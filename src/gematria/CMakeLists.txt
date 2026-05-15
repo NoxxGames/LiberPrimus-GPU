@@ -1,0 +1,5 @@
+add_library(lpgpu_gematria gematria_placeholder.cpp)
+add_library(libreprimus::gematria ALIAS lpgpu_gematria)
+
+target_include_directories(lpgpu_gematria PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(lpgpu_gematria PUBLIC lpgpu_project_options PRIVATE lpgpu_project_warnings)

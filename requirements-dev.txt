@@ -1,0 +1,11 @@
+pyyaml
+rich
+typer
+pydantic
+jsonschema
+orjson
+pytest
+hypothesis
+ruff
+mypy
+pre-commit

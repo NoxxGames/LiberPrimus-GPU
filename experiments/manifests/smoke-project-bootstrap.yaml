@@ -1,0 +1,22 @@
+experiment_id: smoke-project-bootstrap-v1
+stage: Stage 0A
+hypothesis: "Project scaffold and toolchain smoke validation only."
+corpus_slice:
+  kind: none
+  reason: "No corpus imported in Stage 0A."
+transform_chain: []
+scorers: []
+hardware:
+  gpu_required: false
+  cuda_required: false
+success_criteria:
+  - "C++ CPU smoke tests pass."
+  - "Python smoke tests pass."
+  - "Repository documentation exists."
+false_positive_controls:
+  - "No candidate plaintext is generated in Stage 0A."
+output_policy:
+  commit_outputs: false
+  output_path: "experiments/results/smoke-project-bootstrap-v1/"
+notes:
+  - "This manifest validates project bootstrap only."

@@ -1,0 +1,12 @@
+add_subdirectory(core)
+add_subdirectory(corpus)
+add_subdirectory(gematria)
+add_subdirectory(ciphers)
+add_subdirectory(scoring)
+add_subdirectory(search)
+add_subdirectory(report)
+add_subdirectory(sqlite)
+
+if(LPGPU_BUILD_CLI)
+    add_subdirectory(cli)
+endif()

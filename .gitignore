@@ -1,0 +1,76 @@
+# Build outputs
+build/
+cmake-build-*/
+out/
+bin/
+lib/
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+wheels/
+
+# CUDA/profiling
+*.nsys-rep
+*.ncu-rep
+*.qdrep
+profile/
+profiles/
+
+# Experiment outputs
+experiments/results/**
+!experiments/results/
+!experiments/results/README.md
+!experiments/results/.gitkeep
+experiments/reports/**
+!experiments/reports/
+!experiments/reports/README.md
+!experiments/reports/.gitkeep
+*.sqlite
+*.sqlite3
+*.db
+*.jsonl
+*.parquet
+*.csv
+*.log
+
+# Raw corpus and local data
+data/raw/**
+!data/raw/
+!data/raw/README.md
+!data/raw/images/
+!data/raw/images/.gitkeep
+!data/raw/transcripts/
+!data/raw/transcripts/.gitkeep
+!data/raw/messages/
+!data/raw/messages/.gitkeep
+!data/raw/hashes/
+!data/raw/hashes/.gitkeep
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary installers/downloads
+downloads/
+installers/
+*.msi
+*.exe.tmp
