@@ -56,7 +56,9 @@ if (-not (Test-Path -LiteralPath $WikiWorktreeDir)) {
     }
 }
 
-Copy-Item -LiteralPath (Join-Path $source "*") -Destination $WikiWorktreeDir -Recurse -Force
+Get-ChildItem -LiteralPath $source -File -Filter "*.md" | ForEach-Object {
+    Copy-Item -LiteralPath $_.FullName -Destination $WikiWorktreeDir -Force
+}
 
 Push-Location $WikiWorktreeDir
 try {
@@ -71,7 +73,12 @@ try {
         Write-Host "wiki_commit=$commit"
         Write-Host "wiki_pushed=true"
     } else {
-        $commit = (git rev-parse HEAD 2>$null)
+        $commit = $null
+        try {
+            $commit = (git rev-parse HEAD 2>$null)
+        } catch {
+            $commit = $null
+        }
         Write-Host "wiki_no_changes=true"
         if ($commit) { Write-Host "wiki_commit=$($commit.Trim())" }
         Write-Host "wiki_pushed=false"

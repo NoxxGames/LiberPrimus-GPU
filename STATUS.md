@@ -40,6 +40,8 @@ Public-facing tutorials were added under `tutorials/`. GitHub issue templates, i
 
 AGENTS.md now documents push, issue idempotency, and wiki mirror policy. Stage 0D-followup remains the next technical stage.
 
+GitHub labels were created or updated and 10 seed issues were opened. Wiki source pages were prepared, but wiki publish failed because the wiki git endpoint was not reachable despite wiki being enabled.
+
 ## Toolchain status
 
 Use `scripts/verify-toolchain.ps1` for the current host report. Stage 0A supports CPU-only builds and optional CUDA smoke builds.

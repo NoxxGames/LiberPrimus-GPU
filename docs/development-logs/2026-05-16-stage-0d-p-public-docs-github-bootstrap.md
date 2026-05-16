@@ -58,6 +58,38 @@ Raw data, generated outputs, `.venv`, build outputs, `.wiki-worktree/`, and `Lib
 
 Before first commit validation confirmed raw files, generated outputs, `.wiki-worktree/`, `.venv`, build outputs, and `LiberPrimus-Research-Report.md` were not staged.
 
+## First Commit And Push
+
+- Commit: `1d2500a40c0c3abf30e334cfc0e20a70d7cbb6cf`
+- Push: succeeded to `origin/main`.
+- GitHub reported that the old origin URL moved to `https://github.com/NoxxGames/LiberPrimus-GPU.git`; the remote was not rewritten.
+
+## GitHub Labels And Issues
+
+- Labels created or updated: `17`
+- Issues created: `10`
+- Issues skipped as existing: `0`
+- Bootstrap report: `docs/github/issue-bootstrap-report.md`
+
+Issue URLs:
+
+- `https://github.com/NoxxGames/LiberPrimus-GPU/issues/1`
+- `https://github.com/NoxxGames/LiberPrimus-GPU/issues/2`
+- `https://github.com/NoxxGames/LiberPrimus-GPU/issues/3`
+- `https://github.com/NoxxGames/LiberPrimus-GPU/issues/4`
+- `https://github.com/NoxxGames/LiberPrimus-GPU/issues/5`
+- `https://github.com/NoxxGames/LiberPrimus-GPU/issues/6`
+- `https://github.com/NoxxGames/LiberPrimus-GPU/issues/7`
+- `https://github.com/NoxxGames/LiberPrimus-GPU/issues/8`
+- `https://github.com/NoxxGames/LiberPrimus-GPU/issues/9`
+- `https://github.com/NoxxGames/LiberPrimus-GPU/issues/10`
+
+## GitHub Wiki Publish
+
+Wiki source pages were prepared under `docs/github/wiki-pages/`.
+
+Publish was attempted, but the wiki git endpoint returned `Repository not found` for `https://github.com/NoxxGames/LiberPrimus-GPU.wiki.git` even though `gh repo view` reports `hasWikiEnabled=true`. No force-push or destructive retry was attempted. The local `.wiki-worktree/` remains ignored and was not staged.
+
 ## Known Limitations
 
 The tutorials are introductory and must evolve with the workbench. Stage 0D-followup alignment work remains unresolved.
