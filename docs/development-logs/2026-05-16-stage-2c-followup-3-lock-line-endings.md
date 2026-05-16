@@ -60,3 +60,14 @@ Pending final local validation, commit, push, and remote CI observation.
 - Generated outputs staged: `0`.
 - SQLite outputs staged: `0`.
 - `LiberPrimus-Research-Report.md` staged: `0`.
+
+## Post-Push CI Follow-Up
+
+The first post-push CI run for `5c6e112be05635ec12a165c6083bac7df49da258` passed the new lock-hash validation and Ruff, then failed one raw-data-free policy test: `test_stage1c_reference_summary_detects_local_notes` expected ignored local mirrored reference files on the GitHub runner.
+
+Follow-up change in this stage:
+
+- Marked that Stage 1C real-source reference summary test as skipped when `data/raw/reference-repos/scream314-cicada3301/pages_and_ciphers.md` is absent.
+- Targeted tests passed.
+- Ruff passed.
+- Full pytest passed with `247 passed`.

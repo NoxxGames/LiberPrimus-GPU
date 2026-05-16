@@ -2,6 +2,8 @@ import json
 import subprocess
 from pathlib import Path
 
+import pytest
+
 from libreprimus.reference_sources.scream314_pages_and_ciphers import extract_method_notes
 from libreprimus.reference_sources.summary import build_stage1c_reference_summary
 
@@ -46,6 +48,9 @@ def test_synthetic_scream314_extraction_detects_vigenere_keys_and_skip(tmp_path:
 
 
 def test_stage1c_reference_summary_detects_local_notes() -> None:
+    if not Path("data/raw/reference-repos/scream314-cicada3301/pages_and_ciphers.md").is_file():
+        pytest.skip("local mirrored reference sources are ignored and absent in raw-data-free CI")
+
     summary = build_stage1c_reference_summary()["summary"]
 
     assert summary["reference_only"] is True
