@@ -14,7 +14,41 @@ from libreprimus.transcript_sources.models import RTKD_SOURCE_ID, TranscriptLine
 def _best_line(alignment: PastebinTranscriptAlignment | None) -> int | None:
     if alignment is None or alignment.best_match is None:
         return None
-    return alignment.best_match.transcript_physical_line_number
+    return alignment.best_match.transcript_physical_line_start or alignment.best_match.transcript_physical_line_number
+
+
+def _strong_alignment(alignment: PastebinTranscriptAlignment | None) -> bool:
+    if alignment is None or alignment.best_match is None:
+        return False
+    return alignment.best_match.confidence in {"exact", "high"} and (
+        alignment.best_match.neighborhood_supported or alignment.best_match.match_pass in {"physical_line_exact_raw", "logical_line_exact_raw"}
+    )
+
+
+def _nearby_alignment_counts(
+    alignments: list[PastebinTranscriptAlignment],
+    transcript_line: int,
+    *,
+    window: int = 5,
+) -> tuple[int, int]:
+    aligned = 0
+    no_match = 0
+    for alignment in alignments:
+        best_line = _best_line(alignment)
+        if best_line is None:
+            no_match += 1
+            continue
+        if abs(best_line - transcript_line) <= window and _strong_alignment(alignment):
+            aligned += 1
+    return aligned, no_match
+
+
+def _alignment_confidence_for_marker(aligned_count: int) -> str:
+    if aligned_count >= 2:
+        return "high"
+    if aligned_count == 1:
+        return "medium"
+    return "low"
 
 
 def infer_page_boundaries(
@@ -37,6 +71,13 @@ def infer_page_boundaries(
     for record in transcript_records:
         if record.has_page_marker and record.stripped_text == "%":
             next_matched = min((line for line in matched_lines if line is not None and line > record.physical_line_number), default=None)
+            aligned_nearby, no_match_count = _nearby_alignment_counts(alignments, record.physical_line_number)
+            confidence = _alignment_confidence_for_marker(aligned_nearby)
+            evidence = ["explicit rtkd percent page marker"]
+            if aligned_nearby:
+                evidence.append("nearby strong alignment evidence")
+            else:
+                evidence.append("no nearby strong alignment evidence")
             boundaries.append(
                 PageBoundaryCandidate(
                     record_type="lp2_page_boundary_candidate",
@@ -50,10 +91,18 @@ def infer_page_boundaries(
                     end_pair_index=None,
                     start_transcript_line=record.physical_line_number,
                     end_transcript_line=next_matched,
-                    confidence="high",
+                    confidence=confidence,
                     canonical_page_boundary=False,
-                    evidence=["explicit rtkd percent page marker"],
-                    warnings=["Source marker is not activated as a canonical page boundary in Stage 0D."],
+                    evidence=evidence,
+                    explicit_marker=True,
+                    anchor_supported=False,
+                    aligned_pair_count_near_boundary=aligned_nearby,
+                    no_match_count_near_boundary=no_match_count,
+                    downgraded_from_previous_policy=confidence != "high",
+                    warnings=[
+                        "Source marker is not activated as a canonical page boundary in Stage 0D-followup.",
+                        "Boundary confidence is downgraded unless local alignment evidence supports it.",
+                    ],
                 )
             )
 
@@ -63,8 +112,11 @@ def infer_page_boundaries(
         alignment = alignment_by_pair.get(line_pair.pair_index)
         best_line = _best_line(alignment)
         evidence = ["Parable anchor matched"]
+        aligned_count = 1 if _strong_alignment(alignment) else 0
+        confidence = "low"
         if alignment is not None and alignment.best_match is not None:
             evidence.append("consecutive alignment neighborhood" if alignment.best_match.neighborhood_supported else "aligned to rtkd transcript line")
+            confidence = "high" if _strong_alignment(alignment) else "medium"
         if anchors and any(anchor.pair_index == line_pair.pair_index and anchor.page_label_candidate == "57.jpg" for anchor in anchors):
             evidence.append("Stage 0C final-page anchor")
         boundaries.append(
@@ -80,9 +132,14 @@ def infer_page_boundaries(
                 end_pair_index=line_pair.pair_index,
                 start_transcript_line=best_line - 4 if best_line is not None else None,
                 end_transcript_line=best_line,
-                confidence="high" if best_line is not None else "medium",
+                confidence=confidence,
                 canonical_page_boundary=False,
                 evidence=evidence,
+                explicit_marker=False,
+                anchor_supported=True,
+                aligned_pair_count_near_boundary=aligned_count,
+                no_match_count_near_boundary=sum(1 for item in alignments if item.best_match is None),
+                downgraded_from_previous_policy=confidence != "high",
                 warnings=["Final-page anchor is non-authoritative and does not finalize page boundaries."],
             )
         )
@@ -104,6 +161,11 @@ def infer_page_boundaries(
                 confidence="none",
                 canonical_page_boundary=False,
                 evidence=["no explicit marker or anchor signal emitted"],
+                explicit_marker=False,
+                anchor_supported=False,
+                aligned_pair_count_near_boundary=0,
+                no_match_count_near_boundary=sum(1 for item in alignments if item.best_match is None),
+                downgraded_from_previous_policy=False,
                 warnings=["Stage 0D could not infer page boundaries for this input."],
             )
         )

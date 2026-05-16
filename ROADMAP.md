@@ -30,6 +30,12 @@ Add public tutorials, GitHub issue templates, issue seeds, wiki source pages, pr
 
 Resolve transcript-alignment gaps, ambiguous page-boundary candidates, and glyph-variant evidence before corpus freeze.
 
+Stage 0D-followup added transcript views, bounded stream-subsequence matching, gap diagnostics, and boundary confidence auditing. It reduced real-source no-match records from `153` to `2`, but two low-confidence records and boundary overgeneration still require human review.
+
+## Phase 0D-followup-2 - Inspect remaining unmatched spans, if needed
+
+If the remaining ambiguous records block corpus policy work, manually inspect unmatched spans, compare alternate transcript segmentation, and decide whether rtkd logical views or Pastebin source structure should drive LP2 alignment.
+
 ## Phase 0E - Freeze Gematria profile and separator grammar
 
 Freeze Gematria profile and separator grammar, then create canonical corpus v0 candidate records with page-boundary candidates preserved as non-final metadata.

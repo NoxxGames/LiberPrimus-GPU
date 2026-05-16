@@ -35,3 +35,7 @@ Stage 0D records elapsed milliseconds for parsing, signature building, matching,
 ## Public hardware tutorial policy
 
 Public hardware tutorials must not imply speed claims without benchmark records, hardware metadata, source locks, and reproducible commands.
+
+## Stage 0D-followup timing policy
+
+Stage 0D-followup records elapsed milliseconds for transcript view construction, matching, gap analysis, and boundary audit. These timings are diagnostic metadata only. They are not benchmark claims and do not justify optimization work or CUDA changes.

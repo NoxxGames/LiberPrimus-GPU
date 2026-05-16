@@ -21,3 +21,7 @@ Future CUDA kernels may help with batched transforms, scoring, and top-k candida
 ## Speed Claims
 
 Do not make public speed claims without committed benchmark methodology, hardware metadata, and reproducible inputs.
+
+## Stage 0D-followup Timing
+
+The follow-up alignment records elapsed milliseconds for parsing, view generation, matching, gap analysis, and boundary audit. Treat these as troubleshooting metadata, not benchmark results. CUDA remains unused because this stage is about transcript structure and provenance, not batch transform/scoring.

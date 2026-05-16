@@ -65,3 +65,7 @@ The rtkd transcript and scream314 reference are hash-locked, but no canonical co
 ## Stage 0D-P public documentation status
 
 Public docs should distinguish established facts, hypotheses, and generated inferences. Stage 0D-followup remains needed before corpus freeze because many transcript-alignment gaps are still unresolved.
+
+## Stage 0D-followup alignment status
+
+Stage 0D-followup shows that most Pastebin line-pairs align as bounded stream subsequences rather than physical rtkd lines. The no-match count dropped from `153` to `2`, but two low-confidence records and boundary overgeneration still require human review. Boundary confidence is now stricter and remains non-canonical.

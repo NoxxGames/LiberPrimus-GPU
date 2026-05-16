@@ -67,3 +67,7 @@ Transcript lock files live under `data/locks/transcripts/`. Raw transcript files
 ## Public tutorial policy
 
 Tutorials should teach local acquisition and lock workflows without embedding raw data. Public repositories should prefer acquisition instructions, metadata locks, and provenance notes over committed raw files.
+
+## Stage 0D-followup alignment output policy
+
+Transcript views, alignment-gap diagnostics, and boundary-audit files are generated outputs under `data/normalized/alignment/`. They are useful for review and corpus-policy decisions but remain ignored by Git and non-canonical until a later corpus-freeze stage explicitly promotes reviewed records.

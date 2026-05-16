@@ -133,3 +133,13 @@ Do not download real corpus data in Stage 0A. Do not run brute force, long bench
 ## Stop conditions
 
 Stop and report if a tool install requires reboot, a CUDA installer requires driver replacement, raw data would be modified, or the repository has conflicting tracked user changes.
+
+## Stage 0D-followup Alignment Rules
+
+- Stage 0D-followup alignment outputs are still non-canonical.
+- No-match reduction is useful, but not required for corpus freeze unless evidence quality improves.
+- Boundary confidence must never be high from empty-pair or word-length-only evidence.
+- Every boundary candidate must include evidence and `canonical_page_boundary=false`.
+- Alignment-gap reports are generated outputs and must not be committed.
+- GitHub issue updates must be idempotent and must not create duplicate issues.
+- Push after successful commit remains required when remote is verified.

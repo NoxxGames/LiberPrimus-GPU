@@ -39,3 +39,7 @@ Stage 0D has not frozen a canonical Gematria profile. The mapping is a documente
 ## Tests
 
 Tests verify raw glyph preservation, normalized-view mapping, `variant_mapping_applied=true` where applicable, and no mutation of the validation profile.
+
+## Stage 0D-followup Evidence
+
+Follow-up stream alignment preserves the raw `ᛂ` glyph while allowing documented normalized-view matching against candidate `ᛄ`. Real-source observations still show prime value `37`, inferred decimal index `11`, and no canonical mapping change.

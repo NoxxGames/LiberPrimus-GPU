@@ -73,3 +73,7 @@ Composed transforms need manifest serialization and full replay. A flexible engi
 ## Do-not-start-with list
 
 Do not start with brute force, page-specific hacks, GPU-only transforms, or transforms whose CPU reference cannot be tested.
+
+## Stage 0D-followup reminder
+
+Transcript alignment prepares corpus views for future transform work, but it does not implement cipher modules. Prime values from legacy sources must still be converted to decimal indices before any modulo-29 transform. Public docs must not describe planned transform families as implemented.

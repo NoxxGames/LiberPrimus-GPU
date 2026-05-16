@@ -65,3 +65,7 @@ Stage 0D parser and alignment tests are Python-only. They assert no canonical bo
 ## Stage 0D-P documentation and GitHub checks
 
 Stage 0D-P validates tutorial, issue seed, wiki source, and GitHub script existence. GitHub helper scripts support dry runs before mutating labels, issues, or wiki pages.
+
+## Stage 0D-followup parser, alignment, and boundary tests
+
+Stage 0D-followup tests cover transcript physical/logical/stream views, bounded stream-subsequence matching, gap diagnostics, stricter boundary confidence auditing, CLI commands, and real-source conditional smoke checks. Tests assert that empty-pair-only and word-length-only evidence cannot create high-confidence boundaries, all boundaries keep `canonical_page_boundary=false`, and all alignment records remain non-canonical.

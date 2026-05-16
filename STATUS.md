@@ -46,6 +46,16 @@ GitHub labels were created or updated and 10 seed issues were opened. Wiki sourc
 
 Use `scripts/verify-toolchain.ps1` for the current host report. Stage 0A supports CPU-only builds and optional CUDA smoke builds.
 
+## Completed in Stage 0D-followup
+
+Stage 0D-followup added transcript logical-line and rune-stream views, bounded stream-subsequence alignment, alignment-gap diagnostics, and stricter page-boundary confidence auditing.
+
+Real-source follow-up summary: rtkd physical lines `931`, logical lines `798`, Pastebin line pairs `185`, exact matches `52`, high-confidence matches `129`, medium-confidence matches `0`, low-confidence matches `2`, no matches `2`, no-match reduction `151`, boundary candidates `74`, high/medium/low/none boundaries `50/3/21/0`, overgeneration warning `true`.
+
+Remaining gaps: two no-match records and two low-confidence records still require review. Boundary candidates remain tentative and non-canonical.
+
+Developer log: `docs/development-logs/2026-05-16-stage-0d-followup-alignment-gap-audit.md`.
+
 ## Next prompt recommendation
 
-Stage 0D-followup - resolve transcript-alignment gaps, ambiguous page-boundary candidates, and glyph-variant evidence before corpus freeze.
+Stage 0E - freeze Gematria profile and separator grammar, then create canonical corpus v0 candidate records with page-boundary candidates preserved as reviewable non-final metadata. If the remaining four ambiguous alignment records block policy work, run Stage 0D-followup-2 first.

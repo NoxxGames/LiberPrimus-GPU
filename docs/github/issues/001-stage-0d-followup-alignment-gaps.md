@@ -38,3 +38,11 @@ Stage 0D transcript locks and alignment scaffolding.
 
 - `docs/research/transcript-alignment-policy.md`
 - `docs/development-logs/2026-05-16-stage-0d-transcript-alignment-policy.md`
+- `docs/research/stage-0d-followup-alignment-gap-audit.md`
+- `docs/research/page-boundary-confidence-policy.md`
+
+## Stage 0D-followup Result
+
+Follow-up diagnostics reduced real-source no-match records from `153` to `2` using logical/stream transcript views and bounded stream-subsequence matching. Boundary confidence was tightened from `74` high-confidence candidates to `50` high, `3` medium, and `21` low, with an overgeneration warning still present.
+
+The issue remains open for human review because two no-match records, two low-confidence records, and overgenerated boundary candidates still need policy decisions before corpus freeze.

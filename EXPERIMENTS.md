@@ -45,3 +45,7 @@ Manual review notes must distinguish promising output from solved evidence.
 ## Stage 0A smoke manifest
 
 The Stage 0A smoke manifest validates project bootstrap only. No candidate plaintext is generated in Stage 0A.
+
+## Stage 0D-followup diagnostic outputs
+
+Stage 0D-followup alignment outputs may inform future corpus selection and separator policy. They cannot be used as direct solve evidence, direct GPU campaign input, or canonical page-boundary metadata. Future manifests may reference reviewed alignment summaries as provenance, but generated diagnostics must remain ignored unless explicitly promoted later.

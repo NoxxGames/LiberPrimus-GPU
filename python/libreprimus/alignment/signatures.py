@@ -8,7 +8,7 @@ import json
 from libreprimus.legacy_pastebin.gematria_validation import RUNE_TO_ENTRY
 from libreprimus.legacy_pastebin.models import LegacyPastebinLinePair
 from libreprimus.transcript_sources.models import TranscriptLineRecord
-from libreprimus.alignment.models import LineSignature
+from libreprimus.alignment.models import LineSignature, TranscriptViewRecord
 
 DOCUMENTED_VARIANT_MAP = {"ᛂ": "ᛄ"}
 
@@ -96,6 +96,48 @@ def transcript_signature(record: TranscriptLineRecord) -> LineSignature:
         empty_pair=bool(payload["empty_pair"]),
         signature_sha256=_signature_hash(payload),
     )
+
+
+def transcript_view_signature(record: TranscriptViewRecord) -> LineSignature:
+    """Build a deterministic signature for one transcript view record."""
+    payload = {
+        "kind": record.view_name,
+        "view_record_index": record.view_record_index,
+        "raw_rune_sequence": record.flattened_rune_sequence,
+        "normalized_rune_sequence": record.normalized_rune_sequence,
+        "decimal_index_sequence": record.decimal_index_sequence,
+        "word_length_sequence": _word_lengths_from_view(record),
+        "rune_count": record.rune_count,
+        "empty_pair": record.rune_count == 0,
+        "separator_profile": record.separator_profile,
+    }
+    return LineSignature(
+        signature_kind=record.view_name,
+        source_index=record.view_record_index,
+        raw_rune_sequence=str(payload["raw_rune_sequence"]),
+        normalized_rune_sequence=str(payload["normalized_rune_sequence"]),
+        decimal_index_sequence=list(payload["decimal_index_sequence"]),
+        word_length_sequence=list(payload["word_length_sequence"]),
+        rune_count=int(payload["rune_count"]),
+        empty_pair=bool(payload["empty_pair"]),
+        signature_sha256=_signature_hash(payload),
+    )
+
+
+def _word_lengths_from_view(record: TranscriptViewRecord) -> list[int]:
+    pieces: list[str] = []
+    current: list[str] = []
+    for char in record.raw_text_span:
+        if "\u16a0" <= char <= "\u16ff":
+            current.append(char)
+        elif current:
+            pieces.append("".join(current))
+            current = []
+    if current:
+        pieces.append("".join(current))
+    if pieces:
+        return [len(piece) for piece in pieces]
+    return [record.rune_count] if record.rune_count else []
 
 
 def build_signature_index(signatures: list[LineSignature], attr: str) -> dict[object, list[LineSignature]]:

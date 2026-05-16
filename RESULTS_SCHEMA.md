@@ -64,3 +64,14 @@ Pastebin-derived records must include `source_id`, `source_sha256`, `source_loca
 Alignment-derived records must include source IDs, source SHA-256 hashes, confidence labels, and `trusted_as_canonical=false`. Boundary candidates must include `canonical_page_boundary=false`.
 
 Public tutorials must not present generated results as evidence unless they are manifest-backed, provenance-complete, and explicitly reviewed. Stage 0D-P examples are smoke outputs only.
+
+## Stage 0D-followup Record Types
+
+Implemented/generated Stage 0D-followup record types include:
+
+- `transcript_view_record`
+- `alignment_gap_diagnostic`
+- `page_boundary_confidence_audit`
+- `stage0d_followup_alignment_summary`
+
+These are diagnostic records only. They must include source hashes, confidence or reason labels where applicable, and non-canonical flags. Generated JSON/JSONL outputs under `data/normalized/alignment/` remain ignored.

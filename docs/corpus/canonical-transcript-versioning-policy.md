@@ -101,3 +101,7 @@ Resolve Stage 0D alignment gaps or explicitly document them before generating ca
 ## Stop Conditions
 
 Stop if raw sources would be overwritten, page boundaries would be asserted without evidence, glyph variants would be silently rewritten, or generated outputs would be staged as source truth.
+
+## Stage 0D-followup Implications
+
+Stage 0D-followup improves legacy Pastebin alignment through stream views but does not activate the canonical corpus. Corpus v0 candidate records still require Gematria profile freeze, separator grammar freeze, reviewed page-boundary metadata, and explicit handling of the remaining unmatched or low-confidence alignment records.

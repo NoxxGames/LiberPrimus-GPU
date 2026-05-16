@@ -25,3 +25,24 @@ libreprimus corpus-alignment stage0d-smoke `
 ## Why Boundaries Are Tentative
 
 Source markers, anchors, and alignment neighborhoods need review against canonical transcript policy before becoming corpus metadata.
+
+## Stage 0D-followup Diagnostics
+
+Stage 0D-followup adds:
+
+- transcript logical-line and rune-stream views;
+- bounded stream-subsequence matching;
+- alignment gap reports;
+- stricter page-boundary confidence auditing.
+
+Run:
+
+```powershell
+libreprimus corpus-alignment stage0d-followup-smoke `
+  --pastebin <repo-root>\data\raw\legacy-pastebins\58-Pages-In-Runes-With-Prime-Values-Pastebin.txt `
+  --transcript <repo-root>\data\raw\transcripts\rtkd\liber-primus__transcription--master.txt `
+  --out-dir <repo-root>\data\normalized\alignment `
+  --allow-warnings
+```
+
+The generated files are diagnostic outputs and are ignored by Git. High confidence is stricter after Stage 0D-followup: empty pairs and word-length-only evidence cannot create high-confidence boundaries.

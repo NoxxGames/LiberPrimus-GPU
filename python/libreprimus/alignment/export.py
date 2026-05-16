@@ -44,3 +44,41 @@ def write_stage0d_outputs(out_dir: Path, result: dict[str, Any]) -> dict[str, Pa
     write_json(paths["alignment_summary"], result["summary"])
     write_jsonl(paths["warnings"], result["summary"].warnings)
     return paths
+
+
+def write_stage0d_followup_outputs(out_dir: Path, result: dict[str, Any]) -> dict[str, Path]:
+    """Write generated Stage 0D-followup outputs to an ignored directory."""
+    paths = {
+        "transcript_lines": out_dir / "transcript_lines.jsonl",
+        "transcript_views_summary": out_dir / "transcript_views_summary.json",
+        "pastebin_alignment": out_dir / "pastebin_alignment.jsonl",
+        "alignment_gap_diagnostics": out_dir / "alignment_gap_diagnostics.jsonl",
+        "alignment_gap_summary": out_dir / "alignment_gap_summary.json",
+        "page_boundary_candidates": out_dir / "page_boundary_candidates.jsonl",
+        "page_boundary_audit": out_dir / "page_boundary_audit.json",
+        "page_boundary_confidence_audit": out_dir / "page_boundary_confidence_audit.jsonl",
+        "glyph_variant_observations": out_dir / "glyph_variant_observations.jsonl",
+        "alignment_summary": out_dir / "alignment_summary.json",
+        "warnings": out_dir / "warnings.jsonl",
+    }
+    write_jsonl(paths["transcript_lines"], result["transcript_records"])
+    if result.get("transcript_views_summary") is not None:
+        write_json(paths["transcript_views_summary"], result["transcript_views_summary"])
+    else:
+        write_json(paths["transcript_views_summary"], {})
+    write_jsonl(paths["pastebin_alignment"], result["alignments"])
+    write_jsonl(paths["alignment_gap_diagnostics"], result.get("gap_diagnostics", []))
+    write_json(paths["alignment_gap_summary"], result.get("gap_summary", {}))
+    write_jsonl(paths["page_boundary_candidates"], result["boundary_candidates"])
+    write_json(paths["page_boundary_audit"], result.get("boundary_audit_summary", {}))
+    write_jsonl(paths["page_boundary_confidence_audit"], result.get("boundary_audits", []))
+    write_jsonl(paths["glyph_variant_observations"], result["glyph_variant_observations"])
+    write_json(paths["alignment_summary"], result["summary"])
+    warnings = []
+    summary = result.get("summary")
+    if hasattr(summary, "warnings"):
+        warnings.extend(summary.warnings)
+    for alignment in result.get("alignments", []):
+        warnings.extend(getattr(alignment, "warnings", []))
+    write_jsonl(paths["warnings"], warnings)
+    return paths

@@ -41,3 +41,7 @@ Human review must inspect unmatched and ambiguous regions before any corpus-free
 ## Known Limitations
 
 The real Stage 0D smoke aligns only part of the Pastebin source deterministically. Many Pastebin line pairs remain unmatched against rtkd physical lines and need follow-up alignment work.
+
+## Stage 0D-followup Update
+
+Stage 0D-followup adds logical-line and rune-stream views and bounded stream-subsequence matching. These passes reduce real-source no-match records from `153` to `2`, but the outputs remain diagnostics. Boundary confidence now requires stronger evidence and reports overgeneration instead of treating the boundary list as final.
