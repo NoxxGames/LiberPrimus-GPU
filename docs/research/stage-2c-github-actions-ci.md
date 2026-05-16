@@ -21,9 +21,13 @@ The workflow runs on pushes and pull requests targeting `main`. The Python job i
 
 The CMake job builds and tests the CPU scaffold with CUDA disabled.
 
+Stage 2C-followup reformatted the workflow into readable multi-line YAML and added static parsing/formatting tests. The tests reject flattened workflow files and validate the parsed trigger/job structure.
+
 ## Local Scripts
 
 Local reproduction scripts live under `scripts/ci/` for PowerShell and shell users. They split Python checks from schema/manifest validation so contributors can rerun targeted checks.
+
+Stage 2C-followup adds `validate-workflow-static` scripts for PowerShell and shell users.
 
 ## Validation Result
 

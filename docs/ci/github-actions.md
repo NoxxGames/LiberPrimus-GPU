@@ -8,6 +8,8 @@ Stage 2C adds repository CI for fast, raw-data-free validation before any broade
 
 The workflow lives at `.github/workflows/ci.yml` and runs on pushes to `main` and pull requests targeting `main`.
 
+Stage 2C-followup keeps this file as readable multi-line YAML. Static tests reject flattened or minified workflow formatting so review diffs remain useful.
+
 ## Python CI Job
 
 The `python-ci` job runs on `ubuntu-latest` with Python 3.12. It installs the package with development dependencies, then runs:
@@ -27,6 +29,8 @@ Stage 2C includes a CPU-only CMake smoke job on `ubuntu-latest`. It configures w
 
 CI checks Python style, Python tests, CLI smoke wiring, committed transform-registry metadata, solved-baseline manifests, result-store manifests, and the CPU CMake scaffold.
 
+Static workflow tests also validate the parsed YAML structure, trigger branches, permissions, concurrency, job names, required commands, and no artifact-upload or secret usage.
+
 ## What CI Deliberately Does Not Check
 
 CI does not run raw-data real-source smoke commands, generated result-store imports, CUDA builds, search campaigns, scoring, or long benchmarks.
@@ -45,4 +49,4 @@ The default workflow does not require CUDA or GPU runners. Future CUDA CI requir
 
 ## Troubleshooting
 
-If CI fails locally, run `scripts/ci/run-python-ci.ps1` and `scripts/ci/run-schema-manifest-checks.ps1` on Windows, or the `.sh` equivalents on Linux. Real-source conditional tests should skip cleanly when raw files are absent.
+If CI fails locally, run `scripts/ci/run-python-ci.ps1`, `scripts/ci/run-schema-manifest-checks.ps1`, and `scripts/ci/validate-workflow-static.ps1` on Windows, or the `.sh` equivalents on Linux. Real-source conditional tests should skip cleanly when raw files are absent.

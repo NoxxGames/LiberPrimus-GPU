@@ -84,6 +84,8 @@ Add GitHub Actions CI for Python tests, ruff, schema validation, and CPU-only sm
 
 Stage 2C added GitHub Actions CI and local CI reproduction scripts. The workflow runs raw-data-free Python checks, schema/manifest validation, and a CPU-only CMake smoke job with CUDA disabled. It does not upload generated artifacts or run search/scoring.
 
+Stage 2C-followup hardened the workflow with readable multi-line YAML, static YAML structure checks, and local workflow validation scripts.
+
 ## Phase 2D - CI-gated schema and docs hardening
 
 Add schema/docs consistency checks and harden manifest/result-store validation before first bounded CPU exploratory experiment scaffolding.

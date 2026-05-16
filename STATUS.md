@@ -138,7 +138,11 @@ CI summary: workflow `.github/workflows/ci.yml`, Python 3.12 job with Ruff, pyte
 
 Policy summary: CI is raw-data-free, CUDA-free, secret-free, and does not upload generated corpus or result artifacts by default.
 
+Stage 2C-followup reformatted the workflow into readable multi-line YAML, added static YAML parsing and formatting checks, and added local workflow validation scripts.
+
 Developer log: `docs/development-logs/2026-05-16-stage-2c-github-actions-ci.md`.
+
+Follow-up developer log: `docs/development-logs/2026-05-16-stage-2c-followup-ci-hardening.md`.
 
 ## Next prompt recommendation
 

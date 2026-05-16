@@ -229,4 +229,6 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - CI must not upload generated raw, corpus, or result artifacts by default.
 - CI failures must not be bypassed by deleting tests.
 - New commands added for CI must have local reproduction instructions.
+- GitHub workflow YAML must remain readable multi-line YAML.
+- CI workflow changes require static workflow tests.
 - Push after successful commit remains required when remote is verified.

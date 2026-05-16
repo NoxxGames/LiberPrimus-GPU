@@ -9,6 +9,7 @@ These commands reproduce the Stage 2C CI checks without requiring raw data, CUDA
 ```powershell
 .\scripts\ci\run-python-ci.ps1
 .\scripts\ci\run-schema-manifest-checks.ps1
+.\scripts\ci\validate-workflow-static.ps1
 ```
 
 ## Linux Shell Commands
@@ -16,6 +17,7 @@ These commands reproduce the Stage 2C CI checks without requiring raw data, CUDA
 ```bash
 bash scripts/ci/run-python-ci.sh
 bash scripts/ci/run-schema-manifest-checks.sh
+bash scripts/ci/validate-workflow-static.sh
 ```
 
 ## Python Test Commands
@@ -34,6 +36,14 @@ bash scripts/ci/run-schema-manifest-checks.sh
 .\.venv\Scripts\python.exe -m libreprimus.cli solved-baseline validate-manifest --manifest experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml
 .\.venv\Scripts\python.exe -m libreprimus.cli result-store validate-manifest --manifest experiments/manifests/result-store/stage2b-solved-baseline-import.yaml
 ```
+
+## Workflow Static Validation
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q tests/python/test_stage2c_workflow_static.py
+```
+
+The static test parses `.github/workflows/ci.yml`, verifies trigger and job structure, and rejects flattened one-line workflow formatting.
 
 ## Optional CMake CPU Commands
 

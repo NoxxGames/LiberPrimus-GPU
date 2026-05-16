@@ -37,3 +37,16 @@ Intended status comment:
 - Local validation: passed
 - Next recommended stage: Stage 2D CI-gated schema/docs consistency checks and manifest/result-store hardening
 
+## Stage 2C-Followup Issue Update Note
+
+Stage 2C-followup attempted to update issue #7, `Add GitHub Actions CI for Python and CMake smoke tests`, but `gh` was unavailable in the current Codex shell.
+
+Intended status comment:
+
+- Workflow reformatted as readable multi-line YAML.
+- Static workflow validation added using PyYAML-backed parsing and formatting checks.
+- Local validation passed.
+- Remote CI observation could not be performed from this shell because `gh` is unavailable.
+- CI remains raw-data-free, CUDA-free, secret-free, and has no default generated-artifact upload.
+- Next recommended stage: Stage 2D CI-gated schema/docs consistency checks and manifest/result-store hardening.
+

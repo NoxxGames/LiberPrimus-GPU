@@ -122,6 +122,9 @@ Local CI reproduction:
 ```powershell
 .\scripts\ci\run-python-ci.ps1
 .\scripts\ci\run-schema-manifest-checks.ps1
+.\scripts\ci\validate-workflow-static.ps1
 ```
 
 The GitHub Actions workflow also includes a CPU-only CMake smoke job with CUDA disabled.
+
+Stage 2C-followup extends workflow tests to parse YAML with PyYAML, validate trigger and job structure, and reject flattened/minified workflow files.
