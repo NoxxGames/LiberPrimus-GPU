@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2C GitHub Actions CI, local CI reproduction scripts, remote workflow formatting verification, LF canonical lock-hash validation, public documentation status checks, and remote Git blob consistency verification are complete.
+Stage 2D CI-gated schema/docs consistency checks and manifest/result-store validation hardening are complete.
 
 ## Completed in Stage 0A
 
@@ -146,6 +146,14 @@ Developer log: `docs/development-logs/2026-05-16-stage-2c-github-actions-ci.md`.
 
 Follow-up developer log: `docs/development-logs/2026-05-16-stage-2c-followup-ci-hardening.md`.
 
+## Completed in Stage 2D
+
+Stage 2D added raw-data-free consistency checks for registry metadata, solved-baseline manifests, result-store manifests, schemas, public documentation status, ignored-output policy, and result-store records when generated outputs are present.
+
+CI now runs the Stage 2D consistency suite without raw data, search, scoring, CUDA, secrets, or generated artifact uploads.
+
+Developer log: `docs/development-logs/2026-05-16-stage-2d-schema-docs-result-hardening.md`.
+
 ## Next prompt recommendation
 
-Stage 2D - add CI-gated schema/docs consistency checks and harden manifest/result-store validation before first bounded CPU exploratory experiment scaffolding.
+Stage 2E - design a CPU exploratory experiment manifest scaffold and dry-run planner for bounded baseline transforms, without executing unsolved-page search campaigns.

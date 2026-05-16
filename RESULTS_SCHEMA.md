@@ -95,7 +95,7 @@ Generated manifest and page records require `canonical_corpus_active=false`, `pa
 
 Stage 1A adds schemas under `schemas/corpus/` for:
 
-- `solved_page_fixture`
+- `solved-page-fixture-v0` (`solved_page_fixture`)
 - `solved_page_reproduction_record`
 - `solved_page_reproduction_summary`
 
@@ -170,3 +170,9 @@ Stage 2B adds result schemas under `schemas/results/`:
 Solved-baseline imports require `canonical_corpus_active=false`, `page_boundaries_final=false`, `search_performed=false`, `scoring_used=false`, `cuda_used=false`, and `trusted_as_canonical=false`.
 
 Generated result-store outputs include JSONL records and `results.sqlite3` under `experiments/results/result-store/`. They are ignored and must not be committed.
+
+## Stage 2D Consistency Summary
+
+Stage 2D may generate `consistency_check_suite_result` JSON summaries under `experiments/results/consistency/`. These summaries are generated outputs and are ignored by Git.
+
+The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

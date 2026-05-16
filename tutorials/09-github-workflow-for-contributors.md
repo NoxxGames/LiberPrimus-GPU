@@ -33,6 +33,9 @@ Local reproduction:
 ```powershell
 .\scripts\ci\run-python-ci.ps1
 .\scripts\ci\run-schema-manifest-checks.ps1
+.\scripts\ci\run-consistency-checks.ps1
 ```
 
 CI should not require raw data, secrets, CUDA, or generated result artifacts.
+
+Stage 2D adds consistency checks for schemas, manifests, registry metadata, public docs, ignored outputs, and result-store metadata. Run them before opening a pull request that changes any of those areas.

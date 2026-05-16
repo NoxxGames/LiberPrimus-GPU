@@ -98,6 +98,12 @@ Stage 2C-followup-5 added remote Git blob verification for the CI workflow and `
 
 Add schema/docs consistency checks and harden manifest/result-store validation before first bounded CPU exploratory experiment scaffolding.
 
+Stage 2D added a raw-data-free consistency package, CLI commands, CI scripts, workflow gates, and tests covering registry, manifest, schema, docs, ignored-output, and result-store consistency.
+
+## Stage 2E - CPU experiment manifest scaffold and dry-run planner
+
+Design CPU exploratory experiment manifests and a dry-run planner for bounded baseline transforms without executing unsolved-page search campaigns.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

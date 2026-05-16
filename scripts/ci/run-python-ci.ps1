@@ -14,3 +14,6 @@ Write-Host "Running pytest"
 
 Write-Host "Running Python smoke"
 & $Python -m libreprimus.cli smoke
+
+Write-Host "Running consistency checks"
+& $Python -m libreprimus.cli consistency check-all --allow-warnings

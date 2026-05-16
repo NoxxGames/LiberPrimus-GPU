@@ -51,3 +51,7 @@ Prompts should state that solved-baseline imports are regression evidence only, 
 For CI work, require `.github/workflows/ci.yml`, local reproduction scripts, static workflow tests, docs, and a developer log. CI must stay raw-data-free, CUDA-free, secret-free, and must not upload generated corpus or result artifacts by default.
 
 Do not weaken CI by removing tests or conditional real-source skip checks just to get a green run.
+
+## Stage 2D Guardrails
+
+For consistency hardening work, require `libreprimus consistency check-all`, result-store consistency checks, ignored-output checks, and public status checks. Stage 2D is a hardening stage only; it does not authorize search, scoring, CUDA, canonical corpus activation, or page-boundary finalization.

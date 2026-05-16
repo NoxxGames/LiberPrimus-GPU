@@ -87,3 +87,9 @@ Stage 2B adds a result-store manifest and generated JSONL/SQLite sinks for impor
 The result store records manifest SHA-256, registry SHA-256, git commit, host metadata, profile/source provenance, fixture counts, artifact records, and explicit false flags for canonical corpus activation, search, scoring, CUDA, and canonical trust.
 
 Generated result-store files under `experiments/results/result-store/` remain ignored. The import is regression evidence for known solved fixtures only; it is not an unsolved-page experiment and does not authorize search campaigns.
+
+## Stage 2D Consistency Gate
+
+Stage 2D adds a consistency suite that checks schemas, manifests, registry metadata, result-store records, documentation status, and ignored-output rules before any new experiment scaffold is added.
+
+Future experiment manifests should pass this consistency gate before they are used for dry runs or real runs. The gate does not run search, scoring, CUDA, or unsolved-page campaigns.

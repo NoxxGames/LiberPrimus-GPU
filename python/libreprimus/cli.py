@@ -66,6 +66,7 @@ from libreprimus.result_store.validation import (
     validate_result_store_manifest_file,
 )
 from libreprimus.result_store.sqlite_sink import table_counts
+from libreprimus.consistency.runner import run_consistency_suite
 from libreprimus.reference_sources.summary import build_stage1c_reference_summary, write_stage1c_reference_outputs
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
 from libreprimus.transcript_sources.rtkd_master import parse_rtkd_master
@@ -86,6 +87,7 @@ reference_source_app = typer.Typer(no_args_is_help=True)
 transform_registry_app = typer.Typer(no_args_is_help=True)
 solved_baseline_app = typer.Typer(no_args_is_help=True)
 result_store_app = typer.Typer(no_args_is_help=True)
+consistency_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -632,6 +634,9 @@ DEFAULT_STAGE2A_RESULTS_DIR = Path("experiments/results/solved-baselines/stage2a
 DEFAULT_RESULT_STORE_MANIFEST = Path("experiments/manifests/result-store/stage2b-solved-baseline-import.yaml")
 DEFAULT_STAGE2B_RESULT_STORE_DIR = Path("experiments/results/result-store/stage2b")
 DEFAULT_STAGE2B_SQLITE = DEFAULT_STAGE2B_RESULT_STORE_DIR / "results.sqlite3"
+DEFAULT_STAGE2D_CONSISTENCY_SUMMARY = Path(
+    "experiments/results/consistency/stage2d/consistency_summary.json"
+)
 
 
 @profile_app.command("validate-gematria")
@@ -1234,6 +1239,117 @@ def stage2b_smoke(
 
 
 app.add_typer(result_store_app, name="result-store")
+
+
+def _print_consistency_suite(suite) -> None:
+    console.print(f"suite_id={suite.suite_id}")
+    console.print(f"check_count={suite.check_count}")
+    console.print(f"pass_count={suite.pass_count}")
+    console.print(f"fail_count={suite.fail_count}")
+    console.print(f"warning_count={suite.warning_count}")
+    console.print(f"skipped_count={suite.skipped_count}")
+    for result in suite.results:
+        if result.is_failure:
+            console.print(f"[red]{result.check_group}:{result.check_name}: {result.message}[/red]")
+        elif result.is_warning:
+            console.print(f"[yellow]{result.check_group}:{result.check_name}: {result.message}[/yellow]")
+
+
+def _run_consistency_cli(
+    groups: list[str],
+    *,
+    out: Path | None = None,
+    allow_warnings: bool = False,
+    allow_missing_generated: bool = True,
+) -> None:
+    output_path = _resolve_output_path(out) if out is not None else None
+    suite = run_consistency_suite(
+        groups,
+        out=output_path,
+        allow_missing_generated=allow_missing_generated,
+    )
+    _print_consistency_suite(suite)
+    if output_path is not None:
+        console.print(f"summary={output_path}")
+    if suite.has_failures:
+        raise typer.Exit(1)
+    if suite.has_warnings and not allow_warnings:
+        raise typer.Exit(1)
+    console.print("Consistency checks OK")
+
+
+@consistency_app.command("check-all")
+def consistency_check_all(
+    out: Path | None = typer.Option(None, "--out", help="Generated consistency summary JSON path."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Run all raw-data-free Stage 2D consistency checks."""
+    _run_consistency_cli(
+        ["registry", "manifests", "schemas", "docs", "ignored_outputs", "result_store"],
+        out=out,
+        allow_warnings=allow_warnings,
+        allow_missing_generated=True,
+    )
+
+
+@consistency_app.command("check-registry")
+def consistency_check_registry(
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Run transform-registry consistency checks."""
+    _run_consistency_cli(["registry"], allow_warnings=allow_warnings)
+
+
+@consistency_app.command("check-manifests")
+def consistency_check_manifests(
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Run solved-baseline and result-store manifest consistency checks."""
+    _run_consistency_cli(["manifests"], allow_warnings=allow_warnings)
+
+
+@consistency_app.command("check-schemas")
+def consistency_check_schemas(
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Run schema consistency checks."""
+    _run_consistency_cli(["schemas"], allow_warnings=allow_warnings)
+
+
+@consistency_app.command("check-docs")
+def consistency_check_docs(
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Run public documentation consistency checks."""
+    _run_consistency_cli(["docs"], allow_warnings=allow_warnings)
+
+
+@consistency_app.command("check-ignored-outputs")
+def consistency_check_ignored_outputs(
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Run ignored-output policy consistency checks."""
+    _run_consistency_cli(["ignored_outputs"], allow_warnings=allow_warnings)
+
+
+@consistency_app.command("check-result-store")
+def consistency_check_result_store(
+    allow_missing_generated: bool = typer.Option(
+        False,
+        "--allow-missing-generated",
+        help="Return success if local generated result-store outputs are absent.",
+    ),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Run result-store consistency checks."""
+    _run_consistency_cli(
+        ["result_store"],
+        allow_warnings=allow_warnings,
+        allow_missing_generated=allow_missing_generated,
+    )
+
+
+app.add_typer(consistency_app, name="consistency")
 
 
 @solved_fixture_app.command("list")

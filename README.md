@@ -27,12 +27,13 @@ Current status:
 - Stage 2A: CPU transform registry and manifest-addressable solved-baseline runner complete.
 - Stage 2B: JSONL/SQLite experiment result-store foundation complete.
 - Stage 2C: raw-data-free GitHub Actions CI complete and lock-hash hardened.
+- Stage 2D: CI-gated schema/docs consistency and manifest/result-store hardening complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Search/scoring/CUDA campaigns: not started.
-- Next: Stage 2D schema/docs consistency and manifest/result-store hardening.
+- Next: Stage 2E CPU exploratory experiment manifest scaffold and dry-run planner.
 
 ## CI status
 
@@ -159,7 +160,7 @@ Stage 0A requires smoke tests for the C++ skeleton and Python package. Future CU
 
 ## Next milestones
 
-Stage 2D should add CI-gated schema/docs consistency checks and harden manifest/result-store validation before any bounded CPU exploratory experiment scaffolding. Stage 2E or Stage 3-prep should only follow after Stage 2D keeps documentation, manifests, schemas, and generated-output policy consistent. Do not jump directly to CUDA or unsolved-page search campaigns.
+Stage 2E should design a CPU exploratory experiment manifest scaffold and dry-run planner for bounded baseline transforms. It still must not execute unsolved-page search campaigns. Do not jump directly to CUDA or unsolved-page search campaigns.
 
 ## Stage 1B Atbash-Family Fixtures
 

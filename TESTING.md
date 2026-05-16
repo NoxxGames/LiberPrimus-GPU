@@ -136,3 +136,9 @@ Stage 2C-followup-3 adds `.gitattributes` static tests and canonical lock-hash l
 Stage 2C-followup-4 adds public documentation status tests for README, STATUS, and ROADMAP. These tests allow historical stage mentions but reject stale top-level current-status and next-milestone language.
 
 Stage 2C-followup-5 adds remote Git blob verifier tests that require post-push workflow and `.gitattributes` checks to use `git show` as the authoritative remote source and treat raw URL mismatches as warnings.
+
+## Stage 2D Consistency Tests
+
+Stage 2D adds tests for consistency models, registry checks, manifest checks, schema checks, documentation checks, ignored-output checks, result-store checks, and CLI behavior.
+
+The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.

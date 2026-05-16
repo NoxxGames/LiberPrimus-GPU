@@ -54,6 +54,12 @@ jobs:
       - name: Result-store manifest validation
         run: python -m libreprimus.cli result-store validate-manifest --manifest experiments/manifests/result-store/stage2b-solved-baseline-import.yaml
 
+      - name: Consistency checks
+        run: python -m libreprimus.cli consistency check-all --allow-warnings
+
+      - name: Result-store consistency checks
+        run: python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
+
   cmake-cpu-smoke:
     name: CMake CPU Smoke
     runs-on: ubuntu-latest

@@ -30,3 +30,6 @@ foreach ($Manifest in $SolvedManifests) {
 
 Write-Host "Validating result-store manifest"
 & $Python -m libreprimus.cli result-store validate-manifest --manifest experiments/manifests/result-store/stage2b-solved-baseline-import.yaml
+
+Write-Host "Running consistency checks"
+& $Python -m libreprimus.cli consistency check-all --allow-warnings

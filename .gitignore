@@ -55,6 +55,11 @@ experiments/results/**
 !experiments/results/result-store/.gitkeep
 !experiments/results/result-store/stage2b/
 !experiments/results/result-store/stage2b/.gitkeep
+!experiments/results/consistency/
+!experiments/results/consistency/README.md
+!experiments/results/consistency/.gitkeep
+!experiments/results/consistency/stage2d/
+!experiments/results/consistency/stage2d/.gitkeep
 experiments/reports/**
 !experiments/reports/
 !experiments/reports/README.md

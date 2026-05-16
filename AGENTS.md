@@ -247,3 +247,13 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not rely solely on `raw.githubusercontent.com` for remote truth; fetched Git blobs are authoritative.
 - Run the remote Git blob verifier after CI workflow or `.gitattributes` changes.
 - Push after successful commit remains required when remote is verified.
+
+## Stage 2D Consistency Rules
+
+- New schema, manifest, documentation, registry, or result-store changes must pass the consistency checks.
+- Do not update README, STATUS, and ROADMAP inconsistently.
+- Transform registry changes must update CIPHER_CATALOG and manifests as needed.
+- New generated output paths must be ignored and covered by ignored-output checks.
+- CI consistency checks must remain raw-data-free.
+- Stage 2D does not enable search, scoring, CUDA, canonical corpus activation, or page-boundary finalization.
+- Push after successful commit remains required when remote is verified.

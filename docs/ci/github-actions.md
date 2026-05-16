@@ -32,7 +32,7 @@ Stage 2C includes a CPU-only CMake smoke job on `ubuntu-latest`. It configures w
 
 ## What CI Checks
 
-CI checks Python style, Python tests, CLI smoke wiring, committed profile/registry lock hashes, transform-registry metadata, solved-baseline manifests, result-store manifests, public documentation status, and the CPU CMake scaffold.
+CI checks Python style, Python tests, CLI smoke wiring, committed profile/registry lock hashes, transform-registry metadata, solved-baseline manifests, result-store manifests, Stage 2D consistency checks, public documentation status, and the CPU CMake scaffold.
 
 Static workflow tests also validate the parsed YAML structure, trigger branches, permissions, concurrency, job names, required commands, and no artifact-upload or secret usage.
 

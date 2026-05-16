@@ -3,6 +3,7 @@
 Stage 2C adds GitHub Actions and local reproduction scripts for raw-data-free validation.
 
 - `github-actions.md`: workflow design and policy.
+- `consistency-checks.md`: Stage 2D schema, manifest, docs, registry, ignored-output, and result-store consistency checks.
 - `local-ci-reproduction.md`: local PowerShell and shell commands.
 - `line-endings-and-lock-hashes.md`: LF canonical JSON lock policy and verification.
 - `public-docs-status-checks.md`: README, STATUS, and ROADMAP freshness checks.

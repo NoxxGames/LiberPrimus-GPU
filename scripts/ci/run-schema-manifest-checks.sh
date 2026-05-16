@@ -30,3 +30,6 @@ done
 
 echo "Validating result-store manifest"
 "$python_bin" -m libreprimus.cli result-store validate-manifest --manifest experiments/manifests/result-store/stage2b-solved-baseline-import.yaml
+
+echo "Running consistency checks"
+"$python_bin" -m libreprimus.cli consistency check-all --allow-warnings

@@ -14,3 +14,6 @@ echo "Running pytest"
 
 echo "Running Python smoke"
 "$python_bin" -m libreprimus.cli smoke
+
+echo "Running consistency checks"
+"$python_bin" -m libreprimus.cli consistency check-all --allow-warnings

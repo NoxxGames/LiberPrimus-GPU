@@ -9,6 +9,7 @@ These commands reproduce the Stage 2C CI checks without requiring raw data, CUDA
 ```powershell
 .\scripts\ci\run-python-ci.ps1
 .\scripts\ci\run-schema-manifest-checks.ps1
+.\scripts\ci\run-consistency-checks.ps1
 .\scripts\ci\validate-workflow-static.ps1
 .\scripts\ci\verify-lock-hashes.ps1
 ```
@@ -24,6 +25,7 @@ After a workflow push:
 ```bash
 bash scripts/ci/run-python-ci.sh
 bash scripts/ci/run-schema-manifest-checks.sh
+bash scripts/ci/run-consistency-checks.sh
 bash scripts/ci/validate-workflow-static.sh
 bash scripts/ci/verify-lock-hashes.sh
 ```
@@ -50,6 +52,8 @@ bash scripts/ci/verify-remote-workflow.sh --repo-owner NoxxGames --repo-name Lib
 .\.venv\Scripts\python.exe -m libreprimus.cli transform-registry validate --registry data/transform-registry/cpu-reference-transforms-v0.json
 .\.venv\Scripts\python.exe -m libreprimus.cli solved-baseline validate-manifest --manifest experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml
 .\.venv\Scripts\python.exe -m libreprimus.cli result-store validate-manifest --manifest experiments/manifests/result-store/stage2b-solved-baseline-import.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-all --allow-warnings
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 ```
 
 ## Workflow Static Validation

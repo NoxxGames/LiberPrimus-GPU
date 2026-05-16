@@ -1,0 +1,104 @@
+"""Documentation consistency checks."""
+
+from __future__ import annotations
+
+from pathlib import Path
+
+from libreprimus.consistency.models import ConsistencyCheckResult, fail_result, pass_result
+from libreprimus.paths import repo_root
+
+GROUP = "docs"
+README = repo_root() / "README.md"
+STATUS = repo_root() / "STATUS.md"
+ROADMAP = repo_root() / "ROADMAP.md"
+AGENTS = repo_root() / "AGENTS.md"
+CIPHER_CATALOG = repo_root() / "CIPHER_CATALOG.md"
+
+
+def check_docs_consistency(
+    *,
+    readme_path: Path = README,
+    status_path: Path = STATUS,
+    roadmap_path: Path = ROADMAP,
+    agents_path: Path = AGENTS,
+    cipher_catalog_path: Path = CIPHER_CATALOG,
+) -> list[ConsistencyCheckResult]:
+    results: list[ConsistencyCheckResult] = []
+    readme = _read(readme_path)
+    status = _read(status_path)
+    roadmap = _read(roadmap_path)
+    agents = _read(agents_path)
+    catalog = _read(cipher_catalog_path)
+
+    _require(results, "readme_stage2b", "Stage 2B" in readme and "complete" in readme.lower(), "README mentions Stage 2B complete.", readme_path)
+    _require(results, "readme_stage2c", "Stage 2C" in readme and "complete" in readme.lower(), "README mentions Stage 2C complete.", readme_path)
+    _require(results, "readme_stage2d_next", "Stage 2D" in readme, "README points to Stage 2D.", readme_path)
+    _require(results, "status_stage2d", "Stage 2D" in status, "STATUS mentions Stage 2D.", status_path)
+    _require(results, "roadmap_stage2d", "Stage 2D" in roadmap, "ROADMAP mentions Stage 2D.", roadmap_path)
+    for path, text, minimum in [
+        (readme_path, readme, 50),
+        (status_path, status, 20),
+        (roadmap_path, roadmap, 20),
+    ]:
+        _require(
+            results,
+            "public_markdown_multiline",
+            len(text.splitlines()) > minimum,
+            f"{path.name} is readable multi-line Markdown.",
+            path,
+        )
+    for phrase in [
+        "data/raw/",
+        "generated outputs",
+        "canonical corpus",
+        "Push after successful commit",
+        "raw-data-free",
+    ]:
+        _require(
+            results,
+            "agents_safety_rules",
+            phrase.lower() in agents.lower(),
+            f"AGENTS.md includes safety rule phrase: {phrase}",
+            agents_path,
+        )
+    lower_catalog = catalog.lower()
+    unsafe_claims = [
+        "search_enabled=true",
+        "supports_gpu=true",
+        "generic search is implemented",
+        "cuda acceleration implemented",
+    ]
+    _require(
+        results,
+        "cipher_catalog_no_search_cuda_claims",
+        not any(claim in lower_catalog for claim in unsafe_claims),
+        "CIPHER_CATALOG does not claim search/CUDA implementation.",
+        cipher_catalog_path,
+    )
+    lower_readme = readme.lower()
+    _require(
+        results,
+        "readme_no_unsolved_solve_claim",
+        "unsolved page is claimed solved" not in lower_readme
+        and "no liber primus page is claimed solved" in lower_readme,
+        "README does not claim an unsolved page solve.",
+        readme_path,
+    )
+    return results
+
+
+def _read(path: Path) -> str:
+    return path.read_text(encoding="utf-8") if path.is_file() else ""
+
+
+def _require(
+    results: list[ConsistencyCheckResult],
+    name: str,
+    condition: bool,
+    message: str,
+    path: Path,
+) -> None:
+    if condition:
+        results.append(pass_result(GROUP, name, message, path=path))
+    else:
+        results.append(fail_result(GROUP, name, message, path=path))
