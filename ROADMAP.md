@@ -116,6 +116,12 @@ Stage 2F added CPU execution schemas, synthetic and solved-fixture-only manifest
 
 Prepare the first bounded CPU exploratory experiment proposal and approval workflow. Real unsolved-page execution still requires explicit human approval, pinned manifests, result-store policy, stop conditions, and review criteria before any run.
 
+Stage 2G added proposal schemas, approval record schemas, review checklists, blocked proposal examples, pending/denied approval examples, review packet generation, `libreprimus proposal` CLI commands, tests, and documentation. It does not approve or execute proposals and does not start real unsolved-page search.
+
+## Stage 2H - Approval-gated execution path
+
+Implement an approval-gated execution path for approved proposals, initially limited to synthetic/solved controls or a no-op real proposal. Do not jump directly to broad unsolved search, scoring campaigns, or CUDA.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

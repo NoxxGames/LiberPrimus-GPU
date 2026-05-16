@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2F bounded CPU execution harness for synthetic and solved-fixture-only runs is complete.
+Stage 2G exploratory experiment proposal and human-approval workflow is complete.
 
 ## Completed in Stage 0A
 
@@ -170,6 +170,14 @@ Execution is restricted to synthetic and solved-fixture-only scopes. Unsolved-pa
 
 Developer log: `docs/development-logs/2026-05-16-stage-2f-bounded-cpu-execution-harness.md`.
 
+## Completed in Stage 2G
+
+Stage 2G added experiment proposal schemas, review checklist schemas, approval record schemas, review packet schemas, proposal examples, pending/denied approval examples, approval-gate logic, generated review packets, and `libreprimus proposal` CLI commands.
+
+All committed Stage 2G proposals are blocked pending explicit human approval. No proposal executes, no candidate plaintexts are generated, and search, scoring, CUDA, canonical corpus activation, and page-boundary finalization remain prohibited.
+
+Developer log: `docs/development-logs/2026-05-16-stage-2g-experiment-proposal-approval-workflow.md`.
+
 ## Next prompt recommendation
 
-Stage 2G - prepare the first bounded CPU exploratory experiment proposal and approval workflow, still requiring explicit human approval before any real unsolved-page execution.
+Stage 2H - implement approval-gated execution path for approved proposals, initially limited to synthetic/solved controls or a no-op real proposal.

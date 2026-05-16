@@ -1,0 +1,81 @@
+record_type: experiment_proposal
+proposal_id: stage2g-affine-page-candidate-proposal
+proposal_version: experiment-proposal-v0
+title: Stage 2G affine page-candidate proposal
+description: Proposal-only bounded affine mod-29 preview for a future reviewed page candidate.
+proposed_stage: Stage 2G
+proposal_status: ready_for_review
+human_approval_required: true
+approved_for_execution: false
+execution_enabled: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+linked_dry_run_manifest: experiments/manifests/exploratory/stage2e-affine-preview-dry-run.yaml
+corpus_slice:
+  slice_id: stage2g-affine-future-page-candidate
+  slice_kind: future_unsolved_page_candidate
+  source: future-reviewed-corpus-placeholder
+  corpus_candidate_id: rtkd-master-v0-candidate
+  selector:
+    page_candidate_id: human-review-required
+  review_required: true
+transform_space:
+  transform_space_id: stage2g-affine-preview
+  transform_family: affine_mod29_preview
+  execution_supported: false
+  dry_run_supported: true
+parameter_bounds:
+  a_values: [1, 28]
+  b_values: [0, 28]
+candidate_count_estimate: 812
+candidate_count_upper_bound: 812
+safety_gates:
+  - human_approval_required
+  - execution_disabled
+  - search_disabled
+  - candidate_generation_disabled
+  - scoring_disabled
+  - cuda_disabled
+expected_outputs:
+  candidates_written: false
+  review_packet_only: true
+result_store_policy:
+  mode: review_packet_only
+  import_enabled: false
+rollback_plan:
+  stop_condition: Do not execute without a valid approval record.
+review_checklist:
+  record_type: experiment_review_checklist
+  checklist_id: stage2g-affine-page-candidate-checklist
+  proposal_id: stage2g-affine-page-candidate-proposal
+  items:
+    - item_id: approval-required
+      question: Is explicit human approval present?
+      required_answer: true
+      actual_answer: false
+      status: pending
+      severity: error
+      notes: Stage 2G examples are intentionally not approved.
+    - item_id: no-execution
+      question: Is execution disabled?
+      required_answer: false
+      actual_answer: false
+      status: pass
+      severity: info
+      notes: Proposal does not execute.
+  required_approvals:
+    - human-review
+  blocking_items:
+    - approval-required
+  non_blocking_warnings: []
+  reviewer_notes: Pending review.
+  completed: false
+provenance:
+  source: stage2g-proposal-template
+notes:
+  - Proposal only; no execution is allowed in Stage 2G.

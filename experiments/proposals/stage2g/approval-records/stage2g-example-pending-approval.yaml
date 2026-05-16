@@ -1,0 +1,16 @@
+record_type: experiment_approval_record
+approval_id: stage2g-example-pending-approval
+proposal_id: stage2g-caesar-page-candidate-proposal
+proposal_sha256: pending-not-approved
+approval_status: pending
+approved_for_execution: false
+approved_by: ""
+approved_at_utc: ""
+approval_scope: {}
+constraints: []
+expiry_utc: ""
+notes:
+  - Example only; this pending record must block execution.
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false

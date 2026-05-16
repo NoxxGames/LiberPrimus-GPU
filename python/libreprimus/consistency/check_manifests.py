@@ -9,6 +9,8 @@ import yaml
 
 from libreprimus.consistency.models import ConsistencyCheckResult, fail_result, pass_result
 from libreprimus.experiment_execution.manifest_loader import load_cpu_execution_manifest
+from libreprimus.experiment_proposals.approval_records import load_approval_record
+from libreprimus.experiment_proposals.proposal_loader import load_experiment_proposal
 from libreprimus.experiments.candidate_estimator import estimate_candidate_count
 from libreprimus.experiments.manifest_loader import load_exploratory_manifest
 from libreprimus.paths import repo_root
@@ -21,6 +23,8 @@ SOLVED_MANIFEST_DIR = repo_root() / "experiments/manifests/solved-baselines"
 RESULT_STORE_MANIFEST_DIR = repo_root() / "experiments/manifests/result-store"
 EXPLORATORY_MANIFEST_DIR = repo_root() / "experiments/manifests/exploratory"
 CPU_EXECUTION_MANIFEST_DIR = repo_root() / "experiments/manifests/cpu-execution"
+PROPOSAL_DIR = repo_root() / "experiments/proposals/stage2g"
+APPROVAL_RECORD_DIR = repo_root() / "experiments/proposals/stage2g/approval-records"
 REGISTRY_PATH = repo_root() / DEFAULT_REGISTRY_PATH
 
 
@@ -42,6 +46,8 @@ def check_manifest_consistency(
     result_store_manifest_dir: Path = RESULT_STORE_MANIFEST_DIR,
     exploratory_manifest_dir: Path = EXPLORATORY_MANIFEST_DIR,
     cpu_execution_manifest_dir: Path = CPU_EXECUTION_MANIFEST_DIR,
+    proposal_dir: Path = PROPOSAL_DIR,
+    approval_record_dir: Path = APPROVAL_RECORD_DIR,
     registry_path: Path = REGISTRY_PATH,
 ) -> list[ConsistencyCheckResult]:
     results: list[ConsistencyCheckResult] = []
@@ -192,6 +198,63 @@ def check_manifest_consistency(
         result.check_name == "cpu_execution_flags_false" and result.is_failure for result in results
     ):
         results.append(pass_result(GROUP, "cpu_execution_flags_false", "CPU execution manifests disable unsafe flags."))
+
+    proposals = sorted(proposal_dir.glob("*.yaml"))
+    for proposal in proposals:
+        try:
+            loaded = load_experiment_proposal(proposal)
+        except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+            results.append(fail_result(GROUP, "experiment_proposal_valid", str(exc), path=proposal))
+            continue
+        results.append(pass_result(GROUP, "experiment_proposal_valid", "Experiment proposal validates.", path=proposal))
+        _check_proposal_flags(results, loaded.payload, proposal)
+        corpus_slice = loaded.payload.get("corpus_slice", {})
+        if (
+            isinstance(corpus_slice, dict)
+            and corpus_slice.get("slice_kind") == "future_unsolved_page_candidate"
+            and loaded.payload.get("human_approval_required") is not True
+        ):
+            results.append(
+                fail_result(
+                    GROUP,
+                    "proposal_human_approval_required",
+                    "Future unsolved proposals require human approval.",
+                    path=proposal,
+                )
+            )
+        if not _no_raw_dump(proposal):
+            results.append(fail_result(GROUP, "manifest_no_raw_dump", "Proposal appears to include raw data.", path=proposal))
+
+    approval_records = sorted(approval_record_dir.glob("*.yaml"))
+    approved_records = 0
+    for approval_record in approval_records:
+        try:
+            loaded = load_approval_record(approval_record)
+        except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+            results.append(fail_result(GROUP, "approval_record_valid", str(exc), path=approval_record))
+            continue
+        results.append(pass_result(GROUP, "approval_record_valid", "Approval record validates.", path=approval_record))
+        if loaded.payload.get("approval_status") == "approved" or loaded.payload.get("approved_for_execution") is True:
+            approved_records += 1
+            results.append(
+                fail_result(
+                    GROUP,
+                    "no_stage2g_approved_records",
+                    "Stage 2G must not commit approved approval records.",
+                    path=approval_record,
+                )
+            )
+
+    if proposals and not any(result.check_name == "experiment_proposal_valid" and result.is_failure for result in results):
+        results.append(pass_result(GROUP, "experiment_proposals_valid", "Stage 2G proposals validate."))
+    if proposals and not any(result.check_name == "proposal_flags_false" and result.is_failure for result in results):
+        results.append(pass_result(GROUP, "proposal_flags_false", "Stage 2G proposals remain unapproved and non-executable."))
+    if proposals and not any(
+        result.check_name == "proposal_human_approval_required" and result.is_failure for result in results
+    ):
+        results.append(pass_result(GROUP, "proposal_human_approval_required", "Future unsolved proposals require human approval."))
+    if approval_records and approved_records == 0:
+        results.append(pass_result(GROUP, "no_stage2g_approved_records", "No approved Stage 2G approval records are committed."))
     return results
 
 
@@ -239,3 +302,21 @@ def _check_cpu_execution_flags(results: list[ConsistencyCheckResult], payload: d
     ]:
         if payload.get(field) is not False:
             results.append(fail_result(GROUP, "cpu_execution_flags_false", f"{field} must be false.", path=path))
+
+
+def _check_proposal_flags(results: list[ConsistencyCheckResult], payload: dict[str, Any], path: Path) -> None:
+    if payload.get("human_approval_required") is not True:
+        results.append(fail_result(GROUP, "proposal_flags_false", "human_approval_required must be true.", path=path))
+    for field in [
+        "approved_for_execution",
+        "execution_enabled",
+        "search_execution_enabled",
+        "candidate_generation_enabled",
+        "scoring_enabled",
+        "cuda_enabled",
+        "canonical_corpus_active",
+        "page_boundaries_final",
+        "trusted_as_canonical",
+    ]:
+        if payload.get(field) is not False:
+            results.append(fail_result(GROUP, "proposal_flags_false", f"{field} must be false.", path=path))

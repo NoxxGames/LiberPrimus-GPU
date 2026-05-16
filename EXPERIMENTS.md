@@ -117,3 +117,15 @@ Run:
 ```
 
 The harness executes registered CPU reference transforms on synthetic records and records solved-fixture replay status. It rejects the committed blocked unsolved negative manifest and still does not run unsolved-page search, scoring, CUDA, canonical corpus activation, or page-boundary finalization.
+
+## Stage 2G Proposal Workflow
+
+Stage 2G adds proposal-only records under `experiments/proposals/stage2g/`. These describe future bounded exploratory experiments, review checklists, approval requirements, and candidate-count bounds.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli proposal stage2g-review-all --proposal-dir experiments/proposals/stage2g --out-dir experiments/results/proposal-reviews/stage2g --allow-warnings
+```
+
+Generated review packets are ignored under `experiments/results/proposal-reviews/stage2g/`. Stage 2G does not execute proposals, approve proposals automatically, generate candidates, score outputs, use CUDA, activate canonical corpus, or finalize page boundaries.

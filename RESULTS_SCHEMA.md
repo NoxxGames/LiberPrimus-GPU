@@ -199,4 +199,15 @@ Stage 2F adds committed schemas under `schemas/experiments/`:
 
 Generated `cpu_execution_plan`, `cpu_execution_result`, and execution summary records are ignored outputs under `experiments/results/cpu-execution/`. They are limited to synthetic and solved-fixture-only execution and require false search, candidate-generation, scoring, CUDA, canonical corpus, page-boundary, and canonical trust flags.
 
+## Stage 2G Proposal And Approval Schemas
+
+Stage 2G adds committed schemas under `schemas/experiments/`:
+
+- `experiment-proposal-v0`
+- `experiment-review-packet-v0`
+- `experiment-approval-record-v0`
+- `experiment-review-checklist-v0`
+
+Generated `experiment_review_packet` records are ignored outputs under `experiments/results/proposal-reviews/`. Approval examples committed in Stage 2G are pending or denied only; no approved approval records are committed.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

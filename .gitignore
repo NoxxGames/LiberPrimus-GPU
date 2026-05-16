@@ -70,6 +70,11 @@ experiments/results/**
 !experiments/results/cpu-execution/.gitkeep
 !experiments/results/cpu-execution/stage2f/
 !experiments/results/cpu-execution/stage2f/.gitkeep
+!experiments/results/proposal-reviews/
+!experiments/results/proposal-reviews/README.md
+!experiments/results/proposal-reviews/.gitkeep
+!experiments/results/proposal-reviews/stage2g/
+!experiments/results/proposal-reviews/stage2g/.gitkeep
 experiments/reports/**
 !experiments/reports/
 !experiments/reports/README.md

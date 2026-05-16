@@ -1,0 +1,16 @@
+record_type: experiment_approval_record
+approval_id: stage2g-example-denied-approval
+proposal_id: stage2g-caesar-page-candidate-proposal
+proposal_sha256: denied-not-approved
+approval_status: denied
+approved_for_execution: false
+approved_by: human-reviewer-placeholder
+approved_at_utc: "1970-01-01T00:00:00Z"
+approval_scope: {}
+constraints: []
+expiry_utc: ""
+notes:
+  - Example only; this denied record must block execution.
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false

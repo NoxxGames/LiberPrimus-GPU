@@ -1,0 +1,79 @@
+record_type: experiment_proposal
+proposal_id: stage2g-solved-fixture-control-proposal
+proposal_version: experiment-proposal-v0
+title: Stage 2G solved-fixture control proposal
+description: Proposal-only solved fixture replay control used to prove the approval gate blocks even safe controls unless approved.
+proposed_stage: Stage 2G
+proposal_status: ready_for_review
+human_approval_required: true
+approved_for_execution: false
+execution_enabled: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+corpus_slice:
+  slice_id: stage2g-solved-fixture-control
+  slice_kind: solved_fixture_group
+  source: experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml
+  corpus_candidate_id: solved-baselines-stage2a
+  selector:
+    fixture_count: 10
+  review_required: true
+transform_space:
+  transform_space_id: stage2g-solved-fixture-replay-control
+  transform_family: solved_fixture_replay
+  execution_supported: false
+  dry_run_supported: true
+parameter_bounds:
+  fixture_count: 10
+candidate_count_estimate: 10
+candidate_count_upper_bound: 10
+safety_gates:
+  - human_approval_required
+  - execution_disabled
+  - search_disabled
+  - candidate_generation_disabled
+  - scoring_disabled
+  - cuda_disabled
+expected_outputs:
+  candidates_written: false
+  review_packet_only: true
+result_store_policy:
+  mode: review_packet_only
+  import_enabled: false
+rollback_plan:
+  stop_condition: Do not execute without a valid approval record.
+review_checklist:
+  record_type: experiment_review_checklist
+  checklist_id: stage2g-solved-fixture-control-checklist
+  proposal_id: stage2g-solved-fixture-control-proposal
+  items:
+    - item_id: approval-required
+      question: Is explicit human approval present?
+      required_answer: true
+      actual_answer: false
+      status: pending
+      severity: error
+      notes: Even solved controls remain blocked in Stage 2G.
+    - item_id: solved-only
+      question: Is this proposal solved-fixture-only?
+      required_answer: true
+      actual_answer: true
+      status: pass
+      severity: info
+      notes: No unsolved page data is referenced.
+  required_approvals:
+    - human-review
+  blocking_items:
+    - approval-required
+  non_blocking_warnings: []
+  reviewer_notes: Pending review.
+  completed: false
+provenance:
+  source: stage2g-proposal-template
+notes:
+  - Proposal only; no execution is allowed in Stage 2G.

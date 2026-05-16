@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 2F and the work that must stay staged, reviewable, and reproducible before larger experiments begin. CUDA/search/scoring are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 2G and the work that must stay staged, reviewable, and reproducible before larger experiments begin. CUDA/search/scoring are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -24,11 +24,12 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Unsolved-page search campaigns: not started.
 - Scoring campaigns: not started.
 - CUDA experiment campaigns: not started.
+- Real unsolved-page execution: blocked without explicit human approval.
 - Existing CUDA code is scaffold and smoke-test infrastructure only.
 
 ### Deferred future work
 
-- Bounded CPU exploratory experiment scaffolding.
+- Approval-gated execution path for approved proposals.
 - Candidate scoring.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -45,6 +46,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - CI-gated consistency checks.
 - CPU exploratory experiment dry-run planner.
 - Bounded CPU execution harness for synthetic and solved-fixture-only runs.
+- Exploratory experiment proposal and human-approval workflow.
 
 ## Architecture summary
 
@@ -60,12 +62,13 @@ Current status:
 - Stage 2D: CI-gated schema/docs consistency and manifest/result-store hardening complete.
 - Stage 2E: CPU exploratory experiment manifest scaffold and dry-run planner complete.
 - Stage 2F: bounded CPU execution harness for synthetic and solved-fixture-only runs complete.
+- Stage 2G: exploratory experiment proposal and human-approval workflow complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Search/scoring/CUDA campaigns: not started.
-- Next: Stage 2G first bounded CPU exploratory experiment proposal and approval workflow.
+- Next: Stage 2H approval-gated execution path for approved proposals, initially limited to synthetic/solved controls or a no-op real proposal.
 
 ## CI status
 
@@ -192,7 +195,9 @@ Current tests cover the C++ skeleton, Python package, manifests, schemas, result
 
 ## Next milestones
 
-Stage 2G should prepare the first bounded CPU exploratory experiment proposal and approval workflow. It still must require explicit human approval before any real unsolved-page execution and must keep scoring campaigns, CUDA work, canonical corpus activation, and page-boundary finalization out of scope.
+Stage 2G prepared the first bounded CPU exploratory experiment proposal and approval workflow. It requires explicit human approval before any real unsolved-page execution and keeps scoring campaigns, CUDA work, canonical corpus activation, and page-boundary finalization out of scope.
+
+Stage 2H should implement an approval-gated execution path for approved proposals, initially limited to synthetic/solved controls or a no-op real proposal.
 
 ## Stage 1B Atbash-Family Fixtures
 

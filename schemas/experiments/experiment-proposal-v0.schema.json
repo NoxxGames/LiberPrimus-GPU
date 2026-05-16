@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/experiment-proposal-v0.schema.json",
+  "title": "experiment-proposal-v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "proposal_id",
+    "proposal_version",
+    "title",
+    "description",
+    "proposed_stage",
+    "proposal_status",
+    "human_approval_required",
+    "approved_for_execution",
+    "execution_enabled",
+    "search_execution_enabled",
+    "candidate_generation_enabled",
+    "scoring_enabled",
+    "cuda_enabled",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "trusted_as_canonical",
+    "corpus_slice",
+    "transform_space",
+    "parameter_bounds",
+    "candidate_count_estimate",
+    "candidate_count_upper_bound",
+    "safety_gates",
+    "expected_outputs",
+    "result_store_policy",
+    "rollback_plan",
+    "review_checklist",
+    "provenance",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "experiment_proposal" },
+    "proposal_id": { "type": "string", "minLength": 1 },
+    "proposal_version": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "proposed_stage": { "type": "string", "minLength": 1 },
+    "proposal_status": {
+      "type": "string",
+      "enum": ["draft", "ready_for_review", "approved", "denied", "superseded"]
+    },
+    "human_approval_required": { "const": true },
+    "approved_for_execution": { "const": false },
+    "execution_enabled": { "const": false },
+    "search_execution_enabled": { "const": false },
+    "candidate_generation_enabled": { "const": false },
+    "scoring_enabled": { "const": false },
+    "cuda_enabled": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "corpus_slice": { "type": "object" },
+    "transform_space": { "type": "object" },
+    "parameter_bounds": { "type": "object" },
+    "candidate_count_estimate": { "type": "integer", "minimum": 0 },
+    "candidate_count_upper_bound": { "type": "integer", "minimum": 1 },
+    "safety_gates": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          { "type": "string" },
+          { "type": "object" }
+        ]
+      }
+    },
+    "expected_outputs": { "type": "object" },
+    "result_store_policy": { "type": "object" },
+    "rollback_plan": { "type": "object" },
+    "review_checklist": { "type": "object" },
+    "provenance": { "type": "object" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

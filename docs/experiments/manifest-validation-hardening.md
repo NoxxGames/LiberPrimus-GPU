@@ -45,6 +45,10 @@ solved-fixture-only scopes. They still require
 `candidate_generation_enabled=false`, `scoring_enabled=false`, and
 `cuda_enabled=false`.
 
+Stage 2G proposal files must keep execution, search, candidate generation,
+scoring, CUDA, canonical corpus activation, and page-boundary finalization
+disabled. Proposal review packets are generated outputs and must remain ignored.
+
 ## Generated Output Policy
 
 Manifest-runner, result-store, and consistency outputs stay under ignored

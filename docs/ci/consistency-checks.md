@@ -69,5 +69,8 @@ outputs that are absent on a clean CI checkout.
 
 ## Future Extensions
 
+Stage 2G extends the suite to proposal schemas, blocked proposal examples,
+pending/denied approval examples, and ignored proposal review packet paths.
+
 Future stages can add scorer metadata checks and result-store import checks for
 new committed manifest types before any unsolved-page campaign is allowed to run.

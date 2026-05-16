@@ -69,3 +69,7 @@ Generated JSONL and SQLite files remain ignored. CUDA remains unused.
 ## Stage 2F Execution Scope
 
 Stage 2F CPU execution is still small correctness plumbing, not a benchmark. It runs synthetic and solved-fixture-only manifests through CPU reference transforms and records ignored outputs. CUDA, scoring, search, and throughput claims remain out of scope.
+
+## Stage 2G Proposal Scope
+
+Stage 2G adds proposal and approval records only. Hardware performance claims remain out of scope because proposals are blocked pending explicit human approval and do not execute.

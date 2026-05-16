@@ -52,6 +52,10 @@ counts. If they are absent, the check reports a warning instead of failing.
 
 ## Trust Boundaries
 
+Stage 2G proposal consistency checks validate proposal and approval-record
+schemas, require committed proposals to remain non-executable and unapproved,
+and verify generated review packet paths are ignored.
+
 The consistency suite is not source evidence and does not prove any page solve.
 It is a CI gate that verifies committed metadata and documentation are internally
 coherent.

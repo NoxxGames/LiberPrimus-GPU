@@ -76,6 +76,17 @@ jobs:
             --out-dir experiments/results/cpu-execution/stage2f \
             --allow-warnings
 
+      - name: Proposal approval workflow smoke
+        run: |
+          python -m libreprimus.cli proposal validate --proposal experiments/proposals/stage2g/stage2g-caesar-page-candidate-proposal.yaml
+          python -m libreprimus.cli proposal check-approval \
+            --proposal experiments/proposals/stage2g/stage2g-caesar-page-candidate-proposal.yaml \
+            --approval experiments/proposals/stage2g/approval-records/stage2g-example-pending-approval.yaml
+          python -m libreprimus.cli proposal review-packet \
+            --proposal experiments/proposals/stage2g/stage2g-caesar-page-candidate-proposal.yaml \
+            --out-dir "${RUNNER_TEMP}/stage2g-review" \
+            --allow-warnings
+
   cmake-cpu-smoke:
     name: CMake CPU Smoke
     runs-on: ubuntu-latest

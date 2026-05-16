@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/experiment-approval-record-v0.schema.json",
+  "title": "experiment-approval-record-v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "approval_id",
+    "proposal_id",
+    "proposal_sha256",
+    "approval_status",
+    "approved_for_execution",
+    "approved_by",
+    "approved_at_utc",
+    "approval_scope",
+    "constraints",
+    "expiry_utc",
+    "notes",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "trusted_as_canonical"
+  ],
+  "properties": {
+    "record_type": { "const": "experiment_approval_record" },
+    "approval_id": { "type": "string", "minLength": 1 },
+    "proposal_id": { "type": "string", "minLength": 1 },
+    "proposal_sha256": { "type": "string" },
+    "approval_status": {
+      "type": "string",
+      "enum": ["pending", "approved", "denied", "expired", "superseded"]
+    },
+    "approved_for_execution": { "type": "boolean" },
+    "approved_by": { "type": "string" },
+    "approved_at_utc": { "type": "string" },
+    "approval_scope": { "type": "object" },
+    "constraints": { "type": "array", "items": { "type": "string" } },
+    "expiry_utc": { "type": "string" },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "trusted_as_canonical": { "const": false }
+  },
+  "additionalProperties": true
+}

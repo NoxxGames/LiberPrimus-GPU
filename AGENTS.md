@@ -277,6 +277,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Generated CPU execution outputs are ignored and must not be committed.
 - Stage 2F does not activate canonical corpus or finalize page boundaries.
 
+## Stage 2G Proposal Approval Rules
+
+- Real unsolved-page execution requires an explicit human approval record.
+- Stage 2G must not auto-approve proposals.
+- Pending and denied approvals must block execution.
+- Approved records must include proposal SHA-256, approver, timestamp, scope, constraints, and expiry.
+- Generated review packets are ignored and must not be committed.
+- Stage 2G does not execute proposals, generate candidates, score outputs, use CUDA, activate canonical corpus, or finalize page boundaries.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

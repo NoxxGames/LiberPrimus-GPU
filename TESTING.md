@@ -153,4 +153,10 @@ Stage 2F adds tests for CPU execution schemas, safety gates, synthetic execution
 
 The tests assert that synthetic direct, reverse, rotated reverse, Vigenere, and prime-stream examples pass; the blocked unsolved manifest fails; and search, candidate generation, scoring, and CUDA remain disabled.
 
+## Stage 2G Proposal Approval Tests
+
+Stage 2G adds tests for proposal schemas, approval records, approval gates, review packet generation, CLI behavior, and committed proposal files.
+
+The tests assert that pending, denied, missing, invalid, expired, and mismatched approvals block execution; committed Stage 2G proposals are unapproved and non-executable; and review packets contain no candidate plaintext outputs.
+
 The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.

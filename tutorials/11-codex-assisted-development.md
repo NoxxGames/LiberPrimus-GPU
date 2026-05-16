@@ -63,3 +63,7 @@ For exploratory dry-run planner work, require `libreprimus experiment validate-e
 ## Stage 2F Guardrails
 
 For bounded CPU execution work, require `libreprimus execution validate`, `libreprimus execution run`, and blocked unsolved manifest tests. Stage 2F may run synthetic and solved-fixture-only manifests, but it must not execute unsolved pages, search, candidate generation, scoring, CUDA, canonical corpus activation, or page-boundary finalization.
+
+## Stage 2G Guardrails
+
+For proposal workflow work, require `libreprimus proposal validate`, `libreprimus proposal review-packet`, and approval-gate tests. Stage 2G must not create approved records automatically, execute proposals, generate candidates, score outputs, use CUDA, activate canonical corpus, or finalize page boundaries.

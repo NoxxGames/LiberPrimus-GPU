@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/experiment-review-checklist-v0.schema.json",
+  "title": "experiment-review-checklist-v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "checklist_id",
+    "proposal_id",
+    "items",
+    "required_approvals",
+    "blocking_items",
+    "non_blocking_warnings",
+    "reviewer_notes",
+    "completed"
+  ],
+  "properties": {
+    "record_type": { "const": "experiment_review_checklist" },
+    "checklist_id": { "type": "string", "minLength": 1 },
+    "proposal_id": { "type": "string", "minLength": 1 },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "item_id",
+          "question",
+          "required_answer",
+          "actual_answer",
+          "status",
+          "severity",
+          "notes"
+        ],
+        "properties": {
+          "item_id": { "type": "string", "minLength": 1 },
+          "question": { "type": "string", "minLength": 1 },
+          "required_answer": {},
+          "actual_answer": {},
+          "status": {
+            "type": "string",
+            "enum": ["pass", "fail", "warning", "pending", "skipped"]
+          },
+          "severity": { "type": "string", "enum": ["info", "warning", "error"] },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "required_approvals": { "type": "array", "items": { "type": "string" } },
+    "blocking_items": { "type": "array", "items": { "type": "string" } },
+    "non_blocking_warnings": { "type": "array", "items": { "type": "string" } },
+    "reviewer_notes": { "type": "string" },
+    "completed": { "const": false }
+  },
+  "additionalProperties": true
+}
