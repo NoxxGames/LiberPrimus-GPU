@@ -29,3 +29,7 @@ The follow-up alignment records elapsed milliseconds for parsing, view generatio
 ## Stage 0E Timing
 
 Corpus candidate generation records lightweight timing for profile validation and tokenization. It is CPU-only and does not imply future CUDA performance.
+
+## Stage 1A Timing
+
+Direct fixture reproduction is CPU-only and fast. It is a correctness check before future cipher work, not a performance workload.

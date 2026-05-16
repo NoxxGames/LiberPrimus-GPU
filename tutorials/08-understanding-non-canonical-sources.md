@@ -31,3 +31,7 @@ Gematria, separator, and glyph-variant profiles are committed tooling policy. Th
 ## Stage 0E Corpus Candidate
 
 The rtkd master v0 corpus candidate is generated output. It is useful for local review and future fixture work, but it is not active canonical corpus.
+
+## Stage 1A Solved Fixtures
+
+Solved fixtures are committed test expectations with source/profile hashes. They can prove that known direct material still reproduces, but they are not raw source truth and not new solve evidence.

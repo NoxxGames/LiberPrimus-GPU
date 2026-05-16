@@ -155,3 +155,13 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - `canonical_corpus_active=false` remains required until a later activation stage.
 - Corpus candidate records must retain source SHA-256s and profile SHA-256s.
 - Push after successful commit remains required when remote is verified.
+
+## Stage 1A Solved Fixture Rules
+
+- Solved-page golden fixtures are test expectations, not new solve claims.
+- Direct-translation fixtures must not use Atbash, Vigenere, prime-stream, brute-force, or scoring logic.
+- Fixture records must include source and profile SHA-256 provenance.
+- Pending fixtures are allowed when reference text or span selection is ambiguous.
+- Generated reproduction outputs are ignored and must not be committed.
+- Passing Stage 1A does not activate canonical corpus.
+- Push after successful commit remains required when remote is verified.

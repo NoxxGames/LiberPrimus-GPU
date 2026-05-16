@@ -81,3 +81,7 @@ Transcript alignment prepares corpus views for future transform work, but it doe
 ## Stage 0E profile reminder
 
 Future cipher modules must use Gematria profile v0 for rune/index/prime mapping. Stage 0E does not implement any cipher module.
+
+## Stage 1A direct-translation baseline
+
+Stage 1A implements a direct-translation reproduction baseline for solved fixtures only. It maps rune tokens to Gematria profile preferred Latin labels. Atbash, Vigenere, rotated reverse Gematria, prime streams, and search remain unimplemented.

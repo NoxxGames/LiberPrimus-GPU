@@ -1,0 +1,56 @@
+{
+  "canonical_corpus_active": false,
+  "corpus_candidate_id": "rtkd-master-v0-candidate",
+  "corpus_candidate_status": "generated_candidate_reviewable",
+  "direct_translation_expected": true,
+  "expected_known_caveats": [
+    "Normalized output uses Gematria profile preferred Latin labels, so C and U are preserved.",
+    "Line separators are joined for visual line wraps."
+  ],
+  "expected_normalized_plaintext": "PARABLE. LICE THE INSTAR TUNNELING TO THE SURFACE. WE MUST SHED OUR OWN CIRCUMFERENCES. FIND THE DIUINITY WITHIN AND EMERGE.",
+  "expected_normalized_plaintext_sha256": "b1e260449f391b3c734b15e64ff82cf05fd55f79fdcd677f81f71f07c1b54810",
+  "expected_numeric_literal_count": 0,
+  "expected_rune_count": 95,
+  "expected_separator_policy": "profile_label_words_spaces_clause_period_line_join",
+  "fixture_id": "p57-parable",
+  "fixture_version": "direct-translation-v0",
+  "gematria_profile_id": "gematria-primus-v0",
+  "gematria_profile_sha256": "93577209028c964523068b5975180e05bda5b1a07b2675d4e35d03d6d164c5c2",
+  "glyph_variant_profile_id": "glyph-variants-v0",
+  "glyph_variant_profile_sha256": "5acae61c4ea2aa9f2f2fb76bdcafb7ed9c6504bd98caf29590a95d7d43271d6d",
+  "in_scope_for_stage": true,
+  "method_family": "direct_translation",
+  "method_status": "passing_intended",
+  "notes": [
+    "Scream314 documents final-page Parable English text, and Stage 0C/0D found the Parable anchor.",
+    "Fixture uses explicit Stage 0E logical-line range 1715..1723."
+  ],
+  "page_boundaries_final": false,
+  "record_type": "solved_page_fixture",
+  "separator_grammar_id": "rtkd-separator-grammar-v0",
+  "separator_grammar_sha256": "303f3062ad8b41bf84ab068f2fd6601b1efb3291872d53956669ea3dd7d88e3c",
+  "solved_reference_sha256": "0f7545d470f2056b45b5de2c8c116ecdea66969fdca6be57ccbd8e591e40ee92",
+  "solved_reference_source_id": "scream314-liber-primus-md",
+  "solved_section_aliases": [
+    "p57 Parable",
+    "57.jpg"
+  ],
+  "solved_section_title": "p57 Parable",
+  "source_transcript_id": "rtkd-master-transcription",
+  "source_transcript_sha256": "e21743ccd9a07f3845d52a329c61b9fa69e9ca6a44ee3ba0db8f28a0d7065004",
+  "span_selector": {
+    "end_logical_line_index": 1723,
+    "end_token_index": null,
+    "notes": "Explicit logical-line range selected from Stage 0E candidate; page boundaries remain reviewable.",
+    "page_candidate_ids": [],
+    "selector_kind": "explicit_logical_line_range",
+    "source": "rtkd-master-v0-candidate",
+    "start_logical_line_index": 1715,
+    "start_token_index": null
+  },
+  "span_status": "reviewable",
+  "transform_chain": [
+    "direct_translation"
+  ],
+  "trusted_as_canonical": false
+}

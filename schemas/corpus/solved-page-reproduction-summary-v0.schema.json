@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "canonical_corpus_active": { "const": false },
+    "direct_translation_fail_count": { "type": "integer" },
+    "direct_translation_pass_count": { "type": "integer" },
+    "elapsed_ms": { "type": "number" },
+    "fail_count": { "type": "integer" },
+    "fixture_count": { "type": "integer" },
+    "fixture_set_id": { "type": "string" },
+    "generated_at_utc": { "type": "string" },
+    "git_commit": { "type": "string" },
+    "page_boundaries_final": { "const": false },
+    "pass_count": { "type": "integer" },
+    "pending_count": { "type": "integer" },
+    "record_type": { "const": "solved_page_reproduction_summary" },
+    "skipped_count": { "type": "integer" },
+    "warnings": { "type": "array" }
+  },
+  "required": [
+    "record_type",
+    "fixture_set_id",
+    "generated_at_utc",
+    "git_commit",
+    "fixture_count",
+    "pass_count",
+    "fail_count",
+    "pending_count",
+    "skipped_count",
+    "direct_translation_pass_count",
+    "direct_translation_fail_count",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "warnings",
+    "elapsed_ms"
+  ],
+  "type": "object"
+}

@@ -43,3 +43,7 @@ Stage 0D-followup records elapsed milliseconds for transcript view construction,
 ## Stage 0E timing policy
 
 Stage 0E records generation timings for profile validation, tokenization, page-candidate integration, and separator inventory. These values are diagnostics only and are not GPU benchmarks.
+
+## Stage 1A timing policy
+
+Stage 1A reproduction records elapsed milliseconds for fixture diagnostics only. These timings are not benchmark claims and do not involve CUDA.

@@ -44,7 +44,7 @@ Stage 0D alignment outputs under `data/normalized/alignment/` are generated and 
 
 ## Solved fixtures
 
-Solved fixtures belong under `data/solved/` or `tests/golden/` only after a reproduction requirement is defined.
+Solved fixtures live under `data/fixtures/solved-pages/`. Fixture expected text is curated test data with source/profile provenance, not raw corpus data and not a solve claim. Generated solved-baseline reproduction outputs live under `data/normalized/solved-baselines/` and remain ignored.
 
 ## Licensing and redistribution caution
 
@@ -75,3 +75,7 @@ Transcript views, alignment-gap diagnostics, and boundary-audit files are genera
 ## Stage 0E profile source of truth
 
 Committed profiles under `data/profiles/` are tooling source-of-truth records for Gematria, separators, and documented glyph variants. Raw transcripts remain immutable under `data/raw/`; generated corpus candidate outputs live under `data/normalized/corpus-candidates/` and remain ignored.
+
+## Stage 1A solved fixture policy
+
+Direct-translation fixtures use locked rtkd and scream314 sources plus Stage 0E profile hashes. The expected strings are small normalized test expectations and must not be expanded into raw transcript dumps.

@@ -104,6 +104,14 @@ data/normalized/corpus-candidates/**
 !data/normalized/corpus-candidates/README.md
 !data/normalized/corpus-candidates/.gitkeep
 
+# Generated solved baseline outputs
+data/normalized/solved-baselines/**
+!data/normalized/solved-baselines/
+!data/normalized/solved-baselines/README.md
+!data/normalized/solved-baselines/.gitkeep
+!data/normalized/solved-baselines/direct-translation-v0/
+!data/normalized/solved-baselines/direct-translation-v0/.gitkeep
+
 # Generated workbook-derived outputs
 data/normalized/legacy-workbook/**
 !data/normalized/legacy-workbook/

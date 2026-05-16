@@ -43,6 +43,11 @@ from libreprimus.paths import package_root, repo_root
 from libreprimus.profiles.gematria_profile import load_gematria_profile, validate_gematria_profile
 from libreprimus.profiles.glyph_variant_profile import load_glyph_variant_profile, validate_glyph_variant_profile
 from libreprimus.profiles.separator_grammar import load_separator_grammar, validate_separator_grammar
+from libreprimus.solved_fixtures.export import write_reproduction_outputs
+from libreprimus.solved_fixtures.fixture_loader import load_fixtures
+from libreprimus.solved_fixtures.reproduction import reproduce_direct_translation_fixtures
+from libreprimus.solved_fixtures.summary import load_summary as load_fixture_summary
+from libreprimus.solved_fixtures.validation import validate_fixture_dir, validate_reproduction_results
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
 from libreprimus.transcript_sources.rtkd_master import parse_rtkd_master
 from libreprimus.transcript_sources.scream314_reference import parse_scream314_reference
@@ -55,6 +60,7 @@ transcript_source_app = typer.Typer(no_args_is_help=True)
 corpus_alignment_app = typer.Typer(no_args_is_help=True)
 profile_app = typer.Typer(no_args_is_help=True)
 corpus_candidate_app = typer.Typer(no_args_is_help=True)
+solved_fixture_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -584,6 +590,8 @@ DEFAULT_GEMATRIA_PROFILE = Path("data/profiles/gematria/gematria-primus-v0.json"
 DEFAULT_GLYPH_VARIANT_PROFILE = Path("data/profiles/glyph-variants/glyph-variants-v0.json")
 DEFAULT_SEPARATOR_GRAMMAR = Path("data/profiles/separators/rtkd-separator-grammar-v0.json")
 DEFAULT_CORPUS_CANDIDATE_DIR = Path("data/normalized/corpus-candidates/rtkd-master-v0-candidate")
+DEFAULT_DIRECT_FIXTURE_DIR = Path("data/fixtures/solved-pages/direct-translation-v0")
+DEFAULT_DIRECT_BASELINE_DIR = Path("data/normalized/solved-baselines/direct-translation-v0")
 
 
 @profile_app.command("validate-gematria")
@@ -792,6 +800,157 @@ def stage0e_smoke(
 
 
 app.add_typer(corpus_candidate_app, name="corpus-candidate")
+
+
+@solved_fixture_app.command("list")
+def solved_fixture_list(
+    fixture_dir: Path = typer.Option(DEFAULT_DIRECT_FIXTURE_DIR, "--fixture-dir", help="Solved fixture directory."),
+) -> None:
+    """List solved-page fixture IDs and statuses."""
+    fixtures = load_fixtures(_resolve_output_path(fixture_dir))
+    table = Table("Fixture", "Method", "Status", "In Scope")
+    for fixture in fixtures:
+        table.add_row(
+            fixture.fixture_id,
+            fixture.method_family,
+            fixture.method_status,
+            str(fixture.in_scope_for_stage).lower(),
+        )
+    console.print(table)
+    console.print(f"fixture_count={len(fixtures)}")
+
+
+@solved_fixture_app.command("validate")
+def solved_fixture_validate(
+    fixture_dir: Path = typer.Option(DEFAULT_DIRECT_FIXTURE_DIR, "--fixture-dir", help="Solved fixture directory."),
+) -> None:
+    """Validate solved-page fixture manifests."""
+    resolved = _resolve_output_path(fixture_dir)
+    errors = validate_fixture_dir(resolved)
+    console.print(f"fixture_dir={resolved}")
+    console.print(f"validation_error_count={len(errors)}")
+    if errors:
+        for error in errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    console.print("Solved fixture validation OK")
+
+
+def _ensure_candidate_dir(candidate_dir: Path, *, build_if_missing: bool) -> None:
+    manifest = candidate_dir / "corpus_candidate_manifest.json"
+    tokens = candidate_dir / "tokens.jsonl"
+    if manifest.is_file() and tokens.is_file():
+        return
+    if not build_if_missing:
+        console.print(f"[red]Corpus candidate outputs missing: {candidate_dir}[/red]")
+        console.print("Run `libreprimus corpus-candidate stage0e-smoke --transcript data/raw/transcripts/rtkd/liber-primus__transcription--master.txt --out-dir data/normalized/corpus-candidates/rtkd-master-v0-candidate --allow-boundary-warnings --allow-warnings`.")
+        raise typer.Exit(2)
+    build_rtkd_v0(
+        transcript=Path("data/raw/transcripts/rtkd/liber-primus__transcription--master.txt"),
+        gematria=DEFAULT_GEMATRIA_PROFILE,
+        glyph_variants=DEFAULT_GLYPH_VARIANT_PROFILE,
+        separators=DEFAULT_SEPARATOR_GRAMMAR,
+        alignment_dir=Path("data/normalized/alignment"),
+        out_dir=candidate_dir,
+        allow_boundary_warnings=True,
+    )
+
+
+@solved_fixture_app.command("reproduce-direct")
+def solved_fixture_reproduce_direct(
+    fixture_dir: Path = typer.Option(DEFAULT_DIRECT_FIXTURE_DIR, "--fixture-dir", help="Solved fixture directory."),
+    candidate_dir: Path = typer.Option(DEFAULT_CORPUS_CANDIDATE_DIR, "--candidate-dir", help="Generated corpus candidate directory."),
+    out_dir: Path = typer.Option(DEFAULT_DIRECT_BASELINE_DIR, "--out-dir", help="Generated solved baseline output directory."),
+    allow_pending: bool = typer.Option(False, "--allow-pending", help="Return success with pending fixtures."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite reproduction warnings."),
+    require_all_pass: bool = typer.Option(False, "--require-all-pass", help="Require every fixture to pass."),
+) -> None:
+    """Reproduce direct-translation solved-page fixtures."""
+    fixture_path = _resolve_output_path(fixture_dir)
+    candidate_path = _resolve_output_path(candidate_dir)
+    _ensure_candidate_dir(candidate_path, build_if_missing=False)
+    errors = validate_fixture_dir(fixture_path)
+    if errors:
+        for error in errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    records, summary, warnings = reproduce_direct_translation_fixtures(
+        fixture_dir=fixture_path,
+        candidate_dir=candidate_path,
+    )
+    paths = write_reproduction_outputs(_resolve_output_path(out_dir), records, summary, warnings)
+    for name, path in paths.items():
+        console.print(f"{name}={path}")
+    console.print(f"fixture_count={summary.fixture_count}")
+    console.print(f"pass_count={summary.pass_count}")
+    console.print(f"fail_count={summary.fail_count}")
+    console.print(f"pending_count={summary.pending_count}")
+    console.print(f"skipped_count={summary.skipped_count}")
+    console.print(f"direct_translation_pass_count={summary.direct_translation_pass_count}")
+    console.print(f"direct_translation_fail_count={summary.direct_translation_fail_count}")
+    console.print(f"elapsed_ms={summary.elapsed_ms}")
+    if summary.fail_count:
+        raise typer.Exit(1)
+    if require_all_pass and (summary.pending_count or summary.skipped_count):
+        raise typer.Exit(1)
+    if (summary.pending_count or summary.skipped_count) and not allow_pending:
+        raise typer.Exit(1)
+    if warnings and not allow_warnings:
+        raise typer.Exit(1)
+
+
+@solved_fixture_app.command("summary")
+def solved_fixture_summary(
+    results_dir: Path = typer.Option(DEFAULT_DIRECT_BASELINE_DIR, "--results-dir", help="Generated solved baseline directory."),
+) -> None:
+    """Print generated solved-fixture reproduction summary."""
+    summary = load_fixture_summary(_resolve_output_path(results_dir))
+    for key in [
+        "fixture_set_id",
+        "fixture_count",
+        "pass_count",
+        "fail_count",
+        "pending_count",
+        "skipped_count",
+        "direct_translation_pass_count",
+        "direct_translation_fail_count",
+        "canonical_corpus_active",
+        "page_boundaries_final",
+        "elapsed_ms",
+    ]:
+        value = summary.get(key)
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+
+
+@solved_fixture_app.command("stage1a-smoke")
+def stage1a_smoke(
+    fixture_dir: Path = typer.Option(DEFAULT_DIRECT_FIXTURE_DIR, "--fixture-dir", help="Solved fixture directory."),
+    candidate_dir: Path = typer.Option(DEFAULT_CORPUS_CANDIDATE_DIR, "--candidate-dir", help="Generated corpus candidate directory."),
+    out_dir: Path = typer.Option(DEFAULT_DIRECT_BASELINE_DIR, "--out-dir", help="Generated solved baseline output directory."),
+    allow_pending: bool = typer.Option(False, "--allow-pending", help="Return success with pending fixtures."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+    require_all_pass: bool = typer.Option(False, "--require-all-pass", help="Require every fixture to pass."),
+) -> None:
+    """Run Stage 1A fixture validation and direct-translation reproduction."""
+    candidate_path = _resolve_output_path(candidate_dir)
+    _ensure_candidate_dir(candidate_path, build_if_missing=True)
+    solved_fixture_validate(fixture_dir=fixture_dir)
+    solved_fixture_reproduce_direct(
+        fixture_dir=fixture_dir,
+        candidate_dir=candidate_path,
+        out_dir=out_dir,
+        allow_pending=allow_pending,
+        allow_warnings=allow_warnings,
+        require_all_pass=require_all_pass,
+    )
+    validation_errors = validate_reproduction_results(_resolve_output_path(out_dir), allow_warnings=allow_warnings)
+    if validation_errors:
+        for error in validation_errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+
+
+app.add_typer(solved_fixture_app, name="solved-fixture")
 
 
 if __name__ == "__main__":

@@ -73,3 +73,7 @@ Stage 0D-followup tests cover transcript physical/logical/stream views, bounded 
 ## Stage 0E profile and corpus candidate tests
 
 Stage 0E tests validate Gematria profile invariants, glyph variant profile policy, separator grammar rules, corpus tokenization, JSON schemas, synthetic candidate generation, real-source conditional generation, and CLI commands.
+
+## Stage 1A solved fixture tests
+
+Stage 1A tests validate fixture schemas, direct-translation decoding, span selection, provenance validation, synthetic reproduction, real-source conditional reproduction, and solved-fixture CLI commands. They assert that direct fixtures do not use Atbash, Vigenere, prime streams, search, or CUDA.

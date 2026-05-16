@@ -73,3 +73,7 @@ Stage 0D-followup shows that most Pastebin line-pairs align as bounded stream su
 ## Stage 0E corpus candidate status
 
 Stage 0E freezes tooling profiles and generates an rtkd master corpus v0 candidate. This is profile and corpus preparation, not solve evidence. The generated candidate remains inactive with `canonical_corpus_active=false`.
+
+## Stage 1A direct fixture status
+
+Stage 1A adds direct-translation solved-fixture reproduction for selected known solved direct-transliteration sections. This is a regression baseline for known material only; it is not evidence of new plaintext and does not activate the canonical corpus.

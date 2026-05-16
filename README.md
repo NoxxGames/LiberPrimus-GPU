@@ -18,7 +18,7 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 
 ## Current status
 
-Stage 0D-P public documentation and GitHub project bootstrap. The repository has tutorials, non-canonical source ingestion tools, transcript-alignment scaffolding, and GitHub issue/wiki support. No canonical corpus is active and no unsolved page is claimed solved.
+Stage 1A solved-page golden fixtures. The repository has tutorials, non-canonical source ingestion tools, transcript-alignment scaffolding, frozen Stage 0E profiles, an inactive corpus candidate generator, and direct-translation fixture reproduction for selected known solved material. No canonical corpus is active and no unsolved page is claimed solved.
 
 ## Tutorials
 
@@ -87,7 +87,13 @@ ctest --test-dir build\cuda-debug --output-on-failure
 
 ## Python environment setup
 
-The Python package is an orchestration shell only. It currently exposes `libreprimus smoke`, `libreprimus paths`, and `libreprimus toolchain`.
+The Python package exposes smoke/toolchain commands plus legacy ingestion, transcript alignment, profile validation, corpus-candidate generation, and solved-fixture reproduction.
+
+Direct fixture smoke:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli solved-fixture stage1a-smoke --fixture-dir data/fixtures/solved-pages/direct-translation-v0 --candidate-dir data/normalized/corpus-candidates/rtkd-master-v0-candidate --out-dir data/normalized/solved-baselines/direct-translation-v0 --allow-pending --allow-warnings
+```
 
 ## Repository map
 
@@ -116,4 +122,4 @@ Stage 0A requires smoke tests for the C++ skeleton and Python package. Future CU
 
 ## Next milestones
 
-Stage 0B should mirror source archives, pin SHA-256 locks, define canonical transcript/versioning policy, and freeze Gematria profile metadata without implementing cryptanalysis.
+Stage 1B should reproduce reverse Gematria / Atbash-family solved pages using the Stage 1A fixture framework, without brute-force search.

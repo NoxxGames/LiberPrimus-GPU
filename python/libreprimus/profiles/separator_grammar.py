@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
 
 from libreprimus.profiles.gematria_profile import ProfileValidationResult, compute_sha256, load_json
 

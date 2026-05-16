@@ -90,3 +90,13 @@ Stage 0E adds schemas under `schemas/corpus/` for:
 - `corpus_generation_warning`
 
 Generated manifest and page records require `canonical_corpus_active=false`, `page_boundaries_final=false`, `canonical_page_boundary=false`, and `trusted_as_canonical=false` where applicable.
+
+## Stage 1A Solved Fixture Schemas
+
+Stage 1A adds schemas under `schemas/corpus/` for:
+
+- `solved_page_fixture`
+- `solved_page_reproduction_record`
+- `solved_page_reproduction_summary`
+
+Fixture and reproduction records require provenance hashes and keep `trusted_as_canonical=false`, `canonical_corpus_active=false`, and `page_boundaries_final=false`.

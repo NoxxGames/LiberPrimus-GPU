@@ -53,3 +53,7 @@ Stage 0D-followup alignment outputs may inform future corpus selection and separ
 ## Stage 0E profile references
 
 Future experiment manifests may reference `gematria-primus-v0`, `glyph-variants-v0`, and `rtkd-separator-grammar-v0` once Stage 0E validates. They must not treat `rtkd-master-v0-candidate` as active canonical corpus until a later activation stage.
+
+## Stage 1A solved baseline gate
+
+Solved-baseline reproduction should run before any future search campaign. Direct-translation fixtures are pre-experiment validation controls; they are not generated candidate evidence and do not justify search results by themselves.

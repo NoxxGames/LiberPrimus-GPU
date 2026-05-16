@@ -19,3 +19,5 @@ Before any commit, check staged files for `data/raw/`, generated JSONL, `.venv`,
 ## Require Tests And Logs
 
 Each ingestion, alignment, or project-management stage should update a developer log and run focused tests or dry runs.
+
+For solved-fixture stages, require source/profile SHA-256 provenance, non-canonical flags, generated-output ignore checks, and a developer log before commit.

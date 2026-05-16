@@ -60,3 +60,18 @@ libreprimus corpus-candidate stage0e-smoke `
 ```
 
 The candidate has `canonical_corpus_active=false`. Generated outputs remain ignored.
+
+## Stage 1A Solved Fixtures
+
+Stage 1A selects explicit reviewable spans from the Stage 0E corpus candidate and reproduces known direct-translation material:
+
+```powershell
+libreprimus solved-fixture stage1a-smoke `
+  --fixture-dir <repo-root>\data\fixtures\solved-pages\direct-translation-v0 `
+  --candidate-dir <repo-root>\data\normalized\corpus-candidates\rtkd-master-v0-candidate `
+  --out-dir <repo-root>\data\normalized\solved-baselines\direct-translation-v0 `
+  --allow-pending `
+  --allow-warnings
+```
+
+Passing fixtures are correctness checks for known material. They do not finalize page boundaries or activate the corpus.

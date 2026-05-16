@@ -66,6 +66,14 @@ Real-source candidate summary: physical lines `931`, logical lines `1729`, token
 
 Developer log: `docs/development-logs/2026-05-16-stage-0e-gematria-separators-corpus-candidate.md`.
 
+## Completed in Stage 1A
+
+Stage 1A added solved-page golden fixture schemas, direct-translation fixture manifests, a direct-translation decoder, span selectors, reproduction CLI commands, tests, docs, and developer logs.
+
+Real-source fixture summary: fixtures `4`, pass/fail/pending/skipped `4/0/0/0`, direct translation implemented `true`, `canonical_corpus_active=false`.
+
+Developer log: `docs/development-logs/2026-05-16-stage-1a-direct-translation-golden-fixtures.md`.
+
 ## Next prompt recommendation
 
-Stage 1A - implement solved-page golden fixture framework and reproduce direct-translation solved pages using the Stage 0E profiles and corpus candidate generator, without brute-force search.
+Stage 1B - implement reverse Gematria / Atbash-family solved-page reproduction for clearly documented fixtures, using the Stage 1A fixture framework.
