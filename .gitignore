@@ -66,7 +66,14 @@ data/raw/**
 !data/raw/images/
 !data/raw/images/.gitkeep
 !data/raw/transcripts/
+!data/raw/transcripts/README.md
 !data/raw/transcripts/.gitkeep
+!data/raw/transcripts/rtkd/
+!data/raw/transcripts/rtkd/README.md
+!data/raw/transcripts/rtkd/.gitkeep
+!data/raw/transcripts/scream314/
+!data/raw/transcripts/scream314/README.md
+!data/raw/transcripts/scream314/.gitkeep
 !data/raw/messages/
 !data/raw/messages/.gitkeep
 !data/raw/hashes/
@@ -77,6 +84,12 @@ data/raw/**
 !data/raw/legacy-pastebins/
 !data/raw/legacy-pastebins/README.md
 !data/raw/legacy-pastebins/.gitkeep
+
+# Generated alignment outputs
+data/normalized/alignment/**
+!data/normalized/alignment/
+!data/normalized/alignment/README.md
+!data/normalized/alignment/.gitkeep
 
 # Generated workbook-derived outputs
 data/normalized/legacy-workbook/**

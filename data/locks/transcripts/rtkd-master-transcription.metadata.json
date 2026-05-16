@@ -1,0 +1,18 @@
+﻿{
+    "source_id":  "rtkd-master-transcription",
+    "source_kind":  "primary_transcript_candidate",
+    "source_url":  "https://github.com/rtkd/iddqd/blob/master/liber-primus__transcription--master/liber-primus__transcription--master.txt",
+    "raw_url":  "https://raw.githubusercontent.com/rtkd/iddqd/master/liber-primus__transcription--master/liber-primus__transcription--master.txt",
+    "local_path":  "data/raw/transcripts/rtkd/liber-primus__transcription--master.txt",
+    "canonical_transcript_candidate":  true,
+    "canonical_corpus_active":  false,
+    "trusted_as_canonical":  false,
+    "sha256":  "e21743ccd9a07f3845d52a329c61b9fa69e9ca6a44ee3ba0db8f28a0d7065004",
+    "file_size_bytes":  54478,
+    "locked_at_utc":  "2026-05-16T00:47:52Z",
+    "notes":  [
+                  "Primary candidate transcript for future canonical corpus freeze.",
+                  "Not activated as canonical corpus in Stage 0D.",
+                  "Must be parsed, aligned, and reviewed before corpus freeze."
+              ]
+}

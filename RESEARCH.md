@@ -12,6 +12,8 @@ The legacy workbook gives solved-page delta streams and Prime Sums hints that ca
 
 The local TXT contains the Pastebin vGMK330j data described as the 58 pages in runes and rune prime values.
 
+Stage 0D mirrors the rtkd master transcript as the proposed primary transcript candidate and the scream314 markdown as secondary page-label and solved-section context.
+
 ## Open questions
 
 Key unresolved questions include canonical transcripts, image provenance, rune-table variants, page numbering, normalization policy, and fair null controls.
@@ -19,6 +21,10 @@ Key unresolved questions include canonical transcripts, image provenance, rune-t
 Workbook claims about page-to-page shift patterns are unverified and must not be treated as evidence of unsolved plaintext.
 
 The vGMK330j source contains LP2 runes and Gematria prime values. The numbers are prime values, not decimal positions, and the rows are not decrypted plaintext.
+
+The `ᛂ` glyph variant appears 453 times in the legacy Pastebin source with observed prime value `37`. Stage 0D preserves the raw glyph and allows only a documented normalized view toward `ᛄ` for alignment.
+
+Stage 0D alignment remains incomplete: the real smoke run generated 185 alignment records, but many pairs have no deterministic rtkd physical-line match.
 
 ## Evidence quality levels
 
@@ -51,3 +57,7 @@ The Stage 0B parser treats the workbook as a non-canonical legacy analysis artef
 ## Stage 0C local Pastebin status
 
 The Stage 0C parser treats the local Pastebin TXT as a non-canonical legacy LP2 rune/prime-value artefact. It is useful for parser validation and alignment hints only.
+
+## Stage 0D transcript alignment status
+
+The rtkd transcript and scream314 reference are hash-locked, but no canonical corpus is active. Tentative page-boundary candidates require later review.

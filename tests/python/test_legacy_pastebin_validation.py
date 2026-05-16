@@ -1,4 +1,3 @@
-from libreprimus.legacy_pastebin.export import extract_legacy_pastebin
 from libreprimus.legacy_pastebin.parser import build_line_pairs
 from libreprimus.legacy_pastebin.summary import summarize
 

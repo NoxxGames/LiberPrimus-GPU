@@ -19,3 +19,7 @@ Codex may edit docs. Raw data remains immutable.
 ## Stage 0A restrictions
 
 No corpus is imported.
+
+## Stage 0D restrictions
+
+Stage 0D documents proposed transcript versioning and alignment policy only. It does not activate a canonical corpus or finalize page boundaries.

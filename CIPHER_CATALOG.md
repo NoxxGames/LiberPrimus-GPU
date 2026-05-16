@@ -12,6 +12,8 @@ Stage 0B legacy workbook ingestion does not implement real cipher modules. It on
 
 Stage 0C local Pastebin ingestion does not implement cipher modules. It only validates legacy rune/prime-value serialization.
 
+Stage 0D transcript alignment does not implement cipher modules. It prepares corpus views and alignment hints for future transforms only.
+
 ## Future transform registry
 
 Later stages should register transforms with stable IDs, CPU reference behavior, parameters, inverse behavior when available, and test vectors.
@@ -45,6 +47,8 @@ The legacy workbook supports future tests for Vigenere `DIVINITY` and `FIRFUMFER
 Prime-derived streams must define sequence generation, indexing, offset, modulus, and reproducible fixtures.
 
 Prime values from the local Pastebin source must be converted to decimal indices before any future modulo-29 cipher operation.
+
+Transcript alignment records may contain decimal-index views for comparison, but cipher transforms must still wait for a frozen Gematria profile and canonical transcript policy.
 
 The workbook supports future tests for a prime-minus-one stream, including p56 hint checks. This is not a canonical corpus claim.
 

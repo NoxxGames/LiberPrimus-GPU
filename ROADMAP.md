@@ -20,6 +20,16 @@ Stage 0C local legacy Pastebin ingestion is completed as a separate non-canonica
 
 Align legacy Pastebin line-pairs with primary transcript/page-image sources and infer tentative page boundaries with confidence labels.
 
+Stage 0D transcript alignment and policy scaffolding is completed, with significant unmatched regions documented.
+
+## Phase 0D-followup - Resolve transcript-alignment gaps
+
+Resolve transcript-alignment gaps, ambiguous page-boundary candidates, and glyph-variant evidence before corpus freeze.
+
+## Phase 0E - Freeze Gematria profile and separator grammar
+
+Freeze Gematria profile and separator grammar, then create canonical corpus v0 candidate records with page-boundary candidates preserved as non-final metadata.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

@@ -32,10 +32,19 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 - Numeric rows are Gematria prime values, not modulo-29 decimal indices.
 - Every Pastebin-derived record must include source id, source SHA-256, source local filename, and `trusted_as_canonical=false`.
 - Every ingestion stage must create or update a developer log.
+- Stage 0D transcript alignment outputs are non-canonical unless explicitly promoted by a later corpus-freeze stage.
+- Do not treat tentative page-boundary candidates as canonical page boundaries.
+- Do not commit raw transcript files.
+- Do not commit generated alignment outputs.
+- Preserve raw glyphs even when a normalized view maps variant glyphs.
+- Glyph variant `ᛂ` must not be silently rewritten; any normalized view must record the mapping evidence.
+- Every alignment-derived record must include source IDs, source SHA-256 hashes, confidence labels, and `trusted_as_canonical=false`.
+- Every ingestion or alignment stage must create or update a developer log.
+- Speed optimizations must not weaken provenance, raw preservation, or CPU-reference correctness.
 
 ## Current stage
 
-Stage 0C adds non-canonical local legacy Pastebin TXT ingestion on top of the Stage 0B workbook ingestion.
+Stage 0D adds non-canonical transcript alignment and canonical transcript policy scaffolding on top of Stage 0C Pastebin ingestion.
 
 ## Source-of-truth files
 
@@ -48,6 +57,8 @@ Raw source material belongs under `data/raw/` only when explicitly allowed by a 
 Legacy workbook files under `data/raw/legacy-workbooks/` are immutable raw artefacts and must remain ignored by Git.
 
 Legacy Pastebin files under `data/raw/legacy-pastebins/` are immutable raw artefacts and must remain ignored by Git.
+
+Transcript files under `data/raw/transcripts/` are immutable raw artefacts and must remain ignored by Git.
 
 ## Coding standards
 

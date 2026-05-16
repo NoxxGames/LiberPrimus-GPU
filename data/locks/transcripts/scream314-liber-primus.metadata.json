@@ -1,0 +1,18 @@
+﻿{
+    "source_id":  "scream314-liber-primus-md",
+    "source_kind":  "secondary_solved_page_and_numbering_reference",
+    "source_url":  "https://github.com/scream314/cicada3301/blob/master/liber_primus.md",
+    "raw_url":  "https://raw.githubusercontent.com/scream314/cicada3301/master/liber_primus.md",
+    "local_path":  "data/raw/transcripts/scream314/liber_primus.md",
+    "canonical_transcript_candidate":  false,
+    "canonical_corpus_active":  false,
+    "trusted_as_canonical":  false,
+    "sha256":  "0f7545d470f2056b45b5de2c8c116ecdea66969fdca6be57ccbd8e591e40ee92",
+    "file_size_bytes":  137957,
+    "locked_at_utc":  "2026-05-16T00:47:52Z",
+    "notes":  [
+                  "Secondary source for solved-page method notes, section labels, and page-numbering context.",
+                  "Not a canonical corpus source.",
+                  "Do not use as sole transcript authority."
+              ]
+}

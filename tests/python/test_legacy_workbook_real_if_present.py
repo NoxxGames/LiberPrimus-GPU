@@ -1,5 +1,3 @@
-from pathlib import Path
-
 import pytest
 
 from libreprimus.legacy_workbook.export import extract_workbook

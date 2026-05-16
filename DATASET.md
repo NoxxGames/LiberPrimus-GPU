@@ -2,7 +2,7 @@
 
 ## Data policy
 
-Data handling must protect raw evidence and preserve provenance. Stage 0B adds a non-canonical legacy workbook source class without promoting it to corpus truth.
+Data handling must protect raw evidence and preserve provenance. Stage 0D adds raw transcript source classes and alignment outputs without activating canonical corpus truth.
 
 ## Immutable raw data
 
@@ -10,11 +10,15 @@ Data handling must protect raw evidence and preserve provenance. Stage 0B adds a
 
 ## Planned source classes
 
-Future source classes include images, transcripts, message extracts, hashes, source metadata, license notes, `legacy_analysis_workbook`, and `legacy_lp2_rune_prime_value_pastebin_local_txt`.
+Future source classes include images, transcripts, message extracts, hashes, source metadata, license notes, `legacy_analysis_workbook`, `legacy_lp2_rune_prime_value_pastebin_local_txt`, and raw transcript sources.
 
 `legacy_analysis_workbook` is non-canonical. It may provide solved-page delta hints, Prime Sums hints, and formula inventory, but it is not canonical corpus data.
 
 `legacy_lp2_rune_prime_value_pastebin_local_txt` is non-canonical. It contains local Pastebin vGMK330j LP2 rune rows and Gematria prime-value rows. Page boundaries are not finalized from this source.
+
+`primary_transcript_candidate` sources are raw transcript files under review for later canonical activation. The rtkd master transcription is proposed as `rtkd-master-transcription-v0-proposed`, but it is not active canonical corpus in Stage 0D.
+
+`secondary_solved_page_and_numbering_reference` sources may provide page-label and solved-section context. The scream314 markdown is secondary context only.
 
 ## Planned source repositories
 
@@ -36,6 +40,8 @@ Workbook-derived extraction outputs under `data/normalized/legacy-workbook/` are
 
 Pastebin-derived extraction outputs under `data/normalized/legacy-pastebin/` are generated and ignored unless a later stage explicitly promotes selected records through a reviewed process.
 
+Stage 0D alignment outputs under `data/normalized/alignment/` are generated and ignored. They can inform future corpus selection but are not source truth.
+
 ## Solved fixtures
 
 Solved fixtures belong under `data/solved/` or `tests/golden/` only after a reproduction requirement is defined.
@@ -55,3 +61,5 @@ Corpus locks will record file path, SHA-256, size, source, acquisition date, tra
 Legacy workbook lock files live under `data/locks/legacy-workbooks/`. The raw workbook is ignored and hash-locked; only checksum and metadata files are committed.
 
 Legacy Pastebin lock files live under `data/locks/legacy-pastebins/`. The raw local TXT is ignored and hash-locked; only checksum and metadata files are committed.
+
+Transcript lock files live under `data/locks/transcripts/`. Raw transcript files are ignored and hash-locked; only checksum and metadata files are committed.

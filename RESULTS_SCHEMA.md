@@ -26,6 +26,12 @@ Implemented legacy workbook record types:
 - `legacy_pastebin_line_pair`
 - `legacy_pastebin_anchor`
 - `legacy_pastebin_summary`
+- `transcript_line`
+- `scream314_reference_record`
+- `pastebin_transcript_alignment`
+- `lp2_page_boundary_candidate`
+- `glyph_variant_observation`
+- `stage0d_alignment_summary`
 
 ## Planned SQLite tables
 
@@ -54,3 +60,5 @@ Every candidate record must be treated as unverified until rerun, compared to co
 Workbook-derived records must include `trusted_as_canonical=false` and must not be treated as source truth.
 
 Pastebin-derived records must include `source_id`, `source_sha256`, `source_local_filename`, and `trusted_as_canonical=false`.
+
+Alignment-derived records must include source IDs, source SHA-256 hashes, confidence labels, and `trusted_as_canonical=false`. Boundary candidates must include `canonical_page_boundary=false`.

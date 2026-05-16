@@ -27,3 +27,7 @@ CUDA benchmarks require parity tests first and must avoid unbounded search or st
 ## Do not run long benchmarks by default
 
 Default test commands must remain short and safe.
+
+## Stage 0D lightweight timing policy
+
+Stage 0D records elapsed milliseconds for parsing, signature building, matching, boundary inference, and glyph-variant summarization. These values are for regression awareness only and are not benchmark claims. No GPU benchmark is required for transcript alignment.

@@ -44,6 +44,8 @@ Legacy workbook tests include p56 prime-minus-one first-delta checks, Welcome `D
 
 Legacy Pastebin tests include first-pair prime validation, empty-pair preservation, Parable anchor detection, page-boundary non-finalization, and local-real-file conditional tests.
 
+Stage 0D tests cover rtkd parser preservation, scream314 reference parsing, signature indexing, Pastebin-to-transcript alignment, tentative page-boundary candidates, glyph variant `ᛂ`, CLI commands, and real-source conditional smoke checks.
+
 ## Stage 0A smoke tests
 
 Stage 0A includes C++ and Python smoke tests only.
@@ -55,3 +57,7 @@ Stage 0B parser tests are Python-only. CUDA and C++ behavior are unchanged.
 ## Stage 0C Pastebin tests
 
 Stage 0C parser tests are Python-only. They verify that prime values are converted to decimal indices and that generated records remain non-canonical.
+
+## Stage 0D alignment tests
+
+Stage 0D parser and alignment tests are Python-only. They assert no canonical boundary activation, no canonical trust flag, raw glyph preservation, and timing metadata presence.
