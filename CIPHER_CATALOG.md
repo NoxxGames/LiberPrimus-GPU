@@ -97,3 +97,15 @@ Stage 1B implements CPU-only known-solved fixture reproduction for `reverse_gema
 - Rotated reverse Gematria is affine over `Z_29` with `a=-1, b=28+rotation`.
 
 Vigenere, prime-minus-one, generic affine search, scoring, and CUDA acceleration remain unimplemented.
+
+## Stage 1C Explicit-Key Vigenere Baselines
+
+Stage 1C implements CPU-only known-solved fixture reproduction for `vigenere_explicit_key`.
+
+- Formula: `decoded_index = (cipher_index - key_index[key_position]) mod 29`.
+- Keys are explicit fixture parameters, not inferred.
+- Key position advances only on enciphered rune tokens.
+- Cleartext-F pass-through rules are declared per fixture and recorded in reproduction output.
+- No key search, scoring, CUDA, prime-stream, or generic Vigenere search is implemented.
+
+Prime-minus-one and generic affine/shift/search infrastructure remain unimplemented.

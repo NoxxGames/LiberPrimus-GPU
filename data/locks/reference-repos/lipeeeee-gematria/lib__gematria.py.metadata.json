@@ -1,0 +1,19 @@
+{
+  "file_size_bytes": 8609,
+  "imported_as_dependency": false,
+  "local_path": "data/raw/reference-repos/lipeeeee-gematria/lib/gematria.py",
+  "locked_at_utc": "2026-05-16T03:20:01Z",
+  "notes": [
+    "Mirrored for Stage 1C provenance/reference only.",
+    "Raw file remains ignored by Git.",
+    "Do not import or copy external tooling code into production modules."
+  ],
+  "raw_file_committed": false,
+  "raw_url": "https://raw.githubusercontent.com/lipeeeee/gematria/master/lib/gematria.py",
+  "reference_only": true,
+  "repo": "lipeeeee/gematria",
+  "sha256": "0b27771ad3052239d8d2959caffc2ed3d54c0686cc1470861a453a04d141fea9",
+  "source_id": "lipeeeee-gematria-lib-gematria-py",
+  "source_kind": "tooling_reference_code_review_only",
+  "source_url": "https://github.com/lipeeeee/gematria/blob/master/lib/gematria.py"
+}

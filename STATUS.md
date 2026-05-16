@@ -84,6 +84,18 @@ Implemented fixture methods: `reverse_gematria` and `rotated_reverse_gematria`. 
 
 Developer log: `docs/development-logs/2026-05-16-stage-1b-atbash-family-golden-fixtures.md`.
 
+## Completed in Stage 1C
+
+Stage 1C mirrored and locked additional reference-source files, added CPU-only explicit-key Vigenere fixture reproduction, and added Vigenere known-solved fixtures.
+
+Reference mirror summary: files attempted `9`, locked `9`, failed `0`; scream314 method notes `10`; lipeeeee tooling notes `32`.
+
+Real-source fixture summary: Vigenere fixtures `2`, pass/fail/pending/skipped `2/0/0/0`, direct regression `4/0/0/0`, Atbash regression `3/0/0/0`, `canonical_corpus_active=false`.
+
+Implemented fixture method: `vigenere_explicit_key`. Key search, p56 prime streams, generic affine/shift search, scoring, and CUDA remain unimplemented.
+
+Developer log: `docs/development-logs/2026-05-16-stage-1c-vigenere-golden-fixtures.md`.
+
 ## Next prompt recommendation
 
-Stage 1C - implement explicit-key Vigenere solved-page reproduction for locked references only, using the Stage 1A fixture framework.
+Stage 1D - implement p56 An End prime-minus-one / phi-prime solved-page reproduction for locked references only.

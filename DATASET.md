@@ -87,3 +87,10 @@ Stage 1B adds committed fixture manifests under `data/fixtures/solved-pages/atba
 Generated Atbash-family reproduction outputs are written under `data/normalized/solved-baselines/atbash-family-v0/` and remain ignored. Raw transcript files and generated corpus candidate outputs remain uncommitted.
 
 Every Stage 1B fixture records rtkd, scream314, Gematria, separator, glyph-variant, and corpus-candidate provenance. `canonical_corpus_active=false`, `page_boundaries_final=false`, and `trusted_as_canonical=false` remain required.
+## Stage 1C Reference And Fixture Data
+
+Stage 1C mirrors small reference files under ignored `data/raw/reference-repos/` and commits only lock metadata under `data/locks/reference-repos/`.
+
+`lipeeeee/gematria` is reference-only: it is not imported, executed, or copied into production code.
+
+Vigenere fixture expected text under `data/fixtures/solved-pages/vigenere-v0/` is curated test data with locked-source provenance. Generated reproduction outputs under `data/normalized/solved-baselines/vigenere-v0/` remain ignored.

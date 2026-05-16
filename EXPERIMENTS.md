@@ -62,3 +62,8 @@ Solved-baseline reproduction should run before any future search campaign. Direc
 Atbash-family solved fixture reproduction is a pre-experiment validation step. Future search campaigns must preserve these known-solved baselines and direct-translation regressions before claiming experimental results.
 
 Stage 1B does not authorize rotation search, Vigenere search, prime-stream search, scoring, or CUDA runs.
+## Stage 1C Pre-Experiment Validation
+
+Explicit-key Vigenere solved fixtures are now part of pre-experiment validation. Future Vigenere or running-key experiments must keep Stage 1A direct, Stage 1B Atbash-family, and Stage 1C Vigenere fixtures passing before search work begins.
+
+Stage 1C does not permit key search or scoring. Any future search campaign must use separate manifests, null controls, and review criteria.

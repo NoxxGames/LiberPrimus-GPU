@@ -77,6 +77,9 @@ class ReproductionRecord:
     transform_chain: list[Any]
     decoded_index_formula: str | None
     transform_parameters: dict[str, Any]
+    key_text: str | None
+    key_indices: list[int]
+    skip_rule_applied_count: int
     span_selector: SpanSelector
     decoded_normalized_plaintext: str | None
     decoded_normalized_plaintext_sha256: str | None

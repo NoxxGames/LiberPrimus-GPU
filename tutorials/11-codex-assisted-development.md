@@ -26,3 +26,6 @@ For solved-fixture stages, require source/profile SHA-256 provenance, non-canoni
 When asking Codex to add solved-fixture baselines, require explicit provenance, fixture hashes, no generated-output commits, and no search behavior unless a later stage explicitly asks for it.
 
 For Atbash-family work, require declared rotations in fixture manifests and direct-regression tests so existing solved baselines do not regress.
+## Stage 1C Guardrails
+
+For Vigenere fixture work, keep keys explicit in fixture manifests, avoid key search, and keep generated solved-baseline outputs ignored. Do not commit mirrored raw reference files, and do not import or copy external tooling code.

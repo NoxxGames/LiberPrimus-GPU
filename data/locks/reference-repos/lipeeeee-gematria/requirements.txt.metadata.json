@@ -1,0 +1,19 @@
+{
+  "file_size_bytes": 36,
+  "imported_as_dependency": false,
+  "local_path": "data/raw/reference-repos/lipeeeee-gematria/requirements.txt",
+  "locked_at_utc": "2026-05-16T03:20:01Z",
+  "notes": [
+    "Mirrored for Stage 1C provenance/reference only.",
+    "Raw file remains ignored by Git.",
+    "Do not import or copy external tooling code into production modules."
+  ],
+  "raw_file_committed": false,
+  "raw_url": "https://raw.githubusercontent.com/lipeeeee/gematria/master/requirements.txt",
+  "reference_only": true,
+  "repo": "lipeeeee/gematria",
+  "sha256": "65930deadf418c88a9b74f32c50d7690a54a8d4a009266ca51a4467ad3e786d6",
+  "source_id": "lipeeeee-gematria-requirements",
+  "source_kind": "tooling_reference_metadata",
+  "source_url": "https://github.com/lipeeeee/gematria/blob/master/requirements.txt"
+}

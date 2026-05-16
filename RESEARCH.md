@@ -89,3 +89,10 @@ Implemented baselines:
 - `An Instruction`: rotated reverse Gematria with declared `rotation=3`, distinct from the direct Stage 1A instruction fixture.
 
 The result is baseline reproduction only. It is not solve evidence for unsolved pages and does not activate the canonical corpus.
+## Stage 1C Explicit-Key Vigenere Fixtures
+
+Stage 1C reproduces two documented Vigenere known-solved baselines with explicit keys: `DIVINITY` and `FIRFUMFERENFE`.
+
+The mirrored `scream314/cicada3301` files provide method-reference provenance for keys and cleartext-F skip notes. The mirrored `lipeeeee/gematria` files are tooling references only and are not imported or copied.
+
+This stage proves fixture reproducibility for known material only. It does not solve new pages, activate a canonical corpus, finalize page boundaries, or add key search.

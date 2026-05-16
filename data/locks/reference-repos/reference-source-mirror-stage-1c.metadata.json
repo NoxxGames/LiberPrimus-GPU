@@ -1,0 +1,94 @@
+{
+  "code_copied": false,
+  "failed_files": [],
+  "files_attempted": 9,
+  "files_failed": 0,
+  "files_locked": 9,
+  "imported_as_dependency": false,
+  "locked_at_utc": "2026-05-16T03:20:01Z",
+  "locked_files": [
+    {
+      "file_size_bytes": 996,
+      "local_path": "data/raw/reference-repos/scream314-cicada3301/README.md",
+      "metadata_path": "data/locks/reference-repos/scream314-cicada3301/README.md.metadata.json",
+      "repo": "scream314/cicada3301",
+      "sha256": "e6c69c74fc778de9e409c3da241beb9e798e722acc4d1a4912fe4f15f18afa0a",
+      "source_id": "scream314-cicada3301-readme"
+    },
+    {
+      "file_size_bytes": 79441,
+      "local_path": "data/raw/reference-repos/scream314-cicada3301/pages_and_ciphers.md",
+      "metadata_path": "data/locks/reference-repos/scream314-cicada3301/pages_and_ciphers.md.metadata.json",
+      "repo": "scream314/cicada3301",
+      "sha256": "093a43424a06269500f3fc2dd0dd89f80bf40b04ef74843ef8cb46c7c0b3d9e6",
+      "source_id": "scream314-cicada3301-pages-and-ciphers"
+    },
+    {
+      "file_size_bytes": 597,
+      "local_path": "data/raw/reference-repos/scream314-cicada3301/gematria_primus.md",
+      "metadata_path": "data/locks/reference-repos/scream314-cicada3301/gematria_primus.md.metadata.json",
+      "repo": "scream314/cicada3301",
+      "sha256": "0ad96ad6fb9b9ad18c55cafd02c96f9fb0db9d31c1de6e00d2afb3acde28094f",
+      "source_id": "scream314-cicada3301-gematria-primus"
+    },
+    {
+      "file_size_bytes": 9616,
+      "local_path": "data/raw/reference-repos/lipeeeee-gematria/README.md",
+      "metadata_path": "data/locks/reference-repos/lipeeeee-gematria/README.md.metadata.json",
+      "repo": "lipeeeee/gematria",
+      "sha256": "517c1e4c1bbc7e30bec4aa1a005a8c55ac2678aea0f8f2d6c5f11e9a67107c26",
+      "source_id": "lipeeeee-gematria-readme"
+    },
+    {
+      "file_size_bytes": 1061,
+      "local_path": "data/raw/reference-repos/lipeeeee-gematria/LICENSE",
+      "metadata_path": "data/locks/reference-repos/lipeeeee-gematria/LICENSE.metadata.json",
+      "repo": "lipeeeee/gematria",
+      "sha256": "2e7a95b8ba63dc2f3031c4618400c547fac107a00c43918cde20028cabb54f6c",
+      "source_id": "lipeeeee-gematria-license"
+    },
+    {
+      "file_size_bytes": 329,
+      "local_path": "data/raw/reference-repos/lipeeeee-gematria/pyproject.toml",
+      "metadata_path": "data/locks/reference-repos/lipeeeee-gematria/pyproject.toml.metadata.json",
+      "repo": "lipeeeee/gematria",
+      "sha256": "da4774b2d9065cc44236b5816b54086f1701037ada3dea6b4aa154de405e5abe",
+      "source_id": "lipeeeee-gematria-pyproject"
+    },
+    {
+      "file_size_bytes": 36,
+      "local_path": "data/raw/reference-repos/lipeeeee-gematria/requirements.txt",
+      "metadata_path": "data/locks/reference-repos/lipeeeee-gematria/requirements.txt.metadata.json",
+      "repo": "lipeeeee/gematria",
+      "sha256": "65930deadf418c88a9b74f32c50d7690a54a8d4a009266ca51a4467ad3e786d6",
+      "source_id": "lipeeeee-gematria-requirements"
+    },
+    {
+      "file_size_bytes": 8609,
+      "local_path": "data/raw/reference-repos/lipeeeee-gematria/lib/gematria.py",
+      "metadata_path": "data/locks/reference-repos/lipeeeee-gematria/lib__gematria.py.metadata.json",
+      "repo": "lipeeeee/gematria",
+      "sha256": "0b27771ad3052239d8d2959caffc2ed3d54c0686cc1470861a453a04d141fea9",
+      "source_id": "lipeeeee-gematria-lib-gematria-py"
+    },
+    {
+      "file_size_bytes": 1427,
+      "local_path": "data/raw/reference-repos/lipeeeee-gematria/hash.py",
+      "metadata_path": "data/locks/reference-repos/lipeeeee-gematria/hash.py.metadata.json",
+      "repo": "lipeeeee/gematria",
+      "sha256": "55a9af92fcc0d64fa5af7c231436855daff13035087d0270fdd815e71c6cd624",
+      "source_id": "lipeeeee-gematria-hash-py"
+    }
+  ],
+  "mirror_id": "reference-source-mirror-stage-1c",
+  "notes": [
+    "Only explicitly listed files were mirrored; no repositories were cloned.",
+    "Mirrored files are raw reference/provenance sources only and are not committed.",
+    "lipeeeee/gematria is not imported as a dependency and code was not copied."
+  ],
+  "reference_only": true,
+  "repositories": [
+    "scream314/cicada3301",
+    "lipeeeee/gematria"
+  ]
+}

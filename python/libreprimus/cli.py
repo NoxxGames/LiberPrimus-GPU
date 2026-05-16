@@ -49,9 +49,11 @@ from libreprimus.solved_fixtures.fixture_loader import load_fixtures
 from libreprimus.solved_fixtures.reproduction import (
     reproduce_atbash_family_fixtures,
     reproduce_direct_translation_fixtures,
+    reproduce_vigenere_fixtures,
 )
 from libreprimus.solved_fixtures.summary import load_summary as load_fixture_summary
 from libreprimus.solved_fixtures.validation import validate_fixture_dir, validate_reproduction_results
+from libreprimus.reference_sources.summary import build_stage1c_reference_summary, write_stage1c_reference_outputs
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
 from libreprimus.transcript_sources.rtkd_master import parse_rtkd_master
 from libreprimus.transcript_sources.scream314_reference import parse_scream314_reference
@@ -65,6 +67,7 @@ corpus_alignment_app = typer.Typer(no_args_is_help=True)
 profile_app = typer.Typer(no_args_is_help=True)
 corpus_candidate_app = typer.Typer(no_args_is_help=True)
 solved_fixture_app = typer.Typer(no_args_is_help=True)
+reference_source_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -598,6 +601,9 @@ DEFAULT_DIRECT_FIXTURE_DIR = Path("data/fixtures/solved-pages/direct-translation
 DEFAULT_DIRECT_BASELINE_DIR = Path("data/normalized/solved-baselines/direct-translation-v0")
 DEFAULT_ATBASH_FIXTURE_DIR = Path("data/fixtures/solved-pages/atbash-family-v0")
 DEFAULT_ATBASH_BASELINE_DIR = Path("data/normalized/solved-baselines/atbash-family-v0")
+DEFAULT_VIGENERE_FIXTURE_DIR = Path("data/fixtures/solved-pages/vigenere-v0")
+DEFAULT_VIGENERE_BASELINE_DIR = Path("data/normalized/solved-baselines/vigenere-v0")
+DEFAULT_REFERENCE_SUMMARY_DIR = Path("data/normalized/reference-summaries/stage-1c")
 
 
 @profile_app.command("validate-gematria")
@@ -808,6 +814,53 @@ def stage0e_smoke(
 app.add_typer(corpus_candidate_app, name="corpus-candidate")
 
 
+@reference_source_app.command("extract-stage1c")
+def reference_source_extract_stage1c(
+    out_dir: Path = typer.Option(DEFAULT_REFERENCE_SUMMARY_DIR, "--out-dir", help="Generated reference summary directory."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite partial reference notes."),
+) -> None:
+    """Extract small Stage 1C reference-source summaries from mirrored raw files."""
+    output_dir = _resolve_output_path(out_dir)
+    payload = build_stage1c_reference_summary()
+    paths = write_stage1c_reference_outputs(output_dir, payload)
+    for name, path in paths.items():
+        console.print(f"{name}={path}")
+    summary = payload["summary"]
+    console.print(f"scream314_method_note_count={summary['scream314_method_note_count']}")
+    console.print(f"lipeeeee_tooling_note_count={summary['lipeeeee_tooling_note_count']}")
+    console.print(f"divinity_found={str(summary['divinity_found']).lower()}")
+    console.print(f"firfumferenfe_found={str(summary['firfumferenfe_found']).lower()}")
+    console.print(f"cleartext_f_skip_note_found={str(summary['cleartext_f_skip_note_found']).lower()}")
+    console.print(f"imported_as_dependency={str(summary['imported_as_dependency']).lower()}")
+    console.print(f"code_copied={str(summary['code_copied']).lower()}")
+    if not allow_warnings and not summary["scream314_method_note_count"]:
+        raise typer.Exit(1)
+
+
+@reference_source_app.command("summary")
+def reference_source_summary(
+    out_dir: Path = typer.Option(DEFAULT_REFERENCE_SUMMARY_DIR, "--out-dir", help="Generated reference summary directory."),
+) -> None:
+    """Print generated Stage 1C reference-source summary."""
+    summary_path = _resolve_output_path(out_dir) / "summary.json"
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    for key in [
+        "scream314_method_note_count",
+        "lipeeeee_tooling_note_count",
+        "divinity_found",
+        "firfumferenfe_found",
+        "cleartext_f_skip_note_found",
+        "reference_only",
+        "imported_as_dependency",
+        "code_copied",
+    ]:
+        value = summary.get(key)
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+
+
+app.add_typer(reference_source_app, name="reference-source")
+
+
 @solved_fixture_app.command("list")
 def solved_fixture_list(
     fixture_dir: Path = typer.Option(DEFAULT_DIRECT_FIXTURE_DIR, "--fixture-dir", help="Solved fixture directory."),
@@ -946,6 +999,54 @@ def solved_fixture_reproduce_atbash_family(
         raise typer.Exit(1)
 
 
+@solved_fixture_app.command("reproduce-vigenere")
+def solved_fixture_reproduce_vigenere(
+    fixture_dir: Path = typer.Option(DEFAULT_VIGENERE_FIXTURE_DIR, "--fixture-dir", help="Vigenere fixture directory."),
+    candidate_dir: Path = typer.Option(DEFAULT_CORPUS_CANDIDATE_DIR, "--candidate-dir", help="Generated corpus candidate directory."),
+    out_dir: Path = typer.Option(DEFAULT_VIGENERE_BASELINE_DIR, "--out-dir", help="Generated Vigenere solved baseline directory."),
+    allow_pending: bool = typer.Option(False, "--allow-pending", help="Return success with pending fixtures."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite reproduction warnings."),
+    require_all_pass: bool = typer.Option(False, "--require-all-pass", help="Require every fixture to pass."),
+) -> None:
+    """Reproduce explicit-key Vigenere solved-page fixtures."""
+    fixture_path = _resolve_output_path(fixture_dir)
+    candidate_path = _resolve_output_path(candidate_dir)
+    _ensure_candidate_dir(candidate_path, build_if_missing=False)
+    errors = validate_fixture_dir(fixture_path)
+    if errors:
+        for error in errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    records, summary, warnings = reproduce_vigenere_fixtures(
+        fixture_dir=fixture_path,
+        candidate_dir=candidate_path,
+    )
+    paths = write_reproduction_outputs(_resolve_output_path(out_dir), records, summary, warnings)
+    for name, path in paths.items():
+        console.print(f"{name}={path}")
+    console.print(f"fixture_count={summary.fixture_count}")
+    console.print(f"pass_count={summary.pass_count}")
+    console.print(f"fail_count={summary.fail_count}")
+    console.print(f"pending_count={summary.pending_count}")
+    console.print(f"skipped_count={summary.skipped_count}")
+    for record in records:
+        if record.method_family == "vigenere":
+            console.print(
+                f"{record.fixture_id}: key_text={record.key_text} "
+                f"key_indices={record.key_indices} skip_rule_applied_count={record.skip_rule_applied_count} "
+                f"status={record.match_status}"
+            )
+    console.print(f"elapsed_ms={summary.elapsed_ms}")
+    if summary.fail_count:
+        raise typer.Exit(1)
+    if require_all_pass and (summary.pending_count or summary.skipped_count):
+        raise typer.Exit(1)
+    if (summary.pending_count or summary.skipped_count) and not allow_pending:
+        raise typer.Exit(1)
+    if warnings and not allow_warnings:
+        raise typer.Exit(1)
+
+
 @solved_fixture_app.command("summary")
 def solved_fixture_summary(
     results_dir: Path = typer.Option(DEFAULT_DIRECT_BASELINE_DIR, "--results-dir", help="Generated solved baseline directory."),
@@ -1054,6 +1155,80 @@ def stage1b_smoke(
         },
     )
     console.print(f"stage1b_summary={combined_path}")
+
+
+@solved_fixture_app.command("stage1c-smoke")
+def stage1c_smoke(
+    direct_fixture_dir: Path = typer.Option(DEFAULT_DIRECT_FIXTURE_DIR, "--direct-fixture-dir", help="Direct fixture directory."),
+    atbash_fixture_dir: Path = typer.Option(DEFAULT_ATBASH_FIXTURE_DIR, "--atbash-fixture-dir", help="Atbash-family fixture directory."),
+    vigenere_fixture_dir: Path = typer.Option(DEFAULT_VIGENERE_FIXTURE_DIR, "--vigenere-fixture-dir", help="Vigenere fixture directory."),
+    candidate_dir: Path = typer.Option(DEFAULT_CORPUS_CANDIDATE_DIR, "--candidate-dir", help="Generated corpus candidate directory."),
+    direct_out_dir: Path = typer.Option(DEFAULT_DIRECT_BASELINE_DIR, "--direct-out-dir", help="Generated direct solved baseline directory."),
+    atbash_out_dir: Path = typer.Option(DEFAULT_ATBASH_BASELINE_DIR, "--atbash-out-dir", help="Generated Atbash-family solved baseline directory."),
+    vigenere_out_dir: Path = typer.Option(DEFAULT_VIGENERE_BASELINE_DIR, "--vigenere-out-dir", help="Generated Vigenere solved baseline directory."),
+    allow_pending: bool = typer.Option(False, "--allow-pending", help="Return success with pending fixtures."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+    require_all_pass: bool = typer.Option(False, "--require-all-pass", help="Require every fixture to pass."),
+) -> None:
+    """Run Stage 1C direct, Atbash-family, and Vigenere fixture reproduction."""
+    candidate_path = _resolve_output_path(candidate_dir)
+    _ensure_candidate_dir(candidate_path, build_if_missing=True)
+    solved_fixture_validate(fixture_dir=direct_fixture_dir)
+    solved_fixture_validate(fixture_dir=atbash_fixture_dir)
+    solved_fixture_validate(fixture_dir=vigenere_fixture_dir)
+    solved_fixture_reproduce_direct(
+        fixture_dir=direct_fixture_dir,
+        candidate_dir=candidate_path,
+        out_dir=direct_out_dir,
+        allow_pending=allow_pending,
+        allow_warnings=allow_warnings,
+        require_all_pass=require_all_pass,
+    )
+    solved_fixture_reproduce_atbash_family(
+        fixture_dir=atbash_fixture_dir,
+        candidate_dir=candidate_path,
+        out_dir=atbash_out_dir,
+        allow_pending=allow_pending,
+        allow_warnings=allow_warnings,
+        require_all_pass=require_all_pass,
+    )
+    solved_fixture_reproduce_vigenere(
+        fixture_dir=vigenere_fixture_dir,
+        candidate_dir=candidate_path,
+        out_dir=vigenere_out_dir,
+        allow_pending=allow_pending,
+        allow_warnings=allow_warnings,
+        require_all_pass=require_all_pass,
+    )
+    direct_errors = validate_reproduction_results(_resolve_output_path(direct_out_dir), allow_warnings=allow_warnings)
+    atbash_errors = validate_reproduction_results(_resolve_output_path(atbash_out_dir), allow_warnings=allow_warnings)
+    vigenere_errors = validate_reproduction_results(_resolve_output_path(vigenere_out_dir), allow_warnings=allow_warnings)
+    if direct_errors or atbash_errors or vigenere_errors:
+        for error in direct_errors + atbash_errors + vigenere_errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    direct_summary = load_fixture_summary(_resolve_output_path(direct_out_dir))
+    atbash_summary = load_fixture_summary(_resolve_output_path(atbash_out_dir))
+    vigenere_summary = load_fixture_summary(_resolve_output_path(vigenere_out_dir))
+    combined_path = repo_root() / "data/normalized/solved-baselines/stage1c-summary.json"
+    write_fixture_json(
+        combined_path,
+        {
+            "record_type": "stage1c_solved_fixture_summary",
+            "direct_fixture_count": direct_summary.get("fixture_count"),
+            "direct_pass_count": direct_summary.get("pass_count"),
+            "atbash_fixture_count": atbash_summary.get("fixture_count"),
+            "atbash_pass_count": atbash_summary.get("pass_count"),
+            "vigenere_fixture_count": vigenere_summary.get("fixture_count"),
+            "vigenere_pass_count": vigenere_summary.get("pass_count"),
+            "vigenere_fail_count": vigenere_summary.get("fail_count"),
+            "vigenere_pending_count": vigenere_summary.get("pending_count"),
+            "vigenere_skipped_count": vigenere_summary.get("skipped_count"),
+            "canonical_corpus_active": False,
+            "page_boundaries_final": False,
+        },
+    )
+    console.print(f"stage1c_summary={combined_path}")
 
 
 app.add_typer(solved_fixture_app, name="solved-fixture")

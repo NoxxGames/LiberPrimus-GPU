@@ -41,12 +41,13 @@ def _schema_path(name: str) -> Path:
     return repo_root() / "schemas/corpus" / name
 
 
-def _transform_params(payload: dict[str, Any], method_family: str) -> dict[str, Any]:
+def _transform_params(payload: dict[str, Any], method_family: str, transform_name: str | None = None) -> dict[str, Any]:
+    expected_name = transform_name or method_family
     for item in payload.get("transform_chain", []):
-        if isinstance(item, dict) and item.get("name") == method_family:
+        if isinstance(item, dict) and item.get("name") == expected_name:
             params = item.get("params", {})
             return dict(params) if isinstance(params, dict) else {}
-        if isinstance(item, str) and item == method_family:
+        if isinstance(item, str) and item == expected_name:
             return {}
     return {}
 
@@ -76,6 +77,14 @@ def validate_fixture_file(path: Path) -> list[str]:
     if method_family == "reverse_gematria" and payload.get("in_scope_for_stage"):
         if payload.get("direct_translation_expected") is not False:
             errors.append(f"{path.name}: reverse Gematria fixture must not be marked direct_translation_expected.")
+    if method_family == "vigenere" and payload.get("in_scope_for_stage"):
+        params = _transform_params(payload, "vigenere", "vigenere_explicit_key")
+        if not isinstance(params.get("key_text"), str) or not params.get("key_text"):
+            errors.append(f"{path.name}: vigenere fixture requires params.key_text.")
+        if params.get("direction") != "decrypt_subtract":
+            errors.append(f"{path.name}: vigenere fixture requires direction=decrypt_subtract.")
+        if not payload.get("method_reference_source_id") or not payload.get("method_reference_sha256"):
+            errors.append(f"{path.name}: vigenere fixture requires method-reference provenance.")
     if method_status.startswith("pending"):
         if expected is not None or expected_hash is not None:
             errors.append(f"{path.name}: pending fixture must not contain expected plaintext/hash.")

@@ -38,3 +38,6 @@ Direct fixture reproduction is CPU-only and fast. It is a correctness check befo
 Stage 1B Atbash-family reproduction is CPU-only and small. It does not use CUDA, and it should not be treated as a GPU benchmark.
 
 GPU acceleration remains future-facing for larger transform and scoring workloads after CPU references and parity tests exist.
+## Stage 1C Performance Scope
+
+Stage 1C explicit-key Vigenere reproduction is CPU-only and small. Timing fields in generated summaries are diagnostics, not benchmarks. CUDA is not used.

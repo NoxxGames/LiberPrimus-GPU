@@ -58,6 +58,12 @@ Stage 1B added reverse Gematria and rotated reverse Gematria known-solved fixtur
 
 Reproduce documented Vigenere solved pages with explicit locked-source keys and skip rules only where the locked references support them. Do not add key search.
 
+Stage 1C added reference-source locks and explicit-key Vigenere solved fixtures for `DIVINITY` and `FIRFUMFERENFE`. Direct and Atbash-family regressions still pass. No key search was added.
+
+## Phase 1D - p56 prime-minus-one / phi-prime reproduction
+
+Reproduce p56 An End only if locked references and fixture spans support the prime-minus-one / phi-prime method. Preserve payload checks and do not add search.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

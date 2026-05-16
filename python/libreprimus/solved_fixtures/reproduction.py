@@ -13,9 +13,11 @@ from libreprimus.solved_fixtures.direct_translation import decode_direct_transla
 from libreprimus.solved_fixtures.fixture_loader import load_fixtures
 from libreprimus.solved_fixtures.models import ReproductionRecord, ReproductionSummary
 from libreprimus.solved_fixtures.span_selection import select_tokens
+from libreprimus.solved_fixtures.vigenere import decode_vigenere_explicit_key
 
 DIRECT_FIXTURE_SET_ID = "direct-translation-v0"
 ATBASH_FIXTURE_SET_ID = "atbash-family-v0"
+VIGENERE_FIXTURE_SET_ID = "vigenere-v0"
 
 
 def _git_commit() -> str:
@@ -47,11 +49,15 @@ def reproduce_fixtures(
         separator_count = 0
         decoded_index_formula: str | None = None
         transform_parameters: dict[str, object] = {}
+        key_text: str | None = None
+        key_indices: list[int] = []
+        skip_rule_applied_count = 0
         record_warnings: list[str] = []
         supported_method = fixture.method_family in {
             "direct_translation",
             "reverse_gematria",
             "rotated_reverse_gematria",
+            "vigenere",
         }
         if not supported_method or not fixture.in_scope_for_stage:
             status = "pending" if fixture.method_status.startswith("pending") else "skipped"
@@ -67,13 +73,19 @@ def reproduce_fixtures(
                     decoded_index_formula = "decoded_index = cipher_index"
                     transform_parameters = {}
                 else:
-                    result = decode_atbash_family(
-                        tokens,
-                        method_family=fixture.method_family,
-                        transform_chain=fixture.transform_chain,
-                    )
+                    if fixture.method_family == "vigenere":
+                        result = decode_vigenere_explicit_key(tokens, transform_chain=fixture.transform_chain)
+                    else:
+                        result = decode_atbash_family(
+                            tokens,
+                            method_family=fixture.method_family,
+                            transform_chain=fixture.transform_chain,
+                        )
                     decoded_index_formula = str(result["decoded_index_formula"])
                     transform_parameters = dict(result["transform_parameters"])
+                    key_text = result.get("key_text") if isinstance(result.get("key_text"), str) else None
+                    key_indices = [int(item) for item in result.get("key_indices", [])]
+                    skip_rule_applied_count = int(result.get("skip_rule_applied_count", 0))
                 decoded_text = result["decoded_normalized_plaintext"]
                 decoded_hash = result["decoded_normalized_plaintext_sha256"]
                 rune_count = int(result["rune_count"])
@@ -101,6 +113,9 @@ def reproduce_fixtures(
                 transform_chain=fixture.transform_chain,
                 decoded_index_formula=decoded_index_formula,
                 transform_parameters=transform_parameters,
+                key_text=key_text,
+                key_indices=key_indices,
+                skip_rule_applied_count=skip_rule_applied_count,
                 span_selector=fixture.span_selector,
                 decoded_normalized_plaintext=decoded_text,
                 decoded_normalized_plaintext_sha256=decoded_hash,
@@ -162,4 +177,16 @@ def reproduce_atbash_family_fixtures(
         fixture_dir=fixture_dir,
         candidate_dir=candidate_dir,
         fixture_set_id=ATBASH_FIXTURE_SET_ID,
+    )
+
+
+def reproduce_vigenere_fixtures(
+    *,
+    fixture_dir: Path,
+    candidate_dir: Path,
+) -> tuple[list[ReproductionRecord], ReproductionSummary, list[str]]:
+    return reproduce_fixtures(
+        fixture_dir=fixture_dir,
+        candidate_dir=candidate_dir,
+        fixture_set_id=VIGENERE_FIXTURE_SET_ID,
     )

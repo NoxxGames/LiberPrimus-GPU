@@ -40,3 +40,8 @@ Solved fixtures are committed test expectations with source/profile hashes. They
 Reverse Gematria and rotated reverse Gematria fixtures are known-solved baselines. They use locked references and explicit spans from the generated corpus candidate, but they do not make the corpus canonical and do not prove any unsolved page.
 
 For rotated reverse fixtures, the rotation is declared in the fixture manifest. Stage 1B does not search rotations.
+## Stage 1C Reference Mirrors
+
+Stage 1C mirrors selected files from `scream314/cicada3301` and `lipeeeee/gematria` as reference/provenance sources only. Raw mirrored files stay ignored; committed lock metadata records URL, SHA-256, size, and reference-only policy.
+
+The `lipeeeee/gematria` mirror is not a dependency. The project does not copy its code into production modules.

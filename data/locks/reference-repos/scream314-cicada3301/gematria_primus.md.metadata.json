@@ -1,0 +1,19 @@
+{
+  "file_size_bytes": 597,
+  "imported_as_dependency": false,
+  "local_path": "data/raw/reference-repos/scream314-cicada3301/gematria_primus.md",
+  "locked_at_utc": "2026-05-16T03:20:01Z",
+  "notes": [
+    "Mirrored for Stage 1C provenance/reference only.",
+    "Raw file remains ignored by Git.",
+    "Do not import or copy external tooling code into production modules."
+  ],
+  "raw_file_committed": false,
+  "raw_url": "https://raw.githubusercontent.com/scream314/cicada3301/master/gematria_primus.md",
+  "reference_only": true,
+  "repo": "scream314/cicada3301",
+  "sha256": "0ad96ad6fb9b9ad18c55cafd02c96f9fb0db9d31c1de6e00d2afb3acde28094f",
+  "source_id": "scream314-cicada3301-gematria-primus",
+  "source_kind": "gematria_method_reference",
+  "source_url": "https://github.com/scream314/cicada3301/blob/master/gematria_primus.md"
+}

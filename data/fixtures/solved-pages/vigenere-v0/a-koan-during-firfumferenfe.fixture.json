@@ -1,0 +1,81 @@
+{
+  "canonical_corpus_active": false,
+  "corpus_candidate_id": "rtkd-master-v0-candidate",
+  "corpus_candidate_status": "generated_candidate_reviewable",
+  "direct_translation_expected": false,
+  "expected_known_caveats": [
+    "Normalized output uses Gematria profile preferred Latin labels, so V is represented as U and K as C.",
+    "The locked scream314 reference has spelling/line-break quirks; the expected text is the normalized profile-label decode for the declared span.",
+    "The cleartext-F pass-through positions are declared explicitly because not every cipher F is a cleartext F."
+  ],
+  "expected_normalized_plaintext": "A COAN. DURING A LESSON THE MASTER EXPLAINED THE I. THE I IS THE UOICE OF THE CIRCUMFERENCE HE SAID. WHEN ASCED BY A STUDENT TO EXPLAIN WHAT THAT MEANT THE MASTER SAID IT IS A UOICE INSIDE YOUR HEAD. I DONT HAUE A UOICE IN MY HEAD THOUGHT THE STUDENT AND HE RAISED HIS HAND TO TELL THE MASTER. THE MASTER STOP PED THE STUDENT AND SAID THE UOICE THAT JUST SAID YOU HAUE NO UOICE IN YOUR HEAD IS THE I. AND THE STUDENTS WERE ENLIGHTENED.",
+  "expected_normalized_plaintext_sha256": "05d763dea5efcfc30368409a2250338337c16de68f12e4e80888f61e00ff2461",
+  "expected_numeric_literal_count": 0,
+  "expected_rune_count": 319,
+  "expected_separator_policy": "profile_label_words_spaces_clause_period_line_join",
+  "fixture_id": "a-koan-during-firfumferenfe-vigenere",
+  "fixture_version": "vigenere-v0",
+  "gematria_profile_id": "gematria-primus-v0",
+  "gematria_profile_sha256": "93577209028c964523068b5975180e05bda5b1a07b2675d4e35d03d6d164c5c2",
+  "glyph_variant_profile_id": "glyph-variants-v0",
+  "glyph_variant_profile_sha256": "5acae61c4ea2aa9f2f2fb76bdcafb7ed9c6504bd98caf29590a95d7d43271d6d",
+  "in_scope_for_stage": true,
+  "method_family": "vigenere",
+  "method_reference_sha256": "093a43424a06269500f3fc2dd0dd89f80bf40b04ef74843ef8cb46c7c0b3d9e6",
+  "method_reference_source_id": "scream314-cicada3301-pages-and-ciphers",
+  "method_status": "passing_intended",
+  "notes": [
+    "Scream314 documents pages 14-15 with key FIRFUMFERENFE and the cleartext-F skip note.",
+    "This Stage 1C fixture uses explicit Stage 0E logical-line range 289..321 for the A Koan: During section.",
+    "Cleartext-F pass-through token indices are derived from the locked reference text and candidate span; no key search or inference is performed."
+  ],
+  "page_boundaries_final": false,
+  "record_type": "solved_page_fixture",
+  "separator_grammar_id": "rtkd-separator-grammar-v0",
+  "separator_grammar_sha256": "303f3062ad8b41bf84ab068f2fd6601b1efb3291872d53956669ea3dd7d88e3c",
+  "solved_reference_sha256": "0f7545d470f2056b45b5de2c8c116ecdea66969fdca6be57ccbd8e591e40ee92",
+  "solved_reference_source_id": "scream314-liber-primus-md",
+  "solved_section_aliases": [
+    "A Koan: During",
+    "14.jpg",
+    "15.jpg",
+    "FIRFUMFERENFE"
+  ],
+  "solved_section_title": "A Koan: During",
+  "source_transcript_id": "rtkd-master-transcription",
+  "source_transcript_sha256": "e21743ccd9a07f3845d52a329c61b9fa69e9ca6a44ee3ba0db8f28a0d7065004",
+  "span_selector": {
+    "end_logical_line_index": 321,
+    "end_token_index": null,
+    "notes": "Explicit logical-line range selected from Stage 0E candidate; page boundaries remain reviewable.",
+    "page_candidate_ids": [],
+    "selector_kind": "explicit_logical_line_range",
+    "source": "rtkd-master-v0-candidate",
+    "start_logical_line_index": 289,
+    "start_token_index": null
+  },
+  "span_status": "reviewable",
+  "transform_chain": [
+    {
+      "name": "vigenere_explicit_key",
+      "params": {
+        "advance_on": "enciphered_rune_tokens_only",
+        "direction": "decrypt_subtract",
+        "key_alphabet": "gematria-primus-v0",
+        "key_text": "FIRFUMFERENFE",
+        "skip_rule": {
+          "advance_key_on_skip": false,
+          "cleartext_pass_through_rune_indices": [
+            0
+          ],
+          "cleartext_pass_through_token_indices": [
+            3478,
+            3491
+          ],
+          "name": "cleartext_f_pass_through"
+        }
+      }
+    }
+  ],
+  "trusted_as_canonical": false
+}

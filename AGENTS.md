@@ -175,3 +175,17 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Generated Atbash-family reproduction outputs are ignored and must not be committed.
 - Passing Stage 1B does not activate canonical corpus.
 - Push after successful commit remains required when remote is verified.
+
+## Stage 1C Vigenere Fixture Rules
+
+- Mirrored reference repositories are reference/provenance sources only.
+- Do not commit mirrored raw reference files.
+- Do not import `lipeeeee/gematria` as a dependency.
+- Do not copy code from `lipeeeee/gematria` into production modules.
+- Vigenere fixtures are explicit-key known-solved baselines, not new solve claims.
+- Vigenere keys must be declared in fixture manifests.
+- Stage 1C must not infer or search keys.
+- Stage 1C must not use prime-stream logic.
+- Generated Vigenere reproduction outputs are ignored and must not be committed.
+- Passing Stage 1C does not activate canonical corpus.
+- Push after successful commit remains required when remote is verified.

@@ -1,0 +1,19 @@
+{
+  "file_size_bytes": 9616,
+  "imported_as_dependency": false,
+  "local_path": "data/raw/reference-repos/lipeeeee-gematria/README.md",
+  "locked_at_utc": "2026-05-16T03:20:01Z",
+  "notes": [
+    "Mirrored for Stage 1C provenance/reference only.",
+    "Raw file remains ignored by Git.",
+    "Do not import or copy external tooling code into production modules."
+  ],
+  "raw_file_committed": false,
+  "raw_url": "https://raw.githubusercontent.com/lipeeeee/gematria/master/README.md",
+  "reference_only": true,
+  "repo": "lipeeeee/gematria",
+  "sha256": "517c1e4c1bbc7e30bec4aa1a005a8c55ac2678aea0f8f2d6c5f11e9a67107c26",
+  "source_id": "lipeeeee-gematria-readme",
+  "source_kind": "tooling_reference_readme",
+  "source_url": "https://github.com/lipeeeee/gematria/blob/master/README.md"
+}

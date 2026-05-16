@@ -52,3 +52,6 @@ Stage 1A reproduction records elapsed milliseconds for fixture diagnostics only.
 Stage 1B reproduction timing is diagnostic only. It is not a GPU benchmark and must not be used to make hardware speed claims.
 
 The fixture transforms are CPU-only, deterministic, and small. CUDA benchmarking remains out of scope.
+## Stage 1C Timing Note
+
+Stage 1C reproduction timing is diagnostic only. It is CPU-only fixture validation, not a GPU benchmark and not a performance claim.

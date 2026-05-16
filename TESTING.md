@@ -89,3 +89,8 @@ Run:
 ```
 
 C++ tests are not required for Stage 1B unless C++ files change.
+## Stage 1C Tests
+
+Stage 1C tests cover reference mirroring metadata, reference-method extraction, explicit-key Vigenere key conversion, subtract decryption, key-advance rules, fixture-declared cleartext-F pass-through, fixture schema validation, synthetic reproduction, CLI commands, and real-source conditional reproduction.
+
+The Stage 1C smoke keeps Stage 1A direct and Stage 1B Atbash-family fixtures as regressions.

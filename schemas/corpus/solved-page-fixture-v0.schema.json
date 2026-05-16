@@ -29,6 +29,8 @@
         "unknown"
       ]
     },
+    "method_reference_sha256": { "type": "string" },
+    "method_reference_source_id": { "type": "string" },
     "method_status": { "type": "string" },
     "notes": { "type": "array" },
     "page_boundaries_final": { "const": false },

@@ -110,3 +110,18 @@ Stage 1B extends solved-page reproduction records with:
 - `method_family=rotated_reverse_gematria`
 
 All reproduction records must keep `trusted_as_canonical=false`, `canonical_corpus_active=false`, and `page_boundaries_final=false`. Atbash-family generated outputs are stored under ignored solved-baseline directories and must not be committed.
+## Stage 1C Reference And Vigenere Records
+
+Stage 1C adds generated reference summary records:
+
+- `reference_method_note`
+- `tooling_reference_note`
+- `stage1c_reference_source_summary`
+
+Stage 1C also extends `solved_page_reproduction_record` with Vigenere-specific fields:
+
+- `key_text`
+- `key_indices`
+- `skip_rule_applied_count`
+
+All reproduction records continue to require `trusted_as_canonical=false`, `canonical_corpus_active=false`, and `page_boundaries_final=false`.
