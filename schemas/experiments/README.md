@@ -3,3 +3,5 @@
 This directory contains committed schemas for manifest-driven experiment infrastructure.
 
 Stage 2E schemas describe exploratory CPU experiment manifests and dry-run plans only. They do not enable search execution, candidate generation, scoring, CUDA, canonical corpus activation, or page-boundary finalization.
+
+Stage 2F schemas describe bounded CPU execution for synthetic and solved-fixture-only inputs. They continue to block unsolved execution, search, candidate generation, scoring, CUDA, canonical corpus activation, and page-boundary finalization.

@@ -1,0 +1,106 @@
+{
+  "$id": "https://noxxgames.github.io/liberprimus-gpu/schemas/experiments/cpu-execution-plan-v0.schema.json",
+  "title": "cpu-execution-plan-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "plan_id",
+    "manifest_id",
+    "manifest_sha256",
+    "generated_at_utc",
+    "git_commit",
+    "execution_enabled",
+    "execution_scope",
+    "unsolved_execution_allowed",
+    "search_execution_enabled",
+    "candidate_generation_enabled",
+    "scoring_enabled",
+    "cuda_enabled",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "trusted_as_canonical",
+    "transform_summary",
+    "input_summary",
+    "safety_gate_results",
+    "output_paths",
+    "result_store_preview",
+    "warnings",
+    "elapsed_ms"
+  ],
+  "properties": {
+    "record_type": {
+      "const": "cpu_execution_plan"
+    },
+    "plan_id": {
+      "type": "string"
+    },
+    "manifest_id": {
+      "type": "string"
+    },
+    "manifest_sha256": {
+      "type": "string"
+    },
+    "generated_at_utc": {
+      "type": "string"
+    },
+    "git_commit": {
+      "type": "string"
+    },
+    "execution_enabled": {
+      "const": true
+    },
+    "execution_scope": {
+      "enum": [
+        "synthetic_only",
+        "solved_fixture_only",
+        "synthetic_and_solved_fixture_only"
+      ]
+    },
+    "unsolved_execution_allowed": {
+      "const": false
+    },
+    "search_execution_enabled": {
+      "const": false
+    },
+    "candidate_generation_enabled": {
+      "const": false
+    },
+    "scoring_enabled": {
+      "const": false
+    },
+    "cuda_enabled": {
+      "const": false
+    },
+    "canonical_corpus_active": {
+      "const": false
+    },
+    "page_boundaries_final": {
+      "const": false
+    },
+    "trusted_as_canonical": {
+      "const": false
+    },
+    "transform_summary": {
+      "type": "object"
+    },
+    "input_summary": {
+      "type": "object"
+    },
+    "safety_gate_results": {
+      "type": "array"
+    },
+    "output_paths": {
+      "type": "object"
+    },
+    "result_store_preview": {
+      "type": "object"
+    },
+    "warnings": {
+      "type": "array"
+    },
+    "elapsed_ms": {
+      "type": "number"
+    }
+  }
+}

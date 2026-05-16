@@ -59,3 +59,7 @@ For consistency hardening work, require `libreprimus consistency check-all`, res
 ## Stage 2E Guardrails
 
 For exploratory dry-run planner work, require `libreprimus experiment validate-exploratory`, `libreprimus experiment dry-run`, and the full consistency suite. Stage 2E may estimate bounded candidate counts, but it must not enumerate candidate plaintexts or execute unsolved-page searches.
+
+## Stage 2F Guardrails
+
+For bounded CPU execution work, require `libreprimus execution validate`, `libreprimus execution run`, and blocked unsolved manifest tests. Stage 2F may run synthetic and solved-fixture-only manifests, but it must not execute unsolved pages, search, candidate generation, scoring, CUDA, canonical corpus activation, or page-boundary finalization.

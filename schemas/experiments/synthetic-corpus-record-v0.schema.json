@@ -1,0 +1,53 @@
+{
+  "$id": "https://noxxgames.github.io/liberprimus-gpu/schemas/experiments/synthetic-corpus-record-v0.schema.json",
+  "title": "synthetic-corpus-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "synthetic_id",
+    "description",
+    "token_records",
+    "expected_plaintext",
+    "source_kind",
+    "safe_for_execution",
+    "contains_liber_primus_unsolved_text",
+    "trusted_as_canonical"
+  ],
+  "properties": {
+    "record_type": {
+      "const": "synthetic_corpus_record"
+    },
+    "synthetic_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "token_records": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "expected_plaintext": {
+      "type": "string"
+    },
+    "expected_plaintext_sha256": {
+      "type": "string"
+    },
+    "source_kind": {
+      "const": "synthetic"
+    },
+    "safe_for_execution": {
+      "const": true
+    },
+    "contains_liber_primus_unsolved_text": {
+      "const": false
+    },
+    "trusted_as_canonical": {
+      "const": false
+    }
+  }
+}

@@ -105,3 +105,15 @@ Run:
 ```
 
 This does not execute search, enumerate candidate plaintexts, score outputs, use CUDA, activate a canonical corpus, or finalize page boundaries.
+
+## Stage 2F Bounded CPU Execution
+
+Stage 2F adds CPU execution manifests and a bounded execution harness for synthetic and solved-fixture-only inputs.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli execution stage2f-run-all --manifest-dir experiments/manifests/cpu-execution --out-dir experiments/results/cpu-execution/stage2f --allow-warnings
+```
+
+The harness executes registered CPU reference transforms on synthetic records and records solved-fixture replay status. It rejects the committed blocked unsolved negative manifest and still does not run unsolved-page search, scoring, CUDA, canonical corpus activation, or page-boundary finalization.

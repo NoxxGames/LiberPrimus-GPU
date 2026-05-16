@@ -1,0 +1,41 @@
+record_type: cpu_execution_manifest
+manifest_id: stage2f-solved-baseline-replay
+manifest_version: v0
+description: Stage 2F solved-fixture-only replay through the execution harness.
+experiment_stage: stage2f
+execution_enabled: true
+execution_scope: solved_fixture_only
+unsolved_execution_allowed: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+corpus_slice:
+  slice_id: stage2f-solved-baseline-replay-slice
+  slice_kind: solved_fixture_group
+  solved_fixture_only: true
+  manifest_path: experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml
+  expected_fixture_count: 10
+  expected_pass_count: 10
+transform_plan:
+  transform_id: solved_baseline_replay
+  canonical_transform_id: solved_baseline_replay
+parameter_set: {}
+safety_gates:
+  - unsolved_execution_allowed_false
+  - search_scoring_cuda_false
+result_store_policy:
+  mode: preview_only
+output_policy:
+  output_dir: experiments/results/cpu-execution/stage2f
+  commit_outputs: false
+expected_output_policy:
+  require_match: true
+provenance:
+  stage: Stage 2F
+  source: solved_fixture_manifest
+notes:
+  - This is regression evidence only and does not claim any unsolved-page solve.

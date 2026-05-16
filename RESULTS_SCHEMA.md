@@ -187,4 +187,16 @@ Stage 2E adds committed schemas under `schemas/experiments/`:
 
 Generated `exploratory_dry_run_plan` records are ignored planning outputs under `experiments/results/exploratory-dry-runs/`. They are not candidate result rows and do not contain candidate plaintexts.
 
+## Stage 2F CPU Execution Schemas
+
+Stage 2F adds committed schemas under `schemas/experiments/`:
+
+- `cpu-execution-manifest-v0`
+- `cpu-execution-plan-v0`
+- `cpu-execution-result-v0`
+- `synthetic-corpus-record-v0`
+- `execution-safety-gate-v0`
+
+Generated `cpu_execution_plan`, `cpu_execution_result`, and execution summary records are ignored outputs under `experiments/results/cpu-execution/`. They are limited to synthetic and solved-fixture-only execution and require false search, candidate-generation, scoring, CUDA, canonical corpus, page-boundary, and canonical trust flags.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

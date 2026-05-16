@@ -39,6 +39,12 @@ Exploratory manifests additionally keep `execution_enabled=false`,
 `search_execution_enabled=false`, `candidate_generation_enabled=false`, and
 `dry_run_only=true`.
 
+CPU execution manifests may set `execution_enabled=true` only for synthetic or
+solved-fixture-only scopes. They still require
+`unsolved_execution_allowed=false`, `search_execution_enabled=false`,
+`candidate_generation_enabled=false`, `scoring_enabled=false`, and
+`cuda_enabled=false`.
+
 ## Generated Output Policy
 
 Manifest-runner, result-store, and consistency outputs stay under ignored

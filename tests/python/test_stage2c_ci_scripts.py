@@ -63,11 +63,13 @@ def test_ci_scripts_are_raw_data_free() -> None:
 
 
 def test_ci_scripts_do_not_write_generated_result_outputs() -> None:
+    allowed_stage2f_smoke_path = "experiments/results/cpu-execution/stage2f"
     for script in SCRIPT_DIR.glob("*"):
         if not script.is_file() or script.suffix not in {".ps1", ".sh"}:
             continue
         text = script.read_text(encoding="utf-8").lower()
-        assert "experiments/results" not in text
+        text_without_allowed_stage2f_smoke = text.replace(allowed_stage2f_smoke_path, "")
+        assert "experiments/results" not in text_without_allowed_stage2f_smoke
         assert "data/normalized" not in text
 
 

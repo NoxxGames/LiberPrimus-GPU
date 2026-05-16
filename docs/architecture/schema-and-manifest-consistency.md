@@ -21,6 +21,10 @@ manifests and preserve false search/CUDA/scoring flags. Exploratory manifests
 must validate as dry-run-only, preserve disabled execution flags, and keep
 candidate-count estimates within declared upper bounds.
 
+CPU execution manifests must validate as synthetic-only or solved-fixture-only
+execution, preserve disabled search/candidate-generation/scoring/CUDA flags, and
+keep the blocked unsolved negative manifest as an expected validation failure.
+
 ## Schema Consistency
 
 Schema files must parse as JSON, expected corpus/result/experiment schemas must

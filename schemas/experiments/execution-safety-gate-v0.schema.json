@@ -1,0 +1,43 @@
+{
+  "$id": "https://noxxgames.github.io/liberprimus-gpu/schemas/experiments/execution-safety-gate-v0.schema.json",
+  "title": "execution-safety-gate-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "gate_id",
+    "gate_name",
+    "required_value",
+    "actual_value",
+    "status",
+    "severity",
+    "message"
+  ],
+  "properties": {
+    "gate_id": {
+      "type": "string"
+    },
+    "gate_name": {
+      "type": "string"
+    },
+    "required_value": {},
+    "actual_value": {},
+    "status": {
+      "enum": [
+        "pass",
+        "fail",
+        "warning",
+        "skipped"
+      ]
+    },
+    "severity": {
+      "enum": [
+        "info",
+        "warning",
+        "error"
+      ]
+    },
+    "message": {
+      "type": "string"
+    }
+  }
+}

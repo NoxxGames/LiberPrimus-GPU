@@ -110,6 +110,12 @@ Stage 2E added exploratory schemas, dry-run-only manifests, candidate-count esti
 
 Design a bounded CPU experiment execution harness for synthetic and solved-fixture-only runs. Keep unsolved-page campaigns out of scope until dry-run gates, result-store policy, and review criteria remain stable.
 
+Stage 2F added CPU execution schemas, synthetic and solved-fixture-only manifests, a blocked unsolved negative manifest, safety gates, `libreprimus execution` CLI commands, generated ignored execution outputs, tests, and documentation. It does not authorize unsolved-page execution, search, scoring, CUDA, canonical corpus activation, or page-boundary finalization.
+
+## Stage 2G - First bounded CPU exploratory experiment proposal and approval workflow
+
+Prepare the first bounded CPU exploratory experiment proposal and approval workflow. Real unsolved-page execution still requires explicit human approval, pinned manifests, result-store policy, stop conditions, and review criteria before any run.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

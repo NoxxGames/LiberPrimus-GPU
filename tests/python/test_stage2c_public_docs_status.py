@@ -36,6 +36,7 @@ def test_readme_current_status_is_current() -> None:
     assert "Stage 2D" in current_status
     assert "Stage 2E" in current_status
     assert "Stage 2F" in current_status
+    assert "Stage 2G" in current_status
 
 
 def test_readme_top_level_status_is_not_stale() -> None:
@@ -54,8 +55,10 @@ def test_status_and_roadmap_are_current() -> None:
     assert "Stage 2C added GitHub Actions CI" in status
     assert "Stage 2D" in status
     assert "Stage 2E" in status
+    assert "Stage 2F" in status
     assert "## Stage 2D - CI-gated schema and docs hardening" in roadmap
     assert "## Stage 2E - CPU experiment manifest scaffold and dry-run planner" in roadmap
     assert "## Stage 2F - Synthetic and solved-fixture CPU execution harness design" in roadmap
+    assert "## Stage 2G - First bounded CPU exploratory experiment proposal" in roadmap
     assert "Stage 2A should build" not in roadmap
     assert "Stage 2B is the next milestone" not in roadmap

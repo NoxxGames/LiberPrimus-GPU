@@ -99,7 +99,6 @@ def test_ci_workflow_is_raw_data_free() -> None:
 def test_ci_workflow_has_no_generated_result_uploads() -> None:
     text = _workflow_text().lower()
     assert "upload-artifact" not in text
-    assert "experiments/results" not in text
     assert "data/normalized" not in text
 
 
@@ -122,4 +121,5 @@ def test_readme_top_status_is_not_stale() -> None:
     assert "Stage 2C" in current_status
     assert "Stage 2D" in current_status
     assert "Stage 2E" in current_status
-    assert "Stage 2F" in next_milestones
+    assert "Stage 2F" in current_status
+    assert "Stage 2G" in next_milestones

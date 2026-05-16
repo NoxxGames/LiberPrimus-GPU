@@ -80,7 +80,8 @@ def assert_readme(text: str, source: str) -> None:
         "No Liber Primus page is claimed solved",
         "Search/scoring/CUDA campaigns: not started",
         "Stage 2E: CPU exploratory experiment manifest scaffold and dry-run planner complete.",
-        "Stage 2F bounded CPU experiment execution harness design",
+        "Stage 2F: bounded CPU execution harness for synthetic and solved-fixture-only runs complete.",
+        "Stage 2G first bounded CPU exploratory experiment proposal",
     ]
     for item in required:
         if item not in text:

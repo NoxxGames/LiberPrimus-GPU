@@ -1,0 +1,41 @@
+record_type: cpu_execution_manifest
+manifest_id: stage2f-blocked-unsolved-example
+manifest_version: v0
+description: Negative-control manifest proving unsolved execution is blocked.
+experiment_stage: stage2f
+expected_validation_status: fail
+execution_enabled: true
+execution_scope: synthetic_only
+unsolved_execution_allowed: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+corpus_slice:
+  slice_id: stage2f-blocked-unsolved-slice
+  slice_kind: future_unsolved_page_candidate
+  review_required: true
+  solved_fixture_only: false
+  notes:
+    - This intentionally contains no real unsolved text.
+transform_plan:
+  transform_id: direct_translation
+  canonical_transform_id: direct_translation
+parameter_set: {}
+safety_gates:
+  - unsolved_execution_block
+result_store_policy:
+  mode: preview_only
+output_policy:
+  output_dir: experiments/results/cpu-execution/stage2f
+  commit_outputs: false
+expected_output_policy:
+  require_match: false
+provenance:
+  stage: Stage 2F
+  source: negative_control
+notes:
+  - This manifest must fail validation and must never execute.

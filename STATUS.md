@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2E CPU exploratory experiment manifests and dry-run planner are complete.
+Stage 2F bounded CPU execution harness for synthetic and solved-fixture-only runs is complete.
 
 ## Completed in Stage 0A
 
@@ -162,6 +162,14 @@ Dry-run summary: direct `1`, Caesar preview `29`, affine mod-29 preview `812`, V
 
 Developer log: `docs/development-logs/2026-05-16-stage-2e-cpu-exploratory-dry-run-planner.md`.
 
+## Completed in Stage 2F
+
+Stage 2F added CPU execution schemas, safe synthetic execution manifests, a solved-fixture replay manifest, a blocked unsolved negative manifest, safety gates, generated execution output support, and `libreprimus execution` CLI commands.
+
+Execution is restricted to synthetic and solved-fixture-only scopes. Unsolved-page execution, search, candidate generation, scoring, CUDA, canonical corpus activation, and page-boundary finalization remain prohibited.
+
+Developer log: `docs/development-logs/2026-05-16-stage-2f-bounded-cpu-execution-harness.md`.
+
 ## Next prompt recommendation
 
-Stage 2F - design a bounded CPU experiment execution harness for synthetic and solved-fixture-only runs, still prohibiting unsolved-page campaigns.
+Stage 2G - prepare the first bounded CPU exploratory experiment proposal and approval workflow, still requiring explicit human approval before any real unsolved-page execution.

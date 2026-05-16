@@ -24,6 +24,13 @@ try {
 
     Write-Host "Dry-running Stage 2E Caesar preview to temp"
     & $Python -m libreprimus.cli experiment dry-run --manifest experiments/manifests/exploratory/stage2e-caesar-preview-dry-run.yaml --out-dir (Join-Path $TempDir "stage2e-dry-run") --allow-warnings
+
+    Write-Host "Validating Stage 2F CPU execution manifests"
+    & $Python -m libreprimus.cli execution validate --manifest experiments/manifests/cpu-execution/stage2f-synthetic-direct-execution.yaml
+    & $Python -m libreprimus.cli execution validate --manifest experiments/manifests/cpu-execution/stage2f-solved-baseline-replay.yaml
+
+    Write-Host "Running Stage 2F synthetic direct execution"
+    & $Python -m libreprimus.cli execution run --manifest experiments/manifests/cpu-execution/stage2f-synthetic-direct-execution.yaml --out-dir experiments/results/cpu-execution/stage2f --allow-warnings
 } finally {
     if (Test-Path $TempDir) {
         Remove-Item -LiteralPath $TempDir -Recurse -Force

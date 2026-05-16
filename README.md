@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 2E and the work that must stay staged, reviewable, and reproducible before larger experiments begin. CUDA/search/scoring are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 2F and the work that must stay staged, reviewable, and reproducible before larger experiments begin. CUDA/search/scoring are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -44,6 +44,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Raw-data-free GitHub Actions CI.
 - CI-gated consistency checks.
 - CPU exploratory experiment dry-run planner.
+- Bounded CPU execution harness for synthetic and solved-fixture-only runs.
 
 ## Architecture summary
 
@@ -58,12 +59,13 @@ Current status:
 - Stage 2C: raw-data-free GitHub Actions CI complete and lock-hash hardened.
 - Stage 2D: CI-gated schema/docs consistency and manifest/result-store hardening complete.
 - Stage 2E: CPU exploratory experiment manifest scaffold and dry-run planner complete.
+- Stage 2F: bounded CPU execution harness for synthetic and solved-fixture-only runs complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Search/scoring/CUDA campaigns: not started.
-- Next: Stage 2F bounded CPU experiment execution harness design for synthetic and solved-fixture-only runs.
+- Next: Stage 2G first bounded CPU exploratory experiment proposal and approval workflow.
 
 ## CI status
 
@@ -190,7 +192,7 @@ Current tests cover the C++ skeleton, Python package, manifests, schemas, result
 
 ## Next milestones
 
-Stage 2F should design a bounded CPU experiment execution harness for synthetic and solved-fixture-only runs. It still must prohibit unsolved-page campaigns, scoring campaigns, CUDA work, canonical corpus activation, and page-boundary finalization.
+Stage 2G should prepare the first bounded CPU exploratory experiment proposal and approval workflow. It still must require explicit human approval before any real unsolved-page execution and must keep scoring campaigns, CUDA work, canonical corpus activation, and page-boundary finalization out of scope.
 
 ## Stage 1B Atbash-Family Fixtures
 

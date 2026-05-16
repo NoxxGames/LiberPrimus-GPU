@@ -68,6 +68,14 @@ jobs:
             --out-dir "${RUNNER_TEMP}/stage2e-dry-run" \
             --allow-warnings
 
+      - name: Bounded CPU execution smoke
+        run: |
+          python -m libreprimus.cli execution validate --manifest experiments/manifests/cpu-execution/stage2f-synthetic-direct-execution.yaml
+          python -m libreprimus.cli execution run \
+            --manifest experiments/manifests/cpu-execution/stage2f-synthetic-direct-execution.yaml \
+            --out-dir experiments/results/cpu-execution/stage2f \
+            --allow-warnings
+
   cmake-cpu-smoke:
     name: CMake CPU Smoke
     runs-on: ubuntu-latest

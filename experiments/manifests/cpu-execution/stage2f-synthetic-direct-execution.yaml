@@ -1,0 +1,64 @@
+record_type: cpu_execution_manifest
+manifest_id: stage2f-synthetic-direct-execution
+manifest_version: v0
+description: Stage 2F safe synthetic direct-translation CPU execution.
+experiment_stage: stage2f
+execution_enabled: true
+execution_scope: synthetic_only
+unsolved_execution_allowed: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+corpus_slice:
+  slice_id: stage2f-synthetic-direct-slice
+  slice_kind: synthetic
+  solved_fixture_only: false
+transform_plan:
+  transform_id: direct_translation
+  canonical_transform_id: direct_translation
+parameter_set: {}
+synthetic_corpus_record:
+  record_type: synthetic_corpus_record
+  synthetic_id: stage2f-synthetic-direct-abc
+  description: Synthetic ABC direct-translation token record.
+  token_records:
+    - token_kind: rune
+      token_index_global: 0
+      logical_line_index: 0
+      latin_label: A
+      index29: 24
+    - token_kind: rune
+      token_index_global: 1
+      logical_line_index: 0
+      latin_label: B
+      index29: 17
+    - token_kind: rune
+      token_index_global: 2
+      logical_line_index: 0
+      latin_label: C
+      index29: 5
+  expected_plaintext: ABC
+  expected_plaintext_sha256: b5d4045c3f466fa91fe2cc6abe79232a1a57cdf104f7a26e716e0a1e2789df78
+  source_kind: synthetic
+  safe_for_execution: true
+  contains_liber_primus_unsolved_text: false
+  trusted_as_canonical: false
+safety_gates:
+  - unsolved_execution_allowed_false
+  - search_scoring_cuda_false
+result_store_policy:
+  mode: preview_only
+output_policy:
+  output_dir: experiments/results/cpu-execution/stage2f
+  commit_outputs: false
+expected_output_policy:
+  require_match: true
+provenance:
+  stage: Stage 2F
+  source: synthetic
+notes:
+  - Synthetic execution is not evidence for any unsolved page.

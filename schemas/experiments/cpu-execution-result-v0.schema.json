@@ -1,0 +1,123 @@
+{
+  "$id": "https://noxxgames.github.io/liberprimus-gpu/schemas/experiments/cpu-execution-result-v0.schema.json",
+  "title": "cpu-execution-result-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "result_id",
+    "plan_id",
+    "manifest_id",
+    "manifest_sha256",
+    "generated_at_utc",
+    "git_commit",
+    "execution_scope",
+    "transform_id",
+    "canonical_transform_id",
+    "input_id",
+    "output_normalized_text",
+    "output_sha256",
+    "expected_output_sha256",
+    "match_status",
+    "search_performed",
+    "candidate_generation_performed",
+    "scoring_used",
+    "cuda_used",
+    "unsolved_execution_allowed",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "trusted_as_canonical",
+    "warnings",
+    "elapsed_ms"
+  ],
+  "properties": {
+    "record_type": {
+      "const": "cpu_execution_result"
+    },
+    "result_id": {
+      "type": "string"
+    },
+    "plan_id": {
+      "type": "string"
+    },
+    "manifest_id": {
+      "type": "string"
+    },
+    "manifest_sha256": {
+      "type": "string"
+    },
+    "generated_at_utc": {
+      "type": "string"
+    },
+    "git_commit": {
+      "type": "string"
+    },
+    "execution_scope": {
+      "enum": [
+        "synthetic_only",
+        "solved_fixture_only",
+        "synthetic_and_solved_fixture_only"
+      ]
+    },
+    "transform_id": {
+      "type": "string"
+    },
+    "canonical_transform_id": {
+      "type": "string"
+    },
+    "input_id": {
+      "type": "string"
+    },
+    "output_normalized_text": {
+      "type": "string"
+    },
+    "output_sha256": {
+      "type": "string"
+    },
+    "expected_output_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "match_status": {
+      "enum": [
+        "pass",
+        "fail",
+        "pending",
+        "skipped",
+        "error"
+      ]
+    },
+    "search_performed": {
+      "const": false
+    },
+    "candidate_generation_performed": {
+      "const": false
+    },
+    "scoring_used": {
+      "const": false
+    },
+    "cuda_used": {
+      "const": false
+    },
+    "unsolved_execution_allowed": {
+      "const": false
+    },
+    "canonical_corpus_active": {
+      "const": false
+    },
+    "page_boundaries_final": {
+      "const": false
+    },
+    "trusted_as_canonical": {
+      "const": false
+    },
+    "warnings": {
+      "type": "array"
+    },
+    "elapsed_ms": {
+      "type": "number"
+    }
+  }
+}

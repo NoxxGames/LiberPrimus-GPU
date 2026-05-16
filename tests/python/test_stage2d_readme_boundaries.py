@@ -55,7 +55,8 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "CUDA experiment campaigns: not started." in section
     assert "Search/scoring/CUDA campaigns: not started." in readme
     assert "Stage 2E: CPU exploratory experiment manifest scaffold and dry-run planner complete." in readme
-    assert "Stage 2F bounded CPU experiment execution harness design" in readme
+    assert "Stage 2F: bounded CPU execution harness for synthetic and solved-fixture-only runs complete." in readme
+    assert "Stage 2G first bounded CPU exploratory experiment proposal" in readme
 
 
 def test_readme_does_not_imply_deferred_work_is_permanently_excluded() -> None:

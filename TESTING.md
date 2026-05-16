@@ -147,4 +147,10 @@ Stage 2E adds tests for exploratory schemas, candidate-count estimators, safety 
 
 The tests assert that dry-run plans preserve disabled execution/search/candidate-generation/scoring/CUDA flags and do not include candidate plaintext fields.
 
+## Stage 2F Bounded CPU Execution Tests
+
+Stage 2F adds tests for CPU execution schemas, safety gates, synthetic execution, solved-fixture replay, blocked unsolved execution, CLI behavior, and committed manifest files.
+
+The tests assert that synthetic direct, reverse, rotated reverse, Vigenere, and prime-stream examples pass; the blocked unsolved manifest fails; and search, candidate generation, scoring, and CUDA remain disabled.
+
 The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.

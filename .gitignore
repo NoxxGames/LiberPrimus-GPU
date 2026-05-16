@@ -65,6 +65,11 @@ experiments/results/**
 !experiments/results/exploratory-dry-runs/.gitkeep
 !experiments/results/exploratory-dry-runs/stage2e/
 !experiments/results/exploratory-dry-runs/stage2e/.gitkeep
+!experiments/results/cpu-execution/
+!experiments/results/cpu-execution/README.md
+!experiments/results/cpu-execution/.gitkeep
+!experiments/results/cpu-execution/stage2f/
+!experiments/results/cpu-execution/stage2f/.gitkeep
 experiments/reports/**
 !experiments/reports/
 !experiments/reports/README.md

@@ -268,6 +268,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Generated exploratory dry-run outputs are ignored and must not be committed.
 - Stage 2E does not activate canonical corpus or finalize page boundaries.
 
+## Stage 2F Bounded CPU Execution Rules
+
+- Stage 2F execution is limited to synthetic and solved-fixture-only scopes.
+- Unsolved-page execution remains prohibited.
+- `search_execution_enabled`, `candidate_generation_enabled`, `scoring_enabled`, and `cuda_enabled` must remain false.
+- Do not convert dry-run exploratory manifests into real unsolved-page campaigns.
+- Generated CPU execution outputs are ignored and must not be committed.
+- Stage 2F does not activate canonical corpus or finalize page boundaries.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

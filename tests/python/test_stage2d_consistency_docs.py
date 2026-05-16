@@ -15,13 +15,22 @@ def _write_docs(tmp_path: Path, *, readme_extra: str = "", catalog_extra: str = 
         "# Title\n\n"
         "No Liber Primus page is claimed solved.\n\n"
         "## Current status\n\n"
-        "Stage 2B complete. Stage 2C complete. Stage 2E complete. Next Stage 2F.\n"
+        "Stage 2B complete. Stage 2C complete. Stage 2E complete. "
+        "Stage 2F complete. Next Stage 2G.\n"
         + ("Line\n" * 60)
         + readme_extra,
         encoding="utf-8",
     )
-    status.write_text("# Status\n\nStage 2D current. Stage 2E complete.\n" + ("Line\n" * 30), encoding="utf-8")
-    roadmap.write_text("# Roadmap\n\nStage 2D next. Stage 2E complete.\n" + ("Line\n" * 30), encoding="utf-8")
+    status.write_text(
+        "# Status\n\nStage 2D current. Stage 2E complete. Stage 2F complete.\n"
+        + ("Line\n" * 30),
+        encoding="utf-8",
+    )
+    roadmap.write_text(
+        "# Roadmap\n\nStage 2D next. Stage 2E complete. Stage 2F complete.\n"
+        + ("Line\n" * 30),
+        encoding="utf-8",
+    )
     agents.write_text(
         "data/raw/ generated outputs canonical corpus Push after successful commit raw-data-free",
         encoding="utf-8",

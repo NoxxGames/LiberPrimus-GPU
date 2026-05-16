@@ -47,6 +47,9 @@ not require generated local result-store outputs.
 Stage 2E also validates exploratory dry-run manifests and runs a Caesar preview
 dry run into a temporary CI directory.
 
+Stage 2F validates CPU execution manifests and runs a synthetic direct execution
+smoke into an ignored generated output directory.
+
 ## Raw-Data-Free Policy
 
 The suite checks ignored raw paths, but it does not read or require local raw

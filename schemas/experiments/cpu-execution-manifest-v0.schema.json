@@ -1,0 +1,118 @@
+{
+  "$id": "https://noxxgames.github.io/liberprimus-gpu/schemas/experiments/cpu-execution-manifest-v0.schema.json",
+  "title": "cpu-execution-manifest-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "manifest_id",
+    "manifest_version",
+    "description",
+    "experiment_stage",
+    "execution_enabled",
+    "execution_scope",
+    "unsolved_execution_allowed",
+    "search_execution_enabled",
+    "candidate_generation_enabled",
+    "scoring_enabled",
+    "cuda_enabled",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "trusted_as_canonical",
+    "corpus_slice",
+    "transform_plan",
+    "parameter_set",
+    "safety_gates",
+    "result_store_policy",
+    "output_policy",
+    "expected_output_policy",
+    "provenance",
+    "notes"
+  ],
+  "properties": {
+    "record_type": {
+      "const": "cpu_execution_manifest"
+    },
+    "manifest_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "experiment_stage": {
+      "const": "stage2f"
+    },
+    "execution_enabled": {
+      "const": true
+    },
+    "execution_scope": {
+      "enum": [
+        "synthetic_only",
+        "solved_fixture_only",
+        "synthetic_and_solved_fixture_only"
+      ]
+    },
+    "unsolved_execution_allowed": {
+      "const": false
+    },
+    "search_execution_enabled": {
+      "const": false
+    },
+    "candidate_generation_enabled": {
+      "const": false
+    },
+    "scoring_enabled": {
+      "const": false
+    },
+    "cuda_enabled": {
+      "const": false
+    },
+    "canonical_corpus_active": {
+      "const": false
+    },
+    "page_boundaries_final": {
+      "const": false
+    },
+    "trusted_as_canonical": {
+      "const": false
+    },
+    "corpus_slice": {
+      "type": "object"
+    },
+    "transform_plan": {
+      "type": "object"
+    },
+    "parameter_set": {
+      "type": "object"
+    },
+    "safety_gates": {
+      "type": "array"
+    },
+    "result_store_policy": {
+      "type": "object"
+    },
+    "output_policy": {
+      "type": "object"
+    },
+    "expected_output_policy": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "notes": {
+      "type": "array"
+    },
+    "expected_validation_status": {
+      "enum": [
+        "pass",
+        "fail"
+      ]
+    }
+  }
+}
