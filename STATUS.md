@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2B experiment result-store and run-record foundation complete.
+Stage 2C GitHub Actions CI and local CI reproduction scripts complete.
 
 ## Completed in Stage 0A
 
@@ -130,6 +130,16 @@ Imported solved-baseline run summary: pass/fail/pending/skipped `10/0/0/0`, sear
 
 Developer log: `docs/development-logs/2026-05-16-stage-2b-result-store-foundation.md`.
 
+## Completed in Stage 2C
+
+Stage 2C added GitHub Actions CI and local reproduction scripts.
+
+CI summary: workflow `.github/workflows/ci.yml`, Python 3.12 job with Ruff, pytest, Python smoke, transform-registry validation, solved-baseline manifest validation, and result-store manifest validation. CPU-only CMake smoke job is included with `LPGPU_ENABLE_CUDA=OFF`.
+
+Policy summary: CI is raw-data-free, CUDA-free, secret-free, and does not upload generated corpus or result artifacts by default.
+
+Developer log: `docs/development-logs/2026-05-16-stage-2c-github-actions-ci.md`.
+
 ## Next prompt recommendation
 
-Stage 2C - add GitHub Actions CI for Python tests, ruff, schema validation, and CPU-only smoke commands, while keeping raw data and generated outputs excluded.
+Stage 2D - add CI-gated schema/docs consistency checks and harden manifest/result-store validation before first bounded CPU exploratory experiment scaffolding.

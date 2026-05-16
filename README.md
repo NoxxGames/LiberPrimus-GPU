@@ -1,5 +1,7 @@
 # liberprimus-gpu
 
+[![CI](https://github.com/NoxxGames/LiberPrimus-GPU/actions/workflows/ci.yml/badge.svg)](https://github.com/NoxxGames/LiberPrimus-GPU/actions/workflows/ci.yml)
+
 ## Mission
 
 `liberprimus-gpu` is a research workbench for future CUDA-accelerated Liber Primus cryptanalysis experiments. Stage 0A creates the repository structure, documentation, build system, smoke tests, and toolchain checks needed before any serious corpus work or cipher implementation begins.
@@ -18,7 +20,7 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 
 ## Current status
 
-Stage 2B experiment result-store and run-record foundation is complete. Stage 2A provides the CPU transform registry and manifest-addressable solved-baseline runner, and Stage 2B imports that solved-baseline run into generated JSONL and SQLite result stores. Direct fixtures `4/0/0/0`, Atbash-family fixtures `3/0/0/0`, Vigenere fixtures `2/0/0/0`, and prime-stream fixtures `1/0/0/0` pass/fail/pending/skipped, for `10` total known solved baselines reproduced through the registry path. No canonical corpus is active, page boundaries remain reviewable, no unsolved page is claimed solved, and no CUDA/search/scoring campaign is implemented. Next milestone: Stage 2C documentation/CI hardening or safe CPU experiment-manifest scaffolding after result-store validation.
+Stage 2C GitHub Actions CI and local CI reproduction scripts are complete. Stage 2A provides the CPU transform registry and manifest-addressable solved-baseline runner, Stage 2B imports that solved-baseline run into generated JSONL and SQLite result stores, and Stage 2C validates Python tests, Ruff, schema/manifest checks, and CPU-only smoke commands in CI. Direct fixtures `4/0/0/0`, Atbash-family fixtures `3/0/0/0`, Vigenere fixtures `2/0/0/0`, and prime-stream fixtures `1/0/0/0` pass/fail/pending/skipped, for `10` total known solved baselines reproduced through the registry path. No canonical corpus is active, page boundaries remain reviewable, no unsolved page is claimed solved, and no CUDA/search/scoring campaign is implemented. Next milestone: Stage 2D CI-gated schema/docs consistency checks and manifest/result-store hardening before bounded CPU experiment scaffolding.
 
 ## Tutorials
 
@@ -107,6 +109,13 @@ Stage 2B result-store smoke:
 .\.venv\Scripts\python.exe -m libreprimus.cli result-store stage2b-smoke --solved-baseline-manifest experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml --result-store-manifest experiments/manifests/result-store/stage2b-solved-baseline-import.yaml --solved-baseline-out-dir experiments/results/solved-baselines/stage2a --result-store-out-dir experiments/results/result-store/stage2b --replace --allow-warnings
 ```
 
+Local Stage 2C CI reproduction:
+
+```powershell
+.\scripts\ci\run-python-ci.ps1
+.\scripts\ci\run-schema-manifest-checks.ps1
+```
+
 ## Repository map
 
 - `src/`: C++20 native scaffold.
@@ -134,7 +143,7 @@ Stage 0A requires smoke tests for the C++ skeleton and Python package. Future CU
 
 ## Next milestones
 
-Stage 2C should harden CI and/or add safe CPU experiment-manifest scaffolding on top of the Stage 2B result-store foundation, without starting unsolved-page search campaigns.
+Stage 2D should add CI-gated schema/docs consistency checks and harden manifest/result-store validation before any bounded CPU exploratory experiment scaffolding. Do not jump directly to CUDA or unsolved-page search campaigns.
 
 ## Stage 1B Atbash-Family Fixtures
 
@@ -163,3 +172,7 @@ Stage 1D adds p56 `An End` known-solved reproduction using a CPU-only `prime_min
 ## Stage 2B Result Store
 
 Stage 2B adds generated JSONL and SQLite result stores for solved-baseline regression imports. Run records preserve manifest SHA-256, registry SHA-256, git commit, profile/source provenance, and explicit false flags for canonical corpus activation, page-boundary finalization, search, scoring, CUDA, and canonical trust. Generated result-store outputs under `experiments/results/result-store/` remain ignored and are not publication artifacts.
+
+## Stage 2C CI
+
+Stage 2C adds `.github/workflows/ci.yml` plus local scripts under `scripts/ci/`. CI is raw-data-free, CUDA-free, secret-free, and does not upload generated corpus or result artifacts by default. The Python job runs Ruff, pytest, package smoke, transform-registry validation, solved-baseline manifest validation, and result-store manifest validation.

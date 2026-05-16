@@ -45,3 +45,9 @@ Prompts should state that manifest-addressable solved baselines are regression r
 For result-store work, require JSONL and SQLite outputs to stay under ignored result directories. Require schemas, provenance capture, generated-artifact records, validation commands, and a developer log before commit.
 
 Prompts should state that solved-baseline imports are regression evidence only, not unsolved-page experiments, and that search, scoring, CUDA, canonical corpus activation, and page-boundary finalization remain disabled.
+
+## Stage 2C Guardrails
+
+For CI work, require `.github/workflows/ci.yml`, local reproduction scripts, static workflow tests, docs, and a developer log. CI must stay raw-data-free, CUDA-free, secret-free, and must not upload generated corpus or result artifacts by default.
+
+Do not weaken CI by removing tests or conditional real-source skip checks just to get a green run.

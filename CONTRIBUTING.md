@@ -18,6 +18,13 @@ Follow existing module boundaries and keep behavior small, testable, and documen
 
 Run CTest and pytest when the relevant toolchains are available. CUDA changes require parity tests.
 
+For Stage 2C and later, run the local CI reproduction scripts when touching Python, schema, manifest, or workflow files:
+
+```powershell
+.\scripts\ci\run-python-ci.ps1
+.\scripts\ci\run-schema-manifest-checks.ps1
+```
+
 ## Documentation expectations
 
 Update policy documents when behavior, data handling, or experiment rules change.
@@ -44,5 +51,6 @@ Generated results belong under ignored output locations and must not be committe
 
 - Scope is limited and documented.
 - Tests pass or skipped toolchains are explained.
+- GitHub Actions CI remains raw-data-free, CUDA-free, secret-free, and free of default artifact uploads.
 - No generated outputs, caches, raw data, installers, logs, or databases are staged.
 - Manifest and provenance requirements are preserved.

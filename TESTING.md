@@ -112,3 +112,16 @@ The Stage 2A smoke reproduces 10 known solved fixtures through registry dispatch
 Stage 2B tests cover result-store JSON schemas, JSONL sink determinism, SQLite table creation and duplicate handling, provenance capture, solved-baseline import, CLI commands, and real-source conditional smoke checks.
 
 The Stage 2B smoke imports the Stage 2A all-known solved-baseline run into generated JSONL and SQLite result stores. C++ tests are not required for Stage 2B unless C++ files change.
+
+## Stage 2C Tests
+
+Stage 2C adds static workflow tests and CI script tests. They verify `.github/workflows/ci.yml` runs on push and pull requests, uses Python 3.12, runs Ruff and pytest, validates the transform registry and committed manifests, avoids secrets and artifact uploads, and keeps scripts raw-data-free.
+
+Local CI reproduction:
+
+```powershell
+.\scripts\ci\run-python-ci.ps1
+.\scripts\ci\run-schema-manifest-checks.ps1
+```
+
+The GitHub Actions workflow also includes a CPU-only CMake smoke job with CUDA disabled.

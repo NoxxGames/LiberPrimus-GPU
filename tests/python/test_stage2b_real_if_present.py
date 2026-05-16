@@ -14,6 +14,7 @@ REQUIRED_PATHS = [
     Path("data/transform-registry/cpu-reference-transforms-v0.json"),
     Path("experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml"),
     Path("experiments/manifests/result-store/stage2b-solved-baseline-import.yaml"),
+    Path("data/normalized/corpus-candidates/rtkd-master-v0-candidate/tokens.jsonl"),
 ]
 
 

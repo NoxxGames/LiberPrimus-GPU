@@ -220,3 +220,13 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Solved-baseline result imports are regression evidence, not unsolved-page experiments.
 - Future experiments must use the result-store foundation before large searches.
 - Push after successful commit remains required when remote is verified.
+
+## Stage 2C CI Rules
+
+- GitHub Actions CI must remain raw-data-free unless a future stage adds safe committed fixtures.
+- CI must not require CUDA.
+- CI must not require secrets.
+- CI must not upload generated raw, corpus, or result artifacts by default.
+- CI failures must not be bypassed by deleting tests.
+- New commands added for CI must have local reproduction instructions.
+- Push after successful commit remains required when remote is verified.

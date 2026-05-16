@@ -1,0 +1,68 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python-ci:
+    name: Python CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install package
+        run: |
+          python -m pip install -U pip setuptools wheel
+          python -m pip install -e ".[dev]"
+
+      - name: Ruff
+        run: python -m ruff check python/libreprimus tests/python
+
+      - name: Pytest
+        run: python -m pytest -q tests/python
+
+      - name: Python smoke
+        run: python -m libreprimus.cli smoke
+
+      - name: Transform registry validation
+        run: python -m libreprimus.cli transform-registry validate --registry data/transform-registry/cpu-reference-transforms-v0.json
+
+      - name: Solved-baseline manifest validation
+        run: python -m libreprimus.cli solved-baseline validate-manifest --manifest experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml
+
+      - name: Result-store manifest validation
+        run: python -m libreprimus.cli result-store validate-manifest --manifest experiments/manifests/result-store/stage2b-solved-baseline-import.yaml
+
+  cmake-cpu-smoke:
+    name: CMake CPU Smoke
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure CPU build
+        run: cmake -S . -B build/ci-cpu -DCMAKE_BUILD_TYPE=Release -DLPGPU_ENABLE_CUDA=OFF -DLPGPU_BUILD_TESTS=ON
+
+      - name: Build CPU scaffold
+        run: cmake --build build/ci-cpu --parallel
+
+      - name: Run CPU scaffold tests
+        run: ctest --test-dir build/ci-cpu --output-on-failure

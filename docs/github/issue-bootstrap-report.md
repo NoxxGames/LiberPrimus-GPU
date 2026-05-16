@@ -21,3 +21,19 @@
 ## Skipped Existing
 
 
+## Stage 2C Issue Update Note
+
+Stage 2C attempted to update issue #7, `Add GitHub Actions CI for Python and CMake smoke tests`, but `gh` was unavailable in the current Codex shell.
+
+Intended status comment:
+
+- Workflow file: `.github/workflows/ci.yml`
+- Python CI: Ruff, pytest, package smoke, transform-registry validation, solved-baseline manifest validation, and result-store manifest validation
+- CMake CPU smoke: added with CUDA disabled
+- Raw-data-free: true
+- CUDA-free: true
+- Secrets-free: true
+- Artifact upload disabled by default: true
+- Local validation: passed
+- Next recommended stage: Stage 2D CI-gated schema/docs consistency checks and manifest/result-store hardening
+
