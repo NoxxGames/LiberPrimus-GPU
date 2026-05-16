@@ -1,0 +1,31 @@
+{
+  "source_id": "legacy-google-sheet-1JwbWW04y1Fy5Qvwca7B2e3dsFWd5rf3NSorFj53IBNE",
+  "local_filename": "tranlsations.xlsx",
+  "source_kind": "legacy_analysis_workbook",
+  "canonical_corpus_allowed": false,
+  "trusted_as_canonical": false,
+  "trusted_as_solved_fixture_hint": true,
+  "original_google_sheet_id": "1JwbWW04y1Fy5Qvwca7B2e3dsFWd5rf3NSorFj53IBNE",
+  "known_gids": {
+    "629803470": "README",
+    "137197189": "Prime Sums",
+    "0": "A Warning",
+    "126279850": "Some Wisdom",
+    "2124456769": "Welcome",
+    "1187777662": "A Koan A Man",
+    "592446840": "The Loss Of",
+    "1421979231": "A Koan During",
+    "1360576785": "An Instruction",
+    "480300769": "p57 Parable",
+    "2053328121": "p56 An End"
+  },
+  "sha256": "396c45c05cbca79be6fc50ed13f0d0dddd4fd95744a4009578818aeb27355a88",
+  "file_size_bytes": 7423306,
+  "locked_at_utc": "2026-05-15T23:57:57Z",
+  "notes": [
+    "Legacy workbook for solved-page Gematria/cipher/message/delta analysis.",
+    "Do not treat as canonical corpus.",
+    "Do not treat as proof of unsolved-page plaintext.",
+    "Raw workbook is intentionally not committed."
+  ]
+}

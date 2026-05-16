@@ -16,9 +16,13 @@ Integration tests will later cover manifest execution and result writing.
 
 Golden tests will later reproduce known solved-page behavior from locked fixtures. None are included in Stage 0A.
 
+Stage 0B adds conditional real-workbook tests that run only when the ignored legacy workbook is locally present.
+
 ## Property tests
 
 Property tests will later check transform invariants, inverse behavior, and edge cases.
+
+Synthetic workbook parser tests cover inventory, solved-delta extraction, modulo validation, Prime Sums booleans, formula inventory, deterministic output, and CLI behavior.
 
 ## Fuzz tests
 
@@ -36,6 +40,12 @@ Manifests must replay to the same outputs under pinned inputs and fixed seeds.
 
 Documentation checks should verify core policy statements such as raw-data immutability and Stage 0A restrictions.
 
+Legacy workbook tests include p56 prime-minus-one first-delta checks, Welcome `DIVINITY` delta checks, and direct-page zero-delta checks for solved fixture hints.
+
 ## Stage 0A smoke tests
 
 Stage 0A includes C++ and Python smoke tests only.
+
+## Stage 0B workbook tests
+
+Stage 0B parser tests are Python-only. CUDA and C++ behavior are unchanged.

@@ -6,7 +6,7 @@ Define planned result records before generated outputs exist.
 
 ## Stage 0A status
 
-The result schema is planned, not finalized. No real result records are generated in Stage 0A.
+The result schema is planned, not finalized. Stage 0B implements legacy workbook extraction record shapes for non-canonical generated artefacts.
 
 ## Result record principles
 
@@ -15,6 +15,14 @@ Records must be replayable, reviewable, compact, and explicit about uncertainty.
 ## Planned JSONL fields
 
 Planned fields include result ID, experiment ID, manifest hash, corpus lock ID, transform chain, candidate summary, scores, null-control scores, rank, timestamps, and review status.
+
+Implemented legacy workbook record types:
+
+- `legacy_workbook_sheet`
+- `legacy_solved_delta`
+- `legacy_prime_sum`
+- `legacy_workbook_formula`
+- `legacy_workbook_summary`
 
 ## Planned SQLite tables
 
@@ -39,3 +47,5 @@ Reproducibility metadata should include run ID, timestamps, environment summary,
 ## False-positive warnings
 
 Every candidate record must be treated as unverified until rerun, compared to controls, and manually reviewed.
+
+Workbook-derived records must include `trusted_as_canonical=false` and must not be treated as source truth.

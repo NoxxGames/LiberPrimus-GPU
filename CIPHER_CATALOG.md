@@ -8,6 +8,8 @@ This catalog records planned transform families and the standards required befor
 
 No real cipher modules are implemented in Stage 0A. Placeholder modules return smoke statuses only.
 
+Stage 0B legacy workbook ingestion does not implement real cipher modules. It only extracts non-canonical hint records.
+
 ## Future transform registry
 
 Later stages should register transforms with stable IDs, CPU reference behavior, parameters, inverse behavior when available, and test vectors.
@@ -15,6 +17,8 @@ Later stages should register transforms with stable IDs, CPU reference behavior,
 ## Direct translation
 
 Direct rune-to-symbol translation must wait for a frozen Gematria profile and transcript policy.
+
+The workbook can support future tests for direct translation, reverse Gematria, and rotated reverse Gematria. These modules remain unimplemented unless added in a later stage.
 
 ## Mod-29 Caesar
 
@@ -32,9 +36,13 @@ Affine transforms must validate invertibility and define parameter enumeration p
 
 Repeating-key transforms require key-source policy, length limits, and null controls.
 
+The legacy workbook supports future tests for Vigenere `DIVINITY` and `FIRFUMFERENFE`, but these modules are not implemented by Stage 0B.
+
 ## Prime / phi-prime stream
 
 Prime-derived streams must define sequence generation, indexing, offset, modulus, and reproducible fixtures.
+
+The workbook supports future tests for a prime-minus-one stream, including p56 hint checks. This is not a canonical corpus claim.
 
 ## Prime-gap stream
 

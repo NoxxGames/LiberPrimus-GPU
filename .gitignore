@@ -50,6 +50,11 @@ experiments/reports/**
 *.csv
 *.log
 
+# Root-level local workbook drops
+/tranlsations.xlsx
+/translations.xlsx
+/*.xlsx
+
 # Raw corpus and local data
 data/raw/**
 !data/raw/
@@ -62,6 +67,15 @@ data/raw/**
 !data/raw/messages/.gitkeep
 !data/raw/hashes/
 !data/raw/hashes/.gitkeep
+!data/raw/legacy-workbooks/
+!data/raw/legacy-workbooks/README.md
+!data/raw/legacy-workbooks/.gitkeep
+
+# Generated workbook-derived outputs
+data/normalized/legacy-workbook/**
+!data/normalized/legacy-workbook/
+!data/normalized/legacy-workbook/README.md
+!data/normalized/legacy-workbook/.gitkeep
 
 # OS/editor
 .DS_Store

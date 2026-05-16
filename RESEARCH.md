@@ -8,9 +8,13 @@ Liber Primus is a public unsolved puzzle artifact with known solved and unsolved
 
 Future work may evaluate classical substitutions, rune alphabets, prime-derived streams, transpositions, and composed transforms. These are catalog entries, not claims.
 
+The legacy workbook gives solved-page delta streams and Prime Sums hints that can help form hypotheses and later golden-fixture tests.
+
 ## Open questions
 
 Key unresolved questions include canonical transcripts, image provenance, rune-table variants, page numbering, normalization policy, and fair null controls.
+
+Workbook claims about page-to-page shift patterns are unverified and must not be treated as evidence of unsolved plaintext.
 
 ## Evidence quality levels
 
@@ -35,3 +39,7 @@ Short texts, flexible rune mappings, hand-picked transforms, and retrospective s
 ## Stage 0A research status
 
 No research corpus, solved fixture, or candidate plaintext is generated in Stage 0A.
+
+## Stage 0B legacy workbook status
+
+The Stage 0B parser treats the workbook as a non-canonical legacy analysis artefact. It is useful for hypothesis generation and solved-fixture hints only.

@@ -18,10 +18,16 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 - Do not use `git add .` or `git add --all`.
 - Stage only explicit files.
 - Terminal output alone is never evidence of a solve.
+- Legacy workbook data is non-canonical unless explicitly promoted through a future corpus-lock process.
+- Do not treat `tranlsations.xlsx` as proof of unsolved plaintext.
+- Do not commit raw workbook files.
+- Do not commit generated workbook extraction outputs.
+- Workbook-derived deltas may be used as solved-fixture hints only.
+- Every workbook-derived record must include source id, workbook SHA-256, sheet name, and `trusted_as_canonical=false`.
 
 ## Current stage
 
-Stage 0A is project bootstrap only. The repository contains structure, documentation, toolchain scripts, smoke tests, and placeholders.
+Stage 0B adds non-canonical legacy workbook ingestion on top of the Stage 0A scaffold.
 
 ## Source-of-truth files
 
@@ -30,6 +36,8 @@ Use `README.md`, `ARCHITECTURE.md`, `DATASET.md`, `EXPERIMENTS.md`, `CUDA_NOTES.
 ## Corpus immutability rules
 
 Raw source material belongs under `data/raw/` only when explicitly allowed by a later stage. Never normalize, patch, crop, OCR, transcribe, or deduplicate raw files in place.
+
+Legacy workbook files under `data/raw/legacy-workbooks/` are immutable raw artefacts and must remain ignored by Git.
 
 ## Coding standards
 

@@ -8,9 +8,13 @@ Experiments are reproducible tests of hypotheses, not evidence of solves by them
 
 Every real run must start from a YAML manifest that pins inputs, transforms, scorers, controls, and output policy.
 
+Legacy workbook-derived records may support hypothesis generation, but they cannot be direct evidence of a solve.
+
 ## Required manifest fields
 
 Future manifests must include experiment ID, stage, hypothesis, corpus slice, transform chain, scorers, hardware requirements, success criteria, false-positive controls, output policy, and notes.
+
+A future manifest may reference `legacy_source_id` for provenance hints, but canonical corpus locks must still be separate.
 
 ## Required run metadata
 
