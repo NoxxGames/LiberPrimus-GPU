@@ -22,6 +22,10 @@ Start with `README.md`, `AGENTS.md`, `DATASET.md`, `RESEARCH.md`, `TESTING.md`, 
 
 `python/libreprimus/alignment/` emits Stage 0D alignment hints.
 
+`python/libreprimus/profiles/` validates frozen Stage 0E profiles.
+
+`python/libreprimus/corpus_candidate/` generates inactive corpus candidate records.
+
 ## Tests
 
 Python tests live under `tests/python/`. They use synthetic fixtures and conditional real-source checks.
@@ -33,3 +37,7 @@ Python tests live under `tests/python/`. They use synthetic fixtures and conditi
 ## Public Docs
 
 `tutorials/` is the user-facing learning path. `docs/github/` contains issue and wiki bootstrap support. `scripts/github/` contains GitHub helper scripts.
+
+## Profiles And Schemas
+
+`data/profiles/` contains committed tooling profiles. `schemas/corpus/` contains committed JSON schemas for Stage 0E generated records.

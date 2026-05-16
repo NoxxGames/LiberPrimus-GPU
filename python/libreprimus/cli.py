@@ -9,6 +9,11 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
+from libreprimus.corpus_candidate.export import write_corpus_candidate_outputs
+from libreprimus.corpus_candidate.generator import build_rtkd_corpus_candidate
+from libreprimus.corpus_candidate.separator_inventory import observed_separator_inventory
+from libreprimus.corpus_candidate.summary import load_summary as load_candidate_summary
+from libreprimus.corpus_candidate.validation import validate_corpus_candidate
 from libreprimus.legacy_workbook.export import extract_workbook, write_extraction, write_json
 from libreprimus.legacy_workbook.paths import default_output_dir, resolve_workbook_path
 from libreprimus.legacy_pastebin.export import (
@@ -35,6 +40,9 @@ from libreprimus.alignment.pastebin_to_transcript import (
     glyph_variant_observations,
 )
 from libreprimus.paths import package_root, repo_root
+from libreprimus.profiles.gematria_profile import load_gematria_profile, validate_gematria_profile
+from libreprimus.profiles.glyph_variant_profile import load_glyph_variant_profile, validate_glyph_variant_profile
+from libreprimus.profiles.separator_grammar import load_separator_grammar, validate_separator_grammar
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
 from libreprimus.transcript_sources.rtkd_master import parse_rtkd_master
 from libreprimus.transcript_sources.scream314_reference import parse_scream314_reference
@@ -45,6 +53,8 @@ legacy_workbook_app = typer.Typer(no_args_is_help=True)
 legacy_pastebin_app = typer.Typer(no_args_is_help=True)
 transcript_source_app = typer.Typer(no_args_is_help=True)
 corpus_alignment_app = typer.Typer(no_args_is_help=True)
+profile_app = typer.Typer(no_args_is_help=True)
+corpus_candidate_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -568,6 +578,220 @@ def glyph_variants(
 
 
 app.add_typer(corpus_alignment_app, name="corpus-alignment")
+
+
+DEFAULT_GEMATRIA_PROFILE = Path("data/profiles/gematria/gematria-primus-v0.json")
+DEFAULT_GLYPH_VARIANT_PROFILE = Path("data/profiles/glyph-variants/glyph-variants-v0.json")
+DEFAULT_SEPARATOR_GRAMMAR = Path("data/profiles/separators/rtkd-separator-grammar-v0.json")
+DEFAULT_CORPUS_CANDIDATE_DIR = Path("data/normalized/corpus-candidates/rtkd-master-v0-candidate")
+
+
+@profile_app.command("validate-gematria")
+def validate_gematria(
+    profile: Path = typer.Option(DEFAULT_GEMATRIA_PROFILE, "--profile", help="Gematria profile JSON path."),
+) -> None:
+    """Validate the frozen Gematria Primus profile."""
+    profile_path = _resolve_existing_path(profile, "Gematria profile")
+    gematria = load_gematria_profile(profile_path)
+    result = validate_gematria_profile(gematria)
+    console.print(f"profile_id={gematria.profile_id}")
+    console.print(f"entry_count={len(gematria.entries)}")
+    console.print(f"sha256={gematria.sha256}")
+    console.print(f"canonical_profile_active={str(gematria.canonical_profile_active).lower()}")
+    console.print(f"canonical_corpus_active={str(gematria.canonical_corpus_active).lower()}")
+    console.print(f"variant_glyph_canonical={str(chr(0x16C2) in gematria.rune_to_entry).lower()}")
+    if not result.valid:
+        for error in result.errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    console.print("Gematria profile validation OK")
+
+
+@profile_app.command("validate-glyph-variants")
+def validate_glyph_variants(
+    gematria: Path = typer.Option(DEFAULT_GEMATRIA_PROFILE, "--gematria", help="Gematria profile JSON path."),
+    variants: Path = typer.Option(DEFAULT_GLYPH_VARIANT_PROFILE, "--variants", help="Glyph variant profile JSON path."),
+) -> None:
+    """Validate glyph variants against the Gematria profile."""
+    gematria_profile = load_gematria_profile(_resolve_existing_path(gematria, "Gematria profile"))
+    variant_profile = load_glyph_variant_profile(_resolve_existing_path(variants, "Glyph variant profile"))
+    result = validate_glyph_variant_profile(variant_profile, gematria_profile)
+    console.print(f"profile_id={variant_profile.profile_id}")
+    console.print(f"variant_count={len(variant_profile.variants)}")
+    console.print(f"sha256={variant_profile.sha256}")
+    if variant_profile.variants:
+        first = variant_profile.variants[0]
+        observed = first.observed_glyph.encode("unicode_escape").decode("ascii")
+        normalized = first.normalized_rune_candidate.encode("unicode_escape").decode("ascii")
+        console.print(f"observed_glyph={observed}")
+        console.print(f"normalized_rune_candidate={normalized}")
+        console.print(f"normalized_index_candidate={first.normalized_index_candidate}")
+        console.print(f"canonical_mapping_change={str(first.canonical_mapping_change).lower()}")
+    if not result.valid:
+        for error in result.errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    console.print("Glyph variant profile validation OK")
+
+
+@profile_app.command("validate-separators")
+def validate_separators(
+    grammar: Path = typer.Option(DEFAULT_SEPARATOR_GRAMMAR, "--grammar", help="Separator grammar JSON path."),
+) -> None:
+    """Validate the frozen rtkd separator grammar."""
+    separator_grammar = load_separator_grammar(_resolve_existing_path(grammar, "Separator grammar"))
+    result = validate_separator_grammar(separator_grammar)
+    console.print(f"profile_id={separator_grammar.profile_id}")
+    console.print(f"separator_class_count={len(separator_grammar.separator_classes)}")
+    console.print(f"sha256={separator_grammar.sha256}")
+    console.print(f"canonical_profile_active={str(separator_grammar.canonical_profile_active).lower()}")
+    console.print(f"canonical_corpus_active={str(separator_grammar.canonical_corpus_active).lower()}")
+    if not result.valid:
+        for error in result.errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    console.print("Separator grammar validation OK")
+
+
+@profile_app.command("summary")
+def profile_summary() -> None:
+    """Summarize Stage 0E profile files."""
+    gematria = load_gematria_profile(_resolve_existing_path(DEFAULT_GEMATRIA_PROFILE, "Gematria profile"))
+    variants = load_glyph_variant_profile(_resolve_existing_path(DEFAULT_GLYPH_VARIANT_PROFILE, "Glyph variant profile"))
+    separators = load_separator_grammar(_resolve_existing_path(DEFAULT_SEPARATOR_GRAMMAR, "Separator grammar"))
+    table = Table("Profile", "SHA-256", "Active")
+    table.add_row(gematria.profile_id, gematria.sha256, str(gematria.canonical_profile_active).lower())
+    table.add_row(variants.profile_id, variants.sha256, str(variants.canonical_profile_active).lower())
+    table.add_row(separators.profile_id, separators.sha256, str(separators.canonical_profile_active).lower())
+    console.print(table)
+
+
+app.add_typer(profile_app, name="profile")
+
+
+@corpus_candidate_app.command("build-rtkd-v0")
+def build_rtkd_v0(
+    transcript: Path = typer.Option(..., "--transcript", help="rtkd transcript path."),
+    gematria: Path = typer.Option(DEFAULT_GEMATRIA_PROFILE, "--gematria", help="Gematria profile path."),
+    glyph_variants: Path = typer.Option(DEFAULT_GLYPH_VARIANT_PROFILE, "--glyph-variants", help="Glyph variant profile path."),
+    separators: Path = typer.Option(DEFAULT_SEPARATOR_GRAMMAR, "--separators", help="Separator grammar path."),
+    alignment_dir: Path = typer.Option(Path("data/normalized/alignment"), "--alignment-dir", help="Generated alignment output directory."),
+    out_dir: Path = typer.Option(DEFAULT_CORPUS_CANDIDATE_DIR, "--out-dir", help="Generated corpus candidate directory."),
+    allow_boundary_warnings: bool = typer.Option(False, "--allow-boundary-warnings", help="Return success despite page-candidate warnings."),
+) -> None:
+    """Build generated rtkd master v0 corpus candidate outputs."""
+    transcript_path = _resolve_existing_path(transcript, "Transcript source")
+    result = build_rtkd_corpus_candidate(
+        transcript_path=transcript_path,
+        gematria_path=_resolve_existing_path(gematria, "Gematria profile"),
+        glyph_variants_path=_resolve_existing_path(glyph_variants, "Glyph variant profile"),
+        separators_path=_resolve_existing_path(separators, "Separator grammar"),
+        alignment_dir=_resolve_output_path(alignment_dir),
+    )
+    paths = write_corpus_candidate_outputs(_resolve_output_path(out_dir), result)
+    summary = result["summary"]
+    for name, path in paths.items():
+        console.print(f"{name}={path}")
+    console.print(f"corpus_candidate_id={summary.corpus_candidate_id}")
+    console.print(f"physical_line_count={summary.physical_line_count}")
+    console.print(f"logical_line_count={summary.logical_line_count}")
+    console.print(f"token_count={summary.token_count}")
+    console.print(f"rune_token_count={summary.rune_token_count}")
+    console.print(f"separator_token_count={summary.separator_token_count}")
+    console.print(f"numeric_literal_count={summary.numeric_literal_count}")
+    console.print(f"unknown_symbol_count={summary.unknown_symbol_count}")
+    console.print(f"variant_mapped_token_count={summary.variant_mapped_token_count}")
+    console.print(f"page_candidate_count={summary.page_candidate_count}")
+    console.print(f"warning_count={summary.warning_count}")
+    console.print(f"canonical_corpus_candidate={str(summary.canonical_corpus_candidate).lower()}")
+    console.print(f"canonical_corpus_active={str(summary.canonical_corpus_active).lower()}")
+    console.print(f"page_boundaries_final={str(summary.page_boundaries_final).lower()}")
+    console.print(f"elapsed_milliseconds={summary.elapsed_milliseconds}")
+    boundary_warning = any(warning.warning_code.startswith("page_") for warning in result["warnings"])
+    if boundary_warning and not allow_boundary_warnings:
+        raise typer.Exit(1)
+
+
+@corpus_candidate_app.command("validate")
+def validate_candidate(
+    candidate_dir: Path = typer.Option(DEFAULT_CORPUS_CANDIDATE_DIR, "--candidate-dir", help="Generated corpus candidate directory."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite generated warnings."),
+) -> None:
+    """Validate generated corpus candidate outputs."""
+    output_dir = _resolve_output_path(candidate_dir)
+    errors = validate_corpus_candidate(output_dir, allow_warnings=allow_warnings)
+    console.print(f"candidate_dir={output_dir}")
+    console.print(f"validation_error_count={len(errors)}")
+    if errors:
+        for error in errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    console.print("Corpus candidate validation OK")
+
+
+@corpus_candidate_app.command("summary")
+def candidate_summary(
+    candidate_dir: Path = typer.Option(DEFAULT_CORPUS_CANDIDATE_DIR, "--candidate-dir", help="Generated corpus candidate directory."),
+) -> None:
+    """Print generated corpus candidate summary."""
+    output_dir = _resolve_output_path(candidate_dir)
+    summary = load_candidate_summary(output_dir)
+    for key in [
+        "corpus_candidate_id",
+        "physical_line_count",
+        "logical_line_count",
+        "token_count",
+        "rune_token_count",
+        "separator_token_count",
+        "numeric_literal_count",
+        "unknown_symbol_count",
+        "variant_mapped_token_count",
+        "page_candidate_count",
+        "warning_count",
+        "canonical_corpus_candidate",
+        "canonical_corpus_active",
+        "page_boundaries_final",
+    ]:
+        console.print(f"{key}={str(summary.get(key)).lower() if isinstance(summary.get(key), bool) else summary.get(key)}")
+
+
+@corpus_candidate_app.command("separator-inventory")
+def separator_inventory(
+    transcript: Path = typer.Option(..., "--transcript", help="rtkd transcript path."),
+    grammar: Path = typer.Option(DEFAULT_SEPARATOR_GRAMMAR, "--grammar", help="Separator grammar path."),
+    out: Path = typer.Option(DEFAULT_CORPUS_CANDIDATE_DIR / "observed_separator_inventory.json", "--out", help="Generated inventory JSON path."),
+) -> None:
+    """Generate observed separator inventory."""
+    transcript_path = _resolve_existing_path(transcript, "Transcript source")
+    separator_grammar = load_separator_grammar(_resolve_existing_path(grammar, "Separator grammar"))
+    inventory = observed_separator_inventory(transcript_path, separator_grammar)
+    output_path = _resolve_output_path(out)
+    write_alignment_json(output_path, inventory)
+    console.print(f"observed_separator_inventory={output_path}")
+    console.print(f"unknown_observed_separator_count={inventory['unknown_observed_separator_count']}")
+
+
+@corpus_candidate_app.command("stage0e-smoke")
+def stage0e_smoke(
+    transcript: Path = typer.Option(..., "--transcript", help="rtkd transcript path."),
+    out_dir: Path = typer.Option(DEFAULT_CORPUS_CANDIDATE_DIR, "--out-dir", help="Generated corpus candidate directory."),
+    allow_boundary_warnings: bool = typer.Option(False, "--allow-boundary-warnings", help="Return success despite page-candidate warnings."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite generated warnings."),
+) -> None:
+    """Run Stage 0E profile validation and corpus candidate smoke generation."""
+    build_rtkd_v0(
+        transcript=transcript,
+        gematria=DEFAULT_GEMATRIA_PROFILE,
+        glyph_variants=DEFAULT_GLYPH_VARIANT_PROFILE,
+        separators=DEFAULT_SEPARATOR_GRAMMAR,
+        alignment_dir=Path("data/normalized/alignment"),
+        out_dir=out_dir,
+        allow_boundary_warnings=allow_boundary_warnings,
+    )
+    validate_candidate(candidate_dir=out_dir, allow_warnings=allow_warnings)
+
+
+app.add_typer(corpus_candidate_app, name="corpus-candidate")
 
 
 if __name__ == "__main__":

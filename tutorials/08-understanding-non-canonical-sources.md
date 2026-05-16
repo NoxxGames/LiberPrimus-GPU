@@ -23,3 +23,11 @@ You can infer parser behavior, alignment hints, and validation warnings.
 ## What Cannot Be Inferred
 
 You cannot infer new solved pages, canonical page boundaries, or final corpus truth from these sources alone.
+
+## Stage 0E Profiles
+
+Gematria, separator, and glyph-variant profiles are committed tooling policy. They freeze how tooling maps runes, separators, and documented variants.
+
+## Stage 0E Corpus Candidate
+
+The rtkd master v0 corpus candidate is generated output. It is useful for local review and future fixture work, but it is not active canonical corpus.

@@ -1,0 +1,46 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "Corpus Generation Warning v0",
+    "type":  "object",
+    "required":  [
+                     "record_type",
+                     "corpus_candidate_id",
+                     "warning_code",
+                     "severity",
+                     "source_line",
+                     "source_column",
+                     "message",
+                     "raw_context",
+                     "trusted_as_canonical"
+                 ],
+    "properties":  {
+                       "record_type":  {
+                                           "type":  "string"
+                                       },
+                       "corpus_candidate_id":  {
+
+                                               },
+                       "warning_code":  {
+
+                                        },
+                       "severity":  {
+
+                                    },
+                       "source_line":  {
+
+                                       },
+                       "source_column":  {
+
+                                         },
+                       "message":  {
+
+                                   },
+                       "raw_context":  {
+
+                                       },
+                       "trusted_as_canonical":  {
+                                                    "const":  false
+                                                }
+                   },
+    "additionalProperties":  true
+}

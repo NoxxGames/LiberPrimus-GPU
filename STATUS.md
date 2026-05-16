@@ -56,6 +56,16 @@ Remaining gaps: two no-match records and two low-confidence records still requir
 
 Developer log: `docs/development-logs/2026-05-16-stage-0d-followup-alignment-gap-audit.md`.
 
+## Completed in Stage 0E
+
+Stage 0E added frozen tooling profiles, corpus schemas, and an rtkd master corpus v0 candidate generator.
+
+Profile hashes: Gematria `93577209028c964523068b5975180e05bda5b1a07b2675d4e35d03d6d164c5c2`; glyph variants `5acae61c4ea2aa9f2f2fb76bdcafb7ed9c6504bd98caf29590a95d7d43271d6d`; separator grammar `303f3062ad8b41bf84ab068f2fd6601b1efb3291872d53956669ea3dd7d88e3c`.
+
+Real-source candidate summary: physical lines `931`, logical lines `1729`, tokens `22382`, rune tokens `15933`, separator tokens `5795`, page candidates `74`, warnings `311`, `canonical_corpus_active=false`.
+
+Developer log: `docs/development-logs/2026-05-16-stage-0e-gematria-separators-corpus-candidate.md`.
+
 ## Next prompt recommendation
 
-Stage 0E - freeze Gematria profile and separator grammar, then create canonical corpus v0 candidate records with page-boundary candidates preserved as reviewable non-final metadata. If the remaining four ambiguous alignment records block policy work, run Stage 0D-followup-2 first.
+Stage 1A - implement solved-page golden fixture framework and reproduce direct-translation solved pages using the Stage 0E profiles and corpus candidate generator, without brute-force search.

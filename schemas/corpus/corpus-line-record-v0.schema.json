@@ -1,0 +1,78 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "Corpus Line Record v0",
+    "type":  "object",
+    "required":  [
+                     "record_type",
+                     "corpus_candidate_id",
+                     "source_id",
+                     "source_sha256",
+                     "physical_line_number_start",
+                     "physical_line_number_end",
+                     "logical_line_index",
+                     "raw_text",
+                     "token_count",
+                     "rune_count",
+                     "separator_counts",
+                     "rune_indices",
+                     "prime_values",
+                     "line_signature_sha256",
+                     "page_candidate_ids",
+                     "trusted_as_canonical",
+                     "warnings"
+                 ],
+    "properties":  {
+                       "record_type":  {
+                                           "type":  "string"
+                                       },
+                       "corpus_candidate_id":  {
+
+                                               },
+                       "source_id":  {
+
+                                     },
+                       "source_sha256":  {
+
+                                         },
+                       "physical_line_number_start":  {
+
+                                                      },
+                       "physical_line_number_end":  {
+
+                                                    },
+                       "logical_line_index":  {
+
+                                              },
+                       "raw_text":  {
+
+                                    },
+                       "token_count":  {
+
+                                       },
+                       "rune_count":  {
+
+                                      },
+                       "separator_counts":  {
+
+                                            },
+                       "rune_indices":  {
+
+                                        },
+                       "prime_values":  {
+
+                                        },
+                       "line_signature_sha256":  {
+
+                                                 },
+                       "page_candidate_ids":  {
+
+                                              },
+                       "trusted_as_canonical":  {
+                                                    "const":  false
+                                                },
+                       "warnings":  {
+
+                                    }
+                   },
+    "additionalProperties":  true
+}

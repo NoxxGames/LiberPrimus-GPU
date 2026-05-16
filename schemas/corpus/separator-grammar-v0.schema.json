@@ -1,0 +1,30 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "Separator Grammar v0",
+    "type":  "object",
+    "required":  [
+                     "profile_id",
+                     "status",
+                     "canonical_profile_active",
+                     "canonical_corpus_active",
+                     "separator_classes"
+                 ],
+    "properties":  {
+                       "profile_id":  {
+
+                                      },
+                       "status":  {
+
+                                  },
+                       "canonical_profile_active":  {
+
+                                                    },
+                       "canonical_corpus_active":  {
+                                                       "const":  false
+                                                   },
+                       "separator_classes":  {
+
+                                             }
+                   },
+    "additionalProperties":  true
+}

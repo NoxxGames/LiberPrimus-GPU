@@ -71,3 +71,7 @@ Tutorials should teach local acquisition and lock workflows without embedding ra
 ## Stage 0D-followup alignment output policy
 
 Transcript views, alignment-gap diagnostics, and boundary-audit files are generated outputs under `data/normalized/alignment/`. They are useful for review and corpus-policy decisions but remain ignored by Git and non-canonical until a later corpus-freeze stage explicitly promotes reviewed records.
+
+## Stage 0E profile source of truth
+
+Committed profiles under `data/profiles/` are tooling source-of-truth records for Gematria, separators, and documented glyph variants. Raw transcripts remain immutable under `data/raw/`; generated corpus candidate outputs live under `data/normalized/corpus-candidates/` and remain ignored.

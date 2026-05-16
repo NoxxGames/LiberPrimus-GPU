@@ -1,0 +1,35 @@
+{
+  "profile_id": "glyph-variants-v0",
+  "status": "frozen_profile",
+  "canonical_profile_active": true,
+  "canonical_corpus_active": false,
+  "variants": [
+    {
+      "observed_glyph": "ᛂ",
+      "normalized_rune_candidate": "ᛄ",
+      "normalized_index_candidate": 11,
+      "normalized_prime_candidate": 37,
+      "normalized_latin_label_candidate": "J",
+      "policy": "preserve_raw_apply_normalized_view_only",
+      "evidence": [
+        {
+          "source_id": "pastebin-vGMK330j",
+          "evidence_type": "observed_prime_value",
+          "observed_prime_value": 37,
+          "occurrence_count": 453
+        },
+        {
+          "source_id": "rtkd-master-transcription",
+          "evidence_type": "stage_0d_followup_alignment_support",
+          "support_status": "supported"
+        }
+      ],
+      "canonical_mapping_change": false,
+      "warnings": [
+        "Raw glyph must be preserved.",
+        "Normalized view must record variant_mapping_applied=true.",
+        "This does not add ᛂ as a canonical Gematria rune."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "Corpus Candidate Manifest v0",
+    "type":  "object",
+    "required":  [
+                     "record_type",
+                     "corpus_candidate_id",
+                     "source_transcript_id",
+                     "source_transcript_sha256",
+                     "source_transcript_local_path",
+                     "gematria_profile_id",
+                     "gematria_profile_sha256",
+                     "separator_grammar_id",
+                     "separator_grammar_sha256",
+                     "glyph_variant_profile_id",
+                     "glyph_variant_profile_sha256",
+                     "generated_at_utc",
+                     "git_commit",
+                     "generator_version",
+                     "canonical_corpus_candidate",
+                     "canonical_corpus_active",
+                     "page_boundaries_final",
+                     "trusted_as_canonical",
+                     "line_count",
+                     "token_count",
+                     "rune_token_count",
+                     "separator_token_count",
+                     "unknown_symbol_count",
+                     "warning_count",
+                     "page_candidate_count",
+                     "notes"
+                 ],
+    "properties":  {
+                       "record_type":  {
+                                           "type":  "string"
+                                       },
+                       "corpus_candidate_id":  {
+
+                                               },
+                       "source_transcript_id":  {
+
+                                                },
+                       "source_transcript_sha256":  {
+
+                                                    },
+                       "source_transcript_local_path":  {
+
+                                                        },
+                       "gematria_profile_id":  {
+
+                                               },
+                       "gematria_profile_sha256":  {
+
+                                                   },
+                       "separator_grammar_id":  {
+
+                                                },
+                       "separator_grammar_sha256":  {
+
+                                                    },
+                       "glyph_variant_profile_id":  {
+
+                                                    },
+                       "glyph_variant_profile_sha256":  {
+
+                                                        },
+                       "generated_at_utc":  {
+
+                                            },
+                       "git_commit":  {
+
+                                      },
+                       "generator_version":  {
+
+                                             },
+                       "canonical_corpus_candidate":  {
+                                                          "const":  true
+                                                      },
+                       "canonical_corpus_active":  {
+                                                       "const":  false
+                                                   },
+                       "page_boundaries_final":  {
+                                                     "const":  false
+                                                 },
+                       "trusted_as_canonical":  {
+                                                    "const":  false
+                                                },
+                       "line_count":  {
+
+                                      },
+                       "token_count":  {
+
+                                       },
+                       "rune_token_count":  {
+
+                                            },
+                       "separator_token_count":  {
+
+                                                 },
+                       "unknown_symbol_count":  {
+
+                                                },
+                       "warning_count":  {
+
+                                         },
+                       "page_candidate_count":  {
+
+                                                },
+                       "notes":  {
+
+                                 }
+                   },
+    "additionalProperties":  true
+}

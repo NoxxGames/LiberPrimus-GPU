@@ -143,3 +143,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Alignment-gap reports are generated outputs and must not be committed.
 - GitHub issue updates must be idempotent and must not create duplicate issues.
 - Push after successful commit remains required when remote is verified.
+
+## Stage 0E Profile And Corpus Candidate Rules
+
+- Gematria profile v0 is the tooling source of truth for rune/index/prime mapping once Stage 0E passes.
+- Latin labels are display aliases; index order is arithmetic truth.
+- Glyph variants belong in glyph-variant profiles, not Gematria canonical entries.
+- Separator grammar v0 preserves separators as tokens.
+- `%` and `/` must not be treated as final canonical page boundaries.
+- Corpus candidate outputs are generated and must not be committed unless explicitly promoted.
+- `canonical_corpus_active=false` remains required until a later activation stage.
+- Corpus candidate records must retain source SHA-256s and profile SHA-256s.
+- Push after successful commit remains required when remote is verified.

@@ -1,0 +1,90 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "Corpus Page Candidate Record v0",
+    "type":  "object",
+    "required":  [
+                     "record_type",
+                     "corpus_candidate_id",
+                     "candidate_page_id",
+                     "candidate_page_label",
+                     "candidate_local_page_index",
+                     "candidate_global_page_index",
+                     "source",
+                     "confidence",
+                     "confidence_score",
+                     "evidence",
+                     "start_token_index",
+                     "end_token_index",
+                     "start_logical_line_index",
+                     "end_logical_line_index",
+                     "start_physical_line_number",
+                     "end_physical_line_number",
+                     "canonical_page_boundary",
+                     "page_boundaries_final",
+                     "trusted_as_canonical",
+                     "warnings"
+                 ],
+    "properties":  {
+                       "record_type":  {
+                                           "type":  "string"
+                                       },
+                       "corpus_candidate_id":  {
+
+                                               },
+                       "candidate_page_id":  {
+
+                                             },
+                       "candidate_page_label":  {
+
+                                                },
+                       "candidate_local_page_index":  {
+
+                                                      },
+                       "candidate_global_page_index":  {
+
+                                                       },
+                       "source":  {
+
+                                  },
+                       "confidence":  {
+
+                                      },
+                       "confidence_score":  {
+
+                                            },
+                       "evidence":  {
+
+                                    },
+                       "start_token_index":  {
+
+                                             },
+                       "end_token_index":  {
+
+                                           },
+                       "start_logical_line_index":  {
+
+                                                    },
+                       "end_logical_line_index":  {
+
+                                                  },
+                       "start_physical_line_number":  {
+
+                                                      },
+                       "end_physical_line_number":  {
+
+                                                    },
+                       "canonical_page_boundary":  {
+                                                       "const":  false
+                                                   },
+                       "page_boundaries_final":  {
+                                                     "const":  false
+                                                 },
+                       "trusted_as_canonical":  {
+                                                    "const":  false
+                                                },
+                       "warnings":  {
+
+                                    }
+                   },
+    "additionalProperties":  true
+}

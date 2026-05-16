@@ -38,3 +38,7 @@ Stage 0D glyph variant policy and transcript parser.
 
 - `docs/research/glyph-variant-policy.md`
 - `docs/corpus/canonical-transcript-versioning-policy.md`
+
+## Stage 0E Result
+
+Stage 0E added frozen tooling profiles for Gematria, glyph variants, and rtkd separators, plus corpus schemas and an inactive `rtkd-master-v0-candidate` generator. Generated candidate outputs remain ignored, and `canonical_corpus_active=false` remains required.

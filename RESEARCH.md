@@ -69,3 +69,7 @@ Public docs should distinguish established facts, hypotheses, and generated infe
 ## Stage 0D-followup alignment status
 
 Stage 0D-followup shows that most Pastebin line-pairs align as bounded stream subsequences rather than physical rtkd lines. The no-match count dropped from `153` to `2`, but two low-confidence records and boundary overgeneration still require human review. Boundary confidence is now stricter and remains non-canonical.
+
+## Stage 0E corpus candidate status
+
+Stage 0E freezes tooling profiles and generates an rtkd master corpus v0 candidate. This is profile and corpus preparation, not solve evidence. The generated candidate remains inactive with `canonical_corpus_active=false`.

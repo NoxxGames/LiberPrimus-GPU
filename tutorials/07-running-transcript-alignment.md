@@ -46,3 +46,17 @@ libreprimus corpus-alignment stage0d-followup-smoke `
 ```
 
 The generated files are diagnostic outputs and are ignored by Git. High confidence is stricter after Stage 0D-followup: empty pairs and word-length-only evidence cannot create high-confidence boundaries.
+
+## Stage 0E Corpus Candidate
+
+Stage 0E consumes the rtkd transcript and frozen profiles to generate an inactive corpus candidate:
+
+```powershell
+libreprimus corpus-candidate stage0e-smoke `
+  --transcript <repo-root>\data\raw\transcripts\rtkd\liber-primus__transcription--master.txt `
+  --out-dir <repo-root>\data\normalized\corpus-candidates\rtkd-master-v0-candidate `
+  --allow-boundary-warnings `
+  --allow-warnings
+```
+
+The candidate has `canonical_corpus_active=false`. Generated outputs remain ignored.

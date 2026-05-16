@@ -39,3 +39,7 @@ Public hardware tutorials must not imply speed claims without benchmark records,
 ## Stage 0D-followup timing policy
 
 Stage 0D-followup records elapsed milliseconds for transcript view construction, matching, gap analysis, and boundary audit. These timings are diagnostic metadata only. They are not benchmark claims and do not justify optimization work or CUDA changes.
+
+## Stage 0E timing policy
+
+Stage 0E records generation timings for profile validation, tokenization, page-candidate integration, and separator inventory. These values are diagnostics only and are not GPU benchmarks.

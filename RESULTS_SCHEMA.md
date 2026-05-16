@@ -75,3 +75,18 @@ Implemented/generated Stage 0D-followup record types include:
 - `stage0d_followup_alignment_summary`
 
 These are diagnostic records only. They must include source hashes, confidence or reason labels where applicable, and non-canonical flags. Generated JSON/JSONL outputs under `data/normalized/alignment/` remain ignored.
+
+## Stage 0E Corpus Schemas
+
+Stage 0E adds schemas under `schemas/corpus/` for:
+
+- `gematria-profile-v0`
+- `glyph-variant-profile-v0`
+- `separator-grammar-v0`
+- `corpus_candidate_manifest`
+- `corpus_token`
+- `corpus_line`
+- `corpus_page_candidate`
+- `corpus_generation_warning`
+
+Generated manifest and page records require `canonical_corpus_active=false`, `page_boundaries_final=false`, `canonical_page_boundary=false`, and `trusted_as_canonical=false` where applicable.

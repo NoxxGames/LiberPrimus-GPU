@@ -49,3 +49,7 @@ The Stage 0A smoke manifest validates project bootstrap only. No candidate plain
 ## Stage 0D-followup diagnostic outputs
 
 Stage 0D-followup alignment outputs may inform future corpus selection and separator policy. They cannot be used as direct solve evidence, direct GPU campaign input, or canonical page-boundary metadata. Future manifests may reference reviewed alignment summaries as provenance, but generated diagnostics must remain ignored unless explicitly promoted later.
+
+## Stage 0E profile references
+
+Future experiment manifests may reference `gematria-primus-v0`, `glyph-variants-v0`, and `rtkd-separator-grammar-v0` once Stage 0E validates. They must not treat `rtkd-master-v0-candidate` as active canonical corpus until a later activation stage.

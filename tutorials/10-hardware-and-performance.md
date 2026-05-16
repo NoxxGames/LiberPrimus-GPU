@@ -25,3 +25,7 @@ Do not make public speed claims without committed benchmark methodology, hardwar
 ## Stage 0D-followup Timing
 
 The follow-up alignment records elapsed milliseconds for parsing, view generation, matching, gap analysis, and boundary audit. Treat these as troubleshooting metadata, not benchmark results. CUDA remains unused because this stage is about transcript structure and provenance, not batch transform/scoring.
+
+## Stage 0E Timing
+
+Corpus candidate generation records lightweight timing for profile validation and tokenization. It is CPU-only and does not imply future CUDA performance.

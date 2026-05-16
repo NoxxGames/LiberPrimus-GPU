@@ -1,0 +1,102 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "title":  "Corpus Token Record v0",
+    "type":  "object",
+    "required":  [
+                     "record_type",
+                     "corpus_candidate_id",
+                     "source_id",
+                     "source_sha256",
+                     "physical_line_number",
+                     "logical_line_index",
+                     "token_index_global",
+                     "token_index_in_line",
+                     "raw_text",
+                     "token_kind",
+                     "raw_glyph",
+                     "normalized_glyph",
+                     "index29",
+                     "prime_value",
+                     "latin_label",
+                     "variant_mapping_applied",
+                     "variant_source",
+                     "separator_class",
+                     "source_column_start",
+                     "source_column_end",
+                     "page_candidate_ids",
+                     "trusted_as_canonical",
+                     "warnings"
+                 ],
+    "properties":  {
+                       "record_type":  {
+                                           "type":  "string"
+                                       },
+                       "corpus_candidate_id":  {
+
+                                               },
+                       "source_id":  {
+
+                                     },
+                       "source_sha256":  {
+
+                                         },
+                       "physical_line_number":  {
+
+                                                },
+                       "logical_line_index":  {
+
+                                              },
+                       "token_index_global":  {
+
+                                              },
+                       "token_index_in_line":  {
+
+                                               },
+                       "raw_text":  {
+
+                                    },
+                       "token_kind":  {
+
+                                      },
+                       "raw_glyph":  {
+
+                                     },
+                       "normalized_glyph":  {
+
+                                            },
+                       "index29":  {
+
+                                   },
+                       "prime_value":  {
+
+                                       },
+                       "latin_label":  {
+
+                                       },
+                       "variant_mapping_applied":  {
+
+                                                   },
+                       "variant_source":  {
+
+                                          },
+                       "separator_class":  {
+
+                                           },
+                       "source_column_start":  {
+
+                                               },
+                       "source_column_end":  {
+
+                                             },
+                       "page_candidate_ids":  {
+
+                                              },
+                       "trusted_as_canonical":  {
+                                                    "const":  false
+                                                },
+                       "warnings":  {
+
+                                    }
+                   },
+    "additionalProperties":  true
+}

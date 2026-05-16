@@ -19,3 +19,7 @@ Lock metadata records source ID, URL, local filename, SHA-256, size, and canonic
 ## What Not To Commit
 
 Do not commit raw files, generated JSON/JSONL, SQLite databases, CSV exports, build directories, `.venv`, or cache folders.
+
+## Generated Corpus Candidates
+
+Stage 0E writes generated corpus candidate outputs under `data/normalized/corpus-candidates/`. They are ignored because `canonical_corpus_active=false` until a later review stage.

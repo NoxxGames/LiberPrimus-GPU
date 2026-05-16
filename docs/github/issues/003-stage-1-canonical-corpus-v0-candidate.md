@@ -38,3 +38,7 @@ Stage 0E Gematria and separator freeze.
 
 - `DATASET.md`
 - `RESULTS_SCHEMA.md`
+
+## Stage 0E Handoff
+
+Stage 0E generated an inactive corpus v0 candidate from the rtkd master transcript. Stage 1 work should review candidate records, add solved-page golden fixtures, and decide whether a later activation process can promote reviewed metadata. The generated candidate itself is not committed and is not active canonical corpus.

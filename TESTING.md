@@ -69,3 +69,7 @@ Stage 0D-P validates tutorial, issue seed, wiki source, and GitHub script existe
 ## Stage 0D-followup parser, alignment, and boundary tests
 
 Stage 0D-followup tests cover transcript physical/logical/stream views, bounded stream-subsequence matching, gap diagnostics, stricter boundary confidence auditing, CLI commands, and real-source conditional smoke checks. Tests assert that empty-pair-only and word-length-only evidence cannot create high-confidence boundaries, all boundaries keep `canonical_page_boundary=false`, and all alignment records remain non-canonical.
+
+## Stage 0E profile and corpus candidate tests
+
+Stage 0E tests validate Gematria profile invariants, glyph variant profile policy, separator grammar rules, corpus tokenization, JSON schemas, synthetic candidate generation, real-source conditional generation, and CLI commands.

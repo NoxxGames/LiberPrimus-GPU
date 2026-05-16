@@ -32,6 +32,13 @@ wheels/
 *.qdrep
 profile/
 profiles/
+!data/profiles/
+!data/profiles/**
+!python/libreprimus/profiles/
+!python/libreprimus/profiles/**
+python/libreprimus/profiles/__pycache__/
+python/libreprimus/profiles/__pycache__/**
+python/libreprimus/profiles/**/*.pyc
 
 # Experiment outputs
 experiments/results/**
@@ -90,6 +97,12 @@ data/normalized/alignment/**
 !data/normalized/alignment/
 !data/normalized/alignment/README.md
 !data/normalized/alignment/.gitkeep
+
+# Generated corpus candidates
+data/normalized/corpus-candidates/**
+!data/normalized/corpus-candidates/
+!data/normalized/corpus-candidates/README.md
+!data/normalized/corpus-candidates/.gitkeep
 
 # Generated workbook-derived outputs
 data/normalized/legacy-workbook/**

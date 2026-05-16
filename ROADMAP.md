@@ -40,6 +40,12 @@ If the remaining ambiguous records block corpus policy work, manually inspect un
 
 Freeze Gematria profile and separator grammar, then create canonical corpus v0 candidate records with page-boundary candidates preserved as non-final metadata.
 
+Stage 0E generated frozen Gematria, separator, and glyph variant profiles plus an inactive rtkd master v0 corpus candidate.
+
+## Phase 1A - Solved-page golden fixture framework
+
+Implement solved-page golden fixture framework and reproduce direct-translation solved pages using Stage 0E profiles and corpus candidate records. Do not add brute-force search.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.
