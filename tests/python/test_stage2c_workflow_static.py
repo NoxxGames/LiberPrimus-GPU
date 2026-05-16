@@ -77,6 +77,7 @@ def test_ci_workflow_runs_ruff_and_pytest() -> None:
 
 def test_ci_workflow_validates_registry_and_manifests() -> None:
     text = _workflow_text()
+    assert "verify-lock-hashes.sh" in text
     assert "transform-registry validate" in text
     assert "solved-baseline validate-manifest" in text
     assert "result-store validate-manifest" in text

@@ -6,6 +6,9 @@ cd "$repo_root"
 
 python_bin="${PYTHON:-python}"
 
+echo "Validating lock hashes"
+bash scripts/ci/verify-lock-hashes.sh
+
 echo "Validating profile summaries"
 "$python_bin" -m libreprimus.cli profile summary
 

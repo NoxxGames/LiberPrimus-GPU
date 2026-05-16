@@ -25,11 +25,13 @@ Stage 2C-followup reformatted the workflow into readable multi-line YAML and add
 
 Stage 2C-followup-2 confirmed the local and remote raw workflow were already multi-line at the start of the task and added reusable scripts to repeat that remote check after future pushes.
 
+Stage 2C-followup-3 fixed the Linux CI lock mismatch by repairing `.gitattributes`, normalizing canonical profile/registry JSON locks to LF bytes, and adding lock-hash validation to CI.
+
 ## Local Scripts
 
 Local reproduction scripts live under `scripts/ci/` for PowerShell and shell users. They split Python checks from schema/manifest validation so contributors can rerun targeted checks.
 
-Stage 2C-followup adds `validate-workflow-static` scripts for PowerShell and shell users. Stage 2C-followup-2 adds `verify-remote-workflow` scripts that fetch the public raw workflow URL and do not require `gh`.
+Stage 2C-followup adds `validate-workflow-static` scripts for PowerShell and shell users. Stage 2C-followup-2 adds `verify-remote-workflow` scripts that fetch the public raw workflow URL and do not require `gh`. Stage 2C-followup-3 adds canonical lock verification scripts.
 
 ## Validation Result
 

@@ -6,6 +6,7 @@ These scripts reproduce the Stage 2C GitHub Actions checks locally.
 - `run-schema-manifest-checks.ps1` / `run-schema-manifest-checks.sh`: raw-data-free profile, registry, solved-baseline manifest, and result-store manifest validation.
 - `validate-workflow-static.ps1` / `validate-workflow-static.sh`: static GitHub Actions workflow validation.
 - `verify-remote-workflow.ps1` / `verify-remote-workflow.sh`: post-push raw GitHub workflow validation without requiring `gh`.
+- `verify-lock-hashes.ps1` / `verify-lock-hashes.sh`: `.gitattributes`, LF canonical JSON, SHA lock, and metadata validation.
 
 They do not require raw transcript files, CUDA, GitHub credentials, secrets, or generated result-store outputs.
 

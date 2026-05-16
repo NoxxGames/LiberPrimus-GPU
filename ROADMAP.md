@@ -88,6 +88,8 @@ Stage 2C-followup hardened the workflow with readable multi-line YAML, static YA
 
 Stage 2C-followup-2 added post-push raw GitHub workflow verification scripts and `gh` PATH troubleshooting while keeping the workflow raw-data-free, CUDA-free, secret-free, and artifact-upload-free by default.
 
+Stage 2C-followup-3 repaired Git attributes, normalized canonical profile/registry JSON locks to LF bytes, and added lock-hash verification to prevent Windows/Linux SHA drift.
+
 ## Phase 2D - CI-gated schema and docs hardening
 
 Add schema/docs consistency checks and harden manifest/result-store validation before first bounded CPU exploratory experiment scaffolding.

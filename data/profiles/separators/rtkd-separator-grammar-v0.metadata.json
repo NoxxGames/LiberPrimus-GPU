@@ -1,14 +1,14 @@
 {
-    "profile_id":  "rtkd-separator-grammar-v0",
-    "profile_kind":  "separator_grammar_profile",
-    "status":  "frozen_profile",
-    "canonical_profile_active":  true,
-    "canonical_corpus_active":  false,
-    "separator_class_count":  12,
-    "sha256":  "303f3062ad8b41bf84ab068f2fd6601b1efb3291872d53956669ea3dd7d88e3c",
-    "created_at_utc":  "2026-05-16T02:06:52Z",
-    "notes":  [
-                  "Frozen tooling profile for rtkd-style separator preservation.",
-                  "Page and line separator tokens are not final page boundaries."
-              ]
+  "canonical_corpus_active": false,
+  "canonical_profile_active": true,
+  "created_at_utc": "2026-05-16T02:06:52Z",
+  "notes": [
+    "Frozen tooling profile for rtkd-style separator preservation.",
+    "Page and line separator tokens are not final page boundaries."
+  ],
+  "profile_id": "rtkd-separator-grammar-v0",
+  "profile_kind": "separator_grammar_profile",
+  "separator_class_count": 12,
+  "sha256": "e0a5f682ced4afcf25956d06b1b49d1356203fe8ed47c7dec41365e3bec7b8e7",
+  "status": "frozen_profile"
 }

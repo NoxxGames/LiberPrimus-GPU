@@ -10,6 +10,7 @@ These commands reproduce the Stage 2C CI checks without requiring raw data, CUDA
 .\scripts\ci\run-python-ci.ps1
 .\scripts\ci\run-schema-manifest-checks.ps1
 .\scripts\ci\validate-workflow-static.ps1
+.\scripts\ci\verify-lock-hashes.ps1
 ```
 
 After a workflow push:
@@ -24,6 +25,7 @@ After a workflow push:
 bash scripts/ci/run-python-ci.sh
 bash scripts/ci/run-schema-manifest-checks.sh
 bash scripts/ci/validate-workflow-static.sh
+bash scripts/ci/verify-lock-hashes.sh
 ```
 
 After a workflow push:
@@ -43,6 +45,7 @@ bash scripts/ci/verify-remote-workflow.sh --repo-owner NoxxGames --repo-name Lib
 ## Schema And Manifest Validation Commands
 
 ```powershell
+.\.venv\Scripts\python.exe scripts\ci\repair-canonical-json-locks.py --check
 .\.venv\Scripts\python.exe -m libreprimus.cli profile summary
 .\.venv\Scripts\python.exe -m libreprimus.cli transform-registry validate --registry data/transform-registry/cpu-reference-transforms-v0.json
 .\.venv\Scripts\python.exe -m libreprimus.cli solved-baseline validate-manifest --manifest experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml

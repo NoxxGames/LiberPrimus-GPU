@@ -16,6 +16,7 @@ Stage 2C-followup-2 adds a raw GitHub URL verifier so maintainers can confirm th
 
 The `python-ci` job runs on `ubuntu-latest` with Python 3.12. It installs the package with development dependencies, then runs:
 
+- lock-hash validation for canonical profile/registry JSON
 - `python -m ruff check python/libreprimus tests/python`
 - `python -m pytest -q tests/python`
 - `python -m libreprimus.cli smoke`
@@ -29,7 +30,7 @@ Stage 2C includes a CPU-only CMake smoke job on `ubuntu-latest`. It configures w
 
 ## What CI Checks
 
-CI checks Python style, Python tests, CLI smoke wiring, committed transform-registry metadata, solved-baseline manifests, result-store manifests, and the CPU CMake scaffold.
+CI checks Python style, Python tests, CLI smoke wiring, committed profile/registry lock hashes, transform-registry metadata, solved-baseline manifests, result-store manifests, and the CPU CMake scaffold.
 
 Static workflow tests also validate the parsed YAML structure, trigger branches, permissions, concurrency, job names, required commands, and no artifact-upload or secret usage.
 

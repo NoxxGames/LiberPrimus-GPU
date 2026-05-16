@@ -1,107 +1,107 @@
 {
-    "profile_id":  "rtkd-separator-grammar-v0",
-    "status":  "frozen_profile",
-    "canonical_profile_active":  true,
-    "canonical_corpus_active":  false,
-    "source_id":  "rtkd-master-transcription",
-    "separator_classes":  [
-                              {
-                                  "class_id":  "word_separator",
-                                  "glyphs":  [
-                                                 "-"
-                                             ],
-                                  "preserve":  true,
-                                  "token_kind":  "word_separator"
-                              },
-                              {
-                                  "class_id":  "clause_separator",
-                                  "glyphs":  [
-                                                 "."
-                                             ],
-                                  "preserve":  true,
-                                  "token_kind":  "clause_separator"
-                              },
-                              {
-                                  "class_id":  "paragraph_separator",
-                                  "glyphs":  [
-                                                 "\u0026"
-                                             ],
-                                  "preserve":  true,
-                                  "token_kind":  "paragraph_separator"
-                              },
-                              {
-                                  "class_id":  "segment_separator",
-                                  "glyphs":  [
-                                                 "$"
-                                             ],
-                                  "preserve":  true,
-                                  "token_kind":  "segment_separator"
-                              },
-                              {
-                                  "class_id":  "chapter_separator",
-                                  "glyphs":  [
-                                                 "§"
-                                             ],
-                                  "preserve":  true,
-                                  "token_kind":  "chapter_separator"
-                              },
-                              {
-                                  "class_id":  "line_separator",
-                                  "glyphs":  [
-                                                 "/"
-                                             ],
-                                  "preserve":  true,
-                                  "token_kind":  "line_separator"
-                              },
-                              {
-                                  "class_id":  "page_separator_or_marker",
-                                  "glyphs":  [
-                                                 "%"
-                                             ],
-                                  "preserve":  true,
-                                  "token_kind":  "page_separator_or_marker",
-                                  "canonical_page_boundary":  false
-                              },
-                              {
-                                  "class_id":  "whitespace",
-                                  "glyphs":  [
-                                                 " ",
-                                                 "\t"
-                                             ],
-                                  "preserve_raw":  true,
-                                  "token_kind":  "whitespace"
-                              },
-                              {
-                                  "class_id":  "newline",
-                                  "token_kind":  "physical_newline",
-                                  "preserve_raw":  true
-                              },
-                              {
-                                  "class_id":  "numeric_literal",
-                                  "pattern":  "consecutive ASCII digits",
-                                  "preserve":  true,
-                                  "token_kind":  "numeric_literal"
-                              },
-                              {
-                                  "class_id":  "hex_literal_candidate",
-                                  "pattern":  "consecutive ASCII hex chars in known hex contexts",
-                                  "preserve":  true,
-                                  "token_kind":  "hex_literal_candidate",
-                                  "canonical_payload_type":  false
-                              },
-                              {
-                                  "class_id":  "unknown_symbol",
-                                  "preserve":  true,
-                                  "token_kind":  "unknown_symbol",
-                                  "requires_warning":  true
-                              }
-                          ],
-    "rules":  [
-                  "Separators are preserved as tokens.",
-                  "Separators are not discarded during normalization.",
-                  "% does not automatically activate a canonical page boundary.",
-                  "/ may support logical-line views but does not itself prove a page boundary.",
-                  "Unknown symbols must produce warnings.",
-                  "All token records must preserve source position."
-              ]
+  "canonical_corpus_active": false,
+  "canonical_profile_active": true,
+  "profile_id": "rtkd-separator-grammar-v0",
+  "rules": [
+    "Separators are preserved as tokens.",
+    "Separators are not discarded during normalization.",
+    "% does not automatically activate a canonical page boundary.",
+    "/ may support logical-line views but does not itself prove a page boundary.",
+    "Unknown symbols must produce warnings.",
+    "All token records must preserve source position."
+  ],
+  "separator_classes": [
+    {
+      "class_id": "word_separator",
+      "glyphs": [
+        "-"
+      ],
+      "preserve": true,
+      "token_kind": "word_separator"
+    },
+    {
+      "class_id": "clause_separator",
+      "glyphs": [
+        "."
+      ],
+      "preserve": true,
+      "token_kind": "clause_separator"
+    },
+    {
+      "class_id": "paragraph_separator",
+      "glyphs": [
+        "&"
+      ],
+      "preserve": true,
+      "token_kind": "paragraph_separator"
+    },
+    {
+      "class_id": "segment_separator",
+      "glyphs": [
+        "$"
+      ],
+      "preserve": true,
+      "token_kind": "segment_separator"
+    },
+    {
+      "class_id": "chapter_separator",
+      "glyphs": [
+        "§"
+      ],
+      "preserve": true,
+      "token_kind": "chapter_separator"
+    },
+    {
+      "class_id": "line_separator",
+      "glyphs": [
+        "/"
+      ],
+      "preserve": true,
+      "token_kind": "line_separator"
+    },
+    {
+      "canonical_page_boundary": false,
+      "class_id": "page_separator_or_marker",
+      "glyphs": [
+        "%"
+      ],
+      "preserve": true,
+      "token_kind": "page_separator_or_marker"
+    },
+    {
+      "class_id": "whitespace",
+      "glyphs": [
+        " ",
+        "\t"
+      ],
+      "preserve_raw": true,
+      "token_kind": "whitespace"
+    },
+    {
+      "class_id": "newline",
+      "preserve_raw": true,
+      "token_kind": "physical_newline"
+    },
+    {
+      "class_id": "numeric_literal",
+      "pattern": "consecutive ASCII digits",
+      "preserve": true,
+      "token_kind": "numeric_literal"
+    },
+    {
+      "canonical_payload_type": false,
+      "class_id": "hex_literal_candidate",
+      "pattern": "consecutive ASCII hex chars in known hex contexts",
+      "preserve": true,
+      "token_kind": "hex_literal_candidate"
+    },
+    {
+      "class_id": "unknown_symbol",
+      "preserve": true,
+      "requires_warning": true,
+      "token_kind": "unknown_symbol"
+    }
+  ],
+  "source_id": "rtkd-master-transcription",
+  "status": "frozen_profile"
 }

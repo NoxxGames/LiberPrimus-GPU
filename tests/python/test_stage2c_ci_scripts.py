@@ -16,6 +16,8 @@ def test_ci_scripts_exist() -> None:
         "run-schema-manifest-checks.sh",
         "validate-workflow-static.ps1",
         "validate-workflow-static.sh",
+        "verify-lock-hashes.ps1",
+        "verify-lock-hashes.sh",
         "verify-remote-workflow.ps1",
         "verify-remote-workflow.sh",
     ]:
@@ -27,6 +29,7 @@ def test_shell_scripts_use_strict_mode() -> None:
         "run-python-ci.sh",
         "run-schema-manifest-checks.sh",
         "validate-workflow-static.sh",
+        "verify-lock-hashes.sh",
         "verify-remote-workflow.sh",
     ]:
         text = (SCRIPT_DIR / name).read_text(encoding="utf-8")
@@ -38,6 +41,7 @@ def test_powershell_scripts_use_strict_mode() -> None:
         "run-python-ci.ps1",
         "run-schema-manifest-checks.ps1",
         "validate-workflow-static.ps1",
+        "verify-lock-hashes.ps1",
         "verify-remote-workflow.ps1",
     ]:
         text = (SCRIPT_DIR / name).read_text(encoding="utf-8")
@@ -65,6 +69,7 @@ def test_ci_scripts_do_not_write_generated_result_outputs() -> None:
 
 def test_schema_manifest_script_validates_expected_manifests() -> None:
     text = (SCRIPT_DIR / "run-schema-manifest-checks.sh").read_text(encoding="utf-8")
+    assert "verify-lock-hashes.sh" in text
     assert "profile summary" in text
     assert "transform-registry validate" in text
     assert "solved-baseline validate-manifest" in text
@@ -83,3 +88,10 @@ def test_remote_workflow_scripts_do_not_require_gh() -> None:
         assert "gh " not in text
         assert "raw.githubusercontent.com" in text
         assert "minimumlinecount" in text or "minimum_line_count" in text
+
+
+def test_lock_hash_scripts_run_repair_check() -> None:
+    for name in ["verify-lock-hashes.ps1", "verify-lock-hashes.sh"]:
+        text = (SCRIPT_DIR / name).read_text(encoding="utf-8")
+        assert "repair-canonical-json-locks.py --check" in text
+        assert ".gitattributes" in text

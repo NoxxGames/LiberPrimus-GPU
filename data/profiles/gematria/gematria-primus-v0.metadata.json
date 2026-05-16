@@ -1,16 +1,16 @@
 {
-  "profile_id": "gematria-primus-v0",
-  "profile_kind": "gematria_primus_index_prime_profile",
-  "status": "frozen_profile",
-  "canonical_profile_active": true,
   "canonical_corpus_active": false,
+  "canonical_profile_active": true,
+  "created_at_utc": "2026-05-16T02:13:17Z",
   "entry_count": 29,
   "modulus": 29,
-  "sha256": "93577209028c964523068b5975180e05bda5b1a07b2675d4e35d03d6d164c5c2",
-  "created_at_utc": "2026-05-16T02:13:17Z",
   "notes": [
     "Frozen tooling profile for Gematria Primus rune/index/prime mapping.",
     "Latin labels are display/profile labels; index order is the arithmetic source of truth.",
     "Glyph variants such as ᛂ are not canonical Gematria entries."
-  ]
+  ],
+  "profile_id": "gematria-primus-v0",
+  "profile_kind": "gematria_primus_index_prime_profile",
+  "sha256": "80cb10863b1fd3de57b44000c6bd90c307f11b90cc9d864a3d493e3f069c3280",
+  "status": "frozen_profile"
 }

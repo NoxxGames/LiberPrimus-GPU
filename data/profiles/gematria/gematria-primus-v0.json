@@ -1,308 +1,308 @@
 {
-  "profile_id": "gematria-primus-v0",
-  "status": "frozen_profile",
-  "canonical_profile_active": true,
   "canonical_corpus_active": false,
-  "modulus": 29,
-  "source_basis": [
-    "community Gematria Primus ordering",
-    "rtkd/scream314/legacy Pastebin/workbook validation context"
-  ],
+  "canonical_profile_active": true,
   "entries": [
     {
       "index": 0,
-      "prime": 2,
-      "rune": "ᚠ",
       "latin_labels": [
         "F"
       ],
+      "notes": [],
       "preferred_latin_label": "F",
-      "notes": []
+      "prime": 2,
+      "rune": "ᚠ"
     },
     {
       "index": 1,
-      "prime": 3,
-      "rune": "ᚢ",
       "latin_labels": [
         "U",
         "V"
       ],
+      "notes": [],
       "preferred_latin_label": "U",
-      "notes": []
+      "prime": 3,
+      "rune": "ᚢ"
     },
     {
       "index": 2,
-      "prime": 5,
-      "rune": "ᚦ",
       "latin_labels": [
         "TH"
       ],
+      "notes": [],
       "preferred_latin_label": "TH",
-      "notes": []
+      "prime": 5,
+      "rune": "ᚦ"
     },
     {
       "index": 3,
-      "prime": 7,
-      "rune": "ᚩ",
       "latin_labels": [
         "O"
       ],
+      "notes": [],
       "preferred_latin_label": "O",
-      "notes": []
+      "prime": 7,
+      "rune": "ᚩ"
     },
     {
       "index": 4,
-      "prime": 11,
-      "rune": "ᚱ",
       "latin_labels": [
         "R"
       ],
+      "notes": [],
       "preferred_latin_label": "R",
-      "notes": []
+      "prime": 11,
+      "rune": "ᚱ"
     },
     {
       "index": 5,
-      "prime": 13,
-      "rune": "ᚳ",
       "latin_labels": [
         "C",
         "K"
       ],
+      "notes": [],
       "preferred_latin_label": "C",
-      "notes": []
+      "prime": 13,
+      "rune": "ᚳ"
     },
     {
       "index": 6,
-      "prime": 17,
-      "rune": "ᚷ",
       "latin_labels": [
         "G"
       ],
+      "notes": [],
       "preferred_latin_label": "G",
-      "notes": []
+      "prime": 17,
+      "rune": "ᚷ"
     },
     {
       "index": 7,
-      "prime": 19,
-      "rune": "ᚹ",
       "latin_labels": [
         "W"
       ],
+      "notes": [],
       "preferred_latin_label": "W",
-      "notes": []
+      "prime": 19,
+      "rune": "ᚹ"
     },
     {
       "index": 8,
-      "prime": 23,
-      "rune": "ᚻ",
       "latin_labels": [
         "H"
       ],
+      "notes": [],
       "preferred_latin_label": "H",
-      "notes": []
+      "prime": 23,
+      "rune": "ᚻ"
     },
     {
       "index": 9,
-      "prime": 29,
-      "rune": "ᚾ",
       "latin_labels": [
         "N"
       ],
+      "notes": [],
       "preferred_latin_label": "N",
-      "notes": []
+      "prime": 29,
+      "rune": "ᚾ"
     },
     {
       "index": 10,
-      "prime": 31,
-      "rune": "ᛁ",
       "latin_labels": [
         "I"
       ],
+      "notes": [],
       "preferred_latin_label": "I",
-      "notes": []
+      "prime": 31,
+      "rune": "ᛁ"
     },
     {
       "index": 11,
-      "prime": 37,
-      "rune": "ᛄ",
       "latin_labels": [
         "J"
       ],
+      "notes": [],
       "preferred_latin_label": "J",
-      "notes": []
+      "prime": 37,
+      "rune": "ᛄ"
     },
     {
       "index": 12,
-      "prime": 41,
-      "rune": "ᛇ",
       "latin_labels": [
         "EO"
       ],
+      "notes": [],
       "preferred_latin_label": "EO",
-      "notes": []
+      "prime": 41,
+      "rune": "ᛇ"
     },
     {
       "index": 13,
-      "prime": 43,
-      "rune": "ᛈ",
       "latin_labels": [
         "P"
       ],
+      "notes": [],
       "preferred_latin_label": "P",
-      "notes": []
+      "prime": 43,
+      "rune": "ᛈ"
     },
     {
       "index": 14,
-      "prime": 47,
-      "rune": "ᛉ",
       "latin_labels": [
         "X"
       ],
+      "notes": [],
       "preferred_latin_label": "X",
-      "notes": []
+      "prime": 47,
+      "rune": "ᛉ"
     },
     {
       "index": 15,
-      "prime": 53,
-      "rune": "ᛋ",
       "latin_labels": [
         "S",
         "Z"
       ],
+      "notes": [],
       "preferred_latin_label": "S",
-      "notes": []
+      "prime": 53,
+      "rune": "ᛋ"
     },
     {
       "index": 16,
-      "prime": 59,
-      "rune": "ᛏ",
       "latin_labels": [
         "T"
       ],
+      "notes": [],
       "preferred_latin_label": "T",
-      "notes": []
+      "prime": 59,
+      "rune": "ᛏ"
     },
     {
       "index": 17,
-      "prime": 61,
-      "rune": "ᛒ",
       "latin_labels": [
         "B"
       ],
+      "notes": [],
       "preferred_latin_label": "B",
-      "notes": []
+      "prime": 61,
+      "rune": "ᛒ"
     },
     {
       "index": 18,
-      "prime": 67,
-      "rune": "ᛖ",
       "latin_labels": [
         "E"
       ],
+      "notes": [],
       "preferred_latin_label": "E",
-      "notes": []
+      "prime": 67,
+      "rune": "ᛖ"
     },
     {
       "index": 19,
-      "prime": 71,
-      "rune": "ᛗ",
       "latin_labels": [
         "M"
       ],
+      "notes": [],
       "preferred_latin_label": "M",
-      "notes": []
+      "prime": 71,
+      "rune": "ᛗ"
     },
     {
       "index": 20,
-      "prime": 73,
-      "rune": "ᛚ",
       "latin_labels": [
         "L"
       ],
+      "notes": [],
       "preferred_latin_label": "L",
-      "notes": []
+      "prime": 73,
+      "rune": "ᛚ"
     },
     {
       "index": 21,
-      "prime": 79,
-      "rune": "ᛝ",
       "latin_labels": [
         "ING",
         "NG"
       ],
+      "notes": [],
       "preferred_latin_label": "ING",
-      "notes": []
+      "prime": 79,
+      "rune": "ᛝ"
     },
     {
       "index": 22,
-      "prime": 83,
-      "rune": "ᛟ",
       "latin_labels": [
         "OE"
       ],
+      "notes": [],
       "preferred_latin_label": "OE",
-      "notes": []
+      "prime": 83,
+      "rune": "ᛟ"
     },
     {
       "index": 23,
-      "prime": 89,
-      "rune": "ᛞ",
       "latin_labels": [
         "D"
       ],
+      "notes": [],
       "preferred_latin_label": "D",
-      "notes": []
+      "prime": 89,
+      "rune": "ᛞ"
     },
     {
       "index": 24,
-      "prime": 97,
-      "rune": "ᚪ",
       "latin_labels": [
         "A"
       ],
+      "notes": [],
       "preferred_latin_label": "A",
-      "notes": []
+      "prime": 97,
+      "rune": "ᚪ"
     },
     {
       "index": 25,
-      "prime": 101,
-      "rune": "ᚫ",
       "latin_labels": [
         "AE"
       ],
+      "notes": [],
       "preferred_latin_label": "AE",
-      "notes": []
+      "prime": 101,
+      "rune": "ᚫ"
     },
     {
       "index": 26,
-      "prime": 103,
-      "rune": "ᚣ",
       "latin_labels": [
         "Y"
       ],
+      "notes": [],
       "preferred_latin_label": "Y",
-      "notes": []
+      "prime": 103,
+      "rune": "ᚣ"
     },
     {
       "index": 27,
-      "prime": 107,
-      "rune": "ᛡ",
       "latin_labels": [
         "IA",
         "IO"
       ],
+      "notes": [],
       "preferred_latin_label": "IA",
-      "notes": []
+      "prime": 107,
+      "rune": "ᛡ"
     },
     {
       "index": 28,
-      "prime": 109,
-      "rune": "ᛠ",
       "latin_labels": [
         "EA"
       ],
+      "notes": [],
       "preferred_latin_label": "EA",
-      "notes": []
+      "prime": 109,
+      "rune": "ᛠ"
     }
-  ]
+  ],
+  "modulus": 29,
+  "profile_id": "gematria-primus-v0",
+  "source_basis": [
+    "community Gematria Primus ordering",
+    "rtkd/scream314/legacy Pastebin/workbook validation context"
+  ],
+  "status": "frozen_profile"
 }

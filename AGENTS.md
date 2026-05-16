@@ -234,4 +234,9 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - After CI workflow changes, verify both the local workflow and the remote raw workflow line count after push.
 - CI YAML must not be minified or flattened.
 - Remote workflow verification must not depend solely on `gh`; use raw GitHub URL fetch as a fallback.
+- Do not minify `.gitattributes`; it must remain readable multi-line attributes.
+- Do not rewrite profile or registry JSON without regenerating SHA locks and metadata.
+- Do not update `.sha256` files by hand without running lock validation.
+- Canonical profile and registry JSON files must be LF-normalized.
+- CI lock-hash failures must be fixed, not skipped.
 - Push after successful commit remains required when remote is verified.

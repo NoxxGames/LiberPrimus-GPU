@@ -6,6 +6,9 @@ Set-Location $RepoRoot
 
 $Python = if ($env:PYTHON) { $env:PYTHON } elseif (Test-Path ".\.venv\Scripts\python.exe") { ".\.venv\Scripts\python.exe" } else { "python" }
 
+Write-Host "Validating lock hashes"
+& (Join-Path $PSScriptRoot "verify-lock-hashes.ps1")
+
 Write-Host "Validating profile summaries"
 & $Python -m libreprimus.cli profile summary
 

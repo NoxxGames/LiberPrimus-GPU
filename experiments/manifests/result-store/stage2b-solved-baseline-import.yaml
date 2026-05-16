@@ -8,7 +8,7 @@ import_sources:
 - experiments/results/solved-baselines/stage2a/manifest_run_records.jsonl
 - experiments/results/solved-baselines/stage2a/warnings.jsonl
 input_manifest_path: experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml
-input_manifest_sha256: b488ba429468e44736a16dd3c99368ac4e8c83e19d18f8fd3488b806372d0d88
+input_manifest_sha256: 1d508fd8dc27cc6b507300726ab4236dc65d2f8928932710187e43a48dd69049
 jsonl_output_path: experiments/results/result-store/stage2b/run_records.jsonl
 manifest_id: stage2b-solved-baseline-import
 manifest_version: result-store-v0

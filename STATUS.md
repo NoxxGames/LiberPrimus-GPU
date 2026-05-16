@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2C GitHub Actions CI, local CI reproduction scripts, and remote workflow formatting verification are complete.
+Stage 2C GitHub Actions CI, local CI reproduction scripts, remote workflow formatting verification, and LF canonical lock-hash validation are complete.
 
 ## Completed in Stage 0A
 
@@ -60,7 +60,7 @@ Developer log: `docs/development-logs/2026-05-16-stage-0d-followup-alignment-gap
 
 Stage 0E added frozen tooling profiles, corpus schemas, and an rtkd master corpus v0 candidate generator.
 
-Profile hashes: Gematria `93577209028c964523068b5975180e05bda5b1a07b2675d4e35d03d6d164c5c2`; glyph variants `5acae61c4ea2aa9f2f2fb76bdcafb7ed9c6504bd98caf29590a95d7d43271d6d`; separator grammar `303f3062ad8b41bf84ab068f2fd6601b1efb3291872d53956669ea3dd7d88e3c`.
+Profile hashes: Gematria `80cb10863b1fd3de57b44000c6bd90c307f11b90cc9d864a3d493e3f069c3280`; glyph variants `df81597b15c991ddf2894a44f1a6980554a5e463881d00a31524e5366dd704bf`; separator grammar `e0a5f682ced4afcf25956d06b1b49d1356203fe8ed47c7dec41365e3bec7b8e7`.
 
 Real-source candidate summary: physical lines `931`, logical lines `1729`, tokens `22382`, rune tokens `15933`, separator tokens `5795`, page candidates `74`, warnings `311`, `canonical_corpus_active=false`.
 
