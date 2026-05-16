@@ -6,15 +6,43 @@
 
 `liberprimus-gpu` is a reproducible research workbench for conservative Liber Primus cryptanalysis experiments. The project keeps corpus provenance, solved baselines, transform metadata, run records, and CI gates ahead of any exploratory search or GPU acceleration work.
 
-## Non-goals
+## Current boundaries and deferred work
 
-- No Liber Primus page is claimed solved.
-- No unsolved-page search campaign is implemented.
-- No scoring campaign is implemented.
-- No CUDA experiment campaign is implemented.
-- No canonical corpus is active.
-- No page boundaries are finalized.
-- No generated experiment output is committed.
+These are not permanent project exclusions unless they are marked as safety rules. They describe the current implementation boundary after Stage 2D and the work that must stay staged, reviewable, and reproducible before larger experiments begin.
+
+### Permanent safety rules
+
+- No generated output is a solve by itself.
+- No Liber Primus page is claimed solved; material that is still unsolved must not receive a solve claim without a pinned corpus, manifest, transform chain, reproducible output, tests, and review.
+- Raw data must not be overwritten or committed.
+- Generated outputs and SQLite databases must not be committed.
+
+### Current boundaries
+
+- Canonical corpus: inactive.
+- Page boundaries: reviewable.
+- Unsolved-page search campaigns: not started.
+- Scoring campaigns: not started.
+- CUDA experiment campaigns: not started.
+- Existing CUDA code is scaffold and smoke-test infrastructure only.
+
+### Deferred future work
+
+- Bounded CPU exploratory experiment scaffolding.
+- Candidate scoring.
+- Search campaigns.
+- CUDA kernels after CPU references and parity tests exist.
+- Benchmark campaigns after stable CPU/GPU baselines exist.
+
+### Already implemented since Stage 0A
+
+- Profile and corpus-candidate infrastructure.
+- Ten known solved baseline fixtures.
+- CPU transform registry.
+- Solved-baseline manifest runner.
+- JSONL/SQLite result-store foundation.
+- Raw-data-free GitHub Actions CI.
+- CI-gated consistency checks.
 
 ## Architecture summary
 
@@ -96,7 +124,7 @@ If `cl.exe` is not visible in the current shell, run through `scripts\configure-
 
 ## Configure and build with CUDA
 
-CUDA builds are optional in Stage 0A.
+CUDA builds remain optional and are scaffold/smoke only at the current stage.
 
 ```powershell
 cmake -S . -B build\cuda-debug -G Ninja -DCMAKE_BUILD_TYPE=Debug -DLPGPU_ENABLE_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=89 -DLPGPU_BUILD_TESTS=ON
@@ -148,7 +176,7 @@ Local Stage 2C CI reproduction:
 
 ## Data policy
 
-`data/raw/` is immutable. Do not overwrite raw evidence, normalize in place, or commit real raw corpus files in Stage 0A. Later corpus work must use explicit SHA-256 locks and transcript version metadata.
+`data/raw/` is immutable. Do not overwrite raw evidence, normalize in place, or commit real raw corpus files. Corpus work must use explicit SHA-256 locks and transcript version metadata.
 
 ## Experiment policy
 
@@ -156,7 +184,7 @@ Experiments are manifest-driven. Candidate outputs must never be treated as solv
 
 ## Testing policy
 
-Stage 0A requires smoke tests for the C++ skeleton and Python package. Future CUDA kernels must have CPU reference implementations, CPU/GPU parity tests, and benchmarks before optimization.
+Current tests cover the C++ skeleton, Python package, manifests, schemas, result stores, lock hashes, public documentation status, and consistency gates. Future CUDA kernels must have CPU reference implementations, CPU/GPU parity tests, and benchmarks before optimization.
 
 ## Next milestones
 

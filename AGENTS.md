@@ -257,3 +257,10 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - CI consistency checks must remain raw-data-free.
 - Stage 2D does not enable search, scoring, CUDA, canonical corpus activation, or page-boundary finalization.
 - Push after successful commit remains required when remote is verified.
+
+## Public Documentation Wording Rules
+
+- Do not use ambiguous non-goals wording for deferred roadmap work.
+- Public docs must distinguish permanent safety rules, current implementation boundaries, deferred future work, and completed work.
+- README status and boundary sections must be updated when stages complete.
+- Do not leave old Stage 0A boundary wording in top-level public documentation after later infrastructure stages implement parts of that work.
