@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/results/experiment-event-record-v0.schema.json",
+  "title": "Experiment Event Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "run_id",
+    "event_index",
+    "timestamp_utc",
+    "level",
+    "event_type",
+    "message",
+    "data",
+    "trusted_as_canonical"
+  ],
+  "properties": {
+    "record_type": { "const": "experiment_event_record" },
+    "run_id": { "type": "string", "minLength": 1 },
+    "event_index": { "type": "integer", "minimum": 0 },
+    "timestamp_utc": { "type": "string" },
+    "level": { "enum": ["debug", "info", "warning", "error"] },
+    "event_type": { "type": "string", "minLength": 1 },
+    "message": { "type": "string" },
+    "data": { "type": "object" },
+    "trusted_as_canonical": { "const": false }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/results/experiment-artifact-record-v0.schema.json",
+  "title": "Experiment Artifact Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "run_id",
+    "artifact_id",
+    "artifact_kind",
+    "path",
+    "sha256",
+    "size_bytes",
+    "committed",
+    "ignored_by_git",
+    "notes",
+    "trusted_as_canonical"
+  ],
+  "properties": {
+    "record_type": { "const": "experiment_artifact_record" },
+    "run_id": { "type": "string", "minLength": 1 },
+    "artifact_id": { "type": "string", "minLength": 1 },
+    "artifact_kind": { "type": "string", "minLength": 1 },
+    "path": { "type": "string", "minLength": 1 },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "size_bytes": { "type": "integer", "minimum": 0 },
+    "committed": { "const": false },
+    "ignored_by_git": { "const": true },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "trusted_as_canonical": { "const": false }
+  }
+}

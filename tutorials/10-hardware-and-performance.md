@@ -51,3 +51,15 @@ Stage 1D p56 prime-minus-one reproduction is CPU-only and small. Deterministic p
 Stage 2A registry dispatch and solved-baseline manifests are CPU-only regression checks. The elapsed time in `experiments/results/solved-baselines/stage2a/summary.json` is diagnostic metadata only.
 
 Stage 2A does not run search, scoring, CUDA kernels, or throughput benchmarks.
+
+## Stage 2B Result Store Scope
+
+Stage 2B writes generated JSONL and SQLite result stores for the solved-baseline regression import. This is CPU-only bookkeeping and validation, not a benchmark or search workload.
+
+Run the smoke command when you need to verify the local result-store path:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli result-store stage2b-smoke --solved-baseline-manifest experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml --result-store-manifest experiments/manifests/result-store/stage2b-solved-baseline-import.yaml --solved-baseline-out-dir experiments/results/solved-baselines/stage2a --result-store-out-dir experiments/results/result-store/stage2b --replace --allow-warnings
+```
+
+Generated JSONL and SQLite files remain ignored. CUDA remains unused.

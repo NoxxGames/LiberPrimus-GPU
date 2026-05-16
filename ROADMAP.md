@@ -76,6 +76,12 @@ Stage 2A added `cpu-reference-transforms-v0`, registry dispatch, solved-baseline
 
 Add durable JSONL/SQLite result sinks, run-record schemas, manifest provenance, solved-baseline result import, and validation before unsolved-page search campaigns begin.
 
+Stage 2B added result-store schemas, JSONL and SQLite sinks, provenance capture, a solved-baseline import manifest, result-store CLI commands, and generated result-store validation. It imports the Stage 2A all-known solved-baseline run with pass/fail/pending/skipped `10/0/0/0`. Search, scoring, CUDA, canonical corpus activation, and page-boundary finalization remain disabled.
+
+## Phase 2C - CI and safe experiment scaffolding
+
+Add GitHub Actions CI for Python tests, ruff, schema validation, and CPU-only smoke commands, or add bounded CPU experiment-manifest scaffolding only after result-store validation. Do not jump directly to CUDA or unsolved-page search.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

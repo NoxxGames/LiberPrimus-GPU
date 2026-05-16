@@ -108,3 +108,11 @@ The p56 hex block is preserved and hash-checked as payload data, not merged into
 Stage 2A consolidates the known solved baselines behind a CPU reference transform registry and manifest-addressable runner.
 
 The all-known manifest reproduces 10 solved fixture baselines through registry dispatch. This proves orchestration and regression coverage for known material only. It does not start search campaigns, add scoring, activate a canonical corpus, finalize page boundaries, or use CUDA.
+
+## Stage 2B Result Store Foundation
+
+Stage 2B imports the Stage 2A solved-baseline regression run into generated JSONL and SQLite result stores.
+
+The imported run preserves manifest and registry SHA-256s, git commit, profile/source provenance, fixture counts, and explicit false flags for canonical corpus activation, page-boundary finalization, search, scoring, CUDA, and canonical trust.
+
+This stage proves result accounting for known-baseline regression evidence only. It does not run unsolved-page experiments, add scoring, start search campaigns, activate a canonical corpus, finalize page boundaries, or use CUDA.

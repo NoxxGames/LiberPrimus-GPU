@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/results/sqlite-result-store-v0.schema.json",
+  "title": "SQLite Result Store v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["record_type", "schema_id", "tables", "trusted_as_canonical"],
+  "properties": {
+    "record_type": { "const": "sqlite_result_store_schema" },
+    "schema_id": { "const": "sqlite-result-store-v0" },
+    "trusted_as_canonical": { "const": false },
+    "tables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "columns"],
+        "properties": {
+          "name": {
+            "enum": ["schema_metadata", "runs", "events", "artifacts", "summaries"]
+          },
+          "columns": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

@@ -84,7 +84,7 @@ Future cipher modules must use Gematria profile v0 for rune/index/prime mapping.
 
 ## Stage 1A direct-translation baseline
 
-Stage 1A implements a direct-translation reproduction baseline for solved fixtures only. It maps rune tokens to Gematria profile preferred Latin labels. Atbash, Vigenere, rotated reverse Gematria, prime streams, and search remain unimplemented.
+Stage 1A implemented a direct-translation reproduction baseline for solved fixtures only. It maps rune tokens to Gematria profile preferred Latin labels. Later stages added Atbash-family, explicit-key Vigenere, and prime-minus-one solved-baseline transforms; generic search remains unimplemented.
 
 ## Stage 1B Atbash-family baselines
 
@@ -116,7 +116,7 @@ Stage 1D implements `prime_minus_one_stream` only as a known-solved p56 fixture 
 - Alias: `phi_prime_stream`, because `phi(p)=p-1` for prime inputs.
 - Stream position advances only on enciphered rune tokens.
 - Payload tokens are preserved and checked separately.
-- No generic prime-stream search, offset sweep, scoring, CUDA acceleration, or transform registry is implemented.
+- No generic prime-stream search, offset sweep, scoring, or CUDA acceleration is implemented. Stage 2A later registered this as a CPU reference solved-baseline transform.
 
 Generic affine/shift/search infrastructure remains unimplemented.
 
@@ -132,3 +132,9 @@ Stage 2A registers the implemented known-solved baseline transforms as CPU refer
 - `phi_prime_stream` as an alias of `prime_minus_one_stream`
 
 Every registry entry has `supports_gpu=false`, `search_enabled=false`, and `scoring_enabled=false`. The registry is used by solved-baseline manifests and does not implement generic affine/shift search, Vigenere key search, prime-stream search, scoring, CUDA acceleration, or unsolved-page campaign execution.
+
+## Stage 2B Result Store Relationship
+
+Stage 2B does not add cipher behavior. It imports solved-baseline manifest-run outputs into JSONL and SQLite result stores with provenance and false search/CUDA/scoring flags.
+
+The result store is infrastructure for future experiment accounting. It does not implement affine/shift search, Vigenere key search, prime-stream search, scoring, CUDA acceleration, or unsolved-page campaign execution.

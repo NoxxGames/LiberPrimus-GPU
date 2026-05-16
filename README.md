@@ -18,7 +18,7 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 
 ## Current status
 
-Stage 2A CPU transform registry and manifest-addressable solved-baseline runner are complete. The repository has frozen Stage 0E profiles, an inactive corpus candidate generator, a CPU reference transform registry, and manifest-runner coverage for all known solved fixture baselines. Direct fixtures `4/0/0/0`, Atbash-family fixtures `3/0/0/0`, Vigenere fixtures `2/0/0/0`, and prime-stream fixtures `1/0/0/0` pass/fail/pending/skipped, for `10` total known solved baselines reproduced through the registry path. No canonical corpus is active, page boundaries remain reviewable, no unsolved page is claimed solved, and no CUDA/search/scoring campaign is implemented. Next milestone: Stage 2B experiment result-store and run-record foundation.
+Stage 2B experiment result-store and run-record foundation is complete. Stage 2A provides the CPU transform registry and manifest-addressable solved-baseline runner, and Stage 2B imports that solved-baseline run into generated JSONL and SQLite result stores. Direct fixtures `4/0/0/0`, Atbash-family fixtures `3/0/0/0`, Vigenere fixtures `2/0/0/0`, and prime-stream fixtures `1/0/0/0` pass/fail/pending/skipped, for `10` total known solved baselines reproduced through the registry path. No canonical corpus is active, page boundaries remain reviewable, no unsolved page is claimed solved, and no CUDA/search/scoring campaign is implemented. Next milestone: Stage 2C documentation/CI hardening or safe CPU experiment-manifest scaffolding after result-store validation.
 
 ## Tutorials
 
@@ -101,6 +101,12 @@ All-known solved-baseline registry smoke:
 .\.venv\Scripts\python.exe -m libreprimus.cli solved-baseline stage2a-smoke --manifest experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml --out-dir experiments/results/solved-baselines/stage2a --allow-warnings
 ```
 
+Stage 2B result-store smoke:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli result-store stage2b-smoke --solved-baseline-manifest experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml --result-store-manifest experiments/manifests/result-store/stage2b-solved-baseline-import.yaml --solved-baseline-out-dir experiments/results/solved-baselines/stage2a --result-store-out-dir experiments/results/result-store/stage2b --replace --allow-warnings
+```
+
 ## Repository map
 
 - `src/`: C++20 native scaffold.
@@ -128,7 +134,7 @@ Stage 0A requires smoke tests for the C++ skeleton and Python package. Future CU
 
 ## Next milestones
 
-Stage 2A should build a CPU transform registry and manifest-addressable solved-baseline runner for the implemented reference transforms, without starting search campaigns.
+Stage 2C should harden CI and/or add safe CPU experiment-manifest scaffolding on top of the Stage 2B result-store foundation, without starting unsolved-page search campaigns.
 
 ## Stage 1B Atbash-Family Fixtures
 
@@ -153,3 +159,7 @@ Stage 1C adds explicit-key Vigenere known-solved fixture reproduction for `DIVIN
 ## Stage 1D Prime-Stream Baseline
 
 Stage 1D adds p56 `An End` known-solved reproduction using a CPU-only `prime_minus_one_stream` transform with `phi_prime_stream` recorded as an equivalent alias for prime inputs. The p56 hex block is preserved as a payload check, not merged into plaintext. No prime-stream search, scoring, CUDA, or corpus activation is implemented.
+
+## Stage 2B Result Store
+
+Stage 2B adds generated JSONL and SQLite result stores for solved-baseline regression imports. Run records preserve manifest SHA-256, registry SHA-256, git commit, profile/source provenance, and explicit false flags for canonical corpus activation, page-boundary finalization, search, scoring, CUDA, and canonical trust. Generated result-store outputs under `experiments/results/result-store/` remain ignored and are not publication artifacts.

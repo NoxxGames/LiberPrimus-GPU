@@ -39,3 +39,9 @@ For p56 prime-stream work, require explicit stream parameters, no offset or dire
 For transform-registry work, require CPU reference metadata, SHA-256 locks, alias resolution tests, manifest-runner outputs under ignored result paths, and all solved baselines passing through registry dispatch.
 
 Prompts should state that manifest-addressable solved baselines are regression runs, not search campaigns, and that search, scoring, CUDA, canonical corpus activation, and page-boundary finalization remain disabled.
+
+## Stage 2B Guardrails
+
+For result-store work, require JSONL and SQLite outputs to stay under ignored result directories. Require schemas, provenance capture, generated-artifact records, validation commands, and a developer log before commit.
+
+Prompts should state that solved-baseline imports are regression evidence only, not unsolved-page experiments, and that search, scoring, CUDA, canonical corpus activation, and page-boundary finalization remain disabled.

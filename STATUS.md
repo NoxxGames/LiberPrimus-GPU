@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2A CPU transform registry and manifest-addressable solved-baseline runner complete.
+Stage 2B experiment result-store and run-record foundation complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No corpus import, cipher logic, Gematria freeze, scoring model, experiment runner, JSONL output, SQLite database, or serious CUDA kernel exists yet.
+No canonical corpus activation, unsolved-page experiment, scoring model, search campaign, generated result publication, or serious CUDA kernel exists yet.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 
@@ -120,6 +120,16 @@ Generated manifest-runner outputs remain ignored under `experiments/results/solv
 
 Developer log: `docs/development-logs/2026-05-16-stage-2a-cpu-transform-registry.md`.
 
+## Completed in Stage 2B
+
+Stage 2B added the experiment result-store foundation for solved-baseline regression imports.
+
+Result-store summary: schemas `6`, JSONL sink `implemented`, SQLite sink `implemented`, provenance capture `implemented`, solved-baseline import `implemented`, generated outputs ignored under `experiments/results/result-store/stage2b/`.
+
+Imported solved-baseline run summary: pass/fail/pending/skipped `10/0/0/0`, search/cuda/scoring `false/false/false`, `canonical_corpus_active=false`, `page_boundaries_final=false`.
+
+Developer log: `docs/development-logs/2026-05-16-stage-2b-result-store-foundation.md`.
+
 ## Next prompt recommendation
 
-Stage 2B - implement experiment result store and run-record foundation for manifest-driven CPU experiments, without starting unsolved-page search.
+Stage 2C - add GitHub Actions CI for Python tests, ruff, schema validation, and CPU-only smoke commands, while keeping raw data and generated outputs excluded.

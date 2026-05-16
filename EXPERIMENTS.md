@@ -79,3 +79,11 @@ Stage 1D does not authorize offset sweeps, direction sweeps, prime-gap streams, 
 Stage 2A adds manifest-addressable solved-baseline runs. The all-known manifest reproduces 10 current solved fixtures through the CPU reference transform registry.
 
 This is still pre-experiment validation, not an unsolved-page search campaign. Future experiment manifests should import or compare against these solved-baseline results before adding scorers, result stores, or search controls.
+
+## Stage 2B Result-Store Foundation
+
+Stage 2B adds a result-store manifest and generated JSONL/SQLite sinks for importing the Stage 2A solved-baseline regression run.
+
+The result store records manifest SHA-256, registry SHA-256, git commit, host metadata, profile/source provenance, fixture counts, artifact records, and explicit false flags for canonical corpus activation, search, scoring, CUDA, and canonical trust.
+
+Generated result-store files under `experiments/results/result-store/` remain ignored. The import is regression evidence for known solved fixtures only; it is not an unsolved-page experiment and does not authorize search campaigns.

@@ -211,3 +211,12 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Generated manifest-runner outputs are ignored and must not be committed.
 - `phi_prime_stream` is an alias of `prime_minus_one_stream` for prime inputs.
 - Push after successful commit remains required when remote is verified.
+
+## Stage 2B Result Store Rules
+
+- Result stores are generated outputs and must not be committed.
+- SQLite databases and SQLite sidecar files must not be committed.
+- Result records must preserve manifest SHA-256, registry SHA-256, git commit, source/profile/corpus IDs, and false canonical/search/CUDA/scoring flags.
+- Solved-baseline result imports are regression evidence, not unsolved-page experiments.
+- Future experiments must use the result-store foundation before large searches.
+- Push after successful commit remains required when remote is verified.

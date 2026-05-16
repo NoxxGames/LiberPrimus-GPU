@@ -155,3 +155,18 @@ Solved-fixture reproduction records now include registry metadata:
 - `scoring_used=false`
 
 Manifest-run outputs include `solved_baseline_manifest_run_record` JSONL and `solved_baseline_manifest_run_summary` JSON. They must keep `canonical_corpus_active=false`, `page_boundaries_final=false`, and `trusted_as_canonical=false`, and generated files under `experiments/results/solved-baselines/` remain ignored.
+
+## Stage 2B Experiment Result Store Schemas
+
+Stage 2B adds result schemas under `schemas/results/`:
+
+- `experiment-run-record-v0`
+- `experiment-run-summary-v0`
+- `experiment-event-record-v0`
+- `experiment-artifact-record-v0`
+- `experiment-result-store-manifest-v0`
+- `sqlite-result-store-v0`
+
+Solved-baseline imports require `canonical_corpus_active=false`, `page_boundaries_final=false`, `search_performed=false`, `scoring_used=false`, `cuda_used=false`, and `trusted_as_canonical=false`.
+
+Generated result-store outputs include JSONL records and `results.sqlite3` under `experiments/results/result-store/`. They are ignored and must not be committed.

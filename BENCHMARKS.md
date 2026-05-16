@@ -63,3 +63,7 @@ Stage 1D prime-stream reproduction timing is diagnostic only. Prime generation i
 ## Stage 2A Timing Note
 
 Stage 2A manifest-runner elapsed milliseconds are diagnostic metadata only. Registry dispatch is CPU-only and small; it is not a benchmark, speed claim, search throughput measurement, or CUDA readiness signal.
+
+## Stage 2B Timing Note
+
+Stage 2B result-store timings are diagnostic metadata for JSONL/SQLite import and validation only. They are not throughput benchmarks, search measurements, or CUDA readiness signals.

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/results/experiment-run-record-v0.schema.json",
+  "title": "Experiment Run Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "run_id",
+    "run_kind",
+    "run_status",
+    "manifest_id",
+    "manifest_sha256",
+    "registry_id",
+    "registry_sha256",
+    "git_commit",
+    "branch",
+    "created_at_utc",
+    "completed_at_utc",
+    "elapsed_ms",
+    "host",
+    "tool_versions",
+    "input_sources",
+    "profiles",
+    "corpus_candidate_id",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "search_performed",
+    "scoring_used",
+    "cuda_used",
+    "gpu_required",
+    "random_seed",
+    "fixture_counts",
+    "transform_counts",
+    "output_artifacts",
+    "warnings",
+    "trusted_as_canonical",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "experiment_run_record" },
+    "run_id": { "type": "string", "minLength": 1 },
+    "run_kind": {
+      "enum": [
+        "solved_baseline",
+        "corpus_candidate_generation",
+        "future_cpu_experiment",
+        "benchmark",
+        "unknown"
+      ]
+    },
+    "run_status": {
+      "enum": ["pass", "fail", "partial", "pending", "skipped", "error"]
+    },
+    "manifest_id": { "type": "string" },
+    "manifest_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "registry_id": { "type": "string" },
+    "registry_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "git_commit": { "type": "string" },
+    "branch": { "type": "string" },
+    "created_at_utc": { "type": "string" },
+    "completed_at_utc": { "type": "string" },
+    "elapsed_ms": { "type": "number", "minimum": 0 },
+    "host": {
+      "type": "object",
+      "required": ["os", "platform", "machine", "processor", "python_version"],
+      "properties": {
+        "os": { "type": "string" },
+        "platform": { "type": "string" },
+        "machine": { "type": "string" },
+        "processor": { "type": "string" },
+        "python_version": { "type": "string" }
+      }
+    },
+    "tool_versions": { "type": "object" },
+    "input_sources": { "type": "array" },
+    "profiles": { "type": "array" },
+    "corpus_candidate_id": { "type": "string" },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "search_performed": { "const": false },
+    "scoring_used": { "const": false },
+    "cuda_used": { "const": false },
+    "gpu_required": { "const": false },
+    "random_seed": { "type": ["integer", "null"] },
+    "fixture_counts": {
+      "type": "object",
+      "required": ["total", "pass", "fail", "pending", "skipped"],
+      "properties": {
+        "total": { "type": "integer", "minimum": 0 },
+        "pass": { "type": "integer", "minimum": 0 },
+        "fail": { "type": "integer", "minimum": 0 },
+        "pending": { "type": "integer", "minimum": 0 },
+        "skipped": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "transform_counts": { "type": "object" },
+    "output_artifacts": { "type": "array" },
+    "warnings": { "type": "array" },
+    "trusted_as_canonical": { "const": false },
+    "notes": { "type": "array" }
+  }
+}

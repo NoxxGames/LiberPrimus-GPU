@@ -106,3 +106,9 @@ Generated prime-stream reproduction outputs under `data/normalized/solved-baseli
 The CPU transform registry under `data/transform-registry/` and solved-baseline manifests under `experiments/manifests/solved-baselines/` are committed control metadata. They do not contain raw transcript dumps.
 
 Generated manifest-runner outputs under `experiments/results/solved-baselines/` remain ignored. Raw sources, generated corpus candidates, and generated solved-baseline outputs remain uncommitted.
+
+## Stage 2B Result Store Outputs
+
+Stage 2B result-store manifests under `experiments/manifests/result-store/` are committed control metadata and contain no raw transcript dumps.
+
+Generated JSONL and SQLite result stores under `experiments/results/result-store/` are ignored. They may reference generated output paths and provenance hashes, but they must not promote raw sources, generated corpus candidates, solved-baseline outputs, or SQLite databases into Git.

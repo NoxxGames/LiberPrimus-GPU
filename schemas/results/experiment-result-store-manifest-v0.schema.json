@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/results/experiment-result-store-manifest-v0.schema.json",
+  "title": "Experiment Result Store Manifest v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "manifest_id",
+    "manifest_version",
+    "description",
+    "input_manifest_path",
+    "input_manifest_sha256",
+    "output_dir",
+    "jsonl_output_path",
+    "sqlite_output_path",
+    "import_sources",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "search_enabled",
+    "scoring_enabled",
+    "cuda_enabled",
+    "expected_run_kind",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "experiment_result_store_manifest" },
+    "manifest_id": { "type": "string", "minLength": 1 },
+    "manifest_version": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "input_manifest_path": { "type": "string", "minLength": 1 },
+    "input_manifest_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "output_dir": { "type": "string", "minLength": 1 },
+    "jsonl_output_path": { "type": "string", "minLength": 1 },
+    "sqlite_output_path": { "type": "string", "minLength": 1 },
+    "import_sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "search_enabled": { "const": false },
+    "scoring_enabled": { "const": false },
+    "cuda_enabled": { "const": false },
+    "expected_run_kind": { "const": "solved_baseline" },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}
