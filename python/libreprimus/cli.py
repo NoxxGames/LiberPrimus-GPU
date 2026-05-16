@@ -54,11 +54,18 @@ from libreprimus.solved_fixtures.reproduction import (
 )
 from libreprimus.solved_fixtures.summary import load_summary as load_fixture_summary
 from libreprimus.solved_fixtures.validation import validate_fixture_dir, validate_reproduction_results
+from libreprimus.solved_baselines.export import write_manifest_run_outputs
+from libreprimus.solved_baselines.manifest_loader import load_manifest
+from libreprimus.solved_baselines.runner import run_manifest
+from libreprimus.solved_baselines.summary import load_summary as load_baseline_summary
+from libreprimus.solved_baselines.validation import validate_manifest_file
 from libreprimus.reference_sources.summary import build_stage1c_reference_summary, write_stage1c_reference_outputs
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
 from libreprimus.transcript_sources.rtkd_master import parse_rtkd_master
 from libreprimus.transcript_sources.scream314_reference import parse_scream314_reference
 from libreprimus.toolchain import ToolStatus, collect_toolchain
+from libreprimus.transforms.registry import load_registry, resolve_transform
+from libreprimus.transforms.validation import validate_registry_file
 
 app = typer.Typer(no_args_is_help=True)
 legacy_workbook_app = typer.Typer(no_args_is_help=True)
@@ -69,6 +76,8 @@ profile_app = typer.Typer(no_args_is_help=True)
 corpus_candidate_app = typer.Typer(no_args_is_help=True)
 solved_fixture_app = typer.Typer(no_args_is_help=True)
 reference_source_app = typer.Typer(no_args_is_help=True)
+transform_registry_app = typer.Typer(no_args_is_help=True)
+solved_baseline_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -607,6 +616,11 @@ DEFAULT_VIGENERE_BASELINE_DIR = Path("data/normalized/solved-baselines/vigenere-
 DEFAULT_PRIME_STREAM_FIXTURE_DIR = Path("data/fixtures/solved-pages/prime-stream-v0")
 DEFAULT_PRIME_STREAM_BASELINE_DIR = Path("data/normalized/solved-baselines/prime-stream-v0")
 DEFAULT_REFERENCE_SUMMARY_DIR = Path("data/normalized/reference-summaries/stage-1c")
+DEFAULT_TRANSFORM_REGISTRY = Path("data/transform-registry/cpu-reference-transforms-v0.json")
+DEFAULT_SOLVED_BASELINE_MANIFEST = Path(
+    "experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml"
+)
+DEFAULT_STAGE2A_RESULTS_DIR = Path("experiments/results/solved-baselines/stage2a")
 
 
 @profile_app.command("validate-gematria")
@@ -862,6 +876,182 @@ def reference_source_summary(
 
 
 app.add_typer(reference_source_app, name="reference-source")
+
+
+@transform_registry_app.command("summary")
+def transform_registry_summary(
+    registry: Path = typer.Option(DEFAULT_TRANSFORM_REGISTRY, "--registry", help="CPU transform registry JSON path."),
+) -> None:
+    """Print a concise transform registry summary."""
+    loaded = load_registry(_resolve_existing_path(registry, "Transform registry"))
+    alias_count = sum(1 for definition in loaded.transforms if definition.alias_of)
+    console.print(f"registry_id={loaded.registry_id}")
+    console.print(f"registry_sha256={loaded.sha256}")
+    console.print(f"transform_count={len(loaded.transforms)}")
+    console.print(f"alias_count={alias_count}")
+    console.print(f"search_enabled={str(loaded.search_enabled).lower()}")
+    console.print(f"cuda_enabled={str(loaded.cuda_enabled).lower()}")
+    console.print(f"scoring_enabled={str(loaded.scoring_enabled).lower()}")
+
+
+@transform_registry_app.command("validate")
+def transform_registry_validate(
+    registry: Path = typer.Option(DEFAULT_TRANSFORM_REGISTRY, "--registry", help="CPU transform registry JSON path."),
+) -> None:
+    """Validate CPU transform registry metadata and implementation links."""
+    errors = validate_registry_file(_resolve_existing_path(registry, "Transform registry"))
+    if errors:
+        for error in errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    console.print("Transform registry validation OK")
+
+
+@transform_registry_app.command("list")
+def transform_registry_list(
+    registry: Path = typer.Option(DEFAULT_TRANSFORM_REGISTRY, "--registry", help="CPU transform registry JSON path."),
+) -> None:
+    """List registered CPU reference transforms."""
+    loaded = load_registry(_resolve_existing_path(registry, "Transform registry"))
+    table = Table("Transform", "Method", "Alias Of", "Search", "CUDA", "Scoring")
+    for definition in loaded.transforms:
+        table.add_row(
+            definition.transform_id,
+            definition.method_family,
+            definition.alias_of or "",
+            str(definition.search_enabled).lower(),
+            str(definition.supports_gpu).lower(),
+            str(definition.scoring_enabled).lower(),
+        )
+    console.print(table)
+
+
+@transform_registry_app.command("resolve")
+def transform_registry_resolve(
+    registry: Path = typer.Option(DEFAULT_TRANSFORM_REGISTRY, "--registry", help="CPU transform registry JSON path."),
+    transform_id: str = typer.Option(..., "--transform-id", help="Transform ID or alias ID to resolve."),
+) -> None:
+    """Resolve a transform alias to its canonical transform."""
+    loaded = load_registry(_resolve_existing_path(registry, "Transform registry"))
+    try:
+        definition = resolve_transform(loaded, transform_id)
+    except KeyError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(2) from error
+    console.print(f"transform_id={transform_id}")
+    console.print(f"canonical_transform_id={definition.transform_id}")
+    console.print(f"transform_version={definition.transform_version}")
+
+
+app.add_typer(transform_registry_app, name="transform-registry")
+
+
+@solved_baseline_app.command("validate-manifest")
+def solved_baseline_validate_manifest(
+    manifest: Path = typer.Option(DEFAULT_SOLVED_BASELINE_MANIFEST, "--manifest", help="Solved-baseline run manifest."),
+) -> None:
+    """Validate a solved-baseline run manifest."""
+    errors = validate_manifest_file(_resolve_existing_path(manifest, "Solved-baseline manifest"))
+    if errors:
+        for error in errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    console.print("Solved-baseline manifest validation OK")
+
+
+@solved_baseline_app.command("run")
+def solved_baseline_run(
+    manifest: Path = typer.Option(DEFAULT_SOLVED_BASELINE_MANIFEST, "--manifest", help="Solved-baseline run manifest."),
+    candidate_dir: Path | None = typer.Option(None, "--candidate-dir", help="Generated corpus candidate directory override."),
+    out_dir: Path = typer.Option(DEFAULT_STAGE2A_RESULTS_DIR, "--out-dir", help="Generated manifest-runner output directory."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite generated warnings."),
+) -> None:
+    """Run a solved-baseline manifest through CPU registry dispatch."""
+    loaded_manifest = load_manifest(_resolve_existing_path(manifest, "Solved-baseline manifest"))
+    records, summary, warnings = run_manifest(
+        loaded_manifest,
+        candidate_dir=_resolve_output_path(candidate_dir) if candidate_dir is not None else None,
+    )
+    paths = write_manifest_run_outputs(_resolve_output_path(out_dir), records, summary, warnings)
+    for name, path in paths.items():
+        console.print(f"{name}={path}")
+    console.print(f"manifest_id={summary.manifest_id}")
+    console.print(f"fixture_group_count={summary.fixture_group_count}")
+    console.print(f"fixture_count={summary.fixture_count}")
+    console.print(f"pass_count={summary.pass_count}")
+    console.print(f"fail_count={summary.fail_count}")
+    console.print(f"pending_count={summary.pending_count}")
+    console.print(f"skipped_count={summary.skipped_count}")
+    console.print(f"search_performed_any={str(summary.search_performed_any).lower()}")
+    console.print(f"cuda_used_any={str(summary.cuda_used_any).lower()}")
+    console.print(f"scoring_used_any={str(summary.scoring_used_any).lower()}")
+    console.print(f"elapsed_ms={summary.elapsed_ms}")
+    if summary.fail_count or summary.pending_count or summary.skipped_count:
+        raise typer.Exit(1)
+    if warnings and not allow_warnings:
+        raise typer.Exit(1)
+
+
+@solved_baseline_app.command("summary")
+def solved_baseline_summary(
+    results_dir: Path = typer.Option(DEFAULT_STAGE2A_RESULTS_DIR, "--results-dir", help="Generated manifest-runner output directory."),
+) -> None:
+    """Print a generated solved-baseline manifest-run summary."""
+    summary = load_baseline_summary(_resolve_output_path(results_dir))
+    for key in [
+        "manifest_id",
+        "registry_id",
+        "fixture_group_count",
+        "fixture_count",
+        "pass_count",
+        "fail_count",
+        "pending_count",
+        "skipped_count",
+        "direct_translation_pass_count",
+        "atbash_family_pass_count",
+        "vigenere_pass_count",
+        "prime_stream_pass_count",
+        "search_performed_any",
+        "cuda_used_any",
+        "scoring_used_any",
+        "elapsed_ms",
+    ]:
+        value = summary.get(key)
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+
+
+@solved_baseline_app.command("stage2a-smoke")
+def stage2a_smoke(
+    manifest: Path = typer.Option(DEFAULT_SOLVED_BASELINE_MANIFEST, "--manifest", help="Solved-baseline run manifest."),
+    candidate_dir: Path | None = typer.Option(None, "--candidate-dir", help="Generated corpus candidate directory override."),
+    out_dir: Path = typer.Option(DEFAULT_STAGE2A_RESULTS_DIR, "--out-dir", help="Generated manifest-runner output directory."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite generated warnings."),
+) -> None:
+    """Run the Stage 2A registry and all-known solved-baseline smoke test."""
+    transform_registry_validate(registry=DEFAULT_TRANSFORM_REGISTRY)
+    solved_baseline_validate_manifest(manifest=manifest)
+    solved_baseline_run(
+        manifest=manifest,
+        candidate_dir=candidate_dir,
+        out_dir=out_dir,
+        allow_warnings=allow_warnings,
+    )
+    summary = load_baseline_summary(_resolve_output_path(out_dir))
+    loaded_manifest = load_manifest(_resolve_existing_path(manifest, "Solved-baseline manifest"))
+    expected_pass = loaded_manifest.expected_counts.get("pass_count", 0)
+    expected_fail = loaded_manifest.expected_counts.get("fail_count", 0)
+    expected_pending = loaded_manifest.expected_counts.get("pending_count", 0)
+    if (
+        summary.get("pass_count") != expected_pass
+        or summary.get("fail_count") != expected_fail
+        or summary.get("pending_count") != expected_pending
+    ):
+        console.print("[red]Stage 2A smoke counts did not match manifest expectations.[/red]")
+        raise typer.Exit(1)
+    console.print("Stage 2A smoke OK")
+
+
+app.add_typer(solved_baseline_app, name="solved-baseline")
 
 
 @solved_fixture_app.command("list")

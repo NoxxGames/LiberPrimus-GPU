@@ -8,13 +8,12 @@ import subprocess
 from pathlib import Path
 from time import perf_counter
 
-from libreprimus.solved_fixtures.atbash_family import decode_atbash_family
-from libreprimus.solved_fixtures.direct_translation import decode_direct_translation
 from libreprimus.solved_fixtures.fixture_loader import load_fixtures
 from libreprimus.solved_fixtures.models import ReproductionRecord, ReproductionSummary
-from libreprimus.solved_fixtures.prime_stream import decode_prime_minus_one_stream
 from libreprimus.solved_fixtures.span_selection import select_tokens
-from libreprimus.solved_fixtures.vigenere import decode_vigenere_explicit_key
+from libreprimus.transforms.dispatch import dispatch_transform
+from libreprimus.transforms.models import TransformRegistry
+from libreprimus.transforms.registry import load_registry
 
 DIRECT_FIXTURE_SET_ID = "direct-translation-v0"
 ATBASH_FIXTURE_SET_ID = "atbash-family-v0"
@@ -30,15 +29,40 @@ def _git_commit() -> str:
     return result.stdout.strip()
 
 
+def _fixture_transform_id(method_family: str, transform_chain: list[object]) -> str:
+    if method_family == "direct_translation":
+        return "direct_translation"
+    for item in transform_chain:
+        if isinstance(item, dict) and isinstance(item.get("name"), str):
+            return str(item["name"])
+        if isinstance(item, str):
+            return item
+    if method_family == "vigenere":
+        return "vigenere_explicit_key"
+    return method_family
+
+
+def _fixture_transform_parameters(transform_id: str, transform_chain: list[object]) -> dict[str, object]:
+    for item in transform_chain:
+        if isinstance(item, dict) and item.get("name") == transform_id:
+            params = item.get("params", {})
+            return dict(params) if isinstance(params, dict) else {}
+        if isinstance(item, str) and item == transform_id:
+            return {}
+    return {}
+
+
 def reproduce_fixtures(
     *,
     fixture_dir: Path,
     candidate_dir: Path,
     fixture_set_id: str,
+    registry: TransformRegistry | None = None,
 ) -> tuple[list[ReproductionRecord], ReproductionSummary, list[str]]:
     start = perf_counter()
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     git_commit = _git_commit()
+    transform_registry = registry or load_registry()
     fixtures = load_fixtures(fixture_dir)
     records: list[ReproductionRecord] = []
     warnings: list[str] = []
@@ -59,6 +83,13 @@ def reproduce_fixtures(
         first_prime_values: list[int] = []
         first_stream_values_mod29: list[int] = []
         payload_check_results: list[dict[str, object]] = []
+        registry_id = transform_registry.registry_id
+        registry_sha256 = transform_registry.sha256
+        transform_id: str | None = None
+        canonical_transform_id: str | None = None
+        search_performed = False
+        cuda_used = False
+        scoring_used = False
         record_warnings: list[str] = []
         supported_method = fixture.method_family in {
             "direct_translation",
@@ -77,43 +108,35 @@ def reproduce_fixtures(
                 status = "skipped"
                 mismatch_reason = selection_error
             else:
-                if fixture.method_family == "direct_translation":
-                    result = decode_direct_translation(tokens)
-                    decoded_index_formula = "decoded_index = cipher_index"
-                    transform_parameters = {}
-                else:
-                    if fixture.method_family == "vigenere":
-                        result = decode_vigenere_explicit_key(tokens, transform_chain=fixture.transform_chain)
-                    elif fixture.method_family in {"prime_minus_one_stream", "phi_prime_stream"}:
-                        result = decode_prime_minus_one_stream(
-                            tokens,
-                            transform_chain=fixture.transform_chain,
-                            payload_checks=fixture.payload_checks,
-                        )
-                    else:
-                        result = decode_atbash_family(
-                            tokens,
-                            method_family=fixture.method_family,
-                            transform_chain=fixture.transform_chain,
-                        )
-                    decoded_index_formula = str(result["decoded_index_formula"])
-                    transform_parameters = dict(result["transform_parameters"])
-                    key_text = result.get("key_text") if isinstance(result.get("key_text"), str) else None
-                    key_indices = [int(item) for item in result.get("key_indices", [])]
-                    skip_rule_applied_count = int(result.get("skip_rule_applied_count", 0))
-                    prime_values_used_count = int(result.get("prime_values_used_count", 0))
-                    stream_values_used_count = int(result.get("stream_values_used_count", 0))
-                    first_prime_values = [int(item) for item in result.get("first_prime_values", [])]
-                    first_stream_values_mod29 = [int(item) for item in result.get("first_stream_values_mod29", [])]
-                    payload_check_results = [
-                        dict(item) for item in result.get("payload_check_results", []) if isinstance(item, dict)
-                    ]
-                decoded_text = result["decoded_normalized_plaintext"]
-                decoded_hash = result["decoded_normalized_plaintext_sha256"]
-                rune_count = int(result["rune_count"])
-                numeric_literal_count = int(result["numeric_literal_count"])
-                separator_count = int(result["separator_count"])
-                record_warnings = [str(item) for item in result["warnings"]]
+                transform_id = _fixture_transform_id(fixture.method_family, fixture.transform_chain)
+                parameters = _fixture_transform_parameters(transform_id, fixture.transform_chain)
+                result = dispatch_transform(
+                    registry=transform_registry,
+                    transform_id=transform_id,
+                    tokens=tokens,
+                    parameters=parameters,
+                    payload_checks=fixture.payload_checks,
+                )
+                canonical_transform_id = result.canonical_transform_id
+                decoded_index_formula = result.decoded_index_formula
+                transform_parameters = result.parameters
+                key_text = result.key_text
+                key_indices = result.key_indices
+                skip_rule_applied_count = result.skip_rule_applied_count
+                prime_values_used_count = result.prime_values_used_count
+                stream_values_used_count = result.stream_values_used_count
+                first_prime_values = result.first_prime_values
+                first_stream_values_mod29 = result.first_stream_values_mod29
+                payload_check_results = result.payload_check_results
+                search_performed = result.search_performed
+                cuda_used = result.cuda_used
+                scoring_used = result.scoring_used
+                decoded_text = result.decoded_normalized_plaintext
+                decoded_hash = result.decoded_normalized_plaintext_sha256
+                rune_count = result.rune_count
+                numeric_literal_count = result.numeric_literal_count
+                separator_count = result.separator_count
+                record_warnings = result.warnings
                 if fixture.expected_normalized_plaintext_sha256 is None:
                     status = "pending"
                     mismatch_reason = "fixture has no expected hash"
@@ -133,6 +156,10 @@ def reproduce_fixtures(
                 git_commit=git_commit,
                 method_family=fixture.method_family,
                 transform_chain=fixture.transform_chain,
+                registry_id=registry_id,
+                registry_sha256=registry_sha256,
+                transform_id=transform_id,
+                canonical_transform_id=canonical_transform_id,
                 decoded_index_formula=decoded_index_formula,
                 transform_parameters=transform_parameters,
                 key_text=key_text,
@@ -143,6 +170,9 @@ def reproduce_fixtures(
                 first_prime_values=first_prime_values,
                 first_stream_values_mod29=first_stream_values_mod29,
                 payload_check_results=payload_check_results,
+                search_performed=search_performed,
+                cuda_used=cuda_used,
+                scoring_used=scoring_used,
                 span_selector=fixture.span_selector,
                 decoded_normalized_plaintext=decoded_text,
                 decoded_normalized_plaintext_sha256=decoded_hash,

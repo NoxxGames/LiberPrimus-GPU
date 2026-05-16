@@ -70,6 +70,12 @@ Stage 1D added a p56 prime-minus-one known-solved fixture with a passing payload
 
 Register solved-baseline CPU reference transforms for manifest-addressable runs: direct translation, reverse Gematria, rotated reverse Gematria, explicit-key Vigenere, and prime-minus-one. Do not start search campaigns yet.
 
+Stage 2A added `cpu-reference-transforms-v0`, registry dispatch, solved-baseline run manifests, and an all-known solved-baseline runner with 10 passing known fixtures. Search, scoring, CUDA, canonical corpus activation, and page-boundary finalization remain disabled.
+
+## Phase 2B - Experiment result store and run-record foundation
+
+Add durable JSONL/SQLite result sinks, run-record schemas, manifest provenance, solved-baseline result import, and validation before unsolved-page search campaigns begin.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

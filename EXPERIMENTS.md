@@ -73,3 +73,9 @@ Stage 1C does not permit key search or scoring. Any future search campaign must 
 The p56 prime-minus-one fixture is now part of pre-experiment validation. Future prime-stream experiments must keep Stage 1A direct, Stage 1B Atbash-family, Stage 1C Vigenere, and Stage 1D p56 baselines passing before search work begins.
 
 Stage 1D does not authorize offset sweeps, direction sweeps, prime-gap streams, scoring, CUDA kernels, or generic search campaigns.
+
+## Stage 2A Solved-Baseline Manifest Gate
+
+Stage 2A adds manifest-addressable solved-baseline runs. The all-known manifest reproduces 10 current solved fixtures through the CPU reference transform registry.
+
+This is still pre-experiment validation, not an unsolved-page search campaign. Future experiment manifests should import or compare against these solved-baseline results before adding scorers, result stores, or search controls.

@@ -59,3 +59,7 @@ Stage 1C reproduction timing is diagnostic only. It is CPU-only fixture validati
 ## Stage 1D Timing Note
 
 Stage 1D prime-stream reproduction timing is diagnostic only. Prime generation is deterministic and CPU-only for a small known fixture. It is not a GPU benchmark, speed claim, or optimization target.
+
+## Stage 2A Timing Note
+
+Stage 2A manifest-runner elapsed milliseconds are diagnostic metadata only. Registry dispatch is CPU-only and small; it is not a benchmark, speed claim, search throughput measurement, or CUDA readiness signal.

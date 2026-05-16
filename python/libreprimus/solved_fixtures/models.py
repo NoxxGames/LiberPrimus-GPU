@@ -76,6 +76,10 @@ class ReproductionRecord:
     git_commit: str
     method_family: str
     transform_chain: list[Any]
+    registry_id: str
+    registry_sha256: str
+    transform_id: str | None
+    canonical_transform_id: str | None
     decoded_index_formula: str | None
     transform_parameters: dict[str, Any]
     key_text: str | None
@@ -86,6 +90,9 @@ class ReproductionRecord:
     first_prime_values: list[int]
     first_stream_values_mod29: list[int]
     payload_check_results: list[dict[str, Any]]
+    search_performed: bool
+    cuda_used: bool
+    scoring_used: bool
     span_selector: SpanSelector
     decoded_normalized_plaintext: str | None
     decoded_normalized_plaintext_sha256: str | None

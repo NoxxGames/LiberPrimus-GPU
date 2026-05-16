@@ -119,3 +119,16 @@ Stage 1D implements `prime_minus_one_stream` only as a known-solved p56 fixture 
 - No generic prime-stream search, offset sweep, scoring, CUDA acceleration, or transform registry is implemented.
 
 Generic affine/shift/search infrastructure remains unimplemented.
+
+## Stage 2A CPU Reference Transform Registry
+
+Stage 2A registers the implemented known-solved baseline transforms as CPU reference transforms only:
+
+- `direct_translation`
+- `reverse_gematria`
+- `rotated_reverse_gematria`
+- `vigenere_explicit_key`
+- `prime_minus_one_stream`
+- `phi_prime_stream` as an alias of `prime_minus_one_stream`
+
+Every registry entry has `supports_gpu=false`, `search_enabled=false`, and `scoring_enabled=false`. The registry is used by solved-baseline manifests and does not implement generic affine/shift search, Vigenere key search, prime-stream search, scoring, CUDA acceleration, or unsolved-page campaign execution.

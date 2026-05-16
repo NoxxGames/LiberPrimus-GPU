@@ -1,0 +1,37 @@
+allow_pending: false
+allow_warnings: true
+canonical_corpus_active: false
+corpus_candidate_id: rtkd-master-v0-candidate
+cuda_enabled: false
+description: Explicit-key Vigenere solved baseline manifest
+expected_counts:
+  fail_count: 0
+  fixture_count: 2
+  fixture_group_count: 1
+  pass_count: 2
+  pending_count: 0
+  skipped_count: 0
+fixture_groups:
+- allow_pending: false
+  expected_fixture_count: 2
+  expected_pass_count: 2
+  fixture_dir: data/fixtures/solved-pages/vigenere-v0
+  fixture_group_id: vigenere-v0
+  method_family: vigenere
+  transform_ids:
+  - vigenere_explicit_key
+manifest_id: stage2a-vigenere-v0
+manifest_version: solved-baseline-run-v0
+notes:
+- Known solved baseline regression manifest; not a search campaign.
+output_dir: data/normalized/solved-baselines/vigenere-v0
+page_boundaries_final: false
+provenance:
+  registry_path: data/transform-registry/cpu-reference-transforms-v0.json
+  source: Stage 2A committed solved baseline manifest
+record_type: solved_baseline_run_manifest
+registry_id: cpu-reference-transforms-v0
+registry_sha256: 32e449b0a0f02cd1180767625474f0cfe2d988a26b13fd37741b7aa31023595e
+require_all_pass: true
+scoring_enabled: false
+search_enabled: false

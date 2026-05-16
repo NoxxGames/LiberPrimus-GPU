@@ -1,0 +1,256 @@
+{
+  "canonical_corpus_active": false,
+  "cuda_enabled": false,
+  "registry_id": "cpu-reference-transforms-v0",
+  "registry_kind": "cpu_reference_transform_registry",
+  "scoring_enabled": false,
+  "search_enabled": false,
+  "status": "active_for_solved_baselines",
+  "transforms": [
+    {
+      "aliases": [],
+      "fixture_baseline_supported": true,
+      "formula": "decoded_index = cipher_index",
+      "implemented_module": "libreprimus.solved_fixtures.direct_translation.decode_direct_translation",
+      "known_fixture_sets": [
+        "direct-translation-v0"
+      ],
+      "method_family": "direct_translation",
+      "parameter_schema": {
+        "additionalProperties": false,
+        "properties": {},
+        "required": [],
+        "type": "object"
+      },
+      "provenance_notes": [
+        "Stage 1A direct-translation solved-baseline transform."
+      ],
+      "scoring_enabled": false,
+      "search_enabled": false,
+      "supports_cpu_reference": true,
+      "supports_gpu": false,
+      "supports_inverse": false,
+      "transform_id": "direct_translation",
+      "transform_version": "v0"
+    },
+    {
+      "aliases": [
+        "atbash"
+      ],
+      "fixture_baseline_supported": true,
+      "formula": "decoded_index = 28 - cipher_index",
+      "implemented_module": "libreprimus.solved_fixtures.atbash_family.decode_atbash_family",
+      "known_fixture_sets": [
+        "atbash-family-v0"
+      ],
+      "method_family": "reverse_gematria",
+      "parameter_schema": {
+        "additionalProperties": false,
+        "properties": {},
+        "required": [],
+        "type": "object"
+      },
+      "provenance_notes": [
+        "Stage 1B reverse Gematria known-solved baseline transform."
+      ],
+      "scoring_enabled": false,
+      "search_enabled": false,
+      "supports_cpu_reference": true,
+      "supports_gpu": false,
+      "supports_inverse": true,
+      "transform_id": "reverse_gematria",
+      "transform_version": "v0"
+    },
+    {
+      "aliases": [
+        "shifted_atbash"
+      ],
+      "fixture_baseline_supported": true,
+      "formula": "decoded_index = (28 - cipher_index + rotation) mod 29",
+      "implemented_module": "libreprimus.solved_fixtures.atbash_family.decode_atbash_family",
+      "known_fixture_sets": [
+        "atbash-family-v0"
+      ],
+      "method_family": "rotated_reverse_gematria",
+      "parameter_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "rotation": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "rotation"
+        ],
+        "type": "object"
+      },
+      "provenance_notes": [
+        "Stage 1B rotated reverse Gematria known-solved baseline transform.",
+        "Rotation must be explicit; no rotation search is enabled."
+      ],
+      "scoring_enabled": false,
+      "search_enabled": false,
+      "supports_cpu_reference": true,
+      "supports_gpu": false,
+      "supports_inverse": true,
+      "transform_id": "rotated_reverse_gematria",
+      "transform_version": "v0"
+    },
+    {
+      "aliases": [
+        "explicit_key_vigenere"
+      ],
+      "fixture_baseline_supported": true,
+      "formula": "decoded_index = (cipher_index - key_index[key_position]) mod 29",
+      "implemented_module": "libreprimus.solved_fixtures.vigenere.decode_vigenere_explicit_key",
+      "known_fixture_sets": [
+        "vigenere-v0"
+      ],
+      "method_family": "vigenere",
+      "parameter_schema": {
+        "additionalProperties": true,
+        "properties": {
+          "advance_on": {
+            "const": "enciphered_rune_tokens_only"
+          },
+          "direction": {
+            "const": "decrypt_subtract"
+          },
+          "key_alphabet": {
+            "const": "gematria-primus-v0"
+          },
+          "key_text": {
+            "type": "string"
+          },
+          "skip_rule": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "key_text",
+          "direction"
+        ],
+        "type": "object"
+      },
+      "provenance_notes": [
+        "Stage 1C explicit-key Vigenere known-solved baseline transform.",
+        "Key text must be explicit; no key search is enabled."
+      ],
+      "scoring_enabled": false,
+      "search_enabled": false,
+      "supports_cpu_reference": true,
+      "supports_gpu": false,
+      "supports_inverse": false,
+      "transform_id": "vigenere_explicit_key",
+      "transform_version": "v0"
+    },
+    {
+      "aliases": [
+        "phi_prime_stream"
+      ],
+      "fixture_baseline_supported": true,
+      "formula": "decoded_index = (cipher_index - ((prime_i - 1) mod 29)) mod 29",
+      "implemented_module": "libreprimus.solved_fixtures.prime_stream.decode_prime_minus_one_stream",
+      "known_fixture_sets": [
+        "prime-stream-v0"
+      ],
+      "method_family": "prime_minus_one_stream",
+      "parameter_schema": {
+        "additionalProperties": true,
+        "properties": {
+          "advance_on": {
+            "const": "enciphered_rune_tokens_only"
+          },
+          "direction": {
+            "const": "forward"
+          },
+          "equivalent_aliases": {
+            "type": "array"
+          },
+          "prime_start_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "skip_rule": {
+            "type": "object"
+          },
+          "stream_value": {
+            "const": "prime_minus_one_mod29"
+          }
+        },
+        "required": [
+          "prime_start_index",
+          "direction",
+          "stream_value"
+        ],
+        "type": "object"
+      },
+      "provenance_notes": [
+        "Stage 1D p56 prime-minus-one known-solved baseline transform.",
+        "Prime stream parameters must be explicit; no offset, direction, or sequence search is enabled."
+      ],
+      "scoring_enabled": false,
+      "search_enabled": false,
+      "supports_cpu_reference": true,
+      "supports_gpu": false,
+      "supports_inverse": false,
+      "transform_id": "prime_minus_one_stream",
+      "transform_version": "v0"
+    },
+    {
+      "alias_of": "prime_minus_one_stream",
+      "aliases": [],
+      "canonical_transform_id": "prime_minus_one_stream",
+      "equivalence": "phi(p)=p-1 for prime p",
+      "fixture_baseline_supported": true,
+      "formula": "phi(p)=p-1 for prime p",
+      "implemented_as_alias": true,
+      "implemented_module": "libreprimus.solved_fixtures.prime_stream.decode_prime_minus_one_stream",
+      "known_fixture_sets": [
+        "prime-stream-v0"
+      ],
+      "method_family": "phi_prime_stream",
+      "parameter_schema": {
+        "additionalProperties": true,
+        "properties": {
+          "advance_on": {
+            "const": "enciphered_rune_tokens_only"
+          },
+          "direction": {
+            "const": "forward"
+          },
+          "equivalent_aliases": {
+            "type": "array"
+          },
+          "prime_start_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "skip_rule": {
+            "type": "object"
+          },
+          "stream_value": {
+            "const": "prime_minus_one_mod29"
+          }
+        },
+        "required": [
+          "prime_start_index",
+          "direction",
+          "stream_value"
+        ],
+        "type": "object"
+      },
+      "provenance_notes": [
+        "Alias entry for Stage 1D p56 phi-prime wording.",
+        "Uses prime_minus_one_stream implementation; no separate search family is created."
+      ],
+      "scoring_enabled": false,
+      "search_enabled": false,
+      "supports_cpu_reference": true,
+      "supports_gpu": false,
+      "supports_inverse": false,
+      "transform_id": "phi_prime_stream",
+      "transform_version": "v0"
+    }
+  ]
+}

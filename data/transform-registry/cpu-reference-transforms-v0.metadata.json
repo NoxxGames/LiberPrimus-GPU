@@ -1,0 +1,17 @@
+{
+  "canonical_corpus_active": false,
+  "created_at_utc": "2026-05-16T04:19:23Z",
+  "cuda_enabled": false,
+  "notes": [
+    "CPU reference transform registry for known solved baseline reproduction.",
+    "Does not enable search, scoring, or CUDA execution.",
+    "Used by manifest-addressable solved-baseline runner."
+  ],
+  "registry_id": "cpu-reference-transforms-v0",
+  "registry_kind": "cpu_reference_transform_registry",
+  "scoring_enabled": false,
+  "search_enabled": false,
+  "sha256": "32e449b0a0f02cd1180767625474f0cfe2d988a26b13fd37741b7aa31023595e",
+  "status": "active_for_solved_baselines",
+  "transform_count": 6
+}

@@ -33,3 +33,9 @@ For Vigenere fixture work, keep keys explicit in fixture manifests, avoid key se
 ## Stage 1D Guardrails
 
 For p56 prime-stream work, require explicit stream parameters, no offset or direction search, payload checks separate from plaintext, and regression checks for direct, Atbash-family, and Vigenere fixtures.
+
+## Stage 2A Guardrails
+
+For transform-registry work, require CPU reference metadata, SHA-256 locks, alias resolution tests, manifest-runner outputs under ignored result paths, and all solved baselines passing through registry dispatch.
+
+Prompts should state that manifest-addressable solved baselines are regression runs, not search campaigns, and that search, scoring, CUDA, canonical corpus activation, and page-boundary finalization remain disabled.

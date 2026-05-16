@@ -100,3 +100,9 @@ Vigenere fixture expected text under `data/fixtures/solved-pages/vigenere-v0/` i
 The p56 fixture under `data/fixtures/solved-pages/prime-stream-v0/` is curated solved-baseline test data with locked-source provenance. The expected hex payload is recorded as a separate payload check and is not treated as plaintext.
 
 Generated prime-stream reproduction outputs under `data/normalized/solved-baselines/prime-stream-v0/` remain ignored. Raw transcripts, raw mirrored references, generated corpus candidates, and solved-baseline outputs remain uncommitted.
+
+## Stage 2A Registry And Manifest Data
+
+The CPU transform registry under `data/transform-registry/` and solved-baseline manifests under `experiments/manifests/solved-baselines/` are committed control metadata. They do not contain raw transcript dumps.
+
+Generated manifest-runner outputs under `experiments/results/solved-baselines/` remain ignored. Raw sources, generated corpus candidates, and generated solved-baseline outputs remain uncommitted.

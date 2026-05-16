@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/corpus/solved-baseline-run-manifest-v0.schema.json",
+  "title": "Solved Baseline Run Manifest v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_type",
+    "manifest_id",
+    "manifest_version",
+    "description",
+    "registry_id",
+    "registry_sha256",
+    "corpus_candidate_id",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "search_enabled",
+    "cuda_enabled",
+    "scoring_enabled",
+    "fixture_groups",
+    "output_dir",
+    "allow_pending",
+    "allow_warnings",
+    "require_all_pass",
+    "expected_counts",
+    "provenance",
+    "notes"
+  ],
+  "properties": {
+    "record_type": {
+      "const": "solved_baseline_run_manifest"
+    },
+    "manifest_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "registry_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "registry_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "corpus_candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical_corpus_active": {
+      "const": false
+    },
+    "page_boundaries_final": {
+      "const": false
+    },
+    "search_enabled": {
+      "const": false
+    },
+    "cuda_enabled": {
+      "const": false
+    },
+    "scoring_enabled": {
+      "const": false
+    },
+    "fixture_groups": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "fixture_group_id",
+          "fixture_dir",
+          "method_family",
+          "transform_ids",
+          "expected_fixture_count",
+          "expected_pass_count",
+          "allow_pending"
+        ],
+        "properties": {
+          "fixture_group_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fixture_dir": {
+            "type": "string",
+            "minLength": 1
+          },
+          "method_family": {
+            "type": "string",
+            "minLength": 1
+          },
+          "transform_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "expected_fixture_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "expected_pass_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "allow_pending": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "output_dir": {
+      "type": "string",
+      "minLength": 1
+    },
+    "allow_pending": {
+      "type": "boolean"
+    },
+    "allow_warnings": {
+      "type": "boolean"
+    },
+    "require_all_pass": {
+      "type": "boolean"
+    },
+    "expected_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fixture_group_count",
+        "fixture_count",
+        "pass_count"
+      ],
+      "properties": {
+        "fixture_group_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fixture_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pass_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fail_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pending_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "skipped_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -6,9 +6,9 @@ Create a CPU-first transform registry for future cipher modules.
 
 ## Current Status
 
-Stage 1B adds known-solved fixture reproduction for `reverse_gematria` and `rotated_reverse_gematria`. Direct translation from Stage 1A remains passing.
+Stage 2A adds the CPU reference transform registry and manifest-addressable solved-baseline runner. Direct translation, reverse Gematria, rotated reverse Gematria, explicit-key Vigenere, and prime-minus-one known solved baselines reproduce through registry dispatch.
 
-Vigenere, prime streams, generic affine search, scoring, and full transform registry generalization remain open.
+Generic affine/shift search, scoring, CUDA parity, and broader experiment-result storage remain open.
 
 ## Scope
 
@@ -20,17 +20,17 @@ Do not add GPU kernels before CPU correctness and parity tests exist.
 
 ## Deliverables
 
-Registry API, direct translation baseline, Caesar/Atbash scaffolds if policy is ready, and tests.
+Registry API, solved-baseline CPU reference transforms, manifest-addressable runner, and tests.
 
 ## Acceptance Criteria
 
-Transforms are manifest-addressable and covered by deterministic tests.
+Known solved baseline transforms are manifest-addressable and covered by deterministic tests.
 
 ## Safety/Provenance Rules
 
 Do not describe unimplemented transforms as working solver modules.
 
-Suggested labels: stage-1, corpus, testing, safety
+Suggested labels: stage-2, ciphers, testing, needs-human-review
 
 ## Dependencies
 

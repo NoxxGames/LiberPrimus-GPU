@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 0D transcript alignment and canonical transcript policy scaffolding.
+Stage 2A CPU transform registry and manifest-addressable solved-baseline runner complete.
 
 ## Completed in Stage 0A
 
@@ -108,6 +108,18 @@ Implemented fixture method: `prime_minus_one_stream`, with `phi_prime_stream` as
 
 Developer log: `docs/development-logs/2026-05-16-stage-1d-p56-prime-stream-golden-fixture.md`.
 
+## Completed in Stage 2A
+
+Stage 2A added the CPU reference transform registry and manifest-addressable solved-baseline runner.
+
+Registry summary: `cpu-reference-transforms-v0`, transforms `6`, alias entries `1`, `search_enabled=false`, `cuda_enabled=false`, `scoring_enabled=false`.
+
+Solved-baseline manifest summary: manifests `5`, all-known fixture groups `4`, pass/fail/pending/skipped `10/0/0/0`. Direct translation pass count `4`, Atbash-family pass count `3`, Vigenere pass count `2`, prime-stream pass count `1`.
+
+Generated manifest-runner outputs remain ignored under `experiments/results/solved-baselines/stage2a/`. `canonical_corpus_active=false` and `page_boundaries_final=false`.
+
+Developer log: `docs/development-logs/2026-05-16-stage-2a-cpu-transform-registry.md`.
+
 ## Next prompt recommendation
 
-Stage 2A - build the CPU transform registry and manifest-addressable solved-baseline runner, registering direct translation, reverse Gematria, rotated reverse Gematria, explicit-key Vigenere, and prime-minus-one as CPU reference transforms only.
+Stage 2B - implement experiment result store and run-record foundation for manifest-driven CPU experiments, without starting unsolved-page search.

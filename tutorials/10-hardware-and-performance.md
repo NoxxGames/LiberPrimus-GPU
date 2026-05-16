@@ -45,3 +45,9 @@ Stage 1C explicit-key Vigenere reproduction is CPU-only and small. Timing fields
 ## Stage 1D Performance Scope
 
 Stage 1D p56 prime-minus-one reproduction is CPU-only and small. Deterministic prime generation is used for fixture correctness, not throughput benchmarking. CUDA and scoring remain out of scope.
+
+## Stage 2A Performance Scope
+
+Stage 2A registry dispatch and solved-baseline manifests are CPU-only regression checks. The elapsed time in `experiments/results/solved-baselines/stage2a/summary.json` is diagnostic metadata only.
+
+Stage 2A does not run search, scoring, CUDA kernels, or throughput benchmarks.

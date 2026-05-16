@@ -200,3 +200,14 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Generated prime-stream reproduction outputs are ignored and must not be committed.
 - Passing Stage 1D does not activate canonical corpus.
 - Push after successful commit remains required when remote is verified.
+
+## Stage 2A CPU Transform Registry Rules
+
+- CPU transform registry entries are CPU reference transforms only.
+- Registry transforms must not enable search, scoring, or CUDA unless a future stage explicitly implements and tests that capability.
+- Every transform must declare `supports_gpu=false` until GPU parity work exists.
+- Manifest-addressable solved baselines are regression runs, not search campaigns.
+- Manifests must not contain raw corpus dumps.
+- Generated manifest-runner outputs are ignored and must not be committed.
+- `phi_prime_stream` is an alias of `prime_minus_one_stream` for prime inputs.
+- Push after successful commit remains required when remote is verified.

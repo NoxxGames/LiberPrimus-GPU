@@ -139,3 +139,19 @@ Stage 1D extends `solved_page_reproduction_record` with:
 - `payload_check_results`
 
 All reproduction records continue to require `trusted_as_canonical=false`, `canonical_corpus_active=false`, and `page_boundaries_final=false`.
+
+## Stage 2A Registry And Manifest-Run Records
+
+Stage 2A adds `solved-baseline-run-manifest-v0` for manifest-addressable solved-baseline regression runs.
+
+Solved-fixture reproduction records now include registry metadata:
+
+- `registry_id`
+- `registry_sha256`
+- `transform_id`
+- `canonical_transform_id`
+- `search_performed=false`
+- `cuda_used=false`
+- `scoring_used=false`
+
+Manifest-run outputs include `solved_baseline_manifest_run_record` JSONL and `solved_baseline_manifest_run_summary` JSON. They must keep `canonical_corpus_active=false`, `page_boundaries_final=false`, and `trusted_as_canonical=false`, and generated files under `experiments/results/solved-baselines/` remain ignored.

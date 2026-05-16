@@ -18,7 +18,7 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 
 ## Current status
 
-Stage 1D p56 prime-minus-one / phi-prime solved fixture reproduction is complete. The repository has frozen Stage 0E profiles, an inactive corpus candidate generator, known-solved fixture reproduction for direct translation, Atbash-family, explicit-key Vigenere, and p56 prime-stream material. Direct fixtures `4/0/0/0`, Atbash-family fixtures `3/0/0/0`, Vigenere fixtures `2/0/0/0`, and prime-stream fixtures `1/0/0/0` pass/fail/pending/skipped. No canonical corpus is active, no unsolved page is claimed solved, and no CUDA/search/scoring work is implemented.
+Stage 2A CPU transform registry and manifest-addressable solved-baseline runner are complete. The repository has frozen Stage 0E profiles, an inactive corpus candidate generator, a CPU reference transform registry, and manifest-runner coverage for all known solved fixture baselines. Direct fixtures `4/0/0/0`, Atbash-family fixtures `3/0/0/0`, Vigenere fixtures `2/0/0/0`, and prime-stream fixtures `1/0/0/0` pass/fail/pending/skipped, for `10` total known solved baselines reproduced through the registry path. No canonical corpus is active, page boundaries remain reviewable, no unsolved page is claimed solved, and no CUDA/search/scoring campaign is implemented. Next milestone: Stage 2B experiment result-store and run-record foundation.
 
 ## Tutorials
 
@@ -93,6 +93,12 @@ Direct fixture smoke:
 
 ```powershell
 .\.venv\Scripts\python.exe -m libreprimus.cli solved-fixture stage1a-smoke --fixture-dir data/fixtures/solved-pages/direct-translation-v0 --candidate-dir data/normalized/corpus-candidates/rtkd-master-v0-candidate --out-dir data/normalized/solved-baselines/direct-translation-v0 --allow-pending --allow-warnings
+```
+
+All-known solved-baseline registry smoke:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli solved-baseline stage2a-smoke --manifest experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml --out-dir experiments/results/solved-baselines/stage2a --allow-warnings
 ```
 
 ## Repository map

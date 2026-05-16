@@ -45,6 +45,11 @@ experiments/results/**
 !experiments/results/
 !experiments/results/README.md
 !experiments/results/.gitkeep
+!experiments/results/solved-baselines/
+!experiments/results/solved-baselines/README.md
+!experiments/results/solved-baselines/.gitkeep
+!experiments/results/solved-baselines/stage2a/
+!experiments/results/solved-baselines/stage2a/.gitkeep
 experiments/reports/**
 !experiments/reports/
 !experiments/reports/README.md

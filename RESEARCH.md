@@ -102,3 +102,9 @@ This stage proves fixture reproducibility for known material only. It does not s
 Stage 1D reproduces the known p56 `An End` baseline with a declared prime-minus-one stream. For prime inputs, `phi(p)=p-1`, so `phi_prime_stream` is recorded as an alias rather than a separate search family.
 
 The p56 hex block is preserved and hash-checked as payload data, not merged into normalized plaintext. This stage proves known-fixture reproducibility only; it does not solve new pages, activate a canonical corpus, finalize boundaries, add generic prime-stream search, or use CUDA.
+
+## Stage 2A Transform Registry Baseline
+
+Stage 2A consolidates the known solved baselines behind a CPU reference transform registry and manifest-addressable runner.
+
+The all-known manifest reproduces 10 solved fixture baselines through registry dispatch. This proves orchestration and regression coverage for known material only. It does not start search campaigns, add scoring, activate a canonical corpus, finalize page boundaries, or use CUDA.
