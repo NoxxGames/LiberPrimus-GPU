@@ -122,4 +122,21 @@ Stage 0A requires smoke tests for the C++ skeleton and Python package. Future CU
 
 ## Next milestones
 
-Stage 1B should reproduce reverse Gematria / Atbash-family solved pages using the Stage 1A fixture framework, without brute-force search.
+Stage 1C should reproduce explicit-key Vigenere solved pages using the Stage 1A fixture framework, without key search.
+
+## Stage 1B Atbash-Family Fixtures
+
+The workbench now includes known-solved reverse Gematria and rotated reverse Gematria reproduction fixtures. These run through:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli solved-fixture stage1b-smoke `
+  --direct-fixture-dir data/fixtures/solved-pages/direct-translation-v0 `
+  --atbash-fixture-dir data/fixtures/solved-pages/atbash-family-v0 `
+  --candidate-dir data/normalized/corpus-candidates/rtkd-master-v0-candidate `
+  --direct-out-dir data/normalized/solved-baselines/direct-translation-v0 `
+  --atbash-out-dir data/normalized/solved-baselines/atbash-family-v0 `
+  --allow-pending `
+  --allow-warnings
+```
+
+These fixtures are regression baselines, not new solve claims. Generated outputs remain ignored, and `canonical_corpus_active=false`.

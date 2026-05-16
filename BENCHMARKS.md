@@ -47,3 +47,8 @@ Stage 0E records generation timings for profile validation, tokenization, page-c
 ## Stage 1A timing policy
 
 Stage 1A reproduction records elapsed milliseconds for fixture diagnostics only. These timings are not benchmark claims and do not involve CUDA.
+## Stage 1B Timing Policy
+
+Stage 1B reproduction timing is diagnostic only. It is not a GPU benchmark and must not be used to make hardware speed claims.
+
+The fixture transforms are CPU-only, deterministic, and small. CUDA benchmarking remains out of scope.

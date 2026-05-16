@@ -8,12 +8,14 @@ import subprocess
 from pathlib import Path
 from time import perf_counter
 
+from libreprimus.solved_fixtures.atbash_family import decode_atbash_family
 from libreprimus.solved_fixtures.direct_translation import decode_direct_translation
 from libreprimus.solved_fixtures.fixture_loader import load_fixtures
 from libreprimus.solved_fixtures.models import ReproductionRecord, ReproductionSummary
 from libreprimus.solved_fixtures.span_selection import select_tokens
 
-FIXTURE_SET_ID = "direct-translation-v0"
+DIRECT_FIXTURE_SET_ID = "direct-translation-v0"
+ATBASH_FIXTURE_SET_ID = "atbash-family-v0"
 
 
 def _git_commit() -> str:
@@ -24,10 +26,11 @@ def _git_commit() -> str:
     return result.stdout.strip()
 
 
-def reproduce_direct_translation_fixtures(
+def reproduce_fixtures(
     *,
     fixture_dir: Path,
     candidate_dir: Path,
+    fixture_set_id: str,
 ) -> tuple[list[ReproductionRecord], ReproductionSummary, list[str]]:
     start = perf_counter()
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -42,8 +45,15 @@ def reproduce_direct_translation_fixtures(
         rune_count = 0
         numeric_literal_count = 0
         separator_count = 0
+        decoded_index_formula: str | None = None
+        transform_parameters: dict[str, object] = {}
         record_warnings: list[str] = []
-        if fixture.method_family != "direct_translation" or not fixture.in_scope_for_stage:
+        supported_method = fixture.method_family in {
+            "direct_translation",
+            "reverse_gematria",
+            "rotated_reverse_gematria",
+        }
+        if not supported_method or not fixture.in_scope_for_stage:
             status = "pending" if fixture.method_status.startswith("pending") else "skipped"
             mismatch_reason = fixture.method_status
         else:
@@ -52,7 +62,18 @@ def reproduce_direct_translation_fixtures(
                 status = "skipped"
                 mismatch_reason = selection_error
             else:
-                result = decode_direct_translation(tokens)
+                if fixture.method_family == "direct_translation":
+                    result = decode_direct_translation(tokens)
+                    decoded_index_formula = "decoded_index = cipher_index"
+                    transform_parameters = {}
+                else:
+                    result = decode_atbash_family(
+                        tokens,
+                        method_family=fixture.method_family,
+                        transform_chain=fixture.transform_chain,
+                    )
+                    decoded_index_formula = str(result["decoded_index_formula"])
+                    transform_parameters = dict(result["transform_parameters"])
                 decoded_text = result["decoded_normalized_plaintext"]
                 decoded_hash = result["decoded_normalized_plaintext_sha256"]
                 rune_count = int(result["rune_count"])
@@ -78,6 +99,8 @@ def reproduce_direct_translation_fixtures(
                 git_commit=git_commit,
                 method_family=fixture.method_family,
                 transform_chain=fixture.transform_chain,
+                decoded_index_formula=decoded_index_formula,
+                transform_parameters=transform_parameters,
                 span_selector=fixture.span_selector,
                 decoded_normalized_plaintext=decoded_text,
                 decoded_normalized_plaintext_sha256=decoded_hash,
@@ -96,7 +119,7 @@ def reproduce_direct_translation_fixtures(
     counts = Counter(record.match_status for record in records)
     summary = ReproductionSummary(
         record_type="solved_page_reproduction_summary",
-        fixture_set_id=FIXTURE_SET_ID,
+        fixture_set_id=fixture_set_id,
         generated_at_utc=now,
         git_commit=git_commit,
         fixture_count=len(records),
@@ -116,3 +139,27 @@ def reproduce_direct_translation_fixtures(
         elapsed_ms=round((perf_counter() - start) * 1000, 3),
     )
     return records, summary, warnings
+
+
+def reproduce_direct_translation_fixtures(
+    *,
+    fixture_dir: Path,
+    candidate_dir: Path,
+) -> tuple[list[ReproductionRecord], ReproductionSummary, list[str]]:
+    return reproduce_fixtures(
+        fixture_dir=fixture_dir,
+        candidate_dir=candidate_dir,
+        fixture_set_id=DIRECT_FIXTURE_SET_ID,
+    )
+
+
+def reproduce_atbash_family_fixtures(
+    *,
+    fixture_dir: Path,
+    candidate_dir: Path,
+) -> tuple[list[ReproductionRecord], ReproductionSummary, list[str]]:
+    return reproduce_fixtures(
+        fixture_dir=fixture_dir,
+        candidate_dir=candidate_dir,
+        fixture_set_id=ATBASH_FIXTURE_SET_ID,
+    )

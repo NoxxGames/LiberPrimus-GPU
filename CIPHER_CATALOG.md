@@ -85,3 +85,15 @@ Future cipher modules must use Gematria profile v0 for rune/index/prime mapping.
 ## Stage 1A direct-translation baseline
 
 Stage 1A implements a direct-translation reproduction baseline for solved fixtures only. It maps rune tokens to Gematria profile preferred Latin labels. Atbash, Vigenere, rotated reverse Gematria, prime streams, and search remain unimplemented.
+
+## Stage 1B Atbash-family baselines
+
+Stage 1B implements CPU-only known-solved fixture reproduction for `reverse_gematria` and `rotated_reverse_gematria`.
+
+- `reverse_gematria`: implemented for fixtures as `decoded_index = 28 - cipher_index`.
+- `rotated_reverse_gematria`: implemented for fixtures as `decoded_index = (28 - cipher_index + rotation) mod 29`.
+- Rotations are explicit fixture parameters. No rotation search is implemented.
+- Reverse Gematria is affine over `Z_29` with `a=-1, b=28`.
+- Rotated reverse Gematria is affine over `Z_29` with `a=-1, b=28+rotation`.
+
+Vigenere, prime-minus-one, generic affine search, scoring, and CUDA acceleration remain unimplemented.

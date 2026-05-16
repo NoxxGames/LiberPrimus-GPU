@@ -35,3 +35,8 @@ The rtkd master v0 corpus candidate is generated output. It is useful for local 
 ## Stage 1A Solved Fixtures
 
 Solved fixtures are committed test expectations with source/profile hashes. They can prove that known direct material still reproduces, but they are not raw source truth and not new solve evidence.
+## Stage 1B Known-Solved Baselines
+
+Reverse Gematria and rotated reverse Gematria fixtures are known-solved baselines. They use locked references and explicit spans from the generated corpus candidate, but they do not make the corpus canonical and do not prove any unsolved page.
+
+For rotated reverse fixtures, the rotation is declared in the fixture manifest. Stage 1B does not search rotations.

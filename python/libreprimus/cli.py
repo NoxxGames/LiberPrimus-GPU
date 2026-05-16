@@ -43,9 +43,13 @@ from libreprimus.paths import package_root, repo_root
 from libreprimus.profiles.gematria_profile import load_gematria_profile, validate_gematria_profile
 from libreprimus.profiles.glyph_variant_profile import load_glyph_variant_profile, validate_glyph_variant_profile
 from libreprimus.profiles.separator_grammar import load_separator_grammar, validate_separator_grammar
+from libreprimus.solved_fixtures.export import write_json as write_fixture_json
 from libreprimus.solved_fixtures.export import write_reproduction_outputs
 from libreprimus.solved_fixtures.fixture_loader import load_fixtures
-from libreprimus.solved_fixtures.reproduction import reproduce_direct_translation_fixtures
+from libreprimus.solved_fixtures.reproduction import (
+    reproduce_atbash_family_fixtures,
+    reproduce_direct_translation_fixtures,
+)
 from libreprimus.solved_fixtures.summary import load_summary as load_fixture_summary
 from libreprimus.solved_fixtures.validation import validate_fixture_dir, validate_reproduction_results
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
@@ -592,6 +596,8 @@ DEFAULT_SEPARATOR_GRAMMAR = Path("data/profiles/separators/rtkd-separator-gramma
 DEFAULT_CORPUS_CANDIDATE_DIR = Path("data/normalized/corpus-candidates/rtkd-master-v0-candidate")
 DEFAULT_DIRECT_FIXTURE_DIR = Path("data/fixtures/solved-pages/direct-translation-v0")
 DEFAULT_DIRECT_BASELINE_DIR = Path("data/normalized/solved-baselines/direct-translation-v0")
+DEFAULT_ATBASH_FIXTURE_DIR = Path("data/fixtures/solved-pages/atbash-family-v0")
+DEFAULT_ATBASH_BASELINE_DIR = Path("data/normalized/solved-baselines/atbash-family-v0")
 
 
 @profile_app.command("validate-gematria")
@@ -899,6 +905,47 @@ def solved_fixture_reproduce_direct(
         raise typer.Exit(1)
 
 
+@solved_fixture_app.command("reproduce-atbash-family")
+def solved_fixture_reproduce_atbash_family(
+    fixture_dir: Path = typer.Option(DEFAULT_ATBASH_FIXTURE_DIR, "--fixture-dir", help="Atbash-family fixture directory."),
+    candidate_dir: Path = typer.Option(DEFAULT_CORPUS_CANDIDATE_DIR, "--candidate-dir", help="Generated corpus candidate directory."),
+    out_dir: Path = typer.Option(DEFAULT_ATBASH_BASELINE_DIR, "--out-dir", help="Generated Atbash-family solved baseline directory."),
+    allow_pending: bool = typer.Option(False, "--allow-pending", help="Return success with pending fixtures."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite reproduction warnings."),
+    require_all_pass: bool = typer.Option(False, "--require-all-pass", help="Require every fixture to pass."),
+) -> None:
+    """Reproduce reverse Gematria and rotated reverse Gematria solved-page fixtures."""
+    fixture_path = _resolve_output_path(fixture_dir)
+    candidate_path = _resolve_output_path(candidate_dir)
+    _ensure_candidate_dir(candidate_path, build_if_missing=False)
+    errors = validate_fixture_dir(fixture_path)
+    if errors:
+        for error in errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    records, summary, warnings = reproduce_atbash_family_fixtures(
+        fixture_dir=fixture_path,
+        candidate_dir=candidate_path,
+    )
+    paths = write_reproduction_outputs(_resolve_output_path(out_dir), records, summary, warnings)
+    for name, path in paths.items():
+        console.print(f"{name}={path}")
+    console.print(f"fixture_count={summary.fixture_count}")
+    console.print(f"pass_count={summary.pass_count}")
+    console.print(f"fail_count={summary.fail_count}")
+    console.print(f"pending_count={summary.pending_count}")
+    console.print(f"skipped_count={summary.skipped_count}")
+    console.print(f"elapsed_ms={summary.elapsed_ms}")
+    if summary.fail_count:
+        raise typer.Exit(1)
+    if require_all_pass and (summary.pending_count or summary.skipped_count):
+        raise typer.Exit(1)
+    if (summary.pending_count or summary.skipped_count) and not allow_pending:
+        raise typer.Exit(1)
+    if warnings and not allow_warnings:
+        raise typer.Exit(1)
+
+
 @solved_fixture_app.command("summary")
 def solved_fixture_summary(
     results_dir: Path = typer.Option(DEFAULT_DIRECT_BASELINE_DIR, "--results-dir", help="Generated solved baseline directory."),
@@ -948,6 +995,65 @@ def stage1a_smoke(
         for error in validation_errors:
             console.print(f"[red]{error}[/red]")
         raise typer.Exit(1)
+
+
+@solved_fixture_app.command("stage1b-smoke")
+def stage1b_smoke(
+    direct_fixture_dir: Path = typer.Option(DEFAULT_DIRECT_FIXTURE_DIR, "--direct-fixture-dir", help="Direct fixture directory."),
+    atbash_fixture_dir: Path = typer.Option(DEFAULT_ATBASH_FIXTURE_DIR, "--atbash-fixture-dir", help="Atbash-family fixture directory."),
+    candidate_dir: Path = typer.Option(DEFAULT_CORPUS_CANDIDATE_DIR, "--candidate-dir", help="Generated corpus candidate directory."),
+    direct_out_dir: Path = typer.Option(DEFAULT_DIRECT_BASELINE_DIR, "--direct-out-dir", help="Generated direct solved baseline directory."),
+    atbash_out_dir: Path = typer.Option(DEFAULT_ATBASH_BASELINE_DIR, "--atbash-out-dir", help="Generated Atbash-family solved baseline directory."),
+    allow_pending: bool = typer.Option(False, "--allow-pending", help="Return success with pending fixtures."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+    require_all_pass: bool = typer.Option(False, "--require-all-pass", help="Require every fixture to pass."),
+) -> None:
+    """Run Stage 1B direct-regression and Atbash-family fixture reproduction."""
+    candidate_path = _resolve_output_path(candidate_dir)
+    _ensure_candidate_dir(candidate_path, build_if_missing=True)
+    solved_fixture_validate(fixture_dir=direct_fixture_dir)
+    solved_fixture_validate(fixture_dir=atbash_fixture_dir)
+    solved_fixture_reproduce_direct(
+        fixture_dir=direct_fixture_dir,
+        candidate_dir=candidate_path,
+        out_dir=direct_out_dir,
+        allow_pending=allow_pending,
+        allow_warnings=allow_warnings,
+        require_all_pass=require_all_pass,
+    )
+    solved_fixture_reproduce_atbash_family(
+        fixture_dir=atbash_fixture_dir,
+        candidate_dir=candidate_path,
+        out_dir=atbash_out_dir,
+        allow_pending=allow_pending,
+        allow_warnings=allow_warnings,
+        require_all_pass=require_all_pass,
+    )
+    direct_errors = validate_reproduction_results(_resolve_output_path(direct_out_dir), allow_warnings=allow_warnings)
+    atbash_errors = validate_reproduction_results(_resolve_output_path(atbash_out_dir), allow_warnings=allow_warnings)
+    if direct_errors or atbash_errors:
+        for error in direct_errors + atbash_errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    direct_summary = load_fixture_summary(_resolve_output_path(direct_out_dir))
+    atbash_summary = load_fixture_summary(_resolve_output_path(atbash_out_dir))
+    combined_path = repo_root() / "data/normalized/solved-baselines/stage1b-summary.json"
+    write_fixture_json(
+        combined_path,
+        {
+            "record_type": "stage1b_solved_fixture_summary",
+            "direct_fixture_count": direct_summary.get("fixture_count"),
+            "direct_pass_count": direct_summary.get("pass_count"),
+            "atbash_fixture_count": atbash_summary.get("fixture_count"),
+            "atbash_pass_count": atbash_summary.get("pass_count"),
+            "atbash_fail_count": atbash_summary.get("fail_count"),
+            "atbash_pending_count": atbash_summary.get("pending_count"),
+            "atbash_skipped_count": atbash_summary.get("skipped_count"),
+            "canonical_corpus_active": False,
+            "page_boundaries_final": False,
+        },
+    )
+    console.print(f"stage1b_summary={combined_path}")
 
 
 app.add_typer(solved_fixture_app, name="solved-fixture")

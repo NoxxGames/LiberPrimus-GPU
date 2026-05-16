@@ -165,3 +165,13 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Generated reproduction outputs are ignored and must not be committed.
 - Passing Stage 1A does not activate canonical corpus.
 - Push after successful commit remains required when remote is verified.
+
+## Stage 1B Atbash-Family Fixture Rules
+
+- Reverse Gematria / Atbash-family fixtures are known-solved baselines, not new solve claims.
+- Rotated reverse fixtures must declare rotation explicitly.
+- Stage 1B must not infer or search rotations.
+- Stage 1B must not use Vigenere or prime-stream logic.
+- Generated Atbash-family reproduction outputs are ignored and must not be committed.
+- Passing Stage 1B does not activate canonical corpus.
+- Push after successful commit remains required when remote is verified.

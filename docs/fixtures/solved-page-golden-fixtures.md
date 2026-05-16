@@ -35,3 +35,10 @@ A passing fixture only means current tooling reproduces an existing known solved
 ## How To Add Future Fixtures
 
 Add a fixture manifest, cite locked sources, include profile hashes, choose an explicit selector, document caveats, and add tests before using it in experiments.
+## Stage 1B Atbash-Family Fixtures
+
+Stage 1B extends the fixture framework with reverse Gematria and rotated reverse Gematria known-solved baselines. These fixtures use the same provenance and canonical-false rules as Stage 1A.
+
+Rotated reverse fixtures must declare `rotation` in `transform_chain.params`; Stage 1B does not infer or search rotations.
+
+Generated Atbash-family reproduction records are written under `data/normalized/solved-baselines/atbash-family-v0/` and remain ignored.

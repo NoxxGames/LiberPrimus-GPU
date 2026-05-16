@@ -77,3 +77,15 @@ Stage 0E tests validate Gematria profile invariants, glyph variant profile polic
 ## Stage 1A solved fixture tests
 
 Stage 1A tests validate fixture schemas, direct-translation decoding, span selection, provenance validation, synthetic reproduction, real-source conditional reproduction, and solved-fixture CLI commands. They assert that direct fixtures do not use Atbash, Vigenere, prime streams, search, or CUDA.
+## Stage 1B Tests
+
+Stage 1B adds tests for reverse Gematria and rotated reverse Gematria formulas, explicit rotation validation, fixture schema compatibility, synthetic Atbash-family reproduction, direct-fixture regression, CLI smoke behavior, and real-source conditional reproduction.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q tests/python
+.\.venv\Scripts\python.exe -m ruff check python/libreprimus tests/python
+```
+
+C++ tests are not required for Stage 1B unless C++ files change.

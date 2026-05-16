@@ -36,3 +36,6 @@ The current direct-translation fixture set has four passing fixtures and no pend
 ## Known Caveats
 
 Page boundaries remain reviewable, the corpus candidate is inactive, and direct translation does not cover reverse Gematria, Vigenere, or prime-derived solved sections.
+## Stage 1B Regression Role
+
+Stage 1B runs the Stage 1A direct-translation fixtures as a regression check before reproducing Atbash-family fixtures. Direct fixtures remain direct only and must not use reverse Gematria, rotated reverse Gematria, Vigenere, or prime-stream logic.

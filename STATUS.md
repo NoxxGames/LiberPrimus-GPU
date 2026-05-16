@@ -74,6 +74,16 @@ Real-source fixture summary: fixtures `4`, pass/fail/pending/skipped `4/0/0/0`, 
 
 Developer log: `docs/development-logs/2026-05-16-stage-1a-direct-translation-golden-fixtures.md`.
 
+## Completed in Stage 1B
+
+Stage 1B added CPU-only reverse Gematria and rotated reverse Gematria fixture reproduction.
+
+Real-source fixture summary: Atbash-family fixtures `3`, pass/fail/pending/skipped `3/0/0/0`, direct regression `4/0/0/0`, `canonical_corpus_active=false`.
+
+Implemented fixture methods: `reverse_gematria` and `rotated_reverse_gematria`. Vigenere, prime streams, generic affine search, scoring, and CUDA remain unimplemented.
+
+Developer log: `docs/development-logs/2026-05-16-stage-1b-atbash-family-golden-fixtures.md`.
+
 ## Next prompt recommendation
 
-Stage 1B - implement reverse Gematria / Atbash-family solved-page reproduction for clearly documented fixtures, using the Stage 1A fixture framework.
+Stage 1C - implement explicit-key Vigenere solved-page reproduction for locked references only, using the Stage 1A fixture framework.

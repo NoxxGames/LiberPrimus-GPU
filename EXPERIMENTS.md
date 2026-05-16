@@ -57,3 +57,8 @@ Future experiment manifests may reference `gematria-primus-v0`, `glyph-variants-
 ## Stage 1A solved baseline gate
 
 Solved-baseline reproduction should run before any future search campaign. Direct-translation fixtures are pre-experiment validation controls; they are not generated candidate evidence and do not justify search results by themselves.
+## Stage 1B Baseline Gate
+
+Atbash-family solved fixture reproduction is a pre-experiment validation step. Future search campaigns must preserve these known-solved baselines and direct-translation regressions before claiming experimental results.
+
+Stage 1B does not authorize rotation search, Vigenere search, prime-stream search, scoring, or CUDA runs.

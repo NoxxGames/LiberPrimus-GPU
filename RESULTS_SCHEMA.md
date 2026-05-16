@@ -100,3 +100,13 @@ Stage 1A adds schemas under `schemas/corpus/` for:
 - `solved_page_reproduction_summary`
 
 Fixture and reproduction records require provenance hashes and keep `trusted_as_canonical=false`, `canonical_corpus_active=false`, and `page_boundaries_final=false`.
+## Stage 1B Solved-Fixture Results
+
+Stage 1B extends solved-page reproduction records with:
+
+- `decoded_index_formula`
+- `transform_parameters`
+- `method_family=reverse_gematria`
+- `method_family=rotated_reverse_gematria`
+
+All reproduction records must keep `trusted_as_canonical=false`, `canonical_corpus_active=false`, and `page_boundaries_final=false`. Atbash-family generated outputs are stored under ignored solved-baseline directories and must not be committed.

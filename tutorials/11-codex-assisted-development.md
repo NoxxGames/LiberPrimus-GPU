@@ -21,3 +21,8 @@ Before any commit, check staged files for `data/raw/`, generated JSONL, `.venv`,
 Each ingestion, alignment, or project-management stage should update a developer log and run focused tests or dry runs.
 
 For solved-fixture stages, require source/profile SHA-256 provenance, non-canonical flags, generated-output ignore checks, and a developer log before commit.
+## Prompting For Stage 1B-Style Work
+
+When asking Codex to add solved-fixture baselines, require explicit provenance, fixture hashes, no generated-output commits, and no search behavior unless a later stage explicitly asks for it.
+
+For Atbash-family work, require declared rotations in fixture manifests and direct-regression tests so existing solved baselines do not regress.

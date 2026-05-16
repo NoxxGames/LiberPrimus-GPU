@@ -37,7 +37,7 @@ class SolvedPageFixture:
     solved_section_aliases: list[str]
     method_family: str
     method_status: str
-    transform_chain: list[str]
+    transform_chain: list[Any]
     direct_translation_expected: bool
     in_scope_for_stage: bool
     source_transcript_id: str
@@ -74,7 +74,9 @@ class ReproductionRecord:
     generated_at_utc: str
     git_commit: str
     method_family: str
-    transform_chain: list[str]
+    transform_chain: list[Any]
+    decoded_index_formula: str | None
+    transform_parameters: dict[str, Any]
     span_selector: SpanSelector
     decoded_normalized_plaintext: str | None
     decoded_normalized_plaintext_sha256: str | None

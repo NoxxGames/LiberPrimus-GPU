@@ -6,7 +6,9 @@ Create a CPU-first transform registry for future cipher modules.
 
 ## Current Status
 
-No real cipher modules are implemented.
+Stage 1B adds known-solved fixture reproduction for `reverse_gematria` and `rotated_reverse_gematria`. Direct translation from Stage 1A remains passing.
+
+Vigenere, prime streams, generic affine search, scoring, and full transform registry generalization remain open.
 
 ## Scope
 

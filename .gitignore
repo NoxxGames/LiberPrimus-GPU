@@ -111,6 +111,8 @@ data/normalized/solved-baselines/**
 !data/normalized/solved-baselines/.gitkeep
 !data/normalized/solved-baselines/direct-translation-v0/
 !data/normalized/solved-baselines/direct-translation-v0/.gitkeep
+!data/normalized/solved-baselines/atbash-family-v0/
+!data/normalized/solved-baselines/atbash-family-v0/.gitkeep
 
 # Generated workbook-derived outputs
 data/normalized/legacy-workbook/**

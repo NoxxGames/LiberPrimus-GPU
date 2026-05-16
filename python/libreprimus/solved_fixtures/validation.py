@@ -41,6 +41,16 @@ def _schema_path(name: str) -> Path:
     return repo_root() / "schemas/corpus" / name
 
 
+def _transform_params(payload: dict[str, Any], method_family: str) -> dict[str, Any]:
+    for item in payload.get("transform_chain", []):
+        if isinstance(item, dict) and item.get("name") == method_family:
+            params = item.get("params", {})
+            return dict(params) if isinstance(params, dict) else {}
+        if isinstance(item, str) and item == method_family:
+            return {}
+    return {}
+
+
 def validate_fixture_file(path: Path) -> list[str]:
     errors: list[str] = []
     payload = load_fixture_payload(path)
@@ -57,7 +67,16 @@ def validate_fixture_file(path: Path) -> list[str]:
             errors.append(f"{path.name}: {field} does not match local file SHA-256.")
     expected = payload.get("expected_normalized_plaintext")
     expected_hash = payload.get("expected_normalized_plaintext_sha256")
-    if payload.get("method_status") == "pending_reference_text":
+    method_family = payload.get("method_family")
+    method_status = str(payload.get("method_status", ""))
+    if method_family == "rotated_reverse_gematria" and payload.get("in_scope_for_stage"):
+        rotation = _transform_params(payload, "rotated_reverse_gematria").get("rotation")
+        if not isinstance(rotation, int):
+            errors.append(f"{path.name}: rotated_reverse_gematria fixture requires integer params.rotation.")
+    if method_family == "reverse_gematria" and payload.get("in_scope_for_stage"):
+        if payload.get("direct_translation_expected") is not False:
+            errors.append(f"{path.name}: reverse Gematria fixture must not be marked direct_translation_expected.")
+    if method_status.startswith("pending"):
         if expected is not None or expected_hash is not None:
             errors.append(f"{path.name}: pending fixture must not contain expected plaintext/hash.")
         if not payload.get("notes"):

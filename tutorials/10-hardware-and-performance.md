@@ -33,3 +33,8 @@ Corpus candidate generation records lightweight timing for profile validation an
 ## Stage 1A Timing
 
 Direct fixture reproduction is CPU-only and fast. It is a correctness check before future cipher work, not a performance workload.
+## Stage 1B Performance Note
+
+Stage 1B Atbash-family reproduction is CPU-only and small. It does not use CUDA, and it should not be treated as a GPU benchmark.
+
+GPU acceleration remains future-facing for larger transform and scoring workloads after CPU references and parity tests exist.

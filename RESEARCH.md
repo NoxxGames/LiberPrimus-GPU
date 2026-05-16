@@ -77,3 +77,15 @@ Stage 0E freezes tooling profiles and generates an rtkd master corpus v0 candida
 ## Stage 1A direct fixture status
 
 Stage 1A adds direct-translation solved-fixture reproduction for selected known solved direct-transliteration sections. This is a regression baseline for known material only; it is not evidence of new plaintext and does not activate the canonical corpus.
+
+## Stage 1B Atbash-Family Reproduction
+
+Stage 1B reproduces selected known solved reverse Gematria / Atbash-family sections using locked sources and explicit transform parameters.
+
+Implemented baselines:
+
+- `A Warning`: reverse Gematria.
+- `A Koan: A Man`: rotated reverse Gematria with declared `rotation=3`.
+- `An Instruction`: rotated reverse Gematria with declared `rotation=3`, distinct from the direct Stage 1A instruction fixture.
+
+The result is baseline reproduction only. It is not solve evidence for unsolved pages and does not activate the canonical corpus.

@@ -30,7 +30,7 @@ def load_fixture(path: Path) -> SolvedPageFixture:
         solved_section_aliases=[str(item) for item in payload.get("solved_section_aliases", [])],
         method_family=str(payload["method_family"]),
         method_status=str(payload["method_status"]),
-        transform_chain=[str(item) for item in payload.get("transform_chain", [])],
+        transform_chain=list(payload.get("transform_chain", [])),
         direct_translation_expected=bool(payload["direct_translation_expected"]),
         in_scope_for_stage=bool(payload["in_scope_for_stage"]),
         source_transcript_id=str(payload["source_transcript_id"]),

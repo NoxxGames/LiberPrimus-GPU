@@ -79,3 +79,11 @@ Committed profiles under `data/profiles/` are tooling source-of-truth records fo
 ## Stage 1A solved fixture policy
 
 Direct-translation fixtures use locked rtkd and scream314 sources plus Stage 0E profile hashes. The expected strings are small normalized test expectations and must not be expanded into raw transcript dumps.
+
+## Stage 1B Atbash-Family Fixtures
+
+Stage 1B adds committed fixture manifests under `data/fixtures/solved-pages/atbash-family-v0/`. These fixtures are curated test expectations for known solved sections, not raw corpus dumps and not new solve claims.
+
+Generated Atbash-family reproduction outputs are written under `data/normalized/solved-baselines/atbash-family-v0/` and remain ignored. Raw transcript files and generated corpus candidate outputs remain uncommitted.
+
+Every Stage 1B fixture records rtkd, scream314, Gematria, separator, glyph-variant, and corpus-candidate provenance. `canonical_corpus_active=false`, `page_boundaries_final=false`, and `trusted_as_canonical=false` remain required.
