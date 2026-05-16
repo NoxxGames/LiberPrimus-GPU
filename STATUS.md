@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2C GitHub Actions CI and local CI reproduction scripts complete.
+Stage 2C GitHub Actions CI, local CI reproduction scripts, and remote workflow formatting verification are complete.
 
 ## Completed in Stage 0A
 

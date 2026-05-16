@@ -16,18 +16,30 @@ def test_ci_scripts_exist() -> None:
         "run-schema-manifest-checks.sh",
         "validate-workflow-static.ps1",
         "validate-workflow-static.sh",
+        "verify-remote-workflow.ps1",
+        "verify-remote-workflow.sh",
     ]:
         assert (SCRIPT_DIR / name).is_file()
 
 
 def test_shell_scripts_use_strict_mode() -> None:
-    for name in ["run-python-ci.sh", "run-schema-manifest-checks.sh", "validate-workflow-static.sh"]:
+    for name in [
+        "run-python-ci.sh",
+        "run-schema-manifest-checks.sh",
+        "validate-workflow-static.sh",
+        "verify-remote-workflow.sh",
+    ]:
         text = (SCRIPT_DIR / name).read_text(encoding="utf-8")
         assert "set -euo pipefail" in text
 
 
 def test_powershell_scripts_use_strict_mode() -> None:
-    for name in ["run-python-ci.ps1", "run-schema-manifest-checks.ps1", "validate-workflow-static.ps1"]:
+    for name in [
+        "run-python-ci.ps1",
+        "run-schema-manifest-checks.ps1",
+        "validate-workflow-static.ps1",
+        "verify-remote-workflow.ps1",
+    ]:
         text = (SCRIPT_DIR / name).read_text(encoding="utf-8")
         assert 'Set-StrictMode -Version Latest' in text
         assert '$ErrorActionPreference = "Stop"' in text
@@ -63,3 +75,11 @@ def test_workflow_static_script_runs_static_workflow_test() -> None:
     for name in ["validate-workflow-static.ps1", "validate-workflow-static.sh"]:
         text = (SCRIPT_DIR / name).read_text(encoding="utf-8")
         assert "test_stage2c_workflow_static.py" in text
+
+
+def test_remote_workflow_scripts_do_not_require_gh() -> None:
+    for name in ["verify-remote-workflow.ps1", "verify-remote-workflow.sh"]:
+        text = (SCRIPT_DIR / name).read_text(encoding="utf-8").lower()
+        assert "gh " not in text
+        assert "raw.githubusercontent.com" in text
+        assert "minimumlinecount" in text or "minimum_line_count" in text

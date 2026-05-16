@@ -86,6 +86,8 @@ Stage 2C added GitHub Actions CI and local CI reproduction scripts. The workflow
 
 Stage 2C-followup hardened the workflow with readable multi-line YAML, static YAML structure checks, and local workflow validation scripts.
 
+Stage 2C-followup-2 added post-push raw GitHub workflow verification scripts and `gh` PATH troubleshooting while keeping the workflow raw-data-free, CUDA-free, secret-free, and artifact-upload-free by default.
+
 ## Phase 2D - CI-gated schema and docs hardening
 
 Add schema/docs consistency checks and harden manifest/result-store validation before first bounded CPU exploratory experiment scaffolding.

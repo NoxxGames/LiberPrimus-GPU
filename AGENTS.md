@@ -231,4 +231,7 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - New commands added for CI must have local reproduction instructions.
 - GitHub workflow YAML must remain readable multi-line YAML.
 - CI workflow changes require static workflow tests.
+- After CI workflow changes, verify both the local workflow and the remote raw workflow line count after push.
+- CI YAML must not be minified or flattened.
+- Remote workflow verification must not depend solely on `gh`; use raw GitHub URL fetch as a fallback.
 - Push after successful commit remains required when remote is verified.

@@ -2,7 +2,7 @@
 
 ## Status
 
-Complete. Stage 2C adds raw-data-free GitHub Actions CI and local reproduction scripts.
+Complete. Stage 2C adds raw-data-free GitHub Actions CI and local reproduction scripts. Stage 2C-followup-2 adds raw remote workflow verification so the GitHub-served `main` workflow can be checked after push without relying on `gh`.
 
 ## Stage Goal
 
@@ -23,11 +23,13 @@ The CMake job builds and tests the CPU scaffold with CUDA disabled.
 
 Stage 2C-followup reformatted the workflow into readable multi-line YAML and added static parsing/formatting tests. The tests reject flattened workflow files and validate the parsed trigger/job structure.
 
+Stage 2C-followup-2 confirmed the local and remote raw workflow were already multi-line at the start of the task and added reusable scripts to repeat that remote check after future pushes.
+
 ## Local Scripts
 
 Local reproduction scripts live under `scripts/ci/` for PowerShell and shell users. They split Python checks from schema/manifest validation so contributors can rerun targeted checks.
 
-Stage 2C-followup adds `validate-workflow-static` scripts for PowerShell and shell users.
+Stage 2C-followup adds `validate-workflow-static` scripts for PowerShell and shell users. Stage 2C-followup-2 adds `verify-remote-workflow` scripts that fetch the public raw workflow URL and do not require `gh`.
 
 ## Validation Result
 

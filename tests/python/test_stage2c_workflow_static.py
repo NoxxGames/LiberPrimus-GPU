@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import pytest
 import yaml
 
 
@@ -19,16 +20,28 @@ def _workflow_yaml() -> dict[str, object]:
     return payload
 
 
+def _assert_readable_workflow_text(text: str) -> None:
+    lines = text.splitlines()
+    assert len(lines) > 25
+    assert len(lines) > 1
+    assert "name: CI on:" not in lines[0]
+    assert max(len(line) for line in lines) < 180
+
+
 def test_ci_workflow_exists() -> None:
     assert WORKFLOW.is_file()
 
 
 def test_ci_workflow_is_readable_multiline_yaml() -> None:
-    lines = _workflow_text().splitlines()
-    assert len(lines) > 25
-    assert len(lines) == WORKFLOW.read_text(encoding="utf-8").count("\n")
-    assert max(len(line) for line in lines) < 180
-    assert len(lines) > 1
+    text = _workflow_text()
+    _assert_readable_workflow_text(text)
+    assert len(text.splitlines()) == WORKFLOW.read_text(encoding="utf-8").count("\n")
+
+
+def test_minified_workflow_sample_is_rejected() -> None:
+    sample = "name: CI on: push: branches: [main] pull_request: branches: [main]\n"
+    with pytest.raises(AssertionError):
+        _assert_readable_workflow_text(sample)
 
 
 def test_ci_workflow_yaml_parses_and_has_expected_top_level_keys() -> None:

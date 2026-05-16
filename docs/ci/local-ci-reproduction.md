@@ -12,12 +12,24 @@ These commands reproduce the Stage 2C CI checks without requiring raw data, CUDA
 .\scripts\ci\validate-workflow-static.ps1
 ```
 
+After a workflow push:
+
+```powershell
+.\scripts\ci\verify-remote-workflow.ps1 -RepoOwner NoxxGames -RepoName LiberPrimus-GPU -Branch main -WorkflowPath ".github/workflows/ci.yml"
+```
+
 ## Linux Shell Commands
 
 ```bash
 bash scripts/ci/run-python-ci.sh
 bash scripts/ci/run-schema-manifest-checks.sh
 bash scripts/ci/validate-workflow-static.sh
+```
+
+After a workflow push:
+
+```bash
+bash scripts/ci/verify-remote-workflow.sh --repo-owner NoxxGames --repo-name LiberPrimus-GPU --branch main --workflow-path .github/workflows/ci.yml
 ```
 
 ## Python Test Commands
@@ -44,6 +56,8 @@ bash scripts/ci/validate-workflow-static.sh
 ```
 
 The static test parses `.github/workflows/ci.yml`, verifies trigger and job structure, and rejects flattened one-line workflow formatting.
+
+Remote workflow verification fetches the public raw workflow URL and rejects minified files, missing required commands, raw-data references, secrets, artifact uploads, and CUDA enablement.
 
 ## Optional CMake CPU Commands
 

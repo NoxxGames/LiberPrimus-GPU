@@ -19,7 +19,6 @@ jobs:
   python-ci:
     name: Python CI
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -55,7 +54,6 @@ jobs:
   cmake-cpu-smoke:
     name: CMake CPU Smoke
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
