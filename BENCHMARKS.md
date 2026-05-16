@@ -55,3 +55,7 @@ The fixture transforms are CPU-only, deterministic, and small. CUDA benchmarking
 ## Stage 1C Timing Note
 
 Stage 1C reproduction timing is diagnostic only. It is CPU-only fixture validation, not a GPU benchmark and not a performance claim.
+
+## Stage 1D Timing Note
+
+Stage 1D prime-stream reproduction timing is diagnostic only. Prime generation is deterministic and CPU-only for a small known fixture. It is not a GPU benchmark, speed claim, or optimization target.

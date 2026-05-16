@@ -60,6 +60,7 @@ class SolvedPageFixture:
     expected_numeric_literal_count: int | None
     expected_separator_policy: str
     expected_known_caveats: list[str]
+    payload_checks: list[dict[str, Any]]
     trusted_as_canonical: bool
     canonical_corpus_active: bool
     page_boundaries_final: bool
@@ -80,6 +81,11 @@ class ReproductionRecord:
     key_text: str | None
     key_indices: list[int]
     skip_rule_applied_count: int
+    prime_values_used_count: int
+    stream_values_used_count: int
+    first_prime_values: list[int]
+    first_stream_values_mod29: list[int]
+    payload_check_results: list[dict[str, Any]]
     span_selector: SpanSelector
     decoded_normalized_plaintext: str | None
     decoded_normalized_plaintext_sha256: str | None

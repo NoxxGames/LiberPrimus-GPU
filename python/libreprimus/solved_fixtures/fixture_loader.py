@@ -53,6 +53,7 @@ def load_fixture(path: Path) -> SolvedPageFixture:
         expected_numeric_literal_count=payload.get("expected_numeric_literal_count"),
         expected_separator_policy=str(payload["expected_separator_policy"]),
         expected_known_caveats=[str(item) for item in payload.get("expected_known_caveats", [])],
+        payload_checks=[dict(item) for item in payload.get("payload_checks", []) if isinstance(item, dict)],
         trusted_as_canonical=bool(payload["trusted_as_canonical"]),
         canonical_corpus_active=bool(payload["canonical_corpus_active"]),
         page_boundaries_final=bool(payload["page_boundaries_final"]),

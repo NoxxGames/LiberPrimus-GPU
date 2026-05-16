@@ -108,4 +108,14 @@ Stage 1C implements CPU-only known-solved fixture reproduction for `vigenere_exp
 - Cleartext-F pass-through rules are declared per fixture and recorded in reproduction output.
 - No key search, scoring, CUDA, prime-stream, or generic Vigenere search is implemented.
 
-Prime-minus-one and generic affine/shift/search infrastructure remain unimplemented.
+## Stage 1D Prime-Minus-One / Phi-Prime Baseline
+
+Stage 1D implements `prime_minus_one_stream` only as a known-solved p56 fixture transform.
+
+- Formula: `decoded_index = (cipher_index - ((prime_i - 1) mod 29)) mod 29`.
+- Alias: `phi_prime_stream`, because `phi(p)=p-1` for prime inputs.
+- Stream position advances only on enciphered rune tokens.
+- Payload tokens are preserved and checked separately.
+- No generic prime-stream search, offset sweep, scoring, CUDA acceleration, or transform registry is implemented.
+
+Generic affine/shift/search infrastructure remains unimplemented.

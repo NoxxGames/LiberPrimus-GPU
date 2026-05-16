@@ -45,3 +45,9 @@ For rotated reverse fixtures, the rotation is declared in the fixture manifest. 
 Stage 1C mirrors selected files from `scream314/cicada3301` and `lipeeeee/gematria` as reference/provenance sources only. Raw mirrored files stay ignored; committed lock metadata records URL, SHA-256, size, and reference-only policy.
 
 The `lipeeeee/gematria` mirror is not a dependency. The project does not copy its code into production modules.
+
+## Stage 1D p56 Payload Handling
+
+The p56 prime-minus-one fixture is a known-solved baseline. Its hex block is a payload check, not normal plaintext, and it does not advance the prime stream.
+
+The fixture remains non-canonical: it does not finalize page boundaries, activate a corpus, or authorize prime-stream search.

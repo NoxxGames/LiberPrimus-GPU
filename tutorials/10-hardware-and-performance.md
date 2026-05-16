@@ -41,3 +41,7 @@ GPU acceleration remains future-facing for larger transform and scoring workload
 ## Stage 1C Performance Scope
 
 Stage 1C explicit-key Vigenere reproduction is CPU-only and small. Timing fields in generated summaries are diagnostics, not benchmarks. CUDA is not used.
+
+## Stage 1D Performance Scope
+
+Stage 1D p56 prime-minus-one reproduction is CPU-only and small. Deterministic prime generation is used for fixture correctness, not throughput benchmarking. CUDA and scoring remain out of scope.

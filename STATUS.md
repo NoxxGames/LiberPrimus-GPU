@@ -96,6 +96,18 @@ Implemented fixture method: `vigenere_explicit_key`. Key search, p56 prime strea
 
 Developer log: `docs/development-logs/2026-05-16-stage-1c-vigenere-golden-fixtures.md`.
 
+## Completed in Stage 1D
+
+Stage 1D added CPU-only p56 prime-minus-one / phi-prime known-solved fixture reproduction and payload preservation checks.
+
+Real-source fixture summary: prime-stream fixtures `1`, pass/fail/pending/skipped `1/0/0/0`, direct regression `4/0/0/0`, Atbash regression `3/0/0/0`, Vigenere regression `2/0/0/0`, `canonical_corpus_active=false`.
+
+Payload check result: p56 hex block `pass`.
+
+Implemented fixture method: `prime_minus_one_stream`, with `phi_prime_stream` as an equivalent alias for prime inputs. Generic prime-stream search, affine/shift search, scoring, and CUDA remain unimplemented.
+
+Developer log: `docs/development-logs/2026-05-16-stage-1d-p56-prime-stream-golden-fixture.md`.
+
 ## Next prompt recommendation
 
-Stage 1D - implement p56 An End prime-minus-one / phi-prime solved-page reproduction for locked references only.
+Stage 2A - build the CPU transform registry and manifest-addressable solved-baseline runner, registering direct translation, reverse Gematria, rotated reverse Gematria, explicit-key Vigenere, and prime-minus-one as CPU reference transforms only.

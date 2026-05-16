@@ -67,3 +67,9 @@ Stage 1B does not authorize rotation search, Vigenere search, prime-stream searc
 Explicit-key Vigenere solved fixtures are now part of pre-experiment validation. Future Vigenere or running-key experiments must keep Stage 1A direct, Stage 1B Atbash-family, and Stage 1C Vigenere fixtures passing before search work begins.
 
 Stage 1C does not permit key search or scoring. Any future search campaign must use separate manifests, null controls, and review criteria.
+
+## Stage 1D Prime-Stream Gate
+
+The p56 prime-minus-one fixture is now part of pre-experiment validation. Future prime-stream experiments must keep Stage 1A direct, Stage 1B Atbash-family, Stage 1C Vigenere, and Stage 1D p56 baselines passing before search work begins.
+
+Stage 1D does not authorize offset sweeps, direction sweeps, prime-gap streams, scoring, CUDA kernels, or generic search campaigns.

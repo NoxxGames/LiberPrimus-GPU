@@ -26,6 +26,7 @@
         "vigenere",
         "rotated_reverse_gematria",
         "prime_minus_one_stream",
+        "phi_prime_stream",
         "unknown"
       ]
     },
@@ -34,6 +35,7 @@
     "method_status": { "type": "string" },
     "notes": { "type": "array" },
     "page_boundaries_final": { "const": false },
+    "payload_checks": { "type": "array" },
     "record_type": { "const": "solved_page_fixture" },
     "separator_grammar_id": { "type": "string" },
     "separator_grammar_sha256": { "type": "string" },

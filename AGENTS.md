@@ -189,3 +189,14 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Generated Vigenere reproduction outputs are ignored and must not be committed.
 - Passing Stage 1C does not activate canonical corpus.
 - Push after successful commit remains required when remote is verified.
+
+## Stage 1D Prime-Stream Fixture Rules
+
+- p56 prime-minus-one fixtures are known-solved baselines, not new solve claims.
+- Prime-minus-one and phi-prime are equivalent for prime inputs and must not be counted as separate search families.
+- Stage 1D must not perform prime-stream offset, direction, sequence, scoring, or CUDA search.
+- Payload tokens must be preserved and checked separately from plaintext.
+- Payload tokens must not advance prime streams or keys.
+- Generated prime-stream reproduction outputs are ignored and must not be committed.
+- Passing Stage 1D does not activate canonical corpus.
+- Push after successful commit remains required when remote is verified.

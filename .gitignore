@@ -121,6 +121,8 @@ data/normalized/solved-baselines/**
 !data/normalized/solved-baselines/atbash-family-v0/.gitkeep
 !data/normalized/solved-baselines/vigenere-v0/
 !data/normalized/solved-baselines/vigenere-v0/.gitkeep
+!data/normalized/solved-baselines/prime-stream-v0/
+!data/normalized/solved-baselines/prime-stream-v0/.gitkeep
 
 # Generated reference-source summaries
 data/normalized/reference-summaries/**

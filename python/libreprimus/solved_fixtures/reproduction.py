@@ -12,12 +12,14 @@ from libreprimus.solved_fixtures.atbash_family import decode_atbash_family
 from libreprimus.solved_fixtures.direct_translation import decode_direct_translation
 from libreprimus.solved_fixtures.fixture_loader import load_fixtures
 from libreprimus.solved_fixtures.models import ReproductionRecord, ReproductionSummary
+from libreprimus.solved_fixtures.prime_stream import decode_prime_minus_one_stream
 from libreprimus.solved_fixtures.span_selection import select_tokens
 from libreprimus.solved_fixtures.vigenere import decode_vigenere_explicit_key
 
 DIRECT_FIXTURE_SET_ID = "direct-translation-v0"
 ATBASH_FIXTURE_SET_ID = "atbash-family-v0"
 VIGENERE_FIXTURE_SET_ID = "vigenere-v0"
+PRIME_STREAM_FIXTURE_SET_ID = "prime-stream-v0"
 
 
 def _git_commit() -> str:
@@ -52,12 +54,19 @@ def reproduce_fixtures(
         key_text: str | None = None
         key_indices: list[int] = []
         skip_rule_applied_count = 0
+        prime_values_used_count = 0
+        stream_values_used_count = 0
+        first_prime_values: list[int] = []
+        first_stream_values_mod29: list[int] = []
+        payload_check_results: list[dict[str, object]] = []
         record_warnings: list[str] = []
         supported_method = fixture.method_family in {
             "direct_translation",
             "reverse_gematria",
             "rotated_reverse_gematria",
             "vigenere",
+            "prime_minus_one_stream",
+            "phi_prime_stream",
         }
         if not supported_method or not fixture.in_scope_for_stage:
             status = "pending" if fixture.method_status.startswith("pending") else "skipped"
@@ -75,6 +84,12 @@ def reproduce_fixtures(
                 else:
                     if fixture.method_family == "vigenere":
                         result = decode_vigenere_explicit_key(tokens, transform_chain=fixture.transform_chain)
+                    elif fixture.method_family in {"prime_minus_one_stream", "phi_prime_stream"}:
+                        result = decode_prime_minus_one_stream(
+                            tokens,
+                            transform_chain=fixture.transform_chain,
+                            payload_checks=fixture.payload_checks,
+                        )
                     else:
                         result = decode_atbash_family(
                             tokens,
@@ -86,6 +101,13 @@ def reproduce_fixtures(
                     key_text = result.get("key_text") if isinstance(result.get("key_text"), str) else None
                     key_indices = [int(item) for item in result.get("key_indices", [])]
                     skip_rule_applied_count = int(result.get("skip_rule_applied_count", 0))
+                    prime_values_used_count = int(result.get("prime_values_used_count", 0))
+                    stream_values_used_count = int(result.get("stream_values_used_count", 0))
+                    first_prime_values = [int(item) for item in result.get("first_prime_values", [])]
+                    first_stream_values_mod29 = [int(item) for item in result.get("first_stream_values_mod29", [])]
+                    payload_check_results = [
+                        dict(item) for item in result.get("payload_check_results", []) if isinstance(item, dict)
+                    ]
                 decoded_text = result["decoded_normalized_plaintext"]
                 decoded_hash = result["decoded_normalized_plaintext_sha256"]
                 rune_count = int(result["rune_count"])
@@ -116,6 +138,11 @@ def reproduce_fixtures(
                 key_text=key_text,
                 key_indices=key_indices,
                 skip_rule_applied_count=skip_rule_applied_count,
+                prime_values_used_count=prime_values_used_count,
+                stream_values_used_count=stream_values_used_count,
+                first_prime_values=first_prime_values,
+                first_stream_values_mod29=first_stream_values_mod29,
+                payload_check_results=payload_check_results,
                 span_selector=fixture.span_selector,
                 decoded_normalized_plaintext=decoded_text,
                 decoded_normalized_plaintext_sha256=decoded_hash,
@@ -189,4 +216,16 @@ def reproduce_vigenere_fixtures(
         fixture_dir=fixture_dir,
         candidate_dir=candidate_dir,
         fixture_set_id=VIGENERE_FIXTURE_SET_ID,
+    )
+
+
+def reproduce_prime_stream_fixtures(
+    *,
+    fixture_dir: Path,
+    candidate_dir: Path,
+) -> tuple[list[ReproductionRecord], ReproductionSummary, list[str]]:
+    return reproduce_fixtures(
+        fixture_dir=fixture_dir,
+        candidate_dir=candidate_dir,
+        fixture_set_id=PRIME_STREAM_FIXTURE_SET_ID,
     )

@@ -29,3 +29,7 @@ For Atbash-family work, require declared rotations in fixture manifests and dire
 ## Stage 1C Guardrails
 
 For Vigenere fixture work, keep keys explicit in fixture manifests, avoid key search, and keep generated solved-baseline outputs ignored. Do not commit mirrored raw reference files, and do not import or copy external tooling code.
+
+## Stage 1D Guardrails
+
+For p56 prime-stream work, require explicit stream parameters, no offset or direction search, payload checks separate from plaintext, and regression checks for direct, Atbash-family, and Vigenere fixtures.

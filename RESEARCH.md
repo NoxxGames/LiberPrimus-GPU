@@ -96,3 +96,9 @@ Stage 1C reproduces two documented Vigenere known-solved baselines with explicit
 The mirrored `scream314/cicada3301` files provide method-reference provenance for keys and cleartext-F skip notes. The mirrored `lipeeeee/gematria` files are tooling references only and are not imported or copied.
 
 This stage proves fixture reproducibility for known material only. It does not solve new pages, activate a canonical corpus, finalize page boundaries, or add key search.
+
+## Stage 1D p56 Prime-Stream Baseline
+
+Stage 1D reproduces the known p56 `An End` baseline with a declared prime-minus-one stream. For prime inputs, `phi(p)=p-1`, so `phi_prime_stream` is recorded as an alias rather than a separate search family.
+
+The p56 hex block is preserved and hash-checked as payload data, not merged into normalized plaintext. This stage proves known-fixture reproducibility only; it does not solve new pages, activate a canonical corpus, finalize boundaries, add generic prime-stream search, or use CUDA.

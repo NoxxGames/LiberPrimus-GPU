@@ -94,3 +94,9 @@ Stage 1C mirrors small reference files under ignored `data/raw/reference-repos/`
 `lipeeeee/gematria` is reference-only: it is not imported, executed, or copied into production code.
 
 Vigenere fixture expected text under `data/fixtures/solved-pages/vigenere-v0/` is curated test data with locked-source provenance. Generated reproduction outputs under `data/normalized/solved-baselines/vigenere-v0/` remain ignored.
+
+## Stage 1D Prime-Stream Fixture Data
+
+The p56 fixture under `data/fixtures/solved-pages/prime-stream-v0/` is curated solved-baseline test data with locked-source provenance. The expected hex payload is recorded as a separate payload check and is not treated as plaintext.
+
+Generated prime-stream reproduction outputs under `data/normalized/solved-baselines/prime-stream-v0/` remain ignored. Raw transcripts, raw mirrored references, generated corpus candidates, and solved-baseline outputs remain uncommitted.

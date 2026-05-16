@@ -64,6 +64,12 @@ Stage 1C added reference-source locks and explicit-key Vigenere solved fixtures 
 
 Reproduce p56 An End only if locked references and fixture spans support the prime-minus-one / phi-prime method. Preserve payload checks and do not add search.
 
+Stage 1D added a p56 prime-minus-one known-solved fixture with a passing payload hash check. Direct, Atbash-family, and Vigenere regressions still pass. No prime-stream search was added.
+
+## Phase 2A - CPU transform registry foundation
+
+Register solved-baseline CPU reference transforms for manifest-addressable runs: direct translation, reverse Gematria, rotated reverse Gematria, explicit-key Vigenere, and prime-minus-one. Do not start search campaigns yet.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

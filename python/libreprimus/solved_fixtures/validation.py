@@ -85,6 +85,26 @@ def validate_fixture_file(path: Path) -> list[str]:
             errors.append(f"{path.name}: vigenere fixture requires direction=decrypt_subtract.")
         if not payload.get("method_reference_source_id") or not payload.get("method_reference_sha256"):
             errors.append(f"{path.name}: vigenere fixture requires method-reference provenance.")
+    if method_family in {"prime_minus_one_stream", "phi_prime_stream"} and payload.get("in_scope_for_stage"):
+        params = _transform_params(payload, "prime_minus_one_stream")
+        if not params:
+            params = _transform_params(payload, "phi_prime_stream")
+        if not isinstance(params.get("prime_start_index"), int):
+            errors.append(f"{path.name}: prime stream fixture requires integer params.prime_start_index.")
+        if params.get("direction") != "forward":
+            errors.append(f"{path.name}: prime stream fixture requires direction=forward.")
+        if params.get("stream_value") != "prime_minus_one_mod29":
+            errors.append(f"{path.name}: prime stream fixture requires stream_value=prime_minus_one_mod29.")
+        if not payload.get("method_reference_source_id") or not payload.get("method_reference_sha256"):
+            errors.append(f"{path.name}: prime stream fixture requires method-reference provenance.")
+        for check in payload.get("payload_checks", []):
+            if not isinstance(check, dict):
+                errors.append(f"{path.name}: payload_checks entries must be objects.")
+                continue
+            expected_payload = check.get("expected_payload_text")
+            expected_payload_sha = check.get("expected_payload_sha256")
+            if isinstance(expected_payload, str) and expected_payload_sha != sha256_text(expected_payload):
+                errors.append(f"{path.name}: payload check {check.get('payload_id')} SHA-256 mismatch.")
     if method_status.startswith("pending"):
         if expected is not None or expected_hash is not None:
             errors.append(f"{path.name}: pending fixture must not contain expected plaintext/hash.")

@@ -125,3 +125,17 @@ Stage 1C also extends `solved_page_reproduction_record` with Vigenere-specific f
 - `skip_rule_applied_count`
 
 All reproduction records continue to require `trusted_as_canonical=false`, `canonical_corpus_active=false`, and `page_boundaries_final=false`.
+
+## Stage 1D Prime-Stream And Payload Records
+
+Stage 1D extends `solved_page_fixture` records with optional `payload_checks` for fixture-declared payloads.
+
+Stage 1D extends `solved_page_reproduction_record` with:
+
+- `prime_values_used_count`
+- `stream_values_used_count`
+- `first_prime_values`
+- `first_stream_values_mod29`
+- `payload_check_results`
+
+All reproduction records continue to require `trusted_as_canonical=false`, `canonical_corpus_active=false`, and `page_boundaries_final=false`.

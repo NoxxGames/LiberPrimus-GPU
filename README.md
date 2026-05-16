@@ -18,7 +18,7 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 
 ## Current status
 
-Stage 1A solved-page golden fixtures. The repository has tutorials, non-canonical source ingestion tools, transcript-alignment scaffolding, frozen Stage 0E profiles, an inactive corpus candidate generator, and direct-translation fixture reproduction for selected known solved material. No canonical corpus is active and no unsolved page is claimed solved.
+Stage 1D p56 prime-minus-one / phi-prime solved fixture reproduction is complete. The repository has frozen Stage 0E profiles, an inactive corpus candidate generator, known-solved fixture reproduction for direct translation, Atbash-family, explicit-key Vigenere, and p56 prime-stream material. Direct fixtures `4/0/0/0`, Atbash-family fixtures `3/0/0/0`, Vigenere fixtures `2/0/0/0`, and prime-stream fixtures `1/0/0/0` pass/fail/pending/skipped. No canonical corpus is active, no unsolved page is claimed solved, and no CUDA/search/scoring work is implemented.
 
 ## Tutorials
 
@@ -122,7 +122,7 @@ Stage 0A requires smoke tests for the C++ skeleton and Python package. Future CU
 
 ## Next milestones
 
-Stage 1C should reproduce explicit-key Vigenere solved pages using the Stage 1A fixture framework, without key search.
+Stage 2A should build a CPU transform registry and manifest-addressable solved-baseline runner for the implemented reference transforms, without starting search campaigns.
 
 ## Stage 1B Atbash-Family Fixtures
 
@@ -143,3 +143,7 @@ These fixtures are regression baselines, not new solve claims. Generated outputs
 ## Stage 1C Vigenere Baselines
 
 Stage 1C adds explicit-key Vigenere known-solved fixture reproduction for `DIVINITY` and `FIRFUMFERENFE`, plus reference-source locks for selected `scream314/cicada3301` and `lipeeeee/gematria` files. These are provenance and test fixtures only: no new page is solved, no key search is implemented, and `canonical_corpus_active=false` remains required.
+
+## Stage 1D Prime-Stream Baseline
+
+Stage 1D adds p56 `An End` known-solved reproduction using a CPU-only `prime_minus_one_stream` transform with `phi_prime_stream` recorded as an equivalent alias for prime inputs. The p56 hex block is preserved as a payload check, not merged into plaintext. No prime-stream search, scoring, CUDA, or corpus activation is implemented.
