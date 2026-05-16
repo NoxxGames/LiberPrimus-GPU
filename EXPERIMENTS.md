@@ -10,6 +10,8 @@ Every real run must start from a YAML manifest that pins inputs, transforms, sco
 
 Legacy workbook-derived records may support hypothesis generation, but they cannot be direct evidence of a solve.
 
+Local-Pastebin-derived records may be used for parser validation and alignment hints only. They may not be direct evidence of a solve or direct GPU campaign input until canonical alignment is complete.
+
 ## Required manifest fields
 
 Future manifests must include experiment ID, stage, hypothesis, corpus slice, transform chain, scorers, hardware requirements, success criteria, false-positive controls, output policy, and notes.

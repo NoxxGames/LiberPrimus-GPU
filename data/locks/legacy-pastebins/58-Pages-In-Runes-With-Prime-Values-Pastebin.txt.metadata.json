@@ -1,0 +1,26 @@
+{
+  "source_id": "pastebin-vGMK330j",
+  "source_kind": "legacy_lp2_rune_prime_value_pastebin_local_txt",
+  "source_url": "https://pastebin.com/vGMK330j",
+  "raw_url": "https://pastebin.com/raw/vGMK330j",
+  "local_filename": "58-Pages-In-Runes-With-Prime-Values-Pastebin.txt",
+  "canonical_corpus_allowed": false,
+  "trusted_as_canonical": false,
+  "trusted_as_legacy_lp2_hint": true,
+  "contains_page_labels": false,
+  "contains_rune_rows": true,
+  "contains_prime_value_rows": true,
+  "expected_lp2_page_count": 58,
+  "page_boundary_status": "not_finalized",
+  "sha256": "88ce49a218421a1e0481e69afcd7ed05380f2edf979bfdd5f3bcc7b4cc8ff98f",
+  "file_size_bytes": 88739,
+  "locked_at_utc": "2026-05-16T00:19:15Z",
+  "notes": [
+    "Local text file containing the legacy Pastebin vGMK330j data.",
+    "Legacy plain-text serialization of LP2 runes and Gematria prime values.",
+    "Numeric rows are Gematria prime values, not decimal modulo-29 indices.",
+    "Do not treat as canonical corpus.",
+    "Do not treat as proof of unsolved-page plaintext.",
+    "Page boundaries are not labeled in this source."
+  ]
+}

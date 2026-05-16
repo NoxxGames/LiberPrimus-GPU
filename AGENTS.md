@@ -24,10 +24,18 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 - Do not commit generated workbook extraction outputs.
 - Workbook-derived deltas may be used as solved-fixture hints only.
 - Every workbook-derived record must include source id, workbook SHA-256, sheet name, and `trusted_as_canonical=false`.
+- Local Pastebin TXT `58-Pages-In-Runes-With-Prime-Values-Pastebin.txt` is a non-canonical legacy source.
+- Do not treat local Pastebin rows as decrypted plaintext.
+- Do not treat local Pastebin page boundaries as known unless aligned with a canonical transcript.
+- Do not commit raw local Pastebin text.
+- Do not commit generated Pastebin extraction outputs.
+- Numeric rows are Gematria prime values, not modulo-29 decimal indices.
+- Every Pastebin-derived record must include source id, source SHA-256, source local filename, and `trusted_as_canonical=false`.
+- Every ingestion stage must create or update a developer log.
 
 ## Current stage
 
-Stage 0B adds non-canonical legacy workbook ingestion on top of the Stage 0A scaffold.
+Stage 0C adds non-canonical local legacy Pastebin TXT ingestion on top of the Stage 0B workbook ingestion.
 
 ## Source-of-truth files
 
@@ -38,6 +46,8 @@ Use `README.md`, `ARCHITECTURE.md`, `DATASET.md`, `EXPERIMENTS.md`, `CUDA_NOTES.
 Raw source material belongs under `data/raw/` only when explicitly allowed by a later stage. Never normalize, patch, crop, OCR, transcribe, or deduplicate raw files in place.
 
 Legacy workbook files under `data/raw/legacy-workbooks/` are immutable raw artefacts and must remain ignored by Git.
+
+Legacy Pastebin files under `data/raw/legacy-pastebins/` are immutable raw artefacts and must remain ignored by Git.
 
 ## Coding standards
 

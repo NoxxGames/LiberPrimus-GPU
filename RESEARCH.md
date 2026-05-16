@@ -10,11 +10,15 @@ Future work may evaluate classical substitutions, rune alphabets, prime-derived 
 
 The legacy workbook gives solved-page delta streams and Prime Sums hints that can help form hypotheses and later golden-fixture tests.
 
+The local TXT contains the Pastebin vGMK330j data described as the 58 pages in runes and rune prime values.
+
 ## Open questions
 
 Key unresolved questions include canonical transcripts, image provenance, rune-table variants, page numbering, normalization policy, and fair null controls.
 
 Workbook claims about page-to-page shift patterns are unverified and must not be treated as evidence of unsolved plaintext.
+
+The vGMK330j source contains LP2 runes and Gematria prime values. The numbers are prime values, not decimal positions, and the rows are not decrypted plaintext.
 
 ## Evidence quality levels
 
@@ -43,3 +47,7 @@ No research corpus, solved fixture, or candidate plaintext is generated in Stage
 ## Stage 0B legacy workbook status
 
 The Stage 0B parser treats the workbook as a non-canonical legacy analysis artefact. It is useful for hypothesis generation and solved-fixture hints only.
+
+## Stage 0C local Pastebin status
+
+The Stage 0C parser treats the local Pastebin TXT as a non-canonical legacy LP2 rune/prime-value artefact. It is useful for parser validation and alignment hints only.

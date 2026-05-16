@@ -14,6 +14,12 @@ Stage 0B legacy workbook ingestion is completed as a separate non-canonical lega
 
 Mirror primary source archives, pin SHA-256 locks, define canonical transcript/versioning policy, and freeze Gematria profile metadata without implementing unsolved-page cryptanalysis.
 
+Stage 0C local legacy Pastebin ingestion is completed as a separate non-canonical legacy-source step.
+
+## Phase 0D - Align legacy Pastebin line-pairs
+
+Align legacy Pastebin line-pairs with primary transcript/page-image sources and infer tentative page boundaries with confidence labels.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

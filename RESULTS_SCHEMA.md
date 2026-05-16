@@ -23,6 +23,9 @@ Implemented legacy workbook record types:
 - `legacy_prime_sum`
 - `legacy_workbook_formula`
 - `legacy_workbook_summary`
+- `legacy_pastebin_line_pair`
+- `legacy_pastebin_anchor`
+- `legacy_pastebin_summary`
 
 ## Planned SQLite tables
 
@@ -49,3 +52,5 @@ Reproducibility metadata should include run ID, timestamps, environment summary,
 Every candidate record must be treated as unverified until rerun, compared to controls, and manually reviewed.
 
 Workbook-derived records must include `trusted_as_canonical=false` and must not be treated as source truth.
+
+Pastebin-derived records must include `source_id`, `source_sha256`, `source_local_filename`, and `trusted_as_canonical=false`.

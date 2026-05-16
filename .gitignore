@@ -55,6 +55,10 @@ experiments/reports/**
 /translations.xlsx
 /*.xlsx
 
+# Root-level local Pastebin drops
+/58-Pages-In-Runes-With-Prime-Values-Pastebin.txt
+/vGMK330j.txt
+
 # Raw corpus and local data
 data/raw/**
 !data/raw/
@@ -70,12 +74,21 @@ data/raw/**
 !data/raw/legacy-workbooks/
 !data/raw/legacy-workbooks/README.md
 !data/raw/legacy-workbooks/.gitkeep
+!data/raw/legacy-pastebins/
+!data/raw/legacy-pastebins/README.md
+!data/raw/legacy-pastebins/.gitkeep
 
 # Generated workbook-derived outputs
 data/normalized/legacy-workbook/**
 !data/normalized/legacy-workbook/
 !data/normalized/legacy-workbook/README.md
 !data/normalized/legacy-workbook/.gitkeep
+
+# Generated legacy Pastebin normalized outputs
+data/normalized/legacy-pastebin/**
+!data/normalized/legacy-pastebin/
+!data/normalized/legacy-pastebin/README.md
+!data/normalized/legacy-pastebin/.gitkeep
 
 # OS/editor
 .DS_Store

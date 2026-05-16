@@ -10,6 +10,8 @@ No real cipher modules are implemented in Stage 0A. Placeholder modules return s
 
 Stage 0B legacy workbook ingestion does not implement real cipher modules. It only extracts non-canonical hint records.
 
+Stage 0C local Pastebin ingestion does not implement cipher modules. It only validates legacy rune/prime-value serialization.
+
 ## Future transform registry
 
 Later stages should register transforms with stable IDs, CPU reference behavior, parameters, inverse behavior when available, and test vectors.
@@ -41,6 +43,8 @@ The legacy workbook supports future tests for Vigenere `DIVINITY` and `FIRFUMFER
 ## Prime / phi-prime stream
 
 Prime-derived streams must define sequence generation, indexing, offset, modulus, and reproducible fixtures.
+
+Prime values from the local Pastebin source must be converted to decimal indices before any future modulo-29 cipher operation.
 
 The workbook supports future tests for a prime-minus-one stream, including p56 hint checks. This is not a canonical corpus claim.
 

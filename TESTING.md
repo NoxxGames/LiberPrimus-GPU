@@ -42,6 +42,8 @@ Documentation checks should verify core policy statements such as raw-data immut
 
 Legacy workbook tests include p56 prime-minus-one first-delta checks, Welcome `DIVINITY` delta checks, and direct-page zero-delta checks for solved fixture hints.
 
+Legacy Pastebin tests include first-pair prime validation, empty-pair preservation, Parable anchor detection, page-boundary non-finalization, and local-real-file conditional tests.
+
 ## Stage 0A smoke tests
 
 Stage 0A includes C++ and Python smoke tests only.
@@ -49,3 +51,7 @@ Stage 0A includes C++ and Python smoke tests only.
 ## Stage 0B workbook tests
 
 Stage 0B parser tests are Python-only. CUDA and C++ behavior are unchanged.
+
+## Stage 0C Pastebin tests
+
+Stage 0C parser tests are Python-only. They verify that prime values are converted to decimal indices and that generated records remain non-canonical.

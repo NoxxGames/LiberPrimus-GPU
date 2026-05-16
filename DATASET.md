@@ -10,9 +10,11 @@ Data handling must protect raw evidence and preserve provenance. Stage 0B adds a
 
 ## Planned source classes
 
-Future source classes include images, transcripts, message extracts, hashes, source metadata, license notes, and `legacy_analysis_workbook`.
+Future source classes include images, transcripts, message extracts, hashes, source metadata, license notes, `legacy_analysis_workbook`, and `legacy_lp2_rune_prime_value_pastebin_local_txt`.
 
 `legacy_analysis_workbook` is non-canonical. It may provide solved-page delta hints, Prime Sums hints, and formula inventory, but it is not canonical corpus data.
+
+`legacy_lp2_rune_prime_value_pastebin_local_txt` is non-canonical. It contains local Pastebin vGMK330j LP2 rune rows and Gematria prime-value rows. Page boundaries are not finalized from this source.
 
 ## Planned source repositories
 
@@ -32,6 +34,8 @@ Normalized data belongs under `data/normalized/` and must be reproducible from r
 
 Workbook-derived extraction outputs under `data/normalized/legacy-workbook/` are generated and ignored unless a later stage explicitly promotes selected records through a reviewed process.
 
+Pastebin-derived extraction outputs under `data/normalized/legacy-pastebin/` are generated and ignored unless a later stage explicitly promotes selected records through a reviewed process.
+
 ## Solved fixtures
 
 Solved fixtures belong under `data/solved/` or `tests/golden/` only after a reproduction requirement is defined.
@@ -49,3 +53,5 @@ Acquisition scripts must not mutate existing raw files. They should verify hashe
 Corpus locks will record file path, SHA-256, size, source, acquisition date, transcript profile, and Gematria profile.
 
 Legacy workbook lock files live under `data/locks/legacy-workbooks/`. The raw workbook is ignored and hash-locked; only checksum and metadata files are committed.
+
+Legacy Pastebin lock files live under `data/locks/legacy-pastebins/`. The raw local TXT is ignored and hash-locked; only checksum and metadata files are committed.
