@@ -79,8 +79,8 @@ def assert_readme(text: str, source: str) -> None:
         "Canonical corpus: inactive.",
         "No Liber Primus page is claimed solved",
         "Search/scoring/CUDA campaigns: not started",
-        "Stage 2D: CI-gated schema/docs consistency and manifest/result-store hardening complete.",
-        "Stage 2E CPU exploratory experiment manifest scaffold and dry-run planner",
+        "Stage 2E: CPU exploratory experiment manifest scaffold and dry-run planner complete.",
+        "Stage 2F bounded CPU experiment execution harness design",
     ]
     for item in required:
         if item not in text:

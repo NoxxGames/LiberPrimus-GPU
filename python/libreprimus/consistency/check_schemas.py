@@ -15,6 +15,11 @@ RESULTS_SCHEMA_DOC = repo_root() / "RESULTS_SCHEMA.md"
 EXPECTED_SCHEMA_FILES = [
     "corpus/solved-page-fixture-v0.schema.json",
     "corpus/solved-baseline-run-manifest-v0.schema.json",
+    "experiments/exploratory-experiment-manifest-v0.schema.json",
+    "experiments/exploratory-dry-run-plan-v0.schema.json",
+    "experiments/exploratory-transform-space-v0.schema.json",
+    "experiments/exploratory-safety-gate-v0.schema.json",
+    "experiments/exploratory-corpus-slice-v0.schema.json",
     "results/experiment-run-record-v0.schema.json",
     "results/experiment-run-summary-v0.schema.json",
     "results/experiment-result-store-manifest-v0.schema.json",
@@ -23,6 +28,8 @@ EXPECTED_SCHEMA_FILES = [
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
     "experiment-run-summary-v0",
+    "exploratory-experiment-manifest-v0",
+    "exploratory-dry-run-plan-v0",
     "solved-page-fixture",
     "solved-baseline-run-manifest-v0",
 ]

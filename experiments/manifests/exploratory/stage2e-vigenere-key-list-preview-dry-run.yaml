@@ -1,0 +1,59 @@
+record_type: exploratory_experiment_manifest
+manifest_id: stage2e-vigenere-key-list-preview-dry-run
+manifest_version: exploratory-experiment-v0
+description: Dry-run preview for an explicit Vigenere key-list replay.
+experiment_stage: Stage 2E
+dry_run_only: true
+execution_enabled: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+corpus_slice:
+  slice_id: solved-vigenere-fixture-preview
+  slice_kind: solved_fixture_group
+  source: data/fixtures/solved-pages/vigenere-v0
+  corpus_candidate_id: rtkd-master-v0-candidate
+  selector:
+    fixture_group_id: vigenere-v0
+  review_required: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  notes:
+    - Explicit key-list preview only.
+transform_plan:
+  transform_space_id: vigenere-key-list-preview-2
+  transform_family: vigenere_key_list_preview
+  registered_transform_id: vigenere_explicit_key
+  execution_supported: false
+  dry_run_supported: true
+  parameter_bounds:
+    keys:
+      - DIVINITY
+      - FIRFUMFERENFE
+  candidate_count_formula: "len(keys)"
+  candidate_count_upper_bound: 2
+  notes:
+    - No key generation or key search.
+parameter_space:
+  keys:
+    - DIVINITY
+    - FIRFUMFERENFE
+safety_gates:
+  - dry_run_only
+  - execution_disabled
+  - candidate_generation_disabled
+expected_candidate_count_upper_bound: 2
+result_store_policy:
+  mode: preview_only
+  import_enabled: false
+output_policy:
+  output_dir: experiments/results/exploratory-dry-runs/stage2e
+  generated_outputs_ignored: true
+provenance:
+  registry_path: data/transform-registry/cpu-reference-transforms-v0.json
+notes:
+  - This manifest does not execute Vigenere transforms.

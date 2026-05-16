@@ -60,6 +60,14 @@ jobs:
       - name: Result-store consistency checks
         run: python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 
+      - name: Exploratory dry-run planner smoke
+        run: |
+          python -m libreprimus.cli experiment validate-exploratory --manifest experiments/manifests/exploratory/stage2e-caesar-preview-dry-run.yaml
+          python -m libreprimus.cli experiment dry-run \
+            --manifest experiments/manifests/exploratory/stage2e-caesar-preview-dry-run.yaml \
+            --out-dir "${RUNNER_TEMP}/stage2e-dry-run" \
+            --allow-warnings
+
   cmake-cpu-smoke:
     name: CMake CPU Smoke
     runs-on: ubuntu-latest

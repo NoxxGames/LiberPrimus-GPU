@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/liberprimus-gpu/schemas/experiments/exploratory-transform-space-v0.schema.json",
+  "title": "exploratory-transform-space-v0",
+  "type": "object",
+  "required": [
+    "transform_space_id",
+    "transform_family",
+    "registered_transform_id",
+    "execution_supported",
+    "dry_run_supported",
+    "parameter_bounds",
+    "candidate_count_formula",
+    "candidate_count_upper_bound",
+    "notes"
+  ],
+  "properties": {
+    "transform_space_id": { "type": "string", "minLength": 1 },
+    "transform_family": {
+      "type": "string",
+      "enum": [
+        "direct_translation",
+        "reverse_gematria",
+        "rotated_reverse_gematria",
+        "vigenere_explicit_key",
+        "prime_minus_one_stream",
+        "caesar_shift_preview",
+        "affine_mod29_preview",
+        "vigenere_key_list_preview",
+        "prime_stream_parameter_preview",
+        "unknown"
+      ]
+    },
+    "registered_transform_id": { "type": ["string", "null"] },
+    "execution_supported": { "const": false },
+    "dry_run_supported": { "const": true },
+    "parameter_bounds": { "type": "object" },
+    "candidate_count_formula": { "type": "string" },
+    "candidate_count_upper_bound": { "type": "integer", "minimum": 0 },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": false
+}

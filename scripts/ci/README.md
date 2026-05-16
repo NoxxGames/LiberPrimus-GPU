@@ -1,10 +1,10 @@
 # CI Scripts
 
-These scripts reproduce the Stage 2C GitHub Actions checks locally.
+These scripts reproduce the raw-data-free GitHub Actions checks locally.
 
 - `run-python-ci.ps1` / `run-python-ci.sh`: Ruff, pytest, and the Python smoke command.
 - `run-schema-manifest-checks.ps1` / `run-schema-manifest-checks.sh`: raw-data-free profile, registry, solved-baseline manifest, and result-store manifest validation.
-- `run-consistency-checks.ps1` / `run-consistency-checks.sh`: Stage 2D schema, manifest, docs, registry, ignored-output, and result-store consistency checks.
+- `run-consistency-checks.ps1` / `run-consistency-checks.sh`: schema, manifest, docs, registry, ignored-output, result-store, and Stage 2E exploratory dry-run consistency checks.
 - `validate-workflow-static.ps1` / `validate-workflow-static.sh`: static GitHub Actions workflow validation.
 - `verify-remote-workflow.ps1` / `verify-remote-workflow.sh`: post-push raw GitHub workflow validation without requiring `gh`.
 - `verify-remote-git-blobs.ps1` / `verify-remote-git-blobs.sh`: post-push Git blob validation for the workflow and `.gitattributes`; raw URL/API checks are diagnostic.

@@ -55,3 +55,7 @@ Do not weaken CI by removing tests or conditional real-source skip checks just t
 ## Stage 2D Guardrails
 
 For consistency hardening work, require `libreprimus consistency check-all`, result-store consistency checks, ignored-output checks, and public status checks. Stage 2D is a hardening stage only; it does not authorize search, scoring, CUDA, canonical corpus activation, or page-boundary finalization.
+
+## Stage 2E Guardrails
+
+For exploratory dry-run planner work, require `libreprimus experiment validate-exploratory`, `libreprimus experiment dry-run`, and the full consistency suite. Stage 2E may estimate bounded candidate counts, but it must not enumerate candidate plaintexts or execute unsolved-page searches.

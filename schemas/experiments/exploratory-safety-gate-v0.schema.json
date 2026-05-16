@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/liberprimus-gpu/schemas/experiments/exploratory-safety-gate-v0.schema.json",
+  "title": "exploratory-safety-gate-v0",
+  "type": "object",
+  "required": [
+    "gate_id",
+    "gate_name",
+    "required_value",
+    "actual_value",
+    "status",
+    "severity",
+    "message"
+  ],
+  "properties": {
+    "gate_id": { "type": "string" },
+    "gate_name": { "type": "string" },
+    "required_value": {},
+    "actual_value": {},
+    "status": { "type": "string", "enum": ["pass", "fail", "warning", "skipped"] },
+    "severity": { "type": "string", "enum": ["info", "warning", "error"] },
+    "message": { "type": "string" }
+  },
+  "additionalProperties": false
+}

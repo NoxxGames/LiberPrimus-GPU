@@ -1,0 +1,21 @@
+record_type: exploratory_manifest_index
+manifest_id: stage2e-all-preview-dry-runs
+manifest_version: exploratory-index-v0
+description: Index of Stage 2E exploratory dry-run manifests.
+dry_run_only: true
+execution_enabled: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+manifests:
+  - stage2e-direct-known-fixture-dry-run.yaml
+  - stage2e-caesar-preview-dry-run.yaml
+  - stage2e-affine-preview-dry-run.yaml
+  - stage2e-vigenere-key-list-preview-dry-run.yaml
+  - stage2e-prime-stream-parameter-preview-dry-run.yaml
+notes:
+  - Index only; not an executable manifest.

@@ -1,0 +1,61 @@
+record_type: exploratory_experiment_manifest
+manifest_id: stage2e-caesar-preview-dry-run
+manifest_version: exploratory-experiment-v0
+description: Dry-run preview for a page-local Caesar shift sweep over 29 symbols.
+experiment_stage: Stage 2E
+dry_run_only: true
+execution_enabled: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+corpus_slice:
+  slice_id: future-review-caesar-placeholder
+  slice_kind: future_unsolved_page_candidate
+  source: future-review-placeholder
+  corpus_candidate_id: rtkd-master-v0-candidate
+  selector:
+    page_candidate_id: future-review-required-placeholder
+  review_required: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  notes:
+    - Future unsolved-page slice placeholder; review is required before execution.
+transform_plan:
+  transform_space_id: caesar-shift-preview-29
+  transform_family: caesar_shift_preview
+  registered_transform_id: null
+  execution_supported: false
+  dry_run_supported: true
+  parameter_bounds:
+    shift_range:
+      start: 0
+      end: 28
+      step: 1
+  candidate_count_formula: "29"
+  candidate_count_upper_bound: 29
+  notes:
+    - Preview only; no transform execution.
+parameter_space:
+  shift_range:
+    start: 0
+    end: 28
+    step: 1
+safety_gates:
+  - dry_run_only
+  - execution_disabled
+  - candidate_generation_disabled
+expected_candidate_count_upper_bound: 29
+result_store_policy:
+  mode: preview_only
+  import_enabled: false
+output_policy:
+  output_dir: experiments/results/exploratory-dry-runs/stage2e
+  generated_outputs_ignored: true
+provenance:
+  registry_path: data/transform-registry/cpu-reference-transforms-v0.json
+notes:
+  - This manifest estimates a bounded space only.

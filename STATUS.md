@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2D CI-gated schema/docs consistency checks and manifest/result-store validation hardening are complete.
+Stage 2E CPU exploratory experiment manifests and dry-run planner are complete.
 
 ## Completed in Stage 0A
 
@@ -154,6 +154,14 @@ CI now runs the Stage 2D consistency suite without raw data, search, scoring, CU
 
 Developer log: `docs/development-logs/2026-05-16-stage-2d-schema-docs-result-hardening.md`.
 
+## Completed in Stage 2E
+
+Stage 2E added exploratory experiment schemas, dry-run-only manifests, candidate-count estimators, safety gates, generated dry-run plan outputs, and `libreprimus experiment` CLI commands.
+
+Dry-run summary: direct `1`, Caesar preview `29`, affine mod-29 preview `812`, Vigenere key-list preview `2`, prime-stream parameter preview `1`. Execution, search, candidate generation, scoring, CUDA, canonical corpus activation, and page-boundary finalization remain disabled.
+
+Developer log: `docs/development-logs/2026-05-16-stage-2e-cpu-exploratory-dry-run-planner.md`.
+
 ## Next prompt recommendation
 
-Stage 2E - design a CPU exploratory experiment manifest scaffold and dry-run planner for bounded baseline transforms, without executing unsolved-page search campaigns.
+Stage 2F - design a bounded CPU experiment execution harness for synthetic and solved-fixture-only runs, still prohibiting unsolved-page campaigns.

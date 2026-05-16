@@ -42,8 +42,8 @@ function Assert-ReadmeStatus([string]$Text, [string]$SourceName) {
         "Canonical corpus: inactive.",
         "No Liber Primus page is claimed solved",
         "Search/scoring/CUDA campaigns: not started",
-        "Stage 2D: CI-gated schema/docs consistency and manifest/result-store hardening complete.",
-        "Stage 2E CPU exploratory experiment manifest scaffold and dry-run planner"
+        "Stage 2E: CPU exploratory experiment manifest scaffold and dry-run planner complete.",
+        "Stage 2F bounded CPU experiment execution harness design"
     )) {
         if (-not $Text.Contains($Required)) {
             throw "$SourceName README is missing required text: $Required"

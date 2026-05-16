@@ -141,4 +141,10 @@ Stage 2C-followup-5 adds remote Git blob verifier tests that require post-push w
 
 Stage 2D adds tests for consistency models, registry checks, manifest checks, schema checks, documentation checks, ignored-output checks, result-store checks, and CLI behavior.
 
+## Stage 2E Dry-Run Planner Tests
+
+Stage 2E adds tests for exploratory schemas, candidate-count estimators, safety gates, dry-run planner records, committed exploratory manifests, and `libreprimus experiment` CLI commands.
+
+The tests assert that dry-run plans preserve disabled execution/search/candidate-generation/scoring/CUDA flags and do not include candidate plaintext fields.
+
 The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.

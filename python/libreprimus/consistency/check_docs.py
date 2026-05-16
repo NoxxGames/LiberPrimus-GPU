@@ -33,8 +33,12 @@ def check_docs_consistency(
     _require(results, "readme_stage2b", "Stage 2B" in readme and "complete" in readme.lower(), "README mentions Stage 2B complete.", readme_path)
     _require(results, "readme_stage2c", "Stage 2C" in readme and "complete" in readme.lower(), "README mentions Stage 2C complete.", readme_path)
     _require(results, "readme_stage2d_next", "Stage 2D" in readme, "README points to Stage 2D.", readme_path)
+    _require(results, "readme_stage2e", "Stage 2E" in readme and "complete" in readme.lower(), "README mentions Stage 2E complete.", readme_path)
+    _require(results, "readme_stage2f_next", "Stage 2F" in readme, "README points to Stage 2F.", readme_path)
     _require(results, "status_stage2d", "Stage 2D" in status, "STATUS mentions Stage 2D.", status_path)
+    _require(results, "status_stage2e", "Stage 2E" in status, "STATUS mentions Stage 2E.", status_path)
     _require(results, "roadmap_stage2d", "Stage 2D" in roadmap, "ROADMAP mentions Stage 2D.", roadmap_path)
+    _require(results, "roadmap_stage2e", "Stage 2E" in roadmap, "ROADMAP mentions Stage 2E.", roadmap_path)
     for path, text, minimum in [
         (readme_path, readme, 50),
         (status_path, status, 20),

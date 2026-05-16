@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/liberprimus-gpu/schemas/experiments/exploratory-corpus-slice-v0.schema.json",
+  "title": "exploratory-corpus-slice-v0",
+  "type": "object",
+  "required": [
+    "slice_id",
+    "slice_kind",
+    "source",
+    "corpus_candidate_id",
+    "selector",
+    "review_required",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "notes"
+  ],
+  "properties": {
+    "slice_id": { "type": "string", "minLength": 1 },
+    "slice_kind": {
+      "type": "string",
+      "enum": [
+        "solved_fixture_group",
+        "page_candidate",
+        "logical_line_range",
+        "token_range",
+        "synthetic",
+        "future_unsolved_page_candidate"
+      ]
+    },
+    "source": { "type": "string" },
+    "corpus_candidate_id": { "type": "string" },
+    "selector": { "type": "object" },
+    "review_required": { "type": "boolean" },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "slice_kind": { "const": "future_unsolved_page_candidate" } },
+        "required": ["slice_kind"]
+      },
+      "then": {
+        "properties": { "review_required": { "const": true } }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

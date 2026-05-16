@@ -4,7 +4,8 @@
 
 Stage 2D defines consistency checks that keep the CPU transform registry,
 schemas, manifests, docs, ignored-output rules, and result-store metadata in
-sync before exploratory experiment scaffolding begins.
+sync. Stage 2E extends those checks to exploratory dry-run schemas and
+manifests before any execution harness is designed.
 
 ## Registry Consistency
 
@@ -16,13 +17,15 @@ IDs must also appear in `CIPHER_CATALOG.md`.
 
 Solved-baseline manifests must reference valid fixture directories and known
 transform IDs. Result-store manifests must reference valid solved-baseline
-manifests and preserve false search/CUDA/scoring flags.
+manifests and preserve false search/CUDA/scoring flags. Exploratory manifests
+must validate as dry-run-only, preserve disabled execution flags, and keep
+candidate-count estimates within declared upper bounds.
 
 ## Schema Consistency
 
-Schema files must parse as JSON, expected corpus/result schemas must exist, and
-schema metadata must remain unique. Generated/non-canonical record schemas keep
-`trusted_as_canonical=false`.
+Schema files must parse as JSON, expected corpus/result/experiment schemas must
+exist, and schema metadata must remain unique. Generated/non-canonical record
+schemas keep `trusted_as_canonical=false`.
 
 ## Documentation Consistency
 

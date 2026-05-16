@@ -175,4 +175,16 @@ Generated result-store outputs include JSONL records and `results.sqlite3` under
 
 Stage 2D may generate `consistency_check_suite_result` JSON summaries under `experiments/results/consistency/`. These summaries are generated outputs and are ignored by Git.
 
+## Stage 2E Exploratory Dry-Run Schemas
+
+Stage 2E adds committed schemas under `schemas/experiments/`:
+
+- `exploratory-experiment-manifest-v0`
+- `exploratory-dry-run-plan-v0`
+- `exploratory-transform-space-v0`
+- `exploratory-safety-gate-v0`
+- `exploratory-corpus-slice-v0`
+
+Generated `exploratory_dry_run_plan` records are ignored planning outputs under `experiments/results/exploratory-dry-runs/`. They are not candidate result rows and do not contain candidate plaintexts.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

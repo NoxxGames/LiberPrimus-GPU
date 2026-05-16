@@ -93,3 +93,15 @@ Generated result-store files under `experiments/results/result-store/` remain ig
 Stage 2D adds a consistency suite that checks schemas, manifests, registry metadata, result-store records, documentation status, and ignored-output rules before any new experiment scaffold is added.
 
 Future experiment manifests should pass this consistency gate before they are used for dry runs or real runs. The gate does not run search, scoring, CUDA, or unsolved-page campaigns.
+
+## Stage 2E Exploratory Dry-Run Planner
+
+Stage 2E adds exploratory experiment manifests and a dry-run planner. The planner validates manifest safety gates, estimates candidate-count bounds, previews generated output paths, and writes ignored dry-run plan records.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli experiment stage2e-dry-run-all --manifest-dir experiments/manifests/exploratory --out-dir experiments/results/exploratory-dry-runs/stage2e --allow-warnings
+```
+
+This does not execute search, enumerate candidate plaintexts, score outputs, use CUDA, activate a canonical corpus, or finalize page boundaries.

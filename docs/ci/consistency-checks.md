@@ -10,9 +10,9 @@ result-store definitions still agree.
 
 - Registry consistency: transform IDs, aliases, fixture-set paths, SHA locks,
   and disabled search/CUDA/scoring flags.
-- Manifest consistency: solved-baseline and result-store manifests, registry
-  SHA references, fixture directories, expected counts, and false capability
-  flags.
+- Manifest consistency: solved-baseline, result-store, and exploratory dry-run
+  manifests, registry SHA references, fixture directories, expected counts,
+  candidate-count bounds, and false capability flags.
 - Schema consistency: JSON parsing, expected schema files, unique schema
   metadata, record type constants, and non-canonical trust flags.
 - Documentation consistency: README, STATUS, ROADMAP, AGENTS, and cipher catalog
@@ -44,6 +44,9 @@ GitHub Actions runs the consistency suite in the Python CI job after the
 registry and manifest validation commands. The check is raw-data-free and does
 not require generated local result-store outputs.
 
+Stage 2E also validates exploratory dry-run manifests and runs a Caesar preview
+dry run into a temporary CI directory.
+
 ## Raw-Data-Free Policy
 
 The suite checks ignored raw paths, but it does not read or require local raw
@@ -63,6 +66,5 @@ outputs that are absent on a clean CI checkout.
 
 ## Future Extensions
 
-Future stages can add experiment-manifest dry-run checks, scorer metadata
-checks, and result-store import checks for new committed manifest types before
-any unsolved-page campaign is allowed to run.
+Future stages can add scorer metadata checks and result-store import checks for
+new committed manifest types before any unsolved-page campaign is allowed to run.

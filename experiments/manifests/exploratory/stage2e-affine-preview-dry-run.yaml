@@ -1,0 +1,69 @@
+record_type: exploratory_experiment_manifest
+manifest_id: stage2e-affine-preview-dry-run
+manifest_version: exploratory-experiment-v0
+description: Dry-run preview for an affine sweep over Z_29.
+experiment_stage: Stage 2E
+dry_run_only: true
+execution_enabled: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+corpus_slice:
+  slice_id: synthetic-affine-preview
+  slice_kind: synthetic
+  source: synthetic
+  corpus_candidate_id: synthetic-stage2e
+  selector:
+    synthetic_id: affine-preview
+  review_required: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  notes:
+    - Synthetic slice avoids raw corpus requirements.
+transform_plan:
+  transform_space_id: affine-mod29-preview-812
+  transform_family: affine_mod29_preview
+  registered_transform_id: null
+  execution_supported: false
+  dry_run_supported: true
+  parameter_bounds:
+    a_range:
+      start: 1
+      end: 28
+      step: 1
+    b_range:
+      start: 0
+      end: 28
+      step: 1
+  candidate_count_formula: "28 * 29"
+  candidate_count_upper_bound: 812
+  notes:
+    - Preview only; valid a values are 1..28 over Z_29.
+parameter_space:
+  a_range:
+    start: 1
+    end: 28
+    step: 1
+  b_range:
+    start: 0
+    end: 28
+    step: 1
+safety_gates:
+  - dry_run_only
+  - execution_disabled
+  - candidate_generation_disabled
+expected_candidate_count_upper_bound: 812
+result_store_policy:
+  mode: preview_only
+  import_enabled: false
+output_policy:
+  output_dir: experiments/results/exploratory-dry-runs/stage2e
+  generated_outputs_ignored: true
+provenance:
+  registry_path: data/transform-registry/cpu-reference-transforms-v0.json
+notes:
+  - This is a count-only affine preview.

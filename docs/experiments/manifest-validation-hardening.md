@@ -6,6 +6,8 @@ Stage 2D hardens manifest validation before future CPU exploratory experiment
 scaffolding. The checks confirm that current committed manifests are replayable
 metadata, not search campaigns.
 
+Stage 2E adds exploratory dry-run manifests to the same safety model.
+
 ## Solved-Baseline Manifests
 
 Solved-baseline manifests under `experiments/manifests/solved-baselines/` must
@@ -32,6 +34,10 @@ declare the expected fixture count.
 Manifests must keep `search_enabled=false`, `cuda_enabled=false`, and
 `scoring_enabled=false`. Stage 2D does not introduce any campaign runner,
 scorer, or GPU execution path.
+
+Exploratory manifests additionally keep `execution_enabled=false`,
+`search_execution_enabled=false`, `candidate_generation_enabled=false`, and
+`dry_run_only=true`.
 
 ## Generated Output Policy
 

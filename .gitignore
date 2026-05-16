@@ -60,6 +60,11 @@ experiments/results/**
 !experiments/results/consistency/.gitkeep
 !experiments/results/consistency/stage2d/
 !experiments/results/consistency/stage2d/.gitkeep
+!experiments/results/exploratory-dry-runs/
+!experiments/results/exploratory-dry-runs/README.md
+!experiments/results/exploratory-dry-runs/.gitkeep
+!experiments/results/exploratory-dry-runs/stage2e/
+!experiments/results/exploratory-dry-runs/stage2e/.gitkeep
 experiments/reports/**
 !experiments/reports/
 !experiments/reports/README.md

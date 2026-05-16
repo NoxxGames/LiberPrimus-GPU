@@ -1,0 +1,53 @@
+record_type: exploratory_experiment_manifest
+manifest_id: stage2e-direct-known-fixture-dry-run
+manifest_version: exploratory-experiment-v0
+description: Dry-run preview for replaying the direct-translation solved fixture group.
+experiment_stage: Stage 2E
+dry_run_only: true
+execution_enabled: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+corpus_slice:
+  slice_id: direct-translation-fixture-group
+  slice_kind: solved_fixture_group
+  source: data/fixtures/solved-pages/direct-translation-v0
+  corpus_candidate_id: rtkd-master-v0-candidate
+  selector:
+    fixture_group_id: direct-translation-v0
+  review_required: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  notes:
+    - Solved fixture group preview only.
+transform_plan:
+  transform_space_id: direct-translation-singleton
+  transform_family: direct_translation
+  registered_transform_id: direct_translation
+  execution_supported: false
+  dry_run_supported: true
+  parameter_bounds: {}
+  candidate_count_formula: "1"
+  candidate_count_upper_bound: 1
+  notes:
+    - Known solved transform replay preview; no execution in Stage 2E.
+parameter_space: {}
+safety_gates:
+  - dry_run_only
+  - execution_disabled
+  - candidate_generation_disabled
+expected_candidate_count_upper_bound: 1
+result_store_policy:
+  mode: preview_only
+  import_enabled: false
+output_policy:
+  output_dir: experiments/results/exploratory-dry-runs/stage2e
+  generated_outputs_ignored: true
+provenance:
+  registry_path: data/transform-registry/cpu-reference-transforms-v0.json
+notes:
+  - This is not a search or solve claim.

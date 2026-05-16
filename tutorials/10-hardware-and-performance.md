@@ -6,6 +6,8 @@ CPU code owns corpus management, manifests, orchestration, provenance, branching
 
 GPU code will later accelerate large regular transform-and-score batches only after CPU references and parity tests exist.
 
+Stage 2E dry-run manifests may estimate future CPU candidate counts, but they do not run benchmarks, execute search, or use CUDA. Treat those counts as planning metadata only.
+
 ## Current Stage
 
 Stage 0D-P does not use CUDA. Transcript parsing and alignment run on ordinary CPU hardware.

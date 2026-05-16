@@ -258,6 +258,16 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 2D does not enable search, scoring, CUDA, canonical corpus activation, or page-boundary finalization.
 - Push after successful commit remains required when remote is verified.
 
+## Stage 2E Exploratory Dry-Run Rules
+
+- Exploratory experiment manifests in Stage 2E are dry-run only.
+- Do not execute unsolved-page search from exploratory manifests.
+- `execution_enabled`, `search_execution_enabled`, `candidate_generation_enabled`, `scoring_enabled`, and `cuda_enabled` must remain false.
+- Candidate-count estimation is allowed; candidate enumeration is not.
+- Future unsolved page slices require `review_required=true`.
+- Generated exploratory dry-run outputs are ignored and must not be committed.
+- Stage 2E does not activate canonical corpus or finalize page boundaries.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

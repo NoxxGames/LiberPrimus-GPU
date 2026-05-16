@@ -19,13 +19,16 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/results/solved-baselines/stage2a/summary.json",
         "experiments/results/result-store/stage2b/results.sqlite3",
         "experiments/results/consistency/stage2d/consistency_summary.json",
+        "experiments/results/exploratory-dry-runs/stage2e/summary.json",
         "local-test.sqlite3",
     ]
     trackable_paths = [
         "data/profiles/gematria/gematria-primus-v0.json",
         "data/fixtures/solved-pages/direct-translation-v0/an-instruction-direct.fixture.json",
         "schemas/results/experiment-run-record-v0.schema.json",
+        "schemas/experiments/exploratory-experiment-manifest-v0.schema.json",
         "experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml",
+        "experiments/manifests/exploratory/stage2e-caesar-preview-dry-run.yaml",
     ]
     for path in ignored_paths:
         if _is_ignored(root, path):

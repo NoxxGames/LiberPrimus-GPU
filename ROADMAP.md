@@ -104,6 +104,12 @@ Stage 2D added a raw-data-free consistency package, CLI commands, CI scripts, wo
 
 Design CPU exploratory experiment manifests and a dry-run planner for bounded baseline transforms without executing unsolved-page search campaigns.
 
+Stage 2E added exploratory schemas, dry-run-only manifests, candidate-count estimators, safety gates, generated dry-run plan output support, CLI commands, CI consistency integration, and documentation. No search, scoring, CUDA, candidate generation, canonical corpus activation, or page-boundary finalization was added.
+
+## Stage 2F - Synthetic and solved-fixture CPU execution harness design
+
+Design a bounded CPU experiment execution harness for synthetic and solved-fixture-only runs. Keep unsolved-page campaigns out of scope until dry-run gates, result-store policy, and review criteria remain stable.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

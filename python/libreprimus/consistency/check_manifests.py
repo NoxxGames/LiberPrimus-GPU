@@ -8,6 +8,8 @@ from typing import Any
 import yaml
 
 from libreprimus.consistency.models import ConsistencyCheckResult, fail_result, pass_result
+from libreprimus.experiments.candidate_estimator import estimate_candidate_count
+from libreprimus.experiments.manifest_loader import load_exploratory_manifest
 from libreprimus.paths import repo_root
 from libreprimus.result_store.validation import validate_result_store_manifest_file
 from libreprimus.solved_baselines.validation import validate_manifest_file
@@ -16,6 +18,7 @@ from libreprimus.transforms.registry import DEFAULT_REGISTRY_PATH, compute_sha25
 GROUP = "manifests"
 SOLVED_MANIFEST_DIR = repo_root() / "experiments/manifests/solved-baselines"
 RESULT_STORE_MANIFEST_DIR = repo_root() / "experiments/manifests/result-store"
+EXPLORATORY_MANIFEST_DIR = repo_root() / "experiments/manifests/exploratory"
 REGISTRY_PATH = repo_root() / DEFAULT_REGISTRY_PATH
 
 
@@ -35,6 +38,7 @@ def check_manifest_consistency(
     *,
     solved_manifest_dir: Path = SOLVED_MANIFEST_DIR,
     result_store_manifest_dir: Path = RESULT_STORE_MANIFEST_DIR,
+    exploratory_manifest_dir: Path = EXPLORATORY_MANIFEST_DIR,
     registry_path: Path = REGISTRY_PATH,
 ) -> list[ConsistencyCheckResult]:
     results: list[ConsistencyCheckResult] = []
@@ -90,6 +94,29 @@ def check_manifest_consistency(
                 fail_result(GROUP, "result_store_input_manifest_exists", "Input manifest missing.", path=input_manifest)
             )
 
+    exploratory_manifests = sorted(exploratory_manifest_dir.glob("*-dry-run.yaml"))
+    for manifest in exploratory_manifests:
+        try:
+            loaded = load_exploratory_manifest(manifest)
+            estimate = estimate_candidate_count(loaded.payload)
+        except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+            results.append(fail_result(GROUP, "exploratory_manifest_valid", str(exc), path=manifest))
+            continue
+        results.append(pass_result(GROUP, "exploratory_manifest_valid", "Exploratory manifest validates.", path=manifest))
+        _check_exploratory_flags(results, loaded.payload, manifest)
+        upper_bound = int(loaded.payload["expected_candidate_count_upper_bound"])
+        if estimate.candidate_count > upper_bound:
+            results.append(
+                fail_result(
+                    GROUP,
+                    "exploratory_candidate_bound",
+                    "Exploratory estimate exceeds upper bound.",
+                    path=manifest,
+                )
+            )
+        if not _no_raw_dump(manifest):
+            results.append(fail_result(GROUP, "manifest_no_raw_dump", "Manifest appears to include raw data.", path=manifest))
+
     if not any(result.check_name == "manifest_fixture_dir_exists" and result.is_failure for result in results):
         results.append(pass_result(GROUP, "manifest_fixture_dir_exists", "Manifest fixture dirs exist."))
     if not any(result.check_name == "manifest_registry_sha" and result.is_failure for result in results):
@@ -98,6 +125,18 @@ def check_manifest_consistency(
         results.append(pass_result(GROUP, "manifest_flags_false", "Manifest search/CUDA/scoring flags are false."))
     if not any(result.check_name == "manifest_no_raw_dump" and result.is_failure for result in results):
         results.append(pass_result(GROUP, "manifest_no_raw_dump", "Manifests do not contain raw corpus dumps."))
+    if exploratory_manifests and not any(
+        result.check_name == "exploratory_manifest_valid" and result.is_failure for result in results
+    ):
+        results.append(pass_result(GROUP, "exploratory_manifests_valid", "Exploratory manifests validate."))
+    if exploratory_manifests and not any(
+        result.check_name == "exploratory_flags_false" and result.is_failure for result in results
+    ):
+        results.append(pass_result(GROUP, "exploratory_flags_false", "Exploratory manifests disable execution."))
+    if exploratory_manifests and not any(
+        result.check_name == "exploratory_candidate_bound" and result.is_failure for result in results
+    ):
+        results.append(pass_result(GROUP, "exploratory_candidate_bound", "Exploratory estimates fit bounds."))
     return results
 
 
@@ -105,3 +144,20 @@ def _check_manifest_flags(results: list[ConsistencyCheckResult], payload: dict[s
     for field in ["search_enabled", "cuda_enabled", "scoring_enabled", "canonical_corpus_active"]:
         if payload.get(field) is not False:
             results.append(fail_result(GROUP, "manifest_flags_false", f"{field} must be false.", path=path))
+
+
+def _check_exploratory_flags(results: list[ConsistencyCheckResult], payload: dict[str, Any], path: Path) -> None:
+    if payload.get("dry_run_only") is not True:
+        results.append(fail_result(GROUP, "exploratory_flags_false", "dry_run_only must be true.", path=path))
+    for field in [
+        "execution_enabled",
+        "search_execution_enabled",
+        "candidate_generation_enabled",
+        "scoring_enabled",
+        "cuda_enabled",
+        "canonical_corpus_active",
+        "page_boundaries_final",
+        "trusted_as_canonical",
+    ]:
+        if payload.get(field) is not False:
+            results.append(fail_result(GROUP, "exploratory_flags_false", f"{field} must be false.", path=path))
