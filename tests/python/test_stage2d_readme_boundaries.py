@@ -17,11 +17,13 @@ def _section(text: str, heading: str, next_heading: str) -> str:
 
 def test_readme_boundary_section_replaces_stage0a_non_goals() -> None:
     readme = _readme()
+    lines = readme.splitlines()
 
-    assert "## Non-goals for Stage 0A" not in readme
-    assert "## Non-goals" not in readme
-    assert "## Current boundaries and deferred work" in readme
-    assert "These are not permanent project exclusions unless they are marked as safety rules." in readme
+    assert "## Non-goals" not in lines
+    assert "## Non-goals for Stage 0A" not in lines
+    assert "## Current boundaries and deferred work" in lines
+    assert "These are not permanent project exclusions" in readme
+    assert "CUDA/search/scoring are deferred, not permanently excluded." in readme
 
 
 def test_readme_boundary_subsections_are_explicit() -> None:
@@ -51,6 +53,9 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "Unsolved-page search campaigns: not started." in section
     assert "Scoring campaigns: not started." in section
     assert "CUDA experiment campaigns: not started." in section
+    assert "Search/scoring/CUDA campaigns: not started." in readme
+    assert "Stage 2D: CI-gated schema/docs consistency and manifest/result-store hardening complete." in readme
+    assert "Stage 2E CPU exploratory experiment manifest scaffold and dry-run planner" in readme
 
 
 def test_readme_does_not_imply_deferred_work_is_permanently_excluded() -> None:
@@ -61,7 +66,20 @@ def test_readme_does_not_imply_deferred_work_is_permanently_excluded() -> None:
     assert "will never implement search" not in lower_section
     assert "will never implement scoring" not in lower_section
     assert "Deferred future work" in section
+    assert "CUDA/search/scoring are deferred, not permanently excluded." in section
     assert "CUDA kernels after CPU references and parity tests exist." in section
+
+
+def test_remote_readme_verifier_scripts_exist_and_do_not_require_gh() -> None:
+    ps1 = REPO / "scripts" / "ci" / "verify-remote-readme-status.ps1"
+    sh = REPO / "scripts" / "ci" / "verify-remote-readme-status.sh"
+
+    assert ps1.is_file()
+    assert sh.is_file()
+    assert "git show" in ps1.read_text(encoding="utf-8")
+    assert "git show" in sh.read_text(encoding="utf-8")
+    assert "gh " not in ps1.read_text(encoding="utf-8")
+    assert "gh " not in sh.read_text(encoding="utf-8")
 
 
 def test_readme_remains_multiline_markdown() -> None:

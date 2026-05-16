@@ -34,6 +34,17 @@ The scripts do not require `gh`. They fail if the fetched remote Git blobs are
 flattened, minified, missing required CI commands, or missing required Git
 attribute rules. Raw URL and API line count differences are reported separately.
 
+For README status and boundary wording, use:
+
+```powershell
+.\scripts\ci\verify-remote-readme-status.ps1 -Remote origin -Branch main -CheckRawUrl -CheckGitHubApi
+```
+
+This verifier also uses the fetched Git blob as the authoritative remote state.
+It fails if the README has a top-level `## Non-goals` heading or lacks the
+`## Current boundaries and deferred work` section. Raw URL mismatches are
+warnings when the fetched Git blob is correct.
+
 ## Expected Checks
 
 - Workflow blob has more than 25 lines.

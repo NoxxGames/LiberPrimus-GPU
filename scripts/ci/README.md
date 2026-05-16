@@ -10,6 +10,7 @@ These scripts reproduce the Stage 2C GitHub Actions checks locally.
 - `verify-remote-git-blobs.ps1` / `verify-remote-git-blobs.sh`: post-push Git blob validation for the workflow and `.gitattributes`; raw URL/API checks are diagnostic.
 - `verify-lock-hashes.ps1` / `verify-lock-hashes.sh`: `.gitattributes`, LF canonical JSON, SHA lock, and metadata validation.
 - `verify-public-docs-status.ps1` / `verify-public-docs-status.sh`: public README, STATUS, and ROADMAP status validation.
+- `verify-remote-readme-status.ps1` / `verify-remote-readme-status.sh`: remote README boundary wording validation using the fetched Git blob as the authority.
 
 They do not require raw transcript files, CUDA, GitHub credentials, secrets, or generated result-store outputs.
 

@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless they are marked as safety rules. They describe the current implementation boundary after Stage 2D and the work that must stay staged, reviewable, and reproducible before larger experiments begin.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 2D and the work that must stay staged, reviewable, and reproducible before larger experiments begin. CUDA/search/scoring are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
