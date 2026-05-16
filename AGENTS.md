@@ -239,4 +239,8 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not update `.sha256` files by hand without running lock validation.
 - Canonical profile and registry JSON files must be LF-normalized.
 - CI lock-hash failures must be fixed, not skipped.
+- Public README, STATUS, and ROADMAP must be updated whenever stage status changes.
+- CI must include tests preventing stale top-level public status.
+- Do not leave old next-milestone text in README after a stage completes.
+- Public-facing docs must be readable multi-line Markdown, not minified single-line blobs.
 - Push after successful commit remains required when remote is verified.

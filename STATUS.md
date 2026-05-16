@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2C GitHub Actions CI, local CI reproduction scripts, remote workflow formatting verification, and LF canonical lock-hash validation are complete.
+Stage 2C GitHub Actions CI, local CI reproduction scripts, remote workflow formatting verification, LF canonical lock-hash validation, and public documentation status checks are complete.
 
 ## Completed in Stage 0A
 
@@ -139,6 +139,8 @@ CI summary: workflow `.github/workflows/ci.yml`, Python 3.12 job with Ruff, pyte
 Policy summary: CI is raw-data-free, CUDA-free, secret-free, and does not upload generated corpus or result artifacts by default.
 
 Stage 2C-followup reformatted the workflow into readable multi-line YAML, added static YAML parsing and formatting checks, and added local workflow validation scripts.
+
+Stage 2C-followup-4 updated public README/STATUS/ROADMAP stage status and added tests that prevent stale top-level public status and next-milestone text.
 
 Developer log: `docs/development-logs/2026-05-16-stage-2c-github-actions-ci.md`.
 

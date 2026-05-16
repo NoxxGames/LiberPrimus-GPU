@@ -4,15 +4,17 @@
 
 ## Mission
 
-`liberprimus-gpu` is a research workbench for future CUDA-accelerated Liber Primus cryptanalysis experiments. Stage 0A creates the repository structure, documentation, build system, smoke tests, and toolchain checks needed before any serious corpus work or cipher implementation begins.
+`liberprimus-gpu` is a reproducible research workbench for conservative Liber Primus cryptanalysis experiments. The project keeps corpus provenance, solved baselines, transform metadata, run records, and CI gates ahead of any exploratory search or GPU acceleration work.
 
-## Non-goals for Stage 0A
+## Non-goals
 
 - No Liber Primus page is claimed solved.
-- No real corpus data is imported, transformed, or normalized.
-- No cipher-solving logic, search campaign, or benchmark campaign is implemented.
+- No unsolved-page search campaign is implemented.
+- No scoring campaign is implemented.
+- No CUDA experiment campaign is implemented.
+- No canonical corpus is active.
+- No page boundaries are finalized.
 - No generated experiment output is committed.
-- No final Gematria rune table is frozen.
 
 ## Architecture summary
 
@@ -20,7 +22,21 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 
 ## Current status
 
-Stage 2C GitHub Actions CI and local CI reproduction scripts are complete. Stage 2A provides the CPU transform registry and manifest-addressable solved-baseline runner, Stage 2B imports that solved-baseline run into generated JSONL and SQLite result stores, and Stage 2C validates Python tests, Ruff, schema/manifest checks, and CPU-only smoke commands in CI. Direct fixtures `4/0/0/0`, Atbash-family fixtures `3/0/0/0`, Vigenere fixtures `2/0/0/0`, and prime-stream fixtures `1/0/0/0` pass/fail/pending/skipped, for `10` total known solved baselines reproduced through the registry path. No canonical corpus is active, page boundaries remain reviewable, no unsolved page is claimed solved, and no CUDA/search/scoring campaign is implemented. Next milestone: Stage 2D CI-gated schema/docs consistency checks and manifest/result-store hardening before bounded CPU experiment scaffolding.
+Current status:
+
+- Stage 2A: CPU transform registry and manifest-addressable solved-baseline runner complete.
+- Stage 2B: JSONL/SQLite experiment result-store foundation complete.
+- Stage 2C: raw-data-free GitHub Actions CI complete and lock-hash hardened.
+- Known solved baselines: `10` passing through the registry/manifest path.
+- Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
+- Canonical corpus: inactive.
+- Page boundaries: reviewable.
+- Search/scoring/CUDA campaigns: not started.
+- Next: Stage 2D schema/docs consistency and manifest/result-store hardening.
+
+## CI status
+
+GitHub Actions runs at [NoxxGames/LiberPrimus-GPU Actions](https://github.com/NoxxGames/LiberPrimus-GPU/actions). CI is raw-data-free, CUDA-free, secret-free, and does not upload generated corpus or result artifacts by default. Real-source smoke checks remain local-only because ignored raw sources are not present on GitHub-hosted runners.
 
 ## Tutorials
 
@@ -143,7 +159,7 @@ Stage 0A requires smoke tests for the C++ skeleton and Python package. Future CU
 
 ## Next milestones
 
-Stage 2D should add CI-gated schema/docs consistency checks and harden manifest/result-store validation before any bounded CPU exploratory experiment scaffolding. Do not jump directly to CUDA or unsolved-page search campaigns.
+Stage 2D should add CI-gated schema/docs consistency checks and harden manifest/result-store validation before any bounded CPU exploratory experiment scaffolding. Stage 2E or Stage 3-prep should only follow after Stage 2D keeps documentation, manifests, schemas, and generated-output policy consistent. Do not jump directly to CUDA or unsolved-page search campaigns.
 
 ## Stage 1B Atbash-Family Fixtures
 

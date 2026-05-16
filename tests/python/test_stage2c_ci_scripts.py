@@ -18,6 +18,8 @@ def test_ci_scripts_exist() -> None:
         "validate-workflow-static.sh",
         "verify-lock-hashes.ps1",
         "verify-lock-hashes.sh",
+        "verify-public-docs-status.ps1",
+        "verify-public-docs-status.sh",
         "verify-remote-workflow.ps1",
         "verify-remote-workflow.sh",
     ]:
@@ -30,6 +32,7 @@ def test_shell_scripts_use_strict_mode() -> None:
         "run-schema-manifest-checks.sh",
         "validate-workflow-static.sh",
         "verify-lock-hashes.sh",
+        "verify-public-docs-status.sh",
         "verify-remote-workflow.sh",
     ]:
         text = (SCRIPT_DIR / name).read_text(encoding="utf-8")
@@ -42,6 +45,7 @@ def test_powershell_scripts_use_strict_mode() -> None:
         "run-schema-manifest-checks.ps1",
         "validate-workflow-static.ps1",
         "verify-lock-hashes.ps1",
+        "verify-public-docs-status.ps1",
         "verify-remote-workflow.ps1",
     ]:
         text = (SCRIPT_DIR / name).read_text(encoding="utf-8")
@@ -95,3 +99,9 @@ def test_lock_hash_scripts_run_repair_check() -> None:
         text = (SCRIPT_DIR / name).read_text(encoding="utf-8")
         assert "repair-canonical-json-locks.py --check" in text
         assert ".gitattributes" in text
+
+
+def test_public_docs_status_scripts_run_status_test() -> None:
+    for name in ["verify-public-docs-status.ps1", "verify-public-docs-status.sh"]:
+        text = (SCRIPT_DIR / name).read_text(encoding="utf-8")
+        assert "test_stage2c_public_docs_status.py" in text
