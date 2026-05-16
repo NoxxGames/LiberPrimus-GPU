@@ -51,6 +51,6 @@ def test_status_and_roadmap_are_current() -> None:
     assert "Stage 2B added the experiment result-store foundation" in status
     assert "Stage 2C added GitHub Actions CI" in status
     assert "Stage 2D" in status
-    assert "## Phase 2D - CI-gated schema and docs hardening" in roadmap
+    assert "## Stage 2D - CI-gated schema and docs hardening" in roadmap
     assert "Stage 2A should build" not in roadmap
     assert "Stage 2B is the next milestone" not in roadmap
