@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2C GitHub Actions CI, local CI reproduction scripts, remote workflow formatting verification, LF canonical lock-hash validation, and public documentation status checks are complete.
+Stage 2C GitHub Actions CI, local CI reproduction scripts, remote workflow formatting verification, LF canonical lock-hash validation, public documentation status checks, and remote Git blob consistency verification are complete.
 
 ## Completed in Stage 0A
 

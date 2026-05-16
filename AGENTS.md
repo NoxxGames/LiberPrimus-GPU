@@ -243,4 +243,7 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - CI must include tests preventing stale top-level public status.
 - Do not leave old next-milestone text in README after a stage completes.
 - Public-facing docs must be readable multi-line Markdown, not minified single-line blobs.
+- After infrastructure changes, verify local files, `origin/main` Git blobs, and optionally GitHub API/raw URL views.
+- Do not rely solely on `raw.githubusercontent.com` for remote truth; fetched Git blobs are authoritative.
+- Run the remote Git blob verifier after CI workflow or `.gitattributes` changes.
 - Push after successful commit remains required when remote is verified.

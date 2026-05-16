@@ -10,7 +10,9 @@ The workflow lives at `.github/workflows/ci.yml` and runs on pushes to `main` an
 
 Stage 2C-followup keeps this file as readable multi-line YAML. Static tests reject flattened or minified workflow formatting so review diffs remain useful.
 
-Stage 2C-followup-2 adds a raw GitHub URL verifier so maintainers can confirm the pushed workflow is also readable multi-line YAML after GitHub serves it from `main`.
+Stage 2C-followup-2 adds a raw GitHub URL verifier so maintainers can inspect the public workflow view after GitHub serves it from `main`.
+
+Stage 2C-followup-5 adds remote Git blob verification with `git fetch` and `git show`. The Git blob check is the authoritative remote check when raw URLs appear stale or cached.
 
 ## Python CI Job
 
@@ -54,4 +56,4 @@ The default workflow does not require CUDA or GPU runners. Future CUDA CI requir
 
 If CI fails locally, run `scripts/ci/run-python-ci.ps1`, `scripts/ci/run-schema-manifest-checks.ps1`, and `scripts/ci/validate-workflow-static.ps1` on Windows, or the `.sh` equivalents on Linux. Real-source conditional tests should skip cleanly when raw files are absent.
 
-After pushing workflow changes, run `scripts/ci/verify-remote-workflow.ps1` or `scripts/ci/verify-remote-workflow.sh` to verify the public raw workflow. This check uses `raw.githubusercontent.com` and does not require `gh`.
+After pushing workflow changes, run `scripts/ci/verify-remote-git-blobs.ps1 -CheckRawUrl -CheckGitHubApi` or the `.sh` equivalent first. This verifies the fetched remote Git blob and reports raw URL/API line counts without requiring `gh`. Use `verify-remote-workflow` only as a public raw URL diagnostic.

@@ -92,6 +92,8 @@ Stage 2C-followup-3 repaired Git attributes, normalized canonical profile/regist
 
 Stage 2C-followup-4 updated public README/STATUS/ROADMAP status text and added CI-covered tests to prevent stale top-level public status and next-milestone drift.
 
+Stage 2C-followup-5 added remote Git blob verification for the CI workflow and `.gitattributes`, documenting that fetched Git blobs and GitHub API contents outrank potentially cached raw URL views.
+
 ## Stage 2D - CI-gated schema and docs hardening
 
 Add schema/docs consistency checks and harden manifest/result-store validation before first bounded CPU exploratory experiment scaffolding.

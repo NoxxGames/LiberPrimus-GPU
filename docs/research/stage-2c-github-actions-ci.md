@@ -29,11 +29,13 @@ Stage 2C-followup-3 fixed the Linux CI lock mismatch by repairing `.gitattribute
 
 Stage 2C-followup-4 updated public README/STATUS/ROADMAP status text and added tests so stale top-level public status cannot silently return.
 
+Stage 2C-followup-5 audited local files, fetched `origin/main` Git blobs, GitHub API contents, and raw GitHub URLs for the CI workflow and `.gitattributes`. The authoritative remote blobs are readable multi-line files, so no workflow or `.gitattributes` rewrite was needed. New remote blob verifier scripts use `git fetch` and `git show` as the primary remote check and treat raw URL differences as lower-trust cache diagnostics.
+
 ## Local Scripts
 
 Local reproduction scripts live under `scripts/ci/` for PowerShell and shell users. They split Python checks from schema/manifest validation so contributors can rerun targeted checks.
 
-Stage 2C-followup adds `validate-workflow-static` scripts for PowerShell and shell users. Stage 2C-followup-2 adds `verify-remote-workflow` scripts that fetch the public raw workflow URL and do not require `gh`. Stage 2C-followup-3 adds canonical lock verification scripts. Stage 2C-followup-4 adds public docs status verification scripts.
+Stage 2C-followup adds `validate-workflow-static` scripts for PowerShell and shell users. Stage 2C-followup-2 adds `verify-remote-workflow` scripts that fetch the public raw workflow URL and do not require `gh`. Stage 2C-followup-3 adds canonical lock verification scripts. Stage 2C-followup-4 adds public docs status verification scripts. Stage 2C-followup-5 adds `verify-remote-git-blobs` scripts that check fetched remote blobs without requiring `gh`.
 
 ## Validation Result
 

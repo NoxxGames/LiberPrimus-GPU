@@ -43,6 +43,14 @@ bash scripts/ci/verify-lock-hashes.sh
 
 The verification checks `.gitattributes`, canonical JSON line endings, raw SHA-256 locks, and metadata SHA fields.
 
+For remote verification after a push, run the remote Git blob verifier:
+
+```powershell
+.\scripts\ci\verify-remote-git-blobs.ps1 -Remote origin -Branch main -CheckRawUrl -CheckGitHubApi
+```
+
+This checks the fetched `origin/main` `.gitattributes` blob before considering raw URL diagnostics.
+
 ## Repair
 
 To repair canonical profile/registry locks:
