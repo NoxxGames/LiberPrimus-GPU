@@ -41,6 +41,20 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 - Every alignment-derived record must include source IDs, source SHA-256 hashes, confidence labels, and `trusted_as_canonical=false`.
 - Every ingestion or alignment stage must create or update a developer log.
 - Speed optimizations must not weaken provenance, raw preservation, or CPU-reference correctness.
+- After a successful commit, push to the verified GitHub remote unless the user explicitly says not to push.
+- Never push if validation failed.
+- Never push if raw data or generated outputs are staged.
+- Never push if the GitHub remote cannot be verified.
+- Never force-push without explicit user instruction.
+- Never change repository visibility without explicit user instruction.
+- Do not create duplicate GitHub issues; check existing issues first.
+- Wiki pages are public documentation mirrors; repository tutorials and docs remain the source of truth.
+- Tutorials are public-facing and must not include raw corpus dumps.
+- GitHub wiki pages are mirrors; repo tutorials/docs are source of truth.
+- GitHub issues created by Codex must be idempotent and must not duplicate existing issue titles.
+- Codex must create or update a developer log for GitHub/project-management stages.
+- Codex must not change GitHub repository visibility.
+- Codex must not enable public wiki editing without explicit instruction.
 
 ## Current stage
 

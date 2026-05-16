@@ -1,0 +1,19 @@
+[
+  {"name": "stage-0d", "description": "Stage 0D transcript alignment and policy work", "color": "7057ff"},
+  {"name": "stage-0e", "description": "Stage 0E Gematria and separator freeze work", "color": "5319e7"},
+  {"name": "stage-1", "description": "Stage 1 canonical corpus and reproduction work", "color": "0052cc"},
+  {"name": "alignment", "description": "Transcript or source alignment", "color": "1d76db"},
+  {"name": "corpus", "description": "Corpus policy, locks, or normalized records", "color": "0e8a16"},
+  {"name": "data-provenance", "description": "Source provenance, licensing, and locks", "color": "006b75"},
+  {"name": "documentation", "description": "Documentation updates", "color": "0075ca"},
+  {"name": "tutorial", "description": "Tutorial and onboarding content", "color": "c5def5"},
+  {"name": "github", "description": "GitHub issues, wiki, CI, or repository workflow", "color": "bfd4f2"},
+  {"name": "testing", "description": "Tests and validation", "color": "fbca04"},
+  {"name": "cuda", "description": "CUDA planning or implementation", "color": "f29513"},
+  {"name": "performance", "description": "Benchmarking or performance metadata", "color": "d93f0b"},
+  {"name": "blocked", "description": "Blocked by unresolved dependency", "color": "b60205"},
+  {"name": "good-first-issue", "description": "Good first contribution", "color": "7057ff"},
+  {"name": "needs-human-review", "description": "Requires human review before promotion", "color": "d4c5f9"},
+  {"name": "non-canonical", "description": "Non-canonical source or generated hint", "color": "e4e669"},
+  {"name": "safety", "description": "Raw-data, provenance, or false-positive safety", "color": "b60205"}
+]

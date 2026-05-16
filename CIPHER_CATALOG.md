@@ -50,6 +50,8 @@ Prime values from the local Pastebin source must be converted to decimal indices
 
 Transcript alignment records may contain decimal-index views for comparison, but cipher transforms must still wait for a frozen Gematria profile and canonical transcript policy.
 
+Public docs must not describe planned or placeholder cipher modules as implemented solver functionality.
+
 The workbook supports future tests for a prime-minus-one stream, including p56 hint checks. This is not a canonical corpus claim.
 
 ## Prime-gap stream

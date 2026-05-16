@@ -1,0 +1,22 @@
+name: Research task
+description: Track non-solving research, policy, or validation work.
+title: "Research: "
+labels: ["needs-human-review", "non-canonical"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+      description: State the question without implying a solve.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and locks
+      description: Link source metadata and locks. Do not include raw data dumps.
+  - type: textarea
+    id: output
+    attributes:
+      label: Expected output
+      description: Describe docs, tests, or generated ignored outputs.

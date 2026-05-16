@@ -31,3 +31,7 @@ Default test commands must remain short and safe.
 ## Stage 0D lightweight timing policy
 
 Stage 0D records elapsed milliseconds for parsing, signature building, matching, boundary inference, and glyph-variant summarization. These values are for regression awareness only and are not benchmark claims. No GPU benchmark is required for transcript alignment.
+
+## Public hardware tutorial policy
+
+Public hardware tutorials must not imply speed claims without benchmark records, hardware metadata, source locks, and reproducible commands.

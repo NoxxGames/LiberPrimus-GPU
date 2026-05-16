@@ -61,3 +61,7 @@ Stage 0C parser tests are Python-only. They verify that prime values are convert
 ## Stage 0D alignment tests
 
 Stage 0D parser and alignment tests are Python-only. They assert no canonical boundary activation, no canonical trust flag, raw glyph preservation, and timing metadata presence.
+
+## Stage 0D-P documentation and GitHub checks
+
+Stage 0D-P validates tutorial, issue seed, wiki source, and GitHub script existence. GitHub helper scripts support dry runs before mutating labels, issues, or wiki pages.

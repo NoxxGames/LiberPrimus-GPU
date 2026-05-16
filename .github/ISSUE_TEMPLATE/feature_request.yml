@@ -1,0 +1,22 @@
+name: Feature request
+description: Propose scoped implementation work.
+title: "Feature: "
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What should be added?
+    validations:
+      required: true
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals
+      description: State what this request must not do.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List validation commands, docs, tests, and provenance constraints.

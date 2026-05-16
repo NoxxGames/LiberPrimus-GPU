@@ -14,6 +14,8 @@ Local-Pastebin-derived records may be used for parser validation and alignment h
 
 Stage 0D alignment outputs may inform future corpus selection and transcript-version policy. They cannot be used as direct solve evidence, and tentative boundary candidates require later review.
 
+Public tutorial examples must use smoke commands and summaries, not solve claims or generated candidate plaintext.
+
 ## Required manifest fields
 
 Future manifests must include experiment ID, stage, hypothesis, corpus slice, transform chain, scorers, hardware requirements, success criteria, false-positive controls, output policy, and notes.

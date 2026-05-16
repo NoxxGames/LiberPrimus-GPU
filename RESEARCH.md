@@ -61,3 +61,7 @@ The Stage 0C parser treats the local Pastebin TXT as a non-canonical legacy LP2 
 ## Stage 0D transcript alignment status
 
 The rtkd transcript and scream314 reference are hash-locked, but no canonical corpus is active. Tentative page-boundary candidates require later review.
+
+## Stage 0D-P public documentation status
+
+Public docs should distinguish established facts, hypotheses, and generated inferences. Stage 0D-followup remains needed before corpus freeze because many transcript-alignment gaps are still unresolved.

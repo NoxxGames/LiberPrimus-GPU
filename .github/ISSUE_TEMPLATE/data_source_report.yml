@@ -1,0 +1,25 @@
+name: Data source report
+description: Propose or document a source without committing raw data.
+title: "Data source: "
+labels: ["data-provenance", "safety"]
+body:
+  - type: textarea
+    id: source
+    attributes:
+      label: Source description
+      description: Provide URL, license notes, and provenance. Do not paste raw corpus content.
+    validations:
+      required: true
+  - type: textarea
+    id: handling
+    attributes:
+      label: Handling policy
+      description: State where raw files would live and what lock metadata is required.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety checks
+      options:
+        - label: No raw data is attached.
+        - label: No solve claim is made.
+        - label: Canonical status is explicitly stated.

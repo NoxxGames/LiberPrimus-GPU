@@ -1,0 +1,22 @@
+name: Documentation task
+description: Improve tutorials, docs, wiki pages, or contributor guidance.
+title: "Docs: "
+labels: ["documentation", "tutorial"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What should the documentation explain?
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Audience
+      description: Maintainers, contributors, users, or researchers.
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: Do not include raw data, generated dumps, or unsupported solve claims.

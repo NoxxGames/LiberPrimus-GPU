@@ -22,6 +22,10 @@ Align legacy Pastebin line-pairs with primary transcript/page-image sources and 
 
 Stage 0D transcript alignment and policy scaffolding is completed, with significant unmatched regions documented.
 
+## Phase 0D-P - Public docs, wiki, and issue bootstrap
+
+Add public tutorials, GitHub issue templates, issue seeds, wiki source pages, project-management scripts, and push workflow documentation.
+
 ## Phase 0D-followup - Resolve transcript-alignment gaps
 
 Resolve transcript-alignment gaps, ambiguous page-boundary candidates, and glyph-variant evidence before corpus freeze.

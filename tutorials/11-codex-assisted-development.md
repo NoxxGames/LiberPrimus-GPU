@@ -1,0 +1,21 @@
+# Codex-Assisted Development
+
+## AGENTS.md
+
+`AGENTS.md` tells Codex the non-negotiable project rules: no solve claims, no raw-data edits, no generated-output commits, explicit staging, tests, logs, and GitHub push policy.
+
+## Safe Prompts
+
+Ask Codex for scoped stages. Include non-goals, stop conditions, validation commands, and staging rules.
+
+## Review Generated Changes
+
+Review code, docs, tests, Git status, and generated files before committing. Treat terminal output as a check, not as evidence.
+
+## Avoid Raw-Data Commits
+
+Before any commit, check staged files for `data/raw/`, generated JSONL, `.venv`, build outputs, and wiki worktrees.
+
+## Require Tests And Logs
+
+Each ingestion, alignment, or project-management stage should update a developer log and run focused tests or dry runs.

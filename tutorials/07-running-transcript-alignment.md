@@ -1,0 +1,27 @@
+# Running Transcript Alignment
+
+## rtkd Transcript Source
+
+Stage 0D uses the rtkd master transcript as a proposed primary transcript candidate. It is hash-locked but not active canonical corpus.
+
+## Current Alignment Status
+
+The real Stage 0D run produced 185 alignment records but many no-match records remain. Stage 0D-followup is needed before corpus freeze.
+
+## Confidence Labels
+
+Labels are `exact`, `high`, `medium`, `low`, and `none`. Boundary candidates remain tentative even when confidence is high.
+
+## Smoke Command
+
+```powershell
+libreprimus corpus-alignment stage0d-smoke `
+  --pastebin <repo-root>\data\raw\legacy-pastebins\58-Pages-In-Runes-With-Prime-Values-Pastebin.txt `
+  --transcript <repo-root>\data\raw\transcripts\rtkd\liber-primus__transcription--master.txt `
+  --out-dir <repo-root>\data\normalized\alignment `
+  --allow-warnings
+```
+
+## Why Boundaries Are Tentative
+
+Source markers, anchors, and alignment neighborhoods need review against canonical transcript policy before becoming corpus metadata.

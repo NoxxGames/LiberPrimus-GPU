@@ -8,6 +8,8 @@ Contributions should improve reproducibility, documentation, tests, or clearly s
 
 Use the Windows scripts in `scripts/` or equivalent CMake/Python commands from the README.
 
+See `tutorials/` for user-facing setup and workflow guides.
+
 ## Coding standards
 
 Follow existing module boundaries and keep behavior small, testable, and documented.
@@ -20,9 +22,19 @@ Run CTest and pytest when the relevant toolchains are available. CUDA changes re
 
 Update policy documents when behavior, data handling, or experiment rules change.
 
+Tutorial and wiki changes must not include raw corpus dumps, generated JSONL records, or unsupported solve claims. Repository docs and tutorials are the source of truth; wiki pages are mirrors.
+
 ## Data rules
 
-Do not modify `data/raw/` in place. Do not commit raw corpus files in Stage 0A.
+Do not modify `data/raw/` in place. Do not commit raw corpus files, local workbooks, local Pastebin TXT, raw transcripts, or generated normalized outputs.
+
+## Issue filing guidance
+
+Useful issues include current status, scope, non-goals, deliverables, acceptance criteria, safety/provenance rules, dependencies, and links to local docs. Do not attach raw data.
+
+## Pull request guidance
+
+Pull requests should state validation commands, changed docs, raw/generated exclusions, and related issues. Keep work scoped and avoid combining project-management changes with corpus or solver changes.
 
 ## Experiment result rules
 

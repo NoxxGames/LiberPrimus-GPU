@@ -63,3 +63,7 @@ Legacy workbook lock files live under `data/locks/legacy-workbooks/`. The raw wo
 Legacy Pastebin lock files live under `data/locks/legacy-pastebins/`. The raw local TXT is ignored and hash-locked; only checksum and metadata files are committed.
 
 Transcript lock files live under `data/locks/transcripts/`. Raw transcript files are ignored and hash-locked; only checksum and metadata files are committed.
+
+## Public tutorial policy
+
+Tutorials should teach local acquisition and lock workflows without embedding raw data. Public repositories should prefer acquisition instructions, metadata locks, and provenance notes over committed raw files.

@@ -34,6 +34,12 @@ Real-source smoke summary: rtkd physical lines `931`, Pastebin line pairs `185`,
 
 Developer log: `docs/development-logs/2026-05-16-stage-0d-transcript-alignment-policy.md`.
 
+## Completed in Stage 0D-P
+
+Public-facing tutorials were added under `tutorials/`. GitHub issue templates, issue seed files, label definitions, wiki source pages, and helper scripts were added under `.github/`, `docs/github/`, and `scripts/github/`.
+
+AGENTS.md now documents push, issue idempotency, and wiki mirror policy. Stage 0D-followup remains the next technical stage.
+
 ## Toolchain status
 
 Use `scripts/verify-toolchain.ps1` for the current host report. Stage 0A supports CPU-only builds and optional CUDA smoke builds.

@@ -18,7 +18,23 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 
 ## Current status
 
-Stage 0A bootstrap scaffold. The C++ and Python entry points only prove that the repository builds and that the package imports. CUDA is optional and limited to a guarded smoke kernel.
+Stage 0D-P public documentation and GitHub project bootstrap. The repository has tutorials, non-canonical source ingestion tools, transcript-alignment scaffolding, and GitHub issue/wiki support. No canonical corpus is active and no unsolved page is claimed solved.
+
+## Tutorials
+
+Start with `tutorials/README.md`. The tutorials cover Windows and Linux setup, local data handling, current CLI tools, transcript alignment, hardware expectations, and Codex-assisted development.
+
+## GitHub wiki
+
+Wiki source pages live under `docs/github/wiki-pages/`. The repository tutorials and docs are the source of truth; the GitHub wiki is a public mirror and must not contain raw data, generated dumps, or solve claims.
+
+## Issues and backlog
+
+Issue templates live under `.github/ISSUE_TEMPLATE/`. Seed issues for future work live under `docs/github/issues/` and can be created idempotently with `scripts/github/create-issues.ps1`.
+
+## Public-readiness status
+
+The project is public-readable for documentation and scaffold review. It is not ready for unsolved-page cryptanalysis campaigns, canonical corpus release, or GPU acceleration claims.
 
 ## Quick start on Windows
 
@@ -82,7 +98,9 @@ The Python package is an orchestration shell only. It currently exposes `librepr
 - `data/`: immutable raw-data placeholders and future corpus areas.
 - `experiments/`: manifest-driven experiment policy and smoke manifest.
 - `docs/`: methodology, CUDA, corpus, scoring, and Codex notes.
-- `scripts/`: Windows verification, bootstrap, configure, and cleanup scripts.
+- `scripts/`: Windows verification, bootstrap, configure, cleanup, and GitHub helper scripts.
+- `tutorials/`: public user-facing tutorials.
+- `.github/`: issue templates and pull request template.
 
 ## Data policy
 
