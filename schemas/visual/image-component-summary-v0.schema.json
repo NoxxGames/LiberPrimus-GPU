@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/image-component-summary-v0.schema.json",
+  "title": "Image Component Summary v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "image_id",
+    "threshold",
+    "component_count",
+    "largest_components",
+    "trusted_as_canonical",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "image_component_summary" },
+    "image_id": { "type": "string", "minLength": 1 },
+    "threshold": { "enum": [32, 64, 96, 128, 160, 192, 224] },
+    "component_count": { "type": "integer", "minimum": 0 },
+    "largest_components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["area", "area_ratio", "bbox"],
+        "properties": {
+          "area": { "type": "integer", "minimum": 1 },
+          "area_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+          "bbox": {
+            "type": "array",
+            "items": { "type": "integer" },
+            "minItems": 4,
+            "maxItems": 4
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "component_analysis_width": { "type": "integer", "minimum": 1 },
+    "component_analysis_height": { "type": "integer", "minimum": 1 },
+    "component_connectivity": { "enum": ["4-connected"] },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": false
+}

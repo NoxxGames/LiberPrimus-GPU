@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3L and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3M and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -23,7 +23,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Page boundaries: reviewable.
 - Broad unsolved-page search campaigns: not started.
 - Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, and Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only.
-- Visual/image-derived observations: registry-only; Stage 3K records source locks and reviewable observations but does not execute image-derived text experiments.
+- Visual/image-derived observations: registry and deterministic feature summaries only; Stage 3K records source locks and reviewable observations, and Stage 3M records deterministic local image features. No image-derived text experiments are executed.
 - Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, with exact byte-string logging and no fuzzy or partial hash claims.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
@@ -33,7 +33,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 3M deterministic image/audio/web analysis CLIs or Onion7 numeric seed registry after Stage 3L.
+- Stage 3N OutGuess regression harness or archived HTML/resource importer after Stage 3M.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -66,6 +66,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Bounded Stage 3J Mersenne/perfect-number stream probe for the finite declared exponent sequence and 192 candidates.
 - Stage 3K historical archive/source-lock, local image metadata, visual numeric observation, and cookie/hash artefact registry.
 - Stage 3L bounded SHA-256 cookie-hash preimage packs for the two archived 2013 cookie artefacts.
+- Stage 3M deterministic local image-analysis CLI and visual-feature summaries.
 
 ## Architecture summary
 
@@ -97,14 +98,15 @@ Current status:
 - Stage 3J: Mersenne/perfect-number tiny stream probe complete.
 - Stage 3K: archive and visual observation registry complete.
 - Stage 3L: bounded cookie-hash preimage packs complete.
+- Stage 3M: deterministic local image analysis complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad search/scoring/CUDA campaigns: not started.
 - Latest bounded hash review: Stage 3L tested `1809` deduplicated SHA-256 candidate byte strings against the two archived cookie/hash targets for `3618` exact comparisons and found `0` exact matches; no solve claim.
-- Latest registry stage: Stage 3K records `12` source/archive records, local Liber Primus page image locks when local images are present, `5` reviewable visual numeric observations, and `2` cookie/hash artefact records. No image-derived searches are executed.
-- Next: Stage 3M deterministic image/audio/web analysis CLIs or Onion7 numeric seed registry.
+- Latest image-analysis stage: Stage 3M analysed `58` ignored local page images, producing `406` component records, `58` symmetry records, `464` bitplane records, and `71` review-only feature candidates in ignored outputs. No OCR, AI/ML interpretation, image-derived search, or solve claim is made.
+- Next: Stage 3N OutGuess regression harness or archived HTML/resource importer.
 
 ## CI status
 

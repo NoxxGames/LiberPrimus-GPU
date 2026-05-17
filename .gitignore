@@ -169,6 +169,14 @@ experiments/results/hash-preimage/**
 !experiments/results/hash-preimage/stage3l/
 !experiments/results/hash-preimage/stage3l/.gitkeep
 
+# Generated deterministic image-analysis outputs
+experiments/results/image-analysis/**
+!experiments/results/image-analysis/
+!experiments/results/image-analysis/README.md
+!experiments/results/image-analysis/.gitkeep
+!experiments/results/image-analysis/stage3m/
+!experiments/results/image-analysis/stage3m/.gitkeep
+
 # Generated alignment outputs
 data/normalized/alignment/**
 !data/normalized/alignment/

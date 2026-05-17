@@ -127,3 +127,7 @@ For archive and visual observation registry work, treat archive/image observatio
 ## Stage 3L Guardrails
 
 For cookie/hash preimage work, keep candidate packs explicit, log exact byte strings, compare full SHA-256 digests only, and avoid fuzzy matching, broad cracking, external dictionaries, GPU/hashcat, live Tor, and solve claims.
+
+## Stage 3M Guardrails
+
+For deterministic image-analysis work, keep the process mechanical and local: extract statistics, thresholds, components, symmetry, bit-plane summaries, and review-only feature flags. Do not use OCR, AI/ML image interpretation, OutGuess extraction, image-derived cipher execution, raw image commits, generated output commits, CUDA, or solve claims.

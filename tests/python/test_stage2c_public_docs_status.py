@@ -51,7 +51,7 @@ def test_readme_current_status_is_current() -> None:
     assert "Stage 3I" in current_status
     assert "Stage 3J" in current_status
     assert "Stage 3K" in current_status
-    assert "Stage 3L" in current_status
+    assert "Stage 3M" in current_status
 
 
 def test_readme_top_level_status_is_not_stale() -> None:
@@ -86,7 +86,7 @@ def test_status_and_roadmap_are_current() -> None:
     assert "Stage 3I" in status
     assert "Stage 3J" in status
     assert "Stage 3K" in status
-    assert "Stage 3L" in status
+    assert "Stage 3M" in status
     assert "## Stage 2D - CI-gated schema and docs hardening" in roadmap
     assert "## Stage 2E - CPU experiment manifest scaffold and dry-run planner" in roadmap
     assert "## Stage 2F - Synthetic and solved-fixture CPU execution harness design" in roadmap
@@ -107,5 +107,6 @@ def test_status_and_roadmap_are_current() -> None:
     assert "## Stage 3K - Visual numeric observation registry or archive-image source audit" in roadmap
     assert "## Stage 3L - Bounded cookie-hash preimage packs" in roadmap
     assert "## Stage 3M - Deterministic image/audio/web analysis CLIs or Onion7 numeric seed registry" in roadmap
+    assert "## Stage 3N - OutGuess regression harness or archived HTML/resource importer" in roadmap
     assert "Stage 2A should build" not in roadmap
     assert "Stage 2B is the next milestone" not in roadmap

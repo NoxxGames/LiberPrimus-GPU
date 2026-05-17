@@ -26,6 +26,9 @@ echo "Validating Stage 3K archive and observation registries"
 echo "Validating Stage 3L hash preimage candidate packs"
 "$python_bin" -m libreprimus.cli hash-preimage validate-packs --pack-dir data/observations/web/hash-preimage-candidate-packs
 
+echo "Validating Stage 3M deterministic image-analysis raw-data-free mode"
+"$python_bin" -m libreprimus.cli image-analysis validate-results --results-dir "$tmp_dir/stage3m-image-analysis" --allow-missing
+
 echo "Validating Stage 2E exploratory manifests"
 "$python_bin" -m libreprimus.cli experiment validate-exploratory --manifest experiments/manifests/exploratory/stage2e-caesar-preview-dry-run.yaml
 "$python_bin" -m libreprimus.cli experiment validate-exploratory --manifest experiments/manifests/exploratory/stage2e-affine-preview-dry-run.yaml

@@ -126,6 +126,10 @@ Stage 3K is registry work only. Deterministic image metadata extraction is light
 
 Stage 3L is CPU-only SHA-256 exact matching over small committed candidate packs. It does not use CUDA, GPU hash cracking, hashcat, cloud services, or external dictionaries.
 
+## Stage 3M Image Analysis Scope
+
+Stage 3M is deterministic local CPU image-feature extraction. It uses no CUDA, GPU acceleration, OCR, AI/ML image interpretation, OutGuess, audio tooling, live web acquisition, or benchmark claims. Generated image-analysis records remain ignored.
+
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

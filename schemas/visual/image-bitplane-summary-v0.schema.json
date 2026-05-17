@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/image-bitplane-summary-v0.schema.json",
+  "title": "Image Bitplane Summary v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "image_id",
+    "bitplane",
+    "one_ratio",
+    "zero_ratio",
+    "trusted_as_canonical",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "image_bitplane_summary" },
+    "image_id": { "type": "string", "minLength": 1 },
+    "bitplane": { "type": "integer", "minimum": 0, "maximum": 7 },
+    "one_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "zero_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": false
+}

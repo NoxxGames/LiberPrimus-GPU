@@ -20,6 +20,7 @@ dependencies = [
   "jsonschema",
   "orjson",
   "openpyxl>=3.1,<4",
+  "pillow>=10,<12",
 ]
 
 [project.optional-dependencies]

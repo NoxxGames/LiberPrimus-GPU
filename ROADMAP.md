@@ -208,7 +208,11 @@ Stage 3L runs explicit SHA-256-only literal and numeric/base29 candidate packs a
 
 ## Stage 3M - Deterministic image/audio/web analysis CLIs or Onion7 numeric seed registry
 
-After Stage 3L, add deterministic image/audio/web analysis CLIs or an Onion7 numeric seed registry. Any image-derived numeric seed must first pass observation review and policy checks. Do not jump to live Tor or CUDA.
+Stage 3M adds deterministic local Liber Primus page-image analysis CLIs and visual-feature summaries. It records grayscale statistics, threshold summaries, 4-connected component summaries, symmetry metrics, bit-plane densities, and review-only feature candidates. Generated outputs remain ignored, no OCR or AI/ML interpretation is used, and no image-derived search or solve claim is made.
+
+## Stage 3N - OutGuess regression harness or archived HTML/resource importer
+
+After Stage 3M, add an OutGuess regression harness or archived HTML/resource importer. If image-analysis feature IDs look useful, route them through visual feature review and seed promotion before any bounded execution. Do not jump to CUDA.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

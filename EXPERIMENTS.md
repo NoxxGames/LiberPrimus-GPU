@@ -355,3 +355,20 @@ The candidate packs are explicit and committed under `data/observations/web/hash
 The run tests `1809` deduplicated candidate byte strings against `2` targets for `3618` exact comparisons. It finds `0` exact SHA-256 matches.
 
 Generated outputs remain ignored under `experiments/results/hash-preimage/stage3l/`. Stage 3L does not use external dictionaries, fuzzy matching, partial matching, hashcat, GPU, live Tor, or solve claims.
+
+## Stage 3M Deterministic Image Analysis
+
+Stage 3M analyses local ignored Liber Primus page images with deterministic image features:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli image-analysis analyze-local-pages `
+  --source-dir third_party/LiberPrimusPages `
+  --image-locks data/locks/third-party/liber-primus-pages/liber-primus-page-image-locks-v0.jsonl `
+  --out-dir experiments/results/image-analysis/stage3m `
+  --allow-missing `
+  --allow-warnings
+```
+
+The run analysed `58` local images and generated `406` component records, `58` symmetry records, `464` bitplane records, and `71` visual feature candidates.
+
+Generated outputs remain ignored under `experiments/results/image-analysis/stage3m/`. Stage 3M does not run OCR, AI/ML interpretation, OutGuess extraction, audio analysis, image-derived cipher execution, CUDA, or solve claims.

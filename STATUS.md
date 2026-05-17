@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3L bounded cookie-hash preimage packs are complete.
+Stage 3M deterministic local image analysis is complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, and Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, and Stage 3M records deterministic local image features only.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 
@@ -165,6 +165,16 @@ Run summary: candidate packs `2`, generated candidates before deduplication `196
 Stage 3L does not run live Tor crawling, use external dictionaries, use hashcat/GPU/CUDA, perform fuzzy or partial hash matching, activate the canonical corpus, finalize page boundaries, or claim a solve.
 
 Developer log: `docs/development-logs/2026-05-16-stage-3l-cookie-hash-preimage-packs.md`.
+
+## Completed in Stage 3M
+
+Stage 3M added deterministic local image-analysis tooling for ignored Liber Primus page images.
+
+Run summary: local images analysed `58`, threshold records `406`, component records `406`, symmetry records `58`, bitplane records `464`, visual feature candidates `71`, high-symmetry candidates `7`, sparse-dot-like candidates `2`, high-noise candidates `0`.
+
+Stage 3M does not run OCR, AI/ML image interpretation, steganography extraction, OutGuess, audio/spectrogram work, live web/Tor acquisition, image-derived cipher experiments, activate the canonical corpus, finalize page boundaries, or claim a solve.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3m-deterministic-image-analysis.md`.
 
 ## Completed in Stage 2D
 

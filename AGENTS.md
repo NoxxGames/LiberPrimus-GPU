@@ -437,3 +437,12 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - SHA-256 exact match is a preimage candidate only, not a solve claim.
 - Do not run broad hash cracking without explicit instruction.
 - Do not use GPU, CUDA, hashcat, cloud, live Tor, or external dictionaries unless explicitly requested and re-scoped.
+
+## Stage 3M Deterministic Image Analysis Rules
+
+- Deterministic image-analysis outputs are generated and must not be committed.
+- Visual feature candidates are review aids only.
+- Feature candidates are not experiment seeds until promoted through a reviewable observation record.
+- Do not use OCR, AI, or ML image interpretation as source of truth.
+- Do not infer ciphers from visual feature flags alone.
+- Do not commit raw local page images.

@@ -417,4 +417,20 @@ Candidate records log the exact literal text before UTF-8 encoding, byte variant
 
 Generated records remain ignored under `experiments/results/hash-preimage/stage3l/`. They are bounded preimage-test records only and not solve evidence.
 
+## Stage 3M Image Analysis Records
+
+Stage 3M adds committed schemas under `schemas/visual/` for:
+
+- `image_analysis_record`
+- `image_threshold_summary`
+- `image_symmetry_record`
+- `image_bitplane_summary`
+- `image_component_summary`
+- `visual_feature_candidate`
+- `image_analysis_run_summary`
+
+Generated records remain ignored under `experiments/results/image-analysis/stage3m/`.
+
+All Stage 3M records keep `trusted_as_canonical=false` and `solve_claim=false`. Visual feature candidate records also keep `usable_as_experiment_seed=false`; they are human-review aids only and not image-derived seed manifests.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

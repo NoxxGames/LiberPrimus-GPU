@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/image-analysis-run-summary-v0.schema.json",
+  "title": "Image Analysis Run Summary v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "run_id",
+    "generated_at_utc",
+    "image_count",
+    "threshold_values",
+    "symmetry_metrics",
+    "feature_candidate_count",
+    "output_paths",
+    "warnings",
+    "trusted_as_canonical",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "image_analysis_run_summary" },
+    "run_id": { "type": "string", "minLength": 1 },
+    "generated_at_utc": { "type": "string", "minLength": 1 },
+    "image_count": { "type": "integer", "minimum": 0 },
+    "threshold_values": {
+      "type": "array",
+      "items": { "enum": [32, 64, 96, 128, 160, 192, 224] },
+      "minItems": 1
+    },
+    "symmetry_metrics": {
+      "type": "array",
+      "items": { "enum": ["horizontal_mirror_difference", "vertical_mirror_difference", "rotational_180_difference"] },
+      "minItems": 3
+    },
+    "component_record_count": { "type": "integer", "minimum": 0 },
+    "symmetry_record_count": { "type": "integer", "minimum": 0 },
+    "bitplane_record_count": { "type": "integer", "minimum": 0 },
+    "feature_candidate_count": { "type": "integer", "minimum": 0 },
+    "feature_counts": { "type": "object" },
+    "top_symmetric_image_ids": { "type": "array", "items": { "type": "string" } },
+    "top_asymmetric_image_ids": { "type": "array", "items": { "type": "string" } },
+    "top_sparse_dot_like_image_ids": { "type": "array", "items": { "type": "string" } },
+    "output_paths": { "type": "object" },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}
