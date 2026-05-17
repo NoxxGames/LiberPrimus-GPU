@@ -112,3 +112,9 @@
 - Created issue: `https://github.com/NoxxGames/LiberPrimus-GPU/issues/26`.
 - Issue title: `Stage 3H: reset advance ablation`.
 - The issue will be closed after commit, push, and pushed CI verification.
+
+## CI follow-up
+
+- First pushed CI run `25997334094` failed in `tests/python/test_stage3h_output_schema.py` because the test used ignored local corpus-candidate metadata absent from GitHub-hosted raw-data-free CI.
+- Fixed the test to use synthetic inline token records, matching the Stage 3H CI-safe fixture pattern.
+- Targeted rerun for the fixed test passed locally.
