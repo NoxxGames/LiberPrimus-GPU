@@ -111,3 +111,7 @@ For p56-local prime offset sweeps, require manifest-bound offsets, directions, r
 ## Stage 3H Guardrails
 
 For reset/advance ablations, require manifest-bound base transforms, reset modes, advance modes, metadata-support checks, family-specific negative controls, generated-output ignore checks, and summary-only research logs. Do not invent missing boundaries, publish candidate or control dumps, broaden into arbitrary transform families, or turn a noisy calibrated score into a solve claim.
+
+## Stage 3I Guardrails
+
+For historical motif Vigenere packs, require the declared key list, reset modes, advance modes, evidence-family metadata, generated-output ignore checks, and summary-only research logs. Do not expand the key list, run dictionary search, publish candidate dumps, or turn a noisy calibrated score into a solve claim. Visual and image-derived observations belong in a future reviewable observation registry before they become experiment seeds.

@@ -49,8 +49,8 @@ def test_stage3f_policy_blocks_key_expansion_without_count_update() -> None:
     assert "declared_vigenere_key_pack_count_mismatch" in check.blocking_reasons
 
 
-def test_stage3f_historical_key_pack_remains_deferred() -> None:
+def test_stage3f_historical_key_pack_is_no_longer_deferred_after_stage3i() -> None:
     queue = load_bounded_queue(QUEUE)
     item = next(item for item in queue.items if item["item_id"] == "stage3e_vig_history_key_pack_v1")
 
-    assert classify_executor_support(item) == ("needs_executor", "reset_advance_key_pack_executor")
+    assert classify_executor_support(item) == ("runnable_now", "stage3i_historical_key_pack_executor")

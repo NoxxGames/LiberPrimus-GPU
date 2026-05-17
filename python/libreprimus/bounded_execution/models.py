@@ -49,6 +49,7 @@ class BoundedCandidateRecord:
     warnings: list[str] = field(default_factory=list)
     key_text: str | None = None
     key_indices: list[int] | None = None
+    evidence_family: str | None = None
     calibrated_confidence_label: str | None = None
     crib_hits: list[str] | None = None
     crib_hit_count: int | None = None

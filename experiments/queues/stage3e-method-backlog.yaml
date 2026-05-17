@@ -68,17 +68,18 @@ items:
       advance_modes: [runes_only, token_break_preserving]
     candidate_count_estimate: 56
     operator_policy_status: within_policy
-    implementation_status: needs_executor
+    implementation_status: runnable_now
     required_controls: [stage3c_calibration, null_controls, negative_controls]
     generated_output_policy:
-      output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_vig_history_key_pack_v1
+      output_dir: experiments/results/bounded-auto-runs/stage3i
       commit_outputs: false
     no_solve_claim: true
     cuda_enabled: false
     canonical_corpus_active: false
     page_boundaries_final: false
     notes:
-      - Needs reset/advance-aware Vigenere key-pack executor before running.
+      - Stage 3I reuses the reset/advance-aware Vigenere key-pack executor for the bounded historical motif pack.
+      - Historical motif keys remain an explicit-list follow-up and must not expand into dictionary search.
 
   - experiment_id: stage3e_negative_control_extension_v1
     short_name: Family-specific negative controls

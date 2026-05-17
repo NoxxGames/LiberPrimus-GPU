@@ -2546,7 +2546,7 @@ def bounded_run_vigenere_key_pack(
     top_k: int = typer.Option(25, "--top-k", min=1, help="Number of top candidates to write."),
     allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Run warning-only policy-passing items."),
 ) -> None:
-    """Run the bounded Stage 3F evidence-key Vigenere pack."""
+    """Run a bounded explicit Vigenere key-pack queue item."""
     try:
         summary = run_vigenere_key_pack_from_paths(
             _resolve_existing_path(policy, "Operator policy"),

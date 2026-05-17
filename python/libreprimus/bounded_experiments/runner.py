@@ -18,6 +18,7 @@ from libreprimus.bounded_execution.prime_offset_sweep import run_prime_offset_sw
 from libreprimus.bounded_execution.reset_advance_ablation import TARGET_ITEM_ID as STAGE3H_RESET_ADVANCE_ITEM_ID
 from libreprimus.bounded_execution.reset_advance_ablation import run_reset_advance_ablation_item
 from libreprimus.bounded_execution.runner import run_caesar_affine_item
+from libreprimus.bounded_execution.vigenere_key_pack import HISTORICAL_ITEM_ID as STAGE3I_HISTORY_KEY_PACK_ITEM_ID
 from libreprimus.bounded_execution.vigenere_key_pack import TARGET_ITEM_ID as STAGE3F_KEY_PACK_ITEM_ID
 from libreprimus.bounded_execution.vigenere_key_pack import run_vigenere_key_pack_item
 from libreprimus.bounded_execution.vigenere_key_list import run_vigenere_key_list_item
@@ -207,8 +208,11 @@ def _run_policy_passing_item(
             output_paths=dict(stage3d_summary.output_paths),
             warnings=check.warnings,
         )
-    if kind == "vigenere_key_pack" and item.get("item_id") == STAGE3F_KEY_PACK_ITEM_ID:
-        stage3f_summary = run_vigenere_key_pack_item(
+    if kind == "vigenere_key_pack" and item.get("item_id") in {
+        STAGE3F_KEY_PACK_ITEM_ID,
+        STAGE3I_HISTORY_KEY_PACK_ITEM_ID,
+    }:
+        key_pack_summary = run_vigenere_key_pack_item(
             item,
             out_dir=out_dir / str(item["item_id"]),
             top_k=25,
@@ -223,24 +227,24 @@ def _run_policy_passing_item(
             deferred_reason=None,
             summary={
                 "status": "pass",
-                "stage3f_run_id": stage3f_summary.run_id,
-                "input_slice_id": stage3f_summary.input_slice_id,
-                "input_length": stage3f_summary.input_length,
-                "expected_candidate_count": stage3f_summary.expected_candidate_count,
-                "executed_candidate_count": stage3f_summary.executed_candidate_count,
-                "deferred_candidate_count": stage3f_summary.deferred_candidate_count,
-                "candidate_count": stage3f_summary.candidate_count,
-                "vigenere_candidate_count": stage3f_summary.vigenere_candidate_count,
-                "top_candidate": stage3f_summary.top_candidate,
-                "candidate_output_paths": stage3f_summary.output_paths,
-                "confidence_distribution": stage3f_summary.confidence_distribution,
+                "vigenere_key_pack_run_id": key_pack_summary.run_id,
+                "input_slice_id": key_pack_summary.input_slice_id,
+                "input_length": key_pack_summary.input_length,
+                "expected_candidate_count": key_pack_summary.expected_candidate_count,
+                "executed_candidate_count": key_pack_summary.executed_candidate_count,
+                "deferred_candidate_count": key_pack_summary.deferred_candidate_count,
+                "candidate_count": key_pack_summary.candidate_count,
+                "vigenere_candidate_count": key_pack_summary.vigenere_candidate_count,
+                "top_candidate": key_pack_summary.top_candidate,
+                "candidate_output_paths": key_pack_summary.output_paths,
+                "confidence_distribution": key_pack_summary.confidence_distribution,
                 "solve_claim_made": False,
                 "policy_check_status": check.status,
             },
-            search_performed=stage3f_summary.search_performed,
-            scoring_used=stage3f_summary.scoring_used,
-            output_paths=dict(stage3f_summary.output_paths),
-            warnings=check.warnings + stage3f_summary.warnings,
+            search_performed=key_pack_summary.search_performed,
+            scoring_used=key_pack_summary.scoring_used,
+            output_paths=dict(key_pack_summary.output_paths),
+            warnings=check.warnings + key_pack_summary.warnings,
         )
     if kind == "prime_minus_one_offset_sweep" and item.get("item_id") == STAGE3G_PRIME_OFFSET_ITEM_ID:
         stage3g_summary = run_prime_offset_sweep_item(

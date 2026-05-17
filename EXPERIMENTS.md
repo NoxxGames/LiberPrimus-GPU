@@ -278,3 +278,21 @@ Stage 3H runs the bounded reset/advance ablation:
 - Candidate count: `64`
 
 The run executes all `64` candidates on the existing reviewable slice because word, clause, line, and token-break metadata are available. It also writes `100` family-specific negative controls. Generated outputs remain ignored under `experiments/results/bounded-auto-runs/stage3h/`. The top candidate is classified `noisy`; no solve claim is made.
+
+## Stage 3I Historical Motif Vigenere Pack
+
+Stage 3I runs the bounded historical motif Vigenere pack from the Stage 3E queue:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli bounded-run run-vigenere-key-pack `
+  --policy experiments/policies/operator-policy-v0.yaml `
+  --queue experiments/queues/stage3e-bounded-cpu-queue.yaml `
+  --item-id stage3e_vig_history_key_pack_v1 `
+  --out-dir experiments/results/bounded-auto-runs/stage3i `
+  --top-k 25 `
+  --allow-warnings
+```
+
+The run is limited to 14 declared historical motif keys, reset modes `none` and `line`, and advance modes `runes_only` and `token_break_preserving`, for `56` candidates. It does not mutate keys, infer keys, run a dictionary search, use CUDA, activate the canonical corpus, finalize page boundaries, or claim a solve.
+
+Generated outputs remain ignored under `experiments/results/bounded-auto-runs/stage3i/`. The top candidate is classified `noisy`; no solve claim is made.

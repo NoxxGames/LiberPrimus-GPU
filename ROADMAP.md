@@ -186,7 +186,13 @@ Stage 3H implements a shared reset/advance state machine, Vigenere and prime-str
 
 ## Stage 3I - Mersenne tiny probe or historical Vigenere follow-up
 
-If Stage 3H remains noisy, implement the queued tiny Mersenne/perfect-number stream probe or run a bounded historical Vigenere pack follow-up using the reset/advance executor. Keep candidate counts bounded, generated outputs ignored, and no solve claim. Do not jump to CUDA.
+Run a bounded historical Vigenere pack follow-up using the reset/advance executor, or defer to the queued tiny Mersenne/perfect-number stream probe if selected. Keep candidate counts bounded, generated outputs ignored, and no solve claim. Do not jump to CUDA.
+
+Stage 3I runs the bounded historical motif Vigenere pack for `stage3e_vig_history_key_pack_v1`: 14 manifest-bound keys, two reset modes, two advance modes, and `56` candidates. The top lead remains calibrated `noisy`, so it is not solve evidence and does not justify widening into dictionary search.
+
+## Stage 3J - Mersenne tiny probe or visual numeric observation registry
+
+If Stage 3I remains noisy, implement the queued tiny Mersenne/perfect-number stream probe or create a reviewable visual numeric observation registry. Visual observations such as base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must be captured as reviewable observations before being promoted into bounded experiment seeds. Do not jump to CUDA.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

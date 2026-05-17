@@ -1,4 +1,4 @@
-"""Stage 3F bounded Vigenere evidence-key pack execution."""
+"""Bounded Vigenere evidence-key pack execution."""
 
 from __future__ import annotations
 
@@ -30,6 +30,7 @@ from libreprimus.solved_fixtures.models import to_jsonable
 from libreprimus.solved_fixtures.vigenere import key_text_to_indices
 
 TARGET_ITEM_ID = "stage3e_vig_lp_evidence_pack_v1"
+HISTORICAL_ITEM_ID = "stage3e_vig_history_key_pack_v1"
 EXPECTED_STAGE3F_KEYS = [
     "DIVINITY",
     "FIRFUMFERENFE",
@@ -44,9 +45,40 @@ EXPECTED_STAGE3F_KEYS = [
     "SACRED",
     "ENCRYPTED",
 ]
+EXPECTED_STAGE3I_KEYS = [
+    "PATIENCEISAVIRTUE",
+    "THEINSTAREMERGENCE",
+    "SELFRELIANCE",
+    "BOOKOFTHELAW",
+    "MABINOGION",
+    "AGRIPPA",
+    "EMERSON",
+    "CROWLEY",
+    "BLAKE",
+    "PATIENCE",
+    "VIRTUE",
+    "SELF",
+    "RELIANCE",
+    "LAW",
+]
 SUPPORTED_RESET_MODES = {"none", "line"}
 SUPPORTED_ADVANCE_MODES = {"runes_only", "token_break_preserving"}
 MODULUS = 29
+
+KEY_PACK_CONFIGS = {
+    TARGET_ITEM_ID: {
+        "expected_keys": EXPECTED_STAGE3F_KEYS,
+        "evidence_family": "lp_evidence_key_pack",
+        "run_id_prefix": "stage3f",
+        "description": "12 declared LP evidence keys",
+    },
+    HISTORICAL_ITEM_ID: {
+        "expected_keys": EXPECTED_STAGE3I_KEYS,
+        "evidence_family": "historical_motif_key_pack",
+        "run_id_prefix": "stage3i",
+        "description": "14 declared historical motif keys",
+    },
+}
 
 
 @dataclass(frozen=True)
@@ -56,6 +88,8 @@ class VigenereKeyPack:
     reset_modes: list[str]
     advance_modes: list[str]
     expected_candidate_count: int
+    evidence_family: str
+    run_id_prefix: str
 
 
 @dataclass(frozen=True)
@@ -123,7 +157,7 @@ def run_vigenere_key_pack_item(
     if not calibration:
         warnings.append("stage3c_calibration_summary_missing; calibrated label falls back to current thresholds.")
 
-    run_id = f"stage3f-{pack.item_id}-{datetime.now(UTC).strftime('%Y%m%dT%H%M%SZ')}"
+    run_id = f"{pack.run_id_prefix}-{pack.item_id}-{datetime.now(UTC).strftime('%Y%m%dT%H%M%SZ')}"
     records: list[BoundedCandidateRecord] = []
     deferred: list[DeferredCandidate] = []
     candidate_index = 0
@@ -156,6 +190,7 @@ def run_vigenere_key_pack_item(
                         labels=labels,
                         reset_mode=reset_mode,
                         advance_mode=advance_mode,
+                        evidence_family=pack.evidence_family,
                         thresholds=thresholds,
                         warnings=warnings + mode_warnings,
                     )
@@ -197,6 +232,7 @@ def run_vigenere_key_pack_item(
         "top_key_text": top.key_text,
         "top_reset_mode": top.transform_parameters["reset_mode"],
         "top_advance_mode": top.transform_parameters["advance_mode"],
+        "top_evidence_family": top.transform_parameters["evidence_family"],
         "top_score": top.score_summary["total_score"],
         "top_length_normalized_score": top.score_summary.get("length_normalized_score"),
         "top_calibrated_confidence_label": top.calibrated_confidence_label,
@@ -224,6 +260,7 @@ def run_vigenere_key_pack_item(
             "key_indices": top.key_indices,
             "reset_mode": top.transform_parameters["reset_mode"],
             "advance_mode": top.transform_parameters["advance_mode"],
+            "evidence_family": top.transform_parameters["evidence_family"],
             "total_score": top.score_summary["total_score"],
             "length_normalized_score": top.score_summary.get("length_normalized_score"),
             "confidence_label": top.score_summary.get("confidence_label"),
@@ -266,36 +303,40 @@ def run_vigenere_key_pack_item(
 
 def load_declared_key_pack(item: dict[str, Any]) -> VigenereKeyPack:
     item_id = str(item.get("item_id", ""))
-    if item_id != TARGET_ITEM_ID:
-        raise ValueError(f"Stage 3F executor only runs {TARGET_ITEM_ID}; got {item_id}.")
+    config = KEY_PACK_CONFIGS.get(item_id)
+    if config is None:
+        raise ValueError(f"Unsupported bounded Vigenere key-pack item: {item_id}.")
     if item.get("experiment_kind") != "vigenere_key_pack":
-        raise ValueError("Stage 3F target must declare experiment_kind=vigenere_key_pack.")
+        raise ValueError("Bounded Vigenere key-pack items must declare experiment_kind=vigenere_key_pack.")
     if item.get("cpu_only") is not True or item.get("cuda_enabled") is not False or item.get("no_solve_claim") is not True:
-        raise ValueError("Stage 3F key pack must remain CPU-only, CUDA-disabled, and no-solve-claim.")
+        raise ValueError("Bounded Vigenere key packs must remain CPU-only, CUDA-disabled, and no-solve-claim.")
     params = _parameters(item)
     keys = [str(key).strip().upper() for key in params.get("keys", [])]
     reset_modes = [str(mode) for mode in params.get("reset_modes", [])]
     advance_modes = [str(mode) for mode in params.get("advance_modes", [])]
-    if keys != EXPECTED_STAGE3F_KEYS:
-        raise ValueError("Stage 3F evidence key pack must stay at the 12 declared LP evidence keys.")
+    expected_keys = list(config["expected_keys"])
+    if keys != expected_keys:
+        raise ValueError(f"{item_id} must stay at the {config['description']}.")
     if set(reset_modes) != SUPPORTED_RESET_MODES or reset_modes != ["none", "line"]:
-        raise ValueError("Stage 3F reset modes must be exactly [none, line].")
+        raise ValueError("Bounded Vigenere key-pack reset modes must be exactly [none, line].")
     if set(advance_modes) != SUPPORTED_ADVANCE_MODES or advance_modes != ["runes_only", "token_break_preserving"]:
-        raise ValueError("Stage 3F advance modes must be exactly [runes_only, token_break_preserving].")
+        raise ValueError("Bounded Vigenere key-pack advance modes must be exactly [runes_only, token_break_preserving].")
     expected = len(keys) * len(reset_modes) * len(advance_modes)
     declared = int(item.get("candidate_count_upper_bound", -1))
     calculated = validate_candidate_count(item)
     if declared != expected or calculated != expected:
-        raise ValueError(f"Stage 3F candidate count must be {expected}, got declared={declared} calculated={calculated}.")
+        raise ValueError(f"{item_id} candidate count must be {expected}, got declared={declared} calculated={calculated}.")
     for forbidden in ("key_search_enabled", "dictionary_search_enabled", "unconstrained_skip_masks"):
         if params.get(forbidden) is not False:
-            raise ValueError(f"Stage 3F key pack must set {forbidden}=false.")
+            raise ValueError(f"Bounded Vigenere key packs must set {forbidden}=false.")
     return VigenereKeyPack(
         item_id=item_id,
         keys=keys,
         reset_modes=reset_modes,
         advance_modes=advance_modes,
         expected_candidate_count=expected,
+        evidence_family=str(config["evidence_family"]),
+        run_id_prefix=str(config["run_id_prefix"]),
     )
 
 
@@ -369,6 +410,7 @@ def _record(
     labels: dict[int, str],
     reset_mode: str,
     advance_mode: str,
+    evidence_family: str,
     thresholds: dict[str, float],
     warnings: list[str],
 ) -> BoundedCandidateRecord:
@@ -397,6 +439,7 @@ def _record(
         "key_text": key_text,
         "reset_mode": reset_mode,
         "advance_mode": advance_mode,
+        "evidence_family": evidence_family,
         "key_search_enabled": False,
         "dictionary_search_enabled": False,
         "unconstrained_skip_masks": False,
@@ -425,6 +468,7 @@ def _record(
             "entropy": score["entropy"],
             "reset_mode": reset_mode,
             "advance_mode": advance_mode,
+            "evidence_family": evidence_family,
             "output_index_count": len(output_indices),
         },
         search_performed=True,
@@ -437,6 +481,7 @@ def _record(
         warnings=warnings,
         key_text=key_text,
         key_indices=key_indices,
+        evidence_family=evidence_family,
         calibrated_confidence_label=calibrated_label,
         crib_hits=crib_payload["crib_hits"],
         crib_hit_count=crib_payload["crib_hit_count"],
@@ -543,6 +588,7 @@ def _score_details(records: list[BoundedCandidateRecord], calibration: dict[str,
             "key_text": record.key_text,
             "reset_mode": record.transform_parameters["reset_mode"],
             "advance_mode": record.transform_parameters["advance_mode"],
+            "evidence_family": record.transform_parameters["evidence_family"],
             "score_summary": record.score_summary,
             "calibrated_confidence_label": record.calibrated_confidence_label,
             "crib_hits": record.crib_hits,

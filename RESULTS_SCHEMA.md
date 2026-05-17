@@ -345,4 +345,24 @@ The generated Stage 3H summary includes `expected_candidate_count`, `executed_ca
 
 Family-specific negative controls are generated as ignored JSONL records in `negative_control_records.jsonl`. They are false-positive controls only, not candidate solve evidence.
 
+## Stage 3I Historical Vigenere Key-Pack Records
+
+Stage 3I reuses `bounded_candidate_record` and `bounded_experiment_run_summary` for the historical motif Vigenere key pack. Candidate records include:
+
+- `transform_family=vigenere_key_pack`
+- `transform_id=vigenere_explicit_key`
+- `key_text`
+- `key_indices`
+- `evidence_family=historical_motif_key_pack`
+- `transform_parameters.reset_mode`
+- `transform_parameters.advance_mode`
+- `transform_parameters.evidence_family`
+- calibrated scoring fields and crib-hit fields
+- `cuda_used=false`
+- `solve_claim=false`
+
+The generated Stage 3I summary includes `expected_candidate_count`, `executed_candidate_count`, `deferred_candidate_count`, `key_count`, `reset_modes`, `advance_modes`, and `confidence_distribution`.
+
+Generated Stage 3I files remain ignored under `experiments/results/bounded-auto-runs/stage3i/`. They are candidate leads only and not solve evidence.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

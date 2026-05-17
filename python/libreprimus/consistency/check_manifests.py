@@ -682,8 +682,8 @@ def check_manifest_consistency(
         if not any(result.check_name == "stage3e_flags_false" and result.is_failure for result in results):
             results.append(pass_result(GROUP, "stage3e_flags_false", "Stage 3E queue keeps unsafe flags false."))
         if (
-            sum(1 for status in support_statuses.values() if status == "runnable_now") == 3
-            and sum(1 for status in support_statuses.values() if status == "needs_executor") == 3
+            sum(1 for status in support_statuses.values() if status == "runnable_now") == 4
+            and sum(1 for status in support_statuses.values() if status == "needs_executor") == 2
             and sum(
             1 for status in support_statuses.values() if status == "dry_run_only"
             )

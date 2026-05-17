@@ -121,14 +121,30 @@ items:
     status: queued_runnable_stage3g
 
   - item_id: stage3e_vig_history_key_pack_v1
-    description: Historical motif Vigenere key pack; dry-run until reset/advance executor exists.
+    description: Historical motif Vigenere key pack; runnable via Stage 3I historical key-pack executor.
     enabled: true
     experiment_kind: vigenere_key_pack
-    implementation_status: needs_executor
-    required_executor: reset_advance_key_pack_executor
+    implementation_status: runnable_now
+    required_executor: stage3i_historical_key_pack_executor
     corpus_slice:
       slice_id: stage3a-page-candidate-018-reviewable-slice
       slice_kind: future_unsolved_page_candidate
+      review_required: true
+      source: rtkd-master-v0-candidate
+      corpus_candidate_id: rtkd-master-v0-candidate
+      selector:
+        selector_kind: corpus_page_candidate_token_range
+        page_candidate_id: page-candidate-018
+        candidate_local_page_index: 18
+        start_token_index: 5283
+        end_token_index: 5402
+        expected_rune_token_count: 87
+        raw_unsolved_text_included: false
+      metadata_paths:
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/page_candidates.jsonl
+          role: generated_ignored_page_candidate_metadata
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/tokens.jsonl
+          role: generated_ignored_token_metadata
       raw_unsolved_text_included: false
     transform_plan:
       transform_family: vigenere_key_pack
@@ -136,6 +152,7 @@ items:
         keys: [PATIENCEISAVIRTUE, THEINSTAREMERGENCE, SELFRELIANCE, BOOKOFTHELAW, MABINOGION, AGRIPPA, EMERSON, CROWLEY, BLAKE, PATIENCE, VIRTUE, SELF, RELIANCE, LAW]
         reset_modes: [none, line]
         advance_modes: [runes_only, token_break_preserving]
+        evidence_family: historical_motif_key_pack
         key_search_enabled: false
         dictionary_search_enabled: false
         unconstrained_skip_masks: false
@@ -156,10 +173,10 @@ items:
       mode: generated_ignored_preview
       import_enabled: false
     output_policy:
-      generated_output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_vig_history_key_pack_v1
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3i
       commit_outputs: false
       write_candidate_plaintexts: false
-    status: queued_needs_executor
+    status: queued_runnable_stage3i
 
   - item_id: stage3e_negative_control_extension_v1
     description: Family-specific negative-control extension; dry-run until all requested controls are implemented.

@@ -17,6 +17,12 @@ def classify_executor_support(item: dict[str, Any]) -> tuple[str, str]:
             and item.get("required_executor") == "stage3f_evidence_key_pack_executor"
         ):
             return "runnable_now", "stage3f_evidence_key_pack_executor"
+        if (
+            item.get("item_id") == "stage3e_vig_history_key_pack_v1"
+            and declared == "runnable_now"
+            and item.get("required_executor") == "stage3i_historical_key_pack_executor"
+        ):
+            return "runnable_now", "stage3i_historical_key_pack_executor"
         return "needs_executor", "reset_advance_key_pack_executor"
     if kind == "prime_minus_one_offset_sweep":
         if (

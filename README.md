@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3H and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3I and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -22,7 +22,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad unsolved-page search campaigns: not started.
-- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, and Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only.
+- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, and Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
 - Broad unsolved-page campaigns: not started.
@@ -31,7 +31,8 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 3I implementation of the tiny Mersenne/perfect-number stream probe or bounded historical Vigenere pack follow-up if Stage 3H remains noisy.
+- Stage 3J implementation of the tiny Mersenne/perfect-number stream probe or a reviewable visual numeric observation registry.
+- Future visual numeric observation registry for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery before those observations become experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
 - Benchmark campaigns after stable CPU/GPU baselines exist.
@@ -59,6 +60,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Reset/advance-aware Stage 3F LP evidence-key Vigenere pack executor and 48-candidate run.
 - Bounded Stage 3G p56-local prime-minus-one offset sweep executor and 256-candidate run, plus a queued future Mersenne/perfect-number probe.
 - Shared Stage 3H reset/advance state machine, 64-candidate ablation run, and 100 family-specific negative controls.
+- Bounded Stage 3I historical motif Vigenere pack run for 14 declared keys and 56 candidates.
 
 ## Architecture summary
 
@@ -86,13 +88,14 @@ Current status:
 - Stage 3F: LP evidence-key Vigenere pack execution complete.
 - Stage 3G: p56-local prime-minus-one offset sweep complete.
 - Stage 3H: reset/advance ablation and family-specific negative controls complete.
+- Stage 3I: historical motif Vigenere key-pack run complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad search/scoring/CUDA campaigns: not started.
-- Latest bounded review: Stage 3H executed all `64` reset/advance ablation candidates for `stage3h_reset_advance_ablation_v1`; top base transform `prime_minus_one:offset=1`, reset `line`, advance `runes_only`, calibrated label `noisy`; no solve claim.
-- Next: Stage 3I implement the tiny Mersenne/perfect-number stream probe or run a bounded historical Vigenere pack follow-up if selected.
+- Latest bounded review: Stage 3I executed all `56` historical motif Vigenere key-pack candidates for `stage3e_vig_history_key_pack_v1`; top key `SELFRELIANCE`, reset `line`, advance `runes_only`, calibrated label `noisy`; no solve claim.
+- Next: Stage 3J implement the tiny Mersenne/perfect-number stream probe or start the visual numeric observation registry as reviewable observations, not seeds.
 
 ## CI status
 
@@ -234,6 +237,8 @@ Stage 3F implements the reset/advance-aware evidence-key Vigenere pack executor 
 Stage 3G implements the p56-local prime-minus-one offset sweep executor and runs only `stage3e_prime_minus_one_offsets_v1`. It executes `256` candidates, records offset/direction/reset metadata, leaves generated outputs ignored, adds a future `192` candidate Mersenne/perfect-number probe to the queue without executing it, and makes no solve claim.
 
 Stage 3H implements the shared reset/advance state machine and runs only `stage3h_reset_advance_ablation_v1`. It executes `64` bounded candidates across Vigenere and prime-stream adapters, records reset/advance and metadata-support status, writes `100` ignored family-specific negative controls, and makes no solve claim.
+
+Stage 3I reuses the bounded Vigenere key-pack executor and runs only `stage3e_vig_history_key_pack_v1`. It executes `56` candidates for the 14 declared historical motif keys across reset modes `none` and `line` and advance modes `runes_only` and `token_break_preserving`. The top key `SELFRELIANCE` remains calibrated `noisy`; generated outputs stay ignored and no solve claim is made.
 
 ## Stage 1B Atbash-Family Fixtures
 

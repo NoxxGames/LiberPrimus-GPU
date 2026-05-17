@@ -392,6 +392,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Top candidates remain leads only, not solve claims.
 - Full Stage 3H candidate and control outputs under `experiments/results/bounded-auto-runs/stage3h/` are generated outputs and must not be committed.
 
+## Stage 3I Historical Vigenere Rules
+
+- Historical motif Vigenere runs are explicit-list only.
+- Historical keys must have evidence basis documented.
+- Do not expand historical key packs into dictionary search without manifest and policy update.
+- Historical key hits are leads only, not solve claims.
+- Full Stage 3I candidate outputs under `experiments/results/bounded-auto-runs/stage3i/` are generated outputs and must not be committed.
+- Visual/image-derived observations are future work and must be stored as reviewable observations before becoming experiment seeds.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.
