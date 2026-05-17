@@ -130,6 +130,15 @@ from libreprimus.bounded_experiments.summary import (
 )
 from libreprimus.bounded_execution.runner import run_caesar_affine_from_paths
 from libreprimus.bounded_execution.summary import load_summary as load_bounded_run_summary
+from libreprimus.candidate_inspection.analysis import inspect_results, rerank_candidates
+from libreprimus.candidate_inspection.loader import load_candidate_records
+from libreprimus.candidate_inspection.report import (
+    write_inspection_markdown,
+    write_json as write_inspection_json,
+    write_jsonl as write_inspection_jsonl,
+)
+from libreprimus.candidate_inspection.summary import to_summary_payload
+from libreprimus.candidate_inspection.validation import validate_no_full_dump_in_markdown, validate_summary_payload
 from libreprimus.reference_sources.summary import build_stage1c_reference_summary, write_stage1c_reference_outputs
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
 from libreprimus.transcript_sources.rtkd_master import parse_rtkd_master
@@ -158,6 +167,7 @@ approval_execution_app = typer.Typer(no_args_is_help=True)
 approval_readiness_app = typer.Typer(no_args_is_help=True)
 bounded_experiment_app = typer.Typer(no_args_is_help=True)
 bounded_run_app = typer.Typer(no_args_is_help=True)
+candidate_inspect_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -2267,6 +2277,8 @@ DEFAULT_STAGE2J_POLICY = Path("experiments/policies/operator-policy-v0.yaml")
 DEFAULT_STAGE2J_QUEUE = Path("experiments/queues/stage2j-bounded-cpu-queue.yaml")
 DEFAULT_STAGE2J_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage2j")
 DEFAULT_STAGE3A_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3a")
+DEFAULT_STAGE3B_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3b")
+DEFAULT_STAGE3B_INSPECTION_MD = Path("research-log/2026-05-16-stage-3b-stage3a-lead-inspection.md")
 
 
 @bounded_experiment_app.command("validate-policy")
@@ -2404,6 +2416,7 @@ def bounded_run_caesar_affine(
     out_dir: Path = typer.Option(DEFAULT_STAGE3A_BOUNDED_RESULTS_DIR, "--out-dir", help="Generated output directory."),
     top_k: int = typer.Option(25, "--top-k", min=1, help="Number of top candidates to write."),
     allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Run warning-only policy-passing items."),
+    direction: str = typer.Option("auto", "--direction", help="Transform convention: auto, forward, or reverse."),
 ) -> None:
     """Run the bounded Stage 3A Caesar plus affine CPU candidate enumeration."""
     try:
@@ -2414,6 +2427,7 @@ def bounded_run_caesar_affine(
             out_dir=_resolve_output_path(out_dir),
             top_k=top_k,
             allow_warnings=allow_warnings,
+            direction=direction,
         )
     except (FileNotFoundError, ValueError) as error:
         console.print(f"[red]{error}[/red]")
@@ -2438,6 +2452,56 @@ def bounded_run_summary(
     _print_stage3a_summary_payload(summary)
 
 
+@bounded_run_app.command("rerank")
+def bounded_run_rerank(
+    results_dir: Path = typer.Option(DEFAULT_STAGE3A_BOUNDED_RESULTS_DIR, "--results-dir", help="Existing generated results directory."),
+    out_dir: Path = typer.Option(DEFAULT_STAGE3B_BOUNDED_RESULTS_DIR, "--out-dir", help="Generated rerank output directory."),
+    top_k: int = typer.Option(25, "--top-k", min=1, help="Number of reranked top candidates to write."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Allow warning-bearing rerank input."),
+) -> None:
+    """Rerank generated candidates with the current refined minimal triage scorer."""
+    try:
+        records = load_candidate_records(_resolve_output_path(results_dir))
+        reranked = rerank_candidates(records)
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    warnings = [] if allow_warnings else []
+    top_records = reranked[:top_k]
+    original_top = max(records, key=lambda record: float(record.get("score_summary", {}).get("total_score", 0.0)))
+    refined_top = top_records[0]
+    output_dir = _resolve_output_path(out_dir)
+    reranked_path = write_inspection_jsonl(output_dir / "reranked_top_candidates.jsonl", top_records)
+    summary_payload = {
+        "record_type": "stage3b_rerank_summary",
+        "source_results_dir": str(_resolve_output_path(results_dir)),
+        "candidate_count": len(records),
+        "top_k": len(top_records),
+        "original_top": _candidate_cli_summary(original_top),
+        "refined_top": _candidate_cli_summary(refined_top),
+        "top_candidate_changed": original_top.get("candidate_index") != refined_top.get("candidate_index"),
+        "confidence_label": refined_top.get("score_summary", {}).get("confidence_label", "unlabeled"),
+        "solve_claim": False,
+        "cuda_used": False,
+        "generated_outputs_ignored": True,
+        "output_paths": {"reranked_top_candidates": str(reranked_path)},
+    }
+    summary_path = write_inspection_json(output_dir / "rerank_summary.json", summary_payload)
+    warning_path = None
+    if warnings:
+        warning_path = write_inspection_jsonl(output_dir / "warnings.jsonl", [{"record_type": "stage3b_rerank_warning", "warning": warning} for warning in warnings])
+    console.print("rerank_executed=true")
+    console.print(f"candidate_count={len(records)}")
+    console.print(f"original_top_params={json.dumps(original_top.get('transform_parameters', {}), sort_keys=True)}")
+    console.print(f"refined_top_params={json.dumps(refined_top.get('transform_parameters', {}), sort_keys=True)}")
+    console.print(f"top_candidate_changed={str(summary_payload['top_candidate_changed']).lower()}")
+    console.print(f"confidence_label={summary_payload['confidence_label']}")
+    console.print(f"reranked_top_candidates={reranked_path}")
+    console.print(f"rerank_summary={summary_path}")
+    if warning_path:
+        console.print(f"warnings={warning_path}")
+
+
 def _print_stage3a_run_summary(summary) -> None:
     payload = {
         "run_id": summary.run_id,
@@ -2449,6 +2513,8 @@ def _print_stage3a_run_summary(summary) -> None:
         "affine_candidate_count": summary.affine_candidate_count,
         "top_k_count": summary.top_k_count,
         "top_candidate_score": summary.top_candidate.get("total_score"),
+        "top_candidate_length_normalized_score": summary.top_candidate.get("length_normalized_score"),
+        "top_candidate_confidence_label": summary.top_candidate.get("confidence_label"),
         "top_candidate_transform_family": summary.top_candidate.get("transform_family"),
         "top_candidate_transform_parameters": json.dumps(summary.top_candidate.get("transform_parameters", {}), sort_keys=True),
         "solve_claim": summary.solve_claim,
@@ -2475,11 +2541,69 @@ def _print_stage3a_summary_payload(summary: dict) -> None:
     ]:
         console.print(f"{key}={summary.get(key)}")
     console.print(f"top_candidate_score={top.get('total_score')}")
+    console.print(f"top_candidate_length_normalized_score={top.get('length_normalized_score')}")
+    console.print(f"top_candidate_confidence_label={top.get('confidence_label')}")
     console.print(f"top_candidate_transform_family={top.get('transform_family')}")
     console.print(f"top_candidate_transform_parameters={json.dumps(top.get('transform_parameters', {}), sort_keys=True)}")
     console.print(f"solve_claim={str(summary.get('solve_claim')).lower()}")
     for key, path in summary.get("output_paths", {}).items():
         console.print(f"{key}={path}")
+
+
+@candidate_inspect_app.command("inspect-stage3a")
+def candidate_inspect_stage3a(
+    results_dir: Path = typer.Option(DEFAULT_STAGE3A_BOUNDED_RESULTS_DIR, "--results-dir", help="Generated Stage 3A results directory."),
+    top_n: int = typer.Option(25, "--top-n", min=1, help="Number of top candidates to inspect."),
+    out_markdown: Path = typer.Option(DEFAULT_STAGE3B_INSPECTION_MD, "--out-markdown", help="Committed summary Markdown path."),
+) -> None:
+    """Inspect Stage 3A leads and write a summary-only Markdown report."""
+    try:
+        inspection = inspect_results(_resolve_output_path(results_dir), top_n=top_n, rerank=True)
+        written = write_inspection_markdown(out_markdown, inspection)
+        validate_no_full_dump_in_markdown(written.read_text(encoding="utf-8"))
+        payload = validate_summary_payload(to_summary_payload(inspection))
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print(f"candidate_count={payload['candidate_count']}")
+    console.print(f"top_candidate_transform={payload['top_candidate']['transform_family']}")
+    console.print(f"refined_top_transform={payload['refined_top_candidate']['transform_family']}")
+    console.print(f"qualitative_label={payload['qualitative_label']}")
+    console.print(f"recommendation={payload['recommendation']}")
+    console.print(f"markdown={written}")
+
+
+@candidate_inspect_app.command("summary")
+def candidate_inspect_summary(
+    results_dir: Path = typer.Option(DEFAULT_STAGE3A_BOUNDED_RESULTS_DIR, "--results-dir", help="Generated results directory."),
+) -> None:
+    """Print a concise candidate-inspection summary without full candidate dumps."""
+    try:
+        inspection = inspect_results(_resolve_output_path(results_dir), top_n=25, rerank=False)
+        payload = validate_summary_payload(to_summary_payload(inspection))
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print(f"run_id={payload['run_id']}")
+    console.print(f"candidate_count={payload['candidate_count']}")
+    console.print(f"top_transform_family={payload['top_candidate']['transform_family']}")
+    console.print(f"top_transform_parameters={json.dumps(payload['top_candidate']['transform_parameters'], sort_keys=True)}")
+    console.print(f"top_score={payload['top_candidate']['total_score']}")
+    console.print(f"qualitative_label={payload['qualitative_label']}")
+    console.print(f"warning_count={len(payload['warnings'])}")
+
+
+def _candidate_cli_summary(record: dict) -> dict:
+    score = dict(record.get("score_summary", {}))
+    return {
+        "candidate_index": record.get("candidate_index"),
+        "transform_family": record.get("transform_family"),
+        "transform_parameters": record.get("transform_parameters", {}),
+        "total_score": score.get("total_score"),
+        "length_normalized_score": score.get("length_normalized_score"),
+        "confidence_label": score.get("confidence_label"),
+        "output_sha256": record.get("output_sha256"),
+    }
 
 
 def _print_bounded_policy_checks(checks) -> None:
@@ -2505,6 +2629,7 @@ def _print_bounded_run_results(results) -> None:
 
 app.add_typer(bounded_experiment_app, name="bounded-experiment")
 app.add_typer(bounded_run_app, name="bounded-run")
+app.add_typer(candidate_inspect_app, name="candidate-inspect")
 
 
 @solved_fixture_app.command("list")

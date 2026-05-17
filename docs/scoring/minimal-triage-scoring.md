@@ -13,8 +13,16 @@ The score includes:
 - Repeated-character penalty
 - Printable ratio
 - Entropy estimate
+- Length-normalized score
+- Separator-aware word count
+- Vowel-band sanity score
+- Tiny impossible-bigram penalties from `data/scoring/english-impossible-bigrams-tiny-v0.txt`
+- Positive and negative feature explanations
+- Qualitative confidence labels
 
 The word list is intentionally tiny and generic. It is not a language model, not a large dictionary, and not tuned to Liber Primus phrases.
+
+Stage 3B adds the length-normalized and separator-aware fields to reduce obvious false positives from flat, no-separator strings. The impossible-bigram list is tiny and generic; it is not a language model or phrase crib.
 
 ## Non-Goals
 

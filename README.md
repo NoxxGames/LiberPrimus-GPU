@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3A and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3B and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -22,7 +22,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad unsolved-page search campaigns: not started.
-- Scoring campaigns: not started; Stage 3A minimal triage scoring exists only for sorting one bounded 841-candidate CPU run.
+- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
 - Broad unsolved-page campaigns: not started.
@@ -52,6 +52,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - First real bounded exploratory approval-readiness packet.
 - Standing bounded local CPU operator policy and queue scaffold.
 - Minimal CPU Caesar plus affine executor and triage scoring for the first `841` candidate bounded queue item.
+- Candidate lead inspection, refined triage scoring, reranking, and reverse-direction bounded comparison.
 
 ## Architecture summary
 
@@ -72,13 +73,14 @@ Current status:
 - Stage 2I: first real bounded CPU exploratory experiment approval packet complete.
 - Stage 2J: standing bounded CPU auto-run policy and queue scaffold complete.
 - Stage 3A: minimal CPU Caesar plus affine executor and triage scoring complete.
+- Stage 3B: Stage 3A lead inspection, scoring refinement, rerank, and reverse-direction comparison complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad search/scoring/CUDA campaigns: not started.
-- Latest bounded run: Stage 3A executed `841` CPU candidates for one reviewable Caesar plus affine queue item; no solve claim.
-- Next: Stage 3B inspect Stage 3A top candidates and queue the next bounded method or scoring refinement.
+- Latest bounded run: Stage 3B executed a reverse-direction `841` candidate comparison and labeled the refined top leads `noisy`; no solve claim.
+- Next: Stage 3C improve scoring calibration and add null/crib-style checks before widening transform families.
 
 ## CI status
 
@@ -209,7 +211,7 @@ Stage 2J replaces per-experiment approval as the default path with the standing 
 
 The first Caesar plus affine reviewable-slice queue item has candidate upper bound `841` and is policy-eligible. Stage 3A adds the minimal CPU executor and deterministic triage scoring for that item. Full candidate outputs remain ignored under `experiments/results/bounded-auto-runs/stage3a/`; committed research logs summarize counts and top score metadata only.
 
-Stage 3B should inspect Stage 3A top candidates as leads and queue the next bounded method or scoring refinement. No Stage 3A output is a solve claim.
+Stage 3B inspected Stage 3A top candidates, refined the scorer, reranked the 841 candidates, and ran the reverse-direction comparison. Both refined and reverse-direction top leads remain `noisy`. Stage 3C should improve score calibration and add null/crib-style checks before widening transform families. No Stage 3A or Stage 3B output is a solve claim.
 
 ## Stage 1B Atbash-Family Fixtures
 

@@ -183,4 +183,10 @@ Stage 3A adds tests for minimal triage scoring, Caesar and affine enumeration co
 
 The tests assert that scoring is deterministic, Caesar generates `29` candidates, affine generates `812` candidates, total candidate count is `841`, output indices stay in `0..28`, candidate records and run summaries validate, top-k output is bounded, CUDA stays false, solve claims stay false, and synthetic CLI runs work without raw corpus data.
 
+## Stage 3B Inspection And Scoring Tests
+
+Stage 3B adds tests for candidate inspection, refined triage scoring, Stage 3A reranking, reverse-direction Caesar/affine transforms, and the Stage 3B bounded queue.
+
+The tests assert that candidate records load from JSONL, inspection summaries group by transform and score distribution, noisy candidates stay noisy, readable synthetic controls score better, tiny impossible-bigram and repeated-symbol penalties work, reranking can change top order, reverse Caesar and affine inverse formulas are correct, reverse affine produces `812` candidates, total reverse candidates remain `841`, generated outputs are ignored, and no solve claims are made.
+
 The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.

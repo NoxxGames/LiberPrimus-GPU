@@ -14,6 +14,8 @@ from libreprimus.bounded_execution.caesar_affine import (
     caesar_outputs,
     labels_by_index,
     normalize_indices,
+    reverse_affine_outputs,
+    reverse_caesar_outputs,
 )
 from libreprimus.bounded_execution.candidate_writer import write_candidate_outputs
 from libreprimus.bounded_execution.input_slice_loader import load_input_slice
@@ -49,6 +51,7 @@ def run_caesar_affine_from_paths(
     out_dir: Path,
     top_k: int = 25,
     allow_warnings: bool = False,
+    direction: str = "auto",
 ) -> BoundedRunSummary:
     policy = load_operator_policy(policy_path)
     queue = load_bounded_queue(queue_path)
@@ -58,7 +61,8 @@ def run_caesar_affine_from_paths(
         raise ValueError(f"Policy blocked {item_id}: {check.blocking_reasons}")
     if check.warnings and not allow_warnings:
         raise ValueError(f"Policy warnings require --allow-warnings: {check.warnings}")
-    return run_caesar_affine_item(item, out_dir=out_dir, top_k=top_k, policy_id=policy.policy_id)
+    resolved_direction = _resolve_direction(item, direction)
+    return run_caesar_affine_item(item, out_dir=out_dir, top_k=top_k, policy_id=policy.policy_id, direction=resolved_direction)
 
 
 def run_caesar_affine_item(
@@ -67,17 +71,22 @@ def run_caesar_affine_item(
     out_dir: Path,
     top_k: int = 25,
     policy_id: str = "operator-policy-v0",
+    direction: str = "forward",
 ) -> BoundedRunSummary:
+    if direction not in {"forward", "reverse"}:
+        raise ValueError("direction must be 'forward' or 'reverse'.")
     start = perf_counter()
     input_slice = load_input_slice(item)
     labels = labels_by_index(repo_root() / "data/profiles/gematria/gematria-primus-v0.json")
-    run_id = f"stage3a-{item['item_id']}-{datetime.now(UTC).strftime('%Y%m%dT%H%M%SZ')}"
-    records = _build_records(run_id, str(item["item_id"]), input_slice, labels)
+    stage_label = "stage3b" if direction == "reverse" else "stage3a"
+    run_id = f"{stage_label}-{item['item_id']}-{datetime.now(UTC).strftime('%Y%m%dT%H%M%SZ')}"
+    records = _build_records(run_id, str(item["item_id"]), input_slice, labels, direction=direction)
     if len(records) != TOTAL_COUNT:
         raise ValueError(f"Expected {TOTAL_COUNT} candidates, got {len(records)}.")
     ranked = sorted(
         records,
         key=lambda record: (
+            float(record.score_summary.get("length_normalized_score", record.score_summary["total_score"])),
             float(record.score_summary["total_score"]),
             int(record.ranking_features["common_word_hit_count"]),
             -record.candidate_index,
@@ -95,6 +104,9 @@ def run_caesar_affine_item(
         "candidate_count": len(records),
         "top_candidate_index": top.candidate_index,
         "top_score": top.score_summary["total_score"],
+        "top_length_normalized_score": top.score_summary.get("length_normalized_score"),
+        "top_confidence_label": top.score_summary.get("confidence_label"),
+        "direction": direction,
         "import_enabled": False,
         "generated_outputs_ignored": True,
     }
@@ -113,6 +125,8 @@ def run_caesar_affine_item(
             "transform_family": top.transform_family,
             "transform_parameters": top.transform_parameters,
             "total_score": top.score_summary["total_score"],
+            "length_normalized_score": top.score_summary.get("length_normalized_score"),
+            "confidence_label": top.score_summary.get("confidence_label"),
             "output_sha256": top.output_sha256,
         },
         output_paths={},
@@ -138,16 +152,22 @@ def _build_records(
     queue_item_id: str,
     input_slice,
     labels: dict[int, str],
+    *,
+    direction: str,
 ) -> list[BoundedCandidateRecord]:
     records: list[BoundedCandidateRecord] = []
     candidate_index = 0
-    for params, output_indices in caesar_outputs(input_slice.index29_values):
+    caesar_generator = reverse_caesar_outputs if direction == "reverse" else caesar_outputs
+    affine_generator = reverse_affine_outputs if direction == "reverse" else affine_outputs
+    caesar_family = "caesar_shift_mod29_reverse" if direction == "reverse" else "caesar_shift_mod29"
+    affine_family = "affine_mod29_reverse" if direction == "reverse" else "affine_mod29"
+    for params, output_indices in caesar_generator(input_slice.index29_values):
         records.append(
             _record(
                 run_id,
                 queue_item_id,
-                "caesar_shift_mod29",
-                "caesar_shift_mod29",
+                caesar_family,
+                caesar_family,
                 params,
                 candidate_index,
                 input_slice.slice_id,
@@ -157,13 +177,13 @@ def _build_records(
             )
         )
         candidate_index += 1
-    for params, output_indices in affine_outputs(input_slice.index29_values):
+    for params, output_indices in affine_generator(input_slice.index29_values):
         records.append(
             _record(
                 run_id,
                 queue_item_id,
-                "affine_mod29",
-                "affine_mod29",
+                affine_family,
+                affine_family,
                 params,
                 candidate_index,
                 input_slice.slice_id,
@@ -205,6 +225,8 @@ def _record(
         score_summary=score,
         ranking_features={
             "total_score": score["total_score"],
+            "length_normalized_score": score.get("length_normalized_score", score["total_score"]),
+            "confidence_label": score.get("confidence_label", "noisy"),
             "common_word_hit_count": score["common_word_hit_count"],
             "latin_letter_count": score["latin_letter_count"],
             "entropy": score["entropy"],
@@ -225,6 +247,13 @@ def _find_item(items: list[dict[str, Any]], item_id: str) -> dict[str, Any]:
         if item.get("item_id") == item_id:
             return item
     raise ValueError(f"Queue item not found: {item_id}")
+
+
+def _resolve_direction(item: dict[str, Any], direction: str) -> str:
+    if direction != "auto":
+        return direction
+    transform_plan = dict(item.get("transform_plan", {}))
+    return str(transform_plan.get("direction", transform_plan.get("convention", "forward")))
 
 
 def _with_output_paths(summary: BoundedRunSummary, paths: dict[str, Path]) -> BoundedRunSummary:

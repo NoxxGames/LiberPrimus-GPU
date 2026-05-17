@@ -18,4 +18,14 @@ class MinimalTriageScore:
     repeated_character_penalty: float
     printable_ratio: float
     entropy: float
+    length_normalized_score: float
+    separator_aware_word_count: int
+    vowel_band_score: float
+    impossible_bigram_count: int
+    impossible_bigram_hits: list[str]
+    impossible_bigram_penalty: float
+    positive_features: list[str]
+    negative_features: list[str]
+    confidence_label: str
+    no_solve_claim: bool
     notes: list[str] = field(default_factory=list)

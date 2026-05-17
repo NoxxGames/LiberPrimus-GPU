@@ -16,18 +16,18 @@ def _write_docs(tmp_path: Path, *, readme_extra: str = "", catalog_extra: str = 
         "No Liber Primus page is claimed solved.\n\n"
         "## Current status\n\n"
         "Stage 2B complete. Stage 2C complete. Stage 2E complete. "
-        "Stage 2F complete. Stage 2G complete. Stage 2H complete. Stage 2I complete. Stage 2J complete. Stage 3A complete. Next Stage 3B.\n"
+        "Stage 2F complete. Stage 2G complete. Stage 2H complete. Stage 2I complete. Stage 2J complete. Stage 3A complete. Stage 3B complete. Next Stage 3C.\n"
         + ("Line\n" * 60)
         + readme_extra,
         encoding="utf-8",
     )
     status.write_text(
-        "# Status\n\nStage 2D current. Stage 2E complete. Stage 2F complete. Stage 2G complete. Stage 2H complete. Stage 2I complete. Stage 2J complete. Stage 3A complete.\n"
+        "# Status\n\nStage 2D current. Stage 2E complete. Stage 2F complete. Stage 2G complete. Stage 2H complete. Stage 2I complete. Stage 2J complete. Stage 3A complete. Stage 3B complete.\n"
         + ("Line\n" * 30),
         encoding="utf-8",
     )
     roadmap.write_text(
-        "# Roadmap\n\nStage 2D next. Stage 2E complete. Stage 2F complete. Stage 2G complete. Stage 2H complete. Stage 2I complete. Stage 2J complete. Stage 3A complete. Stage 3B next.\n"
+        "# Roadmap\n\nStage 2D next. Stage 2E complete. Stage 2F complete. Stage 2G complete. Stage 2H complete. Stage 2I complete. Stage 2J complete. Stage 3A complete. Stage 3B complete. Stage 3C next.\n"
         + ("Line\n" * 30),
         encoding="utf-8",
     )

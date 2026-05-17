@@ -51,7 +51,7 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "still unsolved must not receive a solve claim" in section
     assert "Canonical corpus: inactive." in section
     assert "Broad unsolved-page search campaigns: not started." in section
-    assert "Scoring campaigns: not started; Stage 3A minimal triage scoring exists only for sorting one bounded 841-candidate CPU run." in section
+    assert "Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs." in section
     assert "CUDA experiment campaigns: not started." in section
     assert "Broad search/scoring/CUDA campaigns: not started." in readme
     assert "Stage 2E: CPU exploratory experiment manifest scaffold and dry-run planner complete." in readme
@@ -61,7 +61,7 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "Stage 2I: first real bounded CPU exploratory experiment approval packet complete." in readme
     assert "Stage 2J: standing bounded CPU auto-run policy and queue scaffold complete." in readme
     assert "Stage 3A: minimal CPU Caesar plus affine executor and triage scoring complete." in readme
-    assert "Stage 3B inspect Stage 3A top candidates" in readme
+    assert "Stage 3B: Stage 3A lead inspection, scoring refinement, rerank, and reverse-direction comparison complete." in readme
 
 
 def test_readme_does_not_imply_deferred_work_is_permanently_excluded() -> None:

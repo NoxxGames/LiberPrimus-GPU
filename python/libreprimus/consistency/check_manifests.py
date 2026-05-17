@@ -37,6 +37,7 @@ STAGE2I_PROPOSAL_DIR = repo_root() / "experiments/proposals/stage2i"
 STAGE2I_APPROVAL_RECORD_DIR = repo_root() / "experiments/proposals/stage2i/approval-records"
 OPERATOR_POLICY_PATH = repo_root() / "experiments/policies/operator-policy-v0.yaml"
 BOUNDED_QUEUE_PATH = repo_root() / "experiments/queues/stage2j-bounded-cpu-queue.yaml"
+STAGE3B_BOUNDED_QUEUE_PATH = repo_root() / "experiments/queues/stage3b-bounded-cpu-queue.yaml"
 REGISTRY_PATH = repo_root() / DEFAULT_REGISTRY_PATH
 
 
@@ -66,6 +67,7 @@ def check_manifest_consistency(
     stage2i_approval_record_dir: Path = STAGE2I_APPROVAL_RECORD_DIR,
     operator_policy_path: Path = OPERATOR_POLICY_PATH,
     bounded_queue_path: Path = BOUNDED_QUEUE_PATH,
+    stage3b_bounded_queue_path: Path = STAGE3B_BOUNDED_QUEUE_PATH,
     registry_path: Path = REGISTRY_PATH,
 ) -> list[ConsistencyCheckResult]:
     results: list[ConsistencyCheckResult] = []
@@ -478,6 +480,49 @@ def check_manifest_consistency(
                 results.append(fail_result(GROUP, "stage2j_flags_false", "Queue item lacks no_solve_claim=true.", path=bounded_queue_path))
         if not any(result.check_name == "stage2j_flags_false" and result.is_failure for result in results):
             results.append(pass_result(GROUP, "stage2j_flags_false", "Stage 2J queue keeps unsafe flags false."))
+    try:
+        stage3b_queue = load_bounded_queue(stage3b_bounded_queue_path)
+        results.append(
+            pass_result(GROUP, "stage3b_queue_valid", "Stage 3B bounded queue validates.", path=stage3b_bounded_queue_path)
+        )
+    except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+        stage3b_queue = None
+        results.append(fail_result(GROUP, "stage3b_queue_valid", str(exc), path=stage3b_bounded_queue_path))
+
+    if policy is not None and stage3b_queue is not None:
+        checks = check_queue(policy, stage3b_queue)
+        pass_or_warning = {check.item_id for check in checks if not check.blocking_reasons}
+        blocked = {check.item_id for check in checks if check.blocking_reasons}
+        if "stage3b-caesar-affine-reverse-direction" in pass_or_warning:
+            results.append(pass_result(GROUP, "stage3b_reverse_item_policy_pass", "Stage 3B reverse item passes policy."))
+        else:
+            results.append(fail_result(GROUP, "stage3b_reverse_item_policy_pass", "Stage 3B reverse item does not pass policy."))
+        if "stage3b-stage3a-rerank-control" in pass_or_warning:
+            results.append(pass_result(GROUP, "stage3b_rerank_policy_pass", "Stage 3B rerank control passes policy."))
+        else:
+            results.append(fail_result(GROUP, "stage3b_rerank_policy_pass", "Stage 3B rerank control does not pass policy."))
+        if "stage3b-blocked-overbudget-control" in blocked:
+            results.append(pass_result(GROUP, "stage3b_overbudget_blocked", "Stage 3B over-budget item is blocked."))
+        else:
+            results.append(fail_result(GROUP, "stage3b_overbudget_blocked", "Stage 3B over-budget item was not blocked."))
+        for item in stage3b_queue.items:
+            if not _no_raw_dump(Path(stage3b_queue.path)):
+                results.append(
+                    fail_result(
+                        GROUP,
+                        "manifest_no_raw_dump",
+                        "Stage 3B queue appears to include raw data.",
+                        path=stage3b_bounded_queue_path,
+                    )
+                )
+            if item.get("cuda_enabled") is not False:
+                results.append(fail_result(GROUP, "stage3b_flags_false", "Queue item enables CUDA.", path=stage3b_bounded_queue_path))
+            if item.get("no_solve_claim") is not True:
+                results.append(
+                    fail_result(GROUP, "stage3b_flags_false", "Queue item lacks no_solve_claim=true.", path=stage3b_bounded_queue_path)
+                )
+        if not any(result.check_name == "stage3b_flags_false" and result.is_failure for result in results):
+            results.append(pass_result(GROUP, "stage3b_flags_false", "Stage 3B queue keeps unsafe flags false."))
     return results
 
 

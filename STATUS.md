@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3A minimal CPU Caesar plus affine executor and triage scoring is complete.
+Stage 3B lead inspection, scoring refinement, rerank, and reverse-direction bounded comparison is complete.
 
 ## Completed in Stage 0A
 
@@ -214,6 +214,20 @@ Generated candidate records, top candidates, run summary, warnings, and result-s
 
 Developer log: `docs/development-logs/2026-05-16-stage-3a-minimal-cpu-caesar-affine-executor.md`.
 
+## Completed in Stage 3B
+
+Stage 3B added candidate-inspection tooling, refined minimal triage scoring, Stage 3A reranking, a Stage 3B bounded queue, and reverse-direction Caesar plus affine execution.
+
+Stage 3A inspection result: original top lead `affine_mod29` with `a=25`, `b=1`, score `33.353307`, qualitative label `weak_noisy`. The top lead had no separator or space context.
+
+Rerank result: refined top lead `affine_mod29` with `a=19`, `b=26`, score `8.040756`, length-normalized score `6.245247`, confidence label `noisy`.
+
+Reverse-direction result: `841` candidates executed; top lead `affine_mod29_reverse` with `a=26`, `a_inverse=19`, `b=20`, score `8.040756`, confidence label `noisy`.
+
+Full candidate dumps remain ignored under `experiments/results/bounded-auto-runs/stage3b/`. Scores and top candidates are leads only, not solve evidence. CUDA remains disabled, the canonical corpus remains inactive, page boundaries remain reviewable, and no solve claim is made.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3b-lead-inspection-scoring-refinement.md`.
+
 ## Next prompt recommendation
 
-Stage 3B - inspect Stage 3A top candidates and queue the next bounded method or scoring refinement.
+Stage 3C - improve scoring calibration and add null/crib-style checks before widening transform families.

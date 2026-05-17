@@ -82,6 +82,10 @@ Stage 2H approval-gated execution is still not a benchmark stage. Approved contr
 
 Stage 3A is a small local CPU candidate enumeration, not a benchmark campaign. It runs `841` Caesar plus affine candidates for one reviewable slice and writes ignored outputs. Minimal triage scoring is used for sorting leads only. CUDA remains disabled, no throughput claim is made, and no solve claim is made.
 
+## Stage 3B Inspection And Reverse-Direction Run
+
+Stage 3B inspects ignored Stage 3A outputs, reranks candidates with refined local scoring, and runs one reverse-direction `841` candidate CPU comparison. This is still not a benchmark, broad campaign, or CUDA workload. Scores remain triage metadata only, and generated candidate dumps stay ignored.
+
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

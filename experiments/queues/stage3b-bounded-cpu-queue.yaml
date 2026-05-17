@@ -1,0 +1,139 @@
+record_type: bounded_experiment_queue
+queue_id: stage3b-bounded-cpu-queue
+queue_version: bounded-experiment-queue-v0
+policy_id: operator-policy-v0
+default_output_dir: experiments/results/bounded-auto-runs/stage3b
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+items:
+  - item_id: stage3b-caesar-affine-reverse-direction
+    description: Reverse/decryption convention comparison for the Stage 3A Caesar plus affine reviewable slice.
+    enabled: true
+    experiment_kind: caesar_affine_reviewable_slice
+    source_queue_item: experiments/queues/stage2j-bounded-cpu-queue.yaml#stage2j-caesar-affine-first-reviewable-slice
+    corpus_slice:
+      slice_id: stage3a-page-candidate-018-reviewable-slice
+      slice_kind: future_unsolved_page_candidate
+      review_required: true
+      source: rtkd-master-v0-candidate
+      corpus_candidate_id: rtkd-master-v0-candidate
+      selector:
+        selector_kind: corpus_page_candidate_token_range
+        page_candidate_id: page-candidate-018
+        candidate_local_page_index: 18
+        start_token_index: 5283
+        end_token_index: 5402
+        expected_rune_token_count: 87
+        selection_reason: Same reviewable slice as Stage 3A, using reverse/decryption transform convention.
+        raw_unsolved_text_included: false
+      metadata_paths:
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/page_candidates.jsonl
+          role: generated_ignored_page_candidate_metadata
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/tokens.jsonl
+          role: generated_ignored_token_metadata
+    transform_plan:
+      direction: reverse
+      families:
+        - transform_family: caesar_shift_mod29_reverse
+          candidate_count: 29
+          parameters:
+            shift_min: 0
+            shift_max: 28
+        - transform_family: affine_mod29_reverse
+          candidate_count: 812
+          parameters:
+            modulus: 29
+            inverse_modulus: 29
+    candidate_count_upper_bound: 841
+    estimated_runtime_seconds: 60
+    generated_output_budget_mb: 10
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: minimal_triage
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3b/reverse_direction
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: ready
+
+  - item_id: stage3b-stage3a-rerank-control
+    description: Rerank existing Stage 3A generated candidates with refined minimal triage scoring.
+    enabled: true
+    experiment_kind: rerank_existing_candidates
+    source_results_dir: experiments/results/bounded-auto-runs/stage3a
+    corpus_slice:
+      slice_id: stage3a-page-candidate-018-reviewable-slice
+      slice_kind: generated_candidate_rerank_control
+      raw_unsolved_text_included: false
+    transform_plan:
+      direction: none
+      families:
+        - transform_family: score_rerank_only
+          candidate_count: 841
+    candidate_count_upper_bound: 841
+    estimated_runtime_seconds: 30
+    generated_output_budget_mb: 5
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: minimal_triage
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3b
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: ready
+
+  - item_id: stage3b-blocked-overbudget-control
+    description: Deliberate over-budget Stage 3B control proving the standing policy still blocks large work.
+    enabled: true
+    experiment_kind: blocked_overbudget_example
+    expected_policy_status: fail
+    corpus_slice:
+      slice_id: stage3b-blocked-overbudget-control
+      slice_kind: synthetic_policy_test
+      raw_unsolved_text_included: false
+    transform_plan:
+      families:
+        - transform_family: overbudget_policy_test
+          candidate_count: 100001
+    candidate_count_upper_bound: 100001
+    estimated_runtime_seconds: 60
+    generated_output_budget_mb: 5
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: false
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: none
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3b
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: blocked_example

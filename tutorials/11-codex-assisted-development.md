@@ -83,3 +83,7 @@ For bounded auto-run policy work, require `libreprimus bounded-experiment valida
 ## Stage 3A Guardrails
 
 For minimal bounded executor work, require `libreprimus bounded-run run-caesar-affine`, `bounded-run summary`, schema validation, and generated-output ignore checks. Full candidate outputs must remain ignored. Committed notes may summarize run ID, candidate count, top score, and transform parameters only. Minimal triage scores and top-k records are leads, not solve evidence.
+
+## Stage 3B Guardrails
+
+For lead inspection and scoring refinement work, require `libreprimus candidate-inspect inspect-stage3a`, `bounded-run rerank`, reverse-direction bounded-run smoke when implemented, schema or summary validation, and generated-output ignore checks. Full candidate outputs must not be committed. Research logs may summarize scores, qualitative labels, and transform parameters only, and must not claim a solve.

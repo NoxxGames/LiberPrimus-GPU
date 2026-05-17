@@ -328,6 +328,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - CUDA remains disabled until a future explicit CUDA stage adds CPU/GPU parity tests.
 - Canonical corpus remains inactive and page boundaries remain reviewable.
 
+## Stage 3B Lead Inspection And Scoring Rules
+
+- Stage 3B top candidates are leads only.
+- Minimal or refined triage scoring cannot justify solve claims.
+- Full candidate dumps remain generated outputs and must not be committed.
+- Research logs may summarize top transform parameters, scores, qualitative labels, and safety flags only.
+- Reranking and reverse-direction comparisons must stay within the standing bounded CPU policy.
+- CUDA, canonical corpus activation, page-boundary finalization, broad search campaigns, and solve claims remain out of scope.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

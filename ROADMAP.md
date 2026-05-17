@@ -146,6 +146,12 @@ Stage 3A added bounded candidate output schemas, minimal deterministic triage sc
 
 Inspect Stage 3A top candidates as leads, add null-control expectations, and queue the next bounded method or scoring refinement. Do not escalate to broad campaigns, CUDA, canonical corpus activation, page-boundary finalization, or solve claims.
 
+Stage 3B added candidate inspection, refined scoring, reranking, a Stage 3B bounded queue, and a reverse-direction Caesar plus affine comparison. Results remain noisy and no solve claim is made.
+
+## Stage 3C - Scoring calibration and null controls
+
+Improve score calibration with null controls, crib/phrase sanity checks, and clearer lead review thresholds before widening transform families. Do not jump directly to CUDA or broad unsolved search.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

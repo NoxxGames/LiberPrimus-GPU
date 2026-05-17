@@ -28,6 +28,11 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/results/bounded-auto-runs/stage3a/candidate_records.jsonl",
         "experiments/results/bounded-auto-runs/stage3a/top_candidates.jsonl",
         "experiments/results/bounded-auto-runs/stage3a/summary.json",
+        "experiments/results/bounded-auto-runs/stage3b/reranked_top_candidates.jsonl",
+        "experiments/results/bounded-auto-runs/stage3b/rerank_summary.json",
+        "experiments/results/bounded-auto-runs/stage3b/reverse_direction/candidate_records.jsonl",
+        "experiments/results/bounded-auto-runs/stage3b/reverse_direction/top_candidates.jsonl",
+        "experiments/results/bounded-auto-runs/stage3b/reverse_direction/summary.json",
         "local-test.sqlite3",
     ]
     trackable_paths = [
@@ -44,6 +49,7 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "schemas/experiments/bounded-candidate-record-v0.schema.json",
         "schemas/scoring/minimal-triage-score-v0.schema.json",
         "data/scoring/english-common-words-tiny-v0.txt",
+        "data/scoring/english-impossible-bigrams-tiny-v0.txt",
         "experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml",
         "experiments/manifests/exploratory/stage2e-caesar-preview-dry-run.yaml",
         "experiments/manifests/cpu-execution/stage2f-synthetic-direct-execution.yaml",
@@ -52,6 +58,7 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/proposals/stage2i/stage2i-first-bounded-caesar-affine-review.yaml",
         "experiments/policies/operator-policy-v0.yaml",
         "experiments/queues/stage2j-bounded-cpu-queue.yaml",
+        "experiments/queues/stage3b-bounded-cpu-queue.yaml",
     ]
     for path in ignored_paths:
         if _is_ignored(root, path):

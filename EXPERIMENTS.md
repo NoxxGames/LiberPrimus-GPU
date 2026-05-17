@@ -173,3 +173,21 @@ Run:
 ```
 
 Generated `candidate_records.jsonl`, `top_candidates.jsonl`, `summary.json`, warnings, and result-store previews are ignored under `experiments/results/bounded-auto-runs/stage3a/`. Minimal triage scores are not solve evidence and must not be used to claim a page is solved.
+
+## Stage 3B Lead Inspection And Reverse-Direction Queue
+
+Stage 3B adds candidate-inspection tooling for the Stage 3A generated outputs, refines minimal triage scoring, reranks the original `841` candidates, and adds `experiments/queues/stage3b-bounded-cpu-queue.yaml`.
+
+Run the inspection summary without committing full candidates:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli candidate-inspect inspect-stage3a --results-dir experiments/results/bounded-auto-runs/stage3a --top-n 25 --out-markdown research-log/2026-05-16-stage-3b-stage3a-lead-inspection.md
+```
+
+Run the bounded reverse-direction comparison:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli bounded-run run-caesar-affine --policy experiments/policies/operator-policy-v0.yaml --queue experiments/queues/stage3b-bounded-cpu-queue.yaml --item-id stage3b-caesar-affine-reverse-direction --out-dir experiments/results/bounded-auto-runs/stage3b/reverse_direction --top-k 25 --allow-warnings
+```
+
+Generated rerank and reverse-direction outputs remain ignored under `experiments/results/bounded-auto-runs/stage3b/`. Research logs may summarize top transform parameters, scores, and qualitative labels only. Stage 3B top candidates are leads, not solve evidence.

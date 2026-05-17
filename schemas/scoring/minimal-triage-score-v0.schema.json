@@ -15,7 +15,17 @@
     "common_word_hits",
     "repeated_character_penalty",
     "printable_ratio",
-    "entropy"
+    "entropy",
+    "length_normalized_score",
+    "separator_aware_word_count",
+    "vowel_band_score",
+    "impossible_bigram_count",
+    "impossible_bigram_hits",
+    "impossible_bigram_penalty",
+    "positive_features",
+    "negative_features",
+    "confidence_label",
+    "no_solve_claim"
   ],
   "properties": {
     "record_type": { "const": "minimal_triage_score" },
@@ -31,6 +41,27 @@
     },
     "repeated_character_penalty": { "type": "number" },
     "printable_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
-    "entropy": { "type": "number", "minimum": 0 }
+    "entropy": { "type": "number", "minimum": 0 },
+    "length_normalized_score": { "type": "number" },
+    "separator_aware_word_count": { "type": "integer", "minimum": 0 },
+    "vowel_band_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "impossible_bigram_count": { "type": "integer", "minimum": 0 },
+    "impossible_bigram_hits": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "impossible_bigram_penalty": { "type": "number", "minimum": 0 },
+    "positive_features": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "negative_features": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "confidence_label": {
+      "enum": ["lead", "weak_lead", "noisy", "garbage"]
+    },
+    "no_solve_claim": { "const": true }
   }
 }

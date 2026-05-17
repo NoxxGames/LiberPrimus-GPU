@@ -28,3 +28,5 @@ Required fields include:
 Generated candidate records are ignored output. Do not commit `candidate_records.jsonl`, `top_candidates.jsonl`, SQLite outputs, or bulk result files.
 
 The summary schema is `schemas/experiments/bounded-experiment-run-summary-v0.schema.json`. Summary records can be used to write committed research-log notes, but committed notes should include counts and top score metadata only, not full candidate dumps.
+
+Stage 3B refined score summaries include length-normalized scores, separator-aware word counts, impossible-bigram counts, feature explanations, and a confidence label. These fields are triage metadata only; they do not justify a solve claim.

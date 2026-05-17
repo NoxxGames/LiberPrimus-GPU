@@ -252,4 +252,10 @@ Generated `bounded_candidate_record` rows are ignored output under `experiments/
 
 Minimal triage score records are deterministic local CPU scoring summaries. They are sorting metadata only and are not solve evidence.
 
+## Stage 3B Refined Triage And Inspection Outputs
+
+Stage 3B extends `minimal-triage-score-v0` with length-normalized score fields, separator-aware word counts, vowel-band checks, repeated-symbol penalties, tiny impossible-bigram penalties, feature explanations, confidence labels, and `no_solve_claim=true`.
+
+Candidate-inspection and rerank outputs are generated records under `experiments/results/bounded-auto-runs/stage3b/`. They may include reranked top-k JSONL and summary JSON, but those files remain ignored outputs and must not be committed. Committed research logs may include top score metadata and transform parameters only, not full candidate text dumps.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.
