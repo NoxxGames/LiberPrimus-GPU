@@ -21,7 +21,7 @@ Stage 3E ingests the method-prioritization backlog, converts the top recommendat
 
 ## Validation Result
 
-The Stage 3E queue contains six items with total deterministic candidate estimate `780`. All items fit the standing operator policy. No item executed because required executors are missing or dry-run-only.
+The Stage 3E queue initially contained six items with total deterministic candidate estimate `780`. Stage 3G adds the future Mersenne/perfect-number probe, bringing the current queue to seven items with total deterministic candidate estimate `972`. All items fit the standing operator policy. Items without executors remain deferred or dry-run-only instead of being faked as runnable.
 
 ## What This Proves
 
@@ -33,4 +33,4 @@ It does not test the queued transforms, generate candidates, score outputs, use 
 
 ## Next Stage
 
-Stage 3F should implement the reset/advance-aware evidence-key Vigenere pack executor and run the LP evidence pack if it remains within policy.
+Stage 3F implemented the reset/advance-aware evidence-key Vigenere pack executor. Stage 3G implemented the p56-local prime offset executor. The next bounded stage should focus on reset/advance ablation, family-specific negative controls, or careful inspection of Stage 3G leads.

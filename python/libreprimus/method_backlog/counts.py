@@ -23,6 +23,13 @@ def candidate_count_for_item(item: dict[str, Any]) -> int:
             * len(params.get("directions", []))
             * len(params.get("reset_modes", []))
         )
+    if kind == "mersenne_prime_stream_tiny":
+        return (
+            len(params.get("stream_variants", []))
+            * _count_range(params.get("offsets"))
+            * len(params.get("directions", []))
+            * len(params.get("reset_modes", []))
+        )
     families = dict(item.get("transform_plan", {})).get("families", [])
     return sum(int(family.get("candidate_count", 0)) for family in families if isinstance(family, dict))
 
@@ -46,7 +53,7 @@ def _count_range(value: Any) -> int:
         return len(value)
     if isinstance(value, dict):
         start = int(value.get("start", 0))
-        end = int(value.get("end", -1))
+        end = int(value.get("end", value.get("stop_inclusive", -1)))
         step = int(value.get("step", 1))
         if step <= 0:
             raise ValueError("Range step must be positive.")

@@ -15,7 +15,7 @@ def test_method_backlog_schema_validates() -> None:
     assert backlog.payload["record_type"] == "method_backlog"
     assert backlog.payload["no_solve_claim"] is True
     assert backlog.payload["cuda_enabled"] is False
-    assert len(backlog.items) == 6
+    assert len(backlog.items) == 7
 
 
 def test_all_stage3e_backlog_items_validate() -> None:

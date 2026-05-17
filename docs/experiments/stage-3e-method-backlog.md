@@ -14,7 +14,7 @@ The machine-readable backlog is `experiments/queues/stage3e-method-backlog.yaml`
 
 ## Backlog Items
 
-Stage 3E records six candidate method families:
+The Stage 3E backlog started with six candidate method families. Stage 3G adds one future low-cost probe:
 
 - `stage3e_vig_lp_evidence_pack_v1`: LP evidence Vigenere key pack, `48` candidates.
 - `stage3e_prime_minus_one_offsets_v1`: p56-local prime-minus-one offset sweep, `256` candidates.
@@ -22,8 +22,9 @@ Stage 3E records six candidate method families:
 - `stage3e_negative_control_extension_v1`: family-specific negative controls, `100` candidates.
 - `stage3e_reset_advance_ablation_v1`: reset/advance ablation dry-run, `64` candidates.
 - `stage3e_prime_mod_gap_pack_v1`: prime neighbour stream dry-run, `256` candidates.
+- `stage3i_mersenne_prime_stream_tiny_v1`: future Mersenne/perfect-number stream probe, `192` candidates, `needs_executor`.
 
-Total deterministic candidate estimate: `780`.
+Total deterministic candidate estimate after Stage 3G: `972`.
 
 ## Scope Controls
 

@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3F evidence-key Vigenere pack execution is complete.
+Stage 3G p56-local prime-minus-one offset sweep execution is complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, and Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, and Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 
@@ -256,9 +256,9 @@ Developer log: `docs/development-logs/2026-05-16-stage-3d-small-vigenere-key-lis
 
 Stage 3E ingested the Deep Research method backlog into committed backlog and bounded queue manifests, added method backlog schemas, deterministic candidate-count validation, dry-run CLI support, executor-support classification, tests, documentation, and summary-only research logs.
 
-Queue summary: six items, total deterministic candidate estimate `780`. LP evidence Vigenere pack `48`, p56 local prime-minus-one offsets `256`, historical Vigenere pack `56`, family-specific negative controls `100`, reset/advance ablation `64`, and prime mod/gap pack `256`.
+Queue summary after Stage 3G: seven items, total deterministic candidate estimate `972`. LP evidence Vigenere pack `48`, p56 local prime-minus-one offsets `256`, historical Vigenere pack `56`, family-specific negative controls `100`, reset/advance ablation `64`, prime mod/gap pack `256`, and future Mersenne/perfect-number probe `192`.
 
-Dry-run result: all six items fit the standing operator policy, but no item executed in Stage 3E. Four items are marked `needs_executor`, two items are `dry_run_only`, and missing executors are recorded explicitly instead of faking candidate output.
+Dry-run result after Stage 3G: all seven items fit the standing operator policy. Two items are runnable now, three are marked `needs_executor`, two are `dry_run_only`, and missing executors are recorded explicitly instead of faking candidate output.
 
 Generated dry-run output remains ignored under `experiments/results/bounded-auto-runs/stage3e/`. CUDA remains disabled, the canonical corpus remains inactive, page boundaries remain reviewable, and no solve claim is made.
 
@@ -276,6 +276,20 @@ Generated candidate outputs remain ignored under `experiments/results/bounded-au
 
 Developer log: `docs/development-logs/2026-05-16-stage-3f-evidence-key-vigenere-pack.md`.
 
+## Completed in Stage 3G
+
+Stage 3G implemented `libreprimus bounded-run run-prime-offset-sweep` for the p56-local prime-minus-one offset sweep and executed `stage3e_prime_minus_one_offsets_v1`.
+
+Run summary: `256` expected candidates, `256` executed, `0` deferred. The run used offsets `0..63`, directions `forward` and `reverse`, and reset modes `none` and `line`. The input slice stayed `stage3a-page-candidate-018-reviewable-slice`.
+
+Top lead: offset `29`, direction `reverse`, reset `line`, score `1.36709`, calibrated label `inconclusive`. The result is a lead only and not solve evidence.
+
+Stage 3G also added future probe `stage3i_mersenne_prime_stream_tiny_v1` to the backlog and queue with candidate count `192`, implementation status `needs_executor`, and execution disabled for this stage.
+
+Generated candidate outputs remain ignored under `experiments/results/bounded-auto-runs/stage3g/`. CUDA remains disabled, the canonical corpus remains inactive, page boundaries remain reviewable, and no solve claim is made.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3g-p56-local-prime-offset-sweep.md`.
+
 ## Next prompt recommendation
 
-Stage 3G - implement the p56-local prime-minus-one offset sweep, or inspect Stage 3F top candidates first if a human wants to review noisy Vigenere leads.
+Stage 3H - implement reset/advance ablation or family-specific negative-control extension, or inspect Stage 3G top candidates first if a human wants to review inconclusive p56-local leads.

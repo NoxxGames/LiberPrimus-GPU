@@ -228,7 +228,7 @@ Run the dry-run count and support check:
 .\.venv\Scripts\python.exe -m libreprimus.cli bounded-experiment dry-run-queue --policy experiments/policies/operator-policy-v0.yaml --queue experiments/queues/stage3e-bounded-cpu-queue.yaml --out-dir experiments/results/bounded-auto-runs/stage3e --allow-warnings
 ```
 
-The queue currently contains six items with total deterministic candidate estimate `780`: LP evidence Vigenere `48`, p56 local prime-minus-one offsets `256`, historical Vigenere `56`, family-specific negative controls `100`, reset/advance ablation `64`, and prime mod/gap `256`.
+The queue currently contains seven items with total deterministic candidate estimate `972`: LP evidence Vigenere `48`, p56 local prime-minus-one offsets `256`, historical Vigenere `56`, family-specific negative controls `100`, reset/advance ablation `64`, prime mod/gap `256`, and future Mersenne/perfect-number probe `192`.
 
 Stage 3E is an ingestion and dry-run stage. It does not execute items whose reset/advance, prime-offset, or family-specific negative-control executors are missing. Generated dry-run summaries remain ignored under `experiments/results/bounded-auto-runs/stage3e/`, and no candidate dumps, CUDA work, canonical corpus activation, page-boundary finalization, or solve claims are produced.
 
@@ -247,3 +247,21 @@ Stage 3F runs the first Stage 3E item whose missing executor was implemented:
 ```
 
 The run is limited to the 12 declared LP evidence keys, reset modes `none` and `line`, and advance modes `runes_only` and `token_break_preserving`. Candidate count is `48`. Generated outputs remain ignored under `experiments/results/bounded-auto-runs/stage3f/`. The Stage 3F top candidate is classified `noisy`; no solve claim is made.
+
+## Stage 3G p56-local prime offset sweep
+
+Stage 3G runs the bounded p56-local prime-minus-one offset sweep:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli bounded-run run-prime-offset-sweep `
+  --policy experiments/policies/operator-policy-v0.yaml `
+  --queue experiments/queues/stage3e-bounded-cpu-queue.yaml `
+  --item-id stage3e_prime_minus_one_offsets_v1 `
+  --out-dir experiments/results/bounded-auto-runs/stage3g `
+  --top-k 25 `
+  --allow-warnings
+```
+
+The run is limited to offsets `0..63`, directions `forward` and `reverse`, and reset modes `none` and `line`, for `256` candidates. Generated outputs remain ignored under `experiments/results/bounded-auto-runs/stage3g/`. The Stage 3G top candidate is classified `inconclusive`; no solve claim is made.
+
+Stage 3G also adds `stage3i_mersenne_prime_stream_tiny_v1` as a future `192` candidate dry-run-only probe. It is not executed in Stage 3G.

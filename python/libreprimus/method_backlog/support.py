@@ -19,6 +19,12 @@ def classify_executor_support(item: dict[str, Any]) -> tuple[str, str]:
             return "runnable_now", "stage3f_evidence_key_pack_executor"
         return "needs_executor", "reset_advance_key_pack_executor"
     if kind == "prime_minus_one_offset_sweep":
+        if (
+            item.get("item_id") == "stage3e_prime_minus_one_offsets_v1"
+            and declared == "runnable_now"
+            and item.get("required_executor") == "stage3g_prime_offset_sweep_executor"
+        ):
+            return "runnable_now", "stage3g_prime_offset_sweep_executor"
         return "needs_executor", "prime_offset_sweep_executor"
     if kind == "family_specific_negative_controls":
         return "needs_executor", "family_specific_negative_control_executor"
@@ -26,6 +32,8 @@ def classify_executor_support(item: dict[str, Any]) -> tuple[str, str]:
         return "dry_run_only", "reset_advance_state_machine"
     if kind == "prime_neighbour_streams":
         return "dry_run_only", "prime_neighbour_stream_executor"
+    if kind == "mersenne_prime_stream_tiny":
+        return "needs_executor", "mersenne_prime_stream_executor"
     return "needs_executor", f"unsupported_experiment_kind:{kind}"
 
 

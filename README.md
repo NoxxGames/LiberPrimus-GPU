@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3F and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3G and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -22,7 +22,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad unsolved-page search campaigns: not started.
-- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, and Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only.
+- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, and Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
 - Broad unsolved-page campaigns: not started.
@@ -31,7 +31,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 3G implementation of the next highest-priority missing executor, starting with the p56-local prime-minus-one offset sweep if Stage 3F remains noisy.
+- Stage 3H implementation of reset/advance ablation or family-specific negative controls if Stage 3G remains noisy.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
 - Benchmark campaigns after stable CPU/GPU baselines exist.
@@ -57,6 +57,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Small explicit-key Vigenere preview for the four declared known-motif keys, with calibrated scoring and ignored generated outputs.
 - Deep Research method backlog ingestion, deterministic Stage 3E queue counts, and dry-run executor-support classification.
 - Reset/advance-aware Stage 3F LP evidence-key Vigenere pack executor and 48-candidate run.
+- Bounded Stage 3G p56-local prime-minus-one offset sweep executor and 256-candidate run, plus a queued future Mersenne/perfect-number probe.
 
 ## Architecture summary
 
@@ -82,13 +83,14 @@ Current status:
 - Stage 3D: small Vigenere known-motif key-list preview complete.
 - Stage 3E: Deep Research method backlog ingestion and bounded queue dry-run complete.
 - Stage 3F: LP evidence-key Vigenere pack execution complete.
+- Stage 3G: p56-local prime-minus-one offset sweep complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad search/scoring/CUDA campaigns: not started.
-- Latest bounded review: Stage 3F executed all `48` LP evidence-key Vigenere candidates for `stage3e_vig_lp_evidence_pack_v1`; top key `EMERGE`, reset `none`, advance `runes_only`, calibrated label `noisy`; no solve claim.
-- Next: Stage 3G implement the p56-local prime-minus-one offset sweep, or inspect Stage 3F top candidates only if a human wants to review the noisy leads first.
+- Latest bounded review: Stage 3G executed all `256` p56-local prime-minus-one offset candidates for `stage3e_prime_minus_one_offsets_v1`; top offset `29`, direction `reverse`, reset `line`, calibrated label `inconclusive`; no solve claim.
+- Next: Stage 3H implement reset/advance ablation or family-specific negative controls, or inspect Stage 3G top candidates only if a human wants to review the inconclusive leads first.
 
 ## CI status
 
@@ -223,9 +225,11 @@ Stage 3B inspected Stage 3A top candidates, refined the scorer, reranked the 841
 
 Stage 3C calibrated scoring against positive solved-fixture controls, deterministic null controls, negative controls, and tiny crib checks. Stage 3D ran the conservative small Vigenere known-motif key-list preview for exactly four declared keys. The top key was `LIBER`, calibrated as `noisy`.
 
-Stage 3E ingests the Deep Research method backlog, commits `experiments/queues/stage3e-method-backlog.yaml` and `experiments/queues/stage3e-bounded-cpu-queue.yaml`, and dry-runs six bounded methods with deterministic counts: LP evidence Vigenere `48`, p56 local prime-minus-one offsets `256`, historical Vigenere `56`, family-specific negative controls `100`, reset/advance ablation `64`, and prime mod/gap `256`.
+Stage 3E ingests the Deep Research method backlog, commits `experiments/queues/stage3e-method-backlog.yaml` and `experiments/queues/stage3e-bounded-cpu-queue.yaml`, and dry-runs bounded methods with deterministic counts: LP evidence Vigenere `48`, p56 local prime-minus-one offsets `256`, historical Vigenere `56`, family-specific negative controls `100`, reset/advance ablation `64`, prime mod/gap `256`, and future Mersenne/perfect-number probe `192`.
 
 Stage 3F implements the reset/advance-aware evidence-key Vigenere pack executor and runs only `stage3e_vig_lp_evidence_pack_v1`. It executes `48` candidates, records key/reset/advance metadata, leaves generated outputs ignored, and makes no solve claim.
+
+Stage 3G implements the p56-local prime-minus-one offset sweep executor and runs only `stage3e_prime_minus_one_offsets_v1`. It executes `256` candidates, records offset/direction/reset metadata, leaves generated outputs ignored, adds a future `192` candidate Mersenne/perfect-number probe to the queue without executing it, and makes no solve claim.
 
 ## Stage 1B Atbash-Family Fixtures
 

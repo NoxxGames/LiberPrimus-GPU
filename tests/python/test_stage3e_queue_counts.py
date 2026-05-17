@@ -23,6 +23,7 @@ def test_stage3e_queue_validates_and_counts_match() -> None:
         "stage3e_negative_control_extension_v1": 100,
         "stage3e_reset_advance_ablation_v1": 64,
         "stage3e_prime_mod_gap_pack_v1": 256,
+        "stage3i_mersenne_prime_stream_tiny_v1": 192,
     }
 
 
@@ -32,4 +33,4 @@ def test_stage3e_queue_items_are_under_operator_policy() -> None:
     checks = check_queue(policy, queue)
 
     assert all(not check.blocking_reasons for check in checks)
-    assert all(check.item_id.startswith("stage3e_") for check in checks)
+    assert all(check.item_id.startswith(("stage3e_", "stage3i_")) for check in checks)

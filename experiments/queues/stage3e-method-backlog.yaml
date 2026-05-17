@@ -45,17 +45,17 @@ items:
       reset_modes: [none, line]
     candidate_count_estimate: 256
     operator_policy_status: within_policy
-    implementation_status: needs_executor
+    implementation_status: runnable_now
     required_controls: [stage3c_calibration, null_controls, p56_solved_fixture_regression]
     generated_output_policy:
-      output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_prime_minus_one_offsets_v1
+      output_dir: experiments/results/bounded-auto-runs/stage3g
       commit_outputs: false
     no_solve_claim: true
     cuda_enabled: false
     canonical_corpus_active: false
     page_boundaries_final: false
     notes:
-      - Existing prime-minus-one support is solved-fixture scoped and does not implement offset/direction/reset sweeps.
+      - Stage 3G implements the bounded p56-local offset, direction, and reset sweep executor for this item.
 
   - experiment_id: stage3e_vig_history_key_pack_v1
     short_name: Historical motif Vigenere key pack
@@ -158,3 +158,40 @@ items:
     page_boundaries_final: false
     notes:
       - Queued for count validation only until prime-neighbour stream executors exist.
+
+  - experiment_id: stage3i_mersenne_prime_stream_tiny_v1
+    short_name: Mersenne / perfect-number stream tiny pack
+    hypothesis: Mersenne-prime-derived streams may be relevant because Cicada used primes, binary/XOR-style processing, Gematria prime values, and p56 uses a prime-derived stream. Evidence is weak-to-moderate, but the test is cheap.
+    evidence_basis: Weak-to-moderate adjacent control family from prime-derived stream use, binary motifs, and low-cost modulo-29 falsification.
+    evidence_level: weak_to_moderate
+    transform_family: mersenne_prime_stream
+    exact_parameters:
+      exponent_sequence: [2, 3, 5, 7, 13, 17, 19, 31]
+      stream_variants: [mersenne_mod29, mersenne_minus_one_mod29, perfect_number_mod29]
+      offsets:
+        start: 0
+        stop_inclusive: 15
+      directions: [forward, reverse]
+      reset_modes: [none, line]
+      broad_sequence_search_enabled: false
+      arbitrary_oeis_search_enabled: false
+      unconstrained_skip_masks: false
+    candidate_count_estimate: 192
+    operator_policy_status: auto_runnable_after_executor
+    implementation_status: needs_executor
+    priority: low_cost_probe
+    run_after:
+      - stage3e_prime_minus_one_offsets_v1
+      - stage3e_reset_advance_ablation_v1
+    required_controls: [stage3c_calibration, null_controls, p56_local_prime_family_comparison]
+    generated_output_policy:
+      output_dir: experiments/results/bounded-auto-runs/stage3i/stage3i_mersenne_prime_stream_tiny_v1
+      commit_outputs: false
+      execution_enabled: false
+    scoring_enabled: calibrated_triage
+    no_solve_claim: true
+    cuda_enabled: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    notes:
+      - Added as a bounded future probe. Do not execute during Stage 3G.

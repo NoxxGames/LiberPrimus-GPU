@@ -372,6 +372,17 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Key-pack hits are leads only, not solve claims.
 - Full Stage 3F candidate outputs under `experiments/results/bounded-auto-runs/stage3f/` are generated outputs and must not be committed.
 
+## Stage 3G Prime Offset Sweep Rules
+
+- Prime offset sweeps must remain bounded by committed queue parameters.
+- Offsets, directions, and reset modes must be recorded in candidate output.
+- Missing line metadata must cause warnings or deferred candidates, not invented boundaries.
+- Mersenne/perfect-number stream probes are low-cost hypotheses, not high-priority evidence.
+- Mersenne probes must stay tiny, documented, and executor-gated before execution.
+- Do not broaden to arbitrary number sequences without backlog update and policy count validation.
+- Prime-stream hits are leads only, not solve claims.
+- Full Stage 3G candidate outputs under `experiments/results/bounded-auto-runs/stage3g/` are generated outputs and must not be committed.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

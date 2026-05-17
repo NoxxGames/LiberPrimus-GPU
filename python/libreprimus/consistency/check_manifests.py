@@ -597,8 +597,8 @@ def check_manifest_consistency(
         results.append(fail_result(GROUP, "stage3e_queue_valid", str(exc), path=stage3e_bounded_queue_path))
 
     if stage3e_backlog is not None:
-        if len(stage3e_backlog.items) >= 6:
-            results.append(pass_result(GROUP, "stage3e_backlog_item_count", "Stage 3E backlog has at least six items."))
+        if len(stage3e_backlog.items) >= 7:
+            results.append(pass_result(GROUP, "stage3e_backlog_item_count", "Stage 3E backlog has at least seven items."))
         else:
             results.append(fail_result(GROUP, "stage3e_backlog_item_count", "Stage 3E backlog is missing items."))
         for item in stage3e_backlog.items:
@@ -633,6 +633,7 @@ def check_manifest_consistency(
             "stage3e_negative_control_extension_v1": 100,
             "stage3e_reset_advance_ablation_v1": 64,
             "stage3e_prime_mod_gap_pack_v1": 256,
+            "stage3i_mersenne_prime_stream_tiny_v1": 192,
         }
         support_statuses: dict[str, str] = {}
         for item in stage3e_queue.items:
@@ -681,7 +682,7 @@ def check_manifest_consistency(
         if not any(result.check_name == "stage3e_flags_false" and result.is_failure for result in results):
             results.append(pass_result(GROUP, "stage3e_flags_false", "Stage 3E queue keeps unsafe flags false."))
         if (
-            sum(1 for status in support_statuses.values() if status == "runnable_now") == 1
+            sum(1 for status in support_statuses.values() if status == "runnable_now") == 2
             and sum(1 for status in support_statuses.values() if status == "needs_executor") == 3
             and sum(
             1 for status in support_statuses.values() if status == "dry_run_only"

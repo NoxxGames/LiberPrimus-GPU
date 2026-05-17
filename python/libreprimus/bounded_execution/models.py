@@ -86,3 +86,4 @@ class BoundedRunSummary:
     reset_modes: list[str] | None = None
     advance_modes: list[str] | None = None
     confidence_distribution: dict[str, int] | None = None
+    prime_candidate_count: int | None = None

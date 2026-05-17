@@ -64,14 +64,30 @@ items:
     status: queued_runnable_stage3f
 
   - item_id: stage3e_prime_minus_one_offsets_v1
-    description: p56-local prime-minus-one offset sweep; dry-run until prime offset sweep executor exists.
+    description: p56-local prime-minus-one offset sweep; runnable via Stage 3G prime offset executor.
     enabled: true
     experiment_kind: prime_minus_one_offset_sweep
-    implementation_status: needs_executor
-    required_executor: prime_offset_sweep_executor
+    implementation_status: runnable_now
+    required_executor: stage3g_prime_offset_sweep_executor
     corpus_slice:
       slice_id: stage3a-page-candidate-018-reviewable-slice
       slice_kind: future_unsolved_page_candidate
+      review_required: true
+      source: rtkd-master-v0-candidate
+      corpus_candidate_id: rtkd-master-v0-candidate
+      selector:
+        selector_kind: corpus_page_candidate_token_range
+        page_candidate_id: page-candidate-018
+        candidate_local_page_index: 18
+        start_token_index: 5283
+        end_token_index: 5402
+        expected_rune_token_count: 87
+        raw_unsolved_text_included: false
+      metadata_paths:
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/page_candidates.jsonl
+          role: generated_ignored_page_candidate_metadata
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/tokens.jsonl
+          role: generated_ignored_token_metadata
       raw_unsolved_text_included: false
     transform_plan:
       transform_family: prime_minus_one_offset_sweep
@@ -99,10 +115,10 @@ items:
       mode: generated_ignored_preview
       import_enabled: false
     output_policy:
-      generated_output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_prime_minus_one_offsets_v1
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3g
       commit_outputs: false
       write_candidate_plaintexts: false
-    status: queued_needs_executor
+    status: queued_runnable_stage3g
 
   - item_id: stage3e_vig_history_key_pack_v1
     description: Historical motif Vigenere key pack; dry-run until reset/advance executor exists.
@@ -268,3 +284,50 @@ items:
       commit_outputs: false
       write_candidate_plaintexts: false
     status: dry_run_only
+
+  - item_id: stage3i_mersenne_prime_stream_tiny_v1
+    description: Mersenne-prime and perfect-number stream tiny probe; queued as future low-cost falsification test only.
+    enabled: true
+    dry_run_only: true
+    experiment_kind: mersenne_prime_stream_tiny
+    implementation_status: needs_executor
+    required_executor: mersenne_prime_stream_executor
+    corpus_slice:
+      slice_id: stage3a-page-candidate-018-reviewable-slice
+      slice_kind: future_unsolved_page_candidate
+      raw_unsolved_text_included: false
+    transform_plan:
+      transform_family: mersenne_prime_stream
+      parameters:
+        exponent_sequence: [2, 3, 5, 7, 13, 17, 19, 31]
+        stream_variants: [mersenne_mod29, mersenne_minus_one_mod29, perfect_number_mod29]
+        offsets:
+          start: 0
+          stop_inclusive: 15
+        directions: [forward, reverse]
+        reset_modes: [none, line]
+        broad_sequence_search_enabled: false
+        arbitrary_oeis_search_enabled: false
+        unconstrained_skip_masks: false
+    candidate_count_upper_bound: 192
+    estimated_runtime_seconds: 60
+    generated_output_budget_mb: 20
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: calibrated_triage
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3i/stage3i_mersenne_prime_stream_tiny_v1
+      commit_outputs: false
+      write_candidate_plaintexts: false
+      execution_enabled: false
+    status: queued_needs_executor_future_probe

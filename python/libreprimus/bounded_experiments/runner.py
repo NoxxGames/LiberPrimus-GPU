@@ -13,6 +13,8 @@ from libreprimus.bounded_experiments.policy_checker import check_queue
 from libreprimus.bounded_experiments.policy_loader import load_operator_policy
 from libreprimus.bounded_experiments.queue_loader import load_bounded_queue
 from libreprimus.bounded_execution.models import MissingReviewableSliceInput
+from libreprimus.bounded_execution.prime_offset_sweep import TARGET_ITEM_ID as STAGE3G_PRIME_OFFSET_ITEM_ID
+from libreprimus.bounded_execution.prime_offset_sweep import run_prime_offset_sweep_item
 from libreprimus.bounded_execution.runner import run_caesar_affine_item
 from libreprimus.bounded_execution.vigenere_key_pack import TARGET_ITEM_ID as STAGE3F_KEY_PACK_ITEM_ID
 from libreprimus.bounded_execution.vigenere_key_pack import run_vigenere_key_pack_item
@@ -237,6 +239,41 @@ def _run_policy_passing_item(
             scoring_used=stage3f_summary.scoring_used,
             output_paths=dict(stage3f_summary.output_paths),
             warnings=check.warnings + stage3f_summary.warnings,
+        )
+    if kind == "prime_minus_one_offset_sweep" and item.get("item_id") == STAGE3G_PRIME_OFFSET_ITEM_ID:
+        stage3g_summary = run_prime_offset_sweep_item(
+            item,
+            out_dir=out_dir / str(item["item_id"]),
+            top_k=25,
+            policy_id=policy_id,
+        )
+        return _base_result(
+            queue_id,
+            policy_id,
+            item,
+            execution_performed=True,
+            execution_status="pass",
+            deferred_reason=None,
+            summary={
+                "status": "pass",
+                "stage3g_run_id": stage3g_summary.run_id,
+                "input_slice_id": stage3g_summary.input_slice_id,
+                "input_length": stage3g_summary.input_length,
+                "expected_candidate_count": stage3g_summary.expected_candidate_count,
+                "executed_candidate_count": stage3g_summary.executed_candidate_count,
+                "deferred_candidate_count": stage3g_summary.deferred_candidate_count,
+                "candidate_count": stage3g_summary.candidate_count,
+                "prime_candidate_count": stage3g_summary.prime_candidate_count,
+                "top_candidate": stage3g_summary.top_candidate,
+                "candidate_output_paths": stage3g_summary.output_paths,
+                "confidence_distribution": stage3g_summary.confidence_distribution,
+                "solve_claim_made": False,
+                "policy_check_status": check.status,
+            },
+            search_performed=stage3g_summary.search_performed,
+            scoring_used=stage3g_summary.scoring_used,
+            output_paths=dict(stage3g_summary.output_paths),
+            warnings=check.warnings + stage3g_summary.warnings,
         )
     return _base_result(
         queue_id,

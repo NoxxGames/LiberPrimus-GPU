@@ -311,4 +311,22 @@ The generated Stage 3F summary includes `expected_candidate_count`, `executed_ca
 
 Generated Stage 3F files remain ignored under `experiments/results/bounded-auto-runs/stage3f/`. They are candidate leads only and not solve evidence.
 
+## Stage 3G Prime Offset Sweep Records
+
+Stage 3G reuses `bounded_candidate_record` and `bounded_experiment_run_summary` for the p56-local prime-minus-one offset sweep. Candidate records include:
+
+- `transform_family=prime_stream_offset_sweep`
+- `transform_id=prime_minus_one_stream`
+- `transform_parameters.offset`
+- `transform_parameters.direction`
+- `transform_parameters.reset_mode`
+- `transform_parameters.prime_index_policy`
+- calibrated score fields and crib hits
+- `cuda_used=false`
+- `solve_claim=false`
+
+The generated Stage 3G summary includes `expected_candidate_count`, `executed_candidate_count`, `deferred_candidate_count`, `prime_candidate_count`, `reset_modes`, and `confidence_distribution`.
+
+Generated Stage 3G files remain ignored under `experiments/results/bounded-auto-runs/stage3g/`. They are candidate leads only and not solve evidence. Stage 3G also adds a future Mersenne/perfect-number queue item, but it remains `needs_executor` and is not executed.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

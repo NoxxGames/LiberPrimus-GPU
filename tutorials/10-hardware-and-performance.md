@@ -96,11 +96,15 @@ Stage 3D is also CPU-only. It runs exactly four explicit Vigenere keys from a co
 
 ## Stage 3E Backlog Dry-Run Scope
 
-Stage 3E is CPU planning and dry-run validation only. It validates six bounded queue items with total candidate estimate `780`, classifies missing executors, writes an ignored dry-run summary, and does not execute queued candidate generation. It is not a benchmark, does not widen into broad key search, and does not justify CUDA work.
+Stage 3E is CPU planning and dry-run validation only. After Stage 3G queue updates, it validates seven bounded queue items with total candidate estimate `972`, classifies missing executors, writes an ignored dry-run summary, and does not execute queued candidate generation by itself. It is not a benchmark, does not widen into broad key search, and does not justify CUDA work.
 
 ## Stage 3F CPU Key-Pack Scope
 
 Stage 3F is still a local CPU-only run. It executes `48` explicit Vigenere candidates from the manifest-bound LP evidence key pack and writes generated outputs to ignored local paths. It is not a performance benchmark, not a dictionary search, and not a reason to start CUDA work.
+
+## Stage 3G Prime Sweep Scope
+
+Stage 3G is still a local CPU-only run. It executes `256` manifest-bound p56-local prime-minus-one offset candidates and writes generated outputs to ignored local paths. It is not a performance benchmark, not a broad number-sequence search, and not a reason to start CUDA work.
 
 ## Stage 2I Approval Readiness
 

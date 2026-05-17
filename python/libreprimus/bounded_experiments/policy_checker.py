@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import Any
 
 from libreprimus.bounded_experiments.models import BoundedExperimentQueue, OperatorPolicy, PolicyCheckResult
+from libreprimus.method_backlog.counts import candidate_count_for_item
 
 PASS = "pass"
 FAIL = "fail"
@@ -125,8 +126,18 @@ def check_item(policy: OperatorPolicy, item: dict[str, Any]) -> PolicyCheckResul
         add(
             "declared_vigenere_key_pack_count_matches_bound",
             key_pack_count == declared,
-            "Declared Vigenere key-pack count matches key × reset × advance count.",
+            "Declared Vigenere key-pack count matches key * reset * advance count.",
             "declared_vigenere_key_pack_count_mismatch",
+        )
+
+    exact_count = _declared_exact_count(item)
+    if exact_count is not None:
+        declared = int(item.get("candidate_count_upper_bound", 0))
+        add(
+            "declared_exact_count_matches_bound",
+            exact_count == declared,
+            "Declared exact method count matches candidate_count_upper_bound.",
+            "declared_exact_count_mismatch",
         )
 
     selector = dict(dict(item.get("corpus_slice", {})).get("selector", {}))
@@ -173,3 +184,12 @@ def _declared_vigenere_key_pack_count(item: dict[str, Any]) -> int | None:
     if not isinstance(keys, list) or not isinstance(reset_modes, list) or not isinstance(advance_modes, list):
         return None
     return len(keys) * len(reset_modes) * len(advance_modes)
+
+
+def _declared_exact_count(item: dict[str, Any]) -> int | None:
+    if str(item.get("experiment_kind", "")) not in {
+        "prime_minus_one_offset_sweep",
+        "mersenne_prime_stream_tiny",
+    }:
+        return None
+    return candidate_count_for_item(item)

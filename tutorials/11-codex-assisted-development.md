@@ -103,3 +103,7 @@ For method-backlog ingestion, require `libreprimus bounded-experiment dry-run-qu
 ## Stage 3F Guardrails
 
 For the evidence-key Vigenere pack, require manifest-bound keys, reset/advance mode recording, candidate-count validation, generated-output ignore checks, and summary-only research logs. Do not expand the key list, invent missing metadata, publish candidate dumps, or turn a noisy calibrated score into a solve claim.
+
+## Stage 3G Guardrails
+
+For p56-local prime offset sweeps, require manifest-bound offsets, directions, reset modes, deterministic prime generation tests, generated-output ignore checks, and summary-only research logs. Do not broaden to arbitrary number sequences, execute the Mersenne probe before an executor exists, publish candidate dumps, or turn an inconclusive calibrated score into a solve claim.

@@ -29,10 +29,10 @@ The dry run validates deterministic candidate counts, operator-policy status, an
 
 ## Expected Stage 3E Summary
 
-- `item_count=6`
-- `total_candidate_estimate=780`
-- `runnable_now_count=1` after Stage 3F implements the LP evidence-key Vigenere executor
-- `needs_executor_count=3` after Stage 3F
+- `item_count=7`
+- `total_candidate_estimate=972`
+- `runnable_now_count=2` after Stage 3G implements the p56-local prime offset executor
+- `needs_executor_count=3` after Stage 3G
 - `dry_run_only_count=2`
 - `blocked_count=0`
 

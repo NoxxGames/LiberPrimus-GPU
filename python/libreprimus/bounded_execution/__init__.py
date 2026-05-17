@@ -7,6 +7,7 @@ __all__ = [
     "candidate_writer",
     "input_slice_loader",
     "models",
+    "prime_offset_sweep",
     "runner",
     "summary",
     "validation",
