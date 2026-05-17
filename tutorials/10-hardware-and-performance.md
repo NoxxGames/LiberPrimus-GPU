@@ -98,6 +98,10 @@ Stage 3D is also CPU-only. It runs exactly four explicit Vigenere keys from a co
 
 Stage 3E is CPU planning and dry-run validation only. It validates six bounded queue items with total candidate estimate `780`, classifies missing executors, writes an ignored dry-run summary, and does not execute queued candidate generation. It is not a benchmark, does not widen into broad key search, and does not justify CUDA work.
 
+## Stage 3F CPU Key-Pack Scope
+
+Stage 3F is still a local CPU-only run. It executes `48` explicit Vigenere candidates from the manifest-bound LP evidence key pack and writes generated outputs to ignored local paths. It is not a performance benchmark, not a dictionary search, and not a reason to start CUDA work.
+
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

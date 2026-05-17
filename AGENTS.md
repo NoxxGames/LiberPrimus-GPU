@@ -363,6 +363,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not run broad dictionary search, arbitrary skip masks, CUDA, cloud work, canonical corpus activation, page-boundary finalization, or solve claims from Stage 3E.
 - Dry-run summaries under `experiments/results/bounded-auto-runs/stage3e/` are generated outputs and must not be committed.
 
+## Stage 3F Evidence-Key Vigenere Pack Rules
+
+- Evidence-key Vigenere pack runs are explicit-list only.
+- Do not expand keys without a manifest update and candidate-count checks.
+- Reset and advance modes must be recorded in candidate output.
+- Missing line or token-break metadata must cause warnings or deferred candidates, not invented boundaries.
+- Key-pack hits are leads only, not solve claims.
+- Full Stage 3F candidate outputs under `experiments/results/bounded-auto-runs/stage3f/` are generated outputs and must not be committed.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

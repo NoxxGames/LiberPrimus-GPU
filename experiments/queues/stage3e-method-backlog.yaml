@@ -18,17 +18,18 @@ items:
       advance_modes: [runes_only, token_break_preserving]
     candidate_count_estimate: 48
     operator_policy_status: within_policy
-    implementation_status: needs_executor
+    implementation_status: runnable_now
     required_controls: [stage3c_calibration, null_controls, negative_controls]
     generated_output_policy:
-      output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_vig_lp_evidence_pack_v1
+      output_dir: experiments/results/bounded-auto-runs/stage3f
       commit_outputs: false
     no_solve_claim: true
     cuda_enabled: false
     canonical_corpus_active: false
     page_boundaries_final: false
     notes:
-      - Needs reset/advance-aware Vigenere key-pack executor before running.
+      - Stage 3F implements the reset/advance-aware evidence-key-pack executor for this item.
+      - Historical key packs remain deferred until explicitly selected in a later stage.
 
   - experiment_id: stage3e_prime_minus_one_offsets_v1
     short_name: p56-local prime-minus-one offset sweep

@@ -10,4 +10,6 @@ __all__ = [
     "runner",
     "summary",
     "validation",
+    "vigenere_key_list",
+    "vigenere_key_pack",
 ]

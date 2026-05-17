@@ -79,3 +79,10 @@ class BoundedRunSummary:
     trusted_as_canonical: bool
     warnings: list[str] = field(default_factory=list)
     vigenere_candidate_count: int | None = None
+    expected_candidate_count: int | None = None
+    executed_candidate_count: int | None = None
+    deferred_candidate_count: int | None = None
+    key_count: int | None = None
+    reset_modes: list[str] | None = None
+    advance_modes: list[str] | None = None
+    confidence_distribution: dict[str, int] | None = None

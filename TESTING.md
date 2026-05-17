@@ -207,4 +207,10 @@ Stage 3E adds tests for method backlog schemas, bounded queue candidate counts, 
 
 The tests assert that the six Stage 3E backlog items validate, LP evidence Vigenere count is `48`, p56 local prime-minus-one offset count is `256`, historical Vigenere count is `56`, negative-control count is `100`, reset/advance ablation count is `64`, prime mod/gap count is `256`, every item fits operator-policy limits, CUDA stays disabled, solve claims stay false, broad dictionary search and unconstrained skip masks are absent, dry-run output is ignored, and missing executors are reported instead of faked.
 
+## Stage 3F Vigenere Key-Pack Tests
+
+Stage 3F adds tests for the evidence-key Vigenere pack executor, CLI, generated output shape, and queue integration.
+
+The tests assert that the LP evidence pack loads exactly 12 keys, rejects key expansion without a count update, computes `12 * 2 * 2 = 48` candidates, maps all keys through the Gematria profile, executes `none` reset, executes or explicitly defers `line` reset based on line metadata, executes or warns for `token_break_preserving` based on token-break metadata, writes key/reset/advance metadata in candidate records, keeps `cuda_used=false` and `solve_claim=false`, blocks candidate-count drift, and leaves generated outputs ignored.
+
 The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.

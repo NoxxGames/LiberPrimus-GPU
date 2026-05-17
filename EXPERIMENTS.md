@@ -231,3 +231,19 @@ Run the dry-run count and support check:
 The queue currently contains six items with total deterministic candidate estimate `780`: LP evidence Vigenere `48`, p56 local prime-minus-one offsets `256`, historical Vigenere `56`, family-specific negative controls `100`, reset/advance ablation `64`, and prime mod/gap `256`.
 
 Stage 3E is an ingestion and dry-run stage. It does not execute items whose reset/advance, prime-offset, or family-specific negative-control executors are missing. Generated dry-run summaries remain ignored under `experiments/results/bounded-auto-runs/stage3e/`, and no candidate dumps, CUDA work, canonical corpus activation, page-boundary finalization, or solve claims are produced.
+
+## Stage 3F Evidence-Key Vigenere Pack
+
+Stage 3F runs the first Stage 3E item whose missing executor was implemented:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli bounded-run run-vigenere-key-pack `
+  --policy experiments/policies/operator-policy-v0.yaml `
+  --queue experiments/queues/stage3e-bounded-cpu-queue.yaml `
+  --item-id stage3e_vig_lp_evidence_pack_v1 `
+  --out-dir experiments/results/bounded-auto-runs/stage3f `
+  --top-k 25 `
+  --allow-warnings
+```
+
+The run is limited to the 12 declared LP evidence keys, reset modes `none` and `line`, and advance modes `runes_only` and `token_break_preserving`. Candidate count is `48`. Generated outputs remain ignored under `experiments/results/bounded-auto-runs/stage3f/`. The Stage 3F top candidate is classified `noisy`; no solve claim is made.

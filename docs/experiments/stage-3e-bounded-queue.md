@@ -27,10 +27,12 @@ Dry-run result:
 - queue items: `6`;
 - total candidate estimate: `780`;
 - policy-blocked items: `0`;
-- runnable-now items: `0`;
-- needs-executor items: `4`;
+- runnable-now items after Stage 3F: `1`;
+- needs-executor items after Stage 3F: `3`;
 - dry-run-only items: `2`;
 - executed items: `0`.
+
+Stage 3E itself executed no items. Stage 3F later implemented the LP evidence-key Vigenere executor and marked `stage3e_vig_lp_evidence_pack_v1` runnable.
 
 ## Executor Status
 

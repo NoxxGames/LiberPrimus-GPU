@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3E Deep Research method backlog ingestion and bounded queue dry-run is complete.
+Stage 3F evidence-key Vigenere pack execution is complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, and Stage 3E queues the next bounded methods without faking missing executors.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, and Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 
@@ -264,6 +264,18 @@ Generated dry-run output remains ignored under `experiments/results/bounded-auto
 
 Developer log: `docs/development-logs/2026-05-16-stage-3e-method-backlog-ingestion.md`.
 
+## Completed in Stage 3F
+
+Stage 3F implemented `libreprimus bounded-run run-vigenere-key-pack` for the LP evidence-key Vigenere pack and executed `stage3e_vig_lp_evidence_pack_v1`.
+
+Run summary: `48` expected candidates, `48` executed, `0` deferred. The run used 12 declared keys, reset modes `none` and `line`, and advance modes `runes_only` and `token_break_preserving`. The input slice stayed `stage3a-page-candidate-018-reviewable-slice`.
+
+Top lead: key `EMERGE`, reset `none`, advance `runes_only`, score `6.800831`, calibrated label `noisy`. The result is a lead only and not solve evidence.
+
+Generated candidate outputs remain ignored under `experiments/results/bounded-auto-runs/stage3f/`. CUDA remains disabled, the canonical corpus remains inactive, page boundaries remain reviewable, and no solve claim is made.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3f-evidence-key-vigenere-pack.md`.
+
 ## Next prompt recommendation
 
-Stage 3F - implement the reset/advance-aware evidence-key Vigenere pack executor and run the LP evidence pack if it still passes operator policy.
+Stage 3G - implement the p56-local prime-minus-one offset sweep, or inspect Stage 3F top candidates first if a human wants to review noisy Vigenere leads.

@@ -293,4 +293,22 @@ The method backlog records evidence basis, exact parameters, candidate-count est
 
 Generated `stage3e_queue_dry_run_summary` records are ignored under `experiments/results/bounded-auto-runs/stage3e/`. They record declared and calculated candidate counts, policy status, executor-support status, deferred reasons, and `executed_count=0` for this ingestion stage. They are not candidate outputs or solve evidence.
 
+## Stage 3F Vigenere Key-Pack Records
+
+Stage 3F reuses `bounded_candidate_record` and `bounded_experiment_run_summary` for the LP evidence-key Vigenere pack. Candidate records include:
+
+- `transform_family=vigenere_key_pack`
+- `transform_id=vigenere_explicit_key`
+- `key_text`
+- `key_indices`
+- `transform_parameters.reset_mode`
+- `transform_parameters.advance_mode`
+- calibrated score fields and crib hits
+- `cuda_used=false`
+- `solve_claim=false`
+
+The generated Stage 3F summary includes `expected_candidate_count`, `executed_candidate_count`, `deferred_candidate_count`, `key_count`, `reset_modes`, `advance_modes`, and `confidence_distribution`.
+
+Generated Stage 3F files remain ignored under `experiments/results/bounded-auto-runs/stage3f/`. They are candidate leads only and not solve evidence.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

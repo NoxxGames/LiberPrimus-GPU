@@ -119,6 +119,15 @@ def check_item(policy: OperatorPolicy, item: dict[str, Any]) -> PolicyCheckResul
             "Declared explicit key count is within candidate_count_upper_bound.",
             "declared_key_count_exceeds_candidate_bound",
         )
+    key_pack_count = _declared_vigenere_key_pack_count(item)
+    if key_pack_count is not None:
+        declared = int(item.get("candidate_count_upper_bound", 0))
+        add(
+            "declared_vigenere_key_pack_count_matches_bound",
+            key_pack_count == declared,
+            "Declared Vigenere key-pack count matches key × reset × advance count.",
+            "declared_vigenere_key_pack_count_mismatch",
+        )
 
     selector = dict(dict(item.get("corpus_slice", {})).get("selector", {}))
     if item.get("experiment_kind") == "caesar_affine_reviewable_slice" and (
@@ -138,7 +147,10 @@ def check_item(policy: OperatorPolicy, item: dict[str, Any]) -> PolicyCheckResul
 
 
 def _declared_key_count(item: dict[str, Any]) -> int | None:
-    if str(item.get("experiment_kind", "")) not in {"vigenere_tiny_key_list_preview", "vigenere_key_list_preview"}:
+    if str(item.get("experiment_kind", "")) not in {
+        "vigenere_tiny_key_list_preview",
+        "vigenere_key_list_preview",
+    }:
         return None
     families = dict(item.get("transform_plan", {})).get("families", [])
     for family in families:
@@ -149,3 +161,15 @@ def _declared_key_count(item: dict[str, Any]) -> int | None:
         if isinstance(keys, list):
             return len(keys)
     return None
+
+
+def _declared_vigenere_key_pack_count(item: dict[str, Any]) -> int | None:
+    if str(item.get("experiment_kind", "")) != "vigenere_key_pack":
+        return None
+    params = dict(dict(item.get("transform_plan", {})).get("parameters", {}))
+    keys = params.get("keys")
+    reset_modes = params.get("reset_modes")
+    advance_modes = params.get("advance_modes")
+    if not isinstance(keys, list) or not isinstance(reset_modes, list) or not isinstance(advance_modes, list):
+        return None
+    return len(keys) * len(reset_modes) * len(advance_modes)

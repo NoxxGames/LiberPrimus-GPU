@@ -16,18 +16,18 @@ def _write_docs(tmp_path: Path, *, readme_extra: str = "", catalog_extra: str = 
         "No Liber Primus page is claimed solved.\n\n"
         "## Current status\n\n"
         "Stage 2B complete. Stage 2C complete. Stage 2E complete. "
-        "Stage 2F complete. Stage 2G complete. Stage 2H complete. Stage 2I complete. Stage 2J complete. Stage 3A complete. Stage 3B complete. Stage 3C complete. Stage 3D complete. Stage 3E complete. Next Stage 3F.\n"
+        "Stage 2F complete. Stage 2G complete. Stage 2H complete. Stage 2I complete. Stage 2J complete. Stage 3A complete. Stage 3B complete. Stage 3C complete. Stage 3D complete. Stage 3E complete. Stage 3F complete. Next Stage 3G.\n"
         + ("Line\n" * 60)
         + readme_extra,
         encoding="utf-8",
     )
     status.write_text(
-        "# Status\n\nStage 2D current. Stage 2E complete. Stage 2F complete. Stage 2G complete. Stage 2H complete. Stage 2I complete. Stage 2J complete. Stage 3A complete. Stage 3B complete. Stage 3C complete. Stage 3D complete. Stage 3E complete.\n"
+        "# Status\n\nStage 2D current. Stage 2E complete. Stage 2F complete. Stage 2G complete. Stage 2H complete. Stage 2I complete. Stage 2J complete. Stage 3A complete. Stage 3B complete. Stage 3C complete. Stage 3D complete. Stage 3E complete. Stage 3F complete.\n"
         + ("Line\n" * 30),
         encoding="utf-8",
     )
     roadmap.write_text(
-        "# Roadmap\n\nStage 2D next. Stage 2E complete. Stage 2F complete. Stage 2G complete. Stage 2H complete. Stage 2I complete. Stage 2J complete. Stage 3A complete. Stage 3B complete. Stage 3C complete. Stage 3D complete. Stage 3E complete. Stage 3F next.\n"
+        "# Roadmap\n\nStage 2D next. Stage 2E complete. Stage 2F complete. Stage 2G complete. Stage 2H complete. Stage 2I complete. Stage 2J complete. Stage 3A complete. Stage 3B complete. Stage 3C complete. Stage 3D complete. Stage 3E complete. Stage 3F complete. Stage 3G next.\n"
         + ("Line\n" * 30),
         encoding="utf-8",
     )

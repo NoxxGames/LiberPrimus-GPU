@@ -8,11 +8,11 @@ page_boundaries_final: false
 trusted_as_canonical: false
 items:
   - item_id: stage3e_vig_lp_evidence_pack_v1
-    description: LP solved-page and earlier-round evidence Vigenere key pack; dry-run until reset/advance executor exists.
+    description: LP solved-page and earlier-round evidence Vigenere key pack; runnable via Stage 3F reset/advance executor.
     enabled: true
     experiment_kind: vigenere_key_pack
-    implementation_status: needs_executor
-    required_executor: reset_advance_key_pack_executor
+    implementation_status: runnable_now
+    required_executor: stage3f_evidence_key_pack_executor
     corpus_slice:
       slice_id: stage3a-page-candidate-018-reviewable-slice
       slice_kind: future_unsolved_page_candidate
@@ -58,10 +58,10 @@ items:
       mode: generated_ignored_preview
       import_enabled: false
     output_policy:
-      generated_output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_vig_lp_evidence_pack_v1
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3f
       commit_outputs: false
       write_candidate_plaintexts: false
-    status: queued_needs_executor
+    status: queued_runnable_stage3f
 
   - item_id: stage3e_prime_minus_one_offsets_v1
     description: p56-local prime-minus-one offset sweep; dry-run until prime offset sweep executor exists.

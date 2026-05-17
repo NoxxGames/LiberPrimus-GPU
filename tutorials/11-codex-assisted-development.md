@@ -99,3 +99,7 @@ For bounded Vigenere key-list work, require `libreprimus bounded-run run-vigener
 ## Stage 3E Guardrails
 
 For method-backlog ingestion, require `libreprimus bounded-experiment dry-run-queue`, deterministic count tests, executor-support classification tests, and generated-output ignore checks. Do not mark missing executors runnable, do not broaden into dictionary search or arbitrary skip masks, and do not execute queued methods until the required executor is implemented cleanly.
+
+## Stage 3F Guardrails
+
+For the evidence-key Vigenere pack, require manifest-bound keys, reset/advance mode recording, candidate-count validation, generated-output ignore checks, and summary-only research logs. Do not expand the key list, invent missing metadata, publish candidate dumps, or turn a noisy calibrated score into a solve claim.

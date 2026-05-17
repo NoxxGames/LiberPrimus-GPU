@@ -130,6 +130,7 @@ from libreprimus.bounded_experiments.summary import (
 )
 from libreprimus.bounded_execution.runner import run_caesar_affine_from_paths
 from libreprimus.bounded_execution.summary import load_summary as load_bounded_run_summary
+from libreprimus.bounded_execution.vigenere_key_pack import run_vigenere_key_pack_from_paths
 from libreprimus.bounded_execution.vigenere_key_list import run_vigenere_key_list_from_paths
 from libreprimus.candidate_inspection.analysis import inspect_results, rerank_candidates
 from libreprimus.candidate_inspection.loader import load_candidate_records
@@ -2288,6 +2289,7 @@ DEFAULT_STAGE3C_CALIBRATION_RESULTS_DIR = Path("experiments/results/scoring-cali
 DEFAULT_STAGE3D_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3d")
 DEFAULT_STAGE3E_QUEUE = Path("experiments/queues/stage3e-bounded-cpu-queue.yaml")
 DEFAULT_STAGE3E_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3e")
+DEFAULT_STAGE3F_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3f")
 
 
 @bounded_experiment_app.command("validate-policy")
@@ -2526,6 +2528,35 @@ def bounded_run_vigenere_key_list(
     _print_stage3a_run_summary(summary)
 
 
+@bounded_run_app.command("run-vigenere-key-pack")
+def bounded_run_vigenere_key_pack(
+    policy: Path = typer.Option(DEFAULT_STAGE2J_POLICY, "--policy", help="Operator policy path."),
+    queue: Path = typer.Option(DEFAULT_STAGE3E_QUEUE, "--queue", help="Bounded experiment queue path."),
+    item_id: str = typer.Option(
+        "stage3e_vig_lp_evidence_pack_v1",
+        "--item-id",
+        help="Queue item to run.",
+    ),
+    out_dir: Path = typer.Option(DEFAULT_STAGE3F_BOUNDED_RESULTS_DIR, "--out-dir", help="Generated output directory."),
+    top_k: int = typer.Option(25, "--top-k", min=1, help="Number of top candidates to write."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Run warning-only policy-passing items."),
+) -> None:
+    """Run the bounded Stage 3F evidence-key Vigenere pack."""
+    try:
+        summary = run_vigenere_key_pack_from_paths(
+            _resolve_existing_path(policy, "Operator policy"),
+            _resolve_existing_path(queue, "Bounded experiment queue"),
+            item_id=item_id,
+            out_dir=_resolve_output_path(out_dir),
+            top_k=top_k,
+            allow_warnings=allow_warnings,
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_stage3a_run_summary(summary)
+
+
 @bounded_run_app.command("rerank")
 def bounded_run_rerank(
     results_dir: Path = typer.Option(DEFAULT_STAGE3A_BOUNDED_RESULTS_DIR, "--results-dir", help="Existing generated results directory."),
@@ -2583,9 +2614,15 @@ def _print_stage3a_run_summary(summary) -> None:
         "input_slice_id": summary.input_slice_id,
         "input_length": summary.input_length,
         "candidate_count": summary.candidate_count,
+        "expected_candidate_count": summary.expected_candidate_count,
+        "executed_candidate_count": summary.executed_candidate_count,
+        "deferred_candidate_count": summary.deferred_candidate_count,
         "caesar_candidate_count": summary.caesar_candidate_count,
         "affine_candidate_count": summary.affine_candidate_count,
         "vigenere_candidate_count": summary.vigenere_candidate_count,
+        "key_count": summary.key_count,
+        "reset_modes": ",".join(summary.reset_modes or []),
+        "advance_modes": ",".join(summary.advance_modes or []),
         "top_k_count": summary.top_k_count,
         "top_candidate_score": summary.top_candidate.get("total_score"),
         "top_candidate_length_normalized_score": summary.top_candidate.get("length_normalized_score"),
@@ -2594,6 +2631,8 @@ def _print_stage3a_run_summary(summary) -> None:
         "top_candidate_transform_family": summary.top_candidate.get("transform_family"),
         "top_candidate_transform_parameters": json.dumps(summary.top_candidate.get("transform_parameters", {}), sort_keys=True),
         "top_candidate_key_text": summary.top_candidate.get("key_text"),
+        "top_candidate_reset_mode": summary.top_candidate.get("reset_mode"),
+        "top_candidate_advance_mode": summary.top_candidate.get("advance_mode"),
         "solve_claim": summary.solve_claim,
     }
     for key, value in payload.items():
@@ -2612,9 +2651,15 @@ def _print_stage3a_summary_payload(summary: dict) -> None:
         "input_slice_id",
         "input_length",
         "candidate_count",
+        "expected_candidate_count",
+        "executed_candidate_count",
+        "deferred_candidate_count",
         "caesar_candidate_count",
         "affine_candidate_count",
         "vigenere_candidate_count",
+        "key_count",
+        "reset_modes",
+        "advance_modes",
         "top_k_count",
     ]:
         console.print(f"{key}={summary.get(key)}")
@@ -2625,6 +2670,8 @@ def _print_stage3a_summary_payload(summary: dict) -> None:
     console.print(f"top_candidate_transform_family={top.get('transform_family')}")
     console.print(f"top_candidate_transform_parameters={json.dumps(top.get('transform_parameters', {}), sort_keys=True)}")
     console.print(f"top_candidate_key_text={top.get('key_text')}")
+    console.print(f"top_candidate_reset_mode={top.get('reset_mode')}")
+    console.print(f"top_candidate_advance_mode={top.get('advance_mode')}")
     console.print(f"solve_claim={str(summary.get('solve_claim')).lower()}")
     for key, path in summary.get("output_paths", {}).items():
         console.print(f"{key}={path}")
