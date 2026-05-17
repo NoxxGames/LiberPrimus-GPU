@@ -59,7 +59,8 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "Stage 2G: exploratory experiment proposal and human-approval workflow complete." in readme
     assert "Stage 2H: approval-gated execution path for approved synthetic/solved controls complete." in readme
     assert "Stage 2I: first real bounded CPU exploratory experiment approval packet complete." in readme
-    assert "Stage 2J human decision on the first bounded CPU exploratory experiment proposal" in readme
+    assert "Stage 2J: standing bounded CPU auto-run policy and queue scaffold complete." in readme
+    assert "Stage 3A minimal real transform execution/scoring scaffold" in readme
 
 
 def test_readme_does_not_imply_deferred_work_is_permanently_excluded() -> None:

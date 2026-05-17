@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2I first real bounded CPU exploratory experiment approval packet is complete.
+Stage 2J standing bounded CPU auto-run policy and queue scaffold is complete.
 
 ## Completed in Stage 0A
 
@@ -194,6 +194,16 @@ The proposal touches reviewable unsolved metadata only and includes no raw unsol
 
 Developer log: `docs/development-logs/2026-05-16-stage-2i-first-real-proposal-packet.md`.
 
+## Completed in Stage 2J
+
+Stage 2J added a standing operator policy for bounded local CPU experiments, bounded experiment queue schemas, policy and queue manifests, a policy checker, generated ignored bounded auto-run records, and `libreprimus bounded-experiment` CLI commands.
+
+The Stage 2J queue includes the first Caesar plus affine reviewable-slice item with candidate upper bound `841`, a solved-baseline regression control, and an intentionally blocked over-budget example. The Caesar plus affine item is policy-eligible but deferred until a safe real transform execution/scoring scaffold exists; the solved control passes; the over-budget item is blocked.
+
+Approval workflow remains available as optional/high-risk audit tooling. Policy-passing bounded local CPU items no longer require per-experiment approval. CUDA, cloud, over-budget work, generated-output commits, canonical corpus activation, page-boundary finalization, and solve claims still require explicit instruction or remain blocked.
+
+Developer log: `docs/development-logs/2026-05-16-stage-2j-bounded-auto-run-policy.md`.
+
 ## Next prompt recommendation
 
-Stage 2J - human decision step: approve, deny, or revise the first bounded CPU exploratory experiment proposal. Do not execute unless an explicit approved approval record is supplied.
+Stage 3A - implement minimal real transform execution/scoring scaffold for the `841` candidate Caesar plus affine queue item.

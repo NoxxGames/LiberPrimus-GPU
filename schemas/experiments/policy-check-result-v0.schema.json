@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/policy-check-result-v0.schema.json",
+  "title": "policy-check-result-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["item_id", "policy_id", "status", "checks", "blocking_reasons", "warnings"],
+  "properties": {
+    "item_id": { "type": "string", "minLength": 1 },
+    "policy_id": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["pass", "fail", "warning"] },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["check_id", "status", "message"],
+        "properties": {
+          "check_id": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["pass", "fail", "warning"] },
+          "message": { "type": "string" }
+        }
+      }
+    },
+    "blocking_reasons": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

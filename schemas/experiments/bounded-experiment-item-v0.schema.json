@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/bounded-experiment-item-v0.schema.json",
+  "title": "bounded-experiment-item-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "item_id",
+    "description",
+    "enabled",
+    "experiment_kind",
+    "corpus_slice",
+    "transform_plan",
+    "candidate_count_upper_bound",
+    "estimated_runtime_seconds",
+    "generated_output_budget_mb",
+    "cpu_only",
+    "cuda_enabled",
+    "scoring_enabled",
+    "result_store_policy",
+    "output_policy",
+    "no_solve_claim",
+    "status"
+  ],
+  "properties": {
+    "item_id": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "enabled": { "type": "boolean" },
+    "experiment_kind": { "type": "string", "minLength": 1 },
+    "corpus_slice": { "type": "object" },
+    "transform_plan": { "type": "object" },
+    "candidate_count_upper_bound": { "type": "integer", "minimum": 0 },
+    "estimated_runtime_seconds": { "type": "integer", "minimum": 0 },
+    "generated_output_budget_mb": { "type": "number", "minimum": 0 },
+    "cpu_only": { "type": "boolean" },
+    "cuda_enabled": { "const": false },
+    "scoring_enabled": { "type": ["boolean", "string"] },
+    "result_store_policy": { "type": "object" },
+    "output_policy": { "type": "object" },
+    "no_solve_claim": { "const": true },
+    "status": { "type": "string", "minLength": 1 }
+  }
+}

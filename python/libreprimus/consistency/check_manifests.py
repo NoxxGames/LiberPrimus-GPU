@@ -7,6 +7,9 @@ from typing import Any
 
 import yaml
 
+from libreprimus.bounded_experiments.policy_checker import check_queue
+from libreprimus.bounded_experiments.policy_loader import load_operator_policy
+from libreprimus.bounded_experiments.queue_loader import load_bounded_queue
 from libreprimus.approval_readiness.readiness_analyzer import analyze_approval_readiness
 from libreprimus.approval_execution.approval_gate import evaluate_approval_execution_gate
 from libreprimus.approval_execution.request_loader import load_approval_execution_request
@@ -32,6 +35,8 @@ STAGE2H_PROPOSAL_DIR = repo_root() / "experiments/proposals/stage2h"
 STAGE2H_APPROVAL_RECORD_DIR = repo_root() / "experiments/proposals/stage2h/approval-records"
 STAGE2I_PROPOSAL_DIR = repo_root() / "experiments/proposals/stage2i"
 STAGE2I_APPROVAL_RECORD_DIR = repo_root() / "experiments/proposals/stage2i/approval-records"
+OPERATOR_POLICY_PATH = repo_root() / "experiments/policies/operator-policy-v0.yaml"
+BOUNDED_QUEUE_PATH = repo_root() / "experiments/queues/stage2j-bounded-cpu-queue.yaml"
 REGISTRY_PATH = repo_root() / DEFAULT_REGISTRY_PATH
 
 
@@ -59,6 +64,8 @@ def check_manifest_consistency(
     stage2h_approval_record_dir: Path = STAGE2H_APPROVAL_RECORD_DIR,
     stage2i_proposal_dir: Path = STAGE2I_PROPOSAL_DIR,
     stage2i_approval_record_dir: Path = STAGE2I_APPROVAL_RECORD_DIR,
+    operator_policy_path: Path = OPERATOR_POLICY_PATH,
+    bounded_queue_path: Path = BOUNDED_QUEUE_PATH,
     registry_path: Path = REGISTRY_PATH,
 ) -> list[ConsistencyCheckResult]:
     results: list[ConsistencyCheckResult] = []
@@ -431,6 +438,46 @@ def check_manifest_consistency(
         results.append(pass_result(GROUP, "stage2i_future_unsolved_metadata", "Stage 2I proposal references reviewable unsolved metadata."))
     if stage2i_proposals and not any(result.check_name == "stage2i_candidate_bound" and result.is_failure for result in results):
         results.append(pass_result(GROUP, "stage2i_candidate_bound", "Stage 2I candidate bound is 841."))
+
+    try:
+        policy = load_operator_policy(operator_policy_path)
+        results.append(pass_result(GROUP, "operator_policy_valid", "Stage 2J operator policy validates.", path=operator_policy_path))
+    except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+        policy = None
+        results.append(fail_result(GROUP, "operator_policy_valid", str(exc), path=operator_policy_path))
+
+    try:
+        queue = load_bounded_queue(bounded_queue_path)
+        results.append(pass_result(GROUP, "bounded_queue_valid", "Stage 2J bounded queue validates.", path=bounded_queue_path))
+    except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+        queue = None
+        results.append(fail_result(GROUP, "bounded_queue_valid", str(exc), path=bounded_queue_path))
+
+    if policy is not None and queue is not None:
+        checks = check_queue(policy, queue)
+        pass_or_warning = {check.item_id for check in checks if not check.blocking_reasons}
+        blocked = {check.item_id for check in checks if check.blocking_reasons}
+        if "stage2j-caesar-affine-first-reviewable-slice" in pass_or_warning:
+            results.append(pass_result(GROUP, "stage2j_first_item_policy_pass", "Stage 2J first item passes policy."))
+        else:
+            results.append(fail_result(GROUP, "stage2j_first_item_policy_pass", "Stage 2J first item does not pass policy."))
+        if "stage2j-solved-baseline-regression-control" in pass_or_warning:
+            results.append(pass_result(GROUP, "stage2j_control_policy_pass", "Stage 2J solved control passes policy."))
+        else:
+            results.append(fail_result(GROUP, "stage2j_control_policy_pass", "Stage 2J solved control does not pass policy."))
+        if "stage2j-blocked-overbudget-example" in blocked:
+            results.append(pass_result(GROUP, "stage2j_overbudget_blocked", "Stage 2J over-budget item is blocked."))
+        else:
+            results.append(fail_result(GROUP, "stage2j_overbudget_blocked", "Stage 2J over-budget item was not blocked."))
+        for item in queue.items:
+            if not _no_raw_dump(Path(queue.path)):
+                results.append(fail_result(GROUP, "manifest_no_raw_dump", "Stage 2J queue appears to include raw data.", path=bounded_queue_path))
+            if item.get("cuda_enabled") is not False:
+                results.append(fail_result(GROUP, "stage2j_flags_false", "Queue item enables CUDA.", path=bounded_queue_path))
+            if item.get("no_solve_claim") is not True:
+                results.append(fail_result(GROUP, "stage2j_flags_false", "Queue item lacks no_solve_claim=true.", path=bounded_queue_path))
+        if not any(result.check_name == "stage2j_flags_false" and result.is_failure for result in results):
+            results.append(pass_result(GROUP, "stage2j_flags_false", "Stage 2J queue keeps unsafe flags false."))
     return results
 
 

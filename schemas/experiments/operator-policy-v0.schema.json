@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/operator-policy-v0.schema.json",
+  "title": "operator-policy-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "policy_id",
+    "policy_version",
+    "description",
+    "standing_permission_granted",
+    "local_cpu_auto_run_allowed",
+    "limits",
+    "allowed_execution",
+    "hard_blocks",
+    "requires_explicit_user_instruction",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "operator_policy" },
+    "policy_id": { "type": "string", "minLength": 1 },
+    "policy_version": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "standing_permission_granted": { "const": true },
+    "local_cpu_auto_run_allowed": { "const": true },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["max_candidate_count", "max_estimated_runtime_seconds", "max_generated_output_mb"],
+      "properties": {
+        "max_candidate_count": { "type": "integer", "minimum": 1, "maximum": 100000 },
+        "max_estimated_runtime_seconds": { "type": "integer", "minimum": 1, "maximum": 600 },
+        "max_generated_output_mb": { "type": "integer", "minimum": 1, "maximum": 250 }
+      }
+    },
+    "allowed_execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cpu_only", "cuda_enabled", "cloud_execution", "paid_services"],
+      "properties": {
+        "cpu_only": { "const": true },
+        "cuda_enabled": { "const": false },
+        "cloud_execution": { "const": false },
+        "paid_services": { "const": false }
+      }
+    },
+    "hard_blocks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical_corpus_activation",
+        "page_boundary_finalization",
+        "solve_claims",
+        "raw_data_commit",
+        "generated_bulk_output_commit",
+        "cuda_campaign",
+        "over_budget"
+      ],
+      "properties": {
+        "canonical_corpus_activation": { "const": true },
+        "page_boundary_finalization": { "const": true },
+        "solve_claims": { "const": true },
+        "raw_data_commit": { "const": true },
+        "generated_bulk_output_commit": { "const": true },
+        "cuda_campaign": { "const": true },
+        "over_budget": { "const": true }
+      }
+    },
+    "requires_explicit_user_instruction": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

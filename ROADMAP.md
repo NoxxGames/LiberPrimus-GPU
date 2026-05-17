@@ -130,9 +130,15 @@ Prepare and review the first real bounded CPU exploratory experiment approval pa
 
 Stage 2I added `stage2i-first-bounded-caesar-affine-review`, a pending approval record, an approval-readiness packet schema, readiness analyzer, `libreprimus approval-readiness` CLI commands, tests, and documentation. It records a Caesar plus affine mod-29 preview upper bound of `841`, commits no approved real-unsolved approval records, does not execute, and does not generate candidates, score output, use CUDA, activate the canonical corpus, or finalize page boundaries.
 
-## Stage 2J - Human decision on first bounded exploratory proposal
+## Stage 2J - Standing bounded auto-run policy
 
-Approve, deny, or revise the first bounded CPU exploratory experiment proposal. Do not auto-execute; any approval must be explicit, scope-bound, non-expired, and separate from proposal creation.
+Replace per-experiment approval as the default path with a standing bounded local CPU operator policy. Keep approval tooling as optional/high-risk audit tooling for out-of-policy work.
+
+Stage 2J added `operator-policy-v0`, bounded queue schemas, `experiments/policies/operator-policy-v0.yaml`, `experiments/queues/stage2j-bounded-cpu-queue.yaml`, a policy checker, generated ignored bounded auto-run records, and `libreprimus bounded-experiment` CLI commands. The `841` candidate Caesar plus affine reviewable-slice item is policy-eligible but deferred until a safe real transform execution/scoring scaffold exists. The solved-baseline control passes and the over-budget negative example is blocked.
+
+## Stage 3A - Minimal real bounded CPU execution/scoring scaffold
+
+Implement the minimal safe executor needed for the `841` candidate Caesar plus affine queue item. Keep CUDA, broad brute force, cloud, canonical corpus activation, page-boundary finalization, generated-output commits, and solve claims out of scope.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

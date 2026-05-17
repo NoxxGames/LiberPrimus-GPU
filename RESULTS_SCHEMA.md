@@ -226,4 +226,18 @@ Stage 2I adds `approval-readiness-packet-v0` under `schemas/experiments/`.
 
 Generated `approval_readiness_packet` records summarize a real exploratory proposal, pending approval status, candidate-count bounds, risk summary, blocking conditions, and the exact human decision still required. They require false approval/execution/search/candidate-generation/scoring/CUDA/canonical flags. These packets are ignored outputs under `experiments/results/approval-readiness/` and are not approvals, execution records, candidate outputs, or solve evidence.
 
+## Stage 2J Bounded Auto-Run Schemas
+
+Stage 2J adds:
+
+- `operator-policy-v0.schema.json`
+- `bounded-experiment-queue-v0.schema.json`
+- `bounded-experiment-item-v0.schema.json`
+- `policy-check-result-v0.schema.json`
+- `bounded-auto-run-result-v0.schema.json`
+
+The operator policy records standing limits for local CPU experiments. Queue records list bounded items, policy-check records explain pass/fail/warning outcomes, and generated `bounded_auto_run_result` records summarize execution, deferral, or blocking outcomes.
+
+Generated bounded auto-run records are ignored under `experiments/results/bounded-auto-runs/`. They must keep `search_performed=false`, `scoring_used=false`, `cuda_used=false`, `solve_claim_made=false`, `canonical_corpus_active=false`, `page_boundaries_final=false`, and `trusted_as_canonical=false`.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

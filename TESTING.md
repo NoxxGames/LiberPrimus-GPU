@@ -171,4 +171,10 @@ Stage 2I adds tests for approval-readiness packet schemas, readiness analysis, p
 
 The tests assert that the first real proposal remains pending and unapproved, candidate-count estimate and upper bound are `841`, generated packets contain no raw unsolved text or candidate plaintext, no approved Stage 2I approval records are committed, and approval-readiness commands do not invoke the execution runner.
 
+## Stage 2J Bounded Auto-Run Tests
+
+Stage 2J adds tests for operator policies, bounded queues, policy checking, bounded runner behavior, and `libreprimus bounded-experiment` CLI commands.
+
+The tests assert that the `841` candidate Caesar plus affine item passes policy, the solved-baseline control passes policy, over-budget/CUDA/cloud/solve-claim/generated-output-commit items fail policy, blocked items do not run, generated outputs are ignored, and per-experiment approval is not required for policy-passing bounded local CPU items.
+
 The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.

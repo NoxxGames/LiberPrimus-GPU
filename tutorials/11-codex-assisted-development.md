@@ -75,3 +75,7 @@ For approval-gated execution work, require `libreprimus approval-execution valid
 ## Stage 2I Guardrails
 
 For the first real approval packet, require `libreprimus approval-readiness validate`, `libreprimus approval-readiness packet`, and tests proving no execution runner is called. Stage 2I proposals remain pending and unapproved; generated readiness packets must not include raw unsolved text or candidate plaintext.
+
+## Stage 2J Guardrails
+
+For bounded auto-run policy work, require `libreprimus bounded-experiment validate-policy`, `validate-queue`, `check-queue`, and `run-all` against the Stage 2J queue. Policy-passing bounded local CPU items do not require per-experiment approval, but over-budget, CUDA/GPU, cloud, paid-service, generated-output-commit, canonical-corpus, page-boundary, and solve-claim actions still require explicit instruction or remain blocked. If a policy-passing queue item has no safe executor, record an explicit deferred result instead of generating candidate plaintexts or solve evidence.

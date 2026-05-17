@@ -40,6 +40,7 @@ def test_readme_current_status_is_current() -> None:
     assert "Stage 2H" in current_status
     assert "Stage 2I" in current_status
     assert "Stage 2J" in current_status
+    assert "Stage 3A" in current_status
 
 
 def test_readme_top_level_status_is_not_stale() -> None:
@@ -62,12 +63,14 @@ def test_status_and_roadmap_are_current() -> None:
     assert "Stage 2G" in status
     assert "Stage 2H" in status
     assert "Stage 2I" in status
+    assert "Stage 2J" in status
     assert "## Stage 2D - CI-gated schema and docs hardening" in roadmap
     assert "## Stage 2E - CPU experiment manifest scaffold and dry-run planner" in roadmap
     assert "## Stage 2F - Synthetic and solved-fixture CPU execution harness design" in roadmap
     assert "## Stage 2G - First bounded CPU exploratory experiment proposal" in roadmap
     assert "## Stage 2H - Approval-gated execution path" in roadmap
     assert "## Stage 2I - First real bounded CPU exploratory approval packet" in roadmap
-    assert "## Stage 2J - Human decision on first bounded exploratory proposal" in roadmap
+    assert "## Stage 2J - Standing bounded auto-run policy" in roadmap
+    assert "## Stage 3A - Minimal real bounded CPU execution/scoring scaffold" in roadmap
     assert "Stage 2A should build" not in roadmap
     assert "Stage 2B is the next milestone" not in roadmap

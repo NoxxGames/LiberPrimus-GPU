@@ -1,0 +1,37 @@
+record_type: operator_policy
+policy_id: operator-policy-v0
+policy_version: operator-policy-v0
+description: Standing operator policy for bounded local CPU experiments.
+standing_permission_granted: true
+local_cpu_auto_run_allowed: true
+limits:
+  max_candidate_count: 100000
+  max_estimated_runtime_seconds: 600
+  max_generated_output_mb: 250
+allowed_execution:
+  cpu_only: true
+  cuda_enabled: false
+  cloud_execution: false
+  paid_services: false
+hard_blocks:
+  canonical_corpus_activation: true
+  page_boundary_finalization: true
+  solve_claims: true
+  raw_data_commit: true
+  generated_bulk_output_commit: true
+  cuda_campaign: true
+  over_budget: true
+requires_explicit_user_instruction:
+  - cuda_or_gpu_campaign
+  - over_candidate_limit
+  - over_runtime_limit
+  - over_output_limit
+  - cloud_or_paid_services
+  - committing_generated_outputs
+  - solve_claim
+  - canonical_corpus_activation
+  - page_boundary_finalization
+notes:
+  - Policy-passing bounded local CPU experiments do not require per-experiment manual approval.
+  - Generated outputs remain ignored and must not be committed.
+  - This policy does not permit solve claims, CUDA, cloud, canonical corpus activation, or page-boundary finalization.

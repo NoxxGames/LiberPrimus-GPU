@@ -309,6 +309,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - If a corpus metadata path is missing, recommend revision instead of asking the user to guess.
 - Stage 2I does not activate canonical corpus, finalize page boundaries, or claim unsolved pages solved.
 
+## Stage 2J Bounded Auto-Run Policy Rules
+
+- User grants standing permission for bounded local CPU experiments within `experiments/policies/operator-policy-v0.yaml` limits.
+- Do not require per-experiment approval for queue items that pass the standing operator policy.
+- Approval workflow is optional/high-risk audit tooling, not the default path for normal bounded local CPU experiments.
+- Over-budget, CUDA/GPU, cloud, paid-service, generated-output-commit, solve-claim, canonical-corpus, and page-boundary changes still require explicit instruction or remain blocked.
+- Generated bounded auto-run outputs are ignored and must not be committed.
+- If a policy-passing item lacks a safe executor, record a deferred result instead of faking candidates or solve evidence.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

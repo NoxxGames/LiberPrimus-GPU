@@ -147,3 +147,17 @@ Run:
 ```
 
 Generated readiness packets are ignored under `experiments/results/approval-readiness/stage2i/`. Stage 2I does not execute the proposal, approve it, generate candidates, score outputs, use CUDA, activate canonical corpus, or finalize page boundaries.
+
+## Stage 2J Bounded Auto-Run Queue
+
+Stage 2J adds the standing operator policy at `experiments/policies/operator-policy-v0.yaml` and the bounded queue at `experiments/queues/stage2j-bounded-cpu-queue.yaml`.
+
+Policy-passing bounded local CPU queue items no longer require per-experiment approval. The policy still blocks over-budget work, CUDA/GPU campaigns, cloud or paid services, committing generated outputs, canonical corpus activation, page-boundary finalization, and solve claims.
+
+The first queue contains:
+
+- `stage2j-caesar-affine-first-reviewable-slice`, candidate upper bound `841`, policy-eligible but deferred until a safe real executor exists.
+- `stage2j-solved-baseline-regression-control`, solved-control upper bound `10`.
+- `stage2j-blocked-overbudget-example`, deliberate policy-fail item with upper bound `100001`.
+
+Generated bounded auto-run records are ignored under `experiments/results/bounded-auto-runs/stage2j/`.

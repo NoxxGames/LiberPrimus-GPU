@@ -117,6 +117,17 @@ from libreprimus.approval_readiness.summary import (
     load_packets as load_approval_readiness_packets,
     load_summary as load_approval_readiness_summary,
 )
+from libreprimus.bounded_experiments.policy_loader import load_operator_policy
+from libreprimus.bounded_experiments.queue_loader import load_bounded_queue
+from libreprimus.bounded_experiments.runner import (
+    check_queue_paths as check_bounded_queue_paths,
+    run_all as run_all_bounded_experiments,
+    run_next as run_next_bounded_experiment,
+)
+from libreprimus.bounded_experiments.summary import (
+    load_results as load_bounded_experiment_results,
+    load_summary as load_bounded_experiment_summary,
+)
 from libreprimus.reference_sources.summary import build_stage1c_reference_summary, write_stage1c_reference_outputs
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
 from libreprimus.transcript_sources.rtkd_master import parse_rtkd_master
@@ -143,6 +154,7 @@ execution_app = typer.Typer(no_args_is_help=True)
 proposal_app = typer.Typer(no_args_is_help=True)
 approval_execution_app = typer.Typer(no_args_is_help=True)
 approval_readiness_app = typer.Typer(no_args_is_help=True)
+bounded_experiment_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -2246,6 +2258,158 @@ def _print_human_readiness_summary(packet) -> None:
 
 
 app.add_typer(approval_readiness_app, name="approval-readiness")
+
+
+DEFAULT_STAGE2J_POLICY = Path("experiments/policies/operator-policy-v0.yaml")
+DEFAULT_STAGE2J_QUEUE = Path("experiments/queues/stage2j-bounded-cpu-queue.yaml")
+DEFAULT_STAGE2J_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage2j")
+
+
+@bounded_experiment_app.command("validate-policy")
+def bounded_experiment_validate_policy(
+    policy: Path = typer.Option(DEFAULT_STAGE2J_POLICY, "--policy", help="Operator policy path."),
+) -> None:
+    """Validate a standing bounded-experiment operator policy."""
+    try:
+        loaded = load_operator_policy(_resolve_existing_path(policy, "Operator policy"))
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print("Operator policy validation OK")
+    console.print(f"policy_id={loaded.policy_id}")
+    console.print(f"max_candidate_count={loaded.max_candidate_count}")
+    console.print(f"max_estimated_runtime_seconds={loaded.max_estimated_runtime_seconds}")
+    console.print(f"max_generated_output_mb={loaded.max_generated_output_mb:g}")
+
+
+@bounded_experiment_app.command("validate-queue")
+def bounded_experiment_validate_queue(
+    queue: Path = typer.Option(DEFAULT_STAGE2J_QUEUE, "--queue", help="Bounded experiment queue path."),
+) -> None:
+    """Validate a bounded experiment queue manifest."""
+    try:
+        loaded = load_bounded_queue(_resolve_existing_path(queue, "Bounded experiment queue"))
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print("Bounded experiment queue validation OK")
+    console.print(f"queue_id={loaded.queue_id}")
+    console.print(f"policy_id={loaded.policy_id}")
+    console.print(f"item_count={len(loaded.items)}")
+
+
+@bounded_experiment_app.command("check-queue")
+def bounded_experiment_check_queue(
+    policy: Path = typer.Option(DEFAULT_STAGE2J_POLICY, "--policy", help="Operator policy path."),
+    queue: Path = typer.Option(DEFAULT_STAGE2J_QUEUE, "--queue", help="Bounded experiment queue path."),
+) -> None:
+    """Check every queue item against the standing operator policy."""
+    try:
+        checks = check_bounded_queue_paths(
+            _resolve_existing_path(policy, "Operator policy"),
+            _resolve_existing_path(queue, "Bounded experiment queue"),
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_bounded_policy_checks(checks)
+
+
+@bounded_experiment_app.command("run-next")
+def bounded_experiment_run_next(
+    policy: Path = typer.Option(DEFAULT_STAGE2J_POLICY, "--policy", help="Operator policy path."),
+    queue: Path = typer.Option(DEFAULT_STAGE2J_QUEUE, "--queue", help="Bounded experiment queue path."),
+    out_dir: Path = typer.Option(DEFAULT_STAGE2J_BOUNDED_RESULTS_DIR, "--out-dir", help="Generated output directory."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Run warning-only policy-passing items."),
+) -> None:
+    """Run the next policy-passing bounded experiment item."""
+    try:
+        checks, results, summary_path = run_next_bounded_experiment(
+            _resolve_existing_path(policy, "Operator policy"),
+            _resolve_existing_path(queue, "Bounded experiment queue"),
+            _resolve_output_path(out_dir),
+            allow_warnings=allow_warnings,
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_bounded_policy_checks(checks)
+    _print_bounded_run_results(results)
+    console.print(f"summary={summary_path}")
+
+
+@bounded_experiment_app.command("run-all")
+def bounded_experiment_run_all(
+    policy: Path = typer.Option(DEFAULT_STAGE2J_POLICY, "--policy", help="Operator policy path."),
+    queue: Path = typer.Option(DEFAULT_STAGE2J_QUEUE, "--queue", help="Bounded experiment queue path."),
+    out_dir: Path = typer.Option(DEFAULT_STAGE2J_BOUNDED_RESULTS_DIR, "--out-dir", help="Generated output directory."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Run warning-only policy-passing items."),
+) -> None:
+    """Run every policy-passing bounded experiment item and block over-budget items."""
+    try:
+        checks, results, summary_path = run_all_bounded_experiments(
+            _resolve_existing_path(policy, "Operator policy"),
+            _resolve_existing_path(queue, "Bounded experiment queue"),
+            _resolve_output_path(out_dir),
+            allow_warnings=allow_warnings,
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_bounded_policy_checks(checks)
+    _print_bounded_run_results(results)
+    console.print(f"summary={summary_path}")
+
+
+@bounded_experiment_app.command("summary")
+def bounded_experiment_summary(
+    results_dir: Path = typer.Option(
+        DEFAULT_STAGE2J_BOUNDED_RESULTS_DIR,
+        "--results-dir",
+        help="Generated bounded auto-run results directory.",
+    ),
+) -> None:
+    """Print generated bounded auto-run summary counts."""
+    resolved = _resolve_output_path(results_dir)
+    summary = load_bounded_experiment_summary(resolved)
+    results = load_bounded_experiment_results(resolved)
+    for key in [
+        "item_count",
+        "policy_pass_count",
+        "policy_blocked_count",
+        "executed_count",
+        "deferred_count",
+        "blocked_count",
+        "result_count",
+        "candidate_count_total",
+    ]:
+        console.print(f"{key}={summary.get(key, 0)}")
+    for result in results:
+        console.print(f"{result.get('item_id')}={result.get('execution_status')}")
+
+
+def _print_bounded_policy_checks(checks) -> None:
+    console.print(f"item_count={len(checks)}")
+    console.print(f"policy_pass_count={sum(1 for check in checks if not check.blocking_reasons)}")
+    console.print(f"policy_blocked_count={sum(1 for check in checks if check.blocking_reasons)}")
+    for check in checks:
+        console.print(f"{check.item_id}=policy:{check.status}")
+        for reason in check.blocking_reasons:
+            console.print(f"{check.item_id}_blocking_reason={reason}")
+
+
+def _print_bounded_run_results(results) -> None:
+    console.print(f"result_count={len(results)}")
+    console.print(f"executed_count={sum(1 for result in results if result.execution_performed)}")
+    console.print(f"deferred_count={sum(1 for result in results if result.execution_status == 'deferred')}")
+    console.print(f"blocked_count={sum(1 for result in results if result.execution_status == 'blocked')}")
+    for result in results:
+        console.print(f"{result.item_id}=execution:{result.execution_status}")
+        if result.deferred_reason:
+            console.print(f"{result.item_id}_deferred_reason={result.deferred_reason}")
+
+
+app.add_typer(bounded_experiment_app, name="bounded-experiment")
 
 
 @solved_fixture_app.command("list")

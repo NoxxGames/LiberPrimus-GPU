@@ -1,0 +1,129 @@
+record_type: bounded_experiment_queue
+queue_id: stage2j-bounded-cpu-queue
+queue_version: bounded-experiment-queue-v0
+policy_id: operator-policy-v0
+default_output_dir: experiments/results/bounded-auto-runs/stage2j
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+items:
+  - item_id: stage2j-caesar-affine-first-reviewable-slice
+    description: Policy conversion of the Stage 2I first bounded Caesar plus affine reviewable-slice proposal.
+    enabled: true
+    experiment_kind: caesar_affine_reviewable_slice
+    source_proposal: experiments/proposals/stage2i/stage2i-first-bounded-caesar-affine-review.yaml
+    corpus_slice:
+      slice_id: stage2i-first-bounded-caesar-affine-review-slice
+      slice_kind: future_unsolved_page_candidate
+      review_required: true
+      source: rtkd-master-v0-candidate
+      selector:
+        selector_kind: reviewable_metadata_only
+        page_candidate_id: lp2-reviewable-page-candidate-placeholder
+        raw_unsolved_text_included: false
+      metadata_paths:
+        - path: experiments/proposals/stage2i/stage2i-first-bounded-caesar-affine-review.yaml
+          role: proposal_embedded_selector_metadata
+    transform_plan:
+      families:
+        - transform_family: caesar_shift_preview
+          candidate_count: 29
+          parameters:
+            shift_min: 0
+            shift_max: 28
+        - transform_family: affine_mod29_preview
+          candidate_count: 812
+          parameters:
+            modulus: 29
+    candidate_count_upper_bound: 841
+    estimated_runtime_seconds: 60
+    generated_output_budget_mb: 10
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: trivial_summary_only
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage2j
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: ready
+
+  - item_id: stage2j-solved-baseline-regression-control
+    description: Solved-baseline regression control for the bounded runner policy path.
+    enabled: true
+    experiment_kind: solved_baseline_regression_control
+    source_manifest: experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml
+    corpus_slice:
+      slice_id: all-known-solved-baselines
+      slice_kind: solved_fixture_group
+      solved_fixture_only: true
+      raw_unsolved_text_included: false
+    transform_plan:
+      families:
+        - transform_family: solved_baseline_replay
+          candidate_count: 10
+    candidate_count_upper_bound: 10
+    estimated_runtime_seconds: 30
+    generated_output_budget_mb: 5
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: false
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_control_summary
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage2j
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: ready
+
+  - item_id: stage2j-blocked-overbudget-example
+    description: Deliberate over-budget example proving the policy blocks queue items above the candidate limit.
+    enabled: true
+    experiment_kind: blocked_overbudget_example
+    expected_policy_status: fail
+    corpus_slice:
+      slice_id: blocked-overbudget-example
+      slice_kind: synthetic_policy_test
+      raw_unsolved_text_included: false
+    transform_plan:
+      families:
+        - transform_family: overbudget_policy_test
+          candidate_count: 100001
+    candidate_count_upper_bound: 100001
+    estimated_runtime_seconds: 60
+    generated_output_budget_mb: 5
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: false
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: none
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage2j
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: blocked_example
