@@ -40,6 +40,7 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/results/bounded-auto-runs/stage3d/top_candidates.jsonl",
         "experiments/results/bounded-auto-runs/stage3d/summary.json",
         "experiments/results/bounded-auto-runs/stage3d/calibrated_scores.jsonl",
+        "experiments/results/bounded-auto-runs/stage3e/stage3e_queue_dry_run_summary.json",
         "local-test.sqlite3",
     ]
     trackable_paths = [
@@ -54,6 +55,9 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "schemas/experiments/operator-policy-v0.schema.json",
         "schemas/experiments/bounded-experiment-queue-v0.schema.json",
         "schemas/experiments/bounded-candidate-record-v0.schema.json",
+        "schemas/experiments/method-backlog-v0.schema.json",
+        "schemas/experiments/method-backlog-item-v0.schema.json",
+        "schemas/experiments/stage3e-queue-item-v0.schema.json",
         "schemas/scoring/minimal-triage-score-v0.schema.json",
         "data/scoring/english-common-words-tiny-v0.txt",
         "data/scoring/english-impossible-bigrams-tiny-v0.txt",
@@ -69,6 +73,8 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/queues/stage2j-bounded-cpu-queue.yaml",
         "experiments/queues/stage3b-bounded-cpu-queue.yaml",
         "experiments/queues/stage3c-bounded-cpu-queue.yaml",
+        "experiments/queues/stage3e-method-backlog.yaml",
+        "experiments/queues/stage3e-bounded-cpu-queue.yaml",
     ]
     for path in ignored_paths:
         if _is_ignored(root, path):

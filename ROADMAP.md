@@ -164,6 +164,12 @@ Stage 3D added bounded explicit-key Vigenere execution for exactly `LIBER`, `PRI
 
 If Stage 3D remains noisy, use Deep Research or a similarly bounded planning pass to prioritize the next conservative CPU method family. Do not jump directly to CUDA, broad Vigenere search, canonical corpus activation, page-boundary finalization, generated-output publication, or solve claims.
 
+Stage 3E ingested the Deep Research method backlog, added machine-readable backlog and bounded queue manifests, validated deterministic candidate counts, and dry-ran six policy-fitting queue items. It executed no experiments because the high-priority items require missing executors, which are marked explicitly instead of faked.
+
+## Stage 3F - Evidence-key Vigenere pack executor
+
+Implement the reset/advance-aware explicit-key Vigenere pack executor for `stage3e_vig_lp_evidence_pack_v1`, then run that one bounded LP evidence pack if it still fits the standing operator policy. Keep the key list manifest-bound, CPU-only, generated outputs ignored, and no solve claim.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

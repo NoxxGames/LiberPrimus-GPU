@@ -95,8 +95,13 @@ def check_item(policy: OperatorPolicy, item: dict[str, Any]) -> PolicyCheckResul
     )
 
     scoring = item.get("scoring_enabled", False)
-    if scoring not in {False, "trivial_summary_only", "minimal_triage"}:
-        add("scoring_bounded", False, "Scoring must be false, trivial_summary_only, or minimal_triage.", "scoring_not_allowed")
+    if scoring not in {False, "trivial_summary_only", "minimal_triage", "calibrated_triage"}:
+        add(
+            "scoring_bounded",
+            False,
+            "Scoring must be false, trivial_summary_only, minimal_triage, or calibrated_triage.",
+            "scoring_not_allowed",
+        )
     else:
         checks.append(
             {

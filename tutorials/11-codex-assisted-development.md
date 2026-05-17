@@ -95,3 +95,7 @@ For scoring calibration work, require `libreprimus scoring calibrate`, `scoring 
 ## Stage 3D Guardrails
 
 For bounded Vigenere key-list work, require `libreprimus bounded-run run-vigenere-key-list`, `bounded-run summary`, exact key-count tests, key-expansion rejection tests, calibrated scoring checks, and generated-output ignore checks. The Stage 3D key list is explicit-list only; do not infer keys, mutate keys, search key lengths, use CUDA, or commit candidate dumps.
+
+## Stage 3E Guardrails
+
+For method-backlog ingestion, require `libreprimus bounded-experiment dry-run-queue`, deterministic count tests, executor-support classification tests, and generated-output ignore checks. Do not mark missing executors runnable, do not broaden into dictionary search or arbitrary skip masks, and do not execute queued methods until the required executor is implemented cleanly.

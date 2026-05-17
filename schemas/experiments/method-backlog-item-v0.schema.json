@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/method-backlog-item-v0.schema.json",
+  "title": "method-backlog-item-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "experiment_id",
+    "short_name",
+    "hypothesis",
+    "evidence_basis",
+    "transform_family",
+    "exact_parameters",
+    "candidate_count_estimate",
+    "operator_policy_status",
+    "implementation_status",
+    "required_controls",
+    "generated_output_policy",
+    "no_solve_claim",
+    "cuda_enabled",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "notes"
+  ],
+  "properties": {
+    "experiment_id": { "type": "string", "minLength": 1 },
+    "short_name": { "type": "string", "minLength": 1 },
+    "hypothesis": { "type": "string", "minLength": 1 },
+    "evidence_basis": { "type": "string", "minLength": 1 },
+    "transform_family": { "type": "string", "minLength": 1 },
+    "exact_parameters": { "type": "object" },
+    "candidate_count_estimate": { "type": "integer", "minimum": 0 },
+    "operator_policy_status": { "type": "string", "minLength": 1 },
+    "implementation_status": {
+      "enum": ["runnable_now", "dry_run_only", "needs_executor", "blocked"]
+    },
+    "required_controls": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "generated_output_policy": { "type": "object" },
+    "no_solve_claim": { "const": true },
+    "cuda_enabled": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

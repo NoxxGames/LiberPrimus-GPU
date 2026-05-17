@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3D and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3E and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -22,7 +22,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad unsolved-page search campaigns: not started.
-- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, and Stage 3D applies that scorer to a four-key explicit Vigenere preview only.
+- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, and Stage 3E queues evidence-ranked methods without widening execution.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
 - Broad unsolved-page campaigns: not started.
@@ -31,7 +31,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Next bounded method execution after calibrated scoring.
+- Stage 3F implementation of the highest-priority missing executor, starting with the reset/advance-aware evidence-key Vigenere pack.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
 - Benchmark campaigns after stable CPU/GPU baselines exist.
@@ -55,6 +55,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Candidate lead inspection, refined triage scoring, reranking, and reverse-direction bounded comparison.
 - Scoring calibration with positive controls, null controls, negative controls, tiny crib checks, and a conservative Stage 3D queue recommendation.
 - Small explicit-key Vigenere preview for the four declared known-motif keys, with calibrated scoring and ignored generated outputs.
+- Deep Research method backlog ingestion, deterministic Stage 3E queue counts, and dry-run executor-support classification.
 
 ## Architecture summary
 
@@ -78,13 +79,14 @@ Current status:
 - Stage 3B: Stage 3A lead inspection, scoring refinement, rerank, and reverse-direction comparison complete.
 - Stage 3C: scoring calibration, null controls, positive controls, and tiny crib checks complete.
 - Stage 3D: small Vigenere known-motif key-list preview complete.
+- Stage 3E: Deep Research method backlog ingestion and bounded queue dry-run complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad search/scoring/CUDA campaigns: not started.
-- Latest bounded review: Stage 3D ran the four-key Vigenere known-motif preview; top key `LIBER` calibrated as `noisy`; no solve claim.
-- Next: Stage 3E prioritize the next bounded method family, or inspect the Vigenere lead only if a human chooses to treat it as a weak lead.
+- Latest bounded review: Stage 3E ingested six evidence-ranked methods with total deterministic candidate estimate `780`; all fit policy, but `0` are runnable now, `4` need executors, and `2` are dry-run-only; no solve claim.
+- Next: Stage 3F implement the reset/advance-aware evidence-key Vigenere pack executor and run the LP evidence pack if it still passes operator policy.
 
 ## CI status
 
@@ -211,13 +213,17 @@ Current tests cover the C++ skeleton, Python package, manifests, schemas, result
 
 ## Next milestones
 
-Stage 2J replaces per-experiment approval as the default path with the standing policy in `experiments/policies/operator-policy-v0.yaml` and the queue in `experiments/queues/stage2j-bounded-cpu-queue.yaml`. Normal local CPU items can run automatically when they stay within the hard limits: candidate upper bound `100000`, runtime estimate `600` seconds, generated output budget `250` MB, CPU only, no CUDA/cloud/paid services, no generated-output commit, no canonical corpus activation, no page-boundary finalization, and no solve claim.
+Stage 2J replaced per-experiment approval as the default path with the standing policy in `experiments/policies/operator-policy-v0.yaml` and the queue in `experiments/queues/stage2j-bounded-cpu-queue.yaml`. Normal local CPU items can run automatically when they stay within the hard limits: candidate upper bound `100000`, runtime estimate `600` seconds, generated output budget `250` MB, CPU only, no CUDA/cloud/paid services, no generated-output commit, no canonical corpus activation, no page-boundary finalization, and no solve claim.
 
 The first Caesar plus affine reviewable-slice queue item has candidate upper bound `841` and is policy-eligible. Stage 3A adds the minimal CPU executor and deterministic triage scoring for that item. Full candidate outputs remain ignored under `experiments/results/bounded-auto-runs/stage3a/`; committed research logs summarize counts and top score metadata only.
 
 Stage 3B inspected Stage 3A top candidates, refined the scorer, reranked the 841 candidates, and ran the reverse-direction comparison. Both refined and reverse-direction top leads remain `noisy`.
 
-Stage 3C calibrated scoring against positive solved-fixture controls, deterministic null controls, negative controls, and tiny crib checks. Stage 3D ran the conservative small Vigenere known-motif key-list preview for exactly four declared keys. The top key was `LIBER`, calibrated as `noisy`, so Stage 3E should prioritize the next bounded method family and avoid widening into broad key search or CUDA. No Stage 3A, Stage 3B, Stage 3C, or Stage 3D output is a solve claim.
+Stage 3C calibrated scoring against positive solved-fixture controls, deterministic null controls, negative controls, and tiny crib checks. Stage 3D ran the conservative small Vigenere known-motif key-list preview for exactly four declared keys. The top key was `LIBER`, calibrated as `noisy`.
+
+Stage 3E ingests the Deep Research method backlog, commits `experiments/queues/stage3e-method-backlog.yaml` and `experiments/queues/stage3e-bounded-cpu-queue.yaml`, and dry-runs six bounded methods with deterministic counts: LP evidence Vigenere `48`, p56 local prime-minus-one offsets `256`, historical Vigenere `56`, family-specific negative controls `100`, reset/advance ablation `64`, and prime mod/gap `256`. No Stage 3E queue item is executed until its missing executor is implemented cleanly. No Stage 3A through Stage 3E output is a solve claim.
+
+Stage 3F should implement the reset/advance-aware evidence-key Vigenere pack executor and run only `stage3e_vig_lp_evidence_pack_v1` if it remains within policy.
 
 ## Stage 1B Atbash-Family Fixtures
 

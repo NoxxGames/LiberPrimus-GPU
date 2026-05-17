@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3D small Vigenere known-motif key-list preview is complete.
+Stage 3E Deep Research method backlog ingestion and bounded queue dry-run is complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, and Stage 3D applies it to a four-key explicit Vigenere preview only.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, and Stage 3E queues the next bounded methods without faking missing executors.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 
@@ -252,6 +252,18 @@ Generated candidate records, calibrated score details, top candidates, warnings,
 
 Developer log: `docs/development-logs/2026-05-16-stage-3d-small-vigenere-key-list.md`.
 
+## Completed in Stage 3E
+
+Stage 3E ingested the Deep Research method backlog into committed backlog and bounded queue manifests, added method backlog schemas, deterministic candidate-count validation, dry-run CLI support, executor-support classification, tests, documentation, and summary-only research logs.
+
+Queue summary: six items, total deterministic candidate estimate `780`. LP evidence Vigenere pack `48`, p56 local prime-minus-one offsets `256`, historical Vigenere pack `56`, family-specific negative controls `100`, reset/advance ablation `64`, and prime mod/gap pack `256`.
+
+Dry-run result: all six items fit the standing operator policy, but no item executed in Stage 3E. Four items are marked `needs_executor`, two items are `dry_run_only`, and missing executors are recorded explicitly instead of faking candidate output.
+
+Generated dry-run output remains ignored under `experiments/results/bounded-auto-runs/stage3e/`. CUDA remains disabled, the canonical corpus remains inactive, page boundaries remain reviewable, and no solve claim is made.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3e-method-backlog-ingestion.md`.
+
 ## Next prompt recommendation
 
-Stage 3E - use Deep Research to prioritize the next bounded method family and generate a method backlog, unless a human explicitly chooses to inspect the noisy Vigenere lead first.
+Stage 3F - implement the reset/advance-aware evidence-key Vigenere pack executor and run the LP evidence pack if it still passes operator policy.

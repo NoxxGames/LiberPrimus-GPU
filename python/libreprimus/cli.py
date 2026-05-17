@@ -142,6 +142,7 @@ from libreprimus.candidate_inspection.summary import to_summary_payload
 from libreprimus.candidate_inspection.validation import validate_no_full_dump_in_markdown, validate_summary_payload
 from libreprimus.scoring.calibration import run_scoring_calibration
 from libreprimus.scoring.crib_checks import DEFAULT_CRIBS_PATH, crib_check, load_cribs
+from libreprimus.method_backlog.dry_run import dry_run_stage3e_queue
 from libreprimus.reference_sources.summary import build_stage1c_reference_summary, write_stage1c_reference_outputs
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
 from libreprimus.transcript_sources.rtkd_master import parse_rtkd_master
@@ -2285,6 +2286,8 @@ DEFAULT_STAGE3B_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-run
 DEFAULT_STAGE3B_INSPECTION_MD = Path("research-log/2026-05-16-stage-3b-stage3a-lead-inspection.md")
 DEFAULT_STAGE3C_CALIBRATION_RESULTS_DIR = Path("experiments/results/scoring-calibration/stage3c")
 DEFAULT_STAGE3D_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3d")
+DEFAULT_STAGE3E_QUEUE = Path("experiments/queues/stage3e-bounded-cpu-queue.yaml")
+DEFAULT_STAGE3E_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3e")
 
 
 @bounded_experiment_app.command("validate-policy")
@@ -2408,6 +2411,42 @@ def bounded_experiment_summary(
         console.print(f"{key}={summary.get(key, 0)}")
     for result in results:
         console.print(f"{result.get('item_id')}={result.get('execution_status')}")
+
+
+@bounded_experiment_app.command("dry-run-queue")
+def bounded_experiment_dry_run_queue(
+    policy: Path = typer.Option(DEFAULT_STAGE2J_POLICY, "--policy", help="Operator policy path."),
+    queue: Path = typer.Option(DEFAULT_STAGE3E_QUEUE, "--queue", help="Stage 3E bounded experiment queue path."),
+    out_dir: Path = typer.Option(DEFAULT_STAGE3E_BOUNDED_RESULTS_DIR, "--out-dir", help="Generated dry-run output directory."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Accepted for symmetry; dry-run records warnings."),
+) -> None:
+    """Dry-run a bounded queue and validate deterministic candidate counts."""
+    try:
+        summary = dry_run_stage3e_queue(
+            policy_path=_resolve_existing_path(policy, "Operator policy"),
+            queue_path=_resolve_existing_path(queue, "Bounded experiment queue"),
+            out_dir=_resolve_output_path(out_dir),
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    if not allow_warnings and any(result.warnings for result in summary.results):
+        console.print("[yellow]dry_run_warnings_present=true[/yellow]")
+    console.print(f"queue_id={summary.queue_id}")
+    console.print(f"item_count={summary.item_count}")
+    console.print(f"total_candidate_estimate={summary.total_candidate_estimate}")
+    console.print(f"runnable_now_count={summary.runnable_now_count}")
+    console.print(f"needs_executor_count={summary.needs_executor_count}")
+    console.print(f"dry_run_only_count={summary.dry_run_only_count}")
+    console.print(f"blocked_count={summary.blocked_count}")
+    for result in summary.results:
+        console.print(
+            f"{result.item_id}=declared:{result.declared_candidate_count};calculated:{result.calculated_candidate_count};"
+            f"policy:{result.policy_status};executor:{result.executor_status}"
+        )
+        for warning in result.warnings:
+            console.print(f"{result.item_id}_warning={warning}")
+    console.print(f"summary={summary.output_path}")
 
 
 @bounded_run_app.command("run-caesar-affine")

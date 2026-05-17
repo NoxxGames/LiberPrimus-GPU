@@ -355,6 +355,14 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Calibrated confidence labels are triage metadata only.
 - CUDA, canonical corpus activation, page-boundary finalization, broad key search, and solve claims remain out of scope.
 
+## Stage 3E Method Backlog Rules
+
+- Stage 3E backlog ingestion must not silently widen search scope.
+- Method backlog queue items must include candidate counts, exact parameters, evidence basis, generated-output policy, and executor-support status.
+- Items requiring missing executors must be marked deferred or dry-run-only, not faked as runnable.
+- Do not run broad dictionary search, arbitrary skip masks, CUDA, cloud work, canonical corpus activation, page-boundary finalization, or solve claims from Stage 3E.
+- Dry-run summaries under `experiments/results/bounded-auto-runs/stage3e/` are generated outputs and must not be committed.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

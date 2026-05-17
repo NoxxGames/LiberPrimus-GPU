@@ -217,3 +217,17 @@ Run:
 The command tests exactly four declared keys: `LIBER`, `PRIMUS`, `DIVINITY`, and `CICADA`. It does not mutate keys, infer keys, search key lengths, use CUDA, or claim a solve.
 
 Generated candidate records and summaries remain ignored under `experiments/results/bounded-auto-runs/stage3d/`. The committed research log records only top-key score metadata and the calibrated confidence label.
+
+## Stage 3E Method Backlog And Bounded Queue
+
+Stage 3E records the Deep Research method backlog and converts the top bounded methods into `experiments/queues/stage3e-bounded-cpu-queue.yaml`.
+
+Run the dry-run count and support check:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli bounded-experiment dry-run-queue --policy experiments/policies/operator-policy-v0.yaml --queue experiments/queues/stage3e-bounded-cpu-queue.yaml --out-dir experiments/results/bounded-auto-runs/stage3e --allow-warnings
+```
+
+The queue currently contains six items with total deterministic candidate estimate `780`: LP evidence Vigenere `48`, p56 local prime-minus-one offsets `256`, historical Vigenere `56`, family-specific negative controls `100`, reset/advance ablation `64`, and prime mod/gap `256`.
+
+Stage 3E is an ingestion and dry-run stage. It does not execute items whose reset/advance, prime-offset, or family-specific negative-control executors are missing. Generated dry-run summaries remain ignored under `experiments/results/bounded-auto-runs/stage3e/`, and no candidate dumps, CUDA work, canonical corpus activation, page-boundary finalization, or solve claims are produced.

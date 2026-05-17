@@ -94,6 +94,10 @@ Stage 3C calibration is CPU-only local scoring work. It scores small positive, n
 
 Stage 3D is also CPU-only. It runs exactly four explicit Vigenere keys from a committed queue item, writes ignored generated outputs, and does not justify GPU work or a solve claim.
 
+## Stage 3E Backlog Dry-Run Scope
+
+Stage 3E is CPU planning and dry-run validation only. It validates six bounded queue items with total candidate estimate `780`, classifies missing executors, writes an ignored dry-run summary, and does not execute queued candidate generation. It is not a benchmark, does not widen into broad key search, and does not justify CUDA work.
+
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

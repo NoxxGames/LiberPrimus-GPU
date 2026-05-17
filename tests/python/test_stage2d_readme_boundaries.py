@@ -51,7 +51,7 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "still unsolved must not receive a solve claim" in section
     assert "Canonical corpus: inactive." in section
     assert "Broad unsolved-page search campaigns: not started." in section
-    assert "Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, and Stage 3D applies that scorer to a four-key explicit Vigenere preview only." in section
+    assert "Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, and Stage 3E queues evidence-ranked methods without widening execution." in section
     assert "CUDA experiment campaigns: not started." in section
     assert "Broad search/scoring/CUDA campaigns: not started." in readme
     assert "Stage 2E: CPU exploratory experiment manifest scaffold and dry-run planner complete." in readme
@@ -64,6 +64,7 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "Stage 3B: Stage 3A lead inspection, scoring refinement, rerank, and reverse-direction comparison complete." in readme
     assert "Stage 3C: scoring calibration, null controls, positive controls, and tiny crib checks complete." in readme
     assert "Stage 3D: small Vigenere known-motif key-list preview complete." in readme
+    assert "Stage 3E: Deep Research method backlog ingestion and bounded queue dry-run complete." in readme
 
 
 def test_readme_does_not_imply_deferred_work_is_permanently_excluded() -> None:

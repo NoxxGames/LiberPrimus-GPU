@@ -1,0 +1,270 @@
+record_type: bounded_experiment_queue
+queue_id: stage3e-bounded-cpu-queue
+queue_version: bounded-experiment-queue-v0
+policy_id: operator-policy-v0
+default_output_dir: experiments/results/bounded-auto-runs/stage3e
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+items:
+  - item_id: stage3e_vig_lp_evidence_pack_v1
+    description: LP solved-page and earlier-round evidence Vigenere key pack; dry-run until reset/advance executor exists.
+    enabled: true
+    experiment_kind: vigenere_key_pack
+    implementation_status: needs_executor
+    required_executor: reset_advance_key_pack_executor
+    corpus_slice:
+      slice_id: stage3a-page-candidate-018-reviewable-slice
+      slice_kind: future_unsolved_page_candidate
+      review_required: true
+      source: rtkd-master-v0-candidate
+      corpus_candidate_id: rtkd-master-v0-candidate
+      selector:
+        selector_kind: corpus_page_candidate_token_range
+        page_candidate_id: page-candidate-018
+        candidate_local_page_index: 18
+        start_token_index: 5283
+        end_token_index: 5402
+        expected_rune_token_count: 87
+        raw_unsolved_text_included: false
+      metadata_paths:
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/page_candidates.jsonl
+          role: generated_ignored_page_candidate_metadata
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/tokens.jsonl
+          role: generated_ignored_token_metadata
+    transform_plan:
+      transform_family: vigenere_key_pack
+      parameters:
+        keys: [DIVINITY, FIRFUMFERENFE, PARABLE, INSTAR, EMERGE, WITHIN, WELCOME, PILGRIM, TOTIENT, PRIMES, SACRED, ENCRYPTED]
+        reset_modes: [none, line]
+        advance_modes: [runes_only, token_break_preserving]
+        key_search_enabled: false
+        dictionary_search_enabled: false
+        unconstrained_skip_masks: false
+    candidate_count_upper_bound: 48
+    estimated_runtime_seconds: 60
+    generated_output_budget_mb: 20
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: calibrated_triage
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_vig_lp_evidence_pack_v1
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: queued_needs_executor
+
+  - item_id: stage3e_prime_minus_one_offsets_v1
+    description: p56-local prime-minus-one offset sweep; dry-run until prime offset sweep executor exists.
+    enabled: true
+    experiment_kind: prime_minus_one_offset_sweep
+    implementation_status: needs_executor
+    required_executor: prime_offset_sweep_executor
+    corpus_slice:
+      slice_id: stage3a-page-candidate-018-reviewable-slice
+      slice_kind: future_unsolved_page_candidate
+      raw_unsolved_text_included: false
+    transform_plan:
+      transform_family: prime_minus_one_offset_sweep
+      parameters:
+        stream: prime_minus_one
+        offsets:
+          start: 0
+          end: 63
+        directions: [forward, reverse]
+        reset_modes: [none, line]
+    candidate_count_upper_bound: 256
+    estimated_runtime_seconds: 120
+    generated_output_budget_mb: 40
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: calibrated_triage
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_prime_minus_one_offsets_v1
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: queued_needs_executor
+
+  - item_id: stage3e_vig_history_key_pack_v1
+    description: Historical motif Vigenere key pack; dry-run until reset/advance executor exists.
+    enabled: true
+    experiment_kind: vigenere_key_pack
+    implementation_status: needs_executor
+    required_executor: reset_advance_key_pack_executor
+    corpus_slice:
+      slice_id: stage3a-page-candidate-018-reviewable-slice
+      slice_kind: future_unsolved_page_candidate
+      raw_unsolved_text_included: false
+    transform_plan:
+      transform_family: vigenere_key_pack
+      parameters:
+        keys: [PATIENCEISAVIRTUE, THEINSTAREMERGENCE, SELFRELIANCE, BOOKOFTHELAW, MABINOGION, AGRIPPA, EMERSON, CROWLEY, BLAKE, PATIENCE, VIRTUE, SELF, RELIANCE, LAW]
+        reset_modes: [none, line]
+        advance_modes: [runes_only, token_break_preserving]
+        key_search_enabled: false
+        dictionary_search_enabled: false
+        unconstrained_skip_masks: false
+    candidate_count_upper_bound: 56
+    estimated_runtime_seconds: 60
+    generated_output_budget_mb: 20
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: calibrated_triage
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_vig_history_key_pack_v1
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: queued_needs_executor
+
+  - item_id: stage3e_negative_control_extension_v1
+    description: Family-specific negative-control extension; dry-run until all requested controls are implemented.
+    enabled: true
+    experiment_kind: family_specific_negative_controls
+    implementation_status: needs_executor
+    required_executor: family_specific_negative_control_executor
+    corpus_slice:
+      slice_id: stage3a-page-candidate-018-reviewable-slice
+      slice_kind: future_unsolved_page_candidate
+      raw_unsolved_text_included: false
+    transform_plan:
+      transform_family: family_specific_negative_controls
+      parameters:
+        negative_corpora: [rune_shuffle_same_length, rune_freq_preserving_shuffle, wrong_mapping_variant, separator_randomised_variant]
+        representative_transform_subset_size: 25
+    candidate_count_upper_bound: 100
+    estimated_runtime_seconds: 60
+    generated_output_budget_mb: 20
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: calibrated_triage
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_negative_control_extension_v1
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: queued_needs_executor
+
+  - item_id: stage3e_reset_advance_ablation_v1
+    description: Reset/advance ablation dry-run item.
+    enabled: true
+    experiment_kind: reset_advance_ablation
+    implementation_status: dry_run_only
+    required_executor: reset_advance_state_machine
+    corpus_slice:
+      slice_id: stage3a-page-candidate-018-reviewable-slice
+      slice_kind: future_unsolved_page_candidate
+      raw_unsolved_text_included: false
+    transform_plan:
+      transform_family: reset_advance_ablation
+      parameters:
+        base_transforms:
+          - vigenere:DIVINITY
+          - vigenere:FIRFUMFERENFE
+          - vigenere:PATIENCEISAVIRTUE
+          - vigenere:THEINSTAREMERGENCE
+          - prime_minus_one:offset=0
+          - prime_minus_one:offset=1
+          - prime_mod29:offset=0
+          - prime_gap:offset=0
+        reset_modes: [none, word, clause, line]
+        advance_modes: [runes_only, token_break_preserving]
+    candidate_count_upper_bound: 64
+    estimated_runtime_seconds: 60
+    generated_output_budget_mb: 20
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: calibrated_triage
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_reset_advance_ablation_v1
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: dry_run_only
+
+  - item_id: stage3e_prime_mod_gap_pack_v1
+    description: Prime neighbour stream pack dry-run item.
+    enabled: true
+    experiment_kind: prime_neighbour_streams
+    implementation_status: dry_run_only
+    required_executor: prime_neighbour_stream_executor
+    corpus_slice:
+      slice_id: stage3a-page-candidate-018-reviewable-slice
+      slice_kind: future_unsolved_page_candidate
+      raw_unsolved_text_included: false
+    transform_plan:
+      transform_family: prime_neighbour_streams
+      parameters:
+        families: [prime_mod29, prime_gap_mod29]
+        offsets:
+          start: 0
+          end: 31
+        directions: [forward, reverse]
+        reset_modes: [none, line]
+    candidate_count_upper_bound: 256
+    estimated_runtime_seconds: 120
+    generated_output_budget_mb: 40
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: calibrated_triage
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_prime_mod_gap_pack_v1
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: dry_run_only

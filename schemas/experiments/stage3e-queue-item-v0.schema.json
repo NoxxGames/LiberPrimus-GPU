@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/stage3e-queue-item-v0.schema.json",
+  "title": "stage3e-queue-item-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "item_id",
+    "experiment_kind",
+    "implementation_status",
+    "candidate_count_upper_bound",
+    "cpu_only",
+    "cuda_enabled",
+    "no_solve_claim",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "transform_plan",
+    "output_policy"
+  ],
+  "properties": {
+    "item_id": { "type": "string", "minLength": 1 },
+    "experiment_kind": { "type": "string", "minLength": 1 },
+    "implementation_status": {
+      "enum": ["runnable_now", "dry_run_only", "needs_executor", "blocked"]
+    },
+    "candidate_count_upper_bound": { "type": "integer", "minimum": 0 },
+    "cpu_only": { "const": true },
+    "cuda_enabled": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "transform_plan": { "type": "object" },
+    "output_policy": { "type": "object" }
+  }
+}

@@ -1,0 +1,159 @@
+record_type: method_backlog
+backlog_id: stage3e-method-backlog
+backlog_version: method-backlog-v0
+source: docs/research/LiberPrimus-CPU-Research-Backlog-For-LiberPrimus-GPU.md
+no_solve_claim: true
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+items:
+  - experiment_id: stage3e_vig_lp_evidence_pack_v1
+    short_name: LP evidence Vigenere key pack
+    hypothesis: Solved-page and earlier-round vocabulary may be useful as explicit Vigenere keys.
+    evidence_basis: Solved LP Vigenere pages use explicit declared keys; earlier Cicada material repeats terms such as divinity, parable, primes, and pilgrimage motifs.
+    transform_family: vigenere_key_pack
+    exact_parameters:
+      keys: [DIVINITY, FIRFUMFERENFE, PARABLE, INSTAR, EMERGE, WITHIN, WELCOME, PILGRIM, TOTIENT, PRIMES, SACRED, ENCRYPTED]
+      reset_modes: [none, line]
+      advance_modes: [runes_only, token_break_preserving]
+    candidate_count_estimate: 48
+    operator_policy_status: within_policy
+    implementation_status: needs_executor
+    required_controls: [stage3c_calibration, null_controls, negative_controls]
+    generated_output_policy:
+      output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_vig_lp_evidence_pack_v1
+      commit_outputs: false
+    no_solve_claim: true
+    cuda_enabled: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    notes:
+      - Needs reset/advance-aware Vigenere key-pack executor before running.
+
+  - experiment_id: stage3e_prime_minus_one_offsets_v1
+    short_name: p56-local prime-minus-one offset sweep
+    hypothesis: Nearby prime-minus-one offsets may test whether the p56 stream family generalizes locally.
+    evidence_basis: p56 An End is solved with ordered prime-minus-one modulo 29; this is the strongest prime-stream evidence available.
+    transform_family: prime_minus_one_offset_sweep
+    exact_parameters:
+      stream: prime_minus_one
+      offsets:
+        start: 0
+        end: 63
+      directions: [forward, reverse]
+      reset_modes: [none, line]
+    candidate_count_estimate: 256
+    operator_policy_status: within_policy
+    implementation_status: needs_executor
+    required_controls: [stage3c_calibration, null_controls, p56_solved_fixture_regression]
+    generated_output_policy:
+      output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_prime_minus_one_offsets_v1
+      commit_outputs: false
+    no_solve_claim: true
+    cuda_enabled: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    notes:
+      - Existing prime-minus-one support is solved-fixture scoped and does not implement offset/direction/reset sweeps.
+
+  - experiment_id: stage3e_vig_history_key_pack_v1
+    short_name: Historical motif Vigenere key pack
+    hypothesis: Earlier Cicada book and phrase motifs may be useful as bounded explicit Vigenere keys.
+    evidence_basis: Earlier rounds used Patience is a virtue, Self-Reliance, Book of the Law, Mabinogion, Agrippa, Emerson, Crowley, and Blake motifs.
+    transform_family: vigenere_key_pack
+    exact_parameters:
+      keys: [PATIENCEISAVIRTUE, THEINSTAREMERGENCE, SELFRELIANCE, BOOKOFTHELAW, MABINOGION, AGRIPPA, EMERSON, CROWLEY, BLAKE, PATIENCE, VIRTUE, SELF, RELIANCE, LAW]
+      reset_modes: [none, line]
+      advance_modes: [runes_only, token_break_preserving]
+    candidate_count_estimate: 56
+    operator_policy_status: within_policy
+    implementation_status: needs_executor
+    required_controls: [stage3c_calibration, null_controls, negative_controls]
+    generated_output_policy:
+      output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_vig_history_key_pack_v1
+      commit_outputs: false
+    no_solve_claim: true
+    cuda_enabled: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    notes:
+      - Needs reset/advance-aware Vigenere key-pack executor before running.
+
+  - experiment_id: stage3e_negative_control_extension_v1
+    short_name: Family-specific negative controls
+    hypothesis: Better family-specific negative controls are needed before widening transform families.
+    evidence_basis: Stage 3C established controls, but family-specific controls would improve false-positive handling for queued methods.
+    transform_family: family_specific_negative_controls
+    exact_parameters:
+      negative_corpora: [rune_shuffle_same_length, rune_freq_preserving_shuffle, wrong_mapping_variant, separator_randomised_variant]
+      representative_transform_subset_size: 25
+    candidate_count_estimate: 100
+    operator_policy_status: within_policy
+    implementation_status: needs_executor
+    required_controls: [stage3c_calibration]
+    generated_output_policy:
+      output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_negative_control_extension_v1
+      commit_outputs: false
+    no_solve_claim: true
+    cuda_enabled: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    notes:
+      - Existing null controls do not yet implement every requested family-specific variant.
+
+  - experiment_id: stage3e_reset_advance_ablation_v1
+    short_name: Reset and advance ablation
+    hypothesis: Reset and token-advance policy may matter as much as transform family.
+    evidence_basis: Solved Vigenere and prime-stream fixture logic includes skip and stream-position details.
+    transform_family: reset_advance_ablation
+    exact_parameters:
+      base_transforms:
+        - vigenere:DIVINITY
+        - vigenere:FIRFUMFERENFE
+        - vigenere:PATIENCEISAVIRTUE
+        - vigenere:THEINSTAREMERGENCE
+        - prime_minus_one:offset=0
+        - prime_minus_one:offset=1
+        - prime_mod29:offset=0
+        - prime_gap:offset=0
+      reset_modes: [none, word, clause, line]
+      advance_modes: [runes_only, token_break_preserving]
+    candidate_count_estimate: 64
+    operator_policy_status: within_policy
+    implementation_status: dry_run_only
+    required_controls: [stage3c_calibration, null_controls]
+    generated_output_policy:
+      output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_reset_advance_ablation_v1
+      commit_outputs: false
+    no_solve_claim: true
+    cuda_enabled: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    notes:
+      - Queued for count validation only until a reset/advance state machine exists.
+
+  - experiment_id: stage3e_prime_mod_gap_pack_v1
+    short_name: Prime neighbour stream pack
+    hypothesis: Prime modulo and prime-gap streams are plausible but lower priority than p56-local prime-minus-one.
+    evidence_basis: The 2016 message emphasizes words, meaning, and numbers; p56 gives a prime-stream precedent.
+    transform_family: prime_neighbour_streams
+    exact_parameters:
+      families: [prime_mod29, prime_gap_mod29]
+      offsets:
+        start: 0
+        end: 31
+      directions: [forward, reverse]
+      reset_modes: [none, line]
+    candidate_count_estimate: 256
+    operator_policy_status: within_policy
+    implementation_status: dry_run_only
+    required_controls: [stage3c_calibration, null_controls, p56_solved_fixture_regression]
+    generated_output_policy:
+      output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_prime_mod_gap_pack_v1
+      commit_outputs: false
+    no_solve_claim: true
+    cuda_enabled: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    notes:
+      - Queued for count validation only until prime-neighbour stream executors exist.

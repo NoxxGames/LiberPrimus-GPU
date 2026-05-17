@@ -281,4 +281,16 @@ Stage 3D reuses `bounded-candidate-record-v0` and `bounded-experiment-run-summar
 
 Generated records remain ignored under `experiments/results/bounded-auto-runs/stage3d/`. They must keep `cuda_used=false`, `solve_claim=false`, `canonical_corpus_active=false`, `page_boundaries_final=false`, and `trusted_as_canonical=false`.
 
+## Stage 3E Method Backlog And Dry-Run Records
+
+Stage 3E adds committed experiment schemas:
+
+- `method-backlog-v0`
+- `method-backlog-item-v0`
+- `stage3e-queue-item-v0`
+
+The method backlog records evidence basis, exact parameters, candidate-count estimates, implementation status, required controls, and generated-output policy for bounded future methods. Stage 3E queue items require `cuda_enabled=false`, `no_solve_claim=true`, `canonical_corpus_active=false`, and `page_boundaries_final=false`.
+
+Generated `stage3e_queue_dry_run_summary` records are ignored under `experiments/results/bounded-auto-runs/stage3e/`. They record declared and calculated candidate counts, policy status, executor-support status, deferred reasons, and `executed_count=0` for this ingestion stage. They are not candidate outputs or solve evidence.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

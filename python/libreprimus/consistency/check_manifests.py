@@ -19,6 +19,10 @@ from libreprimus.experiment_proposals.approval_records import load_approval_reco
 from libreprimus.experiment_proposals.proposal_loader import load_experiment_proposal
 from libreprimus.experiments.candidate_estimator import estimate_candidate_count
 from libreprimus.experiments.manifest_loader import load_exploratory_manifest
+from libreprimus.method_backlog.counts import validate_candidate_count
+from libreprimus.method_backlog.loader import load_method_backlog
+from libreprimus.method_backlog.support import classify_executor_support
+from libreprimus.method_backlog.validation import validate_stage3e_queue_item
 from libreprimus.paths import repo_root
 from libreprimus.result_store.validation import validate_result_store_manifest_file
 from libreprimus.solved_baselines.validation import validate_manifest_file
@@ -39,6 +43,8 @@ OPERATOR_POLICY_PATH = repo_root() / "experiments/policies/operator-policy-v0.ya
 BOUNDED_QUEUE_PATH = repo_root() / "experiments/queues/stage2j-bounded-cpu-queue.yaml"
 STAGE3B_BOUNDED_QUEUE_PATH = repo_root() / "experiments/queues/stage3b-bounded-cpu-queue.yaml"
 STAGE3C_BOUNDED_QUEUE_PATH = repo_root() / "experiments/queues/stage3c-bounded-cpu-queue.yaml"
+STAGE3E_METHOD_BACKLOG_PATH = repo_root() / "experiments/queues/stage3e-method-backlog.yaml"
+STAGE3E_BOUNDED_QUEUE_PATH = repo_root() / "experiments/queues/stage3e-bounded-cpu-queue.yaml"
 REGISTRY_PATH = repo_root() / DEFAULT_REGISTRY_PATH
 
 
@@ -70,6 +76,8 @@ def check_manifest_consistency(
     bounded_queue_path: Path = BOUNDED_QUEUE_PATH,
     stage3b_bounded_queue_path: Path = STAGE3B_BOUNDED_QUEUE_PATH,
     stage3c_bounded_queue_path: Path = STAGE3C_BOUNDED_QUEUE_PATH,
+    stage3e_method_backlog_path: Path = STAGE3E_METHOD_BACKLOG_PATH,
+    stage3e_bounded_queue_path: Path = STAGE3E_BOUNDED_QUEUE_PATH,
     registry_path: Path = REGISTRY_PATH,
 ) -> list[ConsistencyCheckResult]:
     results: list[ConsistencyCheckResult] = []
@@ -564,6 +572,120 @@ def check_manifest_consistency(
                 )
         if not any(result.check_name == "stage3c_flags_false" and result.is_failure for result in results):
             results.append(pass_result(GROUP, "stage3c_flags_false", "Stage 3C queue keeps unsafe flags false."))
+
+    try:
+        stage3e_backlog = load_method_backlog(stage3e_method_backlog_path)
+        results.append(
+            pass_result(
+                GROUP,
+                "stage3e_method_backlog_valid",
+                "Stage 3E method backlog validates.",
+                path=stage3e_method_backlog_path,
+            )
+        )
+    except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+        stage3e_backlog = None
+        results.append(fail_result(GROUP, "stage3e_method_backlog_valid", str(exc), path=stage3e_method_backlog_path))
+
+    try:
+        stage3e_queue = load_bounded_queue(stage3e_bounded_queue_path)
+        results.append(
+            pass_result(GROUP, "stage3e_queue_valid", "Stage 3E bounded queue validates.", path=stage3e_bounded_queue_path)
+        )
+    except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+        stage3e_queue = None
+        results.append(fail_result(GROUP, "stage3e_queue_valid", str(exc), path=stage3e_bounded_queue_path))
+
+    if stage3e_backlog is not None:
+        if len(stage3e_backlog.items) >= 6:
+            results.append(pass_result(GROUP, "stage3e_backlog_item_count", "Stage 3E backlog has at least six items."))
+        else:
+            results.append(fail_result(GROUP, "stage3e_backlog_item_count", "Stage 3E backlog is missing items."))
+        for item in stage3e_backlog.items:
+            if item.get("cuda_enabled") is not False:
+                results.append(fail_result(GROUP, "stage3e_backlog_flags_false", "Backlog item enables CUDA.", path=stage3e_method_backlog_path))
+            if item.get("no_solve_claim") is not True:
+                results.append(
+                    fail_result(GROUP, "stage3e_backlog_flags_false", "Backlog item lacks no_solve_claim=true.", path=stage3e_method_backlog_path)
+                )
+        if not any(result.check_name == "stage3e_backlog_flags_false" and result.is_failure for result in results):
+            results.append(pass_result(GROUP, "stage3e_backlog_flags_false", "Stage 3E backlog keeps unsafe flags false."))
+
+    if policy is not None and stage3e_queue is not None:
+        checks = check_queue(policy, stage3e_queue)
+        blocked = [check for check in checks if check.blocking_reasons]
+        if not blocked:
+            results.append(pass_result(GROUP, "stage3e_policy_pass", "All Stage 3E queue items fit operator-policy limits."))
+        else:
+            for check in blocked:
+                results.append(
+                    fail_result(
+                        GROUP,
+                        "stage3e_policy_pass",
+                        f"{check.item_id} has blocking reasons: {', '.join(check.blocking_reasons)}",
+                        path=stage3e_bounded_queue_path,
+                    )
+                )
+        expected_counts = {
+            "stage3e_vig_lp_evidence_pack_v1": 48,
+            "stage3e_prime_minus_one_offsets_v1": 256,
+            "stage3e_vig_history_key_pack_v1": 56,
+            "stage3e_negative_control_extension_v1": 100,
+            "stage3e_reset_advance_ablation_v1": 64,
+            "stage3e_prime_mod_gap_pack_v1": 256,
+        }
+        support_statuses: dict[str, str] = {}
+        for item in stage3e_queue.items:
+            try:
+                validate_stage3e_queue_item(item)
+                calculated = validate_candidate_count(item)
+            except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+                results.append(fail_result(GROUP, "stage3e_candidate_counts", str(exc), path=stage3e_bounded_queue_path))
+                continue
+            item_id = str(item.get("item_id"))
+            expected = expected_counts.get(item_id)
+            if calculated == expected:
+                results.append(
+                    pass_result(GROUP, "stage3e_candidate_counts", f"{item_id} count is {calculated}.", path=stage3e_bounded_queue_path)
+                )
+            else:
+                results.append(
+                    fail_result(
+                        GROUP,
+                        "stage3e_candidate_counts",
+                        f"{item_id} count {calculated} does not match expected {expected}.",
+                        path=stage3e_bounded_queue_path,
+                    )
+                )
+            support_status, _support_reason = classify_executor_support(item)
+            support_statuses[item_id] = support_status
+            if item.get("cuda_enabled") is not False:
+                results.append(fail_result(GROUP, "stage3e_flags_false", "Queue item enables CUDA.", path=stage3e_bounded_queue_path))
+            if item.get("no_solve_claim") is not True:
+                results.append(
+                    fail_result(GROUP, "stage3e_flags_false", "Queue item lacks no_solve_claim=true.", path=stage3e_bounded_queue_path)
+                )
+            if item.get("canonical_corpus_active") is not False or item.get("page_boundaries_final") is not False:
+                results.append(
+                    fail_result(
+                        GROUP,
+                        "stage3e_flags_false",
+                        "Queue item activates canonical corpus or final page boundaries.",
+                        path=stage3e_bounded_queue_path,
+                    )
+                )
+        if not _no_raw_dump(stage3e_bounded_queue_path):
+            results.append(fail_result(GROUP, "manifest_no_raw_dump", "Stage 3E queue appears to include raw data.", path=stage3e_bounded_queue_path))
+        if not any(result.check_name == "stage3e_candidate_counts" and result.is_failure for result in results):
+            results.append(pass_result(GROUP, "stage3e_candidate_counts_verified", "Stage 3E deterministic candidate counts match."))
+        if not any(result.check_name == "stage3e_flags_false" and result.is_failure for result in results):
+            results.append(pass_result(GROUP, "stage3e_flags_false", "Stage 3E queue keeps unsafe flags false."))
+        if sum(1 for status in support_statuses.values() if status == "needs_executor") == 4 and sum(
+            1 for status in support_statuses.values() if status == "dry_run_only"
+        ) == 2:
+            results.append(pass_result(GROUP, "stage3e_executor_support", "Stage 3E executor support classification is deterministic."))
+        else:
+            results.append(fail_result(GROUP, "stage3e_executor_support", "Stage 3E executor support classification drifted."))
     return results
 
 

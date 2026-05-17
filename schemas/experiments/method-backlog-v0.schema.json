@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/method-backlog-v0.schema.json",
+  "title": "method-backlog-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "backlog_id",
+    "backlog_version",
+    "source",
+    "items",
+    "no_solve_claim",
+    "cuda_enabled",
+    "canonical_corpus_active",
+    "page_boundaries_final"
+  ],
+  "properties": {
+    "record_type": { "const": "method_backlog" },
+    "backlog_id": { "type": "string", "minLength": 1 },
+    "backlog_version": { "type": "string", "minLength": 1 },
+    "source": { "type": "string", "minLength": 1 },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "object" }
+    },
+    "no_solve_claim": { "const": true },
+    "cuda_enabled": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false }
+  }
+}
