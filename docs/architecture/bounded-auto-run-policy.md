@@ -23,7 +23,7 @@ The policy blocks or requires explicit user instruction for over-budget work, CU
 
 The bounded runner loads an operator policy and a queue, evaluates each enabled item, and runs only items that pass policy. Generated records are written to ignored result directories.
 
-Stage 2J does not invent missing executors. The first real Caesar plus affine queue item is policy-eligible but deferred until a safe real transform execution scaffold exists.
+Stage 2J does not invent missing executors. Stage 3A adds the first safe real transform execution scaffold for the policy-eligible Caesar plus affine queue item.
 
 ## Result Records
 

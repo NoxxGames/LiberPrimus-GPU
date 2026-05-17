@@ -134,11 +134,17 @@ Stage 2I added `stage2i-first-bounded-caesar-affine-review`, a pending approval 
 
 Replace per-experiment approval as the default path with a standing bounded local CPU operator policy. Keep approval tooling as optional/high-risk audit tooling for out-of-policy work.
 
-Stage 2J added `operator-policy-v0`, bounded queue schemas, `experiments/policies/operator-policy-v0.yaml`, `experiments/queues/stage2j-bounded-cpu-queue.yaml`, a policy checker, generated ignored bounded auto-run records, and `libreprimus bounded-experiment` CLI commands. The `841` candidate Caesar plus affine reviewable-slice item is policy-eligible but deferred until a safe real transform execution/scoring scaffold exists. The solved-baseline control passes and the over-budget negative example is blocked.
+Stage 2J added `operator-policy-v0`, bounded queue schemas, `experiments/policies/operator-policy-v0.yaml`, `experiments/queues/stage2j-bounded-cpu-queue.yaml`, a policy checker, generated ignored bounded auto-run records, and `libreprimus bounded-experiment` CLI commands. The `841` candidate Caesar plus affine reviewable-slice item is policy-eligible, the solved-baseline control passes, and the over-budget negative example is blocked.
 
 ## Stage 3A - Minimal real bounded CPU execution/scoring scaffold
 
 Implement the minimal safe executor needed for the `841` candidate Caesar plus affine queue item. Keep CUDA, broad brute force, cloud, canonical corpus activation, page-boundary finalization, generated-output commits, and solve claims out of scope.
+
+Stage 3A added bounded candidate output schemas, minimal deterministic triage scoring, a CPU Caesar plus affine executor, `libreprimus bounded-run` CLI commands, and queue-runner integration. The first bounded run generated `841` ignored candidate records for one reviewable slice and made no solve claim.
+
+## Stage 3B - Inspect bounded leads and refine next queue item
+
+Inspect Stage 3A top candidates as leads, add null-control expectations, and queue the next bounded method or scoring refinement. Do not escalate to broad campaigns, CUDA, canonical corpus activation, page-boundary finalization, or solve claims.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

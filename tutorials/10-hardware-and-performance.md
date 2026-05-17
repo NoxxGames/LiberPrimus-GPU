@@ -78,6 +78,10 @@ Stage 2G adds proposal and approval records only. Hardware performance claims re
 
 Stage 2H approval-gated execution is still not a benchmark stage. Approved controls may run synthetic and solved-fixture-only requests, but real unsolved-page execution, search, scoring, and CUDA remain disabled.
 
+## Stage 3A Minimal CPU Run
+
+Stage 3A is a small local CPU candidate enumeration, not a benchmark campaign. It runs `841` Caesar plus affine candidates for one reviewable slice and writes ignored outputs. Minimal triage scoring is used for sorting leads only. CUDA remains disabled, no throughput claim is made, and no solve claim is made.
+
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

@@ -156,8 +156,20 @@ Policy-passing bounded local CPU queue items no longer require per-experiment ap
 
 The first queue contains:
 
-- `stage2j-caesar-affine-first-reviewable-slice`, candidate upper bound `841`, policy-eligible but deferred until a safe real executor exists.
+- `stage2j-caesar-affine-first-reviewable-slice`, candidate upper bound `841`, policy-eligible and executable after Stage 3A when generated selector metadata exists locally.
 - `stage2j-solved-baseline-regression-control`, solved-control upper bound `10`.
 - `stage2j-blocked-overbudget-example`, deliberate policy-fail item with upper bound `100001`.
 
 Generated bounded auto-run records are ignored under `experiments/results/bounded-auto-runs/stage2j/`.
+
+## Stage 3A Bounded Caesar Affine Run
+
+Stage 3A adds `libreprimus bounded-run run-caesar-affine` for the first bounded queue item. It enumerates Caesar shift mod 29 and affine mod 29 candidates over a generated reviewable index-29 slice, producing `29 + 812 = 841` candidates.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli bounded-run run-caesar-affine --policy experiments/policies/operator-policy-v0.yaml --queue experiments/queues/stage2j-bounded-cpu-queue.yaml --item-id stage2j-caesar-affine-first-reviewable-slice --out-dir experiments/results/bounded-auto-runs/stage3a --top-k 25 --allow-warnings
+```
+
+Generated `candidate_records.jsonl`, `top_candidates.jsonl`, `summary.json`, warnings, and result-store previews are ignored under `experiments/results/bounded-auto-runs/stage3a/`. Minimal triage scores are not solve evidence and must not be used to claim a page is solved.

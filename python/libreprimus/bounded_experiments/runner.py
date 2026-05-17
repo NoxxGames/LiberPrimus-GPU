@@ -12,6 +12,8 @@ from libreprimus.bounded_experiments.models import BoundedAutoRunResult, PolicyC
 from libreprimus.bounded_experiments.policy_checker import check_queue
 from libreprimus.bounded_experiments.policy_loader import load_operator_policy
 from libreprimus.bounded_experiments.queue_loader import load_bounded_queue
+from libreprimus.bounded_execution.models import MissingReviewableSliceInput
+from libreprimus.bounded_execution.runner import run_caesar_affine_item
 from libreprimus.paths import repo_root
 
 
@@ -53,13 +55,13 @@ def run_all(
         elif check.blocking_reasons:
             result = _blocked_result(queue.queue_id, policy.policy_id, item, check, ";".join(check.blocking_reasons))
         else:
-            result = _run_policy_passing_item(queue.queue_id, policy.policy_id, item, check)
+            result = _run_policy_passing_item(queue.queue_id, policy.policy_id, item, check, out_dir=out_dir)
         written = write_run_result(out_dir, result)
         result = _with_output_path(result, written)
         write_run_result(out_dir, result)
         results.append(result)
 
-    summary_path = write_summary(out_dir, results, checks)
+    summary_path = write_summary(out_dir, results, checks, filename=_summary_filename(out_dir))
     return checks, results, summary_path
 
 
@@ -82,13 +84,13 @@ def run_next(
             continue
         if check.status == "warning" and not allow_warnings:
             continue
-        result = _run_policy_passing_item(queue.queue_id, policy.policy_id, item, check)
+        result = _run_policy_passing_item(queue.queue_id, policy.policy_id, item, check, out_dir=out_dir)
         written = write_run_result(out_dir, result)
         result = _with_output_path(result, written)
         write_run_result(out_dir, result)
         results.append(result)
         break
-    summary_path = write_summary(out_dir, results, checks)
+    summary_path = write_summary(out_dir, results, checks, filename=_summary_filename(out_dir))
     return checks, results, summary_path
 
 
@@ -97,22 +99,57 @@ def _run_policy_passing_item(
     policy_id: str,
     item: dict[str, Any],
     check: PolicyCheckResult,
+    *,
+    out_dir: Path,
 ) -> BoundedAutoRunResult:
     kind = str(item["experiment_kind"])
     if kind == "caesar_affine_reviewable_slice":
+        try:
+            stage3a_summary = run_caesar_affine_item(
+                item,
+                out_dir=out_dir / str(item["item_id"]),
+                top_k=25,
+                policy_id=policy_id,
+            )
+        except MissingReviewableSliceInput as error:
+            return _base_result(
+                queue_id,
+                policy_id,
+                item,
+                execution_performed=False,
+                execution_status="deferred",
+                deferred_reason="missing_reviewable_slice_input",
+                summary={
+                    "status": "missing_reviewable_slice_input",
+                    "reason": str(error),
+                    "next_step": "Add a precise safe selector or regenerate ignored corpus-candidate metadata.",
+                    "policy_check_status": check.status,
+                },
+                warnings=check.warnings,
+            )
         return _base_result(
             queue_id,
             policy_id,
             item,
-            execution_performed=False,
-            execution_status="deferred",
-            deferred_reason="execution_deferred_missing_executor",
+            execution_performed=True,
+            execution_status="pass",
+            deferred_reason=None,
             summary={
-                "status": "execution_deferred_missing_executor",
-                "reason": "The policy permits this 841-candidate CPU item, but no safe real unsolved-slice executor exists yet.",
-                "next_step": "Implement minimal real transform execution/scoring scaffold before running candidates.",
+                "status": "pass",
+                "stage3a_run_id": stage3a_summary.run_id,
+                "input_slice_id": stage3a_summary.input_slice_id,
+                "input_length": stage3a_summary.input_length,
+                "candidate_count": stage3a_summary.candidate_count,
+                "caesar_candidate_count": stage3a_summary.caesar_candidate_count,
+                "affine_candidate_count": stage3a_summary.affine_candidate_count,
+                "top_candidate": stage3a_summary.top_candidate,
+                "candidate_output_paths": stage3a_summary.output_paths,
+                "solve_claim_made": False,
                 "policy_check_status": check.status,
             },
+            search_performed=stage3a_summary.search_performed,
+            scoring_used=stage3a_summary.scoring_used,
+            output_paths=dict(stage3a_summary.output_paths),
             warnings=check.warnings,
         )
     if kind == "solved_baseline_regression_control":
@@ -178,6 +215,9 @@ def _base_result(
     deferred_reason: str | None,
     summary: dict[str, Any],
     warnings: list[str],
+    search_performed: bool = False,
+    scoring_used: bool = False,
+    output_paths: dict[str, str] | None = None,
 ) -> BoundedAutoRunResult:
     return BoundedAutoRunResult(
         record_type="bounded_auto_run_result",
@@ -188,10 +228,10 @@ def _base_result(
         git_commit=git_commit(),
         execution_performed=execution_performed,
         candidate_count=int(item.get("candidate_count_upper_bound", 0)),
-        output_paths={},
+        output_paths=output_paths or {},
         summary=summary,
-        search_performed=False,
-        scoring_used=False,
+        search_performed=search_performed,
+        scoring_used=scoring_used,
         cuda_used=False,
         solve_claim_made=False,
         canonical_corpus_active=False,
@@ -204,6 +244,8 @@ def _base_result(
 
 
 def _with_output_path(result: BoundedAutoRunResult, path: Path) -> BoundedAutoRunResult:
+    output_paths = dict(result.output_paths)
+    output_paths["result_json"] = str(path)
     return BoundedAutoRunResult(
         record_type=result.record_type,
         item_id=result.item_id,
@@ -213,7 +255,7 @@ def _with_output_path(result: BoundedAutoRunResult, path: Path) -> BoundedAutoRu
         git_commit=result.git_commit,
         execution_performed=result.execution_performed,
         candidate_count=result.candidate_count,
-        output_paths={"result_json": str(path)},
+        output_paths=output_paths,
         summary=result.summary,
         search_performed=result.search_performed,
         scoring_used=result.scoring_used,
@@ -226,3 +268,7 @@ def _with_output_path(result: BoundedAutoRunResult, path: Path) -> BoundedAutoRu
         deferred_reason=result.deferred_reason,
         warnings=result.warnings,
     )
+
+
+def _summary_filename(out_dir: Path) -> str:
+    return "bounded-auto-run-summary.json" if out_dir.name == "stage3a" else "summary.json"

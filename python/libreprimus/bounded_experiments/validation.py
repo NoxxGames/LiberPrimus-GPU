@@ -81,8 +81,6 @@ def validate_bounded_auto_run_result(record: Any) -> dict[str, Any]:
     if "candidate_plaintext" in text or "candidate_plaintexts" in text:
         raise ValueError("Bounded auto-run results must not contain candidate plaintext fields.")
     for field in [
-        "search_performed",
-        "scoring_used",
         "cuda_used",
         "solve_claim_made",
         "canonical_corpus_active",

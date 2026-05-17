@@ -13,17 +13,27 @@ items:
     experiment_kind: caesar_affine_reviewable_slice
     source_proposal: experiments/proposals/stage2i/stage2i-first-bounded-caesar-affine-review.yaml
     corpus_slice:
-      slice_id: stage2i-first-bounded-caesar-affine-review-slice
+      slice_id: stage3a-page-candidate-018-reviewable-slice
       slice_kind: future_unsolved_page_candidate
       review_required: true
       source: rtkd-master-v0-candidate
+      corpus_candidate_id: rtkd-master-v0-candidate
       selector:
-        selector_kind: reviewable_metadata_only
-        page_candidate_id: lp2-reviewable-page-candidate-placeholder
+        selector_kind: corpus_page_candidate_token_range
+        page_candidate_id: page-candidate-018
+        candidate_local_page_index: 18
+        start_token_index: 5283
+        end_token_index: 5402
+        expected_rune_token_count: 87
+        selection_reason: First high-confidence reviewable candidate with at least 80 rune tokens after the initial marker cluster.
         raw_unsolved_text_included: false
       metadata_paths:
         - path: experiments/proposals/stage2i/stage2i-first-bounded-caesar-affine-review.yaml
           role: proposal_embedded_selector_metadata
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/page_candidates.jsonl
+          role: generated_ignored_page_candidate_metadata
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/tokens.jsonl
+          role: generated_ignored_token_metadata
     transform_plan:
       families:
         - transform_family: caesar_shift_preview
@@ -52,10 +62,10 @@ items:
       mode: generated_ignored_preview
       import_enabled: false
     output_policy:
-      generated_output_dir: experiments/results/bounded-auto-runs/stage2j
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3a
       commit_outputs: false
       write_candidate_plaintexts: false
-    status: ready
+    status: ready_for_stage3a_execution
 
   - item_id: stage2j-solved-baseline-regression-control
     description: Solved-baseline regression control for the bounded runner policy path.

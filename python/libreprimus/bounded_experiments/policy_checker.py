@@ -106,7 +106,10 @@ def check_item(policy: OperatorPolicy, item: dict[str, Any]) -> PolicyCheckResul
             }
         )
 
-    if item.get("experiment_kind") == "caesar_affine_reviewable_slice":
+    selector = dict(dict(item.get("corpus_slice", {})).get("selector", {}))
+    if item.get("experiment_kind") == "caesar_affine_reviewable_slice" and (
+        not selector.get("page_candidate_id") or "placeholder" in str(selector.get("page_candidate_id"))
+    ):
         warnings.append("Reviewable-slice item is policy-eligible but requires a safe real executor before execution.")
 
     status = FAIL if blocking else WARNING if warnings else PASS

@@ -21,7 +21,7 @@ def test_policy_checker_accepts_841_candidate_item() -> None:
     checks = {check.item_id: check for check in check_queue(policy, queue)}
 
     check = checks["stage2j-caesar-affine-first-reviewable-slice"]
-    assert check.status == "warning"
+    assert check.status == "pass"
     assert check.blocking_reasons == []
 
 

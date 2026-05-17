@@ -128,6 +128,8 @@ from libreprimus.bounded_experiments.summary import (
     load_results as load_bounded_experiment_results,
     load_summary as load_bounded_experiment_summary,
 )
+from libreprimus.bounded_execution.runner import run_caesar_affine_from_paths
+from libreprimus.bounded_execution.summary import load_summary as load_bounded_run_summary
 from libreprimus.reference_sources.summary import build_stage1c_reference_summary, write_stage1c_reference_outputs
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
 from libreprimus.transcript_sources.rtkd_master import parse_rtkd_master
@@ -155,6 +157,7 @@ proposal_app = typer.Typer(no_args_is_help=True)
 approval_execution_app = typer.Typer(no_args_is_help=True)
 approval_readiness_app = typer.Typer(no_args_is_help=True)
 bounded_experiment_app = typer.Typer(no_args_is_help=True)
+bounded_run_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -2263,6 +2266,7 @@ app.add_typer(approval_readiness_app, name="approval-readiness")
 DEFAULT_STAGE2J_POLICY = Path("experiments/policies/operator-policy-v0.yaml")
 DEFAULT_STAGE2J_QUEUE = Path("experiments/queues/stage2j-bounded-cpu-queue.yaml")
 DEFAULT_STAGE2J_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage2j")
+DEFAULT_STAGE3A_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3a")
 
 
 @bounded_experiment_app.command("validate-policy")
@@ -2388,6 +2392,96 @@ def bounded_experiment_summary(
         console.print(f"{result.get('item_id')}={result.get('execution_status')}")
 
 
+@bounded_run_app.command("run-caesar-affine")
+def bounded_run_caesar_affine(
+    policy: Path = typer.Option(DEFAULT_STAGE2J_POLICY, "--policy", help="Operator policy path."),
+    queue: Path = typer.Option(DEFAULT_STAGE2J_QUEUE, "--queue", help="Bounded experiment queue path."),
+    item_id: str = typer.Option(
+        "stage2j-caesar-affine-first-reviewable-slice",
+        "--item-id",
+        help="Queue item to run.",
+    ),
+    out_dir: Path = typer.Option(DEFAULT_STAGE3A_BOUNDED_RESULTS_DIR, "--out-dir", help="Generated output directory."),
+    top_k: int = typer.Option(25, "--top-k", min=1, help="Number of top candidates to write."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Run warning-only policy-passing items."),
+) -> None:
+    """Run the bounded Stage 3A Caesar plus affine CPU candidate enumeration."""
+    try:
+        summary = run_caesar_affine_from_paths(
+            _resolve_existing_path(policy, "Operator policy"),
+            _resolve_existing_path(queue, "Bounded experiment queue"),
+            item_id=item_id,
+            out_dir=_resolve_output_path(out_dir),
+            top_k=top_k,
+            allow_warnings=allow_warnings,
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_stage3a_run_summary(summary)
+
+
+@bounded_run_app.command("summary")
+def bounded_run_summary(
+    results_dir: Path = typer.Option(
+        DEFAULT_STAGE3A_BOUNDED_RESULTS_DIR,
+        "--results-dir",
+        help="Generated Stage 3A bounded run directory.",
+    ),
+) -> None:
+    """Print the generated Stage 3A bounded run summary."""
+    try:
+        summary = load_bounded_run_summary(_resolve_output_path(results_dir))
+    except FileNotFoundError as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_stage3a_summary_payload(summary)
+
+
+def _print_stage3a_run_summary(summary) -> None:
+    payload = {
+        "run_id": summary.run_id,
+        "queue_item_id": summary.queue_item_id,
+        "input_slice_id": summary.input_slice_id,
+        "input_length": summary.input_length,
+        "candidate_count": summary.candidate_count,
+        "caesar_candidate_count": summary.caesar_candidate_count,
+        "affine_candidate_count": summary.affine_candidate_count,
+        "top_k_count": summary.top_k_count,
+        "top_candidate_score": summary.top_candidate.get("total_score"),
+        "top_candidate_transform_family": summary.top_candidate.get("transform_family"),
+        "top_candidate_transform_parameters": json.dumps(summary.top_candidate.get("transform_parameters", {}), sort_keys=True),
+        "solve_claim": summary.solve_claim,
+    }
+    for key, value in payload.items():
+        if isinstance(value, bool):
+            value = str(value).lower()
+        console.print(f"{key}={value}")
+    for key, path in summary.output_paths.items():
+        console.print(f"{key}={path}")
+
+
+def _print_stage3a_summary_payload(summary: dict) -> None:
+    top = summary.get("top_candidate", {})
+    for key in [
+        "run_id",
+        "queue_item_id",
+        "input_slice_id",
+        "input_length",
+        "candidate_count",
+        "caesar_candidate_count",
+        "affine_candidate_count",
+        "top_k_count",
+    ]:
+        console.print(f"{key}={summary.get(key)}")
+    console.print(f"top_candidate_score={top.get('total_score')}")
+    console.print(f"top_candidate_transform_family={top.get('transform_family')}")
+    console.print(f"top_candidate_transform_parameters={json.dumps(top.get('transform_parameters', {}), sort_keys=True)}")
+    console.print(f"solve_claim={str(summary.get('solve_claim')).lower()}")
+    for key, path in summary.get("output_paths", {}).items():
+        console.print(f"{key}={path}")
+
+
 def _print_bounded_policy_checks(checks) -> None:
     console.print(f"item_count={len(checks)}")
     console.print(f"policy_pass_count={sum(1 for check in checks if not check.blocking_reasons)}")
@@ -2410,6 +2504,7 @@ def _print_bounded_run_results(results) -> None:
 
 
 app.add_typer(bounded_experiment_app, name="bounded-experiment")
+app.add_typer(bounded_run_app, name="bounded-run")
 
 
 @solved_fixture_app.command("list")

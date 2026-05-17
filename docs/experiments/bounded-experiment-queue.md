@@ -14,7 +14,7 @@ The queue contains:
 
 Policy-passing items do not require per-experiment approval. Items above policy limits are blocked and must not run.
 
-The first reviewable Caesar plus affine item is policy-eligible but deferred in Stage 2J because the project does not yet have a safe real unsolved-slice executor. Deferral is explicit; generated outputs must not fake candidate results.
+The first reviewable Caesar plus affine item is policy-eligible. It was deferred in Stage 2J, and Stage 3A adds the minimal safe real executor for the `841` candidate run when generated selector metadata exists locally. Generated outputs must remain ignored and must not be treated as solve evidence.
 
 ## Generated Outputs
 

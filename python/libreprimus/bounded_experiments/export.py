@@ -37,10 +37,16 @@ def write_run_result(out_dir: Path, result: BoundedAutoRunResult) -> Path:
     return write_json(resolved / f"{result.item_id}-bounded-auto-run-result.json", payload)
 
 
-def write_summary(out_dir: Path, results: list[BoundedAutoRunResult], checks: list[PolicyCheckResult]) -> Path:
+def write_summary(
+    out_dir: Path,
+    results: list[BoundedAutoRunResult],
+    checks: list[PolicyCheckResult],
+    *,
+    filename: str = "summary.json",
+) -> Path:
     resolved = _resolve_output_dir(out_dir)
     payload = build_summary_payload(results, checks)
-    return write_json(resolved / "summary.json", payload)
+    return write_json(resolved / filename, payload)
 
 
 def build_summary_payload(results: list[BoundedAutoRunResult], checks: list[PolicyCheckResult]) -> dict[str, Any]:
@@ -54,8 +60,8 @@ def build_summary_payload(results: list[BoundedAutoRunResult], checks: list[Poli
         "blocked_count": sum(1 for result in results if result.execution_status == "blocked"),
         "result_count": len(results),
         "candidate_count_total": sum(result.candidate_count for result in results),
-        "search_performed": False,
-        "scoring_used": False,
+        "search_performed": any(result.search_performed for result in results),
+        "scoring_used": any(result.scoring_used for result in results),
         "cuda_used": False,
         "solve_claim_made": False,
         "results": [

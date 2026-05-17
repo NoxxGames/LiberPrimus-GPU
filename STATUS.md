@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2J standing bounded CPU auto-run policy and queue scaffold is complete.
+Stage 3A minimal CPU Caesar plus affine executor and triage scoring is complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, unsolved-page experiment, scoring model, search campaign, generated result publication, or serious CUDA kernel exists yet.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A adds minimal local triage scoring for one bounded CPU run only.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 
@@ -198,12 +198,22 @@ Developer log: `docs/development-logs/2026-05-16-stage-2i-first-real-proposal-pa
 
 Stage 2J added a standing operator policy for bounded local CPU experiments, bounded experiment queue schemas, policy and queue manifests, a policy checker, generated ignored bounded auto-run records, and `libreprimus bounded-experiment` CLI commands.
 
-The Stage 2J queue includes the first Caesar plus affine reviewable-slice item with candidate upper bound `841`, a solved-baseline regression control, and an intentionally blocked over-budget example. The Caesar plus affine item is policy-eligible but deferred until a safe real transform execution/scoring scaffold exists; the solved control passes; the over-budget item is blocked.
+The Stage 2J queue includes the first Caesar plus affine reviewable-slice item with candidate upper bound `841`, a solved-baseline regression control, and an intentionally blocked over-budget example. Stage 3A now provides the safe real transform execution/scoring scaffold for the Caesar plus affine item; the solved control passes; the over-budget item is blocked.
 
 Approval workflow remains available as optional/high-risk audit tooling. Policy-passing bounded local CPU items no longer require per-experiment approval. CUDA, cloud, over-budget work, generated-output commits, canonical corpus activation, page-boundary finalization, and solve claims still require explicit instruction or remain blocked.
 
 Developer log: `docs/development-logs/2026-05-16-stage-2j-bounded-auto-run-policy.md`.
 
+## Completed in Stage 3A
+
+Stage 3A added bounded candidate schemas, minimal triage scoring, a tiny committed generic word list, a CPU Caesar plus affine executor, generated ignored candidate output support, `libreprimus bounded-run` CLI commands, and queue-runner integration for the first `841` candidate item.
+
+Local run summary: input slice `stage3a-page-candidate-018-reviewable-slice`, input length `87`, candidate count `841`, Caesar `29`, affine `812`, top observed score `33.353307`, top transform `affine_mod29` with `a=25`, `b=1`.
+
+Generated candidate records, top candidates, run summary, warnings, and result-store preview remain ignored under `experiments/results/bounded-auto-runs/stage3a/`. Minimal triage scores are leads only, not solve evidence. CUDA remains disabled, the canonical corpus remains inactive, page boundaries remain reviewable, and no solve claim is made.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3a-minimal-cpu-caesar-affine-executor.md`.
+
 ## Next prompt recommendation
 
-Stage 3A - implement minimal real transform execution/scoring scaffold for the `841` candidate Caesar plus affine queue item.
+Stage 3B - inspect Stage 3A top candidates and queue the next bounded method or scoring refinement.

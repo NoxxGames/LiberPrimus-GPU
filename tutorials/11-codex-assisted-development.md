@@ -79,3 +79,7 @@ For the first real approval packet, require `libreprimus approval-readiness vali
 ## Stage 2J Guardrails
 
 For bounded auto-run policy work, require `libreprimus bounded-experiment validate-policy`, `validate-queue`, `check-queue`, and `run-all` against the Stage 2J queue. Policy-passing bounded local CPU items do not require per-experiment approval, but over-budget, CUDA/GPU, cloud, paid-service, generated-output-commit, canonical-corpus, page-boundary, and solve-claim actions still require explicit instruction or remain blocked. If a policy-passing queue item has no safe executor, record an explicit deferred result instead of generating candidate plaintexts or solve evidence.
+
+## Stage 3A Guardrails
+
+For minimal bounded executor work, require `libreprimus bounded-run run-caesar-affine`, `bounded-run summary`, schema validation, and generated-output ignore checks. Full candidate outputs must remain ignored. Committed notes may summarize run ID, candidate count, top score, and transform parameters only. Minimal triage scores and top-k records are leads, not solve evidence.

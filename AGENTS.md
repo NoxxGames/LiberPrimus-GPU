@@ -318,6 +318,16 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Generated bounded auto-run outputs are ignored and must not be committed.
 - If a policy-passing item lacks a safe executor, record a deferred result instead of faking candidates or solve evidence.
 
+## Stage 3A Minimal Bounded Executor Rules
+
+- Bounded CPU experiment outputs are generated and must not be committed.
+- Minimal triage scores are not solve evidence.
+- Top candidates are leads only.
+- Do not claim a solve from a score, top-k record, or terminal output.
+- Commit only summary-level research notes, not full candidate dumps.
+- CUDA remains disabled until a future explicit CUDA stage adds CPU/GPU parity tests.
+- Canonical corpus remains inactive and page boundaries remain reviewable.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

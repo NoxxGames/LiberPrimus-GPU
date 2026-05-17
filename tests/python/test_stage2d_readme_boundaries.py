@@ -23,7 +23,7 @@ def test_readme_boundary_section_replaces_stage0a_non_goals() -> None:
     assert "## Non-goals for Stage 0A" not in lines
     assert "## Current boundaries and deferred work" in lines
     assert "These are not permanent project exclusions" in readme
-    assert "CUDA/search/scoring are deferred, not permanently excluded." in readme
+    assert "CUDA and broad campaigns are deferred, not permanently excluded." in readme
 
 
 def test_readme_boundary_subsections_are_explicit() -> None:
@@ -50,17 +50,18 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "No Liber Primus page is claimed solved" in section
     assert "still unsolved must not receive a solve claim" in section
     assert "Canonical corpus: inactive." in section
-    assert "Unsolved-page search campaigns: not started." in section
-    assert "Scoring campaigns: not started." in section
+    assert "Broad unsolved-page search campaigns: not started." in section
+    assert "Scoring campaigns: not started; Stage 3A minimal triage scoring exists only for sorting one bounded 841-candidate CPU run." in section
     assert "CUDA experiment campaigns: not started." in section
-    assert "Search/scoring/CUDA campaigns: not started." in readme
+    assert "Broad search/scoring/CUDA campaigns: not started." in readme
     assert "Stage 2E: CPU exploratory experiment manifest scaffold and dry-run planner complete." in readme
     assert "Stage 2F: bounded CPU execution harness for synthetic and solved-fixture-only runs complete." in readme
     assert "Stage 2G: exploratory experiment proposal and human-approval workflow complete." in readme
     assert "Stage 2H: approval-gated execution path for approved synthetic/solved controls complete." in readme
     assert "Stage 2I: first real bounded CPU exploratory experiment approval packet complete." in readme
     assert "Stage 2J: standing bounded CPU auto-run policy and queue scaffold complete." in readme
-    assert "Stage 3A minimal real transform execution/scoring scaffold" in readme
+    assert "Stage 3A: minimal CPU Caesar plus affine executor and triage scoring complete." in readme
+    assert "Stage 3B inspect Stage 3A top candidates" in readme
 
 
 def test_readme_does_not_imply_deferred_work_is_permanently_excluded() -> None:
@@ -71,7 +72,7 @@ def test_readme_does_not_imply_deferred_work_is_permanently_excluded() -> None:
     assert "will never implement search" not in lower_section
     assert "will never implement scoring" not in lower_section
     assert "Deferred future work" in section
-    assert "CUDA/search/scoring are deferred, not permanently excluded." in section
+    assert "CUDA and broad campaigns are deferred, not permanently excluded." in section
     assert "CUDA kernels after CPU references and parity tests exist." in section
 
 

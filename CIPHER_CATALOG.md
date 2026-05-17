@@ -118,7 +118,7 @@ Stage 1D implements `prime_minus_one_stream` only as a known-solved p56 fixture 
 - Payload tokens are preserved and checked separately.
 - No generic prime-stream search, offset sweep, scoring, or CUDA acceleration is implemented. Stage 2A later registered this as a CPU reference solved-baseline transform.
 
-Generic affine/shift/search infrastructure remains unimplemented.
+Generic broad affine/shift/search infrastructure remains unimplemented. Stage 3A adds one bounded CPU Caesar plus affine mod-29 enumerator for the policy-approved `841` candidate queue item only.
 
 ## Stage 2A CPU Reference Transform Registry
 
@@ -131,10 +131,10 @@ Stage 2A registers the implemented known-solved baseline transforms as CPU refer
 - `prime_minus_one_stream`
 - `phi_prime_stream` as an alias of `prime_minus_one_stream`
 
-Every registry entry has `supports_gpu=false`, `search_enabled=false`, and `scoring_enabled=false`. The registry is used by solved-baseline manifests and does not implement generic affine/shift search, Vigenere key search, prime-stream search, scoring, CUDA acceleration, or unsolved-page campaign execution.
+Every registry entry has `supports_gpu=false`, `search_enabled=false`, and `scoring_enabled=false`. The registry is used by solved-baseline manifests and does not implement broad affine/shift search, Vigenere key search, prime-stream search, CUDA acceleration, or unsolved-page campaign execution. Stage 3A minimal triage scoring exists outside the registry for one bounded CPU queue item.
 
 ## Stage 2B Result Store Relationship
 
 Stage 2B does not add cipher behavior. It imports solved-baseline manifest-run outputs into JSONL and SQLite result stores with provenance and false search/CUDA/scoring flags.
 
-The result store is infrastructure for future experiment accounting. It does not implement affine/shift search, Vigenere key search, prime-stream search, scoring, CUDA acceleration, or unsolved-page campaign execution.
+The result store is infrastructure for future experiment accounting. It does not implement broad affine/shift search, Vigenere key search, prime-stream search, CUDA acceleration, or unsolved-page campaign execution.

@@ -177,4 +177,10 @@ Stage 2J adds tests for operator policies, bounded queues, policy checking, boun
 
 The tests assert that the `841` candidate Caesar plus affine item passes policy, the solved-baseline control passes policy, over-budget/CUDA/cloud/solve-claim/generated-output-commit items fail policy, blocked items do not run, generated outputs are ignored, and per-experiment approval is not required for policy-passing bounded local CPU items.
 
+## Stage 3A Minimal Executor Tests
+
+Stage 3A adds tests for minimal triage scoring, Caesar and affine enumeration counts, candidate output schemas, generated-output ignore policy, policy blocking, and `libreprimus bounded-run` CLI behavior.
+
+The tests assert that scoring is deterministic, Caesar generates `29` candidates, affine generates `812` candidates, total candidate count is `841`, output indices stay in `0..28`, candidate records and run summaries validate, top-k output is bounded, CUDA stays false, solve claims stay false, and synthetic CLI runs work without raw corpus data.
+
 The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.

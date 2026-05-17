@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/bounded-experiment-run-summary-v0.schema.json",
+  "title": "bounded-experiment-run-summary-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "run_id",
+    "queue_item_id",
+    "input_slice_id",
+    "candidate_count",
+    "caesar_candidate_count",
+    "affine_candidate_count",
+    "top_k_count",
+    "top_candidate",
+    "output_paths",
+    "generated_outputs_ignored",
+    "search_performed",
+    "scoring_used",
+    "cuda_used",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "solve_claim",
+    "trusted_as_canonical",
+    "warnings"
+  ],
+  "properties": {
+    "record_type": { "const": "bounded_experiment_run_summary" },
+    "run_id": { "type": "string", "minLength": 1 },
+    "queue_item_id": { "type": "string", "minLength": 1 },
+    "input_slice_id": { "type": "string", "minLength": 1 },
+    "candidate_count": { "type": "integer", "minimum": 0 },
+    "caesar_candidate_count": { "type": "integer", "minimum": 0 },
+    "affine_candidate_count": { "type": "integer", "minimum": 0 },
+    "top_k_count": { "type": "integer", "minimum": 0 },
+    "top_candidate": { "type": "object" },
+    "output_paths": { "type": "object" },
+    "generated_outputs_ignored": { "const": true },
+    "search_performed": { "const": true },
+    "scoring_used": { "const": true },
+    "cuda_used": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

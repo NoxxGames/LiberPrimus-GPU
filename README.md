@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 2J and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA/search/scoring are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3A and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -21,8 +21,8 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
-- Unsolved-page search campaigns: not started.
-- Scoring campaigns: not started.
+- Broad unsolved-page search campaigns: not started.
+- Scoring campaigns: not started; Stage 3A minimal triage scoring exists only for sorting one bounded 841-candidate CPU run.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
 - Broad unsolved-page campaigns: not started.
@@ -31,8 +31,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Minimal real transform execution/scoring scaffold for the first `841` candidate bounded queue item.
-- Candidate scoring.
+- Stronger scoring and null controls for bounded candidate review.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
 - Benchmark campaigns after stable CPU/GPU baselines exist.
@@ -52,6 +51,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Approval-gated execution path for approved synthetic/solved controls.
 - First real bounded exploratory approval-readiness packet.
 - Standing bounded local CPU operator policy and queue scaffold.
+- Minimal CPU Caesar plus affine executor and triage scoring for the first `841` candidate bounded queue item.
 
 ## Architecture summary
 
@@ -71,12 +71,14 @@ Current status:
 - Stage 2H: approval-gated execution path for approved synthetic/solved controls complete.
 - Stage 2I: first real bounded CPU exploratory experiment approval packet complete.
 - Stage 2J: standing bounded CPU auto-run policy and queue scaffold complete.
+- Stage 3A: minimal CPU Caesar plus affine executor and triage scoring complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
-- Search/scoring/CUDA campaigns: not started.
-- Next: Stage 3A minimal real transform execution/scoring scaffold for the `841` candidate Caesar plus affine queue item.
+- Broad search/scoring/CUDA campaigns: not started.
+- Latest bounded run: Stage 3A executed `841` CPU candidates for one reviewable Caesar plus affine queue item; no solve claim.
+- Next: Stage 3B inspect Stage 3A top candidates and queue the next bounded method or scoring refinement.
 
 ## CI status
 
@@ -205,9 +207,9 @@ Current tests cover the C++ skeleton, Python package, manifests, schemas, result
 
 Stage 2J replaces per-experiment approval as the default path with the standing policy in `experiments/policies/operator-policy-v0.yaml` and the queue in `experiments/queues/stage2j-bounded-cpu-queue.yaml`. Normal local CPU items can run automatically when they stay within the hard limits: candidate upper bound `100000`, runtime estimate `600` seconds, generated output budget `250` MB, CPU only, no CUDA/cloud/paid services, no generated-output commit, no canonical corpus activation, no page-boundary finalization, and no solve claim.
 
-The first Caesar plus affine reviewable-slice queue item has candidate upper bound `841` and is policy-eligible, but Stage 2J defers actual execution until a safe real transform execution/scoring scaffold exists. The solved-baseline control can run through the policy path, and the over-budget negative example is blocked.
+The first Caesar plus affine reviewable-slice queue item has candidate upper bound `841` and is policy-eligible. Stage 3A adds the minimal CPU executor and deterministic triage scoring for that item. Full candidate outputs remain ignored under `experiments/results/bounded-auto-runs/stage3a/`; committed research logs summarize counts and top score metadata only.
 
-Stage 3A should implement the minimal real transform execution/scoring scaffold for the `841` candidate Caesar plus affine queue item.
+Stage 3B should inspect Stage 3A top candidates as leads and queue the next bounded method or scoring refinement. No Stage 3A output is a solve claim.
 
 ## Stage 1B Atbash-Family Fixtures
 

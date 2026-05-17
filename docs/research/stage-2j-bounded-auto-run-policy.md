@@ -32,4 +32,4 @@ Stage 2J does not execute real unsolved candidate transforms, score candidates, 
 
 ## Next Stage
 
-If the first real item remains deferred, Stage 3A should implement the minimal real transform execution/scoring scaffold needed for the `841` candidate Caesar plus affine queue item.
+Stage 3A is the follow-up that implements the minimal real transform execution/scoring scaffold needed for the `841` candidate Caesar plus affine queue item.

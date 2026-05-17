@@ -25,6 +25,9 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/results/approval-gated-execution/stage2h/summary.json",
         "experiments/results/approval-readiness/stage2i/summary.json",
         "experiments/results/bounded-auto-runs/stage2j/summary.json",
+        "experiments/results/bounded-auto-runs/stage3a/candidate_records.jsonl",
+        "experiments/results/bounded-auto-runs/stage3a/top_candidates.jsonl",
+        "experiments/results/bounded-auto-runs/stage3a/summary.json",
         "local-test.sqlite3",
     ]
     trackable_paths = [
@@ -38,6 +41,9 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "schemas/experiments/approval-readiness-packet-v0.schema.json",
         "schemas/experiments/operator-policy-v0.schema.json",
         "schemas/experiments/bounded-experiment-queue-v0.schema.json",
+        "schemas/experiments/bounded-candidate-record-v0.schema.json",
+        "schemas/scoring/minimal-triage-score-v0.schema.json",
+        "data/scoring/english-common-words-tiny-v0.txt",
         "experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml",
         "experiments/manifests/exploratory/stage2e-caesar-preview-dry-run.yaml",
         "experiments/manifests/cpu-execution/stage2f-synthetic-direct-execution.yaml",

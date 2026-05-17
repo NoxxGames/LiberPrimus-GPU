@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/scoring/minimal-triage-score-v0.schema.json",
+  "title": "minimal-triage-score-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "score_schema",
+    "total_score",
+    "latin_letter_count",
+    "unknown_symbol_count",
+    "vowel_ratio",
+    "common_word_hit_count",
+    "common_word_hits",
+    "repeated_character_penalty",
+    "printable_ratio",
+    "entropy"
+  ],
+  "properties": {
+    "record_type": { "const": "minimal_triage_score" },
+    "score_schema": { "const": "minimal-triage-score-v0" },
+    "total_score": { "type": "number" },
+    "latin_letter_count": { "type": "integer", "minimum": 0 },
+    "unknown_symbol_count": { "type": "integer", "minimum": 0 },
+    "vowel_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "common_word_hit_count": { "type": "integer", "minimum": 0 },
+    "common_word_hits": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "repeated_character_penalty": { "type": "number" },
+    "printable_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "entropy": { "type": "number", "minimum": 0 }
+  }
+}

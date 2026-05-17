@@ -238,6 +238,18 @@ Stage 2J adds:
 
 The operator policy records standing limits for local CPU experiments. Queue records list bounded items, policy-check records explain pass/fail/warning outcomes, and generated `bounded_auto_run_result` records summarize execution, deferral, or blocking outcomes.
 
-Generated bounded auto-run records are ignored under `experiments/results/bounded-auto-runs/`. They must keep `search_performed=false`, `scoring_used=false`, `cuda_used=false`, `solve_claim_made=false`, `canonical_corpus_active=false`, `page_boundaries_final=false`, and `trusted_as_canonical=false`.
+Generated bounded auto-run records are ignored under `experiments/results/bounded-auto-runs/`. Stage 3A permits `search_performed=true` and `scoring_used=true` only for policy-passing bounded local CPU candidate enumeration summaries. They must keep `cuda_used=false`, `solve_claim_made=false`, `canonical_corpus_active=false`, `page_boundaries_final=false`, and `trusted_as_canonical=false`.
+
+## Stage 3A Bounded Candidate And Minimal Scoring Schemas
+
+Stage 3A adds:
+
+- `bounded-candidate-record-v0`
+- `bounded-experiment-run-summary-v0`
+- `minimal-triage-score-v0`
+
+Generated `bounded_candidate_record` rows are ignored output under `experiments/results/bounded-auto-runs/stage3a/`. They include transform family, transform parameters, candidate index, input slice ID, normalized output text, output hash, minimal score summary, ranking features, and explicit safety flags.
+
+Minimal triage score records are deterministic local CPU scoring summaries. They are sorting metadata only and are not solve evidence.
 
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.
