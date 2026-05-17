@@ -419,3 +419,13 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Public docs must distinguish permanent safety rules, current implementation boundaries, deferred future work, and completed work.
 - README status and boundary sections must be updated when stages complete.
 - Do not leave old Stage 0A boundary wording in top-level public documentation after later infrastructure stages implement parts of that work.
+
+## Stage 3K Archive And Visual Observation Rules
+
+- Raw local page images under `third_party/LiberPrimusPages/` must not be committed.
+- Visual observations are reviewable hypotheses, not experiment seeds by default.
+- Cookie/hash records must not claim preimages without exact byte matches.
+- Image-derived numeric readings must preserve ambiguity.
+- Do not use AI, OCR, or third-party image interpretation as source of truth.
+- No live Tor crawling in normal stages.
+- Archive source records must include source class and `trusted_as_canonical=false`.

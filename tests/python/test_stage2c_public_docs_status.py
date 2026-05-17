@@ -50,6 +50,7 @@ def test_readme_current_status_is_current() -> None:
     assert "Stage 3H" in current_status
     assert "Stage 3I" in current_status
     assert "Stage 3J" in current_status
+    assert "Stage 3K" in current_status
 
 
 def test_readme_top_level_status_is_not_stale() -> None:
@@ -83,6 +84,7 @@ def test_status_and_roadmap_are_current() -> None:
     assert "Stage 3H" in status
     assert "Stage 3I" in status
     assert "Stage 3J" in status
+    assert "Stage 3K" in status
     assert "## Stage 2D - CI-gated schema and docs hardening" in roadmap
     assert "## Stage 2E - CPU experiment manifest scaffold and dry-run planner" in roadmap
     assert "## Stage 2F - Synthetic and solved-fixture CPU execution harness design" in roadmap
@@ -101,5 +103,6 @@ def test_status_and_roadmap_are_current() -> None:
     assert "## Stage 3I - Mersenne tiny probe or historical Vigenere follow-up" in roadmap
     assert "## Stage 3J - Mersenne/perfect-number tiny stream probe" in roadmap
     assert "## Stage 3K - Visual numeric observation registry or archive-image source audit" in roadmap
+    assert "## Stage 3L - Deterministic image/audio/web analysis CLIs" in roadmap
     assert "Stage 2A should build" not in roadmap
     assert "Stage 2B is the next milestone" not in roadmap

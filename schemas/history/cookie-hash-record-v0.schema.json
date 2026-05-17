@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/cookie-hash-record-v0.schema.json",
+  "title": "Cookie Hash Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "cookie_id",
+    "source_id",
+    "cookie_name",
+    "cookie_value",
+    "value_format",
+    "candidate_hash_type",
+    "evidence_class",
+    "trusted_as_canonical",
+    "review_status",
+    "preimage_status",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "cookie_hash_record" },
+    "cookie_id": { "type": "string", "minLength": 1 },
+    "source_id": { "type": "string", "minLength": 1 },
+    "cookie_name": { "type": "string", "minLength": 1 },
+    "cookie_value": { "type": "string", "pattern": "^[0-9a-fA-F]{64}$" },
+    "value_format": { "enum": ["hex64"] },
+    "candidate_hash_type": { "type": "string", "minLength": 1 },
+    "evidence_class": {
+      "enum": [
+        "primary_signed",
+        "strong_community_technical",
+        "secondary_archive",
+        "reference_only_tooling",
+        "archived_claim",
+        "speculative_observation",
+        "negative_control_material"
+      ]
+    },
+    "trusted_as_canonical": { "const": false },
+    "review_status": {
+      "enum": [
+        "unreviewed",
+        "machine_checked",
+        "human_review_required",
+        "accepted_as_observation",
+        "rejected"
+      ]
+    },
+    "preimage_status": { "enum": ["unknown", "not_attempted", "rejected"] },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

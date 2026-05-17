@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/visual-observation-reading-v0.schema.json",
+  "title": "Visual Observation Reading v0",
+  "type": "object",
+  "required": [
+    "reading_id",
+    "reading_type",
+    "value",
+    "representation",
+    "derivation",
+    "confidence",
+    "notes"
+  ],
+  "properties": {
+    "reading_id": { "type": "string", "minLength": 1 },
+    "reading_type": { "type": "string", "minLength": 1 },
+    "value": {},
+    "representation": { "type": "string", "minLength": 1 },
+    "derivation": { "type": "string", "minLength": 1 },
+    "confidence": { "enum": ["high", "medium", "low", "review_required", "rejected"] },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

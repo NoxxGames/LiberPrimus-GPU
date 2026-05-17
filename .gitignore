@@ -103,6 +103,8 @@ experiments/reports/**
 *.parquet
 *.csv
 *.log
+!data/locks/**/*.jsonl
+!data/observations/**/*.jsonl
 
 # Root-level local workbook drops
 /tranlsations.xlsx
@@ -112,6 +114,12 @@ experiments/reports/**
 # Root-level local Pastebin drops
 /58-Pages-In-Runes-With-Prime-Values-Pastebin.txt
 /vGMK330j.txt
+
+# Local third-party Liber Primus page images
+third_party/LiberPrimusPages/**
+!third_party/LiberPrimusPages/
+!third_party/LiberPrimusPages/README.md
+!third_party/LiberPrimusPages/.gitkeep
 
 # Raw corpus and local data
 data/raw/**
@@ -144,6 +152,14 @@ data/raw/**
 !data/raw/reference-repos/scream314-cicada3301/.gitkeep
 !data/raw/reference-repos/lipeeeee-gematria/
 !data/raw/reference-repos/lipeeeee-gematria/.gitkeep
+
+# Generated archive/visual registry outputs
+experiments/results/archive-visual-registry/**
+!experiments/results/archive-visual-registry/
+!experiments/results/archive-visual-registry/README.md
+!experiments/results/archive-visual-registry/.gitkeep
+!experiments/results/archive-visual-registry/stage3k/
+!experiments/results/archive-visual-registry/stage3k/.gitkeep
 
 # Generated alignment outputs
 data/normalized/alignment/**

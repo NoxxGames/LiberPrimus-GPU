@@ -1,0 +1,135 @@
+schema_id: visual-numeric-observations-v0
+record_count: 5
+records:
+  - record_type: visual_numeric_observation
+    observation_id: lp-cuneiform-sexagesimal-candidate-v0
+    source_id: uncovering-cicada-art-of-liber-primus
+    image_id: liber-primus-visual-cuneiform-review-required
+    observation_type: sexagesimal_cuneiform_candidate
+    description: Reviewable candidate reading of cuneiform/base-60-like Liber Primus marks.
+    confidence: review_required
+    review_status: human_review_required
+    candidate_readings:
+      - reading_id: lp-cuneiform-17-13-55-1-v0
+        reading_type: sexagesimal_digit_sequence
+        value: [17, 13, 55, 1]
+        representation: "[17, 13, 55, 1]"
+        derivation: Community-labelled possible cuneiform-style digit reading.
+        confidence: review_required
+        notes: Candidate reading only; labels may be wrong.
+    derived_values:
+      pairwise_17_13_base60: 1033
+      pairwise_55_1_base60: 3301
+      full_base60: 3722101
+      full_base60_mod29: 9
+      1033_mod29: 18
+      3301_mod29: 24
+    evidence_notes: Stage 3K research input highlights pairwise 1033 and 3301 as notable if reading is accepted.
+    ambiguity_notes: Community-labelled reading; labels may be wrong; requires visual review.
+    trusted_as_canonical: false
+    usable_as_experiment_seed: false
+    notes: Do not use as an experiment seed until reviewed.
+  - record_type: visual_numeric_observation
+    observation_id: lp-binary-dot-tree-candidate-v0
+    source_id: uncovering-cicada-art-of-liber-primus
+    image_id: liber-primus-visual-dot-pattern-review-required
+    observation_type: binary_dot_pattern_candidate
+    description: Reviewable binary-dot/five-dot candidate observation with ambiguous reading order.
+    confidence: review_required
+    review_status: human_review_required
+    candidate_readings:
+      - reading_id: lp-binary-dot-three-filled-values-v0
+        reading_type: five_bit_three_ones_candidate_set
+        value: [7, 11, 13, 14, 19, 21, 22, 25, 26, 28]
+        representation: five positions, three filled dots and two empty dots
+        derivation: All five-bit values with exactly three one bits under arbitrary ordering.
+        confidence: review_required
+        notes: 13 is possible but not unique.
+      - reading_id: lp-binary-dot-right-all-filled-v0
+        reading_type: five_bit_all_ones_candidate
+        value: 31
+        representation: "11111b"
+        derivation: Five solid dots interpreted as black=1 in five-bit order.
+        confidence: review_required
+        notes: Depends on accepting all-five-filled reading and bit order.
+    derived_values:
+      three_filled_two_empty_candidate_values: [7, 11, 13, 14, 19, 21, 22, 25, 26, 28]
+      thirteen_possible_not_unique: true
+      right_all_filled_candidate_decimal: 31
+    evidence_notes: Stage 3K research input flags binary-like visual patterns as future review material.
+    ambiguity_notes: Bit order, filled/hollow semantics, and grouping are all unresolved.
+    trusted_as_canonical: false
+    usable_as_experiment_seed: false
+    notes: Visual model must be reviewed before use.
+  - record_type: visual_numeric_observation
+    observation_id: historical-prime-dimensions-2012-v0
+    source_id: uncovering-cicada-possible-hints-never-used
+    image_id: historical-2012-prime-dimension-image
+    observation_type: prime_dimension_observation
+    description: Reported 2012 image dimensions 509 by 503 and multiplier 3301.
+    confidence: medium
+    review_status: human_review_required
+    candidate_readings:
+      - reading_id: historical-2012-prime-dimensions-v0
+        reading_type: image_dimension_tuple
+        value: [509, 503, 3301]
+        representation: "509 x 503, multiplier 3301"
+        derivation: Archive/image research report observation.
+        confidence: medium
+        notes: Requires source lock against the original image.
+    derived_values:
+      width: 509
+      height: 503
+      multiplier: 3301
+      product: 845145127
+    evidence_notes: Dimensions and multiplier are notable prime-related historical artefacts.
+    ambiguity_notes: Stage 3K records the claim; source bytes still need exact locking.
+    trusted_as_canonical: false
+    usable_as_experiment_seed: false
+    notes: Not used as seed in Stage 3K.
+  - record_type: visual_numeric_observation
+    observation_id: historical-prime-dimensions-2016-v0
+    source_id: uncovering-cicada-2016-message
+    image_id: historical-2016-prime-dimension-image
+    observation_type: prime_dimension_observation
+    description: Reported 2016 image dimensions 563 by 569.
+    confidence: medium
+    review_status: human_review_required
+    candidate_readings:
+      - reading_id: historical-2016-prime-dimensions-v0
+        reading_type: image_dimension_tuple
+        value: [563, 569]
+        representation: "563 x 569"
+        derivation: Archive/image research report observation.
+        confidence: medium
+        notes: Requires source lock against the original image.
+    derived_values:
+      width: 563
+      height: 569
+    evidence_notes: Both dimensions are prime if source dimensions are confirmed.
+    ambiguity_notes: Stage 3K records the claim; source bytes still need exact locking.
+    trusted_as_canonical: false
+    usable_as_experiment_seed: false
+    notes: Not used as seed in Stage 3K.
+  - record_type: visual_numeric_observation
+    observation_id: onion7-page15-number-table-v0
+    source_id: uncovering-cicada-onion7-numbers-page15
+    image_id: onion7-page15-number-table-review-required
+    observation_type: numeric_table_observation
+    description: Placeholder for reported Onion 7 page-15 raw 4x4 number table.
+    confidence: review_required
+    review_status: human_review_required
+    candidate_readings:
+      - reading_id: onion7-page15-raw-table-pending-v0
+        reading_type: raw_numeric_table_pending
+        value: pending
+        representation: 4x4 table values pending source review
+        derivation: Stage 3K research input notes table existence but committed record does not assert values.
+        confidence: review_required
+        notes: Exact values must be source-locked before use.
+    derived_values: {}
+    evidence_notes: Record exists to prevent the table from becoming an untracked seed.
+    ambiguity_notes: Raw values are pending and must not be inferred from memory.
+    trusted_as_canonical: false
+    usable_as_experiment_seed: false
+    notes: Placeholder/source record only.

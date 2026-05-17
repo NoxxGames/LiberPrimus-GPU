@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/source-archive-record-v0.schema.json",
+  "title": "Source Archive Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "source_id",
+    "title",
+    "url",
+    "source_class",
+    "provenance_notes",
+    "retrieval_status",
+    "mirror_status",
+    "canonical_status",
+    "trusted_as_canonical",
+    "review_status",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "source_archive_record" },
+    "source_id": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "url": { "type": "string", "minLength": 1 },
+    "source_class": {
+      "enum": [
+        "primary_signed",
+        "strong_community_technical",
+        "secondary_archive",
+        "reference_only_tooling",
+        "archived_claim",
+        "speculative_observation",
+        "negative_control_material"
+      ]
+    },
+    "provenance_notes": { "type": "string" },
+    "retrieval_status": { "type": "string", "minLength": 1 },
+    "mirror_status": { "type": "string", "minLength": 1 },
+    "canonical_status": { "enum": ["noncanonical", "canonical_candidate"] },
+    "trusted_as_canonical": { "const": false },
+    "review_status": {
+      "enum": [
+        "unreviewed",
+        "machine_checked",
+        "human_review_required",
+        "accepted_as_observation",
+        "rejected"
+      ]
+    },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

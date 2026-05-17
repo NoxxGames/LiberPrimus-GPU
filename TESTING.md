@@ -189,6 +189,16 @@ Run:
 .\.venv\Scripts\python.exe -m pytest -q tests/python/test_stage3j_mersenne_stream_values.py tests/python/test_stage3j_mersenne_executor.py tests/python/test_stage3j_mersenne_cli.py tests/python/test_stage3j_mersenne_output.py tests/python/test_stage3j_queue.py
 ```
 
+## Stage 3K Archive And Visual Registry Tests
+
+Stage 3K adds tests for source/archive records, source-class vocabulary, noncanonical flags, synthetic image scanning, prime dimension helpers, missing-image handling, committed image lock validation, visual numeric observations, cookie/hash records, CLI commands, ignored raw images, ignored generated scan outputs, and trackable registry JSONL files.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q tests/python -k stage3k
+```
+
 Stage 3A adds tests for minimal triage scoring, Caesar and affine enumeration counts, candidate output schemas, generated-output ignore policy, policy blocking, and `libreprimus bounded-run` CLI behavior.
 
 The tests assert that scoring is deterministic, Caesar generates `29` candidates, affine generates `812` candidates, total candidate count is `841`, output indices stay in `0..28`, candidate records and run summaries validate, top-k output is bounded, CUDA stays false, solve claims stay false, and synthetic CLI runs work without raw corpus data.

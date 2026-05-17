@@ -1,0 +1,147 @@
+schema_id: source-archive-records-v0
+record_count: 12
+records:
+  - record_type: source_archive_record
+    source_id: complete-cicada3301-archive
+    title: The Complete Cicada 3301 Archive
+    url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+    source_class: secondary_archive
+    provenance_notes: Community-maintained archive used as a source-discovery layer.
+    retrieval_status: url_recorded_not_fetched_by_stage3k
+    mirror_status: external_secondary_archive
+    canonical_status: noncanonical
+    trusted_as_canonical: false
+    review_status: unreviewed
+    notes: Do not treat archive copies as canonical without source-lock review.
+  - record_type: source_archive_record
+    source_id: complete-archive-2017-pgp-message-pdf
+    title: Complete Archive 2017 PGP Signed Message PDF
+    url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive/blob/main/2017/PGP%20Signed%20Message%20April%202017.pdf
+    source_class: secondary_archive
+    provenance_notes: Archive copy of signed message source.
+    retrieval_status: url_recorded_not_fetched_by_stage3k
+    mirror_status: external_secondary_archive
+    canonical_status: noncanonical
+    trusted_as_canonical: false
+    review_status: unreviewed
+    notes: Signature and byte provenance require separate review.
+  - record_type: source_archive_record
+    source_id: complete-archive-2013-what-happened-part-1
+    title: Complete Archive 2013 What Happened Part 1
+    url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+    source_class: secondary_archive
+    provenance_notes: Archive-indexed community account of 2013 puzzle material.
+    retrieval_status: url_recorded_not_fetched_by_stage3k
+    mirror_status: external_secondary_archive
+    canonical_status: noncanonical
+    trusted_as_canonical: false
+    review_status: unreviewed
+    notes: Useful for source discovery only.
+  - record_type: source_archive_record
+    source_id: complete-archive-2013-what-happened-part-2
+    title: Complete Archive 2013 What Happened Part 2
+    url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+    source_class: secondary_archive
+    provenance_notes: Archive-indexed community account of 2013 puzzle material.
+    retrieval_status: url_recorded_not_fetched_by_stage3k
+    mirror_status: external_secondary_archive
+    canonical_status: noncanonical
+    trusted_as_canonical: false
+    review_status: unreviewed
+    notes: Useful for source discovery only.
+  - record_type: source_archive_record
+    source_id: complete-archive-2014-onion4-address-runes
+    title: Complete Archive 2014 Onion 4 Address Runes
+    url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+    source_class: secondary_archive
+    provenance_notes: Archive-indexed onion/rune material requiring source lock.
+    retrieval_status: url_recorded_not_fetched_by_stage3k
+    mirror_status: external_secondary_archive
+    canonical_status: noncanonical
+    trusted_as_canonical: false
+    review_status: unreviewed
+    notes: Onion-source material is not fetched or crawled in Stage 3K.
+  - record_type: source_archive_record
+    source_id: rtkd-iddqd
+    title: RTKD IDDQD Technical Reference
+    url: https://github.com/rtkd/iddqd
+    source_class: strong_community_technical
+    provenance_notes: Stronger technical reference used for transcript/tooling context.
+    retrieval_status: url_recorded_not_fetched_by_stage3k
+    mirror_status: external_reference
+    canonical_status: noncanonical
+    trusted_as_canonical: false
+    review_status: unreviewed
+    notes: Technical references still require lock records before canonical use.
+  - record_type: source_archive_record
+    source_id: scream314-cicada3301
+    title: Scream314 Cicada3301 Technical Reference
+    url: https://github.com/scream314/cicada3301
+    source_class: strong_community_technical
+    provenance_notes: Stronger technical reference used by existing fixture/reference stages.
+    retrieval_status: url_recorded_not_fetched_by_stage3k
+    mirror_status: external_reference
+    canonical_status: noncanonical
+    trusted_as_canonical: false
+    review_status: unreviewed
+    notes: Reference material is not proof of unsolved plaintext.
+  - record_type: source_archive_record
+    source_id: uncovering-cicada-2016-message
+    title: Uncovering Cicada 2016 Message
+    url: https://uncovering-cicada.fandom.com/wiki/Uncovering_Cicada_Wiki
+    source_class: archived_claim
+    provenance_notes: Mutable community reference cited by the Stage 3K research input.
+    retrieval_status: url_recorded_not_fetched_by_stage3k
+    mirror_status: mutable_community_reference
+    canonical_status: noncanonical
+    trusted_as_canonical: false
+    review_status: human_review_required
+    notes: Useful as a lead source only.
+  - record_type: source_archive_record
+    source_id: uncovering-cicada-possible-hints-never-used
+    title: Uncovering Cicada Possible Hints Never Used
+    url: https://uncovering-cicada.fandom.com/wiki/Uncovering_Cicada_Wiki
+    source_class: archived_claim
+    provenance_notes: Mutable community page associated with 2013 cookie/hash artefacts.
+    retrieval_status: url_recorded_not_fetched_by_stage3k
+    mirror_status: mutable_community_reference
+    canonical_status: noncanonical
+    trusted_as_canonical: false
+    review_status: human_review_required
+    notes: Cookie values are recorded as claims, not cracked hashes.
+  - record_type: source_archive_record
+    source_id: uncovering-cicada-onion7-numbers-page15
+    title: Uncovering Cicada Onion 7 Numbers Page 15
+    url: https://uncovering-cicada.fandom.com/wiki/Uncovering_Cicada_Wiki
+    source_class: archived_claim
+    provenance_notes: Community report of Onion 7 page-15 raw 4x4 number table.
+    retrieval_status: url_recorded_not_fetched_by_stage3k
+    mirror_status: mutable_community_reference
+    canonical_status: noncanonical
+    trusted_as_canonical: false
+    review_status: human_review_required
+    notes: Raw table values remain pending review in Stage 3K.
+  - record_type: source_archive_record
+    source_id: uncovering-cicada-art-of-liber-primus
+    title: Uncovering Cicada Art of Liber Primus
+    url: https://uncovering-cicada.fandom.com/wiki/Uncovering_Cicada_Wiki
+    source_class: archived_claim
+    provenance_notes: Mutable community reference for visual Liber Primus observations.
+    retrieval_status: url_recorded_not_fetched_by_stage3k
+    mirror_status: mutable_community_reference
+    canonical_status: noncanonical
+    trusted_as_canonical: false
+    review_status: human_review_required
+    notes: Visual readings must preserve ambiguity.
+  - record_type: source_archive_record
+    source_id: internet-archive-latin-liber-primus
+    title: Internet Archive Latin Liber Primus
+    url: https://archive.org/
+    source_class: secondary_archive
+    provenance_notes: Internet Archive discovery reference for Liber Primus related material.
+    retrieval_status: url_recorded_not_fetched_by_stage3k
+    mirror_status: external_secondary_archive
+    canonical_status: noncanonical
+    trusted_as_canonical: false
+    review_status: unreviewed
+    notes: Requires exact item URL and source lock before use.

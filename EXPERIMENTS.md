@@ -314,3 +314,28 @@ Stage 3J runs the bounded Mersenne/perfect-number stream probe:
 The run is limited to the finite declared exponent sequence `2, 3, 5, 7, 13, 17, 19, 31`, three stream variants, offsets `0..15`, directions `forward` and `reverse`, and reset modes `none` and `line`, for `192` candidates.
 
 Generated outputs remain ignored under `experiments/results/bounded-auto-runs/stage3j/`. Duplicate stream signatures are reported in the summary. The top candidate is classified `inconclusive`; no solve claim is made.
+
+## Stage 3K Archive And Visual Observation Registry
+
+Stage 3K creates a registry rather than an execution stage.
+
+Run validation:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli archive validate-sources --records data/observations/archive/source-archive-records-v0.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli observation validate-visual --records data/observations/visual/visual-numeric-observations-v0.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli observation validate-cookies --records data/observations/web/cookie-hash-records-v0.yaml
+```
+
+Run the local image scan:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli archive scan-local-images `
+  --source-dir third_party/LiberPrimusPages `
+  --lock-out data/locks/third-party/liber-primus-pages/liber-primus-page-image-locks-v0.jsonl `
+  --artifact-out data/observations/visual/liber-primus-page-image-artifacts-v0.jsonl `
+  --summary-out experiments/results/archive-visual-registry/stage3k/local-image-scan-summary.json `
+  --allow-missing
+```
+
+Raw page images stay ignored under `third_party/LiberPrimusPages/`. Generated scan summaries stay ignored under `experiments/results/archive-visual-registry/stage3k/`. Stage 3K executes no image-derived text experiments and makes no solve claim.

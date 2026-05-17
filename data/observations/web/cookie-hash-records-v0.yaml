@@ -1,0 +1,27 @@
+schema_id: cookie-hash-records-v0
+record_count: 2
+records:
+  - record_type: cookie_hash_record
+    cookie_id: cookie-2013-167-v0
+    source_id: uncovering-cicada-possible-hints-never-used
+    cookie_name: "167"
+    cookie_value: 6941f707ff39d259ff71657a79cb6b54c184d2f0455810109c1a960860bde0e6
+    value_format: hex64
+    candidate_hash_type: unknown_256bit_hex
+    evidence_class: archived_claim
+    trusted_as_canonical: false
+    review_status: unreviewed
+    preimage_status: unknown
+    notes: Stage 3K records the artefact only; no preimage claim or cracking attempt.
+  - record_type: cookie_hash_record
+    cookie_id: cookie-2013-761-v0
+    source_id: uncovering-cicada-possible-hints-never-used
+    cookie_name: "761"
+    cookie_value: 7bc1e7805ccfa518920f0d94fc4e8f7dbd83287a03b337b89109cd2287befae5
+    value_format: hex64
+    candidate_hash_type: unknown_256bit_hex
+    evidence_class: archived_claim
+    trusted_as_canonical: false
+    review_status: unreviewed
+    preimage_status: unknown
+    notes: Stage 3K records the artefact only; no preimage claim or cracking attempt.

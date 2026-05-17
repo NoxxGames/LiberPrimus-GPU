@@ -143,6 +143,12 @@ Stage 2A registers the implemented known-solved baseline transforms as CPU refer
 
 Every registry entry has `supports_gpu=false`, `search_enabled=false`, and `scoring_enabled=false`. The registry is used by solved-baseline manifests and does not implement broad affine/shift search, Vigenere key search, prime-stream search, CUDA acceleration, or unsolved-page campaign execution. Stage 3A through Stage 3J minimal triage scoring, calibration, explicit-list Vigenere execution, bounded p56-local prime offset execution, reset/advance ablation, and the Mersenne/perfect-number tiny probe exist outside the registry for bounded CPU queue items only. Stage 3E backlog and queue records are planning metadata with deterministic candidate counts and executor-support classification, not new registry cipher implementations.
 
+## Visual And Archive Observations
+
+Stage 3K registry records are not cipher transforms. Cuneiform/base-60 candidates, binary-dot observations, prime-dimension examples, and cookie/hash artefacts are reviewable observations only.
+
+Do not convert visual or web observations into transform seeds without a later manifest, count validation, controls, and explicit bounded execution policy.
+
 ## Stage 2B Result Store Relationship
 
 Stage 2B does not add cipher behavior. It imports solved-baseline manifest-run outputs into JSONL and SQLite result stores with provenance and false search/CUDA/scoring flags.

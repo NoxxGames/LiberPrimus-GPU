@@ -10,6 +10,7 @@ from libreprimus.consistency.check_manifests import check_manifest_consistency
 from libreprimus.consistency.check_registry import check_registry_consistency
 from libreprimus.consistency.check_result_store import check_result_store_consistency
 from libreprimus.consistency.check_schemas import check_schema_consistency
+from libreprimus.consistency.check_archive_visual import check_archive_visual_consistency
 from libreprimus.consistency.export import write_summary
 from libreprimus.consistency.models import ConsistencyCheckResult, ConsistencyCheckSuiteResult
 
@@ -20,6 +21,7 @@ CHECK_GROUPS = {
     "docs": check_docs_consistency,
     "ignored_outputs": check_ignored_output_consistency,
     "result_store": check_result_store_consistency,
+    "archive_visual": check_archive_visual_consistency,
 }
 
 

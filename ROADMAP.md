@@ -200,6 +200,12 @@ Stage 3J implements and runs the `192` candidate Mersenne/perfect-number tiny st
 
 If Stage 3J remains inconclusive or noisy, create a reviewable visual numeric observation registry or archive-image source audit. Visual observations such as base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must be captured as reviewable observations before being promoted into bounded experiment seeds. Do not jump to CUDA.
 
+Stage 3K adds source/archive classification, local image lock records, deterministic image metadata extraction, reviewable visual numeric observations, cookie/hash records, schemas, CLI validation, tests, and documentation. It does not execute image-derived text experiments and makes no solve claim.
+
+## Stage 3L - Deterministic image/audio/web analysis CLIs
+
+After Stage 3K succeeds, add deterministic image/audio/web analysis CLIs or a bounded cookie-hash preimage pack. Any image-derived numeric seed must first pass observation review and policy checks. Do not jump to CUDA.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

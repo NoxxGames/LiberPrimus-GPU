@@ -388,4 +388,20 @@ Duplicate stream signatures are expected because the declared eight-exponent seq
 
 Generated Stage 3J files remain ignored under `experiments/results/bounded-auto-runs/stage3j/`. They are candidate leads only and not solve evidence.
 
+## Stage 3K Archive And Visual Registry Records
+
+Stage 3K adds committed schemas under `schemas/history/` and `schemas/visual/` for:
+
+- `source_archive_record`
+- `source_lock_record`
+- `cookie_hash_record`
+- `image_artifact_record`
+- `visual_numeric_observation`
+- `visual_observation_reading`
+- `image_analysis_summary`
+
+Committed record files live under `data/observations/` and `data/locks/third-party/liber-primus-pages/`. Generated scan summaries remain ignored under `experiments/results/archive-visual-registry/stage3k/`.
+
+All Stage 3K records keep `trusted_as_canonical=false`; visual observations keep `usable_as_experiment_seed=false`; cookie/hash records do not claim preimages.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

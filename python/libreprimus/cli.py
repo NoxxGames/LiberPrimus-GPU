@@ -147,6 +147,13 @@ from libreprimus.candidate_inspection.validation import validate_no_full_dump_in
 from libreprimus.scoring.calibration import run_scoring_calibration
 from libreprimus.scoring.crib_checks import DEFAULT_CRIBS_PATH, crib_check, load_cribs
 from libreprimus.method_backlog.dry_run import dry_run_stage3e_queue
+from libreprimus.history.image_locks import scan_local_images, validate_image_locks
+from libreprimus.history.source_records import validate_source_records
+from libreprimus.visual_observations.validation import (
+    summarize_observations,
+    validate_cookie_records,
+    validate_visual_records,
+)
 from libreprimus.reference_sources.summary import build_stage1c_reference_summary, write_stage1c_reference_outputs
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
 from libreprimus.transcript_sources.rtkd_master import parse_rtkd_master
@@ -177,6 +184,8 @@ bounded_experiment_app = typer.Typer(no_args_is_help=True)
 bounded_run_app = typer.Typer(no_args_is_help=True)
 candidate_inspect_app = typer.Typer(no_args_is_help=True)
 scoring_app = typer.Typer(no_args_is_help=True)
+archive_app = typer.Typer(no_args_is_help=True)
+observation_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -2949,10 +2958,145 @@ def _print_bounded_run_results(results) -> None:
             console.print(f"{result.item_id}_deferred_reason={result.deferred_reason}")
 
 
+@archive_app.command("validate-sources")
+def archive_validate_sources(
+    records: Path = typer.Option(..., "--records", help="Source archive record YAML path."),
+) -> None:
+    """Validate Stage 3K source/archive classification records."""
+    try:
+        count, errors = validate_source_records(_resolve_output_path(records))
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print(f"source_record_count={count}")
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(f"[red]{error}[/red]")
+    if errors:
+        raise typer.Exit(1)
+    console.print("Source archive records OK")
+
+
+@archive_app.command("scan-local-images")
+def archive_scan_local_images(
+    source_dir: Path = typer.Option(..., "--source-dir", help="Local page image source directory."),
+    lock_out: Path = typer.Option(..., "--lock-out", help="Committed source-lock JSONL output path."),
+    artifact_out: Path = typer.Option(..., "--artifact-out", help="Committed image artifact JSONL output path."),
+    summary_out: Path = typer.Option(..., "--summary-out", help="Generated scan summary JSON output path."),
+    allow_missing: bool = typer.Option(False, "--allow-missing", help="Write empty outputs if source dir is missing."),
+) -> None:
+    """Scan local page images and write deterministic source-lock metadata."""
+    try:
+        summary = scan_local_images(
+            source_dir=source_dir,
+            lock_out=lock_out,
+            artifact_out=artifact_out,
+            summary_out=summary_out,
+            allow_missing=allow_missing,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print("image_scan_executed=true")
+    console.print(f"image_count={summary['image_count']}")
+    console.print(f"lock_record_count={summary['lock_record_count']}")
+    console.print(f"image_artifact_record_count={summary['image_artifact_record_count']}")
+    console.print(f"prime_dimension_count={summary['prime_dimension_count']}")
+    console.print(f"summary={_resolve_output_path(summary_out)}")
+
+
+@archive_app.command("validate-image-locks")
+def archive_validate_image_locks(
+    locks: Path = typer.Option(..., "--locks", help="Source-lock JSONL path."),
+    artifacts: Path = typer.Option(..., "--artifacts", help="Image artifact JSONL path."),
+    allow_empty: bool = typer.Option(False, "--allow-empty", help="Allow empty lock/artifact files."),
+) -> None:
+    """Validate Stage 3K local image lock and artifact records."""
+    try:
+        lock_count, artifact_count, errors = validate_image_locks(
+            locks=_resolve_output_path(locks),
+            artifacts=_resolve_output_path(artifacts),
+            allow_empty=allow_empty,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print(f"image_lock_record_count={lock_count}")
+    console.print(f"image_artifact_record_count={artifact_count}")
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(f"[red]{error}[/red]")
+    if errors:
+        raise typer.Exit(1)
+    console.print("Image lock records OK")
+
+
+@observation_app.command("validate-visual")
+def observation_validate_visual(
+    records: Path = typer.Option(..., "--records", help="Visual observation YAML path."),
+) -> None:
+    """Validate reviewable visual numeric observation records."""
+    try:
+        count, errors = validate_visual_records(_resolve_output_path(records))
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print(f"visual_observation_count={count}")
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(f"[red]{error}[/red]")
+    if errors:
+        raise typer.Exit(1)
+    console.print("Visual observation records OK")
+
+
+@observation_app.command("validate-cookies")
+def observation_validate_cookies(
+    records: Path = typer.Option(..., "--records", help="Cookie/hash record YAML path."),
+) -> None:
+    """Validate reviewable cookie/hash artefact records."""
+    try:
+        count, errors = validate_cookie_records(_resolve_output_path(records))
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print(f"cookie_hash_record_count={count}")
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(f"[red]{error}[/red]")
+    if errors:
+        raise typer.Exit(1)
+    console.print("Cookie/hash records OK")
+
+
+@observation_app.command("summary")
+def observation_summary(
+    visual: Path = typer.Option(..., "--visual", help="Visual observation YAML path."),
+    cookies: Path = typer.Option(..., "--cookies", help="Cookie/hash record YAML path."),
+    sources: Path = typer.Option(..., "--sources", help="Source archive record YAML path."),
+) -> None:
+    """Print a concise Stage 3K observation registry summary."""
+    try:
+        summary = summarize_observations(
+            visual=_resolve_output_path(visual),
+            cookies=_resolve_output_path(cookies),
+            sources=_resolve_output_path(sources),
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    for key, value in summary.items():
+        console.print(f"{key}={value}")
+    console.print("trusted_as_canonical=false")
+    console.print("solve_claim=false")
+
+
 app.add_typer(bounded_experiment_app, name="bounded-experiment")
 app.add_typer(bounded_run_app, name="bounded-run")
 app.add_typer(candidate_inspect_app, name="candidate-inspect")
 app.add_typer(scoring_app, name="scoring")
+app.add_typer(archive_app, name="archive")
+app.add_typer(observation_app, name="observation")
 
 
 @solved_fixture_app.command("list")

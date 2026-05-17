@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/image-analysis-summary-v0.schema.json",
+  "title": "Image Analysis Summary v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "summary_id",
+    "generated_at_utc",
+    "source_dir",
+    "image_count",
+    "total_bytes",
+    "prime_dimension_count",
+    "warnings",
+    "trusted_as_canonical",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "image_analysis_summary" },
+    "summary_id": { "type": "string", "minLength": 1 },
+    "generated_at_utc": { "type": "string", "minLength": 1 },
+    "source_dir": { "type": "string", "minLength": 1 },
+    "image_count": { "type": "integer", "minimum": 0 },
+    "total_bytes": { "type": "integer", "minimum": 0 },
+    "prime_dimension_count": { "type": "integer", "minimum": 0 },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "trusted_as_canonical": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

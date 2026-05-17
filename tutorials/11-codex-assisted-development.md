@@ -119,3 +119,7 @@ For historical motif Vigenere packs, require the declared key list, reset modes,
 ## Stage 3J Guardrails
 
 For Mersenne/perfect-number stream probes, require the finite declared exponent sequence, exact variant/offset/direction/reset counts, duplicate stream-signature reporting, generated-output ignore checks, and summary-only research logs. Do not import external exponent lists, broaden into arbitrary number sequences, publish candidate dumps, or turn an inconclusive calibrated score into a solve claim. Visual and image-derived observations still belong in a future reviewable observation registry before they become experiment seeds.
+
+## Stage 3K Guardrails
+
+For archive and visual observation registry work, treat archive/image observations as noncanonical records. Do not stage raw page images, root research reports, generated scan summaries, live Tor crawl output, OCR output, AI interpretation, or image-derived experiment outputs.

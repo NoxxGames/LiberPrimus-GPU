@@ -118,6 +118,10 @@ Stage 3I is still a local CPU-only run. It executes `56` explicit historical mot
 
 Stage 3J is still a local CPU-only run. It executes `192` bounded Mersenne/perfect-number stream candidates from a finite declared exponent sequence and writes generated outputs to ignored local paths. It is not a broad number-theory search, not a benchmark, not a CUDA workload, and not a reason to start GPU work.
 
+## Stage 3K Registry Scope
+
+Stage 3K is registry work only. Deterministic image metadata extraction is lightweight CPU/stdlib work and does not use GPU acceleration, OCR, AI image interpretation, or broad archive crawling.
+
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

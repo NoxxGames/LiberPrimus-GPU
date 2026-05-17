@@ -18,6 +18,8 @@ The GitHub wiki is a mirror for public convenience. Repository tutorials and doc
 
 Do not attach or commit raw corpus files, generated alignment dumps, local workbooks, or local Pastebin text.
 
+Stage 3K also keeps local page images under `third_party/LiberPrimusPages/` ignored. Commit only lock records, observation records, schemas, docs, tests, and source code.
+
 ## Pull Requests
 
 Explain validation commands, note raw/generated exclusions, and link relevant docs or issues.

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/image-artifact-record-v0.schema.json",
+  "title": "Image Artifact Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "image_id",
+    "source_id",
+    "relative_path",
+    "file_name",
+    "file_size_bytes",
+    "sha256",
+    "image_format",
+    "width",
+    "height",
+    "width_is_prime",
+    "height_is_prime",
+    "both_dimensions_prime",
+    "color_mode",
+    "trusted_as_canonical",
+    "review_status",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "image_artifact_record" },
+    "image_id": { "type": "string", "minLength": 1 },
+    "source_id": { "type": "string", "minLength": 1 },
+    "relative_path": { "type": "string", "minLength": 1 },
+    "file_name": { "type": "string", "minLength": 1 },
+    "file_size_bytes": { "type": "integer", "minimum": 0 },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "image_format": { "type": "string", "minLength": 1 },
+    "width": { "type": "integer", "minimum": 1 },
+    "height": { "type": "integer", "minimum": 1 },
+    "width_is_prime": { "type": "boolean" },
+    "height_is_prime": { "type": "boolean" },
+    "both_dimensions_prime": { "type": "boolean" },
+    "color_mode": { "type": "string", "minLength": 1 },
+    "trusted_as_canonical": { "const": false },
+    "review_status": {
+      "enum": [
+        "unreviewed",
+        "machine_checked",
+        "human_review_required",
+        "accepted_as_observation",
+        "rejected"
+      ]
+    },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}
