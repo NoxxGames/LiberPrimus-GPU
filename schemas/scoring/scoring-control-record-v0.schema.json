@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/scoring/scoring-control-record-v0.schema.json",
+  "title": "scoring-control-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "control_id",
+    "control_kind",
+    "source",
+    "text",
+    "text_sha256",
+    "length",
+    "score_summary",
+    "confidence_label",
+    "generated_at_utc",
+    "notes",
+    "trusted_as_canonical",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "scoring_control_record" },
+    "control_id": { "type": "string", "minLength": 1 },
+    "control_kind": {
+      "enum": ["positive", "null", "negative", "candidate"]
+    },
+    "source": { "type": "string", "minLength": 1 },
+    "text": { "type": "string" },
+    "text_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "length": { "type": "integer", "minimum": 0 },
+    "score_summary": { "type": "object" },
+    "confidence_label": {
+      "enum": [
+        "positive_control_like",
+        "plausible_lead",
+        "weak_lead",
+        "noisy",
+        "garbage",
+        "inconclusive"
+      ]
+    },
+    "generated_at_utc": { "type": "string", "minLength": 1 },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

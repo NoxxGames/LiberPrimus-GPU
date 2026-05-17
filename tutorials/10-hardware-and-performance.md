@@ -86,6 +86,10 @@ Stage 3A is a small local CPU candidate enumeration, not a benchmark campaign. I
 
 Stage 3B inspects ignored Stage 3A outputs, reranks candidates with refined local scoring, and runs one reverse-direction `841` candidate CPU comparison. This is still not a benchmark, broad campaign, or CUDA workload. Scores remain triage metadata only, and generated candidate dumps stay ignored.
 
+## Stage 3C Calibration Scope
+
+Stage 3C calibration is CPU-only local scoring work. It scores small positive, null, negative, and candidate control sets, writes ignored outputs, and makes no throughput, CUDA, or solve claim.
+
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

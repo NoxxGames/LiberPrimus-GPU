@@ -38,6 +38,7 @@ STAGE2I_APPROVAL_RECORD_DIR = repo_root() / "experiments/proposals/stage2i/appro
 OPERATOR_POLICY_PATH = repo_root() / "experiments/policies/operator-policy-v0.yaml"
 BOUNDED_QUEUE_PATH = repo_root() / "experiments/queues/stage2j-bounded-cpu-queue.yaml"
 STAGE3B_BOUNDED_QUEUE_PATH = repo_root() / "experiments/queues/stage3b-bounded-cpu-queue.yaml"
+STAGE3C_BOUNDED_QUEUE_PATH = repo_root() / "experiments/queues/stage3c-bounded-cpu-queue.yaml"
 REGISTRY_PATH = repo_root() / DEFAULT_REGISTRY_PATH
 
 
@@ -68,6 +69,7 @@ def check_manifest_consistency(
     operator_policy_path: Path = OPERATOR_POLICY_PATH,
     bounded_queue_path: Path = BOUNDED_QUEUE_PATH,
     stage3b_bounded_queue_path: Path = STAGE3B_BOUNDED_QUEUE_PATH,
+    stage3c_bounded_queue_path: Path = STAGE3C_BOUNDED_QUEUE_PATH,
     registry_path: Path = REGISTRY_PATH,
 ) -> list[ConsistencyCheckResult]:
     results: list[ConsistencyCheckResult] = []
@@ -523,6 +525,45 @@ def check_manifest_consistency(
                 )
         if not any(result.check_name == "stage3b_flags_false" and result.is_failure for result in results):
             results.append(pass_result(GROUP, "stage3b_flags_false", "Stage 3B queue keeps unsafe flags false."))
+    try:
+        stage3c_queue = load_bounded_queue(stage3c_bounded_queue_path)
+        results.append(
+            pass_result(GROUP, "stage3c_queue_valid", "Stage 3C bounded queue validates.", path=stage3c_bounded_queue_path)
+        )
+    except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+        stage3c_queue = None
+        results.append(fail_result(GROUP, "stage3c_queue_valid", str(exc), path=stage3c_bounded_queue_path))
+
+    if policy is not None and stage3c_queue is not None:
+        checks = check_queue(policy, stage3c_queue)
+        pass_or_warning = {check.item_id for check in checks if not check.blocking_reasons}
+        blocked = {check.item_id for check in checks if check.blocking_reasons}
+        if "stage3c-small-vigenere-known-motif-key-list" in pass_or_warning:
+            results.append(pass_result(GROUP, "stage3c_next_item_policy_pass", "Stage 3C next item passes policy."))
+        else:
+            results.append(fail_result(GROUP, "stage3c_next_item_policy_pass", "Stage 3C next item does not pass policy."))
+        if "stage3c-blocked-overbudget-control" in blocked:
+            results.append(pass_result(GROUP, "stage3c_overbudget_blocked", "Stage 3C over-budget item is blocked."))
+        else:
+            results.append(fail_result(GROUP, "stage3c_overbudget_blocked", "Stage 3C over-budget item was not blocked."))
+        for item in stage3c_queue.items:
+            if not _no_raw_dump(Path(stage3c_queue.path)):
+                results.append(
+                    fail_result(
+                        GROUP,
+                        "manifest_no_raw_dump",
+                        "Stage 3C queue appears to include raw data.",
+                        path=stage3c_bounded_queue_path,
+                    )
+                )
+            if item.get("cuda_enabled") is not False:
+                results.append(fail_result(GROUP, "stage3c_flags_false", "Queue item enables CUDA.", path=stage3c_bounded_queue_path))
+            if item.get("no_solve_claim") is not True:
+                results.append(
+                    fail_result(GROUP, "stage3c_flags_false", "Queue item lacks no_solve_claim=true.", path=stage3c_bounded_queue_path)
+                )
+        if not any(result.check_name == "stage3c_flags_false" and result.is_failure for result in results):
+            results.append(pass_result(GROUP, "stage3c_flags_false", "Stage 3C queue keeps unsafe flags false."))
     return results
 
 

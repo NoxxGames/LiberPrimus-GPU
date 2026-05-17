@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3B lead inspection, scoring refinement, rerank, and reverse-direction bounded comparison is complete.
+Stage 3C scoring calibration, null controls, positive controls, and tiny crib checks are complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A adds minimal local triage scoring for one bounded CPU run only.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, and Stage 3C calibrates that scorer with small local controls.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 
@@ -228,6 +228,18 @@ Full candidate dumps remain ignored under `experiments/results/bounded-auto-runs
 
 Developer log: `docs/development-logs/2026-05-16-stage-3b-lead-inspection-scoring-refinement.md`.
 
+## Completed in Stage 3C
+
+Stage 3C added scoring calibration schemas, deterministic null controls, positive controls from solved fixtures and synthetic readable text, negative controls, tiny crib checks, calibrated confidence labels, and `libreprimus scoring` CLI commands.
+
+Calibration result: positive-control length-normalized score range `4.806942` to `29.310739`; null-control range `1.163663` to `11.299382`; negative-control range `-21.268966` to `0.560659`.
+
+Stage 3A original top, Stage 3A refined/reranked top, and Stage 3B reverse-direction top all calibrate as `noisy`. The next bounded method queued is `stage3c-small-vigenere-known-motif-key-list` for Stage 3D.
+
+Generated calibration JSON/JSONL outputs remain ignored under `experiments/results/scoring-calibration/stage3c/`. Crib hits and positive-control-like scores are triage metadata only, not solve evidence. CUDA remains disabled, the canonical corpus remains inactive, page boundaries remain reviewable, and no solve claim is made.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3c-scoring-calibration-null-controls.md`.
+
 ## Next prompt recommendation
 
-Stage 3C - improve scoring calibration and add null/crib-style checks before widening transform families.
+Stage 3D - run the conservative small Vigenere known-motif key-list preview with calibrated scoring.

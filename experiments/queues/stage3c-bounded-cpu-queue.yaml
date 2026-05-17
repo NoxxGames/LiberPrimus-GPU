@@ -1,0 +1,101 @@
+record_type: bounded_experiment_queue
+queue_id: stage3c-bounded-cpu-queue
+queue_version: bounded-experiment-queue-v0
+policy_id: operator-policy-v0
+default_output_dir: experiments/results/bounded-auto-runs/stage3d
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+items:
+  - item_id: stage3c-small-vigenere-known-motif-key-list
+    description: Conservative next bounded method after Stage 3C calibration; explicit tiny key list only.
+    enabled: true
+    experiment_kind: vigenere_tiny_key_list_preview
+    reason: Stage 3A/3B Caesar plus affine leads calibrated as noisy; try a very small explicit-key preview before widening.
+    corpus_slice:
+      slice_id: stage3a-page-candidate-018-reviewable-slice
+      slice_kind: future_unsolved_page_candidate
+      review_required: true
+      source: rtkd-master-v0-candidate
+      corpus_candidate_id: rtkd-master-v0-candidate
+      selector:
+        selector_kind: corpus_page_candidate_token_range
+        page_candidate_id: page-candidate-018
+        candidate_local_page_index: 18
+        start_token_index: 5283
+        end_token_index: 5402
+        expected_rune_token_count: 87
+        raw_unsolved_text_included: false
+      metadata_paths:
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/page_candidates.jsonl
+          role: generated_ignored_page_candidate_metadata
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/tokens.jsonl
+          role: generated_ignored_token_metadata
+    transform_plan:
+      direction: decrypt
+      families:
+        - transform_family: vigenere_explicit_tiny_key_list
+          candidate_count: 4
+          parameters:
+            keys:
+              - LIBER
+              - PRIMUS
+              - DIVINITY
+              - CICADA
+            key_search_enabled: false
+    candidate_count_upper_bound: 4
+    estimated_runtime_seconds: 30
+    generated_output_budget_mb: 5
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: minimal_triage
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3d
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: queued_for_stage3d
+
+  - item_id: stage3c-blocked-overbudget-control
+    description: Deliberate over-budget Stage 3C control proving policy checks still block larger work.
+    enabled: true
+    experiment_kind: blocked_overbudget_example
+    expected_policy_status: fail
+    corpus_slice:
+      slice_id: stage3c-blocked-overbudget-control
+      slice_kind: synthetic_policy_test
+      raw_unsolved_text_included: false
+    transform_plan:
+      families:
+        - transform_family: overbudget_policy_test
+          candidate_count: 100001
+    candidate_count_upper_bound: 100001
+    estimated_runtime_seconds: 60
+    generated_output_budget_mb: 5
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: false
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: none
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3d
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: blocked_example

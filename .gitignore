@@ -85,6 +85,11 @@ experiments/results/**
 !experiments/results/approval-readiness/.gitkeep
 !experiments/results/approval-readiness/stage2i/
 !experiments/results/approval-readiness/stage2i/.gitkeep
+!experiments/results/scoring-calibration/
+!experiments/results/scoring-calibration/README.md
+!experiments/results/scoring-calibration/.gitkeep
+!experiments/results/scoring-calibration/stage3c/
+!experiments/results/scoring-calibration/stage3c/.gitkeep
 experiments/reports/**
 !experiments/reports/
 !experiments/reports/README.md

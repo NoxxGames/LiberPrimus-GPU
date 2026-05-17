@@ -1,0 +1,13 @@
+record_type: null_control_policy
+policy_id: null-control-policy-v0
+policy_version: 0
+random_seed: 3301
+random_control_count: 200
+shuffled_control_count: 50
+length: 87
+alphabet: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+include_spaces: true
+external_sources_used: false
+notes:
+  - Deterministic local null controls for Stage 3C scoring calibration.
+  - No external data, API calls, paid services, CUDA, or solve claims.

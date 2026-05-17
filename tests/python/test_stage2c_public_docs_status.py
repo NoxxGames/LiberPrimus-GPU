@@ -42,6 +42,7 @@ def test_readme_current_status_is_current() -> None:
     assert "Stage 2J" in current_status
     assert "Stage 3A" in current_status
     assert "Stage 3B" in current_status
+    assert "Stage 3C" in current_status
 
 
 def test_readme_top_level_status_is_not_stale() -> None:
@@ -66,6 +67,8 @@ def test_status_and_roadmap_are_current() -> None:
     assert "Stage 2I" in status
     assert "Stage 2J" in status
     assert "Stage 3A" in status
+    assert "Stage 3B" in status
+    assert "Stage 3C" in status
     assert "## Stage 2D - CI-gated schema and docs hardening" in roadmap
     assert "## Stage 2E - CPU experiment manifest scaffold and dry-run planner" in roadmap
     assert "## Stage 2F - Synthetic and solved-fixture CPU execution harness design" in roadmap
@@ -75,5 +78,7 @@ def test_status_and_roadmap_are_current() -> None:
     assert "## Stage 2J - Standing bounded auto-run policy" in roadmap
     assert "## Stage 3A - Minimal real bounded CPU execution/scoring scaffold" in roadmap
     assert "## Stage 3B - Inspect bounded leads and refine next queue item" in roadmap
+    assert "## Stage 3C - Scoring calibration and null controls" in roadmap
+    assert "## Stage 3D - Small Vigenere known-motif key-list preview" in roadmap
     assert "Stage 2A should build" not in roadmap
     assert "Stage 2B is the next milestone" not in roadmap

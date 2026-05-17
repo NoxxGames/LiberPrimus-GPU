@@ -139,6 +139,8 @@ from libreprimus.candidate_inspection.report import (
 )
 from libreprimus.candidate_inspection.summary import to_summary_payload
 from libreprimus.candidate_inspection.validation import validate_no_full_dump_in_markdown, validate_summary_payload
+from libreprimus.scoring.calibration import run_scoring_calibration
+from libreprimus.scoring.crib_checks import DEFAULT_CRIBS_PATH, crib_check, load_cribs
 from libreprimus.reference_sources.summary import build_stage1c_reference_summary, write_stage1c_reference_outputs
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
 from libreprimus.transcript_sources.rtkd_master import parse_rtkd_master
@@ -168,6 +170,7 @@ approval_readiness_app = typer.Typer(no_args_is_help=True)
 bounded_experiment_app = typer.Typer(no_args_is_help=True)
 bounded_run_app = typer.Typer(no_args_is_help=True)
 candidate_inspect_app = typer.Typer(no_args_is_help=True)
+scoring_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -2279,6 +2282,7 @@ DEFAULT_STAGE2J_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-run
 DEFAULT_STAGE3A_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3a")
 DEFAULT_STAGE3B_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3b")
 DEFAULT_STAGE3B_INSPECTION_MD = Path("research-log/2026-05-16-stage-3b-stage3a-lead-inspection.md")
+DEFAULT_STAGE3C_CALIBRATION_RESULTS_DIR = Path("experiments/results/scoring-calibration/stage3c")
 
 
 @bounded_experiment_app.command("validate-policy")
@@ -2593,6 +2597,78 @@ def candidate_inspect_summary(
     console.print(f"warning_count={len(payload['warnings'])}")
 
 
+@scoring_app.command("calibrate")
+def scoring_calibrate(
+    stage3_results_dir: Path = typer.Option(DEFAULT_STAGE3A_BOUNDED_RESULTS_DIR, "--stage3-results-dir", help="Generated Stage 3A results directory."),
+    stage3b_results_dir: Path = typer.Option(DEFAULT_STAGE3B_BOUNDED_RESULTS_DIR, "--stage3b-results-dir", help="Generated Stage 3B results directory."),
+    out_dir: Path = typer.Option(DEFAULT_STAGE3C_CALIBRATION_RESULTS_DIR, "--out-dir", help="Generated calibration output directory."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Allow warning-bearing calibration inputs."),
+) -> None:
+    """Run Stage 3C scoring calibration against controls and bounded candidates."""
+    try:
+        result = run_scoring_calibration(
+            stage3_results_dir=_resolve_output_path(stage3_results_dir),
+            stage3b_results_dir=_resolve_output_path(stage3b_results_dir),
+            out_dir=_resolve_output_path(out_dir),
+            allow_warnings=allow_warnings,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    summary = result.summary
+    console.print("calibration_executed=true")
+    console.print(f"positive_control_count={summary['positive_control_count']}")
+    console.print(f"null_control_count={summary['null_control_count']}")
+    console.print(f"negative_control_count={summary['negative_control_count']}")
+    console.print(f"candidate_count={summary['candidate_count']}")
+    console.print(f"stage3a_top_classification={summary['stage3a_top_classification']}")
+    console.print(f"stage3b_top_classification={summary['stage3b_top_classification']}")
+    console.print(f"recommended_next_step={summary['recommended_next_step']}")
+    for name, path in result.output_paths.items():
+        console.print(f"{name}={path}")
+
+
+@scoring_app.command("crib-check")
+def scoring_crib_check(
+    text: str = typer.Option(..., "--text", help="Text to check against the tiny crib list."),
+    cribs: Path = typer.Option(DEFAULT_CRIBS_PATH, "--cribs", help="Tiny crib-list path."),
+) -> None:
+    """Run a tiny transparent crib check on inline text."""
+    try:
+        crib_terms = load_cribs(_resolve_output_path(cribs))
+        result = crib_check(text, cribs=crib_terms)
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print(f"crib_hit_count={result['crib_hit_count']}")
+    console.print(f"crib_hits={','.join(result['crib_hits'])}")
+    console.print("solve_claim=false")
+
+
+@scoring_app.command("calibration-summary")
+def scoring_calibration_summary(
+    results_dir: Path = typer.Option(DEFAULT_STAGE3C_CALIBRATION_RESULTS_DIR, "--results-dir", help="Generated calibration results directory."),
+) -> None:
+    """Print a concise generated Stage 3C calibration summary."""
+    path = _resolve_output_path(results_dir) / "calibration_summary.json"
+    if not path.is_file():
+        console.print(f"[red]Missing calibration summary: {path}[/red]")
+        raise typer.Exit(1)
+    summary = json.loads(path.read_text(encoding="utf-8"))
+    console.print(f"calibration_id={summary.get('calibration_id')}")
+    console.print(f"positive_control_count={summary.get('positive_control_count')}")
+    console.print(f"null_control_count={summary.get('null_control_count')}")
+    console.print(f"negative_control_count={summary.get('negative_control_count')}")
+    console.print(f"candidate_count={summary.get('candidate_count')}")
+    console.print(f"positive_score_range={json.dumps(summary.get('positive_score_range'), sort_keys=True)}")
+    console.print(f"null_score_range={json.dumps(summary.get('null_score_range'), sort_keys=True)}")
+    console.print(f"negative_score_range={json.dumps(summary.get('negative_score_range'), sort_keys=True)}")
+    console.print(f"stage3a_top_classification={summary.get('stage3a_top_classification')}")
+    console.print(f"stage3b_top_classification={summary.get('stage3b_top_classification')}")
+    console.print(f"recommended_next_step={summary.get('recommended_next_step')}")
+    console.print(f"solve_claim={str(summary.get('solve_claim')).lower()}")
+
+
 def _candidate_cli_summary(record: dict) -> dict:
     score = dict(record.get("score_summary", {}))
     return {
@@ -2630,6 +2706,7 @@ def _print_bounded_run_results(results) -> None:
 app.add_typer(bounded_experiment_app, name="bounded-experiment")
 app.add_typer(bounded_run_app, name="bounded-run")
 app.add_typer(candidate_inspect_app, name="candidate-inspect")
+app.add_typer(scoring_app, name="scoring")
 
 
 @solved_fixture_app.command("list")

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/scoring/scoring-calibration-summary-v0.schema.json",
+  "title": "scoring-calibration-summary-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "calibration_id",
+    "generated_at_utc",
+    "positive_control_count",
+    "null_control_count",
+    "negative_control_count",
+    "candidate_count",
+    "positive_score_range",
+    "null_score_range",
+    "negative_score_range",
+    "candidate_score_range",
+    "thresholds",
+    "stage3a_top_classification",
+    "stage3b_top_classification",
+    "recommended_next_step",
+    "solve_claim",
+    "cuda_used",
+    "warnings"
+  ],
+  "properties": {
+    "record_type": { "const": "scoring_calibration_summary" },
+    "calibration_id": { "type": "string", "minLength": 1 },
+    "generated_at_utc": { "type": "string", "minLength": 1 },
+    "positive_control_count": { "type": "integer", "minimum": 0 },
+    "null_control_count": { "type": "integer", "minimum": 0 },
+    "negative_control_count": { "type": "integer", "minimum": 0 },
+    "candidate_count": { "type": "integer", "minimum": 0 },
+    "positive_score_range": { "type": "object" },
+    "null_score_range": { "type": "object" },
+    "negative_score_range": { "type": "object" },
+    "candidate_score_range": { "type": "object" },
+    "thresholds": { "type": "object" },
+    "stage3a_top_classification": { "type": "string", "minLength": 1 },
+    "stage3b_top_classification": { "type": "string", "minLength": 1 },
+    "recommended_next_step": { "type": "string", "minLength": 1 },
+    "solve_claim": { "const": false },
+    "cuda_used": { "const": false },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

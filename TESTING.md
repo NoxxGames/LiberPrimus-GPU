@@ -189,4 +189,10 @@ Stage 3B adds tests for candidate inspection, refined triage scoring, Stage 3A r
 
 The tests assert that candidate records load from JSONL, inspection summaries group by transform and score distribution, noisy candidates stay noisy, readable synthetic controls score better, tiny impossible-bigram and repeated-symbol penalties work, reranking can change top order, reverse Caesar and affine inverse formulas are correct, reverse affine produces `812` candidates, total reverse candidates remain `841`, generated outputs are ignored, and no solve claims are made.
 
+## Stage 3C Scoring Calibration Tests
+
+Stage 3C adds tests for positive-control loading, deterministic null controls, crib checks, calibration summaries, scoring CLI commands, and the Stage 3C bounded queue.
+
+The tests assert that solved fixture controls load, null controls are deterministic and length-matched, negative controls remain noisy or garbage, crib hits do not imply solve claims, calibration summaries validate, confidence labels are assigned, noisy synthetic candidates stay noisy or garbage, readable synthetic controls classify as positive/plausible, generated outputs are ignored, and the next queue item stays under policy.
+
 The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.

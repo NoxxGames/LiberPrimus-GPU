@@ -87,3 +87,7 @@ For minimal bounded executor work, require `libreprimus bounded-run run-caesar-a
 ## Stage 3B Guardrails
 
 For lead inspection and scoring refinement work, require `libreprimus candidate-inspect inspect-stage3a`, `bounded-run rerank`, reverse-direction bounded-run smoke when implemented, schema or summary validation, and generated-output ignore checks. Full candidate outputs must not be committed. Research logs may summarize scores, qualitative labels, and transform parameters only, and must not claim a solve.
+
+## Stage 3C Guardrails
+
+For scoring calibration work, require `libreprimus scoring calibrate`, `scoring calibration-summary`, schema validation, null-control determinism tests, crib-check tests, and generated-output ignore checks. Do not tune scoring around one candidate, do not use external services or large dictionaries, and do not treat crib hits or positive-control-like labels as solve evidence.

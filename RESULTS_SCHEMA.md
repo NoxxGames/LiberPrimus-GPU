@@ -258,4 +258,14 @@ Stage 3B extends `minimal-triage-score-v0` with length-normalized score fields, 
 
 Candidate-inspection and rerank outputs are generated records under `experiments/results/bounded-auto-runs/stage3b/`. They may include reranked top-k JSONL and summary JSON, but those files remain ignored outputs and must not be committed. Committed research logs may include top score metadata and transform parameters only, not full candidate text dumps.
 
+## Stage 3C Scoring Calibration Schemas
+
+Stage 3C adds:
+
+- `scoring-control-record-v0`
+- `scoring-calibration-summary-v0`
+- `crib-check-result-v0`
+
+Generated calibration records are ignored under `experiments/results/scoring-calibration/stage3c/`. They record positive, null, negative, and candidate score summaries, tiny crib hits, calibrated labels, score ranges, thresholds, and explicit `solve_claim=false` / `cuda_used=false` flags.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

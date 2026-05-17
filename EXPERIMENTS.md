@@ -191,3 +191,15 @@ Run the bounded reverse-direction comparison:
 ```
 
 Generated rerank and reverse-direction outputs remain ignored under `experiments/results/bounded-auto-runs/stage3b/`. Research logs may summarize top transform parameters, scores, and qualitative labels only. Stage 3B top candidates are leads, not solve evidence.
+
+## Stage 3C Scoring Calibration
+
+Stage 3C calibrates minimal triage scoring with solved-fixture positive controls, deterministic local null controls, synthetic negative controls, tiny crib checks, and Stage 3A/3B candidate leads.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli scoring calibrate --stage3-results-dir experiments/results/bounded-auto-runs/stage3a --stage3b-results-dir experiments/results/bounded-auto-runs/stage3b --out-dir experiments/results/scoring-calibration/stage3c --allow-warnings
+```
+
+Generated calibration records remain ignored under `experiments/results/scoring-calibration/stage3c/`. Stage 3C queued `stage3c-small-vigenere-known-motif-key-list` for Stage 3D because Stage 3A/3B leads remained `noisy` under calibrated controls.

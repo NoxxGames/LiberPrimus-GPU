@@ -337,6 +337,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Reranking and reverse-direction comparisons must stay within the standing bounded CPU policy.
 - CUDA, canonical corpus activation, page-boundary finalization, broad search campaigns, and solve claims remain out of scope.
 
+## Stage 3C Scoring Calibration Rules
+
+- Scoring calibration is required before widening search space.
+- Null controls must be used when adding new scoring features.
+- Crib hits are weak evidence only.
+- Positive-control-like scores are not solve claims.
+- Do not tune scoring to make a specific candidate look good.
+- Generated calibration outputs are ignored and must not be committed.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/scoring/crib-check-result-v0.schema.json",
+  "title": "crib-check-result-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "candidate_id",
+    "crib_set_id",
+    "crib_hits",
+    "crib_hit_count",
+    "normalized_text_sha256",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "crib_check_result" },
+    "candidate_id": { "type": "string", "minLength": 1 },
+    "crib_set_id": { "type": "string", "minLength": 1 },
+    "crib_hits": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "crib_hit_count": { "type": "integer", "minimum": 0 },
+    "normalized_text_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "solve_claim": { "const": false }
+  }
+}

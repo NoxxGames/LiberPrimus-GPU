@@ -152,6 +152,12 @@ Stage 3B added candidate inspection, refined scoring, reranking, a Stage 3B boun
 
 Improve score calibration with null controls, crib/phrase sanity checks, and clearer lead review thresholds before widening transform families. Do not jump directly to CUDA or broad unsolved search.
 
+Stage 3C added positive controls, deterministic null controls, negative controls, tiny crib checks, calibrated labels, `libreprimus scoring` CLI commands, and `experiments/queues/stage3c-bounded-cpu-queue.yaml`. Stage 3A/3B top leads remain noisy; no solve claim is made.
+
+## Stage 3D - Small Vigenere known-motif key-list preview
+
+Run the conservative Stage 3C-selected bounded CPU method with calibrated scoring. Keep the explicit key list tiny, generated outputs ignored, no CUDA, no broad key search, no canonical corpus activation, no page-boundary finalization, and no solve claim.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.
