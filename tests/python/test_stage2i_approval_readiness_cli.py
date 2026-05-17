@@ -41,6 +41,42 @@ def test_packet_works_to_tmp_path(tmp_path: Path) -> None:
 
     assert result.exit_code == 0, result.output
     assert "approval_status=pending" in result.output
+    assert (tmp_path / "stage2i-first-bounded-caesar-affine-review.review.md").is_file()
+
+
+def test_human_summary_works() -> None:
+    result = CliRunner().invoke(
+        app,
+        [
+            "approval-readiness",
+            "human-summary",
+            "--proposal",
+            str(PROPOSAL),
+            "--approval",
+            str(APPROVAL),
+        ],
+    )
+
+    assert result.exit_code == 0, result.output
+    assert "proposal_id=stage2i-first-bounded-caesar-affine-review" in result.output
+    assert "decision_option_A=approve later execution" in result.output
+    assert "decision_option_B=revise proposal" in result.output
+    assert "decision_option_C=deny/defer" in result.output
+
+
+def test_inspect_paths_works() -> None:
+    result = CliRunner().invoke(
+        app,
+        ["approval-readiness", "inspect-paths", "--proposal", str(PROPOSAL)],
+    )
+
+    assert result.exit_code == 0, result.output
+    output = result.output.replace("\n", "")
+    assert f"proposal_path={PROPOSAL}" in output
+    assert "proposal_exists=true" in result.output
+    assert "approval_exists=true" in result.output
+    assert "review_markdown=" in result.output
+    assert "metadata_path=" in result.output
 
 
 def test_stage2i_review_and_summary_work(tmp_path: Path) -> None:
@@ -62,6 +98,7 @@ def test_stage2i_review_and_summary_work(tmp_path: Path) -> None:
     assert summary.exit_code == 0, summary.output
     assert "packet_count=1" in summary.output
     assert "candidate_count_estimate_total=841" in summary.output
+    assert "stage2i-first-bounded-caesar-affine-review_review_markdown=" in summary.output
 
 
 def test_invalid_approved_proposal_returns_nonzero(tmp_path: Path) -> None:

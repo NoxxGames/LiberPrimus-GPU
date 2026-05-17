@@ -302,6 +302,11 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - No approved approval records for real unsolved proposals may be committed.
 - Approval-readiness packets must not include candidate plaintext or raw unsolved text.
 - Human approval must be explicit and separate from proposal creation.
+- Approval packets must be self-contained.
+- Do not ask the user to answer vague metadata-review questions without exact paths and summaries.
+- Codex/tooling must perform mechanical checks automatically.
+- Human decision should be approve/revise/deny, not manual YAML auditing.
+- If a corpus metadata path is missing, recommend revision instead of asking the user to guess.
 - Stage 2I does not activate canonical corpus, finalize page boundaries, or claim unsolved pages solved.
 
 ## Public Documentation Wording Rules

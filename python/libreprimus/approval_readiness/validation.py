@@ -53,6 +53,14 @@ def validate_approval_readiness_payload(payload: dict[str, Any]) -> None:
         raise ValueError("Stage 2I real exploratory packets must not be approved.")
     if not payload.get("blocking_conditions"):
         raise ValueError("Approval-readiness packets require blocking_conditions.")
+    if payload.get("human_decision_required") is not True:
+        raise ValueError("Approval-readiness packets require human_decision_required=true.")
+    if not payload.get("machine_check_results"):
+        raise ValueError("Approval-readiness packets require machine_check_results.")
+    if not payload.get("decision_options"):
+        raise ValueError("Approval-readiness packets require decision_options.")
+    if not payload.get("next_commands"):
+        raise ValueError("Approval-readiness packets require next_commands.")
     text = json.dumps(to_jsonable(payload), sort_keys=True)
     if "candidate_plaintext" in text or "candidate_plaintexts" in text:
         raise ValueError("Approval-readiness packets must not contain candidate plaintext fields.")

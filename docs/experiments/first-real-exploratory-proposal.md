@@ -49,6 +49,8 @@ Approval-readiness packets are not approvals. A later human decision must explic
 
 A future reviewer must decide whether the corpus slice, transform bounds, output policy, result-store policy, and stop conditions are acceptable. Approval must be recorded in a separate approval record with scope, constraints, approver, timestamp, expiry, and matching proposal SHA-256.
 
+Stage 2I-followup generates a self-contained Markdown review packet named `stage2i-first-bounded-caesar-affine-review.review.md`. The packet includes machine checks and exact paths so the reviewer can decide approve, revise, or deny without manually auditing scattered YAML.
+
 ## Stop Conditions
 
 Stop before execution if any approval is missing, expired, mismatched, out of scope, or tries to enable search, candidate generation, scoring, CUDA, canonical corpus activation, or page-boundary finalization.

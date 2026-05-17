@@ -2050,6 +2050,53 @@ def approval_readiness_validate(
     _print_readiness_analysis(analysis)
 
 
+@approval_readiness_app.command("human-summary")
+def approval_readiness_human_summary(
+    proposal: Path = typer.Option(..., "--proposal", help="Experiment proposal path."),
+    approval: Path | None = typer.Option(None, "--approval", help="Approval record path."),
+) -> None:
+    """Print a concise human decision summary without generating outputs."""
+    try:
+        packet = build_approval_readiness_packet(
+            _resolve_existing_path(proposal, "Experiment proposal"),
+            approval_path=_resolve_existing_path(approval, "Approval record") if approval else None,
+            out_dir=_resolve_output_path(DEFAULT_STAGE2I_READINESS_DIR),
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_human_readiness_summary(packet)
+
+
+@approval_readiness_app.command("inspect-paths")
+def approval_readiness_inspect_paths(
+    proposal: Path = typer.Option(..., "--proposal", help="Experiment proposal path."),
+) -> None:
+    """Print exact files a reviewer may inspect for a Stage 2I proposal."""
+    try:
+        proposal_path = _resolve_existing_path(proposal, "Experiment proposal")
+        approval_path = _matching_stage2i_pending_approval(proposal_path.parent, proposal_path)
+        packet = build_approval_readiness_packet(
+            proposal_path,
+            approval_path=approval_path,
+            out_dir=_resolve_output_path(DEFAULT_STAGE2I_READINESS_DIR),
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print(f"proposal_path={packet.proposal_path}")
+    console.print(f"proposal_exists={str(Path(packet.proposal_path).is_file()).lower()}")
+    console.print(f"approval_path={packet.approval_path}")
+    console.print(f"approval_exists={str(Path(packet.approval_path).is_file()).lower()}")
+    for key, path in packet.generated_output_preview.items():
+        console.print(f"{key}={path}")
+        console.print(f"{key}_exists={str(Path(path).is_file()).lower()}")
+    for item in packet.corpus_slice.get("metadata_paths", []):
+        console.print(f"metadata_path={item['path']}")
+        console.print(f"metadata_path_exists={str(item['exists']).lower()}")
+        console.print(f"metadata_path_role={item['role']}")
+
+
 @approval_readiness_app.command("packet")
 def approval_readiness_packet(
     proposal: Path = typer.Option(..., "--proposal", help="Experiment proposal path."),
@@ -2136,6 +2183,9 @@ def approval_readiness_summary(
         console.print(f"{key}={summary.get(key, 0)}")
     for packet in packets:
         console.print(f"{packet['proposal_id']}={packet['approval_status']}")
+        preview = packet.get("generated_output_preview", {})
+        if isinstance(preview, dict) and preview.get("review_markdown"):
+            console.print(f"{packet['proposal_id']}_review_markdown={preview['review_markdown']}")
 
 
 def _matching_stage2i_pending_approval(proposal_dir: Path, proposal_path: Path) -> Path | None:
@@ -2173,6 +2223,26 @@ def _print_readiness_packet(packet) -> None:
     console.print(f"candidate_count_upper_bound={packet.candidate_count_upper_bound}")
     console.print(f"blocking_condition_count={len(packet.blocking_conditions)}")
     console.print(f"real_unsolved_material_touched={str(packet.real_unsolved_material_touched).lower()}")
+    console.print(f"recommended_decision={packet.recommended_decision}")
+
+
+def _print_human_readiness_summary(packet) -> None:
+    console.print(f"proposal_id={packet.proposal_id}")
+    console.print(f"approval_status={packet.approval_status}")
+    console.print(f"approved_for_execution={str(packet.approved_for_execution).lower()}")
+    console.print(f"execution_enabled={str(packet.execution_enabled).lower()}")
+    console.print(f"candidate_count={packet.transform_summary['total_candidate_count']}")
+    console.print(f"candidate_count_upper_bound={packet.transform_summary['candidate_count_upper_bound']}")
+    console.print(f"search_execution_enabled={str(packet.search_execution_enabled).lower()}")
+    console.print(f"candidate_generation_enabled={str(packet.candidate_generation_enabled).lower()}")
+    console.print(f"scoring_enabled={str(packet.scoring_enabled).lower()}")
+    console.print(f"cuda_enabled={str(packet.cuda_enabled).lower()}")
+    console.print(f"blocking_conditions={len(packet.blocking_conditions)}")
+    console.print(f"recommended_decision={packet.recommended_decision}")
+    for condition in packet.blocking_conditions:
+        console.print(f"blocking_condition={condition}")
+    for option in packet.decision_options:
+        console.print(f"decision_option_{option['option']}={option['decision']}")
 
 
 app.add_typer(approval_readiness_app, name="approval-readiness")

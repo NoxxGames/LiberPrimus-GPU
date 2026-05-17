@@ -91,12 +91,12 @@ review_checklist:
   proposal_id: stage2i-first-bounded-caesar-affine-review
   items:
     - item_id: corpus-slice-reviewed
-      question: Has the reviewable corpus slice metadata been reviewed by a human?
+      question: Decide whether the corpus selector summary and metadata paths in the generated review packet are sufficient to approve later execution.
       required_answer: true
       actual_answer: false
       status: pending
       severity: error
-      notes: The proposal references metadata only and still needs human corpus-slice review.
+      notes: If no standalone corpus metadata file is referenced, the review packet recommends revision instead of asking the reviewer to guess.
     - item_id: page-boundary-acceptable
       question: Are the selected page-boundary assumptions acceptable for a future bounded run?
       required_answer: true
