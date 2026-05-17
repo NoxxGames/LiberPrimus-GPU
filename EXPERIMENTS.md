@@ -339,3 +339,19 @@ Run the local image scan:
 ```
 
 Raw page images stay ignored under `third_party/LiberPrimusPages/`. Generated scan summaries stay ignored under `experiments/results/archive-visual-registry/stage3k/`. Stage 3K executes no image-derived text experiments and makes no solve claim.
+
+## Stage 3L Cookie Hash Preimage Packs
+
+Stage 3L runs a bounded SHA-256 exact-match preimage check against the two archived 2013 cookie/hash artefacts:
+
+- `cookie-2013-167-v0`
+- `cookie-2013-761-v0`
+
+The candidate packs are explicit and committed under `data/observations/web/hash-preimage-candidate-packs/`:
+
+- `hist_cookie_literal_pack_v1`
+- `hist_cookie_base29_numeric_pack_v1`
+
+The run tests `1809` deduplicated candidate byte strings against `2` targets for `3618` exact comparisons. It finds `0` exact SHA-256 matches.
+
+Generated outputs remain ignored under `experiments/results/hash-preimage/stage3l/`. Stage 3L does not use external dictionaries, fuzzy matching, partial matching, hashcat, GPU, live Tor, or solve claims.

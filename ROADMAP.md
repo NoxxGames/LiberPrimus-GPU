@@ -202,9 +202,13 @@ If Stage 3J remains inconclusive or noisy, create a reviewable visual numeric ob
 
 Stage 3K adds source/archive classification, local image lock records, deterministic image metadata extraction, reviewable visual numeric observations, cookie/hash records, schemas, CLI validation, tests, and documentation. It does not execute image-derived text experiments and makes no solve claim.
 
-## Stage 3L - Deterministic image/audio/web analysis CLIs
+## Stage 3L - Bounded cookie-hash preimage packs
 
-After Stage 3K succeeds, add deterministic image/audio/web analysis CLIs or a bounded cookie-hash preimage pack. Any image-derived numeric seed must first pass observation review and policy checks. Do not jump to CUDA.
+Stage 3L runs explicit SHA-256-only literal and numeric/base29 candidate packs against the archived 2013 `167` and `761` cookie/hash artefacts. It found zero exact matches, made no fuzzy or partial-match claims, and made no solve claim.
+
+## Stage 3M - Deterministic image/audio/web analysis CLIs or Onion7 numeric seed registry
+
+After Stage 3L, add deterministic image/audio/web analysis CLIs or an Onion7 numeric seed registry. Any image-derived numeric seed must first pass observation review and policy checks. Do not jump to live Tor or CUDA.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

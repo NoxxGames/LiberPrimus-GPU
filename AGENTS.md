@@ -429,3 +429,11 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not use AI, OCR, or third-party image interpretation as source of truth.
 - No live Tor crawling in normal stages.
 - Archive source records must include source class and `trusted_as_canonical=false`.
+
+## Stage 3L Cookie Hash Preimage Rules
+
+- Cookie hash tests must use exact byte-string logging.
+- No fuzzy or partial hash claims.
+- SHA-256 exact match is a preimage candidate only, not a solve claim.
+- Do not run broad hash cracking without explicit instruction.
+- Do not use GPU, CUDA, hashcat, cloud, live Tor, or external dictionaries unless explicitly requested and re-scoped.

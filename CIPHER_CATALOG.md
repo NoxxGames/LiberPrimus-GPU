@@ -147,6 +147,8 @@ Every registry entry has `supports_gpu=false`, `search_enabled=false`, and `scor
 
 Stage 3K registry records are not cipher transforms. Cuneiform/base-60 candidates, binary-dot observations, prime-dimension examples, and cookie/hash artefacts are reviewable observations only.
 
+Stage 3L hash-preimage packs are not cipher transforms. They are bounded SHA-256 exact-match tests for archived cookie/hash artefacts and do not imply plaintext recovery or solve evidence.
+
 Do not convert visual or web observations into transform seeds without a later manifest, count validation, controls, and explicit bounded execution policy.
 
 ## Stage 2B Result Store Relationship

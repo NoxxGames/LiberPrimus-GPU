@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/web/hash-preimage-match-record-v0.schema.json",
+  "title": "Hash Preimage Match Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "run_id",
+    "pack_id",
+    "candidate_id",
+    "target_cookie_id",
+    "target_cookie_name",
+    "digest_algorithm",
+    "digest_hex",
+    "literal_text",
+    "byte_variant",
+    "encoding",
+    "exact_match",
+    "solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "hash_preimage_match_record" },
+    "run_id": { "type": "string" },
+    "pack_id": { "type": "string" },
+    "candidate_id": { "type": "string" },
+    "target_cookie_id": { "type": "string" },
+    "target_cookie_name": { "type": "string" },
+    "digest_algorithm": { "const": "sha256" },
+    "digest_hex": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "literal_text": { "type": "string" },
+    "byte_variant": { "type": "string" },
+    "encoding": { "const": "utf-8" },
+    "exact_match": { "const": true },
+    "solve_claim": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

@@ -122,6 +122,10 @@ Stage 3J is still a local CPU-only run. It executes `192` bounded Mersenne/perfe
 
 Stage 3K is registry work only. Deterministic image metadata extraction is lightweight CPU/stdlib work and does not use GPU acceleration, OCR, AI image interpretation, or broad archive crawling.
 
+## Stage 3L Hash Scope
+
+Stage 3L is CPU-only SHA-256 exact matching over small committed candidate packs. It does not use CUDA, GPU hash cracking, hashcat, cloud services, or external dictionaries.
+
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

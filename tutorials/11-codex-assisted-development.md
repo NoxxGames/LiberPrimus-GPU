@@ -123,3 +123,7 @@ For Mersenne/perfect-number stream probes, require the finite declared exponent 
 ## Stage 3K Guardrails
 
 For archive and visual observation registry work, treat archive/image observations as noncanonical records. Do not stage raw page images, root research reports, generated scan summaries, live Tor crawl output, OCR output, AI interpretation, or image-derived experiment outputs.
+
+## Stage 3L Guardrails
+
+For cookie/hash preimage work, keep candidate packs explicit, log exact byte strings, compare full SHA-256 digests only, and avoid fuzzy matching, broad cracking, external dictionaries, GPU/hashcat, live Tor, and solve claims.

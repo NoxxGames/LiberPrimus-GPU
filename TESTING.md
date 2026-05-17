@@ -199,6 +199,16 @@ Run:
 .\.venv\Scripts\python.exe -m pytest -q tests/python -k stage3k
 ```
 
+## Stage 3L Hash Preimage Tests
+
+Stage 3L adds tests for cookie record loading, `hex64` validation, candidate pack validation, SHA-256-only enforcement, no-external-dictionary flags, byte variants, base29 rendering, SHA-256 known vectors, exact match detection, no fuzzy/partial matching, generated output schemas, CLI commands, ignored generated outputs, and `solve_claim=false`.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q tests/python -k stage3l
+```
+
 Stage 3A adds tests for minimal triage scoring, Caesar and affine enumeration counts, candidate output schemas, generated-output ignore policy, policy blocking, and `libreprimus bounded-run` CLI behavior.
 
 The tests assert that scoring is deterministic, Caesar generates `29` candidates, affine generates `812` candidates, total candidate count is `841`, output indices stay in `0..28`, candidate records and run summaries validate, top-k output is bounded, CUDA stays false, solve claims stay false, and synthetic CLI runs work without raw corpus data.

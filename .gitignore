@@ -161,6 +161,14 @@ experiments/results/archive-visual-registry/**
 !experiments/results/archive-visual-registry/stage3k/
 !experiments/results/archive-visual-registry/stage3k/.gitkeep
 
+# Generated hash preimage outputs
+experiments/results/hash-preimage/**
+!experiments/results/hash-preimage/
+!experiments/results/hash-preimage/README.md
+!experiments/results/hash-preimage/.gitkeep
+!experiments/results/hash-preimage/stage3l/
+!experiments/results/hash-preimage/stage3l/.gitkeep
+
 # Generated alignment outputs
 data/normalized/alignment/**
 !data/normalized/alignment/

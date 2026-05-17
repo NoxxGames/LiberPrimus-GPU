@@ -149,6 +149,10 @@ from libreprimus.scoring.crib_checks import DEFAULT_CRIBS_PATH, crib_check, load
 from libreprimus.method_backlog.dry_run import dry_run_stage3e_queue
 from libreprimus.history.image_locks import scan_local_images, validate_image_locks
 from libreprimus.history.source_records import validate_source_records
+from libreprimus.hash_preimage.candidate_packs import expand_candidate_pack, load_candidate_packs
+from libreprimus.hash_preimage.runner import run_hash_preimage
+from libreprimus.hash_preimage.summary import load_summary as load_hash_preimage_summary
+from libreprimus.hash_preimage.validation import validate_candidate_packs
 from libreprimus.visual_observations.validation import (
     summarize_observations,
     validate_cookie_records,
@@ -186,6 +190,7 @@ candidate_inspect_app = typer.Typer(no_args_is_help=True)
 scoring_app = typer.Typer(no_args_is_help=True)
 archive_app = typer.Typer(no_args_is_help=True)
 observation_app = typer.Typer(no_args_is_help=True)
+hash_preimage_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -3091,12 +3096,96 @@ def observation_summary(
     console.print("solve_claim=false")
 
 
+@hash_preimage_app.command("validate-packs")
+def hash_preimage_validate_packs(
+    pack_dir: Path = typer.Option(..., "--pack-dir", help="Hash-preimage candidate pack directory."),
+) -> None:
+    """Validate bounded hash-preimage candidate packs."""
+    try:
+        resolved = _resolve_output_path(pack_dir)
+        count, errors = validate_candidate_packs(resolved)
+        packs = load_candidate_packs(resolved)
+        expanded = [expand_candidate_pack(pack) for pack in packs] if not errors else []
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print(f"candidate_pack_count={count}")
+    console.print(f"validation_error_count={len(errors)}")
+    for pack in expanded:
+        console.print(
+            f"{pack.pack_id}: generated_before_dedup={pack.total_generated_before_dedup} "
+            f"candidate_count={len(pack.candidates)} duplicate_count={pack.duplicate_count} "
+            f"upper_bound={pack.candidate_count_upper_bound}"
+        )
+    for error in errors:
+        console.print(f"[red]{error}[/red]")
+    if errors:
+        raise typer.Exit(1)
+    console.print("Hash preimage candidate packs OK")
+
+
+@hash_preimage_app.command("run")
+def hash_preimage_run(
+    cookies: Path = typer.Option(..., "--cookies", help="Cookie/hash records YAML path."),
+    pack_dir: Path = typer.Option(..., "--pack-dir", help="Hash-preimage candidate pack directory."),
+    out_dir: Path = typer.Option(..., "--out-dir", help="Generated hash-preimage output directory."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Allow duplicate-candidate warnings."),
+) -> None:
+    """Run bounded SHA-256 exact-match hash-preimage packs."""
+    try:
+        summary = run_hash_preimage(
+            cookies=_resolve_output_path(cookies),
+            pack_dir=_resolve_output_path(pack_dir),
+            out_dir=_resolve_output_path(out_dir),
+            allow_warnings=allow_warnings,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_hash_preimage_summary(summary)
+
+
+@hash_preimage_app.command("summary")
+def hash_preimage_print_summary(
+    results_dir: Path = typer.Option(..., "--results-dir", help="Generated hash-preimage result directory."),
+) -> None:
+    """Print a concise generated hash-preimage run summary."""
+    try:
+        summary = load_hash_preimage_summary(_resolve_output_path(results_dir))
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_hash_preimage_summary(summary)
+
+
+def _print_hash_preimage_summary(summary: dict) -> None:
+    for key in [
+        "run_id",
+        "algorithm",
+        "target_cookie_count",
+        "pack_count",
+        "candidate_count_generated_before_dedup",
+        "candidate_count",
+        "duplicate_candidate_count",
+        "comparison_count",
+        "exact_match_count",
+    ]:
+        console.print(f"{key}={summary.get(key)}")
+    console.print(f"target_cookie_ids={','.join(summary.get('target_cookie_ids', []))}")
+    console.print(f"pack_ids={','.join(summary.get('pack_ids', []))}")
+    console.print(f"solve_claim={str(summary.get('solve_claim')).lower()}")
+    console.print(f"cuda_used={str(summary.get('cuda_used')).lower()}")
+    for key, path in summary.get("output_paths", {}).items():
+        console.print(f"{key}={path}")
+
+
 app.add_typer(bounded_experiment_app, name="bounded-experiment")
 app.add_typer(bounded_run_app, name="bounded-run")
 app.add_typer(candidate_inspect_app, name="candidate-inspect")
 app.add_typer(scoring_app, name="scoring")
 app.add_typer(archive_app, name="archive")
 app.add_typer(observation_app, name="observation")
+app.add_typer(hash_preimage_app, name="hash-preimage")
 
 
 @solved_fixture_app.command("list")

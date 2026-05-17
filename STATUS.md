@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3K historical archive/source-lock and visual/web observation registry is complete.
+Stage 3L bounded cookie-hash preimage packs are complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, and Stage 3K records archive/image/web observations without executing image-derived text experiments.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, and Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 
@@ -155,6 +155,16 @@ Registry summary: source/archive records `12`, local image lock records generate
 Stage 3K does not execute image-derived text experiments, run live Tor crawling, use AI/OCR interpretation as source truth, activate the canonical corpus, finalize page boundaries, use CUDA, or claim a solve.
 
 Developer log: `docs/development-logs/2026-05-16-stage-3k-archive-visual-observation-registry.md`.
+
+## Completed in Stage 3L
+
+Stage 3L added bounded SHA-256 cookie-hash preimage infrastructure for the archived 2013 `167` and `761` cookie/hash artefacts.
+
+Run summary: candidate packs `2`, generated candidates before deduplication `1968`, deduplicated candidate byte strings `1809`, exact target comparisons `3618`, exact SHA-256 matches `0`.
+
+Stage 3L does not run live Tor crawling, use external dictionaries, use hashcat/GPU/CUDA, perform fuzzy or partial hash matching, activate the canonical corpus, finalize page boundaries, or claim a solve.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3l-cookie-hash-preimage-packs.md`.
 
 ## Completed in Stage 2D
 

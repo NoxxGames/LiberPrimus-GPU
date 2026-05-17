@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/web/hash-preimage-run-summary-v0.schema.json",
+  "title": "Hash Preimage Run Summary v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "run_id",
+    "generated_at_utc",
+    "algorithm",
+    "target_cookie_count",
+    "pack_count",
+    "candidate_count",
+    "comparison_count",
+    "exact_match_count",
+    "output_paths",
+    "warnings",
+    "solve_claim",
+    "cuda_used",
+    "trusted_as_canonical"
+  ],
+  "properties": {
+    "record_type": { "const": "hash_preimage_run_summary" },
+    "run_id": { "type": "string" },
+    "generated_at_utc": { "type": "string" },
+    "algorithm": { "const": "sha256" },
+    "target_cookie_count": { "type": "integer", "minimum": 0 },
+    "pack_count": { "type": "integer", "minimum": 0 },
+    "candidate_count": { "type": "integer", "minimum": 0 },
+    "comparison_count": { "type": "integer", "minimum": 0 },
+    "exact_match_count": { "type": "integer", "minimum": 0 },
+    "output_paths": { "type": "object" },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "solve_claim": { "const": false },
+    "cuda_used": { "const": false },
+    "trusted_as_canonical": { "const": false }
+  },
+  "additionalProperties": true
+}

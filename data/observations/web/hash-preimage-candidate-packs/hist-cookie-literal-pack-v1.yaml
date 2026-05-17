@@ -1,0 +1,62 @@
+record_type: hash_preimage_candidate_pack
+pack_id: hist_cookie_literal_pack_v1
+description: Bounded historically motivated literal candidates for archived 2013 cookie-like hash artefacts.
+algorithm: sha256
+source_class: archived_claim
+candidate_groups:
+  signed_message_phrases:
+    - Beware false paths
+    - Always verify PGP signature from 7A35090F
+    - Liber Primus is the way
+    - its words are the map
+    - their meaning is the road
+    - their numbers are the direction
+  cicada_terms:
+    - Cicada
+    - CICADA
+    - "3301"
+    - "1033"
+    - "761"
+    - "167"
+    - Liber Primus
+    - LIBER PRIMUS
+    - The Instar Emergence
+    - THE INSTAR EMERGENCE
+    - Patience is a virtue
+    - PATIENCE IS A VIRTUE
+  onion_and_file_terms:
+    - p7amjopgric7dfdi
+    - p7amjopgric7dfdi.onion
+    - 761.mp3
+    - final.jpg
+    - Onion_7
+    - Onion 7
+  liber_terms:
+    - DIVINITY
+    - FIRFUMFERENFE
+    - PARABLE
+    - INSTAR
+    - EMERGE
+    - WITHIN
+    - WELCOME
+    - PILGRIM
+    - TOTIENT
+    - PRIMES
+    - SACRED
+    - ENCRYPTED
+byte_variants:
+  - raw
+  - lower
+  - upper
+  - trailing_lf
+  - trailing_crlf
+  - leading_space
+  - trailing_space
+  - wrapped_space
+candidate_count_upper_bound: 1000
+generated_from_external_dictionary: false
+cuda_enabled: false
+cloud_execution: false
+no_solve_claim: true
+trusted_as_canonical: false
+notes: Explicit curated pack only; no external dictionary or phrase expansion.

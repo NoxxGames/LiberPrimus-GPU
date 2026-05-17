@@ -404,4 +404,17 @@ Committed record files live under `data/observations/` and `data/locks/third-par
 
 All Stage 3K records keep `trusted_as_canonical=false`; visual observations keep `usable_as_experiment_seed=false`; cookie/hash records do not claim preimages.
 
+## Stage 3L Hash Preimage Records
+
+Stage 3L adds committed schemas under `schemas/web/` for:
+
+- `hash_preimage_candidate_pack`
+- `hash_preimage_candidate_record`
+- `hash_preimage_match_record`
+- `hash_preimage_run_summary`
+
+Candidate records log the exact literal text before UTF-8 encoding, byte variant, byte-string SHA-256, target cookie, digest, and exact-match status.
+
+Generated records remain ignored under `experiments/results/hash-preimage/stage3l/`. They are bounded preimage-test records only and not solve evidence.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.
