@@ -7,6 +7,7 @@ from typing import Any
 
 import yaml
 
+from libreprimus.approval_readiness.readiness_analyzer import analyze_approval_readiness
 from libreprimus.approval_execution.approval_gate import evaluate_approval_execution_gate
 from libreprimus.approval_execution.request_loader import load_approval_execution_request
 from libreprimus.consistency.models import ConsistencyCheckResult, fail_result, pass_result
@@ -29,6 +30,8 @@ PROPOSAL_DIR = repo_root() / "experiments/proposals/stage2g"
 APPROVAL_RECORD_DIR = repo_root() / "experiments/proposals/stage2g/approval-records"
 STAGE2H_PROPOSAL_DIR = repo_root() / "experiments/proposals/stage2h"
 STAGE2H_APPROVAL_RECORD_DIR = repo_root() / "experiments/proposals/stage2h/approval-records"
+STAGE2I_PROPOSAL_DIR = repo_root() / "experiments/proposals/stage2i"
+STAGE2I_APPROVAL_RECORD_DIR = repo_root() / "experiments/proposals/stage2i/approval-records"
 REGISTRY_PATH = repo_root() / DEFAULT_REGISTRY_PATH
 
 
@@ -54,6 +57,8 @@ def check_manifest_consistency(
     approval_record_dir: Path = APPROVAL_RECORD_DIR,
     stage2h_proposal_dir: Path = STAGE2H_PROPOSAL_DIR,
     stage2h_approval_record_dir: Path = STAGE2H_APPROVAL_RECORD_DIR,
+    stage2i_proposal_dir: Path = STAGE2I_PROPOSAL_DIR,
+    stage2i_approval_record_dir: Path = STAGE2I_APPROVAL_RECORD_DIR,
     registry_path: Path = REGISTRY_PATH,
 ) -> list[ConsistencyCheckResult]:
     results: list[ConsistencyCheckResult] = []
@@ -350,6 +355,82 @@ def check_manifest_consistency(
         )
     if stage2h_requests and not any(result.check_name == "stage2h_noop_real_blocked" and result.is_failure for result in results):
         results.append(pass_result(GROUP, "stage2h_noop_real_blocked", "Stage 2H no-op real request remains blocked."))
+
+    stage2i_proposals = sorted(stage2i_proposal_dir.glob("*.yaml"))
+    stage2i_approval_records = sorted(stage2i_approval_record_dir.glob("*.yaml"))
+    stage2i_proposal_by_id: dict[str, Any] = {}
+    for proposal in stage2i_proposals:
+        try:
+            loaded = load_experiment_proposal(proposal)
+        except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+            results.append(fail_result(GROUP, "stage2i_proposal_valid", str(exc), path=proposal))
+            continue
+        stage2i_proposal_by_id[loaded.proposal_id] = loaded.payload
+        results.append(pass_result(GROUP, "stage2i_proposal_valid", "Stage 2I proposal validates.", path=proposal))
+        _check_proposal_flags(results, loaded.payload, proposal)
+        corpus_slice = loaded.payload.get("corpus_slice", {})
+        if not isinstance(corpus_slice, dict) or corpus_slice.get("slice_kind") != "future_unsolved_page_candidate":
+            results.append(
+                fail_result(
+                    GROUP,
+                    "stage2i_future_unsolved_metadata",
+                    "Stage 2I proposal must touch reviewable unsolved metadata.",
+                    path=proposal,
+                )
+            )
+        if isinstance(corpus_slice, dict) and corpus_slice.get("review_required") is not True:
+            results.append(
+                fail_result(
+                    GROUP,
+                    "stage2i_future_unsolved_metadata",
+                    "Stage 2I proposal requires review_required=true.",
+                    path=proposal,
+                )
+            )
+        if loaded.payload.get("candidate_count_estimate") != 841 or loaded.payload.get("candidate_count_upper_bound") != 841:
+            results.append(fail_result(GROUP, "stage2i_candidate_bound", "Stage 2I candidate bound must be 841.", path=proposal))
+        if not _no_raw_dump(proposal):
+            results.append(fail_result(GROUP, "manifest_no_raw_dump", "Stage 2I proposal appears to include raw data.", path=proposal))
+
+    approved_stage2i_records = 0
+    for approval_record in stage2i_approval_records:
+        try:
+            loaded = load_approval_record(approval_record)
+        except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+            results.append(fail_result(GROUP, "stage2i_approval_record_valid", str(exc), path=approval_record))
+            continue
+        results.append(pass_result(GROUP, "stage2i_approval_record_valid", "Stage 2I approval record validates.", path=approval_record))
+        if loaded.payload.get("approval_status") == "approved" or loaded.payload.get("approved_for_execution") is True:
+            approved_stage2i_records += 1
+            results.append(
+                fail_result(
+                    GROUP,
+                    "stage2i_no_approved_records",
+                    "Stage 2I must not commit approved approval records.",
+                    path=approval_record,
+                )
+            )
+        proposal_payload = stage2i_proposal_by_id.get(str(loaded.payload.get("proposal_id")))
+        if proposal_payload is not None and loaded.payload.get("proposal_sha256"):
+            proposal_path = stage2i_proposal_dir / f"{loaded.payload['proposal_id']}.yaml"
+            if proposal_path.is_file() and loaded.payload.get("proposal_sha256") != compute_sha256(proposal_path):
+                results.append(fail_result(GROUP, "stage2i_approval_sha", "Stage 2I approval SHA mismatch.", path=approval_record))
+
+    if stage2i_proposals and stage2i_approval_records:
+        try:
+            analyze_approval_readiness(stage2i_proposals[0], approval_path=stage2i_approval_records[0])
+            results.append(pass_result(GROUP, "stage2i_readiness_analyzes", "Stage 2I readiness analyzer accepts proposal."))
+        except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+            results.append(fail_result(GROUP, "stage2i_readiness_analyzes", str(exc), path=stage2i_proposals[0]))
+
+    if stage2i_proposals and not any(result.check_name == "stage2i_proposal_valid" and result.is_failure for result in results):
+        results.append(pass_result(GROUP, "stage2i_proposals_valid", "Stage 2I proposals validate."))
+    if stage2i_approval_records and approved_stage2i_records == 0:
+        results.append(pass_result(GROUP, "stage2i_no_approved_records", "No Stage 2I approved approval records are committed."))
+    if stage2i_proposals and not any(result.check_name == "stage2i_future_unsolved_metadata" and result.is_failure for result in results):
+        results.append(pass_result(GROUP, "stage2i_future_unsolved_metadata", "Stage 2I proposal references reviewable unsolved metadata."))
+    if stage2i_proposals and not any(result.check_name == "stage2i_candidate_bound" and result.is_failure for result in results):
+        results.append(pass_result(GROUP, "stage2i_candidate_bound", "Stage 2I candidate bound is 841."))
     return results
 
 

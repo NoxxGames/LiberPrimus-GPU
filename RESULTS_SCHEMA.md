@@ -220,4 +220,10 @@ Stage 2H adds committed schemas under `schemas/experiments/`:
 
 Approval-gated execution records bind a proposal, a scope-bound approval record, and an output directory. Stage 2H permits approved execution only for synthetic and solved-control requests. Generated approval execution records are ignored under `experiments/results/approval-gated-execution/`; no approved unsolved-page approval records are committed.
 
+## Stage 2I Approval-Readiness Packet Schema
+
+Stage 2I adds `approval-readiness-packet-v0` under `schemas/experiments/`.
+
+Generated `approval_readiness_packet` records summarize a real exploratory proposal, pending approval status, candidate-count bounds, risk summary, blocking conditions, and the exact human decision still required. They require false approval/execution/search/candidate-generation/scoring/CUDA/canonical flags. These packets are ignored outputs under `experiments/results/approval-readiness/` and are not approvals, execution records, candidate outputs, or solve evidence.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

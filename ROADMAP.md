@@ -128,6 +128,12 @@ Stage 2H added approval-gated execution request, plan, and result schemas, appro
 
 Prepare and review the first real bounded CPU exploratory experiment approval packet. Do not execute it unless explicit human approval is supplied in a separate future step, and do not broaden into search campaigns or CUDA.
 
+Stage 2I added `stage2i-first-bounded-caesar-affine-review`, a pending approval record, an approval-readiness packet schema, readiness analyzer, `libreprimus approval-readiness` CLI commands, tests, and documentation. It records a Caesar plus affine mod-29 preview upper bound of `841`, commits no approved real-unsolved approval records, does not execute, and does not generate candidates, score output, use CUDA, activate the canonical corpus, or finalize page boundaries.
+
+## Stage 2J - Human decision on first bounded exploratory proposal
+
+Approve, deny, or revise the first bounded CPU exploratory experiment proposal. Do not auto-execute; any approval must be explicit, scope-bound, non-expired, and separate from proposal creation.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

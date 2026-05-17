@@ -45,6 +45,12 @@ try {
 
     Write-Host "Running Stage 2H approved synthetic request to temp"
     & $Python -m libreprimus.cli approval-execution run --request experiments/proposals/stage2h/stage2h-approved-synthetic-direct-request.yaml --out-dir (Join-Path $TempDir "stage2h-approval-execution") --allow-warnings
+
+    Write-Host "Validating Stage 2I approval-readiness proposal"
+    & $Python -m libreprimus.cli approval-readiness validate --proposal experiments/proposals/stage2i/stage2i-first-bounded-caesar-affine-review.yaml --approval experiments/proposals/stage2i/approval-records/stage2i-first-bounded-caesar-affine-pending-approval.yaml
+
+    Write-Host "Generating Stage 2I readiness packet to temp"
+    & $Python -m libreprimus.cli approval-readiness packet --proposal experiments/proposals/stage2i/stage2i-first-bounded-caesar-affine-review.yaml --approval experiments/proposals/stage2i/approval-records/stage2i-first-bounded-caesar-affine-pending-approval.yaml --out-dir (Join-Path $TempDir "stage2i-readiness") --allow-warnings
 } finally {
     if (Test-Path $TempDir) {
         Remove-Item -LiteralPath $TempDir -Recurse -Force

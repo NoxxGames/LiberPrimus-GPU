@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/approval-readiness-packet-v0.schema.json",
+  "title": "approval-readiness-packet-v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "packet_id",
+    "proposal_id",
+    "proposal_sha256",
+    "generated_at_utc",
+    "git_commit",
+    "proposal_status",
+    "approval_status",
+    "approved_for_execution",
+    "execution_enabled",
+    "search_execution_enabled",
+    "candidate_generation_enabled",
+    "scoring_enabled",
+    "cuda_enabled",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "trusted_as_canonical",
+    "real_unsolved_material_touched",
+    "corpus_slice_summary",
+    "transform_space_summary",
+    "candidate_count_estimate",
+    "candidate_count_upper_bound",
+    "safety_gate_summary",
+    "review_checklist_summary",
+    "approval_requirements",
+    "blocking_conditions",
+    "risk_summary",
+    "recommended_human_decision",
+    "generated_output_preview",
+    "result_store_preview",
+    "warnings",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "approval_readiness_packet" },
+    "packet_id": { "type": "string", "minLength": 1 },
+    "proposal_id": { "type": "string", "minLength": 1 },
+    "proposal_sha256": { "type": "string", "minLength": 64 },
+    "generated_at_utc": { "type": "string", "minLength": 1 },
+    "git_commit": { "type": "string", "minLength": 1 },
+    "proposal_status": { "type": "string", "minLength": 1 },
+    "approval_status": {
+      "type": "string",
+      "enum": ["missing", "pending", "approved", "denied", "expired", "superseded"]
+    },
+    "approved_for_execution": { "const": false },
+    "execution_enabled": { "const": false },
+    "search_execution_enabled": { "const": false },
+    "candidate_generation_enabled": { "const": false },
+    "scoring_enabled": { "const": false },
+    "cuda_enabled": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "real_unsolved_material_touched": { "type": "boolean" },
+    "corpus_slice_summary": { "type": "object" },
+    "transform_space_summary": { "type": "object" },
+    "candidate_count_estimate": { "type": "integer", "minimum": 0 },
+    "candidate_count_upper_bound": { "type": "integer", "minimum": 1 },
+    "safety_gate_summary": { "type": "object" },
+    "review_checklist_summary": { "type": "object" },
+    "approval_requirements": { "type": "array", "items": { "type": "string" } },
+    "blocking_conditions": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "risk_summary": { "type": "object" },
+    "recommended_human_decision": { "type": "string", "minLength": 1 },
+    "generated_output_preview": { "type": "object" },
+    "result_store_preview": { "type": "object" },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "real_unsolved_material_touched": { "const": true }
+        },
+        "required": ["real_unsolved_material_touched"]
+      },
+      "then": {
+        "properties": {
+          "approval_status": {
+            "enum": ["missing", "pending", "denied", "expired", "superseded"]
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": true
+}

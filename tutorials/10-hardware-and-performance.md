@@ -77,3 +77,7 @@ Stage 2G adds proposal and approval records only. Hardware performance claims re
 ## Stage 2H Control Execution Scope
 
 Stage 2H approval-gated execution is still not a benchmark stage. Approved controls may run synthetic and solved-fixture-only requests, but real unsolved-page execution, search, scoring, and CUDA remain disabled.
+
+## Stage 2I Approval Readiness
+
+Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

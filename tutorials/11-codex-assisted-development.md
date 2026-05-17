@@ -71,3 +71,7 @@ For proposal workflow work, require `libreprimus proposal validate`, `libreprimu
 ## Stage 2H Guardrails
 
 For approval-gated execution work, require `libreprimus approval-execution validate`, `libreprimus approval-execution run`, and blocked no-op real-proposal tests. Stage 2H may run approved synthetic and solved-control requests only; it must not commit approved unsolved-page approval records or enable search, candidate generation, scoring, CUDA, canonical corpus activation, or page-boundary finalization.
+
+## Stage 2I Guardrails
+
+For the first real approval packet, require `libreprimus approval-readiness validate`, `libreprimus approval-readiness packet`, and tests proving no execution runner is called. Stage 2I proposals remain pending and unapproved; generated readiness packets must not include raw unsolved text or candidate plaintext.

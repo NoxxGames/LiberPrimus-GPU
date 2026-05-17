@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2H approval-gated execution for approved synthetic and solved controls is complete.
+Stage 2I first real bounded CPU exploratory experiment approval packet is complete.
 
 ## Completed in Stage 0A
 
@@ -186,6 +186,14 @@ Approved control execution is limited to `synthetic_only` and `solved_fixture_on
 
 Developer log: `docs/development-logs/2026-05-16-stage-2h-approval-gated-execution.md`.
 
+## Completed in Stage 2I
+
+Stage 2I added the first real bounded CPU exploratory proposal packet for `stage2i-first-bounded-caesar-affine-review`, an approval-readiness schema, a pending approval record, readiness analysis, generated ignored readiness packets, and `libreprimus approval-readiness` CLI commands.
+
+The proposal touches reviewable unsolved metadata only and includes no raw unsolved text. Candidate-count preview is Caesar `29` plus affine mod-29 `812`, for total upper bound `841`. Approval remains pending, `approved_for_execution=false`, and execution/search/candidate-generation/scoring/CUDA remain disabled.
+
+Developer log: `docs/development-logs/2026-05-16-stage-2i-first-real-proposal-packet.md`.
+
 ## Next prompt recommendation
 
-Stage 2I - prepare and review the first real bounded CPU exploratory experiment approval packet, without executing it unless explicit human approval is supplied in a separate step.
+Stage 2J - human decision step: approve, deny, or revise the first bounded CPU exploratory experiment proposal. Do not execute unless an explicit approved approval record is supplied.

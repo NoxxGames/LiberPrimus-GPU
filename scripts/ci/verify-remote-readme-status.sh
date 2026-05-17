@@ -82,7 +82,8 @@ def assert_readme(text: str, source: str) -> None:
         "Stage 2E: CPU exploratory experiment manifest scaffold and dry-run planner complete.",
         "Stage 2F: bounded CPU execution harness for synthetic and solved-fixture-only runs complete.",
         "Stage 2H: approval-gated execution path for approved synthetic/solved controls complete.",
-        "Stage 2I first real bounded CPU exploratory experiment approval packet",
+        "Stage 2I: first real bounded CPU exploratory experiment approval packet complete.",
+        "Stage 2J human decision on the first bounded CPU exploratory experiment proposal",
     ]
     for item in required:
         if item not in text:

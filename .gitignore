@@ -80,6 +80,11 @@ experiments/results/**
 !experiments/results/approval-gated-execution/.gitkeep
 !experiments/results/approval-gated-execution/stage2h/
 !experiments/results/approval-gated-execution/stage2h/.gitkeep
+!experiments/results/approval-readiness/
+!experiments/results/approval-readiness/README.md
+!experiments/results/approval-readiness/.gitkeep
+!experiments/results/approval-readiness/stage2i/
+!experiments/results/approval-readiness/stage2i/.gitkeep
 experiments/reports/**
 !experiments/reports/
 !experiments/reports/README.md

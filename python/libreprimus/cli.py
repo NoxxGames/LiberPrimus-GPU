@@ -107,6 +107,16 @@ from libreprimus.approval_execution.summary import (
     load_result_records as load_approval_execution_result_records,
     load_summary as load_approval_execution_summary,
 )
+from libreprimus.approval_readiness.export import (
+    write_approval_readiness_outputs,
+    write_summary as write_approval_readiness_summary,
+)
+from libreprimus.approval_readiness.packet_generator import build_approval_readiness_packet
+from libreprimus.approval_readiness.readiness_analyzer import analyze_approval_readiness
+from libreprimus.approval_readiness.summary import (
+    load_packets as load_approval_readiness_packets,
+    load_summary as load_approval_readiness_summary,
+)
 from libreprimus.reference_sources.summary import build_stage1c_reference_summary, write_stage1c_reference_outputs
 from libreprimus.transcript_sources.export import write_jsonl as write_transcript_jsonl
 from libreprimus.transcript_sources.rtkd_master import parse_rtkd_master
@@ -132,6 +142,7 @@ experiment_app = typer.Typer(no_args_is_help=True)
 execution_app = typer.Typer(no_args_is_help=True)
 proposal_app = typer.Typer(no_args_is_help=True)
 approval_execution_app = typer.Typer(no_args_is_help=True)
+approval_readiness_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -2016,6 +2027,155 @@ def _print_approval_execution_run_summary(plan, result) -> None:
 
 
 app.add_typer(approval_execution_app, name="approval-execution")
+
+
+DEFAULT_STAGE2I_PROPOSAL_DIR = Path("experiments/proposals/stage2i")
+DEFAULT_STAGE2I_READINESS_DIR = Path("experiments/results/approval-readiness/stage2i")
+
+
+@approval_readiness_app.command("validate")
+def approval_readiness_validate(
+    proposal: Path = typer.Option(..., "--proposal", help="Experiment proposal path."),
+    approval: Path | None = typer.Option(None, "--approval", help="Approval record path."),
+) -> None:
+    """Validate Stage 2I proposal approval readiness without execution."""
+    try:
+        analysis = analyze_approval_readiness(
+            _resolve_existing_path(proposal, "Experiment proposal"),
+            approval_path=_resolve_existing_path(approval, "Approval record") if approval else None,
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_readiness_analysis(analysis)
+
+
+@approval_readiness_app.command("packet")
+def approval_readiness_packet(
+    proposal: Path = typer.Option(..., "--proposal", help="Experiment proposal path."),
+    approval: Path | None = typer.Option(None, "--approval", help="Approval record path."),
+    out_dir: Path = typer.Option(DEFAULT_STAGE2I_READINESS_DIR, "--out-dir", help="Generated readiness output directory."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Generate a Stage 2I approval-readiness packet without execution."""
+    try:
+        packet = build_approval_readiness_packet(
+            _resolve_existing_path(proposal, "Experiment proposal"),
+            approval_path=_resolve_existing_path(approval, "Approval record") if approval else None,
+            out_dir=_resolve_output_path(out_dir),
+        )
+        paths = write_approval_readiness_outputs(_resolve_output_path(out_dir), packet)
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    for name, path in paths.items():
+        console.print(f"{name}={path}")
+    _print_readiness_packet(packet)
+    if packet.warnings and not allow_warnings:
+        raise typer.Exit(1)
+
+
+@approval_readiness_app.command("stage2i-review")
+def approval_readiness_stage2i_review(
+    proposal_dir: Path = typer.Option(
+        DEFAULT_STAGE2I_PROPOSAL_DIR,
+        "--proposal-dir",
+        help="Directory containing Stage 2I proposals.",
+    ),
+    out_dir: Path = typer.Option(DEFAULT_STAGE2I_READINESS_DIR, "--out-dir", help="Generated readiness output directory."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Generate readiness packets for every Stage 2I proposal."""
+    resolved_dir = _resolve_output_path(proposal_dir)
+    output_dir = _resolve_output_path(out_dir)
+    packets = []
+    warning_count = 0
+    for proposal_path in sorted(path for path in resolved_dir.glob("*.yaml") if "request" not in path.name):
+        approval_path = _matching_stage2i_pending_approval(resolved_dir, proposal_path)
+        try:
+            packet = build_approval_readiness_packet(proposal_path, approval_path=approval_path, out_dir=output_dir)
+            write_approval_readiness_outputs(output_dir, packet)
+        except (FileNotFoundError, ValueError) as error:
+            console.print(f"[red]{proposal_path.name}: {error}[/red]")
+            raise typer.Exit(1) from error
+        packets.append(packet)
+        warning_count += len(packet.warnings)
+        console.print(f"{packet.proposal_id}=approval_status:{packet.approval_status}")
+    summary_path = write_approval_readiness_summary(output_dir, packets)
+    console.print(f"summary={summary_path}")
+    console.print(f"proposal_count={len(packets)}")
+    console.print(f"packet_count={len(packets)}")
+    console.print(f"pending_count={sum(1 for packet in packets if packet.approval_status == 'pending')}")
+    console.print(f"approved_count={sum(1 for packet in packets if packet.approval_status == 'approved')}")
+    console.print(f"candidate_count_estimate_total={sum(packet.candidate_count_estimate for packet in packets)}")
+    console.print(f"blocking_condition_count={sum(len(packet.blocking_conditions) for packet in packets)}")
+    if warning_count and not allow_warnings:
+        raise typer.Exit(1)
+
+
+@approval_readiness_app.command("summary")
+def approval_readiness_summary(
+    results_dir: Path = typer.Option(
+        DEFAULT_STAGE2I_READINESS_DIR,
+        "--results-dir",
+        help="Generated approval-readiness result directory.",
+    ),
+) -> None:
+    """Print generated Stage 2I approval-readiness summary counts."""
+    resolved = _resolve_output_path(results_dir)
+    summary = load_approval_readiness_summary(resolved)
+    packets = load_approval_readiness_packets(resolved)
+    for key in [
+        "proposal_count",
+        "packet_count",
+        "pending_count",
+        "approved_count",
+        "candidate_count_estimate_total",
+        "blocking_condition_count",
+    ]:
+        console.print(f"{key}={summary.get(key, 0)}")
+    for packet in packets:
+        console.print(f"{packet['proposal_id']}={packet['approval_status']}")
+
+
+def _matching_stage2i_pending_approval(proposal_dir: Path, proposal_path: Path) -> Path | None:
+    expected = proposal_dir / "approval-records" / f"{proposal_path.stem.replace('-review', '-pending-approval')}.yaml"
+    if expected.is_file():
+        return expected
+    candidates = sorted((proposal_dir / "approval-records").glob("*pending-approval.yaml"))
+    return candidates[0] if candidates else None
+
+
+def _print_readiness_analysis(analysis) -> None:
+    console.print("Approval-readiness validation OK")
+    console.print(f"proposal_id={analysis.proposal.proposal_id}")
+    console.print(f"proposal_sha256={analysis.proposal.sha256}")
+    console.print(f"readiness_status={analysis.readiness_status}")
+    console.print(f"approval_status={analysis.approval_status}")
+    console.print(f"real_unsolved_material_touched={str(analysis.real_unsolved_material_touched).lower()}")
+    console.print(f"candidate_count_estimate={analysis.candidate_count_estimate}")
+    console.print(f"candidate_count_upper_bound={analysis.candidate_count_upper_bound}")
+    console.print(f"blocking_condition_count={len(analysis.blocking_conditions)}")
+    console.print("execution_enabled=false")
+    console.print("approved_for_execution=false")
+    console.print("candidate_generation_enabled=false")
+    console.print("scoring_enabled=false")
+    console.print("cuda_enabled=false")
+
+
+def _print_readiness_packet(packet) -> None:
+    console.print(f"packet_id={packet.packet_id}")
+    console.print(f"proposal_id={packet.proposal_id}")
+    console.print(f"approval_status={packet.approval_status}")
+    console.print(f"approved_for_execution={str(packet.approved_for_execution).lower()}")
+    console.print(f"execution_enabled={str(packet.execution_enabled).lower()}")
+    console.print(f"candidate_count_estimate={packet.candidate_count_estimate}")
+    console.print(f"candidate_count_upper_bound={packet.candidate_count_upper_bound}")
+    console.print(f"blocking_condition_count={len(packet.blocking_conditions)}")
+    console.print(f"real_unsolved_material_touched={str(packet.real_unsolved_material_touched).lower()}")
+
+
+app.add_typer(approval_readiness_app, name="approval-readiness")
 
 
 @solved_fixture_app.command("list")

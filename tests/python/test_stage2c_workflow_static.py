@@ -124,4 +124,5 @@ def test_readme_top_status_is_not_stale() -> None:
     assert "Stage 2F" in current_status
     assert "Stage 2G" in current_status
     assert "Stage 2H" in current_status
-    assert "Stage 2I" in next_milestones
+    assert "Stage 2I" in current_status
+    assert "Stage 2J" in next_milestones

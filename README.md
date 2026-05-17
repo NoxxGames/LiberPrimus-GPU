@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 2H and the work that must stay staged, reviewable, and reproducible before larger experiments begin. CUDA/search/scoring are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 2I and the work that must stay staged, reviewable, and reproducible before larger experiments begin. CUDA/search/scoring are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -29,7 +29,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- First human-reviewed real exploratory approval packet.
+- Human decision on the first real exploratory approval packet.
 - Candidate scoring.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -48,6 +48,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Bounded CPU execution harness for synthetic and solved-fixture-only runs.
 - Exploratory experiment proposal and human-approval workflow.
 - Approval-gated execution path for approved synthetic/solved controls.
+- First real bounded exploratory approval-readiness packet.
 
 ## Architecture summary
 
@@ -65,12 +66,13 @@ Current status:
 - Stage 2F: bounded CPU execution harness for synthetic and solved-fixture-only runs complete.
 - Stage 2G: exploratory experiment proposal and human-approval workflow complete.
 - Stage 2H: approval-gated execution path for approved synthetic/solved controls complete.
+- Stage 2I: first real bounded CPU exploratory experiment approval packet complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Search/scoring/CUDA campaigns: not started.
-- Next: Stage 2I first real bounded CPU exploratory experiment approval packet, without automatic execution.
+- Next: Stage 2J human decision on the first bounded CPU exploratory experiment proposal; do not execute unless an explicit approved approval record is supplied.
 
 ## CI status
 
@@ -197,9 +199,9 @@ Current tests cover the C++ skeleton, Python package, manifests, schemas, result
 
 ## Next milestones
 
-Stage 2H implemented an approval-gated execution path and proved it with approved synthetic and solved-control requests. It committed no approved unsolved-page approval records, keeps real unsolved-page execution blocked, and leaves scoring campaigns, CUDA work, canonical corpus activation, and page-boundary finalization out of scope.
+Stage 2I prepared the first real bounded CPU exploratory approval packet for `stage2i-first-bounded-caesar-affine-review`. The proposal touches reviewable unsolved metadata only, records a bounded candidate-count preview of `841`, remains pending and unapproved, and produces ignored approval-readiness packets only.
 
-Stage 2I should prepare and review the first real bounded CPU exploratory experiment approval packet without executing it unless explicit human approval is supplied in a separate step.
+Stage 2J should be a human decision step: approve, deny, or revise the first bounded CPU exploratory experiment proposal. It must not execute unless an explicit approved approval record is supplied in a separate step.
 
 ## Stage 1B Atbash-Family Fixtures
 

@@ -1,0 +1,19 @@
+record_type: experiment_approval_record
+approval_id: stage2i-first-bounded-caesar-affine-pending-approval
+proposal_id: stage2i-first-bounded-caesar-affine-review
+proposal_sha256: 057bd4fefc124086a6d3b1836b53c67a02529e7a15d8b7fb818e6e171c4111b7
+approval_status: pending
+approved_for_execution: false
+approved_by: ""
+approved_at_utc: ""
+approval_scope:
+  proposal_id: stage2i-first-bounded-caesar-affine-review
+  execution_scope: no_execution_stage2i
+constraints: []
+expiry_utc: ""
+notes:
+  - Not approved; do not execute.
+  - Stage 2I creates a readiness packet only.
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false

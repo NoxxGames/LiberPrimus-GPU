@@ -1,0 +1,163 @@
+record_type: experiment_proposal
+proposal_id: stage2i-first-bounded-caesar-affine-review
+proposal_version: experiment-proposal-v0
+title: Stage 2I first bounded Caesar/Affine review proposal
+description: Proposal-only review packet for a future bounded CPU exploratory Caesar and affine mod-29 preview over reviewable unsolved-material metadata.
+proposed_stage: Stage 2I
+proposal_status: ready_for_review
+human_approval_required: true
+approved_for_execution: false
+execution_enabled: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+corpus_slice:
+  slice_id: stage2i-lp2-reviewable-page-candidate-placeholder
+  slice_kind: future_unsolved_page_candidate
+  source: rtkd-master-v0-candidate
+  corpus_candidate_id: rtkd-master-v0-candidate
+  selector:
+    page_candidate_id: lp2-review-required-placeholder
+    page_boundary_status: reviewable
+    raw_text_included: false
+  review_required: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+transform_space:
+  transform_space_id: stage2i-caesar-affine-preview
+  transform_family: caesar_affine_preview
+  execution_supported: false
+  dry_run_supported: true
+  families:
+    - transform_family: caesar_shift_preview
+      candidate_count_formula: 29 shifts over index-29 alphabet
+      candidate_count_estimate: 29
+      candidate_count_upper_bound: 29
+      execution_supported: false
+    - transform_family: affine_mod29_preview
+      candidate_count_formula: 28 valid a values times 29 b values
+      candidate_count_estimate: 812
+      candidate_count_upper_bound: 812
+      execution_supported: false
+parameter_bounds:
+  caesar_shift_preview:
+    shift_range:
+      start: 0
+      end: 28
+      step: 1
+  affine_mod29_preview:
+    a_values:
+      start: 1
+      end: 28
+      step: 1
+    b_values:
+      start: 0
+      end: 28
+      step: 1
+candidate_count_estimate: 841
+candidate_count_upper_bound: 841
+safety_gates:
+  - human_approval_required
+  - approved_for_execution_false
+  - execution_disabled
+  - search_disabled
+  - candidate_generation_disabled
+  - scoring_disabled
+  - cuda_disabled
+  - canonical_corpus_inactive
+  - page_boundaries_reviewable
+  - no_raw_unsolved_text
+expected_outputs:
+  approval_readiness_packet_only: true
+  execution_results_written: false
+  candidate_outputs_written: false
+  scoring_outputs_written: false
+result_store_policy:
+  mode: approval_readiness_preview_only
+  import_enabled: false
+  committed_outputs: false
+output_policy:
+  generated_output_dir: experiments/results/approval-readiness/stage2i
+  commit_outputs: false
+rollback_plan:
+  stop_condition: Do not execute unless a separate future stage commits an explicit approved approval record.
+review_checklist:
+  record_type: experiment_review_checklist
+  checklist_id: stage2i-first-bounded-caesar-affine-checklist
+  proposal_id: stage2i-first-bounded-caesar-affine-review
+  items:
+    - item_id: corpus-slice-reviewed
+      question: Has the reviewable corpus slice metadata been reviewed by a human?
+      required_answer: true
+      actual_answer: false
+      status: pending
+      severity: error
+      notes: The proposal references metadata only and still needs human corpus-slice review.
+    - item_id: page-boundary-acceptable
+      question: Are the selected page-boundary assumptions acceptable for a future bounded run?
+      required_answer: true
+      actual_answer: false
+      status: pending
+      severity: error
+      notes: Page boundaries remain reviewable and non-final.
+    - item_id: transform-bounds-acceptable
+      question: Are Caesar 29 and affine 812 preview bounds acceptable?
+      required_answer: true
+      actual_answer: false
+      status: pending
+      severity: error
+      notes: Combined upper bound is 841 and must be explicitly approved.
+    - item_id: output-policy-acceptable
+      question: Are generated ignored output paths acceptable?
+      required_answer: true
+      actual_answer: false
+      status: pending
+      severity: error
+      notes: Outputs would be generated and ignored only in a future approved stage.
+    - item_id: result-store-policy-acceptable
+      question: Is result-store preview-only policy acceptable?
+      required_answer: true
+      actual_answer: false
+      status: pending
+      severity: error
+      notes: No real result rows are written in Stage 2I.
+    - item_id: no-solve-claim
+      question: Does the packet avoid solve claims?
+      required_answer: true
+      actual_answer: true
+      status: pass
+      severity: info
+      notes: The proposal is explicitly unexecuted and unapproved.
+    - item_id: stop-conditions-reviewed
+      question: Are stop conditions reviewed?
+      required_answer: true
+      actual_answer: false
+      status: pending
+      severity: error
+      notes: Human approval must define stop conditions in a separate future approval record.
+  required_approvals:
+    - human-review
+    - corpus-slice-review
+    - transform-bound-review
+  blocking_items:
+    - corpus-slice-reviewed
+    - page-boundary-acceptable
+    - transform-bounds-acceptable
+    - output-policy-acceptable
+    - result-store-policy-acceptable
+    - stop-conditions-reviewed
+  non_blocking_warnings: []
+  reviewer_notes: Stage 2I creates a readiness packet only.
+  completed: false
+provenance:
+  source: stage2i-first-real-proposal-packet
+  based_on_stage2e_dry_run_counts: true
+notes:
+  - Proposal only, not approved, not executable.
+  - No raw unsolved text is included.
+  - No candidate output text is generated or emitted.
+  - Human approval must be explicit and separate from this proposal.

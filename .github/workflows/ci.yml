@@ -98,6 +98,17 @@ jobs:
             --out-dir "${RUNNER_TEMP}/stage2h-approval-execution" \
             --allow-warnings
 
+      - name: Approval-readiness packet smoke
+        run: |
+          python -m libreprimus.cli approval-readiness validate \
+            --proposal experiments/proposals/stage2i/stage2i-first-bounded-caesar-affine-review.yaml \
+            --approval experiments/proposals/stage2i/approval-records/stage2i-first-bounded-caesar-affine-pending-approval.yaml
+          python -m libreprimus.cli approval-readiness packet \
+            --proposal experiments/proposals/stage2i/stage2i-first-bounded-caesar-affine-review.yaml \
+            --approval experiments/proposals/stage2i/approval-records/stage2i-first-bounded-caesar-affine-pending-approval.yaml \
+            --out-dir "${RUNNER_TEMP}/stage2i-readiness" \
+            --allow-warnings
+
   cmake-cpu-smoke:
     name: CMake CPU Smoke
     runs-on: ubuntu-latest

@@ -295,6 +295,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Generated approval execution outputs are ignored and must not be committed.
 - Stage 2H does not activate canonical corpus, finalize page boundaries, or claim unsolved pages solved.
 
+## Stage 2I Approval-Readiness Rules
+
+- Stage 2I approval-readiness packets are not approvals.
+- No Stage 2I proposal may execute.
+- No approved approval records for real unsolved proposals may be committed.
+- Approval-readiness packets must not include candidate plaintext or raw unsolved text.
+- Human approval must be explicit and separate from proposal creation.
+- Stage 2I does not activate canonical corpus, finalize page boundaries, or claim unsolved pages solved.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

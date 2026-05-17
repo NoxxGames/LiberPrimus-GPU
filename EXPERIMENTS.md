@@ -135,3 +135,15 @@ Generated review packets are ignored under `experiments/results/proposal-reviews
 Stage 2H adds approval-gated request records under `experiments/proposals/stage2h/`. Approved examples are limited to synthetic direct translation and solved-fixture replay controls. A no-op real-proposal request remains blocked by a pending approval record and future-unsolved corpus-slice checks.
 
 The `libreprimus approval-execution` CLI validates requests, builds plans, runs approved safe controls, and writes generated ignored results under `experiments/results/approval-gated-execution/stage2h/`. Stage 2H does not approve real unsolved-page execution, generate candidate plaintexts for unsolved pages, score outputs, use CUDA, activate canonical corpus, or finalize page boundaries.
+
+## Stage 2I First Real Approval Packet
+
+Stage 2I adds the first real bounded CPU exploratory proposal under `experiments/proposals/stage2i/`. The proposal references reviewable unsolved metadata only, keeps approval pending, and records Caesar plus affine mod-29 candidate-count bounds of `841`.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli approval-readiness stage2i-review --proposal-dir experiments/proposals/stage2i --out-dir experiments/results/approval-readiness/stage2i --allow-warnings
+```
+
+Generated readiness packets are ignored under `experiments/results/approval-readiness/stage2i/`. Stage 2I does not execute the proposal, approve it, generate candidates, score outputs, use CUDA, activate canonical corpus, or finalize page boundaries.
