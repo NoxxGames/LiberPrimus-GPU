@@ -327,7 +327,7 @@ Stage 3G reuses `bounded_candidate_record` and `bounded_experiment_run_summary` 
 
 The generated Stage 3G summary includes `expected_candidate_count`, `executed_candidate_count`, `deferred_candidate_count`, `prime_candidate_count`, `reset_modes`, and `confidence_distribution`.
 
-Generated Stage 3G files remain ignored under `experiments/results/bounded-auto-runs/stage3g/`. They are candidate leads only and not solve evidence. Stage 3G also adds a future Mersenne/perfect-number queue item, but it remains `needs_executor` and is not executed.
+Generated Stage 3G files remain ignored under `experiments/results/bounded-auto-runs/stage3g/`. They are candidate leads only and not solve evidence. Stage 3G also adds a future Mersenne/perfect-number queue item, which Stage 3J later promotes to runnable through a bounded executor.
 
 ## Stage 3H Reset/Advance Ablation Records
 
@@ -364,5 +364,28 @@ Stage 3I reuses `bounded_candidate_record` and `bounded_experiment_run_summary` 
 The generated Stage 3I summary includes `expected_candidate_count`, `executed_candidate_count`, `deferred_candidate_count`, `key_count`, `reset_modes`, `advance_modes`, and `confidence_distribution`.
 
 Generated Stage 3I files remain ignored under `experiments/results/bounded-auto-runs/stage3i/`. They are candidate leads only and not solve evidence.
+
+## Stage 3J Mersenne Probe Records
+
+Stage 3J reuses `bounded_candidate_record` and `bounded_experiment_run_summary` for the finite-sequence Mersenne/perfect-number probe. Candidate records include:
+
+- `transform_family=mersenne_prime_stream`
+- `transform_id=mersenne_prime_stream_tiny`
+- `stream_variant`
+- `exponent_sequence_id`
+- `exponent_sequence`
+- `offset`
+- `direction`
+- `reset_mode`
+- `stream_signature_sha256`
+- calibrated scoring fields and crib-hit fields
+- `cuda_used=false`
+- `solve_claim=false`
+
+The generated Stage 3J summary includes `expected_candidate_count`, `executed_candidate_count`, `deferred_candidate_count`, `mersenne_candidate_count`, `stream_variants`, `directions`, `reset_modes`, `unique_stream_signature_count`, `duplicate_stream_signature_count`, and `confidence_distribution`.
+
+Duplicate stream signatures are expected because the declared eight-exponent sequence is cyclic. They must be reported, not silently deduplicated.
+
+Generated Stage 3J files remain ignored under `experiments/results/bounded-auto-runs/stage3j/`. They are candidate leads only and not solve evidence.
 
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

@@ -51,6 +51,12 @@ def classify_executor_support(item: dict[str, Any]) -> tuple[str, str]:
     if kind == "prime_neighbour_streams":
         return "dry_run_only", "prime_neighbour_stream_executor"
     if kind == "mersenne_prime_stream_tiny":
+        if (
+            item.get("item_id") in {"stage3i_mersenne_prime_stream_tiny_v1", "stage3j_mersenne_prime_stream_tiny_v1"}
+            and declared == "runnable_now"
+            and item.get("required_executor") == "stage3j_mersenne_stream_probe_executor"
+        ):
+            return "runnable_now", "stage3j_mersenne_stream_probe_executor"
         return "needs_executor", "mersenne_prime_stream_executor"
     return "needs_executor", f"unsupported_experiment_kind:{kind}"
 

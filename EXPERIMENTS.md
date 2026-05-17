@@ -228,9 +228,9 @@ Run the dry-run count and support check:
 .\.venv\Scripts\python.exe -m libreprimus.cli bounded-experiment dry-run-queue --policy experiments/policies/operator-policy-v0.yaml --queue experiments/queues/stage3e-bounded-cpu-queue.yaml --out-dir experiments/results/bounded-auto-runs/stage3e --allow-warnings
 ```
 
-The queue currently contains seven items with total deterministic candidate estimate `972`: LP evidence Vigenere `48`, p56 local prime-minus-one offsets `256`, historical Vigenere `56`, family-specific negative controls `100`, reset/advance ablation `64`, prime mod/gap `256`, and future Mersenne/perfect-number probe `192`.
+The queue currently contains seven items with total deterministic candidate estimate `972`: LP evidence Vigenere `48`, p56 local prime-minus-one offsets `256`, historical Vigenere `56`, family-specific negative controls `100`, reset/advance ablation `64`, prime mod/gap `256`, and Mersenne/perfect-number probe `192`.
 
-Stage 3E is an ingestion and dry-run stage. It does not execute items whose reset/advance, prime-offset, or family-specific negative-control executors are missing. Generated dry-run summaries remain ignored under `experiments/results/bounded-auto-runs/stage3e/`, and no candidate dumps, CUDA work, canonical corpus activation, page-boundary finalization, or solve claims are produced.
+Stage 3E is an ingestion and dry-run stage. It does not execute items whose family-specific negative-control or prime-neighbour stream executors are missing. Generated dry-run summaries remain ignored under `experiments/results/bounded-auto-runs/stage3e/`, and no candidate dumps, CUDA work, canonical corpus activation, page-boundary finalization, or solve claims are produced.
 
 ## Stage 3F Evidence-Key Vigenere Pack
 
@@ -264,7 +264,7 @@ Stage 3G runs the bounded p56-local prime-minus-one offset sweep:
 
 The run is limited to offsets `0..63`, directions `forward` and `reverse`, and reset modes `none` and `line`, for `256` candidates. Generated outputs remain ignored under `experiments/results/bounded-auto-runs/stage3g/`. The Stage 3G top candidate is classified `inconclusive`; no solve claim is made.
 
-Stage 3G also adds `stage3i_mersenne_prime_stream_tiny_v1` as a future `192` candidate dry-run-only probe. It is not executed in Stage 3G.
+Stage 3G also adds `stage3i_mersenne_prime_stream_tiny_v1` as a future `192` candidate probe. Stage 3J later promotes it to runnable through a dedicated bounded executor.
 
 ## Stage 3H reset/advance ablation
 
@@ -296,3 +296,21 @@ Stage 3I runs the bounded historical motif Vigenere pack from the Stage 3E queue
 The run is limited to 14 declared historical motif keys, reset modes `none` and `line`, and advance modes `runes_only` and `token_break_preserving`, for `56` candidates. It does not mutate keys, infer keys, run a dictionary search, use CUDA, activate the canonical corpus, finalize page boundaries, or claim a solve.
 
 Generated outputs remain ignored under `experiments/results/bounded-auto-runs/stage3i/`. The top candidate is classified `noisy`; no solve claim is made.
+
+## Stage 3J Mersenne / Perfect-Number Probe
+
+Stage 3J runs the bounded Mersenne/perfect-number stream probe:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli bounded-run run-mersenne-stream-probe `
+  --policy experiments/policies/operator-policy-v0.yaml `
+  --queue experiments/queues/stage3j-bounded-cpu-queue.yaml `
+  --item-id stage3j_mersenne_prime_stream_tiny_v1 `
+  --out-dir experiments/results/bounded-auto-runs/stage3j `
+  --top-k 25 `
+  --allow-warnings
+```
+
+The run is limited to the finite declared exponent sequence `2, 3, 5, 7, 13, 17, 19, 31`, three stream variants, offsets `0..15`, directions `forward` and `reverse`, and reset modes `none` and `line`, for `192` candidates.
+
+Generated outputs remain ignored under `experiments/results/bounded-auto-runs/stage3j/`. Duplicate stream signatures are reported in the summary. The top candidate is classified `inconclusive`; no solve claim is made.

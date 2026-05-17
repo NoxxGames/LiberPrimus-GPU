@@ -178,21 +178,22 @@ items:
       arbitrary_oeis_search_enabled: false
       unconstrained_skip_masks: false
     candidate_count_estimate: 192
-    operator_policy_status: auto_runnable_after_executor
-    implementation_status: needs_executor
+    operator_policy_status: within_policy
+    implementation_status: runnable_now
     priority: low_cost_probe
     run_after:
       - stage3e_prime_minus_one_offsets_v1
       - stage3e_reset_advance_ablation_v1
     required_controls: [stage3c_calibration, null_controls, p56_local_prime_family_comparison]
     generated_output_policy:
-      output_dir: experiments/results/bounded-auto-runs/stage3i/stage3i_mersenne_prime_stream_tiny_v1
+      output_dir: experiments/results/bounded-auto-runs/stage3j
       commit_outputs: false
-      execution_enabled: false
+      execution_enabled: true
     scoring_enabled: calibrated_triage
     no_solve_claim: true
     cuda_enabled: false
     canonical_corpus_active: false
     page_boundaries_final: false
     notes:
-      - Added as a bounded future probe. Do not execute during Stage 3G.
+      - Added as a bounded future probe during Stage 3G.
+      - Stage 3J implements and executes only this tiny finite exponent-sequence probe.

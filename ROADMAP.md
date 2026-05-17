@@ -190,9 +190,15 @@ Run a bounded historical Vigenere pack follow-up using the reset/advance executo
 
 Stage 3I runs the bounded historical motif Vigenere pack for `stage3e_vig_history_key_pack_v1`: 14 manifest-bound keys, two reset modes, two advance modes, and `56` candidates. The top lead remains calibrated `noisy`, so it is not solve evidence and does not justify widening into dictionary search.
 
-## Stage 3J - Mersenne tiny probe or visual numeric observation registry
+## Stage 3J - Mersenne/perfect-number tiny stream probe
 
-If Stage 3I remains noisy, implement the queued tiny Mersenne/perfect-number stream probe or create a reviewable visual numeric observation registry. Visual observations such as base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must be captured as reviewable observations before being promoted into bounded experiment seeds. Do not jump to CUDA.
+If Stage 3I remains noisy, implement the queued tiny Mersenne/perfect-number stream probe. Keep the finite exponent sequence fixed, report duplicate stream signatures, keep generated outputs ignored, and do not jump to CUDA.
+
+Stage 3J implements and runs the `192` candidate Mersenne/perfect-number tiny stream probe. The top lead remains calibrated `inconclusive` with a raw `garbage` triage label, so it is not solve evidence and does not justify broadening into arbitrary number-sequence search.
+
+## Stage 3K - Visual numeric observation registry or archive-image source audit
+
+If Stage 3J remains inconclusive or noisy, create a reviewable visual numeric observation registry or archive-image source audit. Visual observations such as base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must be captured as reviewable observations before being promoted into bounded experiment seeds. Do not jump to CUDA.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

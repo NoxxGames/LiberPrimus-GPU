@@ -31,9 +31,9 @@ The dry run validates deterministic candidate counts, operator-policy status, an
 
 - `item_count=7`
 - `total_candidate_estimate=972`
-- `runnable_now_count=2` after Stage 3G implements the p56-local prime offset executor
-- `needs_executor_count=3` after Stage 3G
-- `dry_run_only_count=2`
+- `runnable_now_count=5` after Stage 3J implements the Mersenne/perfect-number probe executor
+- `needs_executor_count=1`
+- `dry_run_only_count=1`
 - `blocked_count=0`
 
 ## Troubleshooting

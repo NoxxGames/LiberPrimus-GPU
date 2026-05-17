@@ -401,6 +401,16 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Full Stage 3I candidate outputs under `experiments/results/bounded-auto-runs/stage3i/` are generated outputs and must not be committed.
 - Visual/image-derived observations are future work and must be stored as reviewable observations before becoming experiment seeds.
 
+## Stage 3J Mersenne / Perfect-Number Probe Rules
+
+- Mersenne/perfect-number stream probes are weak-to-moderate evidence and must stay tiny.
+- Do not expand Mersenne probes into arbitrary number-sequence search without backlog and policy update.
+- Use only the finite committed exponent sequence unless a future manifest explicitly changes it.
+- Duplicate stream signatures must be reported, not silently ignored.
+- Mersenne hits are leads only, not solve claims.
+- Full Stage 3J candidate outputs under `experiments/results/bounded-auto-runs/stage3j/` are generated outputs and must not be committed.
+- Visual/image-derived observations are future work and must be stored as reviewable observations before becoming experiment seeds.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

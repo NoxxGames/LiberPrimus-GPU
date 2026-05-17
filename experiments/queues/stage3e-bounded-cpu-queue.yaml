@@ -319,15 +319,31 @@ items:
     status: dry_run_only
 
   - item_id: stage3i_mersenne_prime_stream_tiny_v1
-    description: Mersenne-prime and perfect-number stream tiny probe; queued as future low-cost falsification test only.
+    description: Mersenne-prime and perfect-number stream tiny probe; runnable through the Stage 3J bounded executor.
     enabled: true
-    dry_run_only: true
+    dry_run_only: false
     experiment_kind: mersenne_prime_stream_tiny
-    implementation_status: needs_executor
-    required_executor: mersenne_prime_stream_executor
+    implementation_status: runnable_now
+    required_executor: stage3j_mersenne_stream_probe_executor
     corpus_slice:
       slice_id: stage3a-page-candidate-018-reviewable-slice
       slice_kind: future_unsolved_page_candidate
+      review_required: true
+      source: rtkd-master-v0-candidate
+      corpus_candidate_id: rtkd-master-v0-candidate
+      selector:
+        selector_kind: corpus_page_candidate_token_range
+        page_candidate_id: page-candidate-018
+        candidate_local_page_index: 18
+        start_token_index: 5283
+        end_token_index: 5402
+        expected_rune_token_count: 87
+        raw_unsolved_text_included: false
+      metadata_paths:
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/page_candidates.jsonl
+          role: generated_ignored_page_candidate_metadata
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/tokens.jsonl
+          role: generated_ignored_token_metadata
       raw_unsolved_text_included: false
     transform_plan:
       transform_family: mersenne_prime_stream
@@ -359,8 +375,8 @@ items:
       mode: generated_ignored_preview
       import_enabled: false
     output_policy:
-      generated_output_dir: experiments/results/bounded-auto-runs/stage3i/stage3i_mersenne_prime_stream_tiny_v1
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3j
       commit_outputs: false
       write_candidate_plaintexts: false
-      execution_enabled: false
-    status: queued_needs_executor_future_probe
+      execution_enabled: true
+    status: queued_runnable_stage3j

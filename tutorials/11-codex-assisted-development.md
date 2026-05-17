@@ -115,3 +115,7 @@ For reset/advance ablations, require manifest-bound base transforms, reset modes
 ## Stage 3I Guardrails
 
 For historical motif Vigenere packs, require the declared key list, reset modes, advance modes, evidence-family metadata, generated-output ignore checks, and summary-only research logs. Do not expand the key list, run dictionary search, publish candidate dumps, or turn a noisy calibrated score into a solve claim. Visual and image-derived observations belong in a future reviewable observation registry before they become experiment seeds.
+
+## Stage 3J Guardrails
+
+For Mersenne/perfect-number stream probes, require the finite declared exponent sequence, exact variant/offset/direction/reset counts, duplicate stream-signature reporting, generated-output ignore checks, and summary-only research logs. Do not import external exponent lists, broaden into arbitrary number sequences, publish candidate dumps, or turn an inconclusive calibrated score into a solve claim. Visual and image-derived observations still belong in a future reviewable observation registry before they become experiment seeds.

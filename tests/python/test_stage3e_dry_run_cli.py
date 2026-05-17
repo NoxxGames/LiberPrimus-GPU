@@ -33,8 +33,8 @@ def test_stage3e_dry_run_cli_writes_summary(tmp_path: Path) -> None:
     assert result.exit_code == 0, result.output
     assert "item_count=7" in result.output
     assert "total_candidate_estimate=972" in result.output
-    assert "runnable_now_count=4" in result.output
-    assert "needs_executor_count=2" in result.output
+    assert "runnable_now_count=5" in result.output
+    assert "needs_executor_count=1" in result.output
     assert "dry_run_only_count=1" in result.output
     payload = json.loads((out_dir / "stage3e_queue_dry_run_summary.json").read_text(encoding="utf-8"))
     assert payload["record_type"] == "stage3e_queue_dry_run_summary"

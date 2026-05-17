@@ -20,7 +20,7 @@ def test_stage3e_executor_support_classification_is_deterministic() -> None:
         "stage3e_negative_control_extension_v1": ("needs_executor", "family_specific_negative_control_executor"),
         "stage3e_reset_advance_ablation_v1": ("runnable_now", "stage3h_reset_advance_ablation_executor"),
         "stage3e_prime_mod_gap_pack_v1": ("dry_run_only", "prime_neighbour_stream_executor"),
-        "stage3i_mersenne_prime_stream_tiny_v1": ("needs_executor", "mersenne_prime_stream_executor"),
+        "stage3i_mersenne_prime_stream_tiny_v1": ("runnable_now", "stage3j_mersenne_stream_probe_executor"),
     }
 
 

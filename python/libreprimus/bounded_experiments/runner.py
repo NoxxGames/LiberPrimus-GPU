@@ -13,6 +13,9 @@ from libreprimus.bounded_experiments.policy_checker import check_queue
 from libreprimus.bounded_experiments.policy_loader import load_operator_policy
 from libreprimus.bounded_experiments.queue_loader import load_bounded_queue
 from libreprimus.bounded_execution.models import MissingReviewableSliceInput
+from libreprimus.bounded_execution.mersenne_stream_probe import LEGACY_TARGET_ITEM_ID as STAGE3J_LEGACY_MERSENNE_ITEM_ID
+from libreprimus.bounded_execution.mersenne_stream_probe import TARGET_ITEM_ID as STAGE3J_MERSENNE_ITEM_ID
+from libreprimus.bounded_execution.mersenne_stream_probe import run_mersenne_stream_probe_item
 from libreprimus.bounded_execution.prime_offset_sweep import TARGET_ITEM_ID as STAGE3G_PRIME_OFFSET_ITEM_ID
 from libreprimus.bounded_execution.prime_offset_sweep import run_prime_offset_sweep_item
 from libreprimus.bounded_execution.reset_advance_ablation import TARGET_ITEM_ID as STAGE3H_RESET_ADVANCE_ITEM_ID
@@ -316,6 +319,46 @@ def _run_policy_passing_item(
             scoring_used=stage3h_summary.scoring_used,
             output_paths=dict(stage3h_summary.output_paths),
             warnings=check.warnings + stage3h_summary.warnings,
+        )
+    if kind == "mersenne_prime_stream_tiny" and item.get("item_id") in {
+        STAGE3J_LEGACY_MERSENNE_ITEM_ID,
+        STAGE3J_MERSENNE_ITEM_ID,
+    }:
+        stage3j_summary = run_mersenne_stream_probe_item(
+            item,
+            out_dir=out_dir / str(item["item_id"]),
+            top_k=25,
+            policy_id=policy_id,
+        )
+        return _base_result(
+            queue_id,
+            policy_id,
+            item,
+            execution_performed=True,
+            execution_status="pass",
+            deferred_reason=None,
+            summary={
+                "status": "pass",
+                "stage3j_run_id": stage3j_summary.run_id,
+                "input_slice_id": stage3j_summary.input_slice_id,
+                "input_length": stage3j_summary.input_length,
+                "expected_candidate_count": stage3j_summary.expected_candidate_count,
+                "executed_candidate_count": stage3j_summary.executed_candidate_count,
+                "deferred_candidate_count": stage3j_summary.deferred_candidate_count,
+                "candidate_count": stage3j_summary.candidate_count,
+                "mersenne_candidate_count": stage3j_summary.mersenne_candidate_count,
+                "top_candidate": stage3j_summary.top_candidate,
+                "candidate_output_paths": stage3j_summary.output_paths,
+                "unique_stream_signature_count": stage3j_summary.unique_stream_signature_count,
+                "duplicate_stream_signature_count": stage3j_summary.duplicate_stream_signature_count,
+                "confidence_distribution": stage3j_summary.confidence_distribution,
+                "solve_claim_made": False,
+                "policy_check_status": check.status,
+            },
+            search_performed=stage3j_summary.search_performed,
+            scoring_used=stage3j_summary.scoring_used,
+            output_paths=dict(stage3j_summary.output_paths),
+            warnings=check.warnings + stage3j_summary.warnings,
         )
     return _base_result(
         queue_id,

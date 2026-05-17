@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3I historical motif Vigenere key-pack execution is complete.
+Stage 3J Mersenne/perfect-number tiny stream probe execution is complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, and Stage 3I runs only the 56-candidate historical motif Vigenere pack.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, and Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 
@@ -256,9 +256,9 @@ Developer log: `docs/development-logs/2026-05-16-stage-3d-small-vigenere-key-lis
 
 Stage 3E ingested the Deep Research method backlog into committed backlog and bounded queue manifests, added method backlog schemas, deterministic candidate-count validation, dry-run CLI support, executor-support classification, tests, documentation, and summary-only research logs.
 
-Queue summary after Stage 3I: seven Stage 3E items, total deterministic candidate estimate `972`. LP evidence Vigenere pack `48`, p56 local prime-minus-one offsets `256`, historical Vigenere pack `56`, family-specific negative controls `100`, reset/advance ablation `64`, prime mod/gap pack `256`, and future Mersenne/perfect-number probe `192`.
+Queue summary after Stage 3J: seven Stage 3E items, total deterministic candidate estimate `972`. LP evidence Vigenere pack `48`, p56 local prime-minus-one offsets `256`, historical Vigenere pack `56`, family-specific negative controls `100`, reset/advance ablation `64`, prime mod/gap pack `256`, and Mersenne/perfect-number probe `192`.
 
-Dry-run result after Stage 3I: all seven items fit the standing operator policy. Four items are runnable now, two are marked `needs_executor`, one is `dry_run_only`, and missing executors are recorded explicitly instead of faking candidate output.
+Dry-run result after Stage 3J: all seven items fit the standing operator policy. Five items are runnable now, one is marked `needs_executor`, one is `dry_run_only`, and missing executors are recorded explicitly instead of faking candidate output.
 
 Generated dry-run output remains ignored under `experiments/results/bounded-auto-runs/stage3e/`. CUDA remains disabled, the canonical corpus remains inactive, page boundaries remain reviewable, and no solve claim is made.
 
@@ -284,7 +284,7 @@ Run summary: `256` expected candidates, `256` executed, `0` deferred. The run us
 
 Top lead: offset `29`, direction `reverse`, reset `line`, score `1.36709`, calibrated label `inconclusive`. The result is a lead only and not solve evidence.
 
-Stage 3G also added future probe `stage3i_mersenne_prime_stream_tiny_v1` to the backlog and queue with candidate count `192`, implementation status `needs_executor`, and execution disabled for this stage.
+Stage 3G also added future probe `stage3i_mersenne_prime_stream_tiny_v1` to the backlog and queue with candidate count `192`; it was still executor-gated during Stage 3G and was later implemented in Stage 3J.
 
 Generated candidate outputs remain ignored under `experiments/results/bounded-auto-runs/stage3g/`. CUDA remains disabled, the canonical corpus remains inactive, page boundaries remain reviewable, and no solve claim is made.
 
@@ -314,6 +314,20 @@ Generated candidate outputs remain ignored under `experiments/results/bounded-au
 
 Developer log: `docs/development-logs/2026-05-16-stage-3i-historical-motif-vigenere-pack.md`.
 
+## Completed in Stage 3J
+
+Stage 3J implemented `libreprimus bounded-run run-mersenne-stream-probe` for the bounded Mersenne/perfect-number tiny stream probe and executed `stage3j_mersenne_prime_stream_tiny_v1`.
+
+Run summary: `192` expected candidates, `192` executed, `0` deferred. The finite exponent sequence was `2, 3, 5, 7, 13, 17, 19, 31`; variants were `mersenne_mod29`, `mersenne_minus_one_mod29`, and `perfect_number_mod29`; offsets were `0..15`; directions were `forward` and `reverse`; reset modes were `none` and `line`.
+
+Duplicate stream signatures were reported rather than hidden: unique signatures `96`, duplicate signatures `96`.
+
+Top lead: variant `perfect_number_mod29`, offset `3`, direction `forward`, reset `none`, score `1.515716`, calibrated confidence `inconclusive`. The raw triage label is `garbage`, so this is not solve evidence.
+
+Generated candidate outputs remain ignored under `experiments/results/bounded-auto-runs/stage3j/`. CUDA remains disabled, the canonical corpus remains inactive, page boundaries remain reviewable, and no solve claim is made.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-number-probe.md`.
+
 ## Next prompt recommendation
 
-Stage 3J - implement the tiny Mersenne/perfect-number stream probe or create the visual numeric observation registry. Do not jump to CUDA.
+Stage 3K - visual numeric observation registry / archive-image source audit, using any in-progress Deep Research results if available. Do not jump to CUDA.

@@ -54,6 +54,16 @@ After Stage 3I queue updates:
 - dry-run-only items: `1`;
 - historical motif Vigenere pack: `56` candidates, executed in Stage 3I.
 
+After Stage 3J queue updates:
+
+- queue items: `7`;
+- total candidate estimate: `972`;
+- policy-blocked items: `0`;
+- runnable-now items: `5`;
+- needs-executor items: `1`;
+- dry-run-only items: `1`;
+- Mersenne/perfect-number probe: `192` candidates, executed in Stage 3J.
+
 ## Executor Status
 
 - `stage3e_vig_lp_evidence_pack_v1`: runnable via `stage3f_evidence_key_pack_executor`.
@@ -62,8 +72,8 @@ After Stage 3I queue updates:
 - `stage3e_negative_control_extension_v1`: needs `family_specific_negative_control_executor`.
 - `stage3e_reset_advance_ablation_v1`: runnable via `stage3h_reset_advance_ablation_executor`.
 - `stage3e_prime_mod_gap_pack_v1`: dry-run-only until prime-neighbour stream executors exist.
-- `stage3i_mersenne_prime_stream_tiny_v1`: needs `mersenne_prime_stream_executor`; execution disabled until a future stage.
+- `stage3i_mersenne_prime_stream_tiny_v1`: runnable via `stage3j_mersenne_stream_probe_executor`.
 
 ## Next Step
 
-Stage 3J should implement the queued Mersenne/perfect-number tiny stream probe or create a visual numeric observation registry before promoting image-derived observations into bounded experiment seeds.
+Stage 3K should create a visual numeric observation registry or archive-image source audit before promoting image-derived observations into bounded experiment seeds.

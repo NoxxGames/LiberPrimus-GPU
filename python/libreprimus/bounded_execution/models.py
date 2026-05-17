@@ -60,6 +60,12 @@ class BoundedCandidateRecord:
     advance_mode: str | None = None
     transformable_token_count: int | None = None
     metadata_support_status: dict[str, Any] | None = None
+    stream_variant: str | None = None
+    offset: int | None = None
+    direction: str | None = None
+    stream_signature_sha256: str | None = None
+    exponent_sequence_id: str | None = None
+    exponent_sequence: list[int] | None = None
 
 
 @dataclass(frozen=True)
@@ -97,3 +103,8 @@ class BoundedRunSummary:
     reset_advance_candidate_count: int | None = None
     negative_control_count: int | None = None
     metadata_support_status: dict[str, Any] | None = None
+    mersenne_candidate_count: int | None = None
+    stream_variants: list[str] | None = None
+    directions: list[str] | None = None
+    unique_stream_signature_count: int | None = None
+    duplicate_stream_signature_count: int | None = None

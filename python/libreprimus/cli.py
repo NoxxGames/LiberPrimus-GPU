@@ -131,6 +131,7 @@ from libreprimus.bounded_experiments.summary import (
 from libreprimus.bounded_execution.reset_advance_ablation import run_reset_advance_ablation_from_paths
 from libreprimus.bounded_execution.runner import run_caesar_affine_from_paths
 from libreprimus.bounded_execution.summary import load_summary as load_bounded_run_summary
+from libreprimus.bounded_execution.mersenne_stream_probe import run_mersenne_stream_probe_from_paths
 from libreprimus.bounded_execution.prime_offset_sweep import run_prime_offset_sweep_from_paths
 from libreprimus.bounded_execution.vigenere_key_pack import run_vigenere_key_pack_from_paths
 from libreprimus.bounded_execution.vigenere_key_list import run_vigenere_key_list_from_paths
@@ -2295,6 +2296,8 @@ DEFAULT_STAGE3F_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-run
 DEFAULT_STAGE3G_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3g")
 DEFAULT_STAGE3H_QUEUE = Path("experiments/queues/stage3h-bounded-cpu-queue.yaml")
 DEFAULT_STAGE3H_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3h")
+DEFAULT_STAGE3J_QUEUE = Path("experiments/queues/stage3j-bounded-cpu-queue.yaml")
+DEFAULT_STAGE3J_BOUNDED_RESULTS_DIR = Path("experiments/results/bounded-auto-runs/stage3j")
 
 
 @bounded_experiment_app.command("validate-policy")
@@ -2620,6 +2623,35 @@ def bounded_run_reset_advance_ablation(
     _print_stage3a_run_summary(summary)
 
 
+@bounded_run_app.command("run-mersenne-stream-probe")
+def bounded_run_mersenne_stream_probe(
+    policy: Path = typer.Option(DEFAULT_STAGE2J_POLICY, "--policy", help="Operator policy path."),
+    queue: Path = typer.Option(DEFAULT_STAGE3J_QUEUE, "--queue", help="Bounded experiment queue path."),
+    item_id: str = typer.Option(
+        "stage3j_mersenne_prime_stream_tiny_v1",
+        "--item-id",
+        help="Queue item to run.",
+    ),
+    out_dir: Path = typer.Option(DEFAULT_STAGE3J_BOUNDED_RESULTS_DIR, "--out-dir", help="Generated output directory."),
+    top_k: int = typer.Option(25, "--top-k", min=1, help="Number of top candidates to write."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Run warning-only policy-passing items."),
+) -> None:
+    """Run the bounded Stage 3J Mersenne/perfect-number stream probe."""
+    try:
+        summary = run_mersenne_stream_probe_from_paths(
+            _resolve_existing_path(policy, "Operator policy"),
+            _resolve_existing_path(queue, "Bounded experiment queue"),
+            item_id=item_id,
+            out_dir=_resolve_output_path(out_dir),
+            top_k=top_k,
+            allow_warnings=allow_warnings,
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_stage3a_run_summary(summary)
+
+
 @bounded_run_app.command("rerank")
 def bounded_run_rerank(
     results_dir: Path = typer.Option(DEFAULT_STAGE3A_BOUNDED_RESULTS_DIR, "--results-dir", help="Existing generated results directory."),
@@ -2686,7 +2718,12 @@ def _print_stage3a_run_summary(summary) -> None:
         "prime_candidate_count": summary.prime_candidate_count,
         "reset_advance_candidate_count": summary.reset_advance_candidate_count,
         "negative_control_count": summary.negative_control_count,
+        "mersenne_candidate_count": summary.mersenne_candidate_count,
+        "unique_stream_signature_count": summary.unique_stream_signature_count,
+        "duplicate_stream_signature_count": summary.duplicate_stream_signature_count,
         "key_count": summary.key_count,
+        "stream_variants": ",".join(summary.stream_variants or []),
+        "directions": ",".join(summary.directions or []),
         "reset_modes": ",".join(summary.reset_modes or []),
         "advance_modes": ",".join(summary.advance_modes or []),
         "top_k_count": summary.top_k_count,
@@ -2703,6 +2740,8 @@ def _print_stage3a_run_summary(summary) -> None:
         "top_candidate_direction": summary.top_candidate.get("direction"),
         "top_candidate_reset_mode": summary.top_candidate.get("reset_mode"),
         "top_candidate_advance_mode": summary.top_candidate.get("advance_mode"),
+        "top_candidate_stream_variant": summary.top_candidate.get("stream_variant"),
+        "top_candidate_stream_signature_sha256": summary.top_candidate.get("stream_signature_sha256"),
         "solve_claim": summary.solve_claim,
     }
     for key, value in payload.items():
@@ -2730,7 +2769,12 @@ def _print_stage3a_summary_payload(summary: dict) -> None:
         "prime_candidate_count",
         "reset_advance_candidate_count",
         "negative_control_count",
+        "mersenne_candidate_count",
+        "unique_stream_signature_count",
+        "duplicate_stream_signature_count",
         "key_count",
+        "stream_variants",
+        "directions",
         "reset_modes",
         "advance_modes",
         "top_k_count",
@@ -2749,6 +2793,8 @@ def _print_stage3a_summary_payload(summary: dict) -> None:
     console.print(f"top_candidate_direction={top.get('direction')}")
     console.print(f"top_candidate_reset_mode={top.get('reset_mode')}")
     console.print(f"top_candidate_advance_mode={top.get('advance_mode')}")
+    console.print(f"top_candidate_stream_variant={top.get('stream_variant')}")
+    console.print(f"top_candidate_stream_signature_sha256={top.get('stream_signature_sha256')}")
     console.print(f"solve_claim={str(summary.get('solve_claim')).lower()}")
     for key, path in summary.get("output_paths", {}).items():
         console.print(f"{key}={path}")

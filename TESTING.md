@@ -179,6 +179,16 @@ The tests assert that the `841` candidate Caesar plus affine item passes policy,
 
 ## Stage 3A Minimal Executor Tests
 
+## Stage 3J Mersenne Probe Tests
+
+Stage 3J adds tests for finite exponent-sequence loading, modular stream values, forward/reverse indexing, reset handling, cyclic exponent behavior, duplicate stream-signature detection, output record fields, CLI execution on synthetic input, generated-output ignore policy, and policy blocking when offsets expand without a matching candidate-count update.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q tests/python/test_stage3j_mersenne_stream_values.py tests/python/test_stage3j_mersenne_executor.py tests/python/test_stage3j_mersenne_cli.py tests/python/test_stage3j_mersenne_output.py tests/python/test_stage3j_queue.py
+```
+
 Stage 3A adds tests for minimal triage scoring, Caesar and affine enumeration counts, candidate output schemas, generated-output ignore policy, policy blocking, and `libreprimus bounded-run` CLI behavior.
 
 The tests assert that scoring is deterministic, Caesar generates `29` candidates, affine generates `812` candidates, total candidate count is `841`, output indices stay in `0..28`, candidate records and run summaries validate, top-k output is bounded, CUDA stays false, solve claims stay false, and synthetic CLI runs work without raw corpus data.
@@ -205,7 +215,7 @@ The tests assert that the Stage 3D key list remains exactly `LIBER`, `PRIMUS`, `
 
 Stage 3E adds tests for method backlog schemas, bounded queue candidate counts, executor-support classification, dry-run CLI behavior, and no-scope-creep rules.
 
-The tests assert that the Stage 3E/3G backlog items validate, LP evidence Vigenere count is `48`, p56 local prime-minus-one offset count is `256`, historical Vigenere count is `56`, negative-control count is `100`, reset/advance ablation count is `64`, prime mod/gap count is `256`, future Mersenne probe count is `192`, every item fits operator-policy limits, CUDA stays disabled, solve claims stay false, broad dictionary search and unconstrained skip masks are absent, dry-run output is ignored, and missing executors are reported instead of faked.
+The tests assert that the Stage 3E/3G/3J backlog items validate, LP evidence Vigenere count is `48`, p56 local prime-minus-one offset count is `256`, historical Vigenere count is `56`, negative-control count is `100`, reset/advance ablation count is `64`, prime mod/gap count is `256`, Mersenne probe count is `192`, every item fits operator-policy limits, CUDA stays disabled, solve claims stay false, broad dictionary search and unconstrained skip masks are absent, dry-run output is ignored, and missing executors are reported instead of faked.
 
 ## Stage 3F Vigenere Key-Pack Tests
 
@@ -217,7 +227,7 @@ The tests assert that the LP evidence pack loads exactly 12 keys, rejects key ex
 
 Stage 3G adds tests for deterministic prime generation, prime-minus-one stream values, offset/direction/reset candidate counts, forward and reverse stream indexing, reset-mode handling, CLI execution, generated output shape, Mersenne backlog metadata, and queue-runner integration.
 
-The tests assert that the first ten primes are stable, the p56-local sweep computes `64 * 2 * 2 = 256` candidates, line reset executes with line metadata or defers with an explicit warning, candidate records include offset/direction/reset metadata, `cuda_used=false`, `solve_claim=false`, calibrated confidence labels are present, generated Stage 3G outputs are ignored, the Mersenne probe remains `needs_executor`, and offset expansion without a count update is blocked.
+The tests assert that the first ten primes are stable, the p56-local sweep computes `64 * 2 * 2 = 256` candidates, line reset executes with line metadata or defers with an explicit warning, candidate records include offset/direction/reset metadata, `cuda_used=false`, `solve_claim=false`, calibrated confidence labels are present, generated Stage 3G outputs are ignored, the Mersenne probe is promoted to Stage 3J runnable status, and offset expansion without a count update is blocked.
 
 ## Stage 3H Reset/Advance Ablation Tests
 

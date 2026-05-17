@@ -21,7 +21,7 @@ Stage 3E ingests the method-prioritization backlog, converts the top recommendat
 
 ## Validation Result
 
-The Stage 3E queue initially contained six items with total deterministic candidate estimate `780`. Stage 3G adds the future Mersenne/perfect-number probe, bringing the current queue to seven items with total deterministic candidate estimate `972`. All items fit the standing operator policy. Items without executors remain deferred or dry-run-only instead of being faked as runnable.
+The Stage 3E queue initially contained six items with total deterministic candidate estimate `780`. Stage 3G added the future Mersenne/perfect-number probe, bringing the current queue to seven items with total deterministic candidate estimate `972`. Stage 3J promotes that probe to runnable through a bounded executor. All items fit the standing operator policy. Items without executors remain deferred or dry-run-only instead of being faked as runnable.
 
 ## What This Proves
 
