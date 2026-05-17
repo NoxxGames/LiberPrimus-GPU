@@ -265,3 +265,16 @@ Stage 3G runs the bounded p56-local prime-minus-one offset sweep:
 The run is limited to offsets `0..63`, directions `forward` and `reverse`, and reset modes `none` and `line`, for `256` candidates. Generated outputs remain ignored under `experiments/results/bounded-auto-runs/stage3g/`. The Stage 3G top candidate is classified `inconclusive`; no solve claim is made.
 
 Stage 3G also adds `stage3i_mersenne_prime_stream_tiny_v1` as a future `192` candidate dry-run-only probe. It is not executed in Stage 3G.
+
+## Stage 3H reset/advance ablation
+
+Stage 3H runs the bounded reset/advance ablation:
+
+- Queue: `experiments/queues/stage3h-bounded-cpu-queue.yaml`
+- Item: `stage3h_reset_advance_ablation_v1`
+- Base transforms: four explicit Vigenere keys plus `prime_minus_one` offsets `0` and `1`, `prime_mod29` offset `0`, and `prime_gap` offset `0`
+- Reset modes: `none`, `word`, `clause`, `line`
+- Advance modes: `runes_only`, `token_break_preserving`
+- Candidate count: `64`
+
+The run executes all `64` candidates on the existing reviewable slice because word, clause, line, and token-break metadata are available. It also writes `100` family-specific negative controls. Generated outputs remain ignored under `experiments/results/bounded-auto-runs/stage3h/`. The top candidate is classified `noisy`; no solve claim is made.

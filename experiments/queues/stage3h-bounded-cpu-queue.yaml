@@ -1,0 +1,133 @@
+record_type: bounded_experiment_queue
+queue_id: stage3h-bounded-cpu-queue
+queue_version: bounded-experiment-queue-v0
+policy_id: operator-policy-v0
+default_output_dir: experiments/results/bounded-auto-runs/stage3h
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+items:
+  - item_id: stage3h_reset_advance_ablation_v1
+    description: Stage 3H reset/advance state-machine ablation over bounded Vigenere and prime-stream transforms.
+    enabled: true
+    experiment_kind: reset_advance_ablation
+    implementation_status: runnable_now
+    required_executor: stage3h_reset_advance_ablation_executor
+    corpus_slice:
+      slice_id: stage3a-page-candidate-018-reviewable-slice
+      slice_kind: future_unsolved_page_candidate
+      review_required: true
+      source: rtkd-master-v0-candidate
+      corpus_candidate_id: rtkd-master-v0-candidate
+      selector:
+        selector_kind: corpus_page_candidate_token_range
+        page_candidate_id: page-candidate-018
+        candidate_local_page_index: 18
+        start_token_index: 5283
+        end_token_index: 5402
+        expected_rune_token_count: 87
+        raw_unsolved_text_included: false
+      metadata_paths:
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/page_candidates.jsonl
+          role: generated_ignored_page_candidate_metadata
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/tokens.jsonl
+          role: generated_ignored_token_metadata
+      raw_unsolved_text_included: false
+    transform_plan:
+      transform_family: reset_advance_ablation
+      parameters:
+        base_transforms:
+          - vigenere:DIVINITY
+          - vigenere:FIRFUMFERENFE
+          - vigenere:PATIENCEISAVIRTUE
+          - vigenere:THEINSTAREMERGENCE
+          - prime_minus_one:offset=0
+          - prime_minus_one:offset=1
+          - prime_mod29:offset=0
+          - prime_gap:offset=0
+        reset_modes: [none, word, clause, line]
+        advance_modes: [runes_only, token_break_preserving]
+        key_search_enabled: false
+        dictionary_search_enabled: false
+        broad_sequence_search_enabled: false
+        arbitrary_oeis_search_enabled: false
+        unconstrained_skip_masks: false
+    candidate_count_upper_bound: 64
+    estimated_runtime_seconds: 120
+    generated_output_budget_mb: 40
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: calibrated_triage
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3h
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: queued_runnable_stage3h
+
+  - item_id: stage3h_family_specific_negative_controls_v1
+    description: Stage 3H family-specific negative controls paired with the reset/advance ablation.
+    enabled: true
+    experiment_kind: family_specific_negative_controls
+    implementation_status: runnable_now
+    required_executor: stage3h_family_negative_control_executor
+    corpus_slice:
+      slice_id: stage3a-page-candidate-018-reviewable-slice
+      slice_kind: future_unsolved_page_candidate
+      review_required: true
+      source: rtkd-master-v0-candidate
+      corpus_candidate_id: rtkd-master-v0-candidate
+      selector:
+        selector_kind: corpus_page_candidate_token_range
+        page_candidate_id: page-candidate-018
+        candidate_local_page_index: 18
+        start_token_index: 5283
+        end_token_index: 5402
+        expected_rune_token_count: 87
+        raw_unsolved_text_included: false
+      metadata_paths:
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/page_candidates.jsonl
+          role: generated_ignored_page_candidate_metadata
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/tokens.jsonl
+          role: generated_ignored_token_metadata
+      raw_unsolved_text_included: false
+    transform_plan:
+      transform_family: family_specific_negative_controls
+      parameters:
+        negative_corpora:
+          - rune_shuffle_same_length
+          - rune_freq_preserving_shuffle
+          - separator_randomised_variant
+          - wrong_mapping_variant
+        representative_transform_subset_size: 25
+        deterministic_seed: 3301
+    candidate_count_upper_bound: 100
+    estimated_runtime_seconds: 120
+    generated_output_budget_mb: 40
+    cpu_only: true
+    cuda_enabled: false
+    cloud_execution: false
+    external_paid_services: false
+    scoring_enabled: calibrated_triage
+    raw_data_committed: false
+    generated_outputs_committed: false
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    no_solve_claim: true
+    result_store_policy:
+      mode: generated_ignored_preview
+      import_enabled: false
+    output_policy:
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3h
+      commit_outputs: false
+      write_candidate_plaintexts: false
+    status: queued_runnable_stage3h

@@ -219,4 +219,10 @@ Stage 3G adds tests for deterministic prime generation, prime-minus-one stream v
 
 The tests assert that the first ten primes are stable, the p56-local sweep computes `64 * 2 * 2 = 256` candidates, line reset executes with line metadata or defers with an explicit warning, candidate records include offset/direction/reset metadata, `cuda_used=false`, `solve_claim=false`, calibrated confidence labels are present, generated Stage 3G outputs are ignored, the Mersenne probe remains `needs_executor`, and offset expansion without a count update is blocked.
 
+## Stage 3H Reset/Advance Ablation Tests
+
+Stage 3H adds tests for the reset/advance state machine, transform adapters, family-specific negative controls, CLI execution, generated output shape, and queue policy.
+
+The tests assert that reset `none` uses the whole sequence, reset `line` segments by line metadata, reset `word` and `clause` require metadata, missing metadata emits explicit warnings instead of fake segmentation, `runes_only` advances only transformable tokens, `token_break_preserving` preserves separators, Vigenere and prime-stream adapters work on synthetic tokens, the ablation count is `64`, executed plus deferred counts match, negative controls are deterministic, generated outputs are ignored, `cuda_used=false`, and `solve_claim=false`.
+
 The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.

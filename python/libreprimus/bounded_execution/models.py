@@ -53,6 +53,12 @@ class BoundedCandidateRecord:
     crib_hits: list[str] | None = None
     crib_hit_count: int | None = None
     calibration_position: dict[str, Any] | None = None
+    base_transform_id: str | None = None
+    base_transform_family: str | None = None
+    reset_mode: str | None = None
+    advance_mode: str | None = None
+    transformable_token_count: int | None = None
+    metadata_support_status: dict[str, Any] | None = None
 
 
 @dataclass(frozen=True)
@@ -87,3 +93,6 @@ class BoundedRunSummary:
     advance_modes: list[str] | None = None
     confidence_distribution: dict[str, int] | None = None
     prime_candidate_count: int | None = None
+    reset_advance_candidate_count: int | None = None
+    negative_control_count: int | None = None
+    metadata_support_status: dict[str, Any] | None = None

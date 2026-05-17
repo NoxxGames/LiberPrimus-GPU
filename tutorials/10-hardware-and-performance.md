@@ -106,6 +106,10 @@ Stage 3F is still a local CPU-only run. It executes `48` explicit Vigenere candi
 
 Stage 3G is still a local CPU-only run. It executes `256` manifest-bound p56-local prime-minus-one offset candidates and writes generated outputs to ignored local paths. It is not a performance benchmark, not a broad number-sequence search, and not a reason to start CUDA work.
 
+## Stage 3H Reset/Advance Scope
+
+Stage 3H is still a local CPU-only run. It executes `64` reset/advance ablation candidates and writes `100` family-specific negative controls to ignored local paths. It is not a benchmark, not a broad search, and not a reason to start CUDA work.
+
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

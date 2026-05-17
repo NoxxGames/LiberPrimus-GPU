@@ -199,14 +199,30 @@ items:
     status: queued_needs_executor
 
   - item_id: stage3e_reset_advance_ablation_v1
-    description: Reset/advance ablation dry-run item.
+    description: Reset/advance ablation item; executable through the Stage 3H reset/advance state-machine executor.
     enabled: true
     experiment_kind: reset_advance_ablation
-    implementation_status: dry_run_only
-    required_executor: reset_advance_state_machine
+    implementation_status: runnable_now
+    required_executor: stage3h_reset_advance_ablation_executor
     corpus_slice:
       slice_id: stage3a-page-candidate-018-reviewable-slice
       slice_kind: future_unsolved_page_candidate
+      review_required: true
+      source: rtkd-master-v0-candidate
+      corpus_candidate_id: rtkd-master-v0-candidate
+      selector:
+        selector_kind: corpus_page_candidate_token_range
+        page_candidate_id: page-candidate-018
+        candidate_local_page_index: 18
+        start_token_index: 5283
+        end_token_index: 5402
+        expected_rune_token_count: 87
+        raw_unsolved_text_included: false
+      metadata_paths:
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/page_candidates.jsonl
+          role: generated_ignored_page_candidate_metadata
+        - path: data/normalized/corpus-candidates/rtkd-master-v0-candidate/tokens.jsonl
+          role: generated_ignored_token_metadata
       raw_unsolved_text_included: false
     transform_plan:
       transform_family: reset_advance_ablation
@@ -239,10 +255,10 @@ items:
       mode: generated_ignored_preview
       import_enabled: false
     output_policy:
-      generated_output_dir: experiments/results/bounded-auto-runs/stage3e/stage3e_reset_advance_ablation_v1
+      generated_output_dir: experiments/results/bounded-auto-runs/stage3h
       commit_outputs: false
       write_candidate_plaintexts: false
-    status: dry_run_only
+    status: queued_runnable_stage3h
 
   - item_id: stage3e_prime_mod_gap_pack_v1
     description: Prime neighbour stream pack dry-run item.

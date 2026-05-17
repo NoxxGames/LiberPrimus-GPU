@@ -182,6 +182,12 @@ Stage 3G implements the p56-local prime-minus-one offset sweep and runs all `256
 
 If Stage 3G remains inconclusive or noisy, implement reset/advance ablation or family-specific negative controls before widening stream families. Keep candidate counts bounded, generated outputs ignored, and no solve claim.
 
+Stage 3H implements a shared reset/advance state machine, Vigenere and prime-stream adapters, and family-specific negative controls. It runs all `64` bounded ablation candidates, generates `100` ignored controls, keeps unsupported metadata modes deferrable, and makes no solve claim.
+
+## Stage 3I - Mersenne tiny probe or historical Vigenere follow-up
+
+If Stage 3H remains noisy, implement the queued tiny Mersenne/perfect-number stream probe or run a bounded historical Vigenere pack follow-up using the reset/advance executor. Keep candidate counts bounded, generated outputs ignored, and no solve claim. Do not jump to CUDA.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

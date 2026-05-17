@@ -383,6 +383,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Prime-stream hits are leads only, not solve claims.
 - Full Stage 3G candidate outputs under `experiments/results/bounded-auto-runs/stage3g/` are generated outputs and must not be committed.
 
+## Stage 3H Reset/Advance Rules
+
+- Reset/advance experiments must not invent missing metadata.
+- Unsupported reset modes must be deferred with explicit reasons.
+- Separator-aware improvements require controls against separator-randomised negatives.
+- Family-specific negative controls must accompany new state-machine behaviour.
+- Top candidates remain leads only, not solve claims.
+- Full Stage 3H candidate and control outputs under `experiments/results/bounded-auto-runs/stage3h/` are generated outputs and must not be committed.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

@@ -190,6 +190,8 @@ def _declared_exact_count(item: dict[str, Any]) -> int | None:
     if str(item.get("experiment_kind", "")) not in {
         "prime_minus_one_offset_sweep",
         "mersenne_prime_stream_tiny",
+        "reset_advance_ablation",
+        "family_specific_negative_controls",
     }:
         return None
     return candidate_count_for_item(item)

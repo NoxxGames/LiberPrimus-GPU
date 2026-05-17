@@ -329,4 +329,20 @@ The generated Stage 3G summary includes `expected_candidate_count`, `executed_ca
 
 Generated Stage 3G files remain ignored under `experiments/results/bounded-auto-runs/stage3g/`. They are candidate leads only and not solve evidence. Stage 3G also adds a future Mersenne/perfect-number queue item, but it remains `needs_executor` and is not executed.
 
+## Stage 3H Reset/Advance Ablation Records
+
+Stage 3H reuses `bounded_candidate_record` and `bounded_experiment_run_summary` for reset/advance ablation. Candidate records include:
+
+- `base_transform_id`
+- `base_transform_family`
+- `reset_mode`
+- `advance_mode`
+- `transformable_token_count`
+- `metadata_support_status`
+- calibrated scoring fields and crib-hit fields
+
+The generated Stage 3H summary includes `expected_candidate_count`, `executed_candidate_count`, `deferred_candidate_count`, `reset_advance_candidate_count`, `negative_control_count`, `metadata_support_status`, and `confidence_distribution`.
+
+Family-specific negative controls are generated as ignored JSONL records in `negative_control_records.jsonl`. They are false-positive controls only, not candidate solve evidence.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

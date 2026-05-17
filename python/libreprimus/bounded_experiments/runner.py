@@ -15,6 +15,8 @@ from libreprimus.bounded_experiments.queue_loader import load_bounded_queue
 from libreprimus.bounded_execution.models import MissingReviewableSliceInput
 from libreprimus.bounded_execution.prime_offset_sweep import TARGET_ITEM_ID as STAGE3G_PRIME_OFFSET_ITEM_ID
 from libreprimus.bounded_execution.prime_offset_sweep import run_prime_offset_sweep_item
+from libreprimus.bounded_execution.reset_advance_ablation import TARGET_ITEM_ID as STAGE3H_RESET_ADVANCE_ITEM_ID
+from libreprimus.bounded_execution.reset_advance_ablation import run_reset_advance_ablation_item
 from libreprimus.bounded_execution.runner import run_caesar_affine_item
 from libreprimus.bounded_execution.vigenere_key_pack import TARGET_ITEM_ID as STAGE3F_KEY_PACK_ITEM_ID
 from libreprimus.bounded_execution.vigenere_key_pack import run_vigenere_key_pack_item
@@ -274,6 +276,42 @@ def _run_policy_passing_item(
             scoring_used=stage3g_summary.scoring_used,
             output_paths=dict(stage3g_summary.output_paths),
             warnings=check.warnings + stage3g_summary.warnings,
+        )
+    if kind == "reset_advance_ablation" and item.get("item_id") == STAGE3H_RESET_ADVANCE_ITEM_ID:
+        stage3h_summary = run_reset_advance_ablation_item(
+            item,
+            out_dir=out_dir / str(item["item_id"]),
+            top_k=25,
+            policy_id=policy_id,
+        )
+        return _base_result(
+            queue_id,
+            policy_id,
+            item,
+            execution_performed=True,
+            execution_status="pass",
+            deferred_reason=None,
+            summary={
+                "status": "pass",
+                "stage3h_run_id": stage3h_summary.run_id,
+                "input_slice_id": stage3h_summary.input_slice_id,
+                "input_length": stage3h_summary.input_length,
+                "expected_candidate_count": stage3h_summary.expected_candidate_count,
+                "executed_candidate_count": stage3h_summary.executed_candidate_count,
+                "deferred_candidate_count": stage3h_summary.deferred_candidate_count,
+                "negative_control_count": stage3h_summary.negative_control_count,
+                "candidate_count": stage3h_summary.candidate_count,
+                "reset_advance_candidate_count": stage3h_summary.reset_advance_candidate_count,
+                "top_candidate": stage3h_summary.top_candidate,
+                "candidate_output_paths": stage3h_summary.output_paths,
+                "confidence_distribution": stage3h_summary.confidence_distribution,
+                "solve_claim_made": False,
+                "policy_check_status": check.status,
+            },
+            search_performed=stage3h_summary.search_performed,
+            scoring_used=stage3h_summary.scoring_used,
+            output_paths=dict(stage3h_summary.output_paths),
+            warnings=check.warnings + stage3h_summary.warnings,
         )
     return _base_result(
         queue_id,

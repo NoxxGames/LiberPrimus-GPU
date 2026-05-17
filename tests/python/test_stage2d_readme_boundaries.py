@@ -51,7 +51,7 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "still unsolved must not receive a solve claim" in section
     assert "Canonical corpus: inactive." in section
     assert "Broad unsolved-page search campaigns: not started." in section
-    assert "Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, and Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only." in section
+    assert "Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, and Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only." in section
     assert "CUDA experiment campaigns: not started." in section
     assert "Broad search/scoring/CUDA campaigns: not started." in readme
     assert "Stage 2E: CPU exploratory experiment manifest scaffold and dry-run planner complete." in readme
@@ -67,6 +67,7 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "Stage 3E: Deep Research method backlog ingestion and bounded queue dry-run complete." in readme
     assert "Stage 3F: LP evidence-key Vigenere pack execution complete." in readme
     assert "Stage 3G: p56-local prime-minus-one offset sweep complete." in readme
+    assert "Stage 3H: reset/advance ablation and family-specific negative controls complete." in readme
 
 
 def test_readme_does_not_imply_deferred_work_is_permanently_excluded() -> None:

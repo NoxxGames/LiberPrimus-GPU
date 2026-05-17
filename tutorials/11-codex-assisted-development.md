@@ -107,3 +107,7 @@ For the evidence-key Vigenere pack, require manifest-bound keys, reset/advance m
 ## Stage 3G Guardrails
 
 For p56-local prime offset sweeps, require manifest-bound offsets, directions, reset modes, deterministic prime generation tests, generated-output ignore checks, and summary-only research logs. Do not broaden to arbitrary number sequences, execute the Mersenne probe before an executor exists, publish candidate dumps, or turn an inconclusive calibrated score into a solve claim.
+
+## Stage 3H Guardrails
+
+For reset/advance ablations, require manifest-bound base transforms, reset modes, advance modes, metadata-support checks, family-specific negative controls, generated-output ignore checks, and summary-only research logs. Do not invent missing boundaries, publish candidate or control dumps, broaden into arbitrary transform families, or turn a noisy calibrated score into a solve claim.
