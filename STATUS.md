@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 2G exploratory experiment proposal and human-approval workflow is complete.
+Stage 2H approval-gated execution for approved synthetic and solved controls is complete.
 
 ## Completed in Stage 0A
 
@@ -178,6 +178,14 @@ All committed Stage 2G proposals are blocked pending explicit human approval. No
 
 Developer log: `docs/development-logs/2026-05-16-stage-2g-experiment-proposal-approval-workflow.md`.
 
+## Completed in Stage 2H
+
+Stage 2H added approval-gated execution request, plan, and result schemas; safe approved synthetic and solved-control proposal records; scope-bound approval records; blocked no-op real-proposal handling; an approval execution bridge; and `libreprimus approval-execution` CLI commands.
+
+Approved control execution is limited to `synthetic_only` and `solved_fixture_only` requests. Real unsolved-page proposals remain blocked, no approved unsolved-page approval records are committed, and search, candidate generation, scoring, CUDA, canonical corpus activation, and page-boundary finalization remain disabled.
+
+Developer log: `docs/development-logs/2026-05-16-stage-2h-approval-gated-execution.md`.
+
 ## Next prompt recommendation
 
-Stage 2H - implement approval-gated execution path for approved proposals, initially limited to synthetic/solved controls or a no-op real proposal.
+Stage 2I - prepare and review the first real bounded CPU exploratory experiment approval packet, without executing it unless explicit human approval is supplied in a separate step.

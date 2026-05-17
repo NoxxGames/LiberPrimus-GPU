@@ -44,8 +44,8 @@ function Assert-ReadmeStatus([string]$Text, [string]$SourceName) {
         "Search/scoring/CUDA campaigns: not started",
         "Stage 2E: CPU exploratory experiment manifest scaffold and dry-run planner complete.",
         "Stage 2F: bounded CPU execution harness for synthetic and solved-fixture-only runs complete.",
-        "Stage 2G: exploratory experiment proposal and human-approval workflow complete.",
-        "Stage 2H approval-gated execution path"
+        "Stage 2H: approval-gated execution path for approved synthetic/solved controls complete.",
+        "Stage 2I first real bounded CPU exploratory experiment approval packet"
     )) {
         if (-not $Text.Contains($Required)) {
             throw "$SourceName README is missing required text: $Required"

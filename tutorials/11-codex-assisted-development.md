@@ -67,3 +67,7 @@ For bounded CPU execution work, require `libreprimus execution validate`, `libre
 ## Stage 2G Guardrails
 
 For proposal workflow work, require `libreprimus proposal validate`, `libreprimus proposal review-packet`, and approval-gate tests. Stage 2G must not create approved records automatically, execute proposals, generate candidates, score outputs, use CUDA, activate canonical corpus, or finalize page boundaries.
+
+## Stage 2H Guardrails
+
+For approval-gated execution work, require `libreprimus approval-execution validate`, `libreprimus approval-execution run`, and blocked no-op real-proposal tests. Stage 2H may run approved synthetic and solved-control requests only; it must not commit approved unsolved-page approval records or enable search, candidate generation, scoring, CUDA, canonical corpus activation, or page-boundary finalization.

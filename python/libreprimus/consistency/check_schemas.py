@@ -29,6 +29,9 @@ EXPECTED_SCHEMA_FILES = [
     "experiments/experiment-review-packet-v0.schema.json",
     "experiments/experiment-approval-record-v0.schema.json",
     "experiments/experiment-review-checklist-v0.schema.json",
+    "experiments/approval-gated-execution-request-v0.schema.json",
+    "experiments/approval-gated-execution-plan-v0.schema.json",
+    "experiments/approval-gated-execution-result-v0.schema.json",
     "results/experiment-run-record-v0.schema.json",
     "results/experiment-run-summary-v0.schema.json",
     "results/experiment-result-store-manifest-v0.schema.json",
@@ -43,6 +46,8 @@ EXPECTED_DOC_TERMS = [
     "cpu-execution-result-v0",
     "experiment-proposal-v0",
     "experiment-review-packet-v0",
+    "approval-gated-execution-request-v0",
+    "approval-gated-execution-result-v0",
     "solved-page-fixture",
     "solved-baseline-run-manifest-v0",
 ]

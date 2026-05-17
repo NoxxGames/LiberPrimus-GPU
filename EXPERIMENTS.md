@@ -129,3 +129,9 @@ Run:
 ```
 
 Generated review packets are ignored under `experiments/results/proposal-reviews/stage2g/`. Stage 2G does not execute proposals, approve proposals automatically, generate candidates, score outputs, use CUDA, activate canonical corpus, or finalize page boundaries.
+
+## Stage 2H Approval-Gated Control Execution
+
+Stage 2H adds approval-gated request records under `experiments/proposals/stage2h/`. Approved examples are limited to synthetic direct translation and solved-fixture replay controls. A no-op real-proposal request remains blocked by a pending approval record and future-unsolved corpus-slice checks.
+
+The `libreprimus approval-execution` CLI validates requests, builds plans, runs approved safe controls, and writes generated ignored results under `experiments/results/approval-gated-execution/stage2h/`. Stage 2H does not approve real unsolved-page execution, generate candidate plaintexts for unsolved pages, score outputs, use CUDA, activate canonical corpus, or finalize page boundaries.

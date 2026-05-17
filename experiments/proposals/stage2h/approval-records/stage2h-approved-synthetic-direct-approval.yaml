@@ -1,0 +1,21 @@
+record_type: experiment_approval_record
+approval_id: stage2h-approved-synthetic-direct-approval
+proposal_id: stage2h-approved-synthetic-direct-proposal
+proposal_sha256: e81d9f52e5614108665ba666007f0b8eb0440a1f1e41b4dfa30a6ba1673cc296
+approval_status: approved
+approved_for_execution: true
+approved_by: stage2h-test-approval
+approved_at_utc: "2026-05-17T00:00:00Z"
+approval_scope:
+  proposal_id: stage2h-approved-synthetic-direct-proposal
+  execution_scope: synthetic_only
+constraints:
+  - Synthetic control only.
+  - Not valid for unsolved pages.
+  - Search, candidate generation, scoring, and CUDA remain disabled.
+expiry_utc: "2099-01-01T00:00:00Z"
+notes:
+  - Committed approved record is limited to a synthetic control proposal.
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false

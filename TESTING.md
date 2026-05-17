@@ -159,4 +159,10 @@ Stage 2G adds tests for proposal schemas, approval records, approval gates, revi
 
 The tests assert that pending, denied, missing, invalid, expired, and mismatched approvals block execution; committed Stage 2G proposals are unapproved and non-executable; and review packets contain no candidate plaintext outputs.
 
+## Stage 2H Approval-Gated Execution Tests
+
+Stage 2H adds tests for approval-gated request schemas, approval gate behavior, approved synthetic and solved-control execution, blocked no-op real proposals, CLI behavior, and committed Stage 2H files.
+
+The tests assert that proposal SHA, scope, expiry, approver, and constraints are checked; approved synthetic and solved-control requests pass; no approval, pending approval, denied approval, expired approval, wrong scope, mismatched SHA, and future-unsolved proposals block; and search, candidate generation, scoring, and CUDA remain disabled.
+
 The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.

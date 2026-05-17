@@ -7,6 +7,8 @@ from typing import Any
 
 import yaml
 
+from libreprimus.approval_execution.approval_gate import evaluate_approval_execution_gate
+from libreprimus.approval_execution.request_loader import load_approval_execution_request
 from libreprimus.consistency.models import ConsistencyCheckResult, fail_result, pass_result
 from libreprimus.experiment_execution.manifest_loader import load_cpu_execution_manifest
 from libreprimus.experiment_proposals.approval_records import load_approval_record
@@ -25,6 +27,8 @@ EXPLORATORY_MANIFEST_DIR = repo_root() / "experiments/manifests/exploratory"
 CPU_EXECUTION_MANIFEST_DIR = repo_root() / "experiments/manifests/cpu-execution"
 PROPOSAL_DIR = repo_root() / "experiments/proposals/stage2g"
 APPROVAL_RECORD_DIR = repo_root() / "experiments/proposals/stage2g/approval-records"
+STAGE2H_PROPOSAL_DIR = repo_root() / "experiments/proposals/stage2h"
+STAGE2H_APPROVAL_RECORD_DIR = repo_root() / "experiments/proposals/stage2h/approval-records"
 REGISTRY_PATH = repo_root() / DEFAULT_REGISTRY_PATH
 
 
@@ -48,6 +52,8 @@ def check_manifest_consistency(
     cpu_execution_manifest_dir: Path = CPU_EXECUTION_MANIFEST_DIR,
     proposal_dir: Path = PROPOSAL_DIR,
     approval_record_dir: Path = APPROVAL_RECORD_DIR,
+    stage2h_proposal_dir: Path = STAGE2H_PROPOSAL_DIR,
+    stage2h_approval_record_dir: Path = STAGE2H_APPROVAL_RECORD_DIR,
     registry_path: Path = REGISTRY_PATH,
 ) -> list[ConsistencyCheckResult]:
     results: list[ConsistencyCheckResult] = []
@@ -255,6 +261,95 @@ def check_manifest_consistency(
         results.append(pass_result(GROUP, "proposal_human_approval_required", "Future unsolved proposals require human approval."))
     if approval_records and approved_records == 0:
         results.append(pass_result(GROUP, "no_stage2g_approved_records", "No approved Stage 2G approval records are committed."))
+
+    stage2h_proposals = sorted(
+        path
+        for path in stage2h_proposal_dir.glob("*.yaml")
+        if not path.name.endswith("-request.yaml")
+    )
+    stage2h_requests = sorted(stage2h_proposal_dir.glob("*-request.yaml"))
+    stage2h_approved_records = 0
+    stage2h_approved_unsolved_records = 0
+    stage2h_proposal_by_id: dict[str, Any] = {}
+    for proposal in stage2h_proposals:
+        try:
+            loaded = load_experiment_proposal(proposal)
+        except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+            results.append(fail_result(GROUP, "stage2h_proposal_valid", str(exc), path=proposal))
+            continue
+        stage2h_proposal_by_id[loaded.proposal_id] = loaded.payload
+        results.append(pass_result(GROUP, "stage2h_proposal_valid", "Stage 2H proposal validates.", path=proposal))
+        _check_proposal_flags(results, loaded.payload, proposal)
+        if not _no_raw_dump(proposal):
+            results.append(fail_result(GROUP, "manifest_no_raw_dump", "Proposal appears to include raw data.", path=proposal))
+
+    for approval_record in sorted(stage2h_approval_record_dir.glob("*.yaml")):
+        try:
+            loaded = load_approval_record(approval_record)
+        except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+            results.append(fail_result(GROUP, "stage2h_approval_record_valid", str(exc), path=approval_record))
+            continue
+        results.append(pass_result(GROUP, "stage2h_approval_record_valid", "Stage 2H approval record validates.", path=approval_record))
+        if loaded.payload.get("approval_status") == "approved" or loaded.payload.get("approved_for_execution") is True:
+            stage2h_approved_records += 1
+            proposal_payload = stage2h_proposal_by_id.get(str(loaded.payload.get("proposal_id")), {})
+            corpus_slice = proposal_payload.get("corpus_slice", {}) if isinstance(proposal_payload, dict) else {}
+            approval_scope = loaded.payload.get("approval_scope", {})
+            safe_scope = isinstance(approval_scope, dict) and approval_scope.get("execution_scope") in {
+                "synthetic_only",
+                "solved_fixture_only",
+                "synthetic_and_solved_fixture_only",
+            }
+            if (
+                not safe_scope
+                or not isinstance(corpus_slice, dict)
+                or corpus_slice.get("slice_kind") == "future_unsolved_page_candidate"
+            ):
+                stage2h_approved_unsolved_records += 1
+                results.append(
+                    fail_result(
+                        GROUP,
+                        "stage2h_no_approved_unsolved_records",
+                        "Stage 2H approved records must be synthetic or solved-control only.",
+                        path=approval_record,
+                    )
+                )
+
+    for request in stage2h_requests:
+        try:
+            loaded_request = load_approval_execution_request(request)
+            gate = evaluate_approval_execution_gate(loaded_request)
+        except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
+            results.append(fail_result(GROUP, "stage2h_request_valid", str(exc), path=request))
+            continue
+        results.append(pass_result(GROUP, "stage2h_request_valid", "Stage 2H request validates.", path=request))
+        if loaded_request.payload.get("search_execution_enabled") is not False:
+            results.append(fail_result(GROUP, "stage2h_request_flags_false", "search_execution_enabled must be false.", path=request))
+        if loaded_request.payload.get("scoring_enabled") is not False:
+            results.append(fail_result(GROUP, "stage2h_request_flags_false", "scoring_enabled must be false.", path=request))
+        if loaded_request.payload.get("cuda_enabled") is not False:
+            results.append(fail_result(GROUP, "stage2h_request_flags_false", "cuda_enabled must be false.", path=request))
+        if loaded_request.payload.get("unsolved_execution_allowed") is not False:
+            results.append(fail_result(GROUP, "stage2h_request_flags_false", "unsolved_execution_allowed must be false.", path=request))
+        if loaded_request.execution_scope == "no_op_review_only" and gate.approval_gate_status != "blocked":
+            results.append(fail_result(GROUP, "stage2h_noop_real_blocked", "No-op real request must remain blocked.", path=request))
+
+    if stage2h_proposals and not any(result.check_name == "stage2h_proposal_valid" and result.is_failure for result in results):
+        results.append(pass_result(GROUP, "stage2h_proposals_valid", "Stage 2H proposals validate."))
+    if stage2h_requests and not any(result.check_name == "stage2h_request_valid" and result.is_failure for result in results):
+        results.append(pass_result(GROUP, "stage2h_requests_valid", "Stage 2H requests validate."))
+    if stage2h_requests and not any(result.check_name == "stage2h_request_flags_false" and result.is_failure for result in results):
+        results.append(pass_result(GROUP, "stage2h_request_flags_false", "Stage 2H requests keep unsafe flags false."))
+    if stage2h_approved_records and stage2h_approved_unsolved_records == 0:
+        results.append(
+            pass_result(
+                GROUP,
+                "stage2h_no_approved_unsolved_records",
+                "Stage 2H approved records are limited to synthetic or solved controls.",
+            )
+        )
+    if stage2h_requests and not any(result.check_name == "stage2h_noop_real_blocked" and result.is_failure for result in results):
+        results.append(pass_result(GROUP, "stage2h_noop_real_blocked", "Stage 2H no-op real request remains blocked."))
     return results
 
 

@@ -122,6 +122,12 @@ Stage 2G added proposal schemas, approval record schemas, review checklists, blo
 
 Implement an approval-gated execution path for approved proposals, initially limited to synthetic/solved controls or a no-op real proposal. Do not jump directly to broad unsolved search, scoring campaigns, or CUDA.
 
+Stage 2H added approval-gated execution request, plan, and result schemas, approved synthetic and solved-control approval examples, blocked no-op real-proposal handling, `libreprimus approval-execution` CLI commands, tests, and documentation. It does not approve real unsolved-page execution and does not start search, candidate generation, scoring, CUDA, canonical corpus activation, or page-boundary finalization.
+
+## Stage 2I - First real bounded CPU exploratory approval packet
+
+Prepare and review the first real bounded CPU exploratory experiment approval packet. Do not execute it unless explicit human approval is supplied in a separate future step, and do not broaden into search campaigns or CUDA.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

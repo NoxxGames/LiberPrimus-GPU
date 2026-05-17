@@ -73,3 +73,7 @@ Stage 2F CPU execution is still small correctness plumbing, not a benchmark. It 
 ## Stage 2G Proposal Scope
 
 Stage 2G adds proposal and approval records only. Hardware performance claims remain out of scope because proposals are blocked pending explicit human approval and do not execute.
+
+## Stage 2H Control Execution Scope
+
+Stage 2H approval-gated execution is still not a benchmark stage. Approved controls may run synthetic and solved-fixture-only requests, but real unsolved-page execution, search, scoring, and CUDA remain disabled.

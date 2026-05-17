@@ -1,0 +1,84 @@
+record_type: experiment_proposal
+proposal_id: stage2h-noop-real-proposal
+proposal_version: experiment-proposal-v0
+title: Stage 2H no-op real proposal gate check
+description: Review-only future page-candidate proposal used to prove real proposals remain blocked.
+proposed_stage: Stage 2H
+proposal_status: ready_for_review
+human_approval_required: true
+approved_for_execution: false
+execution_enabled: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+execution_scope: no_op_review_only
+corpus_slice:
+  slice_id: stage2h-noop-real-future-page-candidate
+  slice_kind: future_unsolved_page_candidate
+  source: future-reviewed-corpus-placeholder
+  corpus_candidate_id: rtkd-master-v0-candidate
+  selector:
+    page_candidate_id: human-review-required
+  review_required: true
+transform_space:
+  transform_space_id: stage2h-noop-caesar-preview
+  transform_family: caesar_shift_preview
+  execution_supported: false
+  dry_run_supported: true
+parameter_bounds:
+  shift_range:
+    start: 0
+    end: 28
+    step: 1
+candidate_count_estimate: 29
+candidate_count_upper_bound: 29
+safety_gates:
+  - human_approval_required
+  - execution_disabled
+  - search_disabled
+  - candidate_generation_disabled
+  - scoring_disabled
+  - cuda_disabled
+expected_outputs:
+  review_only: true
+  execution_expected: false
+result_store_policy:
+  mode: review_only
+  import_enabled: false
+rollback_plan:
+  stop_condition: No real execution is permitted in Stage 2H.
+review_checklist:
+  record_type: experiment_review_checklist
+  checklist_id: stage2h-noop-real-checklist
+  proposal_id: stage2h-noop-real-proposal
+  items:
+    - item_id: no-real-execution
+      question: Is real unsolved execution blocked?
+      required_answer: true
+      actual_answer: true
+      status: pass
+      severity: info
+      notes: The request uses no_op_review_only and a pending approval record.
+    - item_id: no-approved-unsolved-record
+      question: Is there no approved unsolved-page approval record?
+      required_answer: true
+      actual_answer: true
+      status: pass
+      severity: info
+      notes: Stage 2H does not commit approved real-proposal records.
+  required_approvals:
+    - future-human-review
+  blocking_items:
+    - no-approved-unsolved-record
+  non_blocking_warnings: []
+  reviewer_notes: Review-only gate check; no execution.
+  completed: false
+provenance:
+  source: stage2h-noop-real-proposal
+notes:
+  - Contains no raw unsolved text and must remain blocked.
+

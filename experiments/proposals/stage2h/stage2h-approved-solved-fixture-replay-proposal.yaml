@@ -1,0 +1,83 @@
+record_type: experiment_proposal
+proposal_id: stage2h-approved-solved-fixture-replay-proposal
+proposal_version: experiment-proposal-v0
+title: Stage 2H approved solved-fixture replay control
+description: Solved-fixture replay control proposal for testing approval-gated execution.
+proposed_stage: Stage 2H
+proposal_status: approved
+human_approval_required: true
+approved_for_execution: false
+execution_enabled: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+execution_scope: solved_fixture_only
+execution_manifest_path: experiments/manifests/cpu-execution/stage2f-solved-baseline-replay.yaml
+corpus_slice:
+  slice_id: stage2h-solved-fixture-control
+  slice_kind: solved_fixture_group
+  source: stage2a-all-known-solved-baselines
+  corpus_candidate_id: solved-fixture-regression
+  selector:
+    manifest_path: experiments/manifests/solved-baselines/stage2a-all-known-solved-baselines.yaml
+  solved_fixture_only: true
+  review_required: false
+transform_space:
+  transform_space_id: stage2h-solved-fixture-replay
+  transform_family: direct_translation
+  registered_transform_id: solved_baseline_replay
+  execution_supported: true
+  dry_run_supported: true
+parameter_bounds:
+  fixture_count: 10
+candidate_count_estimate: 10
+candidate_count_upper_bound: 10
+safety_gates:
+  - approved_record_required
+  - solved_fixture_only_scope
+  - search_disabled
+  - candidate_generation_disabled
+  - scoring_disabled
+  - cuda_disabled
+expected_outputs:
+  expected_pass_count: 10
+  expected_status: pass
+result_store_policy:
+  mode: preview_only
+  import_enabled: false
+rollback_plan:
+  stop_condition: Revoke the solved-control approval record or remove the request file.
+review_checklist:
+  record_type: experiment_review_checklist
+  checklist_id: stage2h-approved-solved-fixture-replay-checklist
+  proposal_id: stage2h-approved-solved-fixture-replay-proposal
+  items:
+    - item_id: solved-fixture-only
+      question: Is the proposal limited to already known solved fixtures?
+      required_answer: true
+      actual_answer: true
+      status: pass
+      severity: info
+      notes: Uses the Stage 2A all-known solved baseline manifest.
+    - item_id: no-new-solve
+      question: Does the proposal avoid claiming a new solve?
+      required_answer: true
+      actual_answer: true
+      status: pass
+      severity: info
+      notes: Regression replay only.
+  required_approvals:
+    - stage2h-control-approval
+  blocking_items: []
+  non_blocking_warnings: []
+  reviewer_notes: Approved solved-control proposal; proposal payload itself stays non-executable.
+  completed: false
+provenance:
+  source: stage2h-control-proposal
+notes:
+  - Solved-fixture approval is not valid for unsolved pages.
+

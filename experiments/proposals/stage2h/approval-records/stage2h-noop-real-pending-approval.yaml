@@ -1,0 +1,18 @@
+record_type: experiment_approval_record
+approval_id: stage2h-noop-real-pending-approval
+proposal_id: stage2h-noop-real-proposal
+proposal_sha256: ec578c475af7d3080ca91b975d358c43f72eb9573429d97ecc6ac25515a6e09c
+approval_status: pending
+approved_for_execution: false
+approved_by: ""
+approved_at_utc: ""
+approval_scope:
+  proposal_id: stage2h-noop-real-proposal
+  execution_scope: no_op_review_only
+constraints: []
+expiry_utc: ""
+notes:
+  - Pending real-proposal record must block execution in Stage 2H.
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false

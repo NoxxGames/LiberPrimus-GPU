@@ -75,6 +75,11 @@ experiments/results/**
 !experiments/results/proposal-reviews/.gitkeep
 !experiments/results/proposal-reviews/stage2g/
 !experiments/results/proposal-reviews/stage2g/.gitkeep
+!experiments/results/approval-gated-execution/
+!experiments/results/approval-gated-execution/README.md
+!experiments/results/approval-gated-execution/.gitkeep
+!experiments/results/approval-gated-execution/stage2h/
+!experiments/results/approval-gated-execution/stage2h/.gitkeep
 experiments/reports/**
 !experiments/reports/
 !experiments/reports/README.md

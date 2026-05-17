@@ -1,0 +1,20 @@
+record_type: approval_gated_execution_request
+request_id: stage2h-approved-solved-fixture-replay-request
+request_version: approval-gated-execution-request-v0
+proposal_path: experiments/proposals/stage2h/stage2h-approved-solved-fixture-replay-proposal.yaml
+approval_record_path: experiments/proposals/stage2h/approval-records/stage2h-approved-solved-fixture-replay-approval.yaml
+output_dir: experiments/results/approval-gated-execution/stage2h
+requested_at_utc: "2026-05-17T00:00:00Z"
+requested_by: stage2h-test-request
+execution_scope: solved_fixture_only
+unsolved_execution_allowed: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+notes:
+  - Approved solved-control request for Stage 2H gate testing only.
+

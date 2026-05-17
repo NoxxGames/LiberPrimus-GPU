@@ -1,0 +1,21 @@
+record_type: experiment_approval_record
+approval_id: stage2h-approved-solved-fixture-replay-approval
+proposal_id: stage2h-approved-solved-fixture-replay-proposal
+proposal_sha256: facd9db87e5b9f89005aa111dace73f16313f7d60c24acb1bd67f11059fba4a5
+approval_status: approved
+approved_for_execution: true
+approved_by: stage2h-test-approval
+approved_at_utc: "2026-05-17T00:00:00Z"
+approval_scope:
+  proposal_id: stage2h-approved-solved-fixture-replay-proposal
+  execution_scope: solved_fixture_only
+constraints:
+  - Solved fixture replay only.
+  - Not valid for unsolved pages.
+  - Search, candidate generation, scoring, and CUDA remain disabled.
+expiry_utc: "2099-01-01T00:00:00Z"
+notes:
+  - Committed approved record is limited to known solved-fixture replay.
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false

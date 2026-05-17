@@ -87,6 +87,17 @@ jobs:
             --out-dir "${RUNNER_TEMP}/stage2g-review" \
             --allow-warnings
 
+      - name: Approval-gated execution smoke
+        run: |
+          python -m libreprimus.cli approval-execution validate \
+            --request experiments/proposals/stage2h/stage2h-approved-synthetic-direct-request.yaml
+          python -m libreprimus.cli approval-execution validate \
+            --request experiments/proposals/stage2h/stage2h-noop-real-request.yaml
+          python -m libreprimus.cli approval-execution run \
+            --request experiments/proposals/stage2h/stage2h-approved-synthetic-direct-request.yaml \
+            --out-dir "${RUNNER_TEMP}/stage2h-approval-execution" \
+            --allow-warnings
+
   cmake-cpu-smoke:
     name: CMake CPU Smoke
     runs-on: ubuntu-latest

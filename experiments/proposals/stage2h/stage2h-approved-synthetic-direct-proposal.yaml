@@ -1,0 +1,82 @@
+record_type: experiment_proposal
+proposal_id: stage2h-approved-synthetic-direct-proposal
+proposal_version: experiment-proposal-v0
+title: Stage 2H approved synthetic direct control
+description: Synthetic direct-translation control proposal for testing approval-gated execution.
+proposed_stage: Stage 2H
+proposal_status: approved
+human_approval_required: true
+approved_for_execution: false
+execution_enabled: false
+search_execution_enabled: false
+candidate_generation_enabled: false
+scoring_enabled: false
+cuda_enabled: false
+canonical_corpus_active: false
+page_boundaries_final: false
+trusted_as_canonical: false
+execution_scope: synthetic_only
+execution_manifest_path: experiments/manifests/cpu-execution/stage2f-synthetic-direct-execution.yaml
+corpus_slice:
+  slice_id: stage2h-synthetic-direct-control
+  slice_kind: synthetic
+  source: stage2f-synthetic-direct-execution
+  corpus_candidate_id: synthetic-control
+  selector:
+    synthetic_id: stage2f-synthetic-direct-abc
+  review_required: false
+transform_space:
+  transform_space_id: stage2h-direct-control
+  transform_family: direct_translation
+  registered_transform_id: direct_translation
+  execution_supported: true
+  dry_run_supported: true
+parameter_bounds:
+  transform_count: 1
+candidate_count_estimate: 1
+candidate_count_upper_bound: 1
+safety_gates:
+  - approved_record_required
+  - synthetic_scope_only
+  - search_disabled
+  - candidate_generation_disabled
+  - scoring_disabled
+  - cuda_disabled
+expected_outputs:
+  stage2f_manifest: experiments/manifests/cpu-execution/stage2f-synthetic-direct-execution.yaml
+  expected_status: pass
+result_store_policy:
+  mode: preview_only
+  import_enabled: false
+rollback_plan:
+  stop_condition: Revoke the synthetic approval record or remove the request file.
+review_checklist:
+  record_type: experiment_review_checklist
+  checklist_id: stage2h-approved-synthetic-direct-checklist
+  proposal_id: stage2h-approved-synthetic-direct-proposal
+  items:
+    - item_id: synthetic-only
+      question: Is the proposal limited to synthetic input?
+      required_answer: true
+      actual_answer: true
+      status: pass
+      severity: info
+      notes: Synthetic ABC fixture only.
+    - item_id: no-search
+      question: Are search, scoring, candidate generation, and CUDA disabled?
+      required_answer: true
+      actual_answer: true
+      status: pass
+      severity: info
+      notes: Stage 2H control execution keeps all unsafe flags false.
+  required_approvals:
+    - stage2h-control-approval
+  blocking_items: []
+  non_blocking_warnings: []
+  reviewer_notes: Approved synthetic control proposal; proposal payload itself stays non-executable.
+  completed: false
+provenance:
+  source: stage2h-control-proposal
+notes:
+  - Synthetic approval is for gate testing only and is not valid for unsolved pages.
+

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/approval-gated-execution-result-v0.schema.json",
+  "title": "approval-gated-execution-result-v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "result_id",
+    "plan_id",
+    "request_id",
+    "proposal_id",
+    "approval_id",
+    "generated_at_utc",
+    "git_commit",
+    "execution_scope",
+    "execution_performed",
+    "execution_status",
+    "underlying_execution_result_ids",
+    "summary",
+    "search_performed",
+    "candidate_generation_performed",
+    "scoring_used",
+    "cuda_used",
+    "unsolved_execution_allowed",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "trusted_as_canonical",
+    "warnings",
+    "elapsed_ms"
+  ],
+  "properties": {
+    "record_type": { "const": "approval_gated_execution_result" },
+    "result_id": { "type": "string", "minLength": 1 },
+    "plan_id": { "type": "string", "minLength": 1 },
+    "request_id": { "type": "string", "minLength": 1 },
+    "proposal_id": { "type": "string", "minLength": 1 },
+    "approval_id": { "type": "string" },
+    "generated_at_utc": { "type": "string" },
+    "git_commit": { "type": "string" },
+    "execution_scope": {
+      "type": "string",
+      "enum": ["synthetic_only", "solved_fixture_only", "synthetic_and_solved_fixture_only", "no_op_review_only"]
+    },
+    "execution_performed": { "type": "boolean" },
+    "execution_status": { "type": "string", "enum": ["pass", "fail", "blocked", "skipped", "error"] },
+    "underlying_execution_result_ids": { "type": "array", "items": { "type": "string" } },
+    "summary": { "type": "object" },
+    "search_performed": { "const": false },
+    "candidate_generation_performed": { "const": false },
+    "scoring_used": { "const": false },
+    "cuda_used": { "const": false },
+    "unsolved_execution_allowed": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "elapsed_ms": { "type": "number", "minimum": 0 }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "execution_status": { "const": "blocked" } },
+        "required": ["execution_status"]
+      },
+      "then": {
+        "properties": { "execution_performed": { "const": false } }
+      }
+    }
+  ],
+  "additionalProperties": true
+}

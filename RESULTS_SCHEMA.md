@@ -210,4 +210,14 @@ Stage 2G adds committed schemas under `schemas/experiments/`:
 
 Generated `experiment_review_packet` records are ignored outputs under `experiments/results/proposal-reviews/`. Approval examples committed in Stage 2G are pending or denied only; no approved approval records are committed.
 
+## Stage 2H Approval-Gated Execution Schemas
+
+Stage 2H adds committed schemas under `schemas/experiments/`:
+
+- `approval-gated-execution-request-v0.schema.json`
+- `approval-gated-execution-plan-v0.schema.json`
+- `approval-gated-execution-result-v0.schema.json`
+
+Approval-gated execution records bind a proposal, a scope-bound approval record, and an output directory. Stage 2H permits approved execution only for synthetic and solved-control requests. Generated approval execution records are ignored under `experiments/results/approval-gated-execution/`; no approved unsolved-page approval records are committed.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

@@ -286,6 +286,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Generated review packets are ignored and must not be committed.
 - Stage 2G does not execute proposals, generate candidates, score outputs, use CUDA, activate canonical corpus, or finalize page boundaries.
 
+## Stage 2H Approval-Gated Execution Rules
+
+- Approved execution in Stage 2H is limited to synthetic and solved-control scopes.
+- Never commit approved approval records for unsolved-page execution without explicit future instruction.
+- Approved records must be scope-bound and expire.
+- Approval-gated execution must still reject search, candidate generation, scoring, and CUDA unless a future stage explicitly changes that.
+- Generated approval execution outputs are ignored and must not be committed.
+- Stage 2H does not activate canonical corpus, finalize page boundaries, or claim unsolved pages solved.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.
