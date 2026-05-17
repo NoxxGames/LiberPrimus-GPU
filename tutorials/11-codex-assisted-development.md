@@ -91,3 +91,7 @@ For lead inspection and scoring refinement work, require `libreprimus candidate-
 ## Stage 3C Guardrails
 
 For scoring calibration work, require `libreprimus scoring calibrate`, `scoring calibration-summary`, schema validation, null-control determinism tests, crib-check tests, and generated-output ignore checks. Do not tune scoring around one candidate, do not use external services or large dictionaries, and do not treat crib hits or positive-control-like labels as solve evidence.
+
+## Stage 3D Guardrails
+
+For bounded Vigenere key-list work, require `libreprimus bounded-run run-vigenere-key-list`, `bounded-run summary`, exact key-count tests, key-expansion rejection tests, calibrated scoring checks, and generated-output ignore checks. The Stage 3D key list is explicit-list only; do not infer keys, mutate keys, search key lengths, use CUDA, or commit candidate dumps.

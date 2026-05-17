@@ -346,6 +346,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not tune scoring to make a specific candidate look good.
 - Generated calibration outputs are ignored and must not be committed.
 
+## Stage 3D Small Vigenere Key-List Rules
+
+- Small key-list Vigenere runs are explicit-list only.
+- Do not expand key lists without a manifest update and candidate-count checks.
+- Key-list hits are leads only, not solve claims.
+- Full Stage 3D candidate outputs remain generated outputs and must not be committed.
+- Calibrated confidence labels are triage metadata only.
+- CUDA, canonical corpus activation, page-boundary finalization, broad key search, and solve claims remain out of scope.
+
 ## Public Documentation Wording Rules
 
 - Do not use ambiguous non-goals wording for deferred roadmap work.

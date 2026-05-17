@@ -106,6 +106,15 @@ def check_item(policy: OperatorPolicy, item: dict[str, Any]) -> PolicyCheckResul
             }
         )
 
+    key_count = _declared_key_count(item)
+    if key_count is not None:
+        add(
+            "declared_key_count_within_bound",
+            key_count <= int(item.get("candidate_count_upper_bound", 0)),
+            "Declared explicit key count is within candidate_count_upper_bound.",
+            "declared_key_count_exceeds_candidate_bound",
+        )
+
     selector = dict(dict(item.get("corpus_slice", {})).get("selector", {}))
     if item.get("experiment_kind") == "caesar_affine_reviewable_slice" and (
         not selector.get("page_candidate_id") or "placeholder" in str(selector.get("page_candidate_id"))
@@ -121,3 +130,17 @@ def check_item(policy: OperatorPolicy, item: dict[str, Any]) -> PolicyCheckResul
         blocking_reasons=blocking,
         warnings=warnings,
     )
+
+
+def _declared_key_count(item: dict[str, Any]) -> int | None:
+    if str(item.get("experiment_kind", "")) not in {"vigenere_tiny_key_list_preview", "vigenere_key_list_preview"}:
+        return None
+    families = dict(item.get("transform_plan", {})).get("families", [])
+    for family in families:
+        if not isinstance(family, dict):
+            continue
+        params = dict(family.get("parameters", {}))
+        keys = params.get("keys")
+        if isinstance(keys, list):
+            return len(keys)
+    return None

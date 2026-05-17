@@ -14,6 +14,7 @@ from libreprimus.bounded_experiments.policy_loader import load_operator_policy
 from libreprimus.bounded_experiments.queue_loader import load_bounded_queue
 from libreprimus.bounded_execution.models import MissingReviewableSliceInput
 from libreprimus.bounded_execution.runner import run_caesar_affine_item
+from libreprimus.bounded_execution.vigenere_key_list import run_vigenere_key_list_item
 from libreprimus.paths import repo_root
 
 
@@ -167,6 +168,37 @@ def _run_policy_passing_item(
                 "solve_claim_made": False,
                 "policy_check_status": check.status,
             },
+            warnings=check.warnings,
+        )
+    if kind == "vigenere_tiny_key_list_preview":
+        stage3d_summary = run_vigenere_key_list_item(
+            item,
+            out_dir=out_dir / str(item["item_id"]),
+            top_k=int(item.get("candidate_count_upper_bound", 4)),
+            policy_id=policy_id,
+        )
+        return _base_result(
+            queue_id,
+            policy_id,
+            item,
+            execution_performed=True,
+            execution_status="pass",
+            deferred_reason=None,
+            summary={
+                "status": "pass",
+                "stage3d_run_id": stage3d_summary.run_id,
+                "input_slice_id": stage3d_summary.input_slice_id,
+                "input_length": stage3d_summary.input_length,
+                "candidate_count": stage3d_summary.candidate_count,
+                "vigenere_candidate_count": stage3d_summary.vigenere_candidate_count,
+                "top_candidate": stage3d_summary.top_candidate,
+                "candidate_output_paths": stage3d_summary.output_paths,
+                "solve_claim_made": False,
+                "policy_check_status": check.status,
+            },
+            search_performed=stage3d_summary.search_performed,
+            scoring_used=stage3d_summary.scoring_used,
+            output_paths=dict(stage3d_summary.output_paths),
             warnings=check.warnings,
         )
     return _base_result(

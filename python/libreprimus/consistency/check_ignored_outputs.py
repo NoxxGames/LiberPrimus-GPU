@@ -36,6 +36,10 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/results/scoring-calibration/stage3c/calibration_summary.json",
         "experiments/results/scoring-calibration/stage3c/null_control_scores.jsonl",
         "experiments/results/scoring-calibration/stage3c/stage3_candidates_calibrated.jsonl",
+        "experiments/results/bounded-auto-runs/stage3d/candidate_records.jsonl",
+        "experiments/results/bounded-auto-runs/stage3d/top_candidates.jsonl",
+        "experiments/results/bounded-auto-runs/stage3d/summary.json",
+        "experiments/results/bounded-auto-runs/stage3d/calibrated_scores.jsonl",
         "local-test.sqlite3",
     ]
     trackable_paths = [

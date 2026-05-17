@@ -195,4 +195,10 @@ Stage 3C adds tests for positive-control loading, deterministic null controls, c
 
 The tests assert that solved fixture controls load, null controls are deterministic and length-matched, negative controls remain noisy or garbage, crib hits do not imply solve claims, calibration summaries validate, confidence labels are assigned, noisy synthetic candidates stay noisy or garbage, readable synthetic controls classify as positive/plausible, generated outputs are ignored, and the next queue item stays under policy.
 
+## Stage 3D Small Vigenere Key-List Tests
+
+Stage 3D adds tests for exact key-list loading, key expansion rejection, Gematria key mapping, explicit-key Vigenere execution, CLI execution, output schema validation, ignored generated outputs, queue candidate counts, and policy blocking when declared keys exceed the candidate bound.
+
+The tests assert that the Stage 3D key list remains exactly `LIBER`, `PRIMUS`, `DIVINITY`, and `CICADA`; the run produces exactly four candidates; candidate records include `key_text`, `key_indices`, calibrated confidence labels, `cuda_used=false`, and `solve_claim=false`; and generated Stage 3D outputs remain ignored.
+
 The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.

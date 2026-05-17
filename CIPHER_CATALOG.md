@@ -118,7 +118,7 @@ Stage 1D implements `prime_minus_one_stream` only as a known-solved p56 fixture 
 - Payload tokens are preserved and checked separately.
 - No generic prime-stream search, offset sweep, scoring, or CUDA acceleration is implemented. Stage 2A later registered this as a CPU reference solved-baseline transform.
 
-Generic broad affine/shift/search infrastructure remains unimplemented. Stage 3A adds one bounded CPU Caesar plus affine mod-29 enumerator for the policy-approved `841` candidate queue item only. Stage 3B adds a bounded reverse/decryption-convention comparison and refined lead scoring for the same candidate-count envelope. Stage 3C adds scoring calibration and queues a tiny explicit-key Vigenere preview for a future stage; it does not implement broad key search.
+Generic broad affine/shift/search infrastructure remains unimplemented. Stage 3A adds one bounded CPU Caesar plus affine mod-29 enumerator for the policy-approved `841` candidate queue item only. Stage 3B adds a bounded reverse/decryption-convention comparison and refined lead scoring for the same candidate-count envelope. Stage 3C adds scoring calibration and queues a tiny explicit-key Vigenere preview. Stage 3D executes that four-key explicit-list preview only; it does not implement broad key search.
 
 ## Stage 2A CPU Reference Transform Registry
 
@@ -131,7 +131,7 @@ Stage 2A registers the implemented known-solved baseline transforms as CPU refer
 - `prime_minus_one_stream`
 - `phi_prime_stream` as an alias of `prime_minus_one_stream`
 
-Every registry entry has `supports_gpu=false`, `search_enabled=false`, and `scoring_enabled=false`. The registry is used by solved-baseline manifests and does not implement broad affine/shift search, Vigenere key search, prime-stream search, CUDA acceleration, or unsolved-page campaign execution. Stage 3A through Stage 3C minimal triage scoring and calibration exist outside the registry for bounded CPU queue items only.
+Every registry entry has `supports_gpu=false`, `search_enabled=false`, and `scoring_enabled=false`. The registry is used by solved-baseline manifests and does not implement broad affine/shift search, Vigenere key search, prime-stream search, CUDA acceleration, or unsolved-page campaign execution. Stage 3A through Stage 3D minimal triage scoring, calibration, and explicit-list Vigenere preview execution exist outside the registry for bounded CPU queue items only.
 
 ## Stage 2B Result Store Relationship
 

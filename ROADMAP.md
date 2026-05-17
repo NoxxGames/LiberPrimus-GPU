@@ -158,6 +158,12 @@ Stage 3C added positive controls, deterministic null controls, negative controls
 
 Run the conservative Stage 3C-selected bounded CPU method with calibrated scoring. Keep the explicit key list tiny, generated outputs ignored, no CUDA, no broad key search, no canonical corpus activation, no page-boundary finalization, and no solve claim.
 
+Stage 3D added bounded explicit-key Vigenere execution for exactly `LIBER`, `PRIMUS`, `DIVINITY`, and `CICADA`. The run produced four ignored candidates; top key `LIBER` calibrated as `noisy`, so no solve claim is made.
+
+## Stage 3E - Method prioritization backlog
+
+If Stage 3D remains noisy, use Deep Research or a similarly bounded planning pass to prioritize the next conservative CPU method family. Do not jump directly to CUDA, broad Vigenere search, canonical corpus activation, page-boundary finalization, generated-output publication, or solve claims.
+
 ## Phase 1 - Corpus and known-solution reproduction
 
 Load locked corpus data and reproduce known solved-page behavior before new search work.

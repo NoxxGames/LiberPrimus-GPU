@@ -203,3 +203,17 @@ Run:
 ```
 
 Generated calibration records remain ignored under `experiments/results/scoring-calibration/stage3c/`. Stage 3C queued `stage3c-small-vigenere-known-motif-key-list` for Stage 3D because Stage 3A/3B leads remained `noisy` under calibrated controls.
+
+## Stage 3D Small Vigenere Key-List Preview
+
+Stage 3D runs the Stage 3C-selected queue item `stage3c-small-vigenere-known-motif-key-list`.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli bounded-run run-vigenere-key-list --policy experiments/policies/operator-policy-v0.yaml --queue experiments/queues/stage3c-bounded-cpu-queue.yaml --item-id stage3c-small-vigenere-known-motif-key-list --out-dir experiments/results/bounded-auto-runs/stage3d --top-k 4 --allow-warnings
+```
+
+The command tests exactly four declared keys: `LIBER`, `PRIMUS`, `DIVINITY`, and `CICADA`. It does not mutate keys, infer keys, search key lengths, use CUDA, or claim a solve.
+
+Generated candidate records and summaries remain ignored under `experiments/results/bounded-auto-runs/stage3d/`. The committed research log records only top-key score metadata and the calibrated confidence label.

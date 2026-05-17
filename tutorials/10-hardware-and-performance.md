@@ -90,6 +90,10 @@ Stage 3B inspects ignored Stage 3A outputs, reranks candidates with refined loca
 
 Stage 3C calibration is CPU-only local scoring work. It scores small positive, null, negative, and candidate control sets, writes ignored outputs, and makes no throughput, CUDA, or solve claim.
 
+## Stage 3D Vigenere Scope
+
+Stage 3D is also CPU-only. It runs exactly four explicit Vigenere keys from a committed queue item, writes ignored generated outputs, and does not justify GPU work or a solve claim.
+
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

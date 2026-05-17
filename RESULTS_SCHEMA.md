@@ -268,4 +268,17 @@ Stage 3C adds:
 
 Generated calibration records are ignored under `experiments/results/scoring-calibration/stage3c/`. They record positive, null, negative, and candidate score summaries, tiny crib hits, calibrated labels, score ranges, thresholds, and explicit `solve_claim=false` / `cuda_used=false` flags.
 
+## Stage 3D Bounded Vigenere Candidate Records
+
+Stage 3D reuses `bounded-candidate-record-v0` and `bounded-experiment-run-summary-v0` for the small explicit-key Vigenere preview. Candidate records add Stage 3D fields through schema `additionalProperties`:
+
+- `key_text`
+- `key_indices`
+- `calibrated_confidence_label`
+- `crib_hits`
+- `crib_hit_count`
+- `calibration_position`
+
+Generated records remain ignored under `experiments/results/bounded-auto-runs/stage3d/`. They must keep `cuda_used=false`, `solve_claim=false`, `canonical_corpus_active=false`, `page_boundaries_final=false`, and `trusted_as_canonical=false`.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

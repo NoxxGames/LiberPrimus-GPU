@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3C and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3D and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -22,7 +22,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad unsolved-page search campaigns: not started.
-- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, and Stage 3C calibration uses small local controls only.
+- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, and Stage 3D applies that scorer to a four-key explicit Vigenere preview only.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
 - Broad unsolved-page campaigns: not started.
@@ -54,6 +54,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Minimal CPU Caesar plus affine executor and triage scoring for the first `841` candidate bounded queue item.
 - Candidate lead inspection, refined triage scoring, reranking, and reverse-direction bounded comparison.
 - Scoring calibration with positive controls, null controls, negative controls, tiny crib checks, and a conservative Stage 3D queue recommendation.
+- Small explicit-key Vigenere preview for the four declared known-motif keys, with calibrated scoring and ignored generated outputs.
 
 ## Architecture summary
 
@@ -76,13 +77,14 @@ Current status:
 - Stage 3A: minimal CPU Caesar plus affine executor and triage scoring complete.
 - Stage 3B: Stage 3A lead inspection, scoring refinement, rerank, and reverse-direction comparison complete.
 - Stage 3C: scoring calibration, null controls, positive controls, and tiny crib checks complete.
+- Stage 3D: small Vigenere known-motif key-list preview complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad search/scoring/CUDA campaigns: not started.
-- Latest bounded review: Stage 3C calibrated scoring against controls and kept the Stage 3A/3B top leads classified `noisy`; no solve claim.
-- Next: Stage 3D run the conservative small Vigenere known-motif key-list preview with calibrated scoring.
+- Latest bounded review: Stage 3D ran the four-key Vigenere known-motif preview; top key `LIBER` calibrated as `noisy`; no solve claim.
+- Next: Stage 3E prioritize the next bounded method family, or inspect the Vigenere lead only if a human chooses to treat it as a weak lead.
 
 ## CI status
 
@@ -215,7 +217,7 @@ The first Caesar plus affine reviewable-slice queue item has candidate upper bou
 
 Stage 3B inspected Stage 3A top candidates, refined the scorer, reranked the 841 candidates, and ran the reverse-direction comparison. Both refined and reverse-direction top leads remain `noisy`.
 
-Stage 3C calibrated scoring against positive solved-fixture controls, deterministic null controls, negative controls, and tiny crib checks. The Stage 3A/3B top leads remain `noisy`, so Stage 3D should run the conservative small Vigenere known-motif key-list preview with calibrated scoring. No Stage 3A, Stage 3B, or Stage 3C output is a solve claim.
+Stage 3C calibrated scoring against positive solved-fixture controls, deterministic null controls, negative controls, and tiny crib checks. Stage 3D ran the conservative small Vigenere known-motif key-list preview for exactly four declared keys. The top key was `LIBER`, calibrated as `noisy`, so Stage 3E should prioritize the next bounded method family and avoid widening into broad key search or CUDA. No Stage 3A, Stage 3B, Stage 3C, or Stage 3D output is a solve claim.
 
 ## Stage 1B Atbash-Family Fixtures
 

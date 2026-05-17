@@ -47,6 +47,12 @@ class BoundedCandidateRecord:
     solve_claim: bool
     trusted_as_canonical: bool
     warnings: list[str] = field(default_factory=list)
+    key_text: str | None = None
+    key_indices: list[int] | None = None
+    calibrated_confidence_label: str | None = None
+    crib_hits: list[str] | None = None
+    crib_hit_count: int | None = None
+    calibration_position: dict[str, Any] | None = None
 
 
 @dataclass(frozen=True)
@@ -72,3 +78,4 @@ class BoundedRunSummary:
     solve_claim: bool
     trusted_as_canonical: bool
     warnings: list[str] = field(default_factory=list)
+    vigenere_candidate_count: int | None = None

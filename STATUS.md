@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3C scoring calibration, null controls, positive controls, and tiny crib checks are complete.
+Stage 3D small Vigenere known-motif key-list preview is complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, and Stage 3C calibrates that scorer with small local controls.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, and Stage 3D applies it to a four-key explicit Vigenere preview only.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 
@@ -240,6 +240,18 @@ Generated calibration JSON/JSONL outputs remain ignored under `experiments/resul
 
 Developer log: `docs/development-logs/2026-05-16-stage-3c-scoring-calibration-null-controls.md`.
 
+## Completed in Stage 3D
+
+Stage 3D added bounded explicit-key Vigenere execution for the Stage 3C-selected small known-motif key-list preview, CLI support, queue-runner integration, tests, documentation, and a summary-only research log.
+
+Local run summary: input slice `stage3a-page-candidate-018-reviewable-slice`, input length `87`, candidate count `4`, keys `LIBER`, `PRIMUS`, `DIVINITY`, `CICADA`.
+
+Top observed key: `LIBER`, total score `6.298395`, length-normalized score `4.753506`, calibrated confidence label `noisy`.
+
+Generated candidate records, calibrated score details, top candidates, warnings, and summary JSON remain ignored under `experiments/results/bounded-auto-runs/stage3d/`. The run is explicit-list only and does not mutate or expand keys. CUDA remains disabled, the canonical corpus remains inactive, page boundaries remain reviewable, and no solve claim is made.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3d-small-vigenere-key-list.md`.
+
 ## Next prompt recommendation
 
-Stage 3D - run the conservative small Vigenere known-motif key-list preview with calibrated scoring.
+Stage 3E - use Deep Research to prioritize the next bounded method family and generate a method backlog, unless a human explicitly chooses to inspect the noisy Vigenere lead first.
