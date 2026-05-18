@@ -11,3 +11,7 @@ Current classes include:
 - `archived_claim`: mutable or community-maintained claims that need review before use.
 
 Every record keeps `trusted_as_canonical=false`.
+
+Stage 3N adds separate Discord aggregate records under `data/observations/discord/` and
+`data/locks/third-party/discord-chats/`. These are not canonical archive records; they identify
+review queues for public links and method claims found in local admin-provided HTML exports.

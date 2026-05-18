@@ -13,6 +13,7 @@ from libreprimus.consistency.check_schemas import check_schema_consistency
 from libreprimus.consistency.check_archive_visual import check_archive_visual_consistency
 from libreprimus.consistency.check_hash_preimage import check_hash_preimage_consistency
 from libreprimus.consistency.check_image_analysis import check_image_analysis_consistency
+from libreprimus.consistency.check_discord_ingestion import check_discord_ingestion_consistency
 from libreprimus.consistency.export import write_summary
 from libreprimus.consistency.models import ConsistencyCheckResult, ConsistencyCheckSuiteResult
 
@@ -26,6 +27,7 @@ CHECK_GROUPS = {
     "archive_visual": check_archive_visual_consistency,
     "hash_preimage": check_hash_preimage_consistency,
     "image_analysis": check_image_analysis_consistency,
+    "discord_ingestion": check_discord_ingestion_consistency,
 }
 
 

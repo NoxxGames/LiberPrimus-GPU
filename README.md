@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3M and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3N and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -25,6 +25,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, and Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only.
 - Visual/image-derived observations: registry and deterministic feature summaries only; Stage 3K records source locks and reviewable observations, and Stage 3M records deterministic local image features. No image-derived text experiments are executed.
 - Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, with exact byte-string logging and no fuzzy or partial hash claims.
+- Discord source discovery: Stage 3N scans admin-provided local HTML exports only and commits aggregate/redacted records only. Raw logs, message bodies, usernames, and private attachment URLs are not committed.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
 - Broad unsolved-page campaigns: not started.
@@ -33,7 +34,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 3N OutGuess regression harness or archived HTML/resource importer after Stage 3M.
+- Stage 3O review of selected public Discord-discovered source links, or an OutGuess regression harness if source review is deferred.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -67,6 +68,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 3K historical archive/source-lock, local image metadata, visual numeric observation, and cookie/hash artefact registry.
 - Stage 3L bounded SHA-256 cookie-hash preimage packs for the two archived 2013 cookie artefacts.
 - Stage 3M deterministic local image-analysis CLI and visual-feature summaries.
+- Stage 3N admin-approved Discord HTML archive ingestion and source-discovery index.
 
 ## Architecture summary
 
@@ -99,6 +101,7 @@ Current status:
 - Stage 3K: archive and visual observation registry complete.
 - Stage 3L: bounded cookie-hash preimage packs complete.
 - Stage 3M: deterministic local image analysis complete.
+- Stage 3N: admin-approved Discord HTML archive ingestion complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -106,7 +109,8 @@ Current status:
 - Broad search/scoring/CUDA campaigns: not started.
 - Latest bounded hash review: Stage 3L tested `1809` deduplicated SHA-256 candidate byte strings against the two archived cookie/hash targets for `3618` exact comparisons and found `0` exact matches; no solve claim.
 - Latest image-analysis stage: Stage 3M analysed `58` ignored local page images, producing `406` component records, `58` symmetry records, `464` bitplane records, and `71` review-only feature candidates in ignored outputs. No OCR, AI/ML interpretation, image-derived search, or solve claim is made.
-- Next: Stage 3N OutGuess regression harness or archived HTML/resource importer.
+- Latest source-discovery stage: Stage 3N scanned `42` admin-provided local Discord HTML files, `465845099` bytes, `386511` extracted links, `2224` unique domains, `38647` attachment candidates, `48107` method-claim candidates, and `67660` numeric-observation candidates. Raw Discord logs, message bodies, usernames, private URLs, and generated review indexes remain uncommitted; no solve claim.
+- Next: Stage 3O review selected Discord-discovered public links and promote vetted records to the source registry, or run an OutGuess regression harness if source review is deferred.
 
 ## CI status
 

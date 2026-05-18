@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/discord-method-claim-candidate-v0.schema.json",
+  "title": "Discord Method Claim Candidate v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "claim_id",
+    "archive_id",
+    "source_file_sha256",
+    "claim_type",
+    "extracted_keywords",
+    "redacted_summary",
+    "raw_message_committed",
+    "usernames_committed",
+    "confidence",
+    "review_status",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "discord_method_claim_candidate" },
+    "claim_id": { "type": "string", "minLength": 1 },
+    "archive_id": { "type": "string", "minLength": 1 },
+    "source_file_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "claim_type": {
+      "enum": [
+        "transform_method",
+        "key_candidate",
+        "stream_candidate",
+        "visual_observation",
+        "gp_sum_claim",
+        "rune_count_claim",
+        "false_positive_warning",
+        "tried_and_failed",
+        "source_reference",
+        "unknown"
+      ]
+    },
+    "extracted_keywords": { "type": "array", "items": { "type": "string" } },
+    "redacted_summary": { "type": "string" },
+    "raw_message_committed": { "const": false },
+    "usernames_committed": { "const": false },
+    "confidence": { "enum": ["low", "review_required"] },
+    "review_status": { "enum": ["unreviewed", "machine_checked", "human_review_required", "rejected"] },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

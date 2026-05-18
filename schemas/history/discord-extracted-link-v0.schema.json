@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/discord-extracted-link-v0.schema.json",
+  "title": "Discord Extracted Link v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "link_id",
+    "archive_id",
+    "source_file_sha256",
+    "url",
+    "normalized_url",
+    "domain",
+    "url_kind",
+    "surrounding_text_redacted",
+    "message_body_committed",
+    "review_status",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "discord_extracted_link" },
+    "link_id": { "type": "string", "minLength": 1 },
+    "archive_id": { "type": "string", "minLength": 1 },
+    "source_file_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "url": { "type": "string", "minLength": 1 },
+    "normalized_url": { "type": "string", "minLength": 1 },
+    "domain": { "type": "string" },
+    "url_kind": {
+      "enum": [
+        "github",
+        "fandom",
+        "reddit",
+        "pastebin",
+        "google_docs",
+        "internet_archive",
+        "discord_attachment",
+        "image",
+        "audio",
+        "pdf",
+        "html",
+        "unknown"
+      ]
+    },
+    "surrounding_text_redacted": { "const": true },
+    "message_body_committed": { "const": false },
+    "review_status": { "enum": ["unreviewed", "machine_checked", "human_review_required", "rejected"] },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

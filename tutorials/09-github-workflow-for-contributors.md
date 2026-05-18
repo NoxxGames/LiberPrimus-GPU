@@ -20,6 +20,8 @@ Do not attach or commit raw corpus files, generated alignment dumps, local workb
 
 Stage 3K also keeps local page images under `third_party/LiberPrimusPages/` ignored. Commit only lock records, observation records, schemas, docs, tests, and source code.
 
+Stage 3N keeps admin-provided Discord HTML logs under `third_party/LiberPrimusDiscordChats/` ignored. Commit only schemas, code, docs, tests, aggregate/redacted records, and research summaries.
+
 ## Pull Requests
 
 Explain validation commands, note raw/generated exclusions, and link relevant docs or issues.

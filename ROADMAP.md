@@ -210,9 +210,13 @@ Stage 3L runs explicit SHA-256-only literal and numeric/base29 candidate packs a
 
 Stage 3M adds deterministic local Liber Primus page-image analysis CLIs and visual-feature summaries. It records grayscale statistics, threshold summaries, 4-connected component summaries, symmetry metrics, bit-plane densities, and review-only feature candidates. Generated outputs remain ignored, no OCR or AI/ML interpretation is used, and no image-derived search or solve claim is made.
 
-## Stage 3N - OutGuess regression harness or archived HTML/resource importer
+## Stage 3N - Admin-approved Discord HTML archive ingestion
 
-After Stage 3M, add an OutGuess regression harness or archived HTML/resource importer. If image-analysis feature IDs look useful, route them through visual feature review and seed promotion before any bounded execution. Do not jump to CUDA.
+Stage 3N adds privacy-preserving ingestion for admin-provided local Discord HTML exports. It scans local ignored HTML logs, extracts redacted source-discovery links, attachment candidates, method-claim candidates, and numeric-observation candidates, and commits aggregate summaries only. Raw Discord logs, message bodies, usernames, private attachment URLs, and generated review indexes remain uncommitted.
+
+## Stage 3O - Review extracted Discord source links
+
+Review selected public links discovered by Stage 3N and promote only vetted public source records or observations into the existing source registry. If Discord source extraction needs parser follow-up, adapt the parser to the export format first. If source review is deferred, an OutGuess regression harness is the next bounded alternative. Do not jump to CUDA or broad AI analysis.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

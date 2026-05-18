@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3M deterministic local image analysis is complete.
+Stage 3N admin-approved Discord HTML archive ingestion is complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, and Stage 3M records deterministic local image features only.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, and Stage 3N records redacted Discord source-discovery aggregates only.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 
@@ -175,6 +175,16 @@ Run summary: local images analysed `58`, threshold records `406`, component reco
 Stage 3M does not run OCR, AI/ML image interpretation, steganography extraction, OutGuess, audio/spectrogram work, live web/Tor acquisition, image-derived cipher experiments, activate the canonical corpus, finalize page boundaries, or claim a solve.
 
 Developer log: `docs/development-logs/2026-05-16-stage-3m-deterministic-image-analysis.md`.
+
+## Completed in Stage 3N
+
+Stage 3N added privacy-preserving ingestion for admin-provided local Discord HTML exports.
+
+Run summary: HTML files `42`, scanned bytes `465845099`, extracted links `386511`, unique domains `2224`, attachment candidates `38647`, method-claim candidates `48107`, numeric-observation candidates `67660`, known-bogus/debunked or tried-and-failed candidates `7324`.
+
+Stage 3N does not scrape Discord, call live Discord APIs, use self-bots, upload logs to AI services, commit raw logs, commit message bodies, commit usernames, execute extracted methods, activate the canonical corpus, finalize page boundaries, use CUDA, or claim a solve.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3n-discord-html-ingestion.md`.
 
 ## Completed in Stage 2D
 

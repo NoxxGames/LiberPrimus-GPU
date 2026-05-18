@@ -213,6 +213,14 @@ Run:
 
 Stage 3M adds tests for synthetic grayscale statistics, threshold ratios, deterministic 4-connected component counts, symmetry metrics, bit-plane ratios, visual feature candidate flags, generated output schemas, CLI commands, missing-image raw-data-free mode, ignored generated outputs, ignored raw images, and `solve_claim=false`.
 
+## Stage 3N Discord Ingestion Tests
+
+Stage 3N adds tests for Discord ingestion schemas, synthetic HTML file locks, missing-directory
+`--allow-missing` behavior, href/src/plaintext URL extraction, source-domain classification,
+Discord attachment URL redaction, keyword-only method-claim extraction, numeric observation
+extraction, aggregate privacy policy checks, CLI scan/validate/export commands, ignored generated
+outputs, ignored raw Discord logs, and no live API or scrape requirements.
+
 Run:
 
 ```powershell

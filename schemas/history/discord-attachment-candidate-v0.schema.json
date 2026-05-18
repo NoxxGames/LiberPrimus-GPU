@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/discord-attachment-candidate-v0.schema.json",
+  "title": "Discord Attachment Candidate v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "attachment_id",
+    "archive_id",
+    "source_file_sha256",
+    "url_or_path_redacted",
+    "file_name",
+    "extension",
+    "media_kind",
+    "private_url_redacted",
+    "review_status",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "discord_attachment_candidate" },
+    "attachment_id": { "type": "string", "minLength": 1 },
+    "archive_id": { "type": "string", "minLength": 1 },
+    "source_file_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "url_or_path_redacted": { "type": "string" },
+    "file_name": { "type": "string" },
+    "extension": { "type": "string" },
+    "media_kind": { "enum": ["image", "audio", "video", "document", "archive", "html", "unknown"] },
+    "private_url_redacted": { "const": true },
+    "review_status": { "enum": ["unreviewed", "machine_checked", "human_review_required", "rejected"] },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

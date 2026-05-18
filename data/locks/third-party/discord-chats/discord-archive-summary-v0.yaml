@@ -1,0 +1,15 @@
+record_type: discord_archive_record
+archive_id: admin-provided-discord-html-stage3n
+description: Admin-provided local Discord HTML export; committed record contains aggregate
+  source-lock metadata only.
+source_status: admin_provided_export
+raw_logs_committed: false
+message_bodies_committed: false
+usernames_committed: false
+ai_upload_allowed: false
+live_api_used: false
+scrape_used: false
+local_path: third_party/LiberPrimusDiscordChats
+created_at_utc: '2026-05-17T23:55:24Z'
+notes: Raw Discord logs remain local and ignored; Discord claims are review leads
+  only.

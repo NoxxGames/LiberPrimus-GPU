@@ -131,3 +131,7 @@ For cookie/hash preimage work, keep candidate packs explicit, log exact byte str
 ## Stage 3M Guardrails
 
 For deterministic image-analysis work, keep the process mechanical and local: extract statistics, thresholds, components, symmetry, bit-plane summaries, and review-only feature flags. Do not use OCR, AI/ML image interpretation, OutGuess extraction, image-derived cipher execution, raw image commits, generated output commits, CUDA, or solve claims.
+
+## Stage 3N Guardrails
+
+For Discord HTML ingestion work, treat logs as sensitive local research material. Do not commit raw logs, message bodies, usernames, user IDs, avatars, private attachment URLs, generated review indexes, or extracted raw contexts. Do not call live Discord APIs, scrape Discord, use self-bots, upload logs to AI services, execute extracted methods, or promote claims without review.

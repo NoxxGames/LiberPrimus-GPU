@@ -1,0 +1,28 @@
+ai_upload_used: false
+archive_id: admin-provided-discord-html-stage3n
+attachment_candidate_count: 38647
+generated_at_utc: '2026-05-17T23:55:24Z'
+html_file_count: 42
+link_count: 386511
+live_api_used: false
+message_bodies_committed: false
+method_claim_candidate_count: 48107
+notes: Aggregate Stage 3N summary only; generated review records remain ignored.
+numeric_observation_candidate_count: 67660
+output_paths:
+  attachments: experiments/results/discord-ingestion/stage3n/discord_attachment_candidates.jsonl
+  file_locks: experiments/results/discord-ingestion/stage3n/discord_html_file_locks.jsonl
+  links: experiments/results/discord-ingestion/stage3n/discord_extracted_links.jsonl
+  local_review_index: experiments/results/discord-ingestion/stage3n/local_review_index.html
+  method_claims: experiments/results/discord-ingestion/stage3n/discord_method_claim_candidates.jsonl
+  numeric_observations: experiments/results/discord-ingestion/stage3n/discord_numeric_observation_candidates.jsonl
+  source_candidates: experiments/results/discord-ingestion/stage3n/discord_source_candidates.jsonl
+  summary: experiments/results/discord-ingestion/stage3n/discord_ingestion_summary.json
+  warnings: experiments/results/discord-ingestion/stage3n/warnings.jsonl
+raw_logs_committed: false
+record_type: discord_ingestion_summary
+scrape_used: false
+total_bytes: 465845099
+unique_domain_count: 2224
+usernames_committed: false
+warning_count: 2

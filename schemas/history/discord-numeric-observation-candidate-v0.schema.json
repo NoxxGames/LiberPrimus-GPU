@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/discord-numeric-observation-candidate-v0.schema.json",
+  "title": "Discord Numeric Observation Candidate v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "observation_id",
+    "archive_id",
+    "source_file_sha256",
+    "numbers",
+    "context_keywords",
+    "candidate_kind",
+    "redacted_summary",
+    "raw_message_committed",
+    "review_status",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "discord_numeric_observation_candidate" },
+    "observation_id": { "type": "string", "minLength": 1 },
+    "archive_id": { "type": "string", "minLength": 1 },
+    "source_file_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "numbers": { "type": "array", "items": { "type": "integer" } },
+    "context_keywords": { "type": "array", "items": { "type": "string" } },
+    "candidate_kind": {
+      "enum": ["gp_sum", "rune_count", "page_number", "prime", "dimension", "cookie_hash", "binary", "base60", "unknown"]
+    },
+    "redacted_summary": { "type": "string" },
+    "raw_message_committed": { "const": false },
+    "review_status": { "enum": ["unreviewed", "machine_checked", "human_review_required", "rejected"] },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

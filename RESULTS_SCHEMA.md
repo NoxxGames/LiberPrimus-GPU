@@ -433,4 +433,24 @@ Generated records remain ignored under `experiments/results/image-analysis/stage
 
 All Stage 3M records keep `trusted_as_canonical=false` and `solve_claim=false`. Visual feature candidate records also keep `usable_as_experiment_seed=false`; they are human-review aids only and not image-derived seed manifests.
 
+## Stage 3N Discord Ingestion Records
+
+Stage 3N adds committed schemas under `schemas/history/` for:
+
+- `discord_archive_record`
+- `discord_html_file_lock`
+- `discord_extracted_link`
+- `discord_attachment_candidate`
+- `discord_method_claim_candidate`
+- `discord_numeric_observation_candidate`
+- `discord_ingestion_summary`
+
+Generated link, attachment, method-claim, numeric-observation, local-review, and per-file lock
+records remain ignored under `experiments/results/discord-ingestion/stage3n/`.
+
+Committed aggregate records under `data/locks/third-party/discord-chats/` and
+`data/observations/discord/` contain aggregate counts and false privacy flags only. Raw logs,
+message bodies, usernames, AI upload, live API use, and scraping are prohibited by schema and
+validation.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

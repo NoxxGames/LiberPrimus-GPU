@@ -372,3 +372,23 @@ Stage 3M analyses local ignored Liber Primus page images with deterministic imag
 The run analysed `58` local images and generated `406` component records, `58` symmetry records, `464` bitplane records, and `71` visual feature candidates.
 
 Generated outputs remain ignored under `experiments/results/image-analysis/stage3m/`. Stage 3M does not run OCR, AI/ML interpretation, OutGuess extraction, audio analysis, image-derived cipher execution, CUDA, or solve claims.
+
+## Stage 3N Discord HTML Source Discovery
+
+Stage 3N scans admin-provided local Discord HTML exports as source-discovery material only:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-ingest scan `
+  --source-dir third_party/LiberPrimusDiscordChats `
+  --out-dir experiments/results/discord-ingestion/stage3n `
+  --allow-missing `
+  --allow-warnings
+```
+
+The scanner computes local file locks, extracts redacted link and attachment candidates, emits
+keyword-only method-claim and numeric-observation candidates, and creates a local ignored review
+index. Generated outputs remain ignored under `experiments/results/discord-ingestion/stage3n/`.
+
+Committed aggregate records contain counts only. Stage 3N does not scrape Discord, call live APIs,
+commit message bodies or usernames, fetch attachments, execute extracted methods, activate the
+canonical corpus, use CUDA, or claim a solve.

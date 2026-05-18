@@ -130,6 +130,10 @@ Stage 3L is CPU-only SHA-256 exact matching over small committed candidate packs
 
 Stage 3M is deterministic local CPU image-feature extraction. It uses no CUDA, GPU acceleration, OCR, AI/ML image interpretation, OutGuess, audio tooling, live web acquisition, or benchmark claims. Generated image-analysis records remain ignored.
 
+## Stage 3N Discord Ingestion Scope
+
+Stage 3N is local HTML parsing and source-discovery indexing only. It uses no CUDA, GPU acceleration, browser automation, live Discord APIs, scraping, self-bots, AI upload, or benchmark claims. Generated Discord ingestion records and local review indexes remain ignored.
+
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

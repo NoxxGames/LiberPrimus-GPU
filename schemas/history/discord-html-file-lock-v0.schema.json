@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/discord-html-file-lock-v0.schema.json",
+  "title": "Discord HTML File Lock v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "archive_id",
+    "relative_path",
+    "file_name",
+    "file_size_bytes",
+    "sha256",
+    "estimated_message_count",
+    "extracted_at_utc",
+    "raw_content_committed",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "discord_html_file_lock" },
+    "archive_id": { "type": "string", "minLength": 1 },
+    "relative_path": { "type": "string", "minLength": 1 },
+    "file_name": { "type": "string", "minLength": 1 },
+    "file_size_bytes": { "type": "integer", "minimum": 0 },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "estimated_message_count": { "type": ["integer", "null"], "minimum": 0 },
+    "extracted_at_utc": { "type": "string" },
+    "raw_content_committed": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

@@ -29,6 +29,10 @@ echo "Validating Stage 3L hash preimage candidate packs"
 echo "Validating Stage 3M deterministic image-analysis raw-data-free mode"
 "$python_bin" -m libreprimus.cli image-analysis validate-results --results-dir "$tmp_dir/stage3m-image-analysis" --allow-missing
 
+echo "Validating Stage 3N Discord ingestion raw-log-free mode"
+"$python_bin" -m libreprimus.cli discord-ingest scan --source-dir "$tmp_dir/missing-discord" --out-dir "$tmp_dir/stage3n-discord" --allow-missing --allow-warnings
+"$python_bin" -m libreprimus.cli discord-ingest validate-results --results-dir "$tmp_dir/stage3n-discord" --allow-missing
+
 echo "Validating Stage 2E exploratory manifests"
 "$python_bin" -m libreprimus.cli experiment validate-exploratory --manifest experiments/manifests/exploratory/stage2e-caesar-preview-dry-run.yaml
 "$python_bin" -m libreprimus.cli experiment validate-exploratory --manifest experiments/manifests/exploratory/stage2e-affine-preview-dry-run.yaml

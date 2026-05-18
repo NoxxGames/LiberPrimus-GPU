@@ -156,6 +156,12 @@ from libreprimus.hash_preimage.validation import validate_candidate_packs
 from libreprimus.image_analysis.runner import analyze_local_pages
 from libreprimus.image_analysis.summary import load_summary as load_image_analysis_summary
 from libreprimus.image_analysis.validation import validate_results as validate_image_analysis_results
+from libreprimus.discord_ingestion.html_scanner import scan_discord_archive
+from libreprimus.discord_ingestion.summary import load_summary as load_discord_ingestion_summary
+from libreprimus.discord_ingestion.validation import (
+    export_aggregate_records as export_discord_aggregate_records,
+    validate_results as validate_discord_ingestion_results,
+)
 from libreprimus.visual_observations.validation import (
     summarize_observations,
     validate_cookie_records,
@@ -195,6 +201,7 @@ archive_app = typer.Typer(no_args_is_help=True)
 observation_app = typer.Typer(no_args_is_help=True)
 hash_preimage_app = typer.Typer(no_args_is_help=True)
 image_analysis_app = typer.Typer(no_args_is_help=True)
+discord_ingest_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -3264,6 +3271,115 @@ def _print_image_analysis_summary(summary: dict) -> None:
         console.print(f"{key}={path}")
 
 
+@discord_ingest_app.command("scan")
+def discord_ingest_scan(
+    source_dir: Path = typer.Option(..., "--source-dir", help="Local Discord HTML archive directory."),
+    out_dir: Path = typer.Option(..., "--out-dir", help="Generated Discord ingestion output directory."),
+    allow_missing: bool = typer.Option(False, "--allow-missing", help="Write empty outputs if source dir is missing."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite non-blocking warnings."),
+) -> None:
+    """Scan admin-provided local Discord HTML logs without committing raw content."""
+    try:
+        summary = scan_discord_archive(
+            source_dir=_resolve_output_path(source_dir),
+            out_dir=_resolve_output_path(out_dir),
+            allow_missing=allow_missing,
+            allow_warnings=allow_warnings,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_discord_ingestion_summary(summary)
+
+
+@discord_ingest_app.command("validate-results")
+def discord_ingest_validate_results(
+    results_dir: Path = typer.Option(..., "--results-dir", help="Generated Discord ingestion result directory."),
+    allow_missing: bool = typer.Option(False, "--allow-missing", help="Allow missing generated results."),
+) -> None:
+    """Validate generated Discord ingestion records."""
+    try:
+        counts, errors = validate_discord_ingestion_results(
+            _resolve_output_path(results_dir),
+            allow_missing=allow_missing,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    for key, value in counts.items():
+        console.print(f"{key}={value}")
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(f"[red]{error}[/red]")
+    if errors:
+        raise typer.Exit(1)
+    console.print("Discord ingestion results OK")
+
+
+@discord_ingest_app.command("summary")
+def discord_ingest_print_summary(
+    results_dir: Path = typer.Option(..., "--results-dir", help="Generated Discord ingestion result directory."),
+) -> None:
+    """Print a concise generated Discord ingestion summary."""
+    try:
+        summary = load_discord_ingestion_summary(_resolve_output_path(results_dir))
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_discord_ingestion_summary(summary)
+
+
+@discord_ingest_app.command("export-aggregate")
+def discord_ingest_export_aggregate(
+    results_dir: Path = typer.Option(..., "--results-dir", help="Generated Discord ingestion result directory."),
+    archive_out: Path = typer.Option(..., "--archive-out", help="Committed aggregate archive record path."),
+    observation_out: Path = typer.Option(..., "--observation-out", help="Committed aggregate observation summary path."),
+    allow_missing: bool = typer.Option(False, "--allow-missing", help="Allow missing generated results."),
+) -> None:
+    """Export aggregate-only committed records from generated Discord ingestion results."""
+    try:
+        archive_record, observation_record = export_discord_aggregate_records(
+            results_dir=_resolve_output_path(results_dir),
+            archive_out=_resolve_output_path(archive_out),
+            observation_out=_resolve_output_path(observation_out),
+            allow_missing=allow_missing,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print(f"archive_id={archive_record.get('archive_id')}")
+    console.print(f"html_file_count={observation_record.get('html_file_count', 0)}")
+    console.print(f"link_count={observation_record.get('link_count', 0)}")
+    console.print(f"archive_out={_resolve_output_path(archive_out)}")
+    console.print(f"observation_out={_resolve_output_path(observation_out)}")
+
+
+def _print_discord_ingestion_summary(summary: dict) -> None:
+    for key in [
+        "archive_id",
+        "html_file_count",
+        "total_bytes",
+        "link_count",
+        "unique_domain_count",
+        "attachment_candidate_count",
+        "method_claim_candidate_count",
+        "numeric_observation_candidate_count",
+        "known_bogus_or_debunked_claim_candidate_count",
+        "source_candidate_count",
+        "hash_like_candidate_count",
+        "warning_count",
+    ]:
+        console.print(f"{key}={summary.get(key)}")
+    console.print(f"raw_logs_committed={str(summary.get('raw_logs_committed')).lower()}")
+    console.print(f"message_bodies_committed={str(summary.get('message_bodies_committed')).lower()}")
+    console.print(f"usernames_committed={str(summary.get('usernames_committed')).lower()}")
+    console.print(f"ai_upload_used={str(summary.get('ai_upload_used')).lower()}")
+    console.print(f"live_api_used={str(summary.get('live_api_used')).lower()}")
+    console.print(f"scrape_used={str(summary.get('scrape_used')).lower()}")
+    for key, path in summary.get("output_paths", {}).items():
+        console.print(f"{key}={path}")
+
+
 app.add_typer(bounded_experiment_app, name="bounded-experiment")
 app.add_typer(bounded_run_app, name="bounded-run")
 app.add_typer(candidate_inspect_app, name="candidate-inspect")
@@ -3272,6 +3388,7 @@ app.add_typer(archive_app, name="archive")
 app.add_typer(observation_app, name="observation")
 app.add_typer(hash_preimage_app, name="hash-preimage")
 app.add_typer(image_analysis_app, name="image-analysis")
+app.add_typer(discord_ingest_app, name="discord-ingest")
 
 
 @solved_fixture_app.command("list")

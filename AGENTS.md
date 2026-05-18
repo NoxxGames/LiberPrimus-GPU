@@ -446,3 +446,12 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not use OCR, AI, or ML image interpretation as source of truth.
 - Do not infer ciphers from visual feature flags alone.
 - Do not commit raw local page images.
+
+## Stage 3N Discord HTML Ingestion Rules
+
+- Admin-provided Discord HTML logs are sensitive local research material.
+- Do not commit raw Discord logs, message bodies, usernames, user IDs, avatars, or private attachment URLs.
+- Do not upload Discord logs to AI services.
+- Do not scrape Discord, use live Discord APIs, user tokens, or self-bots.
+- Extracted Discord claims are reviewable leads only, not facts or experiment seeds.
+- Committed Discord records must be aggregate/redacted only.

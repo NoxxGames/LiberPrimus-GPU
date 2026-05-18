@@ -121,6 +121,12 @@ third_party/LiberPrimusPages/**
 !third_party/LiberPrimusPages/README.md
 !third_party/LiberPrimusPages/.gitkeep
 
+# Local admin-provided Discord HTML archive
+third_party/LiberPrimusDiscordChats/**
+!third_party/LiberPrimusDiscordChats/
+!third_party/LiberPrimusDiscordChats/README.md
+!third_party/LiberPrimusDiscordChats/.gitkeep
+
 # Raw corpus and local data
 data/raw/**
 !data/raw/
@@ -176,6 +182,14 @@ experiments/results/image-analysis/**
 !experiments/results/image-analysis/.gitkeep
 !experiments/results/image-analysis/stage3m/
 !experiments/results/image-analysis/stage3m/.gitkeep
+
+# Generated Discord ingestion outputs
+experiments/results/discord-ingestion/**
+!experiments/results/discord-ingestion/
+!experiments/results/discord-ingestion/README.md
+!experiments/results/discord-ingestion/.gitkeep
+!experiments/results/discord-ingestion/stage3n/
+!experiments/results/discord-ingestion/stage3n/.gitkeep
 
 # Generated alignment outputs
 data/normalized/alignment/**
