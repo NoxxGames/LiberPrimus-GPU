@@ -12,6 +12,8 @@ Raw material stays local and ignored. This includes Discord HTML exports, Liber 
 legacy workbooks, Pastebin drops, transcripts, generated candidates, SQLite databases, and local
 review indexes.
 
+The current private/generated path map is `docs/onboarding/private-generated-data-map.md`.
+
 ## Commands
 
 ```powershell

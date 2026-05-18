@@ -58,6 +58,10 @@ The local validation stack now includes:
 .\.venv\Scripts\python.exe -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md
 ```
 
+## Stage 3Z Onboarding And Source-Of-Truth Tests
+
+Stage 3Z tests cover onboarding docs, Stage 4A direction in the staged plan, direction-change records, AGENTS doc freshness policy, private/generated data maps, and state-drift integration for the new onboarding maps.
+
 ## Stage 3O Promotion And Wiki Tests
 
 Stage 3O tests cover Discord promotion redaction, public-safe URL filtering, review-only promotion records, README/tutorial coverage, Wiki source generation, Wiki validation scripts, and ignored raw/generated paths.

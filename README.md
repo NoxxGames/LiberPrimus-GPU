@@ -89,6 +89,13 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 The CPU side owns corpus management, manifests, hypothesis generation, branching search, result provenance, and manual review. The GPU side will only accelerate large regular batches of transform-and-score work after a CPU reference implementation, parity tests, and benchmarks exist.
 
+## Where To Start
+
+- [Start Here](docs/onboarding/start-here.md): plain-English current-state overview.
+- [Source Of Truth Map](docs/onboarding/source-of-truth-map.md): which file answers which question.
+- [Staged Plan](docs/roadmap/staged-plan.md): completed stages, current direction, planned work, deferred work, and method-retirement context.
+- [Tutorial Index](tutorials/README.md): public workflow guides.
+
 ## Current status
 
 Current status:
@@ -128,6 +135,7 @@ Current status:
 - Stage 3W: state consolidation and anti-drift hardening complete.
 - Stage 3X: CLI modularisation without behavior change complete.
 - Stage 3Y: result synthesis, staged plan, and method-retirement ledger complete.
+- Stage 3Z: source-of-truth / newcomer map complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -146,8 +154,9 @@ Current status:
 - Latest consolidation stage: Stage 3W refreshed persistent project context, defined the source-of-truth hierarchy, and added anti-drift checks so long-lived docs cannot drift back to obsolete current-state claims.
 - Latest maintainability stage: Stage 3X split the Python CLI into `cli_commands` domain modules while preserving `python -m libreprimus.cli` and adding command-surface tests.
 - Latest synthesis stage: Stage 3Y added `docs/roadmap/staged-plan.md`, research synthesis records, method-family status and retirement ledgers, Deep Research influence records, direction-change records, and validation CLI commands.
+- Latest onboarding stage: Stage 3Z added source-of-truth, Codex navigation, Deep Research handoff, contributor module, task-lane, and private/generated data maps.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 3Z source-of-truth / newcomer map.
+- Next: Stage 4A full Discord research-bundle extraction for Deep Research.
 
 ## How To Use This Repo
 

@@ -22,8 +22,23 @@ DEFAULT_OPERATIONAL_FILES = (
     "EXPERIMENTS.md",
     "TESTING.md",
     "docs/roadmap/staged-plan.md",
+    "docs/onboarding/start-here.md",
+    "docs/onboarding/source-of-truth-map.md",
+    "docs/onboarding/codex-navigation-map.md",
+    "docs/onboarding/deep-research-handoff-map.md",
+    "docs/onboarding/contributor-module-map.md",
+    "docs/onboarding/private-generated-data-map.md",
     "pyproject.toml",
     "docker/README.md",
+)
+
+REQUIRED_ONBOARDING_FILES = (
+    "docs/onboarding/start-here.md",
+    "docs/onboarding/source-of-truth-map.md",
+    "docs/onboarding/codex-navigation-map.md",
+    "docs/onboarding/deep-research-handoff-map.md",
+    "docs/onboarding/contributor-module-map.md",
+    "docs/onboarding/private-generated-data-map.md",
 )
 
 HISTORICAL_PATH_PARTS = ("docs/development-logs", "research-log")
@@ -128,6 +143,7 @@ def check_state_drift_consistency(
     roadmap = texts.get("ROADMAP.md", "").lower()
     agents = texts.get("AGENTS.md", "").lower()
     staged_plan = texts.get("docs/roadmap/staged-plan.md", "").lower()
+    private_map = texts.get("docs/onboarding/private-generated-data-map.md", "").lower()
     pyproject = texts.get("pyproject.toml", "").lower()
 
     _require_fact(
@@ -154,14 +170,27 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage3y_current_or_planned",
+        "stage3y_complete",
         "stage 3y" in staged_plan
-        and (
-            "current" in staged_plan
-            or "in progress" in staged_plan
-            or "result synthesis" in staged_plan
-        ),
-        "Staged plan records Stage 3Y as current/planned result-synthesis work.",
+        and "complete" in staged_plan,
+        "Staged plan records Stage 3Y complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage3z_current_or_complete",
+        "stage 3z" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan or "source-of-truth" in staged_plan),
+        "Staged plan records Stage 3Z current/complete source-of-truth work.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4a_discord_research_bundle",
+        "stage 4a" in staged_plan
+        and "discord research-bundle" in staged_plan
+        and "deep research" in staged_plan,
+        "Staged plan records Stage 4A full Discord research-bundle extraction for Deep Research.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -237,6 +266,37 @@ def check_state_drift_consistency(
         "Staged plan records Discord raw logs as local/private/ignored.",
         root / "docs/roadmap/staged-plan.md",
     )
+    _require_fact(
+        results,
+        "agents_docs_text_update_policy",
+        ".md" in agents and ".txt" in agents and "staged-plan" in agents and "direction change" in agents,
+        "AGENTS records staged-plan and markdown/text update policy for direction changes.",
+        root / "AGENTS.md",
+    )
+    _require_fact(
+        results,
+        "private_generated_data_map_core_paths",
+        all(
+            term in private_map
+            for term in (
+                "discord",
+                "page images",
+                "experiments/results",
+                "data/raw",
+                "data/normalized",
+            )
+        ),
+        "Private/generated data map records core raw and generated paths.",
+        root / "docs/onboarding/private-generated-data-map.md",
+    )
+    for relative in REQUIRED_ONBOARDING_FILES:
+        _require_fact(
+            results,
+            f"onboarding_{Path(relative).stem.replace('-', '_')}_present",
+            (root / relative).is_file(),
+            f"{relative} exists.",
+            root / relative,
+        )
     _require_fact(
         results,
         "pyproject_not_stage0a_scaffold",

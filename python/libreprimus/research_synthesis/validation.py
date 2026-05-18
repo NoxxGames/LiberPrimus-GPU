@@ -41,7 +41,14 @@ def validate_research_synthesis(
         staged_text = staged_plan_path.read_text(encoding="utf-8").lower()
         _require_text(errors, staged_text, ("stage 3w", "complete"), "staged_plan_stage3w_complete")
         _require_text(errors, staged_text, ("stage 3x", "complete"), "staged_plan_stage3x_complete")
-        _require_text(errors, staged_text, ("stage 3y",), "staged_plan_stage3y_present")
+        _require_text(errors, staged_text, ("stage 3y", "complete"), "staged_plan_stage3y_complete")
+        _require_text(errors, staged_text, ("stage 3z",), "staged_plan_stage3z_present")
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4a", "discord research-bundle", "deep research"),
+            "staged_plan_stage4a_discord_research_bundle",
+        )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
         _require_text(errors, staged_text, ("page boundaries", "reviewable"), "staged_plan_boundaries_reviewable")
@@ -99,6 +106,18 @@ def validate_research_synthesis(
         if not record.get("reopen_conditions"):
             errors.append(f"retirement_missing_reopen_conditions: {method_id}")
 
+    direction_changes = records_by_key.get("direction_changes", [])
+    stage4a_change = _find_record(direction_changes, "change_id", "stage3z-stage4-discord-bundle-priority")
+    if stage4a_change is None:
+        errors.append("stage3z_stage4_discord_bundle_priority_missing")
+    else:
+        new_direction = str(stage4a_change.get("new_direction", "")).lower()
+        affected_docs = " ".join(str(item) for item in stage4a_change.get("affected_docs", [])).lower()
+        if "discord research-bundle" not in new_direction or "deep research" not in new_direction:
+            errors.append("stage3z_stage4_direction_missing_discord_deep_research")
+        if "docs/roadmap/staged-plan.md" not in affected_docs or "roadmap.md" not in affected_docs:
+            errors.append("stage3z_stage4_direction_missing_affected_docs")
+
     cuda = _find_method(method_records, "cuda_gpu_acceleration")
     if cuda is None or cuda.get("status") != "deferred":
         errors.append("cuda_gpu_acceleration_not_deferred")
@@ -132,5 +151,12 @@ def _require_text(errors: list[str], text: str, terms: tuple[str, ...], check_id
 def _find_method(records: list[dict[str, Any]], method_family_id: str) -> dict[str, Any] | None:
     for record in records:
         if record.get("method_family_id") == method_family_id:
+            return record
+    return None
+
+
+def _find_record(records: list[dict[str, Any]], key: str, value: str) -> dict[str, Any] | None:
+    for record in records:
+        if record.get(key) == value:
             return record
     return None

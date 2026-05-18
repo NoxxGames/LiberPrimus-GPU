@@ -10,6 +10,8 @@ Use the Windows scripts in `scripts/` or equivalent CMake/Python commands from t
 
 See `tutorials/` for user-facing setup and workflow guides.
 
+Start with `docs/onboarding/start-here.md` and `docs/onboarding/contributor-module-map.md` before choosing a task lane.
+
 ## Coding standards
 
 Follow existing module boundaries and keep behavior small, testable, and documented.
@@ -31,10 +33,11 @@ Update policy documents when behavior, data handling, or experiment rules change
 
 Tutorial and wiki changes must not include raw corpus dumps, generated JSONL records, or unsupported solve claims. Repository docs and tutorials are the source of truth; wiki pages are mirrors.
 
-When stage status changes, keep `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, and `README.md` synchronized. Run the anti-drift check before staging documentation-heavy changes:
+When stage status or direction changes, keep `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, `README.md`, and `docs/roadmap/staged-plan.md` synchronized. Update `data/research/project-direction-change-records-v0.yaml` for direction changes and update `docs/onboarding/private-generated-data-map.md` for new raw/private/generated paths. Run the anti-drift and research-synthesis checks before staging documentation-heavy changes:
 
 ```powershell
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-state-drift
+.\.venv\Scripts\python.exe -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md
 ```
 
 ## Data rules

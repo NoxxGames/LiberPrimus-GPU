@@ -262,11 +262,33 @@ Stage 3Y summarizes noisy, negative, inconclusive, verified, and deferred Stage 
 
 ## Stage 3Z - Source-of-truth and newcomer map
 
-Next stage: expand the source-of-truth hierarchy into a concise newcomer map that points humans and Codex sessions to the right operational docs, staged plan, research logs, schemas, and generated-output policies.
+Stage 3Z expands the source-of-truth hierarchy into concise onboarding maps that point humans, Codex sessions, Deep Research, contributors, and reviewers to the right operational docs, staged plan, research logs, schemas, modules, and generated-output policies.
 
-## Stage 4A - CPU batch transform API extraction
+## Stage 4A - Full Discord research-bundle extraction for Deep Research
+
+Next stage: convert local admin-provided Discord HTML exports into redacted, scoped, image-aware Deep-Research-friendly bundles. Raw Discord logs, private attachments, usernames, user IDs, message IDs, and private URLs must remain local/ignored and must not be committed.
+
+The independent review originally suggested CPU batch transform API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier. CPU batch API extraction remains planned later and is not cancelled.
+
+## Stage 4B - Website-derived source-lock triage and visual observation intake
+
+Triage website/public-source findings and visual observations into source-lock, observation, and negative-control records without raw image publication or solve claims.
+
+## Stage 4C - Cuneiform/dot annotation workflow
+
+Create a bounded review workflow for cuneiform, dot, and motif annotations. Keep observations reviewable unless exact source evidence supports promotion.
+
+## Stage 4D - OutGuess/audio historical fixture source-locking
+
+Acquire or source-lock historical OutGuess/audio fixtures where public and size-bounded. Do not run broad stego or audio scans.
+
+## Stage 4E - CPU batch transform API extraction
 
 Extract stable CPU batch transform-and-score APIs needed before any serious CUDA work. CUDA remains deferred until CPU references, stable scoring contracts, parity tests, and benchmark plans exist.
+
+## Stage 4F - Scorer consolidation and calibration report
+
+Consolidate scorer definitions and calibration reports before CPU batch APIs are used for any broader campaigns.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

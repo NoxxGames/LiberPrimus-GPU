@@ -20,6 +20,7 @@ Use Codex safely for scoped repository stages.
 - For Stage 3W-style consolidation, state that no experiments should run and require source-of-truth docs plus anti-drift checks to stay synchronized.
 - For Stage 3X-style CLI modularisation, state that command names, options, help behavior, output shape, and exit semantics must be preserved and that command-surface tests must be added or updated.
 - For Stage 3Y-style research synthesis, require `docs/roadmap/staged-plan.md`, `data/research/` ledgers, anti-drift checks, and `libreprimus research-synthesis validate`. Do not execute experiments.
+- For Stage 3Z-style onboarding work, require `docs/onboarding/` maps, staged-plan updates, direction-change records if the roadmap changes, and state-drift tests. Do not execute experiments.
 
 ## Commands
 
@@ -55,8 +56,8 @@ raw historical artefacts remain ignored, and non-empty payloads are not interpre
 hash validation.
 
 If Codex updates stage state, verify `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, and `README.md` are
-synchronized with `docs/roadmap/staged-plan.md` and run `libreprimus consistency check-state-drift`
-before staging.
+synchronized with `docs/roadmap/staged-plan.md` and relevant `docs/onboarding/` maps, then run
+`libreprimus consistency check-state-drift` before staging.
 
 If Codex retires, reopens, or reprioritises a method family, update `data/research/` ledgers and run
 `libreprimus research-synthesis validate` before staging.

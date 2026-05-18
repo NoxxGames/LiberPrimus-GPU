@@ -12,7 +12,10 @@ Map the repository structure before running experiments.
 - `data/`: committed profiles, fixtures, locks, and reviewable observations.
 - `third_party/`: local ignored raw material placeholders.
 - `docs/`: architecture, research, reference, and Wiki source docs.
+- `docs/onboarding/`: source-of-truth, Codex, Deep Research, contributor, task-lane, and private/generated data maps.
 - `tutorials/`: public source-of-truth tutorials.
+
+For module ownership, read `docs/onboarding/contributor-module-map.md`.
 
 ## Expected Outputs
 

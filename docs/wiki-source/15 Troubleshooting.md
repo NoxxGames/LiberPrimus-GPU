@@ -78,6 +78,11 @@ need to be rewritten, but current-state claims in long-lived docs must match the
 stage, canonical corpus inactive status, page-boundary review status, CUDA deferral, raw/generated
 output policy, Discord privacy, and no-solve-claim policy.
 
+If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
+`source-of-truth-map.md`, `codex-navigation-map.md`, `deep-research-handoff-map.md`,
+`contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
+Stage 3Z/Stage 4A direction.
+
 ## Research Synthesis Validation Fails
 
 Run:

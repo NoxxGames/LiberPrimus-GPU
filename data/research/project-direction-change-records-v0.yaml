@@ -46,3 +46,12 @@ records:
     source: Independent project review.
     affected_docs: [STATUS.md, ROADMAP.md, AGENTS.md, docs/roadmap/staged-plan.md]
     notes: Stage 3Z should improve newcomer/source-of-truth maps.
+  - record_type: project_direction_change_record
+    change_id: stage3z-stage4-discord-bundle-priority
+    date_or_stage: stage-3z
+    previous_direction: Stage 4A CPU batch transform API extraction.
+    new_direction: Stage 4A full Discord research-bundle extraction for Deep Research, with CPU batch API deferred to later Stage 4E or equivalent.
+    reason: User wants the full Discord logs converted into a Deep-Research-friendly, redacted, image-aware bundle after Stage 3 consolidation.
+    source: User direction after Stage 3Y and Discord website review.
+    affected_docs: [docs/roadmap/staged-plan.md, ROADMAP.md, docs/onboarding/deep-research-handoff-map.md, AGENTS.md]
+    notes: CPU batch API remains planned, not cancelled.

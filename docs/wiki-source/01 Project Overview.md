@@ -12,6 +12,10 @@ The durable staged plan lives at `docs/roadmap/staged-plan.md`. Stage 3Y adds re
 records and a method-retirement ledger so noisy or negative methods are not widened without new
 source evidence.
 
+Stage 3Z adds onboarding maps under `docs/onboarding/`. Start with
+`docs/onboarding/start-here.md` when orienting a new user, Codex session, Deep Research handoff, or
+contributor.
+
 ## What It Is Not
 
 It is not a solve claim, raw corpus dump, Discord scraper, live Tor crawler, GPU hash-cracker, or

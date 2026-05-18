@@ -6,6 +6,10 @@
 
 Scan admin-provided local Discord HTML exports as source-discovery material only.
 
+Stage 4A is planned as full Discord research-bundle extraction for Deep Research. It should build
+redacted, scoped, image-aware bundles from local HTML exports without publishing raw logs or private
+attachments.
+
 ## Commands
 
 ```powershell

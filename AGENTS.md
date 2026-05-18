@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 3Y - result synthesis, staged plan, and method-retirement ledger.
+Current completed stage: Stage 3Z - source-of-truth / newcomer map.
 
-Current work: Stage 3Z - source-of-truth / newcomer map. Stage 3Z should improve orientation and source-of-truth navigation; it must not run new experiments, process raw data, change CUDA behavior, activate the canonical corpus, finalize page boundaries, or claim a solve unless explicitly scoped by a later prompt.
+Current work: Stage 4A - full Discord research-bundle extraction for Deep Research. Stage 4A should prepare redacted, scoped, Deep-Research-friendly bundles from local Discord HTML exports; it must not publish raw logs, private attachments, usernames, user IDs, message IDs, or private URLs.
 
 Current project state:
 
@@ -78,9 +78,13 @@ Use `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, `README.md`, and `docs/roadmap/stage
 
 When stage status changes, update `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, `README.md`, and `docs/roadmap/staged-plan.md` together. Long-lived operational docs must not describe obsolete stages as the current state. Historical references are allowed when clearly archival; do not rewrite `docs/development-logs/**` or `research-log/**` merely because they mention older stages.
 
-Every future Codex stage must update relevant `.md` and `.txt` files when stage status, roadmap direction, experiment priorities, method-family status, data policy, CLI behavior, or schema/result families change. Check `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, `README.md`, `EXPERIMENTS.md`, `RESULTS_SCHEMA.md`, `TESTING.md`, `CIPHER_CATALOG.md`, `docs/roadmap/staged-plan.md`, tutorials, and `docs/wiki-source/**`. If no documentation needs updates, state why in the final report.
+Every future Codex stage must update relevant `.md` and `.txt` files when stage status, roadmap direction, experiment priorities, method-family status, data policy, CLI behavior, source-of-truth hierarchy, Deep Research reports, or schema/result families change. Check `STATUS.md`, `ROADMAP.md`, `docs/roadmap/staged-plan.md`, `AGENTS.md`, `README.md`, `EXPERIMENTS.md`, `RESULTS_SCHEMA.md`, `TESTING.md`, `CIPHER_CATALOG.md`, relevant docs/reference pages, relevant tutorials, and `docs/wiki-source/**`. If no documentation needs updates, state why in the final report.
 
 If a method family is retired, reopened, or reprioritised, update `docs/roadmap/staged-plan.md` and the research synthesis ledgers under `data/research/`.
+
+If a direction change happens, update `data/research/project-direction-change-records-v0.yaml`.
+
+If a new raw, private, local, or generated output path is introduced, update `.gitignore` if needed and document the path in `docs/onboarding/private-generated-data-map.md`.
 
 When state matters, verify local `HEAD`, `origin/main`, and latest CI directly with Git/GitHub tooling. Do not rely on rendered GitHub pages, cached raw URLs, or memory for current repository state.
 

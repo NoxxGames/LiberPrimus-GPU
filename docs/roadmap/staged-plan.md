@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage before this record: Stage 3X - CLI modularisation without behaviour change.
-- Current stage: Stage 3Y - result synthesis, method-retirement ledger, and staged plan.
+- Latest completed stage before this record: Stage 3Y - result synthesis and method-retirement ledger.
+- Current stage: Stage 3Z - source-of-truth / newcomer map.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -31,23 +31,26 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Stage 3V: added OutGuess regression harness; missing tool/assets were handled as valid skips.
 - Stage 3W: consolidated project state and added anti-drift checks.
 - Stage 3X: modularised CLI command registration without behaviour changes.
+- Stage 3Y: created the durable staged plan, research-synthesis records, method-retirement ledger, Deep Research influence records, and direction-change records.
 
 ## Current Stage
 
-Stage 3Y adds result synthesis, method-family status records, method-retirement records, Deep Research influence records, direction-change records, validation CLI commands, and anti-drift coverage for this staged plan.
+Stage 3Z adds source-of-truth and newcomer maps for users, Codex, Deep Research, contributors, and reviewers.
 
-No experiments are executed in Stage 3Y.
+No experiments are executed in Stage 3Z.
 
 ## Planned Next Stages
 
-- Stage 3Y - result synthesis and method-retirement ledger.
 - Stage 3Z - source-of-truth / newcomer map.
-- Stage 4A - CPU batch transform API extraction.
-- Stage 4B - scorer consolidation and calibration report.
-- Stage 4C - observation review workflow.
-- Stage 4D - OutGuess asset fixture/source-lock pack.
-- Stage 4E - source-lock delta audit.
+- Stage 4A - full Discord research-bundle extraction for Deep Research.
+- Stage 4B - website-derived source-lock triage and visual observation intake.
+- Stage 4C - cuneiform/dot annotation workflow.
+- Stage 4D - OutGuess/audio historical fixture source-locking.
+- Stage 4E - CPU batch transform API extraction.
+- Stage 4F - scorer consolidation and calibration report.
 - Stage 5A - CUDA planning and parity scaffolding only.
+
+The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research can work with local Discord exports in a redacted, structured form. CPU batch API extraction remains planned as Stage 4E; it is deferred, not cancelled.
 
 ## Deferred Work
 
@@ -61,6 +64,10 @@ No experiments are executed in Stage 3Y.
 - Open-ended spectrogram or image pareidolia work.
 - AI, OCR, or ML as source truth.
 - Live Discord, Tor, or web crawling.
+
+## Stage 4A Direction
+
+Stage 4A should convert local admin-provided Discord HTML exports into full Deep-Research-friendly bundles. The output must be redacted, scoped, image-aware where metadata exists, and generated under ignored paths. Raw Discord logs, private attachments, usernames, user IDs, message IDs, and private URLs must not be committed or handed off raw.
 
 ## Retired Or Deprioritised Directions
 

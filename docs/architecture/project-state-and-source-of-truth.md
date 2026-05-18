@@ -2,7 +2,7 @@
 
 ## Current Reviewed State
 
-Stage 3V is complete, Stage 3W and Stage 3X are complete, and Stage 3Y is complete. Stage 3Z is the next planned source-of-truth / newcomer-map stage.
+Stage 3V is complete, Stage 3W and Stage 3X are complete, Stage 3Y is complete, and Stage 3Z is complete. Stage 4A is the next planned full Discord research-bundle extraction stage for Deep Research.
 
 The current safety posture is:
 
@@ -22,6 +22,8 @@ Primary operational truth:
 - `AGENTS.md`
 - `README.md`
 - `docs/roadmap/staged-plan.md`
+- `docs/onboarding/start-here.md`
+- `docs/onboarding/source-of-truth-map.md`
 
 Research and workflow truth:
 
@@ -44,6 +46,7 @@ User-facing guidance:
 - `tutorials/**`
 - `docs/wiki-source/**`
 - `CONTRIBUTING.md`
+- `docs/onboarding/**`
 
 Stage details:
 
@@ -62,15 +65,27 @@ Long-lived operational docs must not describe obsolete stages as the current sta
 
 The consistency suite includes a state-drift check for the operational docs and staged plan. It fails on stale current-state claims such as "current stage is Stage 0A", obsolete "no result schema" wording, missing staged-plan policy, or claims that CUDA/search/page-boundary policy has advanced beyond the documented safeguards.
 
+## Onboarding Maps
+
+Use these Stage 3Z maps for orientation:
+
+- `docs/onboarding/start-here.md`: first read for humans.
+- `docs/onboarding/source-of-truth-map.md`: authoritative files and historical/current distinction.
+- `docs/onboarding/codex-navigation-map.md`: Codex read-order and update rules.
+- `docs/onboarding/deep-research-handoff-map.md`: Deep Research handoff inputs and privacy boundaries.
+- `docs/onboarding/contributor-module-map.md`: repo area to module map.
+- `docs/onboarding/newcomer-task-lanes.md`: safe task lanes and validation commands.
+- `docs/onboarding/private-generated-data-map.md`: private, raw, and generated data boundaries.
+
 ## Deferred Work
 
 Deferred work after Stage 3Y:
 
-- Stage 3Z: source-of-truth and newcomer map expansion.
-- Stage 4A: CPU batch transform API extraction.
-- Stage 4B: scorer consolidation and calibration report.
-- Stage 4C: observation review workflow.
-- Stage 4D: OutGuess asset fixture/source-lock pack.
-- Stage 4E: source-lock delta audit.
+- Stage 4A: full Discord research-bundle extraction for Deep Research.
+- Stage 4B: website-derived source-lock triage and visual observation intake.
+- Stage 4C: cuneiform/dot annotation workflow.
+- Stage 4D: OutGuess/audio historical fixture source-locking.
+- Stage 4E: CPU batch transform API extraction.
+- Stage 4F: scorer consolidation and calibration report.
 - OutGuess historical fixture acquisition and source-locking.
 - CUDA parity planning after CPU batch APIs and stable scoring contracts exist.

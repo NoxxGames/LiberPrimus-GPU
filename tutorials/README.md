@@ -5,25 +5,27 @@ Workbench. The GitHub Wiki mirrors these files for browsing convenience.
 
 ## Recommended Reading Order
 
-1. [Project Overview](01-project-overview.md)
-2. [Windows Setup](02-windows-setup.md) or [Linux Setup](03-linux-setup.md)
-3. [Repo Tour](04-repo-tour.md)
-4. [Local Data Policy](05-local-data-policy.md)
-5. [Running Tests And CI](06-running-tests-and-ci.md)
-6. [Solved Baselines](07-solved-baselines.md)
-7. [Bounded Experiment Queues](08-bounded-experiment-queues.md)
-8. [Generated Output Policy](09-generated-output-policy.md)
-9. [Image Analysis Workflow](10-image-analysis-workflow.md)
-10. [Discord Archive Ingestion](11-discord-archive-ingestion.md)
-11. [Source Observation Registry](12-source-observation-registry.md)
-12. [GitHub Wiki Mirror](13-github-wiki-mirror.md)
-13. [Codex Assisted Development](14-codex-assisted-development.md)
-14. [Troubleshooting](15-troubleshooting.md)
+1. [Start Here](../docs/onboarding/start-here.md)
+2. [Source Of Truth Map](../docs/onboarding/source-of-truth-map.md)
+3. [Project Overview](01-project-overview.md)
+4. [Windows Setup](02-windows-setup.md) or [Linux Setup](03-linux-setup.md)
+5. [Repo Tour](04-repo-tour.md)
+6. [Local Data Policy](05-local-data-policy.md)
+7. [Running Tests And CI](06-running-tests-and-ci.md)
+8. [Solved Baselines](07-solved-baselines.md)
+9. [Bounded Experiment Queues](08-bounded-experiment-queues.md)
+10. [Generated Output Policy](09-generated-output-policy.md)
+11. [Image Analysis Workflow](10-image-analysis-workflow.md)
+12. [Discord Archive Ingestion](11-discord-archive-ingestion.md)
+13. [Source Observation Registry](12-source-observation-registry.md)
+14. [GitHub Wiki Mirror](13-github-wiki-mirror.md)
+15. [Codex Assisted Development](14-codex-assisted-development.md)
+16. [Troubleshooting](15-troubleshooting.md)
 
 ## Legacy Tutorial Notes
 
 Older topic-specific tutorials remain in this directory for historical context and deeper workflow
-details. The numbered set above is the current public guide series after Stage 3W.
+details. The numbered set above is the current public guide series after Stage 3Z.
 
 ## Safety Warning
 
