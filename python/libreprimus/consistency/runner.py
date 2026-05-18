@@ -17,6 +17,7 @@ from libreprimus.consistency.check_image_transforms import check_image_transform
 from libreprimus.consistency.check_discord_ingestion import check_discord_ingestion_consistency
 from libreprimus.consistency.check_discord_promotion import check_discord_promotion_consistency
 from libreprimus.consistency.check_discord_review import check_discord_review_consistency
+from libreprimus.consistency.check_discord_leads import check_discord_leads_consistency
 from libreprimus.consistency.export import write_summary
 from libreprimus.consistency.models import ConsistencyCheckResult, ConsistencyCheckSuiteResult
 
@@ -34,6 +35,7 @@ CHECK_GROUPS = {
     "discord_ingestion": check_discord_ingestion_consistency,
     "discord_promotion": check_discord_promotion_consistency,
     "discord_review": check_discord_review_consistency,
+    "discord_leads": check_discord_leads_consistency,
 }
 
 

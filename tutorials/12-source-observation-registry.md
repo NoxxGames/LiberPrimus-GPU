@@ -29,6 +29,12 @@ future experiment can use them.
   --results-dir experiments/results/discord-review-bundles/stage3q `
   --aggregate data/observations/discord/discord-review-bundle-aggregate-stage3q.yaml `
   --allow-missing
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-leads validate `
+  --promoted-sources data/observations/discord/stage3r-promoted-source-records.yaml `
+  --promoted-observations data/observations/discord/stage3r-promoted-observation-records.yaml `
+  --negative-controls data/observations/discord/stage3r-negative-control-records.yaml `
+  --manifest-dir experiments/manifests/post-discord `
+  --allow-empty
 ```
 
 ## Expected Outputs
@@ -42,13 +48,21 @@ Stage 3Q redacted Discord topic shards can support later lead review, but the sh
 outputs and are not committed evidence. The committed aggregate records counts and privacy flags
 only.
 
+Stage 3R promoted records can support future bounded manifest review, but they are still
+reviewable leads. Discord-only claims are not source truth. Negative controls should be preserved
+when known false-positive classes appear in future review.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
 Do not commit generated image-transform outputs, contact sheets, review pages, or derived images.
 Do not commit generated Discord review shards, redacted stream JSONL, or local review indexes.
+Do not commit generated Stage 3R promotion-audit JSONL files.
 
 ## Troubleshooting
 
 If a promoted item looks useful, promote the public source through source-classification policy
 before turning it into any experiment seed.
+
+If a disabled Stage 3R manifest looks ready to run, execute it only in a new bounded stage with
+explicit candidate-count validation.

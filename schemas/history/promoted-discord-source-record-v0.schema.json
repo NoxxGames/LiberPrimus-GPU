@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/promoted-discord-source-record-v0.schema.json",
+  "title": "Promoted Discord Source Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "promoted_id",
+    "source_url",
+    "normalized_url",
+    "source_title",
+    "source_class",
+    "promotion_class",
+    "corroboration_basis",
+    "discord_lead_reference",
+    "public_source_required",
+    "raw_message_committed",
+    "username_committed",
+    "private_url_committed",
+    "trusted_as_canonical",
+    "review_status",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "promoted_discord_source_record" },
+    "promoted_id": { "type": "string", "minLength": 1 },
+    "source_url": { "type": "string", "pattern": "^https?://" },
+    "normalized_url": { "type": "string", "pattern": "^https?://" },
+    "source_title": { "type": "string", "minLength": 1 },
+    "source_class": {
+      "enum": [
+        "primary_signed",
+        "strong_community_technical",
+        "secondary_archive",
+        "reference_only_tooling",
+        "archived_claim",
+        "speculative_observation",
+        "negative_control_material"
+      ]
+    },
+    "promotion_class": {
+      "enum": [
+        "source_to_lock",
+        "observation_to_review",
+        "experiment_candidate",
+        "negative_control_candidate",
+        "debunk_or_false_positive",
+        "duplicate_of_existing_work",
+        "too_speculative",
+        "unsafe_or_private",
+        "ignore_for_now"
+      ]
+    },
+    "corroboration_basis": { "type": "string", "minLength": 1 },
+    "discord_lead_reference": { "type": "string", "minLength": 1 },
+    "public_source_required": { "const": true },
+    "raw_message_committed": { "const": false },
+    "username_committed": { "const": false },
+    "private_url_committed": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "review_status": { "type": "string", "minLength": 1 },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

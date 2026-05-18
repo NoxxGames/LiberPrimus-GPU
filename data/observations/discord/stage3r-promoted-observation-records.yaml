@@ -1,0 +1,250 @@
+record_type: stage3r_promoted_observation_records
+run_id: stage3r-discord-lead-promotion-audit
+records:
+- record_type: promoted_discord_observation_record
+  promotion_class: observation_to_review
+  usable_as_experiment_seed: false
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  review_status: review_required
+  notes: Promoted as reviewable observation only; not a fact, seed, or solve claim.
+  observation_id: stage3r-observation-onion7-raw-table
+  observation_type: onion7_raw_4x4_table
+  source_url: https://uncovering-cicada.fandom.com/wiki/Onion_7:_numbers_on_page_15
+  source_title: 'Onion 7: numbers on page 15'
+  values:
+    table_shape: 4x4
+    exact_values_status: public_source_review_required_before_execution
+  derived_values: {}
+  corroboration_basis: Public Onion 7 page identifies the artefact table; exact values
+    remain review-required before execution.
+  ambiguity_notes: Stage 3R queues a disabled manifest and does not invent or execute
+    table values.
+- record_type: promoted_discord_observation_record
+  promotion_class: observation_to_review
+  usable_as_experiment_seed: false
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  review_status: review_required
+  notes: Promoted as reviewable observation only; not a fact, seed, or solve claim.
+  observation_id: stage3r-observation-onion7-prime-table
+  observation_type: onion7_derived_prime_table
+  source_url: https://uncovering-cicada.fandom.com/wiki/Onion_7:_numbers_on_page_15
+  source_title: 'Onion 7: numbers on page 15'
+  values:
+    table_shape: 4x4
+    derived_table: prime_delta_table
+  derived_values:
+    status: review_required
+  corroboration_basis: Derived-table lead from public Onion 7 table source and Discord
+    review bundle triage.
+  ambiguity_notes: Derived table must be recomputed from exact source values in the
+    future executor.
+- record_type: promoted_discord_observation_record
+  promotion_class: observation_to_review
+  usable_as_experiment_seed: false
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  review_status: review_required
+  notes: Promoted as reviewable observation only; not a fact, seed, or solve claim.
+  observation_id: stage3r-observation-onion7-prime-order-table
+  observation_type: onion7_prime_order_table
+  source_url: https://uncovering-cicada.fandom.com/wiki/Onion_7:_numbers_on_page_15
+  source_title: 'Onion 7: numbers on page 15'
+  values:
+    table_shape: 4x4
+    derived_table: prime_order_table
+  derived_values:
+    status: review_required
+  corroboration_basis: Derived-table lead from public Onion 7 table source and Discord
+    review bundle triage.
+  ambiguity_notes: Prime-order interpretation is an experiment candidate only after
+    exact table review.
+- record_type: promoted_discord_observation_record
+  promotion_class: observation_to_review
+  usable_as_experiment_seed: false
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  review_status: review_required
+  notes: Promoted as reviewable observation only; not a fact, seed, or solve claim.
+  observation_id: stage3r-observation-2014-image-dimensions
+  observation_type: image_dimensions
+  source_url: https://uncovering-cicada.fandom.com/wiki/CICADA_3301_2014_PUZZLE
+  source_title: CICADA 3301 2014 PUZZLE
+  values:
+    width: 547
+    height: 577
+  derived_values:
+    both_dimensions_prime: true
+  corroboration_basis: Public 2014 puzzle reference and Stage 3R lead-triage recommendation.
+  ambiguity_notes: Dimension observation only; not a transform seed.
+- record_type: promoted_discord_observation_record
+  promotion_class: observation_to_review
+  usable_as_experiment_seed: false
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  review_status: review_required
+  notes: Promoted as reviewable observation only; not a fact, seed, or solve claim.
+  observation_id: stage3r-observation-2016-image-dimensions
+  observation_type: image_dimensions
+  source_url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  source_title: 2016 Message
+  values:
+    width: 563
+    height: 569
+  derived_values:
+    both_dimensions_prime: true
+  corroboration_basis: Existing visual observation and public 2016 message reference.
+  ambiguity_notes: Already present as review material; not canonical corpus activation.
+- record_type: promoted_discord_observation_record
+  promotion_class: observation_to_review
+  usable_as_experiment_seed: false
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  review_status: review_required
+  notes: Promoted as reviewable observation only; not a fact, seed, or solve claim.
+  observation_id: stage3r-observation-2014-onion-title
+  observation_type: historical_onion_title
+  source_url: https://uncovering-cicada.fandom.com/wiki/CICADA_3301_2014_PUZZLE
+  source_title: CICADA 3301 2014 PUZZLE
+  values:
+    title: For Every Thing That Lives Is Holy
+  derived_values: {}
+  corroboration_basis: Public 2014 reference; may be used only as exact string candidate
+    in disabled manifest.
+  ambiguity_notes: String candidate source; no hash/preimage result claimed.
+- record_type: promoted_discord_observation_record
+  promotion_class: observation_to_review
+  usable_as_experiment_seed: false
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  review_status: review_required
+  notes: Promoted as reviewable observation only; not a fact, seed, or solve claim.
+  observation_id: stage3r-observation-2014-1033-jpg
+  observation_type: historical_image_filename_etag
+  source_url: https://uncovering-cicada.fandom.com/wiki/CICADA_3301_2014_PUZZLE
+  source_title: CICADA 3301 2014 PUZZLE
+  values:
+    filename: 1033.jpg
+    etag_reference: review_required
+  derived_values: {}
+  corroboration_basis: Public source artefact lead; exact ETag must be reviewed from
+    source records.
+  ambiguity_notes: Filename is safe to queue; ETag is not asserted here.
+- record_type: promoted_discord_observation_record
+  promotion_class: observation_to_review
+  usable_as_experiment_seed: false
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  review_status: review_required
+  notes: Promoted as reviewable observation only; not a fact, seed, or solve claim.
+  observation_id: stage3r-observation-2013-761-mp3-167
+  observation_type: historical_audio_duration_cluster
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2013)
+  source_title: What Happened Part 1 (2013)
+  values:
+    filename: 761.mp3
+    duration_seconds: 167
+  derived_values:
+    cookie_ids:
+    - 761
+    - 167
+  corroboration_basis: Public historical source lead plus Stage 3K/3L cookie artefact
+    IDs.
+  ambiguity_notes: Cluster is reviewable context only; not a preimage result.
+- record_type: promoted_discord_observation_record
+  promotion_class: observation_to_review
+  usable_as_experiment_seed: false
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  review_status: review_required
+  notes: Promoted as reviewable observation only; not a fact, seed, or solve claim.
+  observation_id: stage3r-observation-cuneiform-pages-34-40
+  observation_type: cuneiform_review_candidate
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages
+  source_title: Liber Primus Unsolved Pages
+  values:
+    pages:
+    - 34
+    - 35
+    - 36
+    - 37
+    - 38
+    - 39
+    - 40
+    candidate_reading:
+    - 17
+    - 13
+    - 55
+    - 1
+  derived_values:
+    numeric_candidates:
+    - 1033
+    - 3301
+    - 3722101
+  corroboration_basis: Existing Stage 3K visual observation and public unsolved-page
+    reference.
+  ambiguity_notes: Manual review required; usable_as_experiment_seed remains false.
+- record_type: promoted_discord_observation_record
+  promotion_class: observation_to_review
+  usable_as_experiment_seed: false
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  review_status: review_required
+  notes: Promoted as reviewable observation only; not a fact, seed, or solve claim.
+  observation_id: stage3r-observation-dot-motifs
+  observation_type: dot_motif_review_candidate
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages
+  source_title: Liber Primus Unsolved Pages
+  values:
+    five_dot_candidate_pages:
+    - 7
+    - 24
+    - 57
+    three_dot_candidate_pages:
+    - 34
+    - 40
+  derived_values: {}
+  corroboration_basis: Existing visual observation lead and Stage 3Q visual topic
+    triage.
+  ambiguity_notes: No binary, braille, or constellation interpretation is promoted.
+- record_type: promoted_discord_observation_record
+  promotion_class: observation_to_review
+  usable_as_experiment_seed: false
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  review_status: review_required
+  notes: Promoted as reviewable observation only; not a fact, seed, or solve claim.
+  observation_id: stage3r-observation-dead-oak-motif
+  observation_type: dead_oak_motif_review_candidate
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages
+  source_title: Liber Primus Unsolved Pages
+  values:
+    candidate_pages:
+    - 33
+    - 56
+  derived_values: {}
+  corroboration_basis: Stage 3Q visual topic triage mapped to public page/art discussion.
+  ambiguity_notes: Motif location review only; no cipher instruction inferred.

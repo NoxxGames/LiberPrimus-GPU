@@ -1,0 +1,45 @@
+record_type: stage3r_promotion_audit_summary
+run_id: stage3r-discord-lead-promotion-audit
+generated_at_utc: '2026-05-18T04:53:33Z'
+stage3q_review_lead_count: 900
+stage3q_public_link_count: 499
+source_records_promoted: 13
+observation_records_promoted: 11
+negative_controls_created: 11
+duplicate_records_skipped: 3
+unsafe_private_records_rejected: 25
+source_class_counts:
+  strong_community_technical: 2
+  secondary_archive: 9
+  primary_signed: 1
+  speculative_observation: 1
+observation_type_counts:
+  onion7_raw_4x4_table: 1
+  onion7_derived_prime_table: 1
+  onion7_prime_order_table: 1
+  image_dimensions: 2
+  historical_onion_title: 1
+  historical_image_filename_etag: 1
+  historical_audio_duration_cluster: 1
+  cuneiform_review_candidate: 1
+  dot_motif_review_candidate: 1
+  dead_oak_motif_review_candidate: 1
+manifests_queued:
+- EXP-3R-001
+- EXP-3R-003
+- EXP-3R-004
+experiment_execution_performed: false
+raw_message_committed: false
+username_committed: false
+private_url_committed: false
+raw_discord_logs_committed: false
+generated_outputs_committed: false
+solve_claim: false
+output_paths:
+  promotion_audit_records: experiments/results/discord-lead-promotion/stage3r/promotion_audit_records.jsonl
+  rejected_or_quarantined_records: experiments/results/discord-lead-promotion/stage3r/rejected_or_quarantined_records.jsonl
+  promotion_summary: experiments/results/discord-lead-promotion/stage3r/promotion_summary.json
+  warnings: experiments/results/discord-lead-promotion/stage3r/warnings.jsonl
+warnings: []
+notes: Discord-derived leads remain hypotheses; only public/redacted records were
+  promoted.

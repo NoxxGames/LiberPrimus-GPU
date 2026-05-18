@@ -171,6 +171,10 @@ from libreprimus.discord_promotion.validation import validate_promoted_records
 from libreprimus.discord_review.runner import build_review_bundles
 from libreprimus.discord_review.summary import load_summary as load_discord_review_summary
 from libreprimus.discord_review.validation import validate_bundles as validate_discord_review_bundles
+from libreprimus.discord_lead_promotion.manifest_builder import build_post_discord_manifests
+from libreprimus.discord_lead_promotion.promoter import promote_discord_leads
+from libreprimus.discord_lead_promotion.summary import load_summary as load_discord_lead_summary
+from libreprimus.discord_lead_promotion.validation import validate_stage3r_outputs
 from libreprimus.visual_observations.validation import (
     summarize_observations,
     validate_cookie_records,
@@ -214,6 +218,7 @@ image_transform_app = typer.Typer(no_args_is_help=True)
 discord_ingest_app = typer.Typer(no_args_is_help=True)
 discord_promote_app = typer.Typer(no_args_is_help=True)
 discord_review_app = typer.Typer(no_args_is_help=True)
+discord_leads_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -3655,6 +3660,140 @@ def _print_discord_review_summary(summary: dict) -> None:
         console.print(f"{key}={path}")
 
 
+@discord_leads_app.command("promote")
+def discord_leads_promote(
+    review_dir: Path = typer.Option(..., "--review-dir", help="Generated Stage 3Q review-bundle directory."),
+    stage3o_links: Path = typer.Option(..., "--stage3o-links", help="Committed Stage 3O promoted links YAML."),
+    stage3o_methods: Path = typer.Option(..., "--stage3o-methods", help="Committed Stage 3O method claims YAML."),
+    stage3o_numerics: Path = typer.Option(..., "--stage3o-numerics", help="Committed Stage 3O numeric observations YAML."),
+    source_registry: Path = typer.Option(..., "--source-registry", help="Committed source registry YAML."),
+    visual_registry: Path = typer.Option(..., "--visual-registry", help="Committed visual observation registry YAML."),
+    cookie_records: Path = typer.Option(..., "--cookie-records", help="Committed cookie/hash records YAML."),
+    out_dir: Path = typer.Option(..., "--out-dir", help="Generated Stage 3R audit output directory."),
+    promoted_sources_out: Path = typer.Option(..., "--promoted-sources-out", help="Committed promoted sources YAML."),
+    promoted_observations_out: Path = typer.Option(..., "--promoted-observations-out", help="Committed promoted observations YAML."),
+    negative_controls_out: Path = typer.Option(..., "--negative-controls-out", help="Committed negative controls YAML."),
+    audit_summary_out: Path = typer.Option(..., "--audit-summary-out", help="Committed audit summary YAML."),
+    allow_missing: bool = typer.Option(False, "--allow-missing", help="Proceed with reduced coverage if generated inputs are missing."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite non-blocking warnings."),
+) -> None:
+    """Promote corroborated Stage 3Q Discord leads without committing raw Discord content."""
+    try:
+        summary = promote_discord_leads(
+            review_dir=_resolve_output_path(review_dir),
+            stage3o_links=_resolve_output_path(stage3o_links),
+            stage3o_methods=_resolve_output_path(stage3o_methods),
+            stage3o_numerics=_resolve_output_path(stage3o_numerics),
+            source_registry=_resolve_output_path(source_registry),
+            visual_registry=_resolve_output_path(visual_registry),
+            cookie_records=_resolve_output_path(cookie_records),
+            out_dir=_resolve_output_path(out_dir),
+            promoted_sources_out=_resolve_output_path(promoted_sources_out),
+            promoted_observations_out=_resolve_output_path(promoted_observations_out),
+            negative_controls_out=_resolve_output_path(negative_controls_out),
+            audit_summary_out=_resolve_output_path(audit_summary_out),
+            allow_missing=allow_missing,
+            allow_warnings=allow_warnings,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_discord_leads_summary(summary)
+
+
+@discord_leads_app.command("build-manifests")
+def discord_leads_build_manifests(
+    audit_summary: Path = typer.Option(..., "--audit-summary", help="Committed Stage 3R audit summary YAML."),
+    out_dir: Path = typer.Option(..., "--out-dir", help="Committed post-Discord manifest directory."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite non-blocking warnings."),
+) -> None:
+    """Build disabled post-Discord experiment manifests."""
+    try:
+        summary = build_post_discord_manifests(
+            audit_summary=_resolve_output_path(audit_summary),
+            out_dir=_resolve_output_path(out_dir),
+            allow_warnings=allow_warnings,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print(f"manifest_count={summary.get('manifest_count')}")
+    for experiment_id, payload in summary.get("experiments", {}).items():
+        console.print(f"{experiment_id}_candidate_count_cap={payload.get('candidate_count_cap')}")
+        console.print(f"{experiment_id}_execution_enabled={str(payload.get('execution_enabled')).lower()}")
+    console.print(f"output_dir={summary.get('output_dir')}")
+
+
+@discord_leads_app.command("validate")
+def discord_leads_validate(
+    promoted_sources: Path = typer.Option(..., "--promoted-sources", help="Committed promoted sources YAML."),
+    promoted_observations: Path = typer.Option(..., "--promoted-observations", help="Committed promoted observations YAML."),
+    negative_controls: Path = typer.Option(..., "--negative-controls", help="Committed negative controls YAML."),
+    manifest_dir: Path = typer.Option(..., "--manifest-dir", help="Committed post-Discord manifest directory."),
+    allow_empty: bool = typer.Option(False, "--allow-empty", help="Allow absent or empty promoted records."),
+) -> None:
+    """Validate Stage 3R promoted records and disabled manifests."""
+    try:
+        counts, errors = validate_stage3r_outputs(
+            promoted_sources=_resolve_output_path(promoted_sources),
+            promoted_observations=_resolve_output_path(promoted_observations),
+            negative_controls=_resolve_output_path(negative_controls),
+            manifest_dir=_resolve_output_path(manifest_dir),
+            allow_empty=allow_empty,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    for key, value in counts.items():
+        console.print(f"{key}={value}")
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(f"[red]{error}[/red]")
+    if errors:
+        raise typer.Exit(1)
+    console.print("Discord lead promotion records OK")
+
+
+@discord_leads_app.command("summary")
+def discord_leads_print_summary(
+    audit_summary: Path = typer.Option(..., "--audit-summary", help="Committed Stage 3R audit summary YAML."),
+    manifest_dir: Path = typer.Option(..., "--manifest-dir", help="Committed post-Discord manifest directory."),
+) -> None:
+    """Print Stage 3R promotion and post-Discord manifest summary."""
+    try:
+        summary = load_discord_lead_summary(
+            _resolve_output_path(audit_summary),
+            _resolve_output_path(manifest_dir),
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_discord_leads_summary(summary)
+
+
+def _print_discord_leads_summary(summary: dict) -> None:
+    for key in [
+        "run_id",
+        "stage3q_review_lead_count",
+        "stage3q_public_link_count",
+        "source_records_promoted",
+        "observation_records_promoted",
+        "negative_controls_created",
+        "duplicate_records_skipped",
+        "unsafe_private_records_rejected",
+        "manifest_files_present",
+    ]:
+        if key in summary:
+            console.print(f"{key}={summary.get(key)}")
+    console.print(f"experiment_execution_performed={str(summary.get('experiment_execution_performed')).lower()}")
+    console.print(f"raw_message_committed={str(summary.get('raw_message_committed')).lower()}")
+    console.print(f"username_committed={str(summary.get('username_committed')).lower()}")
+    console.print(f"private_url_committed={str(summary.get('private_url_committed')).lower()}")
+    console.print(f"solve_claim={str(summary.get('solve_claim')).lower()}")
+    for key, path in summary.get("output_paths", {}).items():
+        console.print(f"{key}={path}")
+
+
 app.add_typer(bounded_experiment_app, name="bounded-experiment")
 app.add_typer(bounded_run_app, name="bounded-run")
 app.add_typer(candidate_inspect_app, name="candidate-inspect")
@@ -3667,6 +3806,7 @@ app.add_typer(image_transform_app, name="image-transform")
 app.add_typer(discord_ingest_app, name="discord-ingest")
 app.add_typer(discord_promote_app, name="discord-promote")
 app.add_typer(discord_review_app, name="discord-review")
+app.add_typer(discord_leads_app, name="discord-leads")
 
 
 @solved_fixture_app.command("list")

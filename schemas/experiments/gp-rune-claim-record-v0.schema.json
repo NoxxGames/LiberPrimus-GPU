@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/experiments/gp-rune-claim-record-v0.schema.json",
+  "title": "GP Rune Claim Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "claim_id",
+    "source_basis",
+    "claim_type",
+    "target_span",
+    "claimed_value",
+    "value_type",
+    "computation_policy",
+    "verification_status",
+    "trusted_as_canonical",
+    "no_solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "gp_rune_claim_record" },
+    "claim_id": { "type": "string", "minLength": 1 },
+    "source_basis": { "type": "string", "minLength": 1 },
+    "claim_type": { "type": "string", "minLength": 1 },
+    "target_span": { "type": "string", "minLength": 1 },
+    "claimed_value": { "type": ["integer", "number", "string", "array", "object"] },
+    "value_type": { "type": "string", "minLength": 1 },
+    "computation_policy": { "type": "string", "minLength": 1 },
+    "verification_status": {
+      "enum": ["pending", "verified", "unverified", "boundary_sensitive", "missing_source_span"]
+    },
+    "trusted_as_canonical": { "const": false },
+    "no_solve_claim": { "const": true },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

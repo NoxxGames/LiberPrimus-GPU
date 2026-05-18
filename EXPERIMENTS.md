@@ -54,6 +54,20 @@ Stage 3Q topic shards are redacted AI-review aids, not experiment records or evi
 
 Generated review bundles remain ignored under `experiments/results/discord-review-bundles/stage3q/`. The committed aggregate contains counts and privacy flags only.
 
+## Stage 3R Post-Discord Manifest Queue
+
+Stage 3R promotes selected public-source and exact-observation leads, preserves negative controls, and creates disabled experiment manifests only. It does not execute the manifests.
+
+Queued manifests:
+
+- `EXP-3R-001 cookie_sha256_signed_variants_a`, candidate cap `576`.
+- `EXP-3R-003 onion7_raw_prime_order_seed_pack_a`, candidate cap `144`.
+- `EXP-3R-004 gp_rune_claim_verifier_a`, claim cap `64`.
+
+All three keep `execution_enabled=false`, `cpu_only=true`, `cuda_enabled=false`, `cloud_execution=false`, `paid_services=false`, `generated_outputs_committed=false`, `no_solve_claim=true`, `canonical_corpus_active=false`, and `page_boundaries_final=false`.
+
+Generated audit outputs remain ignored under `experiments/results/discord-lead-promotion/stage3r/`. Promoted records are review leads, not facts or solve evidence.
+
 ## Stage 0A smoke manifest
 
 The Stage 0A smoke manifest validates project bootstrap only. No candidate plaintext is generated in Stage 0A.

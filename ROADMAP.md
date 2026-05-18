@@ -226,9 +226,13 @@ Stage 3P adds deterministic local page-image transforms, contact sheets, split/m
 
 Stage 3Q adds redacted Discord AI-review bundles and topic shards from local admin-provided exports and Stage 3N/3O generated records. Generated shards remain ignored, the committed aggregate contains counts only, and no raw logs, usernames, private URLs, AI upload, live Discord, scraping, CUDA, or solve claim is introduced.
 
-## Stage 3R - Review redacted shards or OutGuess harness
+## Stage 3R - Discord lead promotion audit
 
-Use/red-team selected Stage 3Q redacted topic shards with Deep Research and promote useful leads into the observation/source registry, or implement an OutGuess regression harness if Discord review is deferred. Do not jump to CUDA, broad web crawling, live Discord, or raw-chat publication.
+Stage 3R audits redacted Stage 3Q leads, promotes selected public-source and exact-observation records, preserves known false-positive classes as negative controls, and creates the first disabled post-Discord manifests. It does not execute experiments, publish raw Discord content, use CUDA, activate canonical corpus, finalize page boundaries, or claim a solve.
+
+## Stage 3S - Execute one post-Discord bounded manifest or OutGuess harness
+
+If Stage 3R succeeds, execute `EXP-3R-003` Onion 7 explicit seed pack or `EXP-3R-001` cookie signed-variant pack in a bounded CPU-only stage. Alternatively, implement an OutGuess regression harness if post-Discord execution is deferred. Do not jump to CUDA or broad search.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

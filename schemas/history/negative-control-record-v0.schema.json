@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/negative-control-record-v0.schema.json",
+  "title": "Negative Control Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "negative_control_id",
+    "false_positive_class",
+    "description",
+    "source_url",
+    "basis",
+    "recommended_use",
+    "raw_message_committed",
+    "username_committed",
+    "private_url_committed",
+    "trusted_as_canonical",
+    "solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "negative_control_record" },
+    "negative_control_id": { "type": "string", "minLength": 1 },
+    "false_positive_class": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "source_url": { "type": "string" },
+    "basis": { "type": "string", "minLength": 1 },
+    "recommended_use": { "type": "string", "minLength": 1 },
+    "raw_message_committed": { "const": false },
+    "username_committed": { "const": false },
+    "private_url_committed": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

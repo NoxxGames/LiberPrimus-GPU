@@ -26,6 +26,7 @@ Check ignore rules:
 
 ```powershell
 git check-ignore -v experiments/results/discord-promotion/stage3o/promotion_candidates.jsonl
+git check-ignore -v experiments/results/discord-lead-promotion/stage3r/promotion_audit_records.jsonl
 git check-ignore -v experiments/results/image-transforms/stage3p/review_index.html
 git check-ignore -v experiments/results/image-transforms/stage3p/contact_sheets/example.jpg
 ```
@@ -36,6 +37,10 @@ not stage them. Re-run the transform command only after confirming raw page imag
 If an ignored Stage 3Q review-bundle run leaves redacted shards, JSONL indexes, or HTML review
 pages under `experiments/results/discord-review-bundles/`, do not stage them. The committed
 aggregate is the only Stage 3Q data output intended for the repo.
+
+If a Stage 3R promotion audit leaves JSONL records under
+`experiments/results/discord-lead-promotion/`, do not stage them. Commit only the curated YAML
+records and disabled manifests.
 
 ## Image Transform Run Is Slow
 
@@ -61,6 +66,21 @@ redacted shard to a review workflow:
 
 If a shard still looks too large, split the topic further in code/tests instead of publishing raw
 chat logs.
+
+## Stage 3R Manifest Validation Fails
+
+Check that the three post-Discord manifests are disabled:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-leads validate `
+  --promoted-sources data/observations/discord/stage3r-promoted-source-records.yaml `
+  --promoted-observations data/observations/discord/stage3r-promoted-observation-records.yaml `
+  --negative-controls data/observations/discord/stage3r-negative-control-records.yaml `
+  --manifest-dir experiments/manifests/post-discord `
+  --allow-empty
+```
+
+Do not fix validation by enabling execution or removing privacy checks.
 
 ## Wiki Publish Fails
 

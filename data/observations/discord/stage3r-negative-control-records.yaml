@@ -1,0 +1,168 @@
+record_type: stage3r_negative_control_records
+run_id: stage3r-discord-lead-promotion-audit
+records:
+- record_type: negative_control_record
+  negative_control_id: stage3r-negative-2016-qr-background-blocks
+  false_positive_class: 2016_qr_background_blocks
+  description: Treat QR-background block readings as negative controls unless exact
+    public artefact geometry is locked.
+  source_url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  basis: Stage 3R Discord lead-triage policy and public-reference corroboration requirement.
+  recommended_use: Use as a negative control when future review or experiments encounter
+    this claim class.
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved as a false-positive class; not evidence of a solve.
+- record_type: negative_control_record
+  negative_control_id: stage3r-negative-2016-dendrite-interpretation
+  false_positive_class: 2016_dendrite_interpretation
+  description: Treat dendrite-style visual interpretations as review-only until independently
+    sourced.
+  source_url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  basis: Stage 3R Discord lead-triage policy and public-reference corroboration requirement.
+  recommended_use: Use as a negative control when future review or experiments encounter
+    this claim class.
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved as a false-positive class; not evidence of a solve.
+- record_type: negative_control_record
+  negative_control_id: stage3r-negative-2014-imgur-filename-clue
+  false_positive_class: 2014_imgur_filename_clue
+  description: Do not treat image-hosting filename patterns as clues without authenticated
+    source locking.
+  source_url: https://uncovering-cicada.fandom.com/wiki/CICADA_3301_2014_PUZZLE
+  basis: Stage 3R Discord lead-triage policy and public-reference corroboration requirement.
+  recommended_use: Use as a negative control when future review or experiments encounter
+    this claim class.
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved as a false-positive class; not evidence of a solve.
+- record_type: negative_control_record
+  negative_control_id: stage3r-negative-2014-brightness-hidden-cicada
+  false_positive_class: 2014_brightness_only_hidden_silhouette
+  description: Brightness-only hidden-silhouette readings are negative controls without
+    stronger artefact evidence.
+  source_url: https://uncovering-cicada.fandom.com/wiki/CICADA_3301_2014_PUZZLE
+  basis: Stage 3R Discord lead-triage policy and public-reference corroboration requirement.
+  recommended_use: Use as a negative control when future review or experiments encounter
+    this claim class.
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved as a false-positive class; not evidence of a solve.
+- record_type: negative_control_record
+  negative_control_id: stage3r-negative-onion7-related-snippets
+  false_positive_class: onion7_unverified_related_snippets
+  description: Quarantine Onion 7 related-snippet and Mobius/spiral extrapolations
+    not tied to exact tables.
+  source_url: https://uncovering-cicada.fandom.com/wiki/Onion_7:_numbers_on_page_15
+  basis: Stage 3R Discord lead-triage policy and public-reference corroboration requirement.
+  recommended_use: Use as a negative control when future review or experiments encounter
+    this claim class.
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved as a false-positive class; not evidence of a solve.
+- record_type: negative_control_record
+  negative_control_id: stage3r-negative-dots-unique-code
+  false_positive_class: dots_unique_binary_braille_constellation
+  description: Dot motifs are not unique binary, braille, or constellation encodings
+    without exact geometry controls.
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages
+  basis: Stage 3R Discord lead-triage policy and public-reference corroboration requirement.
+  recommended_use: Use as a negative control when future review or experiments encounter
+    this claim class.
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved as a false-positive class; not evidence of a solve.
+- record_type: negative_control_record
+  negative_control_id: stage3r-negative-roots-branches-fibonacci
+  false_positive_class: roots_branches_fibonacci_instruction
+  description: Roots/branches-as-Fibonacci instructions remain negative controls until
+    exact source evidence exists.
+  source_url: https://uncovering-cicada.fandom.com/wiki/Possible_hints_never_used
+  basis: Stage 3R Discord lead-triage policy and public-reference corroboration requirement.
+  recommended_use: Use as a negative control when future review or experiments encounter
+    this claim class.
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved as a false-positive class; not evidence of a solve.
+- record_type: negative_control_record
+  negative_control_id: stage3r-negative-2016-gp-fibonacci-prime
+  false_positive_class: 2016_gp_sum_fibonacci_prime_coincidence
+  description: GP-sum/Fibonacci-prime coincidences require transcript-locked recomputation
+    before use.
+  source_url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  basis: Stage 3R Discord lead-triage policy and public-reference corroboration requirement.
+  recommended_use: Use as a negative control when future review or experiments encounter
+    this claim class.
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved as a false-positive class; not evidence of a solve.
+- record_type: negative_control_record
+  negative_control_id: stage3r-negative-unsigned-post-2017-claims
+  false_positive_class: unsigned_post_2017_cicada_claims
+  description: Unsigned post-2017 claims are negative-control material unless signed/public
+    provenance is shown.
+  source_url: https://uncovering-cicada.fandom.com/wiki/PGP_Signed_Message_April_2017
+  basis: Stage 3R Discord lead-triage policy and public-reference corroboration requirement.
+  recommended_use: Use as a negative control when future review or experiments encounter
+    this claim class.
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved as a false-positive class; not evidence of a solve.
+- record_type: negative_control_record
+  negative_control_id: stage3r-negative-broad-cookie-gpu-cracking
+  false_positive_class: broad_cookie_bruteforce_gpu_hash_attack
+  description: Broad cookie brute force and GPU hash attacks are out of scope for
+    bounded archive tests.
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2013)
+  basis: Stage 3R Discord lead-triage policy and public-reference corroboration requirement.
+  recommended_use: Use as a negative control when future review or experiments encounter
+    this claim class.
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved as a false-positive class; not evidence of a solve.
+- record_type: negative_control_record
+  negative_control_id: stage3r-negative-ai-harmonic-key-proposal
+  false_positive_class: ai_generated_harmonic_key_proposal
+  description: AI-generated harmonic-key proposals are review notes only, not evidence
+    or experiment seeds.
+  source_url: https://uncovering-cicada.fandom.com/wiki/Possible_hints_never_used
+  basis: Stage 3R Discord lead-triage policy and public-reference corroboration requirement.
+  recommended_use: Use as a negative control when future review or experiments encounter
+    this claim class.
+  raw_message_committed: false
+  username_committed: false
+  private_url_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved as a false-positive class; not evidence of a solve.

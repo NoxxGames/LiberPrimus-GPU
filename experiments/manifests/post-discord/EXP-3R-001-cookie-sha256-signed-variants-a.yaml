@@ -1,0 +1,67 @@
+record_type: post_discord_experiment_manifest
+experiment_id: EXP-3R-001
+description: cookie_sha256_signed_variants_a
+hypothesis: Exact SHA-256 preimage test over historically authenticated strings and
+  artefact names.
+candidate_count_cap: 576
+execution_enabled: false
+cpu_only: true
+cuda_enabled: false
+cloud_execution: false
+paid_services: false
+generated_outputs_committed: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+notes: Stage 3R queues this manifest only; execution is explicitly disabled.
+source_basis:
+- cookie-2013-167-v0
+- cookie-2013-761-v0
+- stage3r-promoted-source-records
+required_inputs:
+- input_id: cookie-2013-167-v0
+  kind: archived_cookie_hash
+- input_id: cookie-2013-761-v0
+  kind: archived_cookie_hash
+- input_id: stage3r-public-source-strings
+  kind: authenticated_public_string_review
+candidate_generation:
+  algorithm: sha256
+  base_strings:
+  - ForEveryThingThatLivesIsHoly
+  - For Every Thing That Lives Is Holy
+  - THEPATHLIESEMPTY
+  - LiberPrimusIsTheWay
+  - Liber Primus is the way
+  - 7A35090F
+  - 1033.jpg
+  - 761.mp3
+  - '3301'
+  - '1033'
+  - '761'
+  - '167'
+  - p7amjopgric7dfdi.onion
+  byte_variants:
+  - raw
+  - lower
+  - upper
+  - trailing_lf
+  - trailing_crlf
+  - leading_space
+  - trailing_space
+  - wrapped_space
+  - compact_no_spaces
+  - compact_upper
+  - compact_lower
+  - quoted
+  candidate_count_estimate: 156
+  fuzzy_matching: false
+  gpu_hashcat: false
+controls:
+- Exact hex digest comparison only.
+- No fuzzy or near-match interpretation.
+- No external dictionary or brute-force expansion.
+stop_conditions:
+- candidate_count_exceeds_576
+- input_string_lacks_public_source
+- any_non_sha256_algorithm_requested

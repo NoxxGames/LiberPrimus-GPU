@@ -102,6 +102,24 @@ Committed aggregate fields include:
 
 Generated redacted streams, topic shards, JSONL indexes, and local HTML review indexes remain ignored under `experiments/results/discord-review-bundles/stage3q/`.
 
+## Stage 3R Discord Lead Promotion And Post-Discord Manifest Records
+
+Stage 3R adds committed schemas for:
+
+- `promoted_discord_source_record`
+- `promoted_discord_observation_record`
+- `negative_control_record`
+- `post_discord_experiment_manifest`
+- `gp_rune_claim_record`
+
+Promoted source and observation records require false privacy flags for raw messages, usernames, and private URLs. Observation records keep `usable_as_experiment_seed=false` and `trusted_as_canonical=false`.
+
+Negative-control records preserve known false-positive classes and require `solve_claim=false`.
+
+Post-Discord manifests require `execution_enabled=false`, `cpu_only=true`, `cuda_enabled=false`, `cloud_execution=false`, `paid_services=false`, `generated_outputs_committed=false`, `no_solve_claim=true`, `canonical_corpus_active=false`, and `page_boundaries_final=false`.
+
+Generated promotion-audit records remain ignored under `experiments/results/discord-lead-promotion/stage3r/`.
+
 ## Stage 0D-followup Record Types
 
 Implemented/generated Stage 0D-followup record types include:

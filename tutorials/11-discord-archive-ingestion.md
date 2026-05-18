@@ -30,6 +30,22 @@ Scan admin-provided local Discord HTML exports as source-discovery material only
   --aggregate-out data/observations/discord/discord-review-bundle-aggregate-stage3q.yaml `
   --allow-missing `
   --allow-warnings
+
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-leads promote `
+  --review-dir experiments/results/discord-review-bundles/stage3q `
+  --stage3o-links data/observations/discord/promoted-public-source-links-stage3o.yaml `
+  --stage3o-methods data/observations/discord/promoted-method-claim-candidates-stage3o.yaml `
+  --stage3o-numerics data/observations/discord/promoted-numeric-observation-candidates-stage3o.yaml `
+  --source-registry data/observations/archive/source-archive-records-v0.yaml `
+  --visual-registry data/observations/visual/visual-numeric-observations-v0.yaml `
+  --cookie-records data/observations/web/cookie-hash-records-v0.yaml `
+  --out-dir experiments/results/discord-lead-promotion/stage3r `
+  --promoted-sources-out data/observations/discord/stage3r-promoted-source-records.yaml `
+  --promoted-observations-out data/observations/discord/stage3r-promoted-observation-records.yaml `
+  --negative-controls-out data/observations/discord/stage3r-negative-control-records.yaml `
+  --audit-summary-out data/observations/discord/stage3r-promotion-audit-summary.yaml `
+  --allow-missing `
+  --allow-warnings
 ```
 
 ## Expected Outputs
@@ -37,16 +53,21 @@ Scan admin-provided local Discord HTML exports as source-discovery material only
 Ingestion writes ignored extraction JSONL and a local review index. Promotion writes capped,
 redacted YAML records for public review. Stage 3Q review bundles write redacted topic shards and
 indexes under `experiments/results/discord-review-bundles/stage3q/`; those files are for local
-review and are ignored by Git.
+review and are ignored by Git. Stage 3R promotes corroborated public links and exact observation
+leads into committed redacted records, preserves negative controls, and creates disabled
+post-Discord manifests without executing them.
 
 ## What Not To Commit
 
 Raw Discord HTML, raw message bodies, usernames, user IDs, message IDs, private attachment URLs,
 generated extraction outputs, generated promotion outputs, generated redacted shards, or local
-review indexes.
+review indexes, or generated Stage 3R audit JSONL outputs.
 
 ## Troubleshooting
 
 If the HTML format changes, add a synthetic fixture and adapt the parser without committing raw
 chat content. If a redacted shard is too broad for Deep Research, split by topic rather than
 uploading raw HTML.
+
+If a Stage 3R lead is Discord-only, keep it quarantined until it has a public source or exact
+artefact reference.

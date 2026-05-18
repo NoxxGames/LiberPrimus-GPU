@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3Q redacted Discord AI-review bundles and topic shards are complete.
+Stage 3R Discord lead promotion audit and first disabled post-Discord experiment queue are complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,19 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, and Stage 3Q generates ignored redacted Discord topic shards only.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, Stage 3Q generates ignored redacted Discord topic shards only, and Stage 3R promotes corroborated leads and creates disabled manifests only.
+
+## Completed in Stage 3R
+
+Stage 3R added a Discord lead promotion audit and the first disabled post-Discord manifest queue.
+
+Run summary: promoted source records `13`, promoted observation records `11`, negative controls `11`, duplicate existing source references counted `3`, unsafe/private or quarantined records counted `25`, post-Discord manifests `3`.
+
+The created manifests are `EXP-3R-001` with candidate cap `576`, `EXP-3R-003` with candidate cap `144`, and `EXP-3R-004` with claim cap `64`. All have `execution_enabled=false`, `cuda_enabled=false`, `no_solve_claim=true`, `canonical_corpus_active=false`, and `page_boundaries_final=false`.
+
+Generated audit records remain ignored under `experiments/results/discord-lead-promotion/stage3r/`. Raw Discord logs, generated Stage 3Q shards, message bodies, usernames, private URLs, and raw images remain uncommitted. Stage 3R does not execute experiments, call Discord APIs, scrape Discord, use CUDA, activate canonical corpus, finalize page boundaries, or claim a solve.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3r-discord-lead-promotion-audit.md`.
 
 ## Completed in Stage 3O
 

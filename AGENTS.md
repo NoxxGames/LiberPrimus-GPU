@@ -484,3 +484,13 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Usernames, user IDs, message IDs, avatar URLs, and private Discord URLs must not be committed.
 - Deep Research should receive generated redacted shards, not raw HTML logs.
 - Extracted Discord leads are hypotheses only and must not be promoted to facts or experiment seeds automatically.
+
+## Stage 3R Discord Lead Promotion Rules
+
+- Discord lead promotion requires public-source corroboration or exact artefact/observation references.
+- Discord-only claims are not facts.
+- Negative controls should preserve known false-positive classes.
+- Post-Discord manifests must remain disabled until explicitly run in a later stage.
+- Do not execute Stage 3R manifests during the promotion stage.
+- Do not promote raw Discord private content, message bodies, usernames, user IDs, message IDs, or private attachment URLs.
+- Promoted observation records must remain `usable_as_experiment_seed=false` until a later bounded review stage changes that explicitly.

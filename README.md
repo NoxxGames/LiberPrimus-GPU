@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3P and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3R and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -25,7 +25,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, and Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only.
 - Visual/image-derived observations: registry and deterministic feature summaries only, plus deterministic review transforms; Stage 3K records source locks and reviewable observations, Stage 3M records deterministic local image features, and Stage 3P generates ignored review transforms/contact sheets. No image-derived text experiments are executed.
 - Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, with exact byte-string logging and no fuzzy or partial hash claims.
-- Discord source discovery: Stage 3N scans admin-provided local HTML exports only and commits aggregate/redacted records only. Stage 3O promotes a bounded, public-safe subset of redacted source-discovery records. Stage 3Q builds ignored redacted topic shards for local AI/deep-research review. Raw logs, message bodies, usernames, and private attachment URLs are not committed.
+- Discord source discovery: Stage 3N scans admin-provided local HTML exports only and commits aggregate/redacted records only. Stage 3O promotes a bounded, public-safe subset of redacted source-discovery records. Stage 3Q builds ignored redacted topic shards for local AI/deep-research review. Stage 3R audits those leads, promotes only corroborated public/source-observation records, preserves false positives as negative controls, and queues disabled post-Discord manifests. Raw logs, message bodies, usernames, and private attachment URLs are not committed.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
 - Broad unsolved-page campaigns: not started.
@@ -34,7 +34,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 3R use/red-team selected redacted Discord topic shards with Deep Research, promote useful leads into source/observation registries, or implement an OutGuess regression harness if Discord review is deferred.
+- Stage 3S execute one disabled Stage 3R manifest explicitly, such as the Onion 7 explicit seed pack or cookie signed-variant pack, or implement an OutGuess regression harness if post-Discord execution is deferred.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -72,6 +72,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 3O privacy-preserving Discord source promotion, expanded tutorials, and GitHub Wiki mirror source generation.
 - Stage 3P deterministic image transform suite, contact sheets, and local visual review index.
 - Stage 3Q redacted Discord AI-review bundles and topic shards.
+- Stage 3R Discord lead promotion audit, negative controls, and first disabled post-Discord experiment manifests.
 
 ## Architecture summary
 
@@ -108,6 +109,7 @@ Current status:
 - Stage 3O: Discord source promotion and Wiki tutorial mirror complete.
 - Stage 3P: deterministic image transform suite and visual review index complete.
 - Stage 3Q: redacted Discord AI-review bundles and topic shards complete.
+- Stage 3R: Discord lead promotion audit and first post-Discord manifest queue complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -118,7 +120,8 @@ Current status:
 - Latest source-discovery stage: Stage 3O promoted `500` public source links, `200` method-claim candidates, and `200` numeric-observation candidates from the Stage 3N extraction into redacted review records. It rejected private/unsafe links, expanded public tutorials, and generated Wiki source pages. Raw Discord logs, message bodies, usernames, private URLs, and generated review indexes remain uncommitted; no solve claim.
 - Latest visual review stage: Stage 3P processed `58` ignored local page images, emitted `2077` derived review images, `59` contact sheets, `58` review pages, and `6` review-only visual transform candidates under ignored outputs. No OCR, AI/ML interpretation, image-derived search, or solve claim is made.
 - Latest Discord review stage: Stage 3Q generated `1700` redacted stream records, `17` topic shard files, and `900` review leads under ignored outputs, with an aggregate-only committed summary. Raw logs, message bodies, usernames, private URLs, AI upload, live API use, scraping, and solve claims remain absent.
-- Next: Stage 3R run/red-team selected redacted Discord topic shards with Deep Research and ingest useful leads into the observation/source registry, or implement an OutGuess regression harness.
+- Latest Discord promotion stage: Stage 3R promoted `13` public source records and `11` review-only observation records, preserved `11` negative-control records, counted `25` unsafe/private or quarantined records, and created `3` disabled post-Discord manifests. No experiment was executed and no solve claim was made.
+- Next: Stage 3S execute `EXP-3R-003` Onion 7 explicit seed pack or `EXP-3R-001` cookie signed-variant pack, or implement an OutGuess regression harness.
 
 ## How To Use This Repo
 

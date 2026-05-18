@@ -65,6 +65,21 @@ Local validation includes:
   --allow-missing
 ```
 
+## Stage 3R Discord Lead Promotion Tests
+
+Stage 3R tests cover schema validation, public/private URL corroboration, Discord-only claim rejection, promoted source and observation records, negative-control classes, disabled manifest caps, CLI promote/build/validate behavior, privacy policy checks, and ignored generated outputs.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-leads validate `
+  --promoted-sources data/observations/discord/stage3r-promoted-source-records.yaml `
+  --promoted-observations data/observations/discord/stage3r-promoted-observation-records.yaml `
+  --negative-controls data/observations/discord/stage3r-negative-control-records.yaml `
+  --manifest-dir experiments/manifests/post-discord `
+  --allow-empty
+```
+
 Legacy workbook tests include p56 prime-minus-one first-delta checks, Welcome `DIVINITY` delta checks, and direct-page zero-delta checks for solved fixture hints.
 
 Legacy Pastebin tests include first-pair prime validation, empty-pair preservation, Parable anchor detection, page-boundary non-finalization, and local-real-file conditional tests.

@@ -1,0 +1,53 @@
+record_type: post_discord_experiment_manifest
+experiment_id: EXP-3R-003
+description: onion7_raw_prime_order_seed_pack_a
+hypothesis: Use explicit Onion 7 table values and documented derived tables as bounded
+  numeric seed streams.
+candidate_count_cap: 144
+execution_enabled: false
+cpu_only: true
+cuda_enabled: false
+cloud_execution: false
+paid_services: false
+generated_outputs_committed: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+notes: Stage 3R queues this manifest only; execution is explicitly disabled.
+source_basis:
+- stage3r-observation-onion7-page15-raw-table
+- stage3r-source-onion7-page15
+required_inputs:
+- input_id: onion7_raw_table
+  kind: public_source_table_review_required
+- input_id: onion7_prime_delta_table
+  kind: derived_table_review_required
+- input_id: onion7_prime_order_table
+  kind: derived_table_review_required
+candidate_generation:
+  value_spaces:
+  - raw_table
+  - prime_delta_table
+  - prime_order_table
+  routes:
+  - row_major
+  - column_major
+  - reverse_row_major
+  - reverse_column_major
+  - clockwise_spiral
+  - counterclockwise_spiral
+  directions:
+  - forward
+  - reverse
+  reset_modes:
+  - none
+  - line
+  candidate_count_estimate: 72
+controls:
+- Only exact public Onion 7 table values may be used.
+- No page-boundary finalization.
+- No image-derived seed promotion.
+stop_conditions:
+- candidate_count_exceeds_144
+- raw_or_derived_table_missing_public_review_source
+- execution_requested_in_stage3r

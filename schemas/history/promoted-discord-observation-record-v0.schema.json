@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/promoted-discord-observation-record-v0.schema.json",
+  "title": "Promoted Discord Observation Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "observation_id",
+    "observation_type",
+    "source_url",
+    "source_title",
+    "values",
+    "derived_values",
+    "promotion_class",
+    "corroboration_basis",
+    "ambiguity_notes",
+    "usable_as_experiment_seed",
+    "raw_message_committed",
+    "username_committed",
+    "private_url_committed",
+    "trusted_as_canonical",
+    "review_status",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "promoted_discord_observation_record" },
+    "observation_id": { "type": "string", "minLength": 1 },
+    "observation_type": { "type": "string", "minLength": 1 },
+    "source_url": { "type": "string", "pattern": "^https?://" },
+    "source_title": { "type": "string", "minLength": 1 },
+    "values": { "type": ["array", "object", "string", "number", "integer", "null"] },
+    "derived_values": { "type": ["array", "object"] },
+    "promotion_class": {
+      "enum": [
+        "source_to_lock",
+        "observation_to_review",
+        "experiment_candidate",
+        "negative_control_candidate",
+        "debunk_or_false_positive",
+        "duplicate_of_existing_work",
+        "too_speculative",
+        "unsafe_or_private",
+        "ignore_for_now"
+      ]
+    },
+    "corroboration_basis": { "type": "string", "minLength": 1 },
+    "ambiguity_notes": { "type": "string" },
+    "usable_as_experiment_seed": { "const": false },
+    "raw_message_committed": { "const": false },
+    "username_committed": { "const": false },
+    "private_url_committed": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "review_status": { "type": "string", "minLength": 1 },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

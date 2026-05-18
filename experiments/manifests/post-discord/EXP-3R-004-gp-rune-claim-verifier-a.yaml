@@ -1,0 +1,44 @@
+record_type: post_discord_experiment_manifest
+experiment_id: EXP-3R-004
+description: gp_rune_claim_verifier_a
+hypothesis: Verify exact GP-sum and rune-count claims by recomputation on locked transcript
+  inputs.
+candidate_count_cap: 64
+execution_enabled: false
+cpu_only: true
+cuda_enabled: false
+cloud_execution: false
+paid_services: false
+generated_outputs_committed: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+notes: Stage 3R queues this manifest only; execution is explicitly disabled.
+source_basis:
+- stage3r-promoted-observation-records
+- stage3o-promoted-numeric-observation-candidates
+required_inputs:
+- input_id: promoted_numeric_claims
+  kind: exact_claim_review_required
+- input_id: locked_transcript_candidates
+  kind: future_locked_transcript_input
+- input_id: gematria_profile_v0
+  kind: committed_profile
+candidate_generation:
+  claim_cap: 64
+  claim_types:
+  - gp_sum
+  - rune_count
+  classification_results:
+  - verified
+  - unverified
+  - boundary_sensitive
+  - missing_source_span
+controls:
+- No vague spans.
+- No Discord-only claim promoted as fact.
+- Boundary-sensitive claims must remain non-canonical.
+stop_conditions:
+- claim_count_exceeds_64
+- claim_missing_exact_span
+- execution_requested_in_stage3r
