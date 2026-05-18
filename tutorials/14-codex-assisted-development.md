@@ -16,6 +16,7 @@ Use Codex safely for scoped repository stages.
 - For Stage 3S/3T/3U-style execution, state the exact manifest ID, candidate or claim cap, generated output paths, and that no other post-Discord manifest may run in the same stage.
 - For Stage 3V-style stego work, state whether missing OutGuess tools/assets should skip, list the exact manifest, and prohibit broad image scans.
 - For Stage 3W-style consolidation, state that no experiments should run and require source-of-truth docs plus anti-drift checks to stay synchronized.
+- For Stage 3X-style CLI modularisation, state that command names, options, help behavior, output shape, and exit semantics must be preserved and that command-surface tests must be added or updated.
 
 ## Commands
 
@@ -51,3 +52,7 @@ hash validation.
 
 If Codex updates stage state, verify `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, and `README.md` are
 synchronized and run `libreprimus consistency check-state-drift` before staging.
+
+If Codex changes CLI registration, verify `python -m libreprimus.cli --help`, selected group
+`--help` commands, and the Stage 3X command-surface tests before staging. Do not create
+`python/libreprimus/cli/` while `python/libreprimus/cli.py` remains the public entrypoint.

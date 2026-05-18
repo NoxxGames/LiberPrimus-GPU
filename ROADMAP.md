@@ -252,7 +252,7 @@ Stage 3W consolidates persistent project context after Stage 3V. It repairs stal
 
 ## Stage 3X - CLI modularisation without behavior change
 
-Split the growing `libreprimus.cli` module into focused command modules while preserving command names, options, output shape, tests, and behavior. This is a maintenance stage only, not an experiment stage.
+Stage 3X split the growing `libreprimus.cli` module into focused command modules while preserving command names, options, output shape, tests, and behavior. This is a maintenance stage only, not an experiment stage.
 
 ## Stage 3Y - Result synthesis and retirement ledger
 

@@ -44,6 +44,10 @@ Documentation and anti-drift checks verify core policy statements such as raw-da
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.
 
+## Stage 3X CLI Command-Surface Tests
+
+Stage 3X tests cover the modular CLI package layout, the thin public `python -m libreprimus.cli` entrypoint, preserved root command groups, selected high-risk subcommands, help output, and the rule that no `python/libreprimus/cli/` package may exist while `cli.py` remains the public module.
+
 ## Stage 3O Promotion And Wiki Tests
 
 Stage 3O tests cover Discord promotion redaction, public-safe URL filtering, review-only promotion records, README/tutorial coverage, Wiki source generation, Wiki validation scripts, and ignored raw/generated paths.

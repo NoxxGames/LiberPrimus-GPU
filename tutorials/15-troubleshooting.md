@@ -75,6 +75,19 @@ need to be rewritten, but current-state claims in long-lived docs must match the
 stage, canonical corpus inactive status, page-boundary review status, CUDA deferral, raw/generated
 output policy, Discord privacy, and no-solve-claim policy.
 
+## CLI Command Missing After Refactor
+
+Run the command-surface tests and inspect the registered groups:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q tests/python/test_stage3x_cli_command_surface.py tests/python/test_stage3x_cli_modularisation.py
+.\.venv\Scripts\python.exe -m libreprimus.cli --help
+```
+
+Stage 3X keeps `python/libreprimus/cli.py` as the public entrypoint and moves command groups into
+`python/libreprimus/cli_commands/`. Do not create `python/libreprimus/cli/` while `cli.py` exists,
+and do not rename commands as part of a mechanical modularisation.
+
 ## Image Transform Run Is Slow
 
 Stage 3P uses bounded review previews for large images. Do not switch to full-resolution derived

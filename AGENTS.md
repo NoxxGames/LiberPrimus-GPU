@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 3V - OutGuess regression harness.
+Current completed stage: Stage 3X - CLI modularisation without behaviour change.
 
-Current work: Stage 3W - state consolidation and anti-drift hardening. Stage 3W is documentation, metadata, tests, and CI/check hardening only; it must not add experiment functionality, run new experiments, process raw data, process Discord logs, process page images, run OutGuess extraction, change CUDA behavior, activate the canonical corpus, finalize page boundaries, or claim a solve.
+Current work: Stage 3Y - result synthesis and method-retirement ledger. Stage 3Y should synthesize existing results and retire or defer methods; it must not run new experiments, process raw data, change CUDA behavior, activate the canonical corpus, finalize page boundaries, or claim a solve unless explicitly scoped by a later prompt.
 
 Current project state:
 
@@ -556,3 +556,11 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Keep `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, and `README.md` synchronized when stage status changes.
 - Run `libreprimus consistency check-state-drift` before staging documentation-heavy changes.
 - `deep-research-reports/**` is local review material and must never be staged, committed, or pushed.
+
+## Stage 3X CLI Modularisation Rules
+
+- Keep `python/libreprimus/cli.py` as the public `python -m libreprimus.cli` entrypoint.
+- Do not create `python/libreprimus/cli/` while `cli.py` exists.
+- CLI refactors must preserve command names, option names, help behavior, output shape, and exit semantics unless a later stage explicitly scopes a behavior change.
+- Add or update command-surface tests whenever CLI commands are added, removed, renamed, or moved.
+- Do not combine CLI modularisation with experiment execution, schema redesign, raw-data processing, CUDA work, canonical corpus activation, page-boundary finalization, or solve claims.
