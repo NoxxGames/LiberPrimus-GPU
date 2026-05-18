@@ -201,6 +201,26 @@ Candidate records include:
 
 Generated `hash_candidate_records.jsonl`, `exact_matches.jsonl`, `summary.json`, and warnings must not be committed. Research logs may summarize counts and exact-match IDs only.
 
+## Stage 3V OutGuess Regression Records
+
+Stage 3V generated records are written only to ignored outputs under `experiments/results/stego/outguess/stage3v/`.
+
+Committed schemas:
+
+- `stego-artifact-record-v0`
+- `outguess-regression-manifest-v0`
+- `outguess-tool-record-v0`
+- `outguess-extraction-record-v0`
+- `outguess-regression-summary-v0`
+
+Extraction records include tool availability, asset availability, attempt status, exit code, extracted payload hash and size, expected payload hash, payload-match flag, status, output paths, `raw_payload_committed=false`, `solve_claim=false`, and `cuda_used=false`.
+
+Generated extraction JSONL, tool JSON, summary JSON, warnings, synthetic inputs, and extracted payloads must not be committed.
+
+## Post-Discord Manifest Schemas
+
+Committed post-Discord queue metadata uses `post-discord-experiment-manifest-v0` for disabled/explicit experiment manifests and `gp-rune-claim-record-v0` for exact GP/rune verifier claim records. These schemas keep execution disabled until a later bounded stage explicitly runs one manifest and require no-solve policy fields.
+
 ## Stage 0D-followup Record Types
 
 Implemented/generated Stage 0D-followup record types include:

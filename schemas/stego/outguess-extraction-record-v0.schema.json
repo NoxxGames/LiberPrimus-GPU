@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/stego/outguess-extraction-record-v0.schema.json",
+  "title": "OutGuess Extraction Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "run_id",
+    "case_id",
+    "artifact_id",
+    "expected_role",
+    "tool_available",
+    "asset_available",
+    "extraction_attempted",
+    "extraction_exit_code",
+    "extracted_payload_sha256",
+    "extracted_payload_size_bytes",
+    "expected_payload_sha256",
+    "payload_match",
+    "status",
+    "output_paths",
+    "raw_payload_committed",
+    "solve_claim",
+    "cuda_used",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "outguess_extraction_record" },
+    "run_id": { "type": "string", "minLength": 1 },
+    "case_id": { "type": "string", "minLength": 1 },
+    "artifact_id": { "type": "string", "minLength": 1 },
+    "expected_role": { "type": "string" },
+    "tool_available": { "type": "boolean" },
+    "asset_available": { "type": "boolean" },
+    "extraction_attempted": { "type": "boolean" },
+    "extraction_exit_code": { "type": ["integer", "null"] },
+    "extracted_payload_sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+    "extracted_payload_size_bytes": { "type": ["integer", "null"], "minimum": 0 },
+    "expected_payload_sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+    "payload_match": { "type": ["boolean", "null"] },
+    "status": {
+      "enum": [
+        "passed",
+        "failed",
+        "skipped_tool_missing",
+        "skipped_asset_missing",
+        "skipped_case_disabled",
+        "extraction_error",
+        "unexpected_payload",
+        "no_payload",
+        "reference_extraction_recorded"
+      ]
+    },
+    "output_paths": { "type": "object" },
+    "raw_payload_committed": { "const": false },
+    "solve_claim": { "const": false },
+    "cuda_used": { "const": false },
+    "notes": { "type": "string" }
+  }
+}

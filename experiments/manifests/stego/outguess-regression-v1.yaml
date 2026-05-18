@@ -1,0 +1,61 @@
+record_type: outguess_regression_manifest
+manifest_id: outguess-regression-v1
+description: Deterministic Stage 3V OutGuess regression harness with explicit synthetic controls and historical placeholders.
+tool_required: true
+allow_missing_tool: true
+allow_missing_assets: true
+expected_case_count_upper_bound: 16
+cpu_only: true
+cuda_enabled: false
+no_solve_claim: true
+generated_outputs_committed: false
+default_command:
+  extraction_args:
+  - -r
+  - '{input_path}'
+  - '{output_path}'
+cases:
+- case_id: synthetic-negative-clean-jpeg
+  artifact_id: synthetic-negative-clean-jpeg-v0
+  enabled: true
+  expected_role: synthetic_negative
+  generate_synthetic: clean_jpeg
+  require_expected_payload_hash: false
+  notes: Clean JPEG negative control; non-empty payload is recorded but not interpreted.
+- case_id: synthetic-negative-noise-jpeg
+  artifact_id: synthetic-negative-noise-jpeg-v0
+  enabled: true
+  expected_role: synthetic_negative
+  generate_synthetic: noise_jpeg
+  require_expected_payload_hash: false
+  notes: Noise JPEG negative control.
+- case_id: synthetic-positive-if-embedding-supported
+  artifact_id: synthetic-positive-if-embedding-supported-v0
+  enabled: false
+  expected_role: synthetic_positive
+  notes: Disabled until embedding support and exact expected payload hash are added.
+- case_id: cicada-2012-final-jpg-outguess-positive
+  artifact_id: cicada-2012-final-jpg-outguess-positive
+  enabled: true
+  expected_role: known_positive
+  require_expected_payload_hash: false
+  notes: Historical placeholder; skips when local artefact is absent.
+- case_id: cicada-2013-invitation-jpg-outguess-positive
+  artifact_id: cicada-2013-invitation-jpg-outguess-positive
+  enabled: true
+  expected_role: known_positive
+  require_expected_payload_hash: false
+  notes: Historical placeholder; skips when local artefact is absent.
+- case_id: cicada-2014-1033-jpg-outguess-positive
+  artifact_id: cicada-2014-1033-jpg-outguess-positive
+  enabled: true
+  expected_role: known_positive
+  require_expected_payload_hash: false
+  notes: Historical placeholder; skips when local artefact is absent.
+- case_id: cicada-2016-message-image-outguess-positive
+  artifact_id: cicada-2016-message-image-outguess-positive
+  enabled: true
+  expected_role: known_positive
+  require_expected_payload_hash: false
+  notes: Historical placeholder; skips when local artefact is absent.
+notes: Missing tool or assets produce explicit skipped records. No broad LP image scan is requested.

@@ -29,6 +29,7 @@ git check-ignore -v experiments/results/discord-promotion/stage3o/promotion_cand
 git check-ignore -v experiments/results/discord-lead-promotion/stage3r/promotion_audit_records.jsonl
 git check-ignore -v experiments/results/image-transforms/stage3p/review_index.html
 git check-ignore -v experiments/results/image-transforms/stage3p/contact_sheets/example.jpg
+git check-ignore -v experiments/results/stego/outguess/stage3v/summary.json
 ```
 
 If an ignored Stage 3P transform run leaves local images or HTML under `experiments/results/`, do
@@ -53,6 +54,10 @@ and research logs.
 If a Stage 3U cookie signed-variant run leaves hash candidate records under
 `experiments/results/post-discord/stage3u/`, do not stage them. Commit only summary docs, tests,
 and research logs.
+
+If a Stage 3V OutGuess run leaves extraction records, tool records, synthetic images, or extracted
+payloads under `experiments/results/stego/outguess/stage3v/`, do not stage them. Commit only
+metadata, manifests, docs, tests, and research logs.
 
 ## Image Transform Run Is Slow
 
@@ -110,6 +115,12 @@ Improve claim extraction or span-linking in a separate bounded follow-up, then r
 Zero exact SHA-256 matches is a valid bounded result. Do not add more strings, test partial
 matches, or switch algorithms inside the completed run. Queue a new explicit manifest if the
 scope changes.
+
+## Stage 3V OutGuess Tool Or Assets Missing
+
+Missing `outguess` or historical fixture assets is a valid harness result when the command uses
+`--allow-missing-tool` and `--allow-missing-assets`. Do not install tools automatically or download
+archives during validation. Source-lock fixtures in a separate stage.
 
 ## Wiki Publish Fails
 

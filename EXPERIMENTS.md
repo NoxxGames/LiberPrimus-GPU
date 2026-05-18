@@ -135,6 +135,24 @@ The run generated `156` candidates before deduplication, tested `105` deduplicat
 
 Generated hash candidate records, exact-match JSONL, summary JSON, and warnings remain ignored under `experiments/results/post-discord/stage3u/`.
 
+## Stage 3V OutGuess Regression Harness
+
+Stage 3V runs only the explicit `outguess-regression-v1` manifest.
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli stego outguess-run `
+  --manifest experiments/manifests/stego/outguess-regression-v1.yaml `
+  --artifacts data/observations/stego/outguess-artifacts-v0.yaml `
+  --out-dir experiments/results/stego/outguess/stage3v `
+  --allow-missing-tool `
+  --allow-missing-assets `
+  --allow-warnings
+```
+
+The local run detected no OutGuess binary, so it recorded missing-tool skips. This is a valid harness result. Generated extraction records, tool records, summaries, synthetic inputs, and extracted payload directories remain ignored under `experiments/results/stego/outguess/stage3v/`.
+
+Stage 3V does not scan all Liber Primus images, run non-OutGuess stego tools, process raw Discord logs, use CUDA, or claim a solve.
+
 ## Stage 0A smoke manifest
 
 The Stage 0A smoke manifest validates project bootstrap only. No candidate plaintext is generated in Stage 0A.

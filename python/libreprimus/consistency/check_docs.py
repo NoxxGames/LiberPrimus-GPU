@@ -61,6 +61,7 @@ def check_docs_consistency(
     _require(results, "readme_stage3s", "Stage 3S" in readme and "complete" in readme.lower(), "README mentions Stage 3S complete.", readme_path)
     _require(results, "readme_stage3t", "Stage 3T" in readme and "complete" in readme.lower(), "README mentions Stage 3T complete.", readme_path)
     _require(results, "readme_stage3u", "Stage 3U" in readme and "complete" in readme.lower(), "README mentions Stage 3U complete.", readme_path)
+    _require(results, "readme_stage3v", "Stage 3V" in readme and "complete" in readme.lower(), "README mentions Stage 3V complete.", readme_path)
     _require(results, "status_stage2d", "Stage 2D" in status, "STATUS mentions Stage 2D.", status_path)
     _require(results, "status_stage2e", "Stage 2E" in status, "STATUS mentions Stage 2E.", status_path)
     _require(results, "status_stage2f", "Stage 2F" in status, "STATUS mentions Stage 2F.", status_path)
@@ -87,6 +88,7 @@ def check_docs_consistency(
     _require(results, "status_stage3s", "Stage 3S" in status, "STATUS mentions Stage 3S.", status_path)
     _require(results, "status_stage3t", "Stage 3T" in status, "STATUS mentions Stage 3T.", status_path)
     _require(results, "status_stage3u", "Stage 3U" in status, "STATUS mentions Stage 3U.", status_path)
+    _require(results, "status_stage3v", "Stage 3V" in status, "STATUS mentions Stage 3V.", status_path)
     _require(results, "roadmap_stage2d", "Stage 2D" in roadmap, "ROADMAP mentions Stage 2D.", roadmap_path)
     _require(results, "roadmap_stage2e", "Stage 2E" in roadmap, "ROADMAP mentions Stage 2E.", roadmap_path)
     _require(results, "roadmap_stage2f", "Stage 2F" in roadmap, "ROADMAP mentions Stage 2F.", roadmap_path)
@@ -114,6 +116,7 @@ def check_docs_consistency(
     _require(results, "roadmap_stage3s", "Stage 3S" in roadmap, "ROADMAP mentions Stage 3S.", roadmap_path)
     _require(results, "roadmap_stage3t", "Stage 3T" in roadmap, "ROADMAP mentions Stage 3T.", roadmap_path)
     _require(results, "roadmap_stage3u", "Stage 3U" in roadmap, "ROADMAP mentions Stage 3U.", roadmap_path)
+    _require(results, "roadmap_stage3v", "Stage 3V" in roadmap, "ROADMAP mentions Stage 3V.", roadmap_path)
     for path, text, minimum in [
         (readme_path, readme, 50),
         (status_path, status, 20),

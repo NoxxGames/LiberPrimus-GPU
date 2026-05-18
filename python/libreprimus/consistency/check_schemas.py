@@ -34,6 +34,8 @@ EXPECTED_SCHEMA_FILES = [
     "experiments/approval-gated-execution-result-v0.schema.json",
     "experiments/approval-readiness-packet-v0.schema.json",
     "experiments/operator-policy-v0.schema.json",
+    "experiments/post-discord-experiment-manifest-v0.schema.json",
+    "experiments/gp-rune-claim-record-v0.schema.json",
     "experiments/bounded-experiment-queue-v0.schema.json",
     "experiments/bounded-experiment-item-v0.schema.json",
     "experiments/policy-check-result-v0.schema.json",
@@ -48,6 +50,11 @@ EXPECTED_SCHEMA_FILES = [
     "results/experiment-run-summary-v0.schema.json",
     "results/experiment-result-store-manifest-v0.schema.json",
     "results/sqlite-result-store-v0.schema.json",
+    "stego/stego-artifact-record-v0.schema.json",
+    "stego/outguess-regression-manifest-v0.schema.json",
+    "stego/outguess-extraction-record-v0.schema.json",
+    "stego/outguess-regression-summary-v0.schema.json",
+    "stego/outguess-tool-record-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -62,6 +69,8 @@ EXPECTED_DOC_TERMS = [
     "approval-gated-execution-result-v0",
     "approval-readiness-packet-v0",
     "operator-policy-v0",
+    "post-discord-experiment-manifest-v0",
+    "gp-rune-claim-record-v0",
     "bounded-experiment-queue-v0",
     "policy-check-result-v0",
     "bounded-auto-run-result-v0",
@@ -73,6 +82,11 @@ EXPECTED_DOC_TERMS = [
     "crib-check-result-v0",
     "solved-page-fixture",
     "solved-baseline-run-manifest-v0",
+    "stego-artifact-record-v0",
+    "outguess-regression-manifest-v0",
+    "outguess-extraction-record-v0",
+    "outguess-regression-summary-v0",
+    "outguess-tool-record-v0",
 ]
 
 

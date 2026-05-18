@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3U bounded cookie SHA-256 signed-variant pack execution is complete.
+Stage 3V OutGuess regression harness is complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,17 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, Stage 3Q generates ignored redacted Discord topic shards only, Stage 3R promotes corroborated leads and creates disabled manifests only, Stage 3S executes only the bounded Onion 7 explicit seed-pack manifest, Stage 3T executes only the bounded GP/rune claim verifier, and Stage 3U executes only the bounded cookie SHA-256 signed-variant pack.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, Stage 3Q generates ignored redacted Discord topic shards only, Stage 3R promotes corroborated leads and creates disabled manifests only, Stage 3S executes only the bounded Onion 7 explicit seed-pack manifest, Stage 3T executes only the bounded GP/rune claim verifier, Stage 3U executes only the bounded cookie SHA-256 signed-variant pack, and Stage 3V adds an OutGuess regression harness without broad stego scanning.
+
+## Completed in Stage 3V
+
+Stage 3V added stego schemas, OutGuess artefact metadata, source-lock placeholders, an explicit regression manifest, tool detection, an extraction wrapper, synthetic controls, CLI commands, consistency checks, and fake-tool tests.
+
+Local run summary: OutGuess tool available `false`, manifest cases `7`, attempted `0`, passed `0`, failed `0`, skipped for missing tool `6`, skipped for missing assets `0`, skipped disabled `1`, extraction errors `0`, reference extractions `0`.
+
+Generated tool records, extraction records, summaries, synthetic inputs, and extracted payload directories remain ignored under `experiments/results/stego/outguess/stage3v/`. Raw historical artefacts, raw Liber Primus images, raw Discord logs, and extracted payloads are not committed. No broad stego scan, CUDA, canonical corpus activation, page-boundary finalization, or solve claim is made.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3v-outguess-regression-harness.md`.
 
 ## Completed in Stage 3U
 

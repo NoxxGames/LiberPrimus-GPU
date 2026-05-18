@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/stego/outguess-tool-record-v0.schema.json",
+  "title": "OutGuess Tool Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "tool_name",
+    "tool_available",
+    "tool_path",
+    "help_output_sha256",
+    "detected_at_utc",
+    "platform",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "outguess_tool_record" },
+    "tool_name": { "const": "outguess" },
+    "tool_available": { "type": "boolean" },
+    "tool_path": { "type": ["string", "null"] },
+    "help_output_sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+    "detected_at_utc": { "type": "string" },
+    "platform": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}

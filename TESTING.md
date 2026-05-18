@@ -119,6 +119,20 @@ Local validation includes:
   --results-dir experiments/results/post-discord/stage3u
 ```
 
+## Stage 3V OutGuess Regression Tests
+
+Stage 3V tests cover stego schemas, manifest/artifact validation, missing-tool skips, missing-asset skips, fake OutGuess success and failure, exact expected-payload hash matching, expected-payload hash mismatch, no raw payload commits, no solve claims, CUDA-off flags, CLI detection/validation/run behavior, generated output ignore rules, third-party artefact ignore rules, raw Discord ignore rules, and raw page-image ignore rules.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli stego outguess-validate-manifest `
+  --manifest experiments/manifests/stego/outguess-regression-v1.yaml `
+  --artifacts data/observations/stego/outguess-artifacts-v0.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli stego outguess-summary `
+  --results-dir experiments/results/stego/outguess/stage3v
+```
+
 Legacy workbook tests include p56 prime-minus-one first-delta checks, Welcome `DIVINITY` delta checks, and direct-page zero-delta checks for solved fixture hints.
 
 Legacy Pastebin tests include first-pair prime validation, empty-pair preservation, Parable anchor detection, page-boundary non-finalization, and local-real-file conditional tests.

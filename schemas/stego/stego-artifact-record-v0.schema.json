@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/stego/stego-artifact-record-v0.schema.json",
+  "title": "Stego Artifact Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "artifact_id",
+    "source_class",
+    "source_url",
+    "local_path",
+    "local_path_status",
+    "file_name",
+    "file_size_bytes",
+    "sha256",
+    "media_type",
+    "expected_role",
+    "expected_payload_sha256",
+    "expected_payload_text_sha256",
+    "extraction_tool",
+    "trusted_as_canonical",
+    "solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "stego_artifact_record" },
+    "artifact_id": { "type": "string", "minLength": 1 },
+    "source_class": { "type": "string", "minLength": 1 },
+    "source_url": { "type": ["string", "null"] },
+    "local_path": { "type": "string" },
+    "local_path_status": { "enum": ["present", "missing", "not_required", "generated"] },
+    "file_name": { "type": "string" },
+    "file_size_bytes": { "type": ["integer", "null"], "minimum": 0 },
+    "sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+    "media_type": { "type": "string" },
+    "expected_role": {
+      "enum": [
+        "known_positive",
+        "known_negative",
+        "synthetic_positive",
+        "synthetic_negative",
+        "candidate",
+        "reference_only"
+      ]
+    },
+    "expected_payload_sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+    "expected_payload_text_sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+    "extraction_tool": { "const": "outguess" },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false },
+    "notes": { "type": "string" }
+  }
+}

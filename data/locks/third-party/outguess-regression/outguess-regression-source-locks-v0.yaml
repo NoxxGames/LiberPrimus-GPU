@@ -1,0 +1,36 @@
+record_type: outguess_regression_source_lock_set
+schema: schemas/stego/stego-artifact-record-v0.schema.json
+record_count: 4
+records:
+- lock_id: outguess-lock-what-happened-2012
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_(2012)
+  related_artifact_id: cicada-2012-final-jpg-outguess-positive
+  local_asset_status: missing
+  raw_asset_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Source-reference lock only; no raw image or extracted payload is committed.
+- lock_id: outguess-lock-what-happened-2013
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2013)
+  related_artifact_id: cicada-2013-invitation-jpg-outguess-positive
+  local_asset_status: missing
+  raw_asset_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Source-reference lock only; no raw image or extracted payload is committed.
+- lock_id: outguess-lock-2014-1033
+  source_url: https://uncovering-cicada.fandom.com/wiki/CICADA_3301_2014_PUZZLE
+  related_artifact_id: cicada-2014-1033-jpg-outguess-positive
+  local_asset_status: missing
+  raw_asset_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Source-reference lock only; exact 1033.jpg artefact must be locally source-locked later.
+- lock_id: outguess-lock-2016-message
+  source_url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  related_artifact_id: cicada-2016-message-image-outguess-positive
+  local_asset_status: missing
+  raw_asset_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Source-reference lock only; no raw image or extracted payload is committed.

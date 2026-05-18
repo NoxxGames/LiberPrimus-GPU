@@ -43,6 +43,10 @@ experiments/results/image-transforms/stage3p/review_index.html
 Raw images, generated image-analysis JSONL outputs, generated transform images, contact sheets,
 review HTML, and transform JSONL records.
 
+## OutGuess Regression Boundary
+
+Stage 3V adds OutGuess regression under `libreprimus stego`, but it is not part of the image-analysis transform workflow. It uses explicit stego manifests and optional local historical fixtures only. Do not run broad OutGuess scans across `third_party/LiberPrimusPages/`; those images remain ignored and outside Stage 3V unless a future manifest lists a tiny reviewed control subset.
+
 ## Troubleshooting
 
 If local images are absent, `--allow-missing` supports raw-data-free validation.

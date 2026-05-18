@@ -520,3 +520,13 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - An exact preimage match is a historical artefact lead only, not a solve claim.
 - Do not process raw Discord logs or raw page images during cookie stages.
 - Stage 3U executes only `EXP-3R-001`; do not rerun `EXP-3R-003` or `EXP-3R-004` in the same stage.
+
+## Stage 3V OutGuess Regression Rules
+
+- OutGuess extraction outputs and payloads are generated and must not be committed.
+- Missing OutGuess binary is not a failure when `--allow-missing-tool` is set.
+- Missing historical assets are not a failure when `--allow-missing-assets` is set.
+- Do not infer hidden meaning from non-empty payloads without expected hash and source validation.
+- Do not run broad stego scans by default.
+- Do not process raw Discord logs during stego stages.
+- Raw historical artefacts under `third_party/CicadaArchive/` and `third_party/CicadaOutGuess/` must remain ignored except README and `.gitkeep`.

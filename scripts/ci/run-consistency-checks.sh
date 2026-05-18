@@ -56,6 +56,10 @@ echo "Validating Stage 3T GP/rune claim verifier manifest"
 echo "Validating Stage 3U cookie signed-variant manifest"
 "$python_bin" -m libreprimus.cli post-discord validate-cookie-manifest --manifest experiments/manifests/post-discord/EXP-3R-001-cookie-sha256-signed-variants-a.yaml
 
+echo "Validating Stage 3V OutGuess regression manifest and missing-tool-safe detection"
+"$python_bin" -m libreprimus.cli stego outguess-validate-manifest --manifest experiments/manifests/stego/outguess-regression-v1.yaml --artifacts data/observations/stego/outguess-artifacts-v0.yaml
+"$python_bin" -m libreprimus.cli stego outguess-detect --out-dir "$tmp_dir/stage3v-outguess" --allow-missing-tool
+
 echo "Validating Stage 2E exploratory manifests"
 "$python_bin" -m libreprimus.cli experiment validate-exploratory --manifest experiments/manifests/exploratory/stage2e-caesar-preview-dry-run.yaml
 "$python_bin" -m libreprimus.cli experiment validate-exploratory --manifest experiments/manifests/exploratory/stage2e-affine-preview-dry-run.yaml

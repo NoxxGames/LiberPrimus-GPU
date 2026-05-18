@@ -244,7 +244,11 @@ Stage 3U executes only `EXP-3R-001`, the bounded cookie SHA-256 signed-variant p
 
 ## Stage 3V - OutGuess regression harness
 
-If Stage 3U finds no exact match, implement a bounded OutGuess regression harness. If a later cookie pack finds an exact match, Stage 3V should independently verify preimage bytes and source provenance before any broader interpretation. Do not jump to CUDA or broad search until the selected manifest is explicit and bounded.
+Stage 3V implements the bounded OutGuess regression harness. The local run had no OutGuess binary, so enabled cases were skipped as missing-tool records. Raw historical artefacts and extracted payloads remain ignored, and no broad stego scan or solve claim is made.
+
+## Stage 3W - OutGuess fixture setup or regression expansion
+
+If tool/assets are missing, source-lock historical OutGuess fixture assets and document local setup. If known positives pass later, expand the positive/negative regression set or move to deterministic audio/spectrogram regression. Do not jump to CUDA or broad search.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

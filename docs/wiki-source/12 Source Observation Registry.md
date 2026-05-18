@@ -14,6 +14,7 @@ future experiment can use them.
 - `data/observations/archive/`
 - `data/observations/visual/`
 - `data/observations/web/`
+- `data/observations/stego/`
 - `data/observations/discord/`
 - `data/locks/third-party/`
 
@@ -65,6 +66,10 @@ Generated verification records are ignored experiment outputs rather than regist
 Stage 3U tests manifest-declared signed/public strings against the archived cookie/hash records.
 The generated hash candidate records are ignored experiment outputs rather than registry records.
 
+Stage 3V records OutGuess artefact metadata and source-lock placeholders under `data/observations/stego/`
+and `data/locks/third-party/outguess-regression/`. These records are regression fixtures, not proof of
+hidden content. Missing tools or assets are valid skipped states.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
@@ -77,6 +82,8 @@ Do not commit generated Stage 3T verification JSONL, per-status JSONL, summary J
 files.
 Do not commit generated Stage 3U hash candidate JSONL, exact-match JSONL, summary JSON, or warning
 files.
+Do not commit generated Stage 3V extraction JSONL, tool JSON, summary JSON, synthetic inputs, or
+extracted payloads.
 
 ## Troubleshooting
 
@@ -94,3 +101,6 @@ ID. Do not promote generated verification dumps as source evidence.
 
 If a Stage 3U exact preimage candidate appears, promote only a reviewed summary and independently
 verify source provenance before any interpretation.
+
+If a Stage 3V extraction produces bytes, interpret it only when an expected payload hash exists and
+matches. Otherwise keep it as an ignored reference extraction record.

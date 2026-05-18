@@ -127,6 +127,18 @@ third_party/LiberPrimusDiscordChats/**
 !third_party/LiberPrimusDiscordChats/README.md
 !third_party/LiberPrimusDiscordChats/.gitkeep
 
+# Local third-party Cicada archive artefacts
+third_party/CicadaArchive/**
+!third_party/CicadaArchive/
+!third_party/CicadaArchive/README.md
+!third_party/CicadaArchive/.gitkeep
+
+# Local third-party OutGuess regression artefacts
+third_party/CicadaOutGuess/**
+!third_party/CicadaOutGuess/
+!third_party/CicadaOutGuess/README.md
+!third_party/CicadaOutGuess/.gitkeep
+
 # Raw corpus and local data
 data/raw/**
 !data/raw/
@@ -242,6 +254,16 @@ experiments/results/post-discord/**
 !experiments/results/post-discord/stage3t/.gitkeep
 !experiments/results/post-discord/stage3u/
 !experiments/results/post-discord/stage3u/.gitkeep
+
+# Generated stego/OutGuess outputs
+experiments/results/stego/**
+!experiments/results/stego/
+!experiments/results/stego/README.md
+!experiments/results/stego/.gitkeep
+!experiments/results/stego/outguess/
+!experiments/results/stego/outguess/.gitkeep
+!experiments/results/stego/outguess/stage3v/
+!experiments/results/stego/outguess/stage3v/.gitkeep
 
 # Generated Wiki sync outputs
 experiments/results/wiki-sync/**

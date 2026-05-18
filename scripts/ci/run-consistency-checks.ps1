@@ -59,6 +59,10 @@ try {
     Write-Host "Validating Stage 3U cookie signed-variant manifest"
     & $Python -m libreprimus.cli post-discord validate-cookie-manifest --manifest experiments/manifests/post-discord/EXP-3R-001-cookie-sha256-signed-variants-a.yaml
 
+    Write-Host "Validating Stage 3V OutGuess regression manifest and missing-tool-safe detection"
+    & $Python -m libreprimus.cli stego outguess-validate-manifest --manifest experiments/manifests/stego/outguess-regression-v1.yaml --artifacts data/observations/stego/outguess-artifacts-v0.yaml
+    & $Python -m libreprimus.cli stego outguess-detect --out-dir (Join-Path $TempDir "stage3v-outguess") --allow-missing-tool
+
     Write-Host "Validating Stage 2E exploratory manifests"
     & $Python -m libreprimus.cli experiment validate-exploratory --manifest experiments/manifests/exploratory/stage2e-caesar-preview-dry-run.yaml
     & $Python -m libreprimus.cli experiment validate-exploratory --manifest experiments/manifests/exploratory/stage2e-affine-preview-dry-run.yaml

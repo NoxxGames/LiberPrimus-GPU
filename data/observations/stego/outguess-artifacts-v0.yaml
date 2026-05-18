@@ -1,0 +1,124 @@
+record_type: stego_artifact_record_set
+schema: schemas/stego/stego-artifact-record-v0.schema.json
+record_count: 7
+generated_at_utc: '2026-05-16T00:00:00Z'
+records:
+- record_type: stego_artifact_record
+  artifact_id: synthetic-negative-clean-jpeg-v0
+  source_class: synthetic_control
+  source_url: null
+  local_path: experiments/results/stego/outguess/stage3v/synthetic_inputs/synthetic-negative-clean-jpeg-v0.jpg
+  local_path_status: generated
+  file_name: synthetic-negative-clean-jpeg-v0.jpg
+  file_size_bytes: null
+  sha256: null
+  media_type: image/jpeg
+  expected_role: synthetic_negative
+  expected_payload_sha256: null
+  expected_payload_text_sha256: null
+  extraction_tool: outguess
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Generated clean JPEG control; non-empty extraction is not interpreted as meaningful.
+- record_type: stego_artifact_record
+  artifact_id: synthetic-negative-noise-jpeg-v0
+  source_class: synthetic_control
+  source_url: null
+  local_path: experiments/results/stego/outguess/stage3v/synthetic_inputs/synthetic-negative-noise-jpeg-v0.jpg
+  local_path_status: generated
+  file_name: synthetic-negative-noise-jpeg-v0.jpg
+  file_size_bytes: null
+  sha256: null
+  media_type: image/jpeg
+  expected_role: synthetic_negative
+  expected_payload_sha256: null
+  expected_payload_text_sha256: null
+  extraction_tool: outguess
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Generated noisy JPEG control; no historical claim is attached.
+- record_type: stego_artifact_record
+  artifact_id: synthetic-positive-if-embedding-supported-v0
+  source_class: synthetic_control
+  source_url: null
+  local_path: experiments/results/stego/outguess/stage3v/synthetic_inputs/synthetic-positive-if-embedding-supported-v0.jpg
+  local_path_status: missing
+  file_name: synthetic-positive-if-embedding-supported-v0.jpg
+  file_size_bytes: null
+  sha256: null
+  media_type: image/jpeg
+  expected_role: synthetic_positive
+  expected_payload_sha256: null
+  expected_payload_text_sha256: null
+  extraction_tool: outguess
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Placeholder for a future synthetic positive once embedding support and expected payload hashes are added.
+- record_type: stego_artifact_record
+  artifact_id: cicada-2012-final-jpg-outguess-positive
+  source_class: public_historical_placeholder
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_(2012)
+  local_path: third_party/CicadaOutGuess/cicada-2012-final-jpg-outguess-positive.jpg
+  local_path_status: missing
+  file_name: cicada-2012-final-jpg-outguess-positive.jpg
+  file_size_bytes: null
+  sha256: null
+  media_type: image/jpeg
+  expected_role: known_positive
+  expected_payload_sha256: null
+  expected_payload_text_sha256: null
+  extraction_tool: outguess
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Historical OutGuess-relevant placeholder; exact local artefact and payload hash are not committed.
+- record_type: stego_artifact_record
+  artifact_id: cicada-2013-invitation-jpg-outguess-positive
+  source_class: public_historical_placeholder
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2013)
+  local_path: third_party/CicadaOutGuess/cicada-2013-invitation-jpg-outguess-positive.jpg
+  local_path_status: missing
+  file_name: cicada-2013-invitation-jpg-outguess-positive.jpg
+  file_size_bytes: null
+  sha256: null
+  media_type: image/jpeg
+  expected_role: known_positive
+  expected_payload_sha256: null
+  expected_payload_text_sha256: null
+  extraction_tool: outguess
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Historical OutGuess-relevant placeholder; exact local artefact and payload hash are not committed.
+- record_type: stego_artifact_record
+  artifact_id: cicada-2014-1033-jpg-outguess-positive
+  source_class: public_historical_placeholder
+  source_url: https://uncovering-cicada.fandom.com/wiki/CICADA_3301_2014_PUZZLE
+  local_path: third_party/CicadaOutGuess/cicada-2014-1033-jpg-outguess-positive.jpg
+  local_path_status: missing
+  file_name: cicada-2014-1033-jpg-outguess-positive.jpg
+  file_size_bytes: null
+  sha256: null
+  media_type: image/jpeg
+  expected_role: known_positive
+  expected_payload_sha256: null
+  expected_payload_text_sha256: null
+  extraction_tool: outguess
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Historical OutGuess-relevant placeholder; source-lock before treating this as a real positive.
+- record_type: stego_artifact_record
+  artifact_id: cicada-2016-message-image-outguess-positive
+  source_class: public_historical_placeholder
+  source_url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  local_path: third_party/CicadaOutGuess/cicada-2016-message-image-outguess-positive.jpg
+  local_path_status: missing
+  file_name: cicada-2016-message-image-outguess-positive.jpg
+  file_size_bytes: null
+  sha256: null
+  media_type: image/jpeg
+  expected_role: known_positive
+  expected_payload_sha256: null
+  expected_payload_text_sha256: null
+  extraction_tool: outguess
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Historical OutGuess-relevant placeholder; expected payload hash is not known locally.
