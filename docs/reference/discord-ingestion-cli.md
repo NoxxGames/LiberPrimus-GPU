@@ -25,3 +25,24 @@ Validate the raw-log-free path:
 
 The commands do not require raw logs in CI when `--allow-missing` is used. Generated JSONL and
 local HTML review files remain ignored.
+
+Stage 3O adds promotion commands for the ignored Stage 3N output:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-promote promote `
+  --ingestion-dir experiments/results/discord-ingestion/stage3n `
+  --out-dir experiments/results/discord-promotion/stage3o `
+  --promoted-links-out data/observations/discord/promoted-public-source-links-stage3o.yaml `
+  --promoted-methods-out data/observations/discord/promoted-method-claim-candidates-stage3o.yaml `
+  --promoted-numerics-out data/observations/discord/promoted-numeric-observation-candidates-stage3o.yaml `
+  --allow-missing `
+  --allow-warnings
+
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-promote validate-promoted `
+  --links data/observations/discord/promoted-public-source-links-stage3o.yaml `
+  --methods data/observations/discord/promoted-method-claim-candidates-stage3o.yaml `
+  --numerics data/observations/discord/promoted-numeric-observation-candidates-stage3o.yaml `
+  --allow-empty
+```
+
+Promotion is redacted, bounded, and review-only.

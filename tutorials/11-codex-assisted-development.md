@@ -135,3 +135,7 @@ For deterministic image-analysis work, keep the process mechanical and local: ex
 ## Stage 3N Guardrails
 
 For Discord HTML ingestion work, treat logs as sensitive local research material. Do not commit raw logs, message bodies, usernames, user IDs, avatars, private attachment URLs, generated review indexes, or extracted raw contexts. Do not call live Discord APIs, scrape Discord, use self-bots, upload logs to AI services, execute extracted methods, or promote claims without review.
+
+## Stage 3O Guardrails
+
+For Discord source promotion and Wiki work, keep promoted records redacted and reviewable. Do not commit raw Discord context, usernames, private attachment URLs, generated promotion JSONL, or `.wiki-worktree/`. Update repository tutorials first, regenerate Wiki source, and treat the Wiki as a mirror only.

@@ -216,7 +216,11 @@ Stage 3N adds privacy-preserving ingestion for admin-provided local Discord HTML
 
 ## Stage 3O - Review extracted Discord source links
 
-Review selected public links discovered by Stage 3N and promote only vetted public source records or observations into the existing source registry. If Discord source extraction needs parser follow-up, adapt the parser to the export format first. If source review is deferred, an OutGuess regression harness is the next bounded alternative. Do not jump to CUDA or broad AI analysis.
+Stage 3O promotes a bounded public-safe subset of Stage 3N Discord source-discovery output into redacted review records, expands public tutorials, and generates GitHub Wiki mirror source pages. Raw Discord logs, message bodies, usernames, private URLs, generated review outputs, and Wiki worktrees remain uncommitted.
+
+## Stage 3P - Review promoted Discord public links or OutGuess regression harness
+
+Review the Stage 3O promoted public links and promote high-value public sources into the archive/source registry with independent source locks, or implement an OutGuess regression harness if source review is deferred. Do not jump to CUDA, live Discord, broad web crawling, or broad AI analysis.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

@@ -22,3 +22,8 @@ data/observations/discord/discord-ingestion-aggregate-summary-v0.yaml
 
 Those aggregate records contain counts and safety flags only. They are not canonical source locks
 for any extracted claim.
+
+Stage 3O reads the ignored generated Stage 3N extraction files locally and promotes a bounded,
+redacted subset of public-safe links and observation candidates. Full candidate lists remain
+generated outputs; committed promotion records contain only public URLs or keyword/numeric
+summaries with no message body context.

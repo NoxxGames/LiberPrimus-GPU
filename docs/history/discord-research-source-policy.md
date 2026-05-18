@@ -14,3 +14,8 @@ Rules:
 
 Discord evidence is not canonical. Public links discovered through Discord must be reviewed and
 promoted through the normal source registry before they are used as evidence or experiment seeds.
+
+Stage 3O may promote selected public links and redacted claim summaries into
+`data/observations/discord/`, but those promoted records remain reviewable leads. They must keep
+`trusted_as_canonical=false`, must not include raw message bodies or usernames, and must not be
+treated as facts until a later public-source review stage validates them independently.

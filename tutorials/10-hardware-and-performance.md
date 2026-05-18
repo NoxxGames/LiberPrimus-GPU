@@ -134,6 +134,10 @@ Stage 3M is deterministic local CPU image-feature extraction. It uses no CUDA, G
 
 Stage 3N is local HTML parsing and source-discovery indexing only. It uses no CUDA, GPU acceleration, browser automation, live Discord APIs, scraping, self-bots, AI upload, or benchmark claims. Generated Discord ingestion records and local review indexes remain ignored.
 
+## Stage 3O Source Promotion Scope
+
+Stage 3O is documentation and source-promotion work. It uses no CUDA, GPU acceleration, live Discord APIs, scraping, web crawling, AI upload, or benchmark claims. Generated promotion and Wiki sync reports remain ignored.
+
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.

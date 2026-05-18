@@ -14,6 +14,15 @@ Use GitHub issues for scoped work. A useful issue states context, scope, non-goa
 
 The GitHub wiki is a mirror for public convenience. Repository tutorials and docs are the source of truth.
 
+Stage 3O generates Wiki source from `tutorials/`:
+
+```powershell
+.\scripts\github\validate-wiki-source.ps1
+.\scripts\github\sync-tutorials-to-wiki.ps1 --DryRun
+```
+
+Do not edit only the GitHub Wiki. Update repository tutorials first, regenerate `docs/wiki-source/`, and then publish when the Wiki remote is available.
+
 ## Raw Data Ban
 
 Do not attach or commit raw corpus files, generated alignment dumps, local workbooks, or local Pastebin text.
@@ -21,6 +30,8 @@ Do not attach or commit raw corpus files, generated alignment dumps, local workb
 Stage 3K also keeps local page images under `third_party/LiberPrimusPages/` ignored. Commit only lock records, observation records, schemas, docs, tests, and source code.
 
 Stage 3N keeps admin-provided Discord HTML logs under `third_party/LiberPrimusDiscordChats/` ignored. Commit only schemas, code, docs, tests, aggregate/redacted records, and research summaries.
+
+Stage 3O keeps generated Discord promotion outputs under `experiments/results/discord-promotion/` ignored and commits only curated redacted promotion records.
 
 ## Pull Requests
 

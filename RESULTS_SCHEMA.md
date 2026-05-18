@@ -65,6 +65,23 @@ Alignment-derived records must include source IDs, source SHA-256 hashes, confid
 
 Public tutorials must not present generated results as evidence unless they are manifest-backed, provenance-complete, and explicitly reviewed. Stage 0D-P examples are smoke outputs only.
 
+## Stage 3O Discord Promotion Records
+
+Stage 3O committed promotion records use redacted YAML summaries under `data/observations/discord/`.
+
+Required fields include:
+
+- `promoted_id`
+- `source=discord_admin_export_stage3n`
+- `source_record_type`
+- `redacted=true`
+- `review_status`
+- `trusted_as_canonical=false`
+- `raw_message_committed=false`
+- `usernames_committed=false`
+
+Generated full candidate lists and unsafe-link rejection lists remain ignored under `experiments/results/discord-promotion/stage3o/`. Wiki sync reports remain ignored under `experiments/results/wiki-sync/stage3o/`.
+
 ## Stage 0D-followup Record Types
 
 Implemented/generated Stage 0D-followup record types include:

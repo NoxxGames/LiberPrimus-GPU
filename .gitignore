@@ -191,6 +191,26 @@ experiments/results/discord-ingestion/**
 !experiments/results/discord-ingestion/stage3n/
 !experiments/results/discord-ingestion/stage3n/.gitkeep
 
+# Generated Discord promotion outputs
+experiments/results/discord-promotion/**
+!experiments/results/discord-promotion/
+!experiments/results/discord-promotion/README.md
+!experiments/results/discord-promotion/.gitkeep
+!experiments/results/discord-promotion/stage3o/
+!experiments/results/discord-promotion/stage3o/.gitkeep
+
+# Generated Wiki sync outputs
+experiments/results/wiki-sync/**
+!experiments/results/wiki-sync/
+!experiments/results/wiki-sync/README.md
+!experiments/results/wiki-sync/.gitkeep
+!experiments/results/wiki-sync/stage3o/
+!experiments/results/wiki-sync/stage3o/.gitkeep
+
+# Temporary GitHub Wiki worktree
+.wiki-worktree/
+.wiki-worktree/**
+
 # Generated alignment outputs
 data/normalized/alignment/**
 !data/normalized/alignment/

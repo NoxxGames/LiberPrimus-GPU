@@ -42,6 +42,12 @@ Null controls should include shuffled text, randomized keys, known non-solutions
 
 Manual review notes must distinguish promising output from solved evidence.
 
+## Stage 3O Discord source promotion
+
+Stage 3O promotion records are reviewable source-discovery leads, not experiment seeds. They may point reviewers toward public GitHub, archive, wiki, Reddit, Pastebin, Google, image, audio, or PDF sources, but Discord context itself is not source truth.
+
+Generated promotion candidates and rejection lists remain ignored under `experiments/results/discord-promotion/stage3o/`. Any future experiment based on a promoted source must first promote the public source through a source-lock or observation registry step with independent provenance.
+
 ## Stage 0A smoke manifest
 
 The Stage 0A smoke manifest validates project bootstrap only. No candidate plaintext is generated in Stage 0A.

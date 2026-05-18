@@ -40,6 +40,18 @@ Manifests must replay to the same outputs under pinned inputs and fixed seeds.
 
 Documentation checks should verify core policy statements such as raw-data immutability and Stage 0A restrictions.
 
+## Stage 3O Promotion And Wiki Tests
+
+Stage 3O tests cover Discord promotion redaction, public-safe URL filtering, review-only promotion records, README/tutorial coverage, Wiki source generation, Wiki validation scripts, and ignored raw/generated paths.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-promote validate-promoted --links data/observations/discord/promoted-public-source-links-stage3o.yaml --methods data/observations/discord/promoted-method-claim-candidates-stage3o.yaml --numerics data/observations/discord/promoted-numeric-observation-candidates-stage3o.yaml --allow-empty
+.\scripts\github\validate-wiki-source.ps1
+.\scripts\github\sync-tutorials-to-wiki.ps1 --DryRun
+```
+
 Legacy workbook tests include p56 prime-minus-one first-delta checks, Welcome `DIVINITY` delta checks, and direct-page zero-delta checks for solved fixture hints.
 
 Legacy Pastebin tests include first-pair prime validation, empty-pair preservation, Parable anchor detection, page-boundary non-finalization, and local-real-file conditional tests.

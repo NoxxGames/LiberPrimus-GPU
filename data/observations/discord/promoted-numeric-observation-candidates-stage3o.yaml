@@ -1,0 +1,3489 @@
+record_type: discord_promoted_numeric_observation_candidates_stage3o
+source: discord_admin_export_stage3n
+records:
+- promoted_id: stage3o-numeric-observation-0345
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 31
+  - 503
+  - 509
+  - 1033
+  - 3301
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3358
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 167
+  - 761
+  - 1033
+  - 3301
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2139
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: rune_count
+  numbers:
+  - 13
+  - 29
+  - 31
+  - 761
+  context_keywords:
+  - prime
+  - rune count
+  redacted_summary: 'numeric cluster rune_count: prime, rune count'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3329
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 31
+  - 1033
+  - 3301
+  context_keywords:
+  - cuneiform
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: cuneiform, gp sum'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2501
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 29
+  - 31
+  - 1033
+  - 3301
+  context_keywords:
+  - atbash
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: atbash, cuneiform'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2490
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  - 1033
+  - 3301
+  context_keywords:
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: cuneiform'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2018
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 563
+  - 569
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2980
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 31
+  - 1033
+  - 3301
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0301
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 503
+  - 509
+  - 3301
+  context_keywords:
+  - gp sum
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gp sum, prime'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0432
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  - 29
+  - 31
+  context_keywords:
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: cuneiform'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1886
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  - 1033
+  - 3301
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1566
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  - 1033
+  - 3301
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2166
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 1033
+  - 3301
+  context_keywords:
+  - base 60
+  - fibonacci
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: base 60, fibonacci, gematria, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2544
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  - 1033
+  - 3301
+  context_keywords:
+  - cuneiform
+  - onion
+  redacted_summary: 'numeric cluster base60: cuneiform, onion'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1152
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  - 29
+  - 1033
+  context_keywords:
+  - base 60
+  - cuneiform
+  - prime
+  redacted_summary: 'numeric cluster base60: base 60, cuneiform, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0430
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  - 29
+  - 31
+  context_keywords:
+  - cuneiform
+  - prime
+  redacted_summary: 'numeric cluster base60: cuneiform, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3422
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 29
+  - 31
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1215
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 31
+  - 3301
+  context_keywords:
+  - atbash
+  - fibonacci
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: atbash, fibonacci, gematria, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2307
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 563
+  - 3301
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0202
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 29
+  - 1033
+  - 3301
+  context_keywords:
+  - base60
+  - prime
+  redacted_summary: 'numeric cluster base60: base60, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2508
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  - 1033
+  - 3301
+  context_keywords:
+  - cuneiform
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: cuneiform, gematria, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2560
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 29
+  - 1033
+  - 3301
+  context_keywords:
+  - atbash
+  - base 60
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: atbash, base 60, cuneiform'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1269
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  - 1033
+  - 3301
+  context_keywords:
+  - gp sum
+  - onion
+  redacted_summary: 'numeric cluster gp_sum: gp sum, onion'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1271
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  - 1033
+  - 3301
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0842
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: cuneiform'
+  occurrence_count: 14
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1347
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 14
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0852
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  - 761
+  context_keywords:
+  - gematria
+  - outguess
+  redacted_summary: 'numeric cluster gp_sum: gematria, outguess'
+  occurrence_count: 7
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0283
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1871
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  - 1033
+  context_keywords:
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: cuneiform'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2618
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 29
+  context_keywords:
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gematria, prime'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2658
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 13
+  - 31
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1147
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 29
+  - 31
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-4037
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: rune_count
+  numbers:
+  - 29
+  - 31
+  context_keywords:
+  - prime
+  - rune count
+  redacted_summary: 'numeric cluster rune_count: prime, rune count'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0911
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  - 3301
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3226
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1076
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  - 3301
+  context_keywords:
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gematria, prime'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0217
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - base 60
+  redacted_summary: 'numeric cluster base60: base 60'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2532
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - atbash
+  - base60
+  redacted_summary: 'numeric cluster base60: atbash, base60'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3041
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  - 1033
+  context_keywords:
+  - base 60
+  redacted_summary: 'numeric cluster base60: base 60'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0242
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 29
+  context_keywords:
+  - atbash
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: atbash, gematria'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2925
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 29
+  context_keywords:
+  - gematria
+  - phi
+  redacted_summary: 'numeric cluster gp_sum: gematria, phi'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2518
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  - 3301
+  context_keywords:
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: cuneiform'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1945
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  - 31
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0030
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - base 60
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: base 60, cuneiform'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1187
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - gp sum
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gp sum, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2053
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - gp sum
+  - phi
+  redacted_summary: 'numeric cluster gp_sum: gp sum, phi'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2334
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - fibonacci
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: fibonacci, gematria, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2530
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - atbash
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: atbash, cuneiform'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2531
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - cuneiform
+  - prime
+  redacted_summary: 'numeric cluster base60: cuneiform, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2557
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - base60
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: base60, cuneiform'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3868
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - cuneiform
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: cuneiform, gematria'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-4040
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  - 3301
+  context_keywords:
+  - caesar
+  - gp sum
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: caesar, gp sum, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1240
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  - 1033
+  context_keywords:
+  - cuneiform
+  - prime
+  redacted_summary: 'numeric cluster base60: cuneiform, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3389
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 1033
+  context_keywords:
+  - atbash
+  - gematria
+  - prime
+  - totient
+  - vigenere
+  redacted_summary: 'numeric cluster gp_sum: atbash, gematria, prime, totient, vigenere'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1788
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 29
+  context_keywords:
+  - atbash
+  - gematria
+  - prime
+  - totient
+  redacted_summary: 'numeric cluster gp_sum: atbash, gematria, prime, totient'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1828
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  - 29
+  context_keywords:
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: cuneiform'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2598
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 13
+  - 31
+  context_keywords:
+  - binary
+  - mersenne
+  - prime
+  redacted_summary: 'numeric cluster binary: binary, mersenne, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2938
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  - 31
+  context_keywords:
+  - cuneiform
+  - prime
+  redacted_summary: 'numeric cluster base60: cuneiform, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3906
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 13
+  - 31
+  context_keywords:
+  - binary
+  - prime
+  redacted_summary: 'numeric cluster binary: binary, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-4038
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: rune_count
+  numbers:
+  - 13
+  - 31
+  context_keywords:
+  - prime
+  - rune count
+  redacted_summary: 'numeric cluster rune_count: prime, rune count'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2167
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  - 3301
+  context_keywords:
+  - base 60
+  - fibonacci
+  redacted_summary: 'numeric cluster base60: base 60, fibonacci'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2833
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  - 503
+  context_keywords:
+  - gp sum
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gp sum, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1916
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 167
+  - 1033
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2054
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 167
+  - 761
+  context_keywords:
+  - gematria
+  - mersenne
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gematria, mersenne, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3018
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 167
+  - 761
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-4001
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  - 1033
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0824
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: rune_count
+  numbers:
+  - 29
+  - 3301
+  context_keywords:
+  - fibonacci
+  - rune count
+  redacted_summary: 'numeric cluster rune_count: fibonacci, rune count'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2168
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 29
+  - 3301
+  context_keywords:
+  - base 60
+  - phi
+  redacted_summary: 'numeric cluster base60: base 60, phi'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2370
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 29
+  - 3301
+  context_keywords:
+  - binary
+  - prime
+  - totient
+  redacted_summary: 'numeric cluster binary: binary, prime, totient'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1706
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  - 1033
+  context_keywords:
+  - gematria
+  - onion
+  redacted_summary: 'numeric cluster gp_sum: gematria, onion'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1490
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  - 3301
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0121
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 78
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0046
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 64
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0063
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 36
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0013
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gematria, prime'
+  occurrence_count: 27
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0829
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 3301
+  context_keywords:
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: cuneiform'
+  occurrence_count: 24
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0429
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gematria, prime'
+  occurrence_count: 22
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0856
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 17
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0071
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 3301
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 17
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0284
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 13
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0478
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 29
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 13
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1881
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - gp sum
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gp sum, prime'
+  occurrence_count: 9
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0532
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 8
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1527
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  context_keywords:
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: cuneiform'
+  occurrence_count: 7
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0503
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0735
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  context_keywords:
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gematria, prime'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1211
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  context_keywords:
+  - fibonacci
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: fibonacci, gematria, prime'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1454
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  context_keywords:
+  - gematria
+  - outguess
+  redacted_summary: 'numeric cluster gp_sum: gematria, outguess'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0776
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 167
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2766
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-4036
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: rune_count
+  numbers:
+  - 13
+  context_keywords:
+  - prime
+  - rune count
+  redacted_summary: 'numeric cluster rune_count: prime, rune count'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0881
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - cookie
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: cookie, gematria'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1672
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  context_keywords:
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gematria, prime'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3017
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1134
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 13
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2447
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 13
+  context_keywords:
+  - binary
+  - fibonacci
+  redacted_summary: 'numeric cluster binary: binary, fibonacci'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2825
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  context_keywords:
+  - gp sum
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gp sum, prime'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1408
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 167
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1223
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1985
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - gematria
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gematria, gp sum'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2162
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - gp sum
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gp sum, prime'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2499
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: rune_count
+  numbers:
+  - 29
+  context_keywords:
+  - rune count
+  redacted_summary: 'numeric cluster rune_count: rune count'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2685
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 29
+  context_keywords:
+  - affine
+  - atbash
+  - binary
+  - caesar
+  - vigenere
+  redacted_summary: 'numeric cluster binary: affine, atbash, binary, caesar, vigenere'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0393
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 31
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0520
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 31
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0023
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - binary
+  - gematria
+  - prime
+  - totient
+  redacted_summary: 'numeric cluster gp_sum: binary, gematria, prime, totient'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0914
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: rune_count
+  numbers:
+  - 3301
+  context_keywords:
+  - rune count
+  redacted_summary: 'numeric cluster rune_count: rune count'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2008
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - gematria
+  - phi
+  redacted_summary: 'numeric cluster gp_sum: gematria, phi'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1327
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  context_keywords:
+  - cuneiform
+  - prime
+  redacted_summary: 'numeric cluster base60: cuneiform, prime'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1528
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 13
+  context_keywords:
+  - base 60
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: base 60, cuneiform'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1177
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - atbash
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: atbash, gematria, prime'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1224
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 29
+  context_keywords:
+  - binary
+  - fibonacci
+  redacted_summary: 'numeric cluster binary: binary, fibonacci'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1286
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 29
+  context_keywords:
+  - base 60
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: base 60, cuneiform'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1503
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - gematria
+  - phi
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gematria, phi, prime'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1838
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 29
+  context_keywords:
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: cuneiform'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2178
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - affine
+  - atbash
+  - caesar
+  - fibonacci
+  - gematria
+  - gp sum
+  - hash
+  - page 56
+  - phi
+  - prime
+  - spectrogram
+  - totient
+  redacted_summary: 'numeric cluster gp_sum: affine, atbash, caesar, fibonacci, gematria,
+    gp sum, hash, page 56, phi, prime, spectrogram, totient'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2510
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 29
+  context_keywords:
+  - base 60
+  - prime
+  redacted_summary: 'numeric cluster base60: base 60, prime'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2971
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - atbash
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: atbash, gematria'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0635
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - gematria
+  - onion
+  redacted_summary: 'numeric cluster gp_sum: gematria, onion'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1082
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - cookie
+  - gematria
+  - hash
+  redacted_summary: 'numeric cluster gp_sum: cookie, gematria, hash'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1258
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - gp sum
+  - hash
+  redacted_summary: 'numeric cluster gp_sum: gp sum, hash'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2102
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - fibonacci
+  - gp sum
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: fibonacci, gp sum, prime'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2561
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 3301
+  context_keywords:
+  - base 60
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: base 60, cuneiform'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3188
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - fibonacci
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: fibonacci, gematria'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3242
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 563
+  context_keywords:
+  - atbash
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: atbash, gematria'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2580
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 761
+  context_keywords:
+  - base60
+  redacted_summary: 'numeric cluster base60: base60'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0173
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 1033
+  context_keywords:
+  - binary
+  - prime
+  redacted_summary: 'numeric cluster binary: binary, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1071
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  context_keywords:
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gematria, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1145
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  context_keywords:
+  - gematria
+  - phi
+  redacted_summary: 'numeric cluster gp_sum: gematria, phi'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1270
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  context_keywords:
+  - gp sum
+  - onion
+  redacted_summary: 'numeric cluster gp_sum: gp sum, onion'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2013
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 1033
+  context_keywords:
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: cuneiform'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2513
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 1033
+  context_keywords:
+  - atbash
+  - cuneiform
+  - vigenere
+  redacted_summary: 'numeric cluster base60: atbash, cuneiform, vigenere'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2537
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 1033
+  context_keywords:
+  - base60
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: base60, cuneiform'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3228
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 1033
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3465
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1033
+  context_keywords:
+  - gematria
+  - onion
+  redacted_summary: 'numeric cluster gp_sum: gematria, onion'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1634
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  context_keywords:
+  - gematria
+  - outguess
+  redacted_summary: 'numeric cluster gp_sum: gematria, outguess'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1795
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  context_keywords:
+  - gematria
+  - vigenere
+  redacted_summary: 'numeric cluster gp_sum: gematria, vigenere'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2205
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  context_keywords:
+  - atbash
+  - caesar
+  - gematria
+  - phi
+  redacted_summary: 'numeric cluster gp_sum: atbash, caesar, gematria, phi'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2709
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  context_keywords:
+  - gematria
+  - phi
+  redacted_summary: 'numeric cluster gp_sum: gematria, phi'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2836
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  context_keywords:
+  - gematria
+  - prime
+  - vigenere
+  redacted_summary: 'numeric cluster gp_sum: gematria, prime, vigenere'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2932
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: rune_count
+  numbers:
+  - 13
+  context_keywords:
+  - rune count
+  redacted_summary: 'numeric cluster rune_count: rune count'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3113
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 13
+  context_keywords:
+  - fibonacci
+  - gp sum
+  - prime
+  - rune count
+  redacted_summary: 'numeric cluster gp_sum: fibonacci, gp sum, prime, rune count'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2584
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 167
+  context_keywords:
+  - base 60
+  - prime
+  redacted_summary: 'numeric cluster base60: base 60, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2661
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 167
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0103
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - gematria
+  - prime
+  - totient
+  redacted_summary: 'numeric cluster gp_sum: gematria, prime, totient'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0632
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - gematria
+  - totient
+  redacted_summary: 'numeric cluster gp_sum: gematria, totient'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1156
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - gematria
+  - gp sum
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gematria, gp sum, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1324
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 29
+  context_keywords:
+  - base 60
+  - binary
+  - prime
+  redacted_summary: 'numeric cluster binary: base 60, binary, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1635
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - gematria
+  - phi
+  redacted_summary: 'numeric cluster gp_sum: gematria, phi'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1895
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - gematria
+  - phi
+  - prime
+  - totient
+  redacted_summary: 'numeric cluster gp_sum: gematria, phi, prime, totient'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2298
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - atbash
+  - caesar
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: atbash, caesar, gematria'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2346
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: rune_count
+  numbers:
+  - 29
+  context_keywords:
+  - prime
+  - rune count
+  redacted_summary: 'numeric cluster rune_count: prime, rune count'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2511
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 29
+  context_keywords:
+  - base 60
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: base 60, gematria, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2523
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 29
+  context_keywords:
+  - base60
+  redacted_summary: 'numeric cluster base60: base60'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2922
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 29
+  context_keywords:
+  - base 60
+  redacted_summary: 'numeric cluster base60: base 60'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0557
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 31
+  context_keywords:
+  - binary
+  - prime
+  redacted_summary: 'numeric cluster binary: binary, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2929
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 31
+  context_keywords:
+  - affine
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: affine, gematria'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3847
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 31
+  context_keywords:
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gematria, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0053
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - binary
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: binary, gematria'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0764
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - gematria
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gematria, gp sum'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1181
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - atbash
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: atbash, gp sum'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1216
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - cuneiform
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: cuneiform, gematria, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1260
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - gp sum
+  - hash
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gp sum, hash, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1894
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - gematria
+  - vigenere
+  redacted_summary: 'numeric cluster gp_sum: gematria, vigenere'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2078
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3301
+  context_keywords:
+  - gp sum
+  - vigenere
+  redacted_summary: 'numeric cluster gp_sum: gp sum, vigenere'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2283
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 3301
+  context_keywords:
+  - base 60
+  redacted_summary: 'numeric cluster base60: base 60'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2533
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 3301
+  context_keywords:
+  - base 60
+  - base60
+  redacted_summary: 'numeric cluster base60: base 60, base60'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0410
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  context_keywords:
+  - gematria
+  - page 57
+  redacted_summary: 'numeric cluster gp_sum: gematria, page 57'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1321
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  context_keywords:
+  - binary
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: binary, gematria'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2144
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 761
+  context_keywords:
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: cuneiform'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2576
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 761
+  context_keywords:
+  - base 60
+  redacted_summary: 'numeric cluster base60: base 60'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3040
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  context_keywords:
+  - gp sum
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gp sum, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3087
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 761
+  context_keywords:
+  - gp sum
+  - page 57
+  redacted_summary: 'numeric cluster gp_sum: gp sum, page 57'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-3091
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 761
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0104
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 0
+  - 28
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 112
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0114
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 60
+  context_keywords:
+  - base 60
+  redacted_summary: 'numeric cluster base60: base 60'
+  occurrence_count: 85
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0165
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 0
+  - 1
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 26
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0280
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 33
+  - 39
+  context_keywords:
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: cuneiform'
+  occurrence_count: 23
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0037
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 2013
+  context_keywords:
+  - gematria
+  - prime
+  redacted_summary: 'numeric cluster gp_sum: gematria, prime'
+  occurrence_count: 22
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0701
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 0
+  - 1
+  - 2
+  - 5
+  - 8
+  - 47
+  - 58
+  - 122
+  - 207
+  - 13136
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 21
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0155
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 21
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0090
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 59
+  - 60
+  context_keywords:
+  - base 60
+  redacted_summary: 'numeric cluster base60: base 60'
+  occurrence_count: 19
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0399
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 2013
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 17
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0175
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 3
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 17
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0514
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 60
+  context_keywords:
+  - base 60
+  - cuneiform
+  redacted_summary: 'numeric cluster base60: base 60, cuneiform'
+  occurrence_count: 17
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0152
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 0
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 15
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0226
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 2
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 14
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0216
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 2
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 10
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1069
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 54
+  - 55
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 10
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2633
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 491
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 9
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1061
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 1
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 7
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1523
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 2016
+  - 2017
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 7
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2752
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 64
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 7
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0499
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: binary
+  numbers:
+  - 0
+  context_keywords:
+  - binary
+  redacted_summary: 'numeric cluster binary: binary'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0697
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 1
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0880
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 2012
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-2869
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 54
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0866
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 5
+  context_keywords:
+  - gp sum
+  redacted_summary: 'numeric cluster gp_sum: gp sum'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-1780
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: gp_sum
+  numbers:
+  - 5
+  context_keywords:
+  - gematria
+  redacted_summary: 'numeric cluster gp_sum: gematria'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.
+- promoted_id: stage3o-numeric-observation-0299
+  source: discord_admin_export_stage3n
+  source_record_type: discord_numeric_observation_candidate
+  candidate_kind: base60
+  numbers:
+  - 60
+  - 256
+  context_keywords:
+  - base 60
+  redacted_summary: 'numeric cluster base60: base 60'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Numeric Discord observation lead; not promoted as fact or seed.

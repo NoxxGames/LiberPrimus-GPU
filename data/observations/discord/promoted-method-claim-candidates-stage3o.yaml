@@ -1,0 +1,3094 @@
+record_type: discord_promoted_method_claim_candidates_stage3o
+source: discord_admin_export_stage3n
+records:
+- promoted_id: stage3o-method-claim-0021
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - wrong
+  redacted_summary: 'method keyword cluster: wrong'
+  occurrence_count: 2223
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0041
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - noise
+  redacted_summary: 'method keyword cluster: noise'
+  occurrence_count: 244
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0060
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  redacted_summary: 'method keyword cluster: false positive'
+  occurrence_count: 135
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0164
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - hash
+  - wrong
+  redacted_summary: 'method keyword cluster: hash, wrong'
+  occurrence_count: 36
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0147
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  - outguess
+  redacted_summary: 'method keyword cluster: false positive, outguess'
+  occurrence_count: 29
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0100
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - hallucination
+  redacted_summary: 'method keyword cluster: hallucination'
+  occurrence_count: 23
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0185
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - prime
+  - wrong
+  redacted_summary: 'method keyword cluster: prime, wrong'
+  occurrence_count: 22
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0201
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - debunked
+  redacted_summary: 'method keyword cluster: debunked'
+  occurrence_count: 15
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0079
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - bogus
+  redacted_summary: 'method keyword cluster: bogus'
+  occurrence_count: 14
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0155
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - transcript
+  - wrong
+  redacted_summary: 'method keyword cluster: transcript, wrong'
+  occurrence_count: 13
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0153
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - vigenere
+  - wrong
+  redacted_summary: 'method keyword cluster: vigenere, wrong'
+  occurrence_count: 12
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0282
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - gematria
+  - wrong
+  redacted_summary: 'method keyword cluster: gematria, wrong'
+  occurrence_count: 12
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0075
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - outguess
+  - wrong
+  redacted_summary: 'method keyword cluster: outguess, wrong'
+  occurrence_count: 10
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0121
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - phi
+  - wrong
+  redacted_summary: 'method keyword cluster: phi, wrong'
+  occurrence_count: 10
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0319
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - onion
+  - wrong
+  redacted_summary: 'method keyword cluster: onion, wrong'
+  occurrence_count: 8
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0409
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  - hash
+  redacted_summary: 'method keyword cluster: false positive, hash'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0426
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - gp sum
+  - wrong
+  redacted_summary: 'method keyword cluster: gp sum, wrong'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0081
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - github
+  - wrong
+  redacted_summary: 'method keyword cluster: github, wrong'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0270
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - totient
+  - wrong
+  redacted_summary: 'method keyword cluster: totient, wrong'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0302
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - atbash
+  - wrong
+  redacted_summary: 'method keyword cluster: atbash, wrong'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0356
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - caesar
+  - wrong
+  redacted_summary: 'method keyword cluster: caesar, wrong'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0424
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - page 56
+  - wrong
+  redacted_summary: 'method keyword cluster: page 56, wrong'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0527
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - base60
+  - binary
+  - wrong
+  redacted_summary: 'method keyword cluster: base60, binary, wrong'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0250
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  - wrong
+  redacted_summary: 'method keyword cluster: false positive, wrong'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0251
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - fibonacci
+  - wrong
+  redacted_summary: 'method keyword cluster: fibonacci, wrong'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0362
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - noise
+  - prime
+  redacted_summary: 'method keyword cluster: noise, prime'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0374
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - pastebin
+  - wrong
+  redacted_summary: 'method keyword cluster: pastebin, wrong'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0411
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - gematria
+  - noise
+  redacted_summary: 'method keyword cluster: gematria, noise'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0479
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - atbash
+  - false positive
+  - phi
+  - prime
+  redacted_summary: 'method keyword cluster: atbash, false positive, phi, prime'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0512
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - base 60
+  - wrong
+  redacted_summary: 'method keyword cluster: base 60, wrong'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0522
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - affine
+  - atbash
+  - binary
+  - caesar
+  - vigenere
+  - wrong
+  redacted_summary: 'method keyword cluster: affine, atbash, binary, caesar, vigenere,
+    wrong'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0225
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  - noise
+  redacted_summary: 'method keyword cluster: false positive, noise'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0262
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - archive
+  - wrong
+  redacted_summary: 'method keyword cluster: archive, wrong'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0265
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - github
+  - noise
+  redacted_summary: 'method keyword cluster: github, noise'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0321
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - phi
+  - prime
+  - wrong
+  redacted_summary: 'method keyword cluster: phi, prime, wrong'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0336
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - hash
+  - phi
+  - wrong
+  redacted_summary: 'method keyword cluster: hash, phi, wrong'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0352
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - noise
+  - outguess
+  redacted_summary: 'method keyword cluster: noise, outguess'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0363
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  - noise
+  - prime
+  redacted_summary: 'method keyword cluster: false positive, noise, prime'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0367
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - hash
+  - prime
+  - wrong
+  redacted_summary: 'method keyword cluster: hash, prime, wrong'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0371
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - hash
+  - onion
+  - wrong
+  redacted_summary: 'method keyword cluster: hash, onion, wrong'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0420
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - page 57
+  - wrong
+  redacted_summary: 'method keyword cluster: page 57, wrong'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0440
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - hallucination
+  - transcript
+  redacted_summary: 'method keyword cluster: hallucination, transcript'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0449
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - affine
+  - atbash
+  - caesar
+  - false positive
+  - fibonacci
+  - gematria
+  - gp sum
+  - hash
+  - page 56
+  - phi
+  - prime
+  - spectrogram
+  - totient
+  - transcript
+  redacted_summary: 'method keyword cluster: affine, atbash, caesar, false positive,
+    fibonacci, gematria, gp sum, hash, page 56, phi, prime, spectrogram, totient,
+    transcript'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0474
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - cuneiform
+  - wrong
+  redacted_summary: 'method keyword cluster: cuneiform, wrong'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0539
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - noise
+  - totient
+  redacted_summary: 'method keyword cluster: noise, totient'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0550
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - noise
+  - page 57
+  redacted_summary: 'method keyword cluster: noise, page 57'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0576
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - hash
+  - page 56
+  - wrong
+  redacted_summary: 'method keyword cluster: hash, page 56, wrong'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0099
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - affine
+  - atbash
+  - wrong
+  redacted_summary: 'method keyword cluster: affine, atbash, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0136
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - hash
+  - onion
+  - page 57
+  - wrong
+  redacted_summary: 'method keyword cluster: hash, onion, page 57, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0137
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  - hash
+  - onion
+  redacted_summary: 'method keyword cluster: false positive, hash, onion'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0175
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - affine
+  - atbash
+  - vigenere
+  - wrong
+  redacted_summary: 'method keyword cluster: affine, atbash, vigenere, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0214
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - onion
+  - pastebin
+  - wrong
+  redacted_summary: 'method keyword cluster: onion, pastebin, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0215
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - gp sum
+  - prime
+  - wrong
+  redacted_summary: 'method keyword cluster: gp sum, prime, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0229
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - bogus
+  - prime
+  redacted_summary: 'method keyword cluster: bogus, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0238
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - scream314
+  - wrong
+  redacted_summary: 'method keyword cluster: scream314, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0239
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - github
+  - scream314
+  - wrong
+  redacted_summary: 'method keyword cluster: github, scream314, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0249
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  - gematria
+  redacted_summary: 'method keyword cluster: false positive, gematria'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0286
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - binary
+  - false positive
+  redacted_summary: 'method keyword cluster: binary, false positive'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0313
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - binary
+  - prime
+  - wrong
+  redacted_summary: 'method keyword cluster: binary, prime, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0334
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - github
+  - noise
+  - outguess
+  - wrong
+  redacted_summary: 'method keyword cluster: github, noise, outguess, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0335
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  - outguess
+  - wrong
+  redacted_summary: 'method keyword cluster: false positive, outguess, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0348
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - binary
+  - wrong
+  redacted_summary: 'method keyword cluster: binary, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0353
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - binary
+  - noise
+  redacted_summary: 'method keyword cluster: binary, noise'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0370
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - pastebin
+  - prime
+  - wrong
+  redacted_summary: 'method keyword cluster: pastebin, prime, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0392
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - archive
+  - false positive
+  - outguess
+  redacted_summary: 'method keyword cluster: archive, false positive, outguess'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0394
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - github
+  - noise
+  - outguess
+  redacted_summary: 'method keyword cluster: github, noise, outguess'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0422
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - gematria
+  - prime
+  - wrong
+  redacted_summary: 'method keyword cluster: gematria, prime, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0428
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - atbash
+  - noise
+  redacted_summary: 'method keyword cluster: atbash, noise'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0441
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  - gp sum
+  redacted_summary: 'method keyword cluster: false positive, gp sum'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0443
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  - gp sum
+  - prime
+  redacted_summary: 'method keyword cluster: false positive, gp sum, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0446
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  - fibonacci
+  redacted_summary: 'method keyword cluster: false positive, fibonacci'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0453
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - gematria
+  - transcript
+  - wrong
+  redacted_summary: 'method keyword cluster: gematria, transcript, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0478
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - caesar
+  - false positive
+  - phi
+  - prime
+  redacted_summary: 'method keyword cluster: caesar, false positive, phi, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0480
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - false positive
+  - prime
+  redacted_summary: 'method keyword cluster: false positive, prime'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0486
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - noise
+  - phi
+  redacted_summary: 'method keyword cluster: noise, phi'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0490
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - rune count
+  - wrong
+  redacted_summary: 'method keyword cluster: rune count, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0491
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - atbash
+  - caesar
+  - gematria
+  - noise
+  - phi
+  - transcript
+  redacted_summary: 'method keyword cluster: atbash, caesar, gematria, noise, phi,
+    transcript'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0493
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - atbash
+  - caesar
+  - fandom
+  - noise
+  - page 57
+  - phi
+  - transcript
+  redacted_summary: 'method keyword cluster: atbash, caesar, fandom, noise, page 57,
+    phi, transcript'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0516
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - page 56
+  - totient
+  - wrong
+  redacted_summary: 'method keyword cluster: page 56, totient, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0525
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - rtkd
+  - wrong
+  redacted_summary: 'method keyword cluster: rtkd, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0554
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - noise
+  - spectrogram
+  redacted_summary: 'method keyword cluster: noise, spectrogram'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0560
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - fibonacci
+  - gematria
+  - noise
+  redacted_summary: 'method keyword cluster: fibonacci, gematria, noise'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0566
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - gematria
+  - hallucination
+  redacted_summary: 'method keyword cluster: gematria, hallucination'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0589
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - binary
+  - hash
+  - wrong
+  redacted_summary: 'method keyword cluster: binary, hash, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0594
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - noise
+  - onion
+  redacted_summary: 'method keyword cluster: noise, onion'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0603
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: false_positive_warning
+  extracted_keywords:
+  - fandom
+  - wrong
+  redacted_summary: 'method keyword cluster: fandom, wrong'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0024
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - fandom
+  redacted_summary: 'method keyword cluster: fandom'
+  occurrence_count: 1934
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0013
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - github
+  redacted_summary: 'method keyword cluster: github'
+  occurrence_count: 1804
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0004
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - pastebin
+  redacted_summary: 'method keyword cluster: pastebin'
+  occurrence_count: 1482
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0003
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - archive
+  redacted_summary: 'method keyword cluster: archive'
+  occurrence_count: 820
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0020
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - transcript
+  redacted_summary: 'method keyword cluster: transcript'
+  occurrence_count: 383
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0066
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - github
+  - scream314
+  redacted_summary: 'method keyword cluster: github, scream314'
+  occurrence_count: 209
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0053
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - github
+  - rtkd
+  redacted_summary: 'method keyword cluster: github, rtkd'
+  occurrence_count: 197
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0103
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - rtkd
+  - transcript
+  redacted_summary: 'method keyword cluster: rtkd, transcript'
+  occurrence_count: 162
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0040
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - rtkd
+  redacted_summary: 'method keyword cluster: rtkd'
+  occurrence_count: 155
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0064
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - fandom
+  - onion
+  redacted_summary: 'method keyword cluster: fandom, onion'
+  occurrence_count: 145
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0019
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - github
+  - hash
+  redacted_summary: 'method keyword cluster: github, hash'
+  occurrence_count: 128
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0092
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - gematria
+  - rtkd
+  - transcript
+  redacted_summary: 'method keyword cluster: gematria, rtkd, transcript'
+  occurrence_count: 124
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0044
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - fandom
+  - gematria
+  redacted_summary: 'method keyword cluster: fandom, gematria'
+  occurrence_count: 92
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0135
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - hash
+  - pastebin
+  redacted_summary: 'method keyword cluster: hash, pastebin'
+  occurrence_count: 90
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0052
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - scream314
+  redacted_summary: 'method keyword cluster: scream314'
+  occurrence_count: 82
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0012
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - github
+  - transcript
+  redacted_summary: 'method keyword cluster: github, transcript'
+  occurrence_count: 77
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0102
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - github
+  - rtkd
+  - transcript
+  redacted_summary: 'method keyword cluster: github, rtkd, transcript'
+  occurrence_count: 65
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0017
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - github
+  - outguess
+  redacted_summary: 'method keyword cluster: github, outguess'
+  occurrence_count: 40
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0034
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - archive
+  - github
+  redacted_summary: 'method keyword cluster: archive, github'
+  occurrence_count: 33
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0070
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - github
+  - onion
+  redacted_summary: 'method keyword cluster: github, onion'
+  occurrence_count: 23
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0093
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - fandom
+  - outguess
+  redacted_summary: 'method keyword cluster: fandom, outguess'
+  occurrence_count: 20
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0071
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - github
+  - outguess
+  - rtkd
+  redacted_summary: 'method keyword cluster: github, outguess, rtkd'
+  occurrence_count: 19
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0051
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - gematria
+  - github
+  redacted_summary: 'method keyword cluster: gematria, github'
+  occurrence_count: 13
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0055
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - github
+  - pastebin
+  redacted_summary: 'method keyword cluster: github, pastebin'
+  occurrence_count: 10
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0067
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - archive
+  - onion
+  redacted_summary: 'method keyword cluster: archive, onion'
+  occurrence_count: 8
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0035
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - archive
+  - outguess
+  redacted_summary: 'method keyword cluster: archive, outguess'
+  occurrence_count: 7
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0198
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - archive
+  - hash
+  redacted_summary: 'method keyword cluster: archive, hash'
+  occurrence_count: 7
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0140
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - fandom
+  - page 57
+  redacted_summary: 'method keyword cluster: fandom, page 57'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0234
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - github
+  - onion
+  - scream314
+  redacted_summary: 'method keyword cluster: github, onion, scream314'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0332
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - fandom
+  - github
+  - rtkd
+  - transcript
+  redacted_summary: 'method keyword cluster: fandom, github, rtkd, transcript'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0058
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - gematria
+  - transcript
+  redacted_summary: 'method keyword cluster: gematria, transcript'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0143
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - gematria
+  - pastebin
+  redacted_summary: 'method keyword cluster: gematria, pastebin'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0243
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - outguess
+  - pastebin
+  redacted_summary: 'method keyword cluster: outguess, pastebin'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0423
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - fandom
+  - onion
+  - outguess
+  redacted_summary: 'method keyword cluster: fandom, onion, outguess'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0542
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - hash
+  - page 56
+  - pastebin
+  redacted_summary: 'method keyword cluster: hash, page 56, pastebin'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0585
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - hash
+  - onion
+  - pastebin
+  redacted_summary: 'method keyword cluster: hash, onion, pastebin'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0232
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - archive
+  - hash
+  - onion
+  redacted_summary: 'method keyword cluster: archive, hash, onion'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0361
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - github
+  - onion
+  - outguess
+  redacted_summary: 'method keyword cluster: github, onion, outguess'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0036
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - archive
+  - github
+  - outguess
+  redacted_summary: 'method keyword cluster: archive, github, outguess'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0220
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - archive
+  - pastebin
+  redacted_summary: 'method keyword cluster: archive, pastebin'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0233
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - outguess
+  - rtkd
+  redacted_summary: 'method keyword cluster: outguess, rtkd'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0252
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - hash
+  - scream314
+  redacted_summary: 'method keyword cluster: hash, scream314'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0592
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - archive
+  - onion
+  - pastebin
+  redacted_summary: 'method keyword cluster: archive, onion, pastebin'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0593
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - onion
+  - pastebin
+  redacted_summary: 'method keyword cluster: onion, pastebin'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0072
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - rtkd
+  - scream314
+  redacted_summary: 'method keyword cluster: rtkd, scream314'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0089
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - onion
+  - transcript
+  redacted_summary: 'method keyword cluster: onion, transcript'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0194
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - gematria
+  - github
+  - scream314
+  redacted_summary: 'method keyword cluster: gematria, github, scream314'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0266
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - fandom
+  - github
+  redacted_summary: 'method keyword cluster: fandom, github'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0333
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - fandom
+  - github
+  - outguess
+  redacted_summary: 'method keyword cluster: fandom, github, outguess'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0412
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - outguess
+  - rtkd
+  - transcript
+  redacted_summary: 'method keyword cluster: outguess, rtkd, transcript'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0567
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - gematria
+  - github
+  - rtkd
+  redacted_summary: 'method keyword cluster: gematria, github, rtkd'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0584
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: source_reference
+  extracted_keywords:
+  - fandom
+  - hash
+  redacted_summary: 'method keyword cluster: fandom, hash'
+  occurrence_count: 1
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0002
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - tried
+  redacted_summary: 'method keyword cluster: tried'
+  occurrence_count: 3098
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0001
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - failed
+  redacted_summary: 'method keyword cluster: failed'
+  occurrence_count: 262
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0109
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - hash
+  - tried
+  redacted_summary: 'method keyword cluster: hash, tried'
+  occurrence_count: 111
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0094
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - prime
+  - tried
+  redacted_summary: 'method keyword cluster: prime, tried'
+  occurrence_count: 94
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0073
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - no result
+  redacted_summary: 'method keyword cluster: no result'
+  occurrence_count: 79
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0115
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - tried
+  - vigenere
+  redacted_summary: 'method keyword cluster: tried, vigenere'
+  occurrence_count: 62
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0074
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - outguess
+  - tried
+  redacted_summary: 'method keyword cluster: outguess, tried'
+  occurrence_count: 55
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0148
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - failed
+  - tried
+  redacted_summary: 'method keyword cluster: failed, tried'
+  occurrence_count: 50
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0101
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - tried
+  - wrong
+  redacted_summary: 'method keyword cluster: tried, wrong'
+  occurrence_count: 43
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0124
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - gematria
+  - tried
+  redacted_summary: 'method keyword cluster: gematria, tried'
+  occurrence_count: 37
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0054
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - totient
+  - tried
+  redacted_summary: 'method keyword cluster: totient, tried'
+  occurrence_count: 36
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0029
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - onion
+  - tried
+  redacted_summary: 'method keyword cluster: onion, tried'
+  occurrence_count: 34
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0083
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - caesar
+  - tried
+  redacted_summary: 'method keyword cluster: caesar, tried'
+  occurrence_count: 26
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0160
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - atbash
+  - tried
+  redacted_summary: 'method keyword cluster: atbash, tried'
+  occurrence_count: 25
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0176
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - phi
+  - tried
+  redacted_summary: 'method keyword cluster: phi, tried'
+  occurrence_count: 22
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0106
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - binary
+  - tried
+  redacted_summary: 'method keyword cluster: binary, tried'
+  occurrence_count: 16
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0245
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - hash
+  - onion
+  - tried
+  redacted_summary: 'method keyword cluster: hash, onion, tried'
+  occurrence_count: 14
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0130
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - no result
+  - tried
+  redacted_summary: 'method keyword cluster: no result, tried'
+  occurrence_count: 13
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0179
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - prime
+  - totient
+  - tried
+  redacted_summary: 'method keyword cluster: prime, totient, tried'
+  occurrence_count: 13
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0240
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - fibonacci
+  - tried
+  redacted_summary: 'method keyword cluster: fibonacci, tried'
+  occurrence_count: 12
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0309
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - gp sum
+  - tried
+  redacted_summary: 'method keyword cluster: gp sum, tried'
+  occurrence_count: 12
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0086
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - github
+  - tried
+  redacted_summary: 'method keyword cluster: github, tried'
+  occurrence_count: 10
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0342
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - hash
+  - pastebin
+  - tried
+  redacted_summary: 'method keyword cluster: hash, pastebin, tried'
+  occurrence_count: 8
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0346
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - caesar
+  - tried
+  - wrong
+  redacted_summary: 'method keyword cluster: caesar, tried, wrong'
+  occurrence_count: 8
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0082
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - failed
+  - github
+  redacted_summary: 'method keyword cluster: failed, github'
+  occurrence_count: 7
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0237
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - page 56
+  - totient
+  - tried
+  redacted_summary: 'method keyword cluster: page 56, totient, tried'
+  occurrence_count: 7
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0163
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - atbash
+  - tried
+  - vigenere
+  redacted_summary: 'method keyword cluster: atbash, tried, vigenere'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0397
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - gematria
+  - prime
+  - tried
+  redacted_summary: 'method keyword cluster: gematria, prime, tried'
+  occurrence_count: 6
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0046
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - archive
+  - tried
+  redacted_summary: 'method keyword cluster: archive, tried'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0167
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - page 56
+  - tried
+  redacted_summary: 'method keyword cluster: page 56, tried'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0263
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - failed
+  - phi
+  redacted_summary: 'method keyword cluster: failed, phi'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0304
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - caesar
+  - tried
+  - vigenere
+  redacted_summary: 'method keyword cluster: caesar, tried, vigenere'
+  occurrence_count: 5
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0056
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - hash
+  - phi
+  - tried
+  redacted_summary: 'method keyword cluster: hash, phi, tried'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0173
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - page 57
+  - tried
+  redacted_summary: 'method keyword cluster: page 57, tried'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0207
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - spectrogram
+  - tried
+  redacted_summary: 'method keyword cluster: spectrogram, tried'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0241
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - failed
+  - wrong
+  redacted_summary: 'method keyword cluster: failed, wrong'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0329
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - affine
+  - atbash
+  - tried
+  redacted_summary: 'method keyword cluster: affine, atbash, tried'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0406
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - hash
+  - prime
+  - tried
+  redacted_summary: 'method keyword cluster: hash, prime, tried'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0413
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - atbash
+  - caesar
+  - tried
+  redacted_summary: 'method keyword cluster: atbash, caesar, tried'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0492
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - fandom
+  - tried
+  redacted_summary: 'method keyword cluster: fandom, tried'
+  occurrence_count: 4
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0063
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - base 60
+  - tried
+  redacted_summary: 'method keyword cluster: base 60, tried'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0117
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - phi
+  - totient
+  - tried
+  redacted_summary: 'method keyword cluster: phi, totient, tried'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0146
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - false positive
+  - tried
+  redacted_summary: 'method keyword cluster: false positive, tried'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0210
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - tried
+  - vigenere
+  - wrong
+  redacted_summary: 'method keyword cluster: tried, vigenere, wrong'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0224
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - failed
+  - prime
+  redacted_summary: 'method keyword cluster: failed, prime'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0228
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - page 56
+  - prime
+  - tried
+  redacted_summary: 'method keyword cluster: page 56, prime, tried'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0260
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - prime
+  - tried
+  - vigenere
+  redacted_summary: 'method keyword cluster: prime, tried, vigenere'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0268
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - prime
+  - rune count
+  - tried
+  redacted_summary: 'method keyword cluster: prime, rune count, tried'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0303
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - no result
+  - tried
+  - vigenere
+  redacted_summary: 'method keyword cluster: no result, tried, vigenere'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0328
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - cuneiform
+  - tried
+  redacted_summary: 'method keyword cluster: cuneiform, tried'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0330
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - hash
+  - page 56
+  - tried
+  redacted_summary: 'method keyword cluster: hash, page 56, tried'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0351
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - no result
+  - pastebin
+  redacted_summary: 'method keyword cluster: no result, pastebin'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0429
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - atbash
+  - gematria
+  - tried
+  - vigenere
+  redacted_summary: 'method keyword cluster: atbash, gematria, tried, vigenere'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0439
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - noise
+  - tried
+  redacted_summary: 'method keyword cluster: noise, tried'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0523
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - failed
+  - p56
+  - tried
+  redacted_summary: 'method keyword cluster: failed, p56, tried'
+  occurrence_count: 3
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0088
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - failed
+  - fandom
+  - tried
+  redacted_summary: 'method keyword cluster: failed, fandom, tried'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0128
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - pastebin
+  - tried
+  redacted_summary: 'method keyword cluster: pastebin, tried'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0182
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - affine
+  - tried
+  redacted_summary: 'method keyword cluster: affine, tried'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0227
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - atbash
+  - gematria
+  - tried
+  redacted_summary: 'method keyword cluster: atbash, gematria, tried'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0242
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - base 60
+  - binary
+  - tried
+  redacted_summary: 'method keyword cluster: base 60, binary, tried'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0291
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - totient
+  - tried
+  - vigenere
+  redacted_summary: 'method keyword cluster: totient, tried, vigenere'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.
+- promoted_id: stage3o-method-claim-0360
+  source: discord_admin_export_stage3n
+  source_record_type: discord_method_claim_candidate
+  claim_type: tried_and_failed
+  extracted_keywords:
+  - failed
+  - noise
+  - vigenere
+  redacted_summary: 'method keyword cluster: failed, noise, vigenere'
+  occurrence_count: 2
+  redacted: true
+  review_status: human_review_required
+  trusted_as_canonical: false
+  raw_message_committed: false
+  usernames_committed: false
+  notes: Keyword-only Discord method-claim lead; not promoted as fact.

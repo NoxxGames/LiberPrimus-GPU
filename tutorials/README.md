@@ -1,30 +1,32 @@
 # Tutorials
 
-These tutorials teach practical use of the LiberPrimus GPU Cryptanalysis Workbench on local hardware.
+These tutorials are the public source of truth for using the LiberPrimus GPU Cryptanalysis
+Workbench. The GitHub Wiki mirrors these files for browsing convenience.
 
 ## Recommended Reading Order
 
-1. `00-project-safety-and-provenance.md`
-2. `01-windows-setup.md` or `02-linux-setup.md`
-3. `03-repository-tour.md`
-4. `04-working-with-local-data.md`
-5. Tool-specific tutorials as needed.
+1. [Project Overview](01-project-overview.md)
+2. [Windows Setup](02-windows-setup.md) or [Linux Setup](03-linux-setup.md)
+3. [Repo Tour](04-repo-tour.md)
+4. [Local Data Policy](05-local-data-policy.md)
+5. [Running Tests And CI](06-running-tests-and-ci.md)
+6. [Solved Baselines](07-solved-baselines.md)
+7. [Bounded Experiment Queues](08-bounded-experiment-queues.md)
+8. [Generated Output Policy](09-generated-output-policy.md)
+9. [Image Analysis Workflow](10-image-analysis-workflow.md)
+10. [Discord Archive Ingestion](11-discord-archive-ingestion.md)
+11. [Source Observation Registry](12-source-observation-registry.md)
+12. [GitHub Wiki Mirror](13-github-wiki-mirror.md)
+13. [Codex Assisted Development](14-codex-assisted-development.md)
+14. [Troubleshooting](15-troubleshooting.md)
 
-## Current Project Stage
+## Legacy Tutorial Notes
 
-The project is still in pre-solver corpus-preparation stages. Current tools inventory and validate non-canonical legacy sources, parse transcript candidates, and emit alignment hints.
-
-No unsolved Liber Primus page is claimed solved.
-
-## Quick Command Map
-
-```powershell
-libreprimus legacy-workbook summary
-libreprimus legacy-pastebin summary
-libreprimus transcript-source summary --source rtkd-master --input <repo-root>\data\raw\transcripts\rtkd\liber-primus__transcription--master.txt
-libreprimus corpus-alignment stage0d-smoke --pastebin <repo-root>\data\raw\legacy-pastebins\58-Pages-In-Runes-With-Prime-Values-Pastebin.txt --transcript <repo-root>\data\raw\transcripts\rtkd\liber-primus__transcription--master.txt --out-dir <repo-root>\data\normalized\alignment --allow-warnings
-```
+Older topic-specific tutorials remain in this directory for historical context and deeper workflow
+details. The numbered set above is the current public guide series after Stage 3O.
 
 ## Safety Warning
 
-Terminal output, workbook rows, Pastebin rows, and generated alignment records are not solve evidence. Treat all current outputs as provenance-bearing preparation data.
+Terminal output, generated candidate records, Discord extraction outputs, local review indexes, and
+image-analysis records are not solve evidence. Treat current outputs as provenance-bearing review
+data unless a future stage promotes them through explicit source locks, manifests, tests, and review.

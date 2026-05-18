@@ -33,6 +33,10 @@ echo "Validating Stage 3N Discord ingestion raw-log-free mode"
 "$python_bin" -m libreprimus.cli discord-ingest scan --source-dir "$tmp_dir/missing-discord" --out-dir "$tmp_dir/stage3n-discord" --allow-missing --allow-warnings
 "$python_bin" -m libreprimus.cli discord-ingest validate-results --results-dir "$tmp_dir/stage3n-discord" --allow-missing
 
+echo "Validating Stage 3O Discord promotion and Wiki mirror"
+"$python_bin" -m libreprimus.cli discord-promote validate-promoted --links data/observations/discord/promoted-public-source-links-stage3o.yaml --methods data/observations/discord/promoted-method-claim-candidates-stage3o.yaml --numerics data/observations/discord/promoted-numeric-observation-candidates-stage3o.yaml --allow-empty
+bash scripts/github/validate-wiki-source.sh
+
 echo "Validating Stage 2E exploratory manifests"
 "$python_bin" -m libreprimus.cli experiment validate-exploratory --manifest experiments/manifests/exploratory/stage2e-caesar-preview-dry-run.yaml
 "$python_bin" -m libreprimus.cli experiment validate-exploratory --manifest experiments/manifests/exploratory/stage2e-affine-preview-dry-run.yaml

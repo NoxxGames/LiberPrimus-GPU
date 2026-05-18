@@ -455,3 +455,13 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not scrape Discord, use live Discord APIs, user tokens, or self-bots.
 - Extracted Discord claims are reviewable leads only, not facts or experiment seeds.
 - Committed Discord records must be aggregate/redacted only.
+
+## Stage 3O Discord Promotion And Wiki Rules
+
+- Public docs and tutorials must stay current after each stage.
+- Tutorials are mirrored to GitHub Wiki from repository source files.
+- Repository tutorials are the source of truth; the Wiki is a mirror.
+- Do not edit the Wiki only without syncing the change back to tutorials.
+- Discord promoted records must remain redacted and reviewable.
+- Do not promote Discord claims to facts.
+- Do not commit raw Discord logs, message bodies, usernames, user IDs, message IDs, or private attachment URLs.
