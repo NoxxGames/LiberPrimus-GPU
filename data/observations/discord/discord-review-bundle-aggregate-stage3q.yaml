@@ -1,0 +1,58 @@
+review_lead_count: 900
+redacted_message_count: 1700
+public_link_count: 499
+method_claim_count: 52
+live_api_used: false
+output_paths:
+  redacted_message_stream: experiments/results/discord-review-bundles/stage3q/redacted_message_stream.jsonl
+  topic_shards: experiments/results/discord-review-bundles/stage3q/topic_shards
+  source_links_index: experiments/results/discord-review-bundles/stage3q/source_links_index.jsonl
+  method_claims_index: experiments/results/discord-review-bundles/stage3q/method_claims_index.jsonl
+  numeric_observations_index: experiments/results/discord-review-bundles/stage3q/numeric_observations_index.jsonl
+  visual_observations_index: experiments/results/discord-review-bundles/stage3q/visual_observations_index.jsonl
+  debunks_and_false_positives_index: experiments/results/discord-review-bundles/stage3q/debunks_and_false_positives_index.jsonl
+  attachment_reference_index: experiments/results/discord-review-bundles/stage3q/attachment_reference_index.jsonl
+  summary: experiments/results/discord-review-bundles/stage3q/review_bundle_summary.json
+  warnings: experiments/results/discord-review-bundles/stage3q/warnings.jsonl
+  review_index: experiments/results/discord-review-bundles/stage3q/review_index.html
+generated_at_utc: '2026-05-18T03:04:01Z'
+record_type: discord_review_bundle_summary
+raw_message_committed: false
+html_file_count: 42
+username_committed: false
+visual_observation_count: 87
+raw_logs_committed: false
+topic_lead_counts:
+  claimed-decodes-false-positives-debunks: 90
+  cuneiform-base60-and-babylonian: 57
+  deep-web-hash-and-cookies: 29
+  gematria-gp-sums-and-rune-counts: 51
+  number-squares-and-onion7: 2
+  page-art-dots-binary-braille-stars: 28
+  prime-streams-totients-and-number-theory: 58
+  source-links-and-datasets: 212
+  tools-code-and-repositories: 326
+  vigenere-keys-and-literature: 47
+scrape_used: false
+private_url_committed: false
+notes: Generated review bundles are redacted, ignored AI-review aids and not source
+  evidence.
+solve_claim: false
+warnings: []
+ai_upload_used: false
+debunk_count: 148
+topic_names:
+- claimed-decodes-false-positives-debunks
+- cuneiform-base60-and-babylonian
+- deep-web-hash-and-cookies
+- gematria-gp-sums-and-rune-counts
+- number-squares-and-onion7
+- page-art-dots-binary-braille-stars
+- prime-streams-totients-and-number-theory
+- source-links-and-datasets
+- tools-code-and-repositories
+- vigenere-keys-and-literature
+bundle_id: stage3q-discord-review-bundles
+total_bytes_scanned: 465845099
+numeric_observation_count: 200
+topic_shard_count: 17

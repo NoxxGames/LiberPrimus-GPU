@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3P deterministic image transform suite and visual review index is complete.
+Stage 3Q redacted Discord AI-review bundles and topic shards are complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, and Stage 3P generates deterministic image transform review artefacts only.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, and Stage 3Q generates ignored redacted Discord topic shards only.
 
 ## Completed in Stage 3O
 
@@ -35,6 +35,16 @@ Run summary: local images processed `58`, transform names `37`, derived review i
 Generated transform images, contact sheets, review HTML, and JSONL outputs remain ignored under `experiments/results/image-transforms/stage3p/`. Raw page images and raw Discord logs remain uncommitted. Stage 3P does not run OCR, AI/ML image interpretation, image-derived cipher execution, OutGuess, CUDA, canonical corpus activation, page-boundary finalization, or solve claims.
 
 Developer log: `docs/development-logs/2026-05-16-stage-3p-image-transform-suite.md`.
+
+## Completed in Stage 3Q
+
+Stage 3Q added privacy-preserving Discord review-bundle tooling for local AI/deep-research workflows.
+
+Run summary: HTML files referenced `42`, redacted stream records `1700`, topic shard files `17`, review leads `900`, public links `499`, method claims `52`, numeric observations `200`, visual observations `87`, debunk/false-positive leads `148`.
+
+Generated redacted message streams, topic shards, JSONL indexes, and local review HTML remain ignored under `experiments/results/discord-review-bundles/stage3q/`. Raw Discord logs, message bodies, usernames, user IDs, message IDs, private URLs, and generated shards remain uncommitted. Stage 3Q does not run AI/ML, call Discord APIs, scrape Discord, execute extracted methods, use CUDA, activate canonical corpus, finalize page boundaries, or claim a solve.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3q-discord-review-bundles.md`.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 

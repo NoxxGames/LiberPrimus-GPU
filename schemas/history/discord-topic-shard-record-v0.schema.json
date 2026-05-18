@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/discord-topic-shard-record-v0.schema.json",
+  "title": "Discord Topic Shard Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "shard_id",
+    "topic",
+    "output_relative_path",
+    "lead_count",
+    "source_file_count",
+    "link_count",
+    "numeric_observation_count",
+    "method_claim_count",
+    "raw_message_committed",
+    "username_committed",
+    "private_url_committed",
+    "solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "discord_topic_shard_record" },
+    "shard_id": { "type": "string", "minLength": 1 },
+    "topic": { "type": "string", "minLength": 1 },
+    "output_relative_path": {
+      "type": "string",
+      "pattern": "^experiments/results/discord-review-bundles/stage3q/topic_shards/"
+    },
+    "lead_count": { "type": "integer", "minimum": 0 },
+    "source_file_count": { "type": "integer", "minimum": 0 },
+    "link_count": { "type": "integer", "minimum": 0 },
+    "numeric_observation_count": { "type": "integer", "minimum": 0 },
+    "method_claim_count": { "type": "integer", "minimum": 0 },
+    "raw_message_committed": { "const": false },
+    "username_committed": { "const": false },
+    "private_url_committed": { "const": false },
+    "solve_claim": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

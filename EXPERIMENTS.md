@@ -48,6 +48,12 @@ Stage 3O promotion records are reviewable source-discovery leads, not experiment
 
 Generated promotion candidates and rejection lists remain ignored under `experiments/results/discord-promotion/stage3o/`. Any future experiment based on a promoted source must first promote the public source through a source-lock or observation registry step with independent provenance.
 
+## Stage 3Q Discord review bundles
+
+Stage 3Q topic shards are redacted AI-review aids, not experiment records or evidence. They may help reviewers find public sources, method claims, numeric observations, visual observations, and debunk notes. They must not be used as transform seeds until a later stage promotes selected leads through source/observation review with controls.
+
+Generated review bundles remain ignored under `experiments/results/discord-review-bundles/stage3q/`. The committed aggregate contains counts and privacy flags only.
+
 ## Stage 0A smoke manifest
 
 The Stage 0A smoke manifest validates project bootstrap only. No candidate plaintext is generated in Stage 0A.

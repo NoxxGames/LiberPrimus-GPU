@@ -27,3 +27,7 @@ Stage 3O reads the ignored generated Stage 3N extraction files locally and promo
 redacted subset of public-safe links and observation candidates. Full candidate lists remain
 generated outputs; committed promotion records contain only public URLs or keyword/numeric
 summaries with no message body context.
+
+Stage 3Q can then build redacted topic shards and a local review index from Stage 3N/3O records.
+Those outputs are ignored review aids. They do not publish raw chat, execute extracted claims, or
+promote Discord statements to facts.

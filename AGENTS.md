@@ -475,3 +475,12 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not use OCR, AI, or ML image interpretation as source of truth.
 - Do not process Discord logs in image stages.
 - Do not commit raw local page images, generated derived images, generated contact sheets, generated review HTML, or generated transform JSONL records.
+
+## Stage 3Q Discord Review Bundle Rules
+
+- Discord review bundles are generated outputs and must not be committed.
+- Topic shards are AI-review aids, not committed evidence.
+- Raw Discord logs must never be committed.
+- Usernames, user IDs, message IDs, avatar URLs, and private Discord URLs must not be committed.
+- Deep Research should receive generated redacted shards, not raw HTML logs.
+- Extracted Discord leads are hypotheses only and must not be promoted to facts or experiment seeds automatically.

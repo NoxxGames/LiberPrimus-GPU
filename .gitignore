@@ -213,6 +213,16 @@ experiments/results/discord-promotion/**
 !experiments/results/discord-promotion/stage3o/
 !experiments/results/discord-promotion/stage3o/.gitkeep
 
+# Generated Discord AI-review bundles and topic shards
+experiments/results/discord-review-bundles/**
+!experiments/results/discord-review-bundles/
+!experiments/results/discord-review-bundles/README.md
+!experiments/results/discord-review-bundles/.gitkeep
+!experiments/results/discord-review-bundles/stage3q/
+!experiments/results/discord-review-bundles/stage3q/.gitkeep
+!experiments/results/discord-review-bundles/stage3q/topic_shards/
+!experiments/results/discord-review-bundles/stage3q/topic_shards/.gitkeep
+
 # Generated Wiki sync outputs
 experiments/results/wiki-sync/**
 !experiments/results/wiki-sync/

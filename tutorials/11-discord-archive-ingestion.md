@@ -21,19 +21,32 @@ Scan admin-provided local Discord HTML exports as source-discovery material only
   --promoted-numerics-out data/observations/discord/promoted-numeric-observation-candidates-stage3o.yaml `
   --allow-missing `
   --allow-warnings
+
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-review build-bundles `
+  --ingestion-dir experiments/results/discord-ingestion/stage3n `
+  --promotion-dir experiments/results/discord-promotion/stage3o `
+  --raw-dir third_party/LiberPrimusDiscordChats `
+  --out-dir experiments/results/discord-review-bundles/stage3q `
+  --aggregate-out data/observations/discord/discord-review-bundle-aggregate-stage3q.yaml `
+  --allow-missing `
+  --allow-warnings
 ```
 
 ## Expected Outputs
 
 Ingestion writes ignored extraction JSONL and a local review index. Promotion writes capped,
-redacted YAML records for public review.
+redacted YAML records for public review. Stage 3Q review bundles write redacted topic shards and
+indexes under `experiments/results/discord-review-bundles/stage3q/`; those files are for local
+review and are ignored by Git.
 
 ## What Not To Commit
 
-Raw Discord HTML, message bodies, usernames, user IDs, message IDs, private attachment URLs, or
-generated extraction/review outputs.
+Raw Discord HTML, raw message bodies, usernames, user IDs, message IDs, private attachment URLs,
+generated extraction outputs, generated promotion outputs, generated redacted shards, or local
+review indexes.
 
 ## Troubleshooting
 
 If the HTML format changes, add a synthetic fixture and adapt the parser without committing raw
-chat content.
+chat content. If a redacted shard is too broad for Deep Research, split by topic rather than
+uploading raw HTML.

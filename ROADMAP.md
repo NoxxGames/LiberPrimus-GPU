@@ -222,9 +222,13 @@ Stage 3O promotes a bounded public-safe subset of Stage 3N Discord source-discov
 
 Stage 3P adds deterministic local page-image transforms, contact sheets, split/mirror previews, component overlays, review metrics, and a local visual review index. Generated artefacts remain ignored. It does not use OCR, AI/ML, image-derived cipher execution, OutGuess, Discord processing, CUDA, canonical corpus activation, page-boundary finalization, or solve claims.
 
-## Stage 3Q - Review visual transform candidates or redacted review bundles
+## Stage 3Q - Redacted Discord AI-review bundles
 
-Review Stage 3P visual transform candidates and promote selected observations through reviewable records, or build redacted Discord AI-review bundles/topic shards that contain no raw logs. An OutGuess regression harness remains an alternate bounded Stage 3Q path. Do not jump to CUDA, broad web crawling, live Discord, or broad AI analysis.
+Stage 3Q adds redacted Discord AI-review bundles and topic shards from local admin-provided exports and Stage 3N/3O generated records. Generated shards remain ignored, the committed aggregate contains counts only, and no raw logs, usernames, private URLs, AI upload, live Discord, scraping, CUDA, or solve claim is introduced.
+
+## Stage 3R - Review redacted shards or OutGuess harness
+
+Use/red-team selected Stage 3Q redacted topic shards with Deep Research and promote useful leads into the observation/source registry, or implement an OutGuess regression harness if Discord review is deferred. Do not jump to CUDA, broad web crawling, live Discord, or raw-chat publication.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

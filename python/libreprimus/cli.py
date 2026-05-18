@@ -168,6 +168,9 @@ from libreprimus.discord_ingestion.validation import (
 from libreprimus.discord_promotion.promoter import promote_discord_sources
 from libreprimus.discord_promotion.summary import load_summary as load_discord_promotion_summary
 from libreprimus.discord_promotion.validation import validate_promoted_records
+from libreprimus.discord_review.runner import build_review_bundles
+from libreprimus.discord_review.summary import load_summary as load_discord_review_summary
+from libreprimus.discord_review.validation import validate_bundles as validate_discord_review_bundles
 from libreprimus.visual_observations.validation import (
     summarize_observations,
     validate_cookie_records,
@@ -210,6 +213,7 @@ image_analysis_app = typer.Typer(no_args_is_help=True)
 image_transform_app = typer.Typer(no_args_is_help=True)
 discord_ingest_app = typer.Typer(no_args_is_help=True)
 discord_promote_app = typer.Typer(no_args_is_help=True)
+discord_review_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -3555,6 +3559,102 @@ def _print_discord_promotion_summary(summary: dict) -> None:
         console.print(f"{key}={path}")
 
 
+@discord_review_app.command("build-bundles")
+def discord_review_build_bundles(
+    ingestion_dir: Path = typer.Option(..., "--ingestion-dir", help="Generated Stage 3N ingestion directory."),
+    promotion_dir: Path = typer.Option(..., "--promotion-dir", help="Generated Stage 3O promotion directory."),
+    raw_dir: Path = typer.Option(..., "--raw-dir", help="Local ignored Discord HTML archive directory."),
+    out_dir: Path = typer.Option(..., "--out-dir", help="Generated Stage 3Q review-bundle output directory."),
+    aggregate_out: Path = typer.Option(..., "--aggregate-out", help="Committed aggregate review-bundle YAML."),
+    allow_missing: bool = typer.Option(False, "--allow-missing", help="Write empty outputs if generated inputs are missing."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite non-blocking warnings."),
+) -> None:
+    """Build redacted Discord topic shards and local AI-review indexes."""
+    try:
+        summary = build_review_bundles(
+            ingestion_dir=_resolve_output_path(ingestion_dir),
+            promotion_dir=_resolve_output_path(promotion_dir),
+            raw_dir=_resolve_output_path(raw_dir),
+            out_dir=_resolve_output_path(out_dir),
+            aggregate_out=_resolve_output_path(aggregate_out),
+            allow_missing=allow_missing,
+            allow_warnings=allow_warnings,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_discord_review_summary(summary)
+
+
+@discord_review_app.command("validate-bundles")
+def discord_review_validate_bundles(
+    results_dir: Path = typer.Option(..., "--results-dir", help="Generated Stage 3Q review-bundle directory."),
+    aggregate: Path = typer.Option(..., "--aggregate", help="Committed aggregate review-bundle YAML."),
+    allow_missing: bool = typer.Option(False, "--allow-missing", help="Allow missing generated outputs."),
+) -> None:
+    """Validate generated/aggregate Stage 3Q review-bundle records."""
+    try:
+        counts, errors = validate_discord_review_bundles(
+            results_dir=_resolve_output_path(results_dir),
+            aggregate=_resolve_output_path(aggregate),
+            allow_missing=allow_missing,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    for key, value in counts.items():
+        console.print(f"{key}={value}")
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(f"[red]{error}[/red]")
+    if errors:
+        raise typer.Exit(1)
+    console.print("Discord review bundles OK")
+
+
+@discord_review_app.command("summary")
+def discord_review_print_summary(
+    results_dir: Path = typer.Option(..., "--results-dir", help="Generated Stage 3Q review-bundle directory."),
+    aggregate: Path = typer.Option(..., "--aggregate", help="Committed aggregate review-bundle YAML."),
+) -> None:
+    """Print a concise generated Discord review-bundle summary."""
+    try:
+        summary = load_discord_review_summary(
+            _resolve_output_path(results_dir),
+            _resolve_output_path(aggregate),
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_discord_review_summary(summary)
+
+
+def _print_discord_review_summary(summary: dict) -> None:
+    for key in [
+        "bundle_id",
+        "html_file_count",
+        "redacted_message_count",
+        "topic_shard_count",
+        "review_lead_count",
+        "public_link_count",
+        "method_claim_count",
+        "numeric_observation_count",
+        "visual_observation_count",
+        "debunk_count",
+    ]:
+        console.print(f"{key}={summary.get(key)}")
+    console.print(f"raw_logs_committed={str(summary.get('raw_logs_committed')).lower()}")
+    console.print(f"raw_message_committed={str(summary.get('raw_message_committed')).lower()}")
+    console.print(f"username_committed={str(summary.get('username_committed')).lower()}")
+    console.print(f"private_url_committed={str(summary.get('private_url_committed')).lower()}")
+    console.print(f"ai_upload_used={str(summary.get('ai_upload_used')).lower()}")
+    console.print(f"live_api_used={str(summary.get('live_api_used')).lower()}")
+    console.print(f"scrape_used={str(summary.get('scrape_used')).lower()}")
+    console.print(f"solve_claim={str(summary.get('solve_claim')).lower()}")
+    for key, path in summary.get("output_paths", {}).items():
+        console.print(f"{key}={path}")
+
+
 app.add_typer(bounded_experiment_app, name="bounded-experiment")
 app.add_typer(bounded_run_app, name="bounded-run")
 app.add_typer(candidate_inspect_app, name="candidate-inspect")
@@ -3566,6 +3666,7 @@ app.add_typer(image_analysis_app, name="image-analysis")
 app.add_typer(image_transform_app, name="image-transform")
 app.add_typer(discord_ingest_app, name="discord-ingest")
 app.add_typer(discord_promote_app, name="discord-promote")
+app.add_typer(discord_review_app, name="discord-review")
 
 
 @solved_fixture_app.command("list")

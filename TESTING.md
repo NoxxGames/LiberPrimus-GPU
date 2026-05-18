@@ -52,6 +52,19 @@ Local validation includes:
 .\scripts\github\sync-tutorials-to-wiki.ps1 --DryRun
 ```
 
+## Stage 3Q Discord Review Bundle Tests
+
+Stage 3Q tests cover schema parsing, redaction of usernames/IDs/private URLs, preservation of public external URLs, topic classification, review lead construction, shard privacy headers, shard splitting, local review-index generation, CLI missing-input mode, aggregate privacy flags, and ignored generated shard paths.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-review validate-bundles `
+  --results-dir experiments/results/discord-review-bundles/stage3q `
+  --aggregate data/observations/discord/discord-review-bundle-aggregate-stage3q.yaml `
+  --allow-missing
+```
+
 Legacy workbook tests include p56 prime-minus-one first-delta checks, Welcome `DIVINITY` delta checks, and direct-page zero-delta checks for solved fixture hints.
 
 Legacy Pastebin tests include first-pair prime validation, empty-pair preservation, Parable anchor detection, page-boundary non-finalization, and local-real-file conditional tests.

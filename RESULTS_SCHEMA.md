@@ -82,6 +82,26 @@ Required fields include:
 
 Generated full candidate lists and unsafe-link rejection lists remain ignored under `experiments/results/discord-promotion/stage3o/`. Wiki sync reports remain ignored under `experiments/results/wiki-sync/stage3o/`.
 
+## Stage 3Q Discord Review Bundle Records
+
+Stage 3Q adds schemas for generated redacted message records, generated topic shard records, generated review lead records, and the committed aggregate review-bundle summary.
+
+Committed aggregate fields include:
+
+- `bundle_id`
+- `html_file_count`
+- `redacted_message_count`
+- `topic_shard_count`
+- `review_lead_count`
+- `public_link_count`
+- `method_claim_count`
+- `numeric_observation_count`
+- `visual_observation_count`
+- `debunk_count`
+- false privacy flags for raw logs, raw messages, usernames, private URLs, AI upload, live API use, scraping, and solve claims
+
+Generated redacted streams, topic shards, JSONL indexes, and local HTML review indexes remain ignored under `experiments/results/discord-review-bundles/stage3q/`.
+
 ## Stage 0D-followup Record Types
 
 Implemented/generated Stage 0D-followup record types include:

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/discord-review-lead-record-v0.schema.json",
+  "title": "Discord Review Lead Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "lead_id",
+    "topic",
+    "source_channel",
+    "approximate_date",
+    "evidence_type",
+    "public_links",
+    "numeric_values",
+    "method_keywords",
+    "redacted_summary",
+    "suggested_next_action",
+    "caution_notes",
+    "review_status",
+    "raw_message_committed",
+    "username_committed",
+    "private_url_committed",
+    "trusted_as_canonical",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "discord_review_lead_record" },
+    "lead_id": { "type": "string", "minLength": 1 },
+    "topic": { "type": "string", "minLength": 1 },
+    "source_channel": { "type": "string" },
+    "approximate_date": { "type": "string" },
+    "evidence_type": {
+      "enum": [
+        "source_link",
+        "method_claim",
+        "numeric_observation",
+        "visual_observation",
+        "debunk_or_false_positive",
+        "tool_or_repository",
+        "open_question"
+      ]
+    },
+    "public_links": { "type": "array", "items": { "type": "string" } },
+    "numeric_values": { "type": "array", "items": { "type": "integer" } },
+    "method_keywords": { "type": "array", "items": { "type": "string" } },
+    "redacted_summary": { "type": "string" },
+    "suggested_next_action": { "type": "string" },
+    "caution_notes": { "type": "string" },
+    "review_status": { "enum": ["human_review_required", "machine_checked", "rejected"] },
+    "raw_message_committed": { "const": false },
+    "username_committed": { "const": false },
+    "private_url_committed": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

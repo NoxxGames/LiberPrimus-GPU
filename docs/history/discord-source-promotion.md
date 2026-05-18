@@ -21,3 +21,9 @@ Promotion limits keep public files reviewable:
 Every promoted item keeps `trusted_as_canonical=false`, `raw_message_committed=false`, `usernames_committed=false`, and `review_status=human_review_required`.
 
 No promoted record is an experiment seed by default, and no promoted record is a solve claim.
+
+## Stage 3Q Handoff
+
+Stage 3Q consumes the redacted source-discovery surface to build topic-specific review bundles.
+The generated shards are ignored and are suitable for local Deep Research review only after
+confirming they contain no raw chat identity material.

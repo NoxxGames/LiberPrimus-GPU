@@ -46,3 +46,18 @@ Stage 3O adds promotion commands for the ignored Stage 3N output:
 ```
 
 Promotion is redacted, bounded, and review-only.
+
+Stage 3Q adds redacted review-bundle commands:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-review build-bundles `
+  --ingestion-dir experiments/results/discord-ingestion/stage3n `
+  --promotion-dir experiments/results/discord-promotion/stage3o `
+  --raw-dir third_party/LiberPrimusDiscordChats `
+  --out-dir experiments/results/discord-review-bundles/stage3q `
+  --aggregate-out data/observations/discord/discord-review-bundle-aggregate-stage3q.yaml `
+  --allow-missing `
+  --allow-warnings
+```
+
+Generated Stage 3Q topic shards and indexes are ignored by default.

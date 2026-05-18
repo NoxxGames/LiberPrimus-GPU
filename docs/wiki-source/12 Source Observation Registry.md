@@ -27,6 +27,10 @@ future experiment can use them.
   --methods data/observations/discord/promoted-method-claim-candidates-stage3o.yaml `
   --numerics data/observations/discord/promoted-numeric-observation-candidates-stage3o.yaml `
   --allow-empty
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-review validate-bundles `
+  --results-dir experiments/results/discord-review-bundles/stage3q `
+  --aggregate data/observations/discord/discord-review-bundle-aggregate-stage3q.yaml `
+  --allow-missing
 ```
 
 ## Expected Outputs
@@ -36,10 +40,15 @@ Validation should confirm records are redacted, reviewable, and noncanonical.
 Stage 3P transform outputs can support later review, but the generated flags themselves are not
 registry records and have `usable_as_experiment_seed=false`.
 
+Stage 3Q redacted Discord topic shards can support later lead review, but the shards are generated
+outputs and are not committed evidence. The committed aggregate records counts and privacy flags
+only.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
 Do not commit generated image-transform outputs, contact sheets, review pages, or derived images.
+Do not commit generated Discord review shards, redacted stream JSONL, or local review indexes.
 
 ## Troubleshooting
 
