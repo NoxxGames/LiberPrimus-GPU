@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3O and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3P and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -23,7 +23,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Page boundaries: reviewable.
 - Broad unsolved-page search campaigns: not started.
 - Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, and Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only.
-- Visual/image-derived observations: registry and deterministic feature summaries only; Stage 3K records source locks and reviewable observations, and Stage 3M records deterministic local image features. No image-derived text experiments are executed.
+- Visual/image-derived observations: registry and deterministic feature summaries only, plus deterministic review transforms; Stage 3K records source locks and reviewable observations, Stage 3M records deterministic local image features, and Stage 3P generates ignored review transforms/contact sheets. No image-derived text experiments are executed.
 - Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, with exact byte-string logging and no fuzzy or partial hash claims.
 - Discord source discovery: Stage 3N scans admin-provided local HTML exports only and commits aggregate/redacted records only. Stage 3O promotes a bounded, public-safe subset of redacted source-discovery records. Raw logs, message bodies, usernames, and private attachment URLs are not committed.
 - CUDA experiment campaigns: not started.
@@ -34,7 +34,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 3P review of promoted Discord public links for source-lock promotion, or an OutGuess regression harness if source review is deferred.
+- Stage 3Q review of visual transform candidates and promotion of selected observations, redacted Discord AI-review bundles/topic shards, or an OutGuess regression harness if visual review is deferred.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -70,6 +70,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 3M deterministic local image-analysis CLI and visual-feature summaries.
 - Stage 3N admin-approved Discord HTML archive ingestion and source-discovery index.
 - Stage 3O privacy-preserving Discord source promotion, expanded tutorials, and GitHub Wiki mirror source generation.
+- Stage 3P deterministic image transform suite, contact sheets, and local visual review index.
 
 ## Architecture summary
 
@@ -104,6 +105,7 @@ Current status:
 - Stage 3M: deterministic local image analysis complete.
 - Stage 3N: admin-approved Discord HTML archive ingestion complete.
 - Stage 3O: Discord source promotion and Wiki tutorial mirror complete.
+- Stage 3P: deterministic image transform suite and visual review index complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -112,7 +114,8 @@ Current status:
 - Latest bounded hash review: Stage 3L tested `1809` deduplicated SHA-256 candidate byte strings against the two archived cookie/hash targets for `3618` exact comparisons and found `0` exact matches; no solve claim.
 - Latest image-analysis stage: Stage 3M analysed `58` ignored local page images, producing `406` component records, `58` symmetry records, `464` bitplane records, and `71` review-only feature candidates in ignored outputs. No OCR, AI/ML interpretation, image-derived search, or solve claim is made.
 - Latest source-discovery stage: Stage 3O promoted `500` public source links, `200` method-claim candidates, and `200` numeric-observation candidates from the Stage 3N extraction into redacted review records. It rejected private/unsafe links, expanded public tutorials, and generated Wiki source pages. Raw Discord logs, message bodies, usernames, private URLs, and generated review indexes remain uncommitted; no solve claim.
-- Next: Stage 3P review promoted Discord public links for high-value source-lock promotion, or run an OutGuess regression harness if source review is deferred.
+- Latest visual review stage: Stage 3P processed `58` ignored local page images, emitted `2077` derived review images, `59` contact sheets, `58` review pages, and `6` review-only visual transform candidates under ignored outputs. No OCR, AI/ML interpretation, image-derived search, or solve claim is made.
+- Next: Stage 3Q review visual transform candidates and promote selected observations, or build redacted Discord AI-review bundles/topic shards.
 
 ## How To Use This Repo
 

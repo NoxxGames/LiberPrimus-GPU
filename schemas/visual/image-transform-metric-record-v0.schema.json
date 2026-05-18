@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/image-transform-metric-record-v0.schema.json",
+  "title": "Image Transform Metric Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "image_id",
+    "transform_name",
+    "metric_name",
+    "metric_value",
+    "metric_unit",
+    "metric_notes",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "image_transform_metric_record" },
+    "image_id": { "type": "string", "minLength": 1 },
+    "transform_name": { "type": "string", "minLength": 1 },
+    "metric_name": { "type": "string", "minLength": 1 },
+    "metric_value": { "type": "number" },
+    "metric_unit": { "type": "string" },
+    "metric_notes": { "type": "string" },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

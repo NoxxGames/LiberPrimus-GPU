@@ -183,6 +183,20 @@ experiments/results/image-analysis/**
 !experiments/results/image-analysis/stage3m/
 !experiments/results/image-analysis/stage3m/.gitkeep
 
+# Generated deterministic image-transform outputs
+experiments/results/image-transforms/**
+!experiments/results/image-transforms/
+!experiments/results/image-transforms/README.md
+!experiments/results/image-transforms/.gitkeep
+!experiments/results/image-transforms/stage3p/
+!experiments/results/image-transforms/stage3p/.gitkeep
+!experiments/results/image-transforms/stage3p/contact_sheets/
+!experiments/results/image-transforms/stage3p/contact_sheets/.gitkeep
+!experiments/results/image-transforms/stage3p/review_pages/
+!experiments/results/image-transforms/stage3p/review_pages/.gitkeep
+!experiments/results/image-transforms/stage3p/derived_images/
+!experiments/results/image-transforms/stage3p/derived_images/.gitkeep
+
 # Generated Discord ingestion outputs
 experiments/results/discord-ingestion/**
 !experiments/results/discord-ingestion/

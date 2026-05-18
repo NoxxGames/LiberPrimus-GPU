@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/image-transform-record-v0.schema.json",
+  "title": "Image Transform Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "transform_record_id",
+    "image_id",
+    "source_image_sha256",
+    "transform_name",
+    "transform_parameters",
+    "output_relative_path",
+    "output_sha256",
+    "output_width",
+    "output_height",
+    "generated_at_utc",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed",
+    "solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "image_transform_record" },
+    "transform_record_id": { "type": "string", "minLength": 1 },
+    "image_id": { "type": "string", "minLength": 1 },
+    "source_image_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "transform_name": { "type": "string", "minLength": 1 },
+    "transform_parameters": { "type": "object" },
+    "output_relative_path": {
+      "type": "string",
+      "pattern": "^experiments/results/image-transforms/stage3p/"
+    },
+    "output_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "output_width": { "type": "integer", "minimum": 1 },
+    "output_height": { "type": "integer", "minimum": 1 },
+    "generated_at_utc": { "type": "string", "minLength": 1 },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "solve_claim": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

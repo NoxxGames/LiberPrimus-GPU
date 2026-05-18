@@ -398,3 +398,20 @@ index. Generated outputs remain ignored under `experiments/results/discord-inges
 Committed aggregate records contain counts only. Stage 3N does not scrape Discord, call live APIs,
 commit message bodies or usernames, fetch attachments, execute extracted methods, activate the
 canonical corpus, use CUDA, or claim a solve.
+
+## Stage 3P Deterministic Image Transform Suite
+
+Stage 3P generates deterministic visual review artefacts for local ignored Liber Primus page images:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli image-transform run-local-pages `
+  --source-dir third_party/LiberPrimusPages `
+  --image-locks data/locks/third-party/liber-primus-pages/liber-primus-page-image-locks-v0.jsonl `
+  --out-dir experiments/results/image-transforms/stage3p `
+  --allow-missing `
+  --allow-warnings
+```
+
+The local run processed `58` images, emitted `37` transform names, generated `2077` derived review images, `59` contact sheets, `58` review pages, and `6` review-only visual transform candidates.
+
+Generated images, HTML review pages, JSONL records, and summaries remain ignored under `experiments/results/image-transforms/stage3p/`. Stage 3P does not run OCR, AI/ML interpretation, OpenCV, OutGuess extraction, image-derived cipher execution, Discord processing, CUDA, or solve claims.

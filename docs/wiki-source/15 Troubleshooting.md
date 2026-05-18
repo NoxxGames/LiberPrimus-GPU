@@ -26,7 +26,18 @@ Check ignore rules:
 
 ```powershell
 git check-ignore -v experiments/results/discord-promotion/stage3o/promotion_candidates.jsonl
+git check-ignore -v experiments/results/image-transforms/stage3p/review_index.html
+git check-ignore -v experiments/results/image-transforms/stage3p/contact_sheets/example.jpg
 ```
+
+If an ignored Stage 3P transform run leaves local images or HTML under `experiments/results/`, do
+not stage them. Re-run the transform command only after confirming raw page images remain ignored.
+
+## Image Transform Run Is Slow
+
+Stage 3P uses bounded review previews for large images. Do not switch to full-resolution derived
+image generation unless a future stage explicitly budgets and scopes that output. Original image
+hashes remain anchored by the Stage 3K lock records.
 
 ## Wiki Publish Fails
 

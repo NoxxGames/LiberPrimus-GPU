@@ -465,3 +465,13 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Discord promoted records must remain redacted and reviewable.
 - Do not promote Discord claims to facts.
 - Do not commit raw Discord logs, message bodies, usernames, user IDs, message IDs, or private attachment URLs.
+
+## Stage 3P Image Transform Rules
+
+- Image transform outputs are generated and must not be committed.
+- Visual transform candidates are review aids only.
+- Do not promote visual transform candidates to experiment seeds automatically.
+- Do not interpret split/mirror artefacts as meaning without observation review and controls.
+- Do not use OCR, AI, or ML image interpretation as source of truth.
+- Do not process Discord logs in image stages.
+- Do not commit raw local page images, generated derived images, generated contact sheets, generated review HTML, or generated transform JSONL records.

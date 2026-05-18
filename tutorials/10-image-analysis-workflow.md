@@ -6,6 +6,8 @@ Run deterministic local page-image analysis without OCR, AI/ML, or image-derived
 
 ## Commands
 
+Stage 3M feature analysis:
+
 ```powershell
 .\.venv\Scripts\python.exe -m libreprimus.cli image-analysis analyze-local-pages `
   --source-dir third_party/LiberPrimusPages `
@@ -15,15 +17,36 @@ Run deterministic local page-image analysis without OCR, AI/ML, or image-derived
   --allow-warnings
 ```
 
+Stage 3P transform review artefacts:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli image-transform run-local-pages `
+  --source-dir third_party/LiberPrimusPages `
+  --image-locks data/locks/third-party/liber-primus-pages/liber-primus-page-image-locks-v0.jsonl `
+  --out-dir experiments/results/image-transforms/stage3p `
+  --allow-missing `
+  --allow-warnings
+```
+
 ## Expected Outputs
 
 Generated JSONL records summarize grayscale stats, thresholds, components, symmetry, bitplanes, and
-review-only feature flags.
+review-only feature flags. Stage 3P also writes derived review images, per-image contact sheets,
+a global contact sheet, per-image review pages, and:
+
+```text
+experiments/results/image-transforms/stage3p/review_index.html
+```
 
 ## What Not To Commit
 
-Raw images and generated image-analysis JSONL outputs.
+Raw images, generated image-analysis JSONL outputs, generated transform images, contact sheets,
+review HTML, and transform JSONL records.
 
 ## Troubleshooting
 
 If local images are absent, `--allow-missing` supports raw-data-free validation.
+
+If transform generation is slow on high-resolution images, keep the Stage 3P bounded preview
+settings rather than producing full-resolution derived artefacts. Original image identity is still
+tracked by Stage 3K locks.

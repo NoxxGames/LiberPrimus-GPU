@@ -218,9 +218,13 @@ Stage 3N adds privacy-preserving ingestion for admin-provided local Discord HTML
 
 Stage 3O promotes a bounded public-safe subset of Stage 3N Discord source-discovery output into redacted review records, expands public tutorials, and generates GitHub Wiki mirror source pages. Raw Discord logs, message bodies, usernames, private URLs, generated review outputs, and Wiki worktrees remain uncommitted.
 
-## Stage 3P - Review promoted Discord public links or OutGuess regression harness
+## Stage 3P - Deterministic image transform suite
 
-Review the Stage 3O promoted public links and promote high-value public sources into the archive/source registry with independent source locks, or implement an OutGuess regression harness if source review is deferred. Do not jump to CUDA, live Discord, broad web crawling, or broad AI analysis.
+Stage 3P adds deterministic local page-image transforms, contact sheets, split/mirror previews, component overlays, review metrics, and a local visual review index. Generated artefacts remain ignored. It does not use OCR, AI/ML, image-derived cipher execution, OutGuess, Discord processing, CUDA, canonical corpus activation, page-boundary finalization, or solve claims.
+
+## Stage 3Q - Review visual transform candidates or redacted review bundles
+
+Review Stage 3P visual transform candidates and promote selected observations through reviewable records, or build redacted Discord AI-review bundles/topic shards that contain no raw logs. An OutGuess regression harness remains an alternate bounded Stage 3Q path. Do not jump to CUDA, broad web crawling, live Discord, or broad AI analysis.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

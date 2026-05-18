@@ -156,6 +156,9 @@ from libreprimus.hash_preimage.validation import validate_candidate_packs
 from libreprimus.image_analysis.runner import analyze_local_pages
 from libreprimus.image_analysis.summary import load_summary as load_image_analysis_summary
 from libreprimus.image_analysis.validation import validate_results as validate_image_analysis_results
+from libreprimus.image_transforms.runner import run_local_page_transforms
+from libreprimus.image_transforms.summary import load_summary as load_image_transform_summary
+from libreprimus.image_transforms.validation import validate_results as validate_image_transform_results
 from libreprimus.discord_ingestion.html_scanner import scan_discord_archive
 from libreprimus.discord_ingestion.summary import load_summary as load_discord_ingestion_summary
 from libreprimus.discord_ingestion.validation import (
@@ -204,6 +207,7 @@ archive_app = typer.Typer(no_args_is_help=True)
 observation_app = typer.Typer(no_args_is_help=True)
 hash_preimage_app = typer.Typer(no_args_is_help=True)
 image_analysis_app = typer.Typer(no_args_is_help=True)
+image_transform_app = typer.Typer(no_args_is_help=True)
 discord_ingest_app = typer.Typer(no_args_is_help=True)
 discord_promote_app = typer.Typer(no_args_is_help=True)
 console = Console()
@@ -3275,6 +3279,86 @@ def _print_image_analysis_summary(summary: dict) -> None:
         console.print(f"{key}={path}")
 
 
+@image_transform_app.command("run-local-pages")
+def image_transform_run_local_pages(
+    source_dir: Path = typer.Option(..., "--source-dir", help="Local page image source directory."),
+    image_locks: Path = typer.Option(..., "--image-locks", help="Committed Stage 3K image-lock JSONL path."),
+    out_dir: Path = typer.Option(..., "--out-dir", help="Generated deterministic image-transform output directory."),
+    allow_missing: bool = typer.Option(False, "--allow-missing", help="Write empty outputs if source dir is missing."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite non-blocking warnings."),
+) -> None:
+    """Generate deterministic review transforms for local Liber Primus page images."""
+    try:
+        summary = run_local_page_transforms(
+            source_dir=_resolve_output_path(source_dir),
+            image_locks=_resolve_output_path(image_locks),
+            out_dir=_resolve_output_path(out_dir),
+            allow_missing=allow_missing,
+            allow_warnings=allow_warnings,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_image_transform_summary(summary)
+
+
+@image_transform_app.command("validate-results")
+def image_transform_validate_results(
+    results_dir: Path = typer.Option(..., "--results-dir", help="Generated image-transform result directory."),
+    allow_missing: bool = typer.Option(False, "--allow-missing", help="Allow missing generated results."),
+) -> None:
+    """Validate generated deterministic image-transform records."""
+    try:
+        counts, errors = validate_image_transform_results(
+            _resolve_output_path(results_dir),
+            allow_missing=allow_missing,
+        )
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    for key, value in counts.items():
+        console.print(f"{key}={value}")
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(f"[red]{error}[/red]")
+    if errors:
+        raise typer.Exit(1)
+    console.print("Image transform results OK")
+
+
+@image_transform_app.command("summary")
+def image_transform_print_summary(
+    results_dir: Path = typer.Option(..., "--results-dir", help="Generated image-transform result directory."),
+) -> None:
+    """Print a concise generated deterministic image-transform summary."""
+    try:
+        summary = load_image_transform_summary(_resolve_output_path(results_dir))
+    except Exception as error:  # noqa: BLE001 - CLI reports errors consistently.
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_image_transform_summary(summary)
+
+
+def _print_image_transform_summary(summary: dict) -> None:
+    for key in [
+        "run_id",
+        "image_count",
+        "transform_count",
+        "derived_image_count",
+        "contact_sheet_count",
+        "review_page_count",
+        "visual_candidate_count",
+    ]:
+        console.print(f"{key}={summary.get(key)}")
+    feature_counts = summary.get("feature_counts", {})
+    for feature_name in sorted(feature_counts):
+        console.print(f"{feature_name}_count={feature_counts[feature_name]}")
+    console.print(f"solve_claim={str(summary.get('solve_claim')).lower()}")
+    console.print(f"trusted_as_canonical={str(summary.get('trusted_as_canonical')).lower()}")
+    for key, path in summary.get("output_paths", {}).items():
+        console.print(f"{key}={path}")
+
+
 @discord_ingest_app.command("scan")
 def discord_ingest_scan(
     source_dir: Path = typer.Option(..., "--source-dir", help="Local Discord HTML archive directory."),
@@ -3479,6 +3563,7 @@ app.add_typer(archive_app, name="archive")
 app.add_typer(observation_app, name="observation")
 app.add_typer(hash_preimage_app, name="hash-preimage")
 app.add_typer(image_analysis_app, name="image-analysis")
+app.add_typer(image_transform_app, name="image-transform")
 app.add_typer(discord_ingest_app, name="discord-ingest")
 app.add_typer(discord_promote_app, name="discord-promote")
 

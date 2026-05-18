@@ -233,10 +233,15 @@ Discord attachment URL redaction, keyword-only method-claim extraction, numeric 
 extraction, aggregate privacy policy checks, CLI scan/validate/export commands, ignored generated
 outputs, ignored raw Discord logs, and no live API or scrape requirements.
 
+## Stage 3P Image Transform Tests
+
+Stage 3P adds tests for transform schemas, grayscale/invert/threshold previews, RGB channel splits, bitplane previews, edge maps, split/mirror differences, component overlays, contact sheets, review index generation, visual transform candidate safety flags, CLI raw-image-free mode, ignored generated outputs, ignored raw page images, ignored raw Discord logs, and no OCR/AI/OpenCV dependency requirement.
+
 Run:
 
 ```powershell
 .\.venv\Scripts\python.exe -m pytest -q tests/python -k stage3m
+.\.venv\Scripts\python.exe -m pytest -q tests/python -k stage3p
 ```
 
 Stage 3A adds tests for minimal triage scoring, Caesar and affine enumeration counts, candidate output schemas, generated-output ignore policy, policy blocking, and `libreprimus bounded-run` CLI behavior.

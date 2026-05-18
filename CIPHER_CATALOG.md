@@ -155,6 +155,8 @@ Stage 3N Discord ingestion records are not cipher transforms. Extracted Discord 
 
 Stage 3O promoted Discord records are still not cipher transforms. They are redacted, public-source review leads and must not be treated as experiment seeds, facts, or solve evidence without later independent source-lock review.
 
+Stage 3P deterministic image transform records are not cipher transforms. Derived images, contact sheets, split/mirror differences, bitplanes, component overlays, and visual transform candidate flags are review aids only and do not imply plaintext recovery, seed validity, or solve evidence.
+
 Do not convert visual or web observations into transform seeds without a later manifest, count validation, controls, and explicit bounded execution policy.
 
 ## Stage 2B Result Store Relationship

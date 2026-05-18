@@ -30,6 +30,9 @@ try {
     Write-Host "Validating Stage 3M deterministic image-analysis raw-data-free mode"
     & $Python -m libreprimus.cli image-analysis validate-results --results-dir (Join-Path $TempDir "stage3m-image-analysis") --allow-missing
 
+    Write-Host "Validating Stage 3P deterministic image-transform raw-data-free mode"
+    & $Python -m libreprimus.cli image-transform validate-results --results-dir (Join-Path $TempDir "stage3p-image-transforms") --allow-missing
+
     Write-Host "Validating Stage 3N Discord ingestion raw-log-free mode"
     & $Python -m libreprimus.cli discord-ingest scan --source-dir (Join-Path $TempDir "missing-discord") --out-dir (Join-Path $TempDir "stage3n-discord") --allow-missing --allow-warnings
     & $Python -m libreprimus.cli discord-ingest validate-results --results-dir (Join-Path $TempDir "stage3n-discord") --allow-missing

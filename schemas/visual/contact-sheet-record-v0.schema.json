@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/contact-sheet-record-v0.schema.json",
+  "title": "Contact Sheet Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "contact_sheet_id",
+    "image_id",
+    "output_relative_path",
+    "included_transforms",
+    "thumbnail_count",
+    "generated_at_utc",
+    "trusted_as_canonical",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "contact_sheet_record" },
+    "contact_sheet_id": { "type": "string", "minLength": 1 },
+    "image_id": { "type": "string", "minLength": 1 },
+    "output_relative_path": {
+      "type": "string",
+      "pattern": "^experiments/results/image-transforms/stage3p/"
+    },
+    "included_transforms": { "type": "array", "items": { "type": "string" } },
+    "thumbnail_count": { "type": "integer", "minimum": 0 },
+    "generated_at_utc": { "type": "string", "minLength": 1 },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

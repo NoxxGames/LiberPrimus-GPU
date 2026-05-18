@@ -470,4 +470,18 @@ Committed aggregate records under `data/locks/third-party/discord-chats/` and
 message bodies, usernames, AI upload, live API use, and scraping are prohibited by schema and
 validation.
 
+## Stage 3P Image Transform Records
+
+Stage 3P adds committed schemas under `schemas/visual/` for:
+
+- `image_transform_record`
+- `image_transform_metric_record`
+- `visual_transform_candidate`
+- `contact_sheet_record`
+- `image_transform_run_summary`
+
+Generated records remain ignored under `experiments/results/image-transforms/stage3p/`.
+
+All Stage 3P records keep `trusted_as_canonical=false` and `solve_claim=false`. Transform and candidate records also keep `usable_as_experiment_seed=false`; they are human-review artefacts only and not image-derived seed manifests.
+
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.

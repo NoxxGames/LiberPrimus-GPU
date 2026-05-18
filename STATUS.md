@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3O Discord source promotion and Wiki tutorial mirroring is complete.
+Stage 3P deterministic image transform suite and visual review index is complete.
 
 ## Completed in Stage 0A
 
@@ -18,13 +18,23 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, and Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, and Stage 3P generates deterministic image transform review artefacts only.
 
 ## Completed in Stage 3O
 
 Stage 3O promoted `500` public source links, `200` method-claim candidates, and `200` numeric-observation candidates from local Stage 3N generated outputs into committed redacted review records. It added Discord promotion CLI commands, expanded public README/tutorials, generated `docs/wiki-source/` pages from tutorials, and added Wiki validation/sync scripts.
 
 Raw Discord logs, message bodies, usernames, private attachment URLs, generated promotion outputs, and Wiki worktrees remain uncommitted. Promoted records are reviewable leads only and no solve claim is made.
+
+## Completed in Stage 3P
+
+Stage 3P added deterministic local image-transform tooling for ignored Liber Primus page images.
+
+Run summary: local images processed `58`, transform names `37`, derived review images `2077`, contact sheets `59`, review pages `58`, visual transform candidates `6`, sparse-dot-like candidates `6`, high mirror-difference candidates `0`, low-bitplane candidates `0`.
+
+Generated transform images, contact sheets, review HTML, and JSONL outputs remain ignored under `experiments/results/image-transforms/stage3p/`. Raw page images and raw Discord logs remain uncommitted. Stage 3P does not run OCR, AI/ML image interpretation, image-derived cipher execution, OutGuess, CUDA, canonical corpus activation, page-boundary finalization, or solve claims.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3p-image-transform-suite.md`.
 
 The real workbook was found locally and hash-locked as a raw legacy analysis artefact. It is not committed.
 

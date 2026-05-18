@@ -5,7 +5,9 @@
 ## Purpose
 
 Store reviewable source links, archive records, visual observations, cookie/hash artefacts, and
-Discord-promoted candidates without turning them into facts.
+Discord-promoted candidates without turning them into facts. Stage 3P visual transform candidates
+are also review leads only; selected items must be promoted through observation review before any
+future experiment can use them.
 
 ## Key Paths
 
@@ -31,9 +33,13 @@ Discord-promoted candidates without turning them into facts.
 
 Validation should confirm records are redacted, reviewable, and noncanonical.
 
+Stage 3P transform outputs can support later review, but the generated flags themselves are not
+registry records and have `usable_as_experiment_seed=false`.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
+Do not commit generated image-transform outputs, contact sheets, review pages, or derived images.
 
 ## Troubleshooting
 
