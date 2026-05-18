@@ -21,11 +21,15 @@ result-store definitions still agree.
   and committed schemas/manifests/profiles.
 - Result-store consistency: Stage 2B manifest and local generated outputs when
   present.
+- State-drift consistency: long-lived operational docs agree on current stage,
+  canonical corpus inactive status, page-boundary review status, CUDA deferral,
+  raw/generated output policy, Discord privacy, and no-solve-claim policy.
 
 ## Local Commands
 
 ```powershell
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-all --allow-warnings
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-state-drift
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 .\scripts\ci\run-consistency-checks.ps1
 ```
@@ -34,6 +38,7 @@ Linux/macOS:
 
 ```sh
 python -m libreprimus.cli consistency check-all --allow-warnings
+python -m libreprimus.cli consistency check-state-drift
 python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 scripts/ci/run-consistency-checks.sh
 ```
@@ -43,6 +48,9 @@ scripts/ci/run-consistency-checks.sh
 GitHub Actions runs the consistency suite in the Python CI job after the
 registry and manifest validation commands. The check is raw-data-free and does
 not require generated local result-store outputs.
+
+Stage 3W adds anti-drift checks to `check-all` and to the local CI helper
+scripts.
 
 Stage 2E also validates exploratory dry-run manifests and runs a Caesar preview
 dry run into a temporary CI directory.

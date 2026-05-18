@@ -22,6 +22,7 @@ from libreprimus.consistency.check_post_discord import check_post_discord_consis
 from libreprimus.consistency.check_stego import check_stego_consistency
 from libreprimus.consistency.export import write_summary
 from libreprimus.consistency.models import ConsistencyCheckResult, ConsistencyCheckSuiteResult
+from libreprimus.consistency.state_drift import check_state_drift_consistency
 
 CHECK_GROUPS = {
     "registry": check_registry_consistency,
@@ -40,6 +41,7 @@ CHECK_GROUPS = {
     "discord_leads": check_discord_leads_consistency,
     "post_discord": check_post_discord_consistency,
     "stego": check_stego_consistency,
+    "state_drift": check_state_drift_consistency,
 }
 
 

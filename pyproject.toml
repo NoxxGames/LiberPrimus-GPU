@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "libreprimus-gpu"
 version = "0.1.0"
-description = "Stage 0A scaffold for a CUDA-accelerated Liber Primus cryptanalysis workbench"
+description = "Conservative Liber Primus cryptanalysis workbench with bounded CPU experiments and deferred CUDA acceleration"
 readme = "README.md"
 requires-python = ">=3.12,<3.14"
 license = { text = "GPL-3.0-only" }

@@ -2,7 +2,9 @@
 
 ## Established facts
 
-Liber Primus is a public unsolved puzzle artifact with known solved and unsolved portions. Stage 0A does not reproduce or verify any page solution.
+Liber Primus is a public unsolved puzzle artifact with known solved and unsolved portions. The workbench has reproduced known solved baselines, run bounded review experiments, and added archive/image/Discord/stego review tooling, but it does not claim any new page solve.
+
+After Stage 3V, the canonical corpus is inactive, page boundaries are reviewable, broad campaigns are not started, and CUDA remains deferred. Stage 3W consolidates that state and adds anti-drift checks.
 
 ## Community hypotheses
 
@@ -46,7 +48,7 @@ Prime-minus-one and phi-prime style hypotheses should be treated as research lea
 
 Short texts, flexible rune mappings, hand-picked transforms, and retrospective scoring create high false-positive risk. The manifest and result schema must make that risk visible.
 
-## Stage 0A research status
+## Historical Stage 0A research status
 
 No research corpus, solved fixture, or candidate plaintext is generated in Stage 0A.
 
@@ -58,7 +60,7 @@ The Stage 0B parser treats the workbook as a non-canonical legacy analysis artef
 
 The Stage 0C parser treats the local Pastebin TXT as a non-canonical legacy LP2 rune/prime-value artefact. It is useful for parser validation and alignment hints only.
 
-## Stage 0D transcript alignment status
+## Historical Stage 0D transcript alignment status
 
 The rtkd transcript and scream314 reference are hash-locked, but no canonical corpus is active. Tentative page-boundary candidates require later review.
 

@@ -153,6 +153,12 @@ The local run detected no OutGuess binary, so it recorded missing-tool skips. Th
 
 Stage 3V does not scan all Liber Primus images, run non-OutGuess stego tools, process raw Discord logs, use CUDA, or claim a solve.
 
+## Stage 3W State Consolidation
+
+Stage 3W is not an experiment stage. It updates persistent project context and anti-drift checks only.
+
+Stage 3W does not create experiment manifests, execute candidate generation, process raw data, run OutGuess, process Discord logs, process page images, use CUDA, activate the canonical corpus, finalize page boundaries, or claim a solve.
+
 ## Stage 0A smoke manifest
 
 The Stage 0A smoke manifest validates project bootstrap only. No candidate plaintext is generated in Stage 0A.

@@ -58,11 +58,27 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Stage 0D adds non-canonical transcript alignment and canonical transcript policy scaffolding on top of Stage 0C Pastebin ingestion.
+Current completed stage: Stage 3V - OutGuess regression harness.
+
+Current work: Stage 3W - state consolidation and anti-drift hardening. Stage 3W is documentation, metadata, tests, and CI/check hardening only; it must not add experiment functionality, run new experiments, process raw data, process Discord logs, process page images, run OutGuess extraction, change CUDA behavior, activate the canonical corpus, finalize page boundaries, or claim a solve.
+
+Current project state:
+
+- Canonical corpus: inactive.
+- Page boundaries: reviewable.
+- Broad unsolved-page campaigns: not started.
+- CUDA: deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
+- Existing CUDA code: scaffold/smoke infrastructure only unless code and tests say otherwise.
+- Raw data, generated outputs, SQLite databases, raw Discord logs, raw page images, raw historical stego artefacts, extracted payloads, and local deep-research reports are not committed.
+- No solve claims are present.
 
 ## Source-of-truth files
 
-Use `README.md`, `ARCHITECTURE.md`, `DATASET.md`, `EXPERIMENTS.md`, `CUDA_NOTES.md`, `RESULTS_SCHEMA.md`, and `STATUS.md` as persistent context.
+Use `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, and `README.md` as primary operational truth. Use `EXPERIMENTS.md`, `RESULTS_SCHEMA.md`, `TESTING.md`, `DATASET.md`, `RESEARCH.md`, and `CIPHER_CATALOG.md` as research/workflow truth. Use `ARCHITECTURE.md`, `CUDA_NOTES.md`, `docs/architecture/**`, and `docs/ci/**` as architecture/CI truth. Tutorials and `docs/wiki-source/**` are public guidance; repository tutorials remain the source of truth and Wiki pages are mirrors.
+
+When stage status changes, update `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, and `README.md` together. Long-lived operational docs must not describe obsolete stages as the current state. Historical references are allowed when clearly archival; do not rewrite `docs/development-logs/**` or `research-log/**` merely because they mention older stages.
+
+When state matters, verify local `HEAD`, `origin/main`, and latest CI directly with Git/GitHub tooling. Do not rely on rendered GitHub pages, cached raw URLs, or memory for current repository state.
 
 ## Corpus immutability rules
 
@@ -80,7 +96,7 @@ Prefer small, explicit modules with clear provenance boundaries. Avoid clever tr
 
 ## C++ standards
 
-Use C++20, namespace all project code under `libreprimus`, and keep Stage 0A code dependency-free.
+Use C++20, namespace all project code under `libreprimus`, and keep foundational C++ smoke code dependency-free.
 
 ## CUDA standards
 
@@ -126,9 +142,11 @@ Do not treat memory, screenshots, or terminal output as source evidence. Later c
 
 Preserve remotes and branches. Do not stage build outputs, caches, virtual environments, generated result files, raw corpus data, downloaded installers, logs, or databases.
 
+Do not stage or commit `deep-research-reports/**`; these are local review inputs only.
+
 ## Prohibited actions
 
-Do not download real corpus data in Stage 0A. Do not run brute force, long benchmarks, CUDA stress tests, or unbounded searches. Do not print secrets or credential-bearing environment variables.
+Do not download real corpus data unless a future source-lock stage explicitly scopes it. Do not run brute force, long benchmarks, CUDA stress tests, or unbounded searches. Do not print secrets or credential-bearing environment variables.
 
 ## Stop conditions
 
@@ -530,3 +548,11 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not run broad stego scans by default.
 - Do not process raw Discord logs during stego stages.
 - Raw historical artefacts under `third_party/CicadaArchive/` and `third_party/CicadaOutGuess/` must remain ignored except README and `.gitkeep`.
+
+## Stage 3W State Consolidation Rules
+
+- Stage 3W changes persistent context, checks, docs, tests, and metadata only.
+- Do not add experiment functionality, execute experiments, process raw data, process Discord logs, process page images, run OutGuess extraction, use CUDA, activate canonical corpus, finalize page boundaries, or claim a solve.
+- Keep `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, and `README.md` synchronized when stage status changes.
+- Run `libreprimus consistency check-state-drift` before staging documentation-heavy changes.
+- `deep-research-reports/**` is local review material and must never be staged, committed, or pushed.

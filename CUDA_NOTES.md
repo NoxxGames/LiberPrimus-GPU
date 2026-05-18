@@ -4,42 +4,48 @@
 
 This file records CUDA policy for future acceleration work.
 
-## CUDA status in Stage 0A
+## Current CUDA Status
 
-CUDA is optional in Stage 0A and limited to a guarded smoke kernel.
+CUDA remains deferred after Stage 3V and during Stage 3W. Existing CUDA code is scaffold and smoke-test infrastructure only unless a future stage explicitly adds CPU-reference behavior, parity tests, and benchmark coverage.
 
-## RTX 4060 Ti target
+Do not use CUDA for Discord processing, image interpretation, OutGuess regression, cookie/hash packs, or broad unsolved-page campaigns.
+
+## RTX 4060 Ti Target
 
 The expected GPU target is RTX 4060 Ti.
 
-## Compute capability 8.9
+## Compute Capability 8.9
 
 RTX 4060 Ti uses compute capability 8.9, represented as CUDA architecture `89` in CMake.
 
-## CMake CUDA architecture setting
+## CMake CUDA Architecture Setting
 
-When CUDA is enabled, `CMAKE_CUDA_ARCHITECTURES` defaults to `89` unless the user supplies another value.
+When CUDA is enabled for smoke/scaffold builds, `CMAKE_CUDA_ARCHITECTURES` defaults to `89` unless the user supplies another value.
 
-## CPU reference first
+## CPU Reference First
 
-Every future CUDA transform must follow a CPU reference implementation.
+Every future CUDA transform must follow a CPU reference implementation. CPU behavior, scoring semantics, reset/advance policy, and output records must be stable before acceleration.
 
-## Parity tests
+## Future First CUDA Target
 
-Every CUDA kernel must have CPU/GPU parity tests before optimization.
+The likely first serious CUDA target is a batch transform-and-score API for already-reviewed CPU transforms. Hash cracking, Discord processing, image stego fishing, OCR, AI/ML interpretation, and raw data processing are not CUDA targets.
 
-## No fast-math default
+## Parity Tests
+
+Every CUDA kernel must have CPU/GPU parity tests before optimization. Parity tests must include known inputs, negative controls, edge cases, and deterministic output comparisons.
+
+## No Fast-Math Default
 
 Do not enable fast math by default. Cryptanalytic scoring must remain reproducible.
 
-## Memory layout planned later
+## Memory Layout Planned Later
 
-Memory layouts will be chosen after the CPU transform and scoring APIs are stable.
+Memory layouts will be chosen after CPU transform, batch, and scoring APIs are stable.
 
-## Top-k only output principle
+## Top-K Only Output Principle
 
 GPU kernels should return compact top-k or score summaries instead of dumping huge candidate sets.
 
-## Profiling tools planned later
+## Profiling Tools Planned Later
 
-Nsight Systems and Nsight Compute are planned for later stages. Do not run long profiling jobs in Stage 0A.
+Nsight Systems and Nsight Compute remain future tools. Do not run long profiling jobs before CPU/GPU parity tests and a benchmark plan exist.

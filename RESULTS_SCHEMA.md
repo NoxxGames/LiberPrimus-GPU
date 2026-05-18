@@ -2,19 +2,21 @@
 
 ## Purpose
 
-Define planned result records before generated outputs exist.
+Define result, manifest, source-lock, observation, and generated-output record policy for the workbench.
 
-## Stage 0A status
+## Current Schema State
 
-The result schema is planned, not finalized. Stage 0B implements legacy workbook extraction record shapes for non-canonical generated artefacts.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, post-Discord manifests, GP/rune claim records, image-transform records, and stego/OutGuess regression records.
+
+Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
 ## Result record principles
 
 Records must be replayable, reviewable, compact, and explicit about uncertainty.
 
-## Planned JSONL fields
+## Common JSONL Fields
 
-Planned fields include result ID, experiment ID, manifest hash, corpus lock ID, transform chain, candidate summary, scores, null-control scores, rank, timestamps, and review status.
+Generated and committed record families use fields such as result ID, experiment ID, manifest hash, corpus lock ID, transform chain, candidate summary, scores, null-control scores, rank, timestamps, review status, privacy flags, CUDA flags, canonical-corpus flags, page-boundary flags, and solve-claim flags.
 
 Implemented legacy workbook record types:
 
@@ -33,9 +35,9 @@ Implemented legacy workbook record types:
 - `glyph_variant_observation`
 - `stage0d_alignment_summary`
 
-## Planned SQLite tables
+## SQLite Result Store
 
-Planned tables include experiments, runs, corpus_locks, transform_steps, scores, candidates, null_controls, hardware, and reviews.
+Stage 2B added a SQLite result-store foundation for generated local outputs. SQLite databases and sidecar files are generated outputs and must not be committed.
 
 ## Required provenance fields
 

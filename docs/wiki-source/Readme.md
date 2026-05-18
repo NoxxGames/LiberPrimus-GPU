@@ -25,7 +25,7 @@ Workbench. The GitHub Wiki mirrors these files for browsing convenience.
 ## Legacy Tutorial Notes
 
 Older topic-specific tutorials remain in this directory for historical context and deeper workflow
-details. The numbered set above is the current public guide series after Stage 3V.
+details. The numbered set above is the current public guide series after Stage 3W.
 
 ## Safety Warning
 
@@ -33,5 +33,6 @@ Terminal output, generated candidate records, Discord extraction outputs, redact
 Stage 3R promotion audit JSONL, Stage 3S post-Discord candidate outputs, Stage 3T verification
 outputs, Stage 3U hash candidate outputs, Stage 3V OutGuess extraction outputs, local review
 indexes, image-analysis records, and image-transform review artefacts are not solve evidence.
-Treat current outputs as provenance-bearing review data unless a future stage promotes them through
-explicit source locks, manifests, tests, and review.
+Stage 3W anti-drift checks protect this policy in persistent docs. Treat current outputs as
+provenance-bearing review data unless a future stage promotes them through explicit source locks,
+manifests, tests, and review.

@@ -1448,9 +1448,17 @@ def consistency_check_all(
     out: Path | None = typer.Option(None, "--out", help="Generated consistency summary JSON path."),
     allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
 ) -> None:
-    """Run all raw-data-free Stage 2D consistency checks."""
+    """Run the raw-data-free consistency suite, including anti-drift checks."""
     _run_consistency_cli(
-        ["registry", "manifests", "schemas", "docs", "ignored_outputs", "result_store"],
+        [
+            "registry",
+            "manifests",
+            "schemas",
+            "docs",
+            "ignored_outputs",
+            "result_store",
+            "state_drift",
+        ],
         out=out,
         allow_warnings=allow_warnings,
         allow_missing_generated=True,
@@ -1487,6 +1495,15 @@ def consistency_check_docs(
 ) -> None:
     """Run public documentation consistency checks."""
     _run_consistency_cli(["docs"], allow_warnings=allow_warnings)
+
+
+@consistency_app.command("check-state-drift")
+def consistency_check_state_drift(
+    out: Path | None = typer.Option(None, "--out", help="Generated state-drift summary JSON path."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Run persistent project-state anti-drift checks."""
+    _run_consistency_cli(["state_drift"], out=out, allow_warnings=allow_warnings)
 
 
 @consistency_app.command("check-ignored-outputs")

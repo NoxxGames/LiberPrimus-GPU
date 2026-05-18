@@ -1,65 +1,59 @@
 # Architecture
 
-## Design principles
+## Design Principles
 
-The workbench favors reproducibility, provenance, and skeptical review over speed. GPU acceleration is useful only after the CPU behavior is correct and testable.
+The workbench favors reproducibility, provenance, and skeptical review over speed. Generated output is review material, not evidence of a solve. GPU acceleration is useful only after CPU behavior is correct, testable, and stable.
 
-## System overview
+## Current Repository State
 
-The planned system has a corpus layer, transform registry, scoring layer, manifest runner, result sink, and optional CUDA batch accelerator.
+Stage 3V is complete and Stage 3W consolidates persistent project context. The canonical corpus is inactive, page boundaries are reviewable, broad unsolved-page campaigns are not started, and CUDA is deferred. No solve claim is made.
 
-## Component graph
+Historical Stage 0A was a bootstrap scaffold. The current repository now includes profile/corpus candidate foundations, solved fixtures, CPU transform registry, result-store foundations, bounded execution policy, archive/image/Discord/post-Discord/stego modules, and raw-data-free CI.
+
+## Component Graph
 
 ```mermaid
 flowchart LR
-    Manifest["Experiment manifest"] --> Corpus["Corpus locks and slices"]
-    Manifest --> Transforms["CPU transform chain"]
+    Manifest["Experiment manifest"] --> Corpus["Corpus locks, profiles, and slices"]
+    Manifest --> Transforms["CPU reference transforms"]
     Transforms --> Scorers["Scorers and null controls"]
-    Scorers --> Results["JSONL / SQLite result sink"]
-    Transforms -. optional batches .-> CUDA["CUDA transform-score kernels"]
-    CUDA -. parity .-> Scorers
+    Scorers --> Results["Ignored JSONL / SQLite result stores"]
+    Corpus --> Registries["Source and observation registries"]
+    Registries --> Manifests["Bounded manifest queues"]
+    Transforms -. future optional batches .-> CUDA["CUDA transform-score kernels"]
+    CUDA -. parity tests .-> Scorers
 ```
 
-## CPU/GPU responsibility split
+## CPU/GPU Responsibility Split
 
-The CPU owns corpus management, hypothesis generation, branching search, experiment orchestration, provenance, and review. The GPU only accelerates large regular transform-and-score batches.
+The CPU owns corpus management, profile loading, hypothesis generation, bounded experiment orchestration, provenance, scoring, validation, and review. The GPU may later accelerate large regular transform-and-score batches only after CPU references, batch APIs, parity tests, and benchmarks exist.
 
-## Pipeline vs internal DAG model
+Existing CUDA code is scaffold and smoke-test infrastructure unless a future stage explicitly adds a CPU-parity-tested kernel.
 
-User-facing manifests describe a linear transform chain. Internally, later stages may model shared branches as a DAG for caching, but outputs must still be explainable as a pinned chain.
+## Corpus And Profile Layer
 
-## Corpus layer
+Gematria, separator, and glyph-variant profiles are committed and locked. Corpus candidates and page-boundary records remain non-canonical until a future corpus activation stage. Raw source material remains immutable and ignored unless explicitly promoted through source-lock metadata.
 
-The corpus layer will load immutable raw evidence through locks and produce versioned normalized views. Stage 0A has no corpus loader.
+## Transform And Experiment Layer
 
-## Transform layer
+Solved-baseline transforms are CPU reference implementations registered for manifest-addressable replay. Bounded exploratory and post-Discord stages add manifest-scoped executors only; they do not start broad search campaigns.
 
-Transforms will be CPU reference implementations first. CUDA implementations are optional accelerators, not alternate truth.
+## Scoring Layer
 
-## Scoring layer
+Stage 3C introduced calibrated scoring for bounded review candidates. The scorer is used to sort and label bounded outputs, not to claim solves. Null controls, positive controls, and conservative confidence labels remain required for any future scored campaign.
 
-Scorers will produce structured score breakdowns, null-control comparisons, and review hints. Stage 0A has no scoring logic.
+## Result Sink
 
-## Experiment runner
+JSONL and SQLite result stores exist as generated outputs. They are ignored by Git and must not be committed. Committed records are limited to schemas, manifests, source locks, curated observation metadata, aggregate summaries, tests, docs, and summary research logs.
 
-The runner will consume YAML manifests and write ignored generated outputs. Stage 0A includes only a non-cryptanalytic smoke manifest.
+## Source And Observation Modules
 
-## Result sink
+Stage 3K through Stage 3V added source/visual/web observations, image metadata and transforms, Discord ingestion/review/promotion, post-Discord bounded executors, and OutGuess regression harness metadata. These modules preserve provenance and review status. They do not activate a canonical corpus, finalize page boundaries, publish raw logs/images, or claim solves.
 
-JSONL and SQLite are planned result formats. The schema is documented but not finalized.
+## Testing Layer
 
-## CUDA layer
+CI is raw-data-free, CUDA-free, secret-free, and does not upload generated artefacts by default. Tests cover schema validation, manifest safety, bounded executor behavior, fake-tool stego behavior, ignored-output policy, documentation status, and Stage 3W anti-drift checks.
 
-CUDA is guarded by `LPGPU_ENABLE_CUDA`. The default target architecture is compute capability 8.9 for RTX 4060 Ti.
+## Failure Modes
 
-## Testing layer
-
-Tests begin with scaffold smoke checks. Later stages add golden fixtures, property tests, fuzz tests, manifest determinism tests, and CPU/GPU parity tests.
-
-## Failure modes
-
-Primary risks are false positives, transcript drift, silent rune-table changes, result files treated as evidence, and GPU code diverging from CPU references.
-
-## Stage 0A scaffold limitations
-
-There is no real cipher module, corpus import, search engine, scoring model, or finalized result schema in Stage 0A.
+Primary risks are false positives, stale context, transcript drift, silent rune-table changes, generated outputs treated as evidence, raw/private data leakage, and GPU code diverging from CPU references. Stage 3W adds anti-drift checks to catch stale operational docs before contributors or Codex sessions act on obsolete assumptions.

@@ -139,6 +139,9 @@ third_party/CicadaOutGuess/**
 !third_party/CicadaOutGuess/README.md
 !third_party/CicadaOutGuess/.gitkeep
 
+# Local deep-research reports
+deep-research-reports/**
+
 # Raw corpus and local data
 data/raw/**
 !data/raw/

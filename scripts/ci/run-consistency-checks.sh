@@ -11,6 +11,9 @@ trap 'rm -rf "$tmp_dir"' EXIT
 echo "Running full consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-all --allow-warnings
 
+echo "Running state-drift consistency checks"
+"$python_bin" -m libreprimus.cli consistency check-state-drift
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

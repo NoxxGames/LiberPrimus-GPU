@@ -1,21 +1,21 @@
-# docker
+# Docker
 
 ## Purpose
 
-Placeholder for future container notes.
+This directory is reserved for future documented, reproducible container recipes.
 
-## What belongs here
+## Current Status
 
-Documented, reproducible container recipes may be added later.
+Docker is not the primary supported path after Stage 3V. Current validation is based on local Python/CMake commands and GitHub Actions raw-data-free CI. Stage 3W does not add container automation.
 
-## What does not belong here
+## What Belongs Here
 
-Large images, downloaded installers, secrets, or generated build artifacts.
+Future container files may be added only when they reproduce existing local validation without weakening raw-data, generated-output, CUDA, or solve-claim policy.
 
-## Codex modification policy
+## What Does Not Belong Here
 
-Codex may edit documentation here. Do not add container automation in Stage 0A unless explicitly requested.
+Do not commit large images, downloaded installers, secrets, generated build artefacts, raw data, generated experiment outputs, SQLite databases, or extracted payloads.
 
-## Stage 0A restrictions
+## Codex Modification Policy
 
-No Docker image is required for Stage 0A.
+Codex may edit documentation here. Do not add Docker build implementation unless a future stage explicitly scopes it.

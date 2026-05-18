@@ -10,6 +10,7 @@ Fix common local setup, data, and validation issues.
 git status --short
 git remote -v
 .\.venv\Scripts\python.exe -m libreprimus.cli smoke
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-state-drift
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-all --allow-warnings
 ```
 
@@ -56,6 +57,23 @@ and research logs.
 If a Stage 3V OutGuess run leaves extraction records, tool records, synthetic images, or extracted
 payloads under `experiments/results/stego/outguess/stage3v/`, do not stage them. Commit only
 metadata, manifests, docs, tests, and research logs.
+
+If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
+ignored local review inputs.
+
+## Anti-Drift Check Fails
+
+Run the focused checker:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-state-drift
+```
+
+If it fails, update the operational source-of-truth files together: `STATUS.md`, `ROADMAP.md`,
+`AGENTS.md`, and `README.md`. Historical references in development logs and research logs do not
+need to be rewritten, but current-state claims in long-lived docs must match the latest completed
+stage, canonical corpus inactive status, page-boundary review status, CUDA deferral, raw/generated
+output policy, Discord privacy, and no-solve-claim policy.
 
 ## Image Transform Run Is Slow
 

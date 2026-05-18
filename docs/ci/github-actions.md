@@ -14,6 +14,8 @@ Stage 2C-followup-2 adds a raw GitHub URL verifier so maintainers can inspect th
 
 Stage 2C-followup-5 adds remote Git blob verification with `git fetch` and `git show`. The Git blob check is the authoritative remote check when raw URLs appear stale or cached.
 
+Stage 3W updates `actions/checkout` to `v5` and `actions/setup-python` to `v6` after verifying those tags exist, addressing the GitHub Actions Node 20 deprecation warning for the first-party actions used by this workflow.
+
 ## Python CI Job
 
 The `python-ci` job runs on `ubuntu-latest` with Python 3.12. It installs the package with development dependencies, then runs:
@@ -25,6 +27,7 @@ The `python-ci` job runs on `ubuntu-latest` with Python 3.12. It installs the pa
 - transform registry validation
 - solved-baseline manifest validation
 - result-store manifest validation
+- state-drift checks through the consistency suite
 
 ## Optional CMake CPU Job
 
@@ -32,7 +35,7 @@ Stage 2C includes a CPU-only CMake smoke job on `ubuntu-latest`. It configures w
 
 ## What CI Checks
 
-CI checks Python style, Python tests, CLI smoke wiring, committed profile/registry lock hashes, transform-registry metadata, solved-baseline manifests, result-store manifests, Stage 2D consistency checks, public documentation status, and the CPU CMake scaffold.
+CI checks Python style, Python tests, CLI smoke wiring, committed profile/registry lock hashes, transform-registry metadata, solved-baseline manifests, result-store manifests, Stage 2D consistency checks, Stage 3W anti-drift checks, public documentation status, and the CPU CMake scaffold.
 
 Static workflow tests also validate the parsed YAML structure, trigger branches, permissions, concurrency, job names, required commands, and no artifact-upload or secret usage.
 

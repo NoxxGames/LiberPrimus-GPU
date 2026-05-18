@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3V OutGuess regression harness is complete.
+Stage 3W state consolidation and anti-drift hardening is complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,15 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, Stage 3Q generates ignored redacted Discord topic shards only, Stage 3R promotes corroborated leads and creates disabled manifests only, Stage 3S executes only the bounded Onion 7 explicit seed-pack manifest, Stage 3T executes only the bounded GP/rune claim verifier, Stage 3U executes only the bounded cookie SHA-256 signed-variant pack, and Stage 3V adds an OutGuess regression harness without broad stego scanning.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, Stage 3Q generates ignored redacted Discord topic shards only, Stage 3R promotes corroborated leads and creates disabled manifests only, Stage 3S executes only the bounded Onion 7 explicit seed-pack manifest, Stage 3T executes only the bounded GP/rune claim verifier, Stage 3U executes only the bounded cookie SHA-256 signed-variant pack, Stage 3V adds an OutGuess regression harness without broad stego scanning, and Stage 3W adds state-drift checks without new experiment execution.
+
+## Completed in Stage 3W
+
+Stage 3W consolidated persistent project context after Stage 3V. It updated stale operational docs, clarified the source-of-truth hierarchy, added anti-drift consistency checks and tests, refreshed metadata, documented CI anti-drift behavior, and updated tutorials/wiki source.
+
+No experiments were executed. Raw data, generated outputs, raw Discord logs, raw page images, raw historical stego artefacts, extracted payloads, local deep-research reports, SQLite outputs, CUDA changes, canonical corpus activation, page-boundary finalization, and solve claims remain absent.
+
+Developer log: `docs/development-logs/2026-05-18-stage-3w-state-consolidation-anti-drift.md`.
 
 ## Completed in Stage 3V
 

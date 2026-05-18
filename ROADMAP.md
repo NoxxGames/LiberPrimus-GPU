@@ -246,9 +246,25 @@ Stage 3U executes only `EXP-3R-001`, the bounded cookie SHA-256 signed-variant p
 
 Stage 3V implements the bounded OutGuess regression harness. The local run had no OutGuess binary, so enabled cases were skipped as missing-tool records. Raw historical artefacts and extracted payloads remain ignored, and no broad stego scan or solve claim is made.
 
-## Stage 3W - OutGuess fixture setup or regression expansion
+## Stage 3W - State consolidation and anti-drift hardening
 
-If tool/assets are missing, source-lock historical OutGuess fixture assets and document local setup. If known positives pass later, expand the positive/negative regression set or move to deterministic audio/spectrogram regression. Do not jump to CUDA or broad search.
+Stage 3W consolidates persistent project context after Stage 3V. It repairs stale current-state wording, defines the source-of-truth hierarchy, adds anti-drift checks, updates CI scripts and tests, and does not execute experiments, process raw data, use CUDA, activate the canonical corpus, finalize page boundaries, or claim a solve.
+
+## Stage 3X - CLI modularisation without behavior change
+
+Split the growing `libreprimus.cli` module into focused command modules while preserving command names, options, output shape, tests, and behavior. This is a maintenance stage only, not an experiment stage.
+
+## Stage 3Y - Result synthesis and retirement ledger
+
+Summarize noisy, negative, inconclusive, verified, and deferred Stage 3 results into a retirement ledger so future work does not repeat already-bounded tests without a new manifest and rationale.
+
+## Stage 3Z - Source-of-truth and newcomer map
+
+Expand the source-of-truth hierarchy into a concise newcomer map that points humans and Codex sessions to the right operational docs, research logs, schemas, and generated-output policies.
+
+## Stage 4A - CPU batch transform API extraction
+
+Extract stable CPU batch transform-and-score APIs needed before any serious CUDA work. CUDA remains deferred until CPU references, stable scoring contracts, parity tests, and benchmark plans exist.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

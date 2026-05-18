@@ -4,7 +4,13 @@
 
 This catalog records planned transform families and the standards required before implementation.
 
-## Stage 0A status
+## Current Cipher Status
+
+After Stage 3V, the repository has solved-baseline CPU reference transforms, bounded experiment executors, and an OutGuess regression harness. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, or solve claims.
+
+Canonical corpus activation remains inactive and page boundaries remain reviewable.
+
+## Historical Stage 0A status
 
 No real cipher modules are implemented in Stage 0A. Placeholder modules return smoke statuses only.
 

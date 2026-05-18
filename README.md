@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3V and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3W consolidation and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -36,7 +36,10 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 3W source-lock historical OutGuess fixture assets and document local setup, or expand deterministic positives/negatives if known fixtures are available.
+- Stage 3X CLI modularisation without behavior changes.
+- Stage 3Y result synthesis and retirement ledger.
+- Stage 3Z source-of-truth/newcomer map expansion.
+- Historical OutGuess fixture source-locking and setup documentation when assets become available.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -79,6 +82,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 3T bounded GP/rune claim verifier execution.
 - Stage 3U bounded cookie SHA-256 signed-variant pack execution.
 - Stage 3V OutGuess regression harness.
+- Stage 3W project-state consolidation and anti-drift checks.
 
 ## Architecture summary
 
@@ -120,6 +124,7 @@ Current status:
 - Stage 3T: bounded GP/rune claim verifier execution complete.
 - Stage 3U: bounded cookie SHA-256 signed-variant pack execution complete.
 - Stage 3V: OutGuess regression harness complete.
+- Stage 3W: state consolidation and anti-drift hardening complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -135,7 +140,8 @@ Current status:
 - Latest GP/rune verifier stage: Stage 3T executed `EXP-3R-004` only, loading and deduplicating `25` exact claims. It classified `23` as verified and `2` as unsupported, with no unverified, boundary-sensitive, missing-source-span, malformed, or duplicate claims in the committed input set.
 - Latest cookie signed-variant stage: Stage 3U executed `EXP-3R-001` only, generating `156` candidates before deduplication, testing `105` deduplicated byte strings against `2` cookie targets for `210` exact SHA-256 comparisons, and finding `0` exact matches.
 - Latest stego regression stage: Stage 3V added the OutGuess harness, detected no local OutGuess binary, and recorded `6` missing-tool skips plus `1` disabled case across `7` manifest cases. No raw artefacts or payloads were committed.
-- Next: Stage 3W source-lock historical OutGuess fixture assets and document local setup, or expand deterministic positives/negatives if known fixtures become available.
+- Latest consolidation stage: Stage 3W refreshed persistent project context, defined the source-of-truth hierarchy, and added anti-drift checks so long-lived docs cannot drift back to obsolete current-state claims.
+- Next: Stage 3X CLI modularisation without behavior change.
 
 ## How To Use This Repo
 
@@ -145,6 +151,7 @@ Current status:
 ```powershell
 .\.venv\Scripts\python.exe -m ruff check python/libreprimus tests/python
 .\.venv\Scripts\python.exe -m pytest -q tests/python
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-state-drift
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-all --allow-warnings
 ```
 

@@ -12,6 +12,9 @@ try {
     Write-Host "Running full consistency suite"
     & $Python -m libreprimus.cli consistency check-all --allow-warnings
 
+    Write-Host "Running state-drift consistency checks"
+    & $Python -m libreprimus.cli consistency check-state-drift
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

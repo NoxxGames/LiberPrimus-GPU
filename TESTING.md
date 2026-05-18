@@ -6,15 +6,15 @@ Tests protect reproducibility and prevent false-positive drift.
 
 ## Unit tests
 
-Unit tests cover small deterministic functions and placeholder status in Stage 0A.
+Unit tests cover deterministic parsing, schema validation, manifest safety, bounded executor behavior, fake-tool wrappers, scoring helpers, and consistency policies.
 
 ## Integration tests
 
-Integration tests will later cover manifest execution and result writing.
+Integration tests cover raw-data-free CLI paths, manifest validation, synthetic execution paths, generated-output ignore rules, and local CI reproduction scripts.
 
 ## Golden tests
 
-Golden tests will later reproduce known solved-page behavior from locked fixtures. None are included in Stage 0A.
+Golden solved-baseline tests reproduce the committed known solved fixtures through the CPU transform registry and manifest path. They are regression evidence, not new solve claims.
 
 Stage 0B adds conditional real-workbook tests that run only when the ignored legacy workbook is locally present.
 
@@ -38,7 +38,11 @@ Manifests must replay to the same outputs under pinned inputs and fixed seeds.
 
 ## Documentation consistency tests
 
-Documentation checks should verify core policy statements such as raw-data immutability and Stage 0A restrictions.
+Documentation and anti-drift checks verify core policy statements such as raw-data immutability, generated-output ignore rules, current completed stage, canonical corpus inactive status, page-boundary review status, CUDA deferral, Discord privacy, and no-solve-claim policy.
+
+## Stage 3W State-Drift Tests
+
+Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.
 
 ## Stage 3O Promotion And Wiki Tests
 

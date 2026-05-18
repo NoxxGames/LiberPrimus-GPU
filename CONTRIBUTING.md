@@ -31,6 +31,12 @@ Update policy documents when behavior, data handling, or experiment rules change
 
 Tutorial and wiki changes must not include raw corpus dumps, generated JSONL records, or unsupported solve claims. Repository docs and tutorials are the source of truth; wiki pages are mirrors.
 
+When stage status changes, keep `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, and `README.md` synchronized. Run the anti-drift check before staging documentation-heavy changes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-state-drift
+```
+
 ## Data rules
 
 Do not modify `data/raw/` in place. Do not commit raw corpus files, local workbooks, local Pastebin TXT, raw transcripts, or generated normalized outputs.

@@ -2,7 +2,7 @@
 
 ## Data policy
 
-Data handling must protect raw evidence and preserve provenance. Stage 0D adds raw transcript source classes and alignment outputs without activating canonical corpus truth.
+Data handling must protect raw evidence and preserve provenance. After Stage 3V, the canonical corpus is still inactive and page boundaries remain reviewable. Historical Stage 0D added raw transcript source classes and alignment outputs without activating canonical corpus truth.
 
 ## Immutable raw data
 
@@ -16,7 +16,7 @@ Future source classes include images, transcripts, message extracts, hashes, sou
 
 `legacy_lp2_rune_prime_value_pastebin_local_txt` is non-canonical. It contains local Pastebin vGMK330j LP2 rune rows and Gematria prime-value rows. Page boundaries are not finalized from this source.
 
-`primary_transcript_candidate` sources are raw transcript files under review for later canonical activation. The rtkd master transcription is proposed as `rtkd-master-transcription-v0-proposed`, but it is not active canonical corpus in Stage 0D.
+`primary_transcript_candidate` sources are raw transcript files under review for later canonical activation. The rtkd master transcription is proposed as `rtkd-master-transcription-v0-proposed`, but it is not active canonical corpus.
 
 `secondary_solved_page_and_numbering_reference` sources may provide page-label and solved-section context. The scream314 markdown is secondary context only.
 
