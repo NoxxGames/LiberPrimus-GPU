@@ -148,6 +148,31 @@ Candidate records include:
 
 Generated `candidate_records.jsonl`, `top_candidates.jsonl`, `summary.json`, and warning/score files must not be committed. Research logs may summarize counts, top parameters, top score, and confidence only.
 
+## Stage 3T GP/Rune Verification Records
+
+Stage 3T generated records are written only to ignored outputs under `experiments/results/post-discord/stage3t/`.
+
+Verification records include:
+
+- `experiment_id=EXP-3R-004`
+- `claim_id`
+- `source_basis`
+- `claim_type`
+- `target_span`
+- `claimed_value`
+- `computed`
+- `verification_status`
+- `raw_message_committed=false`
+- `username_committed=false`
+- `private_url_committed=false`
+- `cuda_used=false`
+- `no_solve_claim=true`
+- `canonical_corpus_active=false`
+- `page_boundaries_final=false`
+- `trusted_as_canonical=false`
+
+Generated `gp_rune_claim_verification_records.jsonl`, per-status JSONL files, `summary.json`, and warnings must not be committed. Research logs may summarize status counts and representative claim IDs only.
+
 ## Stage 0D-followup Record Types
 
 Implemented/generated Stage 0D-followup record types include:

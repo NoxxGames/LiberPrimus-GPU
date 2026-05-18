@@ -175,6 +175,15 @@ from libreprimus.discord_lead_promotion.manifest_builder import build_post_disco
 from libreprimus.discord_lead_promotion.promoter import promote_discord_leads
 from libreprimus.discord_lead_promotion.summary import load_summary as load_discord_lead_summary
 from libreprimus.discord_lead_promotion.validation import validate_stage3r_outputs
+from libreprimus.post_discord.gp_rune_claim_verifier import (
+    DEFAULT_MANIFEST as DEFAULT_STAGE3T_GP_RUNE_MANIFEST,
+    DEFAULT_OUTPUT_DIR as DEFAULT_STAGE3T_POST_DISCORD_DIR,
+    DEFAULT_PROMOTED_OBSERVATIONS as DEFAULT_STAGE3T_PROMOTED_OBSERVATIONS,
+    DEFAULT_VISUAL_OBSERVATIONS as DEFAULT_STAGE3T_VISUAL_OBSERVATIONS,
+    load_gp_rune_summary,
+    run_gp_rune_verifier,
+    validate_gp_rune_manifest,
+)
 from libreprimus.post_discord.models import DEFAULT_MANIFEST as DEFAULT_STAGE3S_ONION7_MANIFEST
 from libreprimus.post_discord.models import DEFAULT_OUTPUT_DIR as DEFAULT_STAGE3S_POST_DISCORD_DIR
 from libreprimus.post_discord.onion7_seed_pack import run_onion7_seed_pack
@@ -3938,6 +3947,115 @@ def _print_stage3s_payload(summary: dict) -> None:
     console.print(f"top_confidence_label={top.get('calibrated_confidence_label')}")
     console.print(f"warning_count={len(summary.get('warnings', []))}")
     console.print(f"solve_claim={str(summary.get('solve_claim')).lower()}")
+    for key, path in summary.get("output_paths", {}).items():
+        console.print(f"{key}={path}")
+
+
+@post_discord_app.command("validate-gp-rune-manifest")
+def post_discord_validate_gp_rune_manifest(
+    manifest: Path = typer.Option(
+        Path(DEFAULT_STAGE3T_GP_RUNE_MANIFEST),
+        "--manifest",
+        help="EXP-3R-004 GP/rune verifier manifest path.",
+    ),
+) -> None:
+    """Validate the Stage 3T GP/rune verifier manifest without execution."""
+    payload, errors = validate_gp_rune_manifest(_resolve_existing_path(manifest, "Stage 3T manifest"))
+    if errors:
+        for error in errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    console.print("gp_rune_manifest_valid=true")
+    for key in ["experiment_id", "claim_cap", "execution_enabled", "cuda_enabled", "no_solve_claim"]:
+        value = payload.get(key)
+        if isinstance(value, bool):
+            value = str(value).lower()
+        console.print(f"{key}={value}")
+
+
+@post_discord_app.command("run-gp-rune-verifier")
+def post_discord_run_gp_rune_verifier(
+    manifest: Path = typer.Option(
+        Path(DEFAULT_STAGE3T_GP_RUNE_MANIFEST),
+        "--manifest",
+        help="EXP-3R-004 GP/rune verifier manifest path.",
+    ),
+    promoted_observations: Path = typer.Option(
+        Path(DEFAULT_STAGE3T_PROMOTED_OBSERVATIONS),
+        "--promoted-observations",
+        help="Stage 3R promoted observation records.",
+    ),
+    visual_observations: Path = typer.Option(
+        Path(DEFAULT_STAGE3T_VISUAL_OBSERVATIONS),
+        "--visual-observations",
+        help="Committed visual numeric observation records.",
+    ),
+    out_dir: Path = typer.Option(
+        Path(DEFAULT_STAGE3T_POST_DISCORD_DIR),
+        "--out-dir",
+        help="Generated Stage 3T output directory.",
+    ),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Execute only the bounded Stage 3T GP/rune claim verifier."""
+    try:
+        summary = run_gp_rune_verifier(
+            manifest_path=_resolve_existing_path(manifest, "Stage 3T manifest"),
+            promoted_observations_path=_resolve_existing_path(
+                promoted_observations,
+                "Stage 3R promoted observations",
+            ),
+            visual_observations_path=_resolve_existing_path(
+                visual_observations,
+                "visual numeric observations",
+            ),
+            out_dir=_resolve_output_path(out_dir),
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_stage3t_payload(summary)
+    if summary.get("warnings") and not allow_warnings:
+        raise typer.Exit(1)
+
+
+@post_discord_app.command("gp-rune-summary")
+def post_discord_gp_rune_summary(
+    results_dir: Path = typer.Option(
+        Path(DEFAULT_STAGE3T_POST_DISCORD_DIR),
+        "--results-dir",
+        help="Generated Stage 3T result directory.",
+    ),
+) -> None:
+    """Print a concise Stage 3T GP/rune verifier summary."""
+    try:
+        payload = load_gp_rune_summary(_resolve_output_path(results_dir))
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_stage3t_payload(payload)
+
+
+def _print_stage3t_payload(summary: dict) -> None:
+    for key in [
+        "run_id",
+        "experiment_id",
+        "manifest_path",
+        "claim_cap",
+        "claims_loaded",
+        "claims_deduplicated",
+        "claims_executed",
+        "verified_count",
+        "unverified_count",
+        "boundary_sensitive_count",
+        "missing_source_span_count",
+        "unsupported_claim_count",
+        "malformed_claim_count",
+        "duplicate_claim_count",
+    ]:
+        console.print(f"{key}={summary.get(key)}")
+    console.print(f"warning_count={len(summary.get('warnings', []))}")
+    console.print(f"no_solve_claim={str(summary.get('no_solve_claim')).lower()}")
     for key, path in summary.get("output_paths", {}).items():
         console.print(f"{key}={path}")
 

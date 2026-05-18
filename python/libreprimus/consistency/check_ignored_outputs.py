@@ -61,6 +61,8 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/results/post-discord/stage3s/candidate_records.jsonl",
         "experiments/results/post-discord/stage3s/top_candidates.jsonl",
         "experiments/results/post-discord/stage3s/summary.json",
+        "experiments/results/post-discord/stage3t/gp_rune_claim_verification_records.jsonl",
+        "experiments/results/post-discord/stage3t/summary.json",
         "experiments/results/wiki-sync/stage3o/wiki-sync-report.json",
         ".wiki-worktree/Home.md",
         "experiments/results/bounded-auto-runs/stage3d/candidate_records.jsonl",

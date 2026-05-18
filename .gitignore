@@ -238,6 +238,8 @@ experiments/results/post-discord/**
 !experiments/results/post-discord/.gitkeep
 !experiments/results/post-discord/stage3s/
 !experiments/results/post-discord/stage3s/.gitkeep
+!experiments/results/post-discord/stage3t/
+!experiments/results/post-discord/stage3t/.gitkeep
 
 # Generated Wiki sync outputs
 experiments/results/wiki-sync/**

@@ -26,3 +26,12 @@ def write_json(path: Path, payload: Any) -> Path:
 def read_json(path: Path) -> dict[str, Any]:
     """Read deterministic JSON."""
     return json.loads(resolve_path(path).read_text(encoding="utf-8"))
+
+
+def write_jsonl(path: Path, records: list[Any]) -> Path:
+    """Write deterministic JSONL records."""
+    resolved = resolve_path(path)
+    resolved.parent.mkdir(parents=True, exist_ok=True)
+    lines = [json.dumps(to_jsonable(record), sort_keys=True) for record in records]
+    resolved.write_text("\n".join(lines) + ("\n" if lines else ""), encoding="utf-8")
+    return resolved

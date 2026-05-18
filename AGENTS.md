@@ -502,3 +502,12 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Post-Discord experiments remain bounded, CPU-only, generated-output-ignored, and no-solve by default.
 - Raw Discord logs and raw page images must not be touched by post-Discord text experiments except for ignore-policy checks.
 - Stage 3S executes only `EXP-3R-003`; do not run `EXP-3R-001` or `EXP-3R-004` in the same stage.
+
+## Stage 3T GP/Rune Claim Verifier Rules
+
+- GP/rune claim verification must not search neighbouring spans to make claims true.
+- Missing exact spans must be classified as `missing_source_span`.
+- Discord-derived count claims are hypotheses until recomputed against locked data.
+- Boundary-sensitive claims must remain `boundary_sensitive`, not forced true or false.
+- Do not process raw Discord logs or raw page images during verifier stages.
+- Stage 3T executes only `EXP-3R-004`; do not run `EXP-3R-001` or rerun `EXP-3R-003` in the same stage.

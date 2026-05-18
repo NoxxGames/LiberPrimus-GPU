@@ -93,6 +93,19 @@ Local validation includes:
   --results-dir experiments/results/post-discord/stage3s
 ```
 
+## Stage 3T GP/Rune Claim Verifier Tests
+
+Stage 3T tests cover manifest validation, claim-cap checks, claim deduplication, malformed and unsupported claim classification, missing-span handling, synthetic rune counts, transformable-rune counts, GP sums, mod-29 residues, derived cuneiform arithmetic, boundary-sensitive classification, CLI validation/execution against synthetic records, ignored generated outputs, raw Discord ignore policy, raw image ignore policy, and no-solve flags.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord validate-gp-rune-manifest `
+  --manifest experiments/manifests/post-discord/EXP-3R-004-gp-rune-claim-verifier-a.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord gp-rune-summary `
+  --results-dir experiments/results/post-discord/stage3t
+```
+
 Legacy workbook tests include p56 prime-minus-one first-delta checks, Welcome `DIVINITY` delta checks, and direct-page zero-delta checks for solved fixture hints.
 
 Legacy Pastebin tests include first-pair prime validation, empty-pair preservation, Parable anchor detection, page-boundary non-finalization, and local-real-file conditional tests.

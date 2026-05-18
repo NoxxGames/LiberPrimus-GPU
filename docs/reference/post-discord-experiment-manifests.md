@@ -44,4 +44,4 @@ Stage 3R adds `libreprimus discord-leads` commands for redacted lead promotion a
 
 These commands do not execute experiments. Generated audit output remains ignored.
 
-Stage 3S executes one manifest through the dedicated Onion 7 CLI documented at `docs/reference/onion7-seed-pack-cli.md`. Do not execute other post-Discord manifests in the same stage.
+Stage 3S executes one manifest through the dedicated Onion 7 CLI documented at `docs/reference/onion7-seed-pack-cli.md`. Stage 3T executes one manifest through the GP/rune verifier CLI documented at `docs/reference/gp-rune-claim-verifier-cli.md`. Do not execute multiple post-Discord manifests in the same stage unless a later prompt explicitly scopes that work.

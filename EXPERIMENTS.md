@@ -90,6 +90,29 @@ The run enumerates `72` candidates from three value spaces, six routes, two dire
 
 Generated candidate records, top-candidate JSONL, summary JSON, warnings, and calibrated score details remain ignored under `experiments/results/post-discord/stage3s/`. The top result is `inconclusive`, not solve evidence.
 
+## Stage 3T GP/Rune Claim Verifier
+
+Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier manifest created in Stage 3R.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord validate-gp-rune-manifest `
+  --manifest experiments/manifests/post-discord/EXP-3R-004-gp-rune-claim-verifier-a.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord run-gp-rune-verifier `
+  --manifest experiments/manifests/post-discord/EXP-3R-004-gp-rune-claim-verifier-a.yaml `
+  --promoted-observations data/observations/discord/stage3r-promoted-observation-records.yaml `
+  --visual-observations data/observations/visual/visual-numeric-observations-v0.yaml `
+  --out-dir experiments/results/post-discord/stage3t `
+  --allow-warnings
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord gp-rune-summary `
+  --results-dir experiments/results/post-discord/stage3t
+```
+
+The run verifies exact promoted claims only. It does not search neighbouring spans, infer missing boundaries, process raw Discord logs, process raw page images, use CUDA, or claim a solve.
+
+Generated verification records, per-status JSONL files, summary JSON, and warnings remain ignored under `experiments/results/post-discord/stage3t/`.
+
 ## Stage 0A smoke manifest
 
 The Stage 0A smoke manifest validates project bootstrap only. No candidate plaintext is generated in Stage 0A.

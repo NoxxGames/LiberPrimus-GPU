@@ -55,14 +55,15 @@ redacted YAML records for public review. Stage 3Q review bundles write redacted 
 indexes under `experiments/results/discord-review-bundles/stage3q/`; those files are for local
 review and are ignored by Git. Stage 3R promotes corroborated public links and exact observation
 leads into committed redacted records, preserves negative controls, and creates disabled
-post-Discord manifests. Stage 3S executes only the Onion 7 seed-pack manifest, not raw Discord logs.
+post-Discord manifests. Stage 3S executes only the Onion 7 seed-pack manifest, and Stage 3T
+executes only the GP/rune claim verifier. Neither stage processes raw Discord logs.
 
 ## What Not To Commit
 
 Raw Discord HTML, raw message bodies, usernames, user IDs, message IDs, private attachment URLs,
 generated extraction outputs, generated promotion outputs, generated redacted shards, or local
-review indexes, generated Stage 3R audit JSONL outputs, or generated Stage 3S post-Discord
-candidate outputs.
+review indexes, generated Stage 3R audit JSONL outputs, generated Stage 3S post-Discord
+candidate outputs, or generated Stage 3T verification outputs.
 
 ## Troubleshooting
 

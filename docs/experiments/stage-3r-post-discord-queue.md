@@ -25,4 +25,6 @@ Stage 3S executed only `EXP-3R-003`. It did not run `EXP-3R-001` or `EXP-3R-004`
 
 The Stage 3S run enumerated `72` Onion 7 seed-pack candidates under the `144` cap, with `0` deferred candidates. The top candidate remained calibrated `inconclusive`, so the post-Discord queue still has no solve claim.
 
-Future Stage 3T work can execute `EXP-3R-001`, implement `EXP-3R-004`, or inspect the Stage 3S Onion 7 top candidates if a bounded follow-up is justified.
+Stage 3T executed only `EXP-3R-004`. It loaded and deduplicated `25` exact GP/rune or derived numeric claims under the `64` cap, classifying `23` as verified and `2` as unsupported. It did not run `EXP-3R-001`, rerun Onion 7, search neighbouring spans, or claim a solve.
+
+Future Stage 3U work can execute `EXP-3R-001`, implement an OutGuess regression harness, or improve claim extraction/span linking if future GP/rune verifier inputs contain many missing spans.

@@ -46,6 +46,10 @@ If a Stage 3S Onion 7 run leaves candidate records under
 `experiments/results/post-discord/stage3s/`, do not stage them. Commit only summary docs, tests,
 and research logs.
 
+If a Stage 3T GP/rune verifier run leaves verification records under
+`experiments/results/post-discord/stage3t/`, do not stage them. Commit only summary docs, tests,
+and research logs.
+
 ## Image Transform Run Is Slow
 
 Stage 3P uses bounded review previews for large images. Do not switch to full-resolution derived
@@ -90,7 +94,12 @@ Do not fix validation by enabling execution or removing privacy checks.
 
 An inconclusive top score is a valid bounded result. Do not widen Onion 7 value spaces, add
 speculative routes, or run other Stage 3R manifests in the same stage. Record the summary and
-queue a separate Stage 3T follow-up if review justifies it.
+queue a separate follow-up if review justifies it.
+
+## Stage 3T GP/Rune Claim Missing Spans
+
+`missing_source_span` is a valid verifier result. Do not search nearby spans to make a claim true.
+Improve claim extraction or span-linking in a separate bounded follow-up, then rerun the verifier.
 
 ## Wiki Publish Fails
 

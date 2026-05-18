@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3S and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3T and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -26,7 +26,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Visual/image-derived observations: registry and deterministic feature summaries only, plus deterministic review transforms; Stage 3K records source locks and reviewable observations, Stage 3M records deterministic local image features, and Stage 3P generates ignored review transforms/contact sheets. No image-derived text experiments are executed.
 - Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, with exact byte-string logging and no fuzzy or partial hash claims.
 - Discord source discovery: Stage 3N scans admin-provided local HTML exports only and commits aggregate/redacted records only. Stage 3O promotes a bounded, public-safe subset of redacted source-discovery records. Stage 3Q builds ignored redacted topic shards for local AI/deep-research review. Stage 3R audits those leads, promotes only corroborated public/source-observation records, preserves false positives as negative controls, and queues disabled post-Discord manifests. Raw logs, message bodies, usernames, and private attachment URLs are not committed.
-- Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. It keeps raw and derived Onion 7 values separated, writes generated candidate records under ignored paths, and reports an inconclusive top candidate with no solve claim.
+- Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Both keep generated records under ignored paths and make no solve claim.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
 - Broad unsolved-page campaigns: not started.
@@ -35,7 +35,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 3T execute `EXP-3R-001` cookie signed-variant pack or implement `EXP-3R-004` GP/rune claim verifier, unless the Stage 3S Onion 7 result receives a bounded follow-up review first.
+- Stage 3U execute `EXP-3R-001` cookie signed-variant pack or implement an OutGuess regression harness, unless Stage 3T missing-span results justify a bounded span-linking follow-up first.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -75,6 +75,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 3Q redacted Discord AI-review bundles and topic shards.
 - Stage 3R Discord lead promotion audit, negative controls, and first disabled post-Discord experiment manifests.
 - Stage 3S bounded Onion 7 explicit seed-pack execution.
+- Stage 3T bounded GP/rune claim verifier execution.
 
 ## Architecture summary
 
@@ -113,6 +114,7 @@ Current status:
 - Stage 3Q: redacted Discord AI-review bundles and topic shards complete.
 - Stage 3R: Discord lead promotion audit and first post-Discord manifest queue complete.
 - Stage 3S: bounded Onion 7 explicit seed-pack execution complete.
+- Stage 3T: bounded GP/rune claim verifier execution complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -125,7 +127,8 @@ Current status:
 - Latest Discord review stage: Stage 3Q generated `1700` redacted stream records, `17` topic shard files, and `900` review leads under ignored outputs, with an aggregate-only committed summary. Raw logs, message bodies, usernames, private URLs, AI upload, live API use, scraping, and solve claims remain absent.
 - Latest Discord promotion stage: Stage 3R promoted `13` public source records and `11` review-only observation records, preserved `11` negative-control records, counted `25` unsafe/private or quarantined records, and created `3` disabled post-Discord manifests. No experiment was executed and no solve claim was made.
 - Latest post-Discord experiment stage: Stage 3S executed `EXP-3R-003` only, producing `72` bounded Onion 7 candidates from `3` value spaces, `6` routes, `2` directions, and `2` reset modes. The top candidate scored `1.460714` with calibrated confidence `inconclusive`; generated outputs remain ignored and no solve claim is made.
-- Next: Stage 3T execute `EXP-3R-001` cookie signed-variant pack or implement `EXP-3R-004` GP/rune claim verifier. If the Stage 3S result is reviewed as promising, Stage 3T may instead inspect Onion 7 top candidates and queue a bounded follow-up.
+- Latest GP/rune verifier stage: Stage 3T executed `EXP-3R-004` only, loading and deduplicating `25` exact claims. It classified `23` as verified and `2` as unsupported, with no unverified, boundary-sensitive, missing-source-span, malformed, or duplicate claims in the committed input set.
+- Next: Stage 3U execute `EXP-3R-001` cookie signed-variant pack or implement an OutGuess regression harness. If many future GP/rune claims are missing exact spans, run a Stage 3T follow-up to improve claim extraction and span linking.
 
 ## How To Use This Repo
 
