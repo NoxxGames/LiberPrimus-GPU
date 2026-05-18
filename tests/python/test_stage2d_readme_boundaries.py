@@ -51,7 +51,7 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "still unsolved must not receive a solve claim" in section
     assert "Canonical corpus: inactive." in section
     assert "Broad unsolved-page search campaigns: not started." in section
-    assert "Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, and Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only." in section
+    assert "Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only, and Stage 3S applies it to the bounded 72-candidate Onion 7 explicit seed pack only." in section
     assert "Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only" in section
     assert "Visual/image-derived observations: registry and deterministic feature summaries only" in section
     assert "CUDA experiment campaigns: not started." in section
@@ -74,6 +74,7 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "Stage 3J: Mersenne/perfect-number tiny stream probe complete." in readme
     assert "Stage 3K: archive and visual observation registry complete." in readme
     assert "Stage 3M: deterministic local image analysis complete." in readme
+    assert "Stage 3S: bounded Onion 7 explicit seed-pack execution complete." in readme
 
 
 def test_readme_does_not_imply_deferred_work_is_permanently_excluded() -> None:

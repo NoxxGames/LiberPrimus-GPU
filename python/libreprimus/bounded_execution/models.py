@@ -66,6 +66,13 @@ class BoundedCandidateRecord:
     stream_signature_sha256: str | None = None
     exponent_sequence_id: str | None = None
     exponent_sequence: list[int] | None = None
+    experiment_id: str | None = None
+    manifest_id: str | None = None
+    value_space: str | None = None
+    route: str | None = None
+    numeric_sequence: list[int] | None = None
+    numeric_sequence_mod29: list[int] | None = None
+    sequence_signature_sha256: str | None = None
 
 
 @dataclass(frozen=True)
@@ -108,3 +115,6 @@ class BoundedRunSummary:
     directions: list[str] | None = None
     unique_stream_signature_count: int | None = None
     duplicate_stream_signature_count: int | None = None
+    onion7_candidate_count: int | None = None
+    value_spaces: list[str] | None = None
+    routes: list[str] | None = None

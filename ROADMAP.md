@@ -230,9 +230,13 @@ Stage 3Q adds redacted Discord AI-review bundles and topic shards from local adm
 
 Stage 3R audits redacted Stage 3Q leads, promotes selected public-source and exact-observation records, preserves known false-positive classes as negative controls, and creates the first disabled post-Discord manifests. It does not execute experiments, publish raw Discord content, use CUDA, activate canonical corpus, finalize page boundaries, or claim a solve.
 
-## Stage 3S - Execute one post-Discord bounded manifest or OutGuess harness
+## Stage 3S - Onion 7 explicit seed-pack execution
 
-If Stage 3R succeeds, execute `EXP-3R-003` Onion 7 explicit seed pack or `EXP-3R-001` cookie signed-variant pack in a bounded CPU-only stage. Alternatively, implement an OutGuess regression harness if post-Discord execution is deferred. Do not jump to CUDA or broad search.
+Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. It uses the reviewed raw 4x4 table and reviewed derived value spaces, enumerates the declared routes, directions, and reset modes, applies Stage 3C calibrated scoring, and writes candidate outputs only under ignored paths. The result is inconclusive and no solve claim is made.
+
+## Stage 3T - Cookie signed variants or GP/rune verifier
+
+If Stage 3S remains inconclusive, execute `EXP-3R-001` cookie signed-variant pack or implement `EXP-3R-004` GP/rune claim verifier. If a human review finds the Stage 3S Onion 7 top candidates promising, Stage 3T may instead queue a bounded follow-up. Do not jump to CUDA, broad number-sequence search, or OutGuess until the selected manifest is explicit and bounded.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

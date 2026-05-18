@@ -80,6 +80,19 @@ Local validation includes:
   --allow-empty
 ```
 
+## Stage 3S Onion 7 Seed-Pack Tests
+
+Stage 3S tests cover manifest validation, candidate cap checks, raw 4x4 table shape, deterministic route builders, mod-29 reduction, stream repetition, reset behavior, candidate record fields, CLI validation and execution against a synthetic manifest, ignored generated outputs, raw Discord ignore policy, and raw image ignore policy.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord validate-manifest `
+  --manifest experiments/manifests/post-discord/EXP-3R-003-onion7-raw-prime-order-seed-pack-a.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord summary `
+  --results-dir experiments/results/post-discord/stage3s
+```
+
 Legacy workbook tests include p56 prime-minus-one first-delta checks, Welcome `DIVINITY` delta checks, and direct-page zero-delta checks for solved fixture hints.
 
 Legacy Pastebin tests include first-pair prime validation, empty-pair preservation, Parable anchor detection, page-boundary non-finalization, and local-real-file conditional tests.

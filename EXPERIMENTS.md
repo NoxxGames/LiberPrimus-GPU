@@ -68,6 +68,28 @@ All three keep `execution_enabled=false`, `cpu_only=true`, `cuda_enabled=false`,
 
 Generated audit outputs remain ignored under `experiments/results/discord-lead-promotion/stage3r/`. Promoted records are review leads, not facts or solve evidence.
 
+## Stage 3S Onion 7 Seed Pack
+
+Stage 3S executes only `EXP-3R-003`, the Onion 7 explicit seed-pack manifest created in Stage 3R.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord validate-manifest `
+  --manifest experiments/manifests/post-discord/EXP-3R-003-onion7-raw-prime-order-seed-pack-a.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord run-onion7-seed-pack `
+  --manifest experiments/manifests/post-discord/EXP-3R-003-onion7-raw-prime-order-seed-pack-a.yaml `
+  --out-dir experiments/results/post-discord/stage3s `
+  --top-k 25 `
+  --allow-warnings
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord summary `
+  --results-dir experiments/results/post-discord/stage3s
+```
+
+The run enumerates `72` candidates from three value spaces, six routes, two directions, and two reset modes under a cap of `144`. Candidate streams reduce the selected Onion 7 sequence mod 29 and apply decrypt-subtract over transformable tokens only.
+
+Generated candidate records, top-candidate JSONL, summary JSON, warnings, and calibrated score details remain ignored under `experiments/results/post-discord/stage3s/`. The top result is `inconclusive`, not solve evidence.
+
 ## Stage 0A smoke manifest
 
 The Stage 0A smoke manifest validates project bootstrap only. No candidate plaintext is generated in Stage 0A.

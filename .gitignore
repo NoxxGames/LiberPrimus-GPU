@@ -231,6 +231,14 @@ experiments/results/discord-lead-promotion/**
 !experiments/results/discord-lead-promotion/stage3r/
 !experiments/results/discord-lead-promotion/stage3r/.gitkeep
 
+# Generated post-Discord experiment outputs
+experiments/results/post-discord/**
+!experiments/results/post-discord/
+!experiments/results/post-discord/README.md
+!experiments/results/post-discord/.gitkeep
+!experiments/results/post-discord/stage3s/
+!experiments/results/post-discord/stage3s/.gitkeep
+
 # Generated Wiki sync outputs
 experiments/results/wiki-sync/**
 !experiments/results/wiki-sync/

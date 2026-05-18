@@ -40,6 +40,10 @@ If a Stage 3R promotion audit leaves JSONL records under
 `experiments/results/discord-lead-promotion/`, do not stage them. Commit only the curated YAML
 records and disabled manifests.
 
+If a Stage 3S Onion 7 run leaves candidate records under
+`experiments/results/post-discord/stage3s/`, do not stage them. Commit only summary docs, tests,
+and research logs.
+
 ## Image Transform Run Is Slow
 
 Stage 3P uses bounded review previews for large images. Do not switch to full-resolution derived
@@ -79,6 +83,12 @@ Check that the three post-Discord manifests are disabled:
 ```
 
 Do not fix validation by enabling execution or removing privacy checks.
+
+## Stage 3S Onion 7 Run Looks Noisy
+
+An inconclusive top score is a valid bounded result. Do not widen Onion 7 value spaces, add
+speculative routes, or run other Stage 3R manifests in the same stage. Record the summary and
+queue a separate Stage 3T follow-up if review justifies it.
 
 ## Wiki Publish Fails
 

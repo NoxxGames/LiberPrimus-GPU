@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3R Discord lead promotion audit and first disabled post-Discord experiment queue are complete.
+Stage 3S bounded Onion 7 explicit seed-pack execution is complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,17 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, Stage 3Q generates ignored redacted Discord topic shards only, and Stage 3R promotes corroborated leads and creates disabled manifests only.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, Stage 3Q generates ignored redacted Discord topic shards only, Stage 3R promotes corroborated leads and creates disabled manifests only, and Stage 3S executes only the bounded Onion 7 explicit seed-pack manifest.
+
+## Completed in Stage 3S
+
+Stage 3S added the post-Discord Onion 7 seed-pack executor and executed only `EXP-3R-003`.
+
+Run summary: expected candidates `72`, executed candidates `72`, deferred candidates `0`, value spaces `raw_table`, `prime_delta_table`, and `prime_order_table`, routes `row_major`, `column_major`, `reverse_row_major`, `reverse_column_major`, `clockwise_spiral`, and `counterclockwise_spiral`, directions `forward` and `reverse`, reset modes `none` and `line`.
+
+The top candidate used `raw_table`, `row_major`, `reverse`, and `none`, with score `1.460714` and calibrated confidence `inconclusive`. Generated candidate records, top-candidate JSONL, summary JSON, warnings, and score details remain ignored under `experiments/results/post-discord/stage3s/`. Raw Discord logs and raw page images were not processed. Stage 3S does not run other Stage 3R manifests, use CUDA, activate canonical corpus, finalize page boundaries, or claim a solve.
+
+Developer log: `docs/development-logs/2026-05-16-stage-3s-onion7-seed-pack.md`.
 
 ## Completed in Stage 3R
 

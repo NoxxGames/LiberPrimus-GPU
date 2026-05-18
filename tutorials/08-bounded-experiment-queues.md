@@ -16,14 +16,30 @@ Run policy-approved local CPU experiments without broadening into campaigns.
   --allow-warnings
 ```
 
+Post-Discord manifest execution uses the same bounded policy expectations. Stage 3S runs only the Onion 7 explicit seed pack:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord validate-manifest `
+  --manifest experiments/manifests/post-discord/EXP-3R-003-onion7-raw-prime-order-seed-pack-a.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord run-onion7-seed-pack `
+  --manifest experiments/manifests/post-discord/EXP-3R-003-onion7-raw-prime-order-seed-pack-a.yaml `
+  --out-dir experiments/results/post-discord/stage3s `
+  --top-k 25 `
+  --allow-warnings
+```
+
 ## Expected Outputs
 
 Policy checks should pass for bounded CPU-only items and fail for over-budget examples.
 
+The Stage 3S Onion 7 run should execute `72` candidates under a cap of `144`. Generated candidates stay in `experiments/results/post-discord/stage3s/` and are not solve evidence.
+
 ## What Not To Commit
 
-Do not commit generated candidate dumps, top-candidate JSONL, SQLite files, or broad-search outputs.
+Do not commit generated candidate dumps, top-candidate JSONL, summary JSON, SQLite files, or broad-search outputs.
 
 ## Troubleshooting
 
 If a queue item lacks an executor, record it as deferred instead of faking output.
+
+If an Onion 7 run appears interesting, inspect the generated top candidates locally and queue a separate bounded follow-up instead of broadening routes or adding speculative value spaces.

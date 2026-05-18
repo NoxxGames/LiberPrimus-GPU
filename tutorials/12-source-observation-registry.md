@@ -52,12 +52,18 @@ Stage 3R promoted records can support future bounded manifest review, but they a
 reviewable leads. Discord-only claims are not source truth. Negative controls should be preserved
 when known false-positive classes appear in future review.
 
+Stage 3S executes one post-Discord manifest based on reviewed Onion 7 observations. The raw 4x4
+table values and derived tables remain separate, and the generated candidate records are ignored
+experiment outputs rather than registry records.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
 Do not commit generated image-transform outputs, contact sheets, review pages, or derived images.
 Do not commit generated Discord review shards, redacted stream JSONL, or local review indexes.
 Do not commit generated Stage 3R promotion-audit JSONL files.
+Do not commit generated Stage 3S post-Discord candidate JSONL, top-candidate JSONL, summary JSON,
+or score-detail files.
 
 ## Troubleshooting
 
@@ -66,3 +72,6 @@ before turning it into any experiment seed.
 
 If a disabled Stage 3R manifest looks ready to run, execute it only in a new bounded stage with
 explicit candidate-count validation.
+
+If a Stage 3S candidate looks useful, promote only a summary and queue a new manifest-backed
+follow-up. Do not promote generated candidate text as source evidence.

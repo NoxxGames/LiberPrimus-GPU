@@ -175,6 +175,11 @@ from libreprimus.discord_lead_promotion.manifest_builder import build_post_disco
 from libreprimus.discord_lead_promotion.promoter import promote_discord_leads
 from libreprimus.discord_lead_promotion.summary import load_summary as load_discord_lead_summary
 from libreprimus.discord_lead_promotion.validation import validate_stage3r_outputs
+from libreprimus.post_discord.models import DEFAULT_MANIFEST as DEFAULT_STAGE3S_ONION7_MANIFEST
+from libreprimus.post_discord.models import DEFAULT_OUTPUT_DIR as DEFAULT_STAGE3S_POST_DISCORD_DIR
+from libreprimus.post_discord.onion7_seed_pack import run_onion7_seed_pack
+from libreprimus.post_discord.summary import load_summary as load_post_discord_summary
+from libreprimus.post_discord.validation import validate_manifest as validate_post_discord_manifest
 from libreprimus.visual_observations.validation import (
     summarize_observations,
     validate_cookie_records,
@@ -219,6 +224,7 @@ discord_ingest_app = typer.Typer(no_args_is_help=True)
 discord_promote_app = typer.Typer(no_args_is_help=True)
 discord_review_app = typer.Typer(no_args_is_help=True)
 discord_leads_app = typer.Typer(no_args_is_help=True)
+post_discord_app = typer.Typer(no_args_is_help=True)
 console = Console()
 
 
@@ -3794,6 +3800,148 @@ def _print_discord_leads_summary(summary: dict) -> None:
         console.print(f"{key}={path}")
 
 
+@post_discord_app.command("validate-manifest")
+def post_discord_validate_manifest(
+    manifest: Path = typer.Option(
+        Path(DEFAULT_STAGE3S_ONION7_MANIFEST),
+        "--manifest",
+        help="EXP-3R-003 post-Discord manifest path.",
+    ),
+) -> None:
+    """Validate the Stage 3S Onion 7 manifest without execution."""
+    summary, errors = validate_post_discord_manifest(_resolve_existing_path(manifest, "Stage 3S manifest"))
+    if errors:
+        for error in errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    console.print("post_discord_manifest_valid=true")
+    for key in [
+        "experiment_id",
+        "candidate_count_cap",
+        "expected_candidate_count",
+        "value_spaces",
+        "routes",
+        "directions",
+        "reset_modes",
+    ]:
+        value = summary.get(key)
+        if isinstance(value, list):
+            value = ",".join(str(item) for item in value)
+        console.print(f"{key}={value}")
+
+
+@post_discord_app.command("run-onion7-seed-pack")
+def post_discord_run_onion7_seed_pack(
+    manifest: Path = typer.Option(
+        Path(DEFAULT_STAGE3S_ONION7_MANIFEST),
+        "--manifest",
+        help="EXP-3R-003 post-Discord manifest path.",
+    ),
+    out_dir: Path = typer.Option(
+        Path(DEFAULT_STAGE3S_POST_DISCORD_DIR),
+        "--out-dir",
+        help="Generated Stage 3S output directory.",
+    ),
+    top_k: int = typer.Option(25, "--top-k", min=1, help="Top candidate count to export."),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Execute only the bounded Stage 3S Onion 7 seed pack."""
+    try:
+        summary = run_onion7_seed_pack(
+            manifest_path=_resolve_existing_path(manifest, "Stage 3S manifest"),
+            out_dir=_resolve_output_path(out_dir),
+            top_k=top_k,
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_stage3s_summary(summary)
+    if summary.warnings and not allow_warnings:
+        raise typer.Exit(1)
+
+
+@post_discord_app.command("summary")
+def post_discord_summary(
+    results_dir: Path = typer.Option(
+        Path(DEFAULT_STAGE3S_POST_DISCORD_DIR),
+        "--results-dir",
+        help="Generated Stage 3S result directory.",
+    ),
+) -> None:
+    """Print a concise Stage 3S post-Discord summary."""
+    try:
+        payload = load_post_discord_summary(_resolve_output_path(results_dir))
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_stage3s_payload(payload)
+
+
+def _print_stage3s_summary(summary) -> None:
+    payload = {
+        "run_id": summary.run_id,
+        "experiment_id": summary.queue_item_id,
+        "input_slice_id": summary.input_slice_id,
+        "input_length": summary.input_length,
+        "expected_candidate_count": summary.expected_candidate_count,
+        "executed_candidate_count": summary.executed_candidate_count,
+        "deferred_candidate_count": summary.deferred_candidate_count,
+        "candidate_count": summary.candidate_count,
+        "value_spaces": ",".join(summary.value_spaces or []),
+        "routes": ",".join(summary.routes or []),
+        "directions": ",".join(summary.directions or []),
+        "reset_modes": ",".join(summary.reset_modes or []),
+        "top_value_space": summary.top_candidate.get("value_space"),
+        "top_route": summary.top_candidate.get("route"),
+        "top_direction": summary.top_candidate.get("direction"),
+        "top_reset_mode": summary.top_candidate.get("reset_mode"),
+        "top_score": summary.top_candidate.get("total_score"),
+        "top_length_normalized_score": summary.top_candidate.get("length_normalized_score"),
+        "top_confidence_label": summary.top_candidate.get("calibrated_confidence_label"),
+        "warning_count": len(summary.warnings),
+        "solve_claim": summary.solve_claim,
+    }
+    for key, value in payload.items():
+        if isinstance(value, bool):
+            value = str(value).lower()
+        console.print(f"{key}={value}")
+    for key, path in summary.output_paths.items():
+        console.print(f"{key}={path}")
+
+
+def _print_stage3s_payload(summary: dict) -> None:
+    top = summary.get("top_candidate", {})
+    for key in [
+        "run_id",
+        "queue_item_id",
+        "input_slice_id",
+        "input_length",
+        "expected_candidate_count",
+        "executed_candidate_count",
+        "deferred_candidate_count",
+        "candidate_count",
+        "value_spaces",
+        "routes",
+        "directions",
+        "reset_modes",
+    ]:
+        value = summary.get(key)
+        if isinstance(value, list):
+            value = ",".join(str(item) for item in value)
+        console.print(f"{key}={value}")
+    console.print(f"top_value_space={top.get('value_space')}")
+    console.print(f"top_route={top.get('route')}")
+    console.print(f"top_direction={top.get('direction')}")
+    console.print(f"top_reset_mode={top.get('reset_mode')}")
+    console.print(f"top_score={top.get('total_score')}")
+    console.print(f"top_length_normalized_score={top.get('length_normalized_score')}")
+    console.print(f"top_confidence_label={top.get('calibrated_confidence_label')}")
+    console.print(f"warning_count={len(summary.get('warnings', []))}")
+    console.print(f"solve_claim={str(summary.get('solve_claim')).lower()}")
+    for key, path in summary.get("output_paths", {}).items():
+        console.print(f"{key}={path}")
+
+
 app.add_typer(bounded_experiment_app, name="bounded-experiment")
 app.add_typer(bounded_run_app, name="bounded-run")
 app.add_typer(candidate_inspect_app, name="candidate-inspect")
@@ -3807,6 +3955,7 @@ app.add_typer(discord_ingest_app, name="discord-ingest")
 app.add_typer(discord_promote_app, name="discord-promote")
 app.add_typer(discord_review_app, name="discord-review")
 app.add_typer(discord_leads_app, name="discord-leads")
+app.add_typer(post_discord_app, name="post-discord")
 
 
 @solved_fixture_app.command("list")

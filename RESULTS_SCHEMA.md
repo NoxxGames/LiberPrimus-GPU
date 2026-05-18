@@ -120,6 +120,34 @@ Post-Discord manifests require `execution_enabled=false`, `cpu_only=true`, `cuda
 
 Generated promotion-audit records remain ignored under `experiments/results/discord-lead-promotion/stage3r/`.
 
+## Stage 3S Onion 7 Candidate Records
+
+Stage 3S generated records are written only to ignored outputs under `experiments/results/post-discord/stage3s/`.
+
+Candidate records include:
+
+- `experiment_id=EXP-3R-003`
+- `manifest_id`
+- `value_space`
+- `route`
+- `direction`
+- `reset_mode`
+- `numeric_sequence`
+- `numeric_sequence_mod29`
+- `sequence_signature_sha256`
+- `candidate_index`
+- `input_slice_id`
+- `transform_family=onion7_numeric_seed_pack`
+- `transform_id=onion7_mod29_stream_subtract`
+- score summary and calibrated confidence label
+- `cuda_used=false`
+- `no_solve_claim=true`
+- `canonical_corpus_active=false`
+- `page_boundaries_final=false`
+- `trusted_as_canonical=false`
+
+Generated `candidate_records.jsonl`, `top_candidates.jsonl`, `summary.json`, and warning/score files must not be committed. Research logs may summarize counts, top parameters, top score, and confidence only.
+
 ## Stage 0D-followup Record Types
 
 Implemented/generated Stage 0D-followup record types include:

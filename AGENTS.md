@@ -494,3 +494,11 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not execute Stage 3R manifests during the promotion stage.
 - Do not promote raw Discord private content, message bodies, usernames, user IDs, message IDs, or private attachment URLs.
 - Promoted observation records must remain `usable_as_experiment_seed=false` until a later bounded review stage changes that explicitly.
+
+## Stage 3S Onion 7 Seed-Pack Rules
+
+- Onion 7 raw table values and derived values must remain separated.
+- Do not add speculative Onion 7 interpretations without a manifest and source-record update.
+- Post-Discord experiments remain bounded, CPU-only, generated-output-ignored, and no-solve by default.
+- Raw Discord logs and raw page images must not be touched by post-Discord text experiments except for ignore-policy checks.
+- Stage 3S executes only `EXP-3R-003`; do not run `EXP-3R-001` or `EXP-3R-004` in the same stage.

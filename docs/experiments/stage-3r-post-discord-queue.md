@@ -1,6 +1,6 @@
 ﻿# Stage 3R Post-Discord Queue
 
-Stage 3R creates the first three bounded post-Discord experiment manifests. They are queued only; execution is disabled.
+Stage 3R creates the first three bounded post-Discord experiment manifests. They are queued only; execution is disabled in Stage 3R.
 
 ## Manifests
 
@@ -21,4 +21,8 @@ All manifests require `execution_enabled=false`, `cpu_only=true`, `cuda_enabled=
 
 ## Next Step
 
-Stage 3S may execute one manifest explicitly, such as `EXP-3R-003` or `EXP-3R-001`, after reviewing the manifest and confirming candidate bounds.
+Stage 3S executed only `EXP-3R-003`. It did not run `EXP-3R-001` or `EXP-3R-004`.
+
+The Stage 3S run enumerated `72` Onion 7 seed-pack candidates under the `144` cap, with `0` deferred candidates. The top candidate remained calibrated `inconclusive`, so the post-Discord queue still has no solve claim.
+
+Future Stage 3T work can execute `EXP-3R-001`, implement `EXP-3R-004`, or inspect the Stage 3S Onion 7 top candidates if a bounded follow-up is justified.
