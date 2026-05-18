@@ -173,6 +173,34 @@ Verification records include:
 
 Generated `gp_rune_claim_verification_records.jsonl`, per-status JSONL files, `summary.json`, and warnings must not be committed. Research logs may summarize status counts and representative claim IDs only.
 
+## Stage 3U Cookie Signed-Variant Records
+
+Stage 3U generated records are written only to ignored outputs under `experiments/results/post-discord/stage3u/`.
+
+Candidate records include:
+
+- `experiment_id=EXP-3R-001`
+- `pack_id`
+- `manifest_id`
+- `candidate_id`
+- `base_string_id`
+- `base_string`
+- `source_basis`
+- `byte_variant`
+- `encoding`
+- `candidate_bytes_sha256`
+- `digest_algorithm=sha256`
+- `digest_hex`
+- `target_cookie_id`
+- `target_cookie_name`
+- `exact_match`
+- `solve_claim=false`
+- `cuda_used=false`
+- `cloud_execution=false`
+- `trusted_as_canonical=false`
+
+Generated `hash_candidate_records.jsonl`, `exact_matches.jsonl`, `summary.json`, and warnings must not be committed. Research logs may summarize counts and exact-match IDs only.
+
 ## Stage 0D-followup Record Types
 
 Implemented/generated Stage 0D-followup record types include:

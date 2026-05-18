@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3T and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3U and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -24,9 +24,9 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Broad unsolved-page search campaigns: not started.
 - Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only, and Stage 3S applies it to the bounded 72-candidate Onion 7 explicit seed pack only.
 - Visual/image-derived observations: registry and deterministic feature summaries only, plus deterministic review transforms; Stage 3K records source locks and reviewable observations, Stage 3M records deterministic local image features, and Stage 3P generates ignored review transforms/contact sheets. No image-derived text experiments are executed.
-- Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, with exact byte-string logging and no fuzzy or partial hash claims.
+- Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, and Stage 3U tests the manifest-declared signed/public string variant pack only. Both use exact byte-string logging with no fuzzy, partial, dictionary, GPU, or solve claims.
 - Discord source discovery: Stage 3N scans admin-provided local HTML exports only and commits aggregate/redacted records only. Stage 3O promotes a bounded, public-safe subset of redacted source-discovery records. Stage 3Q builds ignored redacted topic shards for local AI/deep-research review. Stage 3R audits those leads, promotes only corroborated public/source-observation records, preserves false positives as negative controls, and queues disabled post-Discord manifests. Raw logs, message bodies, usernames, and private attachment URLs are not committed.
-- Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Both keep generated records under ignored paths and make no solve claim.
+- Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
 - Broad unsolved-page campaigns: not started.
@@ -35,7 +35,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 3U execute `EXP-3R-001` cookie signed-variant pack or implement an OutGuess regression harness, unless Stage 3T missing-span results justify a bounded span-linking follow-up first.
+- Stage 3V implement an OutGuess regression harness, unless Stage 3U exact-match results require independent preimage/source-provenance verification first.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -76,6 +76,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 3R Discord lead promotion audit, negative controls, and first disabled post-Discord experiment manifests.
 - Stage 3S bounded Onion 7 explicit seed-pack execution.
 - Stage 3T bounded GP/rune claim verifier execution.
+- Stage 3U bounded cookie SHA-256 signed-variant pack execution.
 
 ## Architecture summary
 
@@ -115,6 +116,7 @@ Current status:
 - Stage 3R: Discord lead promotion audit and first post-Discord manifest queue complete.
 - Stage 3S: bounded Onion 7 explicit seed-pack execution complete.
 - Stage 3T: bounded GP/rune claim verifier execution complete.
+- Stage 3U: bounded cookie SHA-256 signed-variant pack execution complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -128,7 +130,8 @@ Current status:
 - Latest Discord promotion stage: Stage 3R promoted `13` public source records and `11` review-only observation records, preserved `11` negative-control records, counted `25` unsafe/private or quarantined records, and created `3` disabled post-Discord manifests. No experiment was executed and no solve claim was made.
 - Latest post-Discord experiment stage: Stage 3S executed `EXP-3R-003` only, producing `72` bounded Onion 7 candidates from `3` value spaces, `6` routes, `2` directions, and `2` reset modes. The top candidate scored `1.460714` with calibrated confidence `inconclusive`; generated outputs remain ignored and no solve claim is made.
 - Latest GP/rune verifier stage: Stage 3T executed `EXP-3R-004` only, loading and deduplicating `25` exact claims. It classified `23` as verified and `2` as unsupported, with no unverified, boundary-sensitive, missing-source-span, malformed, or duplicate claims in the committed input set.
-- Next: Stage 3U execute `EXP-3R-001` cookie signed-variant pack or implement an OutGuess regression harness. If many future GP/rune claims are missing exact spans, run a Stage 3T follow-up to improve claim extraction and span linking.
+- Latest cookie signed-variant stage: Stage 3U executed `EXP-3R-001` only, generating `156` candidates before deduplication, testing `105` deduplicated byte strings against `2` cookie targets for `210` exact SHA-256 comparisons, and finding `0` exact matches.
+- Next: Stage 3V implement an OutGuess regression harness. If a future cookie run finds an exact match, Stage 3V should independently verify the preimage and source provenance before any broader interpretation.
 
 ## How To Use This Repo
 

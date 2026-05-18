@@ -113,6 +113,28 @@ The run verifies exact promoted claims only. It does not search neighbouring spa
 
 Generated verification records, per-status JSONL files, summary JSON, and warnings remain ignored under `experiments/results/post-discord/stage3t/`.
 
+## Stage 3U Cookie Signed-Variant Pack
+
+Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant manifest created in Stage 3R.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord validate-cookie-manifest `
+  --manifest experiments/manifests/post-discord/EXP-3R-001-cookie-sha256-signed-variants-a.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord run-cookie-signed-variants `
+  --manifest experiments/manifests/post-discord/EXP-3R-001-cookie-sha256-signed-variants-a.yaml `
+  --cookies data/observations/web/cookie-hash-records-v0.yaml `
+  --out-dir experiments/results/post-discord/stage3u `
+  --allow-warnings
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord cookie-signed-summary `
+  --results-dir experiments/results/post-discord/stage3u
+```
+
+The run generated `156` candidates before deduplication, tested `105` deduplicated byte strings against two target cookies for `210` exact SHA-256 comparisons, and found `0` exact matches.
+
+Generated hash candidate records, exact-match JSONL, summary JSON, and warnings remain ignored under `experiments/results/post-discord/stage3u/`.
+
 ## Stage 0A smoke manifest
 
 The Stage 0A smoke manifest validates project bootstrap only. No candidate plaintext is generated in Stage 0A.

@@ -240,6 +240,8 @@ experiments/results/post-discord/**
 !experiments/results/post-discord/stage3s/.gitkeep
 !experiments/results/post-discord/stage3t/
 !experiments/results/post-discord/stage3t/.gitkeep
+!experiments/results/post-discord/stage3u/
+!experiments/results/post-discord/stage3u/.gitkeep
 
 # Generated Wiki sync outputs
 experiments/results/wiki-sync/**

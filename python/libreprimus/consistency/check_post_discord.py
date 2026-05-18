@@ -1,4 +1,4 @@
-"""Stage 3S/3T post-Discord consistency checks."""
+"""Stage 3S/3T/3U post-Discord consistency checks."""
 
 from __future__ import annotations
 
@@ -7,16 +7,18 @@ from pathlib import Path
 
 from libreprimus.consistency.models import ConsistencyCheckResult, fail_result, pass_result
 from libreprimus.paths import repo_root
+from libreprimus.post_discord.cookie_signed_variant_pack import validate_cookie_manifest
 from libreprimus.post_discord.gp_rune_claim_verifier import validate_gp_rune_manifest
 from libreprimus.post_discord.validation import validate_manifest
 
 GROUP = "post_discord"
 ONION7_MANIFEST = repo_root() / "experiments/manifests/post-discord/EXP-3R-003-onion7-raw-prime-order-seed-pack-a.yaml"
 GP_RUNE_MANIFEST = repo_root() / "experiments/manifests/post-discord/EXP-3R-004-gp-rune-claim-verifier-a.yaml"
+COOKIE_MANIFEST = repo_root() / "experiments/manifests/post-discord/EXP-3R-001-cookie-sha256-signed-variants-a.yaml"
 
 
 def check_post_discord_consistency(root: Path = repo_root()) -> list[ConsistencyCheckResult]:
-    """Run raw-data-free Stage 3S checks."""
+    """Run raw-data-free post-Discord manifest checks."""
     results: list[ConsistencyCheckResult] = []
     summary, errors = validate_manifest(ONION7_MANIFEST)
     if errors:
@@ -42,20 +44,43 @@ def check_post_discord_consistency(root: Path = repo_root()) -> list[Consistency
                 f"EXP-3R-004 validates with claim cap {gp_summary.get('claim_cap')}.",
             )
         )
+    cookie_summary, cookie_errors = validate_cookie_manifest(COOKIE_MANIFEST)
+    if cookie_errors:
+        for error in cookie_errors:
+            results.append(fail_result(GROUP, "stage3u_manifest_valid", error))
+    else:
+        results.append(
+            pass_result(
+                GROUP,
+                "stage3u_manifest_valid",
+                f"EXP-3R-001 validates with candidate cap {cookie_summary.get('candidate_cap')}.",
+            )
+        )
     for path in [
         "experiments/results/post-discord/stage3s/candidate_records.jsonl",
         "experiments/results/post-discord/stage3s/top_candidates.jsonl",
         "experiments/results/post-discord/stage3s/summary.json",
         "experiments/results/post-discord/stage3t/gp_rune_claim_verification_records.jsonl",
         "experiments/results/post-discord/stage3t/summary.json",
+        "experiments/results/post-discord/stage3u/hash_candidate_records.jsonl",
+        "experiments/results/post-discord/stage3u/exact_matches.jsonl",
+        "experiments/results/post-discord/stage3u/summary.json",
         "third_party/LiberPrimusDiscordChats/example.html",
         "third_party/LiberPrimusPages/example.jpg",
     ]:
         if _is_ignored(root, path):
-            results.append(pass_result(GROUP, "stage3s_path_ignored", f"Ignored path is ignored: {path}", path=path))
+            results.append(pass_result(GROUP, "post_discord_path_ignored", f"Ignored path is ignored: {path}", path=path))
         else:
-            results.append(fail_result(GROUP, "stage3s_path_ignored", f"Expected ignored path is trackable: {path}", path=path))
+            results.append(
+                fail_result(
+                    GROUP,
+                    "post_discord_path_ignored",
+                    f"Expected ignored path is trackable: {path}",
+                    path=path,
+                )
+            )
     for manifest_path, name in [
+        ("experiments/manifests/post-discord/EXP-3R-001-cookie-sha256-signed-variants-a.yaml", "EXP-3R-001"),
         ("experiments/manifests/post-discord/EXP-3R-003-onion7-raw-prime-order-seed-pack-a.yaml", "EXP-3R-003"),
         ("experiments/manifests/post-discord/EXP-3R-004-gp-rune-claim-verifier-a.yaml", "EXP-3R-004"),
     ]:

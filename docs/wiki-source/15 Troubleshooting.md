@@ -50,6 +50,10 @@ If a Stage 3T GP/rune verifier run leaves verification records under
 `experiments/results/post-discord/stage3t/`, do not stage them. Commit only summary docs, tests,
 and research logs.
 
+If a Stage 3U cookie signed-variant run leaves hash candidate records under
+`experiments/results/post-discord/stage3u/`, do not stage them. Commit only summary docs, tests,
+and research logs.
+
 ## Image Transform Run Is Slow
 
 Stage 3P uses bounded review previews for large images. Do not switch to full-resolution derived
@@ -100,6 +104,12 @@ queue a separate follow-up if review justifies it.
 
 `missing_source_span` is a valid verifier result. Do not search nearby spans to make a claim true.
 Improve claim extraction or span-linking in a separate bounded follow-up, then rerun the verifier.
+
+## Stage 3U Cookie Pack Has No Exact Match
+
+Zero exact SHA-256 matches is a valid bounded result. Do not add more strings, test partial
+matches, or switch algorithms inside the completed run. Queue a new explicit manifest if the
+scope changes.
 
 ## Wiki Publish Fails
 

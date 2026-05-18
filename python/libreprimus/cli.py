@@ -175,6 +175,14 @@ from libreprimus.discord_lead_promotion.manifest_builder import build_post_disco
 from libreprimus.discord_lead_promotion.promoter import promote_discord_leads
 from libreprimus.discord_lead_promotion.summary import load_summary as load_discord_lead_summary
 from libreprimus.discord_lead_promotion.validation import validate_stage3r_outputs
+from libreprimus.post_discord.cookie_signed_variant_pack import (
+    DEFAULT_COOKIES as DEFAULT_STAGE3U_COOKIES,
+    DEFAULT_MANIFEST as DEFAULT_STAGE3U_COOKIE_MANIFEST,
+    DEFAULT_OUTPUT_DIR as DEFAULT_STAGE3U_POST_DISCORD_DIR,
+    load_cookie_signed_summary,
+    run_cookie_signed_variant_pack,
+    validate_cookie_manifest,
+)
 from libreprimus.post_discord.gp_rune_claim_verifier import (
     DEFAULT_MANIFEST as DEFAULT_STAGE3T_GP_RUNE_MANIFEST,
     DEFAULT_OUTPUT_DIR as DEFAULT_STAGE3T_POST_DISCORD_DIR,
@@ -4052,6 +4060,112 @@ def _print_stage3t_payload(summary: dict) -> None:
         "unsupported_claim_count",
         "malformed_claim_count",
         "duplicate_claim_count",
+    ]:
+        console.print(f"{key}={summary.get(key)}")
+    console.print(f"warning_count={len(summary.get('warnings', []))}")
+    console.print(f"no_solve_claim={str(summary.get('no_solve_claim')).lower()}")
+    for key, path in summary.get("output_paths", {}).items():
+        console.print(f"{key}={path}")
+
+
+@post_discord_app.command("validate-cookie-manifest")
+def post_discord_validate_cookie_manifest(
+    manifest: Path = typer.Option(
+        Path(DEFAULT_STAGE3U_COOKIE_MANIFEST),
+        "--manifest",
+        help="EXP-3R-001 cookie signed-variant manifest path.",
+    ),
+) -> None:
+    """Validate the Stage 3U cookie signed-variant manifest without execution."""
+    payload, errors = validate_cookie_manifest(_resolve_existing_path(manifest, "Stage 3U manifest"))
+    if errors:
+        for error in errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    console.print("cookie_manifest_valid=true")
+    for key in [
+        "experiment_id",
+        "candidate_cap",
+        "algorithm",
+        "base_string_count",
+        "byte_variant_count",
+        "generated_before_dedup",
+        "execution_enabled",
+        "cuda_enabled",
+        "no_solve_claim",
+    ]:
+        value = payload.get(key)
+        if isinstance(value, bool):
+            value = str(value).lower()
+        console.print(f"{key}={value}")
+
+
+@post_discord_app.command("run-cookie-signed-variants")
+def post_discord_run_cookie_signed_variants(
+    manifest: Path = typer.Option(
+        Path(DEFAULT_STAGE3U_COOKIE_MANIFEST),
+        "--manifest",
+        help="EXP-3R-001 cookie signed-variant manifest path.",
+    ),
+    cookies: Path = typer.Option(
+        Path(DEFAULT_STAGE3U_COOKIES),
+        "--cookies",
+        help="Committed cookie/hash records.",
+    ),
+    out_dir: Path = typer.Option(
+        Path(DEFAULT_STAGE3U_POST_DISCORD_DIR),
+        "--out-dir",
+        help="Generated Stage 3U output directory.",
+    ),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Execute only the bounded Stage 3U cookie signed-variant pack."""
+    try:
+        summary = run_cookie_signed_variant_pack(
+            manifest_path=_resolve_existing_path(manifest, "Stage 3U manifest"),
+            cookies_path=_resolve_existing_path(cookies, "cookie records"),
+            out_dir=_resolve_output_path(out_dir),
+            allow_warnings=allow_warnings,
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_stage3u_payload(summary)
+    if summary.get("warnings") and not allow_warnings:
+        raise typer.Exit(1)
+
+
+@post_discord_app.command("cookie-signed-summary")
+def post_discord_cookie_signed_summary(
+    results_dir: Path = typer.Option(
+        Path(DEFAULT_STAGE3U_POST_DISCORD_DIR),
+        "--results-dir",
+        help="Generated Stage 3U result directory.",
+    ),
+) -> None:
+    """Print a concise Stage 3U cookie signed-variant summary."""
+    try:
+        payload = load_cookie_signed_summary(_resolve_output_path(results_dir))
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    _print_stage3u_payload(payload)
+
+
+def _print_stage3u_payload(summary: dict) -> None:
+    for key in [
+        "run_id",
+        "experiment_id",
+        "manifest_path",
+        "target_cookie_count",
+        "base_string_count",
+        "byte_variant_count",
+        "candidate_count_generated_before_dedup",
+        "candidate_count_after_dedup",
+        "duplicate_candidate_count",
+        "comparison_count",
+        "exact_match_count",
+        "algorithm",
     ]:
         console.print(f"{key}={summary.get(key)}")
     console.print(f"warning_count={len(summary.get('warnings', []))}")

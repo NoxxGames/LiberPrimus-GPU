@@ -106,6 +106,19 @@ Local validation includes:
   --results-dir experiments/results/post-discord/stage3t
 ```
 
+## Stage 3U Cookie Signed-Variant Tests
+
+Stage 3U tests cover manifest validation, candidate-cap checks, SHA-256-only enforcement, cookie-record loading, hex64 validation, deterministic byte variants, compact variants, deduplication, cap-exceeded failure, exact-match output generation, no partial/fuzzy matching, CLI validation/execution against synthetic records, ignored generated outputs, raw Discord ignore policy, raw image ignore policy, and no-solve/CUDA flags.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord validate-cookie-manifest `
+  --manifest experiments/manifests/post-discord/EXP-3R-001-cookie-sha256-signed-variants-a.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord cookie-signed-summary `
+  --results-dir experiments/results/post-discord/stage3u
+```
+
 Legacy workbook tests include p56 prime-minus-one first-delta checks, Welcome `DIVINITY` delta checks, and direct-page zero-delta checks for solved fixture hints.
 
 Legacy Pastebin tests include first-pair prime validation, empty-pair preservation, Parable anchor detection, page-boundary non-finalization, and local-real-file conditional tests.

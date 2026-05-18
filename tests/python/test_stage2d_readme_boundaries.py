@@ -76,6 +76,7 @@ def test_readme_preserves_current_safety_and_boundary_language() -> None:
     assert "Stage 3M: deterministic local image analysis complete." in readme
     assert "Stage 3S: bounded Onion 7 explicit seed-pack execution complete." in readme
     assert "Stage 3T: bounded GP/rune claim verifier execution complete." in readme
+    assert "Stage 3U: bounded cookie SHA-256 signed-variant pack execution complete." in readme
 
 
 def test_readme_does_not_imply_deferred_work_is_permanently_excluded() -> None:

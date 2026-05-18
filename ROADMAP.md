@@ -238,9 +238,13 @@ Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. It 
 
 Stage 3T executes only `EXP-3R-004`, the bounded GP/rune claim verifier. It recomputes exact GP-sum, rune-count, residue, prime-status, and derived numeric claims where exact spans or explicit values exist, classifies unsupported claims without broadening into span search, and writes generated verification outputs only under ignored paths. No raw Discord logs or page images are processed and no solve claim is made.
 
-## Stage 3U - Cookie signed variants or OutGuess regression
+## Stage 3U - Cookie signed variant pack
 
-If Stage 3T leaves the post-Discord queue ready for execution, run `EXP-3R-001` cookie signed-variant pack or implement a bounded OutGuess regression harness. If future verifier inputs contain many `missing_source_span` records, Stage 3U may instead be a Stage 3T follow-up for claim extraction and span linking. Do not jump to CUDA or broad search until the selected manifest is explicit and bounded.
+Stage 3U executes only `EXP-3R-001`, the bounded cookie SHA-256 signed-variant pack. It expands only manifest-declared signed/public strings and byte variants, uses UTF-8 and SHA-256 only, writes generated hash outputs under ignored paths, and finds zero exact matches. No fuzzy matching, partial matching, hashcat, CUDA, live Tor, raw Discord processing, page-image processing, or solve claim is made.
+
+## Stage 3V - OutGuess regression harness
+
+If Stage 3U finds no exact match, implement a bounded OutGuess regression harness. If a later cookie pack finds an exact match, Stage 3V should independently verify preimage bytes and source provenance before any broader interpretation. Do not jump to CUDA or broad search until the selected manifest is explicit and bounded.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

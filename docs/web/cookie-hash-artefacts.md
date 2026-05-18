@@ -13,4 +13,6 @@ Cookie/hash records must keep:
 
 Stage 3L adds a bounded SHA-256-only preimage pack runner for these two archived artefacts. It tests explicit literal and numeric/base29 candidate packs, logs exact byte strings, and found zero exact SHA-256 matches.
 
+Stage 3U executes the post-Discord signed/public string variant pack `EXP-3R-001`. It generated `156` candidates before deduplication, tested `105` deduplicated byte strings against both archived cookie values for `210` exact comparisons, and found zero exact SHA-256 matches.
+
 Any future hash-preimage work must remain bounded and exact-match only unless a later manifest explicitly expands the scope.

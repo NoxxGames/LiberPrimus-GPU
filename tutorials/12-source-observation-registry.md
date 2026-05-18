@@ -60,6 +60,9 @@ Stage 3T verifies exact GP/rune and derived numeric claims from promoted observa
 without exact spans stay classified instead of being forced into neighbouring-span searches.
 Generated verification records are ignored experiment outputs rather than registry records.
 
+Stage 3U tests manifest-declared signed/public strings against the archived cookie/hash records.
+The generated hash candidate records are ignored experiment outputs rather than registry records.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
@@ -69,6 +72,8 @@ Do not commit generated Stage 3R promotion-audit JSONL files.
 Do not commit generated Stage 3S post-Discord candidate JSONL, top-candidate JSONL, summary JSON,
 or score-detail files.
 Do not commit generated Stage 3T verification JSONL, per-status JSONL, summary JSON, or warning
+files.
+Do not commit generated Stage 3U hash candidate JSONL, exact-match JSONL, summary JSON, or warning
 files.
 
 ## Troubleshooting
@@ -84,3 +89,6 @@ follow-up. Do not promote generated candidate text as source evidence.
 
 If a Stage 3T verification result looks useful, promote only the verified claim summary and claim
 ID. Do not promote generated verification dumps as source evidence.
+
+If a Stage 3U exact preimage candidate appears, promote only a reviewed summary and independently
+verify source provenance before any interpretation.

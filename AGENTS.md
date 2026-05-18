@@ -511,3 +511,12 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Boundary-sensitive claims must remain `boundary_sensitive`, not forced true or false.
 - Do not process raw Discord logs or raw page images during verifier stages.
 - Stage 3T executes only `EXP-3R-004`; do not run `EXP-3R-001` or rerun `EXP-3R-003` in the same stage.
+
+## Stage 3U Cookie Signed-Variant Rules
+
+- Cookie hash packs must use exact byte-string logging.
+- Do not make fuzzy, partial, or near-match hash claims.
+- Do not use GPU, CUDA, hashcat, cloud, external dictionaries, or broad candidate expansion without explicit re-scoping.
+- An exact preimage match is a historical artefact lead only, not a solve claim.
+- Do not process raw Discord logs or raw page images during cookie stages.
+- Stage 3U executes only `EXP-3R-001`; do not rerun `EXP-3R-003` or `EXP-3R-004` in the same stage.

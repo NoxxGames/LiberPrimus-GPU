@@ -41,6 +41,18 @@ Stage 3T runs only the GP/rune claim verifier:
   --allow-warnings
 ```
 
+Stage 3U runs only the cookie SHA-256 signed-variant pack:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord validate-cookie-manifest `
+  --manifest experiments/manifests/post-discord/EXP-3R-001-cookie-sha256-signed-variants-a.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli post-discord run-cookie-signed-variants `
+  --manifest experiments/manifests/post-discord/EXP-3R-001-cookie-sha256-signed-variants-a.yaml `
+  --cookies data/observations/web/cookie-hash-records-v0.yaml `
+  --out-dir experiments/results/post-discord/stage3u `
+  --allow-warnings
+```
+
 ## Expected Outputs
 
 Policy checks should pass for bounded CPU-only items and fail for over-budget examples.
@@ -49,9 +61,11 @@ The Stage 3S Onion 7 run should execute `72` candidates under a cap of `144`. Ge
 
 The Stage 3T GP/rune verifier should process exact claims under a cap of `64`. Generated verification JSONL and summary files stay in `experiments/results/post-discord/stage3t/` and are not solve evidence.
 
+The Stage 3U cookie signed-variant pack should process only manifest-declared SHA-256 candidates under a cap of `576`. Generated hash JSONL and summary files stay in `experiments/results/post-discord/stage3u/` and are not solve evidence.
+
 ## What Not To Commit
 
-Do not commit generated candidate dumps, top-candidate JSONL, verification JSONL, summary JSON, SQLite files, or broad-search outputs.
+Do not commit generated candidate dumps, top-candidate JSONL, verification JSONL, hash candidate JSONL, exact-match JSONL, summary JSON, SQLite files, or broad-search outputs.
 
 ## Troubleshooting
 
@@ -60,3 +74,5 @@ If a queue item lacks an executor, record it as deferred instead of faking outpu
 If an Onion 7 run appears interesting, inspect the generated top candidates locally and queue a separate bounded follow-up instead of broadening routes or adding speculative value spaces.
 
 If a GP/rune claim is `missing_source_span`, improve source/span linking in a separate follow-up instead of searching neighbouring spans to make the claim true.
+
+If a cookie pack finds no exact match, record the negative result and move to a separately scoped manifest. Do not add strings or variants to a completed run after the fact.

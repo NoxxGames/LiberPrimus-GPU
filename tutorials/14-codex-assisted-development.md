@@ -13,7 +13,7 @@ Use Codex safely for scoped repository stages.
 - Require GitHub issue updates when relevant.
 - For Discord stages, state that raw logs, generated shards, message bodies, usernames, user IDs, message IDs, and private URLs must not be staged.
 - For post-Discord manifests, state whether the stage is queue-only or execution-authorized.
-- For Stage 3S/3T-style execution, state the exact manifest ID, candidate or claim cap, generated output paths, and that no other post-Discord manifest may run in the same stage.
+- For Stage 3S/3T/3U-style execution, state the exact manifest ID, candidate or claim cap, generated output paths, and that no other post-Discord manifest may run in the same stage.
 
 ## Commands
 
@@ -26,7 +26,7 @@ git status --short
 ## What Not To Commit
 
 Raw corpus material, generated outputs, root research reports, `.venv/`, build dirs, and wiki
-worktrees. For Stage 3R/3S/3T-style work, also keep generated Discord review bundles, topic shards, promotion audit JSONL, post-Discord candidate JSONL, verification JSONL, summary JSON, and root report copies out of staging unless copied into `docs/` intentionally.
+worktrees. For Stage 3R/3S/3T/3U-style work, also keep generated Discord review bundles, topic shards, promotion audit JSONL, post-Discord candidate JSONL, verification JSONL, hash candidate JSONL, summary JSON, and root report copies out of staging unless copied into `docs/` intentionally.
 
 ## Troubleshooting
 
