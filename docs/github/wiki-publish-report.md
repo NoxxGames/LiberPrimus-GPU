@@ -6,9 +6,10 @@
 - Wiki remote accessible before commit: false.
 - Remote checked: `https://github.com/NoxxGames/LiberPrimus-GPU.wiki.git`.
 - Pages generated: 30.
-- Publish attempted: false.
+- Publish attempted: true.
 - Publish succeeded: false.
 - Wiki commit hash: pending.
+- Failure reason: `Wiki remote is not accessible: https://github.com/NoxxGames/LiberPrimus-GPU.wiki.git`.
 
 ## Manual Steps If Publish Fails
 

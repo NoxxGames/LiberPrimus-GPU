@@ -95,3 +95,10 @@ methods, use CUDA, activate the canonical corpus, finalize page boundaries, or c
 - `scripts/ci/validate-workflow-static.ps1`: passed.
 - `scripts/github/validate-wiki-source.ps1`: passed.
 - `scripts/github/sync-tutorials-to-wiki.ps1 --DryRun`: passed.
+
+## Phase 15 Wiki Publish Attempt
+
+- Publish attempted after the main repo push: true.
+- Publish succeeded: false.
+- Failure reason: Wiki remote `https://github.com/NoxxGames/LiberPrimus-GPU.wiki.git` was not accessible.
+- Updated `docs/github/wiki-publish-report.md` and research log with manual next steps.

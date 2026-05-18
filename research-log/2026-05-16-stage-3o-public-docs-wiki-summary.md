@@ -14,7 +14,9 @@
 - Wiki enabled: true
 - Wiki remote checked: `https://github.com/NoxxGames/LiberPrimus-GPU.wiki.git`
 - Wiki remote accessible before main commit: false
-- Publish attempted before main commit: false
+- Publish attempted after main commit: true
+- Publish succeeded: false
+- Failure reason: Wiki remote is not accessible at `https://github.com/NoxxGames/LiberPrimus-GPU.wiki.git`
 - Publish report: `docs/github/wiki-publish-report.md`
 
 ## Policy
