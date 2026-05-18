@@ -17,6 +17,7 @@ The state-drift checker reviews operational and public context files, including:
 - `RESULTS_SCHEMA.md`
 - `EXPERIMENTS.md`
 - `TESTING.md`
+- `docs/roadmap/staged-plan.md`
 - `pyproject.toml`
 - `docker/README.md`
 
@@ -28,6 +29,8 @@ The checker fails if critical facts drift:
 
 - Stage 3V is not recorded as complete.
 - Stage 3W consolidation is not recorded in current project state.
+- Stage 3X is not recorded as complete in the staged plan.
+- Stage 3Y result synthesis is missing from the staged plan.
 - The canonical corpus is not explicitly inactive.
 - Page boundaries are not explicitly reviewable.
 - CUDA is not explicitly deferred.
@@ -35,6 +38,7 @@ The checker fails if critical facts drift:
 - Raw/generated output commit policy is missing.
 - Discord raw-log privacy policy is missing.
 - Local page-image non-commit policy is missing.
+- The staged plan omits update/direction-change policy.
 
 It also fails stale current-state claims such as:
 
@@ -68,11 +72,18 @@ Run it with the rest of the consistency suite:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-all --allow-warnings
 ```
 
+Validate the Stage 3Y research synthesis ledgers:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md
+```
+
 ## Safe Update Process
 
 When a stage completes:
 
-1. Update `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, and `README.md` together.
+1. Update `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, `README.md`, and `docs/roadmap/staged-plan.md` together.
 2. Update architecture, schema, testing, and tutorial docs only where the behavior or policy changed.
-3. Keep generated outputs and raw data ignored.
-4. Run the anti-drift check before staging.
+3. Update `data/research/` ledgers when method-family status, retirement, Deep Research influence, or direction changes.
+4. Keep generated outputs and raw data ignored.
+5. Run the anti-drift and research-synthesis checks before staging.

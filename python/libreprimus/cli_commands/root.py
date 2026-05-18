@@ -27,6 +27,7 @@ from libreprimus.cli_commands import (
     archive_visual,
     discord,
     post_discord,
+    research_synthesis,
     stego,
     solved_fixtures,
 )
@@ -83,6 +84,7 @@ _COMMAND_MODULES = (
     archive_visual,
     discord,
     post_discord,
+    research_synthesis,
     stego,
     solved_fixtures,
 )

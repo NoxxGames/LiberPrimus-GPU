@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/research/project-direction-change-record-v0.schema.json",
+  "title": "Project Direction Change Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "change_id",
+    "date_or_stage",
+    "previous_direction",
+    "new_direction",
+    "reason",
+    "source",
+    "affected_docs",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "project_direction_change_record" },
+    "change_id": { "type": "string", "minLength": 1 },
+    "date_or_stage": { "type": "string", "minLength": 1 },
+    "previous_direction": { "type": "string", "minLength": 1 },
+    "new_direction": { "type": "string", "minLength": 1 },
+    "reason": { "type": "string", "minLength": 1 },
+    "source": { "type": "string", "minLength": 1 },
+    "affected_docs": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

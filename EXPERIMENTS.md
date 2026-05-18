@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 3Y Method Retirement And Result Synthesis
+
+Stage 3Y does not add or execute an experiment. It records method-family status and retirement/deprioritisation guardrails in `data/research/` and documents them in `docs/roadmap/staged-plan.md` and `docs/experiments/method-retirement-ledger.md`.
+
+Noisy, negative, or inconclusive families must not be widened unless their recorded reopen conditions are met and a new manifest explains the evidence. Cookie SHA-256 packs, broad Vigenere/dictionary expansion, Caesar/affine widening, Mersenne/perfect-number expansion, and CUDA acceleration all have explicit stop or defer conditions in the ledger.
+
 ## Experiment philosophy
 
 Experiments are reproducible tests of hypotheses, not evidence of solves by themselves.

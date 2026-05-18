@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/research/method-retirement-record-v0.schema.json",
+  "title": "Method Retirement Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "method_family_id",
+    "retired_status",
+    "reason",
+    "evidence",
+    "stages_supporting",
+    "reopen_conditions",
+    "prohibited_expansions",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "method_retirement_record" },
+    "method_family_id": { "type": "string", "minLength": 1 },
+    "retired_status": {
+      "enum": [
+        "retired",
+        "deprioritised",
+        "deferred",
+        "active_with_constraints"
+      ]
+    },
+    "reason": { "type": "string", "minLength": 1 },
+    "evidence": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "stages_supporting": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "reopen_conditions": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "prohibited_expansions": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

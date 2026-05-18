@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3X CLI modularisation and the work that must stay bounded, reviewable, and reproducible before larger experiments begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3Y result synthesis and method-retirement ledger work. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -36,8 +36,8 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 3Y result synthesis and retirement ledger.
 - Stage 3Z source-of-truth/newcomer map expansion.
+- Stage 4A CPU batch transform API extraction.
 - Historical OutGuess fixture source-locking and setup documentation when assets become available.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
@@ -82,6 +82,8 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 3U bounded cookie SHA-256 signed-variant pack execution.
 - Stage 3V OutGuess regression harness.
 - Stage 3W project-state consolidation and anti-drift checks.
+- Stage 3X CLI modularisation without behavior change.
+- Stage 3Y result synthesis, staged plan, and method-retirement ledger.
 
 ## Architecture summary
 
@@ -125,6 +127,7 @@ Current status:
 - Stage 3V: OutGuess regression harness complete.
 - Stage 3W: state consolidation and anti-drift hardening complete.
 - Stage 3X: CLI modularisation without behavior change complete.
+- Stage 3Y: result synthesis, staged plan, and method-retirement ledger complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -142,7 +145,9 @@ Current status:
 - Latest stego regression stage: Stage 3V added the OutGuess harness, detected no local OutGuess binary, and recorded `6` missing-tool skips plus `1` disabled case across `7` manifest cases. No raw artefacts or payloads were committed.
 - Latest consolidation stage: Stage 3W refreshed persistent project context, defined the source-of-truth hierarchy, and added anti-drift checks so long-lived docs cannot drift back to obsolete current-state claims.
 - Latest maintainability stage: Stage 3X split the Python CLI into `cli_commands` domain modules while preserving `python -m libreprimus.cli` and adding command-surface tests.
-- Next: Stage 3Y result synthesis and method-retirement ledger.
+- Latest synthesis stage: Stage 3Y added `docs/roadmap/staged-plan.md`, research synthesis records, method-family status and retirement ledgers, Deep Research influence records, direction-change records, and validation CLI commands.
+- Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
+- Next: Stage 3Z source-of-truth / newcomer map.
 
 ## How To Use This Repo
 
@@ -153,6 +158,7 @@ Current status:
 .\.venv\Scripts\python.exe -m ruff check python/libreprimus tests/python
 .\.venv\Scripts\python.exe -m pytest -q tests/python
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-state-drift
+.\.venv\Scripts\python.exe -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-all --allow-warnings
 ```
 

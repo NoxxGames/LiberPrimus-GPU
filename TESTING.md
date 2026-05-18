@@ -48,6 +48,16 @@ Stage 3W tests cover the state-drift checker, stale current-stage phrase detecti
 
 Stage 3X tests cover the modular CLI package layout, the thin public `python -m libreprimus.cli` entrypoint, preserved root command groups, selected high-risk subcommands, help output, and the rule that no `python/libreprimus/cli/` package may exist while `cli.py` remains the public module.
 
+## Stage 3Y Research Synthesis Tests
+
+Stage 3Y tests cover the durable staged plan, research synthesis schemas, method-family status records, method-retirement references, Deep Research influence records, direction-change records, `libreprimus research-synthesis` CLI commands, and state-drift integration for `docs/roadmap/staged-plan.md`.
+
+The local validation stack now includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md
+```
+
 ## Stage 3O Promotion And Wiki Tests
 
 Stage 3O tests cover Discord promotion redaction, public-safe URL filtering, review-only promotion records, README/tutorial coverage, Wiki source generation, Wiki validation scripts, and ignored raw/generated paths.

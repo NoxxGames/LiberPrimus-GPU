@@ -1,5 +1,7 @@
 # Roadmap
 
+The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
+
 ## Phase 0A - Project bootstrap
 
 Create repository structure, documentation, toolchain scripts, C++ smoke build, optional CUDA smoke build, Python package, and smoke tests.
@@ -256,11 +258,11 @@ Stage 3X split the growing `libreprimus.cli` module into focused command modules
 
 ## Stage 3Y - Result synthesis and retirement ledger
 
-Summarize noisy, negative, inconclusive, verified, and deferred Stage 3 results into a retirement ledger so future work does not repeat already-bounded tests without a new manifest and rationale.
+Stage 3Y summarizes noisy, negative, inconclusive, verified, and deferred Stage 3 results into `docs/roadmap/staged-plan.md` and `data/research/` ledgers so future work does not repeat already-bounded tests without a new manifest and rationale. It adds `libreprimus research-synthesis` validation, anti-drift coverage, and documentation freshness policy. No experiments are executed and no solve claim is made.
 
 ## Stage 3Z - Source-of-truth and newcomer map
 
-Expand the source-of-truth hierarchy into a concise newcomer map that points humans and Codex sessions to the right operational docs, research logs, schemas, and generated-output policies.
+Next stage: expand the source-of-truth hierarchy into a concise newcomer map that points humans and Codex sessions to the right operational docs, staged plan, research logs, schemas, and generated-output policies.
 
 ## Stage 4A - CPU batch transform API extraction
 

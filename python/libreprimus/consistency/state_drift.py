@@ -21,6 +21,7 @@ DEFAULT_OPERATIONAL_FILES = (
     "RESULTS_SCHEMA.md",
     "EXPERIMENTS.md",
     "TESTING.md",
+    "docs/roadmap/staged-plan.md",
     "pyproject.toml",
     "docker/README.md",
 )
@@ -126,6 +127,7 @@ def check_state_drift_consistency(
     status = texts.get("STATUS.md", "").lower()
     roadmap = texts.get("ROADMAP.md", "").lower()
     agents = texts.get("AGENTS.md", "").lower()
+    staged_plan = texts.get("docs/roadmap/staged-plan.md", "").lower()
     pyproject = texts.get("pyproject.toml", "").lower()
 
     _require_fact(
@@ -142,6 +144,25 @@ def check_state_drift_consistency(
         and ("anti-drift" in combined or "state consolidation" in combined),
         "STATUS, ROADMAP, and AGENTS record Stage 3W consolidation.",
         root / "STATUS.md",
+    )
+    _require_fact(
+        results,
+        "stage3x_complete",
+        "stage 3x" in staged_plan and "complete" in staged_plan,
+        "Staged plan records Stage 3X complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage3y_current_or_planned",
+        "stage 3y" in staged_plan
+        and (
+            "current" in staged_plan
+            or "in progress" in staged_plan
+            or "result synthesis" in staged_plan
+        ),
+        "Staged plan records Stage 3Y as current/planned result-synthesis work.",
+        root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
         results,
@@ -163,6 +184,13 @@ def check_state_drift_consistency(
         "cuda" in combined and "deferred" in combined,
         "CUDA is documented as deferred.",
         root / "CUDA_NOTES.md",
+    )
+    _require_fact(
+        results,
+        "staged_plan_cuda_deferred",
+        "cuda" in staged_plan and "deferred" in staged_plan,
+        "Staged plan records CUDA as deferred.",
+        root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
         results,
@@ -191,6 +219,23 @@ def check_state_drift_consistency(
         _has_line_with_terms(combined, ("page images", "not committed")),
         "Local page-image non-commit policy is documented.",
         root / "AGENTS.md",
+    )
+    _require_fact(
+        results,
+        "staged_plan_update_policy",
+        "update policy" in staged_plan and "direction-change policy" in staged_plan,
+        "Staged plan includes update and direction-change policy.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "discord_raw_logs_private_ignored",
+        "discord raw logs" in staged_plan
+        and "local" in staged_plan
+        and "private" in staged_plan
+        and "ignored" in staged_plan,
+        "Staged plan records Discord raw logs as local/private/ignored.",
+        root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
         results,

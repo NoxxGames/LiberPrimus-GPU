@@ -36,6 +36,7 @@ EXPECTED_GROUPS = {
     "discord-review",
     "discord-leads",
     "post-discord",
+    "research-synthesis",
     "stego",
     "solved-fixture",
 }
@@ -68,6 +69,7 @@ def test_stage3x_key_subcommands_preserved() -> None:
     assert "run-cookie-signed-variants" in group_commands["post-discord"]
     assert "run-gp-rune-verifier" in group_commands["post-discord"]
     assert "run-onion7-seed-pack" in group_commands["post-discord"]
+    assert "validate" in group_commands["research-synthesis"]
 
 
 def test_stage3x_help_commands_exit_zero() -> None:
@@ -80,6 +82,7 @@ def test_stage3x_help_commands_exit_zero() -> None:
         ["post-discord", "run-cookie-signed-variants", "--help"],
         ["post-discord", "run-gp-rune-verifier", "--help"],
         ["post-discord", "run-onion7-seed-pack", "--help"],
+        ["research-synthesis", "validate", "--help"],
     ]:
         result = runner.invoke(app, args)
         assert result.exit_code == 0, result.output

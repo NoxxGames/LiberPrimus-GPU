@@ -46,6 +46,7 @@ Stage 3X intentionally preserves the existing command names and options. This re
 - `discord-review`
 - `discord-leads`
 - `post-discord`
+- `research-synthesis`
 - `stego`
 - `solved-fixture`
 
@@ -59,5 +60,6 @@ Stage 3X tests explicitly cover:
 - `post-discord run-onion7-seed-pack`
 - `post-discord run-gp-rune-verifier`
 - `post-discord run-cookie-signed-variants`
+- `research-synthesis validate`
 
 Future command changes should update this file and the Stage 3X command-surface tests together.

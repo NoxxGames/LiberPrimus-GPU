@@ -15,6 +15,9 @@ try {
     Write-Host "Running state-drift consistency checks"
     & $Python -m libreprimus.cli consistency check-state-drift
 
+    Write-Host "Validating Stage 3Y research synthesis records"
+    & $Python -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

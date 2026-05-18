@@ -6,6 +6,10 @@
 source provenance, solved baselines, bounded CPU experiments, generated-output policy, and CI gates
 ahead of broader search or CUDA work.
 
+The durable staged plan lives at `docs/roadmap/staged-plan.md`. Stage 3Y adds result-synthesis
+records and a method-retirement ledger so noisy or negative methods are not widened without new
+source evidence.
+
 ## What It Is Not
 
 It is not a solve claim, raw corpus dump, Discord scraper, live Tor crawler, GPU hash-cracker, or
@@ -31,4 +35,5 @@ research reports unless copied into committed docs intentionally.
 ## Troubleshooting
 
 Run `.\.venv\Scripts\python.exe -m libreprimus.cli smoke` first. Then run the consistency suite
-before assuming a local environment issue is a code bug.
+and `libreprimus research-synthesis validate` before assuming a local environment issue is a code
+bug.

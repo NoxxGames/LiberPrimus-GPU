@@ -6,9 +6,11 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, post-Discord manifests, GP/rune claim records, image-transform records, and stego/OutGuess regression records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, and Stage 3Y research-synthesis ledgers.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
+
+Stage 3Y research-synthesis records under `data/research/` are committed source-of-truth metadata, not generated experiment outputs. They must keep `solve_claim=false`, record method-family status/reopen conditions, and preserve no-broadening guardrails for noisy, negative, inconclusive, deferred, or infrastructure-only families.
 
 ## Result record principles
 

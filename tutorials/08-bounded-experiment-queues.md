@@ -4,6 +4,10 @@
 
 Run policy-approved local CPU experiments without broadening into campaigns.
 
+Before adding or reopening an experiment family, check `docs/roadmap/staged-plan.md` and
+`data/research/method-retirement-records-v0.yaml`. Stage 3Y records which noisy, negative, or
+inconclusive families are blocked from widening without new source evidence.
+
 ## Commands
 
 ```powershell
@@ -76,3 +80,6 @@ If an Onion 7 run appears interesting, inspect the generated top candidates loca
 If a GP/rune claim is `missing_source_span`, improve source/span linking in a separate follow-up instead of searching neighbouring spans to make the claim true.
 
 If a cookie pack finds no exact match, record the negative result and move to a separately scoped manifest. Do not add strings or variants to a completed run after the fact.
+
+If a method family is retired or deprioritised, update the staged plan and method-retirement ledger
+before adding a new manifest.

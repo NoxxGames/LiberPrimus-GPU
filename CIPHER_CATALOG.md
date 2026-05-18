@@ -6,9 +6,11 @@ This catalog records planned transform families and the standards required befor
 
 ## Current Cipher Status
 
-After Stage 3V, the repository has solved-baseline CPU reference transforms, bounded experiment executors, and an OutGuess regression harness. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, or solve claims.
+After Stage 3Y, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, and a method-retirement ledger. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, or solve claims.
 
 Canonical corpus activation remains inactive and page boundaries remain reviewable.
+
+Method-family status and reopening conditions are now tracked in `data/research/method-family-status-records-v0.yaml` and `data/research/method-retirement-records-v0.yaml`. Noisy or negative families such as Caesar/affine widening, broad Vigenere/dictionary expansion, and cookie SHA-256 broadening must not be expanded without the recorded source-evidence conditions.
 
 ## Historical Stage 0A status
 

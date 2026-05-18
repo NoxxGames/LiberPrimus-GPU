@@ -13,6 +13,7 @@ git status --short
 git remote -v
 .\.venv\Scripts\python.exe -m libreprimus.cli smoke
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-state-drift
+.\.venv\Scripts\python.exe -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-all --allow-warnings
 ```
 
@@ -72,10 +73,22 @@ Run the focused checker:
 ```
 
 If it fails, update the operational source-of-truth files together: `STATUS.md`, `ROADMAP.md`,
-`AGENTS.md`, and `README.md`. Historical references in development logs and research logs do not
+`AGENTS.md`, `README.md`, and `docs/roadmap/staged-plan.md`. Historical references in development logs and research logs do not
 need to be rewritten, but current-state claims in long-lived docs must match the latest completed
 stage, canonical corpus inactive status, page-boundary review status, CUDA deferral, raw/generated
 output policy, Discord privacy, and no-solve-claim policy.
+
+## Research Synthesis Validation Fails
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md
+```
+
+If it fails, check that every method-family record has reopen and stop conditions, every retirement
+record references a method family, CUDA is still deferred, cookie SHA-256 broadening requires an
+explicit new source, and the staged plan still contains its update policy.
 
 ## CLI Command Missing After Refactor
 

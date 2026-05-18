@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/research/method-family-status-record-v0.schema.json",
+  "title": "Method Family Status Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "method_family_id",
+    "name",
+    "status",
+    "evidence_summary",
+    "completed_stage_refs",
+    "reopen_conditions",
+    "stop_conditions",
+    "next_action",
+    "solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "method_family_status_record" },
+    "method_family_id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "status": {
+      "enum": [
+        "active",
+        "promising",
+        "inconclusive",
+        "noisy",
+        "negative",
+        "retired",
+        "deferred",
+        "infrastructure_only"
+      ]
+    },
+    "evidence_summary": { "type": "string", "minLength": 1 },
+    "completed_stage_refs": { "type": "array", "items": { "type": "string" } },
+    "reopen_conditions": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "stop_conditions": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "next_action": { "type": "string", "minLength": 1 },
+    "solve_claim": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

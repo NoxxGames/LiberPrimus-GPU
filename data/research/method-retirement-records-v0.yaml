@@ -1,0 +1,75 @@
+record_set_id: method-retirement-records-v0
+schema: schemas/research/method-retirement-record-v0.schema.json
+records:
+  - record_type: method_retirement_record
+    method_family_id: caesar_affine
+    retired_status: deprioritised
+    reason: Bounded Caesar/affine experiments were noisy under calibrated scoring.
+    evidence: [Stage 3A-3J did not produce robust leads.]
+    stages_supporting: [stage-3a-3j]
+    reopen_conditions: [New source evidence constrains exact shift or affine parameters.]
+    prohibited_expansions: [Broad reranking, larger shift grids, unsourced route variants.]
+    notes: Keep as regression/null-control infrastructure.
+  - record_type: method_retirement_record
+    method_family_id: vigenere_lp_evidence_pack
+    retired_status: deprioritised
+    reason: Vigenere evidence packs were noisy and should not be expanded into dictionary search.
+    evidence: [Stage 3A-3J Vigenere packs did not produce robust leads.]
+    stages_supporting: [stage-3a-3j]
+    reopen_conditions: [Exact promoted key and target span from public source.]
+    prohibited_expansions: [Dictionary-scale keys, Discord-only phrases, unsourced motif lists.]
+    notes: Known-solved Vigenere fixtures remain baselines.
+  - record_type: method_retirement_record
+    method_family_id: vigenere_historical_motif_pack
+    retired_status: deprioritised
+    reason: Historical motif pack was noisy without exact source-key evidence.
+    evidence: [Bounded historical motif runs lacked strong calibrated candidates.]
+    stages_supporting: [stage-3a-3j]
+    reopen_conditions: [Historical source supplies exact key text and span.]
+    prohibited_expansions: [Community motif fishing, dictionary-scale expansion.]
+    notes: Treat as stopped unless new evidence appears.
+  - record_type: method_retirement_record
+    method_family_id: mersenne_perfect_number_probe
+    retired_status: deprioritised
+    reason: Tiny Mersenne/perfect-number probe was inconclusive and low priority.
+    evidence: [No robust lead emerged from the bounded numeric probe.]
+    stages_supporting: [stage-3a-3j]
+    reopen_conditions: [Exact image/source evidence ties a page span to Mersenne or perfect numbers.]
+    prohibited_expansions: [Broad number-family sweeps.]
+    notes: Preserve as a lesson in source anchoring.
+  - record_type: method_retirement_record
+    method_family_id: cookie_hash_sha256_packs
+    retired_status: active_with_constraints
+    reason: Tried SHA-256 packs had zero exact matches; expansion is blocked without explicit new strings.
+    evidence: [Stage 3L found zero exact matches, Stage 3U found zero exact matches.]
+    stages_supporting: [stage-3l, stage-3u]
+    reopen_conditions: [Explicit signed/public candidate string not already tested.]
+    prohibited_expansions: [Fuzzy matching, partial hashes, dictionary search, hashcat, GPU cracking, additional algorithms without a manifest.]
+    notes: Exact SHA-256 remains an artefact hypothesis, not a solve claim.
+  - record_type: method_retirement_record
+    method_family_id: onion7_explicit_seed_pack
+    retired_status: active_with_constraints
+    reason: Stage 3S was inconclusive; Onion 7 observations stay useful but route expansion is blocked.
+    evidence: [Stage 3S executed 72 candidates with inconclusive top confidence.]
+    stages_supporting: [stage-3s]
+    reopen_conditions: [New source constrains route, reset policy, or span.]
+    prohibited_expansions: [Speculative Fibonacci, Mobius, spiral, or route variants beyond manifest evidence.]
+    notes: Keep raw and derived Onion 7 values separated.
+  - record_type: method_retirement_record
+    method_family_id: outguess_regression_harness
+    retired_status: deferred
+    reason: Harness exists but local tool/assets were missing in Stage 3V.
+    evidence: [Stage 3V produced missing-tool/missing-asset-safe harness outputs.]
+    stages_supporting: [stage-3v]
+    reopen_conditions: [Source-locked historical OutGuess fixtures and local tool are available.]
+    prohibited_expansions: [Broad stego scans, meaning inference from non-empty payloads without expected hash.]
+    notes: Stage 4D should source-lock fixtures before expansion.
+  - record_type: method_retirement_record
+    method_family_id: cuda_gpu_acceleration
+    retired_status: deferred
+    reason: CUDA is intentionally delayed until CPU batch APIs, scorer consolidation, parity tests, and benchmarks exist.
+    evidence: [Project policy and Stage 3W anti-drift state keep CUDA deferred.]
+    stages_supporting: [stage-3w]
+    reopen_conditions: [Stage 4A CPU batch API and Stage 4B scorer consolidation are complete.]
+    prohibited_expansions: [GPU kernels without CPU reference, parity tests, and benchmark plan.]
+    notes: Stage 5A is planning and parity scaffolding only.

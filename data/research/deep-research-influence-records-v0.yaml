@@ -1,0 +1,48 @@
+record_set_id: deep-research-influence-records-v0
+schema: schemas/research/deep-research-influence-record-v0.schema.json
+records:
+  - record_type: deep_research_influence_record
+    report_id: original-liber-primus-gpu-research
+    report_title: Original Liber Primus GPU research report
+    influence_summary: Set the long-term GPU cryptanalysis ambition while reinforcing reproducibility and staged provenance.
+    direction_changes: [Keep GPU as future acceleration, not initial search authority.]
+    adopted_recommendations: [Build CPU references first, track manifests and outputs.]
+    rejected_recommendations: [No immediate broad CUDA campaign.]
+    affected_stages: [stage-0a-0e, stage-2a-2j, stage-5a]
+    notes: Raw report files remain outside committed source unless curated.
+  - record_type: deep_research_influence_record
+    report_id: cpu-method-backlog
+    report_title: CPU method and backlog report
+    influence_summary: Pushed the project toward bounded CPU method probes with explicit stop conditions.
+    direction_changes: [Prioritised CPU bounded execution and null controls over broad search.]
+    adopted_recommendations: [Run small manifests, record noisy outcomes.]
+    rejected_recommendations: [No unbounded skip-mask or dictionary campaign.]
+    affected_stages: [stage-2j, stage-3a-3j, stage-3y]
+    notes: Method-retirement records preserve the learned stop conditions.
+  - record_type: deep_research_influence_record
+    report_id: archive-image-onion
+    report_title: Archive, image, and Onion research report
+    influence_summary: Added source-locking, exact artefact metadata, visual observations, and Onion 7 numeric records as review material.
+    direction_changes: [Moved from loose image interpretation to deterministic source/observation records.]
+    adopted_recommendations: [Lock image metadata, separate raw and derived Onion 7 values.]
+    rejected_recommendations: [No OCR or visual interpretation as source truth.]
+    affected_stages: [stage-3k-3q, stage-3s]
+    notes: Visual outputs remain review aids only.
+  - record_type: deep_research_influence_record
+    report_id: discord-corroboration-triage
+    report_title: Discord corroboration and lead-triage reports
+    influence_summary: Established Discord as a private lead-discovery layer requiring public-source corroboration.
+    direction_changes: [Promote only public-source-backed claims and preserve negative controls.]
+    adopted_recommendations: [Create Stage 3R promotion records and first post-Discord manifests.]
+    rejected_recommendations: [No raw Discord publication, scraping, or Discord-only factual promotion.]
+    affected_stages: [stage-3n, stage-3q, stage-3r, stage-3s, stage-3t, stage-3u]
+    notes: Raw Discord logs remain ignored and private.
+  - record_type: deep_research_influence_record
+    report_id: independent-project-review
+    report_title: Independent project review
+    influence_summary: Recommended consolidation, CLI modularisation, and result synthesis before further experiment stages.
+    direction_changes: [Stage 3W, Stage 3X, and Stage 3Y became maintenance/source-of-truth stages.]
+    adopted_recommendations: [Anti-drift checks, CLI modularisation, method-retirement ledger.]
+    rejected_recommendations: [No new experiment before consolidation.]
+    affected_stages: [stage-3w, stage-3x, stage-3y]
+    notes: Deep Research reports in `deep-research-reports/` must not be staged.

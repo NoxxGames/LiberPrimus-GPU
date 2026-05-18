@@ -1,0 +1,48 @@
+record_set_id: project-direction-change-records-v0
+schema: schemas/research/project-direction-change-record-v0.schema.json
+records:
+  - record_type: project_direction_change_record
+    change_id: cpu-before-cuda
+    date_or_stage: stage-0a-through-stage-3w
+    previous_direction: GPU cryptanalysis ambition.
+    new_direction: CPU reference implementations, parity plans, and benchmark requirements before CUDA implementation.
+    reason: Correctness and provenance are prerequisites for meaningful acceleration.
+    source: Original GPU research report and project policy.
+    affected_docs: [CUDA_NOTES.md, AGENTS.md, ROADMAP.md, docs/roadmap/staged-plan.md]
+    notes: CUDA remains deferred.
+  - record_type: project_direction_change_record
+    change_id: broad-search-to-bounded-manifests
+    date_or_stage: stage-2j
+    previous_direction: Potential broad local method runs.
+    new_direction: Operator-policy-bounded manifests with stop conditions and ignored outputs.
+    reason: Prevent uncontrolled experiments and preserve reproducibility.
+    source: CPU method/backlog report and Stage 2J policy.
+    affected_docs: [EXPERIMENTS.md, TESTING.md, docs/roadmap/staged-plan.md]
+    notes: New experiments require manifests and policy checks.
+  - record_type: project_direction_change_record
+    change_id: discord-to-lead-discovery-only
+    date_or_stage: stage-3r
+    previous_direction: Discord bundle review as raw local research context.
+    new_direction: Discord-derived leads are hypotheses until corroborated by public sources or exact artefacts.
+    reason: Privacy and evidence hygiene require public-source promotion only.
+    source: Discord corroboration and triage reports.
+    affected_docs: [AGENTS.md, EXPERIMENTS.md, docs/roadmap/staged-plan.md]
+    notes: Raw logs remain ignored and uncommitted.
+  - record_type: project_direction_change_record
+    change_id: visual-review-not-source-truth
+    date_or_stage: stage-3k-through-stage-3q
+    previous_direction: Visual observations could tempt interpretation-heavy follow-up.
+    new_direction: Deterministic image observations are review aids unless source-locked and exact.
+    reason: Avoid OCR/AI/pareidolia-driven source claims.
+    source: Archive/image/onion research report.
+    affected_docs: [CIPHER_CATALOG.md, EXPERIMENTS.md, docs/roadmap/staged-plan.md]
+    notes: Raw page images remain ignored.
+  - record_type: project_direction_change_record
+    change_id: consolidation-before-new-experiments
+    date_or_stage: stage-3w-through-stage-3y
+    previous_direction: Continue new post-Discord experiments.
+    new_direction: Consolidate persistent docs, modularise CLI, and record method retirement before new experiments.
+    reason: Independent review found context drift and accumulated negative/noisy method history.
+    source: Independent project review.
+    affected_docs: [STATUS.md, ROADMAP.md, AGENTS.md, docs/roadmap/staged-plan.md]
+    notes: Stage 3Z should improve newcomer/source-of-truth maps.

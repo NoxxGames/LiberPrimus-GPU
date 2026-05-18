@@ -1,0 +1,190 @@
+record_set_id: method-family-status-records-v0
+schema: schemas/research/method-family-status-record-v0.schema.json
+records:
+  - record_type: method_family_status_record
+    method_family_id: caesar_affine
+    name: Caesar and affine shifts
+    status: noisy
+    evidence_summary: Stage 3A-3J bounded runs did not produce robust calibrated leads.
+    completed_stage_refs: [stage-3a-3j]
+    reopen_conditions: [New public source evidence identifies a specific shift or affine parameter family.]
+    stop_conditions: [Do not widen shift grids or rerank without new source evidence.]
+    next_action: Keep as solved-baseline and null-control infrastructure only.
+    solve_claim: false
+    notes: Noisy, not retired from regression use.
+  - record_type: method_family_status_record
+    method_family_id: reverse_reranked_affine
+    name: Reverse and reranked affine/Caesar variants
+    status: noisy
+    evidence_summary: Reverse and reranking variants remained noisy.
+    completed_stage_refs: [stage-3a-3j]
+    reopen_conditions: [Exact source note specifies reversal or reranking semantics.]
+    stop_conditions: [Do not iterate route/order variants without source anchor.]
+    next_action: Preserve as negative-control comparison.
+    solve_claim: false
+    notes: Avoid variant fishing.
+  - record_type: method_family_status_record
+    method_family_id: vigenere_tiny_motif
+    name: Small motif Vigenere
+    status: noisy
+    evidence_summary: Small motif keys did not generate strong candidates.
+    completed_stage_refs: [stage-3a-3j]
+    reopen_conditions: [Source-locked key or exact motif-to-key derivation appears.]
+    stop_conditions: [Do not expand key lists from vibes, Discord-only claims, or dictionaries.]
+    next_action: Deprioritise.
+    solve_claim: false
+    notes: Keep known-solved Vigenere fixtures separate.
+  - record_type: method_family_status_record
+    method_family_id: vigenere_lp_evidence_pack
+    name: LP evidence Vigenere pack
+    status: noisy
+    evidence_summary: LP-evidence key pack remained noisy under calibrated scoring.
+    completed_stage_refs: [stage-3a-3j]
+    reopen_conditions: [A promoted source record supplies exact key text or boundary.]
+    stop_conditions: [No dictionary-scale expansion.]
+    next_action: Deprioritise.
+    solve_claim: false
+    notes: Exact-key solved fixtures remain active as regression tests.
+  - record_type: method_family_status_record
+    method_family_id: vigenere_historical_motif_pack
+    name: Historical motif Vigenere pack
+    status: noisy
+    evidence_summary: Historical motif pack did not produce robust leads.
+    completed_stage_refs: [stage-3a-3j]
+    reopen_conditions: [Historical source supplies exact key and span.]
+    stop_conditions: [Do not treat community motif lists as key authority.]
+    next_action: Keep stopped.
+    solve_claim: false
+    notes: No broad Vigenere campaign.
+  - record_type: method_family_status_record
+    method_family_id: p56_local_prime_offsets
+    name: p56-local prime offset sweeps
+    status: inconclusive
+    evidence_summary: Local prime-offset sweeps were noisy/inconclusive.
+    completed_stage_refs: [stage-3a-3j]
+    reopen_conditions: [Promoted source evidence identifies exact offset, sequence, or span.]
+    stop_conditions: [Do not broaden offset windows without a source anchor.]
+    next_action: Low priority.
+    solve_claim: false
+    notes: p56 known-solved fixtures remain regression baselines.
+  - record_type: method_family_status_record
+    method_family_id: reset_advance_ablation
+    name: Reset and advance ablation
+    status: infrastructure_only
+    evidence_summary: Experiment results were noisy, but the ablation framework is useful for future bounded checks.
+    completed_stage_refs: [stage-3a-3j]
+    reopen_conditions: [Future manifest has exact reset or separator policy to verify.]
+    stop_conditions: [Do not run broad reset/advance matrices.]
+    next_action: Preserve infrastructure.
+    solve_claim: false
+    notes: Useful for controlled comparisons only.
+  - record_type: method_family_status_record
+    method_family_id: mersenne_perfect_number_probe
+    name: Mersenne/perfect-number tiny probe
+    status: inconclusive
+    evidence_summary: Tiny numeric probe was inconclusive and low priority.
+    completed_stage_refs: [stage-3a-3j]
+    reopen_conditions: [Image/source evidence explicitly links the page to Mersenne or perfect numbers.]
+    stop_conditions: [Do not expand numeric families without source evidence.]
+    next_action: Defer.
+    solve_claim: false
+    notes: Keep as negative-control lesson.
+  - record_type: method_family_status_record
+    method_family_id: onion7_explicit_seed_pack
+    name: Onion 7 explicit seed pack
+    status: inconclusive
+    evidence_summary: Stage 3S ran 72 manifest-bounded candidates; top confidence was inconclusive.
+    completed_stage_refs: [stage-3s]
+    reopen_conditions: [New source observation constrains route, reset, or target span.]
+    stop_conditions: [Do not add speculative Fibonacci, Mobius, spiral, or route variants beyond manifest evidence.]
+    next_action: Preserve source observation and avoid widening.
+    solve_claim: false
+    notes: Onion 7 numeric tables remain source-supported observations.
+  - record_type: method_family_status_record
+    method_family_id: cookie_hash_sha256_packs
+    name: Cookie SHA-256 preimage packs
+    status: negative
+    evidence_summary: Stage 3L broader initial packs and Stage 3U signed/public exact pack produced zero exact SHA-256 matches.
+    completed_stage_refs: [stage-3l, stage-3u]
+    reopen_conditions: [Explicit new public/signed candidate string source.]
+    stop_conditions: [No fuzzy, partial, dictionary-scale, hashcat, GPU, or non-SHA-256 broadening without explicit new source and explicit instruction.]
+    next_action: Retain negative result and stop expansion.
+    solve_claim: false
+    notes: Exact match would be an artefact lead only, not a solve.
+  - record_type: method_family_status_record
+    method_family_id: gp_rune_claim_verifier
+    name: GP/rune claim verifier
+    status: active
+    evidence_summary: Stage 3T verified 23 of 25 exact claims and quarantined unsupported/malformed claims.
+    completed_stage_refs: [stage-3t]
+    reopen_conditions: [More exact promoted claims with locked source spans.]
+    stop_conditions: [No neighbouring-span search to force claims true.]
+    next_action: Keep available for exact claim verification.
+    solve_claim: false
+    notes: Evidence-hygiene tool, not a search.
+  - record_type: method_family_status_record
+    method_family_id: deterministic_image_analysis
+    name: Deterministic image analysis
+    status: infrastructure_only
+    evidence_summary: Image dimensions and deterministic observations support review, not plaintext claims.
+    completed_stage_refs: [stage-3k-3q]
+    reopen_conditions: [Source-locked artefact metadata or exact visual observation requires deterministic verification.]
+    stop_conditions: [No OCR, AI/ML, pareidolia, or broad image interpretation as source truth.]
+    next_action: Maintain review-aid tooling.
+    solve_claim: false
+    notes: Raw page images remain ignored.
+  - record_type: method_family_status_record
+    method_family_id: image_transform_suite
+    name: Image transform suite
+    status: infrastructure_only
+    evidence_summary: Deterministic transforms are useful for review but do not establish hidden-message evidence alone.
+    completed_stage_refs: [stage-3p]
+    reopen_conditions: [Specific manifest lists exact artefact and transform.]
+    stop_conditions: [Do not run broad filter sweeps.]
+    next_action: Keep bounded.
+    solve_claim: false
+    notes: No visual solve claims.
+  - record_type: method_family_status_record
+    method_family_id: discord_ingestion_review
+    name: Discord ingestion and review
+    status: infrastructure_only
+    evidence_summary: Stage 3N-3Q created raw-log-free review infrastructure for local lead discovery.
+    completed_stage_refs: [stage-3n, stage-3q]
+    reopen_conditions: [Need for redacted local review bundles under existing privacy policy.]
+    stop_conditions: [Do not publish raw logs, usernames, message IDs, or private URLs.]
+    next_action: Keep as private/ignored discovery layer.
+    solve_claim: false
+    notes: Discord-only claims are not facts.
+  - record_type: method_family_status_record
+    method_family_id: discord_lead_promotion
+    name: Discord lead promotion
+    status: active
+    evidence_summary: Stage 3R promoted only public-source-corroborated leads and preserved negative controls.
+    completed_stage_refs: [stage-3r]
+    reopen_conditions: [New redacted lead maps to public URL, exact artefact, or pinned repository record.]
+    stop_conditions: [Quarantine Discord-only, private, identity-bearing, speculative, or unsafe claims.]
+    next_action: Reuse policy when new source-review work appears.
+    solve_claim: false
+    notes: Public-source corroboration decides promotion.
+  - record_type: method_family_status_record
+    method_family_id: outguess_regression_harness
+    name: OutGuess regression harness
+    status: infrastructure_only
+    evidence_summary: Stage 3V added a deterministic harness; local run had missing tool/assets.
+    completed_stage_refs: [stage-3v]
+    reopen_conditions: [Source-locked historical fixtures and local OutGuess tool are available.]
+    stop_conditions: [Do not run broad stego scans or infer meaning from non-empty payloads without expected hash.]
+    next_action: Stage 4D source-lock fixture pack.
+    solve_claim: false
+    notes: Missing tool/assets are valid skips.
+  - record_type: method_family_status_record
+    method_family_id: cuda_gpu_acceleration
+    name: CUDA/GPU acceleration
+    status: deferred
+    evidence_summary: CUDA remains deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
+    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w]
+    reopen_conditions: [CPU batch transform API, scorer consolidation, parity plan, and benchmark plan are complete.]
+    stop_conditions: [No GPU kernels before CPU reference behaviour and parity tests.]
+    next_action: Stage 5A planning and parity scaffolding only.
+    solve_claim: false
+    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise.

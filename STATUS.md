@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3X CLI modularisation without behavior change is complete.
+Stage 3Y result synthesis, staged plan, and method-retirement ledger is complete.
 
 ## Completed in Stage 0A
 
@@ -18,7 +18,15 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, Stage 3Q generates ignored redacted Discord topic shards only, Stage 3R promotes corroborated leads and creates disabled manifests only, Stage 3S executes only the bounded Onion 7 explicit seed-pack manifest, Stage 3T executes only the bounded GP/rune claim verifier, Stage 3U executes only the bounded cookie SHA-256 signed-variant pack, Stage 3V adds an OutGuess regression harness without broad stego scanning, Stage 3W adds state-drift checks without new experiment execution, and Stage 3X modularises CLI command registration without behavior changes.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, Stage 3Q generates ignored redacted Discord topic shards only, Stage 3R promotes corroborated leads and creates disabled manifests only, Stage 3S executes only the bounded Onion 7 explicit seed-pack manifest, Stage 3T executes only the bounded GP/rune claim verifier, Stage 3U executes only the bounded cookie SHA-256 signed-variant pack, Stage 3V adds an OutGuess regression harness without broad stego scanning, Stage 3W adds state-drift checks without new experiment execution, Stage 3X modularises CLI command registration without behavior changes, and Stage 3Y adds result synthesis and method-retirement records without new experiment execution.
+
+## Completed in Stage 3Y
+
+Stage 3Y added `docs/roadmap/staged-plan.md`, research synthesis schemas and records under `data/research/`, a method-family status ledger, a method-retirement/deprioritisation ledger, Deep Research influence records, direction-change records, `libreprimus research-synthesis` validation commands, anti-drift integration, and documentation freshness policy.
+
+No experiments were executed. No raw data, generated outputs, raw Discord logs, raw page images, raw historical stego artefacts, extracted payloads, local deep-research reports, SQLite outputs, CUDA changes, canonical corpus activation, page-boundary finalization, or solve claims were introduced.
+
+Developer log: `docs/development-logs/2026-05-18-stage-3y-result-synthesis-method-retirement.md`.
 
 ## Completed in Stage 3X
 

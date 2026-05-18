@@ -1,0 +1,203 @@
+record_set_id: stage-summary-records-v0
+schema: schemas/research/stage-summary-record-v0.schema.json
+records:
+  - record_type: stage_summary_record
+    stage_id: stage-0a-0e
+    title: Source/profile/corpus candidate foundations
+    status: complete
+    category: infrastructure
+    summary: Established source, profile, separator, transcript, and corpus-candidate foundations without activating a canonical corpus.
+    key_outputs:
+      - Gematria Primus profile and separator grammar.
+      - Non-canonical corpus candidate infrastructure.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Legacy source material remains non-canonical unless promoted later.
+  - record_type: stage_summary_record
+    stage_id: stage-1a-1d
+    title: Solved-page fixture baselines
+    status: complete
+    category: baseline
+    summary: Added direct, Atbash-family, Vigenere, and prime-stream solved-page fixtures as regression baselines.
+    key_outputs:
+      - Ten solved baselines.
+      - Known-solved fixture reproduction tests.
+    result_status: baseline
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Fixtures are regression evidence, not new solve claims.
+  - record_type: stage_summary_record
+    stage_id: stage-2a-2j
+    title: Bounded execution infrastructure
+    status: complete
+    category: infrastructure
+    summary: Added transform registry, result store, CI, dry-runs, approval gates, bounded execution, and operator policy.
+    key_outputs:
+      - CPU reference transform registry.
+      - Result-store schemas and ignored output policy.
+      - Bounded operator policy.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Generated SQLite/result outputs remain ignored.
+  - record_type: stage_summary_record
+    stage_id: stage-3a-3j
+    title: Bounded text, numeric, hash, and ablation experiments
+    status: complete
+    category: experiment
+    summary: Ran bounded CPU experiments over Caesar/affine, Vigenere, prime offsets, reset/advance ablations, and small numeric probes.
+    key_outputs:
+      - Calibrated scoring infrastructure.
+      - Mostly noisy, inconclusive, or negative method-family outcomes.
+    result_status: noisy_or_inconclusive
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Do not widen these families without new source evidence.
+  - record_type: stage_summary_record
+    stage_id: stage-3k-3q
+    title: Archive, image, Discord, and visual review infrastructure
+    status: complete
+    category: source_review
+    summary: Added source/archive records, image locks, visual observations, Discord ingestion/review, and review bundles.
+    key_outputs:
+      - Public-source promotion foundation.
+      - Raw-log-free Discord review bundles.
+      - Deterministic visual-review records.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Discord is lead discovery only; raw logs remain private/ignored.
+  - record_type: stage_summary_record
+    stage_id: stage-3r
+    title: Discord lead promotion and post-Discord queue
+    status: complete
+    category: source_review
+    summary: Promoted only public-source-corroborated Discord-derived leads and created disabled manifests for the first post-Discord queue.
+    key_outputs:
+      - Promoted source and observation records.
+      - Negative-control records.
+      - EXP-3R-001, EXP-3R-003, and EXP-3R-004 manifests.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: No raw Discord text was committed.
+  - record_type: stage_summary_record
+    stage_id: stage-3s
+    title: Onion 7 explicit seed pack
+    status: complete
+    category: experiment
+    summary: Executed EXP-3R-003 over explicit Onion 7 numeric streams.
+    key_outputs:
+      - 72 executed candidates.
+      - Top confidence label was inconclusive.
+    result_status: inconclusive
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Onion 7 observation remains valuable, but the seed pack is not a solve.
+  - record_type: stage_summary_record
+    stage_id: stage-3t
+    title: GP/rune claim verifier
+    status: complete
+    category: verification
+    summary: Executed EXP-3R-004 and recomputed promoted GP/rune claims against locked data.
+    key_outputs:
+      - 25 claims executed.
+      - 23 verified and 2 unsupported/malformed.
+    result_status: useful_verification
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Verification must not search neighbouring spans to make claims true.
+  - record_type: stage_summary_record
+    stage_id: stage-3u
+    title: Cookie SHA-256 signed-variant pack
+    status: complete
+    category: experiment
+    summary: Executed EXP-3R-001 exact SHA-256 signed/public string pack against two archived cookie artefacts.
+    key_outputs:
+      - 105 deduplicated candidates.
+      - 210 exact SHA-256 comparisons.
+      - 0 exact matches.
+    result_status: negative
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Do not broaden cookie hashes without explicit new candidate source strings.
+  - record_type: stage_summary_record
+    stage_id: stage-3v
+    title: OutGuess regression harness
+    status: complete
+    category: infrastructure
+    summary: Added OutGuess detection, manifest validation, missing-tool/missing-asset skip handling, and fake-tool tests.
+    key_outputs:
+      - Stego schemas and manifests.
+      - Raw-data-free OutGuess wrapper.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Tool and historical assets still need local setup/source-locking.
+  - record_type: stage_summary_record
+    stage_id: stage-3w
+    title: State consolidation and anti-drift
+    status: complete
+    category: maintenance
+    summary: Updated persistent docs and added state-drift checks to prevent stale project context.
+    key_outputs:
+      - Source-of-truth hierarchy doc.
+      - Anti-drift consistency checks.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Persistent project context is treated as architecture.
+  - record_type: stage_summary_record
+    stage_id: stage-3x
+    title: CLI modularisation
+    status: complete
+    category: maintenance
+    summary: Split command registration into domain modules while preserving command names, options, and behavior.
+    key_outputs:
+      - Thin public `python -m libreprimus.cli` entrypoint.
+      - Command-surface tests.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: No experiment behaviour changed.
+  - record_type: stage_summary_record
+    stage_id: stage-3y
+    title: Result synthesis and method-retirement ledger
+    status: current
+    category: maintenance
+    summary: Converts accumulated stage history into durable staged-plan, method-family, retirement, influence, and direction-change records.
+    key_outputs:
+      - Staged plan.
+      - Method-retirement ledger.
+      - Research-synthesis validation CLI.
+    result_status: source_of_truth_update
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: No experiments are executed in Stage 3Y.

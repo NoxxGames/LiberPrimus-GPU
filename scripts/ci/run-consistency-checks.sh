@@ -14,6 +14,9 @@ echo "Running full consistency suite"
 echo "Running state-drift consistency checks"
 "$python_bin" -m libreprimus.cli consistency check-state-drift
 
+echo "Validating Stage 3Y research synthesis records"
+"$python_bin" -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 
