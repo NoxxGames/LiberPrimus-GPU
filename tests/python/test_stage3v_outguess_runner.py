@@ -28,7 +28,7 @@ def test_stage3v_missing_tool_is_skipped(tmp_path: Path) -> None:
 
 
 def test_stage3v_missing_asset_is_skipped_with_fake_tool(tmp_path: Path) -> None:
-    tool = _fake_outguess(tmp_path, payload=b"payload\n")
+    tool = _fake_outguess(tmp_path, payload=_fake_payload_bytes())
     artifacts, manifest = _write_fixture_files(tmp_path, local_path=tmp_path / "missing.jpg")
 
     summary = run_outguess_regression(
