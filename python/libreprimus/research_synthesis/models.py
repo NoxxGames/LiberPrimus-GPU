@@ -41,6 +41,7 @@ REQUIRED_METHOD_FAMILIES = {
     "observation_review_workflow",
     "observation_promotion_ledger",
     "image_source_variant_compression_preflight",
+    "stego_audio_positive_control_readiness",
     "source_lock_snapshots",
     "scoring_consolidation",
     "deterministic_image_analysis",

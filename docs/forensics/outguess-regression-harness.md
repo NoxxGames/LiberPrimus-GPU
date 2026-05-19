@@ -8,6 +8,10 @@ It does not scan all Liber Primus images, run other stego tools, infer hidden me
 
 Stage 4F adds fixture source-lock metadata for future OutGuess/audio work. These records identify candidate public paths and toolchain requirements only; they do not provide local assets, execute OutGuess, run OpenPuff/MP3Stego, or interpret payloads.
 
+Stage 4N adds a readiness layer above the Stage 3V harness. It records which historical OutGuess
+candidates still need cached assets, expected output hashes, and available toolchains before any
+future harness execution can be trusted. Stage 4N itself does not invoke OutGuess.
+
 ## Paths
 
 - Artefact metadata: `data/observations/stego/outguess-artifacts-v0.yaml`

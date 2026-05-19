@@ -135,6 +135,12 @@ If a Stage 4M image-preflight build leaves `image_metadata.jsonl`, `compression_
 `warnings.jsonl`, do not stage them. Commit only the YAML preflight/readiness records, schemas,
 code, docs, tests, and research logs. Raw LP images and `data/raw/images/Fib421.jpg` remain ignored.
 
+If a Stage 4N stego/audio positive-control build leaves `readiness_report.json`,
+`cache_report.json`, `toolchain_report.json`, or `warnings.jsonl`, do not stage them. Commit only
+the YAML readiness/cache/expected-output/toolchain/summary records, schemas, code, docs, tests, and
+research logs. Ignored cache files under `third_party/StegoPositiveControls/`, historical fixture
+artefacts, and extracted payloads remain outside Git.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 
@@ -157,8 +163,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 4L, onboarding and staged-plan checks should show Stage 4L complete and Stage 4M image
-source-variant and compression preflight next.
+After Stage 4N, onboarding and staged-plan checks should show Stage 4N complete and Stage 4O CPU
+batch adapter expansion next.
 
 If path sanitisation fails, run:
 

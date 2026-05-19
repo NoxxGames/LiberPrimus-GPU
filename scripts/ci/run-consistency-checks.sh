@@ -129,6 +129,15 @@ echo "Validating Stage 4M image preflight records"
     --summary data/observations/visual/stage4m-image-preflight-summary.yaml \
     --bigram-readiness data/observations/review/stage4m-bigram-frequency-pattern-readiness.yaml
 
+echo "Validating Stage 4N stego/audio positive-control records"
+"$python_bin" -m libreprimus.cli stego-positive-controls validate \
+    --outguess-readiness data/observations/stego/stage4n-outguess-positive-control-readiness.yaml \
+    --audio-readiness data/observations/stego/stage4n-audio-positive-control-readiness.yaml \
+    --fixture-cache data/observations/stego/stage4n-fixture-cache-records.yaml \
+    --expected-output data/observations/stego/stage4n-expected-output-records.yaml \
+    --toolchain data/observations/stego/stage4n-toolchain-readiness.yaml \
+    --summary data/observations/stego/stage4n-positive-control-summary.yaml
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

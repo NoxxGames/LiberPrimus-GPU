@@ -1,0 +1,38 @@
+record_type: stego_positive_control_summary
+stage: stage4n
+outguess_readiness_records_count: 11
+audio_readiness_records_count: 5
+fixture_cache_records_count: 16
+expected_output_records_count: 16
+toolchain_readiness_records_count: 7
+historical_fixtures_ready_count: 0
+historical_fixtures_blocked_count: 8
+synthetic_controls_ready_count: 2
+ready_state_counts:
+  reference_only: 6
+  blocked_expected_output_unknown: 8
+  synthetic_ready: 2
+toolchain_availability_summary:
+  outguess: outguess_missing
+  openpuff: openpuff_manual_required
+  mp3stego: mp3stego_manual_required
+  hexdump/strings: hexdump_strings_available
+  certutil: not_applicable
+  audio_rendering: not_applicable
+  synthetic_control: audio_tools_not_required
+generated_outputs_committed: false
+raw_cache_staged: false
+raw_file_committed: false
+binary_committed: false
+image_committed: false
+audio_committed: false
+font_committed: false
+archive_committed: false
+extracted_payload_committed: false
+solve_claim: false
+execution_performed: false
+tool_executed: false
+source_health_records_loaded: 10
+toolchain_requirement_records_loaded: 5
+source_lock_records_loaded: 15
+manifest_readiness_records_loaded: 13

@@ -136,6 +136,15 @@ try {
         --summary data/observations/visual/stage4m-image-preflight-summary.yaml `
         --bigram-readiness data/observations/review/stage4m-bigram-frequency-pattern-readiness.yaml
 
+    Write-Host "Validating Stage 4N stego/audio positive-control records"
+    & $Python -m libreprimus.cli stego-positive-controls validate `
+        --outguess-readiness data/observations/stego/stage4n-outguess-positive-control-readiness.yaml `
+        --audio-readiness data/observations/stego/stage4n-audio-positive-control-readiness.yaml `
+        --fixture-cache data/observations/stego/stage4n-fixture-cache-records.yaml `
+        --expected-output data/observations/stego/stage4n-expected-output-records.yaml `
+        --toolchain data/observations/stego/stage4n-toolchain-readiness.yaml `
+        --summary data/observations/stego/stage4n-positive-control-summary.yaml
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

@@ -299,13 +299,24 @@ records:
     solve_claim: false
     notes: Compression/star-like artefacts and numeric pattern screenshots are review-only until controlled against source variants and nulls.
   - record_type: method_family_status_record
+    method_family_id: stego_audio_positive_control_readiness
+    name: Stego/audio positive-control readiness
+    status: infrastructure_only
+    evidence_summary: Stage 4N records historical OutGuess/audio fixture readiness, ignored-cache policy, expected-output requirements, toolchain availability, and synthetic controls without executing tools or committing artefacts.
+    completed_stage_refs: [stage-3v, stage-4f, stage-4k, stage-4l, stage-4n]
+    reopen_conditions: [A future explicit execution stage has cached or immutable assets, exact expected-output hashes, documented toolchain availability, and bounded positive/negative manifests.]
+    stop_conditions: [Do not run historical stego/audio tools, commit raw artefacts or extracted payloads, treat source-only metadata as execution-ready, skip expected-output controls, or use positive-control readiness as solve evidence.]
+    next_action: Stage 4O CPU batch adapter expansion can proceed while historical stego/audio execution remains deferred.
+    solve_claim: false
+    notes: Synthetic controls can be readiness-complete without historical artefacts; historical fixtures remain blocked until asset, expected-output, and toolchain blockers are cleared.
+  - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred
-    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, Stage 4L adds the promotion ledger, and Stage 4M adds image preflight records, but parity tests and benchmarks are still required before GPU kernels are trusted.
-    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l, stage-4m]
-    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, image-preflight controls, transform-and-score parity tests, and benchmark plan are complete.]
+    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, Stage 4L adds the promotion ledger, Stage 4M adds image preflight records, and Stage 4N records stego/audio readiness blockers, but parity tests and benchmarks are still required before GPU kernels are trusted.
+    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l, stage-4m, stage-4n]
+    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, image-preflight controls, positive-control readiness records, transform-and-score parity tests, and benchmark plan are complete.]
     stop_conditions: [No GPU kernels before CPU reference behaviour and parity tests.]
     next_action: First future CUDA target is batch transform-and-score parity after source-lock/review workflows and explicit CUDA planning.
     solve_claim: false
-    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H through Stage 4M did not add CUDA code.
+    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H through Stage 4N did not add CUDA code.

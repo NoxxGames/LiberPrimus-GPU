@@ -439,3 +439,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 4M scanned 58 ignored local LP page images for metadata and metrics only, wrote no raw images or visualisations, and kept image artefacts and bigram patterns review-only.
+  - record_type: stage_summary_record
+    stage_id: stage-4n
+    title: OutGuess/audio positive-control completion
+    status: complete
+    category: infrastructure
+    summary: Recorded OutGuess/audio positive-control readiness, fixture-cache status, expected-output requirements, toolchain readiness, and synthetic controls without executing historical stego/audio tools.
+    key_outputs:
+      - "`libreprimus stego-positive-controls` CLI for build, validate, and summary."
+      - OutGuess readiness, audio readiness, fixture-cache, expected-output, toolchain, and positive-control summary records.
+      - Synthetic positive and negative controls ready for CI-safe readiness checks while historical fixtures remain blocked until assets, expected outputs, and toolchains are ready.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 4N wrote 11 OutGuess readiness records, 5 audio readiness records, 16 cache records, 16 expected-output records, 7 toolchain records, 0 historical execution-ready fixtures, 8 blocked historical fixtures, and 2 synthetic-ready controls.

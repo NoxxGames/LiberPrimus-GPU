@@ -410,3 +410,17 @@ experiments/results/image-preflight/**
 !experiments/results/image-preflight/.gitkeep
 !experiments/results/image-preflight/stage4m/
 !experiments/results/image-preflight/stage4m/.gitkeep
+
+# Local ignored stego/audio positive-control fixture cache
+third_party/StegoPositiveControls/**
+!third_party/StegoPositiveControls/
+!third_party/StegoPositiveControls/README.md
+!third_party/StegoPositiveControls/.gitkeep
+
+# Generated stego/audio positive-control readiness reports
+experiments/results/stego-positive-controls/**
+!experiments/results/stego-positive-controls/
+!experiments/results/stego-positive-controls/README.md
+!experiments/results/stego-positive-controls/.gitkeep
+!experiments/results/stego-positive-controls/stage4n/
+!experiments/results/stego-positive-controls/stage4n/.gitkeep

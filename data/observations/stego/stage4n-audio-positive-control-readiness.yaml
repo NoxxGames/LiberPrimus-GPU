@@ -1,0 +1,169 @@
+record_set_id: stage4n-audio-positive-control-readiness
+schema: schemas/stego/audio-positive-control-readiness-v0.schema.json
+records:
+- record_type: audio_positive_control_readiness
+  readiness_id: stage4n-readiness-stage4f-iddqd-interconnectedness-mp3
+  source_record_id: stage4f-iddqd-interconnectedness-mp3
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2014/05/3301%20-%20Interconnectedness.mp3
+  source_path: 2014/05/3301 - Interconnectedness.mp3
+  source_lock_status: commit_address_locked
+  source_lock_record_id: stage4k-stage4f-iddqd-interconnectedness-mp3
+  canonical_url: https://github.com/cicada-solvers/iddqd/blob/0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07/2014/05/3301
+    - Interconnectedness.mp3
+  fixture_category: openpuff_interconnectedness_candidate
+  ready_state: blocked_expected_output_unknown
+  blockers:
+  - asset_not_cached
+  - expected_output_unknown
+  - toolchain_not_ready
+  cache_record_id: stage4n-cache-stage4f-iddqd-interconnectedness-mp3
+  expected_output_id: stage4n-expected-stage4f-iddqd-interconnectedness-mp3
+  expected_output_required: true
+  expected_output_hash: null
+  toolchain_states:
+  - openpuff_manual_required
+  - not_applicable
+  - hexdump_strings_available
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Interconnectedness MP3 fixture candidate; future source-lock only before
+    any analysis.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: audio_positive_control_readiness
+  readiness_id: stage4n-readiness-stage4f-iddqd-761-mp3-instar
+  source_record_id: stage4f-iddqd-761-mp3-instar
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2013/02/761.MP3
+  source_path: 2013/02/761.MP3
+  source_lock_status: commit_address_locked
+  source_lock_record_id: stage4k-stage4f-iddqd-761-mp3-instar
+  canonical_url: https://github.com/cicada-solvers/iddqd/blob/0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07/2013/02/761.MP3
+  fixture_category: mp3_instar_candidate
+  ready_state: blocked_expected_output_unknown
+  blockers:
+  - asset_not_cached
+  - expected_output_unknown
+  - toolchain_not_ready
+  cache_record_id: stage4n-cache-stage4f-iddqd-761-mp3-instar
+  expected_output_id: stage4n-expected-stage4f-iddqd-761-mp3-instar
+  expected_output_required: true
+  expected_output_hash: null
+  toolchain_states:
+  - mp3stego_manual_required
+  - not_applicable
+  - hexdump_strings_available
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Instar-era MP3 fixture candidate; metadata only in Stage 4F.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: audio_positive_control_readiness
+  readiness_id: stage4n-readiness-stage4f-uncovering-instar-emergence-page
+  source_record_id: stage4f-uncovering-instar-emergence-page
+  source_url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem)
+  source_path: Instar emergence source page
+  source_lock_status: fetch_failed
+  source_lock_record_id: stage4k-stage4b-uncovering-instar-emergence
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem)
+  fixture_category: mp3_instar_candidate
+  ready_state: blocked_expected_output_unknown
+  blockers:
+  - asset_not_cached
+  - expected_output_unknown
+  - toolchain_not_ready
+  cache_record_id: stage4n-cache-stage4f-uncovering-instar-emergence-page
+  expected_output_id: stage4n-expected-stage4f-uncovering-instar-emergence-page
+  expected_output_required: true
+  expected_output_hash: null
+  toolchain_states:
+  - mp3stego_manual_required
+  - not_applicable
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Public source context only; no audio or stego tooling was run in Stage 4F.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: audio_positive_control_readiness
+  readiness_id: stage4n-readiness-stage4f-uncovering-what-happened-2014-openpuff-page
+  source_record_id: stage4f-uncovering-what-happened-2014-openpuff-page
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  source_path: What Happened Part 1 2014 source page
+  source_lock_status: fetch_failed
+  source_lock_record_id: stage4k-stage4b-uncovering-what-happened-2014
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  fixture_category: outguess_reference_only
+  ready_state: reference_only
+  blockers: []
+  cache_record_id: stage4n-cache-stage4f-uncovering-what-happened-2014-openpuff-page
+  expected_output_id: stage4n-expected-stage4f-uncovering-what-happened-2014-openpuff-page
+  expected_output_required: false
+  expected_output_hash: null
+  toolchain_states:
+  - openpuff_manual_required
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Public source context only; no audio or stego tooling was run in Stage 4F.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: audio_positive_control_readiness
+  readiness_id: stage4n-readiness-stage4f-charleswyt-mp3stego-reference
+  source_record_id: stage4f-charleswyt-mp3stego-reference
+  source_url: https://github.com/Charleswyt/MP3Stego
+  source_path: MP3Stego reference repository
+  source_lock_status: not_locked
+  source_lock_record_id: null
+  canonical_url: null
+  fixture_category: outguess_reference_only
+  ready_state: reference_only
+  blockers: []
+  cache_record_id: stage4n-cache-stage4f-charleswyt-mp3stego-reference
+  expected_output_id: stage4n-expected-stage4f-charleswyt-mp3stego-reference
+  expected_output_required: false
+  expected_output_hash: null
+  toolchain_states:
+  - mp3stego_manual_required
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Public source context only; no audio or stego tooling was run in Stage 4F.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false

@@ -6,7 +6,7 @@ This file records CUDA policy for future acceleration work.
 
 ## Current CUDA Status
 
-CUDA remains deferred after Stage 4M. Existing CUDA code is scaffold and smoke-test infrastructure only unless a future stage explicitly adds CPU-reference behavior, score-summary parity tests, and benchmark coverage.
+CUDA remains deferred after Stage 4N. Existing CUDA code is scaffold and smoke-test infrastructure only unless a future stage explicitly adds CPU-reference behavior, score-summary parity tests, and benchmark coverage.
 
 Do not use CUDA for Discord processing, image interpretation, OutGuess regression, cookie/hash packs, or broad unsolved-page campaigns.
 
@@ -24,11 +24,11 @@ When CUDA is enabled for smoke/scaffold builds, `CMAKE_CUDA_ARCHITECTURES` defau
 
 ## CPU Reference First
 
-Every future CUDA transform must follow a CPU reference implementation. Stage 4H makes `libreprimus.cpu_batch` the current CPU batch parity contract, Stage 4I makes score-summary records the current scoring contract, and Stage 4M keeps image/bigram observations out of CUDA scope until reproducible controls exist. CPU behavior, scoring semantics, reset/advance policy, review state, and output records must be stable before acceleration.
+Every future CUDA transform must follow a CPU reference implementation. Stage 4H makes `libreprimus.cpu_batch` the current CPU batch parity contract, Stage 4I makes score-summary records the current scoring contract, Stage 4M keeps image/bigram observations out of CUDA scope until reproducible controls exist, and Stage 4N keeps stego/audio positive-control readiness out of CUDA scope until fixtures, expected outputs, and toolchains are ready. CPU behavior, scoring semantics, reset/advance policy, review state, and output records must be stable before acceleration.
 
 ## Future First CUDA Target
 
-The likely first serious CUDA target is batch transform-and-score parity for already-reviewed CPU transforms after observation review hardening, source-lock readiness, image-preflight controls, and explicit CUDA planning. Hash cracking, Discord processing, image stego fishing, OCR, AI/ML interpretation, and raw data processing are not CUDA targets.
+The likely first serious CUDA target is batch transform-and-score parity for already-reviewed CPU transforms after observation review hardening, source-lock readiness, image-preflight controls, positive-control readiness, and explicit CUDA planning. Hash cracking, Discord processing, image stego fishing, audio/stego extraction, OCR, AI/ML interpretation, and raw data processing are not CUDA targets.
 
 ## Parity Tests
 

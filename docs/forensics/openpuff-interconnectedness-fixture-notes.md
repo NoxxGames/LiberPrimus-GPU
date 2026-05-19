@@ -2,6 +2,11 @@
 
 Stage 4F prepares metadata for future Interconnectedness/OpenPuff fixture work without running OpenPuff or touching audio payloads.
 
+Stage 4N keeps Interconnectedness/OpenPuff candidates blocked as historical audio fixtures until
+the asset is source-locked or cached in ignored storage, the expected output hash is known, and
+manual OpenPuff requirements are documented. Source-only context is reference metadata, not
+execution readiness.
+
 ## Source Targets
 
 - `cicada-solvers/iddqd`: `2014/05/3301 - Interconnectedness.mp3`

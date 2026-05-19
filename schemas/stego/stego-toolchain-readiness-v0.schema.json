@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/stego/stego-toolchain-readiness-v0.schema.json",
+  "title": "Stego Toolchain Readiness v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "toolchain_record_id",
+    "toolchain",
+    "toolchain_state",
+    "raw_file_committed",
+    "binary_committed",
+    "image_committed",
+    "audio_committed",
+    "font_committed",
+    "archive_committed",
+    "extracted_payload_committed",
+    "solve_claim",
+    "execution_performed",
+    "tool_executed"
+  ],
+  "properties": {
+    "record_type": { "const": "stego_toolchain_readiness" },
+    "toolchain_record_id": { "type": "string", "minLength": 1 },
+    "toolchain": {
+      "enum": [
+        "outguess",
+        "openpuff",
+        "mp3stego",
+        "hexdump/strings",
+        "audio_rendering",
+        "certutil",
+        "synthetic_control",
+        "not_applicable"
+      ]
+    },
+    "toolchain_state": {
+      "enum": [
+        "outguess_missing",
+        "outguess_available_unverified",
+        "outguess_available_version_recorded",
+        "openpuff_manual_required",
+        "mp3stego_manual_required",
+        "hexdump_strings_available",
+        "audio_tools_not_required",
+        "not_applicable",
+        "missing"
+      ]
+    },
+    "available": { "type": "boolean" },
+    "tool_path": { "type": ["string", "null"] },
+    "tool_help_sha256": {
+      "anyOf": [
+        { "type": "null" },
+        { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      ]
+    },
+    "raw_file_committed": { "const": false },
+    "binary_committed": { "const": false },
+    "image_committed": { "const": false },
+    "audio_committed": { "const": false },
+    "font_committed": { "const": false },
+    "archive_committed": { "const": false },
+    "extracted_payload_committed": { "const": false },
+    "solve_claim": { "const": false },
+    "execution_performed": { "const": false },
+    "tool_executed": { "const": false }
+  }
+}

@@ -130,6 +130,24 @@ Stage 4M does not execute experiments. It reads ignored local LP page images onl
 metadata and compression metrics, records source-variant readiness, keeps image artefact candidates
 review-only, and carries the bigram/Fibonacci-421 claim forward as blocked readiness.
 
+## Stage 4N OutGuess/Audio Positive-Control Completion
+
+Stage 4N does not execute stego/audio experiments. It records readiness for OutGuess/audio positive
+controls, fixture-cache status, expected-output requirements, and toolchain state.
+
+Committed records:
+
+- `data/observations/stego/stage4n-outguess-positive-control-readiness.yaml`
+- `data/observations/stego/stage4n-audio-positive-control-readiness.yaml`
+- `data/observations/stego/stage4n-fixture-cache-records.yaml`
+- `data/observations/stego/stage4n-expected-output-records.yaml`
+- `data/observations/stego/stage4n-toolchain-readiness.yaml`
+- `data/observations/stego/stage4n-positive-control-summary.yaml`
+
+Generated readiness reports remain ignored under `experiments/results/stego-positive-controls/stage4n/`.
+Local fixture bytes remain ignored under `third_party/StegoPositiveControls/`. Historical cases remain
+blocked until assets, expected outputs, and tools are ready; synthetic controls are readiness checks only.
+
 Run:
 
 ```powershell

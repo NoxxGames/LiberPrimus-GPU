@@ -4,15 +4,14 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4M image source-variant and compression preflight is complete. The stage scanned ignored
-local LP page images for metadata and deterministic compression metrics, recorded source-variant
-readiness, kept compression/star-like artefacts review-only, and carried the bigram/Fibonacci-421
-claim forward as blocked readiness without running a matrix audit.
+Stage 4N OutGuess/audio positive-control completion is complete. The stage recorded fixture
+readiness, cache policy, expected-output requirements, toolchain readiness, and synthetic controls
+without running historical stego/audio tools or committing artefacts.
 
-The next planned stage is Stage 4N: OutGuess/audio positive-control completion. CUDA planning
+The next planned stage is Stage 4O: CPU batch adapter expansion. CUDA planning
 remains later; CUDA remains deferred until CPU batch, scorer, review workflow, source-lock
-reproducibility, promotion-ledger records, image-preflight controls, parity tests, and benchmark
-plans are stable.
+reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
+parity tests, and benchmark plans are stable.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
 recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
@@ -23,8 +22,9 @@ stego/audio fixture provenance without running tools, Stage 4G recorded the nega
 refresh result, Stage 4H extracted the CPU batch API as the future CUDA parity contract, Stage
 4I made scoring labels and score summaries triage-only parity metadata, Stage 4J closed the
 review-to-promotion loop, Stage 4K strengthened public-source reproducibility, Stage 4L
-recorded promotion readiness, and Stage 4M created image source-variant/compression preflight
-records before any OutGuess/audio positive-control completion or CUDA planning.
+recorded promotion readiness, Stage 4M created image source-variant/compression preflight
+records, and Stage 4N recorded OutGuess/audio positive-control readiness before CPU batch
+adapter expansion or CUDA planning.
 
 ## Phase 0A - Project bootstrap
 
@@ -309,6 +309,13 @@ Stage 4E is complete. It records metadata for selected `cicada-solvers/iddqd` pa
 ## Stage 4F - OutGuess/audio historical fixture source-locking
 
 Stage 4F is complete. It source-locks historical OutGuess/audio fixture metadata for selected public paths and promoted pages, records toolchain requirements for OutGuess, OpenPuff, MP3Stego, hexdump/strings, and audio rendering, and queues disabled future manifests without downloading or committing raw artefacts.
+
+## Stage 4N - OutGuess/audio positive-control completion
+
+Stage 4N is complete. It records OutGuess/audio readiness, fixture-cache status, expected-output
+requirements, toolchain availability, and synthetic controls. Historical cases remain blocked
+until assets, expected outputs, and tools are ready. No OutGuess, OpenPuff, MP3Stego, spectrogram,
+hexdump/string scan, or extraction was executed.
 
 ## Stage 4G - Cookie exact-candidate refresh
 

@@ -1,0 +1,354 @@
+record_set_id: stage4n-outguess-positive-control-readiness
+schema: schemas/stego/stego-positive-control-readiness-v0.schema.json
+records:
+- record_type: stego_positive_control_readiness
+  readiness_id: stage4n-readiness-stage4f-iddqd-lp-outguessed-tree
+  source_record_id: stage4f-iddqd-lp-outguessed-tree
+  source_url: https://github.com/cicada-solvers/iddqd/tree/master/lp_outguessed
+  source_path: lp_outguessed/
+  source_lock_status: commit_address_locked
+  source_lock_record_id: stage4k-stage4e-cicada-solvers-iddqd
+  canonical_url: https://github.com/cicada-solvers/iddqd/tree/0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  fixture_category: lp_outguessed_reference
+  ready_state: reference_only
+  blockers: []
+  cache_record_id: stage4n-cache-stage4f-iddqd-lp-outguessed-tree
+  expected_output_id: stage4n-expected-stage4f-iddqd-lp-outguessed-tree
+  expected_output_required: false
+  expected_output_hash: null
+  toolchain_states:
+  - outguess_missing
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Selected for future positive/negative OutGuess fixture matrix; raw files
+    are not downloaded in Stage 4F.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: stego_positive_control_readiness
+  readiness_id: stage4n-readiness-stage4f-iddqd-2016-4gq25-image
+  source_record_id: stage4f-iddqd-2016-4gq25-image
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2016/01/4gq25.jpg
+  source_path: 2016/01/4gq25.jpg
+  source_lock_status: commit_address_locked
+  source_lock_record_id: stage4k-stage4f-iddqd-2016-4gq25-image
+  canonical_url: https://github.com/cicada-solvers/iddqd/blob/0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07/2016/01/4gq25.jpg
+  fixture_category: image_fixture_candidate
+  ready_state: blocked_expected_output_unknown
+  blockers:
+  - asset_not_cached
+  - expected_output_unknown
+  - toolchain_not_ready
+  cache_record_id: stage4n-cache-stage4f-iddqd-2016-4gq25-image
+  expected_output_id: stage4n-expected-stage4f-iddqd-2016-4gq25-image
+  expected_output_required: true
+  expected_output_hash: null
+  toolchain_states:
+  - outguess_missing
+  synthetic: false
+  trusted_as_canonical: false
+  notes: 2016 image fixture candidate; future stage must source-lock the asset before
+    extraction.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: stego_positive_control_readiness
+  readiness_id: stage4n-readiness-stage4f-iddqd-2013-02-assets
+  source_record_id: stage4f-iddqd-2013-02-assets
+  source_url: https://github.com/cicada-solvers/iddqd/tree/master/2013/02
+  source_path: 2013/02/
+  source_lock_status: commit_address_locked
+  source_lock_record_id: stage4k-stage4f-iddqd-2013-02-assets
+  canonical_url: https://github.com/cicada-solvers/iddqd/tree/0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07/2013/02
+  fixture_category: outguess_reference_only
+  ready_state: reference_only
+  blockers: []
+  cache_record_id: stage4n-cache-stage4f-iddqd-2013-02-assets
+  expected_output_id: stage4n-expected-stage4f-iddqd-2013-02-assets
+  expected_output_required: false
+  expected_output_hash: null
+  toolchain_states:
+  - outguess_missing
+  - hexdump_strings_available
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Historical 2013 asset tree; metadata only until a fixture-source stage selects
+    individual files.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: stego_positive_control_readiness
+  readiness_id: stage4n-readiness-stage4f-uncovering-outguess-page
+  source_record_id: stage4f-uncovering-outguess-page
+  source_url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  source_path: Uncovering Cicada OutGuess
+  source_lock_status: snapshot_cached_ignored
+  source_lock_record_id: stage4k-stage4b-uncovering-outguess
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  fixture_category: outguess_reference_only
+  ready_state: reference_only
+  blockers: []
+  cache_record_id: stage4n-cache-stage4f-uncovering-outguess-page
+  expected_output_id: stage4n-expected-stage4f-uncovering-outguess-page
+  expected_output_required: false
+  expected_output_hash: null
+  toolchain_states:
+  - outguess_missing
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Stage 4B public source used as fixture context; no tool execution in Stage
+    4F.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: stego_positive_control_readiness
+  readiness_id: stage4n-readiness-stage4f-complete-archive-magicsquares-openpuff-context
+  source_record_id: stage4f-complete-archive-magicsquares-openpuff-context
+  source_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive/blob/main/assets/2014/stage07/magicsquares.txt
+  source_path: assets/2014/stage07/magicsquares.txt
+  source_lock_status: not_locked
+  source_lock_record_id: null
+  canonical_url: null
+  fixture_category: outguess_reference_only
+  ready_state: reference_only
+  blockers: []
+  cache_record_id: stage4n-cache-stage4f-complete-archive-magicsquares-openpuff-context
+  expected_output_id: stage4n-expected-stage4f-complete-archive-magicsquares-openpuff-context
+  expected_output_required: false
+  expected_output_hash: null
+  toolchain_states:
+  - openpuff_manual_required
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Stage 4B public source used as fixture context; no tool execution in Stage
+    4F.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: stego_positive_control_readiness
+  readiness_id: stage4n-readiness-cicada-2012-final-jpg-outguess-positive
+  source_record_id: cicada-2012-final-jpg-outguess-positive
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_(2012)
+  source_path: third_party/CicadaOutGuess/cicada-2012-final-jpg-outguess-positive.jpg
+  source_lock_status: not_locked
+  source_lock_record_id: null
+  canonical_url: null
+  fixture_category: image_fixture_candidate
+  ready_state: blocked_expected_output_unknown
+  blockers:
+  - asset_not_cached
+  - expected_output_unknown
+  cache_record_id: stage4n-cache-cicada-2012-final-jpg-outguess-positive
+  expected_output_id: stage4n-expected-cicada-2012-final-jpg-outguess-positive
+  expected_output_required: true
+  expected_output_hash: null
+  toolchain_states:
+  - not_applicable
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Historical OutGuess-relevant placeholder; exact local artefact and payload
+    hash are not committed.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: stego_positive_control_readiness
+  readiness_id: stage4n-readiness-cicada-2013-invitation-jpg-outguess-positive
+  source_record_id: cicada-2013-invitation-jpg-outguess-positive
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2013)
+  source_path: third_party/CicadaOutGuess/cicada-2013-invitation-jpg-outguess-positive.jpg
+  source_lock_status: not_locked
+  source_lock_record_id: null
+  canonical_url: null
+  fixture_category: image_fixture_candidate
+  ready_state: blocked_expected_output_unknown
+  blockers:
+  - asset_not_cached
+  - expected_output_unknown
+  cache_record_id: stage4n-cache-cicada-2013-invitation-jpg-outguess-positive
+  expected_output_id: stage4n-expected-cicada-2013-invitation-jpg-outguess-positive
+  expected_output_required: true
+  expected_output_hash: null
+  toolchain_states:
+  - not_applicable
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Historical OutGuess-relevant placeholder; exact local artefact and payload
+    hash are not committed.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: stego_positive_control_readiness
+  readiness_id: stage4n-readiness-cicada-2014-1033-jpg-outguess-positive
+  source_record_id: cicada-2014-1033-jpg-outguess-positive
+  source_url: https://uncovering-cicada.fandom.com/wiki/CICADA_3301_2014_PUZZLE
+  source_path: third_party/CicadaOutGuess/cicada-2014-1033-jpg-outguess-positive.jpg
+  source_lock_status: not_locked
+  source_lock_record_id: null
+  canonical_url: null
+  fixture_category: image_fixture_candidate
+  ready_state: blocked_expected_output_unknown
+  blockers:
+  - asset_not_cached
+  - expected_output_unknown
+  cache_record_id: stage4n-cache-cicada-2014-1033-jpg-outguess-positive
+  expected_output_id: stage4n-expected-cicada-2014-1033-jpg-outguess-positive
+  expected_output_required: true
+  expected_output_hash: null
+  toolchain_states:
+  - not_applicable
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Historical OutGuess-relevant placeholder; source-lock before treating this
+    as a real positive.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: stego_positive_control_readiness
+  readiness_id: stage4n-readiness-cicada-2016-message-image-outguess-positive
+  source_record_id: cicada-2016-message-image-outguess-positive
+  source_url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  source_path: third_party/CicadaOutGuess/cicada-2016-message-image-outguess-positive.jpg
+  source_lock_status: not_locked
+  source_lock_record_id: null
+  canonical_url: null
+  fixture_category: image_fixture_candidate
+  ready_state: blocked_expected_output_unknown
+  blockers:
+  - asset_not_cached
+  - expected_output_unknown
+  cache_record_id: stage4n-cache-cicada-2016-message-image-outguess-positive
+  expected_output_id: stage4n-expected-cicada-2016-message-image-outguess-positive
+  expected_output_required: true
+  expected_output_hash: null
+  toolchain_states:
+  - not_applicable
+  synthetic: false
+  trusted_as_canonical: false
+  notes: Historical OutGuess-relevant placeholder; expected payload hash is not known
+    locally.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: stego_positive_control_readiness
+  readiness_id: stage4n-readiness-stage4n-synthetic-positive-control
+  source_record_id: stage4n-synthetic-positive-control
+  source_url: null
+  source_path: synthetic/stage4n-positive.bin
+  source_lock_status: not_locked
+  source_lock_record_id: null
+  canonical_url: null
+  fixture_category: synthetic_positive_control
+  ready_state: synthetic_ready
+  blockers: []
+  cache_record_id: stage4n-cache-stage4n-synthetic-positive-control
+  expected_output_id: stage4n-expected-stage4n-synthetic-positive-control
+  expected_output_required: true
+  expected_output_hash: 702f17fa831b52c7f25908907e3ca9d3330c6a9cfb16a206fb91ae290e932600
+  toolchain_states:
+  - audio_tools_not_required
+  synthetic: true
+  trusted_as_canonical: false
+  notes: CI-safe synthetic positive; no historical artefact involved.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false
+- record_type: stego_positive_control_readiness
+  readiness_id: stage4n-readiness-stage4n-synthetic-negative-control
+  source_record_id: stage4n-synthetic-negative-control
+  source_url: null
+  source_path: synthetic/stage4n-negative.bin
+  source_lock_status: not_locked
+  source_lock_record_id: null
+  canonical_url: null
+  fixture_category: synthetic_negative_control
+  ready_state: synthetic_ready
+  blockers: []
+  cache_record_id: stage4n-cache-stage4n-synthetic-negative-control
+  expected_output_id: stage4n-expected-stage4n-synthetic-negative-control
+  expected_output_required: false
+  expected_output_hash: null
+  toolchain_states:
+  - audio_tools_not_required
+  synthetic: true
+  trusted_as_canonical: false
+  notes: CI-safe synthetic negative; no historical artefact involved.
+  raw_file_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  extracted_payload_committed: false
+  solve_claim: false
+  execution_performed: false
+  tool_executed: false

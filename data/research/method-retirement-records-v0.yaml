@@ -128,6 +128,15 @@ records:
     prohibited_expansions: [Hidden-message inference from metrics, broad image transform fishing, OCR or AI interpretation, image/stego extraction, raw image commits, generated visualisation commits, bigram audit execution without matrix regeneration and null controls.]
     notes: Stage 4M is metric-only preflight and does not promote visual or numeric-pattern observations to experiment seeds.
   - record_type: method_retirement_record
+    method_family_id: stego_audio_positive_control_readiness
+    retired_status: active_with_constraints
+    reason: Stego/audio positive-control readiness is active infrastructure, but historical tool execution is blocked until assets, expected outputs, and toolchain availability are all recorded.
+    evidence: [Stage 4N records 0 historical execution-ready fixtures, 8 blocked historical fixtures, and 2 synthetic-ready controls without running tools or committing raw artefacts.]
+    stages_supporting: [stage-3v, stage-4f, stage-4n]
+    reopen_conditions: [An explicit future execution stage has cached or immutable assets, expected-output hashes, positive/negative manifests, and verified toolchain records.]
+    prohibited_expansions: [Running OutGuess/OpenPuff/MP3Stego during readiness stages, broad stego scans, committing image/audio/binary/font/archive artefacts, committing extracted payloads, treating source-only records as ready, or making hidden-message claims.]
+    notes: Positive-control readiness means future verification can be checked; it is not extraction or evidence of a hidden payload.
+  - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints
     reason: Stage 4B visual observations are useful review inputs, but broad visual pareidolia and unannotated dot/braille/constellation readings remain high-risk false-positive classes.

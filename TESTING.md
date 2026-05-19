@@ -55,6 +55,11 @@ bigram/Fibonacci-421 readiness, CLI build/validate checks, and ignored-output/ra
 `experiments/results/image-preflight/stage4m/`, `third_party/LiberPrimusPages/`, and
 `data/raw/images/Fib421.jpg`.
 
+Stage 4N extends coverage with stego/audio positive-control schemas, fixture classification,
+cache policy, toolchain detection that does not execute tools, expected-output blockers, synthetic
+control readiness, CLI build/validate checks, and ignored-output/raw-cache checks for
+`experiments/results/stego-positive-controls/stage4n/` and `third_party/StegoPositiveControls/`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.
@@ -160,6 +165,25 @@ Local validation includes:
   --source-health data/locks/third-party/stage4f-stego-fixture-source-health.yaml `
   --toolchain data/observations/stego/stage4f-toolchain-requirements.yaml `
   --manifest-dir experiments/manifests/stego/stage4f-disabled
+```
+
+## Stage 4N Stego Audio Positive-Control Tests
+
+Stage 4N tests cover readiness schemas, `lp_outguessed` classification, MP3/audio and image fixture
+classification, cache policy guardrails, missing expected-output blockers, synthetic-ready controls,
+toolchain-unavailable handling, CLI behavior on synthetic records, and ignore policy for generated
+reports and raw caches.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli stego-positive-controls validate `
+  --outguess-readiness data/observations/stego/stage4n-outguess-positive-control-readiness.yaml `
+  --audio-readiness data/observations/stego/stage4n-audio-positive-control-readiness.yaml `
+  --fixture-cache data/observations/stego/stage4n-fixture-cache-records.yaml `
+  --expected-output data/observations/stego/stage4n-expected-output-records.yaml `
+  --toolchain data/observations/stego/stage4n-toolchain-readiness.yaml `
+  --summary data/observations/stego/stage4n-positive-control-summary.yaml
 ```
 
 ## Stage 4G Cookie Refresh Tests

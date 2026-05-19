@@ -2,6 +2,10 @@
 
 Stage 4F records audio fixture metadata for later deterministic regression preparation.
 
+Stage 4N consumes these source records and writes audio readiness, fixture-cache, expected-output,
+and toolchain records. It does not download or commit audio artefacts by default and does not run
+audio tools.
+
 ## Audio Candidates
 
 - `2014/05/3301 - Interconnectedness.mp3`

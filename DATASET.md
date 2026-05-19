@@ -15,6 +15,11 @@ bigram/Fibonacci-421 readiness record under `data/observations/review/`. These r
 local ignored page-image hashes and `data/raw/images/Fib421.jpg` metadata, but the raw images stay
 ignored and uncommitted.
 
+Stage 4N adds stego/audio positive-control readiness records under `data/observations/stego/`.
+These records may describe ignored local fixture-cache policy, expected-output requirements,
+toolchain availability, and synthetic controls, but historical image/audio/binary artefacts,
+extracted payloads, and generated readiness reports stay ignored and uncommitted.
+
 ## Immutable raw data
 
 `data/raw/` is immutable. Do not overwrite, normalize, crop, repair, OCR, transcribe, or deduplicate raw files in place.

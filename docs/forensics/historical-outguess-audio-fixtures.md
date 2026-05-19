@@ -6,6 +6,11 @@ Stage 4K adds public-source snapshot metadata for selected fixture sources, incl
 commit-addressed GitHub references where available. This strengthens future fixture provenance but
 does not download assets, run tools, or prove hidden payloads.
 
+Stage 4N adds positive-control readiness records for the historical OutGuess/audio fixture set.
+It records fixture-cache status, expected-output requirements, and toolchain availability, but
+it does not execute OutGuess, OpenPuff, MP3Stego, hexdump/string scans, spectrogram tooling, or
+payload extraction.
+
 ## Fixture Record Sets
 
 - `data/observations/stego/stage4f-outguess-fixture-source-records.yaml`
@@ -26,4 +31,7 @@ All fixture records keep `trusted_as_canonical=false` and `solve_claim=false`.
 
 ## Boundary
 
-Fixture candidates are provenance targets only. A later explicit execution stage must source-lock assets, document expected outputs or null controls, verify tool availability, and keep generated outputs ignored before any regression run.
+Fixture candidates are provenance targets only. A later explicit execution stage must source-lock
+assets, document expected outputs or null controls, verify tool availability, and keep generated
+outputs ignored before any regression run. Stage 4N records `0` historical execution-ready fixtures,
+`8` blocked historical fixtures, and `2` synthetic controls ready for CI-safe readiness checks.

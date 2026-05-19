@@ -107,9 +107,14 @@ Generated Stage 4M image-preflight JSONL and summary reports under
 `experiments/results/image-preflight/stage4m/` are also not committed. Raw LP page images and the
 raw `data/raw/images/Fib421.jpg` screenshot remain ignored.
 
+Generated Stage 4N stego/audio positive-control readiness reports under
+`experiments/results/stego-positive-controls/stage4n/` are also not committed. They are outside the
+image workflow, but the same raw-artefact policy applies to historical image/audio fixture bytes and
+extracted payloads.
+
 ## OutGuess Regression Boundary
 
-Stage 3V adds OutGuess regression under `libreprimus stego`, but it is not part of the image-analysis transform workflow. It uses explicit stego manifests and optional local historical fixtures only. Stage 4F adds source-lock metadata and toolchain requirements for future fixture work without running tools. Do not run broad OutGuess scans across `third_party/LiberPrimusPages/`; those images remain ignored unless a future manifest lists a tiny reviewed control subset.
+Stage 3V adds OutGuess regression under `libreprimus stego`, but it is not part of the image-analysis transform workflow. It uses explicit stego manifests and optional local historical fixtures only. Stage 4F adds source-lock metadata and toolchain requirements for future fixture work without running tools. Stage 4N records positive-control readiness and synthetic controls without executing OutGuess, OpenPuff, MP3Stego, strings, hexdump, or audio tools. Do not run broad OutGuess scans across `third_party/LiberPrimusPages/`; those images remain ignored unless a future manifest lists a tiny reviewed control subset.
 
 ## Troubleshooting
 

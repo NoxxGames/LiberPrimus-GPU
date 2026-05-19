@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, and Stage 4M image source-variant/compression preflight records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, and Stage 4N stego/audio positive-control readiness records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -49,6 +49,14 @@ records, explicit source-variant statuses, and blocked bigram/Fibonacci-421 read
 future stage provides reproducible matrix regeneration and controls. Generated JSONL reports remain
 ignored under `experiments/results/image-preflight/stage4m/`; raw page images and
 `data/raw/images/Fib421.jpg` remain ignored.
+
+Stage 4N stego/audio positive-control readiness records require `raw_file_committed=false`,
+`binary_committed=false`, `image_committed=false`, `audio_committed=false`, `font_committed=false`,
+`archive_committed=false`, `extracted_payload_committed=false`, `solve_claim=false`,
+`execution_performed=false`, and `tool_executed=false`. Historical real positive-control readiness
+requires exact expected-output metadata; synthetic controls must be labelled synthetic. Generated
+reports remain ignored under `experiments/results/stego-positive-controls/stage4n/`; fixture cache
+bytes remain ignored under `third_party/StegoPositiveControls/`.
 
 ## Result record principles
 
@@ -233,6 +241,23 @@ Committed schema IDs:
 Committed records live under `data/observations/stego/` and `data/locks/third-party/`. Disabled future manifests live under `experiments/manifests/stego/stage4f-disabled/`.
 
 Generated fixture candidate reports, source-gap JSONL files, and warnings remain ignored under `experiments/results/stego-fixtures/stage4f/`. Raw images, audio, binaries, fonts, archives, and extracted payloads remain uncommitted.
+
+## Stage 4N Stego Audio Positive-Control Readiness Records
+
+Stage 4N adds committed schemas for stego readiness, audio readiness, fixture-cache records,
+expected-output records, toolchain readiness, and positive-control summaries.
+
+Committed schema IDs:
+
+- `stego-positive-control-readiness-v0`
+- `audio-positive-control-readiness-v0`
+- `stego-fixture-cache-record-v0`
+- `stego-expected-output-record-v0`
+- `stego-toolchain-readiness-v0`
+- `stego-positive-control-summary-v0`
+
+Generated readiness reports remain ignored under `experiments/results/stego-positive-controls/stage4n/`.
+Local fixture cache bytes remain ignored under `third_party/StegoPositiveControls/`.
 
 ## Stage 4G Cookie Refresh Records
 

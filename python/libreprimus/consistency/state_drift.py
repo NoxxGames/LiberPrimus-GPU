@@ -114,8 +114,13 @@ STALE_CURRENT_STATE_PATTERNS = (
     ),
     StalePattern(
         "stale_next_stage4m",
-        re.compile(r"\bnext:\s*stage\s+4m\b", re.IGNORECASE),
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+4m\b", re.IGNORECASE),
         "Stage 4M is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
+        "stale_next_stage4n",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+4n\b", re.IGNORECASE),
+        "Stage 4N is complete and should not be described as the next stage.",
     ),
     StalePattern(
         "stale_stage3z_current",
@@ -353,9 +358,20 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4n_outguess_audio_positive_control_next",
-        "stage 4n" in staged_plan and "outguess" in staged_plan and "audio" in staged_plan and "positive-control" in staged_plan,
-        "Staged plan records Stage 4N OutGuess/audio positive-control completion as next.",
+        "stage4n_outguess_audio_positive_control_current_or_complete",
+        "stage 4n" in staged_plan
+        and "outguess" in staged_plan
+        and "audio" in staged_plan
+        and "positive-control" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4N OutGuess/audio positive-control completion as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4o_cpu_batch_adapter_next",
+        "stage 4o" in staged_plan and "cpu batch" in staged_plan and "adapter expansion" in staged_plan,
+        "Staged plan records Stage 4O CPU batch adapter expansion as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -384,6 +400,15 @@ def check_state_drift_consistency(
         "image_preflight_policy_present",
         "image preflight" in combined and "compression" in combined and "source variants" in combined,
         "Image source-variant and compression preflight policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stego_positive_control_readiness_policy_present",
+        "positive-control readiness" in combined
+        and "expected output" in combined
+        and "stego/audio" in combined,
+        "Stego/audio positive-control readiness policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

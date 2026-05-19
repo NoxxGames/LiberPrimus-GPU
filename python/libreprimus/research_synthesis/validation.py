@@ -130,8 +130,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 4n", "outguess", "audio", "positive-control"),
-            "staged_plan_stage4n_outguess_audio_next",
+            ("stage 4n", "outguess", "audio", "positive-control", "complete"),
+            "staged_plan_stage4n_outguess_audio_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4o", "cpu batch", "adapter expansion"),
+            "staged_plan_stage4o_cpu_batch_adapter_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -294,6 +300,14 @@ def validate_research_synthesis(
         stop_text = " ".join(str(item).lower() for item in image_preflight.get("stop_conditions", []))
         if "hidden-message" not in stop_text or "raw image" not in stop_text or "seed" not in stop_text:
             errors.append("image_source_variant_compression_preflight_missing_image_guardrail")
+
+    stego_positive_controls = _find_method(method_records, "stego_audio_positive_control_readiness")
+    if stego_positive_controls is None:
+        errors.append("stego_audio_positive_control_readiness_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in stego_positive_controls.get("stop_conditions", []))
+        if "expected-output" not in stop_text or "raw artefact" not in stop_text or "tool" not in stop_text:
+            errors.append("stego_audio_positive_control_readiness_missing_fixture_guardrail")
 
     cuda = _find_method(method_records, "cuda_gpu_acceleration")
     if cuda is None or cuda.get("status") != "deferred":

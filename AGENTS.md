@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4M - image source-variant and compression preflight.
+Current completed stage: Stage 4N - OutGuess/audio positive-control completion.
 
-Current work: Stage 4N - OutGuess/audio positive-control completion. Stage 4N should use source-locked fixture metadata and expected-output controls; it must not become broad stego scanning.
+Current work: Stage 4O - CPU batch adapter expansion. Stage 4O should expand CPU batch adapters conservatively; it must not become broad search, CUDA implementation, or experiment execution without explicit scoped manifests.
 
 Current project state:
 
@@ -125,6 +125,11 @@ Current project state:
 - Compression/star-like artefacts require source variants and controls.
 - Do not promote image artefact observations to seeds.
 - Bigram/Fibonacci-421 audit requires reproducible matrix and null controls before execution.
+- Stage 4N generated stego/audio positive-control reports are generated and ignored under `experiments/results/stego-positive-controls/stage4n/`.
+- Positive-control readiness is not tool execution.
+- Historical stego/audio cases require cached or immutable assets plus expected output hashes before execution.
+- Synthetic controls can be ready without historical artefacts.
+- Do not run stego/audio tools in source-lock/readiness stages.
 - `ready_for_manifest` means planning readiness only; it does not mean execution.
 - Control-only observations must not be treated as true claims.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
@@ -636,6 +641,14 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not run broad stego scans by default.
 - Do not process raw Discord logs during stego stages.
 - Raw historical artefacts under `third_party/CicadaArchive/` and `third_party/CicadaOutGuess/` must remain ignored except README and `.gitkeep`.
+
+## Stage 4N OutGuess/Audio Positive-Control Rules
+
+- Positive-control readiness records are planning metadata, not extraction or solve evidence.
+- Historical OutGuess, OpenPuff, MP3Stego, hexdump/string, and audio cases require cached or immutable assets, exact expected-output hashes, and documented toolchain state before any execution stage.
+- Synthetic controls may be readiness-complete for CI without historical artefacts.
+- Do not run stego/audio tools, broad scans, spectrogram analysis, or payload extraction during source-lock/readiness stages.
+- Do not commit raw fixture artefacts, images, audio, binaries, fonts, archives, extracted payloads, or generated reports.
 
 ## Stage 3W State Consolidation Rules
 

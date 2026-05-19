@@ -8,6 +8,7 @@
 - `third_party/CicadaOutGuess/`: local OutGuess regression artefacts. Commit only README/.gitkeep and curated metadata.
 - `third_party/CicadaSolversIddqd/`: local cache for the `cicada-solvers/iddqd` source-delta audit. Commit only README/.gitkeep; do not commit downloaded images, audio, fonts, archives, blobs, or cloned repository contents.
 - `third_party/SourceSnapshots/`: local cache for Stage 4K allowlisted public source-lock fetches. Commit only README/.gitkeep; fetched public HTML/text bytes remain ignored unless a later explicit policy approves a small text snapshot path.
+- `third_party/StegoPositiveControls/`: local ignored cache for Stage 4N stego/audio positive-control fixture artefacts. Commit only README/.gitkeep; do not commit cached image, audio, binary, font, archive, or extracted payload files.
 - `data/raw/`: immutable raw input area. Do not overwrite or commit real raw artefacts unless a future stage explicitly scopes a curated placeholder or lock.
 
 ## Generated Outputs
@@ -27,6 +28,7 @@
 - `experiments/results/source-lock-snapshots/stage4k/`: generated Stage 4K fetch reports, rejected-source records, duplicate-source records, warnings, and local diagnostics.
 - `experiments/results/observation-promotion/stage4l/`: generated Stage 4L promotion ledger, manifest-readiness, blocker, and warning reports.
 - `experiments/results/image-preflight/stage4m/`: generated Stage 4M image metadata JSONL, compression metric JSONL, source-variant JSONL, artifact candidate reports, summaries, and warnings.
+- `experiments/results/stego-positive-controls/stage4n/`: generated Stage 4N stego/audio readiness, cache, toolchain, and warning reports.
 - `third_party/CommunityObservations/`: ignored local community-observation screenshots and metadata sidecars such as the Fib421 review input. Commit only README and marker files.
 - `data/normalized/`: generated normalized candidate outputs unless a stage explicitly commits a placeholder or curated source.
 - SQLite outputs: `*.sqlite`, `*.sqlite3`, and `*.db` are generated and must not be committed.
@@ -61,8 +63,10 @@
 - Generated Stage 4K source-lock snapshot reports under `experiments/results/source-lock-snapshots/stage4k/`.
 - Generated Stage 4L observation-promotion reports under `experiments/results/observation-promotion/stage4l/`.
 - Generated Stage 4M image-preflight reports under `experiments/results/image-preflight/stage4m/`.
+- Generated Stage 4N stego/audio positive-control reports under `experiments/results/stego-positive-controls/stage4n/`.
 - Raw or sidecar community-observation artefacts under `third_party/CommunityObservations/`.
 - Cached Stage 4K source snapshot bytes under `third_party/SourceSnapshots/`.
+- Cached Stage 4N stego/audio fixture bytes under `third_party/StegoPositiveControls/`.
 - Downloaded or cached `cicada-solvers/iddqd` images, audio, fonts, archives, blobs, or cloned repository contents under `third_party/CicadaSolversIddqd/`.
 - SQLite databases.
 - Root Deep Research report copies or `deep-research-reports/**`.
