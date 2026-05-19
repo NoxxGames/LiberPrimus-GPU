@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/experiments/manifest-readiness-record-v0.schema.json",
+  "title": "Manifest Readiness Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "manifest_readiness_id",
+    "future_manifest_id",
+    "ready_state",
+    "blockers",
+    "execution_enabled",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "manifest_readiness_record" },
+    "manifest_readiness_id": { "type": "string", "minLength": 1 },
+    "future_manifest_id": { "type": "string", "minLength": 1 },
+    "ready_state": { "enum": ["ready", "blocked", "deferred", "control_only"] },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "source_requirements": { "type": "array", "items": { "type": "string" } },
+    "review_requirements": { "type": "array", "items": { "type": "string" } },
+    "expected_candidate_cap": { "type": ["integer", "null"], "minimum": 0 },
+    "recommended_next_stage": { "type": "string" },
+    "execution_enabled": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "ready_state": { "enum": ["blocked", "deferred"] } },
+        "required": ["ready_state"]
+      },
+      "then": {
+        "properties": { "blockers": { "minItems": 1 } }
+      }
+    }
+  ]
+}

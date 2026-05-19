@@ -120,6 +120,14 @@ try {
         --copyright-records data/locks/third-party/source-snapshots/stage4k-source-copyright-policy-records.yaml `
         --summary data/locks/third-party/source-snapshots/stage4k-source-lock-summary.yaml
 
+    Write-Host "Validating Stage 4L observation promotion records"
+    & $Python -m libreprimus.cli observation-promotion validate `
+        --ledger data/observations/review/stage4l-reviewed-observation-promotion-ledger.yaml `
+        --readiness data/observations/review/stage4l-observation-promotion-readiness-records.yaml `
+        --blockers data/observations/review/stage4l-observation-promotion-blocker-records.yaml `
+        --manifest-readiness data/observations/review/stage4l-manifest-readiness-records.yaml `
+        --summary data/observations/review/stage4l-reviewed-observation-promotion-summary.yaml
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

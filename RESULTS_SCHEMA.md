@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, and Stage 4K public source-lock snapshot records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, and Stage 4L observation promotion ledger records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -36,6 +36,11 @@ Stage 4K source-lock snapshot records require `raw_private_data_committed=false`
 committed snapshots are restricted to explicitly allowed small text snapshot policy. Generated
 source-lock reports remain ignored under `experiments/results/source-lock-snapshots/stage4k/`;
 fetched public-source bytes remain ignored under `third_party/SourceSnapshots/`.
+
+Stage 4L observation-promotion records require `execution_enabled=false`, `solve_claim=false`,
+explicit promotion categories, review-decision references, blockers for blocked/deferred/quarantined
+and rejected states, and disabled manifest-readiness records. Generated reports remain ignored under
+`experiments/results/observation-promotion/stage4l/`.
 
 ## Result record principles
 

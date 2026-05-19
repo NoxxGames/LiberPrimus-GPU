@@ -104,6 +104,26 @@ ignored under `experiments/results/source-lock-snapshots/stage4k/`, and fetched 
 under `third_party/SourceSnapshots/`. Source-lock snapshots do not promote observations or create
 solve evidence.
 
+## Stage 4L Reviewed Observation Promotion Ledger
+
+Stage 4L does not execute experiments or enable manifests. It records promotion readiness,
+blockers, control-only states, source-reference-only states, and disabled future-manifest readiness
+for reviewed observations.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli observation-promotion validate `
+  --ledger data/observations/review/stage4l-reviewed-observation-promotion-ledger.yaml `
+  --readiness data/observations/review/stage4l-observation-promotion-readiness-records.yaml `
+  --blockers data/observations/review/stage4l-observation-promotion-blocker-records.yaml `
+  --manifest-readiness data/observations/review/stage4l-manifest-readiness-records.yaml `
+  --summary data/observations/review/stage4l-reviewed-observation-promotion-summary.yaml
+```
+
+Future manifests must cite readiness records and still run only in a separately scoped execution
+stage.
+
 The Stage 4G run generated `4` candidates before deduplication, kept `4` deduplicated candidates, tested `8` exact SHA-256 comparisons against two targets, and found `0` exact matches. Do not rerun cookie work without newly source-locked exact candidate strings.
 
 ## Stage 4H CPU Batch Transform API

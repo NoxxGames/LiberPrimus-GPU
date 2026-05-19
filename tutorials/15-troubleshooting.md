@@ -123,6 +123,11 @@ If a Stage 4K source-lock snapshot build leaves `fetch_report.json`, `rejected_s
 `third_party/SourceSnapshots/`, do not stage them. Commit only source-lock metadata, schemas, code,
 docs, tests, and research logs.
 
+If a Stage 4L observation-promotion build leaves `promotion_ledger_report.json`,
+`manifest_readiness_report.json`, `blocker_report.json`, or `warnings.jsonl`, do not stage them.
+Commit only the YAML ledger/readiness/blocker/summary records, schemas, code, docs, tests, and
+research logs.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 
@@ -145,8 +150,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 4J, onboarding and staged-plan checks should show Stage 4J complete and Stage 4K
-allowlisted public source-lock snapshots next.
+After Stage 4L, onboarding and staged-plan checks should show Stage 4L complete and Stage 4M image
+source-variant and compression preflight next.
 
 If path sanitisation fails, run:
 

@@ -42,7 +42,12 @@ Documentation and anti-drift checks verify core policy statements such as raw-da
 
 Stage 4K extends this coverage with source-lock snapshot validation, allowlist/rejection tests,
 snapshot-policy tests, GitHub commit-address parser tests, generated-output/cache ignore tests, and
-state-drift checks for the Stage 4L next stage.
+state-drift checks for the Stage 4L ledger.
+
+Stage 4L extends coverage with promotion-ledger schema checks, promotion-gate tests that keep visual,
+cuneiform, dot, cookie, and stego/audio records from becoming executable seeds prematurely,
+manifest-readiness tests that keep execution disabled, CLI build/validate checks, and ignored-output
+checks for `experiments/results/observation-promotion/stage4l/`.
 
 ## Stage 3W State-Drift Tests
 

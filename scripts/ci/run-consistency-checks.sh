@@ -113,6 +113,14 @@ echo "Validating Stage 4K source-lock snapshot records"
     --copyright-records data/locks/third-party/source-snapshots/stage4k-source-copyright-policy-records.yaml \
     --summary data/locks/third-party/source-snapshots/stage4k-source-lock-summary.yaml
 
+echo "Validating Stage 4L observation promotion records"
+"$python_bin" -m libreprimus.cli observation-promotion validate \
+    --ledger data/observations/review/stage4l-reviewed-observation-promotion-ledger.yaml \
+    --readiness data/observations/review/stage4l-observation-promotion-readiness-records.yaml \
+    --blockers data/observations/review/stage4l-observation-promotion-blocker-records.yaml \
+    --manifest-readiness data/observations/review/stage4l-manifest-readiness-records.yaml \
+    --summary data/observations/review/stage4l-reviewed-observation-promotion-summary.yaml
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

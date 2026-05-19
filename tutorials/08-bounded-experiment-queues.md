@@ -8,6 +8,10 @@ Before adding or reopening an experiment family, check `docs/roadmap/staged-plan
 `data/research/method-retirement-records-v0.yaml`. Stage 3Y records which noisy, negative, or
 inconclusive families are blocked from widening without new source evidence.
 
+After Stage 4L, future manifests that depend on reviewed observations should cite
+observation-promotion readiness records. Readiness is not execution; every
+manifest still needs a separately scoped bounded execution stage.
+
 ## Commands
 
 ```powershell

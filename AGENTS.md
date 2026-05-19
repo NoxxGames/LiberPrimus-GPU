@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4K - allowlisted public source-lock snapshots.
+Current completed stage: Stage 4L - reviewed observation promotion ledger.
 
-Current work: Stage 4L - reviewed observation promotion ledger. Stage 4L should use Stage 4J review gates and Stage 4K source-lock records before any observation is promoted.
+Current work: Stage 4M - image source-variant and compression preflight. Stage 4M should use Stage 4L promotion-readiness records and keep image/compression observations as preflight/control inputs, not solve evidence.
 
 Current project state:
 
@@ -115,6 +115,11 @@ Current project state:
 - Network use for source-lock snapshots must be explicit via `--allow-network`.
 - Source locks do not imply canonical truth or solve evidence.
 - Do not commit binaries, images, audio, fonts, PDFs, archives, raw Discord artefacts, raw page images, or broad mirrored repository content.
+- Stage 4L generated observation-promotion reports are generated and ignored under `experiments/results/observation-promotion/stage4l/`.
+- The promotion ledger is the gate between review decisions and future manifests.
+- Future manifests must cite promotion-readiness records.
+- `ready_for_manifest` means planning readiness only; it does not mean execution.
+- Control-only observations must not be treated as true claims.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
 - Upload only generated `site/` contents, never raw `third_party/` inputs.
 - Wiki publish failures should be recorded with exact errors and manual recovery steps, but research stages should not fail solely because the GitHub Wiki remote is unavailable.

@@ -6,7 +6,7 @@ This catalog records planned transform families and the standards required befor
 
 ## Current Cipher Status
 
-After Stage 4K, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, metadata-only source-delta records for selected public artefact categories, stego/audio fixture source-lock metadata, a source-backed cookie exact-refresh result, a CPU batch transform API, scorer/calibration records, an observation review lifecycle, and allowlisted public source-lock snapshot records. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, stego/audio extraction, broad hash cracking, or solve claims.
+After Stage 4L, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, metadata-only source-delta records for selected public artefact categories, stego/audio fixture source-lock metadata, a source-backed cookie exact-refresh result, a CPU batch transform API, scorer/calibration records, an observation review lifecycle, allowlisted public source-lock snapshot records, and a reviewed observation promotion ledger. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, stego/audio extraction, broad hash cracking, or solve claims.
 
 Canonical corpus activation remains inactive and page boundaries remain reviewable.
 
@@ -32,6 +32,10 @@ Stage 4K public source-lock snapshot work is not a cipher transform. It locks al
 metadata, GitHub commit-addressed references, fetch hashes, and copyright notes so future claims can
 cite reproducible public-source records without mirroring raw artefacts or treating sources as
 canonical truth.
+
+Stage 4L reviewed observation promotion work is not a cipher transform. It records which reviewed
+observations are source references, controls, blocked, deferred, quarantined, rejected, or future
+manifest-ready while executing nothing.
 
 ## Historical Stage 0A status
 

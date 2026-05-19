@@ -39,6 +39,7 @@ REQUIRED_METHOD_FAMILIES = {
     "cookie_hash_sha256_packs",
     "gp_rune_claim_verifier",
     "observation_review_workflow",
+    "observation_promotion_ledger",
     "source_lock_snapshots",
     "scoring_consolidation",
     "deterministic_image_analysis",

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/observations/observation-promotion-readiness-record-v0.schema.json",
+  "title": "Observation Promotion Readiness Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "readiness_record_id",
+    "review_decision_id",
+    "observation_id",
+    "promotion_category",
+    "blockers",
+    "execution_enabled",
+    "solve_claim",
+    "usable_as_experiment_seed"
+  ],
+  "properties": {
+    "record_type": { "const": "observation_promotion_readiness_record" },
+    "readiness_record_id": { "type": "string", "minLength": 1 },
+    "review_decision_id": { "type": "string", "minLength": 1 },
+    "observation_id": { "type": "string", "minLength": 1 },
+    "promotion_category": {
+      "enum": [
+        "ready_for_manifest",
+        "ready_as_control_only",
+        "source_reference_only",
+        "blocked_needs_coordinates",
+        "blocked_needs_source_lock",
+        "blocked_needs_human_review",
+        "blocked_ambiguous_reading",
+        "blocked_missing_expected_output",
+        "blocked_toolchain_unavailable",
+        "blocked_negative_result",
+        "quarantined_false_positive",
+        "rejected",
+        "deferred"
+      ]
+    },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "source_lock_status": { "type": ["string", "null"] },
+    "execution_enabled": { "const": false },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "type": "boolean" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "promotion_category": {
+            "enum": [
+              "blocked_needs_coordinates",
+              "blocked_needs_source_lock",
+              "blocked_needs_human_review",
+              "blocked_ambiguous_reading",
+              "blocked_missing_expected_output",
+              "blocked_toolchain_unavailable",
+              "blocked_negative_result",
+              "quarantined_false_positive",
+              "rejected",
+              "deferred"
+            ]
+          }
+        },
+        "required": ["promotion_category"]
+      },
+      "then": {
+        "properties": { "blockers": { "minItems": 1 } }
+      }
+    }
+  ]
+}

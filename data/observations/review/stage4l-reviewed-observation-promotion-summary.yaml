@@ -1,0 +1,90 @@
+record_type: reviewed_observation_promotion_summary
+stage: stage4l
+reviewed_observations_loaded: 96
+ledger_records_created: 96
+readiness_records_created: 96
+blocker_records_created: 109
+manifest_readiness_records_created: 12
+ready_for_manifest_count: 0
+ready_as_control_only_count: 17
+source_reference_only_count: 14
+blocked_count: 47
+deferred_count: 2
+quarantined_count: 15
+rejected_count: 1
+cuneiform_ready_count: 0
+cuneiform_deferred_count: 0
+cuneiform_blocker_count: 5
+dot_ready_count: 0
+dot_quarantined_count: 15
+dot_blocker_count: 15
+cookie_ready_count: 0
+cookie_blocked_count: 3
+stego_audio_ready_count: 0
+stego_audio_deferred_count: 0
+stego_audio_blocker_count: 10
+manifest_ready_count: 0
+manifest_control_only_count: 2
+manifest_blocked_count: 6
+manifest_deferred_count: 4
+category_counts:
+  blocked_needs_coordinates: 5
+  blocked_needs_human_review: 13
+  blocked_needs_source_lock: 17
+  blocked_negative_result: 2
+  blocked_toolchain_unavailable: 10
+  deferred: 2
+  quarantined_false_positive: 15
+  ready_as_control_only: 17
+  rejected: 1
+  source_reference_only: 14
+observation_type_counts:
+  cookie_hash_candidate: 3
+  delimiter_candidate: 2
+  discord_derived_lead: 11
+  image_compression_artifact_candidate: 1
+  negative_control: 17
+  numeric_claim: 12
+  source_link: 20
+  stego_audio_fixture_candidate: 10
+  visual_cuneiform_candidate: 5
+  visual_dot_pattern_candidate: 15
+manifest_ready_state_counts:
+  blocked: 6
+  control_only: 2
+  deferred: 4
+execution_enabled: false
+solve_claim: false
+trusted_as_canonical: false
+canonical_corpus_active: false
+page_boundaries_final: false
+cuda_used: false
+generated_outputs_committed: false
+raw_data_processed: false
+relevant_record_counts:
+  data/observations/visual/stage4b-visual-observation-records.yaml: 6
+  data/observations/visual/stage4c-visual-annotation-tasks.yaml: 15
+  data/observations/visual/stage4c-cuneiform-reading-candidates.yaml: 1
+  data/observations/visual/stage4c-dot-pattern-annotation-tasks.yaml: 1
+  data/observations/visual/stage4c-delimiter-annotation-tasks.yaml: 2
+  data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml: 10
+  data/observations/research/stage4b-negative-control-records.yaml: 17
+  data/observations/web/stage4g-cookie-refresh-summary.yaml: 1
+  data/observations/stego/stage4f-outguess-fixture-source-records.yaml: 5
+  data/observations/stego/stage4f-audio-fixture-source-records.yaml: 5
+disabled_manifest_paths:
+- experiments/manifests/stage4b-disabled/exp_stage4b_cookie_pack_v2.yaml
+- experiments/manifests/stage4b-disabled/exp_stage4b_cuneiform_reading_pack_v1.yaml
+- experiments/manifests/stage4b-disabled/exp_stage4b_delimiter_handedness_v1.yaml
+- experiments/manifests/stage4b-disabled/exp_stage4b_dot_ambiguity_audit_v1.yaml
+- experiments/manifests/stage4b-disabled/exp_stage4b_gp_rune_verifier_batch002.yaml
+- experiments/manifests/stage4b-disabled/exp_stage4b_onion7_raw_routes_v1.yaml
+- experiments/manifests/stage4b-disabled/exp_stage4b_visual_negative_controls_v1.yaml
+- experiments/manifests/stego/stage4f-disabled/exp_stage4f_audio_hexdump_string_baseline.yaml
+- experiments/manifests/stego/stage4f-disabled/exp_stage4f_mp3_instar_regression_prep.yaml
+- experiments/manifests/stego/stage4f-disabled/exp_stage4f_openpuff_interconnectedness_fixture_prep.yaml
+- experiments/manifests/stego/stage4f-disabled/exp_stage4f_outguess_positive_negative_matrix.yaml
+- experiments/manifests/stage4e-disabled/exp_stage4e_audio_fixture_source_lock.yaml
+- experiments/manifests/stage4e-disabled/exp_stage4e_image_compression_artifact_preflight.yaml
+- experiments/manifests/stage4e-disabled/exp_stage4e_lp_image_variant_hash_dimension_audit.yaml
+- experiments/manifests/stage4e-disabled/exp_stage4e_lp_outguessed_fixture_source_lock.yaml

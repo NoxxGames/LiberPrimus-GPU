@@ -115,6 +115,18 @@ def validate_research_synthesis(
             ("stage 4l", "reviewed observation promotion ledger"),
             "staged_plan_stage4l_promotion_ledger_next",
         )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4l", "reviewed observation promotion ledger", "complete"),
+            "staged_plan_stage4l_promotion_ledger_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4m", "image source-variant", "compression preflight"),
+            "staged_plan_stage4m_image_preflight_next",
+        )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
         _require_text(errors, staged_text, ("page boundaries", "reviewable"), "staged_plan_boundaries_reviewable")
@@ -260,6 +272,14 @@ def validate_research_synthesis(
         stop_text = " ".join(str(item).lower() for item in source_snapshots.get("stop_conditions", []))
         if "broad crawl" not in stop_text or "binaries/images/audio/fonts/archives" not in stop_text:
             errors.append("source_lock_snapshots_missing_allowlist_raw_guardrail")
+
+    promotion_ledger = _find_method(method_records, "observation_promotion_ledger")
+    if promotion_ledger is None:
+        errors.append("observation_promotion_ledger_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in promotion_ledger.get("stop_conditions", []))
+        if "ready_for_manifest" not in stop_text or "control-only" not in stop_text:
+            errors.append("observation_promotion_ledger_missing_manifest_control_guardrail")
 
     cuda = _find_method(method_records, "cuda_gpu_acceleration")
     if cuda is None or cuda.get("status") != "deferred":

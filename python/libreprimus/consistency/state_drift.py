@@ -108,6 +108,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 4K is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage4l",
+        re.compile(r"\bnext:\s*stage\s+4l\b", re.IGNORECASE),
+        "Stage 4L is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -324,9 +329,18 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4l_reviewed_observation_promotion_next",
-        "stage 4l" in staged_plan and "reviewed observation promotion ledger" in staged_plan,
-        "Staged plan records Stage 4L reviewed observation promotion ledger as next.",
+        "stage4l_reviewed_observation_promotion_current_or_complete",
+        "stage 4l" in staged_plan
+        and "reviewed observation promotion ledger" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4L reviewed observation promotion ledger as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4m_image_source_variant_compression_next",
+        "stage 4m" in staged_plan and "image source-variant" in staged_plan and "compression preflight" in staged_plan,
+        "Staged plan records Stage 4M image source-variant and compression preflight as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -341,6 +355,13 @@ def check_state_drift_consistency(
         "observation_review_workflow_present",
         "observation review" in combined and "promotion" in combined and "experiment seed" in combined,
         "Observation review and promotion gates are documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "observation_promotion_ledger_present",
+        "promotion ledger" in combined and "ready_for_manifest" in combined and "control-only" in combined,
+        "Reviewed observation promotion ledger policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

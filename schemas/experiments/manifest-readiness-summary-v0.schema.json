@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/experiments/manifest-readiness-summary-v0.schema.json",
+  "title": "Manifest Readiness Summary v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage",
+    "ledger_records_created",
+    "manifest_readiness_records_created",
+    "execution_enabled",
+    "solve_claim",
+    "generated_outputs_committed"
+  ],
+  "properties": {
+    "record_type": { "const": "reviewed_observation_promotion_summary" },
+    "stage": { "const": "stage4l" },
+    "ledger_records_created": { "type": "integer", "minimum": 0 },
+    "manifest_readiness_records_created": { "type": "integer", "minimum": 0 },
+    "execution_enabled": { "const": false },
+    "solve_claim": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "cuda_used": { "const": false }
+  }
+}

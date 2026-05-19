@@ -388,3 +388,11 @@ installers/
 *.exe.tmp
 LiberPrimus-Research-Report.md
 .wiki-worktree/
+
+# Generated observation promotion outputs
+experiments/results/observation-promotion/**
+!experiments/results/observation-promotion/
+!experiments/results/observation-promotion/README.md
+!experiments/results/observation-promotion/.gitkeep
+!experiments/results/observation-promotion/stage4l/
+!experiments/results/observation-promotion/stage4l/.gitkeep

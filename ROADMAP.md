@@ -4,13 +4,13 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4K allowlisted public source-lock snapshots are complete. The stage recorded source-lock
-snapshot records, fetch records, copyright notes, GitHub commit-addressed references, ignored cache
-hash metadata, and explicit snapshot policies without broad crawling or committing raw artefacts.
+Stage 4L reviewed observation promotion ledger is complete. The stage joined Stage 4J review
+decisions with Stage 4K source-lock records, created promotion-readiness and blocker records, and
+recorded future manifest-readiness states without executing or enabling any manifest.
 
-The next planned stage is Stage 4L: reviewed observation promotion ledger. CUDA planning remains
-later; CUDA remains deferred until CPU batch, scorer, review workflow, source-lock reproducibility,
-parity tests, and benchmark plans are stable.
+The next planned stage is Stage 4M: image source-variant and compression preflight. CUDA planning
+remains later; CUDA remains deferred until CPU batch, scorer, review workflow, source-lock
+reproducibility, promotion-ledger records, parity tests, and benchmark plans are stable.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
 recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
@@ -20,7 +20,8 @@ selected external source-delta targets without committing raw artefacts, Stage 4
 stego/audio fixture provenance without running tools, Stage 4G recorded the negative exact cookie
 refresh result, Stage 4H extracted the CPU batch API as the future CUDA parity contract, Stage
 4I made scoring labels and score summaries triage-only parity metadata, Stage 4J closed the
-review-to-promotion loop, and Stage 4K strengthened public-source reproducibility.
+review-to-promotion loop, Stage 4K strengthened public-source reproducibility, and Stage 4L
+recorded promotion readiness before image/source-variant preflight.
 
 ## Phase 0A - Project bootstrap
 

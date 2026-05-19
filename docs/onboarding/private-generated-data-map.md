@@ -25,6 +25,7 @@
 - `experiments/results/scoring-consolidation/stage4i/`: generated Stage 4I scorer inventories, rendered calibration reports, CPU batch compatibility JSON, and warnings.
 - `experiments/results/observation-review/stage4j/`: generated Stage 4J observation review decision reports, quarantine reports, promotion-gate reports, path-sanitisation reports, and warnings.
 - `experiments/results/source-lock-snapshots/stage4k/`: generated Stage 4K fetch reports, rejected-source records, duplicate-source records, warnings, and local diagnostics.
+- `experiments/results/observation-promotion/stage4l/`: generated Stage 4L promotion ledger, manifest-readiness, blocker, and warning reports.
 - `data/normalized/`: generated normalized candidate outputs unless a stage explicitly commits a placeholder or curated source.
 - SQLite outputs: `*.sqlite`, `*.sqlite3`, and `*.db` are generated and must not be committed.
 
@@ -56,6 +57,7 @@
 - Generated Stage 4I scorer inventory, calibration report, CPU batch compatibility, and warning outputs under `experiments/results/scoring-consolidation/stage4i/`.
 - Generated Stage 4J observation review reports under `experiments/results/observation-review/stage4j/`.
 - Generated Stage 4K source-lock snapshot reports under `experiments/results/source-lock-snapshots/stage4k/`.
+- Generated Stage 4L observation-promotion reports under `experiments/results/observation-promotion/stage4l/`.
 - Cached Stage 4K source snapshot bytes under `third_party/SourceSnapshots/`.
 - Downloaded or cached `cicada-solvers/iddqd` images, audio, fonts, archives, blobs, or cloned repository contents under `third_party/CicadaSolversIddqd/`.
 - SQLite databases.

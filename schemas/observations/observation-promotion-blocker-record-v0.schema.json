@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/observations/observation-promotion-blocker-record-v0.schema.json",
+  "title": "Observation Promotion Blocker Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "blocker_record_id",
+    "review_decision_id",
+    "observation_id",
+    "blocker_kind",
+    "reason",
+    "execution_enabled",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "observation_promotion_blocker_record" },
+    "blocker_record_id": { "type": "string", "minLength": 1 },
+    "review_decision_id": { "type": "string", "minLength": 1 },
+    "observation_id": { "type": "string", "minLength": 1 },
+    "blocker_kind": {
+      "enum": [
+        "needs_coordinates",
+        "needs_source_lock",
+        "needs_human_review",
+        "ambiguous_reading",
+        "missing_expected_output",
+        "toolchain_unavailable",
+        "negative_result",
+        "quarantined_false_positive",
+        "rejected",
+        "deferred",
+        "explicit_promotion_not_requested"
+      ]
+    },
+    "reason": { "type": "string", "minLength": 1 },
+    "execution_enabled": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

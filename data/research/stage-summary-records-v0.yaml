@@ -407,3 +407,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 4K considered 43 source candidates, wrote 15 allowlisted records, fetched 1 ignored local snapshot, committed 0 raw snapshots, and ran no experiments.
+  - record_type: stage_summary_record
+    stage_id: stage-4l
+    title: Reviewed observation promotion ledger
+    status: complete
+    category: infrastructure
+    summary: Joined Stage 4J review decisions with Stage 4K source-lock records to create a reviewed observation promotion ledger, readiness records, blocker records, and disabled future-manifest readiness records.
+    key_outputs:
+      - "`libreprimus observation-promotion` CLI for build, validate, and summary."
+      - Promotion ledger, readiness records, blocker records, and manifest-readiness records for committed reviewed observations.
+      - Conservative future-manifest readiness states preserving blocked, deferred, source-reference-only, quarantined, and control-only handling.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 4L loaded 96 reviewed observations, created 96 ledger records, 109 blocker records, 12 manifest-readiness records, and promoted 0 observations to executable manifest seed readiness.

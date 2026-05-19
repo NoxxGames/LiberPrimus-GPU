@@ -16,6 +16,7 @@ Observation promotion requires all applicable gates:
 - Discord-derived leads have public-source corroboration;
 - negative controls promote only as controls.
 
-Stage 4J promotes zero observations to candidate manifests. It records why each
-reviewed item is blocked, deferred, quarantined, accepted as source metadata, or
-usable only as a control.
+Stage 4J promotes zero observations to candidate manifests. Stage 4L records
+promotion-readiness and blocker records for existing reviewed observations.
+Future manifests must cite these readiness records, and control-only
+observations must not be treated as true claims.

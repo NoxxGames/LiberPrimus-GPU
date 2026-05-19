@@ -273,17 +273,28 @@ records:
     completed_stage_refs: [stage-4b, stage-4e, stage-4f, stage-4j, stage-4k]
     reopen_conditions: [A new allowlisted public source has clear provenance value, source class, copyright note, and bounded retrieval policy.]
     stop_conditions: [Do not broad crawl, blind-mirror repositories, commit binaries/images/audio/fonts/archives, fetch raw Discord/private links, or treat source locks as canonical truth.]
-    next_action: Use source-lock snapshot records as reproducibility inputs for Stage 4L reviewed observation promotion ledger work.
+    next_action: Use source-lock snapshot records as reproducibility inputs for future reviewed promotion and source-variant preflight work.
     solve_claim: false
     notes: Source locks strengthen reproducibility and source health only; they are not solve evidence and do not activate the canonical corpus.
+  - record_type: method_family_status_record
+    method_family_id: observation_promotion_ledger
+    name: Reviewed observation promotion ledger
+    status: infrastructure_only
+    evidence_summary: Stage 4L joins Stage 4J review decisions with Stage 4K source-lock records and records ready, blocked, deferred, quarantined, source-reference-only, and control-only states without executing manifests.
+    completed_stage_refs: [stage-4j, stage-4k, stage-4l]
+    reopen_conditions: [A future stage proposes manifest inputs that cite explicit promotion-readiness records and pass all promotion gates.]
+    stop_conditions: [Do not treat ready_for_manifest as execution approval, use control-only observations as truth claims, promote cuneiform or dot readings without coordinates and accepted review, or promote cookie/stego/audio work while required source/tool/output blockers remain.]
+    next_action: Stage 4M image source-variant and compression preflight can consume source-reference and control-only readiness records without interpreting artefacts as evidence.
+    solve_claim: false
+    notes: Stage 4L produced zero executable seed-ready observations; the ledger is a gate, not an experiment runner.
   - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred
-    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, and Stage 4K improves source-lock reproducibility, but parity tests and benchmarks are still required before GPU kernels are trusted.
-    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k]
-    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, transform-and-score parity tests, and benchmark plan are complete.]
+    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, and Stage 4L adds the promotion ledger, but parity tests and benchmarks are still required before GPU kernels are trusted.
+    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l]
+    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, transform-and-score parity tests, and benchmark plan are complete.]
     stop_conditions: [No GPU kernels before CPU reference behaviour and parity tests.]
     next_action: First future CUDA target is batch transform-and-score parity after source-lock/review workflows and explicit CUDA planning.
     solve_claim: false
-    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H, Stage 4I, Stage 4J, and Stage 4K did not add CUDA code.
+    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H through Stage 4L did not add CUDA code.

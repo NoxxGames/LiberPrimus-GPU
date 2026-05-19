@@ -153,6 +153,17 @@ These records strengthen reproducibility with canonical URLs, retrieval metadata
 fetched, copyright notes, and snapshot policy. They do not make sources canonical, promote
 observations, or create solve evidence.
 
+Stage 4L records reviewed observation promotion readiness:
+
+- `data/observations/review/stage4l-reviewed-observation-promotion-ledger.yaml`
+- `data/observations/review/stage4l-observation-promotion-readiness-records.yaml`
+- `data/observations/review/stage4l-observation-promotion-blocker-records.yaml`
+- `data/observations/review/stage4l-manifest-readiness-records.yaml`
+
+Use these records to decide whether a future manifest is blocked, control-only,
+source-reference-only, deferred, or ready for planning. Control-only
+observations must not be treated as true claims.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
@@ -185,6 +196,8 @@ Do not commit generated Stage 4G cookie refresh JSON/JSONL outputs under
 `experiments/results/cookie-refresh/stage4g/`.
 Do not commit generated Stage 4J observation-review reports under
 `experiments/results/observation-review/stage4j/`.
+Do not commit generated Stage 4L observation-promotion reports under
+`experiments/results/observation-promotion/stage4l/`.
 
 ## Troubleshooting
 

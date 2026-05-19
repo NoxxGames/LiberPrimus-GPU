@@ -18,3 +18,7 @@ Review-only observations keep `usable_as_experiment_seed=false`. Visual
 observations require page/image evidence and coordinates before seed promotion.
 Cuneiform and dot observations also require accepted readings and ambiguity
 resolution.
+
+Stage 4L adds the reviewed observation promotion ledger on top of this workflow.
+The ledger is the only bridge from review decisions into future manifest
+planning, and it keeps `ready_for_manifest` separate from execution.
