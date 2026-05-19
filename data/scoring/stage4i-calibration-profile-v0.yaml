@@ -1,0 +1,44 @@
+record_set_id: stage4i-calibration-profile-v0
+schema: schemas/scoring/scoring-calibration-profile-v0.schema.json
+records:
+- record_type: scoring_calibration_profile
+  calibration_profile_id: stage4i-stage3c-minimal-triage-calibration-v0
+  scorer_id: minimal_triage_v0
+  scorer_version: minimal-triage-score-v0
+  calibration_source: generated_summary
+  source_ref: experiments\results\scoring-calibration\stage3c\calibration_summary.json
+  positive_control_count: 12
+  null_control_count: 250
+  negative_control_count: 4
+  candidate_count: 3
+  positive_score_range:
+    count: 12
+    max: 29.310739
+    mean: 19.142369
+    min: 4.806942
+  null_score_range:
+    count: 250
+    max: 11.299382
+    mean: 5.917973
+    min: 1.163663
+  negative_score_range:
+    count: 4
+    max: 0.560659
+    mean: -9.13578
+    min: -21.268966
+  thresholds:
+    garbage_max: 0.560659
+    negative_p95: 0.560659
+    null_p95: 9.54987
+    plausible_lead_min: 11.54987
+    positive_control_like_min: 4.806942
+    weak_lead_min: 5.717529
+  stage3a_top_classification: noisy
+  stage3b_top_classification: noisy
+  limitations:
+  - Stage 3C calibration is small and local.
+  - Labels are triage metadata, not plaintext verification.
+  - Generated calibration detail records remain ignored and are not committed.
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/scoring/scoring-calibration-report-v0.schema.json",
+  "title": "scoring-calibration-report-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "report_id",
+    "calibration_profile_id",
+    "positive_controls_available",
+    "null_controls_available",
+    "negative_controls_available",
+    "known_noisy_families",
+    "known_negative_or_deprioritised_families",
+    "solve_claim",
+    "trusted_as_canonical",
+    "cuda_used"
+  ],
+  "properties": {
+    "record_type": { "const": "scoring_calibration_report" },
+    "report_id": { "type": "string", "minLength": 1 },
+    "calibration_profile_id": { "type": "string", "minLength": 1 },
+    "positive_controls_available": { "type": "boolean" },
+    "null_controls_available": { "type": "boolean" },
+    "negative_controls_available": { "type": "boolean" },
+    "known_noisy_families": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "known_negative_or_deprioritised_families": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "cuda_used": { "const": false }
+  }
+}

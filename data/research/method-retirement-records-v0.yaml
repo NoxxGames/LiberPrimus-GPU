@@ -67,12 +67,12 @@ records:
   - record_type: method_retirement_record
     method_family_id: cuda_gpu_acceleration
     retired_status: deferred
-    reason: CUDA is intentionally delayed until CPU batch APIs, scorer consolidation, parity tests, and benchmarks exist.
-    evidence: [Project policy and Stage 3W anti-drift state keep CUDA deferred, Stage 4H added the CPU batch parity contract but not scorer consolidation or GPU code.]
-    stages_supporting: [stage-3w, stage-4h]
-    reopen_conditions: [Stage 4H CPU batch API, Stage 4I scorer consolidation, parity tests, and benchmark plan are complete.]
+    reason: CUDA is intentionally delayed until CPU batch APIs, scorer contracts, parity tests, and benchmarks exist.
+    evidence: [Project policy and Stage 3W anti-drift state keep CUDA deferred, Stage 4H added the CPU batch parity contract, and Stage 4I added scoring semantics without GPU code.]
+    stages_supporting: [stage-3w, stage-4h, stage-4i]
+    reopen_conditions: [Stage 4H CPU batch API, Stage 4I scorer consolidation, transform-and-score parity tests, and benchmark plan are complete.]
     prohibited_expansions: [GPU kernels without CPU reference, parity tests, and benchmark plan.]
-    notes: First future CUDA target is batch transform-and-score parity; Stage 4H did not implement CUDA.
+    notes: First future CUDA target is batch transform-and-score parity; Stage 4H and Stage 4I did not implement CUDA.
   - record_type: method_retirement_record
     method_family_id: cpu_batch_transform_api
     retired_status: active_with_constraints
@@ -82,6 +82,15 @@ records:
     reopen_conditions: [A future stage adds transform adapters with synthetic tests and output hash expectations or uses the API for scorer consolidation.]
     prohibited_expansions: [Broad unsolved-page campaigns, new transform families without manifests, GPU kernels, CUDA parity claims without matching CPU records.]
     notes: CPU batch outputs are generated and ignored; committed summaries are aggregate-only.
+  - record_type: method_retirement_record
+    method_family_id: scoring_consolidation
+    retired_status: active_with_constraints
+    reason: Scoring infrastructure is active as triage metadata only and must not become solve evidence or a moving target for CUDA parity.
+    evidence: [Stage 4I records finite confidence labels, compatibility mappings, Stage 3C calibration profile, calibration report, and CPU batch score compatibility.]
+    stages_supporting: [stage-3c, stage-4i]
+    reopen_conditions: [A future stage adds a scorer with committed scorer records, compatibility mapping, tests, calibration notes, and CPU batch compatibility checks.]
+    prohibited_expansions: [New magic scorers, LLM or ML scoring, score labels that imply solved/plaintext_verified, CUDA scoring without CPU score-summary parity.]
+    notes: High scores create review leads only and cannot validate plaintext.
   - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints

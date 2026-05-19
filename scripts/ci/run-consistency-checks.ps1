@@ -91,6 +91,19 @@ try {
         --allow-warnings
     & $Python -m libreprimus.cli cpu-batch validate-results --results-dir $Stage4HOut
 
+    Write-Host "Validating Stage 4I scoring consolidation records"
+    $Stage4IOut = Join-Path $TempDir "stage4i-scoring"
+    $Stage4IData = Join-Path $TempDir "stage4i-scoring-data"
+    & $Python -m libreprimus.cli scoring consolidate `
+        --out-dir $Stage4IOut `
+        --data-dir $Stage4IData `
+        --allow-warnings
+    & $Python -m libreprimus.cli scoring validate --data-dir data/scoring
+    & $Python -m libreprimus.cli scoring check-cpu-batch-compatibility `
+        --cpu-batch-summary data/research/stage4h-cpu-batch-api-summary.yaml `
+        --data-dir data/scoring `
+        --allow-warnings
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

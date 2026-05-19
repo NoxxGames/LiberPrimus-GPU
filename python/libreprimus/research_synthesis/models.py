@@ -38,6 +38,7 @@ REQUIRED_METHOD_FAMILIES = {
     "onion7_explicit_seed_pack",
     "cookie_hash_sha256_packs",
     "gp_rune_claim_verifier",
+    "scoring_consolidation",
     "deterministic_image_analysis",
     "image_transform_suite",
     "discord_ingestion_review",

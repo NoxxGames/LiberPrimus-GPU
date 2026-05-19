@@ -96,6 +96,17 @@ Stage 4H adds CPU batch API smoke manifests. These are parity infrastructure, no
 
 Generated Stage 4H CPU batch records stay in `experiments/results/cpu-batch/stage4h/` and are future parity anchors, not solve evidence.
 
+Stage 4I consolidates scoring labels and calibration records for CPU batch compatibility:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli scoring consolidate `
+  --out-dir experiments/results/scoring-consolidation/stage4i `
+  --data-dir data/scoring `
+  --allow-warnings
+```
+
+Generated Stage 4I scorer inventories and rendered reports stay in `experiments/results/scoring-consolidation/stage4i/`. Committed scoring records live under `data/scoring/`. Score labels are triage metadata only and cannot imply solved plaintext.
+
 Stage 4D runs only bounded no-fudge numeric and metadata audits from the Stage 4B disabled backlog:
 
 ```powershell
@@ -128,6 +139,8 @@ If a GP/rune claim is `missing_source_span`, improve source/span linking in a se
 If a cookie pack finds no exact match, record the negative result and move to a separately scoped manifest. After Stage 4G, do not rerun cookie work without newly source-locked exact candidate strings.
 
 If a CPU batch adapter is missing, add a synthetic manifest/test and output hash expectation before using it in broader workflows. Do not add CUDA code to satisfy a missing CPU adapter.
+
+If a scoring label looks strong, treat it as a review lead only. Do not convert a score into a solve claim or broaden a method family without source-backed evidence and a bounded manifest.
 
 If a method family is retired or deprioritised, update the staged plan and method-retirement ledger
 before adding a new manifest.

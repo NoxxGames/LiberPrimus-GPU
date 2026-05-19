@@ -1,0 +1,57 @@
+record_set_id: confidence-label-records-v0
+schema: schemas/scoring/confidence-label-record-v0.schema.json
+records:
+- record_type: confidence_label_record
+  label: positive_control_like
+  meaning: Scores in the same broad range as positive controls; review lead only.
+  review_action: manual_review_required
+  solve_claim_allowed: false
+  cuda_used: false
+- record_type: confidence_label_record
+  label: plausible_lead
+  meaning: A candidate with enough calibrated features to inspect, not solve evidence.
+  review_action: manual_review_required
+  solve_claim_allowed: false
+  cuda_used: false
+- record_type: confidence_label_record
+  label: weak_lead
+  meaning: A low-confidence lead requiring stronger controls before any follow-up.
+  review_action: defer_or_review_with_controls
+  solve_claim_allowed: false
+  cuda_used: false
+- record_type: confidence_label_record
+  label: noisy
+  meaning: Features are mixed or affected by known false-positive patterns.
+  review_action: treat_as_noise_unless_new_evidence
+  solve_claim_allowed: false
+  cuda_used: false
+- record_type: confidence_label_record
+  label: inconclusive
+  meaning: Scoring does not support a clear positive or negative interpretation.
+  review_action: do_not_escalate_without_new_evidence
+  solve_claim_allowed: false
+  cuda_used: false
+- record_type: confidence_label_record
+  label: garbage
+  meaning: Triage features are strongly unlike positive controls.
+  review_action: negative_or_drop
+  solve_claim_allowed: false
+  cuda_used: false
+- record_type: confidence_label_record
+  label: negative_control_like
+  meaning: Matches a control class expected to produce false positives.
+  review_action: preserve_as_control
+  solve_claim_allowed: false
+  cuda_used: false
+- record_type: confidence_label_record
+  label: scoring_not_available
+  meaning: No score was produced for this record.
+  review_action: record_missing_score
+  solve_claim_allowed: false
+  cuda_used: false
+- record_type: confidence_label_record
+  label: calibration_not_available
+  meaning: A raw score may exist, but calibration context is missing.
+  review_action: record_missing_calibration
+  solve_claim_allowed: false
+  cuda_used: false

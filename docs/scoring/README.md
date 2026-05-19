@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Scoring model notes for future candidate evaluation.
+Scoring model notes, calibration records, confidence-label policy, and review criteria.
 
 ## What belongs here
 
@@ -10,12 +10,12 @@ Score components, null-control design, thresholds, and review criteria.
 
 ## What does not belong here
 
-Candidate plaintext, result dumps, or ad hoc score output.
+Candidate plaintext, result dumps, ad hoc score output, or labels that imply solved plaintext.
 
 ## Codex modification policy
 
-Codex may modify documentation. Scorers are not implemented in Stage 0A.
+Codex may modify documentation when scorer behavior, calibration records, or score-summary contracts change. Stage 4I records existing scorer behavior and confidence labels as triage infrastructure.
 
-## Stage 0A restrictions
+## Current restrictions
 
-No scoring logic exists.
+Scoring is a triage aid, not solve evidence. Generated scoring outputs stay ignored under `experiments/results/scoring-consolidation/`.

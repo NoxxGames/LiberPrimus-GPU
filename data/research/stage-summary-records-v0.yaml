@@ -359,3 +359,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 4H ran only the synthetic CPU batch smoke manifest; no CUDA implementation, broad experiment, canonical corpus activation, page-boundary finalization, or solve claim was made.
+  - record_type: stage_summary_record
+    stage_id: stage-4i
+    title: Scorer consolidation and calibration report
+    status: complete
+    category: infrastructure
+    summary: Consolidated existing scoring and calibration behavior into stable scorer, confidence-label, compatibility-map, score-summary, calibration-profile, and calibration-report records.
+    key_outputs:
+      - "`libreprimus scoring` CLI for consolidation, validation, reporting, and CPU batch scoring compatibility checks."
+      - Scorer inventory, finite confidence-label records, compatibility mappings, Stage 3C calibration profile, and calibration report.
+      - CPU batch score-summary compatibility records tying future CUDA transform-and-score parity to CPU scorer semantics.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 4I does not invent a new scoring model or run experiments; scoring remains triage metadata only.

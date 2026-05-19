@@ -6,7 +6,7 @@ This file records CUDA policy for future acceleration work.
 
 ## Current CUDA Status
 
-CUDA remains deferred after Stage 4H. Existing CUDA code is scaffold and smoke-test infrastructure only unless a future stage explicitly adds CPU-reference behavior, parity tests, and benchmark coverage.
+CUDA remains deferred after Stage 4I. Existing CUDA code is scaffold and smoke-test infrastructure only unless a future stage explicitly adds CPU-reference behavior, score-summary parity tests, and benchmark coverage.
 
 Do not use CUDA for Discord processing, image interpretation, OutGuess regression, cookie/hash packs, or broad unsolved-page campaigns.
 
@@ -24,11 +24,11 @@ When CUDA is enabled for smoke/scaffold builds, `CMAKE_CUDA_ARCHITECTURES` defau
 
 ## CPU Reference First
 
-Every future CUDA transform must follow a CPU reference implementation. Stage 4H makes `libreprimus.cpu_batch` the current CPU batch parity contract. CPU behavior, scoring semantics, reset/advance policy, and output records must be stable before acceleration.
+Every future CUDA transform must follow a CPU reference implementation. Stage 4H makes `libreprimus.cpu_batch` the current CPU batch parity contract, and Stage 4I makes score-summary records the current scoring contract. CPU behavior, scoring semantics, reset/advance policy, and output records must be stable before acceleration.
 
 ## Future First CUDA Target
 
-The likely first serious CUDA target is batch transform-and-score parity for already-reviewed CPU transforms after Stage 4I scorer consolidation. Hash cracking, Discord processing, image stego fishing, OCR, AI/ML interpretation, and raw data processing are not CUDA targets.
+The likely first serious CUDA target is batch transform-and-score parity for already-reviewed CPU transforms after observation review hardening and explicit CUDA planning. Hash cracking, Discord processing, image stego fishing, OCR, AI/ML interpretation, and raw data processing are not CUDA targets.
 
 ## Parity Tests
 

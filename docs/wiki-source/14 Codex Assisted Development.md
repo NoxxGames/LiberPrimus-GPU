@@ -107,6 +107,11 @@ If Codex changes the CPU batch API, verify `libreprimus cpu-batch validate-manif
 `libreprimus cpu-batch validate-results`, adapter coverage, synthetic output hash tests, and
 the CPU/CUDA parity contract before staging. Do not add GPU code as part of CPU batch API work.
 
+If Codex changes scoring behavior, verify `libreprimus scoring validate`,
+`libreprimus scoring check-cpu-batch-compatibility`, confidence-label mapping tests, and
+calibration notes before staging. Score labels are triage metadata only and must not imply solved
+or plaintext verified.
+
 If Codex changes CLI registration, verify `python -m libreprimus.cli --help`, selected group
 `--help` commands, and the Stage 3X command-surface tests before staging. Do not create
 `python/libreprimus/cli/` while `python/libreprimus/cli.py` remains the public entrypoint.

@@ -4,12 +4,14 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4H CPU batch transform API extraction is complete. It turned existing CPU transform registry
-semantics into deterministic input stream, transform candidate, result, summary, adapter coverage,
-and CUDA parity-contract records without adding GPU code or broad experiment execution.
+Stage 4I scorer consolidation and calibration report is complete. It turned existing minimal
+triage scoring and Stage 3C calibration into scorer records, finite confidence labels,
+compatibility mappings, calibration-profile/report records, and CPU batch score compatibility
+checks without adding a new scoring model, GPU code, or broad experiment execution.
 
-The next planned stage is Stage 4I: scorer consolidation and calibration report. CUDA planning
-remains later; CUDA remains deferred until CPU batch and scorer parity are stable.
+The next planned stage is Stage 4J: observation review workflow hardening. CUDA planning remains
+later; CUDA remains deferred until CPU batch, scorer, review workflow, parity tests, and benchmark
+plans are stable.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
 recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
@@ -17,7 +19,8 @@ review into durable records without executing experiments, Stage 4C made the vis
 measurable without promoting them to seeds, Stage 4D ran only bounded no-fudge audit work, Stage 4E
 selected external source-delta targets without committing raw artefacts, Stage 4F prepared
 stego/audio fixture provenance without running tools, Stage 4G recorded the negative exact cookie
-refresh result, and Stage 4H extracted the CPU batch API as the future CUDA parity contract.
+refresh result, Stage 4H extracted the CPU batch API as the future CUDA parity contract, and Stage
+4I made scoring labels and score summaries triage-only parity metadata.
 
 ## Phase 0A - Project bootstrap
 

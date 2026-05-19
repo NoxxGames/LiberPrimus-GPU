@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4H - CPU batch transform API extraction.
+Current completed stage: Stage 4I - scorer consolidation and calibration report.
 
-Current work: Stage 4I - scorer consolidation and calibration report. Stage 4I should consolidate scorer definitions and calibration reporting before future CPU batch or CUDA parity work; it must not run broad search, activate CUDA, change corpus status, finalize page boundaries, or claim a solve.
+Current work: Stage 4J - observation review workflow hardening. Stage 4J should harden review workflow records and status transitions before any visual/numeric observation becomes an experiment seed; it must not run broad search, activate CUDA, change corpus status, finalize page boundaries, or claim a solve.
 
 Current project state:
 
@@ -97,6 +97,11 @@ Current project state:
 - Do not implement GPU code until CPU batch and scorer APIs are stable and parity tests exist.
 - Any new transform adapter must include a synthetic batch test and deterministic output hash expectation.
 - CLI behavior for `libreprimus cpu-batch` must remain stable unless a future stage updates docs, schemas, tests, and the parity contract together.
+- Stage 4I generated scoring-consolidation records are generated and ignored under `experiments/results/scoring-consolidation/stage4i/`.
+- Scoring is triage metadata, not solve evidence.
+- New scorers require scorer records, confidence-label mapping, tests, and calibration notes.
+- Future CUDA must preserve score-summary semantics before any GPU score is trusted.
+- Score labels cannot imply `solved` or `plaintext_verified`.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
 - Upload only generated `site/` contents, never raw `third_party/` inputs.
 - Wiki publish failures should be recorded with exact errors and manual recovery steps, but research stages should not fail solely because the GitHub Wiki remote is unavailable.

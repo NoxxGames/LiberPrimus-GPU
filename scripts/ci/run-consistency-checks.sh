@@ -86,6 +86,17 @@ echo "Running Stage 4H CPU batch synthetic/temp output"
     --allow-warnings
 "$python_bin" -m libreprimus.cli cpu-batch validate-results --results-dir "$tmp_dir/stage4h-cpu-batch"
 
+echo "Validating Stage 4I scoring consolidation records"
+"$python_bin" -m libreprimus.cli scoring consolidate \
+    --out-dir "$tmp_dir/stage4i-scoring" \
+    --data-dir "$tmp_dir/stage4i-scoring-data" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli scoring validate --data-dir data/scoring
+"$python_bin" -m libreprimus.cli scoring check-cpu-batch-compatibility \
+    --cpu-batch-summary data/research/stage4h-cpu-batch-api-summary.yaml \
+    --data-dir data/scoring \
+    --allow-warnings
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

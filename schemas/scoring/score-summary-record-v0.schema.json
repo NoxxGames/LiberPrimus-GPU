@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/scoring/score-summary-record-v0.schema.json",
+  "title": "score-summary-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "scorer_id",
+    "scorer_version",
+    "input_stream_id",
+    "candidate_id",
+    "transform_family",
+    "score_status",
+    "solve_claim",
+    "trusted_as_canonical",
+    "cuda_used"
+  ],
+  "properties": {
+    "record_type": { "const": "score_summary_record" },
+    "scorer_id": { "type": "string", "minLength": 1 },
+    "scorer_version": { "type": "string", "minLength": 1 },
+    "input_stream_id": { "type": "string", "minLength": 1 },
+    "candidate_id": { "type": "string", "minLength": 1 },
+    "transform_family": { "type": "string", "minLength": 1 },
+    "score_status": {
+      "enum": ["scored", "scoring_not_available", "calibration_not_available", "scorer_error"]
+    },
+    "score_value": { "type": "number" },
+    "score_components": { "type": "object" },
+    "calibration_profile_id": { "type": "string" },
+    "confidence_label": {
+      "enum": [
+        "positive_control_like",
+        "plausible_lead",
+        "weak_lead",
+        "noisy",
+        "inconclusive",
+        "garbage",
+        "negative_control_like",
+        "scoring_not_available",
+        "calibration_not_available"
+      ]
+    },
+    "null_percentile": { "type": "number", "minimum": 0, "maximum": 100 },
+    "positive_control_distance": { "type": "number" },
+    "negative_control_distance": { "type": "number" },
+    "crib_hits": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "cuda_used": { "const": false }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "score_status": { "const": "scored" } },
+        "required": ["score_status"]
+      },
+      "then": {
+        "required": ["confidence_label", "calibration_profile_id"]
+      }
+    }
+  ]
+}

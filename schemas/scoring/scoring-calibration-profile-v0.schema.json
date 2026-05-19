@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/scoring/scoring-calibration-profile-v0.schema.json",
+  "title": "scoring-calibration-profile-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "calibration_profile_id",
+    "scorer_id",
+    "scorer_version",
+    "calibration_source",
+    "positive_control_count",
+    "null_control_count",
+    "negative_control_count",
+    "solve_claim",
+    "trusted_as_canonical",
+    "cuda_used"
+  ],
+  "properties": {
+    "record_type": { "const": "scoring_calibration_profile" },
+    "calibration_profile_id": { "type": "string", "minLength": 1 },
+    "scorer_id": { "type": "string", "minLength": 1 },
+    "scorer_version": { "type": "string", "minLength": 1 },
+    "calibration_source": {
+      "enum": ["generated_summary", "research_log_summary", "manual_record"]
+    },
+    "positive_control_count": { "type": "integer", "minimum": 0 },
+    "null_control_count": { "type": "integer", "minimum": 0 },
+    "negative_control_count": { "type": "integer", "minimum": 0 },
+    "thresholds": { "type": "object" },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "cuda_used": { "const": false }
+  }
+}

@@ -94,8 +94,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 4i", "scorer", "calibration"),
-            "staged_plan_stage4i_scorer_calibration_next",
+            ("stage 4i", "scorer", "calibration", "complete"),
+            "staged_plan_stage4i_scorer_calibration_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4j", "observation review"),
+            "staged_plan_stage4j_observation_review_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -216,6 +222,14 @@ def validate_research_synthesis(
         stop_text = " ".join(str(item).lower() for item in cpu_batch.get("stop_conditions", []))
         if "gpu" not in stop_text or "parity" not in stop_text:
             errors.append("cpu_batch_transform_api_missing_parity_guardrail")
+
+    scoring = _find_method(method_records, "scoring_consolidation")
+    if scoring is None:
+        errors.append("scoring_consolidation_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in scoring.get("stop_conditions", []))
+        if "solve" not in stop_text or "cuda" not in stop_text:
+            errors.append("scoring_consolidation_missing_triage_cuda_guardrail")
 
     cuda = _find_method(method_records, "cuda_gpu_acceleration")
     if cuda is None or cuda.get("status") != "deferred":

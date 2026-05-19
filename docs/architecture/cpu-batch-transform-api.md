@@ -40,3 +40,9 @@ Unsupported transforms return `adapter_missing`; they are not faked and do not f
 ## Boundaries
 
 The API does not implement CUDA, run broad experiments, add new transform families, process raw data, activate the canonical corpus, finalize page boundaries, or make solve claims.
+
+## Stage 4I Scoring Compatibility
+
+Stage 4I adds the score-summary contract used by CPU batch records. CPU batch scoring now includes scorer id/version, calibration profile id, finite Stage 4I confidence labels, legacy label preservation, and explicit no-solve/CUDA flags.
+
+Future transform adapters must keep deterministic output hashes stable before any score comparison matters.

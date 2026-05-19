@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/scoring/scorer-compatibility-map-v0.schema.json",
+  "title": "scorer-compatibility-map-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "source_label",
+    "target_label",
+    "source_context",
+    "mapping_kind",
+    "solve_claim",
+    "trusted_as_canonical",
+    "cuda_used"
+  ],
+  "properties": {
+    "record_type": { "const": "scorer_compatibility_map" },
+    "source_label": { "type": "string", "minLength": 1 },
+    "target_label": {
+      "enum": [
+        "positive_control_like",
+        "plausible_lead",
+        "weak_lead",
+        "noisy",
+        "inconclusive",
+        "garbage",
+        "negative_control_like",
+        "scoring_not_available",
+        "calibration_not_available"
+      ]
+    },
+    "source_context": { "type": "string", "minLength": 1 },
+    "mapping_kind": {
+      "enum": ["identity", "legacy_minimal_triage", "availability_status"]
+    },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "cuda_used": { "const": false }
+  }
+}

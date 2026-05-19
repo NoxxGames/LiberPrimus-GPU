@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/scoring/scorer-record-v0.schema.json",
+  "title": "scorer-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "scorer_id",
+    "scorer_version",
+    "module",
+    "scorer_status",
+    "solve_claim",
+    "trusted_as_canonical",
+    "cuda_used"
+  ],
+  "properties": {
+    "record_type": { "const": "scorer_record" },
+    "scorer_id": { "type": "string", "minLength": 1 },
+    "scorer_version": { "type": "string", "minLength": 1 },
+    "module": { "type": "string", "minLength": 1 },
+    "scorer_status": {
+      "enum": ["active", "compatibility_only", "deferred", "deprecated"]
+    },
+    "score_schema": { "type": "string" },
+    "calibration_profile_id": { "type": "string" },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "cuda_used": { "const": false }
+  }
+}

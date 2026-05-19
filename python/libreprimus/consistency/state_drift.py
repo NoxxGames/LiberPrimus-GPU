@@ -270,11 +270,25 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4i_scorer_consolidation_next",
+        "stage4i_scorer_consolidation_current_or_complete",
         "stage 4i" in staged_plan
         and "scorer" in staged_plan
         and "calibration" in staged_plan,
-        "Staged plan records Stage 4I scorer consolidation and calibration report as next.",
+        "Staged plan records Stage 4I scorer consolidation and calibration report as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4j_observation_review_next",
+        "stage 4j" in staged_plan and "observation review" in staged_plan,
+        "Staged plan records Stage 4J observation review workflow hardening as next.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "scoring_contract_present",
+        "scoring contract" in combined and "triage" in combined,
+        "Scoring contract is documented as triage-only infrastructure.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

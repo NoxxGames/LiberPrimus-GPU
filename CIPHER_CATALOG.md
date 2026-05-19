@@ -191,6 +191,12 @@ Stage 3V OutGuess regression is not a cipher transform. It detects/wraps OutGues
 
 Do not convert visual or web observations into transform seeds without a later manifest, count validation, controls, and explicit bounded execution policy.
 
+## Scoring Is Not A Cipher Transform
+
+Stage 4I scorer consolidation is not a cipher transform and not a solve mechanism. The minimal triage scorer, Stage 3C calibration classifier, crib checks, confidence-label records, and CPU batch score summaries are review-prioritisation infrastructure only.
+
+No score label can mean solved or plaintext verified. New scorers require committed scorer records, compatibility mapping, tests, calibration notes, and CPU batch compatibility checks before use.
+
 ## Stage 2B Result Store Relationship
 
 Stage 2B does not add cipher behavior. It imports solved-baseline manifest-run outputs into JSONL and SQLite result stores with provenance and false search/CUDA/scoring flags.

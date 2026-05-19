@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4H CPU batch transform API extraction. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4I scorer consolidation and calibration. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -22,7 +22,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad unsolved-page search campaigns: not started.
-- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only, and Stage 3S applies it to the bounded 72-candidate Onion 7 explicit seed pack only.
+- Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only, and Stage 3S applies it to the bounded 72-candidate Onion 7 explicit seed pack only. Stage 4I consolidates these score labels and calibration records as triage-only metadata, not solve evidence.
 - Visual/image-derived observations: registry and deterministic feature summaries only, plus deterministic review transforms; Stage 3K records source locks and reviewable observations, Stage 3M records deterministic local image features, and Stage 3P generates ignored review transforms/contact sheets. No image-derived text experiments are executed.
 - Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, Stage 3U tests the manifest-declared signed/public string variant pack only, and Stage 4G refreshes source-backed Stage 4B strings only. All use exact byte-string logging with no fuzzy, partial, dictionary, hashcat, GPU, or solve claims.
 - Stego/OutGuess work: Stage 3V adds a deterministic OutGuess regression harness only. Stage 4F adds fixture source-lock metadata and toolchain requirements only. Missing tools/assets are explicit skipped outcomes, generated payloads stay ignored, and no broad image scan, stego extraction, audio scan, or payload interpretation is performed.
@@ -33,6 +33,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Bounded numeric verification: Stage 4D runs only no-fudge numeric and metadata audits. GP/rune batch002 skips without exact new spans, number-square routes skip without locked raw values, delimiter/dot audits infer no meaning, cuneiform seed execution remains deferred, and cookie pack v2 is deferred to a future explicit stage.
 - Source-delta audits: Stage 4E records selected `cicada-solvers/iddqd` tree metadata only. It does not blind-mirror external repositories, commit raw images/audio/fonts/binaries, run stego tools, or infer meaning from compression artefacts.
 - CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. It is infrastructure for future CUDA parity, not a broad experiment runner.
+- Scoring contract: Stage 4I provides scorer inventory, finite confidence-label records, compatibility mappings, calibration-profile/report records, and CPU batch score compatibility checks. Score labels can create review leads only and cannot imply solved plaintext.
 - Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
@@ -42,7 +43,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 4I scorer consolidation and calibration report.
+- Stage 4J observation review workflow hardening.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -97,6 +98,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 4F historical OutGuess/audio fixture source-locking.
 - Stage 4G cookie exact-candidate refresh.
 - Stage 4H CPU batch transform API extraction.
+- Stage 4I scorer consolidation and calibration report.
 
 ## Architecture summary
 

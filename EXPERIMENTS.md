@@ -626,3 +626,18 @@ Stage 3P generates deterministic visual review artefacts for local ignored Liber
 The local run processed `58` images, emitted `37` transform names, generated `2077` derived review images, `59` contact sheets, `58` review pages, and `6` review-only visual transform candidates.
 
 Generated images, HTML review pages, JSONL records, and summaries remain ignored under `experiments/results/image-transforms/stage3p/`. Stage 3P does not run OCR, AI/ML interpretation, OpenCV, OutGuess extraction, image-derived cipher execution, Discord processing, CUDA, or solve claims.
+
+## Stage 4I Scorer Consolidation
+
+Stage 4I consolidates existing scoring and calibration records:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli scoring consolidate `
+  --out-dir experiments/results/scoring-consolidation/stage4i `
+  --data-dir data/scoring `
+  --allow-warnings
+```
+
+The run writes committed scorer inventory, confidence-label, compatibility-map, calibration-profile, and calibration-report records under `data/scoring/`. Generated inventories and rendered reports stay ignored under `experiments/results/scoring-consolidation/stage4i/`.
+
+Stage 4I is infrastructure only. It does not run a new cryptanalytic experiment, invent a new scoring model, use CUDA, or make solve claims.

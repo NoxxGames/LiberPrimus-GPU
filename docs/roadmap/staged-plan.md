@@ -6,12 +6,13 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 4H - CPU batch transform API extraction.
-- Current planning focus: Stage 4I - scorer consolidation and calibration report.
+- Latest completed stage: Stage 4I - scorer consolidation and calibration report.
+- Current planning focus: Stage 4J - observation review workflow hardening.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
 - CPU batch transform API: active infrastructure and future CUDA parity contract.
+- Scoring contract: active infrastructure and future CUDA score-summary parity contract.
 - Solve claims: none.
 - Raw and generated outputs: ignored and not committed.
 - Discord raw logs: local, private, ignored research material.
@@ -43,19 +44,20 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Stage 4F: source-locked historical OutGuess/audio fixture metadata for lp_outguessed, Interconnectedness MP3, 761.MP3, 4gq25.jpg, 2013/02 assets, OpenPuff/OutGuess/MP3Stego references, and toolchain requirements without downloading raw artefacts or running tools.
 - Stage 4G: executed the source-backed cookie exact-candidate refresh against the two historical cookie targets with SHA-256 exact comparisons only; 4 candidates became 8 comparisons and 0 exact matches.
 - Stage 4H: extracted the CPU-only batch transform API with deterministic input streams, transform candidates, result records, adapter coverage, scoring adapter, synthetic/solved-baseline-safe manifests, and a CPU/CUDA parity contract.
+- Stage 4I: consolidated existing scorer and calibration behavior into scorer records, finite confidence labels, compatibility mappings, score-summary policy, Stage 3C calibration profile/report records, and CPU batch score compatibility checks.
 
 ## Current Stage
 
-Stage 4H is complete. It converted existing CPU transform registry semantics into a deterministic batch API with stable input stream, candidate, result, summary, and parity-contract records. The synthetic smoke batch executed 6 CPU-only candidates, all 6 current registry transforms have explicit CPU batch adapters, and generated outputs remain ignored.
+Stage 4I is complete. It consolidated existing minimal-triage scoring and Stage 3C calibration behavior into durable scorer inventory, confidence-label, compatibility-map, calibration-profile, and calibration-report records. The run recorded 3 scorer records, 9 confidence labels, 11 compatibility mappings, 1 calibration profile, and 1 calibration report, with CPU batch scoring compatibility marked true.
 
-Stage 4H does not run broad experiments, implement CUDA/GPU kernels, change transform semantics, process raw Discord logs or raw page images, activate the canonical corpus, finalize page boundaries, or make solve claims.
+Stage 4I does not invent a new scoring model, run broad experiments, implement CUDA/GPU kernels, process raw Discord logs or raw page images, activate the canonical corpus, finalize page boundaries, or make solve claims. Scoring is triage metadata only.
 
 ## Planned Next Stages
 
-- Stage 4I - scorer consolidation and calibration report.
+- Stage 4J - observation review workflow hardening.
 - Stage 5A - CUDA planning and parity scaffolding only.
 
-The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking, visual observation intake, annotation, and bounded numeric audits ahead of CPU API work. Stage 4H has now completed the CPU batch API extraction; scorer consolidation remains the next prerequisite before CUDA parity work.
+The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking, visual observation intake, annotation, and bounded numeric audits ahead of CPU API work. Stage 4H completed the CPU batch API extraction and Stage 4I completed scorer consolidation; observation review hardening is next before any CUDA planning stage.
 
 ## Deferred Work
 
@@ -90,7 +92,9 @@ Stage 4F records historical stego/audio fixture candidates as metadata only. It 
 
 Stage 4G executes only the Stage 4B source-backed cookie refresh with manifest-declared raw byte strings and SHA-256 exact comparisons. It finds zero exact matches, writes generated result records under ignored `experiments/results/cookie-refresh/stage4g/`, and updates the cookie SHA-256 method family to remain negative/deprioritised unless new exact source strings appear.
 
-Stage 4H makes the CPU batch API the reference path for future acceleration. The API accepts normalized token stream records, explicit transform candidate records, deterministic CPU adapter output, optional minimal-triage scoring metadata, and output hashes that future CUDA code must match before trust. It runs only synthetic or solved-baseline-safe batches and writes generated result records under ignored `experiments/results/cpu-batch/stage4h/`. The next planned stage after Stage 4H is Stage 4I: scorer consolidation and calibration report.
+Stage 4H makes the CPU batch API the reference path for future acceleration. The API accepts normalized token stream records, explicit transform candidate records, deterministic CPU adapter output, optional minimal-triage scoring metadata, and output hashes that future CUDA code must match before trust. It runs only synthetic or solved-baseline-safe batches and writes generated result records under ignored `experiments/results/cpu-batch/stage4h/`.
+
+Stage 4I makes the scoring contract stable enough for future CPU batch and CUDA parity work. Score summaries must cite scorer id/version, calibration profile, candidate/input ids, transform family, finite confidence labels, and explicit no-solve/CUDA flags. Scores can rank review leads only; they cannot validate plaintext. The next planned stage after Stage 4I is Stage 4J: observation review workflow hardening.
 
 ## Retired Or Deprioritised Directions
 
@@ -109,7 +113,7 @@ Stage 4H makes the CPU batch API the reference path for future acceleration. The
 - Source-delta audit work must not blind-mirror external repositories, commit raw binary/image/audio/font artefacts, or treat source variants as canonical corpus.
 - JPEG-like/compression artefact observations are future-preflight only; star-like or compression-like features require source variants and negative controls before any interpretation.
 - Broad OutGuess/stego/audio scans: deferred and prohibited until source-locked fixtures and expected-output controls exist.
-- CUDA acceleration: deferred until CPU batch APIs, stable scorer definitions, parity tests, and benchmarks exist. Stage 4H now provides the CPU batch parity contract; the first future CUDA target is batch transform-and-score parity after Stage 4I scorer consolidation.
+- CUDA acceleration: deferred until CPU batch APIs, stable scorer definitions, parity tests, and benchmarks exist. Stage 4H provides the CPU batch parity contract and Stage 4I provides the scoring contract; the first future CUDA target remains batch transform-and-score parity after review hardening and explicit CUDA planning.
 
 ## Deep Research Influence Log
 

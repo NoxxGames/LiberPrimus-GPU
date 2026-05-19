@@ -768,3 +768,18 @@ Generated records remain ignored under `experiments/results/image-transforms/sta
 All Stage 3P records keep `trusted_as_canonical=false` and `solve_claim=false`. Transform and candidate records also keep `usable_as_experiment_seed=false`; they are human-review artefacts only and not image-derived seed manifests.
 
 The consistency checks cross-reference committed schemas, manifests, registry metadata, documentation status, ignored-output policy, and result-store records when generated outputs are present.
+
+## Stage 4I Scoring Consolidation Records
+
+Stage 4I adds committed schemas under `schemas/scoring/` for:
+
+- `scorer-record-v0`
+- `scoring-calibration-profile-v0`
+- `score-summary-record-v0`
+- `confidence-label-record-v0`
+- `scorer-compatibility-map-v0`
+- `scoring-calibration-report-v0`
+
+Committed records live under `data/scoring/`. Generated scorer inventories and report renderings remain ignored under `experiments/results/scoring-consolidation/stage4i/`.
+
+All Stage 4I records keep scoring as triage metadata only. Score summary records require `solve_claim=false`, `trusted_as_canonical=false`, and `cuda_used=false`.

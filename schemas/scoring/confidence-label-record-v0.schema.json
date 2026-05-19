@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/scoring/confidence-label-record-v0.schema.json",
+  "title": "confidence-label-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "label",
+    "meaning",
+    "review_action",
+    "solve_claim_allowed",
+    "cuda_used"
+  ],
+  "properties": {
+    "record_type": { "const": "confidence_label_record" },
+    "label": {
+      "enum": [
+        "positive_control_like",
+        "plausible_lead",
+        "weak_lead",
+        "noisy",
+        "inconclusive",
+        "garbage",
+        "negative_control_like",
+        "scoring_not_available",
+        "calibration_not_available"
+      ]
+    },
+    "meaning": { "type": "string", "minLength": 1 },
+    "review_action": { "type": "string", "minLength": 1 },
+    "solve_claim_allowed": { "const": false },
+    "cuda_used": { "const": false }
+  },
+  "not": {
+    "properties": {
+      "label": { "enum": ["solved", "plaintext_verified"] }
+    },
+    "required": ["label"]
+  }
+}

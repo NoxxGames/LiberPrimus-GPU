@@ -2,14 +2,14 @@
 
 ## Current Reviewed State
 
-Stage 3V is complete, Stage 3W and Stage 3X are complete, Stage 3Y is complete, Stage 3Z is complete, Stage 4A is complete, Stage 4B is complete, Stage 4C is complete, and Stage 4D is complete. Stage 4E is the next planned cookie exact-candidate refresh.
+Stage 3V is complete; Stage 3W through Stage 3Z are complete. Stage 4A through Stage 4I are complete. The next planned stage is Stage 4J observation review workflow hardening.
 
 The current safety posture is:
 
 - No solve claim is made.
 - The canonical corpus is inactive.
 - Page boundaries are reviewable, not final.
-- CUDA is deferred until CPU references, scorer definitions, batch APIs, parity tests, and benchmarks exist.
+- CUDA is deferred until CPU references, scorer definitions, batch APIs, observation review workflow, parity tests, and benchmarks exist.
 - Broad unsolved-page campaigns are not started.
 - Raw data, generated outputs, SQLite databases, raw Discord logs, raw page images, raw historical stego artefacts, and extracted payloads are not committed.
 

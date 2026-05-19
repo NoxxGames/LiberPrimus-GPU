@@ -1,0 +1,91 @@
+record_set_id: scorer-compatibility-map-v0
+schema: schemas/scoring/scorer-compatibility-map-v0.schema.json
+records:
+- record_type: scorer_compatibility_map
+  source_label: calibration_not_available
+  target_label: calibration_not_available
+  source_context: CPU batch scoring availability status
+  mapping_kind: availability_status
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false
+- record_type: scorer_compatibility_map
+  source_label: garbage
+  target_label: garbage
+  source_context: libreprimus.scoring.minimal_triage confidence_label
+  mapping_kind: legacy_minimal_triage
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false
+- record_type: scorer_compatibility_map
+  source_label: inconclusive
+  target_label: inconclusive
+  source_context: Stage 3C calibrated confidence label
+  mapping_kind: identity
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false
+- record_type: scorer_compatibility_map
+  source_label: lead
+  target_label: plausible_lead
+  source_context: libreprimus.scoring.minimal_triage confidence_label
+  mapping_kind: legacy_minimal_triage
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false
+- record_type: scorer_compatibility_map
+  source_label: negative_control_like
+  target_label: negative_control_like
+  source_context: Stage 3C calibrated confidence label
+  mapping_kind: identity
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false
+- record_type: scorer_compatibility_map
+  source_label: noisy
+  target_label: noisy
+  source_context: libreprimus.scoring.minimal_triage confidence_label
+  mapping_kind: legacy_minimal_triage
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false
+- record_type: scorer_compatibility_map
+  source_label: plausible_lead
+  target_label: plausible_lead
+  source_context: Stage 3C calibrated confidence label
+  mapping_kind: identity
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false
+- record_type: scorer_compatibility_map
+  source_label: positive_control_like
+  target_label: positive_control_like
+  source_context: Stage 3C calibrated confidence label
+  mapping_kind: identity
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false
+- record_type: scorer_compatibility_map
+  source_label: scoring_disabled
+  target_label: scoring_not_available
+  source_context: CPU batch scoring availability status
+  mapping_kind: availability_status
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false
+- record_type: scorer_compatibility_map
+  source_label: scoring_not_available
+  target_label: scoring_not_available
+  source_context: CPU batch scoring availability status
+  mapping_kind: availability_status
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false
+- record_type: scorer_compatibility_map
+  source_label: weak_lead
+  target_label: weak_lead
+  source_context: libreprimus.scoring.minimal_triage confidence_label
+  mapping_kind: legacy_minimal_triage
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false

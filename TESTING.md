@@ -519,3 +519,9 @@ Stage 3I adds tests for the historical motif Vigenere key pack, generic key-pack
 The tests assert that the historical pack loads exactly 14 declared keys, computes `14 * 2 * 2 = 56` candidates, maps all keys through the Gematria profile, rejects key expansion without a candidate-count update, executes reset `none`, executes or explicitly defers reset `line` based on line metadata, executes `runes_only`, executes or warns for `token_break_preserving`, writes `evidence_family=historical_motif_key_pack`, keeps `cuda_used=false`, keeps `solve_claim=false`, includes calibrated confidence labels, and leaves generated outputs ignored.
 
 The consistency suite is raw-data-free. It validates generated result-store outputs only when they are present locally; missing generated outputs are warnings, not CI failures.
+
+## Stage 4I Scorer Consolidation Tests
+
+Stage 4I adds tests for scoring schemas, finite confidence labels, legacy compatibility mapping, scorer inventory records, Stage 3C calibration-profile fallback, CPU batch score-summary compatibility, CLI consolidation/validation/report commands, and ignored generated outputs.
+
+The tests assert that score labels cannot imply solved/plaintext_verified, score summaries reject `solve_claim=true` and `cuda_used=true`, CPU batch score summaries map legacy labels through the compatibility layer, generated scoring-consolidation outputs are ignored, and raw data remains ignored.

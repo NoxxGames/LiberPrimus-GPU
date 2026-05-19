@@ -280,6 +280,21 @@ family as negative/deprioritised and move on to Stage 4H unless a later source-l
 new exact candidate strings. Do not broaden to fuzzy/partial matching, arbitrary strings, hashcat,
 GPU/CUDA, dictionaries, or live web/Tor strings.
 
+## Stage 4I Scoring Output Appears In Git Status
+
+Generated scoring consolidation output belongs under ignored
+`experiments/results/scoring-consolidation/stage4i/`. Do not stage generated scorer inventories,
+rendered calibration reports, CPU batch compatibility JSON, or warning JSONL files.
+
+Committed scoring policy records live under `data/scoring/`. If `libreprimus scoring validate`
+fails, fix the committed records or schemas instead of staging generated reports.
+
+## A Scoring Label Looks Strong
+
+`positive_control_like`, `plausible_lead`, and `weak_lead` are review priorities only. They are not
+solve claims and do not verify plaintext. Use the score to decide what to review, not what to call
+solved.
+
 ## Stage 3V OutGuess Tool Or Assets Missing
 
 Missing `outguess` or historical fixture assets is a valid harness result when the command uses

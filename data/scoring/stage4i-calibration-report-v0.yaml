@@ -1,0 +1,33 @@
+record_set_id: stage4i-calibration-report-v0
+schema: schemas/scoring/scoring-calibration-report-v0.schema.json
+records:
+- record_type: scoring_calibration_report
+  report_id: stage4i-scorer-consolidation-calibration-report-v0
+  calibration_profile_id: stage4i-stage3c-minimal-triage-calibration-v0
+  positive_controls_available: true
+  null_controls_available: true
+  negative_controls_available: true
+  positive_control_count: 12
+  null_control_count: 250
+  negative_control_count: 4
+  known_noisy_families:
+  - caesar_affine
+  - reverse_reranked_affine
+  - vigenere_historical_motif_pack
+  - vigenere_lp_evidence_pack
+  - vigenere_tiny_motif
+  known_negative_or_deprioritised_families:
+  - caesar_affine
+  - cookie_hash_sha256_packs
+  - mersenne_perfect_number_probe
+  - vigenere_historical_motif_pack
+  - vigenere_lp_evidence_pack
+  score_label_interpretation: Scores rank review leads only and cannot verify plaintext.
+  limitations:
+  - Stage 4I consolidates existing scoring behavior and does not invent a new scorer.
+  - No score label can imply solved or plaintext verified.
+  - Future CUDA must match CPU output text and score-summary semantics before being
+    trusted.
+  solve_claim: false
+  trusted_as_canonical: false
+  cuda_used: false

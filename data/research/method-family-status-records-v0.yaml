@@ -240,17 +240,28 @@ records:
     completed_stage_refs: [stage-4h]
     reopen_conditions: [New transform adapters include synthetic batch tests, deterministic output hashes, and unchanged CPU registry semantics.]
     stop_conditions: [Do not implement GPU code, broaden transform families, or trust CUDA outputs until CPU batch and scorer parity pass.]
-    next_action: Stage 4I scorer consolidation and calibration report should make scoring outputs stable enough for future transform-and-score parity.
+    next_action: Use Stage 4I scoring records as the score-summary contract for future CPU batch and CUDA parity work.
     solve_claim: false
     notes: CPU batch records are the future CUDA reference contract; generated result records remain ignored.
+  - record_type: method_family_status_record
+    method_family_id: scoring_consolidation
+    name: Scorer consolidation and calibration report
+    status: infrastructure_only
+    evidence_summary: Stage 4I consolidated existing minimal-triage scoring, Stage 3C calibration labels, confidence-label vocabulary, compatibility mappings, calibration-profile records, and CPU batch score-summary compatibility.
+    completed_stage_refs: [stage-3c, stage-4h, stage-4i]
+    reopen_conditions: [New scorer or scoring adapter includes scorer records, confidence-label mapping, tests, calibration notes, and CPU batch compatibility checks.]
+    stop_conditions: [Do not invent new magic scorers, use scores as solve evidence, change old confidence labels without compatibility mapping, or trust CUDA scores before CPU score-summary parity passes.]
+    next_action: Stage 4J observation review workflow hardening can rely on scoring labels as triage-only metadata.
+    solve_claim: false
+    notes: Scoring is a review-prioritisation aid only; labels cannot mean solved or plaintext_verified.
   - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred
-    evidence_summary: CUDA remains deferred; Stage 4H now provides a CPU batch parity contract, but scorer consolidation, parity tests, and benchmarks are still required before GPU kernels are trusted.
-    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h]
-    reopen_conditions: [CPU batch transform API, scorer consolidation, parity tests, and benchmark plan are complete.]
+    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract and Stage 4I provides scoring semantics, but parity tests and benchmarks are still required before GPU kernels are trusted.
+    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i]
+    reopen_conditions: [CPU batch transform API, scorer consolidation, transform-and-score parity tests, and benchmark plan are complete.]
     stop_conditions: [No GPU kernels before CPU reference behaviour and parity tests.]
-    next_action: First future CUDA target is batch transform-and-score parity after Stage 4I scorer consolidation.
+    next_action: First future CUDA target is batch transform-and-score parity after observation review hardening and explicit CUDA planning.
     solve_claim: false
-    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H did not add CUDA code.
+    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H and Stage 4I did not add CUDA code.
