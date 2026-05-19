@@ -1,12 +1,19 @@
 from __future__ import annotations
 
+import shutil
 import subprocess
+
+import pytest
 
 
 def test_stage4a_wiki_publish_diagnostics_handle_inaccessible_remote() -> None:
+    shell = shutil.which("powershell") or shutil.which("pwsh")
+    if shell is None:
+        pytest.skip("PowerShell is not available in this environment")
+
     result = subprocess.run(
         [
-            "powershell",
+            shell,
             "-NoProfile",
             "-ExecutionPolicy",
             "Bypass",
