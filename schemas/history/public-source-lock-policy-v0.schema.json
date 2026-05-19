@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/history/public-source-lock-policy-v0.schema.json",
+  "title": "Public Source Lock Policy v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "policy_id",
+    "allowlisted_domains",
+    "rejected_domains",
+    "snapshot_policies",
+    "network_requires_allow_network",
+    "raw_private_data_committed",
+    "binary_committed",
+    "image_committed",
+    "audio_committed",
+    "font_committed",
+    "archive_committed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "public_source_lock_policy" },
+    "policy_id": { "type": "string", "minLength": 1 },
+    "allowlisted_domains": { "type": "array", "items": { "type": "string" } },
+    "rejected_domains": { "type": "array", "items": { "type": "string" } },
+    "snapshot_policies": { "type": "array", "items": { "type": "string" } },
+    "network_requires_allow_network": { "const": true },
+    "raw_private_data_committed": { "const": false },
+    "binary_committed": { "const": false },
+    "image_committed": { "const": false },
+    "audio_committed": { "const": false },
+    "font_committed": { "const": false },
+    "archive_committed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

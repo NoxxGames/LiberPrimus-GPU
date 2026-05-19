@@ -391,3 +391,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 4J loaded 96 committed observations, created 96 review decisions, blocked review-only visual observations from seed use, and ran no experiments.
+  - record_type: stage_summary_record
+    stage_id: stage-4k
+    title: Allowlisted public source-lock snapshots
+    status: complete
+    category: source_review
+    summary: Locked a small allowlisted set of public source metadata and ignored local snapshots from Stage 4B, Stage 4E, Stage 4F, and Stage 4J records.
+    key_outputs:
+      - "`libreprimus source-lock-snapshots` CLI for build, validate, summary, and allowlist inspection."
+      - Source-lock snapshot, fetch, copyright-policy, and aggregate summary records for 15 unique allowlisted sources.
+      - GitHub commit-addressed references, public-page hash metadata, explicit snapshot policies, and ignored local cache policy.
+    result_status: source_lock_metadata
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 4K considered 43 source candidates, wrote 15 allowlisted records, fetched 1 ignored local snapshot, committed 0 raw snapshots, and ran no experiments.

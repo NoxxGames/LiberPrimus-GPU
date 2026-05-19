@@ -2,6 +2,10 @@
 
 Stage 4F records historical stego/audio fixture metadata for future regression work. It does not download fixture assets, run OutGuess, run OpenPuff, run MP3Stego, render audio, scan strings, or interpret payloads.
 
+Stage 4K adds public-source snapshot metadata for selected fixture sources, including
+commit-addressed GitHub references where available. This strengthens future fixture provenance but
+does not download assets, run tools, or prove hidden payloads.
+
 ## Fixture Record Sets
 
 - `data/observations/stego/stage4f-outguess-fixture-source-records.yaml`

@@ -16,6 +16,7 @@ future experiment can use them.
 - `data/observations/discord/`
 - `data/observations/review/`
 - `data/locks/third-party/`
+- `data/locks/third-party/source-snapshots/`
 
 ## Commands
 
@@ -140,6 +141,17 @@ review summary:
 
 These records close the review-to-promotion loop. They do not execute experiments or make any
 observation a seed unless a future explicit promotion record satisfies the policy gates.
+
+Stage 4K records allowlisted public source-lock snapshots:
+
+- `data/locks/third-party/source-snapshots/stage4k-source-lock-snapshot-records.yaml`
+- `data/locks/third-party/source-snapshots/stage4k-source-fetch-records.yaml`
+- `data/locks/third-party/source-snapshots/stage4k-source-copyright-policy-records.yaml`
+- `data/locks/third-party/source-snapshots/stage4k-source-lock-summary.yaml`
+
+These records strengthen reproducibility with canonical URLs, retrieval metadata, hashes where
+fetched, copyright notes, and snapshot policy. They do not make sources canonical, promote
+observations, or create solve evidence.
 
 ## What Not To Commit
 

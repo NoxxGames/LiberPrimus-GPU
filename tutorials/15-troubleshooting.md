@@ -39,7 +39,9 @@ git check-ignore -v experiments/results/cookie-refresh/stage4g/summary.json
 git check-ignore -v experiments/results/cpu-batch/stage4h/summary.json
 git check-ignore -v experiments/results/scoring-consolidation/stage4i/scorer_inventory.json
 git check-ignore -v experiments/results/observation-review/stage4j/review_decision_report.json
+git check-ignore -v experiments/results/source-lock-snapshots/stage4k/fetch_report.json
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
+git check-ignore -v third_party/SourceSnapshots/example.html
 ```
 
 If an ignored Stage 3P transform run leaves local images or HTML under `experiments/results/`, do
@@ -115,6 +117,11 @@ If a Stage 4J observation review run leaves `review_decision_report.json`,
 `quarantine_report.json`, `promotion_gate_report.json`, `path_sanitisation_report.json`, or
 `warnings.jsonl`, do not stage them. Commit only schemas, review records, docs, tests, and research
 logs.
+
+If a Stage 4K source-lock snapshot build leaves `fetch_report.json`, `rejected_sources.jsonl`,
+`duplicate_sources.jsonl`, `warnings.jsonl`, or cached public-source bytes under
+`third_party/SourceSnapshots/`, do not stage them. Commit only source-lock metadata, schemas, code,
+docs, tests, and research logs.
 
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.

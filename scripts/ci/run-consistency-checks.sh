@@ -106,6 +106,13 @@ echo "Validating Stage 4J observation review workflow records"
     --summary data/observations/review/stage4j-observation-review-summary.yaml
 "$python_bin" -m libreprimus.cli observation-review check-paths --repo-root .
 
+echo "Validating Stage 4K source-lock snapshot records"
+"$python_bin" -m libreprimus.cli source-lock-snapshots validate \
+    --snapshot-records data/locks/third-party/source-snapshots/stage4k-source-lock-snapshot-records.yaml \
+    --fetch-records data/locks/third-party/source-snapshots/stage4k-source-fetch-records.yaml \
+    --copyright-records data/locks/third-party/source-snapshots/stage4k-source-copyright-policy-records.yaml \
+    --summary data/locks/third-party/source-snapshots/stage4k-source-lock-summary.yaml
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

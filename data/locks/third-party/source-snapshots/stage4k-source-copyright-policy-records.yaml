@@ -1,0 +1,258 @@
+record_set_id: stage4k-source-copyright-policy-records
+schema: schemas/history/source-copyright-policy-record-v0.schema.json
+records:
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4b-rtkd-iddqd-copyright
+  snapshot_record_id: stage4k-stage4b-rtkd-iddqd
+  source_url: https://github.com/rtkd/iddqd
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4b-scream314-cicada3301-copyright
+  snapshot_record_id: stage4k-stage4b-scream314-cicada3301
+  source_url: https://github.com/scream314/cicada3301
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4b-complete-cicada-archive-copyright
+  snapshot_record_id: stage4k-stage4b-complete-cicada-archive
+  source_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4b-uncovering-liber-primus-copyright
+  snapshot_record_id: stage4k-stage4b-uncovering-liber-primus
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4b-uncovering-lp-unsolved-pages-copyright
+  snapshot_record_id: stage4k-stage4b-uncovering-lp-unsolved-pages
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4b-uncovering-lp-transliteration-copyright
+  snapshot_record_id: stage4k-stage4b-uncovering-lp-transliteration
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Page_Transliteration
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4b-uncovering-frequency-analysis-copyright
+  snapshot_record_id: stage4k-stage4b-uncovering-frequency-analysis
+  source_url: https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_(Liber_Primus)
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4b-uncovering-instar-emergence-copyright
+  snapshot_record_id: stage4k-stage4b-uncovering-instar-emergence
+  source_url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem)
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4b-uncovering-what-happened-2014-copyright
+  snapshot_record_id: stage4k-stage4b-uncovering-what-happened-2014
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4b-uncovering-outguess-copyright
+  snapshot_record_id: stage4k-stage4b-uncovering-outguess
+  source_url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4e-cicada-solvers-iddqd-copyright
+  snapshot_record_id: stage4k-stage4e-cicada-solvers-iddqd
+  source_url: https://github.com/cicada-solvers/iddqd
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4f-iddqd-2016-4gq25-image-copyright
+  snapshot_record_id: stage4k-stage4f-iddqd-2016-4gq25-image
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2016/01/4gq25.jpg
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4f-iddqd-2013-02-assets-copyright
+  snapshot_record_id: stage4k-stage4f-iddqd-2013-02-assets
+  source_url: https://github.com/cicada-solvers/iddqd/tree/master/2013/02
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4f-iddqd-interconnectedness-mp3-copyright
+  snapshot_record_id: stage4k-stage4f-iddqd-interconnectedness-mp3
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2014/05/3301%20-%20Interconnectedness.mp3
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_copyright_policy_record
+  copyright_record_id: stage4k-stage4f-iddqd-761-mp3-instar-copyright
+  snapshot_record_id: stage4k-stage4f-iddqd-761-mp3-instar
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2013/02/761.MP3
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  committed_snapshot_allowed: false
+  committed_snapshot_reason: Stage 4K defaults to metadata/hash locks; no committed
+    snapshot requested.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false

@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4J - observation review workflow hardening.
+Current completed stage: Stage 4K - allowlisted public source-lock snapshots.
 
-Current work: Stage 4K - allowlisted public source-lock snapshots. Stage 4K should remain a source-lock snapshot stage, not broad crawling or experiment execution.
+Current work: Stage 4L - reviewed observation promotion ledger. Stage 4L should use Stage 4J review gates and Stage 4K source-lock records before any observation is promoted.
 
 Current project state:
 
@@ -108,6 +108,13 @@ Current project state:
 - Visual observations require page/image references and coordinate/region evidence before seed promotion.
 - Absolute local machine paths must not be committed in operational records; use repository-relative generated-output paths or mark troubleshooting examples as `example_path`.
 - Current-state text should be centralized through `STATUS.md` and `docs/roadmap/staged-plan.md` rather than copied into volatile paragraphs.
+- Stage 4K generated source-lock snapshot reports are generated and ignored under `experiments/results/source-lock-snapshots/stage4k/`.
+- `third_party/SourceSnapshots/` is an ignored local cache for allowlisted public source snapshots; commit only README and `.gitkeep`.
+- Public source locks must be allowlisted and declare explicit snapshot policy.
+- Prefer commit-addressed GitHub references over branch URLs.
+- Network use for source-lock snapshots must be explicit via `--allow-network`.
+- Source locks do not imply canonical truth or solve evidence.
+- Do not commit binaries, images, audio, fonts, PDFs, archives, raw Discord artefacts, raw page images, or broad mirrored repository content.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
 - Upload only generated `site/` contents, never raw `third_party/` inputs.
 - Wiki publish failures should be recorded with exact errors and manual recovery steps, but research stages should not fail solely because the GitHub Wiki remote is unavailable.

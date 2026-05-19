@@ -40,6 +40,10 @@ Manifests must replay to the same outputs under pinned inputs and fixed seeds.
 
 Documentation and anti-drift checks verify core policy statements such as raw-data immutability, generated-output ignore rules, current completed stage, canonical corpus inactive status, page-boundary review status, CUDA deferral, Discord privacy, and no-solve-claim policy.
 
+Stage 4K extends this coverage with source-lock snapshot validation, allowlist/rejection tests,
+snapshot-policy tests, GitHub commit-address parser tests, generated-output/cache ignore tests, and
+state-drift checks for the Stage 4L next stage.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.

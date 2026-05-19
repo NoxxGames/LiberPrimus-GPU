@@ -4,14 +4,13 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4J observation review workflow hardening is complete. It created durable review-state
-schemas, policy records, review decisions, promotion gates, quarantine records, path sanitisation
-checks, and stale-document repairs without promoting observations to manifests or running
-experiments.
+Stage 4K allowlisted public source-lock snapshots are complete. The stage recorded source-lock
+snapshot records, fetch records, copyright notes, GitHub commit-addressed references, ignored cache
+hash metadata, and explicit snapshot policies without broad crawling or committing raw artefacts.
 
-The next planned stage is Stage 4K: allowlisted public source-lock snapshots. CUDA planning remains
-later; CUDA remains deferred until CPU batch, scorer, review workflow, parity tests, and benchmark
-plans are stable.
+The next planned stage is Stage 4L: reviewed observation promotion ledger. CUDA planning remains
+later; CUDA remains deferred until CPU batch, scorer, review workflow, source-lock reproducibility,
+parity tests, and benchmark plans are stable.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
 recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
@@ -20,8 +19,8 @@ measurable without promoting them to seeds, Stage 4D ran only bounded no-fudge a
 selected external source-delta targets without committing raw artefacts, Stage 4F prepared
 stego/audio fixture provenance without running tools, Stage 4G recorded the negative exact cookie
 refresh result, Stage 4H extracted the CPU batch API as the future CUDA parity contract, Stage
-4I made scoring labels and score summaries triage-only parity metadata, and Stage 4J closed the
-review-to-promotion loop.
+4I made scoring labels and score summaries triage-only parity metadata, Stage 4J closed the
+review-to-promotion loop, and Stage 4K strengthened public-source reproducibility.
 
 ## Phase 0A - Project bootstrap
 

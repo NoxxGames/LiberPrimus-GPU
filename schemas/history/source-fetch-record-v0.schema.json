@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/history/source-fetch-record-v0.schema.json",
+  "title": "Source Fetch Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "fetch_record_id",
+    "snapshot_record_id",
+    "source_url",
+    "canonical_url",
+    "retrieval_status",
+    "snapshot_policy",
+    "raw_private_data_committed",
+    "binary_committed",
+    "image_committed",
+    "audio_committed",
+    "font_committed",
+    "archive_committed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "source_fetch_record" },
+    "fetch_record_id": { "type": "string", "minLength": 1 },
+    "snapshot_record_id": { "type": "string", "minLength": 1 },
+    "source_url": { "type": "string", "minLength": 1 },
+    "canonical_url": { "type": "string", "minLength": 1 },
+    "retrieval_status": {
+      "enum": [
+        "fetched",
+        "metadata_only",
+        "network_disabled",
+        "fetch_failed",
+        "not_fetched_binary_policy",
+        "duplicate",
+        "rejected"
+      ]
+    },
+    "snapshot_policy": {
+      "enum": [
+        "metadata_only",
+        "ignored_local_snapshot",
+        "committed_small_text_snapshot",
+        "commit_addressed_reference",
+        "archive_reference_only",
+        "deferred_manual_review",
+        "rejected_unsafe_or_noisy"
+      ]
+    },
+    "retrieval_timestamp_utc": { "type": "string" },
+    "http_status": { "type": ["integer", "null"] },
+    "content_type": { "type": ["string", "null"] },
+    "content_length": { "type": ["integer", "null"], "minimum": 0 },
+    "content_sha256": {
+      "anyOf": [
+        { "type": "null" },
+        { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      ]
+    },
+    "ignored_cache_path": { "type": ["string", "null"] },
+    "raw_private_data_committed": { "const": false },
+    "binary_committed": { "const": false },
+    "image_committed": { "const": false },
+    "audio_committed": { "const": false },
+    "font_committed": { "const": false },
+    "archive_committed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

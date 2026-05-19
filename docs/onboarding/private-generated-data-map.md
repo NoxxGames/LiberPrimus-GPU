@@ -7,6 +7,7 @@
 - `third_party/CicadaArchive/`: local historical Cicada artefacts. Commit only README/.gitkeep and curated metadata.
 - `third_party/CicadaOutGuess/`: local OutGuess regression artefacts. Commit only README/.gitkeep and curated metadata.
 - `third_party/CicadaSolversIddqd/`: local cache for the `cicada-solvers/iddqd` source-delta audit. Commit only README/.gitkeep; do not commit downloaded images, audio, fonts, archives, blobs, or cloned repository contents.
+- `third_party/SourceSnapshots/`: local cache for Stage 4K allowlisted public source-lock fetches. Commit only README/.gitkeep; fetched public HTML/text bytes remain ignored unless a later explicit policy approves a small text snapshot path.
 - `data/raw/`: immutable raw input area. Do not overwrite or commit real raw artefacts unless a future stage explicitly scopes a curated placeholder or lock.
 
 ## Generated Outputs
@@ -23,6 +24,7 @@
 - `experiments/results/cpu-batch/stage4h/`: generated Stage 4H CPU batch result JSONL, summary JSON, adapter coverage JSON, and warning records.
 - `experiments/results/scoring-consolidation/stage4i/`: generated Stage 4I scorer inventories, rendered calibration reports, CPU batch compatibility JSON, and warnings.
 - `experiments/results/observation-review/stage4j/`: generated Stage 4J observation review decision reports, quarantine reports, promotion-gate reports, path-sanitisation reports, and warnings.
+- `experiments/results/source-lock-snapshots/stage4k/`: generated Stage 4K fetch reports, rejected-source records, duplicate-source records, warnings, and local diagnostics.
 - `data/normalized/`: generated normalized candidate outputs unless a stage explicitly commits a placeholder or curated source.
 - SQLite outputs: `*.sqlite`, `*.sqlite3`, and `*.db` are generated and must not be committed.
 
@@ -53,6 +55,8 @@
 - Generated Stage 4H CPU batch result, summary, adapter coverage, and warning outputs under `experiments/results/cpu-batch/stage4h/`.
 - Generated Stage 4I scorer inventory, calibration report, CPU batch compatibility, and warning outputs under `experiments/results/scoring-consolidation/stage4i/`.
 - Generated Stage 4J observation review reports under `experiments/results/observation-review/stage4j/`.
+- Generated Stage 4K source-lock snapshot reports under `experiments/results/source-lock-snapshots/stage4k/`.
+- Cached Stage 4K source snapshot bytes under `third_party/SourceSnapshots/`.
 - Downloaded or cached `cicada-solvers/iddqd` images, audio, fonts, archives, blobs, or cloned repository contents under `third_party/CicadaSolversIddqd/`.
 - SQLite databases.
 - Root Deep Research report copies or `deep-research-reports/**`.

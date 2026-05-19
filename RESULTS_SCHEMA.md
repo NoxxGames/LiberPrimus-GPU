@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, and Stage 4J observation review records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, and Stage 4K public source-lock snapshot records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -29,6 +29,13 @@ Stage 4H CPU batch records require `cpu_only=true`, `cuda_used=false`, `cuda_req
 Stage 4I scoring records require finite confidence labels, scorer IDs/versions, calibration-profile references where available, `solve_claim=false`, `trusted_as_canonical=false`, and `cuda_used=false`. Generated scorer inventories and rendered calibration reports remain ignored under `experiments/results/scoring-consolidation/stage4i/`.
 
 Stage 4J observation review records require explicit review states, promotion gates, quarantine/control records, `solve_claim=false`, `trusted_as_canonical=false`, and `usable_as_experiment_seed=false` unless a future explicit promotion stage changes that with review evidence. Generated review decision, quarantine, promotion-gate, and path-sanitisation reports remain ignored under `experiments/results/observation-review/stage4j/`.
+
+Stage 4K source-lock snapshot records require `raw_private_data_committed=false`,
+`binary_committed=false`, `image_committed=false`, `audio_committed=false`, `font_committed=false`,
+`archive_committed=false`, and `solve_claim=false`. Fetched records require content hashes, and
+committed snapshots are restricted to explicitly allowed small text snapshot policy. Generated
+source-lock reports remain ignored under `experiments/results/source-lock-snapshots/stage4k/`;
+fetched public-source bytes remain ignored under `third_party/SourceSnapshots/`.
 
 ## Result record principles
 

@@ -1,0 +1,111 @@
+record_type: source_lock_snapshot_summary
+stage: Stage 4K
+summary_id: stage4k-source-lock-summary
+sources_considered: 43
+sources_allowlisted: 15
+sources_locked: 9
+sources_fetched: 1
+github_commit_blob_locks: 8
+metadata_only_records: 8
+ignored_local_snapshots: 7
+committed_small_text_snapshots: 0
+rejected_unsafe_noisy_sources: 22
+duplicate_sources: 6
+fetch_failures: 6
+source_lock_status_counts:
+  commit_address_locked: 8
+  fetch_failed: 6
+  snapshot_cached_ignored: 1
+retrieval_status_counts:
+  fetch_failed: 6
+  fetched: 1
+  metadata_only: 5
+  not_fetched_binary_policy: 3
+source_lock_updates:
+- source_id: stage4b-rtkd-iddqd
+  snapshot_record_id: stage4k-stage4b-rtkd-iddqd
+  source_lock_status: commit_address_locked
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4b-scream314-cicada3301
+  snapshot_record_id: stage4k-stage4b-scream314-cicada3301
+  source_lock_status: commit_address_locked
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4b-complete-cicada-archive
+  snapshot_record_id: stage4k-stage4b-complete-cicada-archive
+  source_lock_status: commit_address_locked
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4b-uncovering-liber-primus
+  snapshot_record_id: stage4k-stage4b-uncovering-liber-primus
+  source_lock_status: fetch_failed
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4b-uncovering-lp-unsolved-pages
+  snapshot_record_id: stage4k-stage4b-uncovering-lp-unsolved-pages
+  source_lock_status: fetch_failed
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4b-uncovering-lp-transliteration
+  snapshot_record_id: stage4k-stage4b-uncovering-lp-transliteration
+  source_lock_status: fetch_failed
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4b-uncovering-frequency-analysis
+  snapshot_record_id: stage4k-stage4b-uncovering-frequency-analysis
+  source_lock_status: fetch_failed
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4b-uncovering-instar-emergence
+  snapshot_record_id: stage4k-stage4b-uncovering-instar-emergence
+  source_lock_status: fetch_failed
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4b-uncovering-what-happened-2014
+  snapshot_record_id: stage4k-stage4b-uncovering-what-happened-2014
+  source_lock_status: fetch_failed
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4b-uncovering-outguess
+  snapshot_record_id: stage4k-stage4b-uncovering-outguess
+  source_lock_status: snapshot_cached_ignored
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4e-cicada-solvers-iddqd
+  snapshot_record_id: stage4k-stage4e-cicada-solvers-iddqd
+  source_lock_status: commit_address_locked
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4f-iddqd-2016-4gq25-image
+  snapshot_record_id: stage4k-stage4f-iddqd-2016-4gq25-image
+  source_lock_status: commit_address_locked
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4f-iddqd-2013-02-assets
+  snapshot_record_id: stage4k-stage4f-iddqd-2013-02-assets
+  source_lock_status: commit_address_locked
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4f-iddqd-interconnectedness-mp3
+  snapshot_record_id: stage4k-stage4f-iddqd-interconnectedness-mp3
+  source_lock_status: commit_address_locked
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+- source_id: stage4f-iddqd-761-mp3-instar
+  snapshot_record_id: stage4k-stage4f-iddqd-761-mp3-instar
+  source_lock_status: commit_address_locked
+  review_update_policy: separate_stage4k_summary_record
+  stage4j_records_rewritten: false
+generated_outputs_committed: false
+raw_private_data_committed: false
+binary_committed: false
+image_committed: false
+audio_committed: false
+font_committed: false
+archive_committed: false
+solve_claim: false
+trusted_as_canonical: false
+notes:
+- Source locks strengthen reproducibility; they do not create solve evidence.
+- Stage 4J observation decisions are not destructively rewritten.

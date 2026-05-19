@@ -6,7 +6,7 @@ This catalog records planned transform families and the standards required befor
 
 ## Current Cipher Status
 
-After Stage 4J, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, metadata-only source-delta records for selected public artefact categories, stego/audio fixture source-lock metadata, a source-backed cookie exact-refresh result, a CPU batch transform API, scorer/calibration records, and an observation review lifecycle. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, stego/audio extraction, broad hash cracking, or solve claims.
+After Stage 4K, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, metadata-only source-delta records for selected public artefact categories, stego/audio fixture source-lock metadata, a source-backed cookie exact-refresh result, a CPU batch transform API, scorer/calibration records, an observation review lifecycle, and allowlisted public source-lock snapshot records. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, stego/audio extraction, broad hash cracking, or solve claims.
 
 Canonical corpus activation remains inactive and page boundaries remain reviewable.
 
@@ -27,6 +27,11 @@ Stage 4H CPU batch transform API is not a new cipher family. It packages existin
 Stage 4I scorer consolidation is not a cipher transform. It records scorer inventories, confidence labels, compatibility mappings, calibration profiles, and CPU batch score-summary compatibility. Scoring is triage only and cannot imply solved plaintext.
 
 Stage 4J observation review workflow is not a cipher transform. It adds review states, promotion gates, quarantine records, negative-control policy, and path-sanitisation checks so visual, numeric, source, cookie, stego/audio, and Discord-derived observations cannot silently become experiment seeds.
+
+Stage 4K public source-lock snapshot work is not a cipher transform. It locks allowlisted source
+metadata, GitHub commit-addressed references, fetch hashes, and copyright notes so future claims can
+cite reproducible public-source records without mirroring raw artefacts or treating sources as
+canonical truth.
 
 ## Historical Stage 0A status
 

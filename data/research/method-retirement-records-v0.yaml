@@ -101,6 +101,15 @@ records:
     prohibited_expansions: [Review-only seed use, visual meaning promotion without coordinates and accepted review, Discord-derived promotion without public corroboration, absolute local path commits.]
     notes: Negative controls can be used as controls without accepting them as true observations.
   - record_type: method_retirement_record
+    method_family_id: source_lock_snapshots
+    retired_status: active_with_constraints
+    reason: Public source-lock snapshots are active reproducibility infrastructure, but unrestricted fetching or content mirroring would create copyright, provenance, and repository-hygiene risk.
+    evidence: [Stage 4K records allowlisted public-source metadata, GitHub commit-addressed references, ignored local cache hashes, and explicit snapshot policies.]
+    stages_supporting: [stage-4k]
+    reopen_conditions: [A new public source is allowlisted, high-value, source-classified, copyright-reviewed, and bounded by snapshot policy.]
+    prohibited_expansions: [Broad web crawling, full repository mirroring, raw Discord or private link fetching, committing binary/image/audio/font/archive artefacts, treating source locks as canonical truth.]
+    notes: Stage 4K committed metadata and hashes only; cached fetched content remains ignored.
+  - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints
     reason: Stage 4B visual observations are useful review inputs, but broad visual pareidolia and unannotated dot/braille/constellation readings remain high-risk false-positive classes.

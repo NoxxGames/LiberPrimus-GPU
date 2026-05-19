@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4I scorer consolidation and calibration. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4K allowlisted public source-lock snapshots. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -32,6 +32,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Visual annotation: Stage 4C creates cuneiform, delimiter, dot-pattern, number-square-reference, and visual negative-control annotation tasks plus a generated local annotation site and blank coordinate templates. Coordinates and readings are separate; no Stage 4C visual task is verified, canonical, or usable as an experiment seed.
 - Bounded numeric verification: Stage 4D runs only no-fudge numeric and metadata audits. GP/rune batch002 skips without exact new spans, number-square routes skip without locked raw values, delimiter/dot audits infer no meaning, cuneiform seed execution remains deferred, and cookie pack v2 is deferred to a future explicit stage.
 - Source-delta audits: Stage 4E records selected `cicada-solvers/iddqd` tree metadata only. It does not blind-mirror external repositories, commit raw images/audio/fonts/binaries, run stego tools, or infer meaning from compression artefacts.
+- Public source-lock snapshots: Stage 4K locks a small allowlisted public-source subset with metadata, canonical URLs, retrieval status, hashes where fetched, copyright notes, explicit snapshot policies, and GitHub commit-addressed references. It does not broad crawl, blind-mirror repositories, commit full HTML by default, or commit binary/image/audio/font/archive artefacts.
 - CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. It is infrastructure for future CUDA parity, not a broad experiment runner.
 - Scoring contract: Stage 4I provides scorer inventory, finite confidence-label records, compatibility mappings, calibration-profile/report records, and CPU batch score compatibility checks. Score labels can create review leads only and cannot imply solved plaintext.
 - Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
@@ -43,7 +44,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 4J observation review workflow hardening.
+- Stage 4L reviewed observation promotion ledger.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -99,6 +100,8 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 4G cookie exact-candidate refresh.
 - Stage 4H CPU batch transform API extraction.
 - Stage 4I scorer consolidation and calibration report.
+- Stage 4J observation review workflow hardening.
+- Stage 4K allowlisted public source-lock snapshots.
 
 ## Architecture summary
 
@@ -159,6 +162,9 @@ Current status:
 - Stage 4F: historical OutGuess/audio fixture source-locking complete.
 - Stage 4G: cookie exact-candidate refresh complete.
 - Stage 4H: CPU batch transform API extraction complete.
+- Stage 4I: scorer consolidation and calibration report complete.
+- Stage 4J: observation review workflow hardening complete.
+- Stage 4K: allowlisted public source-lock snapshots complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -188,8 +194,9 @@ Current status:
 - Latest CPU batch API stage: Stage 4H executed `6` synthetic CPU-only candidates, supported all `6` current registry transforms, wrote `6` ignored result records, and created the CPU/CUDA parity contract without GPU code.
 - Latest scorer consolidation stage: Stage 4I recorded `3` scorer records, `9` confidence labels, `11` compatibility mappings, and `1` calibration profile. Positive/null/negative controls are available, CPU batch score compatibility is true, and scoring remains triage only.
 - Latest observation review stage: Stage 4J loaded `96` observation-family records, wrote `96` review decisions, `96` promotion-gate records, `23` quarantine records, and promoted `0` observations to manifests. Review-only observations remain non-seeds.
+- Latest source snapshot stage: Stage 4K considered `43` source candidates, wrote `15` allowlisted source-lock snapshot records, locked `8` GitHub commit-addressed references, fetched `1` ignored local snapshot, committed `0` raw snapshots, rejected `22` unsafe/noisy or non-priority sources, and recorded `6` duplicate sources.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 4K allowlisted public source-lock snapshots.
+- Next: Stage 4L reviewed observation promotion ledger.
 
 ## How To Use This Repo
 

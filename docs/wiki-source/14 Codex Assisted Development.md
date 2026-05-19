@@ -32,6 +32,7 @@ Use Codex safely for scoped repository stages.
 - For Stage 4H-style CPU batch API work, require normalized token streams, explicit transform candidates, deterministic output hashes, synthetic tests, stable CLI behavior, generated ignored outputs, no new transform semantics without docs/tests, no CUDA, and no solve claim.
 - For Stage 4I-style scoring consolidation work, require scorer records, finite confidence labels, compatibility mapping, calibration notes, CPU batch compatibility checks, generated ignored outputs, no new scorer invention, no CUDA, and no solve claim.
 - For Stage 4J-style observation review work, require review-state schemas, decisions, promotion gates, quarantine records, path sanitisation checks, stale-doc repair, generated ignored outputs, no experiment execution, and no solve claim.
+- For Stage 4K-style source-lock snapshot work, require allowlisted public sources only, explicit `--allow-network` for fetches, GitHub commit-addressed references where possible, ignored local cache, copyright notes, generated ignored reports, no broad crawl or mirror, no raw artefact commits, and no solve claim.
 
 ## Commands
 
@@ -117,6 +118,11 @@ or plaintext verified.
 If Codex changes observation review behavior, verify `libreprimus observation-review validate`,
 `libreprimus observation-review check-paths`, promotion-gate tests, quarantine tests, and path
 sanitisation tests before staging. Review-only observations cannot become experiment seeds.
+
+If Codex source-locks public snapshots, verify `libreprimus source-lock-snapshots validate`, keep
+generated reports under ignored `experiments/results/source-lock-snapshots/`, keep cache contents
+under ignored `third_party/SourceSnapshots/`, and do not commit binaries, images, audio, fonts,
+archives, raw Discord material, raw page images, or broad repository mirrors.
 
 If Codex changes CLI registration, verify `python -m libreprimus.cli --help`, selected group
 `--help` commands, and the Stage 3X command-surface tests before staging. Do not create

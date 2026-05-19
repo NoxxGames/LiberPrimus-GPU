@@ -113,6 +113,13 @@ try {
         --summary data/observations/review/stage4j-observation-review-summary.yaml
     & $Python -m libreprimus.cli observation-review check-paths --repo-root .
 
+    Write-Host "Validating Stage 4K source-lock snapshot records"
+    & $Python -m libreprimus.cli source-lock-snapshots validate `
+        --snapshot-records data/locks/third-party/source-snapshots/stage4k-source-lock-snapshot-records.yaml `
+        --fetch-records data/locks/third-party/source-snapshots/stage4k-source-fetch-records.yaml `
+        --copyright-records data/locks/third-party/source-snapshots/stage4k-source-copyright-policy-records.yaml `
+        --summary data/locks/third-party/source-snapshots/stage4k-source-lock-summary.yaml
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

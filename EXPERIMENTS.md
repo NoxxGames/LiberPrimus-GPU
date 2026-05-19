@@ -84,6 +84,26 @@ Run:
   --allow-warnings
 ```
 
+## Stage 4K Allowlisted Public Source-Lock Snapshots
+
+Stage 4K does not execute experiments. It records reproducible public-source metadata for a small
+allowlisted subset from Stage 4B, Stage 4E, Stage 4F, and Stage 4J records.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli source-lock-snapshots validate `
+  --snapshot-records data/locks/third-party/source-snapshots/stage4k-source-lock-snapshot-records.yaml `
+  --fetch-records data/locks/third-party/source-snapshots/stage4k-source-fetch-records.yaml `
+  --copyright-records data/locks/third-party/source-snapshots/stage4k-source-copyright-policy-records.yaml `
+  --summary data/locks/third-party/source-snapshots/stage4k-source-lock-summary.yaml
+```
+
+Network use is explicit through `--allow-network` on the build command. Generated fetch reports remain
+ignored under `experiments/results/source-lock-snapshots/stage4k/`, and fetched bytes remain ignored
+under `third_party/SourceSnapshots/`. Source-lock snapshots do not promote observations or create
+solve evidence.
+
 The Stage 4G run generated `4` candidates before deduplication, kept `4` deduplicated candidates, tested `8` exact SHA-256 comparisons against two targets, and found `0` exact matches. Do not rerun cookie work without newly source-locked exact candidate strings.
 
 ## Stage 4H CPU Batch Transform API

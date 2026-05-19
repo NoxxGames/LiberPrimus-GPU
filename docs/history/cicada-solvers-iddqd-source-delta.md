@@ -2,6 +2,10 @@
 
 Stage 4E inspects the public `cicada-solvers/iddqd` repository as a source-lock delta target. It records tree metadata and path categories only; it does not mirror the repository, process artefacts, or commit raw files.
 
+Stage 4K later locks selected `cicada-solvers/iddqd` references as commit-addressed public-source
+metadata. The source-delta tree remains metadata-only; image, audio, font, archive, and payload files
+are not committed.
+
 ## Scope
 
 The audit target is:

@@ -1,0 +1,574 @@
+record_set_id: stage4k-source-lock-snapshot-records
+schema: schemas/history/source-lock-snapshot-record-v0.schema.json
+records:
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4b-rtkd-iddqd
+  source_candidate_id: stage4b-rtkd-iddqd
+  source_family: stage4b_sources
+  source_url: https://github.com/rtkd/iddqd
+  canonical_url: https://github.com/rtkd/iddqd/tree/f2267b0c2f1e1d2662806b90b9c3a2953b3a7023
+  source_class: github_repository
+  source_path: null
+  artifact_type: strong_community_technical
+  source_basis: Stage 4B promoted public source record
+  retrieval_timestamp_utc: '2026-05-19T20:08:33Z'
+  retrieval_status: metadata_only
+  snapshot_policy: commit_addressed_reference
+  lock_status: commit_address_locked
+  http_status: null
+  content_type: null
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: rtkd
+  github_repo: iddqd
+  github_ref: null
+  github_path: null
+  github_reference_kind: repository
+  github_commit_sha: f2267b0c2f1e1d2662806b90b9c3a2953b3a7023
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4b-scream314-cicada3301
+  source_candidate_id: stage4b-scream314-cicada3301
+  source_family: stage4b_sources
+  source_url: https://github.com/scream314/cicada3301
+  canonical_url: https://github.com/scream314/cicada3301/tree/10733feb487bb8beb9966d534727ee5897aa54fc
+  source_class: github_repository
+  source_path: null
+  artifact_type: strong_community_technical
+  source_basis: Stage 4B promoted public source record
+  retrieval_timestamp_utc: '2026-05-19T20:08:33Z'
+  retrieval_status: metadata_only
+  snapshot_policy: commit_addressed_reference
+  lock_status: commit_address_locked
+  http_status: null
+  content_type: null
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: scream314
+  github_repo: cicada3301
+  github_ref: null
+  github_path: null
+  github_reference_kind: repository
+  github_commit_sha: 10733feb487bb8beb9966d534727ee5897aa54fc
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4b-complete-cicada-archive
+  source_candidate_id: stage4b-complete-cicada-archive
+  source_family: stage4b_sources
+  source_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  canonical_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive/tree/c3127e0e9eb5afbb582d37988d6369fe38429238
+  source_class: github_repository
+  source_path: null
+  artifact_type: secondary_archive
+  source_basis: Stage 4B promoted public source record
+  retrieval_timestamp_utc: '2026-05-19T20:08:33Z'
+  retrieval_status: metadata_only
+  snapshot_policy: commit_addressed_reference
+  lock_status: commit_address_locked
+  http_status: null
+  content_type: null
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: cicada-solvers
+  github_repo: The-Complete-Cicada3301-Archive
+  github_ref: null
+  github_path: null
+  github_reference_kind: repository
+  github_commit_sha: c3127e0e9eb5afbb582d37988d6369fe38429238
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4b-uncovering-liber-primus
+  source_candidate_id: stage4b-uncovering-liber-primus
+  source_family: stage4b_sources
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus
+  source_class: uncovering_cicada_page
+  source_path: null
+  artifact_type: strong_community_technical
+  source_basis: Stage 4B promoted public source record
+  retrieval_timestamp_utc: '2026-05-19T20:08:34Z'
+  retrieval_status: fetch_failed
+  snapshot_policy: ignored_local_snapshot
+  lock_status: fetch_failed
+  http_status: 403
+  content_type: text/html; charset=UTF-8
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: null
+  github_repo: null
+  github_ref: null
+  github_path: null
+  github_reference_kind: null
+  github_commit_sha: null
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4b-uncovering-lp-unsolved-pages
+  source_candidate_id: stage4b-uncovering-lp-unsolved-pages
+  source_family: stage4b_sources
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages
+  source_class: uncovering_cicada_page
+  source_path: null
+  artifact_type: strong_community_technical
+  source_basis: Stage 4B promoted public source record
+  retrieval_timestamp_utc: '2026-05-19T20:08:34Z'
+  retrieval_status: fetch_failed
+  snapshot_policy: ignored_local_snapshot
+  lock_status: fetch_failed
+  http_status: 403
+  content_type: text/html; charset=UTF-8
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: null
+  github_repo: null
+  github_ref: null
+  github_path: null
+  github_reference_kind: null
+  github_commit_sha: null
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4b-uncovering-lp-transliteration
+  source_candidate_id: stage4b-uncovering-lp-transliteration
+  source_family: stage4b_sources
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Page_Transliteration
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Page_Transliteration
+  source_class: uncovering_cicada_page
+  source_path: null
+  artifact_type: strong_community_technical
+  source_basis: Stage 4B promoted public source record
+  retrieval_timestamp_utc: '2026-05-19T20:08:34Z'
+  retrieval_status: fetch_failed
+  snapshot_policy: ignored_local_snapshot
+  lock_status: fetch_failed
+  http_status: 403
+  content_type: text/html; charset=UTF-8
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: null
+  github_repo: null
+  github_ref: null
+  github_path: null
+  github_reference_kind: null
+  github_commit_sha: null
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4b-uncovering-frequency-analysis
+  source_candidate_id: stage4b-uncovering-frequency-analysis
+  source_family: stage4b_sources
+  source_url: https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_(Liber_Primus)
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_(Liber_Primus)
+  source_class: uncovering_cicada_page
+  source_path: null
+  artifact_type: strong_community_technical
+  source_basis: Stage 4B promoted public source record
+  retrieval_timestamp_utc: '2026-05-19T20:08:34Z'
+  retrieval_status: fetch_failed
+  snapshot_policy: ignored_local_snapshot
+  lock_status: fetch_failed
+  http_status: 403
+  content_type: text/html; charset=UTF-8
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: null
+  github_repo: null
+  github_ref: null
+  github_path: null
+  github_reference_kind: null
+  github_commit_sha: null
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4b-uncovering-instar-emergence
+  source_candidate_id: stage4b-uncovering-instar-emergence
+  source_family: stage4b_sources
+  source_url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem)
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem)
+  source_class: uncovering_cicada_page
+  source_path: null
+  artifact_type: strong_community_technical
+  source_basis: Stage 4B promoted public source record
+  retrieval_timestamp_utc: '2026-05-19T20:08:34Z'
+  retrieval_status: fetch_failed
+  snapshot_policy: ignored_local_snapshot
+  lock_status: fetch_failed
+  http_status: 403
+  content_type: text/html; charset=UTF-8
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: null
+  github_repo: null
+  github_ref: null
+  github_path: null
+  github_reference_kind: null
+  github_commit_sha: null
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4b-uncovering-what-happened-2014
+  source_candidate_id: stage4b-uncovering-what-happened-2014
+  source_family: stage4b_sources
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  source_class: uncovering_cicada_page
+  source_path: null
+  artifact_type: strong_community_technical
+  source_basis: Stage 4B promoted public source record
+  retrieval_timestamp_utc: '2026-05-19T20:08:34Z'
+  retrieval_status: fetch_failed
+  snapshot_policy: ignored_local_snapshot
+  lock_status: fetch_failed
+  http_status: 403
+  content_type: text/html; charset=UTF-8
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: null
+  github_repo: null
+  github_ref: null
+  github_path: null
+  github_reference_kind: null
+  github_commit_sha: null
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4b-uncovering-outguess
+  source_candidate_id: stage4b-uncovering-outguess
+  source_family: stage4b_sources
+  source_url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  source_class: uncovering_cicada_page
+  source_path: null
+  artifact_type: strong_community_technical
+  source_basis: Stage 4B promoted public source record
+  retrieval_timestamp_utc: '2026-05-19T20:08:34Z'
+  retrieval_status: fetched
+  snapshot_policy: ignored_local_snapshot
+  lock_status: snapshot_cached_ignored
+  http_status: 200
+  content_type: text/html; charset=UTF-8
+  content_length: 204810
+  content_sha256: 3019c5be8903744afb1af7620f26a30d13db0127a496455c11783f6fe7064ef6
+  ignored_cache_path: third_party/SourceSnapshots/stage4k-stage4b-uncovering-outguess.html
+  github_owner: null
+  github_repo: null
+  github_ref: null
+  github_path: null
+  github_reference_kind: null
+  github_commit_sha: null
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public wiki page metadata/hash locked; full page HTML
+    is cached locally only and not committed.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4e-cicada-solvers-iddqd
+  source_candidate_id: stage4e-cicada-solvers-iddqd
+  source_family: stage4e_source_delta
+  source_url: https://github.com/cicada-solvers/iddqd
+  canonical_url: https://github.com/cicada-solvers/iddqd/tree/0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  source_class: github_repository
+  source_path: null
+  artifact_type: github_repository
+  source_basis: Stage 4E source-delta repository record
+  retrieval_timestamp_utc: '2026-05-19T20:08:35Z'
+  retrieval_status: metadata_only
+  snapshot_policy: commit_addressed_reference
+  lock_status: commit_address_locked
+  http_status: null
+  content_type: null
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: cicada-solvers
+  github_repo: iddqd
+  github_ref: null
+  github_path: null
+  github_reference_kind: repository
+  github_commit_sha: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4f-iddqd-2016-4gq25-image
+  source_candidate_id: stage4f-iddqd-2016-4gq25-image
+  source_family: stage4f_outguess
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2016/01/4gq25.jpg
+  canonical_url: https://github.com/cicada-solvers/iddqd/blob/0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07/2016/01/4gq25.jpg
+  source_class: github_blob
+  source_path: 2016/01/4gq25.jpg
+  artifact_type: image_fixture_candidate
+  source_basis: Stage 4F fixture source metadata
+  retrieval_timestamp_utc: '2026-05-19T20:08:35Z'
+  retrieval_status: not_fetched_binary_policy
+  snapshot_policy: metadata_only
+  lock_status: commit_address_locked
+  http_status: null
+  content_type: null
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: cicada-solvers
+  github_repo: iddqd
+  github_ref: master
+  github_path: 2016/01/4gq25.jpg
+  github_reference_kind: blob
+  github_commit_sha: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4f-iddqd-2013-02-assets
+  source_candidate_id: stage4f-iddqd-2013-02-assets
+  source_family: stage4f_outguess
+  source_url: https://github.com/cicada-solvers/iddqd/tree/master/2013/02
+  canonical_url: https://github.com/cicada-solvers/iddqd/tree/0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07/2013/02
+  source_class: github_tree
+  source_path: 2013/02/
+  artifact_type: historical_2013
+  source_basis: Stage 4F fixture source metadata
+  retrieval_timestamp_utc: '2026-05-19T20:08:36Z'
+  retrieval_status: metadata_only
+  snapshot_policy: commit_addressed_reference
+  lock_status: commit_address_locked
+  http_status: null
+  content_type: null
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: cicada-solvers
+  github_repo: iddqd
+  github_ref: master
+  github_path: 2013/02
+  github_reference_kind: tree
+  github_commit_sha: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4f-iddqd-interconnectedness-mp3
+  source_candidate_id: stage4f-iddqd-interconnectedness-mp3
+  source_family: stage4f_audio
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2014/05/3301%20-%20Interconnectedness.mp3
+  canonical_url: https://github.com/cicada-solvers/iddqd/blob/0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07/2014/05/3301
+    - Interconnectedness.mp3
+  source_class: github_blob
+  source_path: 2014/05/3301 - Interconnectedness.mp3
+  artifact_type: audio_fixture_candidate
+  source_basis: Stage 4F fixture source metadata
+  retrieval_timestamp_utc: '2026-05-19T20:08:36Z'
+  retrieval_status: not_fetched_binary_policy
+  snapshot_policy: metadata_only
+  lock_status: commit_address_locked
+  http_status: null
+  content_type: null
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: cicada-solvers
+  github_repo: iddqd
+  github_ref: master
+  github_path: 2014/05/3301 - Interconnectedness.mp3
+  github_reference_kind: blob
+  github_commit_sha: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+- record_type: source_lock_snapshot_record
+  snapshot_record_id: stage4k-stage4f-iddqd-761-mp3-instar
+  source_candidate_id: stage4f-iddqd-761-mp3-instar
+  source_family: stage4f_audio
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2013/02/761.MP3
+  canonical_url: https://github.com/cicada-solvers/iddqd/blob/0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07/2013/02/761.MP3
+  source_class: github_blob
+  source_path: 2013/02/761.MP3
+  artifact_type: audio_fixture_candidate
+  source_basis: Stage 4F fixture source metadata
+  retrieval_timestamp_utc: '2026-05-19T20:08:37Z'
+  retrieval_status: not_fetched_binary_policy
+  snapshot_policy: metadata_only
+  lock_status: commit_address_locked
+  http_status: null
+  content_type: null
+  content_length: null
+  content_sha256: null
+  ignored_cache_path: null
+  github_owner: cicada-solvers
+  github_repo: iddqd
+  github_ref: master
+  github_path: 2013/02/761.MP3
+  github_reference_kind: blob
+  github_commit_sha: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  github_blob_sha: null
+  committed_snapshot: false
+  committed_snapshot_path: null
+  licence_or_copyright_note: Public GitHub source metadata locked; repository licence
+    must be checked before copying content.
+  raw_private_data_committed: false
+  binary_committed: false
+  image_committed: false
+  audio_committed: false
+  font_committed: false
+  archive_committed: false
+  solve_claim: false
+  trusted_as_canonical: false

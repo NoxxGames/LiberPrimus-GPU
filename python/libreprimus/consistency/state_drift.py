@@ -103,6 +103,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 4I is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage4k",
+        re.compile(r"\bnext:\s*stage\s+4k\b", re.IGNORECASE),
+        "Stage 4K is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -309,9 +314,26 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4k_source_lock_snapshots_next",
-        "stage 4k" in staged_plan and "source-lock" in staged_plan and "snapshot" in staged_plan,
-        "Staged plan records Stage 4K allowlisted public source-lock snapshots as next.",
+        "stage4k_source_lock_snapshots_current_or_complete",
+        "stage 4k" in staged_plan
+        and "source-lock" in staged_plan
+        and "snapshot" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4K allowlisted public source-lock snapshots as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4l_reviewed_observation_promotion_next",
+        "stage 4l" in staged_plan and "reviewed observation promotion ledger" in staged_plan,
+        "Staged plan records Stage 4L reviewed observation promotion ledger as next.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "source_lock_snapshot_policy_present",
+        "source-lock snapshot" in combined and "allowlisted" in combined and "snapshot policy" in combined,
+        "Allowlisted public source-lock snapshot policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

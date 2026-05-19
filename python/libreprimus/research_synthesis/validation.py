@@ -106,8 +106,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 4k", "source-lock"),
-            "staged_plan_stage4k_source_lock_next",
+            ("stage 4k", "source-lock", "complete"),
+            "staged_plan_stage4k_source_lock_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4l", "reviewed observation promotion ledger"),
+            "staged_plan_stage4l_promotion_ledger_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -246,6 +252,14 @@ def validate_research_synthesis(
         )
         if "review-only" not in stop_text or "seed" not in stop_text or "local path" not in stop_text:
             errors.append("observation_review_workflow_missing_promotion_path_guardrail")
+
+    source_snapshots = _find_method(method_records, "source_lock_snapshots")
+    if source_snapshots is None:
+        errors.append("source_lock_snapshots_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in source_snapshots.get("stop_conditions", []))
+        if "broad crawl" not in stop_text or "binaries/images/audio/fonts/archives" not in stop_text:
+            errors.append("source_lock_snapshots_missing_allowlist_raw_guardrail")
 
     cuda = _find_method(method_records, "cuda_gpu_acceleration")
     if cuda is None or cuda.get("status") != "deferred":

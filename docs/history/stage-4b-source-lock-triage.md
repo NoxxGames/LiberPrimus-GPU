@@ -24,6 +24,11 @@ Stage 4B records selected sources rather than mirroring whole repositories. Late
 
 Stage 4E follows that policy for the public `cicada-solvers/iddqd` repository. It records tree/path metadata and source-health records, but it does not blind-mirror the repository or commit raw images, audio, fonts, archives, OutGuess payloads, or extracted artefacts.
 
+Stage 4K later selects a small allowlisted subset of Stage 4B sources for reproducible public
+source-lock snapshots. It adds canonical URLs, retrieval metadata, GitHub commit-addressed
+references, ignored-cache hash metadata where fetched, and copyright notes without committing raw
+source content.
+
 ## Stage 4B Counts
 
 - Stage 4A public links loaded: 57,969.

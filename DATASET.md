@@ -4,6 +4,12 @@
 
 Data handling must protect raw evidence and preserve provenance. After Stage 3V, the canonical corpus is still inactive and page boundaries remain reviewable. Historical Stage 0D added raw transcript source classes and alignment outputs without activating canonical corpus truth.
 
+Stage 4K adds allowlisted public source-lock snapshot metadata under
+`data/locks/third-party/source-snapshots/`. These records may include URLs, canonical URLs,
+retrieval status, content hashes for ignored local fetches, GitHub commit-addressed references,
+source class, copyright notes, and snapshot policy. They are reproducibility metadata only and do
+not make any source canonical.
+
 ## Immutable raw data
 
 `data/raw/` is immutable. Do not overwrite, normalize, crop, repair, OCR, transcribe, or deduplicate raw files in place.
@@ -49,6 +55,10 @@ Solved fixtures live under `data/fixtures/solved-pages/`. Fixture expected text 
 ## Licensing and redistribution caution
 
 Do not assume public availability means redistribution is permitted. Record source and licensing status before adding data.
+
+Stage 4K defaults to metadata/hash locking. Fetched public HTML/text belongs in the ignored
+`third_party/SourceSnapshots/` cache unless a later explicit policy approves a small text snapshot.
+Binary, image, audio, font, PDF, and archive artefacts must not be committed.
 
 ## Acquisition scripts policy
 
