@@ -46,3 +46,12 @@ records:
     rejected_recommendations: [No new experiment before consolidation.]
     affected_stages: [stage-3w, stage-3x, stage-3y]
     notes: Deep Research reports in `deep-research-reports/` must not be staged.
+  - record_type: deep_research_influence_record
+    report_id: stage4a-discord-research-bundle-review
+    report_title: Stage 4A Discord Research-Bundle Review for LiberPrimus-GPU
+    influence_summary: Recommended converting the Stage 4A redacted website output into public-source locks, ambiguity-preserving visual observations, and negative controls before any experiment execution.
+    direction_changes: [Made Stage 4B source-lock triage and visual observation intake the next practical step, with Stage 4C annotation before cuneiform or dot seeds can execute.]
+    adopted_recommendations: [Promote high-value public sources, add cuneiform/dot/number-square/cookie observations as review-only records, preserve false-positive negative controls, queue disabled future manifests.]
+    rejected_recommendations: [No broad source crawl, no raw Discord processing, no image-derived cipher execution, no broad hash cracking, no broad stego scan.]
+    affected_stages: [stage-4a, stage-4b, stage-4c]
+    notes: The curated report copy under docs/research is research input only; it is not a solve claim and Discord/site-derived leads require public-source corroboration.

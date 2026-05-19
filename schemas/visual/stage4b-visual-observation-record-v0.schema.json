@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/stage4b-visual-observation-record-v0.schema.json",
+  "title": "Stage 4B Visual Observation Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "observation_id",
+    "observation_family",
+    "source_id",
+    "page_refs",
+    "classification",
+    "evidence_strength",
+    "false_positive_risk",
+    "recommended_action",
+    "candidate_readings",
+    "derived_values",
+    "ambiguity_notes",
+    "review_status",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed",
+    "solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "stage4b_visual_observation_record" },
+    "observation_id": { "type": "string", "minLength": 1 },
+    "observation_family": { "type": "string", "minLength": 1 },
+    "source_id": { "type": "string", "minLength": 1 },
+    "page_refs": { "type": "array", "items": { "type": "string" } },
+    "classification": {
+      "enum": [
+        "observation_to_review",
+        "experiment_candidate",
+        "negative_control_candidate",
+        "debunk_or_false_positive",
+        "too_speculative"
+      ]
+    },
+    "evidence_strength": { "enum": ["high", "medium", "low", "speculative"] },
+    "false_positive_risk": { "enum": ["low", "medium", "high", "extreme"] },
+    "recommended_action": {
+      "enum": ["observation-review now", "queue bounded experiment", "add negative control", "quarantine"]
+    },
+    "candidate_readings": { "type": "array", "items": { "type": "object" } },
+    "derived_values": { "type": "object" },
+    "ambiguity_notes": { "type": "string" },
+    "review_status": { "enum": ["human_review_required", "quarantined", "negative_control"] },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "solve_claim": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

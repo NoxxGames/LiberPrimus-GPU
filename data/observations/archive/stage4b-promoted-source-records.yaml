@@ -1,0 +1,429 @@
+record_set_id: stage4b-promoted-source-records
+schema: schemas/history/stage4b-source-triage-record-v0.schema.json
+records:
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-rtkd-iddqd
+  title: rtkd iddqd original files and transcript anchor
+  url: https://github.com/rtkd/iddqd
+  normalized_url: https://github.com/rtkd/iddqd
+  source_class: strong_community_technical
+  classification: public_source_to_lock
+  evidence_strength: high
+  false_positive_risk: low
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-01e79a9424443f7ef862
+  - idx-0bddf87e11bce803691f
+  - idx-10e16605e6a20c6b172a
+  - idx-144c535ea2d5e864835e
+  - idx-15a84a93bf8e3f9e8432
+  - idx-18529c66ef1afa6b19c4
+  - idx-1b1918d8a4968e71fcbc
+  - idx-1b44e42a1a63137e7519
+  - idx-23df9ebe54d13fbf749a
+  - idx-2a5d7ef8995f2d50c777
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Strong public technical anchor for original files/transcripts; metadata only
+    in Stage 4B.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-scream314-cicada3301
+  title: scream314 Cicada 3301 public history repository
+  url: https://github.com/scream314/cicada3301
+  normalized_url: https://github.com/scream314/cicada3301
+  source_class: strong_community_technical
+  classification: public_source_to_lock
+  evidence_strength: high
+  false_positive_risk: low
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-06945a8c3ac628c067a6
+  - idx-06b56c27a1ed1a040464
+  - idx-0a5564d2dc14dfeee8e9
+  - idx-0cc33634f429e85b4fb1
+  - idx-0d1adba821df63daff8f
+  - idx-0eb70488ddf96699c393
+  - idx-13423bc3288970a61923
+  - idx-142936100a6d69d50cce
+  - idx-20dc961584f7fb09ad39
+  - idx-31829cddf2a563f713a3
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Public puzzle-history and Liber Primus notes; non-canonical until independently
+    locked.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-complete-cicada-archive
+  title: The Complete Cicada3301 Archive
+  url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  normalized_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  source_class: secondary_archive
+  classification: public_source_to_lock
+  evidence_strength: medium
+  false_positive_risk: medium
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-3ae55800fac49aee4b0b
+  - idx-cab3cf92bf58ef8a99f9
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Selected-file metadata only; Stage 4B does not blind-mirror the archive.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-uncovering-liber-primus
+  title: Uncovering Cicada Liber Primus solved methods page
+  url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus
+  normalized_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus
+  source_class: strong_community_technical
+  classification: public_source_to_lock
+  evidence_strength: high
+  false_positive_risk: low
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-0051510913198f2e361c
+  - idx-01bd9bf8b665cb6450b9
+  - idx-033292de50286494a740
+  - idx-0437f8957330ae3ba18b
+  - idx-069aaab69666df42dabf
+  - idx-07496e589bf2919d2321
+  - idx-08b85c80db518710bfbf
+  - idx-0fa06626a4fc7f7bf2a6
+  - idx-11c06810b218092a5d22
+  - idx-13393c98d6c6dfc28aae
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Community technical summary of solved and unsolved Liber Primus context.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-uncovering-lp-unsolved-pages
+  title: Uncovering Cicada Liber Primus Unsolved Pages
+  url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages
+  normalized_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages
+  source_class: strong_community_technical
+  classification: public_source_to_lock
+  evidence_strength: high
+  false_positive_risk: low
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-02d0a2d6952228bac9ee
+  - idx-076bface9e23569e2275
+  - idx-0cec9788a4038b1ccc5b
+  - idx-0eb38ca8da2266a8caf8
+  - idx-109f23771ca53e5be89b
+  - idx-10e0798a8600f93a8acd
+  - idx-15044a6dd95f8b047cd9
+  - idx-17b6efe476954c995d50
+  - idx-194b3ac7a6028a5cb27e
+  - idx-19839dbe70ab22ddca66
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Public unsolved-page inventory; reviewable, not canonical.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-uncovering-lp-transliteration
+  title: Uncovering Cicada Liber Primus Unsolved Page Transliteration
+  url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Page_Transliteration
+  normalized_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Page_Transliteration
+  source_class: strong_community_technical
+  classification: public_source_to_lock
+  evidence_strength: high
+  false_positive_risk: medium
+  recommended_action: source-lock now
+  stage4a_link_refs: []
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Reference for transliteration and page-boundary cautions; source-lock before
+    use.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-uncovering-frequency-analysis
+  title: Uncovering Cicada Frequency Analysis Liber Primus
+  url: https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_(Liber_Primus)
+  normalized_url: https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_(Liber_Primus
+  source_class: strong_community_technical
+  classification: public_source_to_lock
+  evidence_strength: medium
+  false_positive_risk: medium
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-04dd732da4694604e690
+  - idx-0939a77c097c2229e7b7
+  - idx-10890da72b20eeed47da
+  - idx-3588432b1a5e441b95bb
+  - idx-4c51ec69cb740bf0c420
+  - idx-73a7f8ee6e92d10e5d86
+  - idx-af01b787492c23fdf678
+  - idx-b3d4de42e65a6d70cf65
+  - idx-eae5dbd180cee9aabe49
+  - idx-f4b46bb79838916b41fe
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Useful anti-fantasy reference for cipher-family triage.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-uncovering-instar-emergence
+  title: Uncovering Cicada Instar emergence
+  url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem)
+  normalized_url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem
+  source_class: strong_community_technical
+  classification: public_source_to_lock
+  evidence_strength: high
+  false_positive_risk: low
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-1139e2f908b5d836b854
+  - idx-12d850550713dec7c35c
+  - idx-19f9f361c48508c787a1
+  - idx-21a8b941f1b6748f0e4b
+  - idx-26d2e7c7e8ac6476bd79
+  - idx-278b06eb7a770804a71a
+  - idx-3335c35e46968fc6158f
+  - idx-3479f6424ba2a141f27d
+  - idx-3b6396f91fcbb462a5e7
+  - idx-48fa0ee4c3943858963b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Historical anchor for 761.mp3 and audio/stego fixture planning.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-uncovering-what-happened-2014
+  title: Uncovering Cicada What Happened Part 1 2014
+  url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  normalized_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014
+  source_class: strong_community_technical
+  classification: public_source_to_lock
+  evidence_strength: high
+  false_positive_risk: low
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-01052480c4e4a0481876
+  - idx-02339b0a17091e5276c9
+  - idx-02950629c83f0c50eaef
+  - idx-043b7ba5dbd37d9e0040
+  - idx-083c4d39f878e4b2d2c8
+  - idx-099da7959cb3f49f882c
+  - idx-0a3ac866f7636078b6ea
+  - idx-0b687b63c4791e033af3
+  - idx-0b9b6bffe906d77b7dce
+  - idx-0bf917001fbbaf6e8125
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Historical anchor for Interconnectedness, OpenPuff, and number squares.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-uncovering-outguess
+  title: Uncovering Cicada OutGuess page
+  url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  normalized_url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  source_class: strong_community_technical
+  classification: public_source_to_lock
+  evidence_strength: high
+  false_positive_risk: low
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-017969ffdd8a76700036
+  - idx-0d6f78ba575a31e5ea12
+  - idx-235c3e8e6372a6823aff
+  - idx-28efb85a9981a08cbe06
+  - idx-2e69c2ad1ab6b44544ed
+  - idx-53bc5796b8a676e9d919
+  - idx-5cb6853fe1f275b63f6a
+  - idx-659a0a1df13ecf42f8c8
+  - idx-6d2b8ba3fe48f6ef2be0
+  - idx-71c019f2314669266d99
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Historical stego reference; not a broad-scan permission.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-wayback-outguess
+  title: Wayback OutGuess site snapshot
+  url: https://web.archive.org/web/*/http://www.outguess.org/
+  normalized_url: https://web.archive.org/web/*/http://www.outguess.org
+  source_class: reference_only_tooling
+  classification: public_source_to_lock
+  evidence_strength: medium
+  false_positive_risk: low
+  recommended_action: source-lock now
+  stage4a_link_refs: []
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Tool provenance only; not puzzle evidence.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-cygwin-outguess
+  title: Cygwin OutGuess package page
+  url: https://cygwin.com/packages/summary/outguess.html
+  normalized_url: https://cygwin.com/packages/summary/outguess.html
+  source_class: reference_only_tooling
+  classification: public_source_to_lock
+  evidence_strength: medium
+  false_positive_risk: low
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-af6b88d26b5f94dcd42f
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Install/tooling provenance only.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-charleswyt-mp3stego
+  title: Charleswyt MP3Stego repository
+  url: https://github.com/Charleswyt/MP3Stego
+  normalized_url: https://github.com/Charleswyt/MP3Stego
+  source_class: reference_only_tooling
+  classification: public_source_to_lock
+  evidence_strength: medium
+  false_positive_risk: medium
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-91ee971143b1739b2f10
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Reference-only tooling for future regression controls.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-rtkd-iddqd-2013-02-tree
+  title: rtkd iddqd 2013/02 asset tree
+  url: https://github.com/rtkd/iddqd/tree/master/2013/02
+  normalized_url: https://github.com/rtkd/iddqd/tree/master/2013/02
+  source_class: strong_community_technical
+  classification: public_source_to_lock
+  evidence_strength: high
+  false_positive_risk: low
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-0cf35ab733f51f822259
+  - idx-12dc815835941b19eb0c
+  - idx-42439d5fd971907258e7
+  - idx-4a9b6d374a3628e15e90
+  - idx-51d3f495d6f642fa2cc9
+  - idx-52a53896e3ddb4db87ad
+  - idx-5a90a53bab7ecd51a766
+  - idx-71c89a0ddc069c009279
+  - idx-a4e14b7207283d481e7a
+  - idx-a5cab5e93ab031b55251
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Selected metadata target for 2013 artefact fixture planning.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-cicada-solvers-iddqd-lp-outguessed
+  title: cicada-solvers iddqd LP outguessed tree
+  url: https://github.com/cicada-solvers/iddqd/tree/master/lp_outguessed
+  normalized_url: https://github.com/cicada-solvers/iddqd/tree/master/lp_outguessed
+  source_class: strong_community_technical
+  classification: public_source_to_lock
+  evidence_strength: medium
+  false_positive_risk: medium
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-7e8379af6e809b1948f4
+  - idx-979ec4fc039113bd7b2a
+  - idx-c46660e95be5d7eec797
+  - idx-f400882f60d9e4534ef2
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: High-value public tree surfaced by Stage 4A indexes; metadata only and not
+    canonical.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-google-translations-workbook
+  title: Google translations workbook
+  url: https://docs.google.com/spreadsheets/d/1QsoYQ-NkJcwEuyOgMrD6DkHU2AUktwsfnQGnTURf1bU/edit
+  normalized_url: https://docs.google.com/spreadsheets/d/1QsoYQ-NkJcwEuyOgMrD6DkHU2AUktwsfnQGnTURf1bU/edit
+  source_class: secondary_archive
+  classification: public_source_to_lock
+  evidence_strength: medium
+  false_positive_risk: medium
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-02e3c67640982b4840c7
+  - idx-06ee91bf1de8d69892bc
+  - idx-08853ed440130cac713d
+  - idx-0aa45bd47da26b830721
+  - idx-0addcb718cb34982492f
+  - idx-0ffb108e4eeb054ca57e
+  - idx-112be86fceef0edb27ab
+  - idx-134f466173a0cd7442d0
+  - idx-13bc84c5a20a4675526f
+  - idx-14f0290e400bf23c8a84
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Lock metadata/snapshot cautiously; not canonical solved text.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-complete-archive-magicsquares
+  title: Complete Archive magicsquares.txt
+  url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive/blob/main/assets/2014/stage07/magicsquares.txt
+  normalized_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive/blob/main/assets/2014/stage07/magicsquares.txt
+  source_class: secondary_archive
+  classification: public_source_to_lock
+  evidence_strength: high
+  false_positive_risk: low
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-714dbf98ce2c62a3fe04
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Concrete number-square artefact target; no raw file is fetched in Stage 4B.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-complete-archive-li676-status
+  title: Complete Archive li676 server status original text
+  url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive/blob/main/assets/2014/li676-224_server-status_orig.txt
+  normalized_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive/blob/main/assets/2014/li676-224_server-status_orig.txt
+  source_class: secondary_archive
+  classification: public_source_to_lock
+  evidence_strength: medium
+  false_positive_risk: medium
+  recommended_action: source-lock now
+  stage4a_link_refs:
+  - idx-76a6ec9acdba11fcb0f3
+  - idx-d620dfa83cda5d16c780
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Reference-only later source-lock target; no broad mirror.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-cicada3301-boards-number-square
+  title: Old forum number-square essays
+  url: https://cicada3301.boards.net/
+  normalized_url: https://cicada3301.boards.net
+  source_class: speculative
+  classification: too_speculative
+  evidence_strength: low
+  false_positive_risk: high
+  recommended_action: quarantine
+  stage4a_link_refs:
+  - idx-14eee1a8497eb91de6d3
+  - idx-2529d346b712e753c56a
+  - idx-3b1d6dfc03f36a43cfda
+  - idx-4f085ca830c4d5e42f93
+  - idx-53c671bd9fa196aef3be
+  - idx-5fa69e3d22b7f2b3f7d0
+  - idx-60ddb3b359a17ad49c8d
+  - idx-65b37a6615b01cfc1bb3
+  - idx-be9b7b3d4f303a6b90f4
+  - idx-beffc021cea6e3f08db3
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Historical context only; not evidence without exact artefact locks.
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-boxentriq-binary-tools
+  title: Generic binary and utility tools
+  url: https://www.boxentriq.com/
+  normalized_url: https://www.boxentriq.com
+  source_class: reference_only_tooling
+  classification: ignore_for_now
+  evidence_strength: low
+  false_positive_risk: medium
+  recommended_action: ignore
+  stage4a_link_refs: []
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Generic tooling is not source evidence unless directly referenced by a locked
+    workflow.

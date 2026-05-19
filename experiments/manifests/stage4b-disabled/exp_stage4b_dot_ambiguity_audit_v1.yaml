@@ -1,0 +1,18 @@
+record_type: stage4b_disabled_experiment_manifest
+manifest_id: exp_stage4b_dot_ambiguity_audit_v1
+title: exp stage4b dot ambiguity audit v1
+purpose: Measure ambiguity of dot/binary readings after annotation.
+source_basis:
+- Promoted dot motifs and ambiguity tables.
+- Stage 4A Deep Research review
+- Stage 4B source/observation records
+candidate_count_upper_bound: 140
+execution_enabled: false
+cuda_enabled: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+status: disabled_needs_annotation
+notes: Queued by Stage 4B only. Do not execute until a later explicit stage enables
+  and validates an executor.

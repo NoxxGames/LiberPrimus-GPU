@@ -82,6 +82,22 @@ Local validation includes:
 .\.venv\Scripts\python.exe -m libreprimus.cli discord-full-review validate --results-dir experiments/results/discord-full-review/stage4a
 ```
 
+## Stage 4B Source-Lock Triage Tests
+
+Stage 4B tests cover source-lock schemas, allowlisted URL classification, unsafe Discord/CDN rejection, duplicate URL normalization, visual observation guardrails, negative-control records, disabled manifest flags, CLI run/validate behavior on synthetic Stage 4A indexes, and ignore policy for generated triage outputs, raw Discord logs, and raw page images.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli source-lock-triage validate `
+  --promoted-sources data/observations/archive/stage4b-promoted-source-records.yaml `
+  --source-health data/locks/third-party/stage4b-source-health-records.yaml `
+  --visual-observations data/observations/visual/stage4b-visual-observation-records.yaml `
+  --negative-controls data/observations/research/stage4b-negative-control-records.yaml `
+  --cookie-source-records data/observations/web/stage4b-cookie-candidate-source-records.yaml `
+  --manifest-dir experiments/manifests/stage4b-disabled
+```
+
 ## Stage 3O Promotion And Wiki Tests
 
 Stage 3O tests cover Discord promotion redaction, public-safe URL filtering, review-only promotion records, README/tutorial coverage, Wiki source generation, Wiki validation scripts, and ignored raw/generated paths.

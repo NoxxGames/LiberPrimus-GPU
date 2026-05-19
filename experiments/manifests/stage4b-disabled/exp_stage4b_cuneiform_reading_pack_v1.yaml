@@ -1,0 +1,18 @@
+record_type: stage4b_disabled_experiment_manifest
+manifest_id: exp_stage4b_cuneiform_reading_pack_v1
+title: exp stage4b cuneiform reading pack v1
+purpose: Tiny cuneiform seed test after annotation.
+source_basis:
+- Cuneiform tuple readings after coordinate review.
+- Stage 4A Deep Research review
+- Stage 4B source/observation records
+candidate_count_upper_bound: 32
+execution_enabled: false
+cuda_enabled: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+status: disabled_needs_annotation
+notes: Queued by Stage 4B only. Do not execute until a later explicit stage enables
+  and validates an executor.

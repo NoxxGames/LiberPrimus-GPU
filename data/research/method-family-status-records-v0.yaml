@@ -178,6 +178,17 @@ records:
     solve_claim: false
     notes: Missing tool/assets are valid skips.
   - record_type: method_family_status_record
+    method_family_id: source_lock_visual_observation_intake
+    name: Website-derived source locks and visual observation intake
+    status: active
+    evidence_summary: Stage 4B promotes allowlisted public sources and preserves visual/numeric observations as review-only records with ambiguity and negative controls.
+    completed_stage_refs: [stage-4b]
+    reopen_conditions: [New redacted Deep Research review or source index item maps to an allowlisted public source class or exact observation record.]
+    stop_conditions: [Do not mirror noisy link indexes blindly, promote unsafe/private links, or convert unannotated visual observations into experiment seeds.]
+    next_action: Stage 4C cuneiform and dot annotation pack.
+    solve_claim: false
+    notes: This branch is active for source locks and observation review, not cryptanalytic execution.
+  - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred

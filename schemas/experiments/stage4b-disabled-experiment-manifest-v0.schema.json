@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/experiments/stage4b-disabled-experiment-manifest-v0.schema.json",
+  "title": "Stage 4B Disabled Experiment Manifest v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "manifest_id",
+    "title",
+    "purpose",
+    "source_basis",
+    "candidate_count_upper_bound",
+    "execution_enabled",
+    "cuda_enabled",
+    "no_solve_claim",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "generated_outputs_committed",
+    "status",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "stage4b_disabled_experiment_manifest" },
+    "manifest_id": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "purpose": { "type": "string", "minLength": 1 },
+    "source_basis": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "candidate_count_upper_bound": { "type": "integer", "minimum": 0, "maximum": 100000 },
+    "execution_enabled": { "const": false },
+    "cuda_enabled": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "status": { "enum": ["disabled_pending_review", "disabled_needs_annotation", "disabled_needs_source_lock"] },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

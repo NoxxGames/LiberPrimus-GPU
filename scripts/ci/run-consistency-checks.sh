@@ -17,6 +17,15 @@ echo "Running state-drift consistency checks"
 echo "Validating Stage 3Y research synthesis records"
 "$python_bin" -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md
 
+echo "Validating Stage 4B source-lock triage records"
+"$python_bin" -m libreprimus.cli source-lock-triage validate \
+    --promoted-sources data/observations/archive/stage4b-promoted-source-records.yaml \
+    --source-health data/locks/third-party/stage4b-source-health-records.yaml \
+    --visual-observations data/observations/visual/stage4b-visual-observation-records.yaml \
+    --negative-controls data/observations/research/stage4b-negative-control-records.yaml \
+    --cookie-source-records data/observations/web/stage4b-cookie-candidate-source-records.yaml \
+    --manifest-dir experiments/manifests/stage4b-disabled
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

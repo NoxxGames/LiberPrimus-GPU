@@ -1,0 +1,19 @@
+record_set_id: stage4b-cookie-candidate-source-records
+schema: schemas/history/stage4b-source-triage-record-v0.schema.json
+records:
+- record_type: stage4b_source_triage_record
+  source_id: stage4b-cookie-167-761-exact-artifacts
+  title: Stage 4B cookie 167 and 761 exact artefact candidate strings
+  url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  normalized_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  source_class: strong_community_technical
+  classification: experiment_candidate
+  evidence_strength: medium
+  false_positive_risk: medium
+  recommended_action: queue bounded experiment
+  stage4a_link_refs: []
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Future v2 cookie candidates must be exact public-source strings and deduplicated
+    against prior packs.

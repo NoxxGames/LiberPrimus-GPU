@@ -90,6 +90,11 @@ experiments/results/**
 !experiments/results/scoring-calibration/.gitkeep
 !experiments/results/scoring-calibration/stage3c/
 !experiments/results/scoring-calibration/stage3c/.gitkeep
+!experiments/results/source-lock-triage/
+!experiments/results/source-lock-triage/README.md
+!experiments/results/source-lock-triage/.gitkeep
+!experiments/results/source-lock-triage/stage4b/
+!experiments/results/source-lock-triage/stage4b/.gitkeep
 experiments/reports/**
 !experiments/reports/
 !experiments/reports/README.md

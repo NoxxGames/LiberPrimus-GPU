@@ -50,3 +50,15 @@ includes noindex metadata, `robots.txt`, a site privacy notice, SFTP checklist, 
 Stage 4A prepares full Discord research-bundle extraction for Deep Research from local HTML exports.
 It produces redacted, structured, image-aware bundles and a static site that Deep Research can use
 without publishing raw logs.
+
+## Stage 4B Intake From Deep Research
+
+Stage 4B ingests the Stage 4A Discord Research-Bundle Review into durable project records:
+
+- promoted public-source records under `data/observations/archive/stage4b-promoted-source-records.yaml`;
+- source-health records under `data/locks/third-party/stage4b-source-health-records.yaml`;
+- review-only visual observations under `data/observations/visual/stage4b-visual-observation-records.yaml`;
+- negative controls under `data/observations/research/stage4b-negative-control-records.yaml`;
+- disabled future manifests under `experiments/manifests/stage4b-disabled/`.
+
+Future Deep Research handoffs should prefer these curated records plus the redacted Stage 4A site. Do not hand off raw Discord logs or raw local page images.

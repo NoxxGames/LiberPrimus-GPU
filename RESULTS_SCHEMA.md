@@ -6,11 +6,13 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, and Stage 3Y research-synthesis ledgers.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, and Stage 4B source-lock/visual-intake records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
 Stage 3Y research-synthesis records under `data/research/` are committed source-of-truth metadata, not generated experiment outputs. They must keep `solve_claim=false`, record method-family status/reopen conditions, and preserve no-broadening guardrails for noisy, negative, inconclusive, deferred, or infrastructure-only families.
+
+Stage 4B records under `data/observations/archive/`, `data/locks/third-party/`, `data/observations/visual/`, `data/observations/research/`, and `data/observations/web/` are committed source/observation metadata. They must keep `trusted_as_canonical=false` and `solve_claim=false`; visual records must also keep `usable_as_experiment_seed=false`. Stage 4B disabled manifests must keep `execution_enabled=false`, `cuda_enabled=false`, and `no_solve_claim=true`.
 
 ## Result record principles
 
@@ -118,6 +120,20 @@ Committed schema IDs:
 - `discord-full-review-shard-record-v0`
 - `discord-full-review-index-record-v0`
 - `discord-full-review-summary-v0`
+
+## Stage 4B Source-Lock And Visual Intake Records
+
+Stage 4B adds schemas for source triage, source health, visual observation intake, negative-control records, and disabled future manifest records.
+
+Committed schema IDs:
+
+- `stage4b-source-triage-record-v0`
+- `source-health-record-v0`
+- `stage4b-visual-observation-record-v0`
+- `negative-control-record-v1`
+- `stage4b-disabled-experiment-manifest-v0`
+
+Generated triage diagnostics remain ignored under `experiments/results/source-lock-triage/stage4b/`.
 - `lp-page-gallery-record-v0`
 - `discord-image-reference-v0`
 

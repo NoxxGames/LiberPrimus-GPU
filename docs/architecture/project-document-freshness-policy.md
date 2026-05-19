@@ -44,6 +44,12 @@ When project direction changes:
 4. Update relevant reference docs, tutorials, and `docs/wiki-source/**`.
 5. Run `libreprimus research-synthesis validate` and `libreprimus consistency check-state-drift`.
 
+## Stage 4B Source-Lock And Observation Updates
+
+When source-lock, visual-observation, negative-control, or disabled-manifest records change, update the matching reference docs, staged plan, research-synthesis ledgers, `EXPERIMENTS.md`, `RESULTS_SCHEMA.md`, `TESTING.md`, `CIPHER_CATALOG.md`, and tutorials/wiki-source where public workflow guidance changes.
+
+Stage 4B records are durable context but not solve evidence. Future doc updates must preserve the distinction between public source-lock targets, review-only observations, disabled experiment manifests, and generated ignored diagnostics.
+
 ## Required Doc Update Matrix
 
 - Stage status changes: `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, `README.md`, staged plan.

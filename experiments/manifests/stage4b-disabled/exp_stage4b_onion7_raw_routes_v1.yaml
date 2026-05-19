@@ -1,0 +1,18 @@
+record_type: stage4b_disabled_experiment_manifest
+manifest_id: exp_stage4b_onion7_raw_routes_v1
+title: exp stage4b onion7 raw routes v1
+purpose: No-fudge raw number-square route audit.
+source_basis:
+- Raw Interconnectedness and number-square source locks.
+- Stage 4A Deep Research review
+- Stage 4B source/observation records
+candidate_count_upper_bound: 96
+execution_enabled: false
+cuda_enabled: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+status: disabled_needs_source_lock
+notes: Queued by Stage 4B only. Do not execute until a later explicit stage enables
+  and validates an executor.

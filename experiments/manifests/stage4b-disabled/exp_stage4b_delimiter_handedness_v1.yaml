@@ -1,0 +1,19 @@
+record_type: stage4b_disabled_experiment_manifest
+manifest_id: exp_stage4b_delimiter_handedness_v1
+title: exp stage4b delimiter handedness v1
+purpose: Test delimiter handedness and reset-boundary hypotheses after observation
+  intake.
+source_basis:
+- Mirrored three-dot delimiter observations.
+- Stage 4A Deep Research review
+- Stage 4B source/observation records
+candidate_count_upper_bound: 16
+execution_enabled: false
+cuda_enabled: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+status: disabled_needs_annotation
+notes: Queued by Stage 4B only. Do not execute until a later explicit stage enables
+  and validates an executor.

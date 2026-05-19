@@ -2,7 +2,7 @@
 
 ## Current Reviewed State
 
-Stage 3V is complete, Stage 3W and Stage 3X are complete, Stage 3Y is complete, and Stage 3Z is complete. Stage 4A is the next planned full Discord research-bundle extraction stage for Deep Research.
+Stage 3V is complete, Stage 3W and Stage 3X are complete, Stage 3Y is complete, Stage 3Z is complete, Stage 4A is complete, and Stage 4B is complete. Stage 4C is the next planned cuneiform and dot annotation pack.
 
 The current safety posture is:
 
@@ -83,7 +83,7 @@ Deferred work after Stage 3Y:
 
 - Stage 4A: full Discord research-bundle extraction for Deep Research.
 - Stage 4B: website-derived source-lock triage and visual observation intake.
-- Stage 4C: cuneiform/dot annotation workflow.
+- Stage 4C: cuneiform and dot annotation pack.
 - Stage 4D: OutGuess/audio historical fixture source-locking.
 - Stage 4E: CPU batch transform API extraction.
 - Stage 4F: scorer consolidation and calibration report.

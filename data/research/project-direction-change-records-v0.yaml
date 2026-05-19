@@ -55,3 +55,12 @@ records:
     source: User direction after Stage 3Y and Discord website review.
     affected_docs: [docs/roadmap/staged-plan.md, ROADMAP.md, docs/onboarding/deep-research-handoff-map.md, AGENTS.md]
     notes: CPU batch API remains planned, not cancelled.
+  - record_type: project_direction_change_record
+    change_id: stage4b-source-lock-visual-intake-priority
+    date_or_stage: stage-4b
+    previous_direction: Move from Stage 4A redacted Discord research-bundle generation toward later CPU batch API work.
+    new_direction: Promote high-value public sources, add review-only visual/numeric observations, preserve negative controls, and perform cuneiform/dot annotation before any related experiment execution.
+    reason: The Stage 4A Discord Research-Bundle Review found that source provenance, ambiguity, and false-positive controls are prerequisites for safe follow-up.
+    source: Stage 4A Discord Research-Bundle Review and user Stage 4B direction.
+    affected_docs: [docs/roadmap/staged-plan.md, ROADMAP.md, STATUS.md, AGENTS.md, EXPERIMENTS.md, CIPHER_CATALOG.md]
+    notes: CPU batch API remains planned for Stage 4E; broad search, hash, stego, and visual pareidolia expansions remain deferred or prohibited.

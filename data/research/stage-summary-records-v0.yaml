@@ -188,7 +188,7 @@ records:
   - record_type: stage_summary_record
     stage_id: stage-3y
     title: Result synthesis and method-retirement ledger
-    status: current
+    status: complete
     category: maintenance
     summary: Converts accumulated stage history into durable staged-plan, method-family, retirement, influence, and direction-change records.
     key_outputs:
@@ -200,4 +200,66 @@ records:
     cuda_used: false
     raw_outputs_committed: false
     generated_outputs_committed: false
-    notes: No experiments are executed in Stage 3Y.
+    notes: No experiments were executed in Stage 3Y.
+  - record_type: stage_summary_record
+    stage_id: stage-3z
+    title: Source-of-truth and newcomer map
+    status: complete
+    category: maintenance
+    summary: Added onboarding maps for source-of-truth navigation, Codex workflows, Deep Research handoff, contributor modules, task lanes, and private/generated data.
+    key_outputs:
+      - Onboarding source-of-truth maps.
+      - Direction-change record moving Stage 4A to Discord research-bundle extraction.
+    result_status: source_of_truth_update
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: No experiments were executed in Stage 3Z.
+  - record_type: stage_summary_record
+    stage_id: stage-4a
+    title: Full Discord research-bundle extraction for Deep Research
+    status: complete
+    category: source_review
+    summary: Built a redacted full Discord review bundle and static site from local ignored Discord HTML exports and LP page images.
+    key_outputs:
+      - Redacted chronological streams and channel shards under ignored output paths.
+      - Topic shards, indexes, LP page gallery, static site, and Deep Research manifest.
+      - Aggregate committed summaries only.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Generated site, copied images, raw logs, usernames, IDs, private URLs, and bundle outputs remain ignored.
+  - record_type: stage_summary_record
+    stage_id: stage-4a-followup
+    title: Static review-site privacy hardening and Wiki diagnosis
+    status: complete
+    category: maintenance
+    summary: Hardened the generated Stage 4A static site with noindex metadata, robots output, privacy notices, SFTP checklist, site manifests, and Wiki publish diagnostics.
+    key_outputs:
+      - Privacy-hardened static-site generator defaults.
+      - Wiki publish blocker report.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Generated site files and upload packages remain ignored.
+  - record_type: stage_summary_record
+    stage_id: stage-4b
+    title: Website-derived source-lock triage and visual observation intake
+    status: complete
+    category: source_review
+    summary: Promoted high-value public sources from Stage 4A and Deep Research context, recorded source-health metadata, added ambiguity-preserving visual observations, preserved negative controls, and queued disabled future manifests.
+    key_outputs:
+      - Stage 4B source-lock triage and source-health records.
+      - Cuneiform, delimiter, dot ambiguity, number-square, and cookie observation records.
+      - Negative-control records and disabled Stage 4B manifest backlog.
+    result_status: source_review_records
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: No experiments were executed; observations remain review-only and non-canonical.

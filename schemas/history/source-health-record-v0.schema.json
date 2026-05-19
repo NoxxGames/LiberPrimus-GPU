@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/source-health-record-v0.schema.json",
+  "title": "Source Health Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "source_id",
+    "url",
+    "source_class",
+    "health_status",
+    "fragility",
+    "checked_at_stage",
+    "retrieval_status",
+    "recommended_action",
+    "trusted_as_canonical",
+    "solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "source_health_record" },
+    "source_id": { "type": "string", "minLength": 1 },
+    "url": { "type": "string", "minLength": 1 },
+    "source_class": { "type": "string", "minLength": 1 },
+    "health_status": {
+      "enum": ["not_fetched_stage4b", "fragile", "stable_public", "reference_only", "unknown"]
+    },
+    "fragility": { "enum": ["low", "medium", "high", "unknown"] },
+    "checked_at_stage": { "const": "stage4b" },
+    "retrieval_status": { "type": "string", "minLength": 1 },
+    "recommended_action": { "type": "string", "minLength": 1 },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

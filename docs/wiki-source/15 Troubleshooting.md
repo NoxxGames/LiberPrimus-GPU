@@ -32,6 +32,7 @@ git check-ignore -v experiments/results/discord-lead-promotion/stage3r/promotion
 git check-ignore -v experiments/results/image-transforms/stage3p/review_index.html
 git check-ignore -v experiments/results/image-transforms/stage3p/contact_sheets/example.jpg
 git check-ignore -v experiments/results/stego/outguess/stage3v/summary.json
+git check-ignore -v experiments/results/source-lock-triage/stage4b/source_triage_report.json
 ```
 
 If an ignored Stage 3P transform run leaves local images or HTML under `experiments/results/`, do
@@ -66,6 +67,11 @@ shards, topic shards, indexes, copied LP page images, thumbnails, contact sheets
 under `experiments/results/discord-full-review/stage4a/`, do not stage them. Commit only aggregate
 records, code, schemas, docs, tests, and research logs.
 
+If a Stage 4B source-lock triage run leaves JSON, JSONL, duplicate-link, rejected-link, or warning
+files under `experiments/results/source-lock-triage/stage4b/`, do not stage them. Commit only the
+curated YAML source/observation/negative-control records, disabled manifests, code, schemas, docs,
+tests, and research logs.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 
@@ -87,6 +93,9 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `source-of-truth-map.md`, `codex-navigation-map.md`, `deep-research-handoff-map.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
+
+After Stage 4B, onboarding and staged-plan checks should show Stage 4B complete and Stage 4C
+cuneiform/dot annotation next.
 
 ## Stage 4A Bundle Or Site Problems
 
@@ -124,6 +133,24 @@ Run:
 If it fails, check that every method-family record has reopen and stop conditions, every retirement
 record references a method family, CUDA is still deferred, cookie SHA-256 broadening requires an
 explicit new source, and the staged plan still contains its update policy.
+
+## Stage 4B Source-Lock Validation Fails
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli source-lock-triage validate `
+  --promoted-sources data/observations/archive/stage4b-promoted-source-records.yaml `
+  --source-health data/locks/third-party/stage4b-source-health-records.yaml `
+  --visual-observations data/observations/visual/stage4b-visual-observation-records.yaml `
+  --negative-controls data/observations/research/stage4b-negative-control-records.yaml `
+  --cookie-source-records data/observations/web/stage4b-cookie-candidate-source-records.yaml `
+  --manifest-dir experiments/manifests/stage4b-disabled
+```
+
+Failures usually mean a record is missing `trusted_as_canonical=false`, a visual observation is
+marked usable as an experiment seed, a disabled manifest accidentally allows execution, or an
+unsafe/private URL was promoted.
 
 ## CLI Command Missing After Refactor
 

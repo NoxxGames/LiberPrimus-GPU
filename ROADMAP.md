@@ -4,14 +4,17 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4A full Discord research-bundle extraction is complete. It produced redacted generated review
-bundles and an SFTP-ready static site under ignored paths for Deep Research handoff. The next planned
-stage is Stage 4B: website-derived source-lock triage and visual observation intake, using Stage 4A
-bundle outputs. CPU batch transform API extraction remains planned later; CUDA remains deferred.
+Stage 4B website-derived source-lock triage and visual observation intake is complete. It promoted
+allowlisted public sources, recorded source-health metadata, preserved review-only cuneiform/dot/
+number-square/cookie observations, added negative controls, and queued disabled future manifests
+using Stage 4A bundle outputs and the Stage 4A Deep Research review.
 
-Stage 4A follow-up hardens the generated static site with noindex/robots/privacy/upload metadata and
-records the remaining GitHub Wiki publish blocker. It is not a new research stage and should not
-promote Discord leads before Deep Research returns its report.
+The next planned stage is Stage 4C: cuneiform and dot annotation pack. CPU batch transform API
+extraction remains planned later; CUDA remains deferred.
+
+Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
+recorded the remaining GitHub Wiki publish blocker. Stage 4B has now ingested the Stage 4A Deep
+Research review into durable records without executing experiments.
 
 ## Phase 0A - Project bootstrap
 
@@ -277,17 +280,17 @@ Stage 3Z expands the source-of-truth hierarchy into concise onboarding maps that
 
 ## Stage 4A - Full Discord research-bundle extraction for Deep Research
 
-Next stage: convert local admin-provided Discord HTML exports into redacted, scoped, image-aware Deep-Research-friendly bundles. Raw Discord logs, private attachments, usernames, user IDs, message IDs, and private URLs must remain local/ignored and must not be committed.
+Stage 4A converted local admin-provided Discord HTML exports into redacted, scoped, image-aware Deep-Research-friendly bundles. Raw Discord logs, private attachments, usernames, user IDs, message IDs, and private URLs remain local/ignored and must not be committed.
 
 The independent review originally suggested CPU batch transform API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier. CPU batch API extraction remains planned later and is not cancelled.
 
 ## Stage 4B - Website-derived source-lock triage and visual observation intake
 
-Triage website/public-source findings and visual observations into source-lock, observation, and negative-control records without raw image publication or solve claims.
+Stage 4B triages website/public-source findings and visual observations into source-lock, observation, and negative-control records without raw image publication or solve claims. It promotes allowlisted public sources only, rejects unsafe/private or noisy links, preserves ambiguity, and keeps all queued manifests disabled.
 
-## Stage 4C - Cuneiform/dot annotation workflow
+## Stage 4C - Cuneiform and dot annotation pack
 
-Create a bounded review workflow for cuneiform, dot, and motif annotations. Keep observations reviewable unless exact source evidence supports promotion.
+Create a bounded review workflow for cuneiform, dot, and motif annotations. Record exact coordinates, ambiguity tables, alternate readings, review status, and negative controls before any cuneiform/dot item can become an experiment seed.
 
 ## Stage 4D - OutGuess/audio historical fixture source-locking
 

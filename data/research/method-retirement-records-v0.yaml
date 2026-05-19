@@ -73,3 +73,21 @@ records:
     reopen_conditions: [Stage 4A CPU batch API and Stage 4B scorer consolidation are complete.]
     prohibited_expansions: [GPU kernels without CPU reference, parity tests, and benchmark plan.]
     notes: Stage 5A is planning and parity scaffolding only.
+  - record_type: method_retirement_record
+    method_family_id: deterministic_image_analysis
+    retired_status: active_with_constraints
+    reason: Stage 4B visual observations are useful review inputs, but broad visual pareidolia and unannotated dot/braille/constellation readings remain high-risk false-positive classes.
+    evidence: [Stage 4B negative-control records preserve braille, constellation, forced dot-value, cuneiform-as-fact, and geometry overlay failure modes.]
+    stages_supporting: [stage-4b]
+    reopen_conditions: [Stage 4C-style annotation supplies exact coordinates, ambiguity tables, source refs, and review status.]
+    prohibited_expansions: [OCR or AI-derived page solves, unannotated dot/braille/constellation seeds, broad visual filter fishing, geometry or mirror overlay dumps without source lineage.]
+    notes: Visual observations remain review-only and usable_as_experiment_seed=false until explicitly promoted.
+  - record_type: method_retirement_record
+    method_family_id: source_lock_visual_observation_intake
+    retired_status: active_with_constraints
+    reason: Source-lock and observation intake is active, but noisy public-link indexes and Deep Research leads must be filtered by allowlist, source class, privacy risk, and evidence strength.
+    evidence: [Stage 4B promoted selected public sources while rejecting unsafe/noisy links and preserving negative controls.]
+    stages_supporting: [stage-4b]
+    reopen_conditions: [New public-source class or exact observation has a bounded validation path and documented privacy review.]
+    prohibited_expansions: [Blind archive mirroring, private Discord or CDN link promotion, broad literature-key fishing, broad hash cracking, broad stego scans.]
+    notes: Stage 4B is durable triage state, not a solve or experiment stage.

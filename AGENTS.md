@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 3Z - source-of-truth / newcomer map.
+Current completed stage: Stage 4B - website-derived source-lock triage and visual observation intake.
 
-Current work: Stage 4A - full Discord research-bundle extraction for Deep Research. Stage 4A should prepare redacted, scoped, Deep-Research-friendly bundles from local Discord HTML exports; it must not publish raw logs, private attachments, usernames, user IDs, message IDs, or private URLs.
+Current work: Stage 4C - cuneiform and dot annotation pack. Stage 4C should annotate exact coordinates, ambiguity tables, alternate readings, and review status before any cuneiform/dot observation can become an experiment seed.
 
 Current project state:
 
@@ -77,6 +77,12 @@ Current project state:
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
 - Upload only generated `site/` contents, never raw `third_party/` inputs.
 - Wiki publish failures should be recorded with exact errors and manual recovery steps, but research stages should not fail solely because the GitHub Wiki remote is unavailable.
+- Stage 4B source triage must not mirror noisy public-link indexes blindly.
+- Public-link promotion requires an allowlisted domain, source class, evidence strength, false-positive risk, and recommended action.
+- Visual observations must preserve ambiguity; cuneiform, dot, braille, constellation, and star readings must not be treated as facts.
+- Dot/binary/braille/constellation claims must not become experiment seeds without annotation records, exact coordinates, alternate readings, and controls.
+- Stage 4B disabled manifests stay disabled until a later explicit execution stage.
+- Deep Research reports that change project direction must update `docs/roadmap/staged-plan.md` and the research synthesis records under `data/research/`.
 
 ## Source-of-truth files
 

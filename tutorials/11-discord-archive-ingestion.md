@@ -8,6 +8,10 @@ Stage 4A builds full Discord research-bundle extraction for Deep Research. It cr
 scoped, image-aware generated bundles and an SFTP-ready static site from local HTML exports without
 publishing raw logs or private attachments.
 
+Stage 4B consumes Stage 4A generated indexes and the Stage 4A Deep Research review to create
+public-source locks, review-only visual observations, negative controls, and disabled future
+manifests. It does not process raw logs or execute experiments.
+
 ## Commands
 
 ```powershell
@@ -61,6 +65,14 @@ publishing raw logs or private attachments.
   --emit-robots `
   --emit-site-manifest `
   --allow-warnings
+
+.\.venv\Scripts\python.exe -m libreprimus.cli source-lock-triage validate `
+  --promoted-sources data/observations/archive/stage4b-promoted-source-records.yaml `
+  --source-health data/locks/third-party/stage4b-source-health-records.yaml `
+  --visual-observations data/observations/visual/stage4b-visual-observation-records.yaml `
+  --negative-controls data/observations/research/stage4b-negative-control-records.yaml `
+  --cookie-source-records data/observations/web/stage4b-cookie-candidate-source-records.yaml `
+  --manifest-dir experiments/manifests/stage4b-disabled
 ```
 
 ## Expected Outputs
@@ -78,6 +90,10 @@ static site files, copied LP page images, thumbnails, and archives remain ignore
 site includes noindex metadata, `robots.txt`, a site privacy notice, SFTP upload checklist, optional
 server guidance, and a deterministic site manifest.
 
+Stage 4B writes committed source/observation/negative-control YAML records and disabled manifests.
+Its generated rejected-link, duplicate-link, warning, and triage-report outputs remain ignored under
+`experiments/results/source-lock-triage/stage4b/`.
+
 ## What Not To Commit
 
 Raw Discord HTML, raw message bodies, usernames, user IDs, message IDs, private attachment URLs,
@@ -85,6 +101,7 @@ generated extraction outputs, generated promotion outputs, generated redacted sh
 review indexes, generated Stage 3R audit JSONL outputs, generated Stage 3S post-Discord
 candidate outputs, generated Stage 3T verification outputs, generated Stage 3U hash outputs, or
 generated Stage 4A full-review site/bundle outputs.
+Do not commit generated Stage 4B source-lock triage diagnostics or rejected-link lists.
 
 If a Stage 4A site is uploaded for review, upload only `experiments/results/discord-full-review/stage4a/site/`.
 Never upload raw `third_party/` directories.
@@ -97,3 +114,6 @@ channel part rather than uploading raw HTML.
 
 If a Stage 3R lead is Discord-only, keep it quarantined until it has a public source or exact
 artefact reference.
+
+If a Stage 4B public-link item is useful but not allowlisted, record it as future review context
+rather than promoting it. Do not mirror broad archives or promote private Discord/CDN URLs.

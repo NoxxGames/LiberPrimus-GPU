@@ -21,6 +21,7 @@ Use Codex safely for scoped repository stages.
 - For Stage 3Z-style onboarding work, require `docs/onboarding/` maps, staged-plan updates, direction-change records if the roadmap changes, and state-drift tests. Do not execute experiments.
 - For Stage 4A-style Deep Research handoff work, require `redacted_public` output, ignored static-site/bundle paths, aggregate-only committed records, no raw Discord logs, no usernames/IDs/private URLs, and no copied LP page images in Git.
 - For Stage 4A follow-up static-site work, require noindex metadata, `robots.txt`, privacy notice, SFTP checklist, deterministic site manifest, and validation that generated site files remain ignored.
+- For Stage 4B-style source-lock triage, require allowlisted public-source promotion, unsafe/private link rejection, review-only visual observations, negative-control records, disabled manifests, and no experiment execution.
 
 ## Commands
 
@@ -69,6 +70,9 @@ synchronized with `docs/roadmap/staged-plan.md` and relevant `docs/onboarding/` 
 
 If Codex retires, reopens, or reprioritises a method family, update `data/research/` ledgers and run
 `libreprimus research-synthesis validate` before staging.
+
+If Codex promotes public sources or visual observations, verify `libreprimus source-lock-triage validate`
+and keep generated triage diagnostics under ignored `experiments/results/source-lock-triage/`.
 
 If Codex changes CLI registration, verify `python -m libreprimus.cli --help`, selected group
 `--help` commands, and the Stage 3X command-surface tests before staging. Do not create

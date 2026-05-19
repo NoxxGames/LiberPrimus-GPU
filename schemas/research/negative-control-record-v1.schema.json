@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/research/negative-control-record-v1.schema.json",
+  "title": "Negative Control Record v1",
+  "type": "object",
+  "required": [
+    "record_type",
+    "negative_control_id",
+    "false_positive_class",
+    "description",
+    "why_dangerous",
+    "recommended_use",
+    "evidence_strength",
+    "false_positive_risk",
+    "trusted_as_canonical",
+    "solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "stage4b_negative_control_record" },
+    "negative_control_id": { "type": "string", "minLength": 1 },
+    "false_positive_class": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "why_dangerous": { "type": "string", "minLength": 1 },
+    "recommended_use": { "type": "string", "minLength": 1 },
+    "evidence_strength": { "enum": ["high", "medium", "low", "speculative"] },
+    "false_positive_risk": { "enum": ["low", "medium", "high", "extreme"] },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

@@ -75,6 +75,18 @@ and `data/observations/visual/stage4a-lp-page-gallery-aggregate.yaml` record gen
 counts and privacy flags only. They do not promote raw Discord messages, usernames, private URLs, or
 page-image bytes into source truth.
 
+Stage 4B records website-derived public source locks, source-health metadata, review-only visual
+observations, cookie source candidates, and negative controls:
+
+- `data/observations/archive/stage4b-promoted-source-records.yaml`
+- `data/locks/third-party/stage4b-source-health-records.yaml`
+- `data/observations/visual/stage4b-visual-observation-records.yaml`
+- `data/observations/research/stage4b-negative-control-records.yaml`
+- `data/observations/web/stage4b-cookie-candidate-source-records.yaml`
+
+These records preserve ambiguity and stop conditions. Visual records remain
+`usable_as_experiment_seed=false`.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
@@ -91,6 +103,8 @@ Do not commit generated Stage 3V extraction JSONL, tool JSON, summary JSON, synt
 extracted payloads.
 Do not commit generated Stage 4A redacted streams, channel shards, topic shards, indexes, static
 site files, copied LP page images, thumbnails, contact sheets, or upload archives.
+Do not commit generated Stage 4B source-lock triage reports, rejected-link lists, duplicate-link
+lists, or warnings under `experiments/results/source-lock-triage/stage4b/`.
 
 ## Troubleshooting
 
@@ -111,3 +125,6 @@ verify source provenance before any interpretation.
 
 If a Stage 3V extraction produces bytes, interpret it only when an expected payload hash exists and
 matches. Otherwise keep it as an ignored reference extraction record.
+
+If a Stage 4B visual observation looks promising, add coordinates and alternate readings in Stage 4C
+before any manifest treats it as a seed.

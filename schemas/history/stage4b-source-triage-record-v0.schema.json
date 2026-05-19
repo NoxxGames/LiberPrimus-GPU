@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/history/stage4b-source-triage-record-v0.schema.json",
+  "title": "Stage 4B Source Triage Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "source_id",
+    "title",
+    "url",
+    "normalized_url",
+    "source_class",
+    "classification",
+    "evidence_strength",
+    "false_positive_risk",
+    "recommended_action",
+    "stage4a_link_refs",
+    "retrieval_status",
+    "trusted_as_canonical",
+    "solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "stage4b_source_triage_record" },
+    "source_id": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "url": { "type": "string", "minLength": 1 },
+    "normalized_url": { "type": "string", "minLength": 1 },
+    "source_class": {
+      "enum": [
+        "strong_community_technical",
+        "secondary_archive",
+        "reference_only_tooling",
+        "speculative",
+        "negative_control_material"
+      ]
+    },
+    "classification": {
+      "enum": [
+        "public_source_to_lock",
+        "observation_to_review",
+        "experiment_candidate",
+        "negative_control_candidate",
+        "debunk_or_false_positive",
+        "duplicate_of_existing_work",
+        "too_speculative",
+        "unsafe_or_private",
+        "ignore_for_now"
+      ]
+    },
+    "evidence_strength": { "enum": ["high", "medium", "low", "speculative"] },
+    "false_positive_risk": { "enum": ["low", "medium", "high", "extreme"] },
+    "recommended_action": {
+      "enum": [
+        "source-lock now",
+        "observation-review now",
+        "queue bounded experiment",
+        "add negative control",
+        "duplicate existing work",
+        "quarantine",
+        "ignore"
+      ]
+    },
+    "stage4a_link_refs": { "type": "array", "items": { "type": "string" } },
+    "retrieval_status": { "type": "string", "minLength": 1 },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

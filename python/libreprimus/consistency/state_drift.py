@@ -203,6 +203,23 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
+        "stage4b_source_lock_visual_intake",
+        "stage 4b" in staged_plan
+        and "source-lock" in staged_plan
+        and "visual observation" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4B source-lock triage and visual observation intake.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4c_cuneiform_dot_next",
+        "stage 4c" in staged_plan and "cuneiform" in staged_plan and "dot" in staged_plan,
+        "Staged plan records Stage 4C cuneiform/dot annotation as the next review stage.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
         "canonical_corpus_inactive",
         "canonical corpus" in combined and "inactive" in combined,
         "Canonical corpus is documented as inactive.",

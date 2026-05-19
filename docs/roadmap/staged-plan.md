@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage before this record: Stage 3Z - source-of-truth / newcomer map.
-- Current stage: Stage 4A - full Discord research-bundle extraction for Deep Research.
+- Latest completed stage: Stage 4B - website-derived source-lock triage and visual observation intake.
+- Current planning focus: Stage 4C - cuneiform and dot annotation pack.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -33,24 +33,25 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Stage 3X: modularised CLI command registration without behaviour changes.
 - Stage 3Y: created the durable staged plan, research-synthesis records, method-retirement ledger, Deep Research influence records, and direction-change records.
 - Stage 3Z: created source-of-truth and newcomer maps for users, Codex, Deep Research, contributors, and reviewers.
+- Stage 4A: generated a redacted full Discord research-bundle and static review site for Deep Research from local ignored Discord exports and LP page images.
+- Stage 4A-followup: hardened the generated static review site with noindex/robots/privacy/upload metadata and documented the GitHub Wiki publish blocker.
+- Stage 4B: promoted high-value public sources into source-lock triage records, added review-only visual/numeric observations, preserved false-positive classes as negative controls, and queued disabled future manifests.
 
 ## Current Stage
 
-Stage 4A builds a privacy-preserving full Discord research-bundle for Deep Research from local ignored Discord HTML exports and local ignored Liber Primus page images.
+Stage 4B converts the Stage 4A redacted bundle and the Stage 4A Discord Research-Bundle Review into durable project state. It records high-value public sources, source-health metadata, cuneiform/dot/number-square/cookie visual observations, false-positive negative controls, and disabled future manifests.
 
-Stage 4A creates redacted chronological streams, channel shards, topic shards, indexes, an LP page gallery, and an SFTP-ready static site under ignored output paths. It executes no cryptanalytic experiments and makes no solve claim.
+Stage 4B executes no cryptanalytic experiments, mirrors no broad archive, processes no raw Discord logs or raw page images, and makes no solve claim. Visual and numeric observations remain reviewable and `usable_as_experiment_seed=false` until a later explicit annotation/review stage promotes them.
 
 ## Planned Next Stages
 
-- Stage 4A - full Discord research-bundle extraction for Deep Research.
-- Stage 4B - website-derived source-lock triage and visual observation intake.
-- Stage 4C - cuneiform/dot annotation workflow.
+- Stage 4C - cuneiform and dot annotation pack.
 - Stage 4D - OutGuess/audio historical fixture source-locking.
 - Stage 4E - CPU batch transform API extraction.
 - Stage 4F - scorer consolidation and calibration report.
 - Stage 5A - CUDA planning and parity scaffolding only.
 
-The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research can work with local Discord exports in a redacted, structured form. CPU batch API extraction remains planned as Stage 4E; it is deferred, not cancelled.
+The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking and visual observation intake ahead of CPU API work. CPU batch API extraction remains planned as Stage 4E; it is deferred, not cancelled.
 
 ## Deferred Work
 
@@ -65,7 +66,7 @@ The independent review originally suggested CPU batch API extraction as Stage 4A
 - AI, OCR, or ML as source truth.
 - Live Discord, Tor, or web crawling.
 
-## Stage 4A Direction
+## Stage 4A And Stage 4B Direction
 
 Stage 4A converts local admin-provided Discord HTML exports into full Deep-Research-friendly bundles. The output must be redacted, scoped, image-aware where metadata exists, and generated under ignored paths. Raw Discord logs, private attachments, usernames, user IDs, message IDs, private URLs, generated static site files, copied LP page images, thumbnails, and archives must not be committed or handed off raw.
 
@@ -73,7 +74,9 @@ Stage 4A follow-up hardens the generated static site with noindex metadata, all-
 `robots.txt`, site privacy notices, SFTP upload checklists, optional server configuration guidance,
 and deterministic site manifests. It does not change research conclusions or promote leads.
 
-The next planned stage after Stage 4A is Stage 4B: website-derived source-lock triage and visual observation intake, using Stage 4A bundle outputs.
+Stage 4B promotes only allowlisted, high-value public sources from Stage 4A/Deep Research context. It preserves cuneiform/base-60, mirrored delimiter, dot/binary ambiguity, number-square, cookie/hash, and exact-span GP/rune items as reviewable observations or disabled future manifest inputs only. It also preserves braille, constellation, forced dot-value, ad-hoc arithmetic, broad stego, spectrogram, AI-solve, unsigned-claim, broad literature-key, and attachment-privacy patterns as negative controls.
+
+The next planned stage after Stage 4B is Stage 4C: cuneiform and dot annotation pack. Stage 4C should add exact coordinates, ambiguity tables, and review workflow records before any visual observation can become an experiment seed.
 
 ## Retired Or Deprioritised Directions
 
@@ -85,6 +88,8 @@ The next planned stage after Stage 4A is Stage 4B: website-derived source-lock t
 - Mersenne/perfect-number tiny probe: inconclusive and low priority unless image/source evidence emerges.
 - Cookie SHA-256 packs: negative for tried exact packs; do not broaden without an explicit new candidate source.
 - Broad dictionary/hash cracking: deferred and prohibited without explicit scoped evidence.
+- Broad visual pareidolia, unannotated dot/braille/constellation readings, and image-derived cipher seeds: deferred and prohibited until Stage 4C-style annotation records preserve coordinates, ambiguity, controls, and review status.
+- Broad OutGuess/stego/audio scans: deferred and prohibited until source-locked fixtures and expected-output controls exist.
 - CUDA acceleration: deferred until CPU batch APIs, stable scorer definitions, parity tests, and benchmarks exist.
 
 ## Deep Research Influence Log
@@ -94,6 +99,7 @@ The next planned stage after Stage 4A is Stage 4B: website-derived source-lock t
 - Archive/image/onion research report: promoted source-locking, exact artefact metadata, Onion 7 numeric observations, and deterministic image-review infrastructure.
 - Discord corroboration and triage reports: established Discord as lead discovery only; public-source corroboration decides promotion, and raw logs remain private/ignored.
 - Independent project review: recommended Stage 3W consolidation, Stage 3X CLI modularisation, and this Stage 3Y result-synthesis ledger before new experiment stages.
+- Stage 4A Discord Research-Bundle Review: moved the next practical work to source-lock triage and visual observation intake, with public-source promotion, ambiguity-preserving visual records, and negative controls before any cuneiform/dot experiments.
 
 ## Direction-Change Policy
 

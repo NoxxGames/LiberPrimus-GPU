@@ -49,6 +49,18 @@ def validate_research_synthesis(
             ("stage 4a", "discord research-bundle", "deep research"),
             "staged_plan_stage4a_discord_research_bundle",
         )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4b", "source-lock", "visual observation"),
+            "staged_plan_stage4b_source_lock_visual_observation",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4c", "cuneiform", "dot"),
+            "staged_plan_stage4c_cuneiform_dot_next",
+        )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
         _require_text(errors, staged_text, ("page boundaries", "reviewable"), "staged_plan_boundaries_reviewable")
@@ -117,6 +129,17 @@ def validate_research_synthesis(
             errors.append("stage3z_stage4_direction_missing_discord_deep_research")
         if "docs/roadmap/staged-plan.md" not in affected_docs or "roadmap.md" not in affected_docs:
             errors.append("stage3z_stage4_direction_missing_affected_docs")
+    stage4b_change = _find_record(direction_changes, "change_id", "stage4b-source-lock-visual-intake-priority")
+    if stage4b_change is None:
+        errors.append("stage4b_source_lock_visual_intake_priority_missing")
+    else:
+        new_direction = str(stage4b_change.get("new_direction", "")).lower()
+        if "source" not in new_direction or "visual" not in new_direction or "annotation" not in new_direction:
+            errors.append("stage4b_direction_missing_source_visual_annotation")
+
+    influence_records = records_by_key.get("deep_research_influences", [])
+    if _find_record(influence_records, "report_id", "stage4a-discord-research-bundle-review") is None:
+        errors.append("stage4a_discord_research_bundle_review_influence_missing")
 
     cuda = _find_method(method_records, "cuda_gpu_acceleration")
     if cuda is None or cuda.get("status") != "deferred":

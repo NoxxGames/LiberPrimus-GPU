@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 4A full Discord research-bundle extraction for Deep Research is complete. Next planned stage: Stage 4B website-derived source-lock triage and visual observation intake, using Stage 4A bundle outputs.
+Stage 4B website-derived source-lock triage and visual observation intake is complete. Next planned stage: Stage 4C cuneiform and dot annotation pack.
 
 Stage 4A follow-up hardens the generated static review site with noindex/robots/privacy/upload
 metadata and documents the remaining GitHub Wiki publish blocker. It does not change research
@@ -23,6 +23,16 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 ## Not yet implemented
 
 No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, Stage 3Q generates ignored redacted Discord topic shards only, Stage 3R promotes corroborated leads and creates disabled manifests only, Stage 3S executes only the bounded Onion 7 explicit seed-pack manifest, Stage 3T executes only the bounded GP/rune claim verifier, Stage 3U executes only the bounded cookie SHA-256 signed-variant pack, Stage 3V adds an OutGuess regression harness without broad stego scanning, Stage 3W adds state-drift checks without new experiment execution, Stage 3X modularises CLI command registration without behavior changes, Stage 3Y adds result synthesis and method-retirement records without new experiment execution, and Stage 3Z adds onboarding/source-of-truth maps without new experiment execution.
+
+## Completed in Stage 4B
+
+Stage 4B added website-derived source-lock triage and visual observation intake using Stage 4A generated indexes and the Stage 4A Deep Research review. It promoted high-value public-source records, recorded source-health metadata, added cuneiform/delimiter/dot/number-square/cookie review-only observations, preserved false-positive classes as negative controls, and queued disabled future bounded manifests.
+
+Local triage summary: Stage 4A links loaded `57969`, promoted source records `20`, source-health records `19`, duplicate normalized links skipped `47755`, unsafe/noisy links rejected `40716`, visual observations `6`, cuneiform observations `1`, delimiter observations `2`, dot-ambiguity observations `1`, negative controls `17`, disabled manifests `7`.
+
+Stage 4B executed no experiments, mirrored no broad archive, processed no raw Discord logs or raw page images, used no OCR/AI interpretation, made no solve claim, kept CUDA deferred, and left canonical corpus activation and page-boundary finalization absent.
+
+Developer log: `docs/development-logs/2026-05-18-stage-4b-source-lock-visual-intake.md`.
 
 ## Completed in Stage 4A
 
@@ -494,4 +504,4 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 
 ## Next prompt recommendation
 
-Stage 3Y - result synthesis and method-retirement ledger. Do not jump to CUDA.
+Stage 4C - cuneiform and dot annotation pack. Do not execute cuneiform/dot experiments before exact coordinates, ambiguity tables, review status, and negative controls are recorded.

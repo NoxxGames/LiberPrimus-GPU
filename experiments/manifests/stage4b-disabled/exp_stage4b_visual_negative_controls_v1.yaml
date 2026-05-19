@@ -1,0 +1,18 @@
+record_type: stage4b_disabled_experiment_manifest
+manifest_id: exp_stage4b_visual_negative_controls_v1
+title: exp stage4b visual negative controls v1
+purpose: Pareidolia and ambiguity controls for visual claims.
+source_basis:
+- Braille, constellation, binary, and visual-overfit negative controls.
+- Stage 4A Deep Research review
+- Stage 4B source/observation records
+candidate_count_upper_bound: 60
+execution_enabled: false
+cuda_enabled: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+status: disabled_pending_review
+notes: Queued by Stage 4B only. Do not execute until a later explicit stage enables
+  and validates an executor.

@@ -1,0 +1,212 @@
+record_set_id: stage4b-negative-control-records
+schema: schemas/research/negative-control-record-v1.schema.json
+records:
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-braille_dot_readings
+  false_positive_class: braille_dot_readings
+  description: Braille dot readings
+  why_dangerous: Too many plausible readings can be imposed on sparse dot motifs.
+  recommended_use: Use as visual pareidolia negative controls before any dot scoring.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-constellation_dot_readings
+  false_positive_class: constellation_dot_readings
+  description: Constellation dot readings
+  why_dangerous: Resemblance-only star matching is unstable and contradictory.
+  recommended_use: Use as resemblance-only controls.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-forced_13_31_dot_values
+  false_positive_class: forced_13_31_dot_values
+  description: Forced 13/31 dot readings
+  why_dangerous: 13 and 31 depend on anchor, rotation, grouping, and polarity choices.
+  recommended_use: Require ambiguity tables before treating dot values as seeds.
+  evidence_strength: medium
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-cuneiform_reading_as_fact
+  false_positive_class: cuneiform_reading_as_fact
+  description: Cuneiform reading treated as fact
+  why_dangerous: The arithmetic is clean only if the visual segmentation is accepted.
+  recommended_use: Require coordinate annotation and alternate readings first.
+  evidence_strength: medium
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-incorrect_base60_conversion
+  false_positive_class: incorrect_base60_conversion
+  description: Incorrect or ambiguous base-60 conversion
+  why_dangerous: Sexagesimal arithmetic can be correct while the glyph readout is
+    wrong.
+  recommended_use: Separate arithmetic checks from visual evidence.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-ad_hoc_prime_magic_square_arithmetic
+  false_positive_class: ad_hoc_prime_magic_square_arithmetic
+  description: Ad-hoc prime/magic-square arithmetic
+  why_dangerous: Prime-nearby and no-rule arithmetic can make coincidences look intentional.
+  recommended_use: Use only fixed no-fudge routes on locked raw values.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-broad_outguess_bruteforce_garbage
+  false_positive_class: broad_outguess_bruteforce_garbage
+  description: Broad OutGuess brute-force garbage outputs
+  why_dangerous: OutGuess-like tools can emit fake file types or garbage under arbitrary
+    passwords.
+  recommended_use: Require known positives, negatives, and expected hash checks before
+    new extraction claims.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-mp3stego_without_exact_positive
+  false_positive_class: mp3stego_without_exact_positive
+  description: MP3Stego enthusiasm without exact source-positive
+  why_dangerous: Audio stego claims need reproducible positive controls, not plausible
+    filenames.
+  recommended_use: Source-lock historical positives before broad audio work.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-spectrogram_pareidolia
+  false_positive_class: spectrogram_pareidolia
+  description: Spectrogram pareidolia
+  why_dangerous: Spectrogram shapes are easy to over-read without exact expected payloads.
+  recommended_use: Treat as negative control unless a source-locked positive exists.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-ai_generated_page_solves
+  false_positive_class: ai_generated_page_solves
+  description: AI-generated page solves
+  why_dangerous: AI-generated plaintext can hallucinate even solved-page context.
+  recommended_use: Do not admit AI text as evidence or seed source.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-sixteen_page_authenticity_myth
+  false_positive_class: sixteen_page_authenticity_myth
+  description: LP only has 16 authentic pages myth
+  why_dangerous: Unverified authenticity shortcuts can erase reviewable corpus material.
+  recommended_use: Keep as myth-control until backed by signed provenance.
+  evidence_strength: low
+  false_positive_risk: high
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-unsigned_new_cicada_claims
+  false_positive_class: unsigned_new_cicada_claims
+  description: Unsigned or unverifiable new-Cicada claims
+  why_dangerous: Claims without PGP/signature provenance are cheap false paths.
+  recommended_use: Quarantine unless public signing evidence exists.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-dictionary_looking_prime_hits
+  false_positive_class: dictionary_looking_prime_hits
+  description: Dictionary-looking prime/totient hits
+  why_dangerous: Small transforms can produce English-looking coincidences by chance.
+  recommended_use: Require controls and source-anchored hypotheses.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-broad_literature_key_fishing
+  false_positive_class: broad_literature_key_fishing
+  description: Broad literature-key fishing
+  why_dangerous: Literature references are abundant and low-yield without exact keys.
+  recommended_use: Do not broaden Vigenere/book-key packs without explicit source
+    keys.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-geometry_mirror_overlay_dumps
+  false_positive_class: geometry_mirror_overlay_dumps
+  description: Geometry/mirror overlay dumps without source lineage
+  why_dangerous: Overlays can manufacture structure from arbitrary alignments.
+  recommended_use: Require exact source lineage and negative overlays.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-mayfly_dot_skip_index_theory
+  false_positive_class: mayfly_dot_skip_index_theory
+  description: Mayfly-dot skip-index theory
+  why_dangerous: Large claims from weak visual evidence are high-risk false positives.
+  recommended_use: Quarantine until public exact evidence exists.
+  evidence_strength: low
+  false_positive_risk: extreme
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.
+- record_type: stage4b_negative_control_record
+  negative_control_id: stage4b-negative-attachment_reference_privacy_risk
+  false_positive_class: attachment_reference_privacy_risk
+  description: Attachment-reference indexing as privacy risk
+  why_dangerous: Attachment identifiers are not evidence and increase public exposure.
+  recommended_use: Keep generated attachment indexes private/redacted.
+  evidence_strength: medium
+  false_positive_risk: high
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Preserved from Stage 4A/Deep Research review as a false-positive class, not
+    evidence.

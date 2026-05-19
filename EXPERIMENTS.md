@@ -10,6 +10,14 @@ Noisy, negative, or inconclusive families must not be widened unless their recor
 
 Stage 3Z does not add or execute an experiment. It adds onboarding/source-of-truth maps and updates the staged plan so Stage 4A is full Discord research-bundle extraction for Deep Research. Stage 4A must create redacted, scoped, generated bundles only; raw Discord logs and private attachments remain local/ignored and uncommitted.
 
+## Stage 4B Source-Lock Triage And Disabled Backlog
+
+Stage 4B does not execute an experiment. It promotes selected public-source records, source-health records, review-only visual/numeric observations, and false-positive negative controls from Stage 4A/Deep Research context.
+
+The Stage 4B disabled manifest backlog lives under `experiments/manifests/stage4b-disabled/`. Every manifest must keep `execution_enabled=false`, `cuda_enabled=false`, `no_solve_claim=true`, `canonical_corpus_active=false`, and `page_boundaries_final=false` until a later explicit execution stage revalidates scope and policy.
+
+Visual observations from Stage 4B, including cuneiform/base-60 and dot/binary claims, are not experiment seeds. Stage 4C annotation must record coordinates, ambiguity tables, alternate readings, and negative controls before any related experiment can be proposed.
+
 ## Experiment philosophy
 
 Experiments are reproducible tests of hypotheses, not evidence of solves by themselves.

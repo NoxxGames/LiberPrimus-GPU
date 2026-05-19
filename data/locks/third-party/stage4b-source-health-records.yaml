@@ -1,0 +1,231 @@
+record_set_id: stage4b-source-health-records
+schema: schemas/history/source-health-record-v0.schema.json
+records:
+- record_type: source_health_record
+  source_id: stage4b-rtkd-iddqd
+  url: https://github.com/rtkd/iddqd
+  source_class: strong_community_technical
+  health_status: not_fetched_stage4b
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-scream314-cicada3301
+  url: https://github.com/scream314/cicada3301
+  source_class: strong_community_technical
+  health_status: not_fetched_stage4b
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-complete-cicada-archive
+  url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  source_class: secondary_archive
+  health_status: not_fetched_stage4b
+  fragility: high
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-uncovering-liber-primus
+  url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus
+  source_class: strong_community_technical
+  health_status: not_fetched_stage4b
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-uncovering-lp-unsolved-pages
+  url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages
+  source_class: strong_community_technical
+  health_status: not_fetched_stage4b
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-uncovering-lp-transliteration
+  url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Page_Transliteration
+  source_class: strong_community_technical
+  health_status: not_fetched_stage4b
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-uncovering-frequency-analysis
+  url: https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_(Liber_Primus)
+  source_class: strong_community_technical
+  health_status: not_fetched_stage4b
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-uncovering-instar-emergence
+  url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem)
+  source_class: strong_community_technical
+  health_status: not_fetched_stage4b
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-uncovering-what-happened-2014
+  url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  source_class: strong_community_technical
+  health_status: not_fetched_stage4b
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-uncovering-outguess
+  url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  source_class: strong_community_technical
+  health_status: not_fetched_stage4b
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-wayback-outguess
+  url: https://web.archive.org/web/*/http://www.outguess.org/
+  source_class: reference_only_tooling
+  health_status: reference_only
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-cygwin-outguess
+  url: https://cygwin.com/packages/summary/outguess.html
+  source_class: reference_only_tooling
+  health_status: reference_only
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-charleswyt-mp3stego
+  url: https://github.com/Charleswyt/MP3Stego
+  source_class: reference_only_tooling
+  health_status: reference_only
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-rtkd-iddqd-2013-02-tree
+  url: https://github.com/rtkd/iddqd/tree/master/2013/02
+  source_class: strong_community_technical
+  health_status: not_fetched_stage4b
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-cicada-solvers-iddqd-lp-outguessed
+  url: https://github.com/cicada-solvers/iddqd/tree/master/lp_outguessed
+  source_class: strong_community_technical
+  health_status: not_fetched_stage4b
+  fragility: medium
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-google-translations-workbook
+  url: https://docs.google.com/spreadsheets/d/1QsoYQ-NkJcwEuyOgMrD6DkHU2AUktwsfnQGnTURf1bU/edit
+  source_class: secondary_archive
+  health_status: not_fetched_stage4b
+  fragility: high
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-complete-archive-magicsquares
+  url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive/blob/main/assets/2014/stage07/magicsquares.txt
+  source_class: secondary_archive
+  health_status: not_fetched_stage4b
+  fragility: high
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-complete-archive-li676-status
+  url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive/blob/main/assets/2014/li676-224_server-status_orig.txt
+  source_class: secondary_archive
+  health_status: not_fetched_stage4b
+  fragility: high
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: source-lock now
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.
+- record_type: source_health_record
+  source_id: stage4b-cicada3301-boards-number-square
+  url: https://cicada3301.boards.net/
+  source_class: speculative
+  health_status: not_fetched_stage4b
+  fragility: high
+  checked_at_stage: stage4b
+  retrieval_status: metadata_recorded_not_fetched_stage4b
+  recommended_action: quarantine
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B records source-health metadata only; no broad fetch or mirror occurred.

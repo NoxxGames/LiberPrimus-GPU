@@ -56,6 +56,8 @@ Pull requests should state validation commands, changed docs, raw/generated excl
 
 Generated results belong under ignored output locations and must not be committed.
 
+Stage 4B source-lock and visual-intake contributions must promote only allowlisted public sources, preserve visual ambiguity, and keep disabled manifests disabled until a future explicit execution stage. Do not attach raw Discord logs, raw page images, generated Stage 4A site files, or generated Stage 4B triage outputs.
+
 ## Pull request checklist
 
 - Scope is limited and documented.
