@@ -46,6 +46,22 @@ def build_promotion_ledger(
             "usable_as_experiment_seed": bool(gate["usable_as_experiment_seed"]),
             **safety_flags(),
         }
+        for field in (
+            "source_context",
+            "source_image_name",
+            "source_image_sha256",
+            "source_image_byte_length",
+            "source_image_metadata_cache_path",
+            "claimed_matrix",
+            "claimed_rune_count",
+            "claimed_pattern",
+            "evidence_strength",
+            "false_positive_risk",
+            "future_bounded_verifier_candidate",
+            "negative_control_note",
+        ):
+            if field in decision:
+                common[field] = decision[field]
         ledger_records.append(
             {
                 "record_type": "reviewed_observation_promotion_ledger_record",

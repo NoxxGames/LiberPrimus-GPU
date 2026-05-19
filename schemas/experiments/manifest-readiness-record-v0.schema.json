@@ -11,7 +11,9 @@
     "ready_state",
     "blockers",
     "execution_enabled",
-    "solve_claim"
+    "solve_claim",
+    "no_solve_claim",
+    "cuda_enabled"
   ],
   "properties": {
     "record_type": { "const": "manifest_readiness_record" },
@@ -24,7 +26,9 @@
     "expected_candidate_cap": { "type": ["integer", "null"], "minimum": 0 },
     "recommended_next_stage": { "type": "string" },
     "execution_enabled": { "const": false },
-    "solve_claim": { "const": false }
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "cuda_enabled": { "const": false }
   },
   "allOf": [
     {

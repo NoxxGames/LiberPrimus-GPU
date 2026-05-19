@@ -9,6 +9,7 @@ def test_stage4l_generated_and_raw_paths_ignored() -> None:
         "experiments/results/observation-promotion/stage4l/manifest_readiness_report.json",
         "third_party/LiberPrimusDiscordChats/example.html",
         "third_party/LiberPrimusPages/example.jpg",
+        "third_party/CommunityObservations/Fib421.jpg",
         "data/raw/example.bin",
     ]
     for path in paths:

@@ -12,6 +12,10 @@ Readiness states:
   evidence is missing.
 - `deferred`: valid future branch, but not the next execution step.
 
-Stage 4L records 12 future-manifest readiness records, with 0 ready, 2
-control-only, 6 blocked, and 4 deferred. No Stage 4B, Stage 4E, or Stage 4F
-disabled manifest is executed or enabled.
+Stage 4L records 13 future-manifest readiness records, with 0 ready, 2
+control-only, 7 blocked, and 4 deferred. No Stage 4B, Stage 4E, Stage 4F, or
+future Stage 4M manifest is executed or enabled.
+
+`exp_stage4m_bigram_diagonal_fibonacci_421_audit` is blocked until the bigram
+matrix can be regenerated from an exact transcript/profile source with declared
+rune order, a predefined pattern, and a null model.

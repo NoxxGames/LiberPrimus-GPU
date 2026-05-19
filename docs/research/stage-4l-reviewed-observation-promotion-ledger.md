@@ -12,9 +12,13 @@ Outputs:
 - `data/observations/review/stage4l-manifest-readiness-records.yaml`
 - `data/observations/review/stage4l-reviewed-observation-promotion-summary.yaml`
 
-The stage created 96 ledger records and 109 blocker records. It promoted 0
+The stage created 97 ledger records and 115 blocker records. It promoted 0
 observations to executable manifest seed readiness. This is expected: the stage
 is a conservative bridge from review to planning, not an execution stage.
+
+The follow-up bigram/Fibonacci-421 community claim is recorded as a low-evidence,
+high-risk numeric frequency pattern claim. It is blocked from promotion and
+reserved for a future bounded verifier/false-positive audit only.
 
 Next practical work is Stage 4M image source-variant and compression preflight.
 Stage 4M can use control-only and source-reference records without treating

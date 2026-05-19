@@ -17,6 +17,7 @@ from libreprimus.observation_promotion.models import (
     STAGE4K_FETCH_RECORDS,
     STAGE4K_SNAPSHOT_RECORDS,
     STAGE4K_SUMMARY,
+    STAGE4L_COMMUNITY_INTAKE,
 )
 from libreprimus.paths import repo_root
 
@@ -59,8 +60,12 @@ def load_stage4l_inputs(root: Path | None = None) -> dict[str, Any]:
     """Load committed inputs used by Stage 4L."""
 
     base = root or repo_root()
+    stage4j_decisions = load_yaml_records(base / STAGE4J_DECISIONS)
+    community_intake = load_yaml_records(base / STAGE4L_COMMUNITY_INTAKE)
     return {
-        "decisions": load_yaml_records(base / STAGE4J_DECISIONS),
+        "decisions": [*stage4j_decisions, *community_intake],
+        "stage4j_decisions": stage4j_decisions,
+        "stage4l_community_intake": community_intake,
         "stage4j_promotions": load_yaml_records(base / STAGE4J_PROMOTIONS),
         "stage4j_quarantine": load_yaml_records(base / STAGE4J_QUARANTINE),
         "stage4j_summary": load_yaml_records(base / STAGE4J_SUMMARY),

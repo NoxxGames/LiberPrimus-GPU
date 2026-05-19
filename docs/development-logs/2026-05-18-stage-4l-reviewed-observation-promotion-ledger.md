@@ -112,3 +112,16 @@
   validation, and wiki dry run: passed.
 - Generated outputs staged: 0.
 - Raw staged: 0.
+
+## Follow-up - bigram/Fibonacci-421 observation intake
+
+- Added `stage4l-bigram-diagonal-fibonacci-421-claim` as a
+  `numeric_frequency_pattern_claim`.
+- Local screenshot metadata for `Fib421.jpg` was recorded by SHA-256 and byte
+  length; the image itself remains ignored and uncommitted.
+- The claim is blocked from manifest promotion and seed use.
+- Added blockers for exact transcript/profile source, matrix regeneration,
+  rune-order declaration, diagonal-indexing convention, null controls, and
+  multiple-testing controls.
+- Added blocked future readiness record
+  `exp_stage4m_bigram_diagonal_fibonacci_421_audit`.

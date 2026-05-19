@@ -1,14 +1,14 @@
 record_type: reviewed_observation_promotion_summary
 stage: stage4l
-reviewed_observations_loaded: 96
-ledger_records_created: 96
-readiness_records_created: 96
-blocker_records_created: 109
-manifest_readiness_records_created: 12
+reviewed_observations_loaded: 97
+ledger_records_created: 97
+readiness_records_created: 97
+blocker_records_created: 115
+manifest_readiness_records_created: 13
 ready_for_manifest_count: 0
 ready_as_control_only_count: 17
 source_reference_only_count: 14
-blocked_count: 47
+blocked_count: 48
 deferred_count: 2
 quarantined_count: 15
 rejected_count: 1
@@ -23,13 +23,15 @@ cookie_blocked_count: 3
 stego_audio_ready_count: 0
 stego_audio_deferred_count: 0
 stego_audio_blocker_count: 10
+bigram_claim_ready_count: 0
+bigram_claim_blocker_count: 1
 manifest_ready_count: 0
 manifest_control_only_count: 2
-manifest_blocked_count: 6
+manifest_blocked_count: 7
 manifest_deferred_count: 4
 category_counts:
   blocked_needs_coordinates: 5
-  blocked_needs_human_review: 13
+  blocked_needs_human_review: 14
   blocked_needs_source_lock: 17
   blocked_negative_result: 2
   blocked_toolchain_unavailable: 10
@@ -45,12 +47,13 @@ observation_type_counts:
   image_compression_artifact_candidate: 1
   negative_control: 17
   numeric_claim: 12
+  numeric_frequency_pattern_claim: 1
   source_link: 20
   stego_audio_fixture_candidate: 10
   visual_cuneiform_candidate: 5
   visual_dot_pattern_candidate: 15
 manifest_ready_state_counts:
-  blocked: 6
+  blocked: 7
   control_only: 2
   deferred: 4
 execution_enabled: false
@@ -72,6 +75,7 @@ relevant_record_counts:
   data/observations/web/stage4g-cookie-refresh-summary.yaml: 1
   data/observations/stego/stage4f-outguess-fixture-source-records.yaml: 5
   data/observations/stego/stage4f-audio-fixture-source-records.yaml: 5
+  data/observations/review/stage4l-community-observation-intake.yaml: 1
 disabled_manifest_paths:
 - experiments/manifests/stage4b-disabled/exp_stage4b_cookie_pack_v2.yaml
 - experiments/manifests/stage4b-disabled/exp_stage4b_cuneiform_reading_pack_v1.yaml

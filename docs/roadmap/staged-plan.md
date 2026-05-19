@@ -51,7 +51,7 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Stage
 
-Stage 4L is complete. It loaded 96 reviewed observations, created 96 ledger records, 96 readiness records, 109 blocker records, and 12 manifest-readiness records. It marked 0 observations ready for manifest seed execution, 17 control-only, 14 source-reference-only, 47 blocked, 2 deferred, 15 quarantined, and 1 rejected.
+Stage 4L is complete. It loaded 97 reviewed observations, created 97 ledger records, 97 readiness records, 115 blocker records, and 13 manifest-readiness records. It marked 0 observations ready for manifest seed execution, 17 control-only, 14 source-reference-only, 48 blocked, 2 deferred, 15 quarantined, and 1 rejected. The added bigram/Fibonacci-421 community claim is blocked pending reproducible matrix regeneration, declared rune order, indexing convention, null controls, and multiple-testing controls.
 
 Stage 4L does not execute or enable manifests, process raw Discord logs or raw page images, run image/stego/audio tools, implement CUDA/GPU kernels, activate the canonical corpus, finalize page boundaries, or make solve claims. Promotion-readiness records are planning and gating metadata only.
 

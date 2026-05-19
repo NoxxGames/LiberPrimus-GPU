@@ -1,0 +1,30 @@
+record_set_id: stage4l-community-observation-intake
+schema: schemas/observations/observation-review-decision-v0.schema.json
+records:
+- record_type: observation_review_decision
+  review_decision_id: stage4l-review-bigram-diagonal-fibonacci-421-claim
+  observation_id: stage4l-bigram-diagonal-fibonacci-421-claim
+  observation_type: numeric_frequency_pattern_claim
+  source_family: community_observation
+  source_context: Discord-derived community observation, user-supplied screenshot/description
+  source_path: data/raw/images/Fib421.jpg
+  source_image_name: Fib421.jpg
+  source_image_sha256: e9b5c84c1283fee3a0eeb5d0b9ed848e2049c5768ccfade48d58bd29dbefa321
+  source_image_byte_length: 2311679
+  source_image_metadata_cache_path: third_party/CommunityObservations/stage4l-bigram-diagonal-fibonacci-421-claim.metadata.yaml
+  claimed_matrix: pages 0 to 55 bigram count matrix
+  claimed_rune_count: 12956
+  claimed_pattern:
+  - diagonal same-rune bigram counts include repeated 4-2-1 clusters
+  - clusters are claimed to be separated by Fibonacci-like gaps 3, 5, 8
+  evidence_strength: low
+  false_positive_risk: high
+  review_state: needs_reproducible_matrix
+  source_locked: false
+  image_metadata_locked: true
+  public_source_corroboration: false
+  future_bounded_verifier_candidate: true
+  usable_as_experiment_seed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  negative_control_note: This observation is a good candidate for a future false-positive / numerology-control audit because the pattern may be post-hoc and alphabet-order dependent.

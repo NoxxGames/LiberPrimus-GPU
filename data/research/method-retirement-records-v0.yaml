@@ -113,7 +113,7 @@ records:
     method_family_id: observation_promotion_ledger
     retired_status: active_with_constraints
     reason: Promotion ledger work is active infrastructure, but promotion-readiness records must never be mistaken for experiment execution approval or solve evidence.
-    evidence: [Stage 4L records 96 reviewed observation ledger entries, 109 blocker records, and 12 disabled manifest-readiness records with zero executable seed-ready promotions.]
+    evidence: [Stage 4L records 97 reviewed observation ledger entries, 115 blocker records, and 13 disabled manifest-readiness records with zero executable seed-ready promotions.]
     stages_supporting: [stage-4l]
     reopen_conditions: [A future manifest cites specific promotion-readiness records and passes source, review, coordinate, expected-output, and policy gates.]
     prohibited_expansions: [Executing manifests from readiness records, treating control-only observations as true claims, promoting visual readings without coordinates, promoting cookie work after zero exact matches without new source strings, running stego/audio tools without assets/toolchain/expected outputs.]

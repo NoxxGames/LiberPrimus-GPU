@@ -16,9 +16,11 @@ records:
   recommended_next_stage: no_action
   execution_enabled: false
   solve_claim: false
+  no_solve_claim: true
   canonical_corpus_active: false
   page_boundaries_final: false
   cuda_used: false
+  cuda_enabled: false
 - record_type: manifest_readiness_record
   manifest_readiness_id: stage4l-manifest-readiness-dot_ambiguity_audit_v1
   future_manifest_id: dot_ambiguity_audit_v1
@@ -32,9 +34,11 @@ records:
   recommended_next_stage: Stage 4M
   execution_enabled: false
   solve_claim: false
+  no_solve_claim: true
   canonical_corpus_active: false
   page_boundaries_final: false
   cuda_used: false
+  cuda_enabled: false
 - record_type: manifest_readiness_record
   manifest_readiness_id: stage4l-manifest-readiness-delimiter_handedness_v1
   future_manifest_id: delimiter_handedness_v1
@@ -49,9 +53,11 @@ records:
   recommended_next_stage: no_action
   execution_enabled: false
   solve_claim: false
+  no_solve_claim: true
   canonical_corpus_active: false
   page_boundaries_final: false
   cuda_used: false
+  cuda_enabled: false
 - record_type: manifest_readiness_record
   manifest_readiness_id: stage4l-manifest-readiness-onion7_raw_routes_v1
   future_manifest_id: onion7_raw_routes_v1
@@ -66,9 +72,11 @@ records:
   recommended_next_stage: no_action
   execution_enabled: false
   solve_claim: false
+  no_solve_claim: true
   canonical_corpus_active: false
   page_boundaries_final: false
   cuda_used: false
+  cuda_enabled: false
 - record_type: manifest_readiness_record
   manifest_readiness_id: stage4l-manifest-readiness-cookie_pack_v2
   future_manifest_id: cookie_pack_v2
@@ -83,9 +91,11 @@ records:
   recommended_next_stage: no_action
   execution_enabled: false
   solve_claim: false
+  no_solve_claim: true
   canonical_corpus_active: false
   page_boundaries_final: false
   cuda_used: false
+  cuda_enabled: false
 - record_type: manifest_readiness_record
   manifest_readiness_id: stage4l-manifest-readiness-cuneiform_reading_pack_v1
   future_manifest_id: cuneiform_reading_pack_v1
@@ -101,9 +111,11 @@ records:
   recommended_next_stage: no_action
   execution_enabled: false
   solve_claim: false
+  no_solve_claim: true
   canonical_corpus_active: false
   page_boundaries_final: false
   cuda_used: false
+  cuda_enabled: false
 - record_type: manifest_readiness_record
   manifest_readiness_id: stage4l-manifest-readiness-visual_negative_controls_v1
   future_manifest_id: visual_negative_controls_v1
@@ -117,9 +129,11 @@ records:
   recommended_next_stage: Stage 4M
   execution_enabled: false
   solve_claim: false
+  no_solve_claim: true
   canonical_corpus_active: false
   page_boundaries_final: false
   cuda_used: false
+  cuda_enabled: false
 - record_type: manifest_readiness_record
   manifest_readiness_id: stage4l-manifest-readiness-outguess_positive_negative_matrix
   future_manifest_id: outguess_positive_negative_matrix
@@ -136,9 +150,11 @@ records:
   recommended_next_stage: no_action
   execution_enabled: false
   solve_claim: false
+  no_solve_claim: true
   canonical_corpus_active: false
   page_boundaries_final: false
   cuda_used: false
+  cuda_enabled: false
 - record_type: manifest_readiness_record
   manifest_readiness_id: stage4l-manifest-readiness-mp3_instar_regression_prep
   future_manifest_id: mp3_instar_regression_prep
@@ -154,9 +170,11 @@ records:
   recommended_next_stage: no_action
   execution_enabled: false
   solve_claim: false
+  no_solve_claim: true
   canonical_corpus_active: false
   page_boundaries_final: false
   cuda_used: false
+  cuda_enabled: false
 - record_type: manifest_readiness_record
   manifest_readiness_id: stage4l-manifest-readiness-lp_image_variant_hash_dimension_audit
   future_manifest_id: lp_image_variant_hash_dimension_audit
@@ -172,9 +190,11 @@ records:
   recommended_next_stage: Stage 4M
   execution_enabled: false
   solve_claim: false
+  no_solve_claim: true
   canonical_corpus_active: false
   page_boundaries_final: false
   cuda_used: false
+  cuda_enabled: false
 - record_type: manifest_readiness_record
   manifest_readiness_id: stage4l-manifest-readiness-image_compression_artifact_preflight
   future_manifest_id: image_compression_artifact_preflight
@@ -190,9 +210,11 @@ records:
   recommended_next_stage: Stage 4M
   execution_enabled: false
   solve_claim: false
+  no_solve_claim: true
   canonical_corpus_active: false
   page_boundaries_final: false
   cuda_used: false
+  cuda_enabled: false
 - record_type: manifest_readiness_record
   manifest_readiness_id: stage4l-manifest-readiness-cpu_batch_expansion_future
   future_manifest_id: cpu_batch_expansion_future
@@ -207,6 +229,32 @@ records:
   recommended_next_stage: no_action
   execution_enabled: false
   solve_claim: false
+  no_solve_claim: true
   canonical_corpus_active: false
   page_boundaries_final: false
   cuda_used: false
+  cuda_enabled: false
+- record_type: manifest_readiness_record
+  manifest_readiness_id: stage4l-manifest-readiness-exp_stage4m_bigram_diagonal_fibonacci_421_audit
+  future_manifest_id: exp_stage4m_bigram_diagonal_fibonacci_421_audit
+  ready_state: blocked
+  blockers:
+  - needs_reproducible_bigram_matrix
+  - needs_declared_rune_order
+  - needs_null_model
+  - needs_pattern_predefinition
+  source_requirements:
+  - exact transcript/profile source
+  - reproducible bigram matrix
+  review_requirements:
+  - declared rune order
+  - predefined pattern and null model
+  expected_candidate_cap: 1
+  recommended_next_stage: Stage 4M
+  execution_enabled: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  cuda_used: false
+  cuda_enabled: false

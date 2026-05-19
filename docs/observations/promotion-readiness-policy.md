@@ -14,6 +14,9 @@ A record can be `ready_for_manifest` only when all required gates pass:
   non-coordinate rationale.
 - Discord-derived observations have public-source corroboration.
 - Scoring labels are triage-only and are not the promotion reason by themselves.
+- Numeric/frequency pattern claims have reproducible matrix generation,
+  declared ordering/indexing conventions, null controls, and multiple-testing
+  controls.
 
 Control-only observations may be used as negative/null controls without being
 accepted as true claims.

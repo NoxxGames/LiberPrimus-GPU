@@ -33,3 +33,7 @@ Summary:
 
 The CLI reads committed metadata only and writes generated JSON reports under an
 ignored result path.
+
+Stage 4L follow-up intake includes the bigram/Fibonacci-421 community claim as a
+blocked `numeric_frequency_pattern_claim`. The CLI does not regenerate a bigram
+matrix or execute the future audit manifest.

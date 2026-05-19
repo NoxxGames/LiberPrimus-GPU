@@ -2331,3 +2331,53 @@ records:
   cuda_used: false
   generated_outputs_committed: false
   raw_data_processed: false
+- record_type: observation_promotion_readiness_record
+  readiness_record_id: stage4l-readiness-stage4l-review-bigram-diagonal-fibonacci-421-claim
+  review_decision_id: stage4l-review-bigram-diagonal-fibonacci-421-claim
+  observation_id: stage4l-bigram-diagonal-fibonacci-421-claim
+  observation_type: numeric_frequency_pattern_claim
+  review_state: needs_reproducible_matrix
+  source_family: community_observation
+  source_path: data/raw/images/Fib421.jpg
+  source_lock_status: null
+  source_lock_record_id: null
+  promotion_category: blocked_needs_human_review
+  blockers:
+  - needs_exact_transcript_profile_source
+  - needs_reproducible_bigram_matrix
+  - needs_declared_rune_order
+  - needs_diagonal_indexing_convention
+  - needs_null_controls
+  - needs_multiple_testing_controls
+  blocker_ids:
+  - stage4l-blocker-stage4l-review-bigram-diagonal-fibonacci-421-claim-1
+  - stage4l-blocker-stage4l-review-bigram-diagonal-fibonacci-421-claim-2
+  - stage4l-blocker-stage4l-review-bigram-diagonal-fibonacci-421-claim-3
+  - stage4l-blocker-stage4l-review-bigram-diagonal-fibonacci-421-claim-4
+  - stage4l-blocker-stage4l-review-bigram-diagonal-fibonacci-421-claim-5
+  - stage4l-blocker-stage4l-review-bigram-diagonal-fibonacci-421-claim-6
+  usable_as_experiment_seed: false
+  execution_enabled: false
+  solve_claim: false
+  trusted_as_canonical: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  cuda_used: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  source_context: Discord-derived community observation, user-supplied screenshot/description
+  source_image_name: Fib421.jpg
+  source_image_sha256: e9b5c84c1283fee3a0eeb5d0b9ed848e2049c5768ccfade48d58bd29dbefa321
+  source_image_byte_length: 2311679
+  source_image_metadata_cache_path: third_party/CommunityObservations/stage4l-bigram-diagonal-fibonacci-421-claim.metadata.yaml
+  claimed_matrix: pages 0 to 55 bigram count matrix
+  claimed_rune_count: 12956
+  claimed_pattern:
+  - diagonal same-rune bigram counts include repeated 4-2-1 clusters
+  - clusters are claimed to be separated by Fibonacci-like gaps 3, 5, 8
+  evidence_strength: low
+  false_positive_risk: high
+  future_bounded_verifier_candidate: true
+  negative_control_note: This observation is a good candidate for a future false-positive
+    / numerology-control audit because the pattern may be post-hoc and alphabet-order
+    dependent.

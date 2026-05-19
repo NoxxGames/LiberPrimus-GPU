@@ -28,7 +28,7 @@ No canonical corpus activation, broad unsolved-page campaign, generated result p
 
 Stage 4L added the `libreprimus observation-promotion` CLI, promotion-readiness schemas, blocker records, manifest-readiness records, tests, docs, and research-synthesis updates.
 
-Local promotion summary: reviewed observations `96`, ledger records `96`, readiness records `96`, blocker records `109`, manifest-readiness records `12`, ready-for-manifest `0`, control-only `17`, source-reference-only `14`, blocked `47`, deferred `2`, quarantined `15`, rejected `1`.
+Local promotion summary: reviewed observations `97`, ledger records `97`, readiness records `97`, blocker records `115`, manifest-readiness records `13`, ready-for-manifest `0`, control-only `17`, source-reference-only `14`, blocked `48`, deferred `2`, quarantined `15`, rejected `1`. The bigram/Fibonacci-421 community observation is blocked and retained only as a future bounded verifier / false-positive-control candidate.
 
 Stage 4L did not execute or enable any manifest, process raw Discord logs or raw page images, run image/stego/audio tools, use CUDA/GPU, activate the canonical corpus, finalize page boundaries, or make solve claims. Generated reports remain ignored under `experiments/results/observation-promotion/stage4l/`.
 

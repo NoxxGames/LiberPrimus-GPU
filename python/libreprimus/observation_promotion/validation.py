@@ -49,6 +49,10 @@ def validate_observation_promotion_records(
         _validate_common_flags(record, errors)
         if record.get("execution_enabled") is not False:
             errors.append(f"manifest_execution_enabled:{record.get('manifest_readiness_id')}")
+        if record.get("no_solve_claim") is not True:
+            errors.append(f"manifest_no_solve_claim_not_true:{record.get('manifest_readiness_id')}")
+        if record.get("cuda_enabled") is not False:
+            errors.append(f"manifest_cuda_enabled_not_false:{record.get('manifest_readiness_id')}")
         if record.get("ready_state") in {"blocked", "deferred"} and not record.get("blockers"):
             errors.append(f"manifest_blockers_missing:{record.get('manifest_readiness_id')}")
     if summary_records:

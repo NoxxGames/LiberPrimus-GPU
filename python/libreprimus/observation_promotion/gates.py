@@ -61,6 +61,19 @@ def evaluate_decision(
         return _result("blocked_needs_human_review", ["delimiter_meaning_not_reviewed"], source_status)
     if observation_type == "cookie_hash_candidate":
         return _result("blocked_negative_result", ["stage4g_exact_cookie_refresh_zero_matches"], source_status)
+    if observation_type == "numeric_frequency_pattern_claim":
+        return _result(
+            "blocked_needs_human_review",
+            [
+                "needs_exact_transcript_profile_source",
+                "needs_reproducible_bigram_matrix",
+                "needs_declared_rune_order",
+                "needs_diagonal_indexing_convention",
+                "needs_null_controls",
+                "needs_multiple_testing_controls",
+            ],
+            source_status,
+        )
     if observation_type == "stego_audio_fixture_candidate":
         return _result(
             "blocked_toolchain_unavailable",

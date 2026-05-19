@@ -35,7 +35,8 @@ def test_stage4l_observation_promotion_cli_build_validate_summary(tmp_path) -> N
         ],
     )
     assert build.exit_code == 0, build.output
-    assert "ledger_records_created=96" in build.output
+    assert "ledger_records_created=97" in build.output
+    assert "bigram_claim_blocker_count=1" in build.output
 
     validate = runner.invoke(
         app,

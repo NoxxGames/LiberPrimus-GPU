@@ -22,6 +22,7 @@ def summarize_promotion(
     dots = _type_counts(readiness_records, "visual_dot_pattern_candidate")
     cookies = _type_counts(readiness_records, "cookie_hash_candidate")
     stego_audio = _type_counts(readiness_records, "stego_audio_fixture_candidate")
+    bigram_claims = _type_counts(readiness_records, "numeric_frequency_pattern_claim")
     manifest_states = Counter(str(record.get("ready_state") or "") for record in manifest_readiness_records)
     blocked_count = sum(count for category, count in categories.items() if category.startswith("blocked_"))
     return {
@@ -50,6 +51,8 @@ def summarize_promotion(
         "stego_audio_ready_count": stego_audio["ready_for_manifest"],
         "stego_audio_deferred_count": stego_audio["deferred"],
         "stego_audio_blocker_count": stego_audio["blocked"],
+        "bigram_claim_ready_count": bigram_claims["ready_for_manifest"],
+        "bigram_claim_blocker_count": bigram_claims["blocked"],
         "manifest_ready_count": manifest_states["ready"],
         "manifest_control_only_count": manifest_states["control_only"],
         "manifest_blocked_count": manifest_states["blocked"],

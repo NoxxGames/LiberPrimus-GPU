@@ -26,9 +26,11 @@ def build_manifest_readiness_records() -> list[dict[str, Any]]:
                 "recommended_next_stage": spec["recommended_next_stage"],
                 "execution_enabled": False,
                 "solve_claim": False,
+                "no_solve_claim": True,
                 "canonical_corpus_active": False,
                 "page_boundaries_final": False,
                 "cuda_used": False,
+                "cuda_enabled": False,
             }
         )
     return records
@@ -131,6 +133,19 @@ def _manifest_spec(target: str) -> dict[str, Any]:
             "review_requirements": ["manifest-specific acceptance"],
             "expected_candidate_cap": 512,
             "recommended_next_stage": "no_action",
+        },
+        "exp_stage4m_bigram_diagonal_fibonacci_421_audit": {
+            "ready_state": "blocked",
+            "blockers": [
+                "needs_reproducible_bigram_matrix",
+                "needs_declared_rune_order",
+                "needs_null_model",
+                "needs_pattern_predefinition",
+            ],
+            "source_requirements": ["exact transcript/profile source", "reproducible bigram matrix"],
+            "review_requirements": ["declared rune order", "predefined pattern and null model"],
+            "expected_candidate_cap": 1,
+            "recommended_next_stage": "Stage 4M",
         },
     }
     return specs[target]

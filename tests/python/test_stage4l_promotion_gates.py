@@ -85,3 +85,24 @@ def test_stage4l_source_lock_missing_creates_blocker() -> None:
         }
     )
     assert result["promotion_category"] == "blocked_needs_source_lock"
+
+
+def test_stage4l_bigram_fibonacci_claim_requires_reproducible_matrix() -> None:
+    result = evaluate_decision(
+        {
+            "observation_type": "numeric_frequency_pattern_claim",
+            "review_state": "needs_reproducible_matrix",
+            "source_locked": False,
+            "solve_claim": False,
+        }
+    )
+    assert result["promotion_category"] == "blocked_needs_human_review"
+    assert result["usable_as_experiment_seed"] is False
+    assert result["blockers"] == [
+        "needs_exact_transcript_profile_source",
+        "needs_reproducible_bigram_matrix",
+        "needs_declared_rune_order",
+        "needs_diagonal_indexing_convention",
+        "needs_null_controls",
+        "needs_multiple_testing_controls",
+    ]

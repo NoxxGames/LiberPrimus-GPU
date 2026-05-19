@@ -180,6 +180,12 @@ third_party/SourceSnapshots/**
 !third_party/SourceSnapshots/README.md
 !third_party/SourceSnapshots/.gitkeep
 
+# Local ignored community observation artefacts
+third_party/CommunityObservations/**
+!third_party/CommunityObservations/
+!third_party/CommunityObservations/README.md
+!third_party/CommunityObservations/.gitkeep
+
 # Local deep-research reports
 deep-research-reports/**
 

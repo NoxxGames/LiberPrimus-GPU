@@ -33,6 +33,7 @@ STAGE4K_FETCH_RECORDS = Path(
 )
 STAGE4K_SUMMARY = Path("data/locks/third-party/source-snapshots/stage4k-source-lock-summary.yaml")
 STAGE4G_COOKIE_SUMMARY = Path("data/observations/web/stage4g-cookie-refresh-summary.yaml")
+STAGE4L_COMMUNITY_INTAKE = Path("data/observations/review/stage4l-community-observation-intake.yaml")
 
 RELEVANT_RECORD_PATHS = (
     Path("data/observations/visual/stage4b-visual-observation-records.yaml"),
@@ -45,6 +46,7 @@ RELEVANT_RECORD_PATHS = (
     STAGE4G_COOKIE_SUMMARY,
     Path("data/observations/stego/stage4f-outguess-fixture-source-records.yaml"),
     Path("data/observations/stego/stage4f-audio-fixture-source-records.yaml"),
+    STAGE4L_COMMUNITY_INTAKE,
 )
 
 DISABLED_MANIFEST_DIRS = (
@@ -89,6 +91,7 @@ FUTURE_MANIFEST_TARGETS = (
     "lp_image_variant_hash_dimension_audit",
     "image_compression_artifact_preflight",
     "cpu_batch_expansion_future",
+    "exp_stage4m_bigram_diagonal_fibonacci_421_audit",
 )
 
 
