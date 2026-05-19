@@ -1,0 +1,71 @@
+record_type: stage4h_cpu_batch_api_summary
+schema: schemas/experiments/cpu-batch-run-summary-v0.schema.json
+stage_id: stage-4h
+status: complete
+cpu_batch_summary:
+  adapter_coverage:
+    supported_adapter_count: 6
+    missing_adapter_count: 0
+    transform_count: 6
+  adapter_missing_count: 0
+  candidate_count: 6
+  canonical_corpus_active: false
+  cpu_only: true
+  cuda_required: false
+  cuda_used: false
+  executed_candidate_count: 6
+  generated_outputs_committed: false
+  input_stream_count: 1
+  manifest_id: stage4h-synthetic-smoke-batch
+  no_solve_claim: true
+  page_boundaries_final: false
+  record_type: cpu_batch_run_summary
+  result_record_count: 6
+  run_id: stage4h-stage4h-synthetic-smoke-batch-cpu-reference-v0
+  scoring_available_count: 6
+  scoring_unavailable_count: 0
+  warnings: []
+parity_contract:
+  record_type: cpu_cuda_parity_contract
+  parity_contract_version: cpu-cuda-parity-contract-v0
+  cpu_reference_package: libreprimus.cpu_batch
+  cuda_implementation_status: deferred
+  required_semantics:
+  - Token order is preserved exactly from normalized input stream records.
+  - Only token_kind=rune participates in modulo-29 transforms.
+  - Separators and unknown symbols are preserved or skipped exactly as the CPU adapter
+    records.
+  - Modulo arithmetic is over Z_29 and must match the CPU transform registry definitions.
+  - Vigenere key advancement and skip rules must match solved_fixtures.vigenere.
+  - Prime stream values, reset behavior, and payload skips must match solved_fixtures.prime_stream.
+  - Scoring compatibility requires byte-for-byte matching output text before score
+    comparison.
+  - Output text hashes and output token hashes are the parity comparison anchors.
+  required_result_fields:
+  - candidate_id
+  - input_stream_id
+  - transform_id
+  - canonical_transform_id
+  - transform_parameters
+  - output_text_hash
+  - output_token_hash
+  - score_summary
+  - cuda_used
+  - no_solve_claim
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  notes:
+  - Stage 4H defines the parity contract only; no CUDA implementation is added.
+  - Future CUDA transforms must match these CPU records before any acceleration result
+    is trusted.
+solve_claim: false
+cuda_used: false
+raw_outputs_committed: false
+generated_outputs_committed: false
+notes:
+- Stage 4H establishes CPU batch semantics as the future CUDA parity contract.
+- Generated result records remain under ignored experiments/results/cpu-batch/stage4h/.

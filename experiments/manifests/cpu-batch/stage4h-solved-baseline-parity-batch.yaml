@@ -1,0 +1,56 @@
+record_type: cpu_batch_manifest
+manifest_id: stage4h-solved-baseline-parity-batch
+manifest_version: v0
+description: Solved-baseline-safe CPU batch manifest using committed synthetic fixture-style tokens.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+candidate_count_upper_bound: 4
+input_streams:
+  - record_type: cpu_batch_input_stream
+    input_stream_id: solved-baseline-style-fu-v0
+    source_kind: solved_fixture
+    fixture_id: synthetic-solved-baseline-style-fu-v0
+    token_count: 2
+    transformable_token_count: 2
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 0
+        latin_label: F
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 1
+        latin_label: U
+        token_index_global: 1
+        logical_line_index: 0
+transform_candidates:
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: solved-style-direct-v0
+    input_stream_id: solved-baseline-style-fu-v0
+    transform_family: direct_translation
+    transform_id: direct_translation
+    transform_parameters: {}
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: solved-style-reverse-v0
+    input_stream_id: solved-baseline-style-fu-v0
+    transform_family: reverse_gematria
+    transform_id: reverse_gematria
+    transform_parameters: {}
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+scoring:
+  enabled: false
+  adapter: minimal_triage
+notes:
+  - This parity batch is committed-fixture-style only and does not require raw transcripts in CI.

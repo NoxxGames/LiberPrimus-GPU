@@ -77,6 +77,20 @@ try {
         --allow-warnings
     & $Python -m libreprimus.cli cookie-refresh validate --results-dir $Stage4GOut --summary $Stage4GSummary
 
+    Write-Host "Running Stage 4H CPU batch synthetic/temp output"
+    $Stage4HOut = Join-Path $TempDir "stage4h-cpu-batch"
+    & $Python -m libreprimus.cli cpu-batch validate-manifest `
+        --manifest experiments/manifests/cpu-batch/stage4h-synthetic-smoke-batch.yaml
+    & $Python -m libreprimus.cli cpu-batch run `
+        --manifest experiments/manifests/cpu-batch/stage4h-synthetic-smoke-batch.yaml `
+        --out-dir $Stage4HOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cpu-batch adapter-coverage `
+        --registry data/transform-registry/cpu-reference-transforms-v0.json `
+        --out-dir $Stage4HOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cpu-batch validate-results --results-dir $Stage4HOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

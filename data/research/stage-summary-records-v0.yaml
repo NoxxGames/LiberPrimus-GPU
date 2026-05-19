@@ -343,3 +343,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 4G generated 4 candidates, deduplicated to 4, ran 8 exact SHA-256 comparisons against 2 targets, and found 0 exact matches.
+  - record_type: stage_summary_record
+    stage_id: stage-4h
+    title: CPU batch transform API extraction
+    status: complete
+    category: infrastructure
+    summary: Extracted a reusable CPU-only batch transform API with stable input stream, transform candidate, result, run summary, and CPU/CUDA parity contract records.
+    key_outputs:
+      - "`libreprimus cpu-batch` CLI for manifest validation, synthetic batch runs, adapter coverage, result validation, and summaries."
+      - CPU batch schemas, synthetic/solved-baseline-safe manifests, deterministic output hashes, scoring adapter, and committed aggregate summary.
+      - CUDA parity contract documenting token order, modulo-29 semantics, separator handling, skip/advance rules, scoring compatibility, and output hash expectations.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 4H ran only the synthetic CPU batch smoke manifest; no CUDA implementation, broad experiment, canonical corpus activation, page-boundary finalization, or solve claim was made.

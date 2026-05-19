@@ -1,0 +1,117 @@
+record_type: cpu_batch_manifest
+manifest_id: stage4h-synthetic-smoke-batch
+manifest_version: v0
+description: Synthetic CPU batch smoke manifest for direct, reverse, rotated, Vigenere, prime-stream, and Caesar adapters.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+candidate_count_upper_bound: 8
+input_streams:
+  - record_type: cpu_batch_input_stream
+    input_stream_id: synthetic-futh-o-v0
+    source_kind: synthetic
+    token_count: 5
+    transformable_token_count: 4
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 0
+        latin_label: F
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 1
+        latin_label: U
+        token_index_global: 1
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 2
+        latin_label: TH
+        token_index_global: 2
+        logical_line_index: 0
+      - token_kind: word_separator
+        raw_text: " "
+        token_index_global: 3
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 3
+        latin_label: O
+        token_index_global: 4
+        logical_line_index: 0
+    notes:
+      - Synthetic stream; no raw corpus required.
+transform_candidates:
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: synthetic-direct-v0
+    input_stream_id: synthetic-futh-o-v0
+    transform_family: direct_translation
+    transform_id: direct_translation
+    transform_parameters: {}
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: synthetic-reverse-v0
+    input_stream_id: synthetic-futh-o-v0
+    transform_family: reverse_gematria
+    transform_id: reverse_gematria
+    transform_parameters: {}
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: synthetic-rotated-reverse-v0
+    input_stream_id: synthetic-futh-o-v0
+    transform_family: rotated_reverse_gematria
+    transform_id: rotated_reverse_gematria
+    transform_parameters:
+      rotation: 1
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: synthetic-vigenere-key-f-v0
+    input_stream_id: synthetic-futh-o-v0
+    transform_family: vigenere_explicit_key
+    transform_id: vigenere_explicit_key
+    transform_parameters:
+      key_text: F
+      direction: decrypt_subtract
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: synthetic-prime-minus-one-v0
+    input_stream_id: synthetic-futh-o-v0
+    transform_family: prime_minus_one_stream
+    transform_id: prime_minus_one_stream
+    transform_parameters:
+      prime_start_index: 0
+      direction: forward
+      stream_value: prime_minus_one_mod29
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: synthetic-caesar-shift-v0
+    input_stream_id: synthetic-futh-o-v0
+    transform_family: caesar
+    transform_id: caesar_shift
+    transform_parameters:
+      shift: 1
+      direction: forward
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+scoring:
+  enabled: true
+  adapter: minimal_triage
+  notes:
+    - Scoring is deterministic triage metadata only.
+notes:
+  - Stage 4H smoke manifest; not an unsolved-page experiment.

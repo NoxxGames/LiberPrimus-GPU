@@ -233,13 +233,24 @@ records:
     solve_claim: false
     notes: Fixture records are provenance metadata only, not evidence of hidden payloads.
   - record_type: method_family_status_record
+    method_family_id: cpu_batch_transform_api
+    name: CPU batch transform API and parity contract
+    status: infrastructure_only
+    evidence_summary: Stage 4H extracted a CPU-only batch transform API, deterministic result records, synthetic/solved-baseline-safe manifests, adapter coverage, scoring adapter, and CUDA parity contract without adding GPU code.
+    completed_stage_refs: [stage-4h]
+    reopen_conditions: [New transform adapters include synthetic batch tests, deterministic output hashes, and unchanged CPU registry semantics.]
+    stop_conditions: [Do not implement GPU code, broaden transform families, or trust CUDA outputs until CPU batch and scorer parity pass.]
+    next_action: Stage 4I scorer consolidation and calibration report should make scoring outputs stable enough for future transform-and-score parity.
+    solve_claim: false
+    notes: CPU batch records are the future CUDA reference contract; generated result records remain ignored.
+  - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred
-    evidence_summary: CUDA remains deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
-    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w]
-    reopen_conditions: [CPU batch transform API, scorer consolidation, parity plan, and benchmark plan are complete.]
+    evidence_summary: CUDA remains deferred; Stage 4H now provides a CPU batch parity contract, but scorer consolidation, parity tests, and benchmarks are still required before GPU kernels are trusted.
+    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h]
+    reopen_conditions: [CPU batch transform API, scorer consolidation, parity tests, and benchmark plan are complete.]
     stop_conditions: [No GPU kernels before CPU reference behaviour and parity tests.]
-    next_action: Stage 5A planning and parity scaffolding only.
+    next_action: First future CUDA target is batch transform-and-score parity after Stage 4I scorer consolidation.
     solve_claim: false
-    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise.
+    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H did not add CUDA code.

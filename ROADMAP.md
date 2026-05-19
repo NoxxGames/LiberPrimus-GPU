@@ -4,20 +4,20 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4G cookie exact-candidate refresh is complete. It used Stage 4B source-backed cookie
-candidate records and the historical `167` / `761` cookie targets to run a small exact SHA-256
-refresh with no fuzzy matching, hashcat, GPU work, or broad candidate expansion.
+Stage 4H CPU batch transform API extraction is complete. It turned existing CPU transform registry
+semantics into deterministic input stream, transform candidate, result, summary, adapter coverage,
+and CUDA parity-contract records without adding GPU code or broad experiment execution.
 
-The next planned stage is Stage 4H: CPU batch transform API extraction. Scorer consolidation and
-CUDA planning remain planned later; CUDA remains deferred.
+The next planned stage is Stage 4I: scorer consolidation and calibration report. CUDA planning
+remains later; CUDA remains deferred until CPU batch and scorer parity are stable.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
 recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
 review into durable records without executing experiments, Stage 4C made the visual claims
 measurable without promoting them to seeds, Stage 4D ran only bounded no-fudge audit work, Stage 4E
 selected external source-delta targets without committing raw artefacts, Stage 4F prepared
-stego/audio fixture provenance without running tools, and Stage 4G recorded the negative exact cookie
-refresh result.
+stego/audio fixture provenance without running tools, Stage 4G recorded the negative exact cookie
+refresh result, and Stage 4H extracted the CPU batch API as the future CUDA parity contract.
 
 ## Phase 0A - Project bootstrap
 
@@ -285,7 +285,7 @@ Stage 3Z expands the source-of-truth hierarchy into concise onboarding maps that
 
 Stage 4A converted local admin-provided Discord HTML exports into redacted, scoped, image-aware Deep-Research-friendly bundles. Raw Discord logs, private attachments, usernames, user IDs, message IDs, and private URLs remain local/ignored and must not be committed.
 
-The independent review originally suggested CPU batch transform API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier. CPU batch API extraction remains planned later and is not cancelled.
+The independent review originally suggested CPU batch transform API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier. Stage 4H has now completed CPU batch API extraction; scorer consolidation remains the next prerequisite before CUDA parity work.
 
 ## Stage 4B - Website-derived source-lock triage and visual observation intake
 
@@ -312,11 +312,11 @@ Do not rerun cookie work without newly source-locked exact candidate strings.
 
 ## Stage 4H - CPU batch transform API extraction
 
-Extract stable CPU batch transform-and-score APIs needed before any serious CUDA work. CUDA remains deferred until CPU references, stable scoring contracts, parity tests, and benchmark plans exist.
+Stage 4H is complete. It added `libreprimus cpu-batch`, CPU batch schemas, synthetic and solved-baseline-safe manifests, deterministic result hashes, adapter coverage, scoring adapter integration, and a CUDA parity contract. The local smoke batch executed `6` CPU-only candidates and supported all `6` current registry transforms.
 
 ## Stage 4I - Scorer consolidation and calibration report
 
-Consolidate scorer definitions and calibration reports before CPU batch APIs are used for any broader campaigns.
+Consolidate scorer definitions and calibration reports before CPU batch APIs are used for broader campaigns or future transform-and-score CUDA parity.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

@@ -73,6 +73,19 @@ echo "Running Stage 4G cookie refresh synthetic/temp output"
     --allow-warnings
 "$python_bin" -m libreprimus.cli cookie-refresh validate --results-dir "$tmp_dir/stage4g-cookie-refresh" --summary "$tmp_dir/stage4g-cookie-refresh-summary.yaml"
 
+echo "Running Stage 4H CPU batch synthetic/temp output"
+"$python_bin" -m libreprimus.cli cpu-batch validate-manifest \
+    --manifest experiments/manifests/cpu-batch/stage4h-synthetic-smoke-batch.yaml
+"$python_bin" -m libreprimus.cli cpu-batch run \
+    --manifest experiments/manifests/cpu-batch/stage4h-synthetic-smoke-batch.yaml \
+    --out-dir "$tmp_dir/stage4h-cpu-batch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cpu-batch adapter-coverage \
+    --registry data/transform-registry/cpu-reference-transforms-v0.json \
+    --out-dir "$tmp_dir/stage4h-cpu-batch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cpu-batch validate-results --results-dir "$tmp_dir/stage4h-cpu-batch"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

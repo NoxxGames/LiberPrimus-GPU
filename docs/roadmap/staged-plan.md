@@ -6,11 +6,12 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 4G - cookie exact-candidate refresh.
-- Current planning focus: Stage 4H - CPU batch transform API extraction.
+- Latest completed stage: Stage 4H - CPU batch transform API extraction.
+- Current planning focus: Stage 4I - scorer consolidation and calibration report.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
+- CPU batch transform API: active infrastructure and future CUDA parity contract.
 - Solve claims: none.
 - Raw and generated outputs: ignored and not committed.
 - Discord raw logs: local, private, ignored research material.
@@ -41,20 +42,20 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Stage 4E: completed the source-lock delta audit for the public cicada-solvers/iddqd Git tree without mirroring blobs, classified high-value path categories, recorded selected source-health/source-delta metadata, queued image/stego/audio provenance manifests, and added image-compression artefact future-preflight observations.
 - Stage 4F: source-locked historical OutGuess/audio fixture metadata for lp_outguessed, Interconnectedness MP3, 761.MP3, 4gq25.jpg, 2013/02 assets, OpenPuff/OutGuess/MP3Stego references, and toolchain requirements without downloading raw artefacts or running tools.
 - Stage 4G: executed the source-backed cookie exact-candidate refresh against the two historical cookie targets with SHA-256 exact comparisons only; 4 candidates became 8 comparisons and 0 exact matches.
+- Stage 4H: extracted the CPU-only batch transform API with deterministic input streams, transform candidates, result records, adapter coverage, scoring adapter, synthetic/solved-baseline-safe manifests, and a CPU/CUDA parity contract.
 
 ## Current Stage
 
-Stage 4G is complete. It converted Stage 4B cookie candidate source records and existing cookie artefact records into a bounded exact SHA-256 refresh, found zero exact matches, and preserved the cookie-hash family as negative/deprioritised unless new exact source strings appear.
+Stage 4H is complete. It converted existing CPU transform registry semantics into a deterministic batch API with stable input stream, candidate, result, summary, and parity-contract records. The synthetic smoke batch executed 6 CPU-only candidates, all 6 current registry transforms have explicit CPU batch adapters, and generated outputs remain ignored.
 
-Stage 4G does not run broad hash cracking, hashcat, GPU/CUDA, dictionary search, fuzzy or partial matching, live Tor, raw Discord processing, raw page-image processing, canonical corpus activation, page-boundary finalization, or solve claims.
+Stage 4H does not run broad experiments, implement CUDA/GPU kernels, change transform semantics, process raw Discord logs or raw page images, activate the canonical corpus, finalize page boundaries, or make solve claims.
 
 ## Planned Next Stages
 
-- Stage 4H - CPU batch transform API extraction.
 - Stage 4I - scorer consolidation and calibration report.
 - Stage 5A - CUDA planning and parity scaffolding only.
 
-The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking, visual observation intake, annotation, and bounded numeric audits ahead of CPU API work. CPU batch API extraction remains planned later; it is deferred, not cancelled.
+The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking, visual observation intake, annotation, and bounded numeric audits ahead of CPU API work. Stage 4H has now completed the CPU batch API extraction; scorer consolidation remains the next prerequisite before CUDA parity work.
 
 ## Deferred Work
 
@@ -87,7 +88,9 @@ Stage 4E audits `https://github.com/cicada-solvers/iddqd` as selected source-del
 
 Stage 4F records historical stego/audio fixture candidates as metadata only. It prepares OutGuess, OpenPuff, MP3Stego, hexdump/string, and audio-rendering toolchain requirements, but all future manifests remain disabled.
 
-Stage 4G executes only the Stage 4B source-backed cookie refresh with manifest-declared raw byte strings and SHA-256 exact comparisons. It finds zero exact matches, writes generated result records under ignored `experiments/results/cookie-refresh/stage4g/`, and updates the cookie SHA-256 method family to remain negative/deprioritised unless new exact source strings appear. The next planned stage after Stage 4G is Stage 4H: CPU batch transform API extraction.
+Stage 4G executes only the Stage 4B source-backed cookie refresh with manifest-declared raw byte strings and SHA-256 exact comparisons. It finds zero exact matches, writes generated result records under ignored `experiments/results/cookie-refresh/stage4g/`, and updates the cookie SHA-256 method family to remain negative/deprioritised unless new exact source strings appear.
+
+Stage 4H makes the CPU batch API the reference path for future acceleration. The API accepts normalized token stream records, explicit transform candidate records, deterministic CPU adapter output, optional minimal-triage scoring metadata, and output hashes that future CUDA code must match before trust. It runs only synthetic or solved-baseline-safe batches and writes generated result records under ignored `experiments/results/cpu-batch/stage4h/`. The next planned stage after Stage 4H is Stage 4I: scorer consolidation and calibration report.
 
 ## Retired Or Deprioritised Directions
 
@@ -98,6 +101,7 @@ Stage 4G executes only the Stage 4B source-backed cookie refresh with manifest-d
 - p56-local prime offset sweeps: inconclusive/noisy; revisit only with a stronger source anchor.
 - Mersenne/perfect-number tiny probe: inconclusive and low priority unless image/source evidence emerges.
 - Cookie SHA-256 packs: negative/deprioritised for Stage 3L, Stage 3U, and Stage 4G exact packs; do not rerun without newly source-locked exact candidate strings.
+- CPU batch transform API: active infrastructure only; new adapters require synthetic batch tests, output hash expectations, and unchanged CPU registry semantics.
 - Broad dictionary/hash cracking: deferred and prohibited without explicit scoped evidence.
 - Broad visual pareidolia, unannotated dot/braille/constellation readings, and image-derived cipher seeds: deferred and prohibited until Stage 4C-style annotation records preserve coordinates, ambiguity, controls, and review status.
 - Dot/binary/braille/constellation readings remain not experiment seeds without explicit coordinates, ordering, polarity, ambiguity tables, and later review promotion.
@@ -105,7 +109,7 @@ Stage 4G executes only the Stage 4B source-backed cookie refresh with manifest-d
 - Source-delta audit work must not blind-mirror external repositories, commit raw binary/image/audio/font artefacts, or treat source variants as canonical corpus.
 - JPEG-like/compression artefact observations are future-preflight only; star-like or compression-like features require source variants and negative controls before any interpretation.
 - Broad OutGuess/stego/audio scans: deferred and prohibited until source-locked fixtures and expected-output controls exist.
-- CUDA acceleration: deferred until CPU batch APIs, stable scorer definitions, parity tests, and benchmarks exist.
+- CUDA acceleration: deferred until CPU batch APIs, stable scorer definitions, parity tests, and benchmarks exist. Stage 4H now provides the CPU batch parity contract; the first future CUDA target is batch transform-and-score parity after Stage 4I scorer consolidation.
 
 ## Deep Research Influence Log
 

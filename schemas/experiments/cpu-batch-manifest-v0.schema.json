@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/cpu-batch-manifest-v0.schema.json",
+  "title": "CPU Batch Manifest v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_type",
+    "manifest_id",
+    "manifest_version",
+    "description",
+    "cpu_only",
+    "cuda_used",
+    "cuda_required",
+    "no_solve_claim",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "generated_outputs_committed",
+    "candidate_count_upper_bound",
+    "input_streams",
+    "transform_candidates"
+  ],
+  "properties": {
+    "record_type": { "const": "cpu_batch_manifest" },
+    "manifest_id": { "type": "string", "minLength": 1 },
+    "manifest_version": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "cpu_only": { "const": true },
+    "cuda_used": { "const": false },
+    "cuda_required": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "candidate_count_upper_bound": { "type": "integer", "minimum": 0, "maximum": 100000 },
+    "input_streams": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "cpu-batch-input-stream-v0.schema.json" }
+    },
+    "transform_candidates": {
+      "type": "array",
+      "items": { "$ref": "cpu-batch-transform-candidate-v0.schema.json" }
+    },
+    "scoring": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "adapter": { "type": "string" },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

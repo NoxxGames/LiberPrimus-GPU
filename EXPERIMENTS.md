@@ -86,6 +86,20 @@ Run:
 
 The Stage 4G run generated `4` candidates before deduplication, kept `4` deduplicated candidates, tested `8` exact SHA-256 comparisons against two targets, and found `0` exact matches. Do not rerun cookie work without newly source-locked exact candidate strings.
 
+## Stage 4H CPU Batch Transform API
+
+Stage 4H is infrastructure, not a new experiment family. It adds small CPU-only manifests under `experiments/manifests/cpu-batch/` for synthetic smoke, solved-baseline-style parity, and adapter coverage.
+
+Generated CPU batch outputs remain ignored under `experiments/results/cpu-batch/stage4h/`. The committed summary is aggregate-only at `data/research/stage4h-cpu-batch-api-summary.yaml`.
+
+Rules:
+
+- Use normalized token stream records, not raw transcripts or raw Discord/image inputs.
+- Do not add new transform families without schemas, docs, tests, and output hash expectations.
+- Do not implement CUDA here.
+- Treat CPU batch output hashes as future parity anchors, not solve evidence.
+- Keep `cpu_only=true`, `cuda_used=false`, `no_solve_claim=true`, `canonical_corpus_active=false`, and `page_boundaries_final=false`.
+
 ## Experiment philosophy
 
 Experiments are reproducible tests of hypotheses, not evidence of solves by themselves.

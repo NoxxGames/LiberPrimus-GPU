@@ -160,6 +160,20 @@ Local validation includes:
 .\.venv\Scripts\python.exe -m pytest -q tests/python
 ```
 
+## Stage 4H CPU Batch Tests
+
+Stage 4H tests cover CPU batch schemas, deterministic synthetic input streams, transform adapter dispatch, adapter-missing handling, deterministic batch runner records, stable output hashes, scoring adapter unavailable/scored paths, parity contract fields, CLI run/validate/adapter-coverage commands, generated output ignore policy, raw data ignore policy, and no-solve/CUDA flags.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli cpu-batch validate-manifest `
+  --manifest experiments/manifests/cpu-batch/stage4h-synthetic-smoke-batch.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli cpu-batch validate-results `
+  --results-dir experiments/results/cpu-batch/stage4h
+.\.venv\Scripts\python.exe -m pytest -q tests/python
+```
+
 Local validation includes:
 
 ```powershell

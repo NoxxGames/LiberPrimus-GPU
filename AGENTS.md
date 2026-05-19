@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4G - cookie exact-candidate refresh.
+Current completed stage: Stage 4H - CPU batch transform API extraction.
 
-Current work: Stage 4H - CPU batch transform API extraction. Stage 4H should extract stable CPU batch transform APIs needed before scorer consolidation and CUDA planning; it must not run broad search, activate CUDA, change corpus status, finalize page boundaries, or claim a solve.
+Current work: Stage 4I - scorer consolidation and calibration report. Stage 4I should consolidate scorer definitions and calibration reporting before future CPU batch or CUDA parity work; it must not run broad search, activate CUDA, change corpus status, finalize page boundaries, or claim a solve.
 
 Current project state:
 
@@ -92,6 +92,11 @@ Current project state:
 - Stage 4G generated cookie refresh records are generated and ignored under `experiments/results/cookie-refresh/stage4g/`.
 - Cookie refreshes must remain exact-source-backed. Do not add arbitrary strings, Discord-only strings, dictionary words, fuzzy matching, partial matching, hashcat, GPU/CUDA, or broad cracking.
 - If Stage 4G returns zero exact matches, do not rerun cookie work without newly source-locked exact candidate strings.
+- Stage 4H generated CPU batch records are generated and ignored under `experiments/results/cpu-batch/stage4h/`.
+- Future CUDA work must use the Stage 4H CPU batch parity contract.
+- Do not implement GPU code until CPU batch and scorer APIs are stable and parity tests exist.
+- Any new transform adapter must include a synthetic batch test and deterministic output hash expectation.
+- CLI behavior for `libreprimus cpu-batch` must remain stable unless a future stage updates docs, schemas, tests, and the parity contract together.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
 - Upload only generated `site/` contents, never raw `third_party/` inputs.
 - Wiki publish failures should be recorded with exact errors and manual recovery steps, but research stages should not fail solely because the GitHub Wiki remote is unavailable.

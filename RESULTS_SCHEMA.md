@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, and Stage 4G cookie refresh records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, and Stage 4H CPU batch/parity records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -23,6 +23,8 @@ Stage 4E source-delta records are committed metadata records only. They must kee
 Stage 4F stego/audio fixture source records are committed metadata records only. They must keep `raw_file_committed=false`, `binary_committed=false`, `audio_committed=false`, `image_committed=false`, `font_committed=false`, `extracted_payload_committed=false`, `trusted_as_canonical=false`, and `solve_claim=false`. Future fixture manifests must keep `execution_enabled=false`. Generated fixture reports remain ignored under `experiments/results/stego-fixtures/stage4f/`.
 
 Stage 4G cookie refresh schemas require exact-match-only records: `no_solve_claim=true`, `cuda_used=false`, `cloud_execution=false`, `hashcat_used=false`, `fuzzy_matching=false`, `partial_matching=false`, manifest-declared variants and algorithms, and source-backed base strings. Generated candidate/exact-match JSONL and summary JSON remain ignored under `experiments/results/cookie-refresh/stage4g/`; only the aggregate YAML summary is committed.
+
+Stage 4H CPU batch records require `cpu_only=true`, `cuda_used=false`, `cuda_required=false`, `no_solve_claim=true`, `canonical_corpus_active=false`, `page_boundaries_final=false`, and `generated_outputs_committed=false`. Generated result JSONL and summary JSON remain ignored under `experiments/results/cpu-batch/stage4h/`; only the aggregate YAML summary and parity contract are committed.
 
 ## Result record principles
 
@@ -217,6 +219,19 @@ Stage 4G adds committed schemas for the cookie refresh manifest view, generated 
 - `schemas/web/cookie-refresh-summary-v0.schema.json`
 
 Candidate records log the experiment ID, source record, source basis, byte variant, UTF-8 candidate byte hash, digest, target cookie, exact-match flag, previous-pack duplicate flag, and all no-broadening policy flags. Generated records are not committed.
+
+## Stage 4H CPU Batch Records
+
+Stage 4H adds committed schemas for the CPU batch manifest, input stream, transform candidate, generated result record, run summary, and CPU/CUDA parity contract:
+
+- `schemas/experiments/cpu-batch-manifest-v0.schema.json`
+- `schemas/experiments/cpu-batch-input-stream-v0.schema.json`
+- `schemas/experiments/cpu-batch-transform-candidate-v0.schema.json`
+- `schemas/experiments/cpu-batch-result-record-v0.schema.json`
+- `schemas/experiments/cpu-batch-run-summary-v0.schema.json`
+- `schemas/experiments/cpu-cuda-parity-contract-v0.schema.json`
+
+Result records log transform IDs, parameters, token counts, execution status, output hashes, optional structured score summaries, and all no-CUDA/no-solve policy flags. Generated CPU batch records are not committed.
 
 Committed aggregate summaries live under:
 

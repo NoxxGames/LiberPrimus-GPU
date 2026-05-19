@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/cpu-batch-transform-candidate-v0.schema.json",
+  "title": "CPU Batch Transform Candidate v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_type",
+    "candidate_id",
+    "input_stream_id",
+    "transform_family",
+    "transform_id",
+    "transform_parameters",
+    "cpu_only",
+    "cuda_used",
+    "no_solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "cpu_batch_transform_candidate" },
+    "candidate_id": { "type": "string", "minLength": 1 },
+    "input_stream_id": { "type": "string", "minLength": 1 },
+    "transform_family": { "type": "string", "minLength": 1 },
+    "transform_id": { "type": "string", "minLength": 1 },
+    "transform_parameters": { "type": "object" },
+    "payload_checks": { "type": "array", "items": { "type": "object" } },
+    "cpu_only": { "const": true },
+    "cuda_used": { "const": false },
+    "no_solve_claim": { "const": true },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

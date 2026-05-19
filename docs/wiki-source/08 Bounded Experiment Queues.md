@@ -83,6 +83,19 @@ Stage 4G runs the later source-backed cookie refresh:
 
 The Stage 4G refresh should process only source-backed strings and manifest-declared variants. Generated hash JSONL and summary JSON stay in `experiments/results/cookie-refresh/stage4g/` and are not solve evidence.
 
+Stage 4H adds CPU batch API smoke manifests. These are parity infrastructure, not unsolved-page queues:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli cpu-batch validate-manifest `
+  --manifest experiments/manifests/cpu-batch/stage4h-synthetic-smoke-batch.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli cpu-batch run `
+  --manifest experiments/manifests/cpu-batch/stage4h-synthetic-smoke-batch.yaml `
+  --out-dir experiments/results/cpu-batch/stage4h `
+  --allow-warnings
+```
+
+Generated Stage 4H CPU batch records stay in `experiments/results/cpu-batch/stage4h/` and are future parity anchors, not solve evidence.
+
 Stage 4D runs only bounded no-fudge numeric and metadata audits from the Stage 4B disabled backlog:
 
 ```powershell
@@ -113,6 +126,8 @@ If an Onion 7 run appears interesting, inspect the generated top candidates loca
 If a GP/rune claim is `missing_source_span`, improve source/span linking in a separate follow-up instead of searching neighbouring spans to make the claim true.
 
 If a cookie pack finds no exact match, record the negative result and move to a separately scoped manifest. After Stage 4G, do not rerun cookie work without newly source-locked exact candidate strings.
+
+If a CPU batch adapter is missing, add a synthetic manifest/test and output hash expectation before using it in broader workflows. Do not add CUDA code to satisfy a missing CPU adapter.
 
 If a method family is retired or deprioritised, update the staged plan and method-retirement ledger
 before adding a new manifest.

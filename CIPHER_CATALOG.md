@@ -6,7 +6,7 @@ This catalog records planned transform families and the standards required befor
 
 ## Current Cipher Status
 
-After Stage 4G, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, metadata-only source-delta records for selected public artefact categories, stego/audio fixture source-lock metadata, and a source-backed cookie exact-refresh result. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, stego/audio extraction, broad hash cracking, or solve claims.
+After Stage 4H, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, metadata-only source-delta records for selected public artefact categories, stego/audio fixture source-lock metadata, a source-backed cookie exact-refresh result, and a CPU batch transform API. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, stego/audio extraction, broad hash cracking, or solve claims.
 
 Canonical corpus activation remains inactive and page boundaries remain reviewable.
 
@@ -21,6 +21,8 @@ Stage 4E source-delta audit work is not a cipher transform and not image/stego a
 Stage 4F historical OutGuess/audio fixture source-locking is not a cipher transform and not a stego/audio analysis stage. It records fixture provenance, source health, and toolchain requirements only. OutGuess, OpenPuff, MP3Stego, hexdump/strings, and audio rendering remain deferred until a later explicit execution stage with assets, tools, controls, and output policy.
 
 Stage 4G cookie exact-candidate refresh is not a cipher transform and not a hash-cracking campaign. It tests only source-backed Stage 4B strings against historical cookie artefacts with SHA-256 exact matching, finds zero exact matches, and keeps cookie SHA-256 packs negative/deprioritised unless new exact source strings are source-locked.
+
+Stage 4H CPU batch transform API is not a new cipher family. It packages existing CPU transform semantics into deterministic batch records and a future CUDA parity contract. New adapters must preserve existing transform behavior and include synthetic batch tests with output hash expectations.
 
 ## Historical Stage 0A status
 

@@ -68,11 +68,20 @@ records:
     method_family_id: cuda_gpu_acceleration
     retired_status: deferred
     reason: CUDA is intentionally delayed until CPU batch APIs, scorer consolidation, parity tests, and benchmarks exist.
-    evidence: [Project policy and Stage 3W anti-drift state keep CUDA deferred.]
-    stages_supporting: [stage-3w]
-    reopen_conditions: [Stage 4F CPU batch API and Stage 4G scorer consolidation are complete.]
+    evidence: [Project policy and Stage 3W anti-drift state keep CUDA deferred, Stage 4H added the CPU batch parity contract but not scorer consolidation or GPU code.]
+    stages_supporting: [stage-3w, stage-4h]
+    reopen_conditions: [Stage 4H CPU batch API, Stage 4I scorer consolidation, parity tests, and benchmark plan are complete.]
     prohibited_expansions: [GPU kernels without CPU reference, parity tests, and benchmark plan.]
-    notes: Stage 5A is planning and parity scaffolding only.
+    notes: First future CUDA target is batch transform-and-score parity; Stage 4H did not implement CUDA.
+  - record_type: method_retirement_record
+    method_family_id: cpu_batch_transform_api
+    retired_status: active_with_constraints
+    reason: CPU batch infrastructure is active as the source of truth for future parity, but it must not become a broad experiment runner or hidden CUDA implementation.
+    evidence: [Stage 4H ran only the synthetic smoke manifest, produced deterministic output hashes, and wrote a CUDA parity contract.]
+    stages_supporting: [stage-4h]
+    reopen_conditions: [A future stage adds transform adapters with synthetic tests and output hash expectations or uses the API for scorer consolidation.]
+    prohibited_expansions: [Broad unsolved-page campaigns, new transform families without manifests, GPU kernels, CUDA parity claims without matching CPU records.]
+    notes: CPU batch outputs are generated and ignored; committed summaries are aggregate-only.
   - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints

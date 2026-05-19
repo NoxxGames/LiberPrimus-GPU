@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/cpu-batch-input-stream-v0.schema.json",
+  "title": "CPU Batch Input Stream v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_type",
+    "input_stream_id",
+    "source_kind",
+    "token_count",
+    "transformable_token_count",
+    "tokens",
+    "canonical_corpus_active",
+    "page_boundaries_final"
+  ],
+  "properties": {
+    "record_type": { "const": "cpu_batch_input_stream" },
+    "input_stream_id": { "type": "string", "minLength": 1 },
+    "source_kind": { "enum": ["synthetic", "solved_fixture", "local_only", "unknown"] },
+    "fixture_id": { "type": "string" },
+    "source_span": { "type": "string" },
+    "token_count": { "type": "integer", "minimum": 0 },
+    "transformable_token_count": { "type": "integer", "minimum": 0 },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "tokens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["token_kind"],
+        "properties": {
+          "token_kind": {
+            "enum": [
+              "rune",
+              "word_separator",
+              "clause_separator",
+              "line_separator",
+              "physical_newline",
+              "paragraph_separator",
+              "segment_separator",
+              "chapter_separator",
+              "page_separator_or_marker",
+              "whitespace",
+              "numeric_literal",
+              "unknown_symbol"
+            ]
+          },
+          "index29": { "type": "integer", "minimum": 0, "maximum": 28 },
+          "latin_label": { "type": "string" },
+          "raw_text": { "type": "string" },
+          "token_index_global": { "type": "integer", "minimum": 0 },
+          "logical_line_index": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

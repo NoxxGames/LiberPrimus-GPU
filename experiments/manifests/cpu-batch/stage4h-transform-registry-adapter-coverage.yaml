@@ -1,0 +1,27 @@
+record_type: cpu_batch_manifest
+manifest_id: stage4h-transform-registry-adapter-coverage
+manifest_version: v0
+description: Metadata manifest for reporting CPU batch adapter coverage against the CPU reference transform registry.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+candidate_count_upper_bound: 0
+input_streams:
+  - record_type: cpu_batch_input_stream
+    input_stream_id: adapter-coverage-placeholder-v0
+    source_kind: synthetic
+    token_count: 0
+    transformable_token_count: 0
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens: []
+transform_candidates: []
+scoring:
+  enabled: false
+  adapter: none
+notes:
+  - Run `libreprimus cpu-batch adapter-coverage` to write raw-data-free adapter coverage.

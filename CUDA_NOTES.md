@@ -6,7 +6,7 @@ This file records CUDA policy for future acceleration work.
 
 ## Current CUDA Status
 
-CUDA remains deferred after Stage 3V and during Stage 3W. Existing CUDA code is scaffold and smoke-test infrastructure only unless a future stage explicitly adds CPU-reference behavior, parity tests, and benchmark coverage.
+CUDA remains deferred after Stage 4H. Existing CUDA code is scaffold and smoke-test infrastructure only unless a future stage explicitly adds CPU-reference behavior, parity tests, and benchmark coverage.
 
 Do not use CUDA for Discord processing, image interpretation, OutGuess regression, cookie/hash packs, or broad unsolved-page campaigns.
 
@@ -24,15 +24,15 @@ When CUDA is enabled for smoke/scaffold builds, `CMAKE_CUDA_ARCHITECTURES` defau
 
 ## CPU Reference First
 
-Every future CUDA transform must follow a CPU reference implementation. CPU behavior, scoring semantics, reset/advance policy, and output records must be stable before acceleration.
+Every future CUDA transform must follow a CPU reference implementation. Stage 4H makes `libreprimus.cpu_batch` the current CPU batch parity contract. CPU behavior, scoring semantics, reset/advance policy, and output records must be stable before acceleration.
 
 ## Future First CUDA Target
 
-The likely first serious CUDA target is a batch transform-and-score API for already-reviewed CPU transforms. Hash cracking, Discord processing, image stego fishing, OCR, AI/ML interpretation, and raw data processing are not CUDA targets.
+The likely first serious CUDA target is batch transform-and-score parity for already-reviewed CPU transforms after Stage 4I scorer consolidation. Hash cracking, Discord processing, image stego fishing, OCR, AI/ML interpretation, and raw data processing are not CUDA targets.
 
 ## Parity Tests
 
-Every CUDA kernel must have CPU/GPU parity tests before optimization. Parity tests must include known inputs, negative controls, edge cases, and deterministic output comparisons.
+Every CUDA kernel must have CPU/GPU parity tests before optimization. Parity tests must include known inputs, negative controls, edge cases, deterministic output comparisons, and matching Stage 4H `output_text_hash` / `output_token_hash` records.
 
 ## No Fast-Math Default
 

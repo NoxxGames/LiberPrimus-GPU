@@ -83,7 +83,7 @@ Deferred work after Stage 4D:
 
 - Stage 4E: cookie exact-candidate refresh.
 - Later: OutGuess/audio historical fixture source-locking.
-- Later: CPU batch transform API extraction.
-- Later: scorer consolidation and calibration report.
+- Complete: CPU batch transform API extraction.
+- Next: scorer consolidation and calibration report.
 - OutGuess historical fixture acquisition and source-locking.
 - CUDA parity planning after CPU batch APIs and stable scoring contracts exist.

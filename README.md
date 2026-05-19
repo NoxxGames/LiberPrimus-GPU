@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4G cookie exact-candidate refresh. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4H CPU batch transform API extraction. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -32,6 +32,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Visual annotation: Stage 4C creates cuneiform, delimiter, dot-pattern, number-square-reference, and visual negative-control annotation tasks plus a generated local annotation site and blank coordinate templates. Coordinates and readings are separate; no Stage 4C visual task is verified, canonical, or usable as an experiment seed.
 - Bounded numeric verification: Stage 4D runs only no-fudge numeric and metadata audits. GP/rune batch002 skips without exact new spans, number-square routes skip without locked raw values, delimiter/dot audits infer no meaning, cuneiform seed execution remains deferred, and cookie pack v2 is deferred to a future explicit stage.
 - Source-delta audits: Stage 4E records selected `cicada-solvers/iddqd` tree metadata only. It does not blind-mirror external repositories, commit raw images/audio/fonts/binaries, run stego tools, or infer meaning from compression artefacts.
+- CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. It is infrastructure for future CUDA parity, not a broad experiment runner.
 - Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
@@ -41,7 +42,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 4H CPU batch transform API extraction.
+- Stage 4I scorer consolidation and calibration report.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -94,6 +95,8 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 4D bounded numeric verifier pack.
 - Stage 4E cicada-solvers/iddqd source-lock delta audit.
 - Stage 4F historical OutGuess/audio fixture source-locking.
+- Stage 4G cookie exact-candidate refresh.
+- Stage 4H CPU batch transform API extraction.
 
 ## Architecture summary
 
@@ -153,6 +156,7 @@ Current status:
 - Stage 4E: cicada-solvers/iddqd source-lock delta audit complete.
 - Stage 4F: historical OutGuess/audio fixture source-locking complete.
 - Stage 4G: cookie exact-candidate refresh complete.
+- Stage 4H: CPU batch transform API extraction complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -179,8 +183,9 @@ Current status:
 - Latest source-delta stage: Stage 4E inspected `310` public `cicada-solvers/iddqd` tree paths, recorded `1` source-delta record, `12` source-health records, `1` image artefact future-preflight record, and `4` disabled future manifests without committing raw artefacts.
 - Latest stego/audio fixture stage: Stage 4F recorded `5` OutGuess fixture source records, `5` audio fixture source records, `10` source-health records, `5` toolchain requirement records, and `4` disabled future manifests without running OutGuess, OpenPuff, MP3Stego, hexdump/strings, audio analysis, or committing raw artefacts.
 - Latest cookie refresh stage: Stage 4G generated `4` source-backed candidates before and after deduplication, marked `2` previous-pack duplicates, ran `8` SHA-256 exact comparisons, and found `0` exact matches without fuzzy matching, hashcat, GPU/CUDA, raw Discord processing, raw page-image processing, or solve claims.
+- Latest CPU batch API stage: Stage 4H executed `6` synthetic CPU-only candidates, supported all `6` current registry transforms, wrote `6` ignored result records, and created the CPU/CUDA parity contract without GPU code.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 4H CPU batch transform API extraction.
+- Next: Stage 4I scorer consolidation and calibration report.
 
 ## How To Use This Repo
 

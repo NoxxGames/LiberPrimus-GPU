@@ -261,10 +261,20 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4h_cpu_batch_transform_next",
+        "stage4h_cpu_batch_transform_current_or_complete",
         "stage 4h" in staged_plan
-        and "cpu batch" in staged_plan,
-        "Staged plan records Stage 4H CPU batch transform API extraction as next.",
+        and "cpu batch" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4H CPU batch transform API extraction as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4i_scorer_consolidation_next",
+        "stage 4i" in staged_plan
+        and "scorer" in staged_plan
+        and "calibration" in staged_plan,
+        "Staged plan records Stage 4I scorer consolidation and calibration report as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

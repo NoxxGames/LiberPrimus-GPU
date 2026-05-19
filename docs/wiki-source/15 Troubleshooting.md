@@ -37,6 +37,7 @@ git check-ignore -v experiments/results/visual-annotation/stage4c/site/index.htm
 git check-ignore -v experiments/results/bounded-numeric/stage4d/summary.json
 git check-ignore -v experiments/results/source-delta/stage4e/source_delta_report.json
 git check-ignore -v experiments/results/stego-fixtures/stage4f/fixture_candidate_report.json
+git check-ignore -v experiments/results/cpu-batch/stage4h/summary.json
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 ```
 
@@ -99,6 +100,11 @@ images, fonts, archives, or extracted payloads.
 If a Stage 4G cookie refresh leaves `candidate_records.jsonl`, `exact_matches.jsonl`,
 `duplicate_candidates.jsonl`, `summary.json`, or `warnings.jsonl`, do not stage them. Commit only the
 aggregate summary YAML, schemas, code, docs, tests, and research log.
+
+If a Stage 4H CPU batch run leaves `result_records.jsonl`, `summary.json`,
+`adapter_coverage.json`, or `warnings.jsonl` under `experiments/results/cpu-batch/stage4h/`, do not
+stage them. Commit only schemas, manifests, code, docs, tests, research logs, and aggregate summary
+YAML. Do not add CUDA code while fixing CPU batch failures.
 
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
