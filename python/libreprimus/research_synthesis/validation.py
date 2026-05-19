@@ -70,8 +70,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 4e", "cookie exact-candidate refresh"),
-            "staged_plan_stage4e_cookie_exact_candidate_refresh_next",
+            ("stage 4e", "source-lock delta audit"),
+            "staged_plan_stage4e_source_delta_audit",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4f", "outguess", "audio"),
+            "staged_plan_stage4f_outguess_audio_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -168,6 +174,14 @@ def validate_research_synthesis(
         stop_text = " ".join(str(item).lower() for item in bounded_numeric.get("stop_conditions", []))
         if "no-fudge" not in stop_text or "broaden" not in stop_text:
             errors.append("bounded_numeric_verifier_pack_missing_no_fudge_guardrail")
+
+    source_delta = _find_method(method_records, "source_delta_audit")
+    if source_delta is None:
+        errors.append("source_delta_audit_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in source_delta.get("stop_conditions", []))
+        if "blind-mirror" not in stop_text or "fonts" not in stop_text:
+            errors.append("source_delta_audit_missing_raw_artifact_guardrail")
 
     cuda = _find_method(method_records, "cuda_gpu_acceleration")
     if cuda is None or cuda.get("status") != "deferred":

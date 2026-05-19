@@ -295,3 +295,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: No broad number-theory search, cookie hash pack, cuneiform seed execution, CUDA, or solve claim was made.
+  - record_type: stage_summary_record
+    stage_id: stage-4e
+    title: cicada-solvers/iddqd source-lock delta audit
+    status: complete
+    category: source_review
+    summary: Inspected the public cicada-solvers/iddqd Git tree without mirroring blobs, classified selected high-value paths, recorded source-health metadata, queued image/stego/audio provenance manifests, and added image-compression artefact future-preflight observations.
+    key_outputs:
+      - Source-delta audit records for the cicada-solvers/iddqd tree and selected path categories.
+      - Source-health records for LP images, lp_outguessed, historical image/audio artefacts, byte strings, transcriptions, translations, keys, and font metadata.
+      - Image-compression artefact preflight backlog and disabled Stage 4E future manifests.
+    result_status: source_review_records
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: No repository mirror, raw binary/image/audio/font artefact, image transform, stego extraction, CUDA work, or solve claim was introduced.

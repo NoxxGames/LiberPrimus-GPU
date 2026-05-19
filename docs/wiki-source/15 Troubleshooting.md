@@ -35,6 +35,8 @@ git check-ignore -v experiments/results/stego/outguess/stage3v/summary.json
 git check-ignore -v experiments/results/source-lock-triage/stage4b/source_triage_report.json
 git check-ignore -v experiments/results/visual-annotation/stage4c/site/index.html
 git check-ignore -v experiments/results/bounded-numeric/stage4d/summary.json
+git check-ignore -v experiments/results/source-delta/stage4e/source_delta_report.json
+git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 ```
 
 If an ignored Stage 3P transform run leaves local images or HTML under `experiments/results/`, do
@@ -82,6 +84,11 @@ If a Stage 4D bounded numeric verifier run leaves `summary.json`, result JSONL, 
 warning JSONL, or negative-control JSONL under `experiments/results/bounded-numeric/stage4d/`, do not
 stage them. Commit only schemas, code, docs, tests, and research logs.
 
+If a Stage 4E source-delta audit leaves `path_index.jsonl`, `source_delta_report.json`,
+duplicate/unique candidate JSONL files, warnings, temporary clones, or downloaded raw cache contents,
+do not stage them. Commit only metadata YAML records, disabled manifests, schemas, code, docs, tests,
+and research logs. Font binaries must not be committed or shared.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 
@@ -104,8 +111,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 4D, onboarding and staged-plan checks should show Stage 4D complete and Stage 4E
-cookie exact-candidate refresh next.
+After Stage 4E, onboarding and staged-plan checks should show Stage 4E complete and Stage 4F
+historical OutGuess/audio fixture source-locking next.
 
 ## Stage 4A Bundle Or Site Problems
 

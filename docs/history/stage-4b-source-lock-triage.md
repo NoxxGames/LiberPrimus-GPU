@@ -22,6 +22,8 @@ Public links are promoted only when they match an allowlisted high-value source 
 
 Stage 4B records selected sources rather than mirroring whole repositories. Later source-lock work may fetch or pin selected files with explicit scope.
 
+Stage 4E follows that policy for the public `cicada-solvers/iddqd` repository. It records tree/path metadata and source-health records, but it does not blind-mirror the repository or commit raw images, audio, fonts, archives, OutGuess payloads, or extracted artefacts.
+
 ## Stage 4B Counts
 
 - Stage 4A public links loaded: 57,969.

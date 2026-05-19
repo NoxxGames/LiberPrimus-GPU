@@ -1,0 +1,12 @@
+record_type: future_image_artifact_manifest
+manifest_id: exp_stage4e_lp_image_variant_hash_dimension_audit
+purpose: Compare source-locked LP image variants by filename, count, SHA-256, dimensions,
+  and metadata only.
+stage: stage4e
+execution_enabled: false
+cuda_enabled: false
+raw_outputs_committed: false
+generated_outputs_committed: false
+solve_claim: false
+trusted_as_canonical: false
+notes: Queued only; requires explicit future stage before execution.

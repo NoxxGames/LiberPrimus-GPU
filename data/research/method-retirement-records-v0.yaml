@@ -109,3 +109,12 @@ records:
     reopen_conditions: [A later stage supplies exact source-locked values or accepted annotation records and a bounded manifest cap.]
     prohibited_expansions: [Nearest-prime adjustments, arbitrary +/-n tweaks, post-hoc row or column arithmetic, route expansion beyond manifest, fuzzy numeric matching, broad hash or stego work.]
     notes: No-fudge policy keeps raw and derived values separate and requires formulas/sources for every derived value.
+  - record_type: method_retirement_record
+    method_family_id: source_delta_audit
+    retired_status: active_with_constraints
+    reason: Source-delta auditing is useful only as selected metadata triage; broad external mirrors and binary artefact commits would create provenance and repository-hygiene risk.
+    evidence: [Stage 4E inspected cicada-solvers/iddqd tree metadata, selected high-value path categories, and queued disabled future source-lock work.]
+    stages_supporting: [stage-4e]
+    reopen_conditions: [A future explicit source-lock stage needs selected paths, hashes, dimensions, fixture provenance, or deterministic comparison manifests.]
+    prohibited_expansions: [Full repository mirroring, raw binary/image/audio/font commits, broad web crawling, image-stego extraction, OCR or AI interpretation, compression artefact solve claims.]
+    notes: Image compression artefacts and source variants remain future-preflight observations only.

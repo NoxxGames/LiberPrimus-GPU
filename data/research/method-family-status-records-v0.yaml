@@ -211,6 +211,17 @@ records:
     solve_claim: false
     notes: Delimiter and dot outputs are audit metadata and negative-control measurements, not plaintext candidates.
   - record_type: method_family_status_record
+    method_family_id: source_delta_audit
+    name: Source-lock delta audit and image/stego provenance preparation
+    status: active
+    evidence_summary: Stage 4E records metadata for selected public cicada-solvers/iddqd paths and queues future LP image variant, compression-artifact, lp_outguessed, and audio fixture source-lock work without mirroring raw artefacts.
+    completed_stage_refs: [stage-4e]
+    reopen_conditions: [A future source-lock stage needs selected public repository path metadata, fixture provenance, or deterministic source-variant comparison inputs.]
+    stop_conditions: [Do not blind-mirror external repositories, commit binaries/images/audio/fonts, infer meaning from compression artefacts, run stego tools, or treat source deltas as canonical corpus.]
+    next_action: Stage 4F historical OutGuess/audio fixture source-locking can use the selected lp_outguessed and audio candidate metadata.
+    solve_claim: false
+    notes: Source-delta records are metadata and backlog, not experiments or solves.
+  - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred

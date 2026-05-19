@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus.local/schemas/experiments/future-image-artifact-manifest-v0.schema.json",
+  "title": "Stage 4E future image artifact manifest",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "manifest_id",
+    "purpose",
+    "execution_enabled",
+    "cuda_enabled",
+    "raw_outputs_committed",
+    "generated_outputs_committed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "future_image_artifact_manifest" },
+    "manifest_id": { "type": "string", "minLength": 1 },
+    "purpose": { "type": "string", "minLength": 1 },
+    "execution_enabled": { "const": false },
+    "cuda_enabled": { "const": false },
+    "raw_outputs_committed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

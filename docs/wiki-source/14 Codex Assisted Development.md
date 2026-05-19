@@ -26,6 +26,7 @@ Use Codex safely for scoped repository stages.
 - For Stage 4B-style source-lock triage, require allowlisted public-source promotion, unsafe/private link rejection, review-only visual observations, negative-control records, disabled manifests, and no experiment execution.
 - For Stage 4C-style visual annotation work, require schemas, task records, generated ignored annotation-site support, no coordinate invention, no meaning inference, no OCR/AI/ML, no experiment execution, and `usable_as_experiment_seed=false`.
 - For Stage 4D-style bounded numeric verifier work, require no-fudge policy, exact source-backed claims only, fixed route spaces, generated ignored outputs, skipped/deferred records when evidence is missing, no cookie/cuneiform execution unless explicitly scoped, no CUDA, and no solve claim.
+- For Stage 4E-style source-delta work, require explicit remote target, metadata-only tree/path records, ignored local cache, no blind mirror, no raw image/audio/font/archive commits, disabled future manifests only, no image/stego processing, and no solve claim.
 
 ## Commands
 
@@ -86,6 +87,10 @@ If Codex runs bounded numeric verification, verify `libreprimus bounded-numeric 
 generated JSON/JSONL outputs under ignored `experiments/results/bounded-numeric/`, and reject
 nearest-prime, +/-n, post-hoc row/column arithmetic, route expansion, fuzzy matching, cookie pack
 execution, and cuneiform seed execution unless an explicit future stage scopes them.
+
+If Codex runs a source-delta audit, verify `libreprimus source-delta-audit validate`, keep generated
+JSON/JSONL outputs under ignored `experiments/results/source-delta/`, keep raw cache contents under
+ignored `third_party/CicadaSolversIddqd/`, and commit metadata records only.
 
 If Codex changes CLI registration, verify `python -m libreprimus.cli --help`, selected group
 `--help` commands, and the Stage 3X command-surface tests before staging. Do not create

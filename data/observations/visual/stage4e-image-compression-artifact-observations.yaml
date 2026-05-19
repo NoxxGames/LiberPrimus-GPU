@@ -1,0 +1,34 @@
+record_set_id: stage4e-image-compression-artifact-observations
+schema: schemas/visual/image-compression-artifact-observation-v0.schema.json
+records:
+- record_type: image_compression_artifact_observation
+  observation_id: stage4e-lp-jpeg-like-artifact-preflight
+  artifact_type: jpeg_like_compression_or_source_variant
+  source_basis: community note and local LP image locks; no image transform run in
+    Stage 4E
+  possible_causes:
+  - source artwork had JPEG intermediates
+  - images were recompressed before later mirrors
+  - public mirrors have different compression histories
+  - ordinary compression or scanner noise
+  - less likely intentional visual artefacts
+  future_tests:
+  - source variant filename/count comparison
+  - sha256 and file-size comparison
+  - dimension and color-mode comparison
+  - DCT/blockiness estimate
+  - noise residual and edge residual views
+  - recompress-difference maps
+  - channel and bitplane views
+  - star-like symbol candidate review
+  negative_controls:
+  - known JPEG recompression controls
+  - PNG controls with no JPEG intermediate
+  - random crop controls
+  - mirror and rotation controls for star-like artefacts
+  review_status: future_preflight
+  usable_as_experiment_seed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Compression-like or star-like features remain review candidates only, not
+    evidence.

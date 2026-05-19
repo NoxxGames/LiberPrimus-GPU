@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus.local/schemas/history/source-path-candidate-record-v0.schema.json",
+  "title": "Stage 4E source path candidate record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "candidate_id",
+    "source_id",
+    "path",
+    "artifact_type",
+    "source_class",
+    "recommended_action",
+    "raw_file_committed",
+    "binary_committed",
+    "font_committed",
+    "trusted_as_canonical",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "source_path_candidate_record" },
+    "candidate_id": { "type": "string", "minLength": 1 },
+    "source_id": { "type": "string", "minLength": 1 },
+    "path": { "type": "string", "minLength": 1 },
+    "artifact_type": { "type": "string", "minLength": 1 },
+    "source_class": { "type": "string", "minLength": 1 },
+    "recommended_action": { "type": "string", "minLength": 1 },
+    "duplicate_of": { "type": ["string", "null"] },
+    "raw_file_committed": { "const": false },
+    "binary_committed": { "const": false },
+    "font_committed": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

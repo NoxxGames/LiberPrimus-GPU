@@ -1,0 +1,12 @@
+record_type: future_image_artifact_manifest
+manifest_id: exp_stage4e_image_compression_artifact_preflight
+purpose: Run deterministic compression-artifact preflight metrics after source variants
+  and controls are locked.
+stage: stage4e
+execution_enabled: false
+cuda_enabled: false
+raw_outputs_committed: false
+generated_outputs_committed: false
+solve_claim: false
+trusted_as_canonical: false
+notes: Queued only; requires explicit future stage before execution.

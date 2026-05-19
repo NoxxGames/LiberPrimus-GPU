@@ -24,3 +24,7 @@ experiments/results/image-transforms/stage3p/
 ```
 
 Do not commit raw page images or generated transform artefacts.
+
+## Stage 4E Source-Variant Preflight
+
+Stage 4E adds a future image-compression artefact preflight backlog, not a new transform run. Any JPEG-like artefact or star-like symbol claim must first pass source-variant locking, deterministic metrics, and negative controls. The Stage 4E backlog lives in `data/observations/visual/stage4e-image-compression-artifact-observations.yaml` and keeps `usable_as_experiment_seed=false`.

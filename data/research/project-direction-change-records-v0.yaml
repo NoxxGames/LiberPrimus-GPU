@@ -82,3 +82,12 @@ records:
     source: User Stage 4D direction and Stage 4D no-fudge verifier results.
     affected_docs: [docs/roadmap/staged-plan.md, ROADMAP.md, STATUS.md, AGENTS.md, EXPERIMENTS.md, CIPHER_CATALOG.md]
     notes: The cicada-solvers/iddqd repository is noted as a future source-lock/delta-audit candidate only and was not processed in Stage 4D.
+  - record_type: project_direction_change_record
+    change_id: stage4e-iddqd-source-delta-priority
+    date_or_stage: stage-4e
+    previous_direction: Stage 4E cookie exact-candidate refresh.
+    new_direction: Stage 4E cicada-solvers/iddqd source-lock delta audit, with Stage 4F selected as historical OutGuess/audio fixture source-locking based on the source tree findings.
+    reason: User explicitly prioritized the cicada-solvers/iddqd source-delta audit and the tree exposed high-value lp_outguessed and audio fixture candidate paths that should be source-locked before stego/audio regression work.
+    source: User Stage 4E direction and Stage 4E remote tree audit.
+    affected_docs: [docs/roadmap/staged-plan.md, ROADMAP.md, STATUS.md, AGENTS.md, EXPERIMENTS.md, CIPHER_CATALOG.md]
+    notes: Cookie exact-candidate refresh remains planned later and must still avoid broad hash cracking.

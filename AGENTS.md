@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4D - bounded numeric verifier pack.
+Current completed stage: Stage 4E - cicada-solvers/iddqd source-lock delta audit.
 
-Current work: Stage 4E - cookie exact-candidate refresh. Stage 4E should revisit only explicit source-backed cookie strings and must not broaden into dictionary-scale hash cracking, fuzzy matching, hashcat, GPU work, or non-SHA-256 expansion without a new scoped direction.
+Current work: Stage 4F - historical OutGuess/audio fixture source-locking. Stage 4F should use Stage 4E selected `cicada-solvers/iddqd` metadata for fixture provenance only; it must not run broad stego/audio scans or commit raw binary artefacts.
 
 Current project state:
 
@@ -78,7 +78,12 @@ Current project state:
 - Numeric verifier stages must follow the no-fudge policy: keep raw and derived values separate, record formulas/sources for derived values, and reject nearest-prime, arbitrary +/-n, post-hoc row/column arithmetic, route expansion, and fuzzy matching.
 - Cuneiform-derived seeds require accepted coordinate/readout annotations before execution; current cuneiform records remain deferred.
 - Dot and delimiter ambiguity remains noncanonical unless reviewed and explicitly promoted; delimiter audits must not infer reset-boundary meaning.
-- Source-lock delta candidates such as `https://github.com/cicada-solvers/iddqd` must be handled by an explicit future source-lock stage, not opportunistically processed.
+- Stage 4E source-delta outputs are generated and ignored under `experiments/results/source-delta/stage4e/`.
+- `third_party/CicadaSolversIddqd/` is an ignored local cache for optional cicada-solvers/iddqd audit material; commit only README and `.gitkeep`.
+- Do not blind-mirror external repositories. Source-delta audits commit metadata/records, not raw binary/image/audio/font artefacts.
+- Font binaries must not be committed or shared.
+- Compression artefact observations are future-preflight only and not solve evidence; star-like compression/noise features require source variants and negative controls before interpretation.
+- Source-lock delta candidates such as `https://github.com/cicada-solvers/iddqd` must be handled by an explicit source-lock stage, not opportunistically processed.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
 - Upload only generated `site/` contents, never raw `third_party/` inputs.
 - Wiki publish failures should be recorded with exact errors and manual recovery steps, but research stages should not fail solely because the GitHub Wiki remote is unavailable.

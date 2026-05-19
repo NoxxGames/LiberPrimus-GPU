@@ -1,0 +1,171 @@
+record_set_id: stage4e-cicada-solvers-iddqd-source-health
+schema: schemas/history/source-health-record-v0.schema.json
+records:
+- record_type: source_health_record
+  source_id: stage4e-iddqd-lp_full_image
+  url: https://github.com/cicada-solvers/iddqd/tree/master/liber-primus__images--full/00.jpg
+  source_class: strong_community_technical
+  health_status: reachable_metadata_only
+  fragility: medium
+  checked_at_stage: stage4e
+  retrieval_status: tree_metadata_recorded_no_blobs
+  recommended_action: queue source-variant comparison
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records source-health metadata only; no raw files or binaries are
+    committed.
+- record_type: source_health_record
+  source_id: stage4e-iddqd-lp_unsolved_image
+  url: https://github.com/cicada-solvers/iddqd/tree/master/liber-primus__images--unsolved/0.jpg
+  source_class: strong_community_technical
+  health_status: reachable_metadata_only
+  fragility: medium
+  checked_at_stage: stage4e
+  retrieval_status: tree_metadata_recorded_no_blobs
+  recommended_action: queue source-variant comparison
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records source-health metadata only; no raw files or binaries are
+    committed.
+- record_type: source_health_record
+  source_id: stage4e-iddqd-lp_outguessed
+  url: https://github.com/cicada-solvers/iddqd/tree/master/lp_outguessed/00.jpg
+  source_class: strong_community_technical
+  health_status: reachable_metadata_only
+  fragility: high
+  checked_at_stage: stage4e
+  retrieval_status: tree_metadata_recorded_no_blobs
+  recommended_action: queue fixture source-lock
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records source-health metadata only; no raw files or binaries are
+    committed.
+- record_type: source_health_record
+  source_id: stage4e-iddqd-historical_2012
+  url: https://github.com/cicada-solvers/iddqd/tree/master/2012/02/mabinogion_transcript
+  source_class: secondary_archive
+  health_status: reachable_metadata_only
+  fragility: medium
+  checked_at_stage: stage4e
+  retrieval_status: tree_metadata_recorded_no_blobs
+  recommended_action: source-lock metadata
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records source-health metadata only; no raw files or binaries are
+    committed.
+- record_type: source_health_record
+  source_id: stage4e-iddqd-historical_2013
+  url: https://github.com/cicada-solvers/iddqd/tree/master/2013/02/3301.iso
+  source_class: secondary_archive
+  health_status: reachable_metadata_only
+  fragility: medium
+  checked_at_stage: stage4e
+  retrieval_status: tree_metadata_recorded_no_blobs
+  recommended_action: source-lock metadata
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records source-health metadata only; no raw files or binaries are
+    committed.
+- record_type: source_health_record
+  source_id: stage4e-iddqd-audio_fixture_candidate
+  url: https://github.com/cicada-solvers/iddqd/tree/master/2012/03/answering_machine_2143909608.mp3
+  source_class: secondary_archive
+  health_status: reachable_metadata_only
+  fragility: high
+  checked_at_stage: stage4e
+  retrieval_status: tree_metadata_recorded_no_blobs
+  recommended_action: queue fixture source-lock
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records source-health metadata only; no raw files or binaries are
+    committed.
+- record_type: source_health_record
+  source_id: stage4e-iddqd-image_fixture_candidate
+  url: https://github.com/cicada-solvers/iddqd/tree/master/2012/01/final.jpg
+  source_class: secondary_archive
+  health_status: reachable_metadata_only
+  fragility: medium
+  checked_at_stage: stage4e
+  retrieval_status: tree_metadata_recorded_no_blobs
+  recommended_action: queue fixture source-lock
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records source-health metadata only; no raw files or binaries are
+    committed.
+- record_type: source_health_record
+  source_id: stage4e-iddqd-transcription
+  url: https://github.com/cicada-solvers/iddqd/tree/master/liber-primus__transcription--master/liber-primus__transcription--master.txt
+  source_class: strong_community_technical
+  health_status: reachable_metadata_only
+  fragility: medium
+  checked_at_stage: stage4e
+  retrieval_status: tree_metadata_recorded_no_blobs
+  recommended_action: source-lock metadata
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records source-health metadata only; no raw files or binaries are
+    committed.
+- record_type: source_health_record
+  source_id: stage4e-iddqd-translation
+  url: https://github.com/cicada-solvers/iddqd/tree/master/liber-primus__translation/liber-primus__known-plain-text--headlines.txt
+  source_class: strong_community_technical
+  health_status: reachable_metadata_only
+  fragility: medium
+  checked_at_stage: stage4e
+  retrieval_status: tree_metadata_recorded_no_blobs
+  recommended_action: source-lock metadata
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records source-health metadata only; no raw files or binaries are
+    committed.
+- record_type: source_health_record
+  source_id: stage4e-iddqd-key
+  url: https://github.com/cicada-solvers/iddqd/tree/master/liber-primus__keys/liber-primus__keys.txt
+  source_class: strong_community_technical
+  health_status: reachable_metadata_only
+  fragility: medium
+  checked_at_stage: stage4e
+  retrieval_status: tree_metadata_recorded_no_blobs
+  recommended_action: source-lock metadata
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records source-health metadata only; no raw files or binaries are
+    committed.
+- record_type: source_health_record
+  source_id: stage4e-iddqd-byte_string
+  url: https://github.com/cicada-solvers/iddqd/tree/master/byte-strings/byte-strings
+  source_class: secondary_archive
+  health_status: reachable_metadata_only
+  fragility: medium
+  checked_at_stage: stage4e
+  retrieval_status: tree_metadata_recorded_no_blobs
+  recommended_action: source-lock metadata
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records source-health metadata only; no raw files or binaries are
+    committed.
+- record_type: source_health_record
+  source_id: stage4e-iddqd-font_metadata_only
+  url: https://github.com/cicada-solvers/iddqd/tree/master/ttf/BabelStoneRunicBeorhtnoth.ttf
+  source_class: reference_only_tooling
+  health_status: reachable_metadata_only
+  fragility: high
+  checked_at_stage: stage4e
+  retrieval_status: tree_metadata_recorded_no_blobs
+  recommended_action: record metadata only
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records source-health metadata only; no raw files or binaries are
+    committed.

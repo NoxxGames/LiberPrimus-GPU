@@ -118,6 +118,20 @@ Local validation includes:
 
 Stage 4D tests cover bounded numeric schemas, no-fudge policy rejection for nearest-prime and arbitrary adjustment operations, deterministic route builders, delimiter metadata audit behavior, cuneiform deferral when coordinates/readout are absent, visual negative-control ambiguity metrics, CLI run/validate behavior on synthetic records, and ignore policy for generated bounded-numeric outputs, raw Discord logs, and raw page images.
 
+## Stage 4E Source-Delta Audit Tests
+
+Stage 4E tests cover source-delta schemas, path classification for LP images, `lp_outguessed`, audio candidates, and font metadata-only paths, validation guardrails for raw/font commits, image-compression artefact future-preflight records, disabled future manifests, CLI behavior against a synthetic local git tree, network-disabled deferred records, and ignore policy for the local cache and generated reports.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli source-delta-audit validate `
+  --source-delta data/observations/archive/stage4e-cicada-solvers-iddqd-source-delta.yaml `
+  --source-health data/locks/third-party/stage4e-cicada-solvers-iddqd-source-health.yaml `
+  --image-artifact data/observations/visual/stage4e-image-compression-artifact-observations.yaml `
+  --manifest-dir experiments/manifests/stage4e-disabled
+```
+
 Local validation includes:
 
 ```powershell

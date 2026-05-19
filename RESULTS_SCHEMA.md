@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, and Stage 4B source-lock/visual-intake records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, and Stage 4E source-delta/image-artifact backlog records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -17,6 +17,8 @@ Stage 4B records under `data/observations/archive/`, `data/locks/third-party/`, 
 Stage 4C records under `data/observations/visual/` are committed annotation task metadata. They must keep `trusted_as_canonical=false`, `usable_as_experiment_seed=false`, and `solve_claim=false`. Generated annotation sites, page-image copies, grid overlays, and blank templates remain ignored.
 
 Stage 4D bounded numeric verifier records are generated JSON/JSONL outputs under `experiments/results/bounded-numeric/stage4d/`. They must keep `solve_claim=false`, `cuda_used=false`, `trusted_as_canonical=false`, `no_fudge_policy=true`, and `generated_outputs_committed=false`. Raw values and derived values must stay separated, and every derived value must record a formula and source.
+
+Stage 4E source-delta records are committed metadata records only. They must keep `raw_file_committed=false`, `binary_committed=false`, `font_committed=false`, `trusted_as_canonical=false`, and `solve_claim=false`. Generated tree reports remain ignored under `experiments/results/source-delta/stage4e/`.
 
 ## Result record principles
 
@@ -169,6 +171,22 @@ Committed schema IDs:
 - `delimiter-handedness-audit-record-v0`
 
 Generated result files remain ignored under `experiments/results/bounded-numeric/stage4d/`.
+
+## Stage 4E Source Delta Audit Records
+
+Stage 4E adds committed schemas for source-delta audit records, source-path candidate records, source-variant comparison backlog records, image-compression artefact observations, and disabled future image/stego provenance manifests.
+
+Committed schema IDs:
+
+- `source-delta-audit-record-v0`
+- `source-path-candidate-record-v0`
+- `source-variant-comparison-record-v0`
+- `image-compression-artifact-observation-v0`
+- `future-image-artifact-manifest-v0`
+
+Committed records live under `data/observations/archive/`, `data/locks/third-party/`, `data/observations/visual/`, and `experiments/manifests/stage4e-disabled/`. They must keep `raw_file_committed=false`, `binary_committed=false`, `font_committed=false`, `trusted_as_canonical=false`, and `solve_claim=false`.
+
+Generated path indexes, source-delta reports, duplicate/unique candidate JSONL files, and warnings remain ignored under `experiments/results/source-delta/stage4e/`. Raw cache contents under `third_party/CicadaSolversIddqd/` remain ignored except for README/.gitkeep.
 
 Committed aggregate summaries live under:
 

@@ -6,7 +6,7 @@ This catalog records planned transform families and the standards required befor
 
 ## Current Cipher Status
 
-After Stage 4D, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, and bounded no-fudge numeric verifier audits. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, or solve claims.
+After Stage 4E, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, and metadata-only source-delta records for selected public artefact categories. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, or solve claims.
 
 Canonical corpus activation remains inactive and page boundaries remain reviewable.
 
@@ -15,6 +15,8 @@ Method-family status and reopening conditions are now tracked in `data/research/
 Stage 4B visual observations for cuneiform/base-60, mirrored three-dot delimiters, dot/binary ambiguity, number squares, and cookie/hash artefacts are review-only. Stage 4C creates annotation tasks and blank coordinate templates for the visual subset. They are not cipher modules and are not experiment seeds until a later review/promotion stage accepts exact coordinates, alternate readings, controls, and explicit seed status.
 
 Stage 4D bounded numeric verifier work is not a cipher transform. It audits exact numeric inputs only when source-backed and bounded, records skipped/deferred states when evidence is missing, and prohibits nearest-prime, +/-n, row/column arithmetic, fuzzy matching, and route expansion.
+
+Stage 4E source-delta audit work is not a cipher transform and not image/stego analysis. It records selected repository path metadata and future source-lock backlog items only. JPEG-like compression artefact observations and source variants are future-preflight records, not evidence or seeds.
 
 ## Historical Stage 0A status
 

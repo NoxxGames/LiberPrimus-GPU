@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus.local/schemas/history/source-variant-comparison-record-v0.schema.json",
+  "title": "Stage 4E source variant comparison record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "comparison_id",
+    "source_id",
+    "artifact_type",
+    "recommended_action",
+    "comparison_status",
+    "raw_file_committed",
+    "binary_committed",
+    "trusted_as_canonical",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "source_variant_comparison_record" },
+    "comparison_id": { "type": "string", "minLength": 1 },
+    "source_id": { "type": "string", "minLength": 1 },
+    "artifact_type": { "type": "string", "minLength": 1 },
+    "recommended_action": { "type": "string", "minLength": 1 },
+    "comparison_status": { "type": "string", "minLength": 1 },
+    "raw_file_committed": { "const": false },
+    "binary_committed": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

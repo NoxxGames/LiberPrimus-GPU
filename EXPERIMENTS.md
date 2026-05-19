@@ -38,9 +38,22 @@ Allowed Stage 4D actions:
 - Raw number-square route verification only when locked raw values exist.
 - Visual negative-control ambiguity metrics.
 
-Stage 4D explicitly defers cookie pack v2 and cuneiform reading pack v1. Cookie exact-candidate refresh is planned for Stage 4E; cuneiform-derived seeds require accepted annotation before any future bounded execution. Generated Stage 4D result records remain ignored under `experiments/results/bounded-numeric/stage4d/`.
+Stage 4D explicitly defers cookie pack v2 and cuneiform reading pack v1. Cookie exact-candidate refresh remains planned for a later explicit stage; cuneiform-derived seeds require accepted annotation before any future bounded execution. Generated Stage 4D result records remain ignored under `experiments/results/bounded-numeric/stage4d/`.
 
 No-fudge rules are mandatory: no nearest-prime adjustments, arbitrary +/-n changes, post-hoc row/column arithmetic, route expansion beyond manifest, fuzzy numeric matching, broad number-theory search, CUDA, or solve claims.
+
+## Stage 4E Source-Delta Audit And Disabled Image/Stego Backlog
+
+Stage 4E does not execute an experiment. It inspects the public `cicada-solvers/iddqd` Git tree as metadata, records selected source-delta/source-health records, and queues disabled future manifests under `experiments/manifests/stage4e-disabled/`.
+
+Queued manifests:
+
+- `exp_stage4e_lp_image_variant_hash_dimension_audit`
+- `exp_stage4e_image_compression_artifact_preflight`
+- `exp_stage4e_lp_outguessed_fixture_source_lock`
+- `exp_stage4e_audio_fixture_source_lock`
+
+All keep `execution_enabled=false`, `cuda_enabled=false`, `raw_outputs_committed=false`, `generated_outputs_committed=false`, and `solve_claim=false`. Generated source-delta reports remain ignored under `experiments/results/source-delta/stage4e/`. Raw repository artefacts, images, audio, fonts, and payloads must not be committed.
 
 ## Experiment philosophy
 

@@ -104,6 +104,14 @@ experiments/results/bounded-numeric/**
 !experiments/results/bounded-numeric/stage4d/
 !experiments/results/bounded-numeric/stage4d/.gitkeep
 
+# Generated source delta audit outputs
+experiments/results/source-delta/**
+!experiments/results/source-delta/
+!experiments/results/source-delta/README.md
+!experiments/results/source-delta/.gitkeep
+!experiments/results/source-delta/stage4e/
+!experiments/results/source-delta/stage4e/.gitkeep
+
 # Generated visual annotation packs/sites
 experiments/results/visual-annotation/**
 !experiments/results/visual-annotation/
@@ -159,6 +167,12 @@ third_party/CicadaOutGuess/**
 !third_party/CicadaOutGuess/
 !third_party/CicadaOutGuess/README.md
 !third_party/CicadaOutGuess/.gitkeep
+
+# Local third-party cicada-solvers/iddqd audit cache
+third_party/CicadaSolversIddqd/**
+!third_party/CicadaSolversIddqd/
+!third_party/CicadaSolversIddqd/README.md
+!third_party/CicadaSolversIddqd/.gitkeep
 
 # Local deep-research reports
 deep-research-reports/**

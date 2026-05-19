@@ -1,0 +1,332 @@
+record_set_id: stage4e-cicada-solvers-iddqd-source-delta
+schema: schemas/history/source-delta-audit-record-v0.schema.json
+records:
+- record_type: source_delta_audit_record
+  audit_id: stage4e-cicada-solvers-iddqd-tree-delta
+  source_id: stage4e-cicada-solvers-iddqd
+  repo_url: https://github.com/cicada-solvers/iddqd.git
+  remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+  reachable: true
+  path_count: 310
+  category_counts:
+    audio_fixture_candidate: 3
+    byte_string: 1
+    font_metadata_only: 1
+    historical_2012: 2
+    historical_2013: 3
+    image_fixture_candidate: 9
+    key: 1
+    lp_full_image: 75
+    lp_outguessed: 150
+    lp_unsolved_image: 58
+    transcription: 2
+    translation: 3
+    unknown: 2
+  selected_path_candidates:
+  - record_type: source_path_candidate_record
+    candidate_id: stage4e-iddqd-lp_full_image
+    source_id: stage4e-cicada-solvers-iddqd
+    path: liber-primus__images--full/00.jpg
+    path_count: 75
+    sample_paths:
+    - liber-primus__images--full/00.jpg
+    - liber-primus__images--full/01.jpg
+    - liber-primus__images--full/02.jpg
+    - liber-primus__images--full/03.jpg
+    - liber-primus__images--full/04.jpg
+    artifact_type: lp_full_image
+    source_class: strong_community_technical
+    recommended_action: queue source-variant comparison
+    duplicate_of: null
+    raw_file_committed: false
+    binary_committed: false
+    font_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Candidate for future source-lock/delta comparison; raw image or payload
+      files remain ignored.
+  - record_type: source_path_candidate_record
+    candidate_id: stage4e-iddqd-lp_unsolved_image
+    source_id: stage4e-cicada-solvers-iddqd
+    path: liber-primus__images--unsolved/0.jpg
+    path_count: 58
+    sample_paths:
+    - liber-primus__images--unsolved/0.jpg
+    - liber-primus__images--unsolved/1.jpg
+    - liber-primus__images--unsolved/10.jpg
+    - liber-primus__images--unsolved/11.jpg
+    - liber-primus__images--unsolved/12.jpg
+    artifact_type: lp_unsolved_image
+    source_class: strong_community_technical
+    recommended_action: queue source-variant comparison
+    duplicate_of: null
+    raw_file_committed: false
+    binary_committed: false
+    font_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Candidate for future source-lock/delta comparison; raw image or payload
+      files remain ignored.
+  - record_type: source_path_candidate_record
+    candidate_id: stage4e-iddqd-lp_outguessed
+    source_id: stage4e-cicada-solvers-iddqd
+    path: lp_outguessed/00.jpg
+    path_count: 150
+    sample_paths:
+    - lp_outguessed/00.jpg
+    - lp_outguessed/00.txt
+    - lp_outguessed/01.jpg
+    - lp_outguessed/01.txt
+    - lp_outguessed/02.jpg
+    artifact_type: lp_outguessed
+    source_class: strong_community_technical
+    recommended_action: queue fixture source-lock
+    duplicate_of: stage4b-cicada-solvers-iddqd-lp-outguessed
+    raw_file_committed: false
+    binary_committed: false
+    font_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Candidate for future source-lock/delta comparison; raw image or payload
+      files remain ignored.
+  - record_type: source_path_candidate_record
+    candidate_id: stage4e-iddqd-historical_2012
+    source_id: stage4e-cicada-solvers-iddqd
+    path: 2012/02/mabinogion_transcript
+    path_count: 2
+    sample_paths:
+    - 2012/02/mabinogion_transcript
+    - 2012/02/mabinogion_translation
+    artifact_type: historical_2012
+    source_class: secondary_archive
+    recommended_action: source-lock metadata
+    duplicate_of: null
+    raw_file_committed: false
+    binary_committed: false
+    font_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Selected path category recorded for future bounded source-lock work.
+  - record_type: source_path_candidate_record
+    candidate_id: stage4e-iddqd-historical_2013
+    source_id: stage4e-cicada-solvers-iddqd
+    path: 2013/02/3301.iso
+    path_count: 3
+    sample_paths:
+    - 2013/02/3301.iso
+    - 2013/02/folly
+    - 2013/02/wisdom
+    artifact_type: historical_2013
+    source_class: secondary_archive
+    recommended_action: source-lock metadata
+    duplicate_of: null
+    raw_file_committed: false
+    binary_committed: false
+    font_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Selected path category recorded for future bounded source-lock work.
+  - record_type: source_path_candidate_record
+    candidate_id: stage4e-iddqd-audio_fixture_candidate
+    source_id: stage4e-cicada-solvers-iddqd
+    path: 2012/03/answering_machine_2143909608.mp3
+    path_count: 3
+    sample_paths:
+    - 2012/03/answering_machine_2143909608.mp3
+    - 2013/02/761.MP3
+    - 2014/05/3301 - Interconnectedness.mp3
+    artifact_type: audio_fixture_candidate
+    source_class: secondary_archive
+    recommended_action: queue fixture source-lock
+    duplicate_of: null
+    raw_file_committed: false
+    binary_committed: false
+    font_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Candidate for future audio fixture source-locking; no audio analysis in
+      Stage 4E.
+  - record_type: source_path_candidate_record
+    candidate_id: stage4e-iddqd-image_fixture_candidate
+    source_id: stage4e-cicada-solvers-iddqd
+    path: 2012/01/final.jpg
+    path_count: 9
+    sample_paths:
+    - 2012/01/final.jpg
+    - 2012/01/m9sYK.jpg
+    - 2012/03/428_15th_ave_seattle_usa.jpg
+    - 2012/03/5_oleandrow_warszawa_poland.jpg
+    - 2012/03/8766_8798_sw_152nd_vve_miami_fl_33193_usa.jpg
+    artifact_type: image_fixture_candidate
+    source_class: secondary_archive
+    recommended_action: queue fixture source-lock
+    duplicate_of: null
+    raw_file_committed: false
+    binary_committed: false
+    font_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Selected path category recorded for future bounded source-lock work.
+  - record_type: source_path_candidate_record
+    candidate_id: stage4e-iddqd-transcription
+    source_id: stage4e-cicada-solvers-iddqd
+    path: liber-primus__transcription--master/liber-primus__transcription--master.txt
+    path_count: 2
+    sample_paths:
+    - liber-primus__transcription--master/liber-primus__transcription--master.txt
+    - liber-primus__transcription--sentences/liber-primus__transcription--sentences.txt
+    artifact_type: transcription
+    source_class: strong_community_technical
+    recommended_action: source-lock metadata
+    duplicate_of: null
+    raw_file_committed: false
+    binary_committed: false
+    font_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Selected path category recorded for future bounded source-lock work.
+  - record_type: source_path_candidate_record
+    candidate_id: stage4e-iddqd-translation
+    source_id: stage4e-cicada-solvers-iddqd
+    path: liber-primus__translation/liber-primus__known-plain-text--headlines.txt
+    path_count: 3
+    sample_paths:
+    - liber-primus__translation/liber-primus__known-plain-text--headlines.txt
+    - liber-primus__translation/liber-primus__known-plain-text.txt
+    - liber-primus__translation/liber-primus__translation.txt
+    artifact_type: translation
+    source_class: strong_community_technical
+    recommended_action: source-lock metadata
+    duplicate_of: null
+    raw_file_committed: false
+    binary_committed: false
+    font_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Selected path category recorded for future bounded source-lock work.
+  - record_type: source_path_candidate_record
+    candidate_id: stage4e-iddqd-key
+    source_id: stage4e-cicada-solvers-iddqd
+    path: liber-primus__keys/liber-primus__keys.txt
+    path_count: 1
+    sample_paths:
+    - liber-primus__keys/liber-primus__keys.txt
+    artifact_type: key
+    source_class: strong_community_technical
+    recommended_action: source-lock metadata
+    duplicate_of: null
+    raw_file_committed: false
+    binary_committed: false
+    font_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Selected path category recorded for future bounded source-lock work.
+  - record_type: source_path_candidate_record
+    candidate_id: stage4e-iddqd-byte_string
+    source_id: stage4e-cicada-solvers-iddqd
+    path: byte-strings/byte-strings
+    path_count: 1
+    sample_paths:
+    - byte-strings/byte-strings
+    artifact_type: byte_string
+    source_class: secondary_archive
+    recommended_action: source-lock metadata
+    duplicate_of: null
+    raw_file_committed: false
+    binary_committed: false
+    font_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Selected path category recorded for future bounded source-lock work.
+  - record_type: source_path_candidate_record
+    candidate_id: stage4e-iddqd-font_metadata_only
+    source_id: stage4e-cicada-solvers-iddqd
+    path: ttf/BabelStoneRunicBeorhtnoth.ttf
+    path_count: 1
+    sample_paths:
+    - ttf/BabelStoneRunicBeorhtnoth.ttf
+    artifact_type: font_metadata_only
+    source_class: reference_only_tooling
+    recommended_action: record metadata only
+    duplicate_of: null
+    raw_file_committed: false
+    binary_committed: false
+    font_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Font binaries must not be committed or shared; metadata only.
+  variant_comparison_backlog:
+  - record_type: source_variant_comparison_record
+    comparison_id: stage4e-variant-lp_full_image
+    source_id: stage4e-cicada-solvers-iddqd
+    artifact_type: lp_full_image
+    local_reference: third_party/LiberPrimusPages
+    remote_path_sample: liber-primus__images--full/00.jpg
+    comparison_status: future_source_lock_required
+    recommended_action: queue source-variant comparison
+    raw_file_committed: false
+    binary_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Comparison is queued only; Stage 4E does not fetch or process the raw artefact.
+  - record_type: source_variant_comparison_record
+    comparison_id: stage4e-variant-lp_unsolved_image
+    source_id: stage4e-cicada-solvers-iddqd
+    artifact_type: lp_unsolved_image
+    local_reference: third_party/LiberPrimusPages
+    remote_path_sample: liber-primus__images--unsolved/0.jpg
+    comparison_status: future_source_lock_required
+    recommended_action: queue source-variant comparison
+    raw_file_committed: false
+    binary_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Comparison is queued only; Stage 4E does not fetch or process the raw artefact.
+  - record_type: source_variant_comparison_record
+    comparison_id: stage4e-variant-lp_outguessed
+    source_id: stage4e-cicada-solvers-iddqd
+    artifact_type: lp_outguessed
+    local_reference: third_party/LiberPrimusPages
+    remote_path_sample: lp_outguessed/00.jpg
+    comparison_status: future_source_lock_required
+    recommended_action: queue fixture source-lock
+    raw_file_committed: false
+    binary_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Comparison is queued only; Stage 4E does not fetch or process the raw artefact.
+  - record_type: source_variant_comparison_record
+    comparison_id: stage4e-variant-audio_fixture_candidate
+    source_id: stage4e-cicada-solvers-iddqd
+    artifact_type: audio_fixture_candidate
+    local_reference: null
+    remote_path_sample: 2012/03/answering_machine_2143909608.mp3
+    comparison_status: future_source_lock_required
+    recommended_action: queue fixture source-lock
+    raw_file_committed: false
+    binary_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Comparison is queued only; Stage 4E does not fetch or process the raw artefact.
+  - record_type: source_variant_comparison_record
+    comparison_id: stage4e-variant-image_fixture_candidate
+    source_id: stage4e-cicada-solvers-iddqd
+    artifact_type: image_fixture_candidate
+    local_reference: null
+    remote_path_sample: 2012/01/final.jpg
+    comparison_status: future_source_lock_required
+    recommended_action: queue fixture source-lock
+    raw_file_committed: false
+    binary_committed: false
+    trusted_as_canonical: false
+    solve_claim: false
+    notes: Comparison is queued only; Stage 4E does not fetch or process the raw artefact.
+  source_class: strong_community_technical
+  recommended_action: source-lock selected paths and queue future comparisons
+  raw_file_committed: false
+  binary_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4E records tree metadata only; no repository mirror or raw artefact
+    commit.

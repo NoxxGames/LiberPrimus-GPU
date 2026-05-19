@@ -50,6 +50,13 @@ try {
         --allow-warnings
     & $Python -m libreprimus.cli bounded-numeric validate --results-dir $Stage4DOut
 
+    Write-Host "Validating Stage 4E source-delta audit records"
+    & $Python -m libreprimus.cli source-delta-audit validate `
+        --source-delta data/observations/archive/stage4e-cicada-solvers-iddqd-source-delta.yaml `
+        --source-health data/locks/third-party/stage4e-cicada-solvers-iddqd-source-health.yaml `
+        --image-artifact data/observations/visual/stage4e-image-compression-artifact-observations.yaml `
+        --manifest-dir experiments/manifests/stage4e-disabled
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

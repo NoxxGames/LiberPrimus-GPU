@@ -1,0 +1,12 @@
+record_type: future_image_artifact_manifest
+manifest_id: exp_stage4e_lp_outguessed_fixture_source_lock
+purpose: Source-lock historical lp_outguessed payload fixture metadata without running
+  stego tools.
+stage: stage4e
+execution_enabled: false
+cuda_enabled: false
+raw_outputs_committed: false
+generated_outputs_committed: false
+solve_claim: false
+trusted_as_canonical: false
+notes: Queued only; requires explicit future stage before execution.

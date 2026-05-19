@@ -48,6 +48,13 @@ echo "Running Stage 4D bounded numeric verifier synthetic/temp output"
     --allow-warnings
 "$python_bin" -m libreprimus.cli bounded-numeric validate --results-dir "$tmp_dir/stage4d-bounded-numeric"
 
+echo "Validating Stage 4E source-delta audit records"
+"$python_bin" -m libreprimus.cli source-delta-audit validate \
+    --source-delta data/observations/archive/stage4e-cicada-solvers-iddqd-source-delta.yaml \
+    --source-health data/locks/third-party/stage4e-cicada-solvers-iddqd-source-health.yaml \
+    --image-artifact data/observations/visual/stage4e-image-compression-artifact-observations.yaml \
+    --manifest-dir experiments/manifests/stage4e-disabled
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

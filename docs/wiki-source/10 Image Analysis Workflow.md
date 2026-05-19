@@ -61,6 +61,10 @@ Stage 4D confirms this boundary in the numeric verifier path: cuneiform seed exe
 deferred without accepted coordinates/readout, and delimiter/dot outputs are metadata or ambiguity
 audits only.
 
+Stage 4E adds only a source-variant and compression-artefact preflight backlog. It does not run image
+transforms. JPEG-like artefacts, star-like shapes, and compression/noise features remain review
+candidates until a future deterministic audit locks source variants and applies controls.
+
 ## What Not To Commit
 
 Raw images, generated image-analysis JSONL outputs, generated transform images, contact sheets,
@@ -71,6 +75,9 @@ templates under `experiments/results/visual-annotation/stage4c/` are also genera
 
 Generated Stage 4D bounded numeric verifier JSON/JSONL outputs under
 `experiments/results/bounded-numeric/stage4d/` are also generated outputs.
+
+Generated Stage 4E source-delta reports under `experiments/results/source-delta/stage4e/` and any
+ignored `third_party/CicadaSolversIddqd/` raw cache contents are also not committed.
 
 ## OutGuess Regression Boundary
 

@@ -232,10 +232,20 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4e_cookie_exact_candidate_refresh_next",
+        "stage4e_source_delta_audit_current_or_complete",
         "stage 4e" in staged_plan
-        and "cookie exact-candidate refresh" in staged_plan,
-        "Staged plan records Stage 4E cookie exact-candidate refresh as next.",
+        and "source-lock delta audit" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4E source-lock delta audit as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4f_outguess_audio_source_lock_next",
+        "stage 4f" in staged_plan
+        and "outguess" in staged_plan
+        and "audio" in staged_plan,
+        "Staged plan records Stage 4F OutGuess/audio source-locking as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

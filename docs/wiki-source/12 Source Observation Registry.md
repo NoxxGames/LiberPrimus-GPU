@@ -104,6 +104,16 @@ truth. GP/rune batch002 skipped without exact new spans, number-square routes sk
 locked raw values, delimiter/dot audits inferred no meaning, and cuneiform/cookie packs remained
 deferred.
 
+Stage 4E records `cicada-solvers/iddqd` source-delta metadata and an image-compression artefact
+preflight backlog:
+
+- `data/observations/archive/stage4e-cicada-solvers-iddqd-source-delta.yaml`
+- `data/locks/third-party/stage4e-cicada-solvers-iddqd-source-health.yaml`
+- `data/observations/visual/stage4e-image-compression-artifact-observations.yaml`
+
+These records are source metadata and future-preflight observations only. They do not mirror the
+external repository, commit raw artefacts, or treat compression-like features as solve evidence.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
@@ -126,6 +136,9 @@ Do not commit generated Stage 4C annotation sites, copied review images, grid ov
 templates under `experiments/results/visual-annotation/stage4c/`.
 Do not commit generated Stage 4D bounded numeric result JSON/JSONL files under
 `experiments/results/bounded-numeric/stage4d/`.
+Do not commit generated Stage 4E source-delta reports under
+`experiments/results/source-delta/stage4e/` or raw `cicada-solvers/iddqd` cache contents under
+`third_party/CicadaSolversIddqd/`.
 
 ## Troubleshooting
 
@@ -150,3 +163,6 @@ matches. Otherwise keep it as an ignored reference extraction record.
 If a Stage 4C annotation task looks promising, keep coordinates, accepted readings, rejected
 readings, confidence, and review status separate. A later explicit promotion stage is required
 before any manifest treats it as a seed.
+
+If a Stage 4E source path looks useful, queue an explicit source-lock or fixture-lock stage. Do not
+download or commit the external repository opportunistically, and do not commit font binaries.
