@@ -132,6 +132,21 @@ Local validation includes:
   --manifest-dir experiments/manifests/stage4e-disabled
 ```
 
+## Stage 4F Stego Audio Fixture Tests
+
+Stage 4F tests cover stego/audio fixture schemas, fixture classification for `lp_outguessed`, Interconnectedness MP3, `4gq25.jpg`, and font metadata-only paths, validation guardrails for raw/binary/audio/image/font commits, disabled future manifests, toolchain requirement separation, CLI behavior on synthetic records, and ignore policy for generated fixture reports and raw caches.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli stego-fixtures validate `
+  --outguess-fixtures data/observations/stego/stage4f-outguess-fixture-source-records.yaml `
+  --audio-fixtures data/observations/stego/stage4f-audio-fixture-source-records.yaml `
+  --source-health data/locks/third-party/stage4f-stego-fixture-source-health.yaml `
+  --toolchain data/observations/stego/stage4f-toolchain-requirements.yaml `
+  --manifest-dir experiments/manifests/stego/stage4f-disabled
+```
+
 Local validation includes:
 
 ```powershell

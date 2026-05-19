@@ -4,20 +4,20 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4E source-lock delta audit is complete. It inspected the public `cicada-solvers/iddqd`
-tree without mirroring blobs, recorded selected metadata for LP images, `lp_outguessed`,
-historical image/audio artefacts, byte strings, transcriptions, translations, keys, and font
-metadata-only paths, and queued image/stego/audio provenance manifests.
+Stage 4F historical OutGuess/audio fixture source-locking is complete. It turned Stage 4E
+`cicada-solvers/iddqd` source-delta metadata, Stage 4B promoted public-source records, and Stage 3V
+OutGuess harness context into fixture source-lock records, source-health records, toolchain
+requirements, and disabled future manifests.
 
-The next planned stage is Stage 4F: historical OutGuess/audio fixture source-locking. Cookie
-exact-candidate refresh, CPU batch transform API extraction, scorer consolidation, and CUDA
-planning remain planned later; CUDA remains deferred.
+The next planned stage is Stage 4G: cookie exact-candidate refresh. CPU batch transform API
+extraction, scorer consolidation, and CUDA planning remain planned later; CUDA remains deferred.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
 recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
 review into durable records without executing experiments, Stage 4C made the visual claims
-measurable without promoting them to seeds, Stage 4D ran only bounded no-fudge audit work, and
-Stage 4E selected external source-delta targets without committing raw artefacts.
+measurable without promoting them to seeds, Stage 4D ran only bounded no-fudge audit work, Stage 4E
+selected external source-delta targets without committing raw artefacts, and Stage 4F prepared
+stego/audio fixture provenance without running tools.
 
 ## Phase 0A - Project bootstrap
 
@@ -301,7 +301,7 @@ Stage 4E is complete. It records metadata for selected `cicada-solvers/iddqd` pa
 
 ## Stage 4F - OutGuess/audio historical fixture source-locking
 
-Source-lock historical OutGuess and audio fixtures where public and size-bounded. Use Stage 4E `lp_outguessed` and audio candidate metadata. Do not run broad stego or audio scans.
+Stage 4F is complete. It source-locks historical OutGuess/audio fixture metadata for selected public paths and promoted pages, records toolchain requirements for OutGuess, OpenPuff, MP3Stego, hexdump/strings, and audio rendering, and queues disabled future manifests without downloading or committing raw artefacts.
 
 ## Stage 4G - Cookie exact-candidate refresh
 

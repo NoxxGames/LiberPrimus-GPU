@@ -27,4 +27,18 @@ Generated diagnostics are under ignored `experiments/results/source-delta/stage4
 
 Stage 4E is metadata-only. It does not download or commit images, audio, fonts, archives, OutGuess payloads, or extracted artefacts. The audit preserves `trusted_as_canonical=false` and `solve_claim=false` for every committed record.
 
+## Stage 4F Follow-Up
+
+Stage 4F uses selected Stage 4E categories as fixture provenance inputs for historical OutGuess/audio source-locking. It records `lp_outguessed`, Interconnectedness MP3, `4gq25.jpg`, 2013/02 asset, promoted OutGuess/OpenPuff/Instar source-page, and toolchain requirement metadata without downloading or committing raw artefacts.
+
+Stage 4F outputs:
+
+- `data/observations/stego/stage4f-outguess-fixture-source-records.yaml`
+- `data/observations/stego/stage4f-audio-fixture-source-records.yaml`
+- `data/locks/third-party/stage4f-stego-fixture-source-health.yaml`
+- `data/observations/stego/stage4f-toolchain-requirements.yaml`
+- `experiments/manifests/stego/stage4f-disabled/`
+
+Generated diagnostics remain ignored under `experiments/results/stego-fixtures/stage4f/`.
+
 `lp_outguessed` is queued for future fixture source-locking. LP image categories are queued for later source-variant comparison. Font paths are metadata-only and must not be committed or redistributed.

@@ -55,6 +55,19 @@ Queued manifests:
 
 All keep `execution_enabled=false`, `cuda_enabled=false`, `raw_outputs_committed=false`, `generated_outputs_committed=false`, and `solve_claim=false`. Generated source-delta reports remain ignored under `experiments/results/source-delta/stage4e/`. Raw repository artefacts, images, audio, fonts, and payloads must not be committed.
 
+## Stage 4F Historical Stego/Audio Fixture Source-Locking
+
+Stage 4F does not execute stego or audio experiments. It uses Stage 4E source-delta metadata, Stage 4B promoted source records, and Stage 3V OutGuess harness context to create fixture source-lock records, source-health records, and toolchain requirement records.
+
+Queued manifests:
+
+- `exp_stage4f_outguess_positive_negative_matrix`
+- `exp_stage4f_openpuff_interconnectedness_fixture_prep`
+- `exp_stage4f_mp3_instar_regression_prep`
+- `exp_stage4f_audio_hexdump_string_baseline`
+
+All keep `execution_enabled=false`, `cuda_enabled=false`, `raw_file_committed=false`, `binary_committed=false`, `audio_committed=false`, `image_committed=false`, `font_committed=false`, `extracted_payload_committed=false`, and `solve_claim=false`. Generated fixture candidate reports remain ignored under `experiments/results/stego-fixtures/stage4f/`. Raw images, audio, binaries, fonts, archives, and extracted payloads must not be committed.
+
 ## Experiment philosophy
 
 Experiments are reproducible tests of hypotheses, not evidence of solves by themselves.

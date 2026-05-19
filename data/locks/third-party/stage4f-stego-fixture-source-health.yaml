@@ -1,0 +1,193 @@
+record_set_id: stage4f-stego-fixture-source-health
+schema: schemas/stego/fixture-source-health-record-v0.schema.json
+records:
+- record_type: fixture_source_health_record
+  source_id: stage4f-iddqd-lp-outguessed-tree
+  source_url: https://github.com/cicada-solvers/iddqd/tree/master/lp_outguessed
+  source_path: lp_outguessed/
+  fixture_kind: lp_outguessed
+  health_status: metadata_recorded_no_asset
+  fragility: high
+  retrieval_status: source_metadata_only_stage4f
+  recommended_action: source-lock asset in explicit future stage
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4F records fixture source-health metadata only; no raw artefact is
+    committed.
+- record_type: fixture_source_health_record
+  source_id: stage4f-iddqd-2016-4gq25-image
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2016/01/4gq25.jpg
+  source_path: 2016/01/4gq25.jpg
+  fixture_kind: image_fixture_candidate
+  health_status: metadata_recorded_no_asset
+  fragility: medium
+  retrieval_status: source_metadata_only_stage4f
+  recommended_action: source-lock asset in explicit future stage
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4F records fixture source-health metadata only; no raw artefact is
+    committed.
+- record_type: fixture_source_health_record
+  source_id: stage4f-iddqd-2013-02-assets
+  source_url: https://github.com/cicada-solvers/iddqd/tree/master/2013/02
+  source_path: 2013/02/
+  fixture_kind: historical_2013
+  health_status: metadata_recorded_no_asset
+  fragility: medium
+  retrieval_status: source_metadata_only_stage4f
+  recommended_action: source-lock asset in explicit future stage
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4F records fixture source-health metadata only; no raw artefact is
+    committed.
+- record_type: fixture_source_health_record
+  source_id: stage4f-uncovering-outguess-page
+  source_url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  source_path: Uncovering Cicada OutGuess
+  fixture_kind: reference_source
+  health_status: metadata_recorded_no_asset
+  fragility: medium
+  retrieval_status: source_metadata_only_stage4f
+  recommended_action: source-lock asset in explicit future stage
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4F records fixture source-health metadata only; no raw artefact is
+    committed.
+- record_type: fixture_source_health_record
+  source_id: stage4f-complete-archive-magicsquares-openpuff-context
+  source_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive/blob/main/assets/2014/stage07/magicsquares.txt
+  source_path: assets/2014/stage07/magicsquares.txt
+  fixture_kind: reference_source
+  health_status: metadata_recorded_no_asset
+  fragility: medium
+  retrieval_status: source_metadata_only_stage4f
+  recommended_action: source-lock asset in explicit future stage
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4F records fixture source-health metadata only; no raw artefact is
+    committed.
+- record_type: fixture_source_health_record
+  source_id: stage4f-iddqd-interconnectedness-mp3
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2014/05/3301%20-%20Interconnectedness.mp3
+  source_path: 2014/05/3301 - Interconnectedness.mp3
+  fixture_kind: audio_fixture_candidate
+  health_status: metadata_recorded_no_asset
+  fragility: high
+  retrieval_status: source_metadata_only_stage4f
+  recommended_action: source-lock asset in explicit future stage
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4F records fixture source-health metadata only; no raw artefact is
+    committed.
+- record_type: fixture_source_health_record
+  source_id: stage4f-iddqd-761-mp3-instar
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2013/02/761.MP3
+  source_path: 2013/02/761.MP3
+  fixture_kind: audio_fixture_candidate
+  health_status: metadata_recorded_no_asset
+  fragility: high
+  retrieval_status: source_metadata_only_stage4f
+  recommended_action: source-lock asset in explicit future stage
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4F records fixture source-health metadata only; no raw artefact is
+    committed.
+- record_type: fixture_source_health_record
+  source_id: stage4f-uncovering-instar-emergence-page
+  source_url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem)
+  source_path: Instar emergence source page
+  fixture_kind: reference_source
+  health_status: metadata_recorded_no_asset
+  fragility: medium
+  retrieval_status: source_metadata_only_stage4f
+  recommended_action: source-lock asset in explicit future stage
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4F records fixture source-health metadata only; no raw artefact is
+    committed.
+- record_type: fixture_source_health_record
+  source_id: stage4f-uncovering-what-happened-2014-openpuff-page
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  source_path: What Happened Part 1 2014 source page
+  fixture_kind: reference_source
+  health_status: metadata_recorded_no_asset
+  fragility: medium
+  retrieval_status: source_metadata_only_stage4f
+  recommended_action: source-lock asset in explicit future stage
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4F records fixture source-health metadata only; no raw artefact is
+    committed.
+- record_type: fixture_source_health_record
+  source_id: stage4f-charleswyt-mp3stego-reference
+  source_url: https://github.com/Charleswyt/MP3Stego
+  source_path: MP3Stego reference repository
+  fixture_kind: reference_source
+  health_status: metadata_recorded_no_asset
+  fragility: medium
+  retrieval_status: source_metadata_only_stage4f
+  recommended_action: source-lock asset in explicit future stage
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4F records fixture source-health metadata only; no raw artefact is
+    committed.

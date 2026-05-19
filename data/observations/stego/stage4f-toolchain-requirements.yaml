@@ -1,0 +1,78 @@
+record_set_id: stage4f-toolchain-requirements
+schema: schemas/stego/toolchain-requirement-record-v0.schema.json
+records:
+- record_type: toolchain_requirement_record
+  requirement_id: stage4f-toolchain-outguess
+  toolchain: outguess
+  required_for:
+  - outguess positive/negative matrix
+  execution_status: not_executed_stage4f
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Requirement recorded only; Stage 4F does not run this toolchain.
+- record_type: toolchain_requirement_record
+  requirement_id: stage4f-toolchain-openpuff
+  toolchain: openpuff
+  required_for:
+  - Interconnectedness fixture preparation
+  execution_status: not_executed_stage4f
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Requirement recorded only; Stage 4F does not run this toolchain.
+- record_type: toolchain_requirement_record
+  requirement_id: stage4f-toolchain-mp3stego
+  toolchain: mp3stego
+  required_for:
+  - MP3/Instar deterministic regression prep
+  execution_status: not_executed_stage4f
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Requirement recorded only; Stage 4F does not run this toolchain.
+- record_type: toolchain_requirement_record
+  requirement_id: stage4f-toolchain-hexdump-strings
+  toolchain: hexdump/strings
+  required_for:
+  - audio hexdump/string baseline
+  execution_status: not_executed_stage4f
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Requirement recorded only; Stage 4F does not run this toolchain.
+- record_type: toolchain_requirement_record
+  requirement_id: stage4f-toolchain-audio-rendering
+  toolchain: audio_rendering
+  required_for:
+  - audio fixture metadata review
+  execution_status: not_executed_stage4f
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Requirement recorded only; Stage 4F does not run this toolchain.

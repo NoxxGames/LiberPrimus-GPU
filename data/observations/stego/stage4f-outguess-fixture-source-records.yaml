@@ -1,0 +1,104 @@
+record_set_id: stage4f-outguess-fixture-source-records
+schema: schemas/stego/stego-fixture-source-record-v0.schema.json
+records:
+- record_type: stego_fixture_source_record
+  fixture_id: stage4f-iddqd-lp-outguessed-tree
+  source_id: stage4e-cicada-solvers-iddqd
+  source_url: https://github.com/cicada-solvers/iddqd/tree/master/lp_outguessed
+  source_path: lp_outguessed/
+  artifact_type: lp_outguessed
+  expected_role: known_positive_candidate
+  local_availability: source_only
+  toolchain:
+  - outguess
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Selected for future positive/negative OutGuess fixture matrix; raw files
+    are not downloaded in Stage 4F.
+- record_type: stego_fixture_source_record
+  fixture_id: stage4f-iddqd-2016-4gq25-image
+  source_id: stage4e-cicada-solvers-iddqd
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2016/01/4gq25.jpg
+  source_path: 2016/01/4gq25.jpg
+  artifact_type: image_fixture_candidate
+  expected_role: known_positive_candidate
+  local_availability: source_only
+  toolchain:
+  - outguess
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: 2016 image fixture candidate; future stage must source-lock the asset before
+    extraction.
+- record_type: stego_fixture_source_record
+  fixture_id: stage4f-iddqd-2013-02-assets
+  source_id: stage4e-cicada-solvers-iddqd
+  source_url: https://github.com/cicada-solvers/iddqd/tree/master/2013/02
+  source_path: 2013/02/
+  artifact_type: historical_2013
+  expected_role: future_download_candidate
+  local_availability: source_only
+  toolchain:
+  - outguess
+  - hexdump/strings
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Historical 2013 asset tree; metadata only until a fixture-source stage selects
+    individual files.
+- record_type: stego_fixture_source_record
+  fixture_id: stage4f-uncovering-outguess-page
+  source_id: stage4b-uncovering-outguess
+  source_url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  source_path: Uncovering Cicada OutGuess
+  artifact_type: reference_source
+  expected_role: reference_only
+  local_availability: deferred
+  toolchain:
+  - outguess
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B public source used as fixture context; no tool execution in Stage
+    4F.
+- record_type: stego_fixture_source_record
+  fixture_id: stage4f-complete-archive-magicsquares-openpuff-context
+  source_id: stage4b-complete-archive-magicsquares
+  source_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive/blob/main/assets/2014/stage07/magicsquares.txt
+  source_path: assets/2014/stage07/magicsquares.txt
+  artifact_type: reference_source
+  expected_role: reference_only
+  local_availability: deferred
+  toolchain:
+  - openpuff
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Stage 4B public source used as fixture context; no tool execution in Stage
+    4F.

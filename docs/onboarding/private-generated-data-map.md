@@ -18,6 +18,7 @@
 - `experiments/results/visual-annotation/stage4c/`: generated Stage 4C visual annotation workspace, local static site, page-image review copies, coordinate-grid overlays, blank templates, and annotation manifest.
 - `experiments/results/bounded-numeric/stage4d/`: generated Stage 4D bounded numeric summaries, result JSONL, manifest-status JSONL, warnings, and negative-control audit records.
 - `experiments/results/source-delta/stage4e/`: generated Stage 4E source-delta path indexes, source-delta reports, duplicate/unique candidate JSONL files, and warnings.
+- `experiments/results/stego-fixtures/stage4f/`: generated Stage 4F stego/audio fixture candidate reports, source-gap JSONL files, and warnings.
 - `data/normalized/`: generated normalized candidate outputs unless a stage explicitly commits a placeholder or curated source.
 - SQLite outputs: `*.sqlite`, `*.sqlite3`, and `*.db` are generated and must not be committed.
 
@@ -43,6 +44,7 @@
 - Generated Stage 4C annotation-site files, copied review images, grid overlays, and blank/fillable annotation templates under `experiments/results/visual-annotation/stage4c/`.
 - Generated Stage 4D bounded numeric JSON/JSONL outputs under `experiments/results/bounded-numeric/stage4d/`.
 - Generated Stage 4E source-delta JSON/JSONL outputs under `experiments/results/source-delta/stage4e/`.
+- Generated Stage 4F stego/audio fixture JSON/JSONL outputs under `experiments/results/stego-fixtures/stage4f/`.
 - Downloaded or cached `cicada-solvers/iddqd` images, audio, fonts, archives, blobs, or cloned repository contents under `third_party/CicadaSolversIddqd/`.
 - SQLite databases.
 - Root Deep Research report copies or `deep-research-reports/**`.

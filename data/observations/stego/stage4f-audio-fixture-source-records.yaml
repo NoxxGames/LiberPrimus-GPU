@@ -1,0 +1,104 @@
+record_set_id: stage4f-audio-fixture-source-records
+schema: schemas/stego/audio-fixture-source-record-v0.schema.json
+records:
+- record_type: audio_fixture_source_record
+  fixture_id: stage4f-iddqd-interconnectedness-mp3
+  source_id: stage4e-cicada-solvers-iddqd
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2014/05/3301%20-%20Interconnectedness.mp3
+  source_path: 2014/05/3301 - Interconnectedness.mp3
+  artifact_type: audio_fixture_candidate
+  expected_role: known_positive_candidate
+  local_availability: source_only
+  toolchain:
+  - openpuff
+  - audio_rendering
+  - hexdump/strings
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Interconnectedness MP3 fixture candidate; future source-lock only before
+    any analysis.
+- record_type: audio_fixture_source_record
+  fixture_id: stage4f-iddqd-761-mp3-instar
+  source_id: stage4e-cicada-solvers-iddqd
+  source_url: https://github.com/cicada-solvers/iddqd/blob/master/2013/02/761.MP3
+  source_path: 2013/02/761.MP3
+  artifact_type: audio_fixture_candidate
+  expected_role: known_positive_candidate
+  local_availability: source_only
+  toolchain:
+  - mp3stego
+  - audio_rendering
+  - hexdump/strings
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Instar-era MP3 fixture candidate; metadata only in Stage 4F.
+- record_type: audio_fixture_source_record
+  fixture_id: stage4f-uncovering-instar-emergence-page
+  source_id: stage4b-uncovering-instar-emergence
+  source_url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem)
+  source_path: Instar emergence source page
+  artifact_type: reference_source
+  expected_role: reference_only
+  local_availability: deferred
+  toolchain:
+  - mp3stego
+  - audio_rendering
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Public source context only; no audio or stego tooling was run in Stage 4F.
+- record_type: audio_fixture_source_record
+  fixture_id: stage4f-uncovering-what-happened-2014-openpuff-page
+  source_id: stage4b-uncovering-what-happened-2014
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  source_path: What Happened Part 1 2014 source page
+  artifact_type: reference_source
+  expected_role: reference_only
+  local_availability: deferred
+  toolchain:
+  - openpuff
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Public source context only; no audio or stego tooling was run in Stage 4F.
+- record_type: audio_fixture_source_record
+  fixture_id: stage4f-charleswyt-mp3stego-reference
+  source_id: stage4b-charleswyt-mp3stego
+  source_url: https://github.com/Charleswyt/MP3Stego
+  source_path: MP3Stego reference repository
+  artifact_type: reference_source
+  expected_role: reference_only
+  local_availability: deferred
+  toolchain:
+  - mp3stego
+  raw_file_committed: false
+  binary_committed: false
+  audio_committed: false
+  image_committed: false
+  extracted_payload_committed: false
+  font_committed: false
+  trusted_as_canonical: false
+  solve_claim: false
+  notes: Public source context only; no audio or stego tooling was run in Stage 4F.

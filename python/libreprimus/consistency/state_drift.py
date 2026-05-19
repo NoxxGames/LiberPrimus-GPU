@@ -241,11 +241,21 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4f_outguess_audio_source_lock_next",
+        "stage4f_outguess_audio_source_lock_current_or_complete",
         "stage 4f" in staged_plan
         and "outguess" in staged_plan
-        and "audio" in staged_plan,
-        "Staged plan records Stage 4F OutGuess/audio source-locking as next.",
+        and "audio" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4F OutGuess/audio source-locking as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4g_cookie_exact_candidate_next",
+        "stage 4g" in staged_plan
+        and "cookie" in staged_plan
+        and "exact" in staged_plan,
+        "Staged plan records Stage 4G cookie exact-candidate refresh as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

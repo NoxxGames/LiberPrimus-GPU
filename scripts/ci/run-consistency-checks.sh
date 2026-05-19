@@ -55,6 +55,14 @@ echo "Validating Stage 4E source-delta audit records"
     --image-artifact data/observations/visual/stage4e-image-compression-artifact-observations.yaml \
     --manifest-dir experiments/manifests/stage4e-disabled
 
+echo "Validating Stage 4F stego/audio fixture records"
+"$python_bin" -m libreprimus.cli stego-fixtures validate \
+    --outguess-fixtures data/observations/stego/stage4f-outguess-fixture-source-records.yaml \
+    --audio-fixtures data/observations/stego/stage4f-audio-fixture-source-records.yaml \
+    --source-health data/locks/third-party/stage4f-stego-fixture-source-health.yaml \
+    --toolchain data/observations/stego/stage4f-toolchain-requirements.yaml \
+    --manifest-dir experiments/manifests/stego/stage4f-disabled
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

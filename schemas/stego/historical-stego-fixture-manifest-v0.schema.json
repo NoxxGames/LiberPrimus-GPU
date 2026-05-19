@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus.local/schemas/stego/historical-stego-fixture-manifest-v0.schema.json",
+  "title": "Stage 4F historical stego fixture manifest",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "manifest_id",
+    "stage",
+    "purpose",
+    "execution_enabled",
+    "cuda_enabled",
+    "raw_file_committed",
+    "binary_committed",
+    "audio_committed",
+    "image_committed",
+    "extracted_payload_committed",
+    "font_committed",
+    "trusted_as_canonical",
+    "solve_claim"
+  ],
+  "properties": {
+    "manifest_id": { "type": "string", "minLength": 1 },
+    "stage": { "const": "stage4f" },
+    "purpose": { "type": "string", "minLength": 1 },
+    "execution_enabled": { "const": false },
+    "cuda_enabled": { "const": false },
+    "raw_file_committed": { "const": false },
+    "binary_committed": { "const": false },
+    "audio_committed": { "const": false },
+    "image_committed": { "const": false },
+    "extracted_payload_committed": { "const": false },
+    "font_committed": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

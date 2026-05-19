@@ -170,13 +170,13 @@ records:
     method_family_id: outguess_regression_harness
     name: OutGuess regression harness
     status: infrastructure_only
-    evidence_summary: Stage 3V added a deterministic harness; local run had missing tool/assets.
-    completed_stage_refs: [stage-3v]
-    reopen_conditions: [Source-locked historical fixtures and local OutGuess tool are available.]
+    evidence_summary: Stage 3V added a deterministic harness and Stage 4F prepared historical fixture source-lock metadata; local execution still needs tools/assets.
+    completed_stage_refs: [stage-3v, stage-4f]
+    reopen_conditions: [Source-locked historical fixtures, local artefacts, expected-output controls, and local OutGuess tool are available.]
     stop_conditions: [Do not run broad stego scans or infer meaning from non-empty payloads without expected hash.]
-    next_action: Stage 4D source-lock fixture pack.
+    next_action: Keep execution deferred until an explicit future tool/assets stage.
     solve_claim: false
-    notes: Missing tool/assets are valid skips.
+    notes: Missing tool/assets are valid skips; Stage 4F records metadata only.
   - record_type: method_family_status_record
     method_family_id: source_lock_visual_observation_intake
     name: Website-derived source locks and visual observation intake
@@ -218,9 +218,20 @@ records:
     completed_stage_refs: [stage-4e]
     reopen_conditions: [A future source-lock stage needs selected public repository path metadata, fixture provenance, or deterministic source-variant comparison inputs.]
     stop_conditions: [Do not blind-mirror external repositories, commit binaries/images/audio/fonts, infer meaning from compression artefacts, run stego tools, or treat source deltas as canonical corpus.]
-    next_action: Stage 4F historical OutGuess/audio fixture source-locking can use the selected lp_outguessed and audio candidate metadata.
+    next_action: Stage 4F fixture source-locking used the selected lp_outguessed and audio candidate metadata; future source-delta work should remain selected and metadata-only.
     solve_claim: false
     notes: Source-delta records are metadata and backlog, not experiments or solves.
+  - record_type: method_family_status_record
+    method_family_id: stego_audio_fixture_source_lock
+    name: Historical stego/audio fixture source-locking
+    status: infrastructure_only
+    evidence_summary: Stage 4F records OutGuess/audio fixture source metadata, source health, toolchain requirements, and disabled future manifests without running tools or downloading raw artefacts.
+    completed_stage_refs: [stage-4f]
+    reopen_conditions: [A future explicit fixture execution stage has source-locked assets, expected-output controls, and documented toolchain availability.]
+    stop_conditions: [Do not run OutGuess, OpenPuff, MP3Stego, spectrograms, hexdump/string scans against binary assets, or commit raw image/audio/binary/font artefacts during source-lock stages.]
+    next_action: Stage 4G cookie exact-candidate refresh is next; stego/audio execution remains deferred.
+    solve_claim: false
+    notes: Fixture records are provenance metadata only, not evidence of hidden payloads.
   - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration

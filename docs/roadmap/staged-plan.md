@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 4E - cicada-solvers/iddqd source-lock delta audit.
-- Current planning focus: Stage 4F - historical OutGuess/audio fixture source-locking.
+- Latest completed stage: Stage 4F - historical OutGuess/audio fixture source-locking.
+- Current planning focus: Stage 4G - cookie exact-candidate refresh.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -15,7 +15,7 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Raw and generated outputs: ignored and not committed.
 - Discord raw logs: local, private, ignored research material.
 - Local Liber Primus page images: local third-party material, ignored and not committed.
-- OutGuess: deterministic harness exists; tool/assets still need local setup and source-locking.
+- OutGuess: deterministic harness exists; fixture metadata is source-locked, but tools/assets still need local setup and explicit execution-stage controls.
 
 ## Completed Stage Timeline
 
@@ -38,17 +38,17 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Stage 4B: promoted high-value public sources into source-lock triage records, added review-only visual/numeric observations, preserved false-positive classes as negative controls, and queued disabled future manifests.
 - Stage 4C: created cuneiform/dot visual annotation schemas, review tasks, generated local annotation-site support, coordinate-template generation, and visual negative-control annotation tasks without interpreting meaning or enabling seeds.
 - Stage 4D: completed the bounded numeric verifier pack with no-fudge numeric and metadata audits; GP/rune batch002 skipped because no exact new spans were present, delimiter and dot ambiguity metadata were audited, raw number-square routes skipped because raw values remain pending source-lock, visual negative controls were audited, and cookie/cuneiform packs stayed deferred.
-- Stage 4E: inspected the public cicada-solvers/iddqd Git tree without mirroring blobs, classified high-value path categories, recorded selected source-health/source-delta metadata, queued image/stego/audio provenance manifests, and added image-compression artefact future-preflight observations.
+- Stage 4E: completed the source-lock delta audit for the public cicada-solvers/iddqd Git tree without mirroring blobs, classified high-value path categories, recorded selected source-health/source-delta metadata, queued image/stego/audio provenance manifests, and added image-compression artefact future-preflight observations.
+- Stage 4F: source-locked historical OutGuess/audio fixture metadata for lp_outguessed, Interconnectedness MP3, 761.MP3, 4gq25.jpg, 2013/02 assets, OpenPuff/OutGuess/MP3Stego references, and toolchain requirements without downloading raw artefacts or running tools.
 
 ## Current Stage
 
-Stage 4E is complete. It converted the cicada-solvers/iddqd source-delta target into durable metadata records and future source-lock backlog items without downloading or committing raw artefacts.
+Stage 4F is complete. It converted Stage 4E stego/audio fixture candidates into durable source-lock metadata, source-health records, toolchain requirement records, and disabled future manifests without downloading or committing raw artefacts.
 
-Stage 4E does not mirror the external repository, commit images/audio/fonts/binaries, run image transforms, run OutGuess, run OCR/AI/ML, infer hidden meaning from compression artefacts, process raw Discord logs, use CUDA, activate canonical corpus, finalize page boundaries, or claim a solve.
+Stage 4F does not run OutGuess, OpenPuff, MP3Stego, spectrograms, hexdump/string scans against binary assets, image transforms, OCR/AI/ML, raw Discord processing, CUDA, canonical corpus activation, page-boundary finalization, or solve claims.
 
 ## Planned Next Stages
 
-- Stage 4F - historical OutGuess/audio fixture source-locking.
 - Stage 4G - cookie exact-candidate refresh.
 - Stage 4H - CPU batch transform API extraction.
 - Stage 4I - scorer consolidation and calibration report.
@@ -85,7 +85,7 @@ Stage 4D uses only source-locked, reviewable, bounded numeric claims and explici
 
 Stage 4E audits `https://github.com/cicada-solvers/iddqd` as selected source-delta metadata only. It records the remote tree HEAD, path counts, source-health records, selected path categories, and disabled future manifests for LP image variant comparison, JPEG-like compression-artifact preflight, lp_outguessed fixture source-locking, and audio fixture source-locking. It does not process or commit raw artefacts.
 
-The next planned stage after Stage 4E is Stage 4F: historical OutGuess/audio fixture source-locking. Stage 4E found `lp_outguessed` and historical audio/image fixture candidate categories that should be source-locked before any stego or audio regression execution. Cookie exact-candidate refresh remains planned later as Stage 4G and should revisit only explicit source-backed cookie strings without dictionary-scale hash cracking, fuzzy matching, hashcat, GPU work, or non-SHA-256 expansion.
+Stage 4F records historical stego/audio fixture candidates as metadata only. It prepares OutGuess, OpenPuff, MP3Stego, hexdump/string, and audio-rendering toolchain requirements, but all future manifests remain disabled. The next planned stage after Stage 4F is Stage 4G: cookie exact-candidate refresh, limited to explicit source-backed strings and still blocking broad hash cracking, fuzzy matching, hashcat, GPU work, and non-SHA-256 expansion.
 
 ## Retired Or Deprioritised Directions
 

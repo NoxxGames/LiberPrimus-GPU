@@ -58,12 +58,12 @@ records:
   - record_type: method_retirement_record
     method_family_id: outguess_regression_harness
     retired_status: deferred
-    reason: Harness exists but local tool/assets were missing in Stage 3V.
-    evidence: [Stage 3V produced missing-tool/missing-asset-safe harness outputs.]
-    stages_supporting: [stage-3v]
-    reopen_conditions: [Source-locked historical OutGuess fixtures and local tool are available.]
+    reason: Harness exists and Stage 4F prepared fixture source-lock metadata, but local tools/assets and expected-output controls remain unavailable.
+    evidence: [Stage 3V produced missing-tool/missing-asset-safe harness outputs, Stage 4F prepared metadata-only fixture records.]
+    stages_supporting: [stage-3v, stage-4f]
+    reopen_conditions: [Source-locked historical OutGuess fixtures, local assets, expected-output controls, and local tool are available.]
     prohibited_expansions: [Broad stego scans, meaning inference from non-empty payloads without expected hash.]
-    notes: Stage 4D should source-lock fixtures before expansion.
+    notes: Stage 4F source-locked metadata only; extraction remains deferred.
   - record_type: method_retirement_record
     method_family_id: cuda_gpu_acceleration
     retired_status: deferred
@@ -118,3 +118,12 @@ records:
     reopen_conditions: [A future explicit source-lock stage needs selected paths, hashes, dimensions, fixture provenance, or deterministic comparison manifests.]
     prohibited_expansions: [Full repository mirroring, raw binary/image/audio/font commits, broad web crawling, image-stego extraction, OCR or AI interpretation, compression artefact solve claims.]
     notes: Image compression artefacts and source variants remain future-preflight observations only.
+  - record_type: method_retirement_record
+    method_family_id: stego_audio_fixture_source_lock
+    retired_status: active_with_constraints
+    reason: Historical stego/audio fixture preparation is useful only as source-lock metadata until toolchains, assets, and expected-output controls are explicitly available.
+    evidence: [Stage 4F prepared fixture source records, source health records, toolchain requirements, and disabled future manifests.]
+    stages_supporting: [stage-4f]
+    reopen_conditions: [An explicit future stage source-locks local assets and validates toolchain availability without broad scans.]
+    prohibited_expansions: [Running OutGuess, OpenPuff, MP3Stego, spectrograms, or hexdump/string scans during source-locking; committing raw image/audio/binary/font artefacts; interpreting fixture candidates as proof.]
+    notes: Stage 4F does not execute tools or claim hidden content.

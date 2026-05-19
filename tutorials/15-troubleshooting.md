@@ -34,6 +34,7 @@ git check-ignore -v experiments/results/source-lock-triage/stage4b/source_triage
 git check-ignore -v experiments/results/visual-annotation/stage4c/site/index.html
 git check-ignore -v experiments/results/bounded-numeric/stage4d/summary.json
 git check-ignore -v experiments/results/source-delta/stage4e/source_delta_report.json
+git check-ignore -v experiments/results/stego-fixtures/stage4f/fixture_candidate_report.json
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 ```
 
@@ -87,6 +88,12 @@ duplicate/unique candidate JSONL files, warnings, temporary clones, or downloade
 do not stage them. Commit only metadata YAML records, disabled manifests, schemas, code, docs, tests,
 and research logs. Font binaries must not be committed or shared.
 
+If a Stage 4F stego/audio fixture source-lock run leaves `fixture_candidate_report.json`,
+`source_gap_records.jsonl`, warnings, temporary downloads, or raw cache contents, do not stage them.
+Commit only fixture metadata YAML records, disabled manifests, schemas, code, docs, tests, and
+research logs. Do not run or stage OutGuess/OpenPuff/MP3Stego outputs, audio scans, binaries,
+images, fonts, archives, or extracted payloads.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 
@@ -109,8 +116,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 4E, onboarding and staged-plan checks should show Stage 4E complete and Stage 4F
-historical OutGuess/audio fixture source-locking next.
+After Stage 4F, onboarding and staged-plan checks should show Stage 4F complete and Stage 4G
+cookie exact-candidate refresh next.
 
 ## Stage 4A Bundle Or Site Problems
 

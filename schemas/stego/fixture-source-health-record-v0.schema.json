@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus.local/schemas/stego/fixture-source-health-record-v0.schema.json",
+  "title": "Stage 4F fixture source health record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "source_id",
+    "source_url",
+    "source_path",
+    "fixture_kind",
+    "health_status",
+    "fragility",
+    "raw_file_committed",
+    "binary_committed",
+    "audio_committed",
+    "image_committed",
+    "extracted_payload_committed",
+    "font_committed",
+    "trusted_as_canonical",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "fixture_source_health_record" },
+    "source_id": { "type": "string", "minLength": 1 },
+    "source_url": { "type": "string", "minLength": 1 },
+    "source_path": { "type": "string", "minLength": 1 },
+    "fixture_kind": { "type": "string", "minLength": 1 },
+    "health_status": { "type": "string", "minLength": 1 },
+    "fragility": { "enum": ["low", "medium", "high"] },
+    "raw_file_committed": { "const": false },
+    "binary_committed": { "const": false },
+    "audio_committed": { "const": false },
+    "image_committed": { "const": false },
+    "extracted_payload_committed": { "const": false },
+    "font_committed": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

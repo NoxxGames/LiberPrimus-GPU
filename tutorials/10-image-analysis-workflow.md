@@ -77,9 +77,13 @@ Generated Stage 4D bounded numeric verifier JSON/JSONL outputs under
 Generated Stage 4E source-delta reports under `experiments/results/source-delta/stage4e/` and any
 ignored `third_party/CicadaSolversIddqd/` raw cache contents are also not committed.
 
+Generated Stage 4F stego/audio fixture reports under `experiments/results/stego-fixtures/stage4f/`
+are also not committed. Raw images, audio, binaries, fonts, archives, and extracted payloads remain
+outside Git.
+
 ## OutGuess Regression Boundary
 
-Stage 3V adds OutGuess regression under `libreprimus stego`, but it is not part of the image-analysis transform workflow. It uses explicit stego manifests and optional local historical fixtures only. Do not run broad OutGuess scans across `third_party/LiberPrimusPages/`; those images remain ignored and outside Stage 3V unless a future manifest lists a tiny reviewed control subset.
+Stage 3V adds OutGuess regression under `libreprimus stego`, but it is not part of the image-analysis transform workflow. It uses explicit stego manifests and optional local historical fixtures only. Stage 4F adds source-lock metadata and toolchain requirements for future fixture work without running tools. Do not run broad OutGuess scans across `third_party/LiberPrimusPages/`; those images remain ignored unless a future manifest lists a tiny reviewed control subset.
 
 ## Troubleshooting
 

@@ -1,0 +1,15 @@
+record_type: historical_stego_fixture_manifest
+manifest_id: exp_stage4f_mp3_instar_regression_prep
+stage: stage4f
+purpose: Prepare MP3/Instar deterministic regression provenance.
+execution_enabled: false
+cuda_enabled: false
+raw_file_committed: false
+binary_committed: false
+audio_committed: false
+image_committed: false
+extracted_payload_committed: false
+font_committed: false
+trusted_as_canonical: false
+solve_claim: false
+notes: Disabled future manifest; Stage 4F records metadata only.

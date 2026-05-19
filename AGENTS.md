@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4E - cicada-solvers/iddqd source-lock delta audit.
+Current completed stage: Stage 4F - historical OutGuess/audio fixture source-locking.
 
-Current work: Stage 4F - historical OutGuess/audio fixture source-locking. Stage 4F should use Stage 4E selected `cicada-solvers/iddqd` metadata for fixture provenance only; it must not run broad stego/audio scans or commit raw binary artefacts.
+Current work: Stage 4G - cookie exact-candidate refresh. Stage 4G should use exact source-backed cookie strings only; it must not run broad hash cracking, fuzzy matching, hashcat, CUDA/GPU work, or non-SHA-256 expansion without a new scoped direction.
 
 Current project state:
 
@@ -84,6 +84,11 @@ Current project state:
 - Font binaries must not be committed or shared.
 - Compression artefact observations are future-preflight only and not solve evidence; star-like compression/noise features require source variants and negative controls before interpretation.
 - Source-lock delta candidates such as `https://github.com/cicada-solvers/iddqd` must be handled by an explicit source-lock stage, not opportunistically processed.
+- Stage 4F generated stego/audio fixture diagnostics are generated and ignored under `experiments/results/stego-fixtures/stage4f/`.
+- Historical stego/audio fixture records are metadata/source-locks only unless a later explicit execution stage enables a bounded manifest.
+- Do not run stego/audio tools during source-locking stages.
+- OpenPuff and MP3Stego tool requirements must be documented before any execution stage.
+- No raw binary, audio, image, font, archive, or extracted payload artefacts may be committed.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
 - Upload only generated `site/` contents, never raw `third_party/` inputs.
 - Wiki publish failures should be recorded with exact errors and manual recovery steps, but research stages should not fail solely because the GitHub Wiki remote is unavailable.

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus.local/schemas/stego/toolchain-requirement-record-v0.schema.json",
+  "title": "Stage 4F toolchain requirement record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "requirement_id",
+    "toolchain",
+    "required_for",
+    "execution_status",
+    "raw_file_committed",
+    "binary_committed",
+    "audio_committed",
+    "image_committed",
+    "extracted_payload_committed",
+    "font_committed",
+    "trusted_as_canonical",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "toolchain_requirement_record" },
+    "requirement_id": { "type": "string", "minLength": 1 },
+    "toolchain": { "enum": ["outguess", "openpuff", "mp3stego", "hexdump/strings", "audio_rendering"] },
+    "required_for": { "type": "array", "items": { "type": "string" } },
+    "execution_status": { "const": "not_executed_stage4f" },
+    "raw_file_committed": { "const": false },
+    "binary_committed": { "const": false },
+    "audio_committed": { "const": false },
+    "image_committed": { "const": false },
+    "extracted_payload_committed": { "const": false },
+    "font_committed": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

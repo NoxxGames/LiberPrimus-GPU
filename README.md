@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4E source-lock delta audit infrastructure. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4F historical OutGuess/audio fixture source-locking. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -25,7 +25,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only, and Stage 3S applies it to the bounded 72-candidate Onion 7 explicit seed pack only.
 - Visual/image-derived observations: registry and deterministic feature summaries only, plus deterministic review transforms; Stage 3K records source locks and reviewable observations, Stage 3M records deterministic local image features, and Stage 3P generates ignored review transforms/contact sheets. No image-derived text experiments are executed.
 - Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, and Stage 3U tests the manifest-declared signed/public string variant pack only. Both use exact byte-string logging with no fuzzy, partial, dictionary, GPU, or solve claims.
-- Stego/OutGuess work: Stage 3V adds a deterministic OutGuess regression harness only. Missing tools/assets are explicit skipped outcomes, generated payloads stay ignored, and no broad image scan or payload interpretation is performed.
+- Stego/OutGuess work: Stage 3V adds a deterministic OutGuess regression harness only. Stage 4F adds fixture source-lock metadata and toolchain requirements only. Missing tools/assets are explicit skipped outcomes, generated payloads stay ignored, and no broad image scan, stego extraction, audio scan, or payload interpretation is performed.
 - Discord source discovery: Stage 3N scans admin-provided local HTML exports only and commits aggregate/redacted records only. Stage 3O promotes a bounded, public-safe subset of redacted source-discovery records. Stage 3Q builds ignored redacted topic shards for local AI/deep-research review. Stage 3R audits those leads, promotes only corroborated public/source-observation records, preserves false positives as negative controls, and queues disabled post-Discord manifests. Raw logs, message bodies, usernames, and private attachment URLs are not committed.
 - Full Discord review bundles: Stage 4A builds redacted chronological streams, channel shards, topic shards, indexes, an LP page gallery, and an SFTP-ready static site under ignored paths for Deep Research handoff. Raw Discord logs, usernames, user IDs, message IDs, private URLs, generated static site files, copied LP page images, thumbnails, archives, and generated bundle outputs are not committed.
 - Source-lock and visual observation intake: Stage 4B promotes allowlisted public-source records only, records source-health metadata, preserves cuneiform/delimiter/dot/number-square/cookie observations as review-only and non-canonical, and stores false-positive classes as negative controls. No Stage 4B visual observation is an experiment seed.
@@ -41,8 +41,8 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 4F historical OutGuess/audio fixture source-locking, using Stage 4E metadata.
-- Later cookie exact-candidate refresh.
+- Stage 4G cookie exact-candidate refresh.
+- Later CPU batch transform API extraction.
 - Later CPU batch transform API extraction.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
@@ -95,6 +95,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 4C cuneiform and dot annotation pack.
 - Stage 4D bounded numeric verifier pack.
 - Stage 4E cicada-solvers/iddqd source-lock delta audit.
+- Stage 4F historical OutGuess/audio fixture source-locking.
 
 ## Architecture summary
 
@@ -152,6 +153,7 @@ Current status:
 - Stage 4C: cuneiform and dot annotation pack complete.
 - Stage 4D: bounded numeric verifier pack complete.
 - Stage 4E: cicada-solvers/iddqd source-lock delta audit complete.
+- Stage 4F: historical OutGuess/audio fixture source-locking complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -176,8 +178,9 @@ Current status:
 - Latest annotation stage: Stage 4C created `15` visual annotation tasks, including `1` cuneiform task, `1` dot task, `2` delimiter tasks, and `10` visual negative-control tasks. Generated annotation outputs remain ignored and no visual meaning is inferred.
 - Latest bounded numeric stage: Stage 4D discovered `7` manifests, audited `3`, deferred or skipped `4`, verified `0` GP/rune claims because no exact new spans were present, audited `2` delimiter observations and `10` visual negative controls, skipped number-square routes because raw values are not locked, and deferred cuneiform/cookie execution.
 - Latest source-delta stage: Stage 4E inspected `310` public `cicada-solvers/iddqd` tree paths, recorded `1` source-delta record, `12` source-health records, `1` image artefact future-preflight record, and `4` disabled future manifests without committing raw artefacts.
+- Latest stego/audio fixture stage: Stage 4F recorded `5` OutGuess fixture source records, `5` audio fixture source records, `10` source-health records, `5` toolchain requirement records, and `4` disabled future manifests without running OutGuess, OpenPuff, MP3Stego, hexdump/strings, audio analysis, or committing raw artefacts.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 4F historical OutGuess/audio fixture source-locking.
+- Next: Stage 4G cookie exact-candidate refresh.
 
 ## How To Use This Repo
 

@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, and Stage 4E source-delta/image-artifact backlog records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, and Stage 4F historical stego/audio fixture source-lock records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -19,6 +19,8 @@ Stage 4C records under `data/observations/visual/` are committed annotation task
 Stage 4D bounded numeric verifier records are generated JSON/JSONL outputs under `experiments/results/bounded-numeric/stage4d/`. They must keep `solve_claim=false`, `cuda_used=false`, `trusted_as_canonical=false`, `no_fudge_policy=true`, and `generated_outputs_committed=false`. Raw values and derived values must stay separated, and every derived value must record a formula and source.
 
 Stage 4E source-delta records are committed metadata records only. They must keep `raw_file_committed=false`, `binary_committed=false`, `font_committed=false`, `trusted_as_canonical=false`, and `solve_claim=false`. Generated tree reports remain ignored under `experiments/results/source-delta/stage4e/`.
+
+Stage 4F stego/audio fixture source records are committed metadata records only. They must keep `raw_file_committed=false`, `binary_committed=false`, `audio_committed=false`, `image_committed=false`, `font_committed=false`, `extracted_payload_committed=false`, `trusted_as_canonical=false`, and `solve_claim=false`. Future fixture manifests must keep `execution_enabled=false`. Generated fixture reports remain ignored under `experiments/results/stego-fixtures/stage4f/`.
 
 ## Result record principles
 
@@ -187,6 +189,22 @@ Committed schema IDs:
 Committed records live under `data/observations/archive/`, `data/locks/third-party/`, `data/observations/visual/`, and `experiments/manifests/stage4e-disabled/`. They must keep `raw_file_committed=false`, `binary_committed=false`, `font_committed=false`, `trusted_as_canonical=false`, and `solve_claim=false`.
 
 Generated path indexes, source-delta reports, duplicate/unique candidate JSONL files, and warnings remain ignored under `experiments/results/source-delta/stage4e/`. Raw cache contents under `third_party/CicadaSolversIddqd/` remain ignored except for README/.gitkeep.
+
+## Stage 4F Stego Audio Fixture Source Records
+
+Stage 4F adds committed schemas for historical OutGuess fixture source records, audio fixture source records, source-health records, historical stego fixture manifests, and toolchain requirement records.
+
+Committed schema IDs:
+
+- `stego-fixture-source-record-v0`
+- `audio-fixture-source-record-v0`
+- `fixture-source-health-record-v0`
+- `historical-stego-fixture-manifest-v0`
+- `toolchain-requirement-record-v0`
+
+Committed records live under `data/observations/stego/` and `data/locks/third-party/`. Disabled future manifests live under `experiments/manifests/stego/stage4f-disabled/`.
+
+Generated fixture candidate reports, source-gap JSONL files, and warnings remain ignored under `experiments/results/stego-fixtures/stage4f/`. Raw images, audio, binaries, fonts, archives, and extracted payloads remain uncommitted.
 
 Committed aggregate summaries live under:
 

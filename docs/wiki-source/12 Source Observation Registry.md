@@ -114,6 +114,16 @@ preflight backlog:
 These records are source metadata and future-preflight observations only. They do not mirror the
 external repository, commit raw artefacts, or treat compression-like features as solve evidence.
 
+Stage 4F records historical stego/audio fixture source locks and toolchain requirements:
+
+- `data/observations/stego/stage4f-outguess-fixture-source-records.yaml`
+- `data/observations/stego/stage4f-audio-fixture-source-records.yaml`
+- `data/locks/third-party/stage4f-stego-fixture-source-health.yaml`
+- `data/observations/stego/stage4f-toolchain-requirements.yaml`
+
+These records are fixture provenance and readiness metadata only. They do not download artefacts,
+run OutGuess/OpenPuff/MP3Stego, scan audio, or interpret payloads.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
@@ -139,6 +149,9 @@ Do not commit generated Stage 4D bounded numeric result JSON/JSONL files under
 Do not commit generated Stage 4E source-delta reports under
 `experiments/results/source-delta/stage4e/` or raw `cicada-solvers/iddqd` cache contents under
 `third_party/CicadaSolversIddqd/`.
+Do not commit generated Stage 4F stego/audio fixture reports under
+`experiments/results/stego-fixtures/stage4f/`, raw external caches, downloaded binaries, images,
+audio, fonts, archives, or extracted payloads.
 
 ## Troubleshooting
 
@@ -166,3 +179,7 @@ before any manifest treats it as a seed.
 
 If a Stage 4E source path looks useful, queue an explicit source-lock or fixture-lock stage. Do not
 download or commit the external repository opportunistically, and do not commit font binaries.
+
+If a Stage 4F fixture record looks runnable, create a later execution stage with the exact manifest,
+tool availability, expected payload policy, and controls. Do not run stego/audio tools during
+source-locking work.

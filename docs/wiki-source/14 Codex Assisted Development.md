@@ -27,6 +27,7 @@ Use Codex safely for scoped repository stages.
 - For Stage 4C-style visual annotation work, require schemas, task records, generated ignored annotation-site support, no coordinate invention, no meaning inference, no OCR/AI/ML, no experiment execution, and `usable_as_experiment_seed=false`.
 - For Stage 4D-style bounded numeric verifier work, require no-fudge policy, exact source-backed claims only, fixed route spaces, generated ignored outputs, skipped/deferred records when evidence is missing, no cookie/cuneiform execution unless explicitly scoped, no CUDA, and no solve claim.
 - For Stage 4E-style source-delta work, require explicit remote target, metadata-only tree/path records, ignored local cache, no blind mirror, no raw image/audio/font/archive commits, disabled future manifests only, no image/stego processing, and no solve claim.
+- For Stage 4F-style stego/audio fixture source-locking, require fixture metadata only, source-health records, toolchain requirement records, disabled future manifests, no raw artefact commits, no OutGuess/OpenPuff/MP3Stego/hexdump/audio execution, and no solve claim.
 
 ## Commands
 
@@ -85,8 +86,12 @@ do not mark visual observations as verified or usable as experiment seeds.
 
 If Codex runs bounded numeric verification, verify `libreprimus bounded-numeric validate`, keep
 generated JSON/JSONL outputs under ignored `experiments/results/bounded-numeric/`, and reject
-nearest-prime, +/-n, post-hoc row/column arithmetic, route expansion, fuzzy matching, cookie pack
-execution, and cuneiform seed execution unless an explicit future stage scopes them.
+nearest-prime, arbitrary +/-n, post-hoc row/column arithmetic, fuzzy matching, route expansion,
+cookie pack execution, and cuneiform seed execution unless an explicit future stage scopes them.
+
+If Codex source-locks stego/audio fixtures, verify `libreprimus stego-fixtures validate`, keep
+generated fixture diagnostics under ignored `experiments/results/stego-fixtures/`, and do not run
+OutGuess, OpenPuff, MP3Stego, hexdump/strings, or audio rendering in that stage.
 
 If Codex runs a source-delta audit, verify `libreprimus source-delta-audit validate`, keep generated
 JSON/JSONL outputs under ignored `experiments/results/source-delta/`, keep raw cache contents under

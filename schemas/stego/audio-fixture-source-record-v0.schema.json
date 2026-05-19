@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus.local/schemas/stego/audio-fixture-source-record-v0.schema.json",
+  "title": "Stage 4F audio fixture source record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "fixture_id",
+    "source_id",
+    "source_url",
+    "source_path",
+    "artifact_type",
+    "expected_role",
+    "local_availability",
+    "toolchain",
+    "raw_file_committed",
+    "binary_committed",
+    "audio_committed",
+    "image_committed",
+    "extracted_payload_committed",
+    "font_committed",
+    "trusted_as_canonical",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "audio_fixture_source_record" },
+    "fixture_id": { "type": "string", "minLength": 1 },
+    "source_id": { "type": "string", "minLength": 1 },
+    "source_url": { "type": "string", "minLength": 1 },
+    "source_path": { "type": "string", "minLength": 1 },
+    "artifact_type": { "type": "string", "minLength": 1 },
+    "expected_role": {
+      "enum": [
+        "known_positive_candidate",
+        "known_negative_candidate",
+        "reference_only",
+        "requires_tool",
+        "requires_asset",
+        "future_download_candidate",
+        "fragile_source"
+      ]
+    },
+    "local_availability": { "enum": ["absent", "present_ignored_cache", "source_only", "deferred"] },
+    "toolchain": { "type": "array", "items": { "type": "string" } },
+    "raw_file_committed": { "const": false },
+    "binary_committed": { "const": false },
+    "audio_committed": { "const": false },
+    "image_committed": { "const": false },
+    "extracted_payload_committed": { "const": false },
+    "font_committed": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

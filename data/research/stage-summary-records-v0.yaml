@@ -311,3 +311,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: No repository mirror, raw binary/image/audio/font artefact, image transform, stego extraction, CUDA work, or solve claim was introduced.
+  - record_type: stage_summary_record
+    stage_id: stage-4f
+    title: Historical OutGuess/audio fixture source-locking
+    status: complete
+    category: source_review
+    summary: Prepared source-locked fixture metadata for historical OutGuess/audio regression without running stego or audio tools, downloading raw artefacts, or committing binaries.
+    key_outputs:
+      - OutGuess and audio fixture source records.
+      - Fixture source-health and toolchain requirement records.
+      - Disabled future manifests for OutGuess, OpenPuff, MP3/Instar, and audio hexdump/string baseline preparation.
+    result_status: source_review_records
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: OutGuess, OpenPuff, MP3Stego, spectrogram, and hexdump/string tools were not executed.
