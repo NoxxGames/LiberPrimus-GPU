@@ -223,10 +223,19 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4d_bounded_numeric_verifier_next",
+        "stage4d_bounded_numeric_verifier_current_or_complete",
         "stage 4d" in staged_plan
-        and "bounded numeric verifier" in staged_plan,
-        "Staged plan records Stage 4D bounded numeric verifier pack as next.",
+        and "bounded numeric verifier" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4D bounded numeric verifier pack as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4e_cookie_exact_candidate_refresh_next",
+        "stage 4e" in staged_plan
+        and "cookie exact-candidate refresh" in staged_plan,
+        "Staged plan records Stage 4E cookie exact-candidate refresh as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

@@ -279,3 +279,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: No coordinates or meanings were invented; visual observations remain non-canonical and unusable as experiment seeds.
+  - record_type: stage_summary_record
+    stage_id: stage-4d
+    title: Bounded numeric verifier pack
+    status: complete
+    category: bounded_verification
+    summary: Executed only bounded numeric and metadata audits for Stage 4B/4C records, preserving no-fudge route rules, delimiter ambiguity, visual negative controls, and cuneiform/cookie deferrals.
+    key_outputs:
+      - Bounded numeric verifier CLI and generated ignored result summaries.
+      - GP/rune batch002 exact-claim skip, delimiter metadata audit, dot ambiguity audit, number-square raw-value skip, and visual negative-control ambiguity metrics.
+      - Research synthesis and no-fudge documentation updates.
+    result_status: bounded_audit
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: No broad number-theory search, cookie hash pack, cuneiform seed execution, CUDA, or solve claim was made.

@@ -26,7 +26,7 @@ def test_stage3y_research_synthesis_summary_cli_works() -> None:
     result = CliRunner().invoke(app, ["research-synthesis", "summary", "--data-dir", "data/research"])
 
     assert result.exit_code == 0, result.output
-    assert "method_family_count=19" in result.output
+    assert "method_family_count=20" in result.output
 
 
 def test_stage3y_research_synthesis_check_retirement_cli_works() -> None:

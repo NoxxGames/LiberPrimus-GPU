@@ -96,6 +96,14 @@ experiments/results/**
 !experiments/results/source-lock-triage/stage4b/
 !experiments/results/source-lock-triage/stage4b/.gitkeep
 
+# Generated bounded numeric verifier outputs
+experiments/results/bounded-numeric/**
+!experiments/results/bounded-numeric/
+!experiments/results/bounded-numeric/README.md
+!experiments/results/bounded-numeric/.gitkeep
+!experiments/results/bounded-numeric/stage4d/
+!experiments/results/bounded-numeric/stage4d/.gitkeep
+
 # Generated visual annotation packs/sites
 experiments/results/visual-annotation/**
 !experiments/results/visual-annotation/

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus.local/schemas/experiments/numeric-negative-control-result-v0.schema.json",
+  "title": "Stage 4D numeric negative-control result",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "result_id",
+    "execution_manifest_id",
+    "negative_control_id",
+    "false_positive_class",
+    "possible_reading_count",
+    "claimed_reading_uniqueness",
+    "polarity_orientation_dependent",
+    "no_fudge_policy",
+    "solve_claim",
+    "cuda_used",
+    "trusted_as_canonical"
+  ],
+  "properties": {
+    "record_type": { "const": "numeric_negative_control_result" },
+    "result_id": { "type": "string", "minLength": 1 },
+    "execution_manifest_id": { "type": "string", "minLength": 1 },
+    "negative_control_id": { "type": "string", "minLength": 1 },
+    "false_positive_class": { "type": "string", "minLength": 1 },
+    "possible_reading_count": { "type": "integer", "minimum": 0 },
+    "claimed_reading_uniqueness": { "type": "boolean" },
+    "polarity_orientation_dependent": { "type": "boolean" },
+    "no_fudge_policy": { "const": true },
+    "solve_claim": { "const": false },
+    "cuda_used": { "const": false },
+    "trusted_as_canonical": { "const": false }
+  }
+}

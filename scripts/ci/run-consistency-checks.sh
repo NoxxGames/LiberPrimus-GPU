@@ -35,6 +35,19 @@ echo "Validating Stage 4C visual annotation records"
     --negative data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml \
     --summary data/observations/visual/stage4c-annotation-pack-summary.yaml
 
+echo "Running Stage 4D bounded numeric verifier synthetic/temp output"
+"$python_bin" -m libreprimus.cli bounded-numeric run \
+    --manifest-dir experiments/manifests/stage4b-disabled \
+    --stage4b-visual data/observations/visual/stage4b-visual-observation-records.yaml \
+    --stage4c-tasks data/observations/visual/stage4c-visual-annotation-tasks.yaml \
+    --stage4c-cuneiform data/observations/visual/stage4c-cuneiform-reading-candidates.yaml \
+    --stage4c-dot data/observations/visual/stage4c-dot-pattern-annotation-tasks.yaml \
+    --stage4c-delimiter data/observations/visual/stage4c-delimiter-annotation-tasks.yaml \
+    --stage4c-negative data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml \
+    --out-dir "$tmp_dir/stage4d-bounded-numeric" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-numeric validate --results-dir "$tmp_dir/stage4d-bounded-numeric"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

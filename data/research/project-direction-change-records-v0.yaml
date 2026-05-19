@@ -73,3 +73,12 @@ records:
     source: User Stage 4C direction and Stage 4C annotation policy.
     affected_docs: [docs/roadmap/staged-plan.md, ROADMAP.md, STATUS.md, AGENTS.md, EXPERIMENTS.md, CIPHER_CATALOG.md]
     notes: CPU batch API and scorer consolidation remain planned later, not cancelled.
+  - record_type: project_direction_change_record
+    change_id: stage4d-cookie-refresh-next
+    date_or_stage: stage-4d
+    previous_direction: Stage 4E OutGuess/audio historical fixture source-locking.
+    new_direction: Stage 4E cookie exact-candidate refresh, with OutGuess/audio fixture work and cicada-solvers/iddqd source-lock delta audit kept as later explicit stages.
+    reason: Stage 4D deferred cookie pack v2 by policy; the next bounded source-backed step is to refresh exact cookie candidates without broad hash cracking.
+    source: User Stage 4D direction and Stage 4D no-fudge verifier results.
+    affected_docs: [docs/roadmap/staged-plan.md, ROADMAP.md, STATUS.md, AGENTS.md, EXPERIMENTS.md, CIPHER_CATALOG.md]
+    notes: The cicada-solvers/iddqd repository is noted as a future source-lock/delta-audit candidate only and was not processed in Stage 4D.

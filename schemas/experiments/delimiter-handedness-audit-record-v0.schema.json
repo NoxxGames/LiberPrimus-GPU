@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus.local/schemas/experiments/delimiter-handedness-audit-record-v0.schema.json",
+  "title": "Stage 4D delimiter handedness audit record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "result_id",
+    "execution_manifest_id",
+    "task_id",
+    "delimiter_type",
+    "orientation",
+    "handedness",
+    "reset_boundary_hypothesis",
+    "meaning_inferred",
+    "no_fudge_policy",
+    "solve_claim",
+    "cuda_used",
+    "trusted_as_canonical"
+  ],
+  "properties": {
+    "record_type": { "const": "delimiter_handedness_audit_record" },
+    "result_id": { "type": "string", "minLength": 1 },
+    "execution_manifest_id": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string", "minLength": 1 },
+    "delimiter_type": { "type": "string", "minLength": 1 },
+    "orientation": { "type": "string", "minLength": 1 },
+    "handedness": { "type": "string", "minLength": 1 },
+    "reset_boundary_hypothesis": { "const": false },
+    "meaning_inferred": { "const": false },
+    "no_fudge_policy": { "const": true },
+    "solve_claim": { "const": false },
+    "cuda_used": { "const": false },
+    "trusted_as_canonical": { "const": false }
+  }
+}

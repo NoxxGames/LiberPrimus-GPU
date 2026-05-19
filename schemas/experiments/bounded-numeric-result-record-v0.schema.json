@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus.local/schemas/experiments/bounded-numeric-result-record-v0.schema.json",
+  "title": "Stage 4D bounded numeric result record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "result_id",
+    "execution_manifest_id",
+    "audit_type",
+    "status",
+    "candidate_count",
+    "cap",
+    "raw_values",
+    "derived_values",
+    "no_fudge_policy",
+    "solve_claim",
+    "cuda_used",
+    "trusted_as_canonical"
+  ],
+  "properties": {
+    "record_type": { "const": "bounded_numeric_result_record" },
+    "result_id": { "type": "string", "minLength": 1 },
+    "execution_manifest_id": { "type": "string", "minLength": 1 },
+    "audit_type": { "type": "string", "minLength": 1 },
+    "status": { "type": "string", "minLength": 1 },
+    "candidate_count": { "type": "integer", "minimum": 0 },
+    "cap": { "type": "integer", "minimum": 0, "maximum": 100000 },
+    "raw_values": { "type": ["array", "object", "null"] },
+    "derived_values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "formula", "source", "value"],
+        "properties": {
+          "name": { "type": "string" },
+          "formula": { "type": "string" },
+          "source": { "type": "string" },
+          "value": {}
+        }
+      }
+    },
+    "no_fudge_policy": { "const": true },
+    "solve_claim": { "const": false },
+    "cuda_used": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "generated_outputs_committed": { "const": false }
+  }
+}

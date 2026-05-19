@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 4C - cuneiform and dot annotation pack.
-- Current planning focus: Stage 4D - bounded numeric verifier pack.
+- Latest completed stage: Stage 4D - bounded numeric verifier pack.
+- Current planning focus: Stage 4E - cookie exact-candidate refresh.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -37,22 +37,23 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Stage 4A-followup: hardened the generated static review site with noindex/robots/privacy/upload metadata and documented the GitHub Wiki publish blocker.
 - Stage 4B: promoted high-value public sources into source-lock triage records, added review-only visual/numeric observations, preserved false-positive classes as negative controls, and queued disabled future manifests.
 - Stage 4C: created cuneiform/dot visual annotation schemas, review tasks, generated local annotation-site support, coordinate-template generation, and visual negative-control annotation tasks without interpreting meaning or enabling seeds.
+- Stage 4D: ran bounded numeric and metadata audits with no-fudge rules; GP/rune batch002 skipped because no exact new spans were present, delimiter and dot ambiguity metadata were audited, raw number-square routes skipped because raw values remain pending source-lock, visual negative controls were audited, and cookie/cuneiform packs stayed deferred.
 
 ## Current Stage
 
-Stage 4C converts Stage 4B visual observations into coordinate-review tasks. It creates cuneiform, mirrored delimiter, dot-pattern ambiguity, number-square reference, and visual negative-control annotation tasks, plus an ignored local annotation site and blank templates for human coordinate capture.
+Stage 4D is complete. It converted the Stage 4B disabled numeric backlog into bounded no-fudge audit outputs where inputs were ready, and explicit skipped/deferred records where they were not.
 
-Stage 4C executes no cryptanalytic experiments, infers no visual meaning, performs no OCR/AI/ML, processes no raw Discord logs, and makes no solve claim. Coordinates and readings remain separate: a coordinate annotation can show that a region exists, but it does not establish that the region decodes to a value. Visual observations remain non-canonical and `usable_as_experiment_seed=false`.
+Stage 4D executes no broad number-theory search, no cookie pack, no cuneiform seed pack, no visual meaning inference, no OCR/AI/ML, no raw Discord processing, and no CUDA. Raw and derived values stay separate, every derived value needs a formula/source, and nearest-prime, +/-n, post-hoc row/column arithmetic, route expansion, and fuzzy numeric matching remain prohibited.
 
 ## Planned Next Stages
 
-- Stage 4D - bounded numeric verifier pack.
-- Stage 4E - OutGuess/audio historical fixture source-locking.
-- Stage 4F - CPU batch transform API extraction.
-- Stage 4G - scorer consolidation and calibration report.
+- Stage 4E - cookie exact-candidate refresh.
+- Stage 4F - OutGuess/audio historical fixture source-locking.
+- Stage 4G - CPU batch transform API extraction.
+- Stage 4H - scorer consolidation and calibration report.
 - Stage 5A - CUDA planning and parity scaffolding only.
 
-The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking and visual observation intake ahead of CPU API work. CPU batch API extraction remains planned as Stage 4E; it is deferred, not cancelled.
+The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking, visual observation intake, annotation, and bounded numeric audits ahead of CPU API work. CPU batch API extraction remains planned later; it is deferred, not cancelled.
 
 ## Deferred Work
 
@@ -79,7 +80,11 @@ Stage 4B promotes only allowlisted, high-value public sources from Stage 4A/Deep
 
 Stage 4C adds coordinate-review tasks, ambiguity-preserving cuneiform/dot/delimiter records, local annotation-site support, and blank generated templates. It does not decide whether cuneiform, dot, delimiter, braille, or constellation motifs mean anything.
 
-The next planned stage after Stage 4C is Stage 4D: bounded numeric verifier pack. Stage 4D should use only source-locked, reviewable, bounded numeric claims and must not execute visual-derived seeds unless coordinates and review status explicitly support that future action.
+Stage 4D uses only source-locked, reviewable, bounded numeric claims and explicit metadata audits. It records skipped/deferred states instead of forcing missing evidence: GP/rune batch002 has no exact new claims, Onion7/number-square routes lack locked raw values, cuneiform seed execution lacks accepted annotations, and cookie pack v2 is deferred to the next explicit stage.
+
+The next planned stage after Stage 4D is Stage 4E: cookie exact-candidate refresh. It should revisit only explicit source-backed cookie strings and must not broaden into dictionary-scale hash cracking, fuzzy matching, hashcat, GPU work, or non-SHA-256 expansion without a new scoped direction.
+
+The repository `https://github.com/cicada-solvers/iddqd` is noted as a future source-lock/delta-audit candidate because it may contain LP images, outguessed payload folders, 2014/2016 artefacts, byte strings, keys, transcription, and translation folders. It was not processed in Stage 4D and must be handled only by an explicit future source-lock stage.
 
 ## Retired Or Deprioritised Directions
 
@@ -93,6 +98,7 @@ The next planned stage after Stage 4C is Stage 4D: bounded numeric verifier pack
 - Broad dictionary/hash cracking: deferred and prohibited without explicit scoped evidence.
 - Broad visual pareidolia, unannotated dot/braille/constellation readings, and image-derived cipher seeds: deferred and prohibited until Stage 4C-style annotation records preserve coordinates, ambiguity, controls, and review status.
 - Dot/binary/braille/constellation readings remain not experiment seeds without explicit coordinates, ordering, polarity, ambiguity tables, and later review promotion.
+- No-fudge numeric verifier work must not broaden route/value spaces or apply nearest-prime, +/-n, row/column arithmetic, or post-hoc adjustment.
 - Broad OutGuess/stego/audio scans: deferred and prohibited until source-locked fixtures and expected-output controls exist.
 - CUDA acceleration: deferred until CPU batch APIs, stable scorer definitions, parity tests, and benchmarks exist.
 

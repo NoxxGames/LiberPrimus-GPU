@@ -114,6 +114,17 @@ Local validation includes:
   --summary data/observations/visual/stage4c-annotation-pack-summary.yaml
 ```
 
+## Stage 4D Bounded Numeric Tests
+
+Stage 4D tests cover bounded numeric schemas, no-fudge policy rejection for nearest-prime and arbitrary adjustment operations, deterministic route builders, delimiter metadata audit behavior, cuneiform deferral when coordinates/readout are absent, visual negative-control ambiguity metrics, CLI run/validate behavior on synthetic records, and ignore policy for generated bounded-numeric outputs, raw Discord logs, and raw page images.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli bounded-numeric validate `
+  --results-dir experiments/results/bounded-numeric/stage4d
+```
+
 ## Stage 3O Promotion And Wiki Tests
 
 Stage 3O tests cover Discord promotion redaction, public-safe URL filtering, review-only promotion records, README/tutorial coverage, Wiki source generation, Wiki validation scripts, and ignored raw/generated paths.

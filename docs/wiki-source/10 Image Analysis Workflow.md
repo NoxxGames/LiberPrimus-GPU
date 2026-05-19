@@ -57,6 +57,10 @@ visual negative-control review tasks:
 The generated Stage 4C site and templates are local review aids. They do not infer cuneiform or dot
 meaning and do not make visual observations usable as experiment seeds.
 
+Stage 4D confirms this boundary in the numeric verifier path: cuneiform seed execution remains
+deferred without accepted coordinates/readout, and delimiter/dot outputs are metadata or ambiguity
+audits only.
+
 ## What Not To Commit
 
 Raw images, generated image-analysis JSONL outputs, generated transform images, contact sheets,
@@ -64,6 +68,9 @@ review HTML, and transform JSONL records.
 
 Generated Stage 4C annotation-site pages, copied review images, grid overlays, and blank coordinate
 templates under `experiments/results/visual-annotation/stage4c/` are also generated outputs.
+
+Generated Stage 4D bounded numeric verifier JSON/JSONL outputs under
+`experiments/results/bounded-numeric/stage4d/` are also generated outputs.
 
 ## OutGuess Regression Boundary
 

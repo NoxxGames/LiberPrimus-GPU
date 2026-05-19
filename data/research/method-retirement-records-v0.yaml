@@ -100,3 +100,12 @@ records:
     reopen_conditions: [A later review stage promotes a specific annotated region with exact coordinates, accepted reading, rejected alternatives, confidence, and null controls.]
     prohibited_expansions: [Unannotated cuneiform seed packs, forced dot/binary seeds, braille or constellation seeds, OCR or AI-derived readings, visual meaning inference from generated overlays.]
     notes: Coordinates prove only region location, not cipher meaning.
+  - record_type: method_retirement_record
+    method_family_id: bounded_numeric_verifier_pack
+    retired_status: active_with_constraints
+    reason: Stage 4D numeric verification is allowed only as bounded no-fudge audit work; it must not become broad number-theory fishing.
+    evidence: [Stage 4D records exact-claim skips, raw-value skips, delimiter metadata audits, dot ambiguity audits, and visual negative-control metrics without broadening route spaces.]
+    stages_supporting: [stage-4d]
+    reopen_conditions: [A later stage supplies exact source-locked values or accepted annotation records and a bounded manifest cap.]
+    prohibited_expansions: [Nearest-prime adjustments, arbitrary +/-n tweaks, post-hoc row or column arithmetic, route expansion beyond manifest, fuzzy numeric matching, broad hash or stego work.]
+    notes: No-fudge policy keeps raw and derived values separate and requires formulas/sources for every derived value.

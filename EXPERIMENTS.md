@@ -26,6 +26,22 @@ Coordinate annotations are not experiment seeds. They record where a region may 
 
 Generated Stage 4C annotation-site files, copied review images, grid overlays, and blank templates remain ignored under `experiments/results/visual-annotation/stage4c/`.
 
+## Stage 4D Bounded Numeric Verifier Pack
+
+Stage 4D executes only bounded numeric and metadata audits from the Stage 4B disabled-manifest backlog.
+
+Allowed Stage 4D actions:
+
+- GP/rune batch002 exact-claim verification only when exact new spans exist.
+- Delimiter handedness metadata audit without reset-boundary or cipher-meaning inference.
+- Dot ambiguity audit as a negative-control measurement.
+- Raw number-square route verification only when locked raw values exist.
+- Visual negative-control ambiguity metrics.
+
+Stage 4D explicitly defers cookie pack v2 and cuneiform reading pack v1. Cookie exact-candidate refresh is planned for Stage 4E; cuneiform-derived seeds require accepted annotation before any future bounded execution. Generated Stage 4D result records remain ignored under `experiments/results/bounded-numeric/stage4d/`.
+
+No-fudge rules are mandatory: no nearest-prime adjustments, arbitrary +/-n changes, post-hoc row/column arithmetic, route expansion beyond manifest, fuzzy numeric matching, broad number-theory search, CUDA, or solve claims.
+
 ## Experiment philosophy
 
 Experiments are reproducible tests of hypotheses, not evidence of solves by themselves.

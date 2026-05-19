@@ -2,7 +2,7 @@
 
 ## Current Reviewed State
 
-Stage 3V is complete, Stage 3W and Stage 3X are complete, Stage 3Y is complete, Stage 3Z is complete, Stage 4A is complete, Stage 4B is complete, and Stage 4C is complete. Stage 4D is the next planned bounded numeric verifier pack.
+Stage 3V is complete, Stage 3W and Stage 3X are complete, Stage 3Y is complete, Stage 3Z is complete, Stage 4A is complete, Stage 4B is complete, Stage 4C is complete, and Stage 4D is complete. Stage 4E is the next planned cookie exact-candidate refresh.
 
 The current safety posture is:
 
@@ -79,11 +79,11 @@ Use these Stage 3Z maps for orientation:
 
 ## Deferred Work
 
-Deferred work after Stage 4C:
+Deferred work after Stage 4D:
 
-- Stage 4D: bounded numeric verifier pack.
-- Stage 4E: OutGuess/audio historical fixture source-locking.
-- Stage 4F: CPU batch transform API extraction.
-- Stage 4G: scorer consolidation and calibration report.
+- Stage 4E: cookie exact-candidate refresh.
+- Later: OutGuess/audio historical fixture source-locking.
+- Later: CPU batch transform API extraction.
+- Later: scorer consolidation and calibration report.
 - OutGuess historical fixture acquisition and source-locking.
 - CUDA parity planning after CPU batch APIs and stable scoring contracts exist.

@@ -200,6 +200,17 @@ records:
     solve_claim: false
     notes: Coordinates and readings are separate evidence layers.
   - record_type: method_family_status_record
+    method_family_id: bounded_numeric_verifier_pack
+    name: Bounded numeric verifier pack
+    status: active
+    evidence_summary: Stage 4D runs only source-backed numeric and metadata audits under no-fudge rules, with skips/deferred records when exact spans, raw values, or accepted annotations are missing.
+    completed_stage_refs: [stage-4d]
+    reopen_conditions: [New source-locked exact numeric claims, raw number-square values, or reviewed annotations are available under a bounded manifest cap.]
+    stop_conditions: [Do not broaden route/value spaces, violate no-fudge rules, add nearest-prime or +/-n adjustments, execute cookie packs without an explicit Stage 4E scope, or run cuneiform-derived seeds from unaccepted annotations.]
+    next_action: Stage 4E cookie exact-candidate refresh can revisit only explicit source-backed cookie strings.
+    solve_claim: false
+    notes: Delimiter and dot outputs are audit metadata and negative-control measurements, not plaintext candidates.
+  - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred

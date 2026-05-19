@@ -34,6 +34,7 @@ git check-ignore -v experiments/results/image-transforms/stage3p/contact_sheets/
 git check-ignore -v experiments/results/stego/outguess/stage3v/summary.json
 git check-ignore -v experiments/results/source-lock-triage/stage4b/source_triage_report.json
 git check-ignore -v experiments/results/visual-annotation/stage4c/site/index.html
+git check-ignore -v experiments/results/bounded-numeric/stage4d/summary.json
 ```
 
 If an ignored Stage 3P transform run leaves local images or HTML under `experiments/results/`, do
@@ -77,6 +78,10 @@ If a Stage 4C visual annotation build leaves site pages, copied review images, g
 blank templates under `experiments/results/visual-annotation/stage4c/`, do not stage them. Commit
 only schemas, code, committed YAML task records, docs, tests, and research logs.
 
+If a Stage 4D bounded numeric verifier run leaves `summary.json`, result JSONL, manifest-status JSONL,
+warning JSONL, or negative-control JSONL under `experiments/results/bounded-numeric/stage4d/`, do not
+stage them. Commit only schemas, code, docs, tests, and research logs.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 
@@ -99,8 +104,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 4C, onboarding and staged-plan checks should show Stage 4C complete and Stage 4D
-bounded numeric verifier pack next.
+After Stage 4D, onboarding and staged-plan checks should show Stage 4D complete and Stage 4E
+cookie exact-candidate refresh next.
 
 ## Stage 4A Bundle Or Site Problems
 

@@ -4,18 +4,19 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4C cuneiform and dot annotation pack is complete. It created visual annotation schemas,
-review-task records, cuneiform reading candidates, dot-pattern ambiguity tasks, delimiter tasks,
-visual negative-control annotation tasks, generated local annotation-site support, and blank
-coordinate-template generation without interpreting visual meaning.
+Stage 4D bounded numeric verifier pack is complete. It added no-fudge bounded numeric and metadata
+audits for Stage 4B/4C records, including GP/rune exact-claim skip handling, delimiter metadata
+audits, dot ambiguity audits, raw number-square route skip handling, visual negative-control
+ambiguity metrics, cuneiform deferral, cookie pack deferral, and generated ignored result summaries.
 
-The next planned stage is Stage 4D: bounded numeric verifier pack. CPU batch transform API
-extraction remains planned later; CUDA remains deferred.
+The next planned stage is Stage 4E: cookie exact-candidate refresh. CPU batch transform API
+extraction, OutGuess/audio fixture source-locking, scorer consolidation, and CUDA planning remain
+planned later; CUDA remains deferred.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
 recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
-review into durable records without executing experiments, and Stage 4C made the visual claims
-measurable without promoting them to seeds.
+review into durable records without executing experiments, Stage 4C made the visual claims
+measurable without promoting them to seeds, and Stage 4D ran only bounded no-fudge audit work.
 
 ## Phase 0A - Project bootstrap
 
@@ -293,15 +294,19 @@ Stage 4B triages website/public-source findings and visual observations into sou
 
 Create a bounded review workflow for cuneiform, dot, and motif annotations. Record exact coordinates, ambiguity tables, alternate readings, review status, and negative controls before any cuneiform/dot item can become an experiment seed.
 
-## Stage 4D - OutGuess/audio historical fixture source-locking
+## Stage 4E - Cookie exact-candidate refresh
+
+Refresh only explicit source-backed cookie candidate strings. Do not run broad hash cracking, fuzzy matching, hashcat, GPU work, or non-SHA-256 expansion without a new scoped direction.
+
+## Stage 4F - OutGuess/audio historical fixture source-locking
 
 Acquire or source-lock historical OutGuess/audio fixtures where public and size-bounded. Do not run broad stego or audio scans.
 
-## Stage 4E - CPU batch transform API extraction
+## Stage 4G - CPU batch transform API extraction
 
 Extract stable CPU batch transform-and-score APIs needed before any serious CUDA work. CUDA remains deferred until CPU references, stable scoring contracts, parity tests, and benchmark plans exist.
 
-## Stage 4F - Scorer consolidation and calibration report
+## Stage 4H - Scorer consolidation and calibration report
 
 Consolidate scorer definitions and calibration reports before CPU batch APIs are used for any broader campaigns.
 

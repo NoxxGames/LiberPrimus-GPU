@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus.local/schemas/experiments/bounded-numeric-manifest-v0.schema.json",
+  "title": "Stage 4D bounded numeric manifest",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "manifest_id",
+    "purpose",
+    "candidate_count_upper_bound",
+    "execution_enabled",
+    "cuda_enabled",
+    "no_solve_claim",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "generated_outputs_committed"
+  ],
+  "properties": {
+    "record_type": { "const": "bounded_numeric_manifest" },
+    "manifest_id": { "type": "string", "minLength": 1 },
+    "purpose": { "type": "string", "minLength": 1 },
+    "candidate_count_upper_bound": { "type": "integer", "minimum": 0, "maximum": 100000 },
+    "execution_enabled": { "const": false },
+    "cuda_enabled": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false }
+  }
+}

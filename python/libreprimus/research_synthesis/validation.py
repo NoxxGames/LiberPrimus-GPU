@@ -65,7 +65,13 @@ def validate_research_synthesis(
             errors,
             staged_text,
             ("stage 4d", "bounded numeric verifier"),
-            "staged_plan_stage4d_bounded_numeric_verifier_next",
+            "staged_plan_stage4d_bounded_numeric_verifier",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4e", "cookie exact-candidate refresh"),
+            "staged_plan_stage4e_cookie_exact_candidate_refresh_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -154,6 +160,14 @@ def validate_research_synthesis(
         stop_text = " ".join(str(item).lower() for item in cuneiform_dot.get("stop_conditions", []))
         if "seed" not in stop_text or "unreviewed" not in stop_text:
             errors.append("cuneiform_dot_annotation_pack_missing_seed_guardrail")
+
+    bounded_numeric = _find_method(method_records, "bounded_numeric_verifier_pack")
+    if bounded_numeric is None:
+        errors.append("bounded_numeric_verifier_pack_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in bounded_numeric.get("stop_conditions", []))
+        if "no-fudge" not in stop_text or "broaden" not in stop_text:
+            errors.append("bounded_numeric_verifier_pack_missing_no_fudge_guardrail")
 
     cuda = _find_method(method_records, "cuda_gpu_acceleration")
     if cuda is None or cuda.get("status") != "deferred":

@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4C - cuneiform and dot annotation pack.
+Current completed stage: Stage 4D - bounded numeric verifier pack.
 
-Current work: Stage 4D - bounded numeric verifier pack. Stage 4D should use only source-locked, bounded numeric claims and must not execute visual-derived seeds unless a later review explicitly promotes exact coordinates, accepted readings, alternatives, and controls.
+Current work: Stage 4E - cookie exact-candidate refresh. Stage 4E should revisit only explicit source-backed cookie strings and must not broaden into dictionary-scale hash cracking, fuzzy matching, hashcat, GPU work, or non-SHA-256 expansion without a new scoped direction.
 
 Current project state:
 
@@ -74,6 +74,11 @@ Current project state:
 - Stage 4A generated Discord full-review site, redacted streams, channel shards, topic shards, indexes, copied LP page images, thumbnails, contact sheets, and upload archives are generated outputs and must not be committed.
 - Future Deep Research handoffs should use the Stage 4A redacted bundle/site, not raw Discord logs.
 - Public or semi-public hosting of Stage 4A output must use `redacted_public` mode and should consider noindex headers, private URLs, or basic access controls.
+- Stage 4D bounded numeric verifier outputs are generated and ignored under `experiments/results/bounded-numeric/stage4d/`.
+- Numeric verifier stages must follow the no-fudge policy: keep raw and derived values separate, record formulas/sources for derived values, and reject nearest-prime, arbitrary +/-n, post-hoc row/column arithmetic, route expansion, and fuzzy matching.
+- Cuneiform-derived seeds require accepted coordinate/readout annotations before execution; current cuneiform records remain deferred.
+- Dot and delimiter ambiguity remains noncanonical unless reviewed and explicitly promoted; delimiter audits must not infer reset-boundary meaning.
+- Source-lock delta candidates such as `https://github.com/cicada-solvers/iddqd` must be handled by an explicit future source-lock stage, not opportunistically processed.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
 - Upload only generated `site/` contents, never raw `third_party/` inputs.
 - Wiki publish failures should be recorded with exact errors and manual recovery steps, but research stages should not fail solely because the GitHub Wiki remote is unavailable.

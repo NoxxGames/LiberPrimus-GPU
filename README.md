@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4C cuneiform and dot annotation infrastructure. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4D bounded numeric verifier infrastructure. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -30,6 +30,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Full Discord review bundles: Stage 4A builds redacted chronological streams, channel shards, topic shards, indexes, an LP page gallery, and an SFTP-ready static site under ignored paths for Deep Research handoff. Raw Discord logs, usernames, user IDs, message IDs, private URLs, generated static site files, copied LP page images, thumbnails, archives, and generated bundle outputs are not committed.
 - Source-lock and visual observation intake: Stage 4B promotes allowlisted public-source records only, records source-health metadata, preserves cuneiform/delimiter/dot/number-square/cookie observations as review-only and non-canonical, and stores false-positive classes as negative controls. No Stage 4B visual observation is an experiment seed.
 - Visual annotation: Stage 4C creates cuneiform, delimiter, dot-pattern, number-square-reference, and visual negative-control annotation tasks plus a generated local annotation site and blank coordinate templates. Coordinates and readings are separate; no Stage 4C visual task is verified, canonical, or usable as an experiment seed.
+- Bounded numeric verification: Stage 4D runs only no-fudge numeric and metadata audits. GP/rune batch002 skips without exact new spans, number-square routes skip without locked raw values, delimiter/dot audits infer no meaning, cuneiform seed execution remains deferred, and cookie pack v2 is deferred to a future explicit stage.
 - Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
@@ -39,9 +40,9 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 4D bounded numeric verifier pack.
-- Stage 4E historical OutGuess fixture source-locking and setup documentation when assets become available.
-- Stage 4F CPU batch transform API extraction.
+- Stage 4E cookie exact-candidate refresh.
+- Later historical OutGuess fixture source-locking and setup documentation when assets become available.
+- Later CPU batch transform API extraction.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -90,6 +91,8 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 3Z source-of-truth / newcomer map.
 - Stage 4A full Discord research-bundle extraction and static review site generation.
 - Stage 4B website-derived source-lock triage and visual observation intake.
+- Stage 4C cuneiform and dot annotation pack.
+- Stage 4D bounded numeric verifier pack.
 
 ## Architecture summary
 
@@ -144,6 +147,8 @@ Current status:
 - Stage 3Z: source-of-truth / newcomer map complete.
 - Stage 4A: full Discord research-bundle extraction for Deep Research complete.
 - Stage 4B: website-derived source-lock triage and visual observation intake complete.
+- Stage 4C: cuneiform and dot annotation pack complete.
+- Stage 4D: bounded numeric verifier pack complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -165,8 +170,10 @@ Current status:
 - Latest onboarding stage: Stage 3Z added source-of-truth, Codex navigation, Deep Research handoff, contributor module, task-lane, and private/generated data maps.
 - Latest Deep Research handoff stage: Stage 4A processed `43` local ignored Discord HTML exports into `520009` redacted messages, `1327` channel shards, `12` topic shards, and an ignored SFTP-ready static review site with `58` LP page images included as generated gallery assets. Raw logs, raw images, private URLs, and generated outputs remain uncommitted.
 - Latest source-lock stage: Stage 4B promoted `20` allowlisted public source records, recorded `19` source-health records, added `6` review-only visual observations and `17` negative controls, and queued `7` disabled future manifests. No experiments were executed and no solve claim is made.
+- Latest annotation stage: Stage 4C created `15` visual annotation tasks, including `1` cuneiform task, `1` dot task, `2` delimiter tasks, and `10` visual negative-control tasks. Generated annotation outputs remain ignored and no visual meaning is inferred.
+- Latest bounded numeric stage: Stage 4D discovered `7` manifests, audited `3`, deferred or skipped `4`, verified `0` GP/rune claims because no exact new spans were present, audited `2` delimiter observations and `10` visual negative controls, skipped number-square routes because raw values are not locked, and deferred cuneiform/cookie execution.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 4C cuneiform and dot annotation pack.
+- Next: Stage 4E cookie exact-candidate refresh.
 
 ## How To Use This Repo
 

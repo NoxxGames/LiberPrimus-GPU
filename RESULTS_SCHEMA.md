@@ -16,6 +16,8 @@ Stage 4B records under `data/observations/archive/`, `data/locks/third-party/`, 
 
 Stage 4C records under `data/observations/visual/` are committed annotation task metadata. They must keep `trusted_as_canonical=false`, `usable_as_experiment_seed=false`, and `solve_claim=false`. Generated annotation sites, page-image copies, grid overlays, and blank templates remain ignored.
 
+Stage 4D bounded numeric verifier records are generated JSON/JSONL outputs under `experiments/results/bounded-numeric/stage4d/`. They must keep `solve_claim=false`, `cuda_used=false`, `trusted_as_canonical=false`, `no_fudge_policy=true`, and `generated_outputs_committed=false`. Raw values and derived values must stay separated, and every derived value must record a formula and source.
+
 ## Result record principles
 
 Records must be replayable, reviewable, compact, and explicit about uncertainty.
@@ -154,6 +156,19 @@ Committed schema IDs:
 - `visual-annotation-pack-summary-v0`
 
 Committed records live under `data/observations/visual/`. Generated site files and templates remain ignored under `experiments/results/visual-annotation/stage4c/`.
+
+## Stage 4D Bounded Numeric Verifier Records
+
+Stage 4D adds generated schemas for bounded numeric manifests, bounded numeric result records, numeric negative-control result records, and delimiter handedness audit records.
+
+Committed schema IDs:
+
+- `bounded-numeric-manifest-v0`
+- `bounded-numeric-result-record-v0`
+- `numeric-negative-control-result-v0`
+- `delimiter-handedness-audit-record-v0`
+
+Generated result files remain ignored under `experiments/results/bounded-numeric/stage4d/`.
 
 Committed aggregate summaries live under:
 

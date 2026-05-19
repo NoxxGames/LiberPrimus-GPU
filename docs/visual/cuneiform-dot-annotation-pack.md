@@ -2,6 +2,8 @@
 
 Stage 4C turns Stage 4B visual observations into reviewable annotation tasks. It does not decide what the visual motifs mean.
 
+Stage 4D later checked whether the cuneiform candidate was ready for bounded seed execution. It was not: the candidate still lacks accepted coordinates/readout and remains deferred. Dot and delimiter records were audited only as metadata/ambiguity controls.
+
 Committed records live under `data/observations/visual/`:
 
 - `stage4c-visual-annotation-tasks.yaml`

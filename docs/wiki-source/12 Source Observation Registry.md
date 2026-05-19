@@ -99,6 +99,11 @@ Stage 4C adds annotation task records for the Stage 4B visual subset:
 These records make visual claims reviewable and measurable, but they still keep
 `trusted_as_canonical=false`, `usable_as_experiment_seed=false`, and `solve_claim=false`.
 
+Stage 4D generated bounded numeric audit outputs from these records without promoting them to source
+truth. GP/rune batch002 skipped without exact new spans, number-square routes skipped without
+locked raw values, delimiter/dot audits inferred no meaning, and cuneiform/cookie packs remained
+deferred.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
@@ -119,6 +124,8 @@ Do not commit generated Stage 4B source-lock triage reports, rejected-link lists
 lists, or warnings under `experiments/results/source-lock-triage/stage4b/`.
 Do not commit generated Stage 4C annotation sites, copied review images, grid overlays, or blank
 templates under `experiments/results/visual-annotation/stage4c/`.
+Do not commit generated Stage 4D bounded numeric result JSON/JSONL files under
+`experiments/results/bounded-numeric/stage4d/`.
 
 ## Troubleshooting
 

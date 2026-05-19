@@ -69,6 +69,23 @@ The Stage 3T GP/rune verifier should process exact claims under a cap of `64`. G
 
 The Stage 3U cookie signed-variant pack should process only manifest-declared SHA-256 candidates under a cap of `576`. Generated hash JSONL and summary files stay in `experiments/results/post-discord/stage3u/` and are not solve evidence.
 
+Stage 4D runs only bounded no-fudge numeric and metadata audits from the Stage 4B disabled backlog:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli bounded-numeric run `
+  --manifest-dir experiments/manifests/stage4b-disabled `
+  --stage4b-visual data/observations/visual/stage4b-visual-observation-records.yaml `
+  --stage4c-tasks data/observations/visual/stage4c-visual-annotation-tasks.yaml `
+  --stage4c-cuneiform data/observations/visual/stage4c-cuneiform-reading-candidates.yaml `
+  --stage4c-dot data/observations/visual/stage4c-dot-pattern-annotation-tasks.yaml `
+  --stage4c-delimiter data/observations/visual/stage4c-delimiter-annotation-tasks.yaml `
+  --stage4c-negative data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml `
+  --out-dir experiments/results/bounded-numeric/stage4d `
+  --allow-warnings
+```
+
+Generated Stage 4D result records stay in `experiments/results/bounded-numeric/stage4d/` and are not solve evidence.
+
 ## What Not To Commit
 
 Do not commit generated candidate dumps, top-candidate JSONL, verification JSONL, hash candidate JSONL, exact-match JSONL, summary JSON, SQLite files, or broad-search outputs.
@@ -85,3 +102,5 @@ If a cookie pack finds no exact match, record the negative result and move to a 
 
 If a method family is retired or deprioritised, update the staged plan and method-retirement ledger
 before adding a new manifest.
+
+If a bounded numeric verifier stage lacks exact claims, locked raw values, or accepted annotations, record a skipped/deferred result instead of adding nearest-prime, +/-n, route, or fuzzy matching adjustments.
