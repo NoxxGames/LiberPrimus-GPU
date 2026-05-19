@@ -18,6 +18,14 @@ The Stage 4B disabled manifest backlog lives under `experiments/manifests/stage4
 
 Visual observations from Stage 4B, including cuneiform/base-60 and dot/binary claims, are not experiment seeds. Stage 4C annotation must record coordinates, ambiguity tables, alternate readings, and negative controls before any related experiment can be proposed.
 
+## Stage 4C Visual Annotation Pack
+
+Stage 4C does not execute an experiment. It creates annotation schemas, review-task records, cuneiform/dot/delimiter records, visual negative-control annotation records, and a generated local annotation site.
+
+Coordinate annotations are not experiment seeds. They record where a region may be reviewed. Readings, meanings, polarity, ordering, handedness, and reset-boundary hypotheses require separate review and later explicit promotion. The cuneiform tuple `[17, 13, 55, 1]`, dot values `13` and `31`, braille/constellation motifs, and delimiter handedness remain non-canonical and `usable_as_experiment_seed=false`.
+
+Generated Stage 4C annotation-site files, copied review images, grid overlays, and blank templates remain ignored under `experiments/results/visual-annotation/stage4c/`.
+
 ## Experiment philosophy
 
 Experiments are reproducible tests of hypotheses, not evidence of solves by themselves.

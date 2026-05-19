@@ -1,0 +1,33 @@
+record_set_id: stage4c-cuneiform-reading-candidates
+schema: schemas/visual/cuneiform-reading-candidate-v0.schema.json
+records:
+- record_type: cuneiform_reading_candidate
+  candidate_id: stage4c-cuneiform-candidate-17-13-55-1
+  task_id: stage4c-task-cuneiform-17-13-55-1
+  source_observation_id: stage4b-cuneiform-17-13-55-1
+  page_refs:
+  - pages-33-39-cuneiform-cluster
+  proposed_reading:
+  - 17
+  - 13
+  - 55
+  - 1
+  reading_basis: Carried forward from Stage 4B as a candidate tuple only; visual segmentation
+    and coordinates are not verified.
+  ambiguity_notes: Glyph segmentation is not verified; exact page coordinates and
+    alternative readings are required before seed execution.
+  alternative_readings: []
+  derived_values:
+    pair_17_13_base60: 1033
+    pair_55_1_base60: 3301
+    full_base60: 3722101
+    full_base60_mod29: 9
+    1033_mod29: 18
+    3301_mod29: 24
+  annotation_status: needs_human_coordinates
+  review_status: human_review_required
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: The arithmetic is review metadata only until the glyph reading is accepted.

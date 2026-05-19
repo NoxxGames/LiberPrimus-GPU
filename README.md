@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4B source-lock triage and visual observation intake. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4C cuneiform and dot annotation infrastructure. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -29,6 +29,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Discord source discovery: Stage 3N scans admin-provided local HTML exports only and commits aggregate/redacted records only. Stage 3O promotes a bounded, public-safe subset of redacted source-discovery records. Stage 3Q builds ignored redacted topic shards for local AI/deep-research review. Stage 3R audits those leads, promotes only corroborated public/source-observation records, preserves false positives as negative controls, and queues disabled post-Discord manifests. Raw logs, message bodies, usernames, and private attachment URLs are not committed.
 - Full Discord review bundles: Stage 4A builds redacted chronological streams, channel shards, topic shards, indexes, an LP page gallery, and an SFTP-ready static site under ignored paths for Deep Research handoff. Raw Discord logs, usernames, user IDs, message IDs, private URLs, generated static site files, copied LP page images, thumbnails, archives, and generated bundle outputs are not committed.
 - Source-lock and visual observation intake: Stage 4B promotes allowlisted public-source records only, records source-health metadata, preserves cuneiform/delimiter/dot/number-square/cookie observations as review-only and non-canonical, and stores false-positive classes as negative controls. No Stage 4B visual observation is an experiment seed.
+- Visual annotation: Stage 4C creates cuneiform, delimiter, dot-pattern, number-square-reference, and visual negative-control annotation tasks plus a generated local annotation site and blank coordinate templates. Coordinates and readings are separate; no Stage 4C visual task is verified, canonical, or usable as an experiment seed.
 - Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
@@ -38,9 +39,9 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 4C cuneiform and dot annotation pack.
-- Stage 4E CPU batch transform API extraction.
-- Historical OutGuess fixture source-locking and setup documentation when assets become available.
+- Stage 4D bounded numeric verifier pack.
+- Stage 4E historical OutGuess fixture source-locking and setup documentation when assets become available.
+- Stage 4F CPU batch transform API extraction.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.

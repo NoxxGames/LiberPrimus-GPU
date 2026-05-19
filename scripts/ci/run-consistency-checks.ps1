@@ -27,6 +27,15 @@ try {
         --cookie-source-records data/observations/web/stage4b-cookie-candidate-source-records.yaml `
         --manifest-dir experiments/manifests/stage4b-disabled
 
+    Write-Host "Validating Stage 4C visual annotation records"
+    & $Python -m libreprimus.cli visual-annotation validate `
+        --task data/observations/visual/stage4c-visual-annotation-tasks.yaml `
+        --cuneiform data/observations/visual/stage4c-cuneiform-reading-candidates.yaml `
+        --dot data/observations/visual/stage4c-dot-pattern-annotation-tasks.yaml `
+        --delimiter data/observations/visual/stage4c-delimiter-annotation-tasks.yaml `
+        --negative data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml `
+        --summary data/observations/visual/stage4c-annotation-pack-summary.yaml
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

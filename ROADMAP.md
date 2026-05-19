@@ -4,17 +4,18 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4B website-derived source-lock triage and visual observation intake is complete. It promoted
-allowlisted public sources, recorded source-health metadata, preserved review-only cuneiform/dot/
-number-square/cookie observations, added negative controls, and queued disabled future manifests
-using Stage 4A bundle outputs and the Stage 4A Deep Research review.
+Stage 4C cuneiform and dot annotation pack is complete. It created visual annotation schemas,
+review-task records, cuneiform reading candidates, dot-pattern ambiguity tasks, delimiter tasks,
+visual negative-control annotation tasks, generated local annotation-site support, and blank
+coordinate-template generation without interpreting visual meaning.
 
-The next planned stage is Stage 4C: cuneiform and dot annotation pack. CPU batch transform API
+The next planned stage is Stage 4D: bounded numeric verifier pack. CPU batch transform API
 extraction remains planned later; CUDA remains deferred.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
-recorded the remaining GitHub Wiki publish blocker. Stage 4B has now ingested the Stage 4A Deep
-Research review into durable records without executing experiments.
+recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
+review into durable records without executing experiments, and Stage 4C made the visual claims
+measurable without promoting them to seeds.
 
 ## Phase 0A - Project bootstrap
 

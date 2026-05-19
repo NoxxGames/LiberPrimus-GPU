@@ -64,3 +64,12 @@ records:
     source: Stage 4A Discord Research-Bundle Review and user Stage 4B direction.
     affected_docs: [docs/roadmap/staged-plan.md, ROADMAP.md, STATUS.md, AGENTS.md, EXPERIMENTS.md, CIPHER_CATALOG.md]
     notes: CPU batch API remains planned for Stage 4E; broad search, hash, stego, and visual pareidolia expansions remain deferred or prohibited.
+  - record_type: project_direction_change_record
+    change_id: stage4c-bounded-numeric-verifier-next
+    date_or_stage: stage-4c
+    previous_direction: Stage 4D OutGuess/audio historical fixture source-locking.
+    new_direction: Stage 4D bounded numeric verifier pack, with OutGuess/audio fixture source-locking deferred to later Stage 4E or equivalent.
+    reason: Stage 4B and Stage 4C created source-locked numeric and visual-review records; the next safe step is bounded verification of numeric claims while visual-derived seeds remain disabled.
+    source: User Stage 4C direction and Stage 4C annotation policy.
+    affected_docs: [docs/roadmap/staged-plan.md, ROADMAP.md, STATUS.md, AGENTS.md, EXPERIMENTS.md, CIPHER_CATALOG.md]
+    notes: CPU batch API and scorer consolidation remain planned later, not cancelled.

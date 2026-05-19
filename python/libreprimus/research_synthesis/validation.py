@@ -59,7 +59,13 @@ def validate_research_synthesis(
             errors,
             staged_text,
             ("stage 4c", "cuneiform", "dot"),
-            "staged_plan_stage4c_cuneiform_dot_next",
+            "staged_plan_stage4c_cuneiform_dot",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4d", "bounded numeric verifier"),
+            "staged_plan_stage4d_bounded_numeric_verifier_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -140,6 +146,14 @@ def validate_research_synthesis(
     influence_records = records_by_key.get("deep_research_influences", [])
     if _find_record(influence_records, "report_id", "stage4a-discord-research-bundle-review") is None:
         errors.append("stage4a_discord_research_bundle_review_influence_missing")
+
+    cuneiform_dot = _find_method(method_records, "cuneiform_dot_annotation_pack")
+    if cuneiform_dot is None:
+        errors.append("cuneiform_dot_annotation_pack_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in cuneiform_dot.get("stop_conditions", []))
+        if "seed" not in stop_text or "unreviewed" not in stop_text:
+            errors.append("cuneiform_dot_annotation_pack_missing_seed_guardrail")
 
     cuda = _find_method(method_records, "cuda_gpu_acceleration")
     if cuda is None or cuda.get("status") != "deferred":

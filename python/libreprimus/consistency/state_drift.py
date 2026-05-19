@@ -213,9 +213,20 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4c_cuneiform_dot_next",
-        "stage 4c" in staged_plan and "cuneiform" in staged_plan and "dot" in staged_plan,
-        "Staged plan records Stage 4C cuneiform/dot annotation as the next review stage.",
+        "stage4c_cuneiform_dot_current_or_complete",
+        "stage 4c" in staged_plan
+        and "cuneiform" in staged_plan
+        and "dot" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4C cuneiform/dot annotation as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4d_bounded_numeric_verifier_next",
+        "stage 4d" in staged_plan
+        and "bounded numeric verifier" in staged_plan,
+        "Staged plan records Stage 4D bounded numeric verifier pack as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

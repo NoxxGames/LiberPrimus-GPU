@@ -95,6 +95,14 @@ experiments/results/**
 !experiments/results/source-lock-triage/.gitkeep
 !experiments/results/source-lock-triage/stage4b/
 !experiments/results/source-lock-triage/stage4b/.gitkeep
+
+# Generated visual annotation packs/sites
+experiments/results/visual-annotation/**
+!experiments/results/visual-annotation/
+!experiments/results/visual-annotation/README.md
+!experiments/results/visual-annotation/.gitkeep
+!experiments/results/visual-annotation/stage4c/
+!experiments/results/visual-annotation/stage4c/.gitkeep
 experiments/reports/**
 !experiments/reports/
 !experiments/reports/README.md

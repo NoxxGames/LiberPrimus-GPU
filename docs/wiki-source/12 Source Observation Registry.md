@@ -87,6 +87,18 @@ observations, cookie source candidates, and negative controls:
 These records preserve ambiguity and stop conditions. Visual records remain
 `usable_as_experiment_seed=false`.
 
+Stage 4C adds annotation task records for the Stage 4B visual subset:
+
+- `data/observations/visual/stage4c-visual-annotation-tasks.yaml`
+- `data/observations/visual/stage4c-cuneiform-reading-candidates.yaml`
+- `data/observations/visual/stage4c-dot-pattern-annotation-tasks.yaml`
+- `data/observations/visual/stage4c-delimiter-annotation-tasks.yaml`
+- `data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml`
+- `data/observations/visual/stage4c-annotation-pack-summary.yaml`
+
+These records make visual claims reviewable and measurable, but they still keep
+`trusted_as_canonical=false`, `usable_as_experiment_seed=false`, and `solve_claim=false`.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
@@ -105,6 +117,8 @@ Do not commit generated Stage 4A redacted streams, channel shards, topic shards,
 site files, copied LP page images, thumbnails, contact sheets, or upload archives.
 Do not commit generated Stage 4B source-lock triage reports, rejected-link lists, duplicate-link
 lists, or warnings under `experiments/results/source-lock-triage/stage4b/`.
+Do not commit generated Stage 4C annotation sites, copied review images, grid overlays, or blank
+templates under `experiments/results/visual-annotation/stage4c/`.
 
 ## Troubleshooting
 
@@ -126,5 +140,6 @@ verify source provenance before any interpretation.
 If a Stage 3V extraction produces bytes, interpret it only when an expected payload hash exists and
 matches. Otherwise keep it as an ignored reference extraction record.
 
-If a Stage 4B visual observation looks promising, add coordinates and alternate readings in Stage 4C
+If a Stage 4C annotation task looks promising, keep coordinates, accepted readings, rejected
+readings, confidence, and review status separate. A later explicit promotion stage is required
 before any manifest treats it as a seed.

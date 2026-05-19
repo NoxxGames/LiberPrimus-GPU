@@ -25,6 +25,6 @@ Every Stage 4B visual observation remains:
 
 The cuneiform arithmetic may be internally consistent, but the visual segmentation is not verified. Dot, braille, constellation, and star interpretations require exact coordinates and ambiguity tables before they can become bounded experiment inputs.
 
-## Next Step
+## Stage 4C Follow-Up
 
-Stage 4C should create a cuneiform and dot annotation pack with coordinates, alternate readings, review status, and negative controls.
+Stage 4C created a cuneiform and dot annotation pack with review-task records, coordinate-template generation, a generated local annotation site, and visual negative-control annotation tasks. It did not fill coordinates, interpret meanings, verify readings, or promote any visual observation to an experiment seed.

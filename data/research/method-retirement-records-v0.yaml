@@ -70,7 +70,7 @@ records:
     reason: CUDA is intentionally delayed until CPU batch APIs, scorer consolidation, parity tests, and benchmarks exist.
     evidence: [Project policy and Stage 3W anti-drift state keep CUDA deferred.]
     stages_supporting: [stage-3w]
-    reopen_conditions: [Stage 4A CPU batch API and Stage 4B scorer consolidation are complete.]
+    reopen_conditions: [Stage 4F CPU batch API and Stage 4G scorer consolidation are complete.]
     prohibited_expansions: [GPU kernels without CPU reference, parity tests, and benchmark plan.]
     notes: Stage 5A is planning and parity scaffolding only.
   - record_type: method_retirement_record
@@ -91,3 +91,12 @@ records:
     reopen_conditions: [New public-source class or exact observation has a bounded validation path and documented privacy review.]
     prohibited_expansions: [Blind archive mirroring, private Discord or CDN link promotion, broad literature-key fishing, broad hash cracking, broad stego scans.]
     notes: Stage 4B is durable triage state, not a solve or experiment stage.
+  - record_type: method_retirement_record
+    method_family_id: cuneiform_dot_annotation_pack
+    retired_status: active_with_constraints
+    reason: Stage 4C creates review infrastructure, but visual readings remain unsafe as experiment seeds until exact coordinates, ordering, polarity, ambiguity, and human review are recorded.
+    evidence: [Stage 4C annotation tasks keep cuneiform, dot, delimiter, braille, constellation, and negative-control motifs non-canonical and usable_as_experiment_seed=false.]
+    stages_supporting: [stage-4c]
+    reopen_conditions: [A later review stage promotes a specific annotated region with exact coordinates, accepted reading, rejected alternatives, confidence, and null controls.]
+    prohibited_expansions: [Unannotated cuneiform seed packs, forced dot/binary seeds, braille or constellation seeds, OCR or AI-derived readings, visual meaning inference from generated overlays.]
+    notes: Coordinates prove only region location, not cipher meaning.

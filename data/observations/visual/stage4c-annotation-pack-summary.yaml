@@ -1,0 +1,17 @@
+record_type: visual_annotation_pack_summary
+summary_id: stage4c-visual-annotation-pack-summary
+stage: stage-4c
+task_count: 15
+cuneiform_task_count: 1
+dot_task_count: 1
+delimiter_task_count: 2
+negative_control_task_count: 10
+unresolved_page_reference_count: 1
+generated_site_path: experiments/results/visual-annotation/stage4c/site/index.html
+generated_template_count: 15
+trusted_as_canonical: false
+usable_as_experiment_seed: false
+solve_claim: false
+raw_outputs_committed: false
+generated_outputs_committed: false
+notes: Stage 4C creates review tasks and generated local annotation workspace only.

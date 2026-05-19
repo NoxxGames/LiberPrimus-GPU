@@ -14,6 +14,7 @@
 - `experiments/results/discord-full-review/stage4a/`: generated Stage 4A full Discord review bundle, redacted streams, channel shards, topic shards, indexes, LP page gallery copies/thumbnails, static site, and optional upload archive.
 - `experiments/results/discord-full-review/stage4a/site/`: generated SFTP-ready static review site, including noindex metadata, `robots.txt`, privacy notice, upload checklist, manifests, copied LP page images, and thumbnails.
 - `experiments/results/source-lock-triage/stage4b/`: generated Stage 4B source-lock triage diagnostics, rejected-link lists, duplicate-link lists, warnings, and summaries.
+- `experiments/results/visual-annotation/stage4c/`: generated Stage 4C visual annotation workspace, local static site, page-image review copies, coordinate-grid overlays, blank templates, and annotation manifest.
 - `data/normalized/`: generated normalized candidate outputs unless a stage explicitly commits a placeholder or curated source.
 - SQLite outputs: `*.sqlite`, `*.sqlite3`, and `*.db` are generated and must not be committed.
 
@@ -36,5 +37,6 @@
 - Generated extraction payloads.
 - Generated Stage 4A static sites, redacted message streams, channel shards, topic shards, copied LP page images, thumbnails, contact sheets, and upload archives.
 - Generated Stage 4B source-lock triage diagnostics under `experiments/results/source-lock-triage/stage4b/`.
+- Generated Stage 4C annotation-site files, copied review images, grid overlays, and blank/fillable annotation templates under `experiments/results/visual-annotation/stage4c/`.
 - SQLite databases.
 - Root Deep Research report copies or `deep-research-reports/**`.

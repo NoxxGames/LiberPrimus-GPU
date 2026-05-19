@@ -1,0 +1,41 @@
+record_set_id: stage4c-delimiter-annotation-tasks
+schema: schemas/visual/delimiter-annotation-v0.schema.json
+records:
+- record_type: delimiter_annotation
+  task_id: stage4c-task-stage4b-delimiter-three-dot-page5
+  source_observation_id: stage4b-delimiter-three-dot-page5
+  page_refs:
+  - page-5
+  delimiter_type: mirrored_three_dot_variant
+  orientation: unknown_pending_annotation
+  handedness: unknown_pending_annotation
+  location_reference: page-5
+  reset_boundary_hypothesis: false
+  ambiguity_notes: Needs exact coordinates and a complete delimiter inventory across
+    locked page images.
+  annotation_status: needs_human_coordinates
+  review_status: human_review_required
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Delimiter location task only; reset-boundary hypotheses remain disabled.
+- record_type: delimiter_annotation
+  task_id: stage4c-task-stage4b-delimiter-three-dot-page56
+  source_observation_id: stage4b-delimiter-three-dot-page56
+  page_refs:
+  - page-56
+  delimiter_type: mirrored_three_dot_variant
+  orientation: unknown_pending_annotation
+  handedness: unknown_pending_annotation
+  location_reference: page-56
+  reset_boundary_hypothesis: false
+  ambiguity_notes: Needs exact coordinates and review before any handedness/reset
+    hypothesis is tested.
+  annotation_status: needs_human_coordinates
+  review_status: human_review_required
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Delimiter location task only; reset-boundary hypotheses remain disabled.

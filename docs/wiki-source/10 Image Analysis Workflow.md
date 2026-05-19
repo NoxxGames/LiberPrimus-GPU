@@ -40,10 +40,30 @@ a global contact sheet, per-image review pages, and:
 experiments/results/image-transforms/stage3p/review_index.html
 ```
 
+Stage 4C adds a separate visual-annotation workflow for cuneiform, delimiter, dot-pattern, and
+visual negative-control review tasks:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli visual-annotation build `
+  --visual-observations data/observations/visual/stage4b-visual-observation-records.yaml `
+  --negative-controls data/observations/research/stage4b-negative-control-records.yaml `
+  --image-artifacts data/observations/visual/liber-primus-page-image-artifacts-v0.jsonl `
+  --image-locks data/locks/third-party/liber-primus-pages/liber-primus-page-image-locks-v0.jsonl `
+  --image-dir third_party/LiberPrimusPages `
+  --out-dir experiments/results/visual-annotation/stage4c `
+  --allow-warnings
+```
+
+The generated Stage 4C site and templates are local review aids. They do not infer cuneiform or dot
+meaning and do not make visual observations usable as experiment seeds.
+
 ## What Not To Commit
 
 Raw images, generated image-analysis JSONL outputs, generated transform images, contact sheets,
 review HTML, and transform JSONL records.
+
+Generated Stage 4C annotation-site pages, copied review images, grid overlays, and blank coordinate
+templates under `experiments/results/visual-annotation/stage4c/` are also generated outputs.
 
 ## OutGuess Regression Boundary
 

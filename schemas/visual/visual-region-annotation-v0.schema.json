@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/visual-region-annotation-v0.schema.json",
+  "title": "Visual Region Annotation v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "annotation_id",
+    "task_id",
+    "image_ref",
+    "coordinate_system",
+    "region",
+    "annotator_notes",
+    "confidence",
+    "review_status",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "visual_region_annotation" },
+    "annotation_id": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string", "minLength": 1 },
+    "image_ref": { "type": "string" },
+    "coordinate_system": {
+      "enum": ["pixel_absolute", "normalized_0_1", "unknown_pending_annotation"]
+    },
+    "region": {
+      "type": "object",
+      "required": ["x_min", "y_min", "x_max", "y_max"],
+      "properties": {
+        "x_min": { "type": ["number", "null"] },
+        "y_min": { "type": ["number", "null"] },
+        "x_max": { "type": ["number", "null"] },
+        "y_max": { "type": ["number", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "annotator_notes": { "type": "string" },
+    "accepted_reading": {},
+    "rejected_readings": { "type": "array" },
+    "confidence": { "enum": ["unknown", "low", "medium", "high"] },
+    "review_status": { "type": "string", "minLength": 1 },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": false
+}

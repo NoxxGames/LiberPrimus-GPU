@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/visual-annotation-task-v0.schema.json",
+  "title": "Visual Annotation Task v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "task_id",
+    "task_family",
+    "source_observation_id",
+    "source_refs",
+    "page_refs",
+    "image_refs",
+    "page_reference_status",
+    "annotation_status",
+    "review_status",
+    "coordinate_system",
+    "instructions",
+    "ambiguity_notes",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed",
+    "solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "visual_annotation_task" },
+    "task_id": { "type": "string", "minLength": 1 },
+    "task_family": {
+      "enum": [
+        "cuneiform_base60",
+        "mirrored_three_dot_delimiter",
+        "dot_pattern_ambiguity",
+        "visual_negative_control",
+        "number_square_reference",
+        "cookie_artifact_reference",
+        "unresolved_visual_reference"
+      ]
+    },
+    "source_observation_id": { "type": "string", "minLength": 1 },
+    "source_refs": { "type": "array", "items": { "type": "string" } },
+    "page_refs": { "type": "array", "items": { "type": "string" } },
+    "image_refs": { "type": "array", "items": { "type": "string" } },
+    "page_reference_status": {
+      "enum": ["resolved", "broad_page_reference", "unresolved", "not_applicable"]
+    },
+    "annotation_status": {
+      "enum": [
+        "pending",
+        "needs_human_coordinates",
+        "human_review_required",
+        "annotated",
+        "rejected",
+        "superseded"
+      ]
+    },
+    "review_status": { "type": "string", "minLength": 1 },
+    "coordinate_system": {
+      "enum": ["pixel_absolute", "normalized_0_1", "unknown_pending_annotation"]
+    },
+    "instructions": { "type": "string", "minLength": 1 },
+    "candidate_summary": { "type": "string" },
+    "ambiguity_notes": { "type": "string" },
+    "template_relative_path": { "type": "string" },
+    "site_page_relative_path": { "type": "string" },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "solve_claim": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

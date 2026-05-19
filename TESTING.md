@@ -98,6 +98,22 @@ Local validation includes:
   --manifest-dir experiments/manifests/stage4b-disabled
 ```
 
+## Stage 4C Visual Annotation Tests
+
+Stage 4C tests cover visual annotation schemas, cuneiform candidate guardrails, dot-pattern ambiguity, delimiter reset-boundary blocking, visual negative-control tasks, generated static annotation-site pages, blank template generation, CLI build/validate behavior on synthetic records/images, and ignore policy for generated annotation outputs, raw page images, and raw Discord logs.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli visual-annotation validate `
+  --task data/observations/visual/stage4c-visual-annotation-tasks.yaml `
+  --cuneiform data/observations/visual/stage4c-cuneiform-reading-candidates.yaml `
+  --dot data/observations/visual/stage4c-dot-pattern-annotation-tasks.yaml `
+  --delimiter data/observations/visual/stage4c-delimiter-annotation-tasks.yaml `
+  --negative data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml `
+  --summary data/observations/visual/stage4c-annotation-pack-summary.yaml
+```
+
 ## Stage 3O Promotion And Wiki Tests
 
 Stage 3O tests cover Discord promotion redaction, public-safe URL filtering, review-only promotion records, README/tutorial coverage, Wiki source generation, Wiki validation scripts, and ignored raw/generated paths.

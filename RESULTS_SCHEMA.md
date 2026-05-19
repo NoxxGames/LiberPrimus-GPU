@@ -14,6 +14,8 @@ Stage 3Y research-synthesis records under `data/research/` are committed source-
 
 Stage 4B records under `data/observations/archive/`, `data/locks/third-party/`, `data/observations/visual/`, `data/observations/research/`, and `data/observations/web/` are committed source/observation metadata. They must keep `trusted_as_canonical=false` and `solve_claim=false`; visual records must also keep `usable_as_experiment_seed=false`. Stage 4B disabled manifests must keep `execution_enabled=false`, `cuda_enabled=false`, and `no_solve_claim=true`.
 
+Stage 4C records under `data/observations/visual/` are committed annotation task metadata. They must keep `trusted_as_canonical=false`, `usable_as_experiment_seed=false`, and `solve_claim=false`. Generated annotation sites, page-image copies, grid overlays, and blank templates remain ignored.
+
 ## Result record principles
 
 Records must be replayable, reviewable, compact, and explicit about uncertainty.
@@ -136,6 +138,22 @@ Committed schema IDs:
 Generated triage diagnostics remain ignored under `experiments/results/source-lock-triage/stage4b/`.
 - `lp-page-gallery-record-v0`
 - `discord-image-reference-v0`
+
+## Stage 4C Visual Annotation Records
+
+Stage 4C adds schemas for visual annotation tasks, region annotation templates, cuneiform reading candidates, dot-pattern ambiguity tasks, delimiter tasks, visual negative-control annotation tasks, and the annotation pack summary.
+
+Committed schema IDs:
+
+- `visual-annotation-task-v0`
+- `visual-region-annotation-v0`
+- `cuneiform-reading-candidate-v0`
+- `dot-pattern-annotation-v0`
+- `delimiter-annotation-v0`
+- `visual-negative-control-annotation-v0`
+- `visual-annotation-pack-summary-v0`
+
+Committed records live under `data/observations/visual/`. Generated site files and templates remain ignored under `experiments/results/visual-annotation/stage4c/`.
 
 Committed aggregate summaries live under:
 

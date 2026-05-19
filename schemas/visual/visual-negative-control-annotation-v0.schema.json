@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/visual/visual-negative-control-annotation-v0.schema.json",
+  "title": "Visual Negative Control Annotation v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "task_id",
+    "source_negative_control_id",
+    "false_positive_class",
+    "why_dangerous",
+    "required_null_control",
+    "annotation_status",
+    "review_status",
+    "coordinate_system",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed",
+    "solve_claim",
+    "notes"
+  ],
+  "properties": {
+    "record_type": { "const": "visual_negative_control_annotation" },
+    "task_id": { "type": "string", "minLength": 1 },
+    "source_negative_control_id": { "type": "string", "minLength": 1 },
+    "false_positive_class": { "type": "string", "minLength": 1 },
+    "why_dangerous": { "type": "string", "minLength": 1 },
+    "required_null_control": { "type": "string", "minLength": 1 },
+    "annotation_status": {
+      "enum": [
+        "pending",
+        "needs_human_coordinates",
+        "human_review_required",
+        "annotated",
+        "rejected",
+        "superseded"
+      ]
+    },
+    "review_status": { "type": "string", "minLength": 1 },
+    "coordinate_system": {
+      "enum": ["pixel_absolute", "normalized_0_1", "unknown_pending_annotation"]
+    },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "solve_claim": { "const": false },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

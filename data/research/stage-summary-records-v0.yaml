@@ -263,3 +263,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: No experiments were executed; observations remain review-only and non-canonical.
+  - record_type: stage_summary_record
+    stage_id: stage-4c
+    title: Cuneiform and dot annotation pack
+    status: complete
+    category: visual_review
+    summary: Created schemas, review-task records, generated local annotation-site support, coordinate-template generation, and validation for cuneiform, delimiter, dot-pattern, and visual negative-control annotation work.
+    key_outputs:
+      - Visual annotation task schemas and committed review-task records.
+      - Cuneiform, dot-pattern, delimiter, and visual negative-control annotation records.
+      - Ignored local annotation site and blank coordinate templates.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: No coordinates or meanings were invented; visual observations remain non-canonical and unusable as experiment seeds.

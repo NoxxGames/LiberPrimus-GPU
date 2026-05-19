@@ -1,0 +1,39 @@
+record_set_id: stage4c-dot-pattern-annotation-tasks
+schema: schemas/visual/dot-pattern-annotation-v0.schema.json
+records:
+- record_type: dot_pattern_annotation
+  task_id: stage4c-task-dot-binary-13-31-ambiguity
+  source_observation_id: stage4b-dot-binary-13-31-ambiguity
+  page_refs:
+  - page-39
+  - five-dot-motif
+  - three-dot-motif
+  dot_count: null
+  filled_count: null
+  hollow_count: null
+  ordering_policy: unknown_pending_annotation
+  polarity_policy: unknown_pending_annotation
+  possible_readings:
+  - '11'
+  - '13'
+  - '14'
+  - '19'
+  - '21'
+  - '22'
+  - '25'
+  - '26'
+  - '28'
+  - '31'
+  - '7'
+  claimed_readings:
+  - '13'
+  - '31'
+  ambiguity_notes: 'Ambiguous and unforced: bit order, polarity, anchor, grouping,
+    and rotation change the values.'
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: 13/31 remains ambiguous and unforced until coordinates and ordering are explicit.

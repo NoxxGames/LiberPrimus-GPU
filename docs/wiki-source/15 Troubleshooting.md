@@ -33,6 +33,7 @@ git check-ignore -v experiments/results/image-transforms/stage3p/review_index.ht
 git check-ignore -v experiments/results/image-transforms/stage3p/contact_sheets/example.jpg
 git check-ignore -v experiments/results/stego/outguess/stage3v/summary.json
 git check-ignore -v experiments/results/source-lock-triage/stage4b/source_triage_report.json
+git check-ignore -v experiments/results/visual-annotation/stage4c/site/index.html
 ```
 
 If an ignored Stage 3P transform run leaves local images or HTML under `experiments/results/`, do
@@ -72,6 +73,10 @@ files under `experiments/results/source-lock-triage/stage4b/`, do not stage them
 curated YAML source/observation/negative-control records, disabled manifests, code, schemas, docs,
 tests, and research logs.
 
+If a Stage 4C visual annotation build leaves site pages, copied review images, grid overlays, or
+blank templates under `experiments/results/visual-annotation/stage4c/`, do not stage them. Commit
+only schemas, code, committed YAML task records, docs, tests, and research logs.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 
@@ -94,8 +99,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 4B, onboarding and staged-plan checks should show Stage 4B complete and Stage 4C
-cuneiform/dot annotation next.
+After Stage 4C, onboarding and staged-plan checks should show Stage 4C complete and Stage 4D
+bounded numeric verifier pack next.
 
 ## Stage 4A Bundle Or Site Problems
 
@@ -151,6 +156,23 @@ Run:
 Failures usually mean a record is missing `trusted_as_canonical=false`, a visual observation is
 marked usable as an experiment seed, a disabled manifest accidentally allows execution, or an
 unsafe/private URL was promoted.
+
+## Stage 4C Visual Annotation Validation Fails
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli visual-annotation validate `
+  --task data/observations/visual/stage4c-visual-annotation-tasks.yaml `
+  --cuneiform data/observations/visual/stage4c-cuneiform-reading-candidates.yaml `
+  --dot data/observations/visual/stage4c-dot-pattern-annotation-tasks.yaml `
+  --delimiter data/observations/visual/stage4c-delimiter-annotation-tasks.yaml `
+  --negative data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml `
+  --summary data/observations/visual/stage4c-annotation-pack-summary.yaml
+```
+
+Failures usually mean a task invented coordinates, marked a reading verified, enabled a reset-boundary
+hypothesis, omitted required negative controls, or set `usable_as_experiment_seed=true`.
 
 ## CLI Command Missing After Refactor
 

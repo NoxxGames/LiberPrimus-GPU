@@ -185,9 +185,20 @@ records:
     completed_stage_refs: [stage-4b]
     reopen_conditions: [New redacted Deep Research review or source index item maps to an allowlisted public source class or exact observation record.]
     stop_conditions: [Do not mirror noisy link indexes blindly, promote unsafe/private links, or convert unannotated visual observations into experiment seeds.]
-    next_action: Stage 4C cuneiform and dot annotation pack.
+    next_action: Stage 4C annotation records complete; use them as review infrastructure before any bounded numeric verifier work.
     solve_claim: false
     notes: This branch is active for source locks and observation review, not cryptanalytic execution.
+  - record_type: method_family_status_record
+    method_family_id: cuneiform_dot_annotation_pack
+    name: Cuneiform and dot annotation pack
+    status: infrastructure_only
+    evidence_summary: Stage 4C turns cuneiform/base-60, mirrored delimiter, dot ambiguity, and visual negative-control leads into coordinate-review tasks without deciding meaning.
+    completed_stage_refs: [stage-4c]
+    reopen_conditions: [Human annotations supply exact coordinates, ambiguity tables, source refs, and review status for a bounded follow-up.]
+    stop_conditions: [Do not infer cuneiform meanings, force dot 13/31 readings, promote braille or constellation motifs, or execute image-derived seeds from unreviewed tasks.]
+    next_action: Stage 4D bounded numeric verifier pack can use only source-locked, reviewable numeric claims and must keep visual-derived seeds disabled unless later promoted.
+    solve_claim: false
+    notes: Coordinates and readings are separate evidence layers.
   - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration

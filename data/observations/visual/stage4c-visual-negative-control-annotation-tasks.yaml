@@ -1,0 +1,136 @@
+record_set_id: stage4c-visual-negative-control-annotation-tasks
+schema: schemas/visual/visual-negative-control-annotation-v0.schema.json
+records:
+- record_type: visual_negative_control_annotation
+  task_id: stage4c-negative-braille-dot-readings
+  source_negative_control_id: stage4b-negative-braille_dot_readings
+  false_positive_class: braille_dot_readings
+  why_dangerous: Too many plausible readings can be imposed on sparse dot motifs.
+  required_null_control: Use as visual pareidolia negative controls before any dot
+    scoring.
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control task preserved for later visual review and null controls.
+- record_type: visual_negative_control_annotation
+  task_id: stage4c-negative-constellation-dot-readings
+  source_negative_control_id: stage4b-negative-constellation_dot_readings
+  false_positive_class: constellation_dot_readings
+  why_dangerous: Resemblance-only star matching is unstable and contradictory.
+  required_null_control: Use as resemblance-only controls.
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control task preserved for later visual review and null controls.
+- record_type: visual_negative_control_annotation
+  task_id: stage4c-negative-forced-13-31-dot-values
+  source_negative_control_id: stage4b-negative-forced_13_31_dot_values
+  false_positive_class: forced_13_31_dot_values
+  why_dangerous: 13 and 31 depend on anchor, rotation, grouping, and polarity choices.
+  required_null_control: Require ambiguity tables before treating dot values as seeds.
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control task preserved for later visual review and null controls.
+- record_type: visual_negative_control_annotation
+  task_id: stage4c-negative-cuneiform-reading-as-fact
+  source_negative_control_id: stage4b-negative-cuneiform_reading_as_fact
+  false_positive_class: cuneiform_reading_as_fact
+  why_dangerous: The arithmetic is clean only if the visual segmentation is accepted.
+  required_null_control: Require coordinate annotation and alternate readings first.
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control task preserved for later visual review and null controls.
+- record_type: visual_negative_control_annotation
+  task_id: stage4c-negative-incorrect-base60-conversion
+  source_negative_control_id: stage4b-negative-incorrect_base60_conversion
+  false_positive_class: incorrect_base60_conversion
+  why_dangerous: Sexagesimal arithmetic can be correct while the glyph readout is
+    wrong.
+  required_null_control: Separate arithmetic checks from visual evidence.
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control task preserved for later visual review and null controls.
+- record_type: visual_negative_control_annotation
+  task_id: stage4c-negative-ad-hoc-prime-magic-square-arithmetic
+  source_negative_control_id: stage4b-negative-ad_hoc_prime_magic_square_arithmetic
+  false_positive_class: ad_hoc_prime_magic_square_arithmetic
+  why_dangerous: Prime-nearby and no-rule arithmetic can make coincidences look intentional.
+  required_null_control: Use only fixed no-fudge routes on locked raw values.
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control task preserved for later visual review and null controls.
+- record_type: visual_negative_control_annotation
+  task_id: stage4c-negative-spectrogram-pareidolia
+  source_negative_control_id: stage4b-negative-spectrogram_pareidolia
+  false_positive_class: spectrogram_pareidolia
+  why_dangerous: Spectrogram shapes are easy to over-read without exact expected payloads.
+  required_null_control: Treat as negative control unless a source-locked positive
+    exists.
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control task preserved for later visual review and null controls.
+- record_type: visual_negative_control_annotation
+  task_id: stage4c-negative-ai-generated-page-solves
+  source_negative_control_id: stage4b-negative-ai_generated_page_solves
+  false_positive_class: ai_generated_page_solves
+  why_dangerous: AI-generated plaintext can hallucinate even solved-page context.
+  required_null_control: Do not admit AI text as evidence or seed source.
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control task preserved for later visual review and null controls.
+- record_type: visual_negative_control_annotation
+  task_id: stage4c-negative-geometry-mirror-overlay-dumps
+  source_negative_control_id: stage4b-negative-geometry_mirror_overlay_dumps
+  false_positive_class: geometry_mirror_overlay_dumps
+  why_dangerous: Overlays can manufacture structure from arbitrary alignments.
+  required_null_control: Require exact source lineage and negative overlays.
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control task preserved for later visual review and null controls.
+- record_type: visual_negative_control_annotation
+  task_id: stage4c-negative-mayfly-dot-skip-index-theory
+  source_negative_control_id: stage4b-negative-mayfly_dot_skip_index_theory
+  false_positive_class: mayfly_dot_skip_index_theory
+  why_dangerous: Large claims from weak visual evidence are high-risk false positives.
+  required_null_control: Quarantine until public exact evidence exists.
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control task preserved for later visual review and null controls.

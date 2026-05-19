@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4B - website-derived source-lock triage and visual observation intake.
+Current completed stage: Stage 4C - cuneiform and dot annotation pack.
 
-Current work: Stage 4C - cuneiform and dot annotation pack. Stage 4C should annotate exact coordinates, ambiguity tables, alternate readings, and review status before any cuneiform/dot observation can become an experiment seed.
+Current work: Stage 4D - bounded numeric verifier pack. Stage 4D should use only source-locked, bounded numeric claims and must not execute visual-derived seeds unless a later review explicitly promotes exact coordinates, accepted readings, alternatives, and controls.
 
 Current project state:
 
@@ -83,6 +83,11 @@ Current project state:
 - Dot/binary/braille/constellation claims must not become experiment seeds without annotation records, exact coordinates, alternate readings, and controls.
 - Stage 4B disabled manifests stay disabled until a later explicit execution stage.
 - Deep Research reports that change project direction must update `docs/roadmap/staged-plan.md` and the research synthesis records under `data/research/`.
+- Stage 4C generated annotation sites, copied review images, grid overlays, and blank annotation templates are generated outputs and must not be committed.
+- Visual annotation must not infer meaning; coordinates and readings are separate evidence layers.
+- Empty/blank annotation templates are generated and ignored unless a later stage explicitly commits a schema fixture.
+- Visual observations remain noncanonical and `usable_as_experiment_seed=false` until reviewed and promoted in a later explicit stage.
+- Future stages changing visual-observation status must update `docs/roadmap/staged-plan.md` and the method-family/retirement ledgers under `data/research/`.
 
 ## Source-of-truth files
 

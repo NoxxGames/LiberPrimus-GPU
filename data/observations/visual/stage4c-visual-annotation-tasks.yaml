@@ -1,0 +1,358 @@
+record_set_id: stage4c-visual-annotation-tasks
+schema: schemas/visual/visual-annotation-task-v0.schema.json
+records:
+- record_type: visual_annotation_task
+  task_id: stage4c-task-cuneiform-17-13-55-1
+  task_family: cuneiform_base60
+  source_observation_id: stage4b-cuneiform-17-13-55-1
+  source_refs:
+  - stage4b-uncovering-lp-unsolved-pages
+  page_refs:
+  - pages-33-39-cuneiform-cluster
+  image_refs:
+  - liber-primus-page-image-33
+  - liber-primus-page-image-34
+  - liber-primus-page-image-35
+  - liber-primus-page-image-36
+  - liber-primus-page-image-37
+  - liber-primus-page-image-38
+  - liber-primus-page-image-39
+  page_reference_status: broad_page_reference
+  annotation_status: needs_human_coordinates
+  review_status: human_review_required
+  coordinate_system: unknown_pending_annotation
+  instructions: Mark the broad cuneiform candidate region, then record glyph segmentation
+    and any alternative sexagesimal readings separately.
+  candidate_summary: 'stage4b-cuneiform-tuple-17-13-55-1: [17, 13, 55, 1]'
+  ambiguity_notes: Glyph segmentation is not verified; exact page coordinates and
+    alternative readings are required before seed execution.
+  template_relative_path: site/templates/stage4c-task-cuneiform-17-13-55-1.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-task-cuneiform-17-13-55-1.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Stage 4C review task; coordinates are pending human annotation.
+- record_type: visual_annotation_task
+  task_id: stage4c-task-stage4b-delimiter-three-dot-page5
+  task_family: mirrored_three_dot_delimiter
+  source_observation_id: stage4b-delimiter-three-dot-page5
+  source_refs:
+  - stage4b-uncovering-lp-unsolved-pages
+  page_refs:
+  - page-5
+  image_refs:
+  - liber-primus-page-image-5
+  page_reference_status: resolved
+  annotation_status: needs_human_coordinates
+  review_status: human_review_required
+  coordinate_system: unknown_pending_annotation
+  instructions: Mark the delimiter region only. Do not promote handedness, polarity,
+    or reset-boundary meaning from the coordinate annotation.
+  candidate_summary: 'stage4b-page5-three-dot-delimiter: mirrored_three_dot_variant'
+  ambiguity_notes: Needs exact coordinates and a complete delimiter inventory across
+    locked page images.
+  template_relative_path: site/templates/stage4c-task-stage4b-delimiter-three-dot-page5.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-task-stage4b-delimiter-three-dot-page5.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Stage 4C review task; coordinates are pending human annotation.
+- record_type: visual_annotation_task
+  task_id: stage4c-task-stage4b-delimiter-three-dot-page56
+  task_family: mirrored_three_dot_delimiter
+  source_observation_id: stage4b-delimiter-three-dot-page56
+  source_refs:
+  - stage4b-uncovering-lp-unsolved-pages
+  page_refs:
+  - page-56
+  image_refs:
+  - liber-primus-page-image-56
+  page_reference_status: resolved
+  annotation_status: needs_human_coordinates
+  review_status: human_review_required
+  coordinate_system: unknown_pending_annotation
+  instructions: Mark the delimiter region only. Do not promote handedness, polarity,
+    or reset-boundary meaning from the coordinate annotation.
+  candidate_summary: 'stage4b-page56-three-dot-delimiter: mirrored_three_dot_variant'
+  ambiguity_notes: Needs exact coordinates and review before any handedness/reset
+    hypothesis is tested.
+  template_relative_path: site/templates/stage4c-task-stage4b-delimiter-three-dot-page56.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-task-stage4b-delimiter-three-dot-page56.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Stage 4C review task; coordinates are pending human annotation.
+- record_type: visual_annotation_task
+  task_id: stage4c-task-dot-binary-13-31-ambiguity
+  task_family: dot_pattern_ambiguity
+  source_observation_id: stage4b-dot-binary-13-31-ambiguity
+  source_refs:
+  - stage4b-uncovering-lp-unsolved-pages
+  page_refs:
+  - page-39
+  - five-dot-motif
+  - three-dot-motif
+  image_refs:
+  - liber-primus-page-image-39
+  page_reference_status: resolved
+  annotation_status: needs_human_coordinates
+  review_status: human_review_required
+  coordinate_system: unknown_pending_annotation
+  instructions: Annotate dot locations, fill state, ordering assumptions, and polarity.
+    Record all plausible readings; do not force 13 or 31.
+  candidate_summary: 'stage4b-five-dot-rotations: [13, 26, 21, 11, 22]; stage4b-three-dot-31-ambiguity:
+    [7, 11, 13, 14, 19, 21, 22, 25, 26, 28, 31]'
+  ambiguity_notes: 'Ambiguous and unforced: bit order, polarity, anchor, grouping,
+    and rotation change the values.'
+  template_relative_path: site/templates/stage4c-task-dot-binary-13-31-ambiguity.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-task-dot-binary-13-31-ambiguity.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Stage 4C review task; coordinates are pending human annotation.
+- record_type: visual_annotation_task
+  task_id: stage4c-task-number-square-raw-reference
+  task_family: number_square_reference
+  source_observation_id: stage4b-onion7-number-square-raw
+  source_refs:
+  - stage4b-complete-archive-magicsquares
+  page_refs:
+  - interconnectedness-magicsquares
+  image_refs: []
+  page_reference_status: unresolved
+  annotation_status: needs_human_coordinates
+  review_status: human_review_required
+  coordinate_system: unknown_pending_annotation
+  instructions: Record source and page reference gaps only; do not derive routes.
+  candidate_summary: 'stage4b-magicsquares-raw-pending: pending_source_lock'
+  ambiguity_notes: No ad-hoc prime-nearby or magic-square arithmetic is allowed before
+    raw values are locked.
+  template_relative_path: site/templates/stage4c-task-number-square-raw-reference.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-task-number-square-raw-reference.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Stage 4C review task; coordinates are pending human annotation.
+- record_type: visual_annotation_task
+  task_id: stage4c-negative-braille-dot-readings
+  task_family: visual_negative_control
+  source_observation_id: stage4b-negative-braille_dot_readings
+  source_refs:
+  - stage4b-negative-braille_dot_readings
+  page_refs: []
+  image_refs: []
+  page_reference_status: not_applicable
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  instructions: Use this false-positive class as a review control. Record coordinates
+    only if a future reviewer supplies an exact motif instance.
+  candidate_summary: Braille dot readings
+  ambiguity_notes: Too many plausible readings can be imposed on sparse dot motifs.
+  template_relative_path: site/templates/stage4c-negative-braille-dot-readings.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-negative-braille-dot-readings.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control annotation task; not evidence for a reading.
+- record_type: visual_annotation_task
+  task_id: stage4c-negative-constellation-dot-readings
+  task_family: visual_negative_control
+  source_observation_id: stage4b-negative-constellation_dot_readings
+  source_refs:
+  - stage4b-negative-constellation_dot_readings
+  page_refs: []
+  image_refs: []
+  page_reference_status: not_applicable
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  instructions: Use this false-positive class as a review control. Record coordinates
+    only if a future reviewer supplies an exact motif instance.
+  candidate_summary: Constellation dot readings
+  ambiguity_notes: Resemblance-only star matching is unstable and contradictory.
+  template_relative_path: site/templates/stage4c-negative-constellation-dot-readings.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-negative-constellation-dot-readings.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control annotation task; not evidence for a reading.
+- record_type: visual_annotation_task
+  task_id: stage4c-negative-forced-13-31-dot-values
+  task_family: visual_negative_control
+  source_observation_id: stage4b-negative-forced_13_31_dot_values
+  source_refs:
+  - stage4b-negative-forced_13_31_dot_values
+  page_refs: []
+  image_refs: []
+  page_reference_status: not_applicable
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  instructions: Use this false-positive class as a review control. Record coordinates
+    only if a future reviewer supplies an exact motif instance.
+  candidate_summary: Forced 13/31 dot readings
+  ambiguity_notes: 13 and 31 depend on anchor, rotation, grouping, and polarity choices.
+  template_relative_path: site/templates/stage4c-negative-forced-13-31-dot-values.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-negative-forced-13-31-dot-values.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control annotation task; not evidence for a reading.
+- record_type: visual_annotation_task
+  task_id: stage4c-negative-cuneiform-reading-as-fact
+  task_family: visual_negative_control
+  source_observation_id: stage4b-negative-cuneiform_reading_as_fact
+  source_refs:
+  - stage4b-negative-cuneiform_reading_as_fact
+  page_refs: []
+  image_refs: []
+  page_reference_status: not_applicable
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  instructions: Use this false-positive class as a review control. Record coordinates
+    only if a future reviewer supplies an exact motif instance.
+  candidate_summary: Cuneiform reading treated as fact
+  ambiguity_notes: The arithmetic is clean only if the visual segmentation is accepted.
+  template_relative_path: site/templates/stage4c-negative-cuneiform-reading-as-fact.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-negative-cuneiform-reading-as-fact.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control annotation task; not evidence for a reading.
+- record_type: visual_annotation_task
+  task_id: stage4c-negative-incorrect-base60-conversion
+  task_family: visual_negative_control
+  source_observation_id: stage4b-negative-incorrect_base60_conversion
+  source_refs:
+  - stage4b-negative-incorrect_base60_conversion
+  page_refs: []
+  image_refs: []
+  page_reference_status: not_applicable
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  instructions: Use this false-positive class as a review control. Record coordinates
+    only if a future reviewer supplies an exact motif instance.
+  candidate_summary: Incorrect or ambiguous base-60 conversion
+  ambiguity_notes: Sexagesimal arithmetic can be correct while the glyph readout is
+    wrong.
+  template_relative_path: site/templates/stage4c-negative-incorrect-base60-conversion.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-negative-incorrect-base60-conversion.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control annotation task; not evidence for a reading.
+- record_type: visual_annotation_task
+  task_id: stage4c-negative-ad-hoc-prime-magic-square-arithmetic
+  task_family: visual_negative_control
+  source_observation_id: stage4b-negative-ad_hoc_prime_magic_square_arithmetic
+  source_refs:
+  - stage4b-negative-ad_hoc_prime_magic_square_arithmetic
+  page_refs: []
+  image_refs: []
+  page_reference_status: not_applicable
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  instructions: Use this false-positive class as a review control. Record coordinates
+    only if a future reviewer supplies an exact motif instance.
+  candidate_summary: Ad-hoc prime/magic-square arithmetic
+  ambiguity_notes: Prime-nearby and no-rule arithmetic can make coincidences look
+    intentional.
+  template_relative_path: site/templates/stage4c-negative-ad-hoc-prime-magic-square-arithmetic.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-negative-ad-hoc-prime-magic-square-arithmetic.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control annotation task; not evidence for a reading.
+- record_type: visual_annotation_task
+  task_id: stage4c-negative-spectrogram-pareidolia
+  task_family: visual_negative_control
+  source_observation_id: stage4b-negative-spectrogram_pareidolia
+  source_refs:
+  - stage4b-negative-spectrogram_pareidolia
+  page_refs: []
+  image_refs: []
+  page_reference_status: not_applicable
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  instructions: Use this false-positive class as a review control. Record coordinates
+    only if a future reviewer supplies an exact motif instance.
+  candidate_summary: Spectrogram pareidolia
+  ambiguity_notes: Spectrogram shapes are easy to over-read without exact expected
+    payloads.
+  template_relative_path: site/templates/stage4c-negative-spectrogram-pareidolia.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-negative-spectrogram-pareidolia.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control annotation task; not evidence for a reading.
+- record_type: visual_annotation_task
+  task_id: stage4c-negative-ai-generated-page-solves
+  task_family: visual_negative_control
+  source_observation_id: stage4b-negative-ai_generated_page_solves
+  source_refs:
+  - stage4b-negative-ai_generated_page_solves
+  page_refs: []
+  image_refs: []
+  page_reference_status: not_applicable
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  instructions: Use this false-positive class as a review control. Record coordinates
+    only if a future reviewer supplies an exact motif instance.
+  candidate_summary: AI-generated page solves
+  ambiguity_notes: AI-generated plaintext can hallucinate even solved-page context.
+  template_relative_path: site/templates/stage4c-negative-ai-generated-page-solves.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-negative-ai-generated-page-solves.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control annotation task; not evidence for a reading.
+- record_type: visual_annotation_task
+  task_id: stage4c-negative-geometry-mirror-overlay-dumps
+  task_family: visual_negative_control
+  source_observation_id: stage4b-negative-geometry_mirror_overlay_dumps
+  source_refs:
+  - stage4b-negative-geometry_mirror_overlay_dumps
+  page_refs: []
+  image_refs: []
+  page_reference_status: not_applicable
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  instructions: Use this false-positive class as a review control. Record coordinates
+    only if a future reviewer supplies an exact motif instance.
+  candidate_summary: Geometry/mirror overlay dumps without source lineage
+  ambiguity_notes: Overlays can manufacture structure from arbitrary alignments.
+  template_relative_path: site/templates/stage4c-negative-geometry-mirror-overlay-dumps.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-negative-geometry-mirror-overlay-dumps.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control annotation task; not evidence for a reading.
+- record_type: visual_annotation_task
+  task_id: stage4c-negative-mayfly-dot-skip-index-theory
+  task_family: visual_negative_control
+  source_observation_id: stage4b-negative-mayfly_dot_skip_index_theory
+  source_refs:
+  - stage4b-negative-mayfly_dot_skip_index_theory
+  page_refs: []
+  image_refs: []
+  page_reference_status: not_applicable
+  annotation_status: needs_human_coordinates
+  review_status: negative_control
+  coordinate_system: unknown_pending_annotation
+  instructions: Use this false-positive class as a review control. Record coordinates
+    only if a future reviewer supplies an exact motif instance.
+  candidate_summary: Mayfly-dot skip-index theory
+  ambiguity_notes: Large claims from weak visual evidence are high-risk false positives.
+  template_relative_path: site/templates/stage4c-negative-mayfly-dot-skip-index-theory.annotation.yaml
+  site_page_relative_path: site/tasks/stage4c-negative-mayfly-dot-skip-index-theory.html
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  solve_claim: false
+  notes: Negative-control annotation task; not evidence for a reading.

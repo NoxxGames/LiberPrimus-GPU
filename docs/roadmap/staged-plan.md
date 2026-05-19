@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 4B - website-derived source-lock triage and visual observation intake.
-- Current planning focus: Stage 4C - cuneiform and dot annotation pack.
+- Latest completed stage: Stage 4C - cuneiform and dot annotation pack.
+- Current planning focus: Stage 4D - bounded numeric verifier pack.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -36,19 +36,20 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Stage 4A: generated a redacted full Discord research-bundle and static review site for Deep Research from local ignored Discord exports and LP page images.
 - Stage 4A-followup: hardened the generated static review site with noindex/robots/privacy/upload metadata and documented the GitHub Wiki publish blocker.
 - Stage 4B: promoted high-value public sources into source-lock triage records, added review-only visual/numeric observations, preserved false-positive classes as negative controls, and queued disabled future manifests.
+- Stage 4C: created cuneiform/dot visual annotation schemas, review tasks, generated local annotation-site support, coordinate-template generation, and visual negative-control annotation tasks without interpreting meaning or enabling seeds.
 
 ## Current Stage
 
-Stage 4B converts the Stage 4A redacted bundle and the Stage 4A Discord Research-Bundle Review into durable project state. It records high-value public sources, source-health metadata, cuneiform/dot/number-square/cookie visual observations, false-positive negative controls, and disabled future manifests.
+Stage 4C converts Stage 4B visual observations into coordinate-review tasks. It creates cuneiform, mirrored delimiter, dot-pattern ambiguity, number-square reference, and visual negative-control annotation tasks, plus an ignored local annotation site and blank templates for human coordinate capture.
 
-Stage 4B executes no cryptanalytic experiments, mirrors no broad archive, processes no raw Discord logs or raw page images, and makes no solve claim. Visual and numeric observations remain reviewable and `usable_as_experiment_seed=false` until a later explicit annotation/review stage promotes them.
+Stage 4C executes no cryptanalytic experiments, infers no visual meaning, performs no OCR/AI/ML, processes no raw Discord logs, and makes no solve claim. Coordinates and readings remain separate: a coordinate annotation can show that a region exists, but it does not establish that the region decodes to a value. Visual observations remain non-canonical and `usable_as_experiment_seed=false`.
 
 ## Planned Next Stages
 
-- Stage 4C - cuneiform and dot annotation pack.
-- Stage 4D - OutGuess/audio historical fixture source-locking.
-- Stage 4E - CPU batch transform API extraction.
-- Stage 4F - scorer consolidation and calibration report.
+- Stage 4D - bounded numeric verifier pack.
+- Stage 4E - OutGuess/audio historical fixture source-locking.
+- Stage 4F - CPU batch transform API extraction.
+- Stage 4G - scorer consolidation and calibration report.
 - Stage 5A - CUDA planning and parity scaffolding only.
 
 The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking and visual observation intake ahead of CPU API work. CPU batch API extraction remains planned as Stage 4E; it is deferred, not cancelled.
@@ -76,7 +77,9 @@ and deterministic site manifests. It does not change research conclusions or pro
 
 Stage 4B promotes only allowlisted, high-value public sources from Stage 4A/Deep Research context. It preserves cuneiform/base-60, mirrored delimiter, dot/binary ambiguity, number-square, cookie/hash, and exact-span GP/rune items as reviewable observations or disabled future manifest inputs only. It also preserves braille, constellation, forced dot-value, ad-hoc arithmetic, broad stego, spectrogram, AI-solve, unsigned-claim, broad literature-key, and attachment-privacy patterns as negative controls.
 
-The next planned stage after Stage 4B is Stage 4C: cuneiform and dot annotation pack. Stage 4C should add exact coordinates, ambiguity tables, and review workflow records before any visual observation can become an experiment seed.
+Stage 4C adds coordinate-review tasks, ambiguity-preserving cuneiform/dot/delimiter records, local annotation-site support, and blank generated templates. It does not decide whether cuneiform, dot, delimiter, braille, or constellation motifs mean anything.
+
+The next planned stage after Stage 4C is Stage 4D: bounded numeric verifier pack. Stage 4D should use only source-locked, reviewable, bounded numeric claims and must not execute visual-derived seeds unless coordinates and review status explicitly support that future action.
 
 ## Retired Or Deprioritised Directions
 
@@ -89,6 +92,7 @@ The next planned stage after Stage 4B is Stage 4C: cuneiform and dot annotation 
 - Cookie SHA-256 packs: negative for tried exact packs; do not broaden without an explicit new candidate source.
 - Broad dictionary/hash cracking: deferred and prohibited without explicit scoped evidence.
 - Broad visual pareidolia, unannotated dot/braille/constellation readings, and image-derived cipher seeds: deferred and prohibited until Stage 4C-style annotation records preserve coordinates, ambiguity, controls, and review status.
+- Dot/binary/braille/constellation readings remain not experiment seeds without explicit coordinates, ordering, polarity, ambiguity tables, and later review promotion.
 - Broad OutGuess/stego/audio scans: deferred and prohibited until source-locked fixtures and expected-output controls exist.
 - CUDA acceleration: deferred until CPU batch APIs, stable scorer definitions, parity tests, and benchmarks exist.
 
