@@ -28,6 +28,9 @@ def discord_full_review_build(
     out_dir: Path = typer.Option(DEFAULT_OUTPUT_DIR, "--out-dir", help="Generated Stage 4A output directory."),
     privacy_mode: str = typer.Option(DEFAULT_PRIVACY_MODE, "--privacy-mode", help="Privacy mode; only redacted_public is supported."),
     include_lp_page_gallery: bool = typer.Option(False, "--include-lp-page-gallery", help="Generate LP page image gallery."),
+    emit_noindex: bool = typer.Option(True, "--emit-noindex/--no-emit-noindex", help="Emit noindex metadata on generated HTML pages."),
+    emit_robots: bool = typer.Option(True, "--emit-robots/--no-emit-robots", help="Emit a robots.txt crawler disallow file."),
+    emit_site_manifest: bool = typer.Option(True, "--emit-site-manifest/--no-emit-site-manifest", help="Emit site_manifest.json and site_manifest.md."),
     allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
 ) -> None:
     """Build the Stage 4A redacted Discord full-review bundle and static site."""
@@ -39,6 +42,9 @@ def discord_full_review_build(
             out_dir=_resolve(out_dir),
             privacy_mode=privacy_mode,
             include_lp_page_gallery=include_lp_page_gallery,
+            emit_noindex=emit_noindex,
+            emit_robots=emit_robots,
+            emit_site_manifest=emit_site_manifest,
             allow_warnings=allow_warnings,
         )
     except Exception as error:  # noqa: BLE001 - CLI surfaces build failures consistently.
@@ -112,6 +118,8 @@ def _print_summary(summary: dict) -> None:
         "raw_discord_html_committed",
         "generated_site_committed",
         "solve_claim",
+        "noindex_enabled",
+        "robots_disallow_all",
     ]:
         if key in summary:
             console.print(f"{key}={str(summary.get(key)).lower()}")

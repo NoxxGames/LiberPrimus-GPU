@@ -33,6 +33,7 @@ from libreprimus.discord_full_review.static_site import (
     write_index_page,
     write_site_assets,
     write_site_index,
+    write_site_privacy_files,
     write_topic_page,
 )
 from libreprimus.discord_full_review.topic_classifier import classify_topics
@@ -45,6 +46,9 @@ def build_discord_full_review(
     out_dir: Path = DEFAULT_OUTPUT_DIR,
     privacy_mode: str = DEFAULT_PRIVACY_MODE,
     include_lp_page_gallery: bool = False,
+    emit_noindex: bool = True,
+    emit_robots: bool = True,
+    emit_site_manifest: bool = True,
     allow_warnings: bool = False,
 ) -> dict[str, Any]:
     if privacy_mode != DEFAULT_PRIVACY_MODE:
@@ -137,6 +141,8 @@ def build_discord_full_review(
     _write_deep_research_manifest(resolved_out / "deep_research_bundle_manifest.yaml", summary, channel_records)
     _write_deep_research_readme(resolved_out / "README_FOR_DEEP_RESEARCH.md", summary)
     _write_sftp_instructions(resolved_out / "SFTP_UPLOAD_INSTRUCTIONS.md")
+    if emit_noindex or emit_robots or emit_site_manifest:
+        write_site_privacy_files(site_dir, summary)
     write_site_index(site_dir=site_dir, summary=summary, channel_records=channel_records)
     _zip_site(site_dir, resolved_out / "liberprimus-discord-review-site.zip")
     if warnings and not allow_warnings:
@@ -242,11 +248,17 @@ def _build_summary(
         "output_paths": {
             "site_index": display_path(out_dir / "site" / "index.html"),
             "sftp_root": display_path(out_dir / "site"),
+            "site_privacy_notice": display_path(out_dir / "site" / "SITE_PRIVACY_NOTICE.md"),
+            "site_sftp_upload_checklist": display_path(out_dir / "site" / "SFTP_UPLOAD_CHECKLIST.md"),
+            "site_manifest": display_path(out_dir / "site" / "site_manifest.json"),
+            "robots_txt": display_path(out_dir / "site" / "robots.txt"),
             "deep_research_manifest": display_path(out_dir / "deep_research_bundle_manifest.yaml"),
             "channel_index": display_path(out_dir / "channel_index.md"),
             "summary": display_path(out_dir / "summary.json"),
             "zip": display_path(out_dir / "liberprimus-discord-review-site.zip"),
         },
+        "noindex_enabled": True,
+        "robots_disallow_all": True,
         "warnings": warnings,
         "raw_message_committed": False,
         "username_committed": False,

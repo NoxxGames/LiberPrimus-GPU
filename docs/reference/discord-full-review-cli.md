@@ -15,11 +15,18 @@ The Stage 4A commands are exposed through:
   --out-dir experiments/results/discord-full-review/stage4a `
   --privacy-mode redacted_public `
   --include-lp-page-gallery `
+  --emit-noindex `
+  --emit-robots `
+  --emit-site-manifest `
   --allow-warnings
 ```
 
 `build` reads ignored local inputs and writes ignored generated outputs. It does not call Discord,
 scrape the web, run OCR, or execute experiments.
+
+Privacy hardening is enabled by default. The build writes `robots.txt`, noindex metadata on HTML
+pages, `SITE_PRIVACY_NOTICE.md`, `SFTP_UPLOAD_CHECKLIST.md`, `.htaccess.example`, and site manifest
+files under the generated `site/` directory.
 
 ## Validate
 
@@ -28,8 +35,9 @@ scrape the web, run OCR, or execute experiments.
   --results-dir experiments/results/discord-full-review/stage4a
 ```
 
-Validation checks that required bundle files exist and that generated text does not contain obvious
-raw usernames, user IDs, message IDs, or private Discord-hosted URLs.
+Validation checks that required bundle files exist, privacy files exist, noindex metadata is present
+on generated HTML pages, site manifest counts match the summary, and generated text does not contain
+obvious raw usernames, user IDs, message IDs, or private Discord-hosted URLs.
 
 ## Summary
 

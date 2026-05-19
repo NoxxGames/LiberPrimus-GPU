@@ -4,6 +4,10 @@
 
 Stage 4A full Discord research-bundle extraction for Deep Research is complete. Next planned stage: Stage 4B website-derived source-lock triage and visual observation intake, using Stage 4A bundle outputs.
 
+Stage 4A follow-up hardens the generated static review site with noindex/robots/privacy/upload
+metadata and documents the remaining GitHub Wiki publish blocker. It does not change research
+conclusions or promote Discord leads.
+
 ## Completed in Stage 0A
 
 Repository scaffold, documentation, CMake skeleton, optional CUDA smoke scaffold, Python package scaffold, Windows scripts, smoke manifest, and smoke tests.

@@ -74,6 +74,9 @@ Current project state:
 - Stage 4A generated Discord full-review site, redacted streams, channel shards, topic shards, indexes, copied LP page images, thumbnails, contact sheets, and upload archives are generated outputs and must not be committed.
 - Future Deep Research handoffs should use the Stage 4A redacted bundle/site, not raw Discord logs.
 - Public or semi-public hosting of Stage 4A output must use `redacted_public` mode and should consider noindex headers, private URLs, or basic access controls.
+- Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
+- Upload only generated `site/` contents, never raw `third_party/` inputs.
+- Wiki publish failures should be recorded with exact errors and manual recovery steps, but research stages should not fail solely because the GitHub Wiki remote is unavailable.
 
 ## Source-of-truth files
 

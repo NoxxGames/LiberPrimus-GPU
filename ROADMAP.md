@@ -9,6 +9,10 @@ bundles and an SFTP-ready static site under ignored paths for Deep Research hand
 stage is Stage 4B: website-derived source-lock triage and visual observation intake, using Stage 4A
 bundle outputs. CPU batch transform API extraction remains planned later; CUDA remains deferred.
 
+Stage 4A follow-up hardens the generated static site with noindex/robots/privacy/upload metadata and
+records the remaining GitHub Wiki publish blocker. It is not a new research stage and should not
+promote Discord leads before Deep Research returns its report.
+
 ## Phase 0A - Project bootstrap
 
 Create repository structure, documentation, toolchain scripts, C++ smoke build, optional CUDA smoke build, Python package, and smoke tests.

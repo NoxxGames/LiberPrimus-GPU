@@ -99,6 +99,8 @@ If the Stage 4A static site is missing, rebuild the ignored bundle and validate 
   --out-dir experiments/results/discord-full-review/stage4a `
   --privacy-mode redacted_public `
   --include-lp-page-gallery `
+  --emit-noindex `
+  --emit-robots `
   --allow-warnings
 
 .\.venv\Scripts\python.exe -m libreprimus.cli discord-full-review validate `
@@ -106,6 +108,10 @@ If the Stage 4A static site is missing, rebuild the ignored bundle and validate 
 ```
 
 Do not copy raw Discord HTML or raw LP page images into committed paths to repair a missing site.
+
+If an uploaded Stage 4A site predates the follow-up privacy hardening, reupload the regenerated
+`site/` directory so `robots.txt`, noindex metadata, `SITE_PRIVACY_NOTICE.md`,
+`SFTP_UPLOAD_CHECKLIST.md`, and `site_manifest.json` are present.
 
 ## Research Synthesis Validation Fails
 

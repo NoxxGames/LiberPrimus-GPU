@@ -34,3 +34,8 @@ Stage 4A rechecked Wiki publishing while building the Discord full-review bundle
 reports Wiki support as enabled, but the Wiki git remote is still inaccessible from the local
 publish script. The source mirror under `docs/wiki-source/` remains valid and is still the
 authoritative publish input.
+
+Stage 4A follow-up repeated the publish attempt with the same result: `Repository not found` from
+the Wiki git remote. The likely recovery path is to create an initial Wiki page in the GitHub UI,
+then rerun the publish script. Research stages should not fail solely because the Wiki remote is
+uninitialized when the repository tutorial source and `docs/wiki-source/` validation still pass.

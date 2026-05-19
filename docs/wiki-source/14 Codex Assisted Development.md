@@ -22,6 +22,7 @@ Use Codex safely for scoped repository stages.
 - For Stage 3Y-style research synthesis, require `docs/roadmap/staged-plan.md`, `data/research/` ledgers, anti-drift checks, and `libreprimus research-synthesis validate`. Do not execute experiments.
 - For Stage 3Z-style onboarding work, require `docs/onboarding/` maps, staged-plan updates, direction-change records if the roadmap changes, and state-drift tests. Do not execute experiments.
 - For Stage 4A-style Deep Research handoff work, require `redacted_public` output, ignored static-site/bundle paths, aggregate-only committed records, no raw Discord logs, no usernames/IDs/private URLs, and no copied LP page images in Git.
+- For Stage 4A follow-up static-site work, require noindex metadata, `robots.txt`, privacy notice, SFTP checklist, deterministic site manifest, and validation that generated site files remain ignored.
 
 ## Commands
 
@@ -43,6 +44,10 @@ Keep `deep-research-reports/**` out of staging; it is local review material only
 For Stage 4A and later Deep Research handoff work, use generated redacted bundles and aggregate
 summaries instead of raw Discord logs. Generated static review sites, copied images, thumbnails,
 shards, and upload archives remain ignored outputs.
+
+If GitHub Wiki publishing fails, record the exact error and manual fix in
+`docs/github/wiki-publish-report.md`; do not treat an unavailable Wiki remote as a reason to weaken
+the repository tutorial source or validation scripts.
 
 ## Troubleshooting
 

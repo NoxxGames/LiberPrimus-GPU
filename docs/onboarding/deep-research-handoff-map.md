@@ -34,6 +34,9 @@ Stage 4A also creates an SFTP-ready static review site:
 Use the Stage 4A static site or redacted shards for Deep Research handoff. Do not substitute raw
 Discord HTML exports for the generated redacted bundle.
 
+If the static site is hosted for review, use the Stage 4A follow-up privacy-hardened rebuild. It
+includes noindex metadata, `robots.txt`, a site privacy notice, SFTP checklist, and site manifest.
+
 ## Do Not Give Deep Research
 
 - Raw Discord HTML logs.

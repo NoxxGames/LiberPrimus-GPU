@@ -23,6 +23,10 @@ The generated `site/` subdirectory is SFTP-ready and contains `index.html`, chan
 pages, index pages, CSS, and an LP page gallery. Generated JSONL, Markdown shards, copied page
 images, thumbnails, contact sheets, and zip archives are ignored and must not be committed.
 
+Stage 4A follow-up adds generated site privacy files inside `site/`: `robots.txt`,
+`SITE_PRIVACY_NOTICE.md`, `SFTP_UPLOAD_CHECKLIST.md`, `.htaccess.example`, `site_manifest.json`,
+and `site_manifest.md`. Every generated HTML page includes noindex metadata by default.
+
 ## Privacy Boundary
 
 Default mode is `redacted_public`. Usernames, user IDs, message IDs, avatar URLs, and private
@@ -37,3 +41,7 @@ are secondary views and do not delete messages from the chronological layer.
 Use this bundle when preparing Deep Research context or a private static review site. Do not hand
 off raw Discord exports, private attachments, copied LP page images outside the generated site, or
 large unredacted generated dumps.
+
+If an older copy of the generated site has already been uploaded, rebuild Stage 4A and reupload the
+contents of `experiments/results/discord-full-review/stage4a/site/` to apply noindex, robots, and
+privacy notice updates.

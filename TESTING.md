@@ -71,6 +71,11 @@ indexes, synthetic LP page-gallery thumbnails, static-site generation, Deep Rese
 instructions, aggregate privacy checks, Wiki publish diagnostics, generated-output ignore rules, and
 CLI build/validate/summary paths using synthetic fixtures.
 
+Stage 4A follow-up tests cover static review-site privacy hardening: noindex metadata, all-disallow
+`robots.txt`, site privacy notice, SFTP upload checklist, optional `.htaccess` guidance, deterministic
+site manifests, validation failures when noindex metadata is missing, and Wiki publish blocker
+reporting.
+
 Local validation includes:
 
 ```powershell

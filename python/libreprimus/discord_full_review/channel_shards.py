@@ -8,6 +8,7 @@ from typing import Any
 
 from libreprimus.discord_full_review.export import display_path
 from libreprimus.discord_full_review.models import SHARD_TARGET_MARKDOWN_BYTES, SHARD_TARGET_MESSAGES
+from libreprimus.discord_full_review.static_site import html_page, privacy_notice_html
 
 
 def split_messages(messages: list[dict[str, Any]]) -> list[list[dict[str, Any]]]:
@@ -49,7 +50,16 @@ def write_channel_shards(
         html_path = channel_site_dir / f"{part_name}.html"
         markdown = _channel_part_markdown(channel_name, part_number, shard)
         markdown_path.write_text(markdown, encoding="utf-8", newline="\n")
-        html_path.write_text(_html_page(f"{channel_name} {part_name}", _messages_html(shard)), encoding="utf-8", newline="\n")
+        html_path.write_text(
+            html_page(
+                f"{channel_name} {part_name}",
+                f"<h1>{escape(channel_name)} {part_name}</h1>{privacy_notice_html()}{_messages_html(shard)}"
+                '<p><a href="index.html">Back to channel index</a></p>',
+                css_href="../../assets/site.css",
+            ),
+            encoding="utf-8",
+            newline="\n",
+        )
         part_links.append(f"{part_name}.html")
         shard_records.append(
             {
@@ -114,12 +124,4 @@ def _channel_index_html(channel_name: str, message_count: int, part_links: list[
         f"<ul>{links}</ul>"
         '<p><a href="../../index.html">Back to site index</a></p>'
     )
-    return _html_page(channel_name, body)
-
-
-def _html_page(title: str, body: str) -> str:
-    return (
-        "<!doctype html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">"
-        f"<title>{escape(title)}</title><link rel=\"stylesheet\" href=\"../../assets/site.css\"></head>"
-        f"<body>{body}</body></html>\n"
-    )
+    return html_page(channel_name, body, css_href="../../assets/site.css")

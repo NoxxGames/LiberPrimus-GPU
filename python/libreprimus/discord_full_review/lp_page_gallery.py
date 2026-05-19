@@ -10,6 +10,7 @@ from PIL import Image, ImageDraw
 
 from libreprimus.discord_full_review.export import display_path, sha256_file
 from libreprimus.discord_full_review.models import IMAGE_SUFFIXES
+from libreprimus.discord_full_review.static_site import html_page, privacy_notice_html
 
 THUMB_SIZE = (220, 220)
 
@@ -72,13 +73,15 @@ def _write_gallery_index(path: Path, records: list[dict[str, Any]]) -> None:
         for record in records
     )
     path.write_text(
-        "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>LP Page Gallery</title>"
-        "<link rel=\"stylesheet\" href=\"../assets/site.css\"></head><body>"
-        "<h1>Liber Primus Page Image Gallery</h1>"
-        "<p>Generated ignored local gallery. Source page images remain uncommitted.</p>"
-        f"<div class=\"gallery\">{cards}</div>"
-        "<p><a href=\"../index.html\">Back to site index</a></p>"
-        "</body></html>\n",
+        html_page(
+            "LP Page Gallery",
+            "<h1>Liber Primus Page Image Gallery</h1>"
+            f"{privacy_notice_html()}"
+            "<p>Generated ignored local gallery. Source page images remain uncommitted.</p>"
+            f"<div class=\"gallery\">{cards}</div>"
+            "<p><a href=\"../index.html\">Back to site index</a></p>",
+            css_href="../assets/site.css",
+        ),
         encoding="utf-8",
         newline="\n",
     )

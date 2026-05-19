@@ -69,6 +69,10 @@ The independent review originally suggested CPU batch API extraction as Stage 4A
 
 Stage 4A converts local admin-provided Discord HTML exports into full Deep-Research-friendly bundles. The output must be redacted, scoped, image-aware where metadata exists, and generated under ignored paths. Raw Discord logs, private attachments, usernames, user IDs, message IDs, private URLs, generated static site files, copied LP page images, thumbnails, and archives must not be committed or handed off raw.
 
+Stage 4A follow-up hardens the generated static site with noindex metadata, all-disallow
+`robots.txt`, site privacy notices, SFTP upload checklists, optional server configuration guidance,
+and deterministic site manifests. It does not change research conclusions or promote leads.
+
 The next planned stage after Stage 4A is Stage 4B: website-derived source-lock triage and visual observation intake, using Stage 4A bundle outputs.
 
 ## Retired Or Deprioritised Directions

@@ -59,6 +59,9 @@ publishing raw logs or private attachments.
   --out-dir experiments/results/discord-full-review/stage4a `
   --privacy-mode redacted_public `
   --include-lp-page-gallery `
+  --emit-noindex `
+  --emit-robots `
+  --emit-site-manifest `
   --allow-warnings
 ```
 
@@ -73,7 +76,9 @@ post-Discord manifests. Stage 3S executes only the Onion 7 seed-pack manifest, S
 executes only the GP/rune claim verifier, and Stage 3U executes only the cookie signed-variant
 pack. Stage 4A writes a full redacted review bundle under
 `experiments/results/discord-full-review/stage4a/`; generated redacted streams, shards, indexes,
-static site files, copied LP page images, thumbnails, and archives remain ignored.
+static site files, copied LP page images, thumbnails, and archives remain ignored. The generated
+site includes noindex metadata, `robots.txt`, a site privacy notice, SFTP upload checklist, optional
+server guidance, and a deterministic site manifest.
 
 ## What Not To Commit
 
@@ -82,6 +87,9 @@ generated extraction outputs, generated promotion outputs, generated redacted sh
 review indexes, generated Stage 3R audit JSONL outputs, generated Stage 3S post-Discord
 candidate outputs, generated Stage 3T verification outputs, generated Stage 3U hash outputs, or
 generated Stage 4A full-review site/bundle outputs.
+
+If a Stage 4A site is uploaded for review, upload only `experiments/results/discord-full-review/stage4a/site/`.
+Never upload raw `third_party/` directories.
 
 ## Troubleshooting
 
