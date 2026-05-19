@@ -4,12 +4,12 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4I scorer consolidation and calibration report is complete. It turned existing minimal
-triage scoring and Stage 3C calibration into scorer records, finite confidence labels,
-compatibility mappings, calibration-profile/report records, and CPU batch score compatibility
-checks without adding a new scoring model, GPU code, or broad experiment execution.
+Stage 4J observation review workflow hardening is complete. It created durable review-state
+schemas, policy records, review decisions, promotion gates, quarantine records, path sanitisation
+checks, and stale-document repairs without promoting observations to manifests or running
+experiments.
 
-The next planned stage is Stage 4J: observation review workflow hardening. CUDA planning remains
+The next planned stage is Stage 4K: allowlisted public source-lock snapshots. CUDA planning remains
 later; CUDA remains deferred until CPU batch, scorer, review workflow, parity tests, and benchmark
 plans are stable.
 
@@ -19,8 +19,9 @@ review into durable records without executing experiments, Stage 4C made the vis
 measurable without promoting them to seeds, Stage 4D ran only bounded no-fudge audit work, Stage 4E
 selected external source-delta targets without committing raw artefacts, Stage 4F prepared
 stego/audio fixture provenance without running tools, Stage 4G recorded the negative exact cookie
-refresh result, Stage 4H extracted the CPU batch API as the future CUDA parity contract, and Stage
-4I made scoring labels and score summaries triage-only parity metadata.
+refresh result, Stage 4H extracted the CPU batch API as the future CUDA parity contract, Stage
+4I made scoring labels and score summaries triage-only parity metadata, and Stage 4J closed the
+review-to-promotion loop.
 
 ## Phase 0A - Project bootstrap
 

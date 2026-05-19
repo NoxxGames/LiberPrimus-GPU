@@ -525,3 +525,9 @@ The consistency suite is raw-data-free. It validates generated result-store outp
 Stage 4I adds tests for scoring schemas, finite confidence labels, legacy compatibility mapping, scorer inventory records, Stage 3C calibration-profile fallback, CPU batch score-summary compatibility, CLI consolidation/validation/report commands, and ignored generated outputs.
 
 The tests assert that score labels cannot imply solved/plaintext_verified, score summaries reject `solve_claim=true` and `cuda_used=true`, CPU batch score summaries map legacy labels through the compatibility layer, generated scoring-consolidation outputs are ignored, and raw data remains ignored.
+
+## Stage 4J Observation Review Workflow Tests
+
+Stage 4J adds tests for observation-review schemas, review-state transitions, promotion gates, quarantine records, path sanitisation, stale operational-document detection, CLI build/validate/check paths, and ignored output policy.
+
+The tests assert that visual candidates without coordinates cannot promote, cuneiform readings without accepted review cannot promote, ambiguous dot readings cannot promote, Discord-derived records without public corroboration cannot promote, negative controls remain usable only as controls, scoring labels cannot become solve claims, absolute local paths are rejected unless explicitly marked as examples, generated observation-review outputs are ignored, and raw data remains ignored.

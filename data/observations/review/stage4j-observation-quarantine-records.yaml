@@ -1,0 +1,308 @@
+record_set_id: stage4j-observation-quarantine-records
+schema: schemas/observations/observation-quarantine-record-v0.schema.json
+records:
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_negative-stage4b-negative-ad_hoc_prime_magic_square_arithmetic
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-ad_hoc_prime_magic_square_arithmetic
+  observation_id: stage4b-negative-ad_hoc_prime_magic_square_arithmetic
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: ad_hoc_prime_magic_square_arithmetic
+  why_dangerous: Prime-nearby and no-rule arithmetic can make coincidences look intentional.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_negative-stage4b-negative-ai_generated_page_solves
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-ai_generated_page_solves
+  observation_id: stage4b-negative-ai_generated_page_solves
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: ai_generated_solves
+  why_dangerous: AI-generated plaintext can hallucinate even solved-page context.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_negative-stage4b-negative-attachment_reference_privacy_risk
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-attachment_reference_privacy_risk
+  observation_id: stage4b-negative-attachment_reference_privacy_risk
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: attachment_reference_privacy_risk
+  why_dangerous: Attachment identifiers are not evidence and increase public exposure.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_negative-stage4b-negative-broad_literature_key_fishing
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-broad_literature_key_fishing
+  observation_id: stage4b-negative-broad_literature_key_fishing
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: broad_literature_key_fishing
+  why_dangerous: Literature references are abundant and low-yield without exact keys.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_negative-stage4b-negative-broad_outguess_bruteforce_garbage
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-broad_outguess_bruteforce_garbage
+  observation_id: stage4b-negative-broad_outguess_bruteforce_garbage
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: broad_outguess_brute_force
+  why_dangerous: OutGuess-like tools can emit fake file types or garbage under arbitrary
+    passwords.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_negative-stage4b-negative-dictionary_looking_prime_hits
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-dictionary_looking_prime_hits
+  observation_id: stage4b-negative-dictionary_looking_prime_hits
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: dictionary_looking_prime_hits
+  why_dangerous: Small transforms can produce English-looking coincidences by chance.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_negative-stage4b-negative-geometry_mirror_overlay_dumps
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-geometry_mirror_overlay_dumps
+  observation_id: stage4b-negative-geometry_mirror_overlay_dumps
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: geometry_mirror_overlay_dumps
+  why_dangerous: Overlays can manufacture structure from arbitrary alignments.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_negative-stage4b-negative-incorrect_base60_conversion
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-incorrect_base60_conversion
+  observation_id: stage4b-negative-incorrect_base60_conversion
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: incorrect_base60_conversion
+  why_dangerous: Sexagesimal arithmetic can be correct while the glyph readout is
+    wrong.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_negative-stage4b-negative-mp3stego_without_exact_positive
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-mp3stego_without_exact_positive
+  observation_id: stage4b-negative-mp3stego_without_exact_positive
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: mp3stego_without_exact_positive
+  why_dangerous: Audio stego claims need reproducible positive controls, not plausible
+    filenames.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_negative-stage4b-negative-sixteen_page_authenticity_myth
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-sixteen_page_authenticity_myth
+  observation_id: stage4b-negative-sixteen_page_authenticity_myth
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: sixteen_page_authenticity_myth
+  why_dangerous: Unverified authenticity shortcuts can erase reviewable corpus material.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_negative-stage4b-negative-spectrogram_pareidolia
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-spectrogram_pareidolia
+  observation_id: stage4b-negative-spectrogram_pareidolia
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: spectrogram_pareidolia
+  why_dangerous: Spectrogram shapes are easy to over-read without exact expected payloads.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_negative-stage4b-negative-unsigned_new_cicada_claims
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-unsigned_new_cicada_claims
+  observation_id: stage4b-negative-unsigned_new_cicada_claims
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: unsigned_new_cicada_claims
+  why_dangerous: Claims without PGP/signature provenance are cheap false paths.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4b_visual-stage4b-dot-binary-13-31-ambiguity
+  review_decision_id: stage4j-decision-stage4b_visual-stage4b-dot-binary-13-31-ambiguity
+  observation_id: stage4b-dot-binary-13-31-ambiguity
+  observation_type: visual_dot_pattern_candidate
+  review_state: quarantined
+  false_positive_class: dot_pattern_ambiguity
+  why_dangerous: The observation class is useful as a control but unsafe as truth
+    evidence.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4c_dot-stage4c-task-dot-binary-13-31-ambiguity
+  review_decision_id: stage4j-decision-stage4c_dot-stage4c-task-dot-binary-13-31-ambiguity
+  observation_id: stage4c-task-dot-binary-13-31-ambiguity
+  observation_type: visual_dot_pattern_candidate
+  review_state: quarantined
+  false_positive_class: dot_pattern_ambiguity
+  why_dangerous: The observation class is useful as a control but unsafe as truth
+    evidence.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4c_negative-stage4c-negative-ad-hoc-prime-magic-square-arithmetic
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-ad-hoc-prime-magic-square-arithmetic
+  observation_id: stage4c-negative-ad-hoc-prime-magic-square-arithmetic
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: ad_hoc_prime_magic_square_arithmetic
+  why_dangerous: Prime-nearby and no-rule arithmetic can make coincidences look intentional.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4c_negative-stage4c-negative-ai-generated-page-solves
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-ai-generated-page-solves
+  observation_id: stage4c-negative-ai-generated-page-solves
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: ai_generated_solves
+  why_dangerous: AI-generated plaintext can hallucinate even solved-page context.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4c_negative-stage4c-negative-braille-dot-readings
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-braille-dot-readings
+  observation_id: stage4c-negative-braille-dot-readings
+  observation_type: visual_dot_pattern_candidate
+  review_state: quarantined
+  false_positive_class: braille_overfitting
+  why_dangerous: Too many plausible readings can be imposed on sparse dot motifs.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4c_negative-stage4c-negative-constellation-dot-readings
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-constellation-dot-readings
+  observation_id: stage4c-negative-constellation-dot-readings
+  observation_type: visual_dot_pattern_candidate
+  review_state: quarantined
+  false_positive_class: constellation_overfitting
+  why_dangerous: Resemblance-only star matching is unstable and contradictory.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4c_negative-stage4c-negative-forced-13-31-dot-values
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-forced-13-31-dot-values
+  observation_id: stage4c-negative-forced-13-31-dot-values
+  observation_type: visual_dot_pattern_candidate
+  review_state: quarantined
+  false_positive_class: forced_13_31_readings
+  why_dangerous: 13 and 31 depend on anchor, rotation, grouping, and polarity choices.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4c_negative-stage4c-negative-geometry-mirror-overlay-dumps
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-geometry-mirror-overlay-dumps
+  observation_id: stage4c-negative-geometry-mirror-overlay-dumps
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: geometry_mirror_overlay_dumps
+  why_dangerous: Overlays can manufacture structure from arbitrary alignments.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4c_negative-stage4c-negative-incorrect-base60-conversion
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-incorrect-base60-conversion
+  observation_id: stage4c-negative-incorrect-base60-conversion
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: incorrect_base60_conversion
+  why_dangerous: Sexagesimal arithmetic can be correct while the glyph readout is
+    wrong.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4c_negative-stage4c-negative-mayfly-dot-skip-index-theory
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-mayfly-dot-skip-index-theory
+  observation_id: stage4c-negative-mayfly-dot-skip-index-theory
+  observation_type: visual_dot_pattern_candidate
+  review_state: quarantined
+  false_positive_class: dot_pattern_ambiguity
+  why_dangerous: Large claims from weak visual evidence are high-risk false positives.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+- record_type: observation_quarantine_record
+  quarantine_record_id: stage4j-quarantine-stage4c_negative-stage4c-negative-spectrogram-pareidolia
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-spectrogram-pareidolia
+  observation_id: stage4c-negative-spectrogram-pareidolia
+  observation_type: negative_control
+  review_state: negative_control
+  false_positive_class: spectrogram_pareidolia
+  why_dangerous: Spectrogram shapes are easy to over-read without exact expected payloads.
+  allowed_control_use: true
+  truth_acceptance: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false

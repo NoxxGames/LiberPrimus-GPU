@@ -16,6 +16,7 @@ future experiment can use them.
 - `data/observations/web/`
 - `data/observations/stego/`
 - `data/observations/discord/`
+- `data/observations/review/`
 - `data/locks/third-party/`
 
 ## Commands
@@ -130,6 +131,18 @@ Stage 4G records the cookie exact-refresh aggregate summary:
 
 Generated Stage 4G candidate records are experiment outputs, not source records.
 
+Stage 4J records observation review decisions, promotion-gate records, quarantine records, and the
+review summary:
+
+- `data/observations/review/stage4j-observation-review-policy.yaml`
+- `data/observations/review/stage4j-observation-review-decisions.yaml`
+- `data/observations/review/stage4j-observation-promotion-records.yaml`
+- `data/observations/review/stage4j-observation-quarantine-records.yaml`
+- `data/observations/review/stage4j-observation-review-summary.yaml`
+
+These records close the review-to-promotion loop. They do not execute experiments or make any
+observation a seed unless a future explicit promotion record satisfies the policy gates.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
@@ -160,6 +173,8 @@ Do not commit generated Stage 4F stego/audio fixture reports under
 audio, fonts, archives, or extracted payloads.
 Do not commit generated Stage 4G cookie refresh JSON/JSONL outputs under
 `experiments/results/cookie-refresh/stage4g/`.
+Do not commit generated Stage 4J observation-review reports under
+`experiments/results/observation-review/stage4j/`.
 
 ## Troubleshooting
 
@@ -180,6 +195,10 @@ verify source provenance before any interpretation.
 
 If a Stage 3V extraction produces bytes, interpret it only when an expected payload hash exists and
 matches. Otherwise keep it as an ignored reference extraction record.
+
+If an observation is useful but still review-only, keep it in `needs_human_review`, `deferred`,
+`quarantined`, or `negative_control` state. Do not copy it into a manifest until a future promotion
+stage records the required gates.
 
 If a Stage 4C annotation task looks promising, keep coordinates, accepted readings, rejected
 readings, confidence, and review status separate. A later explicit promotion stage is required

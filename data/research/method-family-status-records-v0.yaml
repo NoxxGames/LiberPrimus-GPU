@@ -255,13 +255,24 @@ records:
     solve_claim: false
     notes: Scoring is a review-prioritisation aid only; labels cannot mean solved or plaintext_verified.
   - record_type: method_family_status_record
+    method_family_id: observation_review_workflow
+    name: Observation review workflow and promotion gates
+    status: infrastructure_only
+    evidence_summary: Stage 4J consolidated committed observation families into explicit review decisions, promotion gate records, quarantine records, and path/doc freshness checks.
+    completed_stage_refs: [stage-4j]
+    reopen_conditions: [New observation families, promotion request types, or source-lock snapshots require review-state mapping and policy validation.]
+    stop_conditions: [Do not let review-only observations become experiment seeds, promote visual meaning without coordinates and accepted review, promote Discord-derived leads without public corroboration, or commit absolute local paths.]
+    next_action: Use the Stage 4J policy and CLI before Stage 4K allowlisted public source-lock snapshots promote any new records.
+    solve_claim: false
+    notes: Observation records are triage inputs until accepted and explicitly promoted; negative controls remain useful as controls without truth acceptance.
+  - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred
-    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract and Stage 4I provides scoring semantics, but parity tests and benchmarks are still required before GPU kernels are trusted.
-    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i]
-    reopen_conditions: [CPU batch transform API, scorer consolidation, transform-and-score parity tests, and benchmark plan are complete.]
+    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, and Stage 4J closes observation review gates, but parity tests and benchmarks are still required before GPU kernels are trusted.
+    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j]
+    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, transform-and-score parity tests, and benchmark plan are complete.]
     stop_conditions: [No GPU kernels before CPU reference behaviour and parity tests.]
-    next_action: First future CUDA target is batch transform-and-score parity after observation review hardening and explicit CUDA planning.
+    next_action: First future CUDA target is batch transform-and-score parity after source-lock/review workflows and explicit CUDA planning.
     solve_claim: false
-    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H and Stage 4I did not add CUDA code.
+    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H, Stage 4I, and Stage 4J did not add CUDA code.

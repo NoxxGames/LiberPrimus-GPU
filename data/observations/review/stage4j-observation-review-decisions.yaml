@@ -1,0 +1,2488 @@
+record_set_id: stage4j-observation-review-decisions
+schema: schemas/observations/observation-review-decision-v0.schema.json
+records:
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage3r_discord_observations-stage3r-observation-2013-761-mp3-167
+  observation_id: stage3r-observation-2013-761-mp3-167
+  source_family: stage3r_discord_observations
+  source_path: data/observations/discord/stage3r-promoted-observation-records.yaml
+  observation_type: discord_derived_lead
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage3r_discord_observations-stage3r-observation-2014-1033-jpg
+  observation_id: stage3r-observation-2014-1033-jpg
+  source_family: stage3r_discord_observations
+  source_path: data/observations/discord/stage3r-promoted-observation-records.yaml
+  observation_type: discord_derived_lead
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage3r_discord_observations-stage3r-observation-2014-image-dimensions
+  observation_id: stage3r-observation-2014-image-dimensions
+  source_family: stage3r_discord_observations
+  source_path: data/observations/discord/stage3r-promoted-observation-records.yaml
+  observation_type: discord_derived_lead
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage3r_discord_observations-stage3r-observation-2014-onion-title
+  observation_id: stage3r-observation-2014-onion-title
+  source_family: stage3r_discord_observations
+  source_path: data/observations/discord/stage3r-promoted-observation-records.yaml
+  observation_type: discord_derived_lead
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage3r_discord_observations-stage3r-observation-2016-image-dimensions
+  observation_id: stage3r-observation-2016-image-dimensions
+  source_family: stage3r_discord_observations
+  source_path: data/observations/discord/stage3r-promoted-observation-records.yaml
+  observation_type: discord_derived_lead
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage3r_discord_observations-stage3r-observation-cuneiform-pages-34-40
+  observation_id: stage3r-observation-cuneiform-pages-34-40
+  source_family: stage3r_discord_observations
+  source_path: data/observations/discord/stage3r-promoted-observation-records.yaml
+  observation_type: discord_derived_lead
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage3r_discord_observations-stage3r-observation-dead-oak-motif
+  observation_id: stage3r-observation-dead-oak-motif
+  source_family: stage3r_discord_observations
+  source_path: data/observations/discord/stage3r-promoted-observation-records.yaml
+  observation_type: discord_derived_lead
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage3r_discord_observations-stage3r-observation-dot-motifs
+  observation_id: stage3r-observation-dot-motifs
+  source_family: stage3r_discord_observations
+  source_path: data/observations/discord/stage3r-promoted-observation-records.yaml
+  observation_type: discord_derived_lead
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage3r_discord_observations-stage3r-observation-onion7-prime-order-table
+  observation_id: stage3r-observation-onion7-prime-order-table
+  source_family: stage3r_discord_observations
+  source_path: data/observations/discord/stage3r-promoted-observation-records.yaml
+  observation_type: discord_derived_lead
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage3r_discord_observations-stage3r-observation-onion7-prime-table
+  observation_id: stage3r-observation-onion7-prime-table
+  source_family: stage3r_discord_observations
+  source_path: data/observations/discord/stage3r-promoted-observation-records.yaml
+  observation_type: discord_derived_lead
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage3r_discord_observations-stage3r-observation-onion7-raw-table
+  observation_id: stage3r-observation-onion7-raw-table
+  source_family: stage3r_discord_observations
+  source_path: data/observations/discord/stage3r-promoted-observation-records.yaml
+  observation_type: discord_derived_lead
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_cookie_sources-stage4b-cookie-167-761-exact-artifacts
+  observation_id: stage4b-cookie-167-761-exact-artifacts
+  source_family: stage4b_cookie_sources
+  source_path: data/observations/web/stage4b-cookie-candidate-source-records.yaml
+  observation_type: cookie_hash_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-ad_hoc_prime_magic_square_arithmetic
+  observation_id: stage4b-negative-ad_hoc_prime_magic_square_arithmetic
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: ad_hoc_prime_magic_square_arithmetic
+  why_dangerous: Prime-nearby and no-rule arithmetic can make coincidences look intentional.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-ai_generated_page_solves
+  observation_id: stage4b-negative-ai_generated_page_solves
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: ai_generated_page_solves
+  why_dangerous: AI-generated plaintext can hallucinate even solved-page context.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-attachment_reference_privacy_risk
+  observation_id: stage4b-negative-attachment_reference_privacy_risk
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: attachment_reference_privacy_risk
+  why_dangerous: Attachment identifiers are not evidence and increase public exposure.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-braille_dot_readings
+  observation_id: stage4b-negative-braille_dot_readings
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: needs_human_review
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: braille_dot_readings
+  why_dangerous: Too many plausible readings can be imposed on sparse dot motifs.
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+  - visual_missing_page_or_image_reference
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-broad_literature_key_fishing
+  observation_id: stage4b-negative-broad_literature_key_fishing
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: broad_literature_key_fishing
+  why_dangerous: Literature references are abundant and low-yield without exact keys.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-broad_outguess_bruteforce_garbage
+  observation_id: stage4b-negative-broad_outguess_bruteforce_garbage
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: broad_outguess_bruteforce_garbage
+  why_dangerous: OutGuess-like tools can emit fake file types or garbage under arbitrary
+    passwords.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-constellation_dot_readings
+  observation_id: stage4b-negative-constellation_dot_readings
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: needs_human_review
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: constellation_dot_readings
+  why_dangerous: Resemblance-only star matching is unstable and contradictory.
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+  - visual_missing_page_or_image_reference
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-cuneiform_reading_as_fact
+  observation_id: stage4b-negative-cuneiform_reading_as_fact
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: visual_cuneiform_candidate
+  review_state: needs_coordinates
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: cuneiform_reading_as_fact
+  why_dangerous: The arithmetic is clean only if the visual segmentation is accepted.
+  rationale: Cuneiform reading remains review-required until exact coordinates and
+    accepted readout exist.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - cuneiform_missing_coordinates
+  - cuneiform_reading_not_accepted
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+  - visual_missing_page_or_image_reference
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-dictionary_looking_prime_hits
+  observation_id: stage4b-negative-dictionary_looking_prime_hits
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: dictionary_looking_prime_hits
+  why_dangerous: Small transforms can produce English-looking coincidences by chance.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-forced_13_31_dot_values
+  observation_id: stage4b-negative-forced_13_31_dot_values
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: needs_human_review
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: forced_13_31_dot_values
+  why_dangerous: 13 and 31 depend on anchor, rotation, grouping, and polarity choices.
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+  - visual_missing_page_or_image_reference
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-geometry_mirror_overlay_dumps
+  observation_id: stage4b-negative-geometry_mirror_overlay_dumps
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: geometry_mirror_overlay_dumps
+  why_dangerous: Overlays can manufacture structure from arbitrary alignments.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-incorrect_base60_conversion
+  observation_id: stage4b-negative-incorrect_base60_conversion
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: incorrect_base60_conversion
+  why_dangerous: Sexagesimal arithmetic can be correct while the glyph readout is
+    wrong.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-mayfly_dot_skip_index_theory
+  observation_id: stage4b-negative-mayfly_dot_skip_index_theory
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: needs_human_review
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: mayfly_dot_skip_index_theory
+  why_dangerous: Large claims from weak visual evidence are high-risk false positives.
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+  - visual_missing_page_or_image_reference
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-mp3stego_without_exact_positive
+  observation_id: stage4b-negative-mp3stego_without_exact_positive
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: mp3stego_without_exact_positive
+  why_dangerous: Audio stego claims need reproducible positive controls, not plausible
+    filenames.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-sixteen_page_authenticity_myth
+  observation_id: stage4b-negative-sixteen_page_authenticity_myth
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: sixteen_page_authenticity_myth
+  why_dangerous: Unverified authenticity shortcuts can erase reviewable corpus material.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-spectrogram_pareidolia
+  observation_id: stage4b-negative-spectrogram_pareidolia
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: spectrogram_pareidolia
+  why_dangerous: Spectrogram shapes are easy to over-read without exact expected payloads.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_negative-stage4b-negative-unsigned_new_cicada_claims
+  observation_id: stage4b-negative-unsigned_new_cicada_claims
+  source_family: stage4b_negative
+  source_path: data/observations/research/stage4b-negative-control-records.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: unsigned_new_cicada_claims
+  why_dangerous: Claims without PGP/signature provenance are cheap false paths.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-boxentriq-binary-tools
+  observation_id: stage4b-boxentriq-binary-tools
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-charleswyt-mp3stego
+  observation_id: stage4b-charleswyt-mp3stego
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-cicada-solvers-iddqd-lp-outguessed
+  observation_id: stage4b-cicada-solvers-iddqd-lp-outguessed
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-cicada3301-boards-number-square
+  observation_id: stage4b-cicada3301-boards-number-square
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-complete-archive-li676-status
+  observation_id: stage4b-complete-archive-li676-status
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-complete-archive-magicsquares
+  observation_id: stage4b-complete-archive-magicsquares
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-complete-cicada-archive
+  observation_id: stage4b-complete-cicada-archive
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-cygwin-outguess
+  observation_id: stage4b-cygwin-outguess
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-google-translations-workbook
+  observation_id: stage4b-google-translations-workbook
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-rtkd-iddqd
+  observation_id: stage4b-rtkd-iddqd
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-rtkd-iddqd-2013-02-tree
+  observation_id: stage4b-rtkd-iddqd-2013-02-tree
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-scream314-cicada3301
+  observation_id: stage4b-scream314-cicada3301
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-uncovering-frequency-analysis
+  observation_id: stage4b-uncovering-frequency-analysis
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-uncovering-instar-emergence
+  observation_id: stage4b-uncovering-instar-emergence
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-uncovering-liber-primus
+  observation_id: stage4b-uncovering-liber-primus
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-uncovering-lp-transliteration
+  observation_id: stage4b-uncovering-lp-transliteration
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-uncovering-lp-unsolved-pages
+  observation_id: stage4b-uncovering-lp-unsolved-pages
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-uncovering-outguess
+  observation_id: stage4b-uncovering-outguess
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-uncovering-what-happened-2014
+  observation_id: stage4b-uncovering-what-happened-2014
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_sources-stage4b-wayback-outguess
+  observation_id: stage4b-wayback-outguess
+  source_family: stage4b_sources
+  source_path: data/observations/archive/stage4b-promoted-source-records.yaml
+  observation_type: source_link
+  review_state: accepted
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Promoted source reference is source-locked as reference metadata, not
+    canonical plaintext.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_visual-stage4b-cookie-167-761-exact-artifacts
+  observation_id: stage4b-cookie-167-761-exact-artifacts
+  source_family: stage4b_visual
+  source_path: data/observations/visual/stage4b-visual-observation-records.yaml
+  observation_type: cookie_hash_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: cookie_hash_artifacts
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_visual-stage4b-cuneiform-17-13-55-1
+  observation_id: stage4b-cuneiform-17-13-55-1
+  source_family: stage4b_visual
+  source_path: data/observations/visual/stage4b-visual-observation-records.yaml
+  observation_type: visual_cuneiform_candidate
+  review_state: needs_coordinates
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: cuneiform_base60
+  why_dangerous: null
+  rationale: Cuneiform reading remains review-required until exact coordinates and
+    accepted readout exist.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - cuneiform_missing_coordinates
+  - cuneiform_reading_not_accepted
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - visual_missing_coordinates
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_visual-stage4b-delimiter-three-dot-page5
+  observation_id: stage4b-delimiter-three-dot-page5
+  source_family: stage4b_visual
+  source_path: data/observations/visual/stage4b-visual-observation-records.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: needs_human_review
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: mirrored_three_dot_delimiter
+  why_dangerous: null
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - visual_missing_coordinates
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_visual-stage4b-delimiter-three-dot-page56
+  observation_id: stage4b-delimiter-three-dot-page56
+  source_family: stage4b_visual
+  source_path: data/observations/visual/stage4b-visual-observation-records.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: needs_human_review
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: mirrored_three_dot_delimiter
+  why_dangerous: null
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - visual_missing_coordinates
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_visual-stage4b-dot-binary-13-31-ambiguity
+  observation_id: stage4b-dot-binary-13-31-ambiguity
+  source_family: stage4b_visual
+  source_path: data/observations/visual/stage4b-visual-observation-records.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: quarantined
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: dot_binary_ambiguity
+  why_dangerous: null
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - review_state_quarantined
+  - visual_missing_coordinates
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4b_visual-stage4b-onion7-number-square-raw
+  observation_id: stage4b-onion7-number-square-raw
+  source_family: stage4b_visual
+  source_path: data/observations/visual/stage4b-visual-observation-records.yaml
+  observation_type: numeric_claim
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: null
+  false_positive_class: number_square_raw
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_cuneiform-stage4c-task-cuneiform-17-13-55-1
+  observation_id: stage4c-task-cuneiform-17-13-55-1
+  source_family: stage4c_cuneiform
+  source_path: data/observations/visual/stage4c-cuneiform-reading-candidates.yaml
+  observation_type: visual_cuneiform_candidate
+  review_state: needs_coordinates
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Cuneiform reading remains review-required until exact coordinates and
+    accepted readout exist.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - cuneiform_missing_coordinates
+  - cuneiform_reading_not_accepted
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_delimiter-stage4c-task-stage4b-delimiter-three-dot-page5
+  observation_id: stage4c-task-stage4b-delimiter-three-dot-page5
+  source_family: stage4c_delimiter
+  source_path: data/observations/visual/stage4c-delimiter-annotation-tasks.yaml
+  observation_type: delimiter_candidate
+  review_state: needs_human_review
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Delimiter observations need human review before any handedness or reset
+    metadata can be inferred.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_delimiter-stage4c-task-stage4b-delimiter-three-dot-page56
+  observation_id: stage4c-task-stage4b-delimiter-three-dot-page56
+  source_family: stage4c_delimiter
+  source_path: data/observations/visual/stage4c-delimiter-annotation-tasks.yaml
+  observation_type: delimiter_candidate
+  review_state: needs_human_review
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Delimiter observations need human review before any handedness or reset
+    metadata can be inferred.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_dot-stage4c-task-dot-binary-13-31-ambiguity
+  observation_id: stage4c-task-dot-binary-13-31-ambiguity
+  source_family: stage4c_dot
+  source_path: data/observations/visual/stage4c-dot-pattern-annotation-tasks.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: quarantined
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - review_state_quarantined
+  - source_not_locked
+  - visual_missing_coordinates
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-ad-hoc-prime-magic-square-arithmetic
+  observation_id: stage4c-negative-ad-hoc-prime-magic-square-arithmetic
+  source_family: stage4c_negative
+  source_path: data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: needs_human_coordinates
+  false_positive_class: ad_hoc_prime_magic_square_arithmetic
+  why_dangerous: Prime-nearby and no-rule arithmetic can make coincidences look intentional.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-ai-generated-page-solves
+  observation_id: stage4c-negative-ai-generated-page-solves
+  source_family: stage4c_negative
+  source_path: data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: needs_human_coordinates
+  false_positive_class: ai_generated_page_solves
+  why_dangerous: AI-generated plaintext can hallucinate even solved-page context.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-braille-dot-readings
+  observation_id: stage4c-negative-braille-dot-readings
+  source_family: stage4c_negative
+  source_path: data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: quarantined
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: braille_dot_readings
+  why_dangerous: Too many plausible readings can be imposed on sparse dot motifs.
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - review_state_quarantined
+  - source_not_locked
+  - visual_missing_coordinates
+  - visual_missing_page_or_image_reference
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-constellation-dot-readings
+  observation_id: stage4c-negative-constellation-dot-readings
+  source_family: stage4c_negative
+  source_path: data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: quarantined
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: constellation_dot_readings
+  why_dangerous: Resemblance-only star matching is unstable and contradictory.
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - review_state_quarantined
+  - source_not_locked
+  - visual_missing_coordinates
+  - visual_missing_page_or_image_reference
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-cuneiform-reading-as-fact
+  observation_id: stage4c-negative-cuneiform-reading-as-fact
+  source_family: stage4c_negative
+  source_path: data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml
+  observation_type: visual_cuneiform_candidate
+  review_state: needs_coordinates
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: cuneiform_reading_as_fact
+  why_dangerous: The arithmetic is clean only if the visual segmentation is accepted.
+  rationale: Cuneiform reading remains review-required until exact coordinates and
+    accepted readout exist.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - cuneiform_missing_coordinates
+  - cuneiform_reading_not_accepted
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+  - visual_missing_page_or_image_reference
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-forced-13-31-dot-values
+  observation_id: stage4c-negative-forced-13-31-dot-values
+  source_family: stage4c_negative
+  source_path: data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: quarantined
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: forced_13_31_dot_values
+  why_dangerous: 13 and 31 depend on anchor, rotation, grouping, and polarity choices.
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - review_state_quarantined
+  - source_not_locked
+  - visual_missing_coordinates
+  - visual_missing_page_or_image_reference
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-geometry-mirror-overlay-dumps
+  observation_id: stage4c-negative-geometry-mirror-overlay-dumps
+  source_family: stage4c_negative
+  source_path: data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: needs_human_coordinates
+  false_positive_class: geometry_mirror_overlay_dumps
+  why_dangerous: Overlays can manufacture structure from arbitrary alignments.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-incorrect-base60-conversion
+  observation_id: stage4c-negative-incorrect-base60-conversion
+  source_family: stage4c_negative
+  source_path: data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: needs_human_coordinates
+  false_positive_class: incorrect_base60_conversion
+  why_dangerous: Sexagesimal arithmetic can be correct while the glyph readout is
+    wrong.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-mayfly-dot-skip-index-theory
+  observation_id: stage4c-negative-mayfly-dot-skip-index-theory
+  source_family: stage4c_negative
+  source_path: data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: quarantined
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: mayfly_dot_skip_index_theory
+  why_dangerous: Large claims from weak visual evidence are high-risk false positives.
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - review_state_quarantined
+  - source_not_locked
+  - visual_missing_coordinates
+  - visual_missing_page_or_image_reference
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_negative-stage4c-negative-spectrogram-pareidolia
+  observation_id: stage4c-negative-spectrogram-pareidolia
+  source_family: stage4c_negative
+  source_path: data/observations/visual/stage4c-visual-negative-control-annotation-tasks.yaml
+  observation_type: negative_control
+  review_state: negative_control
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: needs_human_coordinates
+  false_positive_class: spectrogram_pareidolia
+  why_dangerous: Spectrogram shapes are easy to over-read without exact expected payloads.
+  rationale: Negative-control class is useful as a control without truth acceptance.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - negative_control_not_truth_candidate
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-negative-ad-hoc-prime-magic-square-arithmetic
+  observation_id: stage4c-negative-ad-hoc-prime-magic-square-arithmetic
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: numeric_claim
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-negative-ai-generated-page-solves
+  observation_id: stage4c-negative-ai-generated-page-solves
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: numeric_claim
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-negative-braille-dot-readings
+  observation_id: stage4c-negative-braille-dot-readings
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: numeric_claim
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-negative-constellation-dot-readings
+  observation_id: stage4c-negative-constellation-dot-readings
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: numeric_claim
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-negative-cuneiform-reading-as-fact
+  observation_id: stage4c-negative-cuneiform-reading-as-fact
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: numeric_claim
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-negative-forced-13-31-dot-values
+  observation_id: stage4c-negative-forced-13-31-dot-values
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: numeric_claim
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-negative-geometry-mirror-overlay-dumps
+  observation_id: stage4c-negative-geometry-mirror-overlay-dumps
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: numeric_claim
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-negative-incorrect-base60-conversion
+  observation_id: stage4c-negative-incorrect-base60-conversion
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: numeric_claim
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-negative-mayfly-dot-skip-index-theory
+  observation_id: stage4c-negative-mayfly-dot-skip-index-theory
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: numeric_claim
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-negative-spectrogram-pareidolia
+  observation_id: stage4c-negative-spectrogram-pareidolia
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: numeric_claim
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-task-cuneiform-17-13-55-1
+  observation_id: stage4c-task-cuneiform-17-13-55-1
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: visual_cuneiform_candidate
+  review_state: needs_coordinates
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Cuneiform reading remains review-required until exact coordinates and
+    accepted readout exist.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - cuneiform_missing_coordinates
+  - cuneiform_reading_not_accepted
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-task-dot-binary-13-31-ambiguity
+  observation_id: stage4c-task-dot-binary-13-31-ambiguity
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: needs_human_review
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-task-number-square-raw-reference
+  observation_id: stage4c-task-number-square-raw-reference
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: numeric_claim
+  review_state: needs_source_lock
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Automated Stage 4J policy review prevents implicit promotion.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-task-stage4b-delimiter-three-dot-page5
+  observation_id: stage4c-task-stage4b-delimiter-three-dot-page5
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: needs_human_review
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4c_tasks-stage4c-task-stage4b-delimiter-three-dot-page56
+  observation_id: stage4c-task-stage4b-delimiter-three-dot-page56
+  source_family: stage4c_tasks
+  source_path: data/observations/visual/stage4c-visual-annotation-tasks.yaml
+  observation_type: visual_dot_pattern_candidate
+  review_state: needs_human_review
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: true
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: true
+  annotation_status: needs_human_coordinates
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Dot readings remain ambiguous and unforced; use as review/quarantine
+    material, not seeds.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - dot_reading_ambiguous_or_unforced
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4e_image_artifacts-stage4e-lp-jpeg-like-artifact-preflight
+  observation_id: stage4e-lp-jpeg-like-artifact-preflight
+  source_family: stage4e_image_artifacts
+  source_path: data/observations/visual/stage4e-image-compression-artifact-observations.yaml
+  observation_type: image_compression_artifact_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Image artifact observations require future source-variant preflight and
+    controls.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+  - source_not_locked
+  - visual_missing_coordinates
+  - visual_missing_page_or_image_reference
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4f_audio-stage4b-charleswyt-mp3stego
+  observation_id: stage4b-charleswyt-mp3stego
+  source_family: stage4f_audio
+  source_path: data/observations/stego/stage4f-audio-fixture-source-records.yaml
+  observation_type: stego_audio_fixture_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Fixture candidate remains deferred until assets and documented toolchain
+    are available.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4f_audio-stage4b-uncovering-instar-emergence
+  observation_id: stage4b-uncovering-instar-emergence
+  source_family: stage4f_audio
+  source_path: data/observations/stego/stage4f-audio-fixture-source-records.yaml
+  observation_type: stego_audio_fixture_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Fixture candidate remains deferred until assets and documented toolchain
+    are available.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4f_audio-stage4b-uncovering-what-happened-2014
+  observation_id: stage4b-uncovering-what-happened-2014
+  source_family: stage4f_audio
+  source_path: data/observations/stego/stage4f-audio-fixture-source-records.yaml
+  observation_type: stego_audio_fixture_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Fixture candidate remains deferred until assets and documented toolchain
+    are available.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4f_audio-stage4e-cicada-solvers-iddqd
+  observation_id: stage4e-cicada-solvers-iddqd
+  source_family: stage4f_audio
+  source_path: data/observations/stego/stage4f-audio-fixture-source-records.yaml
+  observation_type: stego_audio_fixture_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Fixture candidate remains deferred until assets and documented toolchain
+    are available.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4f_audio-stage4e-cicada-solvers-iddqd
+  observation_id: stage4e-cicada-solvers-iddqd
+  source_family: stage4f_audio
+  source_path: data/observations/stego/stage4f-audio-fixture-source-records.yaml
+  observation_type: stego_audio_fixture_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Fixture candidate remains deferred until assets and documented toolchain
+    are available.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4f_outguess-stage4b-complete-archive-magicsquares
+  observation_id: stage4b-complete-archive-magicsquares
+  source_family: stage4f_outguess
+  source_path: data/observations/stego/stage4f-outguess-fixture-source-records.yaml
+  observation_type: stego_audio_fixture_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Fixture candidate remains deferred until assets and documented toolchain
+    are available.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4f_outguess-stage4b-uncovering-outguess
+  observation_id: stage4b-uncovering-outguess
+  source_family: stage4f_outguess
+  source_path: data/observations/stego/stage4f-outguess-fixture-source-records.yaml
+  observation_type: stego_audio_fixture_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Fixture candidate remains deferred until assets and documented toolchain
+    are available.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4f_outguess-stage4e-cicada-solvers-iddqd
+  observation_id: stage4e-cicada-solvers-iddqd
+  source_family: stage4f_outguess
+  source_path: data/observations/stego/stage4f-outguess-fixture-source-records.yaml
+  observation_type: stego_audio_fixture_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Fixture candidate remains deferred until assets and documented toolchain
+    are available.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4f_outguess-stage4e-cicada-solvers-iddqd
+  observation_id: stage4e-cicada-solvers-iddqd
+  source_family: stage4f_outguess
+  source_path: data/observations/stego/stage4f-outguess-fixture-source-records.yaml
+  observation_type: stego_audio_fixture_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Fixture candidate remains deferred until assets and documented toolchain
+    are available.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4f_outguess-stage4e-cicada-solvers-iddqd
+  observation_id: stage4e-cicada-solvers-iddqd
+  source_family: stage4f_outguess
+  source_path: data/observations/stego/stage4f-outguess-fixture-source-records.yaml
+  observation_type: stego_audio_fixture_candidate
+  review_state: deferred
+  reviewed_by: automated_policy_check
+  source_locked: true
+  public_source_corroboration: true
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Fixture candidate remains deferred until assets and documented toolchain
+    are available.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_deferred
+  - review_state_not_accepted
+- record_type: observation_review_decision
+  review_decision_id: stage4j-decision-stage4g_cookie_summary-exp_stage4b_cookie_pack_v2
+  observation_id: exp_stage4b_cookie_pack_v2
+  source_family: stage4g_cookie_summary
+  source_path: data/observations/web/stage4g-cookie-refresh-summary.yaml
+  observation_type: cookie_hash_candidate
+  review_state: rejected
+  reviewed_by: automated_policy_check
+  source_locked: false
+  public_source_corroboration: false
+  has_page_or_image_reference: false
+  has_coordinates: false
+  accepted_reading: false
+  ambiguous: false
+  annotation_status: null
+  false_positive_class: null
+  why_dangerous: null
+  rationale: Stage 4G exact source-backed cookie refresh produced zero exact matches.
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  promotion_blocked_reasons:
+  - explicit_promotion_not_requested
+  - review_state_not_accepted
+  - review_state_rejected
+  - source_not_locked

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/observations/observation-promotion-record-v0.schema.json",
+  "title": "Observation Promotion Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "promotion_record_id",
+    "observation_id",
+    "review_state",
+    "promotion_status",
+    "source_locked",
+    "solve_claim",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "record_type": { "const": "observation_promotion_record" },
+    "promotion_record_id": { "type": "string", "minLength": 1 },
+    "observation_id": { "type": "string", "minLength": 1 },
+    "review_state": {
+      "enum": [
+        "pending",
+        "needs_human_review",
+        "needs_source_lock",
+        "needs_coordinates",
+        "accepted",
+        "rejected",
+        "deferred",
+        "quarantined",
+        "superseded",
+        "negative_control",
+        "promoted_to_manifest"
+      ]
+    },
+    "promotion_status": { "enum": ["blocked", "eligible", "promoted_to_manifest"] },
+    "source_locked": { "type": "boolean" },
+    "requires_coordinates": { "type": "boolean", "default": false },
+    "has_coordinates": { "type": "boolean", "default": false },
+    "blocked_reasons": { "type": "array", "items": { "type": "string" } },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "type": "boolean", "default": false }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "promotion_status": { "const": "promoted_to_manifest" } } },
+      "then": {
+        "properties": {
+          "review_state": { "enum": ["accepted", "promoted_to_manifest"] },
+          "usable_as_experiment_seed": { "const": true }
+        }
+      }
+    }
+  ]
+}

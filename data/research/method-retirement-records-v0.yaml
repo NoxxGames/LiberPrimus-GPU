@@ -68,11 +68,11 @@ records:
     method_family_id: cuda_gpu_acceleration
     retired_status: deferred
     reason: CUDA is intentionally delayed until CPU batch APIs, scorer contracts, parity tests, and benchmarks exist.
-    evidence: [Project policy and Stage 3W anti-drift state keep CUDA deferred, Stage 4H added the CPU batch parity contract, and Stage 4I added scoring semantics without GPU code.]
-    stages_supporting: [stage-3w, stage-4h, stage-4i]
-    reopen_conditions: [Stage 4H CPU batch API, Stage 4I scorer consolidation, transform-and-score parity tests, and benchmark plan are complete.]
+    evidence: [Project policy and Stage 3W anti-drift state keep CUDA deferred, Stage 4H added the CPU batch parity contract, Stage 4I added scoring semantics, and Stage 4J added observation review gates without GPU code.]
+    stages_supporting: [stage-3w, stage-4h, stage-4i, stage-4j]
+    reopen_conditions: [Stage 4H CPU batch API, Stage 4I scorer consolidation, Stage 4J observation review gates, transform-and-score parity tests, and benchmark plan are complete.]
     prohibited_expansions: [GPU kernels without CPU reference, parity tests, and benchmark plan.]
-    notes: First future CUDA target is batch transform-and-score parity; Stage 4H and Stage 4I did not implement CUDA.
+    notes: First future CUDA target is batch transform-and-score parity; Stage 4H, Stage 4I, and Stage 4J did not implement CUDA.
   - record_type: method_retirement_record
     method_family_id: cpu_batch_transform_api
     retired_status: active_with_constraints
@@ -91,6 +91,15 @@ records:
     reopen_conditions: [A future stage adds a scorer with committed scorer records, compatibility mapping, tests, calibration notes, and CPU batch compatibility checks.]
     prohibited_expansions: [New magic scorers, LLM or ML scoring, score labels that imply solved/plaintext_verified, CUDA scoring without CPU score-summary parity.]
     notes: High scores create review leads only and cannot validate plaintext.
+  - record_type: method_retirement_record
+    method_family_id: observation_review_workflow
+    retired_status: active_with_constraints
+    reason: Observation review is active infrastructure, but automatic or implied promotion of observations into seeds would recreate false-positive risk.
+    evidence: [Stage 4J generated review decisions, promotion gates, quarantine records, path sanitisation, and stale-doc checks for committed observation families.]
+    stages_supporting: [stage-4j]
+    reopen_conditions: [A new observation family or promotion request has a source lock, explicit review state, and policy-backed promotion path.]
+    prohibited_expansions: [Review-only seed use, visual meaning promotion without coordinates and accepted review, Discord-derived promotion without public corroboration, absolute local path commits.]
+    notes: Negative controls can be used as controls without accepting them as true observations.
   - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints

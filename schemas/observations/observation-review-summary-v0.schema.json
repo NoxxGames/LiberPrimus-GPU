@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/observations/observation-review-summary-v0.schema.json",
+  "title": "Observation Review Summary v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage",
+    "observations_loaded",
+    "decisions_created",
+    "solve_claim",
+    "trusted_as_canonical",
+    "generated_outputs_committed"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "record_type": { "const": "observation_review_summary" },
+    "stage": { "const": "stage4j" },
+    "observations_loaded": { "type": "integer", "minimum": 0 },
+    "decisions_created": { "type": "integer", "minimum": 0 },
+    "accepted_count": { "type": "integer", "minimum": 0 },
+    "rejected_count": { "type": "integer", "minimum": 0 },
+    "deferred_count": { "type": "integer", "minimum": 0 },
+    "quarantined_count": { "type": "integer", "minimum": 0 },
+    "negative_control_count": { "type": "integer", "minimum": 0 },
+    "promoted_to_manifest_count": { "type": "integer", "minimum": 0 },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "generated_outputs_committed": { "const": false }
+  }
+}

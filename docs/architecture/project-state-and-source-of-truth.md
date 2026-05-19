@@ -2,7 +2,7 @@
 
 ## Current Reviewed State
 
-Stage 3V is complete; Stage 3W through Stage 3Z are complete. Stage 4A through Stage 4I are complete. The next planned stage is Stage 4J observation review workflow hardening.
+Stage 3V is complete; Stage 3W through Stage 3Z are complete. Stage 4A through Stage 4J are complete. The next planned stage is Stage 4K allowlisted public source-lock snapshots.
 
 The current safety posture is:
 
@@ -79,11 +79,11 @@ Use these Stage 3Z maps for orientation:
 
 ## Deferred Work
 
-Deferred work after Stage 4D:
+Current deferred work is tracked in `docs/roadmap/staged-plan.md` and the
+research synthesis ledgers. The active near-term queue after Stage 4J is:
 
-- Stage 4E: cookie exact-candidate refresh.
-- Later: OutGuess/audio historical fixture source-locking.
-- Complete: CPU batch transform API extraction.
-- Next: scorer consolidation and calibration report.
-- OutGuess historical fixture acquisition and source-locking.
-- CUDA parity planning after CPU batch APIs and stable scoring contracts exist.
+- Stage 4K allowlisted public source-lock snapshots.
+- OutGuess/audio execution remains deferred until source-locked assets and
+  documented toolchains are available.
+- CUDA parity planning remains deferred until CPU batch APIs, stable scoring
+  contracts, observation review gates, parity tests, and benchmarks exist.

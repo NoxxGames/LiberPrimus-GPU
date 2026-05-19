@@ -375,3 +375,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 4I does not invent a new scoring model or run experiments; scoring remains triage metadata only.
+  - record_type: stage_summary_record
+    stage_id: stage-4j
+    title: Observation review workflow hardening
+    status: complete
+    category: infrastructure
+    summary: Hardened the observation review lifecycle with review-state records, promotion gates, quarantine records, documentation freshness checks, and absolute local path sanitisation.
+    key_outputs:
+      - "`libreprimus observation-review` CLI for build, validate, summary, and path-sanitisation checks."
+      - Observation review policy, decision, promotion, quarantine, and summary records for existing committed observation families.
+      - State-drift and path-sanitisation guardrails that block stale current-stage text and absolute local machine paths in operational records.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 4J loaded 96 committed observations, created 96 review decisions, blocked review-only visual observations from seed use, and ran no experiments.

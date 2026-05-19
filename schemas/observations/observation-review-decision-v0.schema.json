@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/observations/observation-review-decision-v0.schema.json",
+  "title": "Observation Review Decision v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "review_decision_id",
+    "observation_id",
+    "observation_type",
+    "review_state",
+    "reviewed_by",
+    "source_locked",
+    "solve_claim",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "record_type": { "const": "observation_review_decision" },
+    "review_decision_id": { "type": "string", "minLength": 1 },
+    "observation_id": { "type": "string", "minLength": 1 },
+    "observation_type": {
+      "enum": [
+        "visual_cuneiform_candidate",
+        "visual_dot_pattern_candidate",
+        "delimiter_candidate",
+        "numeric_claim",
+        "gp_rune_claim",
+        "source_link",
+        "cookie_hash_candidate",
+        "stego_audio_fixture_candidate",
+        "image_compression_artifact_candidate",
+        "discord_derived_lead",
+        "negative_control"
+      ]
+    },
+    "review_state": {
+      "enum": [
+        "pending",
+        "needs_human_review",
+        "needs_source_lock",
+        "needs_coordinates",
+        "accepted",
+        "rejected",
+        "deferred",
+        "quarantined",
+        "superseded",
+        "negative_control",
+        "promoted_to_manifest"
+      ]
+    },
+    "reviewed_by": {
+      "enum": ["human", "codex_synthetic", "source_lock_verifier", "automated_policy_check"]
+    },
+    "source_locked": { "type": "boolean" },
+    "public_source_corroboration": { "type": "boolean", "default": false },
+    "has_page_or_image_reference": { "type": "boolean", "default": false },
+    "has_coordinates": { "type": "boolean", "default": false },
+    "promotion_blocked_reasons": { "type": "array", "items": { "type": "string" } },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false }
+  }
+}

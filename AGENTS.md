@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4I - scorer consolidation and calibration report.
+Current completed stage: Stage 4J - observation review workflow hardening.
 
-Current work: Stage 4J - observation review workflow hardening. Stage 4J should harden review workflow records and status transitions before any visual/numeric observation becomes an experiment seed; it must not run broad search, activate CUDA, change corpus status, finalize page boundaries, or claim a solve.
+Current work: Stage 4K - allowlisted public source-lock snapshots. Stage 4K should remain a source-lock snapshot stage, not broad crawling or experiment execution.
 
 Current project state:
 
@@ -102,6 +102,12 @@ Current project state:
 - New scorers require scorer records, confidence-label mapping, tests, and calibration notes.
 - Future CUDA must preserve score-summary semantics before any GPU score is trusted.
 - Score labels cannot imply `solved` or `plaintext_verified`.
+- Stage 4J generated observation-review reports are generated and ignored under `experiments/results/observation-review/stage4j/`.
+- Observation promotion requires review-state checks and explicit promotion records.
+- Review-only observations cannot be used as experiment seeds.
+- Visual observations require page/image references and coordinate/region evidence before seed promotion.
+- Absolute local machine paths must not be committed in operational records; use repository-relative generated-output paths or mark troubleshooting examples as `example_path`.
+- Current-state text should be centralized through `STATUS.md` and `docs/roadmap/staged-plan.md` rather than copied into volatile paragraphs.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
 - Upload only generated `site/` contents, never raw `third_party/` inputs.
 - Wiki publish failures should be recorded with exact errors and manual recovery steps, but research stages should not fail solely because the GitHub Wiki remote is unavailable.

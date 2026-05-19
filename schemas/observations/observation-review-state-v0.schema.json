@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/observations/observation-review-state-v0.schema.json",
+  "title": "Observation Review State v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "review_state",
+    "solve_claim",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "record_type": { "const": "observation_review_state" },
+    "review_state": {
+      "enum": [
+        "pending",
+        "needs_human_review",
+        "needs_source_lock",
+        "needs_coordinates",
+        "accepted",
+        "rejected",
+        "deferred",
+        "quarantined",
+        "superseded",
+        "negative_control",
+        "promoted_to_manifest"
+      ]
+    },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "type": "boolean", "default": false }
+  }
+}

@@ -186,8 +186,10 @@ Current status:
 - Latest stego/audio fixture stage: Stage 4F recorded `5` OutGuess fixture source records, `5` audio fixture source records, `10` source-health records, `5` toolchain requirement records, and `4` disabled future manifests without running OutGuess, OpenPuff, MP3Stego, hexdump/strings, audio analysis, or committing raw artefacts.
 - Latest cookie refresh stage: Stage 4G generated `4` source-backed candidates before and after deduplication, marked `2` previous-pack duplicates, ran `8` SHA-256 exact comparisons, and found `0` exact matches without fuzzy matching, hashcat, GPU/CUDA, raw Discord processing, raw page-image processing, or solve claims.
 - Latest CPU batch API stage: Stage 4H executed `6` synthetic CPU-only candidates, supported all `6` current registry transforms, wrote `6` ignored result records, and created the CPU/CUDA parity contract without GPU code.
+- Latest scorer consolidation stage: Stage 4I recorded `3` scorer records, `9` confidence labels, `11` compatibility mappings, and `1` calibration profile. Positive/null/negative controls are available, CPU batch score compatibility is true, and scoring remains triage only.
+- Latest observation review stage: Stage 4J loaded `96` observation-family records, wrote `96` review decisions, `96` promotion-gate records, `23` quarantine records, and promoted `0` observations to manifests. Review-only observations remain non-seeds.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 4I scorer consolidation and calibration report.
+- Next: Stage 4K allowlisted public source-lock snapshots.
 
 ## How To Use This Repo
 

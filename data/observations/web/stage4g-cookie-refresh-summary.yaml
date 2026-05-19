@@ -32,8 +32,8 @@ generated_outputs_committed: false
 raw_discord_processed: false
 raw_lp_images_processed: false
 output_paths:
-  candidate_records: O:\Programming\LiberPrimusSolver\experiments\results\cookie-refresh\stage4g\candidate_records.jsonl
-  exact_matches: O:\Programming\LiberPrimusSolver\experiments\results\cookie-refresh\stage4g\exact_matches.jsonl
-  duplicate_candidates: O:\Programming\LiberPrimusSolver\experiments\results\cookie-refresh\stage4g\duplicate_candidates.jsonl
-  summary: O:\Programming\LiberPrimusSolver\experiments\results\cookie-refresh\stage4g\summary.json
-  warnings: O:\Programming\LiberPrimusSolver\experiments\results\cookie-refresh\stage4g\warnings.jsonl
+  candidate_records: experiments/results/cookie-refresh/stage4g/candidate_records.jsonl
+  exact_matches: experiments/results/cookie-refresh/stage4g/exact_matches.jsonl
+  duplicate_candidates: experiments/results/cookie-refresh/stage4g/duplicate_candidates.jsonl
+  summary: experiments/results/cookie-refresh/stage4g/summary.json
+  warnings: experiments/results/cookie-refresh/stage4g/warnings.jsonl

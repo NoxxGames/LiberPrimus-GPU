@@ -22,9 +22,10 @@ Get-Command gh -ErrorAction SilentlyContinue
 
 ## Common Windows Install Paths
 
-Check these locations when Codex or another shell cannot find `gh` even though a user terminal can:
+Check these example paths when Codex or another shell cannot find `gh` even though a user terminal can:
 
 ```powershell
+# example_path:
 C:\Program Files\GitHub CLI\gh.exe
 C:\Program Files (x86)\GitHub CLI\gh.exe
 $env:LOCALAPPDATA\Programs\GitHub CLI\gh.exe
@@ -33,6 +34,7 @@ $env:LOCALAPPDATA\Programs\GitHub CLI\gh.exe
 If one exists, use the absolute path for optional run checks:
 
 ```powershell
+# example_path:
 & "C:\Program Files\GitHub CLI\gh.exe" run list --repo NoxxGames/LiberPrimus-GPU --workflow ci.yml --limit 5
 ```
 

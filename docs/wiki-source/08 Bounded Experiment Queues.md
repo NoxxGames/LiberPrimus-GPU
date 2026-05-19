@@ -142,6 +142,10 @@ If a CPU batch adapter is missing, add a synthetic manifest/test and output hash
 
 If a scoring label looks strong, treat it as a review lead only. Do not convert a score into a solve claim or broaden a method family without source-backed evidence and a bounded manifest.
 
+If an observation looks ready for a future bounded run, pass it through `libreprimus observation-review`
+first. Review-only visual, Discord-derived, cuneiform, dot, or negative-control records cannot become
+experiment seeds by implication.
+
 If a method family is retired or deprioritised, update the staged plan and method-retirement ledger
 before adding a new manifest.
 

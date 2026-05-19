@@ -63,6 +63,11 @@ Stage 4E adds only a source-variant and compression-artefact preflight backlog. 
 transforms. JPEG-like artefacts, star-like shapes, and compression/noise features remain review
 candidates until a future deterministic audit locks source variants and applies controls.
 
+Stage 4J adds the review workflow that blocks visual observations from becoming experiment seeds
+unless source/page references, coordinate or region evidence, and explicit review decisions are
+present. Cuneiform, dot, delimiter, compression-artefact, braille, and constellation observations
+remain noncanonical until accepted through that workflow.
+
 ## What Not To Commit
 
 Raw images, generated image-analysis JSONL outputs, generated transform images, contact sheets,
@@ -80,6 +85,9 @@ ignored `third_party/CicadaSolversIddqd/` raw cache contents are also not commit
 Generated Stage 4F stego/audio fixture reports under `experiments/results/stego-fixtures/stage4f/`
 are also not committed. Raw images, audio, binaries, fonts, archives, and extracted payloads remain
 outside Git.
+
+Generated Stage 4J observation-review reports under
+`experiments/results/observation-review/stage4j/` are also not committed.
 
 ## OutGuess Regression Boundary
 

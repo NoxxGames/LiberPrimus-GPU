@@ -18,3 +18,5 @@ Scoring records must preserve:
 - finite confidence label where scoring is available
 
 New scorers require scorer records, compatibility mapping, tests, and calibration notes before they can appear in CPU batch summaries.
+
+Stage 4J adds an observation-review gate after scoring. A score label can inform a review decision, but it cannot set `usable_as_experiment_seed=true`, accept an observation, promote a manifest, or imply a solve without the separate review and source-lock policy.

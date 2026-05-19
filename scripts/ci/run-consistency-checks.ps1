@@ -104,6 +104,15 @@ try {
         --data-dir data/scoring `
         --allow-warnings
 
+    Write-Host "Validating Stage 4J observation review workflow records"
+    & $Python -m libreprimus.cli observation-review validate `
+        --policy data/observations/review/stage4j-observation-review-policy.yaml `
+        --decisions data/observations/review/stage4j-observation-review-decisions.yaml `
+        --promotions data/observations/review/stage4j-observation-promotion-records.yaml `
+        --quarantine data/observations/review/stage4j-observation-quarantine-records.yaml `
+        --summary data/observations/review/stage4j-observation-review-summary.yaml
+    & $Python -m libreprimus.cli observation-review check-paths --repo-root .
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

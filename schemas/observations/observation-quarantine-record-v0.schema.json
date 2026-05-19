@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/observations/observation-quarantine-record-v0.schema.json",
+  "title": "Observation Quarantine Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "quarantine_record_id",
+    "observation_id",
+    "false_positive_class",
+    "why_dangerous",
+    "allowed_control_use",
+    "solve_claim",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "record_type": { "const": "observation_quarantine_record" },
+    "quarantine_record_id": { "type": "string", "minLength": 1 },
+    "observation_id": { "type": "string", "minLength": 1 },
+    "false_positive_class": { "type": "string", "minLength": 1 },
+    "why_dangerous": { "type": "string", "minLength": 1 },
+    "allowed_control_use": { "type": "boolean" },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false }
+  }
+}

@@ -63,6 +63,14 @@ Stage 4B records are durable context but not solve evidence. Future doc updates 
 
 Historical stage wording is allowed in `docs/development-logs/**`, `research-log/**`, and clearly archival sections. Operational docs must not describe old stages as current.
 
+## Local Path Sanitisation
+
+Stage 4J adds path-sanitisation checks for committed operational records and
+docs. Do not commit absolute local machine paths such as workstation drive
+paths, user-home paths, or UNC shares. If a troubleshooting document must show a
+platform path as an example, mark the line or fenced block with `example_path`.
+Generated output records should store repository-relative paths.
+
 ## Validation
 
 Run:

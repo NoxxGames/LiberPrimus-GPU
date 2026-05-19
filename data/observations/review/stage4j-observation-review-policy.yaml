@@ -1,0 +1,47 @@
+record_type: observation_review_policy
+policy_id: stage4j-observation-review-policy-v0
+stage: stage4j
+review_states:
+- pending
+- needs_human_review
+- needs_source_lock
+- needs_coordinates
+- accepted
+- rejected
+- deferred
+- quarantined
+- superseded
+- negative_control
+- promoted_to_manifest
+observation_types:
+- visual_cuneiform_candidate
+- visual_dot_pattern_candidate
+- delimiter_candidate
+- numeric_claim
+- gp_rune_claim
+- source_link
+- cookie_hash_candidate
+- stego_audio_fixture_candidate
+- image_compression_artifact_candidate
+- discord_derived_lead
+- negative_control
+promotion_gates:
+- source_locked_or_synthetic_fixture
+- review_state_accepted_or_promoted
+- solve_claim_false
+- trusted_as_canonical_false_by_default
+- usable_as_experiment_seed_requires_explicit_promotion
+- visual_requires_page_or_image_reference
+- visual_seed_requires_coordinates_or_non_coordinate_rationale
+- cuneiform_seed_requires_accepted_reading_and_coordinates
+- dot_seed_requires_unambiguous_ordering_polarity_and_coordinates
+- discord_seed_requires_public_source_corroboration
+- negative_controls_only_promote_as_controls
+review_principles:
+- observation_records_are_not_truth_until_reviewed
+- scoring_is_triage_not_proof
+- visual_interpretation_requires_explicit_review_state
+- review_only_observations_cannot_be_experiment_seeds
+- negative_controls_remain_first_class_controls_without_truth_acceptance
+solve_claim: false
+trusted_as_canonical: false

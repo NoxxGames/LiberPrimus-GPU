@@ -28,6 +28,8 @@ Use Codex safely for scoped repository stages.
 - For Stage 4F-style stego/audio fixture source-locking, require fixture metadata only, source-health records, toolchain requirement records, disabled future manifests, no raw artefact commits, no OutGuess/OpenPuff/MP3Stego/hexdump/audio execution, and no solve claim.
 - For Stage 4G-style cookie refresh work, require source-backed exact strings only, manifest-declared variants and algorithms, exact digest comparison, generated ignored outputs, method-ledger updates on zero matches, no fuzzy/partial matching, no hashcat, no GPU/CUDA, and no solve claim.
 - For Stage 4H-style CPU batch API work, require normalized token streams, explicit transform candidates, deterministic output hashes, synthetic tests, stable CLI behavior, generated ignored outputs, no new transform semantics without docs/tests, no CUDA, and no solve claim.
+- For Stage 4I-style scoring consolidation work, require scorer records, finite confidence labels, compatibility mapping, calibration notes, CPU batch compatibility checks, generated ignored outputs, no new scorer invention, no CUDA, and no solve claim.
+- For Stage 4J-style observation review work, require review-state schemas, decisions, promotion gates, quarantine records, path sanitisation checks, stale-doc repair, generated ignored outputs, no experiment execution, and no solve claim.
 
 ## Commands
 
@@ -109,6 +111,10 @@ If Codex changes scoring behavior, verify `libreprimus scoring validate`,
 `libreprimus scoring check-cpu-batch-compatibility`, confidence-label mapping tests, and
 calibration notes before staging. Score labels are triage metadata only and must not imply solved
 or plaintext verified.
+
+If Codex changes observation review behavior, verify `libreprimus observation-review validate`,
+`libreprimus observation-review check-paths`, promotion-gate tests, quarantine tests, and path
+sanitisation tests before staging. Review-only observations cannot become experiment seeds.
 
 If Codex changes CLI registration, verify `python -m libreprimus.cli --help`, selected group
 `--help` commands, and the Stage 3X command-surface tests before staging. Do not create

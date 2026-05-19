@@ -7,6 +7,7 @@ from pathlib import Path
 import re
 
 from libreprimus.consistency.models import ConsistencyCheckResult, fail_result, pass_result
+from libreprimus.observation_review.path_sanitisation import check_paths_summary
 from libreprimus.paths import repo_root
 
 GROUP = "state_drift"
@@ -95,6 +96,26 @@ STALE_CURRENT_STATE_PATTERNS = (
         "stale_stage3i_next",
         re.compile(r"\bstage\s+3i\b.*\bnext\b|\bnext\b.*\bstage\s+3i\b", re.IGNORECASE),
         "Stage 3I is not the next stage after Stage 3V.",
+    ),
+    StalePattern(
+        "stale_next_stage4i",
+        re.compile(r"\bnext:\s*stage\s+4i\b", re.IGNORECASE),
+        "Stage 4I is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
+        "stale_stage3z_current",
+        re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
+        "Stage 3Z is no longer the current stage.",
+    ),
+    StalePattern(
+        "stale_stage3y_latest_completed",
+        re.compile(r"\bstage\s+3y\s+is\s+the\s+latest\s+completed\b", re.IGNORECASE),
+        "Stage 3Y is no longer the latest completed stage.",
+    ),
+    StalePattern(
+        "stale_deferred_after_stage4d",
+        re.compile(r"\bdeferred\s+work\s+after\s+stage\s+4d\b", re.IGNORECASE),
+        "Stage 4D deferred-work wording is stale in current operational context.",
     ),
 )
 
@@ -279,9 +300,25 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4j_observation_review_next",
-        "stage 4j" in staged_plan and "observation review" in staged_plan,
-        "Staged plan records Stage 4J observation review workflow hardening as next.",
+        "stage4j_observation_review_current_or_complete",
+        "stage 4j" in staged_plan
+        and "observation review" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4J observation review workflow hardening as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4k_source_lock_snapshots_next",
+        "stage 4k" in staged_plan and "source-lock" in staged_plan and "snapshot" in staged_plan,
+        "Staged plan records Stage 4K allowlisted public source-lock snapshots as next.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "observation_review_workflow_present",
+        "observation review" in combined and "promotion" in combined and "experiment seed" in combined,
+        "Observation review and promotion gates are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -420,6 +457,26 @@ def check_state_drift_consistency(
         "pyproject description is not a Stage 0A scaffold description.",
         root / "pyproject.toml",
     )
+    path_summary = check_paths_summary(root)
+    if path_summary["path_sanitisation_passed"]:
+        results.append(
+            pass_result(
+                GROUP,
+                "no_absolute_local_paths",
+                "Operational docs and records contain no unsafe absolute local paths.",
+                path=root,
+            )
+        )
+    else:
+        results.append(
+            fail_result(
+                GROUP,
+                "no_absolute_local_paths",
+                "Operational docs or records contain unsafe local paths or stale current-state text.",
+                path=root,
+                data=path_summary,
+            )
+        )
     return results
 
 

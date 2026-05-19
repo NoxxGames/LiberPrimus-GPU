@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, and Stage 4H CPU batch/parity records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, and Stage 4J observation review records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -25,6 +25,10 @@ Stage 4F stego/audio fixture source records are committed metadata records only.
 Stage 4G cookie refresh schemas require exact-match-only records: `no_solve_claim=true`, `cuda_used=false`, `cloud_execution=false`, `hashcat_used=false`, `fuzzy_matching=false`, `partial_matching=false`, manifest-declared variants and algorithms, and source-backed base strings. Generated candidate/exact-match JSONL and summary JSON remain ignored under `experiments/results/cookie-refresh/stage4g/`; only the aggregate YAML summary is committed.
 
 Stage 4H CPU batch records require `cpu_only=true`, `cuda_used=false`, `cuda_required=false`, `no_solve_claim=true`, `canonical_corpus_active=false`, `page_boundaries_final=false`, and `generated_outputs_committed=false`. Generated result JSONL and summary JSON remain ignored under `experiments/results/cpu-batch/stage4h/`; only the aggregate YAML summary and parity contract are committed.
+
+Stage 4I scoring records require finite confidence labels, scorer IDs/versions, calibration-profile references where available, `solve_claim=false`, `trusted_as_canonical=false`, and `cuda_used=false`. Generated scorer inventories and rendered calibration reports remain ignored under `experiments/results/scoring-consolidation/stage4i/`.
+
+Stage 4J observation review records require explicit review states, promotion gates, quarantine/control records, `solve_claim=false`, `trusted_as_canonical=false`, and `usable_as_experiment_seed=false` unless a future explicit promotion stage changes that with review evidence. Generated review decision, quarantine, promotion-gate, and path-sanitisation reports remain ignored under `experiments/results/observation-review/stage4j/`.
 
 ## Result record principles
 

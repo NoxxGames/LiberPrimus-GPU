@@ -37,7 +37,10 @@ git check-ignore -v experiments/results/visual-annotation/stage4c/site/index.htm
 git check-ignore -v experiments/results/bounded-numeric/stage4d/summary.json
 git check-ignore -v experiments/results/source-delta/stage4e/source_delta_report.json
 git check-ignore -v experiments/results/stego-fixtures/stage4f/fixture_candidate_report.json
+git check-ignore -v experiments/results/cookie-refresh/stage4g/summary.json
 git check-ignore -v experiments/results/cpu-batch/stage4h/summary.json
+git check-ignore -v experiments/results/scoring-consolidation/stage4i/scorer_inventory.json
+git check-ignore -v experiments/results/observation-review/stage4j/review_decision_report.json
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 ```
 
@@ -106,6 +109,15 @@ If a Stage 4H CPU batch run leaves `result_records.jsonl`, `summary.json`,
 stage them. Commit only schemas, manifests, code, docs, tests, research logs, and aggregate summary
 YAML. Do not add CUDA code while fixing CPU batch failures.
 
+If a Stage 4I scoring consolidation run leaves `scorer_inventory.json`,
+`calibration_report_generated.json`, `cpu_batch_score_compatibility.json`, or `warnings.jsonl`,
+do not stage them. Commit only schemas, scoring data records, docs, tests, and research logs.
+
+If a Stage 4J observation review run leaves `review_decision_report.json`,
+`quarantine_report.json`, `promotion_gate_report.json`, `path_sanitisation_report.json`, or
+`warnings.jsonl`, do not stage them. Commit only schemas, review records, docs, tests, and research
+logs.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 
@@ -128,8 +140,17 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 4G, onboarding and staged-plan checks should show Stage 4G complete and Stage 4H CPU
-batch transform API extraction next.
+After Stage 4J, onboarding and staged-plan checks should show Stage 4J complete and Stage 4K
+allowlisted public source-lock snapshots next.
+
+If path sanitisation fails, run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli observation-review check-paths --repo-root .
+```
+
+Replace accidental absolute local paths with repository-relative paths. Keep command examples only
+when they are explicitly marked as example paths.
 
 ## Stage 4A Bundle Or Site Problems
 
@@ -288,6 +309,22 @@ rendered calibration reports, CPU batch compatibility JSON, or warning JSONL fil
 
 Committed scoring policy records live under `data/scoring/`. If `libreprimus scoring validate`
 fails, fix the committed records or schemas instead of staging generated reports.
+
+## Stage 4J Observation Review Validation Fails
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli observation-review validate `
+  --policy data/observations/review/stage4j-observation-review-policy.yaml `
+  --decisions data/observations/review/stage4j-observation-review-decisions.yaml `
+  --promotions data/observations/review/stage4j-observation-promotion-records.yaml `
+  --quarantine data/observations/review/stage4j-observation-quarantine-records.yaml `
+  --summary data/observations/review/stage4j-observation-review-summary.yaml
+```
+
+Failures usually mean a review state is invalid, a promotion record no longer matches policy gates,
+a quarantine record lacks a false-positive rationale, or a record implies a solve/canonical claim.
 
 ## A Scoring Label Looks Strong
 

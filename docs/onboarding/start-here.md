@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 3Y - result synthesis and method-retirement ledger.
-- Current stage: Stage 3Z - source-of-truth / newcomer map.
+- Latest completed stage: Stage 4J - observation review workflow hardening.
+- Next planned stage: Stage 4K - allowlisted public source-lock snapshots.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -19,6 +19,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 - Raw/generated outputs: ignored and not committed.
 - Discord raw logs: local, private, ignored research material.
 - Local page images: local, ignored third-party material.
+- Observation records: review-gated; review-only observations are not experiment
+  seeds without explicit acceptance and promotion.
 
 ## Where To Start
 

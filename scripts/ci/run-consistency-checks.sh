@@ -97,6 +97,15 @@ echo "Validating Stage 4I scoring consolidation records"
     --data-dir data/scoring \
     --allow-warnings
 
+echo "Validating Stage 4J observation review workflow records"
+"$python_bin" -m libreprimus.cli observation-review validate \
+    --policy data/observations/review/stage4j-observation-review-policy.yaml \
+    --decisions data/observations/review/stage4j-observation-review-decisions.yaml \
+    --promotions data/observations/review/stage4j-observation-promotion-records.yaml \
+    --quarantine data/observations/review/stage4j-observation-quarantine-records.yaml \
+    --summary data/observations/review/stage4j-observation-review-summary.yaml
+"$python_bin" -m libreprimus.cli observation-review check-paths --repo-root .
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

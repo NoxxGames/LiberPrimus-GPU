@@ -100,6 +100,27 @@ Rules:
 - Treat CPU batch output hashes as future parity anchors, not solve evidence.
 - Keep `cpu_only=true`, `cuda_used=false`, `no_solve_claim=true`, `canonical_corpus_active=false`, and `page_boundaries_final=false`.
 
+## Stage 4I Scorer Consolidation And Calibration
+
+Stage 4I is scoring infrastructure, not a new experiment family. It consolidates scorer records, finite confidence labels, compatibility mappings, calibration profile/report records, and CPU batch score-summary compatibility.
+
+Scoring remains triage metadata. A high score can create a review lead only; it cannot prove plaintext, justify a solve claim, or activate CUDA parity by itself. Generated scorer inventories and rendered reports remain ignored under `experiments/results/scoring-consolidation/stage4i/`.
+
+## Stage 4J Observation Review Workflow
+
+Stage 4J is observation lifecycle infrastructure, not an experiment. It turns committed observations into explicit review decisions, promotion-gate records, quarantine/negative-control records, and summary records.
+
+Rules:
+
+- Review-only observations cannot become experiment seeds.
+- Visual observations require page/image references and coordinates or an explicit non-coordinate rationale before promotion.
+- Cuneiform and dot observations remain noncanonical unless separately accepted and promoted.
+- Discord-derived observations require public-source corroboration before promotion.
+- Negative controls may be used as controls without being accepted as truth.
+- Absolute local machine paths in committed operational records are rejected.
+
+Generated Stage 4J reports remain ignored under `experiments/results/observation-review/stage4j/`. The committed review data lives under `data/observations/review/`.
+
 ## Experiment philosophy
 
 Experiments are reproducible tests of hypotheses, not evidence of solves by themselves.
