@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/visual/lp-page-gallery-record-v0.schema.json",
+  "title": "Liber Primus Page Gallery Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "image_id",
+    "source_relative_path",
+    "source_sha256",
+    "file_name",
+    "width",
+    "height",
+    "thumbnail_relative_path",
+    "full_copy_relative_path",
+    "site_page_relative_path",
+    "raw_source_committed",
+    "generated_copy_committed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "lp_page_gallery_record" },
+    "image_id": { "type": "string", "minLength": 1 },
+    "source_relative_path": { "type": "string", "minLength": 1 },
+    "source_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "file_name": { "type": "string", "minLength": 1 },
+    "width": { "type": "integer", "minimum": 1 },
+    "height": { "type": "integer", "minimum": 1 },
+    "thumbnail_relative_path": { "type": "string" },
+    "full_copy_relative_path": { "type": "string" },
+    "site_page_relative_path": { "type": "string" },
+    "raw_source_committed": { "const": false },
+    "generated_copy_committed": { "const": false },
+    "solve_claim": { "const": false },
+    "usable_as_experiment_seed": { "const": false }
+  },
+  "additionalProperties": true
+}

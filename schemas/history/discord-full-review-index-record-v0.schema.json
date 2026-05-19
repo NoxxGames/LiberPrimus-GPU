@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/history/discord-full-review-index-record-v0.schema.json",
+  "title": "Discord Full Review Index Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "index_id",
+    "index_type",
+    "message_ref",
+    "channel_id",
+    "redacted_excerpt",
+    "raw_message_committed",
+    "username_committed",
+    "private_url_committed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "discord_full_review_index_record" },
+    "index_id": { "type": "string", "minLength": 1 },
+    "index_type": { "type": "string", "minLength": 1 },
+    "message_ref": { "type": "string", "minLength": 1 },
+    "channel_id": { "type": "string", "minLength": 1 },
+    "redacted_excerpt": { "type": "string" },
+    "raw_message_committed": { "const": false },
+    "username_committed": { "const": false },
+    "user_id_committed": { "const": false },
+    "message_id_committed": { "const": false },
+    "private_url_committed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

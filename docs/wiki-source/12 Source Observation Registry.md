@@ -70,6 +70,11 @@ Stage 3V records OutGuess artefact metadata and source-lock placeholders under `
 and `data/locks/third-party/outguess-regression/`. These records are regression fixtures, not proof of
 hidden content. Missing tools or assets are valid skipped states.
 
+Stage 4A aggregate records under `data/observations/discord/stage4a-full-review-aggregate.yaml`
+and `data/observations/visual/stage4a-lp-page-gallery-aggregate.yaml` record generated bundle
+counts and privacy flags only. They do not promote raw Discord messages, usernames, private URLs, or
+page-image bytes into source truth.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
@@ -84,6 +89,8 @@ Do not commit generated Stage 3U hash candidate JSONL, exact-match JSONL, summar
 files.
 Do not commit generated Stage 3V extraction JSONL, tool JSON, summary JSON, synthetic inputs, or
 extracted payloads.
+Do not commit generated Stage 4A redacted streams, channel shards, topic shards, indexes, static
+site files, copied LP page images, thumbnails, contact sheets, or upload archives.
 
 ## Troubleshooting
 

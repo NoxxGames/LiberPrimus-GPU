@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/history/discord-full-review-shard-record-v0.schema.json",
+  "title": "Discord Full Review Shard Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "shard_id",
+    "channel_id",
+    "part_number",
+    "message_count",
+    "approximate_start_timestamp",
+    "approximate_end_timestamp",
+    "markdown_relative_path",
+    "html_relative_path",
+    "raw_message_committed"
+  ],
+  "properties": {
+    "record_type": { "const": "discord_full_review_shard_record" },
+    "shard_id": { "type": "string", "minLength": 1 },
+    "channel_id": { "type": "string", "minLength": 1 },
+    "part_number": { "type": "integer", "minimum": 1 },
+    "message_count": { "type": "integer", "minimum": 0 },
+    "approximate_start_timestamp": { "type": ["string", "null"] },
+    "approximate_end_timestamp": { "type": ["string", "null"] },
+    "markdown_relative_path": { "type": "string" },
+    "html_relative_path": { "type": "string" },
+    "raw_message_committed": { "const": false },
+    "username_committed": { "const": false },
+    "private_url_committed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

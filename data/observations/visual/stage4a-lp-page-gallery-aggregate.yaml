@@ -1,0 +1,16 @@
+record_type: lp_page_stage4a_gallery_aggregate
+run_id: stage4a-discord-full-review
+generated_at_utc: '2026-05-19T00:00:36Z'
+lp_pages_source_dir: third_party/LiberPrimusPages
+generated_output_dir: experiments/results/discord-full-review/stage4a/lp_pages
+site_gallery_path: experiments/results/discord-full-review/stage4a/site/lp-pages/index.html
+lp_page_image_count: 58
+lp_page_thumbnail_count: 58
+raw_source_committed: false
+generated_copy_committed: false
+raw_lp_page_images_committed: false
+generated_site_committed: false
+solve_claim: false
+usable_as_experiment_seed: false
+notes: Gallery aggregate only; copied full images, thumbnails, contact sheets, and
+  source images are uncommitted.

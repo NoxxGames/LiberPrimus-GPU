@@ -21,6 +21,7 @@ Use Codex safely for scoped repository stages.
 - For Stage 3X-style CLI modularisation, state that command names, options, help behavior, output shape, and exit semantics must be preserved and that command-surface tests must be added or updated.
 - For Stage 3Y-style research synthesis, require `docs/roadmap/staged-plan.md`, `data/research/` ledgers, anti-drift checks, and `libreprimus research-synthesis validate`. Do not execute experiments.
 - For Stage 3Z-style onboarding work, require `docs/onboarding/` maps, staged-plan updates, direction-change records if the roadmap changes, and state-drift tests. Do not execute experiments.
+- For Stage 4A-style Deep Research handoff work, require `redacted_public` output, ignored static-site/bundle paths, aggregate-only committed records, no raw Discord logs, no usernames/IDs/private URLs, and no copied LP page images in Git.
 
 ## Commands
 
@@ -38,6 +39,10 @@ Raw corpus material, generated outputs, root research reports, `.venv/`, build d
 worktrees. For Stage 3R/3S/3T/3U/3V-style work, also keep generated Discord review bundles, topic shards, promotion audit JSONL, post-Discord candidate JSONL, verification JSONL, hash candidate JSONL, OutGuess extraction JSONL, extracted payloads, summary JSON, and root report copies out of staging unless copied into `docs/` intentionally.
 
 Keep `deep-research-reports/**` out of staging; it is local review material only.
+
+For Stage 4A and later Deep Research handoff work, use generated redacted bundles and aggregate
+summaries instead of raw Discord logs. Generated static review sites, copied images, thumbnails,
+shards, and upload archives remain ignored outputs.
 
 ## Troubleshooting
 

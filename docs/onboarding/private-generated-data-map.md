@@ -11,6 +11,7 @@
 ## Generated Outputs
 
 - `experiments/results/`: generated run outputs, review bundles, candidate records, summaries, SQLite stores, image derivatives, OutGuess payloads, and wiki sync reports.
+- `experiments/results/discord-full-review/stage4a/`: generated Stage 4A full Discord review bundle, redacted streams, channel shards, topic shards, indexes, LP page gallery copies/thumbnails, static site, and optional upload archive.
 - `data/normalized/`: generated normalized candidate outputs unless a stage explicitly commits a placeholder or curated source.
 - SQLite outputs: `*.sqlite`, `*.sqlite3`, and `*.db` are generated and must not be committed.
 
@@ -31,5 +32,6 @@
 - Raw third-party historical artefacts.
 - Generated candidate dumps.
 - Generated extraction payloads.
+- Generated Stage 4A static sites, redacted message streams, channel shards, topic shards, copied LP page images, thumbnails, contact sheets, and upload archives.
 - SQLite databases.
 - Root Deep Research report copies or `deep-research-reports/**`.

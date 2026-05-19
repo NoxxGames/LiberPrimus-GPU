@@ -4,9 +4,9 @@
 
 Scan admin-provided local Discord HTML exports as source-discovery material only.
 
-Stage 4A is planned as full Discord research-bundle extraction for Deep Research. It should build
-redacted, scoped, image-aware bundles from local HTML exports without publishing raw logs or private
-attachments.
+Stage 4A builds full Discord research-bundle extraction for Deep Research. It creates redacted,
+scoped, image-aware generated bundles and an SFTP-ready static site from local HTML exports without
+publishing raw logs or private attachments.
 
 ## Commands
 
@@ -50,6 +50,14 @@ attachments.
   --audit-summary-out data/observations/discord/stage3r-promotion-audit-summary.yaml `
   --allow-missing `
   --allow-warnings
+
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-full-review build `
+  --discord-dir third_party/LiberPrimusDiscordChats `
+  --lp-pages-dir third_party/LiberPrimusPages `
+  --out-dir experiments/results/discord-full-review/stage4a `
+  --privacy-mode redacted_public `
+  --include-lp-page-gallery `
+  --allow-warnings
 ```
 
 ## Expected Outputs
@@ -61,20 +69,23 @@ review and are ignored by Git. Stage 3R promotes corroborated public links and e
 leads into committed redacted records, preserves negative controls, and creates disabled
 post-Discord manifests. Stage 3S executes only the Onion 7 seed-pack manifest, Stage 3T
 executes only the GP/rune claim verifier, and Stage 3U executes only the cookie signed-variant
-pack. None of those stages processes raw Discord logs.
+pack. Stage 4A writes a full redacted review bundle under
+`experiments/results/discord-full-review/stage4a/`; generated redacted streams, shards, indexes,
+static site files, copied LP page images, thumbnails, and archives remain ignored.
 
 ## What Not To Commit
 
 Raw Discord HTML, raw message bodies, usernames, user IDs, message IDs, private attachment URLs,
 generated extraction outputs, generated promotion outputs, generated redacted shards, or local
 review indexes, generated Stage 3R audit JSONL outputs, generated Stage 3S post-Discord
-candidate outputs, generated Stage 3T verification outputs, or generated Stage 3U hash outputs.
+candidate outputs, generated Stage 3T verification outputs, generated Stage 3U hash outputs, or
+generated Stage 4A full-review site/bundle outputs.
 
 ## Troubleshooting
 
 If the HTML format changes, add a synthetic fixture and adapt the parser without committing raw
-chat content. If a redacted shard is too broad for Deep Research, split by topic rather than
-uploading raw HTML.
+chat content. If a redacted Stage 4A shard is too broad for Deep Research, split by topic or
+channel part rather than uploading raw HTML.
 
 If a Stage 3R lead is Discord-only, keep it quarantined until it has a public source or exact
 artefact reference.

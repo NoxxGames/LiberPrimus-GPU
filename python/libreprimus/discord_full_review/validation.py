@@ -1,0 +1,68 @@
+"""Validation for Stage 4A full-review generated outputs and aggregates."""
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
+from libreprimus.discord_full_review.export import read_json, read_jsonl, resolve_path
+from libreprimus.discord_full_review.redaction import has_private_discord_url
+
+
+def validate_results(results_dir: Path, *, allow_missing: bool = False) -> tuple[dict[str, Any], list[str]]:
+    resolved = resolve_path(results_dir)
+    if not resolved.is_dir():
+        if allow_missing:
+            return {"results_present": False}, []
+        return {}, [f"results_dir_missing: {resolved}"]
+    errors: list[str] = []
+    required = [
+        resolved / "site" / "index.html",
+        resolved / "channel_index.md",
+        resolved / "channel_index.json",
+        resolved / "deep_research_bundle_manifest.yaml",
+        resolved / "summary.json",
+        resolved / "indexes" / "public_link_index.jsonl",
+        resolved / "indexes" / "image_reference_index.jsonl",
+        resolved / "indexes" / "attachment_reference_index.jsonl",
+        resolved / "lp_pages" / "lp_page_image_manifest.jsonl",
+    ]
+    for path in required:
+        if not path.is_file():
+            errors.append(f"required_output_missing: {path}")
+    summary: dict[str, Any] = {}
+    if (resolved / "summary.json").is_file():
+        summary = read_json(resolved / "summary.json")
+        for key in (
+            "raw_message_committed",
+            "username_committed",
+            "user_id_committed",
+            "message_id_committed",
+            "private_url_committed",
+            "raw_discord_html_committed",
+            "generated_site_committed",
+            "solve_claim",
+        ):
+            if summary.get(key) is not False:
+                errors.append(f"summary_{key}_must_be_false")
+    for stream in (resolved / "redacted_messages").glob("*.jsonl"):
+        for record in read_jsonl(stream):
+            text = str(record.get("redacted_text", ""))
+            if has_private_discord_url(text):
+                errors.append(f"private_discord_url_in_redacted_text: {stream}")
+                break
+            for key in ("raw_message_committed", "username_committed", "user_id_committed", "message_id_committed", "private_url_committed"):
+                if record.get(key) is not False:
+                    errors.append(f"{stream}:{record.get('message_ref')} {key}_must_be_false")
+                    break
+    return summary, errors
+
+
+def validate_aggregate_record(path: Path) -> list[str]:
+    text = resolve_path(path).read_text(encoding="utf-8") if resolve_path(path).is_file() else ""
+    errors: list[str] = []
+    forbidden = ("username", "user_id", "message_id", "cdn.discord", "media.discord")
+    for term in forbidden:
+        if term in text.lower() and term not in {"username", "user_id", "message_id"}:
+            errors.append(f"aggregate_contains_private_term:{term}")
+    return errors

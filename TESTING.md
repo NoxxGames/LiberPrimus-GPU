@@ -62,6 +62,21 @@ The local validation stack now includes:
 
 Stage 3Z tests cover onboarding docs, Stage 4A direction in the staged plan, direction-change records, AGENTS doc freshness policy, private/generated data maps, and state-drift integration for the new onboarding maps.
 
+## Stage 4A Discord Full Review Bundle Tests
+
+Stage 4A tests cover full-review schemas, synthetic Discord-like HTML parsing, redaction of
+usernames/IDs/message IDs/private Discord URLs, public-link preservation, low-signal message
+retention, huge-channel shard splitting, multi-topic classification, image and attachment reference
+indexes, synthetic LP page-gallery thumbnails, static-site generation, Deep Research manifests, SFTP
+instructions, aggregate privacy checks, Wiki publish diagnostics, generated-output ignore rules, and
+CLI build/validate/summary paths using synthetic fixtures.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-full-review validate --results-dir experiments/results/discord-full-review/stage4a
+```
+
 ## Stage 3O Promotion And Wiki Tests
 
 Stage 3O tests cover Discord promotion redaction, public-safe URL filtering, review-only promotion records, README/tutorial coverage, Wiki source generation, Wiki validation scripts, and ignored raw/generated paths.

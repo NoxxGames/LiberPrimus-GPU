@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 3Z source-of-truth / newcomer map is complete. Next planned stage: Stage 4A full Discord research-bundle extraction for Deep Research.
+Stage 4A full Discord research-bundle extraction for Deep Research is complete. Next planned stage: Stage 4B website-derived source-lock triage and visual observation intake, using Stage 4A bundle outputs.
 
 ## Completed in Stage 0A
 
@@ -19,6 +19,16 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 ## Not yet implemented
 
 No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, or serious CUDA kernel exists yet. Stage 3A/3B add minimal local triage scoring for bounded CPU runs only, Stage 3C calibrates that scorer with small local controls, Stage 3D applies it to a four-key explicit Vigenere preview only, Stage 3E queues the next bounded methods without faking missing executors, Stage 3F runs only the 48-candidate LP evidence-key Vigenere pack, Stage 3G runs only the 256-candidate p56-local prime-minus-one offset sweep, Stage 3H runs only the 64-candidate reset/advance ablation with family-specific negative controls, Stage 3I runs only the 56-candidate historical motif Vigenere pack, Stage 3J runs only the 192-candidate Mersenne/perfect-number tiny stream probe, Stage 3K records archive/image/web observations without executing image-derived text experiments, Stage 3L runs only bounded SHA-256 exact-match cookie-hash candidate packs, Stage 3M records deterministic local image features only, Stage 3N records redacted Discord source-discovery aggregates only, Stage 3O promotes a bounded public-safe subset into redacted review records and Wiki tutorial source pages only, Stage 3P generates deterministic image transform review artefacts only, Stage 3Q generates ignored redacted Discord topic shards only, Stage 3R promotes corroborated leads and creates disabled manifests only, Stage 3S executes only the bounded Onion 7 explicit seed-pack manifest, Stage 3T executes only the bounded GP/rune claim verifier, Stage 3U executes only the bounded cookie SHA-256 signed-variant pack, Stage 3V adds an OutGuess regression harness without broad stego scanning, Stage 3W adds state-drift checks without new experiment execution, Stage 3X modularises CLI command registration without behavior changes, Stage 3Y adds result synthesis and method-retirement records without new experiment execution, and Stage 3Z adds onboarding/source-of-truth maps without new experiment execution.
+
+## Completed in Stage 4A
+
+Stage 4A added a privacy-preserving full Discord review bundle builder for local ignored Discord HTML exports and local ignored Liber Primus page images. It generates redacted chronological streams, ordered channel shards, topic shards, public link/image/attachment/method/numeric/visual/debunk indexes, a Liber Primus page-image gallery, an SFTP-ready static site, Deep Research manifest, and aggregate committed summaries.
+
+Local build summary: Discord HTML files `43`, bytes processed `465853032`, channels `43`, redacted messages `520009`, channel shards `1327`, topic shards `12`, public links `57969`, image references `51025`, attachment references `11383`, method claims `41059`, numeric claims `520009`, visual claims `33209`, debunk records `4010`, LP page images included `58`, LP page thumbnails `58`.
+
+Generated redacted streams, shards, indexes, static site files, copied LP page images, thumbnails, contact sheets, Deep Research bundle outputs, and upload archives remain ignored under `experiments/results/discord-full-review/stage4a/`. Raw Discord logs, raw page images, private attachment URLs, usernames, user IDs, message IDs, generated outputs, CUDA changes, canonical corpus activation, page-boundary finalization, and solve claims remain absent.
+
+Developer log: `docs/development-logs/2026-05-18-stage-4a-discord-full-review-bundle.md`.
 
 ## Completed in Stage 3Z
 

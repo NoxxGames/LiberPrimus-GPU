@@ -59,6 +59,11 @@ If a Stage 3V OutGuess run leaves extraction records, tool records, synthetic im
 payloads under `experiments/results/stego/outguess/stage3v/`, do not stage them. Commit only
 metadata, manifests, docs, tests, and research logs.
 
+If a Stage 4A Discord full-review build leaves static site files, redacted message streams, channel
+shards, topic shards, indexes, copied LP page images, thumbnails, contact sheets, or upload archives
+under `experiments/results/discord-full-review/stage4a/`, do not stage them. Commit only aggregate
+records, code, schemas, docs, tests, and research logs.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 
@@ -80,6 +85,25 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `source-of-truth-map.md`, `codex-navigation-map.md`, `deep-research-handoff-map.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
+
+## Stage 4A Bundle Or Site Problems
+
+If the Stage 4A static site is missing, rebuild the ignored bundle and validate it:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-full-review build `
+  --discord-dir third_party/LiberPrimusDiscordChats `
+  --lp-pages-dir third_party/LiberPrimusPages `
+  --out-dir experiments/results/discord-full-review/stage4a `
+  --privacy-mode redacted_public `
+  --include-lp-page-gallery `
+  --allow-warnings
+
+.\.venv\Scripts\python.exe -m libreprimus.cli discord-full-review validate `
+  --results-dir experiments/results/discord-full-review/stage4a
+```
+
+Do not copy raw Discord HTML or raw LP page images into committed paths to repair a missing site.
 
 ## Research Synthesis Validation Fails
 

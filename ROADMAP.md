@@ -2,6 +2,13 @@
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
+## Current Direction
+
+Stage 4A full Discord research-bundle extraction is complete. It produced redacted generated review
+bundles and an SFTP-ready static site under ignored paths for Deep Research handoff. The next planned
+stage is Stage 4B: website-derived source-lock triage and visual observation intake, using Stage 4A
+bundle outputs. CPU batch transform API extraction remains planned later; CUDA remains deferred.
+
 ## Phase 0A - Project bootstrap
 
 Create repository structure, documentation, toolchain scripts, C++ smoke build, optional CUDA smoke build, Python package, and smoke tests.

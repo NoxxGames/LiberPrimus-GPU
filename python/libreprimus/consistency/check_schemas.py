@@ -55,6 +55,13 @@ EXPECTED_SCHEMA_FILES = [
     "stego/outguess-extraction-record-v0.schema.json",
     "stego/outguess-regression-summary-v0.schema.json",
     "stego/outguess-tool-record-v0.schema.json",
+    "history/discord-full-review-channel-record-v0.schema.json",
+    "history/discord-full-review-message-record-v0.schema.json",
+    "history/discord-full-review-shard-record-v0.schema.json",
+    "history/discord-full-review-index-record-v0.schema.json",
+    "history/discord-full-review-summary-v0.schema.json",
+    "visual/lp-page-gallery-record-v0.schema.json",
+    "visual/discord-image-reference-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -87,6 +94,13 @@ EXPECTED_DOC_TERMS = [
     "outguess-extraction-record-v0",
     "outguess-regression-summary-v0",
     "outguess-tool-record-v0",
+    "discord-full-review-channel-record-v0",
+    "discord-full-review-message-record-v0",
+    "discord-full-review-shard-record-v0",
+    "discord-full-review-index-record-v0",
+    "discord-full-review-summary-v0",
+    "lp-page-gallery-record-v0",
+    "discord-image-reference-v0",
 ]
 
 

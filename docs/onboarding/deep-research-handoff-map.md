@@ -21,9 +21,18 @@ Before a Deep Research handoff, verify the latest commit and CI status locally. 
 Use generated, redacted, local-only review bundles when a stage creates them under ignored paths, such as:
 
 - `experiments/results/discord-review-bundles/stage3q/`
-- future Stage 4A full Discord research-bundle outputs.
+- `experiments/results/discord-full-review/stage4a/`
 
 Only pass redacted topic shards, aggregate summaries, public links, public source records, and curated observation/negative-control records. Prefer small focused bundles over huge dumps.
+
+Stage 4A also creates an SFTP-ready static review site:
+
+- `experiments/results/discord-full-review/stage4a/site/index.html`
+- `experiments/results/discord-full-review/stage4a/deep_research_bundle_manifest.yaml`
+- `experiments/results/discord-full-review/stage4a/SFTP_UPLOAD_INSTRUCTIONS.md`
+
+Use the Stage 4A static site or redacted shards for Deep Research handoff. Do not substitute raw
+Discord HTML exports for the generated redacted bundle.
 
 ## Do Not Give Deep Research
 
@@ -33,6 +42,8 @@ Only pass redacted topic shards, aggregate summaries, public links, public sourc
 - Raw Liber Primus page images unless a future source-lock stage explicitly scopes them.
 - Large generated dumps without redaction and scope.
 
-## Upcoming Stage 4A
+## Stage 4A Bundle
 
-Stage 4A should prepare full Discord research-bundle extraction for Deep Research from local HTML exports. It should produce redacted, structured, image-aware bundles that Deep Research can use without publishing raw logs.
+Stage 4A prepares full Discord research-bundle extraction for Deep Research from local HTML exports.
+It produces redacted, structured, image-aware bundles and a static site that Deep Research can use
+without publishing raw logs.

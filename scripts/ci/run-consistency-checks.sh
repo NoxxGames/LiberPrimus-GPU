@@ -50,6 +50,24 @@ echo "Validating Stage 3Q Discord review-bundle raw-log-free mode"
 "$python_bin" -m libreprimus.cli discord-review build-bundles --ingestion-dir "$tmp_dir/missing-stage3n" --promotion-dir "$tmp_dir/missing-stage3o" --raw-dir "$tmp_dir/missing-discord" --out-dir "$tmp_dir/stage3q-discord-review" --aggregate-out "$tmp_dir/stage3q-discord-review-aggregate.yaml" --allow-missing --allow-warnings
 "$python_bin" -m libreprimus.cli discord-review validate-bundles --results-dir "$tmp_dir/stage3q-discord-review" --aggregate "$tmp_dir/stage3q-discord-review-aggregate.yaml" --allow-missing
 
+echo "Validating Stage 4A Discord full-review synthetic build"
+mkdir -p "$tmp_dir/stage4a-discord" "$tmp_dir/stage4a-pages"
+"$python_bin" - <<PY
+from pathlib import Path
+from PIL import Image
+discord = Path("$tmp_dir/stage4a-discord")
+pages = Path("$tmp_dir/stage4a-pages")
+(discord / "CicadaSolvers - Cicada - ci-test [123456789012345678].html").write_text(
+    '<div class="chatlog__message"><span class="chatlog__author-name">User</span>'
+    '<div class="chatlog__content">cuneiform base60 onion 7 https://example.org/source '
+    'https://cdn.discordapp.com/attachments/1/2/test.png?secret=1</div></div>',
+    encoding="utf-8",
+)
+Image.new("RGB", (32, 32), "white").save(pages / "page001.jpg")
+PY
+"$python_bin" -m libreprimus.cli discord-full-review build --discord-dir "$tmp_dir/stage4a-discord" --lp-pages-dir "$tmp_dir/stage4a-pages" --out-dir "$tmp_dir/stage4a-full-review" --privacy-mode redacted_public --include-lp-page-gallery --allow-warnings
+"$python_bin" -m libreprimus.cli discord-full-review validate --results-dir "$tmp_dir/stage4a-full-review"
+
 echo "Validating Stage 3R Discord lead promotion records and disabled manifests"
 "$python_bin" -m libreprimus.cli discord-leads validate --promoted-sources data/observations/discord/stage3r-promoted-source-records.yaml --promoted-observations data/observations/discord/stage3r-promoted-observation-records.yaml --negative-controls data/observations/discord/stage3r-negative-control-records.yaml --manifest-dir experiments/manifests/post-discord --allow-empty
 

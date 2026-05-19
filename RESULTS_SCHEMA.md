@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, and Stage 3Y research-synthesis ledgers.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, and Stage 3Y research-synthesis ledgers.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -105,6 +105,34 @@ Committed aggregate fields include:
 - false privacy flags for raw logs, raw messages, usernames, private URLs, AI upload, live API use, scraping, and solve claims
 
 Generated redacted streams, topic shards, JSONL indexes, and local HTML review indexes remain ignored under `experiments/results/discord-review-bundles/stage3q/`.
+
+## Stage 4A Discord Full Review Bundle Records
+
+Stage 4A adds schemas for generated full-review channel records, redacted message records, shard
+records, index records, bundle summaries, Discord image references, and LP page gallery records.
+
+Committed schema IDs:
+
+- `discord-full-review-channel-record-v0`
+- `discord-full-review-message-record-v0`
+- `discord-full-review-shard-record-v0`
+- `discord-full-review-index-record-v0`
+- `discord-full-review-summary-v0`
+- `lp-page-gallery-record-v0`
+- `discord-image-reference-v0`
+
+Committed aggregate summaries live under:
+
+- `data/observations/discord/stage4a-full-review-aggregate.yaml`
+- `data/observations/visual/stage4a-lp-page-gallery-aggregate.yaml`
+
+Aggregate records contain only counts, generated output paths, source directory references, and
+privacy flags. They must not contain raw messages, usernames, user IDs, message IDs, private URLs,
+raw Discord HTML, generated site content, or copied LP page image bytes.
+
+Generated redacted streams, channel shards, topic shards, indexes, static site files, copied LP page
+images, thumbnails, contact sheets, and upload archives remain ignored under
+`experiments/results/discord-full-review/stage4a/`.
 
 ## Stage 3R Discord Lead Promotion And Post-Discord Manifest Records
 

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/visual/discord-image-reference-v0.schema.json",
+  "title": "Discord Image Reference v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "image_reference_id",
+    "message_ref",
+    "channel_id",
+    "file_name",
+    "extension",
+    "media_kind",
+    "url_public",
+    "url_redacted",
+    "private_url_committed",
+    "raw_message_committed",
+    "solve_claim",
+    "usable_as_experiment_seed"
+  ],
+  "properties": {
+    "record_type": { "const": "discord_image_reference" },
+    "image_reference_id": { "type": "string", "minLength": 1 },
+    "message_ref": { "type": "string", "minLength": 1 },
+    "channel_id": { "type": "string", "minLength": 1 },
+    "file_name": { "type": "string" },
+    "extension": { "type": "string" },
+    "media_kind": { "type": "string" },
+    "url_public": { "type": ["string", "null"] },
+    "url_redacted": { "type": "string" },
+    "private_url_committed": { "const": false },
+    "raw_message_committed": { "const": false },
+    "username_committed": { "const": false },
+    "solve_claim": { "const": false },
+    "usable_as_experiment_seed": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 3Y result synthesis and method-retirement ledger work. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4A full Discord research-bundle extraction work. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -27,6 +27,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, and Stage 3U tests the manifest-declared signed/public string variant pack only. Both use exact byte-string logging with no fuzzy, partial, dictionary, GPU, or solve claims.
 - Stego/OutGuess work: Stage 3V adds a deterministic OutGuess regression harness only. Missing tools/assets are explicit skipped outcomes, generated payloads stay ignored, and no broad image scan or payload interpretation is performed.
 - Discord source discovery: Stage 3N scans admin-provided local HTML exports only and commits aggregate/redacted records only. Stage 3O promotes a bounded, public-safe subset of redacted source-discovery records. Stage 3Q builds ignored redacted topic shards for local AI/deep-research review. Stage 3R audits those leads, promotes only corroborated public/source-observation records, preserves false positives as negative controls, and queues disabled post-Discord manifests. Raw logs, message bodies, usernames, and private attachment URLs are not committed.
+- Full Discord review bundles: Stage 4A builds redacted chronological streams, channel shards, topic shards, indexes, an LP page gallery, and an SFTP-ready static site under ignored paths for Deep Research handoff. Raw Discord logs, usernames, user IDs, message IDs, private URLs, generated static site files, copied LP page images, thumbnails, archives, and generated bundle outputs are not committed.
 - Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
@@ -36,8 +37,8 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 3Z source-of-truth/newcomer map expansion.
-- Stage 4A CPU batch transform API extraction.
+- Stage 4B website-derived source-lock triage and visual observation intake.
+- Stage 4E CPU batch transform API extraction.
 - Historical OutGuess fixture source-locking and setup documentation when assets become available.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
@@ -84,6 +85,8 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 3W project-state consolidation and anti-drift checks.
 - Stage 3X CLI modularisation without behavior change.
 - Stage 3Y result synthesis, staged plan, and method-retirement ledger.
+- Stage 3Z source-of-truth / newcomer map.
+- Stage 4A full Discord research-bundle extraction and static review site generation.
 
 ## Architecture summary
 
@@ -136,6 +139,7 @@ Current status:
 - Stage 3X: CLI modularisation without behavior change complete.
 - Stage 3Y: result synthesis, staged plan, and method-retirement ledger complete.
 - Stage 3Z: source-of-truth / newcomer map complete.
+- Stage 4A: full Discord research-bundle extraction for Deep Research complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -155,8 +159,9 @@ Current status:
 - Latest maintainability stage: Stage 3X split the Python CLI into `cli_commands` domain modules while preserving `python -m libreprimus.cli` and adding command-surface tests.
 - Latest synthesis stage: Stage 3Y added `docs/roadmap/staged-plan.md`, research synthesis records, method-family status and retirement ledgers, Deep Research influence records, direction-change records, and validation CLI commands.
 - Latest onboarding stage: Stage 3Z added source-of-truth, Codex navigation, Deep Research handoff, contributor module, task-lane, and private/generated data maps.
+- Latest Deep Research handoff stage: Stage 4A processed `43` local ignored Discord HTML exports into `520009` redacted messages, `1327` channel shards, `12` topic shards, and an ignored SFTP-ready static review site with `58` LP page images included as generated gallery assets. Raw logs, raw images, private URLs, and generated outputs remain uncommitted.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 4A full Discord research-bundle extraction for Deep Research.
+- Next: Stage 4B website-derived source-lock triage and visual observation intake, using Stage 4A bundle outputs.
 
 ## How To Use This Repo
 

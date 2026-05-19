@@ -144,6 +144,7 @@ def check_state_drift_consistency(
     agents = texts.get("AGENTS.md", "").lower()
     staged_plan = texts.get("docs/roadmap/staged-plan.md", "").lower()
     private_map = texts.get("docs/onboarding/private-generated-data-map.md", "").lower()
+    deep_research_map = texts.get("docs/onboarding/deep-research-handoff-map.md", "").lower()
     pyproject = texts.get("pyproject.toml", "").lower()
 
     _require_fact(
@@ -191,6 +192,13 @@ def check_state_drift_consistency(
         and "discord research-bundle" in staged_plan
         and "deep research" in staged_plan,
         "Staged plan records Stage 4A full Discord research-bundle extraction for Deep Research.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4a_current_or_complete",
+        "stage 4a" in staged_plan and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4A as current or complete.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -288,6 +296,24 @@ def check_state_drift_consistency(
         ),
         "Private/generated data map records core raw and generated paths.",
         root / "docs/onboarding/private-generated-data-map.md",
+    )
+    _require_fact(
+        results,
+        "private_generated_data_map_stage4a_site",
+        "discord-full-review" in private_map
+        and "stage4a" in private_map
+        and "static site" in private_map,
+        "Private/generated data map records Stage 4A static-site output.",
+        root / "docs/onboarding/private-generated-data-map.md",
+    )
+    _require_fact(
+        results,
+        "deep_research_handoff_stage4a_bundle",
+        "stage 4a" in deep_research_map
+        and "research-bundle" in deep_research_map
+        and "redacted" in deep_research_map,
+        "Deep Research handoff map records the Stage 4A redacted bundle.",
+        root / "docs/onboarding/deep-research-handoff-map.md",
     )
     for relative in REQUIRED_ONBOARDING_FILES:
         _require_fact(

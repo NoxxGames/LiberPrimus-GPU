@@ -71,6 +71,9 @@ Current project state:
 - Existing CUDA code: scaffold/smoke infrastructure only unless code and tests say otherwise.
 - Raw data, generated outputs, SQLite databases, raw Discord logs, raw page images, raw historical stego artefacts, extracted payloads, and local deep-research reports are not committed.
 - No solve claims are present.
+- Stage 4A generated Discord full-review site, redacted streams, channel shards, topic shards, indexes, copied LP page images, thumbnails, contact sheets, and upload archives are generated outputs and must not be committed.
+- Future Deep Research handoffs should use the Stage 4A redacted bundle/site, not raw Discord logs.
+- Public or semi-public hosting of Stage 4A output must use `redacted_public` mode and should consider noindex headers, private URLs, or basic access controls.
 
 ## Source-of-truth files
 
