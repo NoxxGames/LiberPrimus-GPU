@@ -327,3 +327,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: OutGuess, OpenPuff, MP3Stego, spectrogram, and hexdump/string tools were not executed.
+  - record_type: stage_summary_record
+    stage_id: stage-4g
+    title: Cookie exact-candidate refresh
+    status: complete
+    category: bounded_verification
+    summary: Executed the source-backed Stage 4B cookie candidate refresh against the historical 167 and 761 cookie targets with exact SHA-256 comparisons only.
+    key_outputs:
+      - Cookie refresh CLI, schemas, validation, and generated ignored exact-comparison outputs.
+      - Aggregate committed Stage 4G cookie refresh summary.
+      - Method-family and retirement ledger updates preserving the negative/deprioritised status unless new exact source strings appear.
+    result_status: negative_exact_match
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 4G generated 4 candidates, deduplicated to 4, ran 8 exact SHA-256 comparisons against 2 targets, and found 0 exact matches.

@@ -104,13 +104,13 @@ records:
     method_family_id: cookie_hash_sha256_packs
     name: Cookie SHA-256 preimage packs
     status: negative
-    evidence_summary: Stage 3L broader initial packs and Stage 3U signed/public exact pack produced zero exact SHA-256 matches.
-    completed_stage_refs: [stage-3l, stage-3u]
-    reopen_conditions: [Explicit new public/signed candidate string source.]
+    evidence_summary: Stage 3L broader initial packs, Stage 3U signed/public exact pack, and Stage 4G source-backed refresh all produced zero exact SHA-256 matches.
+    completed_stage_refs: [stage-3l, stage-3u, stage-4g]
+    reopen_conditions: [New exact public/source-locked candidate string not already covered by Stage 3L, Stage 3U, or Stage 4G.]
     stop_conditions: [No fuzzy, partial, dictionary-scale, hashcat, GPU, or non-SHA-256 broadening without explicit new source and explicit instruction.]
-    next_action: Retain negative result and stop expansion.
+    next_action: Deprioritise cookie SHA-256 exact packs unless new exact source strings appear.
     solve_claim: false
-    notes: Exact match would be an artefact lead only, not a solve.
+    notes: Stage 4G tested 4 source-backed raw strings for 8 SHA-256 comparisons and found 0 exact matches; an exact match would be an artefact lead only, not a solve.
   - record_type: method_family_status_record
     method_family_id: gp_rune_claim_verifier
     name: GP/rune claim verifier
@@ -206,8 +206,8 @@ records:
     evidence_summary: Stage 4D runs only source-backed numeric and metadata audits under no-fudge rules, with skips/deferred records when exact spans, raw values, or accepted annotations are missing.
     completed_stage_refs: [stage-4d]
     reopen_conditions: [New source-locked exact numeric claims, raw number-square values, or reviewed annotations are available under a bounded manifest cap.]
-    stop_conditions: [Do not broaden route/value spaces, violate no-fudge rules, add nearest-prime or +/-n adjustments, execute cookie packs without an explicit Stage 4E scope, or run cuneiform-derived seeds from unaccepted annotations.]
-    next_action: Stage 4E cookie exact-candidate refresh can revisit only explicit source-backed cookie strings.
+    stop_conditions: [Do not broaden route/value spaces, violate no-fudge rules, add nearest-prime or +/-n adjustments, rerun cookie packs without newly source-locked exact strings, or run cuneiform-derived seeds from unaccepted annotations.]
+    next_action: Preserve no-fudge audit infrastructure; Stage 4H CPU batch API work is next.
     solve_claim: false
     notes: Delimiter and dot outputs are audit metadata and negative-control measurements, not plaintext candidates.
   - record_type: method_family_status_record
@@ -229,7 +229,7 @@ records:
     completed_stage_refs: [stage-4f]
     reopen_conditions: [A future explicit fixture execution stage has source-locked assets, expected-output controls, and documented toolchain availability.]
     stop_conditions: [Do not run OutGuess, OpenPuff, MP3Stego, spectrograms, hexdump/string scans against binary assets, or commit raw image/audio/binary/font artefacts during source-lock stages.]
-    next_action: Stage 4G cookie exact-candidate refresh is next; stego/audio execution remains deferred.
+    next_action: Stego/audio execution remains deferred; Stage 4H CPU batch API work is next.
     solve_claim: false
     notes: Fixture records are provenance metadata only, not evidence of hidden payloads.
   - record_type: method_family_status_record

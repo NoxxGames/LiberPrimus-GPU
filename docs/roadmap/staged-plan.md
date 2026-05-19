@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 4F - historical OutGuess/audio fixture source-locking.
-- Current planning focus: Stage 4G - cookie exact-candidate refresh.
+- Latest completed stage: Stage 4G - cookie exact-candidate refresh.
+- Current planning focus: Stage 4H - CPU batch transform API extraction.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -40,16 +40,16 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Stage 4D: completed the bounded numeric verifier pack with no-fudge numeric and metadata audits; GP/rune batch002 skipped because no exact new spans were present, delimiter and dot ambiguity metadata were audited, raw number-square routes skipped because raw values remain pending source-lock, visual negative controls were audited, and cookie/cuneiform packs stayed deferred.
 - Stage 4E: completed the source-lock delta audit for the public cicada-solvers/iddqd Git tree without mirroring blobs, classified high-value path categories, recorded selected source-health/source-delta metadata, queued image/stego/audio provenance manifests, and added image-compression artefact future-preflight observations.
 - Stage 4F: source-locked historical OutGuess/audio fixture metadata for lp_outguessed, Interconnectedness MP3, 761.MP3, 4gq25.jpg, 2013/02 assets, OpenPuff/OutGuess/MP3Stego references, and toolchain requirements without downloading raw artefacts or running tools.
+- Stage 4G: executed the source-backed cookie exact-candidate refresh against the two historical cookie targets with SHA-256 exact comparisons only; 4 candidates became 8 comparisons and 0 exact matches.
 
 ## Current Stage
 
-Stage 4F is complete. It converted Stage 4E stego/audio fixture candidates into durable source-lock metadata, source-health records, toolchain requirement records, and disabled future manifests without downloading or committing raw artefacts.
+Stage 4G is complete. It converted Stage 4B cookie candidate source records and existing cookie artefact records into a bounded exact SHA-256 refresh, found zero exact matches, and preserved the cookie-hash family as negative/deprioritised unless new exact source strings appear.
 
-Stage 4F does not run OutGuess, OpenPuff, MP3Stego, spectrograms, hexdump/string scans against binary assets, image transforms, OCR/AI/ML, raw Discord processing, CUDA, canonical corpus activation, page-boundary finalization, or solve claims.
+Stage 4G does not run broad hash cracking, hashcat, GPU/CUDA, dictionary search, fuzzy or partial matching, live Tor, raw Discord processing, raw page-image processing, canonical corpus activation, page-boundary finalization, or solve claims.
 
 ## Planned Next Stages
 
-- Stage 4G - cookie exact-candidate refresh.
 - Stage 4H - CPU batch transform API extraction.
 - Stage 4I - scorer consolidation and calibration report.
 - Stage 5A - CUDA planning and parity scaffolding only.
@@ -85,7 +85,9 @@ Stage 4D uses only source-locked, reviewable, bounded numeric claims and explici
 
 Stage 4E audits `https://github.com/cicada-solvers/iddqd` as selected source-delta metadata only. It records the remote tree HEAD, path counts, source-health records, selected path categories, and disabled future manifests for LP image variant comparison, JPEG-like compression-artifact preflight, lp_outguessed fixture source-locking, and audio fixture source-locking. It does not process or commit raw artefacts.
 
-Stage 4F records historical stego/audio fixture candidates as metadata only. It prepares OutGuess, OpenPuff, MP3Stego, hexdump/string, and audio-rendering toolchain requirements, but all future manifests remain disabled. The next planned stage after Stage 4F is Stage 4G: cookie exact-candidate refresh, limited to explicit source-backed strings and still blocking broad hash cracking, fuzzy matching, hashcat, GPU work, and non-SHA-256 expansion.
+Stage 4F records historical stego/audio fixture candidates as metadata only. It prepares OutGuess, OpenPuff, MP3Stego, hexdump/string, and audio-rendering toolchain requirements, but all future manifests remain disabled.
+
+Stage 4G executes only the Stage 4B source-backed cookie refresh with manifest-declared raw byte strings and SHA-256 exact comparisons. It finds zero exact matches, writes generated result records under ignored `experiments/results/cookie-refresh/stage4g/`, and updates the cookie SHA-256 method family to remain negative/deprioritised unless new exact source strings appear. The next planned stage after Stage 4G is Stage 4H: CPU batch transform API extraction.
 
 ## Retired Or Deprioritised Directions
 
@@ -95,7 +97,7 @@ Stage 4F records historical stego/audio fixture candidates as metadata only. It 
 - Historical motif Vigenere pack: noisy.
 - p56-local prime offset sweeps: inconclusive/noisy; revisit only with a stronger source anchor.
 - Mersenne/perfect-number tiny probe: inconclusive and low priority unless image/source evidence emerges.
-- Cookie SHA-256 packs: negative for tried exact packs; do not broaden without an explicit new candidate source.
+- Cookie SHA-256 packs: negative/deprioritised for Stage 3L, Stage 3U, and Stage 4G exact packs; do not rerun without newly source-locked exact candidate strings.
 - Broad dictionary/hash cracking: deferred and prohibited without explicit scoped evidence.
 - Broad visual pareidolia, unannotated dot/braille/constellation readings, and image-derived cipher seeds: deferred and prohibited until Stage 4C-style annotation records preserve coordinates, ambiguity, controls, and review status.
 - Dot/binary/braille/constellation readings remain not experiment seeds without explicit coordinates, ordering, polarity, ambiguity tables, and later review promotion.

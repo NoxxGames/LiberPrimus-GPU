@@ -147,6 +147,19 @@ Local validation includes:
   --manifest-dir experiments/manifests/stego/stage4f-disabled
 ```
 
+## Stage 4G Cookie Refresh Tests
+
+Stage 4G tests cover cookie-refresh schemas, source-backed candidate loading, manifest-declared variant and algorithm enforcement, fuzzy/partial rejection, deterministic byte variants, deduplication, cap failures, exact-match and non-match hash behavior, CLI behavior on synthetic records, generated output ignore policy, raw Discord/page-image ignore policy, and no-solve/CUDA/hashcat flags.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli cookie-refresh validate `
+  --results-dir experiments/results/cookie-refresh/stage4g `
+  --summary data/observations/web/stage4g-cookie-refresh-summary.yaml
+.\.venv\Scripts\python.exe -m pytest -q tests/python
+```
+
 Local validation includes:
 
 ```powershell

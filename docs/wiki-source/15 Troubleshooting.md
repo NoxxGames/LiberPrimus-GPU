@@ -96,6 +96,10 @@ Commit only fixture metadata YAML records, disabled manifests, schemas, code, do
 research logs. Do not run or stage OutGuess/OpenPuff/MP3Stego outputs, audio scans, binaries,
 images, fonts, archives, or extracted payloads.
 
+If a Stage 4G cookie refresh leaves `candidate_records.jsonl`, `exact_matches.jsonl`,
+`duplicate_candidates.jsonl`, `summary.json`, or `warnings.jsonl`, do not stage them. Commit only the
+aggregate summary YAML, schemas, code, docs, tests, and research log.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 
@@ -118,8 +122,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 4F, onboarding and staged-plan checks should show Stage 4F complete and Stage 4G
-cookie exact-candidate refresh next.
+After Stage 4G, onboarding and staged-plan checks should show Stage 4G complete and Stage 4H CPU
+batch transform API extraction next.
 
 ## Stage 4A Bundle Or Site Problems
 
@@ -262,6 +266,13 @@ Improve claim extraction or span-linking in a separate bounded follow-up, then r
 Zero exact SHA-256 matches is a valid bounded result. Do not add more strings, test partial
 matches, or switch algorithms inside the completed run. Queue a new explicit manifest if the
 scope changes.
+
+## Stage 4G Cookie Refresh Has No Exact Match
+
+Zero exact matches remains a valid result. The correct follow-up is to update the cookie method
+family as negative/deprioritised and move on to Stage 4H unless a later source-lock stage produces
+new exact candidate strings. Do not broaden to fuzzy/partial matching, arbitrary strings, hashcat,
+GPU/CUDA, dictionaries, or live web/Tor strings.
 
 ## Stage 3V OutGuess Tool Or Assets Missing
 

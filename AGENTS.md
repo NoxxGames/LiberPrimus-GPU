@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4F - historical OutGuess/audio fixture source-locking.
+Current completed stage: Stage 4G - cookie exact-candidate refresh.
 
-Current work: Stage 4G - cookie exact-candidate refresh. Stage 4G should use exact source-backed cookie strings only; it must not run broad hash cracking, fuzzy matching, hashcat, CUDA/GPU work, or non-SHA-256 expansion without a new scoped direction.
+Current work: Stage 4H - CPU batch transform API extraction. Stage 4H should extract stable CPU batch transform APIs needed before scorer consolidation and CUDA planning; it must not run broad search, activate CUDA, change corpus status, finalize page boundaries, or claim a solve.
 
 Current project state:
 
@@ -89,6 +89,9 @@ Current project state:
 - Do not run stego/audio tools during source-locking stages.
 - OpenPuff and MP3Stego tool requirements must be documented before any execution stage.
 - No raw binary, audio, image, font, archive, or extracted payload artefacts may be committed.
+- Stage 4G generated cookie refresh records are generated and ignored under `experiments/results/cookie-refresh/stage4g/`.
+- Cookie refreshes must remain exact-source-backed. Do not add arbitrary strings, Discord-only strings, dictionary words, fuzzy matching, partial matching, hashcat, GPU/CUDA, or broad cracking.
+- If Stage 4G returns zero exact matches, do not rerun cookie work without newly source-locked exact candidate strings.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
 - Upload only generated `site/` contents, never raw `third_party/` inputs.
 - Wiki publish failures should be recorded with exact errors and manual recovery steps, but research stages should not fail solely because the GitHub Wiki remote is unavailable.
@@ -578,6 +581,16 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - An exact preimage match is a historical artefact lead only, not a solve claim.
 - Do not process raw Discord logs or raw page images during cookie stages.
 - Stage 3U executes only `EXP-3R-001`; do not rerun `EXP-3R-003` or `EXP-3R-004` in the same stage.
+
+## Stage 4G Cookie Exact-Candidate Refresh Rules
+
+- Cookie refreshes must use source-backed exact strings only.
+- Manifest-declared byte variants and algorithms are the complete scope.
+- No fuzzy, partial, near-match, dictionary, hashcat, GPU/CUDA, cloud, or broad cracking is allowed.
+- Generated candidate records, exact-match records, duplicates, warnings, and summary JSON under `experiments/results/cookie-refresh/stage4g/` are generated outputs and must not be committed.
+- A zero-match result keeps cookie SHA-256 exact packs negative/deprioritised unless new exact source strings are source-locked later.
+- An exact match would be an `exact_preimage_candidate` artefact lead only, not a Liber Primus solve claim.
+- Do not process raw Discord logs or raw page images during cookie stages.
 
 ## Stage 3V OutGuess Regression Rules
 

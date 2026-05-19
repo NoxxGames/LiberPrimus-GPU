@@ -67,6 +67,20 @@ The Stage 3T GP/rune verifier should process exact claims under a cap of `64`. G
 
 The Stage 3U cookie signed-variant pack should process only manifest-declared SHA-256 candidates under a cap of `576`. Generated hash JSONL and summary files stay in `experiments/results/post-discord/stage3u/` and are not solve evidence.
 
+Stage 4G runs the later source-backed cookie refresh:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli cookie-refresh run `
+  --manifest experiments/manifests/stage4b-disabled/exp_stage4b_cookie_pack_v2.yaml `
+  --candidate-sources data/observations/web/stage4b-cookie-candidate-source-records.yaml `
+  --cookie-targets data/observations/web/cookie-hash-records-v0.yaml `
+  --out-dir experiments/results/cookie-refresh/stage4g `
+  --summary-out data/observations/web/stage4g-cookie-refresh-summary.yaml `
+  --allow-warnings
+```
+
+The Stage 4G refresh should process only source-backed strings and manifest-declared variants. Generated hash JSONL and summary JSON stay in `experiments/results/cookie-refresh/stage4g/` and are not solve evidence.
+
 Stage 4D runs only bounded no-fudge numeric and metadata audits from the Stage 4B disabled backlog:
 
 ```powershell
@@ -96,7 +110,7 @@ If an Onion 7 run appears interesting, inspect the generated top candidates loca
 
 If a GP/rune claim is `missing_source_span`, improve source/span linking in a separate follow-up instead of searching neighbouring spans to make the claim true.
 
-If a cookie pack finds no exact match, record the negative result and move to a separately scoped manifest. Do not add strings or variants to a completed run after the fact.
+If a cookie pack finds no exact match, record the negative result and move to a separately scoped manifest. After Stage 4G, do not rerun cookie work without newly source-locked exact candidate strings.
 
 If a method family is retired or deprioritised, update the staged plan and method-retirement ledger
 before adding a new manifest.

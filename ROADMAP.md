@@ -4,20 +4,20 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4F historical OutGuess/audio fixture source-locking is complete. It turned Stage 4E
-`cicada-solvers/iddqd` source-delta metadata, Stage 4B promoted public-source records, and Stage 3V
-OutGuess harness context into fixture source-lock records, source-health records, toolchain
-requirements, and disabled future manifests.
+Stage 4G cookie exact-candidate refresh is complete. It used Stage 4B source-backed cookie
+candidate records and the historical `167` / `761` cookie targets to run a small exact SHA-256
+refresh with no fuzzy matching, hashcat, GPU work, or broad candidate expansion.
 
-The next planned stage is Stage 4G: cookie exact-candidate refresh. CPU batch transform API
-extraction, scorer consolidation, and CUDA planning remain planned later; CUDA remains deferred.
+The next planned stage is Stage 4H: CPU batch transform API extraction. Scorer consolidation and
+CUDA planning remain planned later; CUDA remains deferred.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
 recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
 review into durable records without executing experiments, Stage 4C made the visual claims
 measurable without promoting them to seeds, Stage 4D ran only bounded no-fudge audit work, Stage 4E
-selected external source-delta targets without committing raw artefacts, and Stage 4F prepared
-stego/audio fixture provenance without running tools.
+selected external source-delta targets without committing raw artefacts, Stage 4F prepared
+stego/audio fixture provenance without running tools, and Stage 4G recorded the negative exact cookie
+refresh result.
 
 ## Phase 0A - Project bootstrap
 
@@ -305,7 +305,10 @@ Stage 4F is complete. It source-locks historical OutGuess/audio fixture metadata
 
 ## Stage 4G - Cookie exact-candidate refresh
 
-Refresh only explicit source-backed cookie candidate strings. Do not run broad hash cracking, fuzzy matching, hashcat, GPU work, or non-SHA-256 expansion without a new scoped direction.
+Stage 4G is complete. It refreshed only explicit source-backed cookie candidate strings, tested `4`
+deduplicated candidates against `2` historical targets for `8` SHA-256 exact comparisons, found `0`
+exact matches, and kept generated records ignored under `experiments/results/cookie-refresh/stage4g/`.
+Do not rerun cookie work without newly source-locked exact candidate strings.
 
 ## Stage 4H - CPU batch transform API extraction
 

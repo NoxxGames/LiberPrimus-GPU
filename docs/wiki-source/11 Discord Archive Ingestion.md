@@ -96,6 +96,10 @@ Stage 4B writes committed source/observation/negative-control YAML records and d
 Its generated rejected-link, duplicate-link, warning, and triage-report outputs remain ignored under
 `experiments/results/source-lock-triage/stage4b/`.
 
+Stage 4G may consume the Stage 4B cookie candidate source records, but only as exact source-backed
+strings through `libreprimus cookie-refresh`. It must not use raw Discord messages, usernames, chat
+phrases, or private URLs as cookie candidates.
+
 ## What Not To Commit
 
 Raw Discord HTML, raw message bodies, usernames, user IDs, message IDs, private attachment URLs,
@@ -104,6 +108,8 @@ review indexes, generated Stage 3R audit JSONL outputs, generated Stage 3S post-
 candidate outputs, generated Stage 3T verification outputs, generated Stage 3U hash outputs, or
 generated Stage 4A full-review site/bundle outputs.
 Do not commit generated Stage 4B source-lock triage diagnostics or rejected-link lists.
+Do not commit generated Stage 4G cookie refresh candidate records, exact-match records, duplicate
+records, warnings, or summary JSON under `experiments/results/cookie-refresh/stage4g/`.
 
 If a Stage 4A site is uploaded for review, upload only `experiments/results/discord-full-review/stage4a/site/`.
 Never upload raw `third_party/` directories.

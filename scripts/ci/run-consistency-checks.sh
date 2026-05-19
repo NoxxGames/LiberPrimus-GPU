@@ -63,6 +63,16 @@ echo "Validating Stage 4F stego/audio fixture records"
     --toolchain data/observations/stego/stage4f-toolchain-requirements.yaml \
     --manifest-dir experiments/manifests/stego/stage4f-disabled
 
+echo "Running Stage 4G cookie refresh synthetic/temp output"
+"$python_bin" -m libreprimus.cli cookie-refresh run \
+    --manifest experiments/manifests/stage4b-disabled/exp_stage4b_cookie_pack_v2.yaml \
+    --candidate-sources data/observations/web/stage4b-cookie-candidate-source-records.yaml \
+    --cookie-targets data/observations/web/cookie-hash-records-v0.yaml \
+    --out-dir "$tmp_dir/stage4g-cookie-refresh" \
+    --summary-out "$tmp_dir/stage4g-cookie-refresh-summary.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cookie-refresh validate --results-dir "$tmp_dir/stage4g-cookie-refresh" --summary "$tmp_dir/stage4g-cookie-refresh-summary.yaml"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

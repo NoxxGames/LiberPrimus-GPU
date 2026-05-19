@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, and Stage 4F historical stego/audio fixture source-lock records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, and Stage 4G cookie refresh records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -21,6 +21,8 @@ Stage 4D bounded numeric verifier records are generated JSON/JSONL outputs under
 Stage 4E source-delta records are committed metadata records only. They must keep `raw_file_committed=false`, `binary_committed=false`, `font_committed=false`, `trusted_as_canonical=false`, and `solve_claim=false`. Generated tree reports remain ignored under `experiments/results/source-delta/stage4e/`.
 
 Stage 4F stego/audio fixture source records are committed metadata records only. They must keep `raw_file_committed=false`, `binary_committed=false`, `audio_committed=false`, `image_committed=false`, `font_committed=false`, `extracted_payload_committed=false`, `trusted_as_canonical=false`, and `solve_claim=false`. Future fixture manifests must keep `execution_enabled=false`. Generated fixture reports remain ignored under `experiments/results/stego-fixtures/stage4f/`.
+
+Stage 4G cookie refresh schemas require exact-match-only records: `no_solve_claim=true`, `cuda_used=false`, `cloud_execution=false`, `hashcat_used=false`, `fuzzy_matching=false`, `partial_matching=false`, manifest-declared variants and algorithms, and source-backed base strings. Generated candidate/exact-match JSONL and summary JSON remain ignored under `experiments/results/cookie-refresh/stage4g/`; only the aggregate YAML summary is committed.
 
 ## Result record principles
 
@@ -205,6 +207,16 @@ Committed schema IDs:
 Committed records live under `data/observations/stego/` and `data/locks/third-party/`. Disabled future manifests live under `experiments/manifests/stego/stage4f-disabled/`.
 
 Generated fixture candidate reports, source-gap JSONL files, and warnings remain ignored under `experiments/results/stego-fixtures/stage4f/`. Raw images, audio, binaries, fonts, archives, and extracted payloads remain uncommitted.
+
+## Stage 4G Cookie Refresh Records
+
+Stage 4G adds committed schemas for the cookie refresh manifest view, generated candidate records, and committed aggregate summary:
+
+- `schemas/web/cookie-refresh-manifest-v0.schema.json`
+- `schemas/web/cookie-refresh-candidate-record-v0.schema.json`
+- `schemas/web/cookie-refresh-summary-v0.schema.json`
+
+Candidate records log the experiment ID, source record, source basis, byte variant, UTF-8 candidate byte hash, digest, target cookie, exact-match flag, previous-pack duplicate flag, and all no-broadening policy flags. Generated records are not committed.
 
 Committed aggregate summaries live under:
 

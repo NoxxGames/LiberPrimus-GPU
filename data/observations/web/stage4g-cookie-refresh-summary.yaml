@@ -1,0 +1,39 @@
+record_type: cookie_refresh_summary
+stage: stage4g
+experiment_id: exp_stage4b_cookie_pack_v2
+generated_at_utc: '2026-05-19T15:23:40.055773Z'
+target_cookie_count: 2
+target_cookie_ids:
+- cookie-2013-167-v0
+- cookie-2013-761-v0
+source_backed_base_string_count: 4
+byte_variant_count: 1
+byte_variants:
+- raw
+algorithms_run:
+- sha256
+generated_candidates_before_dedup: 4
+candidates_after_dedup: 4
+duplicate_count: 0
+previous_pack_duplicate_count: 2
+comparison_count: 8
+exact_match_count: 0
+exact_match_candidate_ids: []
+candidate_count_upper_bound: 384
+exact_match_only: true
+fuzzy_matching: false
+partial_matching: false
+hashcat_used: false
+cuda_used: false
+cloud_execution: false
+no_solve_claim: true
+trusted_as_canonical: false
+generated_outputs_committed: false
+raw_discord_processed: false
+raw_lp_images_processed: false
+output_paths:
+  candidate_records: O:\Programming\LiberPrimusSolver\experiments\results\cookie-refresh\stage4g\candidate_records.jsonl
+  exact_matches: O:\Programming\LiberPrimusSolver\experiments\results\cookie-refresh\stage4g\exact_matches.jsonl
+  duplicate_candidates: O:\Programming\LiberPrimusSolver\experiments\results\cookie-refresh\stage4g\duplicate_candidates.jsonl
+  summary: O:\Programming\LiberPrimusSolver\experiments\results\cookie-refresh\stage4g\summary.json
+  warnings: O:\Programming\LiberPrimusSolver\experiments\results\cookie-refresh\stage4g\warnings.jsonl

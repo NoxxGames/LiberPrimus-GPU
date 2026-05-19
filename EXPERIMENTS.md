@@ -38,7 +38,7 @@ Allowed Stage 4D actions:
 - Raw number-square route verification only when locked raw values exist.
 - Visual negative-control ambiguity metrics.
 
-Stage 4D explicitly defers cookie pack v2 and cuneiform reading pack v1. Cookie exact-candidate refresh remains planned for a later explicit stage; cuneiform-derived seeds require accepted annotation before any future bounded execution. Generated Stage 4D result records remain ignored under `experiments/results/bounded-numeric/stage4d/`.
+Stage 4D explicitly deferred cookie pack v2 and cuneiform reading pack v1. Stage 4G later executed only the source-backed cookie exact refresh and found zero exact matches; cuneiform-derived seeds still require accepted annotation before any future bounded execution. Generated Stage 4D result records remain ignored under `experiments/results/bounded-numeric/stage4d/`.
 
 No-fudge rules are mandatory: no nearest-prime adjustments, arbitrary +/-n changes, post-hoc row/column arithmetic, route expansion beyond manifest, fuzzy numeric matching, broad number-theory search, CUDA, or solve claims.
 
@@ -67,6 +67,24 @@ Queued manifests:
 - `exp_stage4f_audio_hexdump_string_baseline`
 
 All keep `execution_enabled=false`, `cuda_enabled=false`, `raw_file_committed=false`, `binary_committed=false`, `audio_committed=false`, `image_committed=false`, `font_committed=false`, `extracted_payload_committed=false`, and `solve_claim=false`. Generated fixture candidate reports remain ignored under `experiments/results/stego-fixtures/stage4f/`. Raw images, audio, binaries, fonts, archives, and extracted payloads must not be committed.
+
+## Stage 4G Cookie Exact-Candidate Refresh
+
+Stage 4G executes only `exp_stage4b_cookie_pack_v2` as the designated exact-refresh stage. It loads Stage 4B cookie candidate source records and the two historical cookie target records, applies only manifest-declared byte variants, uses SHA-256 exact comparison only, and writes generated records under `experiments/results/cookie-refresh/stage4g/`.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli cookie-refresh run `
+  --manifest experiments/manifests/stage4b-disabled/exp_stage4b_cookie_pack_v2.yaml `
+  --candidate-sources data/observations/web/stage4b-cookie-candidate-source-records.yaml `
+  --cookie-targets data/observations/web/cookie-hash-records-v0.yaml `
+  --out-dir experiments/results/cookie-refresh/stage4g `
+  --summary-out data/observations/web/stage4g-cookie-refresh-summary.yaml `
+  --allow-warnings
+```
+
+The Stage 4G run generated `4` candidates before deduplication, kept `4` deduplicated candidates, tested `8` exact SHA-256 comparisons against two targets, and found `0` exact matches. Do not rerun cookie work without newly source-locked exact candidate strings.
 
 ## Experiment philosophy
 

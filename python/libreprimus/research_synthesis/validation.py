@@ -83,7 +83,13 @@ def validate_research_synthesis(
             errors,
             staged_text,
             ("stage 4g", "cookie", "exact"),
-            "staged_plan_stage4g_cookie_exact_next",
+            "staged_plan_stage4g_cookie_exact",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4h", "cpu batch"),
+            "staged_plan_stage4h_cpu_batch_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")

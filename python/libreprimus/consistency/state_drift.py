@@ -251,11 +251,20 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4g_cookie_exact_candidate_next",
+        "stage4g_cookie_exact_candidate_current_or_complete",
         "stage 4g" in staged_plan
         and "cookie" in staged_plan
-        and "exact" in staged_plan,
-        "Staged plan records Stage 4G cookie exact-candidate refresh as next.",
+        and "exact" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4G cookie exact-candidate refresh as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4h_cpu_batch_transform_next",
+        "stage 4h" in staged_plan
+        and "cpu batch" in staged_plan,
+        "Staged plan records Stage 4H CPU batch transform API extraction as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

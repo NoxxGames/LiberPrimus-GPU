@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4F historical OutGuess/audio fixture source-locking. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4G cookie exact-candidate refresh. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -24,7 +24,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Broad unsolved-page search campaigns: not started.
 - Scoring campaigns: not started; Stage 3A/3B minimal triage scoring exists only for sorting and inspecting bounded 841-candidate CPU runs, Stage 3C calibration uses small local controls only, Stage 3D applies that scorer to a four-key explicit Vigenere preview only, Stage 3F applies it to the bounded 48-candidate LP evidence-key Vigenere pack only, Stage 3G applies it to a bounded 256-candidate p56-local prime-minus-one offset sweep only, Stage 3H applies it to a bounded 64-candidate reset/advance ablation with 100 negative controls only, Stage 3I applies it to a bounded 56-candidate historical motif Vigenere pack only, Stage 3J applies it to a bounded 192-candidate Mersenne/perfect-number stream probe only, and Stage 3S applies it to the bounded 72-candidate Onion 7 explicit seed pack only.
 - Visual/image-derived observations: registry and deterministic feature summaries only, plus deterministic review transforms; Stage 3K records source locks and reviewable observations, Stage 3M records deterministic local image features, and Stage 3P generates ignored review transforms/contact sheets. No image-derived text experiments are executed.
-- Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, and Stage 3U tests the manifest-declared signed/public string variant pack only. Both use exact byte-string logging with no fuzzy, partial, dictionary, GPU, or solve claims.
+- Cookie/hash preimage work: Stage 3L tests two explicit SHA-256 packs only, Stage 3U tests the manifest-declared signed/public string variant pack only, and Stage 4G refreshes source-backed Stage 4B strings only. All use exact byte-string logging with no fuzzy, partial, dictionary, hashcat, GPU, or solve claims.
 - Stego/OutGuess work: Stage 3V adds a deterministic OutGuess regression harness only. Stage 4F adds fixture source-lock metadata and toolchain requirements only. Missing tools/assets are explicit skipped outcomes, generated payloads stay ignored, and no broad image scan, stego extraction, audio scan, or payload interpretation is performed.
 - Discord source discovery: Stage 3N scans admin-provided local HTML exports only and commits aggregate/redacted records only. Stage 3O promotes a bounded, public-safe subset of redacted source-discovery records. Stage 3Q builds ignored redacted topic shards for local AI/deep-research review. Stage 3R audits those leads, promotes only corroborated public/source-observation records, preserves false positives as negative controls, and queues disabled post-Discord manifests. Raw logs, message bodies, usernames, and private attachment URLs are not committed.
 - Full Discord review bundles: Stage 4A builds redacted chronological streams, channel shards, topic shards, indexes, an LP page gallery, and an SFTP-ready static site under ignored paths for Deep Research handoff. Raw Discord logs, usernames, user IDs, message IDs, private URLs, generated static site files, copied LP page images, thumbnails, archives, and generated bundle outputs are not committed.
@@ -41,9 +41,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 4G cookie exact-candidate refresh.
-- Later CPU batch transform API extraction.
-- Later CPU batch transform API extraction.
+- Stage 4H CPU batch transform API extraction.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -154,12 +152,13 @@ Current status:
 - Stage 4D: bounded numeric verifier pack complete.
 - Stage 4E: cicada-solvers/iddqd source-lock delta audit complete.
 - Stage 4F: historical OutGuess/audio fixture source-locking complete.
+- Stage 4G: cookie exact-candidate refresh complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad search/scoring/CUDA campaigns: not started.
-- Latest bounded hash review: Stage 3L tested `1809` deduplicated SHA-256 candidate byte strings against the two archived cookie/hash targets for `3618` exact comparisons and found `0` exact matches; no solve claim.
+- Latest bounded hash review: Stage 4G tested `4` source-backed deduplicated SHA-256 candidate byte strings against the two archived cookie/hash targets for `8` exact comparisons and found `0` exact matches; no solve claim.
 - Latest image-analysis stage: Stage 3M analysed `58` ignored local page images, producing `406` component records, `58` symmetry records, `464` bitplane records, and `71` review-only feature candidates in ignored outputs. No OCR, AI/ML interpretation, image-derived search, or solve claim is made.
 - Latest source-discovery stage: Stage 3O promoted `500` public source links, `200` method-claim candidates, and `200` numeric-observation candidates from the Stage 3N extraction into redacted review records. It rejected private/unsafe links, expanded public tutorials, and generated Wiki source pages. Raw Discord logs, message bodies, usernames, private URLs, and generated review indexes remain uncommitted; no solve claim.
 - Latest visual review stage: Stage 3P processed `58` ignored local page images, emitted `2077` derived review images, `59` contact sheets, `58` review pages, and `6` review-only visual transform candidates under ignored outputs. No OCR, AI/ML interpretation, image-derived search, or solve claim is made.
@@ -179,8 +178,9 @@ Current status:
 - Latest bounded numeric stage: Stage 4D discovered `7` manifests, audited `3`, deferred or skipped `4`, verified `0` GP/rune claims because no exact new spans were present, audited `2` delimiter observations and `10` visual negative controls, skipped number-square routes because raw values are not locked, and deferred cuneiform/cookie execution.
 - Latest source-delta stage: Stage 4E inspected `310` public `cicada-solvers/iddqd` tree paths, recorded `1` source-delta record, `12` source-health records, `1` image artefact future-preflight record, and `4` disabled future manifests without committing raw artefacts.
 - Latest stego/audio fixture stage: Stage 4F recorded `5` OutGuess fixture source records, `5` audio fixture source records, `10` source-health records, `5` toolchain requirement records, and `4` disabled future manifests without running OutGuess, OpenPuff, MP3Stego, hexdump/strings, audio analysis, or committing raw artefacts.
+- Latest cookie refresh stage: Stage 4G generated `4` source-backed candidates before and after deduplication, marked `2` previous-pack duplicates, ran `8` SHA-256 exact comparisons, and found `0` exact matches without fuzzy matching, hashcat, GPU/CUDA, raw Discord processing, raw page-image processing, or solve claims.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 4G cookie exact-candidate refresh.
+- Next: Stage 4H CPU batch transform API extraction.
 
 ## How To Use This Repo
 

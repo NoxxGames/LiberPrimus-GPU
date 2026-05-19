@@ -65,6 +65,18 @@ try {
         --toolchain data/observations/stego/stage4f-toolchain-requirements.yaml `
         --manifest-dir experiments/manifests/stego/stage4f-disabled
 
+    Write-Host "Running Stage 4G cookie refresh synthetic/temp output"
+    $Stage4GOut = Join-Path $TempDir "stage4g-cookie-refresh"
+    $Stage4GSummary = Join-Path $TempDir "stage4g-cookie-refresh-summary.yaml"
+    & $Python -m libreprimus.cli cookie-refresh run `
+        --manifest experiments/manifests/stage4b-disabled/exp_stage4b_cookie_pack_v2.yaml `
+        --candidate-sources data/observations/web/stage4b-cookie-candidate-source-records.yaml `
+        --cookie-targets data/observations/web/cookie-hash-records-v0.yaml `
+        --out-dir $Stage4GOut `
+        --summary-out $Stage4GSummary `
+        --allow-warnings
+    & $Python -m libreprimus.cli cookie-refresh validate --results-dir $Stage4GOut --summary $Stage4GSummary
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

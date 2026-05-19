@@ -122,6 +122,12 @@ Stage 4F records historical stego/audio fixture source locks and toolchain requi
 These records are fixture provenance and readiness metadata only. They do not download artefacts,
 run OutGuess/OpenPuff/MP3Stego, scan audio, or interpret payloads.
 
+Stage 4G records the cookie exact-refresh aggregate summary:
+
+- `data/observations/web/stage4g-cookie-refresh-summary.yaml`
+
+Generated Stage 4G candidate records are experiment outputs, not source records.
+
 ## What Not To Commit
 
 Raw source material, raw chat logs, generated extraction dumps, or unreviewed claims as facts.
@@ -150,6 +156,8 @@ Do not commit generated Stage 4E source-delta reports under
 Do not commit generated Stage 4F stego/audio fixture reports under
 `experiments/results/stego-fixtures/stage4f/`, raw external caches, downloaded binaries, images,
 audio, fonts, archives, or extracted payloads.
+Do not commit generated Stage 4G cookie refresh JSON/JSONL outputs under
+`experiments/results/cookie-refresh/stage4g/`.
 
 ## Troubleshooting
 
@@ -181,3 +189,6 @@ download or commit the external repository opportunistically, and do not commit 
 If a Stage 4F fixture record looks runnable, create a later execution stage with the exact manifest,
 tool availability, expected payload policy, and controls. Do not run stego/audio tools during
 source-locking work.
+
+If a Stage 4G cookie refresh has zero matches, update the method ledger and stop. Do not add arbitrary
+strings or variants unless a later source-lock stage supplies newly exact candidate strings.
