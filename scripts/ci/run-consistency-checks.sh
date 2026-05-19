@@ -121,6 +121,14 @@ echo "Validating Stage 4L observation promotion records"
     --manifest-readiness data/observations/review/stage4l-manifest-readiness-records.yaml \
     --summary data/observations/review/stage4l-reviewed-observation-promotion-summary.yaml
 
+echo "Validating Stage 4M image preflight records"
+"$python_bin" -m libreprimus.cli image-preflight validate \
+    --source-variant data/observations/visual/stage4m-image-source-variant-preflight-records.yaml \
+    --compression data/observations/visual/stage4m-image-compression-preflight-records.yaml \
+    --artifact-candidates data/observations/visual/stage4m-image-artifact-review-candidates.yaml \
+    --summary data/observations/visual/stage4m-image-preflight-summary.yaml \
+    --bigram-readiness data/observations/review/stage4m-bigram-frequency-pattern-readiness.yaml
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

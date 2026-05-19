@@ -40,6 +40,7 @@ REQUIRED_METHOD_FAMILIES = {
     "gp_rune_claim_verifier",
     "observation_review_workflow",
     "observation_promotion_ledger",
+    "image_source_variant_compression_preflight",
     "source_lock_snapshots",
     "scoring_consolidation",
     "deterministic_image_analysis",

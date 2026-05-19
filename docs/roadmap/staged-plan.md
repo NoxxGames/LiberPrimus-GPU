@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 4L - reviewed observation promotion ledger.
-- Current planning focus: Stage 4M - image source-variant and compression preflight.
+- Latest completed stage: Stage 4M - image source-variant and compression preflight.
+- Current planning focus: Stage 4N - OutGuess/audio positive-control completion.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -48,19 +48,20 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Stage 4J: hardened observation review workflow records, promotion gates, quarantine records, documentation freshness checks, and path sanitisation without promoting observations to manifests.
 - Stage 4K: locked a small allowlisted public-source subset with source snapshot schemas, fetch records, copyright notes, GitHub commit-addressed references, ignored local cache hashes, and explicit snapshot policy.
 - Stage 4L: joined Stage 4J review decisions with Stage 4K source locks into a reviewed observation promotion ledger, blocker records, and disabled future-manifest readiness records.
+- Stage 4M: scanned ignored local LP page images for metadata and deterministic compression metrics, recorded source-variant readiness and image-artifact review candidates, and kept the bigram/Fibonacci-421 observation blocked pending reproducible matrix controls.
 
 ## Current Stage
 
-Stage 4L is complete. It loaded 97 reviewed observations, created 97 ledger records, 97 readiness records, 115 blocker records, and 13 manifest-readiness records. It marked 0 observations ready for manifest seed execution, 17 control-only, 14 source-reference-only, 48 blocked, 2 deferred, 15 quarantined, and 1 rejected. The added bigram/Fibonacci-421 community claim is blocked pending reproducible matrix regeneration, declared rune order, indexing convention, null controls, and multiple-testing controls.
+Stage 4M is complete. It scanned 58 ignored local LP page images, produced 58 source-variant records, 58 deterministic compression metric records, 1 image artifact review candidate, and 1 blocked bigram/Fibonacci-421 readiness record. All source-variant comparisons remain blocked until external variant bytes are source-locked in ignored cache.
 
-Stage 4L does not execute or enable manifests, process raw Discord logs or raw page images, run image/stego/audio tools, implement CUDA/GPU kernels, activate the canonical corpus, finalize page boundaries, or make solve claims. Promotion-readiness records are planning and gating metadata only.
+Stage 4M does not execute experiments, regenerate bigram matrices, read raw transcripts, process raw Discord logs, commit raw LP page images or `Fib421.jpg`, generate committed visualisations, run OCR/AI/ML, run stego/audio tools, implement CUDA/GPU kernels, activate the canonical corpus, finalize page boundaries, or make solve claims.
 
 ## Planned Next Stages
 
-- Stage 4M - image source-variant and compression preflight.
+- Stage 4N - OutGuess/audio positive-control completion.
 - Stage 5A - CUDA planning and parity scaffolding only.
 
-The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking, visual observation intake, annotation, and bounded numeric audits ahead of CPU API work. Stage 4H completed the CPU batch API extraction, Stage 4I completed scorer consolidation, Stage 4J closed the observation review-to-promotion loop, Stage 4K strengthened public-source reproducibility, and Stage 4L made promotion readiness explicit before any image/source-variant preflight or CUDA planning stage.
+The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking, visual observation intake, annotation, and bounded numeric audits ahead of CPU API work. Stage 4H completed the CPU batch API extraction, Stage 4I completed scorer consolidation, Stage 4J closed the observation review-to-promotion loop, Stage 4K strengthened public-source reproducibility, Stage 4L made promotion readiness explicit, and Stage 4M created image source-variant/compression preflight records before OutGuess/audio positive-control completion or CUDA planning.
 
 ## Deferred Work
 
@@ -103,7 +104,9 @@ Stage 4J makes observation lifecycle state explicit. Observations may be accepte
 
 Stage 4K makes public-source locking reproducible without turning the repository into a mirror. Every source-lock snapshot record declares an allowlisted source URL, canonical URL where known, retrieval status, hash metadata when fetched, source class, copyright note, snapshot policy, and source-lock status. Binary, image, audio, font, PDF, archive, raw Discord, raw page-image, and generated artefacts remain uncommitted. The next planned stage after Stage 4K is Stage 4L: reviewed observation promotion ledger.
 
-Stage 4L makes reviewed observation promotion state explicit. Every reviewed observation receives a promotion category, blocker list when blocked/deferred/quarantined/rejected, and no-execution/no-solve flags. Future manifests receive readiness records with `execution_enabled=false`. The next planned stage after Stage 4L is Stage 4M: image source-variant and compression preflight.
+Stage 4L makes reviewed observation promotion state explicit. Every reviewed observation receives a promotion category, blocker list when blocked/deferred/quarantined/rejected, and no-execution/no-solve flags. Future manifests receive readiness records with `execution_enabled=false`.
+
+Stage 4M makes image source-variant and compression preflight deterministic without interpretation. It records image metadata, source-variant readiness, metric-only compression summaries, review-only artifact candidates, and blocked bigram/Fibonacci-421 readiness. The next planned stage after Stage 4M is Stage 4N: OutGuess/audio positive-control completion.
 
 ## Retired Or Deprioritised Directions
 
@@ -120,9 +123,9 @@ Stage 4L makes reviewed observation promotion state explicit. Every reviewed obs
 - Dot/binary/braille/constellation readings remain not experiment seeds without explicit coordinates, ordering, polarity, ambiguity tables, and later review promotion.
 - No-fudge numeric verifier work must not broaden route/value spaces or apply nearest-prime, +/-n, row/column arithmetic, or post-hoc adjustment.
 - Source-delta audit work must not blind-mirror external repositories, commit raw binary/image/audio/font artefacts, or treat source variants as canonical corpus.
-- JPEG-like/compression artefact observations are future-preflight only; star-like or compression-like features require source variants and negative controls before any interpretation.
+- JPEG-like/compression artefact observations are preflight/control-only; star-like or compression-like features require source variants and negative controls before any interpretation.
 - Broad OutGuess/stego/audio scans: deferred and prohibited until source-locked fixtures and expected-output controls exist.
-- CUDA acceleration: deferred until CPU batch APIs, stable scorer definitions, observation review gates, source-lock reproducibility records, promotion-readiness records, parity tests, and benchmarks exist. Stage 4H provides the CPU batch parity contract, Stage 4I provides the scoring contract, Stage 4J provides the observation review gate, Stage 4K improves source-lock provenance, and Stage 4L provides the promotion ledger; the first future CUDA target remains batch transform-and-score parity after explicit CUDA planning.
+- CUDA acceleration: deferred until CPU batch APIs, stable scorer definitions, observation review gates, source-lock reproducibility records, promotion-readiness records, parity tests, and benchmarks exist. Stage 4H provides the CPU batch parity contract, Stage 4I provides the scoring contract, Stage 4J provides the observation review gate, Stage 4K improves source-lock provenance, Stage 4L provides the promotion ledger, and Stage 4M adds image-preflight controls; the first future CUDA target remains batch transform-and-score parity after explicit CUDA planning.
 
 ## Deep Research Influence Log
 

@@ -63,6 +63,20 @@ Stage 4E adds only a source-variant and compression-artefact preflight backlog. 
 transforms. JPEG-like artefacts, star-like shapes, and compression/noise features remain review
 candidates until a future deterministic audit locks source variants and applies controls.
 
+Stage 4M implements the first deterministic preflight for that backlog:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli image-preflight validate `
+  --source-variant data/observations/visual/stage4m-image-source-variant-preflight-records.yaml `
+  --compression data/observations/visual/stage4m-image-compression-preflight-records.yaml `
+  --artifact-candidates data/observations/visual/stage4m-image-artifact-review-candidates.yaml `
+  --summary data/observations/visual/stage4m-image-preflight-summary.yaml `
+  --bigram-readiness data/observations/review/stage4m-bigram-frequency-pattern-readiness.yaml
+```
+
+The Stage 4M records are metric-only. They do not infer hidden data, run OCR/AI/ML, regenerate a
+bigram matrix, or promote image artefacts to experiment seeds.
+
 Stage 4J adds the review workflow that blocks visual observations from becoming experiment seeds
 unless source/page references, coordinate or region evidence, and explicit review decisions are
 present. Cuneiform, dot, delimiter, compression-artefact, braille, and constellation observations
@@ -88,6 +102,10 @@ outside Git.
 
 Generated Stage 4J observation-review reports under
 `experiments/results/observation-review/stage4j/` are also not committed.
+
+Generated Stage 4M image-preflight JSONL and summary reports under
+`experiments/results/image-preflight/stage4m/` are also not committed. Raw LP page images and the
+raw `data/raw/images/Fib421.jpg` screenshot remain ignored.
 
 ## OutGuess Regression Boundary
 

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/visual/image-source-variant-preflight-record-v0.schema.json",
+  "title": "Image Source Variant Preflight Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "preflight_record_id",
+    "image_id",
+    "relative_path",
+    "sha256",
+    "source_variant_status",
+    "raw_image_committed",
+    "generated_image_committed",
+    "solve_claim",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed",
+    "image_interpretation_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "image_source_variant_preflight_record" },
+    "preflight_record_id": { "type": "string", "minLength": 1 },
+    "image_id": { "type": "string", "minLength": 1 },
+    "relative_path": { "type": "string", "minLength": 1 },
+    "file_name": { "type": "string", "minLength": 1 },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "source_variant_status": {
+      "enum": [
+        "blocked_external_variant_not_cached",
+        "blocked_missing_local_lock",
+        "metadata_only",
+        "deferred"
+      ]
+    },
+    "raw_image_committed": { "const": false },
+    "generated_image_committed": { "const": false },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "image_interpretation_claim": { "const": false }
+  }
+}

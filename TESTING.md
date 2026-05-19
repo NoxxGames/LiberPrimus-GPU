@@ -49,6 +49,12 @@ cuneiform, dot, cookie, and stego/audio records from becoming executable seeds p
 manifest-readiness tests that keep execution disabled, CLI build/validate checks, and ignored-output
 checks for `experiments/results/observation-promotion/stage4l/`.
 
+Stage 4M extends coverage with image-preflight schemas, deterministic synthetic image metadata and
+compression metrics, source-variant blocked-status checks, review-only artifact candidates, blocked
+bigram/Fibonacci-421 readiness, CLI build/validate checks, and ignored-output/raw-image checks for
+`experiments/results/image-preflight/stage4m/`, `third_party/LiberPrimusPages/`, and
+`data/raw/images/Fib421.jpg`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.

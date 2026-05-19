@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/experiments/bigram-frequency-pattern-readiness-v0.schema.json",
+  "title": "Bigram Frequency Pattern Readiness v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "readiness_id",
+    "future_manifest_id",
+    "ready_state",
+    "blockers",
+    "matrix_regenerated",
+    "raw_transcripts_read",
+    "frequency_pattern_experiment_executed",
+    "execution_enabled",
+    "solve_claim",
+    "no_solve_claim",
+    "cuda_enabled"
+  ],
+  "properties": {
+    "record_type": { "const": "bigram_frequency_pattern_readiness" },
+    "readiness_id": { "type": "string", "minLength": 1 },
+    "future_manifest_id": { "type": "string", "minLength": 1 },
+    "ready_state": { "enum": ["blocked"] },
+    "blockers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "contains": { "const": "blocked_needs_reproducible_bigram_matrix" },
+      "minItems": 1
+    },
+    "matrix_regenerated": { "const": false },
+    "raw_transcripts_read": { "const": false },
+    "frequency_pattern_experiment_executed": { "const": false },
+    "execution_enabled": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "cuda_enabled": { "const": false }
+  }
+}

@@ -1,6 +1,6 @@
 # Image Compression Artefact Preflight
 
-Stage 4E records a future deterministic image/source-variant audit branch for JPEG-like artefacts observed or discussed around Liber Primus depictions. This page is a backlog and policy note, not an analysis result.
+Stage 4E records a future deterministic image/source-variant audit branch for JPEG-like artefacts observed or discussed around Liber Primus depictions. Stage 4M implements the first metadata-only preflight for that branch. This page is a policy note; the Stage 4M aggregate result is in `docs/forensics/image-compression-artifact-preflight-results.md`.
 
 ## Working Hypotheses
 
@@ -12,19 +12,19 @@ PNG page images may show compression-like features for several ordinary reasons:
 - visible features are ordinary compression or scanner noise;
 - intentional visual artefacts are possible but less likely and require controls.
 
-## Future Tests
+## Stage 4M Preflight
 
-A future preflight stage may compare locked source variants with deterministic metrics:
+Stage 4M records local LP page-image metadata, source-variant readiness, deterministic compression metrics, and review-only artifact candidates. It does not download external variants or produce visualisations for commit.
 
 - filename, count, SHA-256, file-size, dimension, and color-mode comparison;
-- DCT/blockiness estimates;
-- edge and noise residual views;
-- recompress-difference maps;
-- channel and bitplane views;
-- star-like symbol candidate review;
-- known JPEG and non-JPEG negative controls.
+- 8x8 blockiness proxy;
+- edge and noise residual summaries;
+- channel histogram summary;
+- bitplane summaries;
+- star-like/compression-like candidate review state;
+- bigram/Fibonacci-421 readiness tracking as blocked, not executed.
 
-These tests must be bounded, deterministic, and source-variant aware. They must not infer hidden meaning from artefacts.
+Future source-variant comparison remains blocked until external variant bytes are source-locked in an ignored cache.
 
 ## Policy
 

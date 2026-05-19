@@ -124,6 +124,27 @@ Run:
 Future manifests must cite readiness records and still run only in a separately scoped execution
 stage.
 
+## Stage 4M Image Source-Variant And Compression Preflight
+
+Stage 4M does not execute experiments. It reads ignored local LP page images only for deterministic
+metadata and compression metrics, records source-variant readiness, keeps image artefact candidates
+review-only, and carries the bigram/Fibonacci-421 claim forward as blocked readiness.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli image-preflight validate `
+  --source-variant data/observations/visual/stage4m-image-source-variant-preflight-records.yaml `
+  --compression data/observations/visual/stage4m-image-compression-preflight-records.yaml `
+  --artifact-candidates data/observations/visual/stage4m-image-artifact-review-candidates.yaml `
+  --summary data/observations/visual/stage4m-image-preflight-summary.yaml `
+  --bigram-readiness data/observations/review/stage4m-bigram-frequency-pattern-readiness.yaml
+```
+
+Source-variant comparisons remain blocked until external variant bytes are source-locked in ignored
+cache. Compression metrics, star-like features, and bigram/Fibonacci patterns are review-only and
+cannot become solve evidence or executable seeds in this stage.
+
 The Stage 4G run generated `4` candidates before deduplication, kept `4` deduplicated candidates, tested `8` exact SHA-256 comparisons against two targets, and found `0` exact matches. Do not rerun cookie work without newly source-locked exact candidate strings.
 
 ## Stage 4H CPU Batch Transform API

@@ -119,6 +119,15 @@ records:
     prohibited_expansions: [Executing manifests from readiness records, treating control-only observations as true claims, promoting visual readings without coordinates, promoting cookie work after zero exact matches without new source strings, running stego/audio tools without assets/toolchain/expected outputs.]
     notes: Ready_for_manifest means future planning readiness only; execution still requires a separate explicit stage.
   - record_type: method_retirement_record
+    method_family_id: image_source_variant_compression_preflight
+    retired_status: active_with_constraints
+    reason: Image preflight is active infrastructure, but compression/star-like artefact metrics and screenshot-based numeric patterns are high false-positive risk without source variants and controls.
+    evidence: [Stage 4M records 58 local LP image metadata/metric records and keeps the bigram/Fibonacci-421 observation blocked pending reproducible matrix and null controls.]
+    stages_supporting: [stage-4m]
+    reopen_conditions: [External source variants are source-locked in ignored cache, null/negative controls are declared, or a future bounded audit has exact reproducible inputs.]
+    prohibited_expansions: [Hidden-message inference from metrics, broad image transform fishing, OCR or AI interpretation, image/stego extraction, raw image commits, generated visualisation commits, bigram audit execution without matrix regeneration and null controls.]
+    notes: Stage 4M is metric-only preflight and does not promote visual or numeric-pattern observations to experiment seeds.
+  - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints
     reason: Stage 4B visual observations are useful review inputs, but broad visual pareidolia and unannotated dot/braille/constellation readings remain high-risk false-positive classes.

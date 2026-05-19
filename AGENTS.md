@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4L - reviewed observation promotion ledger.
+Current completed stage: Stage 4M - image source-variant and compression preflight.
 
-Current work: Stage 4M - image source-variant and compression preflight. Stage 4M should use Stage 4L promotion-readiness records and keep image/compression observations as preflight/control inputs, not solve evidence.
+Current work: Stage 4N - OutGuess/audio positive-control completion. Stage 4N should use source-locked fixture metadata and expected-output controls; it must not become broad stego scanning.
 
 Current project state:
 
@@ -82,7 +82,7 @@ Current project state:
 - `third_party/CicadaSolversIddqd/` is an ignored local cache for optional cicada-solvers/iddqd audit material; commit only README and `.gitkeep`.
 - Do not blind-mirror external repositories. Source-delta audits commit metadata/records, not raw binary/image/audio/font artefacts.
 - Font binaries must not be committed or shared.
-- Compression artefact observations are future-preflight only and not solve evidence; star-like compression/noise features require source variants and negative controls before interpretation.
+- Compression artefact observations are preflight/control-only and not solve evidence; star-like compression/noise features require source variants and negative controls before interpretation.
 - Source-lock delta candidates such as `https://github.com/cicada-solvers/iddqd` must be handled by an explicit source-lock stage, not opportunistically processed.
 - Stage 4F generated stego/audio fixture diagnostics are generated and ignored under `experiments/results/stego-fixtures/stage4f/`.
 - Historical stego/audio fixture records are metadata/source-locks only unless a later explicit execution stage enables a bounded manifest.
@@ -118,6 +118,13 @@ Current project state:
 - Stage 4L generated observation-promotion reports are generated and ignored under `experiments/results/observation-promotion/stage4l/`.
 - The promotion ledger is the gate between review decisions and future manifests.
 - Future manifests must cite promotion-readiness records.
+- Ready_for_manifest does not mean execution.
+- Control-only observations must not be treated as true claims.
+- Stage 4M generated image-preflight reports are generated and ignored under `experiments/results/image-preflight/stage4m/`.
+- Image preflight metrics are not hidden-message evidence.
+- Compression/star-like artefacts require source variants and controls.
+- Do not promote image artefact observations to seeds.
+- Bigram/Fibonacci-421 audit requires reproducible matrix and null controls before execution.
 - `ready_for_manifest` means planning readiness only; it does not mean execution.
 - Control-only observations must not be treated as true claims.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.

@@ -423,3 +423,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 4L loaded 97 reviewed observations, created 97 ledger records, 115 blocker records, 13 manifest-readiness records, and promoted 0 observations to executable manifest seed readiness. The follow-up bigram/Fibonacci-421 community claim is blocked as a low-evidence numeric frequency pattern pending reproducible matrix controls.
+  - record_type: stage_summary_record
+    stage_id: stage-4m
+    title: Image source-variant and compression preflight
+    status: complete
+    category: infrastructure
+    summary: Built deterministic metadata, source-variant readiness, compression metric, artifact review, and bigram/Fibonacci-421 readiness records for local page-image preflight without interpretation or experiment execution.
+    key_outputs:
+      - "`libreprimus image-preflight` CLI for build, validate, and summary."
+      - Image source-variant preflight records, deterministic compression metric records, and review-only artifact candidates.
+      - Bigram/Fibonacci-421 readiness record preserving the Stage 4L blocker state pending reproducible matrix, declared rune order, transcript/profile source, null model, and multiple-testing controls.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 4M scanned 58 ignored local LP page images for metadata and metrics only, wrote no raw images or visualisations, and kept image artefacts and bigram patterns review-only.

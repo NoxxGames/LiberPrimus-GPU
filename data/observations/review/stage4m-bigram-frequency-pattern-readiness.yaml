@@ -1,0 +1,35 @@
+record_type: bigram_frequency_pattern_readiness
+readiness_id: stage4m-bigram-diagonal-fibonacci-421-readiness
+future_manifest_id: exp_stage4m_bigram_diagonal_fibonacci_421_audit
+stage4l_manifest_readiness_id: stage4l-manifest-readiness-exp_stage4m_bigram_diagonal_fibonacci_421_audit
+stage4l_ready_state: blocked
+stage4l_observation_readiness_id: stage4l-readiness-stage4l-review-bigram-diagonal-fibonacci-421-claim
+observation_id: stage4l-bigram-diagonal-fibonacci-421-claim
+observation_type: numeric_frequency_pattern_claim
+ready_state: blocked
+blockers:
+- blocked_needs_reproducible_bigram_matrix
+- blocked_needs_declared_rune_order
+- blocked_needs_transcript_profile_source
+- blocked_needs_null_model
+- blocked_needs_multiple_testing_control
+matrix_regenerated: false
+raw_transcripts_read: false
+frequency_pattern_experiment_executed: false
+synthetic_fixture_only: false
+bigram_image_present: true
+bigram_image_relative_path: data/raw/images/Fib421.jpg
+bigram_image_sha256: e9b5c84c1283fee3a0eeb5d0b9ed848e2049c5768ccfade48d58bd29dbefa321
+bigram_image_sha256_matches_stage4l: true
+bigram_image_byte_length: 2311679
+execution_enabled: false
+solve_claim: false
+no_solve_claim: true
+trusted_as_canonical: false
+usable_as_experiment_seed: false
+cuda_enabled: false
+cuda_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+notes: Stage 4M records readiness only. Matrix regeneration, transcript/profile selection,
+  null controls, and multiple-testing controls are required before any bounded audit.

@@ -1,0 +1,23 @@
+record_type: image_preflight_summary
+stage: stage4m
+image_count: 58
+source_variant_record_count: 58
+compression_record_count: 58
+artifact_candidate_count: 1
+jpeg_like_metric_flag_count: 58
+source_variants_blocked_external_cache_count: 58
+bigram_readiness_records: 1
+bigram_image_present: true
+bigram_readiness_blocked: true
+compression_metric_status_counts:
+  computed: 58
+source_variant_status_counts:
+  blocked_external_variant_not_cached: 58
+notes: Image metrics are deterministic preflight metadata only. Stage 4M does not
+  infer hidden content, intentionality, canonical source status, or page boundaries.
+raw_image_committed: false
+generated_image_committed: false
+solve_claim: false
+trusted_as_canonical: false
+usable_as_experiment_seed: false
+image_interpretation_claim: false

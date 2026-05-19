@@ -402,3 +402,11 @@ experiments/results/observation-promotion/**
 !experiments/results/observation-promotion/.gitkeep
 !experiments/results/observation-promotion/stage4l/
 !experiments/results/observation-promotion/stage4l/.gitkeep
+
+# Generated image preflight outputs
+experiments/results/image-preflight/**
+!experiments/results/image-preflight/
+!experiments/results/image-preflight/README.md
+!experiments/results/image-preflight/.gitkeep
+!experiments/results/image-preflight/stage4m/
+!experiments/results/image-preflight/stage4m/.gitkeep

@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 4L - reviewed observation promotion ledger.
-- Next planned stage: Stage 4M - image source-variant and compression preflight.
+- Latest completed stage: Stage 4M - image source-variant and compression preflight.
+- Next planned stage: Stage 4N - OutGuess/audio positive-control completion.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

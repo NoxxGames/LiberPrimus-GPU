@@ -1,0 +1,22 @@
+record_set_id: stage4m-image-artifact-review-candidates
+schema: schemas/visual/image-artifact-review-candidate-v0.schema.json
+records:
+- record_type: image_artifact_review_candidate
+  candidate_id: stage4m-artifact-candidate-stage4e-lp-jpeg-like-artifact-preflight
+  source_observation_id: stage4e-lp-jpeg-like-artifact-preflight
+  artifact_type: jpeg_like_compression_or_source_variant
+  review_state: future_preflight
+  artifact_review_status: review_only
+  source_variant_required: true
+  negative_controls_required: true
+  ordinary_compression_null_controls_required: true
+  negative_control_note: Compression and star-like features are suitable for future
+    false-positive controls; they are not evidence of intentional hidden data.
+  notes: Compression-like or star-like features remain review candidates only, not
+    evidence.
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false

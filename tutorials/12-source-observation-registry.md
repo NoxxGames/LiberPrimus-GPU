@@ -99,6 +99,18 @@ Stage 4C adds annotation task records for the Stage 4B visual subset:
 These records make visual claims reviewable and measurable, but they still keep
 `trusted_as_canonical=false`, `usable_as_experiment_seed=false`, and `solve_claim=false`.
 
+Stage 4M adds image source-variant/compression preflight records:
+
+- `data/observations/visual/stage4m-image-source-variant-preflight-records.yaml`
+- `data/observations/visual/stage4m-image-compression-preflight-records.yaml`
+- `data/observations/visual/stage4m-image-artifact-review-candidates.yaml`
+- `data/observations/visual/stage4m-image-preflight-summary.yaml`
+- `data/observations/review/stage4m-bigram-frequency-pattern-readiness.yaml`
+
+These records keep compression/star-like artefacts and the bigram/Fibonacci-421 screenshot as
+review-only preflight observations. They are not source truth, not solve evidence, and not
+experiment seeds.
+
 Stage 4D generated bounded numeric audit outputs from these records without promoting them to source
 truth. GP/rune batch002 skipped without exact new spans, number-square routes skipped without
 locked raw values, delimiter/dot audits inferred no meaning, and cuneiform/cookie packs remained

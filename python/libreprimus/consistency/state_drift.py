@@ -113,6 +113,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 4L is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage4m",
+        re.compile(r"\bnext:\s*stage\s+4m\b", re.IGNORECASE),
+        "Stage 4M is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -338,9 +343,19 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4m_image_source_variant_compression_next",
-        "stage 4m" in staged_plan and "image source-variant" in staged_plan and "compression preflight" in staged_plan,
-        "Staged plan records Stage 4M image source-variant and compression preflight as next.",
+        "stage4m_image_source_variant_compression_current_or_complete",
+        "stage 4m" in staged_plan
+        and "image source-variant" in staged_plan
+        and "compression preflight" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4M image source-variant and compression preflight as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4n_outguess_audio_positive_control_next",
+        "stage 4n" in staged_plan and "outguess" in staged_plan and "audio" in staged_plan and "positive-control" in staged_plan,
+        "Staged plan records Stage 4N OutGuess/audio positive-control completion as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -362,6 +377,13 @@ def check_state_drift_consistency(
         "observation_promotion_ledger_present",
         "promotion ledger" in combined and "ready_for_manifest" in combined and "control-only" in combined,
         "Reviewed observation promotion ledger policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "image_preflight_policy_present",
+        "image preflight" in combined and "compression" in combined and "source variants" in combined,
+        "Image source-variant and compression preflight policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

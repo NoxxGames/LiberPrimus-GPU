@@ -130,6 +130,11 @@ If a Stage 4L observation-promotion build leaves `promotion_ledger_report.json`,
 Commit only the YAML ledger/readiness/blocker/summary records, schemas, code, docs, tests, and
 research logs.
 
+If a Stage 4M image-preflight build leaves `image_metadata.jsonl`, `compression_metrics.jsonl`,
+`source_variant_preflight.jsonl`, `artifact_candidate_report.jsonl`, `summary.json`, or
+`warnings.jsonl`, do not stage them. Commit only the YAML preflight/readiness records, schemas,
+code, docs, tests, and research logs. Raw LP images and `data/raw/images/Fib421.jpg` remain ignored.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 

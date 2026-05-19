@@ -34,6 +34,7 @@ Use Codex safely for scoped repository stages.
 - For Stage 4J-style observation review work, require review-state schemas, decisions, promotion gates, quarantine records, path sanitisation checks, stale-doc repair, generated ignored outputs, no experiment execution, and no solve claim.
 - For Stage 4K-style source-lock snapshot work, require allowlisted public sources only, explicit `--allow-network` for fetches, GitHub commit-addressed references where possible, ignored local cache, copyright notes, generated ignored reports, no broad crawl or mirror, no raw artefact commits, and no solve claim.
 - For Stage 4L-style promotion-ledger work, require explicit review-decision and source-lock references, blocker records for non-ready observations, `execution_enabled=false`, no manifest execution, no raw/generated commits, and no solve claim.
+- For Stage 4M-style image preflight work, require metric-only image metadata/compression records, source-variant blocked status when external bytes are absent, review-only artefact candidates, bigram/Fibonacci readiness blocked pending matrix/null controls, generated ignored outputs, no OCR/AI/ML/stego, and no solve claim.
 
 ## Commands
 

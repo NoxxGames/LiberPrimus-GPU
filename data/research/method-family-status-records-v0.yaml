@@ -288,13 +288,24 @@ records:
     solve_claim: false
     notes: Stage 4L produced zero executable seed-ready observations; the ledger is a gate, not an experiment runner.
   - record_type: method_family_status_record
+    method_family_id: image_source_variant_compression_preflight
+    name: Image source-variant and compression preflight
+    status: infrastructure_only
+    evidence_summary: Stage 4M records local LP page-image metadata, deterministic compression metrics, source-variant readiness, review-only artifact candidates, and blocked bigram/Fibonacci-421 readiness without interpreting images or executing experiments.
+    completed_stage_refs: [stage-4e, stage-4l, stage-4m]
+    reopen_conditions: [External source-variant image bytes are source-locked in ignored cache, or a future bounded audit has exact reproducible matrix inputs and null-control policy.]
+    stop_conditions: [Do not infer hidden-message evidence from metrics, commit raw image files or generated visualisations, promote image artefact observations as seeds, run OCR/AI/ML/stego extraction, or execute the bigram/Fibonacci audit without reproducible matrix and null controls.]
+    next_action: Stage 4N OutGuess/audio positive-control completion remains separate from image-source preflight and must preserve expected-output controls.
+    solve_claim: false
+    notes: Compression/star-like artefacts and numeric pattern screenshots are review-only until controlled against source variants and nulls.
+  - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred
-    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, and Stage 4L adds the promotion ledger, but parity tests and benchmarks are still required before GPU kernels are trusted.
-    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l]
-    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, transform-and-score parity tests, and benchmark plan are complete.]
+    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, Stage 4L adds the promotion ledger, and Stage 4M adds image preflight records, but parity tests and benchmarks are still required before GPU kernels are trusted.
+    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l, stage-4m]
+    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, image-preflight controls, transform-and-score parity tests, and benchmark plan are complete.]
     stop_conditions: [No GPU kernels before CPU reference behaviour and parity tests.]
     next_action: First future CUDA target is batch transform-and-score parity after source-lock/review workflows and explicit CUDA planning.
     solve_claim: false
-    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H through Stage 4L did not add CUDA code.
+    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H through Stage 4M did not add CUDA code.

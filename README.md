@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4L reviewed observation promotion ledger work. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4M image source-variant and compression preflight work. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -34,6 +34,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Source-delta audits: Stage 4E records selected `cicada-solvers/iddqd` tree metadata only. It does not blind-mirror external repositories, commit raw images/audio/fonts/binaries, run stego tools, or infer meaning from compression artefacts.
 - Public source-lock snapshots: Stage 4K locks a small allowlisted public-source subset with metadata, canonical URLs, retrieval status, hashes where fetched, copyright notes, explicit snapshot policies, and GitHub commit-addressed references. It does not broad crawl, blind-mirror repositories, commit full HTML by default, or commit binary/image/audio/font/archive artefacts.
 - Observation promotion ledger: Stage 4L joins Stage 4J review decisions with Stage 4K source locks and records ready, blocked, deferred, quarantined, rejected, source-reference-only, and control-only states. Ready does not mean executed; all future manifests remain disabled.
+- Image source-variant and compression preflight: Stage 4M scans ignored local LP page images for metadata and deterministic metric-only compression summaries, records source-variant comparison readiness, keeps star-like/compression-like artefacts review-only, and keeps the bigram/Fibonacci-421 observation blocked pending reproducible matrix and null controls. It does not commit raw images, generated visualisations, or execute image/bigram experiments.
 - CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. It is infrastructure for future CUDA parity, not a broad experiment runner.
 - Scoring contract: Stage 4I provides scorer inventory, finite confidence-label records, compatibility mappings, calibration-profile/report records, and CPU batch score compatibility checks. Score labels can create review leads only and cannot imply solved plaintext.
 - Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
@@ -45,7 +46,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 4M image source-variant and compression preflight.
+- Stage 4N OutGuess/audio positive-control completion.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -98,6 +99,13 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 4D bounded numeric verifier pack.
 - Stage 4E cicada-solvers/iddqd source-lock delta audit.
 - Stage 4F historical OutGuess/audio fixture source-locking.
+- Stage 4G cookie exact-candidate refresh.
+- Stage 4H CPU batch transform API extraction.
+- Stage 4I scorer consolidation and calibration report.
+- Stage 4J observation review workflow hardening.
+- Stage 4K allowlisted public source-lock snapshots.
+- Stage 4L reviewed observation promotion ledger.
+- Stage 4M image source-variant and compression preflight.
 - Stage 4G cookie exact-candidate refresh.
 - Stage 4H CPU batch transform API extraction.
 - Stage 4I scorer consolidation and calibration report.
@@ -199,8 +207,9 @@ Current status:
 - Latest observation review stage: Stage 4J loaded `96` observation-family records, wrote `96` review decisions, `96` promotion-gate records, `23` quarantine records, and promoted `0` observations to manifests. Review-only observations remain non-seeds.
 - Latest source snapshot stage: Stage 4K considered `43` source candidates, wrote `15` allowlisted source-lock snapshot records, locked `8` GitHub commit-addressed references, fetched `1` ignored local snapshot, committed `0` raw snapshots, rejected `22` unsafe/noisy or non-priority sources, and recorded `6` duplicate sources.
 - Latest observation promotion stage: Stage 4L loaded `97` reviewed observations, created `97` ledger records, `97` readiness records, `115` blocker records, and `13` manifest-readiness records. It marked `0` observations ready for manifest execution, `17` control-only, `14` source-reference-only, `48` blocked, `2` deferred, `15` quarantined, and `1` rejected. The added bigram/Fibonacci-421 community claim remains blocked pending reproducible matrix regeneration, rune-order declaration, indexing convention, null controls, and multiple-testing controls.
+- Latest image preflight stage: Stage 4M scanned `58` ignored local LP page images, wrote `58` source-variant records, `58` deterministic compression metric records, `1` review-only image artifact candidate, and `1` blocked bigram/Fibonacci-421 readiness record. It committed no raw images or generated visualisations and ran no image/bigram experiment.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 4M image source-variant and compression preflight.
+- Next: Stage 4N OutGuess/audio positive-control completion.
 
 ## How To Use This Repo
 

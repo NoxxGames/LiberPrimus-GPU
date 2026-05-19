@@ -1,0 +1,2961 @@
+record_set_id: stage4m-image-compression-preflight-records
+schema: schemas/visual/image-compression-preflight-record-v0.schema.json
+records:
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-0
+  image_id: stage4m-lp-image-0
+  relative_path: third_party/LiberPrimusPages/0.jpg
+  file_name: 0.jpg
+  sha256: 197e1e153958b9a2736b09c10eea7d8bb00e0632fd22a8d9606840becc79942e
+  file_size_bytes: 695525
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.154302
+  jpeg_grid_artifact_score: 1.154302
+  noise_residual_mean: 8.029836
+  noise_residual_max: 169
+  edge_residual_mean: 10.004776
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.860232
+      first_bin_ratio: 0.055364
+      last_bin_ratio: 0.860232
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.859632
+      first_bin_ratio: 0.060176
+      last_bin_ratio: 0.859632
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.859604
+      first_bin_ratio: 0.060158
+      last_bin_ratio: 0.859604
+  bitplane_summary:
+    bit_0_one_ratio: 0.903407
+    bit_1_one_ratio: 0.901855
+    bit_2_one_ratio: 0.900948
+    bit_3_one_ratio: 0.902822
+    bit_4_one_ratio: 0.903908
+    bit_5_one_ratio: 0.905937
+    bit_6_one_ratio: 0.90064
+    bit_7_one_ratio: 0.900202
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-1
+  image_id: stage4m-lp-image-1
+  relative_path: third_party/LiberPrimusPages/1.jpg
+  file_name: 1.jpg
+  sha256: f804fae06a68315eb6206158a2b34f55fe157c7d663fa961639fbe8dfc52a39f
+  file_size_bytes: 667228
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.070803
+  jpeg_grid_artifact_score: 1.070803
+  noise_residual_mean: 7.91217
+  noise_residual_max: 165
+  edge_residual_mean: 10.061966
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.865227
+      first_bin_ratio: 0.055931
+      last_bin_ratio: 0.865227
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.865227
+      first_bin_ratio: 0.055931
+      last_bin_ratio: 0.865227
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.865227
+      first_bin_ratio: 0.055931
+      last_bin_ratio: 0.865227
+  bitplane_summary:
+    bit_0_one_ratio: 0.904475
+    bit_1_one_ratio: 0.904198
+    bit_2_one_ratio: 0.904856
+    bit_3_one_ratio: 0.904348
+    bit_4_one_ratio: 0.90509
+    bit_5_one_ratio: 0.904994
+    bit_6_one_ratio: 0.904711
+    bit_7_one_ratio: 0.903819
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-10
+  image_id: stage4m-lp-image-10
+  relative_path: third_party/LiberPrimusPages/10.jpg
+  file_name: 10.jpg
+  sha256: 1716e282c1d5e8a9ff911c01621e9b195d4728c7fa55ac857176a473eaba3239
+  file_size_bytes: 618194
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.159773
+  jpeg_grid_artifact_score: 1.159773
+  noise_residual_mean: 7.467247
+  noise_residual_max: 152
+  edge_residual_mean: 9.15078
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.895582
+      first_bin_ratio: 0.030558
+      last_bin_ratio: 0.895582
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.895582
+      first_bin_ratio: 0.030558
+      last_bin_ratio: 0.895582
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.895576
+      first_bin_ratio: 0.030558
+      last_bin_ratio: 0.895576
+  bitplane_summary:
+    bit_0_one_ratio: 0.922719
+    bit_1_one_ratio: 0.926221
+    bit_2_one_ratio: 0.931254
+    bit_3_one_ratio: 0.93114
+    bit_4_one_ratio: 0.932365
+    bit_5_one_ratio: 0.932426
+    bit_6_one_ratio: 0.933968
+    bit_7_one_ratio: 0.933795
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-11
+  image_id: stage4m-lp-image-11
+  relative_path: third_party/LiberPrimusPages/11.jpg
+  file_name: 11.jpg
+  sha256: 26f0cb307a23dcb2adf03a70fb9c6da89746258a90fd9be5383b2757ab4aad30
+  file_size_bytes: 609111
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.098796
+  jpeg_grid_artifact_score: 1.098796
+  noise_residual_mean: 7.340696
+  noise_residual_max: 152
+  edge_residual_mean: 9.209076
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.896634
+      first_bin_ratio: 0.030286
+      last_bin_ratio: 0.896634
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.896634
+      first_bin_ratio: 0.030286
+      last_bin_ratio: 0.896634
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.896634
+      first_bin_ratio: 0.030286
+      last_bin_ratio: 0.896634
+  bitplane_summary:
+    bit_0_one_ratio: 0.922582
+    bit_1_one_ratio: 0.928167
+    bit_2_one_ratio: 0.931252
+    bit_3_one_ratio: 0.931114
+    bit_4_one_ratio: 0.93335
+    bit_5_one_ratio: 0.933716
+    bit_6_one_ratio: 0.934359
+    bit_7_one_ratio: 0.934476
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-12
+  image_id: stage4m-lp-image-12
+  relative_path: third_party/LiberPrimusPages/12.jpg
+  file_name: 12.jpg
+  sha256: 6961f3f8eedba5b802fee9b40ad91fa604cd4e4394f9ba72853141ad71b19b21
+  file_size_bytes: 609412
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.074816
+  jpeg_grid_artifact_score: 1.074816
+  noise_residual_mean: 7.177986
+  noise_residual_max: 164
+  edge_residual_mean: 9.007484
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.898829
+      first_bin_ratio: 0.029432
+      last_bin_ratio: 0.898829
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.898829
+      first_bin_ratio: 0.029432
+      last_bin_ratio: 0.898829
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.898824
+      first_bin_ratio: 0.029432
+      last_bin_ratio: 0.898824
+  bitplane_summary:
+    bit_0_one_ratio: 0.924873
+    bit_1_one_ratio: 0.929052
+    bit_2_one_ratio: 0.933253
+    bit_3_one_ratio: 0.933978
+    bit_4_one_ratio: 0.934082
+    bit_5_one_ratio: 0.935465
+    bit_6_one_ratio: 0.936038
+    bit_7_one_ratio: 0.936122
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-13
+  image_id: stage4m-lp-image-13
+  relative_path: third_party/LiberPrimusPages/13.jpg
+  file_name: 13.jpg
+  sha256: 3481daeed3ab2bea6effbe36eec22f74955bce87ca4b4ae8674be1d3f84ea08d
+  file_size_bytes: 619368
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 0.996796
+  jpeg_grid_artifact_score: 0.996796
+  noise_residual_mean: 7.554881
+  noise_residual_max: 166
+  edge_residual_mean: 9.638329
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.894114
+      first_bin_ratio: 0.031377
+      last_bin_ratio: 0.894114
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.894114
+      first_bin_ratio: 0.031377
+      last_bin_ratio: 0.894114
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.894114
+      first_bin_ratio: 0.031377
+      last_bin_ratio: 0.894114
+  bitplane_summary:
+    bit_0_one_ratio: 0.921725
+    bit_1_one_ratio: 0.926918
+    bit_2_one_ratio: 0.930173
+    bit_3_one_ratio: 0.92942
+    bit_4_one_ratio: 0.930394
+    bit_5_one_ratio: 0.931623
+    bit_6_one_ratio: 0.932625
+    bit_7_one_ratio: 0.932503
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-14
+  image_id: stage4m-lp-image-14
+  relative_path: third_party/LiberPrimusPages/14.jpg
+  file_name: 14.jpg
+  sha256: 861037ea304b4d3b347cce18d97f25146f6f318cb748e59e6140d9eeaef6abd4
+  file_size_bytes: 436699
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.216293
+  jpeg_grid_artifact_score: 1.216293
+  noise_residual_mean: 4.783908
+  noise_residual_max: 155
+  edge_residual_mean: 5.989983
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.929156
+      first_bin_ratio: 0.018397
+      last_bin_ratio: 0.929156
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.929087
+      first_bin_ratio: 0.01843
+      last_bin_ratio: 0.929087
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.929082
+      first_bin_ratio: 0.01843
+      last_bin_ratio: 0.929082
+  bitplane_summary:
+    bit_0_one_ratio: 0.940338
+    bit_1_one_ratio: 0.946594
+    bit_2_one_ratio: 0.952807
+    bit_3_one_ratio: 0.95389
+    bit_4_one_ratio: 0.954834
+    bit_5_one_ratio: 0.956118
+    bit_6_one_ratio: 0.955841
+    bit_7_one_ratio: 0.9565
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-15
+  image_id: stage4m-lp-image-15
+  relative_path: third_party/LiberPrimusPages/15.jpg
+  file_name: 15.jpg
+  sha256: 5543cfce96493b86eece3195b3f5ea6e779ff41551676600b0c2479fc18c0ec5
+  file_size_bytes: 512272
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.025233
+  jpeg_grid_artifact_score: 1.025233
+  noise_residual_mean: 5.460449
+  noise_residual_max: 157
+  edge_residual_mean: 6.9366
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.922948
+      first_bin_ratio: 0.021212
+      last_bin_ratio: 0.922948
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.921735
+      first_bin_ratio: 0.025897
+      last_bin_ratio: 0.921735
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.92171
+      first_bin_ratio: 0.025874
+      last_bin_ratio: 0.92171
+  bitplane_summary:
+    bit_0_one_ratio: 0.945262
+    bit_1_one_ratio: 0.94691
+    bit_2_one_ratio: 0.948224
+    bit_3_one_ratio: 0.950048
+    bit_4_one_ratio: 0.951088
+    bit_5_one_ratio: 0.952428
+    bit_6_one_ratio: 0.948916
+    bit_7_one_ratio: 0.949793
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-16
+  image_id: stage4m-lp-image-16
+  relative_path: third_party/LiberPrimusPages/16.jpg
+  file_name: 16.jpg
+  sha256: 39780578c48d318310c3bccb0bc30e96adcb5b2de6e4a965000c55465375861d
+  file_size_bytes: 550563
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.078446
+  jpeg_grid_artifact_score: 1.078446
+  noise_residual_mean: 6.784218
+  noise_residual_max: 163
+  edge_residual_mean: 8.529526
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.906059
+      first_bin_ratio: 0.030637
+      last_bin_ratio: 0.906059
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.906059
+      first_bin_ratio: 0.030637
+      last_bin_ratio: 0.906059
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.906059
+      first_bin_ratio: 0.030637
+      last_bin_ratio: 0.906059
+  bitplane_summary:
+    bit_0_one_ratio: 0.937279
+    bit_1_one_ratio: 0.93704
+    bit_2_one_ratio: 0.936292
+    bit_3_one_ratio: 0.937548
+    bit_4_one_ratio: 0.937386
+    bit_5_one_ratio: 0.937548
+    bit_6_one_ratio: 0.938248
+    bit_7_one_ratio: 0.938362
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-17
+  image_id: stage4m-lp-image-17
+  relative_path: third_party/LiberPrimusPages/17.jpg
+  file_name: 17.jpg
+  sha256: f123b66eefa1b4409750c5ea3879bfe64728c6aa1e1398cb8fbd0fa8b1cf1f50
+  file_size_bytes: 541530
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.143608
+  jpeg_grid_artifact_score: 1.143608
+  noise_residual_mean: 6.816661
+  noise_residual_max: 162
+  edge_residual_mean: 8.573975
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.906202
+      first_bin_ratio: 0.029897
+      last_bin_ratio: 0.906202
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.906202
+      first_bin_ratio: 0.029897
+      last_bin_ratio: 0.906202
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.906202
+      first_bin_ratio: 0.029897
+      last_bin_ratio: 0.906202
+  bitplane_summary:
+    bit_0_one_ratio: 0.937777
+    bit_1_one_ratio: 0.936582
+    bit_2_one_ratio: 0.937803
+    bit_3_one_ratio: 0.93708
+    bit_4_one_ratio: 0.937645
+    bit_5_one_ratio: 0.939824
+    bit_6_one_ratio: 0.938876
+    bit_7_one_ratio: 0.938779
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-18
+  image_id: stage4m-lp-image-18
+  relative_path: third_party/LiberPrimusPages/18.jpg
+  file_name: 18.jpg
+  sha256: 90fa414c464e86435bdb22f051f9670e886e3dd1c0b6d8954be94b86188da94b
+  file_size_bytes: 541718
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.127638
+  jpeg_grid_artifact_score: 1.127638
+  noise_residual_mean: 6.729362
+  noise_residual_max: 169
+  edge_residual_mean: 8.478485
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.906812
+      first_bin_ratio: 0.030355
+      last_bin_ratio: 0.906812
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.906812
+      first_bin_ratio: 0.030355
+      last_bin_ratio: 0.906812
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.906812
+      first_bin_ratio: 0.030355
+      last_bin_ratio: 0.906812
+  bitplane_summary:
+    bit_0_one_ratio: 0.937164
+    bit_1_one_ratio: 0.937505
+    bit_2_one_ratio: 0.937408
+    bit_3_one_ratio: 0.936989
+    bit_4_one_ratio: 0.937915
+    bit_5_one_ratio: 0.938797
+    bit_6_one_ratio: 0.938085
+    bit_7_one_ratio: 0.939395
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-19
+  image_id: stage4m-lp-image-19
+  relative_path: third_party/LiberPrimusPages/19.jpg
+  file_name: 19.jpg
+  sha256: b57ec6b12cb9a505eec6a77c64ddf63bf30a1bfb44dd5cdca35d900feed1b651
+  file_size_bytes: 540260
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.089163
+  jpeg_grid_artifact_score: 1.089163
+  noise_residual_mean: 6.846873
+  noise_residual_max: 163
+  edge_residual_mean: 8.369064
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.905746
+      first_bin_ratio: 0.030556
+      last_bin_ratio: 0.905746
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.905746
+      first_bin_ratio: 0.030556
+      last_bin_ratio: 0.905746
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.905746
+      first_bin_ratio: 0.030556
+      last_bin_ratio: 0.905746
+  bitplane_summary:
+    bit_0_one_ratio: 0.936206
+    bit_1_one_ratio: 0.935552
+    bit_2_one_ratio: 0.937266
+    bit_3_one_ratio: 0.936913
+    bit_4_one_ratio: 0.937742
+    bit_5_one_ratio: 0.93809
+    bit_6_one_ratio: 0.937424
+    bit_7_one_ratio: 0.938395
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-2
+  image_id: stage4m-lp-image-2
+  relative_path: third_party/LiberPrimusPages/2.jpg
+  file_name: 2.jpg
+  sha256: 74e955ebe248e6d7442e2d2cd3029951f258017987d5762f48e7897cf6611e34
+  file_size_bytes: 595338
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.147103
+  jpeg_grid_artifact_score: 1.147103
+  noise_residual_mean: 6.782115
+  noise_residual_max: 165
+  edge_residual_mean: 8.342438
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.878998
+      first_bin_ratio: 0.051572
+      last_bin_ratio: 0.878998
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.878876
+      first_bin_ratio: 0.051598
+      last_bin_ratio: 0.878876
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.878873
+      first_bin_ratio: 0.051595
+      last_bin_ratio: 0.878873
+  bitplane_summary:
+    bit_0_one_ratio: 0.912715
+    bit_1_one_ratio: 0.912697
+    bit_2_one_ratio: 0.913526
+    bit_3_one_ratio: 0.91304
+    bit_4_one_ratio: 0.913831
+    bit_5_one_ratio: 0.914243
+    bit_6_one_ratio: 0.912974
+    bit_7_one_ratio: 0.913211
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-20
+  image_id: stage4m-lp-image-20
+  relative_path: third_party/LiberPrimusPages/20.jpg
+  file_name: 20.jpg
+  sha256: 1ceef52570621785a021febff39003538f810179e5767ef5279a59c0c05c9985
+  file_size_bytes: 535883
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.111529
+  jpeg_grid_artifact_score: 1.111529
+  noise_residual_mean: 6.886215
+  noise_residual_max: 159
+  edge_residual_mean: 8.592461
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.905149
+      first_bin_ratio: 0.030835
+      last_bin_ratio: 0.905149
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.905149
+      first_bin_ratio: 0.030835
+      last_bin_ratio: 0.905149
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.905149
+      first_bin_ratio: 0.030835
+      last_bin_ratio: 0.905149
+  bitplane_summary:
+    bit_0_one_ratio: 0.936132
+    bit_1_one_ratio: 0.936432
+    bit_2_one_ratio: 0.936989
+    bit_3_one_ratio: 0.937701
+    bit_4_one_ratio: 0.936592
+    bit_5_one_ratio: 0.936882
+    bit_6_one_ratio: 0.937655
+    bit_7_one_ratio: 0.938497
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-21
+  image_id: stage4m-lp-image-21
+  relative_path: third_party/LiberPrimusPages/21.jpg
+  file_name: 21.jpg
+  sha256: c453ad16212b335a065069e9f755791b909225ed250b579eab205655e7a80c10
+  file_size_bytes: 550964
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.104061
+  jpeg_grid_artifact_score: 1.104061
+  noise_residual_mean: 6.964437
+  noise_residual_max: 154
+  edge_residual_mean: 8.633629
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.904457
+      first_bin_ratio: 0.03098
+      last_bin_ratio: 0.904457
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.904457
+      first_bin_ratio: 0.03098
+      last_bin_ratio: 0.904457
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.904457
+      first_bin_ratio: 0.03098
+      last_bin_ratio: 0.904457
+  bitplane_summary:
+    bit_0_one_ratio: 0.934619
+    bit_1_one_ratio: 0.935323
+    bit_2_one_ratio: 0.93644
+    bit_3_one_ratio: 0.936465
+    bit_4_one_ratio: 0.93692
+    bit_5_one_ratio: 0.936915
+    bit_6_one_ratio: 0.937401
+    bit_7_one_ratio: 0.937271
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-22
+  image_id: stage4m-lp-image-22
+  relative_path: third_party/LiberPrimusPages/22.jpg
+  file_name: 22.jpg
+  sha256: e232eb4649f89125d0edeab7022cbe189185d46ccbf0823fd964b6e71e9bafe7
+  file_size_bytes: 512143
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.201756
+  jpeg_grid_artifact_score: 1.201756
+  noise_residual_mean: 4.861651
+  noise_residual_max: 159
+  edge_residual_mean: 6.353264
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.861913
+      first_bin_ratio: 0.034437
+      last_bin_ratio: 0.861913
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.86186
+      first_bin_ratio: 0.03451
+      last_bin_ratio: 0.86186
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.860799
+      first_bin_ratio: 0.034673
+      last_bin_ratio: 0.860799
+  bitplane_summary:
+    bit_0_one_ratio: 0.885167
+    bit_1_one_ratio: 0.896037
+    bit_2_one_ratio: 0.901746
+    bit_3_one_ratio: 0.905678
+    bit_4_one_ratio: 0.910639
+    bit_5_one_ratio: 0.915611
+    bit_6_one_ratio: 0.919642
+    bit_7_one_ratio: 0.920619
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-23
+  image_id: stage4m-lp-image-23
+  relative_path: third_party/LiberPrimusPages/23.jpg
+  file_name: 23.jpg
+  sha256: d31a23cb3a2e50b505e1c468ffbb0106f5353f469bb5958b87ab929fc88decee
+  file_size_bytes: 484095
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.165534
+  jpeg_grid_artifact_score: 1.165534
+  noise_residual_mean: 5.591743
+  noise_residual_max: 149
+  edge_residual_mean: 6.969032
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.917389
+      first_bin_ratio: 0.02476
+      last_bin_ratio: 0.917389
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.916692
+      first_bin_ratio: 0.030261
+      last_bin_ratio: 0.916692
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.916677
+      first_bin_ratio: 0.030251
+      last_bin_ratio: 0.916677
+  bitplane_summary:
+    bit_0_one_ratio: 0.945496
+    bit_1_one_ratio: 0.944377
+    bit_2_one_ratio: 0.944687
+    bit_3_one_ratio: 0.946721
+    bit_4_one_ratio: 0.948184
+    bit_5_one_ratio: 0.949272
+    bit_6_one_ratio: 0.944534
+    bit_7_one_ratio: 0.944578
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-24
+  image_id: stage4m-lp-image-24
+  relative_path: third_party/LiberPrimusPages/24.jpg
+  file_name: 24.jpg
+  sha256: 62148ef272d17bcedf5df30f6cc9e52df127113c18c1cf57ea92c75feedfce80
+  file_size_bytes: 654761
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.1522
+  jpeg_grid_artifact_score: 1.1522
+  noise_residual_mean: 7.24116
+  noise_residual_max: 151
+  edge_residual_mean: 8.97126
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.883774
+      first_bin_ratio: 0.031802
+      last_bin_ratio: 0.883774
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.883774
+      first_bin_ratio: 0.031802
+      last_bin_ratio: 0.883774
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.883774
+      first_bin_ratio: 0.031802
+      last_bin_ratio: 0.883774
+  bitplane_summary:
+    bit_0_one_ratio: 0.88767
+    bit_1_one_ratio: 0.901113
+    bit_2_one_ratio: 0.913689
+    bit_3_one_ratio: 0.918368
+    bit_4_one_ratio: 0.922938
+    bit_5_one_ratio: 0.928485
+    bit_6_one_ratio: 0.931475
+    bit_7_one_ratio: 0.935628
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-25
+  image_id: stage4m-lp-image-25
+  relative_path: third_party/LiberPrimusPages/25.jpg
+  file_name: 25.jpg
+  sha256: a7d6e597debff4f7c5b3516e1b02ca2e4fa5b37d972f567264ed2ec845013cff
+  file_size_bytes: 643754
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.120268
+  jpeg_grid_artifact_score: 1.120268
+  noise_residual_mean: 7.180466
+  noise_residual_max: 169
+  edge_residual_mean: 9.003471
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.885147
+      first_bin_ratio: 0.031395
+      last_bin_ratio: 0.885147
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.885147
+      first_bin_ratio: 0.031395
+      last_bin_ratio: 0.885147
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.885147
+      first_bin_ratio: 0.031395
+      last_bin_ratio: 0.885147
+  bitplane_summary:
+    bit_0_one_ratio: 0.888212
+    bit_1_one_ratio: 0.902507
+    bit_2_one_ratio: 0.914426
+    bit_3_one_ratio: 0.918261
+    bit_4_one_ratio: 0.924082
+    bit_5_one_ratio: 0.929596
+    bit_6_one_ratio: 0.932493
+    bit_7_one_ratio: 0.936139
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-26
+  image_id: stage4m-lp-image-26
+  relative_path: third_party/LiberPrimusPages/26.jpg
+  file_name: 26.jpg
+  sha256: ed88f5fcdca3d1f846538caa8be979aa28cde969eb99c9464d60daa26c1f9af7
+  file_size_bytes: 677224
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.106958
+  jpeg_grid_artifact_score: 1.106958
+  noise_residual_mean: 7.191861
+  noise_residual_max: 165
+  edge_residual_mean: 9.165977
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.884908
+      first_bin_ratio: 0.031474
+      last_bin_ratio: 0.884908
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.884837
+      first_bin_ratio: 0.031502
+      last_bin_ratio: 0.884837
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.884832
+      first_bin_ratio: 0.031502
+      last_bin_ratio: 0.884832
+  bitplane_summary:
+    bit_0_one_ratio: 0.889697
+    bit_1_one_ratio: 0.90212
+    bit_2_one_ratio: 0.91364
+    bit_3_one_ratio: 0.919268
+    bit_4_one_ratio: 0.922958
+    bit_5_one_ratio: 0.929784
+    bit_6_one_ratio: 0.931849
+    bit_7_one_ratio: 0.935804
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-27
+  image_id: stage4m-lp-image-27
+  relative_path: third_party/LiberPrimusPages/27.jpg
+  file_name: 27.jpg
+  sha256: c92c972f41dd038e136d8589aa7b113e268c36f2860c279cce712cd037cb3a8e
+  file_size_bytes: 580041
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 0.988733
+  jpeg_grid_artifact_score: 0.988733
+  noise_residual_mean: 6.753446
+  noise_residual_max: 157
+  edge_residual_mean: 8.479073
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.899017
+      first_bin_ratio: 0.029572
+      last_bin_ratio: 0.899017
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.898219
+      first_bin_ratio: 0.036944
+      last_bin_ratio: 0.898219
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.898201
+      first_bin_ratio: 0.036934
+      last_bin_ratio: 0.898201
+  bitplane_summary:
+    bit_0_one_ratio: 0.933406
+    bit_1_one_ratio: 0.931206
+    bit_2_one_ratio: 0.931142
+    bit_3_one_ratio: 0.935516
+    bit_4_one_ratio: 0.936264
+    bit_5_one_ratio: 0.938174
+    bit_6_one_ratio: 0.932541
+    bit_7_one_ratio: 0.931908
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-28
+  image_id: stage4m-lp-image-28
+  relative_path: third_party/LiberPrimusPages/28.jpg
+  file_name: 28.jpg
+  sha256: 318bb587f4dcab11b4db7ba3b8bb13b7913ca79bb409e1c987595503a22e0522
+  file_size_bytes: 542267
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.067907
+  jpeg_grid_artifact_score: 1.067907
+  noise_residual_mean: 6.82844
+  noise_residual_max: 168
+  edge_residual_mean: 8.589806
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.906171
+      first_bin_ratio: 0.030184
+      last_bin_ratio: 0.906171
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.906171
+      first_bin_ratio: 0.030184
+      last_bin_ratio: 0.906171
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.906171
+      first_bin_ratio: 0.030184
+      last_bin_ratio: 0.906171
+  bitplane_summary:
+    bit_0_one_ratio: 0.936152
+    bit_1_one_ratio: 0.936943
+    bit_2_one_ratio: 0.937325
+    bit_3_one_ratio: 0.936101
+    bit_4_one_ratio: 0.937813
+    bit_5_one_ratio: 0.937459
+    bit_6_one_ratio: 0.938644
+    bit_7_one_ratio: 0.938624
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-29
+  image_id: stage4m-lp-image-29
+  relative_path: third_party/LiberPrimusPages/29.jpg
+  file_name: 29.jpg
+  sha256: 6f769f266865ddb30b0cb34e82c664a87ba409f674dc52ad3af7c85be443fb5c
+  file_size_bytes: 546105
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.137864
+  jpeg_grid_artifact_score: 1.137864
+  noise_residual_mean: 7.081385
+  noise_residual_max: 163
+  edge_residual_mean: 8.545479
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.903033
+      first_bin_ratio: 0.031456
+      last_bin_ratio: 0.903033
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.903033
+      first_bin_ratio: 0.031456
+      last_bin_ratio: 0.903033
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.903033
+      first_bin_ratio: 0.031456
+      last_bin_ratio: 0.903033
+  bitplane_summary:
+    bit_0_one_ratio: 0.933586
+    bit_1_one_ratio: 0.934578
+    bit_2_one_ratio: 0.935107
+    bit_3_one_ratio: 0.935183
+    bit_4_one_ratio: 0.936053
+    bit_5_one_ratio: 0.936577
+    bit_6_one_ratio: 0.935415
+    bit_7_one_ratio: 0.936854
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-3
+  image_id: stage4m-lp-image-3
+  relative_path: third_party/LiberPrimusPages/3.jpg
+  file_name: 3.jpg
+  sha256: 1453ef27ea607c6ea378d6472c908e77c2881caba33c72d1893caddee8dc1117
+  file_size_bytes: 599916
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.148402
+  jpeg_grid_artifact_score: 1.148402
+  noise_residual_mean: 6.734863
+  noise_residual_max: 162
+  edge_residual_mean: 8.367805
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.900477
+      first_bin_ratio: 0.02666
+      last_bin_ratio: 0.900477
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.899584
+      first_bin_ratio: 0.034943
+      last_bin_ratio: 0.899584
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.899546
+      first_bin_ratio: 0.034922
+      last_bin_ratio: 0.899546
+  bitplane_summary:
+    bit_0_one_ratio: 0.92038
+    bit_1_one_ratio: 0.927816
+    bit_2_one_ratio: 0.931229
+    bit_3_one_ratio: 0.936696
+    bit_4_one_ratio: 0.939102
+    bit_5_one_ratio: 0.940175
+    bit_6_one_ratio: 0.934082
+    bit_7_one_ratio: 0.934031
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-30
+  image_id: stage4m-lp-image-30
+  relative_path: third_party/LiberPrimusPages/30.jpg
+  file_name: 30.jpg
+  sha256: 701b66d1fe98f730dadc5d7d8e1bc3b9a8e20547c1ffb423011f436037dba8b0
+  file_size_bytes: 539780
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.121301
+  jpeg_grid_artifact_score: 1.121301
+  noise_residual_mean: 6.770226
+  noise_residual_max: 150
+  edge_residual_mean: 8.397499
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.906743
+      first_bin_ratio: 0.030006
+      last_bin_ratio: 0.906743
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.906743
+      first_bin_ratio: 0.030006
+      last_bin_ratio: 0.906743
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.906743
+      first_bin_ratio: 0.030006
+      last_bin_ratio: 0.906743
+  bitplane_summary:
+    bit_0_one_ratio: 0.937027
+    bit_1_one_ratio: 0.937197
+    bit_2_one_ratio: 0.937612
+    bit_3_one_ratio: 0.937421
+    bit_4_one_ratio: 0.938299
+    bit_5_one_ratio: 0.938828
+    bit_6_one_ratio: 0.939102
+    bit_7_one_ratio: 0.939433
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-31
+  image_id: stage4m-lp-image-31
+  relative_path: third_party/LiberPrimusPages/31.jpg
+  file_name: 31.jpg
+  sha256: 0cb60ca12b1bf5f9fc03026314018a0d5ee73f813ac86ca4197629c60f2cb80a
+  file_size_bytes: 531046
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.132752
+  jpeg_grid_artifact_score: 1.132752
+  noise_residual_mean: 6.976079
+  noise_residual_max: 157
+  edge_residual_mean: 8.585342
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.90451
+      first_bin_ratio: 0.030952
+      last_bin_ratio: 0.90451
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.90451
+      first_bin_ratio: 0.030952
+      last_bin_ratio: 0.90451
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.90451
+      first_bin_ratio: 0.030952
+      last_bin_ratio: 0.90451
+  bitplane_summary:
+    bit_0_one_ratio: 0.936913
+    bit_1_one_ratio: 0.935895
+    bit_2_one_ratio: 0.936796
+    bit_3_one_ratio: 0.935608
+    bit_4_one_ratio: 0.937159
+    bit_5_one_ratio: 0.937238
+    bit_6_one_ratio: 0.937228
+    bit_7_one_ratio: 0.937477
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-32
+  image_id: stage4m-lp-image-32
+  relative_path: third_party/LiberPrimusPages/32.jpg
+  file_name: 32.jpg
+  sha256: c0f778187a8e9ddbfc667a65929ac567430a2e38278a2022377984ac084e5f72
+  file_size_bytes: 362637
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.198826
+  jpeg_grid_artifact_score: 1.198826
+  noise_residual_mean: 3.114156
+  noise_residual_max: 164
+  edge_residual_mean: 4.05793
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.903076
+      first_bin_ratio: 0.014064
+      last_bin_ratio: 0.903076
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.903043
+      first_bin_ratio: 0.014102
+      last_bin_ratio: 0.903043
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.903046
+      first_bin_ratio: 0.014102
+      last_bin_ratio: 0.903046
+  bitplane_summary:
+    bit_0_one_ratio: 0.929726
+    bit_1_one_ratio: 0.931936
+    bit_2_one_ratio: 0.935216
+    bit_3_one_ratio: 0.937365
+    bit_4_one_ratio: 0.942327
+    bit_5_one_ratio: 0.945618
+    bit_6_one_ratio: 0.952339
+    bit_7_one_ratio: 0.961901
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-33
+  image_id: stage4m-lp-image-33
+  relative_path: third_party/LiberPrimusPages/33.jpg
+  file_name: 33.jpg
+  sha256: 13ff4c8d8ab934032a001b8c1fda16433aa44a38dd7272b3ff0dd7ac8300c62d
+  file_size_bytes: 525652
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.099535
+  jpeg_grid_artifact_score: 1.099535
+  noise_residual_mean: 5.890711
+  noise_residual_max: 165
+  edge_residual_mean: 7.488625
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.906532
+      first_bin_ratio: 0.02597
+      last_bin_ratio: 0.906532
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.905678
+      first_bin_ratio: 0.037999
+      last_bin_ratio: 0.905678
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.905657
+      first_bin_ratio: 0.037987
+      last_bin_ratio: 0.905657
+  bitplane_summary:
+    bit_0_one_ratio: 0.940119
+    bit_1_one_ratio: 0.935816
+    bit_2_one_ratio: 0.933566
+    bit_3_one_ratio: 0.942673
+    bit_4_one_ratio: 0.943451
+    bit_5_one_ratio: 0.946292
+    bit_6_one_ratio: 0.935918
+    bit_7_one_ratio: 0.935336
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-34
+  image_id: stage4m-lp-image-34
+  relative_path: third_party/LiberPrimusPages/34.jpg
+  file_name: 34.jpg
+  sha256: 6f1b4c04b64ee54c689478bd3986bb6ab8a3b81f48780562094e9f248e4e87f8
+  file_size_bytes: 555050
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.112279
+  jpeg_grid_artifact_score: 1.112279
+  noise_residual_mean: 6.979347
+  noise_residual_max: 173
+  edge_residual_mean: 8.599854
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.904058
+      first_bin_ratio: 0.031377
+      last_bin_ratio: 0.904058
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.904058
+      first_bin_ratio: 0.031377
+      last_bin_ratio: 0.904058
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.904058
+      first_bin_ratio: 0.03138
+      last_bin_ratio: 0.904058
+  bitplane_summary:
+    bit_0_one_ratio: 0.93617
+    bit_1_one_ratio: 0.934959
+    bit_2_one_ratio: 0.935987
+    bit_3_one_ratio: 0.935005
+    bit_4_one_ratio: 0.936142
+    bit_5_one_ratio: 0.937391
+    bit_6_one_ratio: 0.936162
+    bit_7_one_ratio: 0.937007
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-35
+  image_id: stage4m-lp-image-35
+  relative_path: third_party/LiberPrimusPages/35.jpg
+  file_name: 35.jpg
+  sha256: d713dd913d9b835ac61f298e8c0855f5093599e348edaedef964710db8664afa
+  file_size_bytes: 574580
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.201449
+  jpeg_grid_artifact_score: 1.201449
+  noise_residual_mean: 7.151428
+  noise_residual_max: 173
+  edge_residual_mean: 8.818993
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.901324
+      first_bin_ratio: 0.032112
+      last_bin_ratio: 0.901324
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.901324
+      first_bin_ratio: 0.032112
+      last_bin_ratio: 0.901324
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.901324
+      first_bin_ratio: 0.032115
+      last_bin_ratio: 0.901324
+  bitplane_summary:
+    bit_0_one_ratio: 0.933604
+    bit_1_one_ratio: 0.933245
+    bit_2_one_ratio: 0.933998
+    bit_3_one_ratio: 0.934374
+    bit_4_one_ratio: 0.934738
+    bit_5_one_ratio: 0.935183
+    bit_6_one_ratio: 0.935097
+    bit_7_one_ratio: 0.935633
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-36
+  image_id: stage4m-lp-image-36
+  relative_path: third_party/LiberPrimusPages/36.jpg
+  file_name: 36.jpg
+  sha256: 3b54a31a9e796e2c01b4e80d46e1092dee2e1142a7c61873e282078e2c776cb9
+  file_size_bytes: 511099
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.126468
+  jpeg_grid_artifact_score: 1.126468
+  noise_residual_mean: 6.263537
+  noise_residual_max: 173
+  edge_residual_mean: 7.659737
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.9132
+      first_bin_ratio: 0.027931
+      last_bin_ratio: 0.9132
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.913132
+      first_bin_ratio: 0.028002
+      last_bin_ratio: 0.913132
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.913129
+      first_bin_ratio: 0.028002
+      last_bin_ratio: 0.913129
+  bitplane_summary:
+    bit_0_one_ratio: 0.941477
+    bit_1_one_ratio: 0.941048
+    bit_2_one_ratio: 0.942655
+    bit_3_one_ratio: 0.942268
+    bit_4_one_ratio: 0.941572
+    bit_5_one_ratio: 0.944344
+    bit_6_one_ratio: 0.942426
+    bit_7_one_ratio: 0.943026
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-37
+  image_id: stage4m-lp-image-37
+  relative_path: third_party/LiberPrimusPages/37.jpg
+  file_name: 37.jpg
+  sha256: cee96d7e71b7de4d4e57237faacefad791229c153202e8224e4bedda45fb8f43
+  file_size_bytes: 503830
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.166313
+  jpeg_grid_artifact_score: 1.166313
+  noise_residual_mean: 6.203059
+  noise_residual_max: 173
+  edge_residual_mean: 7.721375
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.913531
+      first_bin_ratio: 0.027939
+      last_bin_ratio: 0.913531
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.913404
+      first_bin_ratio: 0.028277
+      last_bin_ratio: 0.913404
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.913406
+      first_bin_ratio: 0.028277
+      last_bin_ratio: 0.913406
+  bitplane_summary:
+    bit_0_one_ratio: 0.941569
+    bit_1_one_ratio: 0.941037
+    bit_2_one_ratio: 0.941411
+    bit_3_one_ratio: 0.942294
+    bit_4_one_ratio: 0.942561
+    bit_5_one_ratio: 0.943634
+    bit_6_one_ratio: 0.942574
+    bit_7_one_ratio: 0.943909
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-38
+  image_id: stage4m-lp-image-38
+  relative_path: third_party/LiberPrimusPages/38.jpg
+  file_name: 38.jpg
+  sha256: aec1898f599f57265d6422f3082a481db94a27f62230affbadee595d05077f8c
+  file_size_bytes: 519224
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.028052
+  jpeg_grid_artifact_score: 1.028052
+  noise_residual_mean: 6.321414
+  noise_residual_max: 173
+  edge_residual_mean: 7.811493
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.91228
+      first_bin_ratio: 0.028694
+      last_bin_ratio: 0.91228
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.912214
+      first_bin_ratio: 0.028829
+      last_bin_ratio: 0.912214
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.912211
+      first_bin_ratio: 0.028831
+      last_bin_ratio: 0.912211
+  bitplane_summary:
+    bit_0_one_ratio: 0.940776
+    bit_1_one_ratio: 0.93898
+    bit_2_one_ratio: 0.941394
+    bit_3_one_ratio: 0.940432
+    bit_4_one_ratio: 0.941007
+    bit_5_one_ratio: 0.943097
+    bit_6_one_ratio: 0.941788
+    bit_7_one_ratio: 0.94266
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-39
+  image_id: stage4m-lp-image-39
+  relative_path: third_party/LiberPrimusPages/39.jpg
+  file_name: 39.jpg
+  sha256: d1b7ea5a6ffb79709753e3565d1d46e05edbe3d82ca70c3ed6065d46b131bd00
+  file_size_bytes: 541379
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.123455
+  jpeg_grid_artifact_score: 1.123455
+  noise_residual_mean: 6.332815
+  noise_residual_max: 173
+  edge_residual_mean: 8.028809
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.906453
+      first_bin_ratio: 0.02816
+      last_bin_ratio: 0.906453
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.906077
+      first_bin_ratio: 0.033974
+      last_bin_ratio: 0.906077
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.906069
+      first_bin_ratio: 0.033971
+      last_bin_ratio: 0.906069
+  bitplane_summary:
+    bit_0_one_ratio: 0.939331
+    bit_1_one_ratio: 0.936648
+    bit_2_one_ratio: 0.935499
+    bit_3_one_ratio: 0.940623
+    bit_4_one_ratio: 0.941579
+    bit_5_one_ratio: 0.941889
+    bit_6_one_ratio: 0.936895
+    bit_7_one_ratio: 0.937213
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-4
+  image_id: stage4m-lp-image-4
+  relative_path: third_party/LiberPrimusPages/4.jpg
+  file_name: 4.jpg
+  sha256: 72bea2bfcd4f1b8e2095f882811d0f294e329d4b1bfe68f8ed5ec726d0a1e9d6
+  file_size_bytes: 676634
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.138631
+  jpeg_grid_artifact_score: 1.138631
+  noise_residual_mean: 7.752655
+  noise_residual_max: 159
+  edge_residual_mean: 9.91362
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.892927
+      first_bin_ratio: 0.033536
+      last_bin_ratio: 0.892927
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.892927
+      first_bin_ratio: 0.033536
+      last_bin_ratio: 0.892927
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.892927
+      first_bin_ratio: 0.033536
+      last_bin_ratio: 0.892927
+  bitplane_summary:
+    bit_0_one_ratio: 0.913328
+    bit_1_one_ratio: 0.92323
+    bit_2_one_ratio: 0.926389
+    bit_3_one_ratio: 0.929232
+    bit_4_one_ratio: 0.929222
+    bit_5_one_ratio: 0.930305
+    bit_6_one_ratio: 0.930336
+    bit_7_one_ratio: 0.930967
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-40
+  image_id: stage4m-lp-image-40
+  relative_path: third_party/LiberPrimusPages/40.jpg
+  file_name: 40.jpg
+  sha256: 3f5af995b39f94f268d4aa94825a10f2429f4a3affa1921a7f627e6d1bfcfb69
+  file_size_bytes: 746355
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.178384
+  jpeg_grid_artifact_score: 1.178384
+  noise_residual_mean: 8.595515
+  noise_residual_max: 151
+  edge_residual_mean: 11.311012
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.873795
+      first_bin_ratio: 0.03862
+      last_bin_ratio: 0.873795
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.873395
+      first_bin_ratio: 0.042704
+      last_bin_ratio: 0.873395
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.87339
+      first_bin_ratio: 0.042697
+      last_bin_ratio: 0.87339
+  bitplane_summary:
+    bit_0_one_ratio: 0.916061
+    bit_1_one_ratio: 0.914126
+    bit_2_one_ratio: 0.914324
+    bit_3_one_ratio: 0.916049
+    bit_4_one_ratio: 0.918503
+    bit_5_one_ratio: 0.918643
+    bit_6_one_ratio: 0.916718
+    bit_7_one_ratio: 0.91672
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-41
+  image_id: stage4m-lp-image-41
+  relative_path: third_party/LiberPrimusPages/41.jpg
+  file_name: 41.jpg
+  sha256: 134052dd794a7d11185cc6d942de3f9839bd2b767e0845b0f059f711b269bee2
+  file_size_bytes: 785555
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.095487
+  jpeg_grid_artifact_score: 1.095487
+  noise_residual_mean: 9.531492
+  noise_residual_max: 165
+  edge_residual_mean: 12.208008
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.863177
+      first_bin_ratio: 0.044169
+      last_bin_ratio: 0.863177
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.863177
+      first_bin_ratio: 0.044169
+      last_bin_ratio: 0.863177
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.863177
+      first_bin_ratio: 0.044169
+      last_bin_ratio: 0.863177
+  bitplane_summary:
+    bit_0_one_ratio: 0.907102
+    bit_1_one_ratio: 0.907326
+    bit_2_one_ratio: 0.909899
+    bit_3_one_ratio: 0.908323
+    bit_4_one_ratio: 0.910301
+    bit_5_one_ratio: 0.91006
+    bit_6_one_ratio: 0.909401
+    bit_7_one_ratio: 0.911135
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-42
+  image_id: stage4m-lp-image-42
+  relative_path: third_party/LiberPrimusPages/42.jpg
+  file_name: 42.jpg
+  sha256: e523427112ec6259e97d1711f0420469d961324dedb7dc4eac67ecd9543729f6
+  file_size_bytes: 788795
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.139196
+  jpeg_grid_artifact_score: 1.139196
+  noise_residual_mean: 9.542048
+  noise_residual_max: 165
+  edge_residual_mean: 12.395409
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.862768
+      first_bin_ratio: 0.044696
+      last_bin_ratio: 0.862768
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.862768
+      first_bin_ratio: 0.044696
+      last_bin_ratio: 0.862768
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.862768
+      first_bin_ratio: 0.044696
+      last_bin_ratio: 0.862768
+  bitplane_summary:
+    bit_0_one_ratio: 0.906952
+    bit_1_one_ratio: 0.908264
+    bit_2_one_ratio: 0.908249
+    bit_3_one_ratio: 0.909101
+    bit_4_one_ratio: 0.908536
+    bit_5_one_ratio: 0.90922
+    bit_6_one_ratio: 0.910334
+    bit_7_one_ratio: 0.910545
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-43
+  image_id: stage4m-lp-image-43
+  relative_path: third_party/LiberPrimusPages/43.jpg
+  file_name: 43.jpg
+  sha256: dc4cf22565ccabb2b3d366eb8bd6b74520e3169133a7bd725373aad2f49ac415
+  file_size_bytes: 792166
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.106305
+  jpeg_grid_artifact_score: 1.106305
+  noise_residual_mean: 9.52314
+  noise_residual_max: 160
+  edge_residual_mean: 12.193932
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.862811
+      first_bin_ratio: 0.044487
+      last_bin_ratio: 0.862811
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.862811
+      first_bin_ratio: 0.044487
+      last_bin_ratio: 0.862811
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.862811
+      first_bin_ratio: 0.044487
+      last_bin_ratio: 0.862811
+  bitplane_summary:
+    bit_0_one_ratio: 0.905879
+    bit_1_one_ratio: 0.907237
+    bit_2_one_ratio: 0.909312
+    bit_3_one_ratio: 0.908081
+    bit_4_one_ratio: 0.909322
+    bit_5_one_ratio: 0.909386
+    bit_6_one_ratio: 0.910006
+    bit_7_one_ratio: 0.909833
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-44
+  image_id: stage4m-lp-image-44
+  relative_path: third_party/LiberPrimusPages/44.jpg
+  file_name: 44.jpg
+  sha256: 463cf95229ccb6ae179cdd0fce2338df9f616da0db38813573a9fb1706846208
+  file_size_bytes: 796475
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.10177
+  jpeg_grid_artifact_score: 1.10177
+  noise_residual_mean: 9.643758
+  noise_residual_max: 169
+  edge_residual_mean: 12.478775
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.861437
+      first_bin_ratio: 0.044861
+      last_bin_ratio: 0.861437
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.861437
+      first_bin_ratio: 0.044861
+      last_bin_ratio: 0.861437
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.861437
+      first_bin_ratio: 0.044861
+      last_bin_ratio: 0.861437
+  bitplane_summary:
+    bit_0_one_ratio: 0.90598
+    bit_1_one_ratio: 0.90593
+    bit_2_one_ratio: 0.907051
+    bit_3_one_ratio: 0.906601
+    bit_4_one_ratio: 0.907605
+    bit_5_one_ratio: 0.9092
+    bit_6_one_ratio: 0.908465
+    bit_7_one_ratio: 0.909241
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-45
+  image_id: stage4m-lp-image-45
+  relative_path: third_party/LiberPrimusPages/45.jpg
+  file_name: 45.jpg
+  sha256: 898b614af5473937a9abfcdc618160ba80ea44b07d4a479da4526be6e33f28d9
+  file_size_bytes: 772704
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.090795
+  jpeg_grid_artifact_score: 1.090795
+  noise_residual_mean: 9.430188
+  noise_residual_max: 156
+  edge_residual_mean: 12.205986
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.865046
+      first_bin_ratio: 0.043508
+      last_bin_ratio: 0.865046
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.865046
+      first_bin_ratio: 0.043508
+      last_bin_ratio: 0.865046
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.865046
+      first_bin_ratio: 0.043508
+      last_bin_ratio: 0.865046
+  bitplane_summary:
+    bit_0_one_ratio: 0.908468
+    bit_1_one_ratio: 0.9089
+    bit_2_one_ratio: 0.909828
+    bit_3_one_ratio: 0.909447
+    bit_4_one_ratio: 0.910182
+    bit_5_one_ratio: 0.911448
+    bit_6_one_ratio: 0.911064
+    bit_7_one_ratio: 0.912056
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-46
+  image_id: stage4m-lp-image-46
+  relative_path: third_party/LiberPrimusPages/46.jpg
+  file_name: 46.jpg
+  sha256: 05538b8ebf9ed2a5716d94284a753dd26582a0227f139cc4a27dc3f07b15d301
+  file_size_bytes: 782516
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.062715
+  jpeg_grid_artifact_score: 1.062715
+  noise_residual_mean: 9.456729
+  noise_residual_max: 168
+  edge_residual_mean: 12.271988
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.864632
+      first_bin_ratio: 0.043363
+      last_bin_ratio: 0.864632
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.864632
+      first_bin_ratio: 0.043363
+      last_bin_ratio: 0.864632
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.864632
+      first_bin_ratio: 0.043363
+      last_bin_ratio: 0.864632
+  bitplane_summary:
+    bit_0_one_ratio: 0.909058
+    bit_1_one_ratio: 0.90858
+    bit_2_one_ratio: 0.909902
+    bit_3_one_ratio: 0.910385
+    bit_4_one_ratio: 0.910482
+    bit_5_one_ratio: 0.911847
+    bit_6_one_ratio: 0.910215
+    bit_7_one_ratio: 0.911667
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-47
+  image_id: stage4m-lp-image-47
+  relative_path: third_party/LiberPrimusPages/47.jpg
+  file_name: 47.jpg
+  sha256: 08ed86be5561c09ce5c773d8001b290cc505436db89637d66ea0f5a15818d1c8
+  file_size_bytes: 792027
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.063006
+  jpeg_grid_artifact_score: 1.063006
+  noise_residual_mean: 9.618024
+  noise_residual_max: 163
+  edge_residual_mean: 12.236389
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.862
+      first_bin_ratio: 0.044276
+      last_bin_ratio: 0.862
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.862
+      first_bin_ratio: 0.044276
+      last_bin_ratio: 0.862
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.862
+      first_bin_ratio: 0.044276
+      last_bin_ratio: 0.862
+  bitplane_summary:
+    bit_0_one_ratio: 0.907
+    bit_1_one_ratio: 0.906949
+    bit_2_one_ratio: 0.908735
+    bit_3_one_ratio: 0.907275
+    bit_4_one_ratio: 0.908338
+    bit_5_one_ratio: 0.910957
+    bit_6_one_ratio: 0.908554
+    bit_7_one_ratio: 0.910179
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-48
+  image_id: stage4m-lp-image-48
+  relative_path: third_party/LiberPrimusPages/48.jpg
+  file_name: 48.jpg
+  sha256: 341da69e9d579528dd17b7659e23de210720429111dc76c512843eb1983100ea
+  file_size_bytes: 803285
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.05639
+  jpeg_grid_artifact_score: 1.05639
+  noise_residual_mean: 9.588336
+  noise_residual_max: 170
+  edge_residual_mean: 12.582108
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.862162
+      first_bin_ratio: 0.044739
+      last_bin_ratio: 0.862162
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.862162
+      first_bin_ratio: 0.044739
+      last_bin_ratio: 0.862162
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.862162
+      first_bin_ratio: 0.044739
+      last_bin_ratio: 0.862162
+  bitplane_summary:
+    bit_0_one_ratio: 0.906535
+    bit_1_one_ratio: 0.907163
+    bit_2_one_ratio: 0.909002
+    bit_3_one_ratio: 0.907895
+    bit_4_one_ratio: 0.908635
+    bit_5_one_ratio: 0.909424
+    bit_6_one_ratio: 0.909009
+    bit_7_one_ratio: 0.910093
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-49
+  image_id: stage4m-lp-image-49
+  relative_path: third_party/LiberPrimusPages/49.jpg
+  file_name: 49.jpg
+  sha256: aa3f89156756edf8b796a470a14a3db96516ad2fedf1ed98ccabc1a1cddc0335
+  file_size_bytes: 651504
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.065681
+  jpeg_grid_artifact_score: 1.065681
+  noise_residual_mean: 7.050013
+  noise_residual_max: 157
+  edge_residual_mean: 9.25695
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.903285
+      first_bin_ratio: 0.027829
+      last_bin_ratio: 0.903285
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.903216
+      first_bin_ratio: 0.027852
+      last_bin_ratio: 0.903216
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.903216
+      first_bin_ratio: 0.027852
+      last_bin_ratio: 0.903216
+  bitplane_summary:
+    bit_0_one_ratio: 0.935516
+    bit_1_one_ratio: 0.935987
+    bit_2_one_ratio: 0.936768
+    bit_3_one_ratio: 0.937037
+    bit_4_one_ratio: 0.937246
+    bit_5_one_ratio: 0.938398
+    bit_6_one_ratio: 0.937813
+    bit_7_one_ratio: 0.938881
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-5
+  image_id: stage4m-lp-image-5
+  relative_path: third_party/LiberPrimusPages/5.jpg
+  file_name: 5.jpg
+  sha256: bcef0a3b80532b25a013052ec4394ab47ab69ce675b5b3db59cbad044e7adabd
+  file_size_bytes: 667716
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.07632
+  jpeg_grid_artifact_score: 1.07632
+  noise_residual_mean: 8.034276
+  noise_residual_max: 164
+  edge_residual_mean: 10.03849
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.889676
+      first_bin_ratio: 0.034195
+      last_bin_ratio: 0.889676
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.889676
+      first_bin_ratio: 0.034195
+      last_bin_ratio: 0.889676
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.889676
+      first_bin_ratio: 0.034195
+      last_bin_ratio: 0.889676
+  bitplane_summary:
+    bit_0_one_ratio: 0.91023
+    bit_1_one_ratio: 0.920542
+    bit_2_one_ratio: 0.925451
+    bit_3_one_ratio: 0.926577
+    bit_4_one_ratio: 0.928299
+    bit_5_one_ratio: 0.927706
+    bit_6_one_ratio: 0.929433
+    bit_7_one_ratio: 0.928469
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-50
+  image_id: stage4m-lp-image-50
+  relative_path: third_party/LiberPrimusPages/50.jpg
+  file_name: 50.jpg
+  sha256: bd6d4a3678fa37197bd43c58861273dc59604b5b68dfa20de1ec13f0704be776
+  file_size_bytes: 581983
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.00996
+  jpeg_grid_artifact_score: 1.00996
+  noise_residual_mean: 6.265709
+  noise_residual_max: 157
+  edge_residual_mean: 8.385376
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.915853
+      first_bin_ratio: 0.022776
+      last_bin_ratio: 0.915853
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.915853
+      first_bin_ratio: 0.022776
+      last_bin_ratio: 0.915853
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.915853
+      first_bin_ratio: 0.022776
+      last_bin_ratio: 0.915853
+  bitplane_summary:
+    bit_0_one_ratio: 0.944308
+    bit_1_one_ratio: 0.945297
+    bit_2_one_ratio: 0.946147
+    bit_3_one_ratio: 0.945765
+    bit_4_one_ratio: 0.946437
+    bit_5_one_ratio: 0.946454
+    bit_6_one_ratio: 0.946907
+    bit_7_one_ratio: 0.948603
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-51
+  image_id: stage4m-lp-image-51
+  relative_path: third_party/LiberPrimusPages/51.jpg
+  file_name: 51.jpg
+  sha256: 2b9d60f62b2bc65d040f7ae1bc0960d5a44ca251d2730d049a618074a83e208b
+  file_size_bytes: 661727
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.075998
+  jpeg_grid_artifact_score: 1.075998
+  noise_residual_mean: 7.429937
+  noise_residual_max: 164
+  edge_residual_mean: 9.68898
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.89783
+      first_bin_ratio: 0.029694
+      last_bin_ratio: 0.89783
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.89783
+      first_bin_ratio: 0.029694
+      last_bin_ratio: 0.89783
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.89783
+      first_bin_ratio: 0.029694
+      last_bin_ratio: 0.89783
+  bitplane_summary:
+    bit_0_one_ratio: 0.931669
+    bit_1_one_ratio: 0.932126
+    bit_2_one_ratio: 0.933749
+    bit_3_one_ratio: 0.932576
+    bit_4_one_ratio: 0.933713
+    bit_5_one_ratio: 0.93396
+    bit_6_one_ratio: 0.934402
+    bit_7_one_ratio: 0.934891
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-52
+  image_id: stage4m-lp-image-52
+  relative_path: third_party/LiberPrimusPages/52.jpg
+  file_name: 52.jpg
+  sha256: d34a38f51759284f68fb916122ed6774c3b498dddb5537929355ac674453a0f3
+  file_size_bytes: 792979
+  width: 2400
+  height: 3600
+  color_mode: L
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.054735
+  jpeg_grid_artifact_score: 1.054735
+  noise_residual_mean: 9.409304
+  noise_residual_max: 169
+  edge_residual_mean: 12.348282
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.865039
+      first_bin_ratio: 0.043671
+      last_bin_ratio: 0.865039
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.865039
+      first_bin_ratio: 0.043671
+      last_bin_ratio: 0.865039
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.865039
+      first_bin_ratio: 0.043671
+      last_bin_ratio: 0.865039
+  bitplane_summary:
+    bit_0_one_ratio: 0.909826
+    bit_1_one_ratio: 0.909086
+    bit_2_one_ratio: 0.909627
+    bit_3_one_ratio: 0.910299
+    bit_4_one_ratio: 0.910978
+    bit_5_one_ratio: 0.911306
+    bit_6_one_ratio: 0.910311
+    bit_7_one_ratio: 0.912043
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-53
+  image_id: stage4m-lp-image-53
+  relative_path: third_party/LiberPrimusPages/53.jpg
+  file_name: 53.jpg
+  sha256: 4ec7293ba72bd52384787646d204c8a68fefaf2d22673c40d27f23812d424548
+  file_size_bytes: 753790
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.148083
+  jpeg_grid_artifact_score: 1.148083
+  noise_residual_mean: 7.858116
+  noise_residual_max: 149
+  edge_residual_mean: 10.371078
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.87794
+      first_bin_ratio: 0.03213
+      last_bin_ratio: 0.87794
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.875849
+      first_bin_ratio: 0.0379
+      last_bin_ratio: 0.875849
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.875834
+      first_bin_ratio: 0.037849
+      last_bin_ratio: 0.875834
+  bitplane_summary:
+    bit_0_one_ratio: 0.913104
+    bit_1_one_ratio: 0.916234
+    bit_2_one_ratio: 0.919576
+    bit_3_one_ratio: 0.919703
+    bit_4_one_ratio: 0.921369
+    bit_5_one_ratio: 0.925001
+    bit_6_one_ratio: 0.922236
+    bit_7_one_ratio: 0.922312
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-54
+  image_id: stage4m-lp-image-54
+  relative_path: third_party/LiberPrimusPages/54.jpg
+  file_name: 54.jpg
+  sha256: dbc2cfca46a150689e60ea83015dcd54ace81245711fefe114d6076b96412ec4
+  file_size_bytes: 774295
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 0.993341
+  jpeg_grid_artifact_score: 0.993341
+  noise_residual_mean: 8.790037
+  noise_residual_max: 171
+  edge_residual_mean: 11.415344
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.870219
+      first_bin_ratio: 0.0398
+      last_bin_ratio: 0.870219
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.869789
+      first_bin_ratio: 0.04393
+      last_bin_ratio: 0.869789
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.869774
+      first_bin_ratio: 0.04391
+      last_bin_ratio: 0.869774
+  bitplane_summary:
+    bit_0_one_ratio: 0.91438
+    bit_1_one_ratio: 0.912443
+    bit_2_one_ratio: 0.912938
+    bit_3_one_ratio: 0.915019
+    bit_4_one_ratio: 0.916044
+    bit_5_one_ratio: 0.917292
+    bit_6_one_ratio: 0.913485
+    bit_7_one_ratio: 0.914429
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-55
+  image_id: stage4m-lp-image-55
+  relative_path: third_party/LiberPrimusPages/55.jpg
+  file_name: 55.jpg
+  sha256: a80191592add93a86ed3868f9e4e6ba3944ec20c9ffccc7d3e221b461344beba
+  file_size_bytes: 614928
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.070033
+  jpeg_grid_artifact_score: 1.070033
+  noise_residual_mean: 5.618988
+  noise_residual_max: 148
+  edge_residual_mean: 7.677551
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.891106
+      first_bin_ratio: 0.025571
+      last_bin_ratio: 0.891106
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.891032
+      first_bin_ratio: 0.025612
+      last_bin_ratio: 0.891032
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.891029
+      first_bin_ratio: 0.025612
+      last_bin_ratio: 0.891029
+  bitplane_summary:
+    bit_0_one_ratio: 0.921995
+    bit_1_one_ratio: 0.923861
+    bit_2_one_ratio: 0.926478
+    bit_3_one_ratio: 0.928014
+    bit_4_one_ratio: 0.92824
+    bit_5_one_ratio: 0.928047
+    bit_6_one_ratio: 0.944295
+    bit_7_one_ratio: 0.945338
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-56
+  image_id: stage4m-lp-image-56
+  relative_path: third_party/LiberPrimusPages/56.jpg
+  file_name: 56.jpg
+  sha256: a4c1c9ae1246c3197fc1d7bd0155cbc97f60d4bba84a104d45f180feab1814dc
+  file_size_bytes: 389813
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.079058
+  jpeg_grid_artifact_score: 1.079058
+  noise_residual_mean: 4.134644
+  noise_residual_max: 160
+  edge_residual_mean: 5.154274
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.943985
+      first_bin_ratio: 0.013079
+      last_bin_ratio: 0.943985
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.943652
+      first_bin_ratio: 0.016586
+      last_bin_ratio: 0.943652
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.943649
+      first_bin_ratio: 0.016579
+      last_bin_ratio: 0.943649
+  bitplane_summary:
+    bit_0_one_ratio: 0.964345
+    bit_1_one_ratio: 0.962685
+    bit_2_one_ratio: 0.962997
+    bit_3_one_ratio: 0.965174
+    bit_4_one_ratio: 0.965864
+    bit_5_one_ratio: 0.967934
+    bit_6_one_ratio: 0.96371
+    bit_7_one_ratio: 0.963262
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-57
+  image_id: stage4m-lp-image-57
+  relative_path: third_party/LiberPrimusPages/57.jpg
+  file_name: 57.jpg
+  sha256: 1dabc100ddbf1fc49715219636984eb6ad96a2bd8035e196c12e66db77a1077b
+  file_size_bytes: 318076
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.170846
+  jpeg_grid_artifact_score: 1.170846
+  noise_residual_mean: 3.175542
+  noise_residual_max: 176
+  edge_residual_mean: 3.777618
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.949994
+      first_bin_ratio: 0.010241
+      last_bin_ratio: 0.949994
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.949529
+      first_bin_ratio: 0.016986
+      last_bin_ratio: 0.949529
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.949511
+      first_bin_ratio: 0.016975
+      last_bin_ratio: 0.949511
+  bitplane_summary:
+    bit_0_one_ratio: 0.968391
+    bit_1_one_ratio: 0.965869
+    bit_2_one_ratio: 0.964297
+    bit_3_one_ratio: 0.969884
+    bit_4_one_ratio: 0.971784
+    bit_5_one_ratio: 0.973211
+    bit_6_one_ratio: 0.968257
+    bit_7_one_ratio: 0.969416
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-6
+  image_id: stage4m-lp-image-6
+  relative_path: third_party/LiberPrimusPages/6.jpg
+  file_name: 6.jpg
+  sha256: 4c7dce370242c67a7b785828d75547c042717b221d9d565d7dd097834c7b25d7
+  file_size_bytes: 556991
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.144944
+  jpeg_grid_artifact_score: 1.144944
+  noise_residual_mean: 6.215136
+  noise_residual_max: 170
+  edge_residual_mean: 7.680656
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.911194
+      first_bin_ratio: 0.025508
+      last_bin_ratio: 0.911194
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.910556
+      first_bin_ratio: 0.02977
+      last_bin_ratio: 0.910556
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.910548
+      first_bin_ratio: 0.029747
+      last_bin_ratio: 0.910548
+  bitplane_summary:
+    bit_0_one_ratio: 0.927533
+    bit_1_one_ratio: 0.935084
+    bit_2_one_ratio: 0.937915
+    bit_3_one_ratio: 0.94355
+    bit_4_one_ratio: 0.943105
+    bit_5_one_ratio: 0.945068
+    bit_6_one_ratio: 0.941925
+    bit_7_one_ratio: 0.941305
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-7
+  image_id: stage4m-lp-image-7
+  relative_path: third_party/LiberPrimusPages/7.jpg
+  file_name: 7.jpg
+  sha256: 91a726a7dd59c6caa4d736b9ce72ceba0a2fa827d6b69a2d4057562b9303636c
+  file_size_bytes: 580968
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.183806
+  jpeg_grid_artifact_score: 1.183806
+  noise_residual_mean: 6.484423
+  noise_residual_max: 172
+  edge_residual_mean: 8.200645
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.909037
+      first_bin_ratio: 0.027682
+      last_bin_ratio: 0.909037
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.908267
+      first_bin_ratio: 0.029297
+      last_bin_ratio: 0.908267
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.908239
+      first_bin_ratio: 0.029274
+      last_bin_ratio: 0.908239
+  bitplane_summary:
+    bit_0_one_ratio: 0.923091
+    bit_1_one_ratio: 0.933451
+    bit_2_one_ratio: 0.937561
+    bit_3_one_ratio: 0.937879
+    bit_4_one_ratio: 0.939944
+    bit_5_one_ratio: 0.941058
+    bit_6_one_ratio: 0.941495
+    bit_7_one_ratio: 0.94073
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-8
+  image_id: stage4m-lp-image-8
+  relative_path: third_party/LiberPrimusPages/8.jpg
+  file_name: 8.jpg
+  sha256: 6b1026dfdfb447a5a76819883fe576254e8a47fdf1e97ecf1825166833bc6f00
+  file_size_bytes: 612380
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.134843
+  jpeg_grid_artifact_score: 1.134843
+  noise_residual_mean: 7.082982
+  noise_residual_max: 161
+  edge_residual_mean: 8.879616
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.897069
+      first_bin_ratio: 0.02759
+      last_bin_ratio: 0.897069
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.896474
+      first_bin_ratio: 0.031942
+      last_bin_ratio: 0.896474
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.896484
+      first_bin_ratio: 0.031926
+      last_bin_ratio: 0.896484
+  bitplane_summary:
+    bit_0_one_ratio: 0.924789
+    bit_1_one_ratio: 0.927935
+    bit_2_one_ratio: 0.931849
+    bit_3_one_ratio: 0.934219
+    bit_4_one_ratio: 0.935226
+    bit_5_one_ratio: 0.937042
+    bit_6_one_ratio: 0.93438
+    bit_7_one_ratio: 0.93458
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.
+- record_type: image_compression_preflight_record
+  compression_record_id: stage4m-compression-stage4m-lp-image-9
+  image_id: stage4m-lp-image-9
+  relative_path: third_party/LiberPrimusPages/9.jpg
+  file_name: 9.jpg
+  sha256: b8b7ee73d51de45833b36d864cb1c9067432cb4efadcf6c319eaef94d52c929d
+  file_size_bytes: 639920
+  width: 2400
+  height: 3600
+  color_mode: RGB
+  image_format: JPEG
+  metric_only: true
+  raw_image_committed: false
+  generated_image_committed: false
+  solve_claim: false
+  trusted_as_canonical: false
+  usable_as_experiment_seed: false
+  image_interpretation_claim: false
+  compression_metric_status: computed
+  blockiness_proxy: 1.109994
+  jpeg_grid_artifact_score: 1.109994
+  noise_residual_mean: 7.625918
+  noise_residual_max: 172
+  edge_residual_mean: 9.436234
+  channel_histogram_summary:
+    red:
+      bin_count: 16
+      max_bin_ratio: 0.892408
+      first_bin_ratio: 0.031761
+      last_bin_ratio: 0.892408
+    green:
+      bin_count: 16
+      max_bin_ratio: 0.892408
+      first_bin_ratio: 0.031761
+      last_bin_ratio: 0.892408
+    blue:
+      bin_count: 16
+      max_bin_ratio: 0.892408
+      first_bin_ratio: 0.031761
+      last_bin_ratio: 0.892408
+  bitplane_summary:
+    bit_0_one_ratio: 0.919894
+    bit_1_one_ratio: 0.924581
+    bit_2_one_ratio: 0.928586
+    bit_3_one_ratio: 0.928538
+    bit_4_one_ratio: 0.930064
+    bit_5_one_ratio: 0.930641
+    bit_6_one_ratio: 0.931089
+    bit_7_one_ratio: 0.931946
+  jpeg_like_metric_flag: true
+  notes: Metric-only preflight; no hidden-message or intentionality claim.

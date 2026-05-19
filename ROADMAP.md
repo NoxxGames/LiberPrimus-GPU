@@ -4,13 +4,15 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4L reviewed observation promotion ledger is complete. The stage joined Stage 4J review
-decisions with Stage 4K source-lock records, created promotion-readiness and blocker records, and
-recorded future manifest-readiness states without executing or enabling any manifest.
+Stage 4M image source-variant and compression preflight is complete. The stage scanned ignored
+local LP page images for metadata and deterministic compression metrics, recorded source-variant
+readiness, kept compression/star-like artefacts review-only, and carried the bigram/Fibonacci-421
+claim forward as blocked readiness without running a matrix audit.
 
-The next planned stage is Stage 4M: image source-variant and compression preflight. CUDA planning
+The next planned stage is Stage 4N: OutGuess/audio positive-control completion. CUDA planning
 remains later; CUDA remains deferred until CPU batch, scorer, review workflow, source-lock
-reproducibility, promotion-ledger records, parity tests, and benchmark plans are stable.
+reproducibility, promotion-ledger records, image-preflight controls, parity tests, and benchmark
+plans are stable.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
 recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
@@ -20,8 +22,9 @@ selected external source-delta targets without committing raw artefacts, Stage 4
 stego/audio fixture provenance without running tools, Stage 4G recorded the negative exact cookie
 refresh result, Stage 4H extracted the CPU batch API as the future CUDA parity contract, Stage
 4I made scoring labels and score summaries triage-only parity metadata, Stage 4J closed the
-review-to-promotion loop, Stage 4K strengthened public-source reproducibility, and Stage 4L
-recorded promotion readiness before image/source-variant preflight.
+review-to-promotion loop, Stage 4K strengthened public-source reproducibility, Stage 4L
+recorded promotion readiness, and Stage 4M created image source-variant/compression preflight
+records before any OutGuess/audio positive-control completion or CUDA planning.
 
 ## Phase 0A - Project bootstrap
 

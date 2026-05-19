@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/visual/image-artifact-review-candidate-v0.schema.json",
+  "title": "Image Artifact Review Candidate v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "candidate_id",
+    "review_state",
+    "artifact_review_status",
+    "raw_image_committed",
+    "generated_image_committed",
+    "solve_claim",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed",
+    "image_interpretation_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "image_artifact_review_candidate" },
+    "candidate_id": { "type": "string", "minLength": 1 },
+    "source_observation_id": { "type": ["string", "null"] },
+    "review_state": {
+      "enum": [
+        "future_preflight",
+        "review_only",
+        "blocked_external_variant_not_cached",
+        "needs_human_review",
+        "negative_control"
+      ]
+    },
+    "artifact_review_status": {
+      "enum": [
+        "future_preflight",
+        "review_only",
+        "control_candidate",
+        "blocked"
+      ]
+    },
+    "raw_image_committed": { "const": false },
+    "generated_image_committed": { "const": false },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "image_interpretation_claim": { "const": false }
+  }
+}

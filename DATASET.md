@@ -10,6 +10,11 @@ retrieval status, content hashes for ignored local fetches, GitHub commit-addres
 source class, copyright notes, and snapshot policy. They are reproducibility metadata only and do
 not make any source canonical.
 
+Stage 4M adds image-preflight metadata records under `data/observations/visual/` and a blocked
+bigram/Fibonacci-421 readiness record under `data/observations/review/`. These records may cite
+local ignored page-image hashes and `data/raw/images/Fib421.jpg` metadata, but the raw images stay
+ignored and uncommitted.
+
 ## Immutable raw data
 
 `data/raw/` is immutable. Do not overwrite, normalize, crop, repair, OCR, transcribe, or deduplicate raw files in place.

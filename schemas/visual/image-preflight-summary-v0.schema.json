@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/visual/image-preflight-summary-v0.schema.json",
+  "title": "Image Preflight Summary v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage",
+    "image_count",
+    "source_variant_record_count",
+    "compression_record_count",
+    "artifact_candidate_count",
+    "bigram_readiness_records",
+    "raw_image_committed",
+    "generated_image_committed",
+    "solve_claim",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed",
+    "image_interpretation_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "image_preflight_summary" },
+    "stage": { "const": "stage4m" },
+    "image_count": { "type": "integer", "minimum": 0 },
+    "source_variant_record_count": { "type": "integer", "minimum": 0 },
+    "compression_record_count": { "type": "integer", "minimum": 0 },
+    "artifact_candidate_count": { "type": "integer", "minimum": 0 },
+    "jpeg_like_metric_flag_count": { "type": "integer", "minimum": 0 },
+    "source_variants_blocked_external_cache_count": { "type": "integer", "minimum": 0 },
+    "bigram_readiness_records": { "type": "integer", "minimum": 0 },
+    "bigram_readiness_blocked": { "type": "boolean" },
+    "raw_image_committed": { "const": false },
+    "generated_image_committed": { "const": false },
+    "solve_claim": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "image_interpretation_claim": { "const": false }
+  }
+}
