@@ -125,6 +125,7 @@ def cuda_planning_validate_stage5a(
     ),
     non_targets: Path = typer.Option(NON_TARGETS_PATH, "--non-targets", help="Committed non-target YAML."),
     summary: Path = typer.Option(SUMMARY_PATH, "--summary", help="Committed Stage 5A summary YAML."),
+    results_dir: Path = typer.Option(STAGE5A_OUTPUT_DIR, "--results-dir", help="Generated Stage 5A output directory."),
 ) -> None:
     """Validate Stage 5A CUDA planning records."""
 
@@ -135,6 +136,7 @@ def cuda_planning_validate_stage5a(
             implementation_gates_path=_resolve(implementation_gates),
             non_targets_path=_resolve(non_targets),
             summary_path=_resolve(summary),
+            results_dir=_resolve(results_dir),
         )
     except (FileNotFoundError, ValueError) as error:
         console.print(f"[red]{error}[/red]")

@@ -220,7 +220,8 @@ echo "Running Stage 5A CUDA planning synthetic/temp output"
     --parity-scaffold "$tmp_dir/stage5a-cuda-parity-scaffold.yaml" \
     --implementation-gates "$tmp_dir/stage5a-cuda-implementation-gates.yaml" \
     --non-targets "$tmp_dir/stage5a-cuda-non-targets.yaml" \
-    --summary "$tmp_dir/stage5a-cuda-planning-summary.yaml"
+    --summary "$tmp_dir/stage5a-cuda-planning-summary.yaml" \
+    --results-dir "$tmp_dir/stage5a-cuda-planning"
 
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

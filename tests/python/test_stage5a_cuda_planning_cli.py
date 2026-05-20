@@ -89,6 +89,8 @@ def test_stage5a_cuda_planning_cli(tmp_path: Path) -> None:
             str(non_targets),
             "--summary",
             str(summary),
+            "--results-dir",
+            str(out_dir),
         ],
     )
     assert validate_result.exit_code == 0, validate_result.output

@@ -241,7 +241,8 @@ try {
         --parity-scaffold $Stage5AParityScaffold `
         --implementation-gates $Stage5AGates `
         --non-targets $Stage5ANonTargets `
-        --summary $Stage5ASummary
+        --summary $Stage5ASummary `
+        --results-dir $Stage5AOut
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

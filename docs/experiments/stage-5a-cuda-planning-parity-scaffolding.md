@@ -34,7 +34,8 @@ Validation:
   --parity-scaffold data/cuda/stage5a-cuda-parity-scaffold.yaml `
   --implementation-gates data/cuda/stage5a-cuda-implementation-gates.yaml `
   --non-targets data/cuda/stage5a-cuda-non-targets.yaml `
-  --summary data/cuda/stage5a-cuda-planning-summary.yaml
+  --summary data/cuda/stage5a-cuda-planning-summary.yaml `
+  --results-dir experiments/results/cuda-planning/stage5a
 ```
 
 The generated report files under `experiments/results/cuda-planning/stage5a/` are ignored and must not be committed.
