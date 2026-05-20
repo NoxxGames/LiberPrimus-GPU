@@ -62,6 +62,11 @@ EXPECTED_SCHEMA_FILES = [
     "history/discord-full-review-summary-v0.schema.json",
     "visual/lp-page-gallery-record-v0.schema.json",
     "visual/discord-image-reference-v0.schema.json",
+    "benchmarks/cpu-benchmark-plan-v0.schema.json",
+    "benchmarks/cpu-benchmark-smoke-record-v0.schema.json",
+    "benchmarks/benchmark-environment-record-v0.schema.json",
+    "benchmarks/cuda-parity-benchmark-readiness-v0.schema.json",
+    "benchmarks/stage4q-benchmark-parity-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -101,6 +106,11 @@ EXPECTED_DOC_TERMS = [
     "discord-full-review-summary-v0",
     "lp-page-gallery-record-v0",
     "discord-image-reference-v0",
+    "cpu-benchmark-plan-v0",
+    "cpu-benchmark-smoke-record-v0",
+    "benchmark-environment-record-v0",
+    "cuda-parity-benchmark-readiness-v0",
+    "stage4q-benchmark-parity-summary-v0",
 ]
 
 

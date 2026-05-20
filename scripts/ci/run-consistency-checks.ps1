@@ -186,6 +186,32 @@ try {
         --results-dir $Stage4POut `
         --summary $Stage4PSummary
 
+    Write-Host "Running Stage 4Q benchmark planning synthetic/temp output"
+    $Stage4QOut = Join-Path $TempDir "stage4q-benchmark-planning"
+    $Stage4QPlan = Join-Path $TempDir "stage4q-cpu-benchmark-plan.yaml"
+    $Stage4QReadiness = Join-Path $TempDir "stage4q-cuda-parity-readiness.yaml"
+    $Stage4QSummary = Join-Path $TempDir "stage4q-cpu-benchmark-parity-planning-summary.yaml"
+    & $Python -m libreprimus.cli benchmark-planning environment `
+        --manifest experiments/manifests/benchmarks/stage4q-benchmark-environment.yaml `
+        --out-dir $Stage4QOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli benchmark-planning cpu-smoke `
+        --manifest experiments/manifests/benchmarks/stage4q-cpu-benchmark-smoke.yaml `
+        --out-dir $Stage4QOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli benchmark-planning build-plan `
+        --manifest experiments/manifests/benchmarks/stage4q-cuda-parity-readiness.yaml `
+        --plan-out $Stage4QPlan `
+        --readiness-out $Stage4QReadiness `
+        --summary-out $Stage4QSummary `
+        --out-dir $Stage4QOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli benchmark-planning validate-stage4q `
+        --results-dir $Stage4QOut `
+        --plan $Stage4QPlan `
+        --readiness $Stage4QReadiness `
+        --summary $Stage4QSummary
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

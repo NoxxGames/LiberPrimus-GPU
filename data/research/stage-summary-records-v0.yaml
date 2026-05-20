@@ -487,3 +487,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 4P wrote 18 source inventory records, 82 unified result records, 82 unified score-summary records, and 82 method-status joins; generated bodies remain ignored under experiments/results/result-store-unification/stage4p.
+  - record_type: stage_summary_record
+    stage_id: stage-4q
+    title: CPU benchmark and parity planning
+    status: complete
+    category: infrastructure
+    summary: Recorded CPU benchmark planning, tiny CPU-only smoke diagnostics, future CUDA parity gate readiness, and documentation hygiene checks without CUDA implementation or GPU benchmarking.
+    key_outputs:
+      - "`libreprimus benchmark-planning` commands for environment, CPU smoke, plan generation, and Stage 4Q validation."
+      - Stage 4Q benchmark plan, CUDA parity readiness, benchmark schemas, and aggregate summary records.
+      - Documentation hygiene checks for duplicate stage-list entries, redundant current-status labels, benchmark generated-output ignores, and ignored Codex handoff output.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 4Q wrote 5 benchmark plan records, 14 parity readiness records, 3 CPU smoke records, marked 9 future CUDA targets ready for planning, blocked 2, skipped 3 non-CUDA targets, and made no performance claim.

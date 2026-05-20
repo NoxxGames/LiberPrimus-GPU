@@ -1,0 +1,129 @@
+records:
+- record_type: cpu_benchmark_plan
+  stage_id: stage-4q
+  acceptance_gate: planning_record_only
+  future_execution_requires:
+  - explicit manifest
+  - raw-data-free input or approved fixture
+  - generated-output boundary verification
+  - no solve claim
+  plan_id: stage4q-tier0-environment-record
+  benchmark_scope: environment_record
+  benchmark_status: planned
+  tier: tier0_environment
+  description: Record raw-data-free local CPU/Python/Git context before any future
+    benchmark comparison.
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cpu_benchmark_plan
+  stage_id: stage-4q
+  acceptance_gate: planning_record_only
+  future_execution_requires:
+  - explicit manifest
+  - raw-data-free input or approved fixture
+  - generated-output boundary verification
+  - no solve claim
+  plan_id: stage4q-tier1-cpu-smoke
+  benchmark_scope: cpu_smoke
+  benchmark_status: smoke_passed
+  tier: tier1_cpu_smoke
+  description: Run a tiny deterministic CPU-only diagnostic to prove hashing and summary
+    plumbing.
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cpu_benchmark_plan
+  stage_id: stage-4q
+  acceptance_gate: planning_record_only
+  future_execution_requires:
+  - explicit manifest
+  - raw-data-free input or approved fixture
+  - generated-output boundary verification
+  - no solve claim
+  plan_id: stage4q-tier2-solved-fixture-parity
+  benchmark_scope: planning_only
+  benchmark_status: planned
+  tier: tier2_solved_fixture_parity
+  description: Reuse Stage 4O solved-fixture-safe streams for future benchmark comparisons.
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cpu_benchmark_plan
+  stage_id: stage-4q
+  acceptance_gate: planning_record_only
+  future_execution_requires:
+  - explicit manifest
+  - raw-data-free input or approved fixture
+  - generated-output boundary verification
+  - no solve claim
+  plan_id: stage4q-tier3-transform-score-shape
+  benchmark_scope: planning_only
+  benchmark_status: planned
+  tier: tier3_transform_score_shape
+  description: Require Stage 4I score-summary shape and Stage 4P result-surface compatibility.
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cpu_benchmark_plan
+  stage_id: stage-4q
+  acceptance_gate: planning_record_only
+  future_execution_requires:
+  - explicit manifest
+  - raw-data-free input or approved fixture
+  - generated-output boundary verification
+  - no solve claim
+  plan_id: stage4q-tier4-future-cuda-gates
+  benchmark_scope: parity_readiness
+  benchmark_status: planned
+  tier: tier4_future_cuda_gates
+  description: Document future CUDA parity gates without implementing CUDA or running
+    GPU benchmarks.
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false

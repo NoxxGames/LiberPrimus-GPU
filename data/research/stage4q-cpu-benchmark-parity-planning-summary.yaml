@@ -1,0 +1,38 @@
+record_type: stage4q_benchmark_parity_summary
+schema: schemas/benchmarks/stage4q-benchmark-parity-summary-v0.schema.json
+stage_id: stage-4q
+status: complete
+benchmark_plan_records: 5
+parity_readiness_records: 14
+cpu_smoke_records: 3
+cpu_smoke_candidate_count: 3
+cpu_smoke_result_count: 3
+stage4o_parity_references_used: 8
+stage4p_unified_result_references_used: 8
+future_cuda_targets_ready: 9
+future_cuda_targets_blocked: 2
+skipped_non_cuda_targets: 3
+environment_record_written: true
+documentation_hygiene_checks_added: true
+readme_duplicates_fixed: true
+codex_output_ignored: true
+codex_output_staged: false
+benchmark_generated_outputs_ignored: true
+next_stage: Stage 5A - CUDA planning and parity scaffolding only
+website_expansion_stage: Stage 6
+notes:
+- Stage 4Q records CPU benchmark and future parity planning only.
+- Stage 4Q CPU smoke timings are diagnostics, not performance claims.
+- CUDA implementation remains deferred until Stage 5 explicitly scopes scaffolding.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+gpu_benchmark_performed: false
+cuda_implementation_added: false
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+broad_experiment_executed: false

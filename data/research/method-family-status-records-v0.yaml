@@ -321,13 +321,24 @@ records:
     solve_claim: false
     notes: Missing optional generated outputs are explicit warnings, not silent omissions; generated unified JSON/JSONL records remain ignored.
   - record_type: method_family_status_record
+    method_family_id: cpu_benchmark_parity_planning
+    name: CPU benchmark and future parity planning
+    status: infrastructure_only
+    evidence_summary: Stage 4Q records CPU benchmark tiers, tiny diagnostic CPU smoke records, future CUDA parity gate readiness, and documentation hygiene checks without implementing CUDA or making performance claims.
+    completed_stage_refs: [stage-4o, stage-4p, stage-4q]
+    reopen_conditions: [A future Stage 5 planning stage needs explicit CPU benchmark gates, parity expectation references, or non-target lists before CUDA scaffolding.]
+    stop_conditions: [Do not implement CUDA, run GPU benchmarks, claim speedups, process raw data, broaden experiments, activate the canonical corpus, finalise page boundaries, or use diagnostic smoke timings as evidence.]
+    next_action: Stage 5A CUDA planning and parity scaffolding only may cite Stage 4Q records, but CUDA implementation remains deferred until explicitly scoped.
+    solve_claim: false
+    notes: Stage 4Q marks 9 future CUDA targets ready for planning, 2 blocked pending stable adapter support, and 3 skipped as non-CUDA targets.
+  - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred
-    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, Stage 4L adds the promotion ledger, Stage 4M adds image preflight records, Stage 4N records stego/audio readiness blockers, and Stage 4O adds CPU batch adapter parity expectations, but parity tests and benchmarks are still required before GPU kernels are trusted.
-    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l, stage-4m, stage-4n, stage-4o]
-    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, image-preflight controls, positive-control readiness records, Stage 4O parity expectations, transform-and-score parity tests, and benchmark plan are complete.]
+    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, Stage 4L adds the promotion ledger, Stage 4M adds image preflight records, Stage 4N records stego/audio readiness blockers, Stage 4O adds CPU batch adapter parity expectations, Stage 4P unifies result surfaces, and Stage 4Q records benchmark/parity planning gates, but CUDA implementation and GPU benchmarking remain unstarted.
+    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l, stage-4m, stage-4n, stage-4o, stage-4p, stage-4q]
+    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, image-preflight controls, positive-control readiness records, Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, transform-and-score parity tests, and explicit Stage 5 scope are complete.]
     stop_conditions: [No GPU kernels before CPU reference behaviour and parity tests.]
-    next_action: First future CUDA target remains batch transform-and-score parity after Stage 4P result-store/score-summary unification and explicit CUDA planning.
+    next_action: Stage 5A CUDA planning and parity scaffolding only is next; implementation remains deferred until the planning stage explicitly authorizes scaffolding boundaries.
     solve_claim: false
     notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H through Stage 4O did not add CUDA code.

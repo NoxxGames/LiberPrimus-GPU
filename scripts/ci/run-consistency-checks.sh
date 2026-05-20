@@ -175,6 +175,28 @@ echo "Running Stage 4P result-store unification synthetic/temp output"
     --results-dir "$tmp_dir/stage4p-result-store-unification" \
     --summary "$tmp_dir/stage4p-result-store-score-summary-unification-summary.yaml"
 
+echo "Running Stage 4Q benchmark planning synthetic/temp output"
+"$python_bin" -m libreprimus.cli benchmark-planning environment \
+    --manifest experiments/manifests/benchmarks/stage4q-benchmark-environment.yaml \
+    --out-dir "$tmp_dir/stage4q-benchmark-planning" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli benchmark-planning cpu-smoke \
+    --manifest experiments/manifests/benchmarks/stage4q-cpu-benchmark-smoke.yaml \
+    --out-dir "$tmp_dir/stage4q-benchmark-planning" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli benchmark-planning build-plan \
+    --manifest experiments/manifests/benchmarks/stage4q-cuda-parity-readiness.yaml \
+    --plan-out "$tmp_dir/stage4q-cpu-benchmark-plan.yaml" \
+    --readiness-out "$tmp_dir/stage4q-cuda-parity-readiness.yaml" \
+    --summary-out "$tmp_dir/stage4q-cpu-benchmark-parity-planning-summary.yaml" \
+    --out-dir "$tmp_dir/stage4q-benchmark-planning" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli benchmark-planning validate-stage4q \
+    --results-dir "$tmp_dir/stage4q-benchmark-planning" \
+    --plan "$tmp_dir/stage4q-cpu-benchmark-plan.yaml" \
+    --readiness "$tmp_dir/stage4q-cuda-parity-readiness.yaml" \
+    --summary "$tmp_dir/stage4q-cpu-benchmark-parity-planning-summary.yaml"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

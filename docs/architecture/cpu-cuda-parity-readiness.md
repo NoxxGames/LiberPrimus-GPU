@@ -18,11 +18,11 @@ CUDA results are not trustworthy until they match Stage 4O parity expectations a
 
 ## Stage 4P Reporting Layer
 
-Stage 4P records a unified result surface over CPU batch outputs, score summaries, method statuses, and retirement states. Future CUDA readiness should cite both Stage 4O parity expectation hashes and Stage 4P unified result records before benchmarks or kernels are considered comparable.
+Stage 4P records a unified result surface over CPU batch outputs, score summaries, method statuses, and retirement states. Stage 4Q records CPU benchmark and parity readiness gates. Future CUDA readiness should cite Stage 4O parity expectation hashes, Stage 4P unified result records, and Stage 4Q readiness records before benchmarks or kernels are considered comparable.
 
 ## Deferred CUDA State
 
-CUDA remains deferred. Existing CUDA code is smoke/scaffold infrastructure unless a future explicit stage adds CPU/GPU parity tests, benchmark plans, and gated kernels.
+CUDA remains deferred. Stage 5A is CUDA planning and parity scaffolding only. Existing CUDA code is smoke/scaffold infrastructure unless a future explicit stage adds CPU/GPU parity tests, benchmark plans, and gated kernels.
 
 ## Non-Targets
 

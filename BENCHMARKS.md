@@ -24,6 +24,14 @@ Benchmark output must include CPU, GPU, driver, CUDA toolkit, compiler, OS, cloc
 
 CUDA benchmarks require parity tests first and must avoid unbounded search or stress behavior by default.
 
+## Stage 4Q CPU Benchmark Planning
+
+Stage 4Q records benchmark planning and parity readiness only. It writes committed CPU benchmark plan and CUDA parity readiness metadata, plus ignored environment and CPU smoke diagnostics under `experiments/results/benchmarks/stage4q/`.
+
+Stage 4Q CPU smoke timings are diagnostic only. They are not performance claims, speedup evidence, CUDA benchmarks, or authorization to implement GPU kernels.
+
+Stage 5A may use Stage 4Q records for CUDA planning and parity scaffolding only. Website expansion is deferred to Stage 6.
+
 ## Do not run long benchmarks by default
 
 Default test commands must remain short and safe.

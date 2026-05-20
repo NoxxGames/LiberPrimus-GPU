@@ -146,6 +146,15 @@ records:
     prohibited_expansions: [New scorer models, score labels outside Stage 4I, broad experiment reruns, generated result publication, SQLite commits, solve claims.]
     notes: Cross-stage reports are triage/comparison aids only and cannot promote a result to evidence.
   - record_type: method_retirement_record
+    method_family_id: cpu_benchmark_parity_planning
+    retired_status: active_with_constraints
+    reason: CPU benchmark and parity planning is active infrastructure only; benchmark smoke diagnostics and readiness records are not performance claims or CUDA authorization.
+    evidence: [Stage 4Q records 5 benchmark plan records, 14 parity readiness records, 3 CPU smoke records, 9 future CUDA planning-ready targets, 2 blocked targets, and 3 skipped non-targets.]
+    stages_supporting: [stage-4q]
+    reopen_conditions: [A future Stage 5A planning stage needs CPU benchmark gates, parity scaffolding constraints, or non-target validation before CUDA work.]
+    prohibited_expansions: [CUDA implementation, GPU benchmarking, speedup claims, broad experiments, raw-data processing, generated-output commits, canonical corpus activation, page-boundary finalisation, solve claims.]
+    notes: Stage 4Q diagnostics are planning records; generated benchmark outputs remain ignored.
+  - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints
     reason: Stage 4B visual observations are useful review inputs, but broad visual pareidolia and unannotated dot/braille/constellation readings remain high-risk false-positive classes.

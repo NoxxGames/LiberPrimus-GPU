@@ -4,13 +4,13 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4P result-store and score-summary unification is complete. The stage recorded source
-inventory, unified result records, Stage 4I-compatible score-summary views, method-status joins,
-and a deterministic cross-stage report without executing experiments, adding scorer semantics, or
-publishing generated result bodies.
+Stage 4Q CPU benchmark and parity planning is complete. The stage recorded benchmark plan
+records, CPU-only smoke diagnostics, future CUDA parity readiness gates, and documentation
+hygiene checks without CUDA implementation, GPU benchmarking, broad experiment execution, or
+performance claims.
 
-The next planned stage is Stage 4Q: CPU benchmark and parity planning. CUDA planning
-remains later; CUDA remains deferred until CPU batch, scorer, review workflow, source-lock
+The next planned stage is Stage 5A: CUDA planning and parity scaffolding only. Website expansion
+is deferred to Stage 6. CUDA implementation remains deferred until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, parity tests, and benchmark plans
 are stable.
@@ -26,8 +26,8 @@ refresh result, Stage 4H extracted the CPU batch API as the future CUDA parity c
 review-to-promotion loop, Stage 4K strengthened public-source reproducibility, Stage 4L
 recorded promotion readiness, Stage 4M created image source-variant/compression preflight
 records, Stage 4N recorded OutGuess/audio positive-control readiness, Stage 4O expanded CPU
-batch adapter coverage, and Stage 4P unified result-store/score-summary reporting before CPU
-benchmark and parity planning.
+batch adapter coverage, Stage 4P unified result-store/score-summary reporting, and Stage 4Q
+recorded CPU benchmark and parity planning before Stage 5 CUDA planning scaffolding.
 
 ## Phase 0A - Project bootstrap
 
@@ -335,6 +335,15 @@ method-status joins, and a compact cross-stage report. It records `18` source in
 `82` unified result records, `82` unified score-summary records, and `82` method-status joins.
 Generated JSON/JSONL/SQLite result bodies remain ignored and no new scorer, experiment execution,
 CUDA work, canonical corpus activation, page-boundary finalization, or solve claim was added.
+
+## Stage 4Q - CPU benchmark and parity planning
+
+Stage 4Q is complete. It records `5` benchmark plan records, `14` parity readiness records,
+`3` CPU smoke diagnostic records, `9` future CUDA targets ready for planning, `2` blocked
+targets, and `3` skipped non-CUDA targets. Generated records remain ignored under
+`experiments/results/benchmarks/stage4q/`, and `codex-output/` handoff files remain ignored.
+Stage 4Q did not implement CUDA, run GPU benchmarks, claim speedups, run broad experiments,
+activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Stage 4G - Cookie exact-candidate refresh
 

@@ -134,3 +134,8 @@ archives, raw Discord material, raw page images, or broad repository mirrors.
 If Codex changes CLI registration, verify `python -m libreprimus.cli --help`, selected group
 `--help` commands, and the Stage 3X command-surface tests before staging. Do not create
 `python/libreprimus/cli/` while `python/libreprimus/cli.py` remains the public entrypoint.
+# Stage 4Q Codex Output Boundary
+
+Stage 4Q writes a local completion handoff under `codex-output/`. That directory is ignored and must not be staged. The committed source of truth is the Stage 4Q code, schemas, manifests, docs, and aggregate records under `data/`.
+
+When using Codex for Stage 5A, cite Stage 4Q benchmark/parity records but do not let planning work turn into CUDA implementation or GPU benchmarking without an explicit prompt.

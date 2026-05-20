@@ -95,6 +95,11 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "third_party/LiberPrimusPages/example.png",
         "third_party/LiberPrimusDiscordChats/example.html",
         "third_party/LiberPrimusDiscordChats/example.htm",
+        "experiments/results/benchmarks/stage4q/benchmark_environment.json",
+        "experiments/results/benchmarks/stage4q/cpu_benchmark_smoke_records.jsonl",
+        "experiments/results/benchmarks/stage4q/cuda_parity_readiness.json",
+        "experiments/results/benchmarks/stage4q/summary.json",
+        "codex-output/stage4q-codex-completion.md",
         "local-test.sqlite3",
     ]
     trackable_paths = [

@@ -25,6 +25,8 @@
 - `experiments/results/cpu-batch/stage4h/`: generated Stage 4H CPU batch result JSONL, summary JSON, adapter coverage JSON, and warning records.
 - `experiments/results/cpu-batch/stage4o/`: generated Stage 4O CPU batch result JSONL, adapter coverage JSON, parity expectation JSONL, scoring compatibility JSON, summary JSON, and warning records.
 - `experiments/results/result-store-unification/stage4p/`: generated Stage 4P source inventory, unified result JSONL, unified score-summary JSONL, method-status joins, cross-stage reports, summaries, warnings, and any local SQLite probes.
+- `experiments/results/benchmarks/stage4q/`: generated Stage 4Q environment, CPU smoke, CUDA parity readiness, summary, and warning diagnostics.
+- `codex-output/`: local Codex completion handoff files; do not stage or publish.
 - `experiments/results/scoring-consolidation/stage4i/`: generated Stage 4I scorer inventories, rendered calibration reports, CPU batch compatibility JSON, and warnings.
 - `experiments/results/observation-review/stage4j/`: generated Stage 4J observation review decision reports, quarantine reports, promotion-gate reports, path-sanitisation reports, and warnings.
 - `experiments/results/source-lock-snapshots/stage4k/`: generated Stage 4K fetch reports, rejected-source records, duplicate-source records, warnings, and local diagnostics.
@@ -62,6 +64,7 @@
 - Generated Stage 4H CPU batch result, summary, adapter coverage, and warning outputs under `experiments/results/cpu-batch/stage4h/`.
 - Generated Stage 4O CPU batch result, adapter coverage, parity expectation, scoring compatibility, summary, and warning outputs under `experiments/results/cpu-batch/stage4o/`.
 - Generated Stage 4P source inventory, unified result records, unified score-summary records, method-status join records, cross-stage reports, summary JSON, warnings, and SQLite files under `experiments/results/result-store-unification/stage4p/`.
+- Generated Stage 4Q benchmark planning records under `experiments/results/benchmarks/stage4q/` and local Codex handoffs under `codex-output/`.
 - Generated Stage 4I scorer inventory, calibration report, CPU batch compatibility, and warning outputs under `experiments/results/scoring-consolidation/stage4i/`.
 - Generated Stage 4J observation review reports under `experiments/results/observation-review/stage4j/`.
 - Generated Stage 4K source-lock snapshot reports under `experiments/results/source-lock-snapshots/stage4k/`.

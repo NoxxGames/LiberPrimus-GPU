@@ -1,0 +1,20 @@
+manifest_id: stage4q-benchmark-environment
+schema: schemas/benchmarks/benchmark-environment-record-v0.schema.json
+stage_id: stage-4q
+description: Raw-data-free local benchmark environment metadata for future comparison planning.
+benchmark_scope: environment_record
+cpu_only: true
+cuda_used: false
+cuda_required: false
+gpu_benchmark_performed: false
+cuda_implementation_added: false
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+broad_experiment_executed: false
+absolute_paths_committed: false
+notes:
+  - The generated environment record is local diagnostic metadata and remains ignored.

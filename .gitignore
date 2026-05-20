@@ -439,3 +439,9 @@ experiments/results/result-store-unification/**
 !experiments/results/result-store-unification/.gitkeep
 !experiments/results/result-store-unification/stage4p/
 !experiments/results/result-store-unification/stage4p/.gitkeep
+
+# Generated benchmark planning outputs
+experiments/results/benchmarks/**
+
+# Local Codex completion handoffs
+codex-output/**

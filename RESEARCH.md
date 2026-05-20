@@ -4,7 +4,7 @@
 
 Liber Primus is a public unsolved puzzle artifact with known solved and unsolved portions. The workbench has reproduced known solved baselines, run bounded review experiments, and added archive/image/Discord/stego review tooling, but it does not claim any new page solve.
 
-After Stage 3V, the canonical corpus is inactive, page boundaries are reviewable, broad campaigns are not started, and CUDA remains deferred. Stage 3W consolidates that state and adds anti-drift checks.
+After Stage 4Q, the canonical corpus is inactive, page boundaries are reviewable, broad campaigns are not started, and CUDA remains deferred to Stage 5A planning/scaffolding only. Stage 3W consolidated that state and later stages added review, source-lock, result-surface, and benchmark-planning gates.
 
 ## Community hypotheses
 

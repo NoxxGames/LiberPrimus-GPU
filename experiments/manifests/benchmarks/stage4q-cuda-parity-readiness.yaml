@@ -1,0 +1,23 @@
+manifest_id: stage4q-cuda-parity-readiness
+schema: schemas/benchmarks/cuda-parity-benchmark-readiness-v0.schema.json
+stage_id: stage-4q
+description: Future CUDA parity gate planning over Stage 4O adapter and Stage 4P result-surface metadata.
+benchmark_scope: parity_readiness
+cpu_only: true
+cuda_used: false
+cuda_required: false
+gpu_benchmark_performed: false
+cuda_implementation_added: false
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+broad_experiment_executed: false
+source_summaries:
+  - data/research/stage4o-cpu-batch-adapter-expansion-summary.yaml
+  - data/research/stage4p-result-store-score-summary-unification-summary.yaml
+future_cuda_allowed: false
+notes:
+  - Ready for future CUDA planning does not authorize CUDA implementation or GPU benchmarking.

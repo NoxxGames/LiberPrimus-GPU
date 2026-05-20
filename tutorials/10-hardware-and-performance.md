@@ -141,3 +141,8 @@ Stage 3O is documentation and source-promotion work. It uses no CUDA, GPU accele
 ## Stage 2I Approval Readiness
 
 Stage 2I is documentation and review-packet work only. The first real exploratory proposal records a bounded Caesar plus affine preview count, but it does not run on hardware, generate candidates, score output, or exercise CUDA.
+# Stage 4Q Benchmark Planning
+
+Stage 4Q records benchmark planning, not performance results. The `libreprimus benchmark-planning` CLI can write raw-data-free environment, CPU smoke, plan, readiness, and validation records. Generated diagnostics go under `experiments/results/benchmarks/stage4q/` and stay ignored.
+
+Do not quote Stage 4Q smoke timing as a speed claim. Future CUDA work must still pass explicit CPU/GPU parity tests and benchmark gates.

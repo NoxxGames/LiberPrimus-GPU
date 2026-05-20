@@ -1,0 +1,24 @@
+manifest_id: stage4q-cpu-benchmark-smoke
+schema: schemas/benchmarks/cpu-benchmark-smoke-record-v0.schema.json
+stage_id: stage-4q
+description: Tiny deterministic CPU-only smoke diagnostics for benchmark-planning plumbing.
+benchmark_scope: cpu_smoke
+cpu_only: true
+cuda_used: false
+cuda_required: false
+gpu_benchmark_performed: false
+cuda_implementation_added: false
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+broad_experiment_executed: false
+inputs:
+  - input_stream_id: stage4q-synthetic-smoke-stream
+    source_type: synthetic_inline
+    raw_data_required: false
+candidate_cap: 3
+notes:
+  - Timings emitted by this manifest are diagnostics only and must not be reported as performance evidence.

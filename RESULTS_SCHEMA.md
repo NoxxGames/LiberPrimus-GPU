@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, Stage 4O CPU batch adapter expansion/parity expectation records, and Stage 4P result-store/score-summary unification records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, Stage 4O CPU batch adapter expansion/parity expectation records, Stage 4P result-store/score-summary unification records, and Stage 4Q benchmark/parity planning records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -886,3 +886,14 @@ Stage 4I adds committed schemas under `schemas/scoring/` for:
 Committed records live under `data/scoring/`. Generated scorer inventories and report renderings remain ignored under `experiments/results/scoring-consolidation/stage4i/`.
 
 All Stage 4I records keep scoring as triage metadata only. Score summary records require `solve_claim=false`, `trusted_as_canonical=false`, and `cuda_used=false`.
+# Stage 4Q Benchmark Schemas
+
+Stage 4Q adds benchmark planning schemas:
+
+- `cpu-benchmark-plan-v0`
+- `cpu-benchmark-smoke-record-v0`
+- `benchmark-environment-record-v0`
+- `cuda-parity-benchmark-readiness-v0`
+- `stage4q-benchmark-parity-summary-v0`
+
+These schemas require `cuda_used=false`, `cuda_required=false`, `gpu_benchmark_performed=false`, `cuda_implementation_added=false`, `solve_claim=false`, `canonical_corpus_active=false`, `page_boundaries_final=false`, `raw_data_processed=false`, `broad_experiment_executed=false`, and `generated_outputs_committed=false`.

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/benchmarks/cpu-benchmark-plan-v0.schema.json",
+  "title": "CPU Benchmark Plan v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "plan_id",
+    "stage_id",
+    "benchmark_scope",
+    "benchmark_status",
+    "tier",
+    "cpu_only",
+    "cuda_used",
+    "cuda_required",
+    "gpu_benchmark_performed",
+    "cuda_implementation_added",
+    "no_solve_claim",
+    "solve_claim",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "generated_outputs_committed",
+    "raw_data_processed",
+    "broad_experiment_executed"
+  ],
+  "properties": {
+    "record_type": { "const": "cpu_benchmark_plan" },
+    "plan_id": { "type": "string", "minLength": 1 },
+    "stage_id": { "const": "stage-4q" },
+    "benchmark_scope": {
+      "enum": ["planning_only", "cpu_smoke", "parity_readiness", "environment_record"]
+    },
+    "benchmark_status": {
+      "enum": ["planned", "smoke_passed", "smoke_failed", "skipped_optional", "blocked"]
+    },
+    "tier": { "type": "string", "minLength": 1 },
+    "cpu_only": { "const": true },
+    "cuda_used": { "const": false },
+    "cuda_required": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "cuda_implementation_added": { "const": false },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "broad_experiment_executed": { "const": false }
+  }
+}

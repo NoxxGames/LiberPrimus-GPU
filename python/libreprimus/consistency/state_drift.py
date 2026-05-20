@@ -133,6 +133,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 4P is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage4q",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+4q\b", re.IGNORECASE),
+        "Stage 4Q is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -185,6 +190,48 @@ def check_state_drift_consistency(
                     GROUP,
                     "no_stale_current_state_claims",
                     f"{relative} has no stale current-state claims.",
+                    path=path,
+                )
+            )
+        duplicate_entries = scan_duplicate_stage_list_entries(text, relative)
+        if duplicate_entries:
+            for line_no, line in duplicate_entries:
+                results.append(
+                    fail_result(
+                        GROUP,
+                        "duplicate_stage_list_entry",
+                        f"Duplicate adjacent stage-list entry on line {line_no}: {line.strip()}",
+                        path=path,
+                        data={"line": line_no},
+                    )
+                )
+        else:
+            results.append(
+                pass_result(
+                    GROUP,
+                    "no_duplicate_stage_list_entries",
+                    f"{relative} has no duplicate adjacent stage-list entries.",
+                    path=path,
+                )
+            )
+        redundant_current_status = scan_redundant_current_status_label(text, relative)
+        if redundant_current_status:
+            for line_no, line in redundant_current_status:
+                results.append(
+                    fail_result(
+                        GROUP,
+                        "redundant_current_status_label",
+                        f"Redundant Current status label on line {line_no}: {line.strip()}",
+                        path=path,
+                        data={"line": line_no},
+                    )
+                )
+        else:
+            results.append(
+                pass_result(
+                    GROUP,
+                    "no_redundant_current_status_label",
+                    f"{relative} has no redundant Current status label.",
                     path=path,
                 )
             )
@@ -396,9 +443,19 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4q_cpu_benchmark_parity_next",
-        "stage 4q" in staged_plan and "cpu benchmark" in staged_plan and "parity planning" in staged_plan,
-        "Staged plan records Stage 4Q CPU benchmark and parity planning as next.",
+        "stage4q_cpu_benchmark_parity_current_or_complete",
+        "stage 4q" in staged_plan
+        and "cpu benchmark" in staged_plan
+        and "parity planning" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4Q CPU benchmark and parity planning as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5a_cuda_planning_next",
+        "stage 5a" in staged_plan and "cuda planning" in staged_plan and "parity scaffolding" in staged_plan,
+        "Staged plan records Stage 5A CUDA planning and parity scaffolding as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -455,6 +512,16 @@ def check_state_drift_consistency(
         and "unified result" in combined
         and "triage" in combined,
         "Result-store and score-summary unification policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "cpu_benchmark_parity_planning_policy_present",
+        "cpu benchmark" in combined
+        and "parity planning" in combined
+        and "gpu benchmark" in combined
+        and "stage 5a" in combined,
+        "CPU benchmark and future CUDA parity planning policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -630,6 +697,52 @@ def scan_stale_current_state(text: str, relative_path: str | Path) -> list[tuple
         for stale in STALE_CURRENT_STATE_PATTERNS:
             if stale.pattern.search(line):
                 findings.append((stale.check_id, line_no, line))
+    return findings
+
+
+def scan_duplicate_stage_list_entries(text: str, relative_path: str | Path) -> list[tuple[int, str]]:
+    """Return duplicate Stage bullet entries inside contiguous stage-list blocks."""
+
+    path_text = str(relative_path).replace("\\", "/").lower()
+    if any(part in path_text for part in HISTORICAL_PATH_PARTS):
+        return []
+
+    findings: list[tuple[int, str]] = []
+    seen_in_block: set[str] = set()
+    for line_no, line in enumerate(text.splitlines(), start=1):
+        stripped = line.strip()
+        if not stripped.startswith(("-", "*")):
+            seen_in_block.clear()
+            continue
+        match = re.match(r"^[-*]\s+stage\s+\d+[a-z]?\b", stripped, re.IGNORECASE)
+        if not match:
+            continue
+        key = re.sub(r"\s+", " ", stripped.lower())
+        if key in seen_in_block and not _is_historical_line(line):
+            findings.append((line_no, line))
+        seen_in_block.add(key)
+    return findings
+
+
+def scan_redundant_current_status_label(text: str, relative_path: str | Path) -> list[tuple[int, str]]:
+    """Return headings where `## Current status` is followed by `Current status:`."""
+
+    path_text = str(relative_path).replace("\\", "/").lower()
+    if any(part in path_text for part in HISTORICAL_PATH_PARTS):
+        return []
+
+    findings: list[tuple[int, str]] = []
+    lines = text.splitlines()
+    for index, line in enumerate(lines):
+        if line.strip().lower() != "## current status":
+            continue
+        for next_index in range(index + 1, len(lines)):
+            next_line = lines[next_index].strip()
+            if not next_line:
+                continue
+            if next_line.lower().startswith("current status:"):
+                findings.append((next_index + 1, lines[next_index]))
+            break
     return findings
 
 

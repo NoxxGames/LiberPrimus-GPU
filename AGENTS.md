@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4P - result-store and score-summary unification.
+Current completed stage: Stage 4Q - CPU benchmark and parity planning.
 
-Current work: Stage 4Q - CPU benchmark and parity planning. Stage 4Q should plan CPU benchmark and parity requirements conservatively; it must not become CUDA implementation, GPU benchmarking, broad search, or experiment execution without explicit scoped manifests.
+Current work: Stage 5A - CUDA planning and parity scaffolding only. Stage 5A may cite Stage 4Q benchmark/parity records, but CUDA implementation, GPU benchmarking, speedup claims, broad search, raw-data processing, canonical corpus activation, page-boundary finalisation, and solve claims remain prohibited unless explicitly scoped by a later stage.
 
 Current project state:
 
@@ -141,6 +141,10 @@ Current project state:
 - Cross-stage reports are triage/comparison aids only and cannot make solve claims.
 - Do not commit generated result records, generated score-summary records, SQLite databases, or local reports.
 - Future CUDA planning must reference Stage 4O parity expectations and Stage 4P unified result surfaces.
+- Stage 4Q generated benchmark planning outputs are generated and ignored under `experiments/results/benchmarks/stage4q/`.
+- CPU smoke timings are diagnostic only and must not be reported as performance evidence.
+- Future CUDA planning must cite Stage 4Q benchmark plan and parity readiness records.
+- `codex-output/**` is a local ignored completion-handoff area and must not be staged.
 - `ready_for_manifest` means planning readiness only; it does not mean execution.
 - Control-only observations must not be treated as true claims.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
@@ -679,6 +683,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Cross-stage reports are triage/comparison aids only and cannot make solve claims.
 - Generated unified result records, score-summary records, cross-stage reports, and SQLite files remain ignored and must not be committed.
 - Future CUDA planning must cite Stage 4O parity expectations and Stage 4P unified result surfaces.
+
+## Stage 4Q CPU Benchmark Parity Planning Rules
+
+- Benchmark planning is not CUDA implementation or GPU benchmarking.
+- CPU smoke diagnostics are raw-data-free plumbing checks, not performance claims.
+- Future CUDA planning must cite Stage 4O parity expectations, Stage 4P unified result surfaces, and Stage 4Q parity readiness records.
+- Blocked/deferred adapters must remain blocked until stable CPU-batch contracts exist.
+- Cookie/hash, stego/audio, image/compression, and bigram records are non-CUDA transform targets unless a later stage explicitly re-scopes them.
+- Generated benchmark records and `codex-output/**` completion handoffs remain ignored and must not be staged.
 
 ## Stage 3W State Consolidation Rules
 

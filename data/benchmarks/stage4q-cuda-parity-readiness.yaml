@@ -1,0 +1,524 @@
+records:
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-affine_mod29-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: affine_mod29
+  canonical_transform_id: affine_mod29
+  transform_family: affine_mod29
+  adapter_status: supported
+  benchmark_scope: parity_readiness
+  benchmark_status: planned
+  parity_gate_status: ready_for_future_cuda_planning
+  blockers: []
+  cpu_reference_present: true
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-caesar_mod29-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: caesar_shift
+  canonical_transform_id: caesar_shift
+  transform_family: caesar_mod29
+  adapter_status: supported
+  benchmark_scope: parity_readiness
+  benchmark_status: planned
+  parity_gate_status: ready_for_future_cuda_planning
+  blockers: []
+  cpu_reference_present: true
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-cookie_hash-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: cookie_hash_family
+  canonical_transform_id: null
+  transform_family: cookie_hash
+  adapter_status: unsupported_by_design
+  benchmark_scope: parity_readiness
+  benchmark_status: skipped_optional
+  parity_gate_status: skipped_not_cuda_target
+  blockers:
+  - not_a_cuda_transform_target
+  cpu_reference_present: false
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-direct_translation-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: direct_translation
+  canonical_transform_id: direct_translation
+  transform_family: direct_translation
+  adapter_status: supported
+  benchmark_scope: parity_readiness
+  benchmark_status: planned
+  parity_gate_status: ready_for_future_cuda_planning
+  blockers: []
+  cpu_reference_present: true
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-historical_motif_vigenere-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: historical_motif_vigenere
+  canonical_transform_id: null
+  transform_family: historical_motif_vigenere
+  adapter_status: deferred
+  benchmark_scope: parity_readiness
+  benchmark_status: blocked
+  parity_gate_status: blocked_missing_cpu_reference
+  blockers:
+  - missing_stable_cpu_batch_adapter
+  cpu_reference_present: false
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-image_compression_bigram-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: image_compression_bigram_family
+  canonical_transform_id: null
+  transform_family: image_compression_bigram
+  adapter_status: unsupported_by_design
+  benchmark_scope: parity_readiness
+  benchmark_status: skipped_optional
+  parity_gate_status: skipped_not_cuda_target
+  blockers:
+  - not_a_cuda_transform_target
+  cpu_reference_present: false
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-p56_prime_minus_one-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: p56_prime_minus_one
+  canonical_transform_id: prime_minus_one_stream
+  transform_family: p56_prime_minus_one
+  adapter_status: supported
+  benchmark_scope: parity_readiness
+  benchmark_status: planned
+  parity_gate_status: ready_for_future_cuda_planning
+  blockers: []
+  cpu_reference_present: true
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-phi_prime_stream-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: phi_prime_stream
+  canonical_transform_id: prime_minus_one_stream
+  transform_family: phi_prime_stream
+  adapter_status: supported
+  benchmark_scope: parity_readiness
+  benchmark_status: planned
+  parity_gate_status: ready_for_future_cuda_planning
+  blockers: []
+  cpu_reference_present: true
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-prime_minus_one_stream-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: prime_minus_one_stream
+  canonical_transform_id: prime_minus_one_stream
+  transform_family: prime_minus_one_stream
+  adapter_status: supported
+  benchmark_scope: parity_readiness
+  benchmark_status: planned
+  parity_gate_status: ready_for_future_cuda_planning
+  blockers: []
+  cpu_reference_present: true
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-reset_advance-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: reset_advance_variants
+  canonical_transform_id: null
+  transform_family: reset_advance
+  adapter_status: deferred
+  benchmark_scope: parity_readiness
+  benchmark_status: blocked
+  parity_gate_status: blocked_missing_cpu_reference
+  blockers:
+  - missing_stable_cpu_batch_adapter
+  cpu_reference_present: false
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-reverse_gematria-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: reverse_gematria
+  canonical_transform_id: reverse_gematria
+  transform_family: reverse_gematria
+  adapter_status: supported
+  benchmark_scope: parity_readiness
+  benchmark_status: planned
+  parity_gate_status: ready_for_future_cuda_planning
+  blockers: []
+  cpu_reference_present: true
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-rotated_reverse_gematria-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: rotated_reverse_gematria
+  canonical_transform_id: rotated_reverse_gematria
+  transform_family: rotated_reverse_gematria
+  adapter_status: supported
+  benchmark_scope: parity_readiness
+  benchmark_status: planned
+  parity_gate_status: ready_for_future_cuda_planning
+  blockers: []
+  cpu_reference_present: true
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-stego_audio-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: stego_audio_family
+  canonical_transform_id: null
+  transform_family: stego_audio
+  adapter_status: unsupported_by_design
+  benchmark_scope: parity_readiness
+  benchmark_status: skipped_optional
+  parity_gate_status: skipped_not_cuda_target
+  blockers:
+  - not_a_cuda_transform_target
+  cpu_reference_present: false
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false
+- record_type: cuda_parity_benchmark_readiness
+  readiness_id: stage4q-vigenere-cuda-parity-readiness
+  stage_id: stage-4q
+  transform_id: vigenere_explicit_key
+  canonical_transform_id: vigenere_explicit_key
+  transform_family: vigenere
+  adapter_status: supported
+  benchmark_scope: parity_readiness
+  benchmark_status: planned
+  parity_gate_status: ready_for_future_cuda_planning
+  blockers: []
+  cpu_reference_present: true
+  stage4o_parity_expectation_available: true
+  stage4p_unified_result_surface_available: true
+  stage4o_parity_reference_count: 8
+  stage4p_unified_result_reference_count: 8
+  score_contract_available: true
+  generated_adapter_coverage_used: true
+  future_cuda_may_begin: false
+  required_before_cuda:
+  - explicit Stage 5 scope
+  - CPU benchmark plan acceptance
+  - parity tests
+  - non-target list
+  - generated-output boundary check
+  cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_benchmark_performed: false
+  cuda_implementation_added: false
+  no_solve_claim: true
+  solve_claim: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  broad_experiment_executed: false

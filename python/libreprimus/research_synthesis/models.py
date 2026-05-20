@@ -45,6 +45,7 @@ REQUIRED_METHOD_FAMILIES = {
     "source_lock_snapshots",
     "scoring_consolidation",
     "result_store_score_summary_unification",
+    "cpu_benchmark_parity_planning",
     "deterministic_image_analysis",
     "image_transform_suite",
     "discord_ingestion_review",

@@ -788,3 +788,8 @@ Stage 4I consolidates existing scoring and calibration records:
 The run writes committed scorer inventory, confidence-label, compatibility-map, calibration-profile, and calibration-report records under `data/scoring/`. Generated inventories and rendered reports stay ignored under `experiments/results/scoring-consolidation/stage4i/`.
 
 Stage 4I is infrastructure only. It does not run a new cryptanalytic experiment, invent a new scoring model, use CUDA, or make solve claims.
+# Stage 4Q Benchmark Planning Boundary
+
+Stage 4Q is not an experiment execution stage. It adds benchmark planning records, future CUDA parity readiness records, and tiny CPU-only smoke diagnostics. Generated Stage 4Q diagnostics remain ignored under `experiments/results/benchmarks/stage4q/`.
+
+Do not use Stage 4Q smoke timings as performance evidence. Do not implement CUDA, run GPU benchmarks, broaden search, process raw data, activate the canonical corpus, finalise page boundaries, or claim a solve from benchmark-planning records.

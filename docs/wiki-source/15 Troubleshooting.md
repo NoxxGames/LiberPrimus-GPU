@@ -177,8 +177,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 4P, onboarding and staged-plan checks should show Stage 4P complete and Stage 4Q CPU
-benchmark and parity planning next.
+After Stage 4Q, onboarding and staged-plan checks should show Stage 4Q complete and Stage 5A CUDA
+planning and parity scaffolding only next.
 
 If path sanitisation fails, run:
 
@@ -390,3 +390,18 @@ If the Wiki remote is unavailable, record the failure in `docs/github/wiki-publi
 Do not treat terminal output, Discord claims, local review indexes, or generated candidates as solve
 evidence. A solve requires a reproducible manifest, pinned corpus, matching output, tests, and
 review.
+# Stage 4Q Benchmark Planning Troubleshooting
+
+If Stage 4Q validation fails, regenerate raw-data-free diagnostics with:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli benchmark-planning build-plan `
+  --manifest experiments/manifests/benchmarks/stage4q-cuda-parity-readiness.yaml `
+  --plan-out data/benchmarks/stage4q-cpu-benchmark-plan.yaml `
+  --readiness-out data/benchmarks/stage4q-cuda-parity-readiness.yaml `
+  --summary-out data/research/stage4q-cpu-benchmark-parity-planning-summary.yaml `
+  --out-dir experiments/results/benchmarks/stage4q `
+  --allow-warnings
+```
+
+Do not stage `experiments/results/benchmarks/stage4q/` or `codex-output/`.

@@ -614,3 +614,16 @@ The tests assert that score labels cannot imply solved/plaintext_verified, score
 Stage 4J adds tests for observation-review schemas, review-state transitions, promotion gates, quarantine records, path sanitisation, stale operational-document detection, CLI build/validate/check paths, and ignored output policy.
 
 The tests assert that visual candidates without coordinates cannot promote, cuneiform readings without accepted review cannot promote, ambiguous dot readings cannot promote, Discord-derived records without public corroboration cannot promote, negative controls remain usable only as controls, scoring labels cannot become solve claims, absolute local paths are rejected unless explicitly marked as examples, generated observation-review outputs are ignored, and raw data remains ignored.
+# Stage 4Q Validation
+
+Stage 4Q validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli benchmark-planning validate-stage4q `
+  --results-dir experiments/results/benchmarks/stage4q `
+  --plan data/benchmarks/stage4q-cpu-benchmark-plan.yaml `
+  --readiness data/benchmarks/stage4q-cuda-parity-readiness.yaml `
+  --summary data/research/stage4q-cpu-benchmark-parity-planning-summary.yaml
+```
+
+The consistency scripts also build Stage 4Q temp outputs in a raw-data-free location. Tests must not require CUDA, raw page images, raw Discord logs, stego/audio assets, generated benchmark records in Git, or `codex-output/**`.

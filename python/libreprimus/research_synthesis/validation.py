@@ -160,8 +160,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 4q", "cpu benchmark", "parity planning"),
-            "staged_plan_stage4q_cpu_benchmark_parity_next",
+            ("stage 4q", "cpu benchmark", "parity planning", "complete"),
+            "staged_plan_stage4q_cpu_benchmark_parity_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5a", "cuda planning", "parity scaffolding"),
+            "staged_plan_stage5a_cuda_planning_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
