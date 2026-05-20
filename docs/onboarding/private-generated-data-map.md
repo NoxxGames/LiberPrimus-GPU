@@ -23,6 +23,7 @@
 - `experiments/results/stego-fixtures/stage4f/`: generated Stage 4F stego/audio fixture candidate reports, source-gap JSONL files, and warnings.
 - `experiments/results/cookie-refresh/stage4g/`: generated Stage 4G cookie refresh candidate records, exact-match records, duplicate records, summary JSON, and warnings.
 - `experiments/results/cpu-batch/stage4h/`: generated Stage 4H CPU batch result JSONL, summary JSON, adapter coverage JSON, and warning records.
+- `experiments/results/cpu-batch/stage4o/`: generated Stage 4O CPU batch result JSONL, adapter coverage JSON, parity expectation JSONL, scoring compatibility JSON, summary JSON, and warning records.
 - `experiments/results/scoring-consolidation/stage4i/`: generated Stage 4I scorer inventories, rendered calibration reports, CPU batch compatibility JSON, and warnings.
 - `experiments/results/observation-review/stage4j/`: generated Stage 4J observation review decision reports, quarantine reports, promotion-gate reports, path-sanitisation reports, and warnings.
 - `experiments/results/source-lock-snapshots/stage4k/`: generated Stage 4K fetch reports, rejected-source records, duplicate-source records, warnings, and local diagnostics.
@@ -58,6 +59,7 @@
 - Generated Stage 4F stego/audio fixture JSON/JSONL outputs under `experiments/results/stego-fixtures/stage4f/`.
 - Generated Stage 4G cookie refresh JSON/JSONL and summary JSON outputs under `experiments/results/cookie-refresh/stage4g/`.
 - Generated Stage 4H CPU batch result, summary, adapter coverage, and warning outputs under `experiments/results/cpu-batch/stage4h/`.
+- Generated Stage 4O CPU batch result, adapter coverage, parity expectation, scoring compatibility, summary, and warning outputs under `experiments/results/cpu-batch/stage4o/`.
 - Generated Stage 4I scorer inventory, calibration report, CPU batch compatibility, and warning outputs under `experiments/results/scoring-consolidation/stage4i/`.
 - Generated Stage 4J observation review reports under `experiments/results/observation-review/stage4j/`.
 - Generated Stage 4K source-lock snapshot reports under `experiments/results/source-lock-snapshots/stage4k/`.

@@ -1,0 +1,242 @@
+record_type: cpu_batch_manifest
+manifest_id: stage4o-solved-fixture-parity-batch
+manifest_version: v0
+description: Solved-fixture-safe CPU batch parity manifest for registry, local Caesar, and local Affine adapters.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+candidate_count_upper_bound: 12
+input_streams:
+  - record_type: cpu_batch_input_stream
+    input_stream_id: stage4o-fixture-direct-an-v0
+    source_kind: solved_fixture
+    fixture_id: an-instruction-direct
+    token_count: 2
+    transformable_token_count: 2
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 24
+        latin_label: A
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 9
+        latin_label: N
+        token_index_global: 1
+        logical_line_index: 0
+    notes:
+      - Derived from committed solved-fixture expected plaintext labels only; no raw transcript read.
+  - record_type: cpu_batch_input_stream
+    input_stream_id: stage4o-fixture-reverse-an-v0
+    source_kind: solved_fixture
+    fixture_id: a-warning
+    token_count: 2
+    transformable_token_count: 2
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 4
+        latin_label: R
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 19
+        latin_label: M
+        token_index_global: 1
+        logical_line_index: 0
+    notes:
+      - Encoded from committed solved-fixture expected plaintext labels for reverse Gematria parity.
+  - record_type: cpu_batch_input_stream
+    input_stream_id: stage4o-fixture-rotated-reverse-an-v0
+    source_kind: solved_fixture
+    fixture_id: an-instruction-rotated
+    token_count: 2
+    transformable_token_count: 2
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 5
+        latin_label: C
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 20
+        latin_label: L
+        token_index_global: 1
+        logical_line_index: 0
+    notes:
+      - Encoded from committed solved-fixture expected plaintext labels for rotated reverse Gematria parity.
+  - record_type: cpu_batch_input_stream
+    input_stream_id: stage4o-fixture-vigenere-an-v0
+    source_kind: solved_fixture
+    fixture_id: welcome-divinity
+    token_count: 2
+    transformable_token_count: 2
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 25
+        latin_label: AE
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 10
+        latin_label: I
+        token_index_global: 1
+        logical_line_index: 0
+    notes:
+      - Encoded from committed solved-fixture expected plaintext labels for explicit-key Vigenere parity.
+  - record_type: cpu_batch_input_stream
+    input_stream_id: stage4o-fixture-prime-an-v0
+    source_kind: solved_fixture
+    fixture_id: p56-an-end-prime-minus-one
+    token_count: 2
+    transformable_token_count: 2
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 25
+        latin_label: AE
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 11
+        latin_label: J
+        token_index_global: 1
+        logical_line_index: 0
+    notes:
+      - Encoded from committed solved-fixture expected plaintext labels for prime-minus-one parity.
+  - record_type: cpu_batch_input_stream
+    input_stream_id: stage4o-synthetic-local-futh-v0
+    source_kind: synthetic
+    token_count: 4
+    transformable_token_count: 3
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 0
+        latin_label: F
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 1
+        latin_label: U
+        token_index_global: 1
+        logical_line_index: 0
+      - token_kind: word_separator
+        raw_text: " "
+        token_index_global: 2
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 2
+        latin_label: TH
+        token_index_global: 3
+        logical_line_index: 0
+    notes:
+      - Synthetic stream for local Caesar/Affine adapter smoke parity.
+transform_candidates:
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: stage4o-direct-an-v0
+    input_stream_id: stage4o-fixture-direct-an-v0
+    transform_family: direct_translation
+    transform_id: direct_translation
+    transform_parameters: {}
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: stage4o-reverse-an-v0
+    input_stream_id: stage4o-fixture-reverse-an-v0
+    transform_family: reverse_gematria
+    transform_id: reverse_gematria
+    transform_parameters: {}
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: stage4o-rotated-reverse-an-v0
+    input_stream_id: stage4o-fixture-rotated-reverse-an-v0
+    transform_family: rotated_reverse_gematria
+    transform_id: rotated_reverse_gematria
+    transform_parameters:
+      rotation: 1
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: stage4o-vigenere-an-v0
+    input_stream_id: stage4o-fixture-vigenere-an-v0
+    transform_family: vigenere_explicit_key
+    transform_id: vigenere_explicit_key
+    transform_parameters:
+      key_text: U
+      direction: decrypt_subtract
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: stage4o-prime-minus-one-an-v0
+    input_stream_id: stage4o-fixture-prime-an-v0
+    transform_family: prime_minus_one_stream
+    transform_id: prime_minus_one_stream
+    transform_parameters:
+      prime_start_index: 0
+      direction: forward
+      stream_value: prime_minus_one_mod29
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: stage4o-phi-prime-an-v0
+    input_stream_id: stage4o-fixture-prime-an-v0
+    transform_family: phi_prime_stream
+    transform_id: phi_prime_stream
+    transform_parameters:
+      prime_start_index: 0
+      direction: forward
+      stream_value: prime_minus_one_mod29
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: stage4o-caesar-local-v0
+    input_stream_id: stage4o-synthetic-local-futh-v0
+    transform_family: caesar_mod29
+    transform_id: caesar_shift
+    transform_parameters:
+      shift: 1
+      direction: forward
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+  - record_type: cpu_batch_transform_candidate
+    candidate_id: stage4o-affine-local-v0
+    input_stream_id: stage4o-synthetic-local-futh-v0
+    transform_family: affine_mod29
+    transform_id: affine_mod29
+    transform_parameters:
+      a: 5
+      b: 8
+      direction: forward
+    cpu_only: true
+    cuda_used: false
+    no_solve_claim: true
+scoring:
+  enabled: true
+  adapter: minimal_triage
+  notes:
+    - Scoring remains Stage 4I triage metadata only.
+notes:
+  - Stage 4O solved-fixture-safe parity batch; not an unsolved-page experiment.
+  - Expected solved-baseline outputs are not modified by this manifest.

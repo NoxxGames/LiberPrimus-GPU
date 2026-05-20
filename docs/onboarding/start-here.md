@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 4N - OutGuess/audio positive-control completion.
-- Next planned stage: Stage 4O - CPU batch adapter expansion.
+- Latest completed stage: Stage 4O - CPU batch adapter expansion.
+- Next planned stage: Stage 4P - result-store and score-summary unification.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

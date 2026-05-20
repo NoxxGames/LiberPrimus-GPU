@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/cpu-batch-parity-expectation-v0.schema.json",
+  "title": "CPU Batch Parity Expectation v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "parity_contract_version",
+    "input_stream_id",
+    "candidate_id",
+    "transform_family",
+    "transform_id",
+    "parity_status",
+    "cpu_only",
+    "cuda_used",
+    "cuda_required",
+    "no_solve_claim",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "generated_outputs_committed"
+  ],
+  "properties": {
+    "record_type": { "const": "cpu_batch_parity_expectation" },
+    "parity_contract_version": { "type": "string", "minLength": 1 },
+    "input_stream_id": { "type": "string", "minLength": 1 },
+    "candidate_id": { "type": "string", "minLength": 1 },
+    "transform_family": { "type": "string", "minLength": 1 },
+    "transform_id": { "type": "string", "minLength": 1 },
+    "canonical_transform_id": { "type": ["string", "null"] },
+    "parity_status": {
+      "enum": [
+        "passed",
+        "failed",
+        "skipped_missing_fixture",
+        "skipped_adapter_missing",
+        "skipped_not_applicable"
+      ]
+    },
+    "output_token_hash": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+    "output_text_hash": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+    "score_summary_shape_hash": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+    "transform_parameters_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "separator_behavior": { "type": "string" },
+    "line_reset_behavior": { "type": "string" },
+    "unknown_token_handling": { "type": "string" },
+    "cpu_only": { "const": true },
+    "cuda_used": { "const": false },
+    "cuda_required": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false }
+  },
+  "if": {
+    "properties": { "parity_status": { "const": "passed" } }
+  },
+  "then": {
+    "required": ["output_token_hash", "output_text_hash"]
+  }
+}

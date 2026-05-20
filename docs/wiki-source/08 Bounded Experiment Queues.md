@@ -142,7 +142,7 @@ If a GP/rune claim is `missing_source_span`, improve source/span linking in a se
 
 If a cookie pack finds no exact match, record the negative result and move to a separately scoped manifest. After Stage 4G, do not rerun cookie work without newly source-locked exact candidate strings.
 
-If a CPU batch adapter is missing, add a synthetic manifest/test and output hash expectation before using it in broader workflows. Do not add CUDA code to satisfy a missing CPU adapter.
+If a CPU batch adapter is missing, add a synthetic or solved-fixture-safe manifest/test, explicit deferred reason, and output hash expectation before using it in broader workflows. Stage 4O parity expectations are the CPU reference for future CUDA; do not add CUDA code to satisfy a missing CPU adapter.
 
 If a scoring label looks strong, treat it as a review lead only. Do not convert a score into a solve claim or broaden a method family without source-backed evidence and a bounded manifest.
 

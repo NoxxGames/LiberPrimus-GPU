@@ -70,6 +70,13 @@ experiments/results/**
 !experiments/results/cpu-execution/.gitkeep
 !experiments/results/cpu-execution/stage2f/
 !experiments/results/cpu-execution/stage2f/.gitkeep
+!experiments/results/cpu-batch/
+!experiments/results/cpu-batch/README.md
+!experiments/results/cpu-batch/.gitkeep
+!experiments/results/cpu-batch/stage4h/
+!experiments/results/cpu-batch/stage4h/.gitkeep
+!experiments/results/cpu-batch/stage4o/
+!experiments/results/cpu-batch/stage4o/.gitkeep
 !experiments/results/proposal-reviews/
 !experiments/results/proposal-reviews/README.md
 !experiments/results/proposal-reviews/.gitkeep

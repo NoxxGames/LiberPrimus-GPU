@@ -60,6 +60,11 @@ cache policy, toolchain detection that does not execute tools, expected-output b
 control readiness, CLI build/validate checks, and ignored-output/raw-cache checks for
 `experiments/results/stego-positive-controls/stage4n/` and `third_party/StegoPositiveControls/`.
 
+Stage 4O extends coverage with CPU batch adapter expansion schemas, deterministic solved-fixture
+stream building, missing-fixture skips, adapter coverage records, parity expectation hashes, score
+summary compatibility, Stage 4O CLI commands, Stage 4H command preservation, and ignored-output/raw
+data checks for `experiments/results/cpu-batch/stage4o/`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.
@@ -210,6 +215,22 @@ Local validation includes:
   --manifest experiments/manifests/cpu-batch/stage4h-synthetic-smoke-batch.yaml
 .\.venv\Scripts\python.exe -m libreprimus.cli cpu-batch validate-results `
   --results-dir experiments/results/cpu-batch/stage4h
+.\.venv\Scripts\python.exe -m pytest -q tests/python
+```
+
+## Stage 4O CPU Batch Adapter Expansion Tests
+
+Stage 4O tests cover adapter coverage schemas, solved-fixture-safe stream records, explicit missing
+fixture skips, deferred adapter reasons, parity expectation hashes, score-summary compatibility,
+Stage 4O CLI commands, Stage 4H command preservation, generated output ignore policy, raw data
+ignore policy, and no-solve/CUDA flags.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli cpu-batch validate-stage4o `
+  --results-dir experiments/results/cpu-batch/stage4o `
+  --summary data/research/stage4o-cpu-batch-adapter-expansion-summary.yaml
 .\.venv\Scripts\python.exe -m pytest -q tests/python
 ```
 

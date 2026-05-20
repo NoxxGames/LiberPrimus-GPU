@@ -2,14 +2,14 @@
 
 ## Current Reviewed State
 
-Stage 3V is complete; Stage 3W through Stage 3Z are complete. Stage 4A through Stage 4N are complete. The next planned stage is Stage 4O CPU batch adapter expansion.
+Stage 3V is complete; Stage 3W through Stage 3Z are complete. Stage 4A through Stage 4O are complete. The next planned stage is Stage 4P result-store and score-summary unification.
 
 The current safety posture is:
 
 - No solve claim is made.
 - The canonical corpus is inactive.
 - Page boundaries are reviewable, not final.
-- CUDA is deferred until CPU references, scorer definitions, batch APIs, observation review workflow, promotion-ledger records, image-preflight controls, positive-control readiness, parity tests, and benchmarks exist.
+- CUDA is deferred until CPU references, scorer definitions, batch APIs, observation review workflow, promotion-ledger records, image-preflight controls, positive-control readiness, Stage 4O parity expectations, parity tests, and benchmarks exist.
 - Broad unsolved-page campaigns are not started.
 - Raw data, generated outputs, SQLite databases, raw Discord logs, raw page images, raw historical stego artefacts, and extracted payloads are not committed.
 
@@ -80,11 +80,11 @@ Use these Stage 3Z maps for orientation:
 ## Deferred Work
 
 Current deferred work is tracked in `docs/roadmap/staged-plan.md` and the
-research synthesis ledgers. The active near-term queue after Stage 4N is:
+research synthesis ledgers. The active near-term queue after Stage 4O is:
 
-- Stage 4O CPU batch adapter expansion.
+- Stage 4P result-store and score-summary unification.
 - OutGuess/audio execution remains deferred until source-locked assets,
   expected outputs, and documented toolchains are available.
 - CUDA parity planning remains deferred until CPU batch APIs, stable scoring
   contracts, observation review gates, promotion-ledger records, image-preflight
-  controls, positive-control readiness, parity tests, and benchmarks exist.
+  controls, positive-control readiness, Stage 4O parity expectations, parity tests, and benchmarks exist.

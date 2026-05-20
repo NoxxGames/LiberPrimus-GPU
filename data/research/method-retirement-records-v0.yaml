@@ -68,20 +68,20 @@ records:
     method_family_id: cuda_gpu_acceleration
     retired_status: deferred
     reason: CUDA is intentionally delayed until CPU batch APIs, scorer contracts, parity tests, and benchmarks exist.
-    evidence: [Project policy and Stage 3W anti-drift state keep CUDA deferred, Stage 4H added the CPU batch parity contract, Stage 4I added scoring semantics, and Stage 4J added observation review gates without GPU code.]
-    stages_supporting: [stage-3w, stage-4h, stage-4i, stage-4j]
-    reopen_conditions: [Stage 4H CPU batch API, Stage 4I scorer consolidation, Stage 4J observation review gates, transform-and-score parity tests, and benchmark plan are complete.]
+    evidence: [Project policy and Stage 3W anti-drift state keep CUDA deferred, Stage 4H added the CPU batch parity contract, Stage 4I added scoring semantics, Stage 4J added observation review gates, and Stage 4O added CPU batch adapter parity expectations without GPU code.]
+    stages_supporting: [stage-3w, stage-4h, stage-4i, stage-4j, stage-4o]
+    reopen_conditions: [Stage 4H CPU batch API, Stage 4I scorer consolidation, Stage 4J observation review gates, Stage 4O parity expectations, transform-and-score parity tests, and benchmark plan are complete.]
     prohibited_expansions: [GPU kernels without CPU reference, parity tests, and benchmark plan.]
-    notes: First future CUDA target is batch transform-and-score parity; Stage 4H, Stage 4I, and Stage 4J did not implement CUDA.
+    notes: First future CUDA target is batch transform-and-score parity; Stage 4H through Stage 4O did not implement CUDA.
   - record_type: method_retirement_record
     method_family_id: cpu_batch_transform_api
     retired_status: active_with_constraints
     reason: CPU batch infrastructure is active as the source of truth for future parity, but it must not become a broad experiment runner or hidden CUDA implementation.
-    evidence: [Stage 4H ran only the synthetic smoke manifest, produced deterministic output hashes, and wrote a CUDA parity contract.]
-    stages_supporting: [stage-4h]
-    reopen_conditions: [A future stage adds transform adapters with synthetic tests and output hash expectations or uses the API for scorer consolidation.]
-    prohibited_expansions: [Broad unsolved-page campaigns, new transform families without manifests, GPU kernels, CUDA parity claims without matching CPU records.]
-    notes: CPU batch outputs are generated and ignored; committed summaries are aggregate-only.
+    evidence: [Stage 4H ran only the synthetic smoke manifest and wrote a CUDA parity contract, and Stage 4O added solved-fixture-safe streams, 9 supported adapters, 2 missing/deferred adapter records, 8 CPU-only result records, and 8 parity expectations.]
+    stages_supporting: [stage-4h, stage-4i, stage-4o]
+    reopen_conditions: [A future stage adds transform adapters with synthetic or solved-fixture-safe tests, output hash expectations, score-summary compatibility, and unchanged transform semantics.]
+    prohibited_expansions: [Broad unsolved-page campaigns, new transform families without manifests, GPU kernels, CUDA parity claims without matching CPU records, solved-baseline expected-output changes.]
+    notes: CPU batch outputs are generated and ignored; committed summaries are aggregate-only and Stage 4O parity expectations are future CUDA reference checks.
   - record_type: method_retirement_record
     method_family_id: scoring_consolidation
     retired_status: active_with_constraints

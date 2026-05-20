@@ -141,4 +141,6 @@ def _summary(
 
 
 def _run_id(manifest: CpuBatchManifest) -> str:
+    if manifest.manifest_id.startswith("stage4o-"):
+        return f"stage4o-{manifest.manifest_id}-cpu-reference-v0"
     return f"stage4h-{manifest.manifest_id}-cpu-reference-v0"

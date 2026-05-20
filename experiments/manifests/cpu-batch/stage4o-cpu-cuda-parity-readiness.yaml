@@ -1,0 +1,115 @@
+record_type: cpu_batch_manifest
+manifest_id: stage4o-cpu-cuda-parity-readiness
+manifest_version: v0
+description: Metadata manifest for Stage 4O CPU/CUDA parity-readiness summary and solved-fixture stream accounting.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+candidate_count_upper_bound: 0
+input_streams:
+  - record_type: cpu_batch_input_stream
+    input_stream_id: stage4o-fixture-direct-an-v0
+    source_kind: solved_fixture
+    fixture_id: an-instruction-direct
+    token_count: 2
+    transformable_token_count: 2
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 24
+        latin_label: A
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 9
+        latin_label: N
+        token_index_global: 1
+        logical_line_index: 0
+  - record_type: cpu_batch_input_stream
+    input_stream_id: stage4o-fixture-reverse-an-v0
+    source_kind: solved_fixture
+    fixture_id: a-warning
+    token_count: 2
+    transformable_token_count: 2
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 4
+        latin_label: R
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 19
+        latin_label: M
+        token_index_global: 1
+        logical_line_index: 0
+  - record_type: cpu_batch_input_stream
+    input_stream_id: stage4o-fixture-rotated-reverse-an-v0
+    source_kind: solved_fixture
+    fixture_id: an-instruction-rotated
+    token_count: 2
+    transformable_token_count: 2
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 5
+        latin_label: C
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 20
+        latin_label: L
+        token_index_global: 1
+        logical_line_index: 0
+  - record_type: cpu_batch_input_stream
+    input_stream_id: stage4o-fixture-vigenere-an-v0
+    source_kind: solved_fixture
+    fixture_id: welcome-divinity
+    token_count: 2
+    transformable_token_count: 2
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 25
+        latin_label: AE
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 10
+        latin_label: I
+        token_index_global: 1
+        logical_line_index: 0
+  - record_type: cpu_batch_input_stream
+    input_stream_id: stage4o-fixture-prime-an-v0
+    source_kind: solved_fixture
+    fixture_id: p56-an-end-prime-minus-one
+    token_count: 2
+    transformable_token_count: 2
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens:
+      - token_kind: rune
+        index29: 25
+        latin_label: AE
+        token_index_global: 0
+        logical_line_index: 0
+      - token_kind: rune
+        index29: 11
+        latin_label: J
+        token_index_global: 1
+        logical_line_index: 0
+transform_candidates: []
+scoring:
+  enabled: false
+  adapter: none
+notes:
+  - Run `libreprimus cpu-batch parity-readiness` after Stage 4O generated CPU results and adapter coverage exist.
+  - This manifest records solved-fixture stream accounting only; it executes no broad campaign.

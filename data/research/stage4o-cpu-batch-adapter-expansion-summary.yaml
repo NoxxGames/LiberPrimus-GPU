@@ -1,0 +1,24 @@
+record_type: stage4o_cpu_batch_adapter_expansion_summary
+schema: schemas/experiments/cpu-batch-adapter-expansion-summary-v0.schema.json
+stage_id: stage-4o
+status: complete
+solved_fixture_streams_discovered: 5
+solved_fixture_streams_executed: 5
+skipped_fixture_streams: 0
+transform_adapters_supported: 9
+transform_adapters_missing_or_deferred: 2
+candidates_executed: 8
+result_records: 8
+parity_expectations_written: 8
+scoring_compatible_count: 8
+scoring_unavailable_count: 0
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+notes:
+- Stage 4O expands CPU batch parity records for future CUDA reference checks.
+- Generated Stage 4O result records remain ignored under experiments/results/cpu-batch/stage4o/.

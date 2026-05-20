@@ -1,0 +1,29 @@
+record_type: cpu_batch_manifest
+manifest_id: stage4o-adapter-expansion-smoke-batch
+manifest_version: v0
+description: Metadata manifest for Stage 4O adapter coverage expansion.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+candidate_count_upper_bound: 0
+input_streams:
+  - record_type: cpu_batch_input_stream
+    input_stream_id: stage4o-adapter-expansion-placeholder-v0
+    source_kind: synthetic
+    token_count: 0
+    transformable_token_count: 0
+    canonical_corpus_active: false
+    page_boundaries_final: false
+    tokens: []
+    notes:
+      - Placeholder stream; adapter-expansion reports coverage without executing broad candidates.
+transform_candidates: []
+scoring:
+  enabled: false
+  adapter: none
+notes:
+  - Run `libreprimus cpu-batch adapter-expansion` to write raw-data-free Stage 4O adapter coverage.

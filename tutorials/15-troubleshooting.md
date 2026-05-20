@@ -139,6 +139,11 @@ the YAML readiness/cache/expected-output/toolchain/summary records, schemas, cod
 research logs. Ignored cache files under `third_party/StegoPositiveControls/`, historical fixture
 artefacts, and extracted payloads remain outside Git.
 
+If a Stage 4O CPU batch adapter build leaves `result_records.jsonl`, `adapter_coverage.json`,
+`parity_expectations.jsonl`, `scoring_compatibility.json`, `summary.json`, or `warnings.jsonl`, do
+not stage them. Commit only schemas, manifests, CPU batch code, tests, docs, research logs, and the
+aggregate YAML summary under `data/research/`.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 
@@ -161,8 +166,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 4N, onboarding and staged-plan checks should show Stage 4N complete and Stage 4O CPU
-batch adapter expansion next.
+After Stage 4O, onboarding and staged-plan checks should show Stage 4O complete and Stage 4P
+result-store and score-summary unification next.
 
 If path sanitisation fails, run:
 

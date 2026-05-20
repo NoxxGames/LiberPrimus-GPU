@@ -455,3 +455,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 4N wrote 11 OutGuess readiness records, 5 audio readiness records, 16 cache records, 16 expected-output records, 7 toolchain records, 0 historical execution-ready fixtures, 8 blocked historical fixtures, and 2 synthetic-ready controls.
+  - record_type: stage_summary_record
+    stage_id: stage-4o
+    title: CPU batch adapter expansion
+    status: complete
+    category: infrastructure
+    summary: Expanded the CPU batch reference layer with solved-fixture-safe streams, adapter coverage records, deterministic parity expectations, and score-summary compatibility checks without changing transform semantics or adding CUDA.
+    key_outputs:
+      - "`libreprimus cpu-batch` Stage 4O commands for solved-fixture parity, adapter expansion, parity readiness, and validation."
+      - Solved-fixture-safe CPU batch manifests for parity, adapter smoke coverage, and CPU/CUDA parity readiness.
+      - Aggregate Stage 4O summary with 9 supported adapters, 2 missing/deferred adapters, 8 CPU-only candidates, 8 result records, 8 parity expectations, and 8 scoring-compatible outputs.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Generated Stage 4O result records remain ignored under experiments/results/cpu-batch/stage4o; future CUDA still requires explicit planning, parity tests, and benchmarks.

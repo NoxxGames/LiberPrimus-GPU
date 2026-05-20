@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/cpu-batch-scoring-compatibility-v0.schema.json",
+  "title": "CPU Batch Scoring Compatibility v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "compatible",
+    "record_count",
+    "scoring_compatible_count",
+    "scoring_unavailable_count",
+    "cpu_only",
+    "cuda_used",
+    "cuda_required",
+    "no_solve_claim",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "generated_outputs_committed"
+  ],
+  "properties": {
+    "record_type": { "const": "cpu_batch_scoring_compatibility" },
+    "compatible": { "type": "boolean" },
+    "record_count": { "type": "integer", "minimum": 0 },
+    "scoring_compatible_count": { "type": "integer", "minimum": 0 },
+    "scoring_unavailable_count": { "type": "integer", "minimum": 0 },
+    "score_summary_shape_hashes": { "type": "array", "items": { "type": "string", "pattern": "^[0-9a-f]{64}$" } },
+    "cpu_only": { "const": true },
+    "cuda_used": { "const": false },
+    "cuda_required": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false }
+  }
+}

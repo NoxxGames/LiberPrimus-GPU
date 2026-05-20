@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, and Stage 4N stego/audio positive-control readiness records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, and Stage 4O CPU batch adapter expansion/parity expectation records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -57,6 +57,14 @@ Stage 4N stego/audio positive-control readiness records require `raw_file_commit
 requires exact expected-output metadata; synthetic controls must be labelled synthetic. Generated
 reports remain ignored under `experiments/results/stego-positive-controls/stage4n/`; fixture cache
 bytes remain ignored under `third_party/StegoPositiveControls/`.
+
+Stage 4O CPU batch adapter expansion records require `cpu_only=true`, `cuda_used=false`,
+`cuda_required=false`, `no_solve_claim=true`, `canonical_corpus_active=false`,
+`page_boundaries_final=false`, and `generated_outputs_committed=false`. Adapter coverage records use
+`supported`, `missing`, `deferred`, or `unsupported_by_design`; parity expectation records require
+output hashes when parity passes. Generated result, coverage, parity, scoring, and summary reports
+remain ignored under `experiments/results/cpu-batch/stage4o/`; only the aggregate Stage 4O summary
+is committed under `data/research/`.
 
 ## Result record principles
 
@@ -258,6 +266,23 @@ Committed schema IDs:
 
 Generated readiness reports remain ignored under `experiments/results/stego-positive-controls/stage4n/`.
 Local fixture cache bytes remain ignored under `third_party/StegoPositiveControls/`.
+
+## Stage 4O CPU Batch Adapter Expansion Records
+
+Stage 4O adds committed schemas for adapter coverage, parity expectations, solved-fixture streams,
+scoring compatibility, and the aggregate adapter-expansion summary.
+
+Committed schema IDs:
+
+- `cpu-batch-adapter-coverage-v0`
+- `cpu-batch-parity-expectation-v0`
+- `cpu-batch-adapter-expansion-summary-v0`
+- `cpu-batch-solved-fixture-stream-v0`
+- `cpu-batch-scoring-compatibility-v0`
+
+Generated Stage 4O result, coverage, parity, scoring, and summary records remain ignored under
+`experiments/results/cpu-batch/stage4o/`. The committed aggregate summary lives under
+`data/research/stage4o-cpu-batch-adapter-expansion-summary.yaml`.
 
 ## Stage 4G Cookie Refresh Records
 

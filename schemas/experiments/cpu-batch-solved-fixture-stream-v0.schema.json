@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/cpu-batch-solved-fixture-stream-v0.schema.json",
+  "title": "CPU Batch Solved Fixture Stream v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "input_stream_id",
+    "fixture_id",
+    "source_type",
+    "token_count",
+    "transformable_token_count",
+    "separator_count",
+    "input_token_stream_hash",
+    "cpu_only",
+    "cuda_used",
+    "no_solve_claim",
+    "canonical_corpus_active",
+    "page_boundaries_final"
+  ],
+  "properties": {
+    "record_type": { "const": "cpu_batch_solved_fixture_stream" },
+    "input_stream_id": { "type": "string", "minLength": 1 },
+    "fixture_id": { "type": "string", "minLength": 1 },
+    "source_type": { "enum": ["committed_solved_fixture", "synthetic_fixture_safe", "skipped_missing_fixture"] },
+    "token_count": { "type": "integer", "minimum": 0 },
+    "transformable_token_count": { "type": "integer", "minimum": 0 },
+    "separator_count": { "type": "integer", "minimum": 0 },
+    "line_count": { "type": "integer", "minimum": 0 },
+    "input_token_stream_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "skip_reason": { "type": "string" },
+    "cpu_only": { "const": true },
+    "cuda_used": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false }
+  }
+}

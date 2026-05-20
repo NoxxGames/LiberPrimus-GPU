@@ -138,6 +138,25 @@ echo "Validating Stage 4N stego/audio positive-control records"
     --toolchain data/observations/stego/stage4n-toolchain-readiness.yaml \
     --summary data/observations/stego/stage4n-positive-control-summary.yaml
 
+echo "Running Stage 4O CPU batch adapter expansion synthetic/temp output"
+"$python_bin" -m libreprimus.cli cpu-batch solved-fixture-parity \
+    --manifest experiments/manifests/cpu-batch/stage4o-solved-fixture-parity-batch.yaml \
+    --out-dir "$tmp_dir/stage4o-cpu-batch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cpu-batch adapter-expansion \
+    --manifest experiments/manifests/cpu-batch/stage4o-adapter-expansion-smoke-batch.yaml \
+    --registry data/transform-registry/cpu-reference-transforms-v0.json \
+    --out-dir "$tmp_dir/stage4o-cpu-batch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cpu-batch parity-readiness \
+    --manifest experiments/manifests/cpu-batch/stage4o-cpu-cuda-parity-readiness.yaml \
+    --out-dir "$tmp_dir/stage4o-cpu-batch" \
+    --summary-out "$tmp_dir/stage4o-cpu-batch-summary.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cpu-batch validate-stage4o \
+    --results-dir "$tmp_dir/stage4o-cpu-batch" \
+    --summary "$tmp_dir/stage4o-cpu-batch-summary.yaml"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

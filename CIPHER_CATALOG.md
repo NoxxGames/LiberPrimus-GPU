@@ -6,7 +6,7 @@ This catalog records planned transform families and the standards required befor
 
 ## Current Cipher Status
 
-After Stage 4N, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, metadata-only source-delta records for selected public artefact categories, stego/audio fixture source-lock metadata, a source-backed cookie exact-refresh result, a CPU batch transform API, scorer/calibration records, an observation review lifecycle, allowlisted public source-lock snapshot records, a reviewed observation promotion ledger, metric-only image source-variant/compression preflight records, and stego/audio positive-control readiness records. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, stego/audio extraction, broad hash cracking, or solve claims.
+After Stage 4O, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, metadata-only source-delta records for selected public artefact categories, stego/audio fixture source-lock metadata, a source-backed cookie exact-refresh result, a CPU batch transform API with expanded adapter parity expectations, scorer/calibration records, an observation review lifecycle, allowlisted public source-lock snapshot records, a reviewed observation promotion ledger, metric-only image source-variant/compression preflight records, and stego/audio positive-control readiness records. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, OCR/AI image interpretation, broad stego fishing, stego/audio extraction, broad hash cracking, or solve claims.
 
 Canonical corpus activation remains inactive and page boundaries remain reviewable.
 
@@ -40,6 +40,8 @@ manifest-ready while executing nothing.
 Stage 4M image source-variant and compression preflight is not a cipher transform and not hidden-message extraction. It records image metadata, source-variant readiness, deterministic compression metrics, review-only artefact candidates, and blocked bigram/Fibonacci-421 readiness without promoting visual or numeric-pattern observations to seeds.
 
 Stage 4N OutGuess/audio positive-control completion is not a cipher transform and not stego/audio extraction. It records readiness, fixture-cache, expected-output, toolchain, and synthetic-control metadata while keeping historical cases blocked until assets, expected outputs, and tools are ready.
+
+Stage 4O CPU batch adapter expansion is not a new cipher family. It records solved-fixture-safe streams, adapter coverage, deterministic parity expectations, and score-summary compatibility for existing CPU transform families only. Missing adapters are deferred with reasons instead of changing semantics to fit the batch API.
 
 ## Historical Stage 0A status
 

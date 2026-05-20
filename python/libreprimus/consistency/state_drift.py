@@ -123,6 +123,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 4N is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage4o",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+4o\b", re.IGNORECASE),
+        "Stage 4O is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -369,9 +374,19 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4o_cpu_batch_adapter_next",
-        "stage 4o" in staged_plan and "cpu batch" in staged_plan and "adapter expansion" in staged_plan,
-        "Staged plan records Stage 4O CPU batch adapter expansion as next.",
+        "stage4o_cpu_batch_adapter_current_or_complete",
+        "stage 4o" in staged_plan
+        and "cpu batch" in staged_plan
+        and "adapter expansion" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 4O CPU batch adapter expansion as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4p_result_store_score_summary_next",
+        "stage 4p" in staged_plan and "result-store" in staged_plan and "score-summary" in staged_plan,
+        "Staged plan records Stage 4P result-store and score-summary unification as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -409,6 +424,15 @@ def check_state_drift_consistency(
         and "expected output" in combined
         and "stego/audio" in combined,
         "Stego/audio positive-control readiness policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "cpu_batch_adapter_expansion_policy_present",
+        "cpu batch adapter expansion" in combined
+        and "parity expectations" in combined
+        and "transform semantics" in combined,
+        "CPU batch adapter expansion and future CUDA parity expectations are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

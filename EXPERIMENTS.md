@@ -151,17 +151,38 @@ blocked until assets, expected outputs, and tools are ready; synthetic controls 
 Run:
 
 ```powershell
-.\.venv\Scripts\python.exe -m libreprimus.cli image-preflight validate `
-  --source-variant data/observations/visual/stage4m-image-source-variant-preflight-records.yaml `
-  --compression data/observations/visual/stage4m-image-compression-preflight-records.yaml `
-  --artifact-candidates data/observations/visual/stage4m-image-artifact-review-candidates.yaml `
-  --summary data/observations/visual/stage4m-image-preflight-summary.yaml `
-  --bigram-readiness data/observations/review/stage4m-bigram-frequency-pattern-readiness.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli stego-positive-controls validate `
+  --outguess-readiness data/observations/stego/stage4n-outguess-positive-control-readiness.yaml `
+  --audio-readiness data/observations/stego/stage4n-audio-positive-control-readiness.yaml `
+  --fixture-cache data/observations/stego/stage4n-fixture-cache-records.yaml `
+  --expected-output data/observations/stego/stage4n-expected-output-records.yaml `
+  --toolchain data/observations/stego/stage4n-toolchain-readiness.yaml `
+  --summary data/observations/stego/stage4n-positive-control-summary.yaml
 ```
 
-Source-variant comparisons remain blocked until external variant bytes are source-locked in ignored
-cache. Compression metrics, star-like features, and bigram/Fibonacci patterns are review-only and
-cannot become solve evidence or executable seeds in this stage.
+## Stage 4O CPU Batch Adapter Expansion
+
+Stage 4O is infrastructure, not a new experiment family. It expands CPU batch adapter coverage using
+synthetic and solved-fixture-safe streams only, writes deterministic parity expectations, and checks
+score-summary compatibility.
+
+Committed manifests:
+
+- `experiments/manifests/cpu-batch/stage4o-solved-fixture-parity-batch.yaml`
+- `experiments/manifests/cpu-batch/stage4o-adapter-expansion-smoke-batch.yaml`
+- `experiments/manifests/cpu-batch/stage4o-cpu-cuda-parity-readiness.yaml`
+
+Generated result, coverage, parity, scoring, and summary records remain ignored under
+`experiments/results/cpu-batch/stage4o/`. Stage 4O does not process raw data, alter solved-baseline
+expected outputs, run unsolved-page campaigns, implement CUDA, or make solve claims.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli cpu-batch validate-stage4o `
+  --results-dir experiments/results/cpu-batch/stage4o `
+  --summary data/research/stage4o-cpu-batch-adapter-expansion-summary.yaml
+```
 
 The Stage 4G run generated `4` candidates before deduplication, kept `4` deduplicated candidates, tested `8` exact SHA-256 comparisons against two targets, and found `0` exact matches. Do not rerun cookie work without newly source-locked exact candidate strings.
 

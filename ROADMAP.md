@@ -4,14 +4,14 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4N OutGuess/audio positive-control completion is complete. The stage recorded fixture
-readiness, cache policy, expected-output requirements, toolchain readiness, and synthetic controls
-without running historical stego/audio tools or committing artefacts.
+Stage 4O CPU batch adapter expansion is complete. The stage recorded solved-fixture-safe stream
+metadata, adapter coverage, deterministic parity expectations, and score-summary compatibility
+without changing transform semantics, running broad experiments, or adding CUDA.
 
-The next planned stage is Stage 4O: CPU batch adapter expansion. CUDA planning
+The next planned stage is Stage 4P: result-store and score-summary unification. CUDA planning
 remains later; CUDA remains deferred until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
-parity tests, and benchmark plans are stable.
+Stage 4O parity expectations, parity tests, and benchmark plans are stable.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
 recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
@@ -23,8 +23,8 @@ refresh result, Stage 4H extracted the CPU batch API as the future CUDA parity c
 4I made scoring labels and score summaries triage-only parity metadata, Stage 4J closed the
 review-to-promotion loop, Stage 4K strengthened public-source reproducibility, Stage 4L
 recorded promotion readiness, Stage 4M created image source-variant/compression preflight
-records, and Stage 4N recorded OutGuess/audio positive-control readiness before CPU batch
-adapter expansion or CUDA planning.
+records, Stage 4N recorded OutGuess/audio positive-control readiness, and Stage 4O expanded CPU
+batch adapter coverage before result-store/score-summary unification or CUDA planning.
 
 ## Phase 0A - Project bootstrap
 
@@ -317,6 +317,13 @@ requirements, toolchain availability, and synthetic controls. Historical cases r
 until assets, expected outputs, and tools are ready. No OutGuess, OpenPuff, MP3Stego, spectrogram,
 hexdump/string scan, or extraction was executed.
 
+## Stage 4O - CPU batch adapter expansion
+
+Stage 4O is complete. It expands CPU batch adapter coverage with solved-fixture-safe streams,
+deterministic parity expectations, adapter coverage records, and score-summary compatibility checks.
+It records `9` supported adapters, `2` missing/deferred adapters, and `8` parity expectations
+without adding CUDA or changing transform semantics.
+
 ## Stage 4G - Cookie exact-candidate refresh
 
 Stage 4G is complete. It refreshed only explicit source-backed cookie candidate strings, tested `4`
@@ -330,7 +337,7 @@ Stage 4H is complete. It added `libreprimus cpu-batch`, CPU batch schemas, synth
 
 ## Stage 4I - Scorer consolidation and calibration report
 
-Consolidate scorer definitions and calibration reports before CPU batch APIs are used for broader campaigns or future transform-and-score CUDA parity.
+Stage 4I is complete. It consolidated scorer definitions and calibration reports before CPU batch APIs are used for broader campaigns or future transform-and-score CUDA parity.
 
 ## Phase 1 - Corpus and known-solution reproduction
 

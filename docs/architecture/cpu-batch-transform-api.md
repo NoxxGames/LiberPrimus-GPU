@@ -46,3 +46,11 @@ The API does not implement CUDA, run broad experiments, add new transform famili
 Stage 4I adds the score-summary contract used by CPU batch records. CPU batch scoring now includes scorer id/version, calibration profile id, finite Stage 4I confidence labels, legacy label preservation, and explicit no-solve/CUDA flags.
 
 Future transform adapters must keep deterministic output hashes stable before any score comparison matters.
+
+## Stage 4O Adapter Expansion
+
+Stage 4O adds solved-fixture-safe input stream handling and adapter expansion checks without changing transform semantics. It records `9` supported adapters, `2` missing/deferred adapters, `8` CPU-only result records, `8` parity expectation records, and `8 / 0` scoring compatible/unavailable outputs.
+
+Stage 4O generated records remain ignored under `experiments/results/cpu-batch/stage4o/`. The committed aggregate summary is `data/research/stage4o-cpu-batch-adapter-expansion-summary.yaml`.
+
+New adapters must preserve existing CPU behavior, include synthetic or solved-fixture-safe tests, and produce deterministic output hashes before any future CUDA work can rely on them.

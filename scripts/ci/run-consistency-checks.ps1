@@ -145,6 +145,27 @@ try {
         --toolchain data/observations/stego/stage4n-toolchain-readiness.yaml `
         --summary data/observations/stego/stage4n-positive-control-summary.yaml
 
+    Write-Host "Running Stage 4O CPU batch adapter expansion synthetic/temp output"
+    $Stage4OOut = Join-Path $TempDir "stage4o-cpu-batch"
+    $Stage4OSummary = Join-Path $TempDir "stage4o-cpu-batch-summary.yaml"
+    & $Python -m libreprimus.cli cpu-batch solved-fixture-parity `
+        --manifest experiments/manifests/cpu-batch/stage4o-solved-fixture-parity-batch.yaml `
+        --out-dir $Stage4OOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cpu-batch adapter-expansion `
+        --manifest experiments/manifests/cpu-batch/stage4o-adapter-expansion-smoke-batch.yaml `
+        --registry data/transform-registry/cpu-reference-transforms-v0.json `
+        --out-dir $Stage4OOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cpu-batch parity-readiness `
+        --manifest experiments/manifests/cpu-batch/stage4o-cpu-cuda-parity-readiness.yaml `
+        --out-dir $Stage4OOut `
+        --summary-out $Stage4OSummary `
+        --allow-warnings
+    & $Python -m libreprimus.cli cpu-batch validate-stage4o `
+        --results-dir $Stage4OOut `
+        --summary $Stage4OSummary
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

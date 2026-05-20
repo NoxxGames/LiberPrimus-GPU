@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/experiments/cpu-batch-adapter-coverage-v0.schema.json",
+  "title": "CPU Batch Adapter Coverage v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "registry_id",
+    "transform_count",
+    "supported_adapter_count",
+    "missing_or_deferred_adapter_count",
+    "records",
+    "cpu_only",
+    "cuda_used",
+    "cuda_required",
+    "no_solve_claim",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "generated_outputs_committed"
+  ],
+  "properties": {
+    "record_type": { "const": "cpu_batch_adapter_coverage" },
+    "registry_id": { "type": "string", "minLength": 1 },
+    "registry_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "transform_count": { "type": "integer", "minimum": 0 },
+    "supported_adapter_count": { "type": "integer", "minimum": 0 },
+    "missing_adapter_count": { "type": "integer", "minimum": 0 },
+    "deferred_adapter_count": { "type": "integer", "minimum": 0 },
+    "unsupported_by_design_count": { "type": "integer", "minimum": 0 },
+    "missing_or_deferred_adapter_count": { "type": "integer", "minimum": 0 },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["transform_id", "transform_family", "adapter_status", "reason"],
+        "properties": {
+          "transform_id": { "type": "string", "minLength": 1 },
+          "canonical_transform_id": { "type": ["string", "null"] },
+          "transform_family": { "type": "string", "minLength": 1 },
+          "adapter_status": { "enum": ["supported", "missing", "deferred", "unsupported_by_design"] },
+          "reason": { "type": "string" },
+          "supports_cpu_reference": { "type": "boolean" },
+          "supports_gpu": { "const": false }
+        }
+      }
+    },
+    "cpu_only": { "const": true },
+    "cuda_used": { "const": false },
+    "cuda_required": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false }
+  }
+}

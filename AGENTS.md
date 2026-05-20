@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4N - OutGuess/audio positive-control completion.
+Current completed stage: Stage 4O - CPU batch adapter expansion.
 
-Current work: Stage 4O - CPU batch adapter expansion. Stage 4O should expand CPU batch adapters conservatively; it must not become broad search, CUDA implementation, or experiment execution without explicit scoped manifests.
+Current work: Stage 4P - result-store and score-summary unification. Stage 4P should unify generated-result and score-summary handling conservatively; it must not become broad search, CUDA implementation, or experiment execution without explicit scoped manifests.
 
 Current project state:
 
@@ -130,6 +130,10 @@ Current project state:
 - Historical stego/audio cases require cached or immutable assets plus expected output hashes before execution.
 - Synthetic controls can be ready without historical artefacts.
 - Do not run stego/audio tools in source-lock/readiness stages.
+- Stage 4O generated CPU batch adapter outputs are generated and ignored under `experiments/results/cpu-batch/stage4o/`.
+- CPU batch adapters must keep transform semantics unchanged and must not alter solved-baseline expected outputs.
+- Missing CPU batch adapters require explicit deferred or unsupported-by-design reasons.
+- Future CUDA must satisfy Stage 4O parity expectations before trust.
 - `ready_for_manifest` means planning readiness only; it does not mean execution.
 - Control-only observations must not be treated as true claims.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
@@ -649,6 +653,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Synthetic controls may be readiness-complete for CI without historical artefacts.
 - Do not run stego/audio tools, broad scans, spectrogram analysis, or payload extraction during source-lock/readiness stages.
 - Do not commit raw fixture artefacts, images, audio, binaries, fonts, archives, extracted payloads, or generated reports.
+
+## Stage 4O CPU Batch Adapter Expansion Rules
+
+- CPU batch adapters must keep transform semantics unchanged.
+- Solved-fixture parity must not alter solved-baseline expected outputs.
+- Missing adapters require explicit deferred or unsupported-by-design reasons.
+- Future CUDA must satisfy Stage 4O parity expectations before trust.
+- Stage 4O CPU batch outputs are generated records and must not be committed.
+- Do not treat CPU batch parity records as unsolved-page experiment evidence or solve claims.
 
 ## Stage 3W State Consolidation Rules
 

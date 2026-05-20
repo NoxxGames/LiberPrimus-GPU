@@ -137,7 +137,19 @@ def validate_research_synthesis(
             errors,
             staged_text,
             ("stage 4o", "cpu batch", "adapter expansion"),
-            "staged_plan_stage4o_cpu_batch_adapter_next",
+            "staged_plan_stage4o_cpu_batch_adapter_present",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4o", "cpu batch", "adapter expansion", "complete"),
+            "staged_plan_stage4o_cpu_batch_adapter_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4p", "result-store", "score-summary"),
+            "staged_plan_stage4p_result_store_score_summary_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")

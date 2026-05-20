@@ -8,7 +8,9 @@ from typing import Any
 
 
 DEFAULT_OUTPUT_DIR = Path("experiments/results/cpu-batch/stage4h")
+STAGE4O_OUTPUT_DIR = Path("experiments/results/cpu-batch/stage4o")
 DEFAULT_SUMMARY_PATH = Path("data/research/stage4h-cpu-batch-api-summary.yaml")
+STAGE4O_SUMMARY_PATH = Path("data/research/stage4o-cpu-batch-adapter-expansion-summary.yaml")
 DEFAULT_REGISTRY = Path("data/transform-registry/cpu-reference-transforms-v0.json")
 
 CPU_BATCH_MANIFEST_SCHEMA = Path("schemas/experiments/cpu-batch-manifest-v0.schema.json")
@@ -17,6 +19,11 @@ CPU_BATCH_CANDIDATE_SCHEMA = Path("schemas/experiments/cpu-batch-transform-candi
 CPU_BATCH_RESULT_SCHEMA = Path("schemas/experiments/cpu-batch-result-record-v0.schema.json")
 CPU_BATCH_SUMMARY_SCHEMA = Path("schemas/experiments/cpu-batch-run-summary-v0.schema.json")
 CPU_CUDA_PARITY_SCHEMA = Path("schemas/experiments/cpu-cuda-parity-contract-v0.schema.json")
+CPU_BATCH_ADAPTER_COVERAGE_SCHEMA = Path("schemas/experiments/cpu-batch-adapter-coverage-v0.schema.json")
+CPU_BATCH_PARITY_EXPECTATION_SCHEMA = Path("schemas/experiments/cpu-batch-parity-expectation-v0.schema.json")
+CPU_BATCH_ADAPTER_EXPANSION_SUMMARY_SCHEMA = Path("schemas/experiments/cpu-batch-adapter-expansion-summary-v0.schema.json")
+CPU_BATCH_SCORING_COMPATIBILITY_SCHEMA = Path("schemas/experiments/cpu-batch-scoring-compatibility-v0.schema.json")
+CPU_BATCH_SOLVED_FIXTURE_STREAM_SCHEMA = Path("schemas/experiments/cpu-batch-solved-fixture-stream-v0.schema.json")
 
 SUPPORTED_REGISTRY_TRANSFORMS = {
     "direct_translation",
