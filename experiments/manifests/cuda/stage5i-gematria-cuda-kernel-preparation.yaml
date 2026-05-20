@@ -1,0 +1,16 @@
+manifest_id: stage5i-gematria-cuda-kernel-preparation
+stage_id: stage-5i
+manifest_type: cuda_preparation
+scope: gematria_mod29_shift_score_synthetic_cuda_parity_preparation
+source_contract_id: gematria_mod29_shift_score_contract_v0
+target_future_kernel_name: gematria_mod29_shift_score_kernel
+cpu_only: true
+cuda_required: false
+cuda_execution_performed: false
+gpu_benchmark_performed: false
+raw_data_processed: false
+no_solve_claim: true
+generated_outputs_committed: false
+notes:
+- Build implementation-preparation records only.
+- Do not create CUDA source files in Stage 5I.

@@ -1,0 +1,16 @@
+manifest_id: stage5i-gematria-cuda-abi-plan
+stage_id: stage-5i
+manifest_type: cuda_abi_plan
+scope: c_compatible_raw_buffer_kernel_boundary_plan
+source_contract_id: gematria_mod29_shift_score_contract_v0
+target_future_kernel_name: gematria_mod29_shift_score_kernel
+cpu_only: true
+cuda_required: false
+cuda_execution_performed: false
+gpu_benchmark_performed: false
+raw_data_processed: false
+no_solve_claim: true
+generated_outputs_committed: false
+notes:
+- Future kernel boundary uses uint8_t token buffers and transformable masks.
+- Do not use STL, exceptions, strings, or dynamic allocation in device paths.

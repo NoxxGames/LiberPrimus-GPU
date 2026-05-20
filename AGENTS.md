@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5H - Gematria mod-29 shift_score contract and native parity fixture preparation.
+Current completed stage: Stage 5I - Gematria mod-29 shift_score synthetic CUDA parity preparation.
 
-Current work: Stage 5I - Gematria mod-29 shift_score synthetic CUDA parity preparation. Stage 5I may consume the Stage 5H contract and synthetic numeric fixture, but it must not turn the Stage 5F synthetic kernel into broad CUDA execution or use real Liber Primus page data through CUDA without a later explicit stage.
+Current work: Stage 5J - Gematria mod-29 shift_score synthetic CUDA parity kernel implementation. Stage 5J may consume the Stage 5I ABI, validation-vector, and checklist records, but it must remain synthetic numeric Gematria parity only unless a later explicit stage clears solved-fixture and real-data blockers.
 
 Current project state:
 
@@ -68,7 +68,7 @@ Current project state:
 - Page boundaries: reviewable.
 - Broad unsolved-page campaigns: not started.
 - CUDA: deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
-- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, and Stage 5H contract metadata only unless code and tests say otherwise.
+- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, and Stage 5I preparation metadata only unless code and tests say otherwise.
 - Stage 5C CUDA build/device metadata is readiness infrastructure only; no-GPU CI, compatibility 8GB, and optional local 16GB profiles must remain explicit and smoke-build status is not parity or performance evidence.
 - Stage 5D native CPU backend records are readiness infrastructure only; C++ must remain a deterministic CPU execution plane, Python remains orchestration, and diagnostic timings are not speedup claims.
 - Do not let C++ launch Python worker scripts.
@@ -76,6 +76,11 @@ Current project state:
 - Stage 5F synthetic-only kernel records are parity infrastructure only; the kernel matches the Stage 5D uppercase Latin synthetic shift fixture and is not production Gematria mod-29 CUDA.
 - Stage 5G CUDA parity-reporting records are reporting and hardening infrastructure only; they preserve the Stage 5F hash, enforce conservative CUDA-C style in `.cu`/`.cuh` paths, and keep solved-fixture CUDA execution blocked.
 - Stage 5H Gematria contract records define numeric token semantics only; they do not authorize CUDA execution.
+- Stage 5I preparation is not kernel implementation.
+- Future Gematria CUDA kernel work must use raw numeric token buffers and transformable masks.
+- Separator placeholders must not be transformed.
+- Stage 5J implementation must compare the CUDA token-output hash against the Stage 5H native fixture hash.
+- Stage 5F synthetic A-Z kernel behavior remains separate from Stage 5H/5I numeric Gematria records.
 - The Stage 5F uppercase Latin synthetic hash must not be treated as a Gematria mod-29 fixture hash.
 - Solved-fixture CUDA execution remains blocked until token-domain mapping, separator handling, score-summary parity, and explicit future-stage approval are recorded.
 - Future Gematria CUDA parity must use numeric tokens `0..28`, preserve separators unshifted, and keep Stage 4I confidence labels triage-only.

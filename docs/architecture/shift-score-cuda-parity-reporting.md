@@ -33,3 +33,9 @@ Stage 5H defines the Gematria mod-29 `shift_score` contract and native parity fi
 It records numeric token semantics, a synthetic native fixture hash, solved-fixture mapping
 blockers, and score-summary parity requirements. Any solved-fixture-safe CUDA execution remains
 blocked until a later stage clears those records.
+
+## Stage 5I Preparation Work
+
+Stage 5I prepares the future Gematria mod-29 `shift_score` CUDA parity package. It records the
+`gematria_mod29_shift_score_kernel` ABI plan, validation vectors, and implementation checklist while
+keeping the Stage 5F uppercase Latin synthetic kernel separate and unmodified.

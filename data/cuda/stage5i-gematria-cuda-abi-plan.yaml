@@ -1,0 +1,81 @@
+records:
+- record_type: gematria_cuda_abi_plan_record
+  abi_plan_id: stage5i-gematria-cuda-abi-plan-v0
+  c_compatible_kernel_boundary: true
+  device_code_subset_required: true
+  stl_in_device_path_allowed: false
+  exceptions_in_device_path_allowed: false
+  dynamic_allocation_in_device_path_allowed: false
+  strings_cross_kernel_boundary: false
+  host_ownership_types_cross_kernel_boundary: false
+  output_hashing_host_side: true
+  future_kernel_header_expected: cuda/include/libreprimus/gematria_shift_score_kernel.cuh
+  future_kernel_source_expected: cuda/kernels/gematria_shift_score_kernel.cu
+  future_cuda_files_created: false
+  future_kernel_signature_plan: gematria_shift_score_kernel(const uint8_t* token_values,
+    const uint8_t* transformable_mask, const uint8_t* shifts, uint8_t* output_token_values,
+    int token_count, int candidate_count, int* status_codes)
+  buffer_layout:
+    token_values:
+      type: const uint8_t*
+      purpose: input numeric tokens, including separator placeholders
+    transformable_mask:
+      type: const uint8_t*
+      purpose: 1 for rune tokens, 0 for separators
+    shifts:
+      type: const uint8_t*
+      purpose: candidate shift values
+    output_token_values:
+      type: uint8_t*
+      purpose: candidate-major output tokens
+    token_count:
+      type: int
+      purpose: input token count
+    candidate_count:
+      type: int
+      purpose: shift candidate count
+    status_codes:
+      type: int*
+      purpose: optional per-candidate status codes
+  output_index_formula: output[candidate_index * token_count + token_index]
+  device_formula: 'mask ? (token + shift) % 29 : token'
+  host_wrapper_policy: C++ host wrappers may own buffers outside the device ABI only
+  stage_id: stage-5i
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  selected_future_kernel_id: shift_score_kernel
+  target_future_kernel_name: gematria_mod29_shift_score_kernel
+  current_stage5f_kernel_scope: synthetic_uppercase_latin_only
+  future_stage5j_scope: gematria_mod29_synthetic_numeric_cuda_parity_only
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  native_fixture_id: stage5h-gematria-mod29-synthetic-shift-fixture-v0
+  native_fixture_hash: a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0
+  stage5f_synthetic_hash: 76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66
+  stage5f_hash_is_gematria_fixture_hash: false
+  cuda_kernel_added: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  cuda_execution_performed: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  solved_fixture_cuda_execution_allowed: false
+  production_gematria_mod29_cuda_ready: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false
+  device_code_subset_must_remain_compliant: true
+  no_solve_claim: true
+  solve_claim: false

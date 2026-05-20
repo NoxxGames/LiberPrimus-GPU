@@ -1,0 +1,17 @@
+manifest_id: stage5i-gematria-cuda-validation-vectors
+stage_id: stage-5i
+manifest_type: cuda_validation_vector_preparation
+scope: stage5h_synthetic_numeric_fixture_vectors
+source_contract_id: gematria_mod29_shift_score_contract_v0
+native_fixture_id: stage5h-gematria-mod29-synthetic-shift-fixture-v0
+native_fixture_hash: a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0
+cpu_only: true
+cuda_required: false
+cuda_execution_performed: false
+gpu_benchmark_performed: false
+raw_data_processed: false
+no_solve_claim: true
+generated_outputs_committed: false
+notes:
+- Build validation-vector metadata only.
+- Separator placeholders are inert because transformable_mask controls arithmetic.

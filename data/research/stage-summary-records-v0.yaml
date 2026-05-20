@@ -631,3 +631,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5H recorded 1 contract record, 1 native fixture record, 5 blocked solved-fixture-safe mapping records, 1 score-summary parity plan record, and 7 preflight blockers; no CUDA kernels, CUDA execution, GPU benchmark, broad execution, real Liber Primus CUDA data use, website expansion, canonical-corpus activation, page-boundary finalisation, or solve claim was added.
+  - record_type: stage_summary_record
+    stage_id: stage-5i
+    title: Gematria mod-29 shift_score synthetic CUDA parity preparation
+    status: complete
+    category: infrastructure
+    summary: Converted the Stage 5H numeric Gematria mod-29 shift_score contract into a Stage 5J implementation-ready preparation package with CUDA-C ABI planning, validation vectors, and checklist records without adding CUDA kernels or executing CUDA.
+    key_outputs:
+      - "`libreprimus gematria-cuda-prep` commands for kernel preparation, ABI planning, validation-vector generation, implementation checklist generation, summary generation, validation, and summary display."
+      - Stage 5I kernel-preparation, ABI-plan, validation-vector, implementation-checklist, and aggregate summary records under `data/cuda/`.
+      - A future `gematria_mod29_shift_score_kernel` ABI plan using raw numeric token buffers, transformable masks, candidate-major output ordering, and Stage 5H native fixture hash comparison.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5I recorded 1 kernel-preparation record, 1 ABI-plan record, 1 validation-vector record, and 1 implementation-checklist record; Stage 5J is ready for synthetic numeric implementation only, with CUDA execution, solved-fixture CUDA execution, real Liber Primus CUDA data use, GPU benchmarking, performance/speedup assertions, website expansion, canonical-corpus activation, page-boundary finalisation, and solve claims still blocked.

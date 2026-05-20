@@ -6,7 +6,7 @@ This catalog records planned transform families and the standards required befor
 
 ## Current Cipher Status
 
-After Stage 5H, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, metadata-only source-delta records for selected public artefact categories, stego/audio fixture source-lock metadata, a source-backed cookie exact-refresh result, a CPU batch transform API with expanded adapter parity expectations, scorer/calibration records, an observation review lifecycle, allowlisted public source-lock snapshot records, a reviewed observation promotion ledger, metric-only image source-variant/compression preflight records, stego/audio positive-control readiness records, result-store/score-summary unification records, CPU benchmark/parity planning records, CUDA planning/parity scaffold records, CUDA parity harness skeleton records, CUDA build/device detection records, native C++ CPU backend/threading records, a first CUDA kernel contract for `shift_score_kernel`, a synthetic-only CUDA parity implementation of that contract, parity-reporting/device-code-subset metadata for the synthetic kernel, and a separate Gematria mod-29 numeric shift-score contract with a synthetic native fixture. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, GPU benchmarking, OCR/AI image interpretation, broad stego fishing, stego/audio extraction, broad hash cracking, or solve claims.
+After Stage 5I, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, metadata-only source-delta records for selected public artefact categories, stego/audio fixture source-lock metadata, a source-backed cookie exact-refresh result, a CPU batch transform API with expanded adapter parity expectations, scorer/calibration records, an observation review lifecycle, allowlisted public source-lock snapshot records, a reviewed observation promotion ledger, metric-only image source-variant/compression preflight records, stego/audio positive-control readiness records, result-store/score-summary unification records, CPU benchmark/parity planning records, CUDA planning/parity scaffold records, CUDA parity harness skeleton records, CUDA build/device detection records, native C++ CPU backend/threading records, a first CUDA kernel contract for `shift_score_kernel`, a synthetic-only CUDA parity implementation of that contract, parity-reporting/device-code-subset metadata for the synthetic kernel, a separate Gematria mod-29 numeric shift-score contract with a synthetic native fixture, and Gematria CUDA preparation records for a future synthetic numeric kernel. It does not implement broad cipher search, broad number-sequence search, broad CUDA acceleration, GPU benchmarking, OCR/AI image interpretation, broad stego fishing, stego/audio extraction, broad hash cracking, or solve claims.
 
 Canonical corpus activation remains inactive and page boundaries remain reviewable.
 
@@ -68,6 +68,12 @@ future token-domain contract for the existing shift/caesar family: numeric rune 
 `(token + shift) % 29`, candidate-index ordering, and preserved separators. It prepares synthetic
 native fixture metadata only and does not execute CUDA, solve fixtures, unsolved pages, or broad
 searches.
+
+Stage 5I Gematria CUDA preparation work is not a new cipher family and not a kernel implementation.
+It translates the Stage 5H contract into a CUDA-C ABI plan, raw numeric token buffers,
+transformable masks, validation vectors, and a Stage 5J checklist for the future
+`gematria_mod29_shift_score_kernel`. It adds no CUDA source and still does not execute CUDA, solve
+fixtures, unsolved pages, or broad searches.
 
 ## Historical Stage 0A status
 

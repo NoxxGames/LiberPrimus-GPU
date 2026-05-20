@@ -77,6 +77,10 @@ Stage 4M implements the first deterministic preflight for that backlog:
 The Stage 4M records are metric-only. They do not infer hidden data, run OCR/AI/ML, regenerate a
 bigram matrix, or promote image artefacts to experiment seeds.
 
+Stage 5I Gematria CUDA preparation is outside the image workflow. Image artefact, star-like,
+compression, and bigram/Fibonacci observations must remain review/preflight records and must not be
+used as CUDA inputs or kernel targets.
+
 Stage 4J adds the review workflow that blocks visual observations from becoming experiment seeds
 unless source/page references, coordinate or region evidence, and explicit review decisions are
 present. Cuneiform, dot, delimiter, compression-artefact, braille, and constellation observations

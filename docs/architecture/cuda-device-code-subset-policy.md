@@ -45,3 +45,9 @@ This audit is a style and boundary check. It is not throughput evidence and does
 
 The Stage 5H Gematria contract does not change CUDA-facing source. Future Gematria CUDA parity work
 must keep this conservative CUDA-C subset compliant before any additional kernel target is accepted.
+
+## Stage 5I Requirement
+
+Stage 5I records a future Gematria CUDA-C ABI plan only. Stage 5J implementation must keep raw
+pointer/count buffers at the kernel boundary, keep host ownership outside CUDA-facing files, preserve
+separator placeholders through a transformable mask, and pass the Stage 5G device-code subset audit.

@@ -106,6 +106,12 @@ build/validate/summary checks, validation rejections for CUDA execution, new ker
 generated-output, and solve-claim drift, and ignored-output/codex-output checks for
 `experiments/results/gematria-shift-contract/stage5h/` and `codex-output/`.
 
+Stage 5I extends coverage with Gematria CUDA preparation schemas, CUDA-C ABI planning, validation
+vectors, implementation checklist guardrails, CLI build/validate/summary checks, validation
+rejections for CUDA execution, new kernels, CUDA source changes, production Gematria CUDA readiness,
+generated-output, codex-output, and solve-claim drift, and ignored-output/codex-output checks for
+`experiments/results/gematria-cuda-prep/stage5i/` and `codex-output/`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.
@@ -719,5 +725,21 @@ Stage 5H validation uses:
 ```
 
 The consistency scripts also build Stage 5H temp outputs in a raw-data-free, no-GPU-safe location.
+
+# Stage 5I Validation
+
+Stage 5I validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-cuda-prep validate-stage5i `
+  --preparation data/cuda/stage5i-gematria-cuda-kernel-preparation.yaml `
+  --abi-plan data/cuda/stage5i-gematria-cuda-abi-plan.yaml `
+  --validation-vectors data/cuda/stage5i-gematria-cuda-validation-vectors.yaml `
+  --implementation-checklist data/cuda/stage5i-gematria-cuda-implementation-checklist.yaml `
+  --summary data/cuda/stage5i-gematria-cuda-preparation-summary.yaml `
+  --results-dir experiments/results/gematria-cuda-prep/stage5i
+```
+
+The consistency scripts also build Stage 5I temp outputs in a raw-data-free, no-GPU-safe location.
 Tests must not require CUDA hardware, add transform kernels, run GPU benchmarks, make speedup
 claims, commit generated Gematria shift reports, process raw data, or publish `codex-output/**`.

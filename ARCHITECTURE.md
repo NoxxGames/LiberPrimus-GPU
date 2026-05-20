@@ -6,7 +6,7 @@ The workbench favors reproducibility, provenance, and skeptical review over spee
 
 ## Current Repository State
 
-Stage 5F is complete after the Stage 3W through Stage 5E infrastructure chain. The canonical corpus is inactive, page boundaries are reviewable, broad unsolved-page campaigns are not started, and CUDA implementation is limited to the first synthetic-only `shift_score_kernel` parity target. No solve claim is made.
+Stage 5I is complete after the Stage 3W through Stage 5H infrastructure chain. The canonical corpus is inactive, page boundaries are reviewable, broad unsolved-page campaigns are not started, and CUDA implementation is limited to the Stage 5F synthetic-only `shift_score_kernel` parity target plus Stage 5G-5I reporting, contract, and preparation metadata. No solve claim is made.
 
 Historical Stage 0A was a bootstrap scaffold. The current repository now includes profile/corpus candidate foundations, solved fixtures, CPU transform registry, result-store foundations, bounded execution policy, archive/image/Discord/post-Discord/stego modules, and raw-data-free CI.
 
@@ -28,7 +28,7 @@ flowchart LR
 
 The CPU owns corpus management, profile loading, hypothesis generation, bounded experiment orchestration, provenance, scoring, validation, and review. The GPU may later accelerate large regular transform-and-score batches only after CPU references, batch APIs, parity tests, and benchmarks exist.
 
-Existing CUDA code is scaffold, smoke-test infrastructure, and the Stage 5F synthetic-only `shift_score_kernel` parity target unless a future stage explicitly widens scope. Stage 5D adds a native C++ CPU execution plane for deterministic synthetic batch parity, Stage 5E selects `shift_score_kernel` as the first CUDA contract, and Stage 5F implements only that synthetic fixture; Python remains orchestration and policy validation.
+Existing CUDA code is scaffold, smoke-test infrastructure, and the Stage 5F synthetic-only `shift_score_kernel` parity target unless a future stage explicitly widens scope. Stage 5D adds a native C++ CPU execution plane for deterministic synthetic batch parity, Stage 5E selects `shift_score_kernel` as the first CUDA contract, Stage 5F implements only that synthetic fixture, Stage 5H defines numeric Gematria mod-29 semantics, and Stage 5I prepares the future Gematria CUDA-C ABI and validation vectors; Python remains orchestration and policy validation.
 
 ## Corpus And Profile Layer
 
@@ -52,7 +52,7 @@ Stage 3K through Stage 3V added source/visual/web observations, image metadata a
 
 ## Testing Layer
 
-CI is raw-data-free, no-GPU-safe, secret-free, and does not upload generated artefacts by default. Tests cover schema validation, manifest safety, bounded executor behavior, fake-tool stego behavior, ignored-output policy, documentation status, Stage 3W anti-drift checks, Stage 4Q benchmark-planning validation, Stage 5A CUDA planning validation, Stage 5B CUDA parity harness validation, Stage 5C CUDA build/device detection validation, Stage 5D native CPU backend/threading validation, Stage 5E CUDA kernel contract validation, and Stage 5F no-GPU-safe synthetic CUDA kernel validation.
+CI is raw-data-free, no-GPU-safe, secret-free, and does not upload generated artefacts by default. Tests cover schema validation, manifest safety, bounded executor behavior, fake-tool stego behavior, ignored-output policy, documentation status, Stage 3W anti-drift checks, Stage 4Q benchmark-planning validation, Stage 5A CUDA planning validation, Stage 5B CUDA parity harness validation, Stage 5C CUDA build/device detection validation, Stage 5D native CPU backend/threading validation, Stage 5E CUDA kernel contract validation, Stage 5F no-GPU-safe synthetic CUDA kernel validation, Stage 5G parity reporting validation, Stage 5H Gematria shift contract validation, and Stage 5I Gematria CUDA preparation validation.
 
 ## Failure Modes
 

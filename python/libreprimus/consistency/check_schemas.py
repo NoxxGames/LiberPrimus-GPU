@@ -105,6 +105,11 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/gematria-solved-fixture-safe-mapping-record-v0.schema.json",
     "cuda/gematria-score-summary-parity-plan-record-v0.schema.json",
     "cuda/stage5h-gematria-shift-contract-summary-v0.schema.json",
+    "cuda/gematria-cuda-kernel-preparation-record-v0.schema.json",
+    "cuda/gematria-cuda-abi-plan-record-v0.schema.json",
+    "cuda/gematria-cuda-validation-vector-record-v0.schema.json",
+    "cuda/gematria-cuda-implementation-checklist-record-v0.schema.json",
+    "cuda/stage5i-gematria-cuda-preparation-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -187,6 +192,11 @@ EXPECTED_DOC_TERMS = [
     "gematria-solved-fixture-safe-mapping-record-v0",
     "gematria-score-summary-parity-plan-record-v0",
     "stage5h-gematria-shift-contract-summary-v0",
+    "gematria-cuda-kernel-preparation-record-v0",
+    "gematria-cuda-abi-plan-record-v0",
+    "gematria-cuda-validation-vector-record-v0",
+    "gematria-cuda-implementation-checklist-record-v0",
+    "stage5i-gematria-cuda-preparation-summary-v0",
 ]
 
 

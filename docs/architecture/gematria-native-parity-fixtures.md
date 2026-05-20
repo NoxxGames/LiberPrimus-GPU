@@ -20,3 +20,9 @@ Stage 5H records five solved-fixture-safe mappings from the Stage 4O solved-fixt
 all remain blocked. Future stages must resolve explicit `0..28` rune-token mapping, separator
 handling, Stage 4O parity linkage, score-summary parity, no-unsolved-page guardrails, and explicit
 approval before solved-fixture CUDA execution.
+
+## Stage 5I Use
+
+Stage 5I uses this synthetic numeric fixture as validation-vector source material for future
+Gematria CUDA preparation. It adds no CUDA source and executes no CUDA. Stage 5J must compare future
+CUDA token-output hashes against this fixture hash before any broader Gematria CUDA use.

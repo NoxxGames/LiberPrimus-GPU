@@ -27,4 +27,6 @@ runs no GPU benchmark, and makes no solve claim.
 
 Future Gematria CUDA work must cite this contract, the Stage 5H native fixture hash, Stage 5G
 device-code subset audit records, Stage 5F synthetic parity records, Stage 5D native CPU parity
-records, Stage 4O parity expectations, and Stage 4I score-summary semantics.
+records, Stage 5I ABI and validation-vector records, Stage 4O parity expectations, and Stage 4I
+score-summary semantics. Stage 5J must compare CUDA token-output hashes against the Stage 5H native
+fixture hash before any wider use.

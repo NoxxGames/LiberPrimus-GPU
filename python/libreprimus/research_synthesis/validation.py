@@ -226,8 +226,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 5i", "gematria mod-29", "synthetic cuda parity", "next"),
-            "staged_plan_stage5i_gematria_synthetic_cuda_parity_next",
+            ("stage 5i", "gematria mod-29", "synthetic cuda parity", "complete"),
+            "staged_plan_stage5i_gematria_synthetic_cuda_parity_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5j", "gematria mod-29", "synthetic cuda parity", "kernel implementation", "next"),
+            "staged_plan_stage5j_gematria_synthetic_cuda_kernel_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -441,8 +447,10 @@ def validate_research_synthesis(
         and "stage 5f" not in next_text
         and "stage 5g" not in next_text
         and "stage 5h" not in next_text
+        and "stage 5i" not in next_text
+        and "stage 5j" not in next_text
     ):
-        errors.append("cuda_build_device_detection_missing_stage5d_stage5e_stage5f_stage5g_or_stage5h_next_action")
+        errors.append("cuda_build_device_detection_missing_stage5d_through_stage5j_next_action")
 
     native_cpu = _find_method(method_records, "native_cpp_cpu_backend")
     if native_cpu is None:
@@ -469,8 +477,12 @@ def validate_research_synthesis(
         evidence_text = str(cuda_synthetic_shift.get("evidence_summary", "")).lower()
         if "synthetic-only" not in stop_text or "speedup" not in stop_text or "real liber primus" not in stop_text:
             errors.append("cuda_synthetic_shift_kernel_missing_synthetic_guardrail")
-        if "stage 5h" not in evidence_text or "stage 5i" not in next_text:
-            errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_transition")
+        if (
+            "stage 5h" not in evidence_text
+            or "stage 5i" not in evidence_text
+            or "stage 5j" not in next_text
+        ):
+            errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_stage5j_transition")
 
     cookie = _find_method(method_records, "cookie_hash_sha256_packs")
     if cookie is None:

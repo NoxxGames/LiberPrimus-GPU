@@ -197,8 +197,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 5G, onboarding and staged-plan checks should show Stage 5G complete and Stage 5H
-Gematria mod-29 shift_score contract and native parity fixture preparation next.
+After Stage 5I, onboarding and staged-plan checks should show Stage 5I complete and Stage 5J
+Gematria mod-29 shift_score synthetic CUDA parity kernel implementation next.
 
 If path sanitisation fails, run:
 
@@ -474,3 +474,28 @@ Generated Stage 5H reports belong under ignored
 `experiments/results/gematria-shift-contract/stage5h/`, and the Codex completion handoff belongs
 under ignored `codex-output/stage5h-codex-completion.md`. Stage 5H must not add CUDA kernels,
 execute CUDA, process real Liber Primus data through CUDA, or record performance claims.
+
+# Stage 5I Gematria CUDA Prep Troubleshooting
+
+If Stage 5I validation fails, rebuild the committed preparation records from the no-GPU manifests:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-cuda-prep build-kernel-preparation `
+  --manifest experiments/manifests/cuda/stage5i-gematria-cuda-kernel-preparation.yaml `
+  --preparation-out data/cuda/stage5i-gematria-cuda-kernel-preparation.yaml `
+  --out-dir experiments/results/gematria-cuda-prep/stage5i `
+  --allow-warnings
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-cuda-prep build-summary `
+  --preparation data/cuda/stage5i-gematria-cuda-kernel-preparation.yaml `
+  --abi-plan data/cuda/stage5i-gematria-cuda-abi-plan.yaml `
+  --validation-vectors data/cuda/stage5i-gematria-cuda-validation-vectors.yaml `
+  --implementation-checklist data/cuda/stage5i-gematria-cuda-implementation-checklist.yaml `
+  --summary-out data/cuda/stage5i-gematria-cuda-preparation-summary.yaml `
+  --out-dir experiments/results/gematria-cuda-prep/stage5i `
+  --allow-warnings
+```
+
+Generated Stage 5I reports belong under ignored `experiments/results/gematria-cuda-prep/stage5i/`,
+and the Codex completion handoff belongs under ignored `codex-output/stage5i-codex-completion.md`.
+Stage 5I must not add CUDA source files, add kernels, run CUDA transforms, run solved or unsolved
+page data through CUDA, process real Liber Primus CUDA data, or record performance claims.

@@ -507,5 +507,13 @@ experiments/results/gematria-shift-contract/**
 !experiments/results/gematria-shift-contract/stage5h/
 !experiments/results/gematria-shift-contract/stage5h/.gitkeep
 
+# Generated Gematria CUDA preparation outputs
+experiments/results/gematria-cuda-prep/**
+!experiments/results/gematria-cuda-prep/
+!experiments/results/gematria-cuda-prep/README.md
+!experiments/results/gematria-cuda-prep/.gitkeep
+!experiments/results/gematria-cuda-prep/stage5i/
+!experiments/results/gematria-cuda-prep/stage5i/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

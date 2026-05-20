@@ -178,6 +178,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5H is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5i",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5i\b", re.IGNORECASE),
+        "Stage 5I is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -571,12 +576,23 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5i_gematria_synthetic_cuda_parity_next",
+        "stage5i_gematria_synthetic_cuda_parity_complete",
         "stage 5i" in staged_plan
         and "gematria mod-29" in staged_plan
         and "synthetic cuda parity" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5I Gematria mod-29 synthetic CUDA parity preparation as complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5j_gematria_synthetic_cuda_kernel_next",
+        "stage 5j" in staged_plan
+        and "gematria mod-29" in staged_plan
+        and "synthetic cuda parity" in staged_plan
+        and "kernel implementation" in staged_plan
         and "next" in staged_plan,
-        "Staged plan records Stage 5I Gematria mod-29 synthetic CUDA parity preparation as next.",
+        "Staged plan records Stage 5J Gematria mod-29 synthetic CUDA parity kernel implementation as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -725,6 +741,16 @@ def check_state_drift_consistency(
         and "stage 5i" in combined
         and "native parity fixture" in combined,
         "Stage 5H Gematria mod-29 shift_score contract and native parity fixture policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "gematria_cuda_preparation_policy_present",
+        "gematria cuda preparation" in combined
+        and "cuda-c abi" in combined
+        and "stage 5j" in combined
+        and "stage 5h" in combined,
+        "Stage 5I Gematria CUDA preparation and Stage 5J implementation boundary is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

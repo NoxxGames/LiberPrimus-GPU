@@ -872,3 +872,15 @@ Generated Stage 5H reports remain ignored under
 transforms, run real Liber Primus page data, run solved-page data, run unsolved-page campaigns, run
 GPU benchmarks, broaden searches, process raw data, expand the website, activate the canonical
 corpus, finalise page boundaries, or claim a solve through Stage 5H records.
+
+# Stage 5I Gematria CUDA Preparation Boundary
+
+Stage 5I is not a cryptanalytic experiment and not a CUDA implementation stage. It prepares the
+future Gematria mod-29 `shift_score` synthetic CUDA parity path by recording a kernel-preparation
+record, CUDA-C ABI plan, validation vectors, implementation checklist, and aggregate summary.
+
+Generated Stage 5I reports remain ignored under
+`experiments/results/gematria-cuda-prep/stage5i/`. Do not add CUDA kernels, run CUDA transforms,
+run real Liber Primus data, run solved or unsolved page CUDA transforms, run GPU benchmarks, claim
+speedups, process raw data, publish generated outputs, expand the website, activate the canonical
+corpus, finalise page boundaries, or claim a solve through Stage 5I records.

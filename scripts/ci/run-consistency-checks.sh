@@ -486,6 +486,42 @@ echo "Running Stage 5H Gematria shift contract no-GPU-safe/temp output"
     --summary "$tmp_dir/stage5h-gematria-shift-contract-summary.yaml" \
     --results-dir "$tmp_dir/stage5h-gematria-shift-contract"
 
+echo "Running Stage 5I Gematria CUDA preparation no-GPU-safe/temp output"
+"$python_bin" -m libreprimus.cli gematria-cuda-prep build-kernel-preparation \
+    --manifest experiments/manifests/cuda/stage5i-gematria-cuda-kernel-preparation.yaml \
+    --out-dir "$tmp_dir/stage5i-gematria-cuda-prep" \
+    --preparation-out "$tmp_dir/stage5i-gematria-cuda-kernel-preparation.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-cuda-prep build-abi-plan \
+    --manifest experiments/manifests/cuda/stage5i-gematria-cuda-abi-plan.yaml \
+    --out-dir "$tmp_dir/stage5i-gematria-cuda-prep" \
+    --abi-plan-out "$tmp_dir/stage5i-gematria-cuda-abi-plan.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-cuda-prep build-validation-vectors \
+    --manifest experiments/manifests/cuda/stage5i-gematria-cuda-validation-vectors.yaml \
+    --out-dir "$tmp_dir/stage5i-gematria-cuda-prep" \
+    --validation-vectors-out "$tmp_dir/stage5i-gematria-cuda-validation-vectors.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-cuda-prep build-implementation-checklist \
+    --out-dir "$tmp_dir/stage5i-gematria-cuda-prep" \
+    --implementation-checklist-out "$tmp_dir/stage5i-gematria-cuda-implementation-checklist.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-cuda-prep build-summary \
+    --preparation "$tmp_dir/stage5i-gematria-cuda-kernel-preparation.yaml" \
+    --abi-plan "$tmp_dir/stage5i-gematria-cuda-abi-plan.yaml" \
+    --validation-vectors "$tmp_dir/stage5i-gematria-cuda-validation-vectors.yaml" \
+    --implementation-checklist "$tmp_dir/stage5i-gematria-cuda-implementation-checklist.yaml" \
+    --summary-out "$tmp_dir/stage5i-gematria-cuda-preparation-summary.yaml" \
+    --out-dir "$tmp_dir/stage5i-gematria-cuda-prep" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-cuda-prep validate-stage5i \
+    --preparation "$tmp_dir/stage5i-gematria-cuda-kernel-preparation.yaml" \
+    --abi-plan "$tmp_dir/stage5i-gematria-cuda-abi-plan.yaml" \
+    --validation-vectors "$tmp_dir/stage5i-gematria-cuda-validation-vectors.yaml" \
+    --implementation-checklist "$tmp_dir/stage5i-gematria-cuda-implementation-checklist.yaml" \
+    --summary "$tmp_dir/stage5i-gematria-cuda-preparation-summary.yaml" \
+    --results-dir "$tmp_dir/stage5i-gematria-cuda-prep"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

@@ -549,6 +549,48 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5HSummary `
         --results-dir $Stage5HOut
 
+    Write-Host "Running Stage 5I Gematria CUDA preparation no-GPU-safe/temp output"
+    $Stage5IOut = Join-Path $TempDir "stage5i-gematria-cuda-prep"
+    $Stage5IPreparation = Join-Path $TempDir "stage5i-gematria-cuda-kernel-preparation.yaml"
+    $Stage5IAbi = Join-Path $TempDir "stage5i-gematria-cuda-abi-plan.yaml"
+    $Stage5IVectors = Join-Path $TempDir "stage5i-gematria-cuda-validation-vectors.yaml"
+    $Stage5IChecklist = Join-Path $TempDir "stage5i-gematria-cuda-implementation-checklist.yaml"
+    $Stage5ISummary = Join-Path $TempDir "stage5i-gematria-cuda-preparation-summary.yaml"
+    & $Python -m libreprimus.cli gematria-cuda-prep build-kernel-preparation `
+        --manifest experiments/manifests/cuda/stage5i-gematria-cuda-kernel-preparation.yaml `
+        --out-dir $Stage5IOut `
+        --preparation-out $Stage5IPreparation `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-prep build-abi-plan `
+        --manifest experiments/manifests/cuda/stage5i-gematria-cuda-abi-plan.yaml `
+        --out-dir $Stage5IOut `
+        --abi-plan-out $Stage5IAbi `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-prep build-validation-vectors `
+        --manifest experiments/manifests/cuda/stage5i-gematria-cuda-validation-vectors.yaml `
+        --out-dir $Stage5IOut `
+        --validation-vectors-out $Stage5IVectors `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-prep build-implementation-checklist `
+        --out-dir $Stage5IOut `
+        --implementation-checklist-out $Stage5IChecklist `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-prep build-summary `
+        --preparation $Stage5IPreparation `
+        --abi-plan $Stage5IAbi `
+        --validation-vectors $Stage5IVectors `
+        --implementation-checklist $Stage5IChecklist `
+        --summary-out $Stage5ISummary `
+        --out-dir $Stage5IOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-prep validate-stage5i `
+        --preparation $Stage5IPreparation `
+        --abi-plan $Stage5IAbi `
+        --validation-vectors $Stage5IVectors `
+        --implementation-checklist $Stage5IChecklist `
+        --summary $Stage5ISummary `
+        --results-dir $Stage5IOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 
