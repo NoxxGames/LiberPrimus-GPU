@@ -77,6 +77,11 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/cuda-backend-capability-record-v0.schema.json",
     "cuda/cuda-future-kernel-parity-matrix-v0.schema.json",
     "cuda/stage5b-cuda-parity-harness-summary-v0.schema.json",
+    "cuda/cuda-build-profile-record-v0.schema.json",
+    "cuda/cuda-toolchain-detection-record-v0.schema.json",
+    "cuda/cuda-device-detection-record-v0.schema.json",
+    "cuda/cuda-smoke-build-record-v0.schema.json",
+    "cuda/stage5c-cuda-build-device-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -131,6 +136,11 @@ EXPECTED_DOC_TERMS = [
     "cuda-backend-capability-record-v0",
     "cuda-future-kernel-parity-matrix-v0",
     "stage5b-cuda-parity-harness-summary-v0",
+    "cuda-build-profile-record-v0",
+    "cuda-toolchain-detection-record-v0",
+    "cuda-device-detection-record-v0",
+    "cuda-smoke-build-record-v0",
+    "stage5c-cuda-build-device-summary-v0",
 ]
 
 

@@ -38,6 +38,7 @@ Use Codex safely for scoped repository stages.
 - For Stage 4P-style result-store unification work, require source inventory records, Stage 4I-compatible score-summary views, method-status joins, cross-stage reports, generated ignored outputs, no raw-data reads, no scorer invention, no experiment execution, no SQLite staging, no CUDA, and no solve claim.
 - For Stage 5A-style CUDA planning work, require target plans, non-target records, parity scaffolds, implementation gates, generated ignored outputs, no CUDA source changes, no GPU benchmarks, no speedup claims, no raw-data reads, and no solve claim.
 - For Stage 5B-style CUDA parity harness work, require harness plans, parity fixtures, backend capability profiles, future-kernel matrix rows, generated ignored outputs, no CUDA source changes, no GPU benchmarks, no required local 16GB profile, no speedup claims, no raw-data reads, and no solve claim.
+- For Stage 5C-style CUDA build/device work, require no-GPU-safe build profiles, toolchain records, device records, optional smoke-build records, generated ignored outputs, no CUDA source changes, no GPU benchmarks, no required local 16GB profile, no speedup claims, no website expansion, no raw-data reads, and no solve claim.
 
 ## Commands
 
@@ -140,4 +141,4 @@ If Codex changes CLI registration, verify `python -m libreprimus.cli --help`, se
 
 Stage 4Q writes a local completion handoff under `codex-output/`. That directory is ignored and must not be staged. The committed source of truth is the Stage 4Q code, schemas, manifests, docs, and aggregate records under `data/`.
 
-When using Codex for Stage 5C, cite Stage 5A target-plan/scaffold/gate records and Stage 5B harness/backend/matrix records, but do not let build or device-detection work turn into CUDA kernel implementation or GPU benchmarking without an explicit prompt.
+When using Codex for Stage 5D, cite Stage 4O CPU batch parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark plans, Stage 5A target-plan/scaffold/gate records, Stage 5B harness/backend/matrix records, and Stage 5C build/device records, but do not let native CPU backend work turn into CUDA kernel implementation or GPU benchmarking without an explicit prompt.

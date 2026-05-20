@@ -48,6 +48,7 @@ REQUIRED_METHOD_FAMILIES = {
     "cpu_benchmark_parity_planning",
     "cuda_planning_parity_scaffolding",
     "cuda_parity_harness_skeleton",
+    "cuda_build_device_detection",
     "deterministic_image_analysis",
     "image_transform_suite",
     "discord_ingestion_review",

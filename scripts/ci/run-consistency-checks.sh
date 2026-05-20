@@ -264,6 +264,43 @@ echo "Running Stage 5B CUDA parity harness synthetic/temp output"
     --summary "$tmp_dir/stage5b-cuda-parity-harness-summary.yaml" \
     --results-dir "$tmp_dir/stage5b-cuda-parity"
 
+echo "Running Stage 5C CUDA build/device detection synthetic/temp output"
+"$python_bin" -m libreprimus.cli cuda-build profile-toolchain \
+    --manifest experiments/manifests/cuda/stage5c-cuda-build-device-detection.yaml \
+    --out-dir "$tmp_dir/stage5c-cuda-build" \
+    --profiles-out "$tmp_dir/stage5c-cuda-build-profiles.yaml" \
+    --toolchain-out "$tmp_dir/stage5c-cuda-toolchain-detection.yaml" \
+    --allow-missing-cuda \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-build detect-device \
+    --manifest experiments/manifests/cuda/stage5c-cuda-build-device-detection.yaml \
+    --out-dir "$tmp_dir/stage5c-cuda-build" \
+    --devices-out "$tmp_dir/stage5c-cuda-device-detection.yaml" \
+    --allow-no-gpu \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-build smoke-build \
+    --manifest experiments/manifests/cuda/stage5c-cuda-no-gpu-ci-profile.yaml \
+    --out-dir "$tmp_dir/stage5c-cuda-build" \
+    --smoke-build-out "$tmp_dir/stage5c-cuda-smoke-build-records.yaml" \
+    --allow-missing-cuda \
+    --allow-no-gpu \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-build build-summary \
+    --profiles "$tmp_dir/stage5c-cuda-build-profiles.yaml" \
+    --toolchain "$tmp_dir/stage5c-cuda-toolchain-detection.yaml" \
+    --devices "$tmp_dir/stage5c-cuda-device-detection.yaml" \
+    --smoke-build "$tmp_dir/stage5c-cuda-smoke-build-records.yaml" \
+    --summary-out "$tmp_dir/stage5c-cuda-build-device-summary.yaml" \
+    --out-dir "$tmp_dir/stage5c-cuda-build" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-build validate-stage5c \
+    --profiles "$tmp_dir/stage5c-cuda-build-profiles.yaml" \
+    --toolchain "$tmp_dir/stage5c-cuda-toolchain-detection.yaml" \
+    --devices "$tmp_dir/stage5c-cuda-device-detection.yaml" \
+    --smoke-build "$tmp_dir/stage5c-cuda-smoke-build-records.yaml" \
+    --summary "$tmp_dir/stage5c-cuda-build-device-summary.yaml" \
+    --results-dir "$tmp_dir/stage5c-cuda-build"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

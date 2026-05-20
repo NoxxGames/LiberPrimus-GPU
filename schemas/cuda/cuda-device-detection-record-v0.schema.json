@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/cuda-device-detection-record-v0.schema.json",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "device_record_id",
+    "device_status",
+    "vram_profile",
+    "cuda_required",
+    "gpu_required",
+    "local_16gb_profile_required",
+    "compatibility_8gb_profile_present",
+    "no_gpu_ci_profile_present",
+    "cuda_kernel_added",
+    "cryptanalytic_cuda_kernel_added",
+    "gpu_benchmark_performed",
+    "performance_claim",
+    "speedup_claim",
+    "raw_data_processed",
+    "solve_claim",
+    "no_solve_claim",
+    "generated_outputs_committed",
+    "codex_output_committed"
+  ],
+  "properties": {
+    "record_type": { "const": "cuda_device_detection_record" },
+    "stage_id": { "const": "stage-5c" },
+    "device_record_id": { "type": "string", "minLength": 1 },
+    "device_status": {
+      "enum": [
+        "no_gpu_ci_profile",
+        "compatibility_profile",
+        "detected",
+        "not_detected",
+        "probe_failed"
+      ]
+    },
+    "vram_profile": {
+      "enum": [
+        "ci_no_gpu",
+        "compatibility_8gb",
+        "local_optional_16gb"
+      ]
+    },
+    "cuda_required": { "const": false },
+    "gpu_required": { "const": false },
+    "local_16gb_profile_required": { "const": false },
+    "compatibility_8gb_profile_present": { "const": true },
+    "no_gpu_ci_profile_present": { "const": true },
+    "cuda_kernel_added": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "cryptanalytic_cuda_kernel_added": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "broad_experiment_executed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "codex_output_committed": { "const": false },
+    "website_expansion": { "const": false }
+  }
+}

@@ -291,6 +291,49 @@ try {
         --summary $Stage5BSummary `
         --results-dir $Stage5BOut
 
+    Write-Host "Running Stage 5C CUDA build/device detection synthetic/temp output"
+    $Stage5COut = Join-Path $TempDir "stage5c-cuda-build"
+    $Stage5CProfiles = Join-Path $TempDir "stage5c-cuda-build-profiles.yaml"
+    $Stage5CToolchain = Join-Path $TempDir "stage5c-cuda-toolchain-detection.yaml"
+    $Stage5CDevices = Join-Path $TempDir "stage5c-cuda-device-detection.yaml"
+    $Stage5CSmoke = Join-Path $TempDir "stage5c-cuda-smoke-build-records.yaml"
+    $Stage5CSummary = Join-Path $TempDir "stage5c-cuda-build-device-summary.yaml"
+    & $Python -m libreprimus.cli cuda-build profile-toolchain `
+        --manifest experiments/manifests/cuda/stage5c-cuda-build-device-detection.yaml `
+        --out-dir $Stage5COut `
+        --profiles-out $Stage5CProfiles `
+        --toolchain-out $Stage5CToolchain `
+        --allow-missing-cuda `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-build detect-device `
+        --manifest experiments/manifests/cuda/stage5c-cuda-build-device-detection.yaml `
+        --out-dir $Stage5COut `
+        --devices-out $Stage5CDevices `
+        --allow-no-gpu `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-build smoke-build `
+        --manifest experiments/manifests/cuda/stage5c-cuda-no-gpu-ci-profile.yaml `
+        --out-dir $Stage5COut `
+        --smoke-build-out $Stage5CSmoke `
+        --allow-missing-cuda `
+        --allow-no-gpu `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-build build-summary `
+        --profiles $Stage5CProfiles `
+        --toolchain $Stage5CToolchain `
+        --devices $Stage5CDevices `
+        --smoke-build $Stage5CSmoke `
+        --summary-out $Stage5CSummary `
+        --out-dir $Stage5COut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-build validate-stage5c `
+        --profiles $Stage5CProfiles `
+        --toolchain $Stage5CToolchain `
+        --devices $Stage5CDevices `
+        --smoke-build $Stage5CSmoke `
+        --summary $Stage5CSummary `
+        --results-dir $Stage5COut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

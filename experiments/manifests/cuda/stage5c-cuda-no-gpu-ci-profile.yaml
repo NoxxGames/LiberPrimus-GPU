@@ -1,0 +1,25 @@
+manifest_id: stage5c-cuda-no-gpu-ci-profile
+stage_id: stage-5c
+description: CI-safe profile requiring no CUDA toolkit, GPU, or local hardware.
+execution_enabled: false
+cuda_required: false
+gpu_required: false
+local_16gb_profile_required: false
+compatibility_8gb_profile_present: true
+no_gpu_ci_profile_present: true
+cuda_kernel_added: false
+cryptanalytic_cuda_kernel_added: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+broad_experiment_executed: false
+raw_data_processed: false
+solve_claim: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+codex_output_committed: false
+website_expansion: false
+notes:
+- Missing CUDA must be represented as metadata, not a CI failure.

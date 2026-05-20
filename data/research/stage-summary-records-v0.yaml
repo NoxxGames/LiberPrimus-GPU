@@ -535,3 +535,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5B wrote 14 harness plan records, 14 parity fixture records, 3 backend capability records, and 9 future-kernel matrix records; 9 targets are ready for future kernel planning, 1 future kernel row remains blocked, and Stage 5C is the next CUDA build and device-detection scaffold stage.
+  - record_type: stage_summary_record
+    stage_id: stage-5c
+    title: CUDA build and device-detection scaffold
+    status: complete
+    category: infrastructure
+    summary: Recorded CUDA build profiles, toolchain detection, optional device metadata, and smoke-build readiness without adding CUDA kernels, running GPU benchmarks, or making performance claims.
+    key_outputs:
+      - "`libreprimus cuda-build` commands for toolchain profiling, device detection, optional smoke-build recording, summary, and validation."
+      - Stage 5C build-profile, toolchain-detection, device-detection, smoke-build, and aggregate summary records under `data/cuda/`.
+      - No-GPU CI, optional local 16 GB, and compatibility 8 GB build/device profiles with generated reports kept ignored under `experiments/results/cuda-build/stage5c/`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5C wrote 3 build profiles, 3 toolchain records, 3 device records, and 1 smoke-build record. The local CUDA smoke build was attempted and recorded as failed due local toolchain/build integration, but no smoke executable, CUDA test, GPU benchmark, or cryptanalytic kernel was run. Stage 5D is the next native C++ CPU backend and deterministic threading baseline stage.

@@ -1,0 +1,105 @@
+records:
+- record_type: cuda_toolchain_detection_record
+  stage_id: stage-5c
+  schema: schemas/cuda/cuda-toolchain-detection-record-v0.schema.json
+  tool_id: cmake
+  tool_status: detected
+  tool_detected: true
+  tool_required_for_ci: false
+  absolute_path_committed: false
+  path_marker: cmake_detected_on_path
+  version_excerpt: 'cmake version 3.26.1
+
+
+    CMake suite maintained and supported by Kitware (kitware.com/cmake).'
+  platform_summary: Windows-10-10.0.19045-SP0
+  cuda_build_device_detection_only: true
+  cuda_required: false
+  gpu_required: false
+  local_16gb_profile_required: false
+  compatibility_8gb_profile_present: true
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  cryptanalytic_cuda_kernel_added: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+- record_type: cuda_toolchain_detection_record
+  stage_id: stage-5c
+  schema: schemas/cuda/cuda-toolchain-detection-record-v0.schema.json
+  tool_id: nvcc
+  tool_status: detected
+  tool_detected: true
+  tool_required_for_ci: false
+  absolute_path_committed: false
+  path_marker: nvcc_detected_on_path
+  version_excerpt: 'nvcc: NVIDIA (R) Cuda compiler driver
+
+    Copyright (c) 2005-2025 NVIDIA Corporation
+
+    Built on Wed_Jul_16_20:06:48_Pacific_Daylight_Time_2025
+
+    Cuda compilation tools, release 13.0, V13.0.48
+
+    Build cuda_13.0.r13.0/compiler.36260728_0'
+  platform_summary: Windows-10-10.0.19045-SP0
+  cuda_build_device_detection_only: true
+  cuda_required: false
+  gpu_required: false
+  local_16gb_profile_required: false
+  compatibility_8gb_profile_present: true
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  cryptanalytic_cuda_kernel_added: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+- record_type: cuda_toolchain_detection_record
+  stage_id: stage-5c
+  schema: schemas/cuda/cuda-toolchain-detection-record-v0.schema.json
+  tool_id: nvidia_smi
+  tool_status: detected
+  tool_detected: true
+  tool_required_for_ci: false
+  absolute_path_committed: false
+  path_marker: nvidia_smi_detected_on_path
+  version_excerpt: NVIDIA GeForce RTX 4060 Ti, 16380 MiB
+  platform_summary: Windows-10-10.0.19045-SP0
+  cuda_build_device_detection_only: true
+  cuda_required: false
+  gpu_required: false
+  local_16gb_profile_required: false
+  compatibility_8gb_profile_present: true
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  cryptanalytic_cuda_kernel_added: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false

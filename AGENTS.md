@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5B - CUDA parity harness skeleton.
+Current completed stage: Stage 5C - CUDA build and device-detection scaffold.
 
-Current work: Stage 5C - CUDA build and device-detection scaffold. Stage 5C may cite Stage 5A target/scaffold/gate records and Stage 5B harness/backend/matrix records, but CUDA kernel implementation, GPU benchmarking, speedup claims, broad search, raw-data processing, canonical corpus activation, page-boundary finalisation, and solve claims remain prohibited unless explicitly scoped by a later stage.
+Current work: Stage 5D - native C++ CPU batch backend and deterministic threading baseline. Stage 5D may cite Stage 4O CPU batch parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, Stage 5A target/scaffold/gate records, Stage 5B harness/backend/matrix records, and Stage 5C build/device records, but CUDA kernel implementation, GPU benchmarking, speedup claims, broad search, raw-data processing, canonical corpus activation, page-boundary finalisation, and solve claims remain prohibited unless explicitly scoped by a later stage.
 
 Current project state:
 
@@ -69,6 +69,12 @@ Current project state:
 - Broad unsolved-page campaigns: not started.
 - CUDA: deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
 - Existing CUDA code: scaffold/smoke infrastructure only unless code and tests say otherwise.
+- Stage 5C CUDA build/device metadata is readiness infrastructure only; no-GPU CI, compatibility 8GB, and optional local 16GB profiles must remain explicit and smoke-build status is not parity or performance evidence.
+- CUDA detection must be no-GPU-safe by default.
+- The local 16GB GPU profile is optional and must not become a CI requirement.
+- Do not use device detection or smoke-build results as performance evidence.
+- Do not add CUDA kernels until an explicit implementation stage.
+- Do not stage `codex-output/**`.
 - Raw data, generated outputs, SQLite databases, raw Discord logs, raw page images, raw historical stego artefacts, extracted payloads, and local deep-research reports are not committed.
 - No solve claims are present.
 - Stage 4A generated Discord full-review site, redacted streams, channel shards, topic shards, indexes, copied LP page images, thumbnails, contact sheets, and upload archives are generated outputs and must not be committed.

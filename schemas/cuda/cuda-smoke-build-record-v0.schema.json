@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/cuda-smoke-build-record-v0.schema.json",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "smoke_build_id",
+    "smoke_build_status",
+    "smoke_build_attempted",
+    "smoke_test_executed",
+    "cuda_required",
+    "gpu_required",
+    "local_16gb_profile_required",
+    "cuda_kernel_added",
+    "cryptanalytic_cuda_kernel_added",
+    "gpu_benchmark_performed",
+    "performance_claim",
+    "speedup_claim",
+    "raw_data_processed",
+    "solve_claim",
+    "no_solve_claim",
+    "generated_outputs_committed",
+    "codex_output_committed"
+  ],
+  "properties": {
+    "record_type": { "const": "cuda_smoke_build_record" },
+    "stage_id": { "const": "stage-5c" },
+    "smoke_build_id": { "type": "string", "minLength": 1 },
+    "smoke_build_status": {
+      "enum": [
+        "passed",
+        "failed",
+        "skipped_missing_cuda",
+        "skipped_not_requested"
+      ]
+    },
+    "smoke_build_attempted": { "type": "boolean" },
+    "smoke_test_executed": { "const": false },
+    "cuda_required": { "const": false },
+    "gpu_required": { "const": false },
+    "local_16gb_profile_required": { "const": false },
+    "compatibility_8gb_profile_present": { "const": true },
+    "cuda_kernel_added": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "cryptanalytic_cuda_kernel_added": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "broad_experiment_executed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "codex_output_committed": { "const": false },
+    "website_expansion": { "const": false }
+  }
+}

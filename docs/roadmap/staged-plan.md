@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 5B - CUDA parity harness skeleton.
-- Current planning focus: Stage 5C - CUDA build and device-detection scaffold.
+- Latest completed stage: Stage 5C - CUDA build and device-detection scaffold.
+- Current planning focus: Stage 5D - native C++ CPU batch backend and deterministic threading baseline.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -55,19 +55,20 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Stage 4Q: recorded CPU benchmark plan records, future CUDA parity readiness gates, tiny CPU-only smoke diagnostics, and documentation hygiene checks without CUDA implementation, GPU benchmarking, performance claims, broad execution, or generated-output publication.
 - Stage 5A: recorded CUDA target plans, explicit non-targets, parity scaffolds, and implementation gates without CUDA source changes, GPU benchmarking, speedup claims, broad execution, raw-data processing, or generated-output publication.
 - Stage 5B: recorded CUDA parity harness plans, parity fixtures, backend capability profiles, and future-kernel matrix rows without CUDA source changes, GPU benchmarking, speedup claims, broad execution, raw-data processing, or generated-output publication.
+- Stage 5C: recorded no-GPU-safe CUDA build profiles, toolchain detection, device detection, and optional smoke-build status without CUDA source changes, CUDA kernels, GPU benchmarking, speedup claims, broad execution, raw-data processing, website expansion, or generated-output publication.
 
 ## Current Stage
 
-Stage 5B is complete. It produced 14 CUDA parity harness records, 14 parity fixture records, 3 backend capability records, 9 future-kernel matrix rows, 9 ready future-kernel targets, 1 blocked future-kernel row, 3 skipped non-targets, and optional local 16GB backend metadata that is not required by CI.
+Stage 5C is complete. It produced 3 CUDA build-profile records, 3 toolchain-detection records, 3 device-detection records, and 1 optional smoke-build record. The local 16GB GPU profile is optional, compatibility 8GB remains present, and CI remains no-GPU safe.
 
-Stage 5B does not implement CUDA/GPU code, add or modify `.cu` or `.cuh` files, run GPU benchmarks, claim performance or speedups, execute broad experiments, process raw Discord logs or raw LP page images, alter scoring semantics, add a new scorer, publish generated outputs, commit SQLite databases, activate the canonical corpus, finalize page boundaries, or make solve claims.
+Stage 5C does not implement CUDA/GPU code, add or modify `.cu` or `.cuh` files, run CUDA tests, run GPU benchmarks, claim performance or speedups, execute broad experiments, process raw Discord logs or raw LP page images, alter scoring semantics, add a new scorer, publish generated outputs, commit SQLite databases, expand the website, activate the canonical corpus, finalize page boundaries, or make solve claims.
 
 ## Planned Next Stages
 
-- Stage 5C - CUDA build and device-detection scaffold.
+- Stage 5D - native C++ CPU batch backend and deterministic threading baseline.
 - Stage 6 - website expansion, after CUDA planning boundaries are documented.
 
-The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking, visual observation intake, annotation, and bounded numeric audits ahead of CPU API work. Stage 4H completed the CPU batch API extraction, Stage 4I completed scorer consolidation, Stage 4J closed the observation review-to-promotion loop, Stage 4K strengthened public-source reproducibility, Stage 4L made promotion readiness explicit, Stage 4M created image source-variant/compression preflight records, Stage 4N completed stego/audio positive-control readiness metadata, Stage 4O expanded CPU batch adapters, Stage 4P unified result-store and score-summary surfaces, Stage 4Q recorded CPU benchmark/parity planning, Stage 5A recorded CUDA planning and parity scaffolding, and Stage 5B recorded the CUDA parity harness skeleton before Stage 5C build/device-detection work.
+The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking, visual observation intake, annotation, and bounded numeric audits ahead of CPU API work. Stage 4H completed the CPU batch API extraction, Stage 4I completed scorer consolidation, Stage 4J closed the observation review-to-promotion loop, Stage 4K strengthened public-source reproducibility, Stage 4L made promotion readiness explicit, Stage 4M created image source-variant/compression preflight records, Stage 4N completed stego/audio positive-control readiness metadata, Stage 4O expanded CPU batch adapters, Stage 4P unified result-store and score-summary surfaces, Stage 4Q recorded CPU benchmark/parity planning, Stage 5A recorded CUDA planning and parity scaffolding, Stage 5B recorded the CUDA parity harness skeleton, and Stage 5C recorded CUDA build/device-detection metadata before Stage 5D native C++ CPU backend work.
 
 ## Deferred Work
 
@@ -124,7 +125,9 @@ Stage 4Q records CPU benchmark and future parity planning gates. It writes commi
 
 Stage 5A records CUDA planning and parity scaffolding. It writes committed target-plan, non-target, parity-scaffold, implementation-gate, and summary records, generates ignored planning reports, and keeps CUDA implementation/GPU benchmarking deferred. The next planned stage after Stage 5A is Stage 5B: CUDA parity harness skeleton.
 
-Stage 5B records CUDA parity harness skeleton metadata. It writes committed harness plan, parity fixture, backend capability, future-kernel matrix, and summary records, generates ignored parity reports, and keeps CUDA implementation/GPU benchmarking deferred. The next planned stage after Stage 5B is Stage 5C: CUDA build and device-detection scaffold.
+Stage 5B records CUDA parity harness skeleton metadata. It writes committed harness plan, parity fixture, backend capability, future-kernel matrix, and summary records, generates ignored parity reports, and keeps CUDA implementation/GPU benchmarking deferred.
+
+Stage 5C records CUDA build and device-detection metadata. It writes no-GPU-safe build profiles, toolchain detection records, device detection records, optional smoke-build records, and a summary under `data/cuda/`, generates ignored reports under `experiments/results/cuda-build/stage5c/`, and keeps CUDA implementation, GPU benchmarking, speedup claims, website expansion, and raw-data processing deferred. The next planned stage after Stage 5C is Stage 5D: native C++ CPU batch backend and deterministic threading baseline.
 
 ## Retired Or Deprioritised Directions
 
@@ -140,6 +143,7 @@ Stage 5B records CUDA parity harness skeleton metadata. It writes committed harn
 - CPU benchmark and parity planning: active infrastructure only; Stage 4Q records 5 benchmark plan records, 14 parity readiness records, 3 CPU smoke diagnostics, 9 future CUDA planning-ready targets, 2 blocked targets, and 3 skipped non-CUDA targets. Smoke timings are diagnostics only, not performance claims.
 - CUDA planning and parity scaffolding: active infrastructure only; Stage 5A records 14 target-plan records, 9 ready planning targets, 2 blocked targets, 8 explicit non-target records, 9 parity scaffold records, and 10 satisfied gates. It authorizes no CUDA source changes, GPU benchmarks, speedup claims, or broad execution.
 - CUDA parity harness skeleton: active infrastructure only; Stage 5B records 14 harness plan records, 14 parity fixture records, 3 backend capability records, and 9 future-kernel matrix rows. It authorizes no CUDA source changes, GPU benchmarks, speedup claims, local 16GB requirements, or broad execution.
+- CUDA build/device detection: active infrastructure only; Stage 5C records 3 build profiles, 3 toolchain records, 3 device records, and 1 optional smoke-build record. The local 16GB profile is optional, no-GPU CI remains valid, and smoke-build metadata is not parity evidence or a speedup claim.
 - Broad dictionary/hash cracking: deferred and prohibited without explicit scoped evidence.
 - Broad visual pareidolia, unannotated dot/braille/constellation readings, and image-derived cipher seeds: deferred and prohibited until Stage 4C-style annotation records preserve coordinates, ambiguity, controls, and review status.
 - Dot/binary/braille/constellation readings remain not experiment seeds without explicit coordinates, ordering, polarity, ambiguity tables, and later review promotion.
@@ -147,7 +151,7 @@ Stage 5B records CUDA parity harness skeleton metadata. It writes committed harn
 - Source-delta audit work must not blind-mirror external repositories, commit raw binary/image/audio/font artefacts, or treat source variants as canonical corpus.
 - JPEG-like/compression artefact observations are preflight/control-only; star-like or compression-like features require source variants and negative controls before any interpretation.
 - Broad OutGuess/stego/audio scans: deferred and prohibited until source-locked fixtures, expected-output controls, and toolchain records exist; Stage 4N records readiness metadata only.
-- CUDA acceleration: deferred until CPU batch APIs, stable scorer definitions, observation review gates, source-lock reproducibility records, promotion-readiness records, positive-control readiness, parity expectations, unified result reporting, Stage 4Q benchmark planning, Stage 5A target scaffolds, Stage 5B harness records, parity tests, and explicit Stage 5 implementation scope exist. Stage 4H provides the CPU batch parity contract, Stage 4I provides the scoring contract, Stage 4J provides the observation review gate, Stage 4K improves source-lock provenance, Stage 4L provides the promotion ledger, Stage 4M adds image-preflight controls, Stage 4N records stego/audio readiness blockers, Stage 4O records CPU batch adapter parity expectations, Stage 4P unifies result/score surfaces, Stage 4Q records benchmark/parity planning, Stage 5A records CUDA planning boundaries, and Stage 5B records harness boundaries; the next CUDA step is Stage 5C build/device detection, not kernel implementation.
+- CUDA acceleration: deferred until CPU batch APIs, stable scorer definitions, observation review gates, source-lock reproducibility records, promotion-readiness records, positive-control readiness, parity expectations, unified result reporting, Stage 4Q benchmark planning, Stage 5A target scaffolds, Stage 5B harness records, Stage 5C build/device records, parity tests, and explicit Stage 5 implementation scope exist. Stage 4H provides the CPU batch parity contract, Stage 4I provides the scoring contract, Stage 4J provides the observation review gate, Stage 4K improves source-lock provenance, Stage 4L provides the promotion ledger, Stage 4M adds image-preflight controls, Stage 4N records stego/audio readiness blockers, Stage 4O records CPU batch adapter parity expectations, Stage 4P unifies result/score surfaces, Stage 4Q records benchmark/parity planning, Stage 5A records CUDA planning boundaries, Stage 5B records harness boundaries, and Stage 5C records build/device boundaries; the next step is Stage 5D native C++ CPU backend work, not kernel implementation.
 
 ## Deep Research Influence Log
 

@@ -161,9 +161,9 @@ def cuda_parity_build_future_kernel_matrix(
 
 @cuda_parity_app.command("validate-stage5b")
 def cuda_parity_validate_stage5b(
-    harness_plan: Path = typer.Option(HARNESS_PLAN_PATH, "--harness-plan", help="Stage 5B harness plan."),
-    parity_fixtures: Path = typer.Option(PARITY_FIXTURES_PATH, "--parity-fixtures", help="Stage 5B fixtures."),
-    backend_capability: Path = typer.Option(BACKEND_CAPABILITY_PATH, "--backend-capability", help="Stage 5B backend capability."),
+    harness_plan: Path = typer.Option(HARNESS_PLAN_PATH, "--harness-plan", "--harness", help="Stage 5B harness plan."),
+    parity_fixtures: Path = typer.Option(PARITY_FIXTURES_PATH, "--parity-fixtures", "--fixtures", help="Stage 5B fixtures."),
+    backend_capability: Path = typer.Option(BACKEND_CAPABILITY_PATH, "--backend-capability", "--backend-capabilities", help="Stage 5B backend capability."),
     future_kernel_matrix: Path = typer.Option(FUTURE_KERNEL_MATRIX_PATH, "--future-kernel-matrix", help="Stage 5B future-kernel matrix."),
     summary: Path = typer.Option(SUMMARY_PATH, "--summary", help="Stage 5B summary."),
     results_dir: Path = typer.Option(STAGE5B_OUTPUT_DIR, "--results-dir", help="Generated Stage 5B output directory."),

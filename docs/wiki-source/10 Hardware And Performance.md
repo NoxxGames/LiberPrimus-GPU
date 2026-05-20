@@ -12,7 +12,7 @@ Stage 2E dry-run manifests may estimate future CPU candidate counts, but they do
 
 ## Current Stage
 
-Stage 0D-P does not use CUDA. Transcript parsing and alignment run on ordinary CPU hardware.
+Stage 5C records CUDA build and device-detection metadata only. It does not run GPU benchmarks or make speedup claims. Stage 5D native C++ CPU backend work is next.
 
 ## Design Assumptions
 
@@ -42,6 +42,12 @@ Direct fixture reproduction is CPU-only and fast. It is a correctness check befo
 Stage 1B Atbash-family reproduction is CPU-only and small. It does not use CUDA, and it should not be treated as a GPU benchmark.
 
 GPU acceleration remains future-facing for larger transform and scoring workloads after CPU references and parity tests exist.
+
+## Stage 5C CUDA Build And Device Detection
+
+Stage 5C records no-GPU CI, compatibility 8 GB, and optional local 16 GB profiles. Toolchain and device records are environment metadata only.
+
+The optional smoke-build path records configure/build status for existing scaffold targets. It does not run CUDA tests, benchmarks, or cryptanalytic kernels, and a local device record is not parity evidence.
 ## Stage 1C Performance Scope
 
 Stage 1C explicit-key Vigenere reproduction is CPU-only and small. Timing fields in generated summaries are diagnostics, not benchmarks. CUDA is not used.

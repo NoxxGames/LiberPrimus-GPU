@@ -805,3 +805,9 @@ Do not use Stage 5A planning readiness as execution approval. Do not add or modi
 Stage 5B is not an experiment execution stage. It adds CUDA parity harness records, parity fixture records, backend capability records, future-kernel matrix records, and an aggregate summary. Generated Stage 5B parity reports remain ignored under `experiments/results/cuda-parity/stage5b/`.
 
 Do not use Stage 5B harness readiness as CUDA implementation approval. Do not add or modify CUDA source, add kernels, run GPU benchmarks, require the optional local 16GB profile, claim speedups, broaden search, process raw data, activate the canonical corpus, finalise page boundaries, or claim a solve from harness records.
+
+# Stage 5C CUDA Build/Device Detection Boundary
+
+Stage 5C is not an experiment execution stage. It adds CUDA build-profile records, toolchain detection records, device detection records, optional smoke-build records, and an aggregate summary. Generated Stage 5C build/device reports remain ignored under `experiments/results/cuda-build/stage5c/`.
+
+Do not use Stage 5C toolchain, device, or smoke-build readiness as CUDA implementation approval. Do not add or modify CUDA source, add kernels, run CUDA tests, run GPU benchmarks, require the optional local 16GB profile, claim speedups, broaden search, process raw data, expand the website, activate the canonical corpus, finalise page boundaries, or claim a solve from build/device records.

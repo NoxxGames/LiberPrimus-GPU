@@ -90,9 +90,10 @@ def benchmark_planning_build_plan(
 @benchmark_planning_app.command("validate-stage4q")
 def benchmark_planning_validate_stage4q(
     results_dir: Path = typer.Option(STAGE4Q_OUTPUT_DIR, "--results-dir", help="Generated Stage 4Q output directory."),
-    plan: Path = typer.Option(STAGE4Q_PLAN_PATH, "--plan", help="Committed Stage 4Q plan YAML."),
-    readiness: Path = typer.Option(STAGE4Q_READINESS_PATH, "--readiness", help="Committed Stage 4Q readiness YAML."),
+    plan: Path = typer.Option(STAGE4Q_PLAN_PATH, "--plan", "--plans", help="Committed Stage 4Q plan YAML."),
+    readiness: Path = typer.Option(STAGE4Q_READINESS_PATH, "--readiness", "--cuda-readiness", help="Committed Stage 4Q readiness YAML."),
     summary: Path = typer.Option(STAGE4Q_SUMMARY_PATH, "--summary", help="Committed Stage 4Q summary YAML."),
+    environment: Path | None = typer.Option(None, "--environment", help="Compatibility option; generated environment is read from --results-dir."),
 ) -> None:
     """Validate Stage 4Q generated outputs and committed aggregate records."""
 

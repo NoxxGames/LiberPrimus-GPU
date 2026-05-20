@@ -71,6 +71,12 @@ method-status joins, cross-stage report counts, Stage 4P result-store CLI comman
 result-store command preservation, ignored-output checks, raw-data checks, and SQLite non-staging
 checks for `experiments/results/result-store-unification/stage4p/`.
 
+Stage 5C extends coverage with CUDA build/device schemas, no-GPU-safe build profile checks,
+toolchain detection that tolerates missing CUDA, device detection that tolerates no GPU, optional
+smoke-build records that do not execute CUDA tests by default, CLI build/validate checks, and
+ignored-output/codex-output checks for `experiments/results/cuda-build/stage5c/` and
+`codex-output/`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.

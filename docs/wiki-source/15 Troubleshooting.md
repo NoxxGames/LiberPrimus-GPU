@@ -44,6 +44,8 @@ git check-ignore -v experiments/results/observation-review/stage4j/review_decisi
 git check-ignore -v experiments/results/source-lock-snapshots/stage4k/fetch_report.json
 git check-ignore -v experiments/results/result-store-unification/stage4p/summary.json
 git check-ignore -v experiments/results/result-store-unification/stage4p/results.sqlite3
+git check-ignore -v experiments/results/cuda-build/stage5c/summary.json
+git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -154,6 +156,13 @@ If a Stage 4P result-store unification run leaves `source_inventory.json`,
 `experiments/results/result-store-unification/stage4p/`, do not stage them. Commit only schemas,
 manifests, result-store code, tests, docs, research logs, and the aggregate YAML summary under
 `data/research/`.
+
+If a Stage 5C CUDA build/device run leaves `toolchain_detection_report.json`,
+`device_detection_report.json`, `smoke_build_report.json`, `summary.json`, `warnings.jsonl`, or
+CMake build directories under `experiments/results/cuda-build/stage5c/`, do not stage them.
+Commit only schemas, manifests, CUDA build/device code, tests, docs, research logs, and compact
+YAML records under `data/cuda/`. A failed optional local smoke build is readiness metadata only;
+do not treat it as CUDA parity or benchmark evidence.
 
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.

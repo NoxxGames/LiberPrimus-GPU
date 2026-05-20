@@ -339,7 +339,7 @@ records:
     completed_stage_refs: [stage-4o, stage-4p, stage-4q, stage-5a]
     reopen_conditions: [A future CUDA parity harness stage needs target-specific scaffold records, exact Stage 4O output hashes, Stage 4P unified result references, or explicit implementation gates before any GPU source is added.]
     stop_conditions: [Do not add CUDA implementation or GPU kernels in planning stages, run GPU benchmark commands, claim speedups, process raw data, broaden campaigns, activate the canonical corpus, finalise page boundaries, or treat planning readiness as execution approval.]
-    next_action: Stage 5B completed the raw-data-free parity harness skeleton; Stage 5C can add only CUDA build and device-detection scaffolding while implementation remains deferred.
+    next_action: Stage 5B completed the raw-data-free parity harness skeleton and Stage 5C completed build/device metadata scaffolding; Stage 5D should return to native C++ CPU backend/threading baselines before any CUDA implementation.
     solve_claim: false
     notes: Stage 5A records 14 target-plan records, 9 ready planning targets, 2 blocked targets, 8 explicit non-targets, 9 parity scaffold records, and 10 satisfied implementation gates.
   - record_type: method_family_status_record
@@ -348,19 +348,30 @@ records:
     status: infrastructure_only
     evidence_summary: Stage 5B records a raw-data-free future CUDA parity harness plan, parity fixtures, backend capability profiles, and future-kernel matrix rows without CUDA kernels, CUDA source changes, GPU benchmarks, performance claims, or speedup claims.
     completed_stage_refs: [stage-4o, stage-4p, stage-4q, stage-5a, stage-5b]
-    reopen_conditions: [A future Stage 5C or later scaffold stage needs explicit harness records, backend capability profiles, Stage 4O parity expectation hashes, Stage 4P unified-result references, and non-target exclusions before any build or implementation work proceeds.]
+    reopen_conditions: [A future Stage 5D or later scaffold stage needs explicit harness records, backend capability profiles, Stage 4O parity expectation hashes, Stage 4P unified-result references, and non-target exclusions before any build or implementation work proceeds.]
     stop_conditions: [Do not add CUDA kernels, modify CUDA source, run GPU benchmarks, claim speedups, require the local 16GB GPU profile, process raw data, broaden campaigns, activate the canonical corpus, finalise page boundaries, or treat harness readiness as implementation approval.]
-    next_action: Stage 5C CUDA build and device-detection scaffold can add build/device-detection infrastructure only; future kernels still require explicit implementation stages and CPU/CUDA parity tests.
+    next_action: Stage 5C recorded build/device-detection infrastructure only; Stage 5D native C++ CPU backend/threading baseline remains the next step before future kernels.
     solve_claim: false
     notes: Stage 5B records 14 harness plans, 14 parity fixtures, 3 backend capability profiles, and 9 future-kernel matrix rows with 9 ready future-kernel targets and 1 blocked row.
+  - record_type: method_family_status_record
+    method_family_id: cuda_build_device_detection
+    name: CUDA build and device-detection scaffold
+    status: infrastructure_only
+    evidence_summary: Stage 5C records no-GPU-safe build profiles, CUDA toolchain detection, optional local device metadata, and smoke-build readiness without adding CUDA kernels, running GPU benchmarks, or requiring the local 16 GB GPU profile.
+    completed_stage_refs: [stage-5a, stage-5b, stage-5c]
+    reopen_conditions: [A future native backend or CUDA stage needs reproducible build/device metadata, no-GPU CI profile checks, optional local hardware records, or smoke-build status before implementation work.]
+    stop_conditions: [Do not add CUDA kernels, run GPU benchmarks, claim speedups, require local GPU hardware in CI, process raw data, broaden experiments, expand the website, activate the canonical corpus, finalise page boundaries, or treat smoke-build metadata as parity evidence.]
+    next_action: Stage 5D native C++ CPU batch backend and deterministic threading baseline should preserve CPU reference behaviour before future CUDA implementation stages.
+    solve_claim: false
+    notes: Stage 5C records 3 build profiles, 3 toolchain records, 3 device records, and 1 optional smoke-build record. The optional local smoke build was attempted and recorded as failed due local build/toolchain integration; no smoke executable was run.
   - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred
-    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, Stage 4L adds the promotion ledger, Stage 4M adds image preflight records, Stage 4N records stego/audio readiness blockers, Stage 4O adds CPU batch adapter parity expectations, Stage 4P unifies result surfaces, Stage 4Q records benchmark/parity planning gates, Stage 5A records planning scaffolds, and Stage 5B records a parity harness skeleton, but CUDA implementation and GPU benchmarking remain unstarted.
-    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l, stage-4m, stage-4n, stage-4o, stage-4p, stage-4q, stage-5a, stage-5b]
-    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, image-preflight controls, positive-control readiness records, Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, Stage 5A target plans, Stage 5B harness records, transform-and-score parity tests, and explicit Stage 5 implementation scope are complete.]
+    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, Stage 4L adds the promotion ledger, Stage 4M adds image preflight records, Stage 4N records stego/audio readiness blockers, Stage 4O adds CPU batch adapter parity expectations, Stage 4P unifies result surfaces, Stage 4Q records benchmark/parity planning gates, Stage 5A records planning scaffolds, Stage 5B records a parity harness skeleton, and Stage 5C records build/device metadata, but CUDA implementation and GPU benchmarking remain unstarted.
+    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l, stage-4m, stage-4n, stage-4o, stage-4p, stage-4q, stage-5a, stage-5b, stage-5c]
+    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, image-preflight controls, positive-control readiness records, Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, Stage 5A target plans, Stage 5B harness records, Stage 5C build/device records, transform-and-score parity tests, and explicit Stage 5 implementation scope are complete.]
     stop_conditions: [No GPU kernels before CPU reference behaviour and parity tests.]
-    next_action: Stage 5C CUDA build and device-detection scaffold may add build/device detection only; implementation remains deferred until a later explicit implementation stage passes planning, harness, parity, and benchmark gates.
+    next_action: Stage 5D native C++ CPU batch backend and deterministic threading baseline is next; CUDA implementation remains deferred until a later explicit implementation stage passes planning, harness, build/device, parity, and benchmark gates.
     solve_claim: false
-    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H through Stage 5B did not add CUDA kernels.
+    notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H through Stage 5C did not add CUDA kernels.

@@ -190,8 +190,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 5c", "cuda build", "device-detection scaffold", "next"),
-            "staged_plan_stage5c_cuda_build_device_detection_next",
+            ("stage 5c", "cuda build", "device-detection scaffold", "complete"),
+            "staged_plan_stage5c_cuda_build_device_detection_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5d", "native c++ cpu batch backend", "deterministic threading baseline", "next"),
+            "staged_plan_stage5d_native_cpp_cpu_backend_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -390,6 +396,17 @@ def validate_research_synthesis(
         stop_text = " ".join(str(item).lower() for item in cuda_harness.get("stop_conditions", []))
         if "kernel" not in stop_text or "gpu benchmark" not in stop_text or "speedup" not in stop_text:
             errors.append("cuda_parity_harness_skeleton_missing_no_kernel_guardrail")
+
+    cuda_build = _find_method(method_records, "cuda_build_device_detection")
+    if cuda_build is None:
+        errors.append("cuda_build_device_detection_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in cuda_build.get("stop_conditions", []))
+        next_text = str(cuda_build.get("next_action", "")).lower()
+        if "kernel" not in stop_text or "gpu benchmark" not in stop_text or "speedup" not in stop_text:
+            errors.append("cuda_build_device_detection_missing_no_kernel_guardrail")
+        if "stage 5d" not in next_text or "native c++ cpu" not in next_text:
+            errors.append("cuda_build_device_detection_missing_stage5d_next_action")
 
     cookie = _find_method(method_records, "cookie_hash_sha256_packs")
     if cookie is None:

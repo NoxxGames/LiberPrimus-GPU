@@ -114,6 +114,12 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/results/cuda-parity/stage5b/summary.json",
         "experiments/results/cuda-parity/stage5b/warnings.jsonl",
         "codex-output/stage5b-codex-completion.md",
+        "experiments/results/cuda-build/stage5c/toolchain_detection_report.json",
+        "experiments/results/cuda-build/stage5c/device_detection_report.json",
+        "experiments/results/cuda-build/stage5c/smoke_build_report.json",
+        "experiments/results/cuda-build/stage5c/summary.json",
+        "experiments/results/cuda-build/stage5c/warnings.jsonl",
+        "codex-output/stage5c-codex-completion.md",
         "local-test.sqlite3",
     ]
     trackable_paths = [

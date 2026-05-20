@@ -25,3 +25,5 @@ The harness records define future comparison obligations:
 - explicit blocked conditions for unsupported adapters or missing CPU references.
 
 Readiness means only that a future implementation can be planned against a CPU reference. It is not execution approval.
+
+Stage 5C adds a separate build/device readiness layer. CUDA build profiles, toolchain detection, optional device metadata, and smoke-build status must be cited by future CUDA implementation stages, but they still do not authorize kernels, GPU benchmarks, speedup claims, or local GPU requirements.

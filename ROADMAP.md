@@ -4,13 +4,13 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5B CUDA parity harness skeleton is complete. The stage recorded CUDA harness plans,
-parity fixtures, backend capability profiles, and future-kernel matrix rows without CUDA
-implementation, CUDA source changes, GPU benchmarking, broad experiment execution, or
-performance claims.
+Stage 5C CUDA build and device-detection scaffold is complete. The stage recorded no-GPU-safe build
+profiles, CUDA toolchain detection, optional device metadata, and smoke-build readiness without
+CUDA implementation, CUDA source changes, GPU benchmarking, broad experiment execution, website
+expansion, or performance claims.
 
-The next planned stage is Stage 5C: CUDA build and device-detection scaffold. Website expansion
-is deferred to Stage 6. CUDA implementation remains deferred until CPU batch, scorer, review workflow, source-lock
+The next planned stage is Stage 5D: native C++ CPU batch backend and deterministic threading
+baseline. Website expansion is deferred to Stage 6. CUDA implementation remains deferred until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, parity tests, and benchmark plans
 are stable.
@@ -28,7 +28,8 @@ recorded promotion readiness, Stage 4M created image source-variant/compression 
 records, Stage 4N recorded OutGuess/audio positive-control readiness, Stage 4O expanded CPU
 batch adapter coverage, Stage 4P unified result-store/score-summary reporting, Stage 4Q
 recorded CPU benchmark and parity planning, Stage 5A recorded CUDA planning and parity scaffolding,
-and Stage 5B recorded the CUDA parity harness skeleton before Stage 5C build/device-detection work.
+Stage 5B recorded the CUDA parity harness skeleton, and Stage 5C recorded CUDA build/device-detection
+metadata before Stage 5D native C++ CPU backend work.
 
 ## Phase 0A - Project bootstrap
 
@@ -366,8 +367,19 @@ first-class.
 Generated reports remain ignored under `experiments/results/cuda-parity/stage5b/`, and
 `codex-output/` handoff files remain ignored. Stage 5B did not add or modify CUDA source, add GPU
 kernels, run GPU benchmarks, claim speedups, run broad experiments, process raw data, activate the
-canonical corpus, finalise page boundaries, or make solve claims. Stage 5C is the next CUDA build
-and device-detection scaffold stage.
+canonical corpus, finalise page boundaries, or make solve claims.
+
+## Stage 5C - CUDA build and device-detection scaffold
+
+Stage 5C is complete. It records `3` CUDA build-profile records, `3` toolchain detection records,
+`3` device detection records, and `1` optional smoke-build record. The local 16GB GPU profile is
+recorded only as optional metadata; compatibility 8GB and CI no-GPU profiles remain first-class.
+
+Generated reports remain ignored under `experiments/results/cuda-build/stage5c/`, and
+`codex-output/` handoff files remain ignored. Stage 5C did not add or modify CUDA source, add GPU
+kernels, run CUDA tests, run GPU benchmarks, claim speedups, run broad experiments, process raw
+data, expand the website, activate the canonical corpus, finalise page boundaries, or make solve
+claims. Stage 5D native C++ CPU batch backend and deterministic threading baseline is next.
 
 ## Stage 4G - Cookie exact-candidate refresh
 

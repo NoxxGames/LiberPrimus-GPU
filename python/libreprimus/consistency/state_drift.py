@@ -148,6 +148,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5B is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5c",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5c\b", re.IGNORECASE),
+        "Stage 5C is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -482,12 +487,22 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5c_cuda_build_device_detection_next",
+        "stage5c_cuda_build_device_detection_current_or_complete",
         "stage 5c" in staged_plan
         and "cuda build" in staged_plan
         and "device-detection scaffold" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 5C CUDA build and device-detection scaffold as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5d_native_cpp_cpu_backend_next",
+        "stage 5d" in staged_plan
+        and "native c++ cpu batch backend" in staged_plan
+        and "deterministic threading baseline" in staged_plan
         and "next" in staged_plan,
-        "Staged plan records Stage 5C CUDA build and device-detection scaffold as next.",
+        "Staged plan records Stage 5D native C++ CPU batch backend as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -574,6 +589,17 @@ def check_state_drift_consistency(
         and "backend capability" in combined
         and "speedup claim" in combined,
         "CUDA parity harness skeleton and backend capability policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "cuda_build_device_detection_policy_present",
+        "cuda build" in combined
+        and "device detection" in combined
+        and "no-gpu" in combined
+        and "local 16gb" in combined
+        and "speedup claim" in combined,
+        "CUDA build/device detection and no-GPU policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
