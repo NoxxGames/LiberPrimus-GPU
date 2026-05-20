@@ -467,5 +467,13 @@ experiments/results/cuda-build/**
 !experiments/results/cuda-build/stage5c/
 !experiments/results/cuda-build/stage5c/.gitkeep
 
+# Generated native CPU backend outputs
+experiments/results/native-cpu/**
+!experiments/results/native-cpu/
+!experiments/results/native-cpu/README.md
+!experiments/results/native-cpu/.gitkeep
+!experiments/results/native-cpu/stage5d/
+!experiments/results/native-cpu/stage5d/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

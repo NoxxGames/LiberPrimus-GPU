@@ -12,7 +12,7 @@ Stage 2E dry-run manifests may estimate future CPU candidate counts, but they do
 
 ## Current Stage
 
-Stage 5C records CUDA build and device-detection metadata only. It does not run GPU benchmarks or make speedup claims. Stage 5D native C++ CPU backend work is next.
+Stage 5D records native C++ CPU backend and deterministic threading metadata only. It does not run GPU benchmarks or make speedup claims. Stage 5E first CUDA kernel contract and CPU/native parity adapter selection is next.
 
 ## Design Assumptions
 
@@ -48,6 +48,13 @@ GPU acceleration remains future-facing for larger transform and scoring workload
 Stage 5C records no-GPU CI, compatibility 8 GB, and optional local 16 GB profiles. Toolchain and device records are environment metadata only.
 
 The optional smoke-build path records configure/build status for existing scaffold targets. It does not run CUDA tests, benchmarks, or cryptanalytic kernels, and a local device record is not parity evidence.
+
+## Stage 5D Native CPU Threading
+
+Stage 5D records native CPU backend and threading parity metadata. Matching output hashes across
+thread counts are correctness diagnostics for the synthetic fixture, not CPU benchmarks, GPU
+benchmarks, or speedup claims. C++ remains a deterministic CPU execution plane and Python remains
+orchestration.
 ## Stage 1C Performance Scope
 
 Stage 1C explicit-key Vigenere reproduction is CPU-only and small. Timing fields in generated summaries are diagnostics, not benchmarks. CUDA is not used.
@@ -161,4 +168,6 @@ Stage 5A records CUDA target plans, explicit non-targets, parity scaffolds, and 
 
 Stage 5B records CUDA parity harness plans, parity fixtures, backend capability profiles, and future-kernel matrix rows. It does not compile CUDA kernels, run GPU benchmarks, require the optional local 16GB GPU profile, or make speedup claims.
 
-Future Stage 5C build/device-detection work must cite Stage 5A and Stage 5B records and remain raw-data-free until a later explicit implementation stage.
+Future Stage 5E kernel-contract work must cite Stage 5A target records, Stage 5B harness records,
+Stage 5C build/device records, and Stage 5D native CPU parity records, and must remain
+raw-data-free until a later explicit implementation stage.

@@ -1,0 +1,24 @@
+# Native C++ CPU Batch Backend
+
+Stage 5D adds a native C++20 CPU backend as a deterministic execution plane for future parity work.
+It is not CUDA implementation and it does not replace Python orchestration.
+
+The backend currently runs a small synthetic shift fixture through fixed candidate slots. It records
+backend capability, threading parity, native/Python parity, and diagnostic metadata. The committed
+records live under `data/native-cpu/`; generated JSON reports live under
+`experiments/results/native-cpu/stage5d/` and remain ignored.
+
+## Boundary
+
+- `src/native_cpu/` owns native CPU-only execution helpers.
+- `python/libreprimus/native_cpu/` owns orchestration, validation, export, and reporting.
+- C++ must not launch Python worker scripts.
+- Python remains the policy, manifest, and provenance control plane.
+- CUDA source, CUDA kernels, GPU benchmarks, speedup claims, raw-data processing, website expansion,
+  canonical corpus activation, page-boundary finalisation, and solve claims remain out of scope.
+
+## Parity Role
+
+Stage 5D gives future CUDA stages a native CPU baseline in addition to the Python CPU batch
+reference. Future CUDA kernel contracts must cite the Stage 5D native output hash, threading parity
+records, and native/Python parity record before selecting an adapter for implementation.

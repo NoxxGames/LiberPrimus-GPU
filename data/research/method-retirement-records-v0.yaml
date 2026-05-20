@@ -169,7 +169,7 @@ records:
     reason: CUDA parity harness work is active infrastructure only; it prepares future kernel parity expectations but does not authorize implementation, GPU benchmarking, or performance claims.
     evidence: [Stage 5B records 14 harness plans, 14 parity fixtures, 3 backend capability profiles, and 9 future-kernel matrix rows without modifying CUDA source or running GPU benchmarks.]
     stages_supporting: [stage-5b]
-    reopen_conditions: [A later explicit Stage 5D or implementation stage cites the Stage 5B harness records, preserves CI no-GPU compatibility, and adds parity tests before any CUDA kernel work.]
+    reopen_conditions: [A later explicit Stage 5E or implementation stage cites the Stage 5B harness records, Stage 5D native CPU parity records, preserves CI no-GPU compatibility, and adds parity tests before any CUDA kernel work.]
     prohibited_expansions: [CUDA kernels in harness stages, CUDA source changes outside explicit implementation scope, GPU benchmarks, speedup claims, local 16GB GPU requirements, broad unsolved campaigns, raw-data processing, generated-output commits, solve claims.]
     notes: Stage 5B treats backend capability as optional planning metadata and keeps compatibility 8GB and CI no-GPU profiles first-class.
   - record_type: method_retirement_record
@@ -181,6 +181,15 @@ records:
     reopen_conditions: [A later explicit backend or CUDA stage needs no-GPU-safe profile checks, optional local hardware metadata, or smoke-build readiness records before implementation.]
     prohibited_expansions: [CUDA kernels, cryptanalytic CUDA execution, GPU benchmarks, speedup or performance claims, required local GPU hardware, broad experiments, raw-data processing, website expansion, generated-output commits, codex-output commits, solve claims.]
     notes: The Stage 5C local smoke build attempt is readiness metadata only and failed in the local build integration; it is not parity evidence and no smoke executable was run.
+  - record_type: method_retirement_record
+    method_family_id: native_cpp_cpu_backend
+    retired_status: active_with_constraints
+    reason: Native C++ CPU backend work is active infrastructure only; it establishes deterministic CPU execution semantics for future parity and must not become CUDA implementation, broad execution, or performance marketing.
+    evidence: [Stage 5D records 1 backend capability record, 5 threading records, 1 native/Python parity record, 1 diagnostic record, and matching one-thread/multi-thread/native/Python hashes over a synthetic fixture.]
+    stages_supporting: [stage-5d]
+    reopen_conditions: [A future stage needs additional native CPU adapters, solved-fixture-safe native parity, or CPU/native parity records for the first CUDA kernel contract.]
+    prohibited_expansions: [CUDA kernels, CUDA source changes, GPU benchmarks, speedup claims, C++ launching Python worker scripts, broad experiments, raw-data processing, website expansion, generated-output commits, codex-output commits, solve claims.]
+    notes: Stage 5D timing diagnostics are not benchmarks; Python remains orchestration and policy validation while C++ remains a deterministic CPU execution plane.
   - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints

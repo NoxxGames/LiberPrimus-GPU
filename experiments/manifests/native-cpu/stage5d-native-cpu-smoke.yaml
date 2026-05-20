@@ -1,0 +1,15 @@
+manifest_id: stage5d-native-cpu-smoke
+stage_id: stage-5d
+description: Tiny raw-data-free native C++ CPU backend smoke fixture.
+native_cpu_only: true
+cuda_used: false
+cuda_required: false
+gpu_required: false
+raw_data_processed: false
+broad_experiment_executed: false
+solve_claim: false
+no_solve_claim: true
+generated_outputs_committed: false
+timing_is_diagnostic_only: true
+fixture_id: stage5d-native-synthetic-shift-fixture-v0
+candidate_count: 6

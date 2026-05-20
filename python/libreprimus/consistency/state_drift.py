@@ -153,6 +153,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5C is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5d",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5d\b", re.IGNORECASE),
+        "Stage 5D is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -497,12 +502,22 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5d_native_cpp_cpu_backend_next",
+        "stage5d_native_cpp_cpu_backend_current_or_complete",
         "stage 5d" in staged_plan
         and "native c++ cpu batch backend" in staged_plan
         and "deterministic threading baseline" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 5D native C++ CPU batch backend as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5e_first_cuda_kernel_contract_next",
+        "stage 5e" in staged_plan
+        and "first cuda kernel contract" in staged_plan
+        and "cpu/native parity adapter selection" in staged_plan
         and "next" in staged_plan,
-        "Staged plan records Stage 5D native C++ CPU batch backend as next.",
+        "Staged plan records Stage 5E first CUDA kernel contract and CPU/native parity adapter selection as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -600,6 +615,17 @@ def check_state_drift_consistency(
         and "local 16gb" in combined
         and "speedup claim" in combined,
         "CUDA build/device detection and no-GPU policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "native_cpu_backend_policy_present",
+        "native c++ cpu" in combined
+        and "deterministic threading" in combined
+        and "python" in combined
+        and "orchestration" in combined
+        and "speedup claim" in combined,
+        "Native C++ CPU backend and deterministic threading policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

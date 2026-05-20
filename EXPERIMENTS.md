@@ -811,3 +811,15 @@ Do not use Stage 5B harness readiness as CUDA implementation approval. Do not ad
 Stage 5C is not an experiment execution stage. It adds CUDA build-profile records, toolchain detection records, device detection records, optional smoke-build records, and an aggregate summary. Generated Stage 5C build/device reports remain ignored under `experiments/results/cuda-build/stage5c/`.
 
 Do not use Stage 5C toolchain, device, or smoke-build readiness as CUDA implementation approval. Do not add or modify CUDA source, add kernels, run CUDA tests, run GPU benchmarks, require the optional local 16GB profile, claim speedups, broaden search, process raw data, expand the website, activate the canonical corpus, finalise page boundaries, or claim a solve from build/device records.
+
+# Stage 5D Native CPU Backend Boundary
+
+Stage 5D is not a cryptanalytic experiment. It adds a native C++ CPU backend, deterministic
+threading parity records, native/Python parity records, diagnostic-only runtime records, and an
+aggregate summary. Generated Stage 5D native CPU reports remain ignored under
+`experiments/results/native-cpu/stage5d/`.
+
+Do not use Stage 5D diagnostics as speedup or benchmark evidence. Do not add or modify CUDA source,
+add kernels, run CUDA transforms, run GPU benchmarks, launch Python worker scripts from C++, broaden
+search, process raw data, expand the website, activate the canonical corpus, finalise page
+boundaries, or claim a solve from native CPU backend records.

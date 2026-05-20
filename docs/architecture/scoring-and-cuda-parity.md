@@ -26,3 +26,7 @@ Unknown score semantics are recorded as `scoring_not_available`, not inferred. F
 ## Stage 5A Planning Records
 
 Stage 5A CUDA planning records cite Stage 4O parity hashes and Stage 4P unified result surfaces. A future parity harness must compare score-summary shape and confidence-label vocabulary without treating scores as solve evidence.
+
+Stage 5D does not add a scorer or alter score-summary semantics. Future CUDA parity work must keep
+Stage 4I score summaries, Stage 4P unified result surfaces, and Stage 5D native CPU output hashes
+separate and reproducible.

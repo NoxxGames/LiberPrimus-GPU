@@ -43,7 +43,9 @@ git check-ignore -v experiments/results/source-lock-snapshots/stage4k/fetch_repo
 git check-ignore -v experiments/results/result-store-unification/stage4p/summary.json
 git check-ignore -v experiments/results/result-store-unification/stage4p/results.sqlite3
 git check-ignore -v experiments/results/cuda-build/stage5c/summary.json
+git check-ignore -v experiments/results/native-cpu/stage5d/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
+git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -117,6 +119,12 @@ If a Stage 4I scoring consolidation run leaves `scorer_inventory.json`,
 `calibration_report_generated.json`, `cpu_batch_score_compatibility.json`, or `warnings.jsonl`,
 do not stage them. Commit only schemas, scoring data records, docs, tests, and research logs.
 
+If a Stage 5D native CPU run leaves `native_backend_capabilities.json`,
+`threading_parity_report.json`, `native_python_parity_report.json`, `native_cpu_diagnostics.json`,
+`summary.json`, or `warnings.jsonl` under `experiments/results/native-cpu/stage5d/`, do not stage
+them. Commit only schemas, code, manifests, compact YAML records, docs, tests, and research logs.
+Do not treat timing diagnostics as benchmarks or speedup evidence.
+
 If a Stage 4J observation review run leaves `review_decision_report.json`,
 `quarantine_report.json`, `promotion_gate_report.json`, `path_sanitisation_report.json`, or
 `warnings.jsonl`, do not stage them. Commit only schemas, review records, docs, tests, and research
@@ -184,8 +192,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 5B, onboarding and staged-plan checks should show Stage 5B complete and Stage 5C CUDA
-build and device-detection scaffold next.
+After Stage 5D, onboarding and staged-plan checks should show Stage 5D complete and Stage 5E first
+CUDA kernel contract and CPU/native parity adapter selection next.
 
 If path sanitisation fails, run:
 

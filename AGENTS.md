@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5C - CUDA build and device-detection scaffold.
+Current completed stage: Stage 5D - native C++ CPU batch backend and deterministic threading baseline.
 
-Current work: Stage 5D - native C++ CPU batch backend and deterministic threading baseline. Stage 5D may cite Stage 4O CPU batch parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, Stage 5A target/scaffold/gate records, Stage 5B harness/backend/matrix records, and Stage 5C build/device records, but CUDA kernel implementation, GPU benchmarking, speedup claims, broad search, raw-data processing, canonical corpus activation, page-boundary finalisation, and solve claims remain prohibited unless explicitly scoped by a later stage.
+Current work: Stage 5E - first CUDA kernel contract and CPU/native parity adapter selection. Stage 5E may cite Stage 4O CPU batch parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, Stage 5A target/scaffold/gate records, Stage 5B harness/backend/matrix records, Stage 5C build/device records, and Stage 5D native CPU backend/threading records, but CUDA kernel implementation, GPU benchmarking, speedup claims, broad search, raw-data processing, canonical corpus activation, page-boundary finalisation, and solve claims remain prohibited unless explicitly scoped by a later stage.
 
 Current project state:
 
@@ -70,6 +70,9 @@ Current project state:
 - CUDA: deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
 - Existing CUDA code: scaffold/smoke infrastructure only unless code and tests say otherwise.
 - Stage 5C CUDA build/device metadata is readiness infrastructure only; no-GPU CI, compatibility 8GB, and optional local 16GB profiles must remain explicit and smoke-build status is not parity or performance evidence.
+- Stage 5D native CPU backend records are readiness infrastructure only; C++ must remain a deterministic CPU execution plane, Python remains orchestration, and diagnostic timings are not speedup claims.
+- Do not let C++ launch Python worker scripts.
+- Future CUDA contract work must cite Stage 5D native output hashes and deterministic threading records before selecting a kernel target.
 - CUDA detection must be no-GPU-safe by default.
 - The local 16GB GPU profile is optional and must not become a CI requirement.
 - Do not use device detection or smoke-build results as performance evidence.

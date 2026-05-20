@@ -1,0 +1,37 @@
+records:
+- record_type: native_cpu_backend_capability_record
+  backend_id: stage5d-native-cpu-backend-v0
+  stage_id: stage-5d
+  native_backend_present: true
+  native_backend_built: true
+  native_backend_executable: build/stage5d-native-cpu/src/native_cpu/Debug/lpgpu_native_cpu_backend_cli.exe
+  supported_thread_counts:
+  - 1
+  - 2
+  - 4
+  - 8
+  - 16
+  fixture_id: stage5d-native-synthetic-shift-fixture-v0
+  candidate_count: 6
+  result_count: 6
+  output_hash: 76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66
+  native_cpu_only: true
+  cuda_used: false
+  cuda_required: false
+  gpu_required: false
+  gpu_benchmark_performed: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false

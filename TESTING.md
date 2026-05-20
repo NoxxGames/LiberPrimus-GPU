@@ -77,6 +77,12 @@ smoke-build records that do not execute CUDA tests by default, CLI build/validat
 ignored-output/codex-output checks for `experiments/results/cuda-build/stage5c/` and
 `codex-output/`.
 
+Stage 5D extends coverage with native CPU backend schemas, C++ backend and deterministic threading
+unit tests, Python/native parity checks, threading hash equality across multiple thread counts,
+validation rejections for CUDA/performance/solve-claim drift, CLI run/validate checks, and
+ignored-output/codex-output checks for `experiments/results/native-cpu/stage5d/` and
+`codex-output/`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.

@@ -550,4 +550,20 @@ records:
     cuda_used: false
     raw_outputs_committed: false
     generated_outputs_committed: false
-    notes: Stage 5C wrote 3 build profiles, 3 toolchain records, 3 device records, and 1 smoke-build record. The local CUDA smoke build was attempted and recorded as failed due local toolchain/build integration, but no smoke executable, CUDA test, GPU benchmark, or cryptanalytic kernel was run. Stage 5D is the next native C++ CPU backend and deterministic threading baseline stage.
+    notes: Stage 5C wrote 3 build profiles, 3 toolchain records, 3 device records, and 1 smoke-build record. The local CUDA smoke build was attempted and recorded as failed due local toolchain/build integration, but no smoke executable, CUDA test, GPU benchmark, or cryptanalytic kernel was run.
+  - record_type: stage_summary_record
+    stage_id: stage-5d
+    title: Native C++ CPU batch backend and deterministic threading baseline
+    status: complete
+    category: infrastructure
+    summary: Added a native C++ CPU batch backend for a raw-data-free synthetic transform fixture, deterministic range-partitioned threading, native/Python parity checks, and diagnostic-only runtime records without adding CUDA kernels or making performance claims.
+    key_outputs:
+      - "`libreprimus native-cpu` commands for smoke execution, threading parity, native/Python parity, summary generation, validation, and summary display."
+      - Native C++ backend library and CLI, deterministic threading helpers, C++ unit tests, Python orchestration wrappers, Stage 5D manifests, schemas, and compact committed YAML records under `data/native-cpu/`.
+      - Threading parity records for 1, 2, 4, 8, and 16 thread counts, with matching one-thread and multi-thread hashes and native/Python parity over a limited synthetic fixture.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5D wrote 1 backend capability record, 5 threading records, 1 native/Python parity record, and 1 diagnostic record. Generated native CPU reports remain ignored under experiments/results/native-cpu/stage5d, timing diagnostics are not benchmarks, and Stage 5E is the next first CUDA kernel contract and CPU/native parity adapter selection stage.

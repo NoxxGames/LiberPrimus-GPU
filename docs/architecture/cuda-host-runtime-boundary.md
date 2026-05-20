@@ -1,6 +1,6 @@
 # CUDA Host Runtime Boundary
 
-The Stage 5C host boundary is detection and build readiness, not CUDA execution.
+The Stage 5C host boundary is detection and build readiness, not CUDA execution. Stage 5D native CPU backend records are separate CPU parity infrastructure and do not authorize CUDA execution.
 
 ## Allowed
 

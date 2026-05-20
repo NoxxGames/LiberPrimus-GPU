@@ -2,6 +2,11 @@
 
 Stage 4H defines the CPU batch transform API as the reference path for future acceleration. It is intentionally CPU-only and works from normalized token stream records, not raw Discord logs, raw page images, or unreviewed corpus material.
 
+Stage 5D adds a native C++ CPU backend baseline beside the Python CPU batch reference. Python still
+owns orchestration, manifests, and validation; native C++ owns deterministic CPU execution for the
+Stage 5D synthetic fixture. Future CUDA work must keep transform semantics aligned with both the
+Python reference and Stage 5D native output hashes before any kernel implementation is trusted.
+
 ## Contract
 
 The API accepts:

@@ -27,3 +27,7 @@ The harness records define future comparison obligations:
 Readiness means only that a future implementation can be planned against a CPU reference. It is not execution approval.
 
 Stage 5C adds a separate build/device readiness layer. CUDA build profiles, toolchain detection, optional device metadata, and smoke-build status must be cited by future CUDA implementation stages, but they still do not authorize kernels, GPU benchmarks, speedup claims, or local GPU requirements.
+
+Stage 5D adds the native CPU backend/threading baseline that future harness work must cite when
+selecting the first CUDA adapter. Harness records alone are not enough: future CUDA work needs Stage
+5D native output hashes and native/Python parity records.

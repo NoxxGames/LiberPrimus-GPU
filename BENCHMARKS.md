@@ -30,11 +30,17 @@ Stage 4Q records benchmark planning and parity readiness only. It writes committ
 
 Stage 4Q CPU smoke timings are diagnostic only. They are not performance claims, speedup evidence, CUDA benchmarks, or authorization to implement GPU kernels.
 
-Stage 5A uses Stage 4Q records for CUDA planning and parity scaffolding only. It records target plans, non-targets, parity scaffolds, and implementation gates without running GPU benchmarks or making speedup claims. Stage 5B records a CUDA parity harness skeleton, backend capability profiles, and future-kernel matrix rows without running GPU benchmarks or making speedup claims. Stage 5C records CUDA build profiles, toolchain detection, device detection, and optional smoke-build status without running GPU benchmarks or making speedup claims. Stage 5D native C++ CPU backend work is next; website expansion is deferred to Stage 6.
+Stage 5A uses Stage 4Q records for CUDA planning and parity scaffolding only. It records target plans, non-targets, parity scaffolds, and implementation gates without running GPU benchmarks or making speedup claims. Stage 5B records a CUDA parity harness skeleton, backend capability profiles, and future-kernel matrix rows without running GPU benchmarks or making speedup claims. Stage 5C records CUDA build profiles, toolchain detection, device detection, and optional smoke-build status without running GPU benchmarks or making speedup claims. Stage 5D records native C++ CPU backend diagnostics and threading parity without GPU benchmarks or speedup claims. Stage 5E first-kernel contract work is next; website expansion is deferred to Stage 6.
 
 ## Stage 5C CUDA Build/Device Detection
 
 Stage 5C device detection is hardware metadata, not a benchmark. Toolchain and device records may mention local CUDA availability and optional 16 GB hardware, but no local GPU profile is required by CI and no speedup claim is allowed.
+
+## Stage 5D Native CPU Diagnostics
+
+Stage 5D native CPU runtime values are diagnostic only. Matching one-thread and multi-thread output
+hashes establish deterministic threading behavior for the synthetic fixture; they are not throughput
+benchmarks, CPU optimization claims, GPU benchmarks, or speedup evidence.
 
 ## Do not run long benchmarks by default
 

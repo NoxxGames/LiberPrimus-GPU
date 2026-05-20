@@ -82,6 +82,11 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/cuda-device-detection-record-v0.schema.json",
     "cuda/cuda-smoke-build-record-v0.schema.json",
     "cuda/stage5c-cuda-build-device-summary-v0.schema.json",
+    "native-cpu/native-cpu-backend-capability-record-v0.schema.json",
+    "native-cpu/native-cpu-threading-record-v0.schema.json",
+    "native-cpu/native-cpu-parity-record-v0.schema.json",
+    "native-cpu/native-cpu-diagnostic-record-v0.schema.json",
+    "native-cpu/stage5d-native-cpu-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -141,6 +146,11 @@ EXPECTED_DOC_TERMS = [
     "cuda-device-detection-record-v0",
     "cuda-smoke-build-record-v0",
     "stage5c-cuda-build-device-summary-v0",
+    "native-cpu-backend-capability-record-v0",
+    "native-cpu-threading-record-v0",
+    "native-cpu-parity-record-v0",
+    "native-cpu-diagnostic-record-v0",
+    "stage5d-native-cpu-summary-v0",
 ]
 
 

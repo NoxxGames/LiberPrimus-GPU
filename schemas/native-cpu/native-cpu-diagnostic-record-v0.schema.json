@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/native-cpu/native-cpu-diagnostic-record-v0.schema.json",
+  "title": "Stage 5D native CPU diagnostic record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "diagnostic_record_id",
+    "stage_id",
+    "backend_id",
+    "diagnostic_kind",
+    "timing_is_diagnostic_only",
+    "native_cpu_only",
+    "cuda_used",
+    "gpu_benchmark_performed",
+    "performance_claim",
+    "speedup_claim",
+    "solve_claim",
+    "no_solve_claim",
+    "generated_outputs_committed",
+    "codex_output_committed",
+    "cxx_launches_python_workers"
+  ],
+  "properties": {
+    "record_type": { "const": "native_cpu_diagnostic_record" },
+    "diagnostic_record_id": { "type": "string", "minLength": 1 },
+    "stage_id": { "const": "stage-5d" },
+    "backend_id": { "type": "string", "minLength": 1 },
+    "diagnostic_kind": { "enum": ["native_backend_smoke"] },
+    "timing_is_diagnostic_only": { "const": true },
+    "native_cpu_only": { "const": true },
+    "cuda_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "generated_outputs_committed": { "const": false },
+    "codex_output_committed": { "const": false },
+    "cxx_launches_python_workers": { "const": false }
+  }
+}

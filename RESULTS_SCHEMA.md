@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, Stage 4O CPU batch adapter expansion/parity expectation records, Stage 4P result-store/score-summary unification records, Stage 4Q benchmark/parity planning records, Stage 5A CUDA planning/parity scaffold records, Stage 5B CUDA parity harness skeleton records, and Stage 5C CUDA build/device detection records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, Stage 4O CPU batch adapter expansion/parity expectation records, Stage 4P result-store/score-summary unification records, Stage 4Q benchmark/parity planning records, Stage 5A CUDA planning/parity scaffold records, Stage 5B CUDA parity harness skeleton records, Stage 5C CUDA build/device detection records, and Stage 5D native CPU backend/threading records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -110,6 +110,24 @@ Committed Stage 5C schema IDs:
 - `cuda-device-detection-record-v0`
 - `cuda-smoke-build-record-v0`
 - `stage5c-cuda-build-device-summary-v0`
+
+Stage 5D native CPU backend records require `native_cpu_only=true`, `cuda_used=false`,
+`cuda_required=false`, `gpu_required=false`, `gpu_benchmark_performed=false`,
+`cuda_kernel_added=false`, `cuda_source_modified=false`, `performance_claim=false`,
+`speedup_claim=false`, `solve_claim=false`, `no_solve_claim=true`,
+`generated_outputs_committed=false`, `codex_output_committed=false`, `website_expansion=false`,
+`python_semantic_reference_preserved=true`, and `cxx_launches_python_workers=false`. Threading
+records must preserve deterministic ordering, fixed output slots, and range partitioning. Generated
+native CPU reports remain ignored under `experiments/results/native-cpu/stage5d/`; only compact YAML
+records under `data/native-cpu/` are committed.
+
+Committed Stage 5D schema IDs:
+
+- `native-cpu-backend-capability-record-v0`
+- `native-cpu-threading-record-v0`
+- `native-cpu-parity-record-v0`
+- `native-cpu-diagnostic-record-v0`
+- `stage5d-native-cpu-summary-v0`
 
 ## Result record principles
 

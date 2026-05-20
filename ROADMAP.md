@@ -4,15 +4,11 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5C CUDA build and device-detection scaffold is complete. The stage recorded no-GPU-safe build
-profiles, CUDA toolchain detection, optional device metadata, and smoke-build readiness without
-CUDA implementation, CUDA source changes, GPU benchmarking, broad experiment execution, website
-expansion, or performance claims.
+Stage 5D native C++ CPU batch backend and deterministic threading baseline is complete. The stage recorded native backend capability, deterministic threading parity, native/Python parity, and diagnostic-only runtime metadata without CUDA implementation, CUDA source changes, GPU benchmarking, broad experiment execution, website expansion, or performance claims.
 
-The next planned stage is Stage 5D: native C++ CPU batch backend and deterministic threading
-baseline. Website expansion is deferred to Stage 6. CUDA implementation remains deferred until CPU batch, scorer, review workflow, source-lock
+The next planned stage is Stage 5E: first CUDA kernel contract and CPU/native parity adapter selection. Website expansion is deferred to Stage 6. CUDA implementation remains deferred until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
-Stage 4O parity expectations, Stage 4P unified result surfaces, parity tests, and benchmark plans
+Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, parity tests, and benchmark plans
 are stable.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
@@ -28,8 +24,8 @@ recorded promotion readiness, Stage 4M created image source-variant/compression 
 records, Stage 4N recorded OutGuess/audio positive-control readiness, Stage 4O expanded CPU
 batch adapter coverage, Stage 4P unified result-store/score-summary reporting, Stage 4Q
 recorded CPU benchmark and parity planning, Stage 5A recorded CUDA planning and parity scaffolding,
-Stage 5B recorded the CUDA parity harness skeleton, and Stage 5C recorded CUDA build/device-detection
-metadata before Stage 5D native C++ CPU backend work.
+Stage 5B recorded the CUDA parity harness skeleton, Stage 5C recorded CUDA build/device-detection
+metadata, and Stage 5D recorded native C++ CPU backend/threading parity before Stage 5E first-kernel contract work.
 
 ## Phase 0A - Project bootstrap
 
@@ -379,7 +375,20 @@ Generated reports remain ignored under `experiments/results/cuda-build/stage5c/`
 `codex-output/` handoff files remain ignored. Stage 5C did not add or modify CUDA source, add GPU
 kernels, run CUDA tests, run GPU benchmarks, claim speedups, run broad experiments, process raw
 data, expand the website, activate the canonical corpus, finalise page boundaries, or make solve
-claims. Stage 5D native C++ CPU batch backend and deterministic threading baseline is next.
+claims.
+
+## Stage 5D - native C++ CPU batch backend and deterministic threading baseline
+
+Stage 5D is complete. It records `1` native backend capability record, `5` threading records, `1`
+native/Python parity record, and `1` diagnostic record. Thread counts `1`, `2`, `4`, `8`, and `16`
+produce the same output hash for the synthetic fixture:
+`76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66`.
+
+Generated reports remain ignored under `experiments/results/native-cpu/stage5d/`, and
+`codex-output/` handoff files remain ignored. Stage 5D did not add or modify CUDA source, add GPU
+kernels, run CUDA transforms, run GPU benchmarks, claim speedups, run broad experiments, process raw
+data, expand the website, activate the canonical corpus, finalise page boundaries, or make solve
+claims. Stage 5E first CUDA kernel contract and CPU/native parity adapter selection is next.
 
 ## Stage 4G - Cookie exact-candidate refresh
 

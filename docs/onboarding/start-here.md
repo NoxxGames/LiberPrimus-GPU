@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5C - CUDA build and device-detection scaffold.
-- Next planned stage: Stage 5D - native C++ CPU batch backend and deterministic threading baseline.
+- Latest completed stage: Stage 5D - native C++ CPU batch backend and deterministic threading baseline.
+- Next planned stage: Stage 5E - first CUDA kernel contract and CPU/native parity adapter selection.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

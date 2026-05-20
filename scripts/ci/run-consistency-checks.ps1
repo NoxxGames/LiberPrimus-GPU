@@ -334,6 +334,60 @@ try {
         --summary $Stage5CSummary `
         --results-dir $Stage5COut
 
+    Write-Host "Running Stage 5D native CPU backend synthetic/temp output"
+    $Stage5DOut = Join-Path $TempDir "stage5d-native-cpu"
+    $Stage5DFakeNative = Join-Path $TempDir "stage5d-fake-native.py"
+    $Stage5DCapabilities = Join-Path $TempDir "stage5d-native-cpu-backend-capabilities.yaml"
+    $Stage5DThreading = Join-Path $TempDir "stage5d-native-cpu-threading-records.yaml"
+    $Stage5DParity = Join-Path $TempDir "stage5d-native-cpu-parity-records.yaml"
+    $Stage5DDiagnostics = Join-Path $TempDir "stage5d-native-cpu-diagnostic-records.yaml"
+    $Stage5DSummary = Join-Path $TempDir "stage5d-native-cpu-summary.yaml"
+    @"
+import json
+import sys
+from libreprimus.native_cpu.runner import python_reference_run
+thread_count = 1
+for index, arg in enumerate(sys.argv):
+    if arg == "--threads" and index + 1 < len(sys.argv):
+        thread_count = int(sys.argv[index + 1])
+json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True)
+"@ | Set-Content -Encoding UTF8 $Stage5DFakeNative
+    & $Python -m libreprimus.cli native-cpu run-smoke `
+        --native-executable $Stage5DFakeNative `
+        --manifest experiments/manifests/native-cpu/stage5d-native-cpu-smoke.yaml `
+        --out-dir $Stage5DOut `
+        --capabilities-out $Stage5DCapabilities `
+        --diagnostics-out $Stage5DDiagnostics `
+        --allow-warnings
+    & $Python -m libreprimus.cli native-cpu check-threading-parity `
+        --native-executable $Stage5DFakeNative `
+        --manifest experiments/manifests/native-cpu/stage5d-native-cpu-threading-parity.yaml `
+        --out-dir $Stage5DOut `
+        --threading-out $Stage5DThreading `
+        --thread-counts 1,2,4 `
+        --allow-warnings
+    & $Python -m libreprimus.cli native-cpu check-python-parity `
+        --native-executable $Stage5DFakeNative `
+        --manifest experiments/manifests/native-cpu/stage5d-native-python-parity.yaml `
+        --out-dir $Stage5DOut `
+        --parity-out $Stage5DParity `
+        --allow-warnings
+    & $Python -m libreprimus.cli native-cpu build-summary `
+        --capabilities $Stage5DCapabilities `
+        --threading $Stage5DThreading `
+        --parity $Stage5DParity `
+        --diagnostics $Stage5DDiagnostics `
+        --summary-out $Stage5DSummary `
+        --out-dir $Stage5DOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli native-cpu validate-stage5d `
+        --capabilities $Stage5DCapabilities `
+        --threading $Stage5DThreading `
+        --parity $Stage5DParity `
+        --diagnostics $Stage5DDiagnostics `
+        --summary $Stage5DSummary `
+        --results-dir $Stage5DOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

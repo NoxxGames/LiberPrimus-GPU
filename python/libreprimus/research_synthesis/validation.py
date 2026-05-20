@@ -196,8 +196,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 5d", "native c++ cpu batch backend", "deterministic threading baseline", "next"),
-            "staged_plan_stage5d_native_cpp_cpu_backend_next",
+            ("stage 5d", "native c++ cpu batch backend", "deterministic threading baseline", "complete"),
+            "staged_plan_stage5d_native_cpp_cpu_backend_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5e", "first cuda kernel contract", "cpu/native parity adapter selection", "next"),
+            "staged_plan_stage5e_first_cuda_kernel_contract_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -405,8 +411,16 @@ def validate_research_synthesis(
         next_text = str(cuda_build.get("next_action", "")).lower()
         if "kernel" not in stop_text or "gpu benchmark" not in stop_text or "speedup" not in stop_text:
             errors.append("cuda_build_device_detection_missing_no_kernel_guardrail")
-        if "stage 5d" not in next_text or "native c++ cpu" not in next_text:
-            errors.append("cuda_build_device_detection_missing_stage5d_next_action")
+        if "stage 5d" not in next_text and "stage 5e" not in next_text:
+            errors.append("cuda_build_device_detection_missing_stage5d_or_stage5e_next_action")
+
+    native_cpu = _find_method(method_records, "native_cpp_cpu_backend")
+    if native_cpu is None:
+        errors.append("native_cpp_cpu_backend_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in native_cpu.get("stop_conditions", []))
+        if "cuda kernel" not in stop_text or "python worker" not in stop_text or "speedup" not in stop_text:
+            errors.append("native_cpp_cpu_backend_missing_backend_guardrail")
 
     cookie = _find_method(method_records, "cookie_hash_sha256_packs")
     if cookie is None:

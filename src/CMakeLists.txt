@@ -4,6 +4,7 @@ add_subdirectory(gematria)
 add_subdirectory(ciphers)
 add_subdirectory(scoring)
 add_subdirectory(search)
+add_subdirectory(native_cpu)
 add_subdirectory(report)
 add_subdirectory(sqlite)
 

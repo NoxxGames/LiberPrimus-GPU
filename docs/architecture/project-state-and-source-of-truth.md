@@ -2,14 +2,14 @@
 
 ## Current Reviewed State
 
-Stage 3V is complete; Stage 3W through Stage 3Z are complete. Stage 4A through Stage 4Q are complete. The next planned stage is Stage 5A CUDA planning and parity scaffolding only. Website expansion is deferred to Stage 6.
+Stage 3V is complete; Stage 3W through Stage 3Z are complete. Stage 4A through Stage 4Q are complete. Stage 5A through Stage 5D are complete. The next planned stage is Stage 5E first CUDA kernel contract and CPU/native parity adapter selection. Website expansion is deferred to Stage 6.
 
 The current safety posture is:
 
 - No solve claim is made.
 - The canonical corpus is inactive.
 - Page boundaries are reviewable, not final.
-- CUDA is deferred until CPU references, scorer definitions, batch APIs, observation review workflow, promotion-ledger records, image-preflight controls, positive-control readiness, Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, parity tests, and explicit Stage 5 scope exist.
+- CUDA is deferred until CPU references, scorer definitions, batch APIs, observation review workflow, promotion-ledger records, image-preflight controls, positive-control readiness, Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, Stage 5A planning records, Stage 5B harness records, Stage 5C build/device records, Stage 5D native CPU parity records, parity tests, and explicit Stage 5 implementation scope exist.
 - Broad unsolved-page campaigns are not started.
 - Raw data, generated outputs, SQLite databases, raw Discord logs, raw page images, raw historical stego artefacts, and extracted payloads are not committed.
 
