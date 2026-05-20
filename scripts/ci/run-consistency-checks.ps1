@@ -470,6 +470,41 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5FSummary `
         --results-dir $Stage5FOut
 
+    Write-Host "Running Stage 5G CUDA parity reporting no-GPU-safe/temp output"
+    $Stage5GOut = Join-Path $TempDir "stage5g-cuda-parity-reporting"
+    $Stage5GParityReport = Join-Path $TempDir "stage5g-shift-score-parity-report.yaml"
+    $Stage5GDeviceAudit = Join-Path $TempDir "stage5g-cuda-device-code-subset-audit.yaml"
+    $Stage5GPreflight = Join-Path $TempDir "stage5g-solved-fixture-safe-adapter-preflight.yaml"
+    $Stage5GSummary = Join-Path $TempDir "stage5g-cuda-parity-reporting-summary.yaml"
+    & $Python -m libreprimus.cli cuda-parity-reporting build-parity-report `
+        --manifest experiments/manifests/cuda/stage5g-shift-score-parity-reporting.yaml `
+        --out-dir $Stage5GOut `
+        --parity-report-out $Stage5GParityReport `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-parity-reporting audit-device-code-subset `
+        --manifest experiments/manifests/cuda/stage5g-device-code-subset-audit.yaml `
+        --out-dir $Stage5GOut `
+        --device-code-audit-out $Stage5GDeviceAudit `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-parity-reporting build-solved-fixture-preflight `
+        --manifest experiments/manifests/cuda/stage5g-solved-fixture-safe-adapter-preflight.yaml `
+        --out-dir $Stage5GOut `
+        --preflight-out $Stage5GPreflight `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-parity-reporting build-summary `
+        --parity-report $Stage5GParityReport `
+        --device-code-audit $Stage5GDeviceAudit `
+        --preflight $Stage5GPreflight `
+        --summary-out $Stage5GSummary `
+        --out-dir $Stage5GOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-parity-reporting validate-stage5g `
+        --parity-report $Stage5GParityReport `
+        --device-code-audit $Stage5GDeviceAudit `
+        --preflight $Stage5GPreflight `
+        --summary $Stage5GSummary `
+        --results-dir $Stage5GOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

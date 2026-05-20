@@ -1,30 +1,36 @@
 #pragma once
 
-#include <string>
-#include <vector>
-
 namespace libreprimus {
 
-struct ShiftScoreSyntheticRecord {
-    int candidate_index;
-    std::string candidate_id;
-    int shift;
-    std::string output_text;
-    std::string output_hash;
-    std::string record_hash;
+enum {
+    kShiftScoreSyntheticFixtureLength = 25,
+    kShiftScoreSyntheticCandidateCount = 6,
+    kShiftScoreSyntheticCandidateIdCapacity = 32,
+    kShiftScoreSyntheticKernelIdCapacity = 32,
+    kShiftScoreSyntheticFixtureIdCapacity = 64,
+    kShiftScoreSyntheticHashCapacity = 65
 };
 
-struct ShiftScoreSyntheticRun {
-    std::string kernel_id;
-    std::string fixture_id;
+struct ShiftScoreSyntheticRawRecord {
+    int candidate_index;
+    char candidate_id[kShiftScoreSyntheticCandidateIdCapacity];
+    int shift;
+    char output_text[kShiftScoreSyntheticFixtureLength + 1];
+    char output_hash[kShiftScoreSyntheticHashCapacity];
+    char record_hash[kShiftScoreSyntheticHashCapacity];
+};
+
+struct ShiftScoreSyntheticRawRun {
+    char kernel_id[kShiftScoreSyntheticKernelIdCapacity];
+    char fixture_id[kShiftScoreSyntheticFixtureIdCapacity];
     int candidate_count;
     int result_count;
-    std::string output_hash;
-    std::vector<ShiftScoreSyntheticRecord> records;
+    char output_hash[kShiftScoreSyntheticHashCapacity];
+    ShiftScoreSyntheticRawRecord records[kShiftScoreSyntheticCandidateCount];
 };
 
-ShiftScoreSyntheticRun run_shift_score_synthetic_fixture();
+int run_shift_score_synthetic_fixture_raw(ShiftScoreSyntheticRawRun* output);
 
-std::string shift_score_synthetic_output_hash();
+const char* shift_score_synthetic_expected_output_hash();
 
 }  // namespace libreprimus

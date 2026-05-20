@@ -491,5 +491,13 @@ experiments/results/cuda-kernel/**
 !experiments/results/cuda-kernel/stage5f/
 !experiments/results/cuda-kernel/stage5f/.gitkeep
 
+# Generated CUDA parity reporting outputs
+experiments/results/cuda-parity-reporting/**
+!experiments/results/cuda-parity-reporting/
+!experiments/results/cuda-parity-reporting/README.md
+!experiments/results/cuda-parity-reporting/.gitkeep
+!experiments/results/cuda-parity-reporting/stage5g/
+!experiments/results/cuda-parity-reporting/stage5g/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

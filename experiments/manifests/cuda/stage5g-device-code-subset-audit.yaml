@@ -1,0 +1,17 @@
+manifest_id: stage5g-device-code-subset-audit
+stage_id: stage-5g
+manifest_type: cuda_device_code_subset_audit
+selected_kernel_id: shift_score_kernel
+source_paths:
+- cuda/include/libreprimus/cuda_smoke.cuh
+- cuda/include/libreprimus/shift_score_kernel.cuh
+- cuda/kernels/cuda_smoke.cu
+- cuda/kernels/shift_score_kernel.cu
+policy: conservative_cuda_c_subset
+cuda_required: false
+gpu_required: false
+no_gpu_ci_safe: true
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+no_solve_claim: true

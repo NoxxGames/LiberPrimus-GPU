@@ -96,6 +96,10 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/cuda-kernel-build-record-v0.schema.json",
     "cuda/cuda-synthetic-parity-run-record-v0.schema.json",
     "cuda/stage5f-synthetic-cuda-kernel-summary-v0.schema.json",
+    "cuda/cuda-shift-score-parity-report-record-v0.schema.json",
+    "cuda/cuda-device-code-subset-audit-record-v0.schema.json",
+    "cuda/cuda-solved-fixture-safe-preflight-record-v0.schema.json",
+    "cuda/stage5g-cuda-parity-reporting-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -169,6 +173,10 @@ EXPECTED_DOC_TERMS = [
     "cuda-kernel-build-record-v0",
     "cuda-synthetic-parity-run-record-v0",
     "stage5f-synthetic-cuda-kernel-summary-v0",
+    "cuda-shift-score-parity-report-record-v0",
+    "cuda-device-code-subset-audit-record-v0",
+    "cuda-solved-fixture-safe-preflight-record-v0",
+    "stage5g-cuda-parity-reporting-summary-v0",
 ]
 
 

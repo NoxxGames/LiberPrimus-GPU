@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5F - first synthetic-only CUDA parity kernel implementation.
-- Next planned stage: Stage 5G - shift_score CUDA parity reporting and solved-fixture-safe adapter preflight.
+- Latest completed stage: Stage 5G - shift_score CUDA parity reporting and solved-fixture-safe adapter preflight.
+- Next planned stage: Stage 5H - Gematria mod-29 shift_score contract and native parity fixture preparation.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

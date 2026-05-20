@@ -1,0 +1,19 @@
+manifest_id: stage5g-solved-fixture-safe-adapter-preflight
+stage_id: stage-5g
+manifest_type: cuda_solved_fixture_safe_adapter_preflight
+selected_kernel_id: shift_score_kernel
+current_stage5f_kernel_scope: synthetic_uppercase_latin_only
+production_gematria_mod29_cuda_ready: false
+solved_fixture_cuda_execution_allowed: false
+recommended_next_stage: Stage 5H - Gematria mod-29 shift_score contract and native parity fixture preparation
+cuda_required: false
+gpu_required: false
+no_gpu_ci_safe: true
+synthetic_only: true
+real_liber_primus_data_used: false
+solved_fixture_cuda_used: false
+unsolved_page_cuda_used: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+no_solve_claim: true

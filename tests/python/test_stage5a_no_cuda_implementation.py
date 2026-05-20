@@ -14,6 +14,7 @@ def test_stage5a_does_not_modify_cuda_sources() -> None:
     allowed_stage5f_changes = {
         "cuda/CMakeLists.txt",
         "cuda/include/libreprimus/shift_score_kernel.cuh",
+        "cuda/kernels/cuda_smoke.cu",
         "cuda/kernels/shift_score_kernel.cu",
         "cuda/tests/CMakeLists.txt",
         "cuda/tests/shift_score_kernel_test.cpp",

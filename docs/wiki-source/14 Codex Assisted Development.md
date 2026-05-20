@@ -44,6 +44,7 @@ Use Codex safely for scoped repository stages.
 - For Stage 5D-style native CPU backend work, require C++ CPU-only backend tests, deterministic threading parity, native/Python parity, generated ignored outputs, no CUDA source changes, no GPU benchmarks, no speedup claims, no C++ Python worker launches, no website expansion, no raw-data reads, and no solve claim.
 - For Stage 5E-style CUDA kernel contract work, require selected-contract records, native parity adapter mapping, implementation-readiness records, generated ignored outputs, no CUDA source changes, no GPU benchmarks, no speedup claims, no website expansion, no raw-data reads, and no solve claim.
 - For Stage 5F-style synthetic CUDA kernel work, require the selected `shift_score_kernel` contract, Stage 5D native hash, synthetic-only records, no-GPU-safe validation, no real Liber Primus CUDA data, no GPU benchmarks, no speedup claims, no website expansion, no raw-data reads, and no solve claim.
+- For Stage 5G-style CUDA parity reporting work, require Stage 5F synthetic parity records, conservative CUDA-C `.cu`/`.cuh` subset checks, solved-fixture-safe blockers, no-GPU-safe validation, no new kernels, no real Liber Primus CUDA data, no GPU benchmarks, no speedup claims, no website expansion, no raw-data reads, and no solve claim.
 
 ## Commands
 
@@ -146,4 +147,4 @@ If Codex changes CLI registration, verify `python -m libreprimus.cli --help`, se
 
 Stage 4Q writes a local completion handoff under `codex-output/`. That directory is ignored and must not be staged. The committed source of truth is the Stage 4Q code, schemas, manifests, docs, and aggregate records under `data/`.
 
-When using Codex for Stage 5G, cite the Stage 5F synthetic `shift_score_kernel` parity records, Stage 5E selected contract, Stage 4O CPU batch parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark plans, Stage 5A target-plan/scaffold/gate records, Stage 5B harness/backend/matrix records, Stage 5C build/device records, and Stage 5D native CPU backend/threading records. Do not let synthetic-only kernel reporting turn into broad CUDA implementation or GPU benchmarking without an explicit prompt.
+When using Codex for Stage 5H, cite the Stage 5G parity-reporting/device-code audit records, Stage 5F synthetic `shift_score_kernel` parity records, Stage 5E selected contract, Stage 4O CPU batch parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark plans, Stage 5A target-plan/scaffold/gate records, Stage 5B harness/backend/matrix records, Stage 5C build/device records, and Stage 5D native CPU backend/threading records. Do not let synthetic-only kernel reporting turn into broad CUDA implementation or GPU benchmarking without an explicit prompt.

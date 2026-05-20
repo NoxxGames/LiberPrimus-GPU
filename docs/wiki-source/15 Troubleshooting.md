@@ -50,6 +50,7 @@ git check-ignore -v experiments/results/cuda-kernel/stage5f/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
+git check-ignore -v codex-output/stage5g-codex-completion.md
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -196,8 +197,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 5F, onboarding and staged-plan checks should show Stage 5F complete and Stage 5G
-shift_score CUDA parity reporting and solved-fixture-safe adapter preflight next.
+After Stage 5G, onboarding and staged-plan checks should show Stage 5G complete and Stage 5H
+Gematria mod-29 shift_score contract and native parity fixture preparation next.
 
 If path sanitisation fails, run:
 

@@ -94,6 +94,12 @@ build/validate/summary checks, validation rejections for real Liber Primus data,
 performance/speedup, generated-output, and solve-claim drift, and ignored-output/codex-output checks
 for `experiments/results/cuda-kernel/stage5f/` and `codex-output/`.
 
+Stage 5G extends coverage with CUDA parity-reporting schemas, no-GPU-safe report builders,
+device-code subset audit checks, solved-fixture-safe preflight blockers, CLI
+build/validate/summary checks, validation rejections for real Liber Primus data, benchmarking,
+performance/speedup, generated-output, and solve-claim drift, and ignored-output/codex-output checks
+for `experiments/results/cuda-parity-reporting/stage5g/` and `codex-output/`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.
@@ -674,3 +680,20 @@ Stage 5B validation uses:
 - `libreprimus cuda-parity summary`
 
 The consistency scripts also build Stage 5B temp outputs in a raw-data-free location. Tests must not require CUDA hardware, modify `.cu` or `.cuh` files, add transform kernels, run GPU benchmarks, make performance or speedup claims, commit generated CUDA parity reports, process raw data, or publish `codex-output/**`.
+
+# Stage 5G Validation
+
+Stage 5G validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli cuda-parity-reporting validate-stage5g `
+  --parity-report data/cuda/stage5g-shift-score-parity-report.yaml `
+  --device-code-audit data/cuda/stage5g-cuda-device-code-subset-audit.yaml `
+  --preflight data/cuda/stage5g-solved-fixture-safe-adapter-preflight.yaml `
+  --summary data/cuda/stage5g-cuda-parity-reporting-summary.yaml `
+  --results-dir experiments/results/cuda-parity-reporting/stage5g
+```
+
+The consistency scripts also build Stage 5G temp outputs in a raw-data-free, no-GPU-safe location.
+Tests must not require CUDA hardware, add transform kernels, run GPU benchmarks, make speedup
+claims, commit generated CUDA parity reports, process raw data, or publish `codex-output/**`.

@@ -24,3 +24,7 @@ reference. Stage 5E cites that baseline when selecting the `shift_score_kernel` 
 Stage 5F preserves it for the synthetic CUDA parity kernel. Future
 CUDA kernel work must cite the Stage 5D native output hash, threading parity
 records, and native/Python parity record before selecting an adapter for implementation.
+
+Stage 5G adds a reporting layer over the Stage 5F synthetic hash and records blockers for
+solved-fixture-safe adapter work. Stage 5H must prepare the Gematria mod-29 native fixture contract
+before the native backend is used as a solved-fixture CUDA reference.

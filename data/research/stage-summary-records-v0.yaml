@@ -599,3 +599,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5F recorded 1 implementation record, 1 build record, 1 parity record, and 1 summary record; local optional CUDA build/parity passed for the synthetic fixture, generated reports remain ignored, and no real Liber Primus CUDA data, GPU benchmark, speedup claim, raw-data processing, website expansion, canonical-corpus activation, page-boundary finalisation, or solve claim was added.
+  - record_type: stage_summary_record
+    stage_id: stage-5g
+    title: shift_score CUDA parity reporting and solved-fixture-safe adapter preflight
+    status: complete
+    category: infrastructure
+    summary: Reported Stage 5F synthetic CUDA/native parity, hardened CUDA-facing source toward a conservative CUDA-C subset, and recorded solved-fixture-safe adapter preflight blockers without adding new kernels or widening execution.
+    key_outputs:
+      - "`libreprimus cuda-parity-reporting` commands for parity report generation, CUDA device-code subset audit, solved-fixture-safe preflight, summary generation, validation, and summary display."
+      - Stage 5G parity report, device-code audit, solved-fixture-safe preflight, and summary records under `data/cuda/`.
+      - CUDA-facing source refactor preserving the Stage 5F synthetic hash while removing STL/convenience C++ from `.cu`/`.cuh` device paths.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5G recorded 1 parity report, 1 device-code subset audit, 1 solved-fixture-safe preflight record, and 1 summary record; CUDA/native hash match remains true for `76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66`, generated reports remain ignored, and no new CUDA kernel, GPU benchmark, speedup claim, real Liber Primus CUDA data use, raw-data processing, website expansion, canonical-corpus activation, page-boundary finalisation, or solve claim was added.

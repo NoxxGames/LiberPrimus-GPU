@@ -22,3 +22,7 @@ canonical corpus, finalise page boundaries, or make solve claims.
 
 The Stage 5F implementation remains synthetic-only and inherits the same guardrails. It does not
 turn the contract into broad CUDA execution or production Gematria mod-29 semantics.
+
+Stage 5G reports the Stage 5F synthetic hash match and records conservative CUDA-C device-code
+subset compliance. It does not change the selected contract into solved-fixture-safe or production
+Gematria CUDA work.

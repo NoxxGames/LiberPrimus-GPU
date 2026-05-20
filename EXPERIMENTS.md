@@ -848,3 +848,15 @@ summary. Generated Stage 5F kernel reports remain ignored under
 Do not run real Liber Primus page data, solved-page data, unsolved-page campaigns, GPU benchmarks,
 performance comparisons, broad searches, raw-data processing, website expansion, canonical corpus
 activation, page-boundary finalisation, or solve claims through Stage 5F records.
+
+# Stage 5G CUDA Parity Reporting Boundary
+
+Stage 5G is not a cryptanalytic experiment and not a broad CUDA implementation stage. It reports
+the Stage 5F synthetic CUDA/native parity hash, audits CUDA-facing `.cu`/`.cuh` files for a
+conservative CUDA-C subset, and records solved-fixture-safe adapter blockers.
+
+Generated Stage 5G reports remain ignored under
+`experiments/results/cuda-parity-reporting/stage5g/`. Do not run real Liber Primus page data,
+solved-page data, unsolved-page campaigns, GPU benchmarks, broad searches, raw-data processing,
+website expansion, canonical corpus activation, page-boundary finalisation, or solve claims
+through Stage 5G records.

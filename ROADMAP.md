@@ -4,9 +4,9 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5F first synthetic-only CUDA parity kernel implementation is complete. The stage implemented only the selected `shift_score_kernel` contract for the Stage 5D synthetic uppercase-shift fixture, recorded no-GPU-safe build/parity metadata, and matched the Stage 5D native reference hash without real Liber Primus CUDA data use, GPU benchmarking, broad experiment execution, website expansion, or performance claims.
+Stage 5G shift_score CUDA parity reporting and solved-fixture-safe adapter preflight is complete. The stage reports the Stage 5F `shift_score_kernel` synthetic CUDA/native hash match, verifies CUDA-facing `.cu`/`.cuh` source against a conservative CUDA-C subset, records solved-fixture-safe blockers, and preserves no-GPU-safe validation without new kernels, real Liber Primus CUDA data use, GPU benchmarking, broad experiment execution, website expansion, or performance claims.
 
-The next planned stage is Stage 5G: shift_score CUDA parity reporting and solved-fixture-safe adapter preflight. Website expansion is deferred to Stage 6. Broad CUDA implementation remains deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next planned stage is Stage 5H: Gematria mod-29 shift_score contract and native parity fixture preparation. Website expansion is deferred to Stage 6. Broad CUDA implementation remains deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.
@@ -25,7 +25,7 @@ records, Stage 4N recorded OutGuess/audio positive-control readiness, Stage 4O e
 batch adapter coverage, Stage 4P unified result-store/score-summary reporting, Stage 4Q
 recorded CPU benchmark and parity planning, Stage 5A recorded CUDA planning and parity scaffolding,
 Stage 5B recorded the CUDA parity harness skeleton, Stage 5C recorded CUDA build/device-detection
-metadata, Stage 5D recorded native C++ CPU backend/threading parity, Stage 5E selected the first future CUDA kernel contract, and Stage 5F implemented the first synthetic-only CUDA parity kernel before Stage 5G reporting/preflight work.
+metadata, Stage 5D recorded native C++ CPU backend/threading parity, Stage 5E selected the first future CUDA kernel contract, Stage 5F implemented the first synthetic-only CUDA parity kernel, and Stage 5G completed parity reporting plus CUDA-facing source hardening before Stage 5H Gematria contract preparation.
 
 ## Phase 0A - Project bootstrap
 
@@ -416,8 +416,22 @@ Generated reports remain ignored under `experiments/results/cuda-kernel/stage5f/
 `codex-output/` handoff files remain ignored. Stage 5F does not run real Liber Primus data through
 CUDA, run solved or unsolved page CUDA transforms, run GPU benchmarks, claim speedups, run broad
 experiments, process raw data, expand the website, activate the canonical corpus, finalise page
-boundaries, or make solve claims. Stage 5G shift_score CUDA parity reporting and solved-fixture-safe
-adapter preflight is next.
+boundaries, or make solve claims.
+
+## Stage 5G - shift_score CUDA parity reporting and solved-fixture-safe adapter preflight
+
+Stage 5G is complete. It records one shift_score parity report, one CUDA device-code subset audit,
+one solved-fixture-safe adapter preflight record, and one aggregate summary under `data/cuda/`.
+The Stage 5F native/CUDA synthetic hash remains
+`76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66`.
+
+Stage 5G refactors CUDA-facing `.cu` and `.cuh` code away from STL, exceptions, dynamic allocation,
+and host convenience types at the kernel boundary. Generated reports remain ignored under
+`experiments/results/cuda-parity-reporting/stage5g/`, and `codex-output/` handoff files remain
+ignored. Stage 5G does not add new CUDA kernels, run real Liber Primus data, run solved or unsolved
+page CUDA transforms, run GPU benchmarks, claim speedups, process raw data, expand the website,
+activate the canonical corpus, finalise page boundaries, or make solve claims. Stage 5H Gematria
+mod-29 shift_score contract and native parity fixture preparation is next.
 
 ## Stage 4G - Cookie exact-candidate refresh
 

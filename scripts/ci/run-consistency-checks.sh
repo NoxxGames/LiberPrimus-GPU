@@ -418,6 +418,36 @@ echo "Running Stage 5F synthetic CUDA kernel no-GPU-safe/temp output"
     --summary "$tmp_dir/stage5f-cuda-synthetic-kernel-summary.yaml" \
     --results-dir "$tmp_dir/stage5f-cuda-kernel"
 
+echo "Running Stage 5G CUDA parity reporting no-GPU-safe/temp output"
+"$python_bin" -m libreprimus.cli cuda-parity-reporting build-parity-report \
+    --manifest experiments/manifests/cuda/stage5g-shift-score-parity-reporting.yaml \
+    --out-dir "$tmp_dir/stage5g-cuda-parity-reporting" \
+    --parity-report-out "$tmp_dir/stage5g-shift-score-parity-report.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-parity-reporting audit-device-code-subset \
+    --manifest experiments/manifests/cuda/stage5g-device-code-subset-audit.yaml \
+    --out-dir "$tmp_dir/stage5g-cuda-parity-reporting" \
+    --device-code-audit-out "$tmp_dir/stage5g-cuda-device-code-subset-audit.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-parity-reporting build-solved-fixture-preflight \
+    --manifest experiments/manifests/cuda/stage5g-solved-fixture-safe-adapter-preflight.yaml \
+    --out-dir "$tmp_dir/stage5g-cuda-parity-reporting" \
+    --preflight-out "$tmp_dir/stage5g-solved-fixture-safe-adapter-preflight.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-parity-reporting build-summary \
+    --parity-report "$tmp_dir/stage5g-shift-score-parity-report.yaml" \
+    --device-code-audit "$tmp_dir/stage5g-cuda-device-code-subset-audit.yaml" \
+    --preflight "$tmp_dir/stage5g-solved-fixture-safe-adapter-preflight.yaml" \
+    --summary-out "$tmp_dir/stage5g-cuda-parity-reporting-summary.yaml" \
+    --out-dir "$tmp_dir/stage5g-cuda-parity-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-parity-reporting validate-stage5g \
+    --parity-report "$tmp_dir/stage5g-shift-score-parity-report.yaml" \
+    --device-code-audit "$tmp_dir/stage5g-cuda-device-code-subset-audit.yaml" \
+    --preflight "$tmp_dir/stage5g-solved-fixture-safe-adapter-preflight.yaml" \
+    --summary "$tmp_dir/stage5g-cuda-parity-reporting-summary.yaml" \
+    --results-dir "$tmp_dir/stage5g-cuda-parity-reporting"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

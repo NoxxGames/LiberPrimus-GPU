@@ -22,3 +22,10 @@ transforms, run GPU benchmarks, make performance or speedup claims, process raw 
 generated outputs, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 No-GPU CI remains valid. Local CUDA builds and synthetic parity runs are optional metadata.
+
+## Stage 5G Reporting
+
+Stage 5G records this synthetic parity result in `data/cuda/stage5g-shift-score-parity-report.yaml`
+and preserves the same reference hash. It also hardens CUDA-facing `.cu`/`.cuh` source toward a
+conservative CUDA-C subset and keeps solved-fixture CUDA execution blocked until a later contract
+stage.

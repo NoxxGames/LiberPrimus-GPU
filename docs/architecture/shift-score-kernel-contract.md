@@ -23,3 +23,10 @@ reference hash for the synthetic fixture. Skipped no-GPU records are valid for C
 passes.
 
 Future solved-fixture or production work must use a later explicit stage with new records and tests.
+
+## Stage 5G Preflight
+
+Stage 5G keeps the contract synthetic-only while reporting the Stage 5F hash match and auditing the
+CUDA-facing ABI. Solved-fixture-safe execution remains blocked until Stage 5H defines the Gematria
+mod-29 contract, native fixture preparation, score-summary expectations, and no-real-data
+guardrails.
