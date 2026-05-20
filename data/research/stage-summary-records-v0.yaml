@@ -503,3 +503,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 4Q wrote 5 benchmark plan records, 14 parity readiness records, 3 CPU smoke records, marked 9 future CUDA targets ready for planning, blocked 2, skipped 3 non-CUDA targets, and made no performance claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5a
+    title: CUDA planning and parity scaffolding
+    status: complete
+    category: infrastructure
+    summary: Converted Stage 4Q CUDA readiness into explicit planning-only target records, non-target records, parity scaffold records, and implementation gates without adding CUDA source or running GPU benchmarks.
+    key_outputs:
+      - "`libreprimus cuda-planning` commands for target plans, parity scaffolds, implementation gates, validation, and summary."
+      - Stage 5A target-plan, non-target, parity-scaffold, implementation-gate, and aggregate summary records under `data/cuda/`.
+      - Documentation and consistency checks that keep CUDA implementation, GPU benchmarking, speedup claims, broad campaigns, website expansion, and raw-data processing out of Stage 5A scope.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5A wrote 14 CUDA target-plan records, 9 ready planning targets, 2 blocked targets, 8 explicit non-target records, 9 parity scaffold records, and 10 satisfied implementation gates; Stage 5B is the next CUDA parity harness skeleton stage.

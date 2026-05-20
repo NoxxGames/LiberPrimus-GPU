@@ -177,7 +177,7 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 4Q, onboarding and staged-plan checks should show Stage 4Q complete and Stage 5A CUDA
+After Stage 5A, onboarding and staged-plan checks should show Stage 5A complete and Stage 5B CUDA
 planning and parity scaffolding only next.
 
 If path sanitisation fails, run:

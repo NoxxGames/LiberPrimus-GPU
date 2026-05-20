@@ -793,3 +793,9 @@ Stage 4I is infrastructure only. It does not run a new cryptanalytic experiment,
 Stage 4Q is not an experiment execution stage. It adds benchmark planning records, future CUDA parity readiness records, and tiny CPU-only smoke diagnostics. Generated Stage 4Q diagnostics remain ignored under `experiments/results/benchmarks/stage4q/`.
 
 Do not use Stage 4Q smoke timings as performance evidence. Do not implement CUDA, run GPU benchmarks, broaden search, process raw data, activate the canonical corpus, finalise page boundaries, or claim a solve from benchmark-planning records.
+
+# Stage 5A CUDA Planning Boundary
+
+Stage 5A is not an experiment execution stage. It adds CUDA target-plan records, explicit non-target records, parity scaffold records, and implementation-gate records. Generated Stage 5A planning reports remain ignored under `experiments/results/cuda-planning/stage5a/`.
+
+Do not use Stage 5A planning readiness as execution approval. Do not add or modify CUDA source, run GPU benchmarks, claim speedups, broaden search, process raw data, activate the canonical corpus, finalise page boundaries, or claim a solve from CUDA planning records.

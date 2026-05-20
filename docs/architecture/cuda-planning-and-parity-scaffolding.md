@@ -1,0 +1,24 @@
+# CUDA Planning And Parity Scaffolding
+
+Stage 5A is a planning-only CUDA boundary. It converts Stage 4Q CUDA parity readiness into target-plan records, non-target records, parity scaffold records, and implementation gates.
+
+No CUDA source, GPU kernel, GPU benchmark, speedup claim, raw-data processing, broad experiment, canonical corpus activation, page-boundary finalisation, or solve claim is part of Stage 5A.
+
+The planning chain is:
+
+- Stage 4O supplies CPU batch parity expectations and deterministic output hashes.
+- Stage 4P supplies unified result surfaces for cross-stage score/status comparison.
+- Stage 4Q supplies CPU benchmark planning and CUDA parity readiness.
+- Stage 5A records which targets are ready for planning, blocked, or out of CUDA scope.
+
+Future CUDA work must cite the Stage 5A records before adding a harness or implementation. Planning readiness is not execution readiness.
+
+## Committed Records
+
+- `data/cuda/stage5a-cuda-target-plan.yaml`
+- `data/cuda/stage5a-cuda-non-targets.yaml`
+- `data/cuda/stage5a-cuda-parity-scaffold.yaml`
+- `data/cuda/stage5a-cuda-implementation-gates.yaml`
+- `data/cuda/stage5a-cuda-planning-summary.yaml`
+
+Generated JSON reports remain ignored under `experiments/results/cuda-planning/stage5a/`.

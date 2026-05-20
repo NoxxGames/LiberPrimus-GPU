@@ -1,0 +1,26 @@
+manifest_id: stage5a-cuda-target-plan
+stage_id: stage-5a
+description: Planning-only CUDA target classification from Stage 4Q readiness records.
+cuda_planning_only: true
+cuda_implementation_added: false
+cuda_kernel_added: false
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+broad_experiment_executed: false
+raw_data_processed: false
+execution_enabled: false
+cuda_execution_enabled: false
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+inputs:
+  - data/benchmarks/stage4q-cuda-parity-readiness.yaml
+  - data/research/stage4o-cpu-batch-adapter-expansion-summary.yaml
+  - data/research/stage4p-result-store-score-summary-unification-summary.yaml
+optional_generated_inputs:
+  - experiments/results/cpu-batch/stage4o/parity_expectations.jsonl
+  - experiments/results/result-store-unification/stage4p/unified_result_records.jsonl

@@ -22,7 +22,9 @@ Stage 4P records a unified result surface over CPU batch outputs, score summarie
 
 ## Deferred CUDA State
 
-CUDA remains deferred. Stage 5A is CUDA planning and parity scaffolding only. Existing CUDA code is smoke/scaffold infrastructure unless a future explicit stage adds CPU/GPU parity tests, benchmark plans, and gated kernels.
+CUDA remains deferred. Stage 5A CUDA planning and parity scaffolding is complete; Stage 5B is the next CUDA parity harness skeleton. Existing CUDA code is smoke/scaffold infrastructure unless a future explicit stage adds CPU/GPU parity tests, benchmark plans, and gated kernels.
+
+Stage 5A converts Stage 4O, Stage 4P, and Stage 4Q references into explicit CUDA target-plan and parity scaffold records. Readiness means a future harness can be planned; it does not mean a CUDA implementation exists or may be benchmarked.
 
 ## Non-Targets
 

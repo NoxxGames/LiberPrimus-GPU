@@ -443,5 +443,13 @@ experiments/results/result-store-unification/**
 # Generated benchmark planning outputs
 experiments/results/benchmarks/**
 
+# Generated CUDA planning outputs
+experiments/results/cuda-planning/**
+!experiments/results/cuda-planning/
+!experiments/results/cuda-planning/README.md
+!experiments/results/cuda-planning/.gitkeep
+!experiments/results/cuda-planning/stage5a/
+!experiments/results/cuda-planning/stage5a/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

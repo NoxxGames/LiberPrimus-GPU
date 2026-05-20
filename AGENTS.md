@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4Q - CPU benchmark and parity planning.
+Current completed stage: Stage 5A - CUDA planning and parity scaffolding.
 
-Current work: Stage 5A - CUDA planning and parity scaffolding only. Stage 5A may cite Stage 4Q benchmark/parity records, but CUDA implementation, GPU benchmarking, speedup claims, broad search, raw-data processing, canonical corpus activation, page-boundary finalisation, and solve claims remain prohibited unless explicitly scoped by a later stage.
+Current work: Stage 5B - CUDA parity harness skeleton. Stage 5B may cite Stage 5A target, scaffold, gate, and non-target records, but CUDA implementation, GPU benchmarking, speedup claims, broad search, raw-data processing, canonical corpus activation, page-boundary finalisation, and solve claims remain prohibited unless explicitly scoped by a later stage.
 
 Current project state:
 
@@ -692,6 +692,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Blocked/deferred adapters must remain blocked until stable CPU-batch contracts exist.
 - Cookie/hash, stego/audio, image/compression, and bigram records are non-CUDA transform targets unless a later stage explicitly re-scopes them.
 - Generated benchmark records and `codex-output/**` completion handoffs remain ignored and must not be staged.
+
+## Stage 5A CUDA Planning Parity Scaffolding Rules
+
+- Stage 5A CUDA target-plan and scaffold records are planning metadata, not CUDA execution approval.
+- Do not add or modify CUDA source, `.cu`, or `.cuh` files during planning/scaffolding-only stages.
+- Do not run GPU benchmarks or make speedup/performance claims before exact CPU/GPU parity harnesses exist.
+- Future CUDA harness work must cite Stage 5A target-plan records, parity scaffold records, non-target records, and implementation gates.
+- Non-target records for Discord, image/OCR/AI, compression artefacts, bigram/Fibonacci-421, stego/audio, cookie/hash cracking, broad campaigns, and website expansion must remain out of CUDA scope unless a later explicit stage re-scopes them.
+- Generated CUDA planning reports under `experiments/results/cuda-planning/stage5a/` and `codex-output/**` handoffs remain ignored and must not be staged.
 
 ## Stage 3W State Consolidation Rules
 

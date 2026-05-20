@@ -1,0 +1,42 @@
+record_type: stage5a_cuda_planning_summary
+schema: schemas/cuda/cuda-planning-summary-v0.schema.json
+stage_id: stage-5a
+status: complete
+target_plan_records: 14
+ready_targets: 9
+blocked_targets: 2
+non_cuda_target_plan_records: 3
+non_target_records: 8
+parity_scaffold_records: 9
+implementation_gate_records: 10
+satisfied_gates: 10
+blocked_deferred_gates: 0
+stage4o_parity_references_used: 8
+stage4p_unified_result_references_used: 8
+stage4q_ready_targets: 9
+stage4q_blocked_targets: 2
+stage4q_skipped_non_cuda_targets: 3
+next_stage: Stage 5B - CUDA parity harness skeleton
+website_expansion_stage: Stage 6
+notes:
+- Stage 5A is CUDA planning and parity scaffolding only.
+- No CUDA source, kernels, GPU benchmarks, speedup claims, broad experiments, raw-data
+  processing, or solve claims were added.
+- Future CUDA work must cite Stage 5A target and gate records.
+cuda_planning_only: true
+cuda_implementation_added: false
+cuda_kernel_added: false
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+broad_experiment_executed: false
+raw_data_processed: false
+solve_claim: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+codex_output_committed: false
+cuda_used: false
+cuda_required: false

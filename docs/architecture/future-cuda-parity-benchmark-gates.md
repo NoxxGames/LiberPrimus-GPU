@@ -10,3 +10,5 @@ Future CUDA work remains deferred until Stage 5 explicitly scopes planning or sc
 - Tests check parity before optimization.
 
 Stage 4Q readiness state is not permission to write CUDA kernels. It only records which transform families are ready for future planning, which are blocked, and which are skipped because they are not CUDA transform targets.
+
+Stage 5A converts that readiness state into explicit CUDA target-plan, parity scaffold, non-target, and implementation-gate records. These records are still planning metadata; GPU benchmarks remain blocked until a later harness proves exact CPU/GPU parity.

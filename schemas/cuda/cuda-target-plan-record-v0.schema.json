@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/cuda/cuda-target-plan-record-v0.schema.json",
+  "title": "CUDA Target Plan Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "target_id",
+    "transform_family",
+    "target_status",
+    "blockers",
+    "cuda_planning_only",
+    "cuda_implementation_added",
+    "cuda_kernel_added",
+    "cuda_source_modified",
+    "gpu_benchmark_performed",
+    "performance_claim",
+    "speedup_claim",
+    "broad_experiment_executed",
+    "raw_data_processed",
+    "solve_claim",
+    "no_solve_claim",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "generated_outputs_committed",
+    "codex_output_committed"
+  ],
+  "properties": {
+    "record_type": { "const": "cuda_target_plan" },
+    "stage_id": { "const": "stage-5a" },
+    "target_id": { "type": "string", "minLength": 1 },
+    "transform_family": { "type": "string", "minLength": 1 },
+    "target_status": {
+      "enum": [
+        "ready_for_planning",
+        "blocked_needs_cpu_adapter",
+        "blocked_needs_parity_fixture",
+        "blocked_needs_score_summary_contract",
+        "unsupported_by_design",
+        "non_cuda_target"
+      ]
+    },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "stage4o_parity_expectation_id": { "type": "string" },
+    "stage4p_unified_result_reference": { "type": "string" },
+    "output_text_hash": { "type": "string" },
+    "output_token_hash": { "type": "string" },
+    "cuda_planning_only": { "const": true },
+    "cuda_implementation_added": { "const": false },
+    "cuda_kernel_added": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "broad_experiment_executed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "codex_output_committed": { "const": false }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "target_status": { "const": "ready_for_planning" } } },
+      "then": {
+        "required": [
+          "stage4o_parity_expectation_id",
+          "stage4p_unified_result_reference",
+          "output_token_hash"
+        ]
+      }
+    }
+  ]
+}

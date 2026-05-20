@@ -22,5 +22,4 @@ The join is conservative. Missing method families remain `unknown` with warnings
 
 The cross-stage report is a triage and planning aid. It can show where a family is noisy, negative, inconclusive, retired, blocked, or infrastructure-only, but it cannot promote a result, revive a method family, or prove plaintext.
 
-Future CUDA planning should reference both Stage 4O parity expectations and Stage 4P unified result surfaces before any benchmark or kernel work is trusted.
-
+Future CUDA planning should reference both Stage 4O parity expectations and Stage 4P unified result surfaces before any benchmark or kernel work is trusted. Stage 5A records those references in CUDA target-plan and parity scaffold records; the join is planning metadata only.

@@ -1,0 +1,22 @@
+manifest_id: stage5a-cuda-implementation-gates
+stage_id: stage-5a
+description: Planning-only implementation gates before any CUDA kernel or GPU benchmark work.
+cuda_planning_only: true
+cuda_implementation_added: false
+cuda_kernel_added: false
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+broad_experiment_executed: false
+raw_data_processed: false
+execution_enabled: false
+cuda_execution_enabled: false
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+inputs:
+  - data/cuda/stage5a-cuda-parity-scaffold.yaml
+  - data/cuda/stage5a-cuda-non-targets.yaml

@@ -1,0 +1,251 @@
+records:
+- record_type: cuda_implementation_gate
+  stage_id: stage-5a
+  gate_id: cpu_batch_adapter_contract_stable
+  implementation_gate_status: satisfied
+  acceptance_criteria:
+  - Stage 4H/4O CPU batch adapter records exist and preserve transform semantics.
+  parity_scaffold_records_available: 9
+  enforced_before: any future CUDA kernel implementation or GPU benchmark
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_implementation_gate
+  stage_id: stage-5a
+  gate_id: stage4o_parity_expectations_available
+  implementation_gate_status: satisfied
+  acceptance_criteria:
+  - Stage 4O parity expectation hashes are available for ready planning targets.
+  parity_scaffold_records_available: 9
+  enforced_before: any future CUDA kernel implementation or GPU benchmark
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_implementation_gate
+  stage_id: stage-5a
+  gate_id: stage4p_unified_result_surface_available
+  implementation_gate_status: satisfied
+  acceptance_criteria:
+  - Stage 4P unified result surfaces are available for cross-stage comparison.
+  parity_scaffold_records_available: 9
+  enforced_before: any future CUDA kernel implementation or GPU benchmark
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_implementation_gate
+  stage_id: stage-5a
+  gate_id: stage4q_benchmark_parity_plan_available
+  implementation_gate_status: satisfied
+  acceptance_criteria:
+  - Stage 4Q benchmark/parity plan and readiness records are available.
+  parity_scaffold_records_available: 9
+  enforced_before: any future CUDA kernel implementation or GPU benchmark
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_implementation_gate
+  stage_id: stage-5a
+  gate_id: target_specific_parity_scaffold_exists
+  implementation_gate_status: satisfied
+  acceptance_criteria:
+  - Stage 5A writes one scaffold record for each ready planning target.
+  parity_scaffold_records_available: 9
+  enforced_before: any future CUDA kernel implementation or GPU benchmark
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_implementation_gate
+  stage_id: stage-5a
+  gate_id: generated_output_ignore_policy_exists
+  implementation_gate_status: satisfied
+  acceptance_criteria:
+  - Generated CUDA planning reports are ignored and not committed.
+  parity_scaffold_records_available: 9
+  enforced_before: any future CUDA kernel implementation or GPU benchmark
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_implementation_gate
+  stage_id: stage-5a
+  gate_id: raw_data_free_ci_gate_exists
+  implementation_gate_status: satisfied
+  acceptance_criteria:
+  - CI validation remains raw-data-free and does not require CUDA.
+  parity_scaffold_records_available: 9
+  enforced_before: any future CUDA kernel implementation or GPU benchmark
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_implementation_gate
+  stage_id: stage-5a
+  gate_id: cuda_optional_build_remains_optional
+  implementation_gate_status: satisfied
+  acceptance_criteria:
+  - Existing CUDA scaffold remains optional and is not required by CI.
+  parity_scaffold_records_available: 9
+  enforced_before: any future CUDA kernel implementation or GPU benchmark
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_implementation_gate
+  stage_id: stage-5a
+  gate_id: no_speedup_claim_before_parity
+  implementation_gate_status: satisfied
+  acceptance_criteria:
+  - No speedup claim may be made before exact CPU/GPU parity passes.
+  parity_scaffold_records_available: 9
+  enforced_before: any future CUDA kernel implementation or GPU benchmark
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_implementation_gate
+  stage_id: stage-5a
+  gate_id: no_gpu_benchmark_before_parity
+  implementation_gate_status: satisfied
+  acceptance_criteria:
+  - No GPU benchmark may run before parity harness and acceptance gates exist.
+  parity_scaffold_records_available: 9
+  enforced_before: any future CUDA kernel implementation or GPU benchmark
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false

@@ -332,13 +332,24 @@ records:
     solve_claim: false
     notes: Stage 4Q marks 9 future CUDA targets ready for planning, 2 blocked pending stable adapter support, and 3 skipped as non-CUDA targets.
   - record_type: method_family_status_record
+    method_family_id: cuda_planning_parity_scaffolding
+    name: CUDA planning and parity scaffolding
+    status: infrastructure_only
+    evidence_summary: Stage 5A translates Stage 4Q CUDA readiness into explicit target-plan, non-target, parity-scaffold, and implementation-gate records without adding CUDA source, running GPU benchmarks, or making speedup claims.
+    completed_stage_refs: [stage-4o, stage-4p, stage-4q, stage-5a]
+    reopen_conditions: [A future CUDA parity harness stage needs target-specific scaffold records, exact Stage 4O output hashes, Stage 4P unified result references, or explicit implementation gates before any GPU source is added.]
+    stop_conditions: [Do not add CUDA implementation or GPU kernels in planning stages, run GPU benchmark commands, claim speedups, process raw data, broaden campaigns, activate the canonical corpus, finalise page boundaries, or treat planning readiness as execution approval.]
+    next_action: Stage 5B CUDA parity harness skeleton may build raw-data-free harness structure against the Stage 5A planning records; CUDA implementation remains deferred until explicitly scoped.
+    solve_claim: false
+    notes: Stage 5A records 14 target-plan records, 9 ready planning targets, 2 blocked targets, 8 explicit non-targets, 9 parity scaffold records, and 10 satisfied implementation gates.
+  - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred
-    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, Stage 4L adds the promotion ledger, Stage 4M adds image preflight records, Stage 4N records stego/audio readiness blockers, Stage 4O adds CPU batch adapter parity expectations, Stage 4P unifies result surfaces, and Stage 4Q records benchmark/parity planning gates, but CUDA implementation and GPU benchmarking remain unstarted.
-    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l, stage-4m, stage-4n, stage-4o, stage-4p, stage-4q]
+    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, Stage 4L adds the promotion ledger, Stage 4M adds image preflight records, Stage 4N records stego/audio readiness blockers, Stage 4O adds CPU batch adapter parity expectations, Stage 4P unifies result surfaces, Stage 4Q records benchmark/parity planning gates, and Stage 5A records planning scaffolds, but CUDA implementation and GPU benchmarking remain unstarted.
+    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l, stage-4m, stage-4n, stage-4o, stage-4p, stage-4q, stage-5a]
     reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, image-preflight controls, positive-control readiness records, Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, transform-and-score parity tests, and explicit Stage 5 scope are complete.]
     stop_conditions: [No GPU kernels before CPU reference behaviour and parity tests.]
-    next_action: Stage 5A CUDA planning and parity scaffolding only is next; implementation remains deferred until the planning stage explicitly authorizes scaffolding boundaries.
+    next_action: Stage 5B CUDA parity harness skeleton is next; implementation remains deferred until a later explicit implementation stage passes planning, harness, parity, and benchmark gates.
     solve_claim: false
     notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H through Stage 4O did not add CUDA code.

@@ -146,3 +146,9 @@ Stage 2I is documentation and review-packet work only. The first real explorator
 Stage 4Q records benchmark planning, not performance results. The `libreprimus benchmark-planning` CLI can write raw-data-free environment, CPU smoke, plan, readiness, and validation records. Generated diagnostics go under `experiments/results/benchmarks/stage4q/` and stay ignored.
 
 Do not quote Stage 4Q smoke timing as a speed claim. Future CUDA work must still pass explicit CPU/GPU parity tests and benchmark gates.
+
+# Stage 5A CUDA Planning
+
+Stage 5A records CUDA target plans, explicit non-targets, parity scaffolds, and implementation gates. It does not compile CUDA kernels, run GPU benchmarks, or make speedup claims.
+
+Future Stage 5B harness work must cite Stage 5A records and remain raw-data-free until a later explicit implementation stage.

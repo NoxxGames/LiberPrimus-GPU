@@ -627,3 +627,15 @@ Stage 4Q validation uses:
 ```
 
 The consistency scripts also build Stage 4Q temp outputs in a raw-data-free location. Tests must not require CUDA, raw page images, raw Discord logs, stego/audio assets, generated benchmark records in Git, or `codex-output/**`.
+
+# Stage 5A Validation
+
+Stage 5A validation uses:
+
+- `libreprimus cuda-planning build-target-plan`
+- `libreprimus cuda-planning build-parity-scaffold`
+- `libreprimus cuda-planning build-implementation-gates`
+- `libreprimus cuda-planning validate-stage5a`
+- `libreprimus cuda-planning summary`
+
+The consistency scripts also build Stage 5A temp outputs in a raw-data-free location. Tests must not require CUDA, modify `.cu` or `.cuh` files, run GPU benchmarks, make speedup claims, commit generated CUDA planning reports, process raw data, or publish `codex-output/**`.

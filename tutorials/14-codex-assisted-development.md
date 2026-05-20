@@ -138,4 +138,4 @@ If Codex changes CLI registration, verify `python -m libreprimus.cli --help`, se
 
 Stage 4Q writes a local completion handoff under `codex-output/`. That directory is ignored and must not be staged. The committed source of truth is the Stage 4Q code, schemas, manifests, docs, and aggregate records under `data/`.
 
-When using Codex for Stage 5A, cite Stage 4Q benchmark/parity records but do not let planning work turn into CUDA implementation or GPU benchmarking without an explicit prompt.
+When using Codex for Stage 5B, cite Stage 5A target-plan, parity scaffold, non-target, and gate records but do not let harness work turn into CUDA implementation or GPU benchmarking without an explicit prompt.

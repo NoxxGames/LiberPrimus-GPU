@@ -169,6 +169,18 @@ def validate_research_synthesis(
             ("stage 5a", "cuda planning", "parity scaffolding"),
             "staged_plan_stage5a_cuda_planning_next",
         )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5a", "cuda planning", "parity scaffolding", "complete"),
+            "staged_plan_stage5a_cuda_planning_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5b", "cuda parity harness skeleton"),
+            "staged_plan_stage5b_cuda_parity_harness_next",
+        )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
         _require_text(errors, staged_text, ("page boundaries", "reviewable"), "staged_plan_boundaries_reviewable")
@@ -350,6 +362,14 @@ def validate_research_synthesis(
     cuda = _find_method(method_records, "cuda_gpu_acceleration")
     if cuda is None or cuda.get("status") != "deferred":
         errors.append("cuda_gpu_acceleration_not_deferred")
+
+    cuda_planning = _find_method(method_records, "cuda_planning_parity_scaffolding")
+    if cuda_planning is None:
+        errors.append("cuda_planning_parity_scaffolding_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in cuda_planning.get("stop_conditions", []))
+        if "cuda implementation" not in stop_text or "gpu benchmark" not in stop_text or "speedup" not in stop_text:
+            errors.append("cuda_planning_parity_scaffolding_missing_planning_guardrail")
 
     cookie = _find_method(method_records, "cookie_hash_sha256_packs")
     if cookie is None:

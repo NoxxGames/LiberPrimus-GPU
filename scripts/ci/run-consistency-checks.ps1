@@ -212,6 +212,37 @@ try {
         --readiness $Stage4QReadiness `
         --summary $Stage4QSummary
 
+    Write-Host "Running Stage 5A CUDA planning synthetic/temp output"
+    $Stage5AOut = Join-Path $TempDir "stage5a-cuda-planning"
+    $Stage5ATargetPlan = Join-Path $TempDir "stage5a-cuda-target-plan.yaml"
+    $Stage5ANonTargets = Join-Path $TempDir "stage5a-cuda-non-targets.yaml"
+    $Stage5AParityScaffold = Join-Path $TempDir "stage5a-cuda-parity-scaffold.yaml"
+    $Stage5AGates = Join-Path $TempDir "stage5a-cuda-implementation-gates.yaml"
+    $Stage5ASummary = Join-Path $TempDir "stage5a-cuda-planning-summary.yaml"
+    & $Python -m libreprimus.cli cuda-planning build-target-plan `
+        --manifest experiments/manifests/cuda/stage5a-cuda-target-plan.yaml `
+        --out-dir $Stage5AOut `
+        --target-plan-out $Stage5ATargetPlan `
+        --non-targets-out $Stage5ANonTargets `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-planning build-parity-scaffold `
+        --manifest experiments/manifests/cuda/stage5a-cuda-parity-scaffold.yaml `
+        --out-dir $Stage5AOut `
+        --parity-scaffold-out $Stage5AParityScaffold `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-planning build-implementation-gates `
+        --manifest experiments/manifests/cuda/stage5a-cuda-implementation-gates.yaml `
+        --out-dir $Stage5AOut `
+        --implementation-gates-out $Stage5AGates `
+        --summary-out $Stage5ASummary `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-planning validate-stage5a `
+        --target-plan $Stage5ATargetPlan `
+        --parity-scaffold $Stage5AParityScaffold `
+        --implementation-gates $Stage5AGates `
+        --non-targets $Stage5ANonTargets `
+        --summary $Stage5ASummary
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

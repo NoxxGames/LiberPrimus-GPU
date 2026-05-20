@@ -60,3 +60,7 @@ New adapters must preserve existing CPU behavior, include synthetic or solved-fi
 Stage 4P joins Stage 4O CPU batch result records and parity expectations into the unified result-store reporting surface when local generated records are present. It records output hashes, parity expectation references, score-summary availability, and method status for comparison only.
 
 CPU batch outputs remain generated and ignored. The Stage 4P aggregate summary is committed under `data/research/`; it does not replace Stage 4O parity expectations or authorize CUDA work.
+
+## Stage 5A CUDA Planning Use
+
+Stage 5A consumes Stage 4O parity expectations as future CUDA planning inputs. CUDA target-plan and parity scaffold records must preserve the CPU batch transform semantics recorded here; missing adapters remain blocked instead of being forced into GPU scope.

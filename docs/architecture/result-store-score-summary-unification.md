@@ -29,3 +29,4 @@ Unified score-summary records use the Stage 4I finite confidence-label vocabular
 
 Generated records live under `experiments/results/result-store-unification/stage4p/` and remain ignored. The committed aggregate summary is `data/research/stage4p-result-store-score-summary-unification-summary.yaml`.
 
+Stage 5A CUDA planning may cite Stage 4P unified result references, but those references remain reporting surfaces and cannot be treated as solve evidence or benchmark evidence.

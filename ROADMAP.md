@@ -4,12 +4,11 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4Q CPU benchmark and parity planning is complete. The stage recorded benchmark plan
-records, CPU-only smoke diagnostics, future CUDA parity readiness gates, and documentation
-hygiene checks without CUDA implementation, GPU benchmarking, broad experiment execution, or
-performance claims.
+Stage 5A CUDA planning and parity scaffolding is complete. The stage recorded CUDA target
+plans, non-targets, parity scaffolds, and implementation gates without CUDA implementation,
+GPU benchmarking, broad experiment execution, or performance claims.
 
-The next planned stage is Stage 5A: CUDA planning and parity scaffolding only. Website expansion
+The next planned stage is Stage 5B: CUDA parity harness skeleton. Website expansion
 is deferred to Stage 6. CUDA implementation remains deferred until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, parity tests, and benchmark plans
@@ -27,7 +26,7 @@ review-to-promotion loop, Stage 4K strengthened public-source reproducibility, S
 recorded promotion readiness, Stage 4M created image source-variant/compression preflight
 records, Stage 4N recorded OutGuess/audio positive-control readiness, Stage 4O expanded CPU
 batch adapter coverage, Stage 4P unified result-store/score-summary reporting, and Stage 4Q
-recorded CPU benchmark and parity planning before Stage 5 CUDA planning scaffolding.
+recorded CPU benchmark and parity planning, and Stage 5A recorded CUDA planning and parity scaffolding before the Stage 5B harness skeleton.
 
 ## Phase 0A - Project bootstrap
 
@@ -344,6 +343,16 @@ targets, and `3` skipped non-CUDA targets. Generated records remain ignored unde
 `experiments/results/benchmarks/stage4q/`, and `codex-output/` handoff files remain ignored.
 Stage 4Q did not implement CUDA, run GPU benchmarks, claim speedups, run broad experiments,
 activate the canonical corpus, finalise page boundaries, or make solve claims.
+
+## Stage 5A - CUDA planning and parity scaffolding
+
+Stage 5A is complete. It records `14` CUDA target-plan records, `9` ready planning targets,
+`2` blocked targets, `8` explicit non-target records, `9` parity scaffold records, and `10`
+satisfied implementation gates. Generated reports remain ignored under
+`experiments/results/cuda-planning/stage5a/`, and `codex-output/` handoff files remain ignored.
+Stage 5A did not add or modify CUDA source, run GPU benchmarks, claim speedups, run broad
+experiments, process raw data, activate the canonical corpus, finalise page boundaries, or make
+solve claims.
 
 ## Stage 4G - Cookie exact-candidate refresh
 

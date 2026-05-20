@@ -22,3 +22,7 @@ Future result-store or CUDA work must preserve the Stage 4I score-summary shape 
 Stage 4P normalizes score-summary-like surfaces into Stage 4I-compatible unified records. It wrote `82` unified score-summary records without adding labels, scorers, calibration profiles, or score components.
 
 Unknown score semantics are recorded as `scoring_not_available`, not inferred. Future CUDA score parity should compare against the unified Stage 4P result surface only after Stage 4O output hashes match and Stage 4Q benchmark/parity planning records are cited.
+
+## Stage 5A Planning Records
+
+Stage 5A CUDA planning records cite Stage 4O parity hashes and Stage 4P unified result surfaces. A future parity harness must compare score-summary shape and confidence-label vocabulary without treating scores as solve evidence.

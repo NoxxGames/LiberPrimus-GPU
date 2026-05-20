@@ -138,6 +138,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 4Q is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5a",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5a\b", re.IGNORECASE),
+        "Stage 5A is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -454,8 +459,20 @@ def check_state_drift_consistency(
     _require_fact(
         results,
         "stage5a_cuda_planning_next",
-        "stage 5a" in staged_plan and "cuda planning" in staged_plan and "parity scaffolding" in staged_plan,
-        "Staged plan records Stage 5A CUDA planning and parity scaffolding as next.",
+        "stage 5a" in staged_plan
+        and "cuda planning" in staged_plan
+        and "parity scaffolding" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5A CUDA planning and parity scaffolding as complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5b_cuda_parity_harness_next",
+        "stage 5b" in staged_plan
+        and "cuda parity harness skeleton" in staged_plan
+        and "next" in staged_plan,
+        "Staged plan records Stage 5B CUDA parity harness skeleton as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -522,6 +539,16 @@ def check_state_drift_consistency(
         and "gpu benchmark" in combined
         and "stage 5a" in combined,
         "CPU benchmark and future CUDA parity planning policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "cuda_planning_parity_scaffolding_policy_present",
+        "cuda planning" in combined
+        and "parity scaffolding" in combined
+        and "stage 5b" in combined
+        and "speedup claim" in combined,
+        "CUDA planning and parity scaffolding policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

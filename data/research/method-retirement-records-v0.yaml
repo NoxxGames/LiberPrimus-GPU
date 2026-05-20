@@ -155,6 +155,15 @@ records:
     prohibited_expansions: [CUDA implementation, GPU benchmarking, speedup claims, broad experiments, raw-data processing, generated-output commits, canonical corpus activation, page-boundary finalisation, solve claims.]
     notes: Stage 4Q diagnostics are planning records; generated benchmark outputs remain ignored.
   - record_type: method_retirement_record
+    method_family_id: cuda_planning_parity_scaffolding
+    retired_status: active_with_constraints
+    reason: CUDA planning scaffolding is active infrastructure only; target readiness and parity scaffolds do not authorize CUDA source changes, GPU benchmarks, or speedup claims.
+    evidence: [Stage 5A records 14 target-plan records, 9 ready planning targets, 2 blocked targets, 8 explicit non-targets, 9 parity scaffold records, and 10 satisfied implementation gates without modifying CUDA source.]
+    stages_supporting: [stage-5a]
+    reopen_conditions: [A later explicit Stage 5 CUDA parity harness or implementation stage cites Stage 5A records and remains raw-data-free, CPU-reference-backed, and parity-gated.]
+    prohibited_expansions: [CUDA implementation in planning stages, new GPU kernels, GPU benchmarking, speedup claims before parity, broad unsolved campaigns, raw-data processing, website expansion before Stage 6, generated-output commits, solve claims.]
+    notes: Stage 5A is a boundary and readiness ledger, not CUDA implementation.
+  - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints
     reason: Stage 4B visual observations are useful review inputs, but broad visual pareidolia and unannotated dot/braille/constellation readings remain high-risk false-positive classes.

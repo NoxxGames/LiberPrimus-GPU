@@ -197,6 +197,31 @@ echo "Running Stage 4Q benchmark planning synthetic/temp output"
     --readiness "$tmp_dir/stage4q-cuda-parity-readiness.yaml" \
     --summary "$tmp_dir/stage4q-cpu-benchmark-parity-planning-summary.yaml"
 
+echo "Running Stage 5A CUDA planning synthetic/temp output"
+"$python_bin" -m libreprimus.cli cuda-planning build-target-plan \
+    --manifest experiments/manifests/cuda/stage5a-cuda-target-plan.yaml \
+    --out-dir "$tmp_dir/stage5a-cuda-planning" \
+    --target-plan-out "$tmp_dir/stage5a-cuda-target-plan.yaml" \
+    --non-targets-out "$tmp_dir/stage5a-cuda-non-targets.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-planning build-parity-scaffold \
+    --manifest experiments/manifests/cuda/stage5a-cuda-parity-scaffold.yaml \
+    --out-dir "$tmp_dir/stage5a-cuda-planning" \
+    --parity-scaffold-out "$tmp_dir/stage5a-cuda-parity-scaffold.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-planning build-implementation-gates \
+    --manifest experiments/manifests/cuda/stage5a-cuda-implementation-gates.yaml \
+    --out-dir "$tmp_dir/stage5a-cuda-planning" \
+    --implementation-gates-out "$tmp_dir/stage5a-cuda-implementation-gates.yaml" \
+    --summary-out "$tmp_dir/stage5a-cuda-planning-summary.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-planning validate-stage5a \
+    --target-plan "$tmp_dir/stage5a-cuda-target-plan.yaml" \
+    --parity-scaffold "$tmp_dir/stage5a-cuda-parity-scaffold.yaml" \
+    --implementation-gates "$tmp_dir/stage5a-cuda-implementation-gates.yaml" \
+    --non-targets "$tmp_dir/stage5a-cuda-non-targets.yaml" \
+    --summary "$tmp_dir/stage5a-cuda-planning-summary.yaml"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

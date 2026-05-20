@@ -46,6 +46,7 @@ REQUIRED_METHOD_FAMILIES = {
     "scoring_consolidation",
     "result_store_score_summary_unification",
     "cpu_benchmark_parity_planning",
+    "cuda_planning_parity_scaffolding",
     "deterministic_image_analysis",
     "image_transform_suite",
     "discord_ingestion_review",

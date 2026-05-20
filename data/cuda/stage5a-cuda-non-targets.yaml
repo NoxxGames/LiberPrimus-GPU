@@ -1,0 +1,231 @@
+records:
+- record_type: cuda_non_target
+  stage_id: stage-5a
+  non_target_id: stage5a-discord_source_discovery_raw_logs
+  name: Discord source discovery and raw logs
+  target_status: non_cuda_target
+  reason: Discord processing is source-review and privacy work, not a CUDA transform
+    target.
+  future_reconsideration_requires:
+  - explicit future stage scope
+  - reviewed source/fixture records
+  - raw/generated output policy
+  - no solve claim
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_non_target
+  stage_id: stage-5a
+  non_target_id: stage5a-image_interpretation_ocr_ai_ml
+  name: Image interpretation/OCR/AI/ML
+  target_status: non_cuda_target
+  reason: Visual interpretation is review-only and cannot become CUDA work without
+    reviewed source and coordinate controls.
+  future_reconsideration_requires:
+  - explicit future stage scope
+  - reviewed source/fixture records
+  - raw/generated output policy
+  - no solve claim
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_non_target
+  stage_id: stage-5a
+  non_target_id: stage5a-image_compression_star_artefacts
+  name: Image compression and star-like artefacts
+  target_status: non_cuda_target
+  reason: Compression metrics are preflight observations, not CPU batch transform
+    semantics.
+  future_reconsideration_requires:
+  - explicit future stage scope
+  - reviewed source/fixture records
+  - raw/generated output policy
+  - no solve claim
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_non_target
+  stage_id: stage-5a
+  non_target_id: stage5a-bigram_fibonacci_421_observation
+  name: Bigram/Fibonacci-421 observation
+  target_status: non_cuda_target
+  reason: The bigram claim is blocked pending reproducible matrix, rune order, and
+    null controls.
+  future_reconsideration_requires:
+  - explicit future stage scope
+  - reviewed source/fixture records
+  - raw/generated output policy
+  - no solve claim
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_non_target
+  stage_id: stage-5a
+  non_target_id: stage5a-stego_audio_extraction_tools
+  name: OutGuess/OpenPuff/MP3Stego/audio extraction
+  target_status: non_cuda_target
+  reason: Stego/audio readiness requires fixtures and expected outputs; it is not
+    a CUDA text-transform target.
+  future_reconsideration_requires:
+  - explicit future stage scope
+  - reviewed source/fixture records
+  - raw/generated output policy
+  - no solve claim
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_non_target
+  stage_id: stage-5a
+  non_target_id: stage5a-cookie_hash_cracking_hashcat
+  name: Cookie/hash cracking/hashcat
+  target_status: non_cuda_target
+  reason: Cookie/hash work is exact digest comparison and explicitly not transform
+    adapter acceleration.
+  future_reconsideration_requires:
+  - explicit future stage scope
+  - reviewed source/fixture records
+  - raw/generated output policy
+  - no solve claim
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_non_target
+  stage_id: stage-5a
+  non_target_id: stage5a-broad_unsolved_page_campaigns
+  name: Broad unsolved-page campaigns
+  target_status: non_cuda_target
+  reason: Broad campaigns require approval and corpus locks; Stage 5A is planning-only.
+  future_reconsideration_requires:
+  - explicit future stage scope
+  - reviewed source/fixture records
+  - raw/generated output policy
+  - no solve claim
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_non_target
+  stage_id: stage-5a
+  non_target_id: stage5a-website_expansion_knowledge_hub
+  name: Website expansion / knowledge hub
+  target_status: non_cuda_target
+  reason: Website expansion is deferred to Stage 6 and is not CUDA scope.
+  future_reconsideration_requires:
+  - explicit future stage scope
+  - reviewed source/fixture records
+  - raw/generated output policy
+  - no solve claim
+  cuda_planning_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  cuda_used: false
+  cuda_required: false

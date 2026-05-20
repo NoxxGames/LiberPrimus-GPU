@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 4Q - CPU benchmark and parity planning.
-- Next planned stage: Stage 5A - CUDA planning and parity scaffolding only.
+- Latest completed stage: Stage 5A - CUDA planning and parity scaffolding.
+- Next planned stage: Stage 5B - CUDA parity harness skeleton.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

@@ -67,6 +67,11 @@ EXPECTED_SCHEMA_FILES = [
     "benchmarks/benchmark-environment-record-v0.schema.json",
     "benchmarks/cuda-parity-benchmark-readiness-v0.schema.json",
     "benchmarks/stage4q-benchmark-parity-summary-v0.schema.json",
+    "cuda/cuda-target-plan-record-v0.schema.json",
+    "cuda/cuda-parity-scaffold-record-v0.schema.json",
+    "cuda/cuda-implementation-gate-record-v0.schema.json",
+    "cuda/cuda-non-target-record-v0.schema.json",
+    "cuda/cuda-planning-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -111,6 +116,11 @@ EXPECTED_DOC_TERMS = [
     "benchmark-environment-record-v0",
     "cuda-parity-benchmark-readiness-v0",
     "stage4q-benchmark-parity-summary-v0",
+    "cuda-target-plan-record-v0",
+    "cuda-parity-scaffold-record-v0",
+    "cuda-implementation-gate-record-v0",
+    "cuda-non-target-record-v0",
+    "cuda-planning-summary-v0",
 ]
 
 
