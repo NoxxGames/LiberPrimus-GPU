@@ -431,3 +431,11 @@ experiments/results/stego-positive-controls/**
 !experiments/results/stego-positive-controls/.gitkeep
 !experiments/results/stego-positive-controls/stage4n/
 !experiments/results/stego-positive-controls/stage4n/.gitkeep
+
+# Generated result-store unification outputs
+experiments/results/result-store-unification/**
+!experiments/results/result-store-unification/
+!experiments/results/result-store-unification/README.md
+!experiments/results/result-store-unification/.gitkeep
+!experiments/results/result-store-unification/stage4p/
+!experiments/results/result-store-unification/stage4p/.gitkeep

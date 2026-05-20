@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4O CPU batch adapter expansion. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 4P result-store and score-summary unification. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -36,7 +36,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Observation promotion ledger: Stage 4L joins Stage 4J review decisions with Stage 4K source locks and records ready, blocked, deferred, quarantined, rejected, source-reference-only, and control-only states. Ready does not mean executed; all future manifests remain disabled.
 - Image source-variant and compression preflight: Stage 4M scans ignored local LP page images for metadata and deterministic metric-only compression summaries, records source-variant comparison readiness, keeps star-like/compression-like artefacts review-only, and keeps the bigram/Fibonacci-421 observation blocked pending reproducible matrix and null controls. It does not commit raw images, generated visualisations, or execute image/bigram experiments.
 - Stego/audio positive-control readiness: Stage 4N records fixture readiness, cache policy, expected-output requirements, toolchain state, and synthetic controls. Historical OutGuess/OpenPuff/MP3/audio cases remain blocked until assets, exact expected outputs, and tools are ready.
-- CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. Stage 4O expands this with solved-fixture-safe streams, adapter coverage records, deterministic parity expectations, and score-summary compatibility checks. It is infrastructure for future CUDA parity, not a broad experiment runner.
+- CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. Stage 4O expands this with solved-fixture-safe streams, adapter coverage records, deterministic parity expectations, and score-summary compatibility checks. Stage 4P makes those result and score surfaces comparable with older result-store summaries. It is infrastructure for future CUDA parity, not a broad experiment runner.
 - Scoring contract: Stage 4I provides scorer inventory, finite confidence-label records, compatibility mappings, calibration-profile/report records, and CPU batch score compatibility checks. Score labels can create review leads only and cannot imply solved plaintext.
 - Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
 - CUDA experiment campaigns: not started.
@@ -47,7 +47,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 4P result-store and score-summary unification.
+- Stage 4Q CPU benchmark and parity planning.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
 - CUDA kernels after CPU references and parity tests exist.
@@ -212,9 +212,9 @@ Current status:
 - Latest observation promotion stage: Stage 4L loaded `97` reviewed observations, created `97` ledger records, `97` readiness records, `115` blocker records, and `13` manifest-readiness records. It marked `0` observations ready for manifest execution, `17` control-only, `14` source-reference-only, `48` blocked, `2` deferred, `15` quarantined, and `1` rejected. The added bigram/Fibonacci-421 community claim remains blocked pending reproducible matrix regeneration, rune-order declaration, indexing convention, null controls, and multiple-testing controls.
 - Latest image preflight stage: Stage 4M scanned `58` ignored local LP page images, wrote `58` source-variant records, `58` deterministic compression metric records, `1` review-only image artifact candidate, and `1` blocked bigram/Fibonacci-421 readiness record. It committed no raw images or generated visualisations and ran no image/bigram experiment.
 - Latest stego/audio readiness stage: Stage 4N wrote `11` OutGuess readiness records, `5` audio readiness records, `16` fixture-cache records, `16` expected-output records, `7` toolchain readiness records, `0` historical execution-ready fixtures, `8` blocked historical fixtures, and `2` synthetic-ready controls. It committed no raw artefacts or extracted payloads and ran no stego/audio tools.
-- Latest CPU batch adapter stage: Stage 4O discovered `5` solved-fixture streams, executed `5`, skipped `0`, recorded `9` supported adapters, `2` missing/deferred adapters, `8` CPU-only result records, `8` parity expectations, and `8 / 0` scoring compatible/unavailable outputs. It ran no broad experiments, changed no solved-baseline expectations, and added no CUDA code.
+- Latest result-store unification stage: Stage 4P recorded `18` source inventory records, loaded `11` committed summaries, saw `6` optional ignored generated outputs locally, wrote `82` unified result records, `82` unified score-summary records, and `82` method-status joins. It ran no new experiments, added no scorer semantics, committed no generated result bodies or SQLite databases, and added no CUDA code.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 4P result-store and score-summary unification.
+- Next: Stage 4Q CPU benchmark and parity planning.
 
 ## How To Use This Repo
 

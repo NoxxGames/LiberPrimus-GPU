@@ -1,0 +1,19 @@
+record_type: result_store_unification_manifest
+manifest_id: stage4p-result-source-inventory
+stage_id: stage-4p
+description: Inventory committed result summaries and optional ignored generated result surfaces.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+new_experiment_executed: false
+new_scorer_added: false
+local_ignored_generated_outputs_optional: true
+missing_optional_generated_outputs_are_warnings: true
+notes:
+  - Stage 4P inventory is read-only reporting infrastructure.
+  - Raw Discord logs, raw page images, raw stego/audio artefacts, and raw caches are not read.

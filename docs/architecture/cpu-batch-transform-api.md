@@ -54,3 +54,9 @@ Stage 4O adds solved-fixture-safe input stream handling and adapter expansion ch
 Stage 4O generated records remain ignored under `experiments/results/cpu-batch/stage4o/`. The committed aggregate summary is `data/research/stage4o-cpu-batch-adapter-expansion-summary.yaml`.
 
 New adapters must preserve existing CPU behavior, include synthetic or solved-fixture-safe tests, and produce deterministic output hashes before any future CUDA work can rely on them.
+
+## Stage 4P Result Surface Integration
+
+Stage 4P joins Stage 4O CPU batch result records and parity expectations into the unified result-store reporting surface when local generated records are present. It records output hashes, parity expectation references, score-summary availability, and method status for comparison only.
+
+CPU batch outputs remain generated and ignored. The Stage 4P aggregate summary is committed under `data/research/`; it does not replace Stage 4O parity expectations or authorize CUDA work.

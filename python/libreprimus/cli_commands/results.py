@@ -7,6 +7,11 @@ import typer
 
 from libreprimus.cli_commands.common import *
 from libreprimus.cli_commands.solved_baselines import stage2a_smoke
+from libreprimus.result_store.cross_stage_report import build_cross_stage_report
+from libreprimus.result_store.score_summary_unification import build_unified_score_summaries
+from libreprimus.result_store.source_inventory import build_source_inventory_from_manifest
+from libreprimus.result_store.stage4p_validation import validate_stage4p_results
+from libreprimus.result_store.unified_models import STAGE4P_OUTPUT_DIR, STAGE4P_SUMMARY_PATH
 
 result_store_app = typer.Typer(no_args_is_help=True)
 
@@ -177,6 +182,135 @@ def stage2b_smoke(
     )
     result_store_summary(results_dir=result_store_out_dir)
     console.print("Stage 2B smoke OK")
+
+
+@result_store_app.command("build-source-inventory")
+def result_store_build_source_inventory(
+    manifest: Path = typer.Option(..., "--manifest", help="Stage 4P source inventory manifest."),
+    out_dir: Path = typer.Option(
+        STAGE4P_OUTPUT_DIR,
+        "--out-dir",
+        help="Generated Stage 4P result-store unification output directory.",
+    ),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Build Stage 4P source inventory records."""
+
+    try:
+        records, warnings = build_source_inventory_from_manifest(
+            _resolve_existing_path(manifest, "Stage 4P manifest"),
+            out_dir=out_dir,
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    present = sum(1 for record in records if record["source_presence_status"] == "local_generated_present")
+    missing = sum(1 for record in records if record["source_presence_status"] == "optional_generated_missing")
+    committed = sum(1 for record in records if record["source_presence_status"] == "committed_summary_present")
+    console.print(f"source_inventory_records={len(records)}")
+    console.print(f"committed_summaries_loaded={committed}")
+    console.print(f"optional_generated_outputs_present={present}")
+    console.print(f"optional_generated_outputs_missing={missing}")
+    console.print(f"warning_count={len(warnings)}")
+    if warnings and not allow_warnings:
+        raise typer.Exit(1)
+
+
+@result_store_app.command("unify-score-summaries")
+def result_store_unify_score_summaries(
+    manifest: Path = typer.Option(..., "--manifest", help="Stage 4P score-summary unification manifest."),
+    out_dir: Path = typer.Option(
+        STAGE4P_OUTPUT_DIR,
+        "--out-dir",
+        help="Generated Stage 4P result-store unification output directory.",
+    ),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Build unified result records and Stage 4I-compatible score-summary views."""
+
+    try:
+        scores, warnings = build_unified_score_summaries(
+            _resolve_existing_path(manifest, "Stage 4P manifest"),
+            out_dir=out_dir,
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    scored = sum(1 for record in scores if record["score_status"] == "scored")
+    unavailable = len(scores) - scored
+    console.print(f"unified_score_summary_records={len(scores)}")
+    console.print(f"score_status_scored={scored}")
+    console.print(f"score_status_unavailable={unavailable}")
+    console.print(f"warning_count={len(warnings)}")
+    if warnings and not allow_warnings:
+        raise typer.Exit(1)
+
+
+@result_store_app.command("build-cross-stage-report")
+def result_store_build_cross_stage_report(
+    manifest: Path = typer.Option(..., "--manifest", help="Stage 4P cross-stage report manifest."),
+    out_dir: Path = typer.Option(
+        STAGE4P_OUTPUT_DIR,
+        "--out-dir",
+        help="Generated Stage 4P result-store unification output directory.",
+    ),
+    summary_out: Path = typer.Option(
+        STAGE4P_SUMMARY_PATH,
+        "--summary-out",
+        help="Committed Stage 4P aggregate summary path.",
+    ),
+    allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),
+) -> None:
+    """Build Stage 4P cross-stage report and committed aggregate summary."""
+
+    try:
+        summary = build_cross_stage_report(
+            _resolve_existing_path(manifest, "Stage 4P manifest"),
+            out_dir=out_dir,
+            summary_out=summary_out,
+        )
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    console.print(f"source_inventory_records={summary['source_inventory_records']}")
+    console.print(f"unified_result_records={summary['unified_result_records']}")
+    console.print(f"unified_score_summary_records={summary['unified_score_summary_records']}")
+    console.print(f"method_status_joins={summary['method_status_joins']}")
+    console.print(f"cross_stage_report_written={str(summary['cross_stage_report_written']).lower()}")
+    warning_count = int(summary.get("optional_generated_outputs_missing", 0))
+    console.print(f"optional_generated_outputs_missing={warning_count}")
+    if warning_count and not allow_warnings:
+        raise typer.Exit(1)
+
+
+@result_store_app.command("validate-stage4p")
+def result_store_validate_stage4p(
+    results_dir: Path = typer.Option(
+        STAGE4P_OUTPUT_DIR,
+        "--results-dir",
+        help="Generated Stage 4P result-store unification output directory.",
+    ),
+    summary: Path = typer.Option(
+        STAGE4P_SUMMARY_PATH,
+        "--summary",
+        help="Committed Stage 4P aggregate summary path.",
+    ),
+) -> None:
+    """Validate Stage 4P generated result unification records and committed summary."""
+
+    try:
+        counts, errors = validate_stage4p_results(results_dir, summary)
+    except (FileNotFoundError, ValueError) as error:
+        console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1) from error
+    for key, value in counts.items():
+        console.print(f"{key}={value}")
+    console.print(f"validation_error_count={len(errors)}")
+    if errors:
+        for error in errors:
+            console.print(f"[red]{error}[/red]")
+        raise typer.Exit(1)
+    console.print("result_store_stage4p_valid=true")
 
 
 

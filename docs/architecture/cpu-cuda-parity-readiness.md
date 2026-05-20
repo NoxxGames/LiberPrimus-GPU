@@ -16,10 +16,14 @@ Future CUDA work must match CPU records for:
 
 CUDA results are not trustworthy until they match Stage 4O parity expectations and pass explicit CPU/GPU tests.
 
+## Stage 4P Reporting Layer
+
+Stage 4P records a unified result surface over CPU batch outputs, score summaries, method statuses, and retirement states. Future CUDA readiness should cite both Stage 4O parity expectation hashes and Stage 4P unified result records before benchmarks or kernels are considered comparable.
+
 ## Deferred CUDA State
 
 CUDA remains deferred. Existing CUDA code is smoke/scaffold infrastructure unless a future explicit stage adds CPU/GPU parity tests, benchmark plans, and gated kernels.
 
 ## Non-Targets
 
-Stage 4O parity readiness does not make hash cracking, stego/audio extraction, OCR, AI/ML image interpretation, or raw data processing CUDA targets.
+Stage 4O and Stage 4P parity readiness do not make hash cracking, stego/audio extraction, OCR, AI/ML image interpretation, generated result publication, or raw data processing CUDA targets.

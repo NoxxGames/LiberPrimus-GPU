@@ -44,9 +44,39 @@ Prints concise run counts, artifact counts, pass/fail counts, and safety flags.
 
 Ensures Stage 2A solved-baseline outputs exist, imports them into the result store, validates the outputs, and prints a concise summary.
 
+## Stage 4P Unification Commands
+
+Stage 4P adds read-only reporting commands while preserving the Stage 2B import commands:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli result-store build-source-inventory `
+  --manifest experiments/manifests/result-store/stage4p-result-source-inventory.yaml `
+  --out-dir experiments/results/result-store-unification/stage4p `
+  --allow-warnings
+
+.\.venv\Scripts\python.exe -m libreprimus.cli result-store unify-score-summaries `
+  --manifest experiments/manifests/result-store/stage4p-score-summary-unification.yaml `
+  --out-dir experiments/results/result-store-unification/stage4p `
+  --allow-warnings
+
+.\.venv\Scripts\python.exe -m libreprimus.cli result-store build-cross-stage-report `
+  --manifest experiments/manifests/result-store/stage4p-cross-stage-report.yaml `
+  --out-dir experiments/results/result-store-unification/stage4p `
+  --summary-out data/research/stage4p-result-store-score-summary-unification-summary.yaml `
+  --allow-warnings
+```
+
+Validate the generated reports and committed aggregate summary:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli result-store validate-stage4p `
+  --results-dir experiments/results/result-store-unification/stage4p `
+  --summary data/research/stage4p-result-store-score-summary-unification-summary.yaml
+```
+
 ## Generated Outputs
 
-Generated outputs live under `experiments/results/result-store/stage2b/` and remain ignored by Git. SQLite files and sidecars must not be staged.
+Generated Stage 2B outputs live under `experiments/results/result-store/stage2b/`. Generated Stage 4P outputs live under `experiments/results/result-store-unification/stage4p/`. Both remain ignored by Git. SQLite files and sidecars must not be staged.
 
 ## Troubleshooting
 

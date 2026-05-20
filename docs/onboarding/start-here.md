@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 4O - CPU batch adapter expansion.
-- Next planned stage: Stage 4P - result-store and score-summary unification.
+- Latest completed stage: Stage 4P - result-store and score-summary unification.
+- Next planned stage: Stage 4Q - CPU benchmark and parity planning.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

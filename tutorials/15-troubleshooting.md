@@ -40,6 +40,8 @@ git check-ignore -v experiments/results/cpu-batch/stage4h/summary.json
 git check-ignore -v experiments/results/scoring-consolidation/stage4i/scorer_inventory.json
 git check-ignore -v experiments/results/observation-review/stage4j/review_decision_report.json
 git check-ignore -v experiments/results/source-lock-snapshots/stage4k/fetch_report.json
+git check-ignore -v experiments/results/result-store-unification/stage4p/summary.json
+git check-ignore -v experiments/results/result-store-unification/stage4p/results.sqlite3
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -144,6 +146,13 @@ If a Stage 4O CPU batch adapter build leaves `result_records.jsonl`, `adapter_co
 not stage them. Commit only schemas, manifests, CPU batch code, tests, docs, research logs, and the
 aggregate YAML summary under `data/research/`.
 
+If a Stage 4P result-store unification run leaves `source_inventory.json`,
+`unified_result_records.jsonl`, `unified_score_summary_records.jsonl`, `method_status_join.json`,
+`cross_stage_report.json`, `summary.json`, `warnings.jsonl`, or SQLite files under
+`experiments/results/result-store-unification/stage4p/`, do not stage them. Commit only schemas,
+manifests, result-store code, tests, docs, research logs, and the aggregate YAML summary under
+`data/research/`.
+
 If local deep-research reports appear under `deep-research-reports/`, do not stage them. They are
 ignored local review inputs.
 
@@ -166,8 +175,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 4O, onboarding and staged-plan checks should show Stage 4O complete and Stage 4P
-result-store and score-summary unification next.
+After Stage 4P, onboarding and staged-plan checks should show Stage 4P complete and Stage 4Q CPU
+benchmark and parity planning next.
 
 If path sanitisation fails, run:
 

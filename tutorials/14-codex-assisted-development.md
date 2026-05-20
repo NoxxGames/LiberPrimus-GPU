@@ -35,6 +35,7 @@ Use Codex safely for scoped repository stages.
 - For Stage 4M-style image preflight work, require metric-only image metadata/compression records, source-variant blocked status when external bytes are absent, review-only artefact candidates, bigram/Fibonacci readiness blocked pending matrix/null controls, generated ignored outputs, no OCR/AI/ML/stego, and no solve claim.
 - For Stage 4N-style stego/audio positive-control work, require fixture-readiness records, cache policy, expected-output metadata, toolchain readiness, synthetic controls, generated ignored outputs, no historical stego/audio tool execution, no raw artefact commits, and no solve claim.
 - For Stage 4O-style CPU batch adapter work, require solved-fixture-safe streams, adapter coverage records, parity expectation hashes, scoring compatibility checks, generated ignored outputs, unchanged transform semantics, no solved-baseline expectation changes, no CUDA, and no solve claim.
+- For Stage 4P-style result-store unification work, require source inventory records, Stage 4I-compatible score-summary views, method-status joins, cross-stage reports, generated ignored outputs, no raw-data reads, no scorer invention, no experiment execution, no SQLite staging, no CUDA, and no solve claim.
 
 ## Commands
 
@@ -116,6 +117,10 @@ If Codex changes scoring behavior, verify `libreprimus scoring validate`,
 `libreprimus scoring check-cpu-batch-compatibility`, confidence-label mapping tests, and
 calibration notes before staging. Score labels are triage metadata only and must not imply solved
 or plaintext verified.
+
+If Codex changes result-store unification behavior, verify `libreprimus result-store validate-stage4p`,
+keep generated unified JSON/JSONL/SQLite files under ignored `experiments/results/result-store-unification/`,
+preserve Stage 4I labels, and do not invent scorer semantics or reinterpret old noisy results.
 
 If Codex changes observation review behavior, verify `libreprimus observation-review validate`,
 `libreprimus observation-review check-paths`, promotion-gate tests, quarantine tests, and path

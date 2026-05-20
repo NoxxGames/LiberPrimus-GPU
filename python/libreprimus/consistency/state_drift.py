@@ -128,6 +128,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 4O is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage4p",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+4p\b", re.IGNORECASE),
+        "Stage 4P is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -384,9 +389,16 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage4p_result_store_score_summary_next",
+        "stage4p_result_store_score_summary_current_or_complete",
         "stage 4p" in staged_plan and "result-store" in staged_plan and "score-summary" in staged_plan,
-        "Staged plan records Stage 4P result-store and score-summary unification as next.",
+        "Staged plan records Stage 4P result-store and score-summary unification as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage4q_cpu_benchmark_parity_next",
+        "stage 4q" in staged_plan and "cpu benchmark" in staged_plan and "parity planning" in staged_plan,
+        "Staged plan records Stage 4Q CPU benchmark and parity planning as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -433,6 +445,16 @@ def check_state_drift_consistency(
         and "parity expectations" in combined
         and "transform semantics" in combined,
         "CPU batch adapter expansion and future CUDA parity expectations are documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "result_store_score_summary_unification_policy_present",
+        "result-store" in combined
+        and "score-summary" in combined
+        and "unified result" in combined
+        and "triage" in combined,
+        "Result-store and score-summary unification policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

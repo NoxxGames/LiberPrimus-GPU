@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/results/unified-result-record-v0.schema.json",
+  "title": "unified-result-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "unified_result_id",
+    "source_stage_id",
+    "source_record_type",
+    "result_source_kind",
+    "source_path",
+    "source_presence_status",
+    "score_summary_available",
+    "confidence_label",
+    "method_status",
+    "no_solve_claim",
+    "solve_claim",
+    "cuda_used",
+    "cuda_required",
+    "canonical_corpus_active",
+    "page_boundaries_final",
+    "generated_outputs_committed",
+    "raw_data_processed",
+    "new_experiment_executed",
+    "new_scorer_added"
+  ],
+  "properties": {
+    "record_type": { "const": "unified_result_record" },
+    "unified_result_id": { "type": "string", "minLength": 1 },
+    "source_stage_id": { "type": "string", "minLength": 1 },
+    "source_record_type": { "type": "string", "minLength": 1 },
+    "result_source_kind": {
+      "enum": [
+        "solved_baseline_result_store",
+        "bounded_experiment_summary",
+        "cpu_batch_result",
+        "cpu_batch_parity_expectation",
+        "scoring_record",
+        "method_family_status",
+        "method_retirement",
+        "observation_promotion_summary",
+        "fixture_readiness_summary",
+        "image_preflight_summary",
+        "source_lock_summary",
+        "synthetic_test_fixture"
+      ]
+    },
+    "source_path": { "type": "string", "minLength": 1 },
+    "source_presence_status": {
+      "enum": [
+        "committed_summary_present",
+        "local_generated_present",
+        "optional_generated_missing",
+        "skipped_raw_required",
+        "skipped_schema_unknown"
+      ]
+    },
+    "method_family": { "type": "string" },
+    "transform_family": { "type": "string" },
+    "candidate_id": { "type": "string" },
+    "candidate_count": { "type": "integer", "minimum": 0 },
+    "result_count": { "type": "integer", "minimum": 0 },
+    "score_summary_available": { "type": "boolean" },
+    "confidence_label": {
+      "enum": [
+        "positive_control_like",
+        "plausible_lead",
+        "weak_lead",
+        "noisy",
+        "inconclusive",
+        "garbage",
+        "negative_control_like",
+        "scoring_not_available",
+        "calibration_not_available"
+      ]
+    },
+    "method_status": {
+      "enum": [
+        "active",
+        "infrastructure",
+        "infrastructure_only",
+        "noisy",
+        "inconclusive",
+        "negative",
+        "retired",
+        "deferred",
+        "blocked",
+        "unknown"
+      ]
+    },
+    "retirement_status": { "type": "string" },
+    "output_text_hash": { "type": "string" },
+    "output_token_hash": { "type": "string" },
+    "parity_expectation_id": { "type": "string" },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false },
+    "cuda_used": { "const": false },
+    "cuda_required": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "new_experiment_executed": { "const": false },
+    "new_scorer_added": { "const": false },
+    "score_interpretation": { "const": "triage_only" },
+    "warnings": { "type": "array", "items": { "type": "string" } }
+  }
+}

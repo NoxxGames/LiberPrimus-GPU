@@ -137,6 +137,15 @@ records:
     prohibited_expansions: [Running OutGuess/OpenPuff/MP3Stego during readiness stages, broad stego scans, committing image/audio/binary/font/archive artefacts, committing extracted payloads, treating source-only records as ready, or making hidden-message claims.]
     notes: Positive-control readiness means future verification can be checked; it is not extraction or evidence of a hidden payload.
   - record_type: method_retirement_record
+    method_family_id: result_store_score_summary_unification
+    retired_status: active_with_constraints
+    reason: Result-store and score-summary unification is reporting infrastructure only; publishing generated result bodies or changing score semantics would weaken reproducibility.
+    evidence: [Stage 4P records unified result and score-summary views while preserving Stage 4I labels and method-retirement states.]
+    stages_supporting: [stage-2b, stage-3y, stage-4i, stage-4p]
+    reopen_conditions: [A new committed result family or optional generated surface needs a normalized adapter and schema.]
+    prohibited_expansions: [New scorer models, score labels outside Stage 4I, broad experiment reruns, generated result publication, SQLite commits, solve claims.]
+    notes: Cross-stage reports are triage/comparison aids only and cannot promote a result to evidence.
+  - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints
     reason: Stage 4B visual observations are useful review inputs, but broad visual pareidolia and unannotated dot/braille/constellation readings remain high-risk false-positive classes.

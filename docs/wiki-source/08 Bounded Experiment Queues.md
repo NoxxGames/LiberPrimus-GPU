@@ -111,6 +111,18 @@ Stage 4I consolidates scoring labels and calibration records for CPU batch compa
 
 Generated Stage 4I scorer inventories and rendered reports stay in `experiments/results/scoring-consolidation/stage4i/`. Committed scoring records live under `data/scoring/`. Score labels are triage metadata only and cannot imply solved plaintext.
 
+Stage 4P unifies result-store and score-summary reporting without running experiments:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli result-store validate-stage4p `
+  --results-dir experiments/results/result-store-unification/stage4p `
+  --summary data/research/stage4p-result-store-score-summary-unification-summary.yaml
+```
+
+Generated Stage 4P source inventory, unified result, score-summary, method-status, and cross-stage
+report files stay in `experiments/results/result-store-unification/stage4p/`. They are comparison
+aids only and not solve evidence.
+
 Stage 4D runs only bounded no-fudge numeric and metadata audits from the Stage 4B disabled backlog:
 
 ```powershell
@@ -145,6 +157,9 @@ If a cookie pack finds no exact match, record the negative result and move to a 
 If a CPU batch adapter is missing, add a synthetic or solved-fixture-safe manifest/test, explicit deferred reason, and output hash expectation before using it in broader workflows. Stage 4O parity expectations are the CPU reference for future CUDA; do not add CUDA code to satisfy a missing CPU adapter.
 
 If a scoring label looks strong, treat it as a review lead only. Do not convert a score into a solve claim or broaden a method family without source-backed evidence and a bounded manifest.
+
+If a unified Stage 4P report shows missing optional generated outputs, treat that as an inventory
+warning. Do not rerun broad experiments or stage generated result bodies just to fill the report.
 
 If an observation looks ready for a future bounded run, pass it through `libreprimus observation-review`
 first. Review-only visual, Discord-derived, cuneiform, dot, or negative-control records cannot become

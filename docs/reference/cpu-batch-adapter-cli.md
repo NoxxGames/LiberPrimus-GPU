@@ -39,3 +39,17 @@ Stage 4O extends `libreprimus cpu-batch` with CPU-only adapter expansion command
 ```
 
 These commands do not implement CUDA, run broad experiments, or process raw data.
+
+## Stage 4P Integration
+
+Stage 4P can read already-present ignored Stage 4O generated outputs to build unified result and score-summary views:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli result-store build-cross-stage-report `
+  --manifest experiments/manifests/result-store/stage4p-cross-stage-report.yaml `
+  --out-dir experiments/results/result-store-unification/stage4p `
+  --summary-out data/research/stage4p-result-store-score-summary-unification-summary.yaml `
+  --allow-warnings
+```
+
+This does not rerun Stage 4O or publish generated CPU batch records.

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/results/result-method-status-join-v0.schema.json",
+  "title": "result-method-status-join-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "join_id",
+    "unified_result_id",
+    "method_family",
+    "method_status",
+    "retirement_status",
+    "join_status",
+    "score_interpretation",
+    "no_solve_claim",
+    "solve_claim",
+    "cuda_used"
+  ],
+  "properties": {
+    "record_type": { "const": "result_method_status_join_record" },
+    "join_id": { "type": "string", "minLength": 1 },
+    "unified_result_id": { "type": "string", "minLength": 1 },
+    "method_family": { "type": "string", "minLength": 1 },
+    "method_status": {
+      "enum": [
+        "active",
+        "infrastructure",
+        "infrastructure_only",
+        "noisy",
+        "inconclusive",
+        "negative",
+        "retired",
+        "deferred",
+        "blocked",
+        "unknown"
+      ]
+    },
+    "retirement_status": { "type": "string" },
+    "join_status": { "enum": ["joined", "missing_method_status", "not_applicable"] },
+    "score_interpretation": { "const": "triage_only" },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false },
+    "cuda_used": { "const": false },
+    "warnings": { "type": "array", "items": { "type": "string" } }
+  }
+}

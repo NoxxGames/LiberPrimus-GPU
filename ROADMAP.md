@@ -4,14 +4,16 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 4O CPU batch adapter expansion is complete. The stage recorded solved-fixture-safe stream
-metadata, adapter coverage, deterministic parity expectations, and score-summary compatibility
-without changing transform semantics, running broad experiments, or adding CUDA.
+Stage 4P result-store and score-summary unification is complete. The stage recorded source
+inventory, unified result records, Stage 4I-compatible score-summary views, method-status joins,
+and a deterministic cross-stage report without executing experiments, adding scorer semantics, or
+publishing generated result bodies.
 
-The next planned stage is Stage 4P: result-store and score-summary unification. CUDA planning
+The next planned stage is Stage 4Q: CPU benchmark and parity planning. CUDA planning
 remains later; CUDA remains deferred until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
-Stage 4O parity expectations, parity tests, and benchmark plans are stable.
+Stage 4O parity expectations, Stage 4P unified result surfaces, parity tests, and benchmark plans
+are stable.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
 recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
@@ -23,8 +25,9 @@ refresh result, Stage 4H extracted the CPU batch API as the future CUDA parity c
 4I made scoring labels and score summaries triage-only parity metadata, Stage 4J closed the
 review-to-promotion loop, Stage 4K strengthened public-source reproducibility, Stage 4L
 recorded promotion readiness, Stage 4M created image source-variant/compression preflight
-records, Stage 4N recorded OutGuess/audio positive-control readiness, and Stage 4O expanded CPU
-batch adapter coverage before result-store/score-summary unification or CUDA planning.
+records, Stage 4N recorded OutGuess/audio positive-control readiness, Stage 4O expanded CPU
+batch adapter coverage, and Stage 4P unified result-store/score-summary reporting before CPU
+benchmark and parity planning.
 
 ## Phase 0A - Project bootstrap
 
@@ -323,6 +326,15 @@ Stage 4O is complete. It expands CPU batch adapter coverage with solved-fixture-
 deterministic parity expectations, adapter coverage records, and score-summary compatibility checks.
 It records `9` supported adapters, `2` missing/deferred adapters, and `8` parity expectations
 without adding CUDA or changing transform semantics.
+
+## Stage 4P - result-store and score-summary unification
+
+Stage 4P is complete. It unifies committed summaries and optional ignored generated outputs into
+source inventory records, unified result records, Stage 4I-compatible score summaries,
+method-status joins, and a compact cross-stage report. It records `18` source inventory records,
+`82` unified result records, `82` unified score-summary records, and `82` method-status joins.
+Generated JSON/JSONL/SQLite result bodies remain ignored and no new scorer, experiment execution,
+CUDA work, canonical corpus activation, page-boundary finalization, or solve claim was added.
 
 ## Stage 4G - Cookie exact-candidate refresh
 

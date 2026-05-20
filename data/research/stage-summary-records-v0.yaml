@@ -471,3 +471,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Generated Stage 4O result records remain ignored under experiments/results/cpu-batch/stage4o; future CUDA still requires explicit planning, parity tests, and benchmarks.
+  - record_type: stage_summary_record
+    stage_id: stage-4p
+    title: Result-store and score-summary unification
+    status: complete
+    category: infrastructure
+    summary: Unified committed result summaries, optional ignored generated result surfaces, Stage 4I score-summary views, method-status joins, and deterministic cross-stage reporting without executing experiments or adding a scorer.
+    key_outputs:
+      - "`libreprimus result-store` Stage 4P commands for source inventory, score-summary unification, cross-stage reporting, and validation."
+      - Stage 4P manifests, schemas, generated ignored unified records, and a committed aggregate summary.
+      - Cross-stage method-status joins preserving noisy, negative, inconclusive, retired, deferred, and infrastructure-only states.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 4P wrote 18 source inventory records, 82 unified result records, 82 unified score-summary records, and 82 method-status joins; generated bodies remain ignored under experiments/results/result-store-unification/stage4p.

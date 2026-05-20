@@ -1,0 +1,21 @@
+record_type: result_store_unification_manifest
+manifest_id: stage4p-score-summary-unification
+stage_id: stage-4p
+description: Normalize score-like result surfaces into the Stage 4I score-summary contract.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+new_experiment_executed: false
+new_scorer_added: false
+score_summary_contract: stage4i
+score_interpretation: triage_only
+local_ignored_generated_outputs_optional: true
+missing_optional_generated_outputs_are_warnings: true
+notes:
+  - No new score labels, scoring components, or calibration profiles are introduced.
+  - Unknown score semantics become scoring_not_available records with warnings.

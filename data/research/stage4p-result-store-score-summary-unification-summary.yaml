@@ -1,0 +1,88 @@
+record_type: stage4p_result_store_score_summary_unification_summary
+schema: schemas/results/result-store-unification-summary-v0.schema.json
+stage_id: stage-4p
+status: complete
+source_inventory_records: 18
+committed_summaries_loaded: 11
+optional_generated_outputs_present: 6
+optional_generated_outputs_missing: 0
+unified_result_records: 82
+unified_score_summary_records: 82
+method_status_joins: 82
+stages_represented:
+- stage-2b
+- stage-3a-3j
+- stage-3n
+- stage-3y
+- stage-4h
+- stage-4i
+- stage-4j
+- stage-4k
+- stage-4l
+- stage-4m
+- stage-4n
+- stage-4o
+method_families_represented:
+- bounded_numeric_verifier_pack
+- caesar_affine
+- cookie_hash_sha256_packs
+- cpu_batch_transform_api
+- cuda_gpu_acceleration
+- cuneiform_dot_annotation_pack
+- deterministic_image_analysis
+- discord_ingestion_review
+- discord_lead_promotion
+- gp_rune_claim_verifier
+- image_source_variant_compression_preflight
+- image_transform_suite
+- mersenne_perfect_number_probe
+- observation_promotion_ledger
+- observation_review_workflow
+- onion7_explicit_seed_pack
+- outguess_regression_harness
+- p56_local_prime_offsets
+- reset_advance_ablation
+- result_store_score_summary_unification
+- reverse_reranked_affine
+- scoring_consolidation
+- source_delta_audit
+- source_lock_snapshots
+- source_lock_visual_observation_intake
+- stego_audio_fixture_source_lock
+- stego_audio_positive_control_readiness
+- vigenere_historical_motif_pack
+- vigenere_lp_evidence_pack
+- vigenere_tiny_motif
+confidence_label_counts:
+  garbage: 7
+  noisy: 1
+  scoring_not_available: 74
+method_status_counts:
+  active: 11
+  deferred: 2
+  inconclusive: 5
+  infrastructure_only: 51
+  negative: 2
+  noisy: 9
+  unknown: 2
+retirement_status_counts:
+  active_with_constraints: 56
+  deferred: 4
+  deprioritised: 11
+  unknown: 11
+records_with_output_hashes: 16
+records_with_parity_expectations: 8
+records_skipped_due_raw_required_input: 1
+cross_stage_report_written: true
+score_summary_contract: stage4i
+result_store_contract: stage4p
+no_solve_claim: true
+cuda_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+new_experiment_executed: false
+new_scorer_added: false
+notes:
+- Stage 4P unifies result surfaces for reporting only.
+- Generated unified records remain ignored under experiments/results/result-store-unification/stage4p/.

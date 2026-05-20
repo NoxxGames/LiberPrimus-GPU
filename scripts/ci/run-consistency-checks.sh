@@ -157,6 +157,24 @@ echo "Running Stage 4O CPU batch adapter expansion synthetic/temp output"
     --results-dir "$tmp_dir/stage4o-cpu-batch" \
     --summary "$tmp_dir/stage4o-cpu-batch-summary.yaml"
 
+echo "Running Stage 4P result-store unification synthetic/temp output"
+"$python_bin" -m libreprimus.cli result-store build-source-inventory \
+    --manifest experiments/manifests/result-store/stage4p-result-source-inventory.yaml \
+    --out-dir "$tmp_dir/stage4p-result-store-unification" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli result-store unify-score-summaries \
+    --manifest experiments/manifests/result-store/stage4p-score-summary-unification.yaml \
+    --out-dir "$tmp_dir/stage4p-result-store-unification" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli result-store build-cross-stage-report \
+    --manifest experiments/manifests/result-store/stage4p-cross-stage-report.yaml \
+    --out-dir "$tmp_dir/stage4p-result-store-unification" \
+    --summary-out "$tmp_dir/stage4p-result-store-score-summary-unification-summary.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli result-store validate-stage4p \
+    --results-dir "$tmp_dir/stage4p-result-store-unification" \
+    --summary "$tmp_dir/stage4p-result-store-score-summary-unification-summary.yaml"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

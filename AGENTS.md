@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 4O - CPU batch adapter expansion.
+Current completed stage: Stage 4P - result-store and score-summary unification.
 
-Current work: Stage 4P - result-store and score-summary unification. Stage 4P should unify generated-result and score-summary handling conservatively; it must not become broad search, CUDA implementation, or experiment execution without explicit scoped manifests.
+Current work: Stage 4Q - CPU benchmark and parity planning. Stage 4Q should plan CPU benchmark and parity requirements conservatively; it must not become CUDA implementation, GPU benchmarking, broad search, or experiment execution without explicit scoped manifests.
 
 Current project state:
 
@@ -134,6 +134,13 @@ Current project state:
 - CPU batch adapters must keep transform semantics unchanged and must not alter solved-baseline expected outputs.
 - Missing CPU batch adapters require explicit deferred or unsupported-by-design reasons.
 - Future CUDA must satisfy Stage 4O parity expectations before trust.
+- Stage 4P generated result-store unification outputs are generated and ignored under `experiments/results/result-store-unification/stage4p/`.
+- Result-store unification is read-only reporting infrastructure, not experiment execution.
+- Score-summary unification must use Stage 4I labels and must not invent scorer semantics.
+- Missing optional generated outputs must be recorded explicitly, not silently ignored.
+- Cross-stage reports are triage/comparison aids only and cannot make solve claims.
+- Do not commit generated result records, generated score-summary records, SQLite databases, or local reports.
+- Future CUDA planning must reference Stage 4O parity expectations and Stage 4P unified result surfaces.
 - `ready_for_manifest` means planning readiness only; it does not mean execution.
 - Control-only observations must not be treated as true claims.
 - Generated review sites must include noindex metadata, `robots.txt`, and a privacy notice by default.
@@ -662,6 +669,16 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Future CUDA must satisfy Stage 4O parity expectations before trust.
 - Stage 4O CPU batch outputs are generated records and must not be committed.
 - Do not treat CPU batch parity records as unsolved-page experiment evidence or solve claims.
+
+## Stage 4P Result-Store Score-Summary Unification Rules
+
+- Result-store unification is read-only reporting infrastructure, not experiment execution.
+- Score-summary unification must use the Stage 4I finite confidence-label vocabulary.
+- Do not invent scorer semantics, score labels, or calibration profiles while normalizing old records.
+- Missing optional generated outputs must be recorded explicitly as warnings.
+- Cross-stage reports are triage/comparison aids only and cannot make solve claims.
+- Generated unified result records, score-summary records, cross-stage reports, and SQLite files remain ignored and must not be committed.
+- Future CUDA planning must cite Stage 4O parity expectations and Stage 4P unified result surfaces.
 
 ## Stage 3W State Consolidation Rules
 

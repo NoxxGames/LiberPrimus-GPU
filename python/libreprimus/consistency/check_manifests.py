@@ -115,6 +115,14 @@ def check_manifest_consistency(
             results.append(fail_result(GROUP, "all_known_counts", "All-known manifest count drift."))
 
     for manifest in sorted(result_store_manifest_dir.glob("*.yaml")):
+        payload = _load_yaml(manifest)
+        if payload.get("record_type") == "result_store_unification_manifest":
+            _check_stage4p_result_store_unification_flags(results, payload, manifest)
+            if not _no_raw_dump(manifest):
+                results.append(
+                    fail_result(GROUP, "manifest_no_raw_dump", "Manifest appears to include raw data.", path=manifest)
+                )
+            continue
         try:
             errors = validate_result_store_manifest_file(manifest)
         except Exception as exc:  # noqa: BLE001 - consistency reports collect validation failures.
@@ -125,7 +133,6 @@ def check_manifest_consistency(
             results.append(
                 pass_result(GROUP, "result_store_manifest_valid", "Result-store manifest validates.", path=manifest)
             )
-        payload = _load_yaml(manifest)
         _check_manifest_flags(results, payload, manifest)
         input_manifest = repo_root() / str(payload.get("input_manifest_path", ""))
         if not input_manifest.is_file():
@@ -699,6 +706,56 @@ def _check_manifest_flags(results: list[ConsistencyCheckResult], payload: dict[s
     for field in ["search_enabled", "cuda_enabled", "scoring_enabled", "canonical_corpus_active"]:
         if payload.get(field) is not False:
             results.append(fail_result(GROUP, "manifest_flags_false", f"{field} must be false.", path=path))
+
+
+def _check_stage4p_result_store_unification_flags(
+    results: list[ConsistencyCheckResult],
+    payload: dict[str, Any],
+    path: Path,
+) -> None:
+    """Validate Stage 4P result-store unification manifest guardrails."""
+
+    required_false = (
+        "cuda_used",
+        "cuda_required",
+        "canonical_corpus_active",
+        "page_boundaries_final",
+        "generated_outputs_committed",
+        "raw_data_processed",
+        "new_experiment_executed",
+        "new_scorer_added",
+    )
+    failed = False
+    for field in required_false:
+        if payload.get(field) is not False:
+            failed = True
+            results.append(
+                fail_result(
+                    GROUP,
+                    "stage4p_result_store_unification_flags",
+                    f"{field} must be false.",
+                    path=path,
+                )
+            )
+    if payload.get("no_solve_claim") is not True:
+        failed = True
+        results.append(
+            fail_result(
+                GROUP,
+                "stage4p_result_store_unification_flags",
+                "no_solve_claim must be true.",
+                path=path,
+            )
+        )
+    if not failed:
+        results.append(
+            pass_result(
+                GROUP,
+                "stage4p_result_store_unification_flags",
+                "Stage 4P result-store unification manifest guardrails are set.",
+                path=path,
+            )
+        )
 
 
 def _check_exploratory_flags(results: list[ConsistencyCheckResult], payload: dict[str, Any], path: Path) -> None:

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/results/unified-score-summary-record-v0.schema.json",
+  "title": "unified-score-summary-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "unified_score_id",
+    "source_stage_id",
+    "source_path",
+    "result_source_kind",
+    "score_status",
+    "confidence_label",
+    "score_interpretation",
+    "no_solve_claim",
+    "solve_claim",
+    "cuda_used",
+    "new_scorer_added"
+  ],
+  "properties": {
+    "record_type": { "const": "unified_score_summary_record" },
+    "unified_score_id": { "type": "string", "minLength": 1 },
+    "source_stage_id": { "type": "string", "minLength": 1 },
+    "source_path": { "type": "string", "minLength": 1 },
+    "result_source_kind": { "type": "string", "minLength": 1 },
+    "input_stream_id": { "type": "string" },
+    "candidate_id": { "type": "string" },
+    "transform_family": { "type": "string" },
+    "score_status": {
+      "enum": ["scored", "scoring_not_available", "calibration_not_available", "scorer_error"]
+    },
+    "confidence_label": {
+      "enum": [
+        "positive_control_like",
+        "plausible_lead",
+        "weak_lead",
+        "noisy",
+        "inconclusive",
+        "garbage",
+        "negative_control_like",
+        "scoring_not_available",
+        "calibration_not_available"
+      ]
+    },
+    "score_value": { "type": "number" },
+    "score_components": { "type": "object" },
+    "calibration_profile_id": { "type": "string" },
+    "score_interpretation": { "const": "triage_only" },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false },
+    "cuda_used": { "const": false },
+    "new_scorer_added": { "const": false },
+    "warnings": { "type": "array", "items": { "type": "string" } }
+  }
+}

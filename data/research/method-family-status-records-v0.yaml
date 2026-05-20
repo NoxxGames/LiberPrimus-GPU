@@ -310,6 +310,17 @@ records:
     solve_claim: false
     notes: Synthetic controls can be readiness-complete without historical artefacts; historical fixtures remain blocked until asset, expected-output, and toolchain blockers are cleared.
   - record_type: method_family_status_record
+    method_family_id: result_store_score_summary_unification
+    name: Result-store and score-summary unification
+    status: infrastructure_only
+    evidence_summary: Stage 4P normalizes committed summaries and optional ignored generated result surfaces into unified result records, Stage 4I-compatible score summaries, method-status joins, and a deterministic cross-stage report.
+    completed_stage_refs: [stage-2b, stage-3y, stage-4i, stage-4o, stage-4p]
+    reopen_conditions: [A future stage adds a new result family, score-summary surface, method-status ledger, or parity-report output that needs cross-stage comparability.]
+    stop_conditions: [Do not execute experiments, invent scorer semantics, publish generated result records, import SQLite databases, or reinterpret noisy/negative/inconclusive records as solve evidence.]
+    next_action: Use Stage 4P unified surfaces as reporting inputs for Stage 4Q CPU benchmark and parity planning.
+    solve_claim: false
+    notes: Missing optional generated outputs are explicit warnings, not silent omissions; generated unified JSON/JSONL records remain ignored.
+  - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred

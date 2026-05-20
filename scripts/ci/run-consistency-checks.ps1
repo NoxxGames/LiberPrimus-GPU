@@ -166,6 +166,26 @@ try {
         --results-dir $Stage4OOut `
         --summary $Stage4OSummary
 
+    Write-Host "Running Stage 4P result-store unification synthetic/temp output"
+    $Stage4POut = Join-Path $TempDir "stage4p-result-store-unification"
+    $Stage4PSummary = Join-Path $TempDir "stage4p-result-store-score-summary-unification-summary.yaml"
+    & $Python -m libreprimus.cli result-store build-source-inventory `
+        --manifest experiments/manifests/result-store/stage4p-result-source-inventory.yaml `
+        --out-dir $Stage4POut `
+        --allow-warnings
+    & $Python -m libreprimus.cli result-store unify-score-summaries `
+        --manifest experiments/manifests/result-store/stage4p-score-summary-unification.yaml `
+        --out-dir $Stage4POut `
+        --allow-warnings
+    & $Python -m libreprimus.cli result-store build-cross-stage-report `
+        --manifest experiments/manifests/result-store/stage4p-cross-stage-report.yaml `
+        --out-dir $Stage4POut `
+        --summary-out $Stage4PSummary `
+        --allow-warnings
+    & $Python -m libreprimus.cli result-store validate-stage4p `
+        --results-dir $Stage4POut `
+        --summary $Stage4PSummary
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

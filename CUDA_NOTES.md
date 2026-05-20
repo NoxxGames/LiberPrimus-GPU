@@ -6,7 +6,7 @@ This file records CUDA policy for future acceleration work.
 
 ## Current CUDA Status
 
-CUDA remains deferred after Stage 4O. Existing CUDA code is scaffold and smoke-test infrastructure only unless a future stage explicitly adds CPU-reference behavior, score-summary parity tests, and benchmark coverage.
+CUDA remains deferred after Stage 4P. Existing CUDA code is scaffold and smoke-test infrastructure only unless a future stage explicitly adds CPU-reference behavior, unified result-surface review, score-summary parity tests, and benchmark coverage.
 
 Do not use CUDA for Discord processing, image interpretation, OutGuess regression, cookie/hash packs, or broad unsolved-page campaigns.
 
@@ -24,15 +24,15 @@ When CUDA is enabled for smoke/scaffold builds, `CMAKE_CUDA_ARCHITECTURES` defau
 
 ## CPU Reference First
 
-Every future CUDA transform must follow a CPU reference implementation. Stage 4H makes `libreprimus.cpu_batch` the current CPU batch parity contract, Stage 4I makes score-summary records the current scoring contract, Stage 4M keeps image/bigram observations out of CUDA scope until reproducible controls exist, Stage 4N keeps stego/audio positive-control readiness out of CUDA scope until fixtures, expected outputs, and toolchains are ready, and Stage 4O records deterministic CPU batch parity expectations for expanded adapters. CPU behavior, scoring semantics, reset/advance policy, review state, output records, and parity expectations must be stable before acceleration.
+Every future CUDA transform must follow a CPU reference implementation. Stage 4H makes `libreprimus.cpu_batch` the current CPU batch parity contract, Stage 4I makes score-summary records the current scoring contract, Stage 4M keeps image/bigram observations out of CUDA scope until reproducible controls exist, Stage 4N keeps stego/audio positive-control readiness out of CUDA scope until fixtures, expected outputs, and toolchains are ready, Stage 4O records deterministic CPU batch parity expectations for expanded adapters, and Stage 4P makes result-store and score-summary surfaces comparable. CPU behavior, scoring semantics, reset/advance policy, review state, output records, unified result surfaces, and parity expectations must be stable before acceleration.
 
 ## Future First CUDA Target
 
-The likely first serious CUDA target is batch transform-and-score parity for already-reviewed CPU transforms after observation review hardening, source-lock readiness, image-preflight controls, positive-control readiness, Stage 4O parity expectations, result-store/score-summary unification, and explicit CUDA planning. Hash cracking, Discord processing, image stego fishing, audio/stego extraction, OCR, AI/ML interpretation, and raw data processing are not CUDA targets.
+The likely first serious CUDA target is batch transform-and-score parity for already-reviewed CPU transforms after observation review hardening, source-lock readiness, image-preflight controls, positive-control readiness, Stage 4O parity expectations, Stage 4P result-store/score-summary unification, and explicit CPU benchmark/parity planning. Hash cracking, Discord processing, image stego fishing, audio/stego extraction, OCR, AI/ML interpretation, and raw data processing are not CUDA targets.
 
 ## Parity Tests
 
-Every CUDA kernel must have CPU/GPU parity tests before optimization. Parity tests must include known inputs, negative controls, edge cases, deterministic output comparisons, matching Stage 4H `output_text_hash` / `output_token_hash` records, and Stage 4O parity expectation records for supported adapters.
+Every CUDA kernel must have CPU/GPU parity tests before optimization. Parity tests must include known inputs, negative controls, edge cases, deterministic output comparisons, matching Stage 4H `output_text_hash` / `output_token_hash` records, Stage 4O parity expectation records for supported adapters, and Stage 4P unified result surfaces for cross-stage score/status comparison.
 
 ## No Fast-Math Default
 

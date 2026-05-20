@@ -65,6 +65,12 @@ stream building, missing-fixture skips, adapter coverage records, parity expecta
 summary compatibility, Stage 4O CLI commands, Stage 4H command preservation, and ignored-output/raw
 data checks for `experiments/results/cpu-batch/stage4o/`.
 
+Stage 4P extends coverage with unified result schemas, Stage 4I score-label validation, source
+inventory missing-output and raw-required skips, deterministic score-summary unification,
+method-status joins, cross-stage report counts, Stage 4P result-store CLI commands, existing
+result-store command preservation, ignored-output checks, raw-data checks, and SQLite non-staging
+checks for `experiments/results/result-store-unification/stage4p/`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.
@@ -231,6 +237,23 @@ Local validation includes:
 .\.venv\Scripts\python.exe -m libreprimus.cli cpu-batch validate-stage4o `
   --results-dir experiments/results/cpu-batch/stage4o `
   --summary data/research/stage4o-cpu-batch-adapter-expansion-summary.yaml
+.\.venv\Scripts\python.exe -m pytest -q tests/python
+```
+
+## Stage 4P Result Store Score Summary Unification Tests
+
+Stage 4P tests cover unified result schemas, score-summary schemas, source inventory determinism,
+optional generated-output missing records, raw-required source skips, Stage 4I confidence-label
+preservation, score-unavailable warnings, method-status joins, cross-stage report counts, CLI
+build/validate commands, existing result-store command preservation, generated output ignore policy,
+raw data ignore policy, and SQLite non-staging rules.
+
+Local validation includes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli result-store validate-stage4p `
+  --results-dir experiments/results/result-store-unification/stage4p `
+  --summary data/research/stage4p-result-store-score-summary-unification-summary.yaml
 .\.venv\Scripts\python.exe -m pytest -q tests/python
 ```
 

@@ -151,6 +151,18 @@ def validate_research_synthesis(
             ("stage 4p", "result-store", "score-summary"),
             "staged_plan_stage4p_result_store_score_summary_next",
         )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4p", "result-store", "score-summary", "complete"),
+            "staged_plan_stage4p_result_store_score_summary_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 4q", "cpu benchmark", "parity planning"),
+            "staged_plan_stage4q_cpu_benchmark_parity_next",
+        )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
         _require_text(errors, staged_text, ("page boundaries", "reviewable"), "staged_plan_boundaries_reviewable")
@@ -320,6 +332,14 @@ def validate_research_synthesis(
         stop_text = " ".join(str(item).lower() for item in stego_positive_controls.get("stop_conditions", []))
         if "expected-output" not in stop_text or "raw artefact" not in stop_text or "tool" not in stop_text:
             errors.append("stego_audio_positive_control_readiness_missing_fixture_guardrail")
+
+    result_unification = _find_method(method_records, "result_store_score_summary_unification")
+    if result_unification is None:
+        errors.append("result_store_score_summary_unification_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in result_unification.get("stop_conditions", []))
+        if "generated result" not in stop_text or "scorer" not in stop_text or "solve" not in stop_text:
+            errors.append("result_store_score_summary_unification_missing_reporting_guardrail")
 
     cuda = _find_method(method_records, "cuda_gpu_acceleration")
     if cuda is None or cuda.get("status") != "deferred":

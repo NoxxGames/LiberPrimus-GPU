@@ -13,6 +13,6 @@ Required parity anchors:
 - Scoring parity requires byte-for-byte matching output text before score comparison.
 - `output_text_hash` and `output_token_hash` are the first comparison anchors.
 
-Stage 4I adds the score-summary contract for future transform-and-score parity. Stage 4O adds adapter-level parity expectations for solved-fixture-safe CPU batch outputs.
+Stage 4I adds the score-summary contract for future transform-and-score parity. Stage 4O adds adapter-level parity expectations for solved-fixture-safe CPU batch outputs. Stage 4P adds unified result and score-summary surfaces so future CUDA planning can compare output hashes, score labels, method status, and retirement state without reading raw data or generated bulk outputs from Git.
 
-CUDA remains deferred until observation review hardening, source-lock readiness, promotion readiness, positive-control readiness, result-store/score-summary unification, explicit CUDA planning, parity tests, and benchmark plans exist. Existing CUDA code remains scaffold/smoke infrastructure unless a later explicit stage says otherwise.
+CUDA remains deferred until observation review hardening, source-lock readiness, promotion readiness, positive-control readiness, Stage 4P result-store/score-summary unification, explicit CPU benchmark and parity planning, parity tests, and benchmark plans exist. Existing CUDA code remains scaffold/smoke infrastructure unless a later explicit stage says otherwise.

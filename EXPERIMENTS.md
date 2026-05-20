@@ -186,6 +186,32 @@ Run:
 
 The Stage 4G run generated `4` candidates before deduplication, kept `4` deduplicated candidates, tested `8` exact SHA-256 comparisons against two targets, and found `0` exact matches. Do not rerun cookie work without newly source-locked exact candidate strings.
 
+## Stage 4P Result Store Score Summary Unification
+
+Stage 4P is reporting infrastructure, not a new experiment family. It inventories committed summaries
+and optional ignored generated result surfaces, writes unified result records, maps score summaries
+through the Stage 4I contract, joins method-family status and retirement state, and writes a
+deterministic cross-stage report.
+
+Committed manifests:
+
+- `experiments/manifests/result-store/stage4p-result-source-inventory.yaml`
+- `experiments/manifests/result-store/stage4p-score-summary-unification.yaml`
+- `experiments/manifests/result-store/stage4p-cross-stage-report.yaml`
+
+Generated source inventory, unified result, score-summary, method-status, cross-stage report,
+summary, warning, and SQLite files remain ignored under
+`experiments/results/result-store-unification/stage4p/`. Stage 4P does not run new experiments,
+invent score labels, recalibrate scorers, process raw data, implement CUDA, or make solve claims.
+
+Run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli result-store validate-stage4p `
+  --results-dir experiments/results/result-store-unification/stage4p `
+  --summary data/research/stage4p-result-store-score-summary-unification-summary.yaml
+```
+
 ## Stage 4H CPU Batch Transform API
 
 Stage 4H is infrastructure, not a new experiment family. It adds small CPU-only manifests under `experiments/manifests/cpu-batch/` for synthetic smoke, solved-baseline-style parity, and adapter coverage.
