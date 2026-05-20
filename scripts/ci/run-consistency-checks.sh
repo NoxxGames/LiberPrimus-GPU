@@ -348,6 +348,42 @@ PY
     --summary "$tmp_dir/stage5d-native-cpu-summary.yaml" \
     --results-dir "$tmp_dir/stage5d-native-cpu"
 
+echo "Running Stage 5E CUDA kernel contract synthetic/temp output"
+"$python_bin" -m libreprimus.cli cuda-kernel-contract select-first-kernel \
+    --manifest experiments/manifests/cuda/stage5e-first-kernel-contract.yaml \
+    --out-dir "$tmp_dir/stage5e-cuda-kernel-contract" \
+    --contract-out "$tmp_dir/stage5e-first-kernel-contract.yaml" \
+    --adapter-selection-out "$tmp_dir/stage5e-cuda-adapter-selection.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-kernel-contract build-native-parity-map \
+    --manifest experiments/manifests/cuda/stage5e-adapter-selection.yaml \
+    --contract "$tmp_dir/stage5e-first-kernel-contract.yaml" \
+    --out-dir "$tmp_dir/stage5e-cuda-kernel-contract" \
+    --native-parity-out "$tmp_dir/stage5e-native-parity-adapter-map.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-kernel-contract build-readiness \
+    --manifest experiments/manifests/cuda/stage5e-implementation-readiness.yaml \
+    --contract "$tmp_dir/stage5e-first-kernel-contract.yaml" \
+    --native-parity "$tmp_dir/stage5e-native-parity-adapter-map.yaml" \
+    --out-dir "$tmp_dir/stage5e-cuda-kernel-contract" \
+    --readiness-out "$tmp_dir/stage5e-implementation-readiness.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-kernel-contract build-summary \
+    --contract "$tmp_dir/stage5e-first-kernel-contract.yaml" \
+    --adapter-selection "$tmp_dir/stage5e-cuda-adapter-selection.yaml" \
+    --native-parity "$tmp_dir/stage5e-native-parity-adapter-map.yaml" \
+    --readiness "$tmp_dir/stage5e-implementation-readiness.yaml" \
+    --out-dir "$tmp_dir/stage5e-cuda-kernel-contract" \
+    --summary-out "$tmp_dir/stage5e-first-kernel-contract-summary.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-kernel-contract validate-stage5e \
+    --contract "$tmp_dir/stage5e-first-kernel-contract.yaml" \
+    --adapter-selection "$tmp_dir/stage5e-cuda-adapter-selection.yaml" \
+    --native-parity "$tmp_dir/stage5e-native-parity-adapter-map.yaml" \
+    --readiness "$tmp_dir/stage5e-implementation-readiness.yaml" \
+    --summary "$tmp_dir/stage5e-first-kernel-contract-summary.yaml" \
+    --results-dir "$tmp_dir/stage5e-cuda-kernel-contract"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

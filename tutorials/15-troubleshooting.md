@@ -192,8 +192,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 5D, onboarding and staged-plan checks should show Stage 5D complete and Stage 5E first
-CUDA kernel contract and CPU/native parity adapter selection next.
+After Stage 5E, onboarding and staged-plan checks should show Stage 5E complete and Stage 5F first
+synthetic-only CUDA parity kernel implementation next.
 
 If path sanitisation fails, run:
 

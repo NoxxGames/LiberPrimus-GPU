@@ -823,3 +823,16 @@ Do not use Stage 5D diagnostics as speedup or benchmark evidence. Do not add or 
 add kernels, run CUDA transforms, run GPU benchmarks, launch Python worker scripts from C++, broaden
 search, process raw data, expand the website, activate the canonical corpus, finalise page
 boundaries, or claim a solve from native CPU backend records.
+
+# Stage 5E First CUDA Kernel Contract Boundary
+
+Stage 5E is not a cryptanalytic experiment and not a CUDA implementation stage. It selects the
+first future CUDA kernel contract, maps the CPU/native parity adapter, records implementation
+readiness for a future synthetic-only stage, and writes an aggregate summary. Generated Stage 5E
+kernel-contract reports remain ignored under
+`experiments/results/cuda-kernel-contract/stage5e/`.
+
+The selected contract is `shift_score_kernel` for `caesar_mod29` with adapter
+`native_cpu_synthetic_shift_adapter`. Do not treat this selection as permission for broad CUDA
+implementation, GPU benchmarking, speedup claims, broad searches, raw-data processing, website
+expansion, canonical corpus activation, page-boundary finalisation, or solve claims.

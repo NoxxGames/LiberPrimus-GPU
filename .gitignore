@@ -475,5 +475,13 @@ experiments/results/native-cpu/**
 !experiments/results/native-cpu/stage5d/
 !experiments/results/native-cpu/stage5d/.gitkeep
 
+# Generated CUDA kernel contract outputs
+experiments/results/cuda-kernel-contract/**
+!experiments/results/cuda-kernel-contract/
+!experiments/results/cuda-kernel-contract/README.md
+!experiments/results/cuda-kernel-contract/.gitkeep
+!experiments/results/cuda-kernel-contract/stage5e/
+!experiments/results/cuda-kernel-contract/stage5e/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

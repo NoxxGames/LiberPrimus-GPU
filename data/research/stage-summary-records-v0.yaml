@@ -566,4 +566,20 @@ records:
     cuda_used: false
     raw_outputs_committed: false
     generated_outputs_committed: false
-    notes: Stage 5D wrote 1 backend capability record, 5 threading records, 1 native/Python parity record, and 1 diagnostic record. Generated native CPU reports remain ignored under experiments/results/native-cpu/stage5d, timing diagnostics are not benchmarks, and Stage 5E is the next first CUDA kernel contract and CPU/native parity adapter selection stage.
+    notes: Stage 5D wrote 1 backend capability record, 5 threading records, 1 native/Python parity record, and 1 diagnostic record. Generated native CPU reports remain ignored under experiments/results/native-cpu/stage5d, timing diagnostics are not benchmarks, and Stage 5E completed the first CUDA kernel contract and CPU/native parity adapter selection stage.
+  - record_type: stage_summary_record
+    stage_id: stage-5e
+    title: First CUDA kernel contract and CPU/native parity adapter selection
+    status: complete
+    category: infrastructure
+    summary: Selected the shift-score/caesar_mod29 first future CUDA kernel contract and native CPU synthetic shift parity adapter without adding CUDA kernels, changing CUDA source, running CUDA transforms, or performing GPU benchmarks.
+    key_outputs:
+      - "`libreprimus cuda-kernel-contract` commands for first-kernel selection, native parity mapping, implementation readiness, summary generation, validation, and summary display."
+      - Stage 5E first-kernel contract, adapter-selection, native parity adapter map, implementation-readiness, and summary records under `data/cuda/`.
+      - Documentation and consistency checks preserving Stage 5D native parity hashes as the execution reference while limiting Stage 5F readiness to synthetic-only CUDA parity implementation.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5E selected `shift_score_kernel` for `stage5a-caesar_mod29-cuda-target`, recorded 3 alternate candidates and 10 blocked/rejected candidates, mapped Stage 5D one-thread and multi-thread hashes, and made no kernel, benchmark, speedup, raw-data, website, canonical-corpus, page-boundary, or solve claim.

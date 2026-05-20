@@ -388,6 +388,48 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5DSummary `
         --results-dir $Stage5DOut
 
+    Write-Host "Running Stage 5E CUDA kernel contract synthetic/temp output"
+    $Stage5EOut = Join-Path $TempDir "stage5e-cuda-kernel-contract"
+    $Stage5EContract = Join-Path $TempDir "stage5e-first-kernel-contract.yaml"
+    $Stage5EAdapter = Join-Path $TempDir "stage5e-cuda-adapter-selection.yaml"
+    $Stage5ENative = Join-Path $TempDir "stage5e-native-parity-adapter-map.yaml"
+    $Stage5EReadiness = Join-Path $TempDir "stage5e-implementation-readiness.yaml"
+    $Stage5ESummary = Join-Path $TempDir "stage5e-first-kernel-contract-summary.yaml"
+    & $Python -m libreprimus.cli cuda-kernel-contract select-first-kernel `
+        --manifest experiments/manifests/cuda/stage5e-first-kernel-contract.yaml `
+        --out-dir $Stage5EOut `
+        --contract-out $Stage5EContract `
+        --adapter-selection-out $Stage5EAdapter `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-kernel-contract build-native-parity-map `
+        --manifest experiments/manifests/cuda/stage5e-adapter-selection.yaml `
+        --contract $Stage5EContract `
+        --out-dir $Stage5EOut `
+        --native-parity-out $Stage5ENative `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-kernel-contract build-readiness `
+        --manifest experiments/manifests/cuda/stage5e-implementation-readiness.yaml `
+        --contract $Stage5EContract `
+        --native-parity $Stage5ENative `
+        --out-dir $Stage5EOut `
+        --readiness-out $Stage5EReadiness `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-kernel-contract build-summary `
+        --contract $Stage5EContract `
+        --adapter-selection $Stage5EAdapter `
+        --native-parity $Stage5ENative `
+        --readiness $Stage5EReadiness `
+        --out-dir $Stage5EOut `
+        --summary-out $Stage5ESummary `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-kernel-contract validate-stage5e `
+        --contract $Stage5EContract `
+        --adapter-selection $Stage5EAdapter `
+        --native-parity $Stage5ENative `
+        --readiness $Stage5EReadiness `
+        --summary $Stage5ESummary `
+        --results-dir $Stage5EOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

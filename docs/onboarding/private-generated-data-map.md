@@ -30,6 +30,7 @@
 - `experiments/results/cuda-parity/stage5b/`: generated Stage 5B CUDA parity harness, fixture, backend capability, future-kernel matrix, summary, and warning reports.
 - `experiments/results/cuda-build/stage5c/`: generated Stage 5C CUDA toolchain detection, device detection, optional smoke-build, summary, and warning reports.
 - `experiments/results/native-cpu/stage5d/`: generated Stage 5D native CPU backend capability, threading parity, native/Python parity, diagnostic, summary, and warning reports.
+- `experiments/results/cuda-kernel-contract/stage5e/`: generated Stage 5E first-kernel contract, adapter-selection, native parity adapter, implementation-readiness, summary, and warning reports.
 - `codex-output/`: local Codex completion handoff files; do not stage or publish.
 - `experiments/results/scoring-consolidation/stage4i/`: generated Stage 4I scorer inventories, rendered calibration reports, CPU batch compatibility JSON, and warnings.
 - `experiments/results/observation-review/stage4j/`: generated Stage 4J observation review decision reports, quarantine reports, promotion-gate reports, path-sanitisation reports, and warnings.
@@ -68,7 +69,7 @@
 - Generated Stage 4H CPU batch result, summary, adapter coverage, and warning outputs under `experiments/results/cpu-batch/stage4h/`.
 - Generated Stage 4O CPU batch result, adapter coverage, parity expectation, scoring compatibility, summary, and warning outputs under `experiments/results/cpu-batch/stage4o/`.
 - Generated Stage 4P source inventory, unified result records, unified score-summary records, method-status join records, cross-stage reports, summary JSON, warnings, and SQLite files under `experiments/results/result-store-unification/stage4p/`.
-- Generated Stage 4Q benchmark planning records under `experiments/results/benchmarks/stage4q/`, generated Stage 5A CUDA planning reports under `experiments/results/cuda-planning/stage5a/`, generated Stage 5B CUDA parity reports under `experiments/results/cuda-parity/stage5b/`, generated Stage 5C CUDA build/device reports under `experiments/results/cuda-build/stage5c/`, generated Stage 5D native CPU reports under `experiments/results/native-cpu/stage5d/`, and local Codex handoffs under `codex-output/`.
+- Generated Stage 4Q benchmark planning records under `experiments/results/benchmarks/stage4q/`, generated Stage 5A CUDA planning reports under `experiments/results/cuda-planning/stage5a/`, generated Stage 5B CUDA parity reports under `experiments/results/cuda-parity/stage5b/`, generated Stage 5C CUDA build/device reports under `experiments/results/cuda-build/stage5c/`, generated Stage 5D native CPU reports under `experiments/results/native-cpu/stage5d/`, generated Stage 5E CUDA kernel contract reports under `experiments/results/cuda-kernel-contract/stage5e/`, and local Codex handoffs under `codex-output/`.
 - Generated Stage 4I scorer inventory, calibration report, CPU batch compatibility, and warning outputs under `experiments/results/scoring-consolidation/stage4i/`.
 - Generated Stage 4J observation review reports under `experiments/results/observation-review/stage4j/`.
 - Generated Stage 4K source-lock snapshot reports under `experiments/results/source-lock-snapshots/stage4k/`.

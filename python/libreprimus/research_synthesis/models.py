@@ -50,6 +50,7 @@ REQUIRED_METHOD_FAMILIES = {
     "cuda_parity_harness_skeleton",
     "cuda_build_device_detection",
     "native_cpp_cpu_backend",
+    "cuda_first_kernel_contract",
     "deterministic_image_analysis",
     "image_transform_suite",
     "discord_ingestion_review",

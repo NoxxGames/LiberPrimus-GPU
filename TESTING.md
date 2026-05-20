@@ -83,6 +83,11 @@ validation rejections for CUDA/performance/solve-claim drift, CLI run/validate c
 ignored-output/codex-output checks for `experiments/results/native-cpu/stage5d/` and
 `codex-output/`.
 
+Stage 5E extends coverage with first CUDA kernel contract schemas, contract selection tests,
+native parity adapter mapping checks, implementation-readiness guardrails, CLI command checks,
+validation rejections for CUDA/source/performance/solve-claim drift, and ignored-output/codex-output
+checks for `experiments/results/cuda-kernel-contract/stage5e/` and `codex-output/`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.

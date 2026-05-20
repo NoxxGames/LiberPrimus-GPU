@@ -87,6 +87,11 @@ EXPECTED_SCHEMA_FILES = [
     "native-cpu/native-cpu-parity-record-v0.schema.json",
     "native-cpu/native-cpu-diagnostic-record-v0.schema.json",
     "native-cpu/stage5d-native-cpu-summary-v0.schema.json",
+    "cuda/cuda-first-kernel-contract-record-v0.schema.json",
+    "cuda/cuda-adapter-selection-record-v0.schema.json",
+    "cuda/cuda-native-parity-adapter-record-v0.schema.json",
+    "cuda/cuda-implementation-readiness-record-v0.schema.json",
+    "cuda/stage5e-first-kernel-contract-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -151,6 +156,11 @@ EXPECTED_DOC_TERMS = [
     "native-cpu-parity-record-v0",
     "native-cpu-diagnostic-record-v0",
     "stage5d-native-cpu-summary-v0",
+    "cuda-first-kernel-contract-record-v0",
+    "cuda-adapter-selection-record-v0",
+    "cuda-native-parity-adapter-record-v0",
+    "cuda-implementation-readiness-record-v0",
+    "stage5e-first-kernel-contract-summary-v0",
 ]
 
 

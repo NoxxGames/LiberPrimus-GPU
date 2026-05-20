@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5D native C++ CPU batch backend and deterministic threading baseline. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5E first CUDA kernel contract and CPU/native parity adapter selection. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -36,7 +36,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Observation promotion ledger: Stage 4L joins Stage 4J review decisions with Stage 4K source locks and records ready, blocked, deferred, quarantined, rejected, source-reference-only, and control-only states. Ready does not mean executed; all future manifests remain disabled.
 - Image source-variant and compression preflight: Stage 4M scans ignored local LP page images for metadata and deterministic metric-only compression summaries, records source-variant comparison readiness, keeps star-like/compression-like artefacts review-only, and keeps the bigram/Fibonacci-421 observation blocked pending reproducible matrix and null controls. It does not commit raw images, generated visualisations, or execute image/bigram experiments.
 - Stego/audio positive-control readiness: Stage 4N records fixture readiness, cache policy, expected-output requirements, toolchain state, and synthetic controls. Historical OutGuess/OpenPuff/MP3/audio cases remain blocked until assets, exact expected outputs, and tools are ready.
-- CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. Stage 4O expands this with solved-fixture-safe streams, adapter coverage records, deterministic parity expectations, and score-summary compatibility checks. Stage 4P makes those result and score surfaces comparable with older result-store summaries. Stage 4Q adds benchmark and future parity planning gates. Stage 5A adds CUDA target plans, non-targets, parity scaffolds, and implementation gates. Stage 5B adds CUDA parity harness plans, parity fixtures, backend capability profiles, and future-kernel matrix rows. Stage 5C adds no-GPU-safe CUDA build profiles, toolchain detection, device detection, and optional smoke-build readiness metadata. Stage 5D adds native C++ CPU backend, deterministic threading, and native/Python parity records. It is infrastructure for future CUDA parity, not a broad experiment runner.
+- CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. Stage 4O expands this with solved-fixture-safe streams, adapter coverage records, deterministic parity expectations, and score-summary compatibility checks. Stage 4P makes those result and score surfaces comparable with older result-store summaries. Stage 4Q adds benchmark and future parity planning gates. Stage 5A adds CUDA target plans, non-targets, parity scaffolds, and implementation gates. Stage 5B adds CUDA parity harness plans, parity fixtures, backend capability profiles, and future-kernel matrix rows. Stage 5C adds no-GPU-safe CUDA build profiles, toolchain detection, device detection, and optional smoke-build readiness metadata. Stage 5D adds native C++ CPU backend, deterministic threading, and native/Python parity records. Stage 5E selects `shift_score_kernel` as the first future CUDA kernel contract and maps it to the native synthetic shift parity adapter. It is infrastructure for future CUDA parity, not a broad experiment runner.
 - Scoring contract: Stage 4I provides scorer inventory, finite confidence-label records, compatibility mappings, calibration-profile/report records, and CPU batch score compatibility checks. Score labels can create review leads only and cannot imply solved plaintext.
 - Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
 - CUDA experiment campaigns: not started.
@@ -47,7 +47,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 5E first CUDA kernel contract and CPU/native parity adapter selection.
+- Stage 5F first synthetic-only CUDA parity kernel implementation for the selected Stage 5E `shift_score_kernel` contract.
 - Website expansion is deferred to Stage 6.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
@@ -116,6 +116,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 5B CUDA parity harness skeleton.
 - Stage 5C CUDA build and device-detection scaffold.
 - Stage 5D native C++ CPU batch backend and deterministic threading baseline.
+- Stage 5E first CUDA kernel contract and CPU/native parity adapter selection.
 
 ## Architecture summary
 
@@ -183,6 +184,11 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Stage 4O: CPU batch adapter expansion complete.
 - Stage 4P: result-store and score-summary unification complete.
 - Stage 4Q: CPU benchmark and parity planning complete.
+- Stage 5A: CUDA planning and parity scaffolding complete.
+- Stage 5B: CUDA parity harness skeleton complete.
+- Stage 5C: CUDA build and device-detection scaffold complete.
+- Stage 5D: native C++ CPU batch backend and deterministic threading baseline complete.
+- Stage 5E: first CUDA kernel contract and CPU/native parity adapter selection complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -221,8 +227,9 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Latest CUDA parity harness stage: Stage 5B wrote `14` harness plan records, `14` parity fixture records, `3` backend capability records, and `9` future-kernel matrix records. It made no CUDA source change, GPU benchmark, speedup claim, broad experiment, raw-data processing, or solve claim.
 - Latest CUDA build/device stage: Stage 5C wrote `3` build profiles, `3` toolchain records, `3` device records, and `1` optional smoke-build record. It made no CUDA source change, CUDA kernel, GPU benchmark, speedup claim, broad experiment, raw-data processing, website expansion, or solve claim.
 - Latest native CPU backend stage: Stage 5D wrote `1` backend capability record, `5` threading records, `1` native/Python parity record, and `1` diagnostic record. It tested thread counts `1,2,4,8,16`, produced matching one-thread and multi-thread hashes, preserved Python as orchestration, and made no CUDA source change, GPU benchmark, speedup claim, broad experiment, raw-data processing, website expansion, or solve claim.
+- Latest CUDA kernel contract stage: Stage 5E selected `shift_score_kernel` for `caesar_mod29`, mapped `native_cpu_synthetic_shift_adapter`, recorded `3` alternate candidates and `10` blocked/rejected candidates, and kept CUDA source, GPU benchmarks, speedup claims, raw-data processing, website expansion, and solve claims out of scope.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 5E first CUDA kernel contract and CPU/native parity adapter selection.
+- Next: Stage 5F first synthetic-only CUDA parity kernel implementation.
 
 ## How To Use This Repo
 

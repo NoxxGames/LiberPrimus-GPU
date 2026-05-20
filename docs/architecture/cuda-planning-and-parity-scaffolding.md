@@ -11,7 +11,7 @@ The planning chain is:
 - Stage 4Q supplies CPU benchmark planning and CUDA parity readiness.
 - Stage 5A records which targets are ready for planning, blocked, or out of CUDA scope.
 
-Stage 5B cites the Stage 5A records to create a harness skeleton, parity fixtures, backend capability profiles, and future-kernel matrix rows. Stage 5C then records CUDA build and device-detection metadata. Stage 5D records native C++ CPU backend and deterministic threading parity records. Planning, harness, build/device, and native CPU readiness are not execution readiness.
+Stage 5B cites the Stage 5A records to create a harness skeleton, parity fixtures, backend capability profiles, and future-kernel matrix rows. Stage 5C then records CUDA build and device-detection metadata. Stage 5D records native C++ CPU backend and deterministic threading parity records. Stage 5E selects the first future kernel contract. Planning, harness, build/device, native CPU readiness, and contract selection are not broad execution readiness.
 
 ## Committed Records
 
@@ -23,4 +23,4 @@ Stage 5B cites the Stage 5A records to create a harness skeleton, parity fixture
 
 Generated JSON reports remain ignored under `experiments/results/cuda-planning/stage5a/`.
 
-Stage 5B generated CUDA parity reports remain ignored under `experiments/results/cuda-parity/stage5b/`; committed Stage 5B records live under `data/cuda/`. Stage 5C generated CUDA build/device reports remain ignored under `experiments/results/cuda-build/stage5c/`; committed Stage 5C records live under `data/cuda/`. Stage 5D generated native CPU reports remain ignored under `experiments/results/native-cpu/stage5d/`; committed Stage 5D records live under `data/native-cpu/`.
+Stage 5B generated CUDA parity reports remain ignored under `experiments/results/cuda-parity/stage5b/`; committed Stage 5B records live under `data/cuda/`. Stage 5C generated CUDA build/device reports remain ignored under `experiments/results/cuda-build/stage5c/`; committed Stage 5C records live under `data/cuda/`. Stage 5D generated native CPU reports remain ignored under `experiments/results/native-cpu/stage5d/`; committed Stage 5D records live under `data/native-cpu/`. Stage 5E generated kernel-contract reports remain ignored under `experiments/results/cuda-kernel-contract/stage5e/`; committed Stage 5E records live under `data/cuda/`.

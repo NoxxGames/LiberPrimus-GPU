@@ -20,5 +20,6 @@ records live under `data/native-cpu/`; generated JSON reports live under
 ## Parity Role
 
 Stage 5D gives future CUDA stages a native CPU baseline in addition to the Python CPU batch
-reference. Future CUDA kernel contracts must cite the Stage 5D native output hash, threading parity
+reference. Stage 5E cites that baseline when selecting the `shift_score_kernel` contract. Future
+CUDA kernel work must cite the Stage 5D native output hash, threading parity
 records, and native/Python parity record before selecting an adapter for implementation.

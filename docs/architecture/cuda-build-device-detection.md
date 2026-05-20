@@ -24,4 +24,4 @@ Generated reports remain ignored under `experiments/results/cuda-build/stage5c/`
 
 ## Next Dependency
 
-Future CUDA implementation still needs CPU reference behavior, Stage 5B harness records, Stage 5C build/device records, Stage 5D native CPU output hashes and deterministic threading records, explicit parity tests, and benchmark planning. Stage 5E first CUDA kernel contract and CPU/native parity adapter selection comes before any broad CUDA implementation.
+Future CUDA implementation still needs CPU reference behavior, Stage 5B harness records, Stage 5C build/device records, Stage 5D native CPU output hashes and deterministic threading records, Stage 5E first-kernel contract records, explicit parity tests, and benchmark planning. Stage 5F may implement only the selected synthetic-only contract before any broad CUDA implementation.

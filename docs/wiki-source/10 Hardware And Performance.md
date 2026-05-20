@@ -12,7 +12,7 @@ Stage 2E dry-run manifests may estimate future CPU candidate counts, but they do
 
 ## Current Stage
 
-Stage 5D records native C++ CPU backend and deterministic threading metadata only. It does not run GPU benchmarks or make speedup claims. Stage 5E first CUDA kernel contract and CPU/native parity adapter selection is next.
+Stage 5E records first CUDA kernel contract and CPU/native parity adapter metadata only. It does not add CUDA kernels, run GPU benchmarks, or make speedup claims. Stage 5F first synthetic-only CUDA parity kernel implementation is next.
 
 ## Design Assumptions
 
@@ -168,6 +168,7 @@ Stage 5A records CUDA target plans, explicit non-targets, parity scaffolds, and 
 
 Stage 5B records CUDA parity harness plans, parity fixtures, backend capability profiles, and future-kernel matrix rows. It does not compile CUDA kernels, run GPU benchmarks, require the optional local 16GB GPU profile, or make speedup claims.
 
-Future Stage 5E kernel-contract work must cite Stage 5A target records, Stage 5B harness records,
-Stage 5C build/device records, and Stage 5D native CPU parity records, and must remain
-raw-data-free until a later explicit implementation stage.
+Stage 5E kernel-contract work cites Stage 5A target records, Stage 5B harness records, Stage 5C
+build/device records, and Stage 5D native CPU parity records. Future Stage 5F implementation must
+remain synthetic-only and target the selected `shift_score_kernel` contract unless an explicit
+later stage revises the contract.

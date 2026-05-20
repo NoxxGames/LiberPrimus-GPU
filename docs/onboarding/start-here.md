@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5D - native C++ CPU batch backend and deterministic threading baseline.
-- Next planned stage: Stage 5E - first CUDA kernel contract and CPU/native parity adapter selection.
+- Latest completed stage: Stage 5E - first CUDA kernel contract and CPU/native parity adapter selection.
+- Next planned stage: Stage 5F - first synthetic-only CUDA parity kernel implementation.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

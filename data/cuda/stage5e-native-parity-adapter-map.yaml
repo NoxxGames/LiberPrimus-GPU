@@ -1,0 +1,44 @@
+records:
+- record_type: cuda_native_parity_adapter_record
+  stage_id: stage-5e
+  native_parity_adapter_id: stage5e-native-shift-parity-adapter-map
+  contract_id: stage5e-shift-score-first-kernel-contract
+  selected_kernel_id: shift_score_kernel
+  selected_adapter_family: native_cpu_synthetic_shift_adapter
+  stage5d_backend_id: stage5d-native-cpu-backend-v0
+  stage5d_fixture_id: stage5d-native-synthetic-shift-fixture-v0
+  stage5d_one_thread_hash: 76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66
+  stage5d_multi_thread_hash: 76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66
+  stage5d_one_thread_equals_multi_thread: true
+  stage5d_thread_counts:
+  - 1
+  - 2
+  - 4
+  - 8
+  - 16
+  stage5d_python_native_parity: true
+  timing_is_diagnostic_only: true
+  native_parity_mapped: true
+  native_reference_scope: Stage 5D deterministic native CPU synthetic shift fixture
+  cuda_kernel_contract_only: true
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  cryptanalytic_cuda_kernel_added: false
+  cuda_transform_executed: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  cuda_required: false
+  gpu_required: false
+  local_16gb_profile_required: false
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false

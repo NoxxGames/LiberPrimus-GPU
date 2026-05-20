@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, Stage 4O CPU batch adapter expansion/parity expectation records, Stage 4P result-store/score-summary unification records, Stage 4Q benchmark/parity planning records, Stage 5A CUDA planning/parity scaffold records, Stage 5B CUDA parity harness skeleton records, Stage 5C CUDA build/device detection records, and Stage 5D native CPU backend/threading records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, Stage 4O CPU batch adapter expansion/parity expectation records, Stage 4P result-store/score-summary unification records, Stage 4Q benchmark/parity planning records, Stage 5A CUDA planning/parity scaffold records, Stage 5B CUDA parity harness skeleton records, Stage 5C CUDA build/device detection records, Stage 5D native CPU backend/threading records, and Stage 5E first CUDA kernel contract records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -128,6 +128,26 @@ Committed Stage 5D schema IDs:
 - `native-cpu-parity-record-v0`
 - `native-cpu-diagnostic-record-v0`
 - `stage5d-native-cpu-summary-v0`
+
+Stage 5E first CUDA kernel contract records require `cuda_kernel_contract_only=true`,
+`cuda_kernel_added=false`, `cuda_source_modified=false`, `cryptanalytic_cuda_kernel_added=false`,
+`cuda_transform_executed=false`, `gpu_benchmark_performed=false`, `performance_claim=false`,
+`speedup_claim=false`, `broad_experiment_executed=false`, `raw_data_processed=false`,
+`solve_claim=false`, `no_solve_claim=true`, `generated_outputs_committed=false`,
+`codex_output_committed=false`, `website_expansion=false`, `cuda_required=false`,
+`gpu_required=false`, `local_16gb_profile_required=false`,
+`python_semantic_reference_preserved=true`, and `cxx_launches_python_workers=false`. Generated
+kernel-contract reports remain ignored under
+`experiments/results/cuda-kernel-contract/stage5e/`; only compact YAML records under `data/cuda/`
+are committed.
+
+Committed Stage 5E schema IDs:
+
+- `cuda-first-kernel-contract-record-v0`
+- `cuda-adapter-selection-record-v0`
+- `cuda-native-parity-adapter-record-v0`
+- `cuda-implementation-readiness-record-v0`
+- `stage5e-first-kernel-contract-summary-v0`
 
 ## Result record principles
 

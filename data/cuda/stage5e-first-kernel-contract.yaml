@@ -1,0 +1,130 @@
+records:
+- record_type: cuda_first_kernel_contract_record
+  stage_id: stage-5e
+  contract_id: stage5e-shift-score-first-kernel-contract
+  selected_kernel_id: shift_score_kernel
+  selected_target_id: stage5a-caesar_mod29-cuda-target
+  selected_transform_family: caesar_mod29
+  selected_adapter_family: native_cpu_synthetic_shift_adapter
+  selection_status: selected_for_stage5f_synthetic_only_contract
+  selection_reason: Selected caesar_mod29 shift-score because it is the simplest regular
+    planned target with Stage 5A gates satisfied, Stage 5B ready harness/fixture rows,
+    Stage 4O parity hashes, Stage 4P unified result references, and Stage 5D native
+    synthetic shift parity.
+  stage5a_target_status: ready_for_planning
+  stage5b_future_kernel_status: planned
+  stage5b_harness_status: ready_for_future_kernel
+  stage5b_fixture_status: ready_for_future_kernel
+  stage5a_satisfied_gates:
+  - cpu_batch_adapter_contract_stable
+  - cuda_optional_build_remains_optional
+  - generated_output_ignore_policy_exists
+  - no_gpu_benchmark_before_parity
+  - no_speedup_claim_before_parity
+  - raw_data_free_ci_gate_exists
+  - stage4o_parity_expectations_available
+  - stage4p_unified_result_surface_available
+  - stage4q_benchmark_parity_plan_available
+  - target_specific_parity_scaffold_exists
+  stage4o_parity_expectation_reference: stage4o-caesar-local-v0
+  stage4p_unified_result_reference: stage4p-31e312cdaefa0ffa1326
+  stage4o_summary_present: true
+  stage4p_summary_present: true
+  stage4o_parity_expectations_written: 8
+  stage4p_records_with_parity_expectations: 8
+  output_text_hash: 18f6990554d445d1bcae30cac2623872cf1cb2777958fe3fc9bc52e2965106d4
+  output_token_hash: 5f748fedc4b16723551be7e209b41c57b75ee05a71f5984d7c1b399eb6ad435e
+  score_summary_shape_hash: 91bd19dd38957dc0a18c6b05a8e8f4ff2ee9a799a1b6162e18098d575285fdf9
+  vram_profile: compatibility_8gb
+  local_16gb_profile_optional: true
+  compatibility_8gb_profile_required: true
+  no_gpu_ci_profile_preserved: true
+  alternate_candidates:
+  - target_id: stage5a-affine_mod29-cuda-target
+    transform_family: affine_mod29
+    kernel_id: affine_score_kernel
+    reason_not_selected: Ready alternate, but less minimal than caesar_mod29 shift-score
+      for the first synthetic-only kernel contract.
+  - target_id: stage5a-prime_minus_one_stream-cuda-target
+    transform_family: prime_minus_one_stream
+    kernel_id: prime_minus_one_stream_score_kernel
+    reason_not_selected: Ready alternate, but less minimal than caesar_mod29 shift-score
+      for the first synthetic-only kernel contract.
+  - target_id: stage5a-vigenere-cuda-target
+    transform_family: vigenere
+    kernel_id: vigenere_score_kernel
+    reason_not_selected: Ready alternate, but less minimal than caesar_mod29 shift-score
+      for the first synthetic-only kernel contract.
+  blocked_or_rejected_candidates:
+  - target_id: stage5a-cookie_hash-cuda-target
+    transform_family: cookie_hash
+    target_status: non_cuda_target
+    reasons:
+    - not_a_cuda_transform_target
+  - target_id: stage5a-direct_translation-cuda-target
+    transform_family: direct_translation
+    target_status: ready_for_planning
+    reasons:
+    - not_selected_for_first_kernel_contract
+  - target_id: stage5a-historical_motif_vigenere-cuda-target
+    transform_family: historical_motif_vigenere
+    target_status: blocked_needs_cpu_adapter
+    reasons:
+    - missing_stable_cpu_batch_adapter
+  - target_id: stage5a-image_compression_bigram-cuda-target
+    transform_family: image_compression_bigram
+    target_status: non_cuda_target
+    reasons:
+    - not_a_cuda_transform_target
+  - target_id: stage5a-p56_prime_minus_one-cuda-target
+    transform_family: p56_prime_minus_one
+    target_status: ready_for_planning
+    reasons:
+    - not_selected_for_first_kernel_contract
+  - target_id: stage5a-phi_prime_stream-cuda-target
+    transform_family: phi_prime_stream
+    target_status: ready_for_planning
+    reasons:
+    - not_selected_for_first_kernel_contract
+  - target_id: stage5a-reset_advance-cuda-target
+    transform_family: reset_advance
+    target_status: blocked_needs_cpu_adapter
+    reasons:
+    - missing_stable_cpu_batch_adapter
+  - target_id: stage5a-reverse_gematria-cuda-target
+    transform_family: reverse_gematria
+    target_status: ready_for_planning
+    reasons:
+    - not_selected_for_first_kernel_contract
+  - target_id: stage5a-rotated_reverse_gematria-cuda-target
+    transform_family: rotated_reverse_gematria
+    target_status: ready_for_planning
+    reasons:
+    - not_selected_for_first_kernel_contract
+  - target_id: stage5a-stego_audio-cuda-target
+    transform_family: stego_audio
+    target_status: non_cuda_target
+    reasons:
+    - not_a_cuda_transform_target
+  cuda_kernel_contract_only: true
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  cryptanalytic_cuda_kernel_added: false
+  cuda_transform_executed: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  cuda_required: false
+  gpu_required: false
+  local_16gb_profile_required: false
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false

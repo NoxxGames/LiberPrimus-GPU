@@ -4,11 +4,11 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5D native C++ CPU batch backend and deterministic threading baseline is complete. The stage recorded native backend capability, deterministic threading parity, native/Python parity, and diagnostic-only runtime metadata without CUDA implementation, CUDA source changes, GPU benchmarking, broad experiment execution, website expansion, or performance claims.
+Stage 5E first CUDA kernel contract and CPU/native parity adapter selection is complete. The stage selected `shift_score_kernel` for `caesar_mod29`, mapped it to the Stage 5D native synthetic shift adapter, and recorded implementation readiness for Stage 5F without CUDA implementation, CUDA source changes, GPU benchmarking, broad experiment execution, website expansion, or performance claims.
 
-The next planned stage is Stage 5E: first CUDA kernel contract and CPU/native parity adapter selection. Website expansion is deferred to Stage 6. CUDA implementation remains deferred until CPU batch, scorer, review workflow, source-lock
+The next planned stage is Stage 5F: first synthetic-only CUDA parity kernel implementation. Website expansion is deferred to Stage 6. CUDA implementation remains deferred except for the selected synthetic-only Stage 5E contract until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
-Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, parity tests, and benchmark plans
+Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.
 
 Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
@@ -25,7 +25,7 @@ records, Stage 4N recorded OutGuess/audio positive-control readiness, Stage 4O e
 batch adapter coverage, Stage 4P unified result-store/score-summary reporting, Stage 4Q
 recorded CPU benchmark and parity planning, Stage 5A recorded CUDA planning and parity scaffolding,
 Stage 5B recorded the CUDA parity harness skeleton, Stage 5C recorded CUDA build/device-detection
-metadata, and Stage 5D recorded native C++ CPU backend/threading parity before Stage 5E first-kernel contract work.
+metadata, Stage 5D recorded native C++ CPU backend/threading parity, and Stage 5E selected the first future CUDA kernel contract before Stage 5F synthetic-only implementation work.
 
 ## Phase 0A - Project bootstrap
 
@@ -388,7 +388,23 @@ Generated reports remain ignored under `experiments/results/native-cpu/stage5d/`
 `codex-output/` handoff files remain ignored. Stage 5D did not add or modify CUDA source, add GPU
 kernels, run CUDA transforms, run GPU benchmarks, claim speedups, run broad experiments, process raw
 data, expand the website, activate the canonical corpus, finalise page boundaries, or make solve
-claims. Stage 5E first CUDA kernel contract and CPU/native parity adapter selection is next.
+claims.
+
+## Stage 5E - first CUDA kernel contract and CPU/native parity adapter selection
+
+Stage 5E is complete. It selects `shift_score_kernel` as the first future CUDA kernel contract,
+with target `stage5a-caesar_mod29-cuda-target`, transform family `caesar_mod29`, and adapter
+family `native_cpu_synthetic_shift_adapter`. It records `3` alternate candidates and `10`
+blocked/rejected candidates.
+
+The selected contract cites the Stage 5D one-thread and multi-thread native output hash
+`76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66` and keeps Python/native
+parity `true`. Generated reports remain ignored under
+`experiments/results/cuda-kernel-contract/stage5e/`, and `codex-output/` handoff files remain
+ignored. Stage 5E did not add or modify CUDA source, add GPU kernels, run CUDA transforms, run GPU
+benchmarks, claim speedups, run broad experiments, process raw data, expand the website, activate
+the canonical corpus, finalise page boundaries, or make solve claims. Stage 5F first
+synthetic-only CUDA parity kernel implementation is next.
 
 ## Stage 4G - Cookie exact-candidate refresh
 
