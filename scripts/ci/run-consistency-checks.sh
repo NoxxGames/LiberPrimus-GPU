@@ -384,6 +384,40 @@ echo "Running Stage 5E CUDA kernel contract synthetic/temp output"
     --summary "$tmp_dir/stage5e-first-kernel-contract-summary.yaml" \
     --results-dir "$tmp_dir/stage5e-cuda-kernel-contract"
 
+echo "Running Stage 5F synthetic CUDA kernel no-GPU-safe/temp output"
+"$python_bin" -m libreprimus.cli cuda-kernel build-implementation-records \
+    --manifest experiments/manifests/cuda/stage5f-shift-score-synthetic-parity.yaml \
+    --out-dir "$tmp_dir/stage5f-cuda-kernel" \
+    --implementation-out "$tmp_dir/stage5f-cuda-synthetic-kernel-implementation.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-kernel attempt-build \
+    --manifest experiments/manifests/cuda/stage5f-cuda-no-gpu-ci-skip.yaml \
+    --out-dir "$tmp_dir/stage5f-cuda-kernel" \
+    --build-records-out "$tmp_dir/stage5f-cuda-kernel-build-records.yaml" \
+    --build-dir "$tmp_dir/stage5f-cuda-build" \
+    --skip-build \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-kernel run-synthetic-parity \
+    --manifest experiments/manifests/cuda/stage5f-shift-score-synthetic-parity.yaml \
+    --build-records "$tmp_dir/stage5f-cuda-kernel-build-records.yaml" \
+    --out-dir "$tmp_dir/stage5f-cuda-kernel" \
+    --parity-records-out "$tmp_dir/stage5f-cuda-synthetic-parity-records.yaml" \
+    --build-dir "$tmp_dir/stage5f-cuda-build" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-kernel build-summary \
+    --implementation "$tmp_dir/stage5f-cuda-synthetic-kernel-implementation.yaml" \
+    --build-records "$tmp_dir/stage5f-cuda-kernel-build-records.yaml" \
+    --parity-records "$tmp_dir/stage5f-cuda-synthetic-parity-records.yaml" \
+    --summary-out "$tmp_dir/stage5f-cuda-synthetic-kernel-summary.yaml" \
+    --out-dir "$tmp_dir/stage5f-cuda-kernel" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-kernel validate-stage5f \
+    --implementation "$tmp_dir/stage5f-cuda-synthetic-kernel-implementation.yaml" \
+    --build-records "$tmp_dir/stage5f-cuda-kernel-build-records.yaml" \
+    --parity-records "$tmp_dir/stage5f-cuda-synthetic-parity-records.yaml" \
+    --summary "$tmp_dir/stage5f-cuda-synthetic-kernel-summary.yaml" \
+    --results-dir "$tmp_dir/stage5f-cuda-kernel"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

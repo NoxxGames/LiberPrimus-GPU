@@ -483,5 +483,13 @@ experiments/results/cuda-kernel-contract/**
 !experiments/results/cuda-kernel-contract/stage5e/
 !experiments/results/cuda-kernel-contract/stage5e/.gitkeep
 
+# Generated CUDA kernel implementation outputs
+experiments/results/cuda-kernel/**
+!experiments/results/cuda-kernel/
+!experiments/results/cuda-kernel/README.md
+!experiments/results/cuda-kernel/.gitkeep
+!experiments/results/cuda-kernel/stage5f/
+!experiments/results/cuda-kernel/stage5f/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

@@ -28,6 +28,7 @@ Readiness means only that a future implementation can be planned against a CPU r
 
 Stage 5C adds a separate build/device readiness layer. CUDA build profiles, toolchain detection, optional device metadata, and smoke-build status must be cited by future CUDA implementation stages, but they still do not authorize kernels, GPU benchmarks, speedup claims, or local GPU requirements.
 
-Stage 5D adds the native CPU backend/threading baseline that Stage 5E cites when selecting the first
-CUDA adapter. Harness records alone are not enough: future CUDA work needs Stage
-5D native output hashes and native/Python parity records.
+Stage 5D adds the native CPU backend/threading baseline that Stage 5E cites when selecting the
+first CUDA adapter and Stage 5F uses for the synthetic CUDA parity implementation. Harness records
+alone are not enough: future CUDA work needs Stage 5D native output hashes, Stage 5F synthetic
+parity records, and native/Python parity records.

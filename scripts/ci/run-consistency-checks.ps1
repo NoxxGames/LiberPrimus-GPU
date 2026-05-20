@@ -430,6 +430,46 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5ESummary `
         --results-dir $Stage5EOut
 
+    Write-Host "Running Stage 5F synthetic CUDA kernel no-GPU-safe/temp output"
+    $Stage5FOut = Join-Path $TempDir "stage5f-cuda-kernel"
+    $Stage5FImplementation = Join-Path $TempDir "stage5f-cuda-synthetic-kernel-implementation.yaml"
+    $Stage5FBuild = Join-Path $TempDir "stage5f-cuda-kernel-build-records.yaml"
+    $Stage5FParity = Join-Path $TempDir "stage5f-cuda-synthetic-parity-records.yaml"
+    $Stage5FSummary = Join-Path $TempDir "stage5f-cuda-synthetic-kernel-summary.yaml"
+    $Stage5FBuildDir = Join-Path $TempDir "stage5f-cuda-build"
+    & $Python -m libreprimus.cli cuda-kernel build-implementation-records `
+        --manifest experiments/manifests/cuda/stage5f-shift-score-synthetic-parity.yaml `
+        --out-dir $Stage5FOut `
+        --implementation-out $Stage5FImplementation `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-kernel attempt-build `
+        --manifest experiments/manifests/cuda/stage5f-cuda-no-gpu-ci-skip.yaml `
+        --out-dir $Stage5FOut `
+        --build-records-out $Stage5FBuild `
+        --build-dir $Stage5FBuildDir `
+        --skip-build `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-kernel run-synthetic-parity `
+        --manifest experiments/manifests/cuda/stage5f-shift-score-synthetic-parity.yaml `
+        --build-records $Stage5FBuild `
+        --out-dir $Stage5FOut `
+        --parity-records-out $Stage5FParity `
+        --build-dir $Stage5FBuildDir `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-kernel build-summary `
+        --implementation $Stage5FImplementation `
+        --build-records $Stage5FBuild `
+        --parity-records $Stage5FParity `
+        --summary-out $Stage5FSummary `
+        --out-dir $Stage5FOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-kernel validate-stage5f `
+        --implementation $Stage5FImplementation `
+        --build-records $Stage5FBuild `
+        --parity-records $Stage5FParity `
+        --summary $Stage5FSummary `
+        --results-dir $Stage5FOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

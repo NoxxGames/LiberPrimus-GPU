@@ -194,11 +194,11 @@ records:
     method_family_id: cuda_first_kernel_contract
     retired_status: active_with_constraints
     reason: First-kernel contract selection is active infrastructure only; it selects a future target and parity adapter but does not authorize broad CUDA implementation, GPU benchmarking, or performance claims.
-    evidence: [Stage 5E selects shift_score_kernel/caesar_mod29, maps Stage 5D native one-thread and multi-thread hashes, records implementation readiness for Stage 5F synthetic-only work, and changes no CUDA source files.]
+    evidence: [Stage 5E selects shift_score_kernel/caesar_mod29 and maps Stage 5D native hashes; Stage 5F implements only that synthetic-only CUDA parity kernel and records no broad CUDA readiness.]
     stages_supporting: [stage-5e]
-    reopen_conditions: [A future Stage 5F implementation cites the selected contract, Stage 5D native parity adapter map, Stage 5B harness and fixture records, no-GPU CI profile, and synthetic-only implementation scope.]
+    reopen_conditions: [A future Stage 5G or later implementation/reporting stage cites the selected contract, Stage 5D native parity adapter map, Stage 5F synthetic parity records, Stage 5B harness and fixture records, no-GPU CI profile, and explicit scope.]
     prohibited_expansions: [Unscoped CUDA kernels, CUDA transforms beyond the selected synthetic-only contract, GPU benchmarks, speedup claims, raw-data processing, broad experiments, website expansion, generated-output commits, codex-output commits, solve claims.]
-    notes: Stage 5E is a contract stage only; the selected target is not implementation approval outside the next explicit Stage 5F prompt.
+    notes: Stage 5F is a synthetic-only parity implementation; the selected target is still not broad CUDA implementation approval.
   - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints

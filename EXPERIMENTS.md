@@ -836,3 +836,15 @@ The selected contract is `shift_score_kernel` for `caesar_mod29` with adapter
 `native_cpu_synthetic_shift_adapter`. Do not treat this selection as permission for broad CUDA
 implementation, GPU benchmarking, speedup claims, broad searches, raw-data processing, website
 expansion, canonical corpus activation, page-boundary finalisation, or solve claims.
+
+# Stage 5F Synthetic CUDA Kernel Boundary
+
+Stage 5F is not a cryptanalytic experiment and not a broad CUDA implementation stage. It implements
+only the selected `shift_score_kernel` contract for the Stage 5D synthetic uppercase Latin fixture,
+records no-GPU-safe build metadata, optional local synthetic parity metadata, and an aggregate
+summary. Generated Stage 5F kernel reports remain ignored under
+`experiments/results/cuda-kernel/stage5f/`.
+
+Do not run real Liber Primus page data, solved-page data, unsolved-page campaigns, GPU benchmarks,
+performance comparisons, broad searches, raw-data processing, website expansion, canonical corpus
+activation, page-boundary finalisation, or solve claims through Stage 5F records.

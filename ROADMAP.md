@@ -4,9 +4,9 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5E first CUDA kernel contract and CPU/native parity adapter selection is complete. The stage selected `shift_score_kernel` for `caesar_mod29`, mapped it to the Stage 5D native synthetic shift adapter, and recorded implementation readiness for Stage 5F without CUDA implementation, CUDA source changes, GPU benchmarking, broad experiment execution, website expansion, or performance claims.
+Stage 5F first synthetic-only CUDA parity kernel implementation is complete. The stage implemented only the selected `shift_score_kernel` contract for the Stage 5D synthetic uppercase-shift fixture, recorded no-GPU-safe build/parity metadata, and matched the Stage 5D native reference hash without real Liber Primus CUDA data use, GPU benchmarking, broad experiment execution, website expansion, or performance claims.
 
-The next planned stage is Stage 5F: first synthetic-only CUDA parity kernel implementation. Website expansion is deferred to Stage 6. CUDA implementation remains deferred except for the selected synthetic-only Stage 5E contract until CPU batch, scorer, review workflow, source-lock
+The next planned stage is Stage 5G: shift_score CUDA parity reporting and solved-fixture-safe adapter preflight. Website expansion is deferred to Stage 6. Broad CUDA implementation remains deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.
@@ -25,7 +25,7 @@ records, Stage 4N recorded OutGuess/audio positive-control readiness, Stage 4O e
 batch adapter coverage, Stage 4P unified result-store/score-summary reporting, Stage 4Q
 recorded CPU benchmark and parity planning, Stage 5A recorded CUDA planning and parity scaffolding,
 Stage 5B recorded the CUDA parity harness skeleton, Stage 5C recorded CUDA build/device-detection
-metadata, Stage 5D recorded native C++ CPU backend/threading parity, and Stage 5E selected the first future CUDA kernel contract before Stage 5F synthetic-only implementation work.
+metadata, Stage 5D recorded native C++ CPU backend/threading parity, Stage 5E selected the first future CUDA kernel contract, and Stage 5F implemented the first synthetic-only CUDA parity kernel before Stage 5G reporting/preflight work.
 
 ## Phase 0A - Project bootstrap
 
@@ -403,8 +403,21 @@ parity `true`. Generated reports remain ignored under
 `experiments/results/cuda-kernel-contract/stage5e/`, and `codex-output/` handoff files remain
 ignored. Stage 5E did not add or modify CUDA source, add GPU kernels, run CUDA transforms, run GPU
 benchmarks, claim speedups, run broad experiments, process raw data, expand the website, activate
-the canonical corpus, finalise page boundaries, or make solve claims. Stage 5F first
-synthetic-only CUDA parity kernel implementation is next.
+the canonical corpus, finalise page boundaries, or make solve claims.
+
+## Stage 5F - first synthetic-only CUDA parity kernel implementation
+
+Stage 5F is complete. It adds only the selected `shift_score_kernel` CUDA target for the Stage 5D
+synthetic uppercase Latin shift fixture, keeps the fixture text and shifts fixed, and records the
+native/CUDA synthetic parity hash
+`76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66`.
+
+Generated reports remain ignored under `experiments/results/cuda-kernel/stage5f/`, and
+`codex-output/` handoff files remain ignored. Stage 5F does not run real Liber Primus data through
+CUDA, run solved or unsolved page CUDA transforms, run GPU benchmarks, claim speedups, run broad
+experiments, process raw data, expand the website, activate the canonical corpus, finalise page
+boundaries, or make solve claims. Stage 5G shift_score CUDA parity reporting and solved-fixture-safe
+adapter preflight is next.
 
 ## Stage 4G - Cookie exact-candidate refresh
 

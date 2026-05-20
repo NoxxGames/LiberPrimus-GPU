@@ -30,7 +30,7 @@ Stage 4Q records benchmark planning and parity readiness only. It writes committ
 
 Stage 4Q CPU smoke timings are diagnostic only. They are not performance claims, speedup evidence, CUDA benchmarks, or authorization to implement GPU kernels.
 
-Stage 5A uses Stage 4Q records for CUDA planning and parity scaffolding only. It records target plans, non-targets, parity scaffolds, and implementation gates without running GPU benchmarks or making speedup claims. Stage 5B records a CUDA parity harness skeleton, backend capability profiles, and future-kernel matrix rows without running GPU benchmarks or making speedup claims. Stage 5C records CUDA build profiles, toolchain detection, device detection, and optional smoke-build status without running GPU benchmarks or making speedup claims. Stage 5D records native C++ CPU backend diagnostics and threading parity without GPU benchmarks or speedup claims. Stage 5E records first-kernel contract selection without GPU benchmarks or speedup claims. Stage 5F synthetic-only parity implementation is next; website expansion is deferred to Stage 6.
+Stage 5A uses Stage 4Q records for CUDA planning and parity scaffolding only. It records target plans, non-targets, parity scaffolds, and implementation gates without running GPU benchmarks or making speedup claims. Stage 5B records a CUDA parity harness skeleton, backend capability profiles, and future-kernel matrix rows without running GPU benchmarks or making speedup claims. Stage 5C records CUDA build profiles, toolchain detection, device detection, and optional smoke-build status without running GPU benchmarks or making speedup claims. Stage 5D records native C++ CPU backend diagnostics and threading parity without GPU benchmarks or speedup claims. Stage 5E records first-kernel contract selection without GPU benchmarks or speedup claims. Stage 5F records a synthetic-only parity kernel and optional local build/parity status without GPU benchmarks or speedup claims; website expansion is deferred to Stage 6.
 
 ## Stage 5C CUDA Build/Device Detection
 
@@ -47,6 +47,12 @@ benchmarks, CPU optimization claims, GPU benchmarks, or speedup evidence.
 Stage 5E selected `shift_score_kernel` as a future contract only. It did not run a CUDA kernel,
 GPU benchmark, profiler, or throughput comparison. Do not report Stage 5E records as speedup or
 performance evidence.
+
+## Stage 5F Synthetic Kernel Boundary
+
+Stage 5F implements and optionally runs only the synthetic `shift_score_kernel` parity test. The
+recorded local CUDA build/parity status is correctness metadata, not benchmark metadata. Do not
+report Stage 5F timing, build, or CTest output as performance, throughput, or speedup evidence.
 
 ## Do not run long benchmarks by default
 

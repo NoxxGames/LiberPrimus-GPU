@@ -1,6 +1,7 @@
 # First CUDA Kernel Contract
 
-Stage 5E selects the first future CUDA kernel contract without adding CUDA implementation.
+Stage 5E selects the first future CUDA kernel contract without adding CUDA implementation. Stage 5F
+then implements only that contract as a synthetic CUDA parity target.
 
 Selected contract:
 
@@ -18,3 +19,6 @@ is recorded as true.
 This is a contract only stage. It does not add or modify `.cu` or `.cuh` files, run CUDA
 transforms, run GPU benchmarks, claim speedups, process raw data, expand the website, activate the
 canonical corpus, finalise page boundaries, or make solve claims.
+
+The Stage 5F implementation remains synthetic-only and inherits the same guardrails. It does not
+turn the contract into broad CUDA execution or production Gematria mod-29 semantics.

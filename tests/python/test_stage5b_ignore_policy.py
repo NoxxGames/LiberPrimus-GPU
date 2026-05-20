@@ -31,6 +31,7 @@ def test_stage5b_no_transform_cuda_kernels_added() -> None:
     unexpected = [
         path
         for path in cuda_files
-        if path.stem != "cuda_smoke" and any(part in path.stem.lower() for part in forbidden_name_parts)
+        if path.stem not in {"cuda_smoke", "shift_score_kernel"}
+        and any(part in path.stem.lower() for part in forbidden_name_parts)
     ]
     assert unexpected == []

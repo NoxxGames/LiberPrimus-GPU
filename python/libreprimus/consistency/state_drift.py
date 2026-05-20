@@ -163,6 +163,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5E is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5f",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5f\b", re.IGNORECASE),
+        "Stage 5F is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -527,11 +532,21 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5f_synthetic_cuda_parity_kernel_next",
+        "stage5f_synthetic_cuda_parity_kernel_current_or_complete",
         "stage 5f" in staged_plan
         and "first synthetic-only cuda parity kernel implementation" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 5F first synthetic-only CUDA parity kernel implementation as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5g_shift_score_reporting_next",
+        "stage 5g" in staged_plan
+        and "shift_score cuda parity reporting" in staged_plan
+        and "solved-fixture-safe adapter preflight" in staged_plan
         and "next" in staged_plan,
-        "Staged plan records Stage 5F first synthetic-only CUDA parity kernel implementation as next.",
+        "Staged plan records Stage 5G shift_score CUDA parity reporting and solved-fixture-safe adapter preflight as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -650,6 +665,16 @@ def check_state_drift_consistency(
         and "stage 5f" in combined
         and "synthetic-only" in combined,
         "First CUDA kernel contract selection policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "synthetic_cuda_kernel_policy_present",
+        "synthetic-only cuda parity kernel" in combined
+        and "shift_score_kernel" in combined
+        and "no-gpu" in combined
+        and "speedup claim" in combined,
+        "Stage 5F synthetic-only CUDA kernel and no-GPU policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

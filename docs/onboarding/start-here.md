@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5E - first CUDA kernel contract and CPU/native parity adapter selection.
-- Next planned stage: Stage 5F - first synthetic-only CUDA parity kernel implementation.
+- Latest completed stage: Stage 5F - first synthetic-only CUDA parity kernel implementation.
+- Next planned stage: Stage 5G - shift_score CUDA parity reporting and solved-fixture-safe adapter preflight.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

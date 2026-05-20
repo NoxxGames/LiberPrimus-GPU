@@ -583,3 +583,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5E selected `shift_score_kernel` for `stage5a-caesar_mod29-cuda-target`, recorded 3 alternate candidates and 10 blocked/rejected candidates, mapped Stage 5D one-thread and multi-thread hashes, and made no kernel, benchmark, speedup, raw-data, website, canonical-corpus, page-boundary, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5f
+    title: First synthetic-only CUDA parity kernel implementation
+    status: complete
+    category: infrastructure
+    summary: Implemented only the selected shift_score_kernel synthetic CUDA parity target for the Stage 5D uppercase Latin shift fixture, with no-GPU-safe build records and optional local parity metadata.
+    key_outputs:
+      - "`libreprimus cuda-kernel` commands for implementation records, no-GPU-safe build metadata, synthetic parity records, summary generation, validation, and summary display."
+      - Stage 5F synthetic CUDA kernel implementation, build, parity, and summary records under `data/cuda/`.
+      - CUDA header/source and C++/CUDA tests for the synthetic `shift_score_kernel` fixture matching the Stage 5D native hash.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5F recorded 1 implementation record, 1 build record, 1 parity record, and 1 summary record; local optional CUDA build/parity passed for the synthetic fixture, generated reports remain ignored, and no real Liber Primus CUDA data, GPU benchmark, speedup claim, raw-data processing, website expansion, canonical-corpus activation, page-boundary finalisation, or solve claim was added.

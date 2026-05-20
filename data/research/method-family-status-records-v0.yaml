@@ -339,7 +339,7 @@ records:
     completed_stage_refs: [stage-4o, stage-4p, stage-4q, stage-5a]
     reopen_conditions: [A future CUDA parity harness stage needs target-specific scaffold records, exact Stage 4O output hashes, Stage 4P unified result references, or explicit implementation gates before any GPU source is added.]
     stop_conditions: [Do not add CUDA implementation or GPU kernels in planning stages, run GPU benchmark commands, claim speedups, process raw data, broaden campaigns, activate the canonical corpus, finalise page boundaries, or treat planning readiness as execution approval.]
-    next_action: Stage 5E selected the first CUDA kernel contract and CPU/native parity adapter; Stage 5F may implement only the selected synthetic-only CUDA parity kernel under explicit scope.
+    next_action: Stage 5F implemented only the selected synthetic-only CUDA parity kernel; Stage 5G may report parity and preflight solved-fixture-safe adapter readiness.
     solve_claim: false
     notes: Stage 5A records 14 target-plan records, 9 ready planning targets, 2 blocked targets, 8 explicit non-targets, 9 parity scaffold records, and 10 satisfied implementation gates.
   - record_type: method_family_status_record
@@ -350,7 +350,7 @@ records:
     completed_stage_refs: [stage-4o, stage-4p, stage-4q, stage-5a, stage-5b]
     reopen_conditions: [A future Stage 5E or later scaffold stage needs explicit harness records, backend capability profiles, Stage 4O parity expectation hashes, Stage 4P unified-result references, native CPU parity records, and non-target exclusions before any build or implementation work proceeds.]
     stop_conditions: [Do not add CUDA kernels, modify CUDA source, run GPU benchmarks, claim speedups, require the local 16GB GPU profile, process raw data, broaden campaigns, activate the canonical corpus, finalise page boundaries, or treat harness readiness as implementation approval.]
-    next_action: Stage 5E defined the first CUDA kernel contract; Stage 5F must remain synthetic-only and cite Stage 5B/5D/5E records before implementation.
+    next_action: Stage 5F implemented the first synthetic-only kernel; Stage 5G reporting must cite Stage 5B/5D/5E/5F records before widening.
     solve_claim: false
     notes: Stage 5B records 14 harness plans, 14 parity fixtures, 3 backend capability profiles, and 9 future-kernel matrix rows with 9 ready future-kernel targets and 1 blocked row.
   - record_type: method_family_status_record
@@ -361,7 +361,7 @@ records:
     completed_stage_refs: [stage-5a, stage-5b, stage-5c]
     reopen_conditions: [A future native backend or CUDA stage needs reproducible build/device metadata, no-GPU CI profile checks, optional local hardware records, or smoke-build status before implementation work.]
     stop_conditions: [Do not add CUDA kernels, run GPU benchmarks, claim speedups, require local GPU hardware in CI, process raw data, broaden experiments, expand the website, activate the canonical corpus, finalise page boundaries, or treat smoke-build metadata as parity evidence.]
-    next_action: Stage 5E first CUDA kernel contract and CPU/native parity adapter selection is complete; Stage 5F may implement only the selected synthetic-only CUDA parity kernel under explicit scope.
+    next_action: Stage 5F first synthetic-only CUDA parity kernel implementation is complete; Stage 5G may report/preflight without broadening CUDA execution.
     solve_claim: false
     notes: Stage 5C records 3 build profiles, 3 toolchain records, 3 device records, and 1 optional smoke-build record. The optional local smoke build was attempted and recorded as failed due local build/toolchain integration; no smoke executable was run.
   - record_type: method_family_status_record
@@ -372,7 +372,7 @@ records:
     completed_stage_refs: [stage-4h, stage-4o, stage-4p, stage-5d]
     reopen_conditions: [A future CUDA or native backend stage needs additional transform adapters, wider solved-fixture-safe parity, deterministic output hashes, or native/Python parity records.]
     stop_conditions: [Do not add CUDA kernels, modify CUDA source, run GPU benchmarks, claim speedups, launch Python worker scripts from C++, process raw data, broaden experiments, expand the website, activate the canonical corpus, finalise page boundaries, or make solve claims.]
-    next_action: Stage 5E cited Stage 5D native output hashes and deterministic threading records; Stage 5F may implement only the selected synthetic-only CUDA parity kernel.
+    next_action: Stage 5F cited Stage 5D native output hashes and implemented only the selected synthetic-only CUDA parity kernel; Stage 5G may prepare reporting/preflight.
     solve_claim: false
     notes: Stage 5D is native CPU reference infrastructure only; generated reports remain ignored and timing values are diagnostic, not benchmark or speedup evidence.
   - record_type: method_family_status_record
@@ -381,19 +381,30 @@ records:
     status: infrastructure_only
     evidence_summary: Stage 5E selects the shift-score/caesar_mod29 future CUDA kernel contract and the Stage 5D native synthetic shift parity adapter while keeping CUDA implementation, CUDA transforms, GPU benchmarks, and speedup claims deferred.
     completed_stage_refs: [stage-5a, stage-5b, stage-5c, stage-5d, stage-5e]
-    reopen_conditions: [A future Stage 5F implementation needs the selected contract, Stage 5D native hashes, Stage 5B harness/fixture records, Stage 5A gates, compatibility 8GB and CI no-GPU profiles, and explicit synthetic-only scope.]
-    stop_conditions: [Do not treat contract selection as implementation approval, add CUDA kernels before explicit Stage 5F scope, run GPU benchmarks, claim speedups, require local 16GB hardware, process raw data, broaden campaigns, expand the website, activate the canonical corpus, finalise page boundaries, or make solve claims.]
-    next_action: Stage 5F first synthetic-only CUDA parity kernel implementation may target only the selected shift-score contract unless a later prompt revises the contract.
+    reopen_conditions: [A future Stage 5G or later implementation/reporting stage needs the selected contract, Stage 5D native hashes, Stage 5F synthetic parity records, Stage 5B harness/fixture records, Stage 5A gates, compatibility 8GB and CI no-GPU profiles, and explicit scope.]
+    stop_conditions: [Do not treat contract selection as broad implementation approval, add or widen CUDA kernels outside explicit stage scope, run GPU benchmarks, claim speedups, require local 16GB hardware, process raw data, broaden campaigns, expand the website, activate the canonical corpus, finalise page boundaries, or make solve claims.]
+    next_action: Stage 5F implemented only the selected shift-score synthetic parity kernel; Stage 5G may report and preflight solved-fixture-safe adapter readiness without broadening CUDA execution.
     solve_claim: false
     notes: The selected target is a contract and adapter mapping only; no `.cu` or `.cuh` files changed in Stage 5E.
+  - record_type: method_family_status_record
+    method_family_id: cuda_synthetic_shift_kernel
+    name: First synthetic-only CUDA shift_score kernel
+    status: infrastructure_only
+    evidence_summary: Stage 5F implements only the shift_score_kernel synthetic CUDA parity target for the Stage 5D uppercase Latin shift fixture and records matching native/CUDA hash metadata.
+    completed_stage_refs: [stage-5d, stage-5e, stage-5f]
+    reopen_conditions: [A future Stage 5G or later stage needs explicit reporting/preflight records, solved-fixture-safe input scope, Stage 5D native hashes, Stage 5E contract records, and Stage 5F synthetic parity records before widening adapter use.]
+    stop_conditions: [Do not use the synthetic-only kernel on real Liber Primus data, solved or unsolved page data, production Gematria mod-29 streams, GPU benchmarks, speedup claims, broad searches, raw data, website expansion, canonical corpus activation, final page boundaries, or solve claims.]
+    next_action: Stage 5G should report the synthetic parity surface and prepare solved-fixture-safe adapter preflight without executing broad CUDA work.
+    solve_claim: false
+    notes: The Stage 5F kernel preserves uppercase Latin A-Z synthetic shift semantics and is not a general CUDA transform backend.
   - record_type: method_family_status_record
     method_family_id: cuda_gpu_acceleration
     name: CUDA/GPU acceleration
     status: deferred
-    evidence_summary: CUDA remains deferred; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, Stage 4L adds the promotion ledger, Stage 4M adds image preflight records, Stage 4N records stego/audio readiness blockers, Stage 4O adds CPU batch adapter parity expectations, Stage 4P unifies result surfaces, Stage 4Q records benchmark/parity planning gates, Stage 5A records planning scaffolds, Stage 5B records a parity harness skeleton, Stage 5C records build/device metadata, Stage 5D records a native C++ CPU threading baseline, and Stage 5E selects the first future CUDA kernel contract, but CUDA implementation and GPU benchmarking remain unstarted.
-    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l, stage-4m, stage-4n, stage-4o, stage-4p, stage-4q, stage-5a, stage-5b, stage-5c, stage-5d, stage-5e]
-    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, image-preflight controls, positive-control readiness records, Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, Stage 5A target plans, Stage 5B harness records, Stage 5C build/device records, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, transform-and-score parity tests, and explicit Stage 5 implementation scope are complete.]
+    evidence_summary: CUDA remains deferred beyond the Stage 5F synthetic-only shift_score kernel; Stage 4H provides a CPU batch parity contract, Stage 4I provides scoring semantics, Stage 4J closes observation review gates, Stage 4K improves source-lock reproducibility, Stage 4L adds the promotion ledger, Stage 4M adds image preflight records, Stage 4N records stego/audio readiness blockers, Stage 4O adds CPU batch adapter parity expectations, Stage 4P unifies result surfaces, Stage 4Q records benchmark/parity planning gates, Stage 5A records planning scaffolds, Stage 5B records a parity harness skeleton, Stage 5C records build/device metadata, Stage 5D records a native C++ CPU threading baseline, Stage 5E selects the first future CUDA kernel contract, and Stage 5F implements only synthetic parity for that contract.
+    completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l, stage-4m, stage-4n, stage-4o, stage-4p, stage-4q, stage-5a, stage-5b, stage-5c, stage-5d, stage-5e, stage-5f]
+    reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, image-preflight controls, positive-control readiness records, Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, Stage 5A target plans, Stage 5B harness records, Stage 5C build/device records, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, Stage 5F synthetic parity records, transform-and-score parity tests, and explicit Stage 5 implementation scope are complete.]
     stop_conditions: [No GPU kernels before CPU reference behaviour and parity tests.]
-    next_action: Stage 5F first synthetic-only CUDA parity kernel implementation may implement only the selected Stage 5E contract; broad CUDA implementation remains deferred until a later explicit stage passes parity and benchmark gates.
+    next_action: Stage 5G shift_score CUDA parity reporting and solved-fixture-safe adapter preflight may consume Stage 5F synthetic parity records; broad CUDA implementation remains deferred until a later explicit stage passes parity and benchmark gates.
     solve_claim: false
     notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H through Stage 5D did not add CUDA kernels.

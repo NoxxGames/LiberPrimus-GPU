@@ -92,6 +92,10 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/cuda-native-parity-adapter-record-v0.schema.json",
     "cuda/cuda-implementation-readiness-record-v0.schema.json",
     "cuda/stage5e-first-kernel-contract-summary-v0.schema.json",
+    "cuda/cuda-synthetic-kernel-implementation-record-v0.schema.json",
+    "cuda/cuda-kernel-build-record-v0.schema.json",
+    "cuda/cuda-synthetic-parity-run-record-v0.schema.json",
+    "cuda/stage5f-synthetic-cuda-kernel-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -161,6 +165,10 @@ EXPECTED_DOC_TERMS = [
     "cuda-native-parity-adapter-record-v0",
     "cuda-implementation-readiness-record-v0",
     "stage5e-first-kernel-contract-summary-v0",
+    "cuda-synthetic-kernel-implementation-record-v0",
+    "cuda-kernel-build-record-v0",
+    "cuda-synthetic-parity-run-record-v0",
+    "stage5f-synthetic-cuda-kernel-summary-v0",
 ]
 
 

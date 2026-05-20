@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5E - first CUDA kernel contract and CPU/native parity adapter selection.
+Current completed stage: Stage 5F - first synthetic-only CUDA parity kernel implementation.
 
-Current work: Stage 5F - first synthetic-only CUDA parity kernel implementation. Stage 5F may implement only the Stage 5E selected `shift_score_kernel` contract for `caesar_mod29` under synthetic-only parity scope. GPU benchmarking, speedup claims, broad search, raw-data processing, website expansion, canonical corpus activation, page-boundary finalisation, and solve claims remain prohibited unless explicitly scoped by a later stage.
+Current work: Stage 5G - shift_score CUDA parity reporting and solved-fixture-safe adapter preflight. Stage 5G may report on the Stage 5F `shift_score_kernel` synthetic-only parity implementation and prepare solved-fixture-safe adapter checks, but it must not turn the kernel into broad CUDA execution or use real Liber Primus page data without a later explicit stage.
 
 Current project state:
 
@@ -73,11 +73,12 @@ Current project state:
 - Stage 5D native CPU backend records are readiness infrastructure only; C++ must remain a deterministic CPU execution plane, Python remains orchestration, and diagnostic timings are not speedup claims.
 - Do not let C++ launch Python worker scripts.
 - Stage 5E first-kernel contract records are selection infrastructure only; they do not authorize broad CUDA implementation, GPU benchmarking, or generated-output publication.
-- Future CUDA implementation work must cite the Stage 5E selected contract, Stage 5D native output hashes, and deterministic threading records before adding any kernel target.
+- Stage 5F synthetic-only kernel records are parity infrastructure only; the kernel matches the Stage 5D uppercase Latin synthetic shift fixture and is not production Gematria mod-29 CUDA.
+- Future CUDA implementation work must cite the Stage 5E selected contract, Stage 5D native output hashes, Stage 5F synthetic parity records, and deterministic threading records before adding or widening any kernel target.
 - CUDA detection must be no-GPU-safe by default.
 - The local 16GB GPU profile is optional and must not become a CI requirement.
 - Do not use device detection or smoke-build results as performance evidence.
-- Do not add CUDA kernels until an explicit implementation stage.
+- Do not add or widen CUDA kernels outside an explicit implementation stage.
 - Do not stage `codex-output/**`.
 - Raw data, generated outputs, SQLite databases, raw Discord logs, raw page images, raw historical stego artefacts, extracted payloads, and local deep-research reports are not committed.
 - No solve claims are present.
