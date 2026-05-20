@@ -14,4 +14,4 @@ The Stage 4Q plan is intentionally conservative. It links Stage 4O CPU parity ex
 
 CPU smoke timings are diagnostic plumbing only. They are not performance measurements and must not be reported as evidence of speed or scalability.
 
-Stage 5A uses Stage 4Q readiness records to plan CUDA parity scaffolds. It does not run GPU benchmarks, modify CUDA source, or claim performance.
+Stage 5A uses Stage 4Q readiness records to plan CUDA parity scaffolds. Stage 5B uses those planning records to build a CUDA parity harness skeleton and backend capability profile set. Neither stage runs GPU benchmarks, modifies CUDA source, or claims performance.

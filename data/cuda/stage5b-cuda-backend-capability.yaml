@@ -1,0 +1,113 @@
+records:
+- record_type: cuda_backend_capability_record
+  stage_id: stage-5b
+  backend_id: stage5b-ci-no-gpu-profile
+  backend_status: cuda_hardware_not_required
+  vram_profile: ci_no_gpu
+  gpu_model: not_required
+  vram_gb: 0
+  compute_capability_planned: ''
+  local_16gb_profile_supported: false
+  local_16gb_profile_required: false
+  cuda_hardware_required: false
+  nvcc_path: ''
+  nvidia_smi_path: ''
+  probe_notes:
+  - CI validation must pass without CUDA hardware or toolkit.
+  cuda_parity_harness_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_backend_capability_record
+  stage_id: stage-5b
+  backend_id: stage5b-compatibility-8gb-profile
+  backend_status: cuda_hardware_not_required
+  vram_profile: compatibility_8gb
+  gpu_model: generic CUDA-capable GPU
+  vram_gb: 8
+  compute_capability_planned: ''
+  local_16gb_profile_supported: false
+  local_16gb_profile_required: false
+  cuda_hardware_required: false
+  nvcc_path: ''
+  nvidia_smi_path: ''
+  probe_notes:
+  - Eight GB remains the compatibility planning profile; Stage 5B does not allocate
+    GPU memory.
+  cuda_parity_harness_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_backend_capability_record
+  stage_id: stage-5b
+  backend_id: stage5b-local-rtx-4060-ti-16gb-profile
+  backend_status: cuda_device_detected
+  vram_profile: local_16gb
+  gpu_model: NVIDIA RTX 4060 Ti
+  vram_gb: 16
+  compute_capability_planned: '8.9'
+  local_16gb_profile_supported: true
+  local_16gb_profile_required: false
+  cuda_hardware_required: false
+  nvcc_path: nvcc_detected_on_path
+  nvidia_smi_path: nvidia-smi_detected_on_path
+  probe_notes:
+  - Local RTX 4060 Ti 16 GB is planning metadata only and is not required by CI or
+    future users.
+  - nvcc_detected=true
+  - nvidia_smi_detected=true
+  - platform=Windows-10-10.0.19045-SP0
+  - 'nvcc_version=nvcc: NVIDIA (R) Cuda compiler driver
+
+    Copyright (c) 2005-2025 NVIDIA Corporation
+
+    Built on Wed_Jul_16_20:06:48_Pacific_Daylight_Time_2025
+
+    Cuda compilation tools,'
+  - nvidia_smi=NVIDIA GeForce RTX 4060 Ti, 16380 MiB
+  cuda_parity_harness_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  cuda_used: false
+  cuda_required: false

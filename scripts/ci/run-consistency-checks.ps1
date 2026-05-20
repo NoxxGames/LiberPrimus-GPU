@@ -244,6 +244,53 @@ try {
         --summary $Stage5ASummary `
         --results-dir $Stage5AOut
 
+    Write-Host "Running Stage 5B CUDA parity harness synthetic/temp output"
+    $Stage5BOut = Join-Path $TempDir "stage5b-cuda-parity"
+    $Stage5BHarness = Join-Path $TempDir "stage5b-cuda-parity-harness-plan.yaml"
+    $Stage5BFixtures = Join-Path $TempDir "stage5b-cuda-parity-fixtures.yaml"
+    $Stage5BBackend = Join-Path $TempDir "stage5b-cuda-backend-capability.yaml"
+    $Stage5BMatrix = Join-Path $TempDir "stage5b-future-kernel-parity-matrix.yaml"
+    $Stage5BSummary = Join-Path $TempDir "stage5b-cuda-parity-harness-summary.yaml"
+    & $Python -m libreprimus.cli cuda-parity build-harness-plan `
+        --manifest experiments/manifests/cuda/stage5b-cuda-parity-harness-plan.yaml `
+        --target-plan data/cuda/stage5a-cuda-target-plan.yaml `
+        --parity-scaffold data/cuda/stage5a-cuda-parity-scaffold.yaml `
+        --implementation-gates data/cuda/stage5a-cuda-implementation-gates.yaml `
+        --non-targets data/cuda/stage5a-cuda-non-targets.yaml `
+        --stage5a-summary data/cuda/stage5a-cuda-planning-summary.yaml `
+        --stage4q-readiness data/benchmarks/stage4q-cuda-parity-readiness.yaml `
+        --stage4q-summary data/research/stage4q-cpu-benchmark-parity-planning-summary.yaml `
+        --stage4o-summary data/research/stage4o-cpu-batch-adapter-expansion-summary.yaml `
+        --stage4p-summary data/research/stage4p-result-store-score-summary-unification-summary.yaml `
+        --out-dir $Stage5BOut `
+        --harness-plan-out $Stage5BHarness `
+        --parity-fixtures-out $Stage5BFixtures `
+        --summary-out $Stage5BSummary `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-parity build-backend-capability `
+        --manifest experiments/manifests/cuda/stage5b-cuda-backend-capability.yaml `
+        --out-dir $Stage5BOut `
+        --backend-capability-out $Stage5BBackend `
+        --allow-missing-cuda `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-parity build-future-kernel-matrix `
+        --manifest experiments/manifests/cuda/stage5b-future-kernel-parity-matrix.yaml `
+        --target-plan data/cuda/stage5a-cuda-target-plan.yaml `
+        --harness-plan $Stage5BHarness `
+        --parity-fixtures $Stage5BFixtures `
+        --backend-capability $Stage5BBackend `
+        --out-dir $Stage5BOut `
+        --future-kernel-matrix-out $Stage5BMatrix `
+        --summary-out $Stage5BSummary `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-parity validate-stage5b `
+        --harness-plan $Stage5BHarness `
+        --parity-fixtures $Stage5BFixtures `
+        --backend-capability $Stage5BBackend `
+        --future-kernel-matrix $Stage5BMatrix `
+        --summary $Stage5BSummary `
+        --results-dir $Stage5BOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

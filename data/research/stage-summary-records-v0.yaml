@@ -519,3 +519,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5A wrote 14 CUDA target-plan records, 9 ready planning targets, 2 blocked targets, 8 explicit non-target records, 9 parity scaffold records, and 10 satisfied implementation gates; Stage 5B is the next CUDA parity harness skeleton stage.
+  - record_type: stage_summary_record
+    stage_id: stage-5b
+    title: CUDA parity harness skeleton
+    status: complete
+    category: infrastructure
+    summary: Built a CUDA parity harness skeleton over Stage 5A planning records, Stage 4O parity expectations, and Stage 4P unified result references without adding CUDA kernels, changing CUDA source, or running GPU benchmarks.
+    key_outputs:
+      - "`libreprimus cuda-parity` commands for harness-plan, backend-capability, future-kernel-matrix, validation, and summary."
+      - Stage 5B harness plan, parity fixture, backend capability, future kernel matrix, and aggregate summary records under `data/cuda/`.
+      - Optional local 16 GB GPU capability metadata plus compatibility 8 GB and CI no-GPU profiles, with no hardware requirement.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5B wrote 14 harness plan records, 14 parity fixture records, 3 backend capability records, and 9 future-kernel matrix records; 9 targets are ready for future kernel planning, 1 future kernel row remains blocked, and Stage 5C is the next CUDA build and device-detection scaffold stage.

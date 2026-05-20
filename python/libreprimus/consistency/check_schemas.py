@@ -72,6 +72,11 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/cuda-implementation-gate-record-v0.schema.json",
     "cuda/cuda-non-target-record-v0.schema.json",
     "cuda/cuda-planning-summary-v0.schema.json",
+    "cuda/cuda-parity-harness-record-v0.schema.json",
+    "cuda/cuda-parity-fixture-record-v0.schema.json",
+    "cuda/cuda-backend-capability-record-v0.schema.json",
+    "cuda/cuda-future-kernel-parity-matrix-v0.schema.json",
+    "cuda/stage5b-cuda-parity-harness-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -121,6 +126,11 @@ EXPECTED_DOC_TERMS = [
     "cuda-implementation-gate-record-v0",
     "cuda-non-target-record-v0",
     "cuda-planning-summary-v0",
+    "cuda-parity-harness-record-v0",
+    "cuda-parity-fixture-record-v0",
+    "cuda-backend-capability-record-v0",
+    "cuda-future-kernel-parity-matrix-v0",
+    "stage5b-cuda-parity-harness-summary-v0",
 ]
 
 

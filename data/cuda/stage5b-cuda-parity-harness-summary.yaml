@@ -1,0 +1,45 @@
+record_type: stage5b_cuda_parity_harness_summary
+schema: schemas/cuda/stage5b-cuda-parity-harness-summary-v0.schema.json
+stage_id: stage-5b
+status: complete
+harness_plan_records: 14
+parity_fixture_records: 14
+backend_capability_records: 3
+future_kernel_matrix_records: 9
+stage5a_targets_loaded: 14
+ready_targets_loaded: 9
+blocked_targets_loaded: 2
+non_targets_loaded: 8
+ready_for_future_kernel: 9
+blocked_future_kernels: 1
+skipped_non_targets: 3
+stage4o_parity_references_used: 8
+stage4p_unified_result_references_used: 8
+local_16gb_profile_recorded: true
+local_16gb_profile_required: false
+compatibility_8gb_profile_recorded: true
+next_stage: Stage 5C - CUDA build and device-detection scaffold
+notes:
+- Stage 5B creates a CUDA parity harness skeleton only.
+- No CUDA kernels, GPU benchmarks, performance claims, website expansion, raw-data
+  processing, or solve claims were added.
+- Local RTX 4060 Ti 16 GB is recorded as optional planning metadata; compatibility
+  8 GB and CI no-GPU profiles remain represented.
+cuda_parity_harness_only: true
+cuda_implementation_added: false
+cuda_kernel_added: false
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+broad_experiment_executed: false
+raw_data_processed: false
+solve_claim: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+codex_output_committed: false
+website_expansion: false
+cuda_used: false
+cuda_required: false

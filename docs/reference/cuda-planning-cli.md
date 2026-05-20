@@ -11,3 +11,7 @@ Commands:
 - `summary`: prints committed Stage 5A summary counts.
 
 The CLI does not compile CUDA, add kernels, run GPU benchmarks, run broad experiments, process raw data, or make solve claims.
+
+Stage 5B follows this planning layer with `libreprimus cuda-parity`, which records harness plans,
+parity fixtures, backend capability profiles, and future-kernel matrix rows without modifying CUDA
+source or running benchmarks.

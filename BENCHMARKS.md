@@ -30,7 +30,7 @@ Stage 4Q records benchmark planning and parity readiness only. It writes committ
 
 Stage 4Q CPU smoke timings are diagnostic only. They are not performance claims, speedup evidence, CUDA benchmarks, or authorization to implement GPU kernels.
 
-Stage 5A uses Stage 4Q records for CUDA planning and parity scaffolding only. It records target plans, non-targets, parity scaffolds, and implementation gates without running GPU benchmarks or making speedup claims. Stage 5B is the next CUDA parity harness skeleton; website expansion is deferred to Stage 6.
+Stage 5A uses Stage 4Q records for CUDA planning and parity scaffolding only. It records target plans, non-targets, parity scaffolds, and implementation gates without running GPU benchmarks or making speedup claims. Stage 5B records a CUDA parity harness skeleton, backend capability profiles, and future-kernel matrix rows without running GPU benchmarks or making speedup claims. Stage 5C is the next CUDA build and device-detection scaffold; website expansion is deferred to Stage 6.
 
 ## Do not run long benchmarks by default
 

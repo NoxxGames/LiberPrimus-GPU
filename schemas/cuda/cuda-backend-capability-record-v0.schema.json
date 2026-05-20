@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/cuda-backend-capability-record-v0.schema.json",
+  "title": "CUDA Backend Capability Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "backend_id",
+    "backend_status",
+    "vram_profile",
+    "local_16gb_profile_required",
+    "cuda_hardware_required",
+    "cuda_kernel_added",
+    "gpu_benchmark_performed",
+    "speedup_claim",
+    "solve_claim",
+    "no_solve_claim",
+    "generated_outputs_committed",
+    "codex_output_committed"
+  ],
+  "properties": {
+    "record_type": { "const": "cuda_backend_capability_record" },
+    "stage_id": { "const": "stage-5b" },
+    "backend_id": { "type": "string", "minLength": 1 },
+    "backend_status": {
+      "enum": [
+        "cuda_hardware_not_required",
+        "cuda_unavailable",
+        "cuda_available_unverified",
+        "cuda_toolkit_detected",
+        "cuda_device_detected",
+        "cuda_probe_skipped"
+      ]
+    },
+    "vram_profile": { "enum": ["compatibility_8gb", "local_16gb", "ci_no_gpu", "not_applicable"] },
+    "local_16gb_profile_supported": { "type": "boolean" },
+    "local_16gb_profile_required": { "const": false },
+    "cuda_hardware_required": { "const": false },
+    "cuda_implementation_added": { "const": false },
+    "cuda_kernel_added": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "broad_experiment_executed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "codex_output_committed": { "const": false },
+    "website_expansion": { "const": false }
+  },
+  "additionalProperties": true
+}

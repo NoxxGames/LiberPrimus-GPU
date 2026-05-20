@@ -1,0 +1,352 @@
+records:
+- record_type: cuda_future_kernel_parity_matrix_record
+  stage_id: stage-5b
+  kernel_id: shift_score_kernel
+  future_kernel_status: planned
+  cpu_reference_family: caesar_mod29
+  cpu_reference_required: true
+  cpu_reference_present: true
+  required_fixture_count: 1
+  required_positive_controls: 1
+  required_null_controls: 1
+  required_negative_controls: 1
+  compatibility_8gb_planning_note: Keep memory layout valid for the compatibility
+    8 GB planning profile.
+  local_16gb_profile_planning_note: Local RTX 4060 Ti 16 GB can be used in future
+    explicit benchmark stages, but is not required.
+  vram_profile: compatibility_8gb
+  local_16gb_profile_required: false
+  no_fast_math_default: true
+  no_performance_claim: true
+  notes:
+  - Stage 5B records the future parity contract only; no CUDA kernel is implemented.
+  cuda_parity_harness_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_future_kernel_parity_matrix_record
+  stage_id: stage-5b
+  kernel_id: affine_score_kernel
+  future_kernel_status: planned
+  cpu_reference_family: affine_mod29
+  cpu_reference_required: true
+  cpu_reference_present: true
+  required_fixture_count: 1
+  required_positive_controls: 1
+  required_null_controls: 1
+  required_negative_controls: 1
+  compatibility_8gb_planning_note: Keep memory layout valid for the compatibility
+    8 GB planning profile.
+  local_16gb_profile_planning_note: Local RTX 4060 Ti 16 GB can be used in future
+    explicit benchmark stages, but is not required.
+  vram_profile: compatibility_8gb
+  local_16gb_profile_required: false
+  no_fast_math_default: true
+  no_performance_claim: true
+  notes:
+  - Stage 5B records the future parity contract only; no CUDA kernel is implemented.
+  cuda_parity_harness_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_future_kernel_parity_matrix_record
+  stage_id: stage-5b
+  kernel_id: vigenere_score_kernel
+  future_kernel_status: planned
+  cpu_reference_family: vigenere
+  cpu_reference_required: true
+  cpu_reference_present: true
+  required_fixture_count: 1
+  required_positive_controls: 1
+  required_null_controls: 1
+  required_negative_controls: 1
+  compatibility_8gb_planning_note: Keep memory layout valid for the compatibility
+    8 GB planning profile.
+  local_16gb_profile_planning_note: Local RTX 4060 Ti 16 GB can be used in future
+    explicit benchmark stages, but is not required.
+  vram_profile: compatibility_8gb
+  local_16gb_profile_required: false
+  no_fast_math_default: true
+  no_performance_claim: true
+  notes:
+  - Stage 5B records the future parity contract only; no CUDA kernel is implemented.
+  cuda_parity_harness_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_future_kernel_parity_matrix_record
+  stage_id: stage-5b
+  kernel_id: prime_minus_one_stream_score_kernel
+  future_kernel_status: planned
+  cpu_reference_family: prime_minus_one_stream
+  cpu_reference_required: true
+  cpu_reference_present: true
+  required_fixture_count: 1
+  required_positive_controls: 1
+  required_null_controls: 1
+  required_negative_controls: 1
+  compatibility_8gb_planning_note: Keep memory layout valid for the compatibility
+    8 GB planning profile.
+  local_16gb_profile_planning_note: Local RTX 4060 Ti 16 GB can be used in future
+    explicit benchmark stages, but is not required.
+  vram_profile: compatibility_8gb
+  local_16gb_profile_required: false
+  no_fast_math_default: true
+  no_performance_claim: true
+  notes:
+  - Stage 5B records the future parity contract only; no CUDA kernel is implemented.
+  cuda_parity_harness_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_future_kernel_parity_matrix_record
+  stage_id: stage-5b
+  kernel_id: prime_gap_stream_score_kernel
+  future_kernel_status: blocked
+  cpu_reference_family: prime_gap_stream
+  cpu_reference_required: true
+  cpu_reference_present: false
+  required_fixture_count: 0
+  required_positive_controls: 0
+  required_null_controls: 0
+  required_negative_controls: 0
+  compatibility_8gb_planning_note: Keep memory layout valid for the compatibility
+    8 GB planning profile.
+  local_16gb_profile_planning_note: Local RTX 4060 Ti 16 GB can be used in future
+    explicit benchmark stages, but is not required.
+  vram_profile: not_applicable
+  local_16gb_profile_required: false
+  no_fast_math_default: true
+  no_performance_claim: true
+  notes:
+  - Stage 5B records the future parity contract only; no CUDA kernel is implemented.
+  cuda_parity_harness_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_future_kernel_parity_matrix_record
+  stage_id: stage-5b
+  kernel_id: crib_match_kernel
+  future_kernel_status: planned
+  cpu_reference_family: scoring_crib_checks
+  cpu_reference_required: true
+  cpu_reference_present: true
+  required_fixture_count: 9
+  required_positive_controls: 1
+  required_null_controls: 1
+  required_negative_controls: 1
+  compatibility_8gb_planning_note: Keep memory layout valid for the compatibility
+    8 GB planning profile.
+  local_16gb_profile_planning_note: Local RTX 4060 Ti 16 GB can be used in future
+    explicit benchmark stages, but is not required.
+  vram_profile: compatibility_8gb
+  local_16gb_profile_required: false
+  no_fast_math_default: true
+  no_performance_claim: true
+  notes:
+  - Stage 5B records the future parity contract only; no CUDA kernel is implemented.
+  cuda_parity_harness_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_future_kernel_parity_matrix_record
+  stage_id: stage-5b
+  kernel_id: ngram_score_kernel
+  future_kernel_status: planned
+  cpu_reference_family: scoring_ngram_proxy
+  cpu_reference_required: true
+  cpu_reference_present: true
+  required_fixture_count: 9
+  required_positive_controls: 1
+  required_null_controls: 1
+  required_negative_controls: 1
+  compatibility_8gb_planning_note: Keep memory layout valid for the compatibility
+    8 GB planning profile.
+  local_16gb_profile_planning_note: Local RTX 4060 Ti 16 GB can be used in future
+    explicit benchmark stages, but is not required.
+  vram_profile: compatibility_8gb
+  local_16gb_profile_required: false
+  no_fast_math_default: true
+  no_performance_claim: true
+  notes:
+  - Stage 5B records the future parity contract only; no CUDA kernel is implemented.
+  cuda_parity_harness_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_future_kernel_parity_matrix_record
+  stage_id: stage-5b
+  kernel_id: topk_reduce_kernel
+  future_kernel_status: planned
+  cpu_reference_family: topk_result_ordering
+  cpu_reference_required: true
+  cpu_reference_present: true
+  required_fixture_count: 9
+  required_positive_controls: 1
+  required_null_controls: 1
+  required_negative_controls: 1
+  compatibility_8gb_planning_note: Keep memory layout valid for the compatibility
+    8 GB planning profile.
+  local_16gb_profile_planning_note: Local RTX 4060 Ti 16 GB can be used in future
+    explicit benchmark stages, but is not required.
+  vram_profile: compatibility_8gb
+  local_16gb_profile_required: false
+  no_fast_math_default: true
+  no_performance_claim: true
+  notes:
+  - Stage 5B records the future parity contract only; no CUDA kernel is implemented.
+  cuda_parity_harness_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  cuda_used: false
+  cuda_required: false
+- record_type: cuda_future_kernel_parity_matrix_record
+  stage_id: stage-5b
+  kernel_id: batch_transform_dispatch_kernel
+  future_kernel_status: planned
+  cpu_reference_family: cpu_batch_dispatch
+  cpu_reference_required: true
+  cpu_reference_present: true
+  required_fixture_count: 9
+  required_positive_controls: 1
+  required_null_controls: 1
+  required_negative_controls: 1
+  compatibility_8gb_planning_note: Keep memory layout valid for the compatibility
+    8 GB planning profile.
+  local_16gb_profile_planning_note: Local RTX 4060 Ti 16 GB can be used in future
+    explicit benchmark stages, but is not required.
+  vram_profile: compatibility_8gb
+  local_16gb_profile_required: false
+  no_fast_math_default: true
+  no_performance_claim: true
+  notes:
+  - Stage 5B records the future parity contract only; no CUDA kernel is implemented.
+  cuda_parity_harness_only: true
+  cuda_implementation_added: false
+  cuda_kernel_added: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  cuda_used: false
+  cuda_required: false

@@ -177,8 +177,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 5A, onboarding and staged-plan checks should show Stage 5A complete and Stage 5B CUDA
-planning and parity scaffolding only next.
+After Stage 5B, onboarding and staged-plan checks should show Stage 5B complete and Stage 5C CUDA
+build and device-detection scaffold next.
 
 If path sanitisation fails, run:
 
@@ -405,3 +405,27 @@ If Stage 4Q validation fails, regenerate raw-data-free diagnostics with:
 ```
 
 Do not stage `experiments/results/benchmarks/stage4q/` or `codex-output/`.
+
+# Stage 5B CUDA Parity Harness Troubleshooting
+
+If Stage 5B validation fails, rerun the committed-record check:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli cuda-parity validate-stage5b `
+  --harness-plan data/cuda/stage5b-cuda-parity-harness-plan.yaml `
+  --parity-fixtures data/cuda/stage5b-cuda-parity-fixtures.yaml `
+  --backend-capability data/cuda/stage5b-cuda-backend-capability.yaml `
+  --future-kernel-matrix data/cuda/stage5b-future-kernel-parity-matrix.yaml `
+  --summary data/cuda/stage5b-cuda-parity-harness-summary.yaml `
+  --results-dir experiments/results/cuda-parity/stage5b
+```
+
+Generated Stage 5B reports belong under ignored `experiments/results/cuda-parity/stage5b/`.
+Do not stage `harness_plan_report.json`, `parity_fixtures_report.json`,
+`backend_capability_report.json`, `future_kernel_parity_matrix_report.json`, `summary.json`, or
+`warnings.jsonl`.
+
+If local CUDA tools are present, they may be recorded as optional capability metadata only. Stage
+5B must still pass without CUDA hardware, must not add `.cu` or `.cuh` implementation changes, and
+must not record performance or speedup claims. Keep the local Codex completion handoff under
+ignored `codex-output/stage5b-codex-completion.md`.

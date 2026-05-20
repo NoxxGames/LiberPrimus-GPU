@@ -1,0 +1,29 @@
+manifest_id: stage5b-cuda-backend-capability
+stage_id: stage-5b
+description: Best-effort backend capability metadata; CUDA hardware is optional.
+cuda_parity_harness_only: true
+cuda_implementation_added: false
+cuda_kernel_added: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+broad_experiment_executed: false
+raw_data_processed: false
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+codex_output_committed: false
+website_expansion: false
+cuda_hardware_required: false
+local_gpu_profile:
+  gpu_model: NVIDIA RTX 4060 Ti
+  vram_gb: 16
+  compute_capability_planned: "8.9"
+  required: false
+compatibility_profiles:
+  - ci_no_gpu
+  - compatibility_8gb
+  - local_16gb
+no_raw_input_required_for_ci: true

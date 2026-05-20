@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/cuda-parity-fixture-record-v0.schema.json",
+  "title": "CUDA Parity Fixture Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "fixture_id",
+    "stage5a_target_id",
+    "fixture_status",
+    "cpu_reference_required",
+    "cpu_reference_present",
+    "expected_output_hash_source",
+    "cuda_kernel_added",
+    "gpu_benchmark_performed",
+    "speedup_claim",
+    "solve_claim",
+    "no_solve_claim",
+    "generated_outputs_committed",
+    "codex_output_committed"
+  ],
+  "properties": {
+    "record_type": { "const": "cuda_parity_fixture_record" },
+    "stage_id": { "const": "stage-5b" },
+    "fixture_id": { "type": "string", "minLength": 1 },
+    "stage5a_target_id": { "type": "string", "minLength": 1 },
+    "stage5a_parity_scaffold_id": { "type": "string" },
+    "transform_family": { "type": "string" },
+    "input_stream_class": { "type": "string" },
+    "cpu_reference_required": { "const": true },
+    "cpu_reference_present": { "type": "boolean" },
+    "parity_expectation_reference": { "type": "string" },
+    "score_summary_reference": { "type": "string" },
+    "expected_output_hash_source": {
+      "enum": [
+        "stage4o_parity_expectation",
+        "stage4p_unified_result",
+        "committed_summary_only",
+        "synthetic_fixture",
+        "unavailable"
+      ]
+    },
+    "fixture_status": {
+      "enum": [
+        "ready_for_future_kernel",
+        "blocked_missing_cpu_reference",
+        "blocked_missing_parity_expectation",
+        "blocked_target_not_ready",
+        "skipped_non_target"
+      ]
+    },
+    "vram_profile": { "enum": ["compatibility_8gb", "local_16gb", "ci_no_gpu", "not_applicable"] },
+    "local_16gb_profile_required": { "const": false },
+    "cuda_implementation_added": { "const": false },
+    "cuda_kernel_added": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "broad_experiment_executed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "codex_output_committed": { "const": false },
+    "website_expansion": { "const": false }
+  },
+  "additionalProperties": true
+}

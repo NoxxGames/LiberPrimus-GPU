@@ -11,7 +11,7 @@ The planning chain is:
 - Stage 4Q supplies CPU benchmark planning and CUDA parity readiness.
 - Stage 5A records which targets are ready for planning, blocked, or out of CUDA scope.
 
-Future CUDA work must cite the Stage 5A records before adding a harness or implementation. Planning readiness is not execution readiness.
+Stage 5B now cites the Stage 5A records to create a harness skeleton, parity fixtures, backend capability profiles, and future-kernel matrix rows. Planning readiness is not execution readiness.
 
 ## Committed Records
 
@@ -22,3 +22,5 @@ Future CUDA work must cite the Stage 5A records before adding a harness or imple
 - `data/cuda/stage5a-cuda-planning-summary.yaml`
 
 Generated JSON reports remain ignored under `experiments/results/cuda-planning/stage5a/`.
+
+Stage 5B generated CUDA parity reports remain ignored under `experiments/results/cuda-parity/stage5b/`; committed Stage 5B records live under `data/cuda/`.

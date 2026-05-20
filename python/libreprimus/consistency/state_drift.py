@@ -143,6 +143,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5A is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5b",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5b\b", re.IGNORECASE),
+        "Stage 5B is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -468,11 +473,21 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5b_cuda_parity_harness_next",
+        "stage5b_cuda_parity_harness_current_or_complete",
         "stage 5b" in staged_plan
         and "cuda parity harness skeleton" in staged_plan
+        and ("current" in staged_plan or "complete" in staged_plan),
+        "Staged plan records Stage 5B CUDA parity harness skeleton as current or complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5c_cuda_build_device_detection_next",
+        "stage 5c" in staged_plan
+        and "cuda build" in staged_plan
+        and "device-detection scaffold" in staged_plan
         and "next" in staged_plan,
-        "Staged plan records Stage 5B CUDA parity harness skeleton as next.",
+        "Staged plan records Stage 5C CUDA build and device-detection scaffold as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -549,6 +564,16 @@ def check_state_drift_consistency(
         and "stage 5b" in combined
         and "speedup claim" in combined,
         "CUDA planning and parity scaffolding policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "cuda_parity_harness_skeleton_policy_present",
+        "cuda parity harness skeleton" in combined
+        and "future kernel" in combined
+        and "backend capability" in combined
+        and "speedup claim" in combined,
+        "CUDA parity harness skeleton and backend capability policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

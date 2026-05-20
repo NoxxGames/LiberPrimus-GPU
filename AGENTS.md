@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5A - CUDA planning and parity scaffolding.
+Current completed stage: Stage 5B - CUDA parity harness skeleton.
 
-Current work: Stage 5B - CUDA parity harness skeleton. Stage 5B may cite Stage 5A target, scaffold, gate, and non-target records, but CUDA implementation, GPU benchmarking, speedup claims, broad search, raw-data processing, canonical corpus activation, page-boundary finalisation, and solve claims remain prohibited unless explicitly scoped by a later stage.
+Current work: Stage 5C - CUDA build and device-detection scaffold. Stage 5C may cite Stage 5A target/scaffold/gate records and Stage 5B harness/backend/matrix records, but CUDA kernel implementation, GPU benchmarking, speedup claims, broad search, raw-data processing, canonical corpus activation, page-boundary finalisation, and solve claims remain prohibited unless explicitly scoped by a later stage.
 
 Current project state:
 
@@ -94,6 +94,9 @@ Current project state:
 - If Stage 4G returns zero exact matches, do not rerun cookie work without newly source-locked exact candidate strings.
 - Stage 4H generated CPU batch records are generated and ignored under `experiments/results/cpu-batch/stage4h/`.
 - Future CUDA work must use the Stage 4H CPU batch parity contract.
+- Future CUDA work must cite Stage 5B parity harness, parity fixture, backend capability, and future-kernel matrix records before implementation.
+- Stage 5B backend capability records are planning metadata; the local 16GB profile is optional and must not be required by CI.
+- Stage 5B future-kernel matrix rows are planned or blocked only. They do not mean CUDA kernels exist.
 - Do not implement GPU code until CPU batch and scorer APIs are stable and parity tests exist.
 - Any new transform adapter must include a synthetic batch test and deterministic output hash expectation.
 - CLI behavior for `libreprimus cpu-batch` must remain stable unless a future stage updates docs, schemas, tests, and the parity contract together.

@@ -153,4 +153,6 @@ Do not quote Stage 4Q smoke timing as a speed claim. Future CUDA work must still
 
 Stage 5A records CUDA target plans, explicit non-targets, parity scaffolds, and implementation gates. It does not compile CUDA kernels, run GPU benchmarks, or make speedup claims.
 
-Future Stage 5B harness work must cite Stage 5A records and remain raw-data-free until a later explicit implementation stage.
+Stage 5B records CUDA parity harness plans, parity fixtures, backend capability profiles, and future-kernel matrix rows. It does not compile CUDA kernels, run GPU benchmarks, require the optional local 16GB GPU profile, or make speedup claims.
+
+Future Stage 5C build/device-detection work must cite Stage 5A and Stage 5B records and remain raw-data-free until a later explicit implementation stage.

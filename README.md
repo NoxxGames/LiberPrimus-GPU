@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5A CUDA planning and parity scaffolding. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5B CUDA parity harness skeleton. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -36,7 +36,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Observation promotion ledger: Stage 4L joins Stage 4J review decisions with Stage 4K source locks and records ready, blocked, deferred, quarantined, rejected, source-reference-only, and control-only states. Ready does not mean executed; all future manifests remain disabled.
 - Image source-variant and compression preflight: Stage 4M scans ignored local LP page images for metadata and deterministic metric-only compression summaries, records source-variant comparison readiness, keeps star-like/compression-like artefacts review-only, and keeps the bigram/Fibonacci-421 observation blocked pending reproducible matrix and null controls. It does not commit raw images, generated visualisations, or execute image/bigram experiments.
 - Stego/audio positive-control readiness: Stage 4N records fixture readiness, cache policy, expected-output requirements, toolchain state, and synthetic controls. Historical OutGuess/OpenPuff/MP3/audio cases remain blocked until assets, exact expected outputs, and tools are ready.
-- CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. Stage 4O expands this with solved-fixture-safe streams, adapter coverage records, deterministic parity expectations, and score-summary compatibility checks. Stage 4P makes those result and score surfaces comparable with older result-store summaries. Stage 4Q adds benchmark and future parity planning gates. Stage 5A adds CUDA target plans, non-targets, parity scaffolds, and implementation gates. It is infrastructure for future CUDA parity, not a broad experiment runner.
+- CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. Stage 4O expands this with solved-fixture-safe streams, adapter coverage records, deterministic parity expectations, and score-summary compatibility checks. Stage 4P makes those result and score surfaces comparable with older result-store summaries. Stage 4Q adds benchmark and future parity planning gates. Stage 5A adds CUDA target plans, non-targets, parity scaffolds, and implementation gates. Stage 5B adds CUDA parity harness plans, parity fixtures, backend capability profiles, and future-kernel matrix rows. It is infrastructure for future CUDA parity, not a broad experiment runner.
 - Scoring contract: Stage 4I provides scorer inventory, finite confidence-label records, compatibility mappings, calibration-profile/report records, and CPU batch score compatibility checks. Score labels can create review leads only and cannot imply solved plaintext.
 - Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
 - CUDA experiment campaigns: not started.
@@ -47,7 +47,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 5B CUDA parity harness skeleton.
+- Stage 5C CUDA build and device-detection scaffold.
 - Website expansion is deferred to Stage 6.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
@@ -113,6 +113,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 4P result-store and score-summary unification.
 - Stage 4Q CPU benchmark and parity planning.
 - Stage 5A CUDA planning and parity scaffolding.
+- Stage 5B CUDA parity harness skeleton.
 
 ## Architecture summary
 
@@ -215,8 +216,9 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Latest stego/audio readiness stage: Stage 4N wrote `11` OutGuess readiness records, `5` audio readiness records, `16` fixture-cache records, `16` expected-output records, `7` toolchain readiness records, `0` historical execution-ready fixtures, `8` blocked historical fixtures, and `2` synthetic-ready controls. It committed no raw artefacts or extracted payloads and ran no stego/audio tools.
 - Latest result-store unification stage: Stage 4P recorded `18` source inventory records, loaded `11` committed summaries, saw `6` optional ignored generated outputs locally, wrote `82` unified result records, `82` unified score-summary records, and `82` method-status joins. It ran no new experiments, added no scorer semantics, committed no generated result bodies or SQLite databases, and added no CUDA code.
 - Latest CUDA planning stage: Stage 5A wrote `14` target-plan records, `9` ready planning targets, `2` blocked targets, `8` explicit non-target records, `9` parity scaffold records, and `10` satisfied implementation gates. It made no CUDA source change, GPU benchmark, speedup claim, broad experiment, raw-data processing, or solve claim.
+- Latest CUDA parity harness stage: Stage 5B wrote `14` harness plan records, `14` parity fixture records, `3` backend capability records, and `9` future-kernel matrix records. It made no CUDA source change, GPU benchmark, speedup claim, broad experiment, raw-data processing, or solve claim.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 5B CUDA parity harness skeleton.
+- Next: Stage 5C CUDA build and device-detection scaffold.
 
 ## How To Use This Repo
 

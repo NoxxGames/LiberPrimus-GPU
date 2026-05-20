@@ -6,7 +6,7 @@ This catalog records planned transform families and the standards required befor
 
 ## Current Cipher Status
 
-After Stage 5A, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, metadata-only source-delta records for selected public artefact categories, stego/audio fixture source-lock metadata, a source-backed cookie exact-refresh result, a CPU batch transform API with expanded adapter parity expectations, scorer/calibration records, an observation review lifecycle, allowlisted public source-lock snapshot records, a reviewed observation promotion ledger, metric-only image source-variant/compression preflight records, stego/audio positive-control readiness records, result-store/score-summary unification records, CPU benchmark/parity planning records, and CUDA planning/parity scaffold records. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, GPU benchmarking, OCR/AI image interpretation, broad stego fishing, stego/audio extraction, broad hash cracking, or solve claims.
+After Stage 5B, the repository has solved-baseline CPU reference transforms, bounded experiment executors, an OutGuess regression harness, a method-retirement ledger, source-lock/visual-observation intake records, visual annotation task infrastructure, bounded no-fudge numeric verifier audits, metadata-only source-delta records for selected public artefact categories, stego/audio fixture source-lock metadata, a source-backed cookie exact-refresh result, a CPU batch transform API with expanded adapter parity expectations, scorer/calibration records, an observation review lifecycle, allowlisted public source-lock snapshot records, a reviewed observation promotion ledger, metric-only image source-variant/compression preflight records, stego/audio positive-control readiness records, result-store/score-summary unification records, CPU benchmark/parity planning records, CUDA planning/parity scaffold records, and CUDA parity harness skeleton records. It does not implement broad cipher search, broad number-sequence search, CUDA acceleration, GPU benchmarking, OCR/AI image interpretation, broad stego fishing, stego/audio extraction, broad hash cracking, or solve claims.
 
 Canonical corpus activation remains inactive and page boundaries remain reviewable.
 
@@ -232,3 +232,9 @@ Stage 4Q does not add cipher families or transform semantics. It records CPU ben
 Stage 5A does not add cipher families, transform semantics, CUDA kernels, or GPU benchmark behavior. It records future CUDA target boundaries for existing CPU transform-adapter families only.
 
 Readiness records are not solve evidence. Cookie/hash, stego/audio, image/compression, and bigram records are non-CUDA transform targets unless a later explicit stage changes that boundary.
+
+# Stage 5B CUDA Parity Harness Note
+
+Stage 5B does not add cipher families, transform semantics, CUDA kernels, CUDA source changes, or GPU benchmark behavior. It records future CUDA harness, fixture, backend capability, and kernel-matrix boundaries for existing CPU transform-adapter families only.
+
+Harness records are not solve evidence, implementation approval, or performance evidence. Future CUDA kernels must still be introduced by explicit implementation stages with CPU/GPU parity tests.

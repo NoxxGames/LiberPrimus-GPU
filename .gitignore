@@ -451,5 +451,13 @@ experiments/results/cuda-planning/**
 !experiments/results/cuda-planning/stage5a/
 !experiments/results/cuda-planning/stage5a/.gitkeep
 
+# Generated CUDA parity harness outputs
+experiments/results/cuda-parity/**
+!experiments/results/cuda-parity/
+!experiments/results/cuda-parity/README.md
+!experiments/results/cuda-parity/.gitkeep
+!experiments/results/cuda-parity/stage5b/
+!experiments/results/cuda-parity/stage5b/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

@@ -4,11 +4,12 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5A CUDA planning and parity scaffolding is complete. The stage recorded CUDA target
-plans, non-targets, parity scaffolds, and implementation gates without CUDA implementation,
-GPU benchmarking, broad experiment execution, or performance claims.
+Stage 5B CUDA parity harness skeleton is complete. The stage recorded CUDA harness plans,
+parity fixtures, backend capability profiles, and future-kernel matrix rows without CUDA
+implementation, CUDA source changes, GPU benchmarking, broad experiment execution, or
+performance claims.
 
-The next planned stage is Stage 5B: CUDA parity harness skeleton. Website expansion
+The next planned stage is Stage 5C: CUDA build and device-detection scaffold. Website expansion
 is deferred to Stage 6. CUDA implementation remains deferred until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, parity tests, and benchmark plans
@@ -25,8 +26,9 @@ refresh result, Stage 4H extracted the CPU batch API as the future CUDA parity c
 review-to-promotion loop, Stage 4K strengthened public-source reproducibility, Stage 4L
 recorded promotion readiness, Stage 4M created image source-variant/compression preflight
 records, Stage 4N recorded OutGuess/audio positive-control readiness, Stage 4O expanded CPU
-batch adapter coverage, Stage 4P unified result-store/score-summary reporting, and Stage 4Q
-recorded CPU benchmark and parity planning, and Stage 5A recorded CUDA planning and parity scaffolding before the Stage 5B harness skeleton.
+batch adapter coverage, Stage 4P unified result-store/score-summary reporting, Stage 4Q
+recorded CPU benchmark and parity planning, Stage 5A recorded CUDA planning and parity scaffolding,
+and Stage 5B recorded the CUDA parity harness skeleton before Stage 5C build/device-detection work.
 
 ## Phase 0A - Project bootstrap
 
@@ -294,7 +296,7 @@ Stage 3Z expands the source-of-truth hierarchy into concise onboarding maps that
 
 Stage 4A converted local admin-provided Discord HTML exports into redacted, scoped, image-aware Deep-Research-friendly bundles. Raw Discord logs, private attachments, usernames, user IDs, message IDs, and private URLs remain local/ignored and must not be committed.
 
-The independent review originally suggested CPU batch transform API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier. Stage 4H has now completed CPU batch API extraction; scorer consolidation remains the next prerequisite before CUDA parity work.
+The independent review originally suggested CPU batch transform API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier. Stage 4H later completed CPU batch API extraction, Stage 4I completed scorer consolidation, Stage 4Q recorded benchmark/parity planning, Stage 5A recorded CUDA planning, and Stage 5B completed the harness skeleton before any CUDA implementation work.
 
 ## Stage 4B - Website-derived source-lock triage and visual observation intake
 
@@ -353,6 +355,19 @@ satisfied implementation gates. Generated reports remain ignored under
 Stage 5A did not add or modify CUDA source, run GPU benchmarks, claim speedups, run broad
 experiments, process raw data, activate the canonical corpus, finalise page boundaries, or make
 solve claims.
+
+## Stage 5B - CUDA parity harness skeleton
+
+Stage 5B is complete. It records `14` CUDA parity harness plans, `14` parity fixture records,
+`3` backend capability records, and `9` future-kernel matrix rows. The local 16GB GPU profile is
+recorded only as optional planning metadata; compatibility 8GB and CI no-GPU profiles remain
+first-class.
+
+Generated reports remain ignored under `experiments/results/cuda-parity/stage5b/`, and
+`codex-output/` handoff files remain ignored. Stage 5B did not add or modify CUDA source, add GPU
+kernels, run GPU benchmarks, claim speedups, run broad experiments, process raw data, activate the
+canonical corpus, finalise page boundaries, or make solve claims. Stage 5C is the next CUDA build
+and device-detection scaffold stage.
 
 ## Stage 4G - Cookie exact-candidate refresh
 

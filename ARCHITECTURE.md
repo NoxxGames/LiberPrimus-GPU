@@ -6,7 +6,7 @@ The workbench favors reproducibility, provenance, and skeptical review over spee
 
 ## Current Repository State
 
-Stage 4Q is complete after the Stage 3W through Stage 4P infrastructure chain. The canonical corpus is inactive, page boundaries are reviewable, broad unsolved-page campaigns are not started, and CUDA is deferred to Stage 5A planning/scaffolding only. No solve claim is made.
+Stage 5B is complete after the Stage 3W through Stage 5A infrastructure chain. The canonical corpus is inactive, page boundaries are reviewable, broad unsolved-page campaigns are not started, and CUDA implementation is deferred beyond Stage 5C build/device-detection scaffolding. No solve claim is made.
 
 Historical Stage 0A was a bootstrap scaffold. The current repository now includes profile/corpus candidate foundations, solved fixtures, CPU transform registry, result-store foundations, bounded execution policy, archive/image/Discord/post-Discord/stego modules, and raw-data-free CI.
 
@@ -52,7 +52,7 @@ Stage 3K through Stage 3V added source/visual/web observations, image metadata a
 
 ## Testing Layer
 
-CI is raw-data-free, CUDA-free, secret-free, and does not upload generated artefacts by default. Tests cover schema validation, manifest safety, bounded executor behavior, fake-tool stego behavior, ignored-output policy, documentation status, Stage 3W anti-drift checks, and Stage 4Q benchmark-planning validation.
+CI is raw-data-free, CUDA-free, secret-free, and does not upload generated artefacts by default. Tests cover schema validation, manifest safety, bounded executor behavior, fake-tool stego behavior, ignored-output policy, documentation status, Stage 3W anti-drift checks, Stage 4Q benchmark-planning validation, Stage 5A CUDA planning validation, and Stage 5B CUDA parity harness validation.
 
 ## Failure Modes
 

@@ -164,6 +164,15 @@ records:
     prohibited_expansions: [CUDA implementation in planning stages, new GPU kernels, GPU benchmarking, speedup claims before parity, broad unsolved campaigns, raw-data processing, website expansion before Stage 6, generated-output commits, solve claims.]
     notes: Stage 5A is a boundary and readiness ledger, not CUDA implementation.
   - record_type: method_retirement_record
+    method_family_id: cuda_parity_harness_skeleton
+    retired_status: active_with_constraints
+    reason: CUDA parity harness work is active infrastructure only; it prepares future kernel parity expectations but does not authorize implementation, GPU benchmarking, or performance claims.
+    evidence: [Stage 5B records 14 harness plans, 14 parity fixtures, 3 backend capability profiles, and 9 future-kernel matrix rows without modifying CUDA source or running GPU benchmarks.]
+    stages_supporting: [stage-5b]
+    reopen_conditions: [A later explicit Stage 5C or implementation stage cites the Stage 5B harness records, preserves CI no-GPU compatibility, and adds parity tests before any CUDA kernel work.]
+    prohibited_expansions: [CUDA kernels in harness stages, CUDA source changes outside explicit implementation scope, GPU benchmarks, speedup claims, local 16GB GPU requirements, broad unsolved campaigns, raw-data processing, generated-output commits, solve claims.]
+    notes: Stage 5B treats backend capability as optional planning metadata and keeps compatibility 8GB and CI no-GPU profiles first-class.
+  - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints
     reason: Stage 4B visual observations are useful review inputs, but broad visual pareidolia and unannotated dot/braille/constellation readings remain high-risk false-positive classes.

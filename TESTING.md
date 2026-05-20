@@ -639,3 +639,15 @@ Stage 5A validation uses:
 - `libreprimus cuda-planning summary`
 
 The consistency scripts also build Stage 5A temp outputs in a raw-data-free location. Tests must not require CUDA, modify `.cu` or `.cuh` files, run GPU benchmarks, make speedup claims, commit generated CUDA planning reports, process raw data, or publish `codex-output/**`.
+
+# Stage 5B Validation
+
+Stage 5B validation uses:
+
+- `libreprimus cuda-parity build-harness-plan`
+- `libreprimus cuda-parity build-backend-capability`
+- `libreprimus cuda-parity build-future-kernel-matrix`
+- `libreprimus cuda-parity validate-stage5b`
+- `libreprimus cuda-parity summary`
+
+The consistency scripts also build Stage 5B temp outputs in a raw-data-free location. Tests must not require CUDA hardware, modify `.cu` or `.cuh` files, add transform kernels, run GPU benchmarks, make performance or speedup claims, commit generated CUDA parity reports, process raw data, or publish `codex-output/**`.
