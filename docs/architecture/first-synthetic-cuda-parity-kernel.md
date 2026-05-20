@@ -29,3 +29,9 @@ Stage 5G records this synthetic parity result in `data/cuda/stage5g-shift-score-
 and preserves the same reference hash. It also hardens CUDA-facing `.cu`/`.cuh` source toward a
 conservative CUDA-C subset and keeps solved-fixture CUDA execution blocked until a later contract
 stage.
+
+## Stage 5H Contract Separation
+
+Stage 5H records that this uppercase Latin fixture hash is not the Gematria mod-29 fixture hash.
+Future Gematria parity must use the Stage 5H numeric native fixture hash and cannot treat the Stage
+5F synthetic result as production Gematria behavior.

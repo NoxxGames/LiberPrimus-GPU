@@ -30,7 +30,7 @@ Stage 4Q records benchmark planning and parity readiness only. It writes committ
 
 Stage 4Q CPU smoke timings are diagnostic only. They are not performance claims, speedup evidence, CUDA benchmarks, or authorization to implement GPU kernels.
 
-Stage 5A uses Stage 4Q records for CUDA planning and parity scaffolding only. It records target plans, non-targets, parity scaffolds, and implementation gates without running GPU benchmarks or making speedup claims. Stage 5B records a CUDA parity harness skeleton, backend capability profiles, and future-kernel matrix rows without running GPU benchmarks or making speedup claims. Stage 5C records CUDA build profiles, toolchain detection, device detection, and optional smoke-build status without running GPU benchmarks or making speedup claims. Stage 5D records native C++ CPU backend diagnostics and threading parity without GPU benchmarks or speedup claims. Stage 5E records first-kernel contract selection without GPU benchmarks or speedup claims. Stage 5F records a synthetic-only parity kernel and optional local build/parity status without GPU benchmarks or speedup claims. Stage 5G records parity reporting, CUDA-C subset hardening, and solved-fixture-safe blockers without running GPU benchmarks or making speedup claims; website expansion is deferred to Stage 6.
+Stage 5A uses Stage 4Q records for CUDA planning and parity scaffolding only. It records target plans, non-targets, parity scaffolds, and implementation gates without running GPU benchmarks or making speedup claims. Stage 5B records a CUDA parity harness skeleton, backend capability profiles, and future-kernel matrix rows without running GPU benchmarks or making speedup claims. Stage 5C records CUDA build profiles, toolchain detection, device detection, and optional smoke-build status without running GPU benchmarks or making speedup claims. Stage 5D records native C++ CPU backend diagnostics and threading parity without GPU benchmarks or speedup claims. Stage 5E records first-kernel contract selection without GPU benchmarks or speedup claims. Stage 5F records a synthetic-only parity kernel and optional local build/parity status without GPU benchmarks or speedup claims. Stage 5G records parity reporting, CUDA-C subset hardening, and solved-fixture-safe blockers without running GPU benchmarks or making speedup claims. Stage 5H records Gematria mod-29 contract and native fixture metadata without running GPU benchmarks or making speedup claims; website expansion is deferred to Stage 6.
 
 ## Stage 5C CUDA Build/Device Detection
 
@@ -59,6 +59,12 @@ report Stage 5F timing, build, or CTest output as performance, throughput, or sp
 Stage 5G reports the Stage 5F hash match and audits CUDA-facing source style. The reports are
 readiness metadata only. Do not report Stage 5G build, audit, CTest, or validation output as
 throughput evidence.
+
+## Stage 5H Gematria Contract Boundary
+
+Stage 5H defines numeric Gematria mod-29 shift semantics and a synthetic native fixture hash. The
+records are contract metadata only. Do not report Stage 5H validation, fixture hashes, or CTest
+output as throughput evidence.
 
 ## Do not run long benchmarks by default
 

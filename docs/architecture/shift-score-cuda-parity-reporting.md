@@ -27,6 +27,9 @@ The current result means only that the Stage 5F synthetic uppercase Latin fixtur
 - GPU benchmark commands remain out of scope.
 - Generated reports remain ignored under `experiments/results/cuda-parity-reporting/stage5g/`.
 
-## Next Contract Work
+## Stage 5H Contract Work
 
-Stage 5H must define the Gematria mod-29 `shift_score` contract and native parity fixture preparation before any solved-fixture-safe CUDA execution can be considered.
+Stage 5H defines the Gematria mod-29 `shift_score` contract and native parity fixture preparation.
+It records numeric token semantics, a synthetic native fixture hash, solved-fixture mapping
+blockers, and score-summary parity requirements. Any solved-fixture-safe CUDA execution remains
+blocked until a later stage clears those records.

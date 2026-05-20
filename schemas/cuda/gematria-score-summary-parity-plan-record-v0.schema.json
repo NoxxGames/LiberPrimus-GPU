@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-score-summary-parity-plan-record-v0.schema.json",
+  "title": "Stage 5H Gematria score summary parity plan record",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "plan_id",
+    "required_output_token_hash",
+    "score_summary_status_required",
+    "allowed_confidence_labels",
+    "confidence_labels_triage_only",
+    "no_solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "gematria_score_summary_parity_plan_record" },
+    "stage_id": { "const": "stage-5h" },
+    "plan_id": { "const": "stage5h-gematria-score-summary-parity-plan-v0" },
+    "required_output_token_hash": { "const": true },
+    "score_summary_status_required": { "const": true },
+    "allowed_confidence_labels": {
+      "type": "array",
+      "contains": { "const": "positive_control_like" },
+      "items": {
+        "enum": [
+          "positive_control_like",
+          "strong_lead",
+          "moderate_lead",
+          "weak_lead",
+          "low_signal",
+          "noise_like",
+          "negative_control_like",
+          "scoring_not_available",
+          "calibration_not_available"
+        ]
+      }
+    },
+    "confidence_labels_triage_only": { "const": true },
+    "selected_future_kernel_id": { "const": "shift_score_kernel" },
+    "stage5h_cuda_execution_allowed": { "const": false },
+    "solved_fixture_cuda_execution_allowed": { "const": false },
+    "production_gematria_mod29_cuda_ready": { "const": false },
+    "real_liber_primus_data_used": { "const": false },
+    "solved_fixture_cuda_used": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "cuda_kernel_added": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "raw_data_processed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "generated_outputs_committed": { "const": false },
+    "codex_output_committed": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "no_gpu_ci_safe": { "const": true },
+    "device_code_subset_must_remain_compliant": { "const": true },
+    "gematria_mod29_contract_defined": { "const": true }
+  },
+  "additionalProperties": true
+}

@@ -448,6 +448,44 @@ echo "Running Stage 5G CUDA parity reporting no-GPU-safe/temp output"
     --summary "$tmp_dir/stage5g-cuda-parity-reporting-summary.yaml" \
     --results-dir "$tmp_dir/stage5g-cuda-parity-reporting"
 
+echo "Running Stage 5H Gematria shift contract no-GPU-safe/temp output"
+"$python_bin" -m libreprimus.cli gematria-shift-contract build-contract \
+    --manifest experiments/manifests/cuda/stage5h-gematria-shift-score-contract.yaml \
+    --out-dir "$tmp_dir/stage5h-gematria-shift-contract" \
+    --contract-out "$tmp_dir/stage5h-gematria-shift-score-contract.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-shift-contract build-native-fixtures \
+    --manifest experiments/manifests/cuda/stage5h-gematria-native-parity-fixtures.yaml \
+    --out-dir "$tmp_dir/stage5h-gematria-shift-contract" \
+    --fixtures-out "$tmp_dir/stage5h-gematria-native-parity-fixtures.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-shift-contract build-solved-fixture-mapping \
+    --manifest experiments/manifests/cuda/stage5h-solved-fixture-safe-mapping.yaml \
+    --source-manifest experiments/manifests/cpu-batch/stage4o-solved-fixture-parity-batch.yaml \
+    --out-dir "$tmp_dir/stage5h-gematria-shift-contract" \
+    --mapping-out "$tmp_dir/stage5h-gematria-solved-fixture-safe-mapping.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-shift-contract build-score-summary-plan \
+    --manifest experiments/manifests/cuda/stage5h-gematria-shift-score-contract.yaml \
+    --out-dir "$tmp_dir/stage5h-gematria-shift-contract" \
+    --score-summary-plan-out "$tmp_dir/stage5h-gematria-score-summary-parity-plan.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-shift-contract build-summary \
+    --contract "$tmp_dir/stage5h-gematria-shift-score-contract.yaml" \
+    --fixtures "$tmp_dir/stage5h-gematria-native-parity-fixtures.yaml" \
+    --mapping "$tmp_dir/stage5h-gematria-solved-fixture-safe-mapping.yaml" \
+    --score-summary-plan "$tmp_dir/stage5h-gematria-score-summary-parity-plan.yaml" \
+    --summary-out "$tmp_dir/stage5h-gematria-shift-contract-summary.yaml" \
+    --out-dir "$tmp_dir/stage5h-gematria-shift-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-shift-contract validate-stage5h \
+    --contract "$tmp_dir/stage5h-gematria-shift-score-contract.yaml" \
+    --fixtures "$tmp_dir/stage5h-gematria-native-parity-fixtures.yaml" \
+    --mapping "$tmp_dir/stage5h-gematria-solved-fixture-safe-mapping.yaml" \
+    --score-summary-plan "$tmp_dir/stage5h-gematria-score-summary-parity-plan.yaml" \
+    --summary "$tmp_dir/stage5h-gematria-shift-contract-summary.yaml" \
+    --results-dir "$tmp_dir/stage5h-gematria-shift-contract"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

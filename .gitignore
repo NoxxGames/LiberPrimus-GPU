@@ -499,5 +499,13 @@ experiments/results/cuda-parity-reporting/**
 !experiments/results/cuda-parity-reporting/stage5g/
 !experiments/results/cuda-parity-reporting/stage5g/.gitkeep
 
+# Generated Gematria shift contract outputs
+experiments/results/gematria-shift-contract/**
+!experiments/results/gematria-shift-contract/
+!experiments/results/gematria-shift-contract/README.md
+!experiments/results/gematria-shift-contract/.gitkeep
+!experiments/results/gematria-shift-contract/stage5h/
+!experiments/results/gematria-shift-contract/stage5h/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

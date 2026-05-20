@@ -100,6 +100,11 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/cuda-device-code-subset-audit-record-v0.schema.json",
     "cuda/cuda-solved-fixture-safe-preflight-record-v0.schema.json",
     "cuda/stage5g-cuda-parity-reporting-summary-v0.schema.json",
+    "cuda/gematria-shift-score-contract-record-v0.schema.json",
+    "cuda/gematria-native-parity-fixture-record-v0.schema.json",
+    "cuda/gematria-solved-fixture-safe-mapping-record-v0.schema.json",
+    "cuda/gematria-score-summary-parity-plan-record-v0.schema.json",
+    "cuda/stage5h-gematria-shift-contract-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -177,6 +182,11 @@ EXPECTED_DOC_TERMS = [
     "cuda-device-code-subset-audit-record-v0",
     "cuda-solved-fixture-safe-preflight-record-v0",
     "stage5g-cuda-parity-reporting-summary-v0",
+    "gematria-shift-score-contract-record-v0",
+    "gematria-native-parity-fixture-record-v0",
+    "gematria-solved-fixture-safe-mapping-record-v0",
+    "gematria-score-summary-parity-plan-record-v0",
+    "stage5h-gematria-shift-contract-summary-v0",
 ]
 
 

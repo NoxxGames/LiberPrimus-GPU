@@ -171,3 +171,8 @@ build/device records, Stage 5D native CPU parity records, Stage 5F synthetic par
 Stage 5G parity/device-code audit records. Stage 5F implementation must remain synthetic-only and
 target the selected `shift_score_kernel` contract unless an explicit later stage revises the
 contract.
+
+Stage 5H adds the Gematria Primus mod-29 `shift_score` contract and native synthetic fixture
+metadata. It records the production token-domain expectations for future parity work, but it does
+not execute CUDA, run GPU benchmarks, process real Liber Primus data through CUDA, or make speedup
+claims.

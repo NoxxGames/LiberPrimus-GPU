@@ -1,0 +1,68 @@
+records:
+- record_type: gematria_shift_score_contract_record
+  contract_id: gematria_mod29_shift_score_contract_v0
+  token_domain: integers_0_to_28
+  token_domain_min: 0
+  token_domain_max: 28
+  transformable_token_kind: rune
+  non_transformable_token_kinds:
+  - word_separator
+  - clause_separator
+  - paragraph_separator
+  - segment_separator
+  - chapter_separator
+  - page_separator_or_marker
+  - whitespace
+  - unknown_symbol
+  separator_policy: non_transformable_separators_preserved_unshifted
+  output_ordering: candidate_index_order
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  candidate_shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  candidate_shift_scope: small_synthetic_native_fixture_set_not_broad_search
+  score_summary_required_for_future_cuda: true
+  stage5f_synthetic_hash: 76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66
+  stage5f_hash_is_gematria_fixture_hash: false
+  semantic_notes:
+  - The Stage 5F CUDA kernel remains uppercase Latin A-Z synthetic parity only.
+  - This contract defines future production numeric Gematria mod-29 token semantics.
+  - Forward Caesar adapter semantics in the existing CPU batch adapter use (token
+    + shift) % 29.
+  stage_id: stage-5h
+  selected_future_kernel_id: shift_score_kernel
+  current_stage5f_kernel_scope: synthetic_uppercase_latin_only
+  production_contract_scope: numeric_gematria_mod29_tokens
+  gematria_mod29_contract_defined: true
+  stage5h_cuda_execution_allowed: false
+  solved_fixture_cuda_execution_allowed: false
+  production_gematria_mod29_cuda_ready: false
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  cuda_kernel_added: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false
+  device_code_subset_must_remain_compliant: true

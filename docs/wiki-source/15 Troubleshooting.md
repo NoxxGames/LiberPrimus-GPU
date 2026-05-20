@@ -449,3 +449,28 @@ If local CUDA tools are present, they may be recorded as optional capability met
 5B must still pass without CUDA hardware, must not add `.cu` or `.cuh` implementation changes, and
 must not record performance or speedup claims. Keep the local Codex completion handoff under
 ignored `codex-output/stage5b-codex-completion.md`.
+
+# Stage 5H Gematria Shift Contract Troubleshooting
+
+If Stage 5H validation fails, rebuild the committed records from the no-GPU manifests:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-shift-contract build-contract `
+  --manifest experiments/manifests/cuda/stage5h-gematria-shift-score-contract.yaml `
+  --contract-out data/cuda/stage5h-gematria-shift-score-contract.yaml `
+  --out-dir experiments/results/gematria-shift-contract/stage5h `
+  --allow-warnings
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-shift-contract build-summary `
+  --contract data/cuda/stage5h-gematria-shift-score-contract.yaml `
+  --native-fixtures data/cuda/stage5h-gematria-native-parity-fixtures.yaml `
+  --solved-fixture-mapping data/cuda/stage5h-gematria-solved-fixture-safe-mapping.yaml `
+  --score-summary-plan data/cuda/stage5h-gematria-score-summary-parity-plan.yaml `
+  --summary-out data/cuda/stage5h-gematria-shift-contract-summary.yaml `
+  --out-dir experiments/results/gematria-shift-contract/stage5h `
+  --allow-warnings
+```
+
+Generated Stage 5H reports belong under ignored
+`experiments/results/gematria-shift-contract/stage5h/`, and the Codex completion handoff belongs
+under ignored `codex-output/stage5h-codex-completion.md`. Stage 5H must not add CUDA kernels,
+execute CUDA, process real Liber Primus data through CUDA, or record performance claims.

@@ -194,9 +194,9 @@ records:
     method_family_id: cuda_first_kernel_contract
     retired_status: active_with_constraints
     reason: First-kernel contract selection is active infrastructure only; it selects a future target and parity adapter but does not authorize broad CUDA implementation, GPU benchmarking, or performance claims.
-    evidence: [Stage 5E selects shift_score_kernel/caesar_mod29 and maps Stage 5D native hashes; Stage 5F implements only that synthetic-only CUDA parity kernel and records no broad CUDA readiness; Stage 5G reports the synthetic parity surface and records CUDA-facing device-code subset compliance.]
-    stages_supporting: [stage-5e]
-    reopen_conditions: [A future Stage 5H or later implementation/reporting stage cites the selected contract, Stage 5D native parity adapter map, Stage 5F synthetic parity records, Stage 5G reporting/device-code audit records, Stage 5B harness and fixture records, no-GPU CI profile, and explicit scope.]
+    evidence: [Stage 5E selects shift_score_kernel/caesar_mod29 and maps Stage 5D native hashes; Stage 5F implements only that synthetic-only CUDA parity kernel and records no broad CUDA readiness; Stage 5G reports the synthetic parity surface and records CUDA-facing device-code subset compliance; Stage 5H defines the separate Gematria mod-29 shift_score contract and synthetic native fixture hash.]
+    stages_supporting: [stage-5e, stage-5h]
+    reopen_conditions: [A future Stage 5I or later implementation/reporting stage cites the selected contract, Stage 5H Gematria mod-29 contract and native fixture hash, Stage 5D native parity adapter map, Stage 5F synthetic parity records, Stage 5G reporting/device-code audit records, Stage 5B harness and fixture records, no-GPU CI profile, and explicit scope.]
     prohibited_expansions: [Unscoped CUDA kernels, CUDA transforms beyond the selected synthetic-only contract, GPU benchmarks, speedup claims, raw-data processing, broad experiments, website expansion, generated-output commits, codex-output commits, solve claims.]
     notes: Stage 5F is a synthetic-only parity implementation and Stage 5G is reporting/hardening only; the selected target is still not broad CUDA implementation approval.
   - record_type: method_retirement_record

@@ -505,6 +505,50 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5GSummary `
         --results-dir $Stage5GOut
 
+    Write-Host "Running Stage 5H Gematria shift contract no-GPU-safe/temp output"
+    $Stage5HOut = Join-Path $TempDir "stage5h-gematria-shift-contract"
+    $Stage5HContract = Join-Path $TempDir "stage5h-gematria-shift-score-contract.yaml"
+    $Stage5HFixtures = Join-Path $TempDir "stage5h-gematria-native-parity-fixtures.yaml"
+    $Stage5HMapping = Join-Path $TempDir "stage5h-gematria-solved-fixture-safe-mapping.yaml"
+    $Stage5HScorePlan = Join-Path $TempDir "stage5h-gematria-score-summary-parity-plan.yaml"
+    $Stage5HSummary = Join-Path $TempDir "stage5h-gematria-shift-contract-summary.yaml"
+    & $Python -m libreprimus.cli gematria-shift-contract build-contract `
+        --manifest experiments/manifests/cuda/stage5h-gematria-shift-score-contract.yaml `
+        --out-dir $Stage5HOut `
+        --contract-out $Stage5HContract `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-shift-contract build-native-fixtures `
+        --manifest experiments/manifests/cuda/stage5h-gematria-native-parity-fixtures.yaml `
+        --out-dir $Stage5HOut `
+        --fixtures-out $Stage5HFixtures `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-shift-contract build-solved-fixture-mapping `
+        --manifest experiments/manifests/cuda/stage5h-solved-fixture-safe-mapping.yaml `
+        --source-manifest experiments/manifests/cpu-batch/stage4o-solved-fixture-parity-batch.yaml `
+        --out-dir $Stage5HOut `
+        --mapping-out $Stage5HMapping `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-shift-contract build-score-summary-plan `
+        --manifest experiments/manifests/cuda/stage5h-gematria-shift-score-contract.yaml `
+        --out-dir $Stage5HOut `
+        --score-summary-plan-out $Stage5HScorePlan `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-shift-contract build-summary `
+        --contract $Stage5HContract `
+        --fixtures $Stage5HFixtures `
+        --mapping $Stage5HMapping `
+        --score-summary-plan $Stage5HScorePlan `
+        --summary-out $Stage5HSummary `
+        --out-dir $Stage5HOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-shift-contract validate-stage5h `
+        --contract $Stage5HContract `
+        --fixtures $Stage5HFixtures `
+        --mapping $Stage5HMapping `
+        --score-summary-plan $Stage5HScorePlan `
+        --summary $Stage5HSummary `
+        --results-dir $Stage5HOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

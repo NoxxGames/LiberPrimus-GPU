@@ -1,0 +1,19 @@
+record_type: cuda_contract_manifest
+manifest_id: stage5h-gematria-native-parity-fixtures
+stage_id: stage-5h
+description: Synthetic numeric Gematria native parity fixture preparation.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_gpu_ci_safe: true
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+raw_data_processed: false
+generated_outputs_committed: false
+new_cuda_kernel_added: false
+cuda_execution_performed: false
+fixture_id: stage5h-gematria-mod29-synthetic-shift-fixture-v0
+notes:
+  - Uses synthetic numeric tokens, not real Liber Primus page text.
+  - The fixture is readiness metadata for a later explicit CUDA stage.

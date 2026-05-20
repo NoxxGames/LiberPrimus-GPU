@@ -40,3 +40,8 @@ The committed audit is `data/cuda/stage5g-cuda-device-code-subset-audit.yaml`. I
 - `new_cuda_kernels_added=0`
 
 This audit is a style and boundary check. It is not throughput evidence and does not authorize broader CUDA execution.
+
+## Stage 5H Requirement
+
+The Stage 5H Gematria contract does not change CUDA-facing source. Future Gematria CUDA parity work
+must keep this conservative CUDA-C subset compliant before any additional kernel target is accepted.

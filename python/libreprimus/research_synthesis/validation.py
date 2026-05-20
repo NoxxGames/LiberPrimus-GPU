@@ -220,8 +220,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 5h", "gematria mod-29", "shift_score contract", "next"),
-            "staged_plan_stage5h_gematria_shift_score_contract_next",
+            ("stage 5h", "gematria mod-29", "shift_score contract", "complete"),
+            "staged_plan_stage5h_gematria_shift_score_contract_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5i", "gematria mod-29", "synthetic cuda parity", "next"),
+            "staged_plan_stage5i_gematria_synthetic_cuda_parity_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -463,8 +469,8 @@ def validate_research_synthesis(
         evidence_text = str(cuda_synthetic_shift.get("evidence_summary", "")).lower()
         if "synthetic-only" not in stop_text or "speedup" not in stop_text or "real liber primus" not in stop_text:
             errors.append("cuda_synthetic_shift_kernel_missing_synthetic_guardrail")
-        if "stage 5g" not in evidence_text or "stage 5h" not in next_text:
-            errors.append("cuda_synthetic_shift_kernel_missing_stage5g_stage5h_transition")
+        if "stage 5h" not in evidence_text or "stage 5i" not in next_text:
+            errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_transition")
 
     cookie = _find_method(method_records, "cookie_hash_sha256_packs")
     if cookie is None:

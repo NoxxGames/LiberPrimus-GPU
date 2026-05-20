@@ -173,6 +173,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5G is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5h",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5h\b", re.IGNORECASE),
+        "Stage 5H is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -556,12 +561,22 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5h_gematria_shift_score_contract_next",
+        "stage5h_gematria_shift_score_contract_complete",
         "stage 5h" in staged_plan
         and "gematria mod-29" in staged_plan
         and "shift_score contract" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5H Gematria mod-29 shift_score contract preparation as complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5i_gematria_synthetic_cuda_parity_next",
+        "stage 5i" in staged_plan
+        and "gematria mod-29" in staged_plan
+        and "synthetic cuda parity" in staged_plan
         and "next" in staged_plan,
-        "Staged plan records Stage 5H Gematria mod-29 shift_score contract preparation as next.",
+        "Staged plan records Stage 5I Gematria mod-29 synthetic CUDA parity preparation as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -700,6 +715,16 @@ def check_state_drift_consistency(
         and "solved-fixture-safe" in combined
         and "stage 5h" in combined,
         "Stage 5G CUDA parity reporting, device-code subset, and solved-fixture-safe preflight policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "gematria_shift_contract_policy_present",
+        "gematria mod-29" in combined
+        and "shift_score contract" in combined
+        and "stage 5i" in combined
+        and "native parity fixture" in combined,
+        "Stage 5H Gematria mod-29 shift_score contract and native parity fixture policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

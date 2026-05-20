@@ -1,0 +1,198 @@
+records:
+- record_type: gematria_native_parity_fixture_record
+  fixture_id: stage5h-gematria-mod29-synthetic-shift-fixture-v0
+  native_fixture_prepared: true
+  synthetic_numeric_gematria_fixture: true
+  input_tokens:
+  - position: 0
+    token_kind: rune
+    value: 0
+  - position: 1
+    token_kind: rune
+    value: 1
+  - position: 2
+    token_kind: word_separator
+    raw_text: ' '
+  - position: 3
+    token_kind: rune
+    value: 28
+  - position: 4
+    token_kind: rune
+    value: 13
+  - position: 5
+    token_kind: clause_separator
+    raw_text: .
+  - position: 6
+    token_kind: rune
+    value: 5
+  shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  expected_outputs:
+  - candidate_index: 0
+    shift: 0
+    expected_output_tokens:
+    - position: 0
+      token_kind: rune
+      value: 0
+    - position: 1
+      token_kind: rune
+      value: 1
+    - position: 2
+      token_kind: word_separator
+      raw_text: ' '
+    - position: 3
+      token_kind: rune
+      value: 28
+    - position: 4
+      token_kind: rune
+      value: 13
+    - position: 5
+      token_kind: clause_separator
+      raw_text: .
+    - position: 6
+      token_kind: rune
+      value: 5
+  - candidate_index: 1
+    shift: 1
+    expected_output_tokens:
+    - position: 0
+      token_kind: rune
+      value: 1
+    - position: 1
+      token_kind: rune
+      value: 2
+    - position: 2
+      token_kind: word_separator
+      raw_text: ' '
+    - position: 3
+      token_kind: rune
+      value: 0
+    - position: 4
+      token_kind: rune
+      value: 14
+    - position: 5
+      token_kind: clause_separator
+      raw_text: .
+    - position: 6
+      token_kind: rune
+      value: 6
+  - candidate_index: 2
+    shift: 3
+    expected_output_tokens:
+    - position: 0
+      token_kind: rune
+      value: 3
+    - position: 1
+      token_kind: rune
+      value: 4
+    - position: 2
+      token_kind: word_separator
+      raw_text: ' '
+    - position: 3
+      token_kind: rune
+      value: 2
+    - position: 4
+      token_kind: rune
+      value: 16
+    - position: 5
+      token_kind: clause_separator
+      raw_text: .
+    - position: 6
+      token_kind: rune
+      value: 8
+  - candidate_index: 3
+    shift: 13
+    expected_output_tokens:
+    - position: 0
+      token_kind: rune
+      value: 13
+    - position: 1
+      token_kind: rune
+      value: 14
+    - position: 2
+      token_kind: word_separator
+      raw_text: ' '
+    - position: 3
+      token_kind: rune
+      value: 12
+    - position: 4
+      token_kind: rune
+      value: 26
+    - position: 5
+      token_kind: clause_separator
+      raw_text: .
+    - position: 6
+      token_kind: rune
+      value: 18
+  - candidate_index: 4
+    shift: 28
+    expected_output_tokens:
+    - position: 0
+      token_kind: rune
+      value: 28
+    - position: 1
+      token_kind: rune
+      value: 0
+    - position: 2
+      token_kind: word_separator
+      raw_text: ' '
+    - position: 3
+      token_kind: rune
+      value: 27
+    - position: 4
+      token_kind: rune
+      value: 12
+    - position: 5
+      token_kind: clause_separator
+      raw_text: .
+    - position: 6
+      token_kind: rune
+      value: 4
+  expected_output_hash: a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0
+  stage5f_synthetic_hash: 76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66
+  stage5f_hash_is_gematria_fixture_hash: false
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  intended_future_reference: future_gematria_mod29_cuda_kernel_reference_not_experiment_result
+  compatibility_notes:
+  - Stage 5F validates CUDA plumbing against uppercase Latin A-Z synthetic text only.
+  - This fixture uses numeric rune tokens in 0..28 and preserves separator tokens
+    unshifted.
+  stage_id: stage-5h
+  selected_future_kernel_id: shift_score_kernel
+  current_stage5f_kernel_scope: synthetic_uppercase_latin_only
+  production_contract_scope: numeric_gematria_mod29_tokens
+  gematria_mod29_contract_defined: true
+  stage5h_cuda_execution_allowed: false
+  solved_fixture_cuda_execution_allowed: false
+  production_gematria_mod29_cuda_ready: false
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  cuda_kernel_added: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  solve_claim: false
+  no_solve_claim: true
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false
+  device_code_subset_must_remain_compliant: true

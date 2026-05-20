@@ -100,6 +100,12 @@ build/validate/summary checks, validation rejections for real Liber Primus data,
 performance/speedup, generated-output, and solve-claim drift, and ignored-output/codex-output checks
 for `experiments/results/cuda-parity-reporting/stage5g/` and `codex-output/`.
 
+Stage 5H extends coverage with Gematria shift contract schemas, numeric mod-29 native fixture
+checks, solved-fixture-safe mapping blockers, score-summary parity planning, CLI
+build/validate/summary checks, validation rejections for CUDA execution, new kernels,
+generated-output, and solve-claim drift, and ignored-output/codex-output checks for
+`experiments/results/gematria-shift-contract/stage5h/` and `codex-output/`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.
@@ -697,3 +703,21 @@ Stage 5G validation uses:
 The consistency scripts also build Stage 5G temp outputs in a raw-data-free, no-GPU-safe location.
 Tests must not require CUDA hardware, add transform kernels, run GPU benchmarks, make speedup
 claims, commit generated CUDA parity reports, process raw data, or publish `codex-output/**`.
+
+# Stage 5H Validation
+
+Stage 5H validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-shift-contract validate-stage5h `
+  --contract data/cuda/stage5h-gematria-shift-score-contract.yaml `
+  --fixtures data/cuda/stage5h-gematria-native-parity-fixtures.yaml `
+  --mapping data/cuda/stage5h-gematria-solved-fixture-safe-mapping.yaml `
+  --score-summary-plan data/cuda/stage5h-gematria-score-summary-parity-plan.yaml `
+  --summary data/cuda/stage5h-gematria-shift-contract-summary.yaml `
+  --results-dir experiments/results/gematria-shift-contract/stage5h
+```
+
+The consistency scripts also build Stage 5H temp outputs in a raw-data-free, no-GPU-safe location.
+Tests must not require CUDA hardware, add transform kernels, run GPU benchmarks, make speedup
+claims, commit generated Gematria shift reports, process raw data, or publish `codex-output/**`.

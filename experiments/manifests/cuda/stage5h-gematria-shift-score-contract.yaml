@@ -1,0 +1,20 @@
+record_type: cuda_contract_manifest
+manifest_id: stage5h-gematria-shift-score-contract
+stage_id: stage-5h
+description: Raw-data-free Gematria mod-29 shift_score contract definition.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_gpu_ci_safe: true
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+raw_data_processed: false
+generated_outputs_committed: false
+new_cuda_kernel_added: false
+cuda_execution_performed: false
+selected_future_kernel_id: shift_score_kernel
+contract_id: gematria_mod29_shift_score_contract_v0
+notes:
+  - Defines numeric Gematria mod-29 token semantics only.
+  - Does not modify or execute CUDA kernels.

@@ -27,6 +27,11 @@ Future solved-fixture or production work must use a later explicit stage with ne
 ## Stage 5G Preflight
 
 Stage 5G keeps the contract synthetic-only while reporting the Stage 5F hash match and auditing the
-CUDA-facing ABI. Solved-fixture-safe execution remains blocked until Stage 5H defines the Gematria
-mod-29 contract, native fixture preparation, score-summary expectations, and no-real-data
-guardrails.
+CUDA-facing ABI.
+
+## Stage 5H Gematria Contract
+
+Stage 5H defines the future production Gematria mod-29 contract separately from the Stage 5F
+uppercase Latin fixture. The numeric contract uses tokens `0..28`, `(token + shift) % 29`, and
+preserved separators. Solved-fixture-safe execution remains blocked until a later explicit stage
+accepts token mapping, separator policy, score-summary parity, no-real-data guardrails, and approval.

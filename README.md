@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5G shift_score CUDA parity reporting and solved-fixture-safe adapter preflight. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5H Gematria mod-29 `shift_score` contract and native parity fixture preparation. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -36,18 +36,18 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Observation promotion ledger: Stage 4L joins Stage 4J review decisions with Stage 4K source locks and records ready, blocked, deferred, quarantined, rejected, source-reference-only, and control-only states. Ready does not mean executed; all future manifests remain disabled.
 - Image source-variant and compression preflight: Stage 4M scans ignored local LP page images for metadata and deterministic metric-only compression summaries, records source-variant comparison readiness, keeps star-like/compression-like artefacts review-only, and keeps the bigram/Fibonacci-421 observation blocked pending reproducible matrix and null controls. It does not commit raw images, generated visualisations, or execute image/bigram experiments.
 - Stego/audio positive-control readiness: Stage 4N records fixture readiness, cache policy, expected-output requirements, toolchain state, and synthetic controls. Historical OutGuess/OpenPuff/MP3/audio cases remain blocked until assets, exact expected outputs, and tools are ready.
-- CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. Stage 4O expands this with solved-fixture-safe streams, adapter coverage records, deterministic parity expectations, and score-summary compatibility checks. Stage 4P makes those result and score surfaces comparable with older result-store summaries. Stage 4Q adds benchmark and future parity planning gates. Stage 5A adds CUDA target plans, non-targets, parity scaffolds, and implementation gates. Stage 5B adds CUDA parity harness plans, parity fixtures, backend capability profiles, and future-kernel matrix rows. Stage 5C adds no-GPU-safe CUDA build profiles, toolchain detection, device detection, and optional smoke-build readiness metadata. Stage 5D adds native C++ CPU backend, deterministic threading, and native/Python parity records. Stage 5E selects `shift_score_kernel` as the first future CUDA kernel contract and maps it to the native synthetic shift parity adapter. Stage 5F implements only that synthetic-only CUDA parity kernel and records matching synthetic hash metadata. Stage 5G reports the Stage 5F hash match, hardens `.cu`/`.cuh` CUDA-facing code to a conservative C-style subset, and keeps solved-fixture CUDA execution blocked pending Stage 5H contract work. It is infrastructure for future CUDA parity, not a broad experiment runner.
+- CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. Stage 4O expands this with solved-fixture-safe streams, adapter coverage records, deterministic parity expectations, and score-summary compatibility checks. Stage 4P makes those result and score surfaces comparable with older result-store summaries. Stage 4Q adds benchmark and future parity planning gates. Stage 5A adds CUDA target plans, non-targets, parity scaffolds, and implementation gates. Stage 5B adds CUDA parity harness plans, parity fixtures, backend capability profiles, and future-kernel matrix rows. Stage 5C adds no-GPU-safe CUDA build profiles, toolchain detection, device detection, and optional smoke-build readiness metadata. Stage 5D adds native C++ CPU backend, deterministic threading, and native/Python parity records. Stage 5E selects `shift_score_kernel` as the first future CUDA kernel contract and maps it to the native synthetic shift parity adapter. Stage 5F implements only that synthetic-only CUDA parity kernel and records matching synthetic hash metadata. Stage 5G reports the Stage 5F hash match and hardens `.cu`/`.cuh` CUDA-facing code to a conservative C-style subset. Stage 5H defines the separate numeric Gematria mod-29 contract and native fixture while keeping solved-fixture CUDA execution blocked. It is infrastructure for future CUDA parity, not a broad experiment runner.
 - Scoring contract: Stage 4I provides scorer inventory, finite confidence-label records, compatibility mappings, calibration-profile/report records, and CPU batch score compatibility checks. Score labels can create review leads only and cannot imply solved plaintext.
 - Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
 - CUDA experiment campaigns: not started.
 - Normal bounded local CPU experiments: allowed automatically when they pass `experiments/policies/operator-policy-v0.yaml`.
 - Broad unsolved-page campaigns: not started.
 - Approval packets: optional/high-risk audit tooling, not the default path for policy-passing bounded CPU items.
-- Existing CUDA code is scaffold, smoke-test infrastructure, the Stage 5F synthetic `shift_score_kernel`, and Stage 5G reporting/device-code hardening only.
+- Existing CUDA code is scaffold, smoke-test infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, and Stage 5H metadata/fixture contract records only.
 
 ### Deferred future work
 
-- Stage 5H Gematria mod-29 shift_score contract and native parity fixture preparation after Stage 5G reporting and CUDA-facing source hardening.
+- Stage 5I Gematria mod-29 shift_score synthetic CUDA parity preparation after Stage 5H contract and native fixture preparation.
 - Website expansion is deferred to Stage 6.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
@@ -117,7 +117,9 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 5C CUDA build and device-detection scaffold.
 - Stage 5D native C++ CPU batch backend and deterministic threading baseline.
 - Stage 5E first CUDA kernel contract and CPU/native parity adapter selection.
+- Stage 5F first synthetic-only CUDA parity kernel implementation.
 - Stage 5G shift_score CUDA parity reporting and solved-fixture-safe adapter preflight.
+- Stage 5H Gematria mod-29 shift_score contract and native parity fixture preparation.
 
 ## Architecture summary
 
@@ -230,8 +232,9 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Latest CUDA build/device stage: Stage 5C wrote `3` build profiles, `3` toolchain records, `3` device records, and `1` optional smoke-build record. It made no CUDA source change, CUDA kernel, GPU benchmark, speedup claim, broad experiment, raw-data processing, website expansion, or solve claim.
 - Latest native CPU backend stage: Stage 5D wrote `1` backend capability record, `5` threading records, `1` native/Python parity record, and `1` diagnostic record. It tested thread counts `1,2,4,8,16`, produced matching one-thread and multi-thread hashes, preserved Python as orchestration, and made no CUDA source change, GPU benchmark, speedup claim, broad experiment, raw-data processing, website expansion, or solve claim.
 - Latest CUDA reporting stage: Stage 5G reports the Stage 5F `shift_score_kernel` native/CUDA synthetic hash match, verifies the CUDA-facing `.cu`/`.cuh` files against a conservative device-code subset, records solved-fixture-safe blockers, and keeps real Liber Primus CUDA data use, GPU benchmarks, speedup claims, broad execution, raw-data processing, website expansion, and solve claims out of scope.
+- Latest Gematria shift contract stage: Stage 5H defines numeric Gematria mod-29 `shift_score` semantics over tokens `0..28`, prepares one synthetic native parity fixture with hash `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`, records `5` solved-fixture-safe mapping blockers and `1` score-summary parity plan, and adds no CUDA execution, new kernel, GPU benchmark, real Liber Primus CUDA data use, website expansion, or solve claim.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 5H Gematria mod-29 shift_score contract and native parity fixture preparation.
+- Next: Stage 5I Gematria mod-29 shift_score synthetic CUDA parity preparation.
 
 ## How To Use This Repo
 

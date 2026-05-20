@@ -860,3 +860,15 @@ Generated Stage 5G reports remain ignored under
 solved-page data, unsolved-page campaigns, GPU benchmarks, broad searches, raw-data processing,
 website expansion, canonical corpus activation, page-boundary finalisation, or solve claims
 through Stage 5G records.
+
+# Stage 5H Gematria Shift Contract Boundary
+
+Stage 5H is not a cryptanalytic experiment and not a CUDA implementation stage. It defines the
+future Gematria mod-29 `shift_score` token contract, prepares a synthetic numeric native parity
+fixture, records solved-fixture-safe mapping blockers, and plans score-summary parity.
+
+Generated Stage 5H reports remain ignored under
+`experiments/results/gematria-shift-contract/stage5h/`. Do not add CUDA kernels, run CUDA
+transforms, run real Liber Primus page data, run solved-page data, run unsolved-page campaigns, run
+GPU benchmarks, broaden searches, process raw data, expand the website, activate the canonical
+corpus, finalise page boundaries, or claim a solve through Stage 5H records.
