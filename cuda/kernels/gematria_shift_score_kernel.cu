@@ -84,6 +84,124 @@ bool outputs_match_expected(const unsigned char* output) {
 
 namespace libreprimus {
 
+int run_gematria_shift_score_raw(
+    const GematriaShiftScoreLaunchInput* input,
+    GematriaShiftScoreLaunchOutput* output) {
+    if (input == 0 || output == 0 || input->InputTokenValues == 0 || input->TransformableMask == 0 ||
+        input->Shifts == 0 || output->OutputTokenValues == 0 || output->StatusCodes == 0 ||
+        input->TokenCount <= 0 || input->CandidateCount <= 0) {
+        return 1;
+    }
+
+    unsigned char* device_input_tokens = 0;
+    unsigned char* device_mask = 0;
+    unsigned char* device_shifts = 0;
+    unsigned char* device_output = 0;
+    int* device_status = 0;
+    cudaError_t status = cudaSuccess;
+
+    const unsigned long long token_count = static_cast<unsigned long long>(input->TokenCount);
+    const unsigned long long candidate_count = static_cast<unsigned long long>(input->CandidateCount);
+    const unsigned long long output_count = token_count * candidate_count;
+
+    status = cudaMalloc(&device_input_tokens, token_count);
+    if (status != cudaSuccess) {
+        return cuda_status_code(status);
+    }
+    status = cudaMalloc(&device_mask, token_count);
+    if (status != cudaSuccess) {
+        cudaFree(device_input_tokens);
+        return cuda_status_code(status);
+    }
+    status = cudaMalloc(&device_shifts, candidate_count);
+    if (status != cudaSuccess) {
+        cudaFree(device_input_tokens);
+        cudaFree(device_mask);
+        return cuda_status_code(status);
+    }
+    status = cudaMalloc(&device_output, output_count);
+    if (status != cudaSuccess) {
+        cudaFree(device_input_tokens);
+        cudaFree(device_mask);
+        cudaFree(device_shifts);
+        return cuda_status_code(status);
+    }
+    status = cudaMalloc(&device_status, candidate_count * sizeof(int));
+    if (status != cudaSuccess) {
+        cudaFree(device_input_tokens);
+        cudaFree(device_mask);
+        cudaFree(device_shifts);
+        cudaFree(device_output);
+        return cuda_status_code(status);
+    }
+
+    status = cudaMemcpy(device_input_tokens, input->InputTokenValues, token_count, cudaMemcpyHostToDevice);
+    if (status == cudaSuccess) {
+        status = cudaMemcpy(device_mask, input->TransformableMask, token_count, cudaMemcpyHostToDevice);
+    }
+    if (status == cudaSuccess) {
+        status = cudaMemcpy(device_shifts, input->Shifts, candidate_count, cudaMemcpyHostToDevice);
+    }
+    if (status != cudaSuccess) {
+        cudaFree(device_input_tokens);
+        cudaFree(device_mask);
+        cudaFree(device_shifts);
+        cudaFree(device_output);
+        cudaFree(device_status);
+        return cuda_status_code(status);
+    }
+
+    gematria_mod29_shift_score_kernel<<<input->CandidateCount, input->TokenCount>>>(
+        device_input_tokens,
+        device_mask,
+        device_shifts,
+        input->TokenCount,
+        input->CandidateCount,
+        device_output,
+        device_status);
+    status = cudaGetLastError();
+    if (status == cudaSuccess) {
+        status = cudaDeviceSynchronize();
+    }
+    if (status != cudaSuccess) {
+        cudaFree(device_input_tokens);
+        cudaFree(device_mask);
+        cudaFree(device_shifts);
+        cudaFree(device_output);
+        cudaFree(device_status);
+        return cuda_status_code(status);
+    }
+
+    status = cudaMemcpy(output->OutputTokenValues, device_output, output_count, cudaMemcpyDeviceToHost);
+    if (status == cudaSuccess) {
+        status = cudaMemcpy(output->StatusCodes, device_status, candidate_count * sizeof(int), cudaMemcpyDeviceToHost);
+    }
+    cudaError_t free_input_status = cudaFree(device_input_tokens);
+    cudaError_t free_mask_status = cudaFree(device_mask);
+    cudaError_t free_shifts_status = cudaFree(device_shifts);
+    cudaError_t free_output_status = cudaFree(device_output);
+    cudaError_t free_status_status = cudaFree(device_status);
+    if (status != cudaSuccess) {
+        return cuda_status_code(status);
+    }
+    if (free_input_status != cudaSuccess) {
+        return cuda_status_code(free_input_status);
+    }
+    if (free_mask_status != cudaSuccess) {
+        return cuda_status_code(free_mask_status);
+    }
+    if (free_shifts_status != cudaSuccess) {
+        return cuda_status_code(free_shifts_status);
+    }
+    if (free_output_status != cudaSuccess) {
+        return cuda_status_code(free_output_status);
+    }
+    if (free_status_status != cudaSuccess) {
+        return cuda_status_code(free_status_status);
+    }
+    return 0;
+}
+
 int run_gematria_shift_score_synthetic_fixture_raw(GematriaShiftScoreSyntheticRawRun* output) {
     if (output == 0) {
         return 1;

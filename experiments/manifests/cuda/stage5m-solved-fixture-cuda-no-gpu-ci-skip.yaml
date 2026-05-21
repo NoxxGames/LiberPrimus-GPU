@@ -1,0 +1,16 @@
+manifest_id: stage5m-solved-fixture-cuda-no-gpu-ci-skip
+stage_id: stage-5m
+execution_scope: no_gpu_safe_validation
+skip_cuda_run: true
+ci_gpu_required: false
+solved_fixture_cuda_execution_allowed: true
+unsolved_page_cuda_used: false
+real_liber_primus_cuda_data_used: false
+new_cuda_kernels_added: 0
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+no_solve_claim: true
+solve_claim: false

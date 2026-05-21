@@ -124,6 +124,10 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/gematria-solved-fixture-output-hash-contract-v0.schema.json",
     "cuda/gematria-solved-fixture-score-summary-shape-v0.schema.json",
     "cuda/stage5l-solved-fixture-token-mapping-summary-v0.schema.json",
+    "cuda/gematria-solved-fixture-cuda-run-record-v0.schema.json",
+    "cuda/gematria-solved-fixture-cuda-parity-record-v0.schema.json",
+    "cuda/gematria-solved-fixture-cuda-boundary-record-v0.schema.json",
+    "cuda/stage5m-solved-fixture-cuda-parity-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -225,6 +229,10 @@ EXPECTED_DOC_TERMS = [
     "gematria-solved-fixture-output-hash-contract-v0",
     "gematria-solved-fixture-score-summary-shape-v0",
     "stage5l-solved-fixture-token-mapping-summary-v0",
+    "gematria-solved-fixture-cuda-run-record-v0",
+    "gematria-solved-fixture-cuda-parity-record-v0",
+    "gematria-solved-fixture-cuda-boundary-record-v0",
+    "stage5m-solved-fixture-cuda-parity-summary-v0",
 ]
 
 

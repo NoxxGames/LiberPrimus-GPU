@@ -717,6 +717,49 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5LSummary `
         --results-dir $Stage5LOut
 
+    Write-Host "Running Stage 5M solved-fixture Gematria CUDA parity no-GPU-safe/temp output"
+    $Stage5MOut = Join-Path $TempDir "stage5m-gematria-solved-fixture-cuda"
+    $Stage5MRunRecords = Join-Path $TempDir "stage5m-gematria-solved-fixture-cuda-run.yaml"
+    $Stage5MParityRecords = Join-Path $TempDir "stage5m-gematria-solved-fixture-cuda-parity.yaml"
+    $Stage5MBoundaries = Join-Path $TempDir "stage5m-gematria-solved-fixture-cuda-boundaries.yaml"
+    $Stage5MSummary = Join-Path $TempDir "stage5m-solved-fixture-cuda-parity-summary.yaml"
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda build-run-records `
+        --token-mapping data/cuda/stage5l-gematria-solved-fixture-token-mapping.yaml `
+        --native-parity data/cuda/stage5l-gematria-solved-fixture-native-parity.yaml `
+        --run-records-out $Stage5MRunRecords `
+        --out-dir $Stage5MOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda run-cuda-parity `
+        --run-records $Stage5MRunRecords `
+        --run-records-out $Stage5MRunRecords `
+        --out-dir $Stage5MOut `
+        --build-dir (Join-Path $TempDir "stage5m-cuda-build") `
+        --skip-run `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda build-parity-records `
+        --run-records $Stage5MRunRecords `
+        --parity-records-out $Stage5MParityRecords `
+        --out-dir $Stage5MOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda build-boundary-records `
+        --run-records $Stage5MRunRecords `
+        --boundaries-out $Stage5MBoundaries `
+        --out-dir $Stage5MOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda build-summary `
+        --run-records $Stage5MRunRecords `
+        --parity-records $Stage5MParityRecords `
+        --boundaries $Stage5MBoundaries `
+        --summary-out $Stage5MSummary `
+        --out-dir $Stage5MOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda validate-stage5m `
+        --run-records $Stage5MRunRecords `
+        --parity-records $Stage5MParityRecords `
+        --boundaries $Stage5MBoundaries `
+        --summary $Stage5MSummary `
+        --results-dir $Stage5MOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

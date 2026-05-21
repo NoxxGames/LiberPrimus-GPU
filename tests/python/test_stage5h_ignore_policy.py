@@ -35,14 +35,18 @@ def test_stage5h_docs_make_no_performance_or_speedup_claims() -> None:
         assert "performance claim" not in text
 
 
-def test_stage5h_does_not_change_cuda_sources() -> None:
+def test_cuda_source_changes_remain_stage5m_host_runner_scope() -> None:
     result = subprocess.run(
         ["git", "diff", "--name-only", "--", "cuda/**/*.cu", "cuda/**/*.cuh"],
         check=True,
         capture_output=True,
         text=True,
     )
-    assert result.stdout.strip() == ""
+    changed = set(result.stdout.splitlines())
+    assert changed <= {
+        "cuda/include/libreprimus/gematria_shift_score_kernel.cuh",
+        "cuda/kernels/gematria_shift_score_kernel.cu",
+    }
 
 
 def test_stage5h_device_code_subset_audit_still_passes() -> None:

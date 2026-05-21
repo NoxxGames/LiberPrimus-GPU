@@ -41,6 +41,10 @@ struct GematriaShiftScoreSyntheticRawRun {
 
 int run_gematria_shift_score_synthetic_fixture_raw(GematriaShiftScoreSyntheticRawRun* output);
 
+int run_gematria_shift_score_raw(
+    const GematriaShiftScoreLaunchInput* input,
+    GematriaShiftScoreLaunchOutput* output);
+
 const char* gematria_shift_score_synthetic_expected_output_hash();
 
 }  // namespace libreprimus

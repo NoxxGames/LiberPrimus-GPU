@@ -924,3 +924,17 @@ add kernels, run CUDA, run real Liber Primus data through CUDA, run solved or un
 transforms, run GPU benchmarks, claim speedups, process raw data, publish generated outputs, expand
 the website, activate the canonical corpus, finalise page boundaries, or claim a solve through
 Stage 5L records.
+
+# Stage 5M Solved-Fixture CUDA Parity Boundary
+
+Stage 5M is not a cryptanalytic experiment and not broad CUDA implementation. It runs only the
+existing `gematria_mod29_shift_score_kernel` over exactly five Stage 5L solved-fixture-safe mapped
+token buffers, compares CUDA output-token hashes to Stage 5L native hashes, and records boundary
+metadata.
+
+Generated Stage 5M reports remain ignored under
+`experiments/results/gematria-solved-fixture-cuda/stage5m/`. Do not add CUDA kernels, modify device
+arithmetic, run real Liber Primus data through CUDA, run solved-fixture sets beyond the Stage 5L
+approval scope, run unsolved page CUDA transforms, run GPU benchmarks, claim speedups, process raw
+data, publish generated outputs, expand the website, activate the canonical corpus, finalise page
+boundaries, or claim a solve through Stage 5M records.

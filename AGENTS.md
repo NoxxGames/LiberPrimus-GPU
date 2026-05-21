@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5L - solved-fixture-safe Gematria shift_score token mapping and native parity fixture preparation.
+Current completed stage: Stage 5M - first solved-fixture-safe Gematria shift_score CUDA parity run.
 
-Current work: Stage 5M - first solved-fixture-safe Gematria shift_score CUDA parity run, pending explicit future-stage approval. Stage 5M may consume Stage 5L token mappings and native parity records, but it must remain solved-fixture-safe, no-unsolved, no-benchmark parity work unless the prompt explicitly scopes otherwise.
+Current work: Stage 5N - solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate. Stage 5N may consume Stage 5M parity and boundary records, but it must remain solved-fixture-safe, no-unsolved, no-benchmark reporting/planning work unless the prompt explicitly scopes otherwise.
 
 Current project state:
 
@@ -68,7 +68,7 @@ Current project state:
 - Page boundaries: reviewable.
 - Broad unsolved-page campaigns: not started.
 - CUDA: deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
-- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, and the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel` only unless code and tests say otherwise.
+- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel`, and Stage 5M host-runner plumbing for exact solved-fixture parity only unless code and tests say otherwise.
 - Stage 5C CUDA build/device metadata is readiness infrastructure only; no-GPU CI, compatibility 8GB, and optional local 16GB profiles must remain explicit and smoke-build status is not parity or performance evidence.
 - Stage 5D native CPU backend records are readiness infrastructure only; C++ must remain a deterministic CPU execution plane, Python remains orchestration, and diagnostic timings are not speedup claims.
 - Do not let C++ launch Python worker scripts.
@@ -80,8 +80,9 @@ Current project state:
 - Stage 5J kernel records are synthetic numeric parity only, not production Gematria CUDA readiness.
 - Stage 5K reporting/preflight records are not CUDA execution permission.
 - Stage 5L solved-fixture token mappings are not CUDA execution permission.
+- Stage 5M solved-fixture CUDA parity is exact-scope correctness metadata only; it does not authorize broad solved-fixture expansion or unsolved-page CUDA.
 - Do not invent Gematria token values, token kinds, separator metadata, score-summary fields, or output hashes.
-- Future solved-fixture-safe CUDA requires explicit future-stage approval and no-unsolved guardrails.
+- Future solved-fixture-safe CUDA expansion requires explicit future-stage approval and no-unsolved guardrails.
 - Stage 5J synthetic parity does not authorize solved-page CUDA.
 - Solved-fixture-safe CUDA requires explicit token mapping, score-summary parity, no-unsolved guardrails, and future-stage approval.
 - Future Gematria CUDA kernel work must use raw numeric token buffers and transformable masks.
@@ -89,7 +90,7 @@ Current project state:
 - Stage 5J implementation must compare the CUDA token-output hash against the Stage 5H native fixture hash.
 - Stage 5F synthetic A-Z kernel behavior remains separate from Stage 5H/5I numeric Gematria records.
 - The Stage 5F uppercase Latin synthetic hash must not be treated as a Gematria mod-29 fixture hash.
-- Solved-fixture CUDA execution remains blocked until token-domain mapping, separator handling, score-summary parity, and explicit future-stage approval are recorded.
+- Solved-fixture CUDA expansion remains blocked until Stage 5M parity records, separator handling, score-summary parity, and explicit future-stage approval are cited.
 - Future Gematria CUDA parity must use numeric tokens `0..28`, preserve separators unshifted, and keep Stage 4I confidence labels triage-only.
 - CUDA device/kernel code must use conservative CUDA-C style.
 - Do not use STL, std::array, std::vector, std::string, exceptions, RTTI, lambdas, or dynamic allocation in `.cu` / `.cuh` kernel/device paths.
@@ -762,8 +763,20 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 5L native parity records are CPU/native output-hash fixtures for future comparison only.
 - Do not add or modify CUDA source, run CUDA, run solved or unsolved pages through CUDA, run real Liber Primus data, run GPU benchmarks, claim speedups, or make solve claims during Stage 5L-style work.
 - Preserve token kinds, transformable masks, separator positions, candidate-major ordering, and Stage 4I triage-only score-summary vocabulary.
-- Solved-fixture CUDA execution remains blocked by `need_explicit_future_stage_approval` until a later explicit stage records approval and no-unsolved guardrails.
+- Solved-fixture CUDA execution remains blocked by `need_explicit_future_stage_approval` except where a later explicit stage records approval and no-unsolved guardrails.
 - Generated Stage 5L reports under `experiments/results/gematria-solved-fixture-mapping/stage5l/` and `codex-output/**` handoffs remain ignored and must not be staged.
+
+## Stage 5M Solved-Fixture Gematria CUDA Parity Rules
+
+- Stage 5M may run CUDA only over the exact five Stage 5L mapped solved-fixture-safe token buffers.
+- Stage 5M must use only the existing `gematria_mod29_shift_score_kernel`.
+- Do not add new CUDA kernels or change device kernel arithmetic during Stage 5M-style work.
+- Host-side runner plumbing is allowed only to feed the exact Stage 5L generated input buffers into the existing kernel.
+- Original transform-family semantics are not exercised; Stage 5M exercises only mapped numeric `gematria_shift_score_only` buffers.
+- Do not run unsolved pages, raw Liber Primus text, raw Discord logs, raw page images, raw stego/audio, canonical corpus material, or broad production data through CUDA.
+- Do not run GPU benchmarks, report timing as performance evidence, claim speedups, expand the website, activate the canonical corpus, finalize page boundaries, or make solve claims.
+- Generated Stage 5M reports under `experiments/results/gematria-solved-fixture-cuda/stage5m/` and `codex-output/**` handoffs remain ignored and must not be staged.
+- Stage 5N may report Stage 5M parity and define controlled expansion gates; it must not silently widen CUDA execution.
 
 ## Stage 3W State Consolidation Rules
 

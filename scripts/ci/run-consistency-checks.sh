@@ -630,6 +630,44 @@ echo "Running Stage 5L solved-fixture Gematria token mapping no-GPU-safe/temp ou
     --summary "$tmp_dir/stage5l-solved-fixture-token-mapping-summary.yaml" \
     --results-dir "$tmp_dir/stage5l-gematria-solved-fixture-mapping"
 
+echo "Running Stage 5M solved-fixture Gematria CUDA parity no-GPU-safe/temp output"
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda build-run-records \
+    --token-mapping data/cuda/stage5l-gematria-solved-fixture-token-mapping.yaml \
+    --native-parity data/cuda/stage5l-gematria-solved-fixture-native-parity.yaml \
+    --run-records-out "$tmp_dir/stage5m-gematria-solved-fixture-cuda-run.yaml" \
+    --out-dir "$tmp_dir/stage5m-gematria-solved-fixture-cuda" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda run-cuda-parity \
+    --run-records "$tmp_dir/stage5m-gematria-solved-fixture-cuda-run.yaml" \
+    --run-records-out "$tmp_dir/stage5m-gematria-solved-fixture-cuda-run.yaml" \
+    --out-dir "$tmp_dir/stage5m-gematria-solved-fixture-cuda" \
+    --build-dir "$tmp_dir/stage5m-cuda-build" \
+    --skip-run \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda build-parity-records \
+    --run-records "$tmp_dir/stage5m-gematria-solved-fixture-cuda-run.yaml" \
+    --parity-records-out "$tmp_dir/stage5m-gematria-solved-fixture-cuda-parity.yaml" \
+    --out-dir "$tmp_dir/stage5m-gematria-solved-fixture-cuda" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda build-boundary-records \
+    --run-records "$tmp_dir/stage5m-gematria-solved-fixture-cuda-run.yaml" \
+    --boundaries-out "$tmp_dir/stage5m-gematria-solved-fixture-cuda-boundaries.yaml" \
+    --out-dir "$tmp_dir/stage5m-gematria-solved-fixture-cuda" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda build-summary \
+    --run-records "$tmp_dir/stage5m-gematria-solved-fixture-cuda-run.yaml" \
+    --parity-records "$tmp_dir/stage5m-gematria-solved-fixture-cuda-parity.yaml" \
+    --boundaries "$tmp_dir/stage5m-gematria-solved-fixture-cuda-boundaries.yaml" \
+    --summary-out "$tmp_dir/stage5m-solved-fixture-cuda-parity-summary.yaml" \
+    --out-dir "$tmp_dir/stage5m-gematria-solved-fixture-cuda" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda validate-stage5m \
+    --run-records "$tmp_dir/stage5m-gematria-solved-fixture-cuda-run.yaml" \
+    --parity-records "$tmp_dir/stage5m-gematria-solved-fixture-cuda-parity.yaml" \
+    --boundaries "$tmp_dir/stage5m-gematria-solved-fixture-cuda-boundaries.yaml" \
+    --summary "$tmp_dir/stage5m-solved-fixture-cuda-parity-summary.yaml" \
+    --results-dir "$tmp_dir/stage5m-gematria-solved-fixture-cuda"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

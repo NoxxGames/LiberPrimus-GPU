@@ -1,6 +1,7 @@
 add_executable(lpgpu_cuda_smoke_test cuda_smoke_test.cpp)
 add_executable(lpgpu_cuda_shift_score_test shift_score_kernel_test.cpp)
 add_executable(lpgpu_cuda_gematria_shift_score_test gematria_shift_score_kernel_test.cpp)
+add_executable(lpgpu_cuda_gematria_shift_score_stage5m_runner gematria_shift_score_stage5m_runner.cpp)
 
 target_link_libraries(lpgpu_cuda_smoke_test
     PRIVATE
@@ -17,6 +18,13 @@ target_link_libraries(lpgpu_cuda_shift_score_test
 )
 
 target_link_libraries(lpgpu_cuda_gematria_shift_score_test
+    PRIVATE
+        lpgpu_cuda_gematria_shift_score
+        lpgpu_project_options
+        lpgpu_project_warnings
+)
+
+target_link_libraries(lpgpu_cuda_gematria_shift_score_stage5m_runner
     PRIVATE
         lpgpu_cuda_gematria_shift_score
         lpgpu_project_options

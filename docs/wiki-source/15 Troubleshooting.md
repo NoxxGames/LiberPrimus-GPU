@@ -48,11 +48,13 @@ git check-ignore -v experiments/results/cuda-build/stage5c/summary.json
 git check-ignore -v experiments/results/native-cpu/stage5d/summary.json
 git check-ignore -v experiments/results/cuda-kernel/stage5f/summary.json
 git check-ignore -v experiments/results/gematria-solved-fixture-mapping/stage5l/summary.json
+git check-ignore -v experiments/results/gematria-solved-fixture-cuda/stage5m/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
 git check-ignore -v codex-output/stage5g-codex-completion.md
 git check-ignore -v codex-output/stage5l-codex-completion.md
+git check-ignore -v codex-output/stage5m-codex-completion.md
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -199,9 +201,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 5L, onboarding and staged-plan checks should show Stage 5L complete and Stage 5M first
-solved-fixture-safe Gematria shift_score CUDA parity run next, pending explicit future-stage
-approval.
+After Stage 5M, onboarding and staged-plan checks should show Stage 5M complete and Stage 5N
+solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate next.
 
 If path sanitisation fails, run:
 
@@ -557,3 +558,21 @@ Stage 5L records token buffers and native output-token hashes only. It must not 
 run CUDA, run solved or unsolved page data through CUDA, run GPU benchmarks, publish generated
 reports, or claim a solve. The expected next work is an explicit future Stage 5M solved-fixture-safe
 CUDA parity run only if approval and no-unsolved guardrails are present.
+
+# Stage 5M Solved-Fixture CUDA Parity Troubleshooting
+
+If Stage 5M validation fails, inspect the committed run, parity, boundary, and summary records:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-solved-fixture-cuda validate-stage5m `
+  --run-records data/cuda/stage5m-gematria-solved-fixture-cuda-run.yaml `
+  --parity-records data/cuda/stage5m-gematria-solved-fixture-cuda-parity.yaml `
+  --boundaries data/cuda/stage5m-gematria-solved-fixture-cuda-boundaries.yaml `
+  --summary data/cuda/stage5m-solved-fixture-cuda-parity-summary.yaml `
+  --results-dir experiments/results/gematria-solved-fixture-cuda/stage5m
+```
+
+Stage 5M may use only the existing `gematria_mod29_shift_score_kernel` over the exact five Stage
+5L mapped token buffers. It must not add kernels, change device arithmetic, run real Liber Primus
+data through CUDA, run unsolved pages, publish generated reports, run benchmarks, claim speedups, or
+claim a solve.

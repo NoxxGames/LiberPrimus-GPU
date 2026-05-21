@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-solved-fixture-cuda-boundary-record-v0.schema.json",
+  "type": "object",
+  "required": [
+    "record_type",
+    "boundary_record_id",
+    "approved_scope",
+    "mapping_count",
+    "allowed_mapping_ids",
+    "prohibited_inputs",
+    "no_benchmark_boundary",
+    "no_speedup_claim_boundary",
+    "no_new_kernel_boundary",
+    "solved_fixture_cuda_execution_allowed",
+    "unsolved_page_cuda_used",
+    "real_liber_primus_cuda_data_used",
+    "gpu_benchmark_performed",
+    "speedup_claim",
+    "no_solve_claim",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "gematria_solved_fixture_cuda_boundary_record" },
+    "approved_scope": { "const": "exact_five_stage5l_mapped_solved_fixture_safe_token_buffers" },
+    "mapping_count": { "const": 5 },
+    "no_benchmark_boundary": { "const": true },
+    "no_speedup_claim_boundary": { "const": true },
+    "no_new_kernel_boundary": { "const": true },
+    "solved_fixture_cuda_execution_allowed": { "const": true },
+    "unsolved_page_cuda_used": { "const": false },
+    "real_liber_primus_cuda_data_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "speedup_claim": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "device_kernel_arithmetic_modified": { "const": false },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

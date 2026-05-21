@@ -1,0 +1,76 @@
+record_type: stage5m_solved_fixture_cuda_parity_summary
+stage_id: stage-5m
+status: complete
+implemented_kernel_name: gematria_mod29_shift_score_kernel
+executed_kernel: gematria_mod29_shift_score_kernel
+source_contract_id: gematria_mod29_shift_score_contract_v0
+executed_semantics: gematria_shift_score_only
+input_mapping_records: 5
+run_records: 5
+cuda_attempted_count: 5
+cuda_pass_count: 5
+cuda_fail_count: 0
+cuda_skip_count: 0
+parity_records: 5
+boundary_records: 1
+parity_pass_count: 5
+parity_fail_count: 0
+parity_skip_count: 0
+stage5n_ready: true
+selected_next_stage: Stage 5N - solved-fixture-safe Gematria CUDA parity reporting
+  and controlled expansion gate
+next_stage: Stage 5N - solved-fixture-safe Gematria CUDA parity reporting and controlled
+  expansion gate
+selected_next_stage_reason: All five solved-fixture-safe CUDA/native hashes matched.
+remaining_blockers: []
+newly_discovered_blockers: []
+output_hash_algorithm: sha256_canonical_json_v1
+per_fixture_parity:
+- mapping_id: stage5h-solved-fixture-safe-mapping-00
+  fixture_id: an-instruction-direct
+  native_hash: 15e9cd2c89b41241e3a858484e63f61a270fefb4950b18feaf96a9bdef41667e
+  cuda_hash: 15e9cd2c89b41241e3a858484e63f61a270fefb4950b18feaf96a9bdef41667e
+  status: passed
+- mapping_id: stage5h-solved-fixture-safe-mapping-01
+  fixture_id: a-warning
+  native_hash: 9625e3680d0556df7aee7287b0ef99693e30077737237d86e8e834a779a59969
+  cuda_hash: 9625e3680d0556df7aee7287b0ef99693e30077737237d86e8e834a779a59969
+  status: passed
+- mapping_id: stage5h-solved-fixture-safe-mapping-02
+  fixture_id: an-instruction-rotated
+  native_hash: 2a095a8effb25fcaf6e2646aff408bad2e8c6b6112344ffcf473f431c566e443
+  cuda_hash: 2a095a8effb25fcaf6e2646aff408bad2e8c6b6112344ffcf473f431c566e443
+  status: passed
+- mapping_id: stage5h-solved-fixture-safe-mapping-03
+  fixture_id: welcome-divinity
+  native_hash: 0ae3f3cd98a3393e9361ca63ca404b23b390075b019108baab9094b73e202f27
+  cuda_hash: 0ae3f3cd98a3393e9361ca63ca404b23b390075b019108baab9094b73e202f27
+  status: passed
+- mapping_id: stage5h-solved-fixture-safe-mapping-04
+  fixture_id: p56-an-end-prime-minus-one
+  native_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  cuda_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  status: passed
+solved_fixture_cuda_execution_allowed: true
+solved_fixture_cuda_execution_scope: exact_stage5l_mapped_token_buffers_only
+no_gpu_ci_safe: true
+cuda_execution_performed: true
+solved_fixture_cuda_used: true
+unsolved_page_cuda_used: false
+real_liber_primus_cuda_data_used: false
+new_cuda_kernels_added: 0
+cuda_source_modified: true
+cuda_source_modification_scope: stage5m_host_runner_only_no_device_arithmetic_change
+device_kernel_arithmetic_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+performance_or_speedup_claims: false
+generated_outputs_committed: false
+raw_data_processed: false
+codex_output_committed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+cxx_launches_python_workers: false
+no_solve_claim: true
+solve_claim: false

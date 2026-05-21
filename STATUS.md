@@ -2,7 +2,15 @@
 
 ## Current stage
 
-Stage 5L solved-fixture-safe Gematria shift_score token mapping and native parity fixture preparation is complete. Next planned stage: Stage 5M first solved-fixture-safe Gematria shift_score CUDA parity run, pending explicit future-stage approval. Website expansion is deferred to Stage 6.
+Stage 5M first solved-fixture-safe Gematria shift_score CUDA parity run is complete. Next planned stage: Stage 5N solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate. Website expansion is deferred to Stage 6.
+
+## Completed in Stage 5M
+
+Stage 5M added the `libreprimus gematria-solved-fixture-cuda` CLI, solved-fixture CUDA run/parity/boundary schemas, run records, parity records, boundary records, Stage 5M manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
+
+Local Stage 5M summary: run records `5`, CUDA attempted/pass/fail/skip `5/5/0/0`, parity records `5`, parity pass/fail/skip `5/0/0`, boundary records `1`, `stage5n_ready=true`, selected next stage `Stage 5N - solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate`, solved fixture CUDA execution allowed `true` only for the exact Stage 5L mapped token buffers, CUDA source modified `true` for host-runner plumbing only, new CUDA kernels added `0`, device kernel arithmetic modified `false`, GPU benchmark performed `false`, speedup/performance assertions `false`, unsolved page CUDA used `false`, real Liber Primus CUDA data used `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5M is bounded correctness metadata only. It uses the existing `gematria_mod29_shift_score_kernel`, does not add a new kernel, does not change device arithmetic, does not run unsolved pages or raw Liber Primus data through CUDA, does not run GPU benchmarks, does not process raw data, does not publish generated outputs, does not expand the website, and makes no solve claim. Generated reports remain ignored under `experiments/results/gematria-solved-fixture-cuda/stage5m/`; `codex-output/` completion handoffs are ignored and uncommitted.
 
 ## Completed in Stage 5L
 
@@ -30,7 +38,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5L closes non-execution token-mapping blockers, but it still does not authorize solved-fixture CUDA execution without a future explicit stage.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5M closes the first exact solved-fixture-safe CUDA parity gate only; wider solved-fixture expansion and all unsolved-page CUDA use still require future explicit stages.
 
 ## Completed in Stage 5J
 

@@ -627,12 +627,22 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5m_gematria_solved_fixture_cuda_parity_next",
+        "stage5m_gematria_solved_fixture_cuda_parity_complete",
         "stage 5m" in staged_plan
         and "solved-fixture-safe" in staged_plan
         and "cuda parity" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5M solved-fixture-safe CUDA parity as complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5n_gematria_solved_fixture_cuda_reporting_next",
+        "stage 5n" in staged_plan
+        and "solved-fixture-safe" in staged_plan
+        and "controlled expansion gate" in staged_plan
         and "next" in staged_plan,
-        "Staged plan records Stage 5M solved-fixture-safe CUDA parity as next.",
+        "Staged plan records Stage 5N solved-fixture-safe CUDA reporting as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -821,6 +831,16 @@ def check_state_drift_consistency(
         and "stage 5m" in combined
         and "explicit future-stage approval" in combined,
         "Stage 5L solved-fixture-safe Gematria token mapping and native parity boundary is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "gematria_solved_fixture_cuda_parity_policy_present",
+        "solved-fixture-safe gematria cuda parity" in combined
+        and "gematria_mod29_shift_score_kernel" in combined
+        and "stage 5n" in combined
+        and "no new cuda kernels" in combined,
+        "Stage 5M solved-fixture-safe Gematria CUDA parity boundary is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

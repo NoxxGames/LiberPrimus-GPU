@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, Stage 4O CPU batch adapter expansion/parity expectation records, Stage 4P result-store/score-summary unification records, Stage 4Q benchmark/parity planning records, Stage 5A CUDA planning/parity scaffold records, Stage 5B CUDA parity harness skeleton records, Stage 5C CUDA build/device detection records, Stage 5D native CPU backend/threading records, Stage 5E first CUDA kernel contract records, Stage 5F synthetic CUDA kernel/parity records, Stage 5G CUDA parity-reporting/device-code audit records, Stage 5H Gematria mod-29 shift-score contract records, Stage 5I Gematria CUDA preparation records, Stage 5J Gematria CUDA kernel implementation/build/parity records, Stage 5K Gematria CUDA parity-reporting/preflight records, and Stage 5L solved-fixture token-mapping/native parity records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, Stage 4O CPU batch adapter expansion/parity expectation records, Stage 4P result-store/score-summary unification records, Stage 4Q benchmark/parity planning records, Stage 5A CUDA planning/parity scaffold records, Stage 5B CUDA parity harness skeleton records, Stage 5C CUDA build/device detection records, Stage 5D native CPU backend/threading records, Stage 5E first CUDA kernel contract records, Stage 5F synthetic CUDA kernel/parity records, Stage 5G CUDA parity-reporting/device-code audit records, Stage 5H Gematria mod-29 shift-score contract records, Stage 5I Gematria CUDA preparation records, Stage 5J Gematria CUDA kernel implementation/build/parity records, Stage 5K Gematria CUDA parity-reporting/preflight records, Stage 5L solved-fixture token-mapping/native parity records, and Stage 5M solved-fixture CUDA run/parity/boundary records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -278,6 +278,24 @@ Committed Stage 5L schema IDs:
 - `gematria-solved-fixture-output-hash-contract-v0`
 - `gematria-solved-fixture-score-summary-shape-v0`
 - `stage5l-solved-fixture-token-mapping-summary-v0`
+
+Stage 5M solved-fixture CUDA records require `executed_kernel=gematria_mod29_shift_score_kernel`,
+`executed_semantics=gematria_shift_score_only`, `solved_fixture_cuda_execution_allowed=true`,
+`solved_fixture_cuda_execution_scope=exact_stage5l_mapped_token_buffers_only`,
+`unsolved_page_cuda_used=false`, `real_liber_primus_cuda_data_used=false`,
+`new_cuda_kernels_added=0`, `device_kernel_arithmetic_modified=false`,
+`gpu_benchmark_performed=false`, `performance_claim=false`, `speedup_claim=false`,
+`generated_outputs_committed=false`, `codex_output_committed=false`,
+`canonical_corpus_active=false`, `page_boundaries_final=false`, `no_solve_claim=true`, and
+`solve_claim=false`. Passed parity records require the CUDA output-token hash to match the Stage 5L
+native output-token hash.
+
+Committed Stage 5M schema IDs:
+
+- `gematria-solved-fixture-cuda-run-record-v0`
+- `gematria-solved-fixture-cuda-parity-record-v0`
+- `gematria-solved-fixture-cuda-boundary-record-v0`
+- `stage5m-solved-fixture-cuda-parity-summary-v0`
 
 ## Result record principles
 

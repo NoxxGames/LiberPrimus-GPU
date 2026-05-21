@@ -1,0 +1,501 @@
+records:
+- record_type: gematria_solved_fixture_cuda_run_record
+  run_record_id: stage5m-cuda-run-00
+  mapping_id: stage5h-solved-fixture-safe-mapping-00
+  native_fixture_id: stage5l-native-fixture-00
+  source_input_stream_id: stage4o-fixture-direct-an-v0
+  fixture_id: an-instruction-direct
+  candidate_id: stage4o-direct-an-v0
+  source_transform_family: direct_translation
+  executed_semantics: gematria_shift_score_only
+  original_transform_family_semantics_exercised: false
+  token_values:
+  - 24
+  - 9
+  transformable_mask:
+  - true
+  - true
+  token_kinds:
+  - rune
+  - rune
+  token_records:
+  - position: 0
+    token_kind: rune
+    index29: 24
+    latin_label: A
+    raw_text: null
+    transformable: true
+  - position: 1
+    token_kind: rune
+    index29: 9
+    latin_label: N
+    raw_text: null
+    transformable: true
+  candidate_shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  expected_native_output_token_hash: 15e9cd2c89b41241e3a858484e63f61a270fefb4950b18feaf96a9bdef41667e
+  cuda_build_status: passed
+  cuda_run_status: passed
+  cuda_run_attempted: true
+  cuda_output_token_hash: 15e9cd2c89b41241e3a858484e63f61a270fefb4950b18feaf96a9bdef41667e
+  cuda_native_hash_match: true
+  cuda_status_codes:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  cuda_output_token_values:
+  - 24
+  - 9
+  - 25
+  - 10
+  - 27
+  - 12
+  - 8
+  - 22
+  - 23
+  - 8
+  failure_reason: ''
+  warnings: []
+  cuda_source_modified: true
+  cuda_source_modification_scope: stage5m_host_runner_only_no_device_arithmetic_change
+  solved_fixture_cuda_used: true
+  stage5n_ready: true
+  stage_id: stage-5m
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  executed_kernel: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  solved_fixture_cuda_execution_allowed: true
+  solved_fixture_cuda_execution_scope: exact_stage5l_mapped_token_buffers_only
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  cxx_launches_python_workers: false
+  no_solve_claim: true
+  solve_claim: false
+  cuda_execution_performed: true
+- record_type: gematria_solved_fixture_cuda_run_record
+  run_record_id: stage5m-cuda-run-01
+  mapping_id: stage5h-solved-fixture-safe-mapping-01
+  native_fixture_id: stage5l-native-fixture-01
+  source_input_stream_id: stage4o-fixture-reverse-an-v0
+  fixture_id: a-warning
+  candidate_id: stage4o-reverse-an-v0
+  source_transform_family: reverse_gematria
+  executed_semantics: gematria_shift_score_only
+  original_transform_family_semantics_exercised: false
+  token_values:
+  - 4
+  - 19
+  transformable_mask:
+  - true
+  - true
+  token_kinds:
+  - rune
+  - rune
+  token_records:
+  - position: 0
+    token_kind: rune
+    index29: 4
+    latin_label: R
+    raw_text: null
+    transformable: true
+  - position: 1
+    token_kind: rune
+    index29: 19
+    latin_label: M
+    raw_text: null
+    transformable: true
+  candidate_shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  expected_native_output_token_hash: 9625e3680d0556df7aee7287b0ef99693e30077737237d86e8e834a779a59969
+  cuda_build_status: passed
+  cuda_run_status: passed
+  cuda_run_attempted: true
+  cuda_output_token_hash: 9625e3680d0556df7aee7287b0ef99693e30077737237d86e8e834a779a59969
+  cuda_native_hash_match: true
+  cuda_status_codes:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  cuda_output_token_values:
+  - 4
+  - 19
+  - 5
+  - 20
+  - 7
+  - 22
+  - 17
+  - 3
+  - 3
+  - 18
+  failure_reason: ''
+  warnings: []
+  cuda_source_modified: true
+  cuda_source_modification_scope: stage5m_host_runner_only_no_device_arithmetic_change
+  solved_fixture_cuda_used: true
+  stage5n_ready: true
+  stage_id: stage-5m
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  executed_kernel: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  solved_fixture_cuda_execution_allowed: true
+  solved_fixture_cuda_execution_scope: exact_stage5l_mapped_token_buffers_only
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  cxx_launches_python_workers: false
+  no_solve_claim: true
+  solve_claim: false
+  cuda_execution_performed: true
+- record_type: gematria_solved_fixture_cuda_run_record
+  run_record_id: stage5m-cuda-run-02
+  mapping_id: stage5h-solved-fixture-safe-mapping-02
+  native_fixture_id: stage5l-native-fixture-02
+  source_input_stream_id: stage4o-fixture-rotated-reverse-an-v0
+  fixture_id: an-instruction-rotated
+  candidate_id: stage4o-rotated-reverse-an-v0
+  source_transform_family: rotated_reverse_gematria
+  executed_semantics: gematria_shift_score_only
+  original_transform_family_semantics_exercised: false
+  token_values:
+  - 5
+  - 20
+  transformable_mask:
+  - true
+  - true
+  token_kinds:
+  - rune
+  - rune
+  token_records:
+  - position: 0
+    token_kind: rune
+    index29: 5
+    latin_label: C
+    raw_text: null
+    transformable: true
+  - position: 1
+    token_kind: rune
+    index29: 20
+    latin_label: L
+    raw_text: null
+    transformable: true
+  candidate_shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  expected_native_output_token_hash: 2a095a8effb25fcaf6e2646aff408bad2e8c6b6112344ffcf473f431c566e443
+  cuda_build_status: passed
+  cuda_run_status: passed
+  cuda_run_attempted: true
+  cuda_output_token_hash: 2a095a8effb25fcaf6e2646aff408bad2e8c6b6112344ffcf473f431c566e443
+  cuda_native_hash_match: true
+  cuda_status_codes:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  cuda_output_token_values:
+  - 5
+  - 20
+  - 6
+  - 21
+  - 8
+  - 23
+  - 18
+  - 4
+  - 4
+  - 19
+  failure_reason: ''
+  warnings: []
+  cuda_source_modified: true
+  cuda_source_modification_scope: stage5m_host_runner_only_no_device_arithmetic_change
+  solved_fixture_cuda_used: true
+  stage5n_ready: true
+  stage_id: stage-5m
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  executed_kernel: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  solved_fixture_cuda_execution_allowed: true
+  solved_fixture_cuda_execution_scope: exact_stage5l_mapped_token_buffers_only
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  cxx_launches_python_workers: false
+  no_solve_claim: true
+  solve_claim: false
+  cuda_execution_performed: true
+- record_type: gematria_solved_fixture_cuda_run_record
+  run_record_id: stage5m-cuda-run-03
+  mapping_id: stage5h-solved-fixture-safe-mapping-03
+  native_fixture_id: stage5l-native-fixture-03
+  source_input_stream_id: stage4o-fixture-vigenere-an-v0
+  fixture_id: welcome-divinity
+  candidate_id: stage4o-vigenere-an-v0
+  source_transform_family: vigenere_explicit_key
+  executed_semantics: gematria_shift_score_only
+  original_transform_family_semantics_exercised: false
+  token_values:
+  - 25
+  - 10
+  transformable_mask:
+  - true
+  - true
+  token_kinds:
+  - rune
+  - rune
+  token_records:
+  - position: 0
+    token_kind: rune
+    index29: 25
+    latin_label: AE
+    raw_text: null
+    transformable: true
+  - position: 1
+    token_kind: rune
+    index29: 10
+    latin_label: I
+    raw_text: null
+    transformable: true
+  candidate_shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  expected_native_output_token_hash: 0ae3f3cd98a3393e9361ca63ca404b23b390075b019108baab9094b73e202f27
+  cuda_build_status: passed
+  cuda_run_status: passed
+  cuda_run_attempted: true
+  cuda_output_token_hash: 0ae3f3cd98a3393e9361ca63ca404b23b390075b019108baab9094b73e202f27
+  cuda_native_hash_match: true
+  cuda_status_codes:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  cuda_output_token_values:
+  - 25
+  - 10
+  - 26
+  - 11
+  - 28
+  - 13
+  - 9
+  - 23
+  - 24
+  - 9
+  failure_reason: ''
+  warnings: []
+  cuda_source_modified: true
+  cuda_source_modification_scope: stage5m_host_runner_only_no_device_arithmetic_change
+  solved_fixture_cuda_used: true
+  stage5n_ready: true
+  stage_id: stage-5m
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  executed_kernel: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  solved_fixture_cuda_execution_allowed: true
+  solved_fixture_cuda_execution_scope: exact_stage5l_mapped_token_buffers_only
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  cxx_launches_python_workers: false
+  no_solve_claim: true
+  solve_claim: false
+  cuda_execution_performed: true
+- record_type: gematria_solved_fixture_cuda_run_record
+  run_record_id: stage5m-cuda-run-04
+  mapping_id: stage5h-solved-fixture-safe-mapping-04
+  native_fixture_id: stage5l-native-fixture-04
+  source_input_stream_id: stage4o-fixture-prime-an-v0
+  fixture_id: p56-an-end-prime-minus-one
+  candidate_id: stage4o-prime-minus-one-an-v0
+  source_transform_family: prime_minus_one_stream
+  executed_semantics: gematria_shift_score_only
+  original_transform_family_semantics_exercised: false
+  token_values:
+  - 25
+  - 11
+  transformable_mask:
+  - true
+  - true
+  token_kinds:
+  - rune
+  - rune
+  token_records:
+  - position: 0
+    token_kind: rune
+    index29: 25
+    latin_label: AE
+    raw_text: null
+    transformable: true
+  - position: 1
+    token_kind: rune
+    index29: 11
+    latin_label: J
+    raw_text: null
+    transformable: true
+  candidate_shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  expected_native_output_token_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  cuda_build_status: passed
+  cuda_run_status: passed
+  cuda_run_attempted: true
+  cuda_output_token_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  cuda_native_hash_match: true
+  cuda_status_codes:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  cuda_output_token_values:
+  - 25
+  - 11
+  - 26
+  - 12
+  - 28
+  - 14
+  - 9
+  - 24
+  - 24
+  - 10
+  failure_reason: ''
+  warnings: []
+  cuda_source_modified: true
+  cuda_source_modification_scope: stage5m_host_runner_only_no_device_arithmetic_change
+  solved_fixture_cuda_used: true
+  stage5n_ready: true
+  stage_id: stage-5m
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  executed_kernel: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  solved_fixture_cuda_execution_allowed: true
+  solved_fixture_cuda_execution_scope: exact_stage5l_mapped_token_buffers_only
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  cxx_launches_python_workers: false
+  no_solve_claim: true
+  solve_claim: false
+  cuda_execution_performed: true

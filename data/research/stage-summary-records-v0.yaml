@@ -695,3 +695,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5L recorded 5 token-mapping records, 5 native parity records, 1 output-hash contract record, 1 score-summary shape record, mapped 5 candidate streams, prepared 5 native output-token hashes, reduced blockers from 7 to 1, selected Stage 5M as the next explicit approval-gated solved-fixture CUDA parity step, added no CUDA kernels, modified no CUDA source, executed no CUDA, and made no real Liber Primus data use, GPU benchmark, speedup claim, website expansion, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5m
+    title: First solved-fixture-safe Gematria shift_score CUDA parity run
+    status: complete
+    category: infrastructure
+    summary: Ran the existing Gematria mod-29 shift_score CUDA kernel over exactly five Stage 5L solved-fixture-safe mapped token buffers and matched all Stage 5L native output-token hashes.
+    key_outputs:
+      - "`libreprimus gematria-solved-fixture-cuda` commands for run records, optional local CUDA parity, parity records, boundary records, summary generation, validation, and summary display."
+      - Stage 5M CUDA run, parity, boundary, and aggregate summary records under `data/cuda/`.
+      - Host-runner-only CUDA plumbing and C++ runner target for generated Stage 5M input buffers, with no new kernel and no device arithmetic change.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5M recorded 5 run records, attempted 5 bounded solved-fixture CUDA runs, passed 5 CUDA/native hash comparisons, skipped 0, failed 0, wrote 5 parity records and 1 boundary record, selected Stage 5N as ready, modified CUDA source only for host-runner plumbing, added 0 new kernels, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, and made no canonical-corpus, page-boundary, website-expansion, or solve claim.

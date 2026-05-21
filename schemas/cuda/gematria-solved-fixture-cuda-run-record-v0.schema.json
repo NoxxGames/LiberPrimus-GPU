@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-solved-fixture-cuda-run-record-v0.schema.json",
+  "type": "object",
+  "required": [
+    "record_type",
+    "run_record_id",
+    "mapping_id",
+    "native_fixture_id",
+    "source_input_stream_id",
+    "fixture_id",
+    "candidate_id",
+    "source_transform_family",
+    "executed_kernel",
+    "executed_semantics",
+    "original_transform_family_semantics_exercised",
+    "token_values",
+    "transformable_mask",
+    "token_kinds",
+    "candidate_shifts",
+    "expected_native_output_token_hash",
+    "cuda_build_status",
+    "cuda_run_status",
+    "cuda_run_attempted",
+    "cuda_native_hash_match",
+    "solved_fixture_cuda_execution_allowed",
+    "unsolved_page_cuda_used",
+    "real_liber_primus_cuda_data_used",
+    "gpu_benchmark_performed",
+    "performance_claim",
+    "speedup_claim",
+    "no_solve_claim",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "gematria_solved_fixture_cuda_run_record" },
+    "executed_kernel": { "const": "gematria_mod29_shift_score_kernel" },
+    "executed_semantics": { "const": "gematria_shift_score_only" },
+    "original_transform_family_semantics_exercised": { "type": "boolean" },
+    "cuda_build_status": {
+      "enum": [
+        "pending",
+        "passed",
+        "skipped_not_requested",
+        "skipped_missing_cuda",
+        "failed_environment",
+        "failed_toolkit_resolution",
+        "failed"
+      ]
+    },
+    "cuda_run_status": {
+      "enum": [
+        "pending",
+        "passed",
+        "failed",
+        "skipped_not_requested",
+        "skipped_missing_cuda",
+        "skipped_build_not_passed",
+        "skipped_executable_missing",
+        "failed_environment",
+        "failed_toolkit_resolution"
+      ]
+    },
+    "cuda_native_hash_match": { "type": ["boolean", "null"] },
+    "solved_fixture_cuda_execution_allowed": { "const": true },
+    "unsolved_page_cuda_used": { "const": false },
+    "real_liber_primus_cuda_data_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "device_kernel_arithmetic_modified": { "const": false },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -12,7 +12,7 @@ Stage 2E dry-run manifests may estimate future CPU candidate counts, but they do
 
 ## Current Stage
 
-Stage 5E records first CUDA kernel contract and CPU/native parity adapter metadata only. Stage 5F implements only the selected synthetic `shift_score_kernel` parity target. Stage 5G reports that parity, audits CUDA-facing source style, and keeps solved-fixture CUDA blocked. Stage 5J implements only the synthetic numeric `gematria_mod29_shift_score_kernel` parity target. Stage 5K reports that hash match, audits the device-code subset, and keeps solved-fixture CUDA blocked. Stage 5L maps solved-fixture-safe token buffers and native hashes without CUDA execution. None of these stages run GPU benchmarks or make speedup claims.
+Stage 5E records first CUDA kernel contract and CPU/native parity adapter metadata only. Stage 5F implements only the selected synthetic `shift_score_kernel` parity target. Stage 5G reports that parity, audits CUDA-facing source style, and keeps solved-fixture CUDA blocked. Stage 5J implements only the synthetic numeric `gematria_mod29_shift_score_kernel` parity target. Stage 5K reports that hash match, audits the device-code subset, and keeps solved-fixture CUDA blocked. Stage 5L maps solved-fixture-safe token buffers and native hashes without CUDA execution. Stage 5M runs only the existing Gematria kernel over the exact five Stage 5L buffers and records hash parity. None of these stages run GPU benchmarks or make speedup claims.
 
 ## Design Assumptions
 
@@ -192,3 +192,8 @@ Stage 5L converts committed solved-fixture-safe streams into Gematria token buff
 output-token hashes. Treat those hashes as future parity fixtures only. They are not benchmarks,
 speedup claims, CUDA execution evidence, or permission to run solved or unsolved page data through
 CUDA.
+
+Stage 5M records exact CUDA/native hash parity over the five Stage 5L buffers. Treat the local CUDA
+run status and CTest result as bounded correctness metadata only. It is still not a benchmark,
+speedup claim, broad CUDA implementation, or permission to run additional solved or unsolved page
+data through CUDA.

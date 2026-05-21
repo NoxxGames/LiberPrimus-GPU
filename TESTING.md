@@ -814,3 +814,22 @@ The consistency scripts also build Stage 5L temp outputs in a raw-data-free, no-
 Tests must not require CUDA hardware, modify CUDA source, add kernels, run solved or unsolved page
 data through CUDA, run GPU benchmarks, make speedup claims, commit generated solved-fixture mapping
 reports, process raw data, or publish `codex-output/**`.
+
+# Stage 5M Validation
+
+Stage 5M validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-solved-fixture-cuda validate-stage5m `
+  --run-records data/cuda/stage5m-gematria-solved-fixture-cuda-run.yaml `
+  --parity-records data/cuda/stage5m-gematria-solved-fixture-cuda-parity.yaml `
+  --boundaries data/cuda/stage5m-gematria-solved-fixture-cuda-boundaries.yaml `
+  --summary data/cuda/stage5m-solved-fixture-cuda-parity-summary.yaml `
+  --results-dir experiments/results/gematria-solved-fixture-cuda/stage5m
+```
+
+The consistency scripts also build Stage 5M temp outputs in a raw-data-free, no-GPU-safe location
+using `--skip-run`. Local CUDA may record the exact solved-fixture parity run when available, but CI
+must not require CUDA hardware. Tests must not add kernels, change device arithmetic, run unsolved
+page data through CUDA, run GPU benchmarks, make speedup claims, commit generated CUDA reports,
+process raw data, or publish `codex-output/**`.
