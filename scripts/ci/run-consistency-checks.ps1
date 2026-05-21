@@ -877,6 +877,54 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5OSummary `
         --results-dir $Stage5OOut
 
+    $Stage5POut = Join-Path $TempDir "stage5p-gematria-cuda-result-store"
+    $Stage5PResultStore = Join-Path $TempDir "stage5p-gematria-cuda-result-store-integration.yaml"
+    $Stage5PScore = Join-Path $TempDir "stage5p-gematria-cuda-score-summary-integration.yaml"
+    $Stage5PMethod = Join-Path $TempDir "stage5p-gematria-cuda-method-status-impact.yaml"
+    $Stage5PPolicy = Join-Path $TempDir "stage5p-gematria-cuda-generated-body-policy.yaml"
+    $Stage5PCandidates = Join-Path $TempDir "stage5p-gematria-controlled-expansion-candidates.yaml"
+    $Stage5PSummary = Join-Path $TempDir "stage5p-cuda-result-store-integration-summary.yaml"
+    & $Python -m libreprimus.cli gematria-cuda-result-store build-result-store-integration `
+        --repeat-parity data/cuda/stage5o-gematria-solved-fixture-cuda-repeat-parity.yaml `
+        --result-store-integration-out $Stage5PResultStore `
+        --out-dir $Stage5POut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-result-store build-score-summary-integration `
+        --result-store-integration $Stage5PResultStore `
+        --score-summary-integration-out $Stage5PScore `
+        --out-dir $Stage5POut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-result-store build-method-status-impact `
+        --result-store-integration $Stage5PResultStore `
+        --method-status-impact-out $Stage5PMethod `
+        --out-dir $Stage5POut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-result-store build-generated-body-policy `
+        --generated-body-policy-out $Stage5PPolicy `
+        --out-dir $Stage5POut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-result-store build-controlled-expansion-candidates `
+        --controlled-expansion-candidates-out $Stage5PCandidates `
+        --out-dir $Stage5POut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-result-store build-summary `
+        --result-store-integration $Stage5PResultStore `
+        --score-summary-integration $Stage5PScore `
+        --method-status-impact $Stage5PMethod `
+        --generated-body-policy $Stage5PPolicy `
+        --controlled-expansion-candidates $Stage5PCandidates `
+        --summary-out $Stage5PSummary `
+        --out-dir $Stage5POut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-result-store validate-stage5p `
+        --result-store-integration $Stage5PResultStore `
+        --score-summary-integration $Stage5PScore `
+        --method-status-impact $Stage5PMethod `
+        --generated-body-policy $Stage5PPolicy `
+        --controlled-expansion-candidates $Stage5PCandidates `
+        --summary $Stage5PSummary `
+        --results-dir $Stage5POut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

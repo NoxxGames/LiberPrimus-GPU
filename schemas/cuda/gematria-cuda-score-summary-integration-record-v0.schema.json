@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-cuda-score-summary-integration-record-v0.schema.json",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "score_summary_integration_id",
+    "result_store_integration_id",
+    "score_summary_contract",
+    "score_status",
+    "confidence_label",
+    "confidence_interpretation",
+    "stage4i_compatibility",
+    "generated_body_publication_allowed",
+    "method_status_upgrade_allowed",
+    "cuda_execution_performed",
+    "new_cuda_kernels_added",
+    "no_solve_claim",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "gematria_cuda_score_summary_integration_record" },
+    "stage_id": { "const": "stage-5p" },
+    "score_summary_contract": { "const": "stage4i" },
+    "score_status": {
+      "enum": [
+        "scored",
+        "scoring_not_available",
+        "calibration_not_available",
+        "scorer_error"
+      ]
+    },
+    "confidence_label": {
+      "enum": [
+        "positive_control_like",
+        "plausible_lead",
+        "weak_lead",
+        "noisy",
+        "inconclusive",
+        "garbage",
+        "negative_control_like",
+        "scoring_not_available",
+        "calibration_not_available"
+      ]
+    },
+    "confidence_interpretation": { "const": "triage_only" },
+    "stage4p_compatibility": { "const": true },
+    "stage4i_compatibility": { "const": true },
+    "generated_body_publication_allowed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "method_status_upgrade_allowed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "unsolved_page_cuda_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "speedup_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

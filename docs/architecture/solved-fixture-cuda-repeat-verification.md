@@ -1,5 +1,9 @@
 # Solved-Fixture CUDA Repeat Verification
 
+Stage 5P follow-up: compact Stage 5O repeat parity metadata is now integrated into
+Stage 4P/Stage 4I-compatible result-store and score-summary records. Generated CUDA result bodies
+remain ignored and unpublished.
+
 Stage 5O repeats only the exact Stage 5M Gematria solved-fixture-safe CUDA parity pack. The input
 surface is the same five Stage 5L mapped token buffers and candidate-shift lists that Stage 5M used.
 

@@ -1,5 +1,9 @@
 # Controlled CUDA Expansion Gate
 
+Stage 5P follow-up: controlled expansion candidate records identify Stage 5Q candidate mapping as
+the next bounded planning step while keeping CUDA execution, benchmarks, unsolved-page CUDA, and
+generated-body publication disabled.
+
 Stage 5N records explicit gates between the Stage 5M exact solved-fixture parity pass and any later CUDA work.
 
 Gate outcomes:

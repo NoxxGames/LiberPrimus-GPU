@@ -871,3 +871,21 @@ Stage 5O tests remain no-GPU-safe by using `--skip-run` for CI/temp paths. Local
 verification may run only the exact Stage 5M solved-fixture-safe buffers and must not add kernels,
 modify CUDA source, run benchmarks, make speedup claims, stage generated reports, or stage
 `codex-output/**`.
+
+# Stage 5P Validation
+
+Stage 5P validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-cuda-result-store validate-stage5p `
+  --result-store-integration data/cuda/stage5p-gematria-cuda-result-store-integration.yaml `
+  --score-summary-integration data/cuda/stage5p-gematria-cuda-score-summary-integration.yaml `
+  --method-status-impact data/cuda/stage5p-gematria-cuda-method-status-impact.yaml `
+  --generated-body-policy data/cuda/stage5p-gematria-cuda-generated-body-policy.yaml `
+  --controlled-expansion-candidates data/cuda/stage5p-gematria-controlled-expansion-candidates.yaml `
+  --summary data/cuda/stage5p-cuda-result-store-integration-summary.yaml
+```
+
+Stage 5P tests are no-GPU-safe. They cover schema guardrails, compact result-store records,
+Stage 4I score-summary labels, method-status non-upgrade policy, generated-body publication blocks,
+controlled expansion candidate records, CLI round trips, and ignored-output/codex-output safety.

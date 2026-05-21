@@ -1,5 +1,9 @@
 # Solved-Fixture CUDA Result-Store Preflight
 
+Stage 5P follow-up: the preflight path is now consumed by
+`libreprimus gematria-cuda-result-store` to write compact result-store integration records. This
+does not run CUDA or upgrade method status by parity alone.
+
 Stage 5O prepares compact result-store and score-summary preflight records for the repeated
 solved-fixture CUDA parity surface.
 

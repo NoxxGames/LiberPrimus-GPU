@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-cuda-controlled-expansion-candidate-record-v0.schema.json",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "controlled_expansion_candidate_id",
+    "candidate_class",
+    "candidate_status",
+    "recommended_next_stage",
+    "requires_new_cuda_kernel",
+    "requires_cuda_execution",
+    "requires_benchmark",
+    "requires_unsolved_page_input",
+    "method_status_upgrade_allowed",
+    "cuda_execution_performed",
+    "new_cuda_kernels_added",
+    "unsolved_page_cuda_used",
+    "no_solve_claim",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "gematria_cuda_controlled_expansion_candidate_record" },
+    "stage_id": { "const": "stage-5p" },
+    "candidate_status": {
+      "enum": [
+        "consumed_passed",
+        "ready_for_stage5q_candidate_mapping",
+        "blocked_requires_separate_kernel_contract",
+        "blocked_broad_scope",
+        "blocked_unsolved",
+        "complete"
+      ]
+    },
+    "requires_new_cuda_kernel": { "const": false },
+    "requires_cuda_execution": { "const": false },
+    "requires_benchmark": { "const": false },
+    "requires_unsolved_page_input": { "const": false },
+    "stage4p_compatibility": { "const": true },
+    "stage4i_compatibility": { "const": true },
+    "generated_body_publication_allowed": { "const": false },
+    "method_status_upgrade_allowed": { "const": false },
+    "method_status_upgraded": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "unsolved_page_cuda_used": { "const": false },
+    "real_liber_primus_cuda_data_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "speedup_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

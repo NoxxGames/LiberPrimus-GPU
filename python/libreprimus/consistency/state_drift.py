@@ -213,6 +213,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5O is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5p",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5p\b", re.IGNORECASE),
+        "Stage 5P is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -678,11 +683,21 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5p_controlled_result_store_next",
+        "stage5p_controlled_result_store_complete",
         "stage 5p" in staged_plan
         and "controlled" in staged_plan
         and "result-store" in staged_plan,
-        "Staged plan records Stage 5P controlled result-store integration as next.",
+        "Staged plan records Stage 5P controlled result-store integration as complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5q_controlled_shift_score_next",
+        "stage 5q" in staged_plan
+        and "controlled" in staged_plan
+        and "shift_score" in staged_plan
+        and "candidate mapping" in staged_plan,
+        "Staged plan records Stage 5Q controlled shift_score candidate mapping as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -901,6 +916,16 @@ def check_state_drift_consistency(
         and "stage 5p" in combined
         and "no new cuda kernels" in combined,
         "Stage 5O solved-fixture-safe Gematria CUDA repeat and result-store preflight policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "gematria_cuda_result_store_integration_policy_present",
+        "controlled solved-fixture cuda result-store integration" in combined
+        and "score-summary" in combined
+        and "generated-body" in combined
+        and "stage 5q" in combined,
+        "Stage 5P Gematria CUDA result-store integration and Stage 5Q candidate mapping policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

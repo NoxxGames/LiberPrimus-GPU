@@ -1,0 +1,35 @@
+manifest_id: stage5p-result-store-integration
+stage_id: stage-5p
+description: Compact metadata-only integration of Stage 5O Gematria CUDA repeat parity into Stage 4P-compatible result-store records.
+execution_enabled: false
+cuda_execution_enabled: false
+cuda_used: false
+cuda_required: false
+cpu_only: true
+raw_data_processed: false
+generated_outputs_committed: false
+generated_body_publication_allowed: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+real_liber_primus_cuda_data_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+no_solve_claim: true
+solve_claim: false
+inputs:
+  - data/cuda/stage5o-gematria-solved-fixture-cuda-repeat-parity.yaml
+  - data/cuda/stage5o-repeat-verification-result-store-summary.yaml
+outputs:
+  committed:
+    - data/cuda/stage5p-gematria-cuda-result-store-integration.yaml
+  generated_ignored:
+    - experiments/results/gematria-cuda-result-store/stage5p/result_store_integration_report.json
+policy:
+  compact_summary_only: true
+  preserve_stage5o_generated_bodies: ignored
+  method_status_upgrade_allowed: false

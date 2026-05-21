@@ -1,0 +1,104 @@
+record_type: stage5p_cuda_result_store_integration_summary
+stage_id: stage-5p
+status: complete
+source_stage_id: stage-5o
+source_stage5o_repeat_parity_records: 5
+source_stage5o_repeat_parity_pass_count: 5
+result_store_integration_records: 5
+score_summary_integration_records: 5
+method_status_impact_records: 7
+generated_body_policy_records: 4
+controlled_expansion_candidate_records: 6
+integrated_compact_summary_records: 5
+stage4p_compatibility: true
+stage4i_compatibility: true
+compact_summary_only: true
+score_summary_contract: stage4i
+result_store_contract: stage4p
+output_hash_algorithm: sha256_canonical_json_v1
+confidence_label_counts:
+  scoring_not_available: 5
+score_status_counts:
+  scoring_not_available: 5
+method_impact_status_counts:
+  blocked_not_activated: 1
+  not_upgraded_original_semantics_not_exercised: 5
+  parity_verified_infrastructure_only: 1
+generated_body_policy_status_counts:
+  blocked_generated_body_publication: 1
+  blocked_raw_or_database_publication: 1
+  ignored_codex_output: 1
+  ignored_generated_reports: 1
+controlled_expansion_status_counts:
+  blocked_broad_scope: 1
+  blocked_requires_separate_kernel_contract: 1
+  blocked_unsolved: 1
+  complete: 1
+  consumed_passed: 1
+  ready_for_stage5q_candidate_mapping: 1
+records_with_output_hashes: 5
+per_fixture_integration:
+- fixture_id: an-instruction-direct
+  candidate_id: stage4o-direct-an-v0
+  source_transform_family: direct_translation
+  output_token_hash: 15e9cd2c89b41241e3a858484e63f61a270fefb4950b18feaf96a9bdef41667e
+  integration_status: integrated_compact_summary
+- fixture_id: a-warning
+  candidate_id: stage4o-reverse-an-v0
+  source_transform_family: reverse_gematria
+  output_token_hash: 9625e3680d0556df7aee7287b0ef99693e30077737237d86e8e834a779a59969
+  integration_status: integrated_compact_summary
+- fixture_id: an-instruction-rotated
+  candidate_id: stage4o-rotated-reverse-an-v0
+  source_transform_family: rotated_reverse_gematria
+  output_token_hash: 2a095a8effb25fcaf6e2646aff408bad2e8c6b6112344ffcf473f431c566e443
+  integration_status: integrated_compact_summary
+- fixture_id: welcome-divinity
+  candidate_id: stage4o-vigenere-an-v0
+  source_transform_family: vigenere_explicit_key
+  output_token_hash: 0ae3f3cd98a3393e9361ca63ca404b23b390075b019108baab9094b73e202f27
+  integration_status: integrated_compact_summary
+- fixture_id: p56-an-end-prime-minus-one
+  candidate_id: stage4o-prime-minus-one-an-v0
+  source_transform_family: prime_minus_one_stream
+  output_token_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  integration_status: integrated_compact_summary
+generated_body_publication_allowed: false
+method_status_upgrade_allowed: false
+method_status_upgraded: false
+deep_research_recommended: false
+selected_next_stage: Stage 5Q - controlled solved-fixture-safe Gematria shift_score
+  expansion candidate mapping
+next_stage: Stage 5Q - controlled solved-fixture-safe Gematria shift_score expansion
+  candidate mapping
+selected_next_stage_reason: Stage 5P integrated compact Stage 5O parity metadata and
+  identified a bounded solved-fixture-safe shift_score candidate mapping stage as
+  the next controlled step.
+cuda_execution_performed: false
+solved_fixture_cuda_used: false
+additional_cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+device_kernel_arithmetic_modified: false
+unsolved_page_cuda_used: false
+real_liber_primus_cuda_data_used: false
+real_liber_primus_data_used: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+performance_or_speedup_claims: false
+broad_experiment_executed: false
+new_experiment_executed: false
+raw_data_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+website_expansion: false
+canonical_corpus_active: false
+page_boundaries_final: false
+ci_gpu_required: false
+no_gpu_ci_safe: true
+local_16gb_profile_required: false
+cxx_launches_python_workers: false
+no_solve_claim: true
+solve_claim: false

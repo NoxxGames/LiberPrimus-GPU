@@ -1,0 +1,37 @@
+manifest_id: stage5p-score-summary-integration
+stage_id: stage-5p
+description: Stage 4I-compatible score-summary surface over compact Stage 5P result-store integration records.
+execution_enabled: false
+cuda_execution_enabled: false
+cuda_used: false
+cuda_required: false
+cpu_only: true
+raw_data_processed: false
+generated_outputs_committed: false
+generated_body_publication_allowed: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+real_liber_primus_cuda_data_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+new_scorer_added: false
+score_interpretation: triage_only
+no_solve_claim: true
+solve_claim: false
+inputs:
+  - data/cuda/stage5p-gematria-cuda-result-store-integration.yaml
+  - data/scoring/confidence-label-records-v0.yaml
+outputs:
+  committed:
+    - data/cuda/stage5p-gematria-cuda-score-summary-integration.yaml
+  generated_ignored:
+    - experiments/results/gematria-cuda-result-store/stage5p/score_summary_integration_report.json
+policy:
+  score_summary_contract: stage4i
+  new_scoring_model_allowed: false
+  score_as_solve_evidence_allowed: false

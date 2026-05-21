@@ -1,5 +1,18 @@
 # Experiments
 
+## Stage 5P Gematria CUDA Result-Store Integration
+
+Stage 5P does not execute an experiment. It consumes committed Stage 5O repeat parity metadata and
+writes compact Stage 4P/Stage 4I-compatible result-store and score-summary integration records,
+method-status impact rows, generated-body policy rows, controlled expansion candidate rows, and a
+summary under `data/cuda/`.
+
+Generated Stage 5P reports remain ignored under
+`experiments/results/gematria-cuda-result-store/stage5p/`. Stage 5P must keep CUDA execution,
+CUDA source modification, new kernels, GPU benchmarks, speedup claims, unsolved-page CUDA,
+generated-result-body publication, website expansion, canonical corpus activation, page-boundary
+finalisation, and solve claims disabled.
+
 ## Stage 3Y Method Retirement And Result Synthesis
 
 Stage 3Y does not add or execute an experiment. It records method-family status and retirement/deprioritisation guardrails in `data/research/` and documents them in `docs/roadmap/staged-plan.md` and `docs/experiments/method-retirement-ledger.md`.

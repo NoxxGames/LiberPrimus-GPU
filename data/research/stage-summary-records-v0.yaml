@@ -743,3 +743,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5O attempted 5 exact repeat CUDA runs, passed 5 repeat hash comparisons, skipped 0, failed 0, wrote 5 repeat parity records, 3 result-store preflight records, 1 score-summary preflight record, and 1 Stage 5P-ready expansion decision. It added no CUDA kernels, modified no CUDA source, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, published no generated result bodies, and made no canonical-corpus, page-boundary, website-expansion, or solve claim. The selected next stage is Stage 5P controlled solved-fixture CUDA result-store integration.
+  - record_type: stage_summary_record
+    stage_id: stage-5p
+    title: Controlled solved-fixture CUDA result-store integration
+    status: complete
+    category: infrastructure
+    summary: Integrated Stage 5O repeat parity hashes into compact Stage 4P result-store and Stage 4I score-summary surfaces while preserving generated-body and method-status guardrails.
+    key_outputs:
+      - "`libreprimus gematria-cuda-result-store` commands for result-store integration, score-summary integration, method-status impact, generated-body policy, controlled expansion candidates, summary, validation, and summary display."
+      - Stage 5P result-store integration, score-summary integration, method-status impact, generated-body policy, controlled expansion candidate, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/gematria-cuda-result-store/stage5p/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5P wrote 5 compact result-store integration records, 5 Stage 4I-compatible score-summary records, 7 method-status impact records, 4 generated-body policy records, and 6 controlled expansion candidate records. It performed no CUDA execution, modified no CUDA source, added 0 kernels, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, published no generated result bodies, upgraded no method family to solved, and made no canonical-corpus, page-boundary, website-expansion, or solve claim. The selected next stage is Stage 5Q controlled solved-fixture-safe Gematria shift_score expansion candidate mapping.
