@@ -1,6 +1,8 @@
 # Gematria Shift Kernel ABI
 
-Stage 5I plans a conservative CUDA-C ABI for a future Gematria mod-29 `shift_score` kernel.
+Stage 5I plans a conservative CUDA-C ABI for a future Gematria mod-29 `shift_score` kernel. Stage
+5J implements that ABI for one synthetic numeric parity path while keeping solved-fixture-safe and
+real page execution blocked.
 
 ## Planned Kernel Boundary
 

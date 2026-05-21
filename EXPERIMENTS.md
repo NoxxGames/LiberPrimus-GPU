@@ -884,3 +884,15 @@ Generated Stage 5I reports remain ignored under
 run real Liber Primus data, run solved or unsolved page CUDA transforms, run GPU benchmarks, claim
 speedups, process raw data, publish generated outputs, expand the website, activate the canonical
 corpus, finalise page boundaries, or claim a solve through Stage 5I records.
+
+# Stage 5J Gematria CUDA Kernel Boundary
+
+Stage 5J is not a cryptanalytic experiment. It implements only the synthetic numeric
+`gematria_mod29_shift_score_kernel` prepared by Stage 5I and validates it against the Stage 5H
+native fixture hash.
+
+Generated Stage 5J reports remain ignored under
+`experiments/results/gematria-cuda-kernel/stage5j/`. Do not run real Liber Primus data through CUDA,
+run solved or unsolved page CUDA transforms, run GPU benchmarks, claim speedups, process raw data,
+publish generated outputs, expand the website, activate the canonical corpus, finalise page
+boundaries, or claim a solve through Stage 5J records.

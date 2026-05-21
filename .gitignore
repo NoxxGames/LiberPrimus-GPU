@@ -515,5 +515,13 @@ experiments/results/gematria-cuda-prep/**
 !experiments/results/gematria-cuda-prep/stage5i/
 !experiments/results/gematria-cuda-prep/stage5i/.gitkeep
 
+# Generated Gematria CUDA kernel outputs
+experiments/results/gematria-cuda-kernel/**
+!experiments/results/gematria-cuda-kernel/
+!experiments/results/gematria-cuda-kernel/README.md
+!experiments/results/gematria-cuda-kernel/.gitkeep
+!experiments/results/gematria-cuda-kernel/stage5j/
+!experiments/results/gematria-cuda-kernel/stage5j/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

@@ -4,6 +4,9 @@ Stage 5H defines the future production `shift_score_kernel` token contract for G
 It does not change the Stage 5F CUDA kernel, which remains limited to the uppercase Latin synthetic
 fixture.
 
+Stage 5J implements the synthetic CUDA side of this contract only. The matching Stage 5H/5J fixture
+hash is `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`.
+
 ## Contract
 
 - Contract id: `gematria_mod29_shift_score_contract_v0`

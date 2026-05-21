@@ -1,6 +1,6 @@
 # CUDA Device-Code Subset Policy
 
-Stage 5G hardens CUDA-facing source toward a conservative CUDA-C style subset. The policy applies to `.cu` and `.cuh` files unless a later stage explicitly marks a file as host-only and keeps it out of device compilation.
+Stage 5G hardens CUDA-facing source toward a conservative CUDA-C style subset. The policy applies to `.cu` and `.cuh` files unless a later stage explicitly marks a file as host-only and keeps it out of device compilation. Stage 5J keeps `gematria_mod29_shift_score_kernel` in this subset.
 
 ## Required Style
 

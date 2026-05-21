@@ -522,6 +522,40 @@ echo "Running Stage 5I Gematria CUDA preparation no-GPU-safe/temp output"
     --summary "$tmp_dir/stage5i-gematria-cuda-preparation-summary.yaml" \
     --results-dir "$tmp_dir/stage5i-gematria-cuda-prep"
 
+echo "Running Stage 5J Gematria CUDA kernel no-GPU-safe/temp output"
+"$python_bin" -m libreprimus.cli gematria-cuda-kernel build-implementation-records \
+    --manifest experiments/manifests/cuda/stage5j-gematria-cuda-kernel.yaml \
+    --out-dir "$tmp_dir/stage5j-gematria-cuda-kernel" \
+    --implementation-out "$tmp_dir/stage5j-gematria-cuda-kernel-implementation.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-cuda-kernel attempt-build \
+    --manifest experiments/manifests/cuda/stage5j-gematria-cuda-no-gpu-ci-skip.yaml \
+    --out-dir "$tmp_dir/stage5j-gematria-cuda-kernel" \
+    --build-records-out "$tmp_dir/stage5j-gematria-cuda-kernel-build-records.yaml" \
+    --build-dir "$tmp_dir/stage5j-cuda-build" \
+    --skip-build \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-cuda-kernel run-synthetic-parity \
+    --manifest experiments/manifests/cuda/stage5j-gematria-cuda-kernel.yaml \
+    --build-records "$tmp_dir/stage5j-gematria-cuda-kernel-build-records.yaml" \
+    --out-dir "$tmp_dir/stage5j-gematria-cuda-kernel" \
+    --parity-records-out "$tmp_dir/stage5j-gematria-cuda-synthetic-parity-records.yaml" \
+    --build-dir "$tmp_dir/stage5j-cuda-build" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-cuda-kernel build-summary \
+    --implementation "$tmp_dir/stage5j-gematria-cuda-kernel-implementation.yaml" \
+    --build-records "$tmp_dir/stage5j-gematria-cuda-kernel-build-records.yaml" \
+    --parity-records "$tmp_dir/stage5j-gematria-cuda-synthetic-parity-records.yaml" \
+    --summary-out "$tmp_dir/stage5j-gematria-cuda-kernel-summary.yaml" \
+    --out-dir "$tmp_dir/stage5j-gematria-cuda-kernel" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-cuda-kernel validate-stage5j \
+    --implementation "$tmp_dir/stage5j-gematria-cuda-kernel-implementation.yaml" \
+    --build-records "$tmp_dir/stage5j-gematria-cuda-kernel-build-records.yaml" \
+    --parity-records "$tmp_dir/stage5j-gematria-cuda-synthetic-parity-records.yaml" \
+    --summary "$tmp_dir/stage5j-gematria-cuda-kernel-summary.yaml" \
+    --results-dir "$tmp_dir/stage5j-gematria-cuda-kernel"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

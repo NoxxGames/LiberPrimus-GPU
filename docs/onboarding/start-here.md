@@ -11,7 +11,7 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 ## Current State
 
 - Latest completed stage: Stage 5I - Gematria mod-29 shift_score synthetic CUDA parity preparation.
-- Next planned stage: Stage 5J - Gematria mod-29 shift_score synthetic CUDA parity kernel implementation.
+- Next planned stage: Stage 5K - Gematria shift_score CUDA parity reporting and solved-fixture-safe preflight.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

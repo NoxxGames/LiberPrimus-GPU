@@ -1,0 +1,18 @@
+manifest_id: stage5j-gematria-cuda-local-optional-run
+stage_id: stage-5j
+purpose: Optionally build and run the synthetic Gematria CUDA parity test on a local CUDA toolchain.
+implemented_kernel_name: gematria_mod29_shift_score_kernel
+source_contract_id: gematria_mod29_shift_score_contract_v0
+native_fixture_hash: a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0
+optional_local_cuda: true
+local_16gb_profile_required: false
+ci_gpu_required: false
+real_liber_primus_data_used: false
+solved_fixture_cuda_used: false
+unsolved_page_cuda_used: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false

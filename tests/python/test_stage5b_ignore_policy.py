@@ -28,10 +28,15 @@ def test_stage5b_no_transform_cuda_kernels_added() -> None:
         if path.suffix.lower() in {".cu", ".cuh"} and ".git" not in path.parts
     ]
     assert cuda_files
+    explicitly_scoped_stage5_cuda_files = {
+        "cuda_smoke",
+        "shift_score_kernel",
+        "gematria_shift_score_kernel",
+    }
     unexpected = [
         path
         for path in cuda_files
-        if path.stem not in {"cuda_smoke", "shift_score_kernel"}
+        if path.stem not in explicitly_scoped_stage5_cuda_files
         and any(part in path.stem.lower() for part in forbidden_name_parts)
     ]
     assert unexpected == []

@@ -4,9 +4,9 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5I Gematria mod-29 shift_score synthetic CUDA parity preparation is complete. The stage converts the Stage 5H numeric Gematria contract into a CUDA-C ABI plan, validation vectors, and Stage 5J implementation checklist without new kernels, real Liber Primus CUDA data use, GPU benchmarking, broad experiment execution, website expansion, or performance claims.
+Stage 5J Gematria mod-29 shift_score synthetic CUDA parity kernel implementation is complete. The stage adds only the scoped synthetic numeric `gematria_mod29_shift_score_kernel`, matches the Stage 5H native fixture hash, preserves no-GPU CI behavior, keeps the Stage 5F uppercase Latin fixture separate, and makes no real Liber Primus CUDA data use, GPU benchmark, speedup claim, broad experiment execution, website expansion, or solve claim.
 
-The next planned stage is Stage 5J: Gematria mod-29 shift_score synthetic CUDA parity kernel implementation. Website expansion is deferred to Stage 6. Broad CUDA implementation remains deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next planned stage is Stage 5K: Gematria shift_score CUDA parity reporting and solved-fixture-safe preflight. Website expansion is deferred to Stage 6. Broad CUDA implementation remains deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.
@@ -25,7 +25,7 @@ records, Stage 4N recorded OutGuess/audio positive-control readiness, Stage 4O e
 batch adapter coverage, Stage 4P unified result-store/score-summary reporting, Stage 4Q
 recorded CPU benchmark and parity planning, Stage 5A recorded CUDA planning and parity scaffolding,
 Stage 5B recorded the CUDA parity harness skeleton, Stage 5C recorded CUDA build/device-detection
-metadata, Stage 5D recorded native C++ CPU backend/threading parity, Stage 5E selected the first future CUDA kernel contract, Stage 5F implemented the first synthetic-only CUDA parity kernel, Stage 5G completed parity reporting plus CUDA-facing source hardening, Stage 5H completed Gematria contract preparation, and Stage 5I completed Gematria CUDA preparation before Stage 5J synthetic Gematria kernel implementation.
+metadata, Stage 5D recorded native C++ CPU backend/threading parity, Stage 5E selected the first future CUDA kernel contract, Stage 5F implemented the first synthetic-only CUDA parity kernel, Stage 5G completed parity reporting plus CUDA-facing source hardening, Stage 5H completed Gematria contract preparation, Stage 5I completed Gematria CUDA preparation, and Stage 5J completed synthetic Gematria kernel implementation before Stage 5K parity reporting.
 
 ## Phase 0A - Project bootstrap
 
@@ -458,8 +458,24 @@ Generated reports remain ignored under `experiments/results/gematria-cuda-prep/s
 `codex-output/` handoff files remain ignored. Stage 5I does not add CUDA source, add kernels, run
 CUDA transforms, run real Liber Primus data, run solved or unsolved page CUDA transforms, run GPU
 benchmarks, claim speedups, process raw data, expand the website, activate the canonical corpus,
-finalise page boundaries, or make solve claims. Stage 5J Gematria mod-29 synthetic CUDA parity
-kernel implementation is next.
+finalise page boundaries, or make solve claims.
+
+## Stage 5J - Gematria mod-29 shift_score synthetic CUDA parity kernel implementation
+
+Stage 5J is complete. It records one implementation record, one build record, one synthetic parity
+record, and one aggregate summary under `data/cuda/`, and adds exactly one CUDA kernel:
+`gematria_mod29_shift_score_kernel`.
+
+The kernel applies `(token + shift) % 29` to transformable numeric tokens `0..28`, preserves
+non-transformable separator placeholders by mask, writes deterministic candidate-major output, and
+matches the Stage 5H native fixture hash
+`a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`. The Stage 5F uppercase
+Latin synthetic hash remains separate. Generated reports remain ignored under
+`experiments/results/gematria-cuda-kernel/stage5j/`, and `codex-output/` handoff files remain
+ignored. Stage 5J does not run real Liber Primus data, run solved or unsolved page CUDA transforms,
+run GPU benchmarks, claim speedups, process raw data, expand the website, activate the canonical
+corpus, finalise page boundaries, or make solve claims. Stage 5K Gematria shift_score CUDA parity
+reporting and solved-fixture-safe preflight is next.
 
 ## Stage 4G - Cookie exact-candidate refresh
 

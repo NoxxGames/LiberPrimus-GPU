@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, Stage 4O CPU batch adapter expansion/parity expectation records, Stage 4P result-store/score-summary unification records, Stage 4Q benchmark/parity planning records, Stage 5A CUDA planning/parity scaffold records, Stage 5B CUDA parity harness skeleton records, Stage 5C CUDA build/device detection records, Stage 5D native CPU backend/threading records, Stage 5E first CUDA kernel contract records, Stage 5F synthetic CUDA kernel/parity records, Stage 5G CUDA parity-reporting/device-code audit records, Stage 5H Gematria mod-29 shift-score contract records, and Stage 5I Gematria CUDA preparation records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, Stage 4O CPU batch adapter expansion/parity expectation records, Stage 4P result-store/score-summary unification records, Stage 4Q benchmark/parity planning records, Stage 5A CUDA planning/parity scaffold records, Stage 5B CUDA parity harness skeleton records, Stage 5C CUDA build/device detection records, Stage 5D native CPU backend/threading records, Stage 5E first CUDA kernel contract records, Stage 5F synthetic CUDA kernel/parity records, Stage 5G CUDA parity-reporting/device-code audit records, Stage 5H Gematria mod-29 shift-score contract records, Stage 5I Gematria CUDA preparation records, and Stage 5J Gematria CUDA kernel implementation/build/parity records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -219,6 +219,25 @@ Committed Stage 5I schema IDs:
 - `gematria-cuda-validation-vector-record-v0`
 - `gematria-cuda-implementation-checklist-record-v0`
 - `stage5i-gematria-cuda-preparation-summary-v0`
+
+Stage 5J Gematria CUDA kernel records require `implemented_kernel_name=gematria_mod29_shift_score_kernel`,
+`source_contract_id=gematria_mod29_shift_score_contract_v0`,
+`token_domain=integers_0_to_28`, `arithmetic_direction=forward_add_shift_mod29`,
+`separator_policy=non_transformable_separators_preserved_unshifted`, `synthetic_only=true`,
+`new_cuda_kernels_added=1`, `solved_fixture_cuda_execution_allowed=false`,
+`production_gematria_mod29_cuda_ready=false`, `real_liber_primus_data_used=false`,
+`solved_fixture_cuda_used=false`, `unsolved_page_cuda_used=false`, `gpu_benchmark_performed=false`,
+`performance_claim=false`, `speedup_claim=false`, `generated_outputs_committed=false`,
+`codex_output_committed=false`, `canonical_corpus_active=false`, `page_boundaries_final=false`,
+`no_solve_claim=true`, and `solve_claim=false`. A passed synthetic parity record must match the
+Stage 5H native fixture hash `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`.
+
+Committed Stage 5J schema IDs:
+
+- `gematria-cuda-kernel-implementation-record-v0`
+- `gematria-cuda-kernel-build-record-v0`
+- `gematria-cuda-synthetic-parity-record-v0`
+- `stage5j-gematria-cuda-kernel-summary-v0`
 
 ## Result record principles
 

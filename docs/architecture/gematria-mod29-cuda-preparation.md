@@ -4,6 +4,10 @@ Stage 5I turns the Stage 5H Gematria mod-29 `shift_score` contract into a future
 package. It is preparation only: no CUDA source is added, no CUDA transform is executed, and no
 real Liber Primus data is used.
 
+Stage 5J consumes this preparation package for the scoped synthetic numeric
+`gematria_mod29_shift_score_kernel`. Stage 5I remains the ABI/vector source of truth; Stage 5J is
+hash-matching synthetic implementation metadata, not production Gematria CUDA readiness.
+
 ## Contract
 
 - Source contract: `gematria_mod29_shift_score_contract_v0`

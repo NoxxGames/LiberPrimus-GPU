@@ -1,0 +1,17 @@
+manifest_id: stage5j-gematria-cuda-no-gpu-ci-skip
+stage_id: stage-5j
+purpose: Record no-GPU-safe skipped build/parity behavior for CI and raw-data-free validation.
+implemented_kernel_name: gematria_mod29_shift_score_kernel
+source_contract_id: gematria_mod29_shift_score_contract_v0
+no_gpu_ci_safe: true
+ci_gpu_required: false
+skip_build_allowed: true
+real_liber_primus_data_used: false
+solved_fixture_cuda_used: false
+unsolved_page_cuda_used: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false

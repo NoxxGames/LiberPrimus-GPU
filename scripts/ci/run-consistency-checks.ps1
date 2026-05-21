@@ -591,6 +591,46 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5ISummary `
         --results-dir $Stage5IOut
 
+    Write-Host "Running Stage 5J Gematria CUDA kernel no-GPU-safe/temp output"
+    $Stage5JOut = Join-Path $TempDir "stage5j-gematria-cuda-kernel"
+    $Stage5JImplementation = Join-Path $TempDir "stage5j-gematria-cuda-kernel-implementation.yaml"
+    $Stage5JBuild = Join-Path $TempDir "stage5j-gematria-cuda-kernel-build-records.yaml"
+    $Stage5JParity = Join-Path $TempDir "stage5j-gematria-cuda-synthetic-parity-records.yaml"
+    $Stage5JSummary = Join-Path $TempDir "stage5j-gematria-cuda-kernel-summary.yaml"
+    $Stage5JBuildDir = Join-Path $TempDir "stage5j-cuda-build"
+    & $Python -m libreprimus.cli gematria-cuda-kernel build-implementation-records `
+        --manifest experiments/manifests/cuda/stage5j-gematria-cuda-kernel.yaml `
+        --out-dir $Stage5JOut `
+        --implementation-out $Stage5JImplementation `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-kernel attempt-build `
+        --manifest experiments/manifests/cuda/stage5j-gematria-cuda-no-gpu-ci-skip.yaml `
+        --out-dir $Stage5JOut `
+        --build-records-out $Stage5JBuild `
+        --build-dir $Stage5JBuildDir `
+        --skip-build `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-kernel run-synthetic-parity `
+        --manifest experiments/manifests/cuda/stage5j-gematria-cuda-kernel.yaml `
+        --build-records $Stage5JBuild `
+        --out-dir $Stage5JOut `
+        --parity-records-out $Stage5JParity `
+        --build-dir $Stage5JBuildDir `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-kernel build-summary `
+        --implementation $Stage5JImplementation `
+        --build-records $Stage5JBuild `
+        --parity-records $Stage5JParity `
+        --summary-out $Stage5JSummary `
+        --out-dir $Stage5JOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-kernel validate-stage5j `
+        --implementation $Stage5JImplementation `
+        --build-records $Stage5JBuild `
+        --parity-records $Stage5JParity `
+        --summary $Stage5JSummary `
+        --results-dir $Stage5JOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

@@ -1,0 +1,130 @@
+records:
+- record_type: gematria_cuda_kernel_implementation_record
+  implementation_id: stage5j-gematria-mod29-shift-score-kernel-implementation
+  implementation_status: implemented_synthetic_numeric_only
+  kernel_header: cuda/include/libreprimus/gematria_shift_score_kernel.cuh
+  kernel_source: cuda/kernels/gematria_shift_score_kernel.cu
+  kernel_test: cuda/tests/gematria_shift_score_kernel_test.cpp
+  cuda_c_abi_shape:
+    input_token_values: const unsigned char*
+    transformable_mask: const unsigned char*
+    shifts: const unsigned char*
+    output_token_values: unsigned char*
+    status_codes: int*
+    token_count: int
+    candidate_count: int
+  input_token_values:
+  - 0
+  - 1
+  - 0
+  - 28
+  - 13
+  - 0
+  - 5
+  transformable_mask:
+  - 1
+  - 1
+  - 0
+  - 1
+  - 1
+  - 0
+  - 1
+  token_kinds:
+  - rune
+  - rune
+  - word_separator
+  - rune
+  - rune
+  - clause_separator
+  - rune
+  shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  expected_outputs:
+  - - 0
+    - 1
+    - 0
+    - 28
+    - 13
+    - 0
+    - 5
+  - - 1
+    - 2
+    - 0
+    - 0
+    - 14
+    - 0
+    - 6
+  - - 3
+    - 4
+    - 0
+    - 2
+    - 16
+    - 0
+    - 8
+  - - 13
+    - 14
+    - 0
+    - 12
+    - 26
+    - 0
+    - 18
+  - - 28
+    - 0
+    - 0
+    - 27
+    - 12
+    - 0
+    - 4
+  semantic_scope: synthetic_numeric_gematria_mod29_shift_only
+  cuda_execution_performed: false
+  notes:
+  - Exactly one new CUDA kernel target is introduced for Stage 5J.
+  - The Stage 5F uppercase Latin synthetic kernel remains separate.
+  - Solved fixtures, unsolved pages, and real Liber Primus data remain blocked from
+    CUDA execution.
+  stage_id: stage-5j
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  selected_future_kernel_id: shift_score_kernel
+  native_fixture_id: stage5h-gematria-mod29-synthetic-shift-fixture-v0
+  native_fixture_hash: a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0
+  stage5f_synthetic_hash: 76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66
+  stage5f_hash_is_gematria_fixture_hash: false
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  synthetic_only: true
+  cuda_kernel_added: true
+  new_cuda_kernel_added: true
+  new_cuda_kernels_added: 1
+  cuda_source_modified: true
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  solved_fixture_cuda_execution_allowed: false
+  production_gematria_mod29_cuda_ready: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false
+  device_code_subset_must_remain_compliant: true
+  stl_in_device_path_allowed: false
+  no_solve_claim: true
+  solve_claim: false

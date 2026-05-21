@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/cuda/gematria-cuda-synthetic-parity-record-v0.schema.json",
+  "title": "Gematria CUDA Synthetic Parity Record v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "implemented_kernel_name",
+    "source_contract_id",
+    "native_fixture_hash",
+    "parity_status",
+    "cuda_synthetic_parity_attempted",
+    "gematria_cuda_synthetic_parity_verified",
+    "stage5k_ready",
+    "real_liber_primus_data_used",
+    "solved_fixture_cuda_used",
+    "unsolved_page_cuda_used",
+    "gpu_benchmark_performed",
+    "performance_claim",
+    "speedup_claim",
+    "generated_outputs_committed",
+    "codex_output_committed",
+    "solve_claim",
+    "no_solve_claim"
+  ],
+  "properties": {
+    "record_type": {"const": "gematria_cuda_synthetic_parity_record"},
+    "stage_id": {"const": "stage-5j"},
+    "implemented_kernel_name": {"const": "gematria_mod29_shift_score_kernel"},
+    "source_contract_id": {"const": "gematria_mod29_shift_score_contract_v0"},
+    "native_fixture_hash": {"const": "a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0"},
+    "parity_status": {
+      "enum": [
+        "passed",
+        "skipped_build_not_passed",
+        "skipped_build_not_requested",
+        "skipped_missing_cuda",
+        "skipped_executable_missing",
+        "failed"
+      ]
+    },
+    "cuda_output_hash": {"type": "string"},
+    "cuda_native_hash_match": {"type": ["boolean", "null"]},
+    "gematria_cuda_synthetic_parity_verified": {"type": "boolean"},
+    "stage5k_ready": {"type": "boolean"},
+    "real_liber_primus_data_used": {"const": false},
+    "solved_fixture_cuda_used": {"const": false},
+    "unsolved_page_cuda_used": {"const": false},
+    "solved_fixture_cuda_execution_allowed": {"const": false},
+    "production_gematria_mod29_cuda_ready": {"const": false},
+    "gpu_benchmark_performed": {"const": false},
+    "performance_claim": {"const": false},
+    "speedup_claim": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "codex_output_committed": {"const": false},
+    "no_gpu_ci_safe": {"const": true},
+    "cxx_launches_python_workers": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"parity_status": {"const": "passed"}}},
+      "then": {
+        "properties": {
+          "cuda_output_hash": {"const": "a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0"},
+          "cuda_native_hash_match": {"const": true},
+          "gematria_cuda_synthetic_parity_verified": {"const": true},
+          "stage5k_ready": {"const": true}
+        }
+      }
+    }
+  ],
+  "additionalProperties": true
+}

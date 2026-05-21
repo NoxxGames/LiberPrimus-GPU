@@ -197,8 +197,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 5I, onboarding and staged-plan checks should show Stage 5I complete and Stage 5J
-Gematria mod-29 shift_score synthetic CUDA parity kernel implementation next.
+After Stage 5J, onboarding and staged-plan checks should show Stage 5J complete and Stage 5K
+Gematria shift_score CUDA parity reporting next.
 
 If path sanitisation fails, run:
 
@@ -499,3 +499,20 @@ Generated Stage 5I reports belong under ignored `experiments/results/gematria-cu
 and the Codex completion handoff belongs under ignored `codex-output/stage5i-codex-completion.md`.
 Stage 5I must not add CUDA source files, add kernels, run CUDA transforms, run solved or unsolved
 page data through CUDA, process real Liber Primus CUDA data, or record performance claims.
+
+# Stage 5J Gematria CUDA Kernel Troubleshooting
+
+If Stage 5J validation fails, rebuild or inspect the committed kernel records:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-cuda-kernel validate-stage5j `
+  --implementation data/cuda/stage5j-gematria-cuda-kernel-implementation.yaml `
+  --build-records data/cuda/stage5j-gematria-cuda-kernel-build-records.yaml `
+  --parity-records data/cuda/stage5j-gematria-cuda-synthetic-parity-records.yaml `
+  --summary data/cuda/stage5j-gematria-cuda-kernel-summary.yaml `
+  --results-dir experiments/results/gematria-cuda-kernel/stage5j
+```
+
+No-GPU CI may record skipped build/parity status. Local CUDA parity may pass when the toolkit and
+device are available. Do not treat either path as a benchmark, speedup claim, or permission to run
+real Liber Primus data through CUDA.

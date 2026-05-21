@@ -232,8 +232,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 5j", "gematria mod-29", "synthetic cuda parity", "kernel implementation", "next"),
-            "staged_plan_stage5j_gematria_synthetic_cuda_kernel_next",
+            ("stage 5j", "gematria mod-29", "synthetic cuda parity", "kernel implementation", "complete"),
+            "staged_plan_stage5j_gematria_synthetic_cuda_kernel_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5k", "gematria", "parity reporting", "next"),
+            "staged_plan_stage5k_gematria_parity_reporting_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -449,6 +455,7 @@ def validate_research_synthesis(
         and "stage 5h" not in next_text
         and "stage 5i" not in next_text
         and "stage 5j" not in next_text
+        and "stage 5k" not in next_text
     ):
         errors.append("cuda_build_device_detection_missing_stage5d_through_stage5j_next_action")
 
@@ -480,7 +487,8 @@ def validate_research_synthesis(
         if (
             "stage 5h" not in evidence_text
             or "stage 5i" not in evidence_text
-            or "stage 5j" not in next_text
+            or "stage 5j" not in evidence_text
+            or "stage 5k" not in next_text
         ):
             errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_stage5j_transition")
 

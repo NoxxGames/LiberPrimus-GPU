@@ -110,6 +110,10 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/gematria-cuda-validation-vector-record-v0.schema.json",
     "cuda/gematria-cuda-implementation-checklist-record-v0.schema.json",
     "cuda/stage5i-gematria-cuda-preparation-summary-v0.schema.json",
+    "cuda/gematria-cuda-kernel-implementation-record-v0.schema.json",
+    "cuda/gematria-cuda-kernel-build-record-v0.schema.json",
+    "cuda/gematria-cuda-synthetic-parity-record-v0.schema.json",
+    "cuda/stage5j-gematria-cuda-kernel-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -197,6 +201,10 @@ EXPECTED_DOC_TERMS = [
     "gematria-cuda-validation-vector-record-v0",
     "gematria-cuda-implementation-checklist-record-v0",
     "stage5i-gematria-cuda-preparation-summary-v0",
+    "gematria-cuda-kernel-implementation-record-v0",
+    "gematria-cuda-kernel-build-record-v0",
+    "gematria-cuda-synthetic-parity-record-v0",
+    "stage5j-gematria-cuda-kernel-summary-v0",
 ]
 
 

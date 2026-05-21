@@ -10,7 +10,7 @@ Stage 2E dry-run manifests may estimate future CPU candidate counts, but they do
 
 ## Current Stage
 
-Stage 5E records first CUDA kernel contract and CPU/native parity adapter metadata only. Stage 5F implements only the selected synthetic `shift_score_kernel` parity target. Stage 5G reports that parity, audits CUDA-facing source style, and keeps solved-fixture CUDA blocked. None of these stages run GPU benchmarks or make speedup claims.
+Stage 5E records first CUDA kernel contract and CPU/native parity adapter metadata only. Stage 5F implements only the selected synthetic `shift_score_kernel` parity target. Stage 5G reports that parity, audits CUDA-facing source style, and keeps solved-fixture CUDA blocked. Stage 5J implements only the synthetic numeric `gematria_mod29_shift_score_kernel` parity target. None of these stages run GPU benchmarks or make speedup claims.
 
 ## Design Assumptions
 
@@ -176,3 +176,7 @@ Stage 5H adds the Gematria Primus mod-29 `shift_score` contract and native synth
 metadata. It records the production token-domain expectations for future parity work, but it does
 not execute CUDA, run GPU benchmarks, process real Liber Primus data through CUDA, or make speedup
 claims.
+
+Stage 5J adds one synthetic numeric CUDA kernel for the Stage 5H fixture. Treat the passed local
+build/parity record as correctness metadata only. It is not a benchmark, not a speedup claim, and
+not permission to run solved or unsolved page data through CUDA.

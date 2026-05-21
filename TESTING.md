@@ -112,6 +112,13 @@ rejections for CUDA execution, new kernels, CUDA source changes, production Gema
 generated-output, codex-output, and solve-claim drift, and ignored-output/codex-output checks for
 `experiments/results/gematria-cuda-prep/stage5i/` and `codex-output/`.
 
+Stage 5J extends coverage with Gematria CUDA kernel schemas, implementation/build/parity records,
+optional local synthetic parity, no-GPU-safe consistency temp outputs, conservative device-code
+subset checks, CLI build/validate/summary checks, validation rejections for real Liber Primus CUDA
+data, solved/unsolved page CUDA use, production Gematria CUDA readiness, benchmarking,
+performance/speedup, generated-output, codex-output, and solve-claim drift, and ignored-output
+checks for `experiments/results/gematria-cuda-kernel/stage5j/` and `codex-output/`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.
@@ -743,3 +750,21 @@ Stage 5I validation uses:
 The consistency scripts also build Stage 5I temp outputs in a raw-data-free, no-GPU-safe location.
 Tests must not require CUDA hardware, add transform kernels, run GPU benchmarks, make speedup
 claims, commit generated Gematria shift reports, process raw data, or publish `codex-output/**`.
+
+# Stage 5J Validation
+
+Stage 5J validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-cuda-kernel validate-stage5j `
+  --implementation data/cuda/stage5j-gematria-cuda-kernel-implementation.yaml `
+  --build-records data/cuda/stage5j-gematria-cuda-kernel-build-records.yaml `
+  --parity-records data/cuda/stage5j-gematria-cuda-synthetic-parity-records.yaml `
+  --summary data/cuda/stage5j-gematria-cuda-kernel-summary.yaml `
+  --results-dir experiments/results/gematria-cuda-kernel/stage5j
+```
+
+The consistency scripts also build Stage 5J temp outputs in a raw-data-free, no-GPU-safe location.
+CI can skip CUDA builds, while local CUDA may record a passed build/parity run. Tests must not run
+real Liber Primus data through CUDA, run GPU benchmarks, make speedup claims, commit generated
+Gematria CUDA reports, process raw data, or publish `codex-output/**`.
