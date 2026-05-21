@@ -1,0 +1,22 @@
+manifest_id: stage5n-controlled-expansion-gate
+stage_id: stage-5n
+description: Build no-GPU-safe controlled expansion gate records for future solved-fixture CUDA work.
+cpu_only: true
+cuda_required: false
+cuda_execution_enabled: false
+gpu_benchmark_enabled: false
+raw_data_required: false
+canonical_corpus_active: false
+page_boundaries_final: false
+no_solve_claim: true
+generated_outputs_committed: false
+allowed_gate_scope:
+  - exact_repeat_verification_gate
+  - additional_solved_fixture_shift_score_gate
+  - result_store_score_summary_gate
+blocked_gate_scope:
+  - broad_solved_fixture_cuda_gate
+  - unsolved_page_cuda_gate
+outputs:
+  committed: data/cuda/stage5n-gematria-controlled-expansion-gate.yaml
+  generated_ignored: experiments/results/gematria-solved-fixture-cuda-reporting/stage5n/controlled_expansion_gate.json

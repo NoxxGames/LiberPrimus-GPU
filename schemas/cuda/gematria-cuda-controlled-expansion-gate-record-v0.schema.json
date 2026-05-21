@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/gematria-cuda-controlled-expansion-gate-record-v0.schema.json",
+  "title": "Gematria CUDA Controlled Expansion Gate Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "gate_record_id", "gate_id", "gate_status", "blockers", "recommendation", "execution_permission_granted", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "gematria_cuda_controlled_expansion_gate_record" },
+    "gate_record_id": { "type": "string" },
+    "gate_id": { "type": "string" },
+    "gate_status": {
+      "enum": [
+        "approved_for_exact_repeat_only",
+        "needs_candidate_selection",
+        "needs_result_store_preflight",
+        "needs_score_summary_preflight",
+        "needs_source_mapping",
+        "blocked_broad_scope",
+        "blocked_unsolved",
+        "blocked_pending_deep_review",
+        "blocked_pending_explicit_approval"
+      ]
+    },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "execution_permission_granted": { "type": "boolean" },
+    "additional_cuda_execution_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "real_liber_primus_cuda_data_used": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "cuda_source_modified": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "speedup_claim": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false }
+  }
+}

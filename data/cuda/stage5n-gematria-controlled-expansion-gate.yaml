@@ -1,0 +1,220 @@
+records:
+- record_type: gematria_cuda_controlled_expansion_gate_record
+  gate_record_id: stage5n-gate-00
+  gate_id: exact_repeat_verification_gate
+  purpose: Repeat the exact Stage 5M solved-fixture-safe run to prove reproducibility.
+  input_scope: exact_same_five_stage5l_mapped_token_buffers
+  gate_status: approved_for_exact_repeat_only
+  blockers: []
+  recommendation: Stage 5O may prepare an exact-repeat verification pack; no benchmark
+    or broader fixture class is allowed.
+  execution_permission_granted: true
+  selected_next_stage: Stage 5O - solved-fixture-safe Gematria CUDA repeat verification
+    and result-store preflight
+  selected_next_stage_reason: Stage 5M exact parity passed, but Stage 5N only approves
+    exact-repeat reporting and result-store preflight; broader solved-fixture and
+    unsolved CUDA remain blocked.
+  stage_id: stage-5n
+  additional_cuda_execution_performed: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  ci_gpu_required: false
+  cxx_launches_python_workers: false
+  solve_claim: false
+  no_gpu_ci_safe: true
+  no_solve_claim: true
+- record_type: gematria_cuda_controlled_expansion_gate_record
+  gate_record_id: stage5n-gate-01
+  gate_id: additional_solved_fixture_shift_score_gate
+  purpose: Select additional solved-fixture-safe token streams for Gematria shift_score
+    only.
+  input_scope: future_source_backed_solved_fixture_safe_shift_score_mappings
+  gate_status: needs_candidate_selection
+  blockers:
+  - needs_source_backed_token_mappings
+  - needs_native_output_hashes
+  - needs_explicit_future_stage_approval
+  recommendation: Prepare candidate selection and mapping records before any CUDA
+    execution.
+  execution_permission_granted: false
+  selected_next_stage: Stage 5O - solved-fixture-safe Gematria CUDA repeat verification
+    and result-store preflight
+  selected_next_stage_reason: Stage 5M exact parity passed, but Stage 5N only approves
+    exact-repeat reporting and result-store preflight; broader solved-fixture and
+    unsolved CUDA remain blocked.
+  stage_id: stage-5n
+  additional_cuda_execution_performed: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  ci_gpu_required: false
+  cxx_launches_python_workers: false
+  solve_claim: false
+  no_gpu_ci_safe: true
+  no_solve_claim: true
+- record_type: gematria_cuda_controlled_expansion_gate_record
+  gate_record_id: stage5n-gate-02
+  gate_id: result_store_score_summary_gate
+  purpose: Prepare future solved-fixture CUDA results for Stage 4P and Stage 4I surfaces.
+  input_scope: committed_stage5m_hash_records_and_future_exact_repeat_records
+  gate_status: needs_result_store_preflight
+  blockers:
+  - needs_stage5o_result_store_preflight
+  - needs_score_summary_publication_shape
+  recommendation: Use Stage 5O to prove result-store and score-summary preflight without
+    publishing generated bodies.
+  execution_permission_granted: false
+  selected_next_stage: Stage 5O - solved-fixture-safe Gematria CUDA repeat verification
+    and result-store preflight
+  selected_next_stage_reason: Stage 5M exact parity passed, but Stage 5N only approves
+    exact-repeat reporting and result-store preflight; broader solved-fixture and
+    unsolved CUDA remain blocked.
+  stage_id: stage-5n
+  additional_cuda_execution_performed: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  ci_gpu_required: false
+  cxx_launches_python_workers: false
+  solve_claim: false
+  no_gpu_ci_safe: true
+  no_solve_claim: true
+- record_type: gematria_cuda_controlled_expansion_gate_record
+  gate_record_id: stage5n-gate-03
+  gate_id: broad_solved_fixture_cuda_gate
+  purpose: Broader solved-fixture classes.
+  input_scope: broad_solved_fixture_classes
+  gate_status: blocked_broad_scope
+  blockers:
+  - controlled_expansion_not_proven
+  - result_store_integration_not_proven
+  recommendation: Keep blocked until exact-repeat and result-store preflight are complete.
+  execution_permission_granted: false
+  selected_next_stage: Stage 5O - solved-fixture-safe Gematria CUDA repeat verification
+    and result-store preflight
+  selected_next_stage_reason: Stage 5M exact parity passed, but Stage 5N only approves
+    exact-repeat reporting and result-store preflight; broader solved-fixture and
+    unsolved CUDA remain blocked.
+  stage_id: stage-5n
+  additional_cuda_execution_performed: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  ci_gpu_required: false
+  cxx_launches_python_workers: false
+  solve_claim: false
+  no_gpu_ci_safe: true
+  no_solve_claim: true
+- record_type: gematria_cuda_controlled_expansion_gate_record
+  gate_record_id: stage5n-gate-04
+  gate_id: unsolved_page_cuda_gate
+  purpose: Unsolved pages.
+  input_scope: unsolved_page_inputs
+  gate_status: blocked_unsolved
+  blockers:
+  - canonical_corpus_inactive
+  - page_boundaries_reviewable
+  - no_broad_search_approval
+  recommendation: Keep blocked; Stage 5M parity does not authorize unsolved-page CUDA.
+  execution_permission_granted: false
+  selected_next_stage: Stage 5O - solved-fixture-safe Gematria CUDA repeat verification
+    and result-store preflight
+  selected_next_stage_reason: Stage 5M exact parity passed, but Stage 5N only approves
+    exact-repeat reporting and result-store preflight; broader solved-fixture and
+    unsolved CUDA remain blocked.
+  stage_id: stage-5n
+  additional_cuda_execution_performed: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  ci_gpu_required: false
+  cxx_launches_python_workers: false
+  solve_claim: false
+  no_gpu_ci_safe: true
+  no_solve_claim: true

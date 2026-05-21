@@ -1,0 +1,44 @@
+records:
+- record_type: gematria_cuda_boundary_review_record
+  boundary_review_id: stage5n-boundary-review-00
+  source_stage_id: stage-5m
+  stage5m_scope_exact_stage5l_mapped_token_buffers_only: true
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  host_runner_only_source_modification: true
+  stage5m_executed_semantics: gematria_shift_score_only
+  non_shift_original_transform_family_semantics_validated: false
+  additional_fixture_classes_authorized: false
+  unsolved_page_cuda_authorized: false
+  boundary_status: exact_stage5m_scope_only
+  notes:
+  - Stage 5M exercises only gematria_shift_score_only.
+  - Stage 5M does not validate reverse, rotated-reverse, Vigenere, or prime-stream
+    CUDA semantics.
+  - Stage 5M does not authorize additional fixture classes without a later gate.
+  - Stage 5M does not authorize unsolved-page CUDA.
+  stage_id: stage-5n
+  additional_cuda_execution_performed: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  cuda_source_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  ci_gpu_required: false
+  cxx_launches_python_workers: false
+  solve_claim: false
+  no_gpu_ci_safe: true
+  no_solve_claim: true

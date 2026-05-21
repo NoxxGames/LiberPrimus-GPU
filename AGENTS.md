@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5M - first solved-fixture-safe Gematria shift_score CUDA parity run.
+Current completed stage: Stage 5N - solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate.
 
-Current work: Stage 5N - solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate. Stage 5N may consume Stage 5M parity and boundary records, but it must remain solved-fixture-safe, no-unsolved, no-benchmark reporting/planning work unless the prompt explicitly scopes otherwise.
+Current work: Stage 5O - solved-fixture-safe Gematria CUDA repeat verification and result-store preflight. Stage 5O may use Stage 5N's exact-repeat and result-store preflight gate, but it must remain solved-fixture-safe, no-unsolved, no-benchmark work unless the prompt explicitly scopes otherwise.
 
 Current project state:
 
@@ -81,6 +81,10 @@ Current project state:
 - Stage 5K reporting/preflight records are not CUDA execution permission.
 - Stage 5L solved-fixture token mappings are not CUDA execution permission.
 - Stage 5M solved-fixture CUDA parity is exact-scope correctness metadata only; it does not authorize broad solved-fixture expansion or unsolved-page CUDA.
+- Stage 5N controlled expansion gates are not execution permission unless the next stage explicitly scopes execution.
+- Do not report CUDA parity records as speedup/performance evidence.
+- Do not stage `codex-output/**`.
+- Completion summaries must be detailed and include parity counts, gate decisions, guardrail status, and next-stage rationale.
 - Do not invent Gematria token values, token kinds, separator metadata, score-summary fields, or output hashes.
 - Future solved-fixture-safe CUDA expansion requires explicit future-stage approval and no-unsolved guardrails.
 - Stage 5J synthetic parity does not authorize solved-page CUDA.
@@ -777,6 +781,14 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not run GPU benchmarks, report timing as performance evidence, claim speedups, expand the website, activate the canonical corpus, finalize page boundaries, or make solve claims.
 - Generated Stage 5M reports under `experiments/results/gematria-solved-fixture-cuda/stage5m/` and `codex-output/**` handoffs remain ignored and must not be staged.
 - Stage 5N may report Stage 5M parity and define controlled expansion gates; it must not silently widen CUDA execution.
+
+## Stage 5N Solved-Fixture CUDA Reporting Rules
+
+- Stage 5N reports Stage 5M parity; it must not run CUDA.
+- Stage 5N controlled expansion gates do not authorize unsolved-page CUDA, broad solved-fixture CUDA, GPU benchmarks, speedup claims, or production campaigns.
+- Exact repeat verification is the only approved future execution shape, and only if a later stage explicitly scopes it.
+- Result-store and score-summary preflight must use Stage 4P and Stage 4I contracts and keep confidence labels triage-only.
+- Generated Stage 5N reports under `experiments/results/gematria-solved-fixture-cuda-reporting/stage5n/` and `codex-output/**` handoffs remain ignored and must not be staged.
 
 ## Stage 3W State Consolidation Rules
 

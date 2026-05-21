@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/gematria-cuda-boundary-review-record-v0.schema.json",
+  "title": "Gematria CUDA Boundary Review Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "boundary_review_id",
+    "stage5m_scope_exact_stage5l_mapped_token_buffers_only",
+    "stage5m_executed_semantics",
+    "non_shift_original_transform_family_semantics_validated",
+    "additional_fixture_classes_authorized",
+    "unsolved_page_cuda_authorized",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "gematria_cuda_boundary_review_record" },
+    "boundary_review_id": { "type": "string" },
+    "stage5m_scope_exact_stage5l_mapped_token_buffers_only": { "const": true },
+    "stage5m_executed_semantics": { "const": "gematria_shift_score_only" },
+    "non_shift_original_transform_family_semantics_validated": { "const": false },
+    "additional_fixture_classes_authorized": { "const": false },
+    "unsolved_page_cuda_authorized": { "const": false },
+    "additional_cuda_execution_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "real_liber_primus_cuda_data_used": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "cuda_source_modified": { "const": false },
+    "device_kernel_arithmetic_modified": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "speedup_claim": { "const": false },
+    "raw_data_processed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false }
+  }
+}

@@ -1,0 +1,19 @@
+manifest_id: stage5n-solved-fixture-cuda-reporting
+stage_id: stage-5n
+description: Report committed Stage 5M solved-fixture-safe CUDA parity records without CUDA execution.
+cpu_only: true
+cuda_required: false
+cuda_execution_enabled: false
+gpu_benchmark_enabled: false
+raw_data_required: false
+canonical_corpus_active: false
+page_boundaries_final: false
+no_solve_claim: true
+generated_outputs_committed: false
+inputs:
+  stage5m_run_records: data/cuda/stage5m-gematria-solved-fixture-cuda-run.yaml
+  stage5m_parity_records: data/cuda/stage5m-gematria-solved-fixture-cuda-parity.yaml
+  stage5m_summary: data/cuda/stage5m-solved-fixture-cuda-parity-summary.yaml
+outputs:
+  committed: data/cuda/stage5n-gematria-solved-fixture-cuda-report.yaml
+  generated_ignored: experiments/results/gematria-solved-fixture-cuda-reporting/stage5n/parity_report.json

@@ -193,6 +193,21 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5K is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5l",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5l\b", re.IGNORECASE),
+        "Stage 5L is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
+        "stale_next_stage5m",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5m\b", re.IGNORECASE),
+        "Stage 5M is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
+        "stale_next_stage5n",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5n\b", re.IGNORECASE),
+        "Stage 5N is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -637,12 +652,22 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5n_gematria_solved_fixture_cuda_reporting_next",
+        "stage5n_gematria_solved_fixture_cuda_reporting_complete",
         "stage 5n" in staged_plan
         and "solved-fixture-safe" in staged_plan
         and "controlled expansion gate" in staged_plan
-        and "next" in staged_plan,
-        "Staged plan records Stage 5N solved-fixture-safe CUDA reporting as next.",
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5N solved-fixture-safe CUDA reporting as complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5o_gematria_solved_fixture_repeat_next",
+        "stage 5o" in staged_plan
+        and "solved-fixture-safe" in staged_plan
+        and "repeat verification" in staged_plan
+        and "result-store preflight" in staged_plan,
+        "Staged plan records Stage 5O solved-fixture-safe repeat verification and result-store preflight as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -841,6 +866,16 @@ def check_state_drift_consistency(
         and "stage 5n" in combined
         and "no new cuda kernels" in combined,
         "Stage 5M solved-fixture-safe Gematria CUDA parity boundary is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "gematria_solved_fixture_cuda_reporting_gate_policy_present",
+        "solved-fixture-safe gematria cuda parity reporting" in combined
+        and "controlled expansion gate" in combined
+        and "no-unsolved" in combined
+        and "stage 5o" in combined,
+        "Stage 5N solved-fixture-safe Gematria CUDA reporting and no-unsolved expansion gate is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

@@ -938,3 +938,16 @@ arithmetic, run real Liber Primus data through CUDA, run solved-fixture sets bey
 approval scope, run unsolved page CUDA transforms, run GPU benchmarks, claim speedups, process raw
 data, publish generated outputs, expand the website, activate the canonical corpus, finalise page
 boundaries, or claim a solve through Stage 5M records.
+
+# Stage 5N Solved-Fixture CUDA Reporting Gate
+
+Stage 5N is not a cryptanalytic experiment and not CUDA execution. It reports the Stage 5M
+CUDA/native hash matches, records controlled expansion gates, writes result-store and score-summary
+preflight records, and records no-unsolved guardrails.
+
+Generated Stage 5N reports remain ignored under
+`experiments/results/gematria-solved-fixture-cuda-reporting/stage5n/`. Do not add CUDA kernels,
+modify CUDA source, run CUDA, run real Liber Primus data through CUDA, run unsolved page CUDA
+transforms, run GPU benchmarks, claim speedups, process raw data, publish generated outputs, expand
+the website, activate the canonical corpus, finalise page boundaries, or claim a solve through
+Stage 5N records.

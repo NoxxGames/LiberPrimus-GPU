@@ -256,8 +256,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 5n", "solved-fixture-safe", "controlled expansion gate", "next"),
-            "staged_plan_stage5n_gematria_solved_fixture_cuda_reporting_next",
+            ("stage 5n", "solved-fixture-safe", "controlled expansion gate", "complete"),
+            "staged_plan_stage5n_gematria_solved_fixture_cuda_reporting_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5o", "solved-fixture-safe", "repeat verification", "result-store preflight"),
+            "staged_plan_stage5o_gematria_repeat_result_store_preflight_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -477,6 +483,7 @@ def validate_research_synthesis(
         and "stage 5l" not in next_text
         and "stage 5m" not in next_text
         and "stage 5n" not in next_text
+        and "stage 5o" not in next_text
     ):
         errors.append("cuda_build_device_detection_missing_stage5d_through_stage5j_next_action")
 
@@ -512,7 +519,8 @@ def validate_research_synthesis(
             or "stage 5k" not in evidence_text
             or "stage 5l" not in evidence_text
             or "stage 5m" not in evidence_text
-            or "stage 5n" not in next_text
+            or "stage 5n" not in evidence_text
+            or "stage 5o" not in next_text
         ):
             errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_stage5j_stage5k_transition")
 

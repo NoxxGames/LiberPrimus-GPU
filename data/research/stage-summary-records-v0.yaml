@@ -711,3 +711,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5M recorded 5 run records, attempted 5 bounded solved-fixture CUDA runs, passed 5 CUDA/native hash comparisons, skipped 0, failed 0, wrote 5 parity records and 1 boundary record, selected Stage 5N as ready, modified CUDA source only for host-runner plumbing, added 0 new kernels, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, and made no canonical-corpus, page-boundary, website-expansion, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5n
+    title: Solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate
+    status: complete
+    category: infrastructure
+    summary: Reported Stage 5M exact solved-fixture CUDA/native parity and recorded controlled expansion, result-store preflight, boundary review, and no-unsolved guardrails.
+    key_outputs:
+      - "`libreprimus gematria-solved-fixture-cuda-reporting` commands for parity report, controlled expansion gate, boundary review, result-store preflight, no-unsolved guardrail, summary, validation, and summary display."
+      - Stage 5N parity-report, controlled expansion gate, boundary-review, result-store preflight, no-unsolved guardrail, and aggregate summary records under `data/cuda/`.
+      - Controlled expansion gate status counts approving exact repeat only while blocking broad solved-fixture and unsolved-page CUDA.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5N recorded 5 parity report records, 5 gate records, 1 boundary review record, 2 result-store/score-summary preflight records, and 9 no-unsolved guardrail records. It performed no additional CUDA execution, modified no CUDA source, added 0 kernels, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus data, and made no canonical-corpus, page-boundary, website-expansion, or solve claim. The selected next stage is Stage 5O solved-fixture-safe Gematria CUDA repeat verification and result-store preflight.

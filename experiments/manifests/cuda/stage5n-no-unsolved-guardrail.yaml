@@ -1,0 +1,20 @@
+manifest_id: stage5n-no-unsolved-guardrail
+stage_id: stage-5n
+description: Record no-unsolved CUDA guardrails after Stage 5M solved-fixture-safe parity.
+cpu_only: true
+cuda_required: false
+cuda_execution_enabled: false
+gpu_benchmark_enabled: false
+raw_data_required: false
+canonical_corpus_active: false
+page_boundaries_final: false
+no_solve_claim: true
+generated_outputs_committed: false
+guardrails:
+  - canonical_corpus_inactive
+  - page_boundaries_reviewable
+  - no_raw_page_text_through_cuda
+  - no_unsolved_manifest_from_stage5m
+outputs:
+  committed: data/cuda/stage5n-gematria-no-unsolved-guardrail.yaml
+  generated_ignored: experiments/results/gematria-solved-fixture-cuda-reporting/stage5n/no_unsolved_guardrail.json

@@ -1,0 +1,58 @@
+record_type: stage5n_solved_fixture_cuda_reporting_summary
+stage_id: stage-5n
+status: complete
+parity_report_records: 5
+gate_records: 5
+boundary_review_records: 1
+result_store_preflight_records: 2
+no_unsolved_guardrail_records: 9
+stage5m_run_records: 5
+stage5m_parity_records: 5
+parity_pass_count: 5
+parity_fail_count: 0
+parity_skip_count: 0
+stage5m_exact_scope_confirmed: true
+controlled_expansion_gate_status_counts:
+  approved_for_exact_repeat_only: 1
+  blocked_broad_scope: 1
+  blocked_unsolved: 1
+  needs_candidate_selection: 1
+  needs_result_store_preflight: 1
+no_unsolved_guardrail_status_counts:
+  enforced: 9
+unsolved_page_cuda_allowed: false
+additional_cuda_execution_performed: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+gpu_benchmark_performed: false
+speedup_claim: false
+performance_claim: false
+solve_claim: false
+no_solve_claim: true
+real_liber_primus_cuda_data_used: false
+solved_fixture_cuda_used: false
+generated_outputs_committed: false
+raw_data_processed: false
+codex_output_committed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+no_gpu_ci_safe: true
+selected_next_stage: Stage 5O - solved-fixture-safe Gematria CUDA repeat verification
+  and result-store preflight
+next_stage: Stage 5O - solved-fixture-safe Gematria CUDA repeat verification and result-store
+  preflight
+selected_next_stage_reason: Stage 5M exact parity passed, but Stage 5N only approves
+  exact-repeat reporting and result-store preflight; broader solved-fixture and unsolved
+  CUDA remain blocked.
+remaining_blockers:
+- additional_solved_fixture_candidates_not_selected
+- result_store_preflight_not_executed
+- unsolved_page_cuda_blocked
+newly_discovered_blockers: []
+stage5m_does_not_authorize:
+- unsolved_page_cuda
+- real_liber_primus_page_data_cuda
+- gpu_benchmarking
+- broad_solved_fixture_classes
+- reverse_rotated_reverse_vigenere_prime_stream_cuda_semantics

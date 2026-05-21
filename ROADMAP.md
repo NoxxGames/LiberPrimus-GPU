@@ -4,9 +4,9 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5M first solved-fixture-safe Gematria shift_score CUDA parity run is complete. The stage uses the existing `gematria_mod29_shift_score_kernel` over exactly 5 Stage 5L mapped token buffers, records 5 CUDA/native hash matches, preserves no-GPU CI behavior through skip-run validation paths, adds no new CUDA kernels, changes no device arithmetic, performs no GPU benchmark, and makes no real Liber Primus CUDA data use, unsolved-page CUDA use, speedup claim, broad experiment execution, website expansion, or solve claim.
+Stage 5N solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate is complete. The stage reports the 5 Stage 5M CUDA/native hash matches, records 5 controlled expansion gate rows, 1 boundary review, 2 result-store/score-summary preflight rows, and 9 no-unsolved guardrails, while adding no CUDA execution, CUDA source changes, kernels, GPU benchmarks, speedup claims, real Liber Primus CUDA data use, unsolved-page CUDA use, broad experiment execution, website expansion, or solve claim.
 
-The next planned stage is Stage 5N: solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate. Website expansion is deferred to Stage 6. Broad CUDA implementation remains deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next planned stage is Stage 5O: solved-fixture-safe Gematria CUDA repeat verification and result-store preflight. Website expansion is deferred to Stage 6. Broad CUDA implementation remains deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.
@@ -25,7 +25,7 @@ records, Stage 4N recorded OutGuess/audio positive-control readiness, Stage 4O e
 batch adapter coverage, Stage 4P unified result-store/score-summary reporting, Stage 4Q
 recorded CPU benchmark and parity planning, Stage 5A recorded CUDA planning and parity scaffolding,
 Stage 5B recorded the CUDA parity harness skeleton, Stage 5C recorded CUDA build/device-detection
-metadata, Stage 5D recorded native C++ CPU backend/threading parity, Stage 5E selected the first future CUDA kernel contract, Stage 5F implemented the first synthetic-only CUDA parity kernel, Stage 5G completed parity reporting plus CUDA-facing source hardening, Stage 5H completed Gematria contract preparation, Stage 5I completed Gematria CUDA preparation, Stage 5J completed synthetic Gematria kernel implementation, Stage 5K completed Gematria parity reporting, Stage 5L completed solved-fixture token-mapping preparation, and Stage 5M completed the first exact solved-fixture CUDA parity run before Stage 5N.
+metadata, Stage 5D recorded native C++ CPU backend/threading parity, Stage 5E selected the first future CUDA kernel contract, Stage 5F implemented the first synthetic-only CUDA parity kernel, Stage 5G completed parity reporting plus CUDA-facing source hardening, Stage 5H completed Gematria contract preparation, Stage 5I completed Gematria CUDA preparation, Stage 5J completed synthetic Gematria kernel implementation, Stage 5K completed Gematria parity reporting, Stage 5L completed solved-fixture token-mapping preparation, Stage 5M completed the first exact solved-fixture CUDA parity run, and Stage 5N completed the reporting/controlled expansion gate before Stage 5O.
 
 ## Phase 0A - Project bootstrap
 

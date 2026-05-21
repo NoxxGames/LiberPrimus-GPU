@@ -24,3 +24,5 @@ The boundary explicitly excludes:
 The Stage 5M boundary record also captures that the CUDA source modification is host-runner-only. The device kernel arithmetic remains unchanged, and no new CUDA kernel is introduced.
 
 Future CUDA stages must cite the Stage 5M summary and boundary records before widening solved-fixture coverage. Broad CUDA acceleration remains deferred until parity and benchmark planning gates are explicit.
+
+Stage 5N boundary review preserves these limits and records that the parity pass authorizes only a future exact-repeat gate unless a later stage explicitly scopes more.

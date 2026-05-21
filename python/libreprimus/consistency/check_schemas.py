@@ -128,6 +128,12 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/gematria-solved-fixture-cuda-parity-record-v0.schema.json",
     "cuda/gematria-solved-fixture-cuda-boundary-record-v0.schema.json",
     "cuda/stage5m-solved-fixture-cuda-parity-summary-v0.schema.json",
+    "cuda/gematria-solved-fixture-cuda-report-record-v0.schema.json",
+    "cuda/gematria-cuda-controlled-expansion-gate-record-v0.schema.json",
+    "cuda/gematria-cuda-boundary-review-record-v0.schema.json",
+    "cuda/gematria-cuda-result-store-preflight-record-v0.schema.json",
+    "cuda/gematria-no-unsolved-guardrail-record-v0.schema.json",
+    "cuda/stage5n-solved-fixture-cuda-reporting-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -233,6 +239,12 @@ EXPECTED_DOC_TERMS = [
     "gematria-solved-fixture-cuda-parity-record-v0",
     "gematria-solved-fixture-cuda-boundary-record-v0",
     "stage5m-solved-fixture-cuda-parity-summary-v0",
+    "gematria-solved-fixture-cuda-report-record-v0",
+    "gematria-cuda-controlled-expansion-gate-record-v0",
+    "gematria-cuda-boundary-review-record-v0",
+    "gematria-cuda-result-store-preflight-record-v0",
+    "gematria-no-unsolved-guardrail-record-v0",
+    "stage5n-solved-fixture-cuda-reporting-summary-v0",
 ]
 
 

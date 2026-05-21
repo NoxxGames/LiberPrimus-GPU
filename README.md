@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5M first solved-fixture-safe Gematria `shift_score` CUDA parity run. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5N solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -47,7 +47,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 5N solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate.
+- Stage 5O solved-fixture-safe Gematria CUDA repeat verification and result-store preflight.
 - Website expansion is deferred to Stage 6.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
@@ -125,6 +125,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 5K Gematria shift_score CUDA parity reporting and solved-fixture-safe preflight.
 - Stage 5L solved-fixture-safe Gematria shift_score token mapping and native parity fixture preparation.
 - Stage 5M first solved-fixture-safe Gematria shift_score CUDA parity run.
+- Stage 5N solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate.
 
 ## Architecture summary
 
@@ -205,13 +206,14 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Stage 5K: Gematria shift_score CUDA parity reporting and solved-fixture-safe preflight complete.
 - Stage 5L: solved-fixture-safe Gematria shift_score token mapping and native parity fixture preparation complete.
 - Stage 5M: first solved-fixture-safe Gematria shift_score CUDA parity run complete.
+- Stage 5N: solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad search/scoring/CUDA campaigns: not started.
 - Latest CUDA kernel stage: Stage 5J wrote `1` implementation record, `1` build record, `1` synthetic parity record, and `1` summary record for `gematria_mod29_shift_score_kernel`. Local optional CUDA build and synthetic numeric parity passed with hash `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`; no real Liber Primus CUDA data, solved or unsolved page CUDA execution, GPU benchmark, speedup claim, or solve claim was added.
-- Latest Gematria solved-fixture CUDA parity stage: Stage 5M wrote `5` run records, `5` parity records, `1` boundary record, and `1` summary record. It attempted `5` exact solved-fixture-safe CUDA runs, passed `5`, failed `0`, skipped `0`, matched all Stage 5L native output-token hashes, added `0` new CUDA kernels, modified CUDA source only for host-runner plumbing, and made no benchmark, speedup, unsolved-page CUDA, real Liber Primus CUDA-data, website-expansion, canonical-corpus, page-boundary, or solve claim.
+- Latest Gematria solved-fixture CUDA reporting stage: Stage 5N wrote `5` parity report records, `5` controlled expansion gate records, `1` boundary review record, `2` result-store/score-summary preflight records, `9` no-unsolved guardrail records, and `1` summary record. It carries forward Stage 5M parity pass/fail/skip `5/0/0`, approves only exact-repeat verification for Stage 5O, blocks broad solved-fixture and unsolved-page CUDA, adds `0` new CUDA kernels, modifies no CUDA source, runs no CUDA, and makes no benchmark, speedup, real Liber Primus CUDA-data, website-expansion, canonical-corpus, page-boundary, or solve claim.
 - Latest solved-fixture mapping stage: Stage 5L wrote `5` token-mapping records, `5` native parity records, `1` output-hash contract, `1` score-summary shape, and `1` summary record. It maps all `5` candidate streams, prepares `5` native output-token hashes, and supplies Stage 5M's exact approved input set.
 - Latest bounded hash review: Stage 4G tested `4` source-backed deduplicated SHA-256 candidate byte strings against the two archived cookie/hash targets for `8` exact comparisons and found `0` exact matches; no solve claim.
 - Latest image-analysis stage: Stage 3M analysed `58` ignored local page images, producing `406` component records, `58` symmetry records, `464` bitplane records, and `71` review-only feature candidates in ignored outputs. No OCR, AI/ML interpretation, image-derived search, or solve claim is made.
@@ -248,9 +250,9 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Latest native CPU backend stage: Stage 5D wrote `1` backend capability record, `5` threading records, `1` native/Python parity record, and `1` diagnostic record. It tested thread counts `1,2,4,8,16`, produced matching one-thread and multi-thread hashes, preserved Python as orchestration, and made no CUDA source change, GPU benchmark, speedup claim, broad experiment, raw-data processing, website expansion, or solve claim.
 - Latest CUDA reporting stages: Stage 5G reports the Stage 5F `shift_score_kernel` native/CUDA synthetic hash match and Stage 5K reports the Stage 5J Gematria CUDA/native synthetic hash match. Both verify CUDA-facing device-code subset policy, record solved-fixture-safe blockers, and keep real Liber Primus CUDA data use, GPU benchmarks, speedup claims, broad execution, raw-data processing, website expansion, and solve claims out of scope.
 - Latest Gematria CUDA kernel stage: Stage 5J implements `gematria_mod29_shift_score_kernel` for the Stage 5H synthetic numeric fixture only. It shifts transformable tokens with `(token + shift) % 29`, preserves masked separator placeholders, matches the native fixture hash `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`, keeps Stage 5F uppercase Latin parity separate, and adds no real Liber Primus CUDA data use, solved/unsolved page CUDA execution, GPU benchmark, speedup claim, website expansion, or solve claim.
-- Latest Gematria solved-fixture CUDA parity stage: Stage 5M consumes Stage 5L source-backed Gematria token buffers and native output-token hashes, runs only the existing kernel over the exact approved buffers, and records all five CUDA/native hash matches.
+- Latest Gematria solved-fixture CUDA parity/reporting stage: Stage 5N reports Stage 5M's five CUDA/native hash matches, records controlled expansion gates, and keeps unsolved-page CUDA blocked.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
-- Next: Stage 5N solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate.
+- Next: Stage 5O solved-fixture-safe Gematria CUDA repeat verification and result-store preflight.
 
 ## How To Use This Repo
 

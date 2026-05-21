@@ -833,3 +833,21 @@ using `--skip-run`. Local CUDA may record the exact solved-fixture parity run wh
 must not require CUDA hardware. Tests must not add kernels, change device arithmetic, run unsolved
 page data through CUDA, run GPU benchmarks, make speedup claims, commit generated CUDA reports,
 process raw data, or publish `codex-output/**`.
+
+# Stage 5N Validation
+
+Stage 5N validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-solved-fixture-cuda-reporting validate-stage5n `
+  --parity-report data/cuda/stage5n-gematria-solved-fixture-cuda-report.yaml `
+  --controlled-expansion-gate data/cuda/stage5n-gematria-controlled-expansion-gate.yaml `
+  --boundary-review data/cuda/stage5n-gematria-cuda-boundary-review.yaml `
+  --result-store-preflight data/cuda/stage5n-gematria-cuda-result-store-preflight.yaml `
+  --no-unsolved-guardrail data/cuda/stage5n-gematria-no-unsolved-guardrail.yaml `
+  --summary data/cuda/stage5n-solved-fixture-cuda-reporting-summary.yaml `
+  --results-dir experiments/results/gematria-solved-fixture-cuda-reporting/stage5n
+```
+
+Stage 5N tests are no-GPU-safe. They must not run CUDA, add kernels, modify CUDA source, run
+unsolved data, run benchmarks, make speedup claims, stage generated reports, or stage `codex-output/**`.

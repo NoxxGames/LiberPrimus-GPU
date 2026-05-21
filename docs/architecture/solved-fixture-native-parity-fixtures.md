@@ -18,4 +18,5 @@ the token stream shape. Text rendering remains a higher-level reporting concern 
 to reinterpret a score as solve evidence.
 
 Future CUDA stages must compare GPU output tokens against these native hashes and must keep Stage
-4I confidence labels triage-only.
+4I confidence labels triage-only. Stage 5N reports the first exact Stage 5M matches and records
+that future result-store and score-summary handling still needs Stage 5O preflight.

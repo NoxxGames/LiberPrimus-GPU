@@ -22,3 +22,5 @@ The committed records are:
 Generated JSON reports stay ignored under `experiments/results/gematria-solved-fixture-cuda/stage5m/`.
 
 Stage 5M is correctness metadata only. It is not a benchmark, speedup claim, broad CUDA implementation, solve claim, canonical corpus activation, or page-boundary finalization.
+
+Stage 5N reports these exact Stage 5M records and adds controlled expansion gates. Stage 5N does not rerun CUDA and does not broaden the Stage 5M execution scope.

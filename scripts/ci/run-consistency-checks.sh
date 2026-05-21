@@ -668,6 +668,51 @@ echo "Running Stage 5M solved-fixture Gematria CUDA parity no-GPU-safe/temp outp
     --summary "$tmp_dir/stage5m-solved-fixture-cuda-parity-summary.yaml" \
     --results-dir "$tmp_dir/stage5m-gematria-solved-fixture-cuda"
 
+echo "Running Stage 5N solved-fixture Gematria CUDA reporting no-GPU-safe/temp output"
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-reporting build-parity-report \
+    --stage5m-run-records data/cuda/stage5m-gematria-solved-fixture-cuda-run.yaml \
+    --stage5m-parity-records data/cuda/stage5m-gematria-solved-fixture-cuda-parity.yaml \
+    --stage5m-summary data/cuda/stage5m-solved-fixture-cuda-parity-summary.yaml \
+    --parity-report-out "$tmp_dir/stage5n-gematria-solved-fixture-cuda-report.yaml" \
+    --out-dir "$tmp_dir/stage5n-gematria-solved-fixture-cuda-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-reporting build-controlled-expansion-gate \
+    --controlled-expansion-gate-out "$tmp_dir/stage5n-gematria-controlled-expansion-gate.yaml" \
+    --out-dir "$tmp_dir/stage5n-gematria-solved-fixture-cuda-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-reporting build-boundary-review \
+    --stage5m-summary data/cuda/stage5m-solved-fixture-cuda-parity-summary.yaml \
+    --boundary-review-out "$tmp_dir/stage5n-gematria-cuda-boundary-review.yaml" \
+    --out-dir "$tmp_dir/stage5n-gematria-solved-fixture-cuda-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-reporting build-result-store-preflight \
+    --stage4p-summary data/research/stage4p-result-store-score-summary-unification-summary.yaml \
+    --result-store-preflight-out "$tmp_dir/stage5n-gematria-cuda-result-store-preflight.yaml" \
+    --out-dir "$tmp_dir/stage5n-gematria-solved-fixture-cuda-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-reporting build-no-unsolved-guardrail \
+    --no-unsolved-guardrail-out "$tmp_dir/stage5n-gematria-no-unsolved-guardrail.yaml" \
+    --out-dir "$tmp_dir/stage5n-gematria-solved-fixture-cuda-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-reporting build-summary \
+    --parity-report "$tmp_dir/stage5n-gematria-solved-fixture-cuda-report.yaml" \
+    --controlled-expansion-gate "$tmp_dir/stage5n-gematria-controlled-expansion-gate.yaml" \
+    --boundary-review "$tmp_dir/stage5n-gematria-cuda-boundary-review.yaml" \
+    --result-store-preflight "$tmp_dir/stage5n-gematria-cuda-result-store-preflight.yaml" \
+    --no-unsolved-guardrail "$tmp_dir/stage5n-gematria-no-unsolved-guardrail.yaml" \
+    --stage5m-summary data/cuda/stage5m-solved-fixture-cuda-parity-summary.yaml \
+    --summary-out "$tmp_dir/stage5n-solved-fixture-cuda-reporting-summary.yaml" \
+    --out-dir "$tmp_dir/stage5n-gematria-solved-fixture-cuda-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-reporting validate-stage5n \
+    --parity-report "$tmp_dir/stage5n-gematria-solved-fixture-cuda-report.yaml" \
+    --controlled-expansion-gate "$tmp_dir/stage5n-gematria-controlled-expansion-gate.yaml" \
+    --boundary-review "$tmp_dir/stage5n-gematria-cuda-boundary-review.yaml" \
+    --result-store-preflight "$tmp_dir/stage5n-gematria-cuda-result-store-preflight.yaml" \
+    --no-unsolved-guardrail "$tmp_dir/stage5n-gematria-no-unsolved-guardrail.yaml" \
+    --summary "$tmp_dir/stage5n-solved-fixture-cuda-reporting-summary.yaml" \
+    --results-dir "$tmp_dir/stage5n-gematria-solved-fixture-cuda-reporting"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

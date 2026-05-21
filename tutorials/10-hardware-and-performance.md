@@ -195,3 +195,6 @@ Stage 5M records exact CUDA/native hash parity over the five Stage 5L buffers. T
 run status and CTest result as bounded correctness metadata only. It is still not a benchmark,
 speedup claim, broad CUDA implementation, or permission to run additional solved or unsolved page
 data through CUDA.
+
+Stage 5N reports the Stage 5M parity records and controlled expansion gates. It does not run CUDA
+and must not be cited as performance evidence.

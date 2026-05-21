@@ -574,3 +574,9 @@ Stage 5M may use only the existing `gematria_mod29_shift_score_kernel` over the 
 5L mapped token buffers. It must not add kernels, change device arithmetic, run real Liber Primus
 data through CUDA, run unsolved pages, publish generated reports, run benchmarks, claim speedups, or
 claim a solve.
+
+# Stage 5N CUDA Reporting Troubleshooting
+
+If Stage 5N validation fails, rebuild the reporting sequence from committed Stage 5M records and
+then run `libreprimus gematria-solved-fixture-cuda-reporting validate-stage5n`. Do not rerun CUDA,
+modify CUDA source, add kernels, or process raw data to repair a reporting-only failure.
