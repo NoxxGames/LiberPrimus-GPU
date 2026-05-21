@@ -1,0 +1,19 @@
+manifest_id: stage5s-expanded-cuda-parity-reporting
+stage_id: stage-5s
+description: Compact reporting over committed Stage 5R expanded solved-fixture CUDA parity records.
+execution_enabled: false
+cuda_execution_performed: false
+cuda_required: false
+no_gpu_ci_safe: true
+raw_data_required: false
+generated_outputs_committed: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+inputs:
+  - data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-parity.yaml
+outputs:
+  committed:
+    - data/cuda/stage5s-gematria-expanded-cuda-parity-report.yaml
+  ignored:
+    - experiments/results/gematria-expanded-cuda-result-store/stage5s/parity_report.json

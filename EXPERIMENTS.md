@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5S Expanded CUDA Result-Store Integration
+
+Stage 5S does not execute an experiment. It consumes committed Stage 5R expanded parity metadata and writes compact parity-report, result-store integration, score-summary integration, method-status impact, generated-body policy, boundary review, next-step decision, and summary records under `data/cuda/`.
+
+Generated Stage 5S reports remain ignored under `experiments/results/gematria-expanded-cuda-result-store/stage5s/`. Stage 5S must keep CUDA execution, CUDA source modification, new kernels, GPU benchmarks, speedup claims, unsolved-page CUDA, generated-result-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades to solved, and solve claims disabled.
+
 ## Stage 5R Expanded Solved-Fixture CUDA Parity
 
 Stage 5R is a bounded solved-fixture-safe parity execution, not a search experiment. It uses only

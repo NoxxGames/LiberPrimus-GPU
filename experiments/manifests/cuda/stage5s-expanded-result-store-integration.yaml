@@ -1,0 +1,25 @@
+manifest_id: stage5s-expanded-result-store-integration
+stage_id: stage-5s
+description: Compact Stage 4P and Stage 4I-compatible integration metadata for Stage 5R expanded parity.
+execution_enabled: false
+cuda_execution_performed: false
+cuda_required: false
+no_gpu_ci_safe: true
+raw_data_required: false
+generated_outputs_committed: false
+generated_body_publication_allowed: false
+method_status_upgrade_allowed: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+inputs:
+  - data/cuda/stage5s-gematria-expanded-cuda-parity-report.yaml
+outputs:
+  committed:
+    - data/cuda/stage5s-gematria-expanded-cuda-result-store-integration.yaml
+    - data/cuda/stage5s-gematria-expanded-cuda-score-summary-integration.yaml
+    - data/cuda/stage5s-gematria-expanded-cuda-method-status-impact.yaml
+    - data/cuda/stage5s-gematria-expanded-cuda-generated-body-policy.yaml
+  ignored:
+    - experiments/results/gematria-expanded-cuda-result-store/stage5s/result_store_integration_report.json
+    - experiments/results/gematria-expanded-cuda-result-store/stage5s/score_summary_integration_report.json

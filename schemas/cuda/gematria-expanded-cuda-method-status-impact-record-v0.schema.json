@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-expanded-cuda-method-status-impact-record-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "method_status_impact_id", "method_family", "impact_status", "method_status_upgrade_allowed", "method_status_upgraded", "solve_claim", "no_solve_claim"],
+  "properties": {
+    "record_type": {"const": "gematria_expanded_cuda_method_status_impact_record"},
+    "stage_id": {"const": "stage-5s"},
+    "source_stage_id": {"const": "stage-5r"},
+    "method_status_upgrade_allowed": {"const": false},
+    "method_status_upgraded": {"const": false},
+    "upgraded_to_solved": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  },
+  "additionalProperties": true
+}

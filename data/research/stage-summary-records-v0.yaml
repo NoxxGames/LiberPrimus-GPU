@@ -791,3 +791,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5R wrote 3 run records, attempted 3 bounded CUDA runs, passed 3 CUDA/native hash comparisons, skipped 0, failed 0, wrote 3 parity records, 1 boundary record, 3 result-store preflight records, 3 score-summary preflight records, and selected Stage 5S as ready. It added no CUDA kernels, modified no CUDA source, changed no device arithmetic, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, published no generated result bodies, and made no canonical-corpus, page-boundary, website-expansion, or solve claim. The selected next stage is Stage 5S expanded solved-fixture Gematria CUDA parity reporting and result-store integration.
+  - record_type: stage_summary_record
+    stage_id: stage-5s
+    title: Expanded solved-fixture Gematria CUDA parity reporting and result-store integration
+    status: complete
+    category: infrastructure
+    summary: Integrated Stage 5R expanded CUDA/native parity hashes into compact Stage 4P result-store and Stage 4I score-summary surfaces while preserving generated-body, method-status, and no-unsolved guardrails.
+    key_outputs:
+      - "`libreprimus gematria-expanded-cuda-result-store` commands for parity report, result-store integration, score-summary integration, method-status impact, generated-body policy, boundary review, next-step decision, summary, validation, and summary display."
+      - Stage 5S parity-report, result-store integration, score-summary integration, method-status impact, generated-body policy, boundary-review, next-step-decision, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/gematria-expanded-cuda-result-store/stage5s/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5S consumed 3 Stage 5R expanded parity records, wrote 3 parity-report records, 3 result-store integration records, 3 score-summary integration records, 7 method-status impact records, 4 generated-body policy records, 1 boundary review record, and 6 controlled next-step decision records. It selected Deep Research - Stage 5M-5S CUDA parity arc project review and next-direction assessment as the next prompt. It ran no CUDA, modified no CUDA source, added 0 kernels, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, published no generated result bodies, upgraded no method family to solved, and made no canonical-corpus, page-boundary, website-expansion, or solve claim.

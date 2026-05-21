@@ -19,3 +19,9 @@ Stage 5Q does not execute CUDA, modify CUDA source, add kernels, run benchmarks,
 ## Stage 5R Result
 
 Stage 5R consumed only the three Stage 5Q mapped direct-translation candidates and matched all three CUDA output-token hashes against the Stage 5Q native hashes. The Stage 5Q consumed-control and original-family blockers remain preserved; Stage 5R does not retroactively widen candidate mapping scope.
+## Stage 5S Follow-Up
+
+Stage 5S consumes only the three Stage 5Q mapped direct-translation candidates that Stage 5R ran.
+It does not reclassify the Stage 5L/5M/5O five-buffer pack as new candidates and does not unblock
+the original-family reverse/Vigenere fixtures. Remaining expansion direction is deferred to the
+Stage 5M-5S Deep Research review.

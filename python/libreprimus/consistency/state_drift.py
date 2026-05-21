@@ -228,6 +228,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5R is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5s",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5s\b", re.IGNORECASE),
+        "Stage 5S is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -724,12 +729,12 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5s_expanded_reporting_next",
+        "stage5s_expanded_reporting_complete",
         "stage 5s" in staged_plan
         and "expanded solved-fixture" in staged_plan
         and "result-store integration" in staged_plan
-        and "next" in staged_plan,
-        "Staged plan records Stage 5S reporting/result-store integration as next.",
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5S reporting/result-store integration as complete.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -978,6 +983,16 @@ def check_state_drift_consistency(
         and "exactly the three" in combined
         and "no new cuda kernels" in combined,
         "Stage 5R expanded solved-fixture CUDA parity and Stage 5S boundary are documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "gematria_expanded_cuda_result_store_policy_present",
+        "expanded cuda result-store integration" in combined
+        and "generated-body" in combined
+        and "method-status" in combined
+        and "deep research" in combined,
+        "Stage 5S expanded CUDA result-store integration and next-step policy is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

@@ -928,3 +928,25 @@ Stage 5R tests are no-GPU-safe. They cover schema guardrails, exact Stage 5Q can
 consumed-control and original-family exclusion, skipped-CUDA false-pass prevention, CUDA/native
 hash equality requirements, Stage 4P and Stage 4I preflight records, boundary guardrails, CLI
 round trips through `--skip-run`, ignored output policy, and deterministic next-stage decisions.
+
+# Stage 5S Validation
+
+Stage 5S validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-expanded-cuda-result-store validate-stage5s `
+  --parity-report data/cuda/stage5s-gematria-expanded-cuda-parity-report.yaml `
+  --result-store-integration data/cuda/stage5s-gematria-expanded-cuda-result-store-integration.yaml `
+  --score-summary-integration data/cuda/stage5s-gematria-expanded-cuda-score-summary-integration.yaml `
+  --method-status-impact data/cuda/stage5s-gematria-expanded-cuda-method-status-impact.yaml `
+  --generated-body-policy data/cuda/stage5s-gematria-expanded-cuda-generated-body-policy.yaml `
+  --boundary-review data/cuda/stage5s-gematria-expanded-cuda-boundary-review.yaml `
+  --next-step-decision data/cuda/stage5s-gematria-expanded-cuda-next-step-decision.yaml `
+  --summary data/cuda/stage5s-expanded-cuda-result-store-integration-summary.yaml `
+  --results-dir experiments/results/gematria-expanded-cuda-result-store/stage5s
+```
+
+Stage 5S tests are no-GPU-safe. They cover schema guardrails, exact three-record integration,
+Stage 4P/Stage 4I compatibility, generated-body policy, method-status non-upgrade rules,
+boundary review, deterministic Deep Research next-step selection, CLI round trips, and ignore
+policy for generated reports, raw data, SQLite, and `codex-output/`.

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-expanded-cuda-result-store-integration-record-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "result_store_integration_id", "result_source_kind", "fixture_id", "candidate_id", "stage4p_compatibility", "compact_summary_only", "generated_body_publication_allowed", "method_status_upgrade_allowed", "cuda_execution_performed", "solve_claim", "no_solve_claim"],
+  "properties": {
+    "record_type": {"const": "gematria_expanded_cuda_result_store_integration_record"},
+    "stage_id": {"const": "stage-5s"},
+    "source_stage_id": {"const": "stage-5r"},
+    "result_source_kind": {"const": "expanded_solved_fixture_safe_cuda_parity"},
+    "stage4p_compatibility": {"const": true},
+    "compact_summary_only": {"const": true},
+    "generated_body_publication_allowed": {"const": false},
+    "generated_body_committed": {"const": false},
+    "method_status_upgrade_allowed": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  },
+  "additionalProperties": true
+}

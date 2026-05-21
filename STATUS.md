@@ -2,7 +2,15 @@
 
 ## Current stage
 
-Stage 5R controlled expanded solved-fixture-safe Gematria shift_score CUDA parity is complete. Next planned stage: Stage 5S expanded solved-fixture Gematria CUDA parity reporting and result-store integration. Website expansion is deferred to Stage 6.
+Stage 5S expanded solved-fixture Gematria CUDA parity reporting and result-store integration is complete. Next recommended prompt: Deep Research - Stage 5M-5S CUDA parity arc project review and next-direction assessment. Website expansion is deferred to Stage 6.
+
+## Completed in Stage 5S
+
+Stage 5S added the `libreprimus gematria-expanded-cuda-result-store` CLI, expanded CUDA parity-report/result-store/score-summary/method-status/generated-body/boundary/next-step schemas, Stage 5S manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
+
+Local Stage 5S summary: source Stage 5R records consumed `3`, parity report records `3`, result-store integration records `3`, score-summary integration records `3`, method-status impact records `7`, generated-body policy records `4`, boundary review records `1`, controlled next-step decision records `6`, Stage 4P compatibility `true`, Stage 4I compatibility `true`, generated body publication allowed `false`, method status upgrade allowed `false`, Deep Research recommended `true`, selected next prompt `Deep Research - Stage 5M-5S CUDA parity arc project review and next-direction assessment`, CUDA execution performed `false`, CUDA source modified `false`, new CUDA kernels added `0`, unsolved-page CUDA used `false`, real Liber Primus CUDA data used `false`, GPU benchmark performed `false`, speedup/performance assertions `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5S is compact metadata integration only. It consumes the Stage 5R expanded parity matches for `p57-parable`, `some-wisdom`, and `the-loss-of-divinity`, records hashes and integration metadata, keeps Stage 5L/5M/5O consumed controls separate, keeps Stage 5Q blocked original-family fixtures blocked, publishes no generated CUDA result bodies, does not upgrade method families to solved, does not run CUDA, does not add or modify CUDA source, does not add kernels, does not run benchmarks, does not process raw data, does not expand the website, and makes no solve claim.
 
 ## Completed in Stage 5R
 
@@ -78,7 +86,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5R closes the controlled expanded solved-fixture CUDA parity step for three additional direct-translation candidates only; all reporting integration, broad solved-fixture CUDA expansion, and unsolved-page CUDA use still require future explicit stages.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5S closes compact reporting and integration for the three Stage 5R expanded direct-translation candidate parity matches only; further solved-fixture CUDA expansion, original-transform-family CUDA contracts, GPU benchmarking, and unsolved-page CUDA use still require future explicit stages.
 
 ## Completed in Stage 5J
 

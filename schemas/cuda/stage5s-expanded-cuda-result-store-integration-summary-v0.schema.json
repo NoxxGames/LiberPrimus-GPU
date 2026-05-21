@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/stage5s-expanded-cuda-result-store-integration-summary-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "status", "source_stage5r_records_consumed", "parity_report_records", "result_store_integration_records", "score_summary_integration_records", "method_status_impact_records", "generated_body_policy_records", "boundary_review_records", "controlled_next_step_decision_records", "stage4p_compatibility", "stage4i_compatibility", "deep_research_recommended", "selected_next_prompt", "cuda_execution_performed", "solve_claim", "no_solve_claim"],
+  "properties": {
+    "record_type": {"const": "stage5s_expanded_cuda_result_store_integration_summary"},
+    "stage_id": {"const": "stage-5s"},
+    "source_stage_id": {"const": "stage-5r"},
+    "status": {"const": "complete"},
+    "stage4p_compatibility": {"const": true},
+    "stage4i_compatibility": {"const": true},
+    "generated_body_publication_allowed": {"const": false},
+    "method_status_upgrade_allowed": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "cuda_source_modified": {"const": false},
+    "new_cuda_kernels_added": {"const": 0},
+    "unsolved_page_cuda_used": {"const": false},
+    "real_liber_primus_cuda_data_used": {"const": false},
+    "gpu_benchmark_performed": {"const": false},
+    "speedup_claim": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  },
+  "additionalProperties": true
+}

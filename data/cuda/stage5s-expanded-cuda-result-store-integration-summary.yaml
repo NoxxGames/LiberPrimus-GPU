@@ -1,0 +1,56 @@
+record_type: stage5s_expanded_cuda_result_store_integration_summary
+schema: schemas/cuda/stage5s-expanded-cuda-result-store-integration-summary-v0.schema.json
+status: complete
+source_stage5r_records_consumed: 3
+parity_report_records: 3
+result_store_integration_records: 3
+score_summary_integration_records: 3
+method_status_impact_records: 7
+generated_body_policy_records: 4
+boundary_review_records: 1
+controlled_next_step_decision_records: 6
+stage4p_compatibility: true
+stage4i_compatibility: true
+generated_body_publication_allowed: false
+method_status_upgrade_allowed: false
+selected_next_prompt: Deep Research - Stage 5M-5S CUDA parity arc project review and
+  next-direction assessment
+selected_next_stage_reason: Stage 5S integration succeeded after synthetic parity,
+  exact solved-fixture parity, repeat verification, compact result-store integration,
+  candidate mapping, and expanded parity; remaining choices are strategic.
+deep_research_recommended: true
+deep_research_recommendation_reason: Stage 5S integration succeeded after synthetic
+  parity, exact solved-fixture parity, repeat verification, compact result-store integration,
+  candidate mapping, and expanded parity; remaining choices are strategic.
+remaining_blockers: []
+newly_discovered_blockers: []
+source_stage5r_cuda_attempted_count: 3
+source_stage5r_parity_pass_count: 3
+codex_output_written: false
+stage_id: stage-5s
+source_stage_id: stage-5r
+result_source_kind: expanded_solved_fixture_safe_cuda_parity
+compact_summary_only: true
+generated_outputs_committed: false
+raw_data_processed: false
+codex_output_committed: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+cuda_execution_performed: false
+additional_cuda_execution_performed: false
+unsolved_page_cuda_used: false
+real_liber_primus_cuda_data_used: false
+solved_fixture_cuda_used: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+method_status_upgraded: false
+solve_claim: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+no_gpu_ci_safe: true
+local_16gb_profile_required: false
+ci_gpu_required: false
+cxx_launches_python_workers: false

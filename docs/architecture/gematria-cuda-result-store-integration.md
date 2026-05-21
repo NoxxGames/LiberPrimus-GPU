@@ -17,3 +17,5 @@ solved-fixture-safe candidates for future bounded `shift_score` parity. The Stag
 five-buffer pack remains a consumed control and is excluded from new candidate counts.
 
 Stage 5R follow-up: expanded solved-fixture CUDA parity now produces three compact preflight rows for Stage 5S result-store integration. Generated CUDA output bodies remain ignored and parity success still cannot upgrade method-family status to solved.
+
+Stage 5S follow-up: those three Stage 5R preflight rows are now integrated into compact Stage 4P-compatible result-store records and Stage 4I-compatible score-summary records. Stage 5S records no generated-body publication, no method-status upgrade, no CUDA execution, no CUDA source change, no benchmark, and no solve claim.

@@ -587,5 +587,13 @@ experiments/results/gematria-expanded-solved-fixture-cuda/**
 !experiments/results/gematria-expanded-solved-fixture-cuda/stage5r/
 !experiments/results/gematria-expanded-solved-fixture-cuda/stage5r/.gitkeep
 
+# Generated expanded Gematria CUDA result-store integration outputs
+experiments/results/gematria-expanded-cuda-result-store/**
+!experiments/results/gematria-expanded-cuda-result-store/
+!experiments/results/gematria-expanded-cuda-result-store/README.md
+!experiments/results/gematria-expanded-cuda-result-store/.gitkeep
+!experiments/results/gematria-expanded-cuda-result-store/stage5s/
+!experiments/results/gematria-expanded-cuda-result-store/stage5s/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5R - controlled expanded solved-fixture-safe Gematria shift_score CUDA parity.
+Current completed stage: Stage 5S - expanded solved-fixture Gematria CUDA parity reporting and result-store integration.
 
-Current work: Stage 5S - expanded solved-fixture Gematria CUDA parity reporting and result-store integration. Stage 5S may report and integrate only the compact Stage 5R metadata unless a later prompt explicitly scopes additional records; it must remain no-unsolved, no-benchmark, no-generated-body-publication work unless the prompt explicitly scopes otherwise.
+Current work: Deep Research - Stage 5M-5S CUDA parity arc project review and next-direction assessment. Stage 5S integrated only compact Stage 5R metadata and did not authorize unsolved-page CUDA, benchmarking, generated-body publication, method-status upgrades, or website expansion.
 
 Current project state:
 
@@ -68,7 +68,7 @@ Current project state:
 - Page boundaries: reviewable.
 - Broad unsolved-page campaigns: not started.
 - CUDA: deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
-- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel`, Stage 5M host-runner plumbing for exact solved-fixture parity, Stage 5O repeat verification metadata, Stage 5P result-store integration metadata, Stage 5Q expansion candidate metadata, and Stage 5R controlled expanded solved-fixture parity metadata only unless code and tests say otherwise.
+- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel`, Stage 5M host-runner plumbing for exact solved-fixture parity, Stage 5O repeat verification metadata, Stage 5P result-store integration metadata, Stage 5Q expansion candidate metadata, Stage 5R controlled expanded solved-fixture parity metadata, and Stage 5S compact integration/reporting metadata only unless code and tests say otherwise.
 - Stage 5C CUDA build/device metadata is readiness infrastructure only; no-GPU CI, compatibility 8GB, and optional local 16GB profiles must remain explicit and smoke-build status is not parity or performance evidence.
 - Stage 5D native CPU backend records are readiness infrastructure only; C++ must remain a deterministic CPU execution plane, Python remains orchestration, and diagnostic timings are not speedup claims.
 - Do not let C++ launch Python worker scripts.
@@ -90,6 +90,13 @@ Current project state:
 - Stage 5R must not execute Stage 5L/5M/5O consumed controls as new candidates, blocked original-family fixtures, unsolved pages, raw page text, canonical corpus input, benchmarks, or broad solved-fixture campaigns.
 - Stage 5R parity is correctness metadata only, not performance evidence or solve evidence, and must not publish generated CUDA result bodies.
 - Stage 5R completion summaries must include run counts, hash tables, boundary/guardrail status, and next-stage rationale.
+- Stage 5S is compact result-store integration, not CUDA execution.
+- Stage 5S must not publish generated CUDA result bodies.
+- Stage 5S must not upgrade any method family to solved.
+- Stage 5S must not treat Stage 5R parity as performance evidence.
+- Stage 5S must keep consumed controls and blocked original-family fixtures distinct from the three Stage 5R expanded direct-translation fixtures.
+- Stage 5S must not run unsolved pages, raw page text, canonical corpus input, benchmarks, or broad solved-fixture campaigns.
+- Stage 5S completion summaries must include integration counts, per-fixture hash table, boundary/guardrail status, and next-stage rationale.
 - Do not report CUDA parity records as speedup/performance evidence.
 - Do not stage `codex-output/**`.
 - Completion summaries must be detailed and include parity counts, gate decisions, guardrail status, and next-stage rationale.

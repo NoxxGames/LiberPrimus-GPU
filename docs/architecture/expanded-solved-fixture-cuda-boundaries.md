@@ -12,3 +12,10 @@ Boundary records must show:
 - no generated result body, raw data, or `codex-output/**` file is committed.
 
 Parity success can move the work to compact Stage 5S reporting and result-store integration. It cannot widen CUDA scope or upgrade any method family to solved.
+## Stage 5S Boundary Follow-Up
+
+Stage 5S preserves the Stage 5R boundary as reporting metadata. It confirms the exact approved
+scope, keeps Stage 5L/5M/5O consumed controls excluded, keeps blocked original-family fixtures
+blocked, and records no unsolved-page CUDA, real Liber Primus CUDA data, benchmark, speedup,
+generated-body publication, canonical-corpus activation, page-boundary finalisation, or solve
+claim.

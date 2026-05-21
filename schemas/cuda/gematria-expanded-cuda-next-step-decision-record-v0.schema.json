@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-expanded-cuda-next-step-decision-record-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "next_step_decision_id", "decision_class", "decision_status", "selected", "deep_research_recommended", "cuda_execution_performed", "solve_claim", "no_solve_claim"],
+  "properties": {
+    "record_type": {"const": "gematria_expanded_cuda_next_step_decision_record"},
+    "stage_id": {"const": "stage-5s"},
+    "source_stage_id": {"const": "stage-5r"},
+    "decision_class": {"enum": ["additional_solved_fixture_shift_score_candidate_mapping", "expanded_parity_exact_repeat", "original_transform_family_cuda_contract_review", "deep_research_project_review", "unsolved_page_cuda", "broad_solved_fixture_cuda_campaign"]},
+    "cuda_execution_performed": {"const": false},
+    "unsolved_page_cuda_used": {"const": false},
+    "gpu_benchmark_performed": {"const": false},
+    "speedup_claim": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  },
+  "additionalProperties": true
+}

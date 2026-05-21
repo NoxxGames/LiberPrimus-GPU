@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-expanded-cuda-score-summary-integration-record-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "score_summary_integration_id", "fixture_id", "scorer_contract", "confidence_label", "confidence_interpretation", "score_or_label_status", "solve_claim", "no_solve_claim"],
+  "properties": {
+    "record_type": {"const": "gematria_expanded_cuda_score_summary_integration_record"},
+    "stage_id": {"const": "stage-5s"},
+    "source_stage_id": {"const": "stage-5r"},
+    "scorer_contract": {"const": "stage4i"},
+    "confidence_label": {"enum": ["positive_control_like", "plausible_lead", "weak_lead", "noisy", "inconclusive", "garbage", "negative_control_like", "scoring_not_available", "calibration_not_available"]},
+    "confidence_interpretation": {"const": "triage_only"},
+    "method_status_upgrade_allowed": {"const": false},
+    "generated_body_publication_allowed": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "performance_claim": {"const": false},
+    "speedup_claim": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  },
+  "additionalProperties": true
+}

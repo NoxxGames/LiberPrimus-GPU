@@ -50,6 +50,7 @@ git check-ignore -v experiments/results/gematria-solved-fixture-cuda/stage5m/sum
 git check-ignore -v experiments/results/gematria-solved-fixture-cuda-repeat/stage5o/summary.json
 git check-ignore -v experiments/results/gematria-cuda-result-store/stage5p/summary.json
 git check-ignore -v experiments/results/gematria-expansion-candidate-mapping/stage5q/summary.json
+git check-ignore -v experiments/results/gematria-expanded-cuda-result-store/stage5s/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
@@ -57,6 +58,7 @@ git check-ignore -v codex-output/stage5g-codex-completion.md
 git check-ignore -v codex-output/stage5l-codex-completion.md
 git check-ignore -v codex-output/stage5m-codex-completion.md
 git check-ignore -v codex-output/stage5p-codex-completion.md
+git check-ignore -v codex-output/stage5s-codex-completion.md
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```

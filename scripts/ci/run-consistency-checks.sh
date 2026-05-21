@@ -910,6 +910,62 @@ echo "Running Stage 5R expanded solved-fixture CUDA parity no-GPU-safe/temp outp
     --summary "$tmp_dir/stage5r-expanded-solved-fixture-cuda-parity-summary.yaml" \
     --results-dir "$tmp_dir/stage5r-gematria-expanded-solved-fixture-cuda"
 
+echo "Running Stage 5S expanded CUDA result-store integration temp output"
+"$python_bin" -m libreprimus.cli gematria-expanded-cuda-result-store build-parity-report \
+    --stage5r-parity "$tmp_dir/stage5r-gematria-expanded-solved-fixture-cuda-parity.yaml" \
+    --stage5r-run "$tmp_dir/stage5r-gematria-expanded-solved-fixture-cuda-run.yaml" \
+    --parity-report-out "$tmp_dir/stage5s-gematria-expanded-cuda-parity-report.yaml" \
+    --out-dir "$tmp_dir/stage5s-gematria-expanded-cuda-result-store" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expanded-cuda-result-store build-result-store-integration \
+    --parity-report "$tmp_dir/stage5s-gematria-expanded-cuda-parity-report.yaml" \
+    --result-store-integration-out "$tmp_dir/stage5s-gematria-expanded-cuda-result-store-integration.yaml" \
+    --out-dir "$tmp_dir/stage5s-gematria-expanded-cuda-result-store" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expanded-cuda-result-store build-score-summary-integration \
+    --result-store-integration "$tmp_dir/stage5s-gematria-expanded-cuda-result-store-integration.yaml" \
+    --score-summary-integration-out "$tmp_dir/stage5s-gematria-expanded-cuda-score-summary-integration.yaml" \
+    --out-dir "$tmp_dir/stage5s-gematria-expanded-cuda-result-store" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expanded-cuda-result-store build-method-status-impact \
+    --method-status-impact-out "$tmp_dir/stage5s-gematria-expanded-cuda-method-status-impact.yaml" \
+    --out-dir "$tmp_dir/stage5s-gematria-expanded-cuda-result-store" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expanded-cuda-result-store build-generated-body-policy \
+    --generated-body-policy-out "$tmp_dir/stage5s-gematria-expanded-cuda-generated-body-policy.yaml" \
+    --out-dir "$tmp_dir/stage5s-gematria-expanded-cuda-result-store" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expanded-cuda-result-store build-boundary-review \
+    --boundary-review-out "$tmp_dir/stage5s-gematria-expanded-cuda-boundary-review.yaml" \
+    --out-dir "$tmp_dir/stage5s-gematria-expanded-cuda-result-store" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expanded-cuda-result-store build-next-step-decision \
+    --next-step-decision-out "$tmp_dir/stage5s-gematria-expanded-cuda-next-step-decision.yaml" \
+    --out-dir "$tmp_dir/stage5s-gematria-expanded-cuda-result-store" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expanded-cuda-result-store build-summary \
+    --parity-report "$tmp_dir/stage5s-gematria-expanded-cuda-parity-report.yaml" \
+    --result-store-integration "$tmp_dir/stage5s-gematria-expanded-cuda-result-store-integration.yaml" \
+    --score-summary-integration "$tmp_dir/stage5s-gematria-expanded-cuda-score-summary-integration.yaml" \
+    --method-status-impact "$tmp_dir/stage5s-gematria-expanded-cuda-method-status-impact.yaml" \
+    --generated-body-policy "$tmp_dir/stage5s-gematria-expanded-cuda-generated-body-policy.yaml" \
+    --boundary-review "$tmp_dir/stage5s-gematria-expanded-cuda-boundary-review.yaml" \
+    --next-step-decision "$tmp_dir/stage5s-gematria-expanded-cuda-next-step-decision.yaml" \
+    --stage5r-summary "$tmp_dir/stage5r-expanded-solved-fixture-cuda-parity-summary.yaml" \
+    --summary-out "$tmp_dir/stage5s-expanded-cuda-result-store-integration-summary.yaml" \
+    --out-dir "$tmp_dir/stage5s-gematria-expanded-cuda-result-store" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expanded-cuda-result-store validate-stage5s \
+    --parity-report "$tmp_dir/stage5s-gematria-expanded-cuda-parity-report.yaml" \
+    --result-store-integration "$tmp_dir/stage5s-gematria-expanded-cuda-result-store-integration.yaml" \
+    --score-summary-integration "$tmp_dir/stage5s-gematria-expanded-cuda-score-summary-integration.yaml" \
+    --method-status-impact "$tmp_dir/stage5s-gematria-expanded-cuda-method-status-impact.yaml" \
+    --generated-body-policy "$tmp_dir/stage5s-gematria-expanded-cuda-generated-body-policy.yaml" \
+    --boundary-review "$tmp_dir/stage5s-gematria-expanded-cuda-boundary-review.yaml" \
+    --next-step-decision "$tmp_dir/stage5s-gematria-expanded-cuda-next-step-decision.yaml" \
+    --summary "$tmp_dir/stage5s-expanded-cuda-result-store-integration-summary.yaml" \
+    --results-dir "$tmp_dir/stage5s-gematria-expanded-cuda-result-store"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

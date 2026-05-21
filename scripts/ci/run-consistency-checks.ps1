@@ -1038,6 +1038,71 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5RSummary `
         --results-dir $Stage5ROut
 
+    Write-Host "Running Stage 5S expanded CUDA result-store integration temp output"
+    $Stage5SOut = Join-Path $TempDir "stage5s-gematria-expanded-cuda-result-store"
+    $Stage5SParity = Join-Path $TempDir "stage5s-gematria-expanded-cuda-parity-report.yaml"
+    $Stage5SResultStore = Join-Path $TempDir "stage5s-gematria-expanded-cuda-result-store-integration.yaml"
+    $Stage5SScore = Join-Path $TempDir "stage5s-gematria-expanded-cuda-score-summary-integration.yaml"
+    $Stage5SMethod = Join-Path $TempDir "stage5s-gematria-expanded-cuda-method-status-impact.yaml"
+    $Stage5SPolicy = Join-Path $TempDir "stage5s-gematria-expanded-cuda-generated-body-policy.yaml"
+    $Stage5SBoundary = Join-Path $TempDir "stage5s-gematria-expanded-cuda-boundary-review.yaml"
+    $Stage5SDecision = Join-Path $TempDir "stage5s-gematria-expanded-cuda-next-step-decision.yaml"
+    $Stage5SSummary = Join-Path $TempDir "stage5s-expanded-cuda-result-store-integration-summary.yaml"
+    & $Python -m libreprimus.cli gematria-expanded-cuda-result-store build-parity-report `
+        --stage5r-parity $Stage5RParity `
+        --stage5r-run $Stage5RRun `
+        --parity-report-out $Stage5SParity `
+        --out-dir $Stage5SOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-cuda-result-store build-result-store-integration `
+        --parity-report $Stage5SParity `
+        --result-store-integration-out $Stage5SResultStore `
+        --out-dir $Stage5SOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-cuda-result-store build-score-summary-integration `
+        --result-store-integration $Stage5SResultStore `
+        --score-summary-integration-out $Stage5SScore `
+        --out-dir $Stage5SOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-cuda-result-store build-method-status-impact `
+        --method-status-impact-out $Stage5SMethod `
+        --out-dir $Stage5SOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-cuda-result-store build-generated-body-policy `
+        --generated-body-policy-out $Stage5SPolicy `
+        --out-dir $Stage5SOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-cuda-result-store build-boundary-review `
+        --boundary-review-out $Stage5SBoundary `
+        --out-dir $Stage5SOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-cuda-result-store build-next-step-decision `
+        --next-step-decision-out $Stage5SDecision `
+        --out-dir $Stage5SOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-cuda-result-store build-summary `
+        --parity-report $Stage5SParity `
+        --result-store-integration $Stage5SResultStore `
+        --score-summary-integration $Stage5SScore `
+        --method-status-impact $Stage5SMethod `
+        --generated-body-policy $Stage5SPolicy `
+        --boundary-review $Stage5SBoundary `
+        --next-step-decision $Stage5SDecision `
+        --stage5r-summary $Stage5RSummary `
+        --summary-out $Stage5SSummary `
+        --out-dir $Stage5SOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-cuda-result-store validate-stage5s `
+        --parity-report $Stage5SParity `
+        --result-store-integration $Stage5SResultStore `
+        --score-summary-integration $Stage5SScore `
+        --method-status-impact $Stage5SMethod `
+        --generated-body-policy $Stage5SPolicy `
+        --boundary-review $Stage5SBoundary `
+        --next-step-decision $Stage5SDecision `
+        --summary $Stage5SSummary `
+        --results-dir $Stage5SOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

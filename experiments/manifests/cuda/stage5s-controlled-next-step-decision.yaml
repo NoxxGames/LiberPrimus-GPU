@@ -1,0 +1,20 @@
+manifest_id: stage5s-controlled-next-step-decision
+stage_id: stage-5s
+description: Deterministic next-step decision after Stage 5M through Stage 5S CUDA parity arc.
+execution_enabled: false
+cuda_execution_performed: false
+cuda_required: false
+no_gpu_ci_safe: true
+raw_data_required: false
+generated_outputs_committed: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+default_decision: Deep Research - Stage 5M-5S CUDA parity arc project review and next-direction assessment
+outputs:
+  committed:
+    - data/cuda/stage5s-gematria-expanded-cuda-next-step-decision.yaml
+    - data/cuda/stage5s-expanded-cuda-result-store-integration-summary.yaml
+  ignored:
+    - experiments/results/gematria-expanded-cuda-result-store/stage5s/controlled_next_step_decision.json
+    - experiments/results/gematria-expanded-cuda-result-store/stage5s/summary.json
