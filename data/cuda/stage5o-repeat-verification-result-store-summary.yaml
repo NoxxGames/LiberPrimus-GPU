@@ -1,0 +1,103 @@
+record_type: stage5o_repeat_verification_result_store_summary
+stage_id: stage-5o
+status: complete
+implemented_kernel_name: gematria_mod29_shift_score_kernel
+executed_kernel: gematria_mod29_shift_score_kernel
+source_contract_id: gematria_mod29_shift_score_contract_v0
+executed_semantics: gematria_shift_score_only
+stage5m_run_records: 5
+stage5m_parity_pass_count: 5
+stage5n_gate_next_stage: Stage 5O - solved-fixture-safe Gematria CUDA repeat verification
+  and result-store preflight
+repeat_run_records: 5
+repeat_cuda_attempted_count: 5
+repeat_cuda_pass_count: 5
+repeat_cuda_fail_count: 0
+repeat_cuda_skip_count: 0
+repeat_parity_records: 5
+repeat_parity_pass_count: 5
+repeat_parity_fail_count: 0
+repeat_parity_skip_count: 0
+stage5l_native_hash_match_count: 5
+stage5m_cuda_hash_match_count: 5
+result_store_preflight_records: 3
+result_store_preflight_ready_count: 1
+score_summary_preflight_records: 1
+score_summary_preflight_ready_count: 1
+expansion_decision_records: 1
+expansion_decision_status_counts:
+  stage5p_ready: 1
+result_store_preflight_status_counts:
+  blocked_generated_body_publication: 1
+  blocked_unsolved_scope: 1
+  ready_for_stage5p_compact_summary_integration: 1
+score_summary_shape_status_counts:
+  ready_for_stage5p_compact_summary_integration: 1
+stage5p_ready: true
+selected_next_stage: Stage 5P - controlled solved-fixture CUDA result-store integration
+next_stage: Stage 5P - controlled solved-fixture CUDA result-store integration
+selected_next_stage_reason: All five exact repeat hashes match Stage 5L native and
+  Stage 5M CUDA hashes, and compact preflight is ready.
+remaining_blockers: []
+output_hash_algorithm: sha256_canonical_json_v1
+score_summary_contract: stage4i
+per_fixture_repeat_parity:
+- mapping_id: stage5h-solved-fixture-safe-mapping-00
+  fixture_id: an-instruction-direct
+  stage5l_native_hash: 15e9cd2c89b41241e3a858484e63f61a270fefb4950b18feaf96a9bdef41667e
+  stage5m_cuda_hash: 15e9cd2c89b41241e3a858484e63f61a270fefb4950b18feaf96a9bdef41667e
+  stage5o_repeat_cuda_hash: 15e9cd2c89b41241e3a858484e63f61a270fefb4950b18feaf96a9bdef41667e
+  status: passed
+- mapping_id: stage5h-solved-fixture-safe-mapping-01
+  fixture_id: a-warning
+  stage5l_native_hash: 9625e3680d0556df7aee7287b0ef99693e30077737237d86e8e834a779a59969
+  stage5m_cuda_hash: 9625e3680d0556df7aee7287b0ef99693e30077737237d86e8e834a779a59969
+  stage5o_repeat_cuda_hash: 9625e3680d0556df7aee7287b0ef99693e30077737237d86e8e834a779a59969
+  status: passed
+- mapping_id: stage5h-solved-fixture-safe-mapping-02
+  fixture_id: an-instruction-rotated
+  stage5l_native_hash: 2a095a8effb25fcaf6e2646aff408bad2e8c6b6112344ffcf473f431c566e443
+  stage5m_cuda_hash: 2a095a8effb25fcaf6e2646aff408bad2e8c6b6112344ffcf473f431c566e443
+  stage5o_repeat_cuda_hash: 2a095a8effb25fcaf6e2646aff408bad2e8c6b6112344ffcf473f431c566e443
+  status: passed
+- mapping_id: stage5h-solved-fixture-safe-mapping-03
+  fixture_id: welcome-divinity
+  stage5l_native_hash: 0ae3f3cd98a3393e9361ca63ca404b23b390075b019108baab9094b73e202f27
+  stage5m_cuda_hash: 0ae3f3cd98a3393e9361ca63ca404b23b390075b019108baab9094b73e202f27
+  stage5o_repeat_cuda_hash: 0ae3f3cd98a3393e9361ca63ca404b23b390075b019108baab9094b73e202f27
+  status: passed
+- mapping_id: stage5h-solved-fixture-safe-mapping-04
+  fixture_id: p56-an-end-prime-minus-one
+  stage5l_native_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  stage5m_cuda_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  stage5o_repeat_cuda_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  status: passed
+solved_fixture_cuda_execution_allowed: true
+solved_fixture_cuda_execution_scope: exact_stage5l_mapped_token_buffers_only
+additional_cuda_execution_scope: exact_stage5m_repeat_only
+cuda_execution_performed: true
+solved_fixture_cuda_used: true
+additional_cuda_execution_performed: true
+unsolved_page_cuda_used: false
+real_liber_primus_cuda_data_used: false
+real_liber_primus_data_used: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+device_kernel_arithmetic_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+performance_or_speedup_claims: false
+broad_experiment_executed: false
+raw_data_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+website_expansion: false
+canonical_corpus_active: false
+page_boundaries_final: false
+ci_gpu_required: false
+no_gpu_ci_safe: true
+cxx_launches_python_workers: false
+no_solve_claim: true
+solve_claim: false

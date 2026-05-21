@@ -24,3 +24,5 @@ Generated JSON reports stay ignored under `experiments/results/gematria-solved-f
 Stage 5M is correctness metadata only. It is not a benchmark, speedup claim, broad CUDA implementation, solve claim, canonical corpus activation, or page-boundary finalization.
 
 Stage 5N reports these exact Stage 5M records and adds controlled expansion gates. Stage 5N does not rerun CUDA and does not broaden the Stage 5M execution scope.
+
+Stage 5O repeats only the exact Stage 5M five-buffer pack and compares repeat hashes against both Stage 5L native and Stage 5M CUDA hashes. It does not add kernels, modify CUDA source, benchmark, or permit unsolved-page CUDA.

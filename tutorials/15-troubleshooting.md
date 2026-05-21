@@ -47,6 +47,7 @@ git check-ignore -v experiments/results/native-cpu/stage5d/summary.json
 git check-ignore -v experiments/results/cuda-kernel/stage5f/summary.json
 git check-ignore -v experiments/results/gematria-solved-fixture-mapping/stage5l/summary.json
 git check-ignore -v experiments/results/gematria-solved-fixture-cuda/stage5m/summary.json
+git check-ignore -v experiments/results/gematria-solved-fixture-cuda-repeat/stage5o/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
@@ -199,8 +200,8 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 5M, onboarding and staged-plan checks should show Stage 5M complete and Stage 5N
-solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate next.
+After Stage 5O, onboarding and staged-plan checks should show Stage 5O complete and Stage 5P
+controlled solved-fixture CUDA result-store integration next.
 
 If path sanitisation fails, run:
 
@@ -580,3 +581,11 @@ claim a solve.
 If Stage 5N validation fails, rebuild the reporting sequence from committed Stage 5M records and
 then run `libreprimus gematria-solved-fixture-cuda-reporting validate-stage5n`. Do not rerun CUDA,
 modify CUDA source, add kernels, or process raw data to repair a reporting-only failure.
+
+# Stage 5O CUDA Repeat Troubleshooting
+
+If Stage 5O validation fails, rebuild the repeat records from committed Stage 5M/5L records and
+rerun `libreprimus gematria-solved-fixture-cuda-repeat validate-stage5o`. CI/temp repair paths
+should use `run-repeat-verification --skip-run`; local CUDA repeat runs may only use the exact
+Stage 5M five-buffer pack. Do not add kernels, modify CUDA source, run benchmarks, publish
+generated reports, or process unsolved data to repair Stage 5O records.

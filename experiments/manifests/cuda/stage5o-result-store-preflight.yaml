@@ -1,0 +1,23 @@
+manifest_id: stage5o-result-store-preflight
+stage_id: stage-5o
+description: Compact result-store preflight for Stage 5O repeat parity records.
+execution_enabled: false
+cuda_execution_scope: none
+input_records:
+  - data/cuda/stage5o-gematria-solved-fixture-cuda-repeat-parity.yaml
+  - data/research/stage4p-result-store-score-summary-unification-summary.yaml
+result_store_contract: stage4p
+generated_result_bodies_committed: false
+generated_result_body_publication_allowed: false
+compact_summary_only: true
+raw_data_processed: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+no_solve_claim: true
+solve_claim: false

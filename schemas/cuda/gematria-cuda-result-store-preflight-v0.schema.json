@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-cuda-result-store-preflight-v0.schema.json",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "preflight_record_id",
+    "preflight_kind",
+    "preflight_status",
+    "result_store_contract",
+    "score_summary_contract",
+    "generated_result_bodies_committed",
+    "generated_result_body_publication_allowed",
+    "compact_summary_only",
+    "method_status_upgrade_allowed",
+    "cuda_source_modified",
+    "new_cuda_kernels_added",
+    "gpu_benchmark_performed",
+    "speedup_claim",
+    "unsolved_page_cuda_used",
+    "no_solve_claim",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5o_gematria_cuda_result_store_preflight_record" },
+    "stage_id": { "const": "stage-5o" },
+    "preflight_status": {
+      "enum": [
+        "ready_for_stage5p_compact_summary_integration",
+        "blocked_repeat_parity_or_stage4p_missing",
+        "blocked_generated_body_publication",
+        "blocked_unsolved_scope"
+      ]
+    },
+    "result_store_contract": { "const": "stage4p" },
+    "score_summary_contract": { "const": "stage4i" },
+    "generated_result_bodies_committed": { "const": false },
+    "generated_result_body_publication_allowed": { "const": false },
+    "compact_summary_only": { "const": true },
+    "method_status_upgrade_allowed": { "const": false },
+    "solved_fixture_cuda_execution_allowed": { "const": true },
+    "unsolved_page_cuda_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "speedup_claim": { "const": false },
+    "raw_data_processed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "cuda_source_modified": { "const": false },
+    "no_gpu_ci_safe": { "const": true },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

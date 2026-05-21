@@ -1,0 +1,23 @@
+manifest_id: stage5o-repeat-verification
+stage_id: stage-5o
+description: Exact repeat of Stage 5M solved-fixture-safe Gematria CUDA parity over the same five Stage 5L token buffers.
+execution_enabled: true
+cuda_execution_scope: exact_stage5m_repeat_only
+allowed_input_records:
+  - data/cuda/stage5m-gematria-solved-fixture-cuda-run.yaml
+  - data/cuda/stage5m-gematria-solved-fixture-cuda-parity.yaml
+  - data/cuda/stage5l-gematria-solved-fixture-native-parity.yaml
+output_dir: experiments/results/gematria-solved-fixture-cuda-repeat/stage5o
+generated_outputs_committed: false
+raw_data_processed: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+real_liber_primus_cuda_data_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+no_solve_claim: true
+solve_claim: false

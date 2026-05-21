@@ -134,6 +134,12 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/gematria-cuda-result-store-preflight-record-v0.schema.json",
     "cuda/gematria-no-unsolved-guardrail-record-v0.schema.json",
     "cuda/stage5n-solved-fixture-cuda-reporting-summary-v0.schema.json",
+    "cuda/gematria-solved-fixture-cuda-repeat-run-record-v0.schema.json",
+    "cuda/gematria-solved-fixture-cuda-repeat-parity-record-v0.schema.json",
+    "cuda/gematria-cuda-result-store-preflight-v0.schema.json",
+    "cuda/gematria-cuda-score-summary-preflight-v0.schema.json",
+    "cuda/gematria-cuda-expansion-decision-record-v0.schema.json",
+    "cuda/stage5o-repeat-verification-result-store-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -245,6 +251,12 @@ EXPECTED_DOC_TERMS = [
     "gematria-cuda-result-store-preflight-record-v0",
     "gematria-no-unsolved-guardrail-record-v0",
     "stage5n-solved-fixture-cuda-reporting-summary-v0",
+    "gematria-solved-fixture-cuda-repeat-run-record-v0",
+    "gematria-solved-fixture-cuda-repeat-parity-record-v0",
+    "gematria-cuda-result-store-preflight-v0",
+    "gematria-cuda-score-summary-preflight-v0",
+    "gematria-cuda-expansion-decision-record-v0",
+    "stage5o-repeat-verification-result-store-summary-v0",
 ]
 
 

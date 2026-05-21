@@ -198,3 +198,6 @@ data through CUDA.
 
 Stage 5N reports the Stage 5M parity records and controlled expansion gates. It does not run CUDA
 and must not be cited as performance evidence.
+
+Stage 5O repeats only the exact Stage 5M solved-fixture-safe CUDA pack and records result-store
+preflight. It is repeat correctness metadata, not a benchmark or speedup claim.

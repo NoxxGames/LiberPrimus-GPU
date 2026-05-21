@@ -25,4 +25,4 @@ The Stage 5M boundary record also captures that the CUDA source modification is 
 
 Future CUDA stages must cite the Stage 5M summary and boundary records before widening solved-fixture coverage. Broad CUDA acceleration remains deferred until parity and benchmark planning gates are explicit.
 
-Stage 5N boundary review preserves these limits and records that the parity pass authorizes only a future exact-repeat gate unless a later stage explicitly scopes more.
+Stage 5N boundary review preserves these limits and records that the parity pass authorizes only a future exact-repeat gate unless a later stage explicitly scopes more. Stage 5O consumes that exact-repeat gate and keeps the same boundary: no CUDA source changes, no new kernels, no benchmarks, and no unsolved-page data.

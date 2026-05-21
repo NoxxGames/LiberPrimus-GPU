@@ -812,6 +812,71 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5NSummary `
         --results-dir $Stage5NOut
 
+    Write-Host "Running Stage 5O solved-fixture Gematria CUDA repeat no-GPU-safe/temp output"
+    $Stage5OOut = Join-Path $TempDir "stage5o-gematria-solved-fixture-cuda-repeat"
+    $Stage5ORun = Join-Path $TempDir "stage5o-gematria-solved-fixture-cuda-repeat-run.yaml"
+    $Stage5OParity = Join-Path $TempDir "stage5o-gematria-solved-fixture-cuda-repeat-parity.yaml"
+    $Stage5OResultStore = Join-Path $TempDir "stage5o-gematria-cuda-result-store-preflight.yaml"
+    $Stage5OScore = Join-Path $TempDir "stage5o-gematria-cuda-score-summary-preflight.yaml"
+    $Stage5ODecision = Join-Path $TempDir "stage5o-gematria-cuda-expansion-decision.yaml"
+    $Stage5OSummary = Join-Path $TempDir "stage5o-repeat-verification-result-store-summary.yaml"
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda-repeat build-repeat-run-records `
+        --stage5m-run-records data/cuda/stage5m-gematria-solved-fixture-cuda-run.yaml `
+        --stage5m-parity-records data/cuda/stage5m-gematria-solved-fixture-cuda-parity.yaml `
+        --stage5l-native-parity data/cuda/stage5l-gematria-solved-fixture-native-parity.yaml `
+        --repeat-run-out $Stage5ORun `
+        --out-dir $Stage5OOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda-repeat run-repeat-verification `
+        --repeat-run $Stage5ORun `
+        --repeat-run-out $Stage5ORun `
+        --out-dir $Stage5OOut `
+        --build-dir (Join-Path $TempDir "stage5o-cuda-build") `
+        --skip-run `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda-repeat build-repeat-parity-records `
+        --repeat-run $Stage5ORun `
+        --repeat-parity-out $Stage5OParity `
+        --out-dir $Stage5OOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda-repeat build-result-store-preflight `
+        --repeat-parity $Stage5OParity `
+        --stage4p-summary data/research/stage4p-result-store-score-summary-unification-summary.yaml `
+        --result-store-preflight-out $Stage5OResultStore `
+        --out-dir $Stage5OOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda-repeat build-score-summary-preflight `
+        --repeat-parity $Stage5OParity `
+        --score-summary-preflight-out $Stage5OScore `
+        --out-dir $Stage5OOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda-repeat build-expansion-decision `
+        --repeat-parity $Stage5OParity `
+        --result-store-preflight $Stage5OResultStore `
+        --score-summary-preflight $Stage5OScore `
+        --expansion-decision-out $Stage5ODecision `
+        --out-dir $Stage5OOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda-repeat build-summary `
+        --repeat-run $Stage5ORun `
+        --repeat-parity $Stage5OParity `
+        --result-store-preflight $Stage5OResultStore `
+        --score-summary-preflight $Stage5OScore `
+        --expansion-decision $Stage5ODecision `
+        --stage5m-summary data/cuda/stage5m-solved-fixture-cuda-parity-summary.yaml `
+        --stage5n-summary data/cuda/stage5n-solved-fixture-cuda-reporting-summary.yaml `
+        --summary-out $Stage5OSummary `
+        --out-dir $Stage5OOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-cuda-repeat validate-stage5o `
+        --repeat-run $Stage5ORun `
+        --repeat-parity $Stage5OParity `
+        --result-store-preflight $Stage5OResultStore `
+        --score-summary-preflight $Stage5OScore `
+        --expansion-decision $Stage5ODecision `
+        --summary $Stage5OSummary `
+        --results-dir $Stage5OOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

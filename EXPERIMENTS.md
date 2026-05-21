@@ -951,3 +951,15 @@ modify CUDA source, run CUDA, run real Liber Primus data through CUDA, run unsol
 transforms, run GPU benchmarks, claim speedups, process raw data, publish generated outputs, expand
 the website, activate the canonical corpus, finalise page boundaries, or claim a solve through
 Stage 5N records.
+
+# Stage 5O Solved-Fixture CUDA Repeat And Result-Store Preflight
+
+Stage 5O is not a new cryptanalytic experiment. It repeats only the exact Stage 5M five-buffer
+solved-fixture-safe Gematria CUDA parity pack, compares the repeat hashes against Stage 5L native
+and Stage 5M CUDA hashes, and records compact result-store and score-summary preflight metadata.
+
+Generated Stage 5O reports remain ignored under
+`experiments/results/gematria-solved-fixture-cuda-repeat/stage5o/`. Do not add CUDA kernels,
+modify CUDA source, run unsolved page CUDA transforms, run GPU benchmarks, claim speedups, process
+raw data, publish generated result bodies, expand the website, activate the canonical corpus,
+finalise page boundaries, or claim a solve through Stage 5O records.

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-cuda-expansion-decision-record-v0.schema.json",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "expansion_decision_id",
+    "decision_status",
+    "stage5p_ready",
+    "selected_next_stage",
+    "remaining_blockers",
+    "broad_solved_fixture_cuda_allowed",
+    "unsolved_page_cuda_allowed",
+    "gpu_benchmark_allowed",
+    "cuda_source_modified",
+    "new_cuda_kernels_added",
+    "gpu_benchmark_performed",
+    "speedup_claim",
+    "unsolved_page_cuda_used",
+    "no_solve_claim",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "gematria_cuda_expansion_decision_record" },
+    "stage_id": { "const": "stage-5o" },
+    "decision_status": {
+      "enum": [
+        "stage5p_ready",
+        "repeat_verification_followup_required",
+        "repeat_hash_mismatch_investigation_required",
+        "preflight_followup_required"
+      ]
+    },
+    "stage5p_ready": { "type": "boolean" },
+    "broad_solved_fixture_cuda_allowed": { "const": false },
+    "unsolved_page_cuda_allowed": { "const": false },
+    "gpu_benchmark_allowed": { "const": false },
+    "solved_fixture_cuda_execution_allowed": { "const": true },
+    "unsolved_page_cuda_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "speedup_claim": { "const": false },
+    "raw_data_processed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "cuda_source_modified": { "const": false },
+    "no_gpu_ci_safe": { "const": true },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

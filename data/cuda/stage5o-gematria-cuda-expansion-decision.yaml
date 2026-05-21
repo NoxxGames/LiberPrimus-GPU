@@ -1,0 +1,57 @@
+records:
+- record_type: gematria_cuda_expansion_decision_record
+  expansion_decision_id: stage5o-expansion-decision-00
+  decision_status: stage5p_ready
+  repeat_parity_pass_count: 5
+  repeat_parity_fail_count: 0
+  repeat_parity_skip_count: 0
+  result_store_preflight_ready: true
+  score_summary_preflight_ready: true
+  stage5p_ready: true
+  selected_next_stage: Stage 5P - controlled solved-fixture CUDA result-store integration
+  selected_next_stage_reason: All five exact repeat hashes match Stage 5L native and
+    Stage 5M CUDA hashes, and compact preflight is ready.
+  remaining_blockers: []
+  approved_expansion_scope: compact_result_store_preflight_only
+  broad_solved_fixture_cuda_allowed: false
+  unsolved_page_cuda_allowed: false
+  gpu_benchmark_allowed: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_used: false
+  additional_cuda_execution_performed: false
+  stage_id: stage-5o
+  previous_execution_stage_id: stage-5m
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  executed_kernel: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  executed_semantics: gematria_shift_score_only
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  solved_fixture_cuda_execution_allowed: true
+  solved_fixture_cuda_execution_scope: exact_stage5l_mapped_token_buffers_only
+  additional_cuda_execution_scope: exact_stage5m_repeat_only
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  device_kernel_arithmetic_modified: false
+  cxx_launches_python_workers: false
+  no_solve_claim: true
+  solve_claim: false

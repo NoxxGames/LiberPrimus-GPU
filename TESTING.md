@@ -851,3 +851,23 @@ Stage 5N validation uses:
 
 Stage 5N tests are no-GPU-safe. They must not run CUDA, add kernels, modify CUDA source, run
 unsolved data, run benchmarks, make speedup claims, stage generated reports, or stage `codex-output/**`.
+
+# Stage 5O Validation
+
+Stage 5O validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-solved-fixture-cuda-repeat validate-stage5o `
+  --repeat-run data/cuda/stage5o-gematria-solved-fixture-cuda-repeat-run.yaml `
+  --repeat-parity data/cuda/stage5o-gematria-solved-fixture-cuda-repeat-parity.yaml `
+  --result-store-preflight data/cuda/stage5o-gematria-cuda-result-store-preflight.yaml `
+  --score-summary-preflight data/cuda/stage5o-gematria-cuda-score-summary-preflight.yaml `
+  --expansion-decision data/cuda/stage5o-gematria-cuda-expansion-decision.yaml `
+  --summary data/cuda/stage5o-repeat-verification-result-store-summary.yaml `
+  --results-dir experiments/results/gematria-solved-fixture-cuda-repeat/stage5o
+```
+
+Stage 5O tests remain no-GPU-safe by using `--skip-run` for CI/temp paths. Local CUDA repeat
+verification may run only the exact Stage 5M solved-fixture-safe buffers and must not add kernels,
+modify CUDA source, run benchmarks, make speedup claims, stage generated reports, or stage
+`codex-output/**`.

@@ -1,0 +1,22 @@
+manifest_id: stage5o-score-summary-preflight
+stage_id: stage-5o
+description: Stage 4I score-summary shape preflight for Stage 5O repeat parity records.
+execution_enabled: false
+cuda_execution_scope: none
+input_records:
+  - data/cuda/stage5o-gematria-solved-fixture-cuda-repeat-parity.yaml
+score_summary_contract: stage4i
+score_interpretation: triage_only
+new_scorer_added: false
+raw_data_processed: false
+generated_outputs_committed: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+no_solve_claim: true
+solve_claim: false

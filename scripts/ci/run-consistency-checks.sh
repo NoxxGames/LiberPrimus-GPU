@@ -713,6 +713,64 @@ echo "Running Stage 5N solved-fixture Gematria CUDA reporting no-GPU-safe/temp o
     --summary "$tmp_dir/stage5n-solved-fixture-cuda-reporting-summary.yaml" \
     --results-dir "$tmp_dir/stage5n-gematria-solved-fixture-cuda-reporting"
 
+echo "Running Stage 5O solved-fixture Gematria CUDA repeat no-GPU-safe/temp output"
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-repeat build-repeat-run-records \
+    --stage5m-run-records data/cuda/stage5m-gematria-solved-fixture-cuda-run.yaml \
+    --stage5m-parity-records data/cuda/stage5m-gematria-solved-fixture-cuda-parity.yaml \
+    --stage5l-native-parity data/cuda/stage5l-gematria-solved-fixture-native-parity.yaml \
+    --repeat-run-out "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat-run.yaml" \
+    --out-dir "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-repeat run-repeat-verification \
+    --repeat-run "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat-run.yaml" \
+    --repeat-run-out "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat-run.yaml" \
+    --out-dir "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat" \
+    --build-dir "$tmp_dir/stage5o-cuda-build" \
+    --skip-run \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-repeat build-repeat-parity-records \
+    --repeat-run "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat-run.yaml" \
+    --repeat-parity-out "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat-parity.yaml" \
+    --out-dir "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-repeat build-result-store-preflight \
+    --repeat-parity "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat-parity.yaml" \
+    --stage4p-summary data/research/stage4p-result-store-score-summary-unification-summary.yaml \
+    --result-store-preflight-out "$tmp_dir/stage5o-gematria-cuda-result-store-preflight.yaml" \
+    --out-dir "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-repeat build-score-summary-preflight \
+    --repeat-parity "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat-parity.yaml" \
+    --score-summary-preflight-out "$tmp_dir/stage5o-gematria-cuda-score-summary-preflight.yaml" \
+    --out-dir "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-repeat build-expansion-decision \
+    --repeat-parity "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat-parity.yaml" \
+    --result-store-preflight "$tmp_dir/stage5o-gematria-cuda-result-store-preflight.yaml" \
+    --score-summary-preflight "$tmp_dir/stage5o-gematria-cuda-score-summary-preflight.yaml" \
+    --expansion-decision-out "$tmp_dir/stage5o-gematria-cuda-expansion-decision.yaml" \
+    --out-dir "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-repeat build-summary \
+    --repeat-run "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat-run.yaml" \
+    --repeat-parity "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat-parity.yaml" \
+    --result-store-preflight "$tmp_dir/stage5o-gematria-cuda-result-store-preflight.yaml" \
+    --score-summary-preflight "$tmp_dir/stage5o-gematria-cuda-score-summary-preflight.yaml" \
+    --expansion-decision "$tmp_dir/stage5o-gematria-cuda-expansion-decision.yaml" \
+    --stage5m-summary data/cuda/stage5m-solved-fixture-cuda-parity-summary.yaml \
+    --stage5n-summary data/cuda/stage5n-solved-fixture-cuda-reporting-summary.yaml \
+    --summary-out "$tmp_dir/stage5o-repeat-verification-result-store-summary.yaml" \
+    --out-dir "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-cuda-repeat validate-stage5o \
+    --repeat-run "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat-run.yaml" \
+    --repeat-parity "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat-parity.yaml" \
+    --result-store-preflight "$tmp_dir/stage5o-gematria-cuda-result-store-preflight.yaml" \
+    --score-summary-preflight "$tmp_dir/stage5o-gematria-cuda-score-summary-preflight.yaml" \
+    --expansion-decision "$tmp_dir/stage5o-gematria-cuda-expansion-decision.yaml" \
+    --summary "$tmp_dir/stage5o-repeat-verification-result-store-summary.yaml" \
+    --results-dir "$tmp_dir/stage5o-gematria-solved-fixture-cuda-repeat"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

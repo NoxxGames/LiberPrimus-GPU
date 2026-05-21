@@ -727,3 +727,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5N recorded 5 parity report records, 5 gate records, 1 boundary review record, 2 result-store/score-summary preflight records, and 9 no-unsolved guardrail records. It performed no additional CUDA execution, modified no CUDA source, added 0 kernels, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus data, and made no canonical-corpus, page-boundary, website-expansion, or solve claim. The selected next stage is Stage 5O solved-fixture-safe Gematria CUDA repeat verification and result-store preflight.
+  - record_type: stage_summary_record
+    stage_id: stage-5o
+    title: Solved-fixture-safe Gematria CUDA repeat verification and result-store preflight
+    status: complete
+    category: infrastructure
+    summary: Repeated the exact Stage 5M solved-fixture-safe Gematria CUDA parity pack, matched all Stage 5L native and Stage 5M CUDA output hashes, and prepared compact result-store and score-summary preflight records.
+    key_outputs:
+      - "`libreprimus gematria-solved-fixture-cuda-repeat` commands for repeat run records, repeat verification, repeat parity records, result-store preflight, score-summary preflight, expansion decision, summary, validation, and summary display."
+      - Stage 5O repeat-run, repeat-parity, result-store preflight, score-summary preflight, expansion-decision, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/gematria-solved-fixture-cuda-repeat/stage5o/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5O attempted 5 exact repeat CUDA runs, passed 5 repeat hash comparisons, skipped 0, failed 0, wrote 5 repeat parity records, 3 result-store preflight records, 1 score-summary preflight record, and 1 Stage 5P-ready expansion decision. It added no CUDA kernels, modified no CUDA source, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, published no generated result bodies, and made no canonical-corpus, page-boundary, website-expansion, or solve claim. The selected next stage is Stage 5P controlled solved-fixture CUDA result-store integration.

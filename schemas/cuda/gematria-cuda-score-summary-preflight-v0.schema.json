@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-cuda-score-summary-preflight-v0.schema.json",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "score_summary_preflight_id",
+    "score_summary_contract",
+    "score_interpretation",
+    "stage4i_confidence_labels_only",
+    "new_scorer_added",
+    "score_summary_shape_status",
+    "confidence_label",
+    "score_status",
+    "cuda_source_modified",
+    "new_cuda_kernels_added",
+    "gpu_benchmark_performed",
+    "speedup_claim",
+    "unsolved_page_cuda_used",
+    "no_solve_claim",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5o_gematria_cuda_score_summary_preflight_record" },
+    "stage_id": { "const": "stage-5o" },
+    "score_summary_contract": { "const": "stage4i" },
+    "score_interpretation": { "const": "triage_only" },
+    "stage4i_confidence_labels_only": { "const": true },
+    "new_scorer_added": { "const": false },
+    "score_summary_shape_status": {
+      "enum": [
+        "ready_for_stage5p_compact_summary_integration",
+        "blocked_repeat_parity_not_clean"
+      ]
+    },
+    "confidence_label": {
+      "enum": [
+        "high_control_match",
+        "medium_control_match",
+        "low_control_match",
+        "null_like",
+        "negative_control",
+        "inconclusive",
+        "manual_review",
+        "scoring_not_available",
+        "calibration_not_available"
+      ]
+    },
+    "score_status": {
+      "enum": [
+        "scored",
+        "scoring_not_available",
+        "calibration_not_available",
+        "scorer_error"
+      ]
+    },
+    "solved_fixture_cuda_execution_allowed": { "const": true },
+    "unsolved_page_cuda_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "speedup_claim": { "const": false },
+    "raw_data_processed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "cuda_source_modified": { "const": false },
+    "no_gpu_ci_safe": { "const": true },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

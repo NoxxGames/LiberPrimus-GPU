@@ -2,7 +2,15 @@
 
 ## Current stage
 
-Stage 5N solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate is complete. Next planned stage: Stage 5O solved-fixture-safe Gematria CUDA repeat verification and result-store preflight. Website expansion is deferred to Stage 6.
+Stage 5O solved-fixture-safe Gematria CUDA repeat verification and result-store preflight is complete. Next planned stage: Stage 5P controlled solved-fixture CUDA result-store integration. Website expansion is deferred to Stage 6.
+
+## Completed in Stage 5O
+
+Stage 5O added the `libreprimus gematria-solved-fixture-cuda-repeat` CLI, repeat-run and repeat-parity schemas, result-store preflight records, score-summary preflight records, expansion-decision records, Stage 5O manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
+
+Local Stage 5O summary: repeat run records `5`, repeat CUDA attempted/pass/fail/skip `5/5/0/0`, repeat parity records `5`, repeat parity pass/fail/skip `5/0/0`, Stage 5L native hash matches `5`, Stage 5M CUDA hash matches `5`, result-store preflight records `3`, score-summary preflight records `1`, expansion decision records `1`, Stage 5P ready `true`, selected next stage `Stage 5P - controlled solved-fixture CUDA result-store integration`, CUDA source modified `false`, new CUDA kernels added `0`, GPU benchmark performed `false`, speedup/performance assertions `false`, unsolved page CUDA used `false`, real Liber Primus CUDA data used `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5O is exact repeat correctness and compact preflight metadata only. It repeats only the exact Stage 5M five-buffer solved-fixture-safe CUDA pack, does not add or modify CUDA source, does not add kernels, does not run unsolved page data through CUDA, does not run GPU benchmarks, does not process raw data, does not publish generated result bodies, does not expand the website, and makes no solve claim. Generated reports remain ignored under `experiments/results/gematria-solved-fixture-cuda-repeat/stage5o/`; `codex-output/` completion handoffs are ignored and uncommitted.
 
 ## Completed in Stage 5N
 

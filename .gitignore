@@ -555,5 +555,13 @@ experiments/results/gematria-solved-fixture-cuda-reporting/**
 !experiments/results/gematria-solved-fixture-cuda-reporting/stage5n/
 !experiments/results/gematria-solved-fixture-cuda-reporting/stage5n/.gitkeep
 
+# Generated solved-fixture-safe Gematria CUDA repeat outputs
+experiments/results/gematria-solved-fixture-cuda-repeat/**
+!experiments/results/gematria-solved-fixture-cuda-repeat/
+!experiments/results/gematria-solved-fixture-cuda-repeat/README.md
+!experiments/results/gematria-solved-fixture-cuda-repeat/.gitkeep
+!experiments/results/gematria-solved-fixture-cuda-repeat/stage5o/
+!experiments/results/gematria-solved-fixture-cuda-repeat/stage5o/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

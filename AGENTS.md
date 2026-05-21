@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5N - solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate.
+Current completed stage: Stage 5O - solved-fixture-safe Gematria CUDA repeat verification and result-store preflight.
 
-Current work: Stage 5O - solved-fixture-safe Gematria CUDA repeat verification and result-store preflight. Stage 5O may use Stage 5N's exact-repeat and result-store preflight gate, but it must remain solved-fixture-safe, no-unsolved, no-benchmark work unless the prompt explicitly scopes otherwise.
+Current work: Stage 5P - controlled solved-fixture CUDA result-store integration. Stage 5P may use Stage 5O's repeat parity and preflight records only for compact result-store integration; it must remain solved-fixture-safe, no-unsolved, no-benchmark work unless the prompt explicitly scopes otherwise.
 
 Current project state:
 
@@ -68,7 +68,7 @@ Current project state:
 - Page boundaries: reviewable.
 - Broad unsolved-page campaigns: not started.
 - CUDA: deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
-- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel`, and Stage 5M host-runner plumbing for exact solved-fixture parity only unless code and tests say otherwise.
+- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel`, Stage 5M host-runner plumbing for exact solved-fixture parity, and Stage 5O repeat verification metadata only unless code and tests say otherwise.
 - Stage 5C CUDA build/device metadata is readiness infrastructure only; no-GPU CI, compatibility 8GB, and optional local 16GB profiles must remain explicit and smoke-build status is not parity or performance evidence.
 - Stage 5D native CPU backend records are readiness infrastructure only; C++ must remain a deterministic CPU execution plane, Python remains orchestration, and diagnostic timings are not speedup claims.
 - Do not let C++ launch Python worker scripts.
@@ -82,6 +82,7 @@ Current project state:
 - Stage 5L solved-fixture token mappings are not CUDA execution permission.
 - Stage 5M solved-fixture CUDA parity is exact-scope correctness metadata only; it does not authorize broad solved-fixture expansion or unsolved-page CUDA.
 - Stage 5N controlled expansion gates are not execution permission unless the next stage explicitly scopes execution.
+- Stage 5O repeat verification records are exact-scope correctness and result-store preflight metadata only; they do not authorize broad solved-fixture expansion, unsolved-page CUDA, GPU benchmarking, generated result-body publication, or website expansion.
 - Do not report CUDA parity records as speedup/performance evidence.
 - Do not stage `codex-output/**`.
 - Completion summaries must be detailed and include parity counts, gate decisions, guardrail status, and next-stage rationale.
