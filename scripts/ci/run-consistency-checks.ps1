@@ -979,6 +979,65 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5QSummary `
         --results-dir $Stage5QOut
 
+    Write-Host "Running Stage 5R expanded solved-fixture CUDA parity no-GPU-safe/temp output"
+    $Stage5ROut = Join-Path $TempDir "stage5r-gematria-expanded-solved-fixture-cuda"
+    $Stage5RRun = Join-Path $TempDir "stage5r-gematria-expanded-solved-fixture-cuda-run.yaml"
+    $Stage5RParity = Join-Path $TempDir "stage5r-gematria-expanded-solved-fixture-cuda-parity.yaml"
+    $Stage5RBoundary = Join-Path $TempDir "stage5r-gematria-expanded-solved-fixture-cuda-boundary.yaml"
+    $Stage5RResultStore = Join-Path $TempDir "stage5r-gematria-expanded-solved-fixture-result-store-preflight.yaml"
+    $Stage5RScore = Join-Path $TempDir "stage5r-gematria-expanded-solved-fixture-score-summary-preflight.yaml"
+    $Stage5RSummary = Join-Path $TempDir "stage5r-expanded-solved-fixture-cuda-parity-summary.yaml"
+    $Stage5RBuild = Join-Path $TempDir "stage5r-cuda-build"
+    & $Python -m libreprimus.cli gematria-expanded-solved-fixture-cuda build-run-records `
+        --run-records-out $Stage5RRun `
+        --out-dir $Stage5ROut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-solved-fixture-cuda run-cuda-parity `
+        --run-records $Stage5RRun `
+        --run-records-out $Stage5RRun `
+        --out-dir $Stage5ROut `
+        --build-dir $Stage5RBuild `
+        --skip-run `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-solved-fixture-cuda build-parity-records `
+        --run-records $Stage5RRun `
+        --parity-records-out $Stage5RParity `
+        --out-dir $Stage5ROut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-solved-fixture-cuda build-boundary-records `
+        --run-records $Stage5RRun `
+        --parity-records $Stage5RParity `
+        --boundaries-out $Stage5RBoundary `
+        --out-dir $Stage5ROut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-solved-fixture-cuda build-result-store-preflight `
+        --parity-records $Stage5RParity `
+        --result-store-preflight-out $Stage5RResultStore `
+        --out-dir $Stage5ROut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-solved-fixture-cuda build-score-summary-preflight `
+        --parity-records $Stage5RParity `
+        --score-summary-preflight-out $Stage5RScore `
+        --out-dir $Stage5ROut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-solved-fixture-cuda build-summary `
+        --run-records $Stage5RRun `
+        --parity-records $Stage5RParity `
+        --boundaries $Stage5RBoundary `
+        --result-store-preflight $Stage5RResultStore `
+        --score-summary-preflight $Stage5RScore `
+        --summary-out $Stage5RSummary `
+        --out-dir $Stage5ROut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expanded-solved-fixture-cuda validate-stage5r `
+        --run-records $Stage5RRun `
+        --parity-records $Stage5RParity `
+        --boundaries $Stage5RBoundary `
+        --result-store-preflight $Stage5RResultStore `
+        --score-summary-preflight $Stage5RScore `
+        --summary $Stage5RSummary `
+        --results-dir $Stage5ROut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

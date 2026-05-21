@@ -134,6 +134,12 @@ If Codex changes result-store unification behavior, verify `libreprimus result-s
 keep generated unified JSON/JSONL/SQLite files under ignored `experiments/results/result-store-unification/`,
 preserve Stage 4I labels, and do not invent scorer semantics or reinterpret old noisy results.
 
+If Codex changes Stage 5R expanded Gematria CUDA parity behavior, verify
+`libreprimus gematria-expanded-solved-fixture-cuda validate-stage5r`, keep generated reports under
+ignored `experiments/results/gematria-expanded-solved-fixture-cuda/stage5r/`, keep `codex-output/**`
+ignored, and do not add kernels, benchmarks, speedup claims, generated-body publication, or
+unsolved-page CUDA.
+
 If Codex changes observation review behavior, verify `libreprimus observation-review validate`,
 `libreprimus observation-review check-paths`, promotion-gate tests, quarantine tests, and path
 sanitisation tests before staging. Review-only observations cannot become experiment seeds.

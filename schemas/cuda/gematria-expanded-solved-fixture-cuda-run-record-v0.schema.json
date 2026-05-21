@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-expanded-solved-fixture-cuda-run-record-v0.schema.json",
+  "title": "Stage 5R expanded solved-fixture CUDA run record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "source_stage_id",
+    "run_record_id",
+    "candidate_inventory_id",
+    "token_mapping_record_id",
+    "native_parity_record_id",
+    "fixture_id",
+    "source_input_stream_id",
+    "source_transform_family",
+    "token_count",
+    "transformable_token_count",
+    "candidate_shifts",
+    "expected_native_output_token_hash",
+    "cuda_run_status",
+    "cuda_run_attempted",
+    "new_cuda_kernels_added",
+    "device_kernel_arithmetic_modified",
+    "unsolved_page_cuda_used",
+    "real_liber_primus_cuda_data_used",
+    "gpu_benchmark_performed",
+    "speedup_claim",
+    "generated_outputs_committed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": {"const": "gematria_expanded_solved_fixture_cuda_run_record"},
+    "stage_id": {"const": "stage-5r"},
+    "source_stage_id": {"const": "stage-5q"},
+    "fixture_id": {"enum": ["p57-parable", "some-wisdom", "the-loss-of-divinity"]},
+    "source_transform_family": {"const": "direct_translation"},
+    "cuda_run_status": {
+      "enum": [
+        "pending",
+        "passed",
+        "failed",
+        "skipped_not_requested",
+        "skipped_missing_cuda",
+        "skipped_build_not_passed",
+        "skipped_executable_missing",
+        "failed_environment",
+        "failed_toolkit_resolution"
+      ]
+    },
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0},
+    "device_kernel_arithmetic_modified": {"const": false},
+    "unsolved_page_cuda_used": {"const": false},
+    "real_liber_primus_cuda_data_used": {"const": false},
+    "gpu_benchmark_performed": {"const": false},
+    "speedup_claim": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "solve_claim": {"const": false}
+  }
+}

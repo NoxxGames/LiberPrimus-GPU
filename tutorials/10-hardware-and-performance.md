@@ -201,3 +201,7 @@ and must not be cited as performance evidence.
 
 Stage 5O repeats only the exact Stage 5M solved-fixture-safe CUDA pack and records result-store
 preflight. It is repeat correctness metadata, not a benchmark or speedup claim.
+
+Stage 5R runs only the three Stage 5Q mapped direct-translation solved-fixture-safe candidates and
+matches their native hashes. It is expanded correctness parity only, not a benchmark, speedup
+claim, broad CUDA implementation, or permission to run unsolved page data through CUDA.

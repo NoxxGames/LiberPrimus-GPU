@@ -775,3 +775,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5Q wrote 10 candidate inventory records, 10 token-mapping records, 10 native parity records, 3 result-store preflight records, 1 expansion gate record, and 1 summary record. It mapped 3 new direct-translation solved-fixture-safe candidates, labelled the exact Stage 5L/5M/5O five-buffer pack as 5 consumed controls, blocked 2 original-family fixtures pending separate contracts, prepared 3 native output-token hashes, marked Stage 5R ready, and performed no CUDA execution, CUDA source modification, kernel addition, GPU benchmark, speedup claim, unsolved-page CUDA use, real Liber Primus CUDA-data use, generated-output publication, website expansion, canonical-corpus activation, page-boundary finalisation, or solve claim. The selected next stage is Stage 5R controlled expanded solved-fixture-safe Gematria shift_score CUDA parity run.
+  - record_type: stage_summary_record
+    stage_id: stage-5r
+    title: Controlled expanded solved-fixture-safe Gematria shift_score CUDA parity
+    status: complete
+    category: infrastructure
+    summary: Ran the existing Gematria mod-29 shift_score CUDA kernel over exactly the three Stage 5Q mapped direct-translation solved-fixture-safe token buffers and matched all Stage 5Q native output-token hashes.
+    key_outputs:
+      - "`libreprimus gematria-expanded-solved-fixture-cuda` commands for run records, optional local CUDA parity, parity records, boundary records, result-store preflight, score-summary preflight, summary generation, validation, and summary display."
+      - Stage 5R run, parity, boundary, result-store preflight, score-summary preflight, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/gematria-expanded-solved-fixture-cuda/stage5r/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5R wrote 3 run records, attempted 3 bounded CUDA runs, passed 3 CUDA/native hash comparisons, skipped 0, failed 0, wrote 3 parity records, 1 boundary record, 3 result-store preflight records, 3 score-summary preflight records, and selected Stage 5S as ready. It added no CUDA kernels, modified no CUDA source, changed no device arithmetic, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, published no generated result bodies, and made no canonical-corpus, page-boundary, website-expansion, or solve claim. The selected next stage is Stage 5S expanded solved-fixture Gematria CUDA parity reporting and result-store integration.

@@ -13,4 +13,4 @@ Each prepared record contains:
 
 The native parity records are future CUDA references. They are not result bodies, speed measurements, or solve evidence.
 
-Future Stage 5R CUDA work may cite these hashes only if it remains explicitly scoped to controlled solved-fixture-safe parity. Any broader fixture expansion, original transform-family execution, benchmark, or unsolved-page use still requires a separate stage.
+Stage 5R CUDA work cited these hashes only for controlled solved-fixture-safe parity and matched all three prepared direct-translation records. Any broader fixture expansion, original transform-family execution, benchmark, or unsolved-page use still requires a separate stage.

@@ -1,5 +1,18 @@
 # Experiments
 
+## Stage 5R Expanded Solved-Fixture CUDA Parity
+
+Stage 5R is a bounded solved-fixture-safe parity execution, not a search experiment. It uses only
+the three Stage 5Q mapped direct-translation candidates, runs the existing
+`gematria_mod29_shift_score_kernel`, and records compact run, parity, boundary, result-store
+preflight, score-summary preflight, and summary metadata.
+
+Generated Stage 5R reports remain ignored under
+`experiments/results/gematria-expanded-solved-fixture-cuda/stage5r/`. Stage 5R must keep new
+CUDA kernels, device arithmetic changes, GPU benchmarks, speedup claims, unsolved-page CUDA,
+real Liber Primus CUDA data use, generated-body publication, website expansion, canonical corpus
+activation, page-boundary finalisation, and solve claims false.
+
 ## Stage 5Q Gematria Expansion Candidate Mapping
 
 Stage 5Q does not execute an experiment. It consumes committed Stage 5P controlled expansion

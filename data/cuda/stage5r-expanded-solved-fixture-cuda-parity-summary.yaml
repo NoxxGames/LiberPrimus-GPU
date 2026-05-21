@@ -1,0 +1,98 @@
+record_type: stage5r_expanded_solved_fixture_cuda_parity_summary
+stage_id: stage-5r
+status: complete
+source_stage_id: stage-5q
+implemented_kernel_name: gematria_mod29_shift_score_kernel
+executed_kernel: gematria_mod29_shift_score_kernel
+source_contract_id: gematria_mod29_shift_score_contract_v0
+executed_semantics: gematria_shift_score_only
+input_stage5q_mapped_candidates: 3
+run_records: 3
+cuda_attempted_count: 3
+cuda_pass_count: 3
+cuda_fail_count: 0
+cuda_skip_count: 0
+parity_records: 3
+parity_pass_count: 3
+parity_fail_count: 0
+parity_skip_count: 0
+boundary_records: 1
+result_store_preflight_records: 3
+result_store_preflight_ready_count: 3
+score_summary_preflight_records: 3
+score_summary_preflight_ready_count: 3
+stage4p_compatibility: true
+stage4i_compatibility: true
+stage5s_ready: true
+selected_next_stage: Stage 5S - expanded solved-fixture Gematria CUDA parity reporting
+  and result-store integration
+next_stage: Stage 5S - expanded solved-fixture Gematria CUDA parity reporting and
+  result-store integration
+selected_next_stage_reason: All three Stage 5Q expanded solved-fixture CUDA/native
+  hashes matched.
+remaining_blockers: []
+newly_discovered_blockers: []
+output_hash_algorithm: sha256_canonical_json_v1
+score_summary_contract: stage4i
+parity_status_counts:
+  passed: 3
+per_fixture_parity:
+- candidate_inventory_id: stage5q-new-direct-fixture-05
+  fixture_id: p57-parable
+  source_input_stream_id: stage5q-fixture-p57-parable
+  token_count: 118
+  transformable_token_count: 95
+  stage5q_native_hash: ea159821d84ef4439233d98e695668f1cac2d48cc391b832d709b49d7f70a008
+  stage5r_cuda_hash: ea159821d84ef4439233d98e695668f1cac2d48cc391b832d709b49d7f70a008
+  status: passed
+- candidate_inventory_id: stage5q-new-direct-fixture-06
+  fixture_id: some-wisdom
+  source_input_stream_id: stage5q-fixture-some-wisdom
+  token_count: 108
+  transformable_token_count: 85
+  stage5q_native_hash: aa28ca21943492e8827ef61d666cb2ef971cb29a17fc498599a1716615565f0b
+  stage5r_cuda_hash: aa28ca21943492e8827ef61d666cb2ef971cb29a17fc498599a1716615565f0b
+  status: passed
+- candidate_inventory_id: stage5q-new-direct-fixture-07
+  fixture_id: the-loss-of-divinity
+  source_input_stream_id: stage5q-fixture-the-loss-of-divinity
+  token_count: 94
+  transformable_token_count: 78
+  stage5q_native_hash: f901e5323fb2980955c7900032c52a7c23cead35278f766416be21292ff9cc62
+  stage5r_cuda_hash: f901e5323fb2980955c7900032c52a7c23cead35278f766416be21292ff9cc62
+  status: passed
+solved_fixture_cuda_execution_allowed: true
+solved_fixture_cuda_execution_scope: exact_three_stage5q_mapped_direct_translation_candidates_only
+approved_stage5r_scope: exact_three_stage5q_mapped_direct_translation_candidates_only
+consumed_controls_excluded: true
+blocked_original_family_fixtures_excluded: true
+original_transform_family_semantics_exercised: false
+cuda_execution_performed: true
+solved_fixture_cuda_used: true
+unsolved_page_cuda_used: false
+real_liber_primus_cuda_data_used: false
+real_liber_primus_data_used: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+device_kernel_arithmetic_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+performance_or_speedup_claims: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+codex_output_committed: false
+method_status_upgrade_allowed: false
+method_status_upgraded: false
+deep_research_recommended: false
+website_expansion: false
+canonical_corpus_active: false
+page_boundaries_final: false
+ci_gpu_required: false
+no_gpu_ci_safe: true
+local_16gb_profile_required: false
+cxx_launches_python_workers: false
+no_solve_claim: true
+solve_claim: false

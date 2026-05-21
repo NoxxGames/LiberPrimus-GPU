@@ -1,0 +1,37 @@
+record_type: cuda_metadata_manifest
+manifest_id: stage5r-expanded-result-store-preflight
+stage_id: stage-5r
+description: Compact result-store and score-summary preflight for Stage 5R expanded solved-fixture CUDA parity records.
+execution_enabled: false
+cuda_execution_enabled: false
+cuda_used: false
+cuda_required: false
+ci_gpu_required: false
+no_gpu_ci_safe: true
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+device_kernel_arithmetic_modified: false
+source_records:
+  - data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-parity.yaml
+  - data/research/stage4p-result-store-score-summary-unification-summary.yaml
+  - data/scoring/confidence-label-records-v0.yaml
+output_records:
+  - data/cuda/stage5r-gematria-expanded-solved-fixture-result-store-preflight.yaml
+  - data/cuda/stage5r-gematria-expanded-solved-fixture-score-summary-preflight.yaml
+result_store_contract: stage4p
+score_summary_contract: stage4i
+score_interpretation: triage_only
+generated_body_publication_allowed: false
+method_status_upgrade_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+no_solve_claim: true
+solve_claim: false
+notes:
+  - Preflight records are compact metadata only and do not publish generated CUDA result bodies.
+  - Parity success remains correctness metadata and cannot upgrade any method family to solved.

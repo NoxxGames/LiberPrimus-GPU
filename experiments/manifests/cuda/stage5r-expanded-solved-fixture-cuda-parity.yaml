@@ -1,0 +1,45 @@
+record_type: cuda_metadata_manifest
+manifest_id: stage5r-expanded-solved-fixture-cuda-parity
+stage_id: stage-5r
+description: Controlled CUDA parity run for exactly the three Stage 5Q mapped direct-translation Gematria shift_score solved-fixture-safe candidates.
+execution_enabled: true
+cuda_execution_enabled: true
+cuda_execution_scope: exact_three_stage5q_mapped_direct_translation_candidates_only
+cuda_used: true
+cuda_required: false
+ci_gpu_required: false
+no_gpu_ci_safe: true
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+device_kernel_arithmetic_modified: false
+host_runner_scope: existing_stage5m_runner_reused
+target_kernel: gematria_mod29_shift_score_kernel
+executed_semantics: gematria_shift_score_only
+candidate_fixture_ids:
+  - p57-parable
+  - some-wisdom
+  - the-loss-of-divinity
+blocked_inputs:
+  consumed_controls: excluded
+  original_transform_family_fixtures: excluded
+  unsolved_pages: excluded
+  raw_liber_primus_page_data: excluded
+cpu_reference_records:
+  - data/cuda/stage5q-gematria-expansion-token-mapping.yaml
+  - data/cuda/stage5q-gematria-expansion-native-parity.yaml
+output_records:
+  - data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-run.yaml
+  - data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-parity.yaml
+generated_output_dir: experiments/results/gematria-expanded-solved-fixture-cuda/stage5r/
+generated_outputs_committed: false
+raw_data_processed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+no_solve_claim: true
+solve_claim: false
+notes:
+  - Local CUDA execution is allowed only for the exact three Stage 5Q mapped direct-translation candidates.
+  - CI must be able to use the no-GPU skip manifest instead of requiring CUDA hardware.

@@ -592,3 +592,11 @@ rerun `libreprimus gematria-solved-fixture-cuda-repeat validate-stage5o`. CI/tem
 should use `run-repeat-verification --skip-run`; local CUDA repeat runs may only use the exact
 Stage 5M five-buffer pack. Do not add kernels, modify CUDA source, run benchmarks, publish
 generated reports, or process unsolved data to repair Stage 5O records.
+
+# Stage 5R Expanded CUDA Parity Troubleshooting
+
+If Stage 5R validation fails, rebuild the sequence from committed Stage 5Q records and rerun
+`libreprimus gematria-expanded-solved-fixture-cuda validate-stage5r`. CI/temp repair paths should
+use `run-cuda-parity --skip-run`; local CUDA runs may only use `p57-parable`, `some-wisdom`, and
+`the-loss-of-divinity`. Do not add kernels, modify device arithmetic, run benchmarks, publish
+generated reports, or process unsolved data to repair Stage 5R records.

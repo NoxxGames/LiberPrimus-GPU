@@ -908,3 +908,23 @@ Stage 5Q tests are no-GPU-safe. They cover schema guardrails, exact Stage 5L/5M/
 exclusion, direct-translation token mappings, blocked original-family fixtures, native parity
 hashes, Stage 4P/Stage 4I preflight, controlled Stage 5R gate selection, CLI round trips, and
 ignored output policy.
+
+# Stage 5R Validation
+
+Stage 5R validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-expanded-solved-fixture-cuda validate-stage5r `
+  --run-records data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-run.yaml `
+  --parity-records data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-parity.yaml `
+  --boundaries data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-boundary.yaml `
+  --result-store-preflight data/cuda/stage5r-gematria-expanded-solved-fixture-result-store-preflight.yaml `
+  --score-summary-preflight data/cuda/stage5r-gematria-expanded-solved-fixture-score-summary-preflight.yaml `
+  --summary data/cuda/stage5r-expanded-solved-fixture-cuda-parity-summary.yaml `
+  --results-dir experiments/results/gematria-expanded-solved-fixture-cuda/stage5r
+```
+
+Stage 5R tests are no-GPU-safe. They cover schema guardrails, exact Stage 5Q candidate scope,
+consumed-control and original-family exclusion, skipped-CUDA false-pass prevention, CUDA/native
+hash equality requirements, Stage 4P and Stage 4I preflight records, boundary guardrails, CLI
+round trips through `--skip-run`, ignored output policy, and deterministic next-stage decisions.

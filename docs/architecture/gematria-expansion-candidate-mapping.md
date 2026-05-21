@@ -15,3 +15,7 @@ Blocked solved fixtures stay blocked when they require original-family semantics
 Generated JSON reports stay ignored under `experiments/results/gematria-expansion-candidate-mapping/stage5q/`. The committed records are compact YAML metadata under `data/cuda/`.
 
 Stage 5Q does not execute CUDA, modify CUDA source, add kernels, run benchmarks, process raw data, publish generated result bodies, use unsolved pages, or make solve claims.
+
+## Stage 5R Result
+
+Stage 5R consumed only the three Stage 5Q mapped direct-translation candidates and matched all three CUDA output-token hashes against the Stage 5Q native hashes. The Stage 5Q consumed-control and original-family blockers remain preserved; Stage 5R does not retroactively widen candidate mapping scope.

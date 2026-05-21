@@ -223,6 +223,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5Q is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5r",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5r\b", re.IGNORECASE),
+        "Stage 5R is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -708,13 +713,23 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5r_controlled_expanded_shift_score_next",
+        "stage5r_controlled_expanded_shift_score_complete",
         "stage 5r" in staged_plan
         and "controlled" in staged_plan
         and "expanded" in staged_plan
         and "shift_score" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5R controlled expanded shift_score parity as complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5s_expanded_reporting_next",
+        "stage 5s" in staged_plan
+        and "expanded solved-fixture" in staged_plan
+        and "result-store integration" in staged_plan
         and "next" in staged_plan,
-        "Staged plan records Stage 5R controlled expanded shift_score parity as next.",
+        "Staged plan records Stage 5S reporting/result-store integration as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -953,6 +968,16 @@ def check_state_drift_consistency(
         and "consumed controls" in combined
         and "no cuda execution" in combined,
         "Stage 5Q expansion candidate mapping and Stage 5R boundary are documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "gematria_expanded_cuda_parity_policy_present",
+        "expanded solved-fixture" in combined
+        and "stage 5s" in combined
+        and "exactly the three" in combined
+        and "no new cuda kernels" in combined,
+        "Stage 5R expanded solved-fixture CUDA parity and Stage 5S boundary are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

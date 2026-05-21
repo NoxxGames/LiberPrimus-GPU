@@ -15,3 +15,5 @@ Stage 5Q follow-up: compact Stage 5P records now feed
 `libreprimus gematria-expansion-candidate-mapping`, which maps three additional direct-translation
 solved-fixture-safe candidates for future bounded `shift_score` parity. The Stage 5L/5M/5O
 five-buffer pack remains a consumed control and is excluded from new candidate counts.
+
+Stage 5R follow-up: expanded solved-fixture CUDA parity now produces three compact preflight rows for Stage 5S result-store integration. Generated CUDA output bodies remain ignored and parity success still cannot upgrade method-family status to solved.

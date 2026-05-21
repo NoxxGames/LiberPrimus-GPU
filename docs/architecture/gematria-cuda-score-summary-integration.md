@@ -11,3 +11,7 @@ semantics were implemented in CUDA.
 Stage 5Q keeps this score-summary boundary. New expansion candidates receive result-store preflight
 records with `confidence_interpretation=triage_only` and `score_status=scoring_not_available`; no
 new scoring model or confidence label is added.
+
+Stage 5R keeps the same boundary for expanded solved-fixture CUDA parity. Its score-summary preflight
+records cite the Stage 4I contract, use `scoring_not_available` with `triage_only` interpretation,
+and do not introduce solve-evidence labels.

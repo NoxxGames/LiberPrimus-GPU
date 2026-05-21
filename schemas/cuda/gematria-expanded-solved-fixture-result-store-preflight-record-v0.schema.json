@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-expanded-solved-fixture-result-store-preflight-record-v0.schema.json",
+  "title": "Stage 5R expanded solved-fixture result-store preflight record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "source_stage_id",
+    "result_store_preflight_id",
+    "parity_record_id",
+    "fixture_id",
+    "result_store_contract",
+    "stage4p_compatibility",
+    "generated_body_publication_allowed",
+    "method_status_upgrade_allowed",
+    "preflight_status",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": {"const": "gematria_expanded_solved_fixture_result_store_preflight_record"},
+    "stage_id": {"const": "stage-5r"},
+    "source_stage_id": {"const": "stage-5q"},
+    "result_store_contract": {"const": "stage4p"},
+    "generated_body_publication_allowed": {"const": false},
+    "method_status_upgrade_allowed": {"const": false},
+    "new_cuda_kernels_added": {"const": 0},
+    "unsolved_page_cuda_used": {"const": false},
+    "real_liber_primus_cuda_data_used": {"const": false},
+    "gpu_benchmark_performed": {"const": false},
+    "speedup_claim": {"const": false},
+    "solve_claim": {"const": false}
+  }
+}

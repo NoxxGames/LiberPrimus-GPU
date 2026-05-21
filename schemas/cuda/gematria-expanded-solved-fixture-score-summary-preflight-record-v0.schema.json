@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/gematria-expanded-solved-fixture-score-summary-preflight-record-v0.schema.json",
+  "title": "Stage 5R expanded solved-fixture score-summary preflight record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "source_stage_id",
+    "score_summary_preflight_id",
+    "parity_record_id",
+    "score_summary_contract",
+    "score_interpretation",
+    "confidence_label",
+    "score_status",
+    "new_scorer_added",
+    "method_status_upgrade_allowed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": {"const": "gematria_expanded_solved_fixture_score_summary_preflight_record"},
+    "stage_id": {"const": "stage-5r"},
+    "source_stage_id": {"const": "stage-5q"},
+    "score_summary_contract": {"const": "stage4i"},
+    "score_interpretation": {"const": "triage_only"},
+    "confidence_label": {"enum": ["scoring_not_available", "calibration_not_available", "none", "very_low", "low", "medium", "high", "very_high", "control"]},
+    "new_scorer_added": {"const": false},
+    "method_status_upgrade_allowed": {"const": false},
+    "new_cuda_kernels_added": {"const": 0},
+    "unsolved_page_cuda_used": {"const": false},
+    "real_liber_primus_cuda_data_used": {"const": false},
+    "gpu_benchmark_performed": {"const": false},
+    "speedup_claim": {"const": false},
+    "solve_claim": {"const": false}
+  }
+}

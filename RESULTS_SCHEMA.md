@@ -6,7 +6,7 @@ Define result, manifest, source-lock, observation, and generated-output record p
 
 ## Current Schema State
 
-The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, Stage 4O CPU batch adapter expansion/parity expectation records, Stage 4P result-store/score-summary unification records, Stage 4Q benchmark/parity planning records, Stage 5A CUDA planning/parity scaffold records, Stage 5B CUDA parity harness skeleton records, Stage 5C CUDA build/device detection records, Stage 5D native CPU backend/threading records, Stage 5E first CUDA kernel contract records, Stage 5F synthetic CUDA kernel/parity records, Stage 5G CUDA parity-reporting/device-code audit records, Stage 5H Gematria mod-29 shift-score contract records, Stage 5I Gematria CUDA preparation records, Stage 5J Gematria CUDA kernel implementation/build/parity records, Stage 5K Gematria CUDA parity-reporting/preflight records, Stage 5L solved-fixture token-mapping/native parity records, Stage 5M solved-fixture CUDA run/parity/boundary records, Stage 5N solved-fixture CUDA reporting/gate records, Stage 5O solved-fixture CUDA repeat/result-store preflight records, Stage 5P Gematria CUDA result-store/score-summary integration records, and Stage 5Q Gematria expansion candidate-mapping records.
+The repository now includes committed schema families for solved-baseline records, result-store records, bounded experiment manifests, archive/image/web observations, hash preimage packs, Discord ingestion/review/promotion records, full Discord review bundle records, post-Discord manifests, GP/rune claim records, image-transform records, stego/OutGuess regression records, Stage 3Y research-synthesis ledgers, Stage 4B source-lock/visual-intake records, Stage 4D bounded numeric records, Stage 4E source-delta/image-artifact backlog records, Stage 4F historical stego/audio fixture source-lock records, Stage 4G cookie refresh records, Stage 4H CPU batch/parity records, Stage 4I scoring records, Stage 4J observation review records, Stage 4K public source-lock snapshot records, Stage 4L observation promotion ledger records, Stage 4M image source-variant/compression preflight records, Stage 4N stego/audio positive-control readiness records, Stage 4O CPU batch adapter expansion/parity expectation records, Stage 4P result-store/score-summary unification records, Stage 4Q benchmark/parity planning records, Stage 5A CUDA planning/parity scaffold records, Stage 5B CUDA parity harness skeleton records, Stage 5C CUDA build/device detection records, Stage 5D native CPU backend/threading records, Stage 5E first CUDA kernel contract records, Stage 5F synthetic CUDA kernel/parity records, Stage 5G CUDA parity-reporting/device-code audit records, Stage 5H Gematria mod-29 shift-score contract records, Stage 5I Gematria CUDA preparation records, Stage 5J Gematria CUDA kernel implementation/build/parity records, Stage 5K Gematria CUDA parity-reporting/preflight records, Stage 5L solved-fixture token-mapping/native parity records, Stage 5M solved-fixture CUDA run/parity/boundary records, Stage 5N solved-fixture CUDA reporting/gate records, Stage 5O solved-fixture CUDA repeat/result-store preflight records, Stage 5P Gematria CUDA result-store/score-summary integration records, Stage 5Q Gematria expansion candidate-mapping records, and Stage 5R expanded solved-fixture CUDA parity records.
 
 Generated candidate records, SQLite databases, local review indexes, derived images, topic shards, extraction payloads, and full run outputs remain ignored unless a future stage explicitly promotes a summary or curated record.
 
@@ -39,6 +39,23 @@ Stage 5Q schemas include `gematria-expansion-candidate-inventory-record-v0`,
 `gematria-expansion-token-mapping-record-v0`, `gematria-expansion-native-parity-record-v0`,
 `gematria-expansion-result-store-preflight-record-v0`, `gematria-expansion-gate-record-v0`, and
 `stage5q-expansion-candidate-mapping-summary-v0`.
+
+Stage 5R expanded solved-fixture CUDA parity records allow CUDA execution only for the three
+Stage 5Q mapped direct-translation candidates. They require `new_cuda_kernel_added=false`,
+`new_cuda_kernels_added=0`, `device_kernel_arithmetic_modified=false`,
+`unsolved_page_cuda_used=false`, `real_liber_primus_cuda_data_used=false`,
+`gpu_benchmark_performed=false`, `speedup_claim=false`, `generated_outputs_committed=false`,
+`raw_data_processed=false`, `codex_output_committed=false`, `method_status_upgrade_allowed=false`,
+and `solve_claim=false`. Generated JSON reports remain ignored under
+`experiments/results/gematria-expanded-solved-fixture-cuda/stage5r/`; only compact YAML records
+under `data/cuda/` are committed.
+
+Stage 5R schemas include `gematria-expanded-solved-fixture-cuda-run-record-v0`,
+`gematria-expanded-solved-fixture-cuda-parity-record-v0`,
+`gematria-expanded-solved-fixture-cuda-boundary-record-v0`,
+`gematria-expanded-solved-fixture-result-store-preflight-record-v0`,
+`gematria-expanded-solved-fixture-score-summary-preflight-record-v0`, and
+`stage5r-expanded-solved-fixture-cuda-parity-summary-v0`.
 
 Stage 3Y research-synthesis records under `data/research/` are committed source-of-truth metadata, not generated experiment outputs. They must keep `solve_claim=false`, record method-family status/reopen conditions, and preserve no-broadening guardrails for noisy, negative, inconclusive, deferred, or infrastructure-only families.
 
