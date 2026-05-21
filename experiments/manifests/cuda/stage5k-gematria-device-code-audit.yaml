@@ -1,0 +1,30 @@
+record_type: cuda_manifest
+manifest_id: stage5k-gematria-device-code-audit
+stage_id: stage-5k
+description: Audit Stage 5J and Stage 5F CUDA-facing files for conservative CUDA-C subset compliance.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_gpu_ci_safe: true
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+audited_paths:
+  - cuda/include/libreprimus/gematria_shift_score_kernel.cuh
+  - cuda/kernels/gematria_shift_score_kernel.cu
+  - cuda/include/libreprimus/shift_score_kernel.cuh
+  - cuda/kernels/shift_score_kernel.cu
+outputs:
+  committed: data/cuda/stage5k-gematria-cuda-device-code-audit.yaml
+  generated: experiments/results/gematria-cuda-parity-reporting/stage5k/device_code_audit.json
+notes:
+  - The audit is static and no-GPU-safe.

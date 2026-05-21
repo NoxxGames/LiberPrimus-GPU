@@ -30,7 +30,7 @@ Stage 4Q records benchmark planning and parity readiness only. It writes committ
 
 Stage 4Q CPU smoke timings are diagnostic only. They are not performance claims, speedup evidence, CUDA benchmarks, or authorization to implement GPU kernels.
 
-Stage 5A uses Stage 4Q records for CUDA planning and parity scaffolding only. It records target plans, non-targets, parity scaffolds, and implementation gates without running GPU benchmarks or making speedup claims. Stage 5B records a CUDA parity harness skeleton, backend capability profiles, and future-kernel matrix rows without running GPU benchmarks or making speedup claims. Stage 5C records CUDA build profiles, toolchain detection, device detection, and optional smoke-build status without running GPU benchmarks or making speedup claims. Stage 5D records native C++ CPU backend diagnostics and threading parity without GPU benchmarks or speedup claims. Stage 5E records first-kernel contract selection without GPU benchmarks or speedup claims. Stage 5F records a synthetic-only parity kernel and optional local build/parity status without GPU benchmarks or speedup claims. Stage 5G records parity reporting, CUDA-C subset hardening, and solved-fixture-safe blockers without running GPU benchmarks or making speedup claims. Stage 5H records Gematria mod-29 contract and native fixture metadata without running GPU benchmarks or making speedup claims. Stage 5I records Gematria CUDA preparation metadata without running GPU benchmarks or making speedup claims. Stage 5J records synthetic Gematria CUDA build/parity correctness metadata without running GPU benchmarks or making speedup claims; website expansion is deferred to Stage 6.
+Stage 5A uses Stage 4Q records for CUDA planning and parity scaffolding only. It records target plans, non-targets, parity scaffolds, and implementation gates without running GPU benchmarks or making speedup claims. Stage 5B records a CUDA parity harness skeleton, backend capability profiles, and future-kernel matrix rows without running GPU benchmarks or making speedup claims. Stage 5C records CUDA build profiles, toolchain detection, device detection, and optional smoke-build status without running GPU benchmarks or making speedup claims. Stage 5D records native C++ CPU backend diagnostics and threading parity without GPU benchmarks or speedup claims. Stage 5E records first-kernel contract selection without GPU benchmarks or speedup claims. Stage 5F records a synthetic-only parity kernel and optional local build/parity status without GPU benchmarks or speedup claims. Stage 5G records parity reporting, CUDA-C subset hardening, and solved-fixture-safe blockers without running GPU benchmarks or making speedup claims. Stage 5H records Gematria mod-29 contract and native fixture metadata without running GPU benchmarks or making speedup claims. Stage 5I records Gematria CUDA preparation metadata without running GPU benchmarks or making speedup claims. Stage 5J records synthetic Gematria CUDA build/parity correctness metadata without running GPU benchmarks or making speedup claims. Stage 5K records Gematria parity reporting, device-code audit status, solved-fixture-safe blockers, and score-summary preflight metadata without running CUDA, GPU benchmarks, or making speedup claims; website expansion is deferred to Stage 6.
 
 ## Stage 5C CUDA Build/Device Detection
 
@@ -79,6 +79,13 @@ Stage 5J implements and optionally runs only the synthetic numeric
 `gematria_mod29_shift_score_kernel` parity test. The local CUDA build and parity status is
 correctness metadata, not benchmark metadata. Do not report Stage 5J build, CTest, validation,
 kernel output hash, or generated reports as throughput, performance, or speedup evidence.
+
+## Stage 5K Gematria CUDA Parity Reporting Boundary
+
+Stage 5K reports the Stage 5J Gematria CUDA/native hash match and records solved-fixture-safe
+preflight blockers. It does not run CUDA, modify CUDA source, add kernels, execute solved or
+unsolved page data, run GPU benchmarks, or make speedup claims. Do not report Stage 5K validation,
+device-code audit, blockers, or generated reports as throughput, performance, or speedup evidence.
 
 ## Do not run long benchmarks by default
 

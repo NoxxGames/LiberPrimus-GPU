@@ -631,6 +631,49 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5JSummary `
         --results-dir $Stage5JOut
 
+    Write-Host "Running Stage 5K Gematria CUDA parity reporting no-GPU-safe/temp output"
+    $Stage5KOut = Join-Path $TempDir "stage5k-gematria-cuda-parity-reporting"
+    $Stage5KParity = Join-Path $TempDir "stage5k-gematria-cuda-parity-report.yaml"
+    $Stage5KAudit = Join-Path $TempDir "stage5k-gematria-cuda-device-code-audit.yaml"
+    $Stage5KPreflight = Join-Path $TempDir "stage5k-gematria-solved-fixture-safe-preflight.yaml"
+    $Stage5KScore = Join-Path $TempDir "stage5k-gematria-cuda-score-summary-preflight.yaml"
+    $Stage5KSummary = Join-Path $TempDir "stage5k-gematria-cuda-parity-reporting-summary.yaml"
+    & $Python -m libreprimus.cli gematria-cuda-parity-reporting build-parity-report `
+        --manifest experiments/manifests/cuda/stage5k-gematria-cuda-parity-reporting.yaml `
+        --out-dir $Stage5KOut `
+        --parity-report-out $Stage5KParity `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-parity-reporting audit-device-code `
+        --manifest experiments/manifests/cuda/stage5k-gematria-device-code-audit.yaml `
+        --out-dir $Stage5KOut `
+        --device-code-audit-out $Stage5KAudit `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-parity-reporting build-solved-fixture-preflight `
+        --manifest experiments/manifests/cuda/stage5k-solved-fixture-safe-preflight.yaml `
+        --out-dir $Stage5KOut `
+        --preflight-out $Stage5KPreflight `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-parity-reporting build-score-summary-preflight `
+        --manifest experiments/manifests/cuda/stage5k-solved-fixture-safe-preflight.yaml `
+        --out-dir $Stage5KOut `
+        --score-summary-preflight-out $Stage5KScore `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-parity-reporting build-summary `
+        --parity-report $Stage5KParity `
+        --device-code-audit $Stage5KAudit `
+        --preflight $Stage5KPreflight `
+        --score-summary-preflight $Stage5KScore `
+        --summary-out $Stage5KSummary `
+        --out-dir $Stage5KOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-cuda-parity-reporting validate-stage5k `
+        --parity-report $Stage5KParity `
+        --device-code-audit $Stage5KAudit `
+        --preflight $Stage5KPreflight `
+        --score-summary-preflight $Stage5KScore `
+        --summary $Stage5KSummary `
+        --results-dir $Stage5KOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

@@ -26,3 +26,9 @@ approval before solved-fixture CUDA execution.
 Stage 5I uses this synthetic numeric fixture as validation-vector source material for future
 Gematria CUDA preparation. It adds no CUDA source and executes no CUDA. Stage 5J must compare future
 CUDA token-output hashes against this fixture hash before any broader Gematria CUDA use.
+
+## Stage 5K Use
+
+Stage 5K records that the Stage 5J synthetic CUDA output hash matches this native fixture hash. That
+report is still synthetic-only readiness metadata; solved-fixture CUDA execution remains blocked
+until token mapping, score-summary parity, no-unsolved guardrails, and future-stage approval exist.

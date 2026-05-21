@@ -1,6 +1,6 @@
 # CUDA Device-Code Subset Policy
 
-Stage 5G hardens CUDA-facing source toward a conservative CUDA-C style subset. The policy applies to `.cu` and `.cuh` files unless a later stage explicitly marks a file as host-only and keeps it out of device compilation. Stage 5J keeps `gematria_mod29_shift_score_kernel` in this subset.
+Stage 5G hardens CUDA-facing source toward a conservative CUDA-C style subset. The policy applies to `.cu` and `.cuh` files unless a later stage explicitly marks a file as host-only and keeps it out of device compilation. Stage 5J keeps `gematria_mod29_shift_score_kernel` in this subset, and Stage 5K records the corresponding device-code audit without changing CUDA source.
 
 ## Required Style
 
@@ -51,3 +51,9 @@ must keep this conservative CUDA-C subset compliant before any additional kernel
 Stage 5I records a future Gematria CUDA-C ABI plan only. Stage 5J implementation must keep raw
 pointer/count buffers at the kernel boundary, keep host ownership outside CUDA-facing files, preserve
 separator placeholders through a transformable mask, and pass the Stage 5G device-code subset audit.
+
+## Stage 5K Requirement
+
+Stage 5K records device-code subset compliance for the Gematria kernel reporting surface. Any future
+violation should remain a blocker; it is not permission to widen the CUDA-facing subset or add C++
+convenience features to device paths.

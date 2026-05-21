@@ -523,5 +523,13 @@ experiments/results/gematria-cuda-kernel/**
 !experiments/results/gematria-cuda-kernel/stage5j/
 !experiments/results/gematria-cuda-kernel/stage5j/.gitkeep
 
+# Generated Gematria CUDA parity reporting outputs
+experiments/results/gematria-cuda-parity-reporting/**
+!experiments/results/gematria-cuda-parity-reporting/
+!experiments/results/gematria-cuda-parity-reporting/README.md
+!experiments/results/gematria-cuda-parity-reporting/.gitkeep
+!experiments/results/gematria-cuda-parity-reporting/stage5k/
+!experiments/results/gematria-cuda-parity-reporting/stage5k/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

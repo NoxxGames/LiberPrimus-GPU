@@ -896,3 +896,17 @@ Generated Stage 5J reports remain ignored under
 run solved or unsolved page CUDA transforms, run GPU benchmarks, claim speedups, process raw data,
 publish generated outputs, expand the website, activate the canonical corpus, finalise page
 boundaries, or claim a solve through Stage 5J records.
+
+# Stage 5K Gematria CUDA Parity Reporting Boundary
+
+Stage 5K is not a cryptanalytic experiment and not a CUDA execution stage. It converts the Stage 5J
+synthetic Gematria CUDA/native hash match into durable parity-report records, audits the CUDA-facing
+device-code subset, records solved-fixture-safe preflight blockers, and checks score-summary
+preflight readiness.
+
+Generated Stage 5K reports remain ignored under
+`experiments/results/gematria-cuda-parity-reporting/stage5k/`. Do not add or modify CUDA source,
+add kernels, run CUDA, run real Liber Primus data through CUDA, run solved or unsolved page CUDA
+transforms, run GPU benchmarks, claim speedups, process raw data, publish generated outputs, expand
+the website, activate the canonical corpus, finalise page boundaries, or claim a solve through
+Stage 5K records.

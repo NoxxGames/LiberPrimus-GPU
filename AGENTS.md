@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5J - Gematria mod-29 shift_score synthetic CUDA parity kernel implementation.
+Current completed stage: Stage 5K - Gematria shift_score CUDA parity reporting and solved-fixture-safe preflight.
 
-Current work: Stage 5K - Gematria shift_score CUDA parity reporting and solved-fixture-safe preflight. Stage 5K may consume the Stage 5J synthetic parity records, but it must remain reporting/preflight only unless a later explicit stage clears solved-fixture and real-data blockers.
+Current work: Stage 5L - solved-fixture-safe Gematria shift_score token mapping and native parity fixture preparation. Stage 5L may consume the Stage 5K preflight blockers, but it must remain token-mapping/native-fixture preparation only unless a later explicit stage clears solved-fixture and real-data execution approval.
 
 Current project state:
 
@@ -78,6 +78,9 @@ Current project state:
 - Stage 5H Gematria contract records define numeric token semantics only; they do not authorize CUDA execution.
 - Stage 5I preparation is not kernel implementation.
 - Stage 5J kernel records are synthetic numeric parity only, not production Gematria CUDA readiness.
+- Stage 5K reporting/preflight records are not CUDA execution permission.
+- Stage 5J synthetic parity does not authorize solved-page CUDA.
+- Solved-fixture-safe CUDA requires explicit token mapping, score-summary parity, no-unsolved guardrails, and future-stage approval.
 - Future Gematria CUDA kernel work must use raw numeric token buffers and transformable masks.
 - Separator placeholders must not be transformed.
 - Stage 5J implementation must compare the CUDA token-output hash against the Stage 5H native fixture hash.
@@ -94,6 +97,7 @@ Current project state:
 - Do not use device detection or smoke-build results as performance evidence.
 - Do not add or widen CUDA kernels outside an explicit implementation stage.
 - Do not stage `codex-output/**`.
+- Local CUDA tool paths are optional local hints only, never CI requirements.
 - Raw data, generated outputs, SQLite databases, raw Discord logs, raw page images, raw historical stego artefacts, extracted payloads, and local deep-research reports are not committed.
 - No solve claims are present.
 - Stage 4A generated Discord full-review site, redacted streams, channel shards, topic shards, indexes, copied LP page images, thumbnails, contact sheets, and upload archives are generated outputs and must not be committed.
@@ -740,6 +744,14 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not run GPU benchmarks or make speedup/performance claims.
 - CUDA-facing `.cu` and `.cuh` code must keep the conservative CUDA-C subset: raw pointers, POD data, explicit sizes, and no STL, exceptions, RTTI, lambdas, or dynamic allocation in device paths.
 - Generated Gematria CUDA reports under `experiments/results/gematria-cuda-kernel/stage5j/` and `codex-output/**` handoffs remain ignored and must not be staged.
+
+## Stage 5K Gematria CUDA Parity Reporting Rules
+
+- Stage 5K reports the Stage 5J synthetic Gematria CUDA/native hash match; it is not execution approval.
+- Stage 5K must not add CUDA kernels, modify CUDA source, run CUDA, run solved fixtures, run unsolved pages, run real Liber Primus data, run GPU benchmarks, claim speedups, or make solve claims.
+- Stage 5K solved-fixture-safe records must keep `solved_fixture_cuda_execution_allowed=false` until a future explicit stage records token-domain mapping, score-summary parity, no-unsolved guardrails, and approval.
+- Stage 5K generated reports under `experiments/results/gematria-cuda-parity-reporting/stage5k/` and `codex-output/**` handoffs remain ignored and must not be staged.
+- Local CUDA paths and local GPU memory profiles are optional diagnostics only and must not become CI requirements.
 
 ## Stage 3W State Consolidation Rules
 

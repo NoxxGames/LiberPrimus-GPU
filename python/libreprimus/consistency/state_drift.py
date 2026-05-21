@@ -188,6 +188,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5J is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5k",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5k\b", re.IGNORECASE),
+        "Stage 5K is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -602,12 +607,22 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5k_gematria_parity_reporting_next",
+        "stage5k_gematria_parity_reporting_complete",
         "stage 5k" in staged_plan
         and "gematria" in staged_plan
         and "parity reporting" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5K Gematria parity reporting as complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5l_gematria_token_mapping_next",
+        "stage 5l" in staged_plan
+        and "gematria" in staged_plan
+        and "token mapping" in staged_plan
         and "next" in staged_plan,
-        "Staged plan records Stage 5K Gematria parity reporting as next.",
+        "Staged plan records Stage 5L Gematria token mapping as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -776,6 +791,16 @@ def check_state_drift_consistency(
         and "stage 5k" in combined
         and "speedup claim" in combined,
         "Stage 5J Gematria CUDA kernel and Stage 5K reporting boundary is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "gematria_cuda_parity_reporting_policy_present",
+        "gematria cuda parity reporting" in combined
+        and "solved-fixture-safe" in combined
+        and "stage 5l" in combined
+        and "no-gpu" in combined,
+        "Stage 5K Gematria CUDA parity reporting and Stage 5L token-mapping boundary is documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

@@ -1,0 +1,72 @@
+record_type: stage5k_gematria_cuda_parity_reporting_summary
+stage_id: stage-5k
+status: complete
+parity_report_records: 1
+device_code_audit_records: 1
+solved_fixture_safe_preflight_records: 5
+score_summary_preflight_records: 1
+implemented_kernel_name: gematria_mod29_shift_score_kernel
+source_contract_id: gematria_mod29_shift_score_contract_v0
+native_fixture_hash: a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0
+cuda_output_hash: a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0
+cuda_native_hash_match: true
+gematria_cuda_synthetic_parity_verified: true
+device_code_subset_compliant: true
+stl_used_in_cuda_device_path: false
+std_array_used_in_cuda_device_path: false
+std_vector_used_in_cuda_device_path: false
+std_string_used_in_cuda_device_path: false
+cxx_exceptions_in_cuda_device_path: false
+throw_used_in_cuda_device_path: false
+dynamic_allocation_in_device_code: false
+lambdas_in_cuda_device_path: false
+cxx_ownership_types_cross_kernel_boundary: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+cuda_execution_performed: false
+optional_local_cuda_revalidation_performed: false
+synthetic_only: true
+solved_fixture_cuda_execution_allowed: false
+production_gematria_mod29_cuda_ready: false
+real_liber_primus_data_used: false
+solved_fixture_cuda_used: false
+unsolved_page_cuda_used: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+performance_or_speedup_claims: false
+generated_outputs_committed: false
+codex_output_committed: false
+raw_data_processed: false
+website_expansion: false
+canonical_corpus_active: false
+page_boundaries_final: false
+local_16gb_profile_required: false
+ci_gpu_required: false
+no_gpu_ci_safe: true
+python_semantic_reference_preserved: true
+cxx_launches_python_workers: false
+no_solve_claim: true
+solve_claim: false
+score_summary_contract: stage4i
+score_interpretation: triage_only
+blockers:
+- need_exact_solved_fixture_token_domain_mapping_to_gematria_0_28_buffers
+- need_explicit_future_stage_approval
+- need_host_side_result_record_shape_for_separator_and_token_kind_preservation
+- need_no_unsolved_page_guardrail_recheck
+- need_output_token_hash_definition_for_solved_fixture_stream
+- need_score_summary_parity_record_shape
+- need_stage4o_parity_expectation_linkage
+blocker_count: 7
+readiness_status_counts:
+  needs_token_mapping: 5
+selected_next_stage: Stage 5L - solved-fixture-safe Gematria shift_score token mapping
+  and native parity fixture preparation
+next_stage: Stage 5L - solved-fixture-safe Gematria shift_score token mapping and
+  native parity fixture preparation
+next_stage_reason: Solved-fixture-safe blockers remain for token mapping, native fixture
+  output hashes, score-summary parity, no-unsolved guardrails, and future-stage approval.
+recommended_next_prompt: Stage 5L - solved-fixture-safe Gematria shift_score token
+  mapping and native parity fixture preparation

@@ -663,3 +663,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5J recorded 1 implementation record, 1 build record, 1 parity record, and 1 summary record; local optional CUDA build and synthetic parity passed with hash `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`, generated reports remain ignored, and no real Liber Primus CUDA data, solved/unsolved page CUDA use, GPU benchmark, speedup claim, broad execution, raw-data processing, website expansion, canonical-corpus activation, page-boundary finalisation, or solve claim was added.
+  - record_type: stage_summary_record
+    stage_id: stage-5k
+    title: Gematria shift_score CUDA parity reporting and solved-fixture-safe preflight
+    status: complete
+    category: infrastructure
+    summary: Reported the Stage 5J synthetic Gematria CUDA/native hash match, audited CUDA-facing files for conservative CUDA-C subset compliance, and recorded solved-fixture-safe and score-summary blockers without CUDA execution or source changes.
+    key_outputs:
+      - "`libreprimus gematria-cuda-parity-reporting` commands for parity report generation, device-code audit, solved-fixture preflight, score-summary preflight, summary generation, validation, and summary display."
+      - Stage 5K parity report, device-code audit, solved-fixture-safe preflight, score-summary preflight, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/gematria-cuda-parity-reporting/stage5k/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5K recorded 1 parity report, 1 device-code audit, 5 solved-fixture-safe preflight records, 1 score-summary preflight record, 7 unique blockers, CUDA/native hash match true for `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`, device-code subset compliance true, new CUDA kernels added 0, CUDA source modified false, CUDA execution performed false, and no solved/unsolved page CUDA use, real Liber Primus data use, GPU benchmark, speedup claim, website expansion, canonical-corpus activation, page-boundary finalisation, or solve claim.

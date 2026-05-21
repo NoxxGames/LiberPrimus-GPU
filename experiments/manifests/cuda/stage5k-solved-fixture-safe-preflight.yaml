@@ -1,0 +1,41 @@
+record_type: cuda_manifest
+manifest_id: stage5k-solved-fixture-safe-preflight
+stage_id: stage-5k
+description: Build solved-fixture-safe Gematria CUDA readiness records without CUDA execution.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_gpu_ci_safe: true
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+solved_fixture_cuda_execution_allowed: false
+production_gematria_mod29_cuda_ready: false
+real_liber_primus_data_used: false
+solved_fixture_cuda_used: false
+unsolved_page_cuda_used: false
+inputs:
+  - data/cuda/stage5h-gematria-solved-fixture-safe-mapping.yaml
+  - data/cuda/stage5h-gematria-score-summary-parity-plan.yaml
+  - data/scoring/confidence-label-records-v0.yaml
+  - experiments/manifests/cpu-batch/stage4o-solved-fixture-parity-batch.yaml
+outputs:
+  committed:
+    - data/cuda/stage5k-gematria-solved-fixture-safe-preflight.yaml
+    - data/cuda/stage5k-gematria-cuda-score-summary-preflight.yaml
+    - data/cuda/stage5k-gematria-cuda-parity-reporting-summary.yaml
+  generated:
+    - experiments/results/gematria-cuda-parity-reporting/stage5k/solved_fixture_safe_preflight.json
+    - experiments/results/gematria-cuda-parity-reporting/stage5k/score_summary_preflight.json
+    - experiments/results/gematria-cuda-parity-reporting/stage5k/summary.json
+notes:
+  - Future solved-fixture CUDA execution remains blocked until exact token-domain mapping, score-summary parity shape, no-unsolved guardrails, and explicit future-stage approval exist.

@@ -6,6 +6,7 @@ fixture.
 
 Stage 5J implements the synthetic CUDA side of this contract only. The matching Stage 5H/5J fixture
 hash is `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`.
+Stage 5K reports that hash match and records solved-fixture-safe blockers without CUDA execution.
 
 ## Contract
 
@@ -32,4 +33,6 @@ Future Gematria CUDA work must cite this contract, the Stage 5H native fixture h
 device-code subset audit records, Stage 5F synthetic parity records, Stage 5D native CPU parity
 records, Stage 5I ABI and validation-vector records, Stage 4O parity expectations, and Stage 4I
 score-summary semantics. Stage 5J must compare CUDA token-output hashes against the Stage 5H native
-fixture hash before any wider use.
+fixture hash before any wider use. Stage 5K parity-reporting records must remain blocked for
+solved-fixture CUDA until token mapping, score-summary parity, no-unsolved guardrails, and explicit
+future-stage approval exist.

@@ -13,6 +13,8 @@ The kernel implements the Stage 5H/5I numeric Gematria shift contract for synthe
 The Stage 5F uppercase Latin synthetic kernel remains separate and has hash
 `76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66`.
 
-Stage 5J does not make production Gematria CUDA ready. It does not run real Liber Primus data,
-solved fixtures, unsolved pages, benchmarks, speedup claims, broad experiments, raw-data processing,
-website expansion, canonical corpus activation, page-boundary finalisation, or solve claims.
+Stage 5J does not make production Gematria CUDA ready. Stage 5K reports the Stage 5J hash match and
+records solved-fixture-safe blockers, but also does not run CUDA or clear production readiness. These
+stages do not run real Liber Primus data, solved fixtures, unsolved pages, benchmarks, speedup
+claims, broad experiments, raw-data processing, website expansion, canonical corpus activation,
+page-boundary finalisation, or solve claims.

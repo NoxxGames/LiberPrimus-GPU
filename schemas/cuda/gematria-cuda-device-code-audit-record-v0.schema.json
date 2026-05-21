@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/cuda/gematria-cuda-device-code-audit-record-v0.schema.json",
+  "title": "Gematria CUDA device code audit record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "device_code_subset_compliant",
+    "banned_token_finding_count",
+    "stl_used_in_cuda_device_path",
+    "cxx_exceptions_in_cuda_device_path",
+    "dynamic_allocation_in_device_code",
+    "new_cuda_kernels_added",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "gematria_cuda_device_code_audit_record" },
+    "stage_id": { "const": "stage-5k" },
+    "device_code_subset_compliant": { "const": true },
+    "banned_token_finding_count": { "const": 0 },
+    "stl_used_in_cuda_device_path": { "const": false },
+    "std_array_used_in_cuda_device_path": { "const": false },
+    "std_vector_used_in_cuda_device_path": { "const": false },
+    "std_string_used_in_cuda_device_path": { "const": false },
+    "cxx_exceptions_in_cuda_device_path": { "const": false },
+    "throw_used_in_cuda_device_path": { "const": false },
+    "dynamic_allocation_in_device_code": { "const": false },
+    "lambdas_in_cuda_device_path": { "const": false },
+    "cxx_ownership_types_cross_kernel_boundary": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "cuda_execution_performed": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "solve_claim": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "codex_output_committed": { "const": false }
+  }
+}

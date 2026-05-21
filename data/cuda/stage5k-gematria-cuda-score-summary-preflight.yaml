@@ -1,0 +1,73 @@
+records:
+- record_type: gematria_cuda_score_summary_preflight_record
+  score_summary_preflight_id: stage5k-gematria-cuda-score-summary-preflight-v0
+  score_plan_path: data\cuda\stage5h-gematria-score-summary-parity-plan.yaml
+  confidence_label_source: data\scoring\confidence-label-records-v0.yaml
+  score_summary_contract: stage4i
+  score_interpretation: triage_only
+  required_output_token_hash: true
+  output_text_hash_policy: optional_after_transliteration_policy_exists
+  score_status_values:
+  - scored
+  - scoring_not_available
+  - calibration_not_available
+  - scorer_error
+  allowed_confidence_labels:
+  - positive_control_like
+  - plausible_lead
+  - weak_lead
+  - noisy
+  - inconclusive
+  - garbage
+  - negative_control_like
+  - scoring_not_available
+  - calibration_not_available
+  confidence_labels_triage_only: true
+  future_cuda_output_requirements:
+  - compare CUDA output_token_hash against CPU/native output_token_hash
+  - cite Stage 4O parity expectation where available
+  - record scoring_not_available instead of inventing score semantics
+  notes:
+  - Stage 5K adds no new scorer and does not reinterpret confidence labels as solve
+    evidence.
+  - Output text hashes remain optional until transliteration policy is explicit.
+  stage_id: stage-5k
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  selected_future_kernel_id: shift_score_kernel
+  native_fixture_id: stage5h-gematria-mod29-synthetic-shift-fixture-v0
+  native_fixture_hash: a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0
+  stage5f_synthetic_hash: 76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66
+  stage5f_hash_is_gematria_fixture_hash: false
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  synthetic_only: true
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_execution_allowed: false
+  production_gematria_mod29_cuda_ready: false
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false
+  stl_in_device_path_allowed: false
+  no_solve_claim: true
+  solve_claim: false

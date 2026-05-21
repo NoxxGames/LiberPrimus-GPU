@@ -166,6 +166,13 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/results/gematria-cuda-kernel/stage5j/summary.json",
         "experiments/results/gematria-cuda-kernel/stage5j/warnings.jsonl",
         "codex-output/stage5j-codex-completion.md",
+        "experiments/results/gematria-cuda-parity-reporting/stage5k/parity_report.json",
+        "experiments/results/gematria-cuda-parity-reporting/stage5k/device_code_audit.json",
+        "experiments/results/gematria-cuda-parity-reporting/stage5k/solved_fixture_safe_preflight.json",
+        "experiments/results/gematria-cuda-parity-reporting/stage5k/score_summary_preflight.json",
+        "experiments/results/gematria-cuda-parity-reporting/stage5k/summary.json",
+        "experiments/results/gematria-cuda-parity-reporting/stage5k/warnings.jsonl",
+        "codex-output/stage5k-codex-completion.md",
         "local-test.sqlite3",
     ]
     trackable_paths = [

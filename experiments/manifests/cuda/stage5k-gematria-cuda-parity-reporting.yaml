@@ -1,0 +1,28 @@
+record_type: cuda_manifest
+manifest_id: stage5k-gematria-cuda-parity-reporting
+stage_id: stage-5k
+description: Report Stage 5J Gematria synthetic CUDA/native parity metadata without executing CUDA.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_gpu_ci_safe: true
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+inputs:
+  - data/cuda/stage5j-gematria-cuda-kernel-summary.yaml
+  - data/cuda/stage5j-gematria-cuda-synthetic-parity-records.yaml
+outputs:
+  committed: data/cuda/stage5k-gematria-cuda-parity-report.yaml
+  generated: experiments/results/gematria-cuda-parity-reporting/stage5k/parity_report.json
+notes:
+  - Stage 5K is reporting only; it does not run solved fixtures, unsolved pages, or real LP data through CUDA.

@@ -195,7 +195,7 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 5J, onboarding and staged-plan checks should show Stage 5J complete and Stage 5K
+After Stage 5K, onboarding and staged-plan checks should show Stage 5K complete and Stage 5L
 Gematria shift_score CUDA parity reporting next.
 
 If path sanitisation fails, run:
@@ -514,3 +514,22 @@ If Stage 5J validation fails, rebuild or inspect the committed kernel records:
 No-GPU CI may record skipped build/parity status. Local CUDA parity may pass when the toolkit and
 device are available. Do not treat either path as a benchmark, speedup claim, or permission to run
 real Liber Primus data through CUDA.
+
+# Stage 5K Gematria CUDA Parity Reporting Troubleshooting
+
+If Stage 5K validation fails, rebuild or inspect the committed parity-reporting records:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-cuda-parity-reporting validate-stage5k `
+  --parity-report data/cuda/stage5k-gematria-cuda-parity-report.yaml `
+  --device-code-audit data/cuda/stage5k-gematria-cuda-device-code-audit.yaml `
+  --preflight data/cuda/stage5k-gematria-solved-fixture-safe-preflight.yaml `
+  --score-summary-preflight data/cuda/stage5k-gematria-cuda-score-summary-preflight.yaml `
+  --summary data/cuda/stage5k-gematria-cuda-parity-reporting-summary.yaml `
+  --results-dir experiments/results/gematria-cuda-parity-reporting/stage5k
+```
+
+Stage 5K reports the Stage 5J synthetic hash match and records blockers. It must not add CUDA
+source, run CUDA, run solved or unsolved page data through CUDA, run GPU benchmarks, publish
+generated reports, or claim a solve. If solved-fixture-safe records are not ready, the expected next
+work is Stage 5L token mapping and native parity fixture preparation.

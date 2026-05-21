@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Stage 5J Gematria mod-29 shift_score synthetic CUDA parity kernel implementation is complete. Next planned stage: Stage 5K Gematria shift_score CUDA parity reporting and solved-fixture-safe preflight. Website expansion is deferred to Stage 6.
+Stage 5K Gematria shift_score CUDA parity reporting and solved-fixture-safe preflight is complete. Next planned stage: Stage 5L solved-fixture-safe Gematria shift_score token mapping and native parity fixture preparation. Website expansion is deferred to Stage 6.
 
 Stage 4A follow-up hardens the generated static review site with noindex/robots/privacy/upload
 metadata and documents the remaining GitHub Wiki publish blocker. It does not change research
@@ -31,6 +31,14 @@ Stage 5J added `gematria_mod29_shift_score_kernel`, the `libreprimus gematria-cu
 Local Stage 5J summary: implementation records `1`, build records `1`, parity records `1`, implemented kernel `gematria_mod29_shift_score_kernel`, source contract `gematria_mod29_shift_score_contract_v0`, native fixture `stage5h-gematria-mod29-synthetic-shift-fixture-v0`, native fixture hash `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`, CUDA build status `passed`, CUDA synthetic parity status `passed`, CUDA/native hash match `true`, Stage 5K ready `true`, CUDA source modified `true`, new CUDA kernels added `1`, solved fixture CUDA execution allowed `false`, production Gematria mod-29 CUDA ready `false`, GPU benchmark performed `false`, performance/speedup assertions `false`, and real Liber Primus CUDA data used `false`.
 
 Stage 5J is synthetic numeric parity only. It implements `(token + shift) % 29` over numeric tokens `0..28`, preserves non-transformable separator placeholders by mask, keeps candidate-major output ordering, keeps the Stage 5F uppercase Latin synthetic hash separate, does not run real Liber Primus data, does not run solved or unsolved pages through CUDA, does not run GPU benchmarks, does not process raw data, does not publish generated outputs, does not expand the website, and makes no solve claim. Generated reports remain ignored under `experiments/results/gematria-cuda-kernel/stage5j/`; `codex-output/` completion handoffs are ignored and uncommitted.
+
+## Completed in Stage 5K
+
+Stage 5K added the `libreprimus gematria-cuda-parity-reporting` CLI, Gematria CUDA parity-reporting schemas, Stage 5J parity report records, CUDA device-code audit records, solved-fixture-safe preflight records, score-summary preflight records, Stage 5K manifests, generated ignored reports, Python tests, docs, and research-synthesis updates.
+
+Local Stage 5K summary: parity report records `1`, device-code audit records `1`, solved-fixture-safe preflight records `5`, score-summary preflight records `1`, implemented kernel `gematria_mod29_shift_score_kernel`, native fixture hash `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`, CUDA output hash `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`, CUDA/native hash match `true`, synthetic parity verified `true`, device-code subset compliant `true`, new CUDA kernels added `0`, CUDA source modified `false`, CUDA execution performed `false`, solved fixture CUDA execution allowed `false`, production Gematria mod-29 CUDA ready `false`, GPU benchmark performed `false`, performance/speedup assertions `false`, real Liber Primus CUDA data used `false`, blockers `7`, and readiness statuses `needs_token_mapping: 5`.
+
+Stage 5K is reporting and preflight only. It does not add or modify CUDA source, does not run CUDA, does not run real Liber Primus data, does not run solved or unsolved pages through CUDA, does not run GPU benchmarks, does not process raw data, does not publish generated outputs, does not expand the website, and makes no solve claim. Generated reports remain ignored under `experiments/results/gematria-cuda-parity-reporting/stage5k/`; `codex-output/` completion handoffs are ignored and uncommitted. Stage 5L should prepare solved-fixture-safe token mapping and native parity fixture records before any solved-fixture CUDA execution stage can be considered.
 
 ## Completed in Stage 5I
 

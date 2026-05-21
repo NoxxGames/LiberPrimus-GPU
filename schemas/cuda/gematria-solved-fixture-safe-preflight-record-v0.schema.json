@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/cuda/gematria-solved-fixture-safe-preflight-record-v0.schema.json",
+  "title": "Gematria solved fixture safe preflight record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "mapping_id",
+    "source_input_stream_id",
+    "readiness_status",
+    "blockers",
+    "solved_fixture_cuda_execution_allowed",
+    "real_liber_primus_data_used",
+    "unsolved_page_cuda_used",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "gematria_solved_fixture_safe_preflight_record" },
+    "stage_id": { "const": "stage-5k" },
+    "readiness_status": {
+      "enum": [
+        "blocked",
+        "needs_native_fixture",
+        "needs_token_mapping",
+        "needs_score_summary_plan",
+        "needs_explicit_approval",
+        "ready_for_future_solved_fixture_safe_cuda_stage"
+      ]
+    },
+    "blockers": { "type": "array", "minItems": 1 },
+    "solved_fixture_cuda_execution_allowed": { "const": false },
+    "production_gematria_mod29_cuda_ready": { "const": false },
+    "real_liber_primus_data_used": { "const": false },
+    "solved_fixture_cuda_used": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "gpu_benchmark_performed": { "const": false },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "solve_claim": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "codex_output_committed": { "const": false }
+  }
+}

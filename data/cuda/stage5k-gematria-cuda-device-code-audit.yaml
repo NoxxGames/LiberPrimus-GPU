@@ -1,0 +1,66 @@
+records:
+- record_type: gematria_cuda_device_code_audit_record
+  audit_id: stage5k-gematria-cuda-device-code-audit
+  source_paths:
+  - cuda/include/libreprimus/gematria_shift_score_kernel.cuh
+  - cuda/kernels/gematria_shift_score_kernel.cu
+  - cuda/include/libreprimus/shift_score_kernel.cuh
+  - cuda/kernels/shift_score_kernel.cu
+  files_scanned: 4
+  banned_token_findings: []
+  banned_token_finding_count: 0
+  device_code_subset_compliant: true
+  stl_used_in_cuda_device_path: false
+  std_array_used_in_cuda_device_path: false
+  std_vector_used_in_cuda_device_path: false
+  std_string_used_in_cuda_device_path: false
+  cxx_exceptions_in_cuda_device_path: false
+  throw_used_in_cuda_device_path: false
+  dynamic_allocation_in_device_code: false
+  lambdas_in_cuda_device_path: false
+  cxx_ownership_types_cross_kernel_boundary: false
+  policy: conservative_cuda_c_subset
+  notes:
+  - Stage 5K scans CUDA-facing .cu/.cuh files and does not modify CUDA source.
+  - cudaMalloc/cudaFree host-side runtime calls are not treated as C++ dynamic allocation
+    in device code.
+  stage_id: stage-5k
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  selected_future_kernel_id: shift_score_kernel
+  native_fixture_id: stage5h-gematria-mod29-synthetic-shift-fixture-v0
+  native_fixture_hash: a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0
+  stage5f_synthetic_hash: 76a7d57c1da4d1ea39fc1d34f0e29ef4f732dab2f489b26d31758169ccd21a66
+  stage5f_hash_is_gematria_fixture_hash: false
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  synthetic_only: true
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_execution_allowed: false
+  production_gematria_mod29_cuda_ready: false
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false
+  stl_in_device_path_allowed: false
+  no_solve_claim: true
+  solve_claim: false

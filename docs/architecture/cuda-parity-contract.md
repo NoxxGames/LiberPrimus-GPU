@@ -13,9 +13,11 @@ Required parity anchors:
 - Scoring parity requires byte-for-byte matching output text before score comparison.
 - `output_text_hash` and `output_token_hash` are the first comparison anchors.
 
-Stage 4I adds the score-summary contract for future transform-and-score parity. Stage 4O adds adapter-level parity expectations for solved-fixture-safe CPU batch outputs. Stage 4P adds unified result and score-summary surfaces so future CUDA planning can compare output hashes, score labels, method status, and retirement state without reading raw data or generated bulk outputs from Git. Stage 4Q adds CPU benchmark and parity readiness records so future CUDA planning can distinguish ready, blocked, and non-target transform families. Stage 5A adds target plans, parity scaffolds, non-target records, and implementation gates. Stage 5B adds the planning-only parity harness skeleton, parity fixtures, backend capability profiles, and future-kernel parity matrix.
+Stage 4I adds the score-summary contract for future transform-and-score parity. Stage 4O adds adapter-level parity expectations for solved-fixture-safe CPU batch outputs. Stage 4P adds unified result and score-summary surfaces so future CUDA planning can compare output hashes, score labels, method status, and retirement state without reading raw data or generated bulk outputs from Git. Stage 4Q adds CPU benchmark and parity readiness records so future CUDA planning can distinguish ready, blocked, and non-target transform families. Stage 5A adds target plans, parity scaffolds, non-target records, and implementation gates. Stage 5B adds the planning-only parity harness skeleton, parity fixtures, backend capability profiles, and future-kernel parity matrix. Stage 5K adds Gematria parity-reporting and solved-fixture-safe preflight records for the Stage 5J synthetic numeric kernel.
 
 CUDA implementation remains deferred until observation review hardening, source-lock readiness, promotion readiness, positive-control readiness, Stage 4P result-store/score-summary unification, Stage 4Q CPU benchmark and parity planning, Stage 5A target scaffolds, Stage 5B harness records, parity tests, and benchmark plans exist. Existing CUDA code remains scaffold/smoke infrastructure unless a later explicit stage says otherwise.
 Stage 5E narrows the first future CUDA parity contract to `shift_score_kernel` for `caesar_mod29`.
-Future implementation must cite the Stage 5E contract and Stage 5D native parity hash before any
-kernel output can be trusted.
+Stage 5J implements the synthetic numeric Gematria parity target prepared by Stage 5I, and Stage 5K
+reports that hash match while keeping solved-fixture-safe CUDA blocked. Future implementation must
+cite the relevant contract, native parity hash, Stage 5K blocker status, and explicit benchmark and
+score-summary gates before any broader kernel output can be trusted.

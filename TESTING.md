@@ -119,6 +119,14 @@ data, solved/unsolved page CUDA use, production Gematria CUDA readiness, benchma
 performance/speedup, generated-output, codex-output, and solve-claim drift, and ignored-output
 checks for `experiments/results/gematria-cuda-kernel/stage5j/` and `codex-output/`.
 
+Stage 5K extends coverage with Gematria CUDA parity-reporting schemas, Stage 5J parity report
+records, CUDA device-code audit records, solved-fixture-safe preflight records, score-summary
+preflight records, CLI build/validate/summary checks, validation rejections for CUDA execution,
+new kernels, CUDA source changes, solved/unsolved page CUDA use, production Gematria CUDA readiness,
+benchmarking, performance/speedup, generated-output, codex-output, and solve-claim drift, and
+ignored-output checks for `experiments/results/gematria-cuda-parity-reporting/stage5k/` and
+`codex-output/`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.
@@ -768,3 +776,22 @@ The consistency scripts also build Stage 5J temp outputs in a raw-data-free, no-
 CI can skip CUDA builds, while local CUDA may record a passed build/parity run. Tests must not run
 real Liber Primus data through CUDA, run GPU benchmarks, make speedup claims, commit generated
 Gematria CUDA reports, process raw data, or publish `codex-output/**`.
+
+# Stage 5K Validation
+
+Stage 5K validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-cuda-parity-reporting validate-stage5k `
+  --parity-report data/cuda/stage5k-gematria-cuda-parity-report.yaml `
+  --device-code-audit data/cuda/stage5k-gematria-cuda-device-code-audit.yaml `
+  --preflight data/cuda/stage5k-gematria-solved-fixture-safe-preflight.yaml `
+  --score-summary-preflight data/cuda/stage5k-gematria-cuda-score-summary-preflight.yaml `
+  --summary data/cuda/stage5k-gematria-cuda-parity-reporting-summary.yaml `
+  --results-dir experiments/results/gematria-cuda-parity-reporting/stage5k
+```
+
+The consistency scripts also build Stage 5K temp outputs in a raw-data-free, no-GPU-safe location.
+Tests must not require CUDA hardware, modify CUDA source, add kernels, run solved or unsolved page
+data through CUDA, run GPU benchmarks, make speedup claims, commit generated Gematria CUDA parity
+reports, process raw data, or publish `codex-output/**`.
