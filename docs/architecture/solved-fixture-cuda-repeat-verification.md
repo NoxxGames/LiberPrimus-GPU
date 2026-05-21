@@ -15,3 +15,6 @@ The repeat verifier compares each Stage 5O CUDA output-token hash against two co
 A repeat parity record is `passed` only when both comparisons match. The stage adds no CUDA kernels,
 does not modify CUDA source, does not benchmark, does not process unsolved-page data, and does not
 publish generated result bodies.
+
+Stage 5Q follow-up: the exact Stage 5O repeat pack is labelled as a consumed control and is not
+counted as a new expansion candidate. New candidates must be source-backed and mapped separately.

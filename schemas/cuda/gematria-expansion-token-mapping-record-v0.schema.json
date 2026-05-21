@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/gematria-expansion-token-mapping-record-v0.schema.json",
+  "title": "Gematria Expansion Token Mapping Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "token_mapping_record_id",
+    "candidate_inventory_id",
+    "fixture_id",
+    "candidate_id",
+    "source_input_stream_id",
+    "source_transform_family",
+    "target_kernel",
+    "executed_semantics_if_future_cuda",
+    "original_transform_family_semantics_exercised",
+    "source_backed_token_values",
+    "token_domain",
+    "token_values",
+    "token_kinds",
+    "transformable_mask",
+    "separator_positions",
+    "token_count",
+    "transformable_token_count",
+    "mapping_status",
+    "blockers",
+    "cuda_execution_performed",
+    "cuda_source_modified",
+    "new_cuda_kernels_added",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "gematria_expansion_token_mapping_record" },
+    "stage_id": { "const": "stage-5q" },
+    "source_stage_id": { "const": "stage-5p" },
+    "target_kernel": { "const": "gematria_mod29_shift_score_kernel" },
+    "executed_semantics_if_future_cuda": { "const": "gematria_shift_score_only" },
+    "original_transform_family_semantics_exercised": { "const": false },
+    "token_domain": { "const": "integers_0_to_28" },
+    "mapping_status": {
+      "enum": [
+        "mapped",
+        "blocked_missing_source_tokens",
+        "blocked_invalid_token_domain",
+        "blocked_missing_separator_policy",
+        "blocked_already_consumed_control",
+        "blocked_transform_family_requires_separate_kernel"
+      ]
+    },
+    "token_values": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          { "type": "integer", "minimum": 0, "maximum": 28 },
+          { "type": "null" }
+        ]
+      }
+    },
+    "token_kinds": { "type": "array", "items": { "type": "string" } },
+    "transformable_mask": { "type": "array", "items": { "type": "boolean" } },
+    "generated_body_publication_allowed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "codex_output_committed": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "cuda_source_modified": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "real_liber_primus_cuda_data_used": { "const": false },
+    "solved_fixture_cuda_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "method_status_upgrade_allowed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "canonical_corpus_active": { "const": false },
+    "page_boundaries_final": { "const": false },
+    "no_gpu_ci_safe": { "const": true },
+    "cxx_launches_python_workers": { "const": false }
+  }
+}

@@ -218,6 +218,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5P is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5q",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5q\b", re.IGNORECASE),
+        "Stage 5Q is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -692,12 +697,24 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
-        "stage5q_controlled_shift_score_next",
+        "stage5q_controlled_shift_score_complete",
         "stage 5q" in staged_plan
         and "controlled" in staged_plan
         and "shift_score" in staged_plan
-        and "candidate mapping" in staged_plan,
-        "Staged plan records Stage 5Q controlled shift_score candidate mapping as next.",
+        and "candidate mapping" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5Q controlled shift_score candidate mapping as complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5r_controlled_expanded_shift_score_next",
+        "stage 5r" in staged_plan
+        and "controlled" in staged_plan
+        and "expanded" in staged_plan
+        and "shift_score" in staged_plan
+        and "next" in staged_plan,
+        "Staged plan records Stage 5R controlled expanded shift_score parity as next.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -926,6 +943,16 @@ def check_state_drift_consistency(
         and "generated-body" in combined
         and "stage 5q" in combined,
         "Stage 5P Gematria CUDA result-store integration and Stage 5Q candidate mapping policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "gematria_expansion_candidate_mapping_policy_present",
+        "expansion candidate mapping" in combined
+        and "stage 5r" in combined
+        and "consumed controls" in combined
+        and "no cuda execution" in combined,
+        "Stage 5Q expansion candidate mapping and Stage 5R boundary are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

@@ -1,0 +1,26 @@
+record_type: cuda_metadata_manifest
+manifest_id: stage5q-expansion-candidate-inventory
+stage_id: stage-5q
+description: Raw-data-free candidate inventory for solved-fixture-safe Gematria shift_score expansion mapping.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+cuda_execution_performed: false
+new_cuda_kernels_added: 0
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+source_paths:
+  - data/cuda/stage5p-gematria-controlled-expansion-candidates.yaml
+  - data/cuda/stage5l-gematria-solved-fixture-token-mapping.yaml
+  - data/fixtures/solved-pages/direct-translation-v0/
+  - data/fixtures/solved-pages/atbash-family-v0/
+  - data/fixtures/solved-pages/vigenere-v0/
+  - data/fixtures/solved-pages/prime-stream-v0/
+output_records: data/cuda/stage5q-gematria-expansion-candidate-inventory.yaml
+generated_output_dir: experiments/results/gematria-expansion-candidate-mapping/stage5q/
+notes:
+  - Exact Stage 5L/5M/5O buffers are consumed controls, not new candidates.
+  - No CUDA, benchmark, raw page, Discord, image, stego, or canonical corpus input is used.

@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5P - controlled solved-fixture CUDA result-store integration.
-- Next planned stage: Stage 5Q - controlled solved-fixture-safe Gematria shift_score expansion candidate mapping.
+- Latest completed stage: Stage 5Q - controlled solved-fixture-safe Gematria shift_score expansion candidate mapping.
+- Next planned stage: Stage 5R - controlled expanded solved-fixture-safe Gematria shift_score CUDA parity run.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

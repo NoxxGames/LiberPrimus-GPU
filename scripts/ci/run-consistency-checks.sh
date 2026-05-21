@@ -812,6 +812,53 @@ echo "Running Stage 5O solved-fixture Gematria CUDA repeat no-GPU-safe/temp outp
     --summary "$tmp_dir/stage5p-cuda-result-store-integration-summary.yaml" \
     --results-dir "$tmp_dir/stage5p-gematria-cuda-result-store"
 
+echo "Running Stage 5Q Gematria expansion candidate mapping no-GPU-safe/temp output"
+"$python_bin" -m libreprimus.cli gematria-expansion-candidate-mapping build-candidate-inventory \
+    --candidate-inventory-out "$tmp_dir/stage5q-gematria-expansion-candidate-inventory.yaml" \
+    --out-dir "$tmp_dir/stage5q-gematria-expansion-candidate-mapping" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expansion-candidate-mapping build-token-mapping \
+    --candidate-inventory "$tmp_dir/stage5q-gematria-expansion-candidate-inventory.yaml" \
+    --token-mapping-out "$tmp_dir/stage5q-gematria-expansion-token-mapping.yaml" \
+    --out-dir "$tmp_dir/stage5q-gematria-expansion-candidate-mapping" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expansion-candidate-mapping build-native-parity \
+    --token-mapping "$tmp_dir/stage5q-gematria-expansion-token-mapping.yaml" \
+    --native-parity-out "$tmp_dir/stage5q-gematria-expansion-native-parity.yaml" \
+    --out-dir "$tmp_dir/stage5q-gematria-expansion-candidate-mapping" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expansion-candidate-mapping build-result-store-preflight \
+    --token-mapping "$tmp_dir/stage5q-gematria-expansion-token-mapping.yaml" \
+    --native-parity "$tmp_dir/stage5q-gematria-expansion-native-parity.yaml" \
+    --result-store-preflight-out "$tmp_dir/stage5q-gematria-expansion-result-store-preflight.yaml" \
+    --out-dir "$tmp_dir/stage5q-gematria-expansion-candidate-mapping" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expansion-candidate-mapping build-expansion-gate \
+    --candidate-inventory "$tmp_dir/stage5q-gematria-expansion-candidate-inventory.yaml" \
+    --token-mapping "$tmp_dir/stage5q-gematria-expansion-token-mapping.yaml" \
+    --native-parity "$tmp_dir/stage5q-gematria-expansion-native-parity.yaml" \
+    --result-store-preflight "$tmp_dir/stage5q-gematria-expansion-result-store-preflight.yaml" \
+    --expansion-gate-out "$tmp_dir/stage5q-gematria-expansion-gate.yaml" \
+    --out-dir "$tmp_dir/stage5q-gematria-expansion-candidate-mapping" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expansion-candidate-mapping build-summary \
+    --candidate-inventory "$tmp_dir/stage5q-gematria-expansion-candidate-inventory.yaml" \
+    --token-mapping "$tmp_dir/stage5q-gematria-expansion-token-mapping.yaml" \
+    --native-parity "$tmp_dir/stage5q-gematria-expansion-native-parity.yaml" \
+    --result-store-preflight "$tmp_dir/stage5q-gematria-expansion-result-store-preflight.yaml" \
+    --expansion-gate "$tmp_dir/stage5q-gematria-expansion-gate.yaml" \
+    --summary-out "$tmp_dir/stage5q-expansion-candidate-mapping-summary.yaml" \
+    --out-dir "$tmp_dir/stage5q-gematria-expansion-candidate-mapping" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-expansion-candidate-mapping validate-stage5q \
+    --candidate-inventory "$tmp_dir/stage5q-gematria-expansion-candidate-inventory.yaml" \
+    --token-mapping "$tmp_dir/stage5q-gematria-expansion-token-mapping.yaml" \
+    --native-parity "$tmp_dir/stage5q-gematria-expansion-native-parity.yaml" \
+    --result-store-preflight "$tmp_dir/stage5q-gematria-expansion-result-store-preflight.yaml" \
+    --expansion-gate "$tmp_dir/stage5q-gematria-expansion-gate.yaml" \
+    --summary "$tmp_dir/stage5q-expansion-candidate-mapping-summary.yaml" \
+    --results-dir "$tmp_dir/stage5q-gematria-expansion-candidate-mapping"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

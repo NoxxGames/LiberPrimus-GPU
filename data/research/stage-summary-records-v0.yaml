@@ -759,3 +759,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5P wrote 5 compact result-store integration records, 5 Stage 4I-compatible score-summary records, 7 method-status impact records, 4 generated-body policy records, and 6 controlled expansion candidate records. It performed no CUDA execution, modified no CUDA source, added 0 kernels, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, published no generated result bodies, upgraded no method family to solved, and made no canonical-corpus, page-boundary, website-expansion, or solve claim. The selected next stage is Stage 5Q controlled solved-fixture-safe Gematria shift_score expansion candidate mapping.
+  - record_type: stage_summary_record
+    stage_id: stage-5q
+    title: Controlled solved-fixture-safe Gematria shift_score expansion candidate mapping
+    status: complete
+    category: infrastructure
+    summary: Mapped additional committed direct-translation solved-fixture-safe Gematria shift_score candidates, prepared native output-token hashes, and recorded Stage 4P/Stage 4I-compatible preflight without CUDA execution.
+    key_outputs:
+      - "`libreprimus gematria-expansion-candidate-mapping` commands for candidate inventory, token mapping, native parity, result-store preflight, expansion gate, summary, validation, and summary display."
+      - Stage 5Q candidate inventory, token-mapping, native-parity, result-store preflight, controlled expansion gate, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/gematria-expansion-candidate-mapping/stage5q/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5Q wrote 10 candidate inventory records, 10 token-mapping records, 10 native parity records, 3 result-store preflight records, 1 expansion gate record, and 1 summary record. It mapped 3 new direct-translation solved-fixture-safe candidates, labelled the exact Stage 5L/5M/5O five-buffer pack as 5 consumed controls, blocked 2 original-family fixtures pending separate contracts, prepared 3 native output-token hashes, marked Stage 5R ready, and performed no CUDA execution, CUDA source modification, kernel addition, GPU benchmark, speedup claim, unsolved-page CUDA use, real Liber Primus CUDA-data use, generated-output publication, website expansion, canonical-corpus activation, page-boundary finalisation, or solve claim. The selected next stage is Stage 5R controlled expanded solved-fixture-safe Gematria shift_score CUDA parity run.

@@ -146,6 +146,12 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/gematria-cuda-generated-body-policy-record-v0.schema.json",
     "cuda/gematria-cuda-controlled-expansion-candidate-record-v0.schema.json",
     "cuda/stage5p-cuda-result-store-integration-summary-v0.schema.json",
+    "cuda/gematria-expansion-candidate-inventory-record-v0.schema.json",
+    "cuda/gematria-expansion-token-mapping-record-v0.schema.json",
+    "cuda/gematria-expansion-native-parity-record-v0.schema.json",
+    "cuda/gematria-expansion-result-store-preflight-record-v0.schema.json",
+    "cuda/gematria-expansion-gate-record-v0.schema.json",
+    "cuda/stage5q-expansion-candidate-mapping-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -269,6 +275,12 @@ EXPECTED_DOC_TERMS = [
     "gematria-cuda-generated-body-policy-record-v0",
     "gematria-cuda-controlled-expansion-candidate-record-v0",
     "stage5p-cuda-result-store-integration-summary-v0",
+    "gematria-expansion-candidate-inventory-record-v0",
+    "gematria-expansion-token-mapping-record-v0",
+    "gematria-expansion-native-parity-record-v0",
+    "gematria-expansion-result-store-preflight-record-v0",
+    "gematria-expansion-gate-record-v0",
+    "stage5q-expansion-candidate-mapping-summary-v0",
 ]
 
 

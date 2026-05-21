@@ -17,3 +17,7 @@ The preflight records are intentionally narrow:
 
 Stage 5O selects Stage 5P only for controlled result-store integration. It does not authorize broad
 CUDA execution, benchmarking, website expansion, or solve claims.
+
+Stage 5Q consumes the Stage 5P integration boundary for candidate mapping only. It prepares native
+hashes and Stage 4P/Stage 4I-compatible preflight rows for three new direct-translation fixtures,
+but it still does not authorize CUDA execution by itself.

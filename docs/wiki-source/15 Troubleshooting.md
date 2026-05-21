@@ -51,6 +51,7 @@ git check-ignore -v experiments/results/gematria-solved-fixture-mapping/stage5l/
 git check-ignore -v experiments/results/gematria-solved-fixture-cuda/stage5m/summary.json
 git check-ignore -v experiments/results/gematria-solved-fixture-cuda-repeat/stage5o/summary.json
 git check-ignore -v experiments/results/gematria-cuda-result-store/stage5p/summary.json
+git check-ignore -v experiments/results/gematria-expansion-candidate-mapping/stage5q/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
@@ -204,7 +205,7 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 5O, onboarding and staged-plan checks should show Stage 5O complete and Stage 5P
+After Stage 5Q, onboarding and staged-plan checks should show Stage 5Q complete and Stage 5R
 controlled solved-fixture CUDA result-store integration next.
 
 If path sanitisation fails, run:

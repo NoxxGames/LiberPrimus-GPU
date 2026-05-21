@@ -571,5 +571,13 @@ experiments/results/gematria-cuda-result-store/**
 !experiments/results/gematria-cuda-result-store/stage5p/
 !experiments/results/gematria-cuda-result-store/stage5p/.gitkeep
 
+# Generated Gematria CUDA expansion-candidate mapping outputs
+experiments/results/gematria-expansion-candidate-mapping/**
+!experiments/results/gematria-expansion-candidate-mapping/
+!experiments/results/gematria-expansion-candidate-mapping/README.md
+!experiments/results/gematria-expansion-candidate-mapping/.gitkeep
+!experiments/results/gematria-expansion-candidate-mapping/stage5q/
+!experiments/results/gematria-expansion-candidate-mapping/stage5q/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

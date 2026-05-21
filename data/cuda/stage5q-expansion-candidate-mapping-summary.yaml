@@ -1,0 +1,83 @@
+record_type: stage5q_expansion_candidate_mapping_summary
+stage_id: stage-5q
+status: complete
+source_stage_id: stage-5p
+candidate_inventory_records: 10
+new_candidate_count: 3
+already_consumed_control_records: 5
+blocked_candidate_records: 2
+candidate_status_counts:
+  blocked_requires_separate_kernel_contract: 2
+  already_consumed_control: 5
+  candidate_for_mapping: 3
+candidate_class_counts:
+  blocked_original_transform_family_contract_needed: 2
+  already_consumed_control: 5
+  additional_solved_fixture_shift_score_candidate: 3
+token_mapping_records: 10
+mapped_count: 3
+blocked_mapping_count: 7
+mapping_status_counts:
+  blocked_transform_family_requires_separate_kernel: 2
+  blocked_already_consumed_control: 5
+  mapped: 3
+native_parity_records: 10
+native_parity_prepared_count: 3
+blocked_native_parity_count: 7
+native_parity_status_counts:
+  blocked: 7
+  prepared: 3
+result_store_preflight_records: 3
+result_store_preflight_status_counts:
+  ready_for_future_result_store_integration: 3
+stage4p_compatibility: true
+stage4i_compatibility: true
+stage5l_5m_5o_duplicate_exclusion_status: exact_five_buffer_pack_labelled_as_consumed_controls_not_new_candidates
+output_hash_algorithm: sha256_canonical_json_v1
+generated_body_publication_allowed: false
+method_status_upgrade_allowed: false
+stage5r_ready: true
+selected_next_stage: Stage 5R - controlled expanded solved-fixture-safe Gematria shift_score
+  CUDA parity run
+next_stage: Stage 5R - controlled expanded solved-fixture-safe Gematria shift_score
+  CUDA parity run
+selected_next_stage_reason: Three additional direct-translation solved-fixture-safe
+  token buffers were mapped, native parity hashes were prepared, and Stage 4P/Stage
+  4I preflight is ready without CUDA execution.
+deep_research_recommended: false
+broad_solved_fixture_cuda_status: blocked_broad_scope
+unsolved_page_cuda_status: blocked_unsolved
+source_paths_inspected:
+- data/cuda/stage5l-gematria-solved-fixture-token-mapping.yaml
+- data/fixtures/solved-pages/atbash-family-v0/a-koan-a-man.fixture.json
+- data/fixtures/solved-pages/direct-translation-v0/p57-parable.fixture.json
+- data/fixtures/solved-pages/direct-translation-v0/some-wisdom.fixture.json
+- data/fixtures/solved-pages/direct-translation-v0/the-loss-of-divinity.fixture.json
+- data/fixtures/solved-pages/vigenere-v0/a-koan-during-firfumferenfe.fixture.json
+compact_summary_only: true
+generated_outputs_committed: false
+raw_data_processed: false
+codex_output_committed: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+device_kernel_arithmetic_modified: false
+cuda_execution_performed: false
+additional_cuda_execution_performed: false
+unsolved_page_cuda_used: false
+real_liber_primus_cuda_data_used: false
+real_liber_primus_data_used: false
+solved_fixture_cuda_used: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+performance_or_speedup_claims: false
+method_status_upgraded: false
+solve_claim: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+no_gpu_ci_safe: true
+local_16gb_profile_required: false
+ci_gpu_required: false
+cxx_launches_python_workers: false

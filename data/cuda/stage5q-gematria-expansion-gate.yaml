@@ -1,0 +1,52 @@
+records:
+- record_type: gematria_expansion_gate_record
+  expansion_gate_id: stage5q-controlled-expansion-gate
+  gate_status: stage5r_ready_for_bounded_expanded_cuda_parity
+  stage5r_ready: true
+  new_candidate_count: 3
+  mapped_count: 3
+  native_parity_prepared_count: 3
+  result_store_preflight_ready_count: 3
+  already_consumed_control_count: 5
+  blocked_count: 2
+  remaining_blockers: []
+  newly_discovered_blockers: []
+  selected_next_stage: Stage 5R - controlled expanded solved-fixture-safe Gematria
+    shift_score CUDA parity run
+  selected_next_stage_reason: Three additional direct-translation solved-fixture-safe
+    token buffers were mapped, native parity hashes were prepared, and Stage 4P/Stage
+    4I preflight is ready without CUDA execution.
+  deep_research_recommended: false
+  broad_solved_fixture_cuda_status: blocked_broad_scope
+  unsolved_page_cuda_status: blocked_unsolved
+  stage_id: stage-5q
+  source_stage_id: stage-5p
+  compact_summary_only: true
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  device_kernel_arithmetic_modified: false
+  cuda_execution_performed: false
+  additional_cuda_execution_performed: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  no_gpu_ci_safe: true
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  cxx_launches_python_workers: false

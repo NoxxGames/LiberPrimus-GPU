@@ -2,7 +2,15 @@
 
 ## Current stage
 
-Stage 5P controlled solved-fixture CUDA result-store integration is complete. Next planned stage: Stage 5Q controlled solved-fixture-safe Gematria shift_score expansion candidate mapping. Website expansion is deferred to Stage 6.
+Stage 5Q controlled solved-fixture-safe Gematria shift_score expansion candidate mapping is complete. Next planned stage: Stage 5R controlled expanded solved-fixture-safe Gematria shift_score CUDA parity run. Website expansion is deferred to Stage 6.
+
+## Completed in Stage 5Q
+
+Stage 5Q added the `libreprimus gematria-expansion-candidate-mapping` CLI, expansion candidate inventory schemas, token-mapping records, native-parity records, result-store preflight records, controlled expansion gate records, Stage 5Q manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
+
+Local Stage 5Q summary: candidate inventory records `10`, new candidates `3`, exact Stage 5L/5M/5O consumed controls `5`, blocked original-family fixtures `2`, token mappings `10`, mapped `3`, blocked mappings `7`, native parity records `10`, native parity prepared `3`, result-store preflight records `3`, Stage 4P compatibility `true`, Stage 4I compatibility `true`, Stage 5R ready `true`, selected next stage `Stage 5R - controlled expanded solved-fixture-safe Gematria shift_score CUDA parity run`, Deep Research recommended `false`, CUDA execution performed `false`, CUDA source modified `false`, new CUDA kernels added `0`, unsolved-page CUDA used `false`, real Liber Primus CUDA data used `false`, GPU benchmark performed `false`, speedup/performance assertions `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5Q is candidate-mapping metadata only. It maps three committed direct-translation solved fixtures for future `shift_score` parity, labels the exact Stage 5L/5M/5O five-buffer pack as consumed controls, keeps rotated reverse-Gematria and Vigenere fixtures blocked pending separate original-family contracts, does not run CUDA, does not add or modify CUDA source, does not add kernels, does not run benchmarks, does not process raw data, does not expand the website, and makes no solve claim.
 
 ## Completed in Stage 5P
 
@@ -62,7 +70,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5P closes compact result-store/score-summary integration for the exact Stage 5O repeat pack only; wider solved-fixture expansion and all unsolved-page CUDA use still require future explicit stages.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5Q closes metadata mapping for three additional solved-fixture-safe direct-translation candidates only; expanded solved-fixture CUDA parity and all unsolved-page CUDA use still require future explicit stages.
 
 ## Completed in Stage 5J
 

@@ -275,7 +275,13 @@ def validate_research_synthesis(
             errors,
             staged_text,
             ("stage 5q", "controlled", "shift_score", "candidate mapping"),
-            "staged_plan_stage5q_controlled_shift_score_next",
+            "staged_plan_stage5q_controlled_shift_score_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5r", "controlled", "expanded", "shift_score"),
+            "staged_plan_stage5r_controlled_expanded_shift_score_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -498,6 +504,7 @@ def validate_research_synthesis(
         and "stage 5o" not in next_text
         and "stage 5p" not in next_text
         and "stage 5q" not in next_text
+        and "stage 5r" not in next_text
     ):
         errors.append("cuda_build_device_detection_missing_stage5d_through_stage5j_next_action")
 
@@ -536,7 +543,8 @@ def validate_research_synthesis(
             or "stage 5n" not in evidence_text
             or "stage 5o" not in evidence_text
             or "stage 5p" not in evidence_text
-            or "stage 5q" not in next_text
+            or "stage 5q" not in evidence_text
+            or "stage 5r" not in next_text
         ):
             errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_stage5j_stage5k_transition")
 

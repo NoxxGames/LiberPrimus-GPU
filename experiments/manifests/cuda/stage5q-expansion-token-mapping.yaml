@@ -1,0 +1,22 @@
+record_type: cuda_metadata_manifest
+manifest_id: stage5q-expansion-token-mapping
+stage_id: stage-5q
+description: Source-backed Gematria 0..28 token mapping for Stage 5Q direct solved-fixture expansion candidates.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+cuda_execution_performed: false
+new_cuda_kernels_added: 0
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+source_records: data/cuda/stage5q-gematria-expansion-candidate-inventory.yaml
+output_records: data/cuda/stage5q-gematria-expansion-token-mapping.yaml
+generated_output_dir: experiments/results/gematria-expansion-candidate-mapping/stage5q/
+token_domain: integers_0_to_28
+target_kernel: gematria_mod29_shift_score_kernel
+future_execution_semantics: gematria_shift_score_only
+notes:
+  - The mapping step rejects invented token values and blocks original transform-family derivations.

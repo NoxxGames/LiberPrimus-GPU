@@ -1,5 +1,17 @@
 # Experiments
 
+## Stage 5Q Gematria Expansion Candidate Mapping
+
+Stage 5Q does not execute an experiment. It consumes committed Stage 5P controlled expansion
+metadata and solved-fixture records, then writes compact candidate inventory, token mapping, native
+parity, result-store preflight, gate, and summary metadata.
+
+Generated Stage 5Q reports remain ignored under
+`experiments/results/gematria-expansion-candidate-mapping/stage5q/`. Stage 5Q must keep CUDA
+execution, CUDA source changes, new kernels, GPU benchmarks, speedup claims, unsolved-page CUDA,
+real Liber Primus CUDA data use, generated-body publication, website expansion, canonical corpus
+activation, page-boundary finalisation, and solve claims false.
+
 ## Stage 5P Gematria CUDA Result-Store Integration
 
 Stage 5P does not execute an experiment. It consumes committed Stage 5O repeat parity metadata and

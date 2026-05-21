@@ -925,6 +925,60 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5PSummary `
         --results-dir $Stage5POut
 
+    Write-Host "Running Stage 5Q Gematria expansion candidate mapping no-GPU-safe/temp output"
+    $Stage5QOut = Join-Path $TempDir "stage5q-gematria-expansion-candidate-mapping"
+    $Stage5QInventory = Join-Path $TempDir "stage5q-gematria-expansion-candidate-inventory.yaml"
+    $Stage5QMapping = Join-Path $TempDir "stage5q-gematria-expansion-token-mapping.yaml"
+    $Stage5QNative = Join-Path $TempDir "stage5q-gematria-expansion-native-parity.yaml"
+    $Stage5QPreflight = Join-Path $TempDir "stage5q-gematria-expansion-result-store-preflight.yaml"
+    $Stage5QGate = Join-Path $TempDir "stage5q-gematria-expansion-gate.yaml"
+    $Stage5QSummary = Join-Path $TempDir "stage5q-expansion-candidate-mapping-summary.yaml"
+    & $Python -m libreprimus.cli gematria-expansion-candidate-mapping build-candidate-inventory `
+        --candidate-inventory-out $Stage5QInventory `
+        --out-dir $Stage5QOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expansion-candidate-mapping build-token-mapping `
+        --candidate-inventory $Stage5QInventory `
+        --token-mapping-out $Stage5QMapping `
+        --out-dir $Stage5QOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expansion-candidate-mapping build-native-parity `
+        --token-mapping $Stage5QMapping `
+        --native-parity-out $Stage5QNative `
+        --out-dir $Stage5QOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expansion-candidate-mapping build-result-store-preflight `
+        --token-mapping $Stage5QMapping `
+        --native-parity $Stage5QNative `
+        --result-store-preflight-out $Stage5QPreflight `
+        --out-dir $Stage5QOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expansion-candidate-mapping build-expansion-gate `
+        --candidate-inventory $Stage5QInventory `
+        --token-mapping $Stage5QMapping `
+        --native-parity $Stage5QNative `
+        --result-store-preflight $Stage5QPreflight `
+        --expansion-gate-out $Stage5QGate `
+        --out-dir $Stage5QOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expansion-candidate-mapping build-summary `
+        --candidate-inventory $Stage5QInventory `
+        --token-mapping $Stage5QMapping `
+        --native-parity $Stage5QNative `
+        --result-store-preflight $Stage5QPreflight `
+        --expansion-gate $Stage5QGate `
+        --summary-out $Stage5QSummary `
+        --out-dir $Stage5QOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-expansion-candidate-mapping validate-stage5q `
+        --candidate-inventory $Stage5QInventory `
+        --token-mapping $Stage5QMapping `
+        --native-parity $Stage5QNative `
+        --result-store-preflight $Stage5QPreflight `
+        --expansion-gate $Stage5QGate `
+        --summary $Stage5QSummary `
+        --results-dir $Stage5QOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

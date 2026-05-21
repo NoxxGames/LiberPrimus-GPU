@@ -889,3 +889,22 @@ Stage 5P validation uses:
 Stage 5P tests are no-GPU-safe. They cover schema guardrails, compact result-store records,
 Stage 4I score-summary labels, method-status non-upgrade policy, generated-body publication blocks,
 controlled expansion candidate records, CLI round trips, and ignored-output/codex-output safety.
+
+# Stage 5Q Validation
+
+Stage 5Q validation uses:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-expansion-candidate-mapping validate-stage5q `
+  --candidate-inventory data/cuda/stage5q-gematria-expansion-candidate-inventory.yaml `
+  --token-mapping data/cuda/stage5q-gematria-expansion-token-mapping.yaml `
+  --native-parity data/cuda/stage5q-gematria-expansion-native-parity.yaml `
+  --result-store-preflight data/cuda/stage5q-gematria-expansion-result-store-preflight.yaml `
+  --expansion-gate data/cuda/stage5q-gematria-expansion-gate.yaml `
+  --summary data/cuda/stage5q-expansion-candidate-mapping-summary.yaml
+```
+
+Stage 5Q tests are no-GPU-safe. They cover schema guardrails, exact Stage 5L/5M/5O duplicate
+exclusion, direct-translation token mappings, blocked original-family fixtures, native parity
+hashes, Stage 4P/Stage 4I preflight, controlled Stage 5R gate selection, CLI round trips, and
+ignored output policy.
