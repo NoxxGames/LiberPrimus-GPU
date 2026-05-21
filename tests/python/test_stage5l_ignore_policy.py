@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import re
 import subprocess
+from pathlib import Path
 
 
 def _ignored(path: str) -> bool:
@@ -20,11 +22,20 @@ def test_raw_data_and_sqlite_remain_ignored() -> None:
 
 
 def test_no_cpp_launches_python_workers() -> None:
-    result = subprocess.run(
-        ["rg", "-n", "Py_Initialize|python\\.exe|python3|popen\\(.*python|system\\(.*python", "src", "cuda"],
-        check=False,
+    pattern = re.compile(r"Py_Initialize|python\.exe|python3|popen\(.*python|system\(.*python")
+    tracked = subprocess.run(
+        ["git", "ls-files", "src", "cuda"],
+        check=True,
         capture_output=True,
         text=True,
     )
-    assert result.returncode in {0, 1}
-    assert "python" not in result.stdout.lower()
+    findings: list[str] = []
+    for path_text in tracked.stdout.splitlines():
+        path = Path(path_text)
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        for line_number, line in enumerate(text.splitlines(), start=1):
+            if pattern.search(line):
+                findings.append(f"{path_text}:{line_number}:{line.strip()}")
+    assert findings == []
