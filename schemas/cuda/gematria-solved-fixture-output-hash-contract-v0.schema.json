@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/libreprimus/schemas/cuda/gematria-solved-fixture-output-hash-contract-v0.schema.json",
+  "title": "Gematria solved-fixture output hash contract v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "hash_contract_id",
+    "hash_algorithm",
+    "candidate_ordering_required",
+    "output_token_hash_required",
+    "output_text_hash_required",
+    "separator_metadata_required",
+    "token_kind_metadata_required",
+    "solved_fixture_cuda_execution_allowed",
+    "cuda_execution_performed",
+    "no_gpu_ci_safe",
+    "no_solve_claim",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "gematria_solved_fixture_output_hash_contract_record" },
+    "stage_id": { "const": "stage-5l" },
+    "hash_algorithm": { "const": "sha256_canonical_json_v1" },
+    "candidate_ordering_required": { "const": "candidate-major" },
+    "output_token_hash_required": { "const": true },
+    "output_text_hash_required": { "const": false },
+    "separator_metadata_required": { "const": true },
+    "token_kind_metadata_required": { "const": true },
+    "solved_fixture_cuda_execution_allowed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "cuda_source_modified": { "const": false },
+    "no_gpu_ci_safe": { "const": true },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false },
+    "generated_outputs_committed": { "const": false }
+  },
+  "additionalProperties": true
+}

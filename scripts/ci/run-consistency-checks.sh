@@ -593,6 +593,43 @@ echo "Running Stage 5K Gematria CUDA parity reporting no-GPU-safe/temp output"
     --summary "$tmp_dir/stage5k-gematria-cuda-parity-reporting-summary.yaml" \
     --results-dir "$tmp_dir/stage5k-gematria-cuda-parity-reporting"
 
+echo "Running Stage 5L solved-fixture Gematria token mapping no-GPU-safe/temp output"
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-mapping build-token-mapping \
+    --manifest experiments/manifests/cuda/stage5l-solved-fixture-token-mapping.yaml \
+    --preflight data/cuda/stage5k-gematria-solved-fixture-safe-preflight.yaml \
+    --out-dir "$tmp_dir/stage5l-gematria-solved-fixture-mapping" \
+    --token-mapping-out "$tmp_dir/stage5l-gematria-solved-fixture-token-mapping.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-mapping build-native-parity \
+    --token-mapping "$tmp_dir/stage5l-gematria-solved-fixture-token-mapping.yaml" \
+    --out-dir "$tmp_dir/stage5l-gematria-solved-fixture-mapping" \
+    --native-parity-out "$tmp_dir/stage5l-gematria-solved-fixture-native-parity.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-mapping build-output-hash-contract \
+    --native-parity "$tmp_dir/stage5l-gematria-solved-fixture-native-parity.yaml" \
+    --out-dir "$tmp_dir/stage5l-gematria-solved-fixture-mapping" \
+    --output-hash-contract-out "$tmp_dir/stage5l-gematria-solved-fixture-output-hash-contract.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-mapping build-score-summary-shape \
+    --out-dir "$tmp_dir/stage5l-gematria-solved-fixture-mapping" \
+    --score-summary-shape-out "$tmp_dir/stage5l-gematria-solved-fixture-score-summary-shape.yaml" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-mapping build-summary \
+    --token-mapping "$tmp_dir/stage5l-gematria-solved-fixture-token-mapping.yaml" \
+    --native-parity "$tmp_dir/stage5l-gematria-solved-fixture-native-parity.yaml" \
+    --output-hash-contract "$tmp_dir/stage5l-gematria-solved-fixture-output-hash-contract.yaml" \
+    --score-summary-shape "$tmp_dir/stage5l-gematria-solved-fixture-score-summary-shape.yaml" \
+    --summary-out "$tmp_dir/stage5l-solved-fixture-token-mapping-summary.yaml" \
+    --out-dir "$tmp_dir/stage5l-gematria-solved-fixture-mapping" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli gematria-solved-fixture-mapping validate-stage5l \
+    --token-mapping "$tmp_dir/stage5l-gematria-solved-fixture-token-mapping.yaml" \
+    --native-parity "$tmp_dir/stage5l-gematria-solved-fixture-native-parity.yaml" \
+    --output-hash-contract "$tmp_dir/stage5l-gematria-solved-fixture-output-hash-contract.yaml" \
+    --score-summary-shape "$tmp_dir/stage5l-gematria-solved-fixture-score-summary-shape.yaml" \
+    --summary "$tmp_dir/stage5l-solved-fixture-token-mapping-summary.yaml" \
+    --results-dir "$tmp_dir/stage5l-gematria-solved-fixture-mapping"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

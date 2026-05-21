@@ -1,0 +1,26 @@
+record_type: cuda_stage5l_manifest
+manifest_id: stage5l-score-summary-shape
+stage_id: stage-5l
+description: Stage 4I-compatible score-summary shape for future solved-fixture CUDA parity.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+cuda_execution_performed: false
+solved_fixture_cuda_execution_allowed: false
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+raw_data_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+score_summary_contract: stage4i
+score_interpretation: triage_only
+outputs:
+  committed_score_summary_shape: data/cuda/stage5l-gematria-solved-fixture-score-summary-shape.yaml
+  committed_stage5l_summary: data/cuda/stage5l-solved-fixture-token-mapping-summary.yaml
+  generated_shape_report: experiments/results/gematria-solved-fixture-mapping/stage5l/score_summary_shape_report.json
+  generated_summary: experiments/results/gematria-solved-fixture-mapping/stage5l/summary.json
+notes:
+  - Confidence labels remain finite Stage 4I triage labels.
+  - Score summaries cannot be used as solve evidence.

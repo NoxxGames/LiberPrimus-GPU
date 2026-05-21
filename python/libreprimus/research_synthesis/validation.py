@@ -244,8 +244,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 5l", "gematria", "token mapping", "next"),
-            "staged_plan_stage5l_gematria_token_mapping_next",
+            ("stage 5l", "gematria", "token mapping", "complete"),
+            "staged_plan_stage5l_gematria_token_mapping_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5m", "solved-fixture-safe", "cuda parity", "next"),
+            "staged_plan_stage5m_gematria_solved_fixture_cuda_parity_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -496,7 +502,8 @@ def validate_research_synthesis(
             or "stage 5i" not in evidence_text
             or "stage 5j" not in evidence_text
             or "stage 5k" not in evidence_text
-            or "stage 5l" not in next_text
+            or "stage 5l" not in evidence_text
+            or "stage 5m" not in next_text
         ):
             errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_stage5j_stage5k_transition")
 

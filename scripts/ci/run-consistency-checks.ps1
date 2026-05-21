@@ -674,6 +674,49 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5KSummary `
         --results-dir $Stage5KOut
 
+    Write-Host "Running Stage 5L solved-fixture Gematria token mapping no-GPU-safe/temp output"
+    $Stage5LOut = Join-Path $TempDir "stage5l-gematria-solved-fixture-mapping"
+    $Stage5LTokenMapping = Join-Path $TempDir "stage5l-gematria-solved-fixture-token-mapping.yaml"
+    $Stage5LNativeParity = Join-Path $TempDir "stage5l-gematria-solved-fixture-native-parity.yaml"
+    $Stage5LOutputHash = Join-Path $TempDir "stage5l-gematria-solved-fixture-output-hash-contract.yaml"
+    $Stage5LScoreShape = Join-Path $TempDir "stage5l-gematria-solved-fixture-score-summary-shape.yaml"
+    $Stage5LSummary = Join-Path $TempDir "stage5l-solved-fixture-token-mapping-summary.yaml"
+    & $Python -m libreprimus.cli gematria-solved-fixture-mapping build-token-mapping `
+        --manifest experiments/manifests/cuda/stage5l-solved-fixture-token-mapping.yaml `
+        --preflight data/cuda/stage5k-gematria-solved-fixture-safe-preflight.yaml `
+        --out-dir $Stage5LOut `
+        --token-mapping-out $Stage5LTokenMapping `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-mapping build-native-parity `
+        --token-mapping $Stage5LTokenMapping `
+        --out-dir $Stage5LOut `
+        --native-parity-out $Stage5LNativeParity `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-mapping build-output-hash-contract `
+        --native-parity $Stage5LNativeParity `
+        --out-dir $Stage5LOut `
+        --output-hash-contract-out $Stage5LOutputHash `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-mapping build-score-summary-shape `
+        --out-dir $Stage5LOut `
+        --score-summary-shape-out $Stage5LScoreShape `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-mapping build-summary `
+        --token-mapping $Stage5LTokenMapping `
+        --native-parity $Stage5LNativeParity `
+        --output-hash-contract $Stage5LOutputHash `
+        --score-summary-shape $Stage5LScoreShape `
+        --summary-out $Stage5LSummary `
+        --out-dir $Stage5LOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli gematria-solved-fixture-mapping validate-stage5l `
+        --token-mapping $Stage5LTokenMapping `
+        --native-parity $Stage5LNativeParity `
+        --output-hash-contract $Stage5LOutputHash `
+        --score-summary-shape $Stage5LScoreShape `
+        --summary $Stage5LSummary `
+        --results-dir $Stage5LOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

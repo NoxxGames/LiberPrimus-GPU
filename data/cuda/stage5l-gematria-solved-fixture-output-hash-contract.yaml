@@ -1,0 +1,74 @@
+records:
+- record_type: gematria_solved_fixture_output_hash_contract_record
+  contract_record_id: stage5l-output-hash-contract-v0
+  hash_contract_id: stage5l-solved-fixture-output-hash-contract-v0
+  hash_algorithm: sha256_canonical_json_v1
+  hash_input_material:
+  - mapping_id
+  - source_input_stream_id
+  - fixture_id
+  - candidate_id
+  - token_domain
+  - candidate_ordering
+  - candidate_shifts
+  - candidate-major output token values
+  - token kinds
+  - separator preservation metadata
+  candidate_ordering_required: candidate-major
+  output_token_hash_required: true
+  output_text_hash_required: false
+  output_text_hash_policy: blocked_until_transliteration_policy_is_explicit
+  separator_metadata_required: true
+  token_kind_metadata_required: true
+  compatible_with_stage4p_unified_result_surface: true
+  stage4p_compatibility_reason: Uses explicit result-source kind, output_token_hash,
+    no-CUDA, no-solve, and generated-output flags.
+  compatible_with_stage4i_score_summary: true
+  stage4i_compatibility_reason: Score summaries remain triage-only and cite the output_token_hash.
+  prepared_native_parity_records: 5
+  prepared_output_token_hashes:
+  - 15e9cd2c89b41241e3a858484e63f61a270fefb4950b18feaf96a9bdef41667e
+  - 9625e3680d0556df7aee7287b0ef99693e30077737237d86e8e834a779a59969
+  - 2a095a8effb25fcaf6e2646aff408bad2e8c6b6112344ffcf473f431c566e443
+  - 0ae3f3cd98a3393e9361ca63ca404b23b390075b019108baab9094b73e202f27
+  - 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  blockers:
+  - need_explicit_future_stage_approval
+  blocker_count: 1
+  stage_id: stage-5l
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  selected_future_kernel_id: shift_score_kernel
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_execution_allowed: false
+  production_gematria_mod29_cuda_ready: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false
+  no_solve_claim: true
+  solve_claim: false
+  score_summary_contract: stage4i

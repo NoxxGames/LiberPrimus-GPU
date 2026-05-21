@@ -910,3 +910,17 @@ add kernels, run CUDA, run real Liber Primus data through CUDA, run solved or un
 transforms, run GPU benchmarks, claim speedups, process raw data, publish generated outputs, expand
 the website, activate the canonical corpus, finalise page boundaries, or claim a solve through
 Stage 5K records.
+
+# Stage 5L Solved-Fixture Token Mapping Boundary
+
+Stage 5L is not a cryptanalytic experiment and not a CUDA execution stage. It maps committed
+solved-fixture-safe Stage 4O streams into Gematria `0..28` token buffers, preserves token kinds and
+separator metadata, prepares CPU/native output-token hashes, and records a Stage 4I-compatible
+score-summary shape for future parity comparison.
+
+Generated Stage 5L reports remain ignored under
+`experiments/results/gematria-solved-fixture-mapping/stage5l/`. Do not add or modify CUDA source,
+add kernels, run CUDA, run real Liber Primus data through CUDA, run solved or unsolved page CUDA
+transforms, run GPU benchmarks, claim speedups, process raw data, publish generated outputs, expand
+the website, activate the canonical corpus, finalise page boundaries, or claim a solve through
+Stage 5L records.

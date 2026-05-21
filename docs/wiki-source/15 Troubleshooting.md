@@ -47,10 +47,12 @@ git check-ignore -v experiments/results/result-store-unification/stage4p/results
 git check-ignore -v experiments/results/cuda-build/stage5c/summary.json
 git check-ignore -v experiments/results/native-cpu/stage5d/summary.json
 git check-ignore -v experiments/results/cuda-kernel/stage5f/summary.json
+git check-ignore -v experiments/results/gematria-solved-fixture-mapping/stage5l/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
 git check-ignore -v codex-output/stage5g-codex-completion.md
+git check-ignore -v codex-output/stage5l-codex-completion.md
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -197,8 +199,9 @@ If onboarding map checks fail, confirm that `docs/onboarding/start-here.md`,
 `contributor-module-map.md`, and `private-generated-data-map.md` exist and describe the current
 Stage 3Z/Stage 4A direction.
 
-After Stage 5K, onboarding and staged-plan checks should show Stage 5K complete and Stage 5L
-Gematria shift_score CUDA parity reporting next.
+After Stage 5L, onboarding and staged-plan checks should show Stage 5L complete and Stage 5M first
+solved-fixture-safe Gematria shift_score CUDA parity run next, pending explicit future-stage
+approval.
 
 If path sanitisation fails, run:
 
@@ -535,3 +538,22 @@ Stage 5K reports the Stage 5J synthetic hash match and records blockers. It must
 source, run CUDA, run solved or unsolved page data through CUDA, run GPU benchmarks, publish
 generated reports, or claim a solve. If solved-fixture-safe records are not ready, the expected next
 work is Stage 5L token mapping and native parity fixture preparation.
+
+# Stage 5L Solved-Fixture Mapping Troubleshooting
+
+If Stage 5L validation fails, rebuild or inspect the committed mapping records:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli gematria-solved-fixture-mapping validate-stage5l `
+  --token-mapping data/cuda/stage5l-gematria-solved-fixture-token-mapping.yaml `
+  --native-parity data/cuda/stage5l-gematria-solved-fixture-native-parity.yaml `
+  --output-hash-contract data/cuda/stage5l-gematria-solved-fixture-output-hash-contract.yaml `
+  --score-summary-shape data/cuda/stage5l-gematria-solved-fixture-score-summary-shape.yaml `
+  --summary data/cuda/stage5l-solved-fixture-token-mapping-summary.yaml `
+  --results-dir experiments/results/gematria-solved-fixture-mapping/stage5l
+```
+
+Stage 5L records token buffers and native output-token hashes only. It must not add CUDA source,
+run CUDA, run solved or unsolved page data through CUDA, run GPU benchmarks, publish generated
+reports, or claim a solve. The expected next work is an explicit future Stage 5M solved-fixture-safe
+CUDA parity run only if approval and no-unsolved guardrails are present.

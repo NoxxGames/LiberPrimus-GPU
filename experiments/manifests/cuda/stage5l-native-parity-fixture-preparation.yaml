@@ -1,0 +1,25 @@
+record_type: cuda_stage5l_manifest
+manifest_id: stage5l-native-parity-fixture-preparation
+stage_id: stage-5l
+description: No-GPU native parity fixture preparation for mapped Gematria solved-fixture streams.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+cuda_execution_performed: false
+solved_fixture_cuda_execution_allowed: false
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+raw_data_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+source_token_mapping: data/cuda/stage5l-gematria-solved-fixture-token-mapping.yaml
+outputs:
+  committed_native_parity: data/cuda/stage5l-gematria-solved-fixture-native-parity.yaml
+  committed_output_hash_contract: data/cuda/stage5l-gematria-solved-fixture-output-hash-contract.yaml
+  generated_native_report: experiments/results/gematria-solved-fixture-mapping/stage5l/native_parity_report.json
+  generated_hash_report: experiments/results/gematria-solved-fixture-mapping/stage5l/output_hash_contract_report.json
+notes:
+  - Native parity records are CPU/hash contracts only, not CUDA execution.
+  - Output ordering is candidate-major and preserves token-kind/separator metadata.

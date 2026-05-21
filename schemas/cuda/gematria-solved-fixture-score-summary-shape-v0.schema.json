@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/libreprimus/schemas/cuda/gematria-solved-fixture-score-summary-shape-v0.schema.json",
+  "title": "Gematria solved-fixture score-summary shape v0",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "score_summary_contract",
+    "score_interpretation",
+    "allowed_confidence_labels",
+    "output_token_hash_required",
+    "solved_fixture_cuda_execution_allowed",
+    "cuda_execution_performed",
+    "no_gpu_ci_safe",
+    "no_solve_claim",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "gematria_solved_fixture_score_summary_shape_record" },
+    "stage_id": { "const": "stage-5l" },
+    "score_summary_contract": { "const": "stage4i" },
+    "score_interpretation": { "const": "triage_only" },
+    "allowed_confidence_labels": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "positive_control_like",
+          "strong_lead",
+          "moderate_lead",
+          "weak_lead",
+          "low_signal",
+          "noise_like",
+          "negative_control_like",
+          "scoring_not_available",
+          "calibration_not_available"
+        ]
+      }
+    },
+    "output_token_hash_required": { "const": true },
+    "solved_fixture_cuda_execution_allowed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "cuda_source_modified": { "const": false },
+    "no_gpu_ci_safe": { "const": true },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false },
+    "generated_outputs_committed": { "const": false }
+  },
+  "additionalProperties": true
+}

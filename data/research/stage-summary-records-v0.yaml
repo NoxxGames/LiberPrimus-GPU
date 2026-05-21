@@ -679,3 +679,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5K recorded 1 parity report, 1 device-code audit, 5 solved-fixture-safe preflight records, 1 score-summary preflight record, 7 unique blockers, CUDA/native hash match true for `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`, device-code subset compliance true, new CUDA kernels added 0, CUDA source modified false, CUDA execution performed false, and no solved/unsolved page CUDA use, real Liber Primus data use, GPU benchmark, speedup claim, website expansion, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5l
+    title: solved-fixture-safe Gematria shift_score token mapping and native parity fixture preparation
+    status: complete
+    category: infrastructure
+    summary: Mapped committed solved-fixture-safe Stage 4O streams into Gematria 0..28 token buffers, prepared CPU/native output-token hashes, and defined output-hash and score-summary shapes without CUDA execution or source changes.
+    key_outputs:
+      - "`libreprimus gematria-solved-fixture-mapping` commands for token mapping, native parity, output-hash contract, score-summary shape, summary generation, validation, and summary display."
+      - Stage 5L token-mapping, native-parity, output-hash-contract, score-summary-shape, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/gematria-solved-fixture-mapping/stage5l/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5L recorded 5 token-mapping records, 5 native parity records, 1 output-hash contract record, 1 score-summary shape record, mapped 5 candidate streams, prepared 5 native output-token hashes, reduced blockers from 7 to 1, selected Stage 5M as the next explicit approval-gated solved-fixture CUDA parity step, added no CUDA kernels, modified no CUDA source, executed no CUDA, and made no real Liber Primus data use, GPU benchmark, speedup claim, website expansion, canonical-corpus activation, page-boundary finalisation, or solve claim.

@@ -1,0 +1,706 @@
+records:
+- record_type: gematria_solved_fixture_native_parity_record
+  native_parity_record_id: stage5l-native-parity-00
+  native_fixture_id: stage5l-native-fixture-00
+  mapping_id: stage5h-solved-fixture-safe-mapping-00
+  source_input_stream_id: stage4o-fixture-direct-an-v0
+  fixture_id: an-instruction-direct
+  transform_family: direct_translation
+  candidate_id: stage4o-direct-an-v0
+  native_parity_status: prepared
+  readiness_status: ready_for_future_cuda_approval
+  candidate_shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  candidate_ordering: candidate-major
+  candidate_major_outputs: &id001
+  - candidate_index: 0
+    shift: 0
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 24
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 9
+      raw_text: null
+  - candidate_index: 1
+    shift: 1
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 25
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 10
+      raw_text: null
+  - candidate_index: 2
+    shift: 3
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 27
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 12
+      raw_text: null
+  - candidate_index: 3
+    shift: 13
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 8
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 22
+      raw_text: null
+  - candidate_index: 4
+    shift: 28
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 23
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 8
+      raw_text: null
+  output_token_hash: 15e9cd2c89b41241e3a858484e63f61a270fefb4950b18feaf96a9bdef41667e
+  output_text_hash: null
+  output_text_hash_required: false
+  output_token_hash_required: true
+  hash_algorithm: sha256_canonical_json_v1
+  hash_material:
+    contract_id: stage5l-solved-fixture-output-hash-contract-v0
+    mapping_id: stage5h-solved-fixture-safe-mapping-00
+    source_input_stream_id: stage4o-fixture-direct-an-v0
+    fixture_id: an-instruction-direct
+    candidate_id: stage4o-direct-an-v0
+    token_domain: integers_0_to_28
+    candidate_ordering: candidate-major
+    candidate_outputs: *id001
+  separator_metadata_preserved: true
+  token_kind_metadata_preserved: true
+  stage4o_parity_expectation_linkage_status: linked_to_stage4o_candidate_and_manifest
+  score_summary_shape_required: true
+  blockers:
+  - need_explicit_future_stage_approval
+  blocker_count: 1
+  future_stage_approval_required: true
+  stage_id: stage-5l
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  selected_future_kernel_id: shift_score_kernel
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_execution_allowed: false
+  production_gematria_mod29_cuda_ready: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false
+  no_solve_claim: true
+  solve_claim: false
+- record_type: gematria_solved_fixture_native_parity_record
+  native_parity_record_id: stage5l-native-parity-01
+  native_fixture_id: stage5l-native-fixture-01
+  mapping_id: stage5h-solved-fixture-safe-mapping-01
+  source_input_stream_id: stage4o-fixture-reverse-an-v0
+  fixture_id: a-warning
+  transform_family: reverse_gematria
+  candidate_id: stage4o-reverse-an-v0
+  native_parity_status: prepared
+  readiness_status: ready_for_future_cuda_approval
+  candidate_shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  candidate_ordering: candidate-major
+  candidate_major_outputs: &id002
+  - candidate_index: 0
+    shift: 0
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 4
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 19
+      raw_text: null
+  - candidate_index: 1
+    shift: 1
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 5
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 20
+      raw_text: null
+  - candidate_index: 2
+    shift: 3
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 7
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 22
+      raw_text: null
+  - candidate_index: 3
+    shift: 13
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 17
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 3
+      raw_text: null
+  - candidate_index: 4
+    shift: 28
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 3
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 18
+      raw_text: null
+  output_token_hash: 9625e3680d0556df7aee7287b0ef99693e30077737237d86e8e834a779a59969
+  output_text_hash: null
+  output_text_hash_required: false
+  output_token_hash_required: true
+  hash_algorithm: sha256_canonical_json_v1
+  hash_material:
+    contract_id: stage5l-solved-fixture-output-hash-contract-v0
+    mapping_id: stage5h-solved-fixture-safe-mapping-01
+    source_input_stream_id: stage4o-fixture-reverse-an-v0
+    fixture_id: a-warning
+    candidate_id: stage4o-reverse-an-v0
+    token_domain: integers_0_to_28
+    candidate_ordering: candidate-major
+    candidate_outputs: *id002
+  separator_metadata_preserved: true
+  token_kind_metadata_preserved: true
+  stage4o_parity_expectation_linkage_status: linked_to_stage4o_candidate_and_manifest
+  score_summary_shape_required: true
+  blockers:
+  - need_explicit_future_stage_approval
+  blocker_count: 1
+  future_stage_approval_required: true
+  stage_id: stage-5l
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  selected_future_kernel_id: shift_score_kernel
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_execution_allowed: false
+  production_gematria_mod29_cuda_ready: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false
+  no_solve_claim: true
+  solve_claim: false
+- record_type: gematria_solved_fixture_native_parity_record
+  native_parity_record_id: stage5l-native-parity-02
+  native_fixture_id: stage5l-native-fixture-02
+  mapping_id: stage5h-solved-fixture-safe-mapping-02
+  source_input_stream_id: stage4o-fixture-rotated-reverse-an-v0
+  fixture_id: an-instruction-rotated
+  transform_family: rotated_reverse_gematria
+  candidate_id: stage4o-rotated-reverse-an-v0
+  native_parity_status: prepared
+  readiness_status: ready_for_future_cuda_approval
+  candidate_shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  candidate_ordering: candidate-major
+  candidate_major_outputs: &id003
+  - candidate_index: 0
+    shift: 0
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 5
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 20
+      raw_text: null
+  - candidate_index: 1
+    shift: 1
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 6
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 21
+      raw_text: null
+  - candidate_index: 2
+    shift: 3
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 8
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 23
+      raw_text: null
+  - candidate_index: 3
+    shift: 13
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 18
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 4
+      raw_text: null
+  - candidate_index: 4
+    shift: 28
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 4
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 19
+      raw_text: null
+  output_token_hash: 2a095a8effb25fcaf6e2646aff408bad2e8c6b6112344ffcf473f431c566e443
+  output_text_hash: null
+  output_text_hash_required: false
+  output_token_hash_required: true
+  hash_algorithm: sha256_canonical_json_v1
+  hash_material:
+    contract_id: stage5l-solved-fixture-output-hash-contract-v0
+    mapping_id: stage5h-solved-fixture-safe-mapping-02
+    source_input_stream_id: stage4o-fixture-rotated-reverse-an-v0
+    fixture_id: an-instruction-rotated
+    candidate_id: stage4o-rotated-reverse-an-v0
+    token_domain: integers_0_to_28
+    candidate_ordering: candidate-major
+    candidate_outputs: *id003
+  separator_metadata_preserved: true
+  token_kind_metadata_preserved: true
+  stage4o_parity_expectation_linkage_status: linked_to_stage4o_candidate_and_manifest
+  score_summary_shape_required: true
+  blockers:
+  - need_explicit_future_stage_approval
+  blocker_count: 1
+  future_stage_approval_required: true
+  stage_id: stage-5l
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  selected_future_kernel_id: shift_score_kernel
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_execution_allowed: false
+  production_gematria_mod29_cuda_ready: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false
+  no_solve_claim: true
+  solve_claim: false
+- record_type: gematria_solved_fixture_native_parity_record
+  native_parity_record_id: stage5l-native-parity-03
+  native_fixture_id: stage5l-native-fixture-03
+  mapping_id: stage5h-solved-fixture-safe-mapping-03
+  source_input_stream_id: stage4o-fixture-vigenere-an-v0
+  fixture_id: welcome-divinity
+  transform_family: vigenere_explicit_key
+  candidate_id: stage4o-vigenere-an-v0
+  native_parity_status: prepared
+  readiness_status: ready_for_future_cuda_approval
+  candidate_shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  candidate_ordering: candidate-major
+  candidate_major_outputs: &id004
+  - candidate_index: 0
+    shift: 0
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 25
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 10
+      raw_text: null
+  - candidate_index: 1
+    shift: 1
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 26
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 11
+      raw_text: null
+  - candidate_index: 2
+    shift: 3
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 28
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 13
+      raw_text: null
+  - candidate_index: 3
+    shift: 13
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 9
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 23
+      raw_text: null
+  - candidate_index: 4
+    shift: 28
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 24
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 9
+      raw_text: null
+  output_token_hash: 0ae3f3cd98a3393e9361ca63ca404b23b390075b019108baab9094b73e202f27
+  output_text_hash: null
+  output_text_hash_required: false
+  output_token_hash_required: true
+  hash_algorithm: sha256_canonical_json_v1
+  hash_material:
+    contract_id: stage5l-solved-fixture-output-hash-contract-v0
+    mapping_id: stage5h-solved-fixture-safe-mapping-03
+    source_input_stream_id: stage4o-fixture-vigenere-an-v0
+    fixture_id: welcome-divinity
+    candidate_id: stage4o-vigenere-an-v0
+    token_domain: integers_0_to_28
+    candidate_ordering: candidate-major
+    candidate_outputs: *id004
+  separator_metadata_preserved: true
+  token_kind_metadata_preserved: true
+  stage4o_parity_expectation_linkage_status: linked_to_stage4o_candidate_and_manifest
+  score_summary_shape_required: true
+  blockers:
+  - need_explicit_future_stage_approval
+  blocker_count: 1
+  future_stage_approval_required: true
+  stage_id: stage-5l
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  selected_future_kernel_id: shift_score_kernel
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_execution_allowed: false
+  production_gematria_mod29_cuda_ready: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false
+  no_solve_claim: true
+  solve_claim: false
+- record_type: gematria_solved_fixture_native_parity_record
+  native_parity_record_id: stage5l-native-parity-04
+  native_fixture_id: stage5l-native-fixture-04
+  mapping_id: stage5h-solved-fixture-safe-mapping-04
+  source_input_stream_id: stage4o-fixture-prime-an-v0
+  fixture_id: p56-an-end-prime-minus-one
+  transform_family: prime_minus_one_stream
+  candidate_id: stage4o-prime-minus-one-an-v0
+  native_parity_status: prepared
+  readiness_status: ready_for_future_cuda_approval
+  candidate_shifts:
+  - 0
+  - 1
+  - 3
+  - 13
+  - 28
+  candidate_ordering: candidate-major
+  candidate_major_outputs: &id005
+  - candidate_index: 0
+    shift: 0
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 25
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 11
+      raw_text: null
+  - candidate_index: 1
+    shift: 1
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 26
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 12
+      raw_text: null
+  - candidate_index: 2
+    shift: 3
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 28
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 14
+      raw_text: null
+  - candidate_index: 3
+    shift: 13
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 9
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 24
+      raw_text: null
+  - candidate_index: 4
+    shift: 28
+    output_tokens:
+    - position: 0
+      token_kind: rune
+      transformable: true
+      index29: 24
+      raw_text: null
+    - position: 1
+      token_kind: rune
+      transformable: true
+      index29: 10
+      raw_text: null
+  output_token_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  output_text_hash: null
+  output_text_hash_required: false
+  output_token_hash_required: true
+  hash_algorithm: sha256_canonical_json_v1
+  hash_material:
+    contract_id: stage5l-solved-fixture-output-hash-contract-v0
+    mapping_id: stage5h-solved-fixture-safe-mapping-04
+    source_input_stream_id: stage4o-fixture-prime-an-v0
+    fixture_id: p56-an-end-prime-minus-one
+    candidate_id: stage4o-prime-minus-one-an-v0
+    token_domain: integers_0_to_28
+    candidate_ordering: candidate-major
+    candidate_outputs: *id005
+  separator_metadata_preserved: true
+  token_kind_metadata_preserved: true
+  stage4o_parity_expectation_linkage_status: linked_to_stage4o_candidate_and_manifest
+  score_summary_shape_required: true
+  blockers:
+  - need_explicit_future_stage_approval
+  blocker_count: 1
+  future_stage_approval_required: true
+  stage_id: stage-5l
+  implemented_kernel_name: gematria_mod29_shift_score_kernel
+  source_contract_id: gematria_mod29_shift_score_contract_v0
+  selected_future_kernel_id: shift_score_kernel
+  token_domain: integers_0_to_28
+  arithmetic_direction: forward_add_shift_mod29
+  arithmetic_formula: (token + shift) % 29
+  separator_policy: non_transformable_separators_preserved_unshifted
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  cuda_source_modified: false
+  cuda_execution_performed: false
+  solved_fixture_cuda_execution_allowed: false
+  production_gematria_mod29_cuda_ready: false
+  real_liber_primus_cuda_data_used: false
+  real_liber_primus_data_used: false
+  solved_fixture_cuda_used: false
+  unsolved_page_cuda_used: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  performance_or_speedup_claims: false
+  broad_experiment_executed: false
+  raw_data_processed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  website_expansion: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  local_16gb_profile_required: false
+  ci_gpu_required: false
+  no_gpu_ci_safe: true
+  python_semantic_reference_preserved: true
+  cxx_launches_python_workers: false
+  no_solve_claim: true
+  solve_claim: false

@@ -1,0 +1,83 @@
+record_type: stage5l_solved_fixture_token_mapping_summary
+stage_id: stage-5l
+status: complete
+token_mapping_records: 5
+solved_fixture_token_mapping_records: 5
+mapped_count: 5
+blocked_count: 0
+token_mapping_status_counts:
+  mapped: 5
+native_parity_fixture_records: 5
+native_parity_prepared_count: 5
+output_hash_contract_records: 1
+score_summary_shape_records: 1
+blocker_count_before: 7
+blockers_before:
+- need_exact_solved_fixture_token_domain_mapping_to_gematria_0_28_buffers
+- need_explicit_future_stage_approval
+- need_host_side_result_record_shape_for_separator_and_token_kind_preservation
+- need_no_unsolved_page_guardrail_recheck
+- need_output_token_hash_definition_for_solved_fixture_stream
+- need_score_summary_parity_record_shape
+- need_stage4o_parity_expectation_linkage
+blocker_count_after: 1
+blockers_after: &id001
+- need_explicit_future_stage_approval
+blockers_resolved:
+- need_exact_solved_fixture_token_domain_mapping_to_gematria_0_28_buffers
+- need_host_side_result_record_shape_for_separator_and_token_kind_preservation
+- need_no_unsolved_page_guardrail_recheck
+- need_output_token_hash_definition_for_solved_fixture_stream
+- need_score_summary_parity_record_shape
+- need_stage4o_parity_expectation_linkage
+blockers_remaining: *id001
+blockers_newly_discovered: []
+readiness_status_counts:
+  ready_for_future_cuda_approval: 5
+selected_next_stage: Stage 5M - first solved-fixture-safe Gematria shift_score CUDA
+  parity run
+next_stage: Stage 5M - first solved-fixture-safe Gematria shift_score CUDA parity
+  run
+selected_next_stage_reason: All non-execution blockers are closed; only explicit future-stage
+  approval remains before a solved-fixture-safe CUDA parity run.
+recommended_next_prompt: Stage 5M - first solved-fixture-safe Gematria shift_score
+  CUDA parity run
+score_summary_contract: stage4i
+result_store_contract: stage5l
+output_hash_algorithm: sha256_canonical_json_v1
+cross_stage_report_written: true
+implemented_kernel_name: gematria_mod29_shift_score_kernel
+source_contract_id: gematria_mod29_shift_score_contract_v0
+selected_future_kernel_id: shift_score_kernel
+token_domain: integers_0_to_28
+arithmetic_direction: forward_add_shift_mod29
+arithmetic_formula: (token + shift) % 29
+separator_policy: non_transformable_separators_preserved_unshifted
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+cuda_execution_performed: false
+solved_fixture_cuda_execution_allowed: false
+production_gematria_mod29_cuda_ready: false
+real_liber_primus_cuda_data_used: false
+real_liber_primus_data_used: false
+solved_fixture_cuda_used: false
+unsolved_page_cuda_used: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+performance_or_speedup_claims: false
+broad_experiment_executed: false
+raw_data_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+website_expansion: false
+canonical_corpus_active: false
+page_boundaries_final: false
+local_16gb_profile_required: false
+ci_gpu_required: false
+no_gpu_ci_safe: true
+python_semantic_reference_preserved: true
+cxx_launches_python_workers: false
+no_solve_claim: true
+solve_claim: false

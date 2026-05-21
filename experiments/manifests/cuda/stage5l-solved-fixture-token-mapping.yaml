@@ -1,0 +1,24 @@
+record_type: cuda_stage5l_manifest
+manifest_id: stage5l-solved-fixture-token-mapping
+stage_id: stage-5l
+description: No-GPU-safe solved-fixture Gematria token mapping from committed Stage 4O streams.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+cuda_execution_performed: false
+solved_fixture_cuda_execution_allowed: false
+no_solve_claim: true
+solve_claim: false
+canonical_corpus_active: false
+page_boundaries_final: false
+raw_data_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+source_manifest: experiments/manifests/cpu-batch/stage4o-solved-fixture-parity-batch.yaml
+stage5k_preflight: data/cuda/stage5k-gematria-solved-fixture-safe-preflight.yaml
+outputs:
+  committed_token_mapping: data/cuda/stage5l-gematria-solved-fixture-token-mapping.yaml
+  generated_report: experiments/results/gematria-solved-fixture-mapping/stage5l/token_mapping_report.json
+notes:
+  - Every mapped token value must be source-backed by committed Stage 4O safe records.
+  - This manifest does not authorize solved-fixture CUDA execution.

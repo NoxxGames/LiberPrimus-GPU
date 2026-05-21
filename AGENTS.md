@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5K - Gematria shift_score CUDA parity reporting and solved-fixture-safe preflight.
+Current completed stage: Stage 5L - solved-fixture-safe Gematria shift_score token mapping and native parity fixture preparation.
 
-Current work: Stage 5L - solved-fixture-safe Gematria shift_score token mapping and native parity fixture preparation. Stage 5L may consume the Stage 5K preflight blockers, but it must remain token-mapping/native-fixture preparation only unless a later explicit stage clears solved-fixture and real-data execution approval.
+Current work: Stage 5M - first solved-fixture-safe Gematria shift_score CUDA parity run, pending explicit future-stage approval. Stage 5M may consume Stage 5L token mappings and native parity records, but it must remain solved-fixture-safe, no-unsolved, no-benchmark parity work unless the prompt explicitly scopes otherwise.
 
 Current project state:
 
@@ -79,6 +79,9 @@ Current project state:
 - Stage 5I preparation is not kernel implementation.
 - Stage 5J kernel records are synthetic numeric parity only, not production Gematria CUDA readiness.
 - Stage 5K reporting/preflight records are not CUDA execution permission.
+- Stage 5L solved-fixture token mappings are not CUDA execution permission.
+- Do not invent Gematria token values, token kinds, separator metadata, score-summary fields, or output hashes.
+- Future solved-fixture-safe CUDA requires explicit future-stage approval and no-unsolved guardrails.
 - Stage 5J synthetic parity does not authorize solved-page CUDA.
 - Solved-fixture-safe CUDA requires explicit token mapping, score-summary parity, no-unsolved guardrails, and future-stage approval.
 - Future Gematria CUDA kernel work must use raw numeric token buffers and transformable masks.
@@ -752,6 +755,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 5K solved-fixture-safe records must keep `solved_fixture_cuda_execution_allowed=false` until a future explicit stage records token-domain mapping, score-summary parity, no-unsolved guardrails, and approval.
 - Stage 5K generated reports under `experiments/results/gematria-cuda-parity-reporting/stage5k/` and `codex-output/**` handoffs remain ignored and must not be staged.
 - Local CUDA paths and local GPU memory profiles are optional diagnostics only and must not become CI requirements.
+
+## Stage 5L Solved-Fixture Gematria Token Mapping Rules
+
+- Stage 5L maps committed solved-fixture-safe Stage 4O streams into Gematria `0..28` token buffers; it is not CUDA execution approval.
+- Stage 5L native parity records are CPU/native output-hash fixtures for future comparison only.
+- Do not add or modify CUDA source, run CUDA, run solved or unsolved pages through CUDA, run real Liber Primus data, run GPU benchmarks, claim speedups, or make solve claims during Stage 5L-style work.
+- Preserve token kinds, transformable masks, separator positions, candidate-major ordering, and Stage 4I triage-only score-summary vocabulary.
+- Solved-fixture CUDA execution remains blocked by `need_explicit_future_stage_approval` until a later explicit stage records approval and no-unsolved guardrails.
+- Generated Stage 5L reports under `experiments/results/gematria-solved-fixture-mapping/stage5l/` and `codex-output/**` handoffs remain ignored and must not be staged.
 
 ## Stage 3W State Consolidation Rules
 
