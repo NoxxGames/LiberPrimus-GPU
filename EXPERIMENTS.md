@@ -6,6 +6,12 @@ Stage 5X is not a broad cryptanalytic experiment. It executes only the Stage 5W 
 
 Generated Stage 5X reports remain ignored under `experiments/results/prime-minus-one-native-parity/stage5x/`. Stage 5X must keep CUDA execution, native/CUDA CMake, CUDA source modification, new kernels, full p56 execution, GPU benchmarks, speedup claims, unsolved-page CUDA, broad solved-fixture CUDA, generated-result-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades to solved, and solve claims disabled.
 
+## Stage 5Y Prime-Minus-One Native Reporting
+
+Stage 5Y is not a cryptanalytic experiment. It consumes committed Stage 5X no-GPU native parity records and writes compact parity report, result-store integration, score-summary integration, method-status impact, generated-body policy, full-p56 blocker preservation, CUDA contract readiness-gate, bounded scored-experiment readiness, guardrail, next-stage decision, and summary metadata under `data/cuda/`.
+
+Generated Stage 5Y reports remain ignored under `experiments/results/prime-minus-one-native-reporting/stage5y/`. Stage 5Y must keep native execution, CUDA execution, native/CUDA CMake, CUDA source modification, new kernels, full p56 execution, GPU benchmarks, speedup claims, unsolved-page CUDA, broad solved-fixture CUDA, generated-result-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades to solved, and solve claims disabled.
+
 ## Stage 5W Prime-Minus-One Native Contract
 
 Stage 5W does not execute a cryptanalytic experiment. It consumes Stage 5V Candidate Batch ABI conformance records and committed p56 solved-fixture-safe metadata, then writes source inventory, stream contract, prime schedule, Candidate Batch ABI mapping, native parity preparation, result-store preflight, guardrail, next-stage decision, and summary records under `data/cuda/`.

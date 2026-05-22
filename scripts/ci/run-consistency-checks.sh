@@ -1283,6 +1283,81 @@ echo "Running Stage 5X prime-minus-one native parity temp output"
     --summary "$tmp_dir/stage5x-prime-minus-one-native-parity-summary.yaml" \
     --results-dir "$tmp_dir/stage5x-prime-minus-one-native-parity"
 
+echo "Running Stage 5Y prime-minus-one native reporting temp output"
+"$python_bin" -m libreprimus.cli prime-minus-one-native-reporting build-parity-report \
+    --parity-report-out "$tmp_dir/stage5y-prime-minus-one-native-parity-report.yaml" \
+    --out-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-reporting build-result-store-integration \
+    --parity-report "$tmp_dir/stage5y-prime-minus-one-native-parity-report.yaml" \
+    --result-store-integration-out "$tmp_dir/stage5y-prime-minus-one-native-result-store-integration.yaml" \
+    --out-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-reporting build-score-summary-integration \
+    --parity-report "$tmp_dir/stage5y-prime-minus-one-native-parity-report.yaml" \
+    --score-summary-integration-out "$tmp_dir/stage5y-prime-minus-one-native-score-summary-integration.yaml" \
+    --out-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-reporting build-method-status-impact \
+    --method-status-impact-out "$tmp_dir/stage5y-prime-minus-one-native-method-status-impact.yaml" \
+    --out-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-reporting build-generated-body-policy \
+    --generated-body-policy-out "$tmp_dir/stage5y-prime-minus-one-generated-body-policy.yaml" \
+    --out-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-reporting build-full-p56-blocker-preservation \
+    --full-p56-blocker-preservation-out "$tmp_dir/stage5y-prime-minus-one-full-p56-blocker-preservation.yaml" \
+    --out-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-reporting build-cuda-contract-readiness-gate \
+    --parity-report "$tmp_dir/stage5y-prime-minus-one-native-parity-report.yaml" \
+    --result-store-integration "$tmp_dir/stage5y-prime-minus-one-native-result-store-integration.yaml" \
+    --score-summary-integration "$tmp_dir/stage5y-prime-minus-one-native-score-summary-integration.yaml" \
+    --cuda-contract-readiness-gate-out "$tmp_dir/stage5y-prime-minus-one-cuda-contract-readiness-gate.yaml" \
+    --out-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-reporting build-scored-experiment-readiness \
+    --scored-experiment-readiness-out "$tmp_dir/stage5y-bounded-scored-experiment-readiness.yaml" \
+    --out-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-reporting build-guardrails \
+    --guardrail-out "$tmp_dir/stage5y-prime-minus-one-native-reporting-guardrail.yaml" \
+    --out-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-reporting build-next-stage-decision \
+    --cuda-contract-readiness-gate "$tmp_dir/stage5y-prime-minus-one-cuda-contract-readiness-gate.yaml" \
+    --next-stage-decision-out "$tmp_dir/stage5y-prime-minus-one-native-reporting-next-stage-decision.yaml" \
+    --out-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-reporting build-summary \
+    --parity-report "$tmp_dir/stage5y-prime-minus-one-native-parity-report.yaml" \
+    --result-store-integration "$tmp_dir/stage5y-prime-minus-one-native-result-store-integration.yaml" \
+    --score-summary-integration "$tmp_dir/stage5y-prime-minus-one-native-score-summary-integration.yaml" \
+    --method-status-impact "$tmp_dir/stage5y-prime-minus-one-native-method-status-impact.yaml" \
+    --generated-body-policy "$tmp_dir/stage5y-prime-minus-one-generated-body-policy.yaml" \
+    --full-p56-blocker-preservation "$tmp_dir/stage5y-prime-minus-one-full-p56-blocker-preservation.yaml" \
+    --cuda-contract-readiness-gate "$tmp_dir/stage5y-prime-minus-one-cuda-contract-readiness-gate.yaml" \
+    --scored-experiment-readiness "$tmp_dir/stage5y-bounded-scored-experiment-readiness.yaml" \
+    --guardrail "$tmp_dir/stage5y-prime-minus-one-native-reporting-guardrail.yaml" \
+    --next-stage-decision "$tmp_dir/stage5y-prime-minus-one-native-reporting-next-stage-decision.yaml" \
+    --summary-out "$tmp_dir/stage5y-prime-minus-one-native-reporting-summary.yaml" \
+    --out-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-reporting validate-stage5y \
+    --parity-report "$tmp_dir/stage5y-prime-minus-one-native-parity-report.yaml" \
+    --result-store-integration "$tmp_dir/stage5y-prime-minus-one-native-result-store-integration.yaml" \
+    --score-summary-integration "$tmp_dir/stage5y-prime-minus-one-native-score-summary-integration.yaml" \
+    --method-status-impact "$tmp_dir/stage5y-prime-minus-one-native-method-status-impact.yaml" \
+    --generated-body-policy "$tmp_dir/stage5y-prime-minus-one-generated-body-policy.yaml" \
+    --full-p56-blocker-preservation "$tmp_dir/stage5y-prime-minus-one-full-p56-blocker-preservation.yaml" \
+    --cuda-contract-readiness-gate "$tmp_dir/stage5y-prime-minus-one-cuda-contract-readiness-gate.yaml" \
+    --scored-experiment-readiness "$tmp_dir/stage5y-bounded-scored-experiment-readiness.yaml" \
+    --guardrail "$tmp_dir/stage5y-prime-minus-one-native-reporting-guardrail.yaml" \
+    --next-stage-decision "$tmp_dir/stage5y-prime-minus-one-native-reporting-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5y-prime-minus-one-native-reporting-summary.yaml" \
+    --results-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

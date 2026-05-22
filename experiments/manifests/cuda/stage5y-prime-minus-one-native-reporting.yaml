@@ -1,0 +1,24 @@
+manifest_id: stage5y-prime-minus-one-native-reporting
+stage_id: stage-5y
+purpose: compact_reporting_only
+source_stage_id: stage-5x
+contract_id: prime_minus_one_stream_native_contract_v0
+candidate_batch_abi_id: candidate_batch_abi_v0
+cpu_only: true
+no_gpu_safe: true
+raw_data_required: false
+native_execution_enabled: false
+python_reference_execution_enabled: false
+cuda_execution_enabled: false
+cuda_source_changes_allowed: false
+new_cuda_kernels_allowed: false
+benchmark_execution_allowed: false
+generated_body_publication_allowed: false
+solve_claim: false
+inputs:
+  - data/cuda/stage5x-prime-minus-one-native-parity-summary.yaml
+  - data/cuda/stage5x-prime-minus-one-native-parity.yaml
+outputs:
+  - data/cuda/stage5y-prime-minus-one-native-parity-report.yaml
+  - data/cuda/stage5y-prime-minus-one-native-result-store-integration.yaml
+  - data/cuda/stage5y-prime-minus-one-native-score-summary-integration.yaml

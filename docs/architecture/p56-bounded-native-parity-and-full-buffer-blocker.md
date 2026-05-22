@@ -13,3 +13,5 @@ Full p56 execution requires a future explicit stage that supplies:
 - result-store and score-summary preflight records.
 
 Until then, full p56 parity is `blocked_full_p56_token_buffer_missing`.
+
+Stage 5Y preserves this blocker in a dedicated blocker-preservation record. The CUDA contract readiness gate can become ready for contract preparation without full p56 because full p56 is not required for a metadata-only contract-preparation stage.

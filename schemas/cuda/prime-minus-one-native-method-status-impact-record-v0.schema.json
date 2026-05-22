@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-native-method-status-impact-record-v0.schema.json",
+  "title": "Prime Minus One Native Method Status Impact Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "method_family_id", "method_status_impact", "method_status_upgraded", "marked_solved", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_native_method_status_impact_record" },
+    "stage_id": { "const": "stage-5y" },
+    "method_status_upgraded": { "const": false },
+    "method_status_upgrade_allowed": { "const": false },
+    "marked_solved": { "const": false },
+    "native_execution_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

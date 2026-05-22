@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-native-reporting-next-stage-decision-record-v0.schema.json",
+  "title": "Prime Minus One Native Reporting Next Stage Decision Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "option_id", "status", "selected", "recommended_prompt_type", "recommended_stage_title", "cuda_execution_allowed", "cuda_source_changes_allowed", "benchmark_execution_allowed"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_native_reporting_next_stage_decision_record" },
+    "stage_id": { "const": "stage-5y" },
+    "recommended_prompt_type": { "enum": ["Codex", "Deep Research"] },
+    "native_execution_allowed": { "const": false },
+    "cuda_execution_allowed": { "const": false },
+    "cuda_source_changes_allowed": { "const": false },
+    "benchmark_execution_allowed": { "const": false },
+    "unsolved_page_scope_allowed": { "const": false },
+    "generated_body_publication_allowed": { "const": false },
+    "method_status_upgrade_allowed": { "const": false },
+    "native_execution_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

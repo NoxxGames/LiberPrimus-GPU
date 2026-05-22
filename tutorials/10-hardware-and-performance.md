@@ -10,7 +10,7 @@ Stage 2E dry-run manifests may estimate future CPU candidate counts, but they do
 
 ## Current Stage
 
-Stage 5E records first CUDA kernel contract and CPU/native parity adapter metadata only. Stage 5F implements only the selected synthetic `shift_score_kernel` parity target. Stage 5G reports that parity, audits CUDA-facing source style, and keeps solved-fixture CUDA blocked. Stage 5J implements only the synthetic numeric `gematria_mod29_shift_score_kernel` parity target. Stage 5K reports that hash match, audits the device-code subset, and keeps solved-fixture CUDA blocked. Stage 5L maps solved-fixture-safe token buffers and native hashes without CUDA execution. Stage 5M runs only the existing Gematria kernel over the exact five Stage 5L buffers and records hash parity. Stage 5O repeats that exact pack. Stage 5P integrates compact result-store and score-summary metadata without running CUDA. Stage 5Q maps three additional solved-fixture-safe direct-translation candidates and native hashes without running CUDA. Stage 5R runs those three mapped candidates for correctness parity only. Stage 5S reports and integrates those compact hashes without running CUDA. Stage 5T classifies solved-family readiness. Stage 5U defines shared Candidate Batch ABI contracts. Stage 5V proves no-GPU ABI conformance through Python reference fixtures. Stage 5W prepares prime-minus-one native contract records. Stage 5X executes only the two ready no-GPU prime-minus-one native parity mappings, keeps full p56 blocked, and selects Stage 5Y reporting/readiness work. None of these stages run GPU benchmarks or make speedup claims.
+Stage 5E records first CUDA kernel contract and CPU/native parity adapter metadata only. Stage 5F implements only the selected synthetic `shift_score_kernel` parity target. Stage 5G reports that parity, audits CUDA-facing source style, and keeps solved-fixture CUDA blocked. Stage 5J implements only the synthetic numeric `gematria_mod29_shift_score_kernel` parity target. Stage 5K reports that hash match, audits the device-code subset, and keeps solved-fixture CUDA blocked. Stage 5L maps solved-fixture-safe token buffers and native hashes without CUDA execution. Stage 5M runs only the existing Gematria kernel over the exact five Stage 5L buffers and records hash parity. Stage 5O repeats that exact pack. Stage 5P integrates compact result-store and score-summary metadata without running CUDA. Stage 5Q maps three additional solved-fixture-safe direct-translation candidates and native hashes without running CUDA. Stage 5R runs those three mapped candidates for correctness parity only. Stage 5S reports and integrates those compact hashes without running CUDA. Stage 5T classifies solved-family readiness. Stage 5U defines shared Candidate Batch ABI contracts. Stage 5V proves no-GPU ABI conformance through Python reference fixtures. Stage 5W prepares prime-minus-one native contract records. Stage 5X executes only the two ready no-GPU prime-minus-one native parity mappings and keeps full p56 blocked. Stage 5Y integrates compact prime-minus-one native reporting and CUDA contract readiness-gate metadata without native execution or CUDA execution, and selects Stage 5Z contract preparation. None of these stages run GPU benchmarks or make speedup claims.
 
 ## Design Assumptions
 
@@ -221,6 +221,13 @@ Stage 5V records native Candidate Batch ABI adapter metadata, seven raw-data-fre
 fixtures, three Python reference output-token hashes, token-buffer conformance, schedule shape
 conformance, score-vector/top-k conformance, and compact result-store conformance. Treat these as
 no-GPU correctness metadata only. Stage 5V does not run CUDA, native/CUDA builds, solved or unsolved
-page inputs, benchmarks, or speedup measurements. Stage 5W and Stage 5X have since superseded that
-decision; the selected next work is Stage 5Y prime-minus-one native parity reporting and CUDA
-contract readiness gate.
+page inputs, benchmarks, or speedup measurements. Stage 5W through Stage 5Y have since superseded
+that decision; the selected next work is Stage 5Z prime-minus-one CUDA contract preparation, still
+without kernel implementation, CUDA execution, benchmarks, or speedup measurements.
+
+Stage 5Y consumes Stage 5X prime-minus-one no-GPU native parity records and writes compact reporting,
+result-store, score-summary, method-status, generated-body policy, full-p56 blocker, CUDA contract
+readiness-gate, bounded scored-experiment readiness, guardrail, and next-stage decision records.
+Treat these as reporting and contract-preparation metadata only. Stage 5Y does not rerun native
+parity, run CUDA, modify CUDA source, add kernels, execute full p56, benchmark, publish generated
+bodies, or make solve claims.

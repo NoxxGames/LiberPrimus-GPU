@@ -211,6 +211,17 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/prime-minus-one-native-guardrail-record-v0.schema.json",
     "cuda/prime-minus-one-native-next-stage-decision-record-v0.schema.json",
     "cuda/stage5x-prime-minus-one-native-parity-summary-v0.schema.json",
+    "cuda/prime-minus-one-native-parity-report-record-v0.schema.json",
+    "cuda/prime-minus-one-native-result-store-integration-record-v0.schema.json",
+    "cuda/prime-minus-one-native-score-summary-integration-record-v0.schema.json",
+    "cuda/prime-minus-one-native-method-status-impact-record-v0.schema.json",
+    "cuda/prime-minus-one-generated-body-policy-record-v0.schema.json",
+    "cuda/prime-minus-one-full-p56-blocker-preservation-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-contract-readiness-gate-record-v0.schema.json",
+    "cuda/bounded-scored-experiment-readiness-record-v0.schema.json",
+    "cuda/prime-minus-one-native-reporting-guardrail-record-v0.schema.json",
+    "cuda/prime-minus-one-native-reporting-next-stage-decision-record-v0.schema.json",
+    "cuda/stage5y-prime-minus-one-native-reporting-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -399,6 +410,17 @@ EXPECTED_DOC_TERMS = [
     "prime-minus-one-native-guardrail-record-v0",
     "prime-minus-one-native-next-stage-decision-record-v0",
     "stage5x-prime-minus-one-native-parity-summary-v0",
+    "prime-minus-one-native-parity-report-record-v0",
+    "prime-minus-one-native-result-store-integration-record-v0",
+    "prime-minus-one-native-score-summary-integration-record-v0",
+    "prime-minus-one-native-method-status-impact-record-v0",
+    "prime-minus-one-generated-body-policy-record-v0",
+    "prime-minus-one-full-p56-blocker-preservation-record-v0",
+    "prime-minus-one-cuda-contract-readiness-gate-record-v0",
+    "bounded-scored-experiment-readiness-record-v0",
+    "prime-minus-one-native-reporting-guardrail-record-v0",
+    "prime-minus-one-native-reporting-next-stage-decision-record-v0",
+    "stage5y-prime-minus-one-native-reporting-summary-v0",
 ]
 
 

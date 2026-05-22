@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-contract-readiness-gate-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Contract Readiness Gate Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "readiness_status", "prime_minus_one_cuda_contract_preparation_ready", "cuda_execution_allowed", "cuda_source_changes_allowed", "new_kernel_allowed", "benchmark_execution_allowed"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_contract_readiness_gate_record" },
+    "stage_id": { "const": "stage-5y" },
+    "readiness_status": { "enum": ["ready_for_stage5z_cuda_contract_preparation", "blocked_pending_full_p56_token_buffer", "blocked_reporting_integration_gap"] },
+    "cuda_execution_allowed": { "const": false },
+    "cuda_source_changes_allowed": { "const": false },
+    "new_kernel_allowed": { "const": false },
+    "cuda_kernel_implementation_allowed": { "const": false },
+    "benchmark_planning_allowed": { "const": false },
+    "benchmark_execution_allowed": { "const": false },
+    "unsolved_page_cuda_allowed": { "const": false },
+    "native_execution_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

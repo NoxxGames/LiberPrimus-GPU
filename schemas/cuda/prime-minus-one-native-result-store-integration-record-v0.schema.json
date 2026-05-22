@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-native-result-store-integration-record-v0.schema.json",
+  "title": "Prime Minus One Native Result Store Integration Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "result_store_contract", "stage4p_compatibility", "generated_body_publication_allowed", "performance_claim_allowed", "speedup_claim_allowed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_native_result_store_integration_record" },
+    "stage_id": { "const": "stage-5y" },
+    "result_source_kind": { "const": "prime_minus_one_no_gpu_native_parity" },
+    "allowed_committed_record_type": { "const": "compact_summary_metadata_only" },
+    "result_store_contract": { "const": "stage4p" },
+    "stage4p_compatibility": { "const": "compatible" },
+    "score_summary_contract": { "const": "stage4i" },
+    "generated_body_publication_allowed": { "const": false },
+    "performance_claim_allowed": { "const": false },
+    "speedup_claim_allowed": { "const": false },
+    "native_execution_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "method_status_upgrade_allowed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

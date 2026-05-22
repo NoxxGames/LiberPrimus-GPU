@@ -1,0 +1,18 @@
+manifest_id: stage5y-next-stage-decision
+stage_id: stage-5y
+purpose: next_stage_decision_only
+source_stage_id: stage-5x
+cpu_only: true
+no_gpu_safe: true
+raw_data_required: false
+native_execution_enabled: false
+cuda_execution_enabled: false
+cuda_source_changes_allowed: false
+new_cuda_kernels_allowed: false
+benchmark_execution_allowed: false
+generated_body_publication_allowed: false
+solve_claim: false
+expected_selected_option: stage5z_prime_minus_one_cuda_contract_preparation
+outputs:
+  - data/cuda/stage5y-prime-minus-one-native-reporting-next-stage-decision.yaml
+  - data/cuda/stage5y-prime-minus-one-native-reporting-summary.yaml

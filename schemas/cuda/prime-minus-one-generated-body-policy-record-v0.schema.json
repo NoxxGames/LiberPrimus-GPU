@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-generated-body-policy-record-v0.schema.json",
+  "title": "Prime Minus One Generated Body Policy Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "policy_subject", "policy_status", "generated_body_publication_allowed", "generated_outputs_committed", "raw_data_processed", "codex_output_committed"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_generated_body_policy_record" },
+    "stage_id": { "const": "stage-5y" },
+    "generated_body_publication_allowed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "codex_output_committed": { "const": false },
+    "sqlite_committed": { "const": false },
+    "native_execution_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

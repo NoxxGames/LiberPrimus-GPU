@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/bounded-scored-experiment-readiness-record-v0.schema.json",
+  "title": "Bounded Scored Experiment Readiness Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "readiness_id", "experiment_class", "readiness_status", "cuda_required", "benchmark_allowed", "generated_body_publication_allowed", "unsolved_scope_allowed"],
+  "properties": {
+    "record_type": { "const": "bounded_scored_experiment_readiness_record" },
+    "stage_id": { "const": "stage-5y" },
+    "experiment_class": { "enum": ["bounded_cpu_native_prime_minus_one_scored_experiment", "bounded_solved_fixture_score_regression", "bounded_unsolved_page_micro_pilot", "cuda_scored_experiment", "benchmark_experiment", "website_stage6"] },
+    "benchmark_allowed": { "const": false },
+    "generated_body_publication_allowed": { "const": false },
+    "native_execution_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

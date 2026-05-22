@@ -1,0 +1,68 @@
+record_type: stage5y_prime_minus_one_native_reporting_summary
+schema: schemas/cuda/stage5y-prime-minus-one-native-reporting-summary-v0.schema.json
+stage_id: stage-5y
+status: complete
+source_stage_id: stage-5x
+candidate_batch_abi_id: candidate_batch_abi_v0
+contract_id: prime_minus_one_stream_native_contract_v0
+native_parity_report_records: 3
+result_store_integration_records: 3
+score_summary_integration_records: 3
+method_status_impact_records: 5
+generated_body_policy_records: 7
+full_p56_blocker_preservation_records: 1
+cuda_contract_readiness_gate_records: 1
+bounded_scored_experiment_readiness_records: 6
+guardrail_records: 9
+next_stage_decision_records: 10
+source_stage5x_ready_mapping_count: 2
+source_stage5x_blocked_mapping_count: 1
+source_stage5x_native_pass_count: 2
+source_stage5x_native_fail_count: 0
+source_stage5x_native_skip_count: 1
+stage5x_expected_hash_match_count: 2
+full_p56_status: blocked_full_p56_token_buffer_missing
+prime_minus_one_cuda_contract_preparation_ready: true
+bounded_cpu_native_scored_experiment_ready: true
+bounded_unsolved_page_micro_pilot_ready: false
+stage4p_compatibility: compatible
+stage4i_compatibility: compatible
+recommended_next_prompt_type: Codex
+recommended_next_stage_title: Stage 5Z - prime-minus-one CUDA contract preparation
+recommended_next_stage_reason: Stage 5Y compact reporting integrated the two Stage
+  5X hash-matched no-GPU native parity mappings, preserved the full-p56 blocker, and
+  kept CUDA execution, kernel implementation, and benchmarking blocked. The next bounded
+  engineering step can prepare a prime-minus-one CUDA contract without implementing
+  a kernel.
+deep_research_recommended_next: false
+metadata_only: true
+reporting_only: true
+no_solve_claim: true
+no_gpu_ci_safe: true
+native_execution_performed: false
+python_reference_execution_performed: false
+native_cpu_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+device_kernel_arithmetic_modified: false
+gpu_benchmark_performed: false
+benchmark_execution_allowed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+unsolved_page_cuda_allowed: false
+real_liber_primus_cuda_data_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+codex_output_committed: false
+method_status_upgrade_allowed: false
+method_status_upgraded: false
+solve_claim: false
+ci_gpu_required: false
+local_16gb_profile_required: false
+cxx_launches_python_workers: false

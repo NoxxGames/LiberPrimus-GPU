@@ -2,15 +2,15 @@
 
 ## Current stage
 
-Stage 5X prime-minus-one stream no-GPU native parity execution and result-store preflight is complete. Next recommended prompt: Stage 5Y - prime-minus-one native parity reporting and CUDA contract readiness gate. Website expansion is deferred to Stage 6.
+Stage 5Y prime-minus-one native parity reporting and CUDA contract readiness gate is complete. Next recommended prompt: Stage 5Z - prime-minus-one CUDA contract preparation. Website expansion is deferred to Stage 6.
 
-## Completed in Stage 5X
+## Completed in Stage 5Y
 
-Stage 5X added the `libreprimus prime-minus-one-native-parity` CLI, no-GPU Python-reference native run records, native parity records, result-store preflight records, score-summary preflight records, full-p56 blocker records, guardrail records, next-stage decision records, Stage 5X manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
+Stage 5Y added the `libreprimus prime-minus-one-native-reporting` CLI, compact native parity report records, result-store integration records, score-summary integration records, method-status impact records, generated-body policy records, full-p56 blocker preservation records, CUDA contract readiness-gate records, bounded scored-experiment readiness records, guardrail records, next-stage decision records, Stage 5Y manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
 
-Local Stage 5X summary: native run records `3`, native parity records `3`, result-store preflight records `3`, score-summary preflight records `3`, full-p56 blocker records `1`, guardrail records `7`, next-stage decision records `9`, native execution attempted/pass/fail/skip `2/2/0/1`, ready mappings `2`, blocked mappings `1`, selected next prompt `Stage 5Y - prime-minus-one native parity reporting and CUDA contract readiness gate`, Deep Research recommended next `false`, CUDA execution performed `false`, CUDA source modified `false`, new CUDA kernels added `0`, unsolved-page CUDA used `false`, real Liber Primus CUDA data used `false`, native/CUDA CMake run `false`, GPU benchmark performed `false`, speedup/performance assertions `false`, and generated/codex/raw outputs uncommitted.
+Local Stage 5Y summary: parity report records `3`, result-store integration records `3`, score-summary integration records `3`, method-status impact records `5`, generated-body policy records `7`, full-p56 blocker preservation records `1`, CUDA contract readiness-gate records `1`, bounded scored-experiment readiness records `6`, guardrail records `9`, next-stage decision records `10`, ready mapping count `2`, blocked mapping count `1`, selected next prompt `Stage 5Z - prime-minus-one CUDA contract preparation`, Deep Research recommended next `false`, native execution performed `false`, CUDA execution performed `false`, CUDA source modified `false`, new CUDA kernels added `0`, unsolved-page CUDA used `false`, real Liber Primus CUDA data used `false`, GPU benchmark performed `false`, speedup/performance assertions `false`, and generated/codex/raw outputs uncommitted.
 
-Stage 5X executes only the Stage 5W ready synthetic control and bounded p56 no-GPU Python-reference mappings. Both computed output-token hashes match Stage 5W expected hashes. The full p56 mapping remains blocked until a future explicit stage commits a source-backed full p56 cipher token buffer. Stage 5X is parity/reporting infrastructure only, not a CUDA stage, not native C++ execution, not performance evidence, not website expansion, and not a solve claim.
+Stage 5Y consumes Stage 5X records but does not rerun native parity. It integrates the two Stage 5X hash-matched ready mappings into compact reporting metadata, preserves the full p56 blocker until a future explicit stage commits a source-backed full p56 cipher token buffer, and marks only CUDA contract preparation ready. Stage 5Y is reporting/readiness infrastructure only, not CUDA execution, not kernel implementation, not performance evidence, not website expansion, and not a solve claim.
 
 ## Completed in Stage 5W
 
@@ -834,4 +834,4 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 
 ## Next prompt recommendation
 
-Stage 5X - prime-minus-one stream no-GPU native parity execution and result-store preflight. Use the Stage 5W source-backed prime stream contract records, keep CUDA kernels and benchmarks blocked, keep full p56 parity blocked unless a committed token buffer is explicitly scoped, and do not run unsolved pages, raw-data processing, website expansion, or solve claims.
+Stage 5Z - prime-minus-one CUDA contract preparation. Use the Stage 5Y compact reporting and readiness-gate records, keep CUDA execution, CUDA source changes, kernels, benchmarks, unsolved pages, raw-data processing, website expansion, and solve claims blocked, and preserve the full p56 blocker unless a committed token buffer is explicitly scoped.

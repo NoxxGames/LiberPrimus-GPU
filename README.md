@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5X prime-minus-one stream no-GPU native parity execution and result-store preflight. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5Y prime-minus-one native parity reporting and CUDA contract readiness gating. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -47,7 +47,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 5Y - prime-minus-one native parity reporting and CUDA contract readiness gate.
+- Stage 5Z - prime-minus-one CUDA contract preparation.
 - Website expansion is deferred to Stage 6.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
@@ -261,7 +261,8 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Latest Gematria expanded solved-fixture CUDA reporting stage: Stage 5S consumed the `3` Stage 5R expanded parity records, wrote `3` compact parity-report records, `3` result-store integration records, `3` score-summary integration records, `7` method-status impact records, `4` generated-body policy records, `1` boundary review record, and `6` controlled next-step decision records. It ran no CUDA, modified no CUDA source, added `0` kernels, published no generated CUDA result bodies, upgraded no method family to solved, and made no benchmark, speedup, unsolved-page CUDA, real Liber Primus CUDA-data, website-expansion, canonical-corpus, page-boundary, or solve claim.
 - Latest prime-minus-one native contract stage: Stage 5W wrote `7` source inventory records, `2` stream contract records, `3` prime schedule records, `3` Candidate Batch ABI mapping records, `3` native parity preparation records, `3` result-store preflight records, `6` guardrail records, and `8` next-stage decision records. It marks the bounded Stage 4O/5L p56 mapping ready for future no-GPU native parity, keeps full p56 parity blocked until a complete committed token buffer is scoped, ran no CUDA or native/CUDA CMake, added no kernels, benchmarked nothing, and selected Stage 5X.
 - Latest prime-minus-one native parity stage: Stage 5X wrote `3` native run records, `3` native parity records, `3` result-store preflight records, `3` score-summary preflight records, `1` full-p56 blocker record, `7` guardrail records, and `9` next-stage decision records. It executed only the two Stage 5W ready no-GPU Python-reference mappings, matched both Stage 5W expected hashes, skipped the blocked full p56 mapping, ran no CUDA or native/CUDA CMake, added no kernels, benchmarked nothing, and selected Stage 5Y.
-- Next: Stage 5Y - prime-minus-one native parity reporting and CUDA contract readiness gate.
+- Latest prime-minus-one native reporting stage: Stage 5Y wrote `3` parity report records, `3` result-store integration records, `3` score-summary integration records, `5` method-status impact records, `7` generated-body policy records, `1` full-p56 blocker preservation record, `1` CUDA contract readiness-gate record, `6` bounded scored-experiment readiness records, `9` guardrail records, and `10` next-stage decision records. It did not rerun native parity, execute CUDA, modify CUDA source, add kernels, benchmark, publish generated bodies, or make solve claims.
+- Next: Stage 5Z - prime-minus-one CUDA contract preparation.
 
 ## How To Use This Repo
 

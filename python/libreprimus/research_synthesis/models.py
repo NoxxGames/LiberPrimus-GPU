@@ -54,6 +54,7 @@ REQUIRED_METHOD_FAMILIES = {
     "cuda_synthetic_shift_kernel",
     "prime_minus_one_native_contract",
     "prime_minus_one_native_parity",
+    "prime_minus_one_native_reporting",
     "deterministic_image_analysis",
     "image_transform_suite",
     "discord_ingestion_review",

@@ -1357,6 +1357,57 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5XSummary `
         --results-dir $Stage5XOut
 
+    Write-Host "Running Stage 5Y prime-minus-one native reporting temp output"
+    $Stage5YOut = Join-Path $TempDir "stage5y-prime-minus-one-native-reporting"
+    $Stage5YParity = Join-Path $TempDir "stage5y-prime-minus-one-native-parity-report.yaml"
+    $Stage5YResultStore = Join-Path $TempDir "stage5y-prime-minus-one-native-result-store-integration.yaml"
+    $Stage5YScore = Join-Path $TempDir "stage5y-prime-minus-one-native-score-summary-integration.yaml"
+    $Stage5YMethod = Join-Path $TempDir "stage5y-prime-minus-one-native-method-status-impact.yaml"
+    $Stage5YPolicy = Join-Path $TempDir "stage5y-prime-minus-one-generated-body-policy.yaml"
+    $Stage5YBlocker = Join-Path $TempDir "stage5y-prime-minus-one-full-p56-blocker-preservation.yaml"
+    $Stage5YGate = Join-Path $TempDir "stage5y-prime-minus-one-cuda-contract-readiness-gate.yaml"
+    $Stage5YScored = Join-Path $TempDir "stage5y-bounded-scored-experiment-readiness.yaml"
+    $Stage5YGuardrail = Join-Path $TempDir "stage5y-prime-minus-one-native-reporting-guardrail.yaml"
+    $Stage5YDecision = Join-Path $TempDir "stage5y-prime-minus-one-native-reporting-next-stage-decision.yaml"
+    $Stage5YSummary = Join-Path $TempDir "stage5y-prime-minus-one-native-reporting-summary.yaml"
+    & $Python -m libreprimus.cli prime-minus-one-native-reporting build-parity-report --parity-report-out $Stage5YParity --out-dir $Stage5YOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-reporting build-result-store-integration --parity-report $Stage5YParity --result-store-integration-out $Stage5YResultStore --out-dir $Stage5YOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-reporting build-score-summary-integration --parity-report $Stage5YParity --score-summary-integration-out $Stage5YScore --out-dir $Stage5YOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-reporting build-method-status-impact --method-status-impact-out $Stage5YMethod --out-dir $Stage5YOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-reporting build-generated-body-policy --generated-body-policy-out $Stage5YPolicy --out-dir $Stage5YOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-reporting build-full-p56-blocker-preservation --full-p56-blocker-preservation-out $Stage5YBlocker --out-dir $Stage5YOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-reporting build-cuda-contract-readiness-gate --parity-report $Stage5YParity --result-store-integration $Stage5YResultStore --score-summary-integration $Stage5YScore --cuda-contract-readiness-gate-out $Stage5YGate --out-dir $Stage5YOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-reporting build-scored-experiment-readiness --scored-experiment-readiness-out $Stage5YScored --out-dir $Stage5YOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-reporting build-guardrails --guardrail-out $Stage5YGuardrail --out-dir $Stage5YOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-reporting build-next-stage-decision --cuda-contract-readiness-gate $Stage5YGate --next-stage-decision-out $Stage5YDecision --out-dir $Stage5YOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-reporting build-summary `
+        --parity-report $Stage5YParity `
+        --result-store-integration $Stage5YResultStore `
+        --score-summary-integration $Stage5YScore `
+        --method-status-impact $Stage5YMethod `
+        --generated-body-policy $Stage5YPolicy `
+        --full-p56-blocker-preservation $Stage5YBlocker `
+        --cuda-contract-readiness-gate $Stage5YGate `
+        --scored-experiment-readiness $Stage5YScored `
+        --guardrail $Stage5YGuardrail `
+        --next-stage-decision $Stage5YDecision `
+        --summary-out $Stage5YSummary `
+        --out-dir $Stage5YOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-reporting validate-stage5y `
+        --parity-report $Stage5YParity `
+        --result-store-integration $Stage5YResultStore `
+        --score-summary-integration $Stage5YScore `
+        --method-status-impact $Stage5YMethod `
+        --generated-body-policy $Stage5YPolicy `
+        --full-p56-blocker-preservation $Stage5YBlocker `
+        --cuda-contract-readiness-gate $Stage5YGate `
+        --scored-experiment-readiness $Stage5YScored `
+        --guardrail $Stage5YGuardrail `
+        --next-stage-decision $Stage5YDecision `
+        --summary $Stage5YSummary `
+        --results-dir $Stage5YOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

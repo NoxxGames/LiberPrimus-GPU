@@ -105,6 +105,13 @@ checks, native parity records, result-store and score-summary preflight records,
 checks, guardrails, next-stage decisions, CLI build/validate checks, and ignored-output/codex-output
 checks for `experiments/results/prime-minus-one-native-parity/stage5x/` and `codex-output/`.
 
+Stage 5Y extends coverage with prime-minus-one compact reporting schemas, parity-report records,
+Stage 4P result-store integration, Stage 4I score-summary integration, method-status impact,
+generated-body policy, full-p56 blocker preservation, CUDA contract readiness gates, bounded
+scored-experiment readiness, guardrails, next-stage decisions, CLI build/validate checks, and
+ignored-output/codex-output checks for
+`experiments/results/prime-minus-one-native-reporting/stage5y/` and `codex-output/`.
+
 Stage 5F extends coverage with synthetic CUDA kernel implementation schemas, no-GPU-safe build
 records, optional local synthetic parity records, C++/CUDA synthetic parity tests, CLI
 build/validate/summary checks, validation rejections for real Liber Primus data, benchmarking,

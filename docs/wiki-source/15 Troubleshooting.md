@@ -56,6 +56,7 @@ git check-ignore -v experiments/results/gematria-expanded-cuda-result-store/stag
 git check-ignore -v experiments/results/cuda-candidate-batch-abi-conformance/stage5v/summary.json
 git check-ignore -v experiments/results/prime-minus-one-native-contract/stage5w/summary.json
 git check-ignore -v experiments/results/prime-minus-one-native-parity/stage5x/summary.json
+git check-ignore -v experiments/results/prime-minus-one-native-reporting/stage5y/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
@@ -67,6 +68,7 @@ git check-ignore -v codex-output/stage5s-codex-completion.md
 git check-ignore -v codex-output/stage5v-codex-completion.md
 git check-ignore -v codex-output/stage5w-codex-completion.md
 git check-ignore -v codex-output/stage5x-codex-completion.md
+git check-ignore -v codex-output/stage5y-codex-completion.md
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -196,6 +198,15 @@ preflight, score-summary preflight, full-p56 blocker, guardrail, next-stage deci
 warning reports under `experiments/results/prime-minus-one-native-parity/stage5x/`, do not stage
 them. Commit only schemas, manifests, code, compact YAML records, docs, tests, and research logs.
 Do not execute the blocked full-p56 mapping while fixing validation failures.
+
+If a Stage 5Y prime-minus-one native reporting run leaves parity report, result-store integration,
+score-summary integration, method-status impact, generated-body policy, full-p56 blocker
+preservation, CUDA contract readiness-gate, scored-experiment readiness, guardrail, next-stage
+decision, summary, or warning reports under
+`experiments/results/prime-minus-one-native-reporting/stage5y/`, do not stage them. Commit only
+schemas, manifests, code, compact YAML records, docs, tests, and research logs. Do not rerun native
+parity, run CUDA, modify CUDA source, add kernels, execute the blocked full-p56 mapping, or treat
+reporting metadata as solve evidence while fixing validation failures.
 
 If a Stage 5C CUDA build/device run leaves `toolchain_detection_report.json`,
 `device_detection_report.json`, `smoke_build_report.json`, `summary.json`, `warnings.jsonl`, or
@@ -666,8 +677,8 @@ Python reference fixtures, 4 shape-only fixtures, 7 token-buffer conformance rec
 conformance records, 7 score-vector conformance records, 1 top-k conformance record, 3 result-store
 conformance records, 8 implementation-status records, and 9 next-stage decision records. The
 historical selected next prompt was Stage 5W prime-minus-one stream native parity contract
-preparation; Stage 5W and Stage 5X have since superseded that decision with Stage 5Y reporting and
-CUDA contract readiness gate work.
+preparation; Stage 5W through Stage 5Y have since superseded that decision with Stage 5Z
+prime-minus-one CUDA contract preparation.
 
 Generated Stage 5V reports belong under ignored
 `experiments/results/cuda-candidate-batch-abi-conformance/stage5v/`, and the local handoff belongs
@@ -690,4 +701,23 @@ committed decision records.
 Generated Stage 5X reports belong under ignored
 `experiments/results/prime-minus-one-native-parity/stage5x/`, and the local handoff belongs under
 ignored `codex-output/stage5x-codex-completion.md`. Do not stage generated reports, generated
+result bodies, SQLite files, raw data, or local CUDA diagnostics.
+
+# Stage 5Y Prime-Minus-One Native Reporting Troubleshooting
+
+If Stage 5Y validation fails, rebuild the reporting sequence from committed Stage 5X records and
+rerun `libreprimus prime-minus-one-native-reporting validate-stage5y`. Do not rerun native parity,
+run CUDA, native/CUDA CMake, benchmarks, full p56, solved-page expansion, or unsolved pages to
+repair the records.
+
+Expected Stage 5Y counts are 3 parity report records, 3 result-store integration records, 3
+score-summary integration records, 5 method-status impact records, 7 generated-body policy records,
+1 full-p56 blocker preservation record, 1 CUDA contract readiness-gate record, 6 bounded
+scored-experiment readiness records, 9 guardrail records, and 10 next-stage decision records. The
+selected next prompt should remain Stage 5Z prime-minus-one CUDA contract preparation unless an
+explicit future stage changes the committed decision records.
+
+Generated Stage 5Y reports belong under ignored
+`experiments/results/prime-minus-one-native-reporting/stage5y/`, and the local handoff belongs
+under ignored `codex-output/stage5y-codex-completion.md`. Do not stage generated reports, generated
 result bodies, SQLite files, raw data, or local CUDA diagnostics.
