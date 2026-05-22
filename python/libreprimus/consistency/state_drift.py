@@ -233,6 +233,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5S is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5t",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5t\b", re.IGNORECASE),
+        "Stage 5T is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -739,6 +744,17 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
+        "stage5t_solved_family_readiness_complete",
+        "stage 5t" in staged_plan
+        and "solved-family" in staged_plan
+        and "kernel-readiness" in staged_plan
+        and "stage 5u" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5T solved-family readiness classification as complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
         "source_lock_snapshot_policy_present",
         "source-lock snapshot" in combined and "allowlisted" in combined and "snapshot policy" in combined,
         "Allowlisted public source-lock snapshot policy is documented.",
@@ -993,6 +1009,16 @@ def check_state_drift_consistency(
         and "method-status" in combined
         and "deep research" in combined,
         "Stage 5S expanded CUDA result-store integration and next-step policy is documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "cuda_solved_family_readiness_policy_present",
+        "solved-family cuda readiness" in combined
+        and "kernel-readiness" in combined
+        and "stage 5u" in combined
+        and "no cuda execution" in combined,
+        "Stage 5T CUDA solved-family readiness and Stage 5U ABI direction are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

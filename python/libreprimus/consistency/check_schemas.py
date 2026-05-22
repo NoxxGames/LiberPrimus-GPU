@@ -166,6 +166,14 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/gematria-expanded-cuda-boundary-review-record-v0.schema.json",
     "cuda/gematria-expanded-cuda-next-step-decision-record-v0.schema.json",
     "cuda/stage5s-expanded-cuda-result-store-integration-summary-v0.schema.json",
+    "cuda/solved-family-cuda-inventory-record-v0.schema.json",
+    "cuda/solved-family-cuda-parity-matrix-record-v0.schema.json",
+    "cuda/cuda-kernel-readiness-record-v0.schema.json",
+    "cuda/cuda-candidate-batch-abi-gap-record-v0.schema.json",
+    "cuda/cuda-benchmark-readiness-record-v0.schema.json",
+    "cuda/cuda-no-unsolved-guardrail-review-record-v0.schema.json",
+    "cuda/cuda-next-stage-decision-record-v0.schema.json",
+    "cuda/stage5t-cuda-solved-family-readiness-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -309,6 +317,14 @@ EXPECTED_DOC_TERMS = [
     "gematria-expanded-cuda-boundary-review-record-v0",
     "gematria-expanded-cuda-next-step-decision-record-v0",
     "stage5s-expanded-cuda-result-store-integration-summary-v0",
+    "solved-family-cuda-inventory-record-v0",
+    "solved-family-cuda-parity-matrix-record-v0",
+    "cuda-kernel-readiness-record-v0",
+    "cuda-candidate-batch-abi-gap-record-v0",
+    "cuda-benchmark-readiness-record-v0",
+    "cuda-no-unsolved-guardrail-review-record-v0",
+    "cuda-next-stage-decision-record-v0",
+    "stage5t-cuda-solved-family-readiness-summary-v0",
 ]
 
 

@@ -207,3 +207,8 @@ preflight. It is repeat correctness metadata, not a benchmark or speedup claim.
 Stage 5R runs only the three Stage 5Q mapped direct-translation solved-fixture-safe candidates and
 matches their native hashes. It is expanded correctness parity only, not a benchmark, speedup
 claim, broad CUDA implementation, or permission to run unsolved page data through CUDA.
+
+Stage 5T classifies solved-family CUDA readiness without running CUDA or benchmarks. Treat its
+inventory, parity matrix, kernel-readiness ranking, ABI gaps, benchmark-readiness records, and
+next-stage decision as planning metadata only. The selected next work is Stage 5U unified candidate
+batch ABI consolidation, not benchmark execution or more shift-score widening.

@@ -2,7 +2,15 @@
 
 ## Current stage
 
-Stage 5S expanded solved-fixture Gematria CUDA parity reporting and result-store integration is complete. Next recommended prompt: Deep Research - Stage 5M-5S CUDA parity arc project review and next-direction assessment. Website expansion is deferred to Stage 6.
+Stage 5T solved-family CUDA parity matrix and kernel-readiness classification is complete. Next recommended prompt: Stage 5U - unified candidate batch ABI and backend contract consolidation. Website expansion is deferred to Stage 6.
+
+## Completed in Stage 5T
+
+Stage 5T added the `libreprimus cuda-solved-family-readiness` CLI, solved-family CUDA inventory schemas, parity matrix records, kernel-readiness records, candidate batch ABI gap records, benchmark-readiness records, no-unsolved guardrail review records, next-stage decision records, Stage 5T manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
+
+Local Stage 5T summary: solved-family inventory records `8`, CUDA parity matrix records `8`, kernel-readiness records `7`, batch ABI gap records `5`, benchmark-readiness records `3`, no-unsolved guardrail records `6`, next-stage decision records `5`, verified existing CUDA parity count `3`, ready-for-contract-review count `4`, needs-batch-ABI count `5`, blocked original-transform-contract count `2`, blocked unsolved count `1`, selected next prompt `Stage 5U - unified candidate batch ABI and backend contract consolidation`, Deep Research recommended next `false`, CUDA execution performed `false`, CUDA source modified `false`, new CUDA kernels added `0`, unsolved-page CUDA used `false`, real Liber Primus CUDA data used `false`, GPU benchmark performed `false`, speedup/performance assertions `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5T is metadata-only readiness classification. It consumes the reviewed Stage 5M through Stage 5S CUDA parity arc, distinguishes current `gematria_shift_score_only` parity from original transform-family CUDA semantics, records Vigenere and prime-stream ABI blockers, keeps unsolved-page CUDA and broad solved-fixture campaigns blocked, does not run CUDA, does not add or modify CUDA source, does not add kernels, does not run benchmarks, does not process raw data, does not publish generated result bodies, and makes no solve claim.
 
 ## Completed in Stage 5S
 
@@ -86,7 +94,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5S closes compact reporting and integration for the three Stage 5R expanded direct-translation candidate parity matches only; further solved-fixture CUDA expansion, original-transform-family CUDA contracts, GPU benchmarking, and unsolved-page CUDA use still require future explicit stages.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5T classifies solved-family CUDA readiness only; further CUDA work should first consolidate the unified candidate batch ABI in Stage 5U, and original-transform-family CUDA contracts, GPU benchmarking, broad solved-fixture campaigns, and unsolved-page CUDA use still require future explicit stages.
 
 ## Completed in Stage 5J
 
@@ -794,4 +802,4 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 
 ## Next prompt recommendation
 
-Stage 5K - Gematria shift_score CUDA parity reporting and solved-fixture-safe preflight. Use the Stage 5J synthetic numeric parity records, keep solved fixtures blocked unless explicitly approved, and do not run real Liber Primus CUDA data, GPU benchmarks, broad searches, raw-data processing, website expansion, or solve claims.
+Stage 5U - unified candidate batch ABI and backend contract consolidation. Use the Stage 5T solved-family readiness matrix, keep original transform-family kernels blocked until ABI contracts exist, and do not run CUDA, benchmarks, broad solved-fixture campaigns, unsolved pages, raw-data processing, website expansion, or solve claims.

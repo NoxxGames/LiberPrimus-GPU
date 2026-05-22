@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/cuda/cuda-next-stage-decision-record-v0.schema.json",
+  "title": "cuda-next-stage-decision-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "decision_id", "decision_status", "selected", "recommended_prompt_type", "recommended_stage_title", "cuda_execution_allowed", "solve_claim"],
+  "properties": {
+    "record_type": {"const": "cuda_next_stage_decision_record"},
+    "decision_id": {"type": "string"},
+    "decision_status": {"type": "string"},
+    "selected": {"type": "boolean"},
+    "recommended_prompt_type": {"enum": ["Codex", "Deep Research"]},
+    "recommended_stage_title": {"type": "string"},
+    "cuda_execution_allowed": {"const": false},
+    "benchmark_execution_allowed": {"const": false},
+    "unsolved_page_cuda_allowed": {"const": false},
+    "generated_body_publication_allowed": {"const": false},
+    "method_status_upgrade_allowed": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/cuda/cuda-kernel-readiness-record-v0.schema.json",
+  "title": "cuda-kernel-readiness-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "candidate_family_id", "priority_rank", "implementation_allowed_now", "cuda_execution_performed", "solve_claim"],
+  "properties": {
+    "record_type": {"const": "cuda_kernel_readiness_record"},
+    "candidate_family_id": {"type": "string"},
+    "priority_rank": {"type": "integer"},
+    "implementation_allowed_now": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "cuda_source_modified": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "gpu_benchmark_performed": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  }
+}

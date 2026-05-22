@@ -22,3 +22,9 @@ They use the Stage 4I contract and `scoring_not_available` as triage-only metada
 success is not a decrypted-text score and does not rank unsolved candidates. The records preserve
 `solve_claim=false`, `performance_claim=false`, `speedup_claim=false`, and
 `method_status_upgrade_allowed=false`.
+
+## Stage 5T Readiness Matrix Boundary
+
+Stage 5T does not add scoring semantics. Its readiness records preserve Stage 4I compatibility by
+recording score-summary and score-vector ABI gaps instead of inventing a GPU scorer, confidence
+label, or plaintext-evidence interpretation.

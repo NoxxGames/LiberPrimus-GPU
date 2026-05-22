@@ -19,3 +19,5 @@ five-buffer pack remains a consumed control and is excluded from new candidate c
 Stage 5R follow-up: expanded solved-fixture CUDA parity now produces three compact preflight rows for Stage 5S result-store integration. Generated CUDA output bodies remain ignored and parity success still cannot upgrade method-family status to solved.
 
 Stage 5S follow-up: those three Stage 5R preflight rows are now integrated into compact Stage 4P-compatible result-store records and Stage 4I-compatible score-summary records. Stage 5S records no generated-body publication, no method-status upgrade, no CUDA execution, no CUDA source change, no benchmark, and no solve claim.
+
+Stage 5T follow-up: compact Stage 5S records now feed the solved-family CUDA readiness matrix. Stage 5T classifies the existing `gematria_shift_score_only` parity as current-kernel parity only and keeps original transform-family CUDA contracts blocked until ABI and contract records exist.

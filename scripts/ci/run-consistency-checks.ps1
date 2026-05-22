@@ -1103,6 +1103,73 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5SSummary `
         --results-dir $Stage5SOut
 
+    Write-Host "Running Stage 5T CUDA solved-family readiness temp output"
+    $Stage5TOut = Join-Path $TempDir "stage5t-cuda-solved-family-readiness"
+    $Stage5TInventory = Join-Path $TempDir "stage5t-solved-family-cuda-inventory.yaml"
+    $Stage5TMatrix = Join-Path $TempDir "stage5t-solved-family-cuda-parity-matrix.yaml"
+    $Stage5TKernel = Join-Path $TempDir "stage5t-cuda-kernel-readiness.yaml"
+    $Stage5TAbi = Join-Path $TempDir "stage5t-cuda-candidate-batch-abi-gaps.yaml"
+    $Stage5TBenchmark = Join-Path $TempDir "stage5t-cuda-benchmark-readiness.yaml"
+    $Stage5TGuardrail = Join-Path $TempDir "stage5t-cuda-no-unsolved-guardrail-review.yaml"
+    $Stage5TDecision = Join-Path $TempDir "stage5t-cuda-next-stage-decision.yaml"
+    $Stage5TSummary = Join-Path $TempDir "stage5t-cuda-solved-family-readiness-summary.yaml"
+    & $Python -m libreprimus.cli cuda-solved-family-readiness build-solved-family-inventory `
+        --fixture-root data/fixtures `
+        --solved-family-inventory-out $Stage5TInventory `
+        --out-dir $Stage5TOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-solved-family-readiness build-parity-matrix `
+        --solved-family-inventory $Stage5TInventory `
+        --stage5m-summary $Stage5MSummary `
+        --stage5r-summary $Stage5RSummary `
+        --parity-matrix-out $Stage5TMatrix `
+        --out-dir $Stage5TOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-solved-family-readiness build-kernel-readiness `
+        --parity-matrix $Stage5TMatrix `
+        --kernel-readiness-out $Stage5TKernel `
+        --out-dir $Stage5TOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-solved-family-readiness build-batch-abi-gaps `
+        --batch-abi-gaps-out $Stage5TAbi `
+        --out-dir $Stage5TOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-solved-family-readiness build-benchmark-readiness `
+        --benchmark-readiness-out $Stage5TBenchmark `
+        --out-dir $Stage5TOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-solved-family-readiness build-no-unsolved-guardrail `
+        --no-unsolved-guardrail-out $Stage5TGuardrail `
+        --out-dir $Stage5TOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-solved-family-readiness build-next-stage-decision `
+        --batch-abi-gaps $Stage5TAbi `
+        --next-stage-decision-out $Stage5TDecision `
+        --out-dir $Stage5TOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-solved-family-readiness build-summary `
+        --solved-family-inventory $Stage5TInventory `
+        --parity-matrix $Stage5TMatrix `
+        --kernel-readiness $Stage5TKernel `
+        --batch-abi-gaps $Stage5TAbi `
+        --benchmark-readiness $Stage5TBenchmark `
+        --no-unsolved-guardrail $Stage5TGuardrail `
+        --next-stage-decision $Stage5TDecision `
+        --stage5s-summary $Stage5SSummary `
+        --summary-out $Stage5TSummary `
+        --out-dir $Stage5TOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-solved-family-readiness validate-stage5t `
+        --solved-family-inventory $Stage5TInventory `
+        --parity-matrix $Stage5TMatrix `
+        --kernel-readiness $Stage5TKernel `
+        --batch-abi-gaps $Stage5TAbi `
+        --benchmark-readiness $Stage5TBenchmark `
+        --no-unsolved-guardrail $Stage5TGuardrail `
+        --next-stage-decision $Stage5TDecision `
+        --summary $Stage5TSummary `
+        --results-dir $Stage5TOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

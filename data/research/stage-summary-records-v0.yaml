@@ -807,3 +807,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5S consumed 3 Stage 5R expanded parity records, wrote 3 parity-report records, 3 result-store integration records, 3 score-summary integration records, 7 method-status impact records, 4 generated-body policy records, 1 boundary review record, and 6 controlled next-step decision records. It selected Deep Research - Stage 5M-5S CUDA parity arc project review and next-direction assessment as the next prompt. It ran no CUDA, modified no CUDA source, added 0 kernels, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, published no generated result bodies, upgraded no method family to solved, and made no canonical-corpus, page-boundary, website-expansion, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5t
+    title: Solved-family CUDA parity matrix and kernel-readiness classification
+    status: complete
+    category: infrastructure
+    summary: Classified committed solved-family CUDA readiness after the Stage 5M through Stage 5S parity arc review, separating existing shift-score kernel parity from original transform-family CUDA semantics.
+    key_outputs:
+      - "`libreprimus cuda-solved-family-readiness` commands for solved-family inventory, parity matrix, kernel-readiness, ABI gaps, benchmark-readiness, no-unsolved guardrail, next-stage decision, summary generation, validation, and summary display."
+      - Stage 5T solved-family inventory, parity matrix, kernel-readiness, batch ABI gap, benchmark-readiness, no-unsolved guardrail, next-stage decision, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/cuda-solved-family-readiness/stage5t/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5T wrote 8 solved-family inventory records, 8 CUDA parity matrix records, 7 kernel-readiness records, 5 candidate batch ABI gap records, 3 benchmark-readiness records, 6 no-unsolved guardrail records, and 5 next-stage decision records. It selected Stage 5U unified candidate batch ABI and backend contract consolidation as the next prompt. It ran no CUDA, modified no CUDA source, added 0 kernels, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, published no generated result bodies, upgraded no method family to solved, and made no canonical-corpus, page-boundary, website-expansion, or solve claim.

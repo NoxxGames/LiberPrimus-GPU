@@ -602,3 +602,15 @@ If Stage 5R validation fails, rebuild the sequence from committed Stage 5Q recor
 use `run-cuda-parity --skip-run`; local CUDA runs may only use `p57-parable`, `some-wisdom`, and
 `the-loss-of-divinity`. Do not add kernels, modify device arithmetic, run benchmarks, publish
 generated reports, or process unsolved data to repair Stage 5R records.
+
+# Stage 5T CUDA Solved-Family Readiness Troubleshooting
+
+If Stage 5T validation fails, rebuild the metadata sequence and rerun
+`libreprimus cuda-solved-family-readiness validate-stage5t`. Do not run CUDA, native/CUDA CMake,
+benchmarks, solved fixtures, or unsolved pages to repair readiness records.
+
+Expected Stage 5T counts are 8 solved-family inventory records, 8 parity matrix records, 7
+kernel-readiness records, 5 batch ABI gap records, 3 benchmark-readiness records, 6 no-unsolved
+guardrail records, and 5 next-stage decision records. The selected next prompt should remain
+Stage 5U unified candidate batch ABI consolidation unless the committed readiness records change
+under an explicit future stage.

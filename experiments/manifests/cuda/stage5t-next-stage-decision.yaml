@@ -1,0 +1,39 @@
+record_type: cuda_metadata_manifest
+manifest_id: stage5t-next-stage-decision
+stage_id: stage-5t
+description: Controlled next-stage decision after solved-family CUDA readiness classification.
+execution_enabled: false
+cuda_execution_enabled: false
+cuda_execution_performed: false
+cuda_required: false
+ci_gpu_required: false
+no_gpu_ci_safe: true
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+raw_data_required: false
+raw_data_processed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+codex_output_committed: false
+method_status_upgrade_allowed: false
+method_status_upgraded: false
+no_solve_claim: true
+solve_claim: false
+selected_next_prompt_type: Codex
+selected_next_stage_title: Stage 5U - unified candidate batch ABI and backend contract consolidation
+outputs:
+  committed:
+    - data/cuda/stage5t-cuda-next-stage-decision.yaml
+    - data/cuda/stage5t-cuda-solved-family-readiness-summary.yaml
+  ignored:
+    - experiments/results/cuda-solved-family-readiness/stage5t/next_stage_decision.json
+    - experiments/results/cuda-solved-family-readiness/stage5t/summary.json
+notes:
+  - Stage 5T selects ABI consolidation because multiple original transform families need shared token, key, stream, score-vector, and top-k surfaces before more CUDA contracts are responsible.
+  - A second Deep Research pass is not recommended before Stage 5U because the Stage 5M-5S review has already been operationalized into durable records.

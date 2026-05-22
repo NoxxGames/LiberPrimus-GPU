@@ -1,0 +1,35 @@
+record_type: cuda_metadata_manifest
+manifest_id: stage5t-solved-family-inventory
+stage_id: stage-5t
+description: Raw-data-free solved-family inventory for CUDA parity/readiness classification.
+execution_enabled: false
+cuda_execution_enabled: false
+cuda_execution_performed: false
+cuda_required: false
+ci_gpu_required: false
+no_gpu_ci_safe: true
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+raw_data_required: false
+raw_data_processed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+codex_output_committed: false
+no_solve_claim: true
+solve_claim: false
+input_records:
+  - data/fixtures/solved-pages/
+  - data/cuda/stage5s-expanded-cuda-result-store-integration-summary.yaml
+outputs:
+  committed:
+    - data/cuda/stage5t-solved-family-cuda-inventory.yaml
+  ignored:
+    - experiments/results/cuda-solved-family-readiness/stage5t/solved_family_inventory_report.json
+notes:
+  - This manifest inventories committed solved fixture metadata only.
+  - It does not execute CUDA, native/CUDA CMake, benchmarks, or solved/unsolved campaigns.

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/cuda/cuda-candidate-batch-abi-gap-record-v0.schema.json",
+  "title": "cuda-candidate-batch-abi-gap-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "surface_id", "surface_kind", "gap_status", "blocking", "cuda_execution_performed", "solve_claim"],
+  "properties": {
+    "record_type": {"const": "cuda_candidate_batch_abi_gap_record"},
+    "surface_id": {"type": "string"},
+    "surface_kind": {"type": "string"},
+    "gap_status": {"type": "string"},
+    "blocking": {"type": "boolean"},
+    "cuda_execution_performed": {"const": false},
+    "cuda_source_modified": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "gpu_benchmark_performed": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  }
+}

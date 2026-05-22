@@ -1,0 +1,211 @@
+records:
+- record_type: cuda_candidate_batch_abi_gap_record
+  batch_abi_gap_id: stage5t-batch-abi-gap-00
+  surface_id: token_buffer_header
+  surface_kind: token buffers
+  gap_status: needs_shared_header
+  blocking: true
+  recommended_resolution: Stage 5U unified candidate batch ABI and backend contract
+    consolidation
+  rationale: Common token/mask/length descriptors should be stable before more kernels.
+  result_store_compatibility: requires_compact_summary_shape
+  score_summary_compatibility: requires_stage4i_shape
+  stage_id: stage-5t
+  source_stage_id: stage-5s
+  result_source_kind: cuda_solved_family_readiness_matrix
+  deep_research_review_consumed: true
+  metadata_only: true
+  compact_summary_only: true
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  solved_fixture_cuda_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false
+- record_type: cuda_candidate_batch_abi_gap_record
+  batch_abi_gap_id: stage5t-batch-abi-gap-01
+  surface_id: key_schedule_buffer
+  surface_kind: key schedules
+  gap_status: needs_key_schedule_abi
+  blocking: true
+  recommended_resolution: Stage 5U unified candidate batch ABI and backend contract
+    consolidation
+  rationale: Explicit-key Vigenere needs key-token buffers and advance rules.
+  result_store_compatibility: requires_compact_summary_shape
+  score_summary_compatibility: requires_stage4i_shape
+  stage_id: stage-5t
+  source_stage_id: stage-5s
+  result_source_kind: cuda_solved_family_readiness_matrix
+  deep_research_review_consumed: true
+  metadata_only: true
+  compact_summary_only: true
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  solved_fixture_cuda_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false
+- record_type: cuda_candidate_batch_abi_gap_record
+  batch_abi_gap_id: stage5t-batch-abi-gap-02
+  surface_id: stream_schedule_buffer
+  surface_kind: stream schedules
+  gap_status: needs_stream_schedule_abi
+  blocking: true
+  recommended_resolution: Stage 5U unified candidate batch ABI and backend contract
+    consolidation
+  rationale: Prime-minus-one needs stream value, start index, and advance policy surfaces.
+  result_store_compatibility: requires_compact_summary_shape
+  score_summary_compatibility: requires_stage4i_shape
+  stage_id: stage-5t
+  source_stage_id: stage-5s
+  result_source_kind: cuda_solved_family_readiness_matrix
+  deep_research_review_consumed: true
+  metadata_only: true
+  compact_summary_only: true
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  solved_fixture_cuda_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false
+- record_type: cuda_candidate_batch_abi_gap_record
+  batch_abi_gap_id: stage5t-batch-abi-gap-03
+  surface_id: score_vector_shape
+  surface_kind: score vectors
+  gap_status: needs_score_vector_contract
+  blocking: true
+  recommended_resolution: Stage 5U unified candidate batch ABI and backend contract
+    consolidation
+  rationale: Future GPU scoring needs a Stage 4I-compatible vector shape.
+  result_store_compatibility: requires_compact_summary_shape
+  score_summary_compatibility: requires_stage4i_shape
+  stage_id: stage-5t
+  source_stage_id: stage-5s
+  result_source_kind: cuda_solved_family_readiness_matrix
+  deep_research_review_consumed: true
+  metadata_only: true
+  compact_summary_only: true
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  solved_fixture_cuda_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false
+- record_type: cuda_candidate_batch_abi_gap_record
+  batch_abi_gap_id: stage5t-batch-abi-gap-04
+  surface_id: top_k_output_shape
+  surface_kind: top-k outputs
+  gap_status: needs_top_k_output_contract
+  blocking: true
+  recommended_resolution: Stage 5U unified candidate batch ABI and backend contract
+    consolidation
+  rationale: Future reducers need deterministic top-k output shape and tie policy.
+  result_store_compatibility: requires_compact_summary_shape
+  score_summary_compatibility: requires_stage4i_shape
+  stage_id: stage-5t
+  source_stage_id: stage-5s
+  result_source_kind: cuda_solved_family_readiness_matrix
+  deep_research_review_consumed: true
+  metadata_only: true
+  compact_summary_only: true
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  solved_fixture_cuda_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false

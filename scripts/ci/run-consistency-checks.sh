@@ -966,6 +966,64 @@ echo "Running Stage 5S expanded CUDA result-store integration temp output"
     --summary "$tmp_dir/stage5s-expanded-cuda-result-store-integration-summary.yaml" \
     --results-dir "$tmp_dir/stage5s-gematria-expanded-cuda-result-store"
 
+echo "Running Stage 5T CUDA solved-family readiness temp output"
+"$python_bin" -m libreprimus.cli cuda-solved-family-readiness build-solved-family-inventory \
+    --fixture-root data/fixtures \
+    --solved-family-inventory-out "$tmp_dir/stage5t-solved-family-cuda-inventory.yaml" \
+    --out-dir "$tmp_dir/stage5t-cuda-solved-family-readiness" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-solved-family-readiness build-parity-matrix \
+    --solved-family-inventory "$tmp_dir/stage5t-solved-family-cuda-inventory.yaml" \
+    --stage5m-summary "$tmp_dir/stage5m-solved-fixture-cuda-parity-summary.yaml" \
+    --stage5r-summary "$tmp_dir/stage5r-expanded-solved-fixture-cuda-parity-summary.yaml" \
+    --parity-matrix-out "$tmp_dir/stage5t-solved-family-cuda-parity-matrix.yaml" \
+    --out-dir "$tmp_dir/stage5t-cuda-solved-family-readiness" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-solved-family-readiness build-kernel-readiness \
+    --parity-matrix "$tmp_dir/stage5t-solved-family-cuda-parity-matrix.yaml" \
+    --kernel-readiness-out "$tmp_dir/stage5t-cuda-kernel-readiness.yaml" \
+    --out-dir "$tmp_dir/stage5t-cuda-solved-family-readiness" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-solved-family-readiness build-batch-abi-gaps \
+    --batch-abi-gaps-out "$tmp_dir/stage5t-cuda-candidate-batch-abi-gaps.yaml" \
+    --out-dir "$tmp_dir/stage5t-cuda-solved-family-readiness" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-solved-family-readiness build-benchmark-readiness \
+    --benchmark-readiness-out "$tmp_dir/stage5t-cuda-benchmark-readiness.yaml" \
+    --out-dir "$tmp_dir/stage5t-cuda-solved-family-readiness" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-solved-family-readiness build-no-unsolved-guardrail \
+    --no-unsolved-guardrail-out "$tmp_dir/stage5t-cuda-no-unsolved-guardrail-review.yaml" \
+    --out-dir "$tmp_dir/stage5t-cuda-solved-family-readiness" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-solved-family-readiness build-next-stage-decision \
+    --batch-abi-gaps "$tmp_dir/stage5t-cuda-candidate-batch-abi-gaps.yaml" \
+    --next-stage-decision-out "$tmp_dir/stage5t-cuda-next-stage-decision.yaml" \
+    --out-dir "$tmp_dir/stage5t-cuda-solved-family-readiness" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-solved-family-readiness build-summary \
+    --solved-family-inventory "$tmp_dir/stage5t-solved-family-cuda-inventory.yaml" \
+    --parity-matrix "$tmp_dir/stage5t-solved-family-cuda-parity-matrix.yaml" \
+    --kernel-readiness "$tmp_dir/stage5t-cuda-kernel-readiness.yaml" \
+    --batch-abi-gaps "$tmp_dir/stage5t-cuda-candidate-batch-abi-gaps.yaml" \
+    --benchmark-readiness "$tmp_dir/stage5t-cuda-benchmark-readiness.yaml" \
+    --no-unsolved-guardrail "$tmp_dir/stage5t-cuda-no-unsolved-guardrail-review.yaml" \
+    --next-stage-decision "$tmp_dir/stage5t-cuda-next-stage-decision.yaml" \
+    --stage5s-summary "$tmp_dir/stage5s-expanded-cuda-result-store-integration-summary.yaml" \
+    --summary-out "$tmp_dir/stage5t-cuda-solved-family-readiness-summary.yaml" \
+    --out-dir "$tmp_dir/stage5t-cuda-solved-family-readiness" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-solved-family-readiness validate-stage5t \
+    --solved-family-inventory "$tmp_dir/stage5t-solved-family-cuda-inventory.yaml" \
+    --parity-matrix "$tmp_dir/stage5t-solved-family-cuda-parity-matrix.yaml" \
+    --kernel-readiness "$tmp_dir/stage5t-cuda-kernel-readiness.yaml" \
+    --batch-abi-gaps "$tmp_dir/stage5t-cuda-candidate-batch-abi-gaps.yaml" \
+    --benchmark-readiness "$tmp_dir/stage5t-cuda-benchmark-readiness.yaml" \
+    --no-unsolved-guardrail "$tmp_dir/stage5t-cuda-no-unsolved-guardrail-review.yaml" \
+    --next-stage-decision "$tmp_dir/stage5t-cuda-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5t-cuda-solved-family-readiness-summary.yaml" \
+    --results-dir "$tmp_dir/stage5t-cuda-solved-family-readiness"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

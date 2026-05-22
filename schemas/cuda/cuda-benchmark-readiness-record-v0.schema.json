@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/cuda/cuda-benchmark-readiness-record-v0.schema.json",
+  "title": "cuda-benchmark-readiness-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "benchmark_surface_id", "benchmark_execution_allowed", "performance_claim_allowed", "speedup_claim_allowed", "solve_claim"],
+  "properties": {
+    "record_type": {"const": "cuda_benchmark_readiness_record"},
+    "benchmark_surface_id": {"type": "string"},
+    "benchmark_planning_allowed": {"type": "boolean"},
+    "benchmark_execution_allowed": {"const": false},
+    "performance_claim_allowed": {"const": false},
+    "speedup_claim_allowed": {"const": false},
+    "gpu_benchmark_performed": {"const": false},
+    "performance_claim": {"const": false},
+    "speedup_claim": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  }
+}

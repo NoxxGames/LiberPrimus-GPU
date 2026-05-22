@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/cuda/cuda-no-unsolved-guardrail-review-record-v0.schema.json",
+  "title": "cuda-no-unsolved-guardrail-review-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "guardrail_id", "guardrail_status", "allowed", "unsolved_page_cuda_used", "solve_claim"],
+  "properties": {
+    "record_type": {"const": "cuda_no_unsolved_guardrail_review_record"},
+    "guardrail_id": {"type": "string"},
+    "guardrail_status": {"type": "string"},
+    "allowed": {"const": false},
+    "unsolved_page_cuda_used": {"const": false},
+    "canonical_corpus_active": {"const": false},
+    "page_boundaries_final": {"const": false},
+    "generated_body_publication_allowed": {"const": false},
+    "method_status_upgrade_allowed": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  }
+}

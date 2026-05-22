@@ -595,5 +595,13 @@ experiments/results/gematria-expanded-cuda-result-store/**
 !experiments/results/gematria-expanded-cuda-result-store/stage5s/
 !experiments/results/gematria-expanded-cuda-result-store/stage5s/.gitkeep
 
+# Generated CUDA solved-family readiness outputs
+experiments/results/cuda-solved-family-readiness/**
+!experiments/results/cuda-solved-family-readiness/
+!experiments/results/cuda-solved-family-readiness/README.md
+!experiments/results/cuda-solved-family-readiness/.gitkeep
+!experiments/results/cuda-solved-family-readiness/stage5t/
+!experiments/results/cuda-solved-family-readiness/stage5t/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

@@ -7,3 +7,7 @@ The committed integration records under `data/cuda/` are deliberately small. The
 Result-store integration is compatible with the Stage 4P unified result surface. Score-summary integration is compatible with the Stage 4I finite triage-label vocabulary and uses `scoring_not_available` where no scorer is applicable.
 
 Stage 5S does not upgrade any method family to solved. CUDA/native parity is correctness metadata for the scoped kernel and input buffers only.
+
+Stage 5T consumes this compact integration surface as an input to solved-family readiness
+classification. The Stage 5T matrix explicitly records that the expanded Stage 5R matches are
+`gematria_shift_score_only` current-kernel parity, not original transform-family CUDA verification.

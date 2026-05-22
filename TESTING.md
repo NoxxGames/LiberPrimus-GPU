@@ -127,6 +127,14 @@ benchmarking, performance/speedup, generated-output, codex-output, and solve-cla
 ignored-output checks for `experiments/results/gematria-cuda-parity-reporting/stage5k/` and
 `codex-output/`.
 
+Stage 5T extends coverage with solved-family CUDA readiness schemas, solved-family inventory
+checks, parity-matrix checks that keep original transform semantics distinct from current
+shift-score parity, kernel-readiness rankings that do not authorize implementation, candidate
+batch ABI gap records, benchmark-readiness planning-only records, no-unsolved guardrail records,
+deterministic next-stage decision tests, CLI build/validate/summary checks, and ignored-output,
+raw-data, SQLite, and codex-output checks for
+`experiments/results/cuda-solved-family-readiness/stage5t/` and `codex-output/`.
+
 ## Stage 3W State-Drift Tests
 
 Stage 3W tests cover the state-drift checker, stale current-stage phrase detection, historical-reference allowances, required CUDA/corpus/page-boundary/raw-output/Discord privacy facts, pyproject metadata, persistent doc current-state coverage, and CLI integration through `libreprimus consistency check-state-drift`.

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/cuda/solved-family-cuda-inventory-record-v0.schema.json",
+  "title": "solved-family-cuda-inventory-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "solved_family_id", "readiness_status", "cuda_execution_performed", "solve_claim"],
+  "properties": {
+    "record_type": {"const": "solved_family_cuda_inventory_record"},
+    "solved_family_id": {"type": "string"},
+    "readiness_status": {"type": "string"},
+    "cuda_execution_performed": {"const": false},
+    "cuda_source_modified": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "gpu_benchmark_performed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  }
+}

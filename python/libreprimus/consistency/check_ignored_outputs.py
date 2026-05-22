@@ -236,6 +236,17 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/results/gematria-expanded-cuda-result-store/stage5s/summary.json",
         "experiments/results/gematria-expanded-cuda-result-store/stage5s/warnings.jsonl",
         "codex-output/stage5s-codex-completion.md",
+        "experiments/results/cuda-solved-family-readiness/stage5t/solved_family_inventory_report.json",
+        "experiments/results/cuda-solved-family-readiness/stage5t/cuda_parity_matrix_report.json",
+        "experiments/results/cuda-solved-family-readiness/stage5t/kernel_readiness_report.json",
+        "experiments/results/cuda-solved-family-readiness/stage5t/batch_abi_gap_report.json",
+        "experiments/results/cuda-solved-family-readiness/stage5t/benchmark_readiness_report.json",
+        "experiments/results/cuda-solved-family-readiness/stage5t/no_unsolved_guardrail_report.json",
+        "experiments/results/cuda-solved-family-readiness/stage5t/next_stage_decision.json",
+        "experiments/results/cuda-solved-family-readiness/stage5t/summary.json",
+        "experiments/results/cuda-solved-family-readiness/stage5t/warnings.jsonl",
+        "experiments/results/cuda-solved-family-readiness/stage5t/results.sqlite3",
+        "codex-output/stage5t-codex-completion.md",
         "local-test.sqlite3",
     ]
     trackable_paths = [

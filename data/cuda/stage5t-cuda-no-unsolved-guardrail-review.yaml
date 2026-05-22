@@ -1,0 +1,253 @@
+records:
+- record_type: cuda_no_unsolved_guardrail_review_record
+  guardrail_review_id: stage5t-guardrail-00
+  guardrail_id: unsolved_page_cuda
+  guardrail_status: blocked_unsolved
+  allowed: false
+  rationale: No unsolved-page CUDA is allowed before explicit tiny-pilot gates.
+  requirements_before_future_tiny_pilot:
+  - Stage 5U unified batch ABI
+  - Stage 5W score-vector unification
+  - Stage 5X benchmark harness hardening
+  - explicit user approval
+  stage_id: stage-5t
+  source_stage_id: stage-5s
+  result_source_kind: cuda_solved_family_readiness_matrix
+  deep_research_review_consumed: true
+  metadata_only: true
+  compact_summary_only: true
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  solved_fixture_cuda_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false
+- record_type: cuda_no_unsolved_guardrail_review_record
+  guardrail_review_id: stage5t-guardrail-01
+  guardrail_id: canonical_corpus_activation
+  guardrail_status: blocked_corpus_inactive
+  allowed: false
+  rationale: Canonical corpus remains inactive.
+  requirements_before_future_tiny_pilot:
+  - Stage 5U unified batch ABI
+  - Stage 5W score-vector unification
+  - Stage 5X benchmark harness hardening
+  - explicit user approval
+  stage_id: stage-5t
+  source_stage_id: stage-5s
+  result_source_kind: cuda_solved_family_readiness_matrix
+  deep_research_review_consumed: true
+  metadata_only: true
+  compact_summary_only: true
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  solved_fixture_cuda_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false
+- record_type: cuda_no_unsolved_guardrail_review_record
+  guardrail_review_id: stage5t-guardrail-02
+  guardrail_id: page_boundary_finalisation
+  guardrail_status: blocked_reviewable
+  allowed: false
+  rationale: Page boundaries remain reviewable, not final.
+  requirements_before_future_tiny_pilot:
+  - Stage 5U unified batch ABI
+  - Stage 5W score-vector unification
+  - Stage 5X benchmark harness hardening
+  - explicit user approval
+  stage_id: stage-5t
+  source_stage_id: stage-5s
+  result_source_kind: cuda_solved_family_readiness_matrix
+  deep_research_review_consumed: true
+  metadata_only: true
+  compact_summary_only: true
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  solved_fixture_cuda_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false
+- record_type: cuda_no_unsolved_guardrail_review_record
+  guardrail_review_id: stage5t-guardrail-03
+  guardrail_id: broad_solved_fixture_cuda
+  guardrail_status: blocked_broad_scope
+  allowed: false
+  rationale: Broad solved-fixture CUDA campaigns are outside Stage 5T.
+  requirements_before_future_tiny_pilot:
+  - Stage 5U unified batch ABI
+  - Stage 5W score-vector unification
+  - Stage 5X benchmark harness hardening
+  - explicit user approval
+  stage_id: stage-5t
+  source_stage_id: stage-5s
+  result_source_kind: cuda_solved_family_readiness_matrix
+  deep_research_review_consumed: true
+  metadata_only: true
+  compact_summary_only: true
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  solved_fixture_cuda_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false
+- record_type: cuda_no_unsolved_guardrail_review_record
+  guardrail_review_id: stage5t-guardrail-04
+  guardrail_id: generated_body_publication
+  guardrail_status: blocked_generated_body_publication
+  allowed: false
+  rationale: Generated CUDA bodies remain ignored and unpublished.
+  requirements_before_future_tiny_pilot:
+  - Stage 5U unified batch ABI
+  - Stage 5W score-vector unification
+  - Stage 5X benchmark harness hardening
+  - explicit user approval
+  stage_id: stage-5t
+  source_stage_id: stage-5s
+  result_source_kind: cuda_solved_family_readiness_matrix
+  deep_research_review_consumed: true
+  metadata_only: true
+  compact_summary_only: true
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  solved_fixture_cuda_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false
+- record_type: cuda_no_unsolved_guardrail_review_record
+  guardrail_review_id: stage5t-guardrail-05
+  guardrail_id: method_status_upgrade
+  guardrail_status: blocked_method_status_upgrade
+  allowed: false
+  rationale: Parity is backend correctness metadata, not solve evidence.
+  requirements_before_future_tiny_pilot:
+  - Stage 5U unified batch ABI
+  - Stage 5W score-vector unification
+  - Stage 5X benchmark harness hardening
+  - explicit user approval
+  stage_id: stage-5t
+  source_stage_id: stage-5s
+  result_source_kind: cuda_solved_family_readiness_matrix
+  deep_research_review_consumed: true
+  metadata_only: true
+  compact_summary_only: true
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  unsolved_page_cuda_used: false
+  real_liber_primus_cuda_data_used: false
+  solved_fixture_cuda_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false

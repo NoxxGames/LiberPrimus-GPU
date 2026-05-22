@@ -1,0 +1,51 @@
+record_type: cuda_metadata_manifest
+manifest_id: stage5t-cuda-readiness-matrix
+stage_id: stage-5t
+description: Metadata-only CUDA parity matrix, kernel-readiness ranking, ABI gap, benchmark-readiness, and no-unsolved guardrail classification.
+execution_enabled: false
+cuda_execution_enabled: false
+cuda_execution_performed: false
+cuda_required: false
+ci_gpu_required: false
+no_gpu_ci_safe: true
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+device_kernel_arithmetic_modified: false
+gpu_benchmark_performed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+real_liber_primus_cuda_data_used: false
+solved_fixture_cuda_used: false
+raw_data_required: false
+raw_data_processed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+codex_output_committed: false
+method_status_upgrade_allowed: false
+method_status_upgraded: false
+no_solve_claim: true
+solve_claim: false
+input_records:
+  - data/cuda/stage5t-solved-family-cuda-inventory.yaml
+  - data/cuda/stage5m-solved-fixture-cuda-parity-summary.yaml
+  - data/cuda/stage5r-expanded-solved-fixture-cuda-parity-summary.yaml
+outputs:
+  committed:
+    - data/cuda/stage5t-solved-family-cuda-parity-matrix.yaml
+    - data/cuda/stage5t-cuda-kernel-readiness.yaml
+    - data/cuda/stage5t-cuda-candidate-batch-abi-gaps.yaml
+    - data/cuda/stage5t-cuda-benchmark-readiness.yaml
+    - data/cuda/stage5t-cuda-no-unsolved-guardrail-review.yaml
+  ignored:
+    - experiments/results/cuda-solved-family-readiness/stage5t/cuda_parity_matrix_report.json
+    - experiments/results/cuda-solved-family-readiness/stage5t/kernel_readiness_report.json
+    - experiments/results/cuda-solved-family-readiness/stage5t/batch_abi_gap_report.json
+    - experiments/results/cuda-solved-family-readiness/stage5t/benchmark_readiness_report.json
+    - experiments/results/cuda-solved-family-readiness/stage5t/no_unsolved_guardrail_report.json
+notes:
+  - Existing gematria_shift_score parity is classified separately from original transform-family semantics.
+  - Benchmark records are planning metadata only; execution and speedup claims remain blocked.
