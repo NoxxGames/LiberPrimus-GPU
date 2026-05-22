@@ -1,0 +1,15 @@
+manifest_id: stage5v-score-vector-topk-conformance
+stage_id: stage-5v
+manifest_kind: score_vector_topk_conformance
+candidate_batch_abi_id: candidate_batch_abi_v0
+cpu_only: true
+score_summary_contract: stage4i
+result_store_contract: stage4p
+score_interpretation: triage_only
+topk_tie_policy: score_desc_candidate_id_asc
+cuda_used: false
+cuda_required: false
+benchmark_execution_allowed: false
+generated_body_publication_allowed: false
+method_status_upgrade_allowed: false
+no_solve_claim: true

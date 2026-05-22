@@ -1,0 +1,73 @@
+stage_id: stage-5v
+source_stage_id: stage-5u
+candidate_batch_abi_id: candidate_batch_abi_v0
+candidate_batch_abi_version: 0
+result_source_kind: native_candidate_batch_abi_conformance
+metadata_only: false
+contract_only: false
+compact_summary_only: true
+native_cpu_execution_performed: false
+python_reference_adapter_implemented: true
+cpp_reference_adapter_implemented: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+device_kernel_arithmetic_modified: false
+gpu_benchmark_performed: false
+benchmark_execution_allowed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+unsolved_page_cuda_allowed: false
+real_liber_primus_cuda_data_used: false
+solved_fixture_cuda_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+codex_output_committed: false
+method_status_upgrade_allowed: false
+method_status_upgraded: false
+solve_claim: false
+no_solve_claim: true
+no_gpu_ci_safe: true
+ci_gpu_required: false
+local_16gb_profile_required: false
+cxx_launches_python_workers: false
+record_type: stage5v_native_candidate_batch_conformance_summary
+schema: schemas/cuda/stage5v-native-candidate-batch-conformance-summary-v0.schema.json
+status: complete
+native_adapter_records: 2
+conformance_fixture_records: 7
+token_buffer_conformance_records: 7
+schedule_conformance_records: 2
+score_vector_conformance_records: 7
+topk_conformance_records: 1
+result_store_conformance_records: 3
+abi_implementation_status_records: 8
+next_stage_decision_records: 9
+stage5u_gap_count: 5
+native_conformance_pass_count: 4
+native_conformance_shape_only_count: 2
+native_conformance_blocked_count: 2
+cpp_python_hash_match_count: 0
+executed_conformance_fixture_count: 3
+shape_only_fixture_count: 4
+output_hash_records: 3
+recommended_next_prompt_type: Codex
+recommended_next_stage_title: Stage 5W - prime-minus-one stream native parity contract
+  preparation
+recommended_next_stage_reason: Stage 5V proves token-buffer, score-vector, top-k,
+  and stream-schedule shape conformance without CUDA, so the next bounded native contract
+  should prepare the prime-minus-one stream family before any family-specific CUDA
+  contract.
+deep_research_recommended_next: false
+default_next_stage_title: Stage 5W - prime-minus-one stream native parity contract
+  preparation
+default_next_stage_reason: Stage 5V proves token-buffer, score-vector, top-k, and
+  stream-schedule shape conformance without CUDA, so the next bounded native contract
+  should prepare the prime-minus-one stream family before any family-specific CUDA
+  contract.
+codex_output_written: false

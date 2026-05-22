@@ -319,6 +319,18 @@ def validate_research_synthesis(
             ("stage 5v", "native candidate batch abi", "reference adapter"),
             "staged_plan_stage5v_next",
         )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5v", "native candidate batch abi", "reference adapter", "complete"),
+            "staged_plan_stage5v_native_conformance_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5w", "prime-minus-one stream", "native parity"),
+            "staged_plan_stage5w_prime_stream_next",
+        )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
         _require_text(errors, staged_text, ("page boundaries", "reviewable"), "staged_plan_boundaries_reviewable")
@@ -588,9 +600,21 @@ def validate_research_synthesis(
             or "stage 5s" not in evidence_text
             or "stage 5t" not in evidence_text
             or "stage 5u" not in evidence_text
-            or "stage 5v" not in next_text
+            or "stage 5v" not in evidence_text
+            or "stage 5w" not in next_text
         ):
             errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_stage5j_stage5k_transition")
+
+    native_abi_conformance = _find_method(method_records, "native_candidate_batch_abi_conformance")
+    if native_abi_conformance is None:
+        errors.append("native_candidate_batch_abi_conformance_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in native_abi_conformance.get("stop_conditions", []))
+        next_text = str(native_abi_conformance.get("next_action", "")).lower()
+        if "cuda" not in stop_text or "benchmark" not in stop_text or ("raw-data" not in stop_text and "raw data" not in stop_text):
+            errors.append("native_candidate_batch_abi_conformance_missing_guardrail")
+        if "stage 5w" not in next_text or "prime-minus-one" not in next_text:
+            errors.append("native_candidate_batch_abi_conformance_missing_stage5w_next_action")
 
     cookie = _find_method(method_records, "cookie_hash_sha256_packs")
     if cookie is None:

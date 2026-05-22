@@ -25,4 +25,4 @@ Generated reports remain ignored under `experiments/results/cuda-solved-family-r
 
 ## Stage 5U Follow-Up
 
-Stage 5U consumes the five ABI gap rows from the Stage 5T matrix and defines Candidate Batch ABI v0 contracts for token buffers, key schedules, stream schedules, score vectors, top-k output, backend surfaces, and result-store compatibility. It closes the Stage 5T gaps only at the contract level and selects Stage 5V native ABI conformance fixtures as the next bounded step.
+Stage 5U consumes the five ABI gap rows from the Stage 5T matrix and defines Candidate Batch ABI v0 contracts for token buffers, key schedules, stream schedules, score vectors, top-k output, backend surfaces, and result-store compatibility. Stage 5V has since proved no-GPU native ABI conformance with Python reference fixtures and selected Stage 5W prime-minus-one stream native parity contract preparation as the next bounded step.

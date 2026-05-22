@@ -839,3 +839,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5U wrote 1 candidate-batch ABI record, 8 token-buffer contract records, 6 transform-parameter contract records, 2 key-schedule contract records, 2 stream-schedule contract records, 7 score-vector contract records, 1 top-k output contract record, 7 backend-surface contract records, 3 result-store compatibility records, 5 ABI gap closure records, and 9 next-stage decision records. It closed the five Stage 5T ABI gaps by contract, selected Stage 5V native candidate batch ABI reference adapter and conformance fixtures as the next prompt, and ran no CUDA, modified no CUDA/C++ source, added 0 kernels, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, published no generated result bodies, upgraded no method family to solved, and made no canonical-corpus, page-boundary, website-expansion, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5v
+    title: Native Candidate Batch ABI reference adapter and conformance fixtures
+    status: complete
+    category: infrastructure
+    summary: Proved Candidate Batch ABI v0 no-GPU conformance through a pure Python reference adapter, raw-data-free conformance fixtures, deterministic output-token hashes, score-vector/top-k shape records, and compact result-store compatibility records.
+    key_outputs:
+      - "`libreprimus native-candidate-batch-conformance` commands for adapter records, conformance fixtures, Python reference conformance, token-buffer records, schedule records, score-vector records, top-k records, result-store conformance, implementation status, next-stage decision, summary, validation, and summary display."
+      - Stage 5V adapter, conformance fixture, token-buffer, schedule, score-vector, top-k, result-store, implementation-status, next-stage-decision, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/cuda-candidate-batch-abi-conformance/stage5v/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5V wrote 2 adapter records, 7 conformance fixture records, 7 token-buffer conformance records, 2 schedule conformance records, 7 score-vector conformance records, 1 top-k conformance record, 3 result-store conformance records, 8 implementation-status records, and 9 next-stage decision records. It executed 3 raw-data-free Python reference `shift_mod29` conformance fixtures, prepared 3 deterministic output-token hashes, kept 4 fixtures shape-only, left the C++ reference adapter deferred, selected Stage 5W prime-minus-one stream native parity contract preparation, and performed no CUDA execution, CUDA source modification, kernel addition, GPU benchmark, speedup claim, unsolved-page CUDA use, real Liber Primus CUDA-data use, generated-body publication, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

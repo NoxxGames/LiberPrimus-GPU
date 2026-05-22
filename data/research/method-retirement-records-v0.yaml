@@ -200,6 +200,15 @@ records:
     prohibited_expansions: [Unscoped CUDA kernels, CUDA transforms beyond the selected synthetic-only contract, GPU benchmarks, speedup claims, raw-data processing, broad experiments, website expansion, generated-output commits, codex-output commits, solve claims.]
     notes: Stage 5F is a synthetic-only parity implementation and Stage 5G is reporting/hardening only; the selected target is still not broad CUDA implementation approval.
   - record_type: method_retirement_record
+    method_family_id: native_candidate_batch_abi_conformance
+    retired_status: active_with_constraints
+    reason: Candidate Batch ABI native conformance is active infrastructure only; it proves shape and hash semantics without authorizing CUDA kernels, benchmarks, raw-data use, or original-family execution.
+    evidence: [Stage 5V records 7 raw-data-free conformance fixtures, 3 Python reference output-token hashes, score-vector/top-k shape conformance, and compact result-store compatibility.]
+    stages_supporting: [stage-5u, stage-5v]
+    reopen_conditions: [A future Stage 5W or later native contract stage needs stream, key, affine, reverse, score-vector, top-k, or C++ adapter conformance before CUDA implementation.]
+    prohibited_expansions: [CUDA execution, CUDA source changes, new kernels, GPU benchmarks, speedup claims, unsolved-page CUDA, generated-body publication, raw-data processing, method-status upgrades, solve claims.]
+    notes: Stage 5V selected prime-minus-one stream native parity contract preparation next and left C++ adapter implementation deferred.
+  - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints
     reason: Stage 4B visual observations are useful review inputs, but broad visual pareidolia and unannotated dot/braille/constellation readings remain high-risk false-positive classes.

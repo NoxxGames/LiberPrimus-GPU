@@ -185,6 +185,15 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/candidate-batch-result-store-compatibility-record-v0.schema.json",
     "cuda/candidate-batch-abi-gap-closure-record-v0.schema.json",
     "cuda/stage5u-candidate-batch-abi-summary-v0.schema.json",
+    "cuda/native-candidate-batch-adapter-record-v0.schema.json",
+    "cuda/candidate-batch-conformance-fixture-record-v0.schema.json",
+    "cuda/token-buffer-conformance-record-v0.schema.json",
+    "cuda/schedule-conformance-record-v0.schema.json",
+    "cuda/score-vector-conformance-record-v0.schema.json",
+    "cuda/topk-conformance-record-v0.schema.json",
+    "cuda/native-conformance-result-store-record-v0.schema.json",
+    "cuda/candidate-batch-abi-implementation-status-record-v0.schema.json",
+    "cuda/stage5v-native-candidate-batch-conformance-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -347,6 +356,15 @@ EXPECTED_DOC_TERMS = [
     "candidate-batch-result-store-compatibility-record-v0",
     "candidate-batch-abi-gap-closure-record-v0",
     "stage5u-candidate-batch-abi-summary-v0",
+    "native-candidate-batch-adapter-record-v0",
+    "candidate-batch-conformance-fixture-record-v0",
+    "token-buffer-conformance-record-v0",
+    "schedule-conformance-record-v0",
+    "score-vector-conformance-record-v0",
+    "topk-conformance-record-v0",
+    "native-conformance-result-store-record-v0",
+    "candidate-batch-abi-implementation-status-record-v0",
+    "stage5v-native-candidate-batch-conformance-summary-v0",
 ]
 
 

@@ -243,6 +243,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5U is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5v",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5v\b", re.IGNORECASE),
+        "Stage 5V is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -771,6 +776,17 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
+        "stage5v_native_candidate_batch_conformance_complete",
+        "stage 5v" in staged_plan
+        and "native candidate batch abi" in staged_plan
+        and "reference adapter" in staged_plan
+        and "stage 5w" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5V native Candidate Batch ABI conformance and Stage 5W direction.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
         "source_lock_snapshot_policy_present",
         "source-lock snapshot" in combined and "allowlisted" in combined and "snapshot policy" in combined,
         "Allowlisted public source-lock snapshot policy is documented.",
@@ -1045,6 +1061,16 @@ def check_state_drift_consistency(
         and "score-vector" in combined
         and "stage 5v" in combined,
         "Stage 5U Candidate Batch ABI and next native conformance direction are documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "native_candidate_batch_conformance_policy_present",
+        "native candidate batch abi" in combined
+        and "conformance fixtures" in combined
+        and "stage 5w" in combined
+        and "no cuda execution" in combined,
+        "Stage 5V native Candidate Batch ABI conformance and Stage 5W boundary are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

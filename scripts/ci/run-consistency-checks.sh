@@ -1103,6 +1103,74 @@ echo "Running Stage 5U CUDA candidate batch ABI temp output"
     --summary "$tmp_dir/stage5u-candidate-batch-abi-summary.yaml" \
     --results-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi"
 
+echo "Running Stage 5V native Candidate Batch ABI conformance temp output"
+"$python_bin" -m libreprimus.cli native-candidate-batch-conformance build-adapter-records \
+    --adapter-records-out "$tmp_dir/stage5v-native-candidate-batch-adapter.yaml" \
+    --out-dir "$tmp_dir/stage5v-native-candidate-batch-conformance" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli native-candidate-batch-conformance build-conformance-fixtures \
+    --conformance-fixtures-out "$tmp_dir/stage5v-candidate-batch-conformance-fixtures.yaml" \
+    --out-dir "$tmp_dir/stage5v-native-candidate-batch-conformance" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli native-candidate-batch-conformance run-native-conformance \
+    --conformance-fixtures "$tmp_dir/stage5v-candidate-batch-conformance-fixtures.yaml" \
+    --out-dir "$tmp_dir/stage5v-native-candidate-batch-conformance" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli native-candidate-batch-conformance build-token-buffer-conformance \
+    --conformance-fixtures "$tmp_dir/stage5v-candidate-batch-conformance-fixtures.yaml" \
+    --token-buffer-conformance-out "$tmp_dir/stage5v-token-buffer-conformance.yaml" \
+    --out-dir "$tmp_dir/stage5v-native-candidate-batch-conformance" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli native-candidate-batch-conformance build-schedule-conformance \
+    --schedule-conformance-out "$tmp_dir/stage5v-schedule-conformance.yaml" \
+    --out-dir "$tmp_dir/stage5v-native-candidate-batch-conformance" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli native-candidate-batch-conformance build-score-vector-conformance \
+    --score-vector-conformance-out "$tmp_dir/stage5v-score-vector-conformance.yaml" \
+    --out-dir "$tmp_dir/stage5v-native-candidate-batch-conformance" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli native-candidate-batch-conformance build-topk-conformance \
+    --topk-conformance-out "$tmp_dir/stage5v-topk-conformance.yaml" \
+    --out-dir "$tmp_dir/stage5v-native-candidate-batch-conformance" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli native-candidate-batch-conformance build-result-store-conformance \
+    --result-store-conformance-out "$tmp_dir/stage5v-native-conformance-result-store.yaml" \
+    --out-dir "$tmp_dir/stage5v-native-candidate-batch-conformance" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli native-candidate-batch-conformance build-implementation-status \
+    --implementation-status-out "$tmp_dir/stage5v-abi-implementation-status.yaml" \
+    --out-dir "$tmp_dir/stage5v-native-candidate-batch-conformance" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli native-candidate-batch-conformance build-next-stage-decision \
+    --next-stage-decision-out "$tmp_dir/stage5v-next-stage-decision.yaml" \
+    --out-dir "$tmp_dir/stage5v-native-candidate-batch-conformance" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli native-candidate-batch-conformance build-summary \
+    --adapter-records "$tmp_dir/stage5v-native-candidate-batch-adapter.yaml" \
+    --conformance-fixtures "$tmp_dir/stage5v-candidate-batch-conformance-fixtures.yaml" \
+    --token-buffer-conformance "$tmp_dir/stage5v-token-buffer-conformance.yaml" \
+    --schedule-conformance "$tmp_dir/stage5v-schedule-conformance.yaml" \
+    --score-vector-conformance "$tmp_dir/stage5v-score-vector-conformance.yaml" \
+    --topk-conformance "$tmp_dir/stage5v-topk-conformance.yaml" \
+    --result-store-conformance "$tmp_dir/stage5v-native-conformance-result-store.yaml" \
+    --implementation-status "$tmp_dir/stage5v-abi-implementation-status.yaml" \
+    --next-stage-decision "$tmp_dir/stage5v-next-stage-decision.yaml" \
+    --summary-out "$tmp_dir/stage5v-native-candidate-batch-conformance-summary.yaml" \
+    --out-dir "$tmp_dir/stage5v-native-candidate-batch-conformance" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli native-candidate-batch-conformance validate-stage5v \
+    --adapter-records "$tmp_dir/stage5v-native-candidate-batch-adapter.yaml" \
+    --conformance-fixtures "$tmp_dir/stage5v-candidate-batch-conformance-fixtures.yaml" \
+    --token-buffer-conformance "$tmp_dir/stage5v-token-buffer-conformance.yaml" \
+    --schedule-conformance "$tmp_dir/stage5v-schedule-conformance.yaml" \
+    --score-vector-conformance "$tmp_dir/stage5v-score-vector-conformance.yaml" \
+    --topk-conformance "$tmp_dir/stage5v-topk-conformance.yaml" \
+    --result-store-conformance "$tmp_dir/stage5v-native-conformance-result-store.yaml" \
+    --implementation-status "$tmp_dir/stage5v-abi-implementation-status.yaml" \
+    --next-stage-decision "$tmp_dir/stage5v-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5v-native-candidate-batch-conformance-summary.yaml" \
+    --results-dir "$tmp_dir/stage5v-native-candidate-batch-conformance"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

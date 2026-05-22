@@ -53,6 +53,7 @@ git check-ignore -v experiments/results/gematria-solved-fixture-cuda-repeat/stag
 git check-ignore -v experiments/results/gematria-cuda-result-store/stage5p/summary.json
 git check-ignore -v experiments/results/gematria-expansion-candidate-mapping/stage5q/summary.json
 git check-ignore -v experiments/results/gematria-expanded-cuda-result-store/stage5s/summary.json
+git check-ignore -v experiments/results/cuda-candidate-batch-abi-conformance/stage5v/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
@@ -61,6 +62,7 @@ git check-ignore -v codex-output/stage5l-codex-completion.md
 git check-ignore -v codex-output/stage5m-codex-completion.md
 git check-ignore -v codex-output/stage5p-codex-completion.md
 git check-ignore -v codex-output/stage5s-codex-completion.md
+git check-ignore -v codex-output/stage5v-codex-completion.md
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -627,11 +629,29 @@ Expected Stage 5U counts are 1 candidate-batch ABI record, 8 token-buffer contra
 transform-parameter contract records, 2 key-schedule contract records, 2 stream-schedule contract
 records, 7 score-vector contract records, 1 top-k output contract record, 7 backend-surface
 contract records, 3 result-store compatibility records, 5 ABI gap closure records, and 9
-next-stage decision records. The selected next prompt should remain Stage 5V native candidate batch
-ABI reference adapter and conformance fixtures unless an explicit future stage changes the ABI
-contract records.
+next-stage decision records. Stage 5U selected Stage 5V native candidate batch ABI reference
+adapter and conformance fixtures; Stage 5V has since superseded that next-stage decision with
+Stage 5W prime-minus-one stream native parity contract preparation.
 
 Generated Stage 5U reports belong under ignored
 `experiments/results/cuda-candidate-batch-abi/stage5u/`, and the local handoff belongs under ignored
 `codex-output/stage5u-codex-completion.md`. Do not stage generated reports, generated result bodies,
 SQLite files, raw data, or local CUDA diagnostics.
+
+# Stage 5V Native Candidate Batch ABI Conformance Troubleshooting
+
+If Stage 5V validation fails, rebuild the no-GPU conformance sequence and rerun
+`libreprimus native-candidate-batch-conformance validate-stage5v`. Do not run CUDA,
+native/CUDA CMake, benchmarks, solved fixtures, or unsolved pages to repair conformance records.
+
+Expected Stage 5V counts are 2 native adapter records, 7 conformance fixture records, 3 executed
+Python reference fixtures, 4 shape-only fixtures, 7 token-buffer conformance records, 2 schedule
+conformance records, 7 score-vector conformance records, 1 top-k conformance record, 3 result-store
+conformance records, 8 implementation-status records, and 9 next-stage decision records. The
+selected next prompt should remain Stage 5W prime-minus-one stream native parity contract
+preparation unless an explicit future stage changes the committed decision records.
+
+Generated Stage 5V reports belong under ignored
+`experiments/results/cuda-candidate-batch-abi-conformance/stage5v/`, and the local handoff belongs
+under ignored `codex-output/stage5v-codex-completion.md`. Do not stage generated reports, generated
+result bodies, SQLite files, raw data, or local CUDA diagnostics.

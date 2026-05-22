@@ -127,6 +127,13 @@ conformance. It keeps `gematria_shift_score_only` parity separate from original 
 semantics and selects Stage 5V native no-GPU conformance fixtures before family-specific CUDA
 contracts or benchmarks.
 
+Stage 5V native Candidate Batch ABI conformance is not a new cipher family and not a CUDA execution
+stage. It uses raw-data-free Python reference fixtures to prove shared ABI shape, token-buffer,
+score-vector, top-k, schedule, result-store, and deterministic hash behavior. It keeps C++ adapter
+implementation deferred, keeps `gematria_shift_score_only` separate from original transform-family
+semantics, and selects Stage 5W prime-minus-one stream native parity contract preparation before
+family-specific CUDA contracts or benchmarks.
+
 Stage 5S expanded CUDA parity reporting is still not a new cipher family. It records compact
 result-store and score-summary metadata for the Stage 5R hashes, keeps generated result bodies
 ignored, prevents method-family upgrades to solved, and recommends Deep Research review before

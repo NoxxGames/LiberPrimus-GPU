@@ -611,5 +611,13 @@ experiments/results/cuda-candidate-batch-abi/**
 !experiments/results/cuda-candidate-batch-abi/stage5u/
 !experiments/results/cuda-candidate-batch-abi/stage5u/.gitkeep
 
+# Generated CUDA candidate batch ABI conformance outputs
+experiments/results/cuda-candidate-batch-abi-conformance/**
+!experiments/results/cuda-candidate-batch-abi-conformance/
+!experiments/results/cuda-candidate-batch-abi-conformance/README.md
+!experiments/results/cuda-candidate-batch-abi-conformance/.gitkeep
+!experiments/results/cuda-candidate-batch-abi-conformance/stage5v/
+!experiments/results/cuda-candidate-batch-abi-conformance/stage5v/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

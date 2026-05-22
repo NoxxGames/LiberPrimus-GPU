@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5V Native Candidate Batch ABI Conformance
+
+Stage 5V does not execute a cryptanalytic experiment. It consumes Stage 5U Candidate Batch ABI v0 records and writes native adapter, conformance fixture, token-buffer conformance, schedule conformance, score-vector conformance, top-k conformance, result-store conformance, implementation-status, next-stage decision, and summary records under `data/cuda/`.
+
+Generated Stage 5V reports remain ignored under `experiments/results/cuda-candidate-batch-abi-conformance/stage5v/`. Stage 5V must keep CUDA execution, native/CUDA CMake, CUDA source modification, new kernels, GPU benchmarks, speedup claims, unsolved-page CUDA, broad solved-fixture CUDA, generated-result-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades to solved, and solve claims disabled.
+
 ## Stage 5U Candidate Batch ABI
 
 Stage 5U does not execute an experiment. It defines Candidate Batch ABI v0, token-buffer contracts, transform-parameter contracts, key-schedule contracts, stream-schedule contracts, score-vector contracts, top-k output contracts, backend-surface contracts, result-store compatibility records, Stage 5T ABI gap closure records, next-stage decision records, and summary records under `data/cuda/`.

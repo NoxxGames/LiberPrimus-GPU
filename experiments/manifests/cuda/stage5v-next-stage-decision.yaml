@@ -1,0 +1,16 @@
+manifest_id: stage5v-next-stage-decision
+stage_id: stage-5v
+manifest_kind: next_stage_decision
+candidate_batch_abi_id: candidate_batch_abi_v0
+default_next_stage: Stage 5W - prime-minus-one stream native parity contract preparation
+selection_policy:
+  - prefer_stream_native_contract_if_token_buffer_score_topk_and_stream_shape_conformance_pass
+  - defer_vigenere_until_key_execution_policy_is_explicit
+  - block_cuda_kernels_until_family_specific_native_contracts_exist
+  - block_benchmarks_until native parity and benchmark planning are explicitly scoped
+cuda_used: false
+cuda_required: false
+benchmark_execution_allowed: false
+unsolved_page_cuda_allowed: false
+generated_body_publication_allowed: false
+no_solve_claim: true

@@ -1227,6 +1227,54 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5USummary `
         --results-dir $Stage5UOut
 
+    Write-Host "Running Stage 5V native Candidate Batch ABI conformance temp output"
+    $Stage5VOut = Join-Path $TempDir "stage5v-native-candidate-batch-conformance"
+    $Stage5VAdapter = Join-Path $TempDir "stage5v-native-candidate-batch-adapter.yaml"
+    $Stage5VFixtures = Join-Path $TempDir "stage5v-candidate-batch-conformance-fixtures.yaml"
+    $Stage5VToken = Join-Path $TempDir "stage5v-token-buffer-conformance.yaml"
+    $Stage5VSchedule = Join-Path $TempDir "stage5v-schedule-conformance.yaml"
+    $Stage5VScore = Join-Path $TempDir "stage5v-score-vector-conformance.yaml"
+    $Stage5VTopk = Join-Path $TempDir "stage5v-topk-conformance.yaml"
+    $Stage5VResultStore = Join-Path $TempDir "stage5v-native-conformance-result-store.yaml"
+    $Stage5VStatus = Join-Path $TempDir "stage5v-abi-implementation-status.yaml"
+    $Stage5VDecision = Join-Path $TempDir "stage5v-next-stage-decision.yaml"
+    $Stage5VSummary = Join-Path $TempDir "stage5v-native-candidate-batch-conformance-summary.yaml"
+    & $Python -m libreprimus.cli native-candidate-batch-conformance build-adapter-records --adapter-records-out $Stage5VAdapter --out-dir $Stage5VOut --allow-warnings
+    & $Python -m libreprimus.cli native-candidate-batch-conformance build-conformance-fixtures --conformance-fixtures-out $Stage5VFixtures --out-dir $Stage5VOut --allow-warnings
+    & $Python -m libreprimus.cli native-candidate-batch-conformance run-native-conformance --conformance-fixtures $Stage5VFixtures --out-dir $Stage5VOut --allow-warnings
+    & $Python -m libreprimus.cli native-candidate-batch-conformance build-token-buffer-conformance --conformance-fixtures $Stage5VFixtures --token-buffer-conformance-out $Stage5VToken --out-dir $Stage5VOut --allow-warnings
+    & $Python -m libreprimus.cli native-candidate-batch-conformance build-schedule-conformance --schedule-conformance-out $Stage5VSchedule --out-dir $Stage5VOut --allow-warnings
+    & $Python -m libreprimus.cli native-candidate-batch-conformance build-score-vector-conformance --score-vector-conformance-out $Stage5VScore --out-dir $Stage5VOut --allow-warnings
+    & $Python -m libreprimus.cli native-candidate-batch-conformance build-topk-conformance --topk-conformance-out $Stage5VTopk --out-dir $Stage5VOut --allow-warnings
+    & $Python -m libreprimus.cli native-candidate-batch-conformance build-result-store-conformance --result-store-conformance-out $Stage5VResultStore --out-dir $Stage5VOut --allow-warnings
+    & $Python -m libreprimus.cli native-candidate-batch-conformance build-implementation-status --implementation-status-out $Stage5VStatus --out-dir $Stage5VOut --allow-warnings
+    & $Python -m libreprimus.cli native-candidate-batch-conformance build-next-stage-decision --next-stage-decision-out $Stage5VDecision --out-dir $Stage5VOut --allow-warnings
+    & $Python -m libreprimus.cli native-candidate-batch-conformance build-summary `
+        --adapter-records $Stage5VAdapter `
+        --conformance-fixtures $Stage5VFixtures `
+        --token-buffer-conformance $Stage5VToken `
+        --schedule-conformance $Stage5VSchedule `
+        --score-vector-conformance $Stage5VScore `
+        --topk-conformance $Stage5VTopk `
+        --result-store-conformance $Stage5VResultStore `
+        --implementation-status $Stage5VStatus `
+        --next-stage-decision $Stage5VDecision `
+        --summary-out $Stage5VSummary `
+        --out-dir $Stage5VOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli native-candidate-batch-conformance validate-stage5v `
+        --adapter-records $Stage5VAdapter `
+        --conformance-fixtures $Stage5VFixtures `
+        --token-buffer-conformance $Stage5VToken `
+        --schedule-conformance $Stage5VSchedule `
+        --score-vector-conformance $Stage5VScore `
+        --topk-conformance $Stage5VTopk `
+        --result-store-conformance $Stage5VResultStore `
+        --implementation-status $Stage5VStatus `
+        --next-stage-decision $Stage5VDecision `
+        --summary $Stage5VSummary `
+        --results-dir $Stage5VOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

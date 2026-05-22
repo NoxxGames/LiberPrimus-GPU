@@ -18,4 +18,4 @@ Stage 5T ranks future CUDA work without authorizing implementation.
 
 Every Stage 5T kernel-readiness record sets `implementation_allowed_now=false`. More CUDA kernel work requires an explicit later stage, stable CPU/native semantics, Stage 4I-compatible score-summary shape, and no-unsolved guardrails.
 
-Stage 5U provides the shared Candidate Batch ABI contract needed by those future classifications, but it still keeps `implementation_allowed_now=false` by design. Stage 5V must prove native reference conformance before family-specific CUDA contracts or benchmarks.
+Stage 5U provides the shared Candidate Batch ABI contract needed by those future classifications, but it still keeps `implementation_allowed_now=false` by design. Stage 5V has proved no-GPU native reference conformance; Stage 5W must prepare family-specific prime-minus-one stream native parity before CUDA contracts or benchmarks.

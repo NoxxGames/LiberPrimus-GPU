@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/cuda/native-conformance-result-store-record-v0.schema.json",
+  "title": "native-conformance-result-store-record-v0",
+  "type": "object",
+  "required": ["record_type", "stage_id", "result_store_conformance_id", "compatibility_surface", "compact_summary_only"],
+  "properties": {
+    "record_type": { "const": "native_conformance_result_store_record" },
+    "stage_id": { "const": "stage-5v" },
+    "candidate_batch_abi_id": { "const": "candidate_batch_abi_v0" },
+    "compact_summary_only": { "const": true },
+    "generated_body_committed": { "const": false },
+    "generated_body_publication_allowed": { "const": false },
+    "method_status_upgraded": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "no_gpu_ci_safe": { "const": true }
+  },
+  "additionalProperties": true
+}

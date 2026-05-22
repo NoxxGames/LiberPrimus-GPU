@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/cuda/schedule-conformance-record-v0.schema.json",
+  "title": "schedule-conformance-record-v0",
+  "type": "object",
+  "required": ["record_type", "stage_id", "schedule_id", "schedule_kind", "conformance_status"],
+  "properties": {
+    "record_type": { "const": "schedule_conformance_record" },
+    "stage_id": { "const": "stage-5v" },
+    "candidate_batch_abi_id": { "const": "candidate_batch_abi_v0" },
+    "conformance_status": { "enum": ["passed", "shape_only", "blocked"] },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "no_gpu_ci_safe": { "const": true }
+  },
+  "additionalProperties": true
+}

@@ -88,6 +88,12 @@ native parity adapter mapping checks, implementation-readiness guardrails, CLI c
 validation rejections for CUDA/source/performance/solve-claim drift, and ignored-output/codex-output
 checks for `experiments/results/cuda-kernel-contract/stage5e/` and `codex-output/`.
 
+Stage 5V extends coverage with native Candidate Batch ABI conformance schemas, raw-data-free
+conformance fixtures, token-buffer rules, key/stream schedule shape records, score-vector and top-k
+shape checks, compact result-store conformance, implementation-status blockers, next-stage decision
+guardrails, CLI build/validate checks, and ignored-output/codex-output checks for
+`experiments/results/cuda-candidate-batch-abi-conformance/stage5v/` and `codex-output/`.
+
 Stage 5F extends coverage with synthetic CUDA kernel implementation schemas, no-GPU-safe build
 records, optional local synthetic parity records, C++/CUDA synthetic parity tests, CLI
 build/validate/summary checks, validation rejections for real Liber Primus data, benchmarking,

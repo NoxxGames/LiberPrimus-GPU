@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/cuda/topk-conformance-record-v0.schema.json",
+  "title": "topk-conformance-record-v0",
+  "type": "object",
+  "required": ["record_type", "stage_id", "topk_id", "tie_policy", "sorted_candidate_ids"],
+  "properties": {
+    "record_type": { "const": "topk_conformance_record" },
+    "stage_id": { "const": "stage-5v" },
+    "candidate_batch_abi_id": { "const": "candidate_batch_abi_v0" },
+    "tie_policy": { "const": "score_desc_candidate_id_asc" },
+    "score_interpretation": { "const": "triage_only" },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "generated_body_committed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "no_gpu_ci_safe": { "const": true }
+  },
+  "additionalProperties": true
+}

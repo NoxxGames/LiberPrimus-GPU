@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5U - unified candidate batch ABI and backend contract consolidation.
+Current completed stage: Stage 5V - native candidate batch ABI reference adapter and conformance fixtures.
 
-Current work: Stage 5V - native candidate batch ABI reference adapter and conformance fixtures. Stage 5U closed Stage 5T ABI gaps at the contract level and did not authorize unsolved-page CUDA, benchmarking, generated-body publication, method-status upgrades, website expansion, native/CUDA execution, or new CUDA kernels.
+Current work: Stage 5W - prime-minus-one stream native parity contract preparation. Stage 5V proved no-GPU Candidate Batch ABI conformance through Python reference fixtures and did not authorize unsolved-page CUDA, benchmarking, generated-body publication, method-status upgrades, website expansion, native/CUDA CMake execution, C++ adapter implementation, or new CUDA kernels.
 
 Current project state:
 
@@ -68,7 +68,7 @@ Current project state:
 - Page boundaries: reviewable.
 - Broad unsolved-page campaigns: not started.
 - CUDA: deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
-- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel`, Stage 5M host-runner plumbing for exact solved-fixture parity, Stage 5O repeat verification metadata, Stage 5P result-store integration metadata, Stage 5Q expansion candidate metadata, Stage 5R controlled expanded solved-fixture parity metadata, Stage 5S compact integration/reporting metadata, Stage 5T solved-family readiness metadata, and Stage 5U Candidate Batch ABI contract metadata only unless code and tests say otherwise.
+- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel`, Stage 5M host-runner plumbing for exact solved-fixture parity, Stage 5O repeat verification metadata, Stage 5P result-store integration metadata, Stage 5Q expansion candidate metadata, Stage 5R controlled expanded solved-fixture parity metadata, Stage 5S compact integration/reporting metadata, Stage 5T solved-family readiness metadata, Stage 5U Candidate Batch ABI contract metadata, and Stage 5V native no-GPU conformance metadata only unless code and tests say otherwise.
 - Stage 5C CUDA build/device metadata is readiness infrastructure only; no-GPU CI, compatibility 8GB, and optional local 16GB profiles must remain explicit and smoke-build status is not parity or performance evidence.
 - Stage 5D native CPU backend records are readiness infrastructure only; C++ must remain a deterministic CPU execution plane, Python remains orchestration, and diagnostic timings are not speedup claims.
 - Do not let C++ launch Python worker scripts.
@@ -108,7 +108,14 @@ Current project state:
 - Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
 - Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
 - Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
-- Future Stage 5V work must prove native no-GPU conformance before family-specific CUDA contracts, top-k reducers, or benchmark planning.
+- Stage 5V implements/records native no-GPU Candidate Batch ABI conformance only.
+- Stage 5V may modify native/Python no-GPU reference code but must not modify CUDA source.
+- Stage 5V must not run CUDA, add CUDA kernels, benchmark, or widen solved/unsolved scope.
+- Stage 5V generated result bodies remain ignored; commit only compact conformance metadata.
+- Stage 5V keeps `gematria_shift_score_only` parity distinct from original transform-family semantics.
+- Stage 5V does not mark unresolved family-specific formulas as implemented.
+- Stage 5V completion summaries must include native adapter counts, fixture counts, output hashes, gap implementation status, guardrails, and next-stage rationale.
+- Future Stage 5W work must prepare prime-minus-one stream native parity contracts before family-specific CUDA contracts, top-k reducers, or benchmark planning.
 - Do not report CUDA parity records as speedup/performance evidence.
 - Do not stage `codex-output/**`.
 - Completion summaries must be detailed and include parity counts, gate decisions, guardrail status, and next-stage rationale.
@@ -827,6 +834,18 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Backend-surface contracts must keep Python orchestration, native reference, CUDA host/device, result-store, and generated-body responsibilities distinct.
 - Stage 5U closes Stage 5T ABI gaps by contract only; native implementation remains pending for Stage 5V.
 - Generated Stage 5U reports under `experiments/results/cuda-candidate-batch-abi/stage5u/` and `codex-output/**` handoffs remain ignored and must not be staged.
+
+## Stage 5V Native Candidate Batch ABI Conformance Rules
+
+- Stage 5V native Candidate Batch ABI conformance records are no-GPU reference metadata only.
+- The Python reference adapter may execute raw-data-free fixtures; C++ adapter implementation remains deferred unless a future stage explicitly scopes it.
+- Do not run CUDA, native/CUDA CMake, GPU benchmarks, broad solved-fixture campaigns, unsolved-page CUDA, raw data, generated-body publication, website expansion, or solve-claim workflows during Stage 5V-style work.
+- Do not modify `.cu` or `.cuh` CUDA source, add CUDA kernels, change device arithmetic, or report speedups.
+- Token buffers must preserve Gematria values `0..28`, token kinds, separator placeholders, transformable masks, fixture offsets, fixture lengths, and candidate-major ordering.
+- Score-vector and top-k conformance must remain Stage 4I-compatible and triage-only; result-store records must remain compact metadata with generated bodies ignored.
+- `gematria_shift_score_only` parity remains distinct from original transform-family semantics, and unresolved family-specific formulas must stay blocked or shape-only.
+- Generated Stage 5V reports under `experiments/results/cuda-candidate-batch-abi-conformance/stage5v/` and `codex-output/**` handoffs remain ignored and must not be staged.
+- Stage 5V selects Stage 5W prime-minus-one stream native parity contract preparation; CUDA kernels and benchmark planning remain blocked.
 
 ## Stage 3W State Consolidation Rules
 

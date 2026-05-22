@@ -1,0 +1,28 @@
+manifest_id: stage5v-native-candidate-batch-conformance
+stage_id: stage-5v
+manifest_kind: native_candidate_batch_abi_conformance
+candidate_batch_abi_id: candidate_batch_abi_v0
+cpu_only: true
+native_reference_adapter: python_reference
+cpp_reference_adapter_implemented: false
+python_reference_adapter_implemented: true
+cuda_used: false
+cuda_required: false
+cuda_source_changes_allowed: false
+new_cuda_kernel_allowed: false
+benchmark_execution_allowed: false
+unsolved_page_cuda_allowed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+no_solve_claim: true
+fixtures:
+  - stage5v-shift-single-fixture
+  - stage5v-shift-multi-candidate-fixture
+  - stage5v-variable-length-fixture-pack
+  - stage5v-key-schedule-shape-fixture
+  - stage5v-stream-schedule-shape-fixture
+  - stage5v-score-vector-fixture
+  - stage5v-topk-tie-policy-fixture

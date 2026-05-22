@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://libreprimus-gpu.local/schemas/cuda/score-vector-conformance-record-v0.schema.json",
+  "title": "score-vector-conformance-record-v0",
+  "type": "object",
+  "required": ["record_type", "stage_id", "score_vector_id", "score_component", "score_interpretation"],
+  "properties": {
+    "record_type": { "const": "score_vector_conformance_record" },
+    "stage_id": { "const": "stage-5v" },
+    "candidate_batch_abi_id": { "const": "candidate_batch_abi_v0" },
+    "score_interpretation": { "const": "triage_only" },
+    "confidence_label": {
+      "enum": [
+        "strong_reject",
+        "reject",
+        "weak_reject",
+        "inconclusive",
+        "weak_signal",
+        "candidate",
+        "review_required",
+        "control_only",
+        "not_scored",
+        "scoring_not_available",
+        "calibration_not_available"
+      ]
+    },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "generated_body_committed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true },
+    "no_gpu_ci_safe": { "const": true }
+  },
+  "additionalProperties": true
+}

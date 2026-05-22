@@ -2,7 +2,15 @@
 
 ## Current stage
 
-Stage 5U unified candidate batch ABI and backend contract consolidation is complete. Next recommended prompt: Stage 5V - native candidate batch ABI reference adapter and conformance fixtures. Website expansion is deferred to Stage 6.
+Stage 5V native candidate batch ABI reference adapter and conformance fixtures is complete. Next recommended prompt: Stage 5W - prime-minus-one stream native parity contract preparation. Website expansion is deferred to Stage 6.
+
+## Completed in Stage 5V
+
+Stage 5V added the `libreprimus native-candidate-batch-conformance` CLI, native Candidate Batch ABI adapter records, conformance fixture records, token-buffer conformance records, schedule conformance records, score-vector conformance records, top-k conformance records, native result-store conformance records, ABI implementation-status records, next-stage decision records, Stage 5V manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
+
+Local Stage 5V summary: native adapter records `2`, conformance fixture records `7`, executed conformance fixtures `3`, shape-only fixtures `4`, token-buffer conformance records `7`, schedule conformance records `2`, score-vector conformance records `7`, top-k conformance records `1`, result-store conformance records `3`, ABI implementation-status records `8`, next-stage decision records `9`, output hash records `3`, implementation status counts `pass: 4`, `shape_only: 2`, `blocked: 2`, C++ reference adapter implemented `false`, Python reference adapter implemented `true`, native CPU execution performed `false`, selected next prompt `Stage 5W - prime-minus-one stream native parity contract preparation`, Deep Research recommended next `false`, CUDA execution performed `false`, CUDA source modified `false`, new CUDA kernels added `0`, unsolved-page CUDA used `false`, real Liber Primus CUDA data used `false`, GPU benchmark performed `false`, speedup/performance assertions `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5V is no-GPU Candidate Batch ABI conformance infrastructure. It proves token-buffer, `shift_mod29`, score-vector, top-k, stream-schedule shape, and compact result-store semantics through a pure Python reference adapter and raw-data-free fixtures. It leaves the C++ reference adapter explicitly deferred, keeps `gematria_shift_score_only` parity distinct from original transform-family CUDA semantics, does not run CUDA, does not add or modify CUDA source, does not add kernels, does not run native/CUDA CMake, does not run benchmarks, does not process raw data, does not publish generated result bodies, does not upgrade method families to solved, and makes no solve claim.
 
 ## Completed in Stage 5U
 
@@ -102,7 +110,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5U defines Candidate Batch ABI v0 only; further CUDA work should first prove the ABI through a native reference adapter and conformance fixtures in Stage 5V, and original-transform-family CUDA contracts, GPU benchmarking, broad solved-fixture campaigns, and unsolved-page CUDA use still require future explicit stages.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5V proves no-GPU Candidate Batch ABI conformance through Python reference fixtures only; original-transform-family native contracts, C++ adapter implementation, CUDA contracts, GPU benchmarking, broad solved-fixture campaigns, and unsolved-page CUDA use still require future explicit stages.
 
 ## Completed in Stage 5J
 
@@ -810,4 +818,4 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 
 ## Next prompt recommendation
 
-Stage 5U - unified candidate batch ABI and backend contract consolidation. Use the Stage 5T solved-family readiness matrix, keep original transform-family kernels blocked until ABI contracts exist, and do not run CUDA, benchmarks, broad solved-fixture campaigns, unsolved pages, raw-data processing, website expansion, or solve claims.
+Stage 5W - prime-minus-one stream native parity contract preparation. Use the Stage 5V no-GPU Candidate Batch ABI conformance records, keep CUDA kernels and benchmarks blocked, keep original transform-family semantics explicit, and do not run unsolved pages, raw-data processing, website expansion, or solve claims.
