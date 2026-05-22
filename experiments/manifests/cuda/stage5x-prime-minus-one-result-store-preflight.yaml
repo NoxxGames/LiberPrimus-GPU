@@ -1,0 +1,28 @@
+record_type: prime_minus_one_native_result_store_preflight_manifest
+manifest_id: stage5x-prime-minus-one-result-store-preflight
+stage_id: stage-5x
+description: Preflight compact Stage 5X parity metadata for Stage 4P result-store and Stage 4I score-summary compatibility.
+cpu_only: true
+no_gpu_native_python_reference_only: true
+cuda_used: false
+cuda_required: false
+cuda_execution_allowed: false
+cuda_source_changes_allowed: false
+new_cuda_kernel_allowed: false
+benchmark_execution_allowed: false
+performance_claim_allowed: false
+speedup_claim_allowed: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+method_status_upgrade_allowed: false
+no_solve_claim: true
+solve_claim: false
+result_store_contract: stage4p
+score_summary_contract: stage4i
+confidence_interpretation: triage_only
+allowed_sources:
+  - data/cuda/stage5x-prime-minus-one-native-parity.yaml
+  - data/cuda/stage5x-prime-minus-one-native-run.yaml
+notes:
+  - Preflight records are compact metadata only and do not publish generated output bodies.

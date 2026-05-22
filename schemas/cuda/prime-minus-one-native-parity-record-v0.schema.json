@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-native-parity-record-v0.schema.json",
+  "title": "Prime Minus One Native Parity Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "source_stage_id",
+    "candidate_batch_abi_id",
+    "contract_id",
+    "parity_record_id",
+    "mapping_id",
+    "fixture_id",
+    "expected_output_token_hash",
+    "computed_output_token_hash",
+    "output_hash_algorithm",
+    "parity_status",
+    "native_execution_performed",
+    "python_reference_execution_performed",
+    "cuda_execution_performed",
+    "cuda_source_modified",
+    "new_cuda_kernels_added",
+    "solve_claim",
+    "no_solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_native_parity_record" },
+    "stage_id": { "const": "stage-5x" },
+    "source_stage_id": { "const": "stage-5w" },
+    "candidate_batch_abi_id": { "const": "candidate_batch_abi_v0" },
+    "contract_id": { "const": "prime_minus_one_stream_native_contract_v0" },
+    "parity_status": { "enum": ["passed", "failed_hash_mismatch", "blocked_not_executed"] },
+    "output_hash_algorithm": { "const": "sha256_canonical_json_v1" },
+    "native_cpu_execution_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "device_kernel_arithmetic_modified": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "performance_claim": { "const": false },
+    "speedup_claim": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "real_liber_primus_cuda_data_used": { "const": false },
+    "generated_body_publication_allowed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "codex_output_committed": { "const": false },
+    "method_status_upgrade_allowed": { "const": false },
+    "method_status_upgraded": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "parity_status": { "const": "passed" } } },
+      "then": {
+        "properties": {
+          "computed_output_token_hash": { "type": "string", "minLength": 64, "maxLength": 64 },
+          "expected_output_token_hash": { "type": "string", "minLength": 64, "maxLength": 64 }
+        }
+      }
+    }
+  ]
+}

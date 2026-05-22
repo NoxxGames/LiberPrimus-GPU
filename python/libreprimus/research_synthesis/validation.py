@@ -337,6 +337,18 @@ def validate_research_synthesis(
             ("stage 5x", "prime-minus-one stream", "no-gpu native parity"),
             "staged_plan_stage5x_next",
         )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5x", "prime-minus-one stream", "no-gpu native parity", "complete"),
+            "staged_plan_stage5x_prime_stream_native_parity_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5y", "prime-minus-one native parity reporting"),
+            "staged_plan_stage5y_next",
+        )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
         _require_text(errors, staged_text, ("page boundaries", "reviewable"), "staged_plan_boundaries_reviewable")
@@ -608,7 +620,8 @@ def validate_research_synthesis(
             or "stage 5u" not in evidence_text
             or "stage 5v" not in evidence_text
             or "stage 5w" not in evidence_text
-            or "stage 5x" not in next_text
+            or "stage 5x" not in evidence_text
+            or "stage 5y" not in next_text
         ):
             errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_stage5j_stage5k_transition")
 
@@ -617,10 +630,16 @@ def validate_research_synthesis(
         errors.append("native_candidate_batch_abi_conformance_missing")
     else:
         stop_text = " ".join(str(item).lower() for item in native_abi_conformance.get("stop_conditions", []))
+        evidence_text = str(native_abi_conformance.get("evidence_summary", "")).lower()
         next_text = str(native_abi_conformance.get("next_action", "")).lower()
         if "cuda" not in stop_text or "benchmark" not in stop_text or ("raw-data" not in stop_text and "raw data" not in stop_text):
             errors.append("native_candidate_batch_abi_conformance_missing_guardrail")
-        if "stage 5w" not in next_text or "prime-minus-one" not in next_text:
+        if (
+            "stage 5w" not in evidence_text
+            or "stage 5x" not in evidence_text
+            or "stage 5y" not in next_text
+            or "prime-minus-one" not in next_text
+        ):
             errors.append("native_candidate_batch_abi_conformance_missing_stage5w_next_action")
 
     prime_native_contract = _find_method(method_records, "prime_minus_one_native_contract")
@@ -639,8 +658,28 @@ def validate_research_synthesis(
             errors.append("prime_minus_one_native_contract_missing_guardrail")
         if "p56" not in evidence_text or "source-backed" not in evidence_text or "stage 5w" not in evidence_text:
             errors.append("prime_minus_one_native_contract_missing_stage5w_evidence")
-        if "stage 5x" not in next_text or "no-gpu native parity" not in next_text:
+        if "stage 5x" not in evidence_text or "stage 5y" not in next_text:
             errors.append("prime_minus_one_native_contract_missing_stage5x_next_action")
+
+    prime_native_parity = _find_method(method_records, "prime_minus_one_native_parity")
+    if prime_native_parity is None:
+        errors.append("prime_minus_one_native_parity_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in prime_native_parity.get("stop_conditions", []))
+        evidence_text = str(prime_native_parity.get("evidence_summary", "")).lower()
+        next_text = str(prime_native_parity.get("next_action", "")).lower()
+        if (
+            "cuda" not in stop_text
+            or "benchmark" not in stop_text
+            or "full p56" not in stop_text
+            or "generated" not in stop_text
+            or "solve" not in stop_text
+        ):
+            errors.append("prime_minus_one_native_parity_missing_guardrail")
+        if "native parity" not in evidence_text or "stage 5x" not in evidence_text or "p56" not in evidence_text:
+            errors.append("prime_minus_one_native_parity_missing_stage5x_evidence")
+        if "stage 5y" not in next_text or "reporting" not in next_text:
+            errors.append("prime_minus_one_native_parity_missing_stage5y_next_action")
 
     cookie = _find_method(method_records, "cookie_hash_sha256_packs")
     if cookie is None:

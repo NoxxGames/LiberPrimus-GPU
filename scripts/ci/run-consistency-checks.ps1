@@ -1318,6 +1318,45 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5WSummary `
         --results-dir $Stage5WOut
 
+    Write-Host "Running Stage 5X prime-minus-one native parity temp output"
+    $Stage5XOut = Join-Path $TempDir "stage5x-prime-minus-one-native-parity"
+    $Stage5XRun = Join-Path $TempDir "stage5x-prime-minus-one-native-run.yaml"
+    $Stage5XParity = Join-Path $TempDir "stage5x-prime-minus-one-native-parity.yaml"
+    $Stage5XResultStore = Join-Path $TempDir "stage5x-prime-minus-one-native-result-store-preflight.yaml"
+    $Stage5XScore = Join-Path $TempDir "stage5x-prime-minus-one-native-score-summary-preflight.yaml"
+    $Stage5XBlocker = Join-Path $TempDir "stage5x-prime-minus-one-full-p56-blocker.yaml"
+    $Stage5XGuardrail = Join-Path $TempDir "stage5x-prime-minus-one-native-guardrail.yaml"
+    $Stage5XDecision = Join-Path $TempDir "stage5x-prime-minus-one-native-next-stage-decision.yaml"
+    $Stage5XSummary = Join-Path $TempDir "stage5x-prime-minus-one-native-parity-summary.yaml"
+    & $Python -m libreprimus.cli prime-minus-one-native-parity build-run-records --native-run-out $Stage5XRun --out-dir $Stage5XOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-parity build-parity-records --native-run $Stage5XRun --native-parity-out $Stage5XParity --out-dir $Stage5XOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-parity build-result-store-preflight --native-parity $Stage5XParity --result-store-preflight-out $Stage5XResultStore --out-dir $Stage5XOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-parity build-score-summary-preflight --native-parity $Stage5XParity --score-summary-preflight-out $Stage5XScore --out-dir $Stage5XOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-parity build-full-p56-blocker --full-p56-blocker-out $Stage5XBlocker --out-dir $Stage5XOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-parity build-guardrails --guardrail-out $Stage5XGuardrail --out-dir $Stage5XOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-parity build-next-stage-decision --native-parity $Stage5XParity --next-stage-decision-out $Stage5XDecision --out-dir $Stage5XOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-parity build-summary `
+        --native-run $Stage5XRun `
+        --native-parity $Stage5XParity `
+        --result-store-preflight $Stage5XResultStore `
+        --score-summary-preflight $Stage5XScore `
+        --full-p56-blocker $Stage5XBlocker `
+        --guardrail $Stage5XGuardrail `
+        --next-stage-decision $Stage5XDecision `
+        --summary-out $Stage5XSummary `
+        --out-dir $Stage5XOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-parity validate-stage5x `
+        --native-run $Stage5XRun `
+        --native-parity $Stage5XParity `
+        --result-store-preflight $Stage5XResultStore `
+        --score-summary-preflight $Stage5XScore `
+        --full-p56-blocker $Stage5XBlocker `
+        --guardrail $Stage5XGuardrail `
+        --next-stage-decision $Stage5XDecision `
+        --summary $Stage5XSummary `
+        --results-dir $Stage5XOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

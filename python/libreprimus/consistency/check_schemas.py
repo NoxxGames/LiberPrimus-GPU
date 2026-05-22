@@ -203,6 +203,14 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/prime-minus-one-guardrail-record-v0.schema.json",
     "cuda/prime-minus-one-next-stage-decision-record-v0.schema.json",
     "cuda/stage5w-prime-minus-one-native-contract-summary-v0.schema.json",
+    "cuda/prime-minus-one-native-run-record-v0.schema.json",
+    "cuda/prime-minus-one-native-parity-record-v0.schema.json",
+    "cuda/prime-minus-one-native-result-store-preflight-record-v0.schema.json",
+    "cuda/prime-minus-one-native-score-summary-preflight-record-v0.schema.json",
+    "cuda/prime-minus-one-full-p56-blocker-record-v0.schema.json",
+    "cuda/prime-minus-one-native-guardrail-record-v0.schema.json",
+    "cuda/prime-minus-one-native-next-stage-decision-record-v0.schema.json",
+    "cuda/stage5x-prime-minus-one-native-parity-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -383,6 +391,14 @@ EXPECTED_DOC_TERMS = [
     "prime-minus-one-guardrail-record-v0",
     "prime-minus-one-next-stage-decision-record-v0",
     "stage5w-prime-minus-one-native-contract-summary-v0",
+    "prime-minus-one-native-run-record-v0",
+    "prime-minus-one-native-parity-record-v0",
+    "prime-minus-one-native-result-store-preflight-record-v0",
+    "prime-minus-one-native-score-summary-preflight-record-v0",
+    "prime-minus-one-full-p56-blocker-record-v0",
+    "prime-minus-one-native-guardrail-record-v0",
+    "prime-minus-one-native-next-stage-decision-record-v0",
+    "stage5x-prime-minus-one-native-parity-summary-v0",
 ]
 
 

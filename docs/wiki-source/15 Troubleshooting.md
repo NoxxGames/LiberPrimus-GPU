@@ -55,6 +55,7 @@ git check-ignore -v experiments/results/gematria-expansion-candidate-mapping/sta
 git check-ignore -v experiments/results/gematria-expanded-cuda-result-store/stage5s/summary.json
 git check-ignore -v experiments/results/cuda-candidate-batch-abi-conformance/stage5v/summary.json
 git check-ignore -v experiments/results/prime-minus-one-native-contract/stage5w/summary.json
+git check-ignore -v experiments/results/prime-minus-one-native-parity/stage5x/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
@@ -65,6 +66,7 @@ git check-ignore -v codex-output/stage5p-codex-completion.md
 git check-ignore -v codex-output/stage5s-codex-completion.md
 git check-ignore -v codex-output/stage5v-codex-completion.md
 git check-ignore -v codex-output/stage5w-codex-completion.md
+git check-ignore -v codex-output/stage5x-codex-completion.md
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -188,6 +190,12 @@ next-stage decision, summary, or warning reports under
 `experiments/results/prime-minus-one-native-contract/stage5w/`, do not stage them. Commit only
 schemas, manifests, code, compact YAML records, docs, tests, and research logs. Do not invent p56
 token buffers while fixing validation failures.
+
+If a Stage 5X prime-minus-one native parity run leaves native run, native parity, result-store
+preflight, score-summary preflight, full-p56 blocker, guardrail, next-stage decision, summary, or
+warning reports under `experiments/results/prime-minus-one-native-parity/stage5x/`, do not stage
+them. Commit only schemas, manifests, code, compact YAML records, docs, tests, and research logs.
+Do not execute the blocked full-p56 mapping while fixing validation failures.
 
 If a Stage 5C CUDA build/device run leaves `toolchain_detection_report.json`,
 `device_detection_report.json`, `smoke_build_report.json`, `summary.json`, `warnings.jsonl`, or
@@ -657,10 +665,29 @@ Expected Stage 5V counts are 2 native adapter records, 7 conformance fixture rec
 Python reference fixtures, 4 shape-only fixtures, 7 token-buffer conformance records, 2 schedule
 conformance records, 7 score-vector conformance records, 1 top-k conformance record, 3 result-store
 conformance records, 8 implementation-status records, and 9 next-stage decision records. The
-selected next prompt should remain Stage 5W prime-minus-one stream native parity contract
-preparation unless an explicit future stage changes the committed decision records.
+historical selected next prompt was Stage 5W prime-minus-one stream native parity contract
+preparation; Stage 5W and Stage 5X have since superseded that decision with Stage 5Y reporting and
+CUDA contract readiness gate work.
 
 Generated Stage 5V reports belong under ignored
 `experiments/results/cuda-candidate-batch-abi-conformance/stage5v/`, and the local handoff belongs
 under ignored `codex-output/stage5v-codex-completion.md`. Do not stage generated reports, generated
+result bodies, SQLite files, raw data, or local CUDA diagnostics.
+
+# Stage 5X Prime-Minus-One Native Parity Troubleshooting
+
+If Stage 5X validation fails, rebuild the no-GPU prime-minus-one native parity sequence and rerun
+`libreprimus prime-minus-one-native-parity validate-stage5x`. Do not run CUDA, native/CUDA CMake,
+benchmarks, solved-page expansion, unsolved pages, or the blocked full p56 mapping to repair the
+records.
+
+Expected Stage 5X counts are 3 native run records, 3 native parity records, 3 result-store preflight
+records, 3 score-summary preflight records, 1 full-p56 blocker record, 7 guardrail records, and 9
+next-stage decision records. The selected next prompt should remain Stage 5Y prime-minus-one native
+parity reporting and CUDA contract readiness gate unless an explicit future stage changes the
+committed decision records.
+
+Generated Stage 5X reports belong under ignored
+`experiments/results/prime-minus-one-native-parity/stage5x/`, and the local handoff belongs under
+ignored `codex-output/stage5x-codex-completion.md`. Do not stage generated reports, generated
 result bodies, SQLite files, raw data, or local CUDA diagnostics.

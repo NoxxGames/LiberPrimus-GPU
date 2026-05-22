@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5X Prime-Minus-One Native Parity
+
+Stage 5X is not a broad cryptanalytic experiment. It executes only the Stage 5W ready synthetic control and bounded p56 no-GPU Python-reference mappings, compares their output-token hashes against Stage 5W expectations, and writes compact parity/preflight metadata under `data/cuda/`.
+
+Generated Stage 5X reports remain ignored under `experiments/results/prime-minus-one-native-parity/stage5x/`. Stage 5X must keep CUDA execution, native/CUDA CMake, CUDA source modification, new kernels, full p56 execution, GPU benchmarks, speedup claims, unsolved-page CUDA, broad solved-fixture CUDA, generated-result-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades to solved, and solve claims disabled.
+
 ## Stage 5W Prime-Minus-One Native Contract
 
 Stage 5W does not execute a cryptanalytic experiment. It consumes Stage 5V Candidate Batch ABI conformance records and committed p56 solved-fixture-safe metadata, then writes source inventory, stream contract, prime schedule, Candidate Batch ABI mapping, native parity preparation, result-store preflight, guardrail, next-stage decision, and summary records under `data/cuda/`.

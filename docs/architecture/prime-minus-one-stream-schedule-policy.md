@@ -11,4 +11,4 @@ Prime-minus-one stream schedules are deterministic records, not generated search
 - Preserve cleartext-F skip policy exactly where the committed fixture declares it.
 - Do not invent token values, page spans, plaintext, ciphertext, or stream formulas.
 
-Stage 5W may write compact schedule metadata and ignored JSON reports. Generated bodies stay ignored.
+Stage 5W writes compact schedule metadata and ignored JSON reports. Stage 5X consumes only the ready bounded schedules for no-GPU parity metadata. Generated bodies stay ignored.

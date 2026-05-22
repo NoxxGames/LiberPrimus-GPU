@@ -287,6 +287,17 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/results/prime-minus-one-native-contract/stage5w/warnings.jsonl",
         "experiments/results/prime-minus-one-native-contract/stage5w/results.sqlite3",
         "codex-output/stage5w-codex-completion.md",
+        "experiments/results/prime-minus-one-native-parity/stage5x/native_run_report.json",
+        "experiments/results/prime-minus-one-native-parity/stage5x/native_parity_report.json",
+        "experiments/results/prime-minus-one-native-parity/stage5x/result_store_preflight_report.json",
+        "experiments/results/prime-minus-one-native-parity/stage5x/score_summary_preflight_report.json",
+        "experiments/results/prime-minus-one-native-parity/stage5x/full_p56_blocker_report.json",
+        "experiments/results/prime-minus-one-native-parity/stage5x/guardrail_report.json",
+        "experiments/results/prime-minus-one-native-parity/stage5x/next_stage_decision.json",
+        "experiments/results/prime-minus-one-native-parity/stage5x/summary.json",
+        "experiments/results/prime-minus-one-native-parity/stage5x/warnings.jsonl",
+        "experiments/results/prime-minus-one-native-parity/stage5x/results.sqlite3",
+        "codex-output/stage5x-codex-completion.md",
         "local-test.sqlite3",
     ]
     trackable_paths = [

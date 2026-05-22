@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-native-score-summary-preflight-record-v0.schema.json",
+  "title": "Prime Minus One Native Score Summary Preflight Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "score_summary_preflight_id",
+    "mapping_id",
+    "fixture_id",
+    "score_summary_contract",
+    "stage4i_compatible",
+    "score_interpretation",
+    "confidence_label",
+    "score_status",
+    "preflight_status",
+    "generated_body_publication_allowed",
+    "method_status_upgrade_allowed",
+    "solve_claim",
+    "no_solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_native_score_summary_preflight_record" },
+    "stage_id": { "const": "stage-5x" },
+    "score_summary_contract": { "const": "stage4i" },
+    "stage4i_compatible": { "const": true },
+    "score_interpretation": { "const": "triage_only" },
+    "confidence_label": {
+      "enum": [
+        "known_control",
+        "low",
+        "medium",
+        "high",
+        "negative_control",
+        "false_positive_control",
+        "scoring_not_available",
+        "calibration_not_available",
+        "scorer_error"
+      ]
+    },
+    "score_status": {
+      "enum": ["scored", "scoring_not_available", "calibration_not_available", "scorer_error"]
+    },
+    "generated_body_publication_allowed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "method_status_upgrade_allowed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "gpu_benchmark_performed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

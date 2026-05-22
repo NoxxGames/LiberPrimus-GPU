@@ -1,0 +1,63 @@
+record_type: stage5x_prime_minus_one_native_parity_summary
+schema: schemas/cuda/stage5x-prime-minus-one-native-parity-summary-v0.schema.json
+stage_id: stage-5x
+status: complete
+source_stage_id: stage-5w
+candidate_batch_abi_id: candidate_batch_abi_v0
+contract_id: prime_minus_one_stream_native_contract_v0
+native_run_records: 3
+native_parity_records: 3
+result_store_preflight_records: 3
+score_summary_preflight_records: 3
+full_p56_blocker_records: 1
+guardrail_records: 7
+next_stage_decision_records: 9
+ready_mapping_count: 2
+blocked_mapping_count: 1
+native_execution_attempted_count: 2
+native_pass_count: 2
+native_fail_count: 0
+native_skip_count: 1
+synthetic_control_status: passed
+p56_bounded_mapping_status: passed
+full_p56_status: blocked_full_p56_token_buffer_missing
+stage5w_expected_hash_match_count: 2
+output_hash_algorithm: sha256_canonical_json_v1
+stage5y_ready: true
+recommended_next_prompt_type: Codex
+recommended_next_stage_title: Stage 5Y - prime-minus-one native parity reporting and
+  CUDA contract readiness gate
+recommended_next_stage_reason: Both Stage 5W ready no-GPU mappings passed deterministic
+  native parity, while full p56 fixture execution remains blocked pending a full committed
+  token buffer. The next bounded stage can integrate compact reporting and decide
+  whether CUDA contract preparation is ready.
+deep_research_recommended_next: false
+native_execution_performed: true
+python_reference_execution_performed: true
+native_cpu_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+device_kernel_arithmetic_modified: false
+gpu_benchmark_performed: false
+benchmark_execution_allowed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+unsolved_page_cuda_allowed: false
+real_liber_primus_cuda_data_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+codex_output_committed: false
+method_status_upgrade_allowed: false
+method_status_upgraded: false
+solve_claim: false
+ci_gpu_required: false
+local_16gb_profile_required: false
+cxx_launches_python_workers: false
+no_solve_claim: true
+no_gpu_ci_safe: true

@@ -1,0 +1,35 @@
+record_type: prime_minus_one_native_next_stage_decision_manifest
+manifest_id: stage5x-prime-minus-one-next-stage-decision
+stage_id: stage-5x
+description: Select the bounded follow-up after Stage 5X no-GPU native parity.
+cpu_only: true
+no_gpu_native_python_reference_only: true
+cuda_used: false
+cuda_required: false
+cuda_execution_allowed: false
+cuda_source_changes_allowed: false
+new_cuda_kernel_allowed: false
+benchmark_execution_allowed: false
+benchmark_planning_allowed: false
+performance_claim_allowed: false
+speedup_claim_allowed: false
+unsolved_page_cuda_allowed: false
+real_liber_primus_cuda_data_allowed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+method_status_upgrade_allowed: false
+no_solve_claim: true
+solve_claim: false
+decision_inputs:
+  - data/cuda/stage5x-prime-minus-one-native-parity.yaml
+  - data/cuda/stage5x-prime-minus-one-full-p56-blocker.yaml
+selected_if_ready_mappings_pass: Stage 5Y - prime-minus-one native parity reporting and CUDA contract readiness gate
+selected_if_mismatch: Stage 5X-fix - prime-minus-one native parity mismatch investigation
+blocked_options:
+  - full p56 execution before committed token buffer
+  - CUDA execution or CUDA source changes
+  - benchmark planning before CUDA contract readiness
+  - website expansion without explicit future scope

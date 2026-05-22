@@ -627,5 +627,13 @@ experiments/results/prime-minus-one-native-contract/**
 !experiments/results/prime-minus-one-native-contract/stage5w/
 !experiments/results/prime-minus-one-native-contract/stage5w/.gitkeep
 
+# Generated prime-minus-one native parity outputs
+experiments/results/prime-minus-one-native-parity/**
+!experiments/results/prime-minus-one-native-parity/
+!experiments/results/prime-minus-one-native-parity/README.md
+!experiments/results/prime-minus-one-native-parity/.gitkeep
+!experiments/results/prime-minus-one-native-parity/stage5x/
+!experiments/results/prime-minus-one-native-parity/stage5x/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

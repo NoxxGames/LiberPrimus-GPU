@@ -253,6 +253,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5W is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5x",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5x\b", re.IGNORECASE),
+        "Stage 5X is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -1097,6 +1102,16 @@ def check_state_drift_consistency(
         and "stage 5x" in combined
         and "no cuda execution" in combined,
         "Stage 5W prime-minus-one native contract and Stage 5X boundary are documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "prime_minus_one_native_parity_policy_present",
+        "prime-minus-one stream no-gpu native parity" in combined
+        and "stage 5y" in combined
+        and "full p56" in combined
+        and "no cuda execution" in combined,
+        "Stage 5X prime-minus-one no-GPU native parity and Stage 5Y boundary are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

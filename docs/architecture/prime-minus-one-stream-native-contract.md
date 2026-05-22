@@ -13,4 +13,4 @@ The contract is source-backed and raw-data-free. It records the stream formula `
 - `raw_data_processed=false`
 - `solve_claim=false`
 
-The bounded p56 Stage 4O/5L mapping is ready for future no-GPU native parity execution. Full p56 parity remains blocked until a full committed p56 cipher token buffer is explicitly scoped.
+The bounded p56 Stage 4O/5L mapping was consumed by Stage 5X no-GPU native parity execution. Full p56 parity remains blocked until a full committed p56 cipher token buffer is explicitly scoped.

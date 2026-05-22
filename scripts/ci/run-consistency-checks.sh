@@ -1228,6 +1228,61 @@ echo "Running Stage 5W prime-minus-one native contract temp output"
     --summary "$tmp_dir/stage5w-prime-minus-one-native-contract-summary.yaml" \
     --results-dir "$tmp_dir/stage5w-prime-minus-one-native-contract"
 
+echo "Running Stage 5X prime-minus-one native parity temp output"
+"$python_bin" -m libreprimus.cli prime-minus-one-native-parity build-run-records \
+    --native-run-out "$tmp_dir/stage5x-prime-minus-one-native-run.yaml" \
+    --out-dir "$tmp_dir/stage5x-prime-minus-one-native-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-parity build-parity-records \
+    --native-run "$tmp_dir/stage5x-prime-minus-one-native-run.yaml" \
+    --native-parity-out "$tmp_dir/stage5x-prime-minus-one-native-parity.yaml" \
+    --out-dir "$tmp_dir/stage5x-prime-minus-one-native-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-parity build-result-store-preflight \
+    --native-parity "$tmp_dir/stage5x-prime-minus-one-native-parity.yaml" \
+    --result-store-preflight-out "$tmp_dir/stage5x-prime-minus-one-native-result-store-preflight.yaml" \
+    --out-dir "$tmp_dir/stage5x-prime-minus-one-native-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-parity build-score-summary-preflight \
+    --native-parity "$tmp_dir/stage5x-prime-minus-one-native-parity.yaml" \
+    --score-summary-preflight-out "$tmp_dir/stage5x-prime-minus-one-native-score-summary-preflight.yaml" \
+    --out-dir "$tmp_dir/stage5x-prime-minus-one-native-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-parity build-full-p56-blocker \
+    --full-p56-blocker-out "$tmp_dir/stage5x-prime-minus-one-full-p56-blocker.yaml" \
+    --out-dir "$tmp_dir/stage5x-prime-minus-one-native-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-parity build-guardrails \
+    --guardrail-out "$tmp_dir/stage5x-prime-minus-one-native-guardrail.yaml" \
+    --out-dir "$tmp_dir/stage5x-prime-minus-one-native-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-parity build-next-stage-decision \
+    --native-parity "$tmp_dir/stage5x-prime-minus-one-native-parity.yaml" \
+    --next-stage-decision-out "$tmp_dir/stage5x-prime-minus-one-native-next-stage-decision.yaml" \
+    --out-dir "$tmp_dir/stage5x-prime-minus-one-native-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-parity build-summary \
+    --native-run "$tmp_dir/stage5x-prime-minus-one-native-run.yaml" \
+    --native-parity "$tmp_dir/stage5x-prime-minus-one-native-parity.yaml" \
+    --result-store-preflight "$tmp_dir/stage5x-prime-minus-one-native-result-store-preflight.yaml" \
+    --score-summary-preflight "$tmp_dir/stage5x-prime-minus-one-native-score-summary-preflight.yaml" \
+    --full-p56-blocker "$tmp_dir/stage5x-prime-minus-one-full-p56-blocker.yaml" \
+    --guardrail "$tmp_dir/stage5x-prime-minus-one-native-guardrail.yaml" \
+    --next-stage-decision "$tmp_dir/stage5x-prime-minus-one-native-next-stage-decision.yaml" \
+    --summary-out "$tmp_dir/stage5x-prime-minus-one-native-parity-summary.yaml" \
+    --out-dir "$tmp_dir/stage5x-prime-minus-one-native-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-parity validate-stage5x \
+    --native-run "$tmp_dir/stage5x-prime-minus-one-native-run.yaml" \
+    --native-parity "$tmp_dir/stage5x-prime-minus-one-native-parity.yaml" \
+    --result-store-preflight "$tmp_dir/stage5x-prime-minus-one-native-result-store-preflight.yaml" \
+    --score-summary-preflight "$tmp_dir/stage5x-prime-minus-one-native-score-summary-preflight.yaml" \
+    --full-p56-blocker "$tmp_dir/stage5x-prime-minus-one-full-p56-blocker.yaml" \
+    --guardrail "$tmp_dir/stage5x-prime-minus-one-native-guardrail.yaml" \
+    --next-stage-decision "$tmp_dir/stage5x-prime-minus-one-native-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5x-prime-minus-one-native-parity-summary.yaml" \
+    --results-dir "$tmp_dir/stage5x-prime-minus-one-native-parity"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

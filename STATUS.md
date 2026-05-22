@@ -2,7 +2,15 @@
 
 ## Current stage
 
-Stage 5W prime-minus-one stream native parity contract preparation is complete. Next recommended prompt: Stage 5X - prime-minus-one stream no-GPU native parity execution and result-store preflight. Website expansion is deferred to Stage 6.
+Stage 5X prime-minus-one stream no-GPU native parity execution and result-store preflight is complete. Next recommended prompt: Stage 5Y - prime-minus-one native parity reporting and CUDA contract readiness gate. Website expansion is deferred to Stage 6.
+
+## Completed in Stage 5X
+
+Stage 5X added the `libreprimus prime-minus-one-native-parity` CLI, no-GPU Python-reference native run records, native parity records, result-store preflight records, score-summary preflight records, full-p56 blocker records, guardrail records, next-stage decision records, Stage 5X manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
+
+Local Stage 5X summary: native run records `3`, native parity records `3`, result-store preflight records `3`, score-summary preflight records `3`, full-p56 blocker records `1`, guardrail records `7`, next-stage decision records `9`, native execution attempted/pass/fail/skip `2/2/0/1`, ready mappings `2`, blocked mappings `1`, selected next prompt `Stage 5Y - prime-minus-one native parity reporting and CUDA contract readiness gate`, Deep Research recommended next `false`, CUDA execution performed `false`, CUDA source modified `false`, new CUDA kernels added `0`, unsolved-page CUDA used `false`, real Liber Primus CUDA data used `false`, native/CUDA CMake run `false`, GPU benchmark performed `false`, speedup/performance assertions `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5X executes only the Stage 5W ready synthetic control and bounded p56 no-GPU Python-reference mappings. Both computed output-token hashes match Stage 5W expected hashes. The full p56 mapping remains blocked until a future explicit stage commits a source-backed full p56 cipher token buffer. Stage 5X is parity/reporting infrastructure only, not a CUDA stage, not native C++ execution, not performance evidence, not website expansion, and not a solve claim.
 
 ## Completed in Stage 5W
 

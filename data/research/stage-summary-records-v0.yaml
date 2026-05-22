@@ -871,3 +871,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5W wrote 7 source inventory records, 2 stream contract records, 3 prime schedule records, 3 Candidate Batch ABI mapping records, 3 native parity preparation records, 3 result-store preflight records, 6 guardrail records, and 8 next-stage decision records. It found source-backed p56 formula direction, skip policy, and a bounded Stage 4O/5L token mapping, kept full p56 fixture parity blocked pending a full committed cipher token buffer, selected Stage 5X prime-minus-one stream no-GPU native parity execution and result-store preflight, and performed no CUDA execution, CUDA source modification, kernel addition, native/CUDA CMake run, GPU benchmark, speedup claim, unsolved-page CUDA use, real Liber Primus CUDA-data use, raw-data processing, generated-body publication, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5x
+    title: Prime-minus-one stream no-GPU native parity execution and result-store preflight
+    status: complete
+    category: infrastructure
+    summary: Executed only the two Stage 5W ready no-GPU prime-minus-one native parity mappings, compared output-token hashes against Stage 5W expectations, and preserved the full p56 fixture blocker.
+    key_outputs:
+      - "`libreprimus prime-minus-one-native-parity` commands for native run records, parity records, result-store preflight, score-summary preflight, full-p56 blocker, guardrails, next-stage decision, summary generation, validation, and summary display."
+      - Stage 5X native-run, native-parity, result-store-preflight, score-summary-preflight, full-p56-blocker, guardrail, next-stage-decision, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/prime-minus-one-native-parity/stage5x/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5X wrote 3 native run records, 3 native parity records, 3 result-store preflight records, 3 score-summary preflight records, 1 full-p56 blocker record, 7 guardrail records, and 9 next-stage decision records. It attempted exactly 2 no-GPU Python-reference native mappings and both matched Stage 5W expected hashes; 1 full p56 mapping was skipped because no full committed p56 cipher token buffer exists. It selected Stage 5Y prime-minus-one native parity reporting and CUDA contract readiness gate, and performed no CUDA execution, CUDA source modification, kernel addition, native/CUDA CMake run, GPU benchmark, speedup claim, unsolved-page CUDA use, real Liber Primus CUDA-data use, raw-data processing, generated-body publication, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

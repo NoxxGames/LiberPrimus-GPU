@@ -1,0 +1,42 @@
+record_type: prime_minus_one_native_parity_manifest
+manifest_id: stage5x-prime-minus-one-native-parity
+stage_id: stage-5x
+description: Execute only the Stage 5W ready no-GPU prime-minus-one native parity mappings.
+cpu_only: true
+no_gpu_native_python_reference_only: true
+native_cpu_execution_performed: false
+cuda_used: false
+cuda_required: false
+cuda_execution_allowed: false
+cuda_source_changes_allowed: false
+new_cuda_kernel_allowed: false
+benchmark_execution_allowed: false
+performance_claim_allowed: false
+speedup_claim_allowed: false
+unsolved_page_cuda_allowed: false
+real_liber_primus_cuda_data_allowed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+codex_output_committed: false
+method_status_upgrade_allowed: false
+no_solve_claim: true
+solve_claim: false
+candidate_batch_abi_id: candidate_batch_abi_v0
+contract_id: prime_minus_one_stream_native_contract_v0
+allowed_mapping_ids:
+  - stage5w-mapping-synthetic-prime-control-v0
+  - stage5w-mapping-p56-stage4o-bounded-v0
+blocked_mapping_ids:
+  - stage5w-mapping-p56-full-fixture-blocked-v0
+full_p56_execution_allowed: false
+expected_output_source_stage: stage-5w
+output_policy:
+  committed_records_only: true
+  generated_reports_ignored: true
+  generated_bodies_uncommitted: true
+notes:
+  - Stage 5X compares deterministic no-GPU Python-reference output hashes against Stage 5W expectations.
+  - The full p56 fixture remains blocked until a full committed token buffer is introduced by a future scoped stage.
