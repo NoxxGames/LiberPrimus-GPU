@@ -1,0 +1,22 @@
+record_type: prime_minus_one_native_contract_manifest
+manifest_id: stage5w-prime-minus-one-native-contract
+stage_id: stage-5w
+description: Contract-preparation manifest for prime-minus-one stream Candidate Batch ABI v0 mapping.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+new_experiment_executed: false
+benchmark_execution_allowed: false
+contract_id: prime_minus_one_stream_native_contract_v0
+candidate_batch_abi_id: candidate_batch_abi_v0
+fixture_scope:
+  synthetic_controls: true
+  bounded_stage4o_p56_mapping: true
+  full_p56_page_execution: false
+notes:
+  - Stage 5W prepares records only and performs no native or CUDA execution.

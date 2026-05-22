@@ -16,4 +16,4 @@ The ABI is not a kernel implementation. It records shared token-buffer, transfor
 
 Stage 5U does not run CUDA, modify CUDA source, add kernels, benchmark, process raw data, publish generated bodies, upgrade method families to solved, activate the canonical corpus, finalize page boundaries, or make a solve claim.
 
-Stage 5V has since proved no-GPU Candidate Batch ABI conformance through Python reference fixtures and selected `Stage 5W - prime-minus-one stream native parity contract preparation`.
+Stage 5V has since proved no-GPU Candidate Batch ABI conformance through Python reference fixtures. Stage 5W then prepared the prime-minus-one stream native parity contract and selected `Stage 5X - prime-minus-one stream no-GPU native parity execution and result-store preflight`.

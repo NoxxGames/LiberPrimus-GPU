@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "candidate_batch_abi_id": { "const": "candidate_batch_abi_v0" },
+    "confidence_interpretation": { "const": "triage_only" },
+    "generated_body_publication_allowed": { "const": false },
+    "method_status_upgrade_allowed": { "const": false },
+    "no_solve_claim": { "const": true },
+    "preflight_status": { "type": "string" },
+    "record_type": { "const": "prime_minus_one_result_store_preflight_record" },
+    "result_store_contract": { "const": "stage4p" },
+    "score_summary_contract": { "const": "stage4i" },
+    "score_summary_label_policy": { "const": "finite_triage_only" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5w" }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "result_store_preflight_id",
+    "result_store_contract",
+    "score_summary_contract",
+    "candidate_batch_abi_id",
+    "confidence_interpretation",
+    "method_status_upgrade_allowed",
+    "generated_body_publication_allowed",
+    "solve_claim",
+    "preflight_status"
+  ],
+  "type": "object"
+}

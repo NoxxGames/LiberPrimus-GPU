@@ -52,6 +52,7 @@ git check-ignore -v experiments/results/gematria-cuda-result-store/stage5p/summa
 git check-ignore -v experiments/results/gematria-expansion-candidate-mapping/stage5q/summary.json
 git check-ignore -v experiments/results/gematria-expanded-cuda-result-store/stage5s/summary.json
 git check-ignore -v experiments/results/cuda-candidate-batch-abi-conformance/stage5v/summary.json
+git check-ignore -v experiments/results/prime-minus-one-native-contract/stage5w/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
@@ -61,6 +62,7 @@ git check-ignore -v codex-output/stage5m-codex-completion.md
 git check-ignore -v codex-output/stage5p-codex-completion.md
 git check-ignore -v codex-output/stage5s-codex-completion.md
 git check-ignore -v codex-output/stage5v-codex-completion.md
+git check-ignore -v codex-output/stage5w-codex-completion.md
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -177,6 +179,13 @@ If a Stage 4P result-store unification run leaves `source_inventory.json`,
 `experiments/results/result-store-unification/stage4p/`, do not stage them. Commit only schemas,
 manifests, result-store code, tests, docs, research logs, and the aggregate YAML summary under
 `data/research/`.
+
+If a Stage 5W prime-minus-one native contract run leaves source inventory, stream contract, prime
+schedule, Candidate Batch ABI mapping, native parity preparation, result-store preflight, guardrail,
+next-stage decision, summary, or warning reports under
+`experiments/results/prime-minus-one-native-contract/stage5w/`, do not stage them. Commit only
+schemas, manifests, code, compact YAML records, docs, tests, and research logs. Do not invent p56
+token buffers while fixing validation failures.
 
 If a Stage 5C CUDA build/device run leaves `toolchain_detection_report.json`,
 `device_detection_report.json`, `smoke_build_report.json`, `summary.json`, `warnings.jsonl`, or

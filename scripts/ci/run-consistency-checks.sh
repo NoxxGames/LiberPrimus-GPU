@@ -1171,6 +1171,63 @@ echo "Running Stage 5V native Candidate Batch ABI conformance temp output"
     --summary "$tmp_dir/stage5v-native-candidate-batch-conformance-summary.yaml" \
     --results-dir "$tmp_dir/stage5v-native-candidate-batch-conformance"
 
+echo "Running Stage 5W prime-minus-one native contract temp output"
+"$python_bin" -m libreprimus.cli prime-minus-one-native-contract build-source-inventory \
+    --source-inventory-out "$tmp_dir/stage5w-prime-minus-one-source-inventory.yaml" \
+    --out-dir "$tmp_dir/stage5w-prime-minus-one-native-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-contract build-stream-contract \
+    --stream-contract-out "$tmp_dir/stage5w-prime-minus-one-stream-contract.yaml" \
+    --out-dir "$tmp_dir/stage5w-prime-minus-one-native-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-contract build-prime-schedule \
+    --prime-schedule-out "$tmp_dir/stage5w-prime-minus-one-schedule.yaml" \
+    --out-dir "$tmp_dir/stage5w-prime-minus-one-native-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-contract build-candidate-batch-mapping \
+    --candidate-batch-mapping-out "$tmp_dir/stage5w-prime-minus-one-candidate-batch-mapping.yaml" \
+    --out-dir "$tmp_dir/stage5w-prime-minus-one-native-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-contract build-native-parity-preparation \
+    --native-parity-preparation-out "$tmp_dir/stage5w-prime-minus-one-native-parity-preparation.yaml" \
+    --out-dir "$tmp_dir/stage5w-prime-minus-one-native-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-contract build-result-store-preflight \
+    --result-store-preflight-out "$tmp_dir/stage5w-prime-minus-one-result-store-preflight.yaml" \
+    --out-dir "$tmp_dir/stage5w-prime-minus-one-native-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-contract build-guardrails \
+    --guardrail-out "$tmp_dir/stage5w-prime-minus-one-guardrail.yaml" \
+    --out-dir "$tmp_dir/stage5w-prime-minus-one-native-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-contract build-next-stage-decision \
+    --next-stage-decision-out "$tmp_dir/stage5w-prime-minus-one-next-stage-decision.yaml" \
+    --out-dir "$tmp_dir/stage5w-prime-minus-one-native-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-contract build-summary \
+    --source-inventory "$tmp_dir/stage5w-prime-minus-one-source-inventory.yaml" \
+    --stream-contract "$tmp_dir/stage5w-prime-minus-one-stream-contract.yaml" \
+    --prime-schedule "$tmp_dir/stage5w-prime-minus-one-schedule.yaml" \
+    --candidate-batch-mapping "$tmp_dir/stage5w-prime-minus-one-candidate-batch-mapping.yaml" \
+    --native-parity-preparation "$tmp_dir/stage5w-prime-minus-one-native-parity-preparation.yaml" \
+    --result-store-preflight "$tmp_dir/stage5w-prime-minus-one-result-store-preflight.yaml" \
+    --guardrail "$tmp_dir/stage5w-prime-minus-one-guardrail.yaml" \
+    --next-stage-decision "$tmp_dir/stage5w-prime-minus-one-next-stage-decision.yaml" \
+    --summary-out "$tmp_dir/stage5w-prime-minus-one-native-contract-summary.yaml" \
+    --out-dir "$tmp_dir/stage5w-prime-minus-one-native-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-native-contract validate-stage5w \
+    --source-inventory "$tmp_dir/stage5w-prime-minus-one-source-inventory.yaml" \
+    --stream-contract "$tmp_dir/stage5w-prime-minus-one-stream-contract.yaml" \
+    --prime-schedule "$tmp_dir/stage5w-prime-minus-one-schedule.yaml" \
+    --candidate-batch-mapping "$tmp_dir/stage5w-prime-minus-one-candidate-batch-mapping.yaml" \
+    --native-parity-preparation "$tmp_dir/stage5w-prime-minus-one-native-parity-preparation.yaml" \
+    --result-store-preflight "$tmp_dir/stage5w-prime-minus-one-result-store-preflight.yaml" \
+    --guardrail "$tmp_dir/stage5w-prime-minus-one-guardrail.yaml" \
+    --next-stage-decision "$tmp_dir/stage5w-prime-minus-one-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5w-prime-minus-one-native-contract-summary.yaml" \
+    --results-dir "$tmp_dir/stage5w-prime-minus-one-native-contract"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

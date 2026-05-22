@@ -2,7 +2,15 @@
 
 ## Current stage
 
-Stage 5V native candidate batch ABI reference adapter and conformance fixtures is complete. Next recommended prompt: Stage 5W - prime-minus-one stream native parity contract preparation. Website expansion is deferred to Stage 6.
+Stage 5W prime-minus-one stream native parity contract preparation is complete. Next recommended prompt: Stage 5X - prime-minus-one stream no-GPU native parity execution and result-store preflight. Website expansion is deferred to Stage 6.
+
+## Completed in Stage 5W
+
+Stage 5W added the `libreprimus prime-minus-one-native-contract` CLI, source inventory records, source-backed stream contract records, deterministic prime-minus-one schedule records, Candidate Batch ABI v0 mapping records, native parity preparation records, result-store/score-summary preflight records, guardrail records, next-stage decision records, Stage 5W manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
+
+Local Stage 5W summary: source inventory records `7`, stream contract records `2`, prime schedule records `3`, candidate batch mapping records `3`, native parity preparation records `3`, result-store preflight records `3`, guardrail records `6`, next-stage decision records `8`, synthetic control schedule records `1`, synthetic control ready count `1`, blocked record count `11`, p56 token values available `true`, formula direction available `true`, skip policy available `true`, selected next prompt `Stage 5X - prime-minus-one stream no-GPU native parity execution and result-store preflight`, Deep Research recommended next `false`, CUDA execution performed `false`, CUDA source modified `false`, new CUDA kernels added `0`, unsolved-page CUDA used `false`, real Liber Primus CUDA data used `false`, GPU benchmark performed `false`, speedup/performance assertions `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5W is contract-preparation infrastructure. It keeps the bounded Stage 4O/5L p56 mapping ready for a future no-GPU native parity execution stage, keeps full p56 parity blocked until a committed full cipher token buffer is scoped, does not run native parity, does not run CUDA, does not add or modify CUDA source, does not add kernels, does not benchmark, does not process raw data, does not publish generated result bodies, does not upgrade method families to solved, and makes no solve claim.
 
 ## Completed in Stage 5V
 
@@ -110,7 +118,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5V proves no-GPU Candidate Batch ABI conformance through Python reference fixtures only; original-transform-family native contracts, C++ adapter implementation, CUDA contracts, GPU benchmarking, broad solved-fixture campaigns, and unsolved-page CUDA use still require future explicit stages.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5W prepares prime-minus-one native contract metadata only; original-transform-family native execution, C++ adapter implementation, CUDA contracts, GPU benchmarking, broad solved-fixture campaigns, and unsolved-page CUDA use still require future explicit stages.
 
 ## Completed in Stage 5J
 
@@ -818,4 +826,4 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 
 ## Next prompt recommendation
 
-Stage 5W - prime-minus-one stream native parity contract preparation. Use the Stage 5V no-GPU Candidate Batch ABI conformance records, keep CUDA kernels and benchmarks blocked, keep original transform-family semantics explicit, and do not run unsolved pages, raw-data processing, website expansion, or solve claims.
+Stage 5X - prime-minus-one stream no-GPU native parity execution and result-store preflight. Use the Stage 5W source-backed prime stream contract records, keep CUDA kernels and benchmarks blocked, keep full p56 parity blocked unless a committed token buffer is explicitly scoped, and do not run unsolved pages, raw-data processing, website expansion, or solve claims.

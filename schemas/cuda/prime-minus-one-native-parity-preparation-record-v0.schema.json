@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "cuda_execution_performed": { "const": false },
+    "expected_output_body_committed": { "const": false },
+    "fixture_id": { "type": "string" },
+    "formula_direction_available": { "type": "boolean" },
+    "input_token_values_available": { "type": "boolean" },
+    "native_execution_performed": { "const": false },
+    "native_parity_preparation_id": { "type": "string" },
+    "no_solve_claim": { "const": true },
+    "preparation_status": { "type": "string" },
+    "python_reference_execution_performed": { "const": false },
+    "record_type": { "const": "prime_minus_one_native_parity_preparation_record" },
+    "skip_policy_available": { "type": "boolean" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5w" },
+    "stream_schedule_available": { "type": "boolean" }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "native_parity_preparation_id",
+    "fixture_id",
+    "preparation_status",
+    "input_token_values_available",
+    "stream_schedule_available",
+    "formula_direction_available",
+    "skip_policy_available",
+    "expected_output_body_committed",
+    "native_execution_performed",
+    "python_reference_execution_performed",
+    "cuda_execution_performed"
+  ],
+  "type": "object"
+}

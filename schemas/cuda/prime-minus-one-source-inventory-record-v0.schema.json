@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "canonical_corpus_active": { "const": false },
+    "candidate_batch_abi_compatible": { "type": "boolean" },
+    "committed_safe_source": { "type": "boolean" },
+    "cuda_execution_performed": { "const": false },
+    "fixture_id": { "type": "string" },
+    "formula_direction_available": { "type": "boolean" },
+    "generated_outputs_committed": { "const": false },
+    "no_solve_claim": { "const": true },
+    "raw_data_processed": { "const": false },
+    "record_type": { "const": "prime_minus_one_source_inventory_record" },
+    "skip_policy_available": { "type": "boolean" },
+    "solve_claim": { "const": false },
+    "source_inventory_id": { "type": "string" },
+    "source_path": { "type": "string" },
+    "stage_id": { "const": "stage-5w" },
+    "token_values_available": { "type": "boolean" }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "source_inventory_id",
+    "fixture_id",
+    "source_path",
+    "committed_safe_source",
+    "raw_data_processed",
+    "cuda_execution_performed",
+    "generated_outputs_committed",
+    "solve_claim",
+    "no_solve_claim"
+  ],
+  "type": "object"
+}

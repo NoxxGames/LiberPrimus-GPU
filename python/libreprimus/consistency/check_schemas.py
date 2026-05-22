@@ -194,6 +194,15 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/native-conformance-result-store-record-v0.schema.json",
     "cuda/candidate-batch-abi-implementation-status-record-v0.schema.json",
     "cuda/stage5v-native-candidate-batch-conformance-summary-v0.schema.json",
+    "cuda/prime-minus-one-source-inventory-record-v0.schema.json",
+    "cuda/prime-minus-one-stream-contract-record-v0.schema.json",
+    "cuda/prime-minus-one-schedule-record-v0.schema.json",
+    "cuda/prime-minus-one-candidate-batch-mapping-record-v0.schema.json",
+    "cuda/prime-minus-one-native-parity-preparation-record-v0.schema.json",
+    "cuda/prime-minus-one-result-store-preflight-record-v0.schema.json",
+    "cuda/prime-minus-one-guardrail-record-v0.schema.json",
+    "cuda/prime-minus-one-next-stage-decision-record-v0.schema.json",
+    "cuda/stage5w-prime-minus-one-native-contract-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -365,6 +374,15 @@ EXPECTED_DOC_TERMS = [
     "native-conformance-result-store-record-v0",
     "candidate-batch-abi-implementation-status-record-v0",
     "stage5v-native-candidate-batch-conformance-summary-v0",
+    "prime-minus-one-source-inventory-record-v0",
+    "prime-minus-one-stream-contract-record-v0",
+    "prime-minus-one-schedule-record-v0",
+    "prime-minus-one-candidate-batch-mapping-record-v0",
+    "prime-minus-one-native-parity-preparation-record-v0",
+    "prime-minus-one-result-store-preflight-record-v0",
+    "prime-minus-one-guardrail-record-v0",
+    "prime-minus-one-next-stage-decision-record-v0",
+    "stage5w-prime-minus-one-native-contract-summary-v0",
 ]
 
 

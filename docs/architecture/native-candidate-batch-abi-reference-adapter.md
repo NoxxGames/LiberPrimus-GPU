@@ -23,3 +23,5 @@ The implemented adapter is a pure Python reference path for raw-data-free fixtur
 - `new_cuda_kernels_added=0`
 
 Stage 5V does not run CUDA, does not run native/CUDA CMake, does not benchmark, and does not authorize unsolved-page CUDA or original transform-family CUDA semantics.
+
+Stage 5W consumes this conformance surface for the prime-minus-one stream family. It prepares contract metadata only; the next executable step is Stage 5X no-GPU native parity execution scoped by Stage 5W records.

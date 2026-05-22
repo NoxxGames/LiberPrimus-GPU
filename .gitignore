@@ -619,5 +619,13 @@ experiments/results/cuda-candidate-batch-abi-conformance/**
 !experiments/results/cuda-candidate-batch-abi-conformance/stage5v/
 !experiments/results/cuda-candidate-batch-abi-conformance/stage5v/.gitkeep
 
+# Generated prime-minus-one native contract outputs
+experiments/results/prime-minus-one-native-contract/**
+!experiments/results/prime-minus-one-native-contract/
+!experiments/results/prime-minus-one-native-contract/README.md
+!experiments/results/prime-minus-one-native-contract/.gitkeep
+!experiments/results/prime-minus-one-native-contract/stage5w/
+!experiments/results/prime-minus-one-native-contract/stage5w/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

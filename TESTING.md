@@ -94,6 +94,12 @@ shape checks, compact result-store conformance, implementation-status blockers, 
 guardrails, CLI build/validate checks, and ignored-output/codex-output checks for
 `experiments/results/cuda-candidate-batch-abi-conformance/stage5v/` and `codex-output/`.
 
+Stage 5W extends coverage with prime-minus-one source inventory schemas, source-backed stream
+contract rules, deterministic prime schedule records, Candidate Batch ABI mapping checks, native
+parity preparation blockers, result-store preflight records, guardrail checks, next-stage decision
+records, CLI build/validate checks, and ignored-output/codex-output checks for
+`experiments/results/prime-minus-one-native-contract/stage5w/` and `codex-output/`.
+
 Stage 5F extends coverage with synthetic CUDA kernel implementation schemas, no-GPU-safe build
 records, optional local synthetic parity records, C++/CUDA synthetic parity tests, CLI
 build/validate/summary checks, validation rejections for real Liber Primus data, benchmarking,

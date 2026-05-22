@@ -275,6 +275,18 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/results/cuda-candidate-batch-abi-conformance/stage5v/warnings.jsonl",
         "experiments/results/cuda-candidate-batch-abi-conformance/stage5v/results.sqlite3",
         "codex-output/stage5v-codex-completion.md",
+        "experiments/results/prime-minus-one-native-contract/stage5w/source_inventory_report.json",
+        "experiments/results/prime-minus-one-native-contract/stage5w/stream_contract_report.json",
+        "experiments/results/prime-minus-one-native-contract/stage5w/prime_schedule_report.json",
+        "experiments/results/prime-minus-one-native-contract/stage5w/candidate_batch_mapping_report.json",
+        "experiments/results/prime-minus-one-native-contract/stage5w/native_parity_preparation_report.json",
+        "experiments/results/prime-minus-one-native-contract/stage5w/result_store_preflight_report.json",
+        "experiments/results/prime-minus-one-native-contract/stage5w/guardrail_report.json",
+        "experiments/results/prime-minus-one-native-contract/stage5w/next_stage_decision.json",
+        "experiments/results/prime-minus-one-native-contract/stage5w/summary.json",
+        "experiments/results/prime-minus-one-native-contract/stage5w/warnings.jsonl",
+        "experiments/results/prime-minus-one-native-contract/stage5w/results.sqlite3",
+        "codex-output/stage5w-codex-completion.md",
         "local-test.sqlite3",
     ]
     trackable_paths = [

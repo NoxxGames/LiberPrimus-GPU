@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5W Prime-Minus-One Native Contract
+
+Stage 5W does not execute a cryptanalytic experiment. It consumes Stage 5V Candidate Batch ABI conformance records and committed p56 solved-fixture-safe metadata, then writes source inventory, stream contract, prime schedule, Candidate Batch ABI mapping, native parity preparation, result-store preflight, guardrail, next-stage decision, and summary records under `data/cuda/`.
+
+Generated Stage 5W reports remain ignored under `experiments/results/prime-minus-one-native-contract/stage5w/`. Stage 5W must keep CUDA execution, native/CUDA CMake, CUDA source modification, new kernels, GPU benchmarks, speedup claims, unsolved-page CUDA, broad solved-fixture CUDA, generated-result-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades to solved, and solve claims disabled.
+
 ## Stage 5V Native Candidate Batch ABI Conformance
 
 Stage 5V does not execute a cryptanalytic experiment. It consumes Stage 5U Candidate Batch ABI v0 records and writes native adapter, conformance fixture, token-buffer conformance, schedule conformance, score-vector conformance, top-k conformance, result-store conformance, implementation-status, next-stage decision, and summary records under `data/cuda/`.

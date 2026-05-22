@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5V - native candidate batch ABI reference adapter and conformance fixtures.
+Current completed stage: Stage 5W - prime-minus-one stream native parity contract preparation.
 
-Current work: Stage 5W - prime-minus-one stream native parity contract preparation. Stage 5V proved no-GPU Candidate Batch ABI conformance through Python reference fixtures and did not authorize unsolved-page CUDA, benchmarking, generated-body publication, method-status upgrades, website expansion, native/CUDA CMake execution, C++ adapter implementation, or new CUDA kernels.
+Current work: Stage 5X - prime-minus-one stream no-GPU native parity execution and result-store preflight. Stage 5W prepared source-backed prime-minus-one native parity contracts and did not authorize unsolved-page CUDA, benchmarking, generated-body publication, method-status upgrades, website expansion, native/CUDA CMake execution, C++ adapter implementation, or new CUDA kernels.
 
 Current project state:
 
@@ -68,7 +68,7 @@ Current project state:
 - Page boundaries: reviewable.
 - Broad unsolved-page campaigns: not started.
 - CUDA: deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
-- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel`, Stage 5M host-runner plumbing for exact solved-fixture parity, Stage 5O repeat verification metadata, Stage 5P result-store integration metadata, Stage 5Q expansion candidate metadata, Stage 5R controlled expanded solved-fixture parity metadata, Stage 5S compact integration/reporting metadata, Stage 5T solved-family readiness metadata, Stage 5U Candidate Batch ABI contract metadata, and Stage 5V native no-GPU conformance metadata only unless code and tests say otherwise.
+- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel`, Stage 5M host-runner plumbing for exact solved-fixture parity, Stage 5O repeat verification metadata, Stage 5P result-store integration metadata, Stage 5Q expansion candidate metadata, Stage 5R controlled expanded solved-fixture parity metadata, Stage 5S compact integration/reporting metadata, Stage 5T solved-family readiness metadata, Stage 5U Candidate Batch ABI contract metadata, Stage 5V native no-GPU conformance metadata, and Stage 5W prime-minus-one native contract metadata only unless code and tests say otherwise.
 - Stage 5C CUDA build/device metadata is readiness infrastructure only; no-GPU CI, compatibility 8GB, and optional local 16GB profiles must remain explicit and smoke-build status is not parity or performance evidence.
 - Stage 5D native CPU backend records are readiness infrastructure only; C++ must remain a deterministic CPU execution plane, Python remains orchestration, and diagnostic timings are not speedup claims.
 - Do not let C++ launch Python worker scripts.
@@ -116,6 +116,16 @@ Current project state:
 - Stage 5V does not mark unresolved family-specific formulas as implemented.
 - Stage 5V completion summaries must include native adapter counts, fixture counts, output hashes, gap implementation status, guardrails, and next-stage rationale.
 - Future Stage 5W work must prepare prime-minus-one stream native parity contracts before family-specific CUDA contracts, top-k reducers, or benchmark planning.
+- Stage 5W prepares prime-minus-one native parity contracts only.
+- Stage 5W must not run CUDA or modify CUDA source.
+- Stage 5W must not invent p56 token values, plaintext, ciphertext, or stream formulas.
+- Stage 5W may generate deterministic prime schedules only from an explicit committed contract.
+- Stage 5W must keep generated bodies ignored and commit compact metadata only.
+- Stage 5W must keep p56 solved-fixture parity distinct from unsolved-page execution.
+- Stage 5W must not treat source-backed p56 readiness as a new solve.
+- Stage 5W completion summaries must include source inventory, stream formula, schedule policy, p56 readiness, guardrails, and next-stage rationale.
+- Future Stage 5X may execute only no-GPU native parity scoped by Stage 5W records unless a later prompt explicitly widens scope.
+- Do not stage `codex-output/**`.
 - Do not report CUDA parity records as speedup/performance evidence.
 - Do not stage `codex-output/**`.
 - Completion summaries must be detailed and include parity counts, gate decisions, guardrail status, and next-stage rationale.
@@ -846,6 +856,16 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - `gematria_shift_score_only` parity remains distinct from original transform-family semantics, and unresolved family-specific formulas must stay blocked or shape-only.
 - Generated Stage 5V reports under `experiments/results/cuda-candidate-batch-abi-conformance/stage5v/` and `codex-output/**` handoffs remain ignored and must not be staged.
 - Stage 5V selects Stage 5W prime-minus-one stream native parity contract preparation; CUDA kernels and benchmark planning remain blocked.
+
+## Stage 5W Prime-Minus-One Native Contract Rules
+
+- Stage 5W prime-minus-one stream native parity contract records are contract-preparation metadata only.
+- Do not run CUDA, modify CUDA source, add CUDA kernels, run native/CUDA CMake, benchmark, process raw data, publish generated bodies, upgrade method families to solved, or make solve claims during Stage 5W-style work.
+- Do not invent p56 token values, plaintext, ciphertext, stream formulas, or full fixture buffers; use committed solved-fixture-safe records only.
+- Deterministic prime schedules may be generated only from explicit committed contracts.
+- The bounded Stage 4O/5L p56 mapping may be prepared for future no-GPU native parity, but full p56 parity remains blocked until a full committed token buffer is explicitly scoped.
+- Generated Stage 5W reports under `experiments/results/prime-minus-one-native-contract/stage5w/` and `codex-output/**` handoffs remain ignored and must not be staged.
+- Stage 5W selects Stage 5X prime-minus-one stream no-GPU native parity execution and result-store preflight; CUDA kernels and benchmark planning remain blocked.
 
 ## Stage 3W State Consolidation Rules
 

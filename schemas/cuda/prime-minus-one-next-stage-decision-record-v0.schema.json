@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "benchmark_execution_allowed": { "const": false },
+    "cuda_execution_allowed": { "const": false },
+    "cuda_source_changes_allowed": { "const": false },
+    "generated_body_publication_allowed": { "const": false },
+    "method_status_upgrade_allowed": { "const": false },
+    "no_solve_claim": { "const": true },
+    "option_id": { "type": "string" },
+    "recommended_prompt_type": { "enum": ["Codex", "Deep Research"] },
+    "recommended_stage_title": { "type": "string" },
+    "record_type": { "const": "prime_minus_one_next_stage_decision_record" },
+    "selected": { "type": "boolean" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5w" },
+    "status": { "type": "string" },
+    "unsolved_page_cuda_allowed": { "const": false }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "option_id",
+    "status",
+    "selected",
+    "recommended_prompt_type",
+    "recommended_stage_title",
+    "rationale",
+    "risk_level",
+    "cuda_execution_allowed",
+    "cuda_source_changes_allowed",
+    "benchmark_execution_allowed",
+    "unsolved_page_cuda_allowed",
+    "generated_body_publication_allowed",
+    "method_status_upgrade_allowed"
+  ],
+  "type": "object"
+}

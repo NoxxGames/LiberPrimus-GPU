@@ -52,6 +52,7 @@ REQUIRED_METHOD_FAMILIES = {
     "native_cpp_cpu_backend",
     "cuda_first_kernel_contract",
     "cuda_synthetic_shift_kernel",
+    "prime_minus_one_native_contract",
     "deterministic_image_analysis",
     "image_transform_suite",
     "discord_ingestion_review",

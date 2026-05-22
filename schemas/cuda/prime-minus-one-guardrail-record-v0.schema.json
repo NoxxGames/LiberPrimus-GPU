@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "canonical_corpus_active": { "const": false },
+    "codex_output_committed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "guardrail_id": { "type": "string" },
+    "guardrail_status": { "const": "pass" },
+    "new_cuda_kernels_added": { "const": 0 },
+    "no_solve_claim": { "const": true },
+    "raw_data_processed": { "const": false },
+    "record_type": { "const": "prime_minus_one_guardrail_record" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5w" },
+    "unsolved_page_cuda_used": { "const": false }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "guardrail_id",
+    "guardrail_status",
+    "cuda_execution_performed",
+    "cuda_source_modified",
+    "new_cuda_kernels_added",
+    "gpu_benchmark_performed",
+    "unsolved_page_cuda_used",
+    "raw_data_processed",
+    "generated_outputs_committed",
+    "codex_output_committed",
+    "solve_claim"
+  ],
+  "type": "object"
+}

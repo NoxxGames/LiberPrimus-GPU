@@ -1275,6 +1275,49 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5VSummary `
         --results-dir $Stage5VOut
 
+    Write-Host "Running Stage 5W prime-minus-one native contract temp output"
+    $Stage5WOut = Join-Path $TempDir "stage5w-prime-minus-one-native-contract"
+    $Stage5WSourceInventory = Join-Path $TempDir "stage5w-prime-minus-one-source-inventory.yaml"
+    $Stage5WStreamContract = Join-Path $TempDir "stage5w-prime-minus-one-stream-contract.yaml"
+    $Stage5WPrimeSchedule = Join-Path $TempDir "stage5w-prime-minus-one-schedule.yaml"
+    $Stage5WMapping = Join-Path $TempDir "stage5w-prime-minus-one-candidate-batch-mapping.yaml"
+    $Stage5WPreparation = Join-Path $TempDir "stage5w-prime-minus-one-native-parity-preparation.yaml"
+    $Stage5WResultStore = Join-Path $TempDir "stage5w-prime-minus-one-result-store-preflight.yaml"
+    $Stage5WGuardrail = Join-Path $TempDir "stage5w-prime-minus-one-guardrail.yaml"
+    $Stage5WDecision = Join-Path $TempDir "stage5w-prime-minus-one-next-stage-decision.yaml"
+    $Stage5WSummary = Join-Path $TempDir "stage5w-prime-minus-one-native-contract-summary.yaml"
+    & $Python -m libreprimus.cli prime-minus-one-native-contract build-source-inventory --source-inventory-out $Stage5WSourceInventory --out-dir $Stage5WOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-contract build-stream-contract --stream-contract-out $Stage5WStreamContract --out-dir $Stage5WOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-contract build-prime-schedule --prime-schedule-out $Stage5WPrimeSchedule --out-dir $Stage5WOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-contract build-candidate-batch-mapping --candidate-batch-mapping-out $Stage5WMapping --out-dir $Stage5WOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-contract build-native-parity-preparation --native-parity-preparation-out $Stage5WPreparation --out-dir $Stage5WOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-contract build-result-store-preflight --result-store-preflight-out $Stage5WResultStore --out-dir $Stage5WOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-contract build-guardrails --guardrail-out $Stage5WGuardrail --out-dir $Stage5WOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-contract build-next-stage-decision --next-stage-decision-out $Stage5WDecision --out-dir $Stage5WOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-contract build-summary `
+        --source-inventory $Stage5WSourceInventory `
+        --stream-contract $Stage5WStreamContract `
+        --prime-schedule $Stage5WPrimeSchedule `
+        --candidate-batch-mapping $Stage5WMapping `
+        --native-parity-preparation $Stage5WPreparation `
+        --result-store-preflight $Stage5WResultStore `
+        --guardrail $Stage5WGuardrail `
+        --next-stage-decision $Stage5WDecision `
+        --summary-out $Stage5WSummary `
+        --out-dir $Stage5WOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-native-contract validate-stage5w `
+        --source-inventory $Stage5WSourceInventory `
+        --stream-contract $Stage5WStreamContract `
+        --prime-schedule $Stage5WPrimeSchedule `
+        --candidate-batch-mapping $Stage5WMapping `
+        --native-parity-preparation $Stage5WPreparation `
+        --result-store-preflight $Stage5WResultStore `
+        --guardrail $Stage5WGuardrail `
+        --next-stage-decision $Stage5WDecision `
+        --summary $Stage5WSummary `
+        --results-dir $Stage5WOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

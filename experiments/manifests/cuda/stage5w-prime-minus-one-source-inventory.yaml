@@ -1,0 +1,20 @@
+record_type: prime_minus_one_native_contract_manifest
+manifest_id: stage5w-prime-minus-one-source-inventory
+stage_id: stage-5w
+description: Source inventory manifest for prime-minus-one stream native contract preparation.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+no_solve_claim: true
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+new_experiment_executed: false
+benchmark_execution_allowed: false
+required_sources:
+  - data/fixtures/solved-pages/prime-stream-v0/p56-an-end-prime-minus-one.fixture.json
+  - data/cuda/stage5l-gematria-solved-fixture-token-mapping.yaml
+  - data/cuda/stage5u-stream-schedule-contract.yaml
+notes:
+  - Committed metadata only; no raw transcript or page image input is required.

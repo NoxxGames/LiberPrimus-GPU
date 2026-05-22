@@ -328,8 +328,14 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 5w", "prime-minus-one stream", "native parity"),
-            "staged_plan_stage5w_prime_stream_next",
+            ("stage 5w", "prime-minus-one stream", "native parity", "complete"),
+            "staged_plan_stage5w_prime_stream_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5x", "prime-minus-one stream", "no-gpu native parity"),
+            "staged_plan_stage5x_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -601,7 +607,8 @@ def validate_research_synthesis(
             or "stage 5t" not in evidence_text
             or "stage 5u" not in evidence_text
             or "stage 5v" not in evidence_text
-            or "stage 5w" not in next_text
+            or "stage 5w" not in evidence_text
+            or "stage 5x" not in next_text
         ):
             errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_stage5j_stage5k_transition")
 
@@ -615,6 +622,25 @@ def validate_research_synthesis(
             errors.append("native_candidate_batch_abi_conformance_missing_guardrail")
         if "stage 5w" not in next_text or "prime-minus-one" not in next_text:
             errors.append("native_candidate_batch_abi_conformance_missing_stage5w_next_action")
+
+    prime_native_contract = _find_method(method_records, "prime_minus_one_native_contract")
+    if prime_native_contract is None:
+        errors.append("prime_minus_one_native_contract_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in prime_native_contract.get("stop_conditions", []))
+        evidence_text = str(prime_native_contract.get("evidence_summary", "")).lower()
+        next_text = str(prime_native_contract.get("next_action", "")).lower()
+        if (
+            "cuda" not in stop_text
+            or "benchmark" not in stop_text
+            or "raw" not in stop_text
+            or "invent" not in stop_text
+        ):
+            errors.append("prime_minus_one_native_contract_missing_guardrail")
+        if "p56" not in evidence_text or "source-backed" not in evidence_text or "stage 5w" not in evidence_text:
+            errors.append("prime_minus_one_native_contract_missing_stage5w_evidence")
+        if "stage 5x" not in next_text or "no-gpu native parity" not in next_text:
+            errors.append("prime_minus_one_native_contract_missing_stage5x_next_action")
 
     cookie = _find_method(method_records, "cookie_hash_sha256_packs")
     if cookie is None:
