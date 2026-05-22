@@ -40,6 +40,8 @@ Manifests must replay to the same outputs under pinned inputs and fixed seeds.
 
 Documentation and anti-drift checks verify core policy statements such as raw-data immutability, generated-output ignore rules, current completed stage, canonical corpus inactive status, page-boundary review status, CUDA deferral, Discord privacy, and no-solve-claim policy.
 
+Stage 5AB extends this coverage with dynamic stage-id parsing, operational Markdown staleness scanning, source-of-truth records, website-deferral checks, stale `Existing CUDA code` cap checks, `libreprimus consistency check-doc-staleness`, CI consistency integration, and ignored-output checks for `experiments/results/doc-staleness/stage5ab/` plus `codex-output/**`.
+
 Stage 4K extends this coverage with source-lock snapshot validation, allowlist/rejection tests,
 snapshot-policy tests, GitHub commit-address parser tests, generated-output/cache ignore tests, and
 state-drift checks for the Stage 4L ledger.

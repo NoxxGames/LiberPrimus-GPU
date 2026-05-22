@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/project-state/doc-staleness-finding-record-v0.schema.json",
+  "title": "Doc Staleness Finding Record",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "scan_phase",
+    "finding_count",
+    "findings"
+  ],
+  "properties": {
+    "record_type": { "const": "doc_staleness_finding_record" },
+    "stage_id": { "const": "stage-5ab" },
+    "scan_phase": { "enum": ["before_repair", "after_repair", "summary"] },
+    "finding_count": { "type": "integer", "minimum": 0 },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rule_id", "path", "line", "message"],
+        "properties": {
+          "rule_id": { "type": "string" },
+          "path": { "type": "string" },
+          "line": { "type": "integer", "minimum": 1 },
+          "message": { "type": "string" },
+          "excerpt": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

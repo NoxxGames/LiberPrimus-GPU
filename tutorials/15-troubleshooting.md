@@ -742,11 +742,25 @@ records.
 
 Expected Stage 5AA counts are 1 kernel implementation record, 1 CUDA run record, 1 parity record,
 1 device-subset audit record, 2 result-store preflight records, 2 p56/full-p56 blocker records, 6
-scored-experiment deferral records, and 4 next-stage decision records. The selected next prompt
-should remain Stage 5AB prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA
-parity preflight when the synthetic hash matches.
+scored-experiment deferral records, and 4 next-stage decision records. Stage 5AA historical decision
+records may still name the Stage 5AB reporting/preflight follow-up, but operational docs after the
+Stage 5AB quality gate select Stage 5AC from the Stage 5AA outcome after stale-doc repair.
 
 Generated Stage 5AA reports belong under ignored
 `experiments/results/prime-minus-one-cuda-synthetic/stage5aa/`, and the local handoff belongs under
 ignored `codex-output/stage5aa-codex-completion.md`. Do not stage generated reports, generated
 result bodies, SQLite files, raw data, or local CUDA diagnostics.
+
+# Stage 5AB Document Staleness Troubleshooting
+
+If operational Markdown drifts, run:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ab-doc-staleness-source-of-truth.yaml --strict
+```
+
+The check scans the operational file map, ignores historical logs, rejects active Stage 6 website
+deferrals, rejects stale current/next-stage labels, and rejects brittle current CUDA boundary
+caps that omit the latest completed stage. Generated staleness reports belong under ignored
+`experiments/results/doc-staleness/stage5ab/`, and the local handoff belongs under ignored
+`codex-output/stage5ab-doc-staleness-codex-completion.md`.

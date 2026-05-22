@@ -15,6 +15,11 @@ try {
     Write-Host "Running state-drift consistency checks"
     & $Python -m libreprimus.cli consistency check-state-drift
 
+    Write-Host "Running document staleness checks"
+    & $Python -m libreprimus.cli consistency check-doc-staleness `
+        --source-of-truth data/project-state/stage5ab-doc-staleness-source-of-truth.yaml `
+        --strict
+
     Write-Host "Validating Stage 3Y research synthesis records"
     & $Python -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md
 

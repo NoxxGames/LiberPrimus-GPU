@@ -15,6 +15,7 @@ For most Codex tasks, read:
 - Verify local branch, `HEAD`, `origin/main`, and latest CI with Git/GitHub tooling.
 - Do not trust rendered GitHub pages, cached raw URLs, memory, or old conversation context when state matters.
 - Run the task-specific validation commands before staging.
+- Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ab-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
 - Keep raw/generated outputs unstaged.
 
 ## Documentation Updates

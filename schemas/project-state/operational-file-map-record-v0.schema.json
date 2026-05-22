@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/project-state/operational-file-map-record-v0.schema.json",
+  "title": "Operational File Map",
+  "type": "object",
+  "required": ["record_set_id", "records"],
+  "properties": {
+    "record_set_id": { "const": "operational-file-map" },
+    "schema": { "const": "schemas/project-state/operational-file-map-record-v0.schema.json" },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "category",
+          "purpose",
+          "source_of_truth_rank",
+          "last_meaningful_update_stage",
+          "expected_update_frequency",
+          "mutable_or_reference_only",
+          "mirror_or_generated_relationships",
+          "staleness_check_level",
+          "owner_context",
+          "notes"
+        ],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "category": {
+            "enum": [
+              "operational_status_doc",
+              "roadmap_doc",
+              "architecture_doc",
+              "policy_doc",
+              "tutorial",
+              "wiki_source_mirror",
+              "schema",
+              "active_data_record",
+              "reference_only_data_record",
+              "historical_log",
+              "generated_ignored_output"
+            ]
+          },
+          "purpose": { "type": "string", "minLength": 1 },
+          "source_of_truth_rank": { "type": "integer", "minimum": 1 },
+          "last_meaningful_update_stage": { "type": "string", "minLength": 1 },
+          "expected_update_frequency": { "type": "string", "minLength": 1 },
+          "mutable_or_reference_only": { "type": "string", "minLength": 1 },
+          "mirror_or_generated_relationships": { "type": "string", "minLength": 1 },
+          "staleness_check_level": {
+            "enum": ["strict", "current_state", "mirror", "reference_only", "historical"]
+          },
+          "owner_context": { "type": "string", "minLength": 1 },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

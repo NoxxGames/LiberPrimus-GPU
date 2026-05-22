@@ -91,3 +91,12 @@ records:
     source: User Stage 4E direction and Stage 4E remote tree audit.
     affected_docs: [docs/roadmap/staged-plan.md, ROADMAP.md, STATUS.md, AGENTS.md, EXPERIMENTS.md, CIPHER_CATALOG.md]
     notes: Cookie exact-candidate refresh remains planned later and must still avoid broad hash cracking.
+  - record_type: project_direction_change_record
+    change_id: stage5ab-doc-staleness-quality-gate
+    date_or_stage: stage-5ab
+    previous_direction: Continue directly from Stage 5AA synthetic CUDA parity into the next implementation follow-up while operational Markdown still contained stale current-state claims.
+    new_direction: Repair stale operational Markdown first, add source-of-truth driven document staleness checks, then select Stage 5AC from the Stage 5AA outcome after the quality gate.
+    reason: Stale current/next-stage claims and brittle CUDA-boundary wording can mislead operators and future Codex prompts.
+    source: User Stage 5AB direction and Stage 5AB staleness scan.
+    affected_docs: [README.md, STATUS.md, ROADMAP.md, AGENTS.md, CUDA_NOTES.md, docs/roadmap/staged-plan.md, docs/onboarding/start-here.md]
+    notes: Stage 5AB is process-quality infrastructure only and does not authorize CUDA execution, native execution, benchmarks, scored experiments, website expansion, generated-output publication, method-status upgrades, or solve claims.

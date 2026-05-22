@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5S - expanded solved-fixture Gematria CUDA parity reporting and result-store integration.
-- Current planning focus: Deep Research - Stage 5M-5S CUDA parity arc project review and next-direction assessment.
+- Latest completed stage: Stage 5AB - markdown staleness detection hardening and stale-doc repair.
+- Current planning focus: Stage 5AC - selected from Stage 5AA outcome after stale-doc repair.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -21,6 +21,7 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 - Local page images: local, ignored third-party material.
 - Observation records: review-gated; review-only observations are not experiment
   seeds without explicit acceptance and promotion.
+- Document staleness checks: active through `libreprimus consistency check-doc-staleness`.
 
 ## Where To Start
 

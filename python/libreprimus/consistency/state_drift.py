@@ -7,6 +7,8 @@ from pathlib import Path
 import re
 
 from libreprimus.consistency.models import ConsistencyCheckResult, fail_result, pass_result
+from libreprimus.doc_staleness.models import DEFAULT_SOURCE_OF_TRUTH
+from libreprimus.doc_staleness.scanner import scan_repository
 from libreprimus.observation_review.path_sanitisation import check_paths_summary
 from libreprimus.paths import repo_root
 
@@ -1338,6 +1340,30 @@ def check_state_drift_consistency(
                 data=path_summary,
             )
         )
+    source_of_truth = root / DEFAULT_SOURCE_OF_TRUTH
+    if source_of_truth.is_file():
+        scan = scan_repository(root=root, source_of_truth_path=source_of_truth)
+        if scan.findings:
+            for finding in scan.findings:
+                results.append(
+                    fail_result(
+                        GROUP,
+                        f"doc_staleness_{finding.rule_id}",
+                        f"{finding.message} Line {finding.line}: {finding.excerpt}",
+                        path=root / finding.path,
+                        data=finding.to_dict(),
+                    )
+                )
+        else:
+            results.append(
+                pass_result(
+                    GROUP,
+                    "doc_staleness_dynamic_stage_check",
+                    "Dynamic document staleness check passed.",
+                    path=source_of_truth,
+                    data=scan.summary_dict(),
+                )
+            )
     return results
 
 

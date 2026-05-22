@@ -7,6 +7,8 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
+- `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: current/next-stage expectations for the document staleness checker.
+- `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 
 ## Research And Workflow Truth
 

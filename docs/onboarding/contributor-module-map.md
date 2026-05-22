@@ -14,6 +14,7 @@
 - Post-Discord: `python/libreprimus/post_discord/`.
 - Stego: `python/libreprimus/stego/`.
 - Research synthesis: `python/libreprimus/research_synthesis/`, `data/research/`.
+- Document staleness: `python/libreprimus/doc_staleness/`, `data/project-state/`, `schemas/project-state/`.
 - CLI: `python/libreprimus/cli.py`, `python/libreprimus/cli_commands/`.
 - CI/scripts: `.github/workflows/`, `scripts/ci/`, `scripts/github/`.
 

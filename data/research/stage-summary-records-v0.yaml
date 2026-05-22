@@ -935,3 +935,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AA wrote 1 kernel implementation record, 1 CUDA run record, 1 parity record, 1 device-subset audit record, 2 result-store preflight records, 2 p56/full-p56 blocker records, 6 scored-experiment deferral records, and 4 next-stage decision records. It added one synthetic-only `prime_minus_one_stream_kernel_v0` path, ran only `stage5z-validation-synthetic-prime-control-v0`, matched expected and computed hash `06a5c37f7e5eda8eec00cfab5b09faba6ec157488ca15f61a9189d4bf06005ab`, selected Stage 5AB prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight, and performed no p56/full-p56 CUDA execution, unsolved-page CUDA use, broad solved-fixture campaign, GPU benchmark, speedup claim, scored experiment, real Liber Primus CUDA-data use, raw-data processing, generated-body publication, codex-output publication, website expansion, method-status upgrade to solved, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ab
+    title: Markdown staleness detection hardening and stale-doc repair
+    status: complete
+    category: infrastructure
+    summary: Repaired stale operational Markdown after Stage 5AA, added dynamic stage parsing and source-of-truth driven document staleness checks, and integrated the check into consistency tooling.
+    key_outputs:
+      - "`libreprimus consistency check-doc-staleness` with text, JSON, JSONL, strict mode, source-of-truth selection, and generated-report output."
+      - Stage 5AB source-of-truth, operational-file-map, findings, and summary records under `data/project-state/`.
+      - Ignored generated reports under `experiments/results/doc-staleness/stage5ab/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AB scanned 26 operational files after repair, reduced stale operational findings from 16 to 0, selected Stage 5AC from the Stage 5AA outcome after stale-doc repair, and performed no native execution, CUDA execution, CUDA source modification, kernel addition, native/CUDA CMake run, GPU benchmark, speedup claim, scored experiment, real Liber Primus CUDA-data use, raw-data processing, generated-body publication, codex-output publication, website expansion, method-status upgrade to solved, canonical-corpus activation, page-boundary finalisation, or solve claim.

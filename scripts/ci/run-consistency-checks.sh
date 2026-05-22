@@ -14,6 +14,11 @@ echo "Running full consistency suite"
 echo "Running state-drift consistency checks"
 "$python_bin" -m libreprimus.cli consistency check-state-drift
 
+echo "Running document staleness checks"
+"$python_bin" -m libreprimus.cli consistency check-doc-staleness \
+    --source-of-truth data/project-state/stage5ab-doc-staleness-source-of-truth.yaml \
+    --strict
+
 echo "Validating Stage 3Y research synthesis records"
 "$python_bin" -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md
 

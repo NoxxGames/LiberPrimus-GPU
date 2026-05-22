@@ -394,7 +394,7 @@ records:
     completed_stage_refs: [stage-5d, stage-5e, stage-5f, stage-5g, stage-5h, stage-5i, stage-5j, stage-5k, stage-5l, stage-5m, stage-5n, stage-5o, stage-5p, stage-5q, stage-5r, stage-5s, stage-5t, stage-5u, stage-5v, stage-5w, stage-5x, stage-5y, stage-5z, stage-5aa]
     reopen_conditions: [A future stage needs explicit Gematria mod-29 contract records, the Stage 5H native fixture hash, Stage 5I ABI and validation-vector records, Stage 5J kernel/parity records, Stage 5K reporting/preflight records, Stage 5L solved-fixture token mappings/native hashes, Stage 5M solved-fixture CUDA parity records, Stage 5N controlled expansion gate records, Stage 5O repeat parity/result-store preflight records, Stage 5P result-store integration records, Stage 5Q expansion candidate mappings/native hashes, Stage 5R expanded parity records, Stage 5S compact integration records, Stage 5T readiness matrix records, Stage 5U Candidate Batch ABI records, Stage 5V native conformance records, Stage 5D native hashes, Stage 5E contract records, Stage 5F synthetic parity records, and Stage 5G reporting/device-code audit records before widening adapter use.]
     stop_conditions: [Do not use the synthetic-only or solved-fixture parity kernels on unsolved pages, broad production data, real Liber Primus data, raw data, GPU benchmarks, speedup claims, broad searches, website expansion, canonical corpus activation, final page boundaries, or solve claims.]
-    next_action: Stage 5Z and Stage 5AA prime-minus-one records feed Stage 5AB prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight; broader kernels and benchmark planning remain blocked.
+    next_action: Stage 5AB repaired stale operational docs; Stage 5AC is selected from the Stage 5AA outcome after stale-doc repair, while broader kernels and benchmark planning remain blocked.
     solve_claim: false
     notes: The Stage 5F kernel preserves uppercase Latin A-Z synthetic shift semantics and is not a general CUDA transform backend. Stage 5G verifies no STL/std::array/exceptions remain in CUDA-facing paths.
   - record_type: method_family_status_record
@@ -405,7 +405,7 @@ records:
     completed_stage_refs: [stage-5u, stage-5v, stage-5w, stage-5x, stage-5y]
     reopen_conditions: [A future native or CUDA stage needs Candidate Batch ABI v0 conformance fixtures, deterministic output-token hashes, score-vector/top-k shape records, or compact result-store compatibility records.]
     stop_conditions: [Do not run CUDA, modify CUDA source, add kernels, benchmark, publish generated bodies, process raw data, treat `gematria_shift_score_only` as original-family semantics, upgrade method status to solved, or make solve claims.]
-    next_action: Use Stage 5Z prime-minus-one contract records and Stage 5AA synthetic parity records as input to Stage 5AB reporting/preflight while keeping broader CUDA execution blocked.
+    next_action: Use Stage 5Z prime-minus-one contract records, Stage 5AA synthetic parity records, and Stage 5AB staleness-gate records as input to Stage 5AC while keeping broader CUDA execution blocked.
     solve_claim: false
     notes: The Stage 5V C++ adapter is explicitly deferred; Python reference conformance is enough for no-GPU CI and future family-specific native contract selection.
   - record_type: method_family_status_record
@@ -416,7 +416,7 @@ records:
     completed_stage_refs: [stage-1d, stage-4o, stage-5l, stage-5u, stage-5v, stage-5w, stage-5x, stage-5y]
     reopen_conditions: [A future Stage 5Z-style contract preparation stage cites Stage 5Y reporting and readiness records, or a full p56 token-buffer source is committed through an explicit source policy.]
     stop_conditions: [Do not run CUDA, modify CUDA source, add kernels, benchmark, process raw data, invent p56 token values or formulas, publish generated bodies, upgrade method status to solved, or make solve claims.]
-    next_action: Stage 5Z prime-minus-one contract and Stage 5AA synthetic parity metadata feed Stage 5AB reporting/preflight while keeping full p56 and broad CUDA execution blocked.
+    next_action: Stage 5Z prime-minus-one contract and Stage 5AA synthetic parity metadata feed Stage 5AC through the Stage 5AB quality gate while keeping full p56 and broad CUDA execution blocked.
     solve_claim: false
     notes: Bounded p56 Stage 4O/5L readiness is not full p56 parity and not unsolved-page evidence; full p56 remains blocked pending a complete committed token buffer.
   - record_type: method_family_status_record
@@ -427,7 +427,7 @@ records:
     completed_stage_refs: [stage-1d, stage-4o, stage-5l, stage-5w, stage-5x, stage-5y]
     reopen_conditions: [A future Stage 5Z contract preparation gate needs compact Stage 5Y reporting records, or a full p56 token-buffer expansion stage commits a source-backed complete cipher token buffer.]
     stop_conditions: [Do not run CUDA, modify CUDA source, add kernels, benchmark, claim speedups, execute full p56 without a committed full p56 token buffer, process raw data, publish generated bodies, upgrade method status to solved, or make solve claims.]
-    next_action: Stage 5Z prime-minus-one contract and Stage 5AA synthetic parity records feed Stage 5AB reporting/preflight before any bounded-p56 CUDA execution or benchmark planning.
+    next_action: Stage 5Z prime-minus-one contract and Stage 5AA synthetic parity records feed Stage 5AC through the Stage 5AB stale-doc repair gate before any bounded-p56 CUDA execution or benchmark planning.
     solve_claim: false
     notes: Stage 5X is no-GPU Python-reference native parity only. The bounded p56 hash comparison is not full p56 parity, not performance evidence, and not solve evidence.
   - record_type: method_family_status_record
@@ -438,7 +438,7 @@ records:
     completed_stage_refs: [stage-0a-0e, stage-2a-2j, stage-3w, stage-4h, stage-4i, stage-4j, stage-4k, stage-4l, stage-4m, stage-4n, stage-4o, stage-4p, stage-4q, stage-5a, stage-5b, stage-5c, stage-5d, stage-5e, stage-5f, stage-5g, stage-5h, stage-5i, stage-5j, stage-5k, stage-5l, stage-5m, stage-5n, stage-5o, stage-5p, stage-5q, stage-5r, stage-5s, stage-5t, stage-5u, stage-5v, stage-5w, stage-5x, stage-5y]
     reopen_conditions: [CPU batch transform API, scorer consolidation, observation-review gates, source-lock reproducibility records, promotion-ledger records, image-preflight controls, positive-control readiness records, Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, Stage 5A target plans, Stage 5B harness records, Stage 5C build/device records, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, Stage 5F synthetic parity records, Stage 5G reporting/device-code subset records, Stage 5H Gematria mod-29 contract records, Stage 5I Gematria CUDA preparation records, Stage 5J kernel/parity records, Stage 5K reporting/preflight records, Stage 5L token mappings/native hashes, Stage 5M solved-fixture CUDA parity records, Stage 5N reporting/gate records, Stage 5O repeat/result-store preflight records, Stage 5P result-store integration records, Stage 5Q expansion candidate records, Stage 5R expanded parity records, Stage 5S compact integration records, Stage 5T readiness matrix records, Stage 5U Candidate Batch ABI records, Stage 5V native conformance fixtures, Stage 5W prime-minus-one native contract records, Stage 5X prime-minus-one native parity records, Stage 5Y prime-minus-one native reporting/readiness records, transform-and-score parity tests, explicit implementation scope, and explicit future-stage approval are complete.]
     stop_conditions: [No GPU kernels before CPU reference behaviour and parity tests.]
-    next_action: Stage 5AB prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight is selected; broader CUDA kernels and benchmarks remain blocked.
+    next_action: Stage 5AC is selected from the Stage 5AA outcome after Stage 5AB stale-doc repair; broader CUDA kernels and benchmarks remain blocked.
     solve_claim: false
     notes: Existing CUDA is scaffold/smoke infrastructure only unless code says otherwise; Stage 4H through Stage 5D did not add CUDA kernels.
   - record_type: method_family_status_record
@@ -449,7 +449,7 @@ records:
     completed_stage_refs: [stage-5w, stage-5x, stage-5y]
     reopen_conditions: [A future Stage 5Z contract preparation stage needs prime-minus-one parity report records, result-store integration, score-summary integration, generated-body policy, full-p56 blocker preservation, CUDA contract readiness gate records, or bounded scored-experiment readiness records.]
     stop_conditions: [Do not run CUDA execution, add kernels, modify CUDA source, run native parity, run native/CUDA CMake, benchmark, execute full p56 without a committed full token buffer, process raw data, publish generated bodies, upgrade method status to solved, or make solve claims.]
-    next_action: Stage 5Z contract preparation and Stage 5AA completed synthetic-only implementation feed Stage 5AB reporting/preflight while p56/full-p56, scored experiments, and benchmarks remain blocked.
+    next_action: Stage 5Z contract preparation and Stage 5AA completed synthetic-only implementation feed Stage 5AC through Stage 5AB staleness guardrails while p56/full-p56, scored experiments, and benchmarks remain blocked.
     solve_claim: false
     notes: Stage 5Y readiness means contract-preparation readiness only. It is not permission for prime-minus-one CUDA implementation or full p56 execution.
   - record_type: method_family_status_record
@@ -458,9 +458,9 @@ records:
     status: infrastructure_only
     evidence_summary: Stage 5Z consumes Stage 5Y compact reporting/readiness records and prepares prime-minus-one CUDA contract, CUDA-C kernel ABI, host-runner, buffer, validation-vector, future parity, result-store compatibility, full-p56 blocker, scored-experiment deferral, implementation-readiness, and next-stage decision metadata while preserving full p56 and scored-experiment blockers; Stage 5AA consumes that contract for one synthetic-only CUDA parity implementation.
     completed_stage_refs: [stage-5w, stage-5x, stage-5y, stage-5z, stage-5aa]
-    reopen_conditions: [A future Stage 5AB reporting/preflight stage needs Stage 5Z contract records, Stage 5AA synthetic parity records, full-p56 blocker preservation, result-store compatibility, and no-unsolved/no-benchmark guardrails before considering bounded-p56 CUDA parity preflight.]
+    reopen_conditions: [A future Stage 5AC scoped prompt needs Stage 5Z contract records, Stage 5AA synthetic parity records, Stage 5AB staleness-gate records, full-p56 blocker preservation, result-store compatibility, and no-unsolved/no-benchmark guardrails before considering any bounded-p56 CUDA parity preflight.]
     stop_conditions: [Do not run CUDA execution, add kernels in Stage 5Z, modify CUDA source in Stage 5Z, run native parity, run native/CUDA CMake, benchmark, execute full p56 without a committed full token buffer, process raw data, publish generated bodies, commit codex-output, upgrade method status to solved, or make solve claims.]
-    next_action: Stage 5AA synthetic parity is complete; Stage 5AB prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight is selected; p56/full-p56 execution, unsolved pages, benchmarks, scored experiments, generated bodies, website expansion, method-status upgrades, and solve claims remain blocked.
+    next_action: Stage 5AA synthetic parity is complete; Stage 5AB repaired stale operational docs and selected Stage 5AC from that outcome; p56/full-p56 execution, unsolved pages, benchmarks, scored experiments, generated bodies, website expansion, method-status upgrades, and solve claims remain blocked.
     solve_claim: false
     notes: Stage 5Z readiness is contract preparation only. It is not CUDA execution permission, not full p56 parity, and not scored-experiment approval.
   - record_type: method_family_status_record
@@ -469,8 +469,19 @@ records:
     status: infrastructure_only
     evidence_summary: Stage 5AA implements and runs only the Stage 5Z synthetic validation vector through `prime_minus_one_stream_kernel_v0`, matches the Stage 5Z expected hash, audits the CUDA-facing files, records compact result-store preflight metadata, preserves p56/full-p56 blockers, and defers scored experiments and benchmarks.
     completed_stage_refs: [stage-5w, stage-5x, stage-5y, stage-5z, stage-5aa]
-    reopen_conditions: [A future Stage 5AB reporting/preflight stage needs synthetic CUDA parity records, result-store preflight records, p56/full-p56 blocker records, scored-experiment deferral records, and no-unsolved/no-benchmark guardrails before considering bounded-p56 CUDA parity preflight.]
+    reopen_conditions: [A future Stage 5AC scoped prompt needs synthetic CUDA parity records, Stage 5AB staleness-gate records, result-store preflight records, p56/full-p56 blocker records, scored-experiment deferral records, and no-unsolved/no-benchmark guardrails before considering any bounded-p56 CUDA parity preflight.]
     stop_conditions: [Do not run p56/full-p56 CUDA, unsolved pages, broad solved fixtures, scored experiments, GPU benchmarks, raw data, generated-body publication, website expansion, method-status upgrades to solved, canonical corpus activation, page-boundary finalisation, or solve claims.]
-    next_action: Stage 5AB prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight.
+    next_action: Stage 5AC selected from the Stage 5AA outcome after Stage 5AB stale-doc repair.
     solve_claim: false
     notes: Stage 5AA synthetic parity is correctness metadata only and is not performance evidence or p56 execution permission.
+  - record_type: method_family_status_record
+    method_family_id: document_staleness_detection
+    name: Operational document staleness detection
+    status: infrastructure_only
+    evidence_summary: Stage 5AB adds a source-of-truth driven operational Markdown staleness scanner with dynamic stage parsing, current/next-stage checks, website deferral checks, stale CUDA-cap detection, and CI consistency integration.
+    completed_stage_refs: [stage-5ab]
+    reopen_conditions: [A future stage changes current/next-stage policy, adds new operational source-of-truth docs, or introduces new generated/raw path classes that must be reflected in the operational file map.]
+    stop_conditions: [Do not hide stale operational claims by editing historical logs, do not schedule website expansion as Stage 6, do not commit generated staleness reports or codex-output handoffs, and do not treat documentation repair as CUDA execution or solve evidence.]
+    next_action: Stage 5AC must cite Stage 5AB source-of-truth and operational-file-map records before changing current-stage or next-stage claims.
+    solve_claim: false
+    notes: Stage 5AB reduced stale operational findings from 16 to 0 and selected Stage 5AC from the Stage 5AA outcome after stale-doc repair.

@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AB Markdown Staleness Detection
+
+Stage 5AB is not a cryptanalytic experiment. It adds dynamic document staleness checks, source-of-truth records, operational file-map records, generated ignored staleness reports, and stale-doc repairs only.
+
+Generated Stage 5AB staleness reports remain ignored under `experiments/results/doc-staleness/stage5ab/`. Stage 5AB must keep native execution, CUDA execution, CUDA source modification, new kernels, p56/full-p56 execution, scored experiments, benchmarks, raw-data processing, generated-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades, and solve claims disabled.
+
 ## Stage 5AA Prime-Minus-One CUDA Synthetic Parity
 
 Stage 5AA is not a cryptanalytic experiment. It adds a synthetic-only CUDA kernel path for `stage5z-validation-synthetic-prime-control-v0`, records the CUDA run/parity metadata, and keeps generated reports ignored under `experiments/results/prime-minus-one-cuda-synthetic/stage5aa/`.

@@ -1,0 +1,90 @@
+record_type: doc_staleness_finding_record
+schema: schemas/project-state/doc-staleness-finding-record-v0.schema.json
+stage_id: stage-5ab
+scan_phase: before_repair
+finding_count: 16
+post_repair_finding_count: 0
+post_repair_scanned_paths: 26
+strict_check_after_repair: passed
+notes: Pre-repair findings are preserved as a compact historical record. Generated full scan reports remain ignored under experiments/results/doc-staleness/stage5ab/.
+findings:
+  - rule_id: stale_existing_cuda_code_cap
+    path: README.md
+    line: 39
+    message: Current Existing CUDA code cap omitted the latest completed stage or used brittle only wording.
+    excerpt: Existing CUDA code was capped by a brittle current-state sentence.
+  - rule_id: website_stage6_deferral
+    path: README.md
+    line: 50
+    message: Website expansion must be deferred to a future unnumbered project, not Stage 6.
+    excerpt: Website expansion is deferred to Stage 6.
+  - rule_id: stale_next_stage_claim
+    path: README.md
+    line: 265
+    message: Next-stage claim pointed to Stage 5AB instead of Stage 5AC.
+    excerpt: Next-stage text still pointed to Stage 5AB.
+  - rule_id: stale_current_stage_claim
+    path: STATUS.md
+    line: 5
+    message: Current-state claim pointed to Stage 5AA; expected Stage 5AB.
+    excerpt: Stage 5AA was still presented as the latest completed stage.
+  - rule_id: stale_current_stage_claim
+    path: STATUS.md
+    line: 5
+    message: Current-state claim included stale Stage 5AB implementation wording.
+    excerpt: Current-state text mixed Stage 5AA and Stage 5AB meanings.
+  - rule_id: stale_current_stage_claim
+    path: AGENTS.md
+    line: 61
+    message: Current completed stage claimed Stage 5AA; expected Stage 5AB.
+    excerpt: Current completed stage was stale.
+  - rule_id: stale_current_stage_claim
+    path: AGENTS.md
+    line: 63
+    message: Current work claimed Stage 5AB; expected Stage 5AC.
+    excerpt: Current work was stale after the quality gate.
+  - rule_id: stale_current_stage_claim
+    path: AGENTS.md
+    line: 63
+    message: Current work line contained stale Stage 5AA implementation state.
+    excerpt: Current work mixed historical and active stage state.
+  - rule_id: stale_current_stage_claim
+    path: AGENTS.md
+    line: 63
+    message: Current work line contained stale Stage 5Z state.
+    excerpt: Current work mixed historical and active stage state.
+  - rule_id: stale_existing_cuda_code_cap
+    path: AGENTS.md
+    line: 77
+    message: Current Existing CUDA code cap omitted the latest completed stage or used brittle only wording.
+    excerpt: Existing CUDA code boundary was stale.
+  - rule_id: stale_existing_cuda_code_cap
+    path: CUDA_NOTES.md
+    line: 67
+    message: Current Existing CUDA code cap omitted the latest completed stage or used brittle only wording.
+    excerpt: Existing CUDA code boundary was stale.
+  - rule_id: website_stage6_deferral
+    path: BENCHMARKS.md
+    line: 79
+    message: Website expansion must be deferred to a future unnumbered project, not Stage 6.
+    excerpt: Website expansion was still scheduled as Stage 6.
+  - rule_id: stale_current_stage_claim
+    path: docs/roadmap/staged-plan.md
+    line: 9
+    message: Latest completed stage claimed Stage 5AA; expected Stage 5AB.
+    excerpt: Latest completed stage was stale.
+  - rule_id: stale_current_stage_claim
+    path: docs/roadmap/staged-plan.md
+    line: 10
+    message: Current planning focus claimed Stage 5AB; expected Stage 5AC.
+    excerpt: Current planning focus was stale.
+  - rule_id: stale_current_stage_claim
+    path: docs/onboarding/start-here.md
+    line: 13
+    message: Latest completed stage claimed Stage 5S; expected Stage 5AB.
+    excerpt: Onboarding current state was stale.
+  - rule_id: stale_current_stage_claim
+    path: docs/onboarding/start-here.md
+    line: 14
+    message: Current planning focus claimed Stage 5M; expected Stage 5AC.
+    excerpt: Onboarding current planning focus was stale.

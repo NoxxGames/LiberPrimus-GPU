@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AA - prime-minus-one CUDA synthetic kernel implementation and parity.
+Current completed stage: Stage 5AB - markdown staleness detection hardening and stale-doc repair.
 
-Current work: Stage 5AB - prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight. Stage 5AA implemented and ran only the Stage 5Z synthetic prime-minus-one validation vector; it did not authorize p56/full-p56 CUDA, unsolved-page CUDA, benchmarking, scored experiments, generated-body publication, method-status upgrades, website expansion, or broad CUDA implementation.
+Current work: Stage 5AC - selected from Stage 5AA outcome after stale-doc repair. Stage 5AB repaired stale operational docs and hardened staleness detection; it did not authorize p56/full-p56 CUDA, unsolved-page CUDA, benchmarking, scored experiments, generated-body publication, method-status upgrades, website expansion, CUDA source changes, or broad CUDA implementation.
 
 Current project state:
 
@@ -68,7 +68,7 @@ Current project state:
 - Page boundaries: reviewable.
 - Broad unsolved-page campaigns: not started.
 - CUDA: deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
-- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel`, Stage 5M host-runner plumbing for exact solved-fixture parity, Stage 5O repeat verification metadata, Stage 5P result-store integration metadata, Stage 5Q expansion candidate metadata, Stage 5R controlled expanded solved-fixture parity metadata, Stage 5S compact integration/reporting metadata, Stage 5T solved-family readiness metadata, Stage 5U Candidate Batch ABI contract metadata, Stage 5V native no-GPU conformance metadata, Stage 5W prime-minus-one native contract metadata, Stage 5X no-GPU Python-reference prime-minus-one native parity metadata, Stage 5Y prime-minus-one compact reporting/readiness metadata, Stage 5Z prime-minus-one CUDA contract metadata, and the Stage 5AA synthetic-only `prime_minus_one_stream_kernel_v0` path unless code and tests say otherwise.
+- Existing CUDA code and metadata are summarized by the latest staged-plan and CUDA notes; broad CUDA and unsolved-page CUDA remain blocked unless an explicit future prompt scopes them with CPU references, parity tests, result records, and benchmark plans.
 - Stage 5C CUDA build/device metadata is readiness infrastructure only; no-GPU CI, compatibility 8GB, and optional local 16GB profiles must remain explicit and smoke-build status is not parity or performance evidence.
 - Stage 5D native CPU backend records are readiness infrastructure only; C++ must remain a deterministic CPU execution plane, Python remains orchestration, and diagnostic timings are not speedup claims.
 - Do not let C++ launch Python worker scripts.
@@ -910,6 +910,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 5AA preserves `blocked_full_p56_token_buffer_missing`; bounded-p56 CUDA parity needs Stage 5AB preflight before any execution.
 - Stage 5AA generated reports under `experiments/results/prime-minus-one-cuda-synthetic/stage5aa/` and `codex-output/**` handoffs remain ignored and must not be staged.
 - Stage 5AA selects Stage 5AB prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight when the synthetic hash matches.
+
+## Stage 5AB Document Staleness Hardening Rules
+
+- Stage 5AB is a process-quality and stale-doc repair stage, not CUDA execution.
+- Operational docs must treat Stage 5AB as the latest completed stage and Stage 5AC as the next selected work after stale-doc repair.
+- Use `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml` and `data/project-state/operational-file-map.yaml` when checking current/next-stage text.
+- Website expansion is deferred to a future unnumbered project, not Stage 6.
+- Missing optional generated staleness reports are not evidence; generated reports under `experiments/results/doc-staleness/stage5ab/` and `codex-output/**` handoffs remain ignored and must not be staged.
+- Stage 5AB must not run native/CUDA execution, modify CUDA source, add kernels, run benchmarks, execute scored experiments, process raw data, publish generated bodies, upgrade method status, or make solve claims.
 
 ## Stage 3W State Consolidation Rules
 

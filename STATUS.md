@@ -2,7 +2,17 @@
 
 ## Current stage
 
-Stage 5AA prime-minus-one CUDA synthetic kernel implementation and parity is complete. Next recommended prompt: Stage 5AB - prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight. Website expansion is deferred to a future unnumbered project, not Stage 6.
+Stage 5AB markdown staleness detection hardening and stale-doc repair is complete.
+
+Next recommended prompt: Stage 5AC - selected from Stage 5AA outcome after stale-doc repair. Website expansion is deferred to a future unnumbered project.
+
+## Completed in Stage 5AB
+
+Stage 5AB added dynamic stage parsing, source-of-truth records, an operational file map, operational Markdown staleness scanning, current/next-stage consistency checks, website-deferral rules, stale CUDA-cap detection, generated ignored staleness reports, CLI integration, tests, documentation, tutorial/wiki-source updates, research-synthesis updates, consistency integration, and a detailed ignored Codex completion handoff.
+
+Local Stage 5AB summary: operational files scanned `26`, stale findings before repair `16`, stale findings after repair `0`, repaired operational docs recorded in `data/project-state/stage5ab-doc-staleness-findings.yaml`, source-of-truth record `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`, dynamic parser status `passed`, selected next prompt `Stage 5AC - selected from Stage 5AA outcome after stale-doc repair`, Deep Research recommended next `false`, CUDA execution `false`, CUDA source modified `false`, new CUDA kernels added `0`, benchmarks `false`, scored experiments `false`, website expansion `false`, raw data processed `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5AB is a quality gate. It does not run native/CUDA execution, modify CUDA source, add kernels, run benchmarks, execute scored experiments, process raw data, expand the website, publish generated bodies, upgrade method status, or make a solve claim.
 
 ## Completed in Stage 5AA
 

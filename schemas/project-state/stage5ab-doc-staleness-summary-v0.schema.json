@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/project-state/stage5ab-doc-staleness-summary-v0.schema.json",
+  "title": "Stage 5AB Doc Staleness Summary",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "status",
+    "stale_findings_before_repair",
+    "stale_findings_after_repair",
+    "dynamic_stage_parser",
+    "next_selected_stage",
+    "cuda_execution_performed",
+    "cuda_source_modified",
+    "new_cuda_kernels_added",
+    "benchmark_performed",
+    "scored_experiments_executed",
+    "website_expansion_performed",
+    "raw_data_processed",
+    "generated_outputs_committed",
+    "codex_output_committed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5ab_doc_staleness_summary" },
+    "stage_id": { "const": "stage-5ab" },
+    "status": { "const": "complete" },
+    "stale_findings_before_repair": { "type": "integer", "minimum": 0 },
+    "stale_findings_after_repair": { "const": 0 },
+    "dynamic_stage_parser": { "const": "passed" },
+    "next_selected_stage": {
+      "const": "Stage 5AC - selected from Stage 5AA outcome after stale-doc repair"
+    },
+    "deep_research_recommended_next": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "benchmark_performed": { "const": false },
+    "scored_experiments_executed": { "const": false },
+    "website_expansion_performed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "codex_output_committed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

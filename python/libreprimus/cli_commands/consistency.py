@@ -112,6 +112,53 @@ def consistency_check_state_drift(
     _run_consistency_cli(["state_drift"], out=out, allow_warnings=allow_warnings)
 
 
+@consistency_app.command("check-doc-staleness")
+def consistency_check_doc_staleness(
+    repo_root_path: Path = typer.Option(Path("."), "--repo-root", help="Repository root to scan."),
+    source_of_truth: Path = typer.Option(
+        Path("data/project-state/stage5ab-doc-staleness-source-of-truth.yaml"),
+        "--source-of-truth",
+        help="Document-staleness source-of-truth YAML.",
+    ),
+    output_format: str = typer.Option("text", "--format", help="Output format: text, json, or jsonl."),
+    write_report: Path | None = typer.Option(None, "--write-report", help="Generated JSON findings report path."),
+    strict: bool = typer.Option(False, "--strict", help="Return failure when findings are present."),
+) -> None:
+    """Run dynamic operational Markdown staleness checks."""
+
+    from libreprimus.doc_staleness.export import write_report_bundle
+    from libreprimus.doc_staleness.scanner import scan_repository
+
+    base = repo_root_path.resolve()
+    scan = scan_repository(root=base, source_of_truth_path=source_of_truth)
+    if write_report is not None:
+        write_report_bundle(scan, _resolve_output_path(write_report))
+    payload = {
+        "summary": scan.summary_dict(),
+        "findings": [finding.to_dict() for finding in scan.findings],
+    }
+    if output_format == "json":
+        print(json.dumps(payload, indent=2, sort_keys=True))
+    elif output_format == "jsonl":
+        for finding in scan.findings:
+            print(json.dumps(finding.to_dict(), sort_keys=True))
+    elif output_format == "text":
+        console.print(f"doc_staleness_scanned_paths={len(scan.scanned_paths)}")
+        console.print(f"doc_staleness_findings={scan.finding_count}")
+        console.print(f"doc_staleness_warnings={len(scan.warnings)}")
+        for finding in scan.findings:
+            console.print(
+                f"[red]{finding.rule_id}:{finding.path}:{finding.line}: "
+                f"{finding.message}[/red]"
+            )
+    else:
+        console.print(f"[red]Unsupported format: {output_format}[/red]")
+        raise typer.Exit(2)
+    if scan.finding_count and strict:
+        raise typer.Exit(1)
+    console.print("doc_staleness_valid=true")
+
+
 @consistency_app.command("check-ignored-outputs")
 def consistency_check_ignored_outputs(
     allow_warnings: bool = typer.Option(False, "--allow-warnings", help="Return success despite warnings."),

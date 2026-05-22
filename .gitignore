@@ -659,5 +659,13 @@ experiments/results/prime-minus-one-cuda-synthetic/**
 !experiments/results/prime-minus-one-cuda-synthetic/stage5aa/
 !experiments/results/prime-minus-one-cuda-synthetic/stage5aa/.gitkeep
 
+# Generated document staleness reports
+experiments/results/doc-staleness/**
+!experiments/results/doc-staleness/
+!experiments/results/doc-staleness/README.md
+!experiments/results/doc-staleness/.gitkeep
+!experiments/results/doc-staleness/stage5ab/
+!experiments/results/doc-staleness/stage5ab/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

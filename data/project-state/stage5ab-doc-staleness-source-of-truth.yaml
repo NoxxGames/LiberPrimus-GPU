@@ -1,0 +1,24 @@
+record_type: doc_staleness_source_of_truth_record
+schema: schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json
+stage_id: stage-5ab
+latest_completed_stage_after_this_stage: Stage 5AB - markdown staleness detection hardening and stale-doc repair
+latest_completed_stage_prefix: Stage 5AB
+next_stage_after_this_stage: Stage 5AC - selected from Stage 5AA outcome after stale-doc repair
+expected_next_stage_prefix: Stage 5AC
+latest_previous_stage: Stage 5AA - prime-minus-one CUDA synthetic kernel implementation and parity
+user_override_reason: Stale operational Markdown was detected after Stage 5AA completed; Stage 5AB repairs the source-of-truth layer before the next implementation prompt.
+website_expansion_status: deferred_future_unnumbered_project
+scored_experiments_status: deferred_manifest_gate_required
+unsolved_page_cuda_status: blocked
+canonical_corpus_status: inactive
+page_boundaries_status: reviewable
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernels_added: 0
+benchmark_performed: false
+scored_experiments_executed: false
+website_expansion_performed: false
+raw_data_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+solve_claim: false

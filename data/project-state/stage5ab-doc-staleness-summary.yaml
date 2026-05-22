@@ -1,0 +1,36 @@
+record_type: stage5ab_doc_staleness_summary
+schema: schemas/project-state/stage5ab-doc-staleness-summary-v0.schema.json
+stage_id: stage-5ab
+status: complete
+starting_commit: 84fee801e934acc443f21d3cda335874a04d73b4
+source_of_truth_record: data/project-state/stage5ab-doc-staleness-source-of-truth.yaml
+operational_file_map: data/project-state/operational-file-map.yaml
+findings_record: data/project-state/stage5ab-doc-staleness-findings.yaml
+operational_files_scanned: 26
+stale_findings_before_repair: 16
+stale_findings_after_repair: 0
+warnings_after_repair: 0
+dynamic_stage_parser: passed
+operational_vs_historical_context: passed
+website_deferral_rule: passed
+current_next_stage_rule: passed
+stale_cuda_cap_rule: passed
+ci_integration: added
+next_selected_stage: Stage 5AC - selected from Stage 5AA outcome after stale-doc repair
+deep_research_recommended_next: false
+website_expansion_status: deferred_future_unnumbered_project
+scored_experiments_status: deferred_manifest_gate_required
+unsolved_page_cuda_status: blocked
+canonical_corpus_status: inactive
+page_boundaries_status: reviewable
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernels_added: 0
+benchmark_performed: false
+scored_experiments_executed: false
+website_expansion_performed: false
+raw_data_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+solve_claim: false
+notes: Stage 5AB repaired stale operational Markdown after Stage 5AA and added dynamic staleness checks without changing CUDA source, running CUDA/native execution, benchmarking, processing raw data, publishing generated outputs, or making a solve claim.
