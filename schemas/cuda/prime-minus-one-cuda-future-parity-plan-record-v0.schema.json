@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-future-parity-plan-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Future Parity Plan Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "future_parity_plan_record_id", "future_stage_title", "readiness_status", "execution_enabled", "no_solve_claim", "solve_claim", "cuda_execution_performed", "cuda_source_modified", "new_cuda_kernels_added"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_future_parity_plan_record" },
+    "stage_id": { "const": "stage-5z" },
+    "execution_enabled": { "const": false },
+    "cuda_execution_allowed": { "const": false },
+    "benchmark_allowed": { "const": false },
+    "unsolved_page_scope_allowed": { "const": false },
+    "generated_body_publication_allowed": { "const": false },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false }
+  }
+}

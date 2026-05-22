@@ -112,6 +112,14 @@ scored-experiment readiness, guardrails, next-stage decisions, CLI build/validat
 ignored-output/codex-output checks for
 `experiments/results/prime-minus-one-native-reporting/stage5y/` and `codex-output/`.
 
+Stage 5Z extends coverage with prime-minus-one CUDA contract schemas, CUDA-C style kernel ABI
+records, host-runner contract records, buffer contract records, validation-vector records,
+future-parity plan records, result-store compatibility records, full-p56 blocker records,
+scored-experiment deferral records, implementation-readiness gates, next-stage decisions, CLI
+build/validate checks, guardrail rejection tests for CUDA execution/source changes/kernels/solve
+claims, and ignored-output/codex-output checks for
+`experiments/results/prime-minus-one-cuda-contract/stage5z/` and `codex-output/`.
+
 Stage 5F extends coverage with synthetic CUDA kernel implementation schemas, no-GPU-safe build
 records, optional local synthetic parity records, C++/CUDA synthetic parity tests, CLI
 build/validate/summary checks, validation rejections for real Liber Primus data, benchmarking,

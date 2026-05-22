@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-kernel-abi-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Kernel ABI Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "kernel_abi_record_id", "kernel_id", "abi_status", "cuda_c_style_subset", "forbidden_cuda_features", "no_solve_claim", "solve_claim", "cuda_kernel_implemented", "cuda_execution_performed", "cuda_source_modified", "new_cuda_kernels_added"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_kernel_abi_record" },
+    "stage_id": { "const": "stage-5z" },
+    "cuda_c_style_subset": { "const": true },
+    "host_runner_implemented": { "const": false },
+    "cuda_kernel_implemented": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "implementation_allowed": { "const": false },
+    "cuda_execution_allowed": { "const": false },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "gpu_benchmark_performed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false }
+  }
+}

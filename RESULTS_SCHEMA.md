@@ -1312,3 +1312,22 @@ Stage 5A adds CUDA planning schemas:
 - `cuda-planning-summary-v0`
 
 These records require planning-only/no-solve flags and reject CUDA implementation, GPU benchmark, speedup claim, raw-data, generated-output, canonical-corpus, and page-boundary drift.
+
+# Stage 5Z Prime-Minus-One CUDA Contract Schemas
+
+Stage 5Z adds prime-minus-one CUDA contract schemas:
+
+- `prime-minus-one-cuda-contract-record-v0`
+- `prime-minus-one-cuda-kernel-abi-record-v0`
+- `prime-minus-one-cuda-host-runner-contract-record-v0`
+- `prime-minus-one-cuda-buffer-contract-record-v0`
+- `prime-minus-one-cuda-validation-vector-record-v0`
+- `prime-minus-one-cuda-future-parity-plan-record-v0`
+- `prime-minus-one-cuda-result-store-compatibility-record-v0`
+- `prime-minus-one-cuda-full-p56-blocker-record-v0`
+- `prime-minus-one-scored-experiment-deferral-record-v0`
+- `prime-minus-one-cuda-implementation-readiness-gate-record-v0`
+- `prime-minus-one-cuda-next-stage-decision-record-v0`
+- `stage5z-prime-minus-one-cuda-contract-summary-v0`
+
+These records require contract-only/no-solve flags and reject native execution, CUDA execution, CUDA source modification, new CUDA kernels, GPU benchmarks, speedup claims, raw-data processing, generated-output publication, codex-output publication, canonical-corpus activation, and page-boundary finalisation.

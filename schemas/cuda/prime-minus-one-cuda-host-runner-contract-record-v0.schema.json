@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-host-runner-contract-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Host Runner Contract Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "host_runner_contract_record_id", "host_runner_status", "no_solve_claim", "solve_claim", "host_runner_implemented", "cuda_execution_performed", "cuda_source_modified", "new_cuda_kernels_added"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_host_runner_contract_record" },
+    "stage_id": { "const": "stage-5z" },
+    "host_runner_implemented": { "const": false },
+    "cxx_launches_python_workers": { "const": false },
+    "cxx_backend_implemented": { "const": false },
+    "cuda_host_runner_implemented": { "const": false },
+    "generated_body_publication_allowed": { "const": false },
+    "cuda_execution_allowed": { "const": false },
+    "benchmark_allowed": { "const": false },
+    "implementation_allowed": { "const": false },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false }
+  }
+}

@@ -1,0 +1,26 @@
+manifest_id: stage5z-prime-minus-one-cuda-contract
+stage_id: stage-5z
+purpose: contract_preparation_only
+family_id: prime_minus_one_stream
+candidate_batch_abi_id: candidate_batch_abi_v0
+source_stage_id: stage-5y
+source_native_contract_id: prime_minus_one_stream_native_contract_v0
+cpu_only: true
+cuda_required: false
+cuda_used: false
+cuda_execution_enabled: false
+native_execution_enabled: false
+cuda_source_changes_allowed: false
+new_cuda_kernel_allowed: false
+benchmark_execution_allowed: false
+unsolved_page_scope_allowed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+no_solve_claim: true
+solve_claim: false
+notes:
+  - Stage 5Z records CUDA contract metadata only.
+  - Full-p56 fixture CUDA remains blocked until a committed full p56 token buffer and explicit future scope exist.
+  - Scored experiments remain manifest-gated and are not executed by this manifest.

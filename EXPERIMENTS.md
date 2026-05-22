@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5Z Prime-Minus-One CUDA Contract
+
+Stage 5Z is not a cryptanalytic experiment. It consumes committed Stage 5Y compact reporting/readiness records and writes prime-minus-one CUDA contract, kernel ABI, host-runner contract, buffer contract, validation-vector, future parity plan, result-store compatibility, full-p56 blocker, scored-experiment deferral, implementation-readiness, next-stage decision, and summary metadata under `data/cuda/`.
+
+Generated Stage 5Z reports remain ignored under `experiments/results/prime-minus-one-cuda-contract/stage5z/`. Stage 5Z must keep native execution, CUDA execution, native/CUDA CMake, CUDA source modification, new kernels, full p56 execution, p56 fixture CUDA execution, scored experiments, GPU benchmarks, speedup claims, unsolved-page CUDA, broad solved-fixture CUDA, generated-result-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades to solved, and solve claims disabled.
+
 ## Stage 5X Prime-Minus-One Native Parity
 
 Stage 5X is not a broad cryptanalytic experiment. It executes only the Stage 5W ready synthetic control and bounded p56 no-GPU Python-reference mappings, compares their output-token hashes against Stage 5W expectations, and writes compact parity/preflight metadata under `data/cuda/`.

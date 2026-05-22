@@ -10,3 +10,6 @@ The gate can mark contract preparation ready when:
 - The full p56 blocker remains explicit.
 
 The gate never authorizes CUDA execution, CUDA source changes, new kernels, benchmarks, unsolved-page CUDA, real Liber Primus CUDA data use, generated-body publication, or solve claims.
+# Stage 5Z Follow-Up
+
+The readiness gate is consumed by Stage 5Z to create contract records, kernel ABI records, host-runner contracts, buffer contracts, validation vectors, result-store compatibility records, full-p56 blocker records, scored-experiment deferral records, and a Stage 5AA next-stage decision. Readiness remains contract-only.

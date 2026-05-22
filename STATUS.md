@@ -2,7 +2,15 @@
 
 ## Current stage
 
-Stage 5Y prime-minus-one native parity reporting and CUDA contract readiness gate is complete. Next recommended prompt: Stage 5Z - prime-minus-one CUDA contract preparation. Website expansion is deferred to Stage 6.
+Stage 5Z prime-minus-one CUDA contract preparation is complete. Next recommended prompt: Stage 5AA - prime-minus-one CUDA synthetic kernel implementation and parity. Website expansion is deferred to Stage 6.
+
+## Completed in Stage 5Z
+
+Stage 5Z added the `libreprimus prime-minus-one-cuda-contract` CLI, CUDA contract records, CUDA-C style kernel ABI records, host-runner contract records, buffer contract records, validation-vector records, future parity plan records, result-store compatibility records, full-p56 blocker records, scored-experiment deferral records, implementation-readiness gate records, next-stage decision records, Stage 5Z manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
+
+Local Stage 5Z summary: contract records `2`, kernel ABI records `1`, host-runner contract records `1`, buffer contract records `11`, validation-vector records `7`, future parity plan records `4`, result-store compatibility records `2`, full-p56 blocker records `1`, scored-experiment deferral records `6`, implementation-readiness gate records `1`, next-stage decision records `7`, implementation readiness `ready_for_synthetic_cuda_kernel_implementation_contract_only`, full-p56 blocker `blocked_full_p56_token_buffer_missing`, scored-experiment deferral `deferred_manifest_gate_required`, selected next prompt `Stage 5AA - prime-minus-one CUDA synthetic kernel implementation and parity`, Deep Research recommended next `false`, native execution performed `false`, CUDA execution performed `false`, CUDA source modified `false`, new CUDA kernels added `0`, unsolved-page CUDA used `false`, real Liber Primus CUDA data used `false`, GPU benchmark performed `false`, speedup/performance assertions `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5Z consumes Stage 5Y records but does not run native parity or CUDA. It prepares a future synthetic-only prime-minus-one CUDA implementation contract, preserves the full p56 blocker until a complete committed token buffer is explicitly scoped, and keeps scored experiments deferred behind explicit manifest gates. Stage 5Z is contract infrastructure only, not CUDA execution, not kernel implementation, not performance evidence, not website expansion, and not a solve claim.
 
 ## Completed in Stage 5Y
 

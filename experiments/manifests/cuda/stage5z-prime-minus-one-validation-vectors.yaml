@@ -1,0 +1,24 @@
+manifest_id: stage5z-prime-minus-one-validation-vectors
+stage_id: stage-5z
+purpose: validation_vector_contract_only
+family_id: prime_minus_one_stream
+source_stage_id: stage-5y
+cpu_only: true
+cuda_required: false
+cuda_used: false
+cuda_execution_enabled: false
+native_execution_enabled: false
+synthetic_vectors_only_for_future_stage: true
+p56_bounded_cuda_execution_allowed: false
+full_p56_cuda_execution_allowed: false
+unsolved_page_scope_allowed: false
+benchmark_execution_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+no_solve_claim: true
+solve_claim: false
+validation_vector_policy:
+  token_domain: 0..28
+  separators_advance_stream: false
+  output_hash_algorithm: sha256_canonical_json_v1
+  expected_stage5aa_scope: synthetic_only

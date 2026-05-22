@@ -1,0 +1,88 @@
+record_type: stage5z_prime_minus_one_cuda_contract_summary
+schema: schemas/cuda/stage5z-prime-minus-one-cuda-contract-summary-v0.schema.json
+stage_id: stage-5z
+status: complete
+source_stage_id: stage-5y
+candidate_batch_abi_id: candidate_batch_abi_v0
+source_native_contract_id: prime_minus_one_stream_native_contract_v0
+cuda_contract_records: 2
+kernel_abi_records: 1
+host_runner_contract_records: 1
+buffer_contract_records: 11
+validation_vector_records: 7
+future_parity_plan_records: 4
+result_store_compatibility_records: 2
+full_p56_blocker_records: 1
+scored_experiment_deferral_records: 6
+implementation_readiness_gate_records: 1
+next_stage_decision_records: 7
+expected_record_counts:
+  cuda_contract_records: 2
+  kernel_abi_records: 1
+  host_runner_contract_records: 1
+  buffer_contract_records: 11
+  validation_vector_records: 7
+  future_parity_plan_records: 4
+  result_store_compatibility_records: 2
+  full_p56_blocker_records: 1
+  scored_experiment_deferral_records: 6
+  implementation_readiness_gate_records: 1
+  next_stage_decision_records: 7
+contract_status: ready_for_synthetic_cuda_kernel_implementation_contract_only
+implementation_readiness_status: ready_for_synthetic_cuda_kernel_implementation_contract_only
+full_p56_blocker_status: blocked_full_p56_token_buffer_missing
+scored_experiment_deferral_status: deferred_manifest_gate_required
+selected_next_prompt: Stage 5AA - prime-minus-one CUDA synthetic kernel implementation
+  and parity
+selected_next_prompt_reason: Stage 5Z completes a source-backed prime-minus-one CUDA
+  contract, kernel ABI, host-runner boundary, buffer contract, and validation-vector
+  plan without implementation. The next safe engineering step is a synthetic-only
+  kernel implementation and parity stage, still excluding p56/full p56, unsolved pages,
+  benchmarks, generated-body publication, and solve claims.
+deep_research_recommended_next: false
+deep_research_recommended_next_reason: Codex synthetic-only kernel implementation
+  is selected before Deep Research.
+prime_minus_one_cuda_contract_preparation_complete: true
+future_synthetic_kernel_implementation_ready: true
+bounded_scored_experiment_deferred: true
+recommended_next_stage_title: Stage 5AA - prime-minus-one CUDA synthetic kernel implementation
+  and parity
+recommended_next_stage_reason: Stage 5Z completes a source-backed prime-minus-one
+  CUDA contract, kernel ABI, host-runner boundary, buffer contract, and validation-vector
+  plan without implementation. The next safe engineering step is a synthetic-only
+  kernel implementation and parity stage, still excluding p56/full p56, unsolved pages,
+  benchmarks, generated-body publication, and solve claims.
+recommended_next_prompt_type: Codex
+metadata_only: true
+contract_preparation_only: true
+no_solve_claim: true
+no_gpu_ci_safe: true
+native_execution_performed: false
+python_reference_execution_performed: false
+native_cpu_execution_performed: false
+host_runner_implemented: false
+cuda_kernel_implemented: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+device_kernel_arithmetic_modified: false
+gpu_benchmark_performed: false
+benchmark_execution_allowed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+unsolved_page_cuda_allowed: false
+real_liber_primus_cuda_data_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+codex_output_committed: false
+method_status_upgrade_allowed: false
+method_status_upgraded: false
+solve_claim: false
+ci_gpu_required: false
+local_16gb_profile_required: false
+cxx_launches_python_workers: false

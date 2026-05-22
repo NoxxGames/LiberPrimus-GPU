@@ -218,6 +218,15 @@ records:
     prohibited_expansions: [Native parity execution, CUDA execution, CUDA source changes, new kernels, native/CUDA CMake, GPU benchmarks, speedup claims, full p56 execution without committed token buffer, unsolved-page CUDA, generated-body publication, raw-data processing, method-status upgrades to solved, solve claims.]
     notes: Stage 5Y selected Stage 5Z prime-minus-one CUDA contract preparation as contract preparation only.
   - record_type: method_retirement_record
+    method_family_id: prime_minus_one_cuda_contract
+    retired_status: active_with_constraints
+    reason: Prime-minus-one CUDA contract preparation is active infrastructure only; it prepares a future synthetic-only kernel contract without authorizing CUDA execution, p56/full-p56 execution, scored experiments, benchmarks, generated-body publication, or method-status upgrades.
+    evidence: [Stage 5Z records 2 contract records, 1 kernel ABI record, 1 host-runner contract record, 11 buffer contract records, 7 validation-vector records, 4 future parity plan records, 2 result-store compatibility records, 1 full-p56 blocker record, 6 scored-experiment deferral records, 1 implementation-readiness gate record, and 7 next-stage decision records.]
+    stages_supporting: [stage-5w, stage-5x, stage-5y, stage-5z]
+    reopen_conditions: [A later Stage 5AA-style synthetic implementation stage cites Stage 5Z contract records and keeps p56/full-p56, unsolved pages, benchmarks, generated bodies, and scored experiments disabled unless a later explicit prompt scopes them.]
+    prohibited_expansions: [Native execution, CUDA execution in Stage 5Z, CUDA source modification in Stage 5Z, new kernels in Stage 5Z, native/CUDA CMake, GPU benchmarks, speedup claims, full p56 execution without committed token buffer, unsolved-page CUDA, generated-body publication, raw-data processing, method-status upgrades to solved, solve claims.]
+    notes: Stage 5Z selected Stage 5AA prime-minus-one CUDA synthetic kernel implementation and parity as synthetic-only first.
+  - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints
     reason: Stage 4B visual observations are useful review inputs, but broad visual pareidolia and unannotated dot/braille/constellation readings remain high-risk false-positive classes.

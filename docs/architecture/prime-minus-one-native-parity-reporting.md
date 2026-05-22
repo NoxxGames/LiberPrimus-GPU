@@ -16,3 +16,6 @@ Generated JSON reports are ignored under `experiments/results/prime-minus-one-na
 ## Policy
 
 Only compact hashes, status fields, source IDs, and gate decisions are committed. Generated result bodies, token arrays, raw data, SQLite databases, and `codex-output/**` handoffs remain ignored.
+# Stage 5Z Follow-Up
+
+Stage 5Z consumes these compact Stage 5Y reporting/readiness records and prepares the prime-minus-one CUDA contract. Stage 5Z does not rerun native parity, run CUDA, modify CUDA source, add kernels, benchmark, publish generated bodies, or make solve claims.

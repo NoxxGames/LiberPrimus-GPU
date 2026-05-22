@@ -1408,6 +1408,72 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5YSummary `
         --results-dir $Stage5YOut
 
+    Write-Host "Running Stage 5Z prime-minus-one CUDA contract temp output"
+    $Stage5ZOut = Join-Path $TempDir "stage5z-prime-minus-one-cuda-contract"
+    $Stage5ZContract = Join-Path $TempDir "stage5z-prime-minus-one-cuda-contract.yaml"
+    $Stage5ZKernel = Join-Path $TempDir "stage5z-prime-minus-one-cuda-kernel-abi.yaml"
+    $Stage5ZHost = Join-Path $TempDir "stage5z-prime-minus-one-cuda-host-runner-contract.yaml"
+    $Stage5ZBuffer = Join-Path $TempDir "stage5z-prime-minus-one-cuda-buffer-contract.yaml"
+    $Stage5ZVectors = Join-Path $TempDir "stage5z-prime-minus-one-cuda-validation-vectors.yaml"
+    $Stage5ZFuture = Join-Path $TempDir "stage5z-prime-minus-one-cuda-future-parity-plan.yaml"
+    $Stage5ZResult = Join-Path $TempDir "stage5z-prime-minus-one-cuda-result-store-compatibility.yaml"
+    $Stage5ZBlocker = Join-Path $TempDir "stage5z-prime-minus-one-cuda-full-p56-blocker.yaml"
+    $Stage5ZScored = Join-Path $TempDir "stage5z-prime-minus-one-scored-experiment-deferral.yaml"
+    $Stage5ZGate = Join-Path $TempDir "stage5z-prime-minus-one-cuda-implementation-readiness-gate.yaml"
+    $Stage5ZDecision = Join-Path $TempDir "stage5z-prime-minus-one-cuda-next-stage-decision.yaml"
+    $Stage5ZSummary = Join-Path $TempDir "stage5z-prime-minus-one-cuda-contract-summary.yaml"
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract build-contract-records `
+        --cuda-contract-out $Stage5ZContract --out-dir $Stage5ZOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract build-kernel-abi `
+        --kernel-abi-out $Stage5ZKernel --out-dir $Stage5ZOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract build-host-runner-contract `
+        --host-runner-contract-out $Stage5ZHost --out-dir $Stage5ZOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract build-buffer-contract `
+        --buffer-contract-out $Stage5ZBuffer --out-dir $Stage5ZOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract build-validation-vectors `
+        --validation-vectors-out $Stage5ZVectors --out-dir $Stage5ZOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract build-future-parity-plan `
+        --future-parity-plan-out $Stage5ZFuture --out-dir $Stage5ZOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract build-result-store-compatibility `
+        --result-store-compatibility-out $Stage5ZResult --out-dir $Stage5ZOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract build-full-p56-blocker `
+        --full-p56-blocker-out $Stage5ZBlocker --out-dir $Stage5ZOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract build-scored-experiment-deferral `
+        --scored-experiment-deferral-out $Stage5ZScored --out-dir $Stage5ZOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract build-implementation-readiness-gate `
+        --implementation-readiness-out $Stage5ZGate --out-dir $Stage5ZOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract build-next-stage-decision `
+        --next-stage-decision-out $Stage5ZDecision --out-dir $Stage5ZOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract build-summary `
+        --cuda-contract $Stage5ZContract `
+        --kernel-abi $Stage5ZKernel `
+        --host-runner-contract $Stage5ZHost `
+        --buffer-contract $Stage5ZBuffer `
+        --validation-vectors $Stage5ZVectors `
+        --future-parity-plan $Stage5ZFuture `
+        --result-store-compatibility $Stage5ZResult `
+        --full-p56-blocker $Stage5ZBlocker `
+        --scored-experiment-deferral $Stage5ZScored `
+        --implementation-readiness-gate $Stage5ZGate `
+        --next-stage-decision $Stage5ZDecision `
+        --summary-out $Stage5ZSummary `
+        --out-dir $Stage5ZOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-contract validate-stage5z `
+        --cuda-contract $Stage5ZContract `
+        --kernel-abi $Stage5ZKernel `
+        --host-runner-contract $Stage5ZHost `
+        --buffer-contract $Stage5ZBuffer `
+        --validation-vectors $Stage5ZVectors `
+        --future-parity-plan $Stage5ZFuture `
+        --result-store-compatibility $Stage5ZResult `
+        --full-p56-blocker $Stage5ZBlocker `
+        --scored-experiment-deferral $Stage5ZScored `
+        --implementation-readiness-gate $Stage5ZGate `
+        --next-stage-decision $Stage5ZDecision `
+        --summary $Stage5ZSummary `
+        --results-dir $Stage5ZOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

@@ -16,3 +16,6 @@ Stage 5X does not run CUDA, native C++ CMake, GPU benchmarks, raw page data, or 
 The bounded p56 record compares against the Stage 5W expected hash sourced from Stage 5L compact candidate-major metadata. That is not full p56 parity and is not solve evidence.
 
 Stage 5Y consumes these Stage 5X records for compact reporting and CUDA contract readiness gating only. It does not rerun native parity, execute CUDA, modify CUDA source, add kernels, benchmark, publish generated bodies, or clear the full-p56 blocker.
+# Stage 5Z Follow-Up
+
+Stage 5Z uses the Stage 5X/5Y compact parity surface as source metadata only. It does not execute native parity or CUDA, and it preserves the full-p56 blocker until a complete committed p56 token buffer is explicitly scoped.

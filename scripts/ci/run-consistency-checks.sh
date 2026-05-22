@@ -1358,6 +1358,81 @@ echo "Running Stage 5Y prime-minus-one native reporting temp output"
     --summary "$tmp_dir/stage5y-prime-minus-one-native-reporting-summary.yaml" \
     --results-dir "$tmp_dir/stage5y-prime-minus-one-native-reporting"
 
+echo "Running Stage 5Z prime-minus-one CUDA contract temp output"
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract build-contract-records \
+    --cuda-contract-out "$tmp_dir/stage5z-prime-minus-one-cuda-contract.yaml" \
+    --out-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract build-kernel-abi \
+    --kernel-abi-out "$tmp_dir/stage5z-prime-minus-one-cuda-kernel-abi.yaml" \
+    --out-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract build-host-runner-contract \
+    --host-runner-contract-out "$tmp_dir/stage5z-prime-minus-one-cuda-host-runner-contract.yaml" \
+    --out-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract build-buffer-contract \
+    --buffer-contract-out "$tmp_dir/stage5z-prime-minus-one-cuda-buffer-contract.yaml" \
+    --out-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract build-validation-vectors \
+    --validation-vectors-out "$tmp_dir/stage5z-prime-minus-one-cuda-validation-vectors.yaml" \
+    --out-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract build-future-parity-plan \
+    --future-parity-plan-out "$tmp_dir/stage5z-prime-minus-one-cuda-future-parity-plan.yaml" \
+    --out-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract build-result-store-compatibility \
+    --result-store-compatibility-out "$tmp_dir/stage5z-prime-minus-one-cuda-result-store-compatibility.yaml" \
+    --out-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract build-full-p56-blocker \
+    --full-p56-blocker-out "$tmp_dir/stage5z-prime-minus-one-cuda-full-p56-blocker.yaml" \
+    --out-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract build-scored-experiment-deferral \
+    --scored-experiment-deferral-out "$tmp_dir/stage5z-prime-minus-one-scored-experiment-deferral.yaml" \
+    --out-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract build-implementation-readiness-gate \
+    --implementation-readiness-out "$tmp_dir/stage5z-prime-minus-one-cuda-implementation-readiness-gate.yaml" \
+    --out-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract build-next-stage-decision \
+    --next-stage-decision-out "$tmp_dir/stage5z-prime-minus-one-cuda-next-stage-decision.yaml" \
+    --out-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract build-summary \
+    --cuda-contract "$tmp_dir/stage5z-prime-minus-one-cuda-contract.yaml" \
+    --kernel-abi "$tmp_dir/stage5z-prime-minus-one-cuda-kernel-abi.yaml" \
+    --host-runner-contract "$tmp_dir/stage5z-prime-minus-one-cuda-host-runner-contract.yaml" \
+    --buffer-contract "$tmp_dir/stage5z-prime-minus-one-cuda-buffer-contract.yaml" \
+    --validation-vectors "$tmp_dir/stage5z-prime-minus-one-cuda-validation-vectors.yaml" \
+    --future-parity-plan "$tmp_dir/stage5z-prime-minus-one-cuda-future-parity-plan.yaml" \
+    --result-store-compatibility "$tmp_dir/stage5z-prime-minus-one-cuda-result-store-compatibility.yaml" \
+    --full-p56-blocker "$tmp_dir/stage5z-prime-minus-one-cuda-full-p56-blocker.yaml" \
+    --scored-experiment-deferral "$tmp_dir/stage5z-prime-minus-one-scored-experiment-deferral.yaml" \
+    --implementation-readiness-gate "$tmp_dir/stage5z-prime-minus-one-cuda-implementation-readiness-gate.yaml" \
+    --next-stage-decision "$tmp_dir/stage5z-prime-minus-one-cuda-next-stage-decision.yaml" \
+    --summary-out "$tmp_dir/stage5z-prime-minus-one-cuda-contract-summary.yaml" \
+    --out-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-contract validate-stage5z \
+    --cuda-contract "$tmp_dir/stage5z-prime-minus-one-cuda-contract.yaml" \
+    --kernel-abi "$tmp_dir/stage5z-prime-minus-one-cuda-kernel-abi.yaml" \
+    --host-runner-contract "$tmp_dir/stage5z-prime-minus-one-cuda-host-runner-contract.yaml" \
+    --buffer-contract "$tmp_dir/stage5z-prime-minus-one-cuda-buffer-contract.yaml" \
+    --validation-vectors "$tmp_dir/stage5z-prime-minus-one-cuda-validation-vectors.yaml" \
+    --future-parity-plan "$tmp_dir/stage5z-prime-minus-one-cuda-future-parity-plan.yaml" \
+    --result-store-compatibility "$tmp_dir/stage5z-prime-minus-one-cuda-result-store-compatibility.yaml" \
+    --full-p56-blocker "$tmp_dir/stage5z-prime-minus-one-cuda-full-p56-blocker.yaml" \
+    --scored-experiment-deferral "$tmp_dir/stage5z-prime-minus-one-scored-experiment-deferral.yaml" \
+    --implementation-readiness-gate "$tmp_dir/stage5z-prime-minus-one-cuda-implementation-readiness-gate.yaml" \
+    --next-stage-decision "$tmp_dir/stage5z-prime-minus-one-cuda-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5z-prime-minus-one-cuda-contract-summary.yaml" \
+    --results-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

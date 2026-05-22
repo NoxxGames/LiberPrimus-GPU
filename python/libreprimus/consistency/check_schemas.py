@@ -222,6 +222,18 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/prime-minus-one-native-reporting-guardrail-record-v0.schema.json",
     "cuda/prime-minus-one-native-reporting-next-stage-decision-record-v0.schema.json",
     "cuda/stage5y-prime-minus-one-native-reporting-summary-v0.schema.json",
+    "cuda/prime-minus-one-cuda-contract-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-kernel-abi-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-host-runner-contract-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-buffer-contract-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-validation-vector-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-future-parity-plan-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-result-store-compatibility-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-full-p56-blocker-record-v0.schema.json",
+    "cuda/prime-minus-one-scored-experiment-deferral-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-implementation-readiness-gate-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-next-stage-decision-record-v0.schema.json",
+    "cuda/stage5z-prime-minus-one-cuda-contract-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -421,6 +433,18 @@ EXPECTED_DOC_TERMS = [
     "prime-minus-one-native-reporting-guardrail-record-v0",
     "prime-minus-one-native-reporting-next-stage-decision-record-v0",
     "stage5y-prime-minus-one-native-reporting-summary-v0",
+    "prime-minus-one-cuda-contract-record-v0",
+    "prime-minus-one-cuda-kernel-abi-record-v0",
+    "prime-minus-one-cuda-host-runner-contract-record-v0",
+    "prime-minus-one-cuda-buffer-contract-record-v0",
+    "prime-minus-one-cuda-validation-vector-record-v0",
+    "prime-minus-one-cuda-future-parity-plan-record-v0",
+    "prime-minus-one-cuda-result-store-compatibility-record-v0",
+    "prime-minus-one-cuda-full-p56-blocker-record-v0",
+    "prime-minus-one-scored-experiment-deferral-record-v0",
+    "prime-minus-one-cuda-implementation-readiness-gate-record-v0",
+    "prime-minus-one-cuda-next-stage-decision-record-v0",
+    "stage5z-prime-minus-one-cuda-contract-summary-v0",
 ]
 
 

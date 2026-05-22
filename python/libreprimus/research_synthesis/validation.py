@@ -361,6 +361,18 @@ def validate_research_synthesis(
             ("stage 5z", "prime-minus-one cuda contract preparation"),
             "staged_plan_stage5z_next",
         )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5z", "prime-minus-one cuda contract preparation", "complete"),
+            "staged_plan_stage5z_prime_cuda_contract_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5aa", "prime-minus-one cuda synthetic kernel implementation"),
+            "staged_plan_stage5aa_next",
+        )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
         _require_text(errors, staged_text, ("page boundaries", "reviewable"), "staged_plan_boundaries_reviewable")
@@ -714,6 +726,26 @@ def validate_research_synthesis(
             errors.append("prime_minus_one_native_reporting_missing_stage5y_evidence")
         if "stage 5z" not in next_text or "contract" not in next_text:
             errors.append("prime_minus_one_native_reporting_missing_stage5z_next_action")
+
+    prime_cuda_contract = _find_method(method_records, "prime_minus_one_cuda_contract")
+    if prime_cuda_contract is None:
+        errors.append("prime_minus_one_cuda_contract_missing")
+    else:
+        stop_text = " ".join(str(item).lower() for item in prime_cuda_contract.get("stop_conditions", []))
+        evidence_text = str(prime_cuda_contract.get("evidence_summary", "")).lower()
+        next_text = str(prime_cuda_contract.get("next_action", "")).lower()
+        if (
+            "cuda execution" not in stop_text
+            or "kernel" not in stop_text
+            or "benchmark" not in stop_text
+            or "generated" not in stop_text
+            or "solve" not in stop_text
+        ):
+            errors.append("prime_minus_one_cuda_contract_missing_guardrail")
+        if "stage 5z" not in evidence_text or "stage 5y" not in evidence_text or "full p56" not in evidence_text:
+            errors.append("prime_minus_one_cuda_contract_missing_stage5z_evidence")
+        if "stage 5aa" not in next_text or "synthetic" not in next_text:
+            errors.append("prime_minus_one_cuda_contract_missing_stage5aa_next_action")
 
     cookie = _find_method(method_records, "cookie_hash_sha256_packs")
     if cookie is None:

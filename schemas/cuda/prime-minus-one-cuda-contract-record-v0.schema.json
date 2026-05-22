@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-contract-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Contract Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "contract_record_id", "contract_status", "no_solve_claim", "solve_claim", "cuda_execution_performed", "cuda_source_modified", "new_cuda_kernels_added", "generated_outputs_committed", "raw_data_processed"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_contract_record" },
+    "stage_id": { "const": "stage-5z" },
+    "metadata_only": { "const": true },
+    "contract_preparation_only": { "const": true },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false },
+    "native_execution_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernel_added": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "gpu_benchmark_performed": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "real_liber_primus_cuda_data_used": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "codex_output_committed": { "const": false }
+  }
+}

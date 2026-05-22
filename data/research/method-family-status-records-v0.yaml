@@ -452,3 +452,14 @@ records:
     next_action: Stage 5Z prime-minus-one CUDA contract preparation can prepare contracts only; implementation, execution, and benchmarks remain blocked.
     solve_claim: false
     notes: Stage 5Y readiness means contract-preparation readiness only. It is not permission for prime-minus-one CUDA implementation or full p56 execution.
+  - record_type: method_family_status_record
+    method_family_id: prime_minus_one_cuda_contract
+    name: Prime-minus-one CUDA contract preparation
+    status: infrastructure_only
+    evidence_summary: Stage 5Z consumes Stage 5Y compact reporting/readiness records and prepares prime-minus-one CUDA contract, CUDA-C kernel ABI, host-runner, buffer, validation-vector, future parity, result-store compatibility, full-p56 blocker, scored-experiment deferral, implementation-readiness, and next-stage decision metadata while preserving full p56 and scored-experiment blockers.
+    completed_stage_refs: [stage-5w, stage-5x, stage-5y, stage-5z]
+    reopen_conditions: [A future Stage 5AA synthetic implementation stage needs Stage 5Z contract records, kernel ABI, validation vectors, full-p56 blocker preservation, result-store compatibility, and no-unsolved/no-benchmark guardrails before adding any synthetic-only kernel changes.]
+    stop_conditions: [Do not run CUDA execution, add kernels in Stage 5Z, modify CUDA source in Stage 5Z, run native parity, run native/CUDA CMake, benchmark, execute full p56 without a committed full token buffer, process raw data, publish generated bodies, commit codex-output, upgrade method status to solved, or make solve claims.]
+    next_action: Stage 5AA prime-minus-one CUDA synthetic kernel implementation and parity may implement only a synthetic-only scoped kernel path, with no p56/full-p56, unsolved-page, benchmark, generated-body, method-status upgrade, or solve-claim scope.
+    solve_claim: false
+    notes: Stage 5Z readiness is contract preparation only. It is not CUDA execution permission, not full p56 parity, and not scored-experiment approval.

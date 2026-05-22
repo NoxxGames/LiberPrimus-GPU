@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5Y - prime-minus-one native parity reporting and CUDA contract readiness gate.
+Current completed stage: Stage 5Z - prime-minus-one CUDA contract preparation.
 
-Current work: Stage 5Z - prime-minus-one CUDA contract preparation. Stage 5Y integrated compact Stage 5X reporting, preserved the full p56 blocker, and marked only CUDA contract preparation ready; it did not authorize unsolved-page CUDA, benchmarking, generated-body publication, method-status upgrades, website expansion, native/CUDA execution, C++ adapter implementation, CUDA source changes, or new CUDA kernels.
+Current work: Stage 5AA - prime-minus-one CUDA synthetic kernel implementation and parity. Stage 5Z prepared the prime-minus-one CUDA contract, CUDA-C kernel ABI, host-runner contract, buffer contract, validation vectors, and implementation-readiness gate; it did not authorize p56/full-p56 CUDA, unsolved-page CUDA, benchmarking, generated-body publication, method-status upgrades, website expansion, native/CUDA execution during Stage 5Z, or broad CUDA implementation.
 
 Current project state:
 
@@ -68,7 +68,7 @@ Current project state:
 - Page boundaries: reviewable.
 - Broad unsolved-page campaigns: not started.
 - CUDA: deferred until CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
-- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel`, Stage 5M host-runner plumbing for exact solved-fixture parity, Stage 5O repeat verification metadata, Stage 5P result-store integration metadata, Stage 5Q expansion candidate metadata, Stage 5R controlled expanded solved-fixture parity metadata, Stage 5S compact integration/reporting metadata, Stage 5T solved-family readiness metadata, Stage 5U Candidate Batch ABI contract metadata, Stage 5V native no-GPU conformance metadata, Stage 5W prime-minus-one native contract metadata, Stage 5X no-GPU Python-reference prime-minus-one native parity metadata, and Stage 5Y prime-minus-one compact reporting/readiness metadata only unless code and tests say otherwise.
+- Existing CUDA code: scaffold/smoke infrastructure, the Stage 5F synthetic `shift_score_kernel`, Stage 5G reporting/device-code hardening, Stage 5H contract metadata, Stage 5I preparation metadata, the Stage 5J synthetic numeric `gematria_mod29_shift_score_kernel`, Stage 5M host-runner plumbing for exact solved-fixture parity, Stage 5O repeat verification metadata, Stage 5P result-store integration metadata, Stage 5Q expansion candidate metadata, Stage 5R controlled expanded solved-fixture parity metadata, Stage 5S compact integration/reporting metadata, Stage 5T solved-family readiness metadata, Stage 5U Candidate Batch ABI contract metadata, Stage 5V native no-GPU conformance metadata, Stage 5W prime-minus-one native contract metadata, Stage 5X no-GPU Python-reference prime-minus-one native parity metadata, Stage 5Y prime-minus-one compact reporting/readiness metadata, and Stage 5Z prime-minus-one CUDA contract metadata only unless code and tests say otherwise.
 - Stage 5C CUDA build/device metadata is readiness infrastructure only; no-GPU CI, compatibility 8GB, and optional local 16GB profiles must remain explicit and smoke-build status is not parity or performance evidence.
 - Stage 5D native CPU backend records are readiness infrastructure only; C++ must remain a deterministic CPU execution plane, Python remains orchestration, and diagnostic timings are not speedup claims.
 - Do not let C++ launch Python worker scripts.
@@ -130,7 +130,7 @@ Current project state:
 - Stage 5X native parity is no-GPU Python-reference execution, not CUDA execution and not native C++ execution.
 - Stage 5X bounded p56 parity is not full p56 parity, not performance evidence, and not solve evidence.
 - Stage 5Y integrated compact Stage 5X reporting and CUDA contract readiness metadata, but did not execute CUDA, modify CUDA source, add kernels, run benchmarks, publish generated bodies, upgrade methods, or make solve claims.
-- Future Stage 5Z may prepare prime-minus-one CUDA contracts only; kernel implementation and execution remain blocked unless a later prompt explicitly scopes them.
+- Stage 5Z prepared prime-minus-one CUDA contracts only; Stage 5AA may implement a synthetic-only kernel path if explicitly scoped, while p56/full-p56, unsolved pages, benchmarks, generated-body publication, method-status upgrades, and solve claims remain blocked.
 - Do not stage `codex-output/**`.
 - Do not report CUDA parity records as speedup/performance evidence.
 - Do not stage `codex-output/**`.
@@ -890,6 +890,16 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 5Y bounded scored-experiment readiness means future manifest-gate planning only. It is not experiment execution permission.
 - Stage 5Y generated reports under `experiments/results/prime-minus-one-native-reporting/stage5y/` and `codex-output/**` handoffs remain ignored and must not be staged.
 - Stage 5Y selects Stage 5Z prime-minus-one CUDA contract preparation; CUDA kernels, CUDA execution, and benchmark planning remain blocked.
+
+## Stage 5Z Prime-Minus-One CUDA Contract Rules
+
+- Stage 5Z prime-minus-one CUDA contract records are contract metadata only.
+- Stage 5Z consumes Stage 5Y compact reporting/readiness records and must not rerun native parity, execute CUDA, modify CUDA source, add kernels, run native/CUDA CMake, benchmark, process raw data, publish generated bodies, expand the website, upgrade method families to solved, or make solve claims.
+- Stage 5Z kernel ABI records are future CUDA-C style contracts only; they are not `.cu`/`.cuh` implementation evidence.
+- Stage 5Z preserves `blocked_full_p56_token_buffer_missing`; full p56 remains blocked until a complete committed p56 cipher token buffer is explicitly scoped.
+- Stage 5Z scored-experiment deferral records mean future manifest-gate planning only. They are not scored experiment execution permission.
+- Stage 5Z generated reports under `experiments/results/prime-minus-one-cuda-contract/stage5z/` and `codex-output/**` handoffs remain ignored and must not be staged.
+- Stage 5Z selects Stage 5AA prime-minus-one CUDA synthetic kernel implementation and parity; the next stage must stay synthetic-only unless its prompt explicitly scopes otherwise.
 
 ## Stage 3W State Consolidation Rules
 

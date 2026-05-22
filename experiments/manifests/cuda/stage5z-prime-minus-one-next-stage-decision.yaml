@@ -1,0 +1,22 @@
+manifest_id: stage5z-prime-minus-one-next-stage-decision
+stage_id: stage-5z
+purpose: next_stage_decision_only
+selected_next_stage: Stage 5AA - prime-minus-one CUDA synthetic kernel implementation and parity
+selected_next_prompt_type: Codex
+deep_research_recommended_next: false
+decision_reason: Contract records, kernel ABI, host-runner boundary, buffer contracts, validation vectors, and full-p56 blockers are ready for a synthetic-only CUDA implementation stage.
+cpu_only: true
+cuda_required: false
+cuda_used: false
+cuda_execution_enabled: false
+native_execution_enabled: false
+cuda_source_changes_allowed: false
+new_cuda_kernel_allowed: false
+benchmark_execution_allowed: false
+unsolved_page_scope_allowed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_processed: false
+no_solve_claim: true
+solve_claim: false

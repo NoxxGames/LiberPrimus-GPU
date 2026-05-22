@@ -55,6 +55,7 @@ REQUIRED_METHOD_FAMILIES = {
     "prime_minus_one_native_contract",
     "prime_minus_one_native_parity",
     "prime_minus_one_native_reporting",
+    "prime_minus_one_cuda_contract",
     "deterministic_image_analysis",
     "image_transform_suite",
     "discord_ingestion_review",

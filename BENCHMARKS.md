@@ -60,6 +60,12 @@ Stage 5Y is not a benchmark stage. It records compact parity reports, result-sto
 
 Do not report Stage 5Y record counts, readiness gates, output hashes, blocker status, or generated reports as throughput, performance, or speedup evidence. Stage 5Z may prepare contracts only; GPU benchmarking remains blocked.
 
+## Stage 5Z Prime-Minus-One CUDA Contract Boundary
+
+Stage 5Z is not a benchmark stage. It records prime-minus-one CUDA contract, kernel ABI, host-runner, buffer, validation-vector, future parity, result-store compatibility, full-p56 blocker, scored-experiment deferral, implementation-readiness, and next-stage decision metadata without native execution, CUDA execution, native/CUDA CMake, profilers, timing loops, or benchmark commands.
+
+Do not report Stage 5Z record counts, validation-vector readiness, implementation-readiness gates, or generated reports as throughput, performance, or speedup evidence. Stage 5AA may implement only a synthetic-only kernel parity path if scoped by its prompt; GPU benchmarking remains blocked.
+
 ## Stage 4Q CPU Benchmark Planning
 
 Stage 4Q records benchmark planning and parity readiness only. It writes committed CPU benchmark plan and CUDA parity readiness metadata, plus ignored environment and CPU smoke diagnostics under `experiments/results/benchmarks/stage4q/`.

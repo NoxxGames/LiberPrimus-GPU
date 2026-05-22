@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-buffer-contract-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Buffer Contract Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "buffer_contract_record_id", "buffer_name", "buffer_direction", "element_type", "no_solve_claim", "solve_claim", "cuda_execution_performed", "cuda_source_modified", "new_cuda_kernels_added"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_buffer_contract_record" },
+    "stage_id": { "const": "stage-5z" },
+    "cuda_c_style_subset": { "const": true },
+    "implementation_allowed": { "const": false },
+    "cuda_execution_allowed": { "const": false },
+    "no_solve_claim": { "const": true },
+    "solve_claim": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false }
+  }
+}
