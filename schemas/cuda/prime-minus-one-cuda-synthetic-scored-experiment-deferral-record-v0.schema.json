@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-synthetic-scored-experiment-deferral-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Synthetic Scored Experiment Deferral Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "deferral_record_id", "experiment_class", "execution_enabled", "scored_experiment_executed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_synthetic_scored_experiment_deferral_record" },
+    "stage_id": { "const": "stage-5aa" },
+    "execution_enabled": { "const": false },
+    "scored_experiment_executed": { "const": false },
+    "benchmark_allowed": { "const": false },
+    "website_expansion_allowed": { "const": false },
+    "p56_cuda_execution_performed": { "const": false },
+    "full_p56_cuda_execution_performed": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

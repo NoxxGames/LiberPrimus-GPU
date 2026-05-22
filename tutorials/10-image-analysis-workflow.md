@@ -81,6 +81,10 @@ Stage 5I Gematria CUDA preparation is outside the image workflow. Image artefact
 compression, and bigram/Fibonacci observations must remain review/preflight records and must not be
 used as CUDA inputs or kernel targets.
 
+Stage 5AA prime-minus-one CUDA synthetic parity is also outside the image workflow. It uses only the
+Stage 5Z synthetic numeric validation vector and must not read page images, OCR output, image
+artefact candidates, bigram screenshots, or visual-observation records as CUDA inputs.
+
 Stage 4J adds the review workflow that blocks visual observations from becoming experiment seeds
 unless source/page references, coordinate or region evidence, and explicit review decisions are
 present. Cuneiform, dot, delimiter, compression-artefact, braille, and constellation observations

@@ -1,0 +1,29 @@
+manifest_id: stage5aa-prime-minus-one-cuda-synthetic
+stage_id: stage-5aa
+manifest_type: prime_minus_one_cuda_synthetic
+description: Stage 5AA synthetic-only prime-minus-one CUDA kernel implementation records.
+cpu_only: false
+cuda_allowed: true
+cuda_scope: stage5z_validation_synthetic_prime_control_only
+validation_vector_ids:
+  - stage5z-validation-synthetic-prime-control-v0
+mapping_ids:
+  - stage5w-mapping-synthetic-prime-control-v0
+p56_cuda_allowed: false
+full_p56_cuda_allowed: false
+unsolved_page_cuda_allowed: false
+real_liber_primus_cuda_data_allowed: false
+gpu_benchmark_allowed: false
+scored_experiment_allowed: false
+website_expansion_allowed: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+solve_claim: false
+no_solve_claim: true
+ci_gpu_required: false
+notes:
+  - CUDA execution is optional locally and no-GPU-safe in CI.
+  - Only the Stage 5Z synthetic validation vector is in scope.

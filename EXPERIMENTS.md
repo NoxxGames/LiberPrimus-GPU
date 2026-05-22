@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AA Prime-Minus-One CUDA Synthetic Parity
+
+Stage 5AA is not a cryptanalytic experiment. It adds a synthetic-only CUDA kernel path for `stage5z-validation-synthetic-prime-control-v0`, records the CUDA run/parity metadata, and keeps generated reports ignored under `experiments/results/prime-minus-one-cuda-synthetic/stage5aa/`.
+
+The only executed vector is the Stage 5Z synthetic control. p56/full-p56 CUDA, unsolved pages, scored experiments, benchmarks, broad solved-fixture campaigns, generated-body publication, website expansion, method-status upgrades, canonical corpus activation, page-boundary finalisation, and solve claims remain disabled.
+
 ## Stage 5Z Prime-Minus-One CUDA Contract
 
 Stage 5Z is not a cryptanalytic experiment. It consumes committed Stage 5Y compact reporting/readiness records and writes prime-minus-one CUDA contract, kernel ABI, host-runner contract, buffer contract, validation-vector, future parity plan, result-store compatibility, full-p56 blocker, scored-experiment deferral, implementation-readiness, next-stage decision, and summary metadata under `data/cuda/`.

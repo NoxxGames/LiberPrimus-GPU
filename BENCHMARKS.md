@@ -60,6 +60,10 @@ Stage 5Y is not a benchmark stage. It records compact parity reports, result-sto
 
 Do not report Stage 5Y record counts, readiness gates, output hashes, blocker status, or generated reports as throughput, performance, or speedup evidence. Stage 5Z may prepare contracts only; GPU benchmarking remains blocked.
 
+## Stage 5AA Prime-Minus-One CUDA Synthetic Boundary
+
+Stage 5AA executes only the synthetic prime-minus-one validation vector. The local CUDA pass and matching hash are correctness metadata, not timing, throughput, performance, or speedup evidence. Do not cite Stage 5AA as a benchmark. GPU benchmarking, p56/full-p56 CUDA, scored experiments, and unsolved-page CUDA remain blocked.
+
 ## Stage 5Z Prime-Minus-One CUDA Contract Boundary
 
 Stage 5Z is not a benchmark stage. It records prime-minus-one CUDA contract, kernel ABI, host-runner, buffer, validation-vector, future parity, result-store compatibility, full-p56 blocker, scored-experiment deferral, implementation-readiness, and next-stage decision metadata without native execution, CUDA execution, native/CUDA CMake, profilers, timing loops, or benchmark commands.

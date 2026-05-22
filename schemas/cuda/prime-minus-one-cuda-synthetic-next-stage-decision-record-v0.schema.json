@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-synthetic-next-stage-decision-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Synthetic Next Stage Decision Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "decision_record_id", "option_id", "recommended_stage_title", "selected", "benchmark_selected", "scored_experiment_selected", "unsolved_cuda_selected", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_synthetic_next_stage_decision_record" },
+    "stage_id": { "const": "stage-5aa" },
+    "benchmark_selected": { "const": false },
+    "scored_experiment_selected": { "const": false },
+    "unsolved_cuda_selected": { "const": false },
+    "website_expansion_selected": { "const": false },
+    "p56_cuda_execution_performed": { "const": false },
+    "full_p56_cuda_execution_performed": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "scored_experiment_executed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

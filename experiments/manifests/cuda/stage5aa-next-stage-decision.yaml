@@ -1,0 +1,20 @@
+manifest_id: stage5aa-next-stage-decision
+stage_id: stage-5aa
+manifest_type: prime_minus_one_cuda_synthetic_next_stage_decision
+decision_policy:
+  if_synthetic_cuda_parity_passes: Stage 5AB - prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight
+  if_cuda_cannot_build_or_run: Stage 5AA-followup - prime-minus-one CUDA synthetic toolchain repair and rerun
+  if_hash_mismatch: Stage 5AA-fix - prime-minus-one CUDA synthetic parity mismatch investigation
+forbidden_next:
+  - benchmark
+  - scored_experiment
+  - unsolved_page_cuda
+  - website_expansion
+  - full_p56_cuda
+deep_research_recommended_next: false
+generated_outputs_committed: false
+raw_data_processed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+solve_claim: false
+no_solve_claim: true

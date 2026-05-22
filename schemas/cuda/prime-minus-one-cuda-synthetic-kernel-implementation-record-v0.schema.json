@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-synthetic-kernel-implementation-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Synthetic Kernel Implementation Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "implementation_record_id", "kernel_entrypoint", "validation_vector_id", "synthetic_only", "cuda_source_modified", "new_cuda_kernels_added", "p56_cuda_execution_performed", "full_p56_cuda_execution_performed", "unsolved_page_cuda_used", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_synthetic_kernel_implementation_record" },
+    "stage_id": { "const": "stage-5aa" },
+    "synthetic_only": { "const": true },
+    "implementation_scope": { "const": "stage5z_validation_synthetic_prime_control_only" },
+    "cuda_source_modified": { "const": true },
+    "new_cuda_kernel_added": { "const": true },
+    "new_cuda_kernels_added": { "const": 1 },
+    "device_kernel_arithmetic_modified": { "const": true },
+    "p56_cuda_execution_performed": { "const": false },
+    "full_p56_cuda_execution_performed": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "real_liber_primus_cuda_data_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "scored_experiment_executed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "codex_output_committed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

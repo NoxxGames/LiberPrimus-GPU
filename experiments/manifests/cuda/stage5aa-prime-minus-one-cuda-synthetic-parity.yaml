@@ -1,0 +1,28 @@
+manifest_id: stage5aa-prime-minus-one-cuda-synthetic-parity
+stage_id: stage-5aa
+manifest_type: prime_minus_one_cuda_synthetic_parity
+expected_output_token_hash: 06a5c37f7e5eda8eec00cfab5b09faba6ec157488ca15f61a9189d4bf06005ab
+output_hash_algorithm: sha256_canonical_json_v1
+validation_vector_id: stage5z-validation-synthetic-prime-control-v0
+mapping_id: stage5w-mapping-synthetic-prime-control-v0
+fixture_id: stage5w-synthetic-prime-minus-one-control
+cuda_allowed: true
+cuda_scope: stage5z_validation_synthetic_prime_control_only
+p56_cuda_allowed: false
+full_p56_cuda_allowed: false
+unsolved_page_cuda_allowed: false
+real_liber_primus_cuda_data_allowed: false
+gpu_benchmark_allowed: false
+scored_experiment_allowed: false
+website_expansion_allowed: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+solve_claim: false
+no_solve_claim: true
+ci_gpu_required: false
+pass_condition:
+  - CUDA synthetic output-token hash equals the Stage 5Z expected hash.
+  - No p56, full-p56, unsolved-page, benchmark, scored, website, raw, or generated-body scope is used.

@@ -651,5 +651,13 @@ experiments/results/prime-minus-one-cuda-contract/**
 !experiments/results/prime-minus-one-cuda-contract/stage5z/
 !experiments/results/prime-minus-one-cuda-contract/stage5z/.gitkeep
 
+# Generated prime-minus-one CUDA synthetic outputs
+experiments/results/prime-minus-one-cuda-synthetic/**
+!experiments/results/prime-minus-one-cuda-synthetic/
+!experiments/results/prime-minus-one-cuda-synthetic/README.md
+!experiments/results/prime-minus-one-cuda-synthetic/.gitkeep
+!experiments/results/prime-minus-one-cuda-synthetic/stage5aa/
+!experiments/results/prime-minus-one-cuda-synthetic/stage5aa/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

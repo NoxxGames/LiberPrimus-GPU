@@ -1433,6 +1433,66 @@ echo "Running Stage 5Z prime-minus-one CUDA contract temp output"
     --summary "$tmp_dir/stage5z-prime-minus-one-cuda-contract-summary.yaml" \
     --results-dir "$tmp_dir/stage5z-prime-minus-one-cuda-contract"
 
+echo "Running Stage 5AA prime-minus-one CUDA synthetic temp output"
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic build-kernel-implementation-records \
+    --kernel-implementation-out "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-kernel-implementation.yaml" \
+    --out-dir "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic run-synthetic-cuda-parity \
+    --cuda-run-out "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-run.yaml" \
+    --out-dir "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic" \
+    --skip-cuda \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic build-parity-records \
+    --cuda-run "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-run.yaml" \
+    --parity-out "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-parity.yaml" \
+    --out-dir "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic build-device-subset-audit \
+    --device-subset-audit-out "$tmp_dir/stage5aa-prime-minus-one-cuda-device-subset-audit.yaml" \
+    --out-dir "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic build-result-store-preflight \
+    --result-store-preflight-out "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-result-store-preflight.yaml" \
+    --out-dir "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic build-p56-blocker \
+    --p56-blocker-out "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-p56-blocker.yaml" \
+    --out-dir "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic build-scored-experiment-deferral \
+    --scored-experiment-deferral-out "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-scored-experiment-deferral.yaml" \
+    --out-dir "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic build-next-stage-decision \
+    --parity "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-parity.yaml" \
+    --next-stage-decision-out "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-next-stage-decision.yaml" \
+    --out-dir "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic build-summary \
+    --kernel-implementation "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-kernel-implementation.yaml" \
+    --cuda-run "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-run.yaml" \
+    --parity "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-parity.yaml" \
+    --device-subset-audit "$tmp_dir/stage5aa-prime-minus-one-cuda-device-subset-audit.yaml" \
+    --result-store-preflight "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-result-store-preflight.yaml" \
+    --p56-blocker "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-p56-blocker.yaml" \
+    --scored-experiment-deferral "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-scored-experiment-deferral.yaml" \
+    --next-stage-decision "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-next-stage-decision.yaml" \
+    --summary-out "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-summary.yaml" \
+    --out-dir "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic validate-stage5aa \
+    --kernel-implementation "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-kernel-implementation.yaml" \
+    --cuda-run "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-run.yaml" \
+    --parity "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-parity.yaml" \
+    --device-subset-audit "$tmp_dir/stage5aa-prime-minus-one-cuda-device-subset-audit.yaml" \
+    --result-store-preflight "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-result-store-preflight.yaml" \
+    --p56-blocker "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-p56-blocker.yaml" \
+    --scored-experiment-deferral "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-scored-experiment-deferral.yaml" \
+    --next-stage-decision "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-summary.yaml" \
+    --results-dir "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

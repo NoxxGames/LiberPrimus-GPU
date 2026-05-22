@@ -2,7 +2,15 @@
 
 ## Current stage
 
-Stage 5Z prime-minus-one CUDA contract preparation is complete. Next recommended prompt: Stage 5AA - prime-minus-one CUDA synthetic kernel implementation and parity. Website expansion is deferred to Stage 6.
+Stage 5AA prime-minus-one CUDA synthetic kernel implementation and parity is complete. Next recommended prompt: Stage 5AB - prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight. Website expansion is deferred to a future unnumbered project, not Stage 6.
+
+## Completed in Stage 5AA
+
+Stage 5AA added the `libreprimus prime-minus-one-cuda-synthetic` CLI, a synthetic-only `prime_minus_one_stream_kernel_v0` CUDA path, host-runner/test plumbing, kernel implementation records, CUDA run records, parity records, device-subset audit records, result-store preflight records, p56/full-p56 blocker records, scored-experiment deferral records, next-stage decision records, Stage 5AA manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
+
+Local Stage 5AA summary: kernel implementation records `1`, CUDA run records `1`, parity records `1`, device-subset audit records `1`, result-store preflight records `2`, p56 blocker records `2`, scored-experiment deferral records `6`, next-stage decision records `4`, synthetic vector `stage5z-validation-synthetic-prime-control-v0`, expected/computed hash `06a5c37f7e5eda8eec00cfab5b09faba6ec157488ca15f61a9189d4bf06005ab`, CUDA attempted/pass/fail/skip `1/1/0/0`, parity status `passed`, selected next prompt `Stage 5AB - prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight`, Deep Research recommended next `false`, CUDA source modified `true`, new CUDA kernels added `1`, p56/full-p56 CUDA blocked `true`, unsolved-page CUDA used `false`, real Liber Primus CUDA data used `false`, GPU benchmark performed `false`, speedup/performance assertions `false`, scored experiments executed `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5AA executes only the Stage 5Z synthetic prime-minus-one validation vector. It is correctness infrastructure, not p56/full-p56 CUDA, not unsolved-page CUDA, not a benchmark, not a scored experiment, not website expansion, not method-status promotion, and not a solve claim.
 
 ## Completed in Stage 5Z
 

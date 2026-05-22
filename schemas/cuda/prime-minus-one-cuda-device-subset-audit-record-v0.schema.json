@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-device-subset-audit-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Device Subset Audit Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "audit_record_id", "forbidden_finding_count", "cuda_c_style_subset_status", "synthetic_only", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_device_subset_audit_record" },
+    "stage_id": { "const": "stage-5aa" },
+    "synthetic_only": { "const": true },
+    "cuda_source_modified": { "const": true },
+    "new_cuda_kernel_added": { "const": true },
+    "new_cuda_kernels_added": { "const": 1 },
+    "p56_cuda_execution_performed": { "const": false },
+    "full_p56_cuda_execution_performed": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "scored_experiment_executed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

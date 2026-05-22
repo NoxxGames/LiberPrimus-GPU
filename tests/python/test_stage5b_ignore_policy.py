@@ -32,6 +32,7 @@ def test_stage5b_no_transform_cuda_kernels_added() -> None:
         "cuda_smoke",
         "shift_score_kernel",
         "gematria_shift_score_kernel",
+        "prime_minus_one_stream_kernel",
     }
     unexpected = [
         path

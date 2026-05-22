@@ -56,6 +56,7 @@ git check-ignore -v experiments/results/prime-minus-one-native-contract/stage5w/
 git check-ignore -v experiments/results/prime-minus-one-native-parity/stage5x/summary.json
 git check-ignore -v experiments/results/prime-minus-one-native-reporting/stage5y/summary.json
 git check-ignore -v experiments/results/prime-minus-one-cuda-contract/stage5z/summary.json
+git check-ignore -v experiments/results/prime-minus-one-cuda-synthetic/stage5aa/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
@@ -69,6 +70,7 @@ git check-ignore -v codex-output/stage5w-codex-completion.md
 git check-ignore -v codex-output/stage5x-codex-completion.md
 git check-ignore -v codex-output/stage5y-codex-completion.md
 git check-ignore -v codex-output/stage5z-codex-completion.md
+git check-ignore -v codex-output/stage5aa-codex-completion.md
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -207,6 +209,14 @@ decision, summary, or warning reports under
 schemas, manifests, code, compact YAML records, docs, tests, and research logs. Do not rerun native
 parity, run CUDA, modify CUDA source, add kernels, execute the blocked full-p56 mapping, or treat
 reporting metadata as solve evidence while fixing validation failures.
+
+If a Stage 5AA prime-minus-one CUDA synthetic parity run leaves kernel-build, CUDA-run, parity,
+device-subset, result-store preflight, p56 blocker, scored-experiment deferral, next-stage decision,
+summary, or warning reports under
+`experiments/results/prime-minus-one-cuda-synthetic/stage5aa/`, do not stage them. Commit only
+schemas, manifests, code, compact YAML records, docs, tests, and research logs. Do not run p56 or
+full-p56 CUDA, unsolved pages, scored experiments, benchmarks, website expansion, raw data, or
+method-status upgrades while fixing validation failures.
 
 If a Stage 5C CUDA build/device run leaves `toolchain_detection_report.json`,
 `device_detection_report.json`, `smoke_build_report.json`, `summary.json`, `warnings.jsonl`, or
@@ -720,4 +730,23 @@ explicit future stage changes the committed decision records.
 Generated Stage 5Y reports belong under ignored
 `experiments/results/prime-minus-one-native-reporting/stage5y/`, and the local handoff belongs
 under ignored `codex-output/stage5y-codex-completion.md`. Do not stage generated reports, generated
+result bodies, SQLite files, raw data, or local CUDA diagnostics.
+
+# Stage 5AA Prime-Minus-One CUDA Synthetic Troubleshooting
+
+If Stage 5AA validation fails, rebuild the synthetic-only record sequence and rerun
+`libreprimus prime-minus-one-cuda-synthetic validate-stage5aa`. Only the
+`stage5z-validation-synthetic-prime-control-v0` vector is in scope; do not run p56/full-p56 CUDA,
+unsolved pages, scored experiments, benchmarks, website expansion, or raw data to repair the
+records.
+
+Expected Stage 5AA counts are 1 kernel implementation record, 1 CUDA run record, 1 parity record,
+1 device-subset audit record, 2 result-store preflight records, 2 p56/full-p56 blocker records, 6
+scored-experiment deferral records, and 4 next-stage decision records. The selected next prompt
+should remain Stage 5AB prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA
+parity preflight when the synthetic hash matches.
+
+Generated Stage 5AA reports belong under ignored
+`experiments/results/prime-minus-one-cuda-synthetic/stage5aa/`, and the local handoff belongs under
+ignored `codex-output/stage5aa-codex-completion.md`. Do not stage generated reports, generated
 result bodies, SQLite files, raw data, or local CUDA diagnostics.

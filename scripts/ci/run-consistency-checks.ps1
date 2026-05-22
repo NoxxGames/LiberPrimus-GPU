@@ -1474,6 +1474,57 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5ZSummary `
         --results-dir $Stage5ZOut
 
+    Write-Host "Running Stage 5AA prime-minus-one CUDA synthetic temp output"
+    $Stage5AAOut = Join-Path $TempDir "stage5aa-prime-minus-one-cuda-synthetic"
+    $Stage5AAKernel = Join-Path $TempDir "stage5aa-prime-minus-one-cuda-synthetic-kernel-implementation.yaml"
+    $Stage5AARun = Join-Path $TempDir "stage5aa-prime-minus-one-cuda-synthetic-run.yaml"
+    $Stage5AAParity = Join-Path $TempDir "stage5aa-prime-minus-one-cuda-synthetic-parity.yaml"
+    $Stage5AAAudit = Join-Path $TempDir "stage5aa-prime-minus-one-cuda-device-subset-audit.yaml"
+    $Stage5AAResult = Join-Path $TempDir "stage5aa-prime-minus-one-cuda-synthetic-result-store-preflight.yaml"
+    $Stage5AABlocker = Join-Path $TempDir "stage5aa-prime-minus-one-cuda-synthetic-p56-blocker.yaml"
+    $Stage5AAScored = Join-Path $TempDir "stage5aa-prime-minus-one-cuda-synthetic-scored-experiment-deferral.yaml"
+    $Stage5AADecision = Join-Path $TempDir "stage5aa-prime-minus-one-cuda-synthetic-next-stage-decision.yaml"
+    $Stage5AASummary = Join-Path $TempDir "stage5aa-prime-minus-one-cuda-synthetic-summary.yaml"
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic build-kernel-implementation-records `
+        --kernel-implementation-out $Stage5AAKernel --out-dir $Stage5AAOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic run-synthetic-cuda-parity `
+        --cuda-run-out $Stage5AARun --out-dir $Stage5AAOut --skip-cuda --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic build-parity-records `
+        --cuda-run $Stage5AARun --parity-out $Stage5AAParity --out-dir $Stage5AAOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic build-device-subset-audit `
+        --device-subset-audit-out $Stage5AAAudit --out-dir $Stage5AAOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic build-result-store-preflight `
+        --result-store-preflight-out $Stage5AAResult --out-dir $Stage5AAOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic build-p56-blocker `
+        --p56-blocker-out $Stage5AABlocker --out-dir $Stage5AAOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic build-scored-experiment-deferral `
+        --scored-experiment-deferral-out $Stage5AAScored --out-dir $Stage5AAOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic build-next-stage-decision `
+        --parity $Stage5AAParity --next-stage-decision-out $Stage5AADecision --out-dir $Stage5AAOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic build-summary `
+        --kernel-implementation $Stage5AAKernel `
+        --cuda-run $Stage5AARun `
+        --parity $Stage5AAParity `
+        --device-subset-audit $Stage5AAAudit `
+        --result-store-preflight $Stage5AAResult `
+        --p56-blocker $Stage5AABlocker `
+        --scored-experiment-deferral $Stage5AAScored `
+        --next-stage-decision $Stage5AADecision `
+        --summary-out $Stage5AASummary `
+        --out-dir $Stage5AAOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic validate-stage5aa `
+        --kernel-implementation $Stage5AAKernel `
+        --cuda-run $Stage5AARun `
+        --parity $Stage5AAParity `
+        --device-subset-audit $Stage5AAAudit `
+        --result-store-preflight $Stage5AAResult `
+        --p56-blocker $Stage5AABlocker `
+        --scored-experiment-deferral $Stage5AAScored `
+        --next-stage-decision $Stage5AADecision `
+        --summary $Stage5AASummary `
+        --results-dir $Stage5AAOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

@@ -227,6 +227,15 @@ records:
     prohibited_expansions: [Native execution, CUDA execution in Stage 5Z, CUDA source modification in Stage 5Z, new kernels in Stage 5Z, native/CUDA CMake, GPU benchmarks, speedup claims, full p56 execution without committed token buffer, unsolved-page CUDA, generated-body publication, raw-data processing, method-status upgrades to solved, solve claims.]
     notes: Stage 5Z selected Stage 5AA prime-minus-one CUDA synthetic kernel implementation and parity as synthetic-only first.
   - record_type: method_retirement_record
+    method_family_id: prime_minus_one_cuda_synthetic
+    retired_status: active_with_constraints
+    reason: Prime-minus-one CUDA synthetic parity is active infrastructure only; it proves one synthetic validation vector and does not authorize p56/full-p56 CUDA, unsolved-page CUDA, scored experiments, benchmarks, generated-body publication, or method-status upgrades.
+    evidence: [Stage 5AA records 1 kernel implementation record, 1 CUDA run record, 1 parity record, 1 device-subset audit record, 2 result-store preflight records, 2 p56/full-p56 blocker records, 6 scored-experiment deferral records, and 4 next-stage decision records.]
+    stages_supporting: [stage-5w, stage-5x, stage-5y, stage-5z, stage-5aa]
+    reopen_conditions: [A later Stage 5AB-style reporting/preflight stage cites Stage 5AA synthetic parity records and keeps p56 execution blocked unless an explicit future prompt scopes bounded-p56 CUDA parity.]
+    prohibited_expansions: [p56 CUDA execution in Stage 5AA, full p56 CUDA, unsolved-page CUDA, broad solved-fixture campaigns, scored experiments, GPU benchmarks, speedup claims, generated-body publication, raw-data processing, website expansion, method-status upgrades to solved, solve claims.]
+    notes: Stage 5AA selected Stage 5AB reporting and bounded-p56 CUDA parity preflight after the synthetic hash matched.
+  - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints
     reason: Stage 4B visual observations are useful review inputs, but broad visual pareidolia and unannotated dot/braille/constellation readings remain high-risk false-positive classes.

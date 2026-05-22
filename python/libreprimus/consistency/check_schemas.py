@@ -234,6 +234,15 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/prime-minus-one-cuda-implementation-readiness-gate-record-v0.schema.json",
     "cuda/prime-minus-one-cuda-next-stage-decision-record-v0.schema.json",
     "cuda/stage5z-prime-minus-one-cuda-contract-summary-v0.schema.json",
+    "cuda/prime-minus-one-cuda-synthetic-kernel-implementation-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-synthetic-run-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-synthetic-parity-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-device-subset-audit-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-synthetic-result-store-preflight-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-synthetic-p56-blocker-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-synthetic-scored-experiment-deferral-record-v0.schema.json",
+    "cuda/prime-minus-one-cuda-synthetic-next-stage-decision-record-v0.schema.json",
+    "cuda/stage5aa-prime-minus-one-cuda-synthetic-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -445,6 +454,15 @@ EXPECTED_DOC_TERMS = [
     "prime-minus-one-cuda-implementation-readiness-gate-record-v0",
     "prime-minus-one-cuda-next-stage-decision-record-v0",
     "stage5z-prime-minus-one-cuda-contract-summary-v0",
+    "prime-minus-one-cuda-synthetic-kernel-implementation-record-v0",
+    "prime-minus-one-cuda-synthetic-run-record-v0",
+    "prime-minus-one-cuda-synthetic-parity-record-v0",
+    "prime-minus-one-cuda-device-subset-audit-record-v0",
+    "prime-minus-one-cuda-synthetic-result-store-preflight-record-v0",
+    "prime-minus-one-cuda-synthetic-p56-blocker-record-v0",
+    "prime-minus-one-cuda-synthetic-scored-experiment-deferral-record-v0",
+    "prime-minus-one-cuda-synthetic-next-stage-decision-record-v0",
+    "stage5aa-prime-minus-one-cuda-synthetic-summary-v0",
 ]
 
 

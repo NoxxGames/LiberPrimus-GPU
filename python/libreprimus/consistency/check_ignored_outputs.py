@@ -327,6 +327,18 @@ def check_ignored_output_consistency(root: Path = repo_root()) -> list[Consisten
         "experiments/results/prime-minus-one-cuda-contract/stage5z/warnings.jsonl",
         "experiments/results/prime-minus-one-cuda-contract/stage5z/results.sqlite3",
         "codex-output/stage5z-codex-completion.md",
+        "experiments/results/prime-minus-one-cuda-synthetic/stage5aa/kernel_build_report.json",
+        "experiments/results/prime-minus-one-cuda-synthetic/stage5aa/cuda_run_report.json",
+        "experiments/results/prime-minus-one-cuda-synthetic/stage5aa/parity_report.json",
+        "experiments/results/prime-minus-one-cuda-synthetic/stage5aa/device_subset_audit.json",
+        "experiments/results/prime-minus-one-cuda-synthetic/stage5aa/result_store_preflight_report.json",
+        "experiments/results/prime-minus-one-cuda-synthetic/stage5aa/p56_blocker_report.json",
+        "experiments/results/prime-minus-one-cuda-synthetic/stage5aa/scored_experiment_deferral_report.json",
+        "experiments/results/prime-minus-one-cuda-synthetic/stage5aa/next_stage_decision.json",
+        "experiments/results/prime-minus-one-cuda-synthetic/stage5aa/summary.json",
+        "experiments/results/prime-minus-one-cuda-synthetic/stage5aa/warnings.jsonl",
+        "experiments/results/prime-minus-one-cuda-synthetic/stage5aa/results.sqlite3",
+        "codex-output/stage5aa-codex-completion.md",
         "local-test.sqlite3",
     ]
     trackable_paths = [

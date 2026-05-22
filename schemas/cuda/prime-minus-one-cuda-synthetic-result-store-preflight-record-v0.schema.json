@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-synthetic-result-store-preflight-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Synthetic Result Store Preflight Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "preflight_record_id", "compatibility_contract", "compact_metadata_only", "generated_outputs_committed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_synthetic_result_store_preflight_record" },
+    "stage_id": { "const": "stage-5aa" },
+    "compatibility_contract": { "enum": ["stage4p", "stage4i"] },
+    "compact_metadata_only": { "const": true },
+    "result_body_publication_allowed": { "const": false },
+    "generated_body_publication_allowed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "p56_cuda_execution_performed": { "const": false },
+    "full_p56_cuda_execution_performed": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "scored_experiment_executed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

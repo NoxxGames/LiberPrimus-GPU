@@ -370,8 +370,8 @@ def validate_research_synthesis(
         _require_text(
             errors,
             staged_text,
-            ("stage 5aa", "prime-minus-one cuda synthetic kernel implementation"),
-            "staged_plan_stage5aa_next",
+            ("stage 5ab", "prime-minus-one cuda synthetic parity reporting"),
+            "staged_plan_stage5ab_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -646,7 +646,10 @@ def validate_research_synthesis(
             or "stage 5w" not in evidence_text
             or "stage 5x" not in evidence_text
             or "stage 5y" not in evidence_text
+            or "stage 5z" not in evidence_text
+            or "stage 5aa" not in evidence_text
             or "stage 5z" not in next_text
+            or "stage 5ab" not in next_text
         ):
             errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_stage5j_stage5k_transition")
 

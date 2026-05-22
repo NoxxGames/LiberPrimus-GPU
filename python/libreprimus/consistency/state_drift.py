@@ -268,6 +268,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5Z is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5aa",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5aa\b", re.IGNORECASE),
+        "Stage 5AA is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -828,6 +833,16 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
+        "stage5aa_prime_minus_one_cuda_synthetic_complete",
+        "stage 5aa" in staged_plan
+        and "prime-minus-one cuda synthetic" in staged_plan
+        and "stage 5ab" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5AA synthetic CUDA parity and Stage 5AB direction.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
         "source_lock_snapshot_policy_present",
         "source-lock snapshot" in combined and "allowlisted" in combined and "snapshot policy" in combined,
         "Allowlisted public source-lock snapshot policy is documented.",
@@ -1154,6 +1169,17 @@ def check_state_drift_consistency(
         and "full p56" in combined
         and "no cuda execution" in combined,
         "Stage 5Z prime-minus-one CUDA contract preparation and Stage 5AA synthetic boundary are documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "prime_minus_one_cuda_synthetic_policy_present",
+        "prime-minus-one cuda synthetic" in combined
+        and "stage 5ab" in combined
+        and "full p56" in combined
+        and "benchmarks" in combined
+        and "solve claims" in combined,
+        "Stage 5AA prime-minus-one CUDA synthetic boundary and Stage 5AB direction are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

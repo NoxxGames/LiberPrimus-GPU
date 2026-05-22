@@ -112,6 +112,8 @@ scored-experiment readiness, guardrails, next-stage decisions, CLI build/validat
 ignored-output/codex-output checks for
 `experiments/results/prime-minus-one-native-reporting/stage5y/` and `codex-output/`.
 
+Stage 5AA extends coverage with prime-minus-one CUDA synthetic schemas, record builders, CLI commands, a no-GPU-safe skip path, the local synthetic CUDA parity path, p56/full-p56 blockers, scored-experiment deferrals, and ignore-policy checks. The optional CUDA run is scoped to one synthetic vector and is not required for CI.
+
 Stage 5Z extends coverage with prime-minus-one CUDA contract schemas, CUDA-C style kernel ABI
 records, host-runner contract records, buffer contract records, validation-vector records,
 future-parity plan records, result-store compatibility records, full-p56 blocker records,

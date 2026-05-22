@@ -4,6 +4,12 @@
 
 This file records CUDA policy for future acceleration work.
 
+## Stage 5AA Prime-Minus-One CUDA Synthetic Parity
+
+Stage 5AA is complete. It adds `prime_minus_one_stream_kernel_v0` for the single synthetic Stage 5Z validation vector and records CUDA attempted/pass/fail/skip `1/1/0/0` with the expected and computed hash `06a5c37f7e5eda8eec00cfab5b09faba6ec157488ca15f61a9189d4bf06005ab`.
+
+This is synthetic correctness metadata only. It does not authorize p56/full-p56 CUDA, unsolved-page CUDA, scored experiments, benchmarking, generated-body publication, website expansion, method-status upgrades, canonical corpus activation, page-boundary finalisation, or solve claims. Stage 5AB is the next reporting/preflight step before any bounded-p56 CUDA parity execution can be considered.
+
 ## Stage 5Z Prime-Minus-One CUDA Contract
 
 Stage 5Z is complete. It records prime-minus-one CUDA contract metadata, CUDA-C style kernel ABI records, host-runner contract records, buffer contracts, validation vectors, future parity plans, result-store compatibility, full-p56 blocker preservation, scored-experiment deferral, implementation-readiness gates, and next-stage decisions without native execution, CUDA execution, CUDA source changes, kernels, native/CUDA CMake, or benchmarking.

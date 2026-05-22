@@ -24,3 +24,7 @@ Main commands:
 - `summary`
 
 The commands write compact committed YAML records plus ignored JSON reports. They do not run CUDA or native parity.
+
+Stage 5AA builds on these records through the separate
+`libreprimus prime-minus-one-cuda-synthetic` command group. The Stage 5Z contract CLI remains a
+no-execution contract-preparation surface.

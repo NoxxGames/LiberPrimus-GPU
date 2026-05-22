@@ -919,3 +919,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5Z wrote 2 contract records, 1 kernel ABI record, 1 host-runner contract record, 11 buffer contract records, 7 validation-vector records, 4 future parity plan records, 2 result-store compatibility records, 1 full-p56 blocker record, 6 scored-experiment deferral records, 1 implementation-readiness gate record, and 7 next-stage decision records. It selected Stage 5AA prime-minus-one CUDA synthetic kernel implementation and parity as the next Codex prompt because the synthetic-only contract surface is ready, while preserving the full-p56 blocker and scored-experiment deferral. It performed no native execution, CUDA execution, CUDA source modification, kernel addition, native/CUDA CMake run, GPU benchmark, speedup claim, unsolved-page CUDA use, real Liber Primus CUDA-data use, raw-data processing, generated-body publication, codex-output publication, website expansion, method-status upgrade to solved, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5aa
+    title: Prime-minus-one CUDA synthetic kernel implementation and parity
+    status: complete
+    category: infrastructure
+    summary: Implemented and ran only the Stage 5Z synthetic prime-minus-one CUDA validation vector, matched the expected Stage 5Z hash, and preserved p56/full-p56, scored-experiment, benchmark, website, raw-data, generated-body, method-status, and solve-claim blockers.
+    key_outputs:
+      - "`libreprimus prime-minus-one-cuda-synthetic` commands for kernel implementation records, run records, synthetic CUDA parity, parity records, device-subset audit, result-store preflight, p56 blocker, scored-experiment deferral, next-stage decision, summary generation, validation, and summary display."
+      - Stage 5AA prime-minus-one CUDA synthetic kernel implementation, run, parity, device-subset audit, result-store preflight, p56 blocker, scored-experiment deferral, next-stage-decision, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/prime-minus-one-cuda-synthetic/stage5aa/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AA wrote 1 kernel implementation record, 1 CUDA run record, 1 parity record, 1 device-subset audit record, 2 result-store preflight records, 2 p56/full-p56 blocker records, 6 scored-experiment deferral records, and 4 next-stage decision records. It added one synthetic-only `prime_minus_one_stream_kernel_v0` path, ran only `stage5z-validation-synthetic-prime-control-v0`, matched expected and computed hash `06a5c37f7e5eda8eec00cfab5b09faba6ec157488ca15f61a9189d4bf06005ab`, selected Stage 5AB prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight, and performed no p56/full-p56 CUDA execution, unsolved-page CUDA use, broad solved-fixture campaign, GPU benchmark, speedup claim, scored experiment, real Liber Primus CUDA-data use, raw-data processing, generated-body publication, codex-output publication, website expansion, method-status upgrade to solved, canonical-corpus activation, page-boundary finalisation, or solve claim.

@@ -1313,6 +1313,22 @@ Stage 5A adds CUDA planning schemas:
 
 These records require planning-only/no-solve flags and reject CUDA implementation, GPU benchmark, speedup claim, raw-data, generated-output, canonical-corpus, and page-boundary drift.
 
+# Stage 5AA Prime-Minus-One CUDA Synthetic Schemas
+
+Stage 5AA adds prime-minus-one CUDA synthetic schemas:
+
+- `prime-minus-one-cuda-synthetic-kernel-implementation-record-v0`
+- `prime-minus-one-cuda-synthetic-run-record-v0`
+- `prime-minus-one-cuda-synthetic-parity-record-v0`
+- `prime-minus-one-cuda-device-subset-audit-record-v0`
+- `prime-minus-one-cuda-synthetic-result-store-preflight-record-v0`
+- `prime-minus-one-cuda-synthetic-p56-blocker-record-v0`
+- `prime-minus-one-cuda-synthetic-scored-experiment-deferral-record-v0`
+- `prime-minus-one-cuda-synthetic-next-stage-decision-record-v0`
+- `stage5aa-prime-minus-one-cuda-synthetic-summary-v0`
+
+All Stage 5AA schemas require synthetic-only scope, no solve claim, no generated-output publication, no raw-data processing, no p56/full-p56 execution, no unsolved-page CUDA, no benchmark, and no scored experiment execution.
+
 # Stage 5Z Prime-Minus-One CUDA Contract Schemas
 
 Stage 5Z adds prime-minus-one CUDA contract schemas:
