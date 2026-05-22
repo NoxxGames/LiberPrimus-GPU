@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/cuda/candidate-batch-abi-gap-closure-record-v0.schema.json",
+  "title": "candidate-batch-abi-gap-closure-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "gap_closure_record_id",
+    "stage5t_gap_id",
+    "surface_id",
+    "stage5u_closure_status",
+    "closure_record_reference",
+    "remaining_blockers",
+    "implementation_pending",
+    "cuda_execution_performed",
+    "generated_outputs_committed",
+    "no_solve_claim",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": {"const": "candidate_batch_abi_gap_closure_record"},
+    "stage_id": {"const": "stage-5u"},
+    "gap_closure_record_id": {"type": "string"},
+    "stage5t_gap_id": {"type": "string"},
+    "surface_id": {"type": "string"},
+    "stage5u_closure_status": {"enum": ["closed_by_contract", "partially_closed_by_contract", "still_blocked"]},
+    "closure_record_reference": {"type": "string"},
+    "remaining_blockers": {"type": "array", "items": {"type": "string"}},
+    "implementation_pending": {"const": true},
+    "cuda_execution_performed": {"const": false},
+    "cuda_source_modified": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0},
+    "gpu_benchmark_performed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "no_gpu_ci_safe": {"const": true}
+  }
+}

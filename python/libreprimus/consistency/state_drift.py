@@ -238,6 +238,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5T is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5u",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5u\b", re.IGNORECASE),
+        "Stage 5U is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -755,6 +760,17 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
+        "stage5u_candidate_batch_abi_complete",
+        "stage 5u" in staged_plan
+        and "candidate batch abi" in staged_plan
+        and "backend contract" in staged_plan
+        and "stage 5v" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5U Candidate Batch ABI and Stage 5V direction as complete.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
         "source_lock_snapshot_policy_present",
         "source-lock snapshot" in combined and "allowlisted" in combined and "snapshot policy" in combined,
         "Allowlisted public source-lock snapshot policy is documented.",
@@ -1019,6 +1035,16 @@ def check_state_drift_consistency(
         and "stage 5u" in combined
         and "no cuda execution" in combined,
         "Stage 5T CUDA solved-family readiness and Stage 5U ABI direction are documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "cuda_candidate_batch_abi_policy_present",
+        "candidate batch abi" in combined
+        and "token buffer" in combined
+        and "score-vector" in combined
+        and "stage 5v" in combined,
+        "Stage 5U Candidate Batch ABI and next native conformance direction are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

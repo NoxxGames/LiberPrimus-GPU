@@ -22,3 +22,7 @@ Stage 5T records eight solved-family inventory rows and eight parity-matrix rows
 `gematria_shift_score_only` parity must not be described as original transform-family CUDA parity for direct translation, reverse Gematria, Vigenere, or prime-stream semantics. Stage 5T records current-kernel parity separately from future original-family contracts.
 
 Generated reports remain ignored under `experiments/results/cuda-solved-family-readiness/stage5t/`.
+
+## Stage 5U Follow-Up
+
+Stage 5U consumes the five ABI gap rows from the Stage 5T matrix and defines Candidate Batch ABI v0 contracts for token buffers, key schedules, stream schedules, score vectors, top-k output, backend surfaces, and result-store compatibility. It closes the Stage 5T gaps only at the contract level and selects Stage 5V native ABI conformance fixtures as the next bounded step.

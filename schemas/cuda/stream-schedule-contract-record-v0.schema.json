@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/cuda/stream-schedule-contract-record-v0.schema.json",
+  "title": "stream-schedule-contract-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "stream_schedule_contract_id",
+    "supported_families",
+    "contract_status",
+    "stream_value_domain",
+    "stream_length_field",
+    "stream_offset_field",
+    "cuda_execution_allowed",
+    "cuda_execution_performed",
+    "generated_body_publication_allowed",
+    "no_solve_claim",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": {"const": "stream_schedule_contract_record"},
+    "stage_id": {"const": "stage-5u"},
+    "stream_schedule_contract_id": {"type": "string"},
+    "supported_families": {"type": "array", "items": {"type": "string"}},
+    "contract_status": {"type": "string"},
+    "stream_value_domain": {"type": "string"},
+    "stream_length_field": {"type": "string"},
+    "stream_offset_field": {"type": "string"},
+    "cuda_execution_allowed": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "cuda_source_modified": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0},
+    "generated_body_publication_allowed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "no_gpu_ci_safe": {"const": true}
+  }
+}

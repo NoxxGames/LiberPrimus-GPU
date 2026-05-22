@@ -603,5 +603,13 @@ experiments/results/cuda-solved-family-readiness/**
 !experiments/results/cuda-solved-family-readiness/stage5t/
 !experiments/results/cuda-solved-family-readiness/stage5t/.gitkeep
 
+# Generated CUDA candidate batch ABI outputs
+experiments/results/cuda-candidate-batch-abi/**
+!experiments/results/cuda-candidate-batch-abi/
+!experiments/results/cuda-candidate-batch-abi/README.md
+!experiments/results/cuda-candidate-batch-abi/.gitkeep
+!experiments/results/cuda-candidate-batch-abi/stage5u/
+!experiments/results/cuda-candidate-batch-abi/stage5u/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

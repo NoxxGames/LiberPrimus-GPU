@@ -1,0 +1,50 @@
+record_type: cuda_metadata_manifest
+manifest_id: stage5u-next-stage-decision
+stage_id: stage-5u
+description: Controlled next-stage decision after Candidate Batch ABI v0 contract consolidation.
+execution_enabled: false
+cuda_execution_enabled: false
+cuda_execution_performed: false
+cuda_required: false
+ci_gpu_required: false
+no_gpu_ci_safe: true
+metadata_only: true
+contract_only: true
+compact_summary_only: true
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+cuda_source_modified: false
+device_kernel_arithmetic_modified: false
+gpu_benchmark_performed: false
+benchmark_execution_allowed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+unsolved_page_cuda_allowed: false
+real_liber_primus_cuda_data_used: false
+solved_fixture_cuda_used: false
+raw_data_required: false
+raw_data_processed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+codex_output_committed: false
+method_status_upgrade_allowed: false
+method_status_upgraded: false
+no_solve_claim: true
+solve_claim: false
+selected_next_prompt_type: Codex
+selected_next_stage_title: Stage 5V - native candidate batch ABI reference adapter and conformance fixtures
+deep_research_recommended_next: false
+outputs:
+  committed:
+    - data/cuda/stage5u-next-stage-decision.yaml
+    - data/cuda/stage5u-candidate-batch-abi-summary.yaml
+  ignored:
+    - experiments/results/cuda-candidate-batch-abi/stage5u/next_stage_decision.json
+    - experiments/results/cuda-candidate-batch-abi/stage5u/summary.json
+    - experiments/results/cuda-candidate-batch-abi/stage5u/warnings.jsonl
+notes:
+  - Stage 5U selects a native no-GPU reference adapter and conformance fixture stage before family-specific CUDA contract widening.
+  - Deep Research is not selected as the next step because Stage 5U records close Stage 5T planning gaps at the contract level.

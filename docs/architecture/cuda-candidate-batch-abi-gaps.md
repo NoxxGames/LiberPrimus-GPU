@@ -15,3 +15,9 @@ Stage 5T identifies shared ABI surfaces that block responsible future CUDA contr
 ## Stage 5U Rationale
 
 Because multiple future families need these shared surfaces, Stage 5T selects `Stage 5U - unified candidate batch ABI and backend contract consolidation` before more CUDA contracts or benchmark work.
+
+## Stage 5U Closure
+
+Stage 5U records each Stage 5T gap as `closed_by_contract` in `data/cuda/stage5u-abi-gap-closure.yaml`. The closure is contract-only: native reference implementation, CUDA execution, top-k reducers, score-vector production, and family-specific original-transform CUDA contracts remain pending.
+
+The selected next prompt is `Stage 5V - native candidate batch ABI reference adapter and conformance fixtures`.

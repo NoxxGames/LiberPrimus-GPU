@@ -1,0 +1,54 @@
+records:
+- record_type: topk_output_contract_record
+  topk_contract_id: stage5u-topk-output-contract-v0
+  candidate_ordering: candidate_major
+  score_ordering: score_component_specific_direction_required
+  tie_break_policy:
+  - score descending unless component declares lower_is_better
+  - candidate_id ascending
+  - source_fixture_id ascending
+  - output_token_hash ascending
+  max_k_policy: manifest_declared_k_with_ci_fixture_caps
+  required_candidate_ids: true
+  required_hashes:
+  - output_token_hash
+  required_score_vector_reference: true
+  generated_body_publication_allowed: false
+  compact_summary_only: true
+  stable_sort_required: true
+  deterministic_across_threads: true
+  deterministic_across_backends: true
+  benchmark_execution_allowed: false
+  implementation_allowed_now: false
+  stage_id: stage-5u
+  source_stage_id: stage-5t
+  abi_id: candidate_batch_abi_v0
+  abi_version: 0
+  result_source_kind: cuda_candidate_batch_abi_contract
+  metadata_only: true
+  contract_only: true
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  gpu_benchmark_performed: false
+  performance_claim: false
+  speedup_claim: false
+  unsolved_page_cuda_used: false
+  unsolved_page_cuda_allowed: false
+  real_liber_primus_cuda_data_used: false
+  solved_fixture_cuda_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false

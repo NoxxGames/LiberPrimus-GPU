@@ -174,6 +174,17 @@ EXPECTED_SCHEMA_FILES = [
     "cuda/cuda-no-unsolved-guardrail-review-record-v0.schema.json",
     "cuda/cuda-next-stage-decision-record-v0.schema.json",
     "cuda/stage5t-cuda-solved-family-readiness-summary-v0.schema.json",
+    "cuda/candidate-batch-abi-record-v0.schema.json",
+    "cuda/token-buffer-contract-record-v0.schema.json",
+    "cuda/transform-parameter-contract-record-v0.schema.json",
+    "cuda/key-schedule-contract-record-v0.schema.json",
+    "cuda/stream-schedule-contract-record-v0.schema.json",
+    "cuda/score-vector-contract-record-v0.schema.json",
+    "cuda/topk-output-contract-record-v0.schema.json",
+    "cuda/backend-surface-contract-record-v0.schema.json",
+    "cuda/candidate-batch-result-store-compatibility-record-v0.schema.json",
+    "cuda/candidate-batch-abi-gap-closure-record-v0.schema.json",
+    "cuda/stage5u-candidate-batch-abi-summary-v0.schema.json",
 ]
 EXPECTED_DOC_TERMS = [
     "experiment-run-record-v0",
@@ -325,6 +336,17 @@ EXPECTED_DOC_TERMS = [
     "cuda-no-unsolved-guardrail-review-record-v0",
     "cuda-next-stage-decision-record-v0",
     "stage5t-cuda-solved-family-readiness-summary-v0",
+    "candidate-batch-abi-record-v0",
+    "token-buffer-contract-record-v0",
+    "transform-parameter-contract-record-v0",
+    "key-schedule-contract-record-v0",
+    "stream-schedule-contract-record-v0",
+    "score-vector-contract-record-v0",
+    "topk-output-contract-record-v0",
+    "backend-surface-contract-record-v0",
+    "candidate-batch-result-store-compatibility-record-v0",
+    "candidate-batch-abi-gap-closure-record-v0",
+    "stage5u-candidate-batch-abi-summary-v0",
 ]
 
 

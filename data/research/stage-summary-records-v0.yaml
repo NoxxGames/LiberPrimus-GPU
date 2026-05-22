@@ -823,3 +823,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5T wrote 8 solved-family inventory records, 8 CUDA parity matrix records, 7 kernel-readiness records, 5 candidate batch ABI gap records, 3 benchmark-readiness records, 6 no-unsolved guardrail records, and 5 next-stage decision records. It selected Stage 5U unified candidate batch ABI and backend contract consolidation as the next prompt. It ran no CUDA, modified no CUDA source, added 0 kernels, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, published no generated result bodies, upgraded no method family to solved, and made no canonical-corpus, page-boundary, website-expansion, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5u
+    title: Unified candidate batch ABI and backend contract consolidation
+    status: complete
+    category: infrastructure
+    summary: Defined Candidate Batch ABI v0 and backend contract records that close the Stage 5T shared ABI gaps by contract before native/CUDA implementation work.
+    key_outputs:
+      - "`libreprimus cuda-candidate-batch-abi` commands for candidate-batch ABI, token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, result-store compatibility, ABI gap closure, next-stage decision, summary, validation, and summary display."
+      - Stage 5U candidate-batch ABI, token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k output, backend-surface, result-store compatibility, ABI gap closure, next-stage decision, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/cuda-candidate-batch-abi/stage5u/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5U wrote 1 candidate-batch ABI record, 8 token-buffer contract records, 6 transform-parameter contract records, 2 key-schedule contract records, 2 stream-schedule contract records, 7 score-vector contract records, 1 top-k output contract record, 7 backend-surface contract records, 3 result-store compatibility records, 5 ABI gap closure records, and 9 next-stage decision records. It closed the five Stage 5T ABI gaps by contract, selected Stage 5V native candidate batch ABI reference adapter and conformance fixtures as the next prompt, and ran no CUDA, modified no CUDA/C++ source, added 0 kernels, performed no GPU benchmark, made no speedup claim, processed no unsolved or real Liber Primus raw data, published no generated result bodies, upgraded no method family to solved, and made no canonical-corpus, page-boundary, website-expansion, or solve claim.

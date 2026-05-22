@@ -305,7 +305,19 @@ def validate_research_synthesis(
             errors,
             staged_text,
             ("stage 5u", "unified candidate batch abi", "backend contract"),
-            "staged_plan_stage5u_next",
+            "staged_plan_stage5u_present",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5u", "unified candidate batch abi", "backend contract", "complete"),
+            "staged_plan_stage5u_candidate_batch_abi_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5v", "native candidate batch abi", "reference adapter"),
+            "staged_plan_stage5v_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -532,6 +544,7 @@ def validate_research_synthesis(
         and "stage 5s" not in next_text
         and "stage 5t" not in next_text
         and "stage 5u" not in next_text
+        and "stage 5v" not in next_text
     ):
         errors.append("cuda_build_device_detection_missing_stage5d_through_stage5j_next_action")
 
@@ -574,7 +587,8 @@ def validate_research_synthesis(
             or "stage 5r" not in evidence_text
             or "stage 5s" not in evidence_text
             or "stage 5t" not in evidence_text
-            or "stage 5u" not in next_text
+            or "stage 5u" not in evidence_text
+            or "stage 5v" not in next_text
         ):
             errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_stage5j_stage5k_transition")
 

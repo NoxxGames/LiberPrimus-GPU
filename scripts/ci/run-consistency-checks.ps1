@@ -1170,6 +1170,63 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5TSummary `
         --results-dir $Stage5TOut
 
+    Write-Host "Running Stage 5U CUDA candidate batch ABI temp output"
+    $Stage5UOut = Join-Path $TempDir "stage5u-cuda-candidate-batch-abi"
+    $Stage5UAbi = Join-Path $TempDir "stage5u-candidate-batch-abi.yaml"
+    $Stage5UToken = Join-Path $TempDir "stage5u-token-buffer-contract.yaml"
+    $Stage5UTransform = Join-Path $TempDir "stage5u-transform-parameter-contract.yaml"
+    $Stage5UKey = Join-Path $TempDir "stage5u-key-schedule-contract.yaml"
+    $Stage5UStream = Join-Path $TempDir "stage5u-stream-schedule-contract.yaml"
+    $Stage5UScore = Join-Path $TempDir "stage5u-score-vector-contract.yaml"
+    $Stage5UTopk = Join-Path $TempDir "stage5u-topk-output-contract.yaml"
+    $Stage5UBackend = Join-Path $TempDir "stage5u-backend-surface-contract.yaml"
+    $Stage5UCompat = Join-Path $TempDir "stage5u-result-store-compatibility.yaml"
+    $Stage5UGapClosure = Join-Path $TempDir "stage5u-abi-gap-closure.yaml"
+    $Stage5UDecision = Join-Path $TempDir "stage5u-next-stage-decision.yaml"
+    $Stage5USummary = Join-Path $TempDir "stage5u-candidate-batch-abi-summary.yaml"
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi build-candidate-batch-abi --candidate-batch-abi-out $Stage5UAbi --out-dir $Stage5UOut --allow-warnings
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi build-token-buffer-contract --token-buffer-contract-out $Stage5UToken --out-dir $Stage5UOut --allow-warnings
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi build-transform-parameter-contract --transform-parameter-contract-out $Stage5UTransform --out-dir $Stage5UOut --allow-warnings
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi build-key-schedule-contract --key-schedule-contract-out $Stage5UKey --out-dir $Stage5UOut --allow-warnings
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi build-stream-schedule-contract --stream-schedule-contract-out $Stage5UStream --out-dir $Stage5UOut --allow-warnings
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi build-score-vector-contract --score-vector-contract-out $Stage5UScore --out-dir $Stage5UOut --allow-warnings
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi build-topk-output-contract --topk-output-contract-out $Stage5UTopk --out-dir $Stage5UOut --allow-warnings
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi build-backend-surface-contract --backend-surface-contract-out $Stage5UBackend --out-dir $Stage5UOut --allow-warnings
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi build-result-store-compatibility --result-store-compatibility-out $Stage5UCompat --out-dir $Stage5UOut --allow-warnings
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi build-gap-closure --stage5t-gaps $Stage5TAbi --gap-closure-out $Stage5UGapClosure --out-dir $Stage5UOut --allow-warnings
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi build-next-stage-decision --gap-closure $Stage5UGapClosure --next-stage-decision-out $Stage5UDecision --out-dir $Stage5UOut --allow-warnings
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi build-summary `
+        --candidate-batch-abi $Stage5UAbi `
+        --token-buffer-contract $Stage5UToken `
+        --transform-parameter-contract $Stage5UTransform `
+        --key-schedule-contract $Stage5UKey `
+        --stream-schedule-contract $Stage5UStream `
+        --score-vector-contract $Stage5UScore `
+        --topk-output-contract $Stage5UTopk `
+        --backend-surface-contract $Stage5UBackend `
+        --result-store-compatibility $Stage5UCompat `
+        --gap-closure $Stage5UGapClosure `
+        --next-stage-decision $Stage5UDecision `
+        --stage5t-gaps $Stage5TAbi `
+        --stage5t-summary $Stage5TSummary `
+        --summary-out $Stage5USummary `
+        --out-dir $Stage5UOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli cuda-candidate-batch-abi validate-stage5u `
+        --candidate-batch-abi $Stage5UAbi `
+        --token-buffer-contract $Stage5UToken `
+        --transform-parameter-contract $Stage5UTransform `
+        --key-schedule-contract $Stage5UKey `
+        --stream-schedule-contract $Stage5UStream `
+        --score-vector-contract $Stage5UScore `
+        --topk-output-contract $Stage5UTopk `
+        --backend-surface-contract $Stage5UBackend `
+        --result-store-compatibility $Stage5UCompat `
+        --gap-closure $Stage5UGapClosure `
+        --next-stage-decision $Stage5UDecision `
+        --summary $Stage5USummary `
+        --results-dir $Stage5UOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

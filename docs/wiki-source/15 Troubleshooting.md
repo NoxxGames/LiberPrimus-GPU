@@ -616,3 +616,22 @@ kernel-readiness records, 5 batch ABI gap records, 3 benchmark-readiness records
 guardrail records, and 5 next-stage decision records. The selected next prompt should remain
 Stage 5U unified candidate batch ABI consolidation unless the committed readiness records change
 under an explicit future stage.
+
+# Stage 5U Candidate Batch ABI Troubleshooting
+
+If Stage 5U validation fails, rebuild the no-GPU metadata sequence and rerun
+`libreprimus cuda-candidate-batch-abi validate-stage5u`. Do not run CUDA, native/CUDA CMake,
+benchmarks, solved fixtures, or unsolved pages to repair ABI contract records.
+
+Expected Stage 5U counts are 1 candidate-batch ABI record, 8 token-buffer contract records, 6
+transform-parameter contract records, 2 key-schedule contract records, 2 stream-schedule contract
+records, 7 score-vector contract records, 1 top-k output contract record, 7 backend-surface
+contract records, 3 result-store compatibility records, 5 ABI gap closure records, and 9
+next-stage decision records. The selected next prompt should remain Stage 5V native candidate batch
+ABI reference adapter and conformance fixtures unless an explicit future stage changes the ABI
+contract records.
+
+Generated Stage 5U reports belong under ignored
+`experiments/results/cuda-candidate-batch-abi/stage5u/`, and the local handoff belongs under ignored
+`codex-output/stage5u-codex-completion.md`. Do not stage generated reports, generated result bodies,
+SQLite files, raw data, or local CUDA diagnostics.

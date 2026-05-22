@@ -1,0 +1,65 @@
+record_type: stage5u_candidate_batch_abi_summary
+schema: schemas/cuda/stage5u-candidate-batch-abi-summary-v0.schema.json
+stage_id: stage-5u
+status: complete
+source_stage_id: stage-5t
+candidate_batch_abi_records: 1
+token_buffer_contract_records: 8
+transform_parameter_contract_records: 6
+key_schedule_contract_records: 2
+stream_schedule_contract_records: 2
+score_vector_contract_records: 7
+topk_output_contract_records: 1
+backend_surface_contract_records: 7
+result_store_compatibility_records: 3
+abi_gap_closure_records: 5
+next_stage_decision_records: 9
+stage5t_gap_count: 5
+stage5t_gaps_closed_by_contract_count: 5
+stage5t_gaps_partially_closed_count: 0
+stage5t_gaps_still_blocked_count: 0
+stage5t_implementation_pending_count: 5
+candidate_batch_abi_version: 0
+stage5t_selected_next_stage: Stage 5U - unified candidate batch ABI and backend contract
+  consolidation
+recommended_next_prompt_type: Codex
+recommended_next_stage_title: Stage 5V - native candidate batch ABI reference adapter
+  and conformance fixtures
+recommended_next_stage_reason: Stage 5U is contract-only, so a no-GPU native reference
+  adapter and conformance fixture pack should prove Candidate Batch ABI v0 semantics
+  before family-specific CUDA contracts or benchmarks.
+deep_research_recommended_next: false
+codex_output_written: false
+abi_id: candidate_batch_abi_v0
+abi_version: 0
+result_source_kind: cuda_candidate_batch_abi_contract
+metadata_only: true
+contract_only: true
+compact_summary_only: true
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+device_kernel_arithmetic_modified: false
+gpu_benchmark_performed: false
+benchmark_execution_allowed: false
+performance_claim: false
+speedup_claim: false
+unsolved_page_cuda_used: false
+unsolved_page_cuda_allowed: false
+real_liber_primus_cuda_data_used: false
+solved_fixture_cuda_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_body_publication_allowed: false
+generated_outputs_committed: false
+raw_data_processed: false
+codex_output_committed: false
+method_status_upgrade_allowed: false
+method_status_upgraded: false
+solve_claim: false
+no_solve_claim: true
+no_gpu_ci_safe: true
+ci_gpu_required: false
+local_16gb_profile_required: false
+cxx_launches_python_workers: false

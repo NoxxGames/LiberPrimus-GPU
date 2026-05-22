@@ -2,7 +2,15 @@
 
 ## Current stage
 
-Stage 5T solved-family CUDA parity matrix and kernel-readiness classification is complete. Next recommended prompt: Stage 5U - unified candidate batch ABI and backend contract consolidation. Website expansion is deferred to Stage 6.
+Stage 5U unified candidate batch ABI and backend contract consolidation is complete. Next recommended prompt: Stage 5V - native candidate batch ABI reference adapter and conformance fixtures. Website expansion is deferred to Stage 6.
+
+## Completed in Stage 5U
+
+Stage 5U added the `libreprimus cuda-candidate-batch-abi` CLI, Candidate Batch ABI v0 schemas, token-buffer contracts, transform-parameter contracts, key-schedule contracts, stream-schedule contracts, score-vector contracts, top-k output contracts, backend-surface contracts, result-store compatibility records, Stage 5T ABI gap closure records, next-stage decision records, Stage 5U manifests, generated ignored reports, Python tests, documentation, and research-synthesis updates.
+
+Local Stage 5U summary: candidate batch ABI records `1`, token-buffer contract records `8`, transform-parameter contract records `6`, key-schedule contract records `2`, stream-schedule contract records `2`, score-vector contract records `7`, top-k contract records `1`, backend-surface contract records `7`, result-store compatibility records `3`, ABI gap closure records `5`, next-stage decision records `9`, Stage 5T gaps closed by contract `5`, Stage 5T implementation pending count `5`, selected next prompt `Stage 5V - native candidate batch ABI reference adapter and conformance fixtures`, Deep Research recommended next `false`, CUDA execution performed `false`, CUDA source modified `false`, new CUDA kernels added `0`, unsolved-page CUDA used `false`, real Liber Primus CUDA data used `false`, GPU benchmark performed `false`, speedup/performance assertions `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5U is contract-only ABI infrastructure. It closes Stage 5T ABI gaps at the record level, keeps `gematria_shift_score_only` parity distinct from original transform-family CUDA semantics, assigns backend ownership boundaries, preserves Stage 4I score-summary semantics and Stage 4P compact result-store policy, does not run CUDA, does not add or modify CUDA source, does not add kernels, does not run benchmarks, does not process raw data, does not publish generated result bodies, does not upgrade method families to solved, and makes no solve claim.
 
 ## Completed in Stage 5T
 
@@ -94,7 +102,7 @@ Non-canonical local legacy Pastebin ingestion support was added for `58-Pages-In
 
 ## Not yet implemented
 
-No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5T classifies solved-family CUDA readiness only; further CUDA work should first consolidate the unified candidate batch ABI in Stage 5U, and original-transform-family CUDA contracts, GPU benchmarking, broad solved-fixture campaigns, and unsolved-page CUDA use still require future explicit stages.
+No canonical corpus activation, broad unsolved-page campaign, generated result publication, solve claim, broad CUDA implementation, or serious CUDA acceleration exists yet. Stage 5U defines Candidate Batch ABI v0 only; further CUDA work should first prove the ABI through a native reference adapter and conformance fixtures in Stage 5V, and original-transform-family CUDA contracts, GPU benchmarking, broad solved-fixture campaigns, and unsolved-page CUDA use still require future explicit stages.
 
 ## Completed in Stage 5J
 

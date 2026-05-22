@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://liberprimus-gpu.local/schemas/cuda/topk-output-contract-record-v0.schema.json",
+  "title": "topk-output-contract-record-v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "record_type",
+    "stage_id",
+    "topk_contract_id",
+    "candidate_ordering",
+    "tie_break_policy",
+    "stable_sort_required",
+    "deterministic_across_backends",
+    "implementation_allowed_now",
+    "cuda_execution_performed",
+    "generated_body_publication_allowed",
+    "generated_outputs_committed",
+    "no_solve_claim",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": {"const": "topk_output_contract_record"},
+    "stage_id": {"const": "stage-5u"},
+    "topk_contract_id": {"type": "string"},
+    "candidate_ordering": {"const": "candidate_major"},
+    "tie_break_policy": {"type": "array", "items": {"type": "string"}},
+    "stable_sort_required": {"const": true},
+    "deterministic_across_backends": {"const": true},
+    "implementation_allowed_now": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "cuda_source_modified": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0},
+    "benchmark_execution_allowed": {"const": false},
+    "generated_body_publication_allowed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "no_gpu_ci_safe": {"const": true}
+  }
+}

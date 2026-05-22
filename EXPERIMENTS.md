@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5U Candidate Batch ABI
+
+Stage 5U does not execute an experiment. It defines Candidate Batch ABI v0, token-buffer contracts, transform-parameter contracts, key-schedule contracts, stream-schedule contracts, score-vector contracts, top-k output contracts, backend-surface contracts, result-store compatibility records, Stage 5T ABI gap closure records, next-stage decision records, and summary records under `data/cuda/`.
+
+Generated Stage 5U reports remain ignored under `experiments/results/cuda-candidate-batch-abi/stage5u/`. Stage 5U must keep CUDA execution, native/CUDA CMake, CUDA source modification, new kernels, GPU benchmarks, speedup claims, unsolved-page CUDA, broad solved-fixture CUDA, generated-result-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades to solved, and solve claims disabled.
+
 ## Stage 5T CUDA Solved-Family Readiness
 
 Stage 5T does not execute an experiment. It consumes committed Stage 5M through Stage 5S CUDA parity arc metadata and writes solved-family inventory, CUDA parity matrix, kernel-readiness, candidate batch ABI gap, benchmark-readiness, no-unsolved guardrail, next-stage decision, and summary records under `data/cuda/`.

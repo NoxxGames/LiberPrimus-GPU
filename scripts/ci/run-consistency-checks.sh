@@ -1024,6 +1024,85 @@ echo "Running Stage 5T CUDA solved-family readiness temp output"
     --summary "$tmp_dir/stage5t-cuda-solved-family-readiness-summary.yaml" \
     --results-dir "$tmp_dir/stage5t-cuda-solved-family-readiness"
 
+echo "Running Stage 5U CUDA candidate batch ABI temp output"
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi build-candidate-batch-abi \
+    --candidate-batch-abi-out "$tmp_dir/stage5u-candidate-batch-abi.yaml" \
+    --out-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi build-token-buffer-contract \
+    --token-buffer-contract-out "$tmp_dir/stage5u-token-buffer-contract.yaml" \
+    --out-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi build-transform-parameter-contract \
+    --transform-parameter-contract-out "$tmp_dir/stage5u-transform-parameter-contract.yaml" \
+    --out-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi build-key-schedule-contract \
+    --key-schedule-contract-out "$tmp_dir/stage5u-key-schedule-contract.yaml" \
+    --out-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi build-stream-schedule-contract \
+    --stream-schedule-contract-out "$tmp_dir/stage5u-stream-schedule-contract.yaml" \
+    --out-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi build-score-vector-contract \
+    --score-vector-contract-out "$tmp_dir/stage5u-score-vector-contract.yaml" \
+    --out-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi build-topk-output-contract \
+    --topk-output-contract-out "$tmp_dir/stage5u-topk-output-contract.yaml" \
+    --out-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi build-backend-surface-contract \
+    --backend-surface-contract-out "$tmp_dir/stage5u-backend-surface-contract.yaml" \
+    --out-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi build-result-store-compatibility \
+    --result-store-compatibility-out "$tmp_dir/stage5u-result-store-compatibility.yaml" \
+    --out-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi build-gap-closure \
+    --stage5t-gaps "$tmp_dir/stage5t-cuda-candidate-batch-abi-gaps.yaml" \
+    --gap-closure-out "$tmp_dir/stage5u-abi-gap-closure.yaml" \
+    --out-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi build-next-stage-decision \
+    --gap-closure "$tmp_dir/stage5u-abi-gap-closure.yaml" \
+    --next-stage-decision-out "$tmp_dir/stage5u-next-stage-decision.yaml" \
+    --out-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi build-summary \
+    --candidate-batch-abi "$tmp_dir/stage5u-candidate-batch-abi.yaml" \
+    --token-buffer-contract "$tmp_dir/stage5u-token-buffer-contract.yaml" \
+    --transform-parameter-contract "$tmp_dir/stage5u-transform-parameter-contract.yaml" \
+    --key-schedule-contract "$tmp_dir/stage5u-key-schedule-contract.yaml" \
+    --stream-schedule-contract "$tmp_dir/stage5u-stream-schedule-contract.yaml" \
+    --score-vector-contract "$tmp_dir/stage5u-score-vector-contract.yaml" \
+    --topk-output-contract "$tmp_dir/stage5u-topk-output-contract.yaml" \
+    --backend-surface-contract "$tmp_dir/stage5u-backend-surface-contract.yaml" \
+    --result-store-compatibility "$tmp_dir/stage5u-result-store-compatibility.yaml" \
+    --gap-closure "$tmp_dir/stage5u-abi-gap-closure.yaml" \
+    --next-stage-decision "$tmp_dir/stage5u-next-stage-decision.yaml" \
+    --stage5t-gaps "$tmp_dir/stage5t-cuda-candidate-batch-abi-gaps.yaml" \
+    --stage5t-summary "$tmp_dir/stage5t-cuda-solved-family-readiness-summary.yaml" \
+    --summary-out "$tmp_dir/stage5u-candidate-batch-abi-summary.yaml" \
+    --out-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli cuda-candidate-batch-abi validate-stage5u \
+    --candidate-batch-abi "$tmp_dir/stage5u-candidate-batch-abi.yaml" \
+    --token-buffer-contract "$tmp_dir/stage5u-token-buffer-contract.yaml" \
+    --transform-parameter-contract "$tmp_dir/stage5u-transform-parameter-contract.yaml" \
+    --key-schedule-contract "$tmp_dir/stage5u-key-schedule-contract.yaml" \
+    --stream-schedule-contract "$tmp_dir/stage5u-stream-schedule-contract.yaml" \
+    --score-vector-contract "$tmp_dir/stage5u-score-vector-contract.yaml" \
+    --topk-output-contract "$tmp_dir/stage5u-topk-output-contract.yaml" \
+    --backend-surface-contract "$tmp_dir/stage5u-backend-surface-contract.yaml" \
+    --result-store-compatibility "$tmp_dir/stage5u-result-store-compatibility.yaml" \
+    --gap-closure "$tmp_dir/stage5u-abi-gap-closure.yaml" \
+    --next-stage-decision "$tmp_dir/stage5u-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5u-candidate-batch-abi-summary.yaml" \
+    --results-dir "$tmp_dir/stage5u-cuda-candidate-batch-abi"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

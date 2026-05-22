@@ -119,6 +119,14 @@ data, solved/unsolved page CUDA use, production Gematria CUDA readiness, benchma
 performance/speedup, generated-output, codex-output, and solve-claim drift, and ignored-output
 checks for `experiments/results/gematria-cuda-kernel/stage5j/` and `codex-output/`.
 
+Stage 5U extends coverage with Candidate Batch ABI schemas, token-buffer contract checks,
+transform-parameter family coverage, key-schedule and stream-schedule contract tests, Stage 4I
+score-vector contract checks, deterministic top-k contract checks, backend-surface guardrails,
+result-store compatibility tests, Stage 5T ABI gap closure checks, next-stage decision checks,
+CLI build/validate/summary checks, validation rejections for CUDA/source/benchmark/generated-output
+and solve-claim drift, and ignored-output/codex-output checks for
+`experiments/results/cuda-candidate-batch-abi/stage5u/` and `codex-output/`.
+
 Stage 5K extends coverage with Gematria CUDA parity-reporting schemas, Stage 5J parity report
 records, CUDA device-code audit records, solved-fixture-safe preflight records, score-summary
 preflight records, CLI build/validate/summary checks, validation rejections for CUDA execution,
