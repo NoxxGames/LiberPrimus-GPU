@@ -1,0 +1,204 @@
+record_type: stage5ag_research_bundle_readiness
+schema: schemas/source-harvester/research-bundle-readiness-record-v0.schema.json
+stage_id: stage-5ag
+source_stage_id: stage-5af
+bundle_records: 10
+ready_for_extraction_prep_count: 0
+partial_count: 5
+not_ready_count: 5
+solve_claim: false
+records:
+- record_type: stage5ag_research_bundle_readiness_record
+  schema: schemas/source-harvester/research-bundle-readiness-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  bundle_id: 01-signed-messages-and-authenticity
+  required_source_ids:
+  - complete_cicada3301_archive
+  - isitcicada_pgp_checker
+  - cicada_solvers_isitcicada_repo
+  matched_source_ids:
+  - complete_cicada3301_archive
+  missing_source_ids:
+  - isitcicada_pgp_checker
+  - cicada_solvers_isitcicada_repo
+  local_material_count: 1
+  readiness_status: partially_ready
+  do_not_assume_notes_present: true
+  recommended_next_action: close missing source gaps or build partial curated bundle
+  solve_claim: false
+- record_type: stage5ag_research_bundle_readiness_record
+  schema: schemas/source-harvester/research-bundle-readiness-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  bundle_id: 02-liber-primus-images-and-transcriptions
+  required_source_ids:
+  - liber_primus_dropbox_files
+  - pastebin_vgmk330j_lp_runes_prime_values
+  - solved_page_google_sheet
+  - fandom_liber_primus_solved_pages
+  - fandom_liber_primus_unsolved_pages
+  matched_source_ids:
+  - liber_primus_dropbox_files
+  missing_source_ids:
+  - pastebin_vgmk330j_lp_runes_prime_values
+  - solved_page_google_sheet
+  - fandom_liber_primus_solved_pages
+  - fandom_liber_primus_unsolved_pages
+  local_material_count: 1
+  readiness_status: partially_ready
+  do_not_assume_notes_present: true
+  recommended_next_action: close missing source gaps or build partial curated bundle
+  solve_claim: false
+- record_type: stage5ag_research_bundle_readiness_record
+  schema: schemas/source-harvester/research-bundle-readiness-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  bundle_id: 03-page-49-51-token-block
+  required_source_ids:
+  - pastebin_vgmk330j_lp_runes_prime_values
+  - fandom_liber_primus_unsolved_pages
+  matched_source_ids: []
+  missing_source_ids:
+  - pastebin_vgmk330j_lp_runes_prime_values
+  - fandom_liber_primus_unsolved_pages
+  local_material_count: 0
+  readiness_status: not_ready
+  do_not_assume_notes_present: true
+  recommended_next_action: collect or classify local source material first
+  solve_claim: false
+- record_type: stage5ag_research_bundle_readiness_record
+  schema: schemas/source-harvester/research-bundle-readiness-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  bundle_id: 04-cuneiform-base60-base59
+  required_source_ids:
+  - fandom_liber_primus_ideas
+  - user_uploaded_assets_archive
+  matched_source_ids:
+  - user_uploaded_assets_archive
+  missing_source_ids:
+  - fandom_liber_primus_ideas
+  local_material_count: 1
+  readiness_status: partially_ready
+  do_not_assume_notes_present: true
+  recommended_next_action: close missing source gaps or build partial curated bundle
+  solve_claim: false
+- record_type: stage5ag_research_bundle_readiness_record
+  schema: schemas/source-harvester/research-bundle-readiness-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  bundle_id: 05-red-markers-and-visual-numerics
+  required_source_ids:
+  - fandom_liber_primus_ideas
+  - user_uploaded_assets_archive
+  - liber_primus_dropbox_files
+  matched_source_ids:
+  - user_uploaded_assets_archive
+  - liber_primus_dropbox_files
+  missing_source_ids:
+  - fandom_liber_primus_ideas
+  local_material_count: 2
+  readiness_status: partially_ready
+  do_not_assume_notes_present: true
+  recommended_next_action: close missing source gaps or build partial curated bundle
+  solve_claim: false
+- record_type: stage5ag_research_bundle_readiness_record
+  schema: schemas/source-harvester/research-bundle-readiness-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  bundle_id: 06-outguess-stego-hidden-formatting
+  required_source_ids:
+  - cicada_solvers_iddqd
+  - joutguess_rebirth
+  - complete_cicada3301_archive
+  matched_source_ids:
+  - complete_cicada3301_archive
+  missing_source_ids:
+  - cicada_solvers_iddqd
+  - joutguess_rebirth
+  local_material_count: 1
+  readiness_status: partially_ready
+  do_not_assume_notes_present: true
+  recommended_next_action: close missing source gaps or build partial curated bundle
+  solve_claim: false
+- record_type: stage5ag_research_bundle_readiness_record
+  schema: schemas/source-harvester/research-bundle-readiness-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  bundle_id: 07-boundary-mobius-repeated-fragments
+  required_source_ids:
+  - chapterized_rune_map_google_doc
+  - fandom_liber_primus_unsolved_pages
+  - pastebin_vgmk330j_lp_runes_prime_values
+  matched_source_ids: []
+  missing_source_ids:
+  - chapterized_rune_map_google_doc
+  - fandom_liber_primus_unsolved_pages
+  - pastebin_vgmk330j_lp_runes_prime_values
+  local_material_count: 0
+  readiness_status: not_ready
+  do_not_assume_notes_present: true
+  recommended_next_action: collect or classify local source material first
+  solve_claim: false
+- record_type: stage5ag_research_bundle_readiness_record
+  schema: schemas/source-harvester/research-bundle-readiness-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  bundle_id: 08-tools-gpprime-dwh-gematria
+  required_source_ids:
+  - gp_prime_view
+  - tweqx_dwh_hashkit
+  - tweqx_3301_hash_alarm
+  - mortlach_rune_decrypter_prime
+  - taiiwo_cicada
+  matched_source_ids: []
+  missing_source_ids:
+  - gp_prime_view
+  - tweqx_dwh_hashkit
+  - tweqx_3301_hash_alarm
+  - mortlach_rune_decrypter_prime
+  - taiiwo_cicada
+  local_material_count: 0
+  readiness_status: not_ready
+  do_not_assume_notes_present: true
+  recommended_next_action: collect or classify local source material first
+  solve_claim: false
+- record_type: stage5ag_research_bundle_readiness_record
+  schema: schemas/source-harvester/research-bundle-readiness-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  bundle_id: 09-community-hypotheses
+  required_source_ids:
+  - fandom_liber_primus_ideas
+  - cicada_boards_forum
+  - spiderpuck_pastebin_profile
+  matched_source_ids: []
+  missing_source_ids:
+  - fandom_liber_primus_ideas
+  - cicada_boards_forum
+  - spiderpuck_pastebin_profile
+  local_material_count: 0
+  readiness_status: not_ready
+  do_not_assume_notes_present: true
+  recommended_next_action: collect or classify local source material first
+  solve_claim: false
+- record_type: stage5ag_research_bundle_readiness_record
+  schema: schemas/source-harvester/research-bundle-readiness-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  bundle_id: 10-known-negative-retired-ideas
+  required_source_ids:
+  - fandom_possible_hints_never_used
+  - khan_cryptography
+  - gamedetectives_academy
+  matched_source_ids: []
+  missing_source_ids:
+  - fandom_possible_hints_never_used
+  - khan_cryptography
+  - gamedetectives_academy
+  local_material_count: 0
+  readiness_status: not_ready
+  do_not_assume_notes_present: true
+  recommended_next_action: collect or classify local source material first
+  solve_claim: false

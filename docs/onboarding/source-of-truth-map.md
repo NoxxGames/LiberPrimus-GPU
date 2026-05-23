@@ -10,7 +10,9 @@
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: current/next-stage expectations for the document staleness checker.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
+- `data/source-harvester/stage5ag-source-harvester-summary.yaml`: Stage 5AG local source inventory aggregate summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
+- `docs/onboarding/local-source-inventory-workflow.md`: local `third_party/` source inventory workflow and raw-data guardrails.
 
 ## Research And Workflow Truth
 
@@ -21,6 +23,7 @@
 - `RESEARCH.md`: research posture and evidence expectations.
 - `CIPHER_CATALOG.md`: method-family status and transform policy.
 - `docs/reference/source-harvester-cli.md`: source-harvester CLI usage and guardrails.
+- `docs/reference/source-harvester-local-inventory-cli.md`: Stage 5AG local source inventory CLI usage.
 
 ## Architecture And CI Truth
 

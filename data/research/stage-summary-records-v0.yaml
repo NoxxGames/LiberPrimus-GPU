@@ -1031,3 +1031,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AF wrote 41 source manifest records, 4 collection-priority records, 28 clue target category records, 10 research-bundle plan records, 1 harvest-tool policy record, and 41 dry-run plan records. It selected Stage 5AG local user-provided download source-lock inventory, kept Google/Dropbox/Colab manual-export material local and ignored, prohibited Google Drive project storage, and performed no live broad scraping, raw download commit, raw archive processing, CUDA execution, CUDA-facing source modification, new kernel addition, p56/full-p56 execution, unsolved-page CUDA use, GPU benchmark, speedup claim, scored experiment, generated-body publication, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ag
+    title: Local third-party source inventory and initial source-lock metadata
+    status: complete
+    category: infrastructure
+    summary: Inventoried user-provided ignored third-party source material, linked local paths to Stage 5AF source manifest records, recorded source-lock candidates and gaps, evaluated research-bundle readiness, and selected curated local extraction as the next bounded source-provenance stage.
+    key_outputs:
+      - "`libreprimus source-harvester` local inventory commands for root/file/hash/archive inventory, manifest linkage, source-lock candidates, bundle readiness, guardrails, next-stage decision, summary generation, validation, and summary display."
+      - Stage 5AG local source root, file inventory, archive inventory, hash inventory, manifest linkage, local source extension, source-lock candidate, gap report, research-bundle readiness, guardrail, next-stage-decision, and aggregate summary records under `data/source-harvester/`.
+      - Ignored generated full inventories under `experiments/results/source-harvester-local/stage5ag/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AG inventoried 1402 files, 223 directories, 1356526287 bytes, 4 archives, 3 supported archive listings, 1 unsupported archive type, 1402 SHA-256 hashes, 931 unique hashes, and 216 duplicate hash groups. It consumed 41 manifest records, matched 12, recorded 30 missing/manual sources, recorded 0 ambiguous matches, created 14 unclassified local source extension records, marked 12 source-lock candidates ready, marked 14 needing review, wrote 10 research-bundle readiness records with ready/partial/not-ready 0/5/5, selected Stage 5AH curated research bundle extraction from local source inventory, and performed no network fetch, online clone, Google Drive storage, raw source commit, Deep Research, hypothesis generation, CUDA execution, CUDA-facing source modification, new kernel addition, p56/full-p56 execution, unsolved-page CUDA use, GPU benchmark, speedup claim, scored experiment, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

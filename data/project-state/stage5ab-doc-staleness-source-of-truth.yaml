@@ -1,12 +1,12 @@
 record_type: doc_staleness_source_of_truth_record
 schema: schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json
-stage_id: stage-5af
-latest_completed_stage_after_this_stage: Stage 5AF - Cicada source harvester and archive/visual/numeric provenance inventory tooling
-latest_completed_stage_prefix: Stage 5AF
-next_stage_after_this_stage: Stage 5AG - run source harvester on user-provided downloads and build initial source-lock inventory
-expected_next_stage_prefix: Stage 5AG
-latest_previous_stage: Stage 5AE - corrected bounded p56 CUDA formula parity reporting and reference-contract repair
-user_override_reason: Stage 5AF completed local-only source-harvester tooling and selected user-provided local download source-lock inventory before any Deep Research, scored experiment, benchmark, website, or CUDA expansion.
+stage_id: stage-5ag
+latest_completed_stage_after_this_stage: Stage 5AG - local third-party source inventory and initial source-lock metadata
+latest_completed_stage_prefix: Stage 5AG
+next_stage_after_this_stage: Stage 5AH - curated research bundle extraction from local source inventory
+expected_next_stage_prefix: Stage 5AH
+latest_previous_stage: Stage 5AF - Cicada source harvester and archive/visual/numeric provenance inventory tooling
+user_override_reason: Stage 5AG completed local-only third-party source inventory and selected curated local extraction metadata before any Deep Research, scored experiment, benchmark, website, or CUDA expansion.
 website_expansion_status: deferred_future_unnumbered_project
 scored_experiments_status: deferred_manifest_gate_required
 unsolved_page_cuda_status: blocked

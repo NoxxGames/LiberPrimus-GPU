@@ -1,0 +1,398 @@
+record_type: stage5ag_local_source_gap_report
+schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+stage_id: stage-5ag
+source_stage_id: stage-5af
+gap_count: 44
+solve_claim: false
+records:
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: cicada_solvers_iddqd
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: pastebin_vgmk330j_lp_runes_prime_values
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: solved_page_google_sheet
+  gap_status: needs_manual_export
+  recommended_action: export manually into an ignored local source root
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: solved_pages_colab_notebook
+  gap_status: needs_manual_export
+  recommended_action: export manually into an ignored local source root
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: chapterized_rune_map_google_doc
+  gap_status: needs_manual_export
+  recommended_action: export manually into an ignored local source root
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_main_wiki
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_possible_hints_never_used
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_second_chance_2012
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_post_2014_liber_primus
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_liber_primus_ideas
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_solved_pages_methods
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_liber_primus_solved_pages
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_liber_primus_unsolved_pages
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: cicada_boards_forum
+  gap_status: needs_manual_export
+  recommended_action: export manually into an ignored local source root
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: spiderpuck_pastebin_profile
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: tweqx_dwh_hashkit
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: tweqx_3301_hash_alarm
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: gp_prime_view
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: joutguess_rebirth
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: isitcicada_pgp_checker
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: cicada_solvers_isitcicada_repo
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: taiiwo_cicada
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: mortlach_rune_decrypter_prime
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: cicada_solvers_github_org
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: gematria_web_tools
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: rune_frequency_shiny_app
+  gap_status: needs_manual_export
+  recommended_action: export manually into an ignored local source root
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: noxpopuli_youtube_channel
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: cicada_documentary_youtube
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: khan_cryptography
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: gamedetectives_academy
+  gap_status: missing
+  recommended_action: provide local ignored source material or defer to a later explicit
+    online-fetch stage
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_1348008594460774501_png
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_community_sources_of_datasets_depiction_images_plausable_methods_worth_exploring_md
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_communityobservations
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_cunieform_numbers_png
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_depictions_modified_png
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_depictions_original_png
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_fib421_jpg
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_interconnected_chapters
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_liberprimusdiscordchats
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_more_numbers_mixed_with_runes_page_png
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_page_modified_example_png
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_repeat_rune_png
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_rune_pixel_diff_example_png
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false
+- record_type: stage5ag_local_source_gap_record
+  schema: schemas/source-harvester/local-source-gap-report-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_sourcesnapshots
+  gap_status: needs_manual_classification
+  recommended_action: classify local material and assign a source_id before source
+    locking
+  solve_claim: false

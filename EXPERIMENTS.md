@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AG Local Source Inventory
+
+Stage 5AG is local source-lock inventory metadata, not an experiment. It runs `libreprimus source-harvester` local inventory commands against user-provided ignored `third_party/` material, records compact root/file/hash/archive summaries, links local paths to Stage 5AF manifest IDs, creates source-lock candidate and gap records, records research-bundle readiness, and selects Stage 5AH curated extraction as the next bounded source-provenance step.
+
+Generated Stage 5AG full inventories remain ignored under `experiments/results/source-harvester-local/stage5ag/`. Raw third-party archives, images, PDFs, HTML/docs, audio/video, extracted bodies, and generated bundles must not be staged or committed. Stage 5AG performs no live web scraping, online clone, Google Drive storage, Deep Research, hypothesis generation, CUDA, benchmarks, scored experiments, website expansion, or solve-claim workflow.
+
 ## Stage 5AF Source Harvester
 
 Stage 5AF is source-lock/provenance tooling, not an experiment. It adds `libreprimus source-harvester`, committed source-manifest and clue-category records, local-only harvest policy, dry-run planning, hash/inventory/extraction helpers, and research-bundle scaffolds for later source-lock work.

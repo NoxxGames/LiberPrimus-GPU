@@ -145,3 +145,12 @@ records:
     source: Stage 5AF source manifest, harvest-tool policy, dry-run summary, next-stage decision, and aggregate summary records.
     affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, CUDA_NOTES.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md, docs/onboarding/source-harvester-workflow.md]
     notes: Google Drive is not a project storage location; user-provided Google/Dropbox/Colab exports must be local and ignored. Stage 5AF did not run broad scraping, process raw archives, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.
+  - record_type: project_direction_change_record
+    change_id: stage5ag-curated-local-extraction-next
+    date_or_stage: stage-5ag
+    previous_direction: Run the source harvester on user-provided local downloads and decide whether Deep Research, source-lock gap closure, scored experiments, benchmarks, CUDA, or website work should follow.
+    new_direction: Select Stage 5AH curated research bundle extraction from local source inventory, keeping Deep Research deferred until curated extracted bundles exist and keeping scored experiments, benchmarks, unsolved-page CUDA, online fetching, and website expansion rejected for the next step.
+    reason: Stage 5AG found local third-party material and partial bundle readiness, but the source material needs bounded curated extraction metadata before Deep Research or any hypothesis-facing work can be trusted.
+    source: Stage 5AG local source inventory, manifest linkage, source-lock candidate, gap report, research-bundle readiness, guardrail, next-stage decision, and summary records.
+    affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md, docs/onboarding/source-harvester-workflow.md, docs/onboarding/local-source-inventory-workflow.md]
+    notes: Stage 5AG did not run network fetches, online clones, Google Drive storage, Deep Research, CUDA, benchmarks, scored experiments, website expansion, source interpretation, raw source commits, or solve claims.

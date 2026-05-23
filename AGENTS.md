@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AF - Cicada source harvester and archive/visual/numeric provenance inventory tooling.
+Current completed stage: Stage 5AG - local third-party source inventory and initial source-lock metadata.
 
-Current work: Stage 5AG - run source harvester on user-provided downloads and build initial source-lock inventory. Stage 5AF added local-only source-harvester tooling, source manifests, clue categories, research-bundle plans, dry-run planning, and guardrails without network fetching, raw-download commits, raw archive processing, CUDA execution, benchmarking, scored experiments, website expansion, or solve claims.
+Current work: Stage 5AH - curated research bundle extraction from local source inventory. Stage 5AG inventoried local ignored `third_party/` source material and wrote compact metadata only; it did not fetch from the network, clone online repositories, use Google Drive storage, commit raw source bytes, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.
 
 Current project state:
 
@@ -110,7 +110,9 @@ Current project state:
 - Stage 5AE keeps Stage 5AD historical expected/reference hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87` in the candidate-major reference lineage.
 - Stage 5AF source-harvester work is local-only provenance tooling. It must not use Google Drive as a storage location, and Google/Dropbox/Colab exports must be copied into local ignored output roots.
 - Stage 5AF generated reports and research-bundle previews under `experiments/results/source-harvester/stage5af/` are generated outputs and must not be staged except README/.gitkeep scaffolds.
-- Future Stage 5AG source-lock work may run the harvester only on user-provided local downloads or explicit opt-in fetches; raw bytes, extracted bodies, archives, and generated bundles remain ignored.
+- Stage 5AG local source inventory records are compact metadata only. They may hash/list user-provided ignored `third_party/` files and archives, but raw bytes, extracted bodies, archives, images, PDFs, audio/video, generated full inventories, and generated bundles remain ignored and uncommitted.
+- Stage 5AG did not use Google Drive storage, network fetching, online cloning, Deep Research, hypothesis generation, CUDA, benchmarks, scored experiments, website expansion, or solve claims.
+- Future Stage 5AH curated extraction must consume the Stage 5AG inventory and keep extraction outputs ignored unless a future prompt explicitly promotes compact metadata.
 - Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
 - Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
 - Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
@@ -952,7 +954,7 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - The primary root cause is `expected_hash_reference_lineage_mismatch`; reference-contract and hash-material policy repair are required, but CUDA kernel repair is not supported by current evidence.
 - Stage 5AD-fix does not run CUDA, change CUDA source, add kernels, run full p56, run unsolved pages, benchmark, execute scored experiments, publish generated bodies, upgrade method status, or make a solve claim.
 - Stage 5AE has now repaired corrected bounded p56 CUDA formula parity reporting and reference-contract metadata while preserving Stage 5AD as failed and without widening scope.
-- Stage 5AF has now added Cicada Source Harvester tooling, local-only source-manifest records, clue-category records, research-bundle planning, and dry-run provenance summaries. It performed no live network fetch, raw archive processing, CUDA execution, benchmark, scored experiment, website expansion, or solve claim.
+- Stage 5AF added Cicada Source Harvester tooling, local-only source-manifest records, clue-category records, research-bundle planning, and dry-run provenance summaries. Stage 5AG then inventoried local ignored third-party source material and wrote compact metadata/source-lock readiness records only. Neither stage performed live broad scraping, Google Drive storage, raw source commits, CUDA execution, benchmark, scored experiment, website expansion, or solve claim.
 - Stage 5AD-fix generated reports under `experiments/results/prime-minus-one-bounded-p56-mismatch/stage5ad-fix/` and `codex-output/**` handoffs remain ignored and must not be staged.
 
 ## Stage 3W State Consolidation Rules

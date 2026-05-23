@@ -1,0 +1,209 @@
+record_type: stage5ag_local_source_root_inventory
+schema: schemas/source-harvester/local-source-root-inventory-record-v0.schema.json
+stage_id: stage-5ag
+source_stage_id: stage-5af
+source_root: third_party
+root_exists: true
+root_is_ignored: true
+status: inventoried
+total_files: 1402
+total_dirs: 223
+total_size_bytes: 1356526287
+extension_counts:
+  '.00': 2
+  '.1': 2
+  '.13': 2
+  '.17': 2
+  '.2': 2
+  '.3': 1
+  .7z: 1
+  .asc: 5
+  .bin: 10
+  .bmp: 5
+  .bz2: 1
+  .c: 1
+  .cpp: 1
+  .css: 13
+  .data: 1
+  .dec: 3
+  .decoded: 2
+  .decrypted: 4
+  .docx: 130
+  .gif: 9
+  .gz: 1
+  .headers: 1
+  .hex: 4
+  .html: 65
+  .jpeg: 5
+  .jpg: 579
+  .js: 4
+  .js(1): 1
+  .md: 34
+  .method: 3
+  .mid: 1
+  .mp3: 7
+  .mp4: 14
+  .onion: 1
+  .out: 13
+  .outguess: 18
+  .pdf: 132
+  .pm: 2
+  .png: 75
+  .py: 11
+  .rev: 10
+  .rtf: 1
+  .runes: 1
+  .sh: 1
+  .srt: 2
+  .transcribed: 1
+  .txt: 166
+  .webp: 18
+  .xlsx: 1
+  .yaml: 1
+  .yml: 1
+  .zip: 2
+  '[none]': 29
+mime_guess_counts:
+  application/javascript: 4
+  application/octet-stream: 309
+  application/pdf: 132
+  application/x-sh: 1
+  application/x-zip-compressed: 2
+  audio/mid: 1
+  audio/mpeg: 7
+  image/bmp: 5
+  image/gif: 9
+  image/jpeg: 584
+  image/png: 75
+  text/css: 13
+  text/html: 65
+  text/plain: 170
+  text/x-python: 11
+  video/mp4: 14
+archive_counts:
+  .7z: 1
+  .gz: 1
+  .zip: 2
+image_counts: 691
+pdf_counts: 132
+docx_counts: 130
+text_counts: 203
+html_counts: 65
+audio_counts: 8
+video_counts: 14
+unsupported_archive_count: 1
+largest_files:
+- path: "third_party/LiberPrimusDiscordChats/CicadaSolvers - Off-Topic - \U0001F4AC\
+    general [572337747130580993].html"
+  size_bytes: 200880867
+  sha256: 233e28585405d843a01aca3a22fc50db05a5d4f42aa9b93e63dba5762a2d0280
+- path: third_party/LiberPrimusDiscordChats/CicadaSolvers - Cicada - general-solving
+    [615334603049271322].html
+  size_bytes: 96326879
+  sha256: 7456d373d59e87cf16f524f8093132fa35e345514a716ae73918e30157281d56
+- path: third_party/LiberPrimusDiscordChats/CicadaSolvers - Cicada - solving-lp-general-discussion
+    [572332464643506186].html
+  size_bytes: 42012169
+  sha256: cafbf185d654696238e670c7bb9bcb5a2ed3652b1f0cbd235473af63a435a830
+- path: third_party/LiberPrimusDiscordChats/CicadaSolvers - Cicada - newcomer-questions
+    [612445498070138957].html
+  size_bytes: 31297979
+  sha256: 1099b059b974648ae7fd498f4b5085ef021722dd7418dda9485b31ec18b324d4
+- path: third_party/The-Complete-Cicada3301-Archive-main/2012/additional media/xaxanon
+    videos/00006 MTS/00006.MTS (1080p_30fps_H264-128kbit_AAC).mp4
+  size_bytes: 25023217
+  sha256: aabf76551676e96b9b7e69ba7c83fdc68dd22a9bcf51ca55ae573d31ee8c3841
+- path: third_party/The-Complete-Cicada3301-Archive-main/2012/additional media/xaxanon
+    videos/00011 MTS/00011.MTS (1080p_30fps_H264-128kbit_AAC).mp4
+  size_bytes: 24316954
+  sha256: b6fb5f04048e27c41ca4ff9c0dd3c1fac6bc1c4bda306706e5ffc59c09663704
+- path: third_party/The-Complete-Cicada3301-Archive-main/2012/additional media/xaxanon
+    videos/00005 MTS/00005.MTS (1080p_30fps_H264-128kbit_AAC).mp4
+  size_bytes: 22328526
+  sha256: e590de51b328bd55c3d428b3473cd98bd969ba2acb14fece4b1e8efce05c0461
+- path: third_party/The-Complete-Cicada3301-Archive-main/2012/additional media/xaxanon
+    videos/00009 MTS/00009.MTS (1080p_30fps_H264-128kbit_AAC).mp4
+  size_bytes: 20612283
+  sha256: 3a5f7dba103c9081a092982c0349a656d2c81a374685bb1c9250c4b98c144c84
+- path: third_party/The-Complete-Cicada3301-Archive-main/2013/additional files/Cicada
+    OS/boot sequence.mp4
+  size_bytes: 18190831
+  sha256: f9447ebe3aee02844face135515ecc1b203dafd0600ca9d9f228573f208893b2
+- path: third_party/The-Complete-Cicada3301-Archive-main/ArchiveDir/Media coverage/non
+    text coverage/Cicada 3301_ Headhunting for CIA_MI6_Al-Shabaab or alternate reality
+    game_ (1080p_25fps_H264-128kbit_AAC).mp4
+  size_bytes: 18186540
+  sha256: 15b4a49d0b3fef4e92e85087050ea2a55f6d7810118c848293d8f5f95b857f67
+top_level_entries:
+- path: third_party/1348008594460774501.png
+  entry_name: 1348008594460774501.png
+  entry_type: file
+- path: third_party/CicadaArchive
+  entry_name: CicadaArchive
+  entry_type: directory
+- path: third_party/CicadaOutGuess
+  entry_name: CicadaOutGuess
+  entry_type: directory
+- path: third_party/CicadaSolversIddqd
+  entry_name: CicadaSolversIddqd
+  entry_type: directory
+- path: third_party/Community-sources-of-datasets-depiction-images-plausable-methods-worth-exploring.md
+  entry_name: Community-sources-of-datasets-depiction-images-plausable-methods-worth-exploring.md
+  entry_type: file
+- path: third_party/CommunityObservations
+  entry_name: CommunityObservations
+  entry_type: directory
+- path: third_party/cunieform_numbers.png
+  entry_name: cunieform_numbers.png
+  entry_type: file
+- path: third_party/depictions_modified.png
+  entry_name: depictions_modified.png
+  entry_type: file
+- path: third_party/depictions_original.png
+  entry_name: depictions_original.png
+  entry_type: file
+- path: third_party/DiskCipherStuff
+  entry_name: DiskCipherStuff
+  entry_type: directory
+- path: third_party/Fib421.jpg
+  entry_name: Fib421.jpg
+  entry_type: file
+- path: third_party/interconnected-chapters
+  entry_name: interconnected-chapters
+  entry_type: directory
+- path: third_party/LiberPrimusDiscordChats
+  entry_name: LiberPrimusDiscordChats
+  entry_type: directory
+- path: third_party/LiberPrimusPages
+  entry_name: LiberPrimusPages
+  entry_type: directory
+- path: third_party/more_numbers_mixed_with_runes_page.png
+  entry_name: more_numbers_mixed_with_runes_page.png
+  entry_type: file
+- path: third_party/page_modified_example.png
+  entry_name: page_modified_example.png
+  entry_type: file
+- path: third_party/README.md
+  entry_name: README.md
+  entry_type: file
+- path: third_party/repeat-rune.png
+  entry_name: repeat-rune.png
+  entry_type: file
+- path: third_party/rune_pixel_diff_example.png
+  entry_name: rune_pixel_diff_example.png
+  entry_type: file
+- path: third_party/SourceSnapshots
+  entry_name: SourceSnapshots
+  entry_type: directory
+- path: third_party/StegoPositiveControls
+  entry_name: StegoPositiveControls
+  entry_type: directory
+- path: third_party/The-Complete-Cicada3301-Archive-main
+  entry_name: The-Complete-Cicada3301-Archive-main
+  entry_type: directory
+untracked_raw_files_present: false
+tracked_raw_files_present: false
+staged_raw_files_present: false
+metadata_only: true
+raw_content_included: false
+solve_claim: false

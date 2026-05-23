@@ -28,7 +28,7 @@ Docs, schemas, record validation, test fixtures, and source-lock metadata are re
 
 Corpus/profile semantics, scoring, experiment execution, privacy-sensitive Discord code, generated-output policy, and CUDA are high-risk. Read the relevant docs and tests first.
 
-Source-harvester code is high-provenance tooling. Read `docs/architecture/cicada-source-harvester.md`, `docs/reference/source-harvester-cli.md`, and `docs/onboarding/source-harvester-workflow.md` before changing it. Do not make Google Drive a storage backend; manual Google/Dropbox/Colab exports belong in ignored local roots.
+Source-harvester code is high-provenance tooling. Read `docs/architecture/cicada-source-harvester.md`, `docs/architecture/local-source-lock-inventory.md`, `docs/reference/source-harvester-cli.md`, `docs/reference/source-harvester-local-inventory-cli.md`, `docs/onboarding/source-harvester-workflow.md`, and `docs/onboarding/local-source-inventory-workflow.md` before changing it. Do not make Google Drive a storage backend; manual Google/Dropbox/Colab exports belong in ignored local roots.
 
 ## Good First Areas
 

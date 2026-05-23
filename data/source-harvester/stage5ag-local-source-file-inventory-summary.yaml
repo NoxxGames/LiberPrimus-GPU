@@ -1,0 +1,75 @@
+record_type: stage5ag_local_source_file_inventory_summary
+schema: schemas/source-harvester/local-source-file-inventory-summary-record-v0.schema.json
+stage_id: stage-5ag
+source_stage_id: stage-5af
+inventory_record_count: 1402
+full_inventory_generated_path: experiments/results/source-harvester-local/stage5ag/full_file_inventory.jsonl
+full_inventory_csv_generated_path: experiments/results/source-harvester-local/stage5ag/full_file_inventory.csv
+full_inventory_committed: false
+metadata_only: true
+raw_content_included: false
+category_counts:
+  archive: 4
+  audio: 8
+  docx: 130
+  html: 65
+  image: 691
+  other: 155
+  pdf: 132
+  text: 203
+  video: 14
+extension_counts:
+  '.00': 2
+  '.1': 2
+  '.13': 2
+  '.17': 2
+  '.2': 2
+  '.3': 1
+  .7z: 1
+  .asc: 5
+  .bin: 10
+  .bmp: 5
+  .bz2: 1
+  .c: 1
+  .cpp: 1
+  .css: 13
+  .data: 1
+  .dec: 3
+  .decoded: 2
+  .decrypted: 4
+  .docx: 130
+  .gif: 9
+  .gz: 1
+  .headers: 1
+  .hex: 4
+  .html: 65
+  .jpeg: 5
+  .jpg: 579
+  .js: 4
+  .js(1): 1
+  .md: 34
+  .method: 3
+  .mid: 1
+  .mp3: 7
+  .mp4: 14
+  .onion: 1
+  .out: 13
+  .outguess: 18
+  .pdf: 132
+  .pm: 2
+  .png: 75
+  .py: 11
+  .rev: 10
+  .rtf: 1
+  .runes: 1
+  .sh: 1
+  .srt: 2
+  .transcribed: 1
+  .txt: 166
+  .webp: 18
+  .xlsx: 1
+  .yaml: 1
+  .yml: 1
+  .zip: 2
+  '[none]': 29
+solve_claim: false

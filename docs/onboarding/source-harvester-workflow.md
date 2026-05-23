@@ -1,6 +1,6 @@
 ﻿# Source Harvester Workflow
 
-Use this workflow when running the Stage 5AF harvester locally.
+Use this workflow when running the Stage 5AF harvester locally. For Stage 5AG local source inventory over `third_party/`, use `docs/onboarding/local-source-inventory-workflow.md` after validating the manifest.
 
 1. Validate the committed manifest:
 
@@ -35,3 +35,5 @@ Do not use Google Drive as storage for this project. For Google Sheet, Google Do
 ```
 
 5. Commit only compact metadata when a future prompt explicitly scopes it. Do not commit raw downloads, archives, scraped bodies, images, audio, video, generated bundles, or `codex-output/**`.
+
+Stage 5AG adds local inventory outputs under `experiments/results/source-harvester-local/stage5ag/` and compact metadata under `data/source-harvester/stage5ag-*`. It inventories local files only; online fetching/cloning and Google Drive storage remain out of scope.

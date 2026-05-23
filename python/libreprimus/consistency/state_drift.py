@@ -305,6 +305,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5AF is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5ag",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5ag\b", re.IGNORECASE),
+        "Stage 5AG is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -930,6 +935,17 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
+        "stage5ag_local_source_inventory_complete",
+        "stage 5ag" in staged_plan
+        and "local third-party source inventory" in staged_plan
+        and "stage 5ah" in staged_plan
+        and "1402" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5AG local source inventory and Stage 5AH direction.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
         "source_lock_snapshot_policy_present",
         "source-lock snapshot" in combined and "allowlisted" in combined and "snapshot policy" in combined,
         "Allowlisted public source-lock snapshot policy is documented.",
@@ -1312,9 +1328,22 @@ def check_state_drift_consistency(
         and "local-only" in combined
         and "google drive" in combined
         and "stage 5ag" in combined
+        and "stage 5ah" in combined
         and "raw downloads" in combined
         and "solve claim" in combined,
-        "Stage 5AF source-harvester local-only and Stage 5AG boundary are documented.",
+        "Stage 5AF source-harvester local-only and Stage 5AG/5AH boundary are documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "local_source_inventory_policy_present",
+        "local source inventory" in combined
+        and "third_party" in combined
+        and "google drive" in combined
+        and "raw source" in combined
+        and "stage 5ah" in combined
+        and "solve claim" in combined,
+        "Stage 5AG local source inventory and raw-data guardrails are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

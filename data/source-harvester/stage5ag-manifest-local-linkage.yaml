@@ -1,0 +1,780 @@
+record_type: stage5ag_manifest_local_linkage
+schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+stage_id: stage-5ag
+source_stage_id: stage-5af
+manifest_records_consumed: 41
+extension_records: 15
+matched_count: 12
+missing_count: 30
+ambiguous_count: 0
+unclassified_local_count: 14
+solve_claim: false
+records:
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: liber_primus_dropbox_files
+  expected_priority: A1
+  source_type: dropbox_folder
+  manual_collection_required: true
+  local_match_status: matched_exact
+  matched_paths:
+  - third_party/LiberPrimusPages
+  confidence: high
+  notes: Local ignored material found.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: cicada_solvers_iddqd
+  expected_priority: A1
+  source_type: github_repo
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: complete_cicada3301_archive
+  expected_priority: A1
+  source_type: github_repo
+  manual_collection_required: false
+  local_match_status: matched_exact
+  matched_paths:
+  - third_party/The-Complete-Cicada3301-Archive-main
+  confidence: high
+  notes: Local ignored material found.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: pastebin_vgmk330j_lp_runes_prime_values
+  expected_priority: A1
+  source_type: pastebin
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: solved_page_google_sheet
+  expected_priority: A1
+  source_type: google_sheet
+  manual_collection_required: true
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: solved_pages_colab_notebook
+  expected_priority: A2
+  source_type: google_colab
+  manual_collection_required: true
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: chapterized_rune_map_google_doc
+  expected_priority: A2
+  source_type: google_doc
+  manual_collection_required: true
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_main_wiki
+  expected_priority: A1
+  source_type: fandom_page
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_possible_hints_never_used
+  expected_priority: A1
+  source_type: fandom_page
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_second_chance_2012
+  expected_priority: A1
+  source_type: fandom_page
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_post_2014_liber_primus
+  expected_priority: A1
+  source_type: fandom_page
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_liber_primus_ideas
+  expected_priority: A1
+  source_type: fandom_page
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_solved_pages_methods
+  expected_priority: A1
+  source_type: fandom_page
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_liber_primus_solved_pages
+  expected_priority: A1
+  source_type: fandom_page
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: fandom_liber_primus_unsolved_pages
+  expected_priority: A1
+  source_type: fandom_page
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: cicada_boards_forum
+  expected_priority: A1
+  source_type: forum_index
+  manual_collection_required: true
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: spiderpuck_pastebin_profile
+  expected_priority: A2
+  source_type: pastebin
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: tweqx_dwh_hashkit
+  expected_priority: A1
+  source_type: github_repo
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: tweqx_3301_hash_alarm
+  expected_priority: A1
+  source_type: github_repo
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: gp_prime_view
+  expected_priority: A1
+  source_type: static_webpage
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: joutguess_rebirth
+  expected_priority: A2
+  source_type: static_webpage
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: isitcicada_pgp_checker
+  expected_priority: A2
+  source_type: browser_tool
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: cicada_solvers_isitcicada_repo
+  expected_priority: A2
+  source_type: github_repo
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: taiiwo_cicada
+  expected_priority: A2
+  source_type: github_repo
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: mortlach_rune_decrypter_prime
+  expected_priority: A2
+  source_type: github_repo
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: cicada_solvers_github_org
+  expected_priority: A2
+  source_type: github_org
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: gematria_web_tools
+  expected_priority: A2
+  source_type: static_webpage
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: rune_frequency_shiny_app
+  expected_priority: A2
+  source_type: shiny_app
+  manual_collection_required: true
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: noxpopuli_youtube_channel
+  expected_priority: B
+  source_type: youtube_channel
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: cicada_documentary_youtube
+  expected_priority: B
+  source_type: youtube_video
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: khan_cryptography
+  expected_priority: C
+  source_type: static_webpage
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: gamedetectives_academy
+  expected_priority: C
+  source_type: static_webpage
+  manual_collection_required: false
+  local_match_status: missing
+  matched_paths: []
+  confidence: none
+  notes: No local material matched in Stage 5AG inventory.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: user_uploaded_2012_archive
+  expected_priority: A1
+  source_type: local_user_upload
+  manual_collection_required: true
+  local_match_status: matched_exact
+  matched_paths:
+  - third_party/The-Complete-Cicada3301-Archive-main/2012
+  confidence: high
+  notes: Local ignored material found.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: user_uploaded_2013_archive
+  expected_priority: A1
+  source_type: local_user_upload
+  manual_collection_required: true
+  local_match_status: matched_exact
+  matched_paths:
+  - third_party/The-Complete-Cicada3301-Archive-main/2013
+  confidence: high
+  notes: Local ignored material found.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: user_uploaded_2014_archive
+  expected_priority: A1
+  source_type: local_user_upload
+  manual_collection_required: true
+  local_match_status: matched_exact
+  matched_paths:
+  - third_party/The-Complete-Cicada3301-Archive-main/2014
+  confidence: high
+  notes: Local ignored material found.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: user_uploaded_2015_archive
+  expected_priority: A1
+  source_type: local_user_upload
+  manual_collection_required: true
+  local_match_status: matched_exact
+  matched_paths:
+  - third_party/The-Complete-Cicada3301-Archive-main/2015
+  confidence: high
+  notes: Local ignored material found.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: user_uploaded_2016_archive
+  expected_priority: A1
+  source_type: local_user_upload
+  manual_collection_required: true
+  local_match_status: matched_exact
+  matched_paths:
+  - third_party/The-Complete-Cicada3301-Archive-main/2016
+  confidence: high
+  notes: Local ignored material found.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: user_uploaded_2017_archive
+  expected_priority: A1
+  source_type: local_user_upload
+  manual_collection_required: true
+  local_match_status: matched_exact
+  matched_paths:
+  - third_party/The-Complete-Cicada3301-Archive-main/2017
+  confidence: high
+  notes: Local ignored material found.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: user_uploaded_assets_archive
+  expected_priority: A1
+  source_type: local_user_upload
+  manual_collection_required: true
+  local_match_status: matched_exact
+  matched_paths:
+  - third_party/The-Complete-Cicada3301-Archive-main/assets
+  confidence: high
+  notes: Local ignored material found.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: user_uploaded_archive_dir
+  expected_priority: A1
+  source_type: local_user_upload
+  manual_collection_required: true
+  local_match_status: matched_exact
+  matched_paths:
+  - third_party/The-Complete-Cicada3301-Archive-main/ArchiveDir
+  confidence: high
+  notes: Local ignored material found.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: user_uploaded_extra_wiki_pages
+  expected_priority: A2
+  source_type: local_user_upload
+  manual_collection_required: true
+  local_match_status: matched_exact
+  matched_paths:
+  - third_party/The-Complete-Cicada3301-Archive-main/EXTRA WIKI PAGES
+  confidence: high
+  notes: Local ignored material found.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: disk_cipher_theory_bundle_local
+  expected_priority: A2
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: matched_exact
+  matched_paths:
+  - third_party/DiskCipherStuff
+  confidence: high
+  notes: Local ignored material found.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_1348008594460774501_png
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/1348008594460774501.png
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_community_sources_of_datasets_depiction_images_plausable_methods_worth_exploring_md
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/Community-sources-of-datasets-depiction-images-plausable-methods-worth-exploring.md
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_communityobservations
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/CommunityObservations
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_cunieform_numbers_png
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/cunieform_numbers.png
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_depictions_modified_png
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/depictions_modified.png
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_depictions_original_png
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/depictions_original.png
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_fib421_jpg
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/Fib421.jpg
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_interconnected_chapters
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/interconnected-chapters
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_liberprimusdiscordchats
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/LiberPrimusDiscordChats
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_more_numbers_mixed_with_runes_page_png
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/more_numbers_mixed_with_runes_page.png
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_page_modified_example_png
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/page_modified_example.png
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_repeat_rune_png
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/repeat-rune.png
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_rune_pixel_diff_example_png
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/rune_pixel_diff_example.png
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false
+- record_type: stage5ag_manifest_local_linkage_record
+  schema: schemas/source-harvester/manifest-local-linkage-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_sourcesnapshots
+  expected_priority: deferred
+  source_type: local_user_upload
+  manual_collection_required: false
+  local_match_status: not_expected_local
+  matched_paths:
+  - third_party/SourceSnapshots
+  confidence: low
+  notes: Local ignored material found but no Stage 5AF manifest source matched; manual
+    classification required.
+  solve_claim: false

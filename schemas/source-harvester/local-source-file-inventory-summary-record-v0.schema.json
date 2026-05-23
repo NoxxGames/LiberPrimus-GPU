@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source-harvester/local-source-file-inventory-summary-record-v0.schema.json",
+  "title": "Stage 5AG local source file inventory summary",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "source_stage_id",
+    "inventory_record_count",
+    "full_inventory_generated_path",
+    "full_inventory_committed",
+    "metadata_only",
+    "raw_content_included",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5ag_local_source_file_inventory_summary" },
+    "stage_id": { "const": "stage-5ag" },
+    "source_stage_id": { "const": "stage-5af" },
+    "inventory_record_count": { "type": "integer", "minimum": 0 },
+    "full_inventory_generated_path": { "type": "string" },
+    "full_inventory_csv_generated_path": { "type": "string" },
+    "full_inventory_committed": { "const": false },
+    "metadata_only": { "const": true },
+    "raw_content_included": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

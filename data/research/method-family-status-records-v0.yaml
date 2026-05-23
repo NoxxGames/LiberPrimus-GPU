@@ -511,10 +511,10 @@ records:
     method_family_id: cicada_source_harvester
     name: Cicada source harvester and provenance inventory
     status: infrastructure_only
-    evidence_summary: Stage 5AF adds local-only source-harvester tooling, source manifests, clue-target categories, dry-run planning, file/hash inventory support, and research-bundle scaffolds without source interpretation or experiment execution.
-    completed_stage_refs: [stage-5af]
-    reopen_conditions: [A future Stage 5AG local inventory prompt supplies user-provided downloads or exports under ignored local roots and requests source-lock metadata only.]
-    stop_conditions: [Do not use Google Drive as project storage, do not run live broad scraping in CI, do not commit raw downloads or scraped bodies, do not process raw archives into committed data, do not run CUDA, do not benchmark, do not execute scored experiments, and do not make solve claims.]
-    next_action: Stage 5AG should run the source harvester on user-provided local downloads and build the initial source-lock inventory.
+    evidence_summary: Stage 5AF adds local-only source-harvester tooling, source manifests, clue-target categories, dry-run planning, file/hash inventory support, and research-bundle scaffolds without source interpretation or experiment execution. Stage 5AG consumes user-provided ignored local material under `third_party/`, inventories 1402 files and 4 archives, links 12 manifest sources, records 30 missing/manual sources and 14 unclassified local sources, and keeps five research bundles partially ready for curated extraction metadata.
+    completed_stage_refs: [stage-5af, stage-5ag]
+    reopen_conditions: [A future Stage 5AH prompt scopes curated extraction from matched local source inventory into ignored research-input bundles and commits compact extraction metadata only.]
+    stop_conditions: [Do not use Google Drive as project storage, do not run live broad scraping in CI, do not commit raw downloads or scraped bodies, do not treat archive listings as source truth, do not process raw archives into committed data, do not run CUDA, do not benchmark, do not execute scored experiments, and do not make solve claims.]
+    next_action: Stage 5AH should curate bounded extraction metadata from the Stage 5AG local source inventory while keeping raw and generated extraction bodies ignored.
     solve_claim: false
-    notes: Source-harvester readiness is provenance infrastructure only. It is not Deep Research, experiment execution, website expansion, CUDA permission, or evidence of a solve.
+    notes: Source-harvester readiness is provenance infrastructure only. Stage 5AG local inventory is not Deep Research, experiment execution, website expansion, CUDA permission, source interpretation, or evidence of a solve.

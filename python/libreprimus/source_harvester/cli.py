@@ -8,11 +8,14 @@ import typer
 from rich.console import Console
 
 from .bundles import build_bundle_scaffolds
+from .bundle_readiness import build_bundle_readiness
 from .export import write_json, write_jsonl
 from .extractors import extract_html_file
 from .fetcher import fetch_source
 from .hashing import inventory_archive, write_hash_path
+from .local_inventory import inventory_local_sources
 from .manifest import validate_manifest
+from .manifest_linkage import link_local_sources
 from .models import (
     CLUE_TARGET_CATEGORIES_PATH,
     COLLECTION_PRIORITIES_PATH,
@@ -23,10 +26,30 @@ from .models import (
     OUTPUT_DIR,
     RESEARCH_BUNDLE_PLAN_PATH,
     SOURCE_MANIFEST_PATH,
+    STAGE5AG_ARCHIVE_SUMMARY_PATH,
+    STAGE5AG_BUNDLE_READINESS_PATH,
+    STAGE5AG_CANDIDATE_SUMMARY_PATH,
+    STAGE5AG_FILE_SUMMARY_PATH,
+    STAGE5AG_GAP_REPORT_PATH,
+    STAGE5AG_GUARDRAIL_PATH,
+    STAGE5AG_HASH_SUMMARY_PATH,
+    STAGE5AG_LOCAL_LINKAGE_PATH,
+    STAGE5AG_MANIFEST_EXTENSION_PATH,
+    STAGE5AG_NEXT_STAGE_DECISION_PATH,
+    STAGE5AG_OUTPUT_DIR,
+    STAGE5AG_ROOT_INVENTORY_PATH,
+    STAGE5AG_SUMMARY_PATH,
     SUMMARY_PATH,
     TOOL_POLICY_PATH,
 )
 from .planning import build_plan
+from .source_lock_candidates import build_source_lock_candidates
+from .stage5ag_records import (
+    build_stage5ag_guardrail,
+    build_stage5ag_next_stage_decision,
+    build_stage5ag_summary,
+)
+from .stage5ag_validation import validate_stage5ag
 from .summary import summarize_stage5af
 from .validation import validate_stage5af
 
@@ -224,6 +247,201 @@ def summary_command(summary: Path = typer.Option(SUMMARY_PATH)) -> None:
         "recommended_next_stage_title",
     ):
         console.print(f"{key}={payload.get(key)}")
+
+
+@app.command("inventory-local-sources")
+def inventory_local_sources_command(
+    manifest: Path = typer.Option(SOURCE_MANIFEST_PATH),
+    source_root: Path = typer.Option(Path("third_party")),
+    results_dir: Path = typer.Option(STAGE5AG_OUTPUT_DIR),
+    out_root_inventory: Path = typer.Option(STAGE5AG_ROOT_INVENTORY_PATH),
+    out_file_summary: Path = typer.Option(STAGE5AG_FILE_SUMMARY_PATH),
+    out_archive_summary: Path = typer.Option(STAGE5AG_ARCHIVE_SUMMARY_PATH),
+    out_hash_summary: Path = typer.Option(STAGE5AG_HASH_SUMMARY_PATH),
+) -> None:
+    del manifest
+    result = inventory_local_sources(
+        source_root=source_root,
+        results_dir=results_dir,
+        out_root_inventory=out_root_inventory,
+        out_file_summary=out_file_summary,
+        out_archive_summary=out_archive_summary,
+        out_hash_summary=out_hash_summary,
+    )
+    root = result["root_inventory"]
+    archive = result["archive_summary"]
+    console.print(f"source_root_exists={str(root['root_exists']).lower()}")
+    console.print(f"total_local_files={root['total_files']}")
+    console.print(f"archives_inventoried={archive['archive_record_count']}")
+    console.print(f"unsupported_archive_count={archive['unsupported_archive_count']}")
+
+
+@app.command("link-local-sources")
+def link_local_sources_command(
+    manifest: Path = typer.Option(SOURCE_MANIFEST_PATH),
+    source_root: Path = typer.Option(Path("third_party")),
+    results_dir: Path = typer.Option(STAGE5AG_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AG_LOCAL_LINKAGE_PATH),
+    out_extension: Path = typer.Option(STAGE5AG_MANIFEST_EXTENSION_PATH),
+) -> None:
+    linkage = link_local_sources(
+        manifest_path=manifest,
+        source_root=source_root,
+        results_dir=results_dir,
+        out=out,
+        out_extension=out_extension,
+    )
+    console.print(f"manifest_records_consumed={linkage['manifest_records_consumed']}")
+    console.print(f"matched_count={linkage['matched_count']}")
+    console.print(f"missing_count={linkage['missing_count']}")
+    console.print(f"unclassified_local_count={linkage['unclassified_local_count']}")
+
+
+@app.command("build-source-lock-candidates")
+def build_source_lock_candidates_command(
+    manifest: Path = typer.Option(SOURCE_MANIFEST_PATH),
+    local_linkage: Path = typer.Option(STAGE5AG_LOCAL_LINKAGE_PATH),
+    out: Path = typer.Option(STAGE5AG_CANDIDATE_SUMMARY_PATH),
+    gap_report: Path = typer.Option(STAGE5AG_GAP_REPORT_PATH),
+) -> None:
+    del manifest
+    result = build_source_lock_candidates(
+        local_linkage_path=local_linkage,
+        out=out,
+        gap_report=gap_report,
+    )
+    summary = result["summary"]
+    gaps = result["gap_report"]
+    console.print(f"source_lock_candidates_ready={summary['ready_count']}")
+    console.print(f"source_lock_candidates_needing_review={summary['needs_review_count']}")
+    console.print(f"source_gap_records={gaps['gap_count']}")
+
+
+@app.command("build-bundle-readiness")
+def build_bundle_readiness_command(
+    bundle_plan: Path = typer.Option(RESEARCH_BUNDLE_PLAN_PATH),
+    local_linkage: Path = typer.Option(STAGE5AG_LOCAL_LINKAGE_PATH),
+    out: Path = typer.Option(STAGE5AG_BUNDLE_READINESS_PATH),
+    results_dir: Path = typer.Option(STAGE5AG_OUTPUT_DIR),
+) -> None:
+    summary = build_bundle_readiness(
+        bundle_plan_path=bundle_plan,
+        local_linkage_path=local_linkage,
+        out=out,
+        results_dir=results_dir,
+    )
+    console.print(f"research_bundle_records={summary['bundle_records']}")
+    console.print(f"research_bundles_ready_for_extraction_prep={summary['ready_for_extraction_prep_count']}")
+    console.print(f"research_bundles_not_ready={summary['not_ready_count']}")
+
+
+@app.command("build-stage5ag-guardrail")
+def build_stage5ag_guardrail_command(
+    source_root: Path = typer.Option(Path("third_party")),
+    results_dir: Path = typer.Option(STAGE5AG_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AG_GUARDRAIL_PATH),
+) -> None:
+    guardrail = build_stage5ag_guardrail(source_root=source_root, results_dir=results_dir, out=out)
+    console.print(f"network_fetch_performed={str(guardrail['network_fetch_performed']).lower()}")
+    console.print(f"online_repo_clone_performed={str(guardrail['online_repo_clone_performed']).lower()}")
+    console.print(f"google_drive_storage_used={str(guardrail['google_drive_storage_used']).lower()}")
+    console.print(f"source_root_raw_content_ignored={str(guardrail['source_root_raw_content_ignored']).lower()}")
+
+
+@app.command("build-stage5ag-next-stage-decision")
+def build_stage5ag_next_stage_decision_command(
+    summary_inputs: list[Path] = typer.Option(None),
+    root_inventory: Path | None = typer.Option(None),
+    local_linkage: Path | None = typer.Option(None),
+    bundle_readiness: Path | None = typer.Option(None),
+    out: Path = typer.Option(STAGE5AG_NEXT_STAGE_DECISION_PATH),
+) -> None:
+    if summary_inputs:
+        if len(summary_inputs) != 3:
+            raise typer.BadParameter("--summary-inputs requires root inventory, local linkage, and bundle readiness")
+        root_inventory, local_linkage, bundle_readiness = summary_inputs
+    if root_inventory is None or local_linkage is None or bundle_readiness is None:
+        raise typer.BadParameter("provide --summary-inputs or explicit --root-inventory/--local-linkage/--bundle-readiness")
+    result = build_stage5ag_next_stage_decision(
+        root_inventory_path=root_inventory,
+        local_linkage_path=local_linkage,
+        bundle_readiness_path=bundle_readiness,
+        out=out,
+    )
+    console.print(f"selected_option_id={result['selected_option_id']}")
+
+
+@app.command("build-stage5ag-summary")
+def build_stage5ag_summary_command(
+    root_inventory: Path = typer.Option(STAGE5AG_ROOT_INVENTORY_PATH),
+    file_summary: Path = typer.Option(STAGE5AG_FILE_SUMMARY_PATH),
+    archive_summary: Path = typer.Option(STAGE5AG_ARCHIVE_SUMMARY_PATH),
+    hash_summary: Path = typer.Option(STAGE5AG_HASH_SUMMARY_PATH),
+    local_linkage: Path = typer.Option(STAGE5AG_LOCAL_LINKAGE_PATH),
+    candidate_summary: Path = typer.Option(STAGE5AG_CANDIDATE_SUMMARY_PATH),
+    gap_report: Path = typer.Option(STAGE5AG_GAP_REPORT_PATH),
+    bundle_readiness: Path = typer.Option(STAGE5AG_BUNDLE_READINESS_PATH),
+    guardrail: Path = typer.Option(STAGE5AG_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AG_NEXT_STAGE_DECISION_PATH),
+    out: Path = typer.Option(STAGE5AG_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AG_OUTPUT_DIR),
+) -> None:
+    summary = build_stage5ag_summary(
+        root_inventory_path=root_inventory,
+        file_summary_path=file_summary,
+        archive_summary_path=archive_summary,
+        hash_summary_path=hash_summary,
+        local_linkage_path=local_linkage,
+        candidate_summary_path=candidate_summary,
+        gap_report_path=gap_report,
+        bundle_readiness_path=bundle_readiness,
+        guardrail_path=guardrail,
+        next_stage_decision_path=next_stage_decision,
+        out=out,
+        results_dir=results_dir,
+    )
+    console.print(f"stage_id={summary['stage_id']}")
+    console.print(f"total_local_files={summary['total_local_files']}")
+    console.print(f"recommended_next_stage_title={summary['recommended_next_stage_title']}")
+
+
+@app.command("validate-stage5ag")
+def validate_stage5ag_command(
+    root_inventory: Path = typer.Option(STAGE5AG_ROOT_INVENTORY_PATH),
+    file_summary: Path = typer.Option(STAGE5AG_FILE_SUMMARY_PATH),
+    archive_summary: Path = typer.Option(STAGE5AG_ARCHIVE_SUMMARY_PATH),
+    hash_summary: Path = typer.Option(STAGE5AG_HASH_SUMMARY_PATH),
+    local_linkage: Path = typer.Option(STAGE5AG_LOCAL_LINKAGE_PATH),
+    candidate_summary: Path = typer.Option(STAGE5AG_CANDIDATE_SUMMARY_PATH),
+    gap_report: Path = typer.Option(STAGE5AG_GAP_REPORT_PATH),
+    bundle_readiness: Path = typer.Option(STAGE5AG_BUNDLE_READINESS_PATH),
+    guardrail: Path = typer.Option(STAGE5AG_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AG_NEXT_STAGE_DECISION_PATH),
+    summary: Path = typer.Option(STAGE5AG_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AG_OUTPUT_DIR),
+) -> None:
+    counts, errors = validate_stage5ag(
+        root_inventory_path=root_inventory,
+        file_summary_path=file_summary,
+        archive_summary_path=archive_summary,
+        hash_summary_path=hash_summary,
+        local_linkage_path=local_linkage,
+        candidate_summary_path=candidate_summary,
+        gap_report_path=gap_report,
+        bundle_readiness_path=bundle_readiness,
+        guardrail_path=guardrail,
+        next_stage_decision_path=next_stage_decision,
+        summary_path=summary,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(error)
+    if errors:
+        raise typer.Exit(1)
+    console.print("source_harvester_stage5ag_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

@@ -78,6 +78,8 @@ git check-ignore -v codex-output/stage5ad-fix-codex-completion.md
 git check-ignore -v codex-output/stage5ae-codex-completion.md
 git check-ignore -v codex-output/stage5af-codex-completion.md
 git check-ignore -v experiments/results/source-harvester/stage5af/summary.json
+git check-ignore -v experiments/results/source-harvester-local/stage5ag/summary.json
+git check-ignore -v third_party/example.zip
 git check-ignore -v source-harvester-output/example.txt
 git check-ignore -v harvest-output/example.txt
 git check-ignore -v research-inputs/example.txt
@@ -177,7 +179,9 @@ If a Stage 5AF source-harvester run leaves `harvest_plan.json`, `source_manifest
 schemas, manifests, code, compact data records, docs, tests, and research logs. Raw harvester
 outputs belong in ignored local roots such as `source-harvester-output/`, `harvest-output/`, or
 `research-inputs/`; Google/Dropbox/Colab sources are manual-export local inputs, and Google Drive
-must not be used as project storage.
+is not project storage. If a Stage 5AG local inventory leaves full inventories under
+`experiments/results/source-harvester-local/stage5ag/`, do not stage them. Commit only compact
+metadata under `data/source-harvester/stage5ag-*`, schemas, docs, tests, and source code.
 
 If a Stage 4L observation-promotion build leaves `promotion_ledger_report.json`,
 `manifest_readiness_report.json`, `blocker_report.json`, or `warnings.jsonl`, do not stage them.

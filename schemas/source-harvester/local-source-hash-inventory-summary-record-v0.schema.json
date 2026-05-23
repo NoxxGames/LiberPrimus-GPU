@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source-harvester/local-source-hash-inventory-summary-record-v0.schema.json",
+  "title": "Stage 5AG local source hash inventory summary",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "source_stage_id",
+    "total_hashed_files",
+    "unique_hash_count",
+    "duplicate_hash_groups",
+    "hash_algorithm",
+    "metadata_only",
+    "raw_content_included",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5ag_local_source_hash_inventory_summary" },
+    "stage_id": { "const": "stage-5ag" },
+    "source_stage_id": { "const": "stage-5af" },
+    "total_hashed_files": { "type": "integer", "minimum": 0 },
+    "unique_hash_count": { "type": "integer", "minimum": 0 },
+    "duplicate_hash_groups": { "type": "integer", "minimum": 0 },
+    "hash_algorithm": { "const": "sha256" },
+    "metadata_only": { "const": true },
+    "raw_content_included": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

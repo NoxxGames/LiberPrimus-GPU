@@ -151,6 +151,11 @@ experiments/reports/**
 /58-Pages-In-Runes-With-Prime-Values-Pastebin.txt
 /vGMK330j.txt
 
+# Local third-party source material
+third_party/**
+!third_party/
+!third_party/README.md
+
 # Local third-party Liber Primus page images
 third_party/LiberPrimusPages/**
 !third_party/LiberPrimusPages/
@@ -698,6 +703,14 @@ experiments/results/source-harvester/**
 !experiments/results/source-harvester/.gitkeep
 !experiments/results/source-harvester/stage5af/
 !experiments/results/source-harvester/stage5af/.gitkeep
+
+# Generated local source-harvester outputs
+experiments/results/source-harvester-local/**
+!experiments/results/source-harvester-local/
+!experiments/results/source-harvester-local/README.md
+!experiments/results/source-harvester-local/.gitkeep
+!experiments/results/source-harvester-local/stage5ag/
+!experiments/results/source-harvester-local/stage5ag/.gitkeep
 
 # Local source-harvester raw output roots
 source-harvester-output/**

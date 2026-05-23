@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AF Cicada source harvester and archive/visual/numeric provenance inventory tooling is complete.
+Stage 5AG local third-party source inventory and initial source-lock metadata is complete.
 
-Next recommended prompt: Stage 5AG - run source harvester on user-provided downloads and build initial source-lock inventory. Website expansion is deferred to a future unnumbered project.
+Next recommended prompt: Stage 5AH - curated research bundle extraction from local source inventory. Website expansion is deferred to a future unnumbered project.
+
+## Completed in Stage 5AG
+
+Stage 5AG ran the Stage 5AF local-only source harvester against user-provided ignored material under `third_party/` and added compact local source root, file/hash/archive inventory, manifest linkage, local source-manifest extension, source-lock candidate, gap report, research-bundle readiness, guardrail, next-stage decision, and summary records. It also added Stage 5AG schemas, CLI commands, tests, documentation, tutorial/wiki-source updates, research-synthesis updates, consistency integration, generated ignored output scaffolds, and a detailed ignored Codex completion handoff.
+
+Local Stage 5AG summary: source root exists `true`, total local files `1402`, total dirs `223`, total size bytes `1356526287`, archives `4`, supported/unsupported archive listings `3/1`, images `691`, PDFs `132`, DOCX `130`, text files `203`, HTML files `65`, audio files `8`, video files `14`, hashed files `1402`, unique hashes `931`, duplicate hash groups `216`, manifest records consumed `41`, matched/missing/ambiguous `12/30/0`, unclassified local sources `14`, source-lock candidates ready/needing review `12/14`, research bundles ready/partial/not-ready `0/5/5`, selected next prompt `Stage 5AH - curated research bundle extraction from local source inventory`, Deep Research recommended next `false`, network fetch `false`, online clone `false`, Google Drive storage `false`, raw downloads committed `false`, raw source bytes committed `false`, CUDA execution `false`, CUDA source modified `false`, new CUDA kernels added `0`, benchmarks `false`, scored experiments `false`, raw data committed `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5AG is source-lock inventory metadata only. It inventories local ignored source files and archive member listings but does not treat archive listings as source truth, run live web scraping, clone online repositories, use Google Drive storage, commit raw archives/images/PDFs/HTML/docs/videos/audio/extracted bodies, run Deep Research, generate hypotheses, execute scored experiments, run CUDA, modify CUDA source, add kernels, run p56/full-p56/unsolved pages, benchmark, expand the website, activate the canonical corpus, finalise page boundaries, or make a solve claim.
 
 ## Completed in Stage 5AF
 

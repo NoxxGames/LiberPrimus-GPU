@@ -1,0 +1,191 @@
+record_type: stage5ag_source_harvester_next_stage_decisions
+schema: schemas/source-harvester/stage5ag-source-harvester-next-stage-decision-record-v0.schema.json
+stage_id: stage-5ag
+source_stage_id: stage-5af
+records:
+- record_type: stage5ag_source_harvester_next_stage_decision
+  schema: schemas/source-harvester/stage5ag-source-harvester-next-stage-decision-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  option_id: stage5ah_curated_research_bundle_extraction_from_local_inventory
+  selected: true
+  recommended_next_prompt_type: Codex
+  recommended_next_stage_title: Stage 5AH - curated research bundle extraction from
+    local source inventory
+  recommended_next_stage_reason: Local third-party material is inventoried; next step
+    is ignored curated extraction metadata, not interpretation.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ag_source_harvester_next_stage_decision
+  schema: schemas/source-harvester/stage5ag-source-harvester-next-stage-decision-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  option_id: stage5ah_source_lock_gap_closure_for_missing_priority_sources
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AH - source-lock gap closure for missing priority
+    sources
+  recommended_next_stage_reason: Several priority sources are still missing or manual-export-only.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ag_source_harvester_next_stage_decision
+  schema: schemas/source-harvester/stage5ag-source-harvester-next-stage-decision-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  option_id: stage5ah_online_fetch_for_missing_manifest_sources
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AH - online fetch for missing manifest sources
+  recommended_next_stage_reason: Deferred because Stage 5AG is local-only and online
+    fetch requires explicit future scope.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ag_source_harvester_next_stage_decision
+  schema: schemas/source-harvester/stage5ag-source-harvester-next-stage-decision-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  option_id: stage5ah_deep_research_source_inventory_and_reliability
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AH - Deep Research source inventory and reliability
+  recommended_next_stage_reason: Deferred until at least one curated extracted bundle
+    exists.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ag_source_harvester_next_stage_decision
+  schema: schemas/source-harvester/stage5ag-source-harvester-next-stage-decision-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  option_id: stage5ah_visual_page_image_provenance_inventory
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AH - visual page-image provenance inventory
+  recommended_next_stage_reason: Deferred until local image variants are curated into
+    source-lock bundles.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ag_source_harvester_next_stage_decision
+  schema: schemas/source-harvester/stage5ag-source-harvester-next-stage-decision-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  option_id: stage5ah_cicada_archive_source_lock_initial_ingestion
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AH - Cicada archive source-lock initial ingestion
+  recommended_next_stage_reason: Useful after local archive inventory is curated into
+    a bounded extraction plan.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ag_source_harvester_next_stage_decision
+  schema: schemas/source-harvester/stage5ag-source-harvester-next-stage-decision-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  option_id: stage5ah_harvester_tool_gap_closure
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AH - harvester tool gap closure
+  recommended_next_stage_reason: Fallback if Stage 5AG exposes local inventory tooling
+    gaps.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ag_source_harvester_next_stage_decision
+  schema: schemas/source-harvester/stage5ag-source-harvester-next-stage-decision-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  option_id: stage5ah_bounded_cpu_native_scored_experiment_manifest_gate
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AH - bounded CPU/native scored experiment manifest
+    gate
+  recommended_next_stage_reason: Rejected because source-lock/provenance work must
+    precede hypotheses.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ag_source_harvester_next_stage_decision
+  schema: schemas/source-harvester/stage5ag-source-harvester-next-stage-decision-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  option_id: stage5ah_benchmark_planning
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AH - benchmark planning
+  recommended_next_stage_reason: Rejected because benchmark planning is out of scope.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ag_source_harvester_next_stage_decision
+  schema: schemas/source-harvester/stage5ag-source-harvester-next-stage-decision-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  option_id: stage5ah_unsolved_page_cuda_pilot
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AH - unsolved-page CUDA pilot
+  recommended_next_stage_reason: Rejected because unsolved-page CUDA remains blocked.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ag_source_harvester_next_stage_decision
+  schema: schemas/source-harvester/stage5ag-source-harvester-next-stage-decision-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  option_id: future_website_expansion_unnumbered
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Future unnumbered website expansion
+  recommended_next_stage_reason: Deferred; Stage 5AG does not expand the website.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false

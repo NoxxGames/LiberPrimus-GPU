@@ -1,0 +1,160 @@
+record_type: stage5ag_local_archive_inventory_summary
+schema: schemas/source-harvester/local-archive-inventory-summary-record-v0.schema.json
+stage_id: stage-5ag
+source_stage_id: stage-5af
+archive_record_count: 4
+supported_archive_count: 3
+unsupported_archive_count: 1
+local_archive_inventory_performed: true
+raw_extraction_performed: false
+raw_archive_content_committed: false
+records:
+- record_type: stage5ag_local_archive_inventory_record
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id_candidate: disk_cipher_theory_bundle_local
+  path: third_party/DiskCipherStuff/DiskCipherStuff.zip
+  source_root_relative_path: DiskCipherStuff/DiskCipherStuff.zip
+  sha256: 5224466387dd9d6015644af7a5e5f797021597be9a7823b8b83d5e2bb0db0d04
+  size_bytes: 4366713
+  archive_type: .zip
+  raw_extraction_performed: false
+  raw_archive_content_committed: false
+  solve_claim: false
+  member_count: 22
+  top_level_member_count: 1
+  top_level_members:
+  - DiskCipherStuff
+  extension_counts:
+    .pdf: 4
+    .rtf: 1
+    .txt: 1
+    .webp: 16
+  nested_archive_count: 0
+  largest_members:
+  - archive_member_path: DiskCipherStuff/test1.pdf
+    size_bytes: 2371103
+  - archive_member_path: DiskCipherStuff/Alberti_LP.pdf
+    size_bytes: 767007
+  - archive_member_path: DiskCipherStuff/Bookcover_inv.pdf
+    size_bytes: 755886
+  - archive_member_path: DiskCipherStuff/Cover_table.webp
+    size_bytes: 370306
+  - archive_member_path: DiskCipherStuff/Alberti_statisticsGr.rtf
+    size_bytes: 217815
+  - archive_member_path: DiskCipherStuff/IMG_20230709_010708.webp
+    size_bytes: 169696
+  - archive_member_path: DiskCipherStuff/Rule changes from base M.pdf
+    size_bytes: 151987
+  - archive_member_path: DiskCipherStuff/image2361234.webp
+    size_bytes: 50942
+  - archive_member_path: DiskCipherStuff/image1352.webp
+    size_bytes: 43468
+  - archive_member_path: DiskCipherStuff/image663333333323.webp
+    size_bytes: 38006
+  supported_for_listing: true
+  inventory_status: listed
+  manual_action_required: false
+- record_type: stage5ag_local_archive_inventory_record
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id_candidate: complete_cicada3301_archive
+  path: third_party/The-Complete-Cicada3301-Archive-main/2014/Websites/cicada2014
+    (onion 5 6).7z
+  source_root_relative_path: The-Complete-Cicada3301-Archive-main/2014/Websites/cicada2014
+    (onion 5 6).7z
+  sha256: 00320df21ba08702e4666eb144c9d533f56c220c308e575590887b08c00db285
+  size_bytes: 9450550
+  archive_type: .7z
+  raw_extraction_performed: false
+  raw_archive_content_committed: false
+  solve_claim: false
+  member_count: 0
+  top_level_member_count: 0
+  top_level_members: []
+  extension_counts: {}
+  nested_archive_count: 0
+  largest_members: []
+  supported_for_listing: false
+  inventory_status: unsupported_archive_type
+  manual_action_required: true
+- record_type: stage5ag_local_archive_inventory_record
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id_candidate: complete_cicada3301_archive
+  path: third_party/The-Complete-Cicada3301-Archive-main/ArchiveDir/Old Sites/3301Archive/THE
+    ASSET PACKAGE/3301 Asset Pak-20210115T222056Z-001.zip
+  source_root_relative_path: The-Complete-Cicada3301-Archive-main/ArchiveDir/Old Sites/3301Archive/THE
+    ASSET PACKAGE/3301 Asset Pak-20210115T222056Z-001.zip
+  sha256: e6a86e7475d13522b1d02f1fdd40946233ca24e3af5cdee6c70b5d0ce44248c1
+  size_bytes: 891222
+  archive_type: .zip
+  raw_extraction_performed: false
+  raw_archive_content_committed: false
+  solve_claim: false
+  member_count: 28
+  top_level_member_count: 1
+  top_level_members:
+  - 3301 Asset Pak
+  extension_counts:
+    .gif: 1
+    .jpg: 3
+    .png: 1
+    .txt: 23
+  nested_archive_count: 0
+  largest_members:
+  - archive_member_path: 3301 Asset Pak/2012/4chan Section/Discussion Archives/2012
+      4chan b Discussion Thread.jpg
+    size_bytes: 664578
+  - archive_member_path: 3301 Asset Pak/2012/4chan Section/Final.jpg/final.jpg Auxiliary/final-jpg
+      Hexdump.txt
+    size_bytes: 143642
+  - archive_member_path: 3301 Asset Pak/2012/Imgur Section/m9sYK.jpg/m9sYK.jpg
+    size_bytes: 37348
+  - archive_member_path: 3301 Asset Pak/2012/4chan Section/Final.jpg/final.jpg
+    size_bytes: 29279
+  - archive_member_path: 3301 Asset Pak/2012/4chan Section/Final.jpg/final.jpg Auxiliary/final-jpg
+      Notepad.txt
+    size_bytes: 29279
+  - archive_member_path: 3301 Asset Pak/2012/4chan Section/Final.jpg/final.jpg Auxiliary/ASCII
+      Table.gif
+    size_bytes: 28002
+  - archive_member_path: 3301 Asset Pak/2012/Subreddit Section/Subreddit Attributes/Header/subreddit
+      header.png
+    size_bytes: 24851
+  - archive_member_path: 3301 Asset Pak/2012/4chan Section/Section Brief (1. 4chan).txt
+    size_bytes: 1298
+  - archive_member_path: 3301 Asset Pak/2012/Imgur Section/Section Brief (2. Imgur).txt
+    size_bytes: 880
+  - archive_member_path: 3301 Asset Pak/2012/4chan Section/Final.jpg/final.jpg Auxiliary/final-jpg
+      Outguess.txt
+    size_bytes: 616
+  supported_for_listing: true
+  inventory_status: listed
+  manual_action_required: false
+- record_type: stage5ag_local_archive_inventory_record
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id_candidate: complete_cicada3301_archive
+  path: third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage06/index.gz
+  source_root_relative_path: The-Complete-Cicada3301-Archive-main/assets/2014/stage06/index.gz
+  sha256: d2dc0019198096967f216e03bbaf31d92a4f5cf74c82ee2d5e54074a14abf5cc
+  size_bytes: 2532309
+  archive_type: .gz
+  raw_extraction_performed: false
+  raw_archive_content_committed: false
+  solve_claim: false
+  member_count: 1
+  top_level_member_count: 1
+  top_level_members:
+  - index
+  extension_counts:
+    '[none]': 1
+  nested_archive_count: 0
+  largest_members:
+  - archive_member_path: index
+    size_bytes: 0
+  supported_for_listing: true
+  inventory_status: single_gzip_member_not_extracted
+  manual_action_required: false
+solve_claim: false

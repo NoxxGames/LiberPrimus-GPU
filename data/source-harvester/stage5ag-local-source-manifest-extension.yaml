@@ -1,0 +1,416 @@
+record_type: stage5ag_local_source_manifest_extension
+schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+stage_id: stage-5ag
+source_stage_id: stage-5af
+records:
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: disk_cipher_theory_bundle_local
+  title: Discord disk-cipher / Alberti theory bundle
+  source_type: local_user_upload
+  priority: A2
+  source_tier: tier4_social_claim_or_screenshot
+  collection_status: local_inventory_candidate
+  recommended_capture_modes:
+  - local_zip_hash
+  - file_inventory
+  - attachment_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - disk_cipher_alberti_hypothesis_source_lock
+  - book_cover_rotation_rule_claims
+  - punctuation_dot_branching_claims
+  - page39_claimed_output_review
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads:
+  - disk_cipher_alberti_lp_branching
+  - visual_depictions_rotation_reflection
+  - rune_pixel_variants
+  notes: Source-lock and formalisation candidate only; high false-positive risk.
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_1348008594460774501_png
+  title: 'Unclassified local source: 1348008594460774501.png'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/1348008594460774501.png
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_community_sources_of_datasets_depiction_images_plausable_methods_worth_exploring_md
+  title: 'Unclassified local source: Community-sources-of-datasets-depiction-images-plausable-methods-worth-exploring.md'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/Community-sources-of-datasets-depiction-images-plausable-methods-worth-exploring.md
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_communityobservations
+  title: 'Unclassified local source: CommunityObservations'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/CommunityObservations
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_cunieform_numbers_png
+  title: 'Unclassified local source: cunieform_numbers.png'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/cunieform_numbers.png
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_depictions_modified_png
+  title: 'Unclassified local source: depictions_modified.png'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/depictions_modified.png
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_depictions_original_png
+  title: 'Unclassified local source: depictions_original.png'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/depictions_original.png
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_fib421_jpg
+  title: 'Unclassified local source: Fib421.jpg'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/Fib421.jpg
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_interconnected_chapters
+  title: 'Unclassified local source: interconnected-chapters'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/interconnected-chapters
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_liberprimusdiscordchats
+  title: 'Unclassified local source: LiberPrimusDiscordChats'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/LiberPrimusDiscordChats
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_more_numbers_mixed_with_runes_page_png
+  title: 'Unclassified local source: more_numbers_mixed_with_runes_page.png'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/more_numbers_mixed_with_runes_page.png
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_page_modified_example_png
+  title: 'Unclassified local source: page_modified_example.png'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/page_modified_example.png
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_repeat_rune_png
+  title: 'Unclassified local source: repeat-rune.png'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/repeat-rune.png
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_rune_pixel_diff_example_png
+  title: 'Unclassified local source: rune_pixel_diff_example.png'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/rune_pixel_diff_example.png
+  solve_claim: false
+- record_type: stage5ag_local_source_manifest_extension_record
+  schema: schemas/source-harvester/local-source-manifest-extension-record-v0.schema.json
+  stage_id: stage-5ag
+  source_stage_id: stage-5af
+  source_id: local_unclassified_sourcesnapshots
+  title: 'Unclassified local source: SourceSnapshots'
+  source_type: local_user_upload
+  priority: deferred
+  source_tier: unknown
+  collection_status: needs_manual_classification
+  recommended_capture_modes:
+  - file_inventory
+  - hash_inventory
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - local_source_inventory_triage
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  related_leads: []
+  notes: Stage 5AG local-only unclassified source record; requires manual classification.
+  local_path: third_party/SourceSnapshots
+  solve_claim: false

@@ -1,0 +1,120 @@
+record_type: stage5ag_local_source_hash_inventory_summary
+schema: schemas/source-harvester/local-source-hash-inventory-summary-record-v0.schema.json
+stage_id: stage-5ag
+source_stage_id: stage-5af
+total_hashed_files: 1402
+unique_hash_count: 931
+duplicate_hash_groups: 216
+largest_duplicate_groups:
+- sha256: b3696f3fe3fbd128de34466226bd7b484f2052e9ee772002164a8c336b143803
+  file_count: 13
+  paths:
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Websites/onion 5v2/img.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Websites/onion 5v2/q4utgdi2n4m4uim5_77
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Websites/onion 5v2/q4utgdi2n4m4uim5_77.html
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Websites/onion 5v2/q4utgdi2n4m4uim5_77.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Websites/onion 5v2/q4utgdi2n4m4uim5_77.method
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Websites/onion 5v2/q4utgdi2n4m4uim5_78
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Websites/onion 5v2/q4utgdi2n4m4uim5_78.html
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Websites/onion 5v2/q4utgdi2n4m4uim5_78.method
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Websites/onion 5v2/q4utgdi2n4m4uim5_79
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Websites/onion 5v2/q4utgdi2n4m4uim5_79.html
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Websites/onion 5v2/q4utgdi2n4m4uim5_79.method
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/additional images/godel
+    escher bach/Brotherboxportrait.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage08/index.jpg
+- sha256: 0297572bbc2d234f84df634c6f0474011ff5df66c2ce987c3bb7aa0c635799b4
+  file_count: 5
+  paths:
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber primus
+    images full/02.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/additional images/Liber
+    primus pages/Intus.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/Page2_Chapter_Intus_OK.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/02.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage03/onion3.jpg
+- sha256: 05538b8ebf9ed2a5716d94284a753dd26582a0227f139cc4a27dc3f07b15d301
+  file_count: 5
+  paths:
+  - third_party/LiberPrimusPages/46.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A drop box
+    of all unmodified files/2014onion7/46.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber primus
+    images full/63.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/63.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/46.jpg
+- sha256: 08ed86be5561c09ce5c773d8001b290cc505436db89637d66ea0f5a15818d1c8
+  file_count: 5
+  paths:
+  - third_party/LiberPrimusPages/47.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A drop box
+    of all unmodified files/2014onion7/47.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber primus
+    images full/64.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/64.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/47.jpg
+- sha256: 0cb60ca12b1bf5f9fc03026314018a0d5ee73f813ac86ca4197629c60f2cb80a
+  file_count: 5
+  paths:
+  - third_party/LiberPrimusPages/31.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A drop box
+    of all unmodified files/2014onion7/31.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber primus
+    images full/48.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/48.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/31.jpg
+- sha256: 134052dd794a7d11185cc6d942de3f9839bd2b767e0845b0f059f711b269bee2
+  file_count: 5
+  paths:
+  - third_party/LiberPrimusPages/41.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A drop box
+    of all unmodified files/2014onion7/41.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber primus
+    images full/58.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/58.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/41.jpg
+- sha256: 13ff4c8d8ab934032a001b8c1fda16433aa44a38dd7272b3ff0dd7ac8300c62d
+  file_count: 5
+  paths:
+  - third_party/LiberPrimusPages/33.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A drop box
+    of all unmodified files/2014onion7/33.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber primus
+    images full/50.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/50.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/33.jpg
+- sha256: 1453ef27ea607c6ea378d6472c908e77c2881caba33c72d1893caddee8dc1117
+  file_count: 5
+  paths:
+  - third_party/LiberPrimusPages/3.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A drop box
+    of all unmodified files/2014onion7/3.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber primus
+    images full/20.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/20.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/3.jpg
+- sha256: 1716e282c1d5e8a9ff911c01621e9b195d4728c7fa55ac857176a473eaba3239
+  file_count: 5
+  paths:
+  - third_party/LiberPrimusPages/10.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A drop box
+    of all unmodified files/2014onion7/10.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber primus
+    images full/27.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/27.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/10.jpg
+- sha256: 184e6f9de8695d99435c2bef4fd7e304a8a0f704dbe04439fa8bf13c4da395a7
+  file_count: 5
+  paths:
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber primus
+    images full/00.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/2014/additional images/Liber
+    primus pages/Liber_primus.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/Page 1_Liber_primus_OK.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/00.jpg
+  - third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage03/onion1.jpg
+hash_algorithm: sha256
+full_hash_inventory_generated_path: experiments/results/source-harvester-local/stage5ag/full_hash_inventory.jsonl
+metadata_only: true
+raw_content_included: false
+solve_claim: false

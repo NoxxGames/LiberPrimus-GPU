@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source-harvester/local-source-gap-report-record-v0.schema.json",
+  "title": "Stage 5AG local source gap report",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "solve_claim"],
+  "properties": {
+    "record_type": {
+      "enum": ["stage5ag_local_source_gap_report", "stage5ag_local_source_gap_record"]
+    },
+    "stage_id": { "const": "stage-5ag" },
+    "source_stage_id": { "const": "stage-5af" },
+    "gap_status": {
+      "enum": ["missing", "needs_manual_export", "needs_manual_classification", "unsupported_archive_type"]
+    },
+    "gap_count": { "type": "integer", "minimum": 0 },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -19,10 +19,10 @@ def test_stage5ab_source_of_truth_schema_and_loader() -> None:
 
     _validator("schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json").validate(payload)
     source = load_source_of_truth(path)
-    assert source.latest_completed_stage_prefix == "Stage 5AF"
-    assert source.expected_next_stage_prefix == "Stage 5AG"
+    assert source.latest_completed_stage_prefix == "Stage 5AG"
+    assert source.expected_next_stage_prefix == "Stage 5AH"
     assert source.next_stage_after_this_stage == (
-        "Stage 5AG - run source harvester on user-provided downloads and build initial source-lock inventory"
+        "Stage 5AH - curated research bundle extraction from local source inventory"
     )
 
 

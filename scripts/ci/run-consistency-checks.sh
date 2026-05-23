@@ -1831,6 +1831,81 @@ echo "Running Stage 5AF source harvester temp output"
     --summary "$tmp_dir/stage5af-source-harvester-summary.yaml" \
     --results-dir "$tmp_dir/stage5af-source-harvester"
 
+echo "Running Stage 5AG local source inventory temp output"
+stage5ag_out="$tmp_dir/stage5ag-source-harvester-local"
+stage5ag_root="third_party/__stage5ag_ci_missing__"
+stage5ag_root_inventory="$tmp_dir/stage5ag-local-source-root-inventory.yaml"
+stage5ag_file_summary="$tmp_dir/stage5ag-local-source-file-inventory-summary.yaml"
+stage5ag_archive_summary="$tmp_dir/stage5ag-local-archive-inventory-summary.yaml"
+stage5ag_hash_summary="$tmp_dir/stage5ag-local-source-hash-inventory-summary.yaml"
+stage5ag_linkage="$tmp_dir/stage5ag-manifest-local-linkage.yaml"
+stage5ag_extension="$tmp_dir/stage5ag-local-source-manifest-extension.yaml"
+stage5ag_candidate="$tmp_dir/stage5ag-source-lock-candidate-summary.yaml"
+stage5ag_gap="$tmp_dir/stage5ag-local-source-gap-report.yaml"
+stage5ag_bundle="$tmp_dir/stage5ag-research-bundle-readiness.yaml"
+stage5ag_guardrail="$tmp_dir/stage5ag-local-source-guardrail.yaml"
+stage5ag_decision="$tmp_dir/stage5ag-source-harvester-next-stage-decision.yaml"
+stage5ag_summary="$tmp_dir/stage5ag-source-harvester-summary.yaml"
+"$python_bin" -m libreprimus.cli source-harvester inventory-local-sources \
+    --manifest data/source-harvester/stage5af-cicada-source-manifest.yaml \
+    --source-root "$stage5ag_root" \
+    --results-dir "$stage5ag_out" \
+    --out-root-inventory "$stage5ag_root_inventory" \
+    --out-file-summary "$stage5ag_file_summary" \
+    --out-archive-summary "$stage5ag_archive_summary" \
+    --out-hash-summary "$stage5ag_hash_summary"
+"$python_bin" -m libreprimus.cli source-harvester link-local-sources \
+    --manifest data/source-harvester/stage5af-cicada-source-manifest.yaml \
+    --source-root "$stage5ag_root" \
+    --results-dir "$stage5ag_out" \
+    --out "$stage5ag_linkage" \
+    --out-extension "$stage5ag_extension"
+"$python_bin" -m libreprimus.cli source-harvester build-source-lock-candidates \
+    --manifest data/source-harvester/stage5af-cicada-source-manifest.yaml \
+    --local-linkage "$stage5ag_linkage" \
+    --out "$stage5ag_candidate" \
+    --gap-report "$stage5ag_gap"
+"$python_bin" -m libreprimus.cli source-harvester build-bundle-readiness \
+    --bundle-plan data/source-harvester/stage5af-research-bundle-plan.yaml \
+    --local-linkage "$stage5ag_linkage" \
+    --out "$stage5ag_bundle" \
+    --results-dir "$stage5ag_out"
+"$python_bin" -m libreprimus.cli source-harvester build-stage5ag-guardrail \
+    --source-root "$stage5ag_root" \
+    --results-dir "$stage5ag_out" \
+    --out "$stage5ag_guardrail"
+"$python_bin" -m libreprimus.cli source-harvester build-stage5ag-next-stage-decision \
+    --root-inventory "$stage5ag_root_inventory" \
+    --local-linkage "$stage5ag_linkage" \
+    --bundle-readiness "$stage5ag_bundle" \
+    --out "$stage5ag_decision"
+"$python_bin" -m libreprimus.cli source-harvester build-stage5ag-summary \
+    --root-inventory "$stage5ag_root_inventory" \
+    --file-summary "$stage5ag_file_summary" \
+    --archive-summary "$stage5ag_archive_summary" \
+    --hash-summary "$stage5ag_hash_summary" \
+    --local-linkage "$stage5ag_linkage" \
+    --candidate-summary "$stage5ag_candidate" \
+    --gap-report "$stage5ag_gap" \
+    --bundle-readiness "$stage5ag_bundle" \
+    --guardrail "$stage5ag_guardrail" \
+    --next-stage-decision "$stage5ag_decision" \
+    --out "$stage5ag_summary" \
+    --results-dir "$stage5ag_out"
+"$python_bin" -m libreprimus.cli source-harvester validate-stage5ag \
+    --root-inventory "$stage5ag_root_inventory" \
+    --file-summary "$stage5ag_file_summary" \
+    --archive-summary "$stage5ag_archive_summary" \
+    --hash-summary "$stage5ag_hash_summary" \
+    --local-linkage "$stage5ag_linkage" \
+    --candidate-summary "$stage5ag_candidate" \
+    --gap-report "$stage5ag_gap" \
+    --bundle-readiness "$stage5ag_bundle" \
+    --guardrail "$stage5ag_guardrail" \
+    --next-stage-decision "$stage5ag_decision" \
+    --summary "$stage5ag_summary" \
+    --results-dir "$stage5ag_out"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

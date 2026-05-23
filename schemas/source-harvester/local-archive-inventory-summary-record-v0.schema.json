@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source-harvester/local-archive-inventory-summary-record-v0.schema.json",
+  "title": "Stage 5AG local archive inventory summary",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "source_stage_id",
+    "archive_record_count",
+    "supported_archive_count",
+    "unsupported_archive_count",
+    "local_archive_inventory_performed",
+    "raw_extraction_performed",
+    "raw_archive_content_committed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5ag_local_archive_inventory_summary" },
+    "stage_id": { "const": "stage-5ag" },
+    "source_stage_id": { "const": "stage-5af" },
+    "archive_record_count": { "type": "integer", "minimum": 0 },
+    "supported_archive_count": { "type": "integer", "minimum": 0 },
+    "unsupported_archive_count": { "type": "integer", "minimum": 0 },
+    "local_archive_inventory_performed": { "type": "boolean" },
+    "raw_extraction_performed": { "const": false },
+    "raw_archive_content_committed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -7,8 +7,11 @@ from typing import Any
 
 STAGE_ID = "stage-5af"
 SOURCE_STAGE_ID = "stage-5ae"
+STAGE5AG_ID = "stage-5ag"
+STAGE5AG_SOURCE_STAGE_ID = "stage-5af"
 
 OUTPUT_DIR = Path("experiments/results/source-harvester/stage5af")
+STAGE5AG_OUTPUT_DIR = Path("experiments/results/source-harvester-local/stage5ag")
 SOURCE_MANIFEST_PATH = Path("data/source-harvester/stage5af-cicada-source-manifest.yaml")
 COLLECTION_PRIORITIES_PATH = Path("data/source-harvester/stage5af-source-collection-priorities.yaml")
 CLUE_TARGET_CATEGORIES_PATH = Path("data/source-harvester/stage5af-clue-target-categories.yaml")
@@ -25,6 +28,28 @@ RESEARCH_BUNDLE_PLAN_REPORT = "research_bundle_plan.json"
 FAILURES_REPORT = "failures.jsonl"
 SUMMARY_REPORT = "summary.json"
 WARNINGS_REPORT = "warnings.jsonl"
+FULL_FILE_INVENTORY_REPORT = "full_file_inventory.jsonl"
+FULL_FILE_INVENTORY_CSV_REPORT = "full_file_inventory.csv"
+FULL_HASH_INVENTORY_REPORT = "full_hash_inventory.jsonl"
+FULL_ARCHIVE_INVENTORY_REPORT = "full_archive_inventory.jsonl"
+SOURCE_MANIFEST_LINKAGE_REPORT = "source_manifest_linkage.json"
+DUPLICATE_HASHES_REPORT = "duplicate_hashes.json"
+MISSING_SOURCES_REPORT = "missing_sources.json"
+UNCLASSIFIED_LOCAL_SOURCES_REPORT = "unclassified_local_sources.json"
+RESEARCH_BUNDLE_READINESS_REPORT = "research_bundle_readiness.json"
+
+STAGE5AG_ROOT_INVENTORY_PATH = Path("data/source-harvester/stage5ag-local-source-root-inventory.yaml")
+STAGE5AG_FILE_SUMMARY_PATH = Path("data/source-harvester/stage5ag-local-source-file-inventory-summary.yaml")
+STAGE5AG_ARCHIVE_SUMMARY_PATH = Path("data/source-harvester/stage5ag-local-archive-inventory-summary.yaml")
+STAGE5AG_HASH_SUMMARY_PATH = Path("data/source-harvester/stage5ag-local-source-hash-inventory-summary.yaml")
+STAGE5AG_LOCAL_LINKAGE_PATH = Path("data/source-harvester/stage5ag-manifest-local-linkage.yaml")
+STAGE5AG_MANIFEST_EXTENSION_PATH = Path("data/source-harvester/stage5ag-local-source-manifest-extension.yaml")
+STAGE5AG_CANDIDATE_SUMMARY_PATH = Path("data/source-harvester/stage5ag-source-lock-candidate-summary.yaml")
+STAGE5AG_GAP_REPORT_PATH = Path("data/source-harvester/stage5ag-local-source-gap-report.yaml")
+STAGE5AG_BUNDLE_READINESS_PATH = Path("data/source-harvester/stage5ag-research-bundle-readiness.yaml")
+STAGE5AG_GUARDRAIL_PATH = Path("data/source-harvester/stage5ag-local-source-guardrail.yaml")
+STAGE5AG_NEXT_STAGE_DECISION_PATH = Path("data/source-harvester/stage5ag-source-harvester-next-stage-decision.yaml")
+STAGE5AG_SUMMARY_PATH = Path("data/source-harvester/stage5ag-source-harvester-summary.yaml")
 
 REQUIRED_SOURCE_IDS = {
     "liber_primus_dropbox_files",
@@ -152,6 +177,36 @@ COMMON_FALSE_FLAGS: dict[str, Any] = {
     "solve_claim": False,
 }
 
+STAGE5AG_FALSE_FLAGS: dict[str, Any] = {
+    "network_fetch_performed": False,
+    "live_web_scrape_performed": False,
+    "online_repo_clone_performed": False,
+    "google_drive_storage_used": False,
+    "raw_downloads_committed": False,
+    "raw_archives_committed": False,
+    "raw_images_committed": False,
+    "raw_html_committed": False,
+    "raw_pdf_docx_committed": False,
+    "raw_audio_video_committed": False,
+    "raw_data_committed": False,
+    "generated_outputs_committed": False,
+    "codex_output_committed": False,
+    "third_party_raw_staged": False,
+    "third_party_raw_tracked_new": False,
+    "cuda_execution_performed": False,
+    "cuda_source_modified": False,
+    "new_cuda_kernel_added": False,
+    "full_p56_cuda_executed": False,
+    "unsolved_page_cuda_used": False,
+    "gpu_benchmark_performed": False,
+    "benchmark_execution_allowed": False,
+    "scored_experiment_executed": False,
+    "canonical_corpus_active": False,
+    "page_boundaries_final": False,
+    "method_status_upgraded": False,
+    "solve_claim": False,
+}
+
 
 def common_record_flags() -> dict[str, Any]:
     """Return common guardrail fields for Stage 5AF records."""
@@ -164,4 +219,18 @@ def common_record_flags() -> dict[str, Any]:
         "ci_network_required": False,
         "new_cuda_kernels_added": 0,
         **COMMON_FALSE_FLAGS,
+    }
+
+
+def stage5ag_common_record_flags() -> dict[str, Any]:
+    """Return common guardrail fields for Stage 5AG records."""
+
+    return {
+        "stage_id": STAGE5AG_ID,
+        "source_stage_id": STAGE5AG_SOURCE_STAGE_ID,
+        "no_solve_claim": True,
+        "no_gpu_ci_safe": True,
+        "ci_network_required": False,
+        "new_cuda_kernels_added": 0,
+        **STAGE5AG_FALSE_FLAGS,
     }
