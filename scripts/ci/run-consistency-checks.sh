@@ -1574,6 +1574,79 @@ echo "Running Stage 5AC prime-minus-one CUDA synthetic reporting temp output"
     --summary "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting-summary.yaml" \
     --results-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting"
 
+echo "Running Stage 5AD bounded p56 CUDA parity skipped-CUDA temp output"
+"$python_bin" -m libreprimus.cli bounded-p56-cuda-parity build-run-records \
+    --cuda-run-out "$tmp_dir/stage5ad-bounded-p56-cuda-run.yaml" \
+    --out-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-cuda-parity run-bounded-p56-cuda \
+    --cuda-run-out "$tmp_dir/stage5ad-bounded-p56-cuda-run.yaml" \
+    --out-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity" \
+    --build-dir "$tmp_dir/stage5ad-bounded-p56-cuda-build" \
+    --skip-cuda \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-cuda-parity build-parity-records \
+    --cuda-run "$tmp_dir/stage5ad-bounded-p56-cuda-run.yaml" \
+    --cuda-parity-out "$tmp_dir/stage5ad-bounded-p56-cuda-parity.yaml" \
+    --out-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-cuda-parity build-result-store-preflight \
+    --cuda-parity "$tmp_dir/stage5ad-bounded-p56-cuda-parity.yaml" \
+    --result-store-preflight-out "$tmp_dir/stage5ad-bounded-p56-cuda-result-store-preflight.yaml" \
+    --out-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-cuda-parity build-score-summary-preflight \
+    --cuda-parity "$tmp_dir/stage5ad-bounded-p56-cuda-parity.yaml" \
+    --score-summary-preflight-out "$tmp_dir/stage5ad-bounded-p56-cuda-score-summary-preflight.yaml" \
+    --out-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-cuda-parity build-full-p56-blocker \
+    --full-p56-blocker-out "$tmp_dir/stage5ad-bounded-p56-cuda-full-p56-blocker.yaml" \
+    --out-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-cuda-parity build-scored-experiment-deferral \
+    --scored-experiment-deferral-out "$tmp_dir/stage5ad-bounded-p56-cuda-scored-experiment-deferral.yaml" \
+    --out-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-cuda-parity build-doc-staleness-validation \
+    --doc-staleness-validation-out "$tmp_dir/stage5ad-bounded-p56-cuda-doc-staleness-validation.yaml" \
+    --out-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-cuda-parity build-device-subset-audit \
+    --device-subset-audit-out "$tmp_dir/stage5ad-bounded-p56-cuda-device-subset-audit.yaml" \
+    --out-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-cuda-parity build-next-stage-decision \
+    --cuda-parity "$tmp_dir/stage5ad-bounded-p56-cuda-parity.yaml" \
+    --next-stage-decision-out "$tmp_dir/stage5ad-bounded-p56-cuda-next-stage-decision.yaml" \
+    --out-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-cuda-parity build-summary \
+    --cuda-run "$tmp_dir/stage5ad-bounded-p56-cuda-run.yaml" \
+    --cuda-parity "$tmp_dir/stage5ad-bounded-p56-cuda-parity.yaml" \
+    --result-store-preflight "$tmp_dir/stage5ad-bounded-p56-cuda-result-store-preflight.yaml" \
+    --score-summary-preflight "$tmp_dir/stage5ad-bounded-p56-cuda-score-summary-preflight.yaml" \
+    --full-p56-blocker "$tmp_dir/stage5ad-bounded-p56-cuda-full-p56-blocker.yaml" \
+    --scored-experiment-deferral "$tmp_dir/stage5ad-bounded-p56-cuda-scored-experiment-deferral.yaml" \
+    --doc-staleness-validation "$tmp_dir/stage5ad-bounded-p56-cuda-doc-staleness-validation.yaml" \
+    --device-subset-audit "$tmp_dir/stage5ad-bounded-p56-cuda-device-subset-audit.yaml" \
+    --next-stage-decision "$tmp_dir/stage5ad-bounded-p56-cuda-next-stage-decision.yaml" \
+    --summary-out "$tmp_dir/stage5ad-bounded-p56-cuda-parity-summary.yaml" \
+    --out-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-cuda-parity validate-stage5ad \
+    --cuda-run "$tmp_dir/stage5ad-bounded-p56-cuda-run.yaml" \
+    --cuda-parity "$tmp_dir/stage5ad-bounded-p56-cuda-parity.yaml" \
+    --result-store-preflight "$tmp_dir/stage5ad-bounded-p56-cuda-result-store-preflight.yaml" \
+    --score-summary-preflight "$tmp_dir/stage5ad-bounded-p56-cuda-score-summary-preflight.yaml" \
+    --full-p56-blocker "$tmp_dir/stage5ad-bounded-p56-cuda-full-p56-blocker.yaml" \
+    --scored-experiment-deferral "$tmp_dir/stage5ad-bounded-p56-cuda-scored-experiment-deferral.yaml" \
+    --doc-staleness-validation "$tmp_dir/stage5ad-bounded-p56-cuda-doc-staleness-validation.yaml" \
+    --device-subset-audit "$tmp_dir/stage5ad-bounded-p56-cuda-device-subset-audit.yaml" \
+    --next-stage-decision "$tmp_dir/stage5ad-bounded-p56-cuda-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5ad-bounded-p56-cuda-parity-summary.yaml" \
+    --results-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

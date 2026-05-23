@@ -8,4 +8,4 @@ Non-targets include raw Discord processing, image/OCR/AI interpretation, image c
 
 Blocked targets remain blocked until their CPU batch adapter, parity fixture, or score-summary contract is complete. A blocked target must not be forced into CUDA by changing transform semantics.
 
-Website expansion is deferred to a future unnumbered project. Stage 5AC is complete as prime-minus-one CUDA synthetic reporting and bounded-p56 preflight metadata, and Stage 5AD is the next selected bounded p56 CUDA parity run. CUDA work remains limited to explicit synthetic or solved-fixture-safe parity scopes; broad CUDA and unsolved-page CUDA remain blocked.
+Website expansion is deferred to a future unnumbered project. Stage 5AD is complete as a bounded p56 CUDA parity run with `failed_hash_mismatch`, and Stage 5AD-fix is the next selected mismatch investigation. CUDA work remains limited to explicit synthetic or solved-fixture-safe parity scopes; broad CUDA and unsolved-page CUDA remain blocked.

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/bounded-p56-cuda-next-stage-decision-record-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "option_id", "status", "selected", "recommended_prompt_type", "recommended_stage_title", "solve_claim"],
+  "properties": {
+    "record_type": {"const": "bounded_p56_cuda_next_stage_decision_record"},
+    "stage_id": {"const": "stage-5ad"},
+    "selected": {"type": "boolean"},
+    "recommended_prompt_type": {"enum": ["Codex", "Deep Research"]},
+    "benchmark_execution_allowed": {"const": false},
+    "scored_experiment_execution_allowed": {"const": false},
+    "unsolved_page_scope_allowed": {"const": false},
+    "generated_body_publication_allowed": {"const": false},
+    "method_status_upgrade_allowed": {"const": false},
+    "solve_claim": {"const": false}
+  },
+  "additionalProperties": true
+}

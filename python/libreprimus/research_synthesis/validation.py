@@ -385,6 +385,18 @@ def validate_research_synthesis(
             ("stage 5ad", "bounded p56 cuda parity run"),
             "staged_plan_stage5ad_next",
         )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5ad", "bounded p56 cuda parity", "complete", "failed_hash_mismatch"),
+            "staged_plan_stage5ad_bounded_p56_cuda_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5ad-fix", "bounded p56 cuda parity mismatch investigation"),
+            "staged_plan_stage5ad_fix_next",
+        )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
         _require_text(errors, staged_text, ("page boundaries", "reviewable"), "staged_plan_boundaries_reviewable")

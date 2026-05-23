@@ -1,0 +1,9 @@
+manifest_id: stage5ad-bounded-p56-result-store-preflight
+stage_id: stage-5ad
+description: Build compact result-store and score-summary preflight metadata from the Stage 5AD bounded vector.
+result_store_contract: stage4p
+score_summary_contract: stage4i
+generated_body_publication_allowed: false
+method_status_upgrade_allowed: false
+raw_data_required: false
+no_solve_claim: true

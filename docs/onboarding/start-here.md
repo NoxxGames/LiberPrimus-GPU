@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5AC - prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight.
-- Current planning focus: Stage 5AD - bounded p56 CUDA parity run.
+- Latest completed stage: Stage 5AD - bounded p56 CUDA parity run.
+- Current planning focus: Stage 5AD-fix - bounded p56 CUDA parity mismatch investigation.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

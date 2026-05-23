@@ -44,6 +44,8 @@ Stage 5AB extends this coverage with dynamic stage-id parsing, operational Markd
 
 Stage 5AC extends coverage with prime-minus-one CUDA synthetic reporting schemas, record builders, CLI commands, bounded-p56 preflight checks, full-p56 blocker preservation, scored-experiment deferral checks, Stage 5AB doc-staleness validation, deterministic next-stage decision checks, and ignored-output checks for `experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/` plus `codex-output/**`. It does not run CUDA, CMake, native parity, p56 CUDA, or benchmarks.
 
+Stage 5AD extends coverage with bounded p56 CUDA parity schemas, run/parity record builders, result-store and score-summary preflight checks, full-p56 blocker preservation, scored-experiment deferral checks, device-subset audit checks, deterministic mismatch next-stage decisions, no-GPU `--skip-cuda` CLI validation paths, and ignored-output checks for `experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/` plus `codex-output/**`. It allows only the bounded vector run and still treats CUDA hash parity as correctness metadata, not benchmark or solve evidence.
+
 Stage 4K extends this coverage with source-lock snapshot validation, allowlist/rejection tests,
 snapshot-policy tests, GitHub commit-address parser tests, generated-output/cache ignore tests, and
 state-drift checks for the Stage 4L ledger.

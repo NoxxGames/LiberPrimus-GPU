@@ -4,11 +4,17 @@
 
 This file records CUDA policy for future acceleration work.
 
+## Stage 5AD Bounded P56 CUDA Parity
+
+Stage 5AD is complete. It ran only `stage5z-validation-p56-bounded-v0` through the existing `prime_minus_one_stream_kernel_v0` path and recorded CUDA attempted/pass/fail/skip `1/0/1/0`.
+
+The Stage 5X expected output-token hash is `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87`; the computed CUDA hash is `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`. Stage 5AD records `failed_hash_mismatch` and selects Stage 5AD-fix mismatch investigation.
+
+Stage 5AD modifies no CUDA-facing `.cu` or `.cuh` source, adds no kernels, runs no full p56 or unsolved-page CUDA, runs no benchmarks, executes no scored experiments, processes no raw data, expands no website, and makes no solve claim.
+
 ## Stage 5AC Prime-Minus-One CUDA Synthetic Reporting
 
 Stage 5AC is complete. It reports Stage 5AA synthetic prime-minus-one CUDA parity into compact result-store and score-summary metadata, preserves method-status and generated-body guardrails, validates the Stage 5AB doc-staleness gate, and preflights only the bounded p56 vector for a future explicit Stage 5AD run.
-
-This stage performs no CUDA execution, modifies no CUDA source, adds no kernels, runs no p56/full-p56 CUDA, runs no benchmarks, executes no scored experiments, processes no raw data, expands no website, and makes no solve claim.
 
 ## Stage 5AB Document Staleness Gate
 
@@ -68,7 +74,7 @@ Stage 5T selected `Stage 5U - unified candidate batch ABI and backend contract c
 
 ## Current CUDA Status
 
-CUDA remains deferred after Stage 5AC except for explicitly scoped synthetic or solved-fixture-safe parity stages. Existing CUDA code and metadata are summarized by the latest staged-plan and CUDA notes; broad CUDA and unsolved-page CUDA remain blocked unless an explicit future prompt scopes them with CPU references, parity tests, result records, and benchmark plans. Stage 5Z prime-minus-one CUDA contract records, Stage 5AA synthetic CUDA records, and Stage 5AC reporting/preflight records are not full p56 parity, benchmark evidence, or solve evidence.
+CUDA remains deferred after Stage 5AD except for explicitly scoped synthetic or solved-fixture-safe parity stages. Existing CUDA code and metadata are summarized by the latest staged-plan and CUDA notes; broad CUDA and unsolved-page CUDA remain blocked unless an explicit future prompt scopes them with CPU references, parity tests, result records, and benchmark plans. Stage 5Z prime-minus-one CUDA contract records, Stage 5AA synthetic CUDA records, Stage 5AC reporting/preflight records, and Stage 5AD bounded mismatch records are not full p56 parity, benchmark evidence, or solve evidence.
 
 Do not use CUDA for Discord processing, image interpretation, OutGuess regression, cookie/hash packs, or broad unsolved-page campaigns.
 

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/bounded-p56-cuda-score-summary-preflight-record-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "score_summary_contract", "confidence_interpretation", "confidence_label", "solve_claim"],
+  "properties": {
+    "record_type": {"const": "bounded_p56_cuda_score_summary_preflight_record"},
+    "stage_id": {"const": "stage-5ad"},
+    "score_summary_contract": {"const": "stage4i"},
+    "confidence_interpretation": {"const": "triage_only"},
+    "confidence_label": {"enum": ["positive_control_like", "scoring_not_available"]},
+    "method_status_upgrade_allowed": {"const": false},
+    "solve_claim": {"const": false}
+  },
+  "additionalProperties": true
+}

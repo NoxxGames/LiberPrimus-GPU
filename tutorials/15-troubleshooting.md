@@ -57,6 +57,7 @@ git check-ignore -v experiments/results/prime-minus-one-native-parity/stage5x/su
 git check-ignore -v experiments/results/prime-minus-one-native-reporting/stage5y/summary.json
 git check-ignore -v experiments/results/prime-minus-one-cuda-contract/stage5z/summary.json
 git check-ignore -v experiments/results/prime-minus-one-cuda-synthetic/stage5aa/summary.json
+git check-ignore -v experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
@@ -751,13 +752,29 @@ Generated Stage 5AA reports belong under ignored
 ignored `codex-output/stage5aa-codex-completion.md`. Do not stage generated reports, generated
 result bodies, SQLite files, raw data, or local CUDA diagnostics.
 
+# Stage 5AD Bounded P56 CUDA Parity Troubleshooting
+
+If Stage 5AD validation fails, rebuild the bounded record sequence and rerun
+`libreprimus bounded-p56-cuda-parity validate-stage5ad`. The only execution-scoped vector is
+`stage5z-validation-p56-bounded-v0`; do not widen to full p56, unsolved pages, scored experiments,
+benchmarks, website expansion, raw data, or new kernels to repair the records.
+
+The local Stage 5AD outcome is `failed_hash_mismatch`: expected
+`4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87`, computed CUDA hash
+`6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`. That should select
+Stage 5AD-fix bounded p56 CUDA parity mismatch investigation, not Stage 5AE reporting.
+
+Generated Stage 5AD reports belong under ignored
+`experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/`, and the local handoff
+belongs under ignored `codex-output/stage5ad-codex-completion.md`. Do not stage generated reports,
+generated result bodies, build directories, SQLite files, raw data, or local CUDA diagnostics.
+
 # Stage 5AB Document Staleness Troubleshooting
 
-If Stage 5AC doc-staleness validation fails after updating operational docs, inspect
+If Stage 5AD doc-staleness validation fails after updating operational docs, inspect
 `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`, `data/project-state/operational-file-map.yaml`,
 `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, `README.md`, and `docs/roadmap/staged-plan.md` for mismatched latest or next
-stage labels. Stage 5AC expects Stage 5AC as latest completed and Stage 5AD as next only after bounded-p56 preflight
-passes.
+stage labels. Stage 5AD expects Stage 5AD as latest completed and Stage 5AD-fix as next after the bounded p56 mismatch.
 
 If Stage 5AC bounded-p56 preflight is not ready, do not run p56 CUDA. Keep full p56 blocked, inspect the Stage 5AA
 synthetic hash match and Stage 5AB doc-staleness record, then repair metadata before selecting any future bounded

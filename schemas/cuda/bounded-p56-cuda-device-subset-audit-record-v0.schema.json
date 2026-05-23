@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/bounded-p56-cuda-device-subset-audit-record-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "audit_status", "cuda_source_modified", "device_kernel_arithmetic_modified", "new_cuda_kernels_added", "solve_claim"],
+  "properties": {
+    "record_type": {"const": "bounded_p56_cuda_device_subset_audit_record"},
+    "stage_id": {"const": "stage-5ad"},
+    "cuda_source_modified": {"const": false},
+    "device_kernel_arithmetic_modified": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0},
+    "solve_claim": {"const": false}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/stage5ad-bounded-p56-cuda-parity-summary-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "status", "expected_output_token_hash", "stage5ad_parity_status", "cuda_attempted_count", "cuda_pass_count", "cuda_fail_count", "cuda_skip_count", "solve_claim"],
+  "properties": {
+    "record_type": {"const": "stage5ad_bounded_p56_cuda_parity_summary"},
+    "stage_id": {"const": "stage-5ad"},
+    "status": {"const": "complete"},
+    "full_p56_cuda_executed": {"const": false},
+    "unsolved_page_cuda_used": {"const": false},
+    "gpu_benchmark_performed": {"const": false},
+    "scored_experiment_executed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "method_status_upgraded": {"const": false},
+    "solve_claim": {"const": false},
+    "no_solve_claim": {"const": true}
+  },
+  "additionalProperties": true
+}

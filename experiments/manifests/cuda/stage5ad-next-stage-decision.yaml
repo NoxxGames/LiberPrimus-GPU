@@ -1,0 +1,11 @@
+manifest_id: stage5ad-next-stage-decision
+stage_id: stage-5ad
+description: Select the next Stage 5AD/5AE path from bounded p56 CUDA pass, skip, or mismatch status.
+decision_inputs:
+- data/cuda/stage5ad-bounded-p56-cuda-parity.yaml
+full_p56_cuda_allowed: false
+unsolved_page_cuda_allowed: false
+benchmark_execution_allowed: false
+scored_experiment_execution_allowed: false
+website_expansion_allowed: false
+no_solve_claim: true

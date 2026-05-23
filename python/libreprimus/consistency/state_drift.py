@@ -275,6 +275,16 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5AA is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5ab",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5ab\b", re.IGNORECASE),
+        "Stage 5AB is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
+        "stale_next_stage5ac",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5ac\b", re.IGNORECASE),
+        "Stage 5AC is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -856,6 +866,17 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
+        "stage5ad_bounded_p56_cuda_parity_complete",
+        "stage 5ad" in staged_plan
+        and "bounded p56 cuda parity" in staged_plan
+        and "failed_hash_mismatch" in staged_plan
+        and "stage 5ad-fix" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5AD bounded p56 CUDA parity and Stage 5AD-fix direction.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
         "source_lock_snapshot_policy_present",
         "source-lock snapshot" in combined and "allowlisted" in combined and "snapshot policy" in combined,
         "Allowlisted public source-lock snapshot policy is documented.",
@@ -1194,6 +1215,18 @@ def check_state_drift_consistency(
         and "benchmarks" in combined
         and "solve claims" in combined,
         "Stage 5AA/5AC prime-minus-one CUDA synthetic reporting boundary and Stage 5AD direction are documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "bounded_p56_cuda_parity_policy_present",
+        "bounded p56 cuda parity" in combined
+        and "failed_hash_mismatch" in combined
+        and "stage 5ad-fix" in combined
+        and "full p56" in combined
+        and "benchmarks" in combined
+        and "solve claim" in combined,
+        "Stage 5AD bounded p56 CUDA mismatch boundary and Stage 5AD-fix direction are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

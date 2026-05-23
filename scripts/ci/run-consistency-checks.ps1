@@ -1600,6 +1600,65 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5ACSummary `
         --results-dir $Stage5ACOut
 
+    Write-Host "Running Stage 5AD bounded p56 CUDA parity skipped-CUDA temp output"
+    $Stage5ADOut = Join-Path $TempDir "stage5ad-bounded-p56-cuda-parity"
+    $Stage5ADBuild = Join-Path $TempDir "stage5ad-bounded-p56-cuda-build"
+    $Stage5ADRun = Join-Path $TempDir "stage5ad-bounded-p56-cuda-run.yaml"
+    $Stage5ADParity = Join-Path $TempDir "stage5ad-bounded-p56-cuda-parity.yaml"
+    $Stage5ADResult = Join-Path $TempDir "stage5ad-bounded-p56-cuda-result-store-preflight.yaml"
+    $Stage5ADScore = Join-Path $TempDir "stage5ad-bounded-p56-cuda-score-summary-preflight.yaml"
+    $Stage5ADFull = Join-Path $TempDir "stage5ad-bounded-p56-cuda-full-p56-blocker.yaml"
+    $Stage5ADScored = Join-Path $TempDir "stage5ad-bounded-p56-cuda-scored-experiment-deferral.yaml"
+    $Stage5ADDocs = Join-Path $TempDir "stage5ad-bounded-p56-cuda-doc-staleness-validation.yaml"
+    $Stage5ADAudit = Join-Path $TempDir "stage5ad-bounded-p56-cuda-device-subset-audit.yaml"
+    $Stage5ADDecision = Join-Path $TempDir "stage5ad-bounded-p56-cuda-next-stage-decision.yaml"
+    $Stage5ADSummary = Join-Path $TempDir "stage5ad-bounded-p56-cuda-parity-summary.yaml"
+    & $Python -m libreprimus.cli bounded-p56-cuda-parity build-run-records `
+        --cuda-run-out $Stage5ADRun --out-dir $Stage5ADOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-cuda-parity run-bounded-p56-cuda `
+        --cuda-run-out $Stage5ADRun --out-dir $Stage5ADOut --build-dir $Stage5ADBuild --skip-cuda --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-cuda-parity build-parity-records `
+        --cuda-run $Stage5ADRun --cuda-parity-out $Stage5ADParity --out-dir $Stage5ADOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-cuda-parity build-result-store-preflight `
+        --cuda-parity $Stage5ADParity --result-store-preflight-out $Stage5ADResult --out-dir $Stage5ADOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-cuda-parity build-score-summary-preflight `
+        --cuda-parity $Stage5ADParity --score-summary-preflight-out $Stage5ADScore --out-dir $Stage5ADOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-cuda-parity build-full-p56-blocker `
+        --full-p56-blocker-out $Stage5ADFull --out-dir $Stage5ADOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-cuda-parity build-scored-experiment-deferral `
+        --scored-experiment-deferral-out $Stage5ADScored --out-dir $Stage5ADOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-cuda-parity build-doc-staleness-validation `
+        --doc-staleness-validation-out $Stage5ADDocs --out-dir $Stage5ADOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-cuda-parity build-device-subset-audit `
+        --device-subset-audit-out $Stage5ADAudit --out-dir $Stage5ADOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-cuda-parity build-next-stage-decision `
+        --cuda-parity $Stage5ADParity --next-stage-decision-out $Stage5ADDecision --out-dir $Stage5ADOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-cuda-parity build-summary `
+        --cuda-run $Stage5ADRun `
+        --cuda-parity $Stage5ADParity `
+        --result-store-preflight $Stage5ADResult `
+        --score-summary-preflight $Stage5ADScore `
+        --full-p56-blocker $Stage5ADFull `
+        --scored-experiment-deferral $Stage5ADScored `
+        --doc-staleness-validation $Stage5ADDocs `
+        --device-subset-audit $Stage5ADAudit `
+        --next-stage-decision $Stage5ADDecision `
+        --summary-out $Stage5ADSummary `
+        --out-dir $Stage5ADOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-cuda-parity validate-stage5ad `
+        --cuda-run $Stage5ADRun `
+        --cuda-parity $Stage5ADParity `
+        --result-store-preflight $Stage5ADResult `
+        --score-summary-preflight $Stage5ADScore `
+        --full-p56-blocker $Stage5ADFull `
+        --scored-experiment-deferral $Stage5ADScored `
+        --doc-staleness-validation $Stage5ADDocs `
+        --device-subset-audit $Stage5ADAudit `
+        --next-stage-decision $Stage5ADDecision `
+        --summary $Stage5ADSummary `
+        --results-dir $Stage5ADOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

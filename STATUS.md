@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AC prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight is complete.
+Stage 5AD bounded p56 CUDA parity run is complete.
 
-Next recommended prompt: Stage 5AD - bounded p56 CUDA parity run. Website expansion is deferred to a future unnumbered project.
+Next recommended prompt: Stage 5AD-fix - bounded p56 CUDA parity mismatch investigation. Website expansion is deferred to a future unnumbered project.
+
+## Completed in Stage 5AD
+
+Stage 5AD added the `libreprimus bounded-p56-cuda-parity` CLI, bounded p56 CUDA run records, parity records, result-store and score-summary preflight records, full-p56 blocker records, scored-experiment deferral records, doc-staleness validation records, device-subset audit records, next-stage decision records, Stage 5AD manifests, generated ignored reports, schemas, tests, documentation, tutorial/wiki-source updates, research-synthesis updates, consistency integration, and a detailed ignored Codex completion handoff.
+
+Local Stage 5AD summary: CUDA run records `1`, parity records `1`, result-store preflight records `1`, score-summary preflight records `1`, full-p56 blocker records `1`, scored-experiment deferral records `7`, doc-staleness validation records `1`, device-subset audit records `1`, next-stage decision records `10`, vector `stage5z-validation-p56-bounded-v0`, expected Stage 5X hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87`, computed CUDA hash `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`, CUDA attempted/pass/fail/skip `1/0/1/0`, parity status `failed_hash_mismatch`, full-p56 blocker `blocked_full_p56_token_buffer_missing`, selected next prompt `Stage 5AD-fix - bounded p56 CUDA parity mismatch investigation`, Deep Research recommended next `false`, CUDA source modified `false`, device kernel arithmetic modified `false`, new CUDA kernels added `0`, benchmarks `false`, scored experiments `false`, website expansion `false`, raw data processed `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5AD is bounded correctness infrastructure. It reuses the existing prime-minus-one CUDA kernel for one scoped vector only; it does not run full p56, run unsolved pages, add CUDA kernels, modify CUDA device arithmetic, run benchmarks, execute scored experiments, publish generated bodies, upgrade method status, expand the website, activate the canonical corpus, finalise page boundaries, or make a solve claim.
 
 ## Completed in Stage 5AC
 

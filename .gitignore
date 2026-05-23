@@ -667,6 +667,14 @@ experiments/results/prime-minus-one-cuda-synthetic-reporting/**
 !experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/
 !experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/.gitkeep
 
+# Generated bounded p56 CUDA parity outputs
+experiments/results/prime-minus-one-bounded-p56-cuda-parity/**
+!experiments/results/prime-minus-one-bounded-p56-cuda-parity/
+!experiments/results/prime-minus-one-bounded-p56-cuda-parity/README.md
+!experiments/results/prime-minus-one-bounded-p56-cuda-parity/.gitkeep
+!experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/
+!experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/.gitkeep
+
 # Generated document staleness reports
 experiments/results/doc-staleness/**
 !experiments/results/doc-staleness/

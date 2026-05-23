@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AC - prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight.
+Current completed stage: Stage 5AD - bounded p56 CUDA parity run.
 
-Current work: Stage 5AD - bounded p56 CUDA parity run. Stage 5AC consumed Stage 5AA synthetic CUDA parity metadata and Stage 5AB doc-staleness metadata, reported compact integration records, and preflighted only the bounded p56 vector for future execution; it did not run CUDA, run p56/full-p56 CUDA, modify CUDA source, add kernels, run native parity, benchmark, execute scored experiments, publish generated bodies, upgrade method status, expand the website, or make a solve claim.
+Current work: Stage 5AD-fix - bounded p56 CUDA parity mismatch investigation. Stage 5AD ran exactly the bounded Stage 5Z p56 validation vector through the existing prime-minus-one CUDA kernel, produced `failed_hash_mismatch` against the Stage 5X expected hash, and selected a mismatch investigation before any expansion.
 
 Current project state:
 
@@ -929,6 +929,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 5AC must keep scored experiments, benchmarks, unsolved-page CUDA, website expansion, generated-body publication, method-status upgrades, canonical-corpus activation, page-boundary finalisation, and solve claims blocked.
 - Stage 5AC generated reports under `experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/` and `codex-output/**` handoffs remain ignored and must not be staged.
 - Stage 5AC selects Stage 5AD bounded p56 CUDA parity only because Stage 5AA synthetic parity passed and Stage 5AB doc-staleness checks are clean; this does not authorize full p56 or unsolved-page CUDA.
+
+## Stage 5AD Bounded P56 CUDA Parity Rules
+
+- Stage 5AD ran only `stage5z-validation-p56-bounded-v0` through the existing prime-minus-one CUDA kernel.
+- Stage 5AD recorded `failed_hash_mismatch`: expected Stage 5X hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87`, computed CUDA hash `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`.
+- Stage 5AD did not add CUDA kernels, modify CUDA-facing `.cu` or `.cuh` source, alter device arithmetic, run full p56, run unsolved pages, benchmark, execute scored experiments, publish generated bodies, upgrade method status, or make a solve claim.
+- Full p56 remains `blocked_full_p56_token_buffer_missing`; scored experiments remain `deferred_manifest_gate_required`; website expansion remains a future unnumbered project.
+- Stage 5AD generated reports under `experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/` and `codex-output/**` handoffs remain ignored and must not be staged.
+- The next selected Codex prompt is Stage 5AD-fix bounded p56 CUDA parity mismatch investigation; do not widen CUDA scope before that mismatch is understood.
 
 ## Stage 3W State Consolidation Rules
 

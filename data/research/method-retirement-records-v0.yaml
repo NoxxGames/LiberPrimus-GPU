@@ -236,6 +236,15 @@ records:
     prohibited_expansions: [p56 CUDA execution in Stage 5AA, full p56 CUDA, unsolved-page CUDA, broad solved-fixture campaigns, scored experiments, GPU benchmarks, speedup claims, generated-body publication, raw-data processing, website expansion, method-status upgrades to solved, solve claims.]
     notes: Stage 5AC selected Stage 5AD bounded p56 CUDA parity run after the Stage 5AA synthetic hash matched and Stage 5AB doc-staleness checks passed.
   - record_type: method_retirement_record
+    method_family_id: prime_minus_one_bounded_p56_cuda_parity
+    retired_status: active_with_constraints
+    reason: Bounded p56 CUDA parity is active infrastructure only; Stage 5AD ran one approved vector and found a hash mismatch, which blocks reporting/expansion until a mismatch investigation resolves the reference-mode difference.
+    evidence: [Stage 5AD records CUDA attempted/pass/fail/skip 1/0/1/0, expected Stage 5X hash 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87, computed CUDA hash 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387, full-p56 blocker preservation, scored-experiment deferrals, and Stage 5AD-fix next-stage decision.]
+    stages_supporting: [stage-5ac, stage-5ad]
+    reopen_conditions: [Stage 5AD-fix mismatch investigation reconciles Stage 5X reference-mode hashing with the existing CUDA kernel formula output without widening scope.]
+    prohibited_expansions: [Full p56 CUDA, unsolved-page CUDA, broad solved-fixture CUDA, GPU benchmarks, speedup claims, scored experiments, generated-body publication, raw-data processing, website expansion, method-status upgrades to solved, solve claims.]
+    notes: The mismatch is not a performance result and not solve evidence.
+  - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints
     reason: Stage 4B visual observations are useful review inputs, but broad visual pareidolia and unannotated dot/braille/constellation readings remain high-risk false-positive classes.

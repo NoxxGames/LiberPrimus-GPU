@@ -1,0 +1,15 @@
+manifest_id: stage5ad-bounded-p56-cuda-parity
+stage_id: stage-5ad
+description: Execute only the exact Stage 5Z bounded p56 CUDA parity vector.
+validation_vector_id: stage5z-validation-p56-bounded-v0
+mapping_id: stage5w-mapping-p56-stage4o-bounded-v0
+fixture_id: p56-an-end-prime-minus-one
+candidate_id: stage4o-prime-minus-one-an-v0
+cuda_execution_allowed: true
+full_p56_allowed: false
+unsolved_page_cuda_allowed: false
+benchmark_execution_allowed: false
+scored_experiment_execution_allowed: false
+generated_body_publication_allowed: false
+raw_data_required: false
+no_solve_claim: true

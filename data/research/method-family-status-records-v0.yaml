@@ -486,6 +486,17 @@ records:
     solve_claim: false
     notes: Stage 5AC readiness is not itself execution permission and is not performance or solve evidence.
   - record_type: method_family_status_record
+    method_family_id: prime_minus_one_bounded_p56_cuda_parity
+    name: Prime-minus-one bounded p56 CUDA parity
+    status: infrastructure_only
+    evidence_summary: Stage 5AD consumes Stage 5AC bounded-p56 preflight records and runs only `stage5z-validation-p56-bounded-v0` through the existing prime-minus-one CUDA kernel. The run completes but records `failed_hash_mismatch` against the Stage 5X expected hash, so expansion is blocked pending investigation.
+    completed_stage_refs: [stage-5w, stage-5x, stage-5z, stage-5aa, stage-5ac, stage-5ad]
+    reopen_conditions: [A Stage 5AD-fix mismatch investigation cites Stage 5X reference-mode records, Stage 5L candidate-major hash construction, Stage 5W mapping records, Stage 5Z validation-vector records, Stage 5AA synthetic CUDA parity records, and Stage 5AD run/parity records before deciding whether code or metadata changes are needed.]
+    stop_conditions: [Do not widen to full p56, unsolved pages, broad solved fixtures, scored experiments, GPU benchmarks, generated-body publication, website expansion, method-status upgrades to solved, canonical corpus activation, page-boundary finalisation, or solve claims.]
+    next_action: Stage 5AD-fix should investigate the bounded p56 CUDA mismatch before any Stage 5AE reporting or expansion gate.
+    solve_claim: false
+    notes: The computed CUDA hash is `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`; the Stage 5X expected hash is `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87`.
+  - record_type: method_family_status_record
     method_family_id: document_staleness_detection
     name: Operational document staleness detection
     status: infrastructure_only

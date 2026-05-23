@@ -109,3 +109,12 @@ records:
     source: Stage 5AC parity-reporting summary, bounded-p56 preflight record, doc-staleness validation record, and next-stage decision records.
     affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, CUDA_NOTES.md, BENCHMARKS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md]
     notes: Stage 5AC itself remains compact reporting/preflight infrastructure and did not execute CUDA or p56.
+  - record_type: project_direction_change_record
+    change_id: stage5ad-bounded-p56-mismatch-investigation
+    date_or_stage: stage-5ad
+    previous_direction: If bounded p56 CUDA matched Stage 5X, proceed to Stage 5AE reporting and full-p56/source-expansion gates.
+    new_direction: Select Stage 5AD-fix bounded p56 CUDA parity mismatch investigation before any reporting or expansion gate.
+    reason: The exact bounded p56 CUDA vector ran but produced hash `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`, which does not match the Stage 5X expected hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87`.
+    source: Stage 5AD run, parity, summary, device-subset audit, and next-stage decision records.
+    affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, CUDA_NOTES.md, BENCHMARKS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md]
+    notes: Full p56, unsolved pages, benchmarks, scored experiments, website expansion, generated-body publication, method-status upgrades, and solve claims remain blocked.

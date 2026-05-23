@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AD Bounded P56 CUDA Parity
+
+Stage 5AD is a bounded parity execution stage, not a cryptanalytic experiment. It runs only `stage5z-validation-p56-bounded-v0` through the existing prime-minus-one CUDA path and compares the host-computed output-token hash with the Stage 5X reference.
+
+Generated Stage 5AD reports remain ignored under `experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/`. Stage 5AD records `failed_hash_mismatch` and must keep full p56 execution, unsolved-page CUDA, new kernels, CUDA device arithmetic changes, scored experiments, benchmarks, raw-data processing, generated-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades, and solve claims disabled.
+
 ## Stage 5AC Prime-Minus-One CUDA Synthetic Reporting
 
 Stage 5AC is not a cryptanalytic experiment. It reports Stage 5AA synthetic CUDA parity metadata, integrates compact result-store and score-summary records, preflights a future bounded-p56 CUDA parity stage, preserves full-p56 and scored-experiment blockers, and validates document staleness.

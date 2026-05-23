@@ -6,7 +6,7 @@ Repository: `https://github.com/NoxxGames/LiberPrimus-GPU`
 
 Before a Deep Research handoff, verify the latest commit and CI status locally. The handoff should cite the commit hash, stage, and generated bundle paths.
 
-Stage 5AC does not select Deep Research as the next prompt. The next work is Stage 5AD bounded p56 CUDA parity run. Website expansion remains a future unnumbered project.
+Stage 5AD does not select Deep Research as the next prompt. The next work is Stage 5AD-fix bounded p56 CUDA parity mismatch investigation. Website expansion remains a future unnumbered project.
 
 ## Files Deep Research Should Inspect First
 

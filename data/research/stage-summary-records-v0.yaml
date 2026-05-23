@@ -967,3 +967,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AC wrote 1 synthetic parity report record, 1 result-store integration record, 1 score-summary integration record, 3 method-status impact records, 2 generated-body policy records, 1 bounded-p56 preflight record, 1 full-p56 blocker record, 6 scored-experiment deferral records, 1 doc-staleness validation record, and 8 next-stage decision records. It matched the Stage 5AA synthetic expected/computed hash `06a5c37f7e5eda8eec00cfab5b09faba6ec157488ca15f61a9189d4bf06005ab`, marked the bounded p56 hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87` ready only for a future explicit Stage 5AD parity run, kept full p56 blocked, and performed no CUDA execution, CUDA source modification, kernel addition, native/CUDA CMake run, native execution, GPU benchmark, speedup claim, scored experiment, real Liber Primus CUDA-data use, raw-data processing, generated-body publication, codex-output publication, website expansion, method-status upgrade to solved, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ad
+    title: Bounded p56 CUDA parity run
+    status: complete
+    category: infrastructure
+    summary: Ran exactly the bounded Stage 5Z p56 validation vector through the existing prime-minus-one CUDA kernel and recorded a Stage 5X hash mismatch.
+    key_outputs:
+      - "`libreprimus bounded-p56-cuda-parity` commands for bounded run records, parity records, result-store preflight, score-summary preflight, full-p56 blocker preservation, scored-experiment deferral, doc-staleness validation, device-subset audit, next-stage decision, summary, validation, and summary display."
+      - Stage 5AD bounded p56 CUDA run, parity, result-store preflight, score-summary preflight, full-p56 blocker, scored-experiment deferral, doc-staleness validation, device-subset audit, next-stage-decision, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: true
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AD wrote 1 CUDA run record, 1 parity record, 1 result-store preflight record, 1 score-summary preflight record, 1 full-p56 blocker record, 7 scored-experiment deferral records, 1 doc-staleness validation record, 1 device-subset audit record, and 10 next-stage decision records. It attempted/pass/fail/skipped `1/0/1/0`, expected Stage 5X hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87`, computed CUDA hash `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`, selected Stage 5AD-fix bounded p56 CUDA parity mismatch investigation, and performed no CUDA-facing source modification, device arithmetic change, new kernel addition, full p56 execution, unsolved-page CUDA use, GPU benchmark, speedup claim, scored experiment, raw-data processing, generated-body publication, website expansion, method-status upgrade to solved, canonical-corpus activation, page-boundary finalisation, or solve claim.
