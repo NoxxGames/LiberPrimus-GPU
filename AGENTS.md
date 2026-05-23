@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AB - markdown staleness detection hardening and stale-doc repair.
+Current completed stage: Stage 5AC - prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight.
 
-Current work: Stage 5AC - selected from Stage 5AA outcome after stale-doc repair. Stage 5AB repaired stale operational docs and hardened staleness detection; it did not authorize p56/full-p56 CUDA, unsolved-page CUDA, benchmarking, scored experiments, generated-body publication, method-status upgrades, website expansion, CUDA source changes, or broad CUDA implementation.
+Current work: Stage 5AD - bounded p56 CUDA parity run. Stage 5AC consumed Stage 5AA synthetic CUDA parity metadata and Stage 5AB doc-staleness metadata, reported compact integration records, and preflighted only the bounded p56 vector for future execution; it did not run CUDA, run p56/full-p56 CUDA, modify CUDA source, add kernels, run native parity, benchmark, execute scored experiments, publish generated bodies, upgrade method status, expand the website, or make a solve claim.
 
 Current project state:
 
@@ -907,18 +907,28 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 5AA may execute only `stage5z-validation-synthetic-prime-control-v0` through `prime_minus_one_stream_kernel_v0`.
 - Do not run p56/full-p56 CUDA, unsolved pages, broad solved fixtures, scored experiments, GPU benchmarks, website expansion, raw data, generated-body publication, method-status upgrades, canonical-corpus activation, page-boundary finalisation, or solve claims during Stage 5AA-style work.
 - The Stage 5AA local CUDA pass is not performance evidence and does not authorize broader CUDA execution.
-- Stage 5AA preserves `blocked_full_p56_token_buffer_missing`; bounded-p56 CUDA parity needs Stage 5AB preflight before any execution.
+- Stage 5AA preserves `blocked_full_p56_token_buffer_missing`; bounded-p56 CUDA parity needs Stage 5AC preflight before any execution.
 - Stage 5AA generated reports under `experiments/results/prime-minus-one-cuda-synthetic/stage5aa/` and `codex-output/**` handoffs remain ignored and must not be staged.
-- Stage 5AA selects Stage 5AB prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight when the synthetic hash matches.
+- Stage 5AA selected prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight when the synthetic hash matched; Stage 5AC completed that reporting/preflight under the post-staleness-repair stage name.
 
 ## Stage 5AB Document Staleness Hardening Rules
 
 - Stage 5AB is a process-quality and stale-doc repair stage, not CUDA execution.
-- Operational docs must treat Stage 5AB as the latest completed stage and Stage 5AC as the next selected work after stale-doc repair.
+- Operational docs used Stage 5AB as a quality gate and now use the updated source-of-truth record to treat Stage 5AC as complete and Stage 5AD as the next selected work.
 - Use `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml` and `data/project-state/operational-file-map.yaml` when checking current/next-stage text.
 - Website expansion is deferred to a future unnumbered project, not Stage 6.
 - Missing optional generated staleness reports are not evidence; generated reports under `experiments/results/doc-staleness/stage5ab/` and `codex-output/**` handoffs remain ignored and must not be staged.
 - Stage 5AB must not run native/CUDA execution, modify CUDA source, add kernels, run benchmarks, execute scored experiments, process raw data, publish generated bodies, upgrade method status, or make solve claims.
+
+## Stage 5AC Prime-Minus-One CUDA Synthetic Reporting Rules
+
+- Stage 5AC is reporting/preflight metadata only, not CUDA execution.
+- Stage 5AC consumes Stage 5AA synthetic CUDA parity records and Stage 5AB doc-staleness records.
+- Stage 5AC may mark only the bounded `stage5z-validation-p56-bounded-v0` vector ready for a future explicit Stage 5AD run.
+- Stage 5AC must keep full p56 blocked until a full committed p56 cipher token buffer is explicitly scoped.
+- Stage 5AC must keep scored experiments, benchmarks, unsolved-page CUDA, website expansion, generated-body publication, method-status upgrades, canonical-corpus activation, page-boundary finalisation, and solve claims blocked.
+- Stage 5AC generated reports under `experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/` and `codex-output/**` handoffs remain ignored and must not be staged.
+- Stage 5AC selects Stage 5AD bounded p56 CUDA parity only because Stage 5AA synthetic parity passed and Stage 5AB doc-staleness checks are clean; this does not authorize full p56 or unsolved-page CUDA.
 
 ## Stage 3W State Consolidation Rules
 

@@ -838,9 +838,20 @@ def check_state_drift_consistency(
         "stage5aa_prime_minus_one_cuda_synthetic_complete",
         "stage 5aa" in staged_plan
         and "prime-minus-one cuda synthetic" in staged_plan
-        and "stage 5ab" in staged_plan
+        and "stage 5ac" in staged_plan
         and "complete" in staged_plan,
-        "Staged plan records Stage 5AA synthetic CUDA parity and Stage 5AB direction.",
+        "Staged plan records Stage 5AA synthetic CUDA parity and Stage 5AC reporting follow-up.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5ac_prime_minus_one_cuda_synthetic_reporting_complete",
+        "stage 5ac" in staged_plan
+        and "prime-minus-one cuda synthetic parity reporting" in staged_plan
+        and "bounded-p56" in staged_plan
+        and "stage 5ad" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5AC reporting/preflight and Stage 5AD direction.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -1177,11 +1188,12 @@ def check_state_drift_consistency(
         results,
         "prime_minus_one_cuda_synthetic_policy_present",
         "prime-minus-one cuda synthetic" in combined
-        and "stage 5ab" in combined
+        and "stage 5ac" in combined
+        and "stage 5ad" in combined
         and "full p56" in combined
         and "benchmarks" in combined
         and "solve claims" in combined,
-        "Stage 5AA prime-minus-one CUDA synthetic boundary and Stage 5AB direction are documented.",
+        "Stage 5AA/5AC prime-minus-one CUDA synthetic reporting boundary and Stage 5AD direction are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

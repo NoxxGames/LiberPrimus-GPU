@@ -1,0 +1,32 @@
+manifest_id: stage5ac-prime-minus-one-cuda-synthetic-reporting
+stage_id: stage-5ac
+description: Compact reporting for Stage 5AA synthetic prime-minus-one CUDA parity metadata.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+cuda_execution_enabled: false
+native_execution_enabled: false
+p56_execution_enabled: false
+full_p56_execution_enabled: false
+benchmark_execution_enabled: false
+scored_experiment_execution_enabled: false
+raw_data_processed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+generated_body_publication_allowed: false
+method_status_upgrade_allowed: false
+solve_claim: false
+no_solve_claim: true
+inputs:
+  - data/cuda/stage5aa-prime-minus-one-cuda-synthetic-summary.yaml
+  - data/cuda/stage5aa-prime-minus-one-cuda-synthetic-parity.yaml
+outputs:
+  committed:
+    - data/cuda/stage5ac-prime-minus-one-cuda-synthetic-parity-report.yaml
+    - data/cuda/stage5ac-prime-minus-one-cuda-synthetic-result-store-integration.yaml
+    - data/cuda/stage5ac-prime-minus-one-cuda-synthetic-score-summary-integration.yaml
+  generated_ignored:
+    - experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/synthetic_parity_report.json
+    - experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/result_store_integration_report.json
+    - experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/score_summary_integration_report.json

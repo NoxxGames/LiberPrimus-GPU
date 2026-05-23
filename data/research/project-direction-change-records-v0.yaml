@@ -100,3 +100,12 @@ records:
     source: User Stage 5AB direction and Stage 5AB staleness scan.
     affected_docs: [README.md, STATUS.md, ROADMAP.md, AGENTS.md, CUDA_NOTES.md, docs/roadmap/staged-plan.md, docs/onboarding/start-here.md]
     notes: Stage 5AB is process-quality infrastructure only and does not authorize CUDA execution, native execution, benchmarks, scored experiments, website expansion, generated-output publication, method-status upgrades, or solve claims.
+  - record_type: project_direction_change_record
+    change_id: stage5ac-bounded-p56-parity-preflight
+    date_or_stage: stage-5ac
+    previous_direction: Use the repaired Stage 5AB source-of-truth gate to decide whether Stage 5AA synthetic CUDA parity can safely feed a bounded p56 follow-up.
+    new_direction: Select Stage 5AD bounded p56 CUDA parity run as the next Codex prompt, scoped exactly to the Stage 5Z bounded p56 validation vector and excluding full p56, unsolved pages, scored experiments, benchmarks, generated-body publication, website expansion, method-status upgrades, and solve claims.
+    reason: Stage 5AA synthetic parity passed and Stage 5AC doc-staleness validation confirmed Stage 5AB operational docs were clean, so the only approved future execution scope is the preflighted bounded p56 vector.
+    source: Stage 5AC parity-reporting summary, bounded-p56 preflight record, doc-staleness validation record, and next-stage decision records.
+    affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, CUDA_NOTES.md, BENCHMARKS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md]
+    notes: Stage 5AC itself remains compact reporting/preflight infrastructure and did not execute CUDA or p56.

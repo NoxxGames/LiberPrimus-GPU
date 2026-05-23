@@ -1,0 +1,36 @@
+manifest_id: stage5ac-next-stage-decision
+stage_id: stage-5ac
+description: Deterministic Stage 5AC next-stage decision records.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+cuda_execution_enabled_current_stage: false
+cuda_source_changes_allowed_current_stage: false
+future_cuda_execution_allowed_only_if_selected: true
+benchmark_execution_enabled: false
+scored_experiment_execution_enabled: false
+unsolved_page_scope_allowed: false
+raw_data_processed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+generated_body_publication_allowed: false
+method_status_upgrade_allowed: false
+solve_claim: false
+no_solve_claim: true
+decision_options:
+  - stage5ad_bounded_p56_cuda_parity_run
+  - stage5ad_bounded_p56_preflight_gap_closure
+  - stage5ad_full_p56_token_buffer_source_expansion_preflight
+  - stage5ad_bounded_cpu_native_scored_experiment_manifest_gate
+  - stage5ad_benchmark_planning
+  - stage5ad_unsolved_page_cuda_pilot
+  - stage5ad_pause_cuda_return_to_research
+  - future_website_expansion_unnumbered
+outputs:
+  committed:
+    - data/cuda/stage5ac-prime-minus-one-cuda-synthetic-next-stage-decision.yaml
+    - data/cuda/stage5ac-prime-minus-one-cuda-synthetic-reporting-summary.yaml
+  generated_ignored:
+    - experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/next_stage_decision.json
+    - experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/summary.json

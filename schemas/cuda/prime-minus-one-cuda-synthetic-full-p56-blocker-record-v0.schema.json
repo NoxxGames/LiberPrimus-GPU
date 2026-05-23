@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-synthetic-full-p56-blocker-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Synthetic Full p56 Blocker Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "blocker_record_id", "full_p56_status", "full_p56_cuda_execution_allowed", "full_p56_native_execution_allowed", "full_p56_generated_body_publication_allowed", "blocker_reason", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_synthetic_full_p56_blocker_record" },
+    "stage_id": { "const": "stage-5ac" },
+    "full_p56_status": { "const": "blocked_full_p56_token_buffer_missing" },
+    "full_p56_cuda_execution_allowed": { "const": false },
+    "full_p56_native_execution_allowed": { "const": false },
+    "full_p56_generated_body_publication_allowed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

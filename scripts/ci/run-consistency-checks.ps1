@@ -1530,6 +1530,76 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5AASummary `
         --results-dir $Stage5AAOut
 
+    Write-Host "Running Stage 5AC prime-minus-one CUDA synthetic reporting temp output"
+    $Stage5ACOut = Join-Path $TempDir "stage5ac-prime-minus-one-cuda-synthetic-reporting"
+    $Stage5ACParity = Join-Path $TempDir "stage5ac-prime-minus-one-cuda-synthetic-parity-report.yaml"
+    $Stage5ACResult = Join-Path $TempDir "stage5ac-prime-minus-one-cuda-synthetic-result-store-integration.yaml"
+    $Stage5ACScore = Join-Path $TempDir "stage5ac-prime-minus-one-cuda-synthetic-score-summary-integration.yaml"
+    $Stage5ACMethod = Join-Path $TempDir "stage5ac-prime-minus-one-cuda-synthetic-method-status-impact.yaml"
+    $Stage5ACPolicy = Join-Path $TempDir "stage5ac-prime-minus-one-cuda-synthetic-generated-body-policy.yaml"
+    $Stage5ACBounded = Join-Path $TempDir "stage5ac-bounded-p56-cuda-parity-preflight.yaml"
+    $Stage5ACFull = Join-Path $TempDir "stage5ac-prime-minus-one-cuda-synthetic-full-p56-blocker.yaml"
+    $Stage5ACScored = Join-Path $TempDir "stage5ac-prime-minus-one-cuda-synthetic-scored-experiment-deferral.yaml"
+    $Stage5ACDocs = Join-Path $TempDir "stage5ac-prime-minus-one-cuda-synthetic-doc-staleness-validation.yaml"
+    $Stage5ACDecision = Join-Path $TempDir "stage5ac-prime-minus-one-cuda-synthetic-next-stage-decision.yaml"
+    $Stage5ACSummary = Join-Path $TempDir "stage5ac-prime-minus-one-cuda-synthetic-reporting-summary.yaml"
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-parity-report `
+        --parity-report-out $Stage5ACParity --out-dir $Stage5ACOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-result-store-integration `
+        --parity-report $Stage5ACParity --result-store-integration-out $Stage5ACResult --out-dir $Stage5ACOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-score-summary-integration `
+        --parity-report $Stage5ACParity --score-summary-integration-out $Stage5ACScore --out-dir $Stage5ACOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-method-status-impact `
+        --method-status-impact-out $Stage5ACMethod --out-dir $Stage5ACOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-generated-body-policy `
+        --generated-body-policy-out $Stage5ACPolicy --out-dir $Stage5ACOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-doc-staleness-validation `
+        --doc-staleness-validation-out $Stage5ACDocs --out-dir $Stage5ACOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-bounded-p56-preflight `
+        --parity-report $Stage5ACParity `
+        --doc-staleness-validation $Stage5ACDocs `
+        --bounded-p56-preflight-out $Stage5ACBounded `
+        --out-dir $Stage5ACOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-full-p56-blocker `
+        --full-p56-blocker-out $Stage5ACFull --out-dir $Stage5ACOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-scored-experiment-deferral `
+        --scored-experiment-deferral-out $Stage5ACScored --out-dir $Stage5ACOut --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-next-stage-decision `
+        --parity-report $Stage5ACParity `
+        --bounded-p56-preflight $Stage5ACBounded `
+        --doc-staleness-validation $Stage5ACDocs `
+        --next-stage-decision-out $Stage5ACDecision `
+        --out-dir $Stage5ACOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-summary `
+        --parity-report $Stage5ACParity `
+        --result-store-integration $Stage5ACResult `
+        --score-summary-integration $Stage5ACScore `
+        --method-status-impact $Stage5ACMethod `
+        --generated-body-policy $Stage5ACPolicy `
+        --bounded-p56-preflight $Stage5ACBounded `
+        --full-p56-blocker $Stage5ACFull `
+        --scored-experiment-deferral $Stage5ACScored `
+        --doc-staleness-validation $Stage5ACDocs `
+        --next-stage-decision $Stage5ACDecision `
+        --summary-out $Stage5ACSummary `
+        --out-dir $Stage5ACOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting validate-stage5ac `
+        --parity-report $Stage5ACParity `
+        --result-store-integration $Stage5ACResult `
+        --score-summary-integration $Stage5ACScore `
+        --method-status-impact $Stage5ACMethod `
+        --generated-body-policy $Stage5ACPolicy `
+        --bounded-p56-preflight $Stage5ACBounded `
+        --full-p56-blocker $Stage5ACFull `
+        --scored-experiment-deferral $Stage5ACScored `
+        --doc-staleness-validation $Stage5ACDocs `
+        --next-stage-decision $Stage5ACDecision `
+        --summary $Stage5ACSummary `
+        --results-dir $Stage5ACOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

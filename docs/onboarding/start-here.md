@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5AB - markdown staleness detection hardening and stale-doc repair.
-- Current planning focus: Stage 5AC - selected from Stage 5AA outcome after stale-doc repair.
+- Latest completed stage: Stage 5AC - prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight.
+- Current planning focus: Stage 5AD - bounded p56 CUDA parity run.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

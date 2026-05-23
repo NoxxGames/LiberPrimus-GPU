@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB adds `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. The YAML record is the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AC updates that map for the current reporting/preflight boundary. The YAML record is the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 

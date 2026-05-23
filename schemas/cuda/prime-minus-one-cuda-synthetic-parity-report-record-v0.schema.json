@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-synthetic-parity-report-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Synthetic Parity Report Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "source_stage_id", "report_record_id", "synthetic_vector_id", "expected_output_token_hash", "computed_output_token_hash", "parity_status", "cuda_execution_performed", "cuda_source_modified", "new_cuda_kernels_added", "compact_summary_only", "generated_body_publication_allowed", "method_status_upgrade_allowed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_synthetic_parity_report_record" },
+    "stage_id": { "const": "stage-5ac" },
+    "source_stage_id": { "const": "stage-5aa" },
+    "synthetic_vector_id": { "const": "stage5z-validation-synthetic-prime-control-v0" },
+    "parity_status": { "enum": ["passed", "failed_hash_mismatch", "failed_cuda_run", "skipped_cuda_unavailable"] },
+    "compact_summary_only": { "const": true },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "native_execution_performed": { "const": false },
+    "gpu_benchmark_performed": { "const": false },
+    "scored_experiment_executed": { "const": false },
+    "generated_body_publication_allowed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "codex_output_committed": { "const": false },
+    "method_status_upgrade_allowed": { "const": false },
+    "method_status_upgraded": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

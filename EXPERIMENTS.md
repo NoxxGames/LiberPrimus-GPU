@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AC Prime-Minus-One CUDA Synthetic Reporting
+
+Stage 5AC is not a cryptanalytic experiment. It reports Stage 5AA synthetic CUDA parity metadata, integrates compact result-store and score-summary records, preflights a future bounded-p56 CUDA parity stage, preserves full-p56 and scored-experiment blockers, and validates document staleness.
+
+Generated Stage 5AC reports remain ignored under `experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/`. Stage 5AC must keep CUDA execution, p56/full-p56 execution, native execution, CUDA source modification, new kernels, scored experiments, benchmarks, raw-data processing, generated-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades, and solve claims disabled.
+
 ## Stage 5AB Markdown Staleness Detection
 
 Stage 5AB is not a cryptanalytic experiment. It adds dynamic document staleness checks, source-of-truth records, operational file-map records, generated ignored staleness reports, and stale-doc repairs only.

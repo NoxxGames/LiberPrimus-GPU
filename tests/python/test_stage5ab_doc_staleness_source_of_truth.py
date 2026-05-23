@@ -19,11 +19,9 @@ def test_stage5ab_source_of_truth_schema_and_loader() -> None:
 
     _validator("schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json").validate(payload)
     source = load_source_of_truth(path)
-    assert source.latest_completed_stage_prefix == "Stage 5AB"
-    assert source.expected_next_stage_prefix == "Stage 5AC"
-    assert source.next_stage_after_this_stage == (
-        "Stage 5AC - selected from Stage 5AA outcome after stale-doc repair"
-    )
+    assert source.latest_completed_stage_prefix == "Stage 5AC"
+    assert source.expected_next_stage_prefix == "Stage 5AD"
+    assert source.next_stage_after_this_stage == "Stage 5AD - bounded p56 CUDA parity run"
 
 
 def test_stage5ab_operational_file_map_schema_and_loader() -> None:

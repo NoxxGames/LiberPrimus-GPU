@@ -23,7 +23,7 @@ def test_stage5ab_readme_repaired_stale_examples() -> None:
     assert "Stage 5M" not in "\n".join(
         line for line in text.splitlines() if "Existing CUDA code" in line
     )
-    assert "Stage 5AC - selected from Stage 5AA outcome after stale-doc repair" in text
+    assert "Stage 5AD - bounded p56 CUDA parity run" in text
 
 
 def test_stage5ab_repair_summary_helper_is_deterministic() -> None:

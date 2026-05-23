@@ -1498,6 +1498,82 @@ echo "Running Stage 5AA prime-minus-one CUDA synthetic temp output"
     --summary "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic-summary.yaml" \
     --results-dir "$tmp_dir/stage5aa-prime-minus-one-cuda-synthetic"
 
+echo "Running Stage 5AC prime-minus-one CUDA synthetic reporting temp output"
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-parity-report \
+    --parity-report-out "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-parity-report.yaml" \
+    --out-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-result-store-integration \
+    --parity-report "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-parity-report.yaml" \
+    --result-store-integration-out "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-result-store-integration.yaml" \
+    --out-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-score-summary-integration \
+    --parity-report "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-parity-report.yaml" \
+    --score-summary-integration-out "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-score-summary-integration.yaml" \
+    --out-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-method-status-impact \
+    --method-status-impact-out "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-method-status-impact.yaml" \
+    --out-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-generated-body-policy \
+    --generated-body-policy-out "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-generated-body-policy.yaml" \
+    --out-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-doc-staleness-validation \
+    --doc-staleness-validation-out "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-doc-staleness-validation.yaml" \
+    --out-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-bounded-p56-preflight \
+    --parity-report "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-parity-report.yaml" \
+    --doc-staleness-validation "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-doc-staleness-validation.yaml" \
+    --bounded-p56-preflight-out "$tmp_dir/stage5ac-bounded-p56-cuda-parity-preflight.yaml" \
+    --out-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-full-p56-blocker \
+    --full-p56-blocker-out "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-full-p56-blocker.yaml" \
+    --out-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-scored-experiment-deferral \
+    --scored-experiment-deferral-out "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-scored-experiment-deferral.yaml" \
+    --out-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-next-stage-decision \
+    --parity-report "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-parity-report.yaml" \
+    --bounded-p56-preflight "$tmp_dir/stage5ac-bounded-p56-cuda-parity-preflight.yaml" \
+    --doc-staleness-validation "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-doc-staleness-validation.yaml" \
+    --next-stage-decision-out "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-next-stage-decision.yaml" \
+    --out-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting build-summary \
+    --parity-report "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-parity-report.yaml" \
+    --result-store-integration "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-result-store-integration.yaml" \
+    --score-summary-integration "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-score-summary-integration.yaml" \
+    --method-status-impact "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-method-status-impact.yaml" \
+    --generated-body-policy "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-generated-body-policy.yaml" \
+    --bounded-p56-preflight "$tmp_dir/stage5ac-bounded-p56-cuda-parity-preflight.yaml" \
+    --full-p56-blocker "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-full-p56-blocker.yaml" \
+    --scored-experiment-deferral "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-scored-experiment-deferral.yaml" \
+    --doc-staleness-validation "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-doc-staleness-validation.yaml" \
+    --next-stage-decision "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-next-stage-decision.yaml" \
+    --summary-out "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting-summary.yaml" \
+    --out-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli prime-minus-one-cuda-synthetic-reporting validate-stage5ac \
+    --parity-report "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-parity-report.yaml" \
+    --result-store-integration "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-result-store-integration.yaml" \
+    --score-summary-integration "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-score-summary-integration.yaml" \
+    --method-status-impact "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-method-status-impact.yaml" \
+    --generated-body-policy "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-generated-body-policy.yaml" \
+    --bounded-p56-preflight "$tmp_dir/stage5ac-bounded-p56-cuda-parity-preflight.yaml" \
+    --full-p56-blocker "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-full-p56-blocker.yaml" \
+    --scored-experiment-deferral "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-scored-experiment-deferral.yaml" \
+    --doc-staleness-validation "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-doc-staleness-validation.yaml" \
+    --next-stage-decision "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting-summary.yaml" \
+    --results-dir "$tmp_dir/stage5ac-prime-minus-one-cuda-synthetic-reporting"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

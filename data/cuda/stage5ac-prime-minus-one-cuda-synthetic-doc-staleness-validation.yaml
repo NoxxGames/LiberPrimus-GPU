@@ -1,0 +1,56 @@
+records:
+- stage_id: stage-5ac
+  source_stage_id: stage-5ab
+  doc_quality_source_stage_id: stage-5ab
+  candidate_batch_abi_id: candidate_batch_abi_v0
+  cuda_contract_id: prime_minus_one_stream_cuda_contract_v0
+  kernel_id: prime_minus_one_stream_cuda_kernel_v0
+  cuda_execution_performed: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  native_execution_performed: false
+  native_cpu_execution_performed: false
+  python_reference_execution_performed: false
+  gpu_benchmark_performed: false
+  benchmark_execution_allowed: false
+  performance_claim: false
+  speedup_claim: false
+  scored_experiment_executed: false
+  scored_experiment_execution_allowed: false
+  unsolved_page_cuda_used: false
+  unsolved_page_cuda_allowed: false
+  real_liber_primus_cuda_data_used: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  raw_data_processed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false
+  metadata_only: true
+  reporting_only: true
+  compact_summary_only: true
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  record_type: prime_minus_one_cuda_synthetic_doc_staleness_validation_record
+  schema: schemas/cuda/prime-minus-one-cuda-synthetic-doc-staleness-validation-record-v0.schema.json
+  validation_record_id: stage5ac-doc-staleness-validation-v0
+  doc_staleness_source_of_truth: data/project-state/stage5ab-doc-staleness-source-of-truth.yaml
+  operational_file_map: data/project-state/operational-file-map.yaml
+  doc_staleness_strict_check_passed: true
+  stale_findings_after_repair: 0
+  current_doc_staleness_findings: 0
+  current_doc_staleness_warnings: 0
+  operational_files_scanned: 26
+  website_expansion_status: deferred_future_unnumbered_project
+  next_stage_expected_prefix: Stage 5AD
+  operational_docs_expected_latest: Stage 5AC - prime-minus-one CUDA synthetic parity
+    reporting and bounded-p56 CUDA parity preflight
+  operational_docs_expected_next: Stage 5AD - bounded p56 CUDA parity run

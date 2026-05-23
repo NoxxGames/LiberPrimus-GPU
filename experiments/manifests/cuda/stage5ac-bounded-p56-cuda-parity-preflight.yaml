@@ -1,0 +1,37 @@
+manifest_id: stage5ac-bounded-p56-cuda-parity-preflight
+stage_id: stage-5ac
+description: Preflight a future bounded-p56 CUDA parity run without executing p56 CUDA.
+cpu_only: true
+cuda_used: false
+cuda_required: false
+cuda_execution_enabled: false
+bounded_p56_cuda_execution_allowed_current_stage: false
+bounded_p56_cuda_execution_ready_next_stage: true
+requires_explicit_future_stage: true
+native_execution_enabled: false
+p56_execution_enabled: false
+full_p56_execution_enabled: false
+full_p56_blocked: true
+unsolved_page_cuda_allowed: false
+benchmark_execution_enabled: false
+scored_experiment_execution_enabled: false
+raw_data_processed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+generated_body_publication_allowed: false
+method_status_upgrade_allowed: false
+solve_claim: false
+no_solve_claim: true
+bounded_p56_vector_id: stage5z-validation-p56-bounded-v0
+mapping_id: stage5w-mapping-p56-stage4o-bounded-v0
+fixture_id: p56-an-end-prime-minus-one
+candidate_id: stage4o-prime-minus-one-an-v0
+expected_output_token_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+outputs:
+  committed:
+    - data/cuda/stage5ac-bounded-p56-cuda-parity-preflight.yaml
+    - data/cuda/stage5ac-prime-minus-one-cuda-synthetic-full-p56-blocker.yaml
+  generated_ignored:
+    - experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/bounded_p56_preflight_report.json
+    - experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/full_p56_blocker_report.json

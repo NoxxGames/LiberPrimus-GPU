@@ -42,6 +42,8 @@ Documentation and anti-drift checks verify core policy statements such as raw-da
 
 Stage 5AB extends this coverage with dynamic stage-id parsing, operational Markdown staleness scanning, source-of-truth records, website-deferral checks, stale `Existing CUDA code` cap checks, `libreprimus consistency check-doc-staleness`, CI consistency integration, and ignored-output checks for `experiments/results/doc-staleness/stage5ab/` plus `codex-output/**`.
 
+Stage 5AC extends coverage with prime-minus-one CUDA synthetic reporting schemas, record builders, CLI commands, bounded-p56 preflight checks, full-p56 blocker preservation, scored-experiment deferral checks, Stage 5AB doc-staleness validation, deterministic next-stage decision checks, and ignored-output checks for `experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/` plus `codex-output/**`. It does not run CUDA, CMake, native parity, p56 CUDA, or benchmarks.
+
 Stage 4K extends this coverage with source-lock snapshot validation, allowlist/rejection tests,
 snapshot-policy tests, GitHub commit-address parser tests, generated-output/cache ignore tests, and
 state-drift checks for the Stage 4L ledger.

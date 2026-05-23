@@ -951,3 +951,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AB scanned 26 operational files after repair, reduced stale operational findings from 16 to 0, selected Stage 5AC from the Stage 5AA outcome after stale-doc repair, and performed no native execution, CUDA execution, CUDA source modification, kernel addition, native/CUDA CMake run, GPU benchmark, speedup claim, scored experiment, real Liber Primus CUDA-data use, raw-data processing, generated-body publication, codex-output publication, website expansion, method-status upgrade to solved, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ac
+    title: Prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight
+    status: complete
+    category: infrastructure
+    summary: Reported Stage 5AA synthetic prime-minus-one CUDA parity as compact metadata, integrated it with result-store and Stage 4I score-summary surfaces, validated Stage 5AB doc-staleness guardrails, and preflighted only the bounded p56 vector for a future explicit Stage 5AD parity run.
+    key_outputs:
+      - "`libreprimus prime-minus-one-cuda-synthetic-reporting` commands for parity reporting, result-store integration, score-summary integration, method-status impact, generated-body policy, bounded-p56 preflight, full-p56 blocker preservation, scored-experiment deferral, doc-staleness validation, next-stage decision, summary generation, validation, and summary display."
+      - Stage 5AC synthetic parity report, result-store integration, score-summary integration, method-status impact, generated-body policy, bounded-p56 preflight, full-p56 blocker, scored-experiment deferral, doc-staleness validation, next-stage decision, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AC wrote 1 synthetic parity report record, 1 result-store integration record, 1 score-summary integration record, 3 method-status impact records, 2 generated-body policy records, 1 bounded-p56 preflight record, 1 full-p56 blocker record, 6 scored-experiment deferral records, 1 doc-staleness validation record, and 8 next-stage decision records. It matched the Stage 5AA synthetic expected/computed hash `06a5c37f7e5eda8eec00cfab5b09faba6ec157488ca15f61a9189d4bf06005ab`, marked the bounded p56 hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87` ready only for a future explicit Stage 5AD parity run, kept full p56 blocked, and performed no CUDA execution, CUDA source modification, kernel addition, native/CUDA CMake run, native execution, GPU benchmark, speedup claim, scored experiment, real Liber Primus CUDA-data use, raw-data processing, generated-body publication, codex-output publication, website expansion, method-status upgrade to solved, canonical-corpus activation, page-boundary finalisation, or solve claim.

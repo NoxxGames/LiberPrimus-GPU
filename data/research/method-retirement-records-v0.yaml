@@ -229,12 +229,12 @@ records:
   - record_type: method_retirement_record
     method_family_id: prime_minus_one_cuda_synthetic
     retired_status: active_with_constraints
-    reason: Prime-minus-one CUDA synthetic parity is active infrastructure only; it proves one synthetic validation vector and does not authorize p56/full-p56 CUDA, unsolved-page CUDA, scored experiments, benchmarks, generated-body publication, or method-status upgrades.
-    evidence: [Stage 5AA records 1 kernel implementation record, 1 CUDA run record, 1 parity record, 1 device-subset audit record, 2 result-store preflight records, 2 p56/full-p56 blocker records, 6 scored-experiment deferral records, and 4 next-stage decision records.]
-    stages_supporting: [stage-5w, stage-5x, stage-5y, stage-5z, stage-5aa]
-    reopen_conditions: [A later Stage 5AB-style reporting/preflight stage cites Stage 5AA synthetic parity records and keeps p56 execution blocked unless an explicit future prompt scopes bounded-p56 CUDA parity.]
+    reason: Prime-minus-one CUDA synthetic parity is active infrastructure only; it proves one synthetic validation vector, and Stage 5AC reports that parity while preserving full-p56, unsolved-page, scored-experiment, benchmark, generated-body, and method-status blockers.
+    evidence: [Stage 5AA records 1 kernel implementation record, 1 CUDA run record, 1 parity record, 1 device-subset audit record, 2 result-store preflight records, 2 p56/full-p56 blocker records, 6 scored-experiment deferral records, and 4 next-stage decision records; Stage 5AC records compact reporting metadata, bounded-p56 preflight, full-p56 blocker preservation, scored-experiment deferrals, doc-staleness validation, and 8 next-stage decision records.]
+    stages_supporting: [stage-5w, stage-5x, stage-5y, stage-5z, stage-5aa, stage-5ac]
+    reopen_conditions: [A later Stage 5AD-style bounded parity stage cites Stage 5AC preflight records and keeps full-p56, unsolved-page, benchmark, scored-experiment, generated-body, and method-status blockers unless an explicit future prompt scopes a narrower change.]
     prohibited_expansions: [p56 CUDA execution in Stage 5AA, full p56 CUDA, unsolved-page CUDA, broad solved-fixture campaigns, scored experiments, GPU benchmarks, speedup claims, generated-body publication, raw-data processing, website expansion, method-status upgrades to solved, solve claims.]
-    notes: Stage 5AA selected Stage 5AB reporting and bounded-p56 CUDA parity preflight after the synthetic hash matched.
+    notes: Stage 5AC selected Stage 5AD bounded p56 CUDA parity run after the Stage 5AA synthetic hash matched and Stage 5AB doc-staleness checks passed.
   - record_type: method_retirement_record
     method_family_id: deterministic_image_analysis
     retired_status: active_with_constraints

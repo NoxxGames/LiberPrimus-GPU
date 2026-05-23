@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AB markdown staleness detection hardening and stale-doc repair is complete.
+Stage 5AC prime-minus-one CUDA synthetic parity reporting and bounded-p56 CUDA parity preflight is complete.
 
-Next recommended prompt: Stage 5AC - selected from Stage 5AA outcome after stale-doc repair. Website expansion is deferred to a future unnumbered project.
+Next recommended prompt: Stage 5AD - bounded p56 CUDA parity run. Website expansion is deferred to a future unnumbered project.
+
+## Completed in Stage 5AC
+
+Stage 5AC added the `libreprimus prime-minus-one-cuda-synthetic-reporting` CLI, compact Stage 5AA synthetic parity report records, result-store integration records, score-summary integration records, method-status impact records, generated-body policy records, bounded-p56 CUDA parity preflight records, full-p56 blocker records, scored-experiment deferral records, doc-staleness validation records, next-stage decision records, Stage 5AC manifests, generated ignored reports, schemas, tests, documentation, tutorial/wiki-source updates, research-synthesis updates, consistency integration, and a detailed ignored Codex completion handoff.
+
+Local Stage 5AC summary: synthetic parity report records `1`, result-store integration records `1`, score-summary integration records `1`, method-status impact records `3`, generated-body policy records `2`, bounded-p56 preflight records `1`, full-p56 blocker records `1`, scored-experiment deferral records `6`, doc-staleness validation records `1`, next-stage decision records `8`, expected/computed synthetic hash `06a5c37f7e5eda8eec00cfab5b09faba6ec157488ca15f61a9189d4bf06005ab`, bounded-p56 preflight `ready_for_stage5ad_bounded_p56_cuda_parity`, full-p56 blocker `blocked_full_p56_token_buffer_missing`, doc-staleness strict pass `true`, selected next prompt `Stage 5AD - bounded p56 CUDA parity run`, Deep Research recommended next `false`, CUDA execution `false`, CUDA source modified `false`, new CUDA kernels added `0`, native execution `false`, benchmarks `false`, scored experiments `false`, website expansion `false`, raw data processed `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5AC is reporting and preflight infrastructure. It consumes Stage 5AA synthetic CUDA parity metadata and Stage 5AB doc-staleness metadata, but it does not run CUDA, run p56/full-p56 CUDA, modify CUDA source, add kernels, run native parity, run benchmarks, execute scored experiments, process raw data, expand the website, publish generated bodies, upgrade method status, or make a solve claim.
 
 ## Completed in Stage 5AB
 

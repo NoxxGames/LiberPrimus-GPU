@@ -753,6 +753,16 @@ result bodies, SQLite files, raw data, or local CUDA diagnostics.
 
 # Stage 5AB Document Staleness Troubleshooting
 
+If Stage 5AC doc-staleness validation fails after updating operational docs, inspect
+`data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`, `data/project-state/operational-file-map.yaml`,
+`STATUS.md`, `ROADMAP.md`, `AGENTS.md`, `README.md`, and `docs/roadmap/staged-plan.md` for mismatched latest or next
+stage labels. Stage 5AC expects Stage 5AC as latest completed and Stage 5AD as next only after bounded-p56 preflight
+passes.
+
+If Stage 5AC bounded-p56 preflight is not ready, do not run p56 CUDA. Keep full p56 blocked, inspect the Stage 5AA
+synthetic hash match and Stage 5AB doc-staleness record, then repair metadata before selecting any future bounded
+p56 CUDA run.
+
 If operational Markdown drifts, run:
 
 ```powershell

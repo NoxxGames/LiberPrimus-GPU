@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://noxxgames.github.io/LiberPrimus-GPU/schemas/cuda/prime-minus-one-cuda-synthetic-doc-staleness-validation-record-v0.schema.json",
+  "title": "Prime Minus One CUDA Synthetic Doc Staleness Validation Record v0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["record_type", "stage_id", "source_stage_id", "validation_record_id", "doc_staleness_source_of_truth", "operational_file_map", "doc_staleness_strict_check_passed", "stale_findings_after_repair", "website_expansion_status", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "prime_minus_one_cuda_synthetic_doc_staleness_validation_record" },
+    "stage_id": { "const": "stage-5ac" },
+    "source_stage_id": { "const": "stage-5ab" },
+    "doc_staleness_strict_check_passed": { "const": true },
+    "stale_findings_after_repair": { "const": 0 },
+    "website_expansion_status": { "const": "deferred_future_unnumbered_project" },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "generated_body_publication_allowed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

@@ -659,6 +659,14 @@ experiments/results/prime-minus-one-cuda-synthetic/**
 !experiments/results/prime-minus-one-cuda-synthetic/stage5aa/
 !experiments/results/prime-minus-one-cuda-synthetic/stage5aa/.gitkeep
 
+# Generated prime-minus-one CUDA synthetic reporting outputs
+experiments/results/prime-minus-one-cuda-synthetic-reporting/**
+!experiments/results/prime-minus-one-cuda-synthetic-reporting/
+!experiments/results/prime-minus-one-cuda-synthetic-reporting/README.md
+!experiments/results/prime-minus-one-cuda-synthetic-reporting/.gitkeep
+!experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/
+!experiments/results/prime-minus-one-cuda-synthetic-reporting/stage5ac/.gitkeep
+
 # Generated document staleness reports
 experiments/results/doc-staleness/**
 !experiments/results/doc-staleness/
