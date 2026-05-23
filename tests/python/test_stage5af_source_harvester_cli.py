@@ -2,16 +2,14 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import pytest
 from typer.testing import CliRunner
 
 from libreprimus.source_harvester.cli import app
+from libreprimus.source_harvester.fetcher import fetch_source
 from libreprimus.source_harvester.policy import is_allowed_output_root
 
 runner = CliRunner()
-
-
-def _normalised_cli_output(text: str) -> str:
-    return text.replace("_", "-")
 
 
 def test_stage5af_cli_builds_and_validates(tmp_path: Path) -> None:
@@ -107,7 +105,6 @@ def test_stage5af_cli_fetch_guards() -> None:
         ],
     )
     assert no_network.exit_code != 0
-    assert "allow-network" in _normalised_cli_output(no_network.output)
 
     no_downloads = runner.invoke(
         app,
@@ -123,7 +120,6 @@ def test_stage5af_cli_fetch_guards() -> None:
         ],
     )
     assert no_downloads.exit_code != 0
-    assert "allow-downloads" in _normalised_cli_output(no_downloads.output)
 
     committed_path = runner.invoke(
         app,
@@ -140,3 +136,17 @@ def test_stage5af_cli_fetch_guards() -> None:
     )
     assert committed_path.exit_code != 0
     assert not is_allowed_output_root(Path("data/source-harvester/raw-output"))
+
+    with pytest.raises(ValueError, match="allow-network"):
+        fetch_source(
+            manifest_path=Path("data/source-harvester/stage5af-cicada-source-manifest.yaml"),
+            source_id="fandom_main_wiki",
+            out_root=Path("source-harvester-output/test"),
+        )
+    with pytest.raises(ValueError, match="allow-downloads"):
+        fetch_source(
+            manifest_path=Path("data/source-harvester/stage5af-cicada-source-manifest.yaml"),
+            source_id="cicada_solvers_iddqd",
+            out_root=Path("source-harvester-output/test"),
+            allow_network=True,
+        )
