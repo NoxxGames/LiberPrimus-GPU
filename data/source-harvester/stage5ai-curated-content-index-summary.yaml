@@ -1,0 +1,497 @@
+record_type: stage5ai_curated_content_index_summary
+schema: schemas/source-harvester/curated-content-index-summary-v0.schema.json
+stage_id: stage-5ai
+source_stage_id: stage-5ah
+local_inventory_stage_id: stage-5ag
+content_index_records: 19
+bundle_count: 8
+generated_extract_review_required_count: 17
+blocked_private_or_sensitive_count: 2
+website_publication_allowed_count: 0
+generated_bundle_bodies_committed: false
+website_expansion_performed: false
+solve_claim: false
+records:
+- attachment_count: 1
+  bundle_id: 01-signed-messages-and-authenticity
+  clue_category_tags:
+  - 2012_outguess_outputs
+  - 2013_whitespace_signed_message
+  - outguess_all_pages_claim
+  - signed_messages_authenticity
+  content_id: 01-signed-messages-and-authenticity::complete_cicada3301_archive
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 0
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 01-signed-messages-and-authenticity/extracted_text/complete_cicada3301_archive-metadata.md
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: complete_cicada3301_archive
+  table_count: 0
+  text_length: 0
+  title: Complete Cicada3301 Archive
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 02-liber-primus-images-and-transcriptions
+  clue_category_tags:
+  - liber_primus_page_images_58_and_75
+  - liber_primus_transcriptions
+  - red_1_to_5_markers
+  - red_3299_grid
+  - red_runes_dots_punctuation
+  - rune_pixel_variants
+  content_id: 02-liber-primus-images-and-transcriptions::liber_primus_dropbox_files
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 0
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 02-liber-primus-images-and-transcriptions/extracted_text/liber_primus_dropbox_files-metadata.md
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: liber_primus_dropbox_files
+  table_count: 0
+  text_length: 0
+  title: Liber Primus Dropbox Files
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 04-cuneiform-base60-base59
+  clue_category_tags:
+  - cuneiform_base60_base59
+  content_id: 04-cuneiform-base60-base59::local_unclassified_cunieform_numbers_png
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 1
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 04-cuneiform-base60-base59/image_metadata/local_unclassified_cunieform_numbers_png.json
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_cunieform_numbers_png
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified Cunieform Numbers Png
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 04-cuneiform-base60-base59
+  clue_category_tags:
+  - cuneiform_base60_base59
+  - red_1_to_5_markers
+  - red_3299_grid
+  - red_runes_dots_punctuation
+  - rune_pixel_variants
+  content_id: 04-cuneiform-base60-base59::user_uploaded_assets_archive
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 0
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 04-cuneiform-base60-base59/extracted_text/user_uploaded_assets_archive-metadata.md
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: user_uploaded_assets_archive
+  table_count: 0
+  text_length: 0
+  title: User Uploaded Assets Archive
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 05-red-markers-and-visual-numerics
+  clue_category_tags:
+  - liber_primus_page_images_58_and_75
+  - liber_primus_transcriptions
+  - red_1_to_5_markers
+  - red_3299_grid
+  - red_runes_dots_punctuation
+  - rune_pixel_variants
+  content_id: 05-red-markers-and-visual-numerics::liber_primus_dropbox_files
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 0
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 05-red-markers-and-visual-numerics/extracted_text/liber_primus_dropbox_files-metadata.md
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: liber_primus_dropbox_files
+  table_count: 0
+  text_length: 0
+  title: Liber Primus Dropbox Files
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 05-red-markers-and-visual-numerics
+  clue_category_tags:
+  - modified_image_review_only
+  content_id: 05-red-markers-and-visual-numerics::local_unclassified_depictions_modified_png
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 1
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 05-red-markers-and-visual-numerics/image_metadata/local_unclassified_depictions_modified_png.json
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_depictions_modified_png
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified Depictions Modified Png
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 05-red-markers-and-visual-numerics
+  clue_category_tags:
+  - depictions_tree_cicada_mayfly_wing_spiral_cuneiform
+  content_id: 05-red-markers-and-visual-numerics::local_unclassified_depictions_original_png
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 1
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 05-red-markers-and-visual-numerics/image_metadata/local_unclassified_depictions_original_png.json
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_depictions_original_png
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified Depictions Original Png
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 05-red-markers-and-visual-numerics
+  clue_category_tags:
+  - mixed_numeric_rune_page
+  content_id: 05-red-markers-and-visual-numerics::local_unclassified_more_numbers_mixed_with_runes_page_png
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 1
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 05-red-markers-and-visual-numerics/image_metadata/local_unclassified_more_numbers_mixed_with_runes_page_png.json
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_more_numbers_mixed_with_runes_page_png
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified More Numbers Mixed With Runes Page Png
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 05-red-markers-and-visual-numerics
+  clue_category_tags:
+  - rune_pixel_variants
+  content_id: 05-red-markers-and-visual-numerics::local_unclassified_rune_pixel_diff_example_png
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 1
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 05-red-markers-and-visual-numerics/image_metadata/local_unclassified_rune_pixel_diff_example_png.json
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_rune_pixel_diff_example_png
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified Rune Pixel Diff Example Png
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 05-red-markers-and-visual-numerics
+  clue_category_tags:
+  - cuneiform_base60_base59
+  - red_1_to_5_markers
+  - red_3299_grid
+  - red_runes_dots_punctuation
+  - rune_pixel_variants
+  content_id: 05-red-markers-and-visual-numerics::user_uploaded_assets_archive
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 0
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 05-red-markers-and-visual-numerics/extracted_text/user_uploaded_assets_archive-metadata.md
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: user_uploaded_assets_archive
+  table_count: 0
+  text_length: 0
+  title: User Uploaded Assets Archive
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 06-outguess-stego-hidden-formatting
+  clue_category_tags:
+  - 2012_outguess_outputs
+  - 2013_whitespace_signed_message
+  - outguess_all_pages_claim
+  - signed_messages_authenticity
+  content_id: 06-outguess-stego-hidden-formatting::complete_cicada3301_archive
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 0
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 06-outguess-stego-hidden-formatting/extracted_text/complete_cicada3301_archive-metadata.md
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: complete_cicada3301_archive
+  table_count: 0
+  text_length: 0
+  title: Complete Cicada3301 Archive
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 06-outguess-stego-hidden-formatting
+  clue_category_tags:
+  - modified_page_artifact_claim
+  content_id: 06-outguess-stego-hidden-formatting::local_unclassified_page_modified_example_png
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 1
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 06-outguess-stego-hidden-formatting/image_metadata/local_unclassified_page_modified_example_png.json
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_page_modified_example_png
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified Page Modified Example Png
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 07-boundary-mobius-repeated-fragments
+  clue_category_tags:
+  - interconnected_chapters
+  content_id: 07-boundary-mobius-repeated-fragments::local_unclassified_interconnected_chapters
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 0
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 07-boundary-mobius-repeated-fragments/extracted_text/local_unclassified_interconnected_chapters-metadata.md
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_interconnected_chapters
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified Interconnected Chapters
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 07-boundary-mobius-repeated-fragments
+  clue_category_tags:
+  - dju_bei_repeat
+  content_id: 07-boundary-mobius-repeated-fragments::local_unclassified_repeat_rune_png
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 1
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 07-boundary-mobius-repeated-fragments/image_metadata/local_unclassified_repeat_rune_png.json
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_repeat_rune_png
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified Repeat Rune Png
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 09-community-hypotheses
+  clue_category_tags:
+  - source_discovery_notes
+  content_id: 09-community-hypotheses::local_unclassified_community_sources_of_datasets_depiction_images_plausable_methods_worth_exploring_md
+  content_kind: text_or_metadata_extract
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 0
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 09-community-hypotheses/extracted_text/local_unclassified_community_sources_of_datasets_depiction_images_plausable_methods_worth_exploring_md-metadata.md
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_community_sources_of_datasets_depiction_images_plausable_methods_worth_exploring_md
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified Community Sources Of Datasets Depiction Images Plausable
+    Methods Worth Exploring Md
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 09-community-hypotheses
+  clue_category_tags:
+  - discord_community_hypothesis_leads
+  content_id: 09-community-hypotheses::local_unclassified_communityobservations
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 0
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: blocked_private_or_sensitive
+  redaction_required: true
+  relative_generated_path: 09-community-hypotheses/extracted_text/local_unclassified_communityobservations-metadata.md
+  review_status: review_required
+  sensitive_or_private: true
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_communityobservations
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified Communityobservations
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 09-community-hypotheses
+  clue_category_tags:
+  - bigram_fibonacci_421_review_needed
+  - false_positive_control_candidate
+  content_id: 09-community-hypotheses::local_unclassified_fib421_jpg
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 1
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 09-community-hypotheses/image_metadata/local_unclassified_fib421_jpg.json
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_fib421_jpg
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified Fib421 Jpg
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 09-community-hypotheses
+  clue_category_tags:
+  - discord_private_or_sensitive
+  content_id: 09-community-hypotheses::local_unclassified_liberprimusdiscordchats
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 0
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: blocked_private_or_sensitive
+  redaction_required: true
+  relative_generated_path: 09-community-hypotheses/extracted_text/local_unclassified_liberprimusdiscordchats-metadata.md
+  review_status: review_required
+  sensitive_or_private: true
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_liberprimusdiscordchats
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified Liberprimusdiscordchats
+  website_publication_allowed: false
+- attachment_count: 1
+  bundle_id: 10-known-negative-retired-ideas
+  clue_category_tags:
+  - bigram_fibonacci_421_review_needed
+  - false_positive_control_candidate
+  content_id: 10-known-negative-retired-ideas::local_unclassified_fib421_jpg
+  content_kind: metadata_only
+  do_not_assume_tags:
+  - metadata_is_not_evidence
+  - no_solve_claim
+  extract_hash: null
+  image_metadata_count: 1
+  license_or_rights_note: Stage 5AI metadata only; publication requires later review.
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  relative_generated_path: 10-known-negative-retired-ideas/image_metadata/local_unclassified_fib421_jpg.json
+  review_status: review_required
+  sensitive_or_private: false
+  solve_claim: false
+  source_hash: null
+  source_id: local_unclassified_fib421_jpg
+  table_count: 0
+  text_length: 0
+  title: Local Unclassified Fib421 Jpg
+  website_publication_allowed: false

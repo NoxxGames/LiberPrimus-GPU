@@ -77,12 +77,15 @@ git check-ignore -v codex-output/stage5aa-codex-completion.md
 git check-ignore -v codex-output/stage5ad-fix-codex-completion.md
 git check-ignore -v codex-output/stage5ae-codex-completion.md
 git check-ignore -v codex-output/stage5af-codex-completion.md
+git check-ignore -v codex-output/stage5ai-codex-completion.md
 git check-ignore -v experiments/results/source-harvester/stage5af/summary.json
 git check-ignore -v experiments/results/source-harvester-local/stage5ag/summary.json
+git check-ignore -v experiments/results/research-bundles/stage5ai/summary.json
 git check-ignore -v third_party/example.zip
 git check-ignore -v source-harvester-output/example.txt
 git check-ignore -v harvest-output/example.txt
 git check-ignore -v research-inputs/example.txt
+git check-ignore -v research-inputs/stage5ai/master_manifest.yaml
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -182,6 +185,13 @@ outputs belong in ignored local roots such as `source-harvester-output/`, `harve
 is not project storage. If a Stage 5AG local inventory leaves full inventories under
 `experiments/results/source-harvester-local/stage5ag/`, do not stage them. Commit only compact
 metadata under `data/source-harvester/stage5ag-*`, schemas, docs, tests, and source code.
+
+If a Stage 5AI curated-bundle run leaves `master_manifest.yaml`, bundle manifests, source cards,
+content indexes, extracted text snippets, website-ingest indexes, Deep-Research pack indexes,
+missing-source records, or warning reports under `research-inputs/stage5ai/` or
+`experiments/results/research-bundles/stage5ai/`, do not stage them. Commit only compact metadata
+under `data/source-harvester/stage5ai-*`, schemas, docs, tests, source code, and README/.gitkeep
+scaffolds.
 
 If a Stage 4L observation-promotion build leaves `promotion_ledger_report.json`,
 `manifest_readiness_report.json`, `blocker_report.json`, or `warnings.jsonl`, do not stage them.
@@ -791,12 +801,12 @@ Generated Stage 5AD reports belong under ignored
 belongs under ignored `codex-output/stage5ad-codex-completion.md`. Do not stage generated reports,
 generated result bodies, build directories, SQLite files, raw data, or local CUDA diagnostics.
 
-# Stage 5AB/5AH Document Staleness Troubleshooting
+# Stage 5AB/5AH/5AI Document Staleness Troubleshooting
 
-If Stage 5AH or later doc-staleness validation fails after updating operational docs, inspect
+If Stage 5AI or later doc-staleness validation fails after updating operational docs, inspect
 `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`, `data/project-state/operational-file-map.yaml`,
 `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, `README.md`, and `docs/roadmap/staged-plan.md` for mismatched latest or next
-stage labels. Stage 5AH expects Stage 5AH as latest completed and Stage 5AI as the next curated extraction stage.
+stage labels. After Stage 5AI, the active source-of-truth expects Stage 5AI as latest completed and Stage 5AJ as the next Deep Research source inventory stage.
 
 If Stage 5AC bounded-p56 preflight is not ready, do not run p56 CUDA. Keep full p56 blocked, inspect the Stage 5AA
 synthetic hash match and Stage 5AB doc-staleness record, then repair metadata before selecting any future bounded
@@ -808,18 +818,19 @@ If operational Markdown drifts, run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5AH" `
-  --expected-next-stage "Stage 5AI"
+  --expected-latest-stage "Stage 5AI" `
+  --expected-next-stage "Stage 5AJ"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5AH" `
-  --expected-next-stage "Stage 5AI"
+  --expected-latest-stage "Stage 5AI" `
+  --expected-next-stage "Stage 5AJ"
 ```
 
 The checks scan the operational file map, ignore historical logs, reject active Stage 6 website
 deferrals, reject stale current/next-stage labels, reject stale stage-ledger truncation, and reject
 brittle current CUDA boundary caps that omit the latest completed stage. Generated Stage 5AH
-staleness reports belong under ignored `experiments/results/doc-staleness/stage5ah/`, and the local
-handoff belongs under ignored `codex-output/stage5ah-codex-completion.md`.
+staleness reports belong under ignored `experiments/results/doc-staleness/stage5ah/`, generated
+Stage 5AI bundle reports belong under ignored `experiments/results/research-bundles/stage5ai/`, and
+the local handoff belongs under ignored `codex-output/stage5ai-codex-completion.md`.

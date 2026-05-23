@@ -1,0 +1,950 @@
+record_type: stage5ai_curated_source_card_summary
+schema: schemas/source-harvester/curated-source-card-summary-v0.schema.json
+stage_id: stage-5ai
+source_stage_id: stage-5ah
+local_inventory_stage_id: stage-5ag
+source_card_records: 26
+matched_local_source_cards: 12
+unclassified_source_cards: 14
+private_or_sensitive_source_cards: 2
+website_publication_allowed_count: 0
+raw_content_publication_allowed: false
+generated_extract_publication_allowed: false
+solve_claim: false
+records:
+- source_id: complete_cicada3301_archive
+  title: Complete Cicada3301 Archive
+  source_type: github_repo
+  source_tier: tier1_committed_repo_record
+  priority: A1
+  bundle_ids:
+  - 01-signed-messages-and-authenticity
+  - 06-outguess-stego-hidden-formatting
+  clue_categories:
+  - 2012_outguess_outputs
+  - 2013_whitespace_signed_message
+  - outguess_all_pages_claim
+  - signed_messages_authenticity
+  local_match_status: matched_exact
+  local_source_paths_redacted_or_relative:
+  - third_party/The-Complete-Cicada3301-Archive-main
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: disk_cipher_theory_bundle_local
+  title: Disk Cipher Theory Bundle Local
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A2
+  bundle_ids: []
+  clue_categories: []
+  local_match_status: matched_exact
+  local_source_paths_redacted_or_relative:
+  - third_party/DiskCipherStuff
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: liber_primus_dropbox_files
+  title: Liber Primus Dropbox Files
+  source_type: dropbox_folder
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  bundle_ids:
+  - 02-liber-primus-images-and-transcriptions
+  - 05-red-markers-and-visual-numerics
+  clue_categories:
+  - liber_primus_page_images_58_and_75
+  - liber_primus_transcriptions
+  - red_1_to_5_markers
+  - red_3299_grid
+  - red_runes_dots_punctuation
+  - rune_pixel_variants
+  local_match_status: matched_exact
+  local_source_paths_redacted_or_relative:
+  - third_party/LiberPrimusPages
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: local_unclassified_1348008594460774501_png
+  title: Local Unclassified 1348008594460774501 Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  bundle_ids:
+  - unknown-review-needed
+  clue_categories:
+  - unknown_visual_clue_review_needed
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/1348008594460774501.png
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 1
+    dir_count: 0
+  content_types:
+  - image
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: local_unclassified_community_sources_of_datasets_depiction_images_plausable_methods_worth_exploring_md
+  title: Local Unclassified Community Sources Of Datasets Depiction Images Plausable
+    Methods Worth Exploring Md
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - source_discovery_notes
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/Community-sources-of-datasets-depiction-images-plausable-methods-worth-exploring.md
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 1
+    dir_count: 0
+  content_types:
+  - text
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: local_unclassified_communityobservations
+  title: Local Unclassified Communityobservations
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: deferred
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - discord_community_hypothesis_leads
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/CommunityObservations
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: private_or_sensitive
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: blocked_private_or_sensitive
+  redaction_required: true
+  solve_claim: false
+- source_id: local_unclassified_cunieform_numbers_png
+  title: Local Unclassified Cunieform Numbers Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  bundle_ids:
+  - 04-cuneiform-base60-base59
+  clue_categories:
+  - cuneiform_base60_base59
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/cunieform_numbers.png
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 1
+    dir_count: 0
+  content_types:
+  - image
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: local_unclassified_depictions_modified_png
+  title: Local Unclassified Depictions Modified Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  bundle_ids:
+  - 05-red-markers-and-visual-numerics
+  clue_categories:
+  - modified_image_review_only
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/depictions_modified.png
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 1
+    dir_count: 0
+  content_types:
+  - image
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: local_unclassified_depictions_original_png
+  title: Local Unclassified Depictions Original Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  bundle_ids:
+  - 05-red-markers-and-visual-numerics
+  clue_categories:
+  - depictions_tree_cicada_mayfly_wing_spiral_cuneiform
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/depictions_original.png
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 1
+    dir_count: 0
+  content_types:
+  - image
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: local_unclassified_fib421_jpg
+  title: Local Unclassified Fib421 Jpg
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  bundle_ids:
+  - 09-community-hypotheses
+  - 10-known-negative-retired-ideas
+  clue_categories:
+  - bigram_fibonacci_421_review_needed
+  - false_positive_control_candidate
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/Fib421.jpg
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 1
+    dir_count: 0
+  content_types:
+  - image
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: local_unclassified_interconnected_chapters
+  title: Local Unclassified Interconnected Chapters
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  bundle_ids:
+  - 07-boundary-mobius-repeated-fragments
+  clue_categories:
+  - interconnected_chapters
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/interconnected-chapters
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: local_unclassified_liberprimusdiscordchats
+  title: Local Unclassified Liberprimusdiscordchats
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: deferred
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - discord_private_or_sensitive
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/LiberPrimusDiscordChats
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: private_or_sensitive
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: blocked_private_or_sensitive
+  redaction_required: true
+  solve_claim: false
+- source_id: local_unclassified_more_numbers_mixed_with_runes_page_png
+  title: Local Unclassified More Numbers Mixed With Runes Page Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  bundle_ids:
+  - 05-red-markers-and-visual-numerics
+  clue_categories:
+  - mixed_numeric_rune_page
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/more_numbers_mixed_with_runes_page.png
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 1
+    dir_count: 0
+  content_types:
+  - image
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: local_unclassified_page_modified_example_png
+  title: Local Unclassified Page Modified Example Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  bundle_ids:
+  - 06-outguess-stego-hidden-formatting
+  clue_categories:
+  - modified_page_artifact_claim
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/page_modified_example.png
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 1
+    dir_count: 0
+  content_types:
+  - image
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: local_unclassified_repeat_rune_png
+  title: Local Unclassified Repeat Rune Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  bundle_ids:
+  - 07-boundary-mobius-repeated-fragments
+  clue_categories:
+  - dju_bei_repeat
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/repeat-rune.png
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 1
+    dir_count: 0
+  content_types:
+  - image
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: local_unclassified_rune_pixel_diff_example_png
+  title: Local Unclassified Rune Pixel Diff Example Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  bundle_ids:
+  - 05-red-markers-and-visual-numerics
+  clue_categories:
+  - rune_pixel_variants
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/rune_pixel_diff_example.png
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 1
+    dir_count: 0
+  content_types:
+  - image
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: local_unclassified_sourcesnapshots
+  title: Local Unclassified Sourcesnapshots
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  bundle_ids:
+  - cross-bundle-source-snapshots
+  clue_categories:
+  - source_lock_snapshots_review_needed
+  local_match_status: not_expected_local
+  local_source_paths_redacted_or_relative:
+  - third_party/SourceSnapshots
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: user_uploaded_2012_archive
+  title: User Uploaded 2012 Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  bundle_ids: []
+  clue_categories: []
+  local_match_status: matched_exact
+  local_source_paths_redacted_or_relative:
+  - third_party/The-Complete-Cicada3301-Archive-main/2012
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: user_uploaded_2013_archive
+  title: User Uploaded 2013 Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  bundle_ids: []
+  clue_categories: []
+  local_match_status: matched_exact
+  local_source_paths_redacted_or_relative:
+  - third_party/The-Complete-Cicada3301-Archive-main/2013
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: user_uploaded_2014_archive
+  title: User Uploaded 2014 Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  bundle_ids: []
+  clue_categories: []
+  local_match_status: matched_exact
+  local_source_paths_redacted_or_relative:
+  - third_party/The-Complete-Cicada3301-Archive-main/2014
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: user_uploaded_2015_archive
+  title: User Uploaded 2015 Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  bundle_ids: []
+  clue_categories: []
+  local_match_status: matched_exact
+  local_source_paths_redacted_or_relative:
+  - third_party/The-Complete-Cicada3301-Archive-main/2015
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: user_uploaded_2016_archive
+  title: User Uploaded 2016 Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  bundle_ids: []
+  clue_categories: []
+  local_match_status: matched_exact
+  local_source_paths_redacted_or_relative:
+  - third_party/The-Complete-Cicada3301-Archive-main/2016
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: user_uploaded_2017_archive
+  title: User Uploaded 2017 Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  bundle_ids: []
+  clue_categories: []
+  local_match_status: matched_exact
+  local_source_paths_redacted_or_relative:
+  - third_party/The-Complete-Cicada3301-Archive-main/2017
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: user_uploaded_archive_dir
+  title: User Uploaded Archive Dir
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  bundle_ids: []
+  clue_categories: []
+  local_match_status: matched_exact
+  local_source_paths_redacted_or_relative:
+  - third_party/The-Complete-Cicada3301-Archive-main/ArchiveDir
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: user_uploaded_assets_archive
+  title: User Uploaded Assets Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  bundle_ids:
+  - 04-cuneiform-base60-base59
+  - 05-red-markers-and-visual-numerics
+  clue_categories:
+  - cuneiform_base60_base59
+  - red_1_to_5_markers
+  - red_3299_grid
+  - red_runes_dots_punctuation
+  - rune_pixel_variants
+  local_match_status: matched_exact
+  local_source_paths_redacted_or_relative:
+  - third_party/The-Complete-Cicada3301-Archive-main/assets
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false
+- source_id: user_uploaded_extra_wiki_pages
+  title: User Uploaded Extra Wiki Pages
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A2
+  bundle_ids: []
+  clue_categories: []
+  local_match_status: matched_exact
+  local_source_paths_redacted_or_relative:
+  - third_party/The-Complete-Cicada3301-Archive-main/EXTRA WIKI PAGES
+  hashes: []
+  file_counts:
+    path_count: 1
+    file_count: 0
+    dir_count: 1
+  content_types:
+  - directory
+  readiness_status: local_metadata_ready
+  risk_level: review_required
+  what_it_supports: Local provenance and extraction planning only.
+  what_it_does_not_support: No solve claim, canonical corpus activation, or public
+    publication.
+  do_not_assume:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions:
+  - Which source-lock policy should govern future publication review?
+  recommended_future_use: Use as private Deep Research input metadata after review.
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  publication_status: generated_extract_review_required
+  redaction_required: false
+  solve_claim: false

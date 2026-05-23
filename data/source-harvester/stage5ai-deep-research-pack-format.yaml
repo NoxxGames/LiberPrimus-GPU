@@ -1,0 +1,12 @@
+record_type: stage5ai_deep_research_pack_format
+schema: schemas/source-harvester/deep-research-pack-format-v0.schema.json
+stage_id: stage-5ai
+source_stage_id: stage-5ah
+local_inventory_stage_id: stage-5ag
+deep_research_pack_records: 10
+sequential_order_present: true
+do_not_assume_files_present: true
+known_questions_files_present: true
+private_deep_research_allowed: true
+website_expansion_performed: false
+solve_claim: false

@@ -1,0 +1,151 @@
+record_type: stage5ai_bundle_generation_summary
+schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+stage_id: stage-5ai
+source_stage_id: stage-5ah
+local_inventory_stage_id: stage-5ag
+bundle_root: research-inputs/stage5ai
+curated_bundle_records: 10
+bundles_with_generated_skeleton: 10
+bundles_with_extracted_local_content: 8
+bundles_public_website_ready: 0
+content_index_records: 19
+generated_bundle_bodies_committed: false
+website_expansion_performed: false
+solve_claim: false
+records:
+- bundle_id: 01-signed-messages-and-authenticity
+  title: Signed messages and authenticity
+  sequential_order: 1
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  source_card_count: 1
+  content_record_count: 1
+  missing_source_ids:
+  - isitcicada_pgp_checker
+  - cicada_solvers_isitcicada_repo
+  generated_skeleton: true
+  extracted_local_content: true
+  public_website_ready: false
+  solve_claim: false
+- bundle_id: 02-liber-primus-images-and-transcriptions
+  title: Liber Primus images and transcriptions
+  sequential_order: 2
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  source_card_count: 1
+  content_record_count: 1
+  missing_source_ids:
+  - pastebin_vgmk330j_lp_runes_prime_values
+  - solved_page_google_sheet
+  - fandom_liber_primus_solved_pages
+  - fandom_liber_primus_unsolved_pages
+  generated_skeleton: true
+  extracted_local_content: true
+  public_website_ready: false
+  solve_claim: false
+- bundle_id: 03-page-49-51-token-block
+  title: Page 49-51 token block
+  sequential_order: 3
+  readiness_status: skeleton_only
+  source_card_count: 0
+  content_record_count: 0
+  missing_source_ids:
+  - pastebin_vgmk330j_lp_runes_prime_values
+  - fandom_liber_primus_unsolved_pages
+  generated_skeleton: true
+  extracted_local_content: false
+  public_website_ready: false
+  solve_claim: false
+- bundle_id: 04-cuneiform-base60-base59
+  title: Cuneiform base60/base59
+  sequential_order: 4
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  source_card_count: 2
+  content_record_count: 2
+  missing_source_ids:
+  - fandom_liber_primus_ideas
+  generated_skeleton: true
+  extracted_local_content: true
+  public_website_ready: false
+  solve_claim: false
+- bundle_id: 05-red-markers-and-visual-numerics
+  title: Red markers and visual numerics
+  sequential_order: 5
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  source_card_count: 6
+  content_record_count: 6
+  missing_source_ids:
+  - fandom_liber_primus_ideas
+  generated_skeleton: true
+  extracted_local_content: true
+  public_website_ready: false
+  solve_claim: false
+- bundle_id: 06-outguess-stego-hidden-formatting
+  title: OutGuess/stego/hidden formatting
+  sequential_order: 6
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  source_card_count: 2
+  content_record_count: 2
+  missing_source_ids:
+  - cicada_solvers_iddqd
+  - joutguess_rebirth
+  generated_skeleton: true
+  extracted_local_content: true
+  public_website_ready: false
+  solve_claim: false
+- bundle_id: 07-boundary-mobius-repeated-fragments
+  title: Boundary, Mobius, and repeated fragments
+  sequential_order: 7
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  source_card_count: 2
+  content_record_count: 2
+  missing_source_ids:
+  - chapterized_rune_map_google_doc
+  - fandom_liber_primus_unsolved_pages
+  - pastebin_vgmk330j_lp_runes_prime_values
+  generated_skeleton: true
+  extracted_local_content: true
+  public_website_ready: false
+  solve_claim: false
+- bundle_id: 08-tools-gpprime-dwh-gematria
+  title: Tools, GPPrimeView, DWH, and Gematria
+  sequential_order: 8
+  readiness_status: skeleton_only
+  source_card_count: 0
+  content_record_count: 0
+  missing_source_ids:
+  - gp_prime_view
+  - tweqx_dwh_hashkit
+  - tweqx_3301_hash_alarm
+  - mortlach_rune_decrypter_prime
+  - taiiwo_cicada
+  generated_skeleton: true
+  extracted_local_content: false
+  public_website_ready: false
+  solve_claim: false
+- bundle_id: 09-community-hypotheses
+  title: Community hypotheses
+  sequential_order: 9
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  source_card_count: 4
+  content_record_count: 4
+  missing_source_ids:
+  - fandom_liber_primus_ideas
+  - cicada_boards_forum
+  - spiderpuck_pastebin_profile
+  generated_skeleton: true
+  extracted_local_content: true
+  public_website_ready: false
+  solve_claim: false
+- bundle_id: 10-known-negative-retired-ideas
+  title: Known negative and retired ideas
+  sequential_order: 10
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  source_card_count: 1
+  content_record_count: 1
+  missing_source_ids:
+  - fandom_possible_hints_never_used
+  - khan_cryptography
+  - gamedetectives_academy
+  generated_skeleton: true
+  extracted_local_content: true
+  public_website_ready: false
+  solve_claim: false

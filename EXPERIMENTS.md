@@ -1,5 +1,20 @@
 # Experiments
 
+## Stage 5AI Curated Research Bundles
+
+Stage 5AI is local curation and source-provenance metadata, not an experiment. It consumes Stage
+5AG local inventory records and Stage 5AH clean documentation-staleness records, then writes ignored
+bundle scaffolds under `research-inputs/stage5ai/` plus compact committed source-card,
+content-index, website-ingest, Deep-Research pack, missing-source, readiness, guardrail, next-stage,
+and summary records under `data/source-harvester/`.
+
+Generated Stage 5AI bundle bodies and reports remain ignored under `research-inputs/stage5ai/` and
+`experiments/results/research-bundles/stage5ai/`. Stage 5AI performs no network fetch, online clone,
+Google Drive storage, raw source commit, Deep Research execution, website expansion, hypothesis
+generation/execution, OCR, AI/ML interpretation, image/stego/audio tooling, CUDA, benchmarks,
+scored experiments, canonical-corpus activation, page-boundary finalisation, method-status upgrade,
+or solve-claim workflow.
+
 ## Stage 5AG Local Source Inventory
 
 Stage 5AG is local source-lock inventory metadata, not an experiment. It runs `libreprimus source-harvester` local inventory commands against user-provided ignored `third_party/` material, records compact root/file/hash/archive summaries, links local paths to Stage 5AF manifest IDs, creates source-lock candidate and gap records, records research-bundle readiness, and originally selected curated extraction as the next bounded source-provenance step.

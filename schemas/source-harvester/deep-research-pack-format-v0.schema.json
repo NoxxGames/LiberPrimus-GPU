@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AI Deep Research pack format",
+  "type": "object",
+  "required": ["record_type", "stage_id", "deep_research_pack_records", "website_expansion_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "enum": ["stage5ai_deep_research_pack_index", "stage5ai_deep_research_pack_format"] },
+    "stage_id": { "const": "stage-5ai" },
+    "deep_research_pack_records": { "type": "integer", "minimum": 0 },
+    "website_expansion_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

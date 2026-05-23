@@ -315,6 +315,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5AH is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5ai",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5ai\b", re.IGNORECASE),
+        "Stage 5AI is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -951,6 +956,18 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
+        "stage5ai_curated_research_bundles_complete",
+        "stage 5ai" in staged_plan
+        and "curated research-bundle extraction" in staged_plan
+        and "stage 5aj" in staged_plan
+        and "deep research source inventory" in staged_plan
+        and "10 ignored curated bundle skeletons" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5AI curated research bundles and Stage 5AJ direction.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
         "source_lock_snapshot_policy_present",
         "source-lock snapshot" in combined and "allowlisted" in combined and "snapshot policy" in combined,
         "Allowlisted public source-lock snapshot policy is documented.",
@@ -1333,10 +1350,10 @@ def check_state_drift_consistency(
         and "local-only" in combined
         and "google drive" in combined
         and "stage 5ag" in combined
-        and "stage 5ah" in combined
+        and "stage 5ai" in combined
         and "raw downloads" in combined
         and "solve claim" in combined,
-        "Stage 5AF source-harvester local-only and Stage 5AG/5AH boundary are documented.",
+        "Stage 5AF source-harvester local-only and Stage 5AG/5AI boundary are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -1346,9 +1363,9 @@ def check_state_drift_consistency(
         and "third_party" in combined
         and "google drive" in combined
         and "raw source" in combined
-        and "stage 5ah" in combined
+        and "stage 5ai" in combined
         and "solve claim" in combined,
-        "Stage 5AG local source inventory and raw-data guardrails are documented.",
+        "Stage 5AG local source inventory, Stage 5AI curation, and raw-data guardrails are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AI curated bundle extraction policy",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "raw_content_commit_allowed",
+    "generated_extract_commit_allowed",
+    "ocr_allowed",
+    "ai_ml_interpretation_allowed",
+    "stego_tool_execution_allowed",
+    "hypothesis_execution_allowed",
+    "website_expansion_performed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5ai_curated_bundle_extraction_policy" },
+    "stage_id": { "const": "stage-5ai" },
+    "raw_content_commit_allowed": { "const": false },
+    "generated_extract_commit_allowed": { "const": false },
+    "private_or_sensitive_publication_allowed": { "const": false },
+    "ocr_allowed": { "const": false },
+    "ai_ml_interpretation_allowed": { "const": false },
+    "stego_tool_execution_allowed": { "const": false },
+    "audio_transcription_allowed": { "const": false },
+    "image_transform_allowed": { "const": false },
+    "hash_preimage_search_allowed": { "const": false },
+    "hypothesis_execution_allowed": { "const": false },
+    "website_expansion_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

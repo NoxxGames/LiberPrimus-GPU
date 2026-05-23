@@ -1,0 +1,14 @@
+record_type: stage5ai_website_ingest_format
+schema: schemas/source-harvester/website-ingest-bundle-index-v0.schema.json
+stage_id: stage-5ai
+source_stage_id: stage-5ah
+local_inventory_stage_id: stage-5ag
+website_ingest_metadata_ready: true
+website_ingest_source_card_records: 26
+website_ingest_content_records: 19
+website_ingest_bundle_records: 10
+public_website_ready_count: 0
+generated_extract_review_required_count: 17
+blocked_private_or_sensitive_count: 2
+website_expansion_performed: false
+solve_claim: false

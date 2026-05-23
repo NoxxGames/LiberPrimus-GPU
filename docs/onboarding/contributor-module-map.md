@@ -28,7 +28,9 @@ Docs, schemas, record validation, test fixtures, and source-lock metadata are re
 
 Corpus/profile semantics, scoring, experiment execution, privacy-sensitive Discord code, generated-output policy, and CUDA are high-risk. Read the relevant docs and tests first.
 
-Source-harvester code is high-provenance tooling. Read `docs/architecture/cicada-source-harvester.md`, `docs/architecture/local-source-lock-inventory.md`, `docs/reference/source-harvester-cli.md`, `docs/reference/source-harvester-local-inventory-cli.md`, `docs/onboarding/source-harvester-workflow.md`, and `docs/onboarding/local-source-inventory-workflow.md` before changing it. Do not make Google Drive a storage backend; manual Google/Dropbox/Colab exports belong in ignored local roots.
+Source-harvester code is high-provenance tooling. Read `docs/architecture/cicada-source-harvester.md`, `docs/architecture/local-source-lock-inventory.md`, `docs/architecture/curated-research-bundle-format.md`, `docs/architecture/website-ingest-source-card-format.md`, `docs/reference/source-harvester-cli.md`, `docs/reference/source-harvester-local-inventory-cli.md`, `docs/reference/source-harvester-curated-bundles-cli.md`, `docs/onboarding/source-harvester-workflow.md`, `docs/onboarding/local-source-inventory-workflow.md`, and `docs/onboarding/deep-research-bundle-workflow.md` before changing it. Do not make Google Drive a storage backend; manual Google/Dropbox/Colab exports belong in ignored local roots.
+
+Stage 5AI source-harvester modules under `python/libreprimus/source_harvester/` classify local inventory rows, build source cards, create curated bundle metadata, build content and website-ingest indexes, prepare Deep-Research pack indexes, record missing-source plans, and validate guardrails. They must not read raw third-party material into committed files or execute hypotheses.
 
 ## Good First Areas
 

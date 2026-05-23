@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Website ingest content record",
+  "type": "object",
+  "required": ["content_id", "bundle_id", "source_id", "content_kind", "relative_generated_path", "publication_status", "review_status", "solve_claim"],
+  "properties": {
+    "publication_status": {
+      "enum": [
+        "not_for_publication_raw",
+        "generated_extract_review_required",
+        "metadata_only",
+        "ready_for_private_deep_research",
+        "ready_for_public_website_after_review",
+        "blocked_private_or_sensitive"
+      ]
+    },
+    "website_publication_allowed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

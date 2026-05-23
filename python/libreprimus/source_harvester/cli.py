@@ -9,6 +9,10 @@ from rich.console import Console
 
 from .bundles import build_bundle_scaffolds
 from .bundle_readiness import build_bundle_readiness
+from .classification import classify_local_sources
+from .content_index import build_content_index
+from .curated_bundles import build_curated_bundles
+from .deep_research_pack import build_deep_research_pack_index
 from .export import write_json, write_jsonl
 from .extractors import extract_html_file
 from .fetcher import fetch_source
@@ -16,6 +20,7 @@ from .hashing import inventory_archive, write_hash_path
 from .local_inventory import inventory_local_sources
 from .manifest import validate_manifest
 from .manifest_linkage import link_local_sources
+from .missing_sources import build_missing_source_plan
 from .models import (
     CLUE_TARGET_CATEGORIES_PATH,
     COLLECTION_PRIORITIES_PATH,
@@ -39,6 +44,20 @@ from .models import (
     STAGE5AG_OUTPUT_DIR,
     STAGE5AG_ROOT_INVENTORY_PATH,
     STAGE5AG_SUMMARY_PATH,
+    STAGE5AI_BUNDLE_GENERATION_SUMMARY_PATH,
+    STAGE5AI_BUNDLE_ROOT,
+    STAGE5AI_CLASSIFICATION_PATH,
+    STAGE5AI_CONTENT_INDEX_SUMMARY_PATH,
+    STAGE5AI_DEEP_RESEARCH_PACK_FORMAT_PATH,
+    STAGE5AI_GUARDRAIL_PATH,
+    STAGE5AI_MISSING_SOURCE_PLAN_PATH,
+    STAGE5AI_NEXT_STAGE_DECISION_PATH,
+    STAGE5AI_OUTPUT_DIR,
+    STAGE5AI_POLICY_PATH,
+    STAGE5AI_READINESS_PATH,
+    STAGE5AI_SOURCE_CARD_SUMMARY_PATH,
+    STAGE5AI_SUMMARY_PATH,
+    STAGE5AI_WEBSITE_INGEST_FORMAT_PATH,
     SUMMARY_PATH,
     TOOL_POLICY_PATH,
 )
@@ -50,8 +69,16 @@ from .stage5ag_records import (
     build_stage5ag_summary,
 )
 from .stage5ag_validation import validate_stage5ag
+from .stage5ai_records import (
+    build_stage5ai_guardrail,
+    build_stage5ai_next_stage_decision,
+    build_stage5ai_readiness,
+    build_stage5ai_summary,
+)
+from .stage5ai_validation import validate_stage5ai
 from .summary import summarize_stage5af
 from .validation import validate_stage5af
+from .website_ingest import build_website_ingest_index
 
 console = Console()
 app = typer.Typer(help="Stage 5AF Cicada source-harvester commands.", no_args_is_help=True)
@@ -442,6 +469,239 @@ def validate_stage5ag_command(
     if errors:
         raise typer.Exit(1)
     console.print("source_harvester_stage5ag_valid=true")
+
+
+@app.command("classify-local-sources")
+def classify_local_sources_command(
+    candidate_summary: Path = typer.Option(STAGE5AG_CANDIDATE_SUMMARY_PATH),
+    local_linkage: Path = typer.Option(STAGE5AG_LOCAL_LINKAGE_PATH),
+    out: Path = typer.Option(STAGE5AI_CLASSIFICATION_PATH),
+    results_dir: Path = typer.Option(STAGE5AI_OUTPUT_DIR),
+) -> None:
+    result = classify_local_sources(
+        candidate_summary_path=candidate_summary,
+        local_linkage_path=local_linkage,
+        out=out,
+        results_dir=results_dir,
+    )
+    console.print(f"unclassified_source_classification_records={result['classification_records']}")
+    console.print(f"provisionally_classified_count={result['provisionally_classified_count']}")
+
+
+@app.command("build-source-cards")
+def build_source_cards_command(
+    local_linkage: Path = typer.Option(STAGE5AG_LOCAL_LINKAGE_PATH),
+    candidate_summary: Path = typer.Option(STAGE5AG_CANDIDATE_SUMMARY_PATH),
+    classification: Path = typer.Option(STAGE5AI_CLASSIFICATION_PATH),
+    bundle_plan: Path = typer.Option(RESEARCH_BUNDLE_PLAN_PATH),
+    bundle_root: Path = typer.Option(STAGE5AI_BUNDLE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AI_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AI_SOURCE_CARD_SUMMARY_PATH),
+) -> None:
+    from .source_cards import build_source_cards
+
+    result = build_source_cards(
+        local_linkage_path=local_linkage,
+        candidate_summary_path=candidate_summary,
+        classification_path=classification,
+        bundle_plan_path=bundle_plan,
+        bundle_root=bundle_root,
+        results_dir=results_dir,
+        out=out,
+    )
+    console.print(f"source_card_records={result['source_card_records']}")
+    console.print(f"unclassified_source_cards={result['unclassified_source_cards']}")
+
+
+@app.command("build-curated-bundles")
+def build_curated_bundles_command(
+    local_linkage: Path = typer.Option(STAGE5AG_LOCAL_LINKAGE_PATH),
+    bundle_readiness: Path = typer.Option(STAGE5AG_BUNDLE_READINESS_PATH),
+    bundle_plan: Path = typer.Option(RESEARCH_BUNDLE_PLAN_PATH),
+    classification: Path = typer.Option(STAGE5AI_CLASSIFICATION_PATH),
+    source_root: Path = typer.Option(Path("third_party")),
+    bundle_root: Path = typer.Option(STAGE5AI_BUNDLE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AI_OUTPUT_DIR),
+    out_policy: Path = typer.Option(STAGE5AI_POLICY_PATH),
+    out_summary: Path = typer.Option(STAGE5AI_BUNDLE_GENERATION_SUMMARY_PATH),
+) -> None:
+    result = build_curated_bundles(
+        local_linkage_path=local_linkage,
+        bundle_readiness_path=bundle_readiness,
+        bundle_plan_path=bundle_plan,
+        classification_path=classification,
+        source_root=source_root,
+        bundle_root=bundle_root,
+        results_dir=results_dir,
+        out_policy=out_policy,
+        out_summary=out_summary,
+    )
+    console.print(f"curated_bundle_records={result['curated_bundle_records']}")
+    console.print(f"bundles_with_generated_skeleton={result['bundles_with_generated_skeleton']}")
+    console.print(f"bundles_with_extracted_local_content={result['bundles_with_extracted_local_content']}")
+
+
+@app.command("build-content-index")
+def build_content_index_command(
+    bundle_root: Path = typer.Option(STAGE5AI_BUNDLE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AI_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AI_CONTENT_INDEX_SUMMARY_PATH),
+) -> None:
+    result = build_content_index(bundle_root=bundle_root, results_dir=results_dir, out=out)
+    console.print(f"content_index_records={result['content_index_records']}")
+    console.print(f"blocked_private_or_sensitive_count={result['blocked_private_or_sensitive_count']}")
+
+
+@app.command("build-website-ingest-index")
+def build_website_ingest_index_command(
+    bundle_root: Path = typer.Option(STAGE5AI_BUNDLE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AI_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AI_WEBSITE_INGEST_FORMAT_PATH),
+) -> None:
+    result = build_website_ingest_index(bundle_root=bundle_root, results_dir=results_dir, out=out)
+    console.print(f"website_ingest_metadata_ready={str(result['website_ingest_metadata_ready']).lower()}")
+    console.print(f"website_ingest_source_card_records={result['website_ingest_source_card_records']}")
+    console.print(f"website_ingest_content_records={result['website_ingest_content_records']}")
+
+
+@app.command("build-deep-research-pack-index")
+def build_deep_research_pack_index_command(
+    bundle_root: Path = typer.Option(STAGE5AI_BUNDLE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AI_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AI_DEEP_RESEARCH_PACK_FORMAT_PATH),
+) -> None:
+    result = build_deep_research_pack_index(bundle_root=bundle_root, results_dir=results_dir, out=out)
+    console.print(f"deep_research_pack_records={result['deep_research_pack_records']}")
+    console.print(f"sequential_order_present={str(result['sequential_order_present']).lower()}")
+
+
+@app.command("build-missing-source-plan")
+def build_missing_source_plan_command(
+    stage5ag_readiness: Path = typer.Option(STAGE5AG_BUNDLE_READINESS_PATH),
+    local_linkage: Path = typer.Option(STAGE5AG_LOCAL_LINKAGE_PATH),
+    out: Path = typer.Option(STAGE5AI_MISSING_SOURCE_PLAN_PATH),
+    results_dir: Path = typer.Option(STAGE5AI_OUTPUT_DIR),
+) -> None:
+    result = build_missing_source_plan(
+        stage5ag_readiness_path=stage5ag_readiness,
+        local_linkage_path=local_linkage,
+        out=out,
+        results_dir=results_dir,
+    )
+    console.print(f"missing_source_records={result['missing_source_records']}")
+    console.print(f"missing_a1_a2_count={result['missing_a1_a2_count']}")
+
+
+@app.command("build-stage5ai-guardrail")
+def build_stage5ai_guardrail_command(
+    bundle_root: Path = typer.Option(STAGE5AI_BUNDLE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AI_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AI_GUARDRAIL_PATH),
+) -> None:
+    result = build_stage5ai_guardrail(bundle_root=bundle_root, results_dir=results_dir, out=out)
+    console.print(f"network_fetch_performed={str(result['network_fetch_performed']).lower()}")
+    console.print(f"online_repo_clone_performed={str(result['online_repo_clone_performed']).lower()}")
+    console.print(f"google_drive_storage_used={str(result['google_drive_storage_used']).lower()}")
+
+
+@app.command("build-stage5ai-readiness")
+def build_stage5ai_readiness_command(
+    bundle_root: Path = typer.Option(STAGE5AI_BUNDLE_ROOT),
+    stage5ag_readiness: Path = typer.Option(STAGE5AG_BUNDLE_READINESS_PATH),
+    out: Path = typer.Option(STAGE5AI_READINESS_PATH),
+) -> None:
+    result = build_stage5ai_readiness(bundle_root=bundle_root, stage5ag_readiness_path=stage5ag_readiness, out=out)
+    console.print(f"curated_bundle_records={result['curated_bundle_records']}")
+    console.print(f"bundles_ready_for_private_deep_research={result['bundles_ready_for_private_deep_research']}")
+
+
+@app.command("build-stage5ai-next-stage-decision")
+def build_stage5ai_next_stage_decision_command(
+    readiness: Path = typer.Option(STAGE5AI_READINESS_PATH),
+    missing_source_plan: Path = typer.Option(STAGE5AI_MISSING_SOURCE_PLAN_PATH),
+    out: Path = typer.Option(STAGE5AI_NEXT_STAGE_DECISION_PATH),
+) -> None:
+    result = build_stage5ai_next_stage_decision(readiness_path=readiness, missing_source_plan_path=missing_source_plan, out=out)
+    console.print(f"selected_option_id={result['selected_option_id']}")
+
+
+@app.command("build-stage5ai-summary")
+def build_stage5ai_summary_command(
+    policy: Path = typer.Option(STAGE5AI_POLICY_PATH),
+    source_card_summary: Path = typer.Option(STAGE5AI_SOURCE_CARD_SUMMARY_PATH),
+    content_index_summary: Path = typer.Option(STAGE5AI_CONTENT_INDEX_SUMMARY_PATH),
+    website_ingest_format: Path = typer.Option(STAGE5AI_WEBSITE_INGEST_FORMAT_PATH),
+    deep_research_pack_format: Path = typer.Option(STAGE5AI_DEEP_RESEARCH_PACK_FORMAT_PATH),
+    bundle_generation_summary: Path = typer.Option(STAGE5AI_BUNDLE_GENERATION_SUMMARY_PATH),
+    classification: Path = typer.Option(STAGE5AI_CLASSIFICATION_PATH),
+    missing_source_plan: Path = typer.Option(STAGE5AI_MISSING_SOURCE_PLAN_PATH),
+    readiness: Path = typer.Option(STAGE5AI_READINESS_PATH),
+    guardrail: Path = typer.Option(STAGE5AI_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AI_NEXT_STAGE_DECISION_PATH),
+    out: Path = typer.Option(STAGE5AI_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AI_OUTPUT_DIR),
+) -> None:
+    result = build_stage5ai_summary(
+        policy_path=policy,
+        source_card_summary_path=source_card_summary,
+        content_index_summary_path=content_index_summary,
+        website_ingest_format_path=website_ingest_format,
+        deep_research_pack_format_path=deep_research_pack_format,
+        bundle_generation_summary_path=bundle_generation_summary,
+        classification_path=classification,
+        missing_source_plan_path=missing_source_plan,
+        readiness_path=readiness,
+        guardrail_path=guardrail,
+        next_stage_decision_path=next_stage_decision,
+        out=out,
+        results_dir=results_dir,
+    )
+    console.print(f"stage_id={result['stage_id']}")
+    console.print(f"curated_bundle_records={result['curated_bundle_records']}")
+    console.print(f"recommended_next_stage_title={result['recommended_next_stage_title']}")
+
+
+@app.command("validate-stage5ai")
+def validate_stage5ai_command(
+    policy: Path = typer.Option(STAGE5AI_POLICY_PATH),
+    source_card_summary: Path = typer.Option(STAGE5AI_SOURCE_CARD_SUMMARY_PATH),
+    content_index_summary: Path = typer.Option(STAGE5AI_CONTENT_INDEX_SUMMARY_PATH),
+    website_ingest_format: Path = typer.Option(STAGE5AI_WEBSITE_INGEST_FORMAT_PATH),
+    deep_research_pack_format: Path = typer.Option(STAGE5AI_DEEP_RESEARCH_PACK_FORMAT_PATH),
+    bundle_generation_summary: Path = typer.Option(STAGE5AI_BUNDLE_GENERATION_SUMMARY_PATH),
+    classification: Path = typer.Option(STAGE5AI_CLASSIFICATION_PATH),
+    missing_source_plan: Path = typer.Option(STAGE5AI_MISSING_SOURCE_PLAN_PATH),
+    readiness: Path = typer.Option(STAGE5AI_READINESS_PATH),
+    guardrail: Path = typer.Option(STAGE5AI_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AI_NEXT_STAGE_DECISION_PATH),
+    summary: Path = typer.Option(STAGE5AI_SUMMARY_PATH),
+    bundle_root: Path = typer.Option(STAGE5AI_BUNDLE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AI_OUTPUT_DIR),
+) -> None:
+    counts, errors = validate_stage5ai(
+        policy_path=policy,
+        source_card_summary_path=source_card_summary,
+        content_index_summary_path=content_index_summary,
+        website_ingest_format_path=website_ingest_format,
+        deep_research_pack_format_path=deep_research_pack_format,
+        bundle_generation_summary_path=bundle_generation_summary,
+        classification_path=classification,
+        missing_source_plan_path=missing_source_plan,
+        readiness_path=readiness,
+        guardrail_path=guardrail,
+        next_stage_decision_path=next_stage_decision,
+        summary_path=summary,
+        bundle_root=bundle_root,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(error)
+    if errors:
+        raise typer.Exit(1)
+    console.print("source_harvester_stage5ai_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AI missing source plan",
+  "type": "object",
+  "required": ["record_type", "stage_id", "network_fetch_performed", "online_repo_clone_performed", "google_drive_storage_used", "solve_claim"],
+  "properties": {
+    "record_type": { "enum": ["stage5ai_missing_source_plan", "stage5ai_missing_source_plan_record"] },
+    "stage_id": { "const": "stage-5ai" },
+    "missing_source_records": { "type": "integer", "minimum": 0 },
+    "next_action": { "enum": ["manual_export", "online_fetch_later", "repo_clone_later", "targeted_forum_capture_later", "optional_low_priority"] },
+    "network_fetch_performed": { "const": false },
+    "online_repo_clone_performed": { "const": false },
+    "google_drive_storage_used": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

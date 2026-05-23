@@ -1063,3 +1063,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AH reduced README stage-ledger findings from 1 to 0, stage-ledger findings after repair to 0, operational-file-map coverage findings from 2 to 0, scanned 36 current/next operational paths with 0 findings, recorded Stage 5AI curated research bundle extraction as the next Codex prompt, and performed no network fetch, online clone, Google Drive storage, raw third-party processing, Deep Research, hypothesis generation, CUDA execution, CUDA-facing source modification, new kernel addition, p56/full-p56 execution, unsolved-page CUDA use, GPU benchmark, speedup claim, scored experiment, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ai
+    title: Curated research bundle extraction from local source inventory
+    status: complete
+    category: infrastructure
+    summary: Built ignored curated research-input bundle scaffolds from the Stage 5AG local source inventory and committed compact source-card, content-index, website-ingest, Deep-Research pack, missing-source, classification, readiness, guardrail, and next-stage metadata only.
+    key_outputs:
+      - "`libreprimus source-harvester` commands for local source classification, source-card summaries, curated bundles, content indexes, website-ingest indexes, Deep-Research pack indexes, missing-source plans, guardrails, readiness, next-stage decisions, summary generation, validation, and summary display."
+      - Stage 5AI curated bundle extraction policy, source-card summary, content-index summary, website-ingest format, Deep-Research pack format, bundle-generation summary, unclassified-source classification, missing-source plan, readiness, guardrail, next-stage-decision, and aggregate summary records under `data/source-harvester/`.
+      - Ignored generated bundle bodies under `research-inputs/stage5ai/`, ignored generated reports under `experiments/results/research-bundles/stage5ai/`, and an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AI wrote 10 curated bundle records, 26 source-card records, 19 content-index records, 10 Deep-Research pack records, 20 missing-source records, and 14 unclassified-source classification records. It marks 8 bundles ready for private Deep Research, 0 bundles public website-ready, selects Stage 5AJ Deep Research source inventory and reliability prompt, and performed no network fetch, online clone, Google Drive storage, raw third-party commit, Deep Research execution, hypothesis generation or execution, OCR/AI/ML/image/stego/audio processing, CUDA execution, CUDA-facing source modification, new kernel addition, p56/full-p56 execution, unsolved-page CUDA use, GPU benchmark, speedup claim, scored experiment, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

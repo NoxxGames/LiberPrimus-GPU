@@ -716,6 +716,11 @@ experiments/results/source-harvester-local/**
 source-harvester-output/**
 harvest-output/**
 research-inputs/**
+!research-inputs/
+!research-inputs/README.md
+!research-inputs/.gitkeep
+!research-inputs/stage5ai/
+!research-inputs/stage5ai/.gitkeep
 
 # Generated document staleness reports
 experiments/results/doc-staleness/**
@@ -726,6 +731,14 @@ experiments/results/doc-staleness/**
 !experiments/results/doc-staleness/stage5ab/.gitkeep
 !experiments/results/doc-staleness/stage5ah/
 !experiments/results/doc-staleness/stage5ah/.gitkeep
+
+# Generated research bundle outputs
+experiments/results/research-bundles/**
+!experiments/results/research-bundles/
+!experiments/results/research-bundles/README.md
+!experiments/results/research-bundles/.gitkeep
+!experiments/results/research-bundles/stage5ai/
+!experiments/results/research-bundles/stage5ai/.gitkeep
 
 # Local Codex completion handoffs
 codex-output/**

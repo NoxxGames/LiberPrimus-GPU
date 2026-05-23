@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AI curated content index summary",
+  "type": "object",
+  "required": ["record_type", "stage_id", "content_index_records", "generated_bundle_bodies_committed", "website_expansion_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "enum": ["stage5ai_curated_content_index_summary", "stage5ai_content_index_record"] },
+    "stage_id": { "const": "stage-5ai" },
+    "content_index_records": { "type": "integer", "minimum": 0 },
+    "generated_bundle_bodies_committed": { "const": false },
+    "website_expansion_performed": { "const": false },
+    "website_publication_allowed_count": { "type": "integer", "maximum": 0 },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

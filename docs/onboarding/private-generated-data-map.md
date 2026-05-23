@@ -11,6 +11,7 @@
 - `third_party/StegoPositiveControls/`: local ignored cache for Stage 4N stego/audio positive-control fixture artefacts. Commit only README/.gitkeep; do not commit cached image, audio, binary, font, archive, or extracted payload files.
 - `third_party/**`: local third-party source material, including user-provided Cicada archives, images, PDFs, HTML/docs, audio/video, exported Google/Dropbox/Colab material, and optional source caches. Commit only existing allowlisted README/.gitkeep files; raw content remains ignored.
 - `source-harvester-output/`, `harvest-output/`, and `research-inputs/`: local Stage 5AF/5AG/5AI source-harvester raw output roots. Store manually exported Google/Dropbox/Colab material locally here or in another ignored local root; do not use Google Drive as project storage.
+- `research-inputs/stage5ai/`: generated local curated research-bundle bodies, manifests, source cards, content indexes, Deep-Research pack indexes, website-ingest indexes, extraction warnings, and known-question/do-not-assume notes. Commit only README/.gitkeep scaffolds; generated body files remain ignored.
 - `data/raw/`: immutable raw input area. Do not overwrite or commit real raw artefacts unless a future stage explicitly scopes a curated placeholder or lock.
 
 ## Generated Outputs
@@ -63,6 +64,7 @@
 - `experiments/results/prime-minus-one-bounded-p56-corrected-reporting/stage5ae/`: generated Stage 5AE corrected formula parity report, reference-contract repair, hash-material policy, result-store integration, score-summary integration, method-status impact, generated-body policy, full-p56 blocker, scored-experiment deferral, archive/source-lock deferral, doc-staleness validation, next-stage decision, summary, and warning reports.
 - `experiments/results/source-harvester/stage5af/`: generated Stage 5AF source-harvester dry-run plans, manifest validation, research-bundle preview scaffolds, dry-run summaries, failure logs, warnings, and summary JSON.
 - `experiments/results/source-harvester-local/stage5ag/`: generated Stage 5AG full local file/hash/archive inventories, duplicate-hash reports, missing-source reports, unclassified-source reports, research-bundle readiness reports, guardrail reports, warnings, and summary JSON.
+- `experiments/results/research-bundles/stage5ai/`: generated Stage 5AI classification, source-card, curated-bundle, content-index, website-ingest, Deep-Research pack, missing-source, guardrail, readiness, next-stage, summary, and warning reports.
 - `codex-output/`: local Codex completion handoff files; do not stage or publish.
 - `experiments/results/scoring-consolidation/stage4i/`: generated Stage 4I scorer inventories, rendered calibration reports, CPU batch compatibility JSON, and warnings.
 - `experiments/results/observation-review/stage4j/`: generated Stage 4J observation review decision reports, quarantine reports, promotion-gate reports, path-sanitisation reports, and warnings.

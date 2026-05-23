@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AH operational documentation staleness coverage repair and README stage-ledger audit is complete.
+Stage 5AI curated research bundle extraction from local source inventory is complete.
 
-Next recommended prompt: Stage 5AI - curated research bundle extraction from local source inventory. Website expansion is deferred to a future unnumbered project.
+Next recommended prompt: Stage 5AJ - Deep Research source inventory and reliability prompt. Website expansion is deferred to a future unnumbered project.
+
+## Completed in Stage 5AI
+
+Stage 5AI consumed Stage 5AG local source-inventory metadata and Stage 5AH clean doc-staleness records, then generated ignored curated research-input bundle scaffolds under `research-inputs/stage5ai/` and ignored reports under `experiments/results/research-bundles/stage5ai/`. It committed compact extraction policy, source-card summary, content-index summary, website-ingest format, Deep-Research pack format, bundle-generation summary, unclassified classification, missing-source plan, readiness, guardrail, next-stage decision, and aggregate summary records.
+
+Local Stage 5AI summary: curated bundles `10`, generated skeletons `10`, bundles with extracted local content `8`, bundles ready for private Deep Research `8`, public website-ready bundles `0`, source cards `26`, content-index records `19`, website-ingest source-card records `26`, website-ingest content records `19`, Deep-Research pack records `10`, missing-source records `20`, unclassified source classifications `14`, selected next prompt `Stage 5AJ - Deep Research source inventory and reliability prompt`, network fetch `false`, online clone `false`, Google Drive storage `false`, raw source commits `false`, generated bundle-body commits `false`, CUDA execution `false`, benchmarks `false`, scored experiments `false`, website expansion `false`, and solve claim `false`.
+
+Stage 5AI is curation metadata only. It does not run Deep Research, expand the website, fetch or clone online sources, use Google Drive storage, process raw Discord logs, run OCR/AI/ML/image/stego/audio tooling, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, activate the canonical corpus, finalise page boundaries, upgrade method status, or make a solve claim. Stage 5AJ should consume Stage 5AI manifests and metadata, not raw `third_party/` paths.
 
 ## Completed in Stage 5AH
 

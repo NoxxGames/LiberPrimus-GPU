@@ -1,0 +1,169 @@
+record_type: stage5ai_research_bundle_readiness
+schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+stage_id: stage-5ai
+source_stage_id: stage-5ah
+local_inventory_stage_id: stage-5ag
+curated_bundle_records: 10
+bundles_with_generated_skeleton: 10
+bundles_with_extracted_local_content: 8
+bundles_ready_for_private_deep_research: 8
+bundles_public_website_ready: 0
+website_ingest_metadata_ready: true
+solve_claim: false
+records:
+- record_type: stage5ai_research_bundle_readiness_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  bundle_id: 01-signed-messages-and-authenticity
+  generated_skeleton: true
+  content_index_records: 1
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  missing_source_ids:
+  - isitcicada_pgp_checker
+  - cicada_solvers_isitcicada_repo
+  solve_claim: false
+- record_type: stage5ai_research_bundle_readiness_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  bundle_id: 02-liber-primus-images-and-transcriptions
+  generated_skeleton: true
+  content_index_records: 1
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  missing_source_ids:
+  - pastebin_vgmk330j_lp_runes_prime_values
+  - solved_page_google_sheet
+  - fandom_liber_primus_solved_pages
+  - fandom_liber_primus_unsolved_pages
+  solve_claim: false
+- record_type: stage5ai_research_bundle_readiness_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  bundle_id: 03-page-49-51-token-block
+  generated_skeleton: true
+  content_index_records: 0
+  readiness_status: skeleton_only
+  ready_for_private_deep_research: false
+  public_website_ready: false
+  missing_source_ids:
+  - pastebin_vgmk330j_lp_runes_prime_values
+  - fandom_liber_primus_unsolved_pages
+  solve_claim: false
+- record_type: stage5ai_research_bundle_readiness_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  bundle_id: 04-cuneiform-base60-base59
+  generated_skeleton: true
+  content_index_records: 2
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  missing_source_ids:
+  - fandom_liber_primus_ideas
+  solve_claim: false
+- record_type: stage5ai_research_bundle_readiness_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  bundle_id: 05-red-markers-and-visual-numerics
+  generated_skeleton: true
+  content_index_records: 6
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  missing_source_ids:
+  - fandom_liber_primus_ideas
+  solve_claim: false
+- record_type: stage5ai_research_bundle_readiness_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  bundle_id: 06-outguess-stego-hidden-formatting
+  generated_skeleton: true
+  content_index_records: 2
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  missing_source_ids:
+  - cicada_solvers_iddqd
+  - joutguess_rebirth
+  solve_claim: false
+- record_type: stage5ai_research_bundle_readiness_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  bundle_id: 07-boundary-mobius-repeated-fragments
+  generated_skeleton: true
+  content_index_records: 2
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  missing_source_ids:
+  - chapterized_rune_map_google_doc
+  - fandom_liber_primus_unsolved_pages
+  - pastebin_vgmk330j_lp_runes_prime_values
+  solve_claim: false
+- record_type: stage5ai_research_bundle_readiness_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  bundle_id: 08-tools-gpprime-dwh-gematria
+  generated_skeleton: true
+  content_index_records: 0
+  readiness_status: skeleton_only
+  ready_for_private_deep_research: false
+  public_website_ready: false
+  missing_source_ids:
+  - gp_prime_view
+  - tweqx_dwh_hashkit
+  - tweqx_3301_hash_alarm
+  - mortlach_rune_decrypter_prime
+  - taiiwo_cicada
+  solve_claim: false
+- record_type: stage5ai_research_bundle_readiness_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  bundle_id: 09-community-hypotheses
+  generated_skeleton: true
+  content_index_records: 4
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  missing_source_ids:
+  - fandom_liber_primus_ideas
+  - cicada_boards_forum
+  - spiderpuck_pastebin_profile
+  solve_claim: false
+- record_type: stage5ai_research_bundle_readiness_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  bundle_id: 10-known-negative-retired-ideas
+  generated_skeleton: true
+  content_index_records: 1
+  readiness_status: partial_curated_extract_ready_for_private_deep_research
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  missing_source_ids:
+  - fandom_possible_hints_never_used
+  - khan_cryptography
+  - gamedetectives_academy
+  solve_claim: false

@@ -1,0 +1,17 @@
+record_type: stage5ai_curated_bundle_extraction_policy
+schema: schemas/source-harvester/curated-bundle-extraction-policy-v0.schema.json
+stage_id: stage-5ai
+source_stage_id: stage-5ah
+local_inventory_stage_id: stage-5ag
+raw_content_commit_allowed: false
+generated_extract_commit_allowed: false
+private_or_sensitive_publication_allowed: false
+ocr_allowed: false
+ai_ml_interpretation_allowed: false
+stego_tool_execution_allowed: false
+audio_transcription_allowed: false
+image_transform_allowed: false
+hash_preimage_search_allowed: false
+hypothesis_execution_allowed: false
+website_expansion_performed: false
+solve_claim: false

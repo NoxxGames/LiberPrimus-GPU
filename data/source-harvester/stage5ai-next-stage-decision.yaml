@@ -1,0 +1,209 @@
+record_type: stage5ai_next_stage_decisions
+schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+stage_id: stage-5ai
+source_stage_id: stage-5ah
+selected_option_id: stage5aj_deep_research_source_inventory_and_reliability_prompt
+solve_claim: false
+records:
+- record_type: stage5ai_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  option_id: stage5aj_deep_research_source_inventory_and_reliability_prompt
+  selected: true
+  recommended_next_prompt_type: Deep Research
+  recommended_next_stage_title: Stage 5AJ - Deep Research source inventory and reliability
+    prompt
+  recommended_next_stage_reason: At least one curated private bundle exists; Deep
+    Research should consume Stage 5AI bundle manifests, not raw third_party paths.
+  deep_research_recommended_next: true
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ai_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  option_id: stage5aj_source_gap_closure_for_missing_priority_sources
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AJ - source gap closure for missing priority
+    sources
+  recommended_next_stage_reason: Use if no curated bundle is ready and missing A1/A2
+    sources dominate.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ai_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  option_id: stage5aj_online_fetch_for_missing_manifest_sources
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AJ - online fetch for missing manifest sources
+  recommended_next_stage_reason: Deferred; online fetch requires explicit future scope.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ai_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  option_id: stage5aj_visual_page_image_provenance_inventory
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AJ - visual page-image provenance inventory
+  recommended_next_stage_reason: Use if image-heavy material is curated but not ready
+    for text-oriented Deep Research.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ai_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  option_id: stage5aj_cicada_archive_source_lock_initial_ingestion
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AJ - Cicada archive source-lock initial ingestion
+  recommended_next_stage_reason: Deferred until a future source-lock stage scopes
+    exact archive records.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ai_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  option_id: stage5aj_page49_51_token_block_extraction
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AJ - page 49-51 token block extraction
+  recommended_next_stage_reason: Deferred until exact transcript/profile source gaps
+    close.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ai_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  option_id: stage5aj_cuneiform_red_marker_visual_numeric_extraction
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AJ - cuneiform/red-marker visual numeric extraction
+  recommended_next_stage_reason: Deferred; visual claims remain review-gated.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ai_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  option_id: stage5aj_discord_private_lead_redaction_plan
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AJ - Discord private lead redaction plan
+  recommended_next_stage_reason: Deferred; private/social material requires redaction
+    planning before public use.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ai_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  option_id: stage5aj_bounded_cpu_native_scored_experiment_manifest_gate
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AJ - bounded CPU/native scored experiment manifest
+    gate
+  recommended_next_stage_reason: Rejected because Stage 5AI is curation only.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ai_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  option_id: stage5aj_benchmark_planning
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AJ - benchmark planning
+  recommended_next_stage_reason: Rejected; benchmarks remain out of scope.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ai_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  option_id: stage5aj_unsolved_page_cuda_pilot
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AJ - unsolved-page CUDA pilot
+  recommended_next_stage_reason: Rejected; unsolved-page CUDA remains blocked.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ai_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ai-curated-research-bundle-summary-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  option_id: future_website_expansion_unnumbered
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Future unnumbered website expansion
+  recommended_next_stage_reason: Deferred; Stage 5AI only prepares website-ingest
+    metadata.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false

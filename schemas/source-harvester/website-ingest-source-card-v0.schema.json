@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Website ingest source card",
+  "type": "object",
+  "required": ["source_id", "title", "source_type", "source_tier", "priority", "bundle_ids", "clue_categories", "local_match_status", "readiness_status", "risk_level", "raw_content_publication_allowed", "generated_extract_publication_allowed", "solve_claim"],
+  "properties": {
+    "source_id": { "type": "string" },
+    "bundle_ids": { "type": "array", "items": { "type": "string" } },
+    "clue_categories": { "type": "array", "items": { "type": "string" } },
+    "raw_content_publication_allowed": { "const": false },
+    "generated_extract_publication_allowed": { "const": false },
+    "website_publication_allowed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

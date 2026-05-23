@@ -1,6 +1,6 @@
 ﻿# Source Harvester Workflow
 
-Use this workflow when running the Stage 5AF harvester locally. For Stage 5AG local source inventory over `third_party/`, use `docs/onboarding/local-source-inventory-workflow.md` after validating the manifest. Stage 5AH repaired the documentation gate; Stage 5AI is the next curated extraction stage and must keep raw/extracted bodies ignored.
+Use this workflow when running the Stage 5AF harvester locally. For Stage 5AG local source inventory over `third_party/`, use `docs/onboarding/local-source-inventory-workflow.md` after validating the manifest. Stage 5AH repaired the documentation gate; Stage 5AI completed curated extraction metadata and keeps raw/extracted bodies ignored.
 
 1. Validate the committed manifest:
 
@@ -36,4 +36,4 @@ Do not use Google Drive as storage for this project. For Google Sheet, Google Do
 
 5. Commit only compact metadata when a future prompt explicitly scopes it. Do not commit raw downloads, archives, scraped bodies, images, audio, video, generated bundles, or `codex-output/**`.
 
-Stage 5AG adds local inventory outputs under `experiments/results/source-harvester-local/stage5ag/` and compact metadata under `data/source-harvester/stage5ag-*`. Stage 5AH adds doc-staleness/stage-ledger coverage before extraction resumes. Stage 5AI may curate extraction metadata from local ignored inventory only; online fetching/cloning and Google Drive storage remain out of scope.
+Stage 5AG adds local inventory outputs under `experiments/results/source-harvester-local/stage5ag/` and compact metadata under `data/source-harvester/stage5ag-*`. Stage 5AH adds doc-staleness/stage-ledger coverage before extraction resumes. Stage 5AI adds curated bundle metadata under `data/source-harvester/stage5ai-*`, generated ignored bundle bodies under `research-inputs/stage5ai/`, and generated ignored reports under `experiments/results/research-bundles/stage5ai/`. Online fetching/cloning, Google Drive storage, website expansion, and Deep Research execution remain out of scope until explicitly scoped.

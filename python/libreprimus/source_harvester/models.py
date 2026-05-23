@@ -9,6 +9,9 @@ STAGE_ID = "stage-5af"
 SOURCE_STAGE_ID = "stage-5ae"
 STAGE5AG_ID = "stage-5ag"
 STAGE5AG_SOURCE_STAGE_ID = "stage-5af"
+STAGE5AI_ID = "stage-5ai"
+STAGE5AI_SOURCE_STAGE_ID = "stage-5ah"
+STAGE5AI_LOCAL_INVENTORY_STAGE_ID = "stage-5ag"
 
 OUTPUT_DIR = Path("experiments/results/source-harvester/stage5af")
 STAGE5AG_OUTPUT_DIR = Path("experiments/results/source-harvester-local/stage5ag")
@@ -50,6 +53,32 @@ STAGE5AG_BUNDLE_READINESS_PATH = Path("data/source-harvester/stage5ag-research-b
 STAGE5AG_GUARDRAIL_PATH = Path("data/source-harvester/stage5ag-local-source-guardrail.yaml")
 STAGE5AG_NEXT_STAGE_DECISION_PATH = Path("data/source-harvester/stage5ag-source-harvester-next-stage-decision.yaml")
 STAGE5AG_SUMMARY_PATH = Path("data/source-harvester/stage5ag-source-harvester-summary.yaml")
+
+STAGE5AI_BUNDLE_ROOT = Path("research-inputs/stage5ai")
+STAGE5AI_OUTPUT_DIR = Path("experiments/results/research-bundles/stage5ai")
+STAGE5AI_POLICY_PATH = Path("data/source-harvester/stage5ai-curated-bundle-extraction-policy.yaml")
+STAGE5AI_SOURCE_CARD_SUMMARY_PATH = Path("data/source-harvester/stage5ai-curated-source-card-summary.yaml")
+STAGE5AI_CONTENT_INDEX_SUMMARY_PATH = Path("data/source-harvester/stage5ai-curated-content-index-summary.yaml")
+STAGE5AI_WEBSITE_INGEST_FORMAT_PATH = Path("data/source-harvester/stage5ai-website-ingest-format.yaml")
+STAGE5AI_DEEP_RESEARCH_PACK_FORMAT_PATH = Path("data/source-harvester/stage5ai-deep-research-pack-format.yaml")
+STAGE5AI_BUNDLE_GENERATION_SUMMARY_PATH = Path("data/source-harvester/stage5ai-bundle-generation-summary.yaml")
+STAGE5AI_CLASSIFICATION_PATH = Path("data/source-harvester/stage5ai-unclassified-source-classification.yaml")
+STAGE5AI_MISSING_SOURCE_PLAN_PATH = Path("data/source-harvester/stage5ai-missing-source-plan.yaml")
+STAGE5AI_READINESS_PATH = Path("data/source-harvester/stage5ai-research-bundle-readiness.yaml")
+STAGE5AI_GUARDRAIL_PATH = Path("data/source-harvester/stage5ai-curated-extraction-guardrail.yaml")
+STAGE5AI_NEXT_STAGE_DECISION_PATH = Path("data/source-harvester/stage5ai-next-stage-decision.yaml")
+STAGE5AI_SUMMARY_PATH = Path("data/source-harvester/stage5ai-curated-research-bundle-summary.yaml")
+
+STAGE5AI_REPORTS = {
+    "bundle_generation": "bundle_generation_report.json",
+    "source_cards": "source_card_index.jsonl",
+    "content_index": "content_extract_index.jsonl",
+    "website_ingest": "website_ingest_index.json",
+    "deep_research_pack": "deep_research_pack_index.json",
+    "missing_sources": "missing_sources.json",
+    "warnings": "warnings.jsonl",
+    "summary": "summary.json",
+}
 
 REQUIRED_SOURCE_IDS = {
     "liber_primus_dropbox_files",
@@ -207,6 +236,45 @@ STAGE5AG_FALSE_FLAGS: dict[str, Any] = {
     "solve_claim": False,
 }
 
+STAGE5AI_FALSE_FLAGS: dict[str, Any] = {
+    "network_fetch_performed": False,
+    "live_web_scrape_performed": False,
+    "online_repo_clone_performed": False,
+    "google_drive_storage_used": False,
+    "raw_downloads_committed": False,
+    "raw_archives_committed": False,
+    "raw_images_committed": False,
+    "raw_html_committed": False,
+    "raw_pdf_docx_committed": False,
+    "raw_audio_video_committed": False,
+    "raw_data_committed": False,
+    "generated_bundle_bodies_committed": False,
+    "generated_outputs_committed": False,
+    "codex_output_committed": False,
+    "third_party_raw_staged": False,
+    "third_party_raw_tracked_new": False,
+    "ocr_performed": False,
+    "ai_ml_interpretation_performed": False,
+    "stego_tool_execution_performed": False,
+    "image_forensics_performed": False,
+    "audio_analysis_performed": False,
+    "hypothesis_generation_performed": False,
+    "hypothesis_execution_performed": False,
+    "cuda_execution_performed": False,
+    "cuda_source_modified": False,
+    "new_cuda_kernel_added": False,
+    "full_p56_cuda_executed": False,
+    "unsolved_page_cuda_used": False,
+    "gpu_benchmark_performed": False,
+    "benchmark_execution_allowed": False,
+    "scored_experiment_executed": False,
+    "canonical_corpus_active": False,
+    "page_boundaries_final": False,
+    "method_status_upgraded": False,
+    "website_expansion_performed": False,
+    "solve_claim": False,
+}
+
 
 def common_record_flags() -> dict[str, Any]:
     """Return common guardrail fields for Stage 5AF records."""
@@ -233,4 +301,19 @@ def stage5ag_common_record_flags() -> dict[str, Any]:
         "ci_network_required": False,
         "new_cuda_kernels_added": 0,
         **STAGE5AG_FALSE_FLAGS,
+    }
+
+
+def stage5ai_common_record_flags() -> dict[str, Any]:
+    """Return common guardrail fields for Stage 5AI records."""
+
+    return {
+        "stage_id": STAGE5AI_ID,
+        "source_stage_id": STAGE5AI_SOURCE_STAGE_ID,
+        "local_inventory_stage_id": STAGE5AI_LOCAL_INVENTORY_STAGE_ID,
+        "no_solve_claim": True,
+        "no_gpu_ci_safe": True,
+        "ci_network_required": False,
+        "new_cuda_kernels_added": 0,
+        **STAGE5AI_FALSE_FLAGS,
     }

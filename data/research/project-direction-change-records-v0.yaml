@@ -163,3 +163,12 @@ records:
     source: User Stage 5AH direction, Stage 5AH stage-ledger report, operational-file-map coverage report, current/next-stage consistency report, and summary records.
     affected_docs: [README.md, STATUS.md, ROADMAP.md, AGENTS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md, docs/roadmap/staged-plan.md, docs/onboarding/operational-file-map.md, docs/onboarding/source-of-truth-map.md, docs/onboarding/codex-navigation-map.md, docs/onboarding/source-harvester-workflow.md, docs/onboarding/local-source-inventory-workflow.md]
     notes: Stage 5AH did not process raw third-party sources, fetch from the network, clone online repositories, use Google Drive storage, run Deep Research, execute CUDA, benchmark, run scored experiments, expand the website, or make solve claims.
+  - record_type: project_direction_change_record
+    change_id: stage5ai-deep-research-source-inventory-next
+    date_or_stage: stage-5ai
+    previous_direction: Curate local research-bundle metadata from Stage 5AG inventory after the Stage 5AH documentation quality gate.
+    new_direction: Select Stage 5AJ Deep Research source inventory and reliability prompt, using Stage 5AI curated bundle manifests, source cards, content indexes, missing-source plans, and Deep-Research pack metadata.
+    reason: Stage 5AI produced 10 curated bundle skeletons and compact metadata, with 8 bundles ready for private Deep Research and 0 public website-ready bundles, so the next safe step is source reliability review rather than website expansion, experiments, CUDA, or source fetching.
+    source: Stage 5AI curated research-bundle summary, readiness, guardrail, missing-source, Deep-Research pack, and next-stage decision records.
+    affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md, docs/onboarding/deep-research-handoff-map.md, docs/onboarding/deep-research-bundle-workflow.md, docs/onboarding/source-harvester-workflow.md, docs/onboarding/local-source-inventory-workflow.md]
+    notes: Stage 5AI did not run Deep Research, fetch from the network, clone online repositories, use Google Drive storage, process raw sources into committed data, execute hypotheses, run CUDA, benchmark, run scored experiments, expand the website, or make solve claims.

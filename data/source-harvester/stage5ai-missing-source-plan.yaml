@@ -1,0 +1,343 @@
+record_type: stage5ai_missing_source_plan
+schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+stage_id: stage-5ai
+source_stage_id: stage-5ah
+local_inventory_stage_id: stage-5ag
+missing_source_records: 20
+missing_a1_a2_count: 18
+manual_export_count: 3
+online_fetch_later_count: 8
+repo_clone_later_count: 6
+targeted_forum_capture_later_count: 1
+optional_low_priority_count: 2
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+solve_claim: false
+records:
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: chapterized_rune_map_google_doc
+  source_type: google_doc
+  priority: A2
+  bundle_ids:
+  - 07-boundary-mobius-repeated-fragments
+  next_action: manual_export
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: cicada_boards_forum
+  source_type: forum_index
+  priority: A1
+  bundle_ids:
+  - 09-community-hypotheses
+  next_action: targeted_forum_capture_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: cicada_solvers_iddqd
+  source_type: github_repo
+  priority: A1
+  bundle_ids:
+  - 06-outguess-stego-hidden-formatting
+  next_action: repo_clone_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: cicada_solvers_isitcicada_repo
+  source_type: github_repo
+  priority: A2
+  bundle_ids:
+  - 01-signed-messages-and-authenticity
+  next_action: repo_clone_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: fandom_liber_primus_ideas
+  source_type: fandom_page
+  priority: A1
+  bundle_ids:
+  - 04-cuneiform-base60-base59
+  - 05-red-markers-and-visual-numerics
+  - 09-community-hypotheses
+  next_action: online_fetch_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: fandom_liber_primus_solved_pages
+  source_type: fandom_page
+  priority: A1
+  bundle_ids:
+  - 02-liber-primus-images-and-transcriptions
+  next_action: online_fetch_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: fandom_liber_primus_unsolved_pages
+  source_type: fandom_page
+  priority: A1
+  bundle_ids:
+  - 02-liber-primus-images-and-transcriptions
+  - 03-page-49-51-token-block
+  - 07-boundary-mobius-repeated-fragments
+  next_action: online_fetch_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: fandom_possible_hints_never_used
+  source_type: fandom_page
+  priority: A1
+  bundle_ids:
+  - 10-known-negative-retired-ideas
+  next_action: online_fetch_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: gamedetectives_academy
+  source_type: static_webpage
+  priority: C
+  bundle_ids:
+  - 10-known-negative-retired-ideas
+  next_action: optional_low_priority
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: gp_prime_view
+  source_type: static_webpage
+  priority: A1
+  bundle_ids:
+  - 08-tools-gpprime-dwh-gematria
+  next_action: online_fetch_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: isitcicada_pgp_checker
+  source_type: browser_tool
+  priority: A2
+  bundle_ids:
+  - 01-signed-messages-and-authenticity
+  next_action: manual_export
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: joutguess_rebirth
+  source_type: static_webpage
+  priority: A2
+  bundle_ids:
+  - 06-outguess-stego-hidden-formatting
+  next_action: online_fetch_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: khan_cryptography
+  source_type: static_webpage
+  priority: C
+  bundle_ids:
+  - 10-known-negative-retired-ideas
+  next_action: optional_low_priority
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: mortlach_rune_decrypter_prime
+  source_type: github_repo
+  priority: A2
+  bundle_ids:
+  - 08-tools-gpprime-dwh-gematria
+  next_action: repo_clone_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: pastebin_vgmk330j_lp_runes_prime_values
+  source_type: pastebin
+  priority: A1
+  bundle_ids:
+  - 02-liber-primus-images-and-transcriptions
+  - 03-page-49-51-token-block
+  - 07-boundary-mobius-repeated-fragments
+  next_action: online_fetch_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: solved_page_google_sheet
+  source_type: google_sheet
+  priority: A1
+  bundle_ids:
+  - 02-liber-primus-images-and-transcriptions
+  next_action: manual_export
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: spiderpuck_pastebin_profile
+  source_type: pastebin
+  priority: A2
+  bundle_ids:
+  - 09-community-hypotheses
+  next_action: online_fetch_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: taiiwo_cicada
+  source_type: github_repo
+  priority: A2
+  bundle_ids:
+  - 08-tools-gpprime-dwh-gematria
+  next_action: repo_clone_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: tweqx_3301_hash_alarm
+  source_type: github_repo
+  priority: A1
+  bundle_ids:
+  - 08-tools-gpprime-dwh-gematria
+  next_action: repo_clone_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false
+- record_type: stage5ai_missing_source_plan_record
+  schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: tweqx_dwh_hashkit
+  source_type: github_repo
+  priority: A1
+  bundle_ids:
+  - 08-tools-gpprime-dwh-gematria
+  next_action: repo_clone_later
+  network_fetch_performed: false
+  online_repo_clone_performed: false
+  google_drive_storage_used: false
+  manual_review_required: true
+  solve_claim: false

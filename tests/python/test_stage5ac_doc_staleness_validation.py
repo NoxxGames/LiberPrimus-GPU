@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5ah_latest_and_stage5ai_next() -> None:
+def test_operational_docs_use_stage5ai_latest_and_stage5aj_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5AH operational documentation staleness coverage repair" in status
-    assert "Next recommended prompt: Stage 5AI" in status
-    assert "Latest completed stage: Stage 5AH" in staged_plan
-    assert "Current planning focus: Stage 5AI" in staged_plan
+    assert "Stage 5AI curated research bundle extraction" in status
+    assert "Next recommended prompt: Stage 5AJ" in status
+    assert "Latest completed stage: Stage 5AI" in staged_plan
+    assert "Current planning focus: Stage 5AJ" in staged_plan

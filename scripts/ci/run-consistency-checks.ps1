@@ -24,14 +24,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5AH" `
-        --expected-next-stage "Stage 5AI" `
+        --expected-latest-stage "Stage 5AI" `
+        --expected-next-stage "Stage 5AJ" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5AH" `
-        --expected-next-stage "Stage 5AI" `
+        --expected-latest-stage "Stage 5AI" `
+        --expected-next-stage "Stage 5AJ" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -46,14 +46,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AH",
+        expected_latest_stage="Stage 5AI",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AH",
+            "expected_latest_stage": "Stage 5AI",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -1959,6 +1959,17 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --next-stage-decision $Stage5AGDecision `
         --summary $Stage5AGSummary `
         --results-dir $Stage5AGOut
+
+    if (Test-Path "research-inputs\stage5ai\master_manifest.yaml") {
+        Write-Host "Validating Stage 5AI curated research bundle records"
+        & $Python -m libreprimus.cli source-harvester validate-stage5ai
+    } else {
+        Write-Host "Skipping Stage 5AI generated bundle validation; ignored local bundle bodies are absent"
+    }
+    $Stage5AIBundleManifest = "research-inputs/stage5ai/master_manifest.yaml"
+    $Stage5AIGeneratedReport = Join-Path (Join-Path (Join-Path "experiments" "results") "research-bundles") "stage5ai\summary.json"
+    git check-ignore -q $Stage5AIBundleManifest
+    git check-ignore -q $Stage5AIGeneratedReport
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

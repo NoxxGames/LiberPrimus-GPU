@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5AH - operational documentation staleness coverage repair and README stage-ledger audit.
-- Current planning focus: Stage 5AI - curated research bundle extraction from local source inventory.
+- Latest completed stage: Stage 5AI - curated research bundle extraction from local source inventory.
+- Current planning focus: Stage 5AJ - Deep Research source inventory and reliability prompt.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -22,12 +22,13 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 - Observation records: review-gated; review-only observations are not experiment
   seeds without explicit acceptance and promotion.
 - Document staleness checks: active through `libreprimus consistency check-doc-staleness`.
+- Curated source bundles: Stage 5AI metadata is complete; generated bundle bodies stay ignored.
 
 ## Where To Start
 
 - User or researcher: read `README.md`, `STATUS.md`, and `docs/roadmap/staged-plan.md`.
 - Codex: read `AGENTS.md`, `STATUS.md`, `ROADMAP.md`, this onboarding folder, and the relevant stage logs.
-- Deep Research: read `docs/onboarding/deep-research-handoff-map.md` and use redacted/generated bundles only.
+- Deep Research: read `docs/onboarding/deep-research-handoff-map.md` and `docs/onboarding/deep-research-bundle-workflow.md`; use redacted/generated bundles and Stage 5AI source-card metadata only.
 - Source harvester: read `docs/onboarding/source-harvester-workflow.md` and `docs/onboarding/local-source-inventory-workflow.md`; use local ignored roots only and do not use Google Drive as project storage.
 - Contributor: read `CONTRIBUTING.md`, `TESTING.md`, and `docs/onboarding/contributor-module-map.md`.
 - Reviewer: read `docs/onboarding/source-of-truth-map.md`, `docs/experiments/method-retirement-ledger.md`, and the relevant research log.

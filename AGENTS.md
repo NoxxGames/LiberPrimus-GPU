@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AH - operational documentation staleness coverage repair and README stage-ledger audit.
+Current completed stage: Stage 5AI - curated research bundle extraction from local source inventory.
 
-Current work: Stage 5AI - curated research bundle extraction from local source inventory. Stage 5AH repaired README stage-ledger and operational doc-staleness coverage before extraction; it did not process raw third-party sources, fetch from the network, clone online repositories, use Google Drive storage, run Deep Research, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.
+Current work: Stage 5AJ - Deep Research source inventory and reliability prompt. Stage 5AI created ignored curated research-input bundle scaffolds and compact metadata for Deep Research handoff; it did not run Deep Research, publish website content, process raw sources into committed data, fetch from the network, clone online repositories, use Google Drive storage, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.
 
 Current project state:
 
@@ -113,7 +113,9 @@ Current project state:
 - Stage 5AG local source inventory records are compact metadata only. They may hash/list user-provided ignored `third_party/` files and archives, but raw bytes, extracted bodies, archives, images, PDFs, audio/video, generated full inventories, and generated bundles remain ignored and uncommitted.
 - Stage 5AG did not use Google Drive storage, network fetching, online cloning, Deep Research, hypothesis generation, CUDA, benchmarks, scored experiments, website expansion, or solve claims.
 - Stage 5AH doc-staleness repair records are process-quality metadata only. Stage-ledger checks, operational-file-map coverage, and current/next-stage reports must pass before curated extraction resumes.
-- Future Stage 5AI curated extraction must consume the Stage 5AG inventory and Stage 5AH clean staleness records, and must keep extraction outputs ignored unless a future prompt explicitly promotes compact metadata.
+- Stage 5AI curated extraction records are source-provenance metadata only. Generated bundle bodies under `research-inputs/stage5ai/` and reports under `experiments/results/research-bundles/stage5ai/` remain ignored except README/.gitkeep scaffolds.
+- Stage 5AI website-ingest records are metadata only and do not authorize website expansion.
+- Stage 5AI Deep Research pack records are private handoff metadata only; Stage 5AJ must consume bundle manifests/cards/indexes rather than raw `third_party/` paths.
 - Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
 - Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
 - Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
@@ -936,6 +938,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Use `libreprimus consistency check-stage-ledger-staleness`, `check-operational-file-map-coverage`, `check-current-next-stage-consistency`, and `validate-stage5ah-doc-staleness` for future current-state documentation changes.
 - Stage 5AH generated reports under `experiments/results/doc-staleness/stage5ah/` and `codex-output/**` handoffs remain ignored and must not be staged.
 - Stage 5AH must not process raw third-party sources, fetch from the network, clone online repositories, use Google Drive storage, run Deep Research, run native/CUDA execution, modify CUDA source, add kernels, run benchmarks, execute scored experiments, expand the website, or make solve claims.
+
+## Stage 5AI Curated Research Bundle Rules
+
+- Stage 5AI is local source-curation metadata, not Deep Research execution or experiment execution.
+- Stage 5AI generated bundle bodies under `research-inputs/stage5ai/` remain ignored; commit only compact metadata, schemas, docs, tests, and README/.gitkeep scaffolds.
+- Stage 5AI generated reports under `experiments/results/research-bundles/stage5ai/` and `codex-output/**` handoffs remain ignored and must not be staged.
+- Website-ingest records from Stage 5AI are metadata only; public website-ready count remains `0` until a future publication review stage explicitly scopes website expansion.
+- Stage 5AJ Deep Research should consume Stage 5AI bundle manifests, source cards, content indexes, known-question files, and do-not-assume files, not raw `third_party/` paths.
+- Stage 5AI must not fetch from the network, clone online repositories, use Google Drive storage, commit raw third-party material, run OCR/AI/ML/image forensics/stego/audio tools, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, activate the canonical corpus, finalise page boundaries, upgrade method status, or make solve claims.
 
 ## Stage 5AC Prime-Minus-One CUDA Synthetic Reporting Rules
 

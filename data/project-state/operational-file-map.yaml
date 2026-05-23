@@ -5,7 +5,7 @@ records:
   category: operational_status_doc
   purpose: Public repository entrypoint and current boundary summary.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_stage_when_state_changes
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -17,7 +17,7 @@ records:
   category: operational_status_doc
   purpose: Concise current operational status.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -29,7 +29,7 @@ records:
   category: roadmap_doc
   purpose: High-level current direction with staged-plan pointer.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -41,7 +41,7 @@ records:
   category: policy_doc
   purpose: Codex operational policy and current stage guardrails.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -53,7 +53,7 @@ records:
   category: architecture_doc
   purpose: CUDA guardrails and current acceleration state.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_cuda_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -65,7 +65,7 @@ records:
   category: architecture_doc
   purpose: Benchmark policy and readiness notes.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_benchmark_or_cuda_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -77,7 +77,7 @@ records:
   category: policy_doc
   purpose: Experiment execution and generated-output policy.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_experiment_policy_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -89,7 +89,7 @@ records:
   category: policy_doc
   purpose: Result and score-summary publication policy.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_result_surface_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -101,7 +101,7 @@ records:
   category: policy_doc
   purpose: Validation commands and test boundaries.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_cli_or_ci_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -113,7 +113,7 @@ records:
   category: reference_only_data_record
   purpose: Method-family status and cipher module boundaries.
   source_of_truth_rank: 3
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: method_status_changes
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -125,7 +125,7 @@ records:
   category: roadmap_doc
   purpose: Durable stage timeline, current state, and next-stage direction.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -137,7 +137,7 @@ records:
   category: operational_status_doc
   purpose: Newcomer entrypoint to current project state.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_stage_when_state_changes
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -149,7 +149,7 @@ records:
   category: operational_status_doc
   purpose: Map of authoritative docs and records.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_source_of_truth_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -161,7 +161,7 @@ records:
   category: operational_status_doc
   purpose: Codex navigation guide for stage work.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_cli_or_stage_policy_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -173,7 +173,7 @@ records:
   category: operational_status_doc
   purpose: Deep Research handoff and deferral map.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_research_handoff_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -185,7 +185,7 @@ records:
   category: operational_status_doc
   purpose: Contributor module ownership guide.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_module_surface_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -197,7 +197,7 @@ records:
   category: policy_doc
   purpose: Private, raw, and generated output path policy.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_new_generated_path
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -209,7 +209,7 @@ records:
   category: operational_status_doc
   purpose: Human-readable mirror of this operational file map.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_operational_file_map_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: mirror_of_data_project_state_operational_file_map
@@ -312,7 +312,7 @@ records:
   category: wiki_source_mirror
   purpose: Wildcard policy record for wiki-source tutorial mirrors.
   source_of_truth_rank: 4
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: when_tutorial_changes
   mutable_or_reference_only: mutable_mirror
   mirror_or_generated_relationships: mirror_of_tutorials
@@ -325,7 +325,7 @@ records:
   purpose: Wildcard policy record for active and superseded project-state source-of-truth
     YAML records.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_source_of_truth_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -337,7 +337,7 @@ records:
   category: active_data_record
   purpose: Active Stage 5AH doc-staleness source-of-truth record.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_doc_staleness_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -349,7 +349,7 @@ records:
   category: active_data_record
   purpose: Stage 5AH before/after staleness findings record.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_doc_staleness_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -361,7 +361,7 @@ records:
   category: active_data_record
   purpose: Stage 5AH stage-ledger coverage summary.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_doc_staleness_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -373,7 +373,7 @@ records:
   category: active_data_record
   purpose: Stage 5AH operational-file-map coverage summary.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_doc_staleness_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -385,7 +385,7 @@ records:
   category: active_data_record
   purpose: Stage 5AH next-stage decision record.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_doc_staleness_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -397,7 +397,7 @@ records:
   category: active_data_record
   purpose: Stage 5AH aggregate doc-staleness summary.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_doc_staleness_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -409,7 +409,7 @@ records:
   category: active_data_record
   purpose: Stage 5AG source-harvester record consumed by Stage 5AH and Stage 5AI planning.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: when_source_harvester_state_changes
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -421,7 +421,7 @@ records:
   category: active_data_record
   purpose: Stage 5AG source-harvester record consumed by Stage 5AH and Stage 5AI planning.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: when_source_harvester_state_changes
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -433,7 +433,7 @@ records:
   category: operational_status_doc
   purpose: Source-harvester workflow and local-only source policy.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_source_harvester_policy_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -445,7 +445,7 @@ records:
   category: operational_status_doc
   purpose: Stage 5AG/5AI local source inventory and extraction-prep workflow.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ah
+  last_meaningful_update_stage: stage-5ai
   expected_update_frequency: every_source_harvester_policy_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -453,3 +453,51 @@ records:
   owner_context: source_operator
   notes: Stage 5AH stage-ledger and current-state checks cover this source-harvester
     workflow doc.
+- path: data/source-harvester/stage5ai-curated-research-bundle-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AI curated research-bundle extraction aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ai
+  expected_update_frequency: when_source_harvester_state_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Stage 5AI source-harvester record selecting Stage 5AJ private Deep Research
+    source inventory and reliability review.
+- path: data/source-harvester/stage5ai-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5AI next-stage decision for private Deep Research source review.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ai
+  expected_update_frequency: when_source_harvester_state_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Must keep Stage 5AJ selected without implying website expansion, source
+    fetching, experiment execution, CUDA, or solve claims.
+- path: docs/onboarding/deep-research-bundle-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5AI private curated bundle handoff workflow for Deep Research.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ai
+  expected_update_frequency: every_source_harvester_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: source_operator
+  notes: Generated Stage 5AI bundle bodies remain ignored and are not public website
+    publication artefacts.
+- path: docs/reference/source-harvester-curated-bundles-cli.md
+  category: operational_status_doc
+  purpose: Stage 5AI curated source-harvester CLI reference.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5ai
+  expected_update_frequency: every_source_harvester_cli_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Documents source-card, bundle, content-index, website-ingest, Deep-Research
+    pack, missing-source, readiness, summary, and validation commands.

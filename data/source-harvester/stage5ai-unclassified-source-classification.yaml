@@ -1,0 +1,280 @@
+record_type: stage5ai_unclassified_source_classification
+schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+stage_id: stage-5ai
+source_stage_id: stage-5ah
+local_inventory_stage_id: stage-5ag
+classification_records: 14
+provisionally_classified_count: 11
+needs_review_count: 3
+private_or_sensitive_count: 1
+evidence_status_upgraded: false
+solve_claim: false
+records:
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_1348008594460774501_png
+  source_path: third_party/1348008594460774501.png
+  provisional_bundle_ids:
+  - unknown-review-needed
+  provisional_clue_categories:
+  - unknown_visual_clue_review_needed
+  classification_status: needs_review
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_community_sources_of_datasets_depiction_images_plausable_methods_worth_exploring_md
+  source_path: third_party/Community-sources-of-datasets-depiction-images-plausable-methods-worth-exploring.md
+  provisional_bundle_ids:
+  - 09-community-hypotheses
+  provisional_clue_categories:
+  - source_discovery_notes
+  classification_status: provisionally_classified
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_communityobservations
+  source_path: third_party/CommunityObservations
+  provisional_bundle_ids:
+  - 09-community-hypotheses
+  provisional_clue_categories:
+  - discord_community_hypothesis_leads
+  classification_status: provisionally_classified
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_cunieform_numbers_png
+  source_path: third_party/cunieform_numbers.png
+  provisional_bundle_ids:
+  - 04-cuneiform-base60-base59
+  provisional_clue_categories:
+  - cuneiform_base60_base59
+  classification_status: provisionally_classified
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_depictions_modified_png
+  source_path: third_party/depictions_modified.png
+  provisional_bundle_ids:
+  - 05-red-markers-and-visual-numerics
+  provisional_clue_categories:
+  - modified_image_review_only
+  classification_status: provisionally_classified
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_depictions_original_png
+  source_path: third_party/depictions_original.png
+  provisional_bundle_ids:
+  - 05-red-markers-and-visual-numerics
+  provisional_clue_categories:
+  - depictions_tree_cicada_mayfly_wing_spiral_cuneiform
+  classification_status: provisionally_classified
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_fib421_jpg
+  source_path: third_party/Fib421.jpg
+  provisional_bundle_ids:
+  - 09-community-hypotheses
+  - 10-known-negative-retired-ideas
+  provisional_clue_categories:
+  - bigram_fibonacci_421_review_needed
+  - false_positive_control_candidate
+  classification_status: needs_review
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_interconnected_chapters
+  source_path: third_party/interconnected-chapters
+  provisional_bundle_ids:
+  - 07-boundary-mobius-repeated-fragments
+  provisional_clue_categories:
+  - interconnected_chapters
+  classification_status: provisionally_classified
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_liberprimusdiscordchats
+  source_path: third_party/LiberPrimusDiscordChats
+  provisional_bundle_ids:
+  - 09-community-hypotheses
+  provisional_clue_categories:
+  - discord_private_or_sensitive
+  classification_status: provisionally_classified_private
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: blocked_private_or_sensitive
+  website_publication_allowed: false
+  redaction_required: true
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_more_numbers_mixed_with_runes_page_png
+  source_path: third_party/more_numbers_mixed_with_runes_page.png
+  provisional_bundle_ids:
+  - 05-red-markers-and-visual-numerics
+  provisional_clue_categories:
+  - mixed_numeric_rune_page
+  classification_status: provisionally_classified
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_page_modified_example_png
+  source_path: third_party/page_modified_example.png
+  provisional_bundle_ids:
+  - 06-outguess-stego-hidden-formatting
+  provisional_clue_categories:
+  - modified_page_artifact_claim
+  classification_status: provisionally_classified
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_repeat_rune_png
+  source_path: third_party/repeat-rune.png
+  provisional_bundle_ids:
+  - 07-boundary-mobius-repeated-fragments
+  provisional_clue_categories:
+  - dju_bei_repeat
+  classification_status: provisionally_classified
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_rune_pixel_diff_example_png
+  source_path: third_party/rune_pixel_diff_example.png
+  provisional_bundle_ids:
+  - 05-red-markers-and-visual-numerics
+  provisional_clue_categories:
+  - rune_pixel_variants
+  classification_status: provisionally_classified
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
+- record_type: stage5ai_unclassified_source_classification_record
+  schema: schemas/source-harvester/unclassified-source-classification-v0.schema.json
+  stage_id: stage-5ai
+  source_stage_id: stage-5ah
+  local_inventory_stage_id: stage-5ag
+  source_id: local_unclassified_sourcesnapshots
+  source_path: third_party/SourceSnapshots
+  provisional_bundle_ids:
+  - cross-bundle-source-snapshots
+  provisional_clue_categories:
+  - source_lock_snapshots_review_needed
+  classification_status: needs_review
+  evidence_status_upgraded: false
+  usable_as_evidence: false
+  publication_status: metadata_only
+  website_publication_allowed: false
+  redaction_required: false
+  review_required: true
+  solve_claim: false
