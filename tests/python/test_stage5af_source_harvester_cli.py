@@ -10,6 +10,10 @@ from libreprimus.source_harvester.policy import is_allowed_output_root
 runner = CliRunner()
 
 
+def _normalised_cli_output(text: str) -> str:
+    return text.replace("_", "-")
+
+
 def test_stage5af_cli_builds_and_validates(tmp_path: Path) -> None:
     out = tmp_path / "out"
     dry = tmp_path / "dry.yaml"
@@ -103,7 +107,7 @@ def test_stage5af_cli_fetch_guards() -> None:
         ],
     )
     assert no_network.exit_code != 0
-    assert "allow-network" in no_network.output
+    assert "allow-network" in _normalised_cli_output(no_network.output)
 
     no_downloads = runner.invoke(
         app,
@@ -119,7 +123,7 @@ def test_stage5af_cli_fetch_guards() -> None:
         ],
     )
     assert no_downloads.exit_code != 0
-    assert "allow-downloads" in no_downloads.output
+    assert "allow-downloads" in _normalised_cli_output(no_downloads.output)
 
     committed_path = runner.invoke(
         app,
