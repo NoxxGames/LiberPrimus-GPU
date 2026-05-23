@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AD - bounded p56 CUDA parity run.
+Current completed stage: Stage 5AD-fix - bounded p56 CUDA parity mismatch investigation.
 
-Current work: Stage 5AD-fix - bounded p56 CUDA parity mismatch investigation. Stage 5AD ran exactly the bounded Stage 5Z p56 validation vector through the existing prime-minus-one CUDA kernel, produced `failed_hash_mismatch` against the Stage 5X expected hash, and selected a mismatch investigation before any expansion.
+Current work: Stage 5AE - corrected bounded p56 CUDA formula parity reporting and reference-contract repair. Stage 5AD-fix proved the Stage 5AD CUDA/formula hash matches the Stage 5X formula hash and not the Stage 5L candidate-major expected hash; Stage 5AD remains a failed historical parity record until corrected reporting is explicitly written.
 
 Current project state:
 
@@ -937,7 +937,16 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 5AD did not add CUDA kernels, modify CUDA-facing `.cu` or `.cuh` source, alter device arithmetic, run full p56, run unsolved pages, benchmark, execute scored experiments, publish generated bodies, upgrade method status, or make a solve claim.
 - Full p56 remains `blocked_full_p56_token_buffer_missing`; scored experiments remain `deferred_manifest_gate_required`; website expansion remains a future unnumbered project.
 - Stage 5AD generated reports under `experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/` and `codex-output/**` handoffs remain ignored and must not be staged.
-- The next selected Codex prompt is Stage 5AD-fix bounded p56 CUDA parity mismatch investigation; do not widen CUDA scope before that mismatch is understood.
+- Stage 5AD-fix has now diagnosed the mismatch; Stage 5AD itself remains preserved as a failed historical parity record.
+
+## Stage 5AD-fix Bounded P56 Mismatch Rules
+
+- Stage 5AD-fix recorded that the Stage 5AD CUDA/formula hash `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387` matches the Stage 5X formula hash.
+- Stage 5AD-fix recorded that the Stage 5AD expected hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87` follows Stage 5L candidate-major reference material, not formula-output material.
+- The primary root cause is `expected_hash_reference_lineage_mismatch`; reference-contract and hash-material policy repair are required, but CUDA kernel repair is not supported by current evidence.
+- Stage 5AD-fix does not run CUDA, change CUDA source, add kernels, run full p56, run unsolved pages, benchmark, execute scored experiments, publish generated bodies, upgrade method status, or make a solve claim.
+- Future Stage 5AE may repair corrected bounded p56 CUDA formula parity reporting and reference-contract metadata only; it must preserve Stage 5AD as failed and must not widen scope.
+- Stage 5AD-fix generated reports under `experiments/results/prime-minus-one-bounded-p56-mismatch/stage5ad-fix/` and `codex-output/**` handoffs remain ignored and must not be staged.
 
 ## Stage 3W State Consolidation Rules
 

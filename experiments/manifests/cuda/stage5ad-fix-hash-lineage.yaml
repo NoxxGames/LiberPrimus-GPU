@@ -1,0 +1,16 @@
+manifest_id: stage5ad-fix-hash-lineage
+stage_id: stage-5ad-fix
+purpose: trace the Stage 5AD expected, CUDA/formula, and synthetic reference hashes
+execution_enabled: false
+cuda_execution_performed: false
+raw_data_required: false
+raw_data_processed: false
+generated_outputs_committed: false
+no_solve_claim: true
+hashes:
+  stage5ad_expected_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  stage5ad_computed_cuda_hash: 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387
+  stage5x_formula_hash: 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387
+hash_material_boundary:
+  formula_output_hash_is_not_candidate_major_reference_hash: true
+  reference_contract_repair_required: true

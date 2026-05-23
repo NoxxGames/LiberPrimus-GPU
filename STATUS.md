@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AD bounded p56 CUDA parity run is complete.
+Stage 5AD-fix bounded p56 CUDA parity mismatch investigation is complete.
 
-Next recommended prompt: Stage 5AD-fix - bounded p56 CUDA parity mismatch investigation. Website expansion is deferred to a future unnumbered project.
+Next recommended prompt: Stage 5AE - corrected bounded p56 CUDA formula parity reporting and reference-contract repair. Website expansion is deferred to a future unnumbered project.
+
+## Completed in Stage 5AD-fix
+
+Stage 5AD-fix added the `libreprimus bounded-p56-mismatch` CLI, hash-lineage records, token/stream/formula trace records, hash-material records, reference-contract records, root-cause records, repair-readiness records, guardrail records, next-stage decision records, Stage 5AD-fix manifests, generated ignored reports, schemas, tests, documentation, research-synthesis updates, consistency integration, and a detailed ignored Codex completion handoff.
+
+Local Stage 5AD-fix summary: hash-lineage records `3`, token trace records `1`, stream trace records `1`, formula trace records `1`, hash-material records `2`, reference-contract records `1`, root-cause records `4`, repair-readiness records `3`, guardrail records `1`, next-stage decision records `11`, primary root cause `expected_hash_reference_lineage_mismatch`, Stage 5AD expected hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87`, Stage 5AD computed CUDA/formula hash `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`, Stage 5X formula hash `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`, CUDA/formula matches Stage 5X formula `true`, CUDA/formula matches Stage 5W/5L expected reference `false`, reference-contract repair required `true`, CUDA kernel repair required `false`, hash-material policy repair required `true`, Stage 5AD historical failure preserved `true`, CUDA execution `false`, CUDA source modified `false`, new CUDA kernels added `0`, benchmarks `false`, scored experiments `false`, website expansion `false`, raw data processed `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5AD-fix is diagnostic infrastructure. It proves a hash-material/reference-contract mismatch, not a solve and not a CUDA performance result. It does not overwrite Stage 5AD, run CUDA, run full p56, run unsolved pages, modify CUDA device arithmetic, add kernels, run benchmarks, execute scored experiments, publish generated bodies, upgrade method status, expand the website, activate the canonical corpus, finalise page boundaries, or make a solve claim.
 
 ## Completed in Stage 5AD
 

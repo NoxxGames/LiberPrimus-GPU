@@ -118,3 +118,12 @@ records:
     source: Stage 5AD run, parity, summary, device-subset audit, and next-stage decision records.
     affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, CUDA_NOTES.md, BENCHMARKS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md]
     notes: Full p56, unsolved pages, benchmarks, scored experiments, website expansion, generated-body publication, method-status upgrades, and solve claims remain blocked.
+  - record_type: project_direction_change_record
+    change_id: stage5ad-fix-corrected-formula-reporting
+    date_or_stage: stage-5ad-fix
+    previous_direction: Decide whether the bounded p56 CUDA mismatch requires CUDA kernel repair, hash-material policy repair, or another diagnostic follow-up.
+    new_direction: Select Stage 5AE corrected bounded p56 CUDA formula parity reporting and reference-contract repair, while preserving Stage 5AD as a historical failed-hash record.
+    reason: Stage 5AD-fix shows that hash 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387 matches the Stage 5X formula hash and Stage 5AD CUDA/formula hash, while hash 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87 is linked to Stage 5L/5X reference hash material.
+    source: Stage 5AD-fix hash-lineage, formula-trace, hash-material, reference-contract, root-cause, repair-readiness, guardrail, next-stage-decision, and summary records.
+    affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, CUDA_NOTES.md, BENCHMARKS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md]
+    notes: CUDA kernel repair is not selected; reference-contract and hash-material policy repair are selected. Full p56, unsolved pages, benchmarks, scored experiments, website expansion, generated-body publication, method-status upgrades, and solve claims remain blocked.

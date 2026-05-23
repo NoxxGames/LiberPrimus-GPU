@@ -1,0 +1,22 @@
+manifest_id: stage5ad-fix-bounded-p56-mismatch
+stage_id: stage-5ad-fix
+purpose: bounded p56 CUDA parity mismatch investigation
+execution_enabled: false
+cuda_execution_performed: false
+bounded_p56_cuda_executed: false
+full_p56_cuda_executed: false
+unsolved_page_cuda_used: false
+benchmark_execution_allowed: false
+scored_experiment_execution_allowed: false
+raw_data_required: false
+raw_data_processed: false
+generated_outputs_committed: false
+no_solve_claim: true
+source_records:
+  - data/cuda/stage5ad-bounded-p56-cuda-run.yaml
+  - data/cuda/stage5x-prime-minus-one-native-run.yaml
+  - data/cuda/stage5w-prime-minus-one-candidate-batch-mapping.yaml
+  - data/cuda/stage5l-gematria-solved-fixture-native-parity.yaml
+outputs:
+  committed_summary: data/cuda/stage5ad-fix-bounded-p56-mismatch-summary.yaml
+  ignored_reports: experiments/results/prime-minus-one-bounded-p56-mismatch/stage5ad-fix/

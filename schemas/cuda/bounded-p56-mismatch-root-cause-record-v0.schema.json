@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/bounded-p56-mismatch-root-cause-record-v0.schema.json",
+  "title": "Stage 5AD-fix bounded p56 mismatch root cause record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "root_cause_record_id", "cause_id", "primary_root_cause", "confidence", "no_solve_claim", "solve_claim", "cuda_execution_performed", "generated_outputs_committed", "raw_data_processed", "new_cuda_kernels_added"],
+  "properties": {
+    "record_type": {"const": "bounded_p56_mismatch_root_cause_record"},
+    "stage_id": {"const": "stage-5ad-fix"},
+    "root_cause_record_id": {"type": "string"},
+    "cause_id": {"type": "string"},
+    "primary_root_cause": {"type": "boolean"},
+    "confidence": {"enum": ["low", "medium", "high"]},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0}
+  },
+  "additionalProperties": true
+}

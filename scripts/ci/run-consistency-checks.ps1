@@ -1659,6 +1659,67 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5ADSummary `
         --results-dir $Stage5ADOut
 
+    Write-Host "Running Stage 5AD-fix bounded p56 mismatch temp output"
+    $Stage5ADFixOut = Join-Path $TempDir "stage5ad-fix-bounded-p56-mismatch"
+    $Stage5ADFixHash = Join-Path $TempDir "stage5ad-fix-bounded-p56-mismatch-hash-lineage.yaml"
+    $Stage5ADFixToken = Join-Path $TempDir "stage5ad-fix-bounded-p56-mismatch-token-trace.yaml"
+    $Stage5ADFixStream = Join-Path $TempDir "stage5ad-fix-bounded-p56-mismatch-stream-trace.yaml"
+    $Stage5ADFixFormula = Join-Path $TempDir "stage5ad-fix-bounded-p56-mismatch-formula-trace.yaml"
+    $Stage5ADFixMaterial = Join-Path $TempDir "stage5ad-fix-bounded-p56-mismatch-hash-material.yaml"
+    $Stage5ADFixContract = Join-Path $TempDir "stage5ad-fix-bounded-p56-mismatch-reference-contract.yaml"
+    $Stage5ADFixRoot = Join-Path $TempDir "stage5ad-fix-bounded-p56-mismatch-root-cause.yaml"
+    $Stage5ADFixRepair = Join-Path $TempDir "stage5ad-fix-bounded-p56-mismatch-repair-readiness.yaml"
+    $Stage5ADFixGuardrail = Join-Path $TempDir "stage5ad-fix-bounded-p56-mismatch-guardrail.yaml"
+    $Stage5ADFixDecision = Join-Path $TempDir "stage5ad-fix-bounded-p56-mismatch-next-stage-decision.yaml"
+    $Stage5ADFixSummary = Join-Path $TempDir "stage5ad-fix-bounded-p56-mismatch-summary.yaml"
+    & $Python -m libreprimus.cli bounded-p56-mismatch build-hash-lineage `
+        --hash-lineage-out $Stage5ADFixHash --out-dir $Stage5ADFixOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-mismatch build-token-trace `
+        --token-trace-out $Stage5ADFixToken --out-dir $Stage5ADFixOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-mismatch build-stream-trace `
+        --stream-trace-out $Stage5ADFixStream --out-dir $Stage5ADFixOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-mismatch build-formula-trace `
+        --formula-trace-out $Stage5ADFixFormula --out-dir $Stage5ADFixOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-mismatch build-hash-material-trace `
+        --hash-material-out $Stage5ADFixMaterial --out-dir $Stage5ADFixOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-mismatch build-reference-contract `
+        --reference-contract-out $Stage5ADFixContract --out-dir $Stage5ADFixOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-mismatch build-root-cause `
+        --root-cause-out $Stage5ADFixRoot --out-dir $Stage5ADFixOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-mismatch build-repair-readiness `
+        --repair-readiness-out $Stage5ADFixRepair --out-dir $Stage5ADFixOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-mismatch build-guardrails `
+        --guardrail-out $Stage5ADFixGuardrail --out-dir $Stage5ADFixOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-mismatch build-next-stage-decision `
+        --next-stage-decision-out $Stage5ADFixDecision --out-dir $Stage5ADFixOut --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-mismatch build-summary `
+        --hash-lineage $Stage5ADFixHash `
+        --token-trace $Stage5ADFixToken `
+        --stream-trace $Stage5ADFixStream `
+        --formula-trace $Stage5ADFixFormula `
+        --hash-material $Stage5ADFixMaterial `
+        --reference-contract $Stage5ADFixContract `
+        --root-cause $Stage5ADFixRoot `
+        --repair-readiness $Stage5ADFixRepair `
+        --guardrail $Stage5ADFixGuardrail `
+        --next-stage-decision $Stage5ADFixDecision `
+        --summary-out $Stage5ADFixSummary `
+        --out-dir $Stage5ADFixOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli bounded-p56-mismatch validate-stage5ad-fix `
+        --hash-lineage $Stage5ADFixHash `
+        --token-trace $Stage5ADFixToken `
+        --stream-trace $Stage5ADFixStream `
+        --formula-trace $Stage5ADFixFormula `
+        --hash-material $Stage5ADFixMaterial `
+        --reference-contract $Stage5ADFixContract `
+        --root-cause $Stage5ADFixRoot `
+        --repair-readiness $Stage5ADFixRepair `
+        --guardrail $Stage5ADFixGuardrail `
+        --next-stage-decision $Stage5ADFixDecision `
+        --summary $Stage5ADFixSummary `
+        --results-dir $Stage5ADFixOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

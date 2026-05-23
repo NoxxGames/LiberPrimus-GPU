@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/bounded-p56-mismatch-reference-contract-record-v0.schema.json",
+  "title": "Stage 5AD-fix bounded p56 mismatch reference contract record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "reference_contract_record_id", "contract_status", "cuda_formula_matches_stage5x_formula", "cuda_formula_matches_stage5w_expected", "reference_contract_repair_required", "cuda_kernel_repair_required", "hash_material_policy_repair_required", "no_solve_claim", "solve_claim", "cuda_execution_performed", "generated_outputs_committed", "raw_data_processed", "new_cuda_kernels_added"],
+  "properties": {
+    "record_type": {"const": "bounded_p56_mismatch_reference_contract_record"},
+    "stage_id": {"const": "stage-5ad-fix"},
+    "reference_contract_record_id": {"type": "string"},
+    "contract_status": {"const": "reference_hash_material_mismatch"},
+    "cuda_formula_matches_stage5x_formula": {"const": true},
+    "cuda_formula_matches_stage5w_expected": {"const": false},
+    "reference_contract_repair_required": {"const": true},
+    "cuda_kernel_repair_required": {"const": false},
+    "hash_material_policy_repair_required": {"const": true},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0}
+  },
+  "additionalProperties": true
+}

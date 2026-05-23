@@ -1647,6 +1647,75 @@ echo "Running Stage 5AD bounded p56 CUDA parity skipped-CUDA temp output"
     --summary "$tmp_dir/stage5ad-bounded-p56-cuda-parity-summary.yaml" \
     --results-dir "$tmp_dir/stage5ad-bounded-p56-cuda-parity"
 
+echo "Running Stage 5AD-fix bounded p56 mismatch temp output"
+"$python_bin" -m libreprimus.cli bounded-p56-mismatch build-hash-lineage \
+    --hash-lineage-out "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-hash-lineage.yaml" \
+    --out-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-mismatch build-token-trace \
+    --token-trace-out "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-token-trace.yaml" \
+    --out-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-mismatch build-stream-trace \
+    --stream-trace-out "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-stream-trace.yaml" \
+    --out-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-mismatch build-formula-trace \
+    --formula-trace-out "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-formula-trace.yaml" \
+    --out-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-mismatch build-hash-material-trace \
+    --hash-material-out "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-hash-material.yaml" \
+    --out-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-mismatch build-reference-contract \
+    --reference-contract-out "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-reference-contract.yaml" \
+    --out-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-mismatch build-root-cause \
+    --root-cause-out "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-root-cause.yaml" \
+    --out-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-mismatch build-repair-readiness \
+    --repair-readiness-out "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-repair-readiness.yaml" \
+    --out-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-mismatch build-guardrails \
+    --guardrail-out "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-guardrail.yaml" \
+    --out-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-mismatch build-next-stage-decision \
+    --next-stage-decision-out "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-next-stage-decision.yaml" \
+    --out-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-mismatch build-summary \
+    --hash-lineage "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-hash-lineage.yaml" \
+    --token-trace "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-token-trace.yaml" \
+    --stream-trace "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-stream-trace.yaml" \
+    --formula-trace "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-formula-trace.yaml" \
+    --hash-material "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-hash-material.yaml" \
+    --reference-contract "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-reference-contract.yaml" \
+    --root-cause "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-root-cause.yaml" \
+    --repair-readiness "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-repair-readiness.yaml" \
+    --guardrail "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-guardrail.yaml" \
+    --next-stage-decision "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-next-stage-decision.yaml" \
+    --summary-out "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-summary.yaml" \
+    --out-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli bounded-p56-mismatch validate-stage5ad-fix \
+    --hash-lineage "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-hash-lineage.yaml" \
+    --token-trace "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-token-trace.yaml" \
+    --stream-trace "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-stream-trace.yaml" \
+    --formula-trace "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-formula-trace.yaml" \
+    --hash-material "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-hash-material.yaml" \
+    --reference-contract "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-reference-contract.yaml" \
+    --root-cause "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-root-cause.yaml" \
+    --repair-readiness "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-repair-readiness.yaml" \
+    --guardrail "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-guardrail.yaml" \
+    --next-stage-decision "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-summary.yaml" \
+    --results-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

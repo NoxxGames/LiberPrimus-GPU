@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/bounded-p56-mismatch-guardrail-record-v0.schema.json",
+  "title": "Stage 5AD-fix bounded p56 mismatch guardrail record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "guardrail_record_id", "guardrail_status", "no_solve_claim", "solve_claim", "cuda_execution_performed", "generated_outputs_committed", "raw_data_processed", "new_cuda_kernels_added"],
+  "properties": {
+    "record_type": {"const": "bounded_p56_mismatch_guardrail_record"},
+    "stage_id": {"const": "stage-5ad-fix"},
+    "guardrail_record_id": {"type": "string"},
+    "guardrail_status": {"const": "all_stage5ad_fix_guardrails_preserved"},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0}
+  },
+  "additionalProperties": true
+}

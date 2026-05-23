@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/stage5ad-fix-bounded-p56-mismatch-summary-v0.schema.json",
+  "title": "Stage 5AD-fix bounded p56 mismatch summary",
+  "type": "object",
+  "required": ["record_type", "stage_id", "status", "primary_root_cause", "cuda_formula_matches_stage5x_formula", "cuda_formula_matches_stage5w_expected", "reference_contract_repair_required", "cuda_kernel_repair_required", "stage5ad_historical_failure_preserved", "no_solve_claim", "solve_claim", "cuda_execution_performed", "generated_outputs_committed", "raw_data_processed", "new_cuda_kernels_added"],
+  "properties": {
+    "record_type": {"const": "stage5ad_fix_bounded_p56_mismatch_summary"},
+    "stage_id": {"const": "stage-5ad-fix"},
+    "status": {"const": "complete"},
+    "primary_root_cause": {"const": "expected_hash_reference_lineage_mismatch"},
+    "cuda_formula_matches_stage5x_formula": {"const": true},
+    "cuda_formula_matches_stage5w_expected": {"const": false},
+    "reference_contract_repair_required": {"const": true},
+    "cuda_kernel_repair_required": {"const": false},
+    "stage5ad_historical_failure_preserved": {"const": true},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0}
+  },
+  "additionalProperties": true
+}

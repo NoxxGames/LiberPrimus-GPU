@@ -1,0 +1,100 @@
+records:
+- stage_id: stage-5ad-fix
+  source_stage_id: stage-5ad
+  source_native_stage_id: stage-5x
+  source_contract_stage_id: stage-5w
+  source_token_mapping_stage_id: stage-5l
+  source_cuda_contract_stage_id: stage-5z
+  source_synthetic_stage_id: stage-5aa
+  candidate_batch_abi_id: candidate_batch_abi_v0
+  cuda_contract_id: prime_minus_one_stream_cuda_contract_v0
+  kernel_id: prime_minus_one_stream_cuda_kernel_v0
+  kernel_entrypoint: prime_minus_one_stream_kernel_v0
+  validation_vector_id: stage5z-validation-p56-bounded-v0
+  mapping_id: stage5w-mapping-p56-stage4o-bounded-v0
+  fixture_id: p56-an-end-prime-minus-one
+  candidate_id: stage4o-prime-minus-one-an-v0
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  new_cuda_kernels_added: 0
+  device_kernel_arithmetic_modified: false
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  bounded_p56_cuda_executed: false
+  cuda_execution_performed: false
+  full_p56_cuda_executed: false
+  full_p56_cuda_allowed: false
+  unsolved_page_cuda_used: false
+  unsolved_page_cuda_allowed: false
+  real_liber_primus_cuda_data_used: false
+  raw_data_processed: false
+  gpu_benchmark_performed: false
+  benchmark_execution_allowed: false
+  performance_claim: false
+  speedup_claim: false
+  scored_experiment_executed: false
+  scored_experiment_execution_allowed: false
+  website_expansion_performed: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false
+  record_type: bounded_p56_mismatch_formula_trace_record
+  schema: schemas/cuda/bounded-p56-mismatch-formula-trace-record-v0.schema.json
+  formula_trace_record_id: stage5ad-fix-formula-trace-bounded-p56-v0
+  input_tokens:
+  - position: 0
+    token_kind: rune
+    transformable: true
+    index29: 25
+    raw_text: null
+  - position: 1
+    token_kind: rune
+    transformable: true
+    index29: 11
+    raw_text: null
+  stream_values_used:
+  - 1
+  - 2
+  output_tokens:
+  - position: 0
+    token_kind: rune
+    transformable: true
+    index29: 24
+    raw_text: null
+  - position: 1
+    token_kind: rune
+    transformable: true
+    index29: 9
+    raw_text: null
+  per_token_trace:
+  - position: 0
+    input_index29: 25
+    stream_value: 1
+    formula: (input_index29 - stream_value) mod 29
+    output_index29: 24
+    expected_formula_output_index29: 24
+    formula_match: true
+  - position: 1
+    input_index29: 11
+    stream_value: 2
+    formula: (input_index29 - stream_value) mod 29
+    output_index29: 9
+    expected_formula_output_index29: 9
+    formula_match: true
+  formula_output_token_hash: 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387
+  stage5x_formula_hash: 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387
+  stage5ad_computed_cuda_hash: 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387
+  stage5ad_expected_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  formula_matches_stage5x_formula: true
+  formula_matches_stage5ad_cuda_hash: true
+  formula_matches_stage5ad_expected_hash: false
+  python_reference_execution_performed: true
+  formula_trace_status: formula_hash_reproduced_no_gpu

@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5ad_latest_and_fix_next() -> None:
+def test_operational_docs_use_stage5ad_fix_latest_and_stage5ae_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5AD bounded p56 CUDA parity run is complete." in status
-    assert "Next recommended prompt: Stage 5AD-fix" in status
-    assert "Latest completed stage: Stage 5AD" in staged_plan
-    assert "Current planning focus: Stage 5AD-fix" in staged_plan
+    assert "Stage 5AD-fix bounded p56 CUDA parity mismatch investigation is complete." in status
+    assert "Next recommended prompt: Stage 5AE" in status
+    assert "Latest completed stage: Stage 5AD-fix" in staged_plan
+    assert "Current planning focus: Stage 5AE" in staged_plan

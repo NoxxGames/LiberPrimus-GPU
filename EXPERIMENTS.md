@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AD-fix Bounded P56 Mismatch Investigation
+
+Stage 5AD-fix is a diagnostic/reporting stage, not a cryptanalytic experiment. It builds committed hash-lineage, token/stream/formula trace, hash-material, reference-contract, root-cause, repair-readiness, guardrail, next-stage decision, and summary records from committed Stage 5AD/5X/5W/5L metadata.
+
+Generated Stage 5AD-fix reports remain ignored under `experiments/results/prime-minus-one-bounded-p56-mismatch/stage5ad-fix/`. Stage 5AD-fix records `expected_hash_reference_lineage_mismatch`, preserves the Stage 5AD historical failure, and keeps CUDA execution, full p56 execution, unsolved-page CUDA, new kernels, CUDA device arithmetic changes, scored experiments, benchmarks, raw-data processing, generated-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades, and solve claims disabled.
+
 ## Stage 5AD Bounded P56 CUDA Parity
 
 Stage 5AD is a bounded parity execution stage, not a cryptanalytic experiment. It runs only `stage5z-validation-p56-bounded-v0` through the existing prime-minus-one CUDA path and compares the host-computed output-token hash with the Stage 5X reference.

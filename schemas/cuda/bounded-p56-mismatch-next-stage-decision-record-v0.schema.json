@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/bounded-p56-mismatch-next-stage-decision-record-v0.schema.json",
+  "title": "Stage 5AD-fix bounded p56 mismatch next-stage decision record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "next_stage_decision_record_id", "option_id", "status", "selected", "execution_enabled", "no_solve_claim", "solve_claim", "cuda_execution_performed", "generated_outputs_committed", "raw_data_processed", "new_cuda_kernels_added"],
+  "properties": {
+    "record_type": {"const": "bounded_p56_mismatch_next_stage_decision_record"},
+    "stage_id": {"const": "stage-5ad-fix"},
+    "next_stage_decision_record_id": {"type": "string"},
+    "option_id": {"type": "string"},
+    "status": {"enum": ["selected", "deferred", "blocked"]},
+    "selected": {"type": "boolean"},
+    "execution_enabled": {"const": false},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0}
+  },
+  "additionalProperties": true
+}

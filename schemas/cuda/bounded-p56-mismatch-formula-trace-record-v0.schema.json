@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/bounded-p56-mismatch-formula-trace-record-v0.schema.json",
+  "title": "Stage 5AD-fix bounded p56 mismatch formula trace record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "formula_trace_record_id", "formula_output_token_hash", "formula_matches_stage5x_formula", "formula_matches_stage5ad_cuda_hash", "formula_matches_stage5ad_expected_hash", "no_solve_claim", "solve_claim", "cuda_execution_performed", "generated_outputs_committed", "raw_data_processed", "new_cuda_kernels_added"],
+  "properties": {
+    "record_type": {"const": "bounded_p56_mismatch_formula_trace_record"},
+    "stage_id": {"const": "stage-5ad-fix"},
+    "formula_trace_record_id": {"type": "string"},
+    "formula_output_token_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "formula_matches_stage5x_formula": {"const": true},
+    "formula_matches_stage5ad_cuda_hash": {"const": true},
+    "formula_matches_stage5ad_expected_hash": {"const": false},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0}
+  },
+  "additionalProperties": true
+}

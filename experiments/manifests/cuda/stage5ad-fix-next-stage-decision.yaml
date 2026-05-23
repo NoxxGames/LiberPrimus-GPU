@@ -1,0 +1,15 @@
+manifest_id: stage5ad-fix-next-stage-decision
+stage_id: stage-5ad-fix
+purpose: select the next conservative stage after bounded p56 mismatch diagnosis
+execution_enabled: false
+cuda_execution_performed: false
+benchmark_execution_allowed: false
+scored_experiment_execution_allowed: false
+unsolved_page_cuda_allowed: false
+full_p56_cuda_allowed: false
+generated_outputs_committed: false
+no_solve_claim: true
+selected_next_stage:
+  option_id: stage5ae_corrected_bounded_p56_cuda_formula_parity_reporting
+  title: Stage 5AE - corrected bounded p56 CUDA formula parity reporting and reference-contract repair
+  rationale: The Stage 5AD CUDA/formula hash matches the Stage 5X formula hash, while the expected hash tracks Stage 5L candidate-major reference material.

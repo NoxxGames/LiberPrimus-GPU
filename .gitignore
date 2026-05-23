@@ -675,6 +675,14 @@ experiments/results/prime-minus-one-bounded-p56-cuda-parity/**
 !experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/
 !experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/.gitkeep
 
+# Generated bounded p56 CUDA mismatch diagnostic outputs
+experiments/results/prime-minus-one-bounded-p56-mismatch/**
+!experiments/results/prime-minus-one-bounded-p56-mismatch/
+!experiments/results/prime-minus-one-bounded-p56-mismatch/README.md
+!experiments/results/prime-minus-one-bounded-p56-mismatch/.gitkeep
+!experiments/results/prime-minus-one-bounded-p56-mismatch/stage5ad-fix/
+!experiments/results/prime-minus-one-bounded-p56-mismatch/stage5ad-fix/.gitkeep
+
 # Generated document staleness reports
 experiments/results/doc-staleness/**
 !experiments/results/doc-staleness/

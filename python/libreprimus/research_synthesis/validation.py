@@ -395,7 +395,13 @@ def validate_research_synthesis(
             errors,
             staged_text,
             ("stage 5ad-fix", "bounded p56 cuda parity mismatch investigation"),
-            "staged_plan_stage5ad_fix_next",
+            "staged_plan_stage5ad_fix_complete",
+        )
+        _require_text(
+            errors,
+            staged_text,
+            ("stage 5ae", "corrected bounded p56 cuda formula parity reporting"),
+            "staged_plan_stage5ae_next",
         )
         _require_text(errors, staged_text, ("cuda", "deferred"), "staged_plan_cuda_deferred")
         _require_text(errors, staged_text, ("canonical corpus", "inactive"), "staged_plan_canonical_inactive")
@@ -672,8 +678,8 @@ def validate_research_synthesis(
             or "stage 5y" not in evidence_text
             or "stage 5z" not in evidence_text
             or "stage 5aa" not in evidence_text
-            or "stage 5ac" not in next_text
-            or "stage 5ad" not in next_text
+            or "stage 5ad-fix" not in next_text
+            or "stage 5ae" not in next_text
         ):
             errors.append("cuda_synthetic_shift_kernel_missing_stage5h_stage5i_stage5j_stage5k_transition")
 
@@ -711,7 +717,7 @@ def validate_research_synthesis(
             errors.append("prime_minus_one_native_contract_missing_guardrail")
         if "p56" not in evidence_text or "source-backed" not in evidence_text or "stage 5w" not in evidence_text:
             errors.append("prime_minus_one_native_contract_missing_stage5w_evidence")
-        if "stage 5x" not in evidence_text or "stage 5y" not in evidence_text or "stage 5ad" not in next_text:
+        if "stage 5x" not in evidence_text or "stage 5y" not in evidence_text or "stage 5ae" not in next_text:
             errors.append("prime_minus_one_native_contract_missing_stage5x_next_action")
 
     prime_native_parity = _find_method(method_records, "prime_minus_one_native_parity")
@@ -731,7 +737,7 @@ def validate_research_synthesis(
             errors.append("prime_minus_one_native_parity_missing_guardrail")
         if "native parity" not in evidence_text or "stage 5x" not in evidence_text or "p56" not in evidence_text:
             errors.append("prime_minus_one_native_parity_missing_stage5x_evidence")
-        if "stage 5y" not in evidence_text or "reporting" not in evidence_text or "stage 5ad" not in next_text:
+        if "stage 5y" not in evidence_text or "reporting" not in evidence_text or "stage 5ae" not in next_text:
             errors.append("prime_minus_one_native_parity_missing_stage5y_next_action")
 
     prime_native_reporting = _find_method(method_records, "prime_minus_one_native_reporting")
@@ -751,7 +757,7 @@ def validate_research_synthesis(
             errors.append("prime_minus_one_native_reporting_missing_guardrail")
         if "stage 5y" not in evidence_text or "full p56" not in evidence_text or "stage 5x" not in evidence_text:
             errors.append("prime_minus_one_native_reporting_missing_stage5y_evidence")
-        if "stage 5ad" not in next_text or "bounded p56" not in next_text:
+        if "stage 5ae" not in next_text or "bounded p56" not in next_text:
             errors.append("prime_minus_one_native_reporting_missing_stage5z_next_action")
 
     prime_cuda_contract = _find_method(method_records, "prime_minus_one_cuda_contract")
@@ -771,7 +777,7 @@ def validate_research_synthesis(
             errors.append("prime_minus_one_cuda_contract_missing_guardrail")
         if "stage 5z" not in evidence_text or "stage 5y" not in evidence_text or "full p56" not in evidence_text:
             errors.append("prime_minus_one_cuda_contract_missing_stage5z_evidence")
-        if "stage 5ac" not in next_text or "stage 5ad" not in next_text:
+        if "stage 5ad-fix" not in next_text or "stage 5ae" not in next_text:
             errors.append("prime_minus_one_cuda_contract_missing_stage5aa_next_action")
 
     cookie = _find_method(method_records, "cookie_hash_sha256_packs")

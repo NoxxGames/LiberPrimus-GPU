@@ -46,6 +46,8 @@ Stage 5AC extends coverage with prime-minus-one CUDA synthetic reporting schemas
 
 Stage 5AD extends coverage with bounded p56 CUDA parity schemas, run/parity record builders, result-store and score-summary preflight checks, full-p56 blocker preservation, scored-experiment deferral checks, device-subset audit checks, deterministic mismatch next-stage decisions, no-GPU `--skip-cuda` CLI validation paths, and ignored-output checks for `experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/` plus `codex-output/**`. It allows only the bounded vector run and still treats CUDA hash parity as correctness metadata, not benchmark or solve evidence.
 
+Stage 5AD-fix extends coverage with bounded p56 mismatch schemas, hash-lineage builders, token/stream/formula trace checks, hash-material/reference-contract checks, root-cause and repair-readiness records, guardrail checks, next-stage decision checks, CLI validation paths, and ignored-output checks for `experiments/results/prime-minus-one-bounded-p56-mismatch/stage5ad-fix/` plus `codex-output/**`. It runs no CUDA and treats the mismatch as reference-contract diagnostics, not performance or solve evidence.
+
 Stage 4K extends this coverage with source-lock snapshot validation, allowlist/rejection tests,
 snapshot-policy tests, GitHub commit-address parser tests, generated-output/cache ignore tests, and
 state-drift checks for the Stage 4L ledger.
