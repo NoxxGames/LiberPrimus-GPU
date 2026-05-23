@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source-harvester/research-bundle-plan-record-v0.schema.json",
+  "title": "Stage 5AF research bundle plan record",
+  "type": "object",
+  "required": [
+    "bundle_id",
+    "title",
+    "purpose",
+    "included_source_ids",
+    "included_clue_categories",
+    "required_manual_inputs",
+    "do_not_assume_notes",
+    "recommended_deep_research_order",
+    "ready_after_stage5af"
+  ],
+  "properties": {
+    "bundle_id": { "type": "string" },
+    "title": { "type": "string" },
+    "purpose": { "type": "string" },
+    "included_source_ids": { "type": "array", "items": { "type": "string" } },
+    "included_clue_categories": { "type": "array", "items": { "type": "string" } },
+    "required_manual_inputs": { "type": "array", "items": { "type": "string" } },
+    "do_not_assume_notes": { "type": "array", "items": { "type": "string" } },
+    "recommended_deep_research_order": { "type": "integer", "minimum": 1 },
+    "ready_after_stage5af": { "type": "boolean" },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

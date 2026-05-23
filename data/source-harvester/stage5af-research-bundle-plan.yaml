@@ -1,0 +1,105 @@
+record_type: stage5af_research_bundle_plan
+schema: schemas/source-harvester/research-bundle-plan-record-v0.schema.json
+stage_id: stage-5af
+source_stage_id: stage-5ae
+records:
+  - bundle_id: 01-signed-messages-and-authenticity
+    title: Signed messages and authenticity
+    purpose: Group PGP/signature source provenance before any authenticity conclusion.
+    included_source_ids: [complete_cicada3301_archive, isitcicada_pgp_checker, cicada_solvers_isitcicada_repo]
+    included_clue_categories: [signed_messages_authenticity]
+    required_manual_inputs: [targeted signed-message exports if not available in source-locked repositories]
+    do_not_assume_notes: [Do not treat tool output as proof without locked signed material.]
+    recommended_deep_research_order: 1
+    ready_after_stage5af: true
+    solve_claim: false
+  - bundle_id: 02-liber-primus-images-and-transcriptions
+    title: Liber Primus images and transcriptions
+    purpose: Inventory image/transcription source variants without activating a canonical corpus.
+    included_source_ids: [liber_primus_dropbox_files, pastebin_vgmk330j_lp_runes_prime_values, solved_page_google_sheet, fandom_liber_primus_solved_pages, fandom_liber_primus_unsolved_pages]
+    included_clue_categories: [liber_primus_page_images_58_and_75, liber_primus_transcriptions]
+    required_manual_inputs: [Dropbox local export, Google Sheet local export]
+    do_not_assume_notes: [Do not treat local exports as canonical, Do not finalize page boundaries.]
+    recommended_deep_research_order: 2
+    ready_after_stage5af: true
+    solve_claim: false
+  - bundle_id: 03-page-49-51-token-block
+    title: Page 49-51 token block
+    purpose: Separate source provenance from decimal/base interpretation.
+    included_source_ids: [pastebin_vgmk330j_lp_runes_prime_values, fandom_liber_primus_unsolved_pages]
+    included_clue_categories: [page49_51_token_block, page49_51_decimal_conversions]
+    required_manual_inputs: [exact transcript/profile source]
+    do_not_assume_notes: [Do not treat the block as raw hex without qualification.]
+    recommended_deep_research_order: 3
+    ready_after_stage5af: true
+    solve_claim: false
+  - bundle_id: 04-cuneiform-base60-base59
+    title: Cuneiform base60/base59
+    purpose: Keep cuneiform/base claims source-locked and coordinate-gated.
+    included_source_ids: [fandom_liber_primus_ideas, user_uploaded_assets_archive]
+    included_clue_categories: [cuneiform_base60_base59]
+    required_manual_inputs: [source images, coordinate annotations, accepted readings]
+    do_not_assume_notes: [Do not treat cuneiform readings as accepted without review.]
+    recommended_deep_research_order: 4
+    ready_after_stage5af: true
+    solve_claim: false
+  - bundle_id: 05-red-markers-and-visual-numerics
+    title: Red markers and visual numerics
+    purpose: Inventory visual/numeric red-marker sources and false-positive controls.
+    included_source_ids: [fandom_liber_primus_ideas, user_uploaded_assets_archive, liber_primus_dropbox_files]
+    included_clue_categories: [red_3299_grid, red_1_to_5_markers, red_runes_dots_punctuation, rune_pixel_variants]
+    required_manual_inputs: [local image variants, coordinates, negative controls]
+    do_not_assume_notes: [Do not treat modified images as proof.]
+    recommended_deep_research_order: 5
+    ready_after_stage5af: true
+    solve_claim: false
+  - bundle_id: 06-outguess-stego-hidden-formatting
+    title: OutGuess/stego/hidden formatting
+    purpose: Prepare source locks for stego/audio/formatting claims without tool execution.
+    included_source_ids: [cicada_solvers_iddqd, joutguess_rebirth, complete_cicada3301_archive]
+    included_clue_categories: [2012_outguess_outputs, outguess_all_pages_claim, 2013_whitespace_signed_message]
+    required_manual_inputs: [expected output source records, local ignored fixture cache]
+    do_not_assume_notes: [Do not run OutGuess, OpenPuff, MP3Stego, or broad stego scans.]
+    recommended_deep_research_order: 6
+    ready_after_stage5af: true
+    solve_claim: false
+  - bundle_id: 07-boundary-mobius-repeated-fragments
+    title: Boundary, Mobius, and repeated fragments
+    purpose: Inventory page-boundary and repetition claims without canonical activation.
+    included_source_ids: [chapterized_rune_map_google_doc, fandom_liber_primus_unsolved_pages, pastebin_vgmk330j_lp_runes_prime_values]
+    included_clue_categories: [boundary_mobius_repeated_fragments, dju_bei_repeat]
+    required_manual_inputs: [local document export, exact transcript/profile source]
+    do_not_assume_notes: [Do not treat tentative page boundaries as canonical.]
+    recommended_deep_research_order: 7
+    ready_after_stage5af: true
+    solve_claim: false
+  - bundle_id: 08-tools-gpprime-dwh-gematria
+    title: Tools, GPPrimeView, DWH, and Gematria
+    purpose: Source-lock tool conventions before any method execution.
+    included_source_ids: [gp_prime_view, tweqx_dwh_hashkit, tweqx_3301_hash_alarm, mortlach_rune_decrypter_prime, taiiwo_cicada]
+    included_clue_categories: [dwh_target_and_algorithms, gpprimeview_gematria_prime_conventions, gp_product_dwh_claims]
+    required_manual_inputs: [selected repository/source hashes]
+    do_not_assume_notes: [Do not treat DWH as defined unless target hash and algorithms are source-locked.]
+    recommended_deep_research_order: 8
+    ready_after_stage5af: true
+    solve_claim: false
+  - bundle_id: 09-community-hypotheses
+    title: Community hypotheses
+    purpose: Gather review-only community claims with false-positive controls.
+    included_source_ids: [fandom_liber_primus_ideas, cicada_boards_forum, spiderpuck_pastebin_profile]
+    included_clue_categories: [discord_community_hypothesis_leads, prime_k_tuple_comb_claims, latin_decode_unreproducible_claims]
+    required_manual_inputs: [targeted forum/thread exports only]
+    do_not_assume_notes: [Do not treat social claims or screenshots as source evidence.]
+    recommended_deep_research_order: 9
+    ready_after_stage5af: true
+    solve_claim: false
+  - bundle_id: 10-known-negative-retired-ideas
+    title: Known negative and retired ideas
+    purpose: Preserve negative-control and retirement context for future triage.
+    included_source_ids: [fandom_possible_hints_never_used, khan_cryptography, gamedetectives_academy]
+    included_clue_categories: [negative_or_retired_ideas]
+    required_manual_inputs: []
+    do_not_assume_notes: [Do not revive retired ideas without new source-locked evidence.]
+    recommended_deep_research_order: 10
+    ready_after_stage5af: true
+    solve_claim: false

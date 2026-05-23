@@ -507,3 +507,14 @@ records:
     next_action: Stage 5AC must cite Stage 5AB source-of-truth and operational-file-map records before changing current-stage or next-stage claims.
     solve_claim: false
     notes: Stage 5AB reduced stale operational findings from 16 to 0 and selected Stage 5AC from the Stage 5AA outcome after stale-doc repair.
+  - record_type: method_family_status_record
+    method_family_id: cicada_source_harvester
+    name: Cicada source harvester and provenance inventory
+    status: infrastructure_only
+    evidence_summary: Stage 5AF adds local-only source-harvester tooling, source manifests, clue-target categories, dry-run planning, file/hash inventory support, and research-bundle scaffolds without source interpretation or experiment execution.
+    completed_stage_refs: [stage-5af]
+    reopen_conditions: [A future Stage 5AG local inventory prompt supplies user-provided downloads or exports under ignored local roots and requests source-lock metadata only.]
+    stop_conditions: [Do not use Google Drive as project storage, do not run live broad scraping in CI, do not commit raw downloads or scraped bodies, do not process raw archives into committed data, do not run CUDA, do not benchmark, do not execute scored experiments, and do not make solve claims.]
+    next_action: Stage 5AG should run the source harvester on user-provided local downloads and build the initial source-lock inventory.
+    solve_claim: false
+    notes: Source-harvester readiness is provenance infrastructure only. It is not Deep Research, experiment execution, website expansion, CUDA permission, or evidence of a solve.

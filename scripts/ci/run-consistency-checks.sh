@@ -1798,6 +1798,39 @@ echo "Running Stage 5AE corrected bounded p56 reporting temp output"
     --summary "$tmp_dir/stage5ae-corrected-bounded-p56-reporting-summary.yaml" \
     --results-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting"
 
+echo "Running Stage 5AF source harvester temp output"
+"$python_bin" -m libreprimus.cli source-harvester validate-manifest \
+    --manifest data/source-harvester/stage5af-cicada-source-manifest.yaml \
+    --out-dir "$tmp_dir/stage5af-source-harvester"
+"$python_bin" -m libreprimus.cli source-harvester plan \
+    --manifest data/source-harvester/stage5af-cicada-source-manifest.yaml \
+    --out "$tmp_dir/stage5af-source-harvester/harvest_plan.json" \
+    --dry-run-summary-out "$tmp_dir/stage5af-harvest-dry-run-summary.yaml" \
+    --out-dir "$tmp_dir/stage5af-source-harvester"
+"$python_bin" -m libreprimus.cli source-harvester build-bundles \
+    --bundle-plan data/source-harvester/stage5af-research-bundle-plan.yaml \
+    --out-root "$tmp_dir/stage5af-source-harvester/research_bundles_preview"
+"$python_bin" -m libreprimus.cli source-harvester summarize \
+    --manifest data/source-harvester/stage5af-cicada-source-manifest.yaml \
+    --collection-priorities data/source-harvester/stage5af-source-collection-priorities.yaml \
+    --clue-target-categories data/source-harvester/stage5af-clue-target-categories.yaml \
+    --bundle-plan data/source-harvester/stage5af-research-bundle-plan.yaml \
+    --tool-policy data/source-harvester/stage5af-harvest-tool-policy.yaml \
+    --dry-run-summary "$tmp_dir/stage5af-harvest-dry-run-summary.yaml" \
+    --next-stage-decision-out "$tmp_dir/stage5af-source-harvester-next-stage-decision.yaml" \
+    --summary-out "$tmp_dir/stage5af-source-harvester-summary.yaml" \
+    --out "$tmp_dir/stage5af-source-harvester/summary.json"
+"$python_bin" -m libreprimus.cli source-harvester validate-stage5af \
+    --source-manifest data/source-harvester/stage5af-cicada-source-manifest.yaml \
+    --collection-priorities data/source-harvester/stage5af-source-collection-priorities.yaml \
+    --clue-target-categories data/source-harvester/stage5af-clue-target-categories.yaml \
+    --research-bundle-plan data/source-harvester/stage5af-research-bundle-plan.yaml \
+    --tool-policy data/source-harvester/stage5af-harvest-tool-policy.yaml \
+    --dry-run-summary "$tmp_dir/stage5af-harvest-dry-run-summary.yaml" \
+    --next-stage-decision "$tmp_dir/stage5af-source-harvester-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5af-source-harvester-summary.yaml" \
+    --results-dir "$tmp_dir/stage5af-source-harvester"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

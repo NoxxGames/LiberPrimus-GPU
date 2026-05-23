@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AE corrected bounded p56 CUDA formula parity reporting and reference-contract repair is complete.
+Stage 5AF Cicada source harvester and archive/visual/numeric provenance inventory tooling is complete.
 
-Next recommended prompt: Stage 5AF - archive visual numeric source-lock and provenance inventory. Website expansion is deferred to a future unnumbered project.
+Next recommended prompt: Stage 5AG - run source harvester on user-provided downloads and build initial source-lock inventory. Website expansion is deferred to a future unnumbered project.
+
+## Completed in Stage 5AF
+
+Stage 5AF added the `libreprimus source-harvester` CLI, local-only source-manifest records, collection-priority records, clue-target category records, research-bundle plans, harvest-tool policy records, dry-run planning summaries, next-stage decision records, schemas, tests, documentation, tutorial/wiki-source updates, consistency integration, generated ignored output scaffolds, and a detailed ignored Codex completion handoff.
+
+Local Stage 5AF summary: source manifest records `41`, priority counts `A1: 25`, `A2: 12`, `B: 2`, `C: 2`, source type counts `browser_tool: 1`, `dropbox_folder: 1`, `fandom_page: 8`, `forum_index: 1`, `github_org: 1`, `github_repo: 7`, `google_colab: 1`, `google_doc: 1`, `google_sheet: 1`, `local_user_upload: 9`, `pastebin: 2`, `shiny_app: 1`, `static_webpage: 5`, `youtube_channel: 1`, `youtube_video: 1`, clue categories `28`, research bundles `10`, manual collection required `15`, dry-run plan records `41`, selected next prompt `Stage 5AG - run source harvester on user-provided downloads and build initial source-lock inventory`, Deep Research recommended next `false`, network fetch performed `false`, raw downloads committed `false`, raw archives processed `false`, CUDA execution `false`, CUDA source modified `false`, new CUDA kernels added `0`, benchmarks `false`, scored experiments `false`, raw data processed `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5AF is source-lock/provenance tooling only. It does not run a live broad crawl, scrape boards.net wholesale, use Google Drive as a storage location, download Dropbox/Google/YouTube/video/audio content in CI, bypass access controls, process raw archives, run CUDA, modify CUDA source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, execute scored experiments, expand the website, activate the canonical corpus, finalise page boundaries, or make a solve claim.
 
 ## Completed in Stage 5AE
 

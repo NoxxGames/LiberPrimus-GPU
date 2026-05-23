@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source-harvester/harvest-failure-record-v0.schema.json",
+  "title": "Stage 5AF harvest failure record",
+  "type": "object",
+  "required": ["source_id", "failure_type", "error"],
+  "properties": {
+    "source_id": { "type": "string" },
+    "url": { "type": ["string", "null"] },
+    "failure_type": { "type": "string" },
+    "error": { "type": "string" },
+    "raw_download_committed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

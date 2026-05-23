@@ -6,7 +6,7 @@ Repository: `https://github.com/NoxxGames/LiberPrimus-GPU`
 
 Before a Deep Research handoff, verify the latest commit and CI status locally. The handoff should cite the commit hash, stage, and generated bundle paths.
 
-Stage 5AE does not select Deep Research as the next prompt. The next work is Stage 5AF archive visual numeric source-lock and provenance inventory. Website expansion remains a future unnumbered project.
+Stage 5AF does not select Deep Research as the next prompt. The next work is Stage 5AG local user-download source-lock inventory. Website expansion remains a future unnumbered project.
 
 ## Files Deep Research Should Inspect First
 
@@ -23,6 +23,7 @@ Stage 5AE does not select Deep Research as the next prompt. The next work is Sta
 Use generated, redacted, local-only review bundles when a stage creates them under ignored paths, such as:
 
 - `experiments/results/discord-review-bundles/stage3q/`
+- `experiments/results/source-harvester/stage5af/research_bundles_preview/`
 - `experiments/results/discord-full-review/stage4a/`
 
 Only pass redacted topic shards, aggregate summaries, public links, public source records, and curated observation/negative-control records. Prefer small focused bundles over huge dumps.

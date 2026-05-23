@@ -1,0 +1,16 @@
+manifest_id: stage5af-next-stage-decision
+stage_id: stage-5af
+description: Select the next source-lock/provenance stage after successful harvester validation.
+selected_policy: local_user_downloads_before_deep_research_or_execution
+network_enabled: false
+downloads_enabled: false
+dynamic_browser_enabled: false
+raw_data_processed: false
+generated_outputs_committed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernels_added: 0
+gpu_benchmark_performed: false
+scored_experiment_executed: false
+solve_claim: false
+no_solve_claim: true

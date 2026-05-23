@@ -9,6 +9,8 @@
 - `README.md`: public project overview and where-to-start summary.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: current/next-stage expectations for the document staleness checker.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
+- `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
+- `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 
 ## Research And Workflow Truth
 
@@ -18,6 +20,7 @@
 - `DATASET.md`: data and provenance policy.
 - `RESEARCH.md`: research posture and evidence expectations.
 - `CIPHER_CATALOG.md`: method-family status and transform policy.
+- `docs/reference/source-harvester-cli.md`: source-harvester CLI usage and guardrails.
 
 ## Architecture And CI Truth
 

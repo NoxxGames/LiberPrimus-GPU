@@ -298,3 +298,12 @@ records:
     reopen_conditions: [An explicit future stage source-locks local assets and validates toolchain availability without broad scans.]
     prohibited_expansions: [Running OutGuess, OpenPuff, MP3Stego, spectrograms, or hexdump/string scans during source-locking; committing raw image/audio/binary/font artefacts; interpreting fixture candidates as proof.]
     notes: Stage 4F does not execute tools or claim hidden content.
+  - record_type: method_retirement_record
+    method_family_id: cicada_source_harvester
+    retired_status: active_with_constraints
+    reason: Source harvesting is useful only as local provenance/source-lock infrastructure until explicit future stages review user-provided outputs and commit compact metadata.
+    evidence: [Stage 5AF records 41 source manifest records, 28 clue-target categories, 10 research-bundle plans, local-only harvest policy, and 41 dry-run plan records.]
+    stages_supporting: [stage-5af]
+    reopen_conditions: [A future Stage 5AG prompt scopes local user-provided download inventory, hash recording, and source-lock metadata while keeping raw outputs ignored.]
+    prohibited_expansions: [Google Drive project storage, live broad scraping, wholesale forum crawling, raw download commits, raw archive processing in committed data, scored experiment generation, CUDA execution, benchmarks, website expansion, canonical corpus activation, page-boundary finalisation, solve claims.]
+    notes: Stage 5AF does not interpret sources or promote hypotheses; it prepares local-only source-lock work.

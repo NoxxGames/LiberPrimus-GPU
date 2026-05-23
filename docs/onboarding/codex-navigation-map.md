@@ -17,6 +17,7 @@ For most Codex tasks, read:
 - Run the task-specific validation commands before staging.
 - Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ab-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
 - Keep raw/generated outputs unstaged.
+- For Stage 5AF/5AG source-harvester work, keep all raw harvester outputs local and ignored; do not use Google Drive as project storage.
 
 ## Documentation Updates
 
@@ -30,6 +31,7 @@ If direction changes, update:
 - `ROADMAP.md`
 - `AGENTS.md`
 - Relevant tutorials and `docs/wiki-source/**`
+- `docs/onboarding/source-harvester-workflow.md` and `docs/reference/source-harvester-cli.md` when source-harvester behavior changes.
 
 ## Safety Rules
 

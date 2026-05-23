@@ -1,0 +1,257 @@
+record_type: stage5af_clue_target_categories
+schema: schemas/source-harvester/clue-target-category-record-v0.schema.json
+stage_id: stage-5af
+source_stage_id: stage-5ae
+records:
+  - category_id: signed_messages_authenticity
+    description: PGP/signed-message authenticity and provenance leads.
+    recommended_sources: [complete_cicada3301_archive, isitcicada_pgp_checker, cicada_solvers_isitcicada_repo]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: false
+    risk_level: medium
+    notes: Verify sources before using any authenticity claim.
+    solve_claim: false
+  - category_id: 2012_outguess_outputs
+    description: 2012 OutGuess and related output provenance.
+    recommended_sources: [complete_cicada3301_archive, user_uploaded_2012_archive, joutguess_rebirth]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Positive controls require exact expected outputs before execution.
+    solve_claim: false
+  - category_id: 2012_gps_coordinates
+    description: 2012 GPS coordinate clues and supporting source records.
+    recommended_sources: [fandom_second_chance_2012, complete_cicada3301_archive]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: false
+    risk_level: medium
+    notes: Source-lock exact posts/images before interpretation.
+    solve_claim: false
+  - category_id: 2012_second_chance_numbers_dot_tk
+    description: Second-chance number and dot-tk leads.
+    recommended_sources: [fandom_second_chance_2012, user_uploaded_2012_archive]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Do not infer meaning from number sequences without controls.
+    solve_claim: false
+  - category_id: 2013_prime_echo_1033_3299_3301
+    description: 2013 prime echo claims around 1033, 3299, and 3301.
+    recommended_sources: [user_uploaded_2013_archive, complete_cicada3301_archive]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Multiple-testing controls are required before future analysis.
+    solve_claim: false
+  - category_id: 2013_whitespace_signed_message
+    description: 2013 whitespace and signed-message source leads.
+    recommended_sources: [user_uploaded_2013_archive, complete_cicada3301_archive]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: medium
+    notes: Preserve raw bytes and hashes only in ignored local output.
+    solve_claim: false
+  - category_id: 2016_liber_primus_is_the_way_quote
+    description: 2016 quote/source provenance leads.
+    recommended_sources: [user_uploaded_2016_archive, fandom_post_2014_liber_primus]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: false
+    risk_level: medium
+    notes: Treat as provenance inventory, not plaintext evidence.
+    solve_claim: false
+  - category_id: liber_primus_page_images_58_and_75
+    description: Page image provenance and variant-image leads.
+    recommended_sources: [liber_primus_dropbox_files, user_uploaded_assets_archive, cicada_solvers_iddqd]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Image artefacts require source variants and controls.
+    solve_claim: false
+  - category_id: liber_primus_transcriptions
+    description: Rune/number/plaintext/ciphertext transcription source leads.
+    recommended_sources: [pastebin_vgmk330j_lp_runes_prime_values, solved_page_google_sheet, fandom_liber_primus_solved_pages]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: false
+    risk_level: medium
+    notes: Transcription rows remain non-canonical until a corpus-lock process.
+    solve_claim: false
+  - category_id: page49_51_token_block
+    description: Page 49-51 token block source provenance.
+    recommended_sources: [pastebin_vgmk330j_lp_runes_prime_values, fandom_liber_primus_unsolved_pages]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Do not treat as raw hex without source-locked convention.
+    solve_claim: false
+  - category_id: page49_51_decimal_conversions
+    description: Decimal conversion claims for page 49-51 material.
+    recommended_sources: [pastebin_vgmk330j_lp_runes_prime_values, solved_page_google_sheet]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Numeric profile and base declarations must be source-locked.
+    solve_claim: false
+  - category_id: cuneiform_base60_base59
+    description: Cuneiform, base-60, and base-59 visual/numeric claims.
+    recommended_sources: [fandom_liber_primus_ideas, user_uploaded_assets_archive]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Coordinates and accepted readings are required before any future execution.
+    solve_claim: false
+  - category_id: red_3299_grid
+    description: Red 3299 grid/source-image provenance claims.
+    recommended_sources: [fandom_liber_primus_ideas, user_uploaded_assets_archive]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Red-marker observations are review-only until coordinates and variants exist.
+    solve_claim: false
+  - category_id: red_1_to_5_markers
+    description: Red marker counts or 1-to-5 claims.
+    recommended_sources: [fandom_liber_primus_ideas, user_uploaded_assets_archive]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Do not use marker counts as seeds without controls.
+    solve_claim: false
+  - category_id: red_runes_dots_punctuation
+    description: Red rune/dot/punctuation observations.
+    recommended_sources: [fandom_liber_primus_ideas, user_uploaded_assets_archive]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Dot/delimiter ambiguity remains noncanonical.
+    solve_claim: false
+  - category_id: depictions_tree_cicada_mayfly_wing_spiral_cuneiform
+    description: Depiction/image motif claims.
+    recommended_sources: [user_uploaded_assets_archive, fandom_liber_primus_ideas]
+    source_lock_priority: A2
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Do not treat modified or compressed images as proof.
+    solve_claim: false
+  - category_id: rune_pixel_variants
+    description: Rune pixel/variant image observations.
+    recommended_sources: [liber_primus_dropbox_files, user_uploaded_assets_archive]
+    source_lock_priority: A2
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Requires source variants and compression controls.
+    solve_claim: false
+  - category_id: outguess_all_pages_claim
+    description: Claims involving OutGuess across LP pages.
+    recommended_sources: [cicada_solvers_iddqd, joutguess_rebirth, user_uploaded_2014_archive]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: No stego execution in Stage 5AF.
+    solve_claim: false
+  - category_id: black_square_rectangle_dot_claim
+    description: Black square, rectangle, and dot visual claims.
+    recommended_sources: [fandom_liber_primus_ideas, user_uploaded_assets_archive]
+    source_lock_priority: A2
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Visual ambiguity requires annotation before any use.
+    solve_claim: false
+  - category_id: dwh_target_and_algorithms
+    description: DWH target hashes, algorithms, and tooling sources.
+    recommended_sources: [tweqx_dwh_hashkit, tweqx_3301_hash_alarm]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: medium
+    notes: DWH is undefined unless target hash and algorithms are source-locked.
+    solve_claim: false
+  - category_id: gpprimeview_gematria_prime_conventions
+    description: GPPrimeView and Gematria prime convention sources.
+    recommended_sources: [gp_prime_view, mortlach_rune_decrypter_prime, taiiwo_cicada]
+    source_lock_priority: A1
+    execution_ready: false
+    requires_null_controls: false
+    risk_level: medium
+    notes: Tool convention inventory is not formula proof.
+    solve_claim: false
+  - category_id: boundary_mobius_repeated_fragments
+    description: Boundary, Mobius, and repeated-fragment claims.
+    recommended_sources: [chapterized_rune_map_google_doc, fandom_liber_primus_unsolved_pages]
+    source_lock_priority: A2
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Page boundaries remain reviewable.
+    solve_claim: false
+  - category_id: dju_bei_repeat
+    description: DJU/BEI repeat claims.
+    recommended_sources: [fandom_liber_primus_ideas, pastebin_vgmk330j_lp_runes_prime_values]
+    source_lock_priority: A2
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Repetition claims need exact transcript/profile source.
+    solve_claim: false
+  - category_id: prime_k_tuple_comb_claims
+    description: Prime k-tuple and combinatorial numeric claims.
+    recommended_sources: [fandom_possible_hints_never_used, gp_prime_view]
+    source_lock_priority: A2
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Multiple-testing controls are required.
+    solve_claim: false
+  - category_id: gp_product_dwh_claims
+    description: GP product and DWH-bridging claims.
+    recommended_sources: [gp_prime_view, tweqx_dwh_hashkit]
+    source_lock_priority: A2
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Keep source provenance separate from hypothesis execution.
+    solve_claim: false
+  - category_id: latin_decode_unreproducible_claims
+    description: Unreproducible Latin decode claims.
+    recommended_sources: [fandom_liber_primus_ideas, cicada_boards_forum]
+    source_lock_priority: B
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Preserve as negative-control or review-only material.
+    solve_claim: false
+  - category_id: discord_community_hypothesis_leads
+    description: Community hypothesis leads promoted from public or review records.
+    recommended_sources: [cicada_boards_forum, spiderpuck_pastebin_profile, fandom_liber_primus_ideas]
+    source_lock_priority: A2
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: high
+    notes: Do not process raw Discord logs.
+    solve_claim: false
+  - category_id: negative_or_retired_ideas
+    description: Known negative, retired, or false-positive-prone ideas.
+    recommended_sources: [fandom_possible_hints_never_used, khan_cryptography, gamedetectives_academy]
+    source_lock_priority: C
+    execution_ready: false
+    requires_null_controls: true
+    risk_level: medium
+    notes: Use as control/retirement context only.
+    solve_claim: false

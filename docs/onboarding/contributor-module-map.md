@@ -15,6 +15,7 @@
 - Stego: `python/libreprimus/stego/`.
 - Research synthesis: `python/libreprimus/research_synthesis/`, `data/research/`.
 - Document staleness: `python/libreprimus/doc_staleness/`, `data/project-state/`, `schemas/project-state/`.
+- Source harvester: `python/libreprimus/source_harvester/`, `data/source-harvester/`, `schemas/source-harvester/`.
 - CUDA parity/reporting: `python/libreprimus/cuda_*`, `python/libreprimus/prime_minus_one_*`, `python/libreprimus/bounded_p56_cuda_parity/`, `cuda/`, `data/cuda/`.
 - CLI: `python/libreprimus/cli.py`, `python/libreprimus/cli_commands/`.
 - CI/scripts: `.github/workflows/`, `scripts/ci/`, `scripts/github/`.
@@ -26,6 +27,8 @@ Docs, schemas, record validation, test fixtures, and source-lock metadata are re
 ## Volatile Or Risky Areas
 
 Corpus/profile semantics, scoring, experiment execution, privacy-sensitive Discord code, generated-output policy, and CUDA are high-risk. Read the relevant docs and tests first.
+
+Source-harvester code is high-provenance tooling. Read `docs/architecture/cicada-source-harvester.md`, `docs/reference/source-harvester-cli.md`, and `docs/onboarding/source-harvester-workflow.md` before changing it. Do not make Google Drive a storage backend; manual Google/Dropbox/Colab exports belong in ignored local roots.
 
 ## Good First Areas
 

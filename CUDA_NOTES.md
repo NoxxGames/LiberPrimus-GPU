@@ -4,6 +4,12 @@
 
 This file records CUDA policy for future acceleration work.
 
+## Stage 5AF Source Harvester Boundary
+
+Stage 5AF is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It is local-only source-lock/provenance tooling for archive, visual, numeric, stego, DWH, GP, and community-clue material.
+
+The source harvester may plan future local collection and source-lock work, but it does not authorize CUDA expansion. Google/Dropbox/Colab material must be manually exported into ignored local storage; Google Drive is not a project storage location.
+
 ## Stage 5AE Corrected Bounded P56 Formula Reporting
 
 Stage 5AE is complete. It did not rerun CUDA; it records corrected formula parity using Stage 5AD-fix evidence and preserves Stage 5AD as a historical `failed_hash_mismatch`.
@@ -90,7 +96,7 @@ Stage 5T selected `Stage 5U - unified candidate batch ABI and backend contract c
 
 ## Current CUDA Status
 
-CUDA remains deferred after Stage 5AE except for explicitly scoped synthetic or solved-fixture-safe parity stages. Existing CUDA code and metadata are summarized by the latest staged-plan and CUDA notes; broad CUDA and unsolved-page CUDA remain blocked unless an explicit future prompt scopes them with CPU references, parity tests, result records, and benchmark plans. Stage 5Z prime-minus-one CUDA contract records, Stage 5AA synthetic CUDA records, Stage 5AC reporting/preflight records, Stage 5AD bounded mismatch records, Stage 5AD-fix hash-lineage records, and Stage 5AE corrected reporting records are not full p56 parity, benchmark evidence, speedup evidence, or solve evidence.
+CUDA remains deferred after Stage 5AF except for explicitly scoped synthetic or solved-fixture-safe parity stages. Existing CUDA code and metadata are summarized by the latest staged-plan and CUDA notes; broad CUDA and unsolved-page CUDA remain blocked unless an explicit future prompt scopes them with CPU references, parity tests, result records, and benchmark plans. Stage 5Z prime-minus-one CUDA contract records, Stage 5AA synthetic CUDA records, Stage 5AC reporting/preflight records, Stage 5AD bounded mismatch records, Stage 5AD-fix hash-lineage records, Stage 5AE corrected reporting records, and Stage 5AF source-harvester records are not full p56 parity, benchmark evidence, speedup evidence, or solve evidence.
 
 Do not use CUDA for Discord processing, image interpretation, OutGuess regression, cookie/hash packs, or broad unsolved-page campaigns.
 

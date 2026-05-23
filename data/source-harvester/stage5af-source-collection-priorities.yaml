@@ -1,0 +1,74 @@
+record_type: stage5af_source_collection_priorities
+schema: schemas/source-harvester/source-record-v0.schema.json
+stage_id: stage-5af
+source_stage_id: stage-5ae
+records:
+  - priority: A1
+    description: Highest-value source-lock/provenance targets for archive, LP, Fandom, Pastebin, DWH, GP, and local archive inventory.
+    collection_policy: dry_run_or_manual_local_only_until_explicit_user_run
+    source_ids:
+      - liber_primus_dropbox_files
+      - cicada_solvers_iddqd
+      - complete_cicada3301_archive
+      - pastebin_vgmk330j_lp_runes_prime_values
+      - solved_page_google_sheet
+      - fandom_main_wiki
+      - fandom_possible_hints_never_used
+      - fandom_second_chance_2012
+      - fandom_post_2014_liber_primus
+      - fandom_liber_primus_ideas
+      - fandom_solved_pages_methods
+      - fandom_liber_primus_solved_pages
+      - fandom_liber_primus_unsolved_pages
+      - cicada_boards_forum
+      - tweqx_dwh_hashkit
+      - tweqx_3301_hash_alarm
+      - gp_prime_view
+      - user_uploaded_2012_archive
+      - user_uploaded_2013_archive
+      - user_uploaded_2014_archive
+      - user_uploaded_2015_archive
+      - user_uploaded_2016_archive
+      - user_uploaded_2017_archive
+      - user_uploaded_assets_archive
+      - user_uploaded_archive_dir
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    solve_claim: false
+  - priority: A2
+    description: Important provenance/tooling/community sources that require manual export, targeted source-locking, or dynamic deferral.
+    collection_policy: metadata_or_manual_export_only
+    source_ids:
+      - solved_pages_colab_notebook
+      - chapterized_rune_map_google_doc
+      - spiderpuck_pastebin_profile
+      - joutguess_rebirth
+      - isitcicada_pgp_checker
+      - cicada_solvers_isitcicada_repo
+      - taiiwo_cicada
+      - mortlach_rune_decrypter_prime
+      - cicada_solvers_github_org
+      - gematria_web_tools
+      - rune_frequency_shiny_app
+      - user_uploaded_extra_wiki_pages
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    solve_claim: false
+  - priority: B
+    description: Contextual video/tutorial sources; metadata only by default.
+    collection_policy: metadata_only_no_video_downloads
+    source_ids:
+      - noxpopuli_youtube_channel
+      - cicada_documentary_youtube
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    solve_claim: false
+  - priority: C
+    description: General background sources, not direct Cicada evidence.
+    collection_policy: low_priority_context_only
+    source_ids:
+      - khan_cryptography
+      - gamedetectives_academy
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    solve_claim: false

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source-harvester/extracted-page-record-v0.schema.json",
+  "title": "Stage 5AF extracted page record",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "main_text",
+    "links",
+    "image_links",
+    "raw_body_committed",
+    "image_interpretation_performed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "extracted_page_record" },
+    "stage_id": { "const": "stage-5af" },
+    "source_id": { "type": ["string", "null"] },
+    "main_text": { "type": "string" },
+    "links": { "type": "array", "items": { "type": "string" } },
+    "image_links": { "type": "array", "items": { "type": "string" } },
+    "tables": { "type": "array", "items": { "type": "string" } },
+    "code_blocks": { "type": "array", "items": { "type": "string" } },
+    "raw_body_committed": { "const": false },
+    "image_interpretation_performed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

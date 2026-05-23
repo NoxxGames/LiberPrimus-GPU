@@ -1015,3 +1015,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AE wrote 1 corrected formula-parity report record, 3 reference-contract repair records, 3 hash-material policy records, 1 result-store integration record, 1 score-summary integration record, 1 method-status impact record, 1 generated-body policy record, 1 full-p56 blocker record, 1 scored-experiment deferral record, 3 archive/source-lock deferral records, 1 doc-staleness validation record, and 8 next-stage decision records. It records corrected formula parity as `passed` for hash `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`, preserves Stage 5AD as `failed_hash_mismatch` against reference-lineage hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87`, selects Stage 5AF archive visual numeric source-lock and provenance inventory, and performed no CUDA execution, CUDA-facing source modification, device arithmetic change, new kernel addition, full p56 execution, unsolved-page CUDA use, GPU benchmark, speedup claim, scored experiment, raw/archive-data processing, generated-body publication, website expansion, method-status upgrade to solved, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5af
+    title: Cicada source harvester and archive/visual/numeric provenance inventory tooling
+    status: complete
+    category: infrastructure
+    summary: Added local-only Cicada Source Harvester tooling, source manifests, clue categories, research-bundle scaffolds, dry-run planning, and source-lock provenance policy for archive, visual, numeric, stego, DWH, GP, and community-clue material.
+    key_outputs:
+      - "`libreprimus source-harvester` commands for manifest validation, dry-run planning, optional guarded fetch, local extraction, file/hash inventory, research-bundle scaffolds, Stage 5AF validation, and summary display."
+      - Stage 5AF source manifest, collection priorities, clue-target categories, research-bundle plan, harvest-tool policy, dry-run summary, next-stage decision, and aggregate summary records under `data/source-harvester/`.
+      - Ignored generated reports under `experiments/results/source-harvester/stage5af/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AF wrote 41 source manifest records, 4 collection-priority records, 28 clue target category records, 10 research-bundle plan records, 1 harvest-tool policy record, and 41 dry-run plan records. It selected Stage 5AG local user-provided download source-lock inventory, kept Google/Dropbox/Colab manual-export material local and ignored, prohibited Google Drive project storage, and performed no live broad scraping, raw download commit, raw archive processing, CUDA execution, CUDA-facing source modification, new kernel addition, p56/full-p56 execution, unsolved-page CUDA use, GPU benchmark, speedup claim, scored experiment, generated-body publication, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

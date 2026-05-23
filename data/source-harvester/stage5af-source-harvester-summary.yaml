@@ -1,0 +1,67 @@
+record_type: stage5af_source_harvester_summary
+stage_id: stage-5af
+source_stage_id: stage-5ae
+no_solve_claim: true
+no_gpu_ci_safe: true
+ci_network_required: false
+new_cuda_kernels_added: 0
+network_fetch_performed: false
+live_web_scrape_performed: false
+raw_downloads_committed: false
+raw_archives_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+full_p56_cuda_executed: false
+unsolved_page_cuda_used: false
+gpu_benchmark_performed: false
+benchmark_execution_allowed: false
+scored_experiment_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+status: complete
+source_manifest_records: 41
+collection_priority_records: 4
+clue_target_category_records: 28
+research_bundle_plan_records: 10
+tool_policy_records: 1
+dry_run_plan_records: 41
+source_harvester_package_added: true
+cli_group_added: true
+priority_counts:
+  A1: 25
+  A2: 12
+  B: 2
+  C: 2
+source_type_counts:
+  browser_tool: 1
+  dropbox_folder: 1
+  fandom_page: 8
+  forum_index: 1
+  github_org: 1
+  github_repo: 7
+  google_colab: 1
+  google_doc: 1
+  google_sheet: 1
+  local_user_upload: 9
+  pastebin: 2
+  shiny_app: 1
+  static_webpage: 5
+  youtube_channel: 1
+  youtube_video: 1
+manual_collection_required_count: 15
+network_allowed_default: false
+download_allowed_default: false
+browser_allowed_default: false
+google_drive_storage_allowed: false
+local_storage_only: true
+recommended_next_prompt_type: Codex
+recommended_next_stage_title: Stage 5AG - run source harvester on user-provided downloads
+  and build initial source-lock inventory
+recommended_next_stage_reason: Run the validated harvester against local user-provided
+  downloads only, keeping raw outputs ignored.
+deep_research_recommended_next: false

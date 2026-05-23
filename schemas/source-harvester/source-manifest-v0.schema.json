@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source-harvester/source-manifest-v0.schema.json",
+  "title": "Stage 5AF source manifest",
+  "type": "object",
+  "required": ["record_type", "stage_id", "storage_policy", "records"],
+  "properties": {
+    "record_type": { "const": "stage5af_cicada_source_manifest" },
+    "stage_id": { "const": "stage-5af" },
+    "source_stage_id": { "const": "stage-5ae" },
+    "storage_policy": {
+      "type": "object",
+      "required": ["local_storage_only", "google_drive_storage_allowed"],
+      "properties": {
+        "local_storage_only": { "const": true },
+        "google_drive_storage_allowed": { "const": false },
+        "raw_downloads_committed": { "const": false }
+      },
+      "additionalProperties": true
+    },
+    "one_hop_same_domain_links": {
+      "type": "object",
+      "required": ["enabled_by_default"],
+      "properties": {
+        "enabled_by_default": { "const": false }
+      },
+      "additionalProperties": true
+    },
+    "records": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  },
+  "additionalProperties": true
+}

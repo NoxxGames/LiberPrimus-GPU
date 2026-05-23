@@ -300,6 +300,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5AE is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5af",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5af\b", re.IGNORECASE),
+        "Stage 5AF is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -914,6 +919,17 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
+        "stage5af_source_harvester_complete",
+        "stage 5af" in staged_plan
+        and "cicada source harvester" in staged_plan
+        and "stage 5ag" in staged_plan
+        and "google drive storage" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5AF source harvester and Stage 5AG direction.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
         "source_lock_snapshot_policy_present",
         "source-lock snapshot" in combined and "allowlisted" in combined and "snapshot policy" in combined,
         "Allowlisted public source-lock snapshot policy is documented.",
@@ -1287,6 +1303,18 @@ def check_state_drift_consistency(
         and "archive visual numeric source-lock" in combined
         and "solve claim" in combined,
         "Stage 5AE corrected bounded p56 reporting and Stage 5AF source-lock boundary are documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "source_harvester_policy_present",
+        "source harvester" in combined
+        and "local-only" in combined
+        and "google drive" in combined
+        and "stage 5ag" in combined
+        and "raw downloads" in combined
+        and "solve claim" in combined,
+        "Stage 5AF source-harvester local-only and Stage 5AG boundary are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

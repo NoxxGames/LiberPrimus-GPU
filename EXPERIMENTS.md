@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AF Source Harvester
+
+Stage 5AF is source-lock/provenance tooling, not an experiment. It adds `libreprimus source-harvester`, committed source-manifest and clue-category records, local-only harvest policy, dry-run planning, hash/inventory/extraction helpers, and research-bundle scaffolds for later source-lock work.
+
+Generated Stage 5AF reports remain ignored under `experiments/results/source-harvester/stage5af/`. Raw harvester outputs belong only in ignored local roots such as `source-harvester-output/`, `harvest-output/`, or `research-inputs/`. Google/Dropbox/Colab sources are manual-export inputs into local ignored storage; Google Drive must not be used as a project storage location. Stage 5AF runs no live broad crawl, raw archive processing, CUDA, benchmarks, scored experiments, website expansion, or solve-claim workflow.
+
 ## Stage 5AE Corrected Bounded P56 Reporting
 
 Stage 5AE is a corrected reporting and reference-contract repair stage, not a cryptanalytic experiment. It consumes committed Stage 5AD-fix metadata, records corrected bounded p56 formula parity against the Stage 5X formula hash, preserves Stage 5AD as a historical failed comparison, separates formula-output hash material from candidate-major reference hash material, and selects Stage 5AF source-lock/provenance inventory.

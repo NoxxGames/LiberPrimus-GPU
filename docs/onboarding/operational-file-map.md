@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AE updates that map for the corrected bounded p56 reporting boundary and Stage 5AF source-lock/provenance next-stage direction. The YAML record is the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AF updates that map for local-only source-harvester policy and the Stage 5AG user-download source-lock inventory direction. The YAML record is the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 

@@ -1,0 +1,34 @@
+record_type: stage5af_harvest_tool_policy
+schema: schemas/source-harvester/stage5af-source-harvester-summary-v0.schema.json
+stage_id: stage-5af
+source_stage_id: stage-5ae
+default_network_allowed: false
+default_download_allowed: false
+default_browser_allowed: false
+default_raw_commit_allowed: false
+default_raw_archive_processing_allowed: false
+google_drive_storage_allowed: false
+local_storage_only: true
+requires_output_root_for_fetch: true
+requires_rate_limit: true
+requires_failure_log: true
+requires_hash_inventory: true
+requires_source_tier: true
+requires_manual_export_notice_for_google: true
+requires_no_credentials: true
+requires_no_access_control_bypass: true
+requires_no_ci_network: true
+raw_downloads_committed: false
+raw_archives_processed: false
+generated_outputs_committed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernels_added: 0
+gpu_benchmark_performed: false
+scored_experiment_executed: false
+solve_claim: false
+no_solve_claim: true
+notes:
+  - Harvester outputs are local-only and must use ignored output roots.
+  - Google, Dropbox, and Colab sources require manual export into local ignored paths.
+  - Google Drive must not be used as the harvester storage location.

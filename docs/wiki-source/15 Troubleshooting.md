@@ -78,6 +78,11 @@ git check-ignore -v codex-output/stage5z-codex-completion.md
 git check-ignore -v codex-output/stage5aa-codex-completion.md
 git check-ignore -v codex-output/stage5ad-fix-codex-completion.md
 git check-ignore -v codex-output/stage5ae-codex-completion.md
+git check-ignore -v codex-output/stage5af-codex-completion.md
+git check-ignore -v experiments/results/source-harvester/stage5af/summary.json
+git check-ignore -v source-harvester-output/example.txt
+git check-ignore -v harvest-output/example.txt
+git check-ignore -v research-inputs/example.txt
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```
@@ -166,6 +171,15 @@ If a Stage 4K source-lock snapshot build leaves `fetch_report.json`, `rejected_s
 `duplicate_sources.jsonl`, `warnings.jsonl`, or cached public-source bytes under
 `third_party/SourceSnapshots/`, do not stage them. Commit only source-lock metadata, schemas, code,
 docs, tests, and research logs.
+
+If a Stage 5AF source-harvester run leaves `harvest_plan.json`, `source_manifest_validation.json`,
+`dry_run_summary.json`, `research_bundle_plan.json`, `failures.jsonl`, `summary.json`,
+`warnings.jsonl`, or research-bundle preview scaffolds under
+`experiments/results/source-harvester/stage5af/`, do not stage them. Commit only source-harvester
+schemas, manifests, code, compact data records, docs, tests, and research logs. Raw harvester
+outputs belong in ignored local roots such as `source-harvester-output/`, `harvest-output/`, or
+`research-inputs/`; Google/Dropbox/Colab sources are manual-export local inputs, and Google Drive
+must not be used as project storage.
 
 If a Stage 4L observation-promotion build leaves `promotion_ledger_report.json`,
 `manifest_readiness_report.json`, `blocker_report.json`, or `warnings.jsonl`, do not stage them.

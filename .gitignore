@@ -691,6 +691,19 @@ experiments/results/prime-minus-one-bounded-p56-corrected-reporting/**
 !experiments/results/prime-minus-one-bounded-p56-corrected-reporting/stage5ae/
 !experiments/results/prime-minus-one-bounded-p56-corrected-reporting/stage5ae/.gitkeep
 
+# Generated source-harvester outputs
+experiments/results/source-harvester/**
+!experiments/results/source-harvester/
+!experiments/results/source-harvester/README.md
+!experiments/results/source-harvester/.gitkeep
+!experiments/results/source-harvester/stage5af/
+!experiments/results/source-harvester/stage5af/.gitkeep
+
+# Local source-harvester raw output roots
+source-harvester-output/**
+harvest-output/**
+research-inputs/**
+
 # Generated document staleness reports
 experiments/results/doc-staleness/**
 !experiments/results/doc-staleness/

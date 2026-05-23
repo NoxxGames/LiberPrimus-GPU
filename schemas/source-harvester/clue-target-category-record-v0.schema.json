@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source-harvester/clue-target-category-record-v0.schema.json",
+  "title": "Stage 5AF clue target category record",
+  "type": "object",
+  "required": [
+    "category_id",
+    "description",
+    "recommended_sources",
+    "source_lock_priority",
+    "execution_ready",
+    "requires_null_controls",
+    "risk_level",
+    "notes"
+  ],
+  "properties": {
+    "category_id": { "type": "string" },
+    "description": { "type": "string" },
+    "recommended_sources": { "type": "array", "items": { "type": "string" } },
+    "source_lock_priority": { "type": "string" },
+    "execution_ready": { "const": false },
+    "requires_null_controls": { "type": "boolean" },
+    "risk_level": { "enum": ["low", "medium", "high"] },
+    "notes": { "type": "string" },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

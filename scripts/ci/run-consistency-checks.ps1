@@ -1791,6 +1791,44 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5AESummary `
         --results-dir $Stage5AEOut
 
+    Write-Host "Running Stage 5AF source harvester temp output"
+    $Stage5AFOut = Join-Path $TempDir "stage5af-source-harvester"
+    $Stage5AFPlan = Join-Path $Stage5AFOut "harvest_plan.json"
+    $Stage5AFDryRun = Join-Path $TempDir "stage5af-harvest-dry-run-summary.yaml"
+    $Stage5AFDecision = Join-Path $TempDir "stage5af-source-harvester-next-stage-decision.yaml"
+    $Stage5AFSummary = Join-Path $TempDir "stage5af-source-harvester-summary.yaml"
+    & $Python -m libreprimus.cli source-harvester validate-manifest `
+        --manifest data/source-harvester/stage5af-cicada-source-manifest.yaml `
+        --out-dir $Stage5AFOut
+    & $Python -m libreprimus.cli source-harvester plan `
+        --manifest data/source-harvester/stage5af-cicada-source-manifest.yaml `
+        --out $Stage5AFPlan `
+        --dry-run-summary-out $Stage5AFDryRun `
+        --out-dir $Stage5AFOut
+    & $Python -m libreprimus.cli source-harvester build-bundles `
+        --bundle-plan data/source-harvester/stage5af-research-bundle-plan.yaml `
+        --out-root (Join-Path $Stage5AFOut "research_bundles_preview")
+    & $Python -m libreprimus.cli source-harvester summarize `
+        --manifest data/source-harvester/stage5af-cicada-source-manifest.yaml `
+        --collection-priorities data/source-harvester/stage5af-source-collection-priorities.yaml `
+        --clue-target-categories data/source-harvester/stage5af-clue-target-categories.yaml `
+        --bundle-plan data/source-harvester/stage5af-research-bundle-plan.yaml `
+        --tool-policy data/source-harvester/stage5af-harvest-tool-policy.yaml `
+        --dry-run-summary $Stage5AFDryRun `
+        --next-stage-decision-out $Stage5AFDecision `
+        --summary-out $Stage5AFSummary `
+        --out (Join-Path $Stage5AFOut "summary.json")
+    & $Python -m libreprimus.cli source-harvester validate-stage5af `
+        --source-manifest data/source-harvester/stage5af-cicada-source-manifest.yaml `
+        --collection-priorities data/source-harvester/stage5af-source-collection-priorities.yaml `
+        --clue-target-categories data/source-harvester/stage5af-clue-target-categories.yaml `
+        --research-bundle-plan data/source-harvester/stage5af-research-bundle-plan.yaml `
+        --tool-policy data/source-harvester/stage5af-harvest-tool-policy.yaml `
+        --dry-run-summary $Stage5AFDryRun `
+        --next-stage-decision $Stage5AFDecision `
+        --summary $Stage5AFSummary `
+        --results-dir $Stage5AFOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

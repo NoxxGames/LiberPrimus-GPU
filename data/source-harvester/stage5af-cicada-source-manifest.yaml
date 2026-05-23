@@ -1,0 +1,839 @@
+record_type: stage5af_cicada_source_manifest
+schema: schemas/source-harvester/source-manifest-v0.schema.json
+stage_id: stage-5af
+source_stage_id: stage-5ae
+storage_policy:
+  local_storage_only: true
+  google_drive_storage_allowed: false
+  raw_downloads_committed: false
+  generated_outputs_committed: false
+  note: Store harvester outputs only in local ignored roots, never in Google Drive.
+one_hop_same_domain_links:
+  enabled_by_default: false
+  allowed_domains:
+    - uncovering-cicada.fandom.com
+  max_pages: 50
+records:
+  - source_id: liber_primus_dropbox_files
+    title: Liber Primus Dropbox files
+    url: https://www.dropbox.com/sh/lkta4q921vliyuw/AADmZ1YUHXWSjSizlMGZHXVMa?dl=0
+    source_type: dropbox_folder
+    priority: A1
+    source_tier: tier2_archived_community_page_with_references
+    collection_status: manual_export_required
+    recommended_capture_modes: [download_zip, file_inventory, hash_inventory]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [local_zip_hash, file_inventory, hash_inventory]
+    known_limitations: [Manual download may be required; keep output in local ignored roots only.]
+    what_it_supports: [LP image/source provenance inventory]
+    what_it_does_not_support: [canonical corpus activation, page-boundary finalisation]
+    related_leads: [liber_primus_page_images_58_and_75, liber_primus_transcriptions]
+    notes: Download full folder manually if web download cannot be automated.
+    solve_claim: false
+  - source_id: cicada_solvers_iddqd
+    title: cicada-solvers iddqd
+    url: https://github.com/cicada-solvers/iddqd
+    source_type: github_repo
+    priority: A1
+    source_tier: tier1_committed_repo_record
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [git_clone_or_zip, commit_sha, file_inventory, hash_inventory]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [commit_sha, file_inventory, hash_inventory]
+    known_limitations: [Fetch is opt-in; raw repository bytes remain ignored.]
+    what_it_supports: [tool provenance, image fixture path inventory, lp_outguessed references]
+    what_it_does_not_support: [solve claims, broad method execution]
+    related_leads: [outguess_all_pages_claim, gpprimeview_gematria_prime_conventions]
+    notes: Prefer commit-addressed references in later source-lock stages.
+    solve_claim: false
+  - source_id: complete_cicada3301_archive
+    title: The Complete Cicada 3301 Archive
+    url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+    source_type: github_repo
+    priority: A1
+    source_tier: tier2_archived_community_page_with_references
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [git_clone_or_zip, commit_sha, file_inventory, hash_inventory]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [commit_sha, file_inventory, hash_inventory]
+    known_limitations: [Fetch is opt-in and must not mirror raw archives into git.]
+    what_it_supports: [archive provenance, signed-message source inventory]
+    what_it_does_not_support: [canonical truth without review]
+    related_leads: [signed_messages_authenticity, 2012_outguess_outputs]
+    notes: Use for targeted source-lock inventory only.
+    solve_claim: false
+  - source_id: pastebin_vgmk330j_lp_runes_prime_values
+    title: 58 pages in runes and rune prime values
+    url: https://pastebin.com/vGMK330j
+    source_type: pastebin
+    priority: A1
+    source_tier: tier3_reproducible_community_data
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [raw_text, rendered_html, hash_inventory]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [raw_text_hash, rendered_html_hash]
+    known_limitations: [Non-canonical legacy source; page boundaries remain reviewable.]
+    what_it_supports: [numeric provenance inventory]
+    what_it_does_not_support: [plaintext proof, canonical transcript activation]
+    related_leads: [liber_primus_transcriptions, page49_51_decimal_conversions]
+    notes: Local Pastebin raw text remains ignored.
+    solve_claim: false
+  - source_id: solved_page_google_sheet
+    title: Solved-page spreadsheet with runes/numbers/plaintext/ciphertext
+    url: https://docs.google.com/spreadsheets/d/1QsoYQ-NkJcwEuyOgMrD6DkHU2AUktwsfnQGnTURf1bU/edit#gid=480300769
+    source_type: google_sheet
+    priority: A1
+    source_tier: tier3_reproducible_community_data
+    collection_status: manual_export_required
+    recommended_capture_modes: [xlsx_export, csv_per_tab, metadata]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [xlsx_hash, csv_tab_hashes, sheet_metadata]
+    known_limitations:
+      - Manual export only; copy exports to local ignored roots and do not use Google Drive as harvester storage.
+    what_it_supports: [solved-fixture hints, rune/number cross-checks]
+    what_it_does_not_support: [unsolved plaintext proof, canonical transcript activation]
+    related_leads: [liber_primus_transcriptions]
+    notes: Spreadsheet-derived data remains non-canonical unless promoted by a later corpus-lock stage.
+    solve_claim: false
+  - source_id: solved_pages_colab_notebook
+    title: Google Colab notebook that solves solved pages
+    url: https://colab.research.google.com/drive/1Hd9fNYXHTke3uEvHdi4XPmaM1W67Abdz#scrollTo=4GDzlXdsFL-j
+    source_type: google_colab
+    priority: A2
+    source_tier: tier3_reproducible_community_data
+    collection_status: manual_export_required
+    recommended_capture_modes: [ipynb_export, metadata]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [ipynb_hash, notebook_metadata]
+    known_limitations:
+      - Manual export only; store local ignored copy, never a Google Drive harvester output.
+    what_it_supports: [solved-page method provenance]
+    what_it_does_not_support: [new scorer model, unsolved-page execution]
+    related_leads: [liber_primus_transcriptions]
+    notes: Notebook code is provenance material, not proof for unsolved pages.
+    solve_claim: false
+  - source_id: chapterized_rune_map_google_doc
+    title: Community chapterized rune map
+    url: null
+    source_type: google_doc
+    priority: A2
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: manual_export_required
+    recommended_capture_modes: [pdf_export, docx_export, txt_export]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [pdf_hash, docx_hash, text_hash]
+    known_limitations:
+      - User export only; local ignored storage only, not Google Drive as harvester storage.
+    what_it_supports: [navigation layer, review prompts]
+    what_it_does_not_support: [canonical page boundaries]
+    related_leads: [boundary_mobius_repeated_fragments]
+    notes: Keep as non-canonical navigation layer.
+    solve_claim: false
+  - source_id: fandom_main_wiki
+    title: Uncovering Cicada Wiki
+    url: https://uncovering-cicada.fandom.com/wiki/Uncovering_Cicada_Wiki
+    source_type: fandom_page
+    priority: A1
+    source_tier: tier2_archived_community_page_with_references
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [html, markdown, text, links, images]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, text_extract, link_inventory]
+    known_limitations: [Fandom navigation/noise must be stripped carefully.]
+    what_it_supports: [community-source routing]
+    what_it_does_not_support: [canonical truth]
+    related_leads: [discord_community_hypothesis_leads]
+    notes: One-hop same-domain following is disabled by default.
+    solve_claim: false
+  - source_id: fandom_possible_hints_never_used
+    title: Possible hints never used
+    url: https://uncovering-cicada.fandom.com/wiki/Possible_hints_never_used
+    source_type: fandom_page
+    priority: A1
+    source_tier: tier2_archived_community_page_with_references
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [html, markdown, text, tables, links, images]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, table_extract, link_inventory]
+    known_limitations: [Hypothesis page; false-positive risk is high.]
+    what_it_supports: [negative controls, retired idea review]
+    what_it_does_not_support: [experiment seed promotion]
+    related_leads: [negative_or_retired_ideas]
+    notes: Preserve unsupported claims as review-only.
+    solve_claim: false
+  - source_id: fandom_second_chance_2012
+    title: The second chance (2012)
+    url: https://uncovering-cicada.fandom.com/wiki/The_second_chance_(2012)
+    source_type: fandom_page
+    priority: A1
+    source_tier: tier2_archived_community_page_with_references
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [html, markdown, text, links, images]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, text_extract, link_inventory]
+    known_limitations: [Community reconstruction; verify against signed/original sources.]
+    what_it_supports: [2012 clue provenance]
+    what_it_does_not_support: [solve claims]
+    related_leads: [2012_second_chance_numbers_dot_tk]
+    notes: Targeted source-lock only.
+    solve_claim: false
+  - source_id: fandom_post_2014_liber_primus
+    title: What Happened Liber Primus (Post 2014)
+    url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Liber_Primus_(Post_2014)
+    source_type: fandom_page
+    priority: A1
+    source_tier: tier2_archived_community_page_with_references
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [html, markdown, text, tables, links, images]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, text_extract, table_extract, link_inventory]
+    known_limitations: [Post-hoc narrative; requires source corroboration.]
+    what_it_supports: [Liber Primus source triage]
+    what_it_does_not_support: [canonical status]
+    related_leads: [liber_primus_transcriptions]
+    notes: Treat as community page.
+    solve_claim: false
+  - source_id: fandom_liber_primus_ideas
+    title: Liber Primus Ideas and Suggestions
+    url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Ideas_and_Suggestions
+    source_type: fandom_page
+    priority: A1
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [html, markdown, text, tables, links, images]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, text_extract, table_extract, link_inventory]
+    known_limitations: [Idea list; high false-positive risk.]
+    what_it_supports: [hypothesis cataloguing, negative controls]
+    what_it_does_not_support: [seed promotion]
+    related_leads: [discord_community_hypothesis_leads]
+    notes: No broad scraping in CI.
+    solve_claim: false
+  - source_id: fandom_solved_pages_methods
+    title: How the solved pages of the Liber Primus were solved
+    url: https://uncovering-cicada.fandom.com/wiki/How_the_solved_pages_of_the_Liber_Primus_were_solved
+    source_type: fandom_page
+    priority: A1
+    source_tier: tier2_archived_community_page_with_references
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [html, markdown, text, tables, links, images]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, text_extract, table_extract]
+    known_limitations: [Solved pages are fixtures only, not unsolved-page proof.]
+    what_it_supports: [solved-fixture provenance]
+    what_it_does_not_support: [unsolved-page solve evidence]
+    related_leads: [liber_primus_transcriptions]
+    notes: Keep score labels triage-only.
+    solve_claim: false
+  - source_id: fandom_liber_primus_solved_pages
+    title: Liber Primus Solved Pages
+    url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Solved_Pages
+    source_type: fandom_page
+    priority: A1
+    source_tier: tier2_archived_community_page_with_references
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [html, markdown, text, tables, links, images]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, text_extract, table_extract]
+    known_limitations: [Use only as source provenance until fixture locks supersede it.]
+    what_it_supports: [solved-fixture cross-reference]
+    what_it_does_not_support: [new solve claims]
+    related_leads: [liber_primus_transcriptions]
+    notes: Targeted capture only.
+    solve_claim: false
+  - source_id: fandom_liber_primus_unsolved_pages
+    title: Liber Primus Unsolved Pages
+    url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages
+    source_type: fandom_page
+    priority: A1
+    source_tier: tier2_archived_community_page_with_references
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [html, markdown, text, tables, links, images]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, text_extract, table_extract]
+    known_limitations: [Unsolved pages remain non-execution material.]
+    what_it_supports: [provenance inventory]
+    what_it_does_not_support: [unsolved-page CUDA]
+    related_leads: [liber_primus_transcriptions]
+    notes: No corpus activation.
+    solve_claim: false
+  - source_id: cicada_boards_forum
+    title: Cicada 3301 boards.net forum
+    url: http://cicada3301.boards.net/
+    source_type: forum_index
+    priority: A1
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: manual_targeted_threads_required
+    recommended_capture_modes: [targeted_thread_html, extracted_posts, links]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [targeted_thread_hashes, post_extract_inventory]
+    known_limitations: [Do not crawl wholesale; use targeted threads and rate limits.]
+    what_it_supports: [community claim provenance]
+    what_it_does_not_support: [broad forum scraping]
+    related_leads: [discord_community_hypothesis_leads]
+    notes: Manual/source-lock planning only in Stage 5AF.
+    solve_claim: false
+  - source_id: spiderpuck_pastebin_profile
+    title: SpiderPuck Pastebin voice-session recaps
+    url: https://pastebin.com/u/SpiderPuck
+    source_type: pastebin
+    priority: A2
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [profile_page, raw_pastes_if_accessible, text, links]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [profile_hash, paste_link_inventory]
+    known_limitations: [Profile availability may vary; failures must be recorded.]
+    what_it_supports: [voice-session recap provenance]
+    what_it_does_not_support: [Discord raw log processing]
+    related_leads: [discord_community_hypothesis_leads]
+    notes: Do not use credentials or bypass access controls.
+    solve_claim: false
+  - source_id: tweqx_dwh_hashkit
+    title: DWH hashkit
+    url: https://github.com/tweqx/dwh-hashkit
+    source_type: github_repo
+    priority: A1
+    source_tier: tier1_committed_repo_record
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [git_clone_or_zip, commit_sha, file_inventory, hash_inventory]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [commit_sha, file_inventory, hash_inventory]
+    known_limitations: [Tool provenance only; DWH target/algorithm must be source-locked.]
+    what_it_supports: [DWH algorithm provenance]
+    what_it_does_not_support: [hash cracking, scored experiments]
+    related_leads: [dwh_target_and_algorithms]
+    notes: Do not execute hash searches in Stage 5AF.
+    solve_claim: false
+  - source_id: tweqx_3301_hash_alarm
+    title: 3301 hash alarm browser extension
+    url: https://github.com/tweqx/3301-hash-alarm
+    source_type: github_repo
+    priority: A1
+    source_tier: tier1_committed_repo_record
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [git_clone_or_zip, commit_sha, file_inventory, hash_inventory]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [commit_sha, file_inventory, hash_inventory]
+    known_limitations: [Browser-extension source only; no live browser automation required.]
+    what_it_supports: [DWH/hash tool provenance]
+    what_it_does_not_support: [hash preimage search]
+    related_leads: [dwh_target_and_algorithms]
+    notes: Source-lock before any use.
+    solve_claim: false
+  - source_id: gp_prime_view
+    title: Crashdemons GPPrimeView
+    url: https://cicada-solvers.github.io/GPPrimeView/
+    source_type: static_webpage
+    priority: A1
+    source_tier: tier3_reproducible_community_data
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [html, js, css, text, links]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, js_hashes, link_inventory]
+    known_limitations: [Tool conventions require review before experiment use.]
+    what_it_supports: [Gematria prime convention provenance]
+    what_it_does_not_support: [canonical formula proof]
+    related_leads: [gpprimeview_gematria_prime_conventions]
+    notes: Static source capture only.
+    solve_claim: false
+  - source_id: joutguess_rebirth
+    title: JOutguess rebirth
+    url: https://cicada-solvers.github.io/joutguess-rebirth/
+    source_type: static_webpage
+    priority: A2
+    source_tier: tier3_reproducible_community_data
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [html, js, css, text, links]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, js_hashes, link_inventory]
+    known_limitations: [Tool provenance only; no OutGuess execution.]
+    what_it_supports: [OutGuess tool provenance]
+    what_it_does_not_support: [stego extraction]
+    related_leads: [outguess_all_pages_claim]
+    notes: Historical positive controls still require expected outputs.
+    solve_claim: false
+  - source_id: isitcicada_pgp_checker
+    title: isitcicada PGP checker
+    url: https://isitcicada.meme.tips/
+    source_type: browser_tool
+    priority: A2
+    source_tier: tier3_reproducible_community_data
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [html, text, links]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: true
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, link_inventory]
+    known_limitations: [Dynamic/browser behavior disabled by default and not required in CI.]
+    what_it_supports: [PGP checker provenance]
+    what_it_does_not_support: [signature verification claims without source locks]
+    related_leads: [signed_messages_authenticity]
+    notes: Prefer GitHub source when production page is unavailable.
+    solve_claim: false
+  - source_id: cicada_solvers_isitcicada_repo
+    title: cicada-solvers isitcicada repo
+    url: https://github.com/cicada-solvers/isitcicada
+    source_type: github_repo
+    priority: A2
+    source_tier: tier1_committed_repo_record
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [git_clone_or_zip, commit_sha, file_inventory, hash_inventory]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [commit_sha, file_inventory, hash_inventory]
+    known_limitations: [Repository source only; raw clone remains ignored.]
+    what_it_supports: [PGP tool provenance]
+    what_it_does_not_support: [tool execution in Stage 5AF]
+    related_leads: [signed_messages_authenticity]
+    notes: Use commit-addressed locks later.
+    solve_claim: false
+  - source_id: taiiwo_cicada
+    title: Taiiwo Cicada Python wrapper
+    url: https://github.com/Taiiwo/cicada
+    source_type: github_repo
+    priority: A2
+    source_tier: tier3_reproducible_community_data
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [git_clone_or_zip, commit_sha, file_inventory, hash_inventory]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [commit_sha, file_inventory, hash_inventory]
+    known_limitations: [Wrapper/tool provenance only.]
+    what_it_supports: [tooling source inventory]
+    what_it_does_not_support: [hypothesis execution]
+    related_leads: [gpprimeview_gematria_prime_conventions]
+    notes: No dependency adoption in Stage 5AF.
+    solve_claim: false
+  - source_id: mortlach_rune_decrypter_prime
+    title: Mortlach RuneDecrypterPrime
+    url: https://github.com/mortlach/RuneDecrypterPrime
+    source_type: github_repo
+    priority: A2
+    source_tier: tier3_reproducible_community_data
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [git_clone_or_zip, commit_sha, file_inventory, hash_inventory]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [commit_sha, file_inventory, hash_inventory]
+    known_limitations: [Tool provenance only; do not infer transform correctness.]
+    what_it_supports: [Gematria/rune tool source inventory]
+    what_it_does_not_support: [new transform semantics]
+    related_leads: [gpprimeview_gematria_prime_conventions]
+    notes: No execution in Stage 5AF.
+    solve_claim: false
+  - source_id: cicada_solvers_github_org
+    title: cicada-solvers GitHub organization
+    url: https://github.com/cicada-solvers
+    source_type: github_org
+    priority: A2
+    source_tier: tier2_archived_community_page_with_references
+    collection_status: inventory_candidate
+    recommended_capture_modes: [repo_inventory, selected_repo_clone]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [repo_inventory]
+    known_limitations: [Do not clone all repositories blindly.]
+    what_it_supports: [selected repository discovery]
+    what_it_does_not_support: [broad mirroring]
+    related_leads: [discord_community_hypothesis_leads]
+    notes: Use selected repo source-lock stages.
+    solve_claim: false
+  - source_id: gematria_web_tools
+    title: Gematria web tools
+    url: https://opensource.cicada.gq/
+    source_type: static_webpage
+    priority: A2
+    source_tier: tier3_reproducible_community_data
+    collection_status: source_lock_candidate
+    recommended_capture_modes: [html, text, links]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, text_extract, link_inventory]
+    known_limitations: [May be unavailable; record failure and defer Wayback/manual review.]
+    what_it_supports: [Gematria tool provenance]
+    what_it_does_not_support: [formula proof]
+    related_leads: [gpprimeview_gematria_prime_conventions]
+    notes: Failure is acceptable and should be recorded.
+    solve_claim: false
+  - source_id: rune_frequency_shiny_app
+    title: Rune frequency Shiny app
+    url: https://ether8unny.shinyapps.io/cickada/
+    source_type: shiny_app
+    priority: A2
+    source_tier: tier3_reproducible_community_data
+    collection_status: manual_or_dynamic_required
+    recommended_capture_modes: [html, metadata, screenshot_optional]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: true
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [metadata, manual_export_notes]
+    known_limitations: [Dynamic app; browser fetching disabled by default and not used in CI.]
+    what_it_supports: [rune frequency tool provenance]
+    what_it_does_not_support: [statistical proof]
+    related_leads: [liber_primus_transcriptions]
+    notes: Manual export may be required.
+    solve_claim: false
+  - source_id: noxpopuli_youtube_channel
+    title: Nox Populi puzzle/tutorial videos
+    url: https://youtube.com/c/noxpopuli
+    source_type: youtube_channel
+    priority: B
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: metadata_only_candidate
+    recommended_capture_modes: [metadata, captions_if_available, links]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [metadata, link_inventory]
+    known_limitations: [Do not download videos by default.]
+    what_it_supports: [tutorial/source context]
+    what_it_does_not_support: [video archival or solve evidence]
+    related_leads: [community_hypotheses]
+    notes: Captions/metadata only unless later explicitly scoped.
+    solve_claim: false
+  - source_id: cicada_documentary_youtube
+    title: Cicada documentary
+    url: https://www.youtube.com/watch?v=RatbYqc0-jE&list=PL2mziOCk6AUF1Nlz82lhMPhjf5EBA53eW
+    source_type: youtube_video
+    priority: B
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: metadata_only_candidate
+    recommended_capture_modes: [metadata, captions_if_available, thumbnail]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [metadata, caption_hash_if_available]
+    known_limitations: [Do not download videos by default.]
+    what_it_supports: [contextual reference]
+    what_it_does_not_support: [primary source proof]
+    related_leads: [community_hypotheses]
+    notes: Thumbnail/video bytes remain out of committed data.
+    solve_claim: false
+  - source_id: khan_cryptography
+    title: Khan Academy cryptography
+    url: https://www.khanacademy.org/computing/computer-science/cryptography
+    source_type: static_webpage
+    priority: C
+    source_tier: unknown
+    collection_status: low_priority_reference
+    recommended_capture_modes: [html, text, links]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, link_inventory]
+    known_limitations: [General education source, not Cicada-specific evidence.]
+    what_it_supports: [background reading]
+    what_it_does_not_support: [source-lock for puzzle artefacts]
+    related_leads: [known_negative_retired_ideas]
+    notes: Deferred unless a future tutorial/source context needs it.
+    solve_claim: false
+  - source_id: gamedetectives_academy
+    title: GameDetectives Academy
+    url: https://gamedetectives.net/academy/
+    source_type: static_webpage
+    priority: C
+    source_tier: unknown
+    collection_status: low_priority_reference
+    recommended_capture_modes: [html, text, links]
+    manual_collection_required: false
+    allow_network_fetch: true
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [html_hash, link_inventory]
+    known_limitations: [General puzzle background, not direct source evidence.]
+    what_it_supports: [background reading]
+    what_it_does_not_support: [primary-source claims]
+    related_leads: [known_negative_retired_ideas]
+    notes: Low priority.
+    solve_claim: false
+  - source_id: user_uploaded_2012_archive
+    title: User uploaded 2012.zip
+    url: null
+    source_type: local_user_upload
+    priority: A1
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: local_manual_inventory_required
+    recommended_capture_modes: [local_zip_hash, file_inventory]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [local_zip_hash, file_inventory]
+    known_limitations: [Raw archive must remain ignored; no archive processing in Stage 5AF.]
+    what_it_supports: [2012 archive provenance]
+    what_it_does_not_support: [raw archive commits]
+    related_leads: [signed_messages_authenticity, 2012_outguess_outputs]
+    notes: Local-only manual inventory candidate.
+    solve_claim: false
+  - source_id: user_uploaded_2013_archive
+    title: User uploaded 2013.zip
+    url: null
+    source_type: local_user_upload
+    priority: A1
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: local_manual_inventory_required
+    recommended_capture_modes: [local_zip_hash, file_inventory]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [local_zip_hash, file_inventory]
+    known_limitations: [Raw archive must remain ignored.]
+    what_it_supports: [2013 archive provenance]
+    what_it_does_not_support: [raw archive commits]
+    related_leads: [2013_prime_echo_1033_3299_3301, 2013_whitespace_signed_message]
+    notes: Local-only manual inventory candidate.
+    solve_claim: false
+  - source_id: user_uploaded_2014_archive
+    title: User uploaded 2014.zip
+    url: null
+    source_type: local_user_upload
+    priority: A1
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: local_manual_inventory_required
+    recommended_capture_modes: [local_zip_hash, file_inventory]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [local_zip_hash, file_inventory]
+    known_limitations: [Raw archive must remain ignored.]
+    what_it_supports: [2014 archive provenance]
+    what_it_does_not_support: [raw archive commits]
+    related_leads: [liber_primus_transcriptions, outguess_all_pages_claim]
+    notes: Local-only manual inventory candidate.
+    solve_claim: false
+  - source_id: user_uploaded_2015_archive
+    title: User uploaded 2015.zip
+    url: null
+    source_type: local_user_upload
+    priority: A1
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: local_manual_inventory_required
+    recommended_capture_modes: [local_zip_hash, file_inventory]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [local_zip_hash, file_inventory]
+    known_limitations: [Raw archive must remain ignored.]
+    what_it_supports: [2015 archive provenance]
+    what_it_does_not_support: [raw archive commits]
+    related_leads: [community_hypotheses]
+    notes: Included for archive completeness.
+    solve_claim: false
+  - source_id: user_uploaded_2016_archive
+    title: User uploaded 2016.zip
+    url: null
+    source_type: local_user_upload
+    priority: A1
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: local_manual_inventory_required
+    recommended_capture_modes: [local_zip_hash, file_inventory]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [local_zip_hash, file_inventory]
+    known_limitations: [Raw archive must remain ignored.]
+    what_it_supports: [2016 archive provenance]
+    what_it_does_not_support: [raw archive commits]
+    related_leads: [2016_liber_primus_is_the_way_quote]
+    notes: Included for archive completeness.
+    solve_claim: false
+  - source_id: user_uploaded_2017_archive
+    title: User uploaded 2017.zip
+    url: null
+    source_type: local_user_upload
+    priority: A1
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: local_manual_inventory_required
+    recommended_capture_modes: [local_zip_hash, file_inventory]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [local_zip_hash, file_inventory]
+    known_limitations: [Raw archive must remain ignored.]
+    what_it_supports: [2017 archive provenance]
+    what_it_does_not_support: [raw archive commits]
+    related_leads: [community_hypotheses]
+    notes: Included for archive completeness.
+    solve_claim: false
+  - source_id: user_uploaded_assets_archive
+    title: User uploaded assets.zip
+    url: null
+    source_type: local_user_upload
+    priority: A1
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: local_manual_inventory_required
+    recommended_capture_modes: [local_zip_hash, file_inventory]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [local_zip_hash, file_inventory]
+    known_limitations: [Raw assets archive must remain ignored.]
+    what_it_supports: [asset provenance]
+    what_it_does_not_support: [raw binary/image/audio/font commits]
+    related_leads: [liber_primus_page_images_58_and_75]
+    notes: Local-only manual inventory candidate.
+    solve_claim: false
+  - source_id: user_uploaded_archive_dir
+    title: User uploaded ArchiveDir
+    url: null
+    source_type: local_user_upload
+    priority: A1
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: local_manual_inventory_required
+    recommended_capture_modes: [local_dir_hash, file_inventory]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [file_inventory, hash_inventory]
+    known_limitations: [Raw local directory contents must remain ignored.]
+    what_it_supports: [archive directory provenance]
+    what_it_does_not_support: [raw archive commits]
+    related_leads: [signed_messages_authenticity, community_hypotheses]
+    notes: Local-only manual inventory candidate.
+    solve_claim: false
+  - source_id: user_uploaded_extra_wiki_pages
+    title: User uploaded EXTRA WIKI PAGES.zip
+    url: null
+    source_type: local_user_upload
+    priority: A2
+    source_tier: tier4_social_claim_or_screenshot
+    collection_status: local_manual_inventory_required
+    recommended_capture_modes: [local_zip_hash, file_inventory]
+    manual_collection_required: true
+    allow_network_fetch: false
+    allow_dynamic_browser: false
+    raw_commit_allowed: false
+    google_drive_storage_allowed: false
+    expected_outputs: [local_zip_hash, file_inventory]
+    known_limitations: [Raw extra wiki pages archive must remain ignored.]
+    what_it_supports: [supplemental community-page provenance]
+    what_it_does_not_support: [canonical truth]
+    related_leads: [discord_community_hypothesis_leads]
+    notes: Local-only manual inventory candidate.
+    solve_claim: false

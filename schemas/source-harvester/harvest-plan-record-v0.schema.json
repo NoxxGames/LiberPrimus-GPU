@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source-harvester/harvest-plan-record-v0.schema.json",
+  "title": "Stage 5AF harvest plan record",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "source_id",
+    "source_type",
+    "priority",
+    "dry_run_only",
+    "plan_status",
+    "execution_enabled",
+    "fetch_performed",
+    "download_performed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "harvest_plan_record" },
+    "stage_id": { "const": "stage-5af" },
+    "source_id": { "type": "string" },
+    "source_type": { "type": "string" },
+    "priority": { "type": "string" },
+    "dry_run_only": { "const": true },
+    "plan_status": {
+      "enum": [
+        "local_file_required",
+        "manual_collection_required",
+        "network_fetch_deferred",
+        "metadata_only"
+      ]
+    },
+    "execution_enabled": { "const": false },
+    "fetch_performed": { "const": false },
+    "download_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

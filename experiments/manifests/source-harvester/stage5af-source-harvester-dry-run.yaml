@@ -1,0 +1,16 @@
+manifest_id: stage5af-source-harvester-dry-run
+stage_id: stage-5af
+description: Dry-run source-harvester planning over committed source manifest records.
+source_manifest: data/source-harvester/stage5af-cicada-source-manifest.yaml
+network_enabled: false
+downloads_enabled: false
+dynamic_browser_enabled: false
+raw_data_processed: false
+generated_outputs_committed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernels_added: 0
+gpu_benchmark_performed: false
+scored_experiment_executed: false
+solve_claim: false
+no_solve_claim: true

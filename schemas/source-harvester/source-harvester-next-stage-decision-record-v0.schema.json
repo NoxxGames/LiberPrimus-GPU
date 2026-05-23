@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source-harvester/source-harvester-next-stage-decision-record-v0.schema.json",
+  "title": "Stage 5AF source harvester next-stage decision record",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "option_id",
+    "selected",
+    "recommended_next_stage_title",
+    "deep_research_recommended_next",
+    "execution_enabled",
+    "scored_experiment_executed",
+    "gpu_benchmark_performed",
+    "unsolved_page_cuda_used",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5af_source_harvester_next_stage_decision" },
+    "stage_id": { "const": "stage-5af" },
+    "source_stage_id": { "const": "stage-5ae" },
+    "option_id": { "type": "string" },
+    "selected": { "type": "boolean" },
+    "recommended_next_stage_title": { "type": "string" },
+    "deep_research_recommended_next": { "const": false },
+    "execution_enabled": { "const": false },
+    "network_fetch_performed": { "const": false },
+    "raw_downloads_committed": { "const": false },
+    "raw_archives_processed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "gpu_benchmark_performed": { "const": false },
+    "scored_experiment_executed": { "const": false },
+    "unsolved_page_cuda_used": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

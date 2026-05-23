@@ -136,3 +136,12 @@ records:
     source: Stage 5AE formula parity report, reference-contract repair, hash-material policy, archive-source-lock deferral, next-stage decision, and summary records.
     affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, CUDA_NOTES.md, BENCHMARKS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md]
     notes: Stage 5AE did not run CUDA, modify CUDA source, add kernels, run full p56, run unsolved pages, benchmark, execute scored experiments, process raw/archive data, publish generated bodies, expand the website, upgrade method status, or make solve claims.
+  - record_type: project_direction_change_record
+    change_id: stage5af-local-source-harvester-inventory
+    date_or_stage: stage-5af
+    previous_direction: Build source-lock/provenance tooling after Stage 5AE, then decide whether Deep Research, experiments, benchmarks, CUDA, or website work should follow.
+    new_direction: Select Stage 5AG local user-provided download source-lock inventory, keeping Deep Research deferred until a harvested/source-locked bundle exists and keeping scored experiments, benchmarks, unsolved-page CUDA, and website expansion rejected for the next step.
+    reason: Stage 5AF validates the local-only source harvester and manifest cleanly but does not yet have harvested local raw material source-locked into compact metadata.
+    source: Stage 5AF source manifest, harvest-tool policy, dry-run summary, next-stage decision, and aggregate summary records.
+    affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, CUDA_NOTES.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md, docs/onboarding/source-harvester-workflow.md]
+    notes: Google Drive is not a project storage location; user-provided Google/Dropbox/Colab exports must be local and ignored. Stage 5AF did not run broad scraping, process raw archives, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/source-harvester/source-record-v0.schema.json",
+  "title": "Stage 5AF source record",
+  "type": "object",
+  "required": [
+    "source_id",
+    "title",
+    "source_type",
+    "priority",
+    "source_tier",
+    "collection_status",
+    "recommended_capture_modes",
+    "manual_collection_required",
+    "allow_network_fetch",
+    "allow_dynamic_browser",
+    "raw_commit_allowed",
+    "google_drive_storage_allowed",
+    "expected_outputs",
+    "known_limitations",
+    "what_it_supports",
+    "what_it_does_not_support",
+    "related_leads",
+    "solve_claim"
+  ],
+  "properties": {
+    "source_id": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "url": { "type": ["string", "null"] },
+    "source_type": {
+      "enum": [
+        "github_repo",
+        "github_org",
+        "dropbox_folder",
+        "google_sheet",
+        "google_doc",
+        "google_colab",
+        "pastebin",
+        "fandom_page",
+        "static_webpage",
+        "forum_index",
+        "forum_thread",
+        "youtube_video",
+        "youtube_channel",
+        "browser_tool",
+        "shiny_app",
+        "image_file",
+        "archive_zip",
+        "local_user_upload",
+        "manual_export_required"
+      ]
+    },
+    "priority": { "enum": ["A1", "A2", "B", "C", "deferred"] },
+    "source_tier": {
+      "enum": [
+        "tier0_original_signed_or_verified",
+        "tier1_committed_repo_record",
+        "tier2_archived_community_page_with_references",
+        "tier3_reproducible_community_data",
+        "tier4_social_claim_or_screenshot",
+        "tier5_modified_image_or_speculative_claim",
+        "unknown"
+      ]
+    },
+    "collection_status": { "type": "string" },
+    "recommended_capture_modes": { "type": "array", "items": { "type": "string" } },
+    "manual_collection_required": { "type": "boolean" },
+    "allow_network_fetch": { "type": "boolean" },
+    "allow_dynamic_browser": { "type": "boolean" },
+    "raw_commit_allowed": { "const": false },
+    "google_drive_storage_allowed": { "const": false },
+    "expected_outputs": { "type": "array", "items": { "type": "string" } },
+    "known_limitations": { "type": "array", "items": { "type": "string" } },
+    "what_it_supports": { "type": "array", "items": { "type": "string" } },
+    "what_it_does_not_support": { "type": "array", "items": { "type": "string" } },
+    "related_leads": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": ["string", "null"] },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

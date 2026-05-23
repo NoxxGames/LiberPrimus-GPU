@@ -1,0 +1,37 @@
+record_type: stage5af_harvest_dry_run_summary
+stage_id: stage-5af
+source_stage_id: stage-5ae
+no_solve_claim: true
+no_gpu_ci_safe: true
+ci_network_required: false
+new_cuda_kernels_added: 0
+network_fetch_performed: false
+live_web_scrape_performed: false
+raw_downloads_committed: false
+raw_archives_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+full_p56_cuda_executed: false
+unsolved_page_cuda_used: false
+gpu_benchmark_performed: false
+benchmark_execution_allowed: false
+scored_experiment_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+source_manifest_records: 41
+dry_run_plan_records: 41
+network_default_allowed: false
+download_default_allowed: false
+browser_default_allowed: false
+plan_status_counts:
+  local_file_required: 9
+  manual_collection_required: 6
+  network_fetch_deferred: 26
+manual_collection_required_count: 15
+network_fetch_deferred_count: 26
+warnings_count: 10
