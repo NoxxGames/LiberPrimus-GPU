@@ -61,6 +61,7 @@ git check-ignore -v experiments/results/prime-minus-one-cuda-contract/stage5z/su
 git check-ignore -v experiments/results/prime-minus-one-cuda-synthetic/stage5aa/summary.json
 git check-ignore -v experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/summary.json
 git check-ignore -v experiments/results/prime-minus-one-bounded-p56-mismatch/stage5ad-fix/summary.json
+git check-ignore -v experiments/results/prime-minus-one-bounded-p56-corrected-reporting/stage5ae/summary.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
@@ -76,6 +77,7 @@ git check-ignore -v codex-output/stage5y-codex-completion.md
 git check-ignore -v codex-output/stage5z-codex-completion.md
 git check-ignore -v codex-output/stage5aa-codex-completion.md
 git check-ignore -v codex-output/stage5ad-fix-codex-completion.md
+git check-ignore -v codex-output/stage5ae-codex-completion.md
 git check-ignore -v third_party/CicadaSolversIddqd/example.jpg
 git check-ignore -v third_party/SourceSnapshots/example.html
 ```

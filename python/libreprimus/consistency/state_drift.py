@@ -285,6 +285,21 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5AC is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5ad_fix",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5ad-fix\b", re.IGNORECASE),
+        "Stage 5AD-fix is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
+        "stale_next_stage5ad",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5ad(?!-fix)\b", re.IGNORECASE),
+        "Stage 5AD is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
+        "stale_next_stage5ae",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5ae\b", re.IGNORECASE),
+        "Stage 5AE is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -888,6 +903,17 @@ def check_state_drift_consistency(
     )
     _require_fact(
         results,
+        "stage5ae_corrected_bounded_p56_reporting_complete",
+        "stage 5ae" in staged_plan
+        and "corrected bounded p56 cuda formula parity reporting" in staged_plan
+        and "6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387" in staged_plan
+        and "stage 5af" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5AE corrected bounded p56 reporting and Stage 5AF direction.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
         "source_lock_snapshot_policy_present",
         "source-lock snapshot" in combined and "allowlisted" in combined and "snapshot policy" in combined,
         "Allowlisted public source-lock snapshot policy is documented.",
@@ -1249,6 +1275,18 @@ def check_state_drift_consistency(
         and "cuda kernel repair" in combined
         and "solve claim" in combined,
         "Stage 5AD-fix mismatch investigation and corrected-reporting boundary are documented.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "bounded_p56_corrected_reporting_policy_present",
+        "stage 5ae" in combined
+        and "corrected formula parity" in combined
+        and "failed_hash_mismatch" in combined
+        and "stage 5af" in combined
+        and "archive visual numeric source-lock" in combined
+        and "solve claim" in combined,
+        "Stage 5AE corrected bounded p56 reporting and Stage 5AF source-lock boundary are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

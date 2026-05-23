@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/bounded-p56-reference-contract-repair-record-v0.schema.json",
+  "title": "Stage 5AE bounded p56 reference contract repair record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "hash_role", "hash_value", "hash_material_kind", "valid_for_formula_parity", "reference_contract_repair_complete", "hash_material_policy_repair_complete", "cuda_kernel_repair_required", "stage5ad_historical_failure_preserved", "historical_stage5ad_reclassified_as_passed", "no_solve_claim", "solve_claim", "cuda_execution_performed", "generated_outputs_committed", "raw_data_processed", "new_cuda_kernels_added"],
+  "properties": {
+    "record_type": {"const": "bounded_p56_reference_contract_repair_record"},
+    "stage_id": {"const": "stage-5ae"},
+    "reference_contract_repair_complete": {"const": true},
+    "hash_material_policy_repair_complete": {"const": true},
+    "cuda_kernel_repair_required": {"const": false},
+    "stage5ad_historical_failure_preserved": {"const": true},
+    "historical_stage5ad_reclassified_as_passed": {"const": false},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0}
+  },
+  "additionalProperties": true
+}

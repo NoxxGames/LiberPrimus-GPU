@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/corrected-bounded-p56-full-p56-blocker-record-v0.schema.json",
+  "title": "Stage 5AE corrected bounded p56 full-p56 blocker record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "full_p56_status", "blocker_status", "full_p56_cuda_allowed", "full_p56_cuda_executed", "unsolved_page_cuda_allowed", "no_solve_claim", "solve_claim", "cuda_execution_performed", "raw_data_processed"],
+  "properties": {
+    "record_type": {"const": "corrected_bounded_p56_full_p56_blocker_record"},
+    "stage_id": {"const": "stage-5ae"},
+    "full_p56_status": {"const": "blocked_full_p56_token_buffer_missing"},
+    "full_p56_cuda_allowed": {"const": false},
+    "full_p56_cuda_executed": {"const": false},
+    "unsolved_page_cuda_allowed": {"const": false},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "raw_data_processed": {"const": false}
+  },
+  "additionalProperties": true
+}

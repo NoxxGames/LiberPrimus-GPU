@@ -127,3 +127,12 @@ records:
     source: Stage 5AD-fix hash-lineage, formula-trace, hash-material, reference-contract, root-cause, repair-readiness, guardrail, next-stage-decision, and summary records.
     affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, CUDA_NOTES.md, BENCHMARKS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md]
     notes: CUDA kernel repair is not selected; reference-contract and hash-material policy repair are selected. Full p56, unsolved pages, benchmarks, scored experiments, website expansion, generated-body publication, method-status upgrades, and solve claims remain blocked.
+  - record_type: project_direction_change_record
+    change_id: stage5ae-archive-visual-numeric-source-lock
+    date_or_stage: stage-5ae
+    previous_direction: Complete corrected formula parity reporting after Stage 5AD-fix, then consider whether CUDA/full-p56 expansion or source-lock cleanup is appropriate.
+    new_direction: Select Stage 5AF archive visual numeric source-lock and provenance inventory before any expansion, full-p56 CUDA, scored experiment, benchmark, or website work.
+    reason: Stage 5AE repaired the corrected formula-parity/hash-material reporting boundary, but archive visual numeric provenance still needs source-lock inventory before downstream evidence or manifest planning can be trusted.
+    source: Stage 5AE formula parity report, reference-contract repair, hash-material policy, archive-source-lock deferral, next-stage decision, and summary records.
+    affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, CUDA_NOTES.md, BENCHMARKS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md]
+    notes: Stage 5AE did not run CUDA, modify CUDA source, add kernels, run full p56, run unsolved pages, benchmark, execute scored experiments, process raw/archive data, publish generated bodies, expand the website, upgrade method status, or make solve claims.

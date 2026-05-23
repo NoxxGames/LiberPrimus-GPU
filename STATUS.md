@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AD-fix bounded p56 CUDA parity mismatch investigation is complete.
+Stage 5AE corrected bounded p56 CUDA formula parity reporting and reference-contract repair is complete.
 
-Next recommended prompt: Stage 5AE - corrected bounded p56 CUDA formula parity reporting and reference-contract repair. Website expansion is deferred to a future unnumbered project.
+Next recommended prompt: Stage 5AF - archive visual numeric source-lock and provenance inventory. Website expansion is deferred to a future unnumbered project.
+
+## Completed in Stage 5AE
+
+Stage 5AE added the `libreprimus corrected-bounded-p56-reporting` CLI, corrected formula-parity report records, reference-contract repair records, hash-material policy records, result-store and score-summary integration records, method-status impact records, generated-body policy records, full-p56 blocker records, scored-experiment deferral records, archive/source-lock deferral records, doc-staleness validation records, next-stage decision records, Stage 5AE manifests, generated ignored reports, schemas, tests, documentation, research-synthesis updates, consistency integration, and a detailed ignored Codex completion handoff.
+
+Local Stage 5AE summary: corrected formula-parity report records `1`, reference-contract repair records `3`, hash-material policy records `3`, result-store integration records `1`, score-summary integration records `1`, method-status impact records `1`, generated-body policy records `1`, full-p56 blocker records `1`, scored-experiment deferral records `1`, archive/source-lock deferral records `3`, doc-staleness validation records `1`, next-stage decision records `8`, historical Stage 5AD status `failed_hash_mismatch`, historical expected hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87`, historical computed CUDA/formula hash `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`, corrected formula expected/computed hash `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`, corrected formula parity status `passed`, reference-contract repair complete `true`, hash-material policy repair complete `true`, CUDA kernel repair required `false`, selected next prompt `Stage 5AF - archive visual numeric source-lock and provenance inventory`, CUDA execution `false`, CUDA source modified `false`, new CUDA kernels added `0`, full p56 `false`, unsolved-page CUDA `false`, benchmarks `false`, scored experiments `false`, archive raw data processed `false`, website expansion `false`, raw data processed `false`, and generated/codex/raw outputs uncommitted.
+
+Stage 5AE is corrected reporting and contract repair infrastructure. It does not rewrite Stage 5AD as passed, run CUDA, run full p56, run unsolved pages, modify CUDA device arithmetic, add kernels, run benchmarks, execute scored experiments, process archive/raw data, publish generated bodies, upgrade method status, expand the website, activate the canonical corpus, finalise page boundaries, or make a solve claim.
 
 ## Completed in Stage 5AD-fix
 

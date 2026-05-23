@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/corrected-bounded-p56-next-stage-decision-record-v0.schema.json",
+  "title": "Stage 5AE corrected bounded p56 next-stage decision record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "option_id", "status", "selected", "recommended_prompt_type", "execution_enabled", "future_cuda_execution_allowed", "cuda_source_changes_allowed_current_stage", "unsolved_page_scope_allowed", "no_solve_claim", "solve_claim"],
+  "properties": {
+    "record_type": {"const": "corrected_bounded_p56_next_stage_decision_record"},
+    "stage_id": {"const": "stage-5ae"},
+    "execution_enabled": {"const": false},
+    "future_cuda_execution_allowed": {"const": false},
+    "cuda_source_changes_allowed_current_stage": {"const": false},
+    "unsolved_page_scope_allowed": {"const": false},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/stage5ae-corrected-bounded-p56-reporting-summary-v0.schema.json",
+  "title": "Stage 5AE corrected bounded p56 reporting summary",
+  "type": "object",
+  "required": ["record_type", "stage_id", "status", "historical_stage5ad_status", "historical_stage5ad_failure_preserved", "historical_stage5ad_reclassified_as_passed", "corrected_formula_expected_hash", "corrected_formula_computed_hash", "corrected_formula_parity_status", "reference_contract_repair_complete", "hash_material_policy_repair_complete", "cuda_kernel_repair_required", "no_solve_claim", "solve_claim", "cuda_execution_performed", "cuda_source_modified", "generated_outputs_committed", "raw_data_processed", "new_cuda_kernels_added"],
+  "properties": {
+    "record_type": {"const": "stage5ae_corrected_bounded_p56_reporting_summary"},
+    "stage_id": {"const": "stage-5ae"},
+    "status": {"const": "complete"},
+    "historical_stage5ad_status": {"const": "failed_hash_mismatch"},
+    "historical_stage5ad_failure_preserved": {"const": true},
+    "historical_stage5ad_reclassified_as_passed": {"const": false},
+    "corrected_formula_expected_hash": {"const": "6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387"},
+    "corrected_formula_computed_hash": {"const": "6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387"},
+    "corrected_formula_parity_status": {"const": "passed"},
+    "reference_contract_repair_complete": {"const": true},
+    "hash_material_policy_repair_complete": {"const": true},
+    "cuda_kernel_repair_required": {"const": false},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "cuda_source_modified": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false},
+    "new_cuda_kernel_added": {"const": false},
+    "new_cuda_kernels_added": {"const": 0}
+  },
+  "additionalProperties": true
+}

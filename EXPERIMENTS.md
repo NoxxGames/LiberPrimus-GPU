@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AE Corrected Bounded P56 Reporting
+
+Stage 5AE is a corrected reporting and reference-contract repair stage, not a cryptanalytic experiment. It consumes committed Stage 5AD-fix metadata, records corrected bounded p56 formula parity against the Stage 5X formula hash, preserves Stage 5AD as a historical failed comparison, separates formula-output hash material from candidate-major reference hash material, and selects Stage 5AF source-lock/provenance inventory.
+
+Generated Stage 5AE reports remain ignored under `experiments/results/prime-minus-one-bounded-p56-corrected-reporting/stage5ae/`. Stage 5AE records no CUDA execution, full p56 execution, unsolved-page CUDA, new kernels, CUDA device arithmetic changes, scored experiments, benchmarks, raw/archive-data processing, generated-body publication, website expansion, canonical corpus activation, page-boundary finalisation, method-status upgrades, or solve claims.
+
 ## Stage 5AD-fix Bounded P56 Mismatch Investigation
 
 Stage 5AD-fix is a diagnostic/reporting stage, not a cryptanalytic experiment. It builds committed hash-lineage, token/stream/formula trace, hash-material, reference-contract, root-cause, repair-readiness, guardrail, next-stage decision, and summary records from committed Stage 5AD/5X/5W/5L metadata.

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/corrected-bounded-p56-scored-experiment-deferral-record-v0.schema.json",
+  "title": "Stage 5AE corrected bounded p56 scored-experiment deferral record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "deferral_status", "scored_experiment_execution_allowed", "scored_experiment_executed", "benchmark_execution_allowed", "score_interpretation", "no_solve_claim", "solve_claim"],
+  "properties": {
+    "record_type": {"const": "corrected_bounded_p56_scored_experiment_deferral_record"},
+    "stage_id": {"const": "stage-5ae"},
+    "scored_experiment_execution_allowed": {"const": false},
+    "scored_experiment_executed": {"const": false},
+    "benchmark_execution_allowed": {"const": false},
+    "score_interpretation": {"const": "triage_only"},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false}
+  },
+  "additionalProperties": true
+}

@@ -4,9 +4,9 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5AD-fix bounded p56 CUDA parity mismatch investigation is complete. It records that the Stage 5AD CUDA/formula hash matches the Stage 5X formula hash, while the Stage 5AD expected hash follows Stage 5L candidate-major reference material.
+Stage 5AE corrected bounded p56 CUDA formula parity reporting and reference-contract repair is complete. It preserves Stage 5AD as a historical `failed_hash_mismatch`, records corrected formula parity as `passed` against the Stage 5X formula hash, and separates formula-output hash material from Stage 5L candidate-major reference hash material.
 
-The next recommended prompt is Stage 5AE - corrected bounded p56 CUDA formula parity reporting and reference-contract repair. Website expansion is deferred to a future unnumbered project. Broad CUDA implementation remains deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5AF - archive visual numeric source-lock and provenance inventory. Website expansion is deferred to a future unnumbered project. Broad CUDA implementation remains deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

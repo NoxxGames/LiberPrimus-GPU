@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/corrected-bounded-p56-doc-staleness-validation-record-v0.schema.json",
+  "title": "Stage 5AE corrected bounded p56 doc-staleness validation record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "doc_staleness_validation_status", "strict_doc_staleness_check_expected", "stale_stage5ad_pass_language_allowed", "no_solve_claim", "solve_claim", "cuda_execution_performed"],
+  "properties": {
+    "record_type": {"const": "corrected_bounded_p56_doc_staleness_validation_record"},
+    "stage_id": {"const": "stage-5ae"},
+    "strict_doc_staleness_check_expected": {"const": true},
+    "stale_stage5ad_pass_language_allowed": {"const": false},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "cuda_execution_performed": {"const": false}
+  },
+  "additionalProperties": true
+}

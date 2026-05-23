@@ -1,0 +1,31 @@
+manifest_id: stage5ae-reference-contract-repair
+stage_id: stage-5ae
+title: Stage 5AE bounded p56 reference-contract and hash-material policy repair
+execution_enabled: false
+cuda_execution_performed: false
+cuda_source_changes_allowed: false
+new_cuda_kernels_allowed: false
+full_p56_cuda_allowed: false
+unsolved_page_cuda_allowed: false
+benchmark_execution_allowed: false
+scored_experiment_execution_allowed: false
+raw_data_processed: false
+generated_body_publication_allowed: false
+no_solve_claim: true
+purpose: Separate formula-output hash material from Stage 5L candidate-major reference hash material for future parity validation.
+hash_roles:
+  formula_output_hash:
+    hash: 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387
+    valid_for_formula_parity: true
+    valid_for_reference_parity: false
+  candidate_major_reference_hash:
+    hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+    valid_for_formula_parity: false
+    valid_for_reference_parity: true
+outputs:
+  committed:
+    - data/cuda/stage5ae-bounded-p56-reference-contract-repair.yaml
+    - data/cuda/stage5ae-hash-material-policy.yaml
+  generated_ignored:
+    - experiments/results/prime-minus-one-bounded-p56-corrected-reporting/stage5ae/reference_contract_repair_report.json
+    - experiments/results/prime-minus-one-bounded-p56-corrected-reporting/stage5ae/hash_material_policy_report.json

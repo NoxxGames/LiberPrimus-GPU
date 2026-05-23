@@ -1716,6 +1716,88 @@ echo "Running Stage 5AD-fix bounded p56 mismatch temp output"
     --summary "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-summary.yaml" \
     --results-dir "$tmp_dir/stage5ad-fix-bounded-p56-mismatch"
 
+echo "Running Stage 5AE corrected bounded p56 reporting temp output"
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-formula-parity-report \
+    --stage5ad-fix-summary "$tmp_dir/stage5ad-fix-bounded-p56-mismatch-summary.yaml" \
+    --formula-parity-report-out "$tmp_dir/stage5ae-corrected-bounded-p56-formula-parity-report.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-reference-contract-repair \
+    --reference-contract-repair-out "$tmp_dir/stage5ae-bounded-p56-reference-contract-repair.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-hash-material-policy \
+    --hash-material-policy-out "$tmp_dir/stage5ae-hash-material-policy.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-result-store-integration \
+    --result-store-integration-out "$tmp_dir/stage5ae-corrected-bounded-p56-result-store-integration.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-score-summary-integration \
+    --score-summary-integration-out "$tmp_dir/stage5ae-corrected-bounded-p56-score-summary-integration.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-method-status-impact \
+    --method-status-impact-out "$tmp_dir/stage5ae-corrected-bounded-p56-method-status-impact.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-generated-body-policy \
+    --generated-body-policy-out "$tmp_dir/stage5ae-corrected-bounded-p56-generated-body-policy.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-full-p56-blocker \
+    --full-p56-blocker-out "$tmp_dir/stage5ae-corrected-bounded-p56-full-p56-blocker.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-scored-experiment-deferral \
+    --scored-experiment-deferral-out "$tmp_dir/stage5ae-corrected-bounded-p56-scored-experiment-deferral.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-archive-source-lock-deferral \
+    --archive-source-lock-deferral-out "$tmp_dir/stage5ae-archive-source-lock-deferral.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-doc-staleness-validation \
+    --doc-staleness-validation-out "$tmp_dir/stage5ae-corrected-bounded-p56-doc-staleness-validation.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-next-stage-decision \
+    --next-stage-decision-out "$tmp_dir/stage5ae-corrected-bounded-p56-next-stage-decision.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting build-summary \
+    --formula-parity-report "$tmp_dir/stage5ae-corrected-bounded-p56-formula-parity-report.yaml" \
+    --reference-contract-repair "$tmp_dir/stage5ae-bounded-p56-reference-contract-repair.yaml" \
+    --hash-material-policy "$tmp_dir/stage5ae-hash-material-policy.yaml" \
+    --result-store-integration "$tmp_dir/stage5ae-corrected-bounded-p56-result-store-integration.yaml" \
+    --score-summary-integration "$tmp_dir/stage5ae-corrected-bounded-p56-score-summary-integration.yaml" \
+    --method-status-impact "$tmp_dir/stage5ae-corrected-bounded-p56-method-status-impact.yaml" \
+    --generated-body-policy "$tmp_dir/stage5ae-corrected-bounded-p56-generated-body-policy.yaml" \
+    --full-p56-blocker "$tmp_dir/stage5ae-corrected-bounded-p56-full-p56-blocker.yaml" \
+    --scored-experiment-deferral "$tmp_dir/stage5ae-corrected-bounded-p56-scored-experiment-deferral.yaml" \
+    --archive-source-lock-deferral "$tmp_dir/stage5ae-archive-source-lock-deferral.yaml" \
+    --doc-staleness-validation "$tmp_dir/stage5ae-corrected-bounded-p56-doc-staleness-validation.yaml" \
+    --next-stage-decision "$tmp_dir/stage5ae-corrected-bounded-p56-next-stage-decision.yaml" \
+    --summary-out "$tmp_dir/stage5ae-corrected-bounded-p56-reporting-summary.yaml" \
+    --out-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting" \
+    --allow-warnings
+"$python_bin" -m libreprimus.cli corrected-bounded-p56-reporting validate-stage5ae \
+    --formula-parity-report "$tmp_dir/stage5ae-corrected-bounded-p56-formula-parity-report.yaml" \
+    --reference-contract-repair "$tmp_dir/stage5ae-bounded-p56-reference-contract-repair.yaml" \
+    --hash-material-policy "$tmp_dir/stage5ae-hash-material-policy.yaml" \
+    --result-store-integration "$tmp_dir/stage5ae-corrected-bounded-p56-result-store-integration.yaml" \
+    --score-summary-integration "$tmp_dir/stage5ae-corrected-bounded-p56-score-summary-integration.yaml" \
+    --method-status-impact "$tmp_dir/stage5ae-corrected-bounded-p56-method-status-impact.yaml" \
+    --generated-body-policy "$tmp_dir/stage5ae-corrected-bounded-p56-generated-body-policy.yaml" \
+    --full-p56-blocker "$tmp_dir/stage5ae-corrected-bounded-p56-full-p56-blocker.yaml" \
+    --scored-experiment-deferral "$tmp_dir/stage5ae-corrected-bounded-p56-scored-experiment-deferral.yaml" \
+    --archive-source-lock-deferral "$tmp_dir/stage5ae-archive-source-lock-deferral.yaml" \
+    --doc-staleness-validation "$tmp_dir/stage5ae-corrected-bounded-p56-doc-staleness-validation.yaml" \
+    --next-stage-decision "$tmp_dir/stage5ae-corrected-bounded-p56-next-stage-decision.yaml" \
+    --summary "$tmp_dir/stage5ae-corrected-bounded-p56-reporting-summary.yaml" \
+    --results-dir "$tmp_dir/stage5ae-corrected-bounded-p56-reporting"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

@@ -1720,6 +1720,77 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --summary $Stage5ADFixSummary `
         --results-dir $Stage5ADFixOut
 
+    Write-Host "Running Stage 5AE corrected bounded p56 reporting temp output"
+    $Stage5AEOut = Join-Path $TempDir "stage5ae-corrected-bounded-p56-reporting"
+    $Stage5AEFormula = Join-Path $TempDir "stage5ae-corrected-bounded-p56-formula-parity-report.yaml"
+    $Stage5AEContract = Join-Path $TempDir "stage5ae-bounded-p56-reference-contract-repair.yaml"
+    $Stage5AEPolicy = Join-Path $TempDir "stage5ae-hash-material-policy.yaml"
+    $Stage5AEResult = Join-Path $TempDir "stage5ae-corrected-bounded-p56-result-store-integration.yaml"
+    $Stage5AEScore = Join-Path $TempDir "stage5ae-corrected-bounded-p56-score-summary-integration.yaml"
+    $Stage5AEMethod = Join-Path $TempDir "stage5ae-corrected-bounded-p56-method-status-impact.yaml"
+    $Stage5AEBody = Join-Path $TempDir "stage5ae-corrected-bounded-p56-generated-body-policy.yaml"
+    $Stage5AEFull = Join-Path $TempDir "stage5ae-corrected-bounded-p56-full-p56-blocker.yaml"
+    $Stage5AEScored = Join-Path $TempDir "stage5ae-corrected-bounded-p56-scored-experiment-deferral.yaml"
+    $Stage5AEArchive = Join-Path $TempDir "stage5ae-archive-source-lock-deferral.yaml"
+    $Stage5AEDocs = Join-Path $TempDir "stage5ae-corrected-bounded-p56-doc-staleness-validation.yaml"
+    $Stage5AEDecision = Join-Path $TempDir "stage5ae-corrected-bounded-p56-next-stage-decision.yaml"
+    $Stage5AESummary = Join-Path $TempDir "stage5ae-corrected-bounded-p56-reporting-summary.yaml"
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-formula-parity-report `
+        --stage5ad-fix-summary $Stage5ADFixSummary --formula-parity-report-out $Stage5AEFormula --out-dir $Stage5AEOut --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-reference-contract-repair `
+        --reference-contract-repair-out $Stage5AEContract --out-dir $Stage5AEOut --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-hash-material-policy `
+        --hash-material-policy-out $Stage5AEPolicy --out-dir $Stage5AEOut --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-result-store-integration `
+        --result-store-integration-out $Stage5AEResult --out-dir $Stage5AEOut --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-score-summary-integration `
+        --score-summary-integration-out $Stage5AEScore --out-dir $Stage5AEOut --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-method-status-impact `
+        --method-status-impact-out $Stage5AEMethod --out-dir $Stage5AEOut --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-generated-body-policy `
+        --generated-body-policy-out $Stage5AEBody --out-dir $Stage5AEOut --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-full-p56-blocker `
+        --full-p56-blocker-out $Stage5AEFull --out-dir $Stage5AEOut --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-scored-experiment-deferral `
+        --scored-experiment-deferral-out $Stage5AEScored --out-dir $Stage5AEOut --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-archive-source-lock-deferral `
+        --archive-source-lock-deferral-out $Stage5AEArchive --out-dir $Stage5AEOut --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-doc-staleness-validation `
+        --doc-staleness-validation-out $Stage5AEDocs --out-dir $Stage5AEOut --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-next-stage-decision `
+        --next-stage-decision-out $Stage5AEDecision --out-dir $Stage5AEOut --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting build-summary `
+        --formula-parity-report $Stage5AEFormula `
+        --reference-contract-repair $Stage5AEContract `
+        --hash-material-policy $Stage5AEPolicy `
+        --result-store-integration $Stage5AEResult `
+        --score-summary-integration $Stage5AEScore `
+        --method-status-impact $Stage5AEMethod `
+        --generated-body-policy $Stage5AEBody `
+        --full-p56-blocker $Stage5AEFull `
+        --scored-experiment-deferral $Stage5AEScored `
+        --archive-source-lock-deferral $Stage5AEArchive `
+        --doc-staleness-validation $Stage5AEDocs `
+        --next-stage-decision $Stage5AEDecision `
+        --summary-out $Stage5AESummary `
+        --out-dir $Stage5AEOut `
+        --allow-warnings
+    & $Python -m libreprimus.cli corrected-bounded-p56-reporting validate-stage5ae `
+        --formula-parity-report $Stage5AEFormula `
+        --reference-contract-repair $Stage5AEContract `
+        --hash-material-policy $Stage5AEPolicy `
+        --result-store-integration $Stage5AEResult `
+        --score-summary-integration $Stage5AEScore `
+        --method-status-impact $Stage5AEMethod `
+        --generated-body-policy $Stage5AEBody `
+        --full-p56-blocker $Stage5AEFull `
+        --scored-experiment-deferral $Stage5AEScored `
+        --archive-source-lock-deferral $Stage5AEArchive `
+        --doc-staleness-validation $Stage5AEDocs `
+        --next-stage-decision $Stage5AEDecision `
+        --summary $Stage5AESummary `
+        --results-dir $Stage5AEOut
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

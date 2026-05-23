@@ -76,6 +76,10 @@ Stage 5AD runs only one bounded p56 CUDA parity vector and records a hash mismat
 
 Stage 5AD-fix is a no-GPU diagnostic/reporting stage. It traces hash lineage, token/stream/formula material, and reference-contract status only. Do not cite Stage 5AD-fix as a benchmark, speedup, throughput, CUDA parity pass, full p56 result, or solve result.
 
+## Stage 5AE Corrected Formula Reporting Boundary
+
+Stage 5AE is not a benchmark stage. It records corrected bounded p56 formula-parity metadata and reference-contract/hash-material policy repairs only. Do not cite Stage 5AE record counts, corrected formula hash equality, or generated reports as throughput, performance, speedup, full p56 parity, or solve evidence.
+
 ## Stage 5Z Prime-Minus-One CUDA Contract Boundary
 
 Stage 5Z is not a benchmark stage. It records prime-minus-one CUDA contract, kernel ABI, host-runner, buffer, validation-vector, future parity, result-store compatibility, full-p56 blocker, scored-experiment deferral, implementation-readiness, and next-stage decision metadata without native execution, CUDA execution, native/CUDA CMake, profilers, timing loops, or benchmark commands.

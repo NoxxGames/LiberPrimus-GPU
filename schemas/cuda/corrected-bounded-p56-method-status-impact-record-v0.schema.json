@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/cuda/corrected-bounded-p56-method-status-impact-record-v0.schema.json",
+  "title": "Stage 5AE corrected bounded p56 method-status impact record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "method_family_id", "method_status_impact_status", "method_status_upgrade_allowed", "method_status_upgraded", "no_solve_claim", "solve_claim", "cuda_execution_performed", "generated_outputs_committed", "raw_data_processed"],
+  "properties": {
+    "record_type": {"const": "corrected_bounded_p56_method_status_impact_record"},
+    "stage_id": {"const": "stage-5ae"},
+    "method_status_impact_status": {"const": "no_method_status_upgrade"},
+    "method_status_upgrade_allowed": {"const": false},
+    "method_status_upgraded": {"const": false},
+    "no_solve_claim": {"const": true},
+    "solve_claim": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "generated_outputs_committed": {"const": false},
+    "raw_data_processed": {"const": false}
+  },
+  "additionalProperties": true
+}

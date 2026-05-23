@@ -1,11 +1,11 @@
-record_set_id: operational-file-map
+﻿record_set_id: operational-file-map
 schema: schemas/project-state/operational-file-map-record-v0.schema.json
 records:
   - path: README.md
     category: operational_status_doc
     purpose: Public repository entrypoint and current boundary summary.
     source_of_truth_rank: 1
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_stage_when_state_changes
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -16,7 +16,7 @@ records:
     category: operational_status_doc
     purpose: Concise current operational status.
     source_of_truth_rank: 1
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_stage
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -27,7 +27,7 @@ records:
     category: roadmap_doc
     purpose: High-level current direction with staged-plan pointer.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_stage
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -38,7 +38,7 @@ records:
     category: policy_doc
     purpose: Codex operational policy and current stage guardrails.
     source_of_truth_rank: 1
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_stage
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -49,7 +49,7 @@ records:
     category: architecture_doc
     purpose: CUDA guardrails and current acceleration state.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_cuda_stage
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -60,7 +60,7 @@ records:
     category: architecture_doc
     purpose: Benchmark policy and readiness notes.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_benchmark_or_cuda_stage
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -71,7 +71,7 @@ records:
     category: policy_doc
     purpose: Experiment execution and generated-output policy.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_experiment_policy_change
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -82,7 +82,7 @@ records:
     category: policy_doc
     purpose: Result and score-summary publication policy.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_result_surface_change
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -93,7 +93,7 @@ records:
     category: policy_doc
     purpose: Validation commands and test boundaries.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_cli_or_ci_change
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -104,7 +104,7 @@ records:
     category: reference_only_data_record
     purpose: Method-family status and cipher module boundaries.
     source_of_truth_rank: 3
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: method_status_changes
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -115,7 +115,7 @@ records:
     category: roadmap_doc
     purpose: Durable stage timeline, current state, and next-stage direction.
     source_of_truth_rank: 1
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_stage
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -126,7 +126,7 @@ records:
     category: operational_status_doc
     purpose: Newcomer entrypoint to current project state.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_stage_when_state_changes
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -137,7 +137,7 @@ records:
     category: operational_status_doc
     purpose: Map of authoritative docs and records.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_source_of_truth_change
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -148,7 +148,7 @@ records:
     category: operational_status_doc
     purpose: Codex navigation guide for stage work.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_cli_or_stage_policy_change
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -159,7 +159,7 @@ records:
     category: operational_status_doc
     purpose: Deep Research handoff and deferral map.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_research_handoff_change
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -170,7 +170,7 @@ records:
     category: operational_status_doc
     purpose: Contributor module ownership guide.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_module_surface_change
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -181,7 +181,7 @@ records:
     category: policy_doc
     purpose: Private, raw, and generated output path policy.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_new_generated_path
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -192,7 +192,7 @@ records:
     category: operational_status_doc
     purpose: Human-readable mirror of this operational file map.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_operational_file_map_change
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: mirror_of_data_project_state_operational_file_map
@@ -203,7 +203,7 @@ records:
     category: architecture_doc
     purpose: Source-of-truth hierarchy and current safety posture.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_source_of_truth_change
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -214,7 +214,7 @@ records:
     category: architecture_doc
     purpose: CUDA target and non-target boundary policy.
     source_of_truth_rank: 2
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_cuda_stage
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: source
@@ -225,7 +225,7 @@ records:
     category: tutorial
     purpose: Public hardware/performance guidance.
     source_of_truth_rank: 3
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_cuda_or_benchmark_policy_change
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: mirrored_to_wiki_source
@@ -236,7 +236,7 @@ records:
     category: tutorial
     purpose: Public Codex stage workflow guide.
     source_of_truth_rank: 3
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_codex_workflow_change
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: mirrored_to_wiki_source
@@ -247,7 +247,7 @@ records:
     category: tutorial
     purpose: Public troubleshooting and recovery guide.
     source_of_truth_rank: 3
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: every_common_failure_mode_change
     mutable_or_reference_only: mutable
     mirror_or_generated_relationships: mirrored_to_wiki_source
@@ -258,7 +258,7 @@ records:
     category: wiki_source_mirror
     purpose: Wiki mirror for tutorial 10.
     source_of_truth_rank: 4
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: when_tutorial_changes
     mutable_or_reference_only: mutable_mirror
     mirror_or_generated_relationships: mirror_of_tutorial_10
@@ -269,7 +269,7 @@ records:
     category: wiki_source_mirror
     purpose: Wiki mirror for tutorial 14.
     source_of_truth_rank: 4
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: when_tutorial_changes
     mutable_or_reference_only: mutable_mirror
     mirror_or_generated_relationships: mirror_of_tutorial_14
@@ -280,7 +280,7 @@ records:
     category: wiki_source_mirror
     purpose: Wiki mirror for tutorial 15.
     source_of_truth_rank: 4
-    last_meaningful_update_stage: stage-5ad-fix
+    last_meaningful_update_stage: stage-5ae
     expected_update_frequency: when_tutorial_changes
     mutable_or_reference_only: mutable_mirror
     mirror_or_generated_relationships: mirror_of_tutorial_15

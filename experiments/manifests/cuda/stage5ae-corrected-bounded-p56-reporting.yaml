@@ -1,0 +1,30 @@
+manifest_id: stage5ae-corrected-bounded-p56-reporting
+stage_id: stage-5ae
+title: Stage 5AE corrected bounded p56 formula parity reporting
+execution_enabled: false
+cuda_execution_performed: false
+cuda_source_changes_allowed: false
+new_cuda_kernels_allowed: false
+full_p56_cuda_allowed: false
+unsolved_page_cuda_allowed: false
+benchmark_execution_allowed: false
+scored_experiment_execution_allowed: false
+raw_data_processed: false
+generated_body_publication_allowed: false
+no_solve_claim: true
+purpose: Record corrected formula-parity metadata using Stage 5AD-fix evidence while preserving Stage 5AD as a historical failed hash comparison.
+inputs:
+  - data/cuda/stage5ad-fix-bounded-p56-mismatch-summary.yaml
+  - data/cuda/stage5ad-fix-bounded-p56-mismatch-reference-contract.yaml
+  - data/cuda/stage5ad-fix-bounded-p56-mismatch-hash-material.yaml
+outputs:
+  committed:
+    - data/cuda/stage5ae-corrected-bounded-p56-formula-parity-report.yaml
+    - data/cuda/stage5ae-corrected-bounded-p56-reporting-summary.yaml
+  generated_ignored:
+    - experiments/results/prime-minus-one-bounded-p56-corrected-reporting/stage5ae/corrected_formula_parity_report.json
+guardrails:
+  historical_stage5ad_status: failed_hash_mismatch
+  historical_stage5ad_failure_preserved: true
+  corrected_formula_expected_hash: 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387
+  corrected_formula_computed_hash: 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387

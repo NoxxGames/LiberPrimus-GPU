@@ -999,3 +999,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AD-fix wrote 3 hash-lineage records, 1 token trace record, 1 stream trace record, 1 formula trace record, 2 hash-material records, 1 reference-contract record, 4 root-cause records, 3 repair-readiness records, 1 guardrail record, and 11 next-stage decision records. Its primary root cause is `expected_hash_reference_lineage_mismatch`; Stage 5AD expected hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87` is not the same hash material as the Stage 5X formula/CUDA hash `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`. It selected Stage 5AE corrected bounded p56 CUDA formula parity reporting and reference-contract repair, and performed no CUDA execution, CUDA-facing source modification, device arithmetic change, new kernel addition, full p56 execution, unsolved-page CUDA use, GPU benchmark, speedup claim, scored experiment, raw-data processing, generated-body publication, website expansion, method-status upgrade to solved, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ae
+    title: Corrected bounded p56 CUDA formula parity reporting and reference-contract repair
+    status: complete
+    category: infrastructure
+    summary: Repaired bounded p56 reporting after Stage 5AD-fix by preserving Stage 5AD as a historical failed hash comparison while recording corrected formula-output parity as passed for the Stage 5X formula hash.
+    key_outputs:
+      - "`libreprimus corrected-bounded-p56-reporting` commands for formula parity report, reference-contract repair, hash-material policy, result-store integration, score-summary integration, method-status impact, generated-body policy, full-p56 blocker, scored-experiment deferral, archive/source-lock deferral, doc-staleness validation, next-stage decision, summary, validation, and summary display."
+      - Stage 5AE corrected formula parity report, reference-contract repair, hash-material policy, result-store integration, score-summary integration, method-status impact, generated-body policy, full-p56 blocker, scored-experiment deferral, archive/source-lock deferral, doc-staleness validation, next-stage decision, and aggregate summary records under `data/cuda/`.
+      - Ignored generated reports under `experiments/results/prime-minus-one-bounded-p56-corrected-reporting/stage5ae/`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AE wrote 1 corrected formula-parity report record, 3 reference-contract repair records, 3 hash-material policy records, 1 result-store integration record, 1 score-summary integration record, 1 method-status impact record, 1 generated-body policy record, 1 full-p56 blocker record, 1 scored-experiment deferral record, 3 archive/source-lock deferral records, 1 doc-staleness validation record, and 8 next-stage decision records. It records corrected formula parity as `passed` for hash `6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387`, preserves Stage 5AD as `failed_hash_mismatch` against reference-lineage hash `4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87`, selects Stage 5AF archive visual numeric source-lock and provenance inventory, and performed no CUDA execution, CUDA-facing source modification, device arithmetic change, new kernel addition, full p56 execution, unsolved-page CUDA use, GPU benchmark, speedup claim, scored experiment, raw/archive-data processing, generated-body publication, website expansion, method-status upgrade to solved, canonical-corpus activation, page-boundary finalisation, or solve claim.

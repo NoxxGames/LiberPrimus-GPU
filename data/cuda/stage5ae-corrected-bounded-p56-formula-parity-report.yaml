@@ -1,0 +1,98 @@
+records:
+- stage_id: stage-5ae
+  source_stage_id: stage-5ad-fix
+  historical_failed_stage_id: stage-5ad
+  source_formula_stage_id: stage-5x
+  source_reference_stage_id: stage-5l
+  source_contract_stage_id: stage-5w
+  source_cuda_contract_stage_id: stage-5z
+  source_synthetic_stage_id: stage-5aa
+  candidate_batch_abi_id: candidate_batch_abi_v0
+  cuda_contract_id: prime_minus_one_stream_cuda_contract_v0
+  kernel_id: prime_minus_one_stream_cuda_kernel_v0
+  kernel_entrypoint: prime_minus_one_stream_kernel_v0
+  bounded_p56_vector_id: stage5z-validation-p56-bounded-v0
+  mapping_id: stage5w-mapping-p56-stage4o-bounded-v0
+  fixture_id: p56-an-end-prime-minus-one
+  candidate_id: stage4o-prime-minus-one-an-v0
+  token_mapping_id: stage5l-token-mapping-04
+  stage5ad_historical_failure_preserved: true
+  historical_stage5ad_status: failed_hash_mismatch
+  historical_stage5ad_reclassified_as_passed: false
+  new_cuda_kernels_added: 0
+  no_solve_claim: true
+  no_gpu_ci_safe: true
+  cuda_execution_performed: false
+  bounded_p56_cuda_executed: false
+  full_p56_cuda_executed: false
+  full_p56_cuda_allowed: false
+  unsolved_page_cuda_used: false
+  unsolved_page_cuda_allowed: false
+  real_liber_primus_cuda_data_used: false
+  raw_data_processed: false
+  archive_raw_data_processed: false
+  native_execution_performed: false
+  python_reference_execution_performed: false
+  gpu_benchmark_performed: false
+  benchmark_execution_allowed: false
+  performance_claim: false
+  speedup_claim: false
+  scored_experiment_executed: false
+  scored_experiment_execution_allowed: false
+  website_expansion_performed: false
+  canonical_corpus_active: false
+  page_boundaries_final: false
+  generated_body_publication_allowed: false
+  generated_outputs_committed: false
+  codex_output_committed: false
+  method_status_upgrade_allowed: false
+  method_status_upgraded: false
+  solve_claim: false
+  cuda_source_modified: false
+  new_cuda_kernel_added: false
+  device_kernel_arithmetic_modified: false
+  ci_gpu_required: false
+  local_16gb_profile_required: false
+  cxx_launches_python_workers: false
+  record_type: corrected_bounded_p56_formula_parity_report_record
+  schema: schemas/cuda/corrected-bounded-p56-formula-parity-report-record-v0.schema.json
+  formula_parity_report_id: stage5ae-corrected-bounded-p56-formula-parity-v0
+  historical_expected_hash: 4a3059f12c0f8450bd4ef7e31bf879fbc104202e5fb0e53b7ba514241f07cd87
+  historical_computed_cuda_hash: 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387
+  corrected_formula_expected_hash: 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387
+  corrected_formula_computed_hash: 6034fe2431159615449db79c36869236d306768414038314d47d6d57d9ae7387
+  corrected_formula_parity_status: passed
+  corrected_formula_reference_source: stage5x_formula_output_token_hash
+  formula_output_tokens:
+  - position: 0
+    token_kind: rune
+    transformable: true
+    index29: 24
+    raw_text: null
+  - position: 1
+    token_kind: rune
+    transformable: true
+    index29: 9
+    raw_text: null
+  input_tokens:
+  - position: 0
+    token_kind: rune
+    transformable: true
+    index29: 25
+    raw_text: null
+  - position: 1
+    token_kind: rune
+    transformable: true
+    index29: 11
+    raw_text: null
+  stream_values_used:
+  - 1
+  - 2
+  historical_failure_reason: compared_formula_hash_to_reference_lineage_hash
+  stage5ad_not_reclassified_as_passed: true
+  source_evidence:
+    source_summary_path: data\cuda\stage5ad-fix-bounded-p56-mismatch-summary.yaml
+    source_primary_root_cause: expected_hash_reference_lineage_mismatch
+    source_root_cause_confidence: high
+    source_cuda_formula_matches_stage5x_formula: true
+    source_cuda_formula_matches_stage5w_expected: false

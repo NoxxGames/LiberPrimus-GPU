@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5AD-fix - bounded p56 CUDA parity mismatch investigation.
-- Current planning focus: Stage 5AE - corrected bounded p56 CUDA formula parity reporting and reference-contract repair.
+- Latest completed stage: Stage 5AE - corrected bounded p56 CUDA formula parity reporting and reference-contract repair.
+- Current planning focus: Stage 5AF - archive visual numeric source-lock and provenance inventory.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
