@@ -63,6 +63,24 @@ Stage 4B records are durable context but not solve evidence. Future doc updates 
 
 Historical stage wording is allowed in `docs/development-logs/**`, `research-log/**`, and clearly archival sections. Operational docs must not describe old stages as current.
 
+## Stage 5AH Coverage
+
+Stage 5AH extends this policy beyond line-level current/next checks. Mutable operational docs must not contain stage-ledger sections that stop at older stages while claiming to summarize implemented or current work. The Stage 5AH checks also require `data/project-state/operational-file-map.yaml` to explicitly cover mutable current-state files and source-of-truth records.
+
+Run the Stage 5AH commands before extraction or roadmap work resumes:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
+  --expected-latest-stage "Stage 5AH" `
+  --expected-next-stage "Stage 5AI"
+
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
+
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
+  --expected-latest-stage "Stage 5AH" `
+  --expected-next-stage "Stage 5AI"
+```
+
 ## Local Path Sanitisation
 
 Stage 4J adds path-sanitisation checks for committed operational records and

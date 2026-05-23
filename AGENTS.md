@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AG - local third-party source inventory and initial source-lock metadata.
+Current completed stage: Stage 5AH - operational documentation staleness coverage repair and README stage-ledger audit.
 
-Current work: Stage 5AH - curated research bundle extraction from local source inventory. Stage 5AG inventoried local ignored `third_party/` source material and wrote compact metadata only; it did not fetch from the network, clone online repositories, use Google Drive storage, commit raw source bytes, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.
+Current work: Stage 5AI - curated research bundle extraction from local source inventory. Stage 5AH repaired README stage-ledger and operational doc-staleness coverage before extraction; it did not process raw third-party sources, fetch from the network, clone online repositories, use Google Drive storage, run Deep Research, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.
 
 Current project state:
 
@@ -112,7 +112,8 @@ Current project state:
 - Stage 5AF generated reports and research-bundle previews under `experiments/results/source-harvester/stage5af/` are generated outputs and must not be staged except README/.gitkeep scaffolds.
 - Stage 5AG local source inventory records are compact metadata only. They may hash/list user-provided ignored `third_party/` files and archives, but raw bytes, extracted bodies, archives, images, PDFs, audio/video, generated full inventories, and generated bundles remain ignored and uncommitted.
 - Stage 5AG did not use Google Drive storage, network fetching, online cloning, Deep Research, hypothesis generation, CUDA, benchmarks, scored experiments, website expansion, or solve claims.
-- Future Stage 5AH curated extraction must consume the Stage 5AG inventory and keep extraction outputs ignored unless a future prompt explicitly promotes compact metadata.
+- Stage 5AH doc-staleness repair records are process-quality metadata only. Stage-ledger checks, operational-file-map coverage, and current/next-stage reports must pass before curated extraction resumes.
+- Future Stage 5AI curated extraction must consume the Stage 5AG inventory and Stage 5AH clean staleness records, and must keep extraction outputs ignored unless a future prompt explicitly promotes compact metadata.
 - Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
 - Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
 - Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
@@ -923,10 +924,18 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 
 - Stage 5AB is a process-quality and stale-doc repair stage, not CUDA execution.
 - Operational docs used Stage 5AB as a quality gate and now use the updated source-of-truth record to treat Stage 5AC as complete and Stage 5AD as the next selected work.
-- Use `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml` and `data/project-state/operational-file-map.yaml` when checking current/next-stage text.
+- Use `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml` and `data/project-state/operational-file-map.yaml` when checking current/next-stage text. The Stage 5AB source-of-truth file is historical context only.
 - Website expansion is deferred to a future unnumbered project, not Stage 6.
 - Missing optional generated staleness reports are not evidence; generated reports under `experiments/results/doc-staleness/stage5ab/` and `codex-output/**` handoffs remain ignored and must not be staged.
 - Stage 5AB must not run native/CUDA execution, modify CUDA source, add kernels, run benchmarks, execute scored experiments, process raw data, publish generated bodies, upgrade method status, or make solve claims.
+
+## Stage 5AH Doc Staleness Coverage Rules
+
+- Stage 5AH is a process-quality and stale-doc coverage stage, not source extraction or CUDA execution.
+- Stage 5AH repairs README stage-ledger truncation, current/next-stage consistency, and operational-file-map coverage before Stage 5AI curated extraction resumes.
+- Use `libreprimus consistency check-stage-ledger-staleness`, `check-operational-file-map-coverage`, `check-current-next-stage-consistency`, and `validate-stage5ah-doc-staleness` for future current-state documentation changes.
+- Stage 5AH generated reports under `experiments/results/doc-staleness/stage5ah/` and `codex-output/**` handoffs remain ignored and must not be staged.
+- Stage 5AH must not process raw third-party sources, fetch from the network, clone online repositories, use Google Drive storage, run Deep Research, run native/CUDA execution, modify CUDA source, add kernels, run benchmarks, execute scored experiments, expand the website, or make solve claims.
 
 ## Stage 5AC Prime-Minus-One CUDA Synthetic Reporting Rules
 

@@ -1,0 +1,45 @@
+record_type: operational_file_map_coverage_record
+schema: schemas/project-state/operational-file-map-coverage-record-v0.schema.json
+stage_id: stage-5ah
+status: complete
+operational_file_map_records_before: 28
+operational_file_map_records_after: 38
+coverage_findings_before_repair: 2
+coverage_findings_after_repair: 0
+operational_file_map_coverage_findings_before:
+  - docs/onboarding/source-harvester-workflow.md was not explicitly covered.
+  - docs/onboarding/local-source-inventory-workflow.md was not explicitly covered.
+operational_file_map_coverage_findings_after: []
+files_added_to_operational_map:
+  - docs/onboarding/source-harvester-workflow.md
+  - docs/onboarding/local-source-inventory-workflow.md
+  - docs/wiki-source/*
+  - data/project-state/*source-of-truth*.yaml
+  - data/project-state/stage5ah-doc-staleness-source-of-truth.yaml
+  - data/project-state/stage5ah-doc-staleness-findings.yaml
+  - data/project-state/stage5ah-stage-ledger-coverage.yaml
+  - data/project-state/stage5ah-operational-file-map-coverage.yaml
+  - data/project-state/stage5ah-next-stage-decision.yaml
+  - data/project-state/stage5ah-doc-staleness-summary.yaml
+files_upgraded_to_strict:
+  - BENCHMARKS.md
+  - CIPHER_CATALOG.md
+  - EXPERIMENTS.md
+  - RESULTS_SCHEMA.md
+  - TESTING.md
+  - docs/onboarding/contributor-module-map.md
+  - docs/onboarding/deep-research-handoff-map.md
+  - docs/onboarding/private-generated-data-map.md
+files_marked_reference_only:
+  - docs/wiki-source/*
+  - data/project-state/*source-of-truth*.yaml
+network_fetch_performed: false
+raw_data_processed: false
+generated_outputs_committed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+benchmark_performed: false
+scored_experiments_executed: false
+solve_claim: false

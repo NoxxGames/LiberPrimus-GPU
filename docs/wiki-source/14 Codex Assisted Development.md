@@ -213,6 +213,9 @@ Stage 5X completion handoffs belong under ignored `codex-output/stage5x-codex-co
 Stage 5Y completion handoffs belong under ignored `codex-output/stage5y-codex-completion.md`.
 Stage 5AA completion handoffs belong under ignored `codex-output/stage5aa-codex-completion.md`.
 Stage 5AB completion handoffs belong under ignored `codex-output/stage5ab-doc-staleness-codex-completion.md`.
+Stage 5AH completion handoffs belong under ignored `codex-output/stage5ah-codex-completion.md`; Stage 5AH generated reports belong under ignored `experiments/results/doc-staleness/stage5ah/`.
+
+For Stage 5AH-style documentation repair, validate the active source of truth with `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`, run the stage-ledger, operational-file-map coverage, current/next-stage, and Stage 5AH validation commands, and keep Stage 5AI curated local extraction as the next bounded source-provenance step. Do not use a documentation repair stage to process raw third-party sources, fetch from the network, use Google Drive storage, run Deep Research, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.
 Stage 5AC completion handoffs belong under ignored `codex-output/stage5ac-codex-completion.md`.
 Stage 5AD completion handoffs belong under ignored `codex-output/stage5ad-codex-completion.md`.
 Do not stage the handoff, generated conformance reports, raw data, generated result bodies, SQLite

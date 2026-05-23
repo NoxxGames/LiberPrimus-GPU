@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/project-state/stage-ledger-staleness-record-v0.schema.json",
+  "title": "Stage Ledger Staleness Record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "path", "finding_count", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "stage_ledger_staleness_record" },
+    "stage_id": { "const": "stage-5ah" },
+    "path": { "type": "string", "minLength": 1 },
+    "section_title": { "type": "string" },
+    "finding_count": { "type": "integer", "minimum": 0 },
+    "max_stage": { "type": "string" },
+    "expected_latest_stage": { "type": "string" },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

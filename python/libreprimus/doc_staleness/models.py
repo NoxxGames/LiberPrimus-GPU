@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 
 
-DEFAULT_SOURCE_OF_TRUTH = Path("data/project-state/stage5ab-doc-staleness-source-of-truth.yaml")
+DEFAULT_SOURCE_OF_TRUTH = Path("data/project-state/stage5ah-doc-staleness-source-of-truth.yaml")
 DEFAULT_OPERATIONAL_FILE_MAP = Path("data/project-state/operational-file-map.yaml")
 
 DEFAULT_OPERATIONAL_PATHS = (
@@ -29,9 +29,14 @@ DEFAULT_OPERATIONAL_PATHS = (
     "docs/onboarding/contributor-module-map.md",
     "docs/onboarding/private-generated-data-map.md",
     "docs/onboarding/operational-file-map.md",
+    "docs/onboarding/source-harvester-workflow.md",
+    "docs/onboarding/local-source-inventory-workflow.md",
     "tutorials/10-hardware-and-performance.md",
     "tutorials/14-codex-assisted-development.md",
     "tutorials/15-troubleshooting.md",
+    "data/project-state/stage5ah-doc-staleness-source-of-truth.yaml",
+    "data/source-harvester/stage5ag-source-harvester-summary.yaml",
+    "data/source-harvester/stage5ag-source-harvester-next-stage-decision.yaml",
 )
 
 HISTORICAL_PATH_PREFIXES = (

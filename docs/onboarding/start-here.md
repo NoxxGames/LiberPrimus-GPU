@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5AG - local third-party source inventory and initial source-lock metadata.
-- Current planning focus: Stage 5AH - curated research bundle extraction from local source inventory.
+- Latest completed stage: Stage 5AH - operational documentation staleness coverage repair and README stage-ledger audit.
+- Current planning focus: Stage 5AI - curated research bundle extraction from local source inventory.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

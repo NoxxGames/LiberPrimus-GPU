@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/project-state/operational-file-map-coverage-record-v0.schema.json",
+  "title": "Operational File Map Coverage Record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "status", "coverage_findings_after_repair", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "operational_file_map_coverage_record" },
+    "stage_id": { "const": "stage-5ah" },
+    "status": { "const": "complete" },
+    "operational_file_map_records_before": { "type": "integer", "minimum": 0 },
+    "operational_file_map_records_after": { "type": "integer", "minimum": 0 },
+    "coverage_findings_before_repair": { "type": "integer", "minimum": 0 },
+    "coverage_findings_after_repair": { "const": 0 },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

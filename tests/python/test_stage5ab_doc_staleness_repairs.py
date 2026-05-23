@@ -9,7 +9,7 @@ from libreprimus.doc_staleness.scanner import scan_repository
 
 
 def test_stage5ab_current_operational_docs_have_no_staleness_findings() -> None:
-    scan = scan_repository(source_of_truth_path=Path("data/project-state/stage5ab-doc-staleness-source-of-truth.yaml"))
+    scan = scan_repository(source_of_truth_path=Path("data/project-state/stage5ah-doc-staleness-source-of-truth.yaml"))
 
     assert scan.finding_count == 0
     assert len(scan.scanned_paths) >= 24
@@ -24,6 +24,8 @@ def test_stage5ab_readme_repaired_stale_examples() -> None:
         line for line in text.splitlines() if "Existing CUDA code" in line
     )
     assert "Stage 5AE corrected formula-parity reporting" in text
+    assert "Stage 5AH" in text
+    assert "Stage 5AI" in text
 
 
 def test_stage5ab_repair_summary_helper_is_deterministic() -> None:

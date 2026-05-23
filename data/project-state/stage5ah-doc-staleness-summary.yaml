@@ -1,0 +1,52 @@
+record_type: stage5ah_doc_staleness_summary
+schema: schemas/project-state/stage5ah-doc-staleness-summary-v0.schema.json
+stage_id: stage-5ah
+status: complete
+source_stage_id: stage-5ag
+user_override_reason: README stage ledger stale, one section only went to Stage 5N, broader checks may miss other docs
+latest_completed_stage_before_stage5ah: Stage 5AG - local Cicada source inventory
+latest_completed_stage_after_stage5ah: Stage 5AH - operational documentation staleness coverage repair and README stage ledger audit
+next_stage_after_stage5ah: Stage 5AI - curated research bundle extraction from local source inventory
+stale_findings_before_repair: 11
+stale_findings_after_repair: 0
+warnings_after_repair: 0
+readme_stage_ledger_findings_before: 1
+readme_stage_ledger_findings_after: 0
+stage_ledger_sections_scanned: 26
+stage_ledger_sections_flagged: 0
+operational_files_scanned: 36
+operational_file_map_records_before: 28
+operational_file_map_records_after: 38
+operational_file_map_coverage_findings_before: 2
+operational_file_map_coverage_findings_after: 0
+files_added_to_operational_map: 10
+files_upgraded_to_strict: 8
+files_marked_reference_only: 2
+stage_parser_ordering_tests_added: true
+readme_stage5n_regression_test_added: true
+ci_integration_added: true
+website_expansion_status: deferred_future_unnumbered_project
+scored_experiments_status: deferred_manifest_gate_required
+unsolved_page_cuda_status: blocked
+canonical_corpus_status: inactive
+page_boundaries_status: reviewable
+source_harvester_current_stage: stage-5ag completed, stage-5ai requeued for extraction
+network_fetch_performed: false
+live_web_scrape_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+third_party_processed: false
+raw_data_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+benchmark_performed: false
+scored_experiments_executed: false
+website_expansion_performed: false
+solve_claim: false
+recommended_next_prompt_type: Codex
+recommended_next_stage_title: Stage 5AI - curated research bundle extraction from local source inventory
+deep_research_recommended_next: false

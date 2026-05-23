@@ -1,0 +1,40 @@
+record_type: stage5ah_next_stage_decision
+stage_id: stage-5ah
+status: complete
+candidate_options:
+  - stage5ai_curated_research_bundle_extraction_from_local_inventory
+  - stage5ah_fix_doc_staleness_remaining_findings
+  - stage5ai_source_lock_gap_closure_for_missing_priority_sources
+  - stage5ai_online_fetch_for_missing_manifest_sources
+  - stage5ai_deep_research_source_inventory_and_reliability
+  - stage5ai_visual_page_image_provenance_inventory
+  - stage5ai_cicada_archive_source_lock_initial_ingestion
+  - stage5ai_bounded_cpu_native_scored_experiment_manifest_gate
+  - stage5ai_benchmark_planning
+  - stage5ai_unsolved_page_cuda_pilot
+  - future_website_expansion_unnumbered
+selected_option_id: stage5ai_curated_research_bundle_extraction_from_local_inventory
+selected_next_prompt_type: Codex
+selected_next_stage_title: Stage 5AI - curated research bundle extraction from local source inventory
+selected_next_stage_reason: Stage 5AH doc-staleness and stage-ledger repairs pass; Stage 5AG local inventory can now feed bounded curated extraction metadata without raw publication.
+deep_research_recommended_next: false
+deep_research_deferral_reason: Deep Research stays deferred until at least one curated extracted local source bundle exists.
+scored_experiments_recommended_next: false
+benchmark_recommended_next: false
+unsolved_page_cuda_recommended_next: false
+website_expansion_recommended_next: false
+network_fetch_performed: false
+live_web_scrape_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+raw_data_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+benchmark_performed: false
+scored_experiments_executed: false
+website_expansion_performed: false
+solve_claim: false

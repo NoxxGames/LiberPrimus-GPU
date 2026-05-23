@@ -1,10 +1,11 @@
-"""Build Stage 5AB document-staleness validation records for Stage 5AC."""
+"""Build document-staleness validation records for Stage 5AC."""
 
 from __future__ import annotations
 
 from pathlib import Path
 from typing import Any
 
+from libreprimus.doc_staleness.models import DEFAULT_SOURCE_OF_TRUTH
 from libreprimus.doc_staleness.scanner import scan_repository
 from libreprimus.prime_minus_one_cuda_synthetic_reporting.export import read_yaml, resolve, write_json_report, write_records
 from libreprimus.prime_minus_one_cuda_synthetic_reporting.models import (
@@ -17,11 +18,13 @@ from libreprimus.prime_minus_one_cuda_synthetic_reporting.models import (
     base_record,
 )
 
+ACTIVE_SOURCE_OF_TRUTH_PATH = Path(DEFAULT_SOURCE_OF_TRUTH)
+
 
 def build_doc_staleness_validation(
     *,
     stage5ab_summary: Path = STAGE5AB_SUMMARY_PATH,
-    doc_staleness_source_of_truth: Path = STAGE5AB_SOURCE_OF_TRUTH_PATH,
+    doc_staleness_source_of_truth: Path = ACTIVE_SOURCE_OF_TRUTH_PATH,
     operational_file_map: Path = OPERATIONAL_FILE_MAP_PATH,
     doc_staleness_validation_out: Path = DOC_STALENESS_VALIDATION_PATH,
     out_dir: Path = OUTPUT_DIR,
@@ -39,6 +42,7 @@ def build_doc_staleness_validation(
             validation_record_id="stage5ac-doc-staleness-validation-v0",
             source_stage_id="stage-5ab",
             doc_staleness_source_of_truth=str(doc_staleness_source_of_truth).replace("\\", "/"),
+            historical_doc_staleness_source_of_truth=str(STAGE5AB_SOURCE_OF_TRUTH_PATH).replace("\\", "/"),
             operational_file_map=str(operational_file_map).replace("\\", "/"),
             doc_staleness_strict_check_passed=scan.finding_count == 0,
             stale_findings_after_repair=int(summary.get("stale_findings_after_repair", 0)),

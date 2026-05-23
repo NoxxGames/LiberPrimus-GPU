@@ -724,6 +724,8 @@ experiments/results/doc-staleness/**
 !experiments/results/doc-staleness/.gitkeep
 !experiments/results/doc-staleness/stage5ab/
 !experiments/results/doc-staleness/stage5ab/.gitkeep
+!experiments/results/doc-staleness/stage5ah/
+!experiments/results/doc-staleness/stage5ah/.gitkeep
 
 # Local Codex completion handoffs
 codex-output/**

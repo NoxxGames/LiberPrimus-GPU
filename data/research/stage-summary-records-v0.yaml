@@ -1047,3 +1047,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AG inventoried 1402 files, 223 directories, 1356526287 bytes, 4 archives, 3 supported archive listings, 1 unsupported archive type, 1402 SHA-256 hashes, 931 unique hashes, and 216 duplicate hash groups. It consumed 41 manifest records, matched 12, recorded 30 missing/manual sources, recorded 0 ambiguous matches, created 14 unclassified local source extension records, marked 12 source-lock candidates ready, marked 14 needing review, wrote 10 research-bundle readiness records with ready/partial/not-ready 0/5/5, selected Stage 5AH curated research bundle extraction from local source inventory, and performed no network fetch, online clone, Google Drive storage, raw source commit, Deep Research, hypothesis generation, CUDA execution, CUDA-facing source modification, new kernel addition, p56/full-p56 execution, unsolved-page CUDA use, GPU benchmark, speedup claim, scored experiment, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ah
+    title: Operational documentation staleness coverage repair and README stage-ledger audit
+    status: complete
+    category: infrastructure
+    summary: Repaired stale operational documentation coverage after Stage 5AG by adding stage-ledger truncation checks, operational-file-map coverage checks, current/next-stage consistency checks, and Stage 5AH source-of-truth/summary records before requeuing curated local extraction as Stage 5AI.
+    key_outputs:
+      - "`libreprimus consistency` commands for stage-ledger staleness, operational-file-map coverage, current/next-stage consistency, and Stage 5AH validation."
+      - Stage 5AH source-of-truth, findings, stage-ledger coverage, operational-file-map coverage, next-stage decision, and aggregate summary records under `data/project-state/`.
+      - Ignored generated reports under `experiments/results/doc-staleness/stage5ah/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AH reduced README stage-ledger findings from 1 to 0, stage-ledger findings after repair to 0, operational-file-map coverage findings from 2 to 0, scanned 36 current/next operational paths with 0 findings, recorded Stage 5AI curated research bundle extraction as the next Codex prompt, and performed no network fetch, online clone, Google Drive storage, raw third-party processing, Deep Research, hypothesis generation, CUDA execution, CUDA-facing source modification, new kernel addition, p56/full-p56 execution, unsolved-page CUDA use, GPU benchmark, speedup claim, scored experiment, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

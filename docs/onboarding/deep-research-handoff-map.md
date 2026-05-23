@@ -6,7 +6,7 @@ Repository: `https://github.com/NoxxGames/LiberPrimus-GPU`
 
 Before a Deep Research handoff, verify the latest commit and CI status locally. The handoff should cite the commit hash, stage, and generated bundle paths.
 
-Stage 5AG does not select Deep Research as the next prompt. The next work is Stage 5AH curated research bundle extraction from local source inventory. Website expansion remains a future unnumbered project.
+Stage 5AH does not select Deep Research as the next prompt. The next work is Stage 5AI curated research bundle extraction from local source inventory, using Stage 5AG inventory records only after doc-staleness coverage is clean. Website expansion remains a future unnumbered project.
 
 ## Files Deep Research Should Inspect First
 

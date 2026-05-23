@@ -15,7 +15,8 @@ For most Codex tasks, read:
 - Verify local branch, `HEAD`, `origin/main`, and latest CI with Git/GitHub tooling.
 - Do not trust rendered GitHub pages, cached raw URLs, memory, or old conversation context when state matters.
 - Run the task-specific validation commands before staging.
-- Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ab-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
+- Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
+- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks before resuming curated extraction work.
 - Keep raw/generated outputs unstaged.
 - For Stage 5AF/5AG/5AH source-harvester work, keep all raw harvester outputs local and ignored; do not use Google Drive as project storage.
 
@@ -32,6 +33,7 @@ If direction changes, update:
 - `AGENTS.md`
 - Relevant tutorials and `docs/wiki-source/**`
 - `docs/onboarding/source-harvester-workflow.md`, `docs/onboarding/local-source-inventory-workflow.md`, `docs/reference/source-harvester-cli.md`, and `docs/reference/source-harvester-local-inventory-cli.md` when source-harvester behavior changes.
+- `data/project-state/stage5ah-*.yaml` when Stage 5AH doc-staleness coverage records or the Stage 5AI next-stage decision change.
 
 ## Safety Rules
 

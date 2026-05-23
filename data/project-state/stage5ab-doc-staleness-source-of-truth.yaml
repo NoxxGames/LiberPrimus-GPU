@@ -1,6 +1,9 @@
 record_type: doc_staleness_source_of_truth_record
 schema: schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json
 stage_id: stage-5ag
+superseded_by_stage_id: stage-5ah
+superseded_by_path: data/project-state/stage5ah-doc-staleness-source-of-truth.yaml
+supersession_reason: Stage 5AH extends Stage 5AB/5AG staleness checks with stage-ledger, operational-file-map coverage, and current/next-stage consistency checks.
 latest_completed_stage_after_this_stage: Stage 5AG - local third-party source inventory and initial source-lock metadata
 latest_completed_stage_prefix: Stage 5AG
 next_stage_after_this_stage: Stage 5AH - curated research bundle extraction from local source inventory

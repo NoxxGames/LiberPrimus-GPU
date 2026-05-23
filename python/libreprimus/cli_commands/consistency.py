@@ -116,7 +116,7 @@ def consistency_check_state_drift(
 def consistency_check_doc_staleness(
     repo_root_path: Path = typer.Option(Path("."), "--repo-root", help="Repository root to scan."),
     source_of_truth: Path = typer.Option(
-        Path("data/project-state/stage5ab-doc-staleness-source-of-truth.yaml"),
+        Path("data/project-state/stage5ah-doc-staleness-source-of-truth.yaml"),
         "--source-of-truth",
         help="Document-staleness source-of-truth YAML.",
     ),
@@ -157,6 +157,122 @@ def consistency_check_doc_staleness(
     if scan.finding_count and strict:
         raise typer.Exit(1)
     console.print("doc_staleness_valid=true")
+
+
+@consistency_app.command("check-stage-ledger-staleness")
+def consistency_check_stage_ledger_staleness(
+    expected_latest_stage: str = typer.Option(..., "--expected-latest-stage"),
+    expected_next_stage: str = typer.Option(..., "--expected-next-stage"),
+    operational_file_map: Path = typer.Option(Path("data/project-state/operational-file-map.yaml")),
+    out: Path | None = typer.Option(None, "--out"),
+    strict: bool = typer.Option(True, "--strict/--no-strict"),
+) -> None:
+    """Check mutable operational docs for stale stage-ledger truncation."""
+
+    from libreprimus.doc_staleness.reporting import write_json_report
+    from libreprimus.doc_staleness.source_of_truth import load_operational_paths
+    from libreprimus.doc_staleness.stage_ledger import scan_stage_ledgers
+
+    base = Path(".").resolve()
+    paths = load_operational_paths(operational_file_map, root=base)
+    report = scan_stage_ledgers(
+        paths=paths,
+        root=base,
+        expected_latest_stage=expected_latest_stage,
+    )
+    report["expected_next_stage"] = expected_next_stage
+    if out is not None:
+        write_json_report(_resolve_output_path(out), report)
+    console.print(f"stage_ledger_sections_scanned={report['sections_scanned']}")
+    console.print(f"stage_ledger_findings={report['finding_count']}")
+    console.print(f"stage_ledger_warnings={report['warning_count']}")
+    if report["finding_count"] and strict:
+        raise typer.Exit(1)
+    console.print("stage_ledger_staleness_valid=true")
+
+
+@consistency_app.command("check-operational-file-map-coverage")
+def consistency_check_operational_file_map_coverage(
+    operational_file_map: Path = typer.Option(Path("data/project-state/operational-file-map.yaml")),
+    out: Path | None = typer.Option(None, "--out"),
+    strict: bool = typer.Option(True, "--strict/--no-strict"),
+) -> None:
+    """Check operational-file-map coverage for mutable current-state files."""
+
+    from libreprimus.doc_staleness.coverage import build_operational_file_map_coverage
+    from libreprimus.doc_staleness.reporting import write_json_report
+
+    report = build_operational_file_map_coverage(operational_file_map=operational_file_map)
+    if out is not None:
+        write_json_report(_resolve_output_path(out), report)
+    console.print(f"operational_file_map_records={report['record_count']}")
+    console.print(f"operational_file_map_coverage_findings={report['coverage_finding_count']}")
+    if report["coverage_finding_count"] and strict:
+        raise typer.Exit(1)
+    console.print("operational_file_map_coverage_valid=true")
+
+
+@consistency_app.command("check-current-next-stage-consistency")
+def consistency_check_current_next_stage_consistency(
+    expected_latest_stage: str = typer.Option(..., "--expected-latest-stage"),
+    expected_next_stage: str = typer.Option(..., "--expected-next-stage"),
+    source_of_truth: Path = typer.Option(
+        Path("data/project-state/stage5ah-doc-staleness-source-of-truth.yaml"),
+        "--source-of-truth",
+    ),
+    out: Path | None = typer.Option(None, "--out"),
+    strict: bool = typer.Option(True, "--strict/--no-strict"),
+) -> None:
+    """Check current/latest/next-stage claims against the active source-of-truth."""
+
+    from libreprimus.doc_staleness.current_context import build_current_next_stage_report
+    from libreprimus.doc_staleness.reporting import write_json_report
+
+    report = build_current_next_stage_report(
+        root=Path(".").resolve(),
+        source_of_truth=source_of_truth,
+        expected_latest_stage=expected_latest_stage,
+        expected_next_stage=expected_next_stage,
+    )
+    if out is not None:
+        write_json_report(_resolve_output_path(out), report)
+    console.print(f"current_next_scanned_paths={report['scanned_path_count']}")
+    console.print(f"current_next_findings={report['finding_count']}")
+    console.print(f"current_next_warnings={report['warning_count']}")
+    if report["finding_count"] and strict:
+        raise typer.Exit(1)
+    console.print("current_next_stage_consistency_valid=true")
+
+
+@consistency_app.command("validate-stage5ah-doc-staleness")
+def consistency_validate_stage5ah_doc_staleness(
+    source_of_truth: Path = typer.Option(..., "--source-of-truth"),
+    findings: Path = typer.Option(..., "--findings"),
+    stage_ledger_coverage: Path = typer.Option(..., "--stage-ledger-coverage"),
+    operational_file_map_coverage: Path = typer.Option(..., "--operational-file-map-coverage"),
+    next_stage_decision: Path = typer.Option(..., "--next-stage-decision"),
+    summary: Path = typer.Option(..., "--summary"),
+    results_dir: Path = typer.Option(..., "--results-dir"),
+) -> None:
+    """Validate Stage 5AH doc-staleness repair records."""
+
+    from libreprimus.doc_staleness.validation import validate_stage5ah_doc_staleness_records
+
+    errors = validate_stage5ah_doc_staleness_records(
+        source_of_truth_path=source_of_truth,
+        findings_path=findings,
+        stage_ledger_coverage_path=stage_ledger_coverage,
+        operational_file_map_coverage_path=operational_file_map_coverage,
+        next_stage_decision_path=next_stage_decision,
+        summary_path=summary,
+        results_dir=results_dir,
+    )
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(f"[red]{error}[/red]")
+    if errors:
+        raise typer.Exit(1)
+    console.print("stage5ah_doc_staleness_valid=true")
 
 
 @consistency_app.command("check-ignored-outputs")

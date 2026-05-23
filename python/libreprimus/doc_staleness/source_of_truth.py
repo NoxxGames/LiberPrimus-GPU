@@ -1,4 +1,4 @@
-"""Load Stage 5AB document-staleness source-of-truth records."""
+"""Load document-staleness source-of-truth records."""
 
 from __future__ import annotations
 

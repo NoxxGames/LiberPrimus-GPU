@@ -2,9 +2,15 @@
 
 ## Current stage
 
-Stage 5AG local third-party source inventory and initial source-lock metadata is complete.
+Stage 5AH operational documentation staleness coverage repair and README stage-ledger audit is complete.
 
-Next recommended prompt: Stage 5AH - curated research bundle extraction from local source inventory. Website expansion is deferred to a future unnumbered project.
+Next recommended prompt: Stage 5AI - curated research bundle extraction from local source inventory. Website expansion is deferred to a future unnumbered project.
+
+## Completed in Stage 5AH
+
+Stage 5AH repairs a stale operational-documentation process gap: README stage-ledger sections and similar mutable docs can no longer silently stop at older stages such as Stage 5N. It adds stage-ledger parsing and staleness checks, operational-file-map coverage auditing, current/next-stage consistency validation, Stage 5AH source-of-truth/findings/summary records, README/status/roadmap/onboarding/tutorial/wiki-source repairs, schemas, tests, and consistency integration.
+
+Stage 5AH does not process raw third-party sources, extract research bundles, fetch from the network, clone online repositories, use Google Drive storage, run Deep Research, generate hypotheses, execute scored experiments, run CUDA, modify CUDA source, add kernels, run p56/full-p56/unsolved pages, benchmark, expand the website, activate the canonical corpus, finalise page boundaries, or make a solve claim. Stage 5AI requeues curated local source-bundle extraction only after this documentation gate is clean.
 
 ## Completed in Stage 5AG
 

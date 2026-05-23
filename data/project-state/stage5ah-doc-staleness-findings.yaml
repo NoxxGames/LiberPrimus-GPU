@@ -1,0 +1,55 @@
+record_type: stage5ah_doc_staleness_findings
+stage_id: stage-5ah
+status: complete
+stale_findings_before_repair: 11
+stale_findings_after_repair: 0
+warnings_after_repair: 0
+readme_stage_ledger_findings_before: 1
+readme_stage_ledger_findings_after: 0
+operational_file_map_coverage_findings_before: 2
+operational_file_map_coverage_findings_after: 0
+files_scanned: 36
+files_added_to_operational_map:
+  - docs/onboarding/source-harvester-workflow.md
+  - docs/onboarding/local-source-inventory-workflow.md
+  - docs/wiki-source/*
+  - data/project-state/*source-of-truth*.yaml
+  - data/project-state/stage5ah-doc-staleness-source-of-truth.yaml
+  - data/project-state/stage5ah-doc-staleness-findings.yaml
+  - data/project-state/stage5ah-stage-ledger-coverage.yaml
+  - data/project-state/stage5ah-operational-file-map-coverage.yaml
+  - data/project-state/stage5ah-next-stage-decision.yaml
+  - data/project-state/stage5ah-doc-staleness-summary.yaml
+files_upgraded_to_strict:
+  - BENCHMARKS.md
+  - CIPHER_CATALOG.md
+  - EXPERIMENTS.md
+  - RESULTS_SCHEMA.md
+  - TESTING.md
+  - docs/onboarding/contributor-module-map.md
+  - docs/onboarding/deep-research-handoff-map.md
+  - docs/onboarding/private-generated-data-map.md
+files_marked_reference_only:
+  - docs/wiki-source/*
+  - data/project-state/*source-of-truth*.yaml
+stale_readme_findings_before_repair:
+  - README current/deferred section still named Stage 5AH curated extraction as next.
+  - README Already implemented ledger stopped at Stage 5N while current project state had reached Stage 5AG.
+  - README Current status ledger stopped at Stage 5S before later Stage 5T through Stage 5AG work.
+stale_readme_findings_after_repair: []
+network_fetch_performed: false
+live_web_scrape_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+third_party_processed: false
+raw_data_processed: false
+generated_outputs_committed: false
+codex_output_committed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+benchmark_performed: false
+scored_experiments_executed: false
+website_expansion_performed: false
+solve_claim: false

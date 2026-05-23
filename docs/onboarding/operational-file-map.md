@@ -1,10 +1,10 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AG updates that map for local-only source inventory policy and the Stage 5AH curated extraction direction. The YAML record is the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AH updates that map for stage-ledger staleness coverage, local-only source inventory policy, and the Stage 5AI curated extraction direction. The YAML record is the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 
-These files must stay aligned with `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml` whenever stage status changes:
+These files must stay aligned with `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml` whenever stage status changes. The Stage 5AB source-of-truth file remains historical context only.
 
 - `README.md`
 - `STATUS.md`
@@ -40,5 +40,15 @@ These files may contain more historical context, but current labels and deferral
 Run:
 
 ```powershell
-.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ab-doc-staleness-source-of-truth.yaml --strict
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
+
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
+  --expected-latest-stage "Stage 5AH" `
+  --expected-next-stage "Stage 5AI"
+
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
+
+.\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
+  --expected-latest-stage "Stage 5AH" `
+  --expected-next-stage "Stage 5AI"
 ```

@@ -17,8 +17,64 @@ try {
 
     Write-Host "Running document staleness checks"
     & $Python -m libreprimus.cli consistency check-doc-staleness `
-        --source-of-truth data/project-state/stage5ab-doc-staleness-source-of-truth.yaml `
+        --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml `
         --strict
+
+    Write-Host "Running Stage 5AH doc-staleness coverage checks"
+    $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
+    New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
+    & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
+        --expected-latest-stage "Stage 5AH" `
+        --expected-next-stage "Stage 5AI" `
+        --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
+    & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
+        --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
+    & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
+        --expected-latest-stage "Stage 5AH" `
+        --expected-next-stage "Stage 5AI" `
+        --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
+@"
+import json
+from pathlib import Path
+import yaml
+from libreprimus.doc_staleness.stage_ledger import stage_ledger_findings_for_text
+
+out = Path(r"$Stage5AHOut")
+readme = Path("README.md").read_text(encoding="utf-8")
+findings = [
+    finding.to_dict()
+    for finding in stage_ledger_findings_for_text(
+        readme,
+        path="README.md",
+        expected_latest_stage="Stage 5AH",
+    )
+]
+(out / "readme_stage_coverage_report.json").write_text(
+    json.dumps(
+        {
+            "record_type": "readme_stage_coverage_report",
+            "expected_latest_stage": "Stage 5AH",
+            "finding_count": len(findings),
+            "findings": findings,
+        },
+        indent=2,
+        sort_keys=True,
+    )
+    + "\n",
+    encoding="utf-8",
+)
+summary = yaml.safe_load(Path("data/project-state/stage5ah-doc-staleness-summary.yaml").read_text(encoding="utf-8"))
+(out / "doc_staleness_summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+(out / "warnings.jsonl").write_text("", encoding="utf-8")
+"@ | & $Python -
+    & $Python -m libreprimus.cli consistency validate-stage5ah-doc-staleness `
+        --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml `
+        --findings data/project-state/stage5ah-doc-staleness-findings.yaml `
+        --stage-ledger-coverage data/project-state/stage5ah-stage-ledger-coverage.yaml `
+        --operational-file-map-coverage data/project-state/stage5ah-operational-file-map-coverage.yaml `
+        --next-stage-decision data/project-state/stage5ah-next-stage-decision.yaml `
+        --summary data/project-state/stage5ah-doc-staleness-summary.yaml `
+        --results-dir $Stage5AHOut
 
     Write-Host "Validating Stage 3Y research synthesis records"
     & $Python -m libreprimus.cli research-synthesis validate --data-dir data/research --staged-plan docs/roadmap/staged-plan.md

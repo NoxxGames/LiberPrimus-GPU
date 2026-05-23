@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/project-state/stage-ledger-coverage-summary-v0.schema.json",
+  "title": "Stage Ledger Coverage Summary",
+  "type": "object",
+  "required": ["record_type", "stage_id", "status", "stage_ledger_findings_after_repair", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "stage_ledger_coverage_summary" },
+    "stage_id": { "const": "stage-5ah" },
+    "status": { "const": "complete" },
+    "stage_ledger_sections_scanned": { "type": "integer", "minimum": 0 },
+    "stage_ledger_sections_flagged": { "type": "integer", "minimum": 0 },
+    "stage_ledger_findings_before_repair": { "type": "integer", "minimum": 0 },
+    "stage_ledger_findings_after_repair": { "const": 0 },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_processed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

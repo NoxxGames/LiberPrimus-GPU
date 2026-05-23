@@ -1,0 +1,34 @@
+record_type: stage_ledger_coverage_summary
+schema: schemas/project-state/stage-ledger-coverage-summary-v0.schema.json
+stage_id: stage-5ah
+status: complete
+expected_latest_stage: Stage 5AH - operational documentation staleness coverage repair and README stage ledger audit
+expected_next_stage: Stage 5AI - curated research bundle extraction from local source inventory
+stage_ledger_sections_scanned: 26
+stage_ledger_sections_flagged: 0
+stage_ledger_findings_before_repair: 1
+stage_ledger_findings_after_repair: 0
+readme_stage_ledger_findings_before: 1
+readme_stage_ledger_findings_after: 0
+parser_supports:
+  - Stage 0A
+  - Stage 3Z
+  - Stage 4Q
+  - Stage 5A
+  - Stage 5N
+  - Stage 5AG
+  - Stage 5AH
+  - stage-5ag
+  - stage5ag
+stage_parser_ordering_tests_added: true
+readme_stage5n_regression_test_added: true
+network_fetch_performed: false
+raw_data_processed: false
+generated_outputs_committed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+benchmark_performed: false
+scored_experiments_executed: false
+solve_claim: false

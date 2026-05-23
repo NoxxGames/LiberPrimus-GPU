@@ -310,6 +310,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5AG is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5ah",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5ah\b", re.IGNORECASE),
+        "Stage 5AH is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",

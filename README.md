@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5AG local third-party source inventory and initial source-lock metadata. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5AH operational documentation staleness coverage repair and README stage-ledger audit. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -33,11 +33,11 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Bounded numeric verification: Stage 4D runs only no-fudge numeric and metadata audits. GP/rune batch002 skips without exact new spans, number-square routes skip without locked raw values, delimiter/dot audits infer no meaning, cuneiform seed execution remains deferred, and cookie pack v2 is deferred to a future explicit stage.
 - Source-delta audits: Stage 4E records selected `cicada-solvers/iddqd` tree metadata only. It does not blind-mirror external repositories, commit raw images/audio/fonts/binaries, run stego tools, or infer meaning from compression artefacts.
 - Public source-lock snapshots: Stage 4K locks a small allowlisted public-source subset with metadata, canonical URLs, retrieval status, hashes where fetched, copyright notes, explicit snapshot policies, and GitHub commit-addressed references. It does not broad crawl, blind-mirror repositories, commit full HTML by default, or commit binary/image/audio/font/archive artefacts.
-- Cicada source harvester: Stage 5AF adds local-only source-manifest, dry-run planning, hash/inventory/extraction, and research-bundle scaffold tooling. Stage 5AG runs that tooling against user-provided ignored `third_party/` material and commits compact local source inventory, manifest linkage, source-lock candidate, gap, research-bundle readiness, and guardrail metadata only. Network fetching/cloning remains deferred, Google Drive must not be used as project storage, local archive listings are metadata only, and raw source files remain ignored and uncommitted.
+- Cicada source harvester: Stage 5AF adds local-only source-manifest, dry-run planning, hash/inventory/extraction, and research-bundle scaffold tooling. Stage 5AG runs that tooling against user-provided ignored `third_party/` material and commits compact local source inventory, manifest linkage, source-lock candidate, gap, research-bundle readiness, and guardrail metadata only. Stage 5AH repairs operational doc staleness coverage before extraction continues. Network fetching/cloning remains deferred, Google Drive must not be used as project storage, local archive listings are metadata only, and raw source files remain ignored and uncommitted.
 - Observation promotion ledger: Stage 4L joins Stage 4J review decisions with Stage 4K source locks and records ready, blocked, deferred, quarantined, rejected, source-reference-only, and control-only states. Ready does not mean executed; all future manifests remain disabled.
 - Image source-variant and compression preflight: Stage 4M scans ignored local LP page images for metadata and deterministic metric-only compression summaries, records source-variant comparison readiness, keeps star-like/compression-like artefacts review-only, and keeps the bigram/Fibonacci-421 observation blocked pending reproducible matrix and null controls. It does not commit raw images, generated visualisations, or execute image/bigram experiments.
 - Stego/audio positive-control readiness: Stage 4N records fixture readiness, cache policy, expected-output requirements, toolchain state, and synthetic controls. Historical OutGuess/OpenPuff/MP3/audio cases remain blocked until assets, exact expected outputs, and tools are ready.
-- CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. Later stages extend this into result-store, benchmark-planning, CUDA-contract, native-conformance, prime-minus-one, synthetic CUDA parity, Stage 5AC compact reporting/bounded-p56 preflight metadata, the Stage 5AD bounded p56 CUDA mismatch record, the Stage 5AD-fix reference-contract investigation, and Stage 5AE corrected formula-parity reporting. Stage 5AB adds a document staleness gate over those operational claims so current/next-stage text, website deferral, and CUDA-boundary wording cannot silently drift. This is infrastructure for future native/CUDA parity, not a broad experiment runner.
+- CPU batch transform API: Stage 4H provides deterministic CPU-only input stream, transform candidate, result, summary, adapter coverage, and parity-contract records. Later stages extend this into result-store, benchmark-planning, CUDA-contract, native-conformance, prime-minus-one, synthetic CUDA parity, Stage 5AC compact reporting/bounded-p56 preflight metadata, the Stage 5AD bounded p56 CUDA mismatch record, the Stage 5AD-fix reference-contract investigation, and Stage 5AE corrected formula-parity reporting. Stage 5AB adds a document staleness gate over those operational claims; Stage 5AH hardens it with stage-ledger truncation, operational-file-map coverage, and current/next-stage checks so README-like ledgers cannot silently stop at older stages. This is infrastructure for future native/CUDA parity, not a broad experiment runner.
 - Scoring contract: Stage 4I provides scorer inventory, finite confidence-label records, compatibility mappings, calibration-profile/report records, and CPU batch score compatibility checks. Score labels can create review leads only and cannot imply solved plaintext.
 - Post-Discord experiment execution: Stage 3S executes only `EXP-3R-003`, the bounded Onion 7 explicit seed pack. Stage 3T executes only `EXP-3R-004`, the GP/rune claim verifier. Stage 3U executes only `EXP-3R-001`, the cookie SHA-256 signed-variant pack. All keep generated records under ignored paths and make no solve claim.
 - CUDA experiment campaigns: not started.
@@ -48,7 +48,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 5AH - curated research bundle extraction from local source inventory.
+- Stage 5AI - curated research bundle extraction from local source inventory.
 - Website expansion is deferred to a future unnumbered project.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
@@ -128,6 +128,27 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 5L solved-fixture-safe Gematria shift_score token mapping and native parity fixture preparation.
 - Stage 5M first solved-fixture-safe Gematria shift_score CUDA parity run.
 - Stage 5N solved-fixture-safe Gematria CUDA parity reporting and controlled expansion gate.
+- Stage 5O solved-fixture-safe Gematria CUDA repeat verification and result-store preflight.
+- Stage 5P controlled solved-fixture CUDA result-store integration.
+- Stage 5Q controlled expansion candidate mapping.
+- Stage 5R controlled expanded solved-fixture-safe Gematria CUDA parity.
+- Stage 5S expanded solved-fixture Gematria CUDA parity reporting and result-store integration.
+- Stage 5T solved-family CUDA readiness matrix.
+- Stage 5U Candidate Batch ABI contract consolidation.
+- Stage 5V native Candidate Batch ABI conformance.
+- Stage 5W prime-minus-one stream native parity contract preparation.
+- Stage 5X prime-minus-one no-GPU native parity execution.
+- Stage 5Y prime-minus-one native parity reporting and CUDA contract readiness.
+- Stage 5Z prime-minus-one CUDA contract preparation.
+- Stage 5AA prime-minus-one CUDA synthetic validation.
+- Stage 5AB operational document staleness hardening.
+- Stage 5AC prime-minus-one CUDA synthetic reporting and bounded-p56 preflight.
+- Stage 5AD bounded p56 CUDA parity mismatch record.
+- Stage 5AD-fix bounded p56 mismatch investigation.
+- Stage 5AE corrected bounded p56 formula reporting and reference-contract repair.
+- Stage 5AF Cicada source harvester and archive/visual/numeric provenance inventory tooling.
+- Stage 5AG local third-party source inventory and initial source-lock metadata.
+- Stage 5AH operational documentation staleness coverage repair and README stage-ledger audit.
 
 ## Architecture summary
 
@@ -214,13 +235,29 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Stage 5Q: controlled solved-fixture-safe Gematria shift_score expansion candidate mapping complete.
 - Stage 5R: controlled expanded solved-fixture-safe Gematria shift_score CUDA parity complete.
 - Stage 5S: expanded solved-fixture Gematria CUDA parity reporting and result-store integration complete.
+- Stage 5T: solved-family CUDA readiness matrix complete.
+- Stage 5U: Candidate Batch ABI contract consolidation complete.
+- Stage 5V: native Candidate Batch ABI conformance complete.
+- Stage 5W: prime-minus-one stream native parity contract preparation complete.
+- Stage 5X: prime-minus-one no-GPU native parity execution complete.
+- Stage 5Y: prime-minus-one native parity reporting and CUDA contract readiness complete.
+- Stage 5Z: prime-minus-one CUDA contract preparation complete.
+- Stage 5AA: prime-minus-one CUDA synthetic validation complete.
+- Stage 5AB: operational document staleness hardening complete.
+- Stage 5AC: prime-minus-one CUDA synthetic reporting and bounded-p56 preflight complete.
+- Stage 5AD: bounded p56 CUDA parity mismatch record complete.
+- Stage 5AD-fix: bounded p56 mismatch investigation complete.
+- Stage 5AE: corrected bounded p56 formula reporting and reference-contract repair complete.
+- Stage 5AF: Cicada source harvester and archive/visual/numeric provenance inventory tooling complete.
+- Stage 5AG: local third-party source inventory and initial source-lock metadata complete.
+- Stage 5AH: operational documentation staleness coverage repair and README stage-ledger audit complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - Broad search/scoring/CUDA campaigns: not started.
-- Latest CUDA kernel stage: Stage 5J wrote `1` implementation record, `1` build record, `1` synthetic parity record, and `1` summary record for `gematria_mod29_shift_score_kernel`. Local optional CUDA build and synthetic numeric parity passed with hash `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`; no real Liber Primus CUDA data, solved or unsolved page CUDA execution, GPU benchmark, speedup claim, or solve claim was added.
-- Latest Gematria solved-fixture CUDA reporting stage: Stage 5N wrote `5` parity report records, `5` controlled expansion gate records, `1` boundary review record, `2` result-store/score-summary preflight records, `9` no-unsolved guardrail records, and `1` summary record. It carries forward Stage 5M parity pass/fail/skip `5/0/0`, approves only exact-repeat verification for Stage 5O, blocks broad solved-fixture and unsolved-page CUDA, adds `0` new CUDA kernels, modifies no CUDA source, runs no CUDA, and makes no benchmark, speedup, real Liber Primus CUDA-data, website-expansion, canonical-corpus, page-boundary, or solve claim.
+- Historical CUDA kernel milestone: Stage 5J wrote `1` implementation record, `1` build record, `1` synthetic parity record, and `1` summary record for `gematria_mod29_shift_score_kernel`. Local optional CUDA build and synthetic numeric parity passed with hash `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`; no real Liber Primus CUDA data, solved or unsolved page CUDA execution, GPU benchmark, speedup claim, or solve claim was added.
+- Historical Gematria solved-fixture CUDA reporting milestone: Stage 5N wrote `5` parity report records, `5` controlled expansion gate records, `1` boundary review record, `2` result-store/score-summary preflight records, `9` no-unsolved guardrail records, and `1` summary record. It carries forward Stage 5M parity pass/fail/skip `5/0/0`, approves only exact-repeat verification for Stage 5O, blocks broad solved-fixture and unsolved-page CUDA, adds `0` new CUDA kernels, modifies no CUDA source, runs no CUDA, and makes no benchmark, speedup, real Liber Primus CUDA-data, website-expansion, canonical-corpus, page-boundary, or solve claim.
 - Latest solved-fixture mapping stage: Stage 5L wrote `5` token-mapping records, `5` native parity records, `1` output-hash contract, `1` score-summary shape, and `1` summary record. It maps all `5` candidate streams, prepares `5` native output-token hashes, and supplies Stage 5M's exact approved input set.
 - Latest bounded hash review: Stage 4G tested `4` source-backed deduplicated SHA-256 candidate byte strings against the two archived cookie/hash targets for `8` exact comparisons and found `0` exact matches; no solve claim.
 - Latest image-analysis stage: Stage 3M analysed `58` ignored local page images, producing `406` component records, `58` symmetry records, `464` bitplane records, and `71` review-only feature candidates in ignored outputs. No OCR, AI/ML interpretation, image-derived search, or solve claim is made.
@@ -253,17 +290,18 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Latest result-store unification stage: Stage 4P recorded `18` source inventory records, loaded `11` committed summaries, saw `6` optional ignored generated outputs locally, wrote `82` unified result records, `82` unified score-summary records, and `82` method-status joins. It ran no new experiments, added no scorer semantics, committed no generated result bodies or SQLite databases, and added no CUDA code.
 - Latest CUDA planning stage: Stage 5A wrote `14` target-plan records, `9` ready planning targets, `2` blocked targets, `8` explicit non-target records, `9` parity scaffold records, and `10` satisfied implementation gates. It made no CUDA source change, GPU benchmark, speedup claim, broad experiment, raw-data processing, or solve claim.
 - Latest CUDA parity harness stage: Stage 5B wrote `14` harness plan records, `14` parity fixture records, `3` backend capability records, and `9` future-kernel matrix records. It made no CUDA source change, GPU benchmark, speedup claim, broad experiment, raw-data processing, or solve claim.
-- Latest CUDA build/device stage: Stage 5C wrote `3` build profiles, `3` toolchain records, `3` device records, and `1` optional smoke-build record. It made no CUDA source change, CUDA kernel, GPU benchmark, speedup claim, broad experiment, raw-data processing, website expansion, or solve claim.
-- Latest native CPU backend stage: Stage 5D wrote `1` backend capability record, `5` threading records, `1` native/Python parity record, and `1` diagnostic record. It tested thread counts `1,2,4,8,16`, produced matching one-thread and multi-thread hashes, preserved Python as orchestration, and made no CUDA source change, GPU benchmark, speedup claim, broad experiment, raw-data processing, website expansion, or solve claim.
-- Latest CUDA reporting stages: Stage 5G reports the Stage 5F `shift_score_kernel` native/CUDA synthetic hash match and Stage 5K reports the Stage 5J Gematria CUDA/native synthetic hash match. Both verify CUDA-facing device-code subset policy, record solved-fixture-safe blockers, and keep real Liber Primus CUDA data use, GPU benchmarks, speedup claims, broad execution, raw-data processing, website expansion, and solve claims out of scope.
-- Latest Gematria CUDA kernel stage: Stage 5J implements `gematria_mod29_shift_score_kernel` for the Stage 5H synthetic numeric fixture only. It shifts transformable tokens with `(token + shift) % 29`, preserves masked separator placeholders, matches the native fixture hash `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`, keeps Stage 5F uppercase Latin parity separate, and adds no real Liber Primus CUDA data use, solved/unsolved page CUDA execution, GPU benchmark, speedup claim, website expansion, or solve claim.
-- Latest Gematria solved-fixture CUDA parity/reporting stage: Stage 5N reports Stage 5M's five CUDA/native hash matches, records controlled expansion gates, and keeps unsolved-page CUDA blocked.
+- Historical CUDA build/device milestone: Stage 5C wrote `3` build profiles, `3` toolchain records, `3` device records, and `1` optional smoke-build record. It made no CUDA source change, CUDA kernel, GPU benchmark, speedup claim, broad experiment, raw-data processing, website expansion, or solve claim.
+- Historical native CPU backend milestone: Stage 5D wrote `1` backend capability record, `5` threading records, `1` native/Python parity record, and `1` diagnostic record. It tested thread counts `1,2,4,8,16`, produced matching one-thread and multi-thread hashes, preserved Python as orchestration, and made no CUDA source change, GPU benchmark, speedup claim, broad experiment, raw-data processing, website expansion, or solve claim.
+- Historical CUDA reporting milestones: Stage 5G reports the Stage 5F `shift_score_kernel` native/CUDA synthetic hash match and Stage 5K reports the Stage 5J Gematria CUDA/native synthetic hash match. Both verify CUDA-facing device-code subset policy, record solved-fixture-safe blockers, and keep real Liber Primus CUDA data use, GPU benchmarks, speedup claims, broad execution, raw-data processing, website expansion, and solve claims out of scope.
+- Historical Gematria CUDA kernel milestone: Stage 5J implements `gematria_mod29_shift_score_kernel` for the Stage 5H synthetic numeric fixture only. It shifts transformable tokens with `(token + shift) % 29`, preserves masked separator placeholders, matches the native fixture hash `a6d5d5161145fd31ab429a8e955e0412d7b0af6089f06ee8b33baf8cd00b27a0`, keeps Stage 5F uppercase Latin parity separate, and adds no real Liber Primus CUDA data use, solved/unsolved page CUDA execution, GPU benchmark, speedup claim, website expansion, or solve claim.
+- Historical Gematria solved-fixture CUDA parity/reporting milestone: Stage 5N reports Stage 5M's five CUDA/native hash matches, records controlled expansion gates, and keeps unsolved-page CUDA blocked.
 - Durable staged plan: [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md).
 - Latest Gematria expanded solved-fixture CUDA reporting stage: Stage 5S consumed the `3` Stage 5R expanded parity records, wrote `3` compact parity-report records, `3` result-store integration records, `3` score-summary integration records, `7` method-status impact records, `4` generated-body policy records, `1` boundary review record, and `6` controlled next-step decision records. It ran no CUDA, modified no CUDA source, added `0` kernels, published no generated CUDA result bodies, upgraded no method family to solved, and made no benchmark, speedup, unsolved-page CUDA, real Liber Primus CUDA-data, website-expansion, canonical-corpus, page-boundary, or solve claim.
 - Latest prime-minus-one native contract stage: Stage 5W wrote `7` source inventory records, `2` stream contract records, `3` prime schedule records, `3` Candidate Batch ABI mapping records, `3` native parity preparation records, `3` result-store preflight records, `6` guardrail records, and `8` next-stage decision records. It marks the bounded Stage 4O/5L p56 mapping ready for future no-GPU native parity, keeps full p56 parity blocked until a complete committed token buffer is scoped, ran no CUDA or native/CUDA CMake, added no kernels, benchmarked nothing, and selected Stage 5X.
 - Latest prime-minus-one native parity stage: Stage 5X wrote `3` native run records, `3` native parity records, `3` result-store preflight records, `3` score-summary preflight records, `1` full-p56 blocker record, `7` guardrail records, and `9` next-stage decision records. It executed only the two Stage 5W ready no-GPU Python-reference mappings, matched both Stage 5W expected hashes, skipped the blocked full p56 mapping, ran no CUDA or native/CUDA CMake, added no kernels, benchmarked nothing, and selected Stage 5Y.
 - Latest source-harvester stage: Stage 5AG inventories ignored local `third_party/` material with `1402` files, `223` directories, `1356526287` bytes, `4` archives, `691` images, `132` PDFs, `130` DOCX files, `203` text files, `65` HTML files, `8` audio files, `14` video files, `931` unique SHA-256 hashes, and `216` duplicate hash groups. It consumes `41` Stage 5AF manifest records, matches `12`, records `30` missing/manual sources, records `0` ambiguous matches, creates `14` local unclassified extension records, marks `12` source-lock candidates ready, marks `14` needing review, and leaves research bundles `0` ready, `5` partial, and `5` not ready. It performs no live network fetch or online clone, commits no raw local source bytes, uses no Google Drive storage, runs no CUDA/full-p56/unsolved-page work, benchmarks nothing, executes no scored experiments, and makes no solve claim.
-- Next: Stage 5AH - curated research bundle extraction from local source inventory.
+- Latest doc-staleness stage: Stage 5AH repairs README stage-ledger coverage, operational-file-map coverage, and current/next-stage consistency checks. It requeues curated local source extraction as Stage 5AI and runs no raw source processing, live scraping, online clone, Google Drive storage, CUDA, benchmarks, scored experiments, website expansion, or solve-claim workflow.
+- Next: Stage 5AI - curated research bundle extraction from local source inventory.
 
 ## How To Use This Repo
 
@@ -409,6 +447,8 @@ Experiments are manifest-driven. Candidate outputs must never be treated as solv
 Current tests cover the C++ skeleton, Python package, manifests, schemas, result stores, lock hashes, public documentation status, and consistency gates. Future CUDA kernels must have CPU reference implementations, CPU/GPU parity tests, and benchmarks before optimization.
 
 ## Next milestones
+
+Historical snapshot: early milestones after Stage 2J.
 
 Stage 2J replaced per-experiment approval as the default path with the standing policy in `experiments/policies/operator-policy-v0.yaml` and the queue in `experiments/queues/stage2j-bounded-cpu-queue.yaml`. Normal local CPU items can run automatically when they stay within the hard limits: candidate upper bound `100000`, runtime estimate `600` seconds, generated output budget `250` MB, CPU only, no CUDA/cloud/paid services, no generated-output commit, no canonical corpus activation, no page-boundary finalization, and no solve claim.
 

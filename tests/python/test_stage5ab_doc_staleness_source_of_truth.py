@@ -14,15 +14,15 @@ def _validator(path: str) -> Draft202012Validator:
 
 
 def test_stage5ab_source_of_truth_schema_and_loader() -> None:
-    path = Path("data/project-state/stage5ab-doc-staleness-source-of-truth.yaml")
+    path = Path("data/project-state/stage5ah-doc-staleness-source-of-truth.yaml")
     payload = yaml.safe_load(path.read_text(encoding="utf-8"))
 
     _validator("schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json").validate(payload)
     source = load_source_of_truth(path)
-    assert source.latest_completed_stage_prefix == "Stage 5AG"
-    assert source.expected_next_stage_prefix == "Stage 5AH"
+    assert source.latest_completed_stage_prefix == "Stage 5AH"
+    assert source.expected_next_stage_prefix == "Stage 5AI"
     assert source.next_stage_after_this_stage == (
-        "Stage 5AH - curated research bundle extraction from local source inventory"
+        "Stage 5AI - curated research bundle extraction from local source inventory"
     )
 
 
@@ -34,7 +34,7 @@ def test_stage5ab_operational_file_map_schema_and_loader() -> None:
     paths = load_operational_paths(path)
     assert "README.md" in paths
     assert "docs/onboarding/operational-file-map.md" in paths
-    assert len(paths) >= 24
+    assert len(paths) >= 36
 
 
 def test_stage5ab_summary_and_findings_schemas() -> None:
