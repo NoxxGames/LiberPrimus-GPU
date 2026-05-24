@@ -779,6 +779,16 @@ website-export/**
 !website-export/.gitkeep
 !website-export/stage5am/
 !website-export/stage5am/.gitkeep
+!website-export/stage5an/
+!website-export/stage5an/.gitkeep
+
+# Generated private Deep Research content packs
+deep-research-content-packs/**
+!deep-research-content-packs/
+!deep-research-content-packs/README.md
+!deep-research-content-packs/.gitkeep
+!deep-research-content-packs/stage5an/
+!deep-research-content-packs/stage5an/.gitkeep
 
 # Generated static website renderer reports
 experiments/results/website-render/**

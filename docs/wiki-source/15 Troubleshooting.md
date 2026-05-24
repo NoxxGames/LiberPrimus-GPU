@@ -835,7 +835,7 @@ generated result bodies, build directories, SQLite files, raw data, or local CUD
 If Stage 5AK or later doc-staleness validation fails after updating operational docs, inspect
 `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`, `data/project-state/operational-file-map.yaml`,
 `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, `README.md`, and `docs/roadmap/staged-plan.md` for mismatched latest or next
-stage labels. After Stage 5AM, the active source-of-truth expects Stage 5AM as latest completed and Stage 5AN as the next Deep Research source inventory stage.
+stage labels. After Stage 5AN, the active source-of-truth expects Stage 5AN as latest completed and Stage 5AO as the next Deep Research source inventory stage with private content.
 
 If Stage 5AC bounded-p56 preflight is not ready, do not run p56 CUDA. Keep full p56 blocked, inspect the Stage 5AA
 synthetic hash match and Stage 5AB doc-staleness record, then repair metadata before selecting any future bounded
@@ -847,14 +847,14 @@ If operational Markdown drifts, run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5AM" `
-  --expected-next-stage "Stage 5AN"
+  --expected-latest-stage "Stage 5AN" `
+  --expected-next-stage "Stage 5AO"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5AM" `
-  --expected-next-stage "Stage 5AN"
+  --expected-latest-stage "Stage 5AN" `
+  --expected-next-stage "Stage 5AO"
 ```
 
 The checks scan the operational file map, ignore historical logs, reject active Stage 6 website
@@ -886,4 +886,19 @@ git check-ignore -v website-export/stage5am/research-index/index.html
 git check-ignore -v website-export/stage5am/research-index.zip
 git check-ignore -v experiments/results/website-render/stage5am/summary.json
 git check-ignore -v codex-output/stage5am-codex-completion.md
+```
+
+For Stage 5AN private content-pack runs, committed files belong under `data/deep-research-export/stage5an-*`.
+Generated private pack files and ZIP archives belong under ignored `deep-research-content-packs/stage5an/`;
+hosted private-content files, combined webroots, and upload ZIP archives belong under ignored
+`website-export/stage5an/`; and the Codex completion handoff belongs under ignored
+`codex-output/stage5an-codex-completion.md`. Confirm ignore coverage with:
+
+```powershell
+git check-ignore -v deep-research-content-packs/stage5an/deep-research-content-pack-stage5an.zip
+git check-ignore -v website-export/stage5an/private-content/index.html
+git check-ignore -v website-export/stage5an/webserver-root/index.html
+git check-ignore -v website-export/stage5an/webserver-root/private-content/index.html
+git check-ignore -v website-export/stage5an/webserver-root.zip
+git check-ignore -v codex-output/stage5an-codex-completion.md
 ```

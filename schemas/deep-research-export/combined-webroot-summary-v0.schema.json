@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/deep-research-export/combined-webroot-summary-v0.schema.json",
+  "title": "Stage 5AN Combined Webroot Summary",
+  "type": "object",
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "combined_webroot_generated",
+    "combined_webroot_root",
+    "metadata_index_present",
+    "private_content_present",
+    "robots_noindex_present",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5an_combined_webroot_summary" },
+    "schema": { "const": "schemas/deep-research-export/combined-webroot-summary-v0.schema.json" },
+    "stage_id": { "const": "stage-5an" },
+    "combined_webroot_generated": { "const": true },
+    "combined_webroot_root": { "type": "string" },
+    "metadata_index_present": { "const": true },
+    "private_content_present": { "const": true },
+    "robots_noindex_present": { "const": true },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

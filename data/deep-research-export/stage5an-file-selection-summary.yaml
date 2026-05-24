@@ -1,0 +1,17 @@
+record_type: stage5an_file_selection_summary
+schema: schemas/deep-research-export/file-selection-summary-v0.schema.json
+stage_id: stage-5an
+source_stage_id: stage-5al
+selected_file_count: 183
+safe_extracts_generated_count: 5
+metadata_file_count: 7
+excluded_raw_third_party_count: 0
+excluded_forbidden_file_count: 0
+excluded_file_count: 4
+raw_third_party_files_included: false
+raw_archives_included: false
+raw_workbooks_included: false
+raw_images_included: false
+raw_pdfs_docx_included: false
+raw_audio_video_included: false
+solve_claim: false

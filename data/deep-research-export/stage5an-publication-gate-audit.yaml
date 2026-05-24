@@ -1,0 +1,22 @@
+record_type: stage5an_publication_gate_audit
+schema: schemas/deep-research-export/publication-gate-audit-v0.schema.json
+stage_id: stage-5an
+source_stage_id: stage-5al
+publication_gate_records: 7
+included_file_records: 195
+private_deep_research_only_count: 175
+generated_extract_review_required_count: 19
+blocked_private_or_sensitive_count: 1
+raw_source_never_publish_count: 0
+public_website_ready_count: 0
+excluded_forbidden_file_count: 0
+publication_status_counts:
+  blocked_private_or_sensitive: 1
+  generated_extract_review_required: 19
+  private_deep_research_only: 175
+public_website_publication_performed: false
+local_absolute_paths_published: false
+private_ids_published: false
+raw_third_party_files_included: false
+publication_gate_audit_passed: true
+solve_claim: false

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/deep-research-export/file-selection-summary-v0.schema.json",
+  "title": "Stage 5AN File Selection Summary",
+  "type": "object",
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "selected_file_count",
+    "safe_extracts_generated_count",
+    "excluded_forbidden_file_count",
+    "raw_third_party_files_included",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5an_file_selection_summary" },
+    "schema": { "const": "schemas/deep-research-export/file-selection-summary-v0.schema.json" },
+    "stage_id": { "const": "stage-5an" },
+    "selected_file_count": { "type": "integer", "minimum": 0 },
+    "safe_extracts_generated_count": { "type": "integer", "minimum": 0 },
+    "excluded_forbidden_file_count": { "type": "integer", "minimum": 0 },
+    "raw_third_party_files_included": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

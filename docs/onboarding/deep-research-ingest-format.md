@@ -25,6 +25,16 @@ For Stage 5AM, Deep Research may also use:
 - `data/website-render/stage5am-render-output-manifest.yaml`
 - the ignored metadata-only static index under `website-export/stage5am/research-index/`
 
+For Stage 5AN, Deep Research may use the private hosted content URL and content-pack manifest after the user uploads the combined webroot:
+
+- `data/deep-research-export/stage5an-summary.yaml`
+- `data/deep-research-export/stage5an-content-pack-manifest-summary.yaml`
+- Metadata site: `http://liberprimus-gpu-data.info/index.html`
+- Private content: `http://liberprimus-gpu-data.info/private-content/`
+- Private content manifest: `http://liberprimus-gpu-data.info/private-content/data/content-pack-manifest.json`
+
+These URLs are private/review-gated handoff aids. They are not public publication approval and do not replace committed source-card, content-index, claim-record, and publication-gate metadata.
+
 Do not use raw `third_party/` files as the ingest root, and do not treat website-ingest or website-render metadata as public publication permission.
 
 For Stage 5AJ, private handoffs may reference:

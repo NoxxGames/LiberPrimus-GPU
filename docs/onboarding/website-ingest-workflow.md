@@ -1,6 +1,6 @@
 # Website-Ingest Workflow
 
-Use this workflow for Stage 5AL-style metadata handoffs and Stage 5AM-style static metadata rendering.
+Use this workflow for Stage 5AL-style metadata handoffs, Stage 5AM-style static metadata rendering, and Stage 5AN-style private content-pack handoff.
 
 1. Validate the current source-harvester stage records.
 2. Build `data/website-ingest/stage5al/` from committed metadata.
@@ -8,8 +8,9 @@ Use this workflow for Stage 5AL-style metadata handoffs and Stage 5AM-style stat
 4. Validate publication gates and confirm public website-ready remains zero.
 5. Render the optional private static index with `libreprimus website-render build-stage5am-site`.
 6. Validate the static index with `libreprimus website-render validate-stage5am`.
-7. Keep generated export files, generated reports, raw third-party files, static website files, and `codex-output/**`
+7. Build and validate the private content pack and SFTP webroot with `libreprimus deep-research-export` when URL-based Deep Research handoff is needed.
+8. Keep generated export files, generated reports, raw third-party files, static website files, private content-pack files, hosted private-content files, combined webroots, and `codex-output/**`
    ignored.
 
 Future website work must consume the committed data package and must not infer publication
-permission from source-card presence alone. Publication gates are mandatory, and Stage 5AM renderer output under `website-export/stage5am/` remains a private generated artifact unless a later publication review changes that gate.
+permission from source-card presence alone. Publication gates are mandatory, Stage 5AM renderer output under `website-export/stage5am/` remains a private generated artifact, and Stage 5AN private content under `deep-research-content-packs/stage5an/` plus `website-export/stage5an/` remains private generated handoff material unless a later publication review changes that gate.

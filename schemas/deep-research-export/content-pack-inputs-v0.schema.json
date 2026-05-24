@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/deep-research-export/content-pack-inputs-v0.schema.json",
+  "title": "Stage 5AN Content Pack Inputs",
+  "type": "object",
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "metadata_site_root",
+    "website_ingest_dir",
+    "research_input_roots",
+    "safe_local_source_roots",
+    "source_card_count",
+    "content_record_count",
+    "claim_record_count",
+    "bundle_count",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5an_content_pack_inputs" },
+    "schema": { "const": "schemas/deep-research-export/content-pack-inputs-v0.schema.json" },
+    "stage_id": { "const": "stage-5an" },
+    "metadata_site_root": { "type": "string" },
+    "website_ingest_dir": { "type": "string" },
+    "research_input_roots": { "type": "array", "items": { "type": "string" } },
+    "safe_local_source_roots": { "type": "array", "items": { "type": "string" } },
+    "source_card_count": { "type": "integer", "minimum": 0 },
+    "content_record_count": { "type": "integer", "minimum": 0 },
+    "claim_record_count": { "type": "integer", "minimum": 0 },
+    "bundle_count": { "type": "integer", "minimum": 0 },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -643,3 +643,75 @@ records:
   owner_context: source_operator
   notes: Documents build, validation, guardrail, next-stage, summary, and display
     commands for metadata-only static rendering.
+- path: data/deep-research-export/stage5an-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AN private Deep Research content pack aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5an
+  expected_update_frequency: when_deep_research_export_state_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Records content-pack, hosted-content, combined-webroot, publication-gate,
+    guardrail, and Stage 5AO next-stage counts without committing generated
+    private content files.
+- path: data/deep-research-export/stage5an-content-pack-policy.yaml
+  category: active_data_record
+  purpose: Stage 5AN private content-pack publication and inclusion policy.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5an
+  expected_update_frequency: when_deep_research_export_state_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Representative committed policy record for the Stage 5AN content-pack,
+    hosted-export, webroot, publication-gate, upload, guide, guardrail, and
+    next-stage record family.
+- path: docs/architecture/private-deep-research-content-pack.md
+  category: architecture_doc
+  purpose: Stage 5AN private content-pack architecture and boundary policy.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5an
+  expected_update_frequency: every_research_handoff_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents private/review-gated content-pack and hosted-content guardrails.
+- path: docs/onboarding/private-deep-research-content-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5AN private content-pack and SFTP webroot workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5an
+  expected_update_frequency: every_research_handoff_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents validation, ignore checks, and private upload workflow.
+- path: docs/reference/deep-research-export-cli.md
+  category: operational_status_doc
+  purpose: Stage 5AN deep-research-export CLI reference.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5an
+  expected_update_frequency: every_deep_research_export_cli_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Documents content-pack, hosted-export, combined-webroot, guardrail,
+    next-stage, summary, and validation commands.
+- path: docs/reference/stage5an-private-content-upload.md
+  category: operational_status_doc
+  purpose: Stage 5AN private content upload instructions.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5an
+  expected_update_frequency: every_research_handoff_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Documents that the contents of `website-export/stage5an/webserver-root/`
+    are the private SFTP upload unit.

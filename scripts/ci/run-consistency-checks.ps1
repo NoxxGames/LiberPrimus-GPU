@@ -24,14 +24,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5AM" `
-        --expected-next-stage "Stage 5AN" `
+        --expected-latest-stage "Stage 5AN" `
+        --expected-next-stage "Stage 5AO" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5AM" `
-        --expected-next-stage "Stage 5AN" `
+        --expected-latest-stage "Stage 5AN" `
+        --expected-next-stage "Stage 5AO" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -46,14 +46,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AM",
+        expected_latest_stage="Stage 5AN",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AM",
+            "expected_latest_stage": "Stage 5AN",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2117,6 +2117,99 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
     $Stage5AMGeneratedSummary = Join-Path (Join-Path (Join-Path "experiments" "results") "website-render") "stage5am\summary.json"
     git check-ignore -q $Stage5AMGeneratedSummary
     git check-ignore -q "codex-output/stage5am-codex-completion.md"
+
+    Write-Host "Validating Stage 5AN private Deep Research export records"
+    $Stage5ANRoot = Join-Path $TempDir "stage5an-deep-research-export"
+    $Stage5ANPack = Join-Path $Stage5ANRoot "content-pack"
+    $Stage5ANHosted = Join-Path $Stage5ANRoot "private-content"
+    $Stage5ANWebroot = Join-Path $Stage5ANRoot "webserver-root"
+    $Stage5ANRecords = Join-Path $Stage5ANRoot "records"
+    New-Item -ItemType Directory -Path $Stage5ANRoot, $Stage5ANRecords | Out-Null
+    $Stage5ANPolicy = Join-Path $Stage5ANRecords "content-pack-policy.yaml"
+    $Stage5ANInputs = Join-Path $Stage5ANRecords "content-pack-inputs.yaml"
+    $Stage5ANManifestSummary = Join-Path $Stage5ANRecords "content-pack-manifest-summary.yaml"
+    $Stage5ANHostedSummary = Join-Path $Stage5ANRecords "hosted-content-export-summary.yaml"
+    $Stage5ANCombinedSummary = Join-Path $Stage5ANRecords "combined-webroot-summary.yaml"
+    $Stage5ANFileSelection = Join-Path $Stage5ANRecords "file-selection-summary.yaml"
+    $Stage5ANPublicationGateAudit = Join-Path $Stage5ANRecords "publication-gate-audit.yaml"
+    $Stage5ANUploadInstructions = Join-Path $Stage5ANRecords "upload-instructions.yaml"
+    $Stage5ANConsumptionGuide = Join-Path $Stage5ANRecords "deep-research-consumption-guide.yaml"
+    $Stage5ANGuardrail = Join-Path $Stage5ANRecords "guardrail.yaml"
+    $Stage5ANNextStageDecision = Join-Path $Stage5ANRecords "next-stage-decision.yaml"
+    $Stage5ANSummary = Join-Path $Stage5ANRecords "summary.yaml"
+    & $Python -m libreprimus.cli deep-research-export build-stage5an-content-pack `
+        --metadata-site-root $Stage5AMSite `
+        --website-ingest-dir data/website-ingest/stage5al `
+        --research-input-roots research-inputs/stage5ai `
+        --research-input-roots research-inputs/stage5aj `
+        --research-input-roots research-inputs/stage5ak `
+        --research-input-roots research-inputs/stage5al `
+        --safe-local-source-roots third_party/UsefulFilesAndIdeas `
+        --safe-local-source-roots third_party/UsefulFilesAndIdeas/community-facts `
+        --out-root $Stage5ANPack `
+        --policy-out $Stage5ANPolicy `
+        --inputs-out $Stage5ANInputs `
+        --manifest-summary-out $Stage5ANManifestSummary `
+        --file-selection-summary-out $Stage5ANFileSelection `
+        --publication-gate-audit-out $Stage5ANPublicationGateAudit
+    & $Python -m libreprimus.cli deep-research-export build-stage5an-hosted-export `
+        --content-pack-root $Stage5ANPack `
+        --metadata-site-root $Stage5AMSite `
+        --out-root $Stage5ANHosted `
+        --summary-out $Stage5ANHostedSummary `
+        --upload-instructions-out $Stage5ANUploadInstructions `
+        --consumption-guide-out $Stage5ANConsumptionGuide
+    & $Python -m libreprimus.cli deep-research-export build-stage5an-combined-webroot `
+        --metadata-site-root $Stage5AMSite `
+        --private-content-root $Stage5ANHosted `
+        --out-root $Stage5ANWebroot `
+        --summary-out $Stage5ANCombinedSummary
+    & $Python -m libreprimus.cli deep-research-export build-stage5an-guardrail `
+        --content-pack-root $Stage5ANPack `
+        --hosted-export-root $Stage5ANHosted `
+        --combined-webroot $Stage5ANWebroot `
+        --out $Stage5ANGuardrail
+    & $Python -m libreprimus.cli deep-research-export build-stage5an-next-stage-decision `
+        --manifest-summary $Stage5ANManifestSummary `
+        --hosted-summary $Stage5ANHostedSummary `
+        --combined-summary $Stage5ANCombinedSummary `
+        --publication-gate-audit $Stage5ANPublicationGateAudit `
+        --out $Stage5ANNextStageDecision
+    & $Python -m libreprimus.cli deep-research-export build-stage5an-summary `
+        --policy $Stage5ANPolicy `
+        --inputs $Stage5ANInputs `
+        --manifest-summary $Stage5ANManifestSummary `
+        --hosted-summary $Stage5ANHostedSummary `
+        --combined-summary $Stage5ANCombinedSummary `
+        --file-selection-summary $Stage5ANFileSelection `
+        --publication-gate-audit $Stage5ANPublicationGateAudit `
+        --upload-instructions $Stage5ANUploadInstructions `
+        --consumption-guide $Stage5ANConsumptionGuide `
+        --guardrail $Stage5ANGuardrail `
+        --next-stage-decision $Stage5ANNextStageDecision `
+        --out $Stage5ANSummary
+    & $Python -m libreprimus.cli deep-research-export validate-stage5an `
+        --content-pack-root $Stage5ANPack `
+        --hosted-export-root $Stage5ANHosted `
+        --combined-webroot $Stage5ANWebroot `
+        --policy $Stage5ANPolicy `
+        --inputs $Stage5ANInputs `
+        --manifest-summary $Stage5ANManifestSummary `
+        --hosted-summary $Stage5ANHostedSummary `
+        --combined-summary $Stage5ANCombinedSummary `
+        --file-selection-summary $Stage5ANFileSelection `
+        --publication-gate-audit $Stage5ANPublicationGateAudit `
+        --upload-instructions $Stage5ANUploadInstructions `
+        --consumption-guide $Stage5ANConsumptionGuide `
+        --guardrail $Stage5ANGuardrail `
+        --next-stage-decision $Stage5ANNextStageDecision `
+        --summary $Stage5ANSummary
+    git check-ignore -q "deep-research-content-packs/stage5an/deep-research-content-pack-stage5an.zip"
+    git check-ignore -q "website-export/stage5an/private-content/index.html"
+    git check-ignore -q "website-export/stage5an/webserver-root/index.html"
+    git check-ignore -q "website-export/stage5an/webserver-root/private-content/index.html"
+    git check-ignore -q "website-export/stage5an/webserver-root.zip"
+    git check-ignore -q "codex-output/stage5an-codex-completion.md"
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

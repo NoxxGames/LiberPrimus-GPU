@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AM static research website renderer and webserver export package is complete.
+Stage 5AN private Deep Research content pack and SFTP-ready hosted content library is complete.
 
-Next recommended prompt: Stage 5AN - Deep Research source inventory and reliability prompt. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5AO - Deep Research source inventory and reliability prompt with private content. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5AN
+
+Stage 5AN created a private Deep Research content pack, hosted private-content export, and combined SFTP-ready webroot from Stage 5AL/5AM metadata and existing ignored research-input files.
+
+Local Stage 5AN summary: content pack generated `true`, content pack files `208`, content pack size bytes `1422808`, hosted content generated `true`, hosted content files `211`, hosted content size bytes `1443834`, combined webroot generated `true`, included bundles `10`, included source records `61`, included claim records `12`, included content records `58`, included private extracts `183`, included metadata files `7`, safe extracts generated `5`, publication gates `7`, private Deep Research-only files `175`, generated-extract review-required files `19`, blocked private/sensitive files `1`, public website-ready count `0`, noindex/robots present `true`, upload instructions created `true`, Deep Research consumption guide created `true`, selected next prompt `Stage 5AO - Deep Research source inventory and reliability prompt with private content`, network fetch `false`, online clone `false`, Google Drive storage `false`, raw data committed `false`, generated private bodies committed `false`, hosted content committed `false`, combined webroot committed `false`, public website publication `false`, Deep Research execution `false`, OCR `false`, AI/ML interpretation `false`, image/stego/audio execution `false`, hypothesis generation/execution `false`, CUDA execution/source modification `false`, new CUDA kernels `0`, benchmarks `false`, scored experiments `false`, method-status upgrade `false`, and solve claim `false`.
+
+Stage 5AN is private handoff infrastructure. Its content pack, hosted private content, combined webroot, ZIP archives, safe extracts, and generated website files are ignored and review-gated; they are not public publication, not Deep Research output, not experiment execution, and not solve evidence.
 
 ## Completed in Stage 5AM
 

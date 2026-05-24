@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/deep-research-export/hosted-content-export-summary-v0.schema.json",
+  "title": "Stage 5AN Hosted Content Export Summary",
+  "type": "object",
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "hosted_content_export_generated",
+    "hosted_content_export_root",
+    "hosted_content_file_count",
+    "hosted_content_size_bytes",
+    "robots_noindex_present",
+    "private_ids_published",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5an_hosted_content_export_summary" },
+    "schema": { "const": "schemas/deep-research-export/hosted-content-export-summary-v0.schema.json" },
+    "stage_id": { "const": "stage-5an" },
+    "hosted_content_export_generated": { "const": true },
+    "hosted_content_export_root": { "type": "string" },
+    "hosted_content_file_count": { "type": "integer", "minimum": 0 },
+    "hosted_content_size_bytes": { "type": "integer", "minimum": 0 },
+    "robots_noindex_present": { "const": true },
+    "private_ids_published": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

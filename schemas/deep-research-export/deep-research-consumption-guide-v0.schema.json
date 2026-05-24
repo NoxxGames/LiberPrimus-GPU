@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/deep-research-export/deep-research-consumption-guide-v0.schema.json",
+  "title": "Stage 5AN Deep Research Consumption Guide",
+  "type": "object",
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "metadata_site_url",
+    "private_content_url",
+    "private_content_manifest_url",
+    "recommended_sftp_upload_root",
+    "first_deep_research_prompt_should_reference",
+    "deep_research_performed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5an_deep_research_consumption_guide" },
+    "schema": { "const": "schemas/deep-research-export/deep-research-consumption-guide-v0.schema.json" },
+    "stage_id": { "const": "stage-5an" },
+    "metadata_site_url": { "const": "http://liberprimus-gpu-data.info/index.html" },
+    "private_content_url": { "const": "http://liberprimus-gpu-data.info/private-content/" },
+    "private_content_manifest_url": { "const": "http://liberprimus-gpu-data.info/private-content/data/content-pack-manifest.json" },
+    "recommended_sftp_upload_root": { "const": "website-export/stage5an/webserver-root/" },
+    "first_deep_research_prompt_should_reference": { "type": "array", "minItems": 4 },
+    "deep_research_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

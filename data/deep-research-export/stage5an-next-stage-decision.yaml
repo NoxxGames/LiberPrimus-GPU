@@ -1,0 +1,161 @@
+record_type: stage5an_next_stage_decisions
+schema: schemas/deep-research-export/stage5an-summary-v0.schema.json
+stage_id: stage-5an
+status: complete
+source_stage_id: stage-5am
+content_pack_generated: true
+hosted_content_export_generated: true
+combined_webroot_generated: true
+robots_noindex_present: true
+deep_research_consumption_guide_created: true
+selected_option_id: stage5ao_deep_research_source_inventory_and_reliability_prompt_with_private_content
+selected_next_prompt_type: Deep Research
+selected_next_stage_title: Stage 5AO - Deep Research source inventory and reliability
+  prompt with private content
+selected_next_stage_reason: The private content pack, hosted private-content export,
+  and combined SFTP webroot validate without raw third-party publication or solve
+  claims.
+deep_research_next_ready: true
+records:
+- record_type: stage5an_next_stage_decision_record
+  schema: schemas/deep-research-export/stage5an-summary-v0.schema.json
+  stage_id: stage-5an
+  source_stage_id: stage-5am
+  option_id: stage5ao_deep_research_source_inventory_and_reliability_prompt_with_private_content
+  selected: true
+  recommended_next_prompt_type: Deep Research
+  recommended_next_stage_title: Stage 5AO - Deep Research source inventory and reliability
+    prompt with private content
+  recommended_next_stage_reason: The private content pack, hosted private-content
+    export, and combined SFTP webroot validate without raw third-party publication
+    or solve claims.
+  deep_research_recommended_next: true
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  public_website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5an_next_stage_decision_record
+  schema: schemas/deep-research-export/stage5an-summary-v0.schema.json
+  stage_id: stage-5an
+  source_stage_id: stage-5am
+  option_id: stage5ao_private_content_pack_gap_closure
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AO - private content pack gap closure
+  recommended_next_stage_reason: Use only if generated private content files are missing
+    or hashes fail.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  public_website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5an_next_stage_decision_record
+  schema: schemas/deep-research-export/stage5an-summary-v0.schema.json
+  stage_id: stage-5an
+  source_stage_id: stage-5am
+  option_id: stage5ao_publication_gate_review
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AO - publication gate review
+  recommended_next_stage_reason: Use only if publication policy is ambiguous.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  public_website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5an_next_stage_decision_record
+  schema: schemas/deep-research-export/stage5an-summary-v0.schema.json
+  stage_id: stage-5an
+  source_stage_id: stage-5am
+  option_id: stage5ao_targeted_online_fetch_for_missing_sources
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AO - targeted online fetch for missing sources
+  recommended_next_stage_reason: Deferred; Stage 5AN did not perform network fetches.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  public_website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5an_next_stage_decision_record
+  schema: schemas/deep-research-export/stage5an-summary-v0.schema.json
+  stage_id: stage-5an
+  source_stage_id: stage-5am
+  option_id: stage5ao_bounded_cpu_native_scored_experiment_manifest_gate
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AO - bounded CPU/native scored experiment manifest
+    gate
+  recommended_next_stage_reason: Not selected because Stage 5AN is private content
+    infrastructure, not experiment execution.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  public_website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5an_next_stage_decision_record
+  schema: schemas/deep-research-export/stage5an-summary-v0.schema.json
+  stage_id: stage-5an
+  source_stage_id: stage-5am
+  option_id: stage5ao_benchmark_planning
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AO - benchmark planning
+  recommended_next_stage_reason: Not selected because Stage 5AN does not run benchmarks.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  public_website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5an_next_stage_decision_record
+  schema: schemas/deep-research-export/stage5an-summary-v0.schema.json
+  stage_id: stage-5an
+  source_stage_id: stage-5am
+  option_id: stage5ao_unsolved_page_cuda_pilot
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AO - unsolved-page CUDA pilot
+  recommended_next_stage_reason: Not selected because unsolved-page CUDA remains blocked.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  public_website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5an_next_stage_decision_record
+  schema: schemas/deep-research-export/stage5an-summary-v0.schema.json
+  stage_id: stage-5an
+  source_stage_id: stage-5am
+  option_id: future_public_website_expansion_unnumbered
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Future public website expansion
+  recommended_next_stage_reason: Not selected because private hosted content is review-gated
+    and not public publication.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  public_website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+cuda_execution_performed: false
+new_cuda_kernels_added: 0
+solve_claim: false

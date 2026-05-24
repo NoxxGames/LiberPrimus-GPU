@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AH updates that map for stage-ledger staleness coverage, Stage 5AI updates it for curated bundle metadata, Stage 5AJ updates it for UsefulFiles integration and extraction-fidelity policy, Stage 5AK updates it for community-facts claim curation, Stage 5AL updates it for website-ingest/Deep Research export staging, and Stage 5AM updates it for the static research index renderer and Stage 5AN Deep Research direction. The YAML record is the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AH updates that map for stage-ledger staleness coverage, Stage 5AI updates it for curated bundle metadata, Stage 5AJ updates it for UsefulFiles integration and extraction-fidelity policy, Stage 5AK updates it for community-facts claim curation, Stage 5AL updates it for website-ingest/Deep Research export staging, Stage 5AM updates it for the static research index renderer, and Stage 5AN updates it for the private content pack, hosted private-content library, and Stage 5AO Deep Research direction. The YAML record is the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 
@@ -43,12 +43,12 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5AM" `
-  --expected-next-stage "Stage 5AN"
+  --expected-latest-stage "Stage 5AN" `
+  --expected-next-stage "Stage 5AO"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5AM" `
-  --expected-next-stage "Stage 5AN"
+  --expected-latest-stage "Stage 5AN" `
+  --expected-next-stage "Stage 5AO"
 ```

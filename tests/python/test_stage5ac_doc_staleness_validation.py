@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5am_latest_and_stage5an_next() -> None:
+def test_operational_docs_use_stage5an_latest_and_stage5ao_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5AM static research website renderer" in status
-    assert "Next recommended prompt: Stage 5AN" in status
-    assert "Latest completed stage: Stage 5AM" in staged_plan
-    assert "Current planning focus: Stage 5AN" in staged_plan
+    assert "Stage 5AN private Deep Research content pack" in status
+    assert "Next recommended prompt: Stage 5AO" in status
+    assert "Latest completed stage: Stage 5AN" in staged_plan
+    assert "Current planning focus: Stage 5AO" in staged_plan

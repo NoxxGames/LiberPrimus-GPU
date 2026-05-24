@@ -16,7 +16,7 @@ For most Codex tasks, read:
 - Do not trust rendered GitHub pages, cached raw URLs, memory, or old conversation context when state matters.
 - Run the task-specific validation commands before staging.
 - Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
-- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after Stage 5AM updates so Stage 5AN Deep Research prompts inherit current source-of-truth labels.
+- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after Stage 5AN updates so Stage 5AO Deep Research prompts inherit current source-of-truth labels.
 - Keep raw/generated outputs unstaged.
 - For Stage 5AF/5AG/5AI/5AJ/5AK source-harvester work, keep all raw harvester outputs, raw UsefulFiles/community-facts material, and generated bundle/extraction bodies local and ignored; do not use Google Drive as project storage.
 
@@ -33,7 +33,7 @@ If direction changes, update:
 - `AGENTS.md`
 - Relevant tutorials and `docs/wiki-source/**`
 - `docs/onboarding/source-harvester-workflow.md`, `docs/onboarding/local-source-inventory-workflow.md`, `docs/onboarding/deep-research-bundle-workflow.md`, `docs/onboarding/deep-research-ingest-format.md`, `docs/onboarding/community-observation-ingest-workflow.md`, `docs/reference/source-harvester-cli.md`, `docs/reference/source-harvester-local-inventory-cli.md`, `docs/reference/source-harvester-curated-bundles-cli.md`, `docs/reference/source-harvester-usefulfiles-cli.md`, and `docs/reference/source-harvester-community-facts-cli.md` when source-harvester behavior changes.
-- `data/project-state/stage5ah-*.yaml`, `data/source-harvester/stage5ai-*`, `data/source-harvester/stage5aj-*`, `data/source-harvester/stage5ak-*`, `data/source-harvester/stage5al-*`, `data/website-ingest/stage5al/*`, and `data/website-render/stage5am-*` when bundle metadata, website metadata, or the Stage 5AN next-stage decision change.
+- `data/project-state/stage5ah-*.yaml`, `data/source-harvester/stage5ai-*`, `data/source-harvester/stage5aj-*`, `data/source-harvester/stage5ak-*`, `data/source-harvester/stage5al-*`, `data/website-ingest/stage5al/*`, `data/website-render/stage5am-*`, and `data/deep-research-export/stage5an-*` when bundle metadata, website metadata, private content metadata, or the Stage 5AO next-stage decision change.
 
 ## Safety Rules
 

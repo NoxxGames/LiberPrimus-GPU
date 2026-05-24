@@ -41,6 +41,8 @@ Stage 5AL source-harvester modules add website-ingest package generation, public
 
 Stage 5AM website-render modules render the Stage 5AL metadata package into an ignored private static index and upload manifest. They must keep public website-ready at zero, preserve publication gates, avoid raw/private bodies, avoid external dependencies, write generated site files only under ignored `website-export/stage5am/`, and point Stage 5AN Deep Research at metadata rather than raw paths.
 
+Stage 5AN deep-research-export modules package private handoff files, render hosted private content, and build the combined SFTP webroot. They must keep generated pack/site/webroot files ignored, preserve publication gates, exclude raw third-party binaries and archives by default, avoid network fetches, avoid Google Drive storage, and point Stage 5AO Deep Research at metadata plus private hosted URLs rather than raw paths.
+
 ## Good First Areas
 
 - Documentation fixes.

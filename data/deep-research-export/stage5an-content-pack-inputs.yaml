@@ -1,0 +1,22 @@
+record_type: stage5an_content_pack_inputs
+schema: schemas/deep-research-export/content-pack-inputs-v0.schema.json
+stage_id: stage-5an
+source_stage_id: stage-5am
+metadata_site_root: website-export/stage5am/research-index
+website_ingest_dir: data/website-ingest/stage5al
+research_input_roots:
+- research-inputs/stage5ai
+- research-inputs/stage5aj
+- research-inputs/stage5ak
+- research-inputs/stage5al
+safe_local_source_roots:
+- third_party/UsefulFilesAndIdeas
+- third_party/UsefulFilesAndIdeas/community-facts
+source_card_count: 61
+content_record_count: 58
+claim_record_count: 12
+bundle_count: 10
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+solve_claim: false

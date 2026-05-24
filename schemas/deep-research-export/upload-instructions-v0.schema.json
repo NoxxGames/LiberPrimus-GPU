@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/deep-research-export/upload-instructions-v0.schema.json",
+  "title": "Stage 5AN Upload Instructions",
+  "type": "object",
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "sftp_upload_directory",
+    "copy_contents_to_webserver_root",
+    "expected_urls",
+    "access_control_required_if_sensitive",
+    "robots_noindex_not_security",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5an_upload_instructions" },
+    "schema": { "const": "schemas/deep-research-export/upload-instructions-v0.schema.json" },
+    "stage_id": { "const": "stage-5an" },
+    "sftp_upload_directory": { "const": "website-export/stage5an/webserver-root/" },
+    "copy_contents_to_webserver_root": { "const": true },
+    "expected_urls": { "type": "array", "items": { "type": "string" }, "minItems": 3 },
+    "access_control_required_if_sensitive": { "const": true },
+    "robots_noindex_not_security": { "const": true },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

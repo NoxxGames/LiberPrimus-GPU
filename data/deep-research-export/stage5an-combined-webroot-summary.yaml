@@ -1,0 +1,16 @@
+record_type: stage5an_combined_webroot_summary
+schema: schemas/deep-research-export/combined-webroot-summary-v0.schema.json
+stage_id: stage-5an
+source_stage_id: stage-5am
+combined_webroot_generated: true
+combined_webroot_root: website-export/stage5an/webserver-root
+combined_webroot_zip_created: true
+combined_webroot_zip_path: website-export/stage5an/webserver-root.zip
+combined_webroot_file_count: 233
+combined_webroot_size_bytes: 1843197
+metadata_index_present: true
+private_content_present: true
+private_content_expected_url: http://liberprimus-gpu-data.info/private-content/
+robots_noindex_present: true
+public_website_publication_performed: false
+solve_claim: false

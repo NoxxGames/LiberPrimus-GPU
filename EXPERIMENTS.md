@@ -1,5 +1,13 @@
 # Experiments
 
+## Stage 5AN Private Content Pack
+
+Stage 5AN is private Deep Research handoff infrastructure, not an experiment. It consumes Stage 5AL/5AM metadata plus existing ignored research-input files and writes compact committed records under `data/deep-research-export/`.
+
+Generated Stage 5AN content-pack files remain ignored under `deep-research-content-packs/stage5an/`; generated hosted private-content and combined webroot files remain ignored under `website-export/stage5an/`. The SFTP-ready upload directory is `website-export/stage5an/webserver-root/`; copy the contents of that folder to the private webserver root when hosting is needed.
+
+Stage 5AN performs no Deep Research, network fetch, live scrape, online clone, Google Drive storage, raw source commit, public website publication, hypothesis generation/execution, OCR, AI/ML interpretation, image/stego/audio tooling, CUDA, benchmarks, scored experiments, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AM Static Research Website Renderer
 
 Stage 5AM is a static metadata renderer and upload-package stage, not an experiment. It consumes the committed Stage 5AL website-ingest metadata and writes an ignored private/review-gated static export under `website-export/stage5am/research-index/`.

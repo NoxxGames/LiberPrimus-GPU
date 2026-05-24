@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/deep-research-export/content-pack-manifest-summary-v0.schema.json",
+  "title": "Stage 5AN Content Pack Manifest Summary",
+  "type": "object",
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "content_pack_generated",
+    "content_pack_zip_created",
+    "content_pack_file_count",
+    "content_pack_size_bytes",
+    "included_files",
+    "raw_third_party_files_included",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5an_content_pack_manifest_summary" },
+    "schema": { "const": "schemas/deep-research-export/content-pack-manifest-summary-v0.schema.json" },
+    "stage_id": { "const": "stage-5an" },
+    "content_pack_generated": { "const": true },
+    "content_pack_zip_created": { "type": "boolean" },
+    "content_pack_file_count": { "type": "integer", "minimum": 0 },
+    "content_pack_size_bytes": { "type": "integer", "minimum": 0 },
+    "included_files": { "type": "array", "items": { "type": "object", "required": ["file_id", "relative_path", "sha256", "size_bytes", "publication_status", "review_status"] } },
+    "raw_third_party_files_included": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

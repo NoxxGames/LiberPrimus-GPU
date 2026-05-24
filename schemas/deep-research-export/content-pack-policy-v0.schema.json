@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/deep-research-export/content-pack-policy-v0.schema.json",
+  "title": "Stage 5AN Content Pack Policy",
+  "type": "object",
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "metadata_only_policy",
+    "private_deep_research_content_allowed",
+    "public_website_publication_performed",
+    "network_fetch_performed",
+    "online_repo_clone_performed",
+    "google_drive_storage_used",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5an_content_pack_policy" },
+    "schema": { "const": "schemas/deep-research-export/content-pack-policy-v0.schema.json" },
+    "stage_id": { "const": "stage-5an" },
+    "metadata_only_policy": { "type": "boolean" },
+    "private_deep_research_content_allowed": { "const": true },
+    "public_website_publication_performed": { "const": false },
+    "network_fetch_performed": { "const": false },
+    "online_repo_clone_performed": { "const": false },
+    "google_drive_storage_used": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -206,6 +206,14 @@ archives, raw Discord material, raw page images, or broad repository mirrors.
 If Codex changes CLI registration, verify `python -m libreprimus.cli --help`, selected group
 `--help` commands, and the Stage 3X command-surface tests before staging. Do not create
 `python/libreprimus/cli/` while `python/libreprimus/cli.py` remains the public entrypoint.
+
+If Codex changes Stage 5AN private Deep Research export behavior, verify
+`libreprimus deep-research-export validate-stage5an`, keep generated content packs under ignored
+`deep-research-content-packs/stage5an/`, keep hosted private content and combined webroots under
+ignored `website-export/stage5an/`, keep `codex-output/**` ignored, and do not stage ZIP archives,
+generated private bodies, hosted HTML/JSON files, raw `third_party/**`, raw workbooks/images/PDFs,
+or local absolute/private identifiers. Copy the contents of `website-export/stage5an/webserver-root/`
+to the private webserver root only after validation and access-control review.
 # Stage 4Q Codex Output Boundary
 
 Stage 4Q writes a local completion handoff under `codex-output/`. That directory is ignored and must not be staged. The committed source of truth is the Stage 4Q code, schemas, manifests, docs, and aggregate records under `data/`.
@@ -222,7 +230,8 @@ Stage 5AH completion handoffs belong under ignored `codex-output/stage5ah-codex-
 Stage 5AI completion handoffs belong under ignored `codex-output/stage5ai-codex-completion.md`; Stage 5AI generated bundle reports belong under ignored `experiments/results/research-bundles/stage5ai/`.
 Stage 5AJ completion handoffs belong under ignored `codex-output/stage5aj-codex-completion.md`; Stage 5AJ generated bundle/report bodies belong under ignored `research-inputs/stage5aj/`, `experiments/results/research-bundles/stage5aj/`, and `experiments/results/source-harvester-usefulfiles/stage5aj/`.
 
-For Stage 5AH-style documentation repair, validate the active source of truth with `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`, run the stage-ledger, operational-file-map coverage, current/next-stage, and Stage 5AH validation commands, and keep Stage 5AI curated local extraction as the next bounded source-provenance step. For Stage 5AI/5AJ/5AK/5AL/5AM-style curation and rendering, validate the committed source-harvester and website-render records and keep Stage 5AN Deep Research source inventory and reliability review as the next prompt. Do not use a documentation, curation, or rendering stage to process raw third-party sources into committed data, fetch from the network, use Google Drive storage, run Deep Research, run CUDA, benchmark, execute scored experiments, publish the website, or make solve claims.
+For Stage 5AH-style documentation repair, validate the active source of truth with `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`, run the stage-ledger, operational-file-map coverage, current/next-stage, and Stage 5AH validation commands, and keep Stage 5AI curated local extraction as the next bounded source-provenance step. For Stage 5AI/5AJ/5AK/5AL/5AM/5AN-style curation, rendering, and private content-pack export, validate the committed source-harvester, website-render, and deep-research-export records and keep Stage 5AO Deep Research source inventory and reliability review with private content as the next prompt. Do not use a documentation, curation, rendering, or private content-pack stage to process raw third-party sources into committed data, fetch from the network, use Google Drive storage, run Deep Research, run CUDA, benchmark, execute scored experiments, publicly publish the website, or make solve claims.
+Stage 5AN completion handoffs belong under ignored `codex-output/stage5an-codex-completion.md`; Stage 5AN generated content packs belong under ignored `deep-research-content-packs/stage5an/`; Stage 5AN hosted content and combined webroots belong under ignored `website-export/stage5an/`.
 Stage 5AC completion handoffs belong under ignored `codex-output/stage5ac-codex-completion.md`.
 Stage 5AD completion handoffs belong under ignored `codex-output/stage5ad-codex-completion.md`.
 Do not stage the handoff, generated conformance reports, raw data, generated result bodies, SQLite

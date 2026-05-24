@@ -1,0 +1,24 @@
+record_type: stage5an_upload_instructions
+schema: schemas/deep-research-export/upload-instructions-v0.schema.json
+stage_id: stage-5an
+source_stage_id: stage-5am
+sftp_upload_directory: website-export/stage5an/webserver-root/
+copy_contents_to_webserver_root: true
+expected_urls:
+- http://liberprimus-gpu-data.info/index.html
+- http://liberprimus-gpu-data.info/private-content/index.html
+- http://liberprimus-gpu-data.info/private-content/data/content-pack-manifest.json
+optional_zip: website-export/stage5an/webserver-root.zip
+do_not_upload:
+- third_party/
+- raw archives/workbooks/images/PDFs/audio/video
+- codex-output/
+- experiments/results/
+- source-harvester-output/
+- harvest-output/
+- raw local source roots
+access_control_required_if_sensitive: true
+robots_noindex_not_security: true
+warning: This is no longer metadata-only. Use webserver access control if sensitive.
+public_website_publication_performed: false
+solve_claim: false

@@ -1143,3 +1143,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AM records 9 static pages, 8 data JSON files, 61 source-card records, 58 content records, 12 community-claim records, 10 bundle records, 7 publication-gate records, 26 missing-source records, and 0 public website-ready records. It selects Stage 5AN Deep Research source inventory and reliability prompt, keeps generated website files ignored, keeps raw third-party and generated private bodies ignored, uses no Google Drive storage, and performs no network fetch, live scrape, online clone, Deep Research execution, public website publication, OCR/AI/ML/image forensics/stego/audio processing, hypothesis generation/execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5an
+    title: Private Deep Research content pack and SFTP-ready hosted content library
+    status: complete
+    category: infrastructure
+    summary: Built a private Deep Research content pack, hosted private-content export, and combined SFTP-ready webroot from Stage 5AL/5AM metadata and existing ignored research-input files while preserving publication gates and generated-output boundaries.
+    key_outputs:
+      - "`libreprimus deep-research-export` commands for content-pack generation, hosted private-content export, combined webroot generation, guardrail records, next-stage decisions, summary generation, validation, and summary display."
+      - Stage 5AN content-pack policy, input, manifest-summary, hosted-content summary, combined-webroot summary, file-selection summary, publication-gate audit, upload instructions, consumption guide, guardrail, next-stage-decision, and aggregate summary records under `data/deep-research-export/`.
+      - Ignored generated private content pack under `deep-research-content-packs/stage5an/`, ignored hosted private content and combined webroot under `website-export/stage5an/`, and an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AN records 208 content-pack files, 211 hosted-content files, 10 bundles, 61 source records, 58 content records, 12 community-claim records, 183 private extracts, 5 safe local-source extracts, 7 publication gates, 175 private Deep Research-only files, 19 generated-extract review-required files, 1 blocked private/sensitive file, and 0 public website-ready records. It selects Stage 5AO Deep Research source inventory and reliability prompt with private content, keeps generated private pack/site/webroot files ignored, keeps raw third-party and generated private bodies uncommitted, uses no Google Drive storage, and performs no network fetch, live scrape, online clone, Deep Research execution, public website publication, OCR/AI/ML/image forensics/stego/audio processing, hypothesis generation/execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
