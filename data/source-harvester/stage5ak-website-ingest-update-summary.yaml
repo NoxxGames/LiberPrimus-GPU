@@ -1,0 +1,13 @@
+record_type: stage5ak_website_ingest_update_summary
+schema: schemas/source-harvester/community-facts-content-index-summary-v0.schema.json
+stage_id: stage-5ak
+source_stage_id: stage-5aj
+website_ingest_updates: 6
+website_ingest_metadata_ready: true
+public_website_ready_count: 0
+publication_status: blocked_private_or_sensitive_until_review
+metadata_publication_allowed_after_review: true
+raw_message_bodies_publication_allowed: false
+raw_image_publication_allowed: false
+website_expansion_performed: false
+solve_claim: false

@@ -1,0 +1,248 @@
+record_type: stage5ak_community_facts_local_inventory
+schema: schemas/source-harvester/community-facts-local-inventory-record-v0.schema.json
+stage_id: stage-5ak
+source_stage_id: stage-5aj
+source_id: community_facts_observations_local
+source_root: third_party/UsefulFilesAndIdeas/community-facts
+local_folder_exists: true
+community_facts_file_count: 11
+community_facts_total_size_bytes: 248590
+message_log_detected: true
+message_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+message_log_hash: 88b60cf6bd010dca5f5ec83562216b704d2dccd33a93c6ca870dd058988a0916
+message_log_line_count: 1081
+attachment_images_detected: 10
+new_local_source_records: 1
+source_ids_added:
+- community_facts_observations_local
+source_manifest_record:
+  source_id: community_facts_observations_local
+  title: Community facts and number observations thread
+  source_type: local_user_upload
+  priority: A1
+  source_tier: tier4_social_claim_or_screenshot
+  collection_status: local_ready
+  local_path_hint: third_party/UsefulFilesAndIdeas/community-facts
+  recommended_capture_modes:
+  - text_hash
+  - message_log_index
+  - attachment_image_metadata
+  - ordered_attachment_index
+  - community_claim_record_extraction
+  - correction_log
+  - arithmetic_preflight_metadata
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  what_it_supports:
+  - community_number_fact_thread
+  - no_fehu_section_count_graph
+  - p54_55_p56_p57_hash_length_equivalence
+  - p15_red_text_progressive_sum_square
+  - red_3299_fehu_count_prime_index
+  - p56_p57_fehu_boundary_prime_observations
+  - final_jpg_gp_runs_road_phrase
+  - artwork_red_header_gp_match
+  - pixel_measurement_prime_dimension_claims
+  - whitespace_prime_sequence_claim
+  - cicada_prime_index_number_network
+  - transcript_word_count_conflict
+  - count_policy_correction_log
+  what_it_does_not_support:
+  - solve_claims
+  - execution_ready_status
+  - canonical_corpus_activation
+  - page_boundary_finalisation
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  solve_claim: false
+  notes:
+  - Discord/forum-derived observations; high false-positive risk.
+  - Source-lock and claim-catalogue material only.
+  - Attachments are ordered according to thread order, but message-to-image mapping
+    is inferred unless explicit.
+raw_text_committed: false
+raw_images_committed: false
+raw_data_committed: false
+generated_outputs_committed: false
+solve_claim: false
+records:
+- record_type: stage5ak_community_facts_local_file_record
+  schema: schemas/source-harvester/community-facts-local-inventory-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  file_name: 1.webp
+  relative_path: third_party/UsefulFilesAndIdeas/community-facts/1.webp
+  extension: .webp
+  size_bytes: 2436
+  sha256: 3cdbabb5e0a4c58cd7e2926afbd95e7079d1f4505cccdcde163e1a3fa9b712f7
+  mime_guess: application/octet-stream
+  source_type: local_user_upload
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_local_file_record
+  schema: schemas/source-harvester/community-facts-local-inventory-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  file_name: 10.webp
+  relative_path: third_party/UsefulFilesAndIdeas/community-facts/10.webp
+  extension: .webp
+  size_bytes: 15750
+  sha256: 2d8d4899ffafc1be0e94f287c7ff5852a8041e94446d75b9eee52fa444d5e5e2
+  mime_guess: application/octet-stream
+  source_type: local_user_upload
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_local_file_record
+  schema: schemas/source-harvester/community-facts-local-inventory-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  file_name: 2.webp
+  relative_path: third_party/UsefulFilesAndIdeas/community-facts/2.webp
+  extension: .webp
+  size_bytes: 17520
+  sha256: 1b7ccbd5384e89313b3ebc974711ff15e0f78b1dea5d5f805dcacdebf6b85bd1
+  mime_guess: application/octet-stream
+  source_type: local_user_upload
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_local_file_record
+  schema: schemas/source-harvester/community-facts-local-inventory-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  file_name: 3.webp
+  relative_path: third_party/UsefulFilesAndIdeas/community-facts/3.webp
+  extension: .webp
+  size_bytes: 9600
+  sha256: 5f1ab98967455d49d11b43a62e091d7bf615249e1516850e8c794f5836cf61ee
+  mime_guess: application/octet-stream
+  source_type: local_user_upload
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_local_file_record
+  schema: schemas/source-harvester/community-facts-local-inventory-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  file_name: 4.webp
+  relative_path: third_party/UsefulFilesAndIdeas/community-facts/4.webp
+  extension: .webp
+  size_bytes: 5918
+  sha256: 52ab6f64a080527382a9d6ba9ea2e807f7050b71a326efaf45a68f41f278a7ca
+  mime_guess: application/octet-stream
+  source_type: local_user_upload
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_local_file_record
+  schema: schemas/source-harvester/community-facts-local-inventory-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  file_name: 5.webp
+  relative_path: third_party/UsefulFilesAndIdeas/community-facts/5.webp
+  extension: .webp
+  size_bytes: 1972
+  sha256: e8ba51dfc10b32aca50066e127b5afdc67e51a46a43fb309466a92888202dbfd
+  mime_guess: application/octet-stream
+  source_type: local_user_upload
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_local_file_record
+  schema: schemas/source-harvester/community-facts-local-inventory-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  file_name: 6.webp
+  relative_path: third_party/UsefulFilesAndIdeas/community-facts/6.webp
+  extension: .webp
+  size_bytes: 111014
+  sha256: c84aca712b859a7259324587b4954d33e953194d7f72c475227a53ecdbb1780b
+  mime_guess: application/octet-stream
+  source_type: local_user_upload
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_local_file_record
+  schema: schemas/source-harvester/community-facts-local-inventory-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  file_name: 7.webp
+  relative_path: third_party/UsefulFilesAndIdeas/community-facts/7.webp
+  extension: .webp
+  size_bytes: 15568
+  sha256: 509e42909b90490a026d86ab9ec305008da911ef27e3e67b1de65a00031d9afc
+  mime_guess: application/octet-stream
+  source_type: local_user_upload
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_local_file_record
+  schema: schemas/source-harvester/community-facts-local-inventory-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  file_name: 8.webp
+  relative_path: third_party/UsefulFilesAndIdeas/community-facts/8.webp
+  extension: .webp
+  size_bytes: 16044
+  sha256: 80164520ed37cd3f7cd9b5a57b8af1c79e1651a413c08f9c00a20c70a5950f47
+  mime_guess: application/octet-stream
+  source_type: local_user_upload
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_local_file_record
+  schema: schemas/source-harvester/community-facts-local-inventory-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  file_name: 9.webp
+  relative_path: third_party/UsefulFilesAndIdeas/community-facts/9.webp
+  extension: .webp
+  size_bytes: 15546
+  sha256: 12b926464e4f6a8c1bd5fe61f0ef65ac4c76bf9796b95282352ac90f57a3fa0c
+  mime_guess: application/octet-stream
+  source_type: local_user_upload
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_local_file_record
+  schema: schemas/source-harvester/community-facts-local-inventory-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  file_name: community-facts-collection.txt
+  relative_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  extension: .txt
+  size_bytes: 37222
+  sha256: 88b60cf6bd010dca5f5ec83562216b704d2dccd33a93c6ca870dd058988a0916
+  mime_guess: text/plain
+  source_type: local_user_upload
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false

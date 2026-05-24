@@ -1,0 +1,240 @@
+record_type: stage5ak_next_stage_decisions
+schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+stage_id: stage-5ak
+source_stage_id: stage-5aj
+selected_option_id: stage5al_deep_research_source_inventory_and_reliability_prompt
+solve_claim: false
+records:
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_deep_research_source_inventory_and_reliability_prompt
+  selected: true
+  recommended_next_prompt_type: Deep Research
+  recommended_next_stage_title: Stage 5AL - Deep Research source inventory and reliability
+    prompt
+  recommended_next_stage_reason: Community-facts metadata and claim records integrated
+    cleanly; Deep Research can consume curated manifests and source cards.
+  deep_research_recommended_next: true
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_deep_research_community_number_facts_review_prompt
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AL - Deep Research community number facts review
+    prompt
+  recommended_next_stage_reason: Use only if the community number-fact claim layer
+    should be reviewed before broader source inventory.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_targeted_online_fetch_for_new_links
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AL - targeted online fetch for new links
+  recommended_next_stage_reason: Deferred; Stage 5AK used local files only.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_source_gap_closure_for_missing_priority_sources
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AL - source gap closure for missing priority
+    sources
+  recommended_next_stage_reason: Deferred unless Deep Research exposes blocking source
+    gaps.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_count_policy_reconciliation_preflight
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AL - count policy reconciliation preflight
+  recommended_next_stage_reason: Deferred; useful after Deep Research reviews claim
+    reliability.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_lp_excel_delimiter_transcript_source_lock
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AL - LP Excel delimiter transcript source-lock
+  recommended_next_stage_reason: Deferred; UsefulFiles workbooks remain source-lock
+    metadata only.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_visual_page_image_provenance_inventory
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AL - visual page image provenance inventory
+  recommended_next_stage_reason: Deferred; no image forensics in Stage 5AK.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_page49_51_token_block_extraction
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AL - page 49-51 token block extraction
+  recommended_next_stage_reason: Deferred; not selected by community-facts curation.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_cuneiform_red_marker_visual_numeric_extraction
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AL - cuneiform red marker visual numeric extraction
+  recommended_next_stage_reason: Deferred; would require explicit visual-source policy.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_discord_private_lead_redaction_plan
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AL - Discord private lead redaction plan
+  recommended_next_stage_reason: Deferred; private metadata is ready but not public.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_bounded_cpu_native_scored_experiment_manifest_gate
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AL - bounded CPU/native scored experiment manifest
+    gate
+  recommended_next_stage_reason: Rejected; claim records are not execution-ready.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_benchmark_planning
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AL - benchmark planning
+  recommended_next_stage_reason: Rejected; Stage 5AK is source curation only.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: stage5al_unsolved_page_cuda_pilot
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AL - unsolved-page CUDA pilot
+  recommended_next_stage_reason: Rejected; unsolved-page CUDA remains blocked.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5ak_next_stage_decision_record
+  schema: schemas/source-harvester/stage5ak-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  option_id: future_website_expansion_unnumbered
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Future unnumbered website expansion
+  recommended_next_stage_reason: Deferred; public website publication is review-gated.
+  deep_research_recommended_next: false
+  scored_experiment_recommended_next: false
+  benchmark_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  website_expansion_recommended_next: false
+  execution_enabled: false
+  solve_claim: false

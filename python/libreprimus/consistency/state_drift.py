@@ -325,6 +325,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5AJ is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5ak",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5ak\b", re.IGNORECASE),
+        "Stage 5AK is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -980,12 +985,28 @@ def check_state_drift_consistency(
         and "redaction" in staged_plan
         and "scraper capture" in staged_plan
         and "stage 5ak" in staged_plan
+        and "community-facts" in staged_plan
+        and "no network fetch" in staged_plan
+        and "website expansion" in staged_plan
+        and "deep research execution" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5AJ UsefulFiles integration and Stage 5AK community-facts direction.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5ak_community_facts_integration_complete",
+        "stage 5ak" in staged_plan
+        and "community-facts" in staged_plan
+        and "claim records" in staged_plan
+        and "arithmetic-preflight" in staged_plan
+        and "stage 5al" in staged_plan
         and "deep research source inventory" in staged_plan
         and "no network fetch" in staged_plan
         and "website expansion" in staged_plan
         and "deep research execution" in staged_plan
         and "complete" in staged_plan,
-        "Staged plan records Stage 5AJ UsefulFiles integration and Stage 5AK direction.",
+        "Staged plan records Stage 5AK community-facts integration and Stage 5AL direction.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -1374,10 +1395,12 @@ def check_state_drift_consistency(
         and "stage 5ag" in combined
         and "stage 5ai" in combined
         and "stage 5aj" in combined
+        and "stage 5ak" in combined
         and "usefulfilesandideas" in combined
+        and "community-facts" in combined
         and "raw downloads" in combined
         and "solve claim" in combined,
-        "Stage 5AF source-harvester local-only and Stage 5AG/5AI/5AJ boundaries are documented.",
+        "Stage 5AF source-harvester local-only and Stage 5AG/5AI/5AJ/5AK boundaries are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -1389,8 +1412,10 @@ def check_state_drift_consistency(
         and "raw source" in combined
         and "stage 5ai" in combined
         and "stage 5aj" in combined
+        and "stage 5ak" in combined
+        and "community-facts" in combined
         and "solve claim" in combined,
-        "Stage 5AG local source inventory, Stage 5AI curation, Stage 5AJ UsefulFiles intake, and raw-data guardrails are documented.",
+        "Stage 5AG local source inventory, Stage 5AI curation, Stage 5AJ UsefulFiles intake, Stage 5AK community-facts intake, and raw-data guardrails are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

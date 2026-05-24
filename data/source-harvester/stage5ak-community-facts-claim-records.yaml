@@ -1,0 +1,505 @@
+record_type: stage5ak_community_facts_claim_records
+schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+stage_id: stage-5ak
+source_stage_id: stage-5aj
+source_id: community_facts_observations_local
+claim_record_count: 12
+execution_ready_count: 0
+source_lock_required_count: 7
+requires_null_controls_count: 12
+website_publication_allowed_count: 0
+solve_claim: false
+records:
+- record_type: stage5ak_community_facts_claim_record
+  schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  claim_id: stage5ak-no_fehu_section_count_graph
+  claim_family: no_fehu_section_count_graph
+  source_id: community_facts_observations_local
+  source_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  source_message_locator: community-facts-collection.txt:manual-review:01
+  source_image_refs:
+  - 7.webp
+  - 8.webp
+  - 9.webp
+  - 10.webp
+  image_order:
+  - 7
+  - 8
+  - 9
+  - 10
+  claim_text: No-Fehu section-count graph reports several cross-section equalities
+    after removing Fehu.
+  claim_formula: 2883, 1894, 1433, 1814, 695, and 91 section-count identities
+  input_entities:
+  - section rune counts
+  - Fehu removal policy
+  - Liber Primus section labels
+  claimed_values:
+    '2883': Spirals + Branches + Pre-Mobius table = NO Fehu Spiral Branches
+    '1894': NO Fehu Koan 1 + NO Fehu Loss of Divinity + NO Fehu Koan 2 + NO Fehu Instruction
+      = Mobius
+    '1433': Wing Tree = NO Fehu Cuneiform = NO Fehu Koan 2 + NO Fehu Spirals
+    '1814': NO Fehu Koan 1 + NO Fehu Loss of Divinity + NO Fehu Koan 2 = NO Fehu Sign
+      Post + NO Fehu Spirals
+    '695': Koan 1 - KT1 = NO Fehu Sign Post
+    '91': NO Fehu Warning - Parable = WT 3 dots
+  verification_status: source_lock_required
+  verification_method: manual_review_summary_only
+  correction_status: not_corrected
+  risk_level: medium_high
+  requires_exact_transcript: true
+  requires_exact_image_source: false
+  requires_null_controls: true
+  execution_ready: false
+  solve_claim: false
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  recommended_future_test: deterministic section-count reconstruction plus null controls
+- record_type: stage5ak_community_facts_claim_record
+  schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  claim_id: stage5ak-p54_55_p56_p57_hash_length_equivalence
+  claim_family: p54_55_p56_p57_hash_length_equivalence
+  source_id: community_facts_observations_local
+  source_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  source_message_locator: community-facts-collection.txt:manual-review:02
+  source_image_refs:
+  - 3.webp
+  image_order:
+  - 3
+  claim_text: p54-55 total runes are claimed to equal p56 and p57 runes plus 128 hash
+    characters.
+  claim_formula: 54-55 runes = 308; p56 + p57 runes + 128 hash chars = 308; hash decimal
+    digits = 154 = 308/2
+  input_entities:
+  - p54
+  - p55
+  - p56
+  - p57
+  - 512-bit hash text
+  claimed_values:
+    p54_55_total_runes: 308
+    hash_chars: 128
+    hash_decimal_digits: 154
+  verification_status: source_lock_required
+  verification_method: manual_review_summary_only
+  correction_status: not_corrected
+  risk_level: medium
+  requires_exact_transcript: true
+  requires_exact_image_source: false
+  requires_null_controls: true
+  execution_ready: false
+  solve_claim: false
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  recommended_future_test: source-locked transcript/profile count reconstruction
+- record_type: stage5ak_community_facts_claim_record
+  schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  claim_id: stage5ak-p15_red_text_progressive_sum_square
+  claim_family: p15_red_text_progressive_sum_square
+  source_id: community_facts_observations_local
+  source_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  source_message_locator: community-facts-collection.txt:manual-review:03
+  source_image_refs:
+  - 2.webp
+  image_order:
+  - 2
+  claim_text: Progressive GP sums of page-15 red words reportedly sum to 2472, which
+    appears in the page-15 number square.
+  claim_formula: 2 + 5 + 78 + 149 + 246 + 355 + 458 + 541 + 638 = 2472
+  input_entities:
+  - page 15 red words
+  - Gematria Primus sums
+  - page 15 number square
+  claimed_values:
+    progressive_sums:
+    - 2
+    - 5
+    - 78
+    - 149
+    - 246
+    - 355
+    - 458
+    - 541
+    - 638
+    sum: 2472
+  verification_status: source_lock_required
+  verification_method: manual_review_summary_only
+  correction_status: not_corrected
+  risk_level: high
+  requires_exact_transcript: true
+  requires_exact_image_source: true
+  requires_null_controls: true
+  execution_ready: false
+  solve_claim: false
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  recommended_future_test: red-marker source lock plus null square membership controls
+- record_type: stage5ak_community_facts_claim_record
+  schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  claim_id: stage5ak-red_3299_fehu_count_prime_index
+  claim_family: red_3299_fehu_count_prime_index
+  source_id: community_facts_observations_local
+  source_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  source_message_locator: community-facts-collection.txt:manual-review:04
+  source_image_refs:
+  - 4.webp
+  image_order:
+  - 4
+  claim_text: Reported Fehu count links 463, its prime index, the 463rd prime, and
+    red 3299.
+  claim_formula: Fehu count = 463; prime_index(463)=90; nth_prime(463)=3299
+  input_entities:
+  - pages 0-57
+  - An End decrypted policy
+  - page 15 red number square
+  claimed_values:
+    fehu_count: 463
+    prime_index_463: 90
+    prime_463: 3299
+  verification_status: arithmetic_verified_only
+  verification_method: arithmetic_preflight_for_prime_index_facts
+  correction_status: not_corrected
+  risk_level: medium_high
+  requires_exact_transcript: true
+  requires_exact_image_source: true
+  requires_null_controls: true
+  execution_ready: false
+  solve_claim: false
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  recommended_future_test: source-locked Fehu count plus red-square source validation
+- record_type: stage5ak_community_facts_claim_record
+  schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  claim_id: stage5ak-p56_p57_fehu_boundary_prime_observations
+  claim_family: p56_p57_fehu_boundary_prime_observations
+  source_id: community_facts_observations_local
+  source_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  source_message_locator: community-facts-collection.txt:manual-review:05
+  source_image_refs:
+  - 3.webp
+  - 4.webp
+  image_order:
+  - 3
+  - 4
+  claim_text: p56/p57 boundary claims connect page/rune positions and GP sums to prime
+    indices.
+  claim_formula: p56 is 57th page; skipped F is 57th rune; GP(SEEK OUT)=269=57th prime;
+    initials TH D W A E sum to 277=59th prime
+  input_entities:
+  - p56
+  - p57
+  - boundary phrase
+  - SEEK OUT
+  claimed_values:
+    seek_out_gp: 269
+    prime_57: 269
+    initials_sum: 277
+    prime_59: 277
+  verification_status: source_lock_required
+  verification_method: manual_review_summary_only
+  correction_status: not_corrected
+  risk_level: medium_high
+  requires_exact_transcript: true
+  requires_exact_image_source: false
+  requires_null_controls: true
+  execution_ready: false
+  solve_claim: false
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  recommended_future_test: transcript policy and boundary-position reconstruction
+- record_type: stage5ak_community_facts_claim_record
+  schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  claim_id: stage5ak-artwork_red_header_gp_match
+  claim_family: artwork_red_header_gp_match
+  source_id: community_facts_observations_local
+  source_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  source_message_locator: community-facts-collection.txt:manual-review:06
+  source_image_refs:
+  - 3.webp
+  - 4.webp
+  image_order:
+  - 3
+  - 4
+  claim_text: Artwork/red-header labels are claimed to have paired GP sums and phi(761)
+    relation.
+  claim_formula: GP(PARABLE)=GP(MAYFLY)=449; GP(AN END)=GP(FIVE DOTS)=311; 449+311=760=phi(761)
+  input_entities:
+  - PARABLE
+  - MAYFLY
+  - AN END
+  - FIVE DOTS
+  - '761'
+  claimed_values:
+    parable_mayfly: 449
+    an_end_five_dots: 311
+    sum: 760
+    phi_761: 760
+  verification_status: arithmetic_verified_only
+  verification_method: arithmetic_preflight_for_449_plus_311_and_phi_761_only
+  correction_status: not_corrected
+  risk_level: high
+  requires_exact_transcript: false
+  requires_exact_image_source: true
+  requires_null_controls: true
+  execution_ready: false
+  solve_claim: false
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  recommended_future_test: label policy source lock plus GP helper verification
+- record_type: stage5ak_community_facts_claim_record
+  schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  claim_id: stage5ak-final_jpg_gp_runs_road_phrase
+  claim_family: final_jpg_gp_runs_road_phrase
+  source_id: community_facts_observations_local
+  source_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  source_message_locator: community-facts-collection.txt:manual-review:07
+  source_image_refs: []
+  image_order: []
+  claim_text: Candidate GP windows in Final.jpg message reportedly sum to 3301, 991,
+    and 1229 and are linked to road wording.
+  claim_formula: Final.jpg GP windows -> 3301, 991, 1229; road wording linked to 2016
+    phrase
+  input_entities:
+  - Final.jpg
+  - early puzzle message
+  - 2016 road wording
+  claimed_values:
+    gp_windows:
+    - 3301
+    - 991
+    - 1229
+  verification_status: source_lock_required
+  verification_method: manual_review_summary_only
+  correction_status: not_corrected
+  risk_level: medium_high
+  requires_exact_transcript: true
+  requires_exact_image_source: true
+  requires_null_controls: true
+  execution_ready: false
+  solve_claim: false
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  recommended_future_test: exact source text/image lock plus predefined GP windows
+- record_type: stage5ak_community_facts_claim_record
+  schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  claim_id: stage5ak-pixel_measurement_prime_dimension_claims
+  claim_family: pixel_measurement_prime_dimension_claims
+  source_id: community_facts_observations_local
+  source_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  source_message_locator: community-facts-collection.txt:manual-review:08
+  source_image_refs:
+  - 6.webp
+  image_order:
+  - 6
+  claim_text: Image dimensions and pixel shifts are claimed to involve consecutive
+    primes and 1033-like distances.
+  claim_formula: 2014/2016 image dimensions and 1033/p56/p57 pixel-shift or dot-distance
+    claims
+  input_entities:
+  - 2014 image
+  - 2016 image
+  - p56/p57 overlays
+  - pixel coordinates
+  claimed_values:
+    distance_hint: 1033
+  verification_status: requires_image_coordinate_policy
+  verification_method: manual_review_summary_only
+  correction_status: not_corrected
+  risk_level: very_high
+  requires_exact_transcript: false
+  requires_exact_image_source: true
+  requires_null_controls: true
+  execution_ready: false
+  solve_claim: false
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  recommended_future_test: source-locked image variants and coordinate-system declaration
+- record_type: stage5ak_community_facts_claim_record
+  schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  claim_id: stage5ak-whitespace_prime_sequence_claim
+  claim_family: whitespace_prime_sequence_claim
+  source_id: community_facts_observations_local
+  source_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  source_message_locator: community-facts-collection.txt:manual-review:09
+  source_image_refs: []
+  image_order: []
+  claim_text: Concatenated primes reportedly appear in whitespace of post-2014 messages.
+  claim_formula: 23571113172329313753257 is claimed from whitespace extraction and
+    is prime
+  input_entities:
+  - post-2014 messages
+  - whitespace extraction policy
+  claimed_values:
+    candidate_number: 23571113172329313753257
+  verification_status: source_lock_required
+  verification_method: arithmetic_preflight_can_verify_primality_only
+  correction_status: not_corrected
+  risk_level: high
+  requires_exact_transcript: true
+  requires_exact_image_source: false
+  requires_null_controls: true
+  execution_ready: false
+  solve_claim: false
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  recommended_future_test: source-locked whitespace extraction method plus null controls
+- record_type: stage5ak_community_facts_claim_record
+  schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  claim_id: stage5ak-cicada_prime_index_number_network
+  claim_family: cicada_prime_index_number_network
+  source_id: community_facts_observations_local
+  source_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  source_message_locator: community-facts-collection.txt:manual-review:10
+  source_image_refs:
+  - 5.webp
+  image_order:
+  - 5
+  claim_text: Cicada constants are connected through prime-index arithmetic and a
+    9901/3301-squared visual context.
+  claim_formula: 761+167=928; 928/2=464; prime_index(3301)=464; prime_index(761)+prime_index(167)=174;
+    nth_prime(174)=1033
+  input_entities:
+  - '761'
+  - '167'
+  - '3301'
+  - '1033'
+  - '9901'
+  claimed_values:
+    761_plus_167: 928
+    half: 464
+    prime_index_3301: 464
+    prime_index_sum: 174
+    prime_174: 1033
+  verification_status: arithmetic_verified_only
+  verification_method: arithmetic_preflight_only
+  correction_status: not_corrected
+  risk_level: high
+  requires_exact_transcript: false
+  requires_exact_image_source: true
+  requires_null_controls: true
+  execution_ready: false
+  solve_claim: false
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  recommended_future_test: number-network null controls and source context separation
+- record_type: stage5ak_community_facts_claim_record
+  schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  claim_id: stage5ak-base60_emirp_index_observations
+  claim_family: base60_emirp_index_observations
+  source_id: community_facts_observations_local
+  source_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  source_message_locator: community-facts-collection.txt:manual-review:11
+  source_image_refs: []
+  image_order: []
+  claim_text: 3301 base-60 and reversed base-60 observations are connected to emirp-index
+    context.
+  claim_formula: 3301 base60 = [55,1]; 1*60+55 = 115
+  input_entities:
+  - '3301'
+  - base60
+  - emirp index
+  claimed_values:
+    base60_digits:
+    - 55
+    - 1
+    reversed_value: 115
+  verification_status: arithmetic_verified_only
+  verification_method: base_conversion_only
+  correction_status: not_corrected
+  risk_level: medium_high
+  requires_exact_transcript: false
+  requires_exact_image_source: false
+  requires_null_controls: true
+  execution_ready: false
+  solve_claim: false
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  recommended_future_test: base-convention policy plus cuneiform/base60 source review
+- record_type: stage5ak_community_facts_claim_record
+  schema: schemas/source-harvester/community-facts-claim-record-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  claim_id: stage5ak-doublet_route_index_observations
+  claim_family: doublet_route_index_observations
+  source_id: community_facts_observations_local
+  source_log_path: third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt
+  source_message_locator: community-facts-collection.txt:manual-review:12
+  source_image_refs:
+  - 1.webp
+  image_order:
+  - 1
+  claim_text: First doublet-pair route claim reports indexed route values summing
+    to 174, prime index of 1033.
+  claim_formula: indices 122,117,88,83,78,61,44,1; GP values 5,29,5,5,17,17,43,53;
+    sum=174
+  input_entities:
+  - doublet pair route
+  - GP values
+  - indexing convention
+  claimed_values:
+    indices:
+    - 122
+    - 117
+    - 88
+    - 83
+    - 78
+    - 61
+    - 44
+    - 1
+    gp_values:
+    - 5
+    - 29
+    - 5
+    - 5
+    - 17
+    - 17
+    - 43
+    - 53
+    sum: 174
+    prime_174: 1033
+  verification_status: source_lock_required
+  verification_method: manual_review_summary_only
+  correction_status: not_corrected
+  risk_level: high
+  requires_exact_transcript: true
+  requires_exact_image_source: true
+  requires_null_controls: true
+  execution_ready: false
+  solve_claim: false
+  publication_status: blocked_private_or_sensitive_until_review
+  deep_research_private_allowed: true
+  website_publication_allowed: false
+  recommended_future_test: declared indexing convention plus route null controls

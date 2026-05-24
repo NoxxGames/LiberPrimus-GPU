@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AJ UsefulFilesAndIdeas integration, extraction-fidelity policy, and scraper capture/redaction hardening is complete.
+Stage 5AK community-facts observations integration and number-fact claim curation is complete.
 
-Next recommended prompt: Stage 5AK - Deep Research source inventory and reliability prompt. Website expansion is deferred to a future unnumbered project.
+Next recommended prompt: Stage 5AL - Deep Research source inventory and reliability prompt. Website expansion is deferred to a future unnumbered project.
+
+## Completed in Stage 5AK
+
+Stage 5AK integrated the ignored local `third_party/UsefulFilesAndIdeas/community-facts/` folder into the source-harvester/source-card/content-index/research-bundle system as compact metadata only.
+
+Local Stage 5AK summary: community-facts folder exists `true`, files found `11`, ordered attachments `10`, claim records `12`, correction records `4`, arithmetic preflight records `16`, arithmetic verified/error `15/1`, source-card/content-index updates `1/5`, private Deep Research-ready bundles before/after `10/10`, public website-ready bundles `0`, website-ingest metadata ready `true`, selected next prompt `Stage 5AL - Deep Research source inventory and reliability prompt`, network fetch `false`, online clone `false`, Google Drive storage `false`, raw message/image commits `false`, generated body commits `false`, website expansion `false`, OCR `false`, AI/ML interpretation `false`, image/stego/audio execution `false`, hypothesis generation/execution `false`, CUDA execution/source modification `false`, new CUDA kernels `0`, benchmarks `false`, scored experiments `false`, method-status upgrade `false`, and solve claim `false`.
+
+Stage 5AK is local curation and claim-record metadata only. Community facts are not truth records, execution-ready manifests, website-publication material, or solve evidence. Stage 5AL should consume curated Stage 5AI/5AJ/5AK manifests and source cards, not raw `third_party/` paths.
 
 ## Completed in Stage 5AJ
 
@@ -12,7 +20,7 @@ Stage 5AJ consumed Stage 5AI curated bundle metadata and the ignored local `thir
 
 Local Stage 5AJ summary: UsefulFiles folder exists `true`, local files `5`, local source records `5`, new URL/planned source records `29`, XLSX workbooks detected/summarized `2/2`, important-links URLs parsed `46`, new important-links URLs `23`, source-card updates `34`, content-index updates `34`, new clue-category records `16`, private Deep Research-ready bundles before/after `8/10`, public website-ready bundles `0`, website-ingest metadata ready `true`, selected next prompt `Stage 5AK - Deep Research source inventory and reliability prompt`, network fetch `false`, live web scrape `false`, online clone `false`, Google Drive storage `false`, raw workbook/image/text commits `false`, generated body commits `false`, CUDA execution `false`, benchmarks `false`, scored experiments `false`, website expansion `false`, method-status upgrade `false`, and solve claim `false`.
 
-Stage 5AJ is source-harvester metadata and policy integration only. It does not run Deep Research, expand the website, fetch or clone online sources, use Google Drive storage, process raw Discord logs, run OCR/AI/ML/image-forensics/stego/audio tooling, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, activate the canonical corpus, finalise page boundaries, upgrade method status, or make a solve claim. Stage 5AK should consume curated Stage 5AI/5AJ manifests and source cards, not raw `third_party/` paths.
+Stage 5AJ is source-harvester metadata and policy integration only. It does not run Deep Research, expand the website, fetch or clone online sources, use Google Drive storage, process raw Discord logs, run OCR/AI/ML/image-forensics/stego/audio tooling, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, activate the canonical corpus, finalise page boundaries, upgrade method status, or make a solve claim. Stage 5AK consumed curated Stage 5AI/5AJ manifests plus the new local community-facts folder as metadata only.
 
 ## Completed in Stage 5AI
 

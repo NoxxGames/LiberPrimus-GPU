@@ -23,14 +23,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5AJ" \
-    --expected-next-stage "Stage 5AK" \
+    --expected-latest-stage "Stage 5AK" \
+    --expected-next-stage "Stage 5AL" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5AJ" \
-    --expected-next-stage "Stage 5AK" \
+    --expected-latest-stage "Stage 5AK" \
+    --expected-next-stage "Stage 5AL" \
     --out "$stage5ah_out/current_next_stage_report.json"
 "$python_bin" - <<PY
 import json
@@ -45,14 +45,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AJ",
+        expected_latest_stage="Stage 5AK",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AJ",
+            "expected_latest_stage": "Stage 5AK",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -1988,6 +1988,42 @@ git check-ignore -q "$stage5aj_bundle_manifest"
 git check-ignore -q "$stage5aj_cell_index"
 git check-ignore -q "$stage5aj_important_links"
 git check-ignore -q "$stage5aj_raw_workbook"
+
+stage5ak_results_dir="experiments""/results/source-harvester-community-facts/stage5ak"
+stage5ak_summary_report="$stage5ak_results_dir/summary.json"
+if [[ -f "$stage5ak_summary_report" ]]; then
+    echo "Validating Stage 5AK community-facts records"
+    "$python_bin" -m libreprimus.cli source-harvester validate-stage5ak \
+        --inventory data/source-harvester/stage5ak-community-facts-local-inventory.yaml \
+        --attachment-index data/source-harvester/stage5ak-community-facts-attachment-index.yaml \
+        --source-card-summary data/source-harvester/stage5ak-community-facts-source-card-summary.yaml \
+        --content-index-summary data/source-harvester/stage5ak-community-facts-content-index-summary.yaml \
+        --clue-categories data/source-harvester/stage5ak-community-facts-clue-categories.yaml \
+        --claim-policy data/source-harvester/stage5ak-community-claim-policy.yaml \
+        --claim-records data/source-harvester/stage5ak-community-facts-claim-records.yaml \
+        --correction-log data/source-harvester/stage5ak-community-facts-correction-log.yaml \
+        --arithmetic-preflight data/source-harvester/stage5ak-community-facts-arithmetic-preflight.yaml \
+        --website-update data/source-harvester/stage5ak-website-ingest-update-summary.yaml \
+        --deep-research-update data/source-harvester/stage5ak-deep-research-pack-update-summary.yaml \
+        --readiness data/source-harvester/stage5ak-research-bundle-readiness.yaml \
+        --missing-source-plan data/source-harvester/stage5ak-missing-source-plan-update.yaml \
+        --guardrail data/source-harvester/stage5ak-guardrail.yaml \
+        --next-stage-decision data/source-harvester/stage5ak-next-stage-decision.yaml \
+        --summary data/source-harvester/stage5ak-summary.yaml \
+        --results-dir "$stage5ak_results_dir"
+else
+    echo "Skipping Stage 5AK generated community-facts validation; ignored local reports are absent"
+fi
+stage5ak_raw_text="third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt"
+stage5ak_raw_image="third_party/UsefulFilesAndIdeas/community-facts/1.webp"
+stage5ak_generated_claims="experiments""/results/source-harvester-community-facts/stage5ak/community_claim_records.jsonl"
+stage5ak_bundle_claims="research-inputs/stage5ak/community_claim_records.jsonl"
+stage5ak_handoff="codex-output/stage5ak-codex-completion.md"
+git check-ignore -q "$stage5ak_raw_text"
+git check-ignore -q "$stage5ak_raw_image"
+git check-ignore -q "$stage5ak_generated_claims"
+git check-ignore -q "$stage5ak_bundle_claims"
+git check-ignore -q "$stage5ak_handoff"
 
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

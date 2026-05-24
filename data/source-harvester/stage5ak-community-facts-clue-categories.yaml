@@ -1,0 +1,263 @@
+record_type: stage5ak_community_facts_clue_categories
+schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+stage_id: stage-5ak
+source_stage_id: stage-5aj
+new_clue_category_records: 15
+execution_ready_count: 0
+solve_claim: false
+records:
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: community_number_fact_thread
+  description: community number fact thread
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: medium_high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: no_fehu_section_count_graph
+  description: no fehu section count graph
+  source_lock_priority: A1
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: p54_55_p56_p57_hash_length_equivalence
+  description: p54 55 p56 p57 hash length equivalence
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: p15_red_text_progressive_sum_square
+  description: p15 red text progressive sum square
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: red_3299_fehu_count_prime_index
+  description: red 3299 fehu count prime index
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: p56_p57_fehu_boundary_prime_observations
+  description: p56 p57 fehu boundary prime observations
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: final_jpg_gp_runs_road_phrase
+  description: final jpg gp runs road phrase
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: artwork_red_header_gp_match
+  description: artwork red header gp match
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: pixel_measurement_prime_dimension_claims
+  description: pixel measurement prime dimension claims
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: very_high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: whitespace_prime_sequence_claim
+  description: whitespace prime sequence claim
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: cicada_prime_index_number_network
+  description: cicada prime index number network
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: transcript_word_count_conflict
+  description: transcript word count conflict
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: medium_high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: count_policy_correction_log
+  description: count policy correction log
+  source_lock_priority: A1
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: medium_high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: base60_emirp_index_observations
+  description: base60 emirp index observations
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false
+- record_type: stage5ak_community_facts_clue_category
+  schema: schemas/source-harvester/community-facts-clue-category-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  category_id: doublet_route_index_observations
+  description: doublet route index observations
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high
+  recommended_sources:
+  - community_facts_observations_local
+  what_not_to_assume: Do not treat community number facts as intentional, canonical,
+    execution-ready, or solve evidence.
+  recommended_future_test: source-lock inputs, declare policies, then run bounded
+    null-controlled verifier if later approved.
+  solve_claim: false

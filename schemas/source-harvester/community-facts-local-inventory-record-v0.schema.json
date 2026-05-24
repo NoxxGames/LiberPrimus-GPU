@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AK Community Facts Local Inventory",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "source_id", "local_folder_exists", "raw_data_committed", "raw_text_committed", "raw_images_committed", "generated_outputs_committed", "solve_claim"],
+  "properties": {
+    "record_type": { "type": "string" },
+    "stage_id": { "const": "stage-5ak" },
+    "source_stage_id": { "const": "stage-5aj" },
+    "source_id": { "const": "community_facts_observations_local" },
+    "local_folder_exists": { "type": "boolean" },
+    "community_facts_file_count": { "type": "integer", "minimum": 0 },
+    "attachment_images_detected": { "type": "integer", "minimum": 0 },
+    "raw_file_committed": { "const": false },
+    "raw_data_committed": { "const": false },
+    "raw_text_committed": { "const": false },
+    "raw_images_committed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

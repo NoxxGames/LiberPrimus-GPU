@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AH updates that map for stage-ledger staleness coverage, Stage 5AI updates it for curated bundle metadata, and Stage 5AJ updates it for UsefulFiles integration, extraction-fidelity policy, local-only source inventory policy, and the Stage 5AK Deep Research direction. The YAML record is the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AH updates that map for stage-ledger staleness coverage, Stage 5AI updates it for curated bundle metadata, Stage 5AJ updates it for UsefulFiles integration and extraction-fidelity policy, and Stage 5AK updates it for community-facts claim curation and the Stage 5AL Deep Research direction. The YAML record is the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 
@@ -43,12 +43,12 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5AJ" `
-  --expected-next-stage "Stage 5AK"
+  --expected-latest-stage "Stage 5AK" `
+  --expected-next-stage "Stage 5AL"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5AJ" `
-  --expected-next-stage "Stage 5AK"
+  --expected-latest-stage "Stage 5AK" `
+  --expected-next-stage "Stage 5AL"
 ```

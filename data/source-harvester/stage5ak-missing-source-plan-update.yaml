@@ -1,0 +1,16 @@
+record_type: stage5ak_missing_source_plan_update
+schema: schemas/source-harvester/deep-research-pack-update-summary-v0.schema.json
+stage_id: stage-5ak
+source_stage_id: stage-5aj
+missing_source_records: 1
+records:
+- source_id: community_facts_observations_local
+  status: now_local
+  no_network_fetch_required: true
+  public_review_required: true
+  allow_network_fetch: false
+  solve_claim: false
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+solve_claim: false

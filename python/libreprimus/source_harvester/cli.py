@@ -10,6 +10,14 @@ from rich.console import Console
 from .bundles import build_bundle_scaffolds
 from .bundle_readiness import build_bundle_readiness
 from .classification import classify_local_sources
+from .community_arithmetic import build_community_arithmetic_preflight
+from .community_attachments import build_community_attachment_index
+from .community_claims import build_community_claim_records
+from .community_facts import (
+    build_community_facts_source_cards,
+    inventory_community_facts,
+    update_community_deep_research_packs,
+)
 from .content_index import build_content_index
 from .curated_bundles import build_curated_bundles
 from .deep_research_pack import build_deep_research_pack_index
@@ -80,6 +88,25 @@ from .models import (
     STAGE5AJ_SUMMARY_PATH,
     STAGE5AJ_WEBSITE_UPDATE_PATH,
     STAGE5AJ_XLSX_SUMMARY_PATH,
+    STAGE5AK_ARITHMETIC_PREFLIGHT_PATH,
+    STAGE5AK_ATTACHMENT_INDEX_PATH,
+    STAGE5AK_BUNDLE_ROOT,
+    STAGE5AK_CLAIM_POLICY_PATH,
+    STAGE5AK_CLAIM_RECORDS_PATH,
+    STAGE5AK_CLUE_CATEGORIES_PATH,
+    STAGE5AK_CONTENT_INDEX_SUMMARY_PATH,
+    STAGE5AK_CORRECTION_LOG_PATH,
+    STAGE5AK_DEEP_RESEARCH_UPDATE_PATH,
+    STAGE5AK_GUARDRAIL_PATH,
+    STAGE5AK_INVENTORY_PATH,
+    STAGE5AK_MISSING_SOURCE_PLAN_PATH,
+    STAGE5AK_NEXT_STAGE_DECISION_PATH,
+    STAGE5AK_OUTPUT_DIR,
+    STAGE5AK_READINESS_PATH,
+    STAGE5AK_SOURCE_CARD_SUMMARY_PATH,
+    STAGE5AK_SOURCE_ROOT,
+    STAGE5AK_SUMMARY_PATH,
+    STAGE5AK_WEBSITE_UPDATE_PATH,
     SUMMARY_PATH,
     TOOL_POLICY_PATH,
 )
@@ -107,6 +134,8 @@ from .stage5aj_records import (
     build_stage5aj_summary,
 )
 from .stage5aj_validation import validate_stage5aj
+from .stage5ak_records import build_stage5ak_guardrail, build_stage5ak_next_stage_decision, build_stage5ak_summary
+from .stage5ak_validation import validate_stage5ak
 from .summary import summarize_stage5af
 from .usefulfiles import (
     build_usefulfiles_source_cards,
@@ -998,6 +1027,247 @@ def validate_stage5aj_command(
     if errors:
         raise typer.Exit(1)
     console.print("source_harvester_stage5aj_valid=true")
+
+
+@app.command("inventory-community-facts")
+def inventory_community_facts_command(
+    source_root: Path = typer.Option(STAGE5AK_SOURCE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AK_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AK_INVENTORY_PATH),
+) -> None:
+    result = inventory_community_facts(source_root=source_root, results_dir=results_dir, out=out)
+    console.print(f"local_folder_exists={str(result['local_folder_exists']).lower()}")
+    console.print(f"community_facts_file_count={result['community_facts_file_count']}")
+    console.print(f"message_log_detected={str(result['message_log_detected']).lower()}")
+
+
+@app.command("build-community-attachment-index")
+def build_community_attachment_index_command(
+    source_root: Path = typer.Option(STAGE5AK_SOURCE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AK_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AK_ATTACHMENT_INDEX_PATH),
+) -> None:
+    result = build_community_attachment_index(source_root=source_root, results_dir=results_dir, out=out)
+    console.print(f"attachment_index_records={result['attachment_index_records']}")
+    console.print(f"attachment_images_detected={result['attachment_images_detected']}")
+
+
+@app.command("build-community-facts-source-cards")
+def build_community_facts_source_cards_command(
+    inventory: Path = typer.Option(STAGE5AK_INVENTORY_PATH),
+    attachment_index: Path = typer.Option(STAGE5AK_ATTACHMENT_INDEX_PATH),
+    bundle_plan: Path = typer.Option(RESEARCH_BUNDLE_PLAN_PATH),
+    out_source_card_summary: Path = typer.Option(STAGE5AK_SOURCE_CARD_SUMMARY_PATH),
+    out_content_index_summary: Path = typer.Option(STAGE5AK_CONTENT_INDEX_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AK_OUTPUT_DIR),
+) -> None:
+    result = build_community_facts_source_cards(
+        inventory_path=inventory,
+        attachment_index_path=attachment_index,
+        bundle_plan_path=bundle_plan,
+        out_source_card_summary=out_source_card_summary,
+        out_content_index_summary=out_content_index_summary,
+        results_dir=results_dir,
+    )
+    console.print(f"source_card_updates={result['source_card_updates']}")
+    console.print(f"content_index_updates={result['content_index_records']}")
+
+
+@app.command("build-community-claim-records")
+def build_community_claim_records_command(
+    source_root: Path = typer.Option(STAGE5AK_SOURCE_ROOT),
+    attachment_index: Path = typer.Option(STAGE5AK_ATTACHMENT_INDEX_PATH),
+    claim_policy_out: Path = typer.Option(STAGE5AK_CLAIM_POLICY_PATH),
+    claim_records_out: Path = typer.Option(STAGE5AK_CLAIM_RECORDS_PATH),
+    correction_log_out: Path = typer.Option(STAGE5AK_CORRECTION_LOG_PATH),
+    clue_categories_out: Path = typer.Option(STAGE5AK_CLUE_CATEGORIES_PATH),
+    results_dir: Path = typer.Option(STAGE5AK_OUTPUT_DIR),
+) -> None:
+    result = build_community_claim_records(
+        source_root=source_root,
+        attachment_index_path=attachment_index,
+        claim_policy_out=claim_policy_out,
+        claim_records_out=claim_records_out,
+        correction_log_out=correction_log_out,
+        clue_categories_out=clue_categories_out,
+        results_dir=results_dir,
+    )
+    console.print(f"claim_record_count={result['claims']['claim_record_count']}")
+    console.print(f"correction_record_count={result['corrections']['correction_record_count']}")
+    console.print(f"new_clue_category_records={result['categories']['new_clue_category_records']}")
+
+
+@app.command("build-community-arithmetic-preflight")
+def build_community_arithmetic_preflight_command(
+    claim_records: Path = typer.Option(STAGE5AK_CLAIM_RECORDS_PATH),
+    correction_log: Path = typer.Option(STAGE5AK_CORRECTION_LOG_PATH),
+    out: Path = typer.Option(STAGE5AK_ARITHMETIC_PREFLIGHT_PATH),
+    results_dir: Path = typer.Option(STAGE5AK_OUTPUT_DIR),
+) -> None:
+    result = build_community_arithmetic_preflight(
+        claim_records_path=claim_records,
+        correction_log_path=correction_log,
+        out=out,
+        results_dir=results_dir,
+    )
+    console.print(f"arithmetic_preflight_records={result['arithmetic_preflight_records']}")
+    console.print(f"arithmetic_verified_count={result['arithmetic_verified_count']}")
+    console.print(f"arithmetic_error_count={result['arithmetic_error_count']}")
+
+
+@app.command("update-community-deep-research-packs")
+def update_community_deep_research_packs_command(
+    stage5aj_bundle_root: Path = typer.Option(STAGE5AJ_BUNDLE_ROOT),
+    source_card_summary: Path = typer.Option(STAGE5AK_SOURCE_CARD_SUMMARY_PATH),
+    content_index_summary: Path = typer.Option(STAGE5AK_CONTENT_INDEX_SUMMARY_PATH),
+    claim_records: Path = typer.Option(STAGE5AK_CLAIM_RECORDS_PATH),
+    correction_log: Path = typer.Option(STAGE5AK_CORRECTION_LOG_PATH),
+    bundle_root: Path = typer.Option(STAGE5AK_BUNDLE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AK_OUTPUT_DIR),
+    out_website_update: Path = typer.Option(STAGE5AK_WEBSITE_UPDATE_PATH),
+    out_deep_research_update: Path = typer.Option(STAGE5AK_DEEP_RESEARCH_UPDATE_PATH),
+    out_readiness: Path = typer.Option(STAGE5AK_READINESS_PATH),
+    out_missing_source_plan: Path = typer.Option(STAGE5AK_MISSING_SOURCE_PLAN_PATH),
+) -> None:
+    result = update_community_deep_research_packs(
+        stage5aj_bundle_root=stage5aj_bundle_root,
+        source_card_summary_path=source_card_summary,
+        content_index_summary_path=content_index_summary,
+        claim_records_path=claim_records,
+        correction_log_path=correction_log,
+        bundle_root=bundle_root,
+        results_dir=results_dir,
+        out_website_update=out_website_update,
+        out_deep_research_update=out_deep_research_update,
+        out_readiness=out_readiness,
+        out_missing_source_plan=out_missing_source_plan,
+    )
+    console.print(f"deep_research_pack_updates={result['deep']['deep_research_pack_updates']}")
+    console.print(
+        "bundles_ready_for_private_deep_research="
+        f"{result['readiness']['bundles_ready_for_private_deep_research']}"
+    )
+
+
+@app.command("build-stage5ak-guardrail")
+def build_stage5ak_guardrail_command(
+    source_root: Path = typer.Option(STAGE5AK_SOURCE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AK_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AK_GUARDRAIL_PATH),
+) -> None:
+    result = build_stage5ak_guardrail(source_root=source_root, results_dir=results_dir, out=out)
+    console.print(f"network_fetch_performed={str(result['network_fetch_performed']).lower()}")
+    console.print(f"raw_text_committed={str(result['raw_text_committed']).lower()}")
+    console.print(f"new_cuda_kernels_added={result['new_cuda_kernels_added']}")
+
+
+@app.command("build-stage5ak-next-stage-decision")
+def build_stage5ak_next_stage_decision_command(
+    readiness: Path = typer.Option(STAGE5AK_READINESS_PATH),
+    claim_records: Path = typer.Option(STAGE5AK_CLAIM_RECORDS_PATH),
+    missing_source_plan: Path = typer.Option(STAGE5AK_MISSING_SOURCE_PLAN_PATH),
+    out: Path = typer.Option(STAGE5AK_NEXT_STAGE_DECISION_PATH),
+) -> None:
+    result = build_stage5ak_next_stage_decision(
+        readiness_path=readiness,
+        claim_records_path=claim_records,
+        missing_source_plan_path=missing_source_plan,
+        out=out,
+    )
+    console.print(f"selected_option_id={result['selected_option_id']}")
+
+
+@app.command("build-stage5ak-summary")
+def build_stage5ak_summary_command(
+    inventory: Path = typer.Option(STAGE5AK_INVENTORY_PATH),
+    source_card_summary: Path = typer.Option(STAGE5AK_SOURCE_CARD_SUMMARY_PATH),
+    content_index_summary: Path = typer.Option(STAGE5AK_CONTENT_INDEX_SUMMARY_PATH),
+    attachment_index: Path = typer.Option(STAGE5AK_ATTACHMENT_INDEX_PATH),
+    clue_categories: Path = typer.Option(STAGE5AK_CLUE_CATEGORIES_PATH),
+    claim_policy: Path = typer.Option(STAGE5AK_CLAIM_POLICY_PATH),
+    claim_records: Path = typer.Option(STAGE5AK_CLAIM_RECORDS_PATH),
+    correction_log: Path = typer.Option(STAGE5AK_CORRECTION_LOG_PATH),
+    arithmetic_preflight: Path = typer.Option(STAGE5AK_ARITHMETIC_PREFLIGHT_PATH),
+    website_update: Path = typer.Option(STAGE5AK_WEBSITE_UPDATE_PATH),
+    deep_research_update: Path = typer.Option(STAGE5AK_DEEP_RESEARCH_UPDATE_PATH),
+    readiness: Path = typer.Option(STAGE5AK_READINESS_PATH),
+    missing_source_plan: Path = typer.Option(STAGE5AK_MISSING_SOURCE_PLAN_PATH),
+    guardrail: Path = typer.Option(STAGE5AK_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AK_NEXT_STAGE_DECISION_PATH),
+    out: Path = typer.Option(STAGE5AK_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AK_OUTPUT_DIR),
+) -> None:
+    result = build_stage5ak_summary(
+        inventory_path=inventory,
+        source_card_summary_path=source_card_summary,
+        content_index_summary_path=content_index_summary,
+        attachment_index_path=attachment_index,
+        clue_categories_path=clue_categories,
+        claim_policy_path=claim_policy,
+        claim_records_path=claim_records,
+        correction_log_path=correction_log,
+        arithmetic_preflight_path=arithmetic_preflight,
+        website_update_path=website_update,
+        deep_research_update_path=deep_research_update,
+        readiness_path=readiness,
+        missing_source_plan_path=missing_source_plan,
+        guardrail_path=guardrail,
+        next_stage_decision_path=next_stage_decision,
+        out=out,
+        results_dir=results_dir,
+    )
+    console.print(f"stage_id={result['stage_id']}")
+    console.print(f"community_claim_records={result['community_claim_records']}")
+    console.print(f"recommended_next_stage_title={result['recommended_next_stage_title']}")
+
+
+@app.command("validate-stage5ak")
+def validate_stage5ak_command(
+    inventory: Path = typer.Option(STAGE5AK_INVENTORY_PATH),
+    source_card_summary: Path = typer.Option(STAGE5AK_SOURCE_CARD_SUMMARY_PATH),
+    content_index_summary: Path = typer.Option(STAGE5AK_CONTENT_INDEX_SUMMARY_PATH),
+    attachment_index: Path = typer.Option(STAGE5AK_ATTACHMENT_INDEX_PATH),
+    clue_categories: Path = typer.Option(STAGE5AK_CLUE_CATEGORIES_PATH),
+    claim_policy: Path = typer.Option(STAGE5AK_CLAIM_POLICY_PATH),
+    claim_records: Path = typer.Option(STAGE5AK_CLAIM_RECORDS_PATH),
+    correction_log: Path = typer.Option(STAGE5AK_CORRECTION_LOG_PATH),
+    arithmetic_preflight: Path = typer.Option(STAGE5AK_ARITHMETIC_PREFLIGHT_PATH),
+    website_update: Path = typer.Option(STAGE5AK_WEBSITE_UPDATE_PATH),
+    deep_research_update: Path = typer.Option(STAGE5AK_DEEP_RESEARCH_UPDATE_PATH),
+    readiness: Path = typer.Option(STAGE5AK_READINESS_PATH),
+    missing_source_plan: Path = typer.Option(STAGE5AK_MISSING_SOURCE_PLAN_PATH),
+    guardrail: Path = typer.Option(STAGE5AK_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AK_NEXT_STAGE_DECISION_PATH),
+    summary: Path = typer.Option(STAGE5AK_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AK_OUTPUT_DIR),
+) -> None:
+    counts, errors = validate_stage5ak(
+        inventory_path=inventory,
+        source_card_summary_path=source_card_summary,
+        content_index_summary_path=content_index_summary,
+        attachment_index_path=attachment_index,
+        clue_categories_path=clue_categories,
+        claim_policy_path=claim_policy,
+        claim_records_path=claim_records,
+        correction_log_path=correction_log,
+        arithmetic_preflight_path=arithmetic_preflight,
+        website_update_path=website_update,
+        deep_research_update_path=deep_research_update,
+        readiness_path=readiness,
+        missing_source_plan_path=missing_source_plan,
+        guardrail_path=guardrail,
+        next_stage_decision_path=next_stage_decision,
+        summary_path=summary,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(error)
+    if errors:
+        raise typer.Exit(1)
+    console.print("source_harvester_stage5ak_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

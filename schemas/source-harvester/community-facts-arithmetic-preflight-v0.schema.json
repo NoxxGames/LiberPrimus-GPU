@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AK Community Facts Arithmetic Preflight",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "arithmetic_preflight_records", "scan_or_search_performed", "hypothesis_execution_performed", "execution_ready", "solve_claim"],
+  "properties": {
+    "record_type": { "type": "string" },
+    "stage_id": { "const": "stage-5ak" },
+    "source_stage_id": { "const": "stage-5aj" },
+    "arithmetic_preflight_records": { "type": "integer", "minimum": 0 },
+    "arithmetic_verified_count": { "type": "integer", "minimum": 0 },
+    "arithmetic_error_count": { "type": "integer", "minimum": 0 },
+    "scan_or_search_performed": { "const": false },
+    "hypothesis_execution_performed": { "const": false },
+    "execution_ready": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

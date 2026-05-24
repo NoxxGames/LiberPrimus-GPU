@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AK Community Facts Attachment Index",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "source_id", "attachment_index_records", "raw_images_committed", "generated_outputs_committed", "ocr_performed", "image_forensics_performed", "ai_ml_interpretation_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "type": "string" },
+    "stage_id": { "const": "stage-5ak" },
+    "source_stage_id": { "const": "stage-5aj" },
+    "source_id": { "const": "community_facts_observations_local" },
+    "attachment_index_records": { "type": "integer", "minimum": 0 },
+    "attachment_images_detected": { "type": "integer", "minimum": 0 },
+    "raw_image_committed": { "const": false },
+    "raw_images_committed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "ocr_performed": { "const": false },
+    "image_forensics_performed": { "const": false },
+    "ai_ml_interpretation_performed": { "const": false },
+    "website_publication_allowed": { "const": false },
+    "deep_research_private_allowed": { "const": true },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

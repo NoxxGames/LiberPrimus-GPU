@@ -559,3 +559,51 @@ records:
   staleness_check_level: current_state
   owner_context: source_operator
   notes: Profiles are future capture policy only and do not authorize live scraping.
+- path: data/source-harvester/stage5ak-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AK community-facts integration aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ak
+  expected_update_frequency: when_source_harvester_state_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Records community-facts local-source counts, claim records, correction logs,
+    arithmetic preflight records, Deep-Research readiness, guardrails, and Stage
+    5AL next-stage decision.
+- path: docs/architecture/community-claim-records.md
+  category: architecture_doc
+  purpose: Stage 5AK community claim-record policy.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ak
+  expected_update_frequency: every_source_harvester_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Community facts are claim records, not truth records or solve evidence.
+- path: docs/reference/source-harvester-community-facts-cli.md
+  category: operational_status_doc
+  purpose: Stage 5AK community-facts source-harvester CLI reference.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5ak
+  expected_update_frequency: every_source_harvester_cli_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Documents inventory, attachment index, source-card, claim-record,
+    arithmetic-preflight, Deep-Research update, summary, and validation commands.
+- path: docs/onboarding/community-observation-ingest-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5AK local community observation ingest workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ak
+  expected_update_frequency: every_source_harvester_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Local community observations stay ignored and become compact claim
+    metadata only unless a future source policy says otherwise.

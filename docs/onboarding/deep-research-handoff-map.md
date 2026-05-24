@@ -6,7 +6,7 @@ Repository: `https://github.com/NoxxGames/LiberPrimus-GPU`
 
 Before a Deep Research handoff, verify the latest commit and CI status locally. The handoff should cite the commit hash, stage, and generated bundle paths.
 
-Stage 5AJ selects Stage 5AK Deep Research source inventory and reliability review as the next prompt. Use the Stage 5AI curated bundle manifests, Stage 5AJ UsefulFiles source cards, content indexes, workbook/link summaries, extraction-fidelity policy, redaction policy, scraper-capture policy, Deep-Research pack indexes, known-question files, and do-not-assume files. Do not hand Deep Research raw `third_party/` paths as source truth. Website expansion remains a future unnumbered project.
+Stage 5AK selects Stage 5AL Deep Research source inventory and reliability review as the next prompt. Use the Stage 5AI curated bundle manifests, Stage 5AJ UsefulFiles source cards, content indexes, workbook/link summaries, extraction-fidelity policy, redaction policy, scraper-capture policy, Stage 5AK community claim records, correction logs, arithmetic preflight records, Deep-Research pack indexes, known-question files, and do-not-assume files. Do not hand Deep Research raw `third_party/` paths as source truth. Website expansion remains a future unnumbered project.
 
 ## Files Deep Research Should Inspect First
 

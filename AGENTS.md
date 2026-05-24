@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AJ - UsefulFilesAndIdeas integration, extraction-fidelity policy, and scraper capture/redaction hardening.
+Current completed stage: Stage 5AK - community-facts observations integration and number-fact claim curation.
 
-Current work: Stage 5AK - Deep Research source inventory and reliability prompt. Stage 5AJ integrated ignored local `third_party/UsefulFilesAndIdeas/` source metadata, workbook summaries, important links, source-card/content-index updates, extraction-fidelity policy, redaction policy, scraper-capture profiles, Deep-Research pack readiness, and website-ingest metadata; it did not run Deep Research, publish website content, process raw sources into committed data, fetch from the network, clone online repositories, use Google Drive storage, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.
+Current work: Stage 5AL - Deep Research source inventory and reliability prompt. Stage 5AK integrated ignored local `third_party/UsefulFilesAndIdeas/community-facts/` source metadata, ordered attachment indexes, community claim records, correction logs, arithmetic preflight checks, source-card/content-index updates, Deep-Research pack readiness, website-ingest metadata, and publication guardrails; it did not run Deep Research, publish website content, process raw sources into committed data, fetch from the network, clone online repositories, use Google Drive storage, run OCR, run AI/ML interpretation, run image/stego/audio tooling, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.
 
 Current project state:
 
@@ -119,6 +119,10 @@ Current project state:
 - Stage 5AJ UsefulFilesAndIdeas records are compact local-source integration metadata only. Raw workbooks, images, text files, generated workbook-cell indexes, generated bundle bodies, and generated UsefulFiles reports remain ignored and uncommitted.
 - Stage 5AJ extraction-fidelity policy protects technical content for private Deep Research: do not redact runes, numbers, hashes, tables, cell coordinates, highlights, formulas, workbook sheet names, or technical links from private extracts except for minimal logged privacy/safety redaction.
 - Stage 5AJ scraper-capture profiles are future capture policy only. They do not authorize live scraping, online cloning, network fetches, Google Drive storage, website expansion, Deep Research execution, OCR/AI/ML interpretation, image/stego/audio tooling, CUDA, benchmarks, scored experiments, or solve claims.
+- Stage 5AK community-facts records are claim metadata only. Raw message logs, WebP attachments, generated private body files, generated source-harvester reports, and `codex-output/**` remain ignored and uncommitted.
+- Stage 5AK claim records preserve formulas, inputs, claimed values, correction status, risk level, source-lock requirements, and null-control requirements; they are not truth records, execution-ready manifests, source truth, or solve evidence.
+- Stage 5AK public website publication is blocked/review-gated. Private Deep Research addenda may preserve technical context in ignored `research-inputs/stage5ak/` files.
+- Stage 5AL Deep Research should consume Stage 5AI/5AJ/5AK bundle manifests, source cards, content indexes, claim records, correction logs, extraction-fidelity/redaction policy, and guardrail summaries, not raw `third_party/` paths.
 - Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
 - Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
 - Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
@@ -951,13 +955,21 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 5AK Deep Research should consume Stage 5AI/5AJ bundle manifests, source cards, content indexes, known-question files, do-not-assume files, and extraction-fidelity/redaction policy, not raw `third_party/` paths.
 - Stage 5AI must not fetch from the network, clone online repositories, use Google Drive storage, commit raw third-party material, run OCR/AI/ML/image forensics/stego/audio tools, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, activate the canonical corpus, finalise page boundaries, upgrade method status, or make solve claims.
 
+## Stage 5AK Community Facts Integration Rules
+
+- Stage 5AK is local curation, claim-record, arithmetic-preflight metadata, and Deep-Research-pack update work only, not Deep Research execution, website publication, OCR, AI/ML interpretation, image forensics, stego/audio execution, hypothesis generation/execution, CUDA execution, benchmarking, scored experimentation, corpus activation, page-boundary finalisation, method-status upgrade, or solve evidence.
+- Raw `third_party/UsefulFilesAndIdeas/community-facts/` files and generated extracts under `research-inputs/stage5ak/` and `experiments/results/source-harvester-community-facts/stage5ak/` remain ignored; commit only compact metadata, schemas, docs, tests, logs, and `.gitkeep` scaffolds.
+- Community number facts are claim records, not truth records. Future work must source-lock exact transcripts/profiles/images, declare count and coordinate policies, and add null/multiple-testing controls before any bounded verifier.
+- Public website ingest remains metadata-only and conservative. Public website-ready count stays `0` until a future explicit publication-review stage scopes website expansion.
+- Stage 5AL should run Deep Research source inventory and reliability review against curated Stage 5AI/5AJ/5AK metadata and private ignored handoffs, not raw message logs or raw images.
+
 ## Stage 5AJ UsefulFilesAndIdeas Integration Rules
 
 - Stage 5AJ is local-source metadata and policy integration, not Deep Research execution, website publication, live scraping, OCR, AI/ML interpretation, image forensics, stego/audio execution, CUDA execution, benchmarking, scored experimentation, hypothesis generation/execution, corpus activation, page-boundary finalisation, method-status upgrade, or solve evidence.
 - Raw `third_party/UsefulFilesAndIdeas/` files and generated extracts under `research-inputs/stage5aj/` and `experiments/results/source-harvester-usefulfiles/stage5aj/` remain ignored; commit only compact metadata, schemas, docs, tests, logs, and `.gitkeep` scaffolds.
 - Private Deep Research extracts should preserve technical fidelity aggressively. Redact only minimal privacy/safety material and log every redaction; do not strip rune strings, numbers, hashes, URLs, formulas, sheet/cell coordinates, highlights, or table structure from private handoffs.
 - Public website ingest remains metadata-only and conservative. Public website-ready count stays `0` until a future explicit publication-review stage scopes website expansion.
-- Stage 5AK should review source reliability from Stage 5AI/5AJ metadata and should not read raw local workbooks/images/text unless a future prompt explicitly scopes a local-only source-policy stage.
+- Stage 5AK consumed the new local community-facts material as metadata only; Stage 5AL should review source reliability from Stage 5AI/5AJ/5AK metadata and should not read raw local workbooks/images/text unless a future prompt explicitly scopes a local-only source-policy stage.
 
 ## Stage 5AC Prime-Minus-One CUDA Synthetic Reporting Rules
 

@@ -14,6 +14,8 @@ STAGE5AI_SOURCE_STAGE_ID = "stage-5ah"
 STAGE5AI_LOCAL_INVENTORY_STAGE_ID = "stage-5ag"
 STAGE5AJ_ID = "stage-5aj"
 STAGE5AJ_SOURCE_STAGE_ID = "stage-5ai"
+STAGE5AK_ID = "stage-5ak"
+STAGE5AK_SOURCE_STAGE_ID = "stage-5aj"
 
 OUTPUT_DIR = Path("experiments/results/source-harvester/stage5af")
 STAGE5AG_OUTPUT_DIR = Path("experiments/results/source-harvester-local/stage5ag")
@@ -102,6 +104,40 @@ STAGE5AJ_REPORTS = {
     "redaction_policy": "redaction_policy_report.json",
     "scraper_policy": "scraper_capture_policy_report.json",
     "deep_research_update": "deep_research_pack_update_report.json",
+    "summary": "summary.json",
+    "warnings": "warnings.jsonl",
+}
+
+STAGE5AK_SOURCE_ROOT = Path("third_party/UsefulFilesAndIdeas/community-facts")
+STAGE5AK_BUNDLE_ROOT = Path("research-inputs/stage5ak")
+STAGE5AK_RESEARCH_BUNDLE_OUTPUT_DIR = Path("experiments/results/research-bundles/stage5ak")
+STAGE5AK_OUTPUT_DIR = Path("experiments/results/source-harvester-community-facts/stage5ak")
+STAGE5AK_INVENTORY_PATH = Path("data/source-harvester/stage5ak-community-facts-local-inventory.yaml")
+STAGE5AK_SOURCE_CARD_SUMMARY_PATH = Path("data/source-harvester/stage5ak-community-facts-source-card-summary.yaml")
+STAGE5AK_CONTENT_INDEX_SUMMARY_PATH = Path("data/source-harvester/stage5ak-community-facts-content-index-summary.yaml")
+STAGE5AK_ATTACHMENT_INDEX_PATH = Path("data/source-harvester/stage5ak-community-facts-attachment-index.yaml")
+STAGE5AK_CLUE_CATEGORIES_PATH = Path("data/source-harvester/stage5ak-community-facts-clue-categories.yaml")
+STAGE5AK_CLAIM_POLICY_PATH = Path("data/source-harvester/stage5ak-community-claim-policy.yaml")
+STAGE5AK_CLAIM_RECORDS_PATH = Path("data/source-harvester/stage5ak-community-facts-claim-records.yaml")
+STAGE5AK_CORRECTION_LOG_PATH = Path("data/source-harvester/stage5ak-community-facts-correction-log.yaml")
+STAGE5AK_ARITHMETIC_PREFLIGHT_PATH = Path("data/source-harvester/stage5ak-community-facts-arithmetic-preflight.yaml")
+STAGE5AK_WEBSITE_UPDATE_PATH = Path("data/source-harvester/stage5ak-website-ingest-update-summary.yaml")
+STAGE5AK_DEEP_RESEARCH_UPDATE_PATH = Path("data/source-harvester/stage5ak-deep-research-pack-update-summary.yaml")
+STAGE5AK_READINESS_PATH = Path("data/source-harvester/stage5ak-research-bundle-readiness.yaml")
+STAGE5AK_MISSING_SOURCE_PLAN_PATH = Path("data/source-harvester/stage5ak-missing-source-plan-update.yaml")
+STAGE5AK_GUARDRAIL_PATH = Path("data/source-harvester/stage5ak-guardrail.yaml")
+STAGE5AK_NEXT_STAGE_DECISION_PATH = Path("data/source-harvester/stage5ak-next-stage-decision.yaml")
+STAGE5AK_SUMMARY_PATH = Path("data/source-harvester/stage5ak-summary.yaml")
+
+STAGE5AK_REPORTS = {
+    "inventory": "community_facts_inventory.json",
+    "message_index": "community_message_index.json",
+    "attachment_index": "community_attachment_index.json",
+    "claim_records": "community_claim_records.jsonl",
+    "correction_log": "community_correction_log.jsonl",
+    "arithmetic_preflight": "arithmetic_preflight_report.json",
+    "deep_research_update": "deep_research_pack_update_report.json",
+    "website_update": "website_ingest_update_report.json",
     "summary": "summary.json",
     "warnings": "warnings.jsonl",
 }
@@ -323,6 +359,44 @@ STAGE5AJ_FALSE_FLAGS: dict[str, Any] = {
     "raw_html_committed": False,
     "raw_pdf_docx_committed": False,
     "raw_xlsx_committed": False,
+    "raw_audio_video_committed": False,
+    "raw_data_committed": False,
+    "generated_bundle_bodies_committed": False,
+    "generated_outputs_committed": False,
+    "codex_output_committed": False,
+    "third_party_raw_staged": False,
+    "third_party_raw_tracked_new": False,
+    "ocr_performed": False,
+    "ai_ml_interpretation_performed": False,
+    "stego_tool_execution_performed": False,
+    "image_forensics_performed": False,
+    "audio_analysis_performed": False,
+    "hypothesis_generation_performed": False,
+    "hypothesis_execution_performed": False,
+    "deep_research_performed": False,
+    "website_expansion_performed": False,
+    "cuda_execution_performed": False,
+    "cuda_source_modified": False,
+    "new_cuda_kernel_added": False,
+    "benchmark_performed": False,
+    "scored_experiments_executed": False,
+    "canonical_corpus_active": False,
+    "page_boundaries_final": False,
+    "method_status_upgraded": False,
+    "solve_claim": False,
+}
+
+STAGE5AK_FALSE_FLAGS: dict[str, Any] = {
+    "network_fetch_performed": False,
+    "live_web_scrape_performed": False,
+    "online_repo_clone_performed": False,
+    "google_drive_storage_used": False,
+    "raw_downloads_committed": False,
+    "raw_archives_committed": False,
+    "raw_images_committed": False,
+    "raw_html_committed": False,
+    "raw_pdf_docx_committed": False,
+    "raw_text_committed": False,
     "raw_audio_video_committed": False,
     "raw_data_committed": False,
     "generated_bundle_bodies_committed": False,

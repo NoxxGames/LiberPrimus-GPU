@@ -1095,3 +1095,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AJ records 5 local source records, 29 new URL/planned source records, 2 workbook summaries, 46 parsed important-link URLs, 34 source-card updates, 34 content-index updates, 16 new clue-category records, 7 Deep-Research pack updates, 10 private Deep Research-ready bundles, and 0 public website-ready bundles. It selected Stage 5AK Deep Research source inventory and reliability prompt, preserved raw workbooks/images/text and generated extraction bodies as ignored local material, used no Google Drive storage, and performed no network fetch, live scraping, online clone, Deep Research execution, OCR/AI/ML/image forensics/stego/audio processing, hypothesis generation/execution, CUDA execution, CUDA-facing source modification, new kernel addition, benchmark, scored experiment, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ak
+    title: Community-facts observations integration and number-fact claim curation
+    status: complete
+    category: infrastructure
+    summary: Integrated the ignored local community-facts folder into source-harvester metadata with ordered attachment indexes, community claim records, correction logs, arithmetic-preflight records, Deep-Research addendum metadata, website-ingest metadata, guardrails, and Stage 5AL next-stage decision records.
+    key_outputs:
+      - "`libreprimus source-harvester` Stage 5AK commands for community-facts inventory, attachment indexing, source-card/content-index updates, claim records, arithmetic preflight, Deep-Research pack updates, guardrails, next-stage decision, summary generation, validation, and summary display."
+      - Stage 5AK community-facts local inventory, source-card summary, content-index summary, attachment index, clue categories, claim policy, claim records, correction log, arithmetic preflight, website-ingest update, Deep-Research pack update, readiness, missing-source update, guardrail, next-stage-decision, and aggregate summary records under `data/source-harvester/`.
+      - Ignored generated bundle/report bodies under `research-inputs/stage5ak/`, `experiments/results/research-bundles/stage5ak/`, and `experiments/results/source-harvester-community-facts/stage5ak/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AK records 11 local community-facts files, 10 ordered attachment records, 12 claim records, 4 correction records, 15 new clue-category records, 16 arithmetic-preflight records with 15 arithmetic-verified checks and 1 arithmetic-error check, 1 source-card update, 5 content-index updates, 10 private Deep Research-ready bundles, and 0 public website-ready bundles. It selected Stage 5AL Deep Research source inventory and reliability prompt, preserved raw message logs/images and generated extraction bodies as ignored local material, used no Google Drive storage, and performed no network fetch, live scraping, online clone, Deep Research execution, OCR/AI/ML/image forensics/stego/audio processing, hypothesis generation/execution, CUDA execution, CUDA-facing source modification, new kernel addition, benchmark, scored experiment, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

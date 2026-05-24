@@ -1,0 +1,80 @@
+record_type: stage5ak_community_facts_content_index_summary
+schema: schemas/source-harvester/community-facts-content-index-summary-v0.schema.json
+stage_id: stage-5ak
+source_stage_id: stage-5aj
+content_index_records: 5
+content_index_updates: 5
+source_card_records: 1
+website_publication_allowed_count: 0
+private_deep_research_ready_count: 5
+generated_extract_review_required_count: 5
+raw_message_bodies_committed: false
+raw_image_bytes_committed: false
+generated_outputs_committed: false
+solve_claim: false
+records:
+- record_type: stage5ak_community_facts_content_index_record
+  schema: schemas/source-harvester/community-facts-content-index-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  content_id: community_facts_observations_local:community_message_log_index
+  content_kind: community_message_log_index
+  extract_policy: private_metadata_extract
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_message_body_committed: false
+  raw_image_bytes_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_content_index_record
+  schema: schemas/source-harvester/community-facts-content-index-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  content_id: community_facts_observations_local:ordered_attachment_index
+  content_kind: ordered_attachment_index
+  extract_policy: metadata_only
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_message_body_committed: false
+  raw_image_bytes_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_content_index_record
+  schema: schemas/source-harvester/community-facts-content-index-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  content_id: community_facts_observations_local:community_claim_records
+  content_kind: community_claim_records
+  extract_policy: metadata_only
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_message_body_committed: false
+  raw_image_bytes_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_content_index_record
+  schema: schemas/source-harvester/community-facts-content-index-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  content_id: community_facts_observations_local:community_correction_log
+  content_kind: community_correction_log
+  extract_policy: metadata_only
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_message_body_committed: false
+  raw_image_bytes_committed: false
+  solve_claim: false
+- record_type: stage5ak_community_facts_content_index_record
+  schema: schemas/source-harvester/community-facts-content-index-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  content_id: community_facts_observations_local:arithmetic_preflight_metadata
+  content_kind: arithmetic_preflight_metadata
+  extract_policy: metadata_only
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_message_body_committed: false
+  raw_image_bytes_committed: false
+  solve_claim: false

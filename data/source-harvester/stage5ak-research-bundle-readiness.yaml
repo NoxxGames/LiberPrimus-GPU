@@ -1,0 +1,12 @@
+record_type: stage5ak_research_bundle_readiness
+schema: schemas/source-harvester/deep-research-pack-update-summary-v0.schema.json
+stage_id: stage-5ak
+source_stage_id: stage-5aj
+bundle_readiness_before: 10
+bundle_readiness_after: 10
+community_facts_addendum_ready: true
+private_deep_research_ready: true
+bundles_ready_for_private_deep_research: 10
+bundles_public_website_ready: 0
+public_website_ready: 0
+solve_claim: false

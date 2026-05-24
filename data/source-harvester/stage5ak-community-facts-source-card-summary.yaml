@@ -1,0 +1,52 @@
+record_type: stage5ak_community_facts_source_card_summary
+schema: schemas/source-harvester/community-facts-source-card-summary-v0.schema.json
+stage_id: stage-5ak
+source_stage_id: stage-5aj
+source_card_records: 1
+source_card_updates: 1
+local_source_card_records: 1
+publication_review_required_count: 1
+website_publication_allowed_count: 0
+private_deep_research_extract_ready_count: 1
+raw_content_publication_allowed: false
+generated_extract_publication_allowed: false
+solve_claim: false
+records:
+- record_type: stage5ak_community_facts_source_card
+  schema: schemas/source-harvester/community-facts-source-card-summary-v0.schema.json
+  stage_id: stage-5ak
+  source_stage_id: stage-5aj
+  source_id: community_facts_observations_local
+  title: Community facts and number observations thread
+  source_type: local_user_upload
+  priority: A1
+  source_tier: tier4_social_claim_or_screenshot
+  collection_status: local_ready
+  local_path_hint: third_party/UsefulFilesAndIdeas/community-facts
+  bundle_ids:
+  - 09-community-hypotheses
+  - 05-red-markers-and-visual-numerics
+  - 07-boundary-mobius-repeated-fragments
+  clue_categories:
+  - community_number_fact_thread
+  - no_fehu_section_count_graph
+  - p54_55_p56_p57_hash_length_equivalence
+  - p15_red_text_progressive_sum_square
+  - red_3299_fehu_count_prime_index
+  - whitespace_prime_sequence_claim
+  - count_policy_correction_log
+  recommended_capture_modes:
+  - text_hash
+  - message_log_index
+  - attachment_image_metadata
+  - ordered_attachment_index
+  - community_claim_record_extraction
+  - correction_log
+  - arithmetic_preflight_metadata
+  attachment_count: 10
+  claim_record_layer_required: true
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  deep_research_private_allowed: true
+  solve_claim: false

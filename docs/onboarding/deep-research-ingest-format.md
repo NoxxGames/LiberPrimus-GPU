@@ -2,6 +2,17 @@
 
 Deep Research handoffs use committed source-card, content-index, missing-source, readiness, extraction-fidelity, and redaction-policy metadata as the control plane. Generated bundle bodies may exist locally under ignored `research-inputs/` paths, but they are not committed and are not public documentation.
 
+For Stage 5AK, private handoffs may additionally reference:
+
+- `data/source-harvester/stage5ak-community-facts-source-card-summary.yaml`
+- `data/source-harvester/stage5ak-community-facts-content-index-summary.yaml`
+- `data/source-harvester/stage5ak-community-facts-attachment-index.yaml`
+- `data/source-harvester/stage5ak-community-facts-claim-records.yaml`
+- `data/source-harvester/stage5ak-community-facts-correction-log.yaml`
+- `data/source-harvester/stage5ak-community-facts-arithmetic-preflight.yaml`
+- `data/source-harvester/stage5ak-summary.yaml`
+- ignored private addenda under `research-inputs/stage5ak/`
+
 For Stage 5AJ, private handoffs may reference:
 
 - `data/source-harvester/stage5aj-usefulfiles-source-card-summary.yaml`

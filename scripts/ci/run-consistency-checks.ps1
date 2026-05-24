@@ -24,14 +24,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5AJ" `
-        --expected-next-stage "Stage 5AK" `
+        --expected-latest-stage "Stage 5AK" `
+        --expected-next-stage "Stage 5AL" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5AJ" `
-        --expected-next-stage "Stage 5AK" `
+        --expected-latest-stage "Stage 5AK" `
+        --expected-next-stage "Stage 5AL" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -46,14 +46,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AJ",
+        expected_latest_stage="Stage 5AK",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AJ",
+            "expected_latest_stage": "Stage 5AK",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -1986,6 +1986,42 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
     git check-ignore -q $Stage5AJCellIndex
     git check-ignore -q $Stage5AJImportantLinks
     git check-ignore -q $Stage5AJRawWorkbook
+
+    $Stage5AKGeneratedDir = Join-Path (Join-Path (Join-Path "experiments" "results") "source-harvester-community-facts") "stage5ak"
+    $Stage5AKSummaryReport = Join-Path $Stage5AKGeneratedDir "summary.json"
+    if (Test-Path $Stage5AKSummaryReport) {
+        Write-Host "Validating Stage 5AK community-facts records"
+        & $Python -m libreprimus.cli source-harvester validate-stage5ak `
+            --inventory data/source-harvester/stage5ak-community-facts-local-inventory.yaml `
+            --attachment-index data/source-harvester/stage5ak-community-facts-attachment-index.yaml `
+            --source-card-summary data/source-harvester/stage5ak-community-facts-source-card-summary.yaml `
+            --content-index-summary data/source-harvester/stage5ak-community-facts-content-index-summary.yaml `
+            --clue-categories data/source-harvester/stage5ak-community-facts-clue-categories.yaml `
+            --claim-policy data/source-harvester/stage5ak-community-claim-policy.yaml `
+            --claim-records data/source-harvester/stage5ak-community-facts-claim-records.yaml `
+            --correction-log data/source-harvester/stage5ak-community-facts-correction-log.yaml `
+            --arithmetic-preflight data/source-harvester/stage5ak-community-facts-arithmetic-preflight.yaml `
+            --website-update data/source-harvester/stage5ak-website-ingest-update-summary.yaml `
+            --deep-research-update data/source-harvester/stage5ak-deep-research-pack-update-summary.yaml `
+            --readiness data/source-harvester/stage5ak-research-bundle-readiness.yaml `
+            --missing-source-plan data/source-harvester/stage5ak-missing-source-plan-update.yaml `
+            --guardrail data/source-harvester/stage5ak-guardrail.yaml `
+            --next-stage-decision data/source-harvester/stage5ak-next-stage-decision.yaml `
+            --summary data/source-harvester/stage5ak-summary.yaml `
+            --results-dir $Stage5AKGeneratedDir
+    } else {
+        Write-Host "Skipping Stage 5AK generated community-facts validation; ignored local reports are absent"
+    }
+    $Stage5AKRawText = "third_party/UsefulFilesAndIdeas/community-facts/community-facts-collection.txt"
+    $Stage5AKRawImage = "third_party/UsefulFilesAndIdeas/community-facts/1.webp"
+    $Stage5AKGeneratedClaims = Join-Path (Join-Path (Join-Path "experiments" "results") "source-harvester-community-facts") "stage5ak\community_claim_records.jsonl"
+    $Stage5AKBundleClaims = "research-inputs/stage5ak/community_claim_records.jsonl"
+    $Stage5AKHandoff = "codex-output/stage5ak-codex-completion.md"
+    git check-ignore -q $Stage5AKRawText
+    git check-ignore -q $Stage5AKRawImage
+    git check-ignore -q $Stage5AKGeneratedClaims
+    git check-ignore -q $Stage5AKBundleClaims
+    git check-ignore -q $Stage5AKHandoff
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
