@@ -1,0 +1,248 @@
+record_type: stage5aj_new_clue_categories
+schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+stage_id: stage-5aj
+source_stage_id: stage-5ai
+new_clue_category_records: 16
+execution_ready_count: 0
+solve_claim: false
+records:
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: delimiter_preserving_lp_transcript
+  description: delimiter preserving lp transcript
+  source_lock_priority: A1
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: review_required
+  recommended_sources:
+  - lp_excel_workbook_local
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: manual_highlight_repeat_fragments
+  description: manual highlight repeat fragments
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: review_required
+  recommended_sources:
+  - lp_excel_workbook_local
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: section_boundary_repeat_network
+  description: section boundary repeat network
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: review_required
+  recommended_sources:
+  - stage5aj-usefulfiles-source-manifest-extension
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: lp_count_policy_reconciliation
+  description: lp count policy reconciliation
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: review_required
+  recommended_sources:
+  - stage5aj-usefulfiles-source-manifest-extension
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: p56_p57_gp_sum_3301_1033
+  description: p56 p57 gp sum 3301 1033
+  source_lock_priority: A1
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: review_required
+  recommended_sources:
+  - stage5aj-usefulfiles-source-manifest-extension
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: magic_square_diagonal_3301_1033
+  description: magic square diagonal 3301 1033
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high_false_positive_risk
+  recommended_sources:
+  - usefulfiles_important_links_local
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: page32_tree_path_lies_empty
+  description: page32 tree path lies empty
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: review_required
+  recommended_sources:
+  - usefulfiles_important_links_local
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: brown_corpus_word_length_controls
+  description: brown corpus word length controls
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: review_required
+  recommended_sources:
+  - usefulfiles_ideas_local
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: bibliographic_liber_primus_euler_lead
+  description: bibliographic liber primus euler lead
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: review_required
+  recommended_sources:
+  - usefulfiles_ideas_local
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: 2016_prime_layering
+  description: 2016 prime layering
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: review_required
+  recommended_sources:
+  - stage5aj-usefulfiles-source-manifest-extension
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: twitter_1033_3301_fibonacci_prime_context
+  description: twitter 1033 3301 fibonacci prime context
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: review_required
+  recommended_sources:
+  - stage5aj-usefulfiles-source-manifest-extension
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: low_doublet_statistical_texture
+  description: low doublet statistical texture
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high_false_positive_risk
+  recommended_sources:
+  - stage5aj-usefulfiles-source-manifest-extension
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: unverified_shift_pattern_warning
+  description: unverified shift pattern warning
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: review_required
+  recommended_sources:
+  - stage5aj-usefulfiles-source-manifest-extension
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: excel_highlight_color_annotations
+  description: excel highlight color annotations
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: review_required
+  recommended_sources:
+  - lp_excel_workbook_local
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: workbook_formula_and_image_inventory
+  description: workbook formula and image inventory
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: false
+  risk_level: review_required
+  recommended_sources:
+  - stage5aj-usefulfiles-source-manifest-extension
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false
+- record_type: stage5aj_new_clue_category_record
+  schema: schemas/source-harvester/stage5aj-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  category_id: reddit_claims_targeted_capture
+  description: reddit claims targeted capture
+  source_lock_priority: A2
+  execution_ready: false
+  requires_null_controls: true
+  risk_level: high_false_positive_risk
+  recommended_sources:
+  - usefulfiles_important_links_local
+  what_not_to_assume: Do not treat local/source-card presence as execution readiness
+    or solve evidence.
+  solve_claim: false

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AJ XLSX extraction summary",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "xlsx_workbooks_detected", "raw_workbook_committed", "generated_outputs_committed", "ocr_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "type": "string" },
+    "stage_id": { "const": "stage-5aj" },
+    "source_stage_id": { "const": "stage-5ai" },
+    "xlsx_workbooks_detected": { "type": "integer", "minimum": 0 },
+    "xlsx_workbooks_summarized": { "type": "integer", "minimum": 0 },
+    "lp_excel_detected": { "type": "boolean" },
+    "translations_decryptions_detected": { "type": "boolean" },
+    "raw_workbook_committed": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "ocr_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

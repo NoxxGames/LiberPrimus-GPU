@@ -1,0 +1,11 @@
+record_type: stage5aj_website_ingest_update_summary
+schema: schemas/source-harvester/deep-research-pack-update-summary-v0.schema.json
+stage_id: stage-5aj
+source_stage_id: stage-5ai
+website_ingest_metadata_ready: true
+website_ingest_source_card_records: 34
+website_ingest_content_records: 34
+website_expansion_performed: false
+public_website_ready_count: 0
+publication_review_required_count: 34
+solve_claim: false

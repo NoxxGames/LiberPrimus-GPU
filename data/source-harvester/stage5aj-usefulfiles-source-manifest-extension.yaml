@@ -1,0 +1,1047 @@
+record_type: stage5aj_usefulfiles_source_manifest_extension
+schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+stage_id: stage-5aj
+source_stage_id: stage-5ai
+local_source_records: 5
+new_url_source_records: 29
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+solve_claim: false
+records:
+- record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  source_id: lp_excel_workbook_local
+  title: LP Excel delimiter-preserving Liber Primus workbook
+  source_type: local_user_upload
+  priority: A1
+  source_tier: tier3_reproducible_community_data
+  collection_status: local_ready
+  local_path_hint: third_party/UsefulFilesAndIdeas/LP Excel.xlsx
+  sha256: 75c90c5b0ebf91da118953afdbb1ba4a136f5323599f2d544e8894bd142b6df5
+  size_bytes: 3157592
+  recommended_capture_modes:
+  - xlsx_hash
+  - workbook_sheet_inventory
+  - workbook_cell_metadata
+  - workbook_highlight_metadata
+  - workbook_formula_inventory
+  - workbook_image_inventory
+  - delimiter_policy_extract
+  - rune_count_extract
+  - section_stream_extract
+  related_leads:
+  - delimiter_preserving_lp_transcript
+  - manual_highlight_repeat_fragments
+  - section_boundary_repeat_network
+  - lp_count_policy_reconciliation
+  - excel_highlight_color_annotations
+  - workbook_formula_and_image_inventory
+  bundle_ids:
+  - 02-liber-primus-images-and-transcriptions
+  - 03-page-49-51-token-block
+  - 04-cuneiform-base60-base59
+  - 05-red-markers-and-visual-numerics
+  - 07-boundary-mobius-repeated-fragments
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  source_id: translations_decryptions_xlsx_local
+  title: Translations/decryptions solved-page spreadsheet export
+  source_type: local_user_upload
+  priority: A1
+  source_tier: tier3_reproducible_community_data
+  collection_status: local_ready
+  local_path_hint: third_party/UsefulFilesAndIdeas/tranlsations_decryptions.xlsx
+  sha256: 84d0455178be1098d4177c1aa4bc14a76f9fe47deb7e5af6365faf85f6fd485f
+  size_bytes: 7431832
+  recommended_capture_modes:
+  - xlsx_hash
+  - sheet_inventory
+  - prime_sums_extract
+  - p56_p57_fixture_extract
+  - solved_page_shift_vector_extract
+  - embedded_image_inventory
+  related_leads:
+  - p56_p57_gp_sum_3301_1033
+  - unverified_shift_pattern_warning
+  - workbook_formula_and_image_inventory
+  bundle_ids:
+  - 02-liber-primus-images-and-transcriptions
+  - 08-tools-gpprime-dwh-gematria
+  - 10-known-negative-retired-ideas
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  source_id: usefulfiles_important_links_local
+  title: UsefulFilesAndIdeas important links list
+  source_type: local_user_upload
+  priority: A1
+  source_tier: tier3_reproducible_community_data
+  collection_status: local_ready
+  local_path_hint: third_party/UsefulFilesAndIdeas/important_links.txt
+  sha256: 20c980724dc867bfc635942d09368c31f3397ec424f63fb5f3c7e62c7ea3556c
+  size_bytes: 4495
+  recommended_capture_modes:
+  - text_hash
+  - url_extraction
+  - source_manifest_extension
+  - link_deduplication
+  - source_priority_classification
+  related_leads:
+  - source_gap_closure
+  - reddit_claims_targeted_capture
+  bundle_ids:
+  - 03-page-49-51-token-block
+  - 06-outguess-stego-hidden-formatting
+  - 08-tools-gpprime-dwh-gematria
+  - 09-community-hypotheses
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  source_id: usefulfiles_ideas_local
+  title: UsefulFilesAndIdeas idea seeds
+  source_type: local_user_upload
+  priority: A2
+  source_tier: tier4_social_claim_or_screenshot
+  collection_status: local_ready
+  local_path_hint: third_party/UsefulFilesAndIdeas/ideas.txt
+  sha256: 1cac147fbc9959c71027bf3de11521ef878d7a50f770495893fc676f8e405011
+  size_bytes: 448
+  recommended_capture_modes:
+  - text_hash
+  - idea_seed_index
+  - future_null_control_notes
+  related_leads:
+  - brown_corpus_word_length_controls
+  - bibliographic_liber_primus_euler_lead
+  bundle_ids:
+  - 09-community-hypotheses
+  - 10-known-negative-retired-ideas
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  source_id: gematria_primus_image_local
+  title: Gematria Primus visual table image
+  source_type: local_user_upload
+  priority: A2
+  source_tier: tier3_reproducible_community_data
+  collection_status: local_ready
+  local_path_hint: third_party/UsefulFilesAndIdeas/GematrriaPrimus.jpg
+  sha256: 975ec8293e1de8fc3d7b76489f0eadb217805238f07956407fef053835db38c9
+  size_bytes: 53555
+  recommended_capture_modes:
+  - image_hash
+  - image_metadata
+  related_leads:
+  - visual_gematria_reference
+  bundle_ids:
+  - 02-liber-primus-images-and-transcriptions
+  - 05-red-markers-and-visual-numerics
+  - 08-tools-gpprime-dwh-gematria
+  manual_collection_required: false
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: brown_corpus_reference
+  title: Brown Corpus
+  url: https://en.wikipedia.org/wiki/Brown_Corpus
+  source_type: static_webpage
+  priority: A2
+  source_tier: tier3_reproducible_community_data
+  recommended_capture_modes:
+  - metadata
+  - text
+  - links
+  related_leads:
+  - brown_corpus_word_length_controls
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: planned_source_record_absent_from_local_links
+  present_in_important_links: false
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_2015_twitter_message
+  title: 2015 Twitter Message
+  url: https://uncovering-cicada.fandom.com/wiki/2015_Twitter_Message
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - 2015_twitter_message
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_2016_message
+  title: 2016 Message
+  url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - 2016_liber_primus_is_the_way_quote
+  - 2016_prime_layering
+  bundle_ids:
+  - 06-outguess-stego-hidden-formatting
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_frequency_analysis_unsolved_pages
+  title: Frequency Analysis Unsolved Pages
+  url: https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_Unsolved_Pages
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - same_rune_bigram_statistic
+  - low_doublet_statistical_texture
+  bundle_ids:
+  - 03-page-49-51-token-block
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_harmonic_key_proposal
+  title: 'PROPOSAL: THE 16-DIGIT HARMONIC KEY'
+  url: https://uncovering-cicada.fandom.com/wiki/PROPOSAL%3A_THE_16-DIGIT_HARMONIC_KEY_%282422826321411203%29
+  source_type: fandom_page
+  priority: C
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - ai_generated_or_overfit_claims
+  - negative_or_retired_ideas
+  bundle_ids:
+  - 10-known-negative-retired-ideas
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: planned_source_record_absent_from_local_links
+  present_in_important_links: false
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_liber_primus
+  title: Liber Primus
+  url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - liber_primus
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_list_of_missing_information
+  title: List of missing information
+  url: https://uncovering-cicada.fandom.com/wiki/List_of_missing_information
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - source_gap_closure
+  - negative_or_retired_ideas
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_necrome_cyberterrorism_refutation
+  title: Necrome cyberterrorism refutation
+  url: https://uncovering-cicada.fandom.com/wiki/Necrome_cyberterrorism_refutation
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - necrome_cyberterrorism_refutation
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_onion_7_numbers_on_page_15
+  title: 'Onion 7: numbers on page 15'
+  url: https://uncovering-cicada.fandom.com/wiki/Onion_7:_numbers_on_page_15
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - onion_7_numbers_on_page_15
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_other_twitter_accounts
+  title: Other Twitter Accounts Associated With 3301's Emails
+  url: https://uncovering-cicada.fandom.com/wiki/Other_Twitter_Accounts_Associated_With_3301%27s_Emails
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - twitter_1033_3301_fibonacci_prime_context
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_outguess
+  title: OutGuess
+  url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - outguess_all_pages_claim
+  - stego_tool_provenance
+  bundle_ids:
+  - 06-outguess-stego-hidden-formatting
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_page_56
+  title: PAGE 56
+  url: https://uncovering-cicada.fandom.com/wiki/PAGE_56
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - dwh_target_and_algorithms
+  - p56_prime_minus_one
+  bundle_ids:
+  - 03-page-49-51-token-block
+  - 08-tools-gpprime-dwh-gematria
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_page_57
+  title: PAGE 57
+  url: https://uncovering-cicada.fandom.com/wiki/PAGE_57
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - p57_parable_gp_product
+  - p56_p57_gp_sum_3301_1033
+  bundle_ids:
+  - 03-page-49-51-token-block
+  - 08-tools-gpprime-dwh-gematria
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_pgp_signed_message_april_2017
+  title: PGP Signed Message April 2017
+  url: https://uncovering-cicada.fandom.com/wiki/PGP_Signed_Message_April_2017
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - pgp_signed_message_april_2017
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_proposal_the_16_digit_harmonic_key_2422826321411203
+  title: 'PROPOSAL: THE 16-DIGIT HARMONIC KEY (2422826321411203)'
+  url: https://uncovering-cicada.fandom.com/wiki/PROPOSAL:_THE_16-DIGIT_HARMONIC_KEY_(2422826321411203
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - proposal_the_16_digit_harmonic_key_2422826321411203
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_read_the_wiki
+  title: Read the wiki
+  url: http://uncovering-cicada.wikia.com/
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - read_the_wiki
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_symbols_drawing_art_liber_primus
+  title: Symbols/Drawing/Art of Liber Primus
+  url: https://uncovering-cicada.fandom.com/wiki/Symbols/Drawing/Art_of_Liber_Primus
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - depictions_tree_cicada_mayfly_wing_spiral_cuneiform
+  - cuneiform_base60_base59
+  - red_runes_dots_punctuation
+  bundle_ids:
+  - 04-cuneiform-base60-base59
+  - 05-red-markers-and-visual-numerics
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_the_leaked_email
+  title: The Leaked Email
+  url: https://uncovering-cicada.fandom.com/wiki/The_Leaked_Email
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - the_leaked_email
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_what_happened_2012
+  title: What Happened (2012)
+  url: https://uncovering-cicada.fandom.com/wiki/What_Happened_(2012
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - what_happened_2012
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_what_happened_liber_primus_post_2014
+  title: What Happened Liber Primus (Post 2014)
+  url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Liber_Primus_(Post_2014
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - what_happened_liber_primus_post_2014
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_what_happened_part_1_2013
+  title: What Happened Part 1 (2013)
+  url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2013
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - what_happened_part_1_2013
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: fandom_what_happened_part_1_2014
+  title: What Happened Part 1 (2014)
+  url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  related_leads:
+  - what_happened_part_1_2014
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: reddit_56_57_gp_sums_3301_1033
+  title: 56/57.jpg GP sums of 3301 and 1033
+  url: https://www.reddit.com/r/cicada/comments/1m9lm2a/5657jpg_gp_sums_of_3301_and_1033_found_next_to/
+  source_type: reddit_post
+  priority: A1
+  source_tier: tier4_social_claim_or_screenshot
+  recommended_capture_modes:
+  - targeted_post_capture
+  - listing_metadata
+  - links
+  related_leads:
+  - p56_p57_gp_sum_3301_1033
+  - fehu_skip_policy
+  bundle_ids:
+  - 08-tools-gpprime-dwh-gematria
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: planned_source_record_absent_from_local_links
+  present_in_important_links: false
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: reddit_cicada_subreddit
+  title: r/cicada subreddit
+  url: https://www.reddit.com/r/cicada/
+  source_type: reddit_subreddit
+  priority: A2
+  source_tier: tier4_social_claim_or_screenshot
+  recommended_capture_modes:
+  - targeted_post_capture
+  - listing_metadata
+  - links
+  related_leads:
+  - reddit_claims_targeted_capture
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: reddit_frequency_analysis_lp_notes
+  title: Frequency analysis on LP and notes
+  url: https://www.reddit.com/r/cicada/comments/rxo4vg/frequency_analysis_on_lp_and_some_notes_and/
+  source_type: reddit_post
+  priority: A2
+  source_tier: tier4_social_claim_or_screenshot
+  recommended_capture_modes:
+  - targeted_post_capture
+  - listing_metadata
+  - links
+  related_leads:
+  - frequency_analysis_unsolved
+  - low_doublet_statistical_texture
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: planned_source_record_absent_from_local_links
+  present_in_important_links: false
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: reddit_layered_primes_2016_message
+  title: Layered primes in the 2016 message
+  url: https://www.reddit.com/r/cicada/comments/12j1evm/layered_primes_in_the_2016_message/
+  source_type: reddit_post
+  priority: A2
+  source_tier: tier4_social_claim_or_screenshot
+  recommended_capture_modes:
+  - targeted_post_capture
+  - listing_metadata
+  - links
+  related_leads:
+  - 2016_prime_layering
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: planned_source_record_absent_from_local_links
+  present_in_important_links: false
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: reddit_magic_square_diagonals
+  title: Hidden magic diagonals found in magic squares
+  url: https://www.reddit.com/r/cicada/comments/1lrwmb9/hidden_magic_diagonals_found_in_the_magic_squares/
+  source_type: reddit_post
+  priority: A1
+  source_tier: tier4_social_claim_or_screenshot
+  recommended_capture_modes:
+  - targeted_post_capture
+  - listing_metadata
+  - links
+  related_leads:
+  - magic_square_diagonal_3301_1033
+  - know_this_magic_square_claims
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: planned_source_record_absent_from_local_links
+  present_in_important_links: false
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: reddit_page32_path_lies_empty
+  title: Next step is page 32 in Liber Primus / path lies empty
+  url: https://www.reddit.com/r/cicada/comments/9zb42i/next_step_is_page_32_in_liber_primus_the/
+  source_type: reddit_post
+  priority: A2
+  source_tier: tier4_social_claim_or_screenshot
+  recommended_capture_modes:
+  - targeted_post_capture
+  - listing_metadata
+  - links
+  related_leads:
+  - page32_tree_path_lies_empty
+  - 2016_liber_primus_is_the_way_quote
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false
+- source_id: stage5aj_1_using_the_brown_corpus
+  title: 1. using the Brown corpus (
+  url: https://archive.org/details/BrownCorpus
+  source_type: static_webpage
+  priority: B
+  source_tier: tier3_reproducible_community_data
+  recommended_capture_modes:
+  - metadata
+  - text
+  - links
+  related_leads:
+  - 1_using_the_brown_corpus
+  bundle_ids:
+  - 09-community-hypotheses
+  record_type: stage5aj_source_manifest_extension_record
+  schema: schemas/source-harvester/usefulfiles-source-manifest-extension-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  collection_status: new_online_source_added
+  present_in_important_links: true
+  manual_collection_required: true
+  allow_network_fetch: false
+  allow_dynamic_browser: false
+  raw_commit_allowed: false
+  google_drive_storage_allowed: false
+  network_fetch_performed: false
+  solve_claim: false

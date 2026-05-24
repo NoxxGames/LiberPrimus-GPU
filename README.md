@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5AI curated research bundle extraction from the local source inventory. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5AJ UsefulFilesAndIdeas integration, extraction-fidelity policy, and scraper capture/redaction hardening. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -33,7 +33,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Bounded numeric verification: Stage 4D runs only no-fudge numeric and metadata audits. GP/rune batch002 skips without exact new spans, number-square routes skip without locked raw values, delimiter/dot audits infer no meaning, cuneiform seed execution remains deferred, and cookie pack v2 is deferred to a future explicit stage.
 - Source-delta audits: Stage 4E records selected `cicada-solvers/iddqd` tree metadata only. It does not blind-mirror external repositories, commit raw images/audio/fonts/binaries, run stego tools, or infer meaning from compression artefacts.
 - Public source-lock snapshots: Stage 4K locks a small allowlisted public-source subset with metadata, canonical URLs, retrieval status, hashes where fetched, copyright notes, explicit snapshot policies, and GitHub commit-addressed references. It does not broad crawl, blind-mirror repositories, commit full HTML by default, or commit binary/image/audio/font/archive artefacts.
-- Cicada source harvester: Stage 5AF adds local-only source-manifest, dry-run planning, hash/inventory/extraction, and research-bundle scaffold tooling. Stage 5AG runs that tooling against user-provided ignored `third_party/` material and commits compact local source inventory, manifest linkage, source-lock candidate, gap, research-bundle readiness, and guardrail metadata only. Stage 5AH repairs operational doc staleness coverage before extraction continues. Stage 5AI creates ignored curated research-input bundle scaffolds plus compact source-card, content-index, website-ingest, Deep-Research pack, missing-source, and guardrail metadata. Network fetching/cloning remains deferred, Google Drive must not be used as project storage, local archive listings and generated extracts are not source truth, and raw source files remain ignored and uncommitted.
+- Cicada source harvester: Stage 5AF adds local-only source-manifest, dry-run planning, hash/inventory/extraction, and research-bundle scaffold tooling. Stage 5AG runs that tooling against user-provided ignored `third_party/` material and commits compact local source inventory, manifest linkage, source-lock candidate, gap, research-bundle readiness, and guardrail metadata only. Stage 5AH repairs operational doc staleness coverage before extraction continues. Stage 5AI creates ignored curated research-input bundle scaffolds plus compact source-card, content-index, website-ingest, Deep-Research pack, missing-source, and guardrail metadata. Stage 5AJ integrates ignored `third_party/UsefulFilesAndIdeas/` local workbooks/text/image metadata, important-link indexes, source-card/content-index updates, extraction-fidelity policy, redaction policy, and scraper-capture profiles while keeping private Deep Research extracts minimally redacted and public website views conservative/review-gated. Network fetching/cloning remains deferred, Google Drive must not be used as project storage, local archive/workbook listings and generated extracts are not source truth, and raw source files remain ignored and uncommitted.
 - Observation promotion ledger: Stage 4L joins Stage 4J review decisions with Stage 4K source locks and records ready, blocked, deferred, quarantined, rejected, source-reference-only, and control-only states. Ready does not mean executed; all future manifests remain disabled.
 - Image source-variant and compression preflight: Stage 4M scans ignored local LP page images for metadata and deterministic metric-only compression summaries, records source-variant comparison readiness, keeps star-like/compression-like artefacts review-only, and keeps the bigram/Fibonacci-421 observation blocked pending reproducible matrix and null controls. It does not commit raw images, generated visualisations, or execute image/bigram experiments.
 - Stego/audio positive-control readiness: Stage 4N records fixture readiness, cache policy, expected-output requirements, toolchain state, and synthetic controls. Historical OutGuess/OpenPuff/MP3/audio cases remain blocked until assets, exact expected outputs, and tools are ready.
@@ -48,7 +48,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 5AJ - Deep Research source inventory and reliability prompt.
+- Stage 5AK - Deep Research source inventory and reliability prompt.
 - Website expansion is deferred to a future unnumbered project.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
@@ -150,6 +150,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 5AG local third-party source inventory and initial source-lock metadata.
 - Stage 5AH operational documentation staleness coverage repair and README stage-ledger audit.
 - Stage 5AI curated research bundle extraction from local source inventory.
+- Stage 5AJ UsefulFilesAndIdeas integration, extraction-fidelity policy, and scraper capture/redaction hardening.
 
 ## Architecture summary
 
@@ -253,6 +254,7 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Stage 5AG: local third-party source inventory and initial source-lock metadata complete.
 - Stage 5AH: operational documentation staleness coverage repair and README stage-ledger audit complete.
 - Stage 5AI: curated research bundle extraction from local source inventory complete.
+- Stage 5AJ: UsefulFilesAndIdeas integration, extraction-fidelity policy, and scraper capture/redaction hardening complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -301,9 +303,9 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Latest Gematria expanded solved-fixture CUDA reporting stage: Stage 5S consumed the `3` Stage 5R expanded parity records, wrote `3` compact parity-report records, `3` result-store integration records, `3` score-summary integration records, `7` method-status impact records, `4` generated-body policy records, `1` boundary review record, and `6` controlled next-step decision records. It ran no CUDA, modified no CUDA source, added `0` kernels, published no generated CUDA result bodies, upgraded no method family to solved, and made no benchmark, speedup, unsolved-page CUDA, real Liber Primus CUDA-data, website-expansion, canonical-corpus, page-boundary, or solve claim.
 - Latest prime-minus-one native contract stage: Stage 5W wrote `7` source inventory records, `2` stream contract records, `3` prime schedule records, `3` Candidate Batch ABI mapping records, `3` native parity preparation records, `3` result-store preflight records, `6` guardrail records, and `8` next-stage decision records. It marks the bounded Stage 4O/5L p56 mapping ready for future no-GPU native parity, keeps full p56 parity blocked until a complete committed token buffer is scoped, ran no CUDA or native/CUDA CMake, added no kernels, benchmarked nothing, and selected Stage 5X.
 - Latest prime-minus-one native parity stage: Stage 5X wrote `3` native run records, `3` native parity records, `3` result-store preflight records, `3` score-summary preflight records, `1` full-p56 blocker record, `7` guardrail records, and `9` next-stage decision records. It executed only the two Stage 5W ready no-GPU Python-reference mappings, matched both Stage 5W expected hashes, skipped the blocked full p56 mapping, ran no CUDA or native/CUDA CMake, added no kernels, benchmarked nothing, and selected Stage 5Y.
-- Latest source-harvester stage: Stage 5AI creates `10` ignored curated bundle skeletons, `26` source-card records, `19` content-index records, `10` Deep-Research pack records, `20` missing-source records, and `14` unclassified source classification records from the Stage 5AG local inventory. It marks `8` bundles ready for private Deep Research, keeps public website-ready bundles at `0`, commits only compact metadata, and performs no network fetch, online clone, Google Drive storage, raw source commit, Deep Research execution, hypothesis generation, CUDA, benchmark, scored experiment, website expansion, or solve claim.
-- Latest doc-staleness stage: Stage 5AH repairs README stage-ledger coverage, operational-file-map coverage, and current/next-stage consistency checks before Stage 5AI extraction. Stage 5AI preserves that gate and updates current/next-stage records to Stage 5AJ.
-- Next: Stage 5AJ - Deep Research source inventory and reliability prompt.
+- Latest source-harvester stage: Stage 5AJ integrates `5` ignored UsefulFilesAndIdeas local files, `29` new URL/planned source records, `2` workbook summaries, `46` parsed important-link URLs, `34` source-card updates, `34` content-index updates, and `16` new clue-category records. It marks `10` bundles ready for private Deep Research, keeps public website-ready bundles at `0`, commits only compact metadata, and performs no network fetch, online clone, Google Drive storage, raw source commit, Deep Research execution, hypothesis generation, CUDA, benchmark, scored experiment, website expansion, or solve claim.
+- Latest doc-staleness stage: Stage 5AH repairs README stage-ledger coverage, operational-file-map coverage, and current/next-stage consistency checks before curated extraction. Stage 5AJ preserves that gate and updates current/next-stage records to Stage 5AK.
+- Next: Stage 5AK - Deep Research source inventory and reliability prompt.
 
 ## How To Use This Repo
 

@@ -1,8 +1,8 @@
 # Deep Research Bundle Workflow
 
-Use Stage 5AI bundles as the private handoff layer for the next Deep Research prompt.
+Use Stage 5AI bundles and Stage 5AJ UsefulFiles metadata as the private handoff layer for the next Deep Research prompt.
 
-1. Start from `data/source-harvester/stage5ai-curated-research-bundle-summary.yaml`.
+1. Start from `data/source-harvester/stage5ai-curated-research-bundle-summary.yaml` and `data/source-harvester/stage5aj-summary.yaml`.
 2. Use `research-inputs/stage5ai/master_manifest.yaml` to identify bundle directories.
 3. Prefer `source_cards.jsonl`, `content_index.jsonl`, and `deep_research_pack_index.json` over raw
    local source paths.
@@ -14,6 +14,8 @@ Do not use Google Drive as project storage. Do not publish generated bundle bodi
 `third_party/` material, raw Discord logs, images, PDFs, archives, audio/video, or extracted
 payloads. Website expansion remains deferred to a future unnumbered project.
 
-Stage 5AJ should evaluate source inventory and reliability from Stage 5AI metadata. It should not
+Stage 5AK should evaluate source inventory and reliability from Stage 5AI/5AJ metadata. It should not
 execute experiments, run CUDA, benchmark, activate the canonical corpus, finalise page boundaries,
 or make solve claims.
+
+Stage 5AJ adds extraction-fidelity and redaction policy: private handoffs should preserve runes, numbers, hashes, formulas, table shape, cell coordinates, highlights, and technical links, while public website views remain review-gated.

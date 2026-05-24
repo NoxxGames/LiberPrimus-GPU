@@ -12,6 +12,8 @@ STAGE5AG_SOURCE_STAGE_ID = "stage-5af"
 STAGE5AI_ID = "stage-5ai"
 STAGE5AI_SOURCE_STAGE_ID = "stage-5ah"
 STAGE5AI_LOCAL_INVENTORY_STAGE_ID = "stage-5ag"
+STAGE5AJ_ID = "stage-5aj"
+STAGE5AJ_SOURCE_STAGE_ID = "stage-5ai"
 
 OUTPUT_DIR = Path("experiments/results/source-harvester/stage5af")
 STAGE5AG_OUTPUT_DIR = Path("experiments/results/source-harvester-local/stage5ag")
@@ -68,6 +70,41 @@ STAGE5AI_READINESS_PATH = Path("data/source-harvester/stage5ai-research-bundle-r
 STAGE5AI_GUARDRAIL_PATH = Path("data/source-harvester/stage5ai-curated-extraction-guardrail.yaml")
 STAGE5AI_NEXT_STAGE_DECISION_PATH = Path("data/source-harvester/stage5ai-next-stage-decision.yaml")
 STAGE5AI_SUMMARY_PATH = Path("data/source-harvester/stage5ai-curated-research-bundle-summary.yaml")
+
+STAGE5AJ_SOURCE_ROOT = Path("third_party/UsefulFilesAndIdeas")
+STAGE5AJ_BUNDLE_ROOT = Path("research-inputs/stage5aj")
+STAGE5AJ_RESEARCH_BUNDLE_OUTPUT_DIR = Path("experiments/results/research-bundles/stage5aj")
+STAGE5AJ_OUTPUT_DIR = Path("experiments/results/source-harvester-usefulfiles/stage5aj")
+STAGE5AJ_INVENTORY_PATH = Path("data/source-harvester/stage5aj-usefulfiles-local-inventory.yaml")
+STAGE5AJ_MANIFEST_EXTENSION_PATH = Path("data/source-harvester/stage5aj-usefulfiles-source-manifest-extension.yaml")
+STAGE5AJ_SOURCE_CARD_SUMMARY_PATH = Path("data/source-harvester/stage5aj-usefulfiles-source-card-summary.yaml")
+STAGE5AJ_CONTENT_INDEX_SUMMARY_PATH = Path("data/source-harvester/stage5aj-usefulfiles-content-index-summary.yaml")
+STAGE5AJ_XLSX_SUMMARY_PATH = Path("data/source-harvester/stage5aj-xlsx-extraction-summary.yaml")
+STAGE5AJ_IMPORTANT_LINKS_PATH = Path("data/source-harvester/stage5aj-important-links-source-index.yaml")
+STAGE5AJ_NEW_CLUE_CATEGORIES_PATH = Path("data/source-harvester/stage5aj-new-clue-categories.yaml")
+STAGE5AJ_FIDELITY_POLICY_PATH = Path("data/source-harvester/stage5aj-extraction-fidelity-policy.yaml")
+STAGE5AJ_REDACTION_POLICY_PATH = Path("data/source-harvester/stage5aj-redaction-policy.yaml")
+STAGE5AJ_SCRAPER_POLICY_PATH = Path("data/source-harvester/stage5aj-scraper-capture-policy.yaml")
+STAGE5AJ_WEBSITE_UPDATE_PATH = Path("data/source-harvester/stage5aj-website-ingest-update-summary.yaml")
+STAGE5AJ_DEEP_RESEARCH_UPDATE_PATH = Path("data/source-harvester/stage5aj-deep-research-pack-update-summary.yaml")
+STAGE5AJ_READINESS_PATH = Path("data/source-harvester/stage5aj-research-bundle-readiness.yaml")
+STAGE5AJ_MISSING_SOURCE_PLAN_PATH = Path("data/source-harvester/stage5aj-missing-source-plan-update.yaml")
+STAGE5AJ_GUARDRAIL_PATH = Path("data/source-harvester/stage5aj-guardrail.yaml")
+STAGE5AJ_NEXT_STAGE_DECISION_PATH = Path("data/source-harvester/stage5aj-next-stage-decision.yaml")
+STAGE5AJ_SUMMARY_PATH = Path("data/source-harvester/stage5aj-summary.yaml")
+
+STAGE5AJ_REPORTS = {
+    "inventory": "usefulfiles_inventory.json",
+    "xlsx_index": "xlsx_workbook_extract_index.json",
+    "xlsx_cells": "xlsx_cell_metadata_index.jsonl",
+    "important_links": "important_links_url_index.json",
+    "manifest_preview": "source_manifest_extension_preview.yaml",
+    "redaction_policy": "redaction_policy_report.json",
+    "scraper_policy": "scraper_capture_policy_report.json",
+    "deep_research_update": "deep_research_pack_update_report.json",
+    "summary": "summary.json",
+    "warnings": "warnings.jsonl",
+}
 
 STAGE5AI_REPORTS = {
     "bundle_generation": "bundle_generation_report.json",
@@ -272,6 +309,44 @@ STAGE5AI_FALSE_FLAGS: dict[str, Any] = {
     "page_boundaries_final": False,
     "method_status_upgraded": False,
     "website_expansion_performed": False,
+    "solve_claim": False,
+}
+
+STAGE5AJ_FALSE_FLAGS: dict[str, Any] = {
+    "network_fetch_performed": False,
+    "live_web_scrape_performed": False,
+    "online_repo_clone_performed": False,
+    "google_drive_storage_used": False,
+    "raw_downloads_committed": False,
+    "raw_archives_committed": False,
+    "raw_images_committed": False,
+    "raw_html_committed": False,
+    "raw_pdf_docx_committed": False,
+    "raw_xlsx_committed": False,
+    "raw_audio_video_committed": False,
+    "raw_data_committed": False,
+    "generated_bundle_bodies_committed": False,
+    "generated_outputs_committed": False,
+    "codex_output_committed": False,
+    "third_party_raw_staged": False,
+    "third_party_raw_tracked_new": False,
+    "ocr_performed": False,
+    "ai_ml_interpretation_performed": False,
+    "stego_tool_execution_performed": False,
+    "image_forensics_performed": False,
+    "audio_analysis_performed": False,
+    "hypothesis_generation_performed": False,
+    "hypothesis_execution_performed": False,
+    "deep_research_performed": False,
+    "website_expansion_performed": False,
+    "cuda_execution_performed": False,
+    "cuda_source_modified": False,
+    "new_cuda_kernel_added": False,
+    "benchmark_performed": False,
+    "scored_experiments_executed": False,
+    "canonical_corpus_active": False,
+    "page_boundaries_final": False,
+    "method_status_upgraded": False,
     "solve_claim": False,
 }
 

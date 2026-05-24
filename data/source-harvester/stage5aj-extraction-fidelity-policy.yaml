@@ -1,0 +1,38 @@
+record_type: stage5aj_extraction_fidelity_policy
+schema: schemas/source-harvester/extraction-fidelity-policy-v0.schema.json
+stage_id: stage-5aj
+source_stage_id: stage-5ai
+raw_snapshot_view:
+  stored_in_ignored_local_paths: true
+  committed: false
+  redacted: false
+  purpose: hashing, provenance, and repeat deterministic extraction
+private_deep_research_extract_view:
+  preserve_runes: true
+  preserve_numbers: true
+  preserve_hashes: true
+  preserve_urls_when_public: true
+  preserve_tables: true
+  preserve_code_blocks: true
+  preserve_cell_coordinates: true
+  preserve_highlight_colors: true
+  minimal_redaction_only: true
+  redaction_log_required: true
+public_website_ingest_view:
+  metadata_first: true
+  publication_review_required: true
+  raw_full_body_dumps_allowed_by_default: false
+  private_discord_identity_allowed: false
+  private_urls_allowed: false
+xlsx_profile:
+  preserve_sheet_order: true
+  preserve_formulas: true
+  preserve_comments: true
+  preserve_hyperlinks: true
+  preserve_fill_colors: true
+  preserve_images_as_inventory_only: true
+  full_cell_metadata_committed: false
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+solve_claim: false

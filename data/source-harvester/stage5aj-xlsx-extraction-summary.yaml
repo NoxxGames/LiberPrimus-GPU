@@ -1,0 +1,121 @@
+record_type: stage5aj_xlsx_extraction_summary
+schema: schemas/source-harvester/xlsx-extraction-summary-v0.schema.json
+stage_id: stage-5aj
+source_stage_id: stage-5ai
+xlsx_workbooks_detected: 2
+xlsx_workbooks_summarized: 2
+lp_excel_detected: true
+translations_decryptions_detected: true
+total_sheet_count: 18
+total_highlighted_cell_count: 239
+total_formula_cell_count: 82883
+total_images_count: 46
+generated_cell_metadata_path: experiments/results/source-harvester-usefulfiles/stage5aj/xlsx_cell_metadata_index.jsonl
+raw_workbook_committed: false
+generated_outputs_committed: false
+ocr_performed: false
+solve_claim: false
+records:
+- record_type: stage5aj_xlsx_workbook_summary_record
+  schema: schemas/source-harvester/xlsx-extraction-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  workbook_id: lp_excel_workbook_local
+  source_id: lp_excel_workbook_local
+  path: third_party/UsefulFilesAndIdeas/LP Excel.xlsx
+  sha256: 75c90c5b0ebf91da118953afdbb1ba4a136f5323599f2d544e8894bd142b6df5
+  size_bytes: 3157592
+  sheet_count: 7
+  sheet_names:
+  - LP Delimiters
+  - LP No Delimiters
+  - Rune stream by section
+  - Single String Runes
+  - Translations
+  - Gematria Primus
+  - Rune Counts
+  defined_names_count: 0
+  images_count: 28
+  comments_count: 0
+  hyperlinks_count: 0
+  merged_range_count: 0
+  formula_cell_count: 82882
+  highlighted_cell_count: 239
+  non_empty_cell_count: 197283
+  rune_like_cell_count: 47836
+  numeric_cell_count: 48695
+  table_like_region_count: 6
+  delimiter_key_present: true
+  lp_delimiters_sheet_present: true
+  lp_no_delimiters_sheet_present: true
+  rune_stream_by_section_sheet_present: true
+  single_string_runes_sheet_present: true
+  translations_sheet_present: true
+  gematria_primus_sheet_present: true
+  rune_counts_sheet_present: true
+  highlight_color_groups:
+    FF00FF00: 5
+    FF00FFFF: 19
+    FF9900FF: 12
+    FFB7B7B7: 30
+    FFD9D9D9: 92
+    FFFF0000: 3
+    FFFF00FF: 11
+    FFFF9900: 12
+    FFFFFF00: 55
+  repeat_highlight_candidate_count: 239
+  section_count: 1
+  count_policy_records: 1
+  raw_workbook_committed: false
+  generated_outputs_committed: false
+  ocr_performed: false
+  solve_claim: false
+- record_type: stage5aj_xlsx_workbook_summary_record
+  schema: schemas/source-harvester/xlsx-extraction-summary-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  workbook_id: translations_decryptions_xlsx_local
+  source_id: translations_decryptions_xlsx_local
+  path: third_party/UsefulFilesAndIdeas/tranlsations_decryptions.xlsx
+  sha256: 84d0455178be1098d4177c1aa4bc14a76f9fe47deb7e5af6365faf85f6fd485f
+  size_bytes: 7431832
+  sheet_count: 11
+  sheet_names:
+  - README
+  - Prime Sums
+  - A Warning
+  - Some Wisdom
+  - Welcome
+  - A Koan A Man
+  - The Loss Of
+  - A Koan During
+  - An Instruction
+  - p57 Parable
+  - p56 An End
+  defined_names_count: 0
+  images_count: 18
+  comments_count: 0
+  hyperlinks_count: 4
+  merged_range_count: 14
+  formula_cell_count: 1
+  highlighted_cell_count: 0
+  non_empty_cell_count: 32188
+  rune_like_cell_count: 2977
+  numeric_cell_count: 19230
+  table_like_region_count: 11
+  delimiter_key_present: false
+  lp_delimiters_sheet_present: false
+  lp_no_delimiters_sheet_present: false
+  rune_stream_by_section_sheet_present: false
+  single_string_runes_sheet_present: false
+  translations_sheet_present: false
+  gematria_primus_sheet_present: false
+  rune_counts_sheet_present: false
+  highlight_color_groups: {}
+  repeat_highlight_candidate_count: 0
+  section_count: 0
+  count_policy_records: 0
+  raw_workbook_committed: false
+  generated_outputs_committed: false
+  ocr_performed: false
+  solve_claim: false

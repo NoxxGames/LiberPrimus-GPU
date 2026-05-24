@@ -1,0 +1,10 @@
+record_type: stage5aj_deep_research_pack_update_summary
+schema: schemas/source-harvester/deep-research-pack-update-summary-v0.schema.json
+stage_id: stage-5aj
+source_stage_id: stage-5ai
+deep_research_pack_records: 7
+deep_research_performed: false
+private_deep_research_ready_count: 34
+source_card_update_records: 34
+content_index_update_records: 34
+solve_claim: false

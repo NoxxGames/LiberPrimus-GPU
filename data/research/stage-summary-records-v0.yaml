@@ -1079,3 +1079,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AI wrote 10 curated bundle records, 26 source-card records, 19 content-index records, 10 Deep-Research pack records, 20 missing-source records, and 14 unclassified-source classification records. It marks 8 bundles ready for private Deep Research, 0 bundles public website-ready, selects Stage 5AJ Deep Research source inventory and reliability prompt, and performed no network fetch, online clone, Google Drive storage, raw third-party commit, Deep Research execution, hypothesis generation or execution, OCR/AI/ML/image/stego/audio processing, CUDA execution, CUDA-facing source modification, new kernel addition, p56/full-p56 execution, unsolved-page CUDA use, GPU benchmark, speedup claim, scored experiment, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5aj
+    title: UsefulFilesAndIdeas local-source integration and extraction-fidelity policy
+    status: complete
+    category: infrastructure
+    summary: Integrated the ignored local UsefulFilesAndIdeas folder into source-harvester metadata, added compact workbook/link/source-card summaries, hardened private extraction fidelity and redaction policy, and selected Stage 5AK Deep Research source inventory and reliability review.
+    key_outputs:
+      - "`libreprimus source-harvester` Stage 5AJ commands for UsefulFiles inventory, workbook metadata extraction, important-link parsing, source-card/content-index updates, scraper/redaction/extraction-fidelity policy, Deep-Research pack updates, guardrails, next-stage decisions, summary generation, validation, and summary display."
+      - Stage 5AJ UsefulFiles local inventory, source-manifest extension, source-card summary, content-index summary, XLSX extraction summary, important-links source index, new clue categories, extraction-fidelity policy, redaction policy, scraper-capture policy, website-ingest update, Deep-Research pack update, research-bundle readiness, missing-source plan update, guardrail, next-stage-decision, and aggregate summary records under `data/source-harvester/`.
+      - Ignored generated bundle/report bodies under `research-inputs/stage5aj/`, `experiments/results/research-bundles/stage5aj/`, and `experiments/results/source-harvester-usefulfiles/stage5aj/` plus an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AJ records 5 local source records, 29 new URL/planned source records, 2 workbook summaries, 46 parsed important-link URLs, 34 source-card updates, 34 content-index updates, 16 new clue-category records, 7 Deep-Research pack updates, 10 private Deep Research-ready bundles, and 0 public website-ready bundles. It selected Stage 5AK Deep Research source inventory and reliability prompt, preserved raw workbooks/images/text and generated extraction bodies as ignored local material, used no Google Drive storage, and performed no network fetch, live scraping, online clone, Deep Research execution, OCR/AI/ML/image forensics/stego/audio processing, hypothesis generation/execution, CUDA execution, CUDA-facing source modification, new kernel addition, benchmark, scored experiment, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

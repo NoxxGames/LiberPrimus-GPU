@@ -16,9 +16,9 @@ For most Codex tasks, read:
 - Do not trust rendered GitHub pages, cached raw URLs, memory, or old conversation context when state matters.
 - Run the task-specific validation commands before staging.
 - Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
-- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after Stage 5AI updates so Stage 5AJ Deep Research prompts inherit current source-of-truth labels.
+- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after Stage 5AJ updates so Stage 5AK Deep Research prompts inherit current source-of-truth labels.
 - Keep raw/generated outputs unstaged.
-- For Stage 5AF/5AG/5AI source-harvester work, keep all raw harvester outputs and generated bundle bodies local and ignored; do not use Google Drive as project storage.
+- For Stage 5AF/5AG/5AI/5AJ source-harvester work, keep all raw harvester outputs, raw UsefulFiles material, and generated bundle/extraction bodies local and ignored; do not use Google Drive as project storage.
 
 ## Documentation Updates
 
@@ -32,8 +32,8 @@ If direction changes, update:
 - `ROADMAP.md`
 - `AGENTS.md`
 - Relevant tutorials and `docs/wiki-source/**`
-- `docs/onboarding/source-harvester-workflow.md`, `docs/onboarding/local-source-inventory-workflow.md`, `docs/onboarding/deep-research-bundle-workflow.md`, `docs/reference/source-harvester-cli.md`, `docs/reference/source-harvester-local-inventory-cli.md`, and `docs/reference/source-harvester-curated-bundles-cli.md` when source-harvester behavior changes.
-- `data/project-state/stage5ah-*.yaml` and `data/source-harvester/stage5ai-*` when Stage 5AI bundle metadata or the Stage 5AJ next-stage decision change.
+- `docs/onboarding/source-harvester-workflow.md`, `docs/onboarding/local-source-inventory-workflow.md`, `docs/onboarding/deep-research-bundle-workflow.md`, `docs/onboarding/deep-research-ingest-format.md`, `docs/reference/source-harvester-cli.md`, `docs/reference/source-harvester-local-inventory-cli.md`, `docs/reference/source-harvester-curated-bundles-cli.md`, and `docs/reference/source-harvester-usefulfiles-cli.md` when source-harvester behavior changes.
+- `data/project-state/stage5ah-*.yaml`, `data/source-harvester/stage5ai-*`, and `data/source-harvester/stage5aj-*` when bundle metadata or the Stage 5AK next-stage decision change.
 
 ## Safety Rules
 

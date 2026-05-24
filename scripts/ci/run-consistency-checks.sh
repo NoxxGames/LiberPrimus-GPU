@@ -23,14 +23,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5AI" \
-    --expected-next-stage "Stage 5AJ" \
+    --expected-latest-stage "Stage 5AJ" \
+    --expected-next-stage "Stage 5AK" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5AI" \
-    --expected-next-stage "Stage 5AJ" \
+    --expected-latest-stage "Stage 5AJ" \
+    --expected-next-stage "Stage 5AK" \
     --out "$stage5ah_out/current_next_stage_report.json"
 "$python_bin" - <<PY
 import json
@@ -45,14 +45,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AI",
+        expected_latest_stage="Stage 5AJ",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AI",
+            "expected_latest_stage": "Stage 5AJ",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -1972,6 +1972,22 @@ stage5ai_bundle_manifest="research-inputs/stage5ai/master_manifest.yaml"
 stage5ai_generated_report="experiments""/results/research-bundles/stage5ai/summary.json"
 git check-ignore -q "$stage5ai_bundle_manifest"
 git check-ignore -q "$stage5ai_generated_report"
+
+stage5aj_summary_report="experiments""/results/source-harvester-usefulfiles/stage5aj/summary.json"
+if [[ -f "$stage5aj_summary_report" ]]; then
+    echo "Validating Stage 5AJ UsefulFilesAndIdeas records"
+    "$python_bin" -m libreprimus.cli source-harvester validate-stage5aj
+else
+    echo "Skipping Stage 5AJ generated UsefulFiles validation; ignored local reports are absent"
+fi
+stage5aj_bundle_manifest="research-inputs/stage5aj/master_manifest.yaml"
+stage5aj_cell_index="experiments""/results/source-harvester-usefulfiles/stage5aj/xlsx_cell_metadata_index.jsonl"
+stage5aj_important_links="experiments""/results/source-harvester-usefulfiles/stage5aj/important_links_url_index.json"
+stage5aj_raw_workbook="third_party/UsefulFilesAndIdeas/LP Excel.xlsx"
+git check-ignore -q "$stage5aj_bundle_manifest"
+git check-ignore -q "$stage5aj_cell_index"
+git check-ignore -q "$stage5aj_important_links"
+git check-ignore -q "$stage5aj_raw_workbook"
 
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

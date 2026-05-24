@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AJ UsefulFilesAndIdeas Integration
+
+Stage 5AJ is local source integration and policy hardening, not an experiment. It consumes ignored `third_party/UsefulFilesAndIdeas/` material and commits compact inventory, source-manifest extension, workbook summary, important-link index, source-card/content-index, extraction-fidelity, redaction, scraper-capture, website-ingest, Deep-Research pack, readiness, guardrail, next-stage, and summary records.
+
+Generated Stage 5AJ bundle bodies and reports remain ignored under `research-inputs/stage5aj/`, `experiments/results/research-bundles/stage5aj/`, and `experiments/results/source-harvester-usefulfiles/stage5aj/`. Stage 5AJ performs no network fetch, live web scrape, online clone, Google Drive storage, raw workbook/image/text commit, Deep Research execution, website expansion, hypothesis generation/execution, OCR, AI/ML interpretation, image forensics, stego/audio tooling, CUDA, benchmarks, scored experiments, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AI Curated Research Bundles
 
 Stage 5AI is local curation and source-provenance metadata, not an experiment. It consumes Stage

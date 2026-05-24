@@ -320,6 +320,11 @@ STALE_CURRENT_STATE_PATTERNS = (
         "Stage 5AI is complete and should not be described as the next stage.",
     ),
     StalePattern(
+        "stale_next_stage5aj",
+        re.compile(r"\bnext(?:\s+planned\s+stage)?\s*:\s*stage\s+5aj\b", re.IGNORECASE),
+        "Stage 5AJ is complete and should not be described as the next stage.",
+    ),
+    StalePattern(
         "stale_stage3z_current",
         re.compile(r"\bstage\s+3z\s+current\b", re.IGNORECASE),
         "Stage 3Z is no longer the current stage.",
@@ -960,10 +965,27 @@ def check_state_drift_consistency(
         "stage 5ai" in staged_plan
         and "curated research-bundle extraction" in staged_plan
         and "stage 5aj" in staged_plan
-        and "deep research source inventory" in staged_plan
+        and "usefulfilesandideas" in staged_plan
         and "10 ignored curated bundle skeletons" in staged_plan
         and "complete" in staged_plan,
-        "Staged plan records Stage 5AI curated research bundles and Stage 5AJ direction.",
+        "Staged plan records Stage 5AI curated research bundles and Stage 5AJ UsefulFiles direction.",
+        root / "docs/roadmap/staged-plan.md",
+    )
+    _require_fact(
+        results,
+        "stage5aj_usefulfiles_integration_complete",
+        "stage 5aj" in staged_plan
+        and "usefulfilesandideas" in staged_plan
+        and "extraction-fidelity" in staged_plan
+        and "redaction" in staged_plan
+        and "scraper capture" in staged_plan
+        and "stage 5ak" in staged_plan
+        and "deep research source inventory" in staged_plan
+        and "no network fetch" in staged_plan
+        and "website expansion" in staged_plan
+        and "deep research execution" in staged_plan
+        and "complete" in staged_plan,
+        "Staged plan records Stage 5AJ UsefulFiles integration and Stage 5AK direction.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -1351,9 +1373,11 @@ def check_state_drift_consistency(
         and "google drive" in combined
         and "stage 5ag" in combined
         and "stage 5ai" in combined
+        and "stage 5aj" in combined
+        and "usefulfilesandideas" in combined
         and "raw downloads" in combined
         and "solve claim" in combined,
-        "Stage 5AF source-harvester local-only and Stage 5AG/5AI boundary are documented.",
+        "Stage 5AF source-harvester local-only and Stage 5AG/5AI/5AJ boundaries are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(
@@ -1364,8 +1388,9 @@ def check_state_drift_consistency(
         and "google drive" in combined
         and "raw source" in combined
         and "stage 5ai" in combined
+        and "stage 5aj" in combined
         and "solve claim" in combined,
-        "Stage 5AG local source inventory, Stage 5AI curation, and raw-data guardrails are documented.",
+        "Stage 5AG local source inventory, Stage 5AI curation, Stage 5AJ UsefulFiles intake, and raw-data guardrails are documented.",
         root / "docs/roadmap/staged-plan.md",
     )
     _require_fact(

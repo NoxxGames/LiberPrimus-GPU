@@ -1,0 +1,984 @@
+record_type: stage5aj_usefulfiles_source_card_summary
+schema: schemas/source-harvester/curated-source-card-summary-v0.schema.json
+stage_id: stage-5aj
+source_stage_id: stage-5ai
+source_card_records: 34
+local_source_card_records: 5
+url_source_card_records: 29
+publication_review_required_count: 34
+website_publication_allowed_count: 0
+private_deep_research_extract_ready_count: 34
+xlsx_workbooks_summarized: 2
+important_links_urls_found: 46
+raw_content_publication_allowed: false
+generated_extract_publication_allowed: false
+solve_claim: false
+records:
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: gematria_primus_image_local
+  title: Gematria Primus visual table image
+  source_type: local_user_upload
+  priority: A2
+  source_tier: tier3_reproducible_community_data
+  bundle_ids:
+  - 02-liber-primus-images-and-transcriptions
+  - 05-red-markers-and-visual-numerics
+  - 08-tools-gpprime-dwh-gematria
+  clue_categories:
+  - visual_gematria_reference
+  local_source_paths_redacted_or_relative:
+  - third_party/UsefulFilesAndIdeas/GematrriaPrimus.jpg
+  recommended_capture_modes:
+  - image_hash
+  - image_metadata
+  content_types:
+  - image_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: lp_excel_workbook_local
+  title: LP Excel delimiter-preserving Liber Primus workbook
+  source_type: local_user_upload
+  priority: A1
+  source_tier: tier3_reproducible_community_data
+  bundle_ids:
+  - 02-liber-primus-images-and-transcriptions
+  - 03-page-49-51-token-block
+  - 04-cuneiform-base60-base59
+  - 05-red-markers-and-visual-numerics
+  - 07-boundary-mobius-repeated-fragments
+  clue_categories:
+  - delimiter_preserving_lp_transcript
+  - manual_highlight_repeat_fragments
+  - section_boundary_repeat_network
+  - lp_count_policy_reconciliation
+  - excel_highlight_color_annotations
+  - workbook_formula_and_image_inventory
+  local_source_paths_redacted_or_relative:
+  - third_party/UsefulFilesAndIdeas/LP Excel.xlsx
+  recommended_capture_modes:
+  - xlsx_hash
+  - workbook_sheet_inventory
+  - workbook_cell_metadata
+  - workbook_highlight_metadata
+  - workbook_formula_inventory
+  - workbook_image_inventory
+  - delimiter_policy_extract
+  - rune_count_extract
+  - section_stream_extract
+  content_types:
+  - workbook
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: translations_decryptions_xlsx_local
+  title: Translations/decryptions solved-page spreadsheet export
+  source_type: local_user_upload
+  priority: A1
+  source_tier: tier3_reproducible_community_data
+  bundle_ids:
+  - 02-liber-primus-images-and-transcriptions
+  - 08-tools-gpprime-dwh-gematria
+  - 10-known-negative-retired-ideas
+  clue_categories:
+  - p56_p57_gp_sum_3301_1033
+  - unverified_shift_pattern_warning
+  - workbook_formula_and_image_inventory
+  local_source_paths_redacted_or_relative:
+  - third_party/UsefulFilesAndIdeas/tranlsations_decryptions.xlsx
+  recommended_capture_modes:
+  - xlsx_hash
+  - sheet_inventory
+  - prime_sums_extract
+  - p56_p57_fixture_extract
+  - solved_page_shift_vector_extract
+  - embedded_image_inventory
+  content_types:
+  - workbook
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_frequency_analysis_unsolved_pages
+  title: Frequency Analysis Unsolved Pages
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 03-page-49-51-token-block
+  - 09-community-hypotheses
+  clue_categories:
+  - same_rune_bigram_statistic
+  - low_doublet_statistical_texture
+  url: https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_Unsolved_Pages
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_page_56
+  title: PAGE 56
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 03-page-49-51-token-block
+  - 08-tools-gpprime-dwh-gematria
+  clue_categories:
+  - dwh_target_and_algorithms
+  - p56_prime_minus_one
+  url: https://uncovering-cicada.fandom.com/wiki/PAGE_56
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_page_57
+  title: PAGE 57
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 03-page-49-51-token-block
+  - 08-tools-gpprime-dwh-gematria
+  clue_categories:
+  - p57_parable_gp_product
+  - p56_p57_gp_sum_3301_1033
+  url: https://uncovering-cicada.fandom.com/wiki/PAGE_57
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: usefulfiles_important_links_local
+  title: UsefulFilesAndIdeas important links list
+  source_type: local_user_upload
+  priority: A1
+  source_tier: tier3_reproducible_community_data
+  bundle_ids:
+  - 03-page-49-51-token-block
+  - 06-outguess-stego-hidden-formatting
+  - 08-tools-gpprime-dwh-gematria
+  - 09-community-hypotheses
+  clue_categories:
+  - source_gap_closure
+  - reddit_claims_targeted_capture
+  local_source_paths_redacted_or_relative:
+  - third_party/UsefulFilesAndIdeas/important_links.txt
+  recommended_capture_modes:
+  - text_hash
+  - url_extraction
+  - source_manifest_extension
+  - link_deduplication
+  - source_priority_classification
+  content_types:
+  - text
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_symbols_drawing_art_liber_primus
+  title: Symbols/Drawing/Art of Liber Primus
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 04-cuneiform-base60-base59
+  - 05-red-markers-and-visual-numerics
+  clue_categories:
+  - depictions_tree_cicada_mayfly_wing_spiral_cuneiform
+  - cuneiform_base60_base59
+  - red_runes_dots_punctuation
+  url: https://uncovering-cicada.fandom.com/wiki/Symbols/Drawing/Art_of_Liber_Primus
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_2016_message
+  title: 2016 Message
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 06-outguess-stego-hidden-formatting
+  - 09-community-hypotheses
+  clue_categories:
+  - 2016_liber_primus_is_the_way_quote
+  - 2016_prime_layering
+  url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_outguess
+  title: OutGuess
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 06-outguess-stego-hidden-formatting
+  clue_categories:
+  - outguess_all_pages_claim
+  - stego_tool_provenance
+  url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: reddit_56_57_gp_sums_3301_1033
+  title: 56/57.jpg GP sums of 3301 and 1033
+  source_type: reddit_post
+  priority: A1
+  source_tier: tier4_social_claim_or_screenshot
+  bundle_ids:
+  - 08-tools-gpprime-dwh-gematria
+  - 09-community-hypotheses
+  clue_categories:
+  - p56_p57_gp_sum_3301_1033
+  - fehu_skip_policy
+  url: https://www.reddit.com/r/cicada/comments/1m9lm2a/5657jpg_gp_sums_of_3301_and_1033_found_next_to/
+  recommended_capture_modes:
+  - targeted_post_capture
+  - listing_metadata
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: true
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: brown_corpus_reference
+  title: Brown Corpus
+  source_type: static_webpage
+  priority: A2
+  source_tier: tier3_reproducible_community_data
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - brown_corpus_word_length_controls
+  url: https://en.wikipedia.org/wiki/Brown_Corpus
+  recommended_capture_modes:
+  - metadata
+  - text
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_2015_twitter_message
+  title: 2015 Twitter Message
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - 2015_twitter_message
+  url: https://uncovering-cicada.fandom.com/wiki/2015_Twitter_Message
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_liber_primus
+  title: Liber Primus
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - liber_primus
+  url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_list_of_missing_information
+  title: List of missing information
+  source_type: fandom_page
+  priority: A1
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - source_gap_closure
+  - negative_or_retired_ideas
+  url: https://uncovering-cicada.fandom.com/wiki/List_of_missing_information
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_necrome_cyberterrorism_refutation
+  title: Necrome cyberterrorism refutation
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - necrome_cyberterrorism_refutation
+  url: https://uncovering-cicada.fandom.com/wiki/Necrome_cyberterrorism_refutation
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_onion_7_numbers_on_page_15
+  title: 'Onion 7: numbers on page 15'
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - onion_7_numbers_on_page_15
+  url: https://uncovering-cicada.fandom.com/wiki/Onion_7:_numbers_on_page_15
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_other_twitter_accounts
+  title: Other Twitter Accounts Associated With 3301's Emails
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - twitter_1033_3301_fibonacci_prime_context
+  url: https://uncovering-cicada.fandom.com/wiki/Other_Twitter_Accounts_Associated_With_3301%27s_Emails
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_pgp_signed_message_april_2017
+  title: PGP Signed Message April 2017
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - pgp_signed_message_april_2017
+  url: https://uncovering-cicada.fandom.com/wiki/PGP_Signed_Message_April_2017
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_proposal_the_16_digit_harmonic_key_2422826321411203
+  title: 'PROPOSAL: THE 16-DIGIT HARMONIC KEY (2422826321411203)'
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - proposal_the_16_digit_harmonic_key_2422826321411203
+  url: https://uncovering-cicada.fandom.com/wiki/PROPOSAL:_THE_16-DIGIT_HARMONIC_KEY_(2422826321411203
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_read_the_wiki
+  title: Read the wiki
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - read_the_wiki
+  url: http://uncovering-cicada.wikia.com/
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_the_leaked_email
+  title: The Leaked Email
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - the_leaked_email
+  url: https://uncovering-cicada.fandom.com/wiki/The_Leaked_Email
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_what_happened_2012
+  title: What Happened (2012)
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - what_happened_2012
+  url: https://uncovering-cicada.fandom.com/wiki/What_Happened_(2012
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_what_happened_liber_primus_post_2014
+  title: What Happened Liber Primus (Post 2014)
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - what_happened_liber_primus_post_2014
+  url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Liber_Primus_(Post_2014
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_what_happened_part_1_2013
+  title: What Happened Part 1 (2013)
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - what_happened_part_1_2013
+  url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2013
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_what_happened_part_1_2014
+  title: What Happened Part 1 (2014)
+  source_type: fandom_page
+  priority: A2
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - what_happened_part_1_2014
+  url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: reddit_cicada_subreddit
+  title: r/cicada subreddit
+  source_type: reddit_subreddit
+  priority: A2
+  source_tier: tier4_social_claim_or_screenshot
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - reddit_claims_targeted_capture
+  url: https://www.reddit.com/r/cicada/
+  recommended_capture_modes:
+  - targeted_post_capture
+  - listing_metadata
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: true
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: reddit_frequency_analysis_lp_notes
+  title: Frequency analysis on LP and notes
+  source_type: reddit_post
+  priority: A2
+  source_tier: tier4_social_claim_or_screenshot
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - frequency_analysis_unsolved
+  - low_doublet_statistical_texture
+  url: https://www.reddit.com/r/cicada/comments/rxo4vg/frequency_analysis_on_lp_and_some_notes_and/
+  recommended_capture_modes:
+  - targeted_post_capture
+  - listing_metadata
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: true
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: reddit_layered_primes_2016_message
+  title: Layered primes in the 2016 message
+  source_type: reddit_post
+  priority: A2
+  source_tier: tier4_social_claim_or_screenshot
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - 2016_prime_layering
+  url: https://www.reddit.com/r/cicada/comments/12j1evm/layered_primes_in_the_2016_message/
+  recommended_capture_modes:
+  - targeted_post_capture
+  - listing_metadata
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: true
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: reddit_magic_square_diagonals
+  title: Hidden magic diagonals found in magic squares
+  source_type: reddit_post
+  priority: A1
+  source_tier: tier4_social_claim_or_screenshot
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - magic_square_diagonal_3301_1033
+  - know_this_magic_square_claims
+  url: https://www.reddit.com/r/cicada/comments/1lrwmb9/hidden_magic_diagonals_found_in_the_magic_squares/
+  recommended_capture_modes:
+  - targeted_post_capture
+  - listing_metadata
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: true
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: reddit_page32_path_lies_empty
+  title: Next step is page 32 in Liber Primus / path lies empty
+  source_type: reddit_post
+  priority: A2
+  source_tier: tier4_social_claim_or_screenshot
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - page32_tree_path_lies_empty
+  - 2016_liber_primus_is_the_way_quote
+  url: https://www.reddit.com/r/cicada/comments/9zb42i/next_step_is_page_32_in_liber_primus_the/
+  recommended_capture_modes:
+  - targeted_post_capture
+  - listing_metadata
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: true
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: stage5aj_1_using_the_brown_corpus
+  title: 1. using the Brown corpus (
+  source_type: static_webpage
+  priority: B
+  source_tier: tier3_reproducible_community_data
+  bundle_ids:
+  - 09-community-hypotheses
+  clue_categories:
+  - 1_using_the_brown_corpus
+  url: https://archive.org/details/BrownCorpus
+  recommended_capture_modes:
+  - metadata
+  - text
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: usefulfiles_ideas_local
+  title: UsefulFilesAndIdeas idea seeds
+  source_type: local_user_upload
+  priority: A2
+  source_tier: tier4_social_claim_or_screenshot
+  bundle_ids:
+  - 09-community-hypotheses
+  - 10-known-negative-retired-ideas
+  clue_categories:
+  - brown_corpus_word_length_controls
+  - bibliographic_liber_primus_euler_lead
+  local_source_paths_redacted_or_relative:
+  - third_party/UsefulFilesAndIdeas/ideas.txt
+  recommended_capture_modes:
+  - text_hash
+  - idea_seed_index
+  - future_null_control_notes
+  content_types:
+  - text
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_source_card
+  stage_id: stage-5aj
+  source_id: fandom_harmonic_key_proposal
+  title: 'PROPOSAL: THE 16-DIGIT HARMONIC KEY'
+  source_type: fandom_page
+  priority: C
+  source_tier: tier2_archived_community_page_with_references
+  bundle_ids:
+  - 10-known-negative-retired-ideas
+  clue_categories:
+  - ai_generated_or_overfit_claims
+  - negative_or_retired_ideas
+  url: https://uncovering-cicada.fandom.com/wiki/PROPOSAL%3A_THE_16-DIGIT_HARMONIC_KEY_%282422826321411203%29
+  recommended_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  content_types:
+  - web_metadata
+  publication_status: generated_extract_review_required
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  website_publication_allowed: false
+  private_deep_research_allowed: true
+  redaction_required: false
+  solve_claim: false

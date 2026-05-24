@@ -721,6 +721,8 @@ research-inputs/**
 !research-inputs/.gitkeep
 !research-inputs/stage5ai/
 !research-inputs/stage5ai/.gitkeep
+!research-inputs/stage5aj/
+!research-inputs/stage5aj/.gitkeep
 
 # Generated document staleness reports
 experiments/results/doc-staleness/**
@@ -739,6 +741,15 @@ experiments/results/research-bundles/**
 !experiments/results/research-bundles/.gitkeep
 !experiments/results/research-bundles/stage5ai/
 !experiments/results/research-bundles/stage5ai/.gitkeep
+!experiments/results/research-bundles/stage5aj/
+!experiments/results/research-bundles/stage5aj/.gitkeep
+
+# Generated UsefulFilesAndIdeas source-harvester outputs
+experiments/results/source-harvester-usefulfiles/**
+!experiments/results/source-harvester-usefulfiles/
+!experiments/results/source-harvester-usefulfiles/.gitkeep
+!experiments/results/source-harvester-usefulfiles/stage5aj/
+!experiments/results/source-harvester-usefulfiles/stage5aj/.gitkeep
 
 # Local Codex completion handoffs
 codex-output/**

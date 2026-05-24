@@ -1,0 +1,101 @@
+record_type: stage5aj_research_bundle_readiness
+schema: schemas/source-harvester/deep-research-pack-update-summary-v0.schema.json
+stage_id: stage-5aj
+source_stage_id: stage-5ai
+bundle_readiness_before: 8
+bundle_readiness_after: 10
+bundles_ready_for_private_deep_research: 10
+bundles_public_website_ready: 0
+website_ingest_metadata_ready: true
+solve_claim: false
+records:
+- record_type: stage5aj_research_bundle_readiness_record
+  stage_id: stage-5aj
+  bundle_id: 01-signed-messages-and-authenticity
+  content_index_update_records: 0
+  stage5ai_ready_for_private_deep_research: true
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  readiness_status: stage5ai_readiness_preserved
+  solve_claim: false
+- record_type: stage5aj_research_bundle_readiness_record
+  stage_id: stage-5aj
+  bundle_id: 02-liber-primus-images-and-transcriptions
+  content_index_update_records: 3
+  stage5ai_ready_for_private_deep_research: true
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  readiness_status: usefulfiles_update_ready_for_private_deep_research
+  solve_claim: false
+- record_type: stage5aj_research_bundle_readiness_record
+  stage_id: stage-5aj
+  bundle_id: 03-page-49-51-token-block
+  content_index_update_records: 4
+  stage5ai_ready_for_private_deep_research: false
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  readiness_status: usefulfiles_update_ready_for_private_deep_research
+  solve_claim: false
+- record_type: stage5aj_research_bundle_readiness_record
+  stage_id: stage-5aj
+  bundle_id: 04-cuneiform-base60-base59
+  content_index_update_records: 1
+  stage5ai_ready_for_private_deep_research: true
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  readiness_status: usefulfiles_update_ready_for_private_deep_research
+  solve_claim: false
+- record_type: stage5aj_research_bundle_readiness_record
+  stage_id: stage-5aj
+  bundle_id: 05-red-markers-and-visual-numerics
+  content_index_update_records: 0
+  stage5ai_ready_for_private_deep_research: true
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  readiness_status: stage5ai_readiness_preserved
+  solve_claim: false
+- record_type: stage5aj_research_bundle_readiness_record
+  stage_id: stage-5aj
+  bundle_id: 06-outguess-stego-hidden-formatting
+  content_index_update_records: 2
+  stage5ai_ready_for_private_deep_research: true
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  readiness_status: usefulfiles_update_ready_for_private_deep_research
+  solve_claim: false
+- record_type: stage5aj_research_bundle_readiness_record
+  stage_id: stage-5aj
+  bundle_id: 07-boundary-mobius-repeated-fragments
+  content_index_update_records: 0
+  stage5ai_ready_for_private_deep_research: true
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  readiness_status: stage5ai_readiness_preserved
+  solve_claim: false
+- record_type: stage5aj_research_bundle_readiness_record
+  stage_id: stage-5aj
+  bundle_id: 08-tools-gpprime-dwh-gematria
+  content_index_update_records: 1
+  stage5ai_ready_for_private_deep_research: false
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  readiness_status: usefulfiles_update_ready_for_private_deep_research
+  solve_claim: false
+- record_type: stage5aj_research_bundle_readiness_record
+  stage_id: stage-5aj
+  bundle_id: 09-community-hypotheses
+  content_index_update_records: 22
+  stage5ai_ready_for_private_deep_research: true
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  readiness_status: usefulfiles_update_ready_for_private_deep_research
+  solve_claim: false
+- record_type: stage5aj_research_bundle_readiness_record
+  stage_id: stage-5aj
+  bundle_id: 10-known-negative-retired-ideas
+  content_index_update_records: 1
+  stage5ai_ready_for_private_deep_research: true
+  ready_for_private_deep_research: true
+  public_website_ready: false
+  readiness_status: usefulfiles_update_ready_for_private_deep_research
+  solve_claim: false

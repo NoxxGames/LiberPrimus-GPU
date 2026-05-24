@@ -1,0 +1,113 @@
+record_type: stage5aj_usefulfiles_local_inventory
+schema: schemas/source-harvester/usefulfiles-local-inventory-record-v0.schema.json
+stage_id: stage-5aj
+source_stage_id: stage-5ai
+source_root: third_party/UsefulFilesAndIdeas
+local_folder_exists: true
+usefulfiles_local_file_count: 5
+usefulfiles_total_size_bytes: 10647922
+xlsx_files_found: 2
+important_links_found: true
+ideas_found: true
+gematria_image_found: true
+source_ids_added:
+- gematria_primus_image_local
+- lp_excel_workbook_local
+- translations_decryptions_xlsx_local
+- usefulfiles_ideas_local
+- usefulfiles_important_links_local
+raw_data_committed: false
+generated_outputs_committed: false
+solve_claim: false
+records:
+- record_type: stage5aj_usefulfiles_local_inventory_record
+  schema: schemas/source-harvester/usefulfiles-local-inventory-record-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  source_id: gematria_primus_image_local
+  file_name: GematrriaPrimus.jpg
+  relative_path: third_party/UsefulFilesAndIdeas/GematrriaPrimus.jpg
+  extension: .jpg
+  size_bytes: 53555
+  sha256: 975ec8293e1de8fc3d7b76489f0eadb217805238f07956407fef053835db38c9
+  mime_guess: image/jpeg
+  source_type: local_user_upload
+  priority: A2
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+  image_width: 598
+  image_height: 842
+  image_mode: RGB
+  image_format: JPEG
+  ocr_performed: false
+  image_forensics_performed: false
+- record_type: stage5aj_usefulfiles_local_inventory_record
+  schema: schemas/source-harvester/usefulfiles-local-inventory-record-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  source_id: usefulfiles_ideas_local
+  file_name: ideas.txt
+  relative_path: third_party/UsefulFilesAndIdeas/ideas.txt
+  extension: .txt
+  size_bytes: 448
+  sha256: 1cac147fbc9959c71027bf3de11521ef878d7a50f770495893fc676f8e405011
+  mime_guess: text/plain
+  source_type: local_user_upload
+  priority: A2
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_local_inventory_record
+  schema: schemas/source-harvester/usefulfiles-local-inventory-record-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  source_id: usefulfiles_important_links_local
+  file_name: important_links.txt
+  relative_path: third_party/UsefulFilesAndIdeas/important_links.txt
+  extension: .txt
+  size_bytes: 4495
+  sha256: 20c980724dc867bfc635942d09368c31f3397ec424f63fb5f3c7e62c7ea3556c
+  mime_guess: text/plain
+  source_type: local_user_upload
+  priority: A1
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_local_inventory_record
+  schema: schemas/source-harvester/usefulfiles-local-inventory-record-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  source_id: lp_excel_workbook_local
+  file_name: LP Excel.xlsx
+  relative_path: third_party/UsefulFilesAndIdeas/LP Excel.xlsx
+  extension: .xlsx
+  size_bytes: 3157592
+  sha256: 75c90c5b0ebf91da118953afdbb1ba4a136f5323599f2d544e8894bd142b6df5
+  mime_guess: application/octet-stream
+  source_type: local_user_upload
+  priority: A1
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false
+- record_type: stage5aj_usefulfiles_local_inventory_record
+  schema: schemas/source-harvester/usefulfiles-local-inventory-record-v0.schema.json
+  stage_id: stage-5aj
+  source_stage_id: stage-5ai
+  source_id: translations_decryptions_xlsx_local
+  file_name: tranlsations_decryptions.xlsx
+  relative_path: third_party/UsefulFilesAndIdeas/tranlsations_decryptions.xlsx
+  extension: .xlsx
+  size_bytes: 7431832
+  sha256: 84d0455178be1098d4177c1aa4bc14a76f9fe47deb7e5af6365faf85f6fd485f
+  mime_guess: application/octet-stream
+  source_type: local_user_upload
+  priority: A1
+  collection_status: local_ready
+  raw_file_committed: false
+  generated_outputs_committed: false
+  solve_claim: false

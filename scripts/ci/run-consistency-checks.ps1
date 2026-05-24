@@ -24,14 +24,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5AI" `
-        --expected-next-stage "Stage 5AJ" `
+        --expected-latest-stage "Stage 5AJ" `
+        --expected-next-stage "Stage 5AK" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5AI" `
-        --expected-next-stage "Stage 5AJ" `
+        --expected-latest-stage "Stage 5AJ" `
+        --expected-next-stage "Stage 5AK" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -46,14 +46,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AI",
+        expected_latest_stage="Stage 5AJ",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AI",
+            "expected_latest_stage": "Stage 5AJ",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -1970,6 +1970,22 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
     $Stage5AIGeneratedReport = Join-Path (Join-Path (Join-Path "experiments" "results") "research-bundles") "stage5ai\summary.json"
     git check-ignore -q $Stage5AIBundleManifest
     git check-ignore -q $Stage5AIGeneratedReport
+
+    $Stage5AJSummaryReport = Join-Path (Join-Path (Join-Path "experiments" "results") "source-harvester-usefulfiles") "stage5aj\summary.json"
+    if (Test-Path $Stage5AJSummaryReport) {
+        Write-Host "Validating Stage 5AJ UsefulFilesAndIdeas records"
+        & $Python -m libreprimus.cli source-harvester validate-stage5aj
+    } else {
+        Write-Host "Skipping Stage 5AJ generated UsefulFiles validation; ignored local reports are absent"
+    }
+    $Stage5AJBundleManifest = "research-inputs/stage5aj/master_manifest.yaml"
+    $Stage5AJCellIndex = Join-Path (Join-Path (Join-Path "experiments" "results") "source-harvester-usefulfiles") "stage5aj\xlsx_cell_metadata_index.jsonl"
+    $Stage5AJImportantLinks = Join-Path (Join-Path (Join-Path "experiments" "results") "source-harvester-usefulfiles") "stage5aj\important_links_url_index.json"
+    $Stage5AJRawWorkbook = "third_party/UsefulFilesAndIdeas/LP Excel.xlsx"
+    git check-ignore -q $Stage5AJBundleManifest
+    git check-ignore -q $Stage5AJCellIndex
+    git check-ignore -q $Stage5AJImportantLinks
+    git check-ignore -q $Stage5AJRawWorkbook
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

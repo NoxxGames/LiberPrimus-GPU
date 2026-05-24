@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AJ scraper capture policy",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "capture_profiles", "live_web_scrape_performed", "network_fetch_performed", "online_repo_clone_performed", "google_drive_storage_used", "solve_claim"],
+  "properties": {
+    "record_type": { "type": "string" },
+    "stage_id": { "const": "stage-5aj" },
+    "source_stage_id": { "const": "stage-5ai" },
+    "capture_profiles": { "type": "array", "minItems": 1 },
+    "live_web_scrape_performed": { "const": false },
+    "network_fetch_performed": { "const": false },
+    "online_repo_clone_performed": { "const": false },
+    "google_drive_storage_used": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

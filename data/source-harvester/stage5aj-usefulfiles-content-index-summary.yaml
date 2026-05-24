@@ -1,0 +1,456 @@
+record_type: stage5aj_usefulfiles_content_index_summary
+schema: schemas/source-harvester/curated-content-index-summary-v0.schema.json
+stage_id: stage-5aj
+source_stage_id: stage-5ai
+content_index_records: 34
+source_card_records: 34
+website_publication_allowed_count: 0
+private_deep_research_ready_count: 34
+generated_extract_review_required_count: 34
+blocked_private_or_sensitive_count: 0
+raw_bodies_committed: false
+generated_outputs_committed: false
+solve_claim: false
+records:
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 02-liber-primus-images-and-transcriptions::gematria_primus_image_local
+  bundle_id: 02-liber-primus-images-and-transcriptions
+  source_id: gematria_primus_image_local
+  title: Gematria Primus visual table image
+  content_kind: metadata_only
+  relative_generated_path: 02-liber-primus-images-and-transcriptions/extracted_text/gematria_primus_image_local-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 02-liber-primus-images-and-transcriptions::lp_excel_workbook_local
+  bundle_id: 02-liber-primus-images-and-transcriptions
+  source_id: lp_excel_workbook_local
+  title: LP Excel delimiter-preserving Liber Primus workbook
+  content_kind: metadata_only
+  relative_generated_path: 02-liber-primus-images-and-transcriptions/extracted_text/lp_excel_workbook_local-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 02-liber-primus-images-and-transcriptions::translations_decryptions_xlsx_local
+  bundle_id: 02-liber-primus-images-and-transcriptions
+  source_id: translations_decryptions_xlsx_local
+  title: Translations/decryptions solved-page spreadsheet export
+  content_kind: metadata_only
+  relative_generated_path: 02-liber-primus-images-and-transcriptions/extracted_text/translations_decryptions_xlsx_local-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 03-page-49-51-token-block::fandom_frequency_analysis_unsolved_pages
+  bundle_id: 03-page-49-51-token-block
+  source_id: fandom_frequency_analysis_unsolved_pages
+  title: Frequency Analysis Unsolved Pages
+  content_kind: metadata_only
+  relative_generated_path: 03-page-49-51-token-block/extracted_text/fandom_frequency_analysis_unsolved_pages-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 03-page-49-51-token-block::fandom_page_56
+  bundle_id: 03-page-49-51-token-block
+  source_id: fandom_page_56
+  title: PAGE 56
+  content_kind: metadata_only
+  relative_generated_path: 03-page-49-51-token-block/extracted_text/fandom_page_56-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 03-page-49-51-token-block::fandom_page_57
+  bundle_id: 03-page-49-51-token-block
+  source_id: fandom_page_57
+  title: PAGE 57
+  content_kind: metadata_only
+  relative_generated_path: 03-page-49-51-token-block/extracted_text/fandom_page_57-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 03-page-49-51-token-block::usefulfiles_important_links_local
+  bundle_id: 03-page-49-51-token-block
+  source_id: usefulfiles_important_links_local
+  title: UsefulFilesAndIdeas important links list
+  content_kind: metadata_only
+  relative_generated_path: 03-page-49-51-token-block/extracted_text/usefulfiles_important_links_local-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 04-cuneiform-base60-base59::fandom_symbols_drawing_art_liber_primus
+  bundle_id: 04-cuneiform-base60-base59
+  source_id: fandom_symbols_drawing_art_liber_primus
+  title: Symbols/Drawing/Art of Liber Primus
+  content_kind: metadata_only
+  relative_generated_path: 04-cuneiform-base60-base59/extracted_text/fandom_symbols_drawing_art_liber_primus-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 06-outguess-stego-hidden-formatting::fandom_2016_message
+  bundle_id: 06-outguess-stego-hidden-formatting
+  source_id: fandom_2016_message
+  title: 2016 Message
+  content_kind: metadata_only
+  relative_generated_path: 06-outguess-stego-hidden-formatting/extracted_text/fandom_2016_message-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 06-outguess-stego-hidden-formatting::fandom_outguess
+  bundle_id: 06-outguess-stego-hidden-formatting
+  source_id: fandom_outguess
+  title: OutGuess
+  content_kind: metadata_only
+  relative_generated_path: 06-outguess-stego-hidden-formatting/extracted_text/fandom_outguess-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 08-tools-gpprime-dwh-gematria::reddit_56_57_gp_sums_3301_1033
+  bundle_id: 08-tools-gpprime-dwh-gematria
+  source_id: reddit_56_57_gp_sums_3301_1033
+  title: 56/57.jpg GP sums of 3301 and 1033
+  content_kind: metadata_only
+  relative_generated_path: 08-tools-gpprime-dwh-gematria/extracted_text/reddit_56_57_gp_sums_3301_1033-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: true
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::brown_corpus_reference
+  bundle_id: 09-community-hypotheses
+  source_id: brown_corpus_reference
+  title: Brown Corpus
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/brown_corpus_reference-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_2015_twitter_message
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_2015_twitter_message
+  title: 2015 Twitter Message
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_2015_twitter_message-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_liber_primus
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_liber_primus
+  title: Liber Primus
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_liber_primus-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_list_of_missing_information
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_list_of_missing_information
+  title: List of missing information
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_list_of_missing_information-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_necrome_cyberterrorism_refutation
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_necrome_cyberterrorism_refutation
+  title: Necrome cyberterrorism refutation
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_necrome_cyberterrorism_refutation-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_onion_7_numbers_on_page_15
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_onion_7_numbers_on_page_15
+  title: 'Onion 7: numbers on page 15'
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_onion_7_numbers_on_page_15-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_other_twitter_accounts
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_other_twitter_accounts
+  title: Other Twitter Accounts Associated With 3301's Emails
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_other_twitter_accounts-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_pgp_signed_message_april_2017
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_pgp_signed_message_april_2017
+  title: PGP Signed Message April 2017
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_pgp_signed_message_april_2017-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_proposal_the_16_digit_harmonic_key_2422826321411203
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_proposal_the_16_digit_harmonic_key_2422826321411203
+  title: 'PROPOSAL: THE 16-DIGIT HARMONIC KEY (2422826321411203)'
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_proposal_the_16_digit_harmonic_key_2422826321411203-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_read_the_wiki
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_read_the_wiki
+  title: Read the wiki
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_read_the_wiki-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_the_leaked_email
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_the_leaked_email
+  title: The Leaked Email
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_the_leaked_email-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_what_happened_2012
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_what_happened_2012
+  title: What Happened (2012)
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_what_happened_2012-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_what_happened_liber_primus_post_2014
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_what_happened_liber_primus_post_2014
+  title: What Happened Liber Primus (Post 2014)
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_what_happened_liber_primus_post_2014-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_what_happened_part_1_2013
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_what_happened_part_1_2013
+  title: What Happened Part 1 (2013)
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_what_happened_part_1_2013-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::fandom_what_happened_part_1_2014
+  bundle_id: 09-community-hypotheses
+  source_id: fandom_what_happened_part_1_2014
+  title: What Happened Part 1 (2014)
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/fandom_what_happened_part_1_2014-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::reddit_cicada_subreddit
+  bundle_id: 09-community-hypotheses
+  source_id: reddit_cicada_subreddit
+  title: r/cicada subreddit
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/reddit_cicada_subreddit-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: true
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::reddit_frequency_analysis_lp_notes
+  bundle_id: 09-community-hypotheses
+  source_id: reddit_frequency_analysis_lp_notes
+  title: Frequency analysis on LP and notes
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/reddit_frequency_analysis_lp_notes-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: true
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::reddit_layered_primes_2016_message
+  bundle_id: 09-community-hypotheses
+  source_id: reddit_layered_primes_2016_message
+  title: Layered primes in the 2016 message
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/reddit_layered_primes_2016_message-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: true
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::reddit_magic_square_diagonals
+  bundle_id: 09-community-hypotheses
+  source_id: reddit_magic_square_diagonals
+  title: Hidden magic diagonals found in magic squares
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/reddit_magic_square_diagonals-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: true
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::reddit_page32_path_lies_empty
+  bundle_id: 09-community-hypotheses
+  source_id: reddit_page32_path_lies_empty
+  title: Next step is page 32 in Liber Primus / path lies empty
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/reddit_page32_path_lies_empty-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: true
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::stage5aj_1_using_the_brown_corpus
+  bundle_id: 09-community-hypotheses
+  source_id: stage5aj_1_using_the_brown_corpus
+  title: 1. using the Brown corpus (
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/stage5aj_1_using_the_brown_corpus-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 09-community-hypotheses::usefulfiles_ideas_local
+  bundle_id: 09-community-hypotheses
+  source_id: usefulfiles_ideas_local
+  title: UsefulFilesAndIdeas idea seeds
+  content_kind: metadata_only
+  relative_generated_path: 09-community-hypotheses/extracted_text/usefulfiles_ideas_local-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false
+- record_type: stage5aj_content_index_record
+  stage_id: stage-5aj
+  content_id: 10-known-negative-retired-ideas::fandom_harmonic_key_proposal
+  bundle_id: 10-known-negative-retired-ideas
+  source_id: fandom_harmonic_key_proposal
+  title: 'PROPOSAL: THE 16-DIGIT HARMONIC KEY'
+  content_kind: metadata_only
+  relative_generated_path: 10-known-negative-retired-ideas/extracted_text/fandom_harmonic_key_proposal-metadata.md
+  publication_status: generated_extract_review_required
+  private_deep_research_ready: true
+  website_publication_allowed: false
+  redaction_required: false
+  solve_claim: false

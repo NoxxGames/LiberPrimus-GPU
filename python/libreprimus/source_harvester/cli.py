@@ -15,8 +15,10 @@ from .curated_bundles import build_curated_bundles
 from .deep_research_pack import build_deep_research_pack_index
 from .export import write_json, write_jsonl
 from .extractors import extract_html_file
+from .extraction_fidelity import build_extraction_fidelity_policy
 from .fetcher import fetch_source
 from .hashing import inventory_archive, write_hash_path
+from .important_links import parse_important_links
 from .local_inventory import inventory_local_sources
 from .manifest import validate_manifest
 from .manifest_linkage import link_local_sources
@@ -58,10 +60,32 @@ from .models import (
     STAGE5AI_SOURCE_CARD_SUMMARY_PATH,
     STAGE5AI_SUMMARY_PATH,
     STAGE5AI_WEBSITE_INGEST_FORMAT_PATH,
+    STAGE5AJ_BUNDLE_ROOT,
+    STAGE5AJ_CONTENT_INDEX_SUMMARY_PATH,
+    STAGE5AJ_DEEP_RESEARCH_UPDATE_PATH,
+    STAGE5AJ_FIDELITY_POLICY_PATH,
+    STAGE5AJ_GUARDRAIL_PATH,
+    STAGE5AJ_IMPORTANT_LINKS_PATH,
+    STAGE5AJ_INVENTORY_PATH,
+    STAGE5AJ_MANIFEST_EXTENSION_PATH,
+    STAGE5AJ_MISSING_SOURCE_PLAN_PATH,
+    STAGE5AJ_NEW_CLUE_CATEGORIES_PATH,
+    STAGE5AJ_NEXT_STAGE_DECISION_PATH,
+    STAGE5AJ_OUTPUT_DIR,
+    STAGE5AJ_READINESS_PATH,
+    STAGE5AJ_REDACTION_POLICY_PATH,
+    STAGE5AJ_SCRAPER_POLICY_PATH,
+    STAGE5AJ_SOURCE_CARD_SUMMARY_PATH,
+    STAGE5AJ_SOURCE_ROOT,
+    STAGE5AJ_SUMMARY_PATH,
+    STAGE5AJ_WEBSITE_UPDATE_PATH,
+    STAGE5AJ_XLSX_SUMMARY_PATH,
     SUMMARY_PATH,
     TOOL_POLICY_PATH,
 )
 from .planning import build_plan
+from .redaction_policy import build_redaction_policy
+from .scraper_profiles import build_scraper_capture_policy
 from .source_lock_candidates import build_source_lock_candidates
 from .stage5ag_records import (
     build_stage5ag_guardrail,
@@ -76,9 +100,22 @@ from .stage5ai_records import (
     build_stage5ai_summary,
 )
 from .stage5ai_validation import validate_stage5ai
+from .stage5aj_records import (
+    build_stage5aj_guardrail,
+    build_stage5aj_new_clue_categories,
+    build_stage5aj_next_stage_decision,
+    build_stage5aj_summary,
+)
+from .stage5aj_validation import validate_stage5aj
 from .summary import summarize_stage5af
+from .usefulfiles import (
+    build_usefulfiles_source_cards,
+    inventory_usefulfiles,
+    update_deep_research_packs,
+)
 from .validation import validate_stage5af
 from .website_ingest import build_website_ingest_index
+from .xlsx_extraction import extract_xlsx_metadata
 
 console = Console()
 app = typer.Typer(help="Stage 5AF Cicada source-harvester commands.", no_args_is_help=True)
@@ -702,6 +739,265 @@ def validate_stage5ai_command(
     if errors:
         raise typer.Exit(1)
     console.print("source_harvester_stage5ai_valid=true")
+
+
+@app.command("inventory-usefulfiles")
+def inventory_usefulfiles_command(
+    source_root: Path = typer.Option(STAGE5AJ_SOURCE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AJ_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AJ_INVENTORY_PATH),
+) -> None:
+    result = inventory_usefulfiles(source_root=source_root, results_dir=results_dir, out=out)
+    console.print(f"local_folder_exists={str(result['local_folder_exists']).lower()}")
+    console.print(f"usefulfiles_local_file_count={result['usefulfiles_local_file_count']}")
+    console.print(f"xlsx_files_found={result['xlsx_files_found']}")
+
+
+@app.command("extract-xlsx-metadata")
+def extract_xlsx_metadata_command(
+    source_root: Path = typer.Option(STAGE5AJ_SOURCE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AJ_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AJ_XLSX_SUMMARY_PATH),
+) -> None:
+    result = extract_xlsx_metadata(source_root=source_root, results_dir=results_dir, out=out)
+    console.print(f"xlsx_workbooks_detected={result['xlsx_workbooks_detected']}")
+    console.print(f"xlsx_workbooks_summarized={result['xlsx_workbooks_summarized']}")
+    console.print(f"lp_excel_detected={str(result['lp_excel_detected']).lower()}")
+
+
+@app.command("parse-important-links")
+def parse_important_links_command(
+    source_root: Path = typer.Option(STAGE5AJ_SOURCE_ROOT),
+    existing_manifest: Path = typer.Option(SOURCE_MANIFEST_PATH),
+    results_dir: Path = typer.Option(STAGE5AJ_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AJ_IMPORTANT_LINKS_PATH),
+    out_manifest_extension: Path = typer.Option(STAGE5AJ_MANIFEST_EXTENSION_PATH),
+) -> None:
+    result = parse_important_links(
+        source_root=source_root,
+        existing_manifest_path=existing_manifest,
+        results_dir=results_dir,
+        out=out,
+        out_manifest_extension=out_manifest_extension,
+    )
+    console.print(f"important_links_urls_found={result['important_links_urls_found']}")
+    console.print(f"important_links_new_urls={result['important_links_new_urls']}")
+    console.print(f"manifest_extension_records={result['manifest_extension_records']}")
+
+
+@app.command("build-usefulfiles-source-cards")
+def build_usefulfiles_source_cards_command(
+    inventory: Path = typer.Option(STAGE5AJ_INVENTORY_PATH),
+    xlsx_summary: Path = typer.Option(STAGE5AJ_XLSX_SUMMARY_PATH),
+    important_links: Path = typer.Option(STAGE5AJ_IMPORTANT_LINKS_PATH),
+    manifest_extension: Path = typer.Option(STAGE5AJ_MANIFEST_EXTENSION_PATH),
+    bundle_plan: Path = typer.Option(RESEARCH_BUNDLE_PLAN_PATH),
+    out_source_card_summary: Path = typer.Option(STAGE5AJ_SOURCE_CARD_SUMMARY_PATH),
+    out_content_index_summary: Path = typer.Option(STAGE5AJ_CONTENT_INDEX_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AJ_OUTPUT_DIR),
+) -> None:
+    result = build_usefulfiles_source_cards(
+        inventory_path=inventory,
+        xlsx_summary_path=xlsx_summary,
+        important_links_path=important_links,
+        manifest_extension_path=manifest_extension,
+        bundle_plan_path=bundle_plan,
+        out_source_card_summary=out_source_card_summary,
+        out_content_index_summary=out_content_index_summary,
+        results_dir=results_dir,
+    )
+    console.print(f"source_card_updates={result['source_card_records']}")
+    console.print(f"content_index_updates={result['content_index_records']}")
+
+
+@app.command("build-scraper-capture-policy")
+def build_scraper_capture_policy_command(
+    out: Path = typer.Option(STAGE5AJ_SCRAPER_POLICY_PATH),
+    results_dir: Path = typer.Option(STAGE5AJ_OUTPUT_DIR),
+) -> None:
+    result = build_scraper_capture_policy(out=out, results_dir=results_dir)
+    console.print(f"scraper_capture_policy_created={str(bool(result['capture_profiles'])).lower()}")
+
+
+@app.command("build-redaction-policy")
+def build_redaction_policy_command(
+    out: Path = typer.Option(STAGE5AJ_REDACTION_POLICY_PATH),
+    results_dir: Path = typer.Option(STAGE5AJ_OUTPUT_DIR),
+) -> None:
+    result = build_redaction_policy(out=out, results_dir=results_dir)
+    console.print(f"redaction_log_required={str(result['redaction_log_required']).lower()}")
+
+
+@app.command("build-extraction-fidelity-policy")
+def build_extraction_fidelity_policy_command(
+    out: Path = typer.Option(STAGE5AJ_FIDELITY_POLICY_PATH),
+    results_dir: Path = typer.Option(STAGE5AJ_OUTPUT_DIR),
+) -> None:
+    result = build_extraction_fidelity_policy(out=out, results_dir=results_dir)
+    console.print(
+        "no_over_redaction_policy_created="
+        f"{str(result['private_deep_research_extract_view']['minimal_redaction_only']).lower()}"
+    )
+
+
+@app.command("build-stage5aj-new-clue-categories")
+def build_stage5aj_new_clue_categories_command(
+    out: Path = typer.Option(STAGE5AJ_NEW_CLUE_CATEGORIES_PATH),
+) -> None:
+    result = build_stage5aj_new_clue_categories(out=out)
+    console.print(f"new_clue_category_records={result['new_clue_category_records']}")
+
+
+@app.command("update-deep-research-packs")
+def update_deep_research_packs_command(
+    stage5ai_bundle_root: Path = typer.Option(STAGE5AI_BUNDLE_ROOT),
+    usefulfiles_inventory: Path = typer.Option(STAGE5AJ_INVENTORY_PATH),
+    source_card_summary: Path = typer.Option(STAGE5AJ_SOURCE_CARD_SUMMARY_PATH),
+    content_index_summary: Path = typer.Option(STAGE5AJ_CONTENT_INDEX_SUMMARY_PATH),
+    bundle_root: Path = typer.Option(STAGE5AJ_BUNDLE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AJ_OUTPUT_DIR),
+    out_website_update: Path = typer.Option(STAGE5AJ_WEBSITE_UPDATE_PATH),
+    out_deep_research_update: Path = typer.Option(STAGE5AJ_DEEP_RESEARCH_UPDATE_PATH),
+    out_readiness: Path = typer.Option(STAGE5AJ_READINESS_PATH),
+    out_missing_source_plan: Path = typer.Option(STAGE5AJ_MISSING_SOURCE_PLAN_PATH),
+) -> None:
+    result = update_deep_research_packs(
+        stage5ai_bundle_root=stage5ai_bundle_root,
+        usefulfiles_inventory_path=usefulfiles_inventory,
+        source_card_summary_path=source_card_summary,
+        content_index_summary_path=content_index_summary,
+        bundle_root=bundle_root,
+        results_dir=results_dir,
+        out_website_update=out_website_update,
+        out_deep_research_update=out_deep_research_update,
+        out_readiness=out_readiness,
+        out_missing_source_plan=out_missing_source_plan,
+    )
+    console.print(f"deep_research_pack_updates={result['deep_research_pack_records']}")
+    console.print(
+        "bundles_ready_for_private_deep_research="
+        f"{result['readiness']['bundles_ready_for_private_deep_research']}"
+    )
+
+
+@app.command("build-stage5aj-guardrail")
+def build_stage5aj_guardrail_command(
+    source_root: Path = typer.Option(STAGE5AJ_SOURCE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AJ_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AJ_GUARDRAIL_PATH),
+) -> None:
+    result = build_stage5aj_guardrail(source_root=source_root, results_dir=results_dir, out=out)
+    console.print(f"network_fetch_performed={str(result['network_fetch_performed']).lower()}")
+    console.print(f"raw_xlsx_committed={str(result['raw_xlsx_committed']).lower()}")
+    console.print(f"new_cuda_kernels_added={result['new_cuda_kernels_added']}")
+
+
+@app.command("build-stage5aj-next-stage-decision")
+def build_stage5aj_next_stage_decision_command(
+    summary_inputs: list[Path] = typer.Option(...),
+    out: Path = typer.Option(STAGE5AJ_NEXT_STAGE_DECISION_PATH),
+) -> None:
+    if len(summary_inputs) != 2:
+        raise typer.BadParameter("--summary-inputs requires readiness and missing-source-plan paths")
+    result = build_stage5aj_next_stage_decision(summary_inputs=summary_inputs, out=out)
+    console.print(f"selected_option_id={result['selected_option_id']}")
+
+
+@app.command("build-stage5aj-summary")
+def build_stage5aj_summary_command(
+    inventory: Path = typer.Option(STAGE5AJ_INVENTORY_PATH),
+    manifest_extension: Path = typer.Option(STAGE5AJ_MANIFEST_EXTENSION_PATH),
+    source_card_summary: Path = typer.Option(STAGE5AJ_SOURCE_CARD_SUMMARY_PATH),
+    content_index_summary: Path = typer.Option(STAGE5AJ_CONTENT_INDEX_SUMMARY_PATH),
+    xlsx_summary: Path = typer.Option(STAGE5AJ_XLSX_SUMMARY_PATH),
+    important_links: Path = typer.Option(STAGE5AJ_IMPORTANT_LINKS_PATH),
+    new_clue_categories: Path = typer.Option(STAGE5AJ_NEW_CLUE_CATEGORIES_PATH),
+    fidelity_policy: Path = typer.Option(STAGE5AJ_FIDELITY_POLICY_PATH),
+    redaction_policy: Path = typer.Option(STAGE5AJ_REDACTION_POLICY_PATH),
+    scraper_policy: Path = typer.Option(STAGE5AJ_SCRAPER_POLICY_PATH),
+    website_update: Path = typer.Option(STAGE5AJ_WEBSITE_UPDATE_PATH),
+    deep_research_update: Path = typer.Option(STAGE5AJ_DEEP_RESEARCH_UPDATE_PATH),
+    readiness: Path = typer.Option(STAGE5AJ_READINESS_PATH),
+    missing_source_plan: Path = typer.Option(STAGE5AJ_MISSING_SOURCE_PLAN_PATH),
+    guardrail: Path = typer.Option(STAGE5AJ_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AJ_NEXT_STAGE_DECISION_PATH),
+    out: Path = typer.Option(STAGE5AJ_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AJ_OUTPUT_DIR),
+) -> None:
+    result = build_stage5aj_summary(
+        inventory_path=inventory,
+        manifest_extension_path=manifest_extension,
+        source_card_summary_path=source_card_summary,
+        content_index_summary_path=content_index_summary,
+        xlsx_summary_path=xlsx_summary,
+        important_links_path=important_links,
+        new_clue_categories_path=new_clue_categories,
+        fidelity_policy_path=fidelity_policy,
+        redaction_policy_path=redaction_policy,
+        scraper_policy_path=scraper_policy,
+        website_update_path=website_update,
+        deep_research_update_path=deep_research_update,
+        readiness_path=readiness,
+        missing_source_plan_path=missing_source_plan,
+        guardrail_path=guardrail,
+        next_stage_decision_path=next_stage_decision,
+        out=out,
+        results_dir=results_dir,
+    )
+    console.print(f"stage_id={result['stage_id']}")
+    console.print(f"new_local_source_records={result['new_local_source_records']}")
+    console.print(f"recommended_next_stage_title={result['recommended_next_stage_title']}")
+
+
+@app.command("validate-stage5aj")
+def validate_stage5aj_command(
+    inventory: Path = typer.Option(STAGE5AJ_INVENTORY_PATH),
+    manifest_extension: Path = typer.Option(STAGE5AJ_MANIFEST_EXTENSION_PATH),
+    source_card_summary: Path = typer.Option(STAGE5AJ_SOURCE_CARD_SUMMARY_PATH),
+    content_index_summary: Path = typer.Option(STAGE5AJ_CONTENT_INDEX_SUMMARY_PATH),
+    xlsx_summary: Path = typer.Option(STAGE5AJ_XLSX_SUMMARY_PATH),
+    important_links: Path = typer.Option(STAGE5AJ_IMPORTANT_LINKS_PATH),
+    new_clue_categories: Path = typer.Option(STAGE5AJ_NEW_CLUE_CATEGORIES_PATH),
+    fidelity_policy: Path = typer.Option(STAGE5AJ_FIDELITY_POLICY_PATH),
+    redaction_policy: Path = typer.Option(STAGE5AJ_REDACTION_POLICY_PATH),
+    scraper_policy: Path = typer.Option(STAGE5AJ_SCRAPER_POLICY_PATH),
+    website_update: Path = typer.Option(STAGE5AJ_WEBSITE_UPDATE_PATH),
+    deep_research_update: Path = typer.Option(STAGE5AJ_DEEP_RESEARCH_UPDATE_PATH),
+    readiness: Path = typer.Option(STAGE5AJ_READINESS_PATH),
+    missing_source_plan: Path = typer.Option(STAGE5AJ_MISSING_SOURCE_PLAN_PATH),
+    guardrail: Path = typer.Option(STAGE5AJ_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AJ_NEXT_STAGE_DECISION_PATH),
+    summary: Path = typer.Option(STAGE5AJ_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AJ_OUTPUT_DIR),
+) -> None:
+    counts, errors = validate_stage5aj(
+        inventory_path=inventory,
+        manifest_extension_path=manifest_extension,
+        source_card_summary_path=source_card_summary,
+        content_index_summary_path=content_index_summary,
+        xlsx_summary_path=xlsx_summary,
+        important_links_path=important_links,
+        new_clue_categories_path=new_clue_categories,
+        fidelity_policy_path=fidelity_policy,
+        redaction_policy_path=redaction_policy,
+        scraper_policy_path=scraper_policy,
+        website_update_path=website_update,
+        deep_research_update_path=deep_research_update,
+        readiness_path=readiness,
+        missing_source_plan_path=missing_source_plan,
+        guardrail_path=guardrail,
+        next_stage_decision_path=next_stage_decision,
+        summary_path=summary,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    console.print(f"validation_error_count={len(errors)}")
+    for error in errors:
+        console.print(error)
+    if errors:
+        raise typer.Exit(1)
+    console.print("source_harvester_stage5aj_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

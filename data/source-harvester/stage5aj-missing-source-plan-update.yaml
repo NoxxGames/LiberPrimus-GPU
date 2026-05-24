@@ -1,0 +1,43 @@
+record_type: stage5aj_missing_source_plan_update
+schema: schemas/source-harvester/missing-source-plan-v0.schema.json
+stage_id: stage-5aj
+source_stage_id: stage-5ai
+missing_source_records: 5
+now_local_count: 1
+new_online_source_added_count: 2
+still_missing_online_fetch_count: 0
+private_or_publication_blocked_count: 1
+network_fetch_performed: false
+solve_claim: false
+records:
+- record_type: stage5aj_missing_source_plan_record
+  stage_id: stage-5aj
+  source_id: solved_page_google_sheet
+  status: now_local
+  replacement_source_id: translations_decryptions_xlsx_local
+  network_fetch_required: false
+  solve_claim: false
+- record_type: stage5aj_missing_source_plan_record
+  stage_id: stage-5aj
+  source_id: chapterized_rune_map_google_doc
+  status: still_missing_manual_export
+  network_fetch_required: false
+  solve_claim: false
+- record_type: stage5aj_missing_source_plan_record
+  stage_id: stage-5aj
+  source_id: fandom_stage5aj_new_links
+  status: new_online_source_added
+  network_fetch_required: true
+  solve_claim: false
+- record_type: stage5aj_missing_source_plan_record
+  stage_id: stage-5aj
+  source_id: reddit_stage5aj_targeted_posts
+  status: new_online_source_added
+  network_fetch_required: true
+  solve_claim: false
+- record_type: stage5aj_missing_source_plan_record
+  stage_id: stage-5aj
+  source_id: discord_private_leads
+  status: private_or_publication_blocked
+  network_fetch_required: false
+  solve_claim: false

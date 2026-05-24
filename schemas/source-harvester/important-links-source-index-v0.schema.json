@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AJ important links source index",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "important_links_detected", "network_fetch_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "type": "string" },
+    "stage_id": { "const": "stage-5aj" },
+    "source_stage_id": { "const": "stage-5ai" },
+    "important_links_detected": { "type": "boolean" },
+    "important_links_urls_found": { "type": "integer", "minimum": 0 },
+    "important_links_new_urls": { "type": "integer", "minimum": 0 },
+    "network_fetch_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

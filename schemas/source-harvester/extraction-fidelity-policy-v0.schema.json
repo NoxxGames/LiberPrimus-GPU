@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AJ extraction fidelity policy",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "network_fetch_performed", "ocr_performed", "ai_ml_interpretation_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "type": "string" },
+    "stage_id": { "const": "stage-5aj" },
+    "source_stage_id": { "const": "stage-5ai" },
+    "network_fetch_performed": { "const": false },
+    "ocr_performed": { "const": false },
+    "ai_ml_interpretation_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AJ redaction policy",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_stage_id", "redaction_log_required", "network_fetch_performed", "website_expansion_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "type": "string" },
+    "stage_id": { "const": "stage-5aj" },
+    "source_stage_id": { "const": "stage-5ai" },
+    "redaction_log_required": { "const": true },
+    "network_fetch_performed": { "const": false },
+    "website_expansion_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

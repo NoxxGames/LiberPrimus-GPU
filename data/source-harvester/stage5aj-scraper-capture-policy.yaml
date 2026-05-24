@@ -1,0 +1,73 @@
+record_type: stage5aj_scraper_capture_policy
+schema: schemas/source-harvester/scraper-capture-policy-v0.schema.json
+stage_id: stage-5aj
+source_stage_id: stage-5ai
+capture_profiles:
+- source_type: fandom_page
+  future_capture_modes:
+  - html
+  - markdown
+  - text
+  - tables
+  - images
+  - links
+  preserve:
+  - headings
+  - tables
+  - image_links
+  - captions
+  - citations
+  - numbers
+  - runes
+  - punctuation
+  rate_limit_required: true
+  one_hop_default: false
+- source_type: reddit_post
+  future_capture_modes:
+  - targeted_post_capture
+  - comments_metadata
+  - links
+  preserve:
+  - post_title
+  - permalink
+  - author_redacted_for_public
+  - body_text
+  - public_urls
+  - numbers
+  - tables
+  subreddit_bulk_scrape_allowed: false
+  rate_limit_required: true
+- source_type: github_repo
+  future_capture_modes:
+  - commit_sha
+  - file_inventory
+  - hash_inventory
+  - selected_text_files
+  preserve:
+  - commit_sha
+  - paths
+  - file_hashes
+  - license
+  - README
+  - selected_source_text
+  whole_repo_commit_allowed: false
+- source_type: xlsx_local_export
+  future_capture_modes:
+  - workbook_hash
+  - sheet_inventory
+  - cell_metadata
+  - formatting_metadata
+  preserve:
+  - sheet_order
+  - cell_addresses
+  - formulas
+  - comments
+  - hyperlinks
+  - fill_colors
+  - font_styles
+  raw_workbook_commit_allowed: false
+live_web_scrape_performed: false
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+solve_claim: false
