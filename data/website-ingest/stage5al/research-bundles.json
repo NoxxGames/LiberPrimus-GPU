@@ -1,0 +1,290 @@
+{
+  "record_count": 10,
+  "record_type": "stage5al_research_bundles",
+  "records": [
+    {
+      "bundle_id": "01-signed-messages-and-authenticity",
+      "claim_ids": [],
+      "do_not_assume_tags": [
+        "bundle_metadata_only",
+        "generated_bodies_not_committed"
+      ],
+      "generated_extract_publication_allowed": false,
+      "known_questions_refs": [
+        "research-inputs/stage5al/known_questions_global.md#01-signed-messages-and-authenticity"
+      ],
+      "missing_source_refs": [],
+      "path_kind": "ignored_private_extract",
+      "priority": "A1",
+      "private_deep_research_allowed": true,
+      "publication_status": "private_deep_research_only",
+      "raw_content_publication_allowed": false,
+      "record_type": "stage5al_research_bundle",
+      "relative_path_or_ref": "research-inputs/stage5ai/01-signed-messages-and-authenticity/manifest.yaml",
+      "review_status": "private_export_validated",
+      "schema": "schemas/website-ingest/research-bundle-v0.schema.json",
+      "solve_claim": false,
+      "source_ids": [],
+      "source_stage_id": "stage-5ak",
+      "stage_id": "stage-5al",
+      "title": "Signed messages and authenticity",
+      "website_publication_allowed": false
+    },
+    {
+      "bundle_id": "02-liber-primus-images-and-transcriptions",
+      "claim_ids": [],
+      "do_not_assume_tags": [
+        "bundle_metadata_only",
+        "generated_bodies_not_committed"
+      ],
+      "generated_extract_publication_allowed": false,
+      "known_questions_refs": [
+        "research-inputs/stage5al/known_questions_global.md#02-liber-primus-images-and-transcriptions"
+      ],
+      "missing_source_refs": [],
+      "path_kind": "ignored_private_extract",
+      "priority": "A1",
+      "private_deep_research_allowed": true,
+      "publication_status": "private_deep_research_only",
+      "raw_content_publication_allowed": false,
+      "record_type": "stage5al_research_bundle",
+      "relative_path_or_ref": "research-inputs/stage5ai/02-liber-primus-images-and-transcriptions/manifest.yaml",
+      "review_status": "private_export_validated",
+      "schema": "schemas/website-ingest/research-bundle-v0.schema.json",
+      "solve_claim": false,
+      "source_ids": [],
+      "source_stage_id": "stage-5ak",
+      "stage_id": "stage-5al",
+      "title": "Liber Primus images and transcriptions",
+      "website_publication_allowed": false
+    },
+    {
+      "bundle_id": "03-page-49-51-token-block",
+      "claim_ids": [],
+      "do_not_assume_tags": [
+        "bundle_metadata_only",
+        "generated_bodies_not_committed"
+      ],
+      "generated_extract_publication_allowed": false,
+      "known_questions_refs": [
+        "research-inputs/stage5al/known_questions_global.md#03-page-49-51-token-block"
+      ],
+      "missing_source_refs": [],
+      "path_kind": "ignored_private_extract",
+      "priority": "A1",
+      "private_deep_research_allowed": true,
+      "publication_status": "private_deep_research_only",
+      "raw_content_publication_allowed": false,
+      "record_type": "stage5al_research_bundle",
+      "relative_path_or_ref": "research-inputs/stage5ai/03-page-49-51-token-block/manifest.yaml",
+      "review_status": "private_export_validated",
+      "schema": "schemas/website-ingest/research-bundle-v0.schema.json",
+      "solve_claim": false,
+      "source_ids": [],
+      "source_stage_id": "stage-5ak",
+      "stage_id": "stage-5al",
+      "title": "Page 49-51 token block",
+      "website_publication_allowed": false
+    },
+    {
+      "bundle_id": "04-cuneiform-base60-base59",
+      "claim_ids": [],
+      "do_not_assume_tags": [
+        "bundle_metadata_only",
+        "generated_bodies_not_committed"
+      ],
+      "generated_extract_publication_allowed": false,
+      "known_questions_refs": [
+        "research-inputs/stage5al/known_questions_global.md#04-cuneiform-base60-base59"
+      ],
+      "missing_source_refs": [],
+      "path_kind": "ignored_private_extract",
+      "priority": "A1",
+      "private_deep_research_allowed": true,
+      "publication_status": "private_deep_research_only",
+      "raw_content_publication_allowed": false,
+      "record_type": "stage5al_research_bundle",
+      "relative_path_or_ref": "research-inputs/stage5ai/04-cuneiform-base60-base59/manifest.yaml",
+      "review_status": "private_export_validated",
+      "schema": "schemas/website-ingest/research-bundle-v0.schema.json",
+      "solve_claim": false,
+      "source_ids": [],
+      "source_stage_id": "stage-5ak",
+      "stage_id": "stage-5al",
+      "title": "Cuneiform base60/base59",
+      "website_publication_allowed": false
+    },
+    {
+      "bundle_id": "05-red-markers-and-visual-numerics",
+      "claim_ids": [],
+      "do_not_assume_tags": [
+        "bundle_metadata_only",
+        "generated_bodies_not_committed"
+      ],
+      "generated_extract_publication_allowed": false,
+      "known_questions_refs": [
+        "research-inputs/stage5al/known_questions_global.md#05-red-markers-and-visual-numerics"
+      ],
+      "missing_source_refs": [],
+      "path_kind": "ignored_private_extract",
+      "priority": "A1",
+      "private_deep_research_allowed": true,
+      "publication_status": "private_deep_research_only",
+      "raw_content_publication_allowed": false,
+      "record_type": "stage5al_research_bundle",
+      "relative_path_or_ref": "research-inputs/stage5ak/05-red-markers-and-visual-numerics/manifest.yaml",
+      "review_status": "private_export_validated",
+      "schema": "schemas/website-ingest/research-bundle-v0.schema.json",
+      "solve_claim": false,
+      "source_ids": [],
+      "source_stage_id": "stage-5ak",
+      "stage_id": "stage-5al",
+      "title": "Red markers and visual numerics",
+      "website_publication_allowed": false
+    },
+    {
+      "bundle_id": "06-outguess-stego-hidden-formatting",
+      "claim_ids": [],
+      "do_not_assume_tags": [
+        "bundle_metadata_only",
+        "generated_bodies_not_committed"
+      ],
+      "generated_extract_publication_allowed": false,
+      "known_questions_refs": [
+        "research-inputs/stage5al/known_questions_global.md#06-outguess-stego-hidden-formatting"
+      ],
+      "missing_source_refs": [],
+      "path_kind": "ignored_private_extract",
+      "priority": "A2",
+      "private_deep_research_allowed": true,
+      "publication_status": "private_deep_research_only",
+      "raw_content_publication_allowed": false,
+      "record_type": "stage5al_research_bundle",
+      "relative_path_or_ref": "research-inputs/stage5ai/06-outguess-stego-hidden-formatting/manifest.yaml",
+      "review_status": "private_export_validated",
+      "schema": "schemas/website-ingest/research-bundle-v0.schema.json",
+      "solve_claim": false,
+      "source_ids": [],
+      "source_stage_id": "stage-5ak",
+      "stage_id": "stage-5al",
+      "title": "OutGuess/stego/hidden formatting",
+      "website_publication_allowed": false
+    },
+    {
+      "bundle_id": "07-boundary-mobius-repeated-fragments",
+      "claim_ids": [],
+      "do_not_assume_tags": [
+        "bundle_metadata_only",
+        "generated_bodies_not_committed"
+      ],
+      "generated_extract_publication_allowed": false,
+      "known_questions_refs": [
+        "research-inputs/stage5al/known_questions_global.md#07-boundary-mobius-repeated-fragments"
+      ],
+      "missing_source_refs": [],
+      "path_kind": "ignored_private_extract",
+      "priority": "A2",
+      "private_deep_research_allowed": true,
+      "publication_status": "private_deep_research_only",
+      "raw_content_publication_allowed": false,
+      "record_type": "stage5al_research_bundle",
+      "relative_path_or_ref": "research-inputs/stage5ak/07-boundary-mobius-repeated-fragments/manifest.yaml",
+      "review_status": "private_export_validated",
+      "schema": "schemas/website-ingest/research-bundle-v0.schema.json",
+      "solve_claim": false,
+      "source_ids": [],
+      "source_stage_id": "stage-5ak",
+      "stage_id": "stage-5al",
+      "title": "Boundary, Mobius, and repeated fragments",
+      "website_publication_allowed": false
+    },
+    {
+      "bundle_id": "08-tools-gpprime-dwh-gematria",
+      "claim_ids": [],
+      "do_not_assume_tags": [
+        "bundle_metadata_only",
+        "generated_bodies_not_committed"
+      ],
+      "generated_extract_publication_allowed": false,
+      "known_questions_refs": [
+        "research-inputs/stage5al/known_questions_global.md#08-tools-gpprime-dwh-gematria"
+      ],
+      "missing_source_refs": [],
+      "path_kind": "ignored_private_extract",
+      "priority": "A2",
+      "private_deep_research_allowed": true,
+      "publication_status": "private_deep_research_only",
+      "raw_content_publication_allowed": false,
+      "record_type": "stage5al_research_bundle",
+      "relative_path_or_ref": "research-inputs/stage5ak/08-tools-gpprime-dwh-gematria/manifest.yaml",
+      "review_status": "private_export_validated",
+      "schema": "schemas/website-ingest/research-bundle-v0.schema.json",
+      "solve_claim": false,
+      "source_ids": [],
+      "source_stage_id": "stage-5ak",
+      "stage_id": "stage-5al",
+      "title": "Tools, GPPrimeView, DWH, and Gematria",
+      "website_publication_allowed": false
+    },
+    {
+      "bundle_id": "09-community-hypotheses",
+      "claim_ids": [],
+      "do_not_assume_tags": [
+        "bundle_metadata_only",
+        "generated_bodies_not_committed"
+      ],
+      "generated_extract_publication_allowed": false,
+      "known_questions_refs": [
+        "research-inputs/stage5al/known_questions_global.md#09-community-hypotheses"
+      ],
+      "missing_source_refs": [],
+      "path_kind": "ignored_private_extract",
+      "priority": "A2",
+      "private_deep_research_allowed": true,
+      "publication_status": "private_deep_research_only",
+      "raw_content_publication_allowed": false,
+      "record_type": "stage5al_research_bundle",
+      "relative_path_or_ref": "research-inputs/stage5ak/09-community-hypotheses/manifest.yaml",
+      "review_status": "private_export_validated",
+      "schema": "schemas/website-ingest/research-bundle-v0.schema.json",
+      "solve_claim": false,
+      "source_ids": [],
+      "source_stage_id": "stage-5ak",
+      "stage_id": "stage-5al",
+      "title": "Community hypotheses",
+      "website_publication_allowed": false
+    },
+    {
+      "bundle_id": "10-known-negative-retired-ideas",
+      "claim_ids": [],
+      "do_not_assume_tags": [
+        "bundle_metadata_only",
+        "generated_bodies_not_committed"
+      ],
+      "generated_extract_publication_allowed": false,
+      "known_questions_refs": [
+        "research-inputs/stage5al/known_questions_global.md#10-known-negative-retired-ideas"
+      ],
+      "missing_source_refs": [],
+      "path_kind": "ignored_private_extract",
+      "priority": "A2",
+      "private_deep_research_allowed": true,
+      "publication_status": "private_deep_research_only",
+      "raw_content_publication_allowed": false,
+      "record_type": "stage5al_research_bundle",
+      "relative_path_or_ref": "research-inputs/stage5ak/10-known-negative-retired-ideas/manifest.yaml",
+      "review_status": "private_export_validated",
+      "schema": "schemas/website-ingest/research-bundle-v0.schema.json",
+      "solve_claim": false,
+      "source_ids": [],
+      "source_stage_id": "stage-5ak",
+      "stage_id": "stage-5al",
+      "title": "Known negative and retired ideas",
+      "website_publication_allowed": false
+    }
+  ],
+  "schema": "schemas/website-ingest/research-bundle-v0.schema.json",
+  "solve_claim": false,
+  "source_stage_id": "stage-5ak",
+  "stage_id": "stage-5al"
+}

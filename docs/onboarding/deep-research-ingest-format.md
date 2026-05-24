@@ -13,6 +13,14 @@ For Stage 5AK, private handoffs may additionally reference:
 - `data/source-harvester/stage5ak-summary.yaml`
 - ignored private addenda under `research-inputs/stage5ak/`
 
+For Stage 5AL, Deep Research should start from:
+
+- `data/source-harvester/stage5al-deep-research-export.yaml`
+- `data/website-ingest/stage5al/`
+- ignored helper files under `research-inputs/stage5al/`
+
+Do not use raw `third_party/` files as the ingest root, and do not treat website-ingest metadata as public publication permission.
+
 For Stage 5AJ, private handoffs may reference:
 
 - `data/source-harvester/stage5aj-usefulfiles-source-card-summary.yaml`

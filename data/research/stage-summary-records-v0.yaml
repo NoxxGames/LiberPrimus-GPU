@@ -1111,3 +1111,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AK records 11 local community-facts files, 10 ordered attachment records, 12 claim records, 4 correction records, 15 new clue-category records, 16 arithmetic-preflight records with 15 arithmetic-verified checks and 1 arithmetic-error check, 1 source-card update, 5 content-index updates, 10 private Deep Research-ready bundles, and 0 public website-ready bundles. It selected Stage 5AL Deep Research source inventory and reliability prompt, preserved raw message logs/images and generated extraction bodies as ignored local material, used no Google Drive storage, and performed no network fetch, live scraping, online clone, Deep Research execution, OCR/AI/ML/image forensics/stego/audio processing, hypothesis generation/execution, CUDA execution, CUDA-facing source modification, new kernel addition, benchmark, scored experiment, website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5al
+    title: Research website-ingest staging and Deep-Research export validation
+    status: complete
+    category: infrastructure
+    summary: Created a metadata-only website-ingest package and private Deep Research export staging layer from Stage 5AI, Stage 5AJ, and Stage 5AK source-harvester records, preserving all publication gates and raw/generated-output boundaries.
+    key_outputs:
+      - "`libreprimus source-harvester` Stage 5AL commands for website-ingest package generation, private Deep Research export generation, research-index validation, guardrail generation, next-stage decision, aggregate summary, and validation."
+      - Stage 5AL website-ingest summary, data contract, Deep Research export, publication-gate policy, research-index validation, guardrail, next-stage-decision, and aggregate summary records under `data/source-harvester/`.
+      - Metadata-only website-ingest records under `data/website-ingest/stage5al/`, schemas under `schemas/website-ingest/`, ignored private export files under `research-inputs/stage5al/`, and ignored generated reports under `experiments/results/website-ingest/stage5al/`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AL records 10 private Deep Research bundles, 61 source-card records, 58 content-index records, 12 community-claim metadata records, 7 publication-gate records, 26 missing-source records, and 0 public website-ready records. It selects Stage 5AM Deep Research source inventory and reliability prompt, keeps website expansion/public publication review-gated, keeps raw third-party and generated private bodies ignored, uses no Google Drive storage, and performs no network fetch, live scrape, online clone, Deep Research execution, OCR/AI/ML/image forensics/stego/audio processing, hypothesis generation/execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

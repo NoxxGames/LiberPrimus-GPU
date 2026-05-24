@@ -1,5 +1,20 @@
 # Experiments
 
+## Stage 5AL Website-Ingest Staging
+
+Stage 5AL is website-ingest and Deep Research export staging, not an experiment. It consumes
+Stage 5AI, Stage 5AJ, and Stage 5AK metadata and commits a metadata-only package under
+`data/website-ingest/stage5al/`, plus Stage 5AL summary/export/gate records under
+`data/source-harvester/`.
+
+Generated private export files remain ignored under `research-inputs/stage5al/`; generated
+validation reports remain ignored under `experiments/results/website-ingest/stage5al/`.
+Public website-ready remains `0`. Stage 5AL performs no network fetch, live scrape, online
+clone, Google Drive storage, raw source commit, Deep Research execution, public website
+publication, hypothesis generation/execution, OCR, AI/ML interpretation, image/stego/audio
+tooling, CUDA, benchmarks, scored experiments, canonical-corpus activation, page-boundary
+finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AK Community Facts Integration
 
 Stage 5AK is local community-observation curation, not an experiment. It consumes ignored `third_party/UsefulFilesAndIdeas/community-facts/` material and commits compact inventory, ordered attachment, source-card/content-index, clue-category, claim, correction-log, arithmetic-preflight, website-ingest, Deep-Research pack, readiness, guardrail, next-stage, and summary records.

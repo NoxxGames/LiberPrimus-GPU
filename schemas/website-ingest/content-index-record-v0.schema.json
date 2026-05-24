@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AL Content Index Website-Ingest Record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "content_id", "publication_status", "path_kind", "relative_path_or_ref", "website_publication_allowed", "raw_content_publication_allowed", "generated_extract_publication_allowed", "solve_claim"],
+  "properties": {
+    "record_type": { "type": "string" },
+    "stage_id": { "const": "stage-5al" },
+    "content_id": { "type": "string" },
+    "publication_status": { "enum": ["metadata_only_safe", "private_deep_research_only", "generated_extract_review_required", "blocked_private_or_sensitive", "raw_source_never_publish", "public_website_review_required", "external_link_only"] },
+    "path_kind": { "enum": ["committed_metadata", "ignored_private_extract", "raw_source_ignored", "external_url", "generated_report_ignored"] },
+    "relative_path_or_ref": { "type": "string" },
+    "website_publication_allowed": { "const": false },
+    "raw_content_publication_allowed": { "const": false },
+    "generated_extract_publication_allowed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

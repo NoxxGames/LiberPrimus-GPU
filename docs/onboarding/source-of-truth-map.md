@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5AK it names Stage 5AK as latest complete and Stage 5AL as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5AL it names Stage 5AL as latest complete and Stage 5AM as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -15,6 +15,8 @@
 - `data/source-harvester/stage5ai-curated-research-bundle-summary.yaml`: Stage 5AI curated research-bundle extraction aggregate summary.
 - `data/source-harvester/stage5aj-summary.yaml`: Stage 5AJ UsefulFilesAndIdeas integration aggregate summary.
 - `data/source-harvester/stage5ak-summary.yaml`: Stage 5AK community-facts claim-record integration aggregate summary.
+- `data/source-harvester/stage5al-summary.yaml`: Stage 5AL website-ingest staging and Deep Research export aggregate summary.
+- `data/website-ingest/stage5al/`: committed metadata-only website-ingest package.
 - `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 - `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.

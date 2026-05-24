@@ -835,7 +835,7 @@ generated result bodies, build directories, SQLite files, raw data, or local CUD
 If Stage 5AK or later doc-staleness validation fails after updating operational docs, inspect
 `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`, `data/project-state/operational-file-map.yaml`,
 `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, `README.md`, and `docs/roadmap/staged-plan.md` for mismatched latest or next
-stage labels. After Stage 5AK, the active source-of-truth expects Stage 5AK as latest completed and Stage 5AL as the next Deep Research source inventory stage.
+stage labels. After Stage 5AL, the active source-of-truth expects Stage 5AL as latest completed and Stage 5AM as the next Deep Research source inventory stage.
 
 If Stage 5AC bounded-p56 preflight is not ready, do not run p56 CUDA. Keep full p56 blocked, inspect the Stage 5AA
 synthetic hash match and Stage 5AB doc-staleness record, then repair metadata before selecting any future bounded
@@ -847,14 +847,14 @@ If operational Markdown drifts, run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5AK" `
-  --expected-next-stage "Stage 5AL"
+  --expected-latest-stage "Stage 5AL" `
+  --expected-next-stage "Stage 5AM"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5AK" `
-  --expected-next-stage "Stage 5AL"
+  --expected-latest-stage "Stage 5AL" `
+  --expected-next-stage "Stage 5AM"
 ```
 
 The checks scan the operational file map, ignore historical logs, reject active Stage 6 website
@@ -868,3 +868,9 @@ belongs under ignored `codex-output/stage5aj-codex-completion.md`. Stage 5AK com
 reports belong under ignored `experiments/results/source-harvester-community-facts/stage5ak/`,
 generated private bundle bodies belong under ignored `research-inputs/stage5ak/`, and the local
 Stage 5AK handoff belongs under ignored `codex-output/stage5ak-codex-completion.md`.
+
+For Stage 5AL website-ingest runs, committed files belong under `data/website-ingest/stage5al/`
+and `data/source-harvester/stage5al-*`. Generated private export helpers belong under ignored
+`research-inputs/stage5al/`, generated reports belong under ignored
+`experiments/results/website-ingest/stage5al/`, and the Codex completion handoff belongs under
+ignored `codex-output/stage5al-codex-completion.md`.

@@ -71,6 +71,8 @@
 - `experiments/results/source-harvester-usefulfiles/stage5aj/`: generated Stage 5AJ UsefulFiles inventory, XLSX workbook/cell metadata indexes, important-link indexes, source-manifest previews, policy reports, summary, and warnings. Commit only `.gitkeep`.
 - `experiments/results/research-bundles/stage5ak/`: generated Stage 5AK research-bundle addendum scaffolding. Commit only `.gitkeep`.
 - `experiments/results/source-harvester-community-facts/stage5ak/`: generated Stage 5AK community-facts inventory, message index, attachment index, claim records, correction log, arithmetic preflight, website/Deep-Research update reports, summary, and warnings. Commit only `.gitkeep`.
+- `research-inputs/stage5al/`: generated private Deep Research export helper files. Commit only `.gitkeep`.
+- `experiments/results/website-ingest/stage5al/`: generated Stage 5AL website-ingest validation and export reports. Commit only `.gitkeep`.
 - `codex-output/`: local Codex completion handoff files; do not stage or publish.
 - `experiments/results/scoring-consolidation/stage4i/`: generated Stage 4I scorer inventories, rendered calibration reports, CPU batch compatibility JSON, and warnings.
 - `experiments/results/observation-review/stage4j/`: generated Stage 4J observation review decision reports, quarantine reports, promotion-gate reports, path-sanitisation reports, and warnings.

@@ -1,0 +1,87 @@
+{
+  "ai_ml_interpretation_performed": false,
+  "audio_analysis_performed": false,
+  "benchmark_performed": false,
+  "bundle_count": 10,
+  "canonical_corpus_active": false,
+  "claim_record_count": 12,
+  "codex_output_committed": false,
+  "content_index_count": 58,
+  "cuda_execution_performed": false,
+  "cuda_source_modified": false,
+  "data_package_path": "data/website-ingest/stage5al",
+  "deep_research_performed": false,
+  "generated_bundle_bodies_committed": false,
+  "generated_outputs_committed": false,
+  "google_drive_storage_used": false,
+  "hypothesis_execution_performed": false,
+  "hypothesis_generation_performed": false,
+  "image_forensics_performed": false,
+  "live_web_scrape_performed": false,
+  "method_status_upgraded": false,
+  "missing_source_count": 26,
+  "network_fetch_performed": false,
+  "new_cuda_kernel_added": false,
+  "new_cuda_kernels_added": 0,
+  "no_solve_claim": true,
+  "ocr_performed": false,
+  "online_repo_clone_performed": false,
+  "page_boundaries_final": false,
+  "private_deep_research_ready": true,
+  "private_ids_published": false,
+  "public_website_ready_count": 0,
+  "publication_gate_count": 7,
+  "raw_archives_committed": false,
+  "raw_audio_video_committed": false,
+  "raw_bodies_published": false,
+  "raw_data_committed": false,
+  "raw_downloads_committed": false,
+  "raw_html_committed": false,
+  "raw_images_committed": false,
+  "raw_pdf_docx_committed": false,
+  "raw_text_committed": false,
+  "record_type": "stage5al_research_index",
+  "records": [
+    {
+      "path": "data/website-ingest/stage5al/research-bundles.yaml",
+      "record_kind": "research_bundles"
+    },
+    {
+      "path": "data/website-ingest/stage5al/source-cards.yaml",
+      "record_kind": "source_cards"
+    },
+    {
+      "path": "data/website-ingest/stage5al/content-index.yaml",
+      "record_kind": "content_index"
+    },
+    {
+      "path": "data/website-ingest/stage5al/community-claims.yaml",
+      "record_kind": "community_claims"
+    },
+    {
+      "path": "data/website-ingest/stage5al/publication-gates.yaml",
+      "record_kind": "publication_gates"
+    },
+    {
+      "path": "data/website-ingest/stage5al/deep-research-export.yaml",
+      "record_kind": "deep_research_export"
+    },
+    {
+      "path": "data/website-ingest/stage5al/missing-sources.yaml",
+      "record_kind": "missing_sources"
+    }
+  ],
+  "schema": "schemas/website-ingest/research-index-v0.schema.json",
+  "scored_experiments_executed": false,
+  "solve_claim": false,
+  "source_card_count": 61,
+  "source_stage_id": "stage-5ak",
+  "stage_id": "stage-5al",
+  "stego_tool_execution_performed": false,
+  "third_party_raw_staged": false,
+  "third_party_raw_tracked_new": false,
+  "website_expansion_performed": false,
+  "website_publication_performed": false,
+  "website_shell_present": false,
+  "website_shell_reason": "no_static_website_framework_detected"
+}

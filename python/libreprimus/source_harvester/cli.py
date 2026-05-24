@@ -21,6 +21,7 @@ from .community_facts import (
 from .content_index import build_content_index
 from .curated_bundles import build_curated_bundles
 from .deep_research_pack import build_deep_research_pack_index
+from .deep_research_export import build_deep_research_export_stage5al
 from .export import write_json, write_jsonl
 from .extractors import extract_html_file
 from .extraction_fidelity import build_extraction_fidelity_policy
@@ -107,6 +108,18 @@ from .models import (
     STAGE5AK_SOURCE_ROOT,
     STAGE5AK_SUMMARY_PATH,
     STAGE5AK_WEBSITE_UPDATE_PATH,
+    STAGE5AL_BUNDLE_ROOT,
+    STAGE5AL_DEEP_RESEARCH_EXPORT_PATH,
+    STAGE5AL_DEEP_RESEARCH_EXPORT_SUMMARY_PATH,
+    STAGE5AL_GUARDRAIL_PATH,
+    STAGE5AL_NEXT_STAGE_DECISION_PATH,
+    STAGE5AL_OUTPUT_DIR,
+    STAGE5AL_PUBLICATION_GATE_POLICY_PATH,
+    STAGE5AL_RESEARCH_INDEX_VALIDATION_PATH,
+    STAGE5AL_SUMMARY_PATH,
+    STAGE5AL_WEBSITE_DATA_CONTRACT_PATH,
+    STAGE5AL_WEBSITE_INGEST_DIR,
+    STAGE5AL_WEBSITE_INGEST_SUMMARY_PATH,
     SUMMARY_PATH,
     TOOL_POLICY_PATH,
 )
@@ -136,6 +149,7 @@ from .stage5aj_records import (
 from .stage5aj_validation import validate_stage5aj
 from .stage5ak_records import build_stage5ak_guardrail, build_stage5ak_next_stage_decision, build_stage5ak_summary
 from .stage5ak_validation import validate_stage5ak
+from .stage5al_validation import validate_stage5al, validate_website_ingest_stage5al
 from .summary import summarize_stage5af
 from .usefulfiles import (
     build_usefulfiles_source_cards,
@@ -144,6 +158,12 @@ from .usefulfiles import (
 )
 from .validation import validate_stage5af
 from .website_ingest import build_website_ingest_index
+from .website_ingest_stage5al import (
+    build_stage5al_guardrail,
+    build_stage5al_next_stage_decision,
+    build_stage5al_summary,
+    build_website_ingest_stage5al,
+)
 from .xlsx_extraction import extract_xlsx_metadata
 
 console = Console()
@@ -1268,6 +1288,189 @@ def validate_stage5ak_command(
     if errors:
         raise typer.Exit(1)
     console.print("source_harvester_stage5ak_valid=true")
+
+
+@app.command("build-website-ingest-stage5al")
+def build_website_ingest_stage5al_command(
+    stage5ai_summary: Path = typer.Option(STAGE5AI_SUMMARY_PATH),
+    stage5aj_summary: Path = typer.Option(STAGE5AJ_SUMMARY_PATH),
+    stage5ak_summary: Path = typer.Option(STAGE5AK_SUMMARY_PATH),
+    stage5ak_claims: Path = typer.Option(STAGE5AK_CLAIM_RECORDS_PATH),
+    stage5ak_corrections: Path = typer.Option(STAGE5AK_CORRECTION_LOG_PATH),
+    stage5ak_arithmetic: Path = typer.Option(STAGE5AK_ARITHMETIC_PREFLIGHT_PATH),
+    stage5ak_website_update: Path = typer.Option(STAGE5AK_WEBSITE_UPDATE_PATH),
+    out_dir: Path = typer.Option(STAGE5AL_WEBSITE_INGEST_DIR),
+    results_dir: Path = typer.Option(STAGE5AL_OUTPUT_DIR),
+    summary_out: Path = typer.Option(STAGE5AL_WEBSITE_INGEST_SUMMARY_PATH),
+    contract_out: Path = typer.Option(STAGE5AL_WEBSITE_DATA_CONTRACT_PATH),
+    publication_gates_out: Path = typer.Option(STAGE5AL_PUBLICATION_GATE_POLICY_PATH),
+) -> None:
+    result = build_website_ingest_stage5al(
+        stage5ai_summary_path=stage5ai_summary,
+        stage5aj_summary_path=stage5aj_summary,
+        stage5ak_summary_path=stage5ak_summary,
+        stage5ak_claims_path=stage5ak_claims,
+        stage5ak_corrections_path=stage5ak_corrections,
+        stage5ak_arithmetic_path=stage5ak_arithmetic,
+        stage5ak_website_update_path=stage5ak_website_update,
+        out_dir=out_dir,
+        results_dir=results_dir,
+        summary_out=summary_out,
+        contract_out=contract_out,
+        publication_gates_out=publication_gates_out,
+    )
+    summary = result["summary"]
+    console.print(f"website_shell_present={str(summary['website_shell_present']).lower()}")
+    console.print(f"source_card_count={summary['source_card_count']}")
+    console.print(f"content_index_count={summary['content_index_count']}")
+    console.print(f"claim_record_count={summary['claim_record_count']}")
+    console.print(f"publication_gate_count={summary['publication_gate_count']}")
+
+
+@app.command("build-deep-research-export-stage5al")
+def build_deep_research_export_stage5al_command(
+    stage5ai_summary: Path = typer.Option(STAGE5AI_SUMMARY_PATH),
+    stage5aj_summary: Path = typer.Option(STAGE5AJ_SUMMARY_PATH),
+    stage5ak_summary: Path = typer.Option(STAGE5AK_SUMMARY_PATH),
+    website_ingest_dir: Path = typer.Option(STAGE5AL_WEBSITE_INGEST_DIR),
+    bundle_root: Path = typer.Option(STAGE5AL_BUNDLE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AL_OUTPUT_DIR),
+    export_out: Path = typer.Option(STAGE5AL_DEEP_RESEARCH_EXPORT_PATH),
+    summary_out: Path = typer.Option(STAGE5AL_DEEP_RESEARCH_EXPORT_SUMMARY_PATH),
+) -> None:
+    result = build_deep_research_export_stage5al(
+        stage5ai_summary_path=stage5ai_summary,
+        stage5aj_summary_path=stage5aj_summary,
+        stage5ak_summary_path=stage5ak_summary,
+        website_ingest_dir=website_ingest_dir,
+        bundle_root=bundle_root,
+        results_dir=results_dir,
+        export_out=export_out,
+        summary_out=summary_out,
+    )
+    summary = result["summary"]
+    console.print(f"deep_research_export_ready={str(summary['deep_research_export_ready']).lower()}")
+    console.print(f"bundle_count={summary['bundle_count']}")
+    console.print(f"source_card_count={summary['source_card_count']}")
+    console.print(f"claim_record_count={summary['claim_record_count']}")
+
+
+@app.command("validate-website-ingest-stage5al")
+def validate_website_ingest_stage5al_command(
+    website_ingest_dir: Path = typer.Option(STAGE5AL_WEBSITE_INGEST_DIR),
+    publication_gates: Path = typer.Option(STAGE5AL_PUBLICATION_GATE_POLICY_PATH),
+    results_dir: Path = typer.Option(STAGE5AL_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AL_RESEARCH_INDEX_VALIDATION_PATH),
+) -> None:
+    counts, errors = validate_website_ingest_stage5al(
+        website_ingest_dir=website_ingest_dir,
+        publication_gates_path=publication_gates,
+        results_dir=results_dir,
+        out=out,
+    )
+    for key, value in counts.items():
+        if key != "errors":
+            console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(error)
+    if errors:
+        raise typer.Exit(1)
+
+
+@app.command("build-stage5al-guardrail")
+def build_stage5al_guardrail_command(
+    website_ingest_dir: Path = typer.Option(STAGE5AL_WEBSITE_INGEST_DIR),
+    bundle_root: Path = typer.Option(STAGE5AL_BUNDLE_ROOT),
+    results_dir: Path = typer.Option(STAGE5AL_OUTPUT_DIR),
+    out: Path = typer.Option(STAGE5AL_GUARDRAIL_PATH),
+) -> None:
+    result = build_stage5al_guardrail(
+        website_ingest_dir=website_ingest_dir,
+        bundle_root=bundle_root,
+        results_dir=results_dir,
+        out=out,
+    )
+    console.print(f"network_fetch_performed={str(result['network_fetch_performed']).lower()}")
+    console.print(f"google_drive_storage_used={str(result['google_drive_storage_used']).lower()}")
+    console.print(f"raw_bodies_published={str(result['raw_bodies_published']).lower()}")
+
+
+@app.command("build-stage5al-next-stage-decision")
+def build_stage5al_next_stage_decision_command(
+    website_validation: Path = typer.Option(STAGE5AL_RESEARCH_INDEX_VALIDATION_PATH),
+    deep_research_export: Path = typer.Option(STAGE5AL_DEEP_RESEARCH_EXPORT_SUMMARY_PATH),
+    out: Path = typer.Option(STAGE5AL_NEXT_STAGE_DECISION_PATH),
+) -> None:
+    result = build_stage5al_next_stage_decision(
+        website_validation_path=website_validation,
+        deep_research_export_summary_path=deep_research_export,
+        out=out,
+    )
+    console.print(f"selected_option_id={result['selected_option_id']}")
+
+
+@app.command("build-stage5al-summary")
+def build_stage5al_summary_command(
+    website_ingest_summary: Path = typer.Option(STAGE5AL_WEBSITE_INGEST_SUMMARY_PATH),
+    website_data_contract: Path = typer.Option(STAGE5AL_WEBSITE_DATA_CONTRACT_PATH),
+    deep_research_export: Path = typer.Option(STAGE5AL_DEEP_RESEARCH_EXPORT_PATH),
+    deep_research_export_summary: Path = typer.Option(STAGE5AL_DEEP_RESEARCH_EXPORT_SUMMARY_PATH),
+    publication_gate_policy: Path = typer.Option(STAGE5AL_PUBLICATION_GATE_POLICY_PATH),
+    research_index_validation: Path = typer.Option(STAGE5AL_RESEARCH_INDEX_VALIDATION_PATH),
+    guardrail: Path = typer.Option(STAGE5AL_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AL_NEXT_STAGE_DECISION_PATH),
+    out: Path = typer.Option(STAGE5AL_SUMMARY_PATH),
+) -> None:
+    result = build_stage5al_summary(
+        website_ingest_summary_path=website_ingest_summary,
+        website_data_contract_path=website_data_contract,
+        deep_research_export_path=deep_research_export,
+        deep_research_export_summary_path=deep_research_export_summary,
+        publication_gate_policy_path=publication_gate_policy,
+        research_index_validation_path=research_index_validation,
+        guardrail_path=guardrail,
+        next_stage_decision_path=next_stage_decision,
+        out=out,
+    )
+    console.print(f"stage_id={result['stage_id']}")
+    console.print(f"source_card_count={result['source_card_count']}")
+    console.print(f"selected_next_stage_title={result['selected_next_stage_title']}")
+
+
+@app.command("validate-stage5al")
+def validate_stage5al_command(
+    website_ingest_summary: Path = typer.Option(STAGE5AL_WEBSITE_INGEST_SUMMARY_PATH),
+    website_data_contract: Path = typer.Option(STAGE5AL_WEBSITE_DATA_CONTRACT_PATH),
+    deep_research_export: Path = typer.Option(STAGE5AL_DEEP_RESEARCH_EXPORT_PATH),
+    deep_research_export_summary: Path = typer.Option(STAGE5AL_DEEP_RESEARCH_EXPORT_SUMMARY_PATH),
+    publication_gate_policy: Path = typer.Option(STAGE5AL_PUBLICATION_GATE_POLICY_PATH),
+    research_index_validation: Path = typer.Option(STAGE5AL_RESEARCH_INDEX_VALIDATION_PATH),
+    guardrail: Path = typer.Option(STAGE5AL_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AL_NEXT_STAGE_DECISION_PATH),
+    summary: Path = typer.Option(STAGE5AL_SUMMARY_PATH),
+    website_ingest_dir: Path = typer.Option(STAGE5AL_WEBSITE_INGEST_DIR),
+    results_dir: Path = typer.Option(STAGE5AL_OUTPUT_DIR),
+) -> None:
+    counts, errors = validate_stage5al(
+        website_ingest_summary_path=website_ingest_summary,
+        website_data_contract_path=website_data_contract,
+        deep_research_export_path=deep_research_export,
+        deep_research_export_summary_path=deep_research_export_summary,
+        publication_gate_policy_path=publication_gate_policy,
+        research_index_validation_path=research_index_validation,
+        guardrail_path=guardrail,
+        next_stage_decision_path=next_stage_decision,
+        summary_path=summary,
+        website_ingest_dir=website_ingest_dir,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(error)
+    if errors:
+        raise typer.Exit(1)
+    console.print("source_harvester_stage5al_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

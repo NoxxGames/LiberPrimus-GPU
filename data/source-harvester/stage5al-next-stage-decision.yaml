@@ -1,0 +1,56 @@
+record_type: stage5al_next_stage_decisions
+schema: schemas/website-ingest/stage5al-summary-v0.schema.json
+stage_id: stage-5al
+source_stage_id: stage-5ak
+selected_option_id: stage5am_deep_research_source_inventory_and_reliability_prompt
+solve_claim: false
+records:
+- record_type: stage5al_next_stage_decision_record
+  schema: schemas/website-ingest/stage5al-summary-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  option_id: stage5am_deep_research_source_inventory_and_reliability_prompt
+  selected: true
+  recommended_next_prompt_type: Deep Research
+  recommended_next_stage_title: Stage 5AM - Deep Research source inventory and reliability
+    prompt
+  recommended_next_stage_reason: The Stage 5AL website-ingest package and private
+    Deep Research export validate without publishing raw or private bodies.
+  deep_research_recommended_next: true
+  website_expansion_recommended_next: false
+  scored_experiment_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5al_next_stage_decision_record
+  schema: schemas/website-ingest/stage5al-summary-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  option_id: stage5am_publication_gate_cleanup
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AM - publication gate cleanup
+  recommended_next_stage_reason: Use only if Stage 5AL validation fails or publication
+    gates need manual review.
+  deep_research_recommended_next: false
+  website_expansion_recommended_next: false
+  scored_experiment_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5al_next_stage_decision_record
+  schema: schemas/website-ingest/stage5al-summary-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  option_id: future_public_website_expansion
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Future public website expansion
+  recommended_next_stage_reason: Deferred; Stage 5AL created data contracts only and
+    public publication remains review-gated.
+  deep_research_recommended_next: false
+  website_expansion_recommended_next: false
+  scored_experiment_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  execution_enabled: false
+  solve_claim: false

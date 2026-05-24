@@ -3,15 +3,15 @@ schema: schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.jso
 stage_id: stage-5ah
 status: complete
 latest_completed_stage_before_stage5ah: stage-5ag
-latest_completed_stage_after_this_stage: Stage 5AK - community-facts observations integration and number-fact claim curation
-latest_completed_stage_prefix: Stage 5AK
-next_stage_after_this_stage: Stage 5AL - Deep Research source inventory and reliability prompt
-expected_next_stage_prefix: Stage 5AL
+latest_completed_stage_after_this_stage: Stage 5AL - research website-ingest staging and Deep-Research export validation
+latest_completed_stage_prefix: Stage 5AL
+next_stage_after_this_stage: Stage 5AM - Deep Research source inventory and reliability prompt
+expected_next_stage_prefix: Stage 5AM
 latest_previous_stage: Stage 5AH - operational documentation staleness coverage repair and README stage ledger audit
 stage5ah_role: operational_doc_staleness_coverage_repair
 user_override_reason: README stage ledger stale, one section only goes to Stage 5N, other docs may be missed
-expected_latest_after_stage5ah: Stage 5AK - community-facts observations integration and number-fact claim curation
-expected_next_after_stage5ah: Stage 5AL - Deep Research source inventory and reliability prompt
+expected_latest_after_stage5ah: Stage 5AL - research website-ingest staging and Deep-Research export validation
+expected_next_after_stage5ah: Stage 5AM - Deep Research source inventory and reliability prompt
 website_expansion_status: deferred_future_unnumbered_project
 scored_experiments_status: deferred_manifest_gate_required
 unsolved_page_cuda_status: blocked

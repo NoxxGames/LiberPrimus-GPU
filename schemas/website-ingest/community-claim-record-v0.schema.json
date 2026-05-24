@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AL Community Claim Website-Ingest Record",
+  "type": "object",
+  "required": ["record_type", "stage_id", "claim_id", "claim_family", "publication_status", "execution_ready", "website_publication_allowed", "raw_content_publication_allowed", "generated_extract_publication_allowed", "solve_claim"],
+  "not": { "anyOf": [{ "required": ["claim_text"] }, { "required": ["claim_formula"] }, { "required": ["claimed_values"] }, { "required": ["source_message_locator"] }] },
+  "properties": {
+    "record_type": { "type": "string" },
+    "stage_id": { "const": "stage-5al" },
+    "claim_id": { "type": "string" },
+    "claim_family": { "type": "string" },
+    "publication_status": { "const": "blocked_private_or_sensitive" },
+    "execution_ready": { "const": false },
+    "private_deep_research_allowed": { "const": true },
+    "website_publication_allowed": { "const": false },
+    "raw_content_publication_allowed": { "const": false },
+    "generated_extract_publication_allowed": { "const": false },
+    "requires_null_controls": { "type": "boolean" },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

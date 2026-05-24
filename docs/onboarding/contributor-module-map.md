@@ -36,6 +36,8 @@ Stage 5AJ source-harvester modules add UsefulFilesAndIdeas inventory, workbook m
 
 Stage 5AK source-harvester modules add community-facts inventory, ordered attachment metadata, claim records, correction logs, arithmetic preflight, private Deep Research addenda, publication guardrails, and validation. They must keep raw message logs/images and generated body indexes ignored, and must not treat community number facts as execution-ready or solved.
 
+Stage 5AL source-harvester modules add website-ingest package generation, publication-gate policy, private Deep Research export generation, data-contract validation, guardrails, and next-stage selection. They must keep public website-ready at zero, generated private export helpers ignored, raw `third_party/` material out of committed records, and Stage 5AM Deep Research pointed at metadata rather than raw paths.
+
 ## Good First Areas
 
 - Documentation fixes.

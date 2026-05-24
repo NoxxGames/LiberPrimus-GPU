@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AK - community-facts observations integration and number-fact claim curation.
+Current completed stage: Stage 5AL - research website-ingest staging and Deep-Research export validation.
 
-Current work: Stage 5AL - Deep Research source inventory and reliability prompt. Stage 5AK integrated ignored local `third_party/UsefulFilesAndIdeas/community-facts/` source metadata, ordered attachment indexes, community claim records, correction logs, arithmetic preflight checks, source-card/content-index updates, Deep-Research pack readiness, website-ingest metadata, and publication guardrails; it did not run Deep Research, publish website content, process raw sources into committed data, fetch from the network, clone online repositories, use Google Drive storage, run OCR, run AI/ML interpretation, run image/stego/audio tooling, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.
+Current work: Stage 5AM - Deep Research source inventory and reliability prompt. Stage 5AL created metadata-only website-ingest records, publication gates, a website data contract, and a private Deep Research export package from Stage 5AI/5AJ/5AK metadata; it did not run Deep Research, publish website content, process raw sources into committed data, fetch from the network, clone online repositories, use Google Drive storage, run OCR, run AI/ML interpretation, run image/stego/audio tooling, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.
 
 Current project state:
 
@@ -122,7 +122,8 @@ Current project state:
 - Stage 5AK community-facts records are claim metadata only. Raw message logs, WebP attachments, generated private body files, generated source-harvester reports, and `codex-output/**` remain ignored and uncommitted.
 - Stage 5AK claim records preserve formulas, inputs, claimed values, correction status, risk level, source-lock requirements, and null-control requirements; they are not truth records, execution-ready manifests, source truth, or solve evidence.
 - Stage 5AK public website publication is blocked/review-gated. Private Deep Research addenda may preserve technical context in ignored `research-inputs/stage5ak/` files.
-- Stage 5AL Deep Research should consume Stage 5AI/5AJ/5AK bundle manifests, source cards, content indexes, claim records, correction logs, extraction-fidelity/redaction policy, and guardrail summaries, not raw `third_party/` paths.
+- Stage 5AL website-ingest records are committed metadata only. They do not publish raw or review-blocked content, private identifiers, generated extract bodies, or public website pages.
+- Stage 5AM Deep Research should consume the Stage 5AL export package and publication gates, not raw `third_party/` paths.
 - Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
 - Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
 - Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
@@ -970,6 +971,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Private Deep Research extracts should preserve technical fidelity aggressively. Redact only minimal privacy/safety material and log every redaction; do not strip rune strings, numbers, hashes, URLs, formulas, sheet/cell coordinates, highlights, or table structure from private handoffs.
 - Public website ingest remains metadata-only and conservative. Public website-ready count stays `0` until a future explicit publication-review stage scopes website expansion.
 - Stage 5AK consumed the new local community-facts material as metadata only; Stage 5AL should review source reliability from Stage 5AI/5AJ/5AK metadata and should not read raw local workbooks/images/text unless a future prompt explicitly scopes a local-only source-policy stage.
+
+## Stage 5AL Website-Ingest Staging Rules
+
+- Stage 5AL is metadata-only website-ingest and private Deep Research export staging, not public website publication or Deep Research execution.
+- Future Deep Research prompts must consume `data/source-harvester/stage5al-deep-research-export.yaml`, `data/website-ingest/stage5al/`, and ignored `research-inputs/stage5al/` helper files rather than raw `third_party/` paths.
+- Publication gates are mandatory. Public website-ready remains `0` until a future reviewed publication stage explicitly marks records safe.
+- Do not commit raw third-party files, generated private export bodies, private community identifiers, raw message bodies, raw images, raw workbook bodies, SQLite databases, local absolute paths, or `codex-output/**`.
+- Stage 5AL does not authorize OCR, AI/ML interpretation, image/stego/audio tooling, hypothesis generation/execution, CUDA, benchmarks, scored experiments, method-status upgrades, canonical corpus activation, page-boundary finalisation, or solve claims.
+- Stage 5AM should perform Deep Research source inventory and reliability review from Stage 5AL metadata only.
 
 ## Stage 5AC Prime-Minus-One CUDA Synthetic Reporting Rules
 

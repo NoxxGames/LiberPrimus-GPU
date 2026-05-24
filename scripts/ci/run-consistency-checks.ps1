@@ -24,14 +24,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5AK" `
-        --expected-next-stage "Stage 5AL" `
+        --expected-latest-stage "Stage 5AL" `
+        --expected-next-stage "Stage 5AM" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5AK" `
-        --expected-next-stage "Stage 5AL" `
+        --expected-latest-stage "Stage 5AL" `
+        --expected-next-stage "Stage 5AM" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -46,14 +46,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AK",
+        expected_latest_stage="Stage 5AL",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AK",
+            "expected_latest_stage": "Stage 5AL",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2022,6 +2022,32 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
     git check-ignore -q $Stage5AKGeneratedClaims
     git check-ignore -q $Stage5AKBundleClaims
     git check-ignore -q $Stage5AKHandoff
+
+    Write-Host "Validating Stage 5AL website-ingest records"
+    $Stage5ALGeneratedDir = Join-Path $TempDir "stage5al-website-ingest"
+    New-Item -ItemType Directory -Path $Stage5ALGeneratedDir | Out-Null
+    foreach ($Name in @("source_inventory.json", "research_index.json", "website_package_manifest.json", "publication_gates.json", "deep_research_export.json", "summary.json")) {
+        Set-Content -Path (Join-Path $Stage5ALGeneratedDir $Name) -Value '{"stage_id":"stage-5al","solve_claim":false}' -Encoding UTF8
+    }
+    Set-Content -Path (Join-Path $Stage5ALGeneratedDir "warnings.jsonl") -Value "" -Encoding UTF8
+    & $Python -m libreprimus.cli source-harvester validate-stage5al `
+        --website-ingest-summary data/source-harvester/stage5al-website-ingest-staging-summary.yaml `
+        --website-data-contract data/source-harvester/stage5al-website-data-contract.yaml `
+        --deep-research-export data/source-harvester/stage5al-deep-research-export.yaml `
+        --deep-research-export-summary data/source-harvester/stage5al-deep-research-export-summary.yaml `
+        --publication-gate-policy data/source-harvester/stage5al-publication-gate-policy.yaml `
+        --research-index-validation data/source-harvester/stage5al-research-index-validation.yaml `
+        --guardrail data/source-harvester/stage5al-guardrail.yaml `
+        --next-stage-decision data/source-harvester/stage5al-next-stage-decision.yaml `
+        --summary data/source-harvester/stage5al-summary.yaml `
+        --website-ingest-dir data/website-ingest/stage5al `
+        --results-dir $Stage5ALGeneratedDir
+    $Stage5ALResearchInput = Join-Path "research-inputs" "stage5al\deep_research_master_context.md"
+    $Stage5ALGeneratedSummary = Join-Path (Join-Path (Join-Path "experiments" "results") "website-ingest") "stage5al\summary.json"
+    $Stage5ALCodexOutput = Join-Path "codex-output" "stage5al-codex-completion.md"
+    git check-ignore -q $Stage5ALResearchInput
+    git check-ignore -q $Stage5ALGeneratedSummary
+    git check-ignore -q $Stage5ALCodexOutput
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

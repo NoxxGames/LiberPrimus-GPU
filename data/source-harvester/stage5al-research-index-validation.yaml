@@ -1,0 +1,17 @@
+record_type: stage5al_research_index_validation
+schema: schemas/website-ingest/stage5al-summary-v0.schema.json
+stage_id: stage-5al
+website_ingest_valid: true
+website_ingest_dir: data/website-ingest/stage5al
+bundle_count: 10
+source_card_count: 61
+content_index_count: 58
+claim_record_count: 12
+publication_gate_count: 7
+missing_source_count: 26
+public_website_ready_count: 0
+private_ids_published: false
+raw_bodies_published: false
+validation_error_count: 0
+errors: []
+solve_claim: false

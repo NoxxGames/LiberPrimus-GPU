@@ -725,6 +725,8 @@ research-inputs/**
 !research-inputs/stage5aj/.gitkeep
 !research-inputs/stage5ak/
 !research-inputs/stage5ak/.gitkeep
+!research-inputs/stage5al/
+!research-inputs/stage5al/.gitkeep
 
 # Generated document staleness reports
 experiments/results/doc-staleness/**
@@ -761,6 +763,14 @@ experiments/results/source-harvester-community-facts/**
 !experiments/results/source-harvester-community-facts/.gitkeep
 !experiments/results/source-harvester-community-facts/stage5ak/
 !experiments/results/source-harvester-community-facts/stage5ak/.gitkeep
+
+# Generated website-ingest staging outputs
+experiments/results/website-ingest/**
+!experiments/results/website-ingest/
+!experiments/results/website-ingest/README.md
+!experiments/results/website-ingest/.gitkeep
+!experiments/results/website-ingest/stage5al/
+!experiments/results/website-ingest/stage5al/.gitkeep
 
 # Local Codex completion handoffs
 codex-output/**

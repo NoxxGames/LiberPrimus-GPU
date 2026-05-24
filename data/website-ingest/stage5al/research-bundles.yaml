@@ -1,0 +1,247 @@
+record_type: stage5al_research_bundles
+schema: schemas/website-ingest/research-bundle-v0.schema.json
+stage_id: stage-5al
+source_stage_id: stage-5ak
+record_count: 10
+records:
+- record_type: stage5al_research_bundle
+  schema: schemas/website-ingest/research-bundle-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  bundle_id: 01-signed-messages-and-authenticity
+  title: Signed messages and authenticity
+  priority: A1
+  publication_status: private_deep_research_only
+  review_status: private_export_validated
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: ignored_private_extract
+  relative_path_or_ref: research-inputs/stage5ai/01-signed-messages-and-authenticity/manifest.yaml
+  source_ids: []
+  claim_ids: []
+  do_not_assume_tags:
+  - bundle_metadata_only
+  - generated_bodies_not_committed
+  known_questions_refs:
+  - research-inputs/stage5al/known_questions_global.md#01-signed-messages-and-authenticity
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_research_bundle
+  schema: schemas/website-ingest/research-bundle-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  bundle_id: 02-liber-primus-images-and-transcriptions
+  title: Liber Primus images and transcriptions
+  priority: A1
+  publication_status: private_deep_research_only
+  review_status: private_export_validated
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: ignored_private_extract
+  relative_path_or_ref: research-inputs/stage5ai/02-liber-primus-images-and-transcriptions/manifest.yaml
+  source_ids: []
+  claim_ids: []
+  do_not_assume_tags:
+  - bundle_metadata_only
+  - generated_bodies_not_committed
+  known_questions_refs:
+  - research-inputs/stage5al/known_questions_global.md#02-liber-primus-images-and-transcriptions
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_research_bundle
+  schema: schemas/website-ingest/research-bundle-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  bundle_id: 03-page-49-51-token-block
+  title: Page 49-51 token block
+  priority: A1
+  publication_status: private_deep_research_only
+  review_status: private_export_validated
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: ignored_private_extract
+  relative_path_or_ref: research-inputs/stage5ai/03-page-49-51-token-block/manifest.yaml
+  source_ids: []
+  claim_ids: []
+  do_not_assume_tags:
+  - bundle_metadata_only
+  - generated_bodies_not_committed
+  known_questions_refs:
+  - research-inputs/stage5al/known_questions_global.md#03-page-49-51-token-block
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_research_bundle
+  schema: schemas/website-ingest/research-bundle-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  bundle_id: 04-cuneiform-base60-base59
+  title: Cuneiform base60/base59
+  priority: A1
+  publication_status: private_deep_research_only
+  review_status: private_export_validated
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: ignored_private_extract
+  relative_path_or_ref: research-inputs/stage5ai/04-cuneiform-base60-base59/manifest.yaml
+  source_ids: []
+  claim_ids: []
+  do_not_assume_tags:
+  - bundle_metadata_only
+  - generated_bodies_not_committed
+  known_questions_refs:
+  - research-inputs/stage5al/known_questions_global.md#04-cuneiform-base60-base59
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_research_bundle
+  schema: schemas/website-ingest/research-bundle-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  bundle_id: 05-red-markers-and-visual-numerics
+  title: Red markers and visual numerics
+  priority: A1
+  publication_status: private_deep_research_only
+  review_status: private_export_validated
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: ignored_private_extract
+  relative_path_or_ref: research-inputs/stage5ak/05-red-markers-and-visual-numerics/manifest.yaml
+  source_ids: []
+  claim_ids: []
+  do_not_assume_tags:
+  - bundle_metadata_only
+  - generated_bodies_not_committed
+  known_questions_refs:
+  - research-inputs/stage5al/known_questions_global.md#05-red-markers-and-visual-numerics
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_research_bundle
+  schema: schemas/website-ingest/research-bundle-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  bundle_id: 06-outguess-stego-hidden-formatting
+  title: OutGuess/stego/hidden formatting
+  priority: A2
+  publication_status: private_deep_research_only
+  review_status: private_export_validated
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: ignored_private_extract
+  relative_path_or_ref: research-inputs/stage5ai/06-outguess-stego-hidden-formatting/manifest.yaml
+  source_ids: []
+  claim_ids: []
+  do_not_assume_tags:
+  - bundle_metadata_only
+  - generated_bodies_not_committed
+  known_questions_refs:
+  - research-inputs/stage5al/known_questions_global.md#06-outguess-stego-hidden-formatting
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_research_bundle
+  schema: schemas/website-ingest/research-bundle-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  bundle_id: 07-boundary-mobius-repeated-fragments
+  title: Boundary, Mobius, and repeated fragments
+  priority: A2
+  publication_status: private_deep_research_only
+  review_status: private_export_validated
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: ignored_private_extract
+  relative_path_or_ref: research-inputs/stage5ak/07-boundary-mobius-repeated-fragments/manifest.yaml
+  source_ids: []
+  claim_ids: []
+  do_not_assume_tags:
+  - bundle_metadata_only
+  - generated_bodies_not_committed
+  known_questions_refs:
+  - research-inputs/stage5al/known_questions_global.md#07-boundary-mobius-repeated-fragments
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_research_bundle
+  schema: schemas/website-ingest/research-bundle-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  bundle_id: 08-tools-gpprime-dwh-gematria
+  title: Tools, GPPrimeView, DWH, and Gematria
+  priority: A2
+  publication_status: private_deep_research_only
+  review_status: private_export_validated
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: ignored_private_extract
+  relative_path_or_ref: research-inputs/stage5ak/08-tools-gpprime-dwh-gematria/manifest.yaml
+  source_ids: []
+  claim_ids: []
+  do_not_assume_tags:
+  - bundle_metadata_only
+  - generated_bodies_not_committed
+  known_questions_refs:
+  - research-inputs/stage5al/known_questions_global.md#08-tools-gpprime-dwh-gematria
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_research_bundle
+  schema: schemas/website-ingest/research-bundle-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  bundle_id: 09-community-hypotheses
+  title: Community hypotheses
+  priority: A2
+  publication_status: private_deep_research_only
+  review_status: private_export_validated
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: ignored_private_extract
+  relative_path_or_ref: research-inputs/stage5ak/09-community-hypotheses/manifest.yaml
+  source_ids: []
+  claim_ids: []
+  do_not_assume_tags:
+  - bundle_metadata_only
+  - generated_bodies_not_committed
+  known_questions_refs:
+  - research-inputs/stage5al/known_questions_global.md#09-community-hypotheses
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_research_bundle
+  schema: schemas/website-ingest/research-bundle-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  bundle_id: 10-known-negative-retired-ideas
+  title: Known negative and retired ideas
+  priority: A2
+  publication_status: private_deep_research_only
+  review_status: private_export_validated
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: ignored_private_extract
+  relative_path_or_ref: research-inputs/stage5ak/10-known-negative-retired-ideas/manifest.yaml
+  source_ids: []
+  claim_ids: []
+  do_not_assume_tags:
+  - bundle_metadata_only
+  - generated_bodies_not_committed
+  known_questions_refs:
+  - research-inputs/stage5al/known_questions_global.md#10-known-negative-retired-ideas
+  missing_source_refs: []
+  solve_claim: false
+solve_claim: false

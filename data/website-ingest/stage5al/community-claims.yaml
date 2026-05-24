@@ -1,0 +1,413 @@
+record_type: stage5al_community_claims
+schema: schemas/website-ingest/community-claim-record-v0.schema.json
+stage_id: stage-5al
+source_stage_id: stage-5ak
+record_count: 12
+records:
+- record_type: stage5al_community_claim
+  schema: schemas/website-ingest/community-claim-record-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  claim_id: stage5ak-no_fehu_section_count_graph
+  claim_family: no_fehu_section_count_graph
+  source_id: community_facts_observations_local
+  title: no fehu section count graph
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A1
+  publication_status: blocked_private_or_sensitive
+  review_status: source_lock_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/source-harvester/stage5ak-community-facts-claim-records.yaml#stage5ak-no_fehu_section_count_graph
+  risk_level: medium_high
+  requires_null_controls: true
+  requires_transcript_policy: true
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - community_claim_not_evidence
+  - not_execution_ready
+  - requires_null_controls
+  - requires_transcript_policy
+  known_questions_refs:
+  - deterministic section-count reconstruction plus null controls
+  missing_source_refs:
+  - source_lock_required
+  execution_ready: false
+  solve_claim: false
+- record_type: stage5al_community_claim
+  schema: schemas/website-ingest/community-claim-record-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  claim_id: stage5ak-p54_55_p56_p57_hash_length_equivalence
+  claim_family: p54_55_p56_p57_hash_length_equivalence
+  source_id: community_facts_observations_local
+  title: p54 55 p56 p57 hash length equivalence
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A1
+  publication_status: blocked_private_or_sensitive
+  review_status: source_lock_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/source-harvester/stage5ak-community-facts-claim-records.yaml#stage5ak-p54_55_p56_p57_hash_length_equivalence
+  risk_level: medium
+  requires_null_controls: true
+  requires_transcript_policy: true
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - community_claim_not_evidence
+  - not_execution_ready
+  - requires_null_controls
+  - requires_transcript_policy
+  known_questions_refs:
+  - source-locked transcript/profile count reconstruction
+  missing_source_refs:
+  - source_lock_required
+  execution_ready: false
+  solve_claim: false
+- record_type: stage5al_community_claim
+  schema: schemas/website-ingest/community-claim-record-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  claim_id: stage5ak-p15_red_text_progressive_sum_square
+  claim_family: p15_red_text_progressive_sum_square
+  source_id: community_facts_observations_local
+  title: p15 red text progressive sum square
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A1
+  publication_status: blocked_private_or_sensitive
+  review_status: source_lock_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/source-harvester/stage5ak-community-facts-claim-records.yaml#stage5ak-p15_red_text_progressive_sum_square
+  risk_level: high
+  requires_null_controls: true
+  requires_transcript_policy: true
+  requires_image_coordinate_policy: true
+  do_not_assume_tags:
+  - community_claim_not_evidence
+  - not_execution_ready
+  - requires_null_controls
+  - requires_transcript_policy
+  - requires_image_coordinate_policy
+  known_questions_refs:
+  - red-marker source lock plus null square membership controls
+  missing_source_refs:
+  - source_lock_required
+  execution_ready: false
+  solve_claim: false
+- record_type: stage5al_community_claim
+  schema: schemas/website-ingest/community-claim-record-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  claim_id: stage5ak-red_3299_fehu_count_prime_index
+  claim_family: red_3299_fehu_count_prime_index
+  source_id: community_facts_observations_local
+  title: red 3299 fehu count prime index
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A1
+  publication_status: blocked_private_or_sensitive
+  review_status: arithmetic_verified_only
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/source-harvester/stage5ak-community-facts-claim-records.yaml#stage5ak-red_3299_fehu_count_prime_index
+  risk_level: medium_high
+  requires_null_controls: true
+  requires_transcript_policy: true
+  requires_image_coordinate_policy: true
+  do_not_assume_tags:
+  - community_claim_not_evidence
+  - not_execution_ready
+  - requires_null_controls
+  - requires_transcript_policy
+  - requires_image_coordinate_policy
+  known_questions_refs:
+  - source-locked Fehu count plus red-square source validation
+  missing_source_refs: []
+  execution_ready: false
+  solve_claim: false
+- record_type: stage5al_community_claim
+  schema: schemas/website-ingest/community-claim-record-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  claim_id: stage5ak-p56_p57_fehu_boundary_prime_observations
+  claim_family: p56_p57_fehu_boundary_prime_observations
+  source_id: community_facts_observations_local
+  title: p56 p57 fehu boundary prime observations
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A1
+  publication_status: blocked_private_or_sensitive
+  review_status: source_lock_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/source-harvester/stage5ak-community-facts-claim-records.yaml#stage5ak-p56_p57_fehu_boundary_prime_observations
+  risk_level: medium_high
+  requires_null_controls: true
+  requires_transcript_policy: true
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - community_claim_not_evidence
+  - not_execution_ready
+  - requires_null_controls
+  - requires_transcript_policy
+  known_questions_refs:
+  - transcript policy and boundary-position reconstruction
+  missing_source_refs:
+  - source_lock_required
+  execution_ready: false
+  solve_claim: false
+- record_type: stage5al_community_claim
+  schema: schemas/website-ingest/community-claim-record-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  claim_id: stage5ak-artwork_red_header_gp_match
+  claim_family: artwork_red_header_gp_match
+  source_id: community_facts_observations_local
+  title: artwork red header gp match
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A2
+  publication_status: blocked_private_or_sensitive
+  review_status: arithmetic_verified_only
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/source-harvester/stage5ak-community-facts-claim-records.yaml#stage5ak-artwork_red_header_gp_match
+  risk_level: high
+  requires_null_controls: true
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: true
+  do_not_assume_tags:
+  - community_claim_not_evidence
+  - not_execution_ready
+  - requires_null_controls
+  - requires_image_coordinate_policy
+  known_questions_refs:
+  - label policy source lock plus GP helper verification
+  missing_source_refs: []
+  execution_ready: false
+  solve_claim: false
+- record_type: stage5al_community_claim
+  schema: schemas/website-ingest/community-claim-record-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  claim_id: stage5ak-final_jpg_gp_runs_road_phrase
+  claim_family: final_jpg_gp_runs_road_phrase
+  source_id: community_facts_observations_local
+  title: final jpg gp runs road phrase
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A1
+  publication_status: blocked_private_or_sensitive
+  review_status: source_lock_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/source-harvester/stage5ak-community-facts-claim-records.yaml#stage5ak-final_jpg_gp_runs_road_phrase
+  risk_level: medium_high
+  requires_null_controls: true
+  requires_transcript_policy: true
+  requires_image_coordinate_policy: true
+  do_not_assume_tags:
+  - community_claim_not_evidence
+  - not_execution_ready
+  - requires_null_controls
+  - requires_transcript_policy
+  - requires_image_coordinate_policy
+  known_questions_refs:
+  - exact source text/image lock plus predefined GP windows
+  missing_source_refs:
+  - source_lock_required
+  execution_ready: false
+  solve_claim: false
+- record_type: stage5al_community_claim
+  schema: schemas/website-ingest/community-claim-record-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  claim_id: stage5ak-pixel_measurement_prime_dimension_claims
+  claim_family: pixel_measurement_prime_dimension_claims
+  source_id: community_facts_observations_local
+  title: pixel measurement prime dimension claims
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A2
+  publication_status: blocked_private_or_sensitive
+  review_status: requires_image_coordinate_policy
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/source-harvester/stage5ak-community-facts-claim-records.yaml#stage5ak-pixel_measurement_prime_dimension_claims
+  risk_level: very_high
+  requires_null_controls: true
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: true
+  do_not_assume_tags:
+  - community_claim_not_evidence
+  - not_execution_ready
+  - requires_null_controls
+  - requires_image_coordinate_policy
+  known_questions_refs:
+  - source-locked image variants and coordinate-system declaration
+  missing_source_refs: []
+  execution_ready: false
+  solve_claim: false
+- record_type: stage5al_community_claim
+  schema: schemas/website-ingest/community-claim-record-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  claim_id: stage5ak-whitespace_prime_sequence_claim
+  claim_family: whitespace_prime_sequence_claim
+  source_id: community_facts_observations_local
+  title: whitespace prime sequence claim
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A1
+  publication_status: blocked_private_or_sensitive
+  review_status: source_lock_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/source-harvester/stage5ak-community-facts-claim-records.yaml#stage5ak-whitespace_prime_sequence_claim
+  risk_level: high
+  requires_null_controls: true
+  requires_transcript_policy: true
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - community_claim_not_evidence
+  - not_execution_ready
+  - requires_null_controls
+  - requires_transcript_policy
+  known_questions_refs:
+  - source-locked whitespace extraction method plus null controls
+  missing_source_refs:
+  - source_lock_required
+  execution_ready: false
+  solve_claim: false
+- record_type: stage5al_community_claim
+  schema: schemas/website-ingest/community-claim-record-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  claim_id: stage5ak-cicada_prime_index_number_network
+  claim_family: cicada_prime_index_number_network
+  source_id: community_facts_observations_local
+  title: cicada prime index number network
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A2
+  publication_status: blocked_private_or_sensitive
+  review_status: arithmetic_verified_only
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/source-harvester/stage5ak-community-facts-claim-records.yaml#stage5ak-cicada_prime_index_number_network
+  risk_level: high
+  requires_null_controls: true
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: true
+  do_not_assume_tags:
+  - community_claim_not_evidence
+  - not_execution_ready
+  - requires_null_controls
+  - requires_image_coordinate_policy
+  known_questions_refs:
+  - number-network null controls and source context separation
+  missing_source_refs: []
+  execution_ready: false
+  solve_claim: false
+- record_type: stage5al_community_claim
+  schema: schemas/website-ingest/community-claim-record-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  claim_id: stage5ak-base60_emirp_index_observations
+  claim_family: base60_emirp_index_observations
+  source_id: community_facts_observations_local
+  title: base60 emirp index observations
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A2
+  publication_status: blocked_private_or_sensitive
+  review_status: arithmetic_verified_only
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/source-harvester/stage5ak-community-facts-claim-records.yaml#stage5ak-base60_emirp_index_observations
+  risk_level: medium_high
+  requires_null_controls: true
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - community_claim_not_evidence
+  - not_execution_ready
+  - requires_null_controls
+  known_questions_refs:
+  - base-convention policy plus cuneiform/base60 source review
+  missing_source_refs: []
+  execution_ready: false
+  solve_claim: false
+- record_type: stage5al_community_claim
+  schema: schemas/website-ingest/community-claim-record-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  claim_id: stage5ak-doublet_route_index_observations
+  claim_family: doublet_route_index_observations
+  source_id: community_facts_observations_local
+  title: doublet route index observations
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A1
+  publication_status: blocked_private_or_sensitive
+  review_status: source_lock_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/source-harvester/stage5ak-community-facts-claim-records.yaml#stage5ak-doublet_route_index_observations
+  risk_level: high
+  requires_null_controls: true
+  requires_transcript_policy: true
+  requires_image_coordinate_policy: true
+  do_not_assume_tags:
+  - community_claim_not_evidence
+  - not_execution_ready
+  - requires_null_controls
+  - requires_transcript_policy
+  - requires_image_coordinate_policy
+  known_questions_refs:
+  - declared indexing convention plus route null controls
+  missing_source_refs:
+  - source_lock_required
+  execution_ready: false
+  solve_claim: false
+solve_claim: false

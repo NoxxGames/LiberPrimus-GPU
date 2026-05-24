@@ -1,0 +1,35 @@
+record_type: stage5al_website_data_contract
+schema: schemas/website-ingest/stage5al-summary-v0.schema.json
+stage_id: stage-5al
+source_stage_id: stage-5ak
+website_data_contract_ready: true
+data_package_path: data/website-ingest/stage5al
+required_files:
+- research-index.yaml
+- research-bundles.yaml
+- source-cards.yaml
+- content-index.yaml
+- community-claims.yaml
+- publication-gates.yaml
+- deep-research-export.yaml
+- missing-sources.yaml
+- summary.yaml
+path_kinds:
+- committed_metadata
+- ignored_private_extract
+- raw_source_ignored
+- external_url
+- generated_report_ignored
+forbidden_committed_fields:
+- claim_formula
+- claim_text
+- claimed_values
+- image_order
+- source_image_refs
+- source_message_locator
+publication_gates_required: true
+raw_bodies_allowed: false
+private_ids_allowed: false
+public_website_ready_default: false
+deep_research_export_default: private_deep_research_only
+solve_claim: false

@@ -1,0 +1,144 @@
+record_type: stage5al_deep_research_export
+schema: schemas/website-ingest/deep-research-export-v0.schema.json
+stage_id: stage-5al
+source_stage_id: stage-5ak
+input_material_scope:
+- Stage 5AI curated bundle metadata
+- Stage 5AJ UsefulFilesAndIdeas metadata
+- Stage 5AK community-facts claim metadata
+- Stage 5AL website-ingest publication gates
+relative_path_or_ref: research-inputs/stage5al/deep_research_master_context.md
+bundle_order:
+- bundle_id: 01-signed-messages-and-authenticity
+  title: Signed messages and authenticity
+  relative_path_or_ref: research-inputs/stage5ai/01-signed-messages-and-authenticity/manifest.yaml
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+- bundle_id: 02-liber-primus-images-and-transcriptions
+  title: Liber Primus images and transcriptions
+  relative_path_or_ref: research-inputs/stage5ai/02-liber-primus-images-and-transcriptions/manifest.yaml
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+- bundle_id: 03-page-49-51-token-block
+  title: Page 49-51 token block
+  relative_path_or_ref: research-inputs/stage5ai/03-page-49-51-token-block/manifest.yaml
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+- bundle_id: 04-cuneiform-base60-base59
+  title: Cuneiform base60/base59
+  relative_path_or_ref: research-inputs/stage5ai/04-cuneiform-base60-base59/manifest.yaml
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+- bundle_id: 05-red-markers-and-visual-numerics
+  title: Red markers and visual numerics
+  relative_path_or_ref: research-inputs/stage5ak/05-red-markers-and-visual-numerics/manifest.yaml
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+- bundle_id: 06-outguess-stego-hidden-formatting
+  title: OutGuess/stego/hidden formatting
+  relative_path_or_ref: research-inputs/stage5ai/06-outguess-stego-hidden-formatting/manifest.yaml
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+- bundle_id: 07-boundary-mobius-repeated-fragments
+  title: Boundary, Mobius, and repeated fragments
+  relative_path_or_ref: research-inputs/stage5ak/07-boundary-mobius-repeated-fragments/manifest.yaml
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+- bundle_id: 08-tools-gpprime-dwh-gematria
+  title: Tools, GPPrimeView, DWH, and Gematria
+  relative_path_or_ref: research-inputs/stage5ak/08-tools-gpprime-dwh-gematria/manifest.yaml
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+- bundle_id: 09-community-hypotheses
+  title: Community hypotheses
+  relative_path_or_ref: research-inputs/stage5ak/09-community-hypotheses/manifest.yaml
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+- bundle_id: 10-known-negative-retired-ideas
+  title: Known negative and retired ideas
+  relative_path_or_ref: research-inputs/stage5ak/10-known-negative-retired-ideas/manifest.yaml
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+source_card_count: 61
+content_index_count: 58
+claim_record_count: 12
+missing_source_count: 26
+publication_gate_count: 7
+private_review_blocked_paths:
+- research-inputs/stage5ai/**
+- research-inputs/stage5aj/**
+- research-inputs/stage5ak/**
+- research-inputs/stage5al/**
+- third_party/**
+do_not_assume_summary:
+- Metadata-only website ingest is not public publication.
+- Private Deep Research readiness is not source truth or solve evidence.
+- Community claims require source locks, transcript policy, coordinate policy, and
+  null controls before tests.
+- Raw third-party files and generated extract bodies remain ignored and uncommitted.
+- No CUDA, benchmarks, scored experiments, OCR, AI/ML interpretation, image forensics,
+  or stego/audio execution occurred.
+known_questions_summary:
+- Which Stage 5AI/5AJ/5AK source cards are reliable enough for future public metadata
+  display?
+- Which missing source records block reliability review?
+- Which community number facts are post-hoc and need null-control framing?
+- 'Prioritise missing-source reliability review for: chapterized_rune_map_google_doc,
+  chapterized_rune_map_google_doc, cicada_boards_forum, cicada_solvers_iddqd, cicada_solvers_isitcicada_repo'
+recommended_citation_policy: Cite source_id, stage record path, publication gate,
+  and source-lock status; do not cite raw ignored bodies.
+recommended_first_report_prompt_title: Stage 5AM - Deep Research source inventory
+  and reliability prompt
+what_not_to_analyze_yet:
+- Do not perform OCR, image interpretation, stego/audio extraction, CUDA execution,
+  or scored experiments.
+- Do not treat private community claims as verified facts or solve evidence.
+- Do not publish raw third-party files or generated extract bodies.
+stage5ai_consumed: true
+stage5aj_consumed: true
+stage5ak_consumed: true
+deep_research_export_ready: true
+private_deep_research_allowed: true
+website_publication_allowed: false
+raw_content_publication_allowed: false
+generated_extract_publication_allowed: false
+network_fetch_performed: false
+live_web_scrape_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+raw_downloads_committed: false
+raw_archives_committed: false
+raw_images_committed: false
+raw_html_committed: false
+raw_pdf_docx_committed: false
+raw_text_committed: false
+raw_audio_video_committed: false
+raw_data_committed: false
+generated_bundle_bodies_committed: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+private_ids_published: false
+raw_bodies_published: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+stego_tool_execution_performed: false
+image_forensics_performed: false
+audio_analysis_performed: false
+hypothesis_generation_performed: false
+hypothesis_execution_performed: false
+deep_research_performed: false
+website_expansion_performed: false
+website_publication_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+new_cuda_kernels_added: 0
+no_solve_claim: true

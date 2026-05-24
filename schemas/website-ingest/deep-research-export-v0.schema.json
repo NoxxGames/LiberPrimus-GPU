@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AL Deep Research Export",
+  "type": "object",
+  "required": ["record_type", "stage_id", "deep_research_export_ready", "private_deep_research_allowed", "website_publication_allowed", "raw_content_publication_allowed", "generated_extract_publication_allowed", "deep_research_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "type": "string" },
+    "stage_id": { "const": "stage-5al" },
+    "deep_research_export_ready": { "const": true },
+    "private_deep_research_allowed": { "const": true },
+    "website_publication_allowed": { "const": false },
+    "raw_content_publication_allowed": { "const": false },
+    "generated_extract_publication_allowed": { "const": false },
+    "network_fetch_performed": { "const": false },
+    "online_repo_clone_performed": { "const": false },
+    "google_drive_storage_used": { "const": false },
+    "deep_research_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "benchmark_performed": { "const": false },
+    "scored_experiments_executed": { "const": false },
+    "solve_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  },
+  "additionalProperties": true
+}

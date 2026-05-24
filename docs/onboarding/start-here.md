@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5AK - community-facts observations integration and number-fact claim curation.
-- Current planning focus: Stage 5AL - Deep Research source inventory and reliability prompt.
+- Latest completed stage: Stage 5AL - research website-ingest staging and Deep-Research export validation.
+- Current planning focus: Stage 5AM - Deep Research source inventory and reliability prompt.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -22,7 +22,7 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 - Observation records: review-gated; review-only observations are not experiment
   seeds without explicit acceptance and promotion.
 - Document staleness checks: active through `libreprimus consistency check-doc-staleness`.
-- Curated source bundles: Stage 5AI, Stage 5AJ, and Stage 5AK metadata is complete; generated bundle bodies, UsefulFiles extraction bodies, and community-facts private addenda stay ignored.
+- Curated source bundles: Stage 5AI, Stage 5AJ, and Stage 5AK metadata is complete; Stage 5AL adds a metadata-only website-ingest package and private Deep Research export. Generated bundle bodies, UsefulFiles extraction bodies, community-facts private addenda, and Stage 5AL private export helpers stay ignored.
 
 ## Where To Start
 

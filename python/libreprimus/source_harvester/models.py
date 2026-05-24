@@ -16,6 +16,8 @@ STAGE5AJ_ID = "stage-5aj"
 STAGE5AJ_SOURCE_STAGE_ID = "stage-5ai"
 STAGE5AK_ID = "stage-5ak"
 STAGE5AK_SOURCE_STAGE_ID = "stage-5aj"
+STAGE5AL_ID = "stage-5al"
+STAGE5AL_SOURCE_STAGE_ID = "stage-5ak"
 
 OUTPUT_DIR = Path("experiments/results/source-harvester/stage5af")
 STAGE5AG_OUTPUT_DIR = Path("experiments/results/source-harvester-local/stage5ag")
@@ -128,6 +130,29 @@ STAGE5AK_MISSING_SOURCE_PLAN_PATH = Path("data/source-harvester/stage5ak-missing
 STAGE5AK_GUARDRAIL_PATH = Path("data/source-harvester/stage5ak-guardrail.yaml")
 STAGE5AK_NEXT_STAGE_DECISION_PATH = Path("data/source-harvester/stage5ak-next-stage-decision.yaml")
 STAGE5AK_SUMMARY_PATH = Path("data/source-harvester/stage5ak-summary.yaml")
+
+STAGE5AL_WEBSITE_INGEST_DIR = Path("data/website-ingest/stage5al")
+STAGE5AL_BUNDLE_ROOT = Path("research-inputs/stage5al")
+STAGE5AL_OUTPUT_DIR = Path("experiments/results/website-ingest/stage5al")
+STAGE5AL_WEBSITE_INGEST_SUMMARY_PATH = Path("data/source-harvester/stage5al-website-ingest-staging-summary.yaml")
+STAGE5AL_WEBSITE_DATA_CONTRACT_PATH = Path("data/source-harvester/stage5al-website-data-contract.yaml")
+STAGE5AL_DEEP_RESEARCH_EXPORT_PATH = Path("data/source-harvester/stage5al-deep-research-export.yaml")
+STAGE5AL_DEEP_RESEARCH_EXPORT_SUMMARY_PATH = Path("data/source-harvester/stage5al-deep-research-export-summary.yaml")
+STAGE5AL_PUBLICATION_GATE_POLICY_PATH = Path("data/source-harvester/stage5al-publication-gate-policy.yaml")
+STAGE5AL_RESEARCH_INDEX_VALIDATION_PATH = Path("data/source-harvester/stage5al-research-index-validation.yaml")
+STAGE5AL_GUARDRAIL_PATH = Path("data/source-harvester/stage5al-guardrail.yaml")
+STAGE5AL_NEXT_STAGE_DECISION_PATH = Path("data/source-harvester/stage5al-next-stage-decision.yaml")
+STAGE5AL_SUMMARY_PATH = Path("data/source-harvester/stage5al-summary.yaml")
+
+STAGE5AL_REPORTS = {
+    "source_inventory": "source_inventory.json",
+    "research_index": "research_index.json",
+    "website_package": "website_package_manifest.json",
+    "deep_research_export": "deep_research_export.json",
+    "publication_gates": "publication_gates.json",
+    "summary": "summary.json",
+    "warnings": "warnings.jsonl",
+}
 
 STAGE5AK_REPORTS = {
     "inventory": "community_facts_inventory.json",
@@ -413,6 +438,47 @@ STAGE5AK_FALSE_FLAGS: dict[str, Any] = {
     "hypothesis_execution_performed": False,
     "deep_research_performed": False,
     "website_expansion_performed": False,
+    "cuda_execution_performed": False,
+    "cuda_source_modified": False,
+    "new_cuda_kernel_added": False,
+    "benchmark_performed": False,
+    "scored_experiments_executed": False,
+    "canonical_corpus_active": False,
+    "page_boundaries_final": False,
+    "method_status_upgraded": False,
+    "solve_claim": False,
+}
+
+STAGE5AL_FALSE_FLAGS: dict[str, Any] = {
+    "network_fetch_performed": False,
+    "live_web_scrape_performed": False,
+    "online_repo_clone_performed": False,
+    "google_drive_storage_used": False,
+    "raw_downloads_committed": False,
+    "raw_archives_committed": False,
+    "raw_images_committed": False,
+    "raw_html_committed": False,
+    "raw_pdf_docx_committed": False,
+    "raw_text_committed": False,
+    "raw_audio_video_committed": False,
+    "raw_data_committed": False,
+    "generated_bundle_bodies_committed": False,
+    "generated_outputs_committed": False,
+    "codex_output_committed": False,
+    "third_party_raw_staged": False,
+    "third_party_raw_tracked_new": False,
+    "private_ids_published": False,
+    "raw_bodies_published": False,
+    "ocr_performed": False,
+    "ai_ml_interpretation_performed": False,
+    "stego_tool_execution_performed": False,
+    "image_forensics_performed": False,
+    "audio_analysis_performed": False,
+    "hypothesis_generation_performed": False,
+    "hypothesis_execution_performed": False,
+    "deep_research_performed": False,
+    "website_expansion_performed": False,
+    "website_publication_performed": False,
     "cuda_execution_performed": False,
     "cuda_source_modified": False,
     "new_cuda_kernel_added": False,

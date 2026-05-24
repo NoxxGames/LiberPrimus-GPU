@@ -23,14 +23,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5AK" \
-    --expected-next-stage "Stage 5AL" \
+    --expected-latest-stage "Stage 5AL" \
+    --expected-next-stage "Stage 5AM" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5AK" \
-    --expected-next-stage "Stage 5AL" \
+    --expected-latest-stage "Stage 5AL" \
+    --expected-next-stage "Stage 5AM" \
     --out "$stage5ah_out/current_next_stage_report.json"
 "$python_bin" - <<PY
 import json
@@ -45,14 +45,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AK",
+        expected_latest_stage="Stage 5AL",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AK",
+            "expected_latest_stage": "Stage 5AL",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2024,6 +2024,32 @@ git check-ignore -q "$stage5ak_raw_image"
 git check-ignore -q "$stage5ak_generated_claims"
 git check-ignore -q "$stage5ak_bundle_claims"
 git check-ignore -q "$stage5ak_handoff"
+
+echo "Validating Stage 5AL website-ingest records"
+stage5al_results_dir="$temp_dir/stage5al-website-ingest"
+mkdir -p "$stage5al_results_dir"
+for name in source_inventory.json research_index.json website_package_manifest.json publication_gates.json deep_research_export.json summary.json; do
+    printf '{"stage_id":"stage-5al","solve_claim":false}\n' > "$stage5al_results_dir/$name"
+done
+: > "$stage5al_results_dir/warnings.jsonl"
+"$python_bin" -m libreprimus.cli source-harvester validate-stage5al \
+    --website-ingest-summary data/source-harvester/stage5al-website-ingest-staging-summary.yaml \
+    --website-data-contract data/source-harvester/stage5al-website-data-contract.yaml \
+    --deep-research-export data/source-harvester/stage5al-deep-research-export.yaml \
+    --deep-research-export-summary data/source-harvester/stage5al-deep-research-export-summary.yaml \
+    --publication-gate-policy data/source-harvester/stage5al-publication-gate-policy.yaml \
+    --research-index-validation data/source-harvester/stage5al-research-index-validation.yaml \
+    --guardrail data/source-harvester/stage5al-guardrail.yaml \
+    --next-stage-decision data/source-harvester/stage5al-next-stage-decision.yaml \
+    --summary data/source-harvester/stage5al-summary.yaml \
+    --website-ingest-dir data/website-ingest/stage5al \
+    --results-dir "$stage5al_results_dir"
+stage5al_research_input="research-inputs/stage5al/deep_research_master_context.md"
+stage5al_generated_summary="experiments"/"results"/"website-ingest"/"stage5al"/"summary.json"
+stage5al_codex_output="codex-output/stage5al-codex-completion.md"
+git check-ignore -q "$stage5al_research_input"
+git check-ignore -q "$stage5al_generated_summary"
+git check-ignore -q "$stage5al_codex_output"
 
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

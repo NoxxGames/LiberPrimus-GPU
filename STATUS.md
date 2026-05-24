@@ -2,17 +2,17 @@
 
 ## Current stage
 
-Stage 5AK community-facts observations integration and number-fact claim curation is complete.
+Stage 5AL research website-ingest staging and Deep-Research export validation is complete.
 
-Next recommended prompt: Stage 5AL - Deep Research source inventory and reliability prompt. Website expansion is deferred to a future unnumbered project.
+Next recommended prompt: Stage 5AM - Deep Research source inventory and reliability prompt. Public website expansion remains deferred to a future review-gated project.
 
-## Completed in Stage 5AK
+## Completed in Stage 5AL
 
-Stage 5AK integrated the ignored local `third_party/UsefulFilesAndIdeas/community-facts/` folder into the source-harvester/source-card/content-index/research-bundle system as compact metadata only.
+Stage 5AL created a metadata-only website-ingest package under `data/website-ingest/stage5al/` and a private Deep Research export manifest under `data/source-harvester/`, consuming Stage 5AI, Stage 5AJ, and Stage 5AK metadata without publishing raw or generated bodies.
 
-Local Stage 5AK summary: community-facts folder exists `true`, files found `11`, ordered attachments `10`, claim records `12`, correction records `4`, arithmetic preflight records `16`, arithmetic verified/error `15/1`, source-card/content-index updates `1/5`, private Deep Research-ready bundles before/after `10/10`, public website-ready bundles `0`, website-ingest metadata ready `true`, selected next prompt `Stage 5AL - Deep Research source inventory and reliability prompt`, network fetch `false`, online clone `false`, Google Drive storage `false`, raw message/image commits `false`, generated body commits `false`, website expansion `false`, OCR `false`, AI/ML interpretation `false`, image/stego/audio execution `false`, hypothesis generation/execution `false`, CUDA execution/source modification `false`, new CUDA kernels `0`, benchmarks `false`, scored experiments `false`, method-status upgrade `false`, and solve claim `false`.
+Local Stage 5AL summary: website shell present `false`, bundles `10`, source-card records `61`, content-index records `58`, community-claim metadata records `12`, publication gates `7`, missing-source records `26`, public website-ready count `0`, private Deep Research export ready `true`, selected next prompt `Stage 5AM - Deep Research source inventory and reliability prompt`, network fetch `false`, online clone `false`, Google Drive storage `false`, raw data committed `false`, generated bundle bodies committed `false`, private IDs published `false`, raw bodies published `false`, website publication `false`, Deep Research execution `false`, OCR `false`, AI/ML interpretation `false`, image/stego/audio execution `false`, hypothesis generation/execution `false`, CUDA execution/source modification `false`, new CUDA kernels `0`, benchmarks `false`, scored experiments `false`, method-status upgrade `false`, and solve claim `false`.
 
-Stage 5AK is local curation and claim-record metadata only. Community facts are not truth records, execution-ready manifests, website-publication material, or solve evidence. Stage 5AL should consume curated Stage 5AI/5AJ/5AK manifests and source cards, not raw `third_party/` paths.
+Stage 5AL is read-only data-contract and handoff infrastructure. Its committed records are safe metadata, not public website publication, not Deep Research output, not experiment execution, and not solve evidence. Stage 5AM should consume the Stage 5AL export package, not raw `third_party/` paths.
 
 ## Completed in Stage 5AJ
 

@@ -1,0 +1,1952 @@
+record_type: stage5al_source_cards
+schema: schemas/website-ingest/source-card-v0.schema.json
+stage_id: stage-5al
+source_stage_id: stage-5ak
+record_count: 61
+records:
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: brown_corpus_reference
+  title: Brown Corpus
+  source_type: static_webpage
+  source_tier: tier3_reproducible_community_data
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#brown_corpus_reference
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ak
+  source_id: community_facts_observations_local
+  title: Community facts and number observations thread
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A1
+  publication_status: blocked_private_or_sensitive
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#community_facts_observations_local
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/UsefulFilesAndIdeas/community-facts
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: complete_cicada3301_archive
+  title: Complete Cicada3301 Archive
+  source_type: github_repo
+  source_tier: tier1_committed_repo_record
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#complete_cicada3301_archive
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/The-Complete-Cicada3301-Archive-main
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: disk_cipher_theory_bundle_local
+  title: Disk Cipher Theory Bundle Local
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#disk_cipher_theory_bundle_local
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/DiskCipherStuff
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_2015_twitter_message
+  title: 2015 Twitter Message
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_2015_twitter_message
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_2016_message
+  title: 2016 Message
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_2016_message
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_frequency_analysis_unsolved_pages
+  title: Frequency Analysis Unsolved Pages
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_frequency_analysis_unsolved_pages
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_harmonic_key_proposal
+  title: 'PROPOSAL: THE 16-DIGIT HARMONIC KEY'
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: C
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_harmonic_key_proposal
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_liber_primus
+  title: Liber Primus
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_liber_primus
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_list_of_missing_information
+  title: List of missing information
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_list_of_missing_information
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_necrome_cyberterrorism_refutation
+  title: Necrome cyberterrorism refutation
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_necrome_cyberterrorism_refutation
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_onion_7_numbers_on_page_15
+  title: 'Onion 7: numbers on page 15'
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_onion_7_numbers_on_page_15
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_other_twitter_accounts
+  title: Other Twitter Accounts Associated With 3301's Emails
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_other_twitter_accounts
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_outguess
+  title: OutGuess
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_outguess
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_page_56
+  title: PAGE 56
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_page_56
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_page_57
+  title: PAGE 57
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_page_57
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_pgp_signed_message_april_2017
+  title: PGP Signed Message April 2017
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_pgp_signed_message_april_2017
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_proposal_the_16_digit_harmonic_key_2422826321411203
+  title: 'PROPOSAL: THE 16-DIGIT HARMONIC KEY (2422826321411203)'
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_proposal_the_16_digit_harmonic_key_2422826321411203
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_read_the_wiki
+  title: Read the wiki
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_read_the_wiki
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_symbols_drawing_art_liber_primus
+  title: Symbols/Drawing/Art of Liber Primus
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_symbols_drawing_art_liber_primus
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_the_leaked_email
+  title: The Leaked Email
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_the_leaked_email
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_what_happened_2012
+  title: What Happened (2012)
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_what_happened_2012
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_what_happened_liber_primus_post_2014
+  title: What Happened Liber Primus (Post 2014)
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_what_happened_liber_primus_post_2014
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_what_happened_part_1_2013
+  title: What Happened Part 1 (2013)
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_what_happened_part_1_2013
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: fandom_what_happened_part_1_2014
+  title: What Happened Part 1 (2014)
+  source_type: fandom_page
+  source_tier: tier2_archived_community_page_with_references
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#fandom_what_happened_part_1_2014
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: gematria_primus_image_local
+  title: Gematria Primus visual table image
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#gematria_primus_image_local
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/UsefulFilesAndIdeas/GematrriaPrimus.jpg
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: liber_primus_dropbox_files
+  title: Liber Primus Dropbox Files
+  source_type: dropbox_folder
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#liber_primus_dropbox_files
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/LiberPrimusPages
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_1348008594460774501_png
+  title: Local Unclassified 1348008594460774501 Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_1348008594460774501_png
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/1348008594460774501.png
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_community_sources_of_datasets_depiction_images_plausable_methods_worth_exploring_md
+  title: Local Unclassified Community Sources Of Datasets Depiction Images Plausable
+    Methods Worth Exploring Md
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_community_sources_of_datasets_depiction_images_plausable_methods_worth_exploring_md
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/Community-sources-of-datasets-depiction-images-plausable-methods-worth-exploring.md
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_communityobservations
+  title: Local Unclassified Communityobservations
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_communityobservations
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/CommunityObservations
+  hashes: []
+  risk_level: private_or_sensitive
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_cunieform_numbers_png
+  title: Local Unclassified Cunieform Numbers Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_cunieform_numbers_png
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/cunieform_numbers.png
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_depictions_modified_png
+  title: Local Unclassified Depictions Modified Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_depictions_modified_png
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/depictions_modified.png
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_depictions_original_png
+  title: Local Unclassified Depictions Original Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_depictions_original_png
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/depictions_original.png
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_fib421_jpg
+  title: Local Unclassified Fib421 Jpg
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_fib421_jpg
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/Fib421.jpg
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_interconnected_chapters
+  title: Local Unclassified Interconnected Chapters
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_interconnected_chapters
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/interconnected-chapters
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_liberprimusdiscordchats
+  title: Local Unclassified Liberprimusdiscordchats
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_liberprimusdiscordchats
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/LiberPrimusDiscordChats
+  hashes: []
+  risk_level: private_or_sensitive
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_more_numbers_mixed_with_runes_page_png
+  title: Local Unclassified More Numbers Mixed With Runes Page Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_more_numbers_mixed_with_runes_page_png
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/more_numbers_mixed_with_runes_page.png
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_page_modified_example_png
+  title: Local Unclassified Page Modified Example Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_page_modified_example_png
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/page_modified_example.png
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_repeat_rune_png
+  title: Local Unclassified Repeat Rune Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_repeat_rune_png
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/repeat-rune.png
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_rune_pixel_diff_example_png
+  title: Local Unclassified Rune Pixel Diff Example Png
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_rune_pixel_diff_example_png
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/rune_pixel_diff_example.png
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: local_unclassified_sourcesnapshots
+  title: Local Unclassified Sourcesnapshots
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: deferred
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#local_unclassified_sourcesnapshots
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/SourceSnapshots
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: lp_excel_workbook_local
+  title: LP Excel delimiter-preserving Liber Primus workbook
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#lp_excel_workbook_local
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/UsefulFilesAndIdeas/LP Excel.xlsx
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: reddit_56_57_gp_sums_3301_1033
+  title: 56/57.jpg GP sums of 3301 and 1033
+  source_type: reddit_post
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#reddit_56_57_gp_sums_3301_1033
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: reddit_cicada_subreddit
+  title: r/cicada subreddit
+  source_type: reddit_subreddit
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#reddit_cicada_subreddit
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: reddit_frequency_analysis_lp_notes
+  title: Frequency analysis on LP and notes
+  source_type: reddit_post
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#reddit_frequency_analysis_lp_notes
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: reddit_layered_primes_2016_message
+  title: Layered primes in the 2016 message
+  source_type: reddit_post
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#reddit_layered_primes_2016_message
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: reddit_magic_square_diagonals
+  title: Hidden magic diagonals found in magic squares
+  source_type: reddit_post
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#reddit_magic_square_diagonals
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: reddit_page32_path_lies_empty
+  title: Next step is page 32 in Liber Primus / path lies empty
+  source_type: reddit_post
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#reddit_page32_path_lies_empty
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: stage5aj_1_using_the_brown_corpus
+  title: 1. using the Brown corpus (
+  source_type: static_webpage
+  source_tier: tier3_reproducible_community_data
+  priority: B
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#stage5aj_1_using_the_brown_corpus
+  source_refs:
+  - path_kind: committed_metadata
+    relative_path_or_ref: research-inputs/stage5aj/source_cards.jsonl
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: translations_decryptions_xlsx_local
+  title: Translations/decryptions solved-page spreadsheet export
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#translations_decryptions_xlsx_local
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/UsefulFilesAndIdeas/tranlsations_decryptions.xlsx
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: usefulfiles_ideas_local
+  title: UsefulFilesAndIdeas idea seeds
+  source_type: local_user_upload
+  source_tier: tier4_social_claim_or_screenshot
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#usefulfiles_ideas_local
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/UsefulFilesAndIdeas/ideas.txt
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5aj
+  source_id: usefulfiles_important_links_local
+  title: UsefulFilesAndIdeas important links list
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#usefulfiles_important_links_local
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/UsefulFilesAndIdeas/important_links.txt
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - metadata_is_not_source_evidence
+  known_questions_refs: []
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: user_uploaded_2012_archive
+  title: User Uploaded 2012 Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#user_uploaded_2012_archive
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/The-Complete-Cicada3301-Archive-main/2012
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: user_uploaded_2013_archive
+  title: User Uploaded 2013 Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#user_uploaded_2013_archive
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/The-Complete-Cicada3301-Archive-main/2013
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: user_uploaded_2014_archive
+  title: User Uploaded 2014 Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#user_uploaded_2014_archive
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/The-Complete-Cicada3301-Archive-main/2014
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: user_uploaded_2015_archive
+  title: User Uploaded 2015 Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#user_uploaded_2015_archive
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/The-Complete-Cicada3301-Archive-main/2015
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: user_uploaded_2016_archive
+  title: User Uploaded 2016 Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#user_uploaded_2016_archive
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/The-Complete-Cicada3301-Archive-main/2016
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: user_uploaded_2017_archive
+  title: User Uploaded 2017 Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#user_uploaded_2017_archive
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/The-Complete-Cicada3301-Archive-main/2017
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: user_uploaded_archive_dir
+  title: User Uploaded Archive Dir
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#user_uploaded_archive_dir
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/The-Complete-Cicada3301-Archive-main/ArchiveDir
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: user_uploaded_assets_archive
+  title: User Uploaded Assets Archive
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A1
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#user_uploaded_assets_archive
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/The-Complete-Cicada3301-Archive-main/assets
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+- record_type: stage5al_source_card
+  schema: schemas/website-ingest/source-card-v0.schema.json
+  stage_id: stage-5al
+  source_stage_id: stage-5ai
+  source_id: user_uploaded_extra_wiki_pages
+  title: User Uploaded Extra Wiki Pages
+  source_type: local_user_upload
+  source_tier: tier3_reproducible_community_data
+  priority: A2
+  publication_status: public_website_review_required
+  review_status: public_review_required
+  private_deep_research_allowed: true
+  website_publication_allowed: false
+  raw_content_publication_allowed: false
+  generated_extract_publication_allowed: false
+  path_kind: committed_metadata
+  relative_path_or_ref: data/website-ingest/stage5al/source-cards.yaml#user_uploaded_extra_wiki_pages
+  source_refs:
+  - path_kind: raw_source_ignored
+    relative_path_or_ref: third_party/The-Complete-Cicada3301-Archive-main/EXTRA WIKI
+      PAGES
+  hashes: []
+  risk_level: review_required
+  claim_family: null
+  requires_null_controls: false
+  requires_transcript_policy: false
+  requires_image_coordinate_policy: false
+  do_not_assume_tags:
+  - Do not treat local availability as source truth.
+  - Do not publish raw or generated extract bodies without future review.
+  known_questions_refs:
+  - Which source-lock policy should govern future publication review?
+  missing_source_refs: []
+  solve_claim: false
+solve_claim: false

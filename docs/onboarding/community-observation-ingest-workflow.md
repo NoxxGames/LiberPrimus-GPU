@@ -10,3 +10,5 @@ Use this workflow when a local community observation bundle is supplied outside 
 6. Keep private Deep Research handoff files under ignored `research-inputs/**`.
 
 Community observations are claims to review, not facts to execute. Do not run OCR, AI/ML interpretation, image forensics, stego/audio tooling, CUDA, benchmarks, scored experiments, hypothesis generation/execution, source crawling, website expansion, corpus activation, page-boundary finalisation, method-status upgrades, or solve-claim workflows during ingest.
+
+Stage 5AL exports community-claim metadata to `data/website-ingest/stage5al/community-claims.yaml` without raw message bodies, formulas, claimed-values maps, private message locators, or attachment bodies. Publication remains blocked/private until a future review stage changes the gate.
