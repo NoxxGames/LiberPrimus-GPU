@@ -8,3 +8,7 @@ Implementation notes:
 - Added schemas, tests, docs, tutorial/wiki-source updates, research-synthesis updates, and consistency integration.
 - The renderer reads only committed Stage 5AL metadata and does not read raw `third_party/`, `data/raw/`, or generated private bundle bodies.
 - No Deep Research, public website publication, OCR, AI/ML interpretation, image/stego/audio execution, hypothesis execution, CUDA, benchmark, scored experiment, method-status upgrade, or solve claim was performed.
+
+CI follow-up:
+
+- `validate-stage5am` now treats ignored generated site/report files as optional when validating committed records. `validate-stage5am-site` remains the command for checking an actual generated static export.

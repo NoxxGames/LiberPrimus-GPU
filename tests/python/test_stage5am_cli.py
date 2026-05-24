@@ -64,7 +64,7 @@ def test_website_render_cli_build_and_validate_site(tmp_path: Path) -> None:
     assert "static_site_validation_passed=true" in completed.stdout
 
 
-def test_website_render_cli_full_validate_committed_records() -> None:
+def test_website_render_cli_full_validate_committed_records(tmp_path: Path) -> None:
     command = [
         sys.executable,
         "-m",
@@ -90,9 +90,11 @@ def test_website_render_cli_full_validate_committed_records() -> None:
         "--summary",
         "data/website-render/stage5am-summary.yaml",
         "--site-root",
-        "website-export/stage5am/research-index",
+        str(tmp_path / "missing-generated-site"),
         "--results-dir",
-        "experiments/results/website-render/stage5am",
+        str(tmp_path / "missing-generated-results"),
     ]
     completed = subprocess.run(command, cwd=repo_root(), check=True, capture_output=True, text=True)
+    assert "site_root_present=false" in completed.stdout
+    assert "generated_summary_present=false" in completed.stdout
     assert "website_render_stage5am_valid=true" in completed.stdout

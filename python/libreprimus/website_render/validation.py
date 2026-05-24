@@ -123,8 +123,11 @@ def validate_stage5am(
         errors.append("static_site_validation_not_passed")
     if audit.get("privacy_audit_passed") is not True:
         errors.append("privacy_audit_not_passed")
-    if upload.get("upload_directory") != "website-export/stage5am/research-index":
+    expected_upload_directory = output.get("upload_directory") or output.get("website_export_root")
+    if upload.get("upload_directory") != expected_upload_directory:
         errors.append("upload_directory_mismatch")
+    if summary_record.get("upload_instructions_created") is not True:
+        errors.append("upload_instructions_not_created")
     if decision.get("selected_next_stage_title") != "Stage 5AN - Deep Research source inventory and reliability prompt":
         errors.append("next_stage_not_stage5an")
     if summary_record.get("status") != "complete":
@@ -137,11 +140,12 @@ def validate_stage5am(
     if guard.get("new_cuda_kernels_added") != 0 or summary_record.get("new_cuda_kernels_added") != 0:
         errors.append("new_cuda_kernels_added_nonzero")
 
-    fresh_audit = audit_site(site_root)
-    if fresh_audit.get("privacy_audit_passed") is not True:
-        errors.append("site_privacy_rescan_failed")
-    if not (resolve(results_dir) / "summary.json").exists():
-        errors.append("missing_generated_summary_report")
+    site_root_present = resolve(site_root).exists()
+    generated_summary_present = (resolve(results_dir) / "summary.json").exists()
+    if site_root_present:
+        fresh_audit = audit_site(site_root)
+        if fresh_audit.get("privacy_audit_passed") is not True:
+            errors.append("site_privacy_rescan_failed")
 
     counts = {
         "stage_id": "stage-5am",
@@ -156,6 +160,8 @@ def validate_stage5am(
         "website_export_root": output.get("website_export_root"),
         "upload_directory": upload.get("upload_directory"),
         "deep_research_next_ready": decision.get("deep_research_next_ready", False),
+        "site_root_present": site_root_present,
+        "generated_summary_present": generated_summary_present,
         "validation_error_count": len(errors),
     }
     return counts, errors
