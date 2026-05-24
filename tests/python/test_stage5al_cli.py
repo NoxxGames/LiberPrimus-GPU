@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 from libreprimus.paths import repo_root
@@ -24,7 +25,7 @@ def _prepare_results(tmp_path: Path) -> Path:
 def test_stage5al_cli_validate_works_with_committed_package(tmp_path: Path) -> None:
     results = _prepare_results(tmp_path)
     command = [
-        str(repo_root() / ".venv/Scripts/python.exe"),
+        sys.executable,
         "-m",
         "libreprimus.cli",
         "source-harvester",
