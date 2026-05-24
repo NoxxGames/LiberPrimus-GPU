@@ -24,14 +24,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5AL" `
-        --expected-next-stage "Stage 5AM" `
+        --expected-latest-stage "Stage 5AM" `
+        --expected-next-stage "Stage 5AN" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5AL" `
-        --expected-next-stage "Stage 5AM" `
+        --expected-latest-stage "Stage 5AM" `
+        --expected-next-stage "Stage 5AN" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -46,14 +46,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AL",
+        expected_latest_stage="Stage 5AM",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AL",
+            "expected_latest_stage": "Stage 5AM",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2048,6 +2048,75 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
     git check-ignore -q $Stage5ALResearchInput
     git check-ignore -q $Stage5ALGeneratedSummary
     git check-ignore -q $Stage5ALCodexOutput
+
+    Write-Host "Validating Stage 5AM static website renderer records"
+    $Stage5AMRoot = Join-Path $TempDir "stage5am-website-render"
+    $Stage5AMSite = Join-Path $Stage5AMRoot "research-index"
+    $Stage5AMResults = Join-Path $Stage5AMRoot "results"
+    $Stage5AMRecords = Join-Path $Stage5AMRoot "records"
+    New-Item -ItemType Directory -Path $Stage5AMSite, $Stage5AMResults, $Stage5AMRecords | Out-Null
+    $Stage5AMRenderPolicy = Join-Path $Stage5AMRecords "render-policy.yaml"
+    $Stage5AMRenderInputs = Join-Path $Stage5AMRecords "render-inputs.yaml"
+    $Stage5AMManifest = Join-Path $Stage5AMRecords "render-output-manifest.yaml"
+    $Stage5AMValidation = Join-Path $Stage5AMRecords "static-site-validation.yaml"
+    $Stage5AMPrivacyAudit = Join-Path $Stage5AMRecords "privacy-publication-audit.yaml"
+    $Stage5AMUploadInstructions = Join-Path $Stage5AMRecords "upload-instructions.yaml"
+    $Stage5AMGuardrail = Join-Path $Stage5AMRecords "guardrail.yaml"
+    $Stage5AMNextStage = Join-Path $Stage5AMRecords "next-stage-decision.yaml"
+    $Stage5AMSummary = Join-Path $Stage5AMRecords "summary.yaml"
+    & $Python -m libreprimus.cli website-render build-stage5am-site `
+        --website-ingest-dir data/website-ingest/stage5al `
+        --stage5al-summary data/source-harvester/stage5al-summary.yaml `
+        --out-root $Stage5AMSite `
+        --results-dir $Stage5AMResults `
+        --render-policy-out $Stage5AMRenderPolicy `
+        --render-inputs-out $Stage5AMRenderInputs `
+        --manifest-out $Stage5AMManifest `
+        --privacy-audit-out $Stage5AMPrivacyAudit `
+        --upload-instructions-out $Stage5AMUploadInstructions
+    & $Python -m libreprimus.cli website-render validate-stage5am-site `
+        --site-root $Stage5AMSite `
+        --manifest $Stage5AMManifest `
+        --privacy-audit $Stage5AMPrivacyAudit `
+        --results-dir $Stage5AMResults `
+        --out $Stage5AMValidation
+    & $Python -m libreprimus.cli website-render build-stage5am-guardrail `
+        --site-root $Stage5AMSite `
+        --manifest $Stage5AMManifest `
+        --privacy-audit $Stage5AMPrivacyAudit `
+        --out $Stage5AMGuardrail
+    & $Python -m libreprimus.cli website-render build-stage5am-next-stage-decision `
+        --site-validation $Stage5AMValidation `
+        --privacy-audit $Stage5AMPrivacyAudit `
+        --out $Stage5AMNextStage
+    & $Python -m libreprimus.cli website-render build-stage5am-summary `
+        --render-policy $Stage5AMRenderPolicy `
+        --render-inputs $Stage5AMRenderInputs `
+        --manifest $Stage5AMManifest `
+        --validation $Stage5AMValidation `
+        --privacy-audit $Stage5AMPrivacyAudit `
+        --upload-instructions $Stage5AMUploadInstructions `
+        --guardrail $Stage5AMGuardrail `
+        --next-stage-decision $Stage5AMNextStage `
+        --out $Stage5AMSummary `
+        --results-dir $Stage5AMResults
+    & $Python -m libreprimus.cli website-render validate-stage5am `
+        --render-policy $Stage5AMRenderPolicy `
+        --render-inputs $Stage5AMRenderInputs `
+        --manifest $Stage5AMManifest `
+        --validation $Stage5AMValidation `
+        --privacy-audit $Stage5AMPrivacyAudit `
+        --upload-instructions $Stage5AMUploadInstructions `
+        --guardrail $Stage5AMGuardrail `
+        --next-stage-decision $Stage5AMNextStage `
+        --summary $Stage5AMSummary `
+        --site-root $Stage5AMSite `
+        --results-dir $Stage5AMResults
+    git check-ignore -q "website-export/stage5am/research-index/index.html"
+    git check-ignore -q "website-export/stage5am/research-index.zip"
+    $Stage5AMGeneratedSummary = Join-Path (Join-Path (Join-Path "experiments" "results") "website-render") "stage5am\summary.json"
+    git check-ignore -q $Stage5AMGeneratedSummary
+    git check-ignore -q "codex-output/stage5am-codex-completion.md"
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

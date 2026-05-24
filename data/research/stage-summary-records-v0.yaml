@@ -1127,3 +1127,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AL records 10 private Deep Research bundles, 61 source-card records, 58 content-index records, 12 community-claim metadata records, 7 publication-gate records, 26 missing-source records, and 0 public website-ready records. It selects Stage 5AM Deep Research source inventory and reliability prompt, keeps website expansion/public publication review-gated, keeps raw third-party and generated private bodies ignored, uses no Google Drive storage, and performs no network fetch, live scrape, online clone, Deep Research execution, OCR/AI/ML/image forensics/stego/audio processing, hypothesis generation/execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5am
+    title: Static research website renderer and webserver export package
+    status: complete
+    category: infrastructure
+    summary: Rendered the Stage 5AL website-ingest package into an ignored private static research index with noindex/robots metadata, publication-gate labels, privacy audit records, upload instructions, and Stage 5AN next-stage decision metadata.
+    key_outputs:
+      - "`libreprimus website-render` commands for static site generation, site validation, guardrail generation, next-stage decisions, summary generation, validation, and summary display."
+      - Stage 5AM render policy, render inputs, render output manifest, static-site validation, privacy/publication audit, upload instructions, guardrail, next-stage-decision, and aggregate summary records under `data/website-render/`.
+      - Ignored static website export under `website-export/stage5am/research-index/`, ignored renderer reports under `experiments/results/website-render/stage5am/`, and an ignored `codex-output/` completion handoff.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AM records 9 static pages, 8 data JSON files, 61 source-card records, 58 content records, 12 community-claim records, 10 bundle records, 7 publication-gate records, 26 missing-source records, and 0 public website-ready records. It selects Stage 5AN Deep Research source inventory and reliability prompt, keeps generated website files ignored, keeps raw third-party and generated private bodies ignored, uses no Google Drive storage, and performs no network fetch, live scrape, online clone, Deep Research execution, public website publication, OCR/AI/ML/image forensics/stego/audio processing, hypothesis generation/execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

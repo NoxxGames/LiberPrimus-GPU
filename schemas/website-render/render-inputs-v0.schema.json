@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/website-render/render-inputs-v0.schema.json",
+  "title": "Stage 5AM render inputs",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "source_stage_id",
+    "website_ingest_dir",
+    "metadata_only",
+    "source_card_count",
+    "content_record_count",
+    "claim_record_count",
+    "bundle_count",
+    "publication_gate_count",
+    "missing_source_count",
+    "raw_bodies_included",
+    "private_ids_published",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5am_render_inputs" },
+    "stage_id": { "const": "stage-5am" },
+    "source_stage_id": { "const": "stage-5al" },
+    "metadata_only": { "const": true },
+    "source_card_count": { "type": "integer", "minimum": 0 },
+    "content_record_count": { "type": "integer", "minimum": 0 },
+    "claim_record_count": { "type": "integer", "minimum": 0 },
+    "bundle_count": { "type": "integer", "minimum": 0 },
+    "publication_gate_count": { "type": "integer", "minimum": 0 },
+    "missing_source_count": { "type": "integer", "minimum": 0 },
+    "raw_bodies_included": { "const": false },
+    "private_ids_published": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

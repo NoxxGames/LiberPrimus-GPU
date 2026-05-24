@@ -1,0 +1,134 @@
+record_type: stage5am_render_output_manifest
+schema: schemas/website-render/render-output-manifest-v0.schema.json
+stage_id: stage-5am
+source_stage_id: stage-5al
+metadata_only: true
+website_export_generated: true
+website_export_root: website-export/stage5am/research-index
+upload_directory: website-export/stage5am/research-index
+zip_package_generated: true
+zip_package_path: website-export/stage5am/research-index.zip
+static_pages_generated: 9
+data_json_files_generated: 8
+asset_files_generated: 5
+required_pages:
+- index.html
+- bundles/index.html
+- sources/index.html
+- content/index.html
+- claims/index.html
+- publication-gates/index.html
+- missing-sources/index.html
+- deep-research/index.html
+- about/index.html
+required_data_files:
+- data/research-index.json
+- data/research-bundles.json
+- data/source-cards.json
+- data/content-index.json
+- data/community-claims.json
+- data/publication-gates.json
+- data/deep-research-export.json
+- data/missing-sources.json
+required_assets:
+- assets/site.css
+- assets/site.js
+- assets/search-index.json
+- robots.txt
+- README.md
+generated_file_count: 22
+generated_files:
+- README.md
+- about/index.html
+- assets/search-index.json
+- assets/site.css
+- assets/site.js
+- bundles/index.html
+- claims/index.html
+- content/index.html
+- data/community-claims.json
+- data/content-index.json
+- data/deep-research-export.json
+- data/missing-sources.json
+- data/publication-gates.json
+- data/research-bundles.json
+- data/research-index.json
+- data/source-cards.json
+- deep-research/index.html
+- index.html
+- missing-sources/index.html
+- publication-gates/index.html
+- robots.txt
+- sources/index.html
+raw_bodies_included: false
+private_ids_published: false
+public_website_publication_performed: false
+solve_claim: false
+file_hashes:
+- path: about/index.html
+  sha256: 0e42e92d5cd6ea0363f1114f8d92bba5ce5b7eb7f3fec6bff3418295c34e174d
+  size_bytes: 2174
+- path: assets/search-index.json
+  sha256: 99d1c5d261135434bb3b5cee970a44b3313544071f2208d1f88b9a8ba428a253
+  size_bytes: 52821
+- path: assets/site.css
+  sha256: 3b32a63c9c545b2c4f466ace339529ea3e11c9c4a6f8e72ae439698c1c25c78f
+  size_bytes: 1658
+- path: assets/site.js
+  sha256: 0147626880b3a535ff620e723ee536350a45ba9b99401f3598fd0da98bb7135f
+  size_bytes: 361
+- path: bundles/index.html
+  sha256: d1f8442dc3941e6dcbbffe2ab5bcd2536cad669aa3b1388bfbc1fa7e7888002f
+  size_bytes: 8234
+- path: claims/index.html
+  sha256: 5f62a74aea49b4c6e37acf2d08acbe6dc94dbf331e4d7125ea75a563739e57d6
+  size_bytes: 9509
+- path: content/index.html
+  sha256: b100b8af3573456fd70d99ea6cd970d6016c4f1aa0b542a2abc7e881fd584ed7
+  size_bytes: 20329
+- path: data/community-claims.json
+  sha256: 0a74daba477ce79adca49966be6639a5b1fd872f6da3e4338438027493c89a9c
+  size_bytes: 21147
+- path: data/content-index.json
+  sha256: 1c07384c3b099196e0fb1a2e7992ebb7fc907e619934e7d234dae39a16ee05d7
+  size_bytes: 91710
+- path: data/deep-research-export.json
+  sha256: 46701debaef2d880da2ae2cedb12b6ab212c71cdbf292d2f162539b287c449d3
+  size_bytes: 7405
+- path: data/missing-sources.json
+  sha256: b19d6a4eef1afa4c143b1383ac893b53bfe5b77f7800d12973a9f828dc1ac56b
+  size_bytes: 21807
+- path: data/publication-gates.json
+  sha256: 3a1177746eff347a841760ec7255b33e1cdda13b0975fb8ffa54a5aa4aed4e46
+  size_bytes: 6153
+- path: data/research-bundles.json
+  sha256: 7282a052b173a5be468c8c3df20801f56b937664410c5cd02733ae49af453139
+  size_bytes: 12659
+- path: data/research-index.json
+  sha256: ec57abdb8b394e7c8a05260b425a32f8ac4bf91e47666aa97ae23f98e45000a3
+  size_bytes: 3693
+- path: data/source-cards.json
+  sha256: 610a6c321b7a1f8eeee74c9a637250598b7ae35bbb9e73c1b2bda1661da971b5
+  size_bytes: 100832
+- path: deep-research/index.html
+  sha256: b18da3ccd23ad605092d63bcd0f80cdd38634aee7198c9434b92cd696a1d5425
+  size_bytes: 5969
+- path: index.html
+  sha256: 615746040139633cbf429ce058d855db6a8bcf0190ca13dd24fd60a6f153dc42
+  size_bytes: 2430
+- path: missing-sources/index.html
+  sha256: a3caac2d488c2bb093b6155781dc27816f05cb48ec821dd80faacc9d8a12e8f8
+  size_bytes: 6706
+- path: publication-gates/index.html
+  sha256: 87e6e94d5de94d0709b70280c359d4f122bcbc239d98507a16deb1a09c9308f8
+  size_bytes: 3436
+- path: README.md
+  sha256: e8a2870f816afc1c9c91104f13b67e003a5298d615a6b8ee0a2d29a9424b3e59
+  size_bytes: 217
+- path: robots.txt
+  sha256: a8f31103361fca68bef71fc69cff844b7c23bd3d64d2b872d74690cbda656bfc
+  size_bytes: 28
+- path: sources/index.html
+  sha256: d76e76a4a50d4babcc01c59a4ea5f17fb9a34844ea6c7b12c35fcf3b7eba74cd
+  size_bytes: 19594
+site_root: website-export/stage5am/research-index

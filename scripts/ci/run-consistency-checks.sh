@@ -23,14 +23,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5AL" \
-    --expected-next-stage "Stage 5AM" \
+    --expected-latest-stage "Stage 5AM" \
+    --expected-next-stage "Stage 5AN" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5AL" \
-    --expected-next-stage "Stage 5AM" \
+    --expected-latest-stage "Stage 5AM" \
+    --expected-next-stage "Stage 5AN" \
     --out "$stage5ah_out/current_next_stage_report.json"
 "$python_bin" - <<PY
 import json
@@ -45,14 +45,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AL",
+        expected_latest_stage="Stage 5AM",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AL",
+            "expected_latest_stage": "Stage 5AM",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2050,6 +2050,75 @@ stage5al_codex_output="codex-output/stage5al-codex-completion.md"
 git check-ignore -q "$stage5al_research_input"
 git check-ignore -q "$stage5al_generated_summary"
 git check-ignore -q "$stage5al_codex_output"
+
+echo "Validating Stage 5AM static website renderer records"
+stage5am_root="$tmp_dir/stage5am-website-render"
+stage5am_site="$stage5am_root/research-index"
+stage5am_results="$stage5am_root/results"
+stage5am_records="$stage5am_root/records"
+mkdir -p "$stage5am_site" "$stage5am_results" "$stage5am_records"
+stage5am_render_policy="$stage5am_records/render-policy.yaml"
+stage5am_render_inputs="$stage5am_records/render-inputs.yaml"
+stage5am_manifest="$stage5am_records/render-output-manifest.yaml"
+stage5am_validation="$stage5am_records/static-site-validation.yaml"
+stage5am_privacy_audit="$stage5am_records/privacy-publication-audit.yaml"
+stage5am_upload_instructions="$stage5am_records/upload-instructions.yaml"
+stage5am_guardrail="$stage5am_records/guardrail.yaml"
+stage5am_next_stage="$stage5am_records/next-stage-decision.yaml"
+stage5am_summary="$stage5am_records/summary.yaml"
+"$python_bin" -m libreprimus.cli website-render build-stage5am-site \
+    --website-ingest-dir data/website-ingest/stage5al \
+    --stage5al-summary data/source-harvester/stage5al-summary.yaml \
+    --out-root "$stage5am_site" \
+    --results-dir "$stage5am_results" \
+    --render-policy-out "$stage5am_render_policy" \
+    --render-inputs-out "$stage5am_render_inputs" \
+    --manifest-out "$stage5am_manifest" \
+    --privacy-audit-out "$stage5am_privacy_audit" \
+    --upload-instructions-out "$stage5am_upload_instructions"
+"$python_bin" -m libreprimus.cli website-render validate-stage5am-site \
+    --site-root "$stage5am_site" \
+    --manifest "$stage5am_manifest" \
+    --privacy-audit "$stage5am_privacy_audit" \
+    --results-dir "$stage5am_results" \
+    --out "$stage5am_validation"
+"$python_bin" -m libreprimus.cli website-render build-stage5am-guardrail \
+    --site-root "$stage5am_site" \
+    --manifest "$stage5am_manifest" \
+    --privacy-audit "$stage5am_privacy_audit" \
+    --out "$stage5am_guardrail"
+"$python_bin" -m libreprimus.cli website-render build-stage5am-next-stage-decision \
+    --site-validation "$stage5am_validation" \
+    --privacy-audit "$stage5am_privacy_audit" \
+    --out "$stage5am_next_stage"
+"$python_bin" -m libreprimus.cli website-render build-stage5am-summary \
+    --render-policy "$stage5am_render_policy" \
+    --render-inputs "$stage5am_render_inputs" \
+    --manifest "$stage5am_manifest" \
+    --validation "$stage5am_validation" \
+    --privacy-audit "$stage5am_privacy_audit" \
+    --upload-instructions "$stage5am_upload_instructions" \
+    --guardrail "$stage5am_guardrail" \
+    --next-stage-decision "$stage5am_next_stage" \
+    --out "$stage5am_summary" \
+    --results-dir "$stage5am_results"
+"$python_bin" -m libreprimus.cli website-render validate-stage5am \
+    --render-policy "$stage5am_render_policy" \
+    --render-inputs "$stage5am_render_inputs" \
+    --manifest "$stage5am_manifest" \
+    --validation "$stage5am_validation" \
+    --privacy-audit "$stage5am_privacy_audit" \
+    --upload-instructions "$stage5am_upload_instructions" \
+    --guardrail "$stage5am_guardrail" \
+    --next-stage-decision "$stage5am_next_stage" \
+    --summary "$stage5am_summary" \
+    --site-root "$stage5am_site" \
+    --results-dir "$stage5am_results"
+git check-ignore -q "website-export/stage5am/research-index/index.html"
+git check-ignore -q "website-export/stage5am/research-index.zip"
+stage5am_generated_summary="experiments"/"results"/"website-render"/"stage5am"/"summary.json"
+git check-ignore -q "$stage5am_generated_summary"
+git check-ignore -q "codex-output/stage5am-codex-completion.md"
 
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

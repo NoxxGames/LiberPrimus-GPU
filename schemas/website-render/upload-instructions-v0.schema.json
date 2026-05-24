@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/website-render/upload-instructions-v0.schema.json",
+  "title": "Stage 5AM upload instructions",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "metadata_only",
+    "upload_directory",
+    "do_not_upload",
+    "raw_bodies_included",
+    "private_ids_published",
+    "public_website_publication_performed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5am_upload_instructions" },
+    "stage_id": { "const": "stage-5am" },
+    "metadata_only": { "const": true },
+    "upload_directory": { "const": "website-export/stage5am/research-index" },
+    "do_not_upload": { "type": "array", "items": { "type": "string" } },
+    "raw_bodies_included": { "const": false },
+    "private_ids_published": { "const": false },
+    "public_website_publication_performed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

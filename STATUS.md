@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AL research website-ingest staging and Deep-Research export validation is complete.
+Stage 5AM static research website renderer and webserver export package is complete.
 
-Next recommended prompt: Stage 5AM - Deep Research source inventory and reliability prompt. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5AN - Deep Research source inventory and reliability prompt. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5AM
+
+Stage 5AM created an uploadable metadata-only static research index at `website-export/stage5am/research-index/` from the committed Stage 5AL website-ingest package.
+
+Local Stage 5AM summary: static pages `9`, data JSON files `8`, source-card records `61`, content records `58`, community-claim records `12`, bundles `10`, publication gates `7`, missing-source records `26`, public website-ready count `0`, privacy audit passed `true`, static site validation passed `true`, noindex/robots present `true`, selected next prompt `Stage 5AN - Deep Research source inventory and reliability prompt`, network fetch `false`, online clone `false`, Google Drive storage `false`, raw data committed `false`, generated private bodies committed `false`, private IDs published `false`, raw bodies included `false`, public website publication `false`, Deep Research execution `false`, OCR `false`, AI/ML interpretation `false`, image/stego/audio execution `false`, hypothesis generation/execution `false`, CUDA execution/source modification `false`, new CUDA kernels `0`, benchmarks `false`, scored experiments `false`, method-status upgrade `false`, and solve claim `false`.
+
+Stage 5AM is renderer and upload-package infrastructure. Its generated static site is ignored and private/review-gated; it is not raw/public website publication, not Deep Research output, not experiment execution, and not solve evidence.
 
 ## Completed in Stage 5AL
 

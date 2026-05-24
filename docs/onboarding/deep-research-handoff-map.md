@@ -6,7 +6,7 @@ Repository: `https://github.com/NoxxGames/LiberPrimus-GPU`
 
 Before a Deep Research handoff, verify the latest commit and CI status locally. The handoff should cite the commit hash, stage, and generated bundle paths.
 
-Stage 5AL selects Stage 5AM Deep Research source inventory and reliability review as the next prompt. Use `data/source-harvester/stage5al-deep-research-export.yaml`, `data/website-ingest/stage5al/`, and ignored `research-inputs/stage5al/` helper files. These records summarize the Stage 5AI curated bundles, Stage 5AJ UsefulFiles metadata, and Stage 5AK community claim records behind publication gates. Do not hand Deep Research raw `third_party/` paths as source truth. Public website expansion remains a future review-gated project.
+Stage 5AM selects Stage 5AN Deep Research source inventory and reliability review as the next prompt. Use `data/source-harvester/stage5al-deep-research-export.yaml`, `data/website-ingest/stage5al/`, `data/website-render/stage5am-summary.yaml`, and ignored `research-inputs/stage5al/` helper files. The ignored static index under `website-export/stage5am/research-index/` is a metadata review aid, not source truth or public publication. These records summarize the Stage 5AI curated bundles, Stage 5AJ UsefulFiles metadata, and Stage 5AK community claim records behind publication gates. Do not hand Deep Research raw `third_party/` paths as source truth. Public website expansion remains a future review-gated project.
 
 ## Files Deep Research Should Inspect First
 

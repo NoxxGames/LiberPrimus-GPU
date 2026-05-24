@@ -19,7 +19,13 @@ For Stage 5AL, Deep Research should start from:
 - `data/website-ingest/stage5al/`
 - ignored helper files under `research-inputs/stage5al/`
 
-Do not use raw `third_party/` files as the ingest root, and do not treat website-ingest metadata as public publication permission.
+For Stage 5AM, Deep Research may also use:
+
+- `data/website-render/stage5am-summary.yaml`
+- `data/website-render/stage5am-render-output-manifest.yaml`
+- the ignored metadata-only static index under `website-export/stage5am/research-index/`
+
+Do not use raw `third_party/` files as the ingest root, and do not treat website-ingest or website-render metadata as public publication permission.
 
 For Stage 5AJ, private handoffs may reference:
 

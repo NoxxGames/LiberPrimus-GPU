@@ -1,0 +1,48 @@
+record_type: stage5am_next_stage_decisions
+schema: schemas/website-render/stage5am-summary-v0.schema.json
+stage_id: stage-5am
+source_stage_id: stage-5al
+selected_option_id: stage5an_deep_research_source_inventory_and_reliability_prompt
+deep_research_next_ready: true
+selected_next_prompt_type: Deep Research
+selected_next_stage_title: Stage 5AN - Deep Research source inventory and reliability
+  prompt
+selected_next_stage_reason: The Stage 5AM static metadata-only research index validates
+  with no raw bodies, private IDs, publication-gate overrides, Deep Research execution,
+  or solve claims.
+records:
+- record_type: stage5am_next_stage_decision_record
+  schema: schemas/website-render/stage5am-summary-v0.schema.json
+  stage_id: stage-5am
+  source_stage_id: stage-5al
+  option_id: stage5an_deep_research_source_inventory_and_reliability_prompt
+  selected: true
+  recommended_next_prompt_type: Deep Research
+  recommended_next_stage_title: Stage 5AN - Deep Research source inventory and reliability
+    prompt
+  recommended_next_stage_reason: The Stage 5AM static metadata-only research index
+    validates with no raw bodies, private IDs, publication-gate overrides, Deep Research
+    execution, or solve claims.
+  deep_research_recommended_next: true
+  website_expansion_recommended_next: false
+  scored_experiment_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+- record_type: stage5am_next_stage_decision_record
+  schema: schemas/website-render/stage5am-summary-v0.schema.json
+  stage_id: stage-5am
+  source_stage_id: stage-5al
+  option_id: stage5am_publication_gate_repair
+  selected: false
+  recommended_next_prompt_type: null
+  recommended_next_stage_title: Stage 5AM publication gate repair
+  recommended_next_stage_reason: Use only if renderer validation or privacy audit
+    fails.
+  deep_research_recommended_next: false
+  website_expansion_recommended_next: false
+  scored_experiment_recommended_next: false
+  unsolved_page_cuda_recommended_next: false
+  execution_enabled: false
+  solve_claim: false
+solve_claim: false

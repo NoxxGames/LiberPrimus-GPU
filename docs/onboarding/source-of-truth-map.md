@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5AL it names Stage 5AL as latest complete and Stage 5AM as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5AM it names Stage 5AM as latest complete and Stage 5AN as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -17,11 +17,14 @@
 - `data/source-harvester/stage5ak-summary.yaml`: Stage 5AK community-facts claim-record integration aggregate summary.
 - `data/source-harvester/stage5al-summary.yaml`: Stage 5AL website-ingest staging and Deep Research export aggregate summary.
 - `data/website-ingest/stage5al/`: committed metadata-only website-ingest package.
+- `data/website-render/stage5am-summary.yaml`: Stage 5AM static research website renderer aggregate summary.
+- `data/website-render/stage5am-*.yaml`: committed Stage 5AM render policy, input, manifest, validation, privacy, upload, guardrail, and next-stage decision records.
 - `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 - `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.
 - `docs/onboarding/deep-research-ingest-format.md`: Stage 5AJ Deep Research ingest metadata and fidelity policy.
 - `docs/onboarding/community-observation-ingest-workflow.md`: Stage 5AK community observation ingest and claim-record policy.
+- `docs/onboarding/static-research-index-workflow.md`: Stage 5AM static research index renderer and upload workflow.
 - `docs/onboarding/local-source-inventory-workflow.md`: local `third_party/` source inventory workflow and raw-data guardrails.
 
 ## Research And Workflow Truth
@@ -37,6 +40,7 @@
 - `docs/reference/source-harvester-curated-bundles-cli.md`: Stage 5AI curated bundle/source-card/content-index CLI usage.
 - `docs/reference/source-harvester-usefulfiles-cli.md`: Stage 5AJ UsefulFilesAndIdeas CLI usage and guardrails.
 - `docs/reference/source-harvester-community-facts-cli.md`: Stage 5AK community-facts CLI usage and guardrails.
+- `docs/reference/website-render-cli.md`: Stage 5AM website-render CLI usage and guardrails.
 
 ## Architecture And CI Truth
 

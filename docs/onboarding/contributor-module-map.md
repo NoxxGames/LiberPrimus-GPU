@@ -16,6 +16,7 @@
 - Research synthesis: `python/libreprimus/research_synthesis/`, `data/research/`.
 - Document staleness: `python/libreprimus/doc_staleness/`, `data/project-state/`, `schemas/project-state/`.
 - Source harvester: `python/libreprimus/source_harvester/`, `data/source-harvester/`, `schemas/source-harvester/`.
+- Website renderer: `python/libreprimus/website_render/`, `data/website-render/`, `schemas/website-render/`.
 - CUDA parity/reporting: `python/libreprimus/cuda_*`, `python/libreprimus/prime_minus_one_*`, `python/libreprimus/bounded_p56_cuda_parity/`, `cuda/`, `data/cuda/`.
 - CLI: `python/libreprimus/cli.py`, `python/libreprimus/cli_commands/`.
 - CI/scripts: `.github/workflows/`, `scripts/ci/`, `scripts/github/`.
@@ -36,7 +37,9 @@ Stage 5AJ source-harvester modules add UsefulFilesAndIdeas inventory, workbook m
 
 Stage 5AK source-harvester modules add community-facts inventory, ordered attachment metadata, claim records, correction logs, arithmetic preflight, private Deep Research addenda, publication guardrails, and validation. They must keep raw message logs/images and generated body indexes ignored, and must not treat community number facts as execution-ready or solved.
 
-Stage 5AL source-harvester modules add website-ingest package generation, publication-gate policy, private Deep Research export generation, data-contract validation, guardrails, and next-stage selection. They must keep public website-ready at zero, generated private export helpers ignored, raw `third_party/` material out of committed records, and Stage 5AM Deep Research pointed at metadata rather than raw paths.
+Stage 5AL source-harvester modules add website-ingest package generation, publication-gate policy, private Deep Research export generation, data-contract validation, guardrails, and next-stage selection. They must keep public website-ready at zero, generated private export helpers ignored, and raw `third_party/` material out of committed records.
+
+Stage 5AM website-render modules render the Stage 5AL metadata package into an ignored private static index and upload manifest. They must keep public website-ready at zero, preserve publication gates, avoid raw/private bodies, avoid external dependencies, write generated site files only under ignored `website-export/stage5am/`, and point Stage 5AN Deep Research at metadata rather than raw paths.
 
 ## Good First Areas
 

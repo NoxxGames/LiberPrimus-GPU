@@ -190,3 +190,12 @@ records:
     source: Stage 5AK community-facts inventory, attachment index, claim records, correction log, arithmetic preflight, website-ingest update, Deep-Research pack update, guardrail, next-stage decision, and aggregate summary records.
     affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md, docs/onboarding/deep-research-handoff-map.md, docs/onboarding/deep-research-bundle-workflow.md, docs/onboarding/source-harvester-workflow.md, docs/onboarding/local-source-inventory-workflow.md, docs/onboarding/deep-research-ingest-format.md, docs/onboarding/community-observation-ingest-workflow.md]
     notes: Stage 5AK did not run Deep Research, fetch from the network, scrape live sites, clone online repositories, use Google Drive storage, process raw sources into committed data, execute hypotheses, run OCR/AI/ML/image/stego/audio tooling, run CUDA, benchmark, run scored experiments, expand the website, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
+  - record_type: project_direction_change_record
+    change_id: stage5am-static-research-index-before-deep-research
+    date_or_stage: stage-5am
+    previous_direction: Run the Stage 5AM Deep Research source inventory and reliability prompt directly from Stage 5AL metadata.
+    new_direction: Render an uploadable private static research index first, then select Stage 5AN Deep Research source inventory and reliability prompt.
+    reason: The project owner needed an actual metadata-only static website export before Deep Research continues.
+    source: Stage 5AM render policy, output manifest, privacy audit, static-site validation, upload instructions, guardrail, next-stage decision, and summary records.
+    affected_docs: [docs/roadmap/staged-plan.md, README.md, STATUS.md, ROADMAP.md, AGENTS.md, EXPERIMENTS.md, RESULTS_SCHEMA.md, TESTING.md, CIPHER_CATALOG.md, docs/onboarding/static-research-index-workflow.md, docs/onboarding/private-generated-data-map.md]
+    notes: Stage 5AM did not run Deep Research, fetch from the network, scrape live sites, clone online repositories, use Google Drive storage, publish raw/private bodies, execute hypotheses, run OCR/AI/ML/image/stego/audio tooling, run CUDA, benchmark, run scored experiments, expand public website readiness, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.

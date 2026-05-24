@@ -607,3 +607,39 @@ records:
   owner_context: source_operator
   notes: Local community observations stay ignored and become compact claim
     metadata only unless a future source policy says otherwise.
+- path: data/website-render/stage5am-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AM static research website renderer aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5am
+  expected_update_frequency: when_website_render_state_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Records static page, JSON data, publication-gate, privacy-audit, upload,
+    and Stage 5AN next-stage counts without committing generated website files.
+- path: docs/onboarding/static-research-index-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5AM static research index renderer and upload workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5am
+  expected_update_frequency: every_website_render_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Documents that the static index is private generated output and not public
+    publication approval.
+- path: docs/reference/website-render-cli.md
+  category: operational_status_doc
+  purpose: Stage 5AM website-render CLI reference.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5am
+  expected_update_frequency: every_website_render_cli_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: source_operator
+  notes: Documents build, validation, guardrail, next-stage, summary, and display
+    commands for metadata-only static rendering.

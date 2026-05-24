@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AL - research website-ingest staging and Deep-Research export validation.
+Current completed stage: Stage 5AM - static research website renderer and webserver export package.
 
-Current work: Stage 5AM - Deep Research source inventory and reliability prompt. Stage 5AL created metadata-only website-ingest records, publication gates, a website data contract, and a private Deep Research export package from Stage 5AI/5AJ/5AK metadata; it did not run Deep Research, publish website content, process raw sources into committed data, fetch from the network, clone online repositories, use Google Drive storage, run OCR, run AI/ML interpretation, run image/stego/audio tooling, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, expand the website, or make solve claims.
+Current work: Stage 5AN - Deep Research source inventory and reliability prompt. Stage 5AM rendered Stage 5AL metadata into an ignored private static research index at `website-export/stage5am/research-index/`; it did not run Deep Research, publish raw/private bodies, process raw sources into committed data, fetch from the network, clone online repositories, use Google Drive storage, run OCR, run AI/ML interpretation, run image/stego/audio tooling, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, publicly publish the website, or make solve claims.
 
 Current project state:
 
@@ -123,7 +123,8 @@ Current project state:
 - Stage 5AK claim records preserve formulas, inputs, claimed values, correction status, risk level, source-lock requirements, and null-control requirements; they are not truth records, execution-ready manifests, source truth, or solve evidence.
 - Stage 5AK public website publication is blocked/review-gated. Private Deep Research addenda may preserve technical context in ignored `research-inputs/stage5ak/` files.
 - Stage 5AL website-ingest records are committed metadata only. They do not publish raw or review-blocked content, private identifiers, generated extract bodies, or public website pages.
-- Stage 5AM Deep Research should consume the Stage 5AL export package and publication gates, not raw `third_party/` paths.
+- Stage 5AM static website-render records are committed metadata only; generated HTML/JSON exports remain ignored under `website-export/stage5am/`.
+- Stage 5AN Deep Research should consume the Stage 5AL/5AM metadata package and publication gates, not raw `third_party/` paths.
 - Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
 - Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
 - Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
@@ -979,7 +980,14 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Publication gates are mandatory. Public website-ready remains `0` until a future reviewed publication stage explicitly marks records safe.
 - Do not commit raw third-party files, generated private export bodies, private community identifiers, raw message bodies, raw images, raw workbook bodies, SQLite databases, local absolute paths, or `codex-output/**`.
 - Stage 5AL does not authorize OCR, AI/ML interpretation, image/stego/audio tooling, hypothesis generation/execution, CUDA, benchmarks, scored experiments, method-status upgrades, canonical corpus activation, page-boundary finalisation, or solve claims.
-- Stage 5AM should perform Deep Research source inventory and reliability review from Stage 5AL metadata only.
+- Stage 5AM renders a private static metadata index from Stage 5AL records before Deep Research.
+
+## Stage 5AM Static Research Website Renderer Rules
+
+- Stage 5AM generated static site files are ignored under `website-export/stage5am/` and must not be staged.
+- The static research index is metadata-only and review-gated; it is not public website publication.
+- Do not publish raw/private bodies, generated extraction bodies, private IDs, local absolute paths, raw images, raw workbooks, archives, audio, video, or PDFs through the renderer.
+- Stage 5AN should perform Deep Research source inventory and reliability review from Stage 5AL/5AM metadata only.
 
 ## Stage 5AC Prime-Minus-One CUDA Synthetic Reporting Rules
 

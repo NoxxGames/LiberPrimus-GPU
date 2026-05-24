@@ -1,0 +1,17 @@
+record_type: stage5am_render_inputs
+schema: schemas/website-render/render-inputs-v0.schema.json
+stage_id: stage-5am
+source_stage_id: stage-5al
+website_ingest_dir: data/website-ingest/stage5al
+stage5al_summary_path: data/source-harvester/stage5al-summary.yaml
+stage5al_commit: 66d6ba9f7739861bc5f797d0896f32082af92326
+metadata_only: true
+source_card_count: 61
+content_record_count: 58
+claim_record_count: 12
+bundle_count: 10
+publication_gate_count: 7
+missing_source_count: 26
+raw_bodies_included: false
+private_ids_published: false
+solve_claim: false

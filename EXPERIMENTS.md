@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AM Static Research Website Renderer
+
+Stage 5AM is a static metadata renderer and upload-package stage, not an experiment. It consumes the committed Stage 5AL website-ingest metadata and writes an ignored private/review-gated static export under `website-export/stage5am/research-index/`.
+
+Generated Stage 5AM renderer reports remain ignored under `experiments/results/website-render/stage5am/`. Public website-ready remains `0`; publication gates are displayed and not overridden. Stage 5AM performs no Deep Research, network fetch, live scrape, online clone, Google Drive storage, raw source commit, public website publication, hypothesis generation/execution, OCR, AI/ML interpretation, image/stego/audio tooling, CUDA, benchmarks, scored experiments, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AL Website-Ingest Staging
 
 Stage 5AL is website-ingest and Deep Research export staging, not an experiment. It consumes

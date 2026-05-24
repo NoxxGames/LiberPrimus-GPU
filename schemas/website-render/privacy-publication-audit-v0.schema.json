@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/website-render/privacy-publication-audit-v0.schema.json",
+  "title": "Stage 5AM privacy publication audit",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "metadata_only",
+    "privacy_audit_passed",
+    "raw_bodies_included",
+    "private_ids_published",
+    "local_absolute_paths_published",
+    "public_website_publication_performed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5am_privacy_publication_audit" },
+    "stage_id": { "const": "stage-5am" },
+    "metadata_only": { "const": true },
+    "privacy_audit_passed": { "type": "boolean" },
+    "raw_bodies_included": { "const": false },
+    "private_ids_published": { "const": false },
+    "local_absolute_paths_published": { "const": false },
+    "public_website_publication_performed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

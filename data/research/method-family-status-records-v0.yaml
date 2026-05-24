@@ -522,10 +522,10 @@ records:
     method_family_id: research_website_ingest
     name: Research website-ingest and Deep Research export staging
     status: infrastructure_only
-    evidence_summary: Stage 5AL converts Stage 5AI, Stage 5AJ, and Stage 5AK source-harvester metadata into a committed metadata-only website-ingest package plus a private Deep Research export manifest. It records publication gates, source cards, bundle cards, content indexes, community-claim indexes, missing-source records, and data-contract validation while keeping all raw third-party files and generated private body files ignored.
-    completed_stage_refs: [stage-5ai, stage-5aj, stage-5ak, stage-5al]
+    evidence_summary: Stage 5AL converts Stage 5AI, Stage 5AJ, and Stage 5AK source-harvester metadata into a committed metadata-only website-ingest package plus a private Deep Research export manifest. Stage 5AM renders that package into an ignored private static research index with noindex/robots metadata, publication-gate labels, privacy validation, and upload instructions while keeping all raw third-party files, generated private body files, and generated site files ignored.
+    completed_stage_refs: [stage-5ai, stage-5aj, stage-5ak, stage-5al, stage-5am]
     reopen_conditions: [A future website project needs reviewed public metadata cards, a Deep Research handoff needs updated source-card or claim metadata, or publication gates are changed by explicit review.]
     stop_conditions: [Do not publish raw or review-blocked source bodies, private community data, generated extract bodies, private identifiers, local absolute paths, website pages, Deep Research reports, CUDA outputs, benchmark outputs, scored experiment records, or solve claims.]
-    next_action: Stage 5AM should run the Deep Research source inventory and reliability prompt against the Stage 5AL export package, not raw `third_party/` paths.
+    next_action: Stage 5AN should run the Deep Research source inventory and reliability prompt against the Stage 5AL/5AM metadata package, not raw `third_party/` paths.
     solve_claim: false
-    notes: Public website-ready remains zero after Stage 5AL. The committed package is safe metadata infrastructure and not public website publication.
+    notes: Public website-ready remains zero after Stage 5AM. The committed package and ignored static export are safe metadata infrastructure and not public website publication.

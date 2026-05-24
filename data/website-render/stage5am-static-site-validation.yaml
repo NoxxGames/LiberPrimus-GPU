@@ -1,0 +1,16 @@
+record_type: stage5am_static_site_validation
+schema: schemas/website-render/static-site-validation-v0.schema.json
+stage_id: stage-5am
+source_stage_id: stage-5al
+site_root: website-export/stage5am/research-index
+static_site_validation_passed: true
+required_pages_present: true
+robots_noindex_present: true
+robots_disallow_all_present: true
+external_network_dependencies_present: false
+raw_bodies_included: false
+private_ids_published: false
+public_website_publication_performed: false
+validation_error_count: 0
+errors: []
+solve_claim: false

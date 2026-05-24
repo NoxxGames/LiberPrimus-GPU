@@ -19,10 +19,10 @@ def test_stage5ab_source_of_truth_schema_and_loader() -> None:
 
     _validator("schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json").validate(payload)
     source = load_source_of_truth(path)
-    assert source.latest_completed_stage_prefix == "Stage 5AL"
-    assert source.expected_next_stage_prefix == "Stage 5AM"
+    assert source.latest_completed_stage_prefix == "Stage 5AM"
+    assert source.expected_next_stage_prefix == "Stage 5AN"
     assert source.next_stage_after_this_stage == (
-        "Stage 5AM - Deep Research source inventory and reliability prompt"
+        "Stage 5AN - Deep Research source inventory and reliability prompt"
     )
 
 
@@ -34,7 +34,7 @@ def test_stage5ab_operational_file_map_schema_and_loader() -> None:
     paths = load_operational_paths(path)
     assert "README.md" in paths
     assert "docs/onboarding/operational-file-map.md" in paths
-    assert len(paths) >= 36
+    assert len(paths) >= 40
 
 
 def test_stage5ab_summary_and_findings_schemas() -> None:

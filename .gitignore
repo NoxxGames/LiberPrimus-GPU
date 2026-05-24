@@ -772,5 +772,21 @@ experiments/results/website-ingest/**
 !experiments/results/website-ingest/stage5al/
 !experiments/results/website-ingest/stage5al/.gitkeep
 
+# Generated static website export packages
+website-export/**
+!website-export/
+!website-export/README.md
+!website-export/.gitkeep
+!website-export/stage5am/
+!website-export/stage5am/.gitkeep
+
+# Generated static website renderer reports
+experiments/results/website-render/**
+!experiments/results/website-render/
+!experiments/results/website-render/README.md
+!experiments/results/website-render/.gitkeep
+!experiments/results/website-render/stage5am/
+!experiments/results/website-render/stage5am/.gitkeep
+
 # Local Codex completion handoffs
 codex-output/**

@@ -73,6 +73,8 @@
 - `experiments/results/source-harvester-community-facts/stage5ak/`: generated Stage 5AK community-facts inventory, message index, attachment index, claim records, correction log, arithmetic preflight, website/Deep-Research update reports, summary, and warnings. Commit only `.gitkeep`.
 - `research-inputs/stage5al/`: generated private Deep Research export helper files. Commit only `.gitkeep`.
 - `experiments/results/website-ingest/stage5al/`: generated Stage 5AL website-ingest validation and export reports. Commit only `.gitkeep`.
+- `website-export/stage5am/`: generated Stage 5AM private static research index, static assets, JSON data, robots/noindex metadata, and optional upload ZIP. Commit only README/.gitkeep scaffolds.
+- `experiments/results/website-render/stage5am/`: generated Stage 5AM renderer validation reports, privacy/publication audits, manifests, summaries, and warnings. Commit only `.gitkeep`.
 - `codex-output/`: local Codex completion handoff files; do not stage or publish.
 - `experiments/results/scoring-consolidation/stage4i/`: generated Stage 4I scorer inventories, rendered calibration reports, CPU batch compatibility JSON, and warnings.
 - `experiments/results/observation-review/stage4j/`: generated Stage 4J observation review decision reports, quarantine reports, promotion-gate reports, path-sanitisation reports, and warnings.
@@ -118,6 +120,7 @@
 - Generated Stage 4L observation-promotion reports under `experiments/results/observation-promotion/stage4l/`.
 - Generated Stage 4M image-preflight reports under `experiments/results/image-preflight/stage4m/`.
 - Generated Stage 4N stego/audio positive-control reports under `experiments/results/stego-positive-controls/stage4n/`.
+- Generated Stage 5AM static website exports under `website-export/stage5am/` and renderer reports under `experiments/results/website-render/stage5am/`.
 - Raw or sidecar community-observation artefacts under `third_party/CommunityObservations/`.
 - Cached Stage 4K source snapshot bytes under `third_party/SourceSnapshots/`.
 - Cached Stage 4N stego/audio fixture bytes under `third_party/StegoPositiveControls/`.
