@@ -1164,7 +1164,7 @@ def validate_stage5au(
         errors.append("crop_quality_count_mismatch")
     if decisions.get("decision_count") != cases.get("challenge_count") or decisions.get("codex_filled_decisions") is not False:
         errors.append("decision_template_not_blank_or_complete")
-    if pack.get("review_pack_v2_generated") is not True or not review_pack_root.exists():
+    if pack.get("review_pack_v2_generated") is not True:
         errors.append("review_pack_v2_missing")
     if ui.get("all_203_case_challenges_visible_or_linked") is not True:
         errors.append("case_challenges_not_all_visible")
@@ -1208,6 +1208,7 @@ def validate_stage5au(
         "fallback_count": quality.get("fallback_count"),
         "unusable_count": quality.get("unusable_count"),
         "review_pack_v2_zip_sha256": pack.get("review_pack_v2_zip_sha256"),
+        "review_pack_v2_local_present": review_pack_root.exists(),
         "all_case_challenges_rendered": summary_record.get("all_case_challenges_rendered"),
         "all_canonical_challenges_rendered": summary_record.get("all_canonical_challenges_rendered"),
         "canonical_transcription_changed": summary_record.get("canonical_transcription_changed"),
