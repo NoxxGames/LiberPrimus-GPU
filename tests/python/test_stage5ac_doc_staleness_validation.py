@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5ap_latest_and_stage5aq_next() -> None:
+def test_operational_docs_use_stage5ar_latest_and_stage5as_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5AP page 49-51 token-block source-lock" in status
-    assert "Next recommended prompt: Stage 5AQ" in status
-    assert "Latest completed stage: Stage 5AP" in staged_plan
-    assert "Current planning focus: Stage 5AQ" in staged_plan
+    assert "Stage 5AR page 49-51 original-image pixel-coordinate" in status
+    assert "Next recommended prompt: Stage 5AS" in status
+    assert "Latest completed stage: Stage 5AR" in staged_plan
+    assert "Current planning focus: Stage 5AS" in staged_plan

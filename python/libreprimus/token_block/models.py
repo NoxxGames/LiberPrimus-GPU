@@ -10,6 +10,7 @@ from typing import Any
 import yaml
 
 STAGE_ID = "stage-5ap"
+STAGE5AR_ID = "stage-5ar"
 TOKEN_BLOCK_ID = "stage5ap-page49-51-token-block"
 PRIMARY_ALPHABET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwx"
 TOKEN_GRID_LINES = [
@@ -51,6 +52,7 @@ DATA_DIR = Path("data/token-block")
 STEGO_DATA_DIR = Path("data/stego")
 PROJECT_STATE_DIR = Path("data/project-state")
 RESULTS_DIR = Path("experiments/results/token-block/stage5ap")
+STAGE5AR_RESULTS_DIR = Path("experiments/results/token-block/stage5ar")
 
 SOURCE_LOCK_PATH = DATA_DIR / "stage5ap-page49-51-source-lock.yaml"
 IMAGE_PROVENANCE_PATH = DATA_DIR / "stage5ap-page49-51-image-provenance.yaml"
@@ -63,6 +65,22 @@ DWH_CONTEXT_PATH = DATA_DIR / "stage5ap-token-block-dwh-context.yaml"
 RESEARCH_SUMMARY_PATH = Path("data/research/stage5ap-page49-51-source-lock-research-summary.yaml")
 NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5ap-next-stage-decision.yaml"
 SUMMARY_PATH = PROJECT_STATE_DIR / "stage5ap-summary.yaml"
+
+STAGE5AR_ORIGINAL_SOURCE_LOCK_PATH = DATA_DIR / "stage5ar-original-page-image-source-lock.yaml"
+STAGE5AR_IMAGE_VARIANTS_PATH = DATA_DIR / "stage5ar-original-page-image-variants.yaml"
+STAGE5AR_PAGE_SPLIT_POLICY_PATH = DATA_DIR / "stage5ar-page-split-policy.yaml"
+STAGE5AR_PAGE_SPLIT_RECORDS_PATH = DATA_DIR / "stage5ar-page-split-records.yaml"
+STAGE5AR_PIXEL_COORDINATE_POLICY_PATH = DATA_DIR / "stage5ar-token-pixel-coordinate-policy.yaml"
+STAGE5AR_PIXEL_COORDINATE_RECORDS_PATH = DATA_DIR / "stage5ar-token-pixel-coordinate-records.yaml"
+STAGE5AR_CASE_POLICY_PATH = DATA_DIR / "stage5ar-token-case-policy.yaml"
+STAGE5AR_CASE_AMBIGUITIES_PATH = DATA_DIR / "stage5ar-token-case-ambiguity-records.yaml"
+STAGE5AR_COORDINATE_VALIDATION_PATH = DATA_DIR / "stage5ar-token-coordinate-validation.yaml"
+STAGE5AR_SOURCE_LOCK_UPDATE_PATH = DATA_DIR / "stage5ar-token-block-source-lock-update.yaml"
+STAGE5AR_NULL_CONTROL_UPDATE_PATH = DATA_DIR / "stage5ar-token-block-null-control-update.yaml"
+STAGE5AR_DWH_CONTEXT_PATH = DATA_DIR / "stage5ar-dwh-coordinate-context.yaml"
+STAGE5AR_GUARDRAIL_PATH = DATA_DIR / "stage5ar-guardrail.yaml"
+STAGE5AR_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5ar-next-stage-decision.yaml"
+STAGE5AR_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5ar-summary.yaml"
 
 FALSE_GUARDRAILS = {
     "network_fetch_performed": False,

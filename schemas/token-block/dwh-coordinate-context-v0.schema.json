@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "stage_id", "dwh_defined", "dwh_expansion", "hash_search_performed", "hash_preimage_claim", "decode_claim"],
+  "properties": {
+    "record_type": { "const": "dwh_coordinate_context" },
+    "stage_id": { "const": "stage-5ar" },
+    "dwh_defined": { "const": true },
+    "dwh_expansion": { "const": "Deep Web Hash" },
+    "hash_search_performed": { "const": false },
+    "hash_preimage_claim": { "const": false },
+    "decode_claim": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

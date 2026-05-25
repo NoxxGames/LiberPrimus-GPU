@@ -1,0 +1,112 @@
+record_type: page_split_record_set
+schema: schemas/token-block/page-split-record-v0.schema.json
+stage_id: stage-5ar
+token_block_id: stage5ap-page49-51-token-block
+candidate_page_split_id: community_10_13_9
+page_split_status: source_locked_logical_page_split
+accepted: true
+page_49_row_count: 10
+page_50_row_count: 13
+page_51_row_count: 9
+row_count_sum: 32
+records:
+- record_type: page_split_record
+  schema: schemas/token-block/page-split-record-v0.schema.json
+  stage_id: stage-5ar
+  token_block_id: stage5ap-page49-51-token-block
+  candidate_page_split_id: community_10_13_9
+  page_number: 49
+  row_count: 10
+  global_rows_0_based:
+  - 0
+  - 9
+  global_rows_1_based:
+  - 1
+  - 10
+  supporting_original_images:
+  - stage5ar-original-page-49-liberprimuspages-jpg
+  supporting_original_image_paths:
+  - third_party/LiberPrimusPages/49.jpg
+  supporting_non_original_images: []
+  source_basis: original_liber_primus_page_image
+  confidence: medium_high
+  review_status: accepted_review_required
+  accepted: true
+  reason: community 10/13/9 split matches visible token-row counts in selected original
+    page images
+  raw_image_committed: false
+  solve_claim: false
+- record_type: page_split_record
+  schema: schemas/token-block/page-split-record-v0.schema.json
+  stage_id: stage-5ar
+  token_block_id: stage5ap-page49-51-token-block
+  candidate_page_split_id: community_10_13_9
+  page_number: 50
+  row_count: 13
+  global_rows_0_based:
+  - 10
+  - 22
+  global_rows_1_based:
+  - 11
+  - 23
+  supporting_original_images:
+  - stage5ar-original-page-50-liberprimuspages-jpg
+  supporting_original_image_paths:
+  - third_party/LiberPrimusPages/50.jpg
+  supporting_non_original_images: []
+  source_basis: original_liber_primus_page_image
+  confidence: medium_high
+  review_status: accepted_review_required
+  accepted: true
+  reason: community 10/13/9 split matches visible token-row counts in selected original
+    page images
+  raw_image_committed: false
+  solve_claim: false
+- record_type: page_split_record
+  schema: schemas/token-block/page-split-record-v0.schema.json
+  stage_id: stage-5ar
+  token_block_id: stage5ap-page49-51-token-block
+  candidate_page_split_id: community_10_13_9
+  page_number: 51
+  row_count: 9
+  global_rows_0_based:
+  - 23
+  - 31
+  global_rows_1_based:
+  - 24
+  - 32
+  supporting_original_images:
+  - stage5ar-original-page-51-liberprimuspages-jpg
+  supporting_original_image_paths:
+  - third_party/LiberPrimusPages/51.jpg
+  supporting_non_original_images: []
+  source_basis: original_liber_primus_page_image
+  confidence: medium_high
+  review_status: accepted_review_required
+  accepted: true
+  reason: community 10/13/9 split matches visible token-row counts in selected original
+    page images
+  raw_image_committed: false
+  solve_claim: false
+source_path: data/token-block/stage5ar-original-page-image-source-lock.yaml
+no_solve_claim: true
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+stego_tool_execution_performed: false
+lp_page_outguess_run_performed: false
+hash_preimage_search_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false

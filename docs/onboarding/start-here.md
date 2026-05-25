@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5AP - page 49-51 token-block source-lock and OutGuess positive-control infrastructure.
-- Current planning focus: Stage 5AQ - Deep Research page 49-51 token-block, Deep Web Hash context, and exact token-to-value source-lock review.
+- Latest completed stage: Stage 5AR - page 49-51 original-image pixel-coordinate and page-split source-gap closure.
+- Current planning focus: Stage 5AS - Deep Research page 49-51 original-image coordinate review and bounded token-block preflight planning.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -22,13 +22,13 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 - Observation records: review-gated; review-only observations are not experiment
   seeds without explicit acceptance and promotion.
 - Document staleness checks: active through `libreprimus consistency check-doc-staleness`.
-- Curated source bundles: Stage 5AI, Stage 5AJ, and Stage 5AK metadata is complete; Stage 5AL adds a metadata-only website-ingest package and private Deep Research export, Stage 5AM renders that metadata to an ignored private static index, Stage 5AN builds an ignored private content pack plus SFTP-ready hosted content library, and Stage 5AP adds page 49-51 token-block source-lock metadata for the next focused Deep Research review. Generated bundle bodies, UsefulFiles extraction bodies, community-facts private addenda, Stage 5AL private export helpers, Stage 5AM static site files, Stage 5AN private content files, and Stage 5AP token-block/stego-control reports stay ignored.
+- Curated source bundles: Stage 5AI, Stage 5AJ, and Stage 5AK metadata is complete; Stage 5AL adds a metadata-only website-ingest package and private Deep Research export, Stage 5AM renders that metadata to an ignored private static index, Stage 5AN builds an ignored private content pack plus SFTP-ready hosted content library, Stage 5AP adds page 49-51 token-block source-lock metadata, and Stage 5AR adds original-image coordinate-lock metadata for the next focused Deep Research review. Generated bundle bodies, UsefulFiles extraction bodies, community-facts private addenda, Stage 5AL private export helpers, Stage 5AM static site files, Stage 5AN private content files, Stage 5AP token-block/stego-control reports, and Stage 5AR coordinate reports stay ignored.
 
 ## Where To Start
 
 - User or researcher: read `README.md`, `STATUS.md`, and `docs/roadmap/staged-plan.md`.
 - Codex: read `AGENTS.md`, `STATUS.md`, `ROADMAP.md`, this onboarding folder, and the relevant stage logs.
-- Deep Research: read `docs/onboarding/deep-research-handoff-map.md`, `docs/onboarding/deep-research-bundle-workflow.md`, `docs/onboarding/deep-research-ingest-format.md`, `docs/onboarding/private-deep-research-content-workflow.md`, `docs/onboarding/community-observation-ingest-workflow.md`, and `docs/onboarding/token-block-source-lock-workflow.md`; use curated Stage 5AI/5AJ/5AK source-card, claim-record, Stage 5AL website-ingest, Stage 5AM renderer metadata, Stage 5AN private content-pack metadata/hosted content URLs, and Stage 5AP token-block records only.
+- Deep Research: read `docs/onboarding/deep-research-handoff-map.md`, `docs/onboarding/deep-research-bundle-workflow.md`, `docs/onboarding/deep-research-ingest-format.md`, `docs/onboarding/private-deep-research-content-workflow.md`, `docs/onboarding/community-observation-ingest-workflow.md`, `docs/onboarding/token-block-source-lock-workflow.md`, and `docs/onboarding/page49-51-coordinate-source-lock-workflow.md`; use curated Stage 5AI/5AJ/5AK source-card, claim-record, Stage 5AL website-ingest, Stage 5AM renderer metadata, Stage 5AN private content-pack metadata/hosted content URLs, Stage 5AP token-block records, and Stage 5AR coordinate records only.
 - Source harvester: read `docs/onboarding/source-harvester-workflow.md` and `docs/onboarding/local-source-inventory-workflow.md`; use local ignored roots only and do not use Google Drive as project storage.
 - Contributor: read `CONTRIBUTING.md`, `TESTING.md`, and `docs/onboarding/contributor-module-map.md`.
 - Reviewer: read `docs/onboarding/source-of-truth-map.md`, `docs/experiments/method-retirement-ledger.md`, and the relevant research log.

@@ -726,7 +726,7 @@ records:
   staleness_check_level: current_state
   owner_context: research_operator
   notes: Records source-lock, transcription, coordinate, alphabet, mapping,
-    null-control, DWH, OutGuess, guardrail, and Stage 5AQ next-stage counts.
+    null-control, DWH, OutGuess, guardrail, and historical Stage 5AQ next-stage counts.
 - path: data/token-block/stage5ap-token-block-canonical-transcription.yaml
   category: active_data_record
   purpose: Stage 5AP canonical 32x8 page 49-51 token-block transcription.
@@ -749,7 +749,7 @@ records:
   mirror_or_generated_relationships: source
   staleness_check_level: current_state
   owner_context: research_operator
-  notes: Documents how future Stage 5AQ review should consume Stage 5AP records
+  notes: Documents how future Stage 5AS review should consume Stage 5AP and Stage 5AR records
     without treating them as decoded, canonical, or execution-ready.
 - path: docs/reference/token-block-cli.md
   category: operational_status_doc
@@ -787,3 +787,75 @@ records:
   owner_context: research_operator
   notes: Documents that page-image hashes, coordinates, and transcription are
     source-lock metadata only.
+- path: data/project-state/stage5ar-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AR page 49-51 original-image coordinate-lock aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ar
+  expected_update_frequency: when_token_block_coordinate_lock_state_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records original page-image availability, variant counts, 10/13/9 split,
+    pixel-coordinate counts, case-policy counts, guardrails, and Stage 5AS next-stage decision.
+- path: data/token-block/stage5ar-original-page-image-source-lock.yaml
+  category: active_data_record
+  purpose: Stage 5AR original page-image source-lock records.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ar
+  expected_update_frequency: when_original_page_image_source_lock_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records page 49-51 original image hashes and forbids screenshots, crops,
+    modified images, web-rendered pages, and private generated images as coordinate truth.
+- path: data/token-block/stage5ar-token-pixel-coordinate-records.yaml
+  category: active_data_record
+  purpose: Stage 5AR original-image pixel-coordinate records.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ar
+  expected_update_frequency: when_token_pixel_coordinates_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records 256 token bounding boxes in original-image pixel space; not OCR,
+    image interpretation, decoded text, execution permission, or solve evidence.
+- path: docs/onboarding/page49-51-coordinate-source-lock-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5AR coordinate source-lock workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ar
+  expected_update_frequency: every_token_block_coordinate_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents how Stage 5AS review should consume Stage 5AR coordinate records
+    without treating them as OCR, decoded text, canonical, or execution-ready.
+- path: docs/reference/token-block-coordinate-cli.md
+  category: operational_status_doc
+  purpose: Stage 5AR token-block coordinate CLI reference.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5ar
+  expected_update_frequency: every_token_block_coordinate_cli_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents original-image source-lock, page-split, pixel-coordinate, case-policy,
+    coordinate-validation, updates, summary, and validation commands.
+- path: docs/architecture/page49-51-original-image-coordinate-lock.md
+  category: architecture_doc
+  purpose: Stage 5AR original-image coordinate-lock architecture and boundary policy.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ar
+  expected_update_frequency: every_token_block_coordinate_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents original-image-only coordinate truth, variant rejection, page split,
+    pixel-coordinate generation, and guardrails.

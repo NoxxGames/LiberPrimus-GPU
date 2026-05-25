@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AP page 49-51 token-block source-lock and OutGuess positive-control infrastructure is complete.
+Stage 5AR page 49-51 original-image pixel-coordinate and page-split source-gap closure is complete.
 
-Next recommended prompt: Stage 5AQ - Deep Research page 49-51 token-block, Deep Web Hash context, and exact token-to-value source-lock review. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5AS - Deep Research page 49-51 original-image coordinate review and bounded token-block preflight planning. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5AR
+
+Stage 5AR locked original-image coordinate context for the Stage 5AP page 49-51 token block. It selected three original local page images, inventoried 15 image variants, accepted the source-backed 10/13/9 page split, wrote 256 original-image pixel-coordinate records, recorded case-ambiguity policy, validated coordinates, and updated source-lock/null-control/DWH coordinate context records.
+
+Local Stage 5AR summary: original page images found/selected/missing `3/3/0`, image variant records `15`, page split status `source_locked_logical_page_split`, page split accepted `true`, page row counts `49:10, 50:13, 51:9`, token pixel-coordinate records `256`, coordinate validation `valid_with_review_required`, coordinate method `deterministic_projection_from_original_image`, unresolved coordinate count `0`, case ambiguity records `9`, case policy unresolved count `9`, canonical transcription changed `false`, null-control update created `true`, DWH coordinate context created `true`, selected next prompt `Stage 5AS - Deep Research page 49-51 original-image coordinate review and bounded token-block preflight planning`, network fetch `false`, online clone `false`, Google Drive storage `false`, Deep Research execution `false`, OCR `false`, AI/ML interpretation `false`, semantic image interpretation `false`, hidden-content image forensics `false`, stego execution `false`, LP-page OutGuess execution `false`, hash/preimage search `false`, decode attempt `false`, hypothesis execution `false`, CUDA execution/source modification `false`, new CUDA kernels `0`, benchmarks `false`, scored experiments `false`, raw images committed `false`, generated outputs committed `false`, and solve claim `false`.
+
+Stage 5AR is coordinate source-lock and review-preflight infrastructure. Pixel coordinates are original-image anchors only; screenshots, crops, modified images, web-rendered pages, and private generated images cannot be coordinate truth. Generated coordinate reports remain ignored under `experiments/results/token-block/stage5ar/`.
 
 ## Completed in Stage 5AP
 

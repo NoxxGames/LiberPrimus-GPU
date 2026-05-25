@@ -23,14 +23,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5AP" \
-    --expected-next-stage "Stage 5AQ" \
+    --expected-latest-stage "Stage 5AR" \
+    --expected-next-stage "Stage 5AS" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5AP" \
-    --expected-next-stage "Stage 5AQ" \
+    --expected-latest-stage "Stage 5AR" \
+    --expected-next-stage "Stage 5AS" \
     --out "$stage5ah_out/current_next_stage_report.json"
 "$python_bin" - <<PY
 import json
@@ -45,14 +45,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AP",
+        expected_latest_stage="Stage 5AR",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AP",
+            "expected_latest_stage": "Stage 5AR",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2239,6 +2239,31 @@ git check-ignore -q "$stage5ap_token_results_root/canonical_token_grid.csv"
 git check-ignore -q "$stage5ap_token_results_root/token_byte_preflight_primary_60.json"
 git check-ignore -q "$stage5ap_stego_results_root/outguess_positive_control_matrix.json"
 git check-ignore -q "codex-output/stage5ap-codex-completion.md"
+
+echo "Validating Stage 5AR original-image coordinate-lock records"
+stage5ar_results_root="experiments"/"results"
+stage5ar_token_results_root="$stage5ar_results_root/token-block/stage5ar"
+"$python_bin" -m libreprimus.cli token-block validate-stage5ar \
+    --original-source-lock data/token-block/stage5ar-original-page-image-source-lock.yaml \
+    --variants data/token-block/stage5ar-original-page-image-variants.yaml \
+    --page-split-policy data/token-block/stage5ar-page-split-policy.yaml \
+    --page-split-records data/token-block/stage5ar-page-split-records.yaml \
+    --pixel-coordinate-policy data/token-block/stage5ar-token-pixel-coordinate-policy.yaml \
+    --pixel-coordinate-records data/token-block/stage5ar-token-pixel-coordinate-records.yaml \
+    --case-policy data/token-block/stage5ar-token-case-policy.yaml \
+    --case-ambiguities data/token-block/stage5ar-token-case-ambiguity-records.yaml \
+    --coordinate-validation data/token-block/stage5ar-token-coordinate-validation.yaml \
+    --source-lock-update data/token-block/stage5ar-token-block-source-lock-update.yaml \
+    --null-control-update data/token-block/stage5ar-token-block-null-control-update.yaml \
+    --dwh-context data/token-block/stage5ar-dwh-coordinate-context.yaml \
+    --guardrail data/token-block/stage5ar-guardrail.yaml \
+    --next-stage-decision data/project-state/stage5ar-next-stage-decision.yaml \
+    --summary data/project-state/stage5ar-summary.yaml \
+    --results-dir "$stage5ar_token_results_root"
+git check-ignore -q "$stage5ar_token_results_root/token_pixel_coordinate_records.jsonl"
+git check-ignore -q "$stage5ar_token_results_root/token_coordinate_validation.json"
+git check-ignore -q "$stage5ar_token_results_root/review-overlays/example.png"
+git check-ignore -q "codex-output/stage5ar-codex-completion.md"
 
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

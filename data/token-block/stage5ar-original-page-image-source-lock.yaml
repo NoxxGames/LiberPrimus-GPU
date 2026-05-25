@@ -1,0 +1,97 @@
+record_type: original_page_image_source_lock
+schema: schemas/token-block/original-page-image-source-lock-v0.schema.json
+stage_id: stage-5ar
+token_block_id: stage5ap-page49-51-token-block
+source_lock_status: original_images_available
+stage5ap_image_provenance: data/token-block/stage5ap-page49-51-image-provenance.yaml
+selected_original_image_count: 3
+missing_original_pages: []
+coordinate_source_available: true
+original_images_required: true
+screenshots_forbidden_as_coordinate_sources: true
+records:
+- record_type: original_page_image_source_lock_record
+  stage_id: stage-5ar
+  token_block_id: stage5ap-page49-51-token-block
+  original_image_id: stage5ar-original-page-49-liberprimuspages-jpg
+  page_number: 49
+  source_path: third_party/LiberPrimusPages/49.jpg
+  sha256: aa3f89156756edf8b796a470a14a3db96516ad2fedf1ed98ccabc1a1cddc0335
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: RGB
+  file_size_bytes: 651504
+  coordinate_source_class: original_liber_primus_page_image
+  variant_class: original_candidate
+  coordinate_truth_allowed: true
+  raw_image_committed: false
+  ocr_performed: false
+  ai_ml_interpretation_performed: false
+  semantic_image_interpretation_performed: false
+  solve_claim: false
+- record_type: original_page_image_source_lock_record
+  stage_id: stage-5ar
+  token_block_id: stage5ap-page49-51-token-block
+  original_image_id: stage5ar-original-page-50-liberprimuspages-jpg
+  page_number: 50
+  source_path: third_party/LiberPrimusPages/50.jpg
+  sha256: bd6d4a3678fa37197bd43c58861273dc59604b5b68dfa20de1ec13f0704be776
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: L
+  file_size_bytes: 581983
+  coordinate_source_class: original_liber_primus_page_image
+  variant_class: original_candidate
+  coordinate_truth_allowed: true
+  raw_image_committed: false
+  ocr_performed: false
+  ai_ml_interpretation_performed: false
+  semantic_image_interpretation_performed: false
+  solve_claim: false
+- record_type: original_page_image_source_lock_record
+  stage_id: stage-5ar
+  token_block_id: stage5ap-page49-51-token-block
+  original_image_id: stage5ar-original-page-51-liberprimuspages-jpg
+  page_number: 51
+  source_path: third_party/LiberPrimusPages/51.jpg
+  sha256: 2b9d60f62b2bc65d040f7ae1bc0960d5a44ca251d2730d049a618074a83e208b
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: L
+  file_size_bytes: 661727
+  coordinate_source_class: original_liber_primus_page_image
+  variant_class: original_candidate
+  coordinate_truth_allowed: true
+  raw_image_committed: false
+  ocr_performed: false
+  ai_ml_interpretation_performed: false
+  semantic_image_interpretation_performed: false
+  solve_claim: false
+raw_image_committed: false
+generated_image_committed: false
+no_decode: true
+no_hash_preimage_search: true
+no_solve_claim: true
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+stego_tool_execution_performed: false
+lp_page_outguess_run_performed: false
+hash_preimage_search_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false

@@ -1,0 +1,45 @@
+record_type: token_block_null_control_update
+schema: schemas/token-block/token-block-null-control-update-v0.schema.json
+stage_id: stage-5ar
+token_block_id: stage5ap-page49-51-token-block
+source_null_control_plan: data/token-block/stage5ap-token-block-null-control-plan.yaml
+source_null_control_count: 5
+coordinate_specific_controls_created: true
+case_confusion_controls:
+- I/l swap control
+- O/0 swap control
+- 1/I/l ambiguity control
+- S/5 ambiguity control
+page_split_controls:
+- accepted 10/13/9 split
+- alternative 11/11/10 split
+- row-shuffled split preserving page row counts
+- no-page-boundary control
+coordinate_controls:
+- row-order reversal
+- column-order reversal
+- per-page local reading order
+- global 32-row reading order
+execution_enabled: false
+no_decode: true
+no_solve_claim: true
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+stego_tool_execution_performed: false
+lp_page_outguess_run_performed: false
+hash_preimage_search_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false

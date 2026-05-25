@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "stage_id", "canonical_transcription_changed", "ambiguity_class_count", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "token_case_policy" },
+    "stage_id": { "const": "stage-5ar" },
+    "canonical_transcription_changed": { "const": false },
+    "ocr_performed": { "const": false },
+    "ai_ml_interpretation_performed": { "const": false },
+    "semantic_image_interpretation_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "stage_id", "updated_source_lock_status", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "token_block_source_lock_update" },
+    "stage_id": { "const": "stage-5ar" },
+    "execution_enabled": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

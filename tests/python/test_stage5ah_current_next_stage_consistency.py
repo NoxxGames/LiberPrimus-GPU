@@ -9,8 +9,8 @@ def test_stage5ah_current_next_stage_claims_are_consistent() -> None:
     report = build_current_next_stage_report(
         root=Path("."),
         source_of_truth=Path("data/project-state/stage5ah-doc-staleness-source-of-truth.yaml"),
-        expected_latest_stage="Stage 5AP",
-        expected_next_stage="Stage 5AQ",
+        expected_latest_stage="Stage 5AR",
+        expected_next_stage="Stage 5AS",
     )
 
     assert report["finding_count"] == 0

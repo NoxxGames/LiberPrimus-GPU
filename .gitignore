@@ -797,6 +797,8 @@ experiments/results/token-block/**
 !experiments/results/token-block/.gitkeep
 !experiments/results/token-block/stage5ap/
 !experiments/results/token-block/stage5ap/.gitkeep
+!experiments/results/token-block/stage5ar/
+!experiments/results/token-block/stage5ar/.gitkeep
 
 # Generated stego-control readiness outputs
 experiments/results/stego-controls/**

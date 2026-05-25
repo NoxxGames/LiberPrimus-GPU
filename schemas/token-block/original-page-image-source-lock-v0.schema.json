@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_lock_status", "coordinate_source_available", "records", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "original_page_image_source_lock" },
+    "stage_id": { "const": "stage-5ar" },
+    "coordinate_source_available": { "type": "boolean" },
+    "raw_image_committed": { "const": false },
+    "generated_image_committed": { "const": false },
+    "ocr_performed": { "const": false },
+    "ai_ml_interpretation_performed": { "const": false },
+    "solve_claim": { "const": false },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["page_number", "source_path", "sha256", "coordinate_source_class", "coordinate_truth_allowed"],
+        "properties": {
+          "coordinate_source_class": {
+            "enum": ["original_liber_primus_page_image", "original_archive_page_image", "byte_identical_original_copy", "source_locked_original_candidate"]
+          },
+          "coordinate_truth_allowed": { "const": true },
+          "raw_image_committed": { "const": false },
+          "solve_claim": { "const": false }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

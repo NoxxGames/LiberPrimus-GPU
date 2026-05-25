@@ -1164,7 +1164,7 @@ records:
     title: Page 49-51 token-block source-lock and OutGuess positive-control infrastructure
     status: complete
     category: infrastructure
-    summary: Added metadata-only source locks and preflight records for the page 49-51 32x8 token block, candidate primary-60 mapping, null controls, Deep Web Hash context, and OutGuess positive-control readiness, selecting Stage 5AQ exact source-lock review.
+    summary: Added metadata-only source locks and preflight records for the page 49-51 32x8 token block, candidate primary-60 mapping, null controls, Deep Web Hash context, and OutGuess positive-control readiness, historically selecting Stage 5AQ exact source-lock review before Stage 5AR coordinate closure.
     key_outputs:
       - "`libreprimus token-block` commands for source locks, canonical transcription, logical coordinates, alphabet registry, mapping preflight, null-control planning, DWH context, summary generation, and validation."
       - "`libreprimus stego-controls` commands for OutGuess toolchain readiness, positive-control matrix, historical fixture readiness, guardrails, and validation."
@@ -1175,4 +1175,20 @@ records:
     cuda_used: false
     raw_outputs_committed: false
     generated_outputs_committed: false
-    notes: Stage 5AP records 15 page-image metadata locks, a 32x8/256-token transcription, 256 logical coordinates, 161 unique tokens, first-character counts 0:60/1:58/2:65/3:56/4:17, primary alphabet length 60, observed suffix count 59, lowercase f absent, mapping range 0..255 with 00->0 and 4F->255 checks, 5 null controls, DWH status review_only_external_deep_research_context, OutGuess state outguess_missing, 5 positive-control matrix rows, 2 synthetic controls, 4 historical fixture records, 0 historical fixtures ready, and selected Stage 5AQ. It performs no Deep Research execution, live scraping, network fetch, online clone, Google Drive storage, raw image commit, OCR, AI/ML interpretation, broad image forensics, broad stego scan, LP-page OutGuess, hash/preimage search, hypothesis execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+    notes: Stage 5AP records 15 page-image metadata locks, a 32x8/256-token transcription, 256 logical coordinates, 161 unique tokens, first-character counts 0:60/1:58/2:65/3:56/4:17, primary alphabet length 60, observed suffix count 59, lowercase f absent, mapping range 0..255 with 00->0 and 4F->255 checks, 5 null controls, DWH status review_only_external_deep_research_context, OutGuess state outguess_missing, 5 positive-control matrix rows, 2 synthetic controls, 4 historical fixture records, 0 historical fixtures ready, and selected the historical Stage 5AQ review. It performs no Deep Research execution, live scraping, network fetch, online clone, Google Drive storage, raw image commit, OCR, AI/ML interpretation, broad image forensics, broad stego scan, LP-page OutGuess, hash/preimage search, hypothesis execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ar
+    title: Page 49-51 original-image pixel-coordinate and page-split source-gap closure
+    status: complete
+    category: infrastructure
+    summary: Locked original page-image coordinate context for the Stage 5AP page 49-51 token block, recording original-image source locks, image variants, page-split policy, pixel coordinates, case-policy ambiguity records, coordinate validation, source-lock/null-control updates, DWH context, and Stage 5AS next-stage decision.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5AR commands for original-image source locks, image-variant classification, page-split records, pixel-coordinate records, case-policy records, coordinate validation, source-lock/null-control updates, summary generation, and validation."
+      - Stage 5AR original-image source-lock, image-variant, page-split, pixel-coordinate, case-policy, coordinate-validation, update, DWH-context, guardrail, next-stage, and aggregate summary records under `data/token-block/` and `data/project-state/`.
+      - Ignored generated coordinate reports under `experiments/results/token-block/stage5ar/`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AR records 3 selected original page images, 15 image variant records, source-backed 10/13/9 page split, 256 pixel-coordinate records, coordinate validation status valid_with_review_required, 9 unresolved case-ambiguity classes, 0 unresolved coordinate records, null-control and DWH coordinate-context updates, and selected Stage 5AS. It performs no Deep Research execution, live scraping, network fetch, online clone, Google Drive storage, raw image commit, OCR, AI/ML interpretation, semantic image interpretation, hidden-content image forensics, broad stego scan, LP-page OutGuess, decode attempt, hash/preimage search, hypothesis execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

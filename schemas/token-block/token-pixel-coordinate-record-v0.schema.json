@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "stage_id", "coordinate_record_count", "records", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "token_pixel_coordinate_record_set" },
+    "stage_id": { "const": "stage-5ar" },
+    "coordinate_record_count": { "const": 256 },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

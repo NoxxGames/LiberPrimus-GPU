@@ -24,14 +24,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5AP" `
-        --expected-next-stage "Stage 5AQ" `
+        --expected-latest-stage "Stage 5AR" `
+        --expected-next-stage "Stage 5AS" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5AP" `
-        --expected-next-stage "Stage 5AQ" `
+        --expected-latest-stage "Stage 5AR" `
+        --expected-next-stage "Stage 5AS" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -46,14 +46,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AP",
+        expected_latest_stage="Stage 5AR",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AP",
+            "expected_latest_stage": "Stage 5AR",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2236,6 +2236,30 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
     git check-ignore -q (Join-Path $Stage5APResultsRoot "token_byte_preflight_primary_60.json")
     git check-ignore -q (Join-Path $Stage5APStegoResultsRoot "outguess_positive_control_matrix.json")
     git check-ignore -q "codex-output/stage5ap-codex-completion.md"
+
+    Write-Host "Validating Stage 5AR original-image coordinate-lock records"
+    $Stage5ARResultsRoot = Join-Path (Join-Path "experiments" "results") "token-block/stage5ar"
+    & $Python -m libreprimus.cli token-block validate-stage5ar `
+        --original-source-lock data/token-block/stage5ar-original-page-image-source-lock.yaml `
+        --variants data/token-block/stage5ar-original-page-image-variants.yaml `
+        --page-split-policy data/token-block/stage5ar-page-split-policy.yaml `
+        --page-split-records data/token-block/stage5ar-page-split-records.yaml `
+        --pixel-coordinate-policy data/token-block/stage5ar-token-pixel-coordinate-policy.yaml `
+        --pixel-coordinate-records data/token-block/stage5ar-token-pixel-coordinate-records.yaml `
+        --case-policy data/token-block/stage5ar-token-case-policy.yaml `
+        --case-ambiguities data/token-block/stage5ar-token-case-ambiguity-records.yaml `
+        --coordinate-validation data/token-block/stage5ar-token-coordinate-validation.yaml `
+        --source-lock-update data/token-block/stage5ar-token-block-source-lock-update.yaml `
+        --null-control-update data/token-block/stage5ar-token-block-null-control-update.yaml `
+        --dwh-context data/token-block/stage5ar-dwh-coordinate-context.yaml `
+        --guardrail data/token-block/stage5ar-guardrail.yaml `
+        --next-stage-decision data/project-state/stage5ar-next-stage-decision.yaml `
+        --summary data/project-state/stage5ar-summary.yaml `
+        --results-dir $Stage5ARResultsRoot
+    git check-ignore -q (Join-Path $Stage5ARResultsRoot "token_pixel_coordinate_records.jsonl")
+    git check-ignore -q (Join-Path $Stage5ARResultsRoot "token_coordinate_validation.json")
+    git check-ignore -q (Join-Path $Stage5ARResultsRoot "review-overlays/example.png")
+    git check-ignore -q "codex-output/stage5ar-codex-completion.md"
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
