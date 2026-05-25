@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/null-control-case-update-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "case_decision_controls_added", "review_bias_controls_added", "value_sensitivity_controls_added", "no_solve_claim"],
+  "properties": {
+    "record_type": { "const": "null_control_case_update" },
+    "stage_id": { "const": "stage-5at" },
+    "case_decision_controls_added": { "const": true },
+    "review_bias_controls_added": { "const": true },
+    "value_sensitivity_controls_added": { "const": true },
+    "no_solve_claim": { "const": true }
+  }
+}

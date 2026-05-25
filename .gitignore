@@ -799,6 +799,16 @@ experiments/results/token-block/**
 !experiments/results/token-block/stage5ap/.gitkeep
 !experiments/results/token-block/stage5ar/
 !experiments/results/token-block/stage5ar/.gitkeep
+!experiments/results/token-block/stage5at/
+!experiments/results/token-block/stage5at/.gitkeep
+
+# Generated human-review packs
+human-review-packs/**
+!human-review-packs/
+!human-review-packs/README.md
+!human-review-packs/.gitkeep
+!human-review-packs/stage5at/
+!human-review-packs/stage5at/.gitkeep
 
 # Generated stego-control readiness outputs
 experiments/results/stego-controls/**

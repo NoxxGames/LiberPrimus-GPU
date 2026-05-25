@@ -500,11 +500,11 @@ records:
     method_family_id: document_staleness_detection
     name: Operational document staleness detection
     status: infrastructure_only
-    evidence_summary: Stage 5AB adds a source-of-truth driven operational Markdown staleness scanner with dynamic stage parsing, current/next-stage checks, website deferral checks, stale CUDA-cap detection, and CI consistency integration. Stage 5AH extends that gate with stage-ledger truncation checks, operational-file-map coverage checks, current/next-stage consistency reports, and active next-stage records. Stage 5AK updates active source-of-truth records to Stage 5AK complete and Stage 5AL next.
-    completed_stage_refs: [stage-5ab, stage-5ah, stage-5ai, stage-5aj, stage-5ak]
+    evidence_summary: Stage 5AB adds a source-of-truth driven operational Markdown staleness scanner with dynamic stage parsing, current/next-stage checks, website deferral checks, stale CUDA-cap detection, and CI consistency integration. Stage 5AH extends that gate with stage-ledger truncation checks, operational-file-map coverage checks, current/next-stage consistency reports, and active next-stage records. Stage 5AT updates active source-of-truth records to Stage 5AT complete and Stage 5AU next.
+    completed_stage_refs: [stage-5ab, stage-5ah, stage-5ai, stage-5aj, stage-5ak, stage-5at]
     reopen_conditions: [A future stage changes current/next-stage policy, adds new operational source-of-truth docs, introduces new generated/raw path classes that must be reflected in the operational file map, or truncates README/roadmap stage ledgers.]
     stop_conditions: [Do not hide stale operational claims by editing historical logs, do not schedule website expansion as Stage 6, do not commit generated staleness reports or codex-output handoffs, and do not treat documentation repair as CUDA execution or solve evidence.]
-    next_action: Stage 5AL Deep Research source inventory and reliability review must cite Stage 5AI/5AJ/5AK curated bundle/source-card/claim metadata and the updated Stage 5AH source-of-truth gate.
+    next_action: Stage 5AU manual token-case review must cite the updated Stage 5AT source-of-truth gate before any later integration stage changes active/current stage claims.
     solve_claim: false
     notes: Stage 5AH keeps documentation repair as process-quality metadata only; it is not source extraction, Deep Research, CUDA execution, benchmark evidence, or solve evidence.
   - record_type: method_family_status_record
@@ -526,20 +526,20 @@ records:
     completed_stage_refs: [stage-5ai, stage-5aj, stage-5ak, stage-5al, stage-5am, stage-5an]
     reopen_conditions: [A future website project needs reviewed public metadata cards, a Deep Research handoff needs updated source-card or claim metadata, private content-pack metadata changes, or publication gates are changed by explicit review.]
     stop_conditions: [Do not publish raw or review-blocked source bodies as committed artefacts, private community data, generated extract bodies, private identifiers, local absolute paths, website pages, hosted private content, Deep Research reports, CUDA outputs, benchmark outputs, scored experiment records, or solve claims.]
-    next_action: Stage 5AS should run focused Deep Research review against Stage 5AR coordinate-lock records, Stage 5AP token-block records, DWH context, Stage 5AL/5AM/5AN metadata, and private hosted content URLs, not raw `third_party/` paths or raw page images as source truth.
+    next_action: Keep public website expansion deferred; Stage 5AU should use the Stage 5AT local human-review pack and committed metadata rather than raw `third_party/` paths or raw page images as source truth.
     solve_claim: false
     notes: Public website-ready remains zero after Stage 5AN. The committed package, ignored static export, ignored private content pack, and ignored hosted content library are private handoff infrastructure and not public website publication.
   - record_type: method_family_status_record
     method_family_id: page49_51_token_block_source_lock
     name: Page 49-51 token-block source-lock and primary-60 mapping preflight
     status: infrastructure_only
-    evidence_summary: Stage 5AP records a supplied 32x8 page 49-51 token block, local page-image metadata hashes, logical coordinates, candidate primary-60 alphabet and byte-mapping preflight, null controls, DWH context, and a historical Stage 5AQ next-stage decision without decoding, hash search, or execution. Stage 5AR adds original-image source locks, 15 image-variant records, a source-backed 10/13/9 page split, 256 pixel-coordinate records, case-ambiguity policy, coordinate validation, and Stage 5AS next-stage decision without OCR, image interpretation, decode, hash search, CUDA, or execution.
-    completed_stage_refs: [stage-5ap, stage-5ar]
-    reopen_conditions: [A future Stage 5AS or later source-lock review provides exact transcript/profile source evidence, alternate token-to-value source locks, reviewed original-image coordinate confirmation, stronger DWH context, or explicit bounded verifier requirements.]
+    evidence_summary: Stage 5AP records a supplied 32x8 page 49-51 token block, local page-image metadata hashes, logical coordinates, candidate primary-60 alphabet and byte-mapping preflight, null controls, DWH context, and a historical Stage 5AQ next-stage decision without decoding, hash search, or execution. Stage 5AR adds original-image source locks, 15 image-variant records, a source-backed 10/13/9 page split, 256 pixel-coordinate records, case-ambiguity policy, coordinate validation, and Stage 5AS next-stage decision without OCR, image interpretation, decode, hash search, CUDA, or execution. Stage 5AT turns the unresolved case policy into 203 human-review challenges, 212 canonical-transcription challenge records, and an ignored generated review pack while preserving canonical transcription unchanged.
+    completed_stage_refs: [stage-5ap, stage-5ar, stage-5at]
+    reopen_conditions: [A future Stage 5AU or later source-lock review provides human case decisions, exact transcript/profile source evidence, alternate token-to-value source locks, reviewed original-image coordinate confirmation, stronger DWH context, or explicit bounded verifier requirements.]
     stop_conditions: [Do not treat the token grid as decoded plaintext, source truth, canonical corpus, page-boundary finalisation, experiment seed, hash target, CUDA input, or solve evidence.]
-    next_action: Stage 5AS should review original-image coordinates, exact token-to-value source locks, DWH context, and bounded preflight blockers before any bounded manifest can be considered.
+    next_action: Stage 5AU should manually review the Stage 5AT token case challenge pack before any Codex integration or bounded manifest can be considered.
     solve_claim: false
-    notes: Stage 5AP preflight maps 00 to 0 and 4F to 255 over the candidate primary-60 alphabet, and Stage 5AR provides original-image pixel-coordinate anchors for all 256 tokens; both are review metadata only.
+    notes: Stage 5AP preflight maps 00 to 0 and 4F to 255 over the candidate primary-60 alphabet, Stage 5AR provides original-image pixel-coordinate anchors for all 256 tokens, and Stage 5AT provides human-review challenges only; all are review metadata and not decoded text or solve evidence.
   - record_type: method_family_status_record
     method_family_id: outguess_positive_control_guardrails
     name: OutGuess positive-control guardrails

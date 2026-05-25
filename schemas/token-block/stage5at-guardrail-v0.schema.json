@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/stage5at-guardrail-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "human_review_required", "automatic_case_resolution_performed", "canonical_transcription_changed", "ocr_performed", "ai_ml_interpretation_performed", "llm_vision_token_reading_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "stage5at_guardrail" },
+    "stage_id": { "const": "stage-5at" },
+    "human_review_required": { "const": true },
+    "automatic_case_resolution_performed": { "const": false },
+    "canonical_transcription_changed": { "const": false },
+    "ocr_performed": { "const": false },
+    "ai_ml_interpretation_performed": { "const": false },
+    "llm_vision_token_reading_performed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

@@ -749,7 +749,7 @@ records:
   mirror_or_generated_relationships: source
   staleness_check_level: current_state
   owner_context: research_operator
-  notes: Documents how future Stage 5AS review should consume Stage 5AP and Stage 5AR records
+  notes: Documents how future token-case review should consume Stage 5AP, Stage 5AR, and Stage 5AT records
     without treating them as decoded, canonical, or execution-ready.
 - path: docs/reference/token-block-cli.md
   category: operational_status_doc
@@ -798,7 +798,7 @@ records:
   staleness_check_level: current_state
   owner_context: research_operator
   notes: Records original page-image availability, variant counts, 10/13/9 split,
-    pixel-coordinate counts, case-policy counts, guardrails, and Stage 5AS next-stage decision.
+    pixel-coordinate counts, case-policy counts, guardrails, and historical Stage 5AS next-stage decision.
 - path: data/token-block/stage5ar-original-page-image-source-lock.yaml
   category: active_data_record
   purpose: Stage 5AR original page-image source-lock records.
@@ -833,7 +833,7 @@ records:
   mirror_or_generated_relationships: source
   staleness_check_level: current_state
   owner_context: research_operator
-  notes: Documents how Stage 5AS review should consume Stage 5AR coordinate records
+  notes: Documents how Stage 5AT and Stage 5AU review should consume Stage 5AR coordinate records
     without treating them as OCR, decoded text, canonical, or execution-ready.
 - path: docs/reference/token-block-coordinate-cli.md
   category: operational_status_doc
@@ -859,3 +859,73 @@ records:
   owner_context: research_operator
   notes: Documents original-image-only coordinate truth, variant rejection, page split,
     pixel-coordinate generation, and guardrails.
+- path: data/project-state/stage5at-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AT token case-review pack aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5at
+  expected_update_frequency: when_token_case_review_pack_state_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records case-review challenge counts, generated review-pack counts,
+    variant-classifier/doc-drift repair status, guardrails, and Stage 5AU next-stage decision.
+- path: data/token-block/stage5at-case-review-policy.yaml
+  category: active_data_record
+  purpose: Stage 5AT token case-review active-class policy.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5at
+  expected_update_frequency: when_token_case_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Defines the active token-case ambiguity classes for Stage 5AU manual review.
+- path: data/token-block/stage5at-case-review-challenge-set.yaml
+  category: active_data_record
+  purpose: Stage 5AT grouped token case-review challenge records.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5at
+  expected_update_frequency: when_token_case_challenge_pack_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records the 203 grouped ambiguity challenges; generated crops remain ignored.
+- path: docs/onboarding/token-case-human-review-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5AT/5AU token case human-review workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5at
+  expected_update_frequency: every_token_case_review_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents how Stage 5AU should review Stage 5AT generated packs without
+    treating crops or prompts as automatic transcription changes.
+- path: docs/reference/token-case-review-pack-cli.md
+  category: operational_status_doc
+  purpose: Stage 5AT token case-review pack CLI reference.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5at
+  expected_update_frequency: every_token_case_review_cli_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents Stage 5AT token-block commands for policy, challenge, review-pack,
+    summary, and validation records.
+- path: docs/architecture/token-case-human-review-pack.md
+  category: architecture_doc
+  purpose: Stage 5AT token case-review pack architecture and boundary policy.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5at
+  expected_update_frequency: every_token_case_review_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents that token-case review packs are human-review packaging only,
+    not OCR, AI/ML, decode, CUDA, or solve evidence.

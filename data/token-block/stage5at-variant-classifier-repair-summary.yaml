@@ -1,0 +1,25 @@
+record_type: variant_classifier_repair_summary
+schema: schemas/token-block/variant-classifier-repair-summary-v0.schema.json
+stage_id: stage-5at
+token_block_id: stage5ap-page49-51-token-block
+source_variant_record_count: 15
+variant_classifier_repaired: true
+repair_rule: hash_equality_precedes_tokenized_path_heuristics
+unmodified_path_bug_test_passed: true
+hash_equality_overrides_path_heuristics: true
+modified_path_hash_diff_forbidden: true
+unmodified_test:
+  source_path: A drop box of all unmodified files/49.jpg
+  variant_class: byte_identical_original_copy
+  coordinate_source_class: byte_identical_original_copy
+  coordinate_truth_allowed: true
+modified_test:
+  source_path: A drop box of modified files/49.jpg
+  variant_class: modified_or_composite
+  coordinate_source_class: forbidden_supporting_only
+  coordinate_truth_allowed: false
+source_selection_changed: false
+review_item_created: false
+raw_image_committed: false
+generated_outputs_committed: false
+solve_claim: false

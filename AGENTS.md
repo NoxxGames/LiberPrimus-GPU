@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AR - page 49-51 original-image pixel-coordinate and page-split source-gap closure.
+Current completed stage: Stage 5AT - token case-policy human review pack and canonical-transcription challenge set.
 
-Current work: Stage 5AS - Deep Research page 49-51 original-image coordinate review and bounded token-block preflight planning. Stage 5AR locked original-image pixel-coordinate metadata for the Stage 5AP page 49-51 32x8 token block, selected the three local original page images, recorded source-backed 10/13/9 page-split records, generated 256 original-image pixel-coordinate records, recorded unresolved case-ambiguity policy, updated null controls and DWH coordinate context, and kept screenshots/crops/modified/web-rendered/private generated images out of coordinate-truth status; it did not run Deep Research, publish raw/private bodies, process raw sources into committed data, fetch from the network, clone online repositories, use Google Drive storage, run OCR, run AI/ML interpretation, run semantic or hidden-content image interpretation, run broad image forensics, run broad stego scans, run LP-page OutGuess, run hash/preimage search, decode the token block, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, publicly publish the website, or make solve claims.
+Current work: Stage 5AU - manual human review of token case challenge pack. Stage 5AT packaged the Stage 5AR/5AS token-case ambiguity findings into committed policy and challenge metadata plus an ignored local human-review pack, kept the Stage 5AP canonical transcription unchanged, repaired the unmodified-path image variant classifier, and selected manual human review before any Codex integration or bounded preflight; it did not run Deep Research, publish raw/private bodies, process raw sources into committed data, fetch from the network, clone online repositories, use Google Drive storage, run OCR, run AI/ML interpretation, run LLM/vision token reading, run semantic or hidden-content image interpretation, run broad image forensics, run broad stego scans, run LP-page OutGuess, run hash/preimage search, decode the token block, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, publicly publish the website, or make solve claims.
 
 Current project state:
 
@@ -125,12 +125,14 @@ Current project state:
 - Stage 5AL website-ingest records are committed metadata only. They do not publish raw or review-blocked content, private identifiers, generated extract bodies, or public website pages.
 - Stage 5AM static website-render records are committed metadata only; generated HTML/JSON exports remain ignored under `website-export/stage5am/`.
 - Stage 5AN private content-pack records are committed metadata only; generated content-pack files, hosted private content, combined webroots, ZIP archives, and safe extracts remain ignored under `deep-research-content-packs/stage5an/` and `website-export/stage5an/`.
-- Stage 5AS Deep Research should consume Stage 5AR original-image coordinate-lock records, Stage 5AP token-block records, the Stage 5AL/5AM metadata package, Stage 5AN content-pack metadata, private hosted content URLs, and publication gates, not raw `third_party/` paths or raw page images as source truth.
+- Stage 5AS external review has been consumed by Stage 5AT as review context. Future token-case work must consume Stage 5AT review-pack policy and challenge records, Stage 5AR original-image coordinate-lock records, Stage 5AP token-block records, the Stage 5AL/5AM metadata package, Stage 5AN content-pack metadata, private hosted content URLs, and publication gates, not raw `third_party/` paths or raw page images as source truth.
 - Stage 5AP page 49-51 token-block records are source-lock/preflight metadata only. The 32x8 token grid, logical coordinates, primary-60 mapping, DWH context, null controls, and OutGuess controls are not decoded plaintext, not canonical corpus activation, not experiment seeds, and not solve evidence.
 - Stage 5AP generated reports under `experiments/results/token-block/stage5ap/` and `experiments/results/stego-controls/stage5ap/` remain ignored and must not be staged.
 - Stage 5AR page 49-51 original-image coordinate records are coordinate source-lock/review-preflight metadata only. Pixel boxes are original-image anchors, not decoded text, OCR output, image semantics, canonical corpus activation, page-boundary finalisation, experiment seeds, CUDA inputs, or solve evidence.
 - Stage 5AR generated reports under `experiments/results/token-block/stage5ar/` remain ignored and must not be staged.
-- Future Stage 5AS review must cite Stage 5AR original-image source-lock, page-split, pixel-coordinate, coordinate-validation, case-policy, null-control, DWH, and guardrail records before any bounded token-block preflight planning.
+- Stage 5AT token-case review-pack records are human-review packaging metadata only. The generated review pack under `human-review-packs/stage5at/token-case-review/` and generated reports under `experiments/results/token-block/stage5at/` remain ignored and must not be staged except allowed scaffolds.
+- Stage 5AT active ambiguity classes are exactly `I/l`, `O/0`, `1/I/l`, `S/5`, `Z/2`, `B/8`, `G/6`, `o/0`, and `q/g/p`; stale example classes such as `f/F`, `A/4`, and `C/G` are non-active examples only.
+- Future Stage 5AU review must use the Stage 5AT decision template and challenge pack, must not use OCR/AI/ML/LLM vision to fill decisions, and must not change canonical transcription until reviewed human decisions are integrated by a later explicit stage.
 - Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
 - Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
 - Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
@@ -993,7 +995,7 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 5AM generated static site files are ignored under `website-export/stage5am/` and must not be staged.
 - The static research index is metadata-only and review-gated; it is not public website publication.
 - Do not publish raw/private bodies, generated extraction bodies, private IDs, local absolute paths, raw images, raw workbooks, archives, audio, video, or PDFs through the renderer.
-- Stage 5AN built the private content pack before Deep Research; Stage 5AS should perform focused coordinate/source-lock review from Stage 5AR coordinate records, Stage 5AP token-block records, Stage 5AL/5AM/5AN metadata, and private hosted content URLs only.
+- Stage 5AN built the private content pack before Deep Research; Stage 5AT now routes token-case work to Stage 5AU manual review using Stage 5AT review-pack records, Stage 5AR coordinate records, Stage 5AP token-block records, Stage 5AL/5AM/5AN metadata, and private hosted content URLs only.
 
 ## Stage 5AN Private Content Pack Rules
 
@@ -1002,14 +1004,14 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - The SFTP-ready upload root is `website-export/stage5an/webserver-root/`; copy the contents of that folder to the private server root if hosting is desired.
 - Noindex and robots metadata are not access control. Use private hosting controls if generated extracts are uploaded.
 - Stage 5AN private content is review-gated handoff infrastructure, not public website publication, not Deep Research output, not experiment execution, and not solve evidence.
-- Stage 5AS Deep Research should cite Stage 5AR coordinate-lock records, Stage 5AP token-block records, and both `http://liberprimus-gpu-data.info/index.html` and `http://liberprimus-gpu-data.info/private-content/` when the user confirms the generated webroot is uploaded.
+- Future review should cite Stage 5AT review-pack records, Stage 5AR coordinate-lock records, Stage 5AP token-block records, and both `http://liberprimus-gpu-data.info/index.html` and `http://liberprimus-gpu-data.info/private-content/` when the user confirms the generated webroot is uploaded.
 
 ## Stage 5AP Token-Block Source-Lock Rules
 
 - Stage 5AP page 49-51 token-block records are source-lock/preflight metadata only.
 - The 32x8 token transcription, logical coordinates, primary-60 mapping, null controls, DWH context, and OutGuess controls are not decoded plaintext, canonical corpus activation, experiment seeds, hash targets, or solve evidence.
 - Generated token-block and stego-control reports under `experiments/results/token-block/stage5ap/` and `experiments/results/stego-controls/stage5ap/` remain ignored.
-- Future Stage 5AS review must cite Stage 5AR original-image coordinate records plus Stage 5AP source-lock, transcription, alphabet, mapping, null-control, DWH, and OutGuess guardrail records before any bounded token-block preflight follow-up.
+- Future Stage 5AU manual review must cite Stage 5AT review-pack records plus Stage 5AR original-image coordinate records and Stage 5AP source-lock, transcription, alphabet, mapping, null-control, DWH, and OutGuess guardrail records before any bounded token-block preflight follow-up.
 
 ## Stage 5AR Original-Image Coordinate Lock Rules
 
@@ -1017,7 +1019,14 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Original local page images are coordinate truth for pixel boxes; screenshots, crops, modified images, web-rendered pages, and private generated images are not coordinate truth.
 - Pixel coordinates are not OCR output, decoded text, semantic image interpretation, hidden-content forensics, experiment seeds, CUDA input permission, canonical corpus activation, page-boundary finalisation, or solve evidence.
 - Stage 5AR generated coordinate reports under `experiments/results/token-block/stage5ar/` remain ignored and must not be staged except for allowed scaffold files.
-- Future Stage 5AS review must cite Stage 5AR source-lock, image-variant, page-split, pixel-coordinate, case-policy, coordinate-validation, source-lock/null-control, DWH context, and guardrail records before any bounded token-block preflight planning.
+- Future Stage 5AU manual review must cite Stage 5AT review-pack records and Stage 5AR source-lock, image-variant, page-split, pixel-coordinate, case-policy, coordinate-validation, source-lock/null-control, DWH context, and guardrail records before any bounded token-block preflight planning.
+
+## Stage 5AT Token Case Review Pack Rules
+
+- Stage 5AT token case-review records are human-review packaging metadata only.
+- Generated review-pack files under `human-review-packs/stage5at/token-case-review/` and generated reports under `experiments/results/token-block/stage5at/` remain ignored and must not be staged except allowed scaffolds.
+- The Stage 5AP canonical transcription remains unchanged until reviewed human decisions are explicitly integrated by a future stage.
+- Stage 5AU manual review must not use OCR, AI/ML, LLM vision, semantic image interpretation, hidden-content forensics, stego, hash/preimage search, CUDA, benchmarks, scored experiments, or solve claims to fill decision fields.
 
 ## Stage 5AC Prime-Minus-One CUDA Synthetic Reporting Rules
 

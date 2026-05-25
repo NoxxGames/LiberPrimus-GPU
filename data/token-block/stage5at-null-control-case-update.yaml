@@ -1,0 +1,60 @@
+record_type: null_control_case_update
+schema: schemas/token-block/null-control-case-update-v0.schema.json
+stage_id: stage-5at
+token_block_id: stage5ap-page49-51-token-block
+source_stage5ar_null_controls: data/token-block/stage5ap-token-block-null-control-plan.yaml
+case_decision_controls_added: true
+review_bias_controls_added: true
+value_sensitivity_controls_added: true
+case_decision_controls:
+- keep-current control
+- change-token control
+- unresolved-control
+- not-reviewable-control
+review_bias_controls:
+- blind duplicate review item
+- non-ambiguous calibration control
+- page-transition calibration control
+value_sensitivity_controls:
+- primary-60 value-change control
+- outside-primary-60 candidate control
+challenge_count: 203
+execution_enabled: false
+no_decode: true
+no_solve_claim: true
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+stego_tool_execution_performed: false
+lp_page_outguess_run_performed: false
+hash_preimage_search_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false
+live_web_scrape_performed: false
+raw_images_committed: false
+generated_crops_committed: false
+generated_review_pack_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+public_website_publication_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+decode_attempt_performed: false
+hypothesis_generation_performed: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+method_status_upgraded: false

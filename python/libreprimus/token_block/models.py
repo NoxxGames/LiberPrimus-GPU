@@ -11,6 +11,7 @@ import yaml
 
 STAGE_ID = "stage-5ap"
 STAGE5AR_ID = "stage-5ar"
+STAGE5AT_ID = "stage-5at"
 TOKEN_BLOCK_ID = "stage5ap-page49-51-token-block"
 PRIMARY_ALPHABET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwx"
 TOKEN_GRID_LINES = [
@@ -81,6 +82,22 @@ STAGE5AR_DWH_CONTEXT_PATH = DATA_DIR / "stage5ar-dwh-coordinate-context.yaml"
 STAGE5AR_GUARDRAIL_PATH = DATA_DIR / "stage5ar-guardrail.yaml"
 STAGE5AR_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5ar-next-stage-decision.yaml"
 STAGE5AR_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5ar-summary.yaml"
+
+STAGE5AT_RESULTS_DIR = Path("experiments/results/token-block/stage5at")
+STAGE5AT_REVIEW_PACK_ROOT = Path("human-review-packs/stage5at/token-case-review")
+STAGE5AT_CASE_REVIEW_POLICY_PATH = DATA_DIR / "stage5at-case-review-policy.yaml"
+STAGE5AT_CASE_REVIEW_CHALLENGE_SET_PATH = DATA_DIR / "stage5at-case-review-challenge-set.yaml"
+STAGE5AT_CANONICAL_CHALLENGE_SET_PATH = DATA_DIR / "stage5at-canonical-transcription-challenge-set.yaml"
+STAGE5AT_CROP_MANIFEST_PATH = DATA_DIR / "stage5at-case-review-crop-manifest.yaml"
+STAGE5AT_DECISION_TEMPLATE_PATH = DATA_DIR / "stage5at-human-review-decision-template.yaml"
+STAGE5AT_PACK_MANIFEST_PATH = DATA_DIR / "stage5at-case-review-pack-manifest.yaml"
+STAGE5AT_VARIANT_REPAIR_PATH = DATA_DIR / "stage5at-variant-classifier-repair-summary.yaml"
+STAGE5AT_DOC_DRIFT_PATH = DATA_DIR / "stage5at-doc-drift-repair-summary.yaml"
+STAGE5AT_NULL_CONTROL_UPDATE_PATH = DATA_DIR / "stage5at-null-control-case-update.yaml"
+STAGE5AT_DWH_CASE_CONTEXT_PATH = DATA_DIR / "stage5at-dwh-case-context.yaml"
+STAGE5AT_GUARDRAIL_PATH = DATA_DIR / "stage5at-guardrail.yaml"
+STAGE5AT_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5at-next-stage-decision.yaml"
+STAGE5AT_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5at-summary.yaml"
 
 FALSE_GUARDRAILS = {
     "network_fetch_performed": False,

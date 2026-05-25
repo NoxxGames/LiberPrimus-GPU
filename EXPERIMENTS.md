@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AT Token Case Review Pack
+
+Stage 5AT is human-review packaging infrastructure, not an experiment. It commits metadata for token-case policy, grouped ambiguity challenges, canonical-transcription review prompts, crop manifests, decision templates, review-pack manifests, variant-classifier repair, doc-drift repair, null-control updates, DWH case context, guardrails, and next-stage decisions.
+
+Generated Stage 5AT token-block reports remain ignored under `experiments/results/token-block/stage5at/`. Generated human-review pack files remain ignored under `human-review-packs/stage5at/token-case-review/`. Stage 5AT performs no Deep Research, network fetch, live scrape, online clone, Google Drive storage, raw image commit, OCR, AI/ML interpretation, LLM/vision token reading, semantic image interpretation, hidden-content image forensics, broad stego scan, LP-page OutGuess execution, hash/preimage search, decode attempt, hypothesis generation/execution, CUDA, benchmarks, scored experiments, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AR Page 49-51 Original-Image Coordinate Lock
 
 Stage 5AR is coordinate source-lock and review-preflight infrastructure, not an experiment. It commits metadata for original page-image locks, image variants, the 10/13/9 page split, 256 original-image pixel coordinates, case ambiguity policy, coordinate validation, null controls, DWH coordinate context, and guardrails.

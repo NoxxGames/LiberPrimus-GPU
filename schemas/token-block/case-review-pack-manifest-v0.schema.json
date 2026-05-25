@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/case-review-pack-manifest-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "review_pack_generated", "review_pack_root", "review_pack_zip_created", "generated_review_pack_committed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "case_review_pack_manifest" },
+    "stage_id": { "const": "stage-5at" },
+    "review_pack_generated": { "const": true },
+    "review_pack_zip_created": { "const": true },
+    "generated_review_pack_committed": { "const": false },
+    "generated_crops_committed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import re
 from typing import Any
 
 from .models import (
@@ -85,20 +86,23 @@ def classify_variant(path: Path, selected_hashes: dict[int, str]) -> tuple[str, 
 
     page = _page_number(path)
     lower_path = repo_relative(path).lower()
+    if page in selected_hashes and sha256_file(path) == selected_hashes[page]:
+        if "liberprimuspages" in lower_path and path.name.lower() in {f"{p}.jpg" for p in PAGE_NUMBERS}:
+            return "original_candidate", "original_liber_primus_page_image", True
+        return "byte_identical_original_copy", "byte_identical_original_copy", True
+    path_tokens = {token for token in re.split(r"[^a-z0-9]+", lower_path) if token}
     if any(term in lower_path for term in ("screenshot", "screen-shot", "capture")):
         return "derived_screenshot", "forbidden_supporting_only", False
     if any(term in lower_path for term in ("crop", "cropped")):
         return "crop", "forbidden_supporting_only", False
     if any(term in lower_path for term in ("annotated", "highlight", "overlay", "circled")):
         return "annotated_or_highlighted", "forbidden_supporting_only", False
-    if any(term in lower_path for term in ("modified", "composite", "page_modified", "depictions_modified")):
+    if "modified" in path_tokens or "composite" in path_tokens:
         return "modified_or_composite", "forbidden_supporting_only", False
     if lower_path.startswith(("website-export/", "research-inputs/", "deep-research-content-packs/")):
         return "private_content_generated", "forbidden_supporting_only", False
     if "liberprimuspages" in lower_path and path.name.lower() in {f"{p}.jpg" for p in PAGE_NUMBERS}:
         return "original_candidate", "original_liber_primus_page_image", True
-    if page in selected_hashes and sha256_file(path) == selected_hashes[page]:
-        return "byte_identical_original_copy", "byte_identical_original_copy", True
     if "the-complete-cicada3301-archive" in lower_path:
         return "near_original_variant", "original_archive_page_image", False
     return "unknown", "unknown", False

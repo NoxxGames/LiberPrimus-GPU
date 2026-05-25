@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/case-review-crop-manifest-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "crop_count", "records", "derived_review_images_not_source_truth", "generated_crops_committed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "case_review_crop_manifest" },
+    "stage_id": { "const": "stage-5at" },
+    "crop_count": { "type": "integer", "minimum": 1 },
+    "derived_review_images_not_source_truth": { "const": true },
+    "generated_crops_committed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/doc-drift-repair-summary-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "doc_drift_repaired", "doc_drift_active_classes_match_data", "no_solve_claim"],
+  "properties": {
+    "record_type": { "const": "doc_drift_repair_summary" },
+    "stage_id": { "const": "stage-5at" },
+    "doc_drift_repaired": { "const": true },
+    "doc_drift_active_classes_match_data": { "const": true },
+    "no_solve_claim": { "const": true }
+  }
+}

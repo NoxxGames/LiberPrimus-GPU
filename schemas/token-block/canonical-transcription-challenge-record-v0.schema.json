@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/canonical-transcription-challenge-record-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "challenge_count", "records", "canonical_transcription_changed", "canonical_transcription_change_allowed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "canonical_transcription_challenge_set" },
+    "stage_id": { "const": "stage-5at" },
+    "challenge_count": { "type": "integer", "minimum": 1 },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["token_index", "current_canonical_token", "review_reason", "review_priority", "decision_status"],
+        "properties": {
+          "decision_status": { "const": "unresolved" },
+          "canonical_transcription_changed": { "const": false },
+          "canonical_transcription_change_allowed": { "const": false }
+        }
+      }
+    },
+    "canonical_transcription_changed": { "const": false },
+    "canonical_transcription_change_allowed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

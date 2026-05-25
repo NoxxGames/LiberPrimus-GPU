@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/dwh-case-context-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "dwh_defined", "dwh_expansion", "hash_search_performed", "decode_claim", "no_solve_claim"],
+  "properties": {
+    "record_type": { "const": "dwh_case_context" },
+    "stage_id": { "const": "stage-5at" },
+    "dwh_defined": { "const": true },
+    "dwh_expansion": { "const": "Deep Web Hash" },
+    "hash_search_performed": { "const": false },
+    "decode_claim": { "const": false },
+    "no_solve_claim": { "const": true }
+  }
+}

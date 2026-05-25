@@ -4,11 +4,17 @@
 
 This file records CUDA policy for future acceleration work.
 
+## Stage 5AT Token Case Review Pack Boundary
+
+Stage 5AT is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It records token case-review policy, challenge records, decision templates, generated ignored review-pack manifests, variant-classifier repair, doc-drift repair, null-control and DWH context updates, and Stage 5AU manual review direction only.
+
+Stage 5AT does not authorize CUDA expansion, token-block CUDA input, hash/preimage search, scored experiments, OCR/AI/ML/LLM vision token reading, automatic transcription changes, or solve claims.
+
 ## Stage 5AP Page 49-51 Token-Block Boundary
 
 Stage 5AP is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It records page 49-51 token-block source-lock/preflight metadata and OutGuess positive-control guardrails only.
 
-Stage 5AP does not authorize CUDA expansion, token-block CUDA input, hash/preimage search, scored experiments, or solve claims. Stage 5AQ is a focused Deep Research source-lock review stage.
+Stage 5AP does not authorize CUDA expansion, token-block CUDA input, hash/preimage search, scored experiments, or solve claims. Stage 5AT keeps token-case follow-up in manual review.
 
 ## Stage 5AJ UsefulFilesAndIdeas Boundary
 
@@ -116,7 +122,7 @@ Stage 5T selected `Stage 5U - unified candidate batch ABI and backend contract c
 
 ## Current CUDA Status
 
-CUDA remains deferred after Stage 5AJ except for explicitly scoped synthetic or solved-fixture-safe parity stages. Existing CUDA code and metadata are summarized by the latest staged-plan and CUDA notes; broad CUDA and unsolved-page CUDA remain blocked unless an explicit future prompt scopes them with CPU references, parity tests, result records, and benchmark plans. Stage 5Z prime-minus-one CUDA contract records, Stage 5AA synthetic CUDA records, Stage 5AC reporting/preflight records, Stage 5AD bounded mismatch records, Stage 5AD-fix hash-lineage records, Stage 5AE corrected reporting records, Stage 5AF source-harvester records, Stage 5AG local inventory records, Stage 5AH doc-staleness records, Stage 5AI curated research-bundle records, and Stage 5AJ UsefulFilesAndIdeas records are not full p56 parity, benchmark evidence, speedup evidence, CUDA authorization, or solve evidence.
+CUDA remains deferred after Stage 5AT except for explicitly scoped synthetic or solved-fixture-safe parity stages. Existing CUDA code and metadata are summarized by the latest staged-plan and CUDA notes; broad CUDA and unsolved-page CUDA remain blocked unless an explicit future prompt scopes them with CPU references, parity tests, result records, and benchmark plans. Stage 5Z prime-minus-one CUDA contract records, Stage 5AA synthetic CUDA records, Stage 5AC reporting/preflight records, Stage 5AD bounded mismatch records, Stage 5AD-fix hash-lineage records, Stage 5AE corrected reporting records, Stage 5AF source-harvester records, Stage 5AG local inventory records, Stage 5AH doc-staleness records, Stage 5AI curated research-bundle records, Stage 5AJ UsefulFilesAndIdeas records, Stage 5AP token-block records, Stage 5AR coordinate-lock records, and Stage 5AT review-pack records are not full p56 parity, benchmark evidence, speedup evidence, CUDA authorization, or solve evidence.
 
 Do not use CUDA for Discord processing, image interpretation, OutGuess regression, cookie/hash packs, or broad unsolved-page campaigns.
 

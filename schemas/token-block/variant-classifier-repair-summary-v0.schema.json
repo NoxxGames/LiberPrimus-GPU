@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/variant-classifier-repair-summary-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "variant_classifier_repaired", "unmodified_path_bug_test_passed", "hash_equality_overrides_path_heuristics", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "variant_classifier_repair_summary" },
+    "stage_id": { "const": "stage-5at" },
+    "variant_classifier_repaired": { "const": true },
+    "unmodified_path_bug_test_passed": { "const": true },
+    "hash_equality_overrides_path_heuristics": { "const": true },
+    "solve_claim": { "const": false }
+  }
+}

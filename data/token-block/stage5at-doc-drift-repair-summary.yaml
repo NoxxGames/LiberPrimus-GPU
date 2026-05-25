@@ -1,0 +1,23 @@
+record_type: doc_drift_repair_summary
+schema: schemas/token-block/doc-drift-repair-summary-v0.schema.json
+stage_id: stage-5at
+token_block_id: stage5ap-page49-51-token-block
+doc_drift_repaired: true
+active_ambiguity_classes:
+- I/l
+- O/0
+- 1/I/l
+- S/5
+- Z/2
+- B/8
+- G/6
+- o/0
+- q/g/p
+stale_doc_only_examples:
+- f/F
+- A/4
+- C/G
+stale_examples_not_active: true
+doc_drift_active_classes_match_data: true
+canonical_transcription_changed: false
+no_solve_claim: true

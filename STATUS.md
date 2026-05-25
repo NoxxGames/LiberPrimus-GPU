@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AR page 49-51 original-image pixel-coordinate and page-split source-gap closure is complete.
+Stage 5AT token case-policy human review pack and canonical-transcription challenge set is complete.
 
-Next recommended prompt: Stage 5AS - Deep Research page 49-51 original-image coordinate review and bounded token-block preflight planning. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5AU - manual human review of token case challenge pack. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5AT
+
+Stage 5AT converted the Stage 5AR token-case ambiguity records and Stage 5AS review finding into a deterministic local human-review pack. It preserved the Stage 5AP canonical transcription unchanged, repaired the unmodified-path image variant classifier issue, refreshed documentation drift records so active case classes match committed data, and wrote committed review-policy, challenge-set, crop-manifest, decision-template, pack-manifest, null-control, DWH context, guardrail, next-stage, and summary records.
+
+Local Stage 5AT summary: active ambiguity classes `I/l, O/0, 1/I/l, S/5, Z/2, B/8, G/6, o/0, q/g/p`, active ambiguity class count `9`, case review challenge count `203`, canonical transcription challenge count `212`, non-ambiguous control token count `6`, page-transition review items `40`, review pack root `human-review-packs/stage5at/token-case-review`, review pack ZIP `human-review-packs/stage5at/token-case-review/token-case-review-pack.zip`, generated crop count `1015`, context crop count `609`, review sheet count `9`, variant classifier repaired `true`, unmodified-path bug test passed `true`, doc drift repaired `true`, canonical transcription changed `false`, human review decisions present/integrated `false/false`, selected next prompt `Stage 5AU - manual human review of token case challenge pack`, manual human review recommended `true`, network fetch `false`, online clone `false`, Google Drive storage `false`, Deep Research execution `false`, OCR `false`, AI/ML interpretation `false`, LLM/vision token reading `false`, semantic image interpretation `false`, hidden-content image forensics `false`, stego execution `false`, LP-page OutGuess execution `false`, hash/preimage search `false`, decode attempt `false`, hypothesis generation/execution `false`, CUDA execution/source modification `false`, new CUDA kernels `0`, benchmarks `false`, scored experiments `false`, raw images committed `false`, generated review pack committed `false`, generated outputs committed `false`, and solve claim `false`.
+
+Stage 5AT is human-review packaging infrastructure. The generated review pack remains ignored under `human-review-packs/stage5at/token-case-review/`; generated JSON reports remain ignored under `experiments/results/token-block/stage5at/`. It does not resolve token case automatically, does not treat the block as decoded text, and does not authorize bounded preflight, CUDA, hash/preimage search, OCR, AI/ML, or solve claims.
 
 ## Completed in Stage 5AR
 

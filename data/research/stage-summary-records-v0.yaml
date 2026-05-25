@@ -1192,3 +1192,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AR records 3 selected original page images, 15 image variant records, source-backed 10/13/9 page split, 256 pixel-coordinate records, coordinate validation status valid_with_review_required, 9 unresolved case-ambiguity classes, 0 unresolved coordinate records, null-control and DWH coordinate-context updates, and selected Stage 5AS. It performs no Deep Research execution, live scraping, network fetch, online clone, Google Drive storage, raw image commit, OCR, AI/ML interpretation, semantic image interpretation, hidden-content image forensics, broad stego scan, LP-page OutGuess, decode attempt, hash/preimage search, hypothesis execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5at
+    title: Token case-policy human review pack and canonical-transcription challenge set
+    status: complete
+    category: infrastructure
+    summary: Built a deterministic local human-review pack for page 49-51 token-case ambiguity, preserving the Stage 5AP canonical transcription unchanged and selecting Stage 5AU manual review before any automated integration.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5AT commands for variant-classifier repair, case-review policy, case challenge generation, decision templates, review-pack generation, null-control/DWH updates, doc-drift summary, aggregate summary, and validation."
+      - Stage 5AT case-review policy, challenge-set, canonical-transcription challenge, crop-manifest, decision-template, review-pack manifest, variant-classifier repair, doc-drift repair, null-control update, DWH context, guardrail, next-stage, and aggregate summary records under `data/token-block/` and `data/project-state/`.
+      - Ignored generated reports under `experiments/results/token-block/stage5at/` and ignored human-review pack files under `human-review-packs/stage5at/token-case-review/`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AT records 9 active ambiguity classes, 203 grouped case-review challenges, 212 canonical-transcription challenge records, 6 non-ambiguous controls, 40 page-transition review items, 1015 generated local crops, 609 context crops, 9 review sheets, variant-classifier repair true, doc-drift repair true, canonical transcription changed false, human review decisions present/integrated false/false, and selected Stage 5AU. It performs no Deep Research execution, live scraping, network fetch, online clone, Google Drive storage, raw image commit, generated review-pack commit, OCR, AI/ML interpretation, LLM/vision token reading, semantic image interpretation, hidden-content image forensics, broad stego scan, LP-page OutGuess, decode attempt, hash/preimage search, hypothesis generation/execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

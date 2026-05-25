@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/case-review-policy-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "active_ambiguity_classes", "human_review_required", "canonical_transcription_changed", "automatic_case_resolution_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "case_review_policy" },
+    "stage_id": { "const": "stage-5at" },
+    "active_ambiguity_classes": { "type": "array", "items": { "type": "string" } },
+    "human_review_required": { "const": true },
+    "canonical_transcription_changed": { "const": false },
+    "automatic_case_resolution_performed": { "const": false },
+    "ocr_performed": { "const": false },
+    "ai_ml_interpretation_performed": { "const": false },
+    "llm_vision_token_reading_performed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}
