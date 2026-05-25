@@ -9,6 +9,7 @@ Future integration must preserve the distinction between:
 - the committed Stage 5AP canonical transcription;
 - Stage 5AR original-image coordinates;
 - Stage 5AT human-review challenges and generated crops;
-- Stage 5AU human decision files, once manually filled.
+- Stage 5AU review-pack v2 challenge/crop metadata;
+- Stage 5AV human decision files, once manually filled.
 
 No OCR, AI/ML, LLM vision, semantic image interpretation, hidden-content forensics, or automatic case resolution may populate the decision fields.

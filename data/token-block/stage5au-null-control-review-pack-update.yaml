@@ -1,0 +1,55 @@
+record_type: null_control_review_pack_update
+schema: schemas/token-block/null-control-review-pack-update-v0.schema.json
+stage_id: stage-5au
+token_block_id: stage5ap-page49-51-token-block
+source_stage5at_null_control_update: null_control_case_update
+review_pack_v2_null_controls_added: true
+case_challenge_count: 203
+crop_quality_diagnostic_count: 203
+controls:
+- non-ambiguous control rows remain visible in canonical review
+- not-reviewable decision remains available
+- cell-only fallback status is explicit
+- derived crop warnings are preserved for manual reviewers
+execution_enabled: false
+automatic_case_resolution_performed: false
+no_solve_claim: true
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+stego_tool_execution_performed: false
+lp_page_outguess_run_performed: false
+hash_preimage_search_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false
+live_web_scrape_performed: false
+public_website_publication_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+decode_attempt_performed: false
+hypothesis_generation_performed: false
+canonical_transcription_changed: false
+canonical_transcription_change_allowed: false
+raw_images_committed: false
+generated_crops_committed: false
+generated_overlays_committed: false
+generated_review_pack_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+method_status_upgraded: false

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/null-control-review-pack-update-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "review_pack_v2_null_controls_added", "execution_enabled", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "null_control_review_pack_update" },
+    "stage_id": { "const": "stage-5au" },
+    "review_pack_v2_null_controls_added": { "const": true },
+    "execution_enabled": { "const": false },
+    "automatic_case_resolution_performed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

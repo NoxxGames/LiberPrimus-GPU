@@ -9,7 +9,7 @@ Use this workflow when reviewing the Stage 5AR page 49-51 original-image coordin
 5. Use `data/token-block/stage5ar-token-pixel-coordinate-records.yaml` for token bounding boxes.
 6. Keep `data/token-block/stage5ar-token-case-policy.yaml` and `data/token-block/stage5ar-token-case-ambiguity-records.yaml` open when reviewing token text.
 7. Treat `data/token-block/stage5ar-dwh-coordinate-context.yaml` as context only. Do not run DWH hash/preimage search.
-8. For token-case decisions, use the Stage 5AT review pack and decision template instead of editing the canonical transcription directly.
+8. For token-case decisions, use the Stage 5AU review pack v2 and blank decision template instead of editing the canonical transcription directly.
 
 Generated reports under `experiments/results/token-block/stage5ar/` are local diagnostics and remain ignored. Raw images under `third_party/LiberPrimusPages/` remain ignored.
 

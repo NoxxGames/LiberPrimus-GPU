@@ -1,0 +1,58 @@
+record_type: stage5au_next_stage_decision
+schema: schemas/project-state/stage5au-summary-v0.schema.json
+stage_id: stage-5au
+status: complete
+selected_next_stage_short_name: Stage 5AV
+selected_next_stage_title: Stage 5AV - manual human review of token case challenge
+  pack v2
+selected_next_prompt_type: manual_human_review
+selection_reason: The v2 pack renders all case and canonical challenges, but no human
+  decision file is present or integrated.
+manual_human_review_recommended: true
+codex_integration_next_ready: false
+bounded_preflight_recommended: false
+scored_experiments_recommended: false
+unsolved_page_cuda_recommended: false
+public_website_expansion_recommended: false
+execution_enabled: false
+no_solve_claim: true
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+stego_tool_execution_performed: false
+lp_page_outguess_run_performed: false
+hash_preimage_search_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false
+live_web_scrape_performed: false
+public_website_publication_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+decode_attempt_performed: false
+hypothesis_generation_performed: false
+automatic_case_resolution_performed: false
+canonical_transcription_changed: false
+canonical_transcription_change_allowed: false
+raw_images_committed: false
+generated_crops_committed: false
+generated_overlays_committed: false
+generated_review_pack_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+method_status_upgraded: false

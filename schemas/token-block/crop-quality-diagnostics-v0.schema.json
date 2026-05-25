@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/crop-quality-diagnostics-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "diagnostic_count", "records", "automatic_case_resolution_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "crop_quality_diagnostics" },
+    "stage_id": { "const": "stage-5au" },
+    "diagnostic_count": { "type": "integer", "minimum": 0 },
+    "records": { "type": "array" },
+    "automatic_case_resolution_performed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/review-pack-usability-audit-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "stage5at_manual_review_usable", "manual_review_should_proceed_from_stage5at_pack", "repair_required", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "review_pack_usability_audit" },
+    "stage_id": { "const": "stage-5au" },
+    "stage5at_manual_review_usable": { "const": false },
+    "manual_review_should_proceed_from_stage5at_pack": { "const": false },
+    "repair_required": { "const": true },
+    "solve_claim": { "const": false }
+  }
+}

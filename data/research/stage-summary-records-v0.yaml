@@ -1208,3 +1208,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AT records 9 active ambiguity classes, 203 grouped case-review challenges, 212 canonical-transcription challenge records, 6 non-ambiguous controls, 40 page-transition review items, 1015 generated local crops, 609 context crops, 9 review sheets, variant-classifier repair true, doc-drift repair true, canonical transcription changed false, human review decisions present/integrated false/false, and selected Stage 5AU. It performs no Deep Research execution, live scraping, network fetch, online clone, Google Drive storage, raw image commit, generated review-pack commit, OCR, AI/ML interpretation, LLM/vision token reading, semantic image interpretation, hidden-content image forensics, broad stego scan, LP-page OutGuess, decode attempt, hash/preimage search, hypothesis generation/execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5au
+    title: Token case-review pack usability fix and glyph-tight crop rebuild
+    status: complete
+    category: infrastructure
+    summary: Audited the Stage 5AT review pack as count-valid but not usable for reliable manual review, then rebuilt an ignored v2 review pack with glyph-candidate crops, context crops, row context, overlays, complete case and canonical challenge visibility, blank decision templates, crop-quality diagnostics, and Stage 5AV next-stage decision records.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5AU commands for Stage 5AT usability audit, crop-geometry policy generation, review-pack v2 generation, v2 validation, null-control/DWH updates, aggregate summary, and validation."
+      - Stage 5AU usability-audit, crop-geometry policy, crop-quality diagnostics, v2 case-review challenge, v2 canonical-transcription challenge, v2 decision-template, review-pack manifest, UI coverage, null-control update, DWH context, guardrail, next-stage, and aggregate summary records under `data/token-block/` and `data/project-state/`.
+      - Ignored generated reports under `experiments/results/token-block/stage5au/` and ignored review-pack v2 files under `human-review-packs/stage5au/token-case-review-v2/`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AU records Stage 5AT manual-review usability false, 203 case-review challenges rendered, 212 canonical-transcription challenges rendered, 2436 generated crop/overlay files, 203 glyph-candidate crops, 609 context crops, 203 row-context crops, 609 overlays, 0 fallbacks, 0 unusable crops, canonical transcription changed false, human review decisions present/integrated false/false, and selected Stage 5AV. It performs no Deep Research execution, live scraping, network fetch, online clone, Google Drive storage, raw image commit, generated review-pack commit, OCR, AI/ML interpretation, LLM/vision token reading, semantic image interpretation, hidden-content image forensics, broad stego scan, LP-page OutGuess, decode attempt, hash/preimage search, hypothesis generation/execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

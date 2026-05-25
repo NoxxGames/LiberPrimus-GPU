@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/review-pack-v2-ui-coverage-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "all_203_case_challenges_visible_or_linked", "all_212_canonical_challenges_visible_or_linked", "manual_review_usable", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "review_pack_v2_ui_coverage" },
+    "stage_id": { "const": "stage-5au" },
+    "all_203_case_challenges_visible_or_linked": { "const": true },
+    "all_212_canonical_challenges_visible_or_linked": { "const": true },
+    "manual_review_usable": { "const": true },
+    "automatic_case_resolution_performed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

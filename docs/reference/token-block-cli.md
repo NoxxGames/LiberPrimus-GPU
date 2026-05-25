@@ -1,7 +1,7 @@
 # Token-Block CLI
 
 Stage 5AP adds `libreprimus token-block` for metadata-only source-lock and preflight records.
-Stage 5AR extends the same group with original-image coordinate-lock commands documented in `docs/reference/token-block-coordinate-cli.md`. Stage 5AT adds token case-review pack commands documented in `docs/reference/token-case-review-pack-cli.md`.
+Stage 5AR extends the same group with original-image coordinate-lock commands documented in `docs/reference/token-block-coordinate-cli.md`. Stage 5AT adds token case-review pack commands documented in `docs/reference/token-case-review-pack-cli.md`. Stage 5AU adds review-pack v2 usability-repair commands documented in `docs/reference/token-case-review-pack-v2-cli.md`.
 
 Core commands:
 
@@ -21,3 +21,5 @@ Generated reports are written under `experiments/results/token-block/stage5ap/` 
 Stage 5AR generated reports are written under `experiments/results/token-block/stage5ar/` and remain ignored. The coordinate commands may read local original page images for deterministic pixel-coordinate metadata, but they must not commit raw images or use screenshots/crops/modified images as coordinate truth.
 
 Stage 5AT generated reports are written under `experiments/results/token-block/stage5at/`, and generated review-pack files are written under `human-review-packs/stage5at/token-case-review/`; both remain ignored. The case-review commands must not change canonical transcription, use OCR/AI/ML/LLM vision, decode the block, run hash/preimage search, run CUDA, benchmark, execute scored experiments, or make solve claims.
+
+Stage 5AU generated reports are written under `experiments/results/token-block/stage5au/`, and generated review-pack v2 files are written under `human-review-packs/stage5au/token-case-review-v2/`; both remain ignored. The v2 commands must not fill decisions, change canonical transcription, use OCR/AI/ML/LLM vision, interpret images, decode the block, run hash/preimage search, run stego, run CUDA, benchmark, execute scored experiments, or make solve claims.

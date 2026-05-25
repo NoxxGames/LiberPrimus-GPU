@@ -56,7 +56,23 @@ from .models import (
     STAGE5AT_REVIEW_PACK_ROOT,
     STAGE5AT_SUMMARY_PATH,
     STAGE5AT_VARIANT_REPAIR_PATH,
+    STAGE5AU_CANONICAL_CHALLENGES_V2_PATH,
+    STAGE5AU_CASE_CHALLENGES_V2_PATH,
+    STAGE5AU_CROP_GEOMETRY_POLICY_PATH,
+    STAGE5AU_CROP_QUALITY_PATH,
+    STAGE5AU_DECISION_TEMPLATE_PATH,
+    STAGE5AU_DWH_CONTEXT_PATH,
+    STAGE5AU_GUARDRAIL_PATH,
+    STAGE5AU_NEXT_STAGE_DECISION_PATH,
+    STAGE5AU_NULL_CONTROL_UPDATE_PATH,
+    STAGE5AU_PACK_MANIFEST_PATH,
+    STAGE5AU_RESULTS_DIR,
+    STAGE5AU_REVIEW_PACK_ROOT,
+    STAGE5AU_SUMMARY_PATH,
+    STAGE5AU_UI_COVERAGE_PATH,
+    STAGE5AU_USABILITY_AUDIT_PATH,
     TRANSCRIPTION_PATH,
+    read_yaml,
 )
 from .null_controls import build_null_control_plan
 from .original_images import build_original_image_source_lock
@@ -74,6 +90,15 @@ from .stage5at import (
     build_review_pack,
     build_stage5at_summary,
     validate_stage5at,
+)
+from .stage5au import (
+    audit_stage5at_review_pack_usability,
+    build_crop_geometry_policy,
+    build_review_pack_v2,
+    build_stage5au_dwh_review_pack_context,
+    build_stage5au_null_control_update,
+    build_stage5au_summary,
+    validate_stage5au,
 )
 from .transcription import build_transcription
 from .validation import validate_stage5ap
@@ -717,6 +742,200 @@ def validate_stage5at_command(
     if errors:
         raise typer.Exit(1)
     console.print("token_block_stage5at_valid=true")
+
+
+@app.command("audit-stage5at-review-pack-usability")
+def audit_stage5at_review_pack_usability_command(
+    stage5at_review_pack_root: Path = typer.Option(STAGE5AT_REVIEW_PACK_ROOT),
+    stage5at_pack_manifest: Path = typer.Option(STAGE5AT_PACK_MANIFEST_PATH),
+    stage5at_case_challenges: Path = typer.Option(STAGE5AT_CASE_REVIEW_CHALLENGE_SET_PATH),
+    stage5at_canonical_challenges: Path = typer.Option(STAGE5AT_CANONICAL_CHALLENGE_SET_PATH),
+    results_dir: Path = typer.Option(STAGE5AU_RESULTS_DIR),
+    out: Path = typer.Option(STAGE5AU_USABILITY_AUDIT_PATH),
+) -> None:
+    payload = audit_stage5at_review_pack_usability(
+        stage5at_review_pack_root=stage5at_review_pack_root,
+        stage5at_pack_manifest=stage5at_pack_manifest,
+        stage5at_case_challenges=stage5at_case_challenges,
+        stage5at_canonical_challenges=stage5at_canonical_challenges,
+        results_dir=results_dir,
+        out=out,
+    )
+    console.print(f"stage5at_pack_exists={str(payload['stage5at_pack_exists']).lower()}")
+    console.print(f"stage5at_html_case_card_count={payload['stage5at_html_case_card_count']}")
+    console.print(f"stage5at_manual_review_usable={str(payload['stage5at_manual_review_usable']).lower()}")
+    console.print(f"repair_required={str(payload['repair_required']).lower()}")
+
+
+@app.command("build-stage5au-crop-geometry-policy")
+def build_stage5au_crop_geometry_policy_command(
+    stage5ar_source_lock: Path = typer.Option(STAGE5AR_ORIGINAL_SOURCE_LOCK_PATH),
+    stage5ar_pixel_coordinates: Path = typer.Option(STAGE5AR_PIXEL_COORDINATE_RECORDS_PATH),
+    out: Path = typer.Option(STAGE5AU_CROP_GEOMETRY_POLICY_PATH),
+) -> None:
+    payload = build_crop_geometry_policy(
+        stage5ar_source_lock=stage5ar_source_lock,
+        stage5ar_pixel_coordinates=stage5ar_pixel_coordinates,
+        out=out,
+    )
+    console.print(f"source_original_images_only={str(payload['source_original_images_only']).lower()}")
+    console.print(f"crop_type_count={len(payload['crop_types'])}")
+
+
+@app.command("build-stage5au-review-pack-v2")
+def build_stage5au_review_pack_v2_command(
+    stage5ar_source_lock: Path = typer.Option(STAGE5AR_ORIGINAL_SOURCE_LOCK_PATH),
+    stage5ar_pixel_coordinates: Path = typer.Option(STAGE5AR_PIXEL_COORDINATE_RECORDS_PATH),
+    stage5at_case_challenges: Path = typer.Option(STAGE5AT_CASE_REVIEW_CHALLENGE_SET_PATH),
+    stage5at_canonical_challenges: Path = typer.Option(STAGE5AT_CANONICAL_CHALLENGE_SET_PATH),
+    crop_geometry_policy: Path = typer.Option(STAGE5AU_CROP_GEOMETRY_POLICY_PATH),
+    out_root: Path = typer.Option(STAGE5AU_REVIEW_PACK_ROOT),
+    results_dir: Path = typer.Option(STAGE5AU_RESULTS_DIR),
+    out_crop_quality: Path = typer.Option(STAGE5AU_CROP_QUALITY_PATH),
+    out_case_challenges_v2: Path = typer.Option(STAGE5AU_CASE_CHALLENGES_V2_PATH),
+    out_canonical_challenges_v2: Path = typer.Option(STAGE5AU_CANONICAL_CHALLENGES_V2_PATH),
+    out_pack_manifest: Path = typer.Option(STAGE5AU_PACK_MANIFEST_PATH),
+    out_ui_coverage: Path = typer.Option(STAGE5AU_UI_COVERAGE_PATH),
+    out_decision_template: Path = typer.Option(STAGE5AU_DECISION_TEMPLATE_PATH),
+) -> None:
+    quality, cases, canonical, pack, ui = build_review_pack_v2(
+        stage5ar_source_lock=stage5ar_source_lock,
+        stage5ar_pixel_coordinates=stage5ar_pixel_coordinates,
+        stage5at_case_challenges=stage5at_case_challenges,
+        stage5at_canonical_challenges=stage5at_canonical_challenges,
+        crop_geometry_policy=crop_geometry_policy,
+        out_root=out_root,
+        results_dir=results_dir,
+        out_crop_quality=out_crop_quality,
+        out_case_challenges_v2=out_case_challenges_v2,
+        out_canonical_challenges_v2=out_canonical_challenges_v2,
+        out_pack_manifest=out_pack_manifest,
+        out_ui_coverage=out_ui_coverage,
+        out_decision_template=out_decision_template,
+    )
+    console.print(f"case_challenges_rendered={cases['challenge_count']}")
+    console.print(f"canonical_challenges_rendered={canonical['challenge_count']}")
+    console.print(f"generated_crop_count={pack['generated_crop_count']}")
+    console.print(f"overlay_count={quality['overlay_count']}")
+    console.print(f"all_case_challenges_visible={str(ui['all_203_case_challenges_visible_or_linked']).lower()}")
+
+
+@app.command("validate-stage5au-review-pack-v2")
+def validate_stage5au_review_pack_v2_command(
+    ui_coverage: Path = typer.Option(STAGE5AU_UI_COVERAGE_PATH),
+    pack_manifest: Path = typer.Option(STAGE5AU_PACK_MANIFEST_PATH),
+) -> None:
+    ui = read_yaml(ui_coverage)
+    pack = read_yaml(pack_manifest)
+    console.print(f"case_challenges_rendered={ui['case_challenges_rendered']}")
+    console.print(f"canonical_challenges_rendered={ui['canonical_challenges_rendered']}")
+    console.print(f"review_pack_v2_zip_path={pack['review_pack_v2_zip_path']}")
+    if not ui.get("manual_review_usable"):
+        raise typer.Exit(1)
+    console.print("token_block_stage5au_review_pack_v2_valid=true")
+
+
+@app.command("build-stage5au-null-control-update")
+def build_stage5au_null_control_update_command(
+    stage5at_null_control_update: Path = typer.Option(STAGE5AT_NULL_CONTROL_UPDATE_PATH),
+    case_challenges_v2: Path = typer.Option(STAGE5AU_CASE_CHALLENGES_V2_PATH),
+    crop_quality: Path = typer.Option(STAGE5AU_CROP_QUALITY_PATH),
+    out: Path = typer.Option(STAGE5AU_NULL_CONTROL_UPDATE_PATH),
+) -> None:
+    payload = build_stage5au_null_control_update(
+        stage5at_null_control_update=stage5at_null_control_update,
+        case_challenges_v2=case_challenges_v2,
+        crop_quality=crop_quality,
+        out=out,
+    )
+    console.print(f"review_pack_v2_null_controls_added={str(payload['review_pack_v2_null_controls_added']).lower()}")
+
+
+@app.command("build-stage5au-dwh-review-pack-context")
+def build_stage5au_dwh_review_pack_context_command(out: Path = typer.Option(STAGE5AU_DWH_CONTEXT_PATH)) -> None:
+    payload = build_stage5au_dwh_review_pack_context(out=out)
+    console.print(f"dwh_expansion={payload['dwh_expansion']}")
+    console.print(f"hash_search_performed={str(payload['hash_search_performed']).lower()}")
+
+
+@app.command("build-stage5au-summary")
+def build_stage5au_summary_command(
+    usability_audit: Path = typer.Option(STAGE5AU_USABILITY_AUDIT_PATH),
+    crop_geometry_policy: Path = typer.Option(STAGE5AU_CROP_GEOMETRY_POLICY_PATH),
+    crop_quality: Path = typer.Option(STAGE5AU_CROP_QUALITY_PATH),
+    case_challenges_v2: Path = typer.Option(STAGE5AU_CASE_CHALLENGES_V2_PATH),
+    canonical_challenges_v2: Path = typer.Option(STAGE5AU_CANONICAL_CHALLENGES_V2_PATH),
+    pack_manifest: Path = typer.Option(STAGE5AU_PACK_MANIFEST_PATH),
+    ui_coverage: Path = typer.Option(STAGE5AU_UI_COVERAGE_PATH),
+    decision_template_v2: Path = typer.Option(STAGE5AU_DECISION_TEMPLATE_PATH),
+    null_control_update: Path = typer.Option(STAGE5AU_NULL_CONTROL_UPDATE_PATH),
+    dwh_context: Path = typer.Option(STAGE5AU_DWH_CONTEXT_PATH),
+    out_guardrail: Path = typer.Option(STAGE5AU_GUARDRAIL_PATH),
+    out_next_stage: Path = typer.Option(STAGE5AU_NEXT_STAGE_DECISION_PATH),
+    out_summary: Path = typer.Option(STAGE5AU_SUMMARY_PATH),
+) -> None:
+    guard, next_stage, summary = build_stage5au_summary(
+        usability_audit=usability_audit,
+        crop_geometry_policy=crop_geometry_policy,
+        crop_quality=crop_quality,
+        case_challenges_v2=case_challenges_v2,
+        canonical_challenges_v2=canonical_challenges_v2,
+        pack_manifest=pack_manifest,
+        ui_coverage=ui_coverage,
+        decision_template_v2=decision_template_v2,
+        null_control_update=null_control_update,
+        dwh_context=dwh_context,
+        out_guardrail=out_guardrail,
+        out_next_stage=out_next_stage,
+        out_summary=out_summary,
+    )
+    console.print(f"selected_next_stage_title={next_stage['selected_next_stage_title']}")
+    console.print(f"review_pack_v2_zip_sha256={summary['review_pack_v2_zip_sha256']}")
+    console.print(f"automatic_case_resolution_performed={str(guard['automatic_case_resolution_performed']).lower()}")
+
+
+@app.command("validate-stage5au")
+def validate_stage5au_command(
+    usability_audit: Path = typer.Option(STAGE5AU_USABILITY_AUDIT_PATH),
+    crop_geometry_policy: Path = typer.Option(STAGE5AU_CROP_GEOMETRY_POLICY_PATH),
+    crop_quality: Path = typer.Option(STAGE5AU_CROP_QUALITY_PATH),
+    case_challenges_v2: Path = typer.Option(STAGE5AU_CASE_CHALLENGES_V2_PATH),
+    canonical_challenges_v2: Path = typer.Option(STAGE5AU_CANONICAL_CHALLENGES_V2_PATH),
+    pack_manifest: Path = typer.Option(STAGE5AU_PACK_MANIFEST_PATH),
+    ui_coverage: Path = typer.Option(STAGE5AU_UI_COVERAGE_PATH),
+    decision_template_v2: Path = typer.Option(STAGE5AU_DECISION_TEMPLATE_PATH),
+    null_control_update: Path = typer.Option(STAGE5AU_NULL_CONTROL_UPDATE_PATH),
+    dwh_context: Path = typer.Option(STAGE5AU_DWH_CONTEXT_PATH),
+    guardrail: Path = typer.Option(STAGE5AU_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AU_NEXT_STAGE_DECISION_PATH),
+    summary: Path = typer.Option(STAGE5AU_SUMMARY_PATH),
+    review_pack_root: Path = typer.Option(STAGE5AU_REVIEW_PACK_ROOT),
+    results_dir: Path = typer.Option(STAGE5AU_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5au(
+        usability_audit=usability_audit,
+        crop_geometry_policy=crop_geometry_policy,
+        crop_quality=crop_quality,
+        case_challenges_v2=case_challenges_v2,
+        canonical_challenges_v2=canonical_challenges_v2,
+        pack_manifest=pack_manifest,
+        ui_coverage=ui_coverage,
+        decision_template_v2=decision_template_v2,
+        null_control_update=null_control_update,
+        dwh_context=dwh_context,
+        guardrail=guardrail,
+        next_stage_decision=next_stage_decision,
+        summary=summary,
+        review_pack_root=review_pack_root,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(error)
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5au_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

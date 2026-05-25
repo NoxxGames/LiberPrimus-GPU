@@ -16,7 +16,7 @@
 - Token-block source locks: `python/libreprimus/token_block/`, `data/token-block/`, `schemas/token-block/`.
 - Stage 5AP stego controls: `python/libreprimus/stego_controls/`, `data/stego/stage5ap-outguess-*.yaml`, `schemas/stego/outguess-*.json`.
 - Stage 5AR token-block coordinates: `python/libreprimus/token_block/`, `data/token-block/stage5ar-*.yaml`, `schemas/token-block/*coordinate*.json`, and `schemas/token-block/*case*.json`.
-- Stage 5AT token-case review packs: `python/libreprimus/token_block/`, `data/token-block/stage5at-*.yaml`, `data/project-state/stage5at-*.yaml`, `schemas/token-block/*case-review*.json`, `schemas/token-block/*challenge*.json`, and `schemas/token-block/*review*.json`.
+- Stage 5AT/5AU token-case review packs: `python/libreprimus/token_block/`, `data/token-block/stage5at-*.yaml`, `data/token-block/stage5au-*.yaml`, `data/project-state/stage5at-*.yaml`, `data/project-state/stage5au-*.yaml`, `schemas/token-block/*case-review*.json`, `schemas/token-block/*challenge*.json`, `schemas/token-block/*review*.json`, and `schemas/token-block/*crop*.json`.
 - Research synthesis: `python/libreprimus/research_synthesis/`, `data/research/`.
 - Document staleness: `python/libreprimus/doc_staleness/`, `data/project-state/`, `schemas/project-state/`.
 - Source harvester: `python/libreprimus/source_harvester/`, `data/source-harvester/`, `schemas/source-harvester/`.
@@ -45,13 +45,13 @@ Stage 5AL source-harvester modules add website-ingest package generation, public
 
 Stage 5AM website-render modules render the Stage 5AL metadata package into an ignored private static index and upload manifest. They must keep public website-ready at zero, preserve publication gates, avoid raw/private bodies, avoid external dependencies, write generated site files only under ignored `website-export/stage5am/`, and point Stage 5AN Deep Research at metadata rather than raw paths.
 
-Stage 5AN deep-research-export modules package private handoff files, render hosted private content, and build the combined SFTP webroot. They must keep generated pack/site/webroot files ignored, preserve publication gates, exclude raw third-party binaries and archives by default, avoid network fetches, avoid Google Drive storage, and point future review work at Stage 5AT review-pack records, Stage 5AR coordinate records, Stage 5AP token-block records, plus metadata/private hosted URLs rather than raw paths.
+Stage 5AN deep-research-export modules package private handoff files, render hosted private content, and build the combined SFTP webroot. They must keep generated pack/site/webroot files ignored, preserve publication gates, exclude raw third-party binaries and archives by default, avoid network fetches, avoid Google Drive storage, and point future review work at Stage 5AU review-pack v2 records, Stage 5AT review-pack records, Stage 5AR coordinate records, Stage 5AP token-block records, plus metadata/private hosted URLs rather than raw paths.
 
 Stage 5AP token-block and stego-control modules record page 49-51 source-lock/preflight metadata and OutGuess control readiness. They must not decode the token block, run hash/preimage search, run OCR/AI/ML, process raw page images into committed data, run LP-page OutGuess, execute CUDA, benchmark, or make solve claims.
 
 Stage 5AR token-block coordinate modules record original-image source locks, image variants, page splits, pixel coordinates, case ambiguity, coordinate validation, and null-control/DWH context updates. They must not use screenshots/crops/modified images as coordinate truth, run OCR/AI/ML, interpret image semantics, run hidden-content forensics, decode, search hashes, execute stego/CUDA/scored experiments, benchmark, or make solve claims.
 
-Stage 5AT token-block review modules build local human-review packs for case ambiguity. They may create ignored crops and review sheets, but must not commit generated packs, use OCR/AI/ML/LLM vision to fill decisions, change the canonical transcription, decode, search hashes, execute stego/CUDA/scored experiments, benchmark, or make solve claims.
+Stage 5AT/5AU token-block review modules build local human-review packs for case ambiguity. They may create ignored crops, overlays, and review sheets, but must not commit generated packs, use OCR/AI/ML/LLM vision to fill decisions, change the canonical transcription, decode, search hashes, execute stego/CUDA/scored experiments, benchmark, or make solve claims.
 
 ## Good First Areas
 

@@ -801,6 +801,8 @@ experiments/results/token-block/**
 !experiments/results/token-block/stage5ar/.gitkeep
 !experiments/results/token-block/stage5at/
 !experiments/results/token-block/stage5at/.gitkeep
+!experiments/results/token-block/stage5au/
+!experiments/results/token-block/stage5au/.gitkeep
 
 # Generated human-review packs
 human-review-packs/**
@@ -809,6 +811,8 @@ human-review-packs/**
 !human-review-packs/.gitkeep
 !human-review-packs/stage5at/
 !human-review-packs/stage5at/.gitkeep
+!human-review-packs/stage5au/
+!human-review-packs/stage5au/.gitkeep
 
 # Generated stego-control readiness outputs
 experiments/results/stego-controls/**

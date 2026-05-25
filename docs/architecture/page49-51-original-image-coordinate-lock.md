@@ -19,4 +19,4 @@ The lock selects three original image candidates: pages 49, 50, and 51. Each is 
 
 Stage 5AR validates the accepted 10/13/9 logical split in source-locked image context and records `valid_with_review_required` because human review is still required before any future bounded preflight can treat coordinates as reviewed.
 
-Stage 5AT consumes the Stage 5AR case-ambiguity and coordinate records to build the token-case human-review pack. Stage 5AR coordinates remain coordinate anchors only; Stage 5AT crops and prompts do not change canonical transcription by themselves.
+Stage 5AT consumes the Stage 5AR case-ambiguity and coordinate records to build the token-case human-review pack. Stage 5AU rebuilds that pack as v2 with tighter derived review crops and context overlays. Stage 5AR coordinates remain coordinate anchors only; Stage 5AT/5AU crops and prompts do not change canonical transcription by themselves.

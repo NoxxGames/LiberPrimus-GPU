@@ -4,4 +4,4 @@ Stage 5AT keeps token-case handling in human-review state. The active ambiguity 
 
 The stage records `203` grouped case-review challenges and `212` canonical-transcription challenge records. It generates review crops and sheets locally but commits only metadata. Human review decisions are not present or integrated in Stage 5AT.
 
-The selected next stage is Stage 5AU manual human review. Later Codex integration must cite the Stage 5AT decision template and must not treat generated crops or review prompts as automatic transcription changes.
+Stage 5AU later audited the generated Stage 5AT pack as count-valid but not usable for reliable manual decisions, then rebuilt a v2 pack. Later Codex integration must cite the Stage 5AU decision template v2 and must not treat generated crops or review prompts as automatic transcription changes.

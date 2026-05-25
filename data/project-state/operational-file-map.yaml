@@ -870,7 +870,7 @@ records:
   staleness_check_level: current_state
   owner_context: research_operator
   notes: Records case-review challenge counts, generated review-pack counts,
-    variant-classifier/doc-drift repair status, guardrails, and Stage 5AU next-stage decision.
+    variant-classifier/doc-drift repair status, guardrails, and historical Stage 5AU next-stage decision.
 - path: data/token-block/stage5at-case-review-policy.yaml
   category: active_data_record
   purpose: Stage 5AT token case-review active-class policy.
@@ -881,7 +881,7 @@ records:
   mirror_or_generated_relationships: source
   staleness_check_level: current_state
   owner_context: research_operator
-  notes: Defines the active token-case ambiguity classes for Stage 5AU manual review.
+  notes: Defines the active token-case ambiguity classes consumed by Stage 5AU and Stage 5AV review workflows.
 - path: data/token-block/stage5at-case-review-challenge-set.yaml
   category: active_data_record
   purpose: Stage 5AT grouped token case-review challenge records.
@@ -929,3 +929,73 @@ records:
   owner_context: research_operator
   notes: Documents that token-case review packs are human-review packaging only,
     not OCR, AI/ML, decode, CUDA, or solve evidence.
+- path: data/project-state/stage5au-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AU token case-review pack v2 aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5au
+  expected_update_frequency: when_token_case_review_pack_state_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records the Stage 5AT usability failure, v2 pack coverage counts,
+    crop-quality counts, guardrails, and Stage 5AV next-stage decision.
+- path: data/token-block/stage5au-review-pack-v2-manifest.yaml
+  category: active_data_record
+  purpose: Stage 5AU token case-review pack v2 manifest.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5au
+  expected_update_frequency: when_token_case_review_pack_state_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records generated v2 pack paths and counts while keeping the pack ignored.
+- path: data/token-block/stage5au-crop-quality-diagnostics.yaml
+  category: active_data_record
+  purpose: Stage 5AU glyph-candidate crop-quality diagnostics.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5au
+  expected_update_frequency: when_token_case_crop_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records deterministic crop diagnostics; derived crops are review aids only,
+    not token decisions or source truth.
+- path: docs/architecture/token-case-review-pack-v2.md
+  category: architecture_doc
+  purpose: Stage 5AU token case-review pack v2 architecture and boundary policy.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5au
+  expected_update_frequency: every_token_case_review_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents the v2 pack usability repair, full challenge visibility, and
+    generated-output boundaries.
+- path: docs/architecture/glyph-candidate-crop-policy.md
+  category: architecture_doc
+  purpose: Stage 5AU deterministic glyph-candidate crop policy.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5au
+  expected_update_frequency: every_token_case_crop_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents original-image-only crop derivation and the no-OCR/no-decision boundary.
+- path: docs/onboarding/token-case-review-pack-v2-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5AU token case-review pack v2 workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5au
+  expected_update_frequency: every_token_case_review_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents how Stage 5AV manual review should consume Stage 5AU v2
+    challenge and decision-template records.

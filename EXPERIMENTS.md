@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AU Token Case Review Pack V2
+
+Stage 5AU is review-pack usability repair infrastructure, not an experiment. It commits metadata for a Stage 5AT usability audit, deterministic crop-geometry policy, crop-quality diagnostics, v2 case/canonical challenge sets, v2 decision templates, review-pack manifests, null-control updates, DWH review-pack context, guardrails, and next-stage decisions.
+
+Generated Stage 5AU token-block reports remain ignored under `experiments/results/token-block/stage5au/`. Generated v2 human-review pack files remain ignored under `human-review-packs/stage5au/token-case-review-v2/`. Stage 5AU performs no Deep Research, network fetch, live scrape, online clone, Google Drive storage, raw image commit, OCR, AI/ML interpretation, LLM/vision token reading, semantic image interpretation, hidden-content image forensics, broad stego scan, LP-page OutGuess execution, hash/preimage search, decode attempt, hypothesis generation/execution, CUDA, benchmarks, scored experiments, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AT Token Case Review Pack
 
 Stage 5AT is human-review packaging infrastructure, not an experiment. It commits metadata for token-case policy, grouped ambiguity challenges, canonical-transcription review prompts, crop manifests, decision templates, review-pack manifests, variant-classifier repair, doc-drift repair, null-control updates, DWH case context, guardrails, and next-stage decisions.

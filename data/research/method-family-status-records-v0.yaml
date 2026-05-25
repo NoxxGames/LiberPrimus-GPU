@@ -500,11 +500,11 @@ records:
     method_family_id: document_staleness_detection
     name: Operational document staleness detection
     status: infrastructure_only
-    evidence_summary: Stage 5AB adds a source-of-truth driven operational Markdown staleness scanner with dynamic stage parsing, current/next-stage checks, website deferral checks, stale CUDA-cap detection, and CI consistency integration. Stage 5AH extends that gate with stage-ledger truncation checks, operational-file-map coverage checks, current/next-stage consistency reports, and active next-stage records. Stage 5AT updates active source-of-truth records to Stage 5AT complete and Stage 5AU next.
-    completed_stage_refs: [stage-5ab, stage-5ah, stage-5ai, stage-5aj, stage-5ak, stage-5at]
+    evidence_summary: Stage 5AB adds a source-of-truth driven operational Markdown staleness scanner with dynamic stage parsing, current/next-stage checks, website deferral checks, stale CUDA-cap detection, and CI consistency integration. Stage 5AH extends that gate with stage-ledger truncation checks, operational-file-map coverage checks, current/next-stage consistency reports, and active next-stage records. Stage 5AU updates active source-of-truth records to Stage 5AU complete and Stage 5AV next.
+    completed_stage_refs: [stage-5ab, stage-5ah, stage-5ai, stage-5aj, stage-5ak, stage-5at, stage-5au]
     reopen_conditions: [A future stage changes current/next-stage policy, adds new operational source-of-truth docs, introduces new generated/raw path classes that must be reflected in the operational file map, or truncates README/roadmap stage ledgers.]
     stop_conditions: [Do not hide stale operational claims by editing historical logs, do not schedule website expansion as Stage 6, do not commit generated staleness reports or codex-output handoffs, and do not treat documentation repair as CUDA execution or solve evidence.]
-    next_action: Stage 5AU manual token-case review must cite the updated Stage 5AT source-of-truth gate before any later integration stage changes active/current stage claims.
+    next_action: Stage 5AV manual token-case review must cite the updated Stage 5AU source-of-truth gate before any later integration stage changes active/current stage claims.
     solve_claim: false
     notes: Stage 5AH keeps documentation repair as process-quality metadata only; it is not source extraction, Deep Research, CUDA execution, benchmark evidence, or solve evidence.
   - record_type: method_family_status_record
@@ -526,20 +526,31 @@ records:
     completed_stage_refs: [stage-5ai, stage-5aj, stage-5ak, stage-5al, stage-5am, stage-5an]
     reopen_conditions: [A future website project needs reviewed public metadata cards, a Deep Research handoff needs updated source-card or claim metadata, private content-pack metadata changes, or publication gates are changed by explicit review.]
     stop_conditions: [Do not publish raw or review-blocked source bodies as committed artefacts, private community data, generated extract bodies, private identifiers, local absolute paths, website pages, hosted private content, Deep Research reports, CUDA outputs, benchmark outputs, scored experiment records, or solve claims.]
-    next_action: Keep public website expansion deferred; Stage 5AU should use the Stage 5AT local human-review pack and committed metadata rather than raw `third_party/` paths or raw page images as source truth.
+    next_action: Keep public website expansion deferred; Stage 5AV should use the Stage 5AU local human-review pack v2 and committed metadata rather than raw `third_party/` paths or raw page images as source truth.
     solve_claim: false
     notes: Public website-ready remains zero after Stage 5AN. The committed package, ignored static export, ignored private content pack, and ignored hosted content library are private handoff infrastructure and not public website publication.
   - record_type: method_family_status_record
     method_family_id: page49_51_token_block_source_lock
     name: Page 49-51 token-block source-lock and primary-60 mapping preflight
     status: infrastructure_only
-    evidence_summary: Stage 5AP records a supplied 32x8 page 49-51 token block, local page-image metadata hashes, logical coordinates, candidate primary-60 alphabet and byte-mapping preflight, null controls, DWH context, and a historical Stage 5AQ next-stage decision without decoding, hash search, or execution. Stage 5AR adds original-image source locks, 15 image-variant records, a source-backed 10/13/9 page split, 256 pixel-coordinate records, case-ambiguity policy, coordinate validation, and Stage 5AS next-stage decision without OCR, image interpretation, decode, hash search, CUDA, or execution. Stage 5AT turns the unresolved case policy into 203 human-review challenges, 212 canonical-transcription challenge records, and an ignored generated review pack while preserving canonical transcription unchanged.
-    completed_stage_refs: [stage-5ap, stage-5ar, stage-5at]
-    reopen_conditions: [A future Stage 5AU or later source-lock review provides human case decisions, exact transcript/profile source evidence, alternate token-to-value source locks, reviewed original-image coordinate confirmation, stronger DWH context, or explicit bounded verifier requirements.]
+    evidence_summary: Stage 5AP records a supplied 32x8 page 49-51 token block, local page-image metadata hashes, logical coordinates, candidate primary-60 alphabet and byte-mapping preflight, null controls, DWH context, and a historical Stage 5AQ next-stage decision without decoding, hash search, or execution. Stage 5AR adds original-image source locks, 15 image-variant records, a source-backed 10/13/9 page split, 256 pixel-coordinate records, case-ambiguity policy, coordinate validation, and Stage 5AS next-stage decision without OCR, image interpretation, decode, hash search, CUDA, or execution. Stage 5AT turns the unresolved case policy into 203 human-review challenges, 212 canonical-transcription challenge records, and an ignored generated review pack while preserving canonical transcription unchanged. Stage 5AU audits that pack as not usable for reliable decisions and rebuilds an ignored v2 pack with glyph-candidate crops, context crops, row context, overlays, and full challenge visibility.
+    completed_stage_refs: [stage-5ap, stage-5ar, stage-5at, stage-5au]
+    reopen_conditions: [A future Stage 5AV or later source-lock review provides human case decisions, exact transcript/profile source evidence, alternate token-to-value source locks, reviewed original-image coordinate confirmation, stronger DWH context, or explicit bounded verifier requirements.]
     stop_conditions: [Do not treat the token grid as decoded plaintext, source truth, canonical corpus, page-boundary finalisation, experiment seed, hash target, CUDA input, or solve evidence.]
-    next_action: Stage 5AU should manually review the Stage 5AT token case challenge pack before any Codex integration or bounded manifest can be considered.
+    next_action: Stage 5AV should manually review the Stage 5AU token case challenge pack v2 before any Codex integration or bounded manifest can be considered.
     solve_claim: false
-    notes: Stage 5AP preflight maps 00 to 0 and 4F to 255 over the candidate primary-60 alphabet, Stage 5AR provides original-image pixel-coordinate anchors for all 256 tokens, and Stage 5AT provides human-review challenges only; all are review metadata and not decoded text or solve evidence.
+    notes: Stage 5AP preflight maps 00 to 0 and 4F to 255 over the candidate primary-60 alphabet, Stage 5AR provides original-image pixel-coordinate anchors for all 256 tokens, Stage 5AT provides human-review challenges, and Stage 5AU provides a usable v2 review pack only; all are review metadata and not decoded text or solve evidence.
+  - record_type: method_family_status_record
+    method_family_id: token_case_review_pack_usability
+    name: Token case review-pack usability and glyph-candidate crops
+    status: infrastructure_only
+    evidence_summary: Stage 5AU audits the Stage 5AT review pack as count-valid but not usable for reliable decisions, rebuilds the ignored v2 pack with glyph-candidate crops, context crops, row context, overlays, all 203 case-review challenges, all 212 canonical-transcription challenges, blank decision templates, and crop-quality diagnostics, and keeps canonical transcription unchanged.
+    completed_stage_refs: [stage-5at, stage-5au]
+    reopen_conditions: [Stage 5AV supplies manual human decisions from the v2 pack, or a later prompt explicitly scopes a gap-closure pass for crop quality, review coverage, or decision-template integration.]
+    stop_conditions: [Do not use OCR, AI/ML, LLM vision, semantic image interpretation, hidden-content forensics, stego, hash/preimage search, decode attempts, CUDA, benchmarks, scored experiments, generated review-pack publication, method-status upgrades to solved, or solve claims.]
+    next_action: Stage 5AV manual human review should consume the Stage 5AU v2 pack and keep decisions explicit, including unresolved cases.
+    solve_claim: false
+    notes: Derived crops and overlays are review aids only, not source truth or token identity decisions.
   - record_type: method_family_status_record
     method_family_id: outguess_positive_control_guardrails
     name: OutGuess positive-control guardrails

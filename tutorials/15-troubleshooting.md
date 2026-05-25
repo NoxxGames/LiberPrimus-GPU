@@ -67,6 +67,9 @@ git check-ignore -v experiments/results/token-block/stage5ar/token_coordinate_va
 git check-ignore -v experiments/results/token-block/stage5at/case_review_challenge_set.json
 git check-ignore -v human-review-packs/stage5at/token-case-review/index.html
 git check-ignore -v human-review-packs/stage5at/token-case-review/token-case-review-pack.zip
+git check-ignore -v experiments/results/token-block/stage5au/summary.json
+git check-ignore -v human-review-packs/stage5au/token-case-review-v2/index.html
+git check-ignore -v human-review-packs/stage5au/token-case-review-v2/token-case-review-pack-v2.zip
 git check-ignore -v experiments/results/stego-controls/stage5ap/outguess_positive_control_matrix.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
@@ -87,6 +90,7 @@ git check-ignore -v codex-output/stage5ae-codex-completion.md
 git check-ignore -v codex-output/stage5af-codex-completion.md
 git check-ignore -v codex-output/stage5ap-codex-completion.md
 git check-ignore -v codex-output/stage5at-codex-completion.md
+git check-ignore -v codex-output/stage5au-codex-completion.md
 git check-ignore -v codex-output/stage5ai-codex-completion.md
 git check-ignore -v codex-output/stage5aj-codex-completion.md
 git check-ignore -v codex-output/stage5ak-codex-completion.md

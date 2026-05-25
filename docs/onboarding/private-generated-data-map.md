@@ -15,6 +15,7 @@
 - `research-inputs/stage5aj/`: generated local UsefulFilesAndIdeas research-bundle bodies, manifests, source cards, content indexes, and extraction warnings. Commit only `.gitkeep`; generated body files remain ignored.
 - `research-inputs/stage5ak/`: generated local community-facts Deep Research addendum bodies, manifests, source cards, content indexes, claim records, correction logs, known-question/do-not-assume notes, and bundle-specific addenda. Commit only `.gitkeep`; generated body files remain ignored.
 - `human-review-packs/stage5at/`: generated local Stage 5AT token-case human-review pack files, crops, context crops, review sheets, decision templates, HTML index, and ZIP archives. Commit only root README/.gitkeep scaffolds; generated review-pack bodies remain ignored.
+- `human-review-packs/stage5au/`: generated local Stage 5AU token-case review-pack v2 files, glyph-candidate crops, context crops, row crops, overlays, review sheets, blank decision templates, HTML index, and ZIP archives. Commit only root `.gitkeep` scaffolds; generated review-pack bodies remain ignored.
 - `data/raw/`: immutable raw input area. Do not overwrite or commit real raw artefacts unless a future stage explicitly scopes a curated placeholder or lock.
 
 ## Generated Outputs
@@ -81,6 +82,7 @@
 - `experiments/results/token-block/stage5ap/`: generated Stage 5AP token-block source-lock, canonical grid, coordinate, mapping-preflight, summary, and warning reports. Commit only README/.gitkeep scaffolds.
 - `experiments/results/token-block/stage5ar/`: generated Stage 5AR original-image coordinate-lock, image-variant, page-split, pixel-coordinate, coordinate-validation, summary, and warning reports. Commit only README/.gitkeep scaffolds.
 - `experiments/results/token-block/stage5at/`: generated Stage 5AT case-review policy, challenge-set, review-pack, validation, summary, and warning reports. Commit only `.gitkeep` scaffolds.
+- `experiments/results/token-block/stage5au/`: generated Stage 5AU usability-audit, review-pack v2, crop-quality, validation, summary, and warning reports. Commit only `.gitkeep` scaffolds.
 - `experiments/results/stego-controls/stage5ap/`: generated Stage 5AP OutGuess positive-control matrix and historical fixture readiness reports. Commit only README/.gitkeep scaffolds.
 - `codex-output/`: local Codex completion handoff files; do not stage or publish.
 - `experiments/results/scoring-consolidation/stage4i/`: generated Stage 4I scorer inventories, rendered calibration reports, CPU batch compatibility JSON, and warnings.

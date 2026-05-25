@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/human-review-decision-template-v2-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "template_status", "decision_count", "codex_filled_decisions", "canonical_transcription_changed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "human_review_decision_template_v2" },
+    "stage_id": { "const": "stage-5au" },
+    "template_status": { "const": "empty_unfilled" },
+    "decision_count": { "type": "integer", "minimum": 203 },
+    "codex_filled_decisions": { "const": false },
+    "human_review_decisions_present": { "const": false },
+    "human_review_decisions_integrated": { "const": false },
+    "canonical_transcription_changed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

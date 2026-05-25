@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/project-state/stage5au-summary-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "status", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5au" },
+    "status": { "type": "string" },
+    "canonical_transcription_changed": { "const": false },
+    "automatic_case_resolution_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "generated_review_pack_committed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

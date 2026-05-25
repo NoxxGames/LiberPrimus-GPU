@@ -14,3 +14,16 @@ Typical local sequence:
 ```
 
 The build commands may read local ignored page images only to create deterministic crops. Validation works from committed metadata and guardrails. Generated packs and reports remain ignored.
+
+Stage 5AU adds the v2 usability-repair sequence:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block audit-stage5at-review-pack-usability
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5au-crop-geometry-policy
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5au-review-pack-v2
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5au-review-pack-v2
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5au-summary
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5au
+```
+
+Stage 5AU records the Stage 5AT pack as count-valid but not usable for reliable manual review. The v2 build writes ignored files under `human-review-packs/stage5au/token-case-review-v2/` and committed compact metadata under `data/token-block/stage5au-*` and `data/project-state/stage5au-*`. It does not fill decisions, change canonical transcription, run OCR, run AI/ML or LLM/vision reading, run image interpretation, run stego, search hashes, decode, run CUDA, benchmark, or execute scored experiments.

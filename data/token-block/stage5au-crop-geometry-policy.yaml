@@ -1,0 +1,86 @@
+record_type: crop_geometry_policy
+schema: schemas/token-block/crop-geometry-policy-v0.schema.json
+stage_id: stage-5au
+source_stage_id: stage-5ar
+token_block_id: stage5ap-page49-51-token-block
+source_original_images_only: true
+selected_original_image_count: 3
+coordinate_record_count: 256
+derived_crops_are_review_aids: true
+derived_review_overlay_not_source_truth: true
+automatic_case_resolution_performed: false
+crop_types:
+- cell_crop
+- cell_crop_x4
+- glyph_candidate_crop
+- glyph_candidate_crop_x8
+- context_small
+- context_medium
+- context_large
+- row_context
+- row_context_overlay
+- page_strip_context
+- page_strip_overlay
+- debug_overlay
+parameters:
+  glyph_roi_x_margin: 48
+  glyph_roi_y_margin: 32
+  dark_pixel_threshold: 180
+  min_component_area_px: 8
+  glyph_bbox_padding_px: 16
+  context_small_margin_px: 64
+  context_medium_margin_px: 160
+  context_large_margin_px: 320
+  row_context_y_margin_px: 64
+  page_strip_x_margin_px: 96
+  page_strip_y_margin_px: 96
+algorithm:
+- Expand Stage 5AR cell bbox inside the selected original page image.
+- Threshold dark pixels deterministically in grayscale.
+- Find connected components above the fixed area threshold.
+- Union components overlapping the Stage 5AR cell bbox.
+- Pad the union bbox and fall back to the Stage 5AR cell bbox if no component overlaps.
+- Generate overlays as review aids only; do not classify token identity.
+no_ocr: true
+no_ai_ml: true
+no_llm_vision: true
+no_solve_claim: true
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+stego_tool_execution_performed: false
+lp_page_outguess_run_performed: false
+hash_preimage_search_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false
+live_web_scrape_performed: false
+public_website_publication_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+decode_attempt_performed: false
+hypothesis_generation_performed: false
+canonical_transcription_changed: false
+canonical_transcription_change_allowed: false
+raw_images_committed: false
+generated_crops_committed: false
+generated_overlays_committed: false
+generated_review_pack_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+method_status_upgraded: false

@@ -18,4 +18,4 @@ Stale examples such as `f/F`, `A/4`, and `C/G` are non-active examples only. The
 
 Committed metadata lives under `data/token-block/` and `data/project-state/`. Generated review material lives under `human-review-packs/stage5at/token-case-review/` and remains ignored. The pack contains crops, context crops, review sheets, an HTML index, and decision templates for manual review.
 
-Stage 5AT deliberately keeps `canonical_transcription_changed=false`. Manual review decisions are expected in Stage 5AU before any later Codex integration stage can consider transcription updates.
+Stage 5AT deliberately keeps `canonical_transcription_changed=false`. Stage 5AU later records the Stage 5AT generated pack as count-valid but not usable for reliable manual decisions and rebuilds a v2 pack under `human-review-packs/stage5au/token-case-review-v2/`. Manual review decisions are expected in Stage 5AV before any later Codex integration stage can consider transcription updates.

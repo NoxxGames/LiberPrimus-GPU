@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/review-pack-v2-manifest-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "review_pack_v2_generated", "review_pack_v2_zip_sha256", "generated_review_pack_committed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "review_pack_v2_manifest" },
+    "stage_id": { "const": "stage-5au" },
+    "review_pack_v2_generated": { "const": true },
+    "review_pack_v2_zip_sha256": { "type": "string", "minLength": 64, "maxLength": 64 },
+    "generated_review_pack_committed": { "const": false },
+    "generated_crops_committed": { "const": false },
+    "generated_overlays_committed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

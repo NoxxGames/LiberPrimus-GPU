@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5at_latest_and_stage5au_next() -> None:
+def test_operational_docs_use_stage5au_latest_and_stage5av_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5AT token case-policy human review pack" in status
-    assert "Next recommended prompt: Stage 5AU" in status
-    assert "Latest completed stage: Stage 5AT" in staged_plan
-    assert "Current planning focus: Stage 5AU" in staged_plan
+    assert "Stage 5AU token case-review pack usability fix" in status
+    assert "Next recommended prompt: Stage 5AV" in status
+    assert "Latest completed stage: Stage 5AU" in staged_plan
+    assert "Current planning focus: Stage 5AV" in staged_plan

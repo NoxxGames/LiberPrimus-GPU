@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/case-review-challenge-set-v2-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "challenge_count", "records", "automatic_case_resolution_performed", "canonical_transcription_changed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "case_review_challenge_set_v2" },
+    "stage_id": { "const": "stage-5au" },
+    "challenge_count": { "type": "integer", "minimum": 203 },
+    "records": { "type": "array" },
+    "automatic_case_resolution_performed": { "const": false },
+    "canonical_transcription_changed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}

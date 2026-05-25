@@ -29,8 +29,14 @@ For Stage 5AN, Deep Research may use the private hosted content URL and content-
 
 - `data/deep-research-export/stage5an-summary.yaml`
 
-For Stage 5AU manual review, use the Stage 5AT case-review package with the Stage 5AR coordinate-lock package and Stage 5AP token-block source-lock package:
+For Stage 5AV manual review, use the Stage 5AU review-pack v2 package with the Stage 5AT case-review package, Stage 5AR coordinate-lock package, and Stage 5AP token-block source-lock package:
 
+- `data/token-block/stage5au-review-pack-usability-audit.yaml`
+- `data/token-block/stage5au-crop-geometry-policy.yaml`
+- `data/token-block/stage5au-crop-quality-diagnostics.yaml`
+- `data/token-block/stage5au-case-review-challenge-set-v2.yaml`
+- `data/token-block/stage5au-canonical-transcription-challenge-set-v2.yaml`
+- `data/token-block/stage5au-human-review-decision-template-v2.yaml`
 - `data/token-block/stage5ar-original-page-image-source-lock.yaml`
 - `data/token-block/stage5ar-page-split-records.yaml`
 - `data/token-block/stage5ar-token-pixel-coordinate-records.yaml`

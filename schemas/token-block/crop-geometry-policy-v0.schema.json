@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/crop-geometry-policy-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "source_original_images_only", "derived_crops_are_review_aids", "automatic_case_resolution_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "crop_geometry_policy" },
+    "stage_id": { "const": "stage-5au" },
+    "source_original_images_only": { "const": true },
+    "derived_crops_are_review_aids": { "const": true },
+    "automatic_case_resolution_performed": { "const": false },
+    "ocr_performed": { "const": false },
+    "ai_ml_interpretation_performed": { "const": false },
+    "llm_vision_token_reading_performed": { "const": false },
+    "solve_claim": { "const": false }
+  }
+}
