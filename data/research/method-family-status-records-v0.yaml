@@ -526,6 +526,28 @@ records:
     completed_stage_refs: [stage-5ai, stage-5aj, stage-5ak, stage-5al, stage-5am, stage-5an]
     reopen_conditions: [A future website project needs reviewed public metadata cards, a Deep Research handoff needs updated source-card or claim metadata, private content-pack metadata changes, or publication gates are changed by explicit review.]
     stop_conditions: [Do not publish raw or review-blocked source bodies as committed artefacts, private community data, generated extract bodies, private identifiers, local absolute paths, website pages, hosted private content, Deep Research reports, CUDA outputs, benchmark outputs, scored experiment records, or solve claims.]
-    next_action: Stage 5AO should run the Deep Research source inventory and reliability prompt against Stage 5AL/5AM/5AN metadata and the private hosted content URLs, not raw `third_party/` paths.
+    next_action: Stage 5AQ should run focused Deep Research review against Stage 5AP token-block records, DWH context, Stage 5AL/5AM/5AN metadata, and private hosted content URLs, not raw `third_party/` paths or raw page images.
     solve_claim: false
     notes: Public website-ready remains zero after Stage 5AN. The committed package, ignored static export, ignored private content pack, and ignored hosted content library are private handoff infrastructure and not public website publication.
+  - record_type: method_family_status_record
+    method_family_id: page49_51_token_block_source_lock
+    name: Page 49-51 token-block source-lock and primary-60 mapping preflight
+    status: infrastructure_only
+    evidence_summary: Stage 5AP records a supplied 32x8 page 49-51 token block, local page-image metadata hashes, logical coordinates, candidate primary-60 alphabet and byte-mapping preflight, null controls, DWH context, and Stage 5AQ next-stage decision without decoding, hash search, or execution.
+    completed_stage_refs: [stage-5ap]
+    reopen_conditions: [A future Stage 5AQ or later source-lock review provides exact transcript/profile source evidence, alternate token-to-value source locks, stronger DWH context, or explicit bounded verifier requirements.]
+    stop_conditions: [Do not treat the token grid as decoded plaintext, source truth, canonical corpus, page-boundary finalisation, experiment seed, hash target, CUDA input, or solve evidence.]
+    next_action: Stage 5AQ should review exact token-to-value source locks and DWH context before any bounded manifest can be considered.
+    solve_claim: false
+    notes: Stage 5AP preflight maps 00 to 0 and 4F to 255 over the candidate primary-60 alphabet; that mapping is review metadata only.
+  - record_type: method_family_status_record
+    method_family_id: outguess_positive_control_guardrails
+    name: OutGuess positive-control guardrails
+    status: infrastructure_only
+    evidence_summary: Stage 5AP records OutGuess positive-control policy, local toolchain readiness, a positive-control matrix, historical fixture readiness blockers, and guardrails while keeping LP-page OutGuess execution and historical stego extraction disabled.
+    completed_stage_refs: [stage-4n, stage-5ap]
+    reopen_conditions: [A future explicit stego-control stage source-locks assets, exact expected payload hashes, and a reproducible OutGuess toolchain.]
+    stop_conditions: [Do not run OutGuess on LP page images, broad stego scans, historical fixture extraction, audio/stego tools, hash/preimage search, CUDA, benchmarks, or solve claims during readiness stages.]
+    next_action: Keep historical fixtures blocked and use synthetic controls only for raw-data-free validation until expected outputs and tools are source-locked.
+    solve_claim: false
+    notes: Stage 5AP records `outguess_missing` locally and 0 historical fixtures ready.

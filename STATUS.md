@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AN private Deep Research content pack and SFTP-ready hosted content library is complete.
+Stage 5AP page 49-51 token-block source-lock and OutGuess positive-control infrastructure is complete.
 
-Next recommended prompt: Stage 5AO - Deep Research source inventory and reliability prompt with private content. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5AQ - Deep Research page 49-51 token-block, Deep Web Hash context, and exact token-to-value source-lock review. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5AP
+
+Stage 5AP source-locked the page 49-51 token block as a metadata/provenance candidate, created a canonical 32x8 transcription, logical coordinate records, a candidate primary-60 alphabet registry, byte-mapping preflight, null-control plan, Deep Web Hash context record, and OutGuess positive-control readiness records.
+
+Local Stage 5AP summary: source-locked page-image metadata records `15`, row count `32`, column count `8`, token count `256`, unique token count `161`, first-character counts `0:60, 1:58, 2:65, 3:56, 4:17`, observed suffix count `59`, lowercase `f` absent `true`, primary mapping value range `0..255`, known checks `00 -> 0` and `4F -> 255`, coordinate records `256`, null controls `5`, OutGuess toolchain state `outguess_missing`, OutGuess matrix records `5`, synthetic controls `2`, historical fixture records `4`, historical fixtures ready `0`, selected next prompt `Stage 5AQ - Deep Research page 49-51 token-block, Deep Web Hash context, and exact token-to-value source-lock review`, network fetch `false`, online clone `false`, Google Drive storage `false`, Deep Research execution `false`, OCR `false`, AI/ML interpretation `false`, broad image forensics `false`, LP-page OutGuess execution `false`, hash/preimage search `false`, hypothesis execution `false`, CUDA execution/source modification `false`, benchmarks `false`, scored experiments `false`, raw data committed `false`, generated outputs committed `false`, and solve claim `false`.
+
+Stage 5AP is source-lock and positive-control infrastructure. The token block is not decoded, not interpreted as text, not used for a hash/preimage search, not treated as canonical corpus, and not promoted to a solve claim. Generated token-block and stego-control reports remain ignored under `experiments/results/token-block/stage5ap/` and `experiments/results/stego-controls/stage5ap/`.
 
 ## Completed in Stage 5AN
 

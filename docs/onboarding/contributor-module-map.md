@@ -13,6 +13,8 @@
 - Discord: `python/libreprimus/discord_ingestion/`, `discord_promotion/`, `discord_review/`, `discord_lead_promotion/`.
 - Post-Discord: `python/libreprimus/post_discord/`.
 - Stego: `python/libreprimus/stego/`.
+- Token-block source locks: `python/libreprimus/token_block/`, `data/token-block/`, `schemas/token-block/`.
+- Stage 5AP stego controls: `python/libreprimus/stego_controls/`, `data/stego/stage5ap-outguess-*.yaml`, `schemas/stego/outguess-*.json`.
 - Research synthesis: `python/libreprimus/research_synthesis/`, `data/research/`.
 - Document staleness: `python/libreprimus/doc_staleness/`, `data/project-state/`, `schemas/project-state/`.
 - Source harvester: `python/libreprimus/source_harvester/`, `data/source-harvester/`, `schemas/source-harvester/`.
@@ -41,7 +43,9 @@ Stage 5AL source-harvester modules add website-ingest package generation, public
 
 Stage 5AM website-render modules render the Stage 5AL metadata package into an ignored private static index and upload manifest. They must keep public website-ready at zero, preserve publication gates, avoid raw/private bodies, avoid external dependencies, write generated site files only under ignored `website-export/stage5am/`, and point Stage 5AN Deep Research at metadata rather than raw paths.
 
-Stage 5AN deep-research-export modules package private handoff files, render hosted private content, and build the combined SFTP webroot. They must keep generated pack/site/webroot files ignored, preserve publication gates, exclude raw third-party binaries and archives by default, avoid network fetches, avoid Google Drive storage, and point Stage 5AO Deep Research at metadata plus private hosted URLs rather than raw paths.
+Stage 5AN deep-research-export modules package private handoff files, render hosted private content, and build the combined SFTP webroot. They must keep generated pack/site/webroot files ignored, preserve publication gates, exclude raw third-party binaries and archives by default, avoid network fetches, avoid Google Drive storage, and point Stage 5AQ Deep Research at Stage 5AP token-block records plus metadata/private hosted URLs rather than raw paths.
+
+Stage 5AP token-block and stego-control modules record page 49-51 source-lock/preflight metadata and OutGuess control readiness. They must not decode the token block, run hash/preimage search, run OCR/AI/ML, process raw page images into committed data, run LP-page OutGuess, execute CUDA, benchmark, or make solve claims.
 
 ## Good First Areas
 

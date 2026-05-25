@@ -49,6 +49,8 @@ Stage 3X intentionally preserves the existing command names and options. This re
 - `research-synthesis`
 - `stego`
 - `solved-fixture`
+- `token-block`
+- `stego-controls`
 
 ## Guarded Commands
 
@@ -61,5 +63,7 @@ Stage 3X tests explicitly cover:
 - `post-discord run-gp-rune-verifier`
 - `post-discord run-cookie-signed-variants`
 - `research-synthesis validate`
+- `token-block validate-stage5ap`
+- `stego-controls validate-stage5ap-outguess`
 
 Future command changes should update this file and the Stage 3X command-surface tests together.

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/stego/outguess-historical-fixture-readiness-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "historical_fixture_count", "historical_fixture_ready_count", "execution_enabled", "tool_executed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "outguess_historical_fixture_readiness" },
+    "stage_id": { "const": "stage-5ap" },
+    "historical_fixture_count": { "type": "integer", "minimum": 1 },
+    "historical_fixture_ready_count": { "const": 0 },
+    "execution_enabled": { "const": false },
+    "tool_executed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

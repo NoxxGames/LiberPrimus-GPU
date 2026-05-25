@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/token-block-dwh-context-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "context_status", "execution_enabled", "hash_preimage_search_performed", "decode_attempted", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "token_block_dwh_context" },
+    "stage_id": { "const": "stage-5ap" },
+    "context_status": { "type": "string" },
+    "execution_enabled": { "const": false },
+    "hash_preimage_search_performed": { "const": false },
+    "decode_attempted": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/stego/outguess-positive-control-matrix-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "matrix_record_count", "synthetic_control_count", "ready_historical_fixture_count", "execution_enabled", "tool_executed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "outguess_positive_control_matrix" },
+    "stage_id": { "const": "stage-5ap" },
+    "matrix_record_count": { "type": "integer", "minimum": 1 },
+    "synthetic_control_count": { "type": "integer", "minimum": 1 },
+    "ready_historical_fixture_count": { "const": 0 },
+    "execution_enabled": { "const": false },
+    "tool_executed": { "const": false },
+    "lp_page_outguess_run_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

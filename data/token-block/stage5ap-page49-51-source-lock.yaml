@@ -1,0 +1,457 @@
+record_type: page49_51_source_lock
+schema: schemas/token-block/page49-51-source-lock-v0.schema.json
+stage_id: stage-5ap
+token_block_id: stage5ap-page49-51-token-block
+source_context: External Stage 5AO Deep Research report plus Stage 5AP user-supplied
+  token transcription; local page images are metadata-hash locked only.
+source_lock_status: local_metadata_hash_locked
+source_locked_page_image_count: 15
+text_reference_record_count: 32
+image_source_paths:
+- third_party/LiberPrimusPages/49.jpg
+- third_party/LiberPrimusPages/50.jpg
+- third_party/LiberPrimusPages/51.jpg
+- third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A drop box of
+  all unmodified files/2014onion7/49.jpg
+- third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A drop box of
+  all unmodified files/2014onion7/50.jpg
+- third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A drop box of
+  all unmodified files/2014onion7/51.jpg
+- third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber primus
+  images full/49.jpg
+- third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber primus
+  images full/50.jpg
+- third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber primus
+  images full/51.jpg
+- third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/49.jpg
+- third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/50.jpg
+- third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/51.jpg
+- third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/49.jpg
+- third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/50.jpg
+- third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/51.jpg
+text_reference_paths:
+- third_party/DiskCipherStuff/DiskCipherStuff/message_bodies.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2012/additional docs/signed messages/final
+  message for 2012.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2012/additional docs/the mail/people
+  who didnt share their info.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2012/MIDI puzzle/Cicada 3301 Puzzles.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2012/MIDI puzzle/MIDI Puzzle.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2013/additional docs/logs/all cosmos
+  posts from 7th on the 761 song - full log.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2013/additional docs/signed messages/gematria-primus.jpg.out.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2013/additional docs/signed messages/OutGuessed
+  message from rune table.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2013/additional docs/telnet/2013
+  offset messsage from telnet.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2013/additional docs/The Leaked
+  Email/Server response - include leaker email with pgp.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2013/additional files/Cicada OS/Cicada
+  OS - the shell script.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2013/additional files/The twitter/all
+  cicada 2013 twitter feed.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Cicada 3301
+  auqgnxjtvdbll3pv.onion JPeg.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/onion 5 signed
+  message.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/outguss/intus
+  outguss.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/outguss/liber
+  primus 5 outguss.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/outguss/liber
+  primus outguss.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/outguss/portrait
+  outguss.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/outguss/runes
+  outguss.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/scripts/page
+  56 script decoder.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/the growing
+  string/CICADA 3301 2914 onion 2 updates GMT+1.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/the growing
+  string/The new string whice is 3641299 characters long.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/the growing
+  string/the second onion new string.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+  from time of solving/Analyzing onion-2-003.jpg.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+  from time of solving/Final result of XOR started last night; images and MP3 - outguss
+  noise.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+  from time of solving/Final result of XOR started last night; images and MP3.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+  from time of solving/he fifth onion contained the following (signed) message.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+  from time of solving/onion6.outguess02.dat.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+  from time of solving/Outguessing the welcome image yields a signed message.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+  from time of solving/the Apache server status page changed once again to display
+  a new hexadecimal string.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+  from time of solving/the Apache server status page.txt
+- third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+  from time of solving/the fourth onion hex string.txt
+raw_image_committed: false
+raw_body_committed: false
+network_fetch_performed: false
+online_repo_clone_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+trusted_as_canonical: false
+usable_as_experiment_seed: false
+solve_claim: false
+records:
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/message_bodies.txt
+  sha256: 37d89137bd22e8aa70a217d1c40d69b216e0ede1631456544cbbf0df4296d455
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2012/additional docs/signed
+    messages/final message for 2012.txt
+  sha256: 8e9e2243834ad388fe37a9931b68c7b21f2911582985acf811f5c3e377497cbb
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2012/additional docs/the
+    mail/people who didnt share their info.txt
+  sha256: 2adf2aadd956946ecdc39f4be95ce6ac0c3f21cc3a839314541296e6c79faccb
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2012/MIDI puzzle/Cicada
+    3301 Puzzles.txt
+  sha256: 4f6e0bb36b4579fd1f2559c6e6b5bb403358a5b1ac5896849c1751ab04b03443
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2012/MIDI puzzle/MIDI
+    Puzzle.txt
+  sha256: 4f6e0bb36b4579fd1f2559c6e6b5bb403358a5b1ac5896849c1751ab04b03443
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2013/additional docs/logs/all
+    cosmos posts from 7th on the 761 song - full log.txt
+  sha256: 366b468d8d125c7b3ddfe56e5b3bb10c2f454b572e8bb21062ec7f4a6cce8a82
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2013/additional docs/signed
+    messages/gematria-primus.jpg.out.txt
+  sha256: 685aeec4217b1c76bb1cf64ba8f1c537e05895f4971d5c31ab6ed42d4460bd8b
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2013/additional docs/signed
+    messages/OutGuessed message from rune table.txt
+  sha256: 685aeec4217b1c76bb1cf64ba8f1c537e05895f4971d5c31ab6ed42d4460bd8b
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2013/additional docs/telnet/2013
+    offset messsage from telnet.txt
+  sha256: 1b1bb7539353c027510b759bfbd7dd53a5d02b60010af6b38ed6ce6e2193a951
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2013/additional docs/The
+    Leaked Email/Server response - include leaker email with pgp.txt
+  sha256: 94bf82be0b548056f5f71b27964e71c7a4ffe726a187acd7d5b0f6d240feb958
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2013/additional files/Cicada
+    OS/Cicada OS - the shell script.txt
+  sha256: 2134f30d0af3d6bf296b3f69e9a709676206c5824aac6436bf4d16020edb4ba5
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2013/additional files/The
+    twitter/all cicada 2013 twitter feed.txt
+  sha256: 16f7e960513166f7583953db53291e558e67c0b1bec3b55429019e68d1a25699
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Cicada
+    3301 auqgnxjtvdbll3pv.onion JPeg.txt
+  sha256: 4202adc79154f8cc3fe870387d1ac7179f99e8dc6fbfcd7e5e3948ba04dbd174
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/onion
+    5 signed message.txt
+  sha256: 55904a90db0b3fb1af059097617ee5d411867c7a940a3f978bf56fe875e82d18
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/outguss/intus
+    outguss.txt
+  sha256: ec8594dff1a3b5db7e106ed7971c954fa48242ec9ce758efe4760ab1ead96f96
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/outguss/liber
+    primus 5 outguss.txt
+  sha256: 59ce53a6dea9a4f4358636eb7476bafd65abec28ad02842d3c517bc1315c770b
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/outguss/liber
+    primus outguss.txt
+  sha256: aee36b637fafc77641bae197b7113ad46d9556c77c1c048f2fd19334a423a9d1
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/outguss/portrait
+    outguss.txt
+  sha256: 55904a90db0b3fb1af059097617ee5d411867c7a940a3f978bf56fe875e82d18
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/outguss/runes
+    outguss.txt
+  sha256: 18a497408a22c45d1f27a12cd5e2be96214164cb5bafa019ed41e0fd8004bef6
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/scripts/page
+    56 script decoder.txt
+  sha256: 091dd2b4c964dd92ace279293f7834c7943da1bc057a9e27a67b107e7e22fb9c
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/the
+    growing string/CICADA 3301 2914 onion 2 updates GMT+1.txt
+  sha256: 96e205599bf6716f59be9b29c43d58bebb27dadeaf7c5297ddced9c9abea08b4
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/the
+    growing string/The new string whice is 3641299 characters long.txt
+  sha256: 6c0a8158ee4e92884e3c7208de77cf3ed2a35fe586b31360c58e71bc27588451
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/the
+    growing string/the second onion new string.txt
+  sha256: bb0a01cb66eca069a11bf75e1a2d1bc576afc1c9419506c07bfe887cb44b7922
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+    from time of solving/Analyzing onion-2-003.jpg.txt
+  sha256: 42dd16ca0585fa4d7e9362d97849341342b54ffa85635a91494bc4738085becb
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+    from time of solving/Final result of XOR started last night; images and MP3 -
+    outguss noise.txt
+  sha256: b12a67c0e79a009e5fe2ba73c4961e2a197f5fdb3fd8e2324144e244fe69f05d
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+    from time of solving/Final result of XOR started last night; images and MP3.txt
+  sha256: 51f289cff4c7375303c11d0949e0cc507f81f6593657da9b0cf2239dab7b5ac9
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+    from time of solving/he fifth onion contained the following (signed) message.txt
+  sha256: 19dd8b5d7c2ca0b50361c35966707dad9fe36b9337e52ae90c0ccfd8bc2456c0
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+    from time of solving/onion6.outguess02.dat.txt
+  sha256: c2ee79a9e68a7630e21b0ca6fe42dd8d6c6b6ec6212637c93665faa57512a946
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+    from time of solving/Outguessing the welcome image yields a signed message.txt
+  sha256: 59ce53a6dea9a4f4358636eb7476bafd65abec28ad02842d3c517bc1315c770b
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+    from time of solving/the Apache server status page changed once again to display
+    a new hexadecimal string.txt
+  sha256: 3a1adca43ffa8cf372dc16644f23e49525af95a0449822e351c1da5e73c56256
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+    from time of solving/the Apache server status page.txt
+  sha256: 3a1adca43ffa8cf372dc16644f23e49525af95a0449822e351c1da5e73c56256
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false
+- record_type: page49_51_text_reference_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/additional docs/Titanpads
+    from time of solving/the fourth onion hex string.txt
+  sha256: 74e5c753ea0d30b71f5f52acc18c28f989d1299c62766d3ffca6682bc18dfb7f
+  matched_terms:
+  - 4F
+  raw_body_committed: false
+  source_lock_status: metadata_hash_locked
+  solve_claim: false

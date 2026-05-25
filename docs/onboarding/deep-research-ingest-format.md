@@ -28,6 +28,17 @@ For Stage 5AM, Deep Research may also use:
 For Stage 5AN, Deep Research may use the private hosted content URL and content-pack manifest after the user uploads the combined webroot:
 
 - `data/deep-research-export/stage5an-summary.yaml`
+
+For Stage 5AQ, Deep Research should also use the Stage 5AP token-block source-lock package:
+
+- `data/token-block/stage5ap-page49-51-source-lock.yaml`
+- `data/token-block/stage5ap-token-block-canonical-transcription.yaml`
+- `data/token-block/stage5ap-token-block-mapping-preflight.yaml`
+- `data/token-block/stage5ap-token-block-null-control-plan.yaml`
+- `data/token-block/stage5ap-token-block-dwh-context.yaml`
+- `data/project-state/stage5ap-summary.yaml`
+
+Stage 5AP records are source-lock/preflight metadata only. Do not infer plaintext, intentionality, hash targets, or execution permission from them.
 - `data/deep-research-export/stage5an-content-pack-manifest-summary.yaml`
 - Metadata site: `http://liberprimus-gpu-data.info/index.html`
 - Private content: `http://liberprimus-gpu-data.info/private-content/`

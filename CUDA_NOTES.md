@@ -4,6 +4,12 @@
 
 This file records CUDA policy for future acceleration work.
 
+## Stage 5AP Page 49-51 Token-Block Boundary
+
+Stage 5AP is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It records page 49-51 token-block source-lock/preflight metadata and OutGuess positive-control guardrails only.
+
+Stage 5AP does not authorize CUDA expansion, token-block CUDA input, hash/preimage search, scored experiments, or solve claims. Stage 5AQ is a focused Deep Research source-lock review stage.
+
 ## Stage 5AJ UsefulFilesAndIdeas Boundary
 
 Stage 5AJ is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It integrates ignored UsefulFilesAndIdeas local-source metadata, workbook summaries, important-link indexes, source-card/content-index updates, extraction-fidelity policy, redaction policy, scraper-capture profiles, and Deep-Research readiness.

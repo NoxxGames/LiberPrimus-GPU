@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/page49-51-source-lock-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "token_block_id", "source_lock_status", "source_locked_page_image_count", "raw_image_committed", "network_fetch_performed", "ocr_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "page49_51_source_lock" },
+    "stage_id": { "const": "stage-5ap" },
+    "source_lock_status": { "type": "string" },
+    "source_locked_page_image_count": { "type": "integer", "minimum": 0 },
+    "raw_image_committed": { "const": false },
+    "raw_body_committed": { "const": false },
+    "network_fetch_performed": { "const": false },
+    "online_repo_clone_performed": { "const": false },
+    "ocr_performed": { "const": false },
+    "ai_ml_interpretation_performed": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

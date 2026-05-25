@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AN - private Deep Research content pack and SFTP-ready hosted content library.
+Current completed stage: Stage 5AP - page 49-51 token-block source-lock and OutGuess positive-control infrastructure.
 
-Current work: Stage 5AO - Deep Research source inventory and reliability prompt with private content. Stage 5AN built a private content pack under `deep-research-content-packs/stage5an/`, a hosted private-content library under `website-export/stage5an/private-content/`, and a combined SFTP-ready webroot under `website-export/stage5an/webserver-root/`; it did not run Deep Research, publish raw/private bodies as committed artefacts, process raw sources into committed data, fetch from the network, clone online repositories, use Google Drive storage, run OCR, run AI/ML interpretation, run image/stego/audio tooling, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, publicly publish the website, or make solve claims.
+Current work: Stage 5AQ - Deep Research page 49-51 token-block, Deep Web Hash context, and exact token-to-value source-lock review. Stage 5AP created source-lock/preflight metadata for the page 49-51 32x8 token block, local page-image hashes, logical coordinates, candidate primary-60 mapping, null controls, DWH context, and OutGuess positive-control guardrails; it did not run Deep Research, publish raw/private bodies, process raw sources into committed data, fetch from the network, clone online repositories, use Google Drive storage, run OCR, run AI/ML interpretation, run broad image forensics, run broad stego scans, run LP-page OutGuess, run hash/preimage search, generate or execute hypotheses, run CUDA, benchmark, execute scored experiments, publicly publish the website, or make solve claims.
 
 Current project state:
 
@@ -125,7 +125,10 @@ Current project state:
 - Stage 5AL website-ingest records are committed metadata only. They do not publish raw or review-blocked content, private identifiers, generated extract bodies, or public website pages.
 - Stage 5AM static website-render records are committed metadata only; generated HTML/JSON exports remain ignored under `website-export/stage5am/`.
 - Stage 5AN private content-pack records are committed metadata only; generated content-pack files, hosted private content, combined webroots, ZIP archives, and safe extracts remain ignored under `deep-research-content-packs/stage5an/` and `website-export/stage5an/`.
-- Stage 5AO Deep Research should consume the Stage 5AL/5AM metadata package, Stage 5AN content-pack metadata, private hosted content URLs, and publication gates, not raw `third_party/` paths.
+- Stage 5AQ Deep Research should consume Stage 5AP token-block records, the Stage 5AL/5AM metadata package, Stage 5AN content-pack metadata, private hosted content URLs, and publication gates, not raw `third_party/` paths or raw page images.
+- Stage 5AP page 49-51 token-block records are source-lock/preflight metadata only. The 32x8 token grid, logical coordinates, primary-60 mapping, DWH context, null controls, and OutGuess controls are not decoded plaintext, not canonical corpus activation, not experiment seeds, and not solve evidence.
+- Stage 5AP generated reports under `experiments/results/token-block/stage5ap/` and `experiments/results/stego-controls/stage5ap/` remain ignored and must not be staged.
+- Future Stage 5AQ review must cite Stage 5AP source-lock, transcription, alphabet, mapping, null-control, DWH, and OutGuess guardrail records before any source interpretation or token-to-value follow-up.
 - Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
 - Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
 - Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
@@ -981,14 +984,14 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Publication gates are mandatory. Public website-ready remains `0` until a future reviewed publication stage explicitly marks records safe.
 - Do not commit raw third-party files, generated private export bodies, private community identifiers, raw message bodies, raw images, raw workbook bodies, SQLite databases, local absolute paths, or `codex-output/**`.
 - Stage 5AL does not authorize OCR, AI/ML interpretation, image/stego/audio tooling, hypothesis generation/execution, CUDA, benchmarks, scored experiments, method-status upgrades, canonical corpus activation, page-boundary finalisation, or solve claims.
-- Stage 5AM renders a private static metadata index from Stage 5AL records before Deep Research.
+- Stage 5AM renders a private static metadata index from Stage 5AL records before Deep Research; Stage 5AN built the private content pack; Stage 5AP adds token-block source-lock metadata before the next focused review.
 
 ## Stage 5AM Static Research Website Renderer Rules
 
 - Stage 5AM generated static site files are ignored under `website-export/stage5am/` and must not be staged.
 - The static research index is metadata-only and review-gated; it is not public website publication.
 - Do not publish raw/private bodies, generated extraction bodies, private IDs, local absolute paths, raw images, raw workbooks, archives, audio, video, or PDFs through the renderer.
-- Stage 5AN built the private content pack before Deep Research; Stage 5AO should perform source inventory and reliability review from Stage 5AL/5AM/5AN metadata and private hosted content URLs only.
+- Stage 5AN built the private content pack before Deep Research; Stage 5AQ should perform focused source-lock review from Stage 5AP token-block records, Stage 5AL/5AM/5AN metadata, and private hosted content URLs only.
 
 ## Stage 5AN Private Content Pack Rules
 
@@ -997,7 +1000,14 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - The SFTP-ready upload root is `website-export/stage5an/webserver-root/`; copy the contents of that folder to the private server root if hosting is desired.
 - Noindex and robots metadata are not access control. Use private hosting controls if generated extracts are uploaded.
 - Stage 5AN private content is review-gated handoff infrastructure, not public website publication, not Deep Research output, not experiment execution, and not solve evidence.
-- Stage 5AO Deep Research should cite both `http://liberprimus-gpu-data.info/index.html` and `http://liberprimus-gpu-data.info/private-content/` when the user confirms the generated webroot is uploaded.
+- Stage 5AQ Deep Research should cite Stage 5AP token-block records plus both `http://liberprimus-gpu-data.info/index.html` and `http://liberprimus-gpu-data.info/private-content/` when the user confirms the generated webroot is uploaded.
+
+## Stage 5AP Token-Block Source-Lock Rules
+
+- Stage 5AP page 49-51 token-block records are source-lock/preflight metadata only.
+- The 32x8 token transcription, logical coordinates, primary-60 mapping, null controls, DWH context, and OutGuess controls are not decoded plaintext, canonical corpus activation, experiment seeds, hash targets, or solve evidence.
+- Generated token-block and stego-control reports under `experiments/results/token-block/stage5ap/` and `experiments/results/stego-controls/stage5ap/` remain ignored.
+- Future Stage 5AQ review must cite Stage 5AP source-lock, transcription, alphabet, mapping, null-control, DWH, and OutGuess guardrail records before any exact token-to-value source-lock follow-up.
 
 ## Stage 5AC Prime-Minus-One CUDA Synthetic Reporting Rules
 

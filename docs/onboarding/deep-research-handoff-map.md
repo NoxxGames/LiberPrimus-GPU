@@ -6,7 +6,7 @@ Repository: `https://github.com/NoxxGames/LiberPrimus-GPU`
 
 Before a Deep Research handoff, verify the latest commit and CI status locally. The handoff should cite the commit hash, stage, and generated bundle paths.
 
-Stage 5AN selects Stage 5AO Deep Research source inventory and reliability review with private content as the next prompt. Use `data/source-harvester/stage5al-deep-research-export.yaml`, `data/website-ingest/stage5al/`, `data/website-render/stage5am-summary.yaml`, `data/deep-research-export/stage5an-summary.yaml`, and ignored `research-inputs/stage5al/` helper files. The ignored static index under `website-export/stage5am/research-index/` is a metadata review aid, and the ignored private content library under `website-export/stage5an/private-content/` is a private generated handoff, not source truth or public publication. These records summarize the Stage 5AI curated bundles, Stage 5AJ UsefulFiles metadata, and Stage 5AK community claim records behind publication gates. Do not hand Deep Research raw `third_party/` paths as source truth. Public website expansion remains a future review-gated project.
+Stage 5AP selects Stage 5AQ Deep Research page 49-51 token-block, Deep Web Hash context, and exact token-to-value source-lock review as the next prompt. Use `data/token-block/stage5ap-*`, `data/stego/stage5ap-outguess-*`, `data/project-state/stage5ap-summary.yaml`, `data/source-harvester/stage5al-deep-research-export.yaml`, `data/website-ingest/stage5al/`, `data/website-render/stage5am-summary.yaml`, `data/deep-research-export/stage5an-summary.yaml`, and ignored `research-inputs/stage5al/` helper files. The ignored static index under `website-export/stage5am/research-index/` is a metadata review aid, and the ignored private content library under `website-export/stage5an/private-content/` is a private generated handoff, not source truth or public publication. These records summarize the Stage 5AI curated bundles, Stage 5AJ UsefulFiles metadata, Stage 5AK community claim records, and Stage 5AP token-block source-lock records behind publication gates. Do not hand Deep Research raw `third_party/` paths or raw page images as source truth. Public website expansion remains a future review-gated project.
 
 ## Files Deep Research Should Inspect First
 
@@ -31,6 +31,10 @@ Use generated, redacted, local-only review bundles when a stage creates them und
 - `data/source-harvester/stage5aj-summary.yaml`
 - `docs/onboarding/deep-research-ingest-format.md`
 - `experiments/results/discord-full-review/stage4a/`
+- `data/token-block/stage5ap-token-block-canonical-transcription.yaml`
+- `data/token-block/stage5ap-token-block-mapping-preflight.yaml`
+- `data/token-block/stage5ap-token-block-null-control-plan.yaml`
+- `data/token-block/stage5ap-token-block-dwh-context.yaml`
 
 Only pass redacted topic shards, aggregate summaries, public links, public source records, and curated observation/negative-control records. Prefer small focused bundles over huge dumps.
 

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/token-block-null-control-plan-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "null_control_count", "execution_enabled", "hash_preimage_search_enabled", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "token_block_null_control_plan" },
+    "stage_id": { "const": "stage-5ap" },
+    "null_control_count": { "type": "integer", "minimum": 1 },
+    "execution_enabled": { "const": false },
+    "hash_preimage_search_enabled": { "const": false },
+    "scored_experiment_enabled": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

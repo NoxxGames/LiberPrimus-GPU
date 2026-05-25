@@ -1,6 +1,6 @@
 # Website-Ingest Workflow
 
-Use this workflow for Stage 5AL-style metadata handoffs, Stage 5AM-style static metadata rendering, and Stage 5AN-style private content-pack handoff.
+Use this workflow for Stage 5AL-style metadata handoffs, Stage 5AM-style static metadata rendering, Stage 5AN-style private content-pack handoff, and Stage 5AP token-block references that need to remain metadata-only.
 
 1. Validate the current source-harvester stage records.
 2. Build `data/website-ingest/stage5al/` from committed metadata.
@@ -13,4 +13,4 @@ Use this workflow for Stage 5AL-style metadata handoffs, Stage 5AM-style static 
    ignored.
 
 Future website work must consume the committed data package and must not infer publication
-permission from source-card presence alone. Publication gates are mandatory, Stage 5AM renderer output under `website-export/stage5am/` remains a private generated artifact, and Stage 5AN private content under `deep-research-content-packs/stage5an/` plus `website-export/stage5an/` remains private generated handoff material unless a later publication review changes that gate.
+permission from source-card presence alone. Publication gates are mandatory, Stage 5AM renderer output under `website-export/stage5am/` remains a private generated artifact, Stage 5AN private content under `deep-research-content-packs/stage5an/` plus `website-export/stage5an/` remains private generated handoff material, and Stage 5AP token-block records must not be rendered as decoded text or solve evidence unless a later review changes that gate.

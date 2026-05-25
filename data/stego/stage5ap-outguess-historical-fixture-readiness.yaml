@@ -1,0 +1,75 @@
+record_type: outguess_historical_fixture_readiness
+schema: schemas/stego/outguess-historical-fixture-readiness-v0.schema.json
+stage_id: stage-5ap
+historical_fixture_count: 4
+historical_fixture_ready_count: 0
+historical_fixture_blocked_count: 4
+execution_enabled: false
+tool_executed: false
+records:
+- fixture_id: stage5ap-historical-4gq25-jpg
+  fixture_category: image_fixture_candidate
+  source_record_id: stage4f_or_stage4e_reference
+  ready_state: blocked_asset_not_cached
+  blockers:
+  - asset_not_cached
+  - expected_output_unknown
+  - toolchain_unverified
+  expected_output_required: true
+  execution_enabled: false
+  tool_executed: false
+  solve_claim: false
+- fixture_id: stage5ap-historical-lp-outguessed-reference
+  fixture_category: lp_outguessed_reference
+  source_record_id: stage4f_or_stage4e_reference
+  ready_state: source_only_missing_expected_output
+  blockers:
+  - expected_output_unknown
+  - manual_source_review_required
+  expected_output_required: true
+  execution_enabled: false
+  tool_executed: false
+  solve_claim: false
+- fixture_id: stage5ap-historical-interconnectedness-mp3
+  fixture_category: openpuff_interconnectedness_candidate
+  source_record_id: stage4f_audio_reference
+  ready_state: reference_only
+  blockers:
+  - openpuff_manual_required
+  - expected_output_unknown
+  expected_output_required: true
+  execution_enabled: false
+  tool_executed: false
+  solve_claim: false
+- fixture_id: stage5ap-historical-761-instar-mp3
+  fixture_category: mp3_instar_candidate
+  source_record_id: stage4f_audio_reference
+  ready_state: reference_only
+  blockers:
+  - mp3stego_manual_required
+  - expected_output_unknown
+  expected_output_required: true
+  execution_enabled: false
+  tool_executed: false
+  solve_claim: false
+no_solve_claim: true
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+stego_tool_execution_performed: false
+lp_page_outguess_run_performed: false
+hash_preimage_search_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false

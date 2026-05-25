@@ -790,6 +790,22 @@ deep-research-content-packs/**
 !deep-research-content-packs/stage5an/
 !deep-research-content-packs/stage5an/.gitkeep
 
+# Generated token-block source-lock/preflight outputs
+experiments/results/token-block/**
+!experiments/results/token-block/
+!experiments/results/token-block/README.md
+!experiments/results/token-block/.gitkeep
+!experiments/results/token-block/stage5ap/
+!experiments/results/token-block/stage5ap/.gitkeep
+
+# Generated stego-control readiness outputs
+experiments/results/stego-controls/**
+!experiments/results/stego-controls/
+!experiments/results/stego-controls/README.md
+!experiments/results/stego-controls/.gitkeep
+!experiments/results/stego-controls/stage5ap/
+!experiments/results/stego-controls/stage5ap/.gitkeep
+
 # Generated static website renderer reports
 experiments/results/website-render/**
 !experiments/results/website-render/

@@ -1,0 +1,78 @@
+record_type: outguess_positive_control_matrix
+schema: schemas/stego/outguess-positive-control-matrix-v0.schema.json
+stage_id: stage-5ap
+matrix_record_count: 5
+synthetic_control_count: 2
+historical_fixture_count: 2
+lp_page_execution_candidate_count: 1
+ready_historical_fixture_count: 0
+toolchain_record: data/stego/stage5ap-outguess-toolchain-readiness.yaml
+execution_enabled: false
+tool_executed: false
+lp_page_outguess_run_performed: false
+records:
+- fixture_id: stage5ap-outguess-synthetic-positive-control
+  fixture_category: synthetic_positive_control
+  source_status: synthetic_ci_only
+  ready_state: synthetic_ready
+  expected_output_required: true
+  expected_output_hash: 9b3cd744115c205462ee3986c53f1b5c9647ce3199bbde588cd478d5634c091e
+  execution_enabled: false
+  tool_executed: false
+  solve_claim: false
+- fixture_id: stage5ap-outguess-synthetic-negative-control
+  fixture_category: synthetic_negative_control
+  source_status: synthetic_ci_only
+  ready_state: synthetic_ready
+  expected_output_required: true
+  expected_output_hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  execution_enabled: false
+  tool_executed: false
+  solve_claim: false
+- fixture_id: stage5ap-historical-4gq25-jpg
+  fixture_category: outguess_known_positive_candidate
+  source_status: historical_source_reference
+  ready_state: blocked_asset_not_cached
+  expected_output_required: true
+  expected_output_hash: null
+  execution_enabled: false
+  tool_executed: false
+  solve_claim: false
+- fixture_id: stage5ap-historical-lp-outguessed-reference
+  fixture_category: lp_outguessed_reference
+  source_status: historical_source_reference
+  ready_state: blocked_expected_output_unknown
+  expected_output_required: true
+  expected_output_hash: null
+  execution_enabled: false
+  tool_executed: false
+  solve_claim: false
+- fixture_id: stage5ap-page49-51-lp-page-outguess
+  fixture_category: lp_page_outguess_blocked_guardrail
+  source_status: token_block_source_lock_candidate
+  ready_state: rejected_unsafe_or_out_of_scope
+  expected_output_required: true
+  expected_output_hash: null
+  execution_enabled: false
+  tool_executed: false
+  solve_claim: false
+no_solve_claim: true
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false

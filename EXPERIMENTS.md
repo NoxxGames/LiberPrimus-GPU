@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AP Page 49-51 Token Block Source-Lock
+
+Stage 5AP is source-lock and positive-control infrastructure, not an experiment. It commits metadata for the page 49-51 32x8 token block, logical coordinates, candidate primary-60 byte mapping, null controls, Deep Web Hash context, and OutGuess positive-control guardrails.
+
+Generated Stage 5AP token-block reports remain ignored under `experiments/results/token-block/stage5ap/`; generated stego-control reports remain ignored under `experiments/results/stego-controls/stage5ap/`. Stage 5AP performs no Deep Research, network fetch, live scrape, online clone, Google Drive storage, raw image commit, OCR, AI/ML interpretation, broad image forensics, broad stego scan, LP-page OutGuess execution, hash/preimage search, hypothesis execution, CUDA, benchmarks, scored experiments, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AN Private Content Pack
 
 Stage 5AN is private Deep Research handoff infrastructure, not an experiment. It consumes Stage 5AL/5AM metadata plus existing ignored research-input files and writes compact committed records under `data/deep-research-export/`.

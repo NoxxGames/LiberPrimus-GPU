@@ -77,6 +77,8 @@
 - `experiments/results/website-render/stage5am/`: generated Stage 5AM renderer validation reports, privacy/publication audits, manifests, summaries, and warnings. Commit only `.gitkeep`.
 - `deep-research-content-packs/stage5an/`: generated Stage 5AN private content pack, copied/generated private handoff files, safe extracts, manifests, hashes, and ZIP archive. Commit only `.gitkeep` scaffolds.
 - `website-export/stage5an/`: generated Stage 5AN hosted private-content library, combined SFTP webroot, static assets, manifests, and ZIP archives. Commit only `.gitkeep` scaffolds.
+- `experiments/results/token-block/stage5ap/`: generated Stage 5AP token-block source-lock, canonical grid, coordinate, mapping-preflight, summary, and warning reports. Commit only README/.gitkeep scaffolds.
+- `experiments/results/stego-controls/stage5ap/`: generated Stage 5AP OutGuess positive-control matrix and historical fixture readiness reports. Commit only README/.gitkeep scaffolds.
 - `codex-output/`: local Codex completion handoff files; do not stage or publish.
 - `experiments/results/scoring-consolidation/stage4i/`: generated Stage 4I scorer inventories, rendered calibration reports, CPU batch compatibility JSON, and warnings.
 - `experiments/results/observation-review/stage4j/`: generated Stage 4J observation review decision reports, quarantine reports, promotion-gate reports, path-sanitisation reports, and warnings.
@@ -124,6 +126,7 @@
 - Generated Stage 4N stego/audio positive-control reports under `experiments/results/stego-positive-controls/stage4n/`.
 - Generated Stage 5AM static website exports under `website-export/stage5am/` and renderer reports under `experiments/results/website-render/stage5am/`.
 - Generated Stage 5AN private content packs under `deep-research-content-packs/stage5an/` and hosted/webroot exports under `website-export/stage5an/`.
+- Generated Stage 5AP token-block and OutGuess-control reports under `experiments/results/token-block/stage5ap/` and `experiments/results/stego-controls/stage5ap/`.
 - Raw or sidecar community-observation artefacts under `third_party/CommunityObservations/`.
 - Cached Stage 4K source snapshot bytes under `third_party/SourceSnapshots/`.
 - Cached Stage 4N stego/audio fixture bytes under `third_party/StegoPositiveControls/`.

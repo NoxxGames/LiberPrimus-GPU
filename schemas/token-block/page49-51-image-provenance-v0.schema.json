@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/page49-51-image-provenance-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "page_image_record_count", "raw_image_committed", "generated_image_committed", "ocr_performed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "page49_51_image_provenance" },
+    "stage_id": { "const": "stage-5ap" },
+    "page_image_record_count": { "type": "integer", "minimum": 0 },
+    "source_variant_status": { "type": "string" },
+    "raw_image_committed": { "const": false },
+    "generated_image_committed": { "const": false },
+    "ocr_performed": { "const": false },
+    "ai_ml_interpretation_performed": { "const": false },
+    "broad_image_forensics_performed": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/token-block-alphabet-registry-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "primary_alphabet", "primary_alphabet_length", "observed_suffix_count", "lowercase_f_absent", "trusted_as_canonical", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "token_block_alphabet_registry" },
+    "stage_id": { "const": "stage-5ap" },
+    "primary_alphabet_length": { "const": 60 },
+    "observed_suffix_count": { "const": 59 },
+    "lowercase_f_absent": { "const": true },
+    "suffix_order_declared": { "const": true },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

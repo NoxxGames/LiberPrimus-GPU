@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/token-block-coordinate-record-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "coordinate_system", "coordinate_record_count", "page_boundaries_final", "pixel_coordinates_available", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "token_block_coordinate_record_set" },
+    "stage_id": { "const": "stage-5ap" },
+    "coordinate_system": { "const": "logical_grid_only" },
+    "coordinate_record_count": { "const": 256 },
+    "page_boundaries_final": { "const": false },
+    "pixel_coordinates_available": { "const": false },
+    "coordinate_review_required": { "const": true },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

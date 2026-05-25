@@ -1,0 +1,325 @@
+record_type: page49_51_image_provenance
+schema: schemas/token-block/page49-51-image-provenance-v0.schema.json
+stage_id: stage-5ap
+token_block_id: stage5ap-page49-51-token-block
+page_image_record_count: 15
+page_candidates_present:
+- '49'
+- '50'
+- '51'
+source_variant_status: local_metadata_only
+raw_image_committed: false
+generated_image_committed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+trusted_as_canonical: false
+solve_claim: false
+records:
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/LiberPrimusPages/49.jpg
+  file_name: 49.jpg
+  page_candidate: '49'
+  extension: .jpg
+  file_size_bytes: 651504
+  sha256: aa3f89156756edf8b796a470a14a3db96516ad2fedf1ed98ccabc1a1cddc0335
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: RGB
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/LiberPrimusPages/50.jpg
+  file_name: 50.jpg
+  page_candidate: '50'
+  extension: .jpg
+  file_size_bytes: 581983
+  sha256: bd6d4a3678fa37197bd43c58861273dc59604b5b68dfa20de1ec13f0704be776
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: L
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/LiberPrimusPages/51.jpg
+  file_name: 51.jpg
+  page_candidate: '51'
+  extension: .jpg
+  file_size_bytes: 661727
+  sha256: 2b9d60f62b2bc65d040f7ae1bc0960d5a44ca251d2730d049a618074a83e208b
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: L
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A
+    drop box of all unmodified files/2014onion7/49.jpg
+  file_name: 49.jpg
+  page_candidate: '49'
+  extension: .jpg
+  file_size_bytes: 651504
+  sha256: aa3f89156756edf8b796a470a14a3db96516ad2fedf1ed98ccabc1a1cddc0335
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: RGB
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A
+    drop box of all unmodified files/2014onion7/50.jpg
+  file_name: 50.jpg
+  page_candidate: '50'
+  extension: .jpg
+  file_size_bytes: 581983
+  sha256: bd6d4a3678fa37197bd43c58861273dc59604b5b68dfa20de1ec13f0704be776
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: L
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/A
+    drop box of all unmodified files/2014onion7/51.jpg
+  file_name: 51.jpg
+  page_candidate: '51'
+  extension: .jpg
+  file_size_bytes: 661727
+  sha256: 2b9d60f62b2bc65d040f7ae1bc0960d5a44ca251d2730d049a618074a83e208b
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: L
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber
+    primus images full/49.jpg
+  file_name: 49.jpg
+  page_candidate: '49'
+  extension: .jpg
+  file_size_bytes: 362637
+  sha256: c0f778187a8e9ddbfc667a65929ac567430a2e38278a2022377984ac084e5f72
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: RGB
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber
+    primus images full/50.jpg
+  file_name: 50.jpg
+  page_candidate: '50'
+  extension: .jpg
+  file_size_bytes: 525652
+  sha256: 13ff4c8d8ab934032a001b8c1fda16433aa44a38dd7272b3ff0dd7ac8300c62d
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: RGB
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/liber
+    primus images full/51.jpg
+  file_name: 51.jpg
+  page_candidate: '51'
+  extension: .jpg
+  file_size_bytes: 555050
+  sha256: 6f1b4c04b64ee54c689478bd3986bb6ab8a3b81f48780562094e9f248e4e87f8
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: RGB
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/49.jpg
+  file_name: 49.jpg
+  page_candidate: '49'
+  extension: .jpg
+  file_size_bytes: 362637
+  sha256: c0f778187a8e9ddbfc667a65929ac567430a2e38278a2022377984ac084e5f72
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: RGB
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/50.jpg
+  file_name: 50.jpg
+  page_candidate: '50'
+  extension: .jpg
+  file_size_bytes: 525652
+  sha256: 13ff4c8d8ab934032a001b8c1fda16433aa44a38dd7272b3ff0dd7ac8300c62d
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: RGB
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/assets/2014/liber-primus-complete/51.jpg
+  file_name: 51.jpg
+  page_candidate: '51'
+  extension: .jpg
+  file_size_bytes: 555050
+  sha256: 6f1b4c04b64ee54c689478bd3986bb6ab8a3b81f48780562094e9f248e4e87f8
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: RGB
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/49.jpg
+  file_name: 49.jpg
+  page_candidate: '49'
+  extension: .jpg
+  file_size_bytes: 651504
+  sha256: aa3f89156756edf8b796a470a14a3db96516ad2fedf1ed98ccabc1a1cddc0335
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: RGB
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/50.jpg
+  file_name: 50.jpg
+  page_candidate: '50'
+  extension: .jpg
+  file_size_bytes: 581983
+  sha256: bd6d4a3678fa37197bd43c58861273dc59604b5b68dfa20de1ec13f0704be776
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: L
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+- record_type: page49_51_image_provenance_record
+  stage_id: stage-5ap
+  token_block_id: stage5ap-page49-51-token-block
+  source_path: third_party/The-Complete-Cicada3301-Archive-main/assets/2014/stage11/ky2khlqdf7qdznac.onion/51.jpg
+  file_name: 51.jpg
+  page_candidate: '51'
+  extension: .jpg
+  file_size_bytes: 661727
+  sha256: 2b9d60f62b2bc65d040f7ae1bc0960d5a44ca251d2730d049a618074a83e208b
+  width: 2400
+  height: 3600
+  image_format: JPEG
+  color_mode: L
+  raw_image_committed: false
+  ocr_performed: false
+  image_interpretation_performed: false
+  source_lock_status: local_metadata_hash_locked
+  trusted_as_canonical: false
+  solve_claim: false
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+stego_tool_execution_performed: false
+lp_page_outguess_run_performed: false
+hash_preimage_search_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false

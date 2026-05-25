@@ -1,6 +1,6 @@
 # Private Deep Research Content Workflow
 
-Use this workflow when preparing the private Stage 5AN content package for Deep Research.
+Use this workflow when preparing the private Stage 5AN content package for Deep Research or when handing Stage 5AP token-block metadata to Stage 5AQ review.
 
 1. Validate Stage 5AL and Stage 5AM records.
 2. Build the Stage 5AN content pack, hosted private-content export, and combined webroot with `libreprimus deep-research-export`.
@@ -16,4 +16,4 @@ git check-ignore -v website-export/stage5an/webserver-root/private-content/index
 
 5. For hosted handoff, copy the contents of `website-export/stage5an/webserver-root/` to the private webserver root.
 
-Deep Research should use the metadata site and private content URL together. Do not hand off raw `third_party/` paths as source truth, and do not treat hosted private extracts as public publication or solve evidence.
+Deep Research should use the metadata site and private content URL together. Stage 5AQ should additionally use `data/token-block/stage5ap-*`, `data/stego/stage5ap-outguess-*`, and `data/project-state/stage5ap-summary.yaml` for page 49-51 token-block source review. Do not hand off raw `third_party/` paths or raw page images as source truth, and do not treat hosted private extracts or token-block preflight records as public publication or solve evidence.

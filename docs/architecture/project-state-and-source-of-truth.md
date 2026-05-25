@@ -2,14 +2,14 @@
 
 ## Current Reviewed State
 
-Stage 3V is complete; Stage 3W through Stage 3Z are complete. Stage 4A through Stage 4Q are complete. Stage 5A through Stage 5AD are complete. The next planned stage is Stage 5AD-fix - bounded p56 CUDA parity mismatch investigation. Website expansion is deferred to a future unnumbered project.
+Stage 3V is complete; Stage 3W through Stage 3Z are complete. Stage 4A through Stage 4Q are complete. Stage 5A through Stage 5AN are complete, and Stage 5AP is the latest completed metadata/source-lock stage. The next planned stage is Stage 5AQ - Deep Research page 49-51 token-block, Deep Web Hash context, and exact token-to-value source-lock review. Website expansion is deferred to a future unnumbered project.
 
 The current safety posture is:
 
 - No solve claim is made.
 - The canonical corpus is inactive.
 - Page boundaries are reviewable, not final.
-- CUDA is deferred except for explicitly scoped synthetic or solved-fixture-safe parity stages until CPU references, scorer definitions, batch APIs, observation review workflow, promotion-ledger records, image-preflight controls, positive-control readiness, Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, Stage 5A planning records, Stage 5B harness records, Stage 5C build/device records, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, Stage 5AA synthetic-only parity records, Stage 5AB stale-doc guardrails, Stage 5AC reporting/preflight records, Stage 5AD mismatch records, parity tests, and explicit future-stage implementation scope exist.
+- CUDA is deferred except for explicitly scoped synthetic or solved-fixture-safe parity stages until CPU references, scorer definitions, batch APIs, observation review workflow, promotion-ledger records, image-preflight controls, positive-control readiness, Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 4Q benchmark planning, Stage 5A planning records, Stage 5B harness records, Stage 5C build/device records, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, Stage 5AA synthetic-only parity records, Stage 5AB stale-doc guardrails, Stage 5AC reporting/preflight records, Stage 5AD mismatch records, Stage 5AP token-block/source-lock guardrails, parity tests, and explicit future-stage implementation scope exist.
 - Broad unsolved-page campaigns are not started.
 - Raw data, generated outputs, SQLite databases, raw Discord logs, raw page images, raw historical stego artefacts, and extracted payloads are not committed.
 

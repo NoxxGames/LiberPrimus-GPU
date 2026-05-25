@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5AN it names Stage 5AN as latest complete and Stage 5AO as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5AP it names Stage 5AP as latest complete and Stage 5AQ as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -21,6 +21,9 @@
 - `data/website-render/stage5am-*.yaml`: committed Stage 5AM render policy, input, manifest, validation, privacy, upload, guardrail, and next-stage decision records.
 - `data/deep-research-export/stage5an-summary.yaml`: Stage 5AN private content-pack and hosted private-content aggregate summary.
 - `data/deep-research-export/stage5an-*.yaml`: committed Stage 5AN content-pack, hosted export, combined webroot, file-selection, publication-gate, upload, consumption-guide, guardrail, and next-stage records.
+- `data/token-block/stage5ap-*.yaml`: committed Stage 5AP page 49-51 source-lock, image-provenance, transcription, coordinate, alphabet, mapping, null-control, and DWH records.
+- `data/stego/stage5ap-outguess-*.yaml`: committed Stage 5AP OutGuess policy, toolchain, positive-control matrix, historical fixture readiness, and guardrail records.
+- `data/project-state/stage5ap-summary.yaml`: Stage 5AP aggregate summary and guardrail state.
 - `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 - `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.
@@ -28,6 +31,7 @@
 - `docs/onboarding/community-observation-ingest-workflow.md`: Stage 5AK community observation ingest and claim-record policy.
 - `docs/onboarding/static-research-index-workflow.md`: Stage 5AM static research index renderer and upload workflow.
 - `docs/onboarding/private-deep-research-content-workflow.md`: Stage 5AN private content-pack and SFTP webroot workflow.
+- `docs/onboarding/token-block-source-lock-workflow.md`: Stage 5AP page 49-51 token-block source-lock workflow.
 - `docs/onboarding/local-source-inventory-workflow.md`: local `third_party/` source inventory workflow and raw-data guardrails.
 
 ## Research And Workflow Truth
@@ -45,6 +49,8 @@
 - `docs/reference/source-harvester-community-facts-cli.md`: Stage 5AK community-facts CLI usage and guardrails.
 - `docs/reference/website-render-cli.md`: Stage 5AM website-render CLI usage and guardrails.
 - `docs/reference/deep-research-export-cli.md`: Stage 5AN deep-research-export CLI usage and guardrails.
+- `docs/reference/token-block-cli.md`: Stage 5AP token-block CLI usage and guardrails.
+- `docs/reference/stego-controls-cli.md`: Stage 5AP stego-control CLI usage and guardrails.
 
 ## Architecture And CI Truth
 

@@ -62,6 +62,9 @@ git check-ignore -v experiments/results/prime-minus-one-cuda-synthetic/stage5aa/
 git check-ignore -v experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/summary.json
 git check-ignore -v experiments/results/prime-minus-one-bounded-p56-mismatch/stage5ad-fix/summary.json
 git check-ignore -v experiments/results/prime-minus-one-bounded-p56-corrected-reporting/stage5ae/summary.json
+git check-ignore -v experiments/results/token-block/stage5ap/canonical_token_grid.csv
+git check-ignore -v experiments/results/token-block/stage5ap/token_byte_preflight_primary_60.json
+git check-ignore -v experiments/results/stego-controls/stage5ap/outguess_positive_control_matrix.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md
 git check-ignore -v codex-output/stage5f-codex-completion.md
@@ -79,6 +82,7 @@ git check-ignore -v codex-output/stage5aa-codex-completion.md
 git check-ignore -v codex-output/stage5ad-fix-codex-completion.md
 git check-ignore -v codex-output/stage5ae-codex-completion.md
 git check-ignore -v codex-output/stage5af-codex-completion.md
+git check-ignore -v codex-output/stage5ap-codex-completion.md
 git check-ignore -v codex-output/stage5ai-codex-completion.md
 git check-ignore -v codex-output/stage5aj-codex-completion.md
 git check-ignore -v codex-output/stage5ak-codex-completion.md

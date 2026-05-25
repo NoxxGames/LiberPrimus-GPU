@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/stego/outguess-toolchain-readiness-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "toolchain_state", "tool_executed", "extraction_executed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "outguess_toolchain_readiness" },
+    "stage_id": { "const": "stage-5ap" },
+    "toolchain_state": { "type": "string" },
+    "tool_executed": { "const": false },
+    "extraction_executed": { "const": false },
+    "lp_page_outguess_run_performed": { "const": false },
+    "historical_fixture_run_performed": { "const": false },
+    "synthetic_fixture_run_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

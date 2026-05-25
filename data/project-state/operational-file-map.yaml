@@ -654,7 +654,7 @@ records:
   staleness_check_level: current_state
   owner_context: source_operator
   notes: Records content-pack, hosted-content, combined-webroot, publication-gate,
-    guardrail, and Stage 5AO next-stage counts without committing generated
+    guardrail, and historical next-stage counts without committing generated
     private content files.
 - path: data/deep-research-export/stage5an-content-pack-policy.yaml
   category: active_data_record
@@ -715,3 +715,75 @@ records:
   owner_context: source_operator
   notes: Documents that the contents of `website-export/stage5an/webserver-root/`
     are the private SFTP upload unit.
+- path: data/project-state/stage5ap-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AP page 49-51 token-block aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ap
+  expected_update_frequency: when_token_block_source_lock_state_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records source-lock, transcription, coordinate, alphabet, mapping,
+    null-control, DWH, OutGuess, guardrail, and Stage 5AQ next-stage counts.
+- path: data/token-block/stage5ap-token-block-canonical-transcription.yaml
+  category: active_data_record
+  purpose: Stage 5AP canonical 32x8 page 49-51 token-block transcription.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ap
+  expected_update_frequency: when_token_block_transcription_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Source-lock candidate transcription only; not decoded text, canonical
+    corpus activation, page-boundary finalisation, or solve evidence.
+- path: docs/onboarding/token-block-source-lock-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5AP page 49-51 token-block source-lock workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ap
+  expected_update_frequency: every_token_block_source_lock_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents how future Stage 5AQ review should consume Stage 5AP records
+    without treating them as decoded, canonical, or execution-ready.
+- path: docs/reference/token-block-cli.md
+  category: operational_status_doc
+  purpose: Stage 5AP token-block CLI reference.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5ap
+  expected_update_frequency: every_token_block_cli_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents source-lock, transcription, alphabet, mapping, null-control,
+    DWH, summary, and validation commands.
+- path: docs/reference/stego-controls-cli.md
+  category: operational_status_doc
+  purpose: Stage 5AP stego-control CLI reference.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5ap
+  expected_update_frequency: every_stego_control_cli_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents OutGuess positive-control readiness commands without
+    authorizing tool execution.
+- path: docs/architecture/page49-51-token-block-source-lock.md
+  category: architecture_doc
+  purpose: Stage 5AP token-block source-lock architecture and boundary policy.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ap
+  expected_update_frequency: every_token_block_source_lock_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents that page-image hashes, coordinates, and transcription are
+    source-lock metadata only.

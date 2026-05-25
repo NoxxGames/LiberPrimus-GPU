@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5AN private Deep Research content pack and SFTP-ready hosted content library. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5AP page 49-51 token-block source-lock and OutGuess positive-control infrastructure. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -34,6 +34,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Source-delta audits: Stage 4E records selected `cicada-solvers/iddqd` tree metadata only. It does not blind-mirror external repositories, commit raw images/audio/fonts/binaries, run stego tools, or infer meaning from compression artefacts.
 - Public source-lock snapshots: Stage 4K locks a small allowlisted public-source subset with metadata, canonical URLs, retrieval status, hashes where fetched, copyright notes, explicit snapshot policies, and GitHub commit-addressed references. It does not broad crawl, blind-mirror repositories, commit full HTML by default, or commit binary/image/audio/font/archive artefacts.
 - Cicada source harvester: Stage 5AF adds local-only source-manifest, dry-run planning, hash/inventory/extraction, and research-bundle scaffold tooling. Stage 5AG runs that tooling against user-provided ignored `third_party/` material and commits compact local source inventory, manifest linkage, source-lock candidate, gap, research-bundle readiness, and guardrail metadata only. Stage 5AH repairs operational doc staleness coverage before extraction continues. Stage 5AI creates ignored curated research-input bundle scaffolds plus compact source-card, content-index, website-ingest, Deep-Research pack, missing-source, and guardrail metadata. Stage 5AJ integrates ignored `third_party/UsefulFilesAndIdeas/` local workbooks/text/image metadata, important-link indexes, source-card/content-index updates, extraction-fidelity policy, redaction policy, and scraper-capture profiles while keeping private Deep Research extracts minimally redacted and public website views conservative/review-gated. Stage 5AK integrates ignored `third_party/UsefulFilesAndIdeas/community-facts/` message and attachment metadata, claim records, correction logs, and arithmetic preflight checks as review-only community observations. Stage 5AL creates the committed metadata-only website-ingest package and private Deep Research export contract while keeping public website-ready at `0`. Stage 5AM renders that metadata into an ignored uploadable private static index at `website-export/stage5am/research-index/` with no raw bodies or private identifiers. Stage 5AN builds an ignored private content pack, hosted private-content export, and combined SFTP-ready webroot under `deep-research-content-packs/stage5an/` and `website-export/stage5an/` for private Deep Research handoff. Network fetching/cloning remains deferred, Google Drive must not be used as project storage, local archive/workbook/community listings and generated extracts are not source truth, and raw source files remain ignored and uncommitted.
+- Page 49-51 token block: Stage 5AP creates metadata-only source locks, canonical 32x8 token transcription, logical coordinate records, primary-60 alphabet/mapping preflight, null-control planning, Deep Web Hash context, and OutGuess positive-control guardrails. The block is not decoded, not treated as intentional evidence, not used for hash/preimage search, and not an experiment seed.
 - Observation promotion ledger: Stage 4L joins Stage 4J review decisions with Stage 4K source locks and records ready, blocked, deferred, quarantined, rejected, source-reference-only, and control-only states. Ready does not mean executed; all future manifests remain disabled.
 - Image source-variant and compression preflight: Stage 4M scans ignored local LP page images for metadata and deterministic metric-only compression summaries, records source-variant comparison readiness, keeps star-like/compression-like artefacts review-only, and keeps the bigram/Fibonacci-421 observation blocked pending reproducible matrix and null controls. It does not commit raw images, generated visualisations, or execute image/bigram experiments.
 - Stego/audio positive-control readiness: Stage 4N records fixture readiness, cache policy, expected-output requirements, toolchain state, and synthetic controls. Historical OutGuess/OpenPuff/MP3/audio cases remain blocked until assets, exact expected outputs, and tools are ready.
@@ -48,7 +49,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 5AO - Deep Research source inventory and reliability prompt with private content.
+- Stage 5AQ - Deep Research page 49-51 token-block, Deep Web Hash context, and exact token-to-value source-lock review.
 - Website expansion is deferred to a future unnumbered project.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
@@ -152,6 +153,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 5AI curated research bundle extraction from local source inventory.
 - Stage 5AM static research website renderer and webserver export package.
 - Stage 5AN private Deep Research content pack and SFTP-ready hosted content library.
+- Stage 5AP page 49-51 token-block source-lock and OutGuess positive-control infrastructure.
 
 ## Architecture summary
 
@@ -260,6 +262,7 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Stage 5AL: research website-ingest staging and Deep-Research export validation complete.
 - Stage 5AM: static research website renderer and webserver export package complete.
 - Stage 5AN: private Deep Research content pack and SFTP-ready hosted content library complete.
+- Stage 5AP: page 49-51 token-block source-lock and OutGuess positive-control infrastructure complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -309,8 +312,9 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Latest prime-minus-one native contract stage: Stage 5W wrote `7` source inventory records, `2` stream contract records, `3` prime schedule records, `3` Candidate Batch ABI mapping records, `3` native parity preparation records, `3` result-store preflight records, `6` guardrail records, and `8` next-stage decision records. It marks the bounded Stage 4O/5L p56 mapping ready for future no-GPU native parity, keeps full p56 parity blocked until a complete committed token buffer is scoped, ran no CUDA or native/CUDA CMake, added no kernels, benchmarked nothing, and selected Stage 5X.
 - Latest prime-minus-one native parity stage: Stage 5X wrote `3` native run records, `3` native parity records, `3` result-store preflight records, `3` score-summary preflight records, `1` full-p56 blocker record, `7` guardrail records, and `9` next-stage decision records. It executed only the two Stage 5W ready no-GPU Python-reference mappings, matched both Stage 5W expected hashes, skipped the blocked full p56 mapping, ran no CUDA or native/CUDA CMake, added no kernels, benchmarked nothing, and selected Stage 5Y.
 - Latest source-harvester/website stage: Stage 5AN builds a private Deep Research content pack and SFTP-ready hosted content library from Stage 5AL/5AM metadata. It writes compact records under `data/deep-research-export/`, generated private pack files under `deep-research-content-packs/stage5an/`, hosted private content under `website-export/stage5an/private-content/`, and a combined upload root under `website-export/stage5an/webserver-root/`. It records `208` content-pack files, `211` hosted-content files, `10` bundles, `61` source records, `58` content records, `12` community-claim records, `183` private extracts, `7` publication gates, and `0` public website-ready records. It commits only metadata/contracts/scaffolds and performs no network fetch, online clone, Google Drive storage, raw source commit, public website publication, Deep Research execution, hypothesis generation/execution, OCR, AI/ML interpretation, image/stego/audio execution, CUDA, benchmark, scored experiment, or solve claim.
-- Latest doc-staleness stage: Stage 5AH repairs README stage-ledger coverage, operational-file-map coverage, and current/next-stage consistency checks before curated extraction. Stage 5AN updates current/next-stage records to Stage 5AO.
-- Next: Stage 5AO - Deep Research source inventory and reliability prompt with private content.
+- Latest token-block stage: Stage 5AP records `15` page-image metadata locks, a `32x8`/`256` token canonical transcription, `256` logical coordinates, a `60`-character primary alphabet candidate with `59` observed suffixes, primary-60 byte range `0..255`, `5` null controls, `5` OutGuess matrix rows, and `0` historical OutGuess fixtures ready. It runs no decode, hash/preimage search, LP-page OutGuess, Deep Research, CUDA, benchmark, scored experiment, or solve claim.
+- Latest doc-staleness stage: Stage 5AH repairs README stage-ledger coverage, operational-file-map coverage, and current/next-stage consistency checks before curated extraction. Stage 5AP updates current/next-stage records to Stage 5AQ.
+- Next: Stage 5AQ - Deep Research page 49-51 token-block, Deep Web Hash context, and exact token-to-value source-lock review.
 
 ## How To Use This Repo
 

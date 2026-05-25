@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/stego/outguess-guardrail-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "guardrail_status", "lp_page_outguess_run_performed", "outguess_tool_executed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "outguess_guardrail" },
+    "stage_id": { "const": "stage-5ap" },
+    "guardrail_status": { "const": "active" },
+    "lp_page_outguess_run_performed": { "const": false },
+    "historical_fixture_run_performed": { "const": false },
+    "synthetic_fixture_run_performed": { "const": false },
+    "broad_stego_scan_performed": { "const": false },
+    "outguess_tool_executed": { "const": false },
+    "openpuff_tool_executed": { "const": false },
+    "mp3stego_tool_executed": { "const": false },
+    "raw_fixture_committed": { "const": false },
+    "extracted_payload_committed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

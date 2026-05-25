@@ -1,0 +1,47 @@
+record_type: token_block_dwh_context
+schema: schemas/token-block/token-block-dwh-context-v0.schema.json
+stage_id: stage-5ap
+token_block_id: stage5ap-page49-51-token-block
+context_label: Deep Web Hash / DWH
+context_status: review_only_external_deep_research_context
+source_context: Stage 5AO external Deep Research report summarized by the Stage 5AP
+  prompt.
+claims_preserved:
+- The page 49-51 32x8 token block may be relevant to Deep Web Hash context.
+- A primary-60 ASCII-like mapping is a preflight candidate only.
+blocked_actions:
+- hash_preimage_search
+- plaintext_decode
+- hypothesis_execution
+- scored_experiment
+- cuda_execution
+required_next_review:
+- exact token-to-value source-lock review
+- page-image source provenance review
+- source-backed DWH context review
+- null-control definition before any pattern test
+execution_enabled: false
+hash_preimage_search_performed: false
+decode_attempted: false
+trusted_as_canonical: false
+usable_as_experiment_seed: false
+no_solve_claim: true
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+stego_tool_execution_performed: false
+lp_page_outguess_run_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false

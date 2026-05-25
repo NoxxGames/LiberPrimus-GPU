@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/token-block/token-block-transcription-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "row_count", "column_count", "token_count", "unique_token_count", "decode_attempted", "trusted_as_canonical", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "token_block_transcription" },
+    "stage_id": { "const": "stage-5ap" },
+    "row_count": { "const": 32 },
+    "column_count": { "const": 8 },
+    "token_count": { "const": 256 },
+    "unique_token_count": { "const": 161 },
+    "decode_attempted": { "const": false },
+    "text_interpretation_attempted": { "const": false },
+    "trusted_as_canonical": { "const": false },
+    "usable_as_experiment_seed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

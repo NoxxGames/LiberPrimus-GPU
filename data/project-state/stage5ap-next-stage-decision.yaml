@@ -1,0 +1,36 @@
+record_type: stage5ap_next_stage_decision
+schema: schemas/project-state/stage5ap-summary-v0.schema.json
+stage_id: stage-5ap
+status: complete
+source_stage_id: stage-5ao-external
+selected_next_stage_title: Stage 5AQ - Deep Research page 49-51 token-block, Deep
+  Web Hash context, and exact token-to-value source-lock review
+selected_next_stage_short_name: Stage 5AQ
+deep_research_next_ready: true
+gap_closure_next_ready: false
+selection_reason: Token transcription, primary-60 mapping, and local page-image metadata
+  hashes are present.
+execution_enabled: false
+cuda_execution_enabled: false
+hash_preimage_search_enabled: false
+scored_experiment_enabled: false
+solve_claim: false
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+stego_tool_execution_performed: false
+lp_page_outguess_run_performed: false
+hash_preimage_search_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false

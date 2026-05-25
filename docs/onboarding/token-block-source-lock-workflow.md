@@ -1,0 +1,13 @@
+# Token-Block Source-Lock Workflow
+
+Use this workflow when a future stage works with the page 49-51 token block.
+
+1. Read `STATUS.md`, `docs/roadmap/staged-plan.md`, and `data/project-state/stage5ap-summary.yaml`.
+2. Inspect the committed Stage 5AP records under `data/token-block/` and `data/stego/`.
+3. Treat the 32x8 token grid as a source-lock candidate, not decoded text.
+4. Keep raw page images ignored and uncommitted.
+5. Record any alternate alphabet order, source transcript, or DWH context explicitly.
+6. Use null controls before interpreting any pattern.
+7. Do not run OutGuess against LP pages unless a later explicit stage scopes assets, expected outputs, and toolchain readiness.
+
+Generated Stage 5AP reports live under `experiments/results/token-block/stage5ap/` and `experiments/results/stego-controls/stage5ap/`; they remain ignored except README/.gitkeep scaffolds.

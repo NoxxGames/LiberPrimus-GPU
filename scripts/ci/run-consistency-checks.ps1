@@ -24,14 +24,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5AN" `
-        --expected-next-stage "Stage 5AO" `
+        --expected-latest-stage "Stage 5AP" `
+        --expected-next-stage "Stage 5AQ" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5AN" `
-        --expected-next-stage "Stage 5AO" `
+        --expected-latest-stage "Stage 5AP" `
+        --expected-next-stage "Stage 5AQ" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -46,14 +46,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AN",
+        expected_latest_stage="Stage 5AP",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AN",
+            "expected_latest_stage": "Stage 5AP",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2210,6 +2210,32 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
     git check-ignore -q "website-export/stage5an/webserver-root/private-content/index.html"
     git check-ignore -q "website-export/stage5an/webserver-root.zip"
     git check-ignore -q "codex-output/stage5an-codex-completion.md"
+
+    Write-Host "Validating Stage 5AP token-block and stego-control records"
+    & $Python -m libreprimus.cli token-block validate-stage5ap `
+        --source-lock data/token-block/stage5ap-page49-51-source-lock.yaml `
+        --image-provenance data/token-block/stage5ap-page49-51-image-provenance.yaml `
+        --transcription data/token-block/stage5ap-token-block-canonical-transcription.yaml `
+        --coordinates data/token-block/stage5ap-token-block-coordinate-records.yaml `
+        --alphabet-registry data/token-block/stage5ap-token-block-alphabet-registry.yaml `
+        --mapping-preflight data/token-block/stage5ap-token-block-mapping-preflight.yaml `
+        --null-control-plan data/token-block/stage5ap-token-block-null-control-plan.yaml `
+        --dwh-context data/token-block/stage5ap-token-block-dwh-context.yaml `
+        --research-summary data/research/stage5ap-page49-51-source-lock-research-summary.yaml `
+        --next-stage-decision data/project-state/stage5ap-next-stage-decision.yaml `
+        --summary data/project-state/stage5ap-summary.yaml
+    & $Python -m libreprimus.cli stego-controls validate-stage5ap-outguess `
+        --policy data/stego/stage5ap-outguess-positive-control-policy.yaml `
+        --toolchain data/stego/stage5ap-outguess-toolchain-readiness.yaml `
+        --matrix data/stego/stage5ap-outguess-positive-control-matrix.yaml `
+        --historical data/stego/stage5ap-outguess-historical-fixture-readiness.yaml `
+        --guardrail data/stego/stage5ap-outguess-guardrail.yaml
+    $Stage5APResultsRoot = Join-Path (Join-Path "experiments" "results") "token-block/stage5ap"
+    $Stage5APStegoResultsRoot = Join-Path (Join-Path "experiments" "results") "stego-controls/stage5ap"
+    git check-ignore -q (Join-Path $Stage5APResultsRoot "canonical_token_grid.csv")
+    git check-ignore -q (Join-Path $Stage5APResultsRoot "token_byte_preflight_primary_60.json")
+    git check-ignore -q (Join-Path $Stage5APStegoResultsRoot "outguess_positive_control_matrix.json")
+    git check-ignore -q "codex-output/stage5ap-codex-completion.md"
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/stego/outguess-positive-control-policy-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "stage_id", "tool_execution_allowed_stage5ap", "lp_page_outguess_execution_allowed", "raw_fixture_committed", "extracted_payload_committed", "solve_claim"],
+  "properties": {
+    "record_type": { "const": "outguess_positive_control_policy" },
+    "stage_id": { "const": "stage-5ap" },
+    "tool_execution_allowed_stage5ap": { "const": false },
+    "lp_page_outguess_execution_allowed": { "const": false },
+    "broad_stego_scan_allowed": { "const": false },
+    "raw_fixture_committed": { "const": false },
+    "extracted_payload_committed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

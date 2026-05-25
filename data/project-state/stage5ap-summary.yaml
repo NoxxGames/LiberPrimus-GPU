@@ -1,0 +1,65 @@
+record_type: stage5ap_summary
+schema: schemas/project-state/stage5ap-summary-v0.schema.json
+stage_id: stage-5ap
+status: complete
+token_block_id: stage5ap-page49-51-token-block
+source_lock_status: local_metadata_hash_locked
+source_locked_page_image_count: 15
+page_image_provenance_records: 15
+row_count: 32
+column_count: 8
+token_count: 256
+unique_token_count: 161
+first_character_counts:
+  '0': 60
+  '1': 58
+  '2': 65
+  '3': 56
+  '4': 17
+coordinate_record_count: 256
+primary_alphabet_length: 60
+observed_suffix_count: 59
+lowercase_f_absent: true
+mapping_value_min: 0
+mapping_value_max: 255
+mapping_all_values_in_byte_range: true
+null_control_count: 5
+dwh_context_status: review_only_external_deep_research_context
+outguess_toolchain_state: outguess_missing
+outguess_positive_control_matrix_records: 5
+outguess_synthetic_control_count: 2
+outguess_historical_fixture_records: 4
+outguess_historical_fixture_ready_count: 0
+outguess_guardrail_status: active
+research_result: source_lock_and_preflight_only
+selected_next_stage_title: Stage 5AQ - Deep Research page 49-51 token-block, Deep
+  Web Hash context, and exact token-to-value source-lock review
+deep_research_next_ready: true
+canonical_token_transcription_created: true
+primary_60_mapping_preflight_created: true
+outguess_policy_created: true
+outguess_tool_execution_performed: false
+lp_page_outguess_run_performed: false
+no_decode: true
+no_text_interpretation: true
+no_hash_preimage_search: true
+no_solve_claim: true
+network_fetch_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+broad_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+hypothesis_execution_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false
