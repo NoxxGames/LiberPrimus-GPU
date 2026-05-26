@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "automatic_case_resolution_performed": { "const": false },
+    "canonical_transcription_changed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "experiment_execution_performed": { "const": false },
+    "full_cartesian_product_enumerated": { "const": false },
+    "generated_outputs_committed": { "const": false },
+    "record_type": { "const": "stage5av_guardrail" },
+    "schema": { "const": "schemas/token-block/stage5av-guardrail-v0.schema.json" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5av" },
+    "variant_byte_streams_generated": { "const": false }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "automatic_case_resolution_performed",
+    "canonical_transcription_changed",
+    "variant_byte_streams_generated",
+    "full_cartesian_product_enumerated",
+    "experiment_execution_performed",
+    "generated_outputs_committed",
+    "solve_claim"
+  ],
+  "type": "object"
+}

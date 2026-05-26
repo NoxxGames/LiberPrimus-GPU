@@ -4,6 +4,12 @@
 
 This file records CUDA policy for future acceleration work.
 
+## Stage 5AV Token Case Decision Integration Boundary
+
+Stage 5AV is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It records local human token-case decision integration, unresolved branch metadata, primary-60 impact, and compact branch-manifest records only.
+
+Stage 5AV does not authorize token-block CUDA input, variant byte-stream generation, DWH/hash search, scored experiments, or solve claims. Future Stage 5AW work is bounded manifest design without execution.
+
 ## Stage 5AT Token Case Review Pack Boundary
 
 Stage 5AT is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It records token case-review policy, challenge records, decision templates, generated ignored review-pack manifests, variant-classifier repair, doc-drift repair, null-control and DWH context updates, and Stage 5AU manual review direction only.

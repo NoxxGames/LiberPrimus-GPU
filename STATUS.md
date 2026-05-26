@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AU token case-review pack usability fix and glyph-tight crop rebuild is complete.
+Stage 5AV token case-review decision integration and compact variant-branch manifest is complete.
 
-Next recommended prompt: Stage 5AV - manual human review of token case challenge pack v2. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5AW - bounded token-block preflight manifest design without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5AV
+
+Stage 5AV integrated the filled local Stage 5AU v2 decision template into committed metadata while keeping the decision file ignored. It recorded the decision-file SHA-256 `dd9e3ee0fe5dccd70fd19dbca864dbb57706c113f48777abe546b98d9d8f25f7`, validated 203 records with 0 errors and 0 warnings, created 203 human-review decision records, 126 confirmed-token records, 77 unresolved variant records, 13 reviewer-extra possible-token records, a primary-60 variant impact summary, a compact token-variant branch manifest, canonical-transcription non-update records, null-control and Deep Web Hash context updates, guardrails, and Stage 5AW next-stage metadata.
+
+Local Stage 5AV summary: keep_current `126`, unresolved `77`, change_token `0`, not_reviewable `0`, high confidence `126`, medium confidence `77`, requires_second_review true/false `77/126`, reviewer extra possible tokens `13`, primary-60 mappable/unmappable possible-token options `98/65`, branch upper-bound product `1813388729421943762059264`, branch upper-bound log10 `24.258491`, compact branch manifest created `true`, full Cartesian product enumerated `false`, variant byte streams generated `false`, canonical transcription changed `false`, automatic case resolution `false`, DWH/hash search `false`, decode attempt `false`, OCR `false`, AI/ML interpretation `false`, LLM/vision token reading `false`, semantic image interpretation `false`, hidden-content image forensics `false`, stego execution `false`, CUDA execution/source modification `false`, benchmarks `false`, scored experiments `false`, raw images committed `false`, generated variant outputs committed `false`, and solve claim `false`.
+
+Stage 5AV is decision-integration metadata only. Unresolved multi-option cases are preserved for future bounded preflight design; they are not forced into a token identity and they do not update the Stage 5AP canonical transcription.
 
 ## Completed in Stage 5AU
 

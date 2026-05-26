@@ -1,0 +1,18 @@
+record_type: stage5av_next_stage_decision
+schema: schemas/project-state/stage5av-summary-v0.schema.json
+stage_id: stage-5av
+token_block_id: stage5ap-page49-51-token-block
+next_stage_id: stage-5aw
+next_stage_title: Stage 5AW - bounded token-block preflight manifest design without
+  execution
+next_stage_selected: Stage 5AW - bounded token-block preflight manifest design without
+  execution
+decision_file_correction_required: false
+manual_human_review_followup_required: true
+bounded_preflight_manifest_design_ready: true
+next_bounded_preflight_manifest_design_ready: true
+next_stage_rationale: Valid human decisions preserve 77 unresolved case variants in
+  a compact branch manifest; the next stage should design bounded preflight manifests
+  without enumerating variants or executing experiments.
+execution_enabled: false
+solve_claim: false

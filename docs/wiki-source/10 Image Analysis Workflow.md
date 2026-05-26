@@ -133,3 +133,7 @@ If local images are absent, `--allow-missing` supports raw-data-free validation.
 If transform generation is slow on high-resolution images, keep the Stage 3P bounded preview
 settings rather than producing full-resolution derived artefacts. Original image identity is still
 tracked by Stage 3K locks.
+
+Stage 5AV token-case decision integration is outside the image workflow. It must not use OCR,
+AI/ML, LLM vision, semantic image interpretation, or hidden-content image forensics to read tokens;
+it consumes human decisions already recorded in the ignored local review template.

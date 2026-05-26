@@ -1,0 +1,20 @@
+record_type: null_control_decision_update
+schema: schemas/token-block/null-control-decision-update-v0.schema.json
+stage_id: stage-5av
+source_stage_id: stage-5au
+token_block_id: stage5ap-page49-51-token-block
+baseline_current_control_preserved: true
+confirmed_token_control_count: 126
+unresolved_variant_control_count: 77
+control_families:
+- control_id: stage5av-baseline-confirmed-current-control
+  control_type: baseline_current_tokens
+- control_id: stage5av-single-change-per-case-controls
+  control_type: single_unresolved_case_option_controls
+- control_id: stage5av-randomized-case-assignment-controls
+  control_type: randomized_case_assignment_controls
+- control_id: stage5av-current-canonical-unchanged-control
+  control_type: current_canonical_unchanged_control
+variant_branch_upper_bound_product: 1813388729421943762059264
+execution_performed: false
+solve_claim: false

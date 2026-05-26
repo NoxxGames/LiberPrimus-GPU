@@ -269,3 +269,8 @@ status, expected output hashes, and toolchain requirements are all satisfied.
 
 If a Stage 4G cookie refresh has zero matches, update the method ledger and stop. Do not add arbitrary
 strings or variants unless a later source-lock stage supplies newly exact candidate strings.
+
+If a Stage 5AV token-case decision looks useful, keep it in the committed decision and branch
+metadata. Unresolved token alternatives are not source truth or execution-ready seeds; a future
+Stage 5AW manifest-design step must cite the compact branch manifest before any bounded preflight is
+even considered.

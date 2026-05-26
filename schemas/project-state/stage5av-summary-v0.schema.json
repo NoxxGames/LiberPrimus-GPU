@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "record_type": {
+      "enum": [
+        "stage5av_summary",
+        "stage5av_next_stage_decision"
+      ]
+    },
+    "schema": { "const": "schemas/project-state/stage5av-summary-v0.schema.json" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5av" }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "solve_claim"
+  ],
+  "type": "object"
+}

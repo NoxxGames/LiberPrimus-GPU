@@ -1,0 +1,14 @@
+record_type: dwh_decision_context
+schema: schemas/token-block/dwh-decision-context-v0.schema.json
+stage_id: stage-5av
+source_stage_id: stage-5au
+token_block_id: stage5ap-page49-51-token-block
+dwh_defined: true
+dwh_expansion: Deep Web Hash
+dwh_term_status: context_only
+hash_search_performed: false
+dwh_hash_candidates_generated: false
+dwh_preimage_search_performed: false
+dwh_decode_attempt_performed: false
+bounded_variant_manifest_may_feed_future_preflight: true
+solve_claim: false

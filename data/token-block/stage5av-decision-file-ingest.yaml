@@ -1,0 +1,21 @@
+record_type: decision_file_ingest
+schema: schemas/token-block/decision-file-ingest-v0.schema.json
+stage_id: stage-5av
+source_stage_id: stage-5au
+token_block_id: stage5ap-page49-51-token-block
+decision_file_priority_order:
+- human-review-packs/stage5au/token-case-review-v2/decision-template.yaml
+- decision-template.yaml
+- review-decisions/stage5av/decision-template.yaml
+decision_file_found: true
+decision_file_path: human-review-packs/stage5au/token-case-review-v2/decision-template.yaml
+decision_file_sha256: dd9e3ee0fe5dccd70fd19dbca864dbb57706c113f48777abe546b98d9d8f25f7
+decision_file_yaml_valid: true
+decision_file_parse_error: null
+decision_record_count: 203
+decision_file_not_committed: true
+local_human_review_pack_consumed: true
+canonical_transcription_changed: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "execution_performed": { "const": false },
+    "record_type": { "const": "primary60_variant_impact_summary" },
+    "schema": { "const": "schemas/token-block/primary60-variant-impact-summary-v0.schema.json" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5av" },
+    "variant_byte_streams_generated": { "const": false }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "primary_alphabet_id",
+    "unresolved_token_variant_count",
+    "branch_count_upper_bound_product",
+    "branch_count_upper_bound_log10",
+    "variant_byte_streams_generated",
+    "execution_performed",
+    "solve_claim"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,39 @@
+record_type: decision_file_validation
+schema: schemas/token-block/decision-file-validation-v0.schema.json
+stage_id: stage-5av
+source_stage_id: stage-5au
+token_block_id: stage5ap-page49-51-token-block
+decision_file_path: human-review-packs/stage5au/token-case-review-v2/decision-template.yaml
+decision_file_sha256: dd9e3ee0fe5dccd70fd19dbca864dbb57706c113f48777abe546b98d9d8f25f7
+decision_file_found: true
+yaml_parse_status: valid
+decision_record_count: 203
+expected_decision_count: 203
+decision_record_count_matches_expected: true
+decision_counts:
+  keep_current: 126
+  unresolved: 77
+confidence_counts:
+  high: 126
+  medium: 77
+requires_second_review_counts:
+  'false': 126
+  'true': 77
+possible_tokens_note_count: 77
+possible_tokens_missing_count: 0
+selected_token_pipe_error_count: 0
+stale_3l_typo_warning_count: 0
+numeric_token_normalisation_warning_count: 0
+stage5at_token_case_255_selected_token: 1K
+challenge_ids_unique: true
+stage5au_v2_challenge_count: 203
+missing_stage5au_v2_challenge_count: 0
+validation_error_count: 0
+validation_warning_count: 0
+validation_errors: []
+validation_warnings: []
+valid_for_stage5av_integration: true
+canonical_transcription_changed: false
+generated_outputs_committed: false
+raw_data_committed: false
+solve_claim: false

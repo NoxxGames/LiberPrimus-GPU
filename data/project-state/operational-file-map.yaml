@@ -999,3 +999,51 @@ records:
   owner_context: research_operator
   notes: Documents how Stage 5AV manual review should consume Stage 5AU v2
     challenge and decision-template records.
+- path: data/project-state/stage5av-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AV token case decision integration aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5av
+  expected_update_frequency: when_token_case_decision_integration_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records integrated decision counts, unresolved variant counts, branch-manifest
+    status, canonical non-update, and Stage 5AW next-stage decision.
+- path: data/token-block/stage5av-human-review-decision-records.yaml
+  category: active_data_record
+  purpose: Stage 5AV compact human review decision records.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5av
+  expected_update_frequency: when_token_case_decision_integration_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records 203 validated user decisions while the filled decision template
+    remains local and ignored.
+- path: data/token-block/stage5av-token-variant-branch-manifest.yaml
+  category: active_data_record
+  purpose: Stage 5AV compact unresolved-token branch manifest.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5av
+  expected_update_frequency: when_token_variant_branch_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Preserves unresolved multi-option branches without full enumeration,
+    variant byte-stream generation, experiments, or canonical transcription changes.
+- path: docs/onboarding/token-case-decision-integration-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5AV decision integration workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5av
+  expected_update_frequency: every_token_case_decision_integration_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents local ignored decision-file ingestion and the no-execution
+    branch-manifest boundary for Stage 5AW planning.

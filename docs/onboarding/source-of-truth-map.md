@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5AU it names Stage 5AU as latest complete and Stage 5AV as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5AV it names Stage 5AV as latest complete and Stage 5AW as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -25,11 +25,13 @@
 - `data/token-block/stage5ar-*.yaml`: committed Stage 5AR original-image source-lock, image-variant, page-split, pixel-coordinate, case-policy, coordinate-validation, source-lock/null-control update, DWH coordinate context, and guardrail records.
 - `data/token-block/stage5at-*.yaml`: committed Stage 5AT token case-review policy, challenge, crop-manifest, decision-template, review-pack manifest, variant-classifier repair, doc-drift repair, null-control update, DWH context, and guardrail records.
 - `data/token-block/stage5au-*.yaml`: committed Stage 5AU usability-audit, crop-geometry, crop-quality, v2 challenge, v2 decision-template, review-pack v2 manifest, UI coverage, null-control, DWH context, and guardrail records.
+- `data/token-block/stage5av-*.yaml`: committed Stage 5AV decision ingest, validation, human decision, confirmed-token, unresolved-variant, reviewer-extra-token, primary-60 impact, branch-manifest, canonical non-update, null-control, DWH context, and guardrail records.
 - `data/stego/stage5ap-outguess-*.yaml`: committed Stage 5AP OutGuess policy, toolchain, positive-control matrix, historical fixture readiness, and guardrail records.
 - `data/project-state/stage5ap-summary.yaml`: Stage 5AP aggregate summary and guardrail state.
 - `data/project-state/stage5ar-summary.yaml`: Stage 5AR aggregate summary and guardrail state.
 - `data/project-state/stage5at-summary.yaml`: Stage 5AT aggregate summary and guardrail state.
-- `data/project-state/stage5au-summary.yaml`: Stage 5AU aggregate summary, guardrail state, and Stage 5AV next-stage decision.
+- `data/project-state/stage5au-summary.yaml`: Stage 5AU aggregate summary, guardrail state, and historical Stage 5AV next-stage decision.
+- `data/project-state/stage5av-summary.yaml`: Stage 5AV aggregate summary, guardrail state, and Stage 5AW next-stage decision.
 - `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 - `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.
@@ -41,6 +43,7 @@
 - `docs/onboarding/page49-51-coordinate-source-lock-workflow.md`: Stage 5AR original-image coordinate-lock workflow.
 - `docs/onboarding/token-case-human-review-workflow.md`: Stage 5AU/5AV token case human-review workflow.
 - `docs/onboarding/token-case-review-pack-v2-workflow.md`: Stage 5AU v2 review-pack usage workflow.
+- `docs/onboarding/token-case-decision-integration-workflow.md`: Stage 5AV decision integration workflow.
 - `docs/onboarding/local-source-inventory-workflow.md`: local `third_party/` source inventory workflow and raw-data guardrails.
 
 ## Research And Workflow Truth
@@ -62,6 +65,7 @@
 - `docs/reference/token-block-coordinate-cli.md`: Stage 5AR coordinate-lock CLI usage and guardrails.
 - `docs/reference/token-case-review-pack-cli.md`: Stage 5AT token case-review pack CLI usage and guardrails.
 - `docs/reference/token-case-review-pack-v2-cli.md`: Stage 5AU token case-review pack v2 CLI usage and guardrails.
+- `docs/reference/token-case-decision-integration-cli.md`: Stage 5AV token case decision integration CLI usage and guardrails.
 - `docs/reference/stego-controls-cli.md`: Stage 5AP stego-control CLI usage and guardrails.
 
 ## Architecture And CI Truth

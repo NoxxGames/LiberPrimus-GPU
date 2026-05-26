@@ -71,6 +71,22 @@ from .models import (
     STAGE5AU_SUMMARY_PATH,
     STAGE5AU_UI_COVERAGE_PATH,
     STAGE5AU_USABILITY_AUDIT_PATH,
+    STAGE5AV_BRANCH_MANIFEST_PATH,
+    STAGE5AV_CANONICAL_UPDATE_PATH,
+    STAGE5AV_CONFIRMED_TOKENS_PATH,
+    STAGE5AV_DECISION_FILE_INGEST_PATH,
+    STAGE5AV_DECISION_FILE_VALIDATION_PATH,
+    STAGE5AV_DWH_CONTEXT_PATH,
+    STAGE5AV_GUARDRAIL_PATH,
+    STAGE5AV_HUMAN_REVIEW_DECISIONS_PATH,
+    STAGE5AV_LOCAL_DECISION_TEMPLATE_PATH,
+    STAGE5AV_NEXT_STAGE_DECISION_PATH,
+    STAGE5AV_NULL_CONTROL_UPDATE_PATH,
+    STAGE5AV_PRIMARY60_IMPACT_PATH,
+    STAGE5AV_RESULTS_DIR,
+    STAGE5AV_REVIEWER_EXTRA_TOKENS_PATH,
+    STAGE5AV_SUMMARY_PATH,
+    STAGE5AV_UNRESOLVED_VARIANTS_PATH,
     TRANSCRIPTION_PATH,
     read_yaml,
 )
@@ -99,6 +115,14 @@ from .stage5au import (
     build_stage5au_null_control_update,
     build_stage5au_summary,
     validate_stage5au,
+)
+from .stage5av import (
+    build_stage5av_decision_records,
+    build_stage5av_summary,
+    build_stage5av_updates,
+    build_stage5av_variant_branch_manifest,
+    ingest_stage5av_decisions,
+    validate_stage5av,
 )
 from .transcription import build_transcription
 from .validation import validate_stage5ap
@@ -936,6 +960,208 @@ def validate_stage5au_command(
     if errors:
         raise typer.Exit(1)
     console.print("token_block_stage5au_valid=true")
+
+
+@app.command("ingest-stage5av-decisions")
+def ingest_stage5av_decisions_command(
+    decision_file: Path = typer.Option(STAGE5AV_LOCAL_DECISION_TEMPLATE_PATH),
+    case_challenges_v2: Path = typer.Option(STAGE5AU_CASE_CHALLENGES_V2_PATH),
+    canonical_challenges_v2: Path = typer.Option(STAGE5AU_CANONICAL_CHALLENGES_V2_PATH),
+    stage5ap_transcription: Path = typer.Option(TRANSCRIPTION_PATH),
+    results_dir: Path = typer.Option(STAGE5AV_RESULTS_DIR),
+    out_ingest: Path = typer.Option(STAGE5AV_DECISION_FILE_INGEST_PATH),
+    out_validation: Path = typer.Option(STAGE5AV_DECISION_FILE_VALIDATION_PATH),
+) -> None:
+    ingest, validation = ingest_stage5av_decisions(
+        decision_file=decision_file,
+        case_challenges_v2=case_challenges_v2,
+        canonical_challenges_v2=canonical_challenges_v2,
+        stage5ap_transcription=stage5ap_transcription,
+        results_dir=results_dir,
+        out_ingest=out_ingest,
+        out_validation=out_validation,
+    )
+    console.print(f"decision_file_found={str(ingest['decision_file_found']).lower()}")
+    console.print(f"decision_record_count={ingest['decision_record_count']}")
+    for decision, count in validation.get("decision_counts", {}).items():
+        console.print(f"{decision}_count={count}")
+    if validation.get("validation_error_count"):
+        raise typer.Exit(1)
+
+
+@app.command("validate-stage5av-decisions")
+def validate_stage5av_decisions_command(
+    validation: Path = typer.Option(STAGE5AV_DECISION_FILE_VALIDATION_PATH),
+) -> None:
+    payload = read_yaml(validation)
+    console.print(f"valid_for_stage5av_integration={str(payload['valid_for_stage5av_integration']).lower()}")
+    console.print(f"validation_error_count={payload['validation_error_count']}")
+    console.print(f"validation_warning_count={payload['validation_warning_count']}")
+    if payload.get("validation_error_count"):
+        raise typer.Exit(1)
+
+
+@app.command("build-stage5av-decision-records")
+def build_stage5av_decision_records_command(
+    decision_file: Path = typer.Option(STAGE5AV_LOCAL_DECISION_TEMPLATE_PATH),
+    validation: Path = typer.Option(STAGE5AV_DECISION_FILE_VALIDATION_PATH),
+    case_challenges_v2: Path = typer.Option(STAGE5AU_CASE_CHALLENGES_V2_PATH),
+    stage5ap_alphabet_registry: Path = typer.Option(ALPHABET_PATH),
+    results_dir: Path = typer.Option(STAGE5AV_RESULTS_DIR),
+    out_decisions: Path = typer.Option(STAGE5AV_HUMAN_REVIEW_DECISIONS_PATH),
+    out_confirmed: Path = typer.Option(STAGE5AV_CONFIRMED_TOKENS_PATH),
+    out_unresolved: Path = typer.Option(STAGE5AV_UNRESOLVED_VARIANTS_PATH),
+    out_extras: Path = typer.Option(STAGE5AV_REVIEWER_EXTRA_TOKENS_PATH),
+) -> None:
+    decisions, confirmed, unresolved, extras = build_stage5av_decision_records(
+        decision_file=decision_file,
+        validation=validation,
+        case_challenges_v2=case_challenges_v2,
+        stage5ap_alphabet_registry=stage5ap_alphabet_registry,
+        results_dir=results_dir,
+        out_decisions=out_decisions,
+        out_confirmed=out_confirmed,
+        out_unresolved=out_unresolved,
+        out_extras=out_extras,
+    )
+    console.print(f"decision_record_count={decisions['decision_record_count']}")
+    console.print(f"confirmed_token_count={confirmed['confirmed_token_count']}")
+    console.print(f"unresolved_token_variant_count={unresolved['unresolved_token_variant_count']}")
+    console.print(f"reviewer_extra_possible_token_count={extras['reviewer_extra_possible_token_count']}")
+
+
+@app.command("build-stage5av-variant-branch-manifest")
+def build_stage5av_variant_branch_manifest_command(
+    decision_records: Path = typer.Option(STAGE5AV_HUMAN_REVIEW_DECISIONS_PATH),
+    unresolved_variants: Path = typer.Option(STAGE5AV_UNRESOLVED_VARIANTS_PATH),
+    reviewer_extras: Path = typer.Option(STAGE5AV_REVIEWER_EXTRA_TOKENS_PATH),
+    stage5ap_transcription: Path = typer.Option(TRANSCRIPTION_PATH),
+    stage5ap_mapping_preflight: Path = typer.Option(MAPPING_PATH),
+    results_dir: Path = typer.Option(STAGE5AV_RESULTS_DIR),
+    out_impact: Path = typer.Option(STAGE5AV_PRIMARY60_IMPACT_PATH),
+    out_branch_manifest: Path = typer.Option(STAGE5AV_BRANCH_MANIFEST_PATH),
+) -> None:
+    impact, manifest = build_stage5av_variant_branch_manifest(
+        decision_records=decision_records,
+        unresolved_variants=unresolved_variants,
+        reviewer_extras=reviewer_extras,
+        stage5ap_transcription=stage5ap_transcription,
+        stage5ap_mapping_preflight=stage5ap_mapping_preflight,
+        results_dir=results_dir,
+        out_impact=out_impact,
+        out_branch_manifest=out_branch_manifest,
+    )
+    console.print(f"branch_count_upper_bound_log10={impact['branch_count_upper_bound_log10']}")
+    console.print(f"use_compact_branch_manifest={str(manifest['use_compact_branch_manifest']).lower()}")
+    console.print(f"full_cartesian_product_enumerated={str(manifest['full_cartesian_product_enumerated']).lower()}")
+
+
+@app.command("build-stage5av-updates")
+def build_stage5av_updates_command(
+    decision_records: Path = typer.Option(STAGE5AV_HUMAN_REVIEW_DECISIONS_PATH),
+    unresolved_variants: Path = typer.Option(STAGE5AV_UNRESOLVED_VARIANTS_PATH),
+    impact_summary: Path = typer.Option(STAGE5AV_PRIMARY60_IMPACT_PATH),
+    branch_manifest: Path = typer.Option(STAGE5AV_BRANCH_MANIFEST_PATH),
+    out_canonical_update: Path = typer.Option(STAGE5AV_CANONICAL_UPDATE_PATH),
+    out_null_control_update: Path = typer.Option(STAGE5AV_NULL_CONTROL_UPDATE_PATH),
+    out_dwh_context: Path = typer.Option(STAGE5AV_DWH_CONTEXT_PATH),
+) -> None:
+    canonical, null_update, dwh = build_stage5av_updates(
+        decision_records=decision_records,
+        unresolved_variants=unresolved_variants,
+        impact_summary=impact_summary,
+        branch_manifest=branch_manifest,
+        out_canonical_update=out_canonical_update,
+        out_null_control_update=out_null_control_update,
+        out_dwh_context=out_dwh_context,
+    )
+    console.print(f"canonical_transcription_changed={str(canonical['canonical_transcription_changed']).lower()}")
+    console.print(f"null_controls_updated={str(null_update['baseline_current_control_preserved']).lower()}")
+    console.print(f"dwh_defined={str(dwh['dwh_defined']).lower()}")
+
+
+@app.command("build-stage5av-summary")
+def build_stage5av_summary_command(
+    ingest: Path = typer.Option(STAGE5AV_DECISION_FILE_INGEST_PATH),
+    validation: Path = typer.Option(STAGE5AV_DECISION_FILE_VALIDATION_PATH),
+    decision_records: Path = typer.Option(STAGE5AV_HUMAN_REVIEW_DECISIONS_PATH),
+    confirmed: Path = typer.Option(STAGE5AV_CONFIRMED_TOKENS_PATH),
+    unresolved_variants: Path = typer.Option(STAGE5AV_UNRESOLVED_VARIANTS_PATH),
+    reviewer_extras: Path = typer.Option(STAGE5AV_REVIEWER_EXTRA_TOKENS_PATH),
+    impact_summary: Path = typer.Option(STAGE5AV_PRIMARY60_IMPACT_PATH),
+    branch_manifest: Path = typer.Option(STAGE5AV_BRANCH_MANIFEST_PATH),
+    canonical_update: Path = typer.Option(STAGE5AV_CANONICAL_UPDATE_PATH),
+    null_control_update: Path = typer.Option(STAGE5AV_NULL_CONTROL_UPDATE_PATH),
+    dwh_context: Path = typer.Option(STAGE5AV_DWH_CONTEXT_PATH),
+    out_guardrail: Path = typer.Option(STAGE5AV_GUARDRAIL_PATH),
+    out_next_stage: Path = typer.Option(STAGE5AV_NEXT_STAGE_DECISION_PATH),
+    out_summary: Path = typer.Option(STAGE5AV_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AV_RESULTS_DIR),
+) -> None:
+    guard, next_stage, summary = build_stage5av_summary(
+        ingest=ingest,
+        validation=validation,
+        decision_records=decision_records,
+        confirmed=confirmed,
+        unresolved_variants=unresolved_variants,
+        reviewer_extras=reviewer_extras,
+        impact_summary=impact_summary,
+        branch_manifest=branch_manifest,
+        canonical_update=canonical_update,
+        null_control_update=null_control_update,
+        dwh_context=dwh_context,
+        out_guardrail=out_guardrail,
+        out_next_stage=out_next_stage,
+        out_summary=out_summary,
+        results_dir=results_dir,
+    )
+    console.print(f"automatic_case_resolution_performed={str(guard['automatic_case_resolution_performed']).lower()}")
+    console.print(f"next_stage={next_stage['next_stage_selected']}")
+    console.print(f"decision_record_count={summary['decision_record_count']}")
+
+
+@app.command("validate-stage5av")
+def validate_stage5av_command(
+    ingest: Path = typer.Option(STAGE5AV_DECISION_FILE_INGEST_PATH),
+    validation: Path = typer.Option(STAGE5AV_DECISION_FILE_VALIDATION_PATH),
+    decision_records: Path = typer.Option(STAGE5AV_HUMAN_REVIEW_DECISIONS_PATH),
+    confirmed: Path = typer.Option(STAGE5AV_CONFIRMED_TOKENS_PATH),
+    unresolved_variants: Path = typer.Option(STAGE5AV_UNRESOLVED_VARIANTS_PATH),
+    reviewer_extras: Path = typer.Option(STAGE5AV_REVIEWER_EXTRA_TOKENS_PATH),
+    impact_summary: Path = typer.Option(STAGE5AV_PRIMARY60_IMPACT_PATH),
+    branch_manifest: Path = typer.Option(STAGE5AV_BRANCH_MANIFEST_PATH),
+    canonical_update: Path = typer.Option(STAGE5AV_CANONICAL_UPDATE_PATH),
+    null_control_update: Path = typer.Option(STAGE5AV_NULL_CONTROL_UPDATE_PATH),
+    dwh_context: Path = typer.Option(STAGE5AV_DWH_CONTEXT_PATH),
+    guardrail: Path = typer.Option(STAGE5AV_GUARDRAIL_PATH),
+    next_stage: Path = typer.Option(STAGE5AV_NEXT_STAGE_DECISION_PATH),
+    summary: Path = typer.Option(STAGE5AV_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AV_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5av(
+        ingest=ingest,
+        validation=validation,
+        decision_records=decision_records,
+        confirmed=confirmed,
+        unresolved_variants=unresolved_variants,
+        reviewer_extras=reviewer_extras,
+        impact_summary=impact_summary,
+        branch_manifest=branch_manifest,
+        canonical_update=canonical_update,
+        null_control_update=null_control_update,
+        dwh_context=dwh_context,
+        guardrail=guardrail,
+        next_stage=next_stage,
+        summary=summary,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(error)
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5av_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

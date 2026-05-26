@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AV Token Case Decision Integration
+
+Stage 5AV is decision-integration infrastructure, not an experiment. It commits metadata for the completed local Stage 5AU v2 decision-file ingest, validation, human decision records, confirmed-token records, unresolved variant records, reviewer-extra possible tokens, primary-60 impact summary, compact branch manifest, canonical-transcription non-update, null-control update, DWH context, guardrails, and next-stage decision.
+
+Generated Stage 5AV reports remain ignored under `experiments/results/token-block/stage5av/`. The filled decision template remains ignored under `human-review-packs/stage5au/token-case-review-v2/decision-template.yaml`. Stage 5AV performs no token experiment, full variant enumeration, variant byte-stream generation, DWH/hash search, decode attempt, OCR, AI/ML interpretation, LLM/vision token reading, semantic image interpretation, hidden-content image forensics, stego execution, CUDA, benchmarks, scored experiments, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AU Token Case Review Pack V2
 
 Stage 5AU is review-pack usability repair infrastructure, not an experiment. It commits metadata for a Stage 5AT usability audit, deterministic crop-geometry policy, crop-quality diagnostics, v2 case/canonical challenge sets, v2 decision templates, review-pack manifests, null-control updates, DWH review-pack context, guardrails, and next-stage decisions.

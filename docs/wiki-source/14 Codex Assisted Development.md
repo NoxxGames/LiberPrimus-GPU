@@ -239,3 +239,11 @@ Stage 5AC completion handoffs belong under ignored `codex-output/stage5ac-codex-
 Stage 5AD completion handoffs belong under ignored `codex-output/stage5ad-codex-completion.md`.
 Do not stage the handoff, generated conformance reports, raw data, generated result bodies, SQLite
 databases, or local CUDA diagnostics.
+
+Stage 5AV completion handoffs belong under ignored `codex-output/stage5av-codex-completion.md`.
+If Codex changes Stage 5AV token-case decision integration, verify
+`libreprimus token-block validate-stage5av`, keep generated reports under ignored
+`experiments/results/token-block/stage5av/`, keep the filled decision template under ignored
+`human-review-packs/stage5au/token-case-review-v2/`, and do not generate variant byte streams,
+run token experiments, run DWH/hash searches, run CUDA, benchmark, execute scored experiments, or
+make solve claims.

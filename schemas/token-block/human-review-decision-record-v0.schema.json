@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "canonical_transcription_changed": { "const": false },
+    "record_type": { "const": "human_review_decision_record_set" },
+    "schema": { "const": "schemas/token-block/human-review-decision-record-v0.schema.json" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5av" }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "decision_record_count",
+    "records",
+    "canonical_transcription_changed",
+    "solve_claim"
+  ],
+  "type": "object"
+}

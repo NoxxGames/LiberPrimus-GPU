@@ -27,3 +27,17 @@ Stage 5AU adds the v2 usability-repair sequence:
 ```
 
 Stage 5AU records the Stage 5AT pack as count-valid but not usable for reliable manual review. The v2 build writes ignored files under `human-review-packs/stage5au/token-case-review-v2/` and committed compact metadata under `data/token-block/stage5au-*` and `data/project-state/stage5au-*`. It does not fill decisions, change canonical transcription, run OCR, run AI/ML or LLM/vision reading, run image interpretation, run stego, search hashes, decode, run CUDA, benchmark, or execute scored experiments.
+
+Stage 5AV adds decision-integration commands after the human reviewer fills the v2 template:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block ingest-stage5av-decisions --decision-file human-review-packs/stage5au/token-case-review-v2/decision-template.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5av-decisions
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5av-decision-records --decision-file human-review-packs/stage5au/token-case-review-v2/decision-template.yaml
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5av-variant-branch-manifest
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5av-updates
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5av-summary
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5av
+```
+
+The Stage 5AV validation path is CI-safe from committed metadata. The filled decision template, generated review pack, generated JSON reports, and any future variant bodies remain ignored.

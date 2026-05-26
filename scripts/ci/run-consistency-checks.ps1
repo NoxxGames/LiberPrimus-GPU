@@ -2310,6 +2310,29 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
     git check-ignore -q (Join-Path $Stage5AUReviewPackRoot "token-case-review-pack-v2.zip")
     git check-ignore -q "codex-output/stage5au-codex-completion.md"
 
+    Write-Host "Validating Stage 5AV token case decision integration records"
+    $Stage5AVResultsRoot = Join-Path (Join-Path "experiments" "results") "token-block/stage5av"
+    & $Python -m libreprimus.cli token-block validate-stage5av `
+        --ingest data/token-block/stage5av-decision-file-ingest.yaml `
+        --validation data/token-block/stage5av-decision-file-validation.yaml `
+        --decision-records data/token-block/stage5av-human-review-decision-records.yaml `
+        --confirmed data/token-block/stage5av-confirmed-token-records.yaml `
+        --unresolved-variants data/token-block/stage5av-unresolved-token-variant-records.yaml `
+        --reviewer-extras data/token-block/stage5av-reviewer-extra-possible-tokens.yaml `
+        --impact-summary data/token-block/stage5av-primary60-variant-impact-summary.yaml `
+        --branch-manifest data/token-block/stage5av-token-variant-branch-manifest.yaml `
+        --canonical-update data/token-block/stage5av-canonical-transcription-update.yaml `
+        --null-control-update data/token-block/stage5av-null-control-decision-update.yaml `
+        --dwh-context data/token-block/stage5av-dwh-decision-context.yaml `
+        --guardrail data/token-block/stage5av-guardrail.yaml `
+        --next-stage data/project-state/stage5av-next-stage-decision.yaml `
+        --summary data/project-state/stage5av-summary.yaml `
+        --results-dir $Stage5AVResultsRoot
+    git check-ignore -q (Join-Path $Stage5AVResultsRoot "decision_file_ingest_report.json")
+    git check-ignore -q (Join-Path $Stage5AVResultsRoot "token_variant_branch_manifest.json")
+    git check-ignore -q "human-review-packs/stage5au/token-case-review-v2/decision-template.yaml"
+    git check-ignore -q "codex-output/stage5av-codex-completion.md"
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

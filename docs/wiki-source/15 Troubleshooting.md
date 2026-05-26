@@ -916,3 +916,10 @@ git check-ignore -v website-export/stage5an/webserver-root/private-content/index
 git check-ignore -v website-export/stage5an/webserver-root.zip
 git check-ignore -v codex-output/stage5an-codex-completion.md
 ```
+
+For Stage 5AV token-case decision integration, the filled decision template must stay local and
+ignored at `human-review-packs/stage5au/token-case-review-v2/decision-template.yaml`. If validation
+fails, inspect `data/token-block/stage5av-decision-file-validation.yaml` and do not substitute the
+committed blank template. Unresolved alternatives belong in `reviewer_notes` as `possible_tokens=...`
+with `selected_token: null`; they are preserved as branch metadata and do not change canonical
+transcription.

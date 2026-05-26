@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "canonical_transcription_changed": { "const": false },
+    "record_type": { "const": "canonical_transcription_update" },
+    "schema": { "const": "schemas/token-block/canonical-transcription-update-v0.schema.json" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5av" }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "canonical_transcription_update_status",
+    "canonical_transcription_changed",
+    "canonical_transcription_change_count",
+    "explicit_change_token_count",
+    "solve_claim"
+  ],
+  "type": "object"
+}

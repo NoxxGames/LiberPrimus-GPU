@@ -13,6 +13,7 @@ STAGE_ID = "stage-5ap"
 STAGE5AR_ID = "stage-5ar"
 STAGE5AT_ID = "stage-5at"
 STAGE5AU_ID = "stage-5au"
+STAGE5AV_ID = "stage-5av"
 TOKEN_BLOCK_ID = "stage5ap-page49-51-token-block"
 PRIMARY_ALPHABET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwx"
 TOKEN_GRID_LINES = [
@@ -115,6 +116,41 @@ STAGE5AU_DWH_CONTEXT_PATH = DATA_DIR / "stage5au-dwh-review-pack-context.yaml"
 STAGE5AU_GUARDRAIL_PATH = DATA_DIR / "stage5au-guardrail.yaml"
 STAGE5AU_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5au-next-stage-decision.yaml"
 STAGE5AU_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5au-summary.yaml"
+
+STAGE5AV_RESULTS_DIR = Path("experiments/results/token-block/stage5av")
+STAGE5AV_LOCAL_DECISION_TEMPLATE_PATH = (
+    STAGE5AU_REVIEW_PACK_ROOT / "decision-template.yaml"
+)
+STAGE5AV_DECISION_FILE_INGEST_PATH = DATA_DIR / "stage5av-decision-file-ingest.yaml"
+STAGE5AV_DECISION_FILE_VALIDATION_PATH = (
+    DATA_DIR / "stage5av-decision-file-validation.yaml"
+)
+STAGE5AV_HUMAN_REVIEW_DECISIONS_PATH = (
+    DATA_DIR / "stage5av-human-review-decision-records.yaml"
+)
+STAGE5AV_CONFIRMED_TOKENS_PATH = DATA_DIR / "stage5av-confirmed-token-records.yaml"
+STAGE5AV_UNRESOLVED_VARIANTS_PATH = (
+    DATA_DIR / "stage5av-unresolved-token-variant-records.yaml"
+)
+STAGE5AV_REVIEWER_EXTRA_TOKENS_PATH = (
+    DATA_DIR / "stage5av-reviewer-extra-possible-tokens.yaml"
+)
+STAGE5AV_PRIMARY60_IMPACT_PATH = (
+    DATA_DIR / "stage5av-primary60-variant-impact-summary.yaml"
+)
+STAGE5AV_BRANCH_MANIFEST_PATH = (
+    DATA_DIR / "stage5av-token-variant-branch-manifest.yaml"
+)
+STAGE5AV_CANONICAL_UPDATE_PATH = (
+    DATA_DIR / "stage5av-canonical-transcription-update.yaml"
+)
+STAGE5AV_NULL_CONTROL_UPDATE_PATH = (
+    DATA_DIR / "stage5av-null-control-decision-update.yaml"
+)
+STAGE5AV_DWH_CONTEXT_PATH = DATA_DIR / "stage5av-dwh-decision-context.yaml"
+STAGE5AV_GUARDRAIL_PATH = DATA_DIR / "stage5av-guardrail.yaml"
+STAGE5AV_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5av-next-stage-decision.yaml"
+STAGE5AV_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5av-summary.yaml"
 
 FALSE_GUARDRAILS = {
     "network_fetch_performed": False,

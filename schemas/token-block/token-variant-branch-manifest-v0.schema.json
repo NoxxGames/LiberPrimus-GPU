@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "canonical_transcription_changed": { "const": false },
+    "execution_performed": { "const": false },
+    "full_cartesian_product_enumerated": { "const": false },
+    "record_type": { "const": "token_variant_branch_manifest" },
+    "schema": { "const": "schemas/token-block/token-variant-branch-manifest-v0.schema.json" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5av" },
+    "variant_byte_streams_generated": { "const": false }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "branch_manifest_type",
+    "unresolved_cases",
+    "controls",
+    "full_cartesian_product_enumerated",
+    "variant_byte_streams_generated",
+    "execution_performed",
+    "canonical_transcription_changed",
+    "solve_claim"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "canonical_transcription_changed": { "const": false },
+    "decision_file_found": { "type": "boolean" },
+    "generated_outputs_committed": { "const": false },
+    "raw_data_committed": { "const": false },
+    "record_type": { "const": "decision_file_ingest" },
+    "schema": { "const": "schemas/token-block/decision-file-ingest-v0.schema.json" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5av" }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "decision_file_found",
+    "decision_file_path",
+    "decision_file_sha256",
+    "decision_record_count",
+    "canonical_transcription_changed",
+    "generated_outputs_committed",
+    "raw_data_committed",
+    "solve_claim"
+  ],
+  "type": "object"
+}
