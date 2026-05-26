@@ -102,6 +102,23 @@ from .models import (
     STAGE5AW_REPAIRED_UNRESOLVED_VARIANTS_PATH,
     STAGE5AW_RESULTS_DIR,
     STAGE5AW_SUMMARY_PATH,
+    STAGE5AY_ALPHABET_CONTROL_MANIFEST_PATH,
+    STAGE5AY_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH,
+    STAGE5AY_BRANCH_COUNT_BUDGET_PATH,
+    STAGE5AY_BRANCH_ELIGIBILITY_POLICY_PATH,
+    STAGE5AY_DWH_PREFLIGHT_CONTEXT_PATH,
+    STAGE5AY_EXECUTION_GATES_PATH,
+    STAGE5AY_FUTURE_RESULT_SCHEMA_PREVIEW_PATH,
+    STAGE5AY_GUARDRAIL_PATH,
+    STAGE5AY_NEXT_STAGE_DECISION_PATH,
+    STAGE5AY_NULL_CONTROL_FAMILY_MANIFEST_PATH,
+    STAGE5AY_PAGE_SPLIT_CONTROL_MANIFEST_PATH,
+    STAGE5AY_PREFLIGHT_DESIGN_POLICY_PATH,
+    STAGE5AY_PREFLIGHT_SOURCE_INPUTS_PATH,
+    STAGE5AY_READING_ORDER_CONTROL_MANIFEST_PATH,
+    STAGE5AY_RESULTS_DIR,
+    STAGE5AY_SOURCE_CONTROL_MANIFEST_PATH,
+    STAGE5AY_SUMMARY_PATH,
     TRANSCRIPTION_PATH,
     read_yaml,
 )
@@ -146,6 +163,13 @@ from .stage5aw import (
     build_stage5aw_updates,
     repair_stage5aw_decision_variants,
     validate_stage5aw,
+)
+from .stage5ay import (
+    build_stage5ay_control_manifests,
+    build_stage5ay_execution_gates,
+    build_stage5ay_preflight_design,
+    build_stage5ay_summary,
+    validate_stage5ay,
 )
 from .transcription import build_transcription
 from .validation import validate_stage5ap
@@ -1417,6 +1441,198 @@ def validate_stage5aw_command(
     if errors:
         raise typer.Exit(1)
     console.print("token_block_stage5aw_valid=true")
+
+
+@app.command("build-stage5ay-preflight-design")
+def build_stage5ay_preflight_design_command(
+    stage5ap_transcription: Path = typer.Option(TRANSCRIPTION_PATH),
+    stage5ap_alphabet_registry: Path = typer.Option(ALPHABET_PATH),
+    stage5ap_mapping_preflight: Path = typer.Option(MAPPING_PATH),
+    stage5ar_coordinate_validation: Path = typer.Option(STAGE5AR_COORDINATE_VALIDATION_PATH),
+    stage5aw_branch_manifest: Path = typer.Option(STAGE5AW_REPAIRED_BRANCH_MANIFEST_PATH),
+    stage5aw_impact_summary: Path = typer.Option(STAGE5AW_REPAIRED_PRIMARY60_IMPACT_PATH),
+    stage5aw_null_control: Path = typer.Option(STAGE5AW_NULL_CONTROL_UPDATE_PATH),
+    stage5ax_run_summary: Path = typer.Option("data/ci/stage5ax-parallel-validation-run-summary.yaml"),
+    results_dir: Path = typer.Option(STAGE5AY_RESULTS_DIR),
+    out_source_inputs: Path = typer.Option(STAGE5AY_PREFLIGHT_SOURCE_INPUTS_PATH),
+    out_policy: Path = typer.Option(STAGE5AY_PREFLIGHT_DESIGN_POLICY_PATH),
+    out_branch_eligibility: Path = typer.Option(STAGE5AY_BRANCH_ELIGIBILITY_POLICY_PATH),
+    out_branch_budget: Path = typer.Option(STAGE5AY_BRANCH_COUNT_BUDGET_PATH),
+) -> None:
+    source_inputs, policy, eligibility, budget = build_stage5ay_preflight_design(
+        stage5ap_transcription=stage5ap_transcription,
+        stage5ap_alphabet_registry=stage5ap_alphabet_registry,
+        stage5ap_mapping_preflight=stage5ap_mapping_preflight,
+        stage5ar_coordinate_validation=stage5ar_coordinate_validation,
+        stage5aw_branch_manifest=stage5aw_branch_manifest,
+        stage5aw_impact_summary=stage5aw_impact_summary,
+        stage5aw_null_control=stage5aw_null_control,
+        stage5ax_run_summary=stage5ax_run_summary,
+        results_dir=results_dir,
+        out_source_inputs=out_source_inputs,
+        out_policy=out_policy,
+        out_branch_eligibility=out_branch_eligibility,
+        out_branch_budget=out_branch_budget,
+    )
+    console.print(f"source_input_record_count={source_inputs['source_record_count']}")
+    console.print(f"branch_eligibility_option_record_count={eligibility['option_record_count']}")
+    console.print(f"branch_upper_bound_product={budget['branch_count_upper_bound_product']}")
+    console.print(f"stage5aw_repaired_branch_manifest_used={str(policy['stage5aw_repaired_branch_manifest_used']).lower()}")
+
+
+@app.command("build-stage5ay-control-manifests")
+def build_stage5ay_control_manifests_command(
+    preflight_policy: Path = typer.Option(STAGE5AY_PREFLIGHT_DESIGN_POLICY_PATH),
+    branch_eligibility: Path = typer.Option(STAGE5AY_BRANCH_ELIGIBILITY_POLICY_PATH),
+    stage5ap_null_control: Path = typer.Option(NULL_CONTROL_PATH),
+    stage5aw_null_control: Path = typer.Option(STAGE5AW_NULL_CONTROL_UPDATE_PATH),
+    results_dir: Path = typer.Option(STAGE5AY_RESULTS_DIR),
+    out_variant_family: Path = typer.Option(STAGE5AY_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    out_null_control_family: Path = typer.Option(STAGE5AY_NULL_CONTROL_FAMILY_MANIFEST_PATH),
+    out_alphabet_control: Path = typer.Option(STAGE5AY_ALPHABET_CONTROL_MANIFEST_PATH),
+    out_reading_order: Path = typer.Option(STAGE5AY_READING_ORDER_CONTROL_MANIFEST_PATH),
+    out_page_split: Path = typer.Option(STAGE5AY_PAGE_SPLIT_CONTROL_MANIFEST_PATH),
+    out_source_control: Path = typer.Option(STAGE5AY_SOURCE_CONTROL_MANIFEST_PATH),
+) -> None:
+    variant, null_control, alphabet, reading, page_split, source = build_stage5ay_control_manifests(
+        preflight_policy=preflight_policy,
+        branch_eligibility=branch_eligibility,
+        stage5ap_null_control=stage5ap_null_control,
+        stage5aw_null_control=stage5aw_null_control,
+        results_dir=results_dir,
+        out_variant_family=out_variant_family,
+        out_null_control_family=out_null_control_family,
+        out_alphabet_control=out_alphabet_control,
+        out_reading_order=out_reading_order,
+        out_page_split=out_page_split,
+        out_source_control=out_source_control,
+    )
+    control_count = (
+        len(null_control["families"])
+        + len(alphabet["families"])
+        + len(reading["families"])
+        + len(page_split["families"])
+        + len(source["families"])
+    )
+    console.print(f"variant_family_count={variant['family_count']}")
+    console.print(f"control_family_count={control_count}")
+    console.print("controls_executed=false")
+
+
+@app.command("build-stage5ay-execution-gates")
+def build_stage5ay_execution_gates_command(
+    source_inputs: Path = typer.Option(STAGE5AY_PREFLIGHT_SOURCE_INPUTS_PATH),
+    branch_budget: Path = typer.Option(STAGE5AY_BRANCH_COUNT_BUDGET_PATH),
+    variant_family: Path = typer.Option(STAGE5AY_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    null_control_family: Path = typer.Option(STAGE5AY_NULL_CONTROL_FAMILY_MANIFEST_PATH),
+    results_dir: Path = typer.Option(STAGE5AY_RESULTS_DIR),
+    out_result_schema_preview: Path = typer.Option(STAGE5AY_FUTURE_RESULT_SCHEMA_PREVIEW_PATH),
+    out_execution_gates: Path = typer.Option(STAGE5AY_EXECUTION_GATES_PATH),
+    out_dwh_context: Path = typer.Option(STAGE5AY_DWH_PREFLIGHT_CONTEXT_PATH),
+) -> None:
+    result_schema, gates, dwh = build_stage5ay_execution_gates(
+        source_inputs=source_inputs,
+        branch_budget=branch_budget,
+        variant_family=variant_family,
+        null_control_family=null_control_family,
+        results_dir=results_dir,
+        out_result_schema_preview=out_result_schema_preview,
+        out_execution_gates=out_execution_gates,
+        out_dwh_context=out_dwh_context,
+    )
+    console.print(f"execution_gate_count={len(gates['gates'])}")
+    console.print(f"dwh_operational_status={dwh['dwh_operational_status']}")
+    console.print(f"future_result_schema_preview_only={str(result_schema['future_result_schema_preview_only']).lower()}")
+
+
+@app.command("build-stage5ay-summary")
+def build_stage5ay_summary_command(
+    source_inputs: Path = typer.Option(STAGE5AY_PREFLIGHT_SOURCE_INPUTS_PATH),
+    policy: Path = typer.Option(STAGE5AY_PREFLIGHT_DESIGN_POLICY_PATH),
+    branch_eligibility: Path = typer.Option(STAGE5AY_BRANCH_ELIGIBILITY_POLICY_PATH),
+    variant_family: Path = typer.Option(STAGE5AY_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    null_control_family: Path = typer.Option(STAGE5AY_NULL_CONTROL_FAMILY_MANIFEST_PATH),
+    alphabet_control: Path = typer.Option(STAGE5AY_ALPHABET_CONTROL_MANIFEST_PATH),
+    reading_order: Path = typer.Option(STAGE5AY_READING_ORDER_CONTROL_MANIFEST_PATH),
+    page_split: Path = typer.Option(STAGE5AY_PAGE_SPLIT_CONTROL_MANIFEST_PATH),
+    source_control: Path = typer.Option(STAGE5AY_SOURCE_CONTROL_MANIFEST_PATH),
+    branch_budget: Path = typer.Option(STAGE5AY_BRANCH_COUNT_BUDGET_PATH),
+    result_schema_preview: Path = typer.Option(STAGE5AY_FUTURE_RESULT_SCHEMA_PREVIEW_PATH),
+    execution_gates: Path = typer.Option(STAGE5AY_EXECUTION_GATES_PATH),
+    dwh_context: Path = typer.Option(STAGE5AY_DWH_PREFLIGHT_CONTEXT_PATH),
+    out_guardrail: Path = typer.Option(STAGE5AY_GUARDRAIL_PATH),
+    out_next_stage: Path = typer.Option(STAGE5AY_NEXT_STAGE_DECISION_PATH),
+    out_summary: Path = typer.Option(STAGE5AY_SUMMARY_PATH),
+) -> None:
+    _guardrail, next_stage, summary = build_stage5ay_summary(
+        source_inputs=source_inputs,
+        policy=policy,
+        branch_eligibility=branch_eligibility,
+        variant_family=variant_family,
+        null_control_family=null_control_family,
+        alphabet_control=alphabet_control,
+        reading_order=reading_order,
+        page_split=page_split,
+        source_control=source_control,
+        branch_budget=branch_budget,
+        result_schema_preview=result_schema_preview,
+        execution_gates=execution_gates,
+        dwh_context=dwh_context,
+        out_guardrail=out_guardrail,
+        out_next_stage=out_next_stage,
+        out_summary=out_summary,
+    )
+    console.print(f"selected_next_stage_title={next_stage['selected_next_stage_title']}")
+    console.print(f"manifest_family_count={summary['manifest_family_count']}")
+    console.print(f"token_experiments_executed={str(summary['token_experiments_executed']).lower()}")
+
+
+@app.command("validate-stage5ay")
+def validate_stage5ay_command(
+    source_inputs: Path = typer.Option(STAGE5AY_PREFLIGHT_SOURCE_INPUTS_PATH),
+    policy: Path = typer.Option(STAGE5AY_PREFLIGHT_DESIGN_POLICY_PATH),
+    branch_eligibility: Path = typer.Option(STAGE5AY_BRANCH_ELIGIBILITY_POLICY_PATH),
+    variant_family: Path = typer.Option(STAGE5AY_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    null_control_family: Path = typer.Option(STAGE5AY_NULL_CONTROL_FAMILY_MANIFEST_PATH),
+    alphabet_control: Path = typer.Option(STAGE5AY_ALPHABET_CONTROL_MANIFEST_PATH),
+    reading_order: Path = typer.Option(STAGE5AY_READING_ORDER_CONTROL_MANIFEST_PATH),
+    page_split: Path = typer.Option(STAGE5AY_PAGE_SPLIT_CONTROL_MANIFEST_PATH),
+    source_control: Path = typer.Option(STAGE5AY_SOURCE_CONTROL_MANIFEST_PATH),
+    branch_budget: Path = typer.Option(STAGE5AY_BRANCH_COUNT_BUDGET_PATH),
+    result_schema_preview: Path = typer.Option(STAGE5AY_FUTURE_RESULT_SCHEMA_PREVIEW_PATH),
+    execution_gates: Path = typer.Option(STAGE5AY_EXECUTION_GATES_PATH),
+    dwh_context: Path = typer.Option(STAGE5AY_DWH_PREFLIGHT_CONTEXT_PATH),
+    guardrail: Path = typer.Option(STAGE5AY_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AY_NEXT_STAGE_DECISION_PATH),
+    summary: Path = typer.Option(STAGE5AY_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AY_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5ay(
+        source_inputs=source_inputs,
+        policy=policy,
+        branch_eligibility=branch_eligibility,
+        variant_family=variant_family,
+        null_control_family=null_control_family,
+        alphabet_control=alphabet_control,
+        reading_order=reading_order,
+        page_split=page_split,
+        source_control=source_control,
+        branch_budget=branch_budget,
+        result_schema_preview=result_schema_preview,
+        execution_gates=execution_gates,
+        dwh_context=dwh_context,
+        guardrail=guardrail,
+        next_stage_decision=next_stage_decision,
+        summary=summary,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(error)
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ay_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

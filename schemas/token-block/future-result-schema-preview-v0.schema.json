@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AY future result schema preview",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "future_result_schema_preview_only", "result_generated_now", "preview_fields", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5ay" },
+    "future_result_schema_preview_only": { "const": true },
+    "result_generated_now": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

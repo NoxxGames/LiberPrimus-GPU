@@ -24,14 +24,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5AX" \
-    --expected-next-stage "Stage 5AY" \
+    --expected-latest-stage "Stage 5AY" \
+    --expected-next-stage "Stage 5AZ" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5AX" \
-    --expected-next-stage "Stage 5AY" \
+    --expected-latest-stage "Stage 5AY" \
+    --expected-next-stage "Stage 5AZ" \
     --out "$stage5ah_out/current_next_stage_report.json"
 "$python_bin" - <<PY
 import json
@@ -46,14 +46,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AX",
+        expected_latest_stage="Stage 5AY",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AX",
+            "expected_latest_stage": "Stage 5AY",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2391,6 +2391,30 @@ PY
 stage5ax_repo_results_root="experiments"/"results/ci/parallel-validation/stage5ax"
 git check-ignore -q "$stage5ax_repo_results_root/run-summary.json"
 git check-ignore -q "codex-output/stage5ax-codex-completion.md"
+
+echo "Validating Stage 5AY bounded token-block preflight design records"
+stage5ay_results_root="experiments"/"results/token-block/stage5ay"
+"$python_bin" -m libreprimus.cli token-block validate-stage5ay \
+    --source-inputs data/token-block/stage5ay-preflight-source-inputs.yaml \
+    --policy data/token-block/stage5ay-preflight-design-policy.yaml \
+    --branch-eligibility data/token-block/stage5ay-branch-eligibility-policy.yaml \
+    --variant-family data/token-block/stage5ay-bounded-variant-family-manifest.yaml \
+    --null-control-family data/token-block/stage5ay-null-control-family-manifest.yaml \
+    --alphabet-control data/token-block/stage5ay-alphabet-control-manifest.yaml \
+    --reading-order data/token-block/stage5ay-reading-order-control-manifest.yaml \
+    --page-split data/token-block/stage5ay-page-split-control-manifest.yaml \
+    --source-control data/token-block/stage5ay-source-control-manifest.yaml \
+    --branch-budget data/token-block/stage5ay-branch-count-budget.yaml \
+    --result-schema-preview data/token-block/stage5ay-future-result-schema-preview.yaml \
+    --execution-gates data/token-block/stage5ay-execution-gates.yaml \
+    --dwh-context data/token-block/stage5ay-dwh-preflight-context.yaml \
+    --guardrail data/token-block/stage5ay-guardrail.yaml \
+    --next-stage-decision data/project-state/stage5ay-next-stage-decision.yaml \
+    --summary data/project-state/stage5ay-summary.yaml \
+    --results-dir "$stage5ay_results_root"
+git check-ignore -q "$stage5ay_results_root/preflight_design_report.json"
+git check-ignore -q "$stage5ay_results_root/branch_budget_report.json"
+git check-ignore -q "codex-output/stage5ay-codex-completion.md"
 
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AY reading-order control manifest",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "families", "controls_executed", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5ay" },
+    "controls_executed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

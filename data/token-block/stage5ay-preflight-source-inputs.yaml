@@ -1,0 +1,118 @@
+record_type: stage5ay_preflight_source_inputs
+schema: schemas/token-block/preflight-source-inputs-v0.schema.json
+stage_id: stage-5ay
+token_block_id: stage5ap-page49-51-token-block
+source_stage_ids:
+- stage-5ap
+- stage-5ar
+- stage-5au
+- stage-5aw
+- stage-5ax
+stage5aw_repaired_branch_manifest_used: true
+stage5av_branch_manifest_used: false
+stage5av_branch_manifest_superseded_by_stage5aw: true
+source_record_count: 15
+missing_required_source_count: 0
+records:
+- path: data/ci/stage5ax-parallel-validation-run-summary.yaml
+  role: stage5ax_parallel_validation_run_summary
+  required: true
+  present: true
+  sha256: 52db34a909f813f1adf7c66013237697b20d97f6640ca7fe1620e481af9456b5
+- path: data/token-block/stage5ap-token-block-alphabet-registry.yaml
+  role: stage5ap_alphabet_registry
+  required: true
+  present: true
+  sha256: 9d93ea1bc29fa58c1bc59a48099475c2b9fdc2a7f58fc30f9875c691d3c4c354
+- path: data/token-block/stage5ap-token-block-canonical-transcription.yaml
+  role: stage5ap_canonical_transcription
+  required: true
+  present: true
+  sha256: 264e059f73ebf04ea2982288d34ad8d7f278d68ef0e8d88fe2e6c8b15f66328e
+- path: data/token-block/stage5ap-token-block-mapping-preflight.yaml
+  role: stage5ap_mapping_preflight
+  required: true
+  present: true
+  sha256: 31bc81fab612239473f4655960b8daf149af0b05f7e5207ce488fc8334183ca9
+- path: data/token-block/stage5ap-token-block-null-control-plan.yaml
+  role: stage5ap_null_control_plan
+  required: true
+  present: true
+  sha256: b2e6c4559f36aa5f2a2cfda17092ed1111672122e026d5049849c3576a368547
+- path: data/token-block/stage5ar-original-page-image-source-lock.yaml
+  role: stage5ar_original_image_source_lock
+  required: true
+  present: true
+  sha256: 6d1828a5d9c67889c4176057c3533e453fea26b4dfdd3f170d6060b4a1082102
+- path: data/token-block/stage5ar-page-split-records.yaml
+  role: stage5ar_page_split_records
+  required: true
+  present: true
+  sha256: 56aa27491d17058c907350a281880f824ad5d7dfcd92f1007fbec79a1df915f1
+- path: data/token-block/stage5ar-token-coordinate-validation.yaml
+  role: stage5ar_token_coordinate_validation
+  required: true
+  present: true
+  sha256: 9ac4627273a9931693511cd9a812c1bb303dce69a0fd019ba7b2f7b343545b35
+- path: data/token-block/stage5ar-token-pixel-coordinate-records.yaml
+  role: stage5ar_token_pixel_coordinate_records
+  required: true
+  present: true
+  sha256: 5e35031dde56a7d81d8e42336bd88771d425e34812eaab829c46cfc8cfefba25
+- path: data/token-block/stage5au-review-pack-v2-manifest.yaml
+  role: stage5au_review_pack_v2_manifest
+  required: true
+  present: true
+  sha256: 09d55ac28bfb5812d524bc4c1dd11fe0002b19f5a76674d1ed81b0df6a8c5dda
+- path: data/token-block/stage5aw-null-control-decision-update.yaml
+  role: stage5aw_null_control_update
+  required: true
+  present: true
+  sha256: 61a148651452370d993fbc6ac2e99ff02ad5f0e1c6a89cae0c11fb6a43b6423e
+- path: data/token-block/stage5aw-repaired-primary60-variant-impact-summary.yaml
+  role: stage5aw_repaired_primary60_impact
+  required: true
+  present: true
+  sha256: 882e3840f7362c3e3841d883cf189719f5a4a894359f6b8483cd5e391e495f55
+- path: data/token-block/stage5aw-repaired-reviewer-extra-possible-tokens.yaml
+  role: stage5aw_repaired_reviewer_extra_tokens
+  required: true
+  present: true
+  sha256: ba9d7bda988ac9d9d19a7a629ebb9c306c1044c605f57eb010ddc7520241bec1
+- path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+  role: stage5aw_repaired_branch_manifest
+  required: true
+  present: true
+  sha256: 5e2dfee9717b1950cc7f61cf6e8b48ea592105e6dbe5e94d31396556c41daa3f
+- path: data/token-block/stage5aw-repaired-unresolved-token-variant-records.yaml
+  role: stage5aw_repaired_unresolved_variants
+  required: true
+  present: true
+  sha256: 45e23abd7a06324634e063af9d9ee8104765d75b5b2373835b338b7f6eb3353d
+source_inputs_validated: true
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false

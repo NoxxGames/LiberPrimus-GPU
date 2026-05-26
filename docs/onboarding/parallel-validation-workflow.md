@@ -18,4 +18,4 @@ The workflow:
 
 Do not add mutating commands to the parallel-safe class. Generated-output-writing commands need isolated ignored outputs or must stay serial. Network, GitHub, commit, push, and manual operations stay serial.
 
-Stage 5AY bounded token-block preflight design should still cite Stage 5AW repaired branch metadata; Stage 5AX only changes validation orchestration.
+Stage 5AY bounded token-block preflight design cites Stage 5AW repaired branch metadata and uses Stage 5AX as validation infrastructure only. Stage 5AZ review should inspect Stage 5AY design records, not generated Stage 5AX logs.

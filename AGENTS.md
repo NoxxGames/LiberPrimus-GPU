@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AX - parallel validation harness and fast CI check orchestrator.
+Current completed stage: Stage 5AY - bounded token-block preflight manifest design without execution.
 
-Current work: Stage 5AY - bounded token-block preflight manifest design without execution. Stage 5AX inserted local opt-in parallel validation infrastructure before the Stage 5AW-selected preflight design, added command classification, subprocess scheduling, pytest-xdist detection, deterministic sharded fallback, separated logs, failure aggregation, safety audit records, and wrapper scripts, and kept the conservative serial CI path as default. It did not run token experiments, generate variant byte streams, run DWH/hash searches, decode, OCR, AI/ML interpretation, LLM/vision token reading, semantic or hidden-content image interpretation, stego, CUDA, cryptanalytic benchmarks, scored experiments, website expansion, method-status upgrades, or solve claims.
+Current work: Stage 5AZ - Deep Research review of bounded token-block preflight manifest and execution gates. Stage 5AY designed bounded future token-block preflight manifests from Stage 5AW repaired branch metadata, used Stage 5AX validation metadata, kept Stage 5AV branch metadata superseded for planning, created branch eligibility, controls, branch budget, result-schema preview, DWH context, and execution gates, and did not generate byte streams, execute token experiments, run DWH/hash searches, decode, OCR, AI/ML interpretation, LLM/vision token reading, semantic or hidden-content image interpretation, stego, CUDA, cryptanalytic benchmarks, scored experiments, website expansion, method-status upgrades, or solve claims.
 
 Current project state:
 
@@ -138,9 +138,10 @@ Current project state:
 - Stage 5AW token-case parser repair records supersede Stage 5AV branch metadata for future planning. They preserve valid reviewer extras, preserve visual placeholders as review-only unmappable options, exclude prose fragments from reviewer-extra token variants, and do not change canonical transcription.
 - Stage 5AX generated validation outputs are ignored under `experiments/results/ci/parallel-validation/stage5ax/`; commit only compact metadata under `data/ci/` and `data/project-state/`.
 - Stage 5AX parallel validation is local infrastructure only, not cryptanalytic benchmark evidence.
+- Stage 5AY bounded token-block preflight manifest records are design-only metadata. They consume Stage 5AW repaired branch metadata, keep Stage 5AV branch metadata superseded for planning, define controls and execution gates, and do not authorize byte-stream generation, DWH/hash search, decoding, scoring, CUDA, benchmarks, method-status upgrades, canonical corpus activation, page-boundary finalisation, or solve claims.
 - Stage 5AX keeps git, GitHub, network/remote, generated-output-writing, issue-update, commit, and push operations serial.
 - Stage 5AX uses pytest-xdist only when available and otherwise falls back to deterministic subprocess sharding.
-- Future Stage 5AY preflight design must cite Stage 5AW repaired branch metadata and the Stage 5AX next-stage decision, must not use ignored review-pack bodies as committed input, and must not execute token experiments or DWH/hash searches.
+- Stage 5AY preflight design cites Stage 5AW repaired branch metadata and the Stage 5AX next-stage decision, does not use ignored review-pack bodies as committed input, and does not execute token experiments or DWH/hash searches. Future Stage 5AZ review must consume Stage 5AY manifest-design and execution-gate records before any execution-stage decision.
 - Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
 - Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
 - Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
@@ -1019,7 +1020,7 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 5AP page 49-51 token-block records are source-lock/preflight metadata only.
 - The 32x8 token transcription, logical coordinates, primary-60 mapping, null controls, DWH context, and OutGuess controls are not decoded plaintext, canonical corpus activation, experiment seeds, hash targets, or solve evidence.
 - Generated token-block and stego-control reports under `experiments/results/token-block/stage5ap/` and `experiments/results/stego-controls/stage5ap/` remain ignored.
-- Future Stage 5AY bounded preflight design must cite Stage 5AW repaired decision/branch records, Stage 5AV decision records, Stage 5AU review-pack v2 records, Stage 5AT review-pack records, Stage 5AR original-image coordinate records, and Stage 5AP source-lock, transcription, alphabet, mapping, null-control, DWH, and OutGuess guardrail records before any bounded token-block preflight follow-up.
+- Stage 5AY bounded preflight design cites Stage 5AW repaired decision/branch records, Stage 5AV decision records, Stage 5AU review-pack v2 records, Stage 5AT review-pack records, Stage 5AR original-image coordinate records, and Stage 5AP source-lock, transcription, alphabet, mapping, null-control, DWH, and OutGuess guardrail records. Future Stage 5AZ review must cite Stage 5AY execution gates before any bounded token-block execution follow-up.
 
 ## Stage 5AR Original-Image Coordinate Lock Rules
 
@@ -1027,7 +1028,7 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Original local page images are coordinate truth for pixel boxes; screenshots, crops, modified images, web-rendered pages, and private generated images are not coordinate truth.
 - Pixel coordinates are not OCR output, decoded text, semantic image interpretation, hidden-content forensics, experiment seeds, CUDA input permission, canonical corpus activation, page-boundary finalisation, or solve evidence.
 - Stage 5AR generated coordinate reports under `experiments/results/token-block/stage5ar/` remain ignored and must not be staged except for allowed scaffold files.
-- Future Stage 5AY bounded preflight design must cite Stage 5AW repaired decision/branch records, Stage 5AV decision/branch records, Stage 5AU review-pack v2 records, Stage 5AT review-pack records, and Stage 5AR source-lock, image-variant, page-split, pixel-coordinate, case-policy, coordinate-validation, source-lock/null-control, DWH context, and guardrail records before any bounded token-block preflight planning.
+- Stage 5AY bounded preflight design cites Stage 5AW repaired decision/branch records, Stage 5AV decision/branch records, Stage 5AU review-pack v2 records, Stage 5AT review-pack records, and Stage 5AR source-lock, image-variant, page-split, pixel-coordinate, case-policy, coordinate-validation, source-lock/null-control, DWH context, and guardrail records. Future Stage 5AZ review must preserve the Stage 5AY no-execution guardrails unless a later prompt explicitly scopes execution.
 
 ## Stage 5AT Token Case Review Pack Rules
 

@@ -1,8 +1,8 @@
 # Token-Block Source-Lock Workflow
 
-## Stage 5AX Note
+## Stage 5AY Note
 
-Stage 5AW supersedes Stage 5AV branch metadata for future token-block planning. Stage 5AX only inserted validation infrastructure, so Stage 5AY source-lock/preflight follow-up should cite the repaired Stage 5AW branch manifest and keep the Stage 5AP canonical transcription unchanged unless a future review stage explicitly scopes a canonical transcription update.
+Stage 5AW supersedes Stage 5AV branch metadata for future token-block planning. Stage 5AX only inserted validation infrastructure, and Stage 5AY now records bounded preflight design using the repaired Stage 5AW branch manifest. Keep the Stage 5AP canonical transcription unchanged unless a future review stage explicitly scopes a canonical transcription update.
 
 Use this workflow when a future stage works with the page 49-51 token block.
 

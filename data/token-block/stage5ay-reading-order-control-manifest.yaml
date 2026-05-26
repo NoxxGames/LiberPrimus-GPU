@@ -1,0 +1,71 @@
+record_type: stage5ay_reading_order_control_manifest
+schema: schemas/token-block/reading-order-control-manifest-v0.schema.json
+stage_id: stage-5ay
+families:
+- family_id: global_32_row_order
+  family_type: reading_order_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: per_page_local_order
+  family_type: reading_order_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: row_reversal
+  family_type: reading_order_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: column_reversal
+  family_type: reading_order_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: row_column_reversal
+  family_type: reading_order_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: row_shuffle_fixed_seed
+  family_type: reading_order_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: column_shuffle_fixed_seed
+  family_type: reading_order_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: token_shuffle_fixed_seed
+  family_type: reading_order_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+controls_executed: false
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false

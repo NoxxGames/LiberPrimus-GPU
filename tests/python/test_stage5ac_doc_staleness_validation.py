@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5ax_latest_and_stage5ay_next() -> None:
+def test_operational_docs_use_stage5ay_latest_and_stage5az_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5AX parallel validation harness and fast CI check orchestrator" in status
-    assert "Next recommended prompt: Stage 5AY" in status
-    assert "Latest completed stage: Stage 5AX" in staged_plan
-    assert "Current planning focus: Stage 5AY" in staged_plan
+    assert "Stage 5AY bounded token-block preflight manifest design without execution" in status
+    assert "Next recommended prompt: Stage 5AZ" in status
+    assert "Latest completed stage: Stage 5AY" in staged_plan
+    assert "Current planning focus: Stage 5AZ" in staged_plan

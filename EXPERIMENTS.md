@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AY Bounded Token-Block Preflight Manifest Design
+
+Stage 5AY is manifest-design infrastructure, not an experiment. It commits compact source-input, design-policy, branch-eligibility, bounded variant-family, null/alphabet/reading-order/page-split/source-control, branch-budget, future-result-schema preview, execution-gate, DWH-context, guardrail, and next-stage records.
+
+Generated Stage 5AY reports remain ignored under `experiments/results/token-block/stage5ay/`. Stage 5AY uses the Stage 5AW repaired branch manifest and records that the Stage 5AV branch manifest is superseded for planning. It performs no token experiment, variant byte-stream generation, full Cartesian enumeration, DWH/hash search, decode attempt, OCR, AI/ML interpretation, LLM/vision token reading, semantic image interpretation, hidden-content image forensics, stego execution, CUDA, cryptanalytic benchmark, scored experiment, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AX Parallel Validation Harness
 
 Stage 5AX is validation infrastructure, not an experiment. It commits metadata for a parallel validation plan, command registry, run policy, pytest shard plan, run summary, safety audit, guardrail, and Stage 5AY next-stage decision.

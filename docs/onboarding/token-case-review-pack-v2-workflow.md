@@ -1,8 +1,8 @@
 # Token Case Review Pack V2 Workflow
 
-## Stage 5AX Note
+## Stage 5AY Note
 
-The filled Stage 5AU v2 decision template remains local and ignored. Stage 5AW consumed it only to rebuild compact repaired metadata and does not change generated review-pack files, crops, overlays, or canonical transcription. Stage 5AX adds validation infrastructure only, and Stage 5AY is the next bounded preflight design stage.
+The filled Stage 5AU v2 decision template remains local and ignored. Stage 5AW consumed it only to rebuild compact repaired metadata and does not change generated review-pack files, crops, overlays, or canonical transcription. Stage 5AX adds validation infrastructure only, and Stage 5AY records bounded preflight design without execution.
 
 Use Stage 5AU records when preparing the next manual review:
 

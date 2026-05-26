@@ -181,6 +181,25 @@ STAGE5AW_GUARDRAIL_PATH = DATA_DIR / "stage5aw-guardrail.yaml"
 STAGE5AW_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5aw-next-stage-decision.yaml"
 STAGE5AW_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5aw-summary.yaml"
 
+STAGE5AY_ID = "stage-5ay"
+STAGE5AY_RESULTS_DIR = Path("experiments/results/token-block/stage5ay")
+STAGE5AY_PREFLIGHT_SOURCE_INPUTS_PATH = DATA_DIR / "stage5ay-preflight-source-inputs.yaml"
+STAGE5AY_PREFLIGHT_DESIGN_POLICY_PATH = DATA_DIR / "stage5ay-preflight-design-policy.yaml"
+STAGE5AY_BRANCH_ELIGIBILITY_POLICY_PATH = DATA_DIR / "stage5ay-branch-eligibility-policy.yaml"
+STAGE5AY_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH = DATA_DIR / "stage5ay-bounded-variant-family-manifest.yaml"
+STAGE5AY_NULL_CONTROL_FAMILY_MANIFEST_PATH = DATA_DIR / "stage5ay-null-control-family-manifest.yaml"
+STAGE5AY_ALPHABET_CONTROL_MANIFEST_PATH = DATA_DIR / "stage5ay-alphabet-control-manifest.yaml"
+STAGE5AY_READING_ORDER_CONTROL_MANIFEST_PATH = DATA_DIR / "stage5ay-reading-order-control-manifest.yaml"
+STAGE5AY_PAGE_SPLIT_CONTROL_MANIFEST_PATH = DATA_DIR / "stage5ay-page-split-control-manifest.yaml"
+STAGE5AY_SOURCE_CONTROL_MANIFEST_PATH = DATA_DIR / "stage5ay-source-control-manifest.yaml"
+STAGE5AY_BRANCH_COUNT_BUDGET_PATH = DATA_DIR / "stage5ay-branch-count-budget.yaml"
+STAGE5AY_FUTURE_RESULT_SCHEMA_PREVIEW_PATH = DATA_DIR / "stage5ay-future-result-schema-preview.yaml"
+STAGE5AY_EXECUTION_GATES_PATH = DATA_DIR / "stage5ay-execution-gates.yaml"
+STAGE5AY_DWH_PREFLIGHT_CONTEXT_PATH = DATA_DIR / "stage5ay-dwh-preflight-context.yaml"
+STAGE5AY_GUARDRAIL_PATH = DATA_DIR / "stage5ay-guardrail.yaml"
+STAGE5AY_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5ay-next-stage-decision.yaml"
+STAGE5AY_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5ay-summary.yaml"
+
 FALSE_GUARDRAILS = {
     "network_fetch_performed": False,
     "online_repo_clone_performed": False,

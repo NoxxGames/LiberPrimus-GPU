@@ -1120,3 +1120,42 @@ records:
   owner_context: research_operator
   notes: Documents the opt-in local validation harness, pytest xdist/shard behavior,
     serial-only protections, ignored logs, and Stage 5AY next-stage routing.
+- path: data/project-state/stage5ay-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AY bounded token-block preflight manifest design aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ay
+  expected_update_frequency: when_token_block_preflight_manifest_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records source input count, branch eligibility count, branch budget,
+    manifest/control family count, execution-gate count, DWH status, no-execution
+    guardrails, and the Stage 5AZ next-stage decision.
+- path: data/token-block/stage5ay-execution-gates.yaml
+  category: active_data_record
+  purpose: Stage 5AY future token-block preflight execution gates.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ay
+  expected_update_frequency: when_token_block_execution_gate_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Blocks execution until source-lock, case-review, manifest-review,
+    null-control, execution-scope, DWH, and safety gates are satisfied by a future
+    explicit stage.
+- path: docs/onboarding/bounded-token-block-preflight-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5AY bounded token-block preflight design workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ay
+  expected_update_frequency: every_token_block_preflight_design_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents that Stage 5AY uses Stage 5AW repaired branch metadata,
+    supersedes Stage 5AV branch metadata for planning, defines controls and gates,
+    and remains non-executing pending Stage 5AZ review.

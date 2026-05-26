@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AY branch eligibility policy",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "stage5aw_repaired_branch_manifest_used", "stage5av_branch_manifest_used", "eligibility_classes", "option_records", "full_cartesian_product_allowed", "variant_byte_streams_generated", "token_experiments_executed", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5ay" },
+    "stage5aw_repaired_branch_manifest_used": { "const": true },
+    "stage5av_branch_manifest_used": { "const": false },
+    "full_cartesian_product_allowed": { "const": false },
+    "variant_byte_streams_generated": { "const": false },
+    "token_experiments_executed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

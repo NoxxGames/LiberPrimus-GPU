@@ -1,0 +1,92 @@
+record_type: stage5ay_bounded_variant_family_manifest
+schema: schemas/token-block/bounded-variant-family-manifest-v0.schema.json
+stage_id: stage-5ay
+source_policy: data/token-block/stage5ay-preflight-design-policy.yaml
+source_branch_eligibility: data/token-block/stage5ay-branch-eligibility-policy.yaml
+stage5aw_repaired_branch_manifest_used: true
+stage5av_branch_manifest_used: false
+family_count: 11
+families:
+- family_id: keep_current_baseline
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: unresolved_as_current_only
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: single_change_variants
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: per_ambiguity_class_variants
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: primary60_mappable_only_variants
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: visual_placeholder_excluded_variants
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: reviewer_extra_possible_token_variants
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: unresolved_as_excluded
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: unresolved_as_all_declared_variants
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: unresolved_as_current_only
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: unresolved_as_primary60_mappable_only
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+visual_placeholder_family_execution_allowed: false
+full_cartesian_product_allowed: false
+variant_byte_streams_generated: false
+token_experiments_executed: false
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+variant_experiments_executed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false

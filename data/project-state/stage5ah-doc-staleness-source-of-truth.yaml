@@ -3,15 +3,15 @@ schema: schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.jso
 stage_id: stage-5ah
 status: complete
 latest_completed_stage_before_stage5ah: stage-5ag
-latest_completed_stage_after_this_stage: Stage 5AX - parallel validation harness and fast CI check orchestrator
-latest_completed_stage_prefix: Stage 5AX
-next_stage_after_this_stage: Stage 5AY - bounded token-block preflight manifest design without execution
-expected_next_stage_prefix: Stage 5AY
+latest_completed_stage_after_this_stage: Stage 5AY - bounded token-block preflight manifest design without execution
+latest_completed_stage_prefix: Stage 5AY
+next_stage_after_this_stage: Stage 5AZ - Deep Research review of bounded token-block preflight manifest and execution gates
+expected_next_stage_prefix: Stage 5AZ
 latest_previous_stage: Stage 5AH - operational documentation staleness coverage repair and README stage ledger audit
 stage5ah_role: operational_doc_staleness_coverage_repair
 user_override_reason: README stage ledger stale, one section only goes to Stage 5N, other docs may be missed
-expected_latest_after_stage5ah: Stage 5AX - parallel validation harness and fast CI check orchestrator
-expected_next_after_stage5ah: Stage 5AY - bounded token-block preflight manifest design without execution
+expected_latest_after_stage5ah: Stage 5AY - bounded token-block preflight manifest design without execution
+expected_next_after_stage5ah: Stage 5AZ - Deep Research review of bounded token-block preflight manifest and execution gates
 website_expansion_status: deferred_future_unnumbered_project
 scored_experiments_status: deferred_manifest_gate_required
 unsolved_page_cuda_status: blocked

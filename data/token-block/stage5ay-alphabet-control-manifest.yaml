@@ -1,0 +1,61 @@
+record_type: stage5ay_alphabet_control_manifest
+schema: schemas/token-block/alphabet-control-manifest-v0.schema.json
+stage_id: stage-5ay
+families:
+- family_id: primary60_current_alphabet
+  family_type: alphabet_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: reversed_primary60_control
+  family_type: alphabet_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: case_swapped_primary60_control
+  family_type: alphabet_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: digit_lower_upper_variant_control
+  family_type: alphabet_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: seeded_permutation_3301_control
+  family_type: alphabet_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: seeded_permutation_1033_control
+  family_type: alphabet_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+controls_executed: false
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false

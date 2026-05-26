@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AY guardrail",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "status", "stage5aw_repaired_branch_manifest_used", "stage5av_branch_manifest_used", "variant_byte_streams_generated", "token_experiments_executed", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5ay" },
+    "status": { "const": "passed" },
+    "stage5aw_repaired_branch_manifest_used": { "const": true },
+    "stage5av_branch_manifest_used": { "const": false },
+    "variant_byte_streams_generated": { "const": false },
+    "token_experiments_executed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -260,3 +260,12 @@ If Codex changes Stage 5AX parallel validation, verify
 `libreprimus parallel-validation validate-stage5ax`, keep generated logs under ignored
 `experiments/results/ci/parallel-validation/stage5ax/`, and keep git, GitHub, network/remote,
 generated-output-writing, issue-update, commit, push, and final staging checks serial.
+
+Stage 5AY completion handoffs belong under ignored `codex-output/stage5ay-codex-completion.md`.
+If Codex changes Stage 5AY bounded token-block preflight design, verify
+`libreprimus token-block validate-stage5ay`, keep generated reports under ignored
+`experiments/results/token-block/stage5ay/`, use the Stage 5AW repaired branch manifest rather than
+the superseded Stage 5AV branch manifest for planning, and do not generate variant byte streams,
+run token experiments, enumerate full Cartesian products, run DWH/hash searches, decode, score,
+run OCR/AI/ML/LLM vision, run stego, run CUDA, benchmark, execute scored experiments, or make solve
+claims.

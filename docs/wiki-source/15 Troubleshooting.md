@@ -937,3 +937,9 @@ the concurrent pool. If a validation run fails, inspect the separated stdout/std
 ignored `experiments/results/ci/parallel-validation/stage5ax/logs/`, then rerun the failing command
 directly. Keep git, GitHub, network/remote, generated-output-writing, commit, and push operations
 serial.
+
+For Stage 5AY bounded preflight design, validation failures usually mean a source input is missing,
+the Stage 5AW repaired branch manifest is not being used, a no-execution flag drifted, or generated
+reports are not ignored. Rerun `libreprimus token-block validate-stage5ay`, inspect
+`data/token-block/stage5ay-*.yaml`, confirm `experiments/results/token-block/stage5ay/*.json` is
+ignored, and keep Stage 5AZ review as the next action rather than implementing a runner.

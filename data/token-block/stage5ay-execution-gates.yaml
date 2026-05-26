@@ -1,0 +1,82 @@
+record_type: stage5ay_execution_gates
+schema: schemas/token-block/execution-gates-v0.schema.json
+stage_id: stage-5ay
+source_inputs: data/token-block/stage5ay-preflight-source-inputs.yaml
+branch_budget: data/token-block/stage5ay-branch-count-budget.yaml
+variant_family: data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+null_control_family: data/token-block/stage5ay-null-control-family-manifest.yaml
+all_gates_required_before_execution: true
+execution_authorised_now: false
+gates:
+- gate_id: source_lock_gate
+  required: true
+  status: design_satisfied_execution_still_blocked
+  requirements:
+  - Stage 5AR original-image coordinate records exist and validate.
+- gate_id: case_review_gate
+  required: true
+  status: design_satisfied_execution_still_blocked
+  requirements:
+  - Stage 5AV/5AW human decisions are integrated.
+  - Stage 5AW repaired branch manifest is used.
+  - Stage 5AV branch manifest is superseded.
+- gate_id: manifest_review_gate
+  required: true
+  status: blocked_pending_stage5az_or_later_review
+  requirements:
+  - Stage 5AY manifest design exists.
+  - Stage 5AY manifest has passed validation.
+  - A later Deep Research or human review has approved the manifest.
+- gate_id: null_control_gate
+  required: true
+  status: defined_not_executed
+  requirements:
+  - Null controls are defined before execution.
+  - Control families are fixed before any result inspection.
+- gate_id: execution_scope_gate
+  required: true
+  status: blocked_pending_later_authorisation
+  requirements:
+  - Maximum branch count is bounded.
+  - No full Cartesian product above threshold.
+  - Sampled variants require fixed seeds and later authorisation.
+- gate_id: dwh_gate
+  required: true
+  status: blocked_speculative_source_lock_required
+  requirements:
+  - DWH remains speculative.
+  - No hash/preimage search unless exact hash object, algorithm, input material, and
+    target policy are source-locked by a later stage.
+- gate_id: safety_gate
+  required: true
+  status: blocked_execution_not_authorised
+  requirements:
+  - No CUDA unless explicitly staged later.
+  - No scored experiment until manifest review and execution authorisation.
+  - No solve claim.
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false

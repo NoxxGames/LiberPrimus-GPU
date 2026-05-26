@@ -1,0 +1,47 @@
+record_type: stage5ay_source_control_manifest
+schema: schemas/token-block/source-control-manifest-v0.schema.json
+stage_id: stage-5ay
+families:
+- family_id: wrong_page_block_control_future_source_lock_required
+  family_type: source_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: random_lp_like_token_stream_from_observed_frequencies
+  family_type: source_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+- family_id: random_lp_like_token_stream_from_uniform_primary60
+  family_type: source_control
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+future_source_lock_required_for_wrong_page_block_control: true
+controls_executed: false
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false

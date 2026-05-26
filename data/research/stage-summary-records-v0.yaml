@@ -1272,3 +1272,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AX records 10 parallel-safe commands, 6 serial commands, 1 blocked command, 16 requested/used validation workers, 16 requested/used pytest workers, shard-mode pytest fallback because pytest-xdist was unavailable locally, 0 failed commands, and Stage 5AY bounded token-block preflight manifest design without execution as the next stage. It performs no token experiments, variant byte-stream generation, DWH/hash search, decode attempt, OCR, AI/ML or LLM/vision reading, semantic image interpretation, hidden-content image forensics, stego execution, CUDA execution/source modification/kernel addition, cryptanalytic benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ay
+    title: Bounded token-block preflight manifest design without execution
+    status: complete
+    category: infrastructure
+    summary: Designed bounded future preflight manifests for the page 49-51 token block using Stage 5AW repaired branch metadata and Stage 5AX validation metadata, without execution.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5AY commands for preflight design, control manifests, execution gates, summary generation, and validation."
+      - Stage 5AY source-input, design-policy, branch-eligibility, bounded variant-family, null-control, alphabet-control, reading-order, page-split, source-control, branch-budget, future-result-schema, execution-gate, DWH-context, guardrail, next-stage, and aggregate summary records under `data/token-block/` and `data/project-state/`.
+      - Ignored generated design reports under `experiments/results/token-block/stage5ay/`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AY records 15 source inputs, 167 branch eligibility option records, 11 variant families, 38 total manifest/control families, 7 execution gates, branch upper-bound product 2720083094132915643088896 and log10 24.434582, primary-60 mappable branch product 4194304 and log10 6.62266, and Stage 5AZ Deep Research review as the next stage. It consumes Stage 5AW repaired branch metadata, keeps Stage 5AV branch metadata superseded for planning, and performs no token experiments, variant byte-stream generation, Cartesian branch enumeration, DWH/hash search, decode attempt, OCR, AI/ML or LLM/vision reading, semantic image interpretation, hidden-content image forensics, stego execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

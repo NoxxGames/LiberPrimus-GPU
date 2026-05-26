@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AY execution gates",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "all_gates_required_before_execution", "execution_authorised_now", "gates", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5ay" },
+    "all_gates_required_before_execution": { "const": true },
+    "execution_authorised_now": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

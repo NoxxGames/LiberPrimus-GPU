@@ -1,0 +1,12 @@
+record_type: stage5ay_next_stage_decision
+schema: schemas/project-state/stage5ay-summary-v0.schema.json
+stage_id: stage-5ay
+selected_option_id: stage5az_deep_research_review_of_bounded_preflight_manifest_and_execution_gates
+selected_next_stage_title: Stage 5AZ - Deep Research review of bounded token-block
+  preflight manifest and execution gates
+selected_next_stage_reason: Stage 5AY produced design-only manifests and gates; Deep
+  Research or human review should inspect them before any runner implementation or
+  execution.
+deep_research_review_recommended_next: true
+execution_enabled: false
+solve_claim: false

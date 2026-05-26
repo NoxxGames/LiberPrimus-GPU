@@ -1,0 +1,43 @@
+record_type: stage5ay_dwh_preflight_context
+schema: schemas/token-block/dwh-preflight-context-v0.schema.json
+stage_id: stage-5ay
+dwh_defined: true
+dwh_expansion: Deep Web Hash
+token_block_dwh_relationship_status: speculative_source_lock_required
+dwh_operational_status: not_operational
+preflight_manifest_relevance: bounded token-block preflight may eventually help define
+  candidate byte material, but this stage does not generate bytes or search hashes
+source_lock_required_before_hash_search: true
+exact_hash_object_required_before_hash_search: true
+algorithm_policy_required_before_hash_search: true
+input_material_policy_required_before_hash_search: true
+branch_count_upper_bound_product: 2720083094132915643088896
+hash_search_performed: false
+hash_preimage_claim: false
+decode_claim: false
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false

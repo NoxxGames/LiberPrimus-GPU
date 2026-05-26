@@ -1,0 +1,1619 @@
+record_type: stage5ay_branch_eligibility_policy
+schema: schemas/token-block/branch-eligibility-policy-v0.schema.json
+stage_id: stage-5ay
+token_block_id: stage5ap-page49-51-token-block
+source_branch_manifest: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+stage5aw_repaired_branch_manifest_used: true
+stage5av_branch_manifest_used: false
+eligibility_classes:
+  canonical_current_token: 76
+  human_confirmed_keep_current_token: 0
+  generated_candidate_token: 76
+  reviewer_extra_possible_token: 10
+  visual_placeholder_from_reviewer_notes: 2
+  malformed_fragment_audit_only: 3
+  primary60_mappable_option: 99
+  primary60_unmappable_visual_option: 2
+  primary60_unmappable_non_digit_prefix: 63
+  primary60_unmappable_suffix_not_in_alphabet: 0
+  execution_ineligible_option: 68
+option_record_count: 167
+option_records:
+- challenge_id: stage5at-token-case-002
+  token_index_0_based: 2
+  token: 2I
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-002
+  token_index_0_based: 2
+  token: 2l
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-013
+  token_index_0_based: 13
+  token: '04'
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-013
+  token_index_0_based: 13
+  token: O4
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-013
+  token_index_0_based: 13
+  token: ?4
+  option_classes:
+  - visual_placeholder_from_reviewer_notes
+  - primary60_unmappable_visual_option
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: visual_placeholder_unmappable
+- challenge_id: stage5at-token-case-018
+  token_index_0_based: 18
+  token: 0F
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-018
+  token_index_0_based: 18
+  token: OF
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-019
+  token_index_0_based: 19
+  token: 0X
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-019
+  token_index_0_based: 19
+  token: OX
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-022
+  token_index_0_based: 22
+  token: 0x
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-022
+  token_index_0_based: 22
+  token: Ox
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-025
+  token_index_0_based: 25
+  token: 3I
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-025
+  token_index_0_based: 25
+  token: 3l
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-025
+  token_index_0_based: 25
+  token: 3?
+  option_classes:
+  - visual_placeholder_from_reviewer_notes
+  - primary60_unmappable_visual_option
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: visual_placeholder_unmappable
+- challenge_id: stage5at-token-case-027
+  token_index_0_based: 27
+  token: 0P
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-027
+  token_index_0_based: 27
+  token: OP
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-035
+  token_index_0_based: 35
+  token: 0d
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-035
+  token_index_0_based: 35
+  token: Od
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-036
+  token_index_0_based: 36
+  token: 0s
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-036
+  token_index_0_based: 36
+  token: Os
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-039
+  token_index_0_based: 39
+  token: '05'
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-039
+  token_index_0_based: 39
+  token: O5
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-041
+  token_index_0_based: 41
+  token: '10'
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-041
+  token_index_0_based: 41
+  token: 1O
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-042
+  token_index_0_based: 42
+  token: 0S
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-042
+  token_index_0_based: 42
+  token: OS
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-045
+  token_index_0_based: 45
+  token: 1I
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-045
+  token_index_0_based: 45
+  token: 1l
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-049
+  token_index_0_based: 49
+  token: 0G
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-049
+  token_index_0_based: 49
+  token: OG
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-050
+  token_index_0_based: 50
+  token: 0I
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-050
+  token_index_0_based: 50
+  token: 0l
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-050
+  token_index_0_based: 50
+  token: OI
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-050
+  token_index_0_based: 50
+  token: Ol
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-051
+  token_index_0_based: 51
+  token: 0x
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-051
+  token_index_0_based: 51
+  token: Ox
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-063
+  token_index_0_based: 63
+  token: 0p
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-066
+  token_index_0_based: 66
+  token: 0P
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-077
+  token_index_0_based: 77
+  token: '20'
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-077
+  token_index_0_based: 77
+  token: 2O
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-078
+  token_index_0_based: 78
+  token: 0k
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-078
+  token_index_0_based: 78
+  token: Ok
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-081
+  token_index_0_based: 81
+  token: 0w
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-081
+  token_index_0_based: 81
+  token: Ow
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-085
+  token_index_0_based: 85
+  token: 0S
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-085
+  token_index_0_based: 85
+  token: OS
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-090
+  token_index_0_based: 90
+  token: 3I
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-090
+  token_index_0_based: 90
+  token: 3l
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-091
+  token_index_0_based: 91
+  token: 0n
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-091
+  token_index_0_based: 91
+  token: 'On'
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-093
+  token_index_0_based: 93
+  token: '10'
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-093
+  token_index_0_based: 93
+  token: 1O
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-094
+  token_index_0_based: 94
+  token: 0u
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-094
+  token_index_0_based: 94
+  token: Ou
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-095
+  token_index_0_based: 95
+  token: 0Z
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-095
+  token_index_0_based: 95
+  token: OZ
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-099
+  token_index_0_based: 99
+  token: 0Y
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-099
+  token_index_0_based: 99
+  token: OY
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-102
+  token_index_0_based: 102
+  token: 0W
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-102
+  token_index_0_based: 102
+  token: OW
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-106
+  token_index_0_based: 106
+  token: 0V
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-106
+  token_index_0_based: 106
+  token: OV
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-108
+  token_index_0_based: 108
+  token: 0E
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-108
+  token_index_0_based: 108
+  token: OE
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-110
+  token_index_0_based: 110
+  token: 0W
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-110
+  token_index_0_based: 110
+  token: OW
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-116
+  token_index_0_based: 116
+  token: 0s
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-116
+  token_index_0_based: 116
+  token: Os
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-118
+  token_index_0_based: 118
+  token: 0Z
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-118
+  token_index_0_based: 118
+  token: OZ
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-120
+  token_index_0_based: 120
+  token: 0g
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-120
+  token_index_0_based: 120
+  token: Og
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-123
+  token_index_0_based: 123
+  token: 0s
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-123
+  token_index_0_based: 123
+  token: Os
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-124
+  token_index_0_based: 124
+  token: 0D
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-124
+  token_index_0_based: 124
+  token: OD
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-125
+  token_index_0_based: 125
+  token: 0K
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-125
+  token_index_0_based: 125
+  token: OK
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-131
+  token_index_0_based: 131
+  token: '20'
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-131
+  token_index_0_based: 131
+  token: 2O
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-136
+  token_index_0_based: 136
+  token: 0A
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-136
+  token_index_0_based: 136
+  token: OA
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-139
+  token_index_0_based: 139
+  token: 0D
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-139
+  token_index_0_based: 139
+  token: OD
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-141
+  token_index_0_based: 141
+  token: 0k
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-141
+  token_index_0_based: 141
+  token: Ok
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-153
+  token_index_0_based: 153
+  token: 0X
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-153
+  token_index_0_based: 153
+  token: OX
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-154
+  token_index_0_based: 154
+  token: 0E
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-154
+  token_index_0_based: 154
+  token: OE
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-156
+  token_index_0_based: 156
+  token: 0q
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-156
+  token_index_0_based: 156
+  token: Oq
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-164
+  token_index_0_based: 164
+  token: 1i
+  option_classes:
+  - reviewer_extra_possible_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-164
+  token_index_0_based: 164
+  token: 1j
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-165
+  token_index_0_based: 165
+  token: 0I
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-165
+  token_index_0_based: 165
+  token: 0j
+  option_classes:
+  - reviewer_extra_possible_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-165
+  token_index_0_based: 165
+  token: Oj
+  option_classes:
+  - reviewer_extra_possible_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-165
+  token_index_0_based: 165
+  token: Ol
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-168
+  token_index_0_based: 168
+  token: '40'
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-168
+  token_index_0_based: 168
+  token: 4O
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-171
+  token_index_0_based: 171
+  token: 0s
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-171
+  token_index_0_based: 171
+  token: Os
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-175
+  token_index_0_based: 175
+  token: 0I
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-175
+  token_index_0_based: 175
+  token: 0j
+  option_classes:
+  - reviewer_extra_possible_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-175
+  token_index_0_based: 175
+  token: Oj
+  option_classes:
+  - reviewer_extra_possible_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-175
+  token_index_0_based: 175
+  token: Ol
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-180
+  token_index_0_based: 180
+  token: '20'
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-180
+  token_index_0_based: 180
+  token: 2O
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-181
+  token_index_0_based: 181
+  token: 0e
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-181
+  token_index_0_based: 181
+  token: Oe
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-186
+  token_index_0_based: 186
+  token: 0j
+  option_classes:
+  - reviewer_extra_possible_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-186
+  token_index_0_based: 186
+  token: 0J
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-186
+  token_index_0_based: 186
+  token: Oj
+  option_classes:
+  - reviewer_extra_possible_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-186
+  token_index_0_based: 186
+  token: OJ
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-188
+  token_index_0_based: 188
+  token: 0c
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-188
+  token_index_0_based: 188
+  token: Oc
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-191
+  token_index_0_based: 191
+  token: 0X
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-191
+  token_index_0_based: 191
+  token: OX
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-192
+  token_index_0_based: 192
+  token: '00'
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-192
+  token_index_0_based: 192
+  token: OO
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-198
+  token_index_0_based: 198
+  token: 1I
+  option_classes:
+  - reviewer_extra_possible_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-198
+  token_index_0_based: 198
+  token: 1j
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-199
+  token_index_0_based: 199
+  token: 0I
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-199
+  token_index_0_based: 199
+  token: 0j
+  option_classes:
+  - reviewer_extra_possible_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-199
+  token_index_0_based: 199
+  token: OI
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-199
+  token_index_0_based: 199
+  token: Oj
+  option_classes:
+  - reviewer_extra_possible_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-207
+  token_index_0_based: 207
+  token: 0L
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-207
+  token_index_0_based: 207
+  token: OL
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-208
+  token_index_0_based: 208
+  token: 0v
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-208
+  token_index_0_based: 208
+  token: Ov
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-210
+  token_index_0_based: 210
+  token: '06'
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-210
+  token_index_0_based: 210
+  token: O6
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-215
+  token_index_0_based: 215
+  token: '10'
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-215
+  token_index_0_based: 215
+  token: 1O
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-219
+  token_index_0_based: 219
+  token: 0x
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-219
+  token_index_0_based: 219
+  token: Ox
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-220
+  token_index_0_based: 220
+  token: 0w
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-220
+  token_index_0_based: 220
+  token: Ow
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-221
+  token_index_0_based: 221
+  token: 0q
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-221
+  token_index_0_based: 221
+  token: Oq
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-222
+  token_index_0_based: 222
+  token: 0p
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-222
+  token_index_0_based: 222
+  token: Op
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-225
+  token_index_0_based: 225
+  token: 0q
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-225
+  token_index_0_based: 225
+  token: Oq
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-228
+  token_index_0_based: 228
+  token: '20'
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-228
+  token_index_0_based: 228
+  token: 2O
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-229
+  token_index_0_based: 229
+  token: '00'
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-229
+  token_index_0_based: 229
+  token: OO
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-237
+  token_index_0_based: 237
+  token: 0W
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-237
+  token_index_0_based: 237
+  token: OW
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-240
+  token_index_0_based: 240
+  token: '20'
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-240
+  token_index_0_based: 240
+  token: 2O
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-242
+  token_index_0_based: 242
+  token: 0g
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-242
+  token_index_0_based: 242
+  token: Og
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-244
+  token_index_0_based: 244
+  token: 0M
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-244
+  token_index_0_based: 244
+  token: OM
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-245
+  token_index_0_based: 245
+  token: 0u
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-245
+  token_index_0_based: 245
+  token: Ou
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-246
+  token_index_0_based: 246
+  token: 3I
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-246
+  token_index_0_based: 246
+  token: 3l
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-252
+  token_index_0_based: 252
+  token: '30'
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-252
+  token_index_0_based: 252
+  token: 3O
+  option_classes:
+  - generated_candidate_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-253
+  token_index_0_based: 253
+  token: 0a
+  option_classes:
+  - canonical_current_token
+  - primary60_mappable_option
+  variant_byte_stream_eligible: true
+  primary60_mappable: true
+  primary60_error: null
+- challenge_id: stage5at-token-case-253
+  token_index_0_based: 253
+  token: Oa
+  option_classes:
+  - generated_candidate_token
+  - primary60_unmappable_non_digit_prefix
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: first_symbol_not_in_0_to_4
+- challenge_id: stage5at-token-case-013
+  token_index_0_based: 13
+  token: null
+  option_classes:
+  - malformed_fragment_audit_only
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: malformed_fragment_audit_only
+- challenge_id: stage5at-token-case-013
+  token_index_0_based: 13
+  token: null
+  option_classes:
+  - malformed_fragment_audit_only
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: malformed_fragment_audit_only
+- challenge_id: stage5at-token-case-025
+  token_index_0_based: 25
+  token: null
+  option_classes:
+  - malformed_fragment_audit_only
+  - execution_ineligible_option
+  variant_byte_stream_eligible: false
+  primary60_mappable: false
+  primary60_error: malformed_fragment_audit_only
+visual_placeholders_preserved_for_review: true
+visual_placeholder_family_execution_allowed: false
+malformed_fragments_audit_only: true
+full_cartesian_product_allowed: false
+variant_byte_streams_generated: false
+token_experiments_executed: false
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+variant_experiments_executed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
