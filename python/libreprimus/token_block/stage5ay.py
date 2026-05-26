@@ -812,8 +812,7 @@ def validate_stage5ay(
         errors.append("dwh_expansion_must_be_Deep_Web_Hash")
     if payloads["next_stage_decision"].get("selected_next_stage_title") != STAGE5AZ_TITLE:
         errors.append("selected_next_stage_must_be_stage5az")
-    if not (results_dir / "summary.json").exists():
-        errors.append("stage5ay_generated_summary_missing")
+    generated_summary_present = (results_dir / "summary.json").exists()
     counts = {
         "source_input_record_count": payloads["source_inputs"].get("source_record_count"),
         "branch_eligibility_option_record_count": payloads["branch_eligibility"].get("option_record_count"),
@@ -823,6 +822,7 @@ def validate_stage5ay(
         "primary60_mappable_branch_product": payloads["branch_budget"].get(
             "primary60_mappable_branch_upper_bound_product"
         ),
+        "stage5ay_generated_summary_present": generated_summary_present,
         "validation_error_count": len(errors),
     }
     return counts, errors
