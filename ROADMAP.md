@@ -4,9 +4,9 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5AW decision possible-token parser cleanup and branch-manifest repair is complete. It consumed the Stage 5AV decision metadata plus the ignored local Stage 5AU v2 `decision-template.yaml`, found `3` malformed prose-as-token reviewer extras, preserved `10` valid reviewer-extra tokens and `2` visual placeholders, recalculated primary-60 mappability, created a superseding compact branch manifest, and kept the Stage 5AP canonical transcription unchanged.
+Stage 5AX parallel validation harness and fast CI check orchestrator is complete. It consumed the Stage 5AW repaired branch metadata and the user override to insert validation-speed infrastructure before bounded preflight design, added a subprocess-based parallel validation CLI, command classification, deterministic pytest sharding fallback, xdist detection, safety audit records, opt-in scripts, and compact run summaries while keeping the existing serial CI path conservative.
 
-The next recommended prompt is Stage 5AX - bounded token-block preflight manifest design without execution. Public website expansion is deferred to a future review-gated project. Broad CUDA implementation remains deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5AY - bounded token-block preflight manifest design without execution. Public website expansion is deferred to a future review-gated project. Broad CUDA implementation remains deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

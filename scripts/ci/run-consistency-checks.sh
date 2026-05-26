@@ -7,6 +7,7 @@ cd "$repo_root"
 python_bin="${PYTHON:-python}"
 tmp_dir="$(mktemp -d)"
 trap 'rm -rf "$tmp_dir"' EXIT
+echo "For faster local validation, use scripts/ci/run-parallel-validation.sh --workers 16"
 
 echo "Running full consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-all --allow-warnings
@@ -23,14 +24,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5AW" \
-    --expected-next-stage "Stage 5AX" \
+    --expected-latest-stage "Stage 5AX" \
+    --expected-next-stage "Stage 5AY" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5AW" \
-    --expected-next-stage "Stage 5AX" \
+    --expected-latest-stage "Stage 5AX" \
+    --expected-next-stage "Stage 5AY" \
     --out "$stage5ah_out/current_next_stage_report.json"
 "$python_bin" - <<PY
 import json
@@ -45,14 +46,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AW",
+        expected_latest_stage="Stage 5AX",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AW",
+            "expected_latest_stage": "Stage 5AX",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2362,6 +2363,34 @@ stage5aw_token_results_root="$stage5aw_results_root/token-block/stage5aw"
 git check-ignore -q "$stage5aw_token_results_root/summary.json"
 git check-ignore -q "$stage5aw_token_results_root/repaired_token_variant_branch_manifest.json"
 git check-ignore -q "codex-output/stage5aw-codex-completion.md"
+
+echo "Validating Stage 5AX parallel validation records"
+stage5ax_results_root="$tmp_dir/stage5ax-parallel-validation"
+mkdir -p "$stage5ax_results_root"
+"$python_bin" - <<PY
+import json
+from pathlib import Path
+import yaml
+
+summary = yaml.safe_load(Path("data/ci/stage5ax-parallel-validation-run-summary.yaml").read_text(encoding="utf-8"))
+out = Path("$stage5ax_results_root")
+out.mkdir(parents=True, exist_ok=True)
+(out / "run-summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+PY
+"$python_bin" -m libreprimus.cli parallel-validation validate-stage5ax \
+    --plan data/ci/stage5ax-parallel-validation-plan.yaml \
+    --command-registry data/ci/stage5ax-parallel-command-registry.yaml \
+    --run-policy data/ci/stage5ax-parallel-run-policy.yaml \
+    --run-summary data/ci/stage5ax-parallel-validation-run-summary.yaml \
+    --safety-audit data/ci/stage5ax-parallel-validation-safety-audit.yaml \
+    --pytest-shard-plan data/ci/stage5ax-pytest-shard-plan.yaml \
+    --guardrail data/ci/stage5ax-guardrail.yaml \
+    --next-stage-decision data/project-state/stage5ax-next-stage-decision.yaml \
+    --summary data/project-state/stage5ax-summary.yaml \
+    --results-dir "$stage5ax_results_root"
+stage5ax_repo_results_root="experiments"/"results/ci/parallel-validation/stage5ax"
+git check-ignore -q "$stage5ax_repo_results_root/run-summary.json"
+git check-ignore -q "codex-output/stage5ax-codex-completion.md"
 
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

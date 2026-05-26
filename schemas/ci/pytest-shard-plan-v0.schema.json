@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AX pytest shard plan",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "shard_count", "test_file_count", "all_tests_covered_once", "shards"],
+  "properties": {
+    "record_type": { "const": "stage5ax_pytest_shard_plan" },
+    "schema": { "const": "schemas/ci/pytest-shard-plan-v0.schema.json" },
+    "stage_id": { "const": "stage-5ax" },
+    "shard_count": { "type": "integer", "minimum": 1 },
+    "test_file_count": { "type": "integer", "minimum": 1 },
+    "all_tests_covered_once": { "const": true },
+    "shards": { "type": "array" }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AX project-state summary",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id"],
+  "properties": {
+    "schema": { "const": "schemas/project-state/stage5ax-summary-v0.schema.json" },
+    "stage_id": { "const": "stage-5ax" },
+    "solve_claim": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "generated_validation_outputs_committed": { "const": false }
+  },
+  "additionalProperties": true
+}

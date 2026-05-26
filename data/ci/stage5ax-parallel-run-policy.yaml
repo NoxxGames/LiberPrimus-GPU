@@ -1,0 +1,22 @@
+record_type: stage5ax_parallel_run_policy
+schema: schemas/ci/parallel-run-policy-v0.schema.json
+stage_id: stage-5ax
+default_workers: auto
+max_workers_default: 16
+max_workers_cap: 16
+env_override: LIBERPRIMUS_VALIDATION_WORKERS
+pytest_worker_override: LIBERPRIMUS_PYTEST_WORKERS
+pytest_mode_override: LIBERPRIMUS_PYTEST_MODE
+results_dir_override: LIBERPRIMUS_PARALLEL_VALIDATION_RESULTS_DIR
+parallel_classes_allowed:
+- read_only_parallel_safe
+- read_only_parallel_safe_with_isolated_temp
+serial_classes_blocked_from_parallel:
+- serial_read_only_final_check
+- serial_generates_outputs
+- serial_git_mutating
+- serial_remote_or_network
+- serial_manual_only
+- blocked
+ci_default_parallel: false
+codex_local_parallel_recommended: true

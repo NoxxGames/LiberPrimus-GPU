@@ -1,8 +1,8 @@
 # Contributor Module Map
 
-## Stage 5AW Note
+## Stage 5AX Note
 
-The token-block module now includes Stage 5AW parser-repair helpers under `python/libreprimus/token_block/`. These helpers are metadata repair infrastructure only and must not be extended into token execution, decoding, DWH/hash search, OCR/AI/ML interpretation, CUDA, benchmarks, or scored experiments without an explicit future stage.
+The validation layer now includes Stage 5AX helpers under `python/libreprimus/parallel_validation/`. These helpers are subprocess orchestration and record-validation infrastructure only and must not be extended into token execution, decoding, DWH/hash search, OCR/AI/ML interpretation, CUDA, cryptanalytic benchmarks, or scored experiments without an explicit future stage. Token-block parser-repair helpers remain under `python/libreprimus/token_block/` for Stage 5AW records.
 
 ## Module Areas
 
@@ -23,6 +23,7 @@ The token-block module now includes Stage 5AW parser-repair helpers under `pytho
 - Stage 5AT/5AU token-case review packs: `python/libreprimus/token_block/`, `data/token-block/stage5at-*.yaml`, `data/token-block/stage5au-*.yaml`, `data/project-state/stage5at-*.yaml`, `data/project-state/stage5au-*.yaml`, `schemas/token-block/*case-review*.json`, `schemas/token-block/*challenge*.json`, `schemas/token-block/*review*.json`, and `schemas/token-block/*crop*.json`.
 - Research synthesis: `python/libreprimus/research_synthesis/`, `data/research/`.
 - Document staleness: `python/libreprimus/doc_staleness/`, `data/project-state/`, `schemas/project-state/`.
+- Parallel validation: `python/libreprimus/parallel_validation/`, `data/ci/stage5ax-*.yaml`, `schemas/ci/*parallel*.json`, and `scripts/ci/run-parallel-validation.*`.
 - Source harvester: `python/libreprimus/source_harvester/`, `data/source-harvester/`, `schemas/source-harvester/`.
 - Website renderer: `python/libreprimus/website_render/`, `data/website-render/`, `schemas/website-render/`.
 - CUDA parity/reporting: `python/libreprimus/cuda_*`, `python/libreprimus/prime_minus_one_*`, `python/libreprimus/bounded_p56_cuda_parity/`, `cuda/`, `data/cuda/`.
@@ -60,6 +61,8 @@ Stage 5AT/5AU token-block review modules build local human-review packs for case
 Stage 5AV token-block decision integration modules ingest the local filled Stage 5AU v2 decision template into committed metadata, confirmed-token records, unresolved variant records, reviewer-extra possible-token records, primary-60 impact summaries, and compact branch manifests. They must not commit the human decision template or generated reports, change canonical transcription, auto-resolve unresolved variants, generate variant byte streams, decode, search DWH/hash/preimage candidates, execute stego/CUDA/scored experiments, benchmark, or make solve claims.
 
 Stage 5AW token-block decision-parser repair modules audit possible-token parser contamination, preserve valid reviewer extras, preserve visual placeholders as review-only unmappable records, audit malformed prose fragments, and rebuild repaired compact branch metadata. They must not reinterpret human decisions, change canonical transcription, generate variant byte streams, decode, search DWH/hash/preimage candidates, execute stego/CUDA/scored experiments, benchmark, or make solve claims.
+
+Stage 5AX parallel-validation modules classify commands, cap worker counts, run read-only validation subprocesses, shard pytest when xdist is unavailable, aggregate logs/failures, and validate safety records. They must not schedule git/GitHub/network/generated-output-writing commands in the parallel pool or run cryptanalytic work.
 
 ## Good First Areas
 

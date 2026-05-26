@@ -41,6 +41,13 @@ packages = ["python/libreprimus"]
 [tool.pytest.ini_options]
 testpaths = ["tests/python"]
 pythonpath = ["python"]
+markers = [
+  "serial: tests that must not run concurrently with other tests",
+  "writes_repo: tests that write repository files",
+  "writes_generated_outputs: tests that write generated output paths",
+  "network: tests that require network access",
+  "slow: slower tests that may be scheduled separately",
+]
 
 [tool.ruff]
 line-length = 100

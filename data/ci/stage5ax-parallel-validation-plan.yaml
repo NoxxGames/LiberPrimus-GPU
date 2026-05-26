@@ -1,0 +1,20 @@
+record_type: stage5ax_parallel_validation_plan
+schema: schemas/ci/parallel-validation-plan-v0.schema.json
+stage_id: stage-5ax
+stage_title: Stage 5AX - parallel validation harness and fast CI check orchestrator
+status: ready
+command_registry: data/ci/stage5ax-parallel-command-registry.yaml
+run_policy: data/ci/stage5ax-parallel-run-policy.yaml
+results_dir: experiments/results/ci/parallel-validation/stage5ax
+pytest_modes:
+- auto
+- xdist
+- shard
+- serial
+parallel_safe_command_count: 10
+serial_command_count: 6
+blocked_command_count: 1
+serial_final_confirmation_recorded: true
+bounded_preflight_moved_to: Stage 5AY - bounded token-block preflight manifest design
+  without execution
+no_cryptanalytic_execution: true

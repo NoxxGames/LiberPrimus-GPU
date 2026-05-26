@@ -1,8 +1,8 @@
 # Token Case Human Review Workflow
 
-## Stage 5AW Note
+## Stage 5AX Note
 
-Stage 5AW repairs parser handling after human decisions were integrated. Human decisions remain unchanged, prose fragments are audited rather than stored as token alternatives, visual placeholders remain review-only, and future bounded preflight design should use Stage 5AW repaired branch metadata.
+Stage 5AW repairs parser handling after human decisions were integrated. Stage 5AX adds validation infrastructure only. Human decisions remain unchanged, prose fragments are audited rather than stored as token alternatives, visual placeholders remain review-only, and future Stage 5AY bounded preflight design should use Stage 5AW repaired branch metadata.
 
 Use this workflow as the historical Stage 5AV manual-review input process for the Stage 5AU token-case challenge pack v2. Stage 5AV has now integrated the filled template into compact metadata.
 
@@ -15,4 +15,4 @@ Use this workflow as the historical Stage 5AV manual-review input process for th
 
 The Stage 5AT pack is preserved as historical generated output but Stage 5AU records it as count-valid and not usable for reliable decisions. Use the v2 pack because it surfaces glyph-candidate crops, context crops, row context, overlays, all 203 case-review challenges, and all 212 canonical-transcription challenges.
 
-The review pack is ignored local material. Do not commit crops, HTML, overlays, review sheets, ZIP files, or manually filled decision files. Stage 5AV commits only derived decision/branch metadata; future Stage 5AW work should consume those committed records.
+The review pack is ignored local material. Do not commit crops, HTML, overlays, review sheets, ZIP files, or manually filled decision files. Stage 5AV commits only derived decision/branch metadata; Stage 5AW repairs that metadata; Stage 5AY should consume those committed records.

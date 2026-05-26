@@ -1,0 +1,12 @@
+record_type: stage5ax_next_stage_decision
+schema: schemas/project-state/stage5ax-summary-v0.schema.json
+stage_id: stage-5ax
+selected_option_id: stage5ay_bounded_token_block_preflight_manifest_design_without_execution
+selected_next_stage_title: Stage 5AY - bounded token-block preflight manifest design
+  without execution
+selected_next_stage_reason: User inserted Stage 5AX validation infrastructure before
+  the Stage 5AW-selected bounded preflight work; the preflight design moves to Stage
+  5AY after the harness validates.
+recommended_next_prompt_type: bounded_preflight_manifest_design_without_execution
+execution_enabled: false
+solve_claim: false

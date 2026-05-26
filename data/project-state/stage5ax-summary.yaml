@@ -1,0 +1,85 @@
+record_type: stage5ax_parallel_validation_harness_summary
+schema: schemas/project-state/stage5ax-summary-v0.schema.json
+stage_id: stage-5ax
+status: complete
+source_stage_id: stage-5aw
+source_stage5aw_commit: 51c6d1c96c0a47420bac12f3f72055b115623eb5
+user_override_from_stage5aw_next_stage: true
+user_override_inserted_parallel_validation: true
+stage5aw_original_next_stage: Stage 5AX - bounded token-block preflight manifest design
+  without execution
+stage5aw_selected_next_stage: Stage 5AX - bounded token-block preflight manifest design
+  without execution
+stage5ax_actual_stage_title: Stage 5AX - parallel validation harness and fast CI check
+  orchestrator
+bounded_preflight_moved_to_stage: Stage 5AY - bounded token-block preflight manifest
+  design without execution
+parallel_validation_plan_created: true
+parallel_command_registry_created: true
+parallel_run_policy_created: true
+parallel_validation_run_completed: true
+parallel_validation_run_passed: true
+parallel_validation_safety_audit_created: true
+parallel_validation_plan_status: ready
+parallel_safe_command_count: 10
+serial_command_count: 6
+blocked_command_count: 1
+workers_requested: 16
+workers_used: 16
+pytest_workers_requested: 16
+pytest_workers_used: 16
+pytest_mode_used: shard
+pytest_xdist_available: false
+pytest_shard_fallback_used: true
+pytest_shard_count: 16
+pytest_test_file_count: 870
+failed_command_count: 0
+commands_succeeded: 11
+commands_failed: 0
+failed_command_ids: []
+safety_audit_status: passed
+serial_final_confirmation_recorded: true
+generated_validation_outputs_committed: false
+generated_outputs_committed: false
+codex_output_committed: false
+raw_data_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+validation_timing_recorded: true
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+network_fetch_performed: false
+live_web_scrape_performed: false
+online_repo_clone_performed: false
+google_drive_storage_used: false
+deep_research_performed: false
+public_website_publication_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+hypothesis_generation_performed: false
+hypothesis_execution_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+raw_images_committed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+new_cuda_kernels_added: 0
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+recommended_next_prompt_type: bounded_preflight_manifest_design_without_execution
+recommended_next_stage_title: Stage 5AY - bounded token-block preflight manifest design
+  without execution
+recommended_next_stage_reason: User inserted Stage 5AX validation infrastructure before
+  the Stage 5AW-selected bounded preflight work; the preflight design moves to Stage
+  5AY after the harness validates.

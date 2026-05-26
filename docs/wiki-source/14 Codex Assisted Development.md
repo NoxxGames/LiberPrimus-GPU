@@ -256,3 +256,9 @@ If Codex changes Stage 5AW decision-parser repair, verify
 generate variant byte streams, run token experiments, run DWH/hash searches, run OCR/AI/ML/LLM
 vision, run semantic or hidden-content image interpretation, run stego, run CUDA, benchmark,
 execute scored experiments, or make solve claims.
+
+Stage 5AX completion handoffs belong under ignored `codex-output/stage5ax-codex-completion.md`.
+If Codex changes Stage 5AX parallel validation, verify
+`libreprimus parallel-validation validate-stage5ax`, keep generated logs under ignored
+`experiments/results/ci/parallel-validation/stage5ax/`, and keep git, GitHub, network/remote,
+generated-output-writing, issue-update, commit, push, and final staging checks serial.

@@ -1256,3 +1256,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AW finds 3 malformed Stage 5AV prose-as-token reviewer extras, preserves 10 valid reviewer-extra possible tokens, preserves 2 visual placeholders as primary-60 unmappable review-only options, records 77 unresolved variants, recalculates primary-60 mappable/unmappable options to 99/65, computes compact branch upper-bound product 2720083094132915643088896 and log10 24.434582, and selects Stage 5AX bounded token-block preflight manifest design without execution. It performs no human-decision reinterpretation, automatic case resolution, canonical transcription rewrite, full Cartesian variant enumeration, variant byte-stream generation, DWH/hash search, decode attempt, OCR, AI/ML or LLM/vision reading, semantic image interpretation, hidden-content image forensics, stego execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ax
+    title: Parallel validation harness and fast CI check orchestrator
+    status: complete
+    category: infrastructure
+    summary: Added local opt-in parallel validation infrastructure with classified command plans, subprocess scheduling, pytest-xdist detection, deterministic sharded fallback, separated logs, failure aggregation, safety audit records, wrapper scripts, and Stage 5AY next-stage routing.
+    key_outputs:
+      - "`libreprimus parallel-validation` commands for plan generation, pytest execution, parallel validation, summary generation, validation, and summary display."
+      - Stage 5AX parallel validation plan, command registry, run policy, run summary, safety audit, pytest shard plan, guardrail, next-stage decision, and aggregate summary records under `data/ci/` and `data/project-state/`.
+      - Ignored generated validation logs and JSON/JSONL reports under `experiments/results/ci/parallel-validation/stage5ax/`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AX records 10 parallel-safe commands, 6 serial commands, 1 blocked command, 16 requested/used validation workers, 16 requested/used pytest workers, shard-mode pytest fallback because pytest-xdist was unavailable locally, 0 failed commands, and Stage 5AY bounded token-block preflight manifest design without execution as the next stage. It performs no token experiments, variant byte-stream generation, DWH/hash search, decode attempt, OCR, AI/ML or LLM/vision reading, semantic image interpretation, hidden-content image forensics, stego execution, CUDA execution/source modification/kernel addition, cryptanalytic benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

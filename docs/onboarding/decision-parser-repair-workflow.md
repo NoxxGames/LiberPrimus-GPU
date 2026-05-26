@@ -9,3 +9,5 @@ Use this workflow when a human-review decision note parser captures prose as a t
 5. Validate with `libreprimus token-block validate-stage5aw`.
 
 The workflow preserves the ignored local decision template and commits only compact metadata. It does not change canonical transcription, resolve ambiguous tokens automatically, generate variant byte streams, decode the token block, run DWH/hash search, run OCR/AI/ML/LLM vision, run stego, run CUDA, benchmark, execute scored experiments, or make solve claims.
+
+Stage 5AX inserted parallel validation infrastructure after this repair. Bounded token-block preflight design is now Stage 5AY and must cite the repaired Stage 5AW branch manifest.

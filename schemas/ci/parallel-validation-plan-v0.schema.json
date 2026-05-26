@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AX parallel validation plan",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "status", "parallel_safe_command_count", "serial_command_count", "blocked_command_count", "no_cryptanalytic_execution"],
+  "properties": {
+    "record_type": { "const": "stage5ax_parallel_validation_plan" },
+    "schema": { "const": "schemas/ci/parallel-validation-plan-v0.schema.json" },
+    "stage_id": { "const": "stage-5ax" },
+    "status": { "type": "string" },
+    "parallel_safe_command_count": { "type": "integer", "minimum": 1 },
+    "serial_command_count": { "type": "integer", "minimum": 1 },
+    "blocked_command_count": { "type": "integer", "minimum": 1 },
+    "no_cryptanalytic_execution": { "const": true }
+  },
+  "additionalProperties": true
+}

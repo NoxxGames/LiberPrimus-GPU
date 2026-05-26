@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AW decision possible-token parser cleanup and branch-manifest repair is complete.
+Stage 5AX parallel validation harness and fast CI check orchestrator is complete.
 
-Next recommended prompt: Stage 5AX - bounded token-block preflight manifest design without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5AY - bounded token-block preflight manifest design without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5AX
+
+Stage 5AX inserted local validation-speed infrastructure before the Stage 5AW-selected bounded preflight design. It added the `libreprimus parallel-validation` CLI group, classified command registries, worker policy, deterministic pytest sharding fallback, xdist detection, subprocess-based scheduling, separated command logs, failure aggregation, compact run/safety summaries, opt-in PowerShell and shell wrappers, guardrails, and Stage 5AY next-stage metadata.
+
+Local Stage 5AX summary: parallel-safe commands `10`, serial commands `6`, blocked commands `1`, workers requested/used `16/16`, pytest workers requested/used `16/16`, pytest mode used `shard`, pytest-xdist available `false`, shard fallback used `true`, failed command count `0`, validation timing recorded `true`, benchmark performed `false`, cryptanalytic benchmark performed `false`, generated validation outputs committed `false`, network fetch `false`, OCR `false`, AI/ML interpretation `false`, LLM/vision token reading `false`, semantic image interpretation `false`, hidden-content image forensics `false`, stego execution `false`, hash/preimage search `false`, decode attempt `false`, token experiments `false`, variant byte streams generated `false`, CUDA execution/source modification `false`, new CUDA kernels `0`, scored experiments `false`, and solve claim `false`.
+
+Stage 5AX is infrastructure only. The existing serial CI path remains default; the new parallel scripts are opt-in for local Codex validation. Stage 5AW selected bounded preflight as Stage 5AX, but the user explicitly inserted this infrastructure stage first, so bounded token-block preflight manifest design moves to Stage 5AY.
 
 ## Completed in Stage 5AW
 

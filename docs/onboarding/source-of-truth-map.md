@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5AW it names Stage 5AW as latest complete and Stage 5AX as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5AX it names Stage 5AX as latest complete and Stage 5AY as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -34,6 +34,8 @@
 - `data/project-state/stage5au-summary.yaml`: Stage 5AU aggregate summary, guardrail state, and historical Stage 5AV next-stage decision.
 - `data/project-state/stage5av-summary.yaml`: Stage 5AV aggregate summary, guardrail state, and Stage 5AW next-stage decision.
 - `data/project-state/stage5aw-summary.yaml`: Stage 5AW parser-repair aggregate summary, guardrail state, and Stage 5AX next-stage decision.
+- `data/ci/stage5ax-*.yaml`: Stage 5AX parallel validation plan, command registry, run policy, run summary, safety audit, pytest shard plan, and guardrail records.
+- `data/project-state/stage5ax-summary.yaml`: Stage 5AX aggregate summary, guardrail state, and Stage 5AY next-stage decision.
 - `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 - `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.
@@ -47,6 +49,7 @@
 - `docs/onboarding/token-case-review-pack-v2-workflow.md`: Stage 5AU v2 review-pack usage workflow.
 - `docs/onboarding/token-case-decision-integration-workflow.md`: Stage 5AV decision integration workflow.
 - `docs/onboarding/decision-parser-repair-workflow.md`: Stage 5AW decision parser repair workflow.
+- `docs/onboarding/parallel-validation-workflow.md`: Stage 5AX local parallel validation workflow.
 - `docs/onboarding/local-source-inventory-workflow.md`: local `third_party/` source inventory workflow and raw-data guardrails.
 
 ## Research And Workflow Truth
@@ -70,6 +73,8 @@
 - `docs/reference/token-case-review-pack-v2-cli.md`: Stage 5AU token case-review pack v2 CLI usage and guardrails.
 - `docs/reference/token-case-decision-integration-cli.md`: Stage 5AV token case decision integration CLI usage and guardrails.
 - `docs/reference/decision-parser-repair-cli.md`: Stage 5AW decision parser repair CLI usage and guardrails.
+- `docs/reference/parallel-validation-cli.md`: Stage 5AX parallel validation CLI usage and guardrails.
+- `docs/reference/fast-local-validation.md`: local wrapper commands for opt-in Stage 5AX validation.
 - `docs/reference/stego-controls-cli.md`: Stage 5AP stego-control CLI usage and guardrails.
 
 ## Architecture And CI Truth

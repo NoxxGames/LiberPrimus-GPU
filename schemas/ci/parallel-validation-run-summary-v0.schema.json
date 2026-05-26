@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AX parallel validation run summary",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "status", "workers_used", "pytest_mode_used", "failed_command_count", "generated_validation_outputs_committed", "benchmark_performed", "cryptanalytic_benchmark_performed"],
+  "properties": {
+    "record_type": { "const": "stage5ax_parallel_validation_run_summary" },
+    "schema": { "const": "schemas/ci/parallel-validation-run-summary-v0.schema.json" },
+    "stage_id": { "const": "stage-5ax" },
+    "status": { "enum": ["passed", "failed"] },
+    "workers_used": { "type": "integer", "minimum": 1, "maximum": 16 },
+    "pytest_mode_used": { "enum": ["xdist", "shard", "serial"] },
+    "failed_command_count": { "type": "integer", "minimum": 0 },
+    "generated_validation_outputs_committed": { "const": false },
+    "benchmark_performed": { "const": false },
+    "cryptanalytic_benchmark_performed": { "const": false }
+  },
+  "additionalProperties": true
+}

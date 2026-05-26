@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AX Parallel Validation Harness
+
+Stage 5AX is validation infrastructure, not an experiment. It commits metadata for a parallel validation plan, command registry, run policy, pytest shard plan, run summary, safety audit, guardrail, and Stage 5AY next-stage decision.
+
+Generated Stage 5AX logs and JSON reports remain ignored under `experiments/results/ci/parallel-validation/stage5ax/`. The harness runs only explicitly read-only validation commands concurrently; git, GitHub, network/remote, generated-output-writing, commit, push, issue-update, and blocked cryptanalytic commands remain serial or disabled. Stage 5AX performs no token experiment, variant byte-stream generation, DWH/hash search, decode attempt, OCR, AI/ML interpretation, LLM/vision token reading, semantic image interpretation, hidden-content image forensics, stego execution, CUDA, cryptanalytic benchmark, scored experiment, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AW Decision Parser Repair
 
 Stage 5AW is parser-repair and branch-manifest infrastructure, not an experiment. It commits metadata for a Stage 5AV reviewer-note parser audit, repaired possible-token policy, repaired human-review decision records, repaired unresolved-variant records, cleaned reviewer-extra token records, malformed-fragment audit, primary-60 impact recalculation, superseding compact branch manifest, canonical-transcription non-update, null-control update, Deep Web Hash context, guardrails, and next-stage decision.

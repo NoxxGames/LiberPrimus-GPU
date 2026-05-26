@@ -1084,3 +1084,39 @@ records:
   owner_context: research_operator
   notes: Documents parser-repair commands, malformed-fragment auditing, visual
     placeholder handling, and no-execution guardrails.
+- path: data/project-state/stage5ax-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AX parallel validation harness aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ax
+  expected_update_frequency: when_parallel_validation_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records worker counts, pytest mode, command classification counts, safety
+    audit status, guardrails, and the Stage 5AY next-stage decision.
+- path: data/ci/stage5ax-parallel-validation-plan.yaml
+  category: active_data_record
+  purpose: Stage 5AX parallel validation command plan.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ax
+  expected_update_frequency: when_validation_command_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Defines the local opt-in parallel validation plan and preserves the serial
+    boundary for git, GitHub, network, generated-output-writing, and blocked commands.
+- path: docs/onboarding/parallel-validation-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5AX local parallel validation workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ax
+  expected_update_frequency: every_parallel_validation_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents the opt-in local validation harness, pytest xdist/shard behavior,
+    serial-only protections, ignored logs, and Stage 5AY next-stage routing.

@@ -7,6 +7,7 @@ Set-Location $RepoRoot
 $Python = if ($env:PYTHON) { $env:PYTHON } elseif (Test-Path ".\.venv\Scripts\python.exe") { ".\.venv\Scripts\python.exe" } else { "python" }
 $TempDir = Join-Path ([System.IO.Path]::GetTempPath()) ("libreprimus-consistency-" + [System.Guid]::NewGuid().ToString("N"))
 New-Item -ItemType Directory -Path $TempDir | Out-Null
+Write-Host "For faster local validation, use scripts/ci/run-parallel-validation.ps1 -Workers 16"
 
 try {
     Write-Host "Running full consistency suite"
@@ -24,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5AW" `
-        --expected-next-stage "Stage 5AX" `
+        --expected-latest-stage "Stage 5AX" `
+        --expected-next-stage "Stage 5AY" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5AW" `
-        --expected-next-stage "Stage 5AX" `
+        --expected-latest-stage "Stage 5AX" `
+        --expected-next-stage "Stage 5AY" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -46,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AW",
+        expected_latest_stage="Stage 5AX",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AW",
+            "expected_latest_stage": "Stage 5AX",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2354,6 +2355,34 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
     git check-ignore -q (Join-Path $Stage5AWResultsRoot "summary.json")
     git check-ignore -q (Join-Path $Stage5AWResultsRoot "repaired_token_variant_branch_manifest.json")
     git check-ignore -q "codex-output/stage5aw-codex-completion.md"
+
+    Write-Host "Validating Stage 5AX parallel validation records"
+    $Stage5AXResultsRoot = Join-Path $TempDir "stage5ax-parallel-validation"
+    New-Item -ItemType Directory -Path $Stage5AXResultsRoot | Out-Null
+@"
+import json
+from pathlib import Path
+import yaml
+
+summary = yaml.safe_load(Path("data/ci/stage5ax-parallel-validation-run-summary.yaml").read_text(encoding="utf-8"))
+Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
+(Path(r"$Stage5AXResultsRoot") / "run-summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+"@ | & $Python -
+    & $Python -m libreprimus.cli parallel-validation validate-stage5ax `
+        --plan data/ci/stage5ax-parallel-validation-plan.yaml `
+        --command-registry data/ci/stage5ax-parallel-command-registry.yaml `
+        --run-policy data/ci/stage5ax-parallel-run-policy.yaml `
+        --run-summary data/ci/stage5ax-parallel-validation-run-summary.yaml `
+        --safety-audit data/ci/stage5ax-parallel-validation-safety-audit.yaml `
+        --pytest-shard-plan data/ci/stage5ax-pytest-shard-plan.yaml `
+        --guardrail data/ci/stage5ax-guardrail.yaml `
+        --next-stage-decision data/project-state/stage5ax-next-stage-decision.yaml `
+        --summary data/project-state/stage5ax-summary.yaml `
+        --results-dir $Stage5AXResultsRoot
+    $Stage5AXRepoResultsRoot = Join-Path (Join-Path (Join-Path (Join-Path "experiments" "results") "ci") "parallel-validation") "stage5ax"
+    $Stage5AXRunSummaryForIgnore = Join-Path $Stage5AXRepoResultsRoot "run-summary.json"
+    git check-ignore -q $Stage5AXRunSummaryForIgnore
+    git check-ignore -q "codex-output/stage5ax-codex-completion.md"
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

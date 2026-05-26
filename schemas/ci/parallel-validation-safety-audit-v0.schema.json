@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AX parallel validation safety audit",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "git_mutating_commands_parallelised", "network_commands_parallelised", "parallel_worker_count_capped"],
+  "properties": {
+    "record_type": { "const": "stage5ax_parallel_validation_safety_audit" },
+    "schema": { "const": "schemas/ci/parallel-validation-safety-audit-v0.schema.json" },
+    "stage_id": { "const": "stage-5ax" },
+    "git_mutating_commands_parallelised": { "const": false },
+    "network_commands_parallelised": { "const": false },
+    "parallel_worker_count_capped": { "const": true }
+  },
+  "additionalProperties": true
+}

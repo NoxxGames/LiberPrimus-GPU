@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AX parallel run policy",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "max_workers_cap", "ci_default_parallel"],
+  "properties": {
+    "record_type": { "const": "stage5ax_parallel_run_policy" },
+    "schema": { "const": "schemas/ci/parallel-run-policy-v0.schema.json" },
+    "stage_id": { "const": "stage-5ax" },
+    "max_workers_cap": { "type": "integer", "minimum": 1, "maximum": 16 },
+    "ci_default_parallel": { "const": false }
+  },
+  "additionalProperties": true
+}

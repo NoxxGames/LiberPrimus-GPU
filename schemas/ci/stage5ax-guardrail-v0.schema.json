@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AX guardrail",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "infrastructure_stage", "parallel_validation_only", "solve_claim", "cuda_execution_performed", "cryptanalytic_benchmark_performed"],
+  "properties": {
+    "record_type": { "const": "stage5ax_parallel_validation_guardrail" },
+    "schema": { "const": "schemas/ci/stage5ax-guardrail-v0.schema.json" },
+    "stage_id": { "const": "stage-5ax" },
+    "infrastructure_stage": { "const": true },
+    "parallel_validation_only": { "const": true },
+    "solve_claim": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cryptanalytic_benchmark_performed": { "const": false }
+  },
+  "additionalProperties": true
+}

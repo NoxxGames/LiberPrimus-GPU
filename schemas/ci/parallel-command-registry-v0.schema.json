@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AX parallel command registry",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "command_count", "commands"],
+  "properties": {
+    "record_type": { "const": "stage5ax_parallel_command_registry" },
+    "schema": { "const": "schemas/ci/parallel-command-registry-v0.schema.json" },
+    "stage_id": { "const": "stage-5ax" },
+    "command_count": { "type": "integer", "minimum": 1 },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["command_id", "command", "parallel_class", "requires_serial"],
+        "properties": {
+          "parallel_class": {
+            "enum": [
+              "read_only_parallel_safe",
+              "read_only_parallel_safe_with_isolated_temp",
+              "serial_read_only_final_check",
+              "serial_generates_outputs",
+              "serial_git_mutating",
+              "serial_remote_or_network",
+              "serial_manual_only",
+              "blocked"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

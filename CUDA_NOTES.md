@@ -4,11 +4,17 @@
 
 This file records CUDA policy for future acceleration work.
 
+## Stage 5AX Parallel Validation Boundary
+
+Stage 5AX is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It records local opt-in validation orchestration metadata only.
+
+Stage 5AX does not authorize token-block CUDA input, variant byte-stream generation, DWH/hash search, scored experiments, or solve claims. Bounded token-block preflight design is moved to Stage 5AY and remains non-execution unless separately scoped.
+
 ## Stage 5AV Token Case Decision Integration Boundary
 
 Stage 5AV is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It records local human token-case decision integration, unresolved branch metadata, primary-60 impact, and compact branch-manifest records only.
 
-Stage 5AV does not authorize token-block CUDA input, variant byte-stream generation, DWH/hash search, scored experiments, or solve claims. Future Stage 5AW work is bounded manifest design without execution.
+Stage 5AV does not authorize token-block CUDA input, variant byte-stream generation, DWH/hash search, scored experiments, or solve claims. Stage 5AW repaired parser metadata, Stage 5AX inserted validation infrastructure, and future Stage 5AY work is bounded manifest design without execution.
 
 ## Stage 5AT Token Case Review Pack Boundary
 

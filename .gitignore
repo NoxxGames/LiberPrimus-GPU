@@ -808,6 +808,16 @@ experiments/results/token-block/**
 !experiments/results/token-block/stage5aw/
 !experiments/results/token-block/stage5aw/.gitkeep
 
+# Generated CI/validation outputs
+experiments/results/ci/**
+!experiments/results/ci/
+!experiments/results/ci/README.md
+!experiments/results/ci/.gitkeep
+!experiments/results/ci/parallel-validation/
+!experiments/results/ci/parallel-validation/.gitkeep
+!experiments/results/ci/parallel-validation/stage5ax/
+!experiments/results/ci/parallel-validation/stage5ax/.gitkeep
+
 # Generated human-review packs
 human-review-packs/**
 !human-review-packs/

@@ -1,0 +1,405 @@
+record_type: stage5ax_parallel_command_registry
+schema: schemas/ci/parallel-command-registry-v0.schema.json
+stage_id: stage-5ax
+command_count: 17
+parallel_safe_command_count: 10
+serial_command_count: 6
+blocked_command_count: 1
+commands:
+- command_id: ruff-check
+  display_name: Ruff
+  command:
+  - '{python}'
+  - -m
+  - ruff
+  - check
+  - python/libreprimus
+  - tests/python
+  working_directory: .
+  category: validation
+  parallel_class: read_only_parallel_safe
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: false
+  timeout_seconds: 300
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: Read-only style/lint check.
+- command_id: doc-staleness
+  display_name: Document staleness strict check
+  command:
+  - '{python}'
+  - -m
+  - libreprimus.cli
+  - consistency
+  - check-doc-staleness
+  - --source-of-truth
+  - data/project-state/stage5ah-doc-staleness-source-of-truth.yaml
+  - --strict
+  working_directory: .
+  category: validation
+  parallel_class: read_only_parallel_safe
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: false
+  timeout_seconds: 300
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: ''
+- command_id: observation-paths
+  display_name: Observation-review path sanitisation
+  command:
+  - '{python}'
+  - -m
+  - libreprimus.cli
+  - observation-review
+  - check-paths
+  - --repo-root
+  - .
+  working_directory: .
+  category: validation
+  parallel_class: read_only_parallel_safe
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: false
+  timeout_seconds: 300
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: ''
+- command_id: research-synthesis
+  display_name: Research synthesis validation
+  command:
+  - '{python}'
+  - -m
+  - libreprimus.cli
+  - research-synthesis
+  - validate
+  - --data-dir
+  - data/research
+  - --staged-plan
+  - docs/roadmap/staged-plan.md
+  working_directory: .
+  category: validation
+  parallel_class: read_only_parallel_safe
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: false
+  timeout_seconds: 300
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: ''
+- command_id: state-drift
+  display_name: State-drift consistency
+  command:
+  - '{python}'
+  - -m
+  - libreprimus.cli
+  - consistency
+  - check-state-drift
+  working_directory: .
+  category: validation
+  parallel_class: read_only_parallel_safe
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: false
+  timeout_seconds: 300
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: ''
+- command_id: smoke
+  display_name: Python smoke
+  command:
+  - '{python}'
+  - -m
+  - libreprimus.cli
+  - smoke
+  working_directory: .
+  category: validation
+  parallel_class: read_only_parallel_safe
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: false
+  timeout_seconds: 120
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: ''
+- command_id: verify-public-docs-status
+  display_name: Public docs status
+  command:
+  - '{powershell}'
+  - -NoProfile
+  - -ExecutionPolicy
+  - Bypass
+  - -File
+  - scripts/ci/verify-public-docs-status.ps1
+  working_directory: .
+  category: validation
+  parallel_class: read_only_parallel_safe
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: false
+  timeout_seconds: 300
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: Runs a small read-only pytest subset.
+- command_id: verify-lock-hashes
+  display_name: Lock hash validation
+  command:
+  - '{powershell}'
+  - -NoProfile
+  - -ExecutionPolicy
+  - Bypass
+  - -File
+  - scripts/ci/verify-lock-hashes.ps1
+  working_directory: .
+  category: validation
+  parallel_class: read_only_parallel_safe
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: false
+  timeout_seconds: 300
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: ''
+- command_id: validate-workflow-static
+  display_name: Workflow static validation
+  command:
+  - '{powershell}'
+  - -NoProfile
+  - -ExecutionPolicy
+  - Bypass
+  - -File
+  - scripts/ci/validate-workflow-static.ps1
+  working_directory: .
+  category: validation
+  parallel_class: read_only_parallel_safe
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: false
+  timeout_seconds: 300
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: ''
+- command_id: validate-wiki-source
+  display_name: Wiki source validation
+  command:
+  - '{powershell}'
+  - -NoProfile
+  - -ExecutionPolicy
+  - Bypass
+  - -File
+  - scripts/github/validate-wiki-source.ps1
+  working_directory: .
+  category: validation
+  parallel_class: read_only_parallel_safe
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: false
+  timeout_seconds: 300
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: ''
+- command_id: sync-tutorials-wiki-dryrun
+  display_name: Tutorial-to-wiki dry run
+  command:
+  - '{powershell}'
+  - -NoProfile
+  - -ExecutionPolicy
+  - Bypass
+  - -File
+  - scripts/github/sync-tutorials-to-wiki.ps1
+  - --DryRun
+  working_directory: .
+  category: validation
+  parallel_class: serial_read_only_final_check
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: true
+  timeout_seconds: 300
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: Dry-run sync touches wiki mirror staging state and stays serial.
+- command_id: consistency-check-all-final
+  display_name: Full consistency final check
+  command:
+  - '{python}'
+  - -m
+  - libreprimus.cli
+  - consistency
+  - check-all
+  - --allow-warnings
+  working_directory: .
+  category: validation
+  parallel_class: serial_read_only_final_check
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: true
+  timeout_seconds: 1200
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: Recorded as serial final confirmation; not parallelised by the harness.
+- command_id: run-consistency-checks-final
+  display_name: Full CI consistency script
+  command:
+  - '{powershell}'
+  - -NoProfile
+  - -ExecutionPolicy
+  - Bypass
+  - -File
+  - scripts/ci/run-consistency-checks.ps1
+  working_directory: .
+  category: validation
+  parallel_class: serial_read_only_final_check
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: true
+  timeout_seconds: 1800
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: ''
+- command_id: git-status
+  display_name: Git status
+  command:
+  - git
+  - status
+  - --short
+  working_directory: .
+  category: validation
+  parallel_class: serial_git_mutating
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: true
+  timeout_seconds: 120
+  env: {}
+  depends_on: []
+  allowed_in_ci: true
+  allowed_in_codex_local: true
+  notes: Serial git safety check; not mutating but kept out of the parallel scheduler.
+- command_id: github-issue-update
+  display_name: GitHub issue update
+  command:
+  - gh
+  - issue
+  - comment
+  working_directory: .
+  category: validation
+  parallel_class: serial_remote_or_network
+  writes_outputs: false
+  writes_repo: false
+  uses_network: true
+  uses_git_mutation: false
+  uses_github_mutation: true
+  requires_serial: true
+  timeout_seconds: 120
+  env: {}
+  depends_on: []
+  allowed_in_ci: false
+  allowed_in_codex_local: true
+  notes: ''
+- command_id: commit-push
+  display_name: Commit and push
+  command:
+  - git
+  - push
+  working_directory: .
+  category: validation
+  parallel_class: serial_git_mutating
+  writes_outputs: false
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: true
+  uses_github_mutation: false
+  requires_serial: true
+  timeout_seconds: 300
+  env: {}
+  depends_on: []
+  allowed_in_ci: false
+  allowed_in_codex_local: true
+  notes: ''
+- command_id: token-block-experiment
+  display_name: Token-block experiment execution
+  command:
+  - blocked
+  working_directory: .
+  category: validation
+  parallel_class: blocked
+  writes_outputs: true
+  writes_repo: false
+  uses_network: false
+  uses_git_mutation: false
+  uses_github_mutation: false
+  requires_serial: true
+  timeout_seconds: 600
+  env: {}
+  depends_on: []
+  allowed_in_ci: false
+  allowed_in_codex_local: false
+  notes: Blocked by Stage 5AX guardrails.

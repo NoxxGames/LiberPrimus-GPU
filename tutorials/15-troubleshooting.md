@@ -929,3 +929,9 @@ possible-token records. If validation fails, inspect
 as `?4` and `3?` are review-only, primary-60 unmappable, and ineligible for variant byte streams.
 Generated Stage 5AW JSON reports belong under ignored `experiments/results/token-block/stage5aw/`;
 the Codex completion handoff belongs under ignored `codex-output/stage5aw-codex-completion.md`.
+
+For Stage 5AX parallel validation, only commands classified as read-only parallel-safe may run in
+the concurrent pool. If a validation run fails, inspect the separated stdout/stderr logs under
+ignored `experiments/results/ci/parallel-validation/stage5ax/logs/`, then rerun the failing command
+directly. Keep git, GitHub, network/remote, generated-output-writing, commit, and push operations
+serial.
