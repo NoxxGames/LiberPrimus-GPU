@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import math
-import re
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -44,6 +43,7 @@ from .models import (
     write_jsonl,
     write_yaml,
 )
+from .possible_token_parser import parse_possible_token_notes
 
 ALLOWED_DECISIONS = {"keep_current", "change_token", "unresolved", "not_reviewable"}
 ALLOWED_CONFIDENCE = {"high", "medium", "low", None}
@@ -89,24 +89,8 @@ def _dedupe_ordered(values: list[str]) -> list[str]:
 def parse_possible_tokens(notes: str | None) -> tuple[list[str], bool]:
     """Extract reviewer possible token list from a review note."""
 
-    if not notes:
-        return [], False
-    possible_tokens: list[str] = []
-    match = re.search(r"(?:^|[;\s])possible_tokens=([^;]+)", notes)
-    if match:
-        possible_tokens = [
-            token.strip()
-            for token in match.group(1).split("|")
-            if token.strip()
-        ]
-    include_all = bool(
-        re.search(
-            r"include_all_possible_tokens_for_variant_controls\s*=\s*true",
-            notes,
-            flags=re.IGNORECASE,
-        )
-    )
-    return _dedupe_ordered(possible_tokens), include_all
+    parsed = parse_possible_token_notes(notes)
+    return parsed.possible_tokens, parsed.include_all_possible_tokens_for_variant_controls
 
 
 def classify_primary60_token(token: str | None) -> dict[str, Any]:

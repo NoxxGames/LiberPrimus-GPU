@@ -9,3 +9,5 @@ Use this workflow after a human reviewer fills the Stage 5AU v2 decision templat
 5. Do not stage the decision template, generated HTML/crops, JSON reports, or variant bodies.
 
 Unresolved cases should keep `selected_token: null` and place alternatives in `reviewer_notes` as `possible_tokens=...`. Stage 5AV preserves these branches for future bounded preflight design and does not change the canonical transcription.
+
+Stage 5AW repairs the Stage 5AV possible-token parser before preflight design proceeds. Future planning should use `data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml`, not the original Stage 5AV branch manifest. Valid reviewer extras are preserved, visual placeholders are review-only and primary-60 unmappable, and prose fragments are stored only in malformed-fragment audit records.

@@ -921,3 +921,11 @@ fails, inspect `data/token-block/stage5av-decision-file-validation.yaml` and do 
 committed blank template. Unresolved alternatives belong in `reviewer_notes` as `possible_tokens=...`
 with `selected_token: null`; they are preserved as branch metadata and do not change canonical
 transcription.
+
+For Stage 5AW decision-parser repair, malformed prose fragments must stay out of reviewer-extra
+possible-token records. If validation fails, inspect
+`data/token-block/stage5aw-malformed-possible-token-fragments.yaml` and
+`data/token-block/stage5aw-repaired-reviewer-extra-possible-tokens.yaml`. Visual placeholders such
+as `?4` and `3?` are review-only, primary-60 unmappable, and ineligible for variant byte streams.
+Generated Stage 5AW JSON reports belong under ignored `experiments/results/token-block/stage5aw/`;
+the Codex completion handoff belongs under ignored `codex-output/stage5aw-codex-completion.md`.

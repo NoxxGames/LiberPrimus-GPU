@@ -805,6 +805,8 @@ experiments/results/token-block/**
 !experiments/results/token-block/stage5au/.gitkeep
 !experiments/results/token-block/stage5av/
 !experiments/results/token-block/stage5av/.gitkeep
+!experiments/results/token-block/stage5aw/
+!experiments/results/token-block/stage5aw/.gitkeep
 
 # Generated human-review packs
 human-review-packs/**

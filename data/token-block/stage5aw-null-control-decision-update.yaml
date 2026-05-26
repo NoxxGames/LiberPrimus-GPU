@@ -1,0 +1,24 @@
+record_type: stage5aw_null_control_decision_update
+schema: schemas/token-block/null-control-decision-update-v0.schema.json
+stage_id: stage-5aw
+source_stage_id: stage-5av
+token_block_id: stage5ap-page49-51-token-block
+supersedes_stage5av_branch_metadata: true
+future_preflight_must_use_stage5aw_repaired_manifest: true
+visual_placeholders_preserved_for_review: true
+visual_placeholders_excluded_from_primary60_byte_variants: true
+malformed_prose_fragments_preserved_in_audit: true
+malformed_prose_fragments_excluded_from_variant_options: true
+unresolved_variant_control_count: 77
+branch_count_upper_bound_product: 2720083094132915643088896
+control_families:
+- control_id: stage5aw-baseline-confirmed-current-control
+  control_type: baseline_current_tokens
+- control_id: stage5aw-visual-placeholder-excluded-control
+  control_type: visual_placeholders_review_only_not_primary60_variants
+- control_id: stage5aw-malformed-fragment-exclusion-control
+  control_type: malformed_prose_fragments_excluded
+- control_id: stage5aw-single-change-per-case-controls
+  control_type: single_unresolved_case_option_controls
+execution_performed: false
+solve_claim: false

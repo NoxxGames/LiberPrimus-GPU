@@ -1,0 +1,13 @@
+record_type: stage5aw_next_stage_decision
+schema: schemas/project-state/stage5aw-summary-v0.schema.json
+stage_id: stage-5aw
+source_stage_id: stage-5av
+selected_option_id: stage5ax_bounded_token_block_preflight_manifest_design_without_execution
+selected_next_stage_title: Stage 5AX - bounded token-block preflight manifest design
+  without execution
+selected_next_stage_reason: Parser repair validated; bounded preflight design can
+  use Stage 5AW repaired branch metadata.
+bounded_preflight_manifest_design_ready: true
+decision_parser_followup_required: false
+execution_enabled: false
+solve_claim: false

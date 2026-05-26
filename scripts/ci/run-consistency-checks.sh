@@ -23,14 +23,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5AU" \
-    --expected-next-stage "Stage 5AV" \
+    --expected-latest-stage "Stage 5AW" \
+    --expected-next-stage "Stage 5AX" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5AU" \
-    --expected-next-stage "Stage 5AV" \
+    --expected-latest-stage "Stage 5AW" \
+    --expected-next-stage "Stage 5AX" \
     --out "$stage5ah_out/current_next_stage_report.json"
 "$python_bin" - <<PY
 import json
@@ -45,14 +45,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AU",
+        expected_latest_stage="Stage 5AW",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AU",
+            "expected_latest_stage": "Stage 5AW",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2339,6 +2339,29 @@ git check-ignore -q "$stage5av_token_results_root/decision_file_ingest_report.js
 git check-ignore -q "$stage5av_token_results_root/token_variant_branch_manifest.json"
 git check-ignore -q "human-review-packs/stage5au/token-case-review-v2/decision-template.yaml"
 git check-ignore -q "codex-output/stage5av-codex-completion.md"
+
+echo "Validating Stage 5AW decision parser repair records"
+stage5aw_results_root="experiments"/"results"
+stage5aw_token_results_root="$stage5aw_results_root/token-block/stage5aw"
+"$python_bin" -m libreprimus.cli token-block validate-stage5aw \
+    --audit data/token-block/stage5aw-decision-parser-audit.yaml \
+    --policy data/token-block/stage5aw-possible-token-parser-policy.yaml \
+    --repaired-decisions data/token-block/stage5aw-repaired-human-review-decision-records.yaml \
+    --repaired-unresolved data/token-block/stage5aw-repaired-unresolved-token-variant-records.yaml \
+    --repaired-extras data/token-block/stage5aw-repaired-reviewer-extra-possible-tokens.yaml \
+    --malformed-fragments data/token-block/stage5aw-malformed-possible-token-fragments.yaml \
+    --impact-summary data/token-block/stage5aw-repaired-primary60-variant-impact-summary.yaml \
+    --branch-manifest data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml \
+    --canonical-update data/token-block/stage5aw-canonical-transcription-update.yaml \
+    --null-control data/token-block/stage5aw-null-control-decision-update.yaml \
+    --dwh-context data/token-block/stage5aw-dwh-decision-context.yaml \
+    --guardrail data/token-block/stage5aw-guardrail.yaml \
+    --next-stage-decision data/project-state/stage5aw-next-stage-decision.yaml \
+    --summary data/project-state/stage5aw-summary.yaml \
+    --results-dir "$stage5aw_token_results_root"
+git check-ignore -q "$stage5aw_token_results_root/summary.json"
+git check-ignore -q "$stage5aw_token_results_root/repaired_token_variant_branch_manifest.json"
+git check-ignore -q "codex-output/stage5aw-codex-completion.md"
 
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

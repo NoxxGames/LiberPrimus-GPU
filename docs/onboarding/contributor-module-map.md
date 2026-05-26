@@ -1,5 +1,9 @@
 # Contributor Module Map
 
+## Stage 5AW Note
+
+The token-block module now includes Stage 5AW parser-repair helpers under `python/libreprimus/token_block/`. These helpers are metadata repair infrastructure only and must not be extended into token execution, decoding, DWH/hash search, OCR/AI/ML interpretation, CUDA, benchmarks, or scored experiments without an explicit future stage.
+
 ## Module Areas
 
 - Profiles/corpus: `python/libreprimus/profiles/`, `python/libreprimus/corpus_candidate/`, `data/profiles/`.
@@ -54,6 +58,8 @@ Stage 5AR token-block coordinate modules record original-image source locks, ima
 Stage 5AT/5AU token-block review modules build local human-review packs for case ambiguity. They may create ignored crops, overlays, and review sheets, but must not commit generated packs, use OCR/AI/ML/LLM vision to fill decisions, change the canonical transcription, decode, search hashes, execute stego/CUDA/scored experiments, benchmark, or make solve claims.
 
 Stage 5AV token-block decision integration modules ingest the local filled Stage 5AU v2 decision template into committed metadata, confirmed-token records, unresolved variant records, reviewer-extra possible-token records, primary-60 impact summaries, and compact branch manifests. They must not commit the human decision template or generated reports, change canonical transcription, auto-resolve unresolved variants, generate variant byte streams, decode, search DWH/hash/preimage candidates, execute stego/CUDA/scored experiments, benchmark, or make solve claims.
+
+Stage 5AW token-block decision-parser repair modules audit possible-token parser contamination, preserve valid reviewer extras, preserve visual placeholders as review-only unmappable records, audit malformed prose fragments, and rebuild repaired compact branch metadata. They must not reinterpret human decisions, change canonical transcription, generate variant byte streams, decode, search DWH/hash/preimage candidates, execute stego/CUDA/scored experiments, benchmark, or make solve claims.
 
 ## Good First Areas
 

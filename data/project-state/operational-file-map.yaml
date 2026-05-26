@@ -1047,3 +1047,40 @@ records:
   owner_context: research_operator
   notes: Documents local ignored decision-file ingestion and the no-execution
     branch-manifest boundary for Stage 5AW planning.
+- path: data/project-state/stage5aw-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AW decision parser repair aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5aw
+  expected_update_frequency: when_token_case_decision_parser_repair_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records malformed parser-fragment counts, repaired reviewer-extra counts,
+    primary-60 impact, branch-manifest status, canonical non-update, and Stage 5AX
+    next-stage decision.
+- path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+  category: active_data_record
+  purpose: Stage 5AW superseding compact unresolved-token branch manifest.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5aw
+  expected_update_frequency: when_token_variant_branch_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Supersedes Stage 5AV branch metadata for future preflight planning while
+    preserving no-execution and no-canonical-transcription-change boundaries.
+- path: docs/onboarding/decision-parser-repair-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5AW decision parser repair workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5aw
+  expected_update_frequency: every_token_case_parser_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents parser-repair commands, malformed-fragment auditing, visual
+    placeholder handling, and no-execution guardrails.

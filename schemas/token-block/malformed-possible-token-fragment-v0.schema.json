@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "fragments_excluded_from_reviewer_extra_tokens": { "const": true },
+    "record_type": { "const": "malformed_possible_token_fragment_set" },
+    "schema": { "const": "schemas/token-block/malformed-possible-token-fragment-v0.schema.json" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5aw" },
+    "variant_byte_streams_generated": { "const": false }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "malformed_possible_token_fragment_count",
+    "records",
+    "fragments_excluded_from_reviewer_extra_tokens",
+    "variant_byte_streams_generated",
+    "solve_claim"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "canonical_transcription_changed": { "const": false },
+    "prose_fragments_in_reviewer_extra_tokens_allowed": { "const": false },
+    "record_type": { "const": "possible_token_parser_policy" },
+    "schema": { "const": "schemas/token-block/possible-token-parser-policy-v0.schema.json" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5aw" },
+    "variant_byte_streams_generated": { "const": false },
+    "visual_placeholder_variant_byte_stream_eligible": { "const": false }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "possible_tokens_value_stops_at_next_semicolon",
+    "prose_fragments_in_reviewer_extra_tokens_allowed",
+    "malformed_fragments_audited",
+    "canonical_transcription_changed",
+    "variant_byte_streams_generated",
+    "solve_claim"
+  ],
+  "type": "object"
+}

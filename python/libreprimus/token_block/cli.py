@@ -87,6 +87,21 @@ from .models import (
     STAGE5AV_REVIEWER_EXTRA_TOKENS_PATH,
     STAGE5AV_SUMMARY_PATH,
     STAGE5AV_UNRESOLVED_VARIANTS_PATH,
+    STAGE5AW_CANONICAL_UPDATE_PATH,
+    STAGE5AW_DECISION_PARSER_AUDIT_PATH,
+    STAGE5AW_DWH_CONTEXT_PATH,
+    STAGE5AW_GUARDRAIL_PATH,
+    STAGE5AW_MALFORMED_FRAGMENTS_PATH,
+    STAGE5AW_NEXT_STAGE_DECISION_PATH,
+    STAGE5AW_NULL_CONTROL_UPDATE_PATH,
+    STAGE5AW_PARSER_POLICY_PATH,
+    STAGE5AW_REPAIRED_BRANCH_MANIFEST_PATH,
+    STAGE5AW_REPAIRED_HUMAN_REVIEW_DECISIONS_PATH,
+    STAGE5AW_REPAIRED_PRIMARY60_IMPACT_PATH,
+    STAGE5AW_REPAIRED_REVIEWER_EXTRA_TOKENS_PATH,
+    STAGE5AW_REPAIRED_UNRESOLVED_VARIANTS_PATH,
+    STAGE5AW_RESULTS_DIR,
+    STAGE5AW_SUMMARY_PATH,
     TRANSCRIPTION_PATH,
     read_yaml,
 )
@@ -123,6 +138,14 @@ from .stage5av import (
     build_stage5av_variant_branch_manifest,
     ingest_stage5av_decisions,
     validate_stage5av,
+)
+from .stage5aw import (
+    audit_stage5aw_decision_parser,
+    build_stage5aw_repaired_branch_manifest,
+    build_stage5aw_summary,
+    build_stage5aw_updates,
+    repair_stage5aw_decision_variants,
+    validate_stage5aw,
 )
 from .transcription import build_transcription
 from .validation import validate_stage5ap
@@ -1162,6 +1185,238 @@ def validate_stage5av_command(
     if errors:
         raise typer.Exit(1)
     console.print("token_block_stage5av_valid=true")
+
+
+@app.command("audit-stage5aw-decision-parser")
+def audit_stage5aw_decision_parser_command(
+    decision_file: Path = typer.Option(STAGE5AV_LOCAL_DECISION_TEMPLATE_PATH),
+    stage5av_extras: Path = typer.Option(STAGE5AV_REVIEWER_EXTRA_TOKENS_PATH),
+    stage5av_branch_manifest: Path = typer.Option(STAGE5AV_BRANCH_MANIFEST_PATH),
+    results_dir: Path = typer.Option(STAGE5AW_RESULTS_DIR),
+    out_audit: Path = typer.Option(STAGE5AW_DECISION_PARSER_AUDIT_PATH),
+    out_policy: Path = typer.Option(STAGE5AW_PARSER_POLICY_PATH),
+) -> None:
+    audit, policy = audit_stage5aw_decision_parser(
+        decision_file=decision_file,
+        stage5av_extras=stage5av_extras,
+        stage5av_branch_manifest=stage5av_branch_manifest,
+        results_dir=results_dir,
+        out_audit=out_audit,
+        out_policy=out_policy,
+    )
+    console.print(f"stage5av_malformed_reviewer_extra_count={audit['stage5av_malformed_reviewer_extra_count']}")
+    console.print(f"parser_policy_status={policy['policy_status']}")
+
+
+@app.command("repair-stage5aw-decision-variants")
+def repair_stage5aw_decision_variants_command(
+    decision_file: Path = typer.Option(STAGE5AV_LOCAL_DECISION_TEMPLATE_PATH),
+    stage5au_case_challenges: Path = typer.Option(STAGE5AU_CASE_CHALLENGES_V2_PATH),
+    stage5ap_alphabet_registry: Path = typer.Option(ALPHABET_PATH),
+    parser_policy: Path = typer.Option(STAGE5AW_PARSER_POLICY_PATH),
+    results_dir: Path = typer.Option(STAGE5AW_RESULTS_DIR),
+    out_decisions: Path = typer.Option(STAGE5AW_REPAIRED_HUMAN_REVIEW_DECISIONS_PATH),
+    out_unresolved: Path = typer.Option(
+        STAGE5AW_REPAIRED_UNRESOLVED_VARIANTS_PATH,
+        "--out-unresolved-variants",
+        "--out-unresolved",
+    ),
+    out_extras: Path = typer.Option(
+        STAGE5AW_REPAIRED_REVIEWER_EXTRA_TOKENS_PATH,
+        "--out-reviewer-extras",
+        "--out-extras",
+    ),
+    out_malformed: Path = typer.Option(STAGE5AW_MALFORMED_FRAGMENTS_PATH),
+) -> None:
+    decisions, unresolved, extras, malformed = repair_stage5aw_decision_variants(
+        decision_file=decision_file,
+        stage5au_case_challenges=stage5au_case_challenges,
+        stage5ap_alphabet_registry=stage5ap_alphabet_registry,
+        parser_policy=parser_policy,
+        results_dir=results_dir,
+        out_decisions=out_decisions,
+        out_unresolved=out_unresolved,
+        out_extras=out_extras,
+        out_malformed=out_malformed,
+    )
+    console.print(f"repaired_decision_record_count={decisions['decision_record_count']}")
+    console.print(f"repaired_unresolved_variant_count={unresolved['unresolved_token_variant_count']}")
+    console.print(f"repaired_reviewer_extra_possible_token_count={extras['repaired_reviewer_extra_possible_token_count']}")
+    console.print(f"malformed_possible_token_fragment_count={malformed['malformed_possible_token_fragment_count']}")
+
+
+@app.command("build-stage5aw-repaired-branch-manifest")
+def build_stage5aw_repaired_branch_manifest_command(
+    repaired_decisions: Path = typer.Option(STAGE5AW_REPAIRED_HUMAN_REVIEW_DECISIONS_PATH),
+    repaired_unresolved: Path = typer.Option(
+        STAGE5AW_REPAIRED_UNRESOLVED_VARIANTS_PATH,
+        "--repaired-unresolved-variants",
+        "--repaired-unresolved",
+    ),
+    repaired_extras: Path = typer.Option(
+        STAGE5AW_REPAIRED_REVIEWER_EXTRA_TOKENS_PATH,
+        "--repaired-reviewer-extras",
+        "--repaired-extras",
+    ),
+    malformed_fragments: Path = typer.Option(STAGE5AW_MALFORMED_FRAGMENTS_PATH),
+    stage5ap_transcription: Path = typer.Option(TRANSCRIPTION_PATH),
+    stage5ap_mapping_preflight: Path = typer.Option(MAPPING_PATH),
+    results_dir: Path = typer.Option(STAGE5AW_RESULTS_DIR),
+    out_impact: Path = typer.Option(STAGE5AW_REPAIRED_PRIMARY60_IMPACT_PATH),
+    out_branch_manifest: Path = typer.Option(STAGE5AW_REPAIRED_BRANCH_MANIFEST_PATH),
+) -> None:
+    impact, manifest = build_stage5aw_repaired_branch_manifest(
+        repaired_decisions=repaired_decisions,
+        repaired_unresolved=repaired_unresolved,
+        repaired_extras=repaired_extras,
+        malformed_fragments=malformed_fragments,
+        stage5ap_transcription=stage5ap_transcription,
+        stage5ap_mapping_preflight=stage5ap_mapping_preflight,
+        results_dir=results_dir,
+        out_impact=out_impact,
+        out_branch_manifest=out_branch_manifest,
+    )
+    console.print(f"primary60_mappable_option_count={impact['primary60_mappable_option_count']}")
+    console.print(f"primary60_unmappable_option_count={impact['primary60_unmappable_option_count']}")
+    console.print(f"branch_count_upper_bound_product={manifest['branch_count_upper_bound_product']}")
+
+
+@app.command("build-stage5aw-updates")
+def build_stage5aw_updates_command(
+    repaired_unresolved: Path = typer.Option(
+        STAGE5AW_REPAIRED_UNRESOLVED_VARIANTS_PATH,
+        "--repaired-unresolved-variants",
+        "--repaired-unresolved",
+    ),
+    impact_summary: Path = typer.Option(STAGE5AW_REPAIRED_PRIMARY60_IMPACT_PATH),
+    branch_manifest: Path = typer.Option(STAGE5AW_REPAIRED_BRANCH_MANIFEST_PATH),
+    out_canonical_update: Path = typer.Option(STAGE5AW_CANONICAL_UPDATE_PATH),
+    out_null_control: Path = typer.Option(
+        STAGE5AW_NULL_CONTROL_UPDATE_PATH,
+        "--out-null-control-update",
+        "--out-null-control",
+    ),
+    out_dwh_context: Path = typer.Option(STAGE5AW_DWH_CONTEXT_PATH),
+) -> None:
+    canonical, null_control, dwh = build_stage5aw_updates(
+        repaired_unresolved=repaired_unresolved,
+        impact_summary=impact_summary,
+        branch_manifest=branch_manifest,
+        out_canonical_update=out_canonical_update,
+        out_null_control=out_null_control,
+        out_dwh_context=out_dwh_context,
+    )
+    console.print(f"canonical_transcription_changed={str(canonical['canonical_transcription_changed']).lower()}")
+    console.print(f"future_preflight_must_use_stage5aw_repaired_manifest={str(null_control['future_preflight_must_use_stage5aw_repaired_manifest']).lower()}")
+    console.print(f"dwh_defined={str(dwh['dwh_defined']).lower()}")
+
+
+@app.command("build-stage5aw-summary")
+def build_stage5aw_summary_command(
+    audit: Path = typer.Option(STAGE5AW_DECISION_PARSER_AUDIT_PATH),
+    policy: Path = typer.Option(STAGE5AW_PARSER_POLICY_PATH),
+    repaired_decisions: Path = typer.Option(STAGE5AW_REPAIRED_HUMAN_REVIEW_DECISIONS_PATH),
+    repaired_unresolved: Path = typer.Option(
+        STAGE5AW_REPAIRED_UNRESOLVED_VARIANTS_PATH,
+        "--repaired-unresolved-variants",
+        "--repaired-unresolved",
+    ),
+    repaired_extras: Path = typer.Option(
+        STAGE5AW_REPAIRED_REVIEWER_EXTRA_TOKENS_PATH,
+        "--repaired-reviewer-extras",
+        "--repaired-extras",
+    ),
+    malformed_fragments: Path = typer.Option(STAGE5AW_MALFORMED_FRAGMENTS_PATH),
+    impact_summary: Path = typer.Option(STAGE5AW_REPAIRED_PRIMARY60_IMPACT_PATH),
+    branch_manifest: Path = typer.Option(STAGE5AW_REPAIRED_BRANCH_MANIFEST_PATH),
+    canonical_update: Path = typer.Option(STAGE5AW_CANONICAL_UPDATE_PATH),
+    null_control: Path = typer.Option(
+        STAGE5AW_NULL_CONTROL_UPDATE_PATH,
+        "--null-control-update",
+        "--null-control",
+    ),
+    dwh_context: Path = typer.Option(STAGE5AW_DWH_CONTEXT_PATH),
+    out_guardrail: Path = typer.Option(STAGE5AW_GUARDRAIL_PATH),
+    out_next_stage: Path = typer.Option(STAGE5AW_NEXT_STAGE_DECISION_PATH),
+    out_summary: Path = typer.Option(STAGE5AW_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AW_RESULTS_DIR),
+) -> None:
+    guard, next_stage, summary = build_stage5aw_summary(
+        audit=audit,
+        policy=policy,
+        repaired_decisions=repaired_decisions,
+        repaired_unresolved=repaired_unresolved,
+        repaired_extras=repaired_extras,
+        malformed_fragments=malformed_fragments,
+        impact_summary=impact_summary,
+        branch_manifest=branch_manifest,
+        canonical_update=canonical_update,
+        null_control=null_control,
+        dwh_context=dwh_context,
+        out_guardrail=out_guardrail,
+        out_next_stage=out_next_stage,
+        out_summary=out_summary,
+        results_dir=results_dir,
+    )
+    console.print(f"parser_repair_only={str(guard['parser_repair_only']).lower()}")
+    console.print(f"selected_next_stage_title={next_stage['selected_next_stage_title']}")
+    console.print(f"stage5aw_repaired_reviewer_extra_possible_token_count={summary['stage5aw_repaired_reviewer_extra_possible_token_count']}")
+
+
+@app.command("validate-stage5aw")
+def validate_stage5aw_command(
+    audit: Path = typer.Option(STAGE5AW_DECISION_PARSER_AUDIT_PATH),
+    policy: Path = typer.Option(STAGE5AW_PARSER_POLICY_PATH),
+    repaired_decisions: Path = typer.Option(STAGE5AW_REPAIRED_HUMAN_REVIEW_DECISIONS_PATH),
+    repaired_unresolved: Path = typer.Option(
+        STAGE5AW_REPAIRED_UNRESOLVED_VARIANTS_PATH,
+        "--repaired-unresolved-variants",
+        "--repaired-unresolved",
+    ),
+    repaired_extras: Path = typer.Option(
+        STAGE5AW_REPAIRED_REVIEWER_EXTRA_TOKENS_PATH,
+        "--repaired-reviewer-extras",
+        "--repaired-extras",
+    ),
+    malformed_fragments: Path = typer.Option(STAGE5AW_MALFORMED_FRAGMENTS_PATH),
+    impact_summary: Path = typer.Option(STAGE5AW_REPAIRED_PRIMARY60_IMPACT_PATH),
+    branch_manifest: Path = typer.Option(STAGE5AW_REPAIRED_BRANCH_MANIFEST_PATH),
+    canonical_update: Path = typer.Option(STAGE5AW_CANONICAL_UPDATE_PATH),
+    null_control: Path = typer.Option(
+        STAGE5AW_NULL_CONTROL_UPDATE_PATH,
+        "--null-control-update",
+        "--null-control",
+    ),
+    dwh_context: Path = typer.Option(STAGE5AW_DWH_CONTEXT_PATH),
+    guardrail: Path = typer.Option(STAGE5AW_GUARDRAIL_PATH),
+    next_stage: Path = typer.Option(STAGE5AW_NEXT_STAGE_DECISION_PATH, "--next-stage-decision", "--next-stage"),
+    summary: Path = typer.Option(STAGE5AW_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AW_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5aw(
+        audit=audit,
+        policy=policy,
+        repaired_decisions=repaired_decisions,
+        repaired_unresolved=repaired_unresolved,
+        repaired_extras=repaired_extras,
+        malformed_fragments=malformed_fragments,
+        impact_summary=impact_summary,
+        branch_manifest=branch_manifest,
+        canonical_update=canonical_update,
+        null_control=null_control,
+        dwh_context=dwh_context,
+        guardrail=guardrail,
+        next_stage=next_stage,
+        summary=summary,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(error)
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5aw_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

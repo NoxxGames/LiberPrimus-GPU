@@ -1,0 +1,4210 @@
+record_type: repaired_unresolved_token_variant_record_set
+schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+stage_id: stage-5aw
+source_stage_id: stage-5av
+unresolved_token_variant_count: 77
+records:
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-002
+  challenge_id: stage5at-token-case-002
+  token_index_0_based: 2
+  canonical_token: 2l
+  candidate_tokens:
+  - '21'
+  - 2I
+  - 2l
+  - Z1
+  - ZI
+  - Zl
+  possible_tokens:
+  - 2I
+  - 2l
+  possible_token_details:
+  - token: 2I
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 138
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 2l
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 167
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-013
+  challenge_id: stage5at-token-case-013
+  token_index_0_based: 13
+  canonical_token: '04'
+  candidate_tokens:
+  - '04'
+  - O4
+  - o4
+  possible_tokens:
+  - '04'
+  - O4
+  - ?4
+  possible_token_details:
+  - token: '04'
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 4
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: O4
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  - token: ?4
+    possible_token_source: visual_placeholder_from_reviewer_notes
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: visual_placeholder_unmappable
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: visual_placeholder_unmappable
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens:
+  - ?4
+  malformed_possible_token_fragments:
+  - record_type: malformed_possible_token_fragment
+    schema: schemas/token-block/malformed-possible-token-fragment-v0.schema.json
+    stage_id: stage-5aw
+    source_stage_id: stage-5av
+    challenge_id: stage5at-token-case-013
+    token_index_0_based: 13
+    canonical_token: '04'
+    raw_fragment: O4 row overlay supports ?4
+    extracted_tokens:
+    - O4
+    - ?4
+    cleanup_status: token_prefix_and_visual_placeholder_extracted
+    included_in_reviewer_extra_possible_tokens: false
+    variant_byte_stream_eligible: false
+    canonical_transcription_changed: false
+    solve_claim: false
+  - record_type: malformed_possible_token_fragment
+    schema: schemas/token-block/malformed-possible-token-fragment-v0.schema.json
+    stage_id: stage-5aw
+    source_stage_id: stage-5av
+    challenge_id: stage5at-token-case-013
+    token_index_0_based: 13
+    canonical_token: '04'
+    raw_fragment: ?4 but prefix remains ambiguous
+    extracted_tokens:
+    - ?4
+    cleanup_status: token_prefix_and_visual_placeholder_extracted
+    included_in_reviewer_extra_possible_tokens: false
+    variant_byte_stream_eligible: false
+    canonical_transcription_changed: false
+    solve_claim: false
+  possible_token_count: 3
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 1
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 2
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-018
+  challenge_id: stage5at-token-case-018
+  token_index_0_based: 18
+  canonical_token: 0F
+  candidate_tokens:
+  - 0F
+  - OF
+  - oF
+  possible_tokens:
+  - 0F
+  - OF
+  possible_token_details:
+  - token: 0F
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 15
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OF
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-019
+  challenge_id: stage5at-token-case-019
+  token_index_0_based: 19
+  canonical_token: 0X
+  candidate_tokens:
+  - 0X
+  - OX
+  - oX
+  possible_tokens:
+  - 0X
+  - OX
+  possible_token_details:
+  - token: 0X
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 33
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OX
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-022
+  challenge_id: stage5at-token-case-022
+  token_index_0_based: 22
+  canonical_token: 0x
+  candidate_tokens:
+  - 0x
+  - Ox
+  - ox
+  possible_tokens:
+  - 0x
+  - Ox
+  possible_token_details:
+  - token: 0x
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 59
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Ox
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-025
+  challenge_id: stage5at-token-case-025
+  token_index_0_based: 25
+  canonical_token: 3l
+  candidate_tokens:
+  - '31'
+  - 3I
+  - 3l
+  possible_tokens:
+  - 3I
+  - 3l
+  - 3?
+  possible_token_details:
+  - token: 3I
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 198
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 3l
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 227
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 3?
+    possible_token_source: visual_placeholder_from_reviewer_notes
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: visual_placeholder_unmappable
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: visual_placeholder_unmappable
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens:
+  - 3?
+  malformed_possible_token_fragments:
+  - record_type: malformed_possible_token_fragment
+    schema: schemas/token-block/malformed-possible-token-fragment-v0.schema.json
+    stage_id: stage-5aw
+    source_stage_id: stage-5av
+    challenge_id: stage5at-token-case-025
+    token_index_0_based: 25
+    canonical_token: 3l
+    raw_fragment: 3l row overlay supports 3? but suffix remains ambiguous
+    extracted_tokens:
+    - 3l
+    - 3?
+    cleanup_status: token_prefix_and_visual_placeholder_extracted
+    included_in_reviewer_extra_possible_tokens: false
+    variant_byte_stream_eligible: false
+    canonical_transcription_changed: false
+    solve_claim: false
+  possible_token_count: 3
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 1
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-027
+  challenge_id: stage5at-token-case-027
+  token_index_0_based: 27
+  canonical_token: 0P
+  candidate_tokens:
+  - 0P
+  - OP
+  - oP
+  possible_tokens:
+  - 0P
+  - OP
+  possible_token_details:
+  - token: 0P
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 25
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OP
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-035
+  challenge_id: stage5at-token-case-035
+  token_index_0_based: 35
+  canonical_token: 0d
+  candidate_tokens:
+  - 0d
+  - Od
+  - od
+  possible_tokens:
+  - 0d
+  - Od
+  possible_token_details:
+  - token: 0d
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 39
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Od
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-036
+  challenge_id: stage5at-token-case-036
+  token_index_0_based: 36
+  canonical_token: 0s
+  candidate_tokens:
+  - 0s
+  - Os
+  - os
+  possible_tokens:
+  - 0s
+  - Os
+  possible_token_details:
+  - token: 0s
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 54
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Os
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-039
+  challenge_id: stage5at-token-case-039
+  token_index_0_based: 39
+  canonical_token: '05'
+  candidate_tokens:
+  - '05'
+  - 0S
+  - O5
+  - OS
+  - o5
+  - oS
+  possible_tokens:
+  - '05'
+  - O5
+  possible_token_details:
+  - token: '05'
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 5
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: O5
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-041
+  challenge_id: stage5at-token-case-041
+  token_index_0_based: 41
+  canonical_token: 1O
+  candidate_tokens:
+  - '10'
+  - 1O
+  - I0
+  - IO
+  - l0
+  - lO
+  possible_tokens:
+  - '10'
+  - 1O
+  possible_token_details:
+  - token: '10'
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 60
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 1O
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 84
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-042
+  challenge_id: stage5at-token-case-042
+  token_index_0_based: 42
+  canonical_token: 0S
+  candidate_tokens:
+  - '05'
+  - 0S
+  - O5
+  - OS
+  - o5
+  - oS
+  possible_tokens:
+  - 0S
+  - OS
+  possible_token_details:
+  - token: 0S
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 28
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OS
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-045
+  challenge_id: stage5at-token-case-045
+  token_index_0_based: 45
+  canonical_token: 1I
+  candidate_tokens:
+  - '11'
+  - 1I
+  - 1l
+  - I1
+  - II
+  - Il
+  - l1
+  - lI
+  - ll
+  possible_tokens:
+  - 1I
+  - 1l
+  possible_token_details:
+  - token: 1I
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 78
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 1l
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 107
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-049
+  challenge_id: stage5at-token-case-049
+  token_index_0_based: 49
+  canonical_token: 0G
+  candidate_tokens:
+  - '06'
+  - 0G
+  - O6
+  - OG
+  - o6
+  - oG
+  possible_tokens:
+  - 0G
+  - OG
+  possible_token_details:
+  - token: 0G
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 16
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OG
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-050
+  challenge_id: stage5at-token-case-050
+  token_index_0_based: 50
+  canonical_token: 0I
+  candidate_tokens:
+  - '01'
+  - 0I
+  - 0l
+  - O1
+  - OI
+  - Ol
+  - o1
+  - oI
+  - ol
+  possible_tokens:
+  - 0I
+  - 0l
+  - OI
+  - Ol
+  possible_token_details:
+  - token: 0I
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 18
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 0l
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 47
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OI
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  - token: Ol
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 4
+  generated_candidate_possible_token_count: 3
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 2
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-051
+  challenge_id: stage5at-token-case-051
+  token_index_0_based: 51
+  canonical_token: 0x
+  candidate_tokens:
+  - 0x
+  - Ox
+  - ox
+  possible_tokens:
+  - 0x
+  - Ox
+  possible_token_details:
+  - token: 0x
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 59
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Ox
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-063
+  challenge_id: stage5at-token-case-063
+  token_index_0_based: 63
+  canonical_token: 0p
+  candidate_tokens:
+  - 0g
+  - 0p
+  - 0q
+  - Og
+  - Op
+  - Oq
+  - og
+  - op
+  - oq
+  possible_tokens:
+  - 0p
+  possible_token_details:
+  - token: 0p
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 51
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 1
+  generated_candidate_possible_token_count: 0
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-066
+  challenge_id: stage5at-token-case-066
+  token_index_0_based: 66
+  canonical_token: 0P
+  candidate_tokens:
+  - 0P
+  - OP
+  - oP
+  possible_tokens:
+  - 0P
+  possible_token_details:
+  - token: 0P
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 25
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 1
+  generated_candidate_possible_token_count: 0
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-077
+  challenge_id: stage5at-token-case-077
+  token_index_0_based: 77
+  canonical_token: 2O
+  candidate_tokens:
+  - '20'
+  - 2O
+  - Z0
+  - ZO
+  possible_tokens:
+  - '20'
+  - 2O
+  possible_token_details:
+  - token: '20'
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 120
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 2O
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 144
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-078
+  challenge_id: stage5at-token-case-078
+  token_index_0_based: 78
+  canonical_token: 0k
+  candidate_tokens:
+  - 0k
+  - Ok
+  - ok
+  possible_tokens:
+  - 0k
+  - Ok
+  possible_token_details:
+  - token: 0k
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 46
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Ok
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-081
+  challenge_id: stage5at-token-case-081
+  token_index_0_based: 81
+  canonical_token: 0w
+  candidate_tokens:
+  - 0w
+  - Ow
+  - ow
+  possible_tokens:
+  - 0w
+  - Ow
+  possible_token_details:
+  - token: 0w
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 58
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Ow
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-085
+  challenge_id: stage5at-token-case-085
+  token_index_0_based: 85
+  canonical_token: 0S
+  candidate_tokens:
+  - '05'
+  - 0S
+  - O5
+  - OS
+  - o5
+  - oS
+  possible_tokens:
+  - 0S
+  - OS
+  possible_token_details:
+  - token: 0S
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 28
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OS
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-090
+  challenge_id: stage5at-token-case-090
+  token_index_0_based: 90
+  canonical_token: 3l
+  candidate_tokens:
+  - '31'
+  - 3I
+  - 3l
+  possible_tokens:
+  - 3I
+  - 3l
+  possible_token_details:
+  - token: 3I
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 198
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 3l
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 227
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-091
+  challenge_id: stage5at-token-case-091
+  token_index_0_based: 91
+  canonical_token: 0n
+  candidate_tokens:
+  - 0n
+  - 'On'
+  - 'on'
+  possible_tokens:
+  - 0n
+  - 'On'
+  possible_token_details:
+  - token: 0n
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 49
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 'On'
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-093
+  challenge_id: stage5at-token-case-093
+  token_index_0_based: 93
+  canonical_token: 1O
+  candidate_tokens:
+  - '10'
+  - 1O
+  - I0
+  - IO
+  - l0
+  - lO
+  possible_tokens:
+  - '10'
+  - 1O
+  possible_token_details:
+  - token: '10'
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 60
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 1O
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 84
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-094
+  challenge_id: stage5at-token-case-094
+  token_index_0_based: 94
+  canonical_token: 0u
+  candidate_tokens:
+  - 0u
+  - Ou
+  - ou
+  possible_tokens:
+  - 0u
+  - Ou
+  possible_token_details:
+  - token: 0u
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 56
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Ou
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-095
+  challenge_id: stage5at-token-case-095
+  token_index_0_based: 95
+  canonical_token: 0Z
+  candidate_tokens:
+  - '02'
+  - 0Z
+  - O2
+  - OZ
+  - o2
+  - oZ
+  possible_tokens:
+  - 0Z
+  - OZ
+  possible_token_details:
+  - token: 0Z
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 35
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OZ
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-099
+  challenge_id: stage5at-token-case-099
+  token_index_0_based: 99
+  canonical_token: 0Y
+  candidate_tokens:
+  - 0Y
+  - OY
+  - oY
+  possible_tokens:
+  - 0Y
+  - OY
+  possible_token_details:
+  - token: 0Y
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 34
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OY
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-102
+  challenge_id: stage5at-token-case-102
+  token_index_0_based: 102
+  canonical_token: 0W
+  candidate_tokens:
+  - 0W
+  - OW
+  - oW
+  possible_tokens:
+  - 0W
+  - OW
+  possible_token_details:
+  - token: 0W
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 32
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OW
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-106
+  challenge_id: stage5at-token-case-106
+  token_index_0_based: 106
+  canonical_token: 0V
+  candidate_tokens:
+  - 0V
+  - OV
+  - oV
+  possible_tokens:
+  - 0V
+  - OV
+  possible_token_details:
+  - token: 0V
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 31
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OV
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-108
+  challenge_id: stage5at-token-case-108
+  token_index_0_based: 108
+  canonical_token: 0E
+  candidate_tokens:
+  - 0E
+  - OE
+  - oE
+  possible_tokens:
+  - 0E
+  - OE
+  possible_token_details:
+  - token: 0E
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 14
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OE
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-110
+  challenge_id: stage5at-token-case-110
+  token_index_0_based: 110
+  canonical_token: 0W
+  candidate_tokens:
+  - 0W
+  - OW
+  - oW
+  possible_tokens:
+  - 0W
+  - OW
+  possible_token_details:
+  - token: 0W
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 32
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OW
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-116
+  challenge_id: stage5at-token-case-116
+  token_index_0_based: 116
+  canonical_token: 0s
+  candidate_tokens:
+  - 0s
+  - Os
+  - os
+  possible_tokens:
+  - 0s
+  - Os
+  possible_token_details:
+  - token: 0s
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 54
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Os
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-118
+  challenge_id: stage5at-token-case-118
+  token_index_0_based: 118
+  canonical_token: 0Z
+  candidate_tokens:
+  - '02'
+  - 0Z
+  - O2
+  - OZ
+  - o2
+  - oZ
+  possible_tokens:
+  - 0Z
+  - OZ
+  possible_token_details:
+  - token: 0Z
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 35
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OZ
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-120
+  challenge_id: stage5at-token-case-120
+  token_index_0_based: 120
+  canonical_token: 0g
+  candidate_tokens:
+  - 0g
+  - 0p
+  - 0q
+  - Og
+  - Op
+  - Oq
+  - og
+  - op
+  - oq
+  possible_tokens:
+  - 0g
+  - Og
+  possible_token_details:
+  - token: 0g
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 42
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Og
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-123
+  challenge_id: stage5at-token-case-123
+  token_index_0_based: 123
+  canonical_token: 0s
+  candidate_tokens:
+  - 0s
+  - Os
+  - os
+  possible_tokens:
+  - 0s
+  - Os
+  possible_token_details:
+  - token: 0s
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 54
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Os
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-124
+  challenge_id: stage5at-token-case-124
+  token_index_0_based: 124
+  canonical_token: 0D
+  candidate_tokens:
+  - 0D
+  - OD
+  - oD
+  possible_tokens:
+  - 0D
+  - OD
+  possible_token_details:
+  - token: 0D
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 13
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OD
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-125
+  challenge_id: stage5at-token-case-125
+  token_index_0_based: 125
+  canonical_token: 0K
+  candidate_tokens:
+  - 0K
+  - OK
+  - oK
+  possible_tokens:
+  - 0K
+  - OK
+  possible_token_details:
+  - token: 0K
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 20
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OK
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-131
+  challenge_id: stage5at-token-case-131
+  token_index_0_based: 131
+  canonical_token: '20'
+  candidate_tokens:
+  - '20'
+  - 2O
+  - 2o
+  - Z0
+  - ZO
+  - Zo
+  possible_tokens:
+  - '20'
+  - 2O
+  possible_token_details:
+  - token: '20'
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 120
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 2O
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 144
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-136
+  challenge_id: stage5at-token-case-136
+  token_index_0_based: 136
+  canonical_token: 0A
+  candidate_tokens:
+  - 0A
+  - OA
+  - oA
+  possible_tokens:
+  - 0A
+  - OA
+  possible_token_details:
+  - token: 0A
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 10
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OA
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-139
+  challenge_id: stage5at-token-case-139
+  token_index_0_based: 139
+  canonical_token: 0D
+  candidate_tokens:
+  - 0D
+  - OD
+  - oD
+  possible_tokens:
+  - 0D
+  - OD
+  possible_token_details:
+  - token: 0D
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 13
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OD
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-141
+  challenge_id: stage5at-token-case-141
+  token_index_0_based: 141
+  canonical_token: 0k
+  candidate_tokens:
+  - 0k
+  - Ok
+  - ok
+  possible_tokens:
+  - 0k
+  - Ok
+  possible_token_details:
+  - token: 0k
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 46
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Ok
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-153
+  challenge_id: stage5at-token-case-153
+  token_index_0_based: 153
+  canonical_token: 0X
+  candidate_tokens:
+  - 0X
+  - OX
+  - oX
+  possible_tokens:
+  - 0X
+  - OX
+  possible_token_details:
+  - token: 0X
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 33
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OX
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-154
+  challenge_id: stage5at-token-case-154
+  token_index_0_based: 154
+  canonical_token: 0E
+  candidate_tokens:
+  - 0E
+  - OE
+  - oE
+  possible_tokens:
+  - 0E
+  - OE
+  possible_token_details:
+  - token: 0E
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 14
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OE
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-156
+  challenge_id: stage5at-token-case-156
+  token_index_0_based: 156
+  canonical_token: 0q
+  candidate_tokens:
+  - 0g
+  - 0p
+  - 0q
+  - Og
+  - Op
+  - Oq
+  - og
+  - op
+  - oq
+  possible_tokens:
+  - 0q
+  - Oq
+  possible_token_details:
+  - token: 0q
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 52
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Oq
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-164
+  challenge_id: stage5at-token-case-164
+  token_index_0_based: 164
+  canonical_token: 1j
+  candidate_tokens:
+  - 1j
+  - Ij
+  - lj
+  possible_tokens:
+  - 1i
+  - 1j
+  possible_token_details:
+  - token: 1i
+    possible_token_source: reviewer_extra_possible_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 104
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 1j
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 105
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens:
+  - 1i
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 0
+  reviewer_extra_possible_token_count: 1
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-165
+  challenge_id: stage5at-token-case-165
+  token_index_0_based: 165
+  canonical_token: 0I
+  candidate_tokens:
+  - '01'
+  - 0I
+  - 0l
+  - O1
+  - OI
+  - Ol
+  - o1
+  - oI
+  - ol
+  possible_tokens:
+  - 0I
+  - 0j
+  - Oj
+  - Ol
+  possible_token_details:
+  - token: 0I
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 18
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 0j
+    possible_token_source: reviewer_extra_possible_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 45
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Oj
+    possible_token_source: reviewer_extra_possible_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  - token: Ol
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens:
+  - 0j
+  - Oj
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 4
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 2
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 2
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-168
+  challenge_id: stage5at-token-case-168
+  token_index_0_based: 168
+  canonical_token: '40'
+  candidate_tokens:
+  - '40'
+  - 4O
+  - 4o
+  possible_tokens:
+  - '40'
+  - 4O
+  possible_token_details:
+  - token: '40'
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 240
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 4O
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 264
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-171
+  challenge_id: stage5at-token-case-171
+  token_index_0_based: 171
+  canonical_token: 0s
+  candidate_tokens:
+  - 0s
+  - Os
+  - os
+  possible_tokens:
+  - 0s
+  - Os
+  possible_token_details:
+  - token: 0s
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 54
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Os
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-175
+  challenge_id: stage5at-token-case-175
+  token_index_0_based: 175
+  canonical_token: 0l
+  candidate_tokens:
+  - '01'
+  - 0I
+  - 0l
+  - O1
+  - OI
+  - Ol
+  - o1
+  - oI
+  - ol
+  possible_tokens:
+  - 0I
+  - 0j
+  - Oj
+  - Ol
+  possible_token_details:
+  - token: 0I
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 18
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 0j
+    possible_token_source: reviewer_extra_possible_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 45
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Oj
+    possible_token_source: reviewer_extra_possible_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  - token: Ol
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens:
+  - 0j
+  - Oj
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 4
+  generated_candidate_possible_token_count: 2
+  reviewer_extra_possible_token_count: 2
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 2
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-180
+  challenge_id: stage5at-token-case-180
+  token_index_0_based: 180
+  canonical_token: 2O
+  candidate_tokens:
+  - '20'
+  - 2O
+  - Z0
+  - ZO
+  possible_tokens:
+  - '20'
+  - 2O
+  possible_token_details:
+  - token: '20'
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 120
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 2O
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 144
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-181
+  challenge_id: stage5at-token-case-181
+  token_index_0_based: 181
+  canonical_token: 0e
+  candidate_tokens:
+  - 0e
+  - Oe
+  - oe
+  possible_tokens:
+  - 0e
+  - Oe
+  possible_token_details:
+  - token: 0e
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 40
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Oe
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-186
+  challenge_id: stage5at-token-case-186
+  token_index_0_based: 186
+  canonical_token: 0J
+  candidate_tokens:
+  - 0J
+  - OJ
+  - oJ
+  possible_tokens:
+  - 0j
+  - 0J
+  - Oj
+  - OJ
+  possible_token_details:
+  - token: 0j
+    possible_token_source: reviewer_extra_possible_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 45
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 0J
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 19
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Oj
+    possible_token_source: reviewer_extra_possible_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  - token: OJ
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens:
+  - 0j
+  - Oj
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 4
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 2
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 2
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-188
+  challenge_id: stage5at-token-case-188
+  token_index_0_based: 188
+  canonical_token: 0c
+  candidate_tokens:
+  - 0c
+  - Oc
+  - oc
+  possible_tokens:
+  - 0c
+  - Oc
+  possible_token_details:
+  - token: 0c
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 38
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Oc
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-191
+  challenge_id: stage5at-token-case-191
+  token_index_0_based: 191
+  canonical_token: 0X
+  candidate_tokens:
+  - 0X
+  - OX
+  - oX
+  possible_tokens:
+  - 0X
+  - OX
+  possible_token_details:
+  - token: 0X
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 33
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OX
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-192
+  challenge_id: stage5at-token-case-192
+  token_index_0_based: 192
+  canonical_token: '00'
+  candidate_tokens:
+  - '00'
+  - 0O
+  - 0o
+  - O0
+  - OO
+  - Oo
+  - o0
+  - oO
+  - oo
+  possible_tokens:
+  - '00'
+  - OO
+  possible_token_details:
+  - token: '00'
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 0
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OO
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-198
+  challenge_id: stage5at-token-case-198
+  token_index_0_based: 198
+  canonical_token: 1j
+  candidate_tokens:
+  - 1j
+  - Ij
+  - lj
+  possible_tokens:
+  - 1I
+  - 1j
+  possible_token_details:
+  - token: 1I
+    possible_token_source: reviewer_extra_possible_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 78
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 1j
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 105
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens:
+  - 1I
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 0
+  reviewer_extra_possible_token_count: 1
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-199
+  challenge_id: stage5at-token-case-199
+  token_index_0_based: 199
+  canonical_token: 0I
+  candidate_tokens:
+  - '01'
+  - 0I
+  - 0l
+  - O1
+  - OI
+  - Ol
+  - o1
+  - oI
+  - ol
+  possible_tokens:
+  - 0I
+  - 0j
+  - OI
+  - Oj
+  possible_token_details:
+  - token: 0I
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 18
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 0j
+    possible_token_source: reviewer_extra_possible_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 45
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OI
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  - token: Oj
+    possible_token_source: reviewer_extra_possible_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens:
+  - 0j
+  - Oj
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 4
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 2
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 2
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-207
+  challenge_id: stage5at-token-case-207
+  token_index_0_based: 207
+  canonical_token: 0L
+  candidate_tokens:
+  - 0L
+  - OL
+  - oL
+  possible_tokens:
+  - 0L
+  - OL
+  possible_token_details:
+  - token: 0L
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 21
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OL
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-208
+  challenge_id: stage5at-token-case-208
+  token_index_0_based: 208
+  canonical_token: 0v
+  candidate_tokens:
+  - 0v
+  - Ov
+  - ov
+  possible_tokens:
+  - 0v
+  - Ov
+  possible_token_details:
+  - token: 0v
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 57
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Ov
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-210
+  challenge_id: stage5at-token-case-210
+  token_index_0_based: 210
+  canonical_token: '06'
+  candidate_tokens:
+  - '06'
+  - 0G
+  - O6
+  - OG
+  - o6
+  - oG
+  possible_tokens:
+  - '06'
+  - O6
+  possible_token_details:
+  - token: '06'
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 6
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: O6
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-215
+  challenge_id: stage5at-token-case-215
+  token_index_0_based: 215
+  canonical_token: 1O
+  candidate_tokens:
+  - '10'
+  - 1O
+  - I0
+  - IO
+  - l0
+  - lO
+  possible_tokens:
+  - '10'
+  - 1O
+  possible_token_details:
+  - token: '10'
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 60
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 1O
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 84
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-219
+  challenge_id: stage5at-token-case-219
+  token_index_0_based: 219
+  canonical_token: 0x
+  candidate_tokens:
+  - 0x
+  - Ox
+  - ox
+  possible_tokens:
+  - 0x
+  - Ox
+  possible_token_details:
+  - token: 0x
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 59
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Ox
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-220
+  challenge_id: stage5at-token-case-220
+  token_index_0_based: 220
+  canonical_token: 0w
+  candidate_tokens:
+  - 0w
+  - Ow
+  - ow
+  possible_tokens:
+  - 0w
+  - Ow
+  possible_token_details:
+  - token: 0w
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 58
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Ow
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-221
+  challenge_id: stage5at-token-case-221
+  token_index_0_based: 221
+  canonical_token: 0q
+  candidate_tokens:
+  - 0g
+  - 0p
+  - 0q
+  - Og
+  - Op
+  - Oq
+  - og
+  - op
+  - oq
+  possible_tokens:
+  - 0q
+  - Oq
+  possible_token_details:
+  - token: 0q
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 52
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Oq
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-222
+  challenge_id: stage5at-token-case-222
+  token_index_0_based: 222
+  canonical_token: 0p
+  candidate_tokens:
+  - 0g
+  - 0p
+  - 0q
+  - Og
+  - Op
+  - Oq
+  - og
+  - op
+  - oq
+  possible_tokens:
+  - 0p
+  - Op
+  possible_token_details:
+  - token: 0p
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 51
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Op
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-225
+  challenge_id: stage5at-token-case-225
+  token_index_0_based: 225
+  canonical_token: 0q
+  candidate_tokens:
+  - 0g
+  - 0p
+  - 0q
+  - Og
+  - Op
+  - Oq
+  - og
+  - op
+  - oq
+  possible_tokens:
+  - 0q
+  - Oq
+  possible_token_details:
+  - token: 0q
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 52
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Oq
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-228
+  challenge_id: stage5at-token-case-228
+  token_index_0_based: 228
+  canonical_token: 2O
+  candidate_tokens:
+  - '20'
+  - 2O
+  - Z0
+  - ZO
+  possible_tokens:
+  - '20'
+  - 2O
+  possible_token_details:
+  - token: '20'
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 120
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 2O
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 144
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-229
+  challenge_id: stage5at-token-case-229
+  token_index_0_based: 229
+  canonical_token: '00'
+  candidate_tokens:
+  - '00'
+  - 0O
+  - 0o
+  - O0
+  - OO
+  - Oo
+  - o0
+  - oO
+  - oo
+  possible_tokens:
+  - '00'
+  - OO
+  possible_token_details:
+  - token: '00'
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 0
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OO
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-237
+  challenge_id: stage5at-token-case-237
+  token_index_0_based: 237
+  canonical_token: 0W
+  candidate_tokens:
+  - 0W
+  - OW
+  - oW
+  possible_tokens:
+  - 0W
+  - OW
+  possible_token_details:
+  - token: 0W
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 32
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OW
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-240
+  challenge_id: stage5at-token-case-240
+  token_index_0_based: 240
+  canonical_token: 2O
+  candidate_tokens:
+  - '20'
+  - 2O
+  - Z0
+  - ZO
+  possible_tokens:
+  - '20'
+  - 2O
+  possible_token_details:
+  - token: '20'
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 120
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 2O
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 144
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-242
+  challenge_id: stage5at-token-case-242
+  token_index_0_based: 242
+  canonical_token: 0g
+  candidate_tokens:
+  - 0g
+  - 0p
+  - 0q
+  - Og
+  - Op
+  - Oq
+  - og
+  - op
+  - oq
+  possible_tokens:
+  - 0g
+  - Og
+  possible_token_details:
+  - token: 0g
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 42
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Og
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-244
+  challenge_id: stage5at-token-case-244
+  token_index_0_based: 244
+  canonical_token: 0M
+  candidate_tokens:
+  - 0M
+  - OM
+  - oM
+  possible_tokens:
+  - 0M
+  - OM
+  possible_token_details:
+  - token: 0M
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 22
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: OM
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-245
+  challenge_id: stage5at-token-case-245
+  token_index_0_based: 245
+  canonical_token: 0u
+  candidate_tokens:
+  - 0u
+  - Ou
+  - ou
+  possible_tokens:
+  - 0u
+  - Ou
+  possible_token_details:
+  - token: 0u
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 56
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Ou
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-246
+  challenge_id: stage5at-token-case-246
+  token_index_0_based: 246
+  canonical_token: 3l
+  candidate_tokens:
+  - '31'
+  - 3I
+  - 3l
+  possible_tokens:
+  - 3I
+  - 3l
+  possible_token_details:
+  - token: 3I
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 198
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 3l
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 227
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-252
+  challenge_id: stage5at-token-case-252
+  token_index_0_based: 252
+  canonical_token: '30'
+  candidate_tokens:
+  - '30'
+  - 3O
+  - 3o
+  possible_tokens:
+  - '30'
+  - 3O
+  possible_token_details:
+  - token: '30'
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 180
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: 3O
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 204
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 2
+  primary60_unmappable_possible_token_count: 0
+  variant_byte_stream_eligible_possible_token_count: 2
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+- record_type: repaired_unresolved_token_variant_record
+  schema: schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  source_decision_record_id: stage5at-token-case-253
+  challenge_id: stage5at-token-case-253
+  token_index_0_based: 253
+  canonical_token: 0a
+  candidate_tokens:
+  - 0a
+  - Oa
+  - oa
+  possible_tokens:
+  - 0a
+  - Oa
+  possible_token_details:
+  - token: 0a
+    possible_token_source: current_canonical_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: mapped_primary_60
+    primary60_mappable: true
+    primary60_value: 36
+    primary60_error: null
+    variant_byte_stream_eligible: true
+  - token: Oa
+    possible_token_source: generated_candidate_token
+    primary60_alphabet_id: community_60_digit_upper_lower_a_to_x
+    primary60_status: unmappable_primary_60
+    primary60_mappable: false
+    primary60_value: null
+    primary60_error: first_symbol_not_in_0_to_4
+    variant_byte_stream_eligible: false
+  reviewer_extra_possible_tokens: []
+  visual_placeholder_possible_tokens: []
+  malformed_possible_token_fragments: []
+  possible_token_count: 2
+  generated_candidate_possible_token_count: 1
+  reviewer_extra_possible_token_count: 0
+  visual_placeholder_possible_token_count: 0
+  primary60_mappable_possible_token_count: 1
+  primary60_unmappable_possible_token_count: 1
+  variant_byte_stream_eligible_possible_token_count: 1
+  possible_tokens_missing: false
+  variant_options_default_to_current_only: false
+  requires_review_followup: true
+  variant_policy_status: stage5aw_repaired_compact_branch_manifest_only
+  source_stage5au_challenge_record_present: true
+  canonical_transcription_changed: false
+  variant_byte_streams_generated: false
+  execution_performed: false
+  solve_claim: false
+canonical_transcription_changed: false
+variant_byte_streams_generated: false
+execution_performed: false
+solve_claim: false

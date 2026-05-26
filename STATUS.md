@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AV token case-review decision integration and compact variant-branch manifest is complete.
+Stage 5AW decision possible-token parser cleanup and branch-manifest repair is complete.
 
-Next recommended prompt: Stage 5AW - bounded token-block preflight manifest design without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5AX - bounded token-block preflight manifest design without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5AW
+
+Stage 5AW repaired a Stage 5AV reviewer-note parser quality issue before bounded token-block preflight design proceeds. It audited the Stage 5AV reviewer-extra token set, found `3` malformed prose-as-token records, repaired possible-token parsing, regenerated superseding Stage 5AW human-review decision records, unresolved-variant records, reviewer-extra token records, malformed-fragment audit records, primary-60 impact metadata, compact branch-manifest metadata, canonical-transcription non-update records, null-control updates, Deep Web Hash context, guardrails, and Stage 5AX next-stage metadata.
+
+Local Stage 5AW summary: original Stage 5AV reviewer-extra possible tokens `13`, repaired reviewer-extra possible tokens `10`, malformed possible-token fragments `3`, visual placeholder possible tokens `2`, parser cleanup warnings `4`, unresolved variant records `77`, primary-60 mappable/unmappable possible-token options `99/65`, branch upper-bound product `2720083094132915643088896`, branch upper-bound log10 `24.434582`, primary-60 mappable branch product `4194304`, compact branch manifest created `true`, full Cartesian product enumerated `false`, variant byte streams generated `false`, canonical transcription changed `false`, automatic case resolution `false`, DWH/hash search `false`, decode attempt `false`, OCR `false`, AI/ML interpretation `false`, LLM/vision token reading `false`, semantic image interpretation `false`, hidden-content image forensics `false`, stego execution `false`, CUDA execution/source modification `false`, new CUDA kernels `0`, benchmarks `false`, scored experiments `false`, generated outputs committed `false`, and solve claim `false`.
+
+Stage 5AW supersedes Stage 5AV branch metadata for future planning. It does not reinterpret human decisions, resolve token identities automatically, change the Stage 5AP canonical transcription, generate variant byte streams, decode the token block, or make any solve claim.
 
 ## Completed in Stage 5AV
 

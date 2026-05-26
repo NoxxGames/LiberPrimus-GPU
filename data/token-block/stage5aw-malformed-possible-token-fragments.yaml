@@ -1,0 +1,56 @@
+record_type: malformed_possible_token_fragment_set
+schema: schemas/token-block/malformed-possible-token-fragment-v0.schema.json
+stage_id: stage-5aw
+source_stage_id: stage-5av
+malformed_possible_token_fragment_count: 3
+records:
+- record_type: malformed_possible_token_fragment
+  schema: schemas/token-block/malformed-possible-token-fragment-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  challenge_id: stage5at-token-case-013
+  token_index_0_based: 13
+  canonical_token: '04'
+  raw_fragment: O4 row overlay supports ?4
+  extracted_tokens:
+  - O4
+  - ?4
+  cleanup_status: token_prefix_and_visual_placeholder_extracted
+  included_in_reviewer_extra_possible_tokens: false
+  variant_byte_stream_eligible: false
+  canonical_transcription_changed: false
+  solve_claim: false
+- record_type: malformed_possible_token_fragment
+  schema: schemas/token-block/malformed-possible-token-fragment-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  challenge_id: stage5at-token-case-013
+  token_index_0_based: 13
+  canonical_token: '04'
+  raw_fragment: ?4 but prefix remains ambiguous
+  extracted_tokens:
+  - ?4
+  cleanup_status: token_prefix_and_visual_placeholder_extracted
+  included_in_reviewer_extra_possible_tokens: false
+  variant_byte_stream_eligible: false
+  canonical_transcription_changed: false
+  solve_claim: false
+- record_type: malformed_possible_token_fragment
+  schema: schemas/token-block/malformed-possible-token-fragment-v0.schema.json
+  stage_id: stage-5aw
+  source_stage_id: stage-5av
+  challenge_id: stage5at-token-case-025
+  token_index_0_based: 25
+  canonical_token: 3l
+  raw_fragment: 3l row overlay supports 3? but suffix remains ambiguous
+  extracted_tokens:
+  - 3l
+  - 3?
+  cleanup_status: token_prefix_and_visual_placeholder_extracted
+  included_in_reviewer_extra_possible_tokens: false
+  variant_byte_stream_eligible: false
+  canonical_transcription_changed: false
+  solve_claim: false
+fragments_excluded_from_reviewer_extra_tokens: true
+variant_byte_streams_generated: false
+solve_claim: false

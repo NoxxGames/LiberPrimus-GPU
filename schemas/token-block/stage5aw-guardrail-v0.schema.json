@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "automatic_case_resolution_performed": { "const": false },
+    "benchmark_performed": { "const": false },
+    "canonical_transcription_changed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "parser_repair_only": { "const": true },
+    "record_type": { "const": "stage5aw_guardrail" },
+    "schema": { "const": "schemas/token-block/stage5aw-guardrail-v0.schema.json" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5aw" },
+    "variant_byte_streams_generated": { "const": false },
+    "variant_experiments_executed": { "const": false }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "parser_repair_only",
+    "canonical_transcription_changed",
+    "variant_byte_streams_generated",
+    "variant_experiments_executed",
+    "cuda_execution_performed",
+    "benchmark_performed",
+    "scored_experiments_executed",
+    "solve_claim"
+  ],
+  "type": "object"
+}

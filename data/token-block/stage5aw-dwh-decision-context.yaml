@@ -1,0 +1,15 @@
+record_type: stage5aw_dwh_decision_context
+schema: schemas/token-block/dwh-decision-context-v0.schema.json
+stage_id: stage-5aw
+source_stage_id: stage-5av
+token_block_id: stage5ap-page49-51-token-block
+dwh_defined: true
+dwh_expansion: Deep Web Hash
+decision_parser_repair_relevance: repaired token variants affect future token-to-value
+  planning
+token_block_dwh_relationship_status: speculative_source_lock_required
+dwh_operational_status: not_operational
+hash_search_performed: false
+hash_preimage_claim: false
+decode_claim: false
+solve_claim: false

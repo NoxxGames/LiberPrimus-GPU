@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "canonical_transcription_changed": { "const": false },
+    "execution_performed": { "const": false },
+    "record_type": { "const": "repaired_unresolved_token_variant_record_set" },
+    "schema": { "const": "schemas/token-block/repaired-unresolved-token-variant-record-v0.schema.json" },
+    "solve_claim": { "const": false },
+    "stage_id": { "const": "stage-5aw" },
+    "variant_byte_streams_generated": { "const": false }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "unresolved_token_variant_count",
+    "records",
+    "canonical_transcription_changed",
+    "variant_byte_streams_generated",
+    "execution_performed",
+    "solve_claim"
+  ],
+  "type": "object"
+}

@@ -1,5 +1,9 @@
 # Token Case Human Review Workflow
 
+## Stage 5AW Note
+
+Stage 5AW repairs parser handling after human decisions were integrated. Human decisions remain unchanged, prose fragments are audited rather than stored as token alternatives, visual placeholders remain review-only, and future bounded preflight design should use Stage 5AW repaired branch metadata.
+
 Use this workflow as the historical Stage 5AV manual-review input process for the Stage 5AU token-case challenge pack v2. Stage 5AV has now integrated the filled template into compact metadata.
 
 1. Start from `data/project-state/stage5au-summary.yaml`.

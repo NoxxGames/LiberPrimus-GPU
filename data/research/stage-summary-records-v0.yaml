@@ -1240,3 +1240,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5AV validates 203 user decisions with 126 keep_current, 77 unresolved, 0 change_token, 0 not_reviewable, 126 high-confidence records, 77 medium-confidence records, 13 reviewer-extra possible tokens, 98 primary-60 mappable options, 65 primary-60 unmappable options, compact branch upper-bound product 1813388729421943762059264, and selected Stage 5AW bounded token-block preflight manifest design without execution. It performs no automatic case resolution, canonical transcription rewrite, full Cartesian variant enumeration, variant byte-stream generation, DWH/hash search, decode attempt, OCR, AI/ML or LLM/vision reading, hidden-content image forensics, stego execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5aw
+    title: Decision possible-token parser cleanup and branch-manifest repair
+    status: complete
+    category: infrastructure
+    summary: Repaired Stage 5AV possible-token parser contamination, audited malformed prose fragments, preserved valid reviewer extras and visual placeholders separately, recalculated primary-60 impact, and created superseding compact branch metadata before bounded preflight design.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5AW commands for parser audit, repaired decision/variant generation, repaired branch-manifest generation, update records, summary generation, and validation."
+      - Stage 5AW parser audit, parser policy, repaired decision, repaired unresolved-variant, repaired reviewer-extra-token, malformed-fragment, primary-60 impact, branch-manifest, canonical non-update, null-control, DWH context, guardrail, next-stage, and aggregate summary records under `data/token-block/` and `data/project-state/`.
+      - Ignored generated reports under `experiments/results/token-block/stage5aw/` while the filled local decision template remains ignored under `human-review-packs/stage5au/token-case-review-v2/`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5AW finds 3 malformed Stage 5AV prose-as-token reviewer extras, preserves 10 valid reviewer-extra possible tokens, preserves 2 visual placeholders as primary-60 unmappable review-only options, records 77 unresolved variants, recalculates primary-60 mappable/unmappable options to 99/65, computes compact branch upper-bound product 2720083094132915643088896 and log10 24.434582, and selects Stage 5AX bounded token-block preflight manifest design without execution. It performs no human-decision reinterpretation, automatic case resolution, canonical transcription rewrite, full Cartesian variant enumeration, variant byte-stream generation, DWH/hash search, decode attempt, OCR, AI/ML or LLM/vision reading, semantic image interpretation, hidden-content image forensics, stego execution, CUDA execution/source modification/kernel addition, benchmark, scored experiment, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

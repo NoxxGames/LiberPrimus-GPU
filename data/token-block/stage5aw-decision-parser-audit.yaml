@@ -1,0 +1,39 @@
+record_type: decision_parser_audit
+schema: schemas/token-block/decision-parser-audit-v0.schema.json
+stage_id: stage-5aw
+source_stage_id: stage-5av
+source_stage5av_commit: 023e10c2a283c1fc01df215908d6c0744700c515
+decision_file_path: human-review-packs/stage5au/token-case-review-v2/decision-template.yaml
+decision_file_sha256: dd9e3ee0fe5dccd70fd19dbca864dbb57706c113f48777abe546b98d9d8f25f7
+stage5av_original_reviewer_extra_possible_token_count: 13
+stage5av_malformed_reviewer_extra_count: 3
+malformed_stage5av_reviewer_extra_records:
+- challenge_id: stage5at-token-case-013
+  token_index_0_based: 13
+  raw_reviewer_extra_possible_token: O4 row overlay supports ?4
+  malformation_reason: prose_fragment_or_non_two_character_token
+- challenge_id: stage5at-token-case-013
+  token_index_0_based: 13
+  raw_reviewer_extra_possible_token: ?4 but prefix remains ambiguous
+  malformation_reason: prose_fragment_or_non_two_character_token
+- challenge_id: stage5at-token-case-025
+  token_index_0_based: 25
+  raw_reviewer_extra_possible_token: 3l row overlay supports 3? but suffix remains
+    ambiguous
+  malformation_reason: prose_fragment_or_non_two_character_token
+audit_target_ids:
+- stage5at-token-case-013
+- stage5at-token-case-025
+- stage5at-token-case-164
+- stage5at-token-case-165
+- stage5at-token-case-175
+- stage5at-token-case-186
+- stage5at-token-case-198
+- stage5at-token-case-199
+stage5av_branch_manifest_path: data/token-block/stage5av-token-variant-branch-manifest.yaml
+stage5av_branch_count_upper_bound_product: 1813388729421943762059264
+parser_repair_required: true
+canonical_transcription_changed: false
+variant_byte_streams_generated: false
+execution_performed: false
+solve_claim: false

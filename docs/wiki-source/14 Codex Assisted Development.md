@@ -247,3 +247,12 @@ If Codex changes Stage 5AV token-case decision integration, verify
 `human-review-packs/stage5au/token-case-review-v2/`, and do not generate variant byte streams,
 run token experiments, run DWH/hash searches, run CUDA, benchmark, execute scored experiments, or
 make solve claims.
+
+Stage 5AW completion handoffs belong under ignored `codex-output/stage5aw-codex-completion.md`.
+If Codex changes Stage 5AW decision-parser repair, verify
+`libreprimus token-block validate-stage5aw`, keep generated reports under ignored
+`experiments/results/token-block/stage5aw/`, keep the filled decision template under ignored
+`human-review-packs/stage5au/token-case-review-v2/`, and do not reinterpret human decisions,
+generate variant byte streams, run token experiments, run DWH/hash searches, run OCR/AI/ML/LLM
+vision, run semantic or hidden-content image interpretation, run stego, run CUDA, benchmark,
+execute scored experiments, or make solve claims.

@@ -1,0 +1,1420 @@
+record_type: repaired_primary60_variant_impact_summary
+schema: schemas/token-block/repaired-primary60-variant-impact-summary-v0.schema.json
+stage_id: stage-5aw
+source_stage_id: stage-5av
+token_block_id: stage5ap-page49-51-token-block
+primary_alphabet_id: community_60_digit_upper_lower_a_to_x
+primary_alphabet: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwx
+unresolved_token_variant_count: 77
+affected_token_indices:
+- 2
+- 13
+- 18
+- 19
+- 22
+- 25
+- 27
+- 35
+- 36
+- 39
+- 41
+- 42
+- 45
+- 49
+- 50
+- 51
+- 63
+- 66
+- 77
+- 78
+- 81
+- 85
+- 90
+- 91
+- 93
+- 94
+- 95
+- 99
+- 102
+- 106
+- 108
+- 110
+- 116
+- 118
+- 120
+- 123
+- 124
+- 125
+- 131
+- 136
+- 139
+- 141
+- 153
+- 154
+- 156
+- 164
+- 165
+- 168
+- 171
+- 175
+- 180
+- 181
+- 186
+- 188
+- 191
+- 192
+- 198
+- 199
+- 207
+- 208
+- 210
+- 215
+- 219
+- 220
+- 221
+- 222
+- 225
+- 228
+- 229
+- 237
+- 240
+- 242
+- 244
+- 245
+- 246
+- 252
+- 253
+total_possible_token_options: 164
+primary60_mappable_option_count: 99
+primary60_unmappable_option_count: 65
+visual_placeholder_possible_token_count: 2
+malformed_fragment_count: 3
+branch_count_upper_bound_product: 2720083094132915643088896
+branch_count_upper_bound_log10: 24.434582
+primary60_mappable_branch_upper_bound_product: 4194304
+primary60_mappable_branch_upper_bound_log10: 6.62266
+possible_primary60_values_by_token:
+- challenge_id: stage5at-token-case-002
+  token_index_0_based: 2
+  canonical_token: 2l
+  current_primary60_value: 167
+  possible_primary60_values:
+  - token: 2I
+    primary60_value: 138
+    delta_from_current: -29
+  - token: 2l
+    primary60_value: 167
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-013
+  token_index_0_based: 13
+  canonical_token: '04'
+  current_primary60_value: 4
+  possible_primary60_values:
+  - token: '04'
+    primary60_value: 4
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-018
+  token_index_0_based: 18
+  canonical_token: 0F
+  current_primary60_value: 15
+  possible_primary60_values:
+  - token: 0F
+    primary60_value: 15
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-019
+  token_index_0_based: 19
+  canonical_token: 0X
+  current_primary60_value: 33
+  possible_primary60_values:
+  - token: 0X
+    primary60_value: 33
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-022
+  token_index_0_based: 22
+  canonical_token: 0x
+  current_primary60_value: 59
+  possible_primary60_values:
+  - token: 0x
+    primary60_value: 59
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-025
+  token_index_0_based: 25
+  canonical_token: 3l
+  current_primary60_value: 227
+  possible_primary60_values:
+  - token: 3I
+    primary60_value: 198
+    delta_from_current: -29
+  - token: 3l
+    primary60_value: 227
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-027
+  token_index_0_based: 27
+  canonical_token: 0P
+  current_primary60_value: 25
+  possible_primary60_values:
+  - token: 0P
+    primary60_value: 25
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-035
+  token_index_0_based: 35
+  canonical_token: 0d
+  current_primary60_value: 39
+  possible_primary60_values:
+  - token: 0d
+    primary60_value: 39
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-036
+  token_index_0_based: 36
+  canonical_token: 0s
+  current_primary60_value: 54
+  possible_primary60_values:
+  - token: 0s
+    primary60_value: 54
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-039
+  token_index_0_based: 39
+  canonical_token: '05'
+  current_primary60_value: 5
+  possible_primary60_values:
+  - token: '05'
+    primary60_value: 5
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-041
+  token_index_0_based: 41
+  canonical_token: 1O
+  current_primary60_value: 84
+  possible_primary60_values:
+  - token: '10'
+    primary60_value: 60
+    delta_from_current: -24
+  - token: 1O
+    primary60_value: 84
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-042
+  token_index_0_based: 42
+  canonical_token: 0S
+  current_primary60_value: 28
+  possible_primary60_values:
+  - token: 0S
+    primary60_value: 28
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-045
+  token_index_0_based: 45
+  canonical_token: 1I
+  current_primary60_value: 78
+  possible_primary60_values:
+  - token: 1I
+    primary60_value: 78
+    delta_from_current: 0
+  - token: 1l
+    primary60_value: 107
+    delta_from_current: 29
+- challenge_id: stage5at-token-case-049
+  token_index_0_based: 49
+  canonical_token: 0G
+  current_primary60_value: 16
+  possible_primary60_values:
+  - token: 0G
+    primary60_value: 16
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-050
+  token_index_0_based: 50
+  canonical_token: 0I
+  current_primary60_value: 18
+  possible_primary60_values:
+  - token: 0I
+    primary60_value: 18
+    delta_from_current: 0
+  - token: 0l
+    primary60_value: 47
+    delta_from_current: 29
+- challenge_id: stage5at-token-case-051
+  token_index_0_based: 51
+  canonical_token: 0x
+  current_primary60_value: 59
+  possible_primary60_values:
+  - token: 0x
+    primary60_value: 59
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-063
+  token_index_0_based: 63
+  canonical_token: 0p
+  current_primary60_value: 51
+  possible_primary60_values:
+  - token: 0p
+    primary60_value: 51
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-066
+  token_index_0_based: 66
+  canonical_token: 0P
+  current_primary60_value: 25
+  possible_primary60_values:
+  - token: 0P
+    primary60_value: 25
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-077
+  token_index_0_based: 77
+  canonical_token: 2O
+  current_primary60_value: 144
+  possible_primary60_values:
+  - token: '20'
+    primary60_value: 120
+    delta_from_current: -24
+  - token: 2O
+    primary60_value: 144
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-078
+  token_index_0_based: 78
+  canonical_token: 0k
+  current_primary60_value: 46
+  possible_primary60_values:
+  - token: 0k
+    primary60_value: 46
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-081
+  token_index_0_based: 81
+  canonical_token: 0w
+  current_primary60_value: 58
+  possible_primary60_values:
+  - token: 0w
+    primary60_value: 58
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-085
+  token_index_0_based: 85
+  canonical_token: 0S
+  current_primary60_value: 28
+  possible_primary60_values:
+  - token: 0S
+    primary60_value: 28
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-090
+  token_index_0_based: 90
+  canonical_token: 3l
+  current_primary60_value: 227
+  possible_primary60_values:
+  - token: 3I
+    primary60_value: 198
+    delta_from_current: -29
+  - token: 3l
+    primary60_value: 227
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-091
+  token_index_0_based: 91
+  canonical_token: 0n
+  current_primary60_value: 49
+  possible_primary60_values:
+  - token: 0n
+    primary60_value: 49
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-093
+  token_index_0_based: 93
+  canonical_token: 1O
+  current_primary60_value: 84
+  possible_primary60_values:
+  - token: '10'
+    primary60_value: 60
+    delta_from_current: -24
+  - token: 1O
+    primary60_value: 84
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-094
+  token_index_0_based: 94
+  canonical_token: 0u
+  current_primary60_value: 56
+  possible_primary60_values:
+  - token: 0u
+    primary60_value: 56
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-095
+  token_index_0_based: 95
+  canonical_token: 0Z
+  current_primary60_value: 35
+  possible_primary60_values:
+  - token: 0Z
+    primary60_value: 35
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-099
+  token_index_0_based: 99
+  canonical_token: 0Y
+  current_primary60_value: 34
+  possible_primary60_values:
+  - token: 0Y
+    primary60_value: 34
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-102
+  token_index_0_based: 102
+  canonical_token: 0W
+  current_primary60_value: 32
+  possible_primary60_values:
+  - token: 0W
+    primary60_value: 32
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-106
+  token_index_0_based: 106
+  canonical_token: 0V
+  current_primary60_value: 31
+  possible_primary60_values:
+  - token: 0V
+    primary60_value: 31
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-108
+  token_index_0_based: 108
+  canonical_token: 0E
+  current_primary60_value: 14
+  possible_primary60_values:
+  - token: 0E
+    primary60_value: 14
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-110
+  token_index_0_based: 110
+  canonical_token: 0W
+  current_primary60_value: 32
+  possible_primary60_values:
+  - token: 0W
+    primary60_value: 32
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-116
+  token_index_0_based: 116
+  canonical_token: 0s
+  current_primary60_value: 54
+  possible_primary60_values:
+  - token: 0s
+    primary60_value: 54
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-118
+  token_index_0_based: 118
+  canonical_token: 0Z
+  current_primary60_value: 35
+  possible_primary60_values:
+  - token: 0Z
+    primary60_value: 35
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-120
+  token_index_0_based: 120
+  canonical_token: 0g
+  current_primary60_value: 42
+  possible_primary60_values:
+  - token: 0g
+    primary60_value: 42
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-123
+  token_index_0_based: 123
+  canonical_token: 0s
+  current_primary60_value: 54
+  possible_primary60_values:
+  - token: 0s
+    primary60_value: 54
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-124
+  token_index_0_based: 124
+  canonical_token: 0D
+  current_primary60_value: 13
+  possible_primary60_values:
+  - token: 0D
+    primary60_value: 13
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-125
+  token_index_0_based: 125
+  canonical_token: 0K
+  current_primary60_value: 20
+  possible_primary60_values:
+  - token: 0K
+    primary60_value: 20
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-131
+  token_index_0_based: 131
+  canonical_token: '20'
+  current_primary60_value: 120
+  possible_primary60_values:
+  - token: '20'
+    primary60_value: 120
+    delta_from_current: 0
+  - token: 2O
+    primary60_value: 144
+    delta_from_current: 24
+- challenge_id: stage5at-token-case-136
+  token_index_0_based: 136
+  canonical_token: 0A
+  current_primary60_value: 10
+  possible_primary60_values:
+  - token: 0A
+    primary60_value: 10
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-139
+  token_index_0_based: 139
+  canonical_token: 0D
+  current_primary60_value: 13
+  possible_primary60_values:
+  - token: 0D
+    primary60_value: 13
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-141
+  token_index_0_based: 141
+  canonical_token: 0k
+  current_primary60_value: 46
+  possible_primary60_values:
+  - token: 0k
+    primary60_value: 46
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-153
+  token_index_0_based: 153
+  canonical_token: 0X
+  current_primary60_value: 33
+  possible_primary60_values:
+  - token: 0X
+    primary60_value: 33
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-154
+  token_index_0_based: 154
+  canonical_token: 0E
+  current_primary60_value: 14
+  possible_primary60_values:
+  - token: 0E
+    primary60_value: 14
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-156
+  token_index_0_based: 156
+  canonical_token: 0q
+  current_primary60_value: 52
+  possible_primary60_values:
+  - token: 0q
+    primary60_value: 52
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-164
+  token_index_0_based: 164
+  canonical_token: 1j
+  current_primary60_value: 105
+  possible_primary60_values:
+  - token: 1i
+    primary60_value: 104
+    delta_from_current: -1
+  - token: 1j
+    primary60_value: 105
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-165
+  token_index_0_based: 165
+  canonical_token: 0I
+  current_primary60_value: 18
+  possible_primary60_values:
+  - token: 0I
+    primary60_value: 18
+    delta_from_current: 0
+  - token: 0j
+    primary60_value: 45
+    delta_from_current: 27
+- challenge_id: stage5at-token-case-168
+  token_index_0_based: 168
+  canonical_token: '40'
+  current_primary60_value: 240
+  possible_primary60_values:
+  - token: '40'
+    primary60_value: 240
+    delta_from_current: 0
+  - token: 4O
+    primary60_value: 264
+    delta_from_current: 24
+- challenge_id: stage5at-token-case-171
+  token_index_0_based: 171
+  canonical_token: 0s
+  current_primary60_value: 54
+  possible_primary60_values:
+  - token: 0s
+    primary60_value: 54
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-175
+  token_index_0_based: 175
+  canonical_token: 0l
+  current_primary60_value: 47
+  possible_primary60_values:
+  - token: 0I
+    primary60_value: 18
+    delta_from_current: -29
+  - token: 0j
+    primary60_value: 45
+    delta_from_current: -2
+- challenge_id: stage5at-token-case-180
+  token_index_0_based: 180
+  canonical_token: 2O
+  current_primary60_value: 144
+  possible_primary60_values:
+  - token: '20'
+    primary60_value: 120
+    delta_from_current: -24
+  - token: 2O
+    primary60_value: 144
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-181
+  token_index_0_based: 181
+  canonical_token: 0e
+  current_primary60_value: 40
+  possible_primary60_values:
+  - token: 0e
+    primary60_value: 40
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-186
+  token_index_0_based: 186
+  canonical_token: 0J
+  current_primary60_value: 19
+  possible_primary60_values:
+  - token: 0j
+    primary60_value: 45
+    delta_from_current: 26
+  - token: 0J
+    primary60_value: 19
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-188
+  token_index_0_based: 188
+  canonical_token: 0c
+  current_primary60_value: 38
+  possible_primary60_values:
+  - token: 0c
+    primary60_value: 38
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-191
+  token_index_0_based: 191
+  canonical_token: 0X
+  current_primary60_value: 33
+  possible_primary60_values:
+  - token: 0X
+    primary60_value: 33
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-192
+  token_index_0_based: 192
+  canonical_token: '00'
+  current_primary60_value: 0
+  possible_primary60_values:
+  - token: '00'
+    primary60_value: 0
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-198
+  token_index_0_based: 198
+  canonical_token: 1j
+  current_primary60_value: 105
+  possible_primary60_values:
+  - token: 1I
+    primary60_value: 78
+    delta_from_current: -27
+  - token: 1j
+    primary60_value: 105
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-199
+  token_index_0_based: 199
+  canonical_token: 0I
+  current_primary60_value: 18
+  possible_primary60_values:
+  - token: 0I
+    primary60_value: 18
+    delta_from_current: 0
+  - token: 0j
+    primary60_value: 45
+    delta_from_current: 27
+- challenge_id: stage5at-token-case-207
+  token_index_0_based: 207
+  canonical_token: 0L
+  current_primary60_value: 21
+  possible_primary60_values:
+  - token: 0L
+    primary60_value: 21
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-208
+  token_index_0_based: 208
+  canonical_token: 0v
+  current_primary60_value: 57
+  possible_primary60_values:
+  - token: 0v
+    primary60_value: 57
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-210
+  token_index_0_based: 210
+  canonical_token: '06'
+  current_primary60_value: 6
+  possible_primary60_values:
+  - token: '06'
+    primary60_value: 6
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-215
+  token_index_0_based: 215
+  canonical_token: 1O
+  current_primary60_value: 84
+  possible_primary60_values:
+  - token: '10'
+    primary60_value: 60
+    delta_from_current: -24
+  - token: 1O
+    primary60_value: 84
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-219
+  token_index_0_based: 219
+  canonical_token: 0x
+  current_primary60_value: 59
+  possible_primary60_values:
+  - token: 0x
+    primary60_value: 59
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-220
+  token_index_0_based: 220
+  canonical_token: 0w
+  current_primary60_value: 58
+  possible_primary60_values:
+  - token: 0w
+    primary60_value: 58
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-221
+  token_index_0_based: 221
+  canonical_token: 0q
+  current_primary60_value: 52
+  possible_primary60_values:
+  - token: 0q
+    primary60_value: 52
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-222
+  token_index_0_based: 222
+  canonical_token: 0p
+  current_primary60_value: 51
+  possible_primary60_values:
+  - token: 0p
+    primary60_value: 51
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-225
+  token_index_0_based: 225
+  canonical_token: 0q
+  current_primary60_value: 52
+  possible_primary60_values:
+  - token: 0q
+    primary60_value: 52
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-228
+  token_index_0_based: 228
+  canonical_token: 2O
+  current_primary60_value: 144
+  possible_primary60_values:
+  - token: '20'
+    primary60_value: 120
+    delta_from_current: -24
+  - token: 2O
+    primary60_value: 144
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-229
+  token_index_0_based: 229
+  canonical_token: '00'
+  current_primary60_value: 0
+  possible_primary60_values:
+  - token: '00'
+    primary60_value: 0
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-237
+  token_index_0_based: 237
+  canonical_token: 0W
+  current_primary60_value: 32
+  possible_primary60_values:
+  - token: 0W
+    primary60_value: 32
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-240
+  token_index_0_based: 240
+  canonical_token: 2O
+  current_primary60_value: 144
+  possible_primary60_values:
+  - token: '20'
+    primary60_value: 120
+    delta_from_current: -24
+  - token: 2O
+    primary60_value: 144
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-242
+  token_index_0_based: 242
+  canonical_token: 0g
+  current_primary60_value: 42
+  possible_primary60_values:
+  - token: 0g
+    primary60_value: 42
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-244
+  token_index_0_based: 244
+  canonical_token: 0M
+  current_primary60_value: 22
+  possible_primary60_values:
+  - token: 0M
+    primary60_value: 22
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-245
+  token_index_0_based: 245
+  canonical_token: 0u
+  current_primary60_value: 56
+  possible_primary60_values:
+  - token: 0u
+    primary60_value: 56
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-246
+  token_index_0_based: 246
+  canonical_token: 3l
+  current_primary60_value: 227
+  possible_primary60_values:
+  - token: 3I
+    primary60_value: 198
+    delta_from_current: -29
+  - token: 3l
+    primary60_value: 227
+    delta_from_current: 0
+- challenge_id: stage5at-token-case-252
+  token_index_0_based: 252
+  canonical_token: '30'
+  current_primary60_value: 180
+  possible_primary60_values:
+  - token: '30'
+    primary60_value: 180
+    delta_from_current: 0
+  - token: 3O
+    primary60_value: 204
+    delta_from_current: 24
+- challenge_id: stage5at-token-case-253
+  token_index_0_based: 253
+  canonical_token: 0a
+  current_primary60_value: 36
+  possible_primary60_values:
+  - token: 0a
+    primary60_value: 36
+    delta_from_current: 0
+value_delta_summary_by_token:
+- challenge_id: stage5at-token-case-002
+  token_index_0_based: 2
+  canonical_token: 2l
+  delta_values:
+  - -29
+  - 0
+  delta_min: -29
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-013
+  token_index_0_based: 13
+  canonical_token: '04'
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-018
+  token_index_0_based: 18
+  canonical_token: 0F
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-019
+  token_index_0_based: 19
+  canonical_token: 0X
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-022
+  token_index_0_based: 22
+  canonical_token: 0x
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-025
+  token_index_0_based: 25
+  canonical_token: 3l
+  delta_values:
+  - -29
+  - 0
+  delta_min: -29
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-027
+  token_index_0_based: 27
+  canonical_token: 0P
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-035
+  token_index_0_based: 35
+  canonical_token: 0d
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-036
+  token_index_0_based: 36
+  canonical_token: 0s
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-039
+  token_index_0_based: 39
+  canonical_token: '05'
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-041
+  token_index_0_based: 41
+  canonical_token: 1O
+  delta_values:
+  - -24
+  - 0
+  delta_min: -24
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-042
+  token_index_0_based: 42
+  canonical_token: 0S
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-045
+  token_index_0_based: 45
+  canonical_token: 1I
+  delta_values:
+  - 0
+  - 29
+  delta_min: 0
+  delta_max: 29
+  delta_count: 2
+- challenge_id: stage5at-token-case-049
+  token_index_0_based: 49
+  canonical_token: 0G
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-050
+  token_index_0_based: 50
+  canonical_token: 0I
+  delta_values:
+  - 0
+  - 29
+  delta_min: 0
+  delta_max: 29
+  delta_count: 2
+- challenge_id: stage5at-token-case-051
+  token_index_0_based: 51
+  canonical_token: 0x
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-063
+  token_index_0_based: 63
+  canonical_token: 0p
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-066
+  token_index_0_based: 66
+  canonical_token: 0P
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-077
+  token_index_0_based: 77
+  canonical_token: 2O
+  delta_values:
+  - -24
+  - 0
+  delta_min: -24
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-078
+  token_index_0_based: 78
+  canonical_token: 0k
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-081
+  token_index_0_based: 81
+  canonical_token: 0w
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-085
+  token_index_0_based: 85
+  canonical_token: 0S
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-090
+  token_index_0_based: 90
+  canonical_token: 3l
+  delta_values:
+  - -29
+  - 0
+  delta_min: -29
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-091
+  token_index_0_based: 91
+  canonical_token: 0n
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-093
+  token_index_0_based: 93
+  canonical_token: 1O
+  delta_values:
+  - -24
+  - 0
+  delta_min: -24
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-094
+  token_index_0_based: 94
+  canonical_token: 0u
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-095
+  token_index_0_based: 95
+  canonical_token: 0Z
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-099
+  token_index_0_based: 99
+  canonical_token: 0Y
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-102
+  token_index_0_based: 102
+  canonical_token: 0W
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-106
+  token_index_0_based: 106
+  canonical_token: 0V
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-108
+  token_index_0_based: 108
+  canonical_token: 0E
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-110
+  token_index_0_based: 110
+  canonical_token: 0W
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-116
+  token_index_0_based: 116
+  canonical_token: 0s
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-118
+  token_index_0_based: 118
+  canonical_token: 0Z
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-120
+  token_index_0_based: 120
+  canonical_token: 0g
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-123
+  token_index_0_based: 123
+  canonical_token: 0s
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-124
+  token_index_0_based: 124
+  canonical_token: 0D
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-125
+  token_index_0_based: 125
+  canonical_token: 0K
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-131
+  token_index_0_based: 131
+  canonical_token: '20'
+  delta_values:
+  - 0
+  - 24
+  delta_min: 0
+  delta_max: 24
+  delta_count: 2
+- challenge_id: stage5at-token-case-136
+  token_index_0_based: 136
+  canonical_token: 0A
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-139
+  token_index_0_based: 139
+  canonical_token: 0D
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-141
+  token_index_0_based: 141
+  canonical_token: 0k
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-153
+  token_index_0_based: 153
+  canonical_token: 0X
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-154
+  token_index_0_based: 154
+  canonical_token: 0E
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-156
+  token_index_0_based: 156
+  canonical_token: 0q
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-164
+  token_index_0_based: 164
+  canonical_token: 1j
+  delta_values:
+  - -1
+  - 0
+  delta_min: -1
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-165
+  token_index_0_based: 165
+  canonical_token: 0I
+  delta_values:
+  - 0
+  - 27
+  delta_min: 0
+  delta_max: 27
+  delta_count: 2
+- challenge_id: stage5at-token-case-168
+  token_index_0_based: 168
+  canonical_token: '40'
+  delta_values:
+  - 0
+  - 24
+  delta_min: 0
+  delta_max: 24
+  delta_count: 2
+- challenge_id: stage5at-token-case-171
+  token_index_0_based: 171
+  canonical_token: 0s
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-175
+  token_index_0_based: 175
+  canonical_token: 0l
+  delta_values:
+  - -29
+  - -2
+  delta_min: -29
+  delta_max: -2
+  delta_count: 2
+- challenge_id: stage5at-token-case-180
+  token_index_0_based: 180
+  canonical_token: 2O
+  delta_values:
+  - -24
+  - 0
+  delta_min: -24
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-181
+  token_index_0_based: 181
+  canonical_token: 0e
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-186
+  token_index_0_based: 186
+  canonical_token: 0J
+  delta_values:
+  - 26
+  - 0
+  delta_min: 0
+  delta_max: 26
+  delta_count: 2
+- challenge_id: stage5at-token-case-188
+  token_index_0_based: 188
+  canonical_token: 0c
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-191
+  token_index_0_based: 191
+  canonical_token: 0X
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-192
+  token_index_0_based: 192
+  canonical_token: '00'
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-198
+  token_index_0_based: 198
+  canonical_token: 1j
+  delta_values:
+  - -27
+  - 0
+  delta_min: -27
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-199
+  token_index_0_based: 199
+  canonical_token: 0I
+  delta_values:
+  - 0
+  - 27
+  delta_min: 0
+  delta_max: 27
+  delta_count: 2
+- challenge_id: stage5at-token-case-207
+  token_index_0_based: 207
+  canonical_token: 0L
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-208
+  token_index_0_based: 208
+  canonical_token: 0v
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-210
+  token_index_0_based: 210
+  canonical_token: '06'
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-215
+  token_index_0_based: 215
+  canonical_token: 1O
+  delta_values:
+  - -24
+  - 0
+  delta_min: -24
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-219
+  token_index_0_based: 219
+  canonical_token: 0x
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-220
+  token_index_0_based: 220
+  canonical_token: 0w
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-221
+  token_index_0_based: 221
+  canonical_token: 0q
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-222
+  token_index_0_based: 222
+  canonical_token: 0p
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-225
+  token_index_0_based: 225
+  canonical_token: 0q
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-228
+  token_index_0_based: 228
+  canonical_token: 2O
+  delta_values:
+  - -24
+  - 0
+  delta_min: -24
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-229
+  token_index_0_based: 229
+  canonical_token: '00'
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-237
+  token_index_0_based: 237
+  canonical_token: 0W
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-240
+  token_index_0_based: 240
+  canonical_token: 2O
+  delta_values:
+  - -24
+  - 0
+  delta_min: -24
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-242
+  token_index_0_based: 242
+  canonical_token: 0g
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-244
+  token_index_0_based: 244
+  canonical_token: 0M
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-245
+  token_index_0_based: 245
+  canonical_token: 0u
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+- challenge_id: stage5at-token-case-246
+  token_index_0_based: 246
+  canonical_token: 3l
+  delta_values:
+  - -29
+  - 0
+  delta_min: -29
+  delta_max: 0
+  delta_count: 2
+- challenge_id: stage5at-token-case-252
+  token_index_0_based: 252
+  canonical_token: '30'
+  delta_values:
+  - 0
+  - 24
+  delta_min: 0
+  delta_max: 24
+  delta_count: 2
+- challenge_id: stage5at-token-case-253
+  token_index_0_based: 253
+  canonical_token: 0a
+  delta_values:
+  - 0
+  delta_min: 0
+  delta_max: 0
+  delta_count: 1
+variant_byte_streams_generated: false
+execution_performed: false
+solve_claim: false

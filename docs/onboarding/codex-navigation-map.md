@@ -1,5 +1,9 @@
 # Codex Navigation Map
 
+## Stage 5AW Note
+
+Stage 5AW is a parser-repair stage. Token-block follow-up work should use the repaired Stage 5AW branch metadata for planning, keep the Stage 5AU filled decision template ignored, and avoid token experiments, decode attempts, hash/preimage search, OCR/AI/ML/LLM vision, image forensics, stego, CUDA, benchmarks, scored experiments, or solve-claim workflows.
+
 ## Read First
 
 For most Codex tasks, read:

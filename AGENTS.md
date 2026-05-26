@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5AV - token case-review decision integration and compact variant-branch manifest.
+Current completed stage: Stage 5AW - decision possible-token parser cleanup and branch-manifest repair.
 
-Current work: Stage 5AW - bounded token-block preflight manifest design without execution. Stage 5AV integrated the filled local Stage 5AU v2 decision template, validated 203 user decisions, confirmed 126 current tokens, preserved 77 unresolved multi-option branches, captured 13 reviewer-extra possible tokens, created primary-60 impact and compact branch-manifest metadata, and kept canonical transcription unchanged because there were zero `change_token` decisions. It did not run token experiments, DWH/hash searches, decode attempts, OCR, AI/ML interpretation, LLM/vision token reading, semantic or hidden-content image interpretation, stego, CUDA, benchmarks, scored experiments, website expansion, method-status upgrades, or solve claims.
+Current work: Stage 5AX - bounded token-block preflight manifest design without execution. Stage 5AW repaired a Stage 5AV possible-token parser quality issue, found 3 malformed prose-as-token reviewer-extra records, preserved 10 valid reviewer-extra tokens and 2 visual placeholders separately, recalculated primary-60 impact, created superseding compact branch metadata, and kept canonical transcription unchanged. It did not reinterpret human decisions, run token experiments, generate variant byte streams, DWH/hash searches, decode attempts, OCR, AI/ML interpretation, LLM/vision token reading, semantic or hidden-content image interpretation, stego, CUDA, benchmarks, scored experiments, website expansion, method-status upgrades, or solve claims.
 
 Current project state:
 
@@ -135,7 +135,8 @@ Current project state:
 - Stage 5AU token-case review-pack v2 records are usability-repair metadata only. The generated review pack under `human-review-packs/stage5au/token-case-review-v2/` and generated reports under `experiments/results/token-block/stage5au/` remain ignored and must not be staged except allowed scaffolds.
 - Stage 5AU derived glyph-candidate crops, context crops, row crops, and overlays are review aids only, not source truth, OCR output, token decisions, image interpretation, experiment seeds, or solve evidence.
 - Stage 5AV token-case decision records are integration metadata only. They preserve 126 keep-current decisions and 77 unresolved branches, keep the filled decision template ignored, and do not change canonical transcription.
-- Future Stage 5AW preflight design must cite Stage 5AV branch metadata, must not use ignored review-pack bodies as committed input, and must not execute token experiments or DWH/hash searches.
+- Stage 5AW token-case parser repair records supersede Stage 5AV branch metadata for future planning. They preserve valid reviewer extras, preserve visual placeholders as review-only unmappable options, exclude prose fragments from reviewer-extra token variants, and do not change canonical transcription.
+- Future Stage 5AX preflight design must cite Stage 5AW repaired branch metadata, must not use ignored review-pack bodies as committed input, and must not execute token experiments or DWH/hash searches.
 - Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
 - Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
 - Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
@@ -1014,7 +1015,7 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 5AP page 49-51 token-block records are source-lock/preflight metadata only.
 - The 32x8 token transcription, logical coordinates, primary-60 mapping, null controls, DWH context, and OutGuess controls are not decoded plaintext, canonical corpus activation, experiment seeds, hash targets, or solve evidence.
 - Generated token-block and stego-control reports under `experiments/results/token-block/stage5ap/` and `experiments/results/stego-controls/stage5ap/` remain ignored.
-- Future Stage 5AW bounded preflight design must cite Stage 5AV decision/branch records, Stage 5AU review-pack v2 records, Stage 5AT review-pack records, Stage 5AR original-image coordinate records, and Stage 5AP source-lock, transcription, alphabet, mapping, null-control, DWH, and OutGuess guardrail records before any bounded token-block preflight follow-up.
+- Future Stage 5AX bounded preflight design must cite Stage 5AW repaired decision/branch records, Stage 5AV decision records, Stage 5AU review-pack v2 records, Stage 5AT review-pack records, Stage 5AR original-image coordinate records, and Stage 5AP source-lock, transcription, alphabet, mapping, null-control, DWH, and OutGuess guardrail records before any bounded token-block preflight follow-up.
 
 ## Stage 5AR Original-Image Coordinate Lock Rules
 
@@ -1022,7 +1023,7 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Original local page images are coordinate truth for pixel boxes; screenshots, crops, modified images, web-rendered pages, and private generated images are not coordinate truth.
 - Pixel coordinates are not OCR output, decoded text, semantic image interpretation, hidden-content forensics, experiment seeds, CUDA input permission, canonical corpus activation, page-boundary finalisation, or solve evidence.
 - Stage 5AR generated coordinate reports under `experiments/results/token-block/stage5ar/` remain ignored and must not be staged except for allowed scaffold files.
-- Future Stage 5AW bounded preflight design must cite Stage 5AV decision/branch records, Stage 5AU review-pack v2 records, Stage 5AT review-pack records, and Stage 5AR source-lock, image-variant, page-split, pixel-coordinate, case-policy, coordinate-validation, source-lock/null-control, DWH context, and guardrail records before any bounded token-block preflight planning.
+- Future Stage 5AX bounded preflight design must cite Stage 5AW repaired decision/branch records, Stage 5AV decision/branch records, Stage 5AU review-pack v2 records, Stage 5AT review-pack records, and Stage 5AR source-lock, image-variant, page-split, pixel-coordinate, case-policy, coordinate-validation, source-lock/null-control, DWH context, and guardrail records before any bounded token-block preflight planning.
 
 ## Stage 5AT Token Case Review Pack Rules
 
@@ -1045,7 +1046,8 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Unresolved multi-option cases must stay unresolved branch metadata; do not force token identity.
 - Canonical transcription remains unchanged unless a future explicit stage validates `change_token` decisions.
 - The compact branch manifest is planning metadata only; do not enumerate full variants or generate variant byte streams in Stage 5AV.
-- Stage 5AW bounded preflight design must not run token experiments, DWH/hash searches, decode attempts, OCR, AI/ML, LLM vision, semantic image interpretation, hidden-content forensics, stego, CUDA, benchmarks, scored experiments, or solve claims.
+- Stage 5AW decision-parser repair is parser metadata cleanup only and must not be reported as execution, token identity resolution, or canonical transcription change.
+- Stage 5AX bounded preflight design must not run token experiments, DWH/hash searches, decode attempts, OCR, AI/ML, LLM vision, semantic image interpretation, hidden-content forensics, stego, CUDA, benchmarks, scored experiments, or solve claims.
 
 ## Stage 5AC Prime-Minus-One CUDA Synthetic Reporting Rules
 

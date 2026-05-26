@@ -1,0 +1,11 @@
+record_type: stage5aw_canonical_transcription_update
+schema: schemas/token-block/canonical-transcription-update-v0.schema.json
+stage_id: stage-5aw
+source_stage_id: stage-5av
+token_block_id: stage5ap-page49-51-token-block
+canonical_transcription_update_status: unchanged_parser_repair_only
+canonical_transcription_changed: false
+canonical_transcription_change_count: 0
+explicit_change_token_count: 0
+parser_repair_only: true
+solve_claim: false

@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AW Decision Parser Repair
+
+Stage 5AW is parser-repair and branch-manifest infrastructure, not an experiment. It commits metadata for a Stage 5AV reviewer-note parser audit, repaired possible-token policy, repaired human-review decision records, repaired unresolved-variant records, cleaned reviewer-extra token records, malformed-fragment audit, primary-60 impact recalculation, superseding compact branch manifest, canonical-transcription non-update, null-control update, Deep Web Hash context, guardrails, and next-stage decision.
+
+Generated Stage 5AW reports remain ignored under `experiments/results/token-block/stage5aw/`. The filled decision template remains ignored under `human-review-packs/stage5au/token-case-review-v2/decision-template.yaml`. Stage 5AW performs no token experiment, full variant enumeration, variant byte-stream generation, DWH/hash search, decode attempt, OCR, AI/ML interpretation, LLM/vision token reading, semantic image interpretation, hidden-content image forensics, stego execution, CUDA, benchmarks, scored experiments, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AV Token Case Decision Integration
 
 Stage 5AV is decision-integration infrastructure, not an experiment. It commits metadata for the completed local Stage 5AU v2 decision-file ingest, validation, human decision records, confirmed-token records, unresolved variant records, reviewer-extra possible tokens, primary-60 impact summary, compact branch manifest, canonical-transcription non-update, null-control update, DWH context, guardrails, and next-stage decision.

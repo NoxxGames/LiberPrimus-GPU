@@ -152,6 +152,35 @@ STAGE5AV_GUARDRAIL_PATH = DATA_DIR / "stage5av-guardrail.yaml"
 STAGE5AV_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5av-next-stage-decision.yaml"
 STAGE5AV_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5av-summary.yaml"
 
+STAGE5AW_ID = "stage-5aw"
+STAGE5AW_RESULTS_DIR = Path("experiments/results/token-block/stage5aw")
+STAGE5AW_DECISION_PARSER_AUDIT_PATH = DATA_DIR / "stage5aw-decision-parser-audit.yaml"
+STAGE5AW_PARSER_POLICY_PATH = DATA_DIR / "stage5aw-possible-token-parser-policy.yaml"
+STAGE5AW_REPAIRED_HUMAN_REVIEW_DECISIONS_PATH = (
+    DATA_DIR / "stage5aw-repaired-human-review-decision-records.yaml"
+)
+STAGE5AW_REPAIRED_UNRESOLVED_VARIANTS_PATH = (
+    DATA_DIR / "stage5aw-repaired-unresolved-token-variant-records.yaml"
+)
+STAGE5AW_REPAIRED_REVIEWER_EXTRA_TOKENS_PATH = (
+    DATA_DIR / "stage5aw-repaired-reviewer-extra-possible-tokens.yaml"
+)
+STAGE5AW_MALFORMED_FRAGMENTS_PATH = (
+    DATA_DIR / "stage5aw-malformed-possible-token-fragments.yaml"
+)
+STAGE5AW_REPAIRED_PRIMARY60_IMPACT_PATH = (
+    DATA_DIR / "stage5aw-repaired-primary60-variant-impact-summary.yaml"
+)
+STAGE5AW_REPAIRED_BRANCH_MANIFEST_PATH = (
+    DATA_DIR / "stage5aw-repaired-token-variant-branch-manifest.yaml"
+)
+STAGE5AW_CANONICAL_UPDATE_PATH = DATA_DIR / "stage5aw-canonical-transcription-update.yaml"
+STAGE5AW_NULL_CONTROL_UPDATE_PATH = DATA_DIR / "stage5aw-null-control-decision-update.yaml"
+STAGE5AW_DWH_CONTEXT_PATH = DATA_DIR / "stage5aw-dwh-decision-context.yaml"
+STAGE5AW_GUARDRAIL_PATH = DATA_DIR / "stage5aw-guardrail.yaml"
+STAGE5AW_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5aw-next-stage-decision.yaml"
+STAGE5AW_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5aw-summary.yaml"
+
 FALSE_GUARDRAILS = {
     "network_fetch_performed": False,
     "online_repo_clone_performed": False,
