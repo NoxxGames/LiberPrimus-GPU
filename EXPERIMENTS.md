@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5BB Token-Block Preflight Runner Scaffold
+
+Stage 5BB is runner-scaffold infrastructure, not an experiment. It commits compact active-manifest registry, manifest precedence, legacy pointer audit, manifest-reference validation, branch-eligibility validation, loader policy, runner scaffold, dry-run preview, branch/family counter, execution-gate enforcement, fixture-only result schema, no-execution proof, DWH runner context, guardrail, next-stage, and summary records.
+
+Generated Stage 5BB reports remain ignored under `experiments/results/token-block/stage5bb/`; fixture-only generated reports remain ignored under `experiments/results/token-block/stage5bb/fixtures/`. Stage 5BB keeps Stage 5AW repaired branch metadata and Stage 5AZ repaired variant-family/design/budget/gate records active, rejects Stage 5AV and old Stage 5AY manifests as active inputs, validates Stage 5AY branch eligibility explicitly, and performs no token experiment, real byte-stream generation, variant materialisation, full Cartesian enumeration, DWH/hash search, hash comparison, decode attempt, OCR, AI/ML interpretation, LLM/vision token reading, semantic image interpretation, hidden-content image forensics, stego execution, CUDA, cryptanalytic benchmark, scored experiment, public website expansion, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AZ Bounded Preflight Manifest Integrity Repair
 
 Stage 5AZ is manifest-integrity repair infrastructure, not an experiment. It commits compact preflight manifest integrity audit, family-ID uniqueness audit, manifest-reference audit, taxonomy-membership policy, repaired bounded variant-family manifest, repaired design-policy, repaired branch-budget, repaired execution-gates, Deep Research readiness, DWH context, guardrail, next-stage, and summary records.

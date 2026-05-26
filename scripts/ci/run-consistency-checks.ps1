@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5AZ" `
-        --expected-next-stage "Stage 5BA" `
+        --expected-latest-stage "Stage 5BB" `
+        --expected-next-stage "Stage 5BC" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5AZ" `
-        --expected-next-stage "Stage 5BA" `
+        --expected-latest-stage "Stage 5BB" `
+        --expected-next-stage "Stage 5BC" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AZ",
+        expected_latest_stage="Stage 5BB",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AZ",
+            "expected_latest_stage": "Stage 5BB",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2428,6 +2428,35 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q (Join-Path $Stage5AZResultsRoot "preflight_manifest_integrity_audit.json")
     git check-ignore -q (Join-Path $Stage5AZResultsRoot "repaired_variant_family_manifest.json")
     git check-ignore -q "codex-output/stage5az-codex-completion.md"
+
+    Write-Host "Validating Stage 5BB token-block runner scaffold records"
+    $Stage5BBResultsRoot = Join-Path (Join-Path "experiments" "results") "token-block/stage5bb"
+    & $Python -m libreprimus.cli token-block validate-stage5bb `
+        --active-registry data/token-block/stage5bb-active-manifest-registry.yaml `
+        --precedence-policy data/token-block/stage5bb-manifest-precedence-policy.yaml `
+        --legacy-pointer-audit data/token-block/stage5bb-legacy-pointer-audit.yaml `
+        --reference-validation data/token-block/stage5bb-manifest-reference-validation.yaml `
+        --branch-eligibility-validation data/token-block/stage5bb-branch-eligibility-reference-validation.yaml `
+        --loader-policy data/token-block/stage5bb-loader-scaffold-policy.yaml `
+        --runner-manifest data/token-block/stage5bb-runner-scaffold-manifest.yaml `
+        --dry-run-preview data/token-block/stage5bb-dry-run-plan-preview.yaml `
+        --branch-counter data/token-block/stage5bb-branch-counter-summary.yaml `
+        --family-summary data/token-block/stage5bb-family-enumeration-summary.yaml `
+        --gate-policy data/token-block/stage5bb-execution-gate-enforcement-policy.yaml `
+        --gate-validation data/token-block/stage5bb-execution-gate-validation.yaml `
+        --fixture-policy data/token-block/stage5bb-result-schema-fixture-policy.yaml `
+        --fixture-records data/token-block/stage5bb-fixture-result-schema-records.yaml `
+        --validation-evidence data/token-block/stage5bb-validation-evidence-index.yaml `
+        --no-execution-proof data/token-block/stage5bb-no-execution-proof.yaml `
+        --dwh-context data/token-block/stage5bb-dwh-runner-context.yaml `
+        --guardrail data/token-block/stage5bb-guardrail.yaml `
+        --next-stage-decision data/project-state/stage5bb-next-stage-decision.yaml `
+        --summary data/project-state/stage5bb-summary.yaml `
+        --results-dir $Stage5BBResultsRoot
+    git check-ignore -q (Join-Path $Stage5BBResultsRoot "dry_run_plan_preview.json")
+    git check-ignore -q (Join-Path $Stage5BBResultsRoot "manifest_reference_validation.json")
+    git check-ignore -q (Join-Path (Join-Path $Stage5BBResultsRoot "fixtures") "fixture_result_schema_records.json")
+    git check-ignore -q "codex-output/stage5bb-codex-completion.md"
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

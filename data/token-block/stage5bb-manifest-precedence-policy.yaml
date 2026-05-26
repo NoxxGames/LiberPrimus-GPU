@@ -1,0 +1,23 @@
+record_type: stage5bb_manifest_precedence_policy
+schema: schemas/token-block/manifest-precedence-policy-v0.schema.json
+stage_id: stage-5bb
+policy_status: active
+rules:
+- rule_id: active_registry_is_source_of_truth
+  description: All loader roles resolve through stage5bb-active-manifest-registry.
+- rule_id: stage5aw_supersedes_stage5av_branch_manifest
+  inactive_path: data/token-block/stage5av-token-variant-branch-manifest.yaml
+  active_path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+- rule_id: stage5az_supersedes_stage5ay_variant_family_manifest
+  inactive_path: data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+  active_path: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+- rule_id: branch_eligibility_policy_required
+  required_path: data/token-block/stage5ay-branch-eligibility-policy.yaml
+- rule_id: stale_active_load_fails_validation
+  stale_active_load_allowed: false
+- rule_id: historical_diagnostic_load_requires_explicit_mode
+  historical_diagnostic_load_allowed: true
+  default_mode: false
+execution_authorised_now: false
+stale_active_load_allowed: false
+historical_diagnostic_load_allowed: true

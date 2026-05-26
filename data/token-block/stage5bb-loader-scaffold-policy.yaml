@@ -1,0 +1,12 @@
+record_type: stage5bb_loader_scaffold_policy
+schema: schemas/token-block/loader-scaffold-policy-v0.schema.json
+stage_id: stage-5bb
+loader_scaffold_policy_created: true
+loaders_must_use_active_manifest_registry: true
+load_only_active_paths_by_default: true
+refuse_inactive_paths_as_active_inputs: true
+inactive_paths_allowed_only_for_historical_diagnostic_mode: true
+historical_diagnostic_mode_default: false
+record_attempted_stale_loads: true
+stale_active_load_allowed: false
+execution_authorised_now: false

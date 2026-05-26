@@ -1,0 +1,20 @@
+record_type: stage5bb_execution_gate_enforcement_policy
+schema: schemas/token-block/execution-gate-enforcement-policy-v0.schema.json
+stage_id: stage-5bb
+execution_gate_enforcement_policy_created: true
+source_execution_gates: data/token-block/stage5az-repaired-execution-gates.yaml
+execution_authorised_now: false
+all_gates_required_before_execution: true
+gate_count: 8
+gate_ids:
+- source_lock_gate
+- case_review_gate
+- manifest_review_gate
+- null_control_gate
+- execution_scope_gate
+- dwh_gate
+- safety_gate
+- manifest_integrity_gate
+gate_enforcer_fails_closed: true
+real_execution_blocked: true
+token_experiments_executed: false

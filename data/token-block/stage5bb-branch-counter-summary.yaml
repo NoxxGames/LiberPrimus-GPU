@@ -1,0 +1,15 @@
+record_type: stage5bb_branch_counter_summary
+schema: schemas/token-block/branch-counter-summary-v0.schema.json
+stage_id: stage-5bb
+source_branch_budget: data/token-block/stage5az-repaired-branch-count-budget.yaml
+source_branch_manifest: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+branch_counter_mode: metadata_only
+branch_upper_bound_product: 2720083094132915643088896
+branch_upper_bound_log10: 24.434582
+primary60_mappable_branch_upper_bound_product: 4194304
+primary60_mappable_branch_upper_bound_log10: 6.62266
+full_cartesian_product_enumerated: false
+sampled_variants_generated: false
+single_change_variants_generated: false
+per_ambiguity_variants_generated: false
+variant_byte_streams_generated: false

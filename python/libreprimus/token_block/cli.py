@@ -133,6 +133,27 @@ from .models import (
     STAGE5AZ_REPAIRED_PREFLIGHT_DESIGN_POLICY_PATH,
     STAGE5AZ_RESULTS_DIR,
     STAGE5AZ_SUMMARY_PATH,
+    STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH,
+    STAGE5BB_BRANCH_COUNTER_SUMMARY_PATH,
+    STAGE5BB_BRANCH_ELIGIBILITY_REFERENCE_VALIDATION_PATH,
+    STAGE5BB_DRY_RUN_PLAN_PREVIEW_PATH,
+    STAGE5BB_DWH_RUNNER_CONTEXT_PATH,
+    STAGE5BB_EXECUTION_GATE_ENFORCEMENT_POLICY_PATH,
+    STAGE5BB_EXECUTION_GATE_VALIDATION_PATH,
+    STAGE5BB_FAMILY_ENUMERATION_SUMMARY_PATH,
+    STAGE5BB_FIXTURE_RESULT_SCHEMA_RECORDS_PATH,
+    STAGE5BB_GUARDRAIL_PATH,
+    STAGE5BB_LEGACY_POINTER_AUDIT_PATH,
+    STAGE5BB_LOADER_SCAFFOLD_POLICY_PATH,
+    STAGE5BB_MANIFEST_PRECEDENCE_POLICY_PATH,
+    STAGE5BB_MANIFEST_REFERENCE_VALIDATION_PATH,
+    STAGE5BB_NEXT_STAGE_DECISION_PATH,
+    STAGE5BB_NO_EXECUTION_PROOF_PATH,
+    STAGE5BB_RESULT_SCHEMA_FIXTURE_POLICY_PATH,
+    STAGE5BB_RESULTS_DIR,
+    STAGE5BB_RUNNER_SCAFFOLD_MANIFEST_PATH,
+    STAGE5BB_SUMMARY_PATH,
+    STAGE5BB_VALIDATION_EVIDENCE_INDEX_PATH,
     TRANSCRIPTION_PATH,
     read_yaml,
 )
@@ -191,6 +212,17 @@ from .stage5az import (
     build_stage5az_summary,
     repair_stage5az_variant_family_manifest,
     validate_stage5az,
+)
+from .stage5bb import (
+    audit_stage5bb_legacy_pointers,
+    build_stage5bb_active_manifest_registry,
+    build_stage5bb_dry_run_preview,
+    build_stage5bb_fixture_result_schema_records,
+    build_stage5bb_runner_scaffold,
+    build_stage5bb_summary,
+    validate_stage5bb,
+    validate_stage5bb_execution_gates,
+    validate_stage5bb_manifest_references,
 )
 from .transcription import build_transcription
 from .validation import validate_stage5ap
@@ -1848,6 +1880,316 @@ def validate_stage5az_command(
     if errors:
         raise typer.Exit(1)
     console.print("token_block_stage5az_valid=true")
+
+
+@app.command("build-stage5bb-active-manifest-registry")
+def build_stage5bb_active_manifest_registry_command(
+    stage5az_summary: Path = typer.Option(STAGE5AZ_SUMMARY_PATH),
+    stage5az_readiness: Path = typer.Option(STAGE5AZ_DEEP_RESEARCH_READINESS_PATH),
+    stage5aw_branch_manifest: Path = typer.Option(STAGE5AW_REPAIRED_BRANCH_MANIFEST_PATH),
+    stage5aw_impact_summary: Path = typer.Option(STAGE5AW_REPAIRED_PRIMARY60_IMPACT_PATH),
+    stage5aw_unresolved: Path = typer.Option(STAGE5AW_REPAIRED_UNRESOLVED_VARIANTS_PATH),
+    stage5aw_extras: Path = typer.Option(STAGE5AW_REPAIRED_REVIEWER_EXTRA_TOKENS_PATH),
+    stage5ay_source_inputs: Path = typer.Option(STAGE5AY_PREFLIGHT_SOURCE_INPUTS_PATH),
+    stage5ay_branch_eligibility: Path = typer.Option(STAGE5AY_BRANCH_ELIGIBILITY_POLICY_PATH),
+    stage5az_policy: Path = typer.Option(STAGE5AZ_REPAIRED_PREFLIGHT_DESIGN_POLICY_PATH),
+    stage5az_variant_family: Path = typer.Option(STAGE5AZ_REPAIRED_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    stage5az_branch_budget: Path = typer.Option(STAGE5AZ_REPAIRED_BRANCH_COUNT_BUDGET_PATH),
+    stage5az_execution_gates: Path = typer.Option(STAGE5AZ_REPAIRED_EXECUTION_GATES_PATH),
+    stage5az_dwh_context: Path = typer.Option(STAGE5AZ_DWH_MANIFEST_INTEGRITY_CONTEXT_PATH),
+    stage5ay_null_control_family: Path = typer.Option(STAGE5AY_NULL_CONTROL_FAMILY_MANIFEST_PATH),
+    stage5ay_alphabet_control: Path = typer.Option(STAGE5AY_ALPHABET_CONTROL_MANIFEST_PATH),
+    stage5ay_reading_order_control: Path = typer.Option(STAGE5AY_READING_ORDER_CONTROL_MANIFEST_PATH),
+    stage5ay_page_split_control: Path = typer.Option(STAGE5AY_PAGE_SPLIT_CONTROL_MANIFEST_PATH),
+    stage5ay_source_control: Path = typer.Option(STAGE5AY_SOURCE_CONTROL_MANIFEST_PATH),
+    stage5ay_result_schema_preview: Path = typer.Option(STAGE5AY_FUTURE_RESULT_SCHEMA_PREVIEW_PATH),
+    inactive_stage5av_branch_manifest: Path = typer.Option(STAGE5AV_BRANCH_MANIFEST_PATH),
+    inactive_stage5ay_variant_family: Path = typer.Option(STAGE5AY_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    results_dir: Path = typer.Option(STAGE5BB_RESULTS_DIR),
+    out_registry: Path = typer.Option(STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH),
+    out_precedence_policy: Path = typer.Option(STAGE5BB_MANIFEST_PRECEDENCE_POLICY_PATH),
+) -> None:
+    registry, policy = build_stage5bb_active_manifest_registry(
+        stage5az_summary=stage5az_summary,
+        stage5az_readiness=stage5az_readiness,
+        stage5aw_branch_manifest=stage5aw_branch_manifest,
+        stage5aw_impact_summary=stage5aw_impact_summary,
+        stage5aw_unresolved=stage5aw_unresolved,
+        stage5aw_extras=stage5aw_extras,
+        stage5ay_source_inputs=stage5ay_source_inputs,
+        stage5ay_branch_eligibility=stage5ay_branch_eligibility,
+        stage5az_policy=stage5az_policy,
+        stage5az_variant_family=stage5az_variant_family,
+        stage5az_branch_budget=stage5az_branch_budget,
+        stage5az_execution_gates=stage5az_execution_gates,
+        stage5az_dwh_context=stage5az_dwh_context,
+        stage5ay_null_control_family=stage5ay_null_control_family,
+        stage5ay_alphabet_control=stage5ay_alphabet_control,
+        stage5ay_reading_order_control=stage5ay_reading_order_control,
+        stage5ay_page_split_control=stage5ay_page_split_control,
+        stage5ay_source_control=stage5ay_source_control,
+        stage5ay_result_schema_preview=stage5ay_result_schema_preview,
+        inactive_stage5av_branch_manifest=inactive_stage5av_branch_manifest,
+        inactive_stage5ay_variant_family=inactive_stage5ay_variant_family,
+        results_dir=results_dir,
+        out_registry=out_registry,
+        out_precedence_policy=out_precedence_policy,
+    )
+    console.print(f"active_manifest_role_count={registry['active_manifest_role_count']}")
+    console.print(f"all_active_paths_resolve={registry['all_active_paths_resolve']}")
+    console.print(f"stale_active_load_allowed={registry['stale_active_load_allowed']}")
+    console.print(f"precedence_policy_status={policy['policy_status']}")
+
+
+@app.command("audit-stage5bb-legacy-pointers")
+def audit_stage5bb_legacy_pointers_command(
+    active_registry: Path = typer.Option(STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH),
+    precedence_policy: Path = typer.Option(STAGE5BB_MANIFEST_PRECEDENCE_POLICY_PATH),
+    stage5az_execution_gates: Path = typer.Option(STAGE5AZ_REPAIRED_EXECUTION_GATES_PATH),
+    stage5ay_variant_family: Path = typer.Option(STAGE5AY_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    stage5az_variant_family: Path = typer.Option(STAGE5AZ_REPAIRED_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    results_dir: Path = typer.Option(STAGE5BB_RESULTS_DIR),
+    out: Path = typer.Option(STAGE5BB_LEGACY_POINTER_AUDIT_PATH),
+) -> None:
+    audit = audit_stage5bb_legacy_pointers(
+        active_registry=active_registry,
+        precedence_policy=precedence_policy,
+        stage5az_execution_gates=stage5az_execution_gates,
+        stage5ay_variant_family=stage5ay_variant_family,
+        stage5az_variant_family=stage5az_variant_family,
+        results_dir=results_dir,
+        out=out,
+    )
+    console.print(f"legacy_pointer_count={audit['legacy_pointer_count']}")
+    console.print(f"audit_status={audit['audit_status']}")
+    console.print(f"stale_active_load_allowed={audit['stale_active_load_allowed']}")
+
+
+@app.command("validate-stage5bb-manifest-references")
+def validate_stage5bb_manifest_references_command(
+    active_registry: Path = typer.Option(STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH),
+    precedence_policy: Path = typer.Option(STAGE5BB_MANIFEST_PRECEDENCE_POLICY_PATH),
+    legacy_pointer_audit: Path = typer.Option(STAGE5BB_LEGACY_POINTER_AUDIT_PATH),
+    results_dir: Path = typer.Option(STAGE5BB_RESULTS_DIR),
+    out_reference_validation: Path = typer.Option(STAGE5BB_MANIFEST_REFERENCE_VALIDATION_PATH),
+    out_branch_eligibility_validation: Path = typer.Option(STAGE5BB_BRANCH_ELIGIBILITY_REFERENCE_VALIDATION_PATH),
+) -> None:
+    reference, branch = validate_stage5bb_manifest_references(
+        active_registry=active_registry,
+        precedence_policy=precedence_policy,
+        legacy_pointer_audit=legacy_pointer_audit,
+        results_dir=results_dir,
+        out_reference_validation=out_reference_validation,
+        out_branch_eligibility_validation=out_branch_eligibility_validation,
+    )
+    console.print(f"all_manifest_references_resolve={reference['all_manifest_references_resolve']}")
+    console.print(f"inactive_manifest_used_as_active_count={reference['inactive_manifest_used_as_active_count']}")
+    console.print(f"branch_eligibility_policy_validated={branch['branch_eligibility_policy_validated']}")
+    console.print(f"option_record_count={branch['option_record_count']}")
+
+
+@app.command("build-stage5bb-runner-scaffold")
+def build_stage5bb_runner_scaffold_command(
+    active_registry: Path = typer.Option(STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH),
+    reference_validation: Path = typer.Option(STAGE5BB_MANIFEST_REFERENCE_VALIDATION_PATH),
+    branch_eligibility_validation: Path = typer.Option(STAGE5BB_BRANCH_ELIGIBILITY_REFERENCE_VALIDATION_PATH),
+    stage5az_execution_gates: Path = typer.Option(STAGE5AZ_REPAIRED_EXECUTION_GATES_PATH),
+    results_dir: Path = typer.Option(STAGE5BB_RESULTS_DIR),
+    out_loader_policy: Path = typer.Option(STAGE5BB_LOADER_SCAFFOLD_POLICY_PATH),
+    out_runner_manifest: Path = typer.Option(STAGE5BB_RUNNER_SCAFFOLD_MANIFEST_PATH),
+    out_gate_policy: Path = typer.Option(STAGE5BB_EXECUTION_GATE_ENFORCEMENT_POLICY_PATH),
+) -> None:
+    loader, runner, gate = build_stage5bb_runner_scaffold(
+        active_registry=active_registry,
+        reference_validation=reference_validation,
+        branch_eligibility_validation=branch_eligibility_validation,
+        stage5az_execution_gates=stage5az_execution_gates,
+        results_dir=results_dir,
+        out_loader_policy=out_loader_policy,
+        out_runner_manifest=out_runner_manifest,
+        out_gate_policy=out_gate_policy,
+    )
+    console.print(f"loader_refuses_inactive={loader['refuse_inactive_paths_as_active_inputs']}")
+    console.print(f"runner_scaffold_created={runner['runner_scaffold_created']}")
+    console.print(f"runner_execution_created={runner['runner_execution_created']}")
+    console.print(f"gate_count={gate['gate_count']}")
+
+
+@app.command("build-stage5bb-dry-run-preview")
+def build_stage5bb_dry_run_preview_command(
+    active_registry: Path = typer.Option(STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH),
+    runner_manifest: Path = typer.Option(STAGE5BB_RUNNER_SCAFFOLD_MANIFEST_PATH),
+    gate_policy: Path = typer.Option(STAGE5BB_EXECUTION_GATE_ENFORCEMENT_POLICY_PATH),
+    results_dir: Path = typer.Option(STAGE5BB_RESULTS_DIR),
+    out_dry_run_preview: Path = typer.Option(STAGE5BB_DRY_RUN_PLAN_PREVIEW_PATH),
+    out_branch_counter: Path = typer.Option(STAGE5BB_BRANCH_COUNTER_SUMMARY_PATH),
+    out_family_summary: Path = typer.Option(STAGE5BB_FAMILY_ENUMERATION_SUMMARY_PATH),
+) -> None:
+    preview, branch, family = build_stage5bb_dry_run_preview(
+        active_registry=active_registry,
+        runner_manifest=runner_manifest,
+        gate_policy=gate_policy,
+        results_dir=results_dir,
+        out_dry_run_preview=out_dry_run_preview,
+        out_branch_counter=out_branch_counter,
+        out_family_summary=out_family_summary,
+    )
+    console.print(f"dry_run_preview_created={preview['dry_run_preview_created']}")
+    console.print(f"branch_upper_bound_product={branch['branch_upper_bound_product']}")
+    console.print(f"unique_variant_family_count={family['unique_variant_family_count']}")
+    console.print(f"taxonomy_membership_count={family['taxonomy_membership_count']}")
+
+
+@app.command("validate-stage5bb-execution-gates")
+def validate_stage5bb_execution_gates_command(
+    active_registry: Path = typer.Option(STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH),
+    runner_manifest: Path = typer.Option(STAGE5BB_RUNNER_SCAFFOLD_MANIFEST_PATH),
+    dry_run_preview: Path = typer.Option(STAGE5BB_DRY_RUN_PLAN_PREVIEW_PATH),
+    stage5az_execution_gates: Path = typer.Option(STAGE5AZ_REPAIRED_EXECUTION_GATES_PATH),
+    gate_policy: Path = typer.Option(STAGE5BB_EXECUTION_GATE_ENFORCEMENT_POLICY_PATH),
+    results_dir: Path = typer.Option(STAGE5BB_RESULTS_DIR),
+    out_gate_validation: Path = typer.Option(STAGE5BB_EXECUTION_GATE_VALIDATION_PATH),
+    out_no_execution_proof: Path = typer.Option(STAGE5BB_NO_EXECUTION_PROOF_PATH),
+) -> None:
+    gate, proof = validate_stage5bb_execution_gates(
+        active_registry=active_registry,
+        runner_manifest=runner_manifest,
+        dry_run_preview=dry_run_preview,
+        stage5az_execution_gates=stage5az_execution_gates,
+        gate_policy=gate_policy,
+        results_dir=results_dir,
+        out_gate_validation=out_gate_validation,
+        out_no_execution_proof=out_no_execution_proof,
+    )
+    console.print(f"gate_enforcer_blocks_execution={gate['gate_enforcer_blocks_execution']}")
+    console.print(f"real_token_block_byte_streams_generated={proof['real_token_block_byte_streams_generated']}")
+    console.print(f"hash_search_performed={proof['hash_search_performed']}")
+
+
+@app.command("build-stage5bb-fixture-result-schema-records")
+def build_stage5bb_fixture_result_schema_records_command(
+    active_registry: Path = typer.Option(STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH),
+    runner_manifest: Path = typer.Option(STAGE5BB_RUNNER_SCAFFOLD_MANIFEST_PATH),
+    results_dir: Path = typer.Option(STAGE5BB_RESULTS_DIR),
+    out_policy: Path = typer.Option(STAGE5BB_RESULT_SCHEMA_FIXTURE_POLICY_PATH),
+    out_records: Path = typer.Option(STAGE5BB_FIXTURE_RESULT_SCHEMA_RECORDS_PATH),
+) -> None:
+    policy, records = build_stage5bb_fixture_result_schema_records(
+        active_registry=active_registry,
+        runner_manifest=runner_manifest,
+        results_dir=results_dir,
+        out_policy=out_policy,
+        out_records=out_records,
+    )
+    console.print(f"fixture_result_schema_writer_allowed={policy['fixture_result_schema_writer_allowed']}")
+    console.print(f"fixture_record_count={records['fixture_record_count']}")
+    console.print(f"fixture_data_not_derived_from_liber_primus={policy['fixture_data_not_derived_from_liber_primus']}")
+
+
+@app.command("build-stage5bb-summary")
+def build_stage5bb_summary_command(
+    active_registry: Path = typer.Option(STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH),
+    precedence_policy: Path = typer.Option(STAGE5BB_MANIFEST_PRECEDENCE_POLICY_PATH),
+    legacy_pointer_audit: Path = typer.Option(STAGE5BB_LEGACY_POINTER_AUDIT_PATH),
+    reference_validation: Path = typer.Option(STAGE5BB_MANIFEST_REFERENCE_VALIDATION_PATH),
+    branch_eligibility_validation: Path = typer.Option(STAGE5BB_BRANCH_ELIGIBILITY_REFERENCE_VALIDATION_PATH),
+    loader_policy: Path = typer.Option(STAGE5BB_LOADER_SCAFFOLD_POLICY_PATH),
+    runner_manifest: Path = typer.Option(STAGE5BB_RUNNER_SCAFFOLD_MANIFEST_PATH),
+    dry_run_preview: Path = typer.Option(STAGE5BB_DRY_RUN_PLAN_PREVIEW_PATH),
+    branch_counter: Path = typer.Option(STAGE5BB_BRANCH_COUNTER_SUMMARY_PATH),
+    family_summary: Path = typer.Option(STAGE5BB_FAMILY_ENUMERATION_SUMMARY_PATH),
+    gate_policy: Path = typer.Option(STAGE5BB_EXECUTION_GATE_ENFORCEMENT_POLICY_PATH),
+    gate_validation: Path = typer.Option(STAGE5BB_EXECUTION_GATE_VALIDATION_PATH),
+    fixture_policy: Path = typer.Option(STAGE5BB_RESULT_SCHEMA_FIXTURE_POLICY_PATH),
+    fixture_records: Path = typer.Option(STAGE5BB_FIXTURE_RESULT_SCHEMA_RECORDS_PATH),
+    no_execution_proof: Path = typer.Option(STAGE5BB_NO_EXECUTION_PROOF_PATH),
+    out_validation_evidence: Path = typer.Option(STAGE5BB_VALIDATION_EVIDENCE_INDEX_PATH),
+    out_dwh_context: Path = typer.Option(STAGE5BB_DWH_RUNNER_CONTEXT_PATH),
+    out_guardrail: Path = typer.Option(STAGE5BB_GUARDRAIL_PATH),
+    out_next_stage: Path = typer.Option(STAGE5BB_NEXT_STAGE_DECISION_PATH),
+    out_summary: Path = typer.Option(STAGE5BB_SUMMARY_PATH),
+) -> None:
+    evidence, dwh, _guardrail, summary = build_stage5bb_summary(
+        active_registry=active_registry,
+        precedence_policy=precedence_policy,
+        legacy_pointer_audit=legacy_pointer_audit,
+        reference_validation=reference_validation,
+        branch_eligibility_validation=branch_eligibility_validation,
+        loader_policy=loader_policy,
+        runner_manifest=runner_manifest,
+        dry_run_preview=dry_run_preview,
+        branch_counter=branch_counter,
+        family_summary=family_summary,
+        gate_policy=gate_policy,
+        gate_validation=gate_validation,
+        fixture_policy=fixture_policy,
+        fixture_records=fixture_records,
+        no_execution_proof=no_execution_proof,
+        out_validation_evidence=out_validation_evidence,
+        out_dwh_context=out_dwh_context,
+        out_guardrail=out_guardrail,
+        out_next_stage=out_next_stage,
+        out_summary=out_summary,
+    )
+    console.print(f"validation_evidence_index_created={evidence['validation_evidence_index_created']}")
+    console.print(f"dwh_operational_status={dwh['dwh_operational_status']}")
+    console.print(f"recommended_next_stage_title={summary['recommended_next_stage_title']}")
+
+
+@app.command("validate-stage5bb")
+def validate_stage5bb_command(
+    active_registry: Path = typer.Option(STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH),
+    precedence_policy: Path = typer.Option(STAGE5BB_MANIFEST_PRECEDENCE_POLICY_PATH),
+    legacy_pointer_audit: Path = typer.Option(STAGE5BB_LEGACY_POINTER_AUDIT_PATH),
+    reference_validation: Path = typer.Option(STAGE5BB_MANIFEST_REFERENCE_VALIDATION_PATH),
+    branch_eligibility_validation: Path = typer.Option(STAGE5BB_BRANCH_ELIGIBILITY_REFERENCE_VALIDATION_PATH),
+    loader_policy: Path = typer.Option(STAGE5BB_LOADER_SCAFFOLD_POLICY_PATH),
+    runner_manifest: Path = typer.Option(STAGE5BB_RUNNER_SCAFFOLD_MANIFEST_PATH),
+    dry_run_preview: Path = typer.Option(STAGE5BB_DRY_RUN_PLAN_PREVIEW_PATH),
+    branch_counter: Path = typer.Option(STAGE5BB_BRANCH_COUNTER_SUMMARY_PATH),
+    family_summary: Path = typer.Option(STAGE5BB_FAMILY_ENUMERATION_SUMMARY_PATH),
+    gate_policy: Path = typer.Option(STAGE5BB_EXECUTION_GATE_ENFORCEMENT_POLICY_PATH),
+    gate_validation: Path = typer.Option(STAGE5BB_EXECUTION_GATE_VALIDATION_PATH),
+    fixture_policy: Path = typer.Option(STAGE5BB_RESULT_SCHEMA_FIXTURE_POLICY_PATH),
+    fixture_records: Path = typer.Option(STAGE5BB_FIXTURE_RESULT_SCHEMA_RECORDS_PATH),
+    validation_evidence: Path = typer.Option(STAGE5BB_VALIDATION_EVIDENCE_INDEX_PATH),
+    no_execution_proof: Path = typer.Option(STAGE5BB_NO_EXECUTION_PROOF_PATH),
+    dwh_context: Path = typer.Option(STAGE5BB_DWH_RUNNER_CONTEXT_PATH),
+    guardrail: Path = typer.Option(STAGE5BB_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5BB_NEXT_STAGE_DECISION_PATH),
+    summary: Path = typer.Option(STAGE5BB_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5BB_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5bb(
+        active_registry=active_registry,
+        precedence_policy=precedence_policy,
+        legacy_pointer_audit=legacy_pointer_audit,
+        reference_validation=reference_validation,
+        branch_eligibility_validation=branch_eligibility_validation,
+        loader_policy=loader_policy,
+        runner_manifest=runner_manifest,
+        dry_run_preview=dry_run_preview,
+        branch_counter=branch_counter,
+        family_summary=family_summary,
+        gate_policy=gate_policy,
+        gate_validation=gate_validation,
+        fixture_policy=fixture_policy,
+        fixture_records=fixture_records,
+        validation_evidence=validation_evidence,
+        no_execution_proof=no_execution_proof,
+        dwh_context=dwh_context,
+        guardrail=guardrail,
+        next_stage_decision=next_stage_decision,
+        summary=summary,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5bb_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

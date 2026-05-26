@@ -1,0 +1,13 @@
+record_type: stage5bb_family_enumeration_summary
+schema: schemas/token-block/family-enumeration-summary-v0.schema.json
+stage_id: stage-5bb
+source_variant_family_manifest: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+family_enumeration_mode: metadata_only
+unique_variant_family_count: 10
+manifest_family_entry_count: 10
+taxonomy_membership_count: 11
+duplicate_active_family_id_count: 0
+duplicate_active_family_ids: []
+no_duplicate_active_family_ids: true
+real_variant_branches_enumerated: false
+variant_outputs_generated: false

@@ -1,0 +1,183 @@
+record_type: stage5bb_active_manifest_registry
+schema: schemas/token-block/active-manifest-registry-v0.schema.json
+stage_id: stage-5bb
+status: complete
+source_stage_id: stage-5ba
+source_stage5az_commit: 8f96f43545a8c3a7a50baf38a49aa8e66cffd71e
+source_stage5az_summary: data/project-state/stage5az-summary.yaml
+source_stage5az_readiness: data/token-block/stage5az-deep-research-readiness.yaml
+active_manifest_roles:
+  active_branch_manifest:
+    path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+    role: active_branch_manifest
+    source_stage_id: stage-5aw
+    active: true
+    required: true
+    present: true
+    readable: true
+    sha256: 5e2dfee9717b1950cc7f61cf6e8b48ea592105e6dbe5e94d31396556c41daa3f
+  active_primary60_impact_summary:
+    path: data/token-block/stage5aw-repaired-primary60-variant-impact-summary.yaml
+    role: active_primary60_impact_summary
+    source_stage_id: stage-5aw
+    active: true
+    required: true
+    present: true
+    readable: true
+    sha256: 882e3840f7362c3e3841d883cf189719f5a4a894359f6b8483cd5e391e495f55
+  active_unresolved_variant_records:
+    path: data/token-block/stage5aw-repaired-unresolved-token-variant-records.yaml
+    role: active_unresolved_variant_records
+    source_stage_id: stage-5aw
+    active: true
+    required: true
+    present: true
+    readable: true
+    sha256: 45e23abd7a06324634e063af9d9ee8104765d75b5b2373835b338b7f6eb3353d
+  active_reviewer_extra_possible_tokens:
+    path: data/token-block/stage5aw-repaired-reviewer-extra-possible-tokens.yaml
+    role: active_reviewer_extra_possible_tokens
+    source_stage_id: stage-5aw
+    active: true
+    required: true
+    present: true
+    readable: true
+    sha256: ba9d7bda988ac9d9d19a7a629ebb9c306c1044c605f57eb010ddc7520241bec1
+  active_preflight_source_inputs:
+    path: data/token-block/stage5ay-preflight-source-inputs.yaml
+    role: active_preflight_source_inputs
+    source_stage_id: stage-5ay
+    active: true
+    required: true
+    present: true
+    readable: true
+    sha256: 122716b5e35a4367bd8b4d482484079e9578a66f9025a2420e2dbeace25a5df0
+  active_branch_eligibility_policy:
+    path: data/token-block/stage5ay-branch-eligibility-policy.yaml
+    role: active_branch_eligibility_policy
+    source_stage_id: stage-5ay
+    active: true
+    required: true
+    present: true
+    readable: true
+    sha256: 8cab6a59ce259ce3cb9aa4f5c0312071f47cae543b46f39a5ff838f676d98624
+  active_preflight_design_policy:
+    path: data/token-block/stage5az-repaired-preflight-design-policy.yaml
+    role: active_preflight_design_policy
+    source_stage_id: stage-5az
+    active: true
+    required: true
+    present: true
+    readable: true
+    sha256: ad4b31d12a40027cffb8e9964c5d1f4a8412c782424b936a83a0876fdf76936c
+  active_bounded_variant_family_manifest:
+    path: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+    role: active_bounded_variant_family_manifest
+    source_stage_id: stage-5az
+    active: true
+    required: true
+    present: true
+    readable: true
+    sha256: 4be0806a2f41aac56b858774af253d249bd1dd894e253fa04fe52a57ed4bf1a3
+  active_branch_count_budget:
+    path: data/token-block/stage5az-repaired-branch-count-budget.yaml
+    role: active_branch_count_budget
+    source_stage_id: stage-5az
+    active: true
+    required: true
+    present: true
+    readable: true
+    sha256: 30d271329945350ae4f11e1d435acca1240ecf6c5985b407d2257af24ae9da3d
+  active_execution_gates:
+    path: data/token-block/stage5az-repaired-execution-gates.yaml
+    role: active_execution_gates
+    source_stage_id: stage-5az
+    active: true
+    required: true
+    present: true
+    readable: true
+    sha256: 5d512e8faebbb805183d223773e924f791e122615519c428cea2f688b76384ce
+  active_dwh_context:
+    path: data/token-block/stage5az-dwh-manifest-integrity-context.yaml
+    role: active_dwh_context
+    source_stage_id: stage-5az
+    active: true
+    required: true
+    present: true
+    readable: true
+    sha256: c83e7913b9f0adeca688e38af382416f9389f8751c77b2546a7a606706a6037e
+  supporting_null_control_family_manifest:
+    path: data/token-block/stage5ay-null-control-family-manifest.yaml
+    role: supporting_null_control_family_manifest
+    source_stage_id: stage-5ay
+    active: true
+    required: false
+    present: true
+    readable: true
+    sha256: 168d93172fb764f1a00a64bc55585c8a145384d6539a29a4d2f5f2427d3c3ea4
+  supporting_alphabet_control_manifest:
+    path: data/token-block/stage5ay-alphabet-control-manifest.yaml
+    role: supporting_alphabet_control_manifest
+    source_stage_id: stage-5ay
+    active: true
+    required: false
+    present: true
+    readable: true
+    sha256: ae555356345f1419f98ecfe22a8518ae1e22a8d6bcb797f2d2f73cb1c6475c1e
+  supporting_reading_order_control_manifest:
+    path: data/token-block/stage5ay-reading-order-control-manifest.yaml
+    role: supporting_reading_order_control_manifest
+    source_stage_id: stage-5ay
+    active: true
+    required: false
+    present: true
+    readable: true
+    sha256: 1feb7c13b998eda60487ac7333ba12c879de6971d87326c622876a1750996923
+  supporting_page_split_control_manifest:
+    path: data/token-block/stage5ay-page-split-control-manifest.yaml
+    role: supporting_page_split_control_manifest
+    source_stage_id: stage-5ay
+    active: true
+    required: false
+    present: true
+    readable: true
+    sha256: 67e5ec7c3013a99aea008f23accf308f8afd3872a4eea1d94bc4294b1e45c2ba
+  supporting_source_control_manifest:
+    path: data/token-block/stage5ay-source-control-manifest.yaml
+    role: supporting_source_control_manifest
+    source_stage_id: stage-5ay
+    active: true
+    required: false
+    present: true
+    readable: true
+    sha256: a4b3486d684704116d34a2128754b440b20f02656b30d579759ec92ac54c101d
+  supporting_future_result_schema_preview:
+    path: data/token-block/stage5ay-future-result-schema-preview.yaml
+    role: supporting_future_result_schema_preview
+    source_stage_id: stage-5ay
+    active: true
+    required: false
+    present: true
+    readable: true
+    sha256: 1d70a4c34f96c7d5f5eb308232afa5cb8f3abdb6c14bf6bf766d18f8d6c0bf1f
+inactive_or_superseded_manifests:
+- manifest_key: inactive_stage5av_branch_manifest
+  path: data/token-block/stage5av-token-variant-branch-manifest.yaml
+  source_stage_id: stage-5av
+  inactive_reason: superseded_by_stage5aw_repaired_branch_manifest
+  active_replacement_path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+  active_load_allowed: false
+  historical_diagnostic_load_allowed: true
+- manifest_key: inactive_stage5ay_bounded_variant_family_manifest
+  path: data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+  source_stage_id: stage-5ay
+  inactive_reason: superseded_by_stage5az_repaired_bounded_variant_family_manifest
+  active_replacement_path: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+  active_load_allowed: false
+  historical_diagnostic_load_allowed: true
+active_manifest_role_count: 17
+required_active_manifest_count: 11
+all_active_paths_resolve: true
+stale_active_load_allowed: false
+historical_diagnostic_load_allowed: true
+execution_authorised: false

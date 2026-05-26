@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB execution gate validation",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "execution_authorised_now", "gate_enforcer_blocks_execution", "validation_status"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "execution_authorised_now": { "const": false },
+    "gate_enforcer_blocks_execution": { "const": true },
+    "validation_status": { "const": "passed" }
+  },
+  "additionalProperties": true
+}

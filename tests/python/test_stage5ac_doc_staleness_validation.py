@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5az_latest_and_stage5ba_next() -> None:
+def test_operational_docs_use_stage5bb_latest_and_stage5bc_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5AZ bounded preflight manifest integrity gap closure is complete" in status
-    assert "Next recommended prompt: Stage 5BA" in status
-    assert "Latest completed stage: Stage 5AZ" in staged_plan
-    assert "Current planning focus: Stage 5BA" in staged_plan
+    assert "Stage 5BB token-block preflight runner scaffold without execution is complete" in status
+    assert "Next recommended prompt: Stage 5BC" in status
+    assert "Latest completed stage: Stage 5BB" in staged_plan
+    assert "Current planning focus: Stage 5BC" in staged_plan

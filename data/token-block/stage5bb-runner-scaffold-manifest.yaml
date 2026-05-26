@@ -1,0 +1,23 @@
+record_type: stage5bb_runner_scaffold_manifest
+schema: schemas/token-block/runner-scaffold-manifest-v0.schema.json
+stage_id: stage-5bb
+runner_scaffold_created: true
+runner_execution_created: false
+runner_scaffold_type: no_execution_preflight_scaffold
+components:
+- active_manifest_registry_loader
+- manifest_precedence_resolver
+- legacy_pointer_auditor
+- manifest_reference_validator
+- branch_eligibility_loader
+- branch_budget_counter
+- variant_family_counter
+- dry_run_plan_preview_builder
+- execution_gate_enforcer
+- fixture_result_schema_writer
+- no_execution_proof_generator
+real_token_block_byte_generation_supported: false
+real_variant_materialisation_supported: false
+fixture_only_schema_writer_supported: true
+fixture_data_not_derived_from_liber_primus: true
+execution_authorised_now: false

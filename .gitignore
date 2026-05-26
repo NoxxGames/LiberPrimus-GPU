@@ -811,6 +811,10 @@ experiments/results/token-block/**
 !experiments/results/token-block/stage5ay/.gitkeep
 !experiments/results/token-block/stage5az/
 !experiments/results/token-block/stage5az/.gitkeep
+!experiments/results/token-block/stage5bb/
+!experiments/results/token-block/stage5bb/.gitkeep
+!experiments/results/token-block/stage5bb/fixtures/
+!experiments/results/token-block/stage5bb/fixtures/.gitkeep
 
 # Generated CI/validation outputs
 experiments/results/ci/**

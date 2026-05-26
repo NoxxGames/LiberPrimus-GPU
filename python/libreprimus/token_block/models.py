@@ -230,6 +230,33 @@ STAGE5AZ_GUARDRAIL_PATH = DATA_DIR / "stage5az-guardrail.yaml"
 STAGE5AZ_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5az-next-stage-decision.yaml"
 STAGE5AZ_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5az-summary.yaml"
 
+STAGE5BB_ID = "stage-5bb"
+STAGE5BB_RESULTS_DIR = Path("experiments/results/token-block/stage5bb")
+STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH = DATA_DIR / "stage5bb-active-manifest-registry.yaml"
+STAGE5BB_MANIFEST_PRECEDENCE_POLICY_PATH = DATA_DIR / "stage5bb-manifest-precedence-policy.yaml"
+STAGE5BB_LEGACY_POINTER_AUDIT_PATH = DATA_DIR / "stage5bb-legacy-pointer-audit.yaml"
+STAGE5BB_MANIFEST_REFERENCE_VALIDATION_PATH = DATA_DIR / "stage5bb-manifest-reference-validation.yaml"
+STAGE5BB_BRANCH_ELIGIBILITY_REFERENCE_VALIDATION_PATH = (
+    DATA_DIR / "stage5bb-branch-eligibility-reference-validation.yaml"
+)
+STAGE5BB_LOADER_SCAFFOLD_POLICY_PATH = DATA_DIR / "stage5bb-loader-scaffold-policy.yaml"
+STAGE5BB_RUNNER_SCAFFOLD_MANIFEST_PATH = DATA_DIR / "stage5bb-runner-scaffold-manifest.yaml"
+STAGE5BB_DRY_RUN_PLAN_PREVIEW_PATH = DATA_DIR / "stage5bb-dry-run-plan-preview.yaml"
+STAGE5BB_BRANCH_COUNTER_SUMMARY_PATH = DATA_DIR / "stage5bb-branch-counter-summary.yaml"
+STAGE5BB_FAMILY_ENUMERATION_SUMMARY_PATH = DATA_DIR / "stage5bb-family-enumeration-summary.yaml"
+STAGE5BB_EXECUTION_GATE_ENFORCEMENT_POLICY_PATH = (
+    DATA_DIR / "stage5bb-execution-gate-enforcement-policy.yaml"
+)
+STAGE5BB_EXECUTION_GATE_VALIDATION_PATH = DATA_DIR / "stage5bb-execution-gate-validation.yaml"
+STAGE5BB_RESULT_SCHEMA_FIXTURE_POLICY_PATH = DATA_DIR / "stage5bb-result-schema-fixture-policy.yaml"
+STAGE5BB_FIXTURE_RESULT_SCHEMA_RECORDS_PATH = DATA_DIR / "stage5bb-fixture-result-schema-records.yaml"
+STAGE5BB_VALIDATION_EVIDENCE_INDEX_PATH = DATA_DIR / "stage5bb-validation-evidence-index.yaml"
+STAGE5BB_NO_EXECUTION_PROOF_PATH = DATA_DIR / "stage5bb-no-execution-proof.yaml"
+STAGE5BB_DWH_RUNNER_CONTEXT_PATH = DATA_DIR / "stage5bb-dwh-runner-context.yaml"
+STAGE5BB_GUARDRAIL_PATH = DATA_DIR / "stage5bb-guardrail.yaml"
+STAGE5BB_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5bb-next-stage-decision.yaml"
+STAGE5BB_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5bb-summary.yaml"
+
 FALSE_GUARDRAILS = {
     "network_fetch_performed": False,
     "online_repo_clone_performed": False,

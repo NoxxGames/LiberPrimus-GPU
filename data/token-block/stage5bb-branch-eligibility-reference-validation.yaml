@@ -1,0 +1,25 @@
+record_type: stage5bb_branch_eligibility_reference_validation
+schema: schemas/token-block/branch-eligibility-reference-validation-v0.schema.json
+stage_id: stage-5bb
+branch_eligibility_policy_required: true
+branch_eligibility_policy_path: data/token-block/stage5ay-branch-eligibility-policy.yaml
+branch_eligibility_policy_present: true
+branch_eligibility_policy_readable: true
+branch_eligibility_policy_validated: true
+branch_eligibility_policy_active_supporting_input: true
+validated_against:
+- data/token-block/stage5aw-repaired-unresolved-token-variant-records.yaml
+- data/token-block/stage5aw-repaired-reviewer-extra-possible-tokens.yaml
+- data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+option_record_count: 167
+primary60_mappable_option_count: 99
+primary60_unmappable_option_count: 65
+visual_placeholder_option_count: 2
+malformed_fragment_audit_only_count: 3
+execution_ineligible_option_count: 68
+unique_variant_family_count: 10
+manifest_family_entry_count: 10
+taxonomy_membership_count: 11
+duplicate_active_family_id_count: 0
+duplicate_active_family_ids: []
+validation_status: passed

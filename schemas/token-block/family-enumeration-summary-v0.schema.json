@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB family enumeration summary",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "family_enumeration_mode", "unique_variant_family_count", "taxonomy_membership_count", "no_duplicate_active_family_ids"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "family_enumeration_mode": { "const": "metadata_only" },
+    "unique_variant_family_count": { "const": 10 },
+    "taxonomy_membership_count": { "const": 11 },
+    "no_duplicate_active_family_ids": { "const": true },
+    "real_variant_branches_enumerated": { "const": false },
+    "variant_outputs_generated": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB DWH runner context",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "dwh_defined", "dwh_expansion", "dwh_operational_status", "hash_search_performed", "dwh_execution_authorised"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "dwh_defined": { "const": true },
+    "dwh_expansion": { "const": "Deep Web Hash" },
+    "dwh_operational_status": { "const": "not_operational" },
+    "hash_search_performed": { "const": false },
+    "dwh_execution_authorised": { "const": false },
+    "dwh_hash_search_supported_by_stage5bb": { "const": false }
+  },
+  "additionalProperties": true
+}

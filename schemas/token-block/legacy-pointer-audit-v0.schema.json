@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB legacy pointer audit",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "legacy_pointers_detected", "legacy_pointer_count", "active_loader_target", "stale_active_load_allowed", "audit_status"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "active_loader_target": { "const": "data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml" },
+    "stale_active_load_allowed": { "const": false }
+  },
+  "additionalProperties": true
+}

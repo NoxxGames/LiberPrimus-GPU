@@ -14,3 +14,5 @@ Important boundaries:
 - Malformed prose fragments are audit-only and never variant choices.
 - Full Cartesian enumeration remains blocked.
 - Sampling is design-only and requires a fixed seed plus later authorization.
+
+Stage 5BB validates this Stage 5AY branch-eligibility policy as an active runner-scaffold input. Validation does not generate byte streams or choose branches; it only proves that the scaffold references the repaired active manifest set and preserves ineligible options as blocked.

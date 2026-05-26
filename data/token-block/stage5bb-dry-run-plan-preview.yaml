@@ -1,0 +1,40 @@
+record_type: stage5bb_dry_run_plan_preview
+schema: schemas/token-block/dry-run-plan-preview-v0.schema.json
+stage_id: stage-5bb
+dry_run_preview_created: true
+dry_run_preview_type: no_output_manifest_plan_preview
+active_registry_path: data/token-block/stage5bb-active-manifest-registry.yaml
+loaded_manifest_roles:
+- active_branch_manifest
+- active_preflight_design_policy
+- active_bounded_variant_family_manifest
+- active_branch_count_budget
+- active_execution_gates
+- active_branch_eligibility_policy
+unique_variant_family_count: 10
+manifest_family_entry_count: 10
+taxonomy_membership_count: 11
+duplicate_active_family_id_count: 0
+duplicate_active_family_ids: []
+control_family_count: 5
+branch_upper_bound_product: 2720083094132915643088896
+branch_upper_bound_log10: 24.434582
+primary60_mappable_branch_upper_bound_product: 4194304
+primary60_mappable_branch_upper_bound_log10: 6.62266
+execution_gate_summary:
+  execution_authorised_now: false
+  all_gates_required_before_execution: true
+  gates_blocking_execution:
+  - source_lock_gate
+  - case_review_gate
+  - manifest_review_gate
+  - null_control_gate
+  - execution_scope_gate
+  - dwh_gate
+  - safety_gate
+  - manifest_integrity_gate
+real_byte_streams_included: false
+real_variant_outputs_included: false
+hash_comparisons_included: false
+scores_included: false
+decode_outputs_included: false

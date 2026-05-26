@@ -1,0 +1,20 @@
+record_type: stage5bb_validation_evidence_index
+schema: schemas/token-block/validation-evidence-index-v0.schema.json
+stage_id: stage-5bb
+validation_evidence_index_created: true
+local_commands_recorded:
+- validate-stage5bb
+- pytest
+- ruff
+- run-parallel-validation
+- run-consistency-checks
+ci_expected_after_push: true
+github_issue_expected: true
+completion_handoff_expected: codex-output/stage5bb-codex-completion.md
+validation_result_status:
+  stage5bb_validation: passed
+  pytest: pending_before_final
+  ruff: pending_before_final
+  parallel_validation: pending_before_final
+  consistency: pending_before_final
+generated_validation_outputs_committed: false

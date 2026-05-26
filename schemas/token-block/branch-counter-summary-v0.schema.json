@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB branch counter summary",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "branch_counter_mode", "branch_upper_bound_product", "full_cartesian_product_enumerated", "variant_byte_streams_generated"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "branch_counter_mode": { "const": "metadata_only" },
+    "full_cartesian_product_enumerated": { "const": false },
+    "sampled_variants_generated": { "const": false },
+    "variant_byte_streams_generated": { "const": false }
+  },
+  "additionalProperties": true
+}

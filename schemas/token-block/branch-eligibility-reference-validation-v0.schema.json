@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB branch eligibility reference validation",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "branch_eligibility_policy_required", "branch_eligibility_policy_present", "branch_eligibility_policy_validated", "validation_status"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "branch_eligibility_policy_required": { "const": true },
+    "branch_eligibility_policy_present": { "const": true },
+    "branch_eligibility_policy_validated": { "const": true },
+    "branch_eligibility_policy_active_supporting_input": { "const": true },
+    "validation_status": { "const": "passed" }
+  },
+  "additionalProperties": true
+}

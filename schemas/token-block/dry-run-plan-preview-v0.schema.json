@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB dry-run plan preview",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "dry_run_preview_created", "unique_variant_family_count", "taxonomy_membership_count", "real_byte_streams_included", "real_variant_outputs_included"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "dry_run_preview_created": { "const": true },
+    "unique_variant_family_count": { "const": 10 },
+    "taxonomy_membership_count": { "const": 11 },
+    "real_byte_streams_included": { "const": false },
+    "real_variant_outputs_included": { "const": false },
+    "hash_comparisons_included": { "const": false },
+    "scores_included": { "const": false },
+    "decode_outputs_included": { "const": false }
+  },
+  "additionalProperties": true
+}

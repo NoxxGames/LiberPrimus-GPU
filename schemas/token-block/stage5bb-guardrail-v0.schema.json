@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB guardrail",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "runner_scaffold_only", "execution_performed", "token_experiments_executed", "variant_byte_streams_generated", "cuda_execution_performed", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "runner_scaffold_only": { "const": true },
+    "execution_performed": { "const": false },
+    "token_experiments_executed": { "const": false },
+    "variant_byte_streams_generated": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "cuda_source_modified": { "const": false },
+    "new_cuda_kernels_added": { "const": 0 },
+    "benchmark_performed": { "const": false },
+    "scored_experiments_executed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

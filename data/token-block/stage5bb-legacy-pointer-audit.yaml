@@ -1,0 +1,20 @@
+record_type: stage5bb_legacy_pointer_audit
+schema: schemas/token-block/legacy-pointer-audit-v0.schema.json
+stage_id: stage-5bb
+source_file: data/token-block/stage5az-repaired-execution-gates.yaml
+legacy_pointers_detected:
+- pointer_role: variant_family
+  legacy_path: data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+  classification: legacy_superseded_pointer
+  active_replacement_path: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+  active_loader_target: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+  stale_active_load_allowed: false
+  historical_diagnostic_load_allowed: true
+legacy_pointer_count: 1
+legacy_pointer_count_active_blocked: 1
+legacy_pointer_count_historical_allowed: 1
+stage5ba_caveat_resolved_upstream: false
+active_loader_target: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+stale_active_load_allowed: false
+historical_diagnostic_load_allowed: true
+audit_status: passed

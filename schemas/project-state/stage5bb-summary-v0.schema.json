@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB project-state summary",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "status", "runner_scaffold_created", "runner_execution_created", "execution_authorised_now", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "status": { "const": "complete" },
+    "runner_scaffold_created": { "const": true },
+    "runner_execution_created": { "const": false },
+    "execution_authorised_now": { "const": false },
+    "stage5aw_repaired_branch_manifest_used": { "const": true },
+    "stage5av_branch_manifest_used_as_active": { "const": false },
+    "stage5az_repaired_variant_family_manifest_used": { "const": true },
+    "stage5ay_variant_family_manifest_used_as_active": { "const": false },
+    "stage5ay_branch_eligibility_policy_validated": { "const": true },
+    "real_token_block_byte_streams_generated": { "const": false },
+    "variant_byte_streams_generated": { "const": false },
+    "hash_search_performed": { "const": false },
+    "decode_attempt_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

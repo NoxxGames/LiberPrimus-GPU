@@ -2,8 +2,8 @@ record_type: stage5ax_parallel_validation_run_summary
 schema: schemas/ci/parallel-validation-run-summary-v0.schema.json
 stage_id: stage-5ax
 status: passed
-start_time_utc: '2026-05-26T17:41:24.263447Z'
-end_time_utc: '2026-05-26T17:46:20.911455Z'
+start_time_utc: '2026-05-26T21:32:15.659804Z'
+end_time_utc: '2026-05-26T21:37:34.883317Z'
 workers_requested: 16
 workers_used: 16
 pytest_workers_requested: 16
@@ -32,12 +32,12 @@ generated_validation_outputs_committed: false
 validation_timing_recorded: true
 benchmark_performed: false
 cryptanalytic_benchmark_performed: false
-duration_seconds: 296.648008
+duration_seconds: 319.223513
 command_results:
 - command_id: doc-staleness
   display_name: Document staleness strict check
   returncode: 0
-  duration_seconds: 2.94711
+  duration_seconds: 3.76182
   stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/doc-staleness.stdout.log
   stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/doc-staleness.stderr.log
   timed_out: false
@@ -45,7 +45,7 @@ command_results:
 - command_id: observation-paths
   display_name: Observation-review path sanitisation
   returncode: 0
-  duration_seconds: 3.780373
+  duration_seconds: 4.674755
   stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/observation-paths.stdout.log
   stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/observation-paths.stderr.log
   timed_out: false
@@ -53,7 +53,7 @@ command_results:
 - command_id: research-synthesis
   display_name: Research synthesis validation
   returncode: 0
-  duration_seconds: 2.821178
+  duration_seconds: 3.529239
   stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/research-synthesis.stdout.log
   stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/research-synthesis.stderr.log
   timed_out: false
@@ -61,7 +61,7 @@ command_results:
 - command_id: ruff-check
   display_name: Ruff
   returncode: 0
-  duration_seconds: 0.228442
+  duration_seconds: 0.278403
   stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/ruff-check.stdout.log
   stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/ruff-check.stderr.log
   timed_out: false
@@ -69,7 +69,7 @@ command_results:
 - command_id: smoke
   display_name: Python smoke
   returncode: 0
-  duration_seconds: 2.449614
+  duration_seconds: 3.05116
   stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/smoke.stdout.log
   stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/smoke.stderr.log
   timed_out: false
@@ -77,7 +77,7 @@ command_results:
 - command_id: state-drift
   display_name: State-drift consistency
   returncode: 0
-  duration_seconds: 5.056903
+  duration_seconds: 5.924255
   stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/state-drift.stdout.log
   stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/state-drift.stderr.log
   timed_out: false
@@ -85,7 +85,7 @@ command_results:
 - command_id: validate-wiki-source
   display_name: Wiki source validation
   returncode: 0
-  duration_seconds: 0.543305
+  duration_seconds: 0.579286
   stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/validate-wiki-source.stdout.log
   stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/validate-wiki-source.stderr.log
   timed_out: false
@@ -93,7 +93,7 @@ command_results:
 - command_id: validate-workflow-static
   display_name: Workflow static validation
   returncode: 0
-  duration_seconds: 2.164527
+  duration_seconds: 2.52415
   stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/validate-workflow-static.stdout.log
   stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/validate-workflow-static.stderr.log
   timed_out: false
@@ -101,7 +101,7 @@ command_results:
 - command_id: verify-lock-hashes
   display_name: Lock hash validation
   returncode: 0
-  duration_seconds: 0.605467
+  duration_seconds: 0.612889
   stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/verify-lock-hashes.stdout.log
   stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/verify-lock-hashes.stderr.log
   timed_out: false
@@ -109,7 +109,7 @@ command_results:
 - command_id: verify-public-docs-status
   display_name: Public docs status
   returncode: 0
-  duration_seconds: 2.730481
+  duration_seconds: 3.255447
   stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/verify-public-docs-status.stdout.log
   stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/commands/verify-public-docs-status.stderr.log
   timed_out: false
@@ -123,153 +123,153 @@ pytest_result:
   pytest_xdist_available: false
   pytest_shard_fallback_used: true
   pytest_shard_count: 16
-  test_file_count: 903
+  test_file_count: 925
   failure_count: 0
   success_count: 16
   passed: true
-  duration_seconds: 291.522707
+  duration_seconds: 313.22614
   shard_results:
   - command_id: pytest-shard-01
     display_name: pytest-shard-01
     returncode: 0
-    duration_seconds: 218.829204
+    duration_seconds: 226.234524
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-01.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-01.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 57
+    test_file_count: 58
   - command_id: pytest-shard-02
     display_name: pytest-shard-02
     returncode: 0
-    duration_seconds: 216.734978
+    duration_seconds: 231.21221
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-02.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-02.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 57
+    test_file_count: 58
   - command_id: pytest-shard-03
     display_name: pytest-shard-03
     returncode: 0
-    duration_seconds: 244.153019
+    duration_seconds: 254.003436
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-03.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-03.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 57
+    test_file_count: 58
   - command_id: pytest-shard-04
     display_name: pytest-shard-04
     returncode: 0
-    duration_seconds: 218.455458
+    duration_seconds: 207.851748
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-04.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-04.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 57
+    test_file_count: 58
   - command_id: pytest-shard-05
     display_name: pytest-shard-05
     returncode: 0
-    duration_seconds: 281.336949
+    duration_seconds: 299.929246
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-05.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-05.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 57
+    test_file_count: 58
   - command_id: pytest-shard-06
     display_name: pytest-shard-06
     returncode: 0
-    duration_seconds: 237.652605
+    duration_seconds: 256.963271
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-06.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-06.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 57
+    test_file_count: 58
   - command_id: pytest-shard-07
     display_name: pytest-shard-07
     returncode: 0
-    duration_seconds: 225.240308
+    duration_seconds: 251.892262
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-07.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-07.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 57
+    test_file_count: 58
   - command_id: pytest-shard-08
     display_name: pytest-shard-08
     returncode: 0
-    duration_seconds: 252.055354
+    duration_seconds: 267.876496
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-08.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-08.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 56
+    test_file_count: 58
   - command_id: pytest-shard-09
     display_name: pytest-shard-09
     returncode: 0
-    duration_seconds: 262.460911
+    duration_seconds: 246.781008
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-09.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-09.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 56
+    test_file_count: 58
   - command_id: pytest-shard-10
     display_name: pytest-shard-10
     returncode: 0
-    duration_seconds: 291.440497
+    duration_seconds: 313.149465
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-10.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-10.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 56
+    test_file_count: 58
   - command_id: pytest-shard-11
     display_name: pytest-shard-11
     returncode: 0
-    duration_seconds: 198.466541
+    duration_seconds: 192.912718
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-11.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-11.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 56
+    test_file_count: 58
   - command_id: pytest-shard-12
     display_name: pytest-shard-12
     returncode: 0
-    duration_seconds: 270.684977
+    duration_seconds: 286.706314
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-12.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-12.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 56
+    test_file_count: 58
   - command_id: pytest-shard-13
     display_name: pytest-shard-13
     returncode: 0
-    duration_seconds: 196.29512
+    duration_seconds: 220.156242
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-13.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-13.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 56
+    test_file_count: 58
   - command_id: pytest-shard-14
     display_name: pytest-shard-14
     returncode: 0
-    duration_seconds: 184.1687
+    duration_seconds: 191.896553
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-14.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-14.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 56
+    test_file_count: 57
   - command_id: pytest-shard-15
     display_name: pytest-shard-15
     returncode: 0
-    duration_seconds: 181.806744
+    duration_seconds: 253.369103
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-15.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-15.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 56
+    test_file_count: 57
   - command_id: pytest-shard-16
     display_name: pytest-shard-16
     returncode: 0
-    duration_seconds: 211.42075
+    duration_seconds: 227.623519
     stdout_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-16.stdout.log
     stderr_log: experiments/results/ci/parallel-validation/stage5ax/logs/pytest/pytest-shard-16.stderr.log
     timed_out: false
     passed: true
-    test_file_count: 56
+    test_file_count: 57

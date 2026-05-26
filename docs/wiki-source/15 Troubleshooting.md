@@ -942,12 +942,22 @@ For Stage 5AY bounded preflight design, validation failures usually mean a sourc
 the Stage 5AW repaired branch manifest is not being used, a no-execution flag drifted, or generated
 reports are not ignored. Rerun `libreprimus token-block validate-stage5ay`, inspect
 `data/token-block/stage5ay-*.yaml`, confirm `experiments/results/token-block/stage5ay/*.json` is
-ignored, and keep Stage 5AZ repair or Stage 5BA review as the next action rather than implementing a runner.
+ignored, and keep Stage 5AZ repair, Stage 5BB scaffold validation, or Stage 5BC review as the next
+action rather than implementing an execution-capable runner.
 
 For Stage 5AZ bounded preflight manifest integrity repair, validation failures usually mean the
 duplicate `unresolved_as_current_only` family ID was not collapsed, taxonomy memberships were lost,
 the Stage 5AY bounded variant-family manifest is still treated as active, branch-budget values
 changed, or generated reports are not ignored. Rerun `libreprimus token-block validate-stage5az`,
 inspect `data/token-block/stage5az-*.yaml`, confirm
-`experiments/results/token-block/stage5az/*.json` is ignored, and keep Stage 5BA Deep Research
-review as the next action rather than implementing a runner.
+`experiments/results/token-block/stage5az/*.json` is ignored, and use the Stage 5BB scaffold plus
+Stage 5BC Deep Research review as the next action rather than enabling execution.
+
+For Stage 5BB token-block preflight runner scaffold, validation failures usually mean the active
+manifest registry, legacy pointer audit, branch-eligibility validation, no-execution proof, or
+execution-gate enforcement records drifted. Validate Stage 5AZ first, then rerun
+`libreprimus token-block validate-stage5bb`, inspect `data/token-block/stage5bb-*.yaml`, confirm
+`experiments/results/token-block/stage5bb/*.json` and `codex-output/stage5bb-codex-completion.md`
+are ignored, and keep Stage 5BC Deep Research review as the next action rather than enabling
+byte-stream generation, variant materialisation, DWH/hash search, decoding, scoring, CUDA, or
+benchmarks.

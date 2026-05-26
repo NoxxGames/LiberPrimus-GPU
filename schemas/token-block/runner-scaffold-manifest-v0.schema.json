@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB runner scaffold manifest",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "runner_scaffold_created", "runner_execution_created", "runner_scaffold_type", "execution_authorised_now"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "runner_scaffold_created": { "const": true },
+    "runner_execution_created": { "const": false },
+    "runner_scaffold_type": { "const": "no_execution_preflight_scaffold" },
+    "real_token_block_byte_generation_supported": { "const": false },
+    "real_variant_materialisation_supported": { "const": false },
+    "execution_authorised_now": { "const": false }
+  },
+  "additionalProperties": true
+}

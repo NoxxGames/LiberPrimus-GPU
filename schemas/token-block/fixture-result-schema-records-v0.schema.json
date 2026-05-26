@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB fixture result schema records",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "fixture_record_count", "fixture_records"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "fixture_record_count": { "const": 1 }
+  },
+  "additionalProperties": true
+}

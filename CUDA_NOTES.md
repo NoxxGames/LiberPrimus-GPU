@@ -4,11 +4,11 @@
 
 This file records CUDA policy for future acceleration work.
 
-## Stage 5AZ Bounded Preflight Manifest Integrity Boundary
+## Stage 5BB Token-Block Runner Scaffold Boundary
 
-Stage 5AZ is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It repairs the Stage 5AY duplicated family ID in metadata only, preserves the branch budget, adds manifest-integrity gate coverage, and selects Stage 5BA Deep Research review.
+Stage 5BB is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It builds a no-execution token-block preflight runner scaffold, canonicalises active manifests, validates Stage 5AY branch eligibility, blocks stale Stage 5AV/5AY active loads, and selects Stage 5BC Deep Research review.
 
-Stage 5AZ does not authorize token-block CUDA input, variant byte-stream generation, DWH/hash search, scored experiments, canonical corpus activation, page-boundary finalisation, or solve claims. Stage 5BA must review the Stage 5AZ repaired manifest and execution-gate records before any future execution-stage decision.
+Stage 5BB does not authorize token-block CUDA input, variant byte-stream generation, DWH/hash search, scored experiments, canonical corpus activation, page-boundary finalisation, or solve claims. Stage 5BC must review the Stage 5BB active-manifest registry, runner scaffold, no-execution proof, and execution-gate records before any future execution-stage decision.
 
 ## Stage 5AY Bounded Token-Block Preflight Boundary
 

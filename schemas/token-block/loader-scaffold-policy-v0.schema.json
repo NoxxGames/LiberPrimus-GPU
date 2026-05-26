@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB loader scaffold policy",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "loaders_must_use_active_manifest_registry", "refuse_inactive_paths_as_active_inputs", "stale_active_load_allowed", "execution_authorised_now"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "loaders_must_use_active_manifest_registry": { "const": true },
+    "refuse_inactive_paths_as_active_inputs": { "const": true },
+    "stale_active_load_allowed": { "const": false },
+    "execution_authorised_now": { "const": false }
+  },
+  "additionalProperties": true
+}

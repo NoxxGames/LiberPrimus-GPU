@@ -1197,3 +1197,115 @@ records:
   owner_context: research_operator
   notes: Adds manifest-integrity gate coverage and keeps token experiments, byte
     streams, DWH/hash search, CUDA, benchmarks, scoring, and solve claims blocked.
+- path: data/project-state/stage5bb-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BB token-block preflight runner scaffold aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bb
+  expected_update_frequency: when_token_block_preflight_runner_scaffold_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records active-manifest registry status, legacy pointer audit counts,
+    scaffold/no-execution gates, fixture-only result schema status, and Stage 5BC
+    next-stage decision.
+- path: data/token-block/stage5bb-active-manifest-registry.yaml
+  category: active_data_record
+  purpose: Stage 5BB active manifest registry and inactive legacy input status.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bb
+  expected_update_frequency: when_token_block_manifest_precedence_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Canonicalises Stage 5AW branch metadata, Stage 5AZ repaired variant-family
+    metadata, and Stage 5AY branch-eligibility policy as active while rejecting
+    Stage 5AV and old Stage 5AY variant-family inputs as active loader targets.
+- path: data/token-block/stage5bb-runner-scaffold-manifest.yaml
+  category: active_data_record
+  purpose: Stage 5BB no-execution preflight runner scaffold manifest.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bb
+  expected_update_frequency: when_token_block_runner_scaffold_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Describes loader and runner scaffold boundaries without generating real
+    token-block byte streams, materialising variants, decoding, scoring, DWH/hash
+    searching, CUDA, or benchmarks.
+- path: data/token-block/stage5bb-no-execution-proof.yaml
+  category: active_data_record
+  purpose: Stage 5BB no-execution proof and forbidden-action evidence.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bb
+  expected_update_frequency: when_token_block_runner_scaffold_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records that token experiments, variant byte streams, DWH/hash searches,
+    decode attempts, scoring, CUDA, benchmarks, website publication, and solve
+    claims were not performed.
+- path: docs/onboarding/token-block-preflight-runner-scaffold-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5BB operator workflow for token-block preflight runner scaffold validation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bb
+  expected_update_frequency: every_token_block_runner_scaffold_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents CLI order, active-manifest precedence, ignored output paths, and
+    no-execution guardrails for future Stage 5BC review.
+- path: docs/reference/token-block-preflight-runner-scaffold-cli.md
+  category: operational_status_doc
+  purpose: Stage 5BB token-block preflight runner scaffold CLI reference.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bb
+  expected_update_frequency: every_token_block_runner_scaffold_cli_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents build, audit, validation, dry-run preview, fixture-schema, summary,
+    and validate commands for Stage 5BB.
+- path: docs/architecture/token-block-preflight-runner-scaffold.md
+  category: architecture_doc
+  purpose: Stage 5BB token-block preflight runner scaffold architecture.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bb
+  expected_update_frequency: every_token_block_runner_scaffold_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Defines the scaffold-only boundary and explains why execution-capable
+    byte-stream generation remains blocked pending Stage 5BC review.
+- path: docs/architecture/active-manifest-precedence-policy.md
+  category: architecture_doc
+  purpose: Stage 5BB active-manifest precedence policy.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bb
+  expected_update_frequency: when_token_block_manifest_precedence_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents Stage 5AW/5AZ/5AY active inputs and Stage 5AV/old Stage 5AY
+    inactive status for loader work.
+- path: docs/architecture/token-block-preflight-execution-gate-enforcement.md
+  category: architecture_doc
+  purpose: Stage 5BB execution-gate enforcement architecture.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bb
+  expected_update_frequency: when_token_block_execution_gate_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents fail-closed gates for real byte-stream generation, variant
+    materialisation, DWH/hash search, decode, scoring, CUDA, and benchmarks.

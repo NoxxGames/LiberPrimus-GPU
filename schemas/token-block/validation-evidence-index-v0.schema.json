@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB validation evidence index",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "validation_evidence_index_created", "local_commands_recorded", "generated_validation_outputs_committed"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "validation_evidence_index_created": { "const": true },
+    "generated_validation_outputs_committed": { "const": false }
+  },
+  "additionalProperties": true
+}

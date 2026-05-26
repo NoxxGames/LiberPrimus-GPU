@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB result schema fixture policy",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "fixture_result_schema_writer_allowed", "fixture_data_not_derived_from_liber_primus", "real_token_block_data_allowed", "real_variant_byte_streams_allowed"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "fixture_result_schema_writer_allowed": { "const": true },
+    "fixture_data_not_derived_from_liber_primus": { "const": true },
+    "real_token_block_data_allowed": { "const": false },
+    "real_variant_byte_streams_allowed": { "const": false },
+    "future_real_result_generation_authorised": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -13,3 +13,5 @@ Required gates:
 - `safety_gate`: no CUDA, scored experiment, or solve claim is allowed without a future explicit stage.
 
 The gates are planning records, not execution permission.
+
+Stage 5BB adds a scaffold enforcement layer around these gates. Its runner scaffold must fail closed for real token-block byte-stream generation, variant materialisation, DWH/hash search, decode attempts, scoring, CUDA, and benchmarks until a future explicit stage changes the gate state after review.

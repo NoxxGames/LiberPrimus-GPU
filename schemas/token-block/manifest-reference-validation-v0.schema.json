@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5BB manifest reference validation",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "all_manifest_references_resolve", "inactive_manifest_used_as_active_count", "validation_status"],
+  "properties": {
+    "stage_id": { "const": "stage-5bb" },
+    "all_manifest_references_resolve": { "const": true },
+    "inactive_manifest_used_as_active_count": { "const": 0 },
+    "validation_status": { "const": "passed" }
+  },
+  "additionalProperties": true
+}

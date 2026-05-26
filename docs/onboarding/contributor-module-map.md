@@ -1,8 +1,8 @@
 # Contributor Module Map
 
-## Stage 5AZ Note
+## Stage 5BB Note
 
-The token-block layer now includes Stage 5AY design helpers and Stage 5AZ manifest-integrity repair helpers under `python/libreprimus/token_block/`. Stage 5AZ collapses the duplicate `unresolved_as_current_only` family record into one unique family with multiple taxonomy memberships, preserves Stage 5AY branch budgets, and keeps execution blocked. These helpers must not be extended into token execution, byte-stream generation, decoding, DWH/hash search, OCR/AI/ML interpretation, CUDA, cryptanalytic benchmarks, or scored experiments without an explicit future stage.
+The token-block layer now includes Stage 5BB runner-scaffold helpers under `python/libreprimus/token_block/`. Stage 5BB canonicalises active-manifest precedence, validates Stage 5AY branch eligibility, blocks stale Stage 5AV/5AY active loads, writes dry-run previews and no-execution proof records, and keeps execution blocked. These helpers must not be extended into token execution, byte-stream generation, variant materialisation, decoding, DWH/hash search, scoring, OCR/AI/ML interpretation, CUDA, cryptanalytic benchmarks, or scored experiments without an explicit future stage.
 
 ## Module Areas
 
@@ -26,6 +26,7 @@ The token-block layer now includes Stage 5AY design helpers and Stage 5AZ manife
 - Parallel validation: `python/libreprimus/parallel_validation/`, `data/ci/stage5ax-*.yaml`, `schemas/ci/*parallel*.json`, and `scripts/ci/run-parallel-validation.*`.
 - Stage 5AY token-block preflight design: `python/libreprimus/token_block/stage5ay.py`, `data/token-block/stage5ay-*.yaml`, `data/project-state/stage5ay-*.yaml`, and `schemas/token-block/*preflight*.json`.
 - Stage 5AZ token-block manifest-integrity repair: `python/libreprimus/token_block/stage5az.py`, `data/token-block/stage5az-*.yaml`, `data/project-state/stage5az-*.yaml`, and `schemas/token-block/*integrity*.json`.
+- Stage 5BB token-block preflight runner scaffold: `python/libreprimus/token_block/stage5bb.py`, `data/token-block/stage5bb-*.yaml`, `data/project-state/stage5bb-*.yaml`, and `schemas/token-block/*manifest*.json`, `schemas/token-block/*scaffold*.json`, `schemas/token-block/*execution-gate*.json`, plus `schemas/project-state/stage5bb-summary-v0.schema.json`.
 - Source harvester: `python/libreprimus/source_harvester/`, `data/source-harvester/`, `schemas/source-harvester/`.
 - Website renderer: `python/libreprimus/website_render/`, `data/website-render/`, `schemas/website-render/`.
 - CUDA parity/reporting: `python/libreprimus/cuda_*`, `python/libreprimus/prime_minus_one_*`, `python/libreprimus/bounded_p56_cuda_parity/`, `cuda/`, `data/cuda/`.
@@ -69,6 +70,8 @@ Stage 5AX parallel-validation modules classify commands, cap worker counts, run 
 Stage 5AY token-block preflight modules build design metadata only. They must use Stage 5AW repaired branch metadata, keep Stage 5AV branch metadata superseded for planning, define controls and gates without execution, keep generated reports ignored, and preserve all no-DWH/no-decode/no-CUDA/no-score/no-solve guardrails.
 
 Stage 5AZ token-block manifest-integrity modules repair metadata only. They must supersede the Stage 5AY bounded variant-family manifest for Deep Research review, preserve taxonomy overlap through `taxonomy_memberships`, keep branch budgets unchanged, keep execution gates blocked, keep generated reports ignored, and preserve all no-DWH/no-decode/no-CUDA/no-score/no-solve guardrails.
+
+Stage 5BB token-block runner-scaffold modules build no-execution loader, registry, reference validation, dry-run preview, counter, execution-gate, fixture-schema, and no-execution proof records. They must use the Stage 5BB active-manifest registry, keep Stage 5AV and old Stage 5AY manifests inactive as active inputs, keep generated reports ignored, and preserve all no-byte-stream/no-variant/no-DWH/no-decode/no-score/no-CUDA/no-benchmark/no-solve guardrails.
 
 ## Good First Areas
 

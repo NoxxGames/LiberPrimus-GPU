@@ -1,8 +1,8 @@
 # Token Case Human Review Workflow
 
-## Stage 5AZ Note
+## Stage 5BB Note
 
-Stage 5AW repairs parser handling after human decisions were integrated. Stage 5AX adds validation infrastructure only. Stage 5AY designs bounded preflight manifests and gates from Stage 5AW repaired branch metadata. Stage 5AZ repairs duplicate manifest metadata only. Human decisions remain unchanged, prose fragments are audited rather than stored as token alternatives, and visual placeholders remain review-only.
+Stage 5AW repairs parser handling after human decisions were integrated. Stage 5AX adds validation infrastructure only. Stage 5AY designs bounded preflight manifests and gates from Stage 5AW repaired branch metadata. Stage 5AZ repairs duplicate manifest metadata only. Stage 5BB scaffolds the no-execution runner and active-manifest registry only. Human decisions remain unchanged, prose fragments are audited rather than stored as token alternatives, and visual placeholders remain review-only.
 
 Use this workflow as the historical Stage 5AV manual-review input process for the Stage 5AU token-case challenge pack v2. Stage 5AV has now integrated the filled template into compact metadata.
 

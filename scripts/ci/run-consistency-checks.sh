@@ -24,14 +24,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5AZ" \
-    --expected-next-stage "Stage 5BA" \
+    --expected-latest-stage "Stage 5BB" \
+    --expected-next-stage "Stage 5BC" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5AZ" \
-    --expected-next-stage "Stage 5BA" \
+    --expected-latest-stage "Stage 5BB" \
+    --expected-next-stage "Stage 5BC" \
     --out "$stage5ah_out/current_next_stage_report.json"
 "$python_bin" - <<PY
 import json
@@ -46,14 +46,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AZ",
+        expected_latest_stage="Stage 5BB",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AZ",
+            "expected_latest_stage": "Stage 5BB",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2436,6 +2436,35 @@ stage5az_results_root="experiments"/"results/token-block/stage5az"
 git check-ignore -q "$stage5az_results_root/preflight_manifest_integrity_audit.json"
 git check-ignore -q "$stage5az_results_root/repaired_variant_family_manifest.json"
 git check-ignore -q "codex-output/stage5az-codex-completion.md"
+
+echo "Validating Stage 5BB token-block runner scaffold records"
+stage5bb_results_root="experiments"/"results/token-block/stage5bb"
+"$python_bin" -m libreprimus.cli token-block validate-stage5bb \
+    --active-registry data/token-block/stage5bb-active-manifest-registry.yaml \
+    --precedence-policy data/token-block/stage5bb-manifest-precedence-policy.yaml \
+    --legacy-pointer-audit data/token-block/stage5bb-legacy-pointer-audit.yaml \
+    --reference-validation data/token-block/stage5bb-manifest-reference-validation.yaml \
+    --branch-eligibility-validation data/token-block/stage5bb-branch-eligibility-reference-validation.yaml \
+    --loader-policy data/token-block/stage5bb-loader-scaffold-policy.yaml \
+    --runner-manifest data/token-block/stage5bb-runner-scaffold-manifest.yaml \
+    --dry-run-preview data/token-block/stage5bb-dry-run-plan-preview.yaml \
+    --branch-counter data/token-block/stage5bb-branch-counter-summary.yaml \
+    --family-summary data/token-block/stage5bb-family-enumeration-summary.yaml \
+    --gate-policy data/token-block/stage5bb-execution-gate-enforcement-policy.yaml \
+    --gate-validation data/token-block/stage5bb-execution-gate-validation.yaml \
+    --fixture-policy data/token-block/stage5bb-result-schema-fixture-policy.yaml \
+    --fixture-records data/token-block/stage5bb-fixture-result-schema-records.yaml \
+    --validation-evidence data/token-block/stage5bb-validation-evidence-index.yaml \
+    --no-execution-proof data/token-block/stage5bb-no-execution-proof.yaml \
+    --dwh-context data/token-block/stage5bb-dwh-runner-context.yaml \
+    --guardrail data/token-block/stage5bb-guardrail.yaml \
+    --next-stage-decision data/project-state/stage5bb-next-stage-decision.yaml \
+    --summary data/project-state/stage5bb-summary.yaml \
+    --results-dir "$stage5bb_results_root"
+git check-ignore -q "$stage5bb_results_root/dry_run_plan_preview.json"
+git check-ignore -q "$stage5bb_results_root/manifest_reference_validation.json"
+git check-ignore -q "$stage5bb_results_root/fixtures/fixture_result_schema_records.json"
+git check-ignore -q "codex-output/stage5bb-codex-completion.md"
 
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

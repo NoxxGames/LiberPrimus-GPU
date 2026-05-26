@@ -1,0 +1,16 @@
+record_type: stage5bb_next_stage_decision
+stage_id: stage-5bb
+selected_next_prompt_type: Deep Research
+selected_next_stage_key: stage5bc_deep_research_preflight_runner_scaffold_review
+selected_next_stage_title: Stage 5BC - Deep Research review of token-block preflight
+  runner scaffold and execution-gate enforcement
+selected_next_stage_reason: Stage 5BB canonicalised active manifests, validated branch
+  eligibility, created no-execution runner scaffold metadata, and proved execution
+  gates fail closed; Deep Research should review the scaffold before any execution-capable
+  implementation.
+execution_stage_selected: false
+dwh_hash_search_selected: false
+scored_experiments_selected: false
+benchmark_selected: false
+cuda_selected: false
+public_website_expansion_selected: false

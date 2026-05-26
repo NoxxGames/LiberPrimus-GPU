@@ -278,3 +278,12 @@ Stage 5AZ repaired bounded variant-family manifest for Deep Research review, and
 variant byte streams, run token experiments, enumerate full Cartesian products, run DWH/hash
 searches, decode, score, run OCR/AI/ML/LLM vision, run stego, run CUDA, benchmark, execute scored
 experiments, expand the public website, or make solve claims.
+
+Stage 5BB completion handoffs belong under ignored `codex-output/stage5bb-codex-completion.md`.
+If Codex changes Stage 5BB token-block preflight runner scaffold records, verify
+`libreprimus token-block validate-stage5bb`, keep generated reports under ignored
+`experiments/results/token-block/stage5bb/`, use the Stage 5BB active-manifest registry for future
+loader work, keep Stage 5AV and old Stage 5AY manifests inactive as active inputs, and do not
+generate token byte streams, materialise variants, enumerate full Cartesian products, run DWH/hash
+searches, decode, score, run OCR/AI/ML/LLM vision, run stego, run CUDA, benchmark, execute scored
+experiments, expand the public website, or make solve claims.

@@ -1,0 +1,18 @@
+record_type: stage5bb_fixture_result_schema_records
+schema: schemas/token-block/fixture-result-schema-records-v0.schema.json
+stage_id: stage-5bb
+fixture_record_count: 1
+fixture_records:
+- record_id: stage5bb-fixture-result-schema-record-001
+  fixture_id: stage5bb-toy-result-schema-fixture
+  fixture_values:
+  - 0
+  - 1
+  - 2
+  - 255
+  fixture_source: synthetic_fixture_only
+  not_derived_from_liber_primus: true
+  result_schema_preview_only: true
+  real_token_block_data_used: false
+  variant_output_generated: false
+  score_generated: false

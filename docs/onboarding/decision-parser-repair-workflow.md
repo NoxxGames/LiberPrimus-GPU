@@ -1,5 +1,9 @@
 # Decision Parser Repair Workflow
 
+## Stage 5BB Note
+
+Stage 5BB consumes the Stage 5AW repaired branch manifest through the active-manifest registry. The original Stage 5AV branch manifest remains inactive as an active runner input; use it only for explicit historical diagnostics.
+
 Use this workflow when a human-review decision note parser captures prose as a token alternative.
 
 1. Audit the prior reviewer-extra token records with `libreprimus token-block audit-stage5aw-decision-parser`.
