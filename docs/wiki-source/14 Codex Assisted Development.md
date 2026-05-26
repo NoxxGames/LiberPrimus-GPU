@@ -271,3 +271,12 @@ the superseded Stage 5AV branch manifest for planning, and do not generate varia
 run token experiments, enumerate full Cartesian products, run DWH/hash searches, decode, score,
 run OCR/AI/ML/LLM vision, run stego, run CUDA, benchmark, execute scored experiments, or make solve
 claims.
+
+Stage 5AZ completion handoffs belong under ignored `codex-output/stage5az-codex-completion.md`.
+If Codex changes Stage 5AZ bounded preflight manifest integrity records, verify
+`libreprimus token-block validate-stage5az`, keep generated reports under ignored
+`experiments/results/token-block/stage5az/`, preserve Stage 5AY as historical design input, use the
+Stage 5AZ repaired bounded variant-family manifest for Deep Research review, and do not generate
+variant byte streams, run token experiments, enumerate full Cartesian products, run DWH/hash
+searches, decode, score, run OCR/AI/ML/LLM vision, run stego, run CUDA, benchmark, execute scored
+experiments, expand the public website, or make solve claims.

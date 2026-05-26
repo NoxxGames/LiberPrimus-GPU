@@ -1,0 +1,72 @@
+record_type: stage5az_preflight_manifest_integrity_gap_closure_summary
+schema: schemas/project-state/stage5az-summary-v0.schema.json
+stage_id: stage-5az
+status: complete
+source_stage_ids:
+- stage-5ay
+- stage-5aw
+- stage-5ax
+integrity_audit_status: repair_required
+duplicate_family_id_found: unresolved_as_current_only
+duplicate_family_id_count_before_repair: 1
+duplicate_family_ids_before_repair:
+- unresolved_as_current_only
+duplicate_family_id_count_after_repair: 0
+duplicate_family_ids_after_repair: []
+repaired_unique_family_count: 10
+unique_variant_family_record_count: 10
+variant_family_taxonomy_membership_count: 11
+taxonomy_membership_count: 11
+family_count_semantics: unique_family_records
+unresolved_as_current_only_memberships:
+- baseline_family
+- unresolved_policy_family
+branch_budget_changed: false
+branch_upper_bound_product: 2720083094132915643088896
+branch_upper_bound_log10: 24.434582
+primary60_mappable_branch_product: 4194304
+primary60_mappable_branch_log10: 6.62266
+stage5aw_repaired_branch_manifest_used: true
+stage5av_branch_manifest_used: false
+stage5av_branch_manifest_inactive: true
+stage5ay_bounded_variant_family_manifest_superseded_for_deep_research_review: true
+execution_gate_count: 8
+manifest_integrity_gate_status: design_satisfied_execution_still_blocked
+deep_research_readiness: true
+dwh_context_status: not_operational
+selected_next_stage_title: Stage 5BA - Deep Research review of repaired bounded token-block
+  preflight manifest and execution gates
+selected_next_stage_reason: Stage 5AZ repaired the duplicate variant-family ID and
+  preserved execution gates, so Deep Research should review the repaired manifest
+  set next.
+parallel_validation_harness_used: true
+public_website_expansion_selected: false
+new_cuda_kernels_added: 0
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+full_cartesian_product_enumerated: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+raw_images_committed: false

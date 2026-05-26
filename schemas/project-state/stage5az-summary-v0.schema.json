@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AZ project-state summary",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5az" },
+    "status": { "const": "complete" },
+    "duplicate_family_id_count_before_repair": { "const": 1 },
+    "duplicate_family_id_count_after_repair": { "const": 0 },
+    "repaired_unique_family_count": { "const": 10 },
+    "taxonomy_membership_count": { "const": 11 },
+    "branch_budget_changed": { "const": false },
+    "deep_research_readiness": { "const": true },
+    "token_experiments_executed": { "const": false },
+    "variant_byte_streams_generated": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

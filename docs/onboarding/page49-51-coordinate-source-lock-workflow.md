@@ -1,8 +1,8 @@
 # Page 49-51 Coordinate Source-Lock Workflow
 
-## Stage 5AY Note
+## Stage 5AZ Note
 
-Stage 5AW does not alter Stage 5AR coordinates or the Stage 5AP token transcription. It only repairs parser-derived branch metadata from Stage 5AV; Stage 5AX adds validation infrastructure only; Stage 5AY designs preflight manifests and gates only. Coordinate and image-source truth still come from the Stage 5AR original-image coordinate records.
+Stage 5AW does not alter Stage 5AR coordinates or the Stage 5AP token transcription. It only repairs parser-derived branch metadata from Stage 5AV; Stage 5AX adds validation infrastructure only; Stage 5AY designs preflight manifests and gates only; Stage 5AZ repairs duplicate manifest metadata only. Coordinate and image-source truth still come from the Stage 5AR original-image coordinate records.
 
 Use this workflow when reviewing the Stage 5AR page 49-51 original-image coordinate lock.
 

@@ -1,0 +1,12 @@
+record_type: stage5az_next_stage_decision
+schema: schemas/project-state/stage5az-summary-v0.schema.json
+stage_id: stage-5az
+selected_option_id: stage5ba_deep_research_review_of_repaired_bounded_preflight_manifest
+selected_next_stage_title: Stage 5BA - Deep Research review of repaired bounded token-block
+  preflight manifest and execution gates
+selected_next_stage_reason: Stage 5AZ repaired the duplicate variant-family ID and
+  preserved execution gates, so Deep Research should review the repaired manifest
+  set next.
+deep_research_review_recommended_next: true
+execution_enabled: false
+solve_claim: false

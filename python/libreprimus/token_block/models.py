@@ -200,6 +200,36 @@ STAGE5AY_GUARDRAIL_PATH = DATA_DIR / "stage5ay-guardrail.yaml"
 STAGE5AY_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5ay-next-stage-decision.yaml"
 STAGE5AY_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5ay-summary.yaml"
 
+STAGE5AZ_ID = "stage-5az"
+STAGE5AZ_RESULTS_DIR = Path("experiments/results/token-block/stage5az")
+STAGE5AZ_PREFLIGHT_MANIFEST_INTEGRITY_AUDIT_PATH = (
+    DATA_DIR / "stage5az-preflight-manifest-integrity-audit.yaml"
+)
+STAGE5AZ_FAMILY_ID_UNIQUENESS_AUDIT_PATH = (
+    DATA_DIR / "stage5az-family-id-uniqueness-audit.yaml"
+)
+STAGE5AZ_MANIFEST_REFERENCE_AUDIT_PATH = DATA_DIR / "stage5az-manifest-reference-audit.yaml"
+STAGE5AZ_FAMILY_TAXONOMY_MEMBERSHIP_POLICY_PATH = (
+    DATA_DIR / "stage5az-family-taxonomy-membership-policy.yaml"
+)
+STAGE5AZ_REPAIRED_PREFLIGHT_DESIGN_POLICY_PATH = (
+    DATA_DIR / "stage5az-repaired-preflight-design-policy.yaml"
+)
+STAGE5AZ_REPAIRED_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH = (
+    DATA_DIR / "stage5az-repaired-bounded-variant-family-manifest.yaml"
+)
+STAGE5AZ_REPAIRED_BRANCH_COUNT_BUDGET_PATH = (
+    DATA_DIR / "stage5az-repaired-branch-count-budget.yaml"
+)
+STAGE5AZ_REPAIRED_EXECUTION_GATES_PATH = DATA_DIR / "stage5az-repaired-execution-gates.yaml"
+STAGE5AZ_DEEP_RESEARCH_READINESS_PATH = DATA_DIR / "stage5az-deep-research-readiness.yaml"
+STAGE5AZ_DWH_MANIFEST_INTEGRITY_CONTEXT_PATH = (
+    DATA_DIR / "stage5az-dwh-manifest-integrity-context.yaml"
+)
+STAGE5AZ_GUARDRAIL_PATH = DATA_DIR / "stage5az-guardrail.yaml"
+STAGE5AZ_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5az-next-stage-decision.yaml"
+STAGE5AZ_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5az-summary.yaml"
+
 FALSE_GUARDRAILS = {
     "network_fetch_performed": False,
     "online_repo_clone_performed": False,

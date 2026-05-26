@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AH updates that map for stage-ledger staleness coverage, Stage 5AI updates it for curated bundle metadata, Stage 5AJ updates it for UsefulFiles integration and extraction-fidelity policy, Stage 5AK updates it for community-facts claim curation, Stage 5AL updates it for website-ingest/Deep Research export staging, Stage 5AM updates it for the static research index renderer, Stage 5AN updates it for the private content pack and hosted private-content library, Stage 5AP updates it for the page 49-51 token-block source-lock, Stage 5AR updates it for original-image coordinate locking, Stage 5AT updates it for token case-review pack records, Stage 5AU updates it for review-pack v2 usability repair and Stage 5AV manual review direction, Stage 5AW updates it for decision-parser repair records, Stage 5AX updates it for parallel validation records, and Stage 5AY updates it for bounded preflight design records plus Stage 5AZ review planning. The YAML record is the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AH updates that map for stage-ledger staleness coverage, Stage 5AI updates it for curated bundle metadata, Stage 5AJ updates it for UsefulFiles integration and extraction-fidelity policy, Stage 5AK updates it for community-facts claim curation, Stage 5AL updates it for website-ingest/Deep Research export staging, Stage 5AM updates it for the static research index renderer, Stage 5AN updates it for the private content pack and hosted private-content library, Stage 5AP updates it for the page 49-51 token-block source-lock, Stage 5AR updates it for original-image coordinate locking, Stage 5AT updates it for token case-review pack records, Stage 5AU updates it for review-pack v2 usability repair and Stage 5AV manual review direction, Stage 5AW updates it for decision-parser repair records, Stage 5AX updates it for parallel validation records, Stage 5AY updates it for bounded preflight design records, and Stage 5AZ updates it for repaired bounded preflight manifest-integrity records plus Stage 5BA review planning. The YAML record is the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 
@@ -43,12 +43,12 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5AU" `
-  --expected-next-stage "Stage 5AV"
+  --expected-latest-stage "Stage 5AZ" `
+  --expected-next-stage "Stage 5BA"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5AU" `
-  --expected-next-stage "Stage 5AV"
+  --expected-latest-stage "Stage 5AZ" `
+  --expected-next-stage "Stage 5BA"
 ```

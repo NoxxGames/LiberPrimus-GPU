@@ -809,6 +809,8 @@ experiments/results/token-block/**
 !experiments/results/token-block/stage5aw/.gitkeep
 !experiments/results/token-block/stage5ay/
 !experiments/results/token-block/stage5ay/.gitkeep
+!experiments/results/token-block/stage5az/
+!experiments/results/token-block/stage5az/.gitkeep
 
 # Generated CI/validation outputs
 experiments/results/ci/**

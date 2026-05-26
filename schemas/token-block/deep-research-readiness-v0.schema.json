@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AZ Deep Research readiness",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "deep_research_readiness", "execution_enabled", "selected_next_stage_title", "token_experiments_executed", "variant_byte_streams_generated", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5az" },
+    "deep_research_readiness": { "const": true },
+    "execution_enabled": { "const": false },
+    "token_experiments_executed": { "const": false },
+    "variant_byte_streams_generated": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

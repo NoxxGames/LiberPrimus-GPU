@@ -1,0 +1,134 @@
+record_type: stage5az_repaired_bounded_variant_family_manifest
+schema: schemas/token-block/repaired-bounded-variant-family-manifest-v0.schema.json
+stage_id: stage-5az
+source_stage_id: stage-5ay
+source_stage5ay_variant_family_manifest: data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+source_stage5ay_policy: data/token-block/stage5ay-preflight-design-policy.yaml
+supersedes_for_deep_research_review: data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+stage5ay_bounded_variant_family_manifest_superseded_for_deep_research_review: true
+repair_reason: Stage 5AY duplicated unresolved_as_current_only as a flat family record.
+repair_strategy: one_unique_family_record_with_multiple_taxonomy_memberships
+family_count_semantics: unique_family_records
+unique_family_count: 10
+manifest_family_entry_count: 10
+taxonomy_membership_count: 11
+duplicate_family_id_count_before_repair: 1
+duplicate_family_ids_before_repair:
+- unresolved_as_current_only
+duplicate_family_id_count_after_repair: 0
+duplicate_family_ids_after_repair: []
+families:
+- family_id: keep_current_baseline
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+  taxonomy_memberships:
+  - baseline_family
+  duplicate_stage5ay_record_collapsed: false
+- family_id: unresolved_as_current_only
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+  taxonomy_memberships:
+  - baseline_family
+  - unresolved_policy_family
+  duplicate_stage5ay_record_collapsed: true
+- family_id: single_change_variants
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+  taxonomy_memberships:
+  - case_branch_family
+  duplicate_stage5ay_record_collapsed: false
+- family_id: per_ambiguity_class_variants
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+  taxonomy_memberships:
+  - case_branch_family
+  duplicate_stage5ay_record_collapsed: false
+- family_id: primary60_mappable_only_variants
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+  taxonomy_memberships:
+  - case_branch_family
+  duplicate_stage5ay_record_collapsed: false
+- family_id: visual_placeholder_excluded_variants
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+  taxonomy_memberships:
+  - case_branch_family
+  duplicate_stage5ay_record_collapsed: false
+- family_id: reviewer_extra_possible_token_variants
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+  taxonomy_memberships:
+  - case_branch_family
+  duplicate_stage5ay_record_collapsed: false
+- family_id: unresolved_as_excluded
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+  taxonomy_memberships:
+  - unresolved_policy_family
+  duplicate_stage5ay_record_collapsed: false
+- family_id: unresolved_as_all_declared_variants
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+  taxonomy_memberships:
+  - unresolved_policy_family
+  duplicate_stage5ay_record_collapsed: false
+- family_id: unresolved_as_primary60_mappable_only
+  family_type: bounded_variant_family
+  design_status: defined_not_executed
+  execution_enabled: false
+  requires_later_authorisation: true
+  taxonomy_memberships:
+  - unresolved_policy_family
+  duplicate_stage5ay_record_collapsed: false
+stage5aw_repaired_branch_manifest_used: true
+stage5av_branch_manifest_used: false
+visual_placeholder_family_execution_allowed: false
+full_cartesian_product_allowed: false
+variant_byte_streams_generated: false
+token_experiments_executed: false
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+variant_experiments_executed: false
+full_cartesian_product_enumerated: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+public_website_expansion_selected: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+raw_images_committed: false

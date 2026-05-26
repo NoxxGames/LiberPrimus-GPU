@@ -1159,3 +1159,41 @@ records:
   notes: Documents that Stage 5AY uses Stage 5AW repaired branch metadata,
     supersedes Stage 5AV branch metadata for planning, defines controls and gates,
     and remains non-executing pending Stage 5AZ review.
+- path: data/project-state/stage5az-summary.yaml
+  category: active_data_record
+  purpose: Stage 5AZ bounded preflight manifest integrity gap closure aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5az
+  expected_update_frequency: when_token_block_preflight_manifest_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records duplicate family-ID repair counts, repaired taxonomy membership
+    counts, branch-budget preservation, execution-gate status, guardrails, and the
+    Stage 5BA next-stage decision.
+- path: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+  category: active_data_record
+  purpose: Stage 5AZ superseding repaired bounded variant family manifest.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5az
+  expected_update_frequency: when_token_block_preflight_manifest_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Supersedes the Stage 5AY bounded variant family manifest for Deep Research
+    review by collapsing duplicate family IDs into unique records with taxonomy
+    memberships while preserving no-execution guardrails.
+- path: data/token-block/stage5az-repaired-execution-gates.yaml
+  category: active_data_record
+  purpose: Stage 5AZ repaired token-block preflight execution gates.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5az
+  expected_update_frequency: when_token_block_execution_gate_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Adds manifest-integrity gate coverage and keeps token experiments, byte
+    streams, DWH/hash search, CUDA, benchmarks, scoring, and solve claims blocked.

@@ -1,0 +1,146 @@
+record_type: stage5az_family_taxonomy_membership_policy
+schema: schemas/token-block/family-taxonomy-membership-policy-v0.schema.json
+stage_id: stage-5az
+source_stage_id: stage-5ay
+source_policy: data/token-block/stage5ay-preflight-design-policy.yaml
+policy_status: active_for_stage5az_repair
+duplicate_taxonomy_membership_allowed: true
+duplicate_family_records_allowed: false
+family_count_semantics: unique_family_records
+taxonomy_membership_count_semantics: taxonomy_memberships_across_unique_family_records
+family_taxonomy:
+  baseline_family:
+  - keep_current_baseline
+  - unresolved_as_current_only
+  case_branch_family:
+  - single_change_variants
+  - per_ambiguity_class_variants
+  - primary60_mappable_only_variants
+  - visual_placeholder_excluded_variants
+  - reviewer_extra_possible_token_variants
+  unresolved_policy_family:
+  - unresolved_as_excluded
+  - unresolved_as_all_declared_variants
+  - unresolved_as_current_only
+  - unresolved_as_primary60_mappable_only
+  alphabet_family:
+  - primary60_current_alphabet
+  - reversed_primary60_control
+  - case_swapped_primary60_control
+  - digit_lower_upper_variant_control
+  - seeded_permutation_3301_control
+  - seeded_permutation_1033_control
+  reading_order_family:
+  - global_32_row_order
+  - per_page_local_order
+  - row_reversal
+  - column_reversal
+  - row_column_reversal
+  - row_shuffle_fixed_seed
+  - column_shuffle_fixed_seed
+  - token_shuffle_fixed_seed
+  page_split_family:
+  - accepted_10_13_9_split
+  - no_page_boundary_control
+  - alternative_11_11_10_split
+  - row_shuffled_split_preserving_page_counts
+  source_control_family:
+  - wrong_page_block_control_future_source_lock_required
+  - random_lp_like_token_stream_from_observed_frequencies
+  - random_lp_like_token_stream_from_uniform_primary60
+taxonomy_memberships_by_family_id:
+  accepted_10_13_9_split:
+  - page_split_family
+  alternative_11_11_10_split:
+  - page_split_family
+  case_swapped_primary60_control:
+  - alphabet_family
+  column_reversal:
+  - reading_order_family
+  column_shuffle_fixed_seed:
+  - reading_order_family
+  digit_lower_upper_variant_control:
+  - alphabet_family
+  global_32_row_order:
+  - reading_order_family
+  keep_current_baseline:
+  - baseline_family
+  no_page_boundary_control:
+  - page_split_family
+  per_ambiguity_class_variants:
+  - case_branch_family
+  per_page_local_order:
+  - reading_order_family
+  primary60_current_alphabet:
+  - alphabet_family
+  primary60_mappable_only_variants:
+  - case_branch_family
+  random_lp_like_token_stream_from_observed_frequencies:
+  - source_control_family
+  random_lp_like_token_stream_from_uniform_primary60:
+  - source_control_family
+  reversed_primary60_control:
+  - alphabet_family
+  reviewer_extra_possible_token_variants:
+  - case_branch_family
+  row_column_reversal:
+  - reading_order_family
+  row_reversal:
+  - reading_order_family
+  row_shuffle_fixed_seed:
+  - reading_order_family
+  row_shuffled_split_preserving_page_counts:
+  - page_split_family
+  seeded_permutation_1033_control:
+  - alphabet_family
+  seeded_permutation_3301_control:
+  - alphabet_family
+  single_change_variants:
+  - case_branch_family
+  token_shuffle_fixed_seed:
+  - reading_order_family
+  unresolved_as_all_declared_variants:
+  - unresolved_policy_family
+  unresolved_as_current_only: &id001
+  - baseline_family
+  - unresolved_policy_family
+  unresolved_as_excluded:
+  - unresolved_policy_family
+  unresolved_as_primary60_mappable_only:
+  - unresolved_policy_family
+  visual_placeholder_excluded_variants:
+  - case_branch_family
+  wrong_page_block_control_future_source_lock_required:
+  - source_control_family
+multi_membership_family_ids:
+- unresolved_as_current_only
+unresolved_as_current_only_memberships: *id001
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+full_cartesian_product_enumerated: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+public_website_expansion_selected: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+raw_images_committed: false

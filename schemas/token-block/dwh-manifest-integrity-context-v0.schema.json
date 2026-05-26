@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AZ DWH manifest integrity context",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "dwh_expansion", "dwh_operational_status", "hash_search_allowed_now", "hash_search_performed", "decode_claim", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5az" },
+    "dwh_expansion": { "const": "Deep Web Hash" },
+    "dwh_operational_status": { "const": "not_operational" },
+    "hash_search_allowed_now": { "const": false },
+    "hash_search_performed": { "const": false },
+    "decode_claim": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -119,6 +119,20 @@ from .models import (
     STAGE5AY_RESULTS_DIR,
     STAGE5AY_SOURCE_CONTROL_MANIFEST_PATH,
     STAGE5AY_SUMMARY_PATH,
+    STAGE5AZ_DEEP_RESEARCH_READINESS_PATH,
+    STAGE5AZ_DWH_MANIFEST_INTEGRITY_CONTEXT_PATH,
+    STAGE5AZ_FAMILY_ID_UNIQUENESS_AUDIT_PATH,
+    STAGE5AZ_FAMILY_TAXONOMY_MEMBERSHIP_POLICY_PATH,
+    STAGE5AZ_GUARDRAIL_PATH,
+    STAGE5AZ_MANIFEST_REFERENCE_AUDIT_PATH,
+    STAGE5AZ_NEXT_STAGE_DECISION_PATH,
+    STAGE5AZ_PREFLIGHT_MANIFEST_INTEGRITY_AUDIT_PATH,
+    STAGE5AZ_REPAIRED_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH,
+    STAGE5AZ_REPAIRED_BRANCH_COUNT_BUDGET_PATH,
+    STAGE5AZ_REPAIRED_EXECUTION_GATES_PATH,
+    STAGE5AZ_REPAIRED_PREFLIGHT_DESIGN_POLICY_PATH,
+    STAGE5AZ_RESULTS_DIR,
+    STAGE5AZ_SUMMARY_PATH,
     TRANSCRIPTION_PATH,
     read_yaml,
 )
@@ -170,6 +184,13 @@ from .stage5ay import (
     build_stage5ay_preflight_design,
     build_stage5ay_summary,
     validate_stage5ay,
+)
+from .stage5az import (
+    audit_stage5az_preflight_manifests,
+    build_stage5az_readiness,
+    build_stage5az_summary,
+    repair_stage5az_variant_family_manifest,
+    validate_stage5az,
 )
 from .transcription import build_transcription
 from .validation import validate_stage5ap
@@ -1633,6 +1654,200 @@ def validate_stage5ay_command(
     if errors:
         raise typer.Exit(1)
     console.print("token_block_stage5ay_valid=true")
+
+
+@app.command("audit-stage5az-preflight-manifests")
+def audit_stage5az_preflight_manifests_command(
+    stage5ay_summary: Path = typer.Option(STAGE5AY_SUMMARY_PATH),
+    stage5ay_source_inputs: Path = typer.Option(STAGE5AY_PREFLIGHT_SOURCE_INPUTS_PATH),
+    stage5ay_policy: Path = typer.Option(STAGE5AY_PREFLIGHT_DESIGN_POLICY_PATH),
+    stage5ay_variant_family: Path = typer.Option(STAGE5AY_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    stage5ay_null_control_family: Path = typer.Option(STAGE5AY_NULL_CONTROL_FAMILY_MANIFEST_PATH),
+    stage5ay_alphabet_control: Path = typer.Option(STAGE5AY_ALPHABET_CONTROL_MANIFEST_PATH),
+    stage5ay_reading_order: Path = typer.Option(STAGE5AY_READING_ORDER_CONTROL_MANIFEST_PATH),
+    stage5ay_page_split: Path = typer.Option(STAGE5AY_PAGE_SPLIT_CONTROL_MANIFEST_PATH),
+    stage5ay_source_control: Path = typer.Option(STAGE5AY_SOURCE_CONTROL_MANIFEST_PATH),
+    stage5ay_branch_budget: Path = typer.Option(STAGE5AY_BRANCH_COUNT_BUDGET_PATH),
+    stage5ay_result_schema_preview: Path = typer.Option(STAGE5AY_FUTURE_RESULT_SCHEMA_PREVIEW_PATH),
+    stage5ay_execution_gates: Path = typer.Option(STAGE5AY_EXECUTION_GATES_PATH),
+    stage5ay_dwh_context: Path = typer.Option(STAGE5AY_DWH_PREFLIGHT_CONTEXT_PATH),
+    stage5ay_guardrail: Path = typer.Option(STAGE5AY_GUARDRAIL_PATH),
+    stage5aw_branch_manifest: Path = typer.Option(STAGE5AW_REPAIRED_BRANCH_MANIFEST_PATH),
+    results_dir: Path = typer.Option(STAGE5AZ_RESULTS_DIR),
+    out_integrity_audit: Path = typer.Option(STAGE5AZ_PREFLIGHT_MANIFEST_INTEGRITY_AUDIT_PATH),
+    out_family_id_audit: Path = typer.Option(STAGE5AZ_FAMILY_ID_UNIQUENESS_AUDIT_PATH),
+    out_reference_audit: Path = typer.Option(STAGE5AZ_MANIFEST_REFERENCE_AUDIT_PATH),
+    out_taxonomy_policy: Path = typer.Option(STAGE5AZ_FAMILY_TAXONOMY_MEMBERSHIP_POLICY_PATH),
+) -> None:
+    integrity, family_audit, reference, taxonomy = audit_stage5az_preflight_manifests(
+        stage5ay_summary=stage5ay_summary,
+        stage5ay_source_inputs=stage5ay_source_inputs,
+        stage5ay_policy=stage5ay_policy,
+        stage5ay_variant_family=stage5ay_variant_family,
+        stage5ay_null_control_family=stage5ay_null_control_family,
+        stage5ay_alphabet_control=stage5ay_alphabet_control,
+        stage5ay_reading_order=stage5ay_reading_order,
+        stage5ay_page_split=stage5ay_page_split,
+        stage5ay_source_control=stage5ay_source_control,
+        stage5ay_branch_budget=stage5ay_branch_budget,
+        stage5ay_result_schema_preview=stage5ay_result_schema_preview,
+        stage5ay_execution_gates=stage5ay_execution_gates,
+        stage5ay_dwh_context=stage5ay_dwh_context,
+        stage5ay_guardrail=stage5ay_guardrail,
+        stage5aw_branch_manifest=stage5aw_branch_manifest,
+        results_dir=results_dir,
+        out_integrity_audit=out_integrity_audit,
+        out_family_id_audit=out_family_id_audit,
+        out_reference_audit=out_reference_audit,
+        out_taxonomy_policy=out_taxonomy_policy,
+    )
+    console.print(f"manifest_count_checked={integrity['manifest_count_checked']}")
+    console.print(
+        f"duplicate_family_id_count_before_repair={family_audit['duplicate_family_id_count_before_repair']}"
+    )
+    console.print(f"known_duplicate_family_id_found={family_audit['known_duplicate_family_id_found']}")
+    console.print(f"stage5aw_repaired_branch_manifest_used={reference['stage5aw_repaired_branch_manifest_used']}")
+    console.print(f"taxonomy_multi_membership_family_count={len(taxonomy['multi_membership_family_ids'])}")
+
+
+@app.command("repair-stage5az-variant-family-manifest")
+def repair_stage5az_variant_family_manifest_command(
+    stage5ay_policy: Path = typer.Option(STAGE5AY_PREFLIGHT_DESIGN_POLICY_PATH),
+    stage5ay_variant_family: Path = typer.Option(STAGE5AY_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    stage5ay_branch_budget: Path = typer.Option(STAGE5AY_BRANCH_COUNT_BUDGET_PATH),
+    stage5ay_execution_gates: Path = typer.Option(STAGE5AY_EXECUTION_GATES_PATH),
+    taxonomy_policy: Path = typer.Option(STAGE5AZ_FAMILY_TAXONOMY_MEMBERSHIP_POLICY_PATH),
+    family_id_audit: Path = typer.Option(STAGE5AZ_FAMILY_ID_UNIQUENESS_AUDIT_PATH),
+    results_dir: Path = typer.Option(STAGE5AZ_RESULTS_DIR),
+    out_repaired_policy: Path = typer.Option(STAGE5AZ_REPAIRED_PREFLIGHT_DESIGN_POLICY_PATH),
+    out_repaired_variant_family: Path = typer.Option(STAGE5AZ_REPAIRED_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    out_repaired_branch_budget: Path = typer.Option(STAGE5AZ_REPAIRED_BRANCH_COUNT_BUDGET_PATH),
+    out_repaired_execution_gates: Path = typer.Option(STAGE5AZ_REPAIRED_EXECUTION_GATES_PATH),
+) -> None:
+    _policy, variant, budget, gates = repair_stage5az_variant_family_manifest(
+        stage5ay_policy=stage5ay_policy,
+        stage5ay_variant_family=stage5ay_variant_family,
+        stage5ay_branch_budget=stage5ay_branch_budget,
+        stage5ay_execution_gates=stage5ay_execution_gates,
+        taxonomy_policy=taxonomy_policy,
+        family_id_audit=family_id_audit,
+        results_dir=results_dir,
+        out_repaired_policy=out_repaired_policy,
+        out_repaired_variant_family=out_repaired_variant_family,
+        out_repaired_branch_budget=out_repaired_branch_budget,
+        out_repaired_execution_gates=out_repaired_execution_gates,
+    )
+    console.print(f"repaired_unique_family_count={variant['unique_family_count']}")
+    console.print(f"taxonomy_membership_count={variant['taxonomy_membership_count']}")
+    console.print(f"branch_budget_changed={budget['branch_budget_changed']}")
+    console.print(f"execution_gate_count={len(gates['gates'])}")
+
+
+@app.command("build-stage5az-readiness")
+def build_stage5az_readiness_command(
+    integrity_audit: Path = typer.Option(STAGE5AZ_PREFLIGHT_MANIFEST_INTEGRITY_AUDIT_PATH),
+    family_id_audit: Path = typer.Option(STAGE5AZ_FAMILY_ID_UNIQUENESS_AUDIT_PATH),
+    reference_audit: Path = typer.Option(STAGE5AZ_MANIFEST_REFERENCE_AUDIT_PATH),
+    repaired_policy: Path = typer.Option(STAGE5AZ_REPAIRED_PREFLIGHT_DESIGN_POLICY_PATH),
+    repaired_variant_family: Path = typer.Option(STAGE5AZ_REPAIRED_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    repaired_branch_budget: Path = typer.Option(STAGE5AZ_REPAIRED_BRANCH_COUNT_BUDGET_PATH),
+    repaired_execution_gates: Path = typer.Option(STAGE5AZ_REPAIRED_EXECUTION_GATES_PATH),
+    stage5ay_dwh_context: Path = typer.Option(STAGE5AY_DWH_PREFLIGHT_CONTEXT_PATH),
+    out_readiness: Path = typer.Option(STAGE5AZ_DEEP_RESEARCH_READINESS_PATH),
+    out_dwh_context: Path = typer.Option(STAGE5AZ_DWH_MANIFEST_INTEGRITY_CONTEXT_PATH),
+) -> None:
+    readiness, dwh = build_stage5az_readiness(
+        integrity_audit=integrity_audit,
+        family_id_audit=family_id_audit,
+        reference_audit=reference_audit,
+        repaired_policy=repaired_policy,
+        repaired_variant_family=repaired_variant_family,
+        repaired_branch_budget=repaired_branch_budget,
+        repaired_execution_gates=repaired_execution_gates,
+        stage5ay_dwh_context=stage5ay_dwh_context,
+        out_readiness=out_readiness,
+        out_dwh_context=out_dwh_context,
+    )
+    console.print(f"deep_research_readiness={readiness['deep_research_readiness']}")
+    console.print(f"dwh_operational_status={dwh['dwh_operational_status']}")
+
+
+@app.command("build-stage5az-summary")
+def build_stage5az_summary_command(
+    integrity_audit: Path = typer.Option(STAGE5AZ_PREFLIGHT_MANIFEST_INTEGRITY_AUDIT_PATH),
+    family_id_audit: Path = typer.Option(STAGE5AZ_FAMILY_ID_UNIQUENESS_AUDIT_PATH),
+    reference_audit: Path = typer.Option(STAGE5AZ_MANIFEST_REFERENCE_AUDIT_PATH),
+    taxonomy_policy: Path = typer.Option(STAGE5AZ_FAMILY_TAXONOMY_MEMBERSHIP_POLICY_PATH),
+    repaired_policy: Path = typer.Option(STAGE5AZ_REPAIRED_PREFLIGHT_DESIGN_POLICY_PATH),
+    repaired_variant_family: Path = typer.Option(STAGE5AZ_REPAIRED_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    repaired_branch_budget: Path = typer.Option(STAGE5AZ_REPAIRED_BRANCH_COUNT_BUDGET_PATH),
+    repaired_execution_gates: Path = typer.Option(STAGE5AZ_REPAIRED_EXECUTION_GATES_PATH),
+    readiness: Path = typer.Option(STAGE5AZ_DEEP_RESEARCH_READINESS_PATH),
+    dwh_context: Path = typer.Option(STAGE5AZ_DWH_MANIFEST_INTEGRITY_CONTEXT_PATH),
+    out_guardrail: Path = typer.Option(STAGE5AZ_GUARDRAIL_PATH),
+    out_next_stage: Path = typer.Option(STAGE5AZ_NEXT_STAGE_DECISION_PATH),
+    out_summary: Path = typer.Option(STAGE5AZ_SUMMARY_PATH),
+) -> None:
+    guardrail, next_stage, summary = build_stage5az_summary(
+        integrity_audit=integrity_audit,
+        family_id_audit=family_id_audit,
+        reference_audit=reference_audit,
+        taxonomy_policy=taxonomy_policy,
+        repaired_policy=repaired_policy,
+        repaired_variant_family=repaired_variant_family,
+        repaired_branch_budget=repaired_branch_budget,
+        repaired_execution_gates=repaired_execution_gates,
+        readiness=readiness,
+        dwh_context=dwh_context,
+        out_guardrail=out_guardrail,
+        out_next_stage=out_next_stage,
+        out_summary=out_summary,
+    )
+    console.print(f"stage5az_guardrail_status={guardrail['status']}")
+    console.print(f"selected_next_stage_title={next_stage['selected_next_stage_title']}")
+    console.print(f"repaired_unique_family_count={summary['repaired_unique_family_count']}")
+
+
+@app.command("validate-stage5az")
+def validate_stage5az_command(
+    integrity_audit: Path = typer.Option(STAGE5AZ_PREFLIGHT_MANIFEST_INTEGRITY_AUDIT_PATH),
+    family_id_audit: Path = typer.Option(STAGE5AZ_FAMILY_ID_UNIQUENESS_AUDIT_PATH),
+    reference_audit: Path = typer.Option(STAGE5AZ_MANIFEST_REFERENCE_AUDIT_PATH),
+    taxonomy_policy: Path = typer.Option(STAGE5AZ_FAMILY_TAXONOMY_MEMBERSHIP_POLICY_PATH),
+    repaired_policy: Path = typer.Option(STAGE5AZ_REPAIRED_PREFLIGHT_DESIGN_POLICY_PATH),
+    repaired_variant_family: Path = typer.Option(STAGE5AZ_REPAIRED_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    repaired_branch_budget: Path = typer.Option(STAGE5AZ_REPAIRED_BRANCH_COUNT_BUDGET_PATH),
+    repaired_execution_gates: Path = typer.Option(STAGE5AZ_REPAIRED_EXECUTION_GATES_PATH),
+    readiness: Path = typer.Option(STAGE5AZ_DEEP_RESEARCH_READINESS_PATH),
+    dwh_context: Path = typer.Option(STAGE5AZ_DWH_MANIFEST_INTEGRITY_CONTEXT_PATH),
+    guardrail: Path = typer.Option(STAGE5AZ_GUARDRAIL_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5AZ_NEXT_STAGE_DECISION_PATH),
+    summary: Path = typer.Option(STAGE5AZ_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5AZ_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5az(
+        integrity_audit=integrity_audit,
+        family_id_audit=family_id_audit,
+        reference_audit=reference_audit,
+        taxonomy_policy=taxonomy_policy,
+        repaired_policy=repaired_policy,
+        repaired_variant_family=repaired_variant_family,
+        repaired_branch_budget=repaired_branch_budget,
+        repaired_execution_gates=repaired_execution_gates,
+        readiness=readiness,
+        dwh_context=dwh_context,
+        guardrail=guardrail,
+        next_stage_decision=next_stage_decision,
+        summary=summary,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5az_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

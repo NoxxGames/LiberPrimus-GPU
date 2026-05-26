@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AZ repaired execution gates",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "execution_authorised_now", "manifest_integrity_gate_status", "gates", "token_experiments_executed", "variant_byte_streams_generated", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5az" },
+    "execution_authorised_now": { "const": false },
+    "manifest_integrity_gate_status": { "const": "design_satisfied_execution_still_blocked" },
+    "token_experiments_executed": { "const": false },
+    "variant_byte_streams_generated": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

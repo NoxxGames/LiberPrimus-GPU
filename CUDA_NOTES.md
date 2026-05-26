@@ -4,11 +4,17 @@
 
 This file records CUDA policy for future acceleration work.
 
+## Stage 5AZ Bounded Preflight Manifest Integrity Boundary
+
+Stage 5AZ is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It repairs the Stage 5AY duplicated family ID in metadata only, preserves the branch budget, adds manifest-integrity gate coverage, and selects Stage 5BA Deep Research review.
+
+Stage 5AZ does not authorize token-block CUDA input, variant byte-stream generation, DWH/hash search, scored experiments, canonical corpus activation, page-boundary finalisation, or solve claims. Stage 5BA must review the Stage 5AZ repaired manifest and execution-gate records before any future execution-stage decision.
+
 ## Stage 5AY Bounded Token-Block Preflight Boundary
 
 Stage 5AY is complete and does not execute CUDA, modify CUDA-facing `.cu` or `.cuh` source, add kernels, run p56/full-p56/unsolved-page CUDA, benchmark, or make performance claims. It records bounded token-block preflight manifest design, branch eligibility, control families, branch budgets, DWH context, and execution gates only.
 
-Stage 5AY does not authorize token-block CUDA input, variant byte-stream generation, DWH/hash search, scored experiments, canonical corpus activation, page-boundary finalisation, or solve claims. Stage 5AZ must review the Stage 5AY manifest-design and execution-gate records before any future execution-stage decision.
+Stage 5AY does not authorize token-block CUDA input, variant byte-stream generation, DWH/hash search, scored experiments, canonical corpus activation, page-boundary finalisation, or solve claims. Stage 5AZ supersedes the Stage 5AY bounded variant-family manifest for Deep Research review through repaired metadata only.
 
 ## Stage 5AX Parallel Validation Boundary
 

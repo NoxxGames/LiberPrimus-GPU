@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AZ repaired bounded variant family manifest",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "unique_family_count", "manifest_family_entry_count", "taxonomy_membership_count", "duplicate_family_id_count_after_repair", "stage5ay_bounded_variant_family_manifest_superseded_for_deep_research_review", "families", "token_experiments_executed", "variant_byte_streams_generated", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5az" },
+    "unique_family_count": { "const": 10 },
+    "manifest_family_entry_count": { "const": 10 },
+    "taxonomy_membership_count": { "const": 11 },
+    "duplicate_family_id_count_after_repair": { "const": 0 },
+    "stage5ay_bounded_variant_family_manifest_superseded_for_deep_research_review": { "const": true },
+    "token_experiments_executed": { "const": false },
+    "variant_byte_streams_generated": { "const": false },
+    "full_cartesian_product_enumerated": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

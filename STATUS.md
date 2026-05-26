@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5AY bounded token-block preflight manifest design without execution is complete.
+Stage 5AZ bounded preflight manifest integrity gap closure is complete.
 
-Next recommended prompt: Stage 5AZ - Deep Research review of bounded token-block preflight manifest and execution gates. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5BA - Deep Research review of repaired bounded token-block preflight manifest and execution gates. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5AZ
+
+Stage 5AZ repaired the Stage 5AY bounded preflight manifest integrity gap before Deep Research review. It audited Stage 5AY manifests, detected the duplicated flat family ID `unresolved_as_current_only`, preserved its overlap as taxonomy membership in both `baseline_family` and `unresolved_policy_family`, and wrote superseding Stage 5AZ repaired records rather than rewriting Stage 5AY history.
+
+Local Stage 5AZ summary: duplicate family ID count before/after repair `1/0`, repaired unique variant family records `10`, variant family taxonomy memberships `11`, branch budget changed `false`, Stage 5AW repaired branch manifest used `true`, Stage 5AV branch manifest used `false`, Stage 5AY bounded variant family manifest superseded for Deep Research review `true`, execution gates `8`, manifest integrity gate status `design_satisfied_execution_still_blocked`, Deep Research readiness `true`, selected next prompt `Stage 5BA - Deep Research review of repaired bounded token-block preflight manifest and execution gates`, generated outputs committed `false`, CUDA execution/source modification `false`, new CUDA kernels `0`, benchmark `false`, scored experiments `false`, and solve claim `false`.
+
+Stage 5AZ is metadata repair only. It does not run token experiments, generate variant byte streams, enumerate Cartesian branches, run DWH/hash/preimage search, decode, OCR, AI/ML interpretation, LLM/vision token reading, semantic or hidden-content image interpretation, stego, CUDA, cryptanalytic benchmarks, scored experiments, method-status upgrades, public website expansion, canonical corpus activation, page-boundary finalisation, or solve claims.
 
 ## Completed in Stage 5AY
 
@@ -1014,4 +1022,4 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 
 ## Next prompt recommendation
 
-Stage 5AZ - Deep Research review of bounded token-block preflight manifest and execution gates. Use the Stage 5AY source-input, branch-eligibility, manifest-family, control-family, branch-budget, future-result-schema-preview, DWH-context, and execution-gate records; keep token experiment execution, variant byte-stream generation, Cartesian enumeration, DWH/hash/preimage search, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, and solve claims blocked unless a later prompt explicitly scopes execution.
+Stage 5BA - Deep Research review of repaired bounded token-block preflight manifest and execution gates. Use the Stage 5AZ repaired design-policy, repaired variant-family manifest, repaired branch budget, repaired execution gates, manifest-integrity audit, family-ID uniqueness audit, manifest-reference audit, Deep Research readiness, and Stage 5AY source-input/design context records; keep token experiment execution, variant byte-stream generation, Cartesian enumeration, DWH/hash/preimage search, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, and solve claims blocked unless a later prompt explicitly scopes execution.

@@ -1,8 +1,8 @@
 # Codex Navigation Map
 
-## Stage 5AY Note
+## Stage 5AZ Note
 
-Stage 5AY is a bounded token-block preflight manifest design stage. Use `libreprimus token-block validate-stage5ay` for committed Stage 5AY records and `libreprimus parallel-validation` or `scripts/ci/run-parallel-validation.ps1` for opt-in local validation. Stage 5AZ follow-up work should review the Stage 5AY design and gates, keep the Stage 5AU filled decision template ignored, and avoid token experiments, byte-stream generation, decode attempts, hash/preimage search, OCR/AI/ML/LLM vision, image forensics, stego, CUDA, cryptanalytic benchmarks, scored experiments, or solve-claim workflows.
+Stage 5AZ is a bounded token-block preflight manifest integrity repair stage. Use `libreprimus token-block validate-stage5az` for the repaired Stage 5AZ records, `libreprimus token-block validate-stage5ay` for historical Stage 5AY design records, and `libreprimus parallel-validation` or `scripts/ci/run-parallel-validation.ps1` for opt-in local validation. Stage 5BA follow-up work should review the Stage 5AZ repaired records and gates, keep the Stage 5AU filled decision template ignored, and avoid token experiments, byte-stream generation, decode attempts, hash/preimage search, OCR/AI/ML/LLM vision, image forensics, stego, CUDA, cryptanalytic benchmarks, scored experiments, or solve-claim workflows.
 
 ## Read First
 
@@ -20,7 +20,7 @@ For most Codex tasks, read:
 - Do not trust rendered GitHub pages, cached raw URLs, memory, or old conversation context when state matters.
 - Run the task-specific validation commands before staging.
 - Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
-- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5AZ prompts inherit current source-of-truth labels.
+- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5BA prompts inherit current source-of-truth labels.
 - Keep raw/generated outputs unstaged.
 - For Stage 5AF/5AG/5AI/5AJ/5AK source-harvester work, keep all raw harvester outputs, raw UsefulFiles/community-facts material, and generated bundle/extraction bodies local and ignored; do not use Google Drive as project storage.
 

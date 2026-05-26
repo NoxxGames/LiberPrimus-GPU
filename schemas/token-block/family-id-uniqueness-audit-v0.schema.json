@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AZ family ID uniqueness audit",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "status", "duplicate_family_id_count_before_repair", "duplicate_family_ids_before_repair", "duplicate_family_id_count_after_repair", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5az" },
+    "duplicate_family_id_count_before_repair": { "const": 1 },
+    "duplicate_family_id_count_after_repair": { "const": 0 },
+    "known_duplicate_family_id_found": { "const": true },
+    "token_experiments_executed": { "const": false },
+    "variant_byte_streams_generated": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

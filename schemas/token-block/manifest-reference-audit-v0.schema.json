@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AZ manifest reference audit",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "status", "stage5aw_repaired_branch_manifest_used", "stage5av_branch_manifest_used", "stage5av_branch_manifest_inactive", "missing_reference_count", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5az" },
+    "status": { "const": "passed" },
+    "stage5aw_repaired_branch_manifest_used": { "const": true },
+    "stage5av_branch_manifest_used": { "const": false },
+    "stage5av_branch_manifest_inactive": { "const": true },
+    "missing_reference_count": { "const": 0 },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

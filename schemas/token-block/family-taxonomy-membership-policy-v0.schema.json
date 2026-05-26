@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AZ family taxonomy membership policy",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "duplicate_taxonomy_membership_allowed", "duplicate_family_records_allowed", "family_count_semantics", "unresolved_as_current_only_memberships", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5az" },
+    "duplicate_taxonomy_membership_allowed": { "const": true },
+    "duplicate_family_records_allowed": { "const": false },
+    "family_count_semantics": { "const": "unique_family_records" },
+    "token_experiments_executed": { "const": false },
+    "variant_byte_streams_generated": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

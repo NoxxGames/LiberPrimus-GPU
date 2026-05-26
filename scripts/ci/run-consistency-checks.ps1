@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5AY" `
-        --expected-next-stage "Stage 5AZ" `
+        --expected-latest-stage "Stage 5AZ" `
+        --expected-next-stage "Stage 5BA" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5AY" `
-        --expected-next-stage "Stage 5AZ" `
+        --expected-latest-stage "Stage 5AZ" `
+        --expected-next-stage "Stage 5BA" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5AY",
+        expected_latest_stage="Stage 5AZ",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5AY",
+            "expected_latest_stage": "Stage 5AZ",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2407,6 +2407,27 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q (Join-Path $Stage5AYResultsRoot "preflight_design_report.json")
     git check-ignore -q (Join-Path $Stage5AYResultsRoot "branch_budget_report.json")
     git check-ignore -q "codex-output/stage5ay-codex-completion.md"
+
+    Write-Host "Validating Stage 5AZ bounded preflight manifest integrity records"
+    $Stage5AZResultsRoot = Join-Path (Join-Path "experiments" "results") "token-block/stage5az"
+    & $Python -m libreprimus.cli token-block validate-stage5az `
+        --integrity-audit data/token-block/stage5az-preflight-manifest-integrity-audit.yaml `
+        --family-id-audit data/token-block/stage5az-family-id-uniqueness-audit.yaml `
+        --reference-audit data/token-block/stage5az-manifest-reference-audit.yaml `
+        --taxonomy-policy data/token-block/stage5az-family-taxonomy-membership-policy.yaml `
+        --repaired-policy data/token-block/stage5az-repaired-preflight-design-policy.yaml `
+        --repaired-variant-family data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml `
+        --repaired-branch-budget data/token-block/stage5az-repaired-branch-count-budget.yaml `
+        --repaired-execution-gates data/token-block/stage5az-repaired-execution-gates.yaml `
+        --readiness data/token-block/stage5az-deep-research-readiness.yaml `
+        --dwh-context data/token-block/stage5az-dwh-manifest-integrity-context.yaml `
+        --guardrail data/token-block/stage5az-guardrail.yaml `
+        --next-stage-decision data/project-state/stage5az-next-stage-decision.yaml `
+        --summary data/project-state/stage5az-summary.yaml `
+        --results-dir $Stage5AZResultsRoot
+    git check-ignore -q (Join-Path $Stage5AZResultsRoot "preflight_manifest_integrity_audit.json")
+    git check-ignore -q (Join-Path $Stage5AZResultsRoot "repaired_variant_family_manifest.json")
+    git check-ignore -q "codex-output/stage5az-codex-completion.md"
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

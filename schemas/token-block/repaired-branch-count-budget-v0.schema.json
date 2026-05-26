@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AZ repaired branch count budget",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "branch_budget_changed", "branch_count_upper_bound_product", "primary60_mappable_branch_upper_bound_product", "full_cartesian_product_allowed", "variant_byte_streams_generated", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5az" },
+    "branch_budget_changed": { "const": false },
+    "full_cartesian_product_allowed": { "const": false },
+    "full_cartesian_product_enumerated": { "const": false },
+    "variant_byte_streams_generated": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

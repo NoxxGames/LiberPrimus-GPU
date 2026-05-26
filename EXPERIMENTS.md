@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5AZ Bounded Preflight Manifest Integrity Repair
+
+Stage 5AZ is manifest-integrity repair infrastructure, not an experiment. It commits compact preflight manifest integrity audit, family-ID uniqueness audit, manifest-reference audit, taxonomy-membership policy, repaired bounded variant-family manifest, repaired design-policy, repaired branch-budget, repaired execution-gates, Deep Research readiness, DWH context, guardrail, next-stage, and summary records.
+
+Generated Stage 5AZ reports remain ignored under `experiments/results/token-block/stage5az/`. Stage 5AZ supersedes the Stage 5AY bounded variant-family manifest for Deep Research review by collapsing the duplicate `unresolved_as_current_only` flat family record into one unique family record with both baseline and unresolved-policy taxonomy memberships. It performs no token experiment, variant byte-stream generation, full Cartesian enumeration, DWH/hash search, decode attempt, OCR, AI/ML interpretation, LLM/vision token reading, semantic image interpretation, hidden-content image forensics, stego execution, CUDA, cryptanalytic benchmark, scored experiment, public website expansion, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5AY Bounded Token-Block Preflight Manifest Design
 
 Stage 5AY is manifest-design infrastructure, not an experiment. It commits compact source-input, design-policy, branch-eligibility, bounded variant-family, null/alphabet/reading-order/page-split/source-control, branch-budget, future-result-schema preview, execution-gate, DWH-context, guardrail, and next-stage records.

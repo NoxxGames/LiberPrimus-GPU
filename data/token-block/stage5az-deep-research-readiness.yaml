@@ -1,0 +1,56 @@
+record_type: stage5az_deep_research_readiness
+schema: schemas/token-block/deep-research-readiness-v0.schema.json
+stage_id: stage-5az
+status: ready_for_deep_research_review_only
+deep_research_readiness: true
+execution_enabled: false
+selected_next_stage_title: Stage 5BA - Deep Research review of repaired bounded token-block
+  preflight manifest and execution gates
+readiness_reason: Stage 5AZ repaired duplicate family IDs without changing branch
+  budgets or enabling execution.
+records_deep_research_should_inspect:
+- data/token-block/stage5az-repaired-preflight-design-policy.yaml
+- data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+- data/token-block/stage5az-repaired-branch-count-budget.yaml
+- data/token-block/stage5az-repaired-execution-gates.yaml
+- data/token-block/stage5az-preflight-manifest-integrity-audit.yaml
+- data/token-block/stage5az-family-id-uniqueness-audit.yaml
+- data/token-block/stage5az-manifest-reference-audit.yaml
+records_deep_research_should_not_treat_as_active:
+- data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+superseded_active_manifest_warning: Do not use the Stage 5AY bounded variant family
+  manifest as the active variant-family manifest for Deep Research review.
+stage5aw_repaired_branch_manifest_used: true
+stage5av_branch_manifest_used: false
+stage5ay_bounded_variant_family_manifest_superseded_for_deep_research_review: true
+duplicate_family_id_count_after_repair: 0
+manifest_integrity_gate_status: design_satisfied_execution_still_blocked
+token_experiments_executed: false
+variant_byte_streams_generated: false
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+variant_experiments_executed: false
+full_cartesian_product_enumerated: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+public_website_expansion_selected: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+raw_images_committed: false

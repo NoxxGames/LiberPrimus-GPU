@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AZ repaired preflight design policy",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "policy_status", "duplicate_taxonomy_membership_allowed", "duplicate_family_records_allowed", "variant_byte_stream_generation_allowed_now", "token_experiment_execution_allowed_now", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5az" },
+    "policy_status": { "const": "design_only_repaired_for_family_id_uniqueness" },
+    "duplicate_taxonomy_membership_allowed": { "const": true },
+    "duplicate_family_records_allowed": { "const": false },
+    "variant_byte_stream_generation_allowed_now": { "const": false },
+    "token_experiment_execution_allowed_now": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

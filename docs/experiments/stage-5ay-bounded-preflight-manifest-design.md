@@ -16,4 +16,4 @@ Local design summary:
 - Primary-60 mappable branch product: `4194304`
 - Primary-60 mappable branch log10: `6.62266`
 
-Stage 5AY uses Stage 5AW repaired branch metadata, not the superseded Stage 5AV branch manifest. It recommends Stage 5AZ Deep Research review before any runner implementation or execution.
+Stage 5AY uses Stage 5AW repaired branch metadata, not the superseded Stage 5AV branch manifest. Stage 5AZ later supersedes the Stage 5AY bounded variant-family manifest for review by repairing the duplicate `unresolved_as_current_only` family ID; Stage 5BA is the current Deep Research review target before any runner implementation or execution.

@@ -1,0 +1,51 @@
+record_type: stage5az_family_id_uniqueness_audit
+schema: schemas/token-block/family-id-uniqueness-audit-v0.schema.json
+stage_id: stage-5az
+source_stage_id: stage-5ay
+status: repaired
+source_variant_family_manifest: data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+duplicate_family_id_count_before_repair: 1
+duplicate_family_ids_before_repair:
+- unresolved_as_current_only
+duplicate_family_id_count_after_repair: 0
+duplicate_family_ids_after_repair: []
+known_duplicate_family_id_found: true
+variant_family_entry_count_before_repair: 11
+unique_variant_family_record_count_before_repair: 10
+duplicate_records:
+- path: data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+  id_key: family_id
+  id_value: unresolved_as_current_only
+  occurrence_count: 2
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+full_cartesian_product_enumerated: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+public_website_expansion_selected: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+raw_images_committed: false
+repaired_variant_family_manifest: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+unique_variant_family_record_count_after_repair: 10
+variant_family_taxonomy_membership_count_after_repair: 11

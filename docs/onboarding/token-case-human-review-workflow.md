@@ -1,8 +1,8 @@
 # Token Case Human Review Workflow
 
-## Stage 5AY Note
+## Stage 5AZ Note
 
-Stage 5AW repairs parser handling after human decisions were integrated. Stage 5AX adds validation infrastructure only. Stage 5AY designs bounded preflight manifests and gates from Stage 5AW repaired branch metadata. Human decisions remain unchanged, prose fragments are audited rather than stored as token alternatives, and visual placeholders remain review-only.
+Stage 5AW repairs parser handling after human decisions were integrated. Stage 5AX adds validation infrastructure only. Stage 5AY designs bounded preflight manifests and gates from Stage 5AW repaired branch metadata. Stage 5AZ repairs duplicate manifest metadata only. Human decisions remain unchanged, prose fragments are audited rather than stored as token alternatives, and visual placeholders remain review-only.
 
 Use this workflow as the historical Stage 5AV manual-review input process for the Stage 5AU token-case challenge pack v2. Stage 5AV has now integrated the filled template into compact metadata.
 
@@ -15,4 +15,4 @@ Use this workflow as the historical Stage 5AV manual-review input process for th
 
 The Stage 5AT pack is preserved as historical generated output but Stage 5AU records it as count-valid and not usable for reliable decisions. Use the v2 pack because it surfaces glyph-candidate crops, context crops, row context, overlays, all 203 case-review challenges, and all 212 canonical-transcription challenges.
 
-The review pack is ignored local material. Do not commit crops, HTML, overlays, review sheets, ZIP files, or manually filled decision files. Stage 5AV commits only derived decision/branch metadata; Stage 5AW repairs that metadata; Stage 5AY consumes those committed records for design only.
+The review pack is ignored local material. Do not commit crops, HTML, overlays, review sheets, ZIP files, or manually filled decision files. Stage 5AV commits only derived decision/branch metadata; Stage 5AW repairs that metadata; Stage 5AY consumes those committed records for design only; Stage 5AZ supersedes only the duplicate bounded variant-family manifest for review.

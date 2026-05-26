@@ -1,0 +1,96 @@
+record_type: stage5az_repaired_preflight_design_policy
+schema: schemas/token-block/repaired-preflight-design-policy-v0.schema.json
+stage_id: stage-5az
+token_block_id: stage5ap-page49-51-token-block
+policy_status: design_only_repaired_for_family_id_uniqueness
+source_branch_manifest: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+source_branch_manifest_sha256: 5e2dfee9717b1950cc7f61cf6e8b48ea592105e6dbe5e94d31396556c41daa3f
+stage5aw_repaired_branch_manifest_used: true
+stage5av_branch_manifest_used: false
+stage5av_branch_manifest_superseded_by_stage5aw: true
+family_taxonomy:
+  baseline_family:
+  - keep_current_baseline
+  - unresolved_as_current_only
+  case_branch_family:
+  - single_change_variants
+  - per_ambiguity_class_variants
+  - primary60_mappable_only_variants
+  - visual_placeholder_excluded_variants
+  - reviewer_extra_possible_token_variants
+  unresolved_policy_family:
+  - unresolved_as_excluded
+  - unresolved_as_all_declared_variants
+  - unresolved_as_current_only
+  - unresolved_as_primary60_mappable_only
+  alphabet_family:
+  - primary60_current_alphabet
+  - reversed_primary60_control
+  - case_swapped_primary60_control
+  - digit_lower_upper_variant_control
+  - seeded_permutation_3301_control
+  - seeded_permutation_1033_control
+  reading_order_family:
+  - global_32_row_order
+  - per_page_local_order
+  - row_reversal
+  - column_reversal
+  - row_column_reversal
+  - row_shuffle_fixed_seed
+  - column_shuffle_fixed_seed
+  - token_shuffle_fixed_seed
+  page_split_family:
+  - accepted_10_13_9_split
+  - no_page_boundary_control
+  - alternative_11_11_10_split
+  - row_shuffled_split_preserving_page_counts
+  source_control_family:
+  - wrong_page_block_control_future_source_lock_required
+  - random_lp_like_token_stream_from_observed_frequencies
+  - random_lp_like_token_stream_from_uniform_primary60
+full_cartesian_product_allowed: false
+variant_byte_stream_generation_allowed_now: false
+token_experiment_execution_allowed_now: false
+branch_sampling_design_only: true
+future_review_required_before_runner_implementation: true
+parallel_validation_harness_required_for_local_validation: true
+stage5ax_run_status: passed
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+source_stage_id: stage-5ay
+source_stage5ay_policy: data/token-block/stage5ay-preflight-design-policy.yaml
+stage5ay_preflight_design_policy_superseded_for_deep_research_review: true
+duplicate_taxonomy_membership_allowed: true
+duplicate_family_records_allowed: false
+family_count_semantics: unique_family_records
+taxonomy_membership_count_semantics: taxonomy_memberships_across_unique_family_records
+unique_variant_family_record_count: 10
+variant_family_taxonomy_membership_count: 11
+repaired_variant_family_manifest: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+full_cartesian_product_enumerated: false
+public_website_expansion_selected: false
+raw_images_committed: false

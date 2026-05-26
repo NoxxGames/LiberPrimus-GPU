@@ -1,8 +1,8 @@
 # Contributor Module Map
 
-## Stage 5AY Note
+## Stage 5AZ Note
 
-The token-block layer now includes Stage 5AY helpers under `python/libreprimus/token_block/`. These helpers create design-only preflight manifests, branch eligibility records, control families, branch budgets, result-schema previews, execution gates, DWH context, and summaries. They must not be extended into token execution, byte-stream generation, decoding, DWH/hash search, OCR/AI/ML interpretation, CUDA, cryptanalytic benchmarks, or scored experiments without an explicit future stage.
+The token-block layer now includes Stage 5AY design helpers and Stage 5AZ manifest-integrity repair helpers under `python/libreprimus/token_block/`. Stage 5AZ collapses the duplicate `unresolved_as_current_only` family record into one unique family with multiple taxonomy memberships, preserves Stage 5AY branch budgets, and keeps execution blocked. These helpers must not be extended into token execution, byte-stream generation, decoding, DWH/hash search, OCR/AI/ML interpretation, CUDA, cryptanalytic benchmarks, or scored experiments without an explicit future stage.
 
 ## Module Areas
 
@@ -25,6 +25,7 @@ The token-block layer now includes Stage 5AY helpers under `python/libreprimus/t
 - Document staleness: `python/libreprimus/doc_staleness/`, `data/project-state/`, `schemas/project-state/`.
 - Parallel validation: `python/libreprimus/parallel_validation/`, `data/ci/stage5ax-*.yaml`, `schemas/ci/*parallel*.json`, and `scripts/ci/run-parallel-validation.*`.
 - Stage 5AY token-block preflight design: `python/libreprimus/token_block/stage5ay.py`, `data/token-block/stage5ay-*.yaml`, `data/project-state/stage5ay-*.yaml`, and `schemas/token-block/*preflight*.json`.
+- Stage 5AZ token-block manifest-integrity repair: `python/libreprimus/token_block/stage5az.py`, `data/token-block/stage5az-*.yaml`, `data/project-state/stage5az-*.yaml`, and `schemas/token-block/*integrity*.json`.
 - Source harvester: `python/libreprimus/source_harvester/`, `data/source-harvester/`, `schemas/source-harvester/`.
 - Website renderer: `python/libreprimus/website_render/`, `data/website-render/`, `schemas/website-render/`.
 - CUDA parity/reporting: `python/libreprimus/cuda_*`, `python/libreprimus/prime_minus_one_*`, `python/libreprimus/bounded_p56_cuda_parity/`, `cuda/`, `data/cuda/`.
@@ -66,6 +67,8 @@ Stage 5AW token-block decision-parser repair modules audit possible-token parser
 Stage 5AX parallel-validation modules classify commands, cap worker counts, run read-only validation subprocesses, shard pytest when xdist is unavailable, aggregate logs/failures, and validate safety records. They must not schedule git/GitHub/network/generated-output-writing commands in the parallel pool or run cryptanalytic work.
 
 Stage 5AY token-block preflight modules build design metadata only. They must use Stage 5AW repaired branch metadata, keep Stage 5AV branch metadata superseded for planning, define controls and gates without execution, keep generated reports ignored, and preserve all no-DWH/no-decode/no-CUDA/no-score/no-solve guardrails.
+
+Stage 5AZ token-block manifest-integrity modules repair metadata only. They must supersede the Stage 5AY bounded variant-family manifest for Deep Research review, preserve taxonomy overlap through `taxonomy_memberships`, keep branch budgets unchanged, keep execution gates blocked, keep generated reports ignored, and preserve all no-DWH/no-decode/no-CUDA/no-score/no-solve guardrails.
 
 ## Good First Areas
 

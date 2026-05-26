@@ -1,0 +1,130 @@
+record_type: stage5az_preflight_manifest_integrity_audit
+schema: schemas/token-block/preflight-manifest-integrity-audit-v0.schema.json
+stage_id: stage-5az
+source_stage_id: stage-5ay
+status: repair_required
+manifest_count_checked: 7
+duplicate_id_record_count: 1
+duplicate_family_id_count_before_repair: 1
+duplicate_family_ids_before_repair:
+- unresolved_as_current_only
+duplicate_id_records_by_file:
+- path: data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+  duplicate_id_count: 1
+  duplicates:
+  - path: data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+    id_key: family_id
+    id_value: unresolved_as_current_only
+    occurrence_count: 2
+- path: data/token-block/stage5ay-null-control-family-manifest.yaml
+  duplicate_id_count: 0
+  duplicates: []
+- path: data/token-block/stage5ay-alphabet-control-manifest.yaml
+  duplicate_id_count: 0
+  duplicates: []
+- path: data/token-block/stage5ay-reading-order-control-manifest.yaml
+  duplicate_id_count: 0
+  duplicates: []
+- path: data/token-block/stage5ay-page-split-control-manifest.yaml
+  duplicate_id_count: 0
+  duplicates: []
+- path: data/token-block/stage5ay-source-control-manifest.yaml
+  duplicate_id_count: 0
+  duplicates: []
+- path: data/token-block/stage5ay-execution-gates.yaml
+  duplicate_id_count: 0
+  duplicates: []
+unique_id_counts_by_file:
+- path: data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+  unique_id_counts:
+    family_id: 10
+    control_id: 0
+    gate_id: 0
+    source_id: 0
+    record_id: 0
+    manifest_id: 0
+- path: data/token-block/stage5ay-null-control-family-manifest.yaml
+  unique_id_counts:
+    family_id: 6
+    control_id: 0
+    gate_id: 0
+    source_id: 0
+    record_id: 0
+    manifest_id: 0
+- path: data/token-block/stage5ay-alphabet-control-manifest.yaml
+  unique_id_counts:
+    family_id: 6
+    control_id: 0
+    gate_id: 0
+    source_id: 0
+    record_id: 0
+    manifest_id: 0
+- path: data/token-block/stage5ay-reading-order-control-manifest.yaml
+  unique_id_counts:
+    family_id: 8
+    control_id: 0
+    gate_id: 0
+    source_id: 0
+    record_id: 0
+    manifest_id: 0
+- path: data/token-block/stage5ay-page-split-control-manifest.yaml
+  unique_id_counts:
+    family_id: 4
+    control_id: 0
+    gate_id: 0
+    source_id: 0
+    record_id: 0
+    manifest_id: 0
+- path: data/token-block/stage5ay-source-control-manifest.yaml
+  unique_id_counts:
+    family_id: 3
+    control_id: 0
+    gate_id: 0
+    source_id: 0
+    record_id: 0
+    manifest_id: 0
+- path: data/token-block/stage5ay-execution-gates.yaml
+  unique_id_counts:
+    family_id: 0
+    control_id: 0
+    gate_id: 7
+    source_id: 0
+    record_id: 0
+    manifest_id: 0
+known_integrity_issue: duplicate_flat_family_id_for_taxonomy_overlap
+repair_strategy: collapse_duplicate_family_records_and_preserve_taxonomy_memberships
+guardrail_consistency:
+  guardrail_consistent: true
+  guardrail_violation_count: 0
+  guardrail_violations: []
+stage5aw_repaired_branch_manifest_used: true
+stage5av_branch_manifest_used: false
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+full_cartesian_product_enumerated: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+public_website_expansion_selected: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+raw_images_committed: false

@@ -1,0 +1,120 @@
+record_type: stage5az_manifest_reference_audit
+schema: schemas/token-block/manifest-reference-audit-v0.schema.json
+stage_id: stage-5az
+source_stage_id: stage-5ay
+status: passed
+stage5aw_repaired_branch_manifest_used: true
+stage5aw_repaired_branch_manifest_path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+stage5aw_repaired_branch_manifest_sha256: 5e2dfee9717b1950cc7f61cf6e8b48ea592105e6dbe5e94d31396556c41daa3f
+stage5av_branch_manifest_used: false
+stage5av_branch_manifest_inactive: true
+stage5av_branch_manifest_path: data/token-block/stage5av-token-variant-branch-manifest.yaml
+required_reference_count: 15
+missing_reference_count: 0
+reference_records:
+- path: data/project-state/stage5ay-summary.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: 14a4e2183483e49a9c800911aeb546662fc10e3e8d9f512941f0cce8610b1f4d
+- path: data/token-block/stage5ay-preflight-source-inputs.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: 122716b5e35a4367bd8b4d482484079e9578a66f9025a2420e2dbeace25a5df0
+- path: data/token-block/stage5ay-preflight-design-policy.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: e73411e5fed819fd8a2b115aca7d7be8e932e77620e64256db7f4d1b2e22eeb1
+- path: data/token-block/stage5ay-branch-count-budget.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: c774940065e155737c5cbc67c81fc550acf5bfe2a75e9bef74fd272c490b93a2
+- path: data/token-block/stage5ay-future-result-schema-preview.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: 1d70a4c34f96c7d5f5eb308232afa5cb8f3abdb6c14bf6bf766d18f8d6c0bf1f
+- path: data/token-block/stage5ay-dwh-preflight-context.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: 0901ee7257c4383bba09324b6e1936fe0c4e91f9d6f9c4fc36da4cd4ca34ddff
+- path: data/token-block/stage5ay-guardrail.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: 5e7a784059b274cac7133cc516a1035c2184c523906461d7ae1244e0967ea54f
+- path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: 5e2dfee9717b1950cc7f61cf6e8b48ea592105e6dbe5e94d31396556c41daa3f
+- path: data/token-block/stage5ay-bounded-variant-family-manifest.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: a98a8f105260ec67cd7e4e5565fe32808abc905090fd64146392c7783f27dca1
+- path: data/token-block/stage5ay-null-control-family-manifest.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: 168d93172fb764f1a00a64bc55585c8a145384d6539a29a4d2f5f2427d3c3ea4
+- path: data/token-block/stage5ay-alphabet-control-manifest.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: ae555356345f1419f98ecfe22a8518ae1e22a8d6bcb797f2d2f73cb1c6475c1e
+- path: data/token-block/stage5ay-reading-order-control-manifest.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: 1feb7c13b998eda60487ac7333ba12c879de6971d87326c622876a1750996923
+- path: data/token-block/stage5ay-page-split-control-manifest.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: 67e5ec7c3013a99aea008f23accf308f8afd3872a4eea1d94bc4294b1e45c2ba
+- path: data/token-block/stage5ay-source-control-manifest.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: a4b3486d684704116d34a2128754b440b20f02656b30d579759ec92ac54c101d
+- path: data/token-block/stage5ay-execution-gates.yaml
+  role: required_stage5ay_or_stage5aw_input
+  required: true
+  present: true
+  sha256: f5489e327e6cbd7db6fc399a349f1953eea55c2b74ef807fa1cefa50a598c59d
+stage5ay_execution_gates_reference_existing_manifests: true
+stage5ay_future_result_schema_preview_reference_checked: true
+network_fetch_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+stego_tool_execution_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+token_experiments_executed: false
+variant_byte_streams_generated: false
+variant_experiments_executed: false
+full_cartesian_product_enumerated: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernel_added: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+scored_experiments_executed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+public_website_expansion_selected: false
+solve_claim: false
+generated_outputs_committed: false
+codex_output_committed: false
+third_party_raw_staged: false
+third_party_raw_tracked_new: false
+raw_images_committed: false

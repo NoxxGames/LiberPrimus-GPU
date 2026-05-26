@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 5AZ preflight manifest integrity audit",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "status", "duplicate_family_id_count_before_repair", "stage5aw_repaired_branch_manifest_used", "stage5av_branch_manifest_used", "token_experiments_executed", "variant_byte_streams_generated", "solve_claim"],
+  "properties": {
+    "stage_id": { "const": "stage-5az" },
+    "stage5aw_repaired_branch_manifest_used": { "const": true },
+    "stage5av_branch_manifest_used": { "const": false },
+    "token_experiments_executed": { "const": false },
+    "variant_byte_streams_generated": { "const": false },
+    "hash_preimage_search_performed": { "const": false },
+    "decode_attempt_performed": { "const": false },
+    "cuda_execution_performed": { "const": false },
+    "benchmark_performed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}
