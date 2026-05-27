@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5BD - token-block preflight dry-run implementation without byte-stream generation.
+Current completed stage: Stage 5BF - 2012-2017 Cicada historical route source-lock and technique extraction.
 
-Current work: Stage 5BE - Deep Research review of token-block preflight dry-run implementation, archive/evidence hygiene, and execution-gate enforcement. Stage 5BD implements deterministic metadata-only dry-run plan IDs, future result-path validation, family counters, fixture-only synthetic records, Stage 5BB validation-evidence consolidation, archive marker policy/scripts, and a preflight-runner package split while keeping Stage 5AW and Stage 5AZ repaired manifests active, Stage 5AV and old Stage 5AY active loads inactive, and all execution gates blocked. It did not generate byte streams, materialise variants, enumerate Cartesian products, execute token experiments, run DWH/hash searches, decode, score, OCR, AI/ML interpretation, LLM/vision token reading, semantic or hidden-content image interpretation, stego, CUDA, cryptanalytic benchmarks, website expansion, method-status upgrades, or solve claims.
+Current work: Stage 5BG - Deep Research review of 2012-2017 historical route source-lock, technique taxonomy, and impact on future token-block dry-run planning. Stage 5BF consumes the ignored local `third_party/CicadaSolversIddqd` archive as metadata only, records archive tree/inventory summaries, annual route inventories, high-priority artifact hashes, trust classifications, specialized historical route candidates, DWH historical context, token-block planning impact, guardrails, and Deep Research readiness. It did not clone online sources, scrape live sites, verify PGP online, run stego tools, run OutGuess/OpenPuff/MP3Stego, run OCR, use AI/ML or LLM vision, generate token-block byte streams, materialise variants, run DWH/hash searches, decode, score, run CUDA, benchmark, publish website content, upgrade method status, or make solve claims.
 
 Current project state:
 
@@ -146,6 +146,10 @@ Current project state:
 - Stage 5BD dry-run plan IDs, future result-path validation, family counters, fixture-only records, archive marker policy, and Stage 5BB validation-evidence consolidation are dry-run planning metadata only.
 - Stage 5BD must not be treated as authorization for byte-stream generation, variant materialisation, Cartesian enumeration, DWH/hash/preimage search, decoding, scoring, CUDA, benchmarks, website expansion, method-status upgrades, or solve claims.
 - Future Stage 5BE review must inspect Stage 5BD dry-run implementation, archive/evidence hygiene, no-byte-stream proof, future result-path validation, and execution-gate enforcement before any execution-capable runner stage.
+- Stage 5BF historical route records are source-lock and taxonomy metadata only.
+- Stage 5BF consumes ignored local `third_party/CicadaSolversIddqd` files by hash/path metadata only; do not commit raw archive bytes.
+- Stage 5BF does not execute historical techniques, PGP network verification, stego tools, OutGuess/OpenPuff/MP3Stego, DWH/hash search, token-block experiments, byte-stream generation, CUDA, benchmarks, website expansion, method-status upgrades, or solve claims.
+- Future Stage 5BG review must consume Stage 5BF archive location, inventory, trust-classification, technique-taxonomy, source-gap, DWH context, token-block planning-impact, and guardrail records before token-block planning changes.
 - Stage 5AX keeps git, GitHub, network/remote, generated-output-writing, issue-update, commit, and push operations serial.
 - Stage 5AX uses pytest-xdist only when available and otherwise falls back to deterministic subprocess sharding.
 - Stage 5AY preflight design cites Stage 5AW repaired branch metadata and the Stage 5AX next-stage decision, does not use ignored review-pack bodies as committed input, and does not execute token experiments or DWH/hash searches. Future Stage 5BE review must consume Stage 5BD dry-run records, Stage 5BB active-manifest registry, no-execution runner scaffold, and Stage 5AZ repaired manifest-design/execution-gate records before any execution-stage decision.

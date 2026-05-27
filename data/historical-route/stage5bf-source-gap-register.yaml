@@ -1,0 +1,13 @@
+record_type: stage5bf_source_gap_register
+schema: schemas/historical-route/source-gap-register-v0.schema.json
+stage_id: stage-5bf
+source_gap_count: 4
+gaps:
+- gap_id: pgp_online_verification_not_performed
+  status: requires_deep_research_review
+- gap_id: historical_stego_expected_outputs_not_execution_ready
+  status: requires_deep_research_review
+- gap_id: openpuff_interconnectedness_requires_review_before_any_execution
+  status: requires_deep_research_review
+- gap_id: dwh_relationship_remains_speculative
+  status: requires_deep_research_review

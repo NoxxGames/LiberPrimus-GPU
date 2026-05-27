@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BD it names Stage 5BD as latest complete and Stage 5BE as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BF it names Stage 5BF as latest complete and Stage 5BG as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -42,8 +42,10 @@
 - `data/project-state/stage5az-summary.yaml`: Stage 5AZ aggregate summary, guardrail state, and Stage 5BA next-stage decision.
 - `data/token-block/stage5bb-*.yaml`: Stage 5BB active-manifest registry, precedence policy, legacy pointer audit, branch-eligibility validation, runner scaffold, dry-run, counter, execution-gate, fixture-schema, validation, no-execution, DWH context, and guardrail records.
 - `data/token-block/stage5bd-*.yaml`: Stage 5BD dry-run policy, active-manifest lock, run-plan ID, future-path, counter, fixture-only, execution-gate, no-byte-stream, validation-evidence consolidation, archive marker, DWH context, and guardrail records.
+- `data/historical-route/stage5bf-*.yaml`: Stage 5BF local archive source-lock, inventory, trust-classification, specialized artifact, technique-taxonomy, token-block impact, source-gap, Deep Research readiness, DWH context, and guardrail records.
 - `data/project-state/stage5bb-summary.yaml`: Stage 5BB aggregate summary, guardrail state, and Stage 5BC historical next-stage decision.
 - `data/project-state/stage5bd-summary.yaml`: Stage 5BD aggregate summary, guardrail state, archive marker state, and Stage 5BE next-stage decision.
+- `data/project-state/stage5bf-summary.yaml`: Stage 5BF aggregate summary, guardrail state, and Stage 5BG next-stage decision.
 - `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 - `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.
@@ -61,6 +63,7 @@
 - `docs/onboarding/bounded-token-block-preflight-workflow.md`: Stage 5AY design, Stage 5AZ repaired bounded preflight manifest workflow, Stage 5BB no-execution runner scaffold boundary, and Stage 5BD dry-run planning boundary.
 - `docs/onboarding/token-block-preflight-runner-scaffold-workflow.md`: Stage 5BB active-manifest and runner-scaffold workflow, with Stage 5BD validation-evidence supersession notes.
 - `docs/onboarding/token-block-preflight-dry-run-workflow.md`: Stage 5BD dry-run planning workflow.
+- `docs/onboarding/historical-route-source-lock-workflow.md`: Stage 5BF local archive source-lock workflow.
 - `docs/onboarding/local-source-inventory-workflow.md`: local `third_party/` source inventory workflow and raw-data guardrails.
 
 ## Research And Workflow Truth
@@ -88,6 +91,7 @@
 - `docs/reference/token-block-preflight-manifest-cli.md`: Stage 5AY token-block preflight design and Stage 5AZ manifest-integrity repair CLI usage and guardrails.
 - `docs/reference/token-block-preflight-runner-scaffold-cli.md`: Stage 5BB no-execution runner scaffold CLI usage and guardrails.
 - `docs/reference/token-block-preflight-dry-run-cli.md`: Stage 5BD no-byte-stream dry-run planning CLI usage and guardrails.
+- `docs/reference/historical-route-source-lock-cli.md`: Stage 5BF local historical-route source-lock CLI usage and guardrails.
 - `docs/reference/fast-local-validation.md`: local wrapper commands for opt-in Stage 5AX validation.
 - `docs/reference/stego-controls-cli.md`: Stage 5AP stego-control CLI usage and guardrails.
 
@@ -106,6 +110,6 @@
 - `data/research/**`: Stage 3Y synthesis records.
 
 Historical docs may mention old stages. Current-state claims must be taken from the operational files above.
-## Stage 5BD Additions
+## Stage 5BF Additions
 
-Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bd-summary.yaml`, and `data/token-block/stage5bd-dry-run-plan-manifest.yaml` for the current token-block dry-run state.
+Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bf-summary.yaml`, and `data/historical-route/stage5bf-historical-technique-taxonomy.yaml` for the current historical-route source-lock state. Use Stage 5BD dry-run records as still-valid token-block planning infrastructure, not as execution permission.

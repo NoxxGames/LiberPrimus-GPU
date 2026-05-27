@@ -1,0 +1,15 @@
+record_type: stage5bf_next_stage_decision
+stage_id: stage-5bf
+selected_next_prompt_type: deep_research_review
+selected_next_stage_id: stage-5bg
+selected_next_stage_title: Stage 5BG - Deep Research historical route source-lock
+  review
+selected_next_stage_reason: Local historical route archive source-lock, trust classification,
+  and technique taxonomy records exist, but Deep Research must review them before
+  future token-block planning changes.
+token_block_preflight_execution_selected: false
+dwh_hash_search_selected: false
+scored_experiments_selected: false
+benchmark_selected: false
+unsolved_page_cuda_selected: false
+public_website_expansion_selected: false

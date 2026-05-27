@@ -1,0 +1,227 @@
+record_type: stage5bf_openpuff_mp3_candidates
+schema: schemas/historical-route/openpuff-mp3-candidates-v0.schema.json
+stage_id: stage-5bf
+candidate_count: 7
+interconnectedness_present: true
+openpuff_execution_performed: false
+mp3stego_execution_performed: false
+candidates:
+- artifact_id: stage5bf-a8af532e07c2db99
+  year_or_scope: '2013'
+  artifact_family: cicada_os_artifact
+  artifact_families:
+  - cicada_os_artifact
+  - mp3stego_candidate
+  relative_path: 2013/additional files/Cicada OS/cicados/AUDIO/761.MP3
+  sha256: 83008217439110c3b824898af73b99cb2cf0657dda88cb363c3aa34a4ec0a460
+  size_bytes: 4010732
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-7917b2c890e5f336
+  year_or_scope: '2014'
+  artifact_family: interconnectedness_mp3_candidate
+  artifact_families:
+  - interconnectedness_mp3_candidate
+  - mp3stego_candidate
+  - old_site_snapshot
+  - onion_url
+  - tor_hidden_service_requirement
+  relative_path: 2014/Websites/Interconnectedness fron onion 5/3301 - Interconnectedness.mp3
+  sha256: 1ce3839b4a62462d9009c4469acc189b523e1bdcf338cb49cda1cd7bb4efffc6
+  size_bytes: 6651873
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-4c931d6455a344b9
+  year_or_scope: '2014'
+  artifact_family: mp3stego_candidate
+  artifact_families:
+  - mp3stego_candidate
+  - old_site_snapshot
+  - onion_url
+  - tor_hidden_service_requirement
+  relative_path: 2014/Websites/onion 5v2/c.mp3
+  sha256: f5719fec286ab0fcc88b36d1fcdd24f23c928b3cce75d437e8aa4f195069e03d
+  size_bytes: 9288
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-de5c5ebb4b4336ff
+  year_or_scope: Archive
+  artifact_family: mp3stego_candidate
+  artifact_families:
+  - mp3stego_candidate
+  relative_path: Archive/Media coverage/non text coverage/Cicada 3301 The Great Internet
+    Mystery Solved!.mp3
+  sha256: e836dcb932eede360d4959c88d6cb007871ae1b26ba035a8ffca17dcd174237f
+  size_bytes: 10938376
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-d877a597fc980d44
+  year_or_scope: assets
+  artifact_family: mp3stego_candidate
+  artifact_families:
+  - mp3stego_candidate
+  relative_path: assets/2013/cicados/AUDIO/761.MP3
+  sha256: 83008217439110c3b824898af73b99cb2cf0657dda88cb363c3aa34a4ec0a460
+  size_bytes: 4010732
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-280f65f3e737e9fa
+  year_or_scope: assets
+  artifact_family: mp3stego_candidate
+  artifact_families:
+  - mp3stego_candidate
+  relative_path: assets/2014/stage07/index.mp3
+  sha256: 1ce3839b4a62462d9009c4469acc189b523e1bdcf338cb49cda1cd7bb4efffc6
+  size_bytes: 6651873
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-863ecc0afac46409
+  year_or_scope: assets
+  artifact_family: mp3stego_candidate
+  artifact_families:
+  - mp3stego_candidate
+  relative_path: assets/2014/stage08/index.3.mp3
+  sha256: f5719fec286ab0fcc88b36d1fcdd24f23c928b3cce75d437e8aa4f195069e03d
+  size_bytes: 9288
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.

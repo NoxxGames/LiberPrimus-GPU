@@ -1,0 +1,190 @@
+record_type: stage5bf_archive_tree_summary
+schema: schemas/historical-route/archive-tree-summary-v0.schema.json
+stage_id: stage-5bf
+archive_available: true
+archive_root: third_party/CicadaSolversIddqd
+total_file_count: 1243
+total_directory_count: 209
+total_size_bytes: 838987564
+top_level_directories:
+- '2012'
+- '2013'
+- '2014'
+- '2015'
+- '2016'
+- '2017'
+- Archive
+- EXTRA WIKI PAGES
+- assets
+expected_year_directories_present:
+  '2012': true
+  '2013': true
+  '2014': true
+  '2015': true
+  '2016': true
+  '2017': true
+  Archive: true
+  EXTRA WIKI PAGES: true
+  assets: true
+file_count_by_top_level:
+  .gitkeep: 1
+  '2012': 140
+  '2013': 101
+  '2014': 321
+  '2015': 10
+  '2016': 16
+  '2017': 10
+  Archive: 176
+  EXTRA WIKI PAGES: 129
+  README.md: 1
+  assets: 338
+file_count_by_extension:
+  '.00': 2
+  '.1': 2
+  '.13': 2
+  '.17': 2
+  '.2': 2
+  '.3': 1
+  .7z: 1
+  .asc: 4
+  .bin: 10
+  .bmp: 5
+  .bz2: 1
+  .c: 1
+  .cpp: 1
+  .css: 13
+  .data: 1
+  .dec: 3
+  .decoded: 2
+  .decrypted: 4
+  .docx: 130
+  .gif: 9
+  .gz: 1
+  .headers: 1
+  .hex: 4
+  .html: 20
+  .jpeg: 5
+  .jpg: 520
+  .md: 24
+  .method: 3
+  .mid: 1
+  .mp3: 7
+  .mp4: 14
+  .onion: 1
+  .out: 13
+  .outguess: 18
+  .pdf: 128
+  .pm: 2
+  .png: 64
+  .py: 11
+  .rev: 10
+  .runes: 1
+  .sh: 1
+  .srt: 2
+  .transcribed: 1
+  .txt: 165
+  .webp: 2
+  .xlsx: 1
+  .zip: 1
+  ".\u05D4\u05D5\u05E8\u05D3\u05D4": 5
+  '[none]': 21
+file_count_by_year_or_scope:
+  .gitkeep: 1
+  '2012': 140
+  '2013': 101
+  '2014': 321
+  '2015': 10
+  '2016': 16
+  '2017': 10
+  Archive: 176
+  EXTRA WIKI PAGES: 129
+  README.md: 1
+  assets: 338
+largest_files_summary:
+- relative_path: 2012/additional media/xaxanon videos/00006 MTS/00006.MTS (1080p_30fps_H264-128kbit_AAC).mp4
+  size_bytes: 25023217
+  sha256: aabf76551676e96b9b7e69ba7c83fdc68dd22a9bcf51ca55ae573d31ee8c3841
+  file_type_guess: video
+- relative_path: 2012/additional media/xaxanon videos/00011 MTS/00011.MTS (1080p_30fps_H264-128kbit_AAC).mp4
+  size_bytes: 24316954
+  sha256: b6fb5f04048e27c41ca4ff9c0dd3c1fac6bc1c4bda306706e5ffc59c09663704
+  file_type_guess: video
+- relative_path: 2012/additional media/xaxanon videos/00005 MTS/00005.MTS (1080p_30fps_H264-128kbit_AAC).mp4
+  size_bytes: 22328526
+  sha256: e590de51b328bd55c3d428b3473cd98bd969ba2acb14fece4b1e8efce05c0461
+  file_type_guess: video
+- relative_path: 2012/additional media/xaxanon videos/00009 MTS/00009.MTS (1080p_30fps_H264-128kbit_AAC).mp4
+  size_bytes: 20612283
+  sha256: 3a5f7dba103c9081a092982c0349a656d2c81a374685bb1c9250c4b98c144c84
+  file_type_guess: video
+- relative_path: 2013/additional files/Cicada OS/boot sequence.mp4
+  size_bytes: 18190831
+  sha256: f9447ebe3aee02844face135515ecc1b203dafd0600ca9d9f228573f208893b2
+  file_type_guess: video
+- relative_path: Archive/Media coverage/non text coverage/Cicada 3301_ Headhunting
+    for CIA_MI6_Al-Shabaab or alternate reality game_ (1080p_25fps_H264-128kbit_AAC).mp4
+  size_bytes: 18186540
+  sha256: 15b4a49d0b3fef4e92e85087050ea2a55f6d7810118c848293d8f5f95b857f67
+  file_type_guess: video
+- relative_path: EXTRA WIKI PAGES/DEBATE ABOUT MEANING OF THE PICTURE ON ONION/collage
+    images origin/William Blake - Nebuchadnezzar/William_Blake_-_Nebuchadnezzar_(Minneapolis).jpg
+  size_bytes: 15123553
+  sha256: 51d7c3708a58cde7ec38604265b138c4306a2e93b15d55d40e1e72d3300fbd49
+  file_type_guess: image
+- relative_path: 2014/additional docs/Titanpads from time of solving/he fifth onion
+    contained the following (signed) message.txt
+  size_bytes: 13748107
+  sha256: 19dd8b5d7c2ca0b50361c35966707dad9fe36b9337e52ae90c0ccfd8bc2456c0
+  file_type_guess: text
+- relative_path: assets/2014/stage07/q4utgdi2n4m4uim5.onion/index.html
+  size_bytes: 13526359
+  sha256: aa11ab74ea83d68dc4e0bf76c96baca9e7f37909432917ff4d8d5e924d9a8189
+  file_type_guess: text
+- relative_path: 2014/Liber Primus/gifs/LP pages displayed on the collage cover image.gif
+  size_bytes: 12620485
+  sha256: 0c2258a12ae44533fcce924867b1845fa47831d4def3afe14d01baf08277f50b
+  file_type_guess: image
+- relative_path: 2012/additional media/xaxanon videos/00007 MTS/00007.MTS (1080p_30fps_H264-128kbit_AAC).mp4
+  size_bytes: 11152530
+  sha256: dc9978c3c429bf4fe62741f5eea13454683057c1bccd8de4ad56d4c9f6c2f45a
+  file_type_guess: video
+- relative_path: Archive/Media coverage/non text coverage/Cicada 3301 The Great Internet
+    Mystery Solved!.mp3
+  size_bytes: 10938376
+  sha256: e836dcb932eede360d4959c88d6cb007871ae1b26ba035a8ffca17dcd174237f
+  file_type_guess: audio
+- relative_path: 2012/additional media/xaxanon videos/00008 MTS/00008.MTS (1080p_30fps_H264-128kbit_AAC).mp4
+  size_bytes: 10869572
+  sha256: 1fb009fb6b7082c5eabba28622a9863c49d9c27fb06bd115ccb140113cbbc2aa
+  file_type_guess: video
+- relative_path: 2014/Websites/cicada2014 (onion 5 6).7z
+  size_bytes: 9450550
+  sha256: 00320df21ba08702e4666eb144c9d533f56c220c308e575590887b08c00db285
+  file_type_guess: archive
+- relative_path: EXTRA WIKI PAGES/DEBATE ABOUT MEANING OF THE PICTURE ON ONION/DEBATE
+    ABOUT MEANING OF THE PICTURE ON ONION.docx
+  size_bytes: 9280185
+  sha256: 7430d1d8e09c43f9d26b27bf04be8d84fdb2d81a4d8506004c6fc580a0e83d28
+  file_type_guess: document
+- relative_path: Archive/Media coverage/Mainstream media/The rolling stones/Cicada_
+    Solving the Web's Deepest Mystery - Rolling Stone.pdf
+  size_bytes: 9060776
+  sha256: d44708de3370931bc9959699538fbcbd1fc1e5928b1f44f4d24011758e0c30e0
+  file_type_guess: document
+- relative_path: 2012/additional media/xaxanon videos/00004 MTS/00004.MTS (1080p_30fps_H264-128kbit_AAC).mp4
+  size_bytes: 8968538
+  sha256: bee645447368d1afab28931a24de146416a051e8731bf8598593dc3574469c35
+  file_type_guess: video
+- relative_path: 2014/Websites/onion 6/ut3qtzbrvs7dtvzp.onion
+  size_bytes: 8623291
+  sha256: 43f6c2a5628c34955bb1f50302b0e85f3aa9a38e571712072f09f5a7a144e448
+  file_type_guess: binary_or_unknown
+- relative_path: assets/2014/stage09/ut3qtzbrvs7dtvzp.onion/index.html
+  size_bytes: 8623291
+  sha256: 43f6c2a5628c34955bb1f50302b0e85f3aa9a38e571712072f09f5a7a144e448
+  file_type_guess: text
+- relative_path: 2014/Websites/onion 6/ut3qtzbrvs7dtvzp.onion.hex
+  size_bytes: 8623280
+  sha256: 7d67f55a6e6dc874a3bfa133b7abd1dbfce82595aea150fb48645022a3935bec
+  file_type_guess: binary_or_unknown
+archive_tree_digest: bdc8739120be85fc7015e495704ee80bc80ef3a25cfc32c43e3b4d7de40270af

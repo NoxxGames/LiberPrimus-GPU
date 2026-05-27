@@ -1,0 +1,228 @@
+record_type: stage5bf_annual_route_inventory
+schema: schemas/historical-route/annual-route-inventory-v0.schema.json
+stage_id: stage-5bf
+years:
+  '2012':
+    route_directory_present: true
+    route_docs:
+    - 2012/2012 - what happend part 1.docx
+    - 2012/2012 - what happend part 2.docx
+    - 2012/MIDI puzzle/The MIDI puzzle and solution.docx
+    - 2012/additional docs/The Leaked Email/The leaked email.docx
+    - 2012/additional docs/accusation of cyberterrorism/3301 accused of cyberterrorism.docx
+    - 2012/additional docs/locations across the globe.docx
+    - 2012/additional docs/scream314 git pages/2012.docx
+    - 2012/additional docs/the outgussed messege.docx
+    - 2012/additional docs/the subreddit/The subreddit.docx
+    - 2012/additional docs/the unsolved book code/the june 2017 edit.docx
+    - 2012/additional docs/unverified claims from alleged winners on Unfiction.docx
+    - 2012/additional media/images/MIDI and seconde chance/The Wm. Blake Page - The
+      Marriage of Heaven and Hell.pdf
+    - 2012/websites/CIcada's MIT keyserver/Search results for '0x181f01e57a35090f'.pdf
+    - 2012/websites/CIcada's MIT keyserver/list of cicada signatures.docx
+    - '2012/websites/the subreddit/PDFs/a2e7j6ic78h0j7eiejd0120 - #1.pdf'
+    - '2012/websites/the subreddit/PDFs/a2e7j6ic78h0j7eiejd0120 - #2.pdf'
+    - '2012/websites/the subreddit/PDFs/a2e7j6ic78h0j7eiejd0120 - #3.pdf'
+    - '2012/websites/the subreddit/PDFs/a2e7j6ic78h0j7eiejd0120 - #4.pdf'
+    - '2012/websites/the subreddit/PDFs/a2e7j6ic78h0j7eiejd0120 - #5.pdf'
+    - '2012/websites/the subreddit/PDFs/a2e7j6ic78h0j7eiejd0120 - #6.pdf'
+    - '2012/websites/the subreddit/PDFs/a2e7j6ic78h0j7eiejd0120 - #7.pdf'
+    - '2012/websites/the subreddit/PDFs/a2e7j6ic78h0j7eiejd0120 - #8.pdf'
+    - 2012/websites/the subreddit/PDFs/overview for CageThrottleUs.pdf
+    image_artifacts:
+    - 2012/additional docs/scream314 git pages/2012.png
+    - 2012/additional media/Puzzle chart/Chart.webp
+    - 2012/additional media/Unverified and Leaked information/0l2KtQL.jpg
+    - 2012/additional media/Unverified and Leaked information/EiIpyIW.png
+    - 2012/additional media/Unverified and Leaked information/x9Fo5K7.png
+    - 2012/additional media/images/1CcV1.jpg
+    - 2012/additional media/images/8D7hN.jpg
+    - 2012/additional media/images/EB1911_-_Volume_06.djvu.jpg
+    - 2012/additional media/images/KXLOP.jpg
+    - 2012/additional media/images/MIDI and seconde chance/NHYLD.jpg
+    - 2012/additional media/images/MIDI and seconde chance/hkdgl.png
+    - 2012/additional media/images/MIDI and seconde chance/mhh4.jpg
+    - 2012/additional media/images/The posters/Cicada_2012_poster_paris.jpg
+    - 2012/additional media/images/The posters/Poster2012Seul.jpg
+    - 2012/additional media/images/The posters/Poster_2012 us.jpg
+    - 2012/additional media/images/The posters/Poster_2012_seul.jpg
+    - 2012/additional media/images/The posters/Telegraphpole.jpg
+    - 2012/additional media/images/The posters/cAuUz.jpg
+    - 2012/additional media/images/UMa-nedknxEIvArh.png
+    - 2012/additional media/images/cicada (from the website).jpg
+    - 2012/additional media/images/cicada's reddit user.bmp
+    - 2012/additional media/images/donthaveoriginaloftihs.jpg
+    - 2012/additional media/images/everywhere.jpg
+    - 2012/additional media/images/m9sYK.jpg
+    - 2012/additional media/images/the subreddit.bmp
+    signed_message_candidates: 18
+    stego_candidates: 1
+    book_code_candidates: 3
+    website_snapshots: 37
+    physical_world_artifacts: 12
+    audio_video_artifacts: 2
+    source_gaps: []
+    summary: 113 source-lock-relevant local archive artifacts classified for 2012.
+  '2013':
+    route_directory_present: true
+    route_docs:
+    - 2013/2013 - what happend part 1.docx
+    - 2013/2013 - what happend part 2.docx
+    - 2013/additional docs/Related wikipedia pages/Anglo-Saxon runes - Wikipedia.pdf
+    - 2013/additional docs/Related wikipedia pages/Numerical digit - Wikipedia.pdf
+    - 2013/additional docs/Related wikipedia pages/Prime number - Wikipedia.pdf
+    - 2013/additional docs/TOR 2.2 PAGE/TOR 2.2 PAGE.docx
+    - 2013/additional docs/The Leaked Email/Reddit thread discovering the leaked email
+      with pgp.pdf
+    - 2013/additional docs/The Leaked Email/WE GOT EMAILS.docx
+    - 2013/additional docs/The Leaked Email/hacker forum thread about 2013 leaked
+      email with pgp.pdf
+    - 2013/additional docs/scream314 github/2013.docx
+    image_artifacts:
+    - 2013/additional docs/TOR 2.2 PAGE/1.png
+    - 2013/additional docs/The Leaked Email/screenshot from hacker-forum.png
+    - 2013/additional docs/scream314 github/2013.png
+    - 2013/additional files/The twitter/34a87d4db5cdcdf30785cf0a1dd71bba_400x400.png
+    - 2013/additional files/The twitter/the twitter.bmp
+    - 2013/additional files/Winners leak/0iKcgK8.png
+    - 2013/additional files/Winners leak/KaGgU2j.jpg
+    - 2013/additional files/Winners leak/L2N80rG.jpg
+    - 2013/additional files/Winners leak/aWOcomB.jpg
+    - 2013/additional files/Winners leak/cChYewZ.png
+    - 2013/additional files/Winners leak/inVmnbQ.jpg
+    - 2013/additional images/1357366592898.jpg
+    - 2013/additional images/1357373692810.jpg
+    - 2013/additional images/761 extra metadata.png
+    - 2013/additional images/A draft spectral anlysis.png
+    - 2013/additional images/Posters/EKoUaoV.jpg
+    - 2013/additional images/Posters/GA.jpg
+    - 2013/additional images/Posters/MWKGq.jpg
+    - 2013/additional images/Posters/Portland2013poster.jpg
+    - 2013/additional images/Posters/Screenshot_21.jpg
+    - 2013/additional images/Testout.jpg
+    - 2013/additional images/e4RE2.jpg
+    - 2013/additional images/the end questions/1ZND6M7.jpg
+    - 2013/additional images/the end questions/4XAalwX.jpg
+    - 2013/additional images/the end questions/8MThJBS.jpg
+    signed_message_candidates: 15
+    stego_candidates: 2
+    book_code_candidates: 1
+    website_snapshots: 0
+    physical_world_artifacts: 5
+    audio_video_artifacts: 3
+    source_gaps: []
+    summary: 87 source-lock-relevant local archive artifacts classified for 2013.
+  '2014':
+    route_directory_present: true
+    route_docs:
+    - 2014/2014 - What Happened Part 1.docx
+    - 2014/2014 - What Happened Part 2; Liber Primus (POST 2014).docx
+    - 2014/2014 - What Happened Part 2; Liber Primus (POST 2014).pdf
+    - 2014/Liber Primus/lp-full-english transcript.docx
+    - 2014/Liber Primus/runs numerical transcript.docx
+    - 2014/Liber Primus/the runes in text format.docx
+    - 2014/additional docs/Self-Reliance and Other Essays/Self-Reliance - Wikipedia.pdf
+    - 2014/additional docs/Self-Reliance and Other Essays/Self-Reliance and Other
+      Essays.pdf
+    - 2014/additional docs/scream314 github/2014.docx
+    - 2014/additional docs/scream314 github/LP.docx
+    - 2014/additional docs/scripts/programs' site/CADO-NFS.pdf
+    - 2014/additional docs/scripts/programs' site/thttpd.pdf
+    - 2014/additional docs/scripts/runes script in python.docx
+    image_artifacts:
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/0.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/1.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/10.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/11.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/12.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/13.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/14.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/15.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/16.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/17.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/18.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/19.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/2.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/20.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/21.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/22.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/23.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/24.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/25.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/26.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/27.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/28.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/29.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/3.jpg
+    - 2014/Liber Primus/A drop box of all unmodified files/2014onion7/30.jpg
+    signed_message_candidates: 16
+    stego_candidates: 13
+    book_code_candidates: 0
+    website_snapshots: 35
+    physical_world_artifacts: 1
+    audio_video_artifacts: 2
+    source_gaps: []
+    summary: 303 source-lock-relevant local archive artifacts classified for 2014.
+  '2015':
+    route_directory_present: true
+    route_docs:
+    - 2015/Cicada Breaks the Silence 2015 Twitter Message.docx
+    - 2015/Cicada Breaks the Silence 2015 Twitter Message.pdf
+    - 2015/extra docs/scream314 github.docx
+    image_artifacts:
+    - 2015/images/Kleogoodpgp.jpg
+    - 2015/images/Messagetxtasc.jpg
+    - 2015/images/Necrome.jpg
+    - 2015/images/Plannedp.jpg
+    - 2015/images/Screenshot_2015-11-17_09.35.05.png
+    signed_message_candidates: 4
+    stego_candidates: 0
+    book_code_candidates: 0
+    website_snapshots: 0
+    physical_world_artifacts: 0
+    audio_video_artifacts: 0
+    source_gaps: []
+    summary: 9 source-lock-relevant local archive artifacts classified for 2015.
+  '2016':
+    route_directory_present: true
+    route_docs:
+    - 2016/2016/2016 puzzle.docx
+    - 2016/2016/additional docs/scream314 github.docx
+    image_artifacts:
+    - 2016/2016/additional images/28_-_G8mJjnF.jpg
+    - 2016/2016/additional images/33_-_RaU4eGi.jpg
+    - 2016/2016/additional images/4gq25.jpg
+    - 2016/2016/additional images/4gq25_(processed).jpg
+    - 2016/2016/additional images/56_-_g9FD0Fb.jpg
+    - 2016/2016/additional images/Fibotree.png
+    - 2016/2016/additional images/Saproling.png
+    - 2016/2016/additional images/Screenshot_from_2016-01-15_02-52-43.png
+    - 2016/2016/additional images/abcy97qTL.jpeg
+    signed_message_candidates: 1
+    stego_candidates: 0
+    book_code_candidates: 0
+    website_snapshots: 0
+    physical_world_artifacts: 0
+    audio_video_artifacts: 0
+    source_gaps: []
+    summary: 13 source-lock-relevant local archive artifacts classified for 2016.
+  '2017':
+    route_directory_present: true
+    route_docs:
+    - 2017/PGP Signed Message April 2017.docx
+    - 2017/PGP Signed Message April 2017.pdf
+    image_artifacts:
+    - 2017/additional images/1ma7Gwq.png
+    - 2017/additional images/Discordisfornonces.png
+    - 2017/additional images/download.png
+    - 2017/additional images/download2.png
+    signed_message_candidates: 3
+    stego_candidates: 0
+    book_code_candidates: 0
+    website_snapshots: 0
+    physical_world_artifacts: 0
+    audio_video_artifacts: 0
+    source_gaps: []
+    summary: 7 source-lock-relevant local archive artifacts classified for 2017.
+raw_archive_files_committed: false
+execution_performed: false

@@ -1,0 +1,126 @@
+"""Constants for Stage 5BF historical route source-lock records."""
+
+from __future__ import annotations
+
+from pathlib import Path
+
+STAGE_ID = "stage-5bf"
+UPSTREAM_URL = "https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive"
+PREFERRED_ARCHIVE = Path("third_party/CicadaSolversIddqd")
+FALLBACK_ARCHIVE = Path("O:/Programming/LiberPrimusSolver/third_party/CicadaSolversIddqd")
+RESULTS_DIR = Path("experiments/results/historical-route/stage5bf")
+CONTENT_PACK_DIR = Path("deep-research-content-packs/stage5bf")
+
+YEARS = ("2012", "2013", "2014", "2015", "2016", "2017")
+EXPECTED_TOP_LEVEL = (*YEARS, "Archive", "EXTRA WIKI PAGES", "assets")
+
+TRUST_CLASSES = (
+    "primary_signed_or_hashable",
+    "primary_binary_or_image_artifact_needed",
+    "archived_local_file_hash_locked",
+    "pgp_block_present_not_verified",
+    "pgp_verified_by_prior_source_claim_only",
+    "secondary_wiki_route_description",
+    "speculative_community_analysis",
+    "not_yet_source_locked",
+    "out_of_scope_media_or_context",
+    "rejected_duplicate_or_derived",
+)
+
+ARTIFACT_FAMILIES = (
+    "pgp_signed_message",
+    "pgp_public_key_reference",
+    "pgp_key_id_reference",
+    "signed_message_claim",
+    "unsigned_or_disputed_message",
+    "2017_false_paths_warning",
+    "2015_false_claim_refutation",
+    "outguess_source_image_candidate",
+    "outguess_extracted_payload_text_present",
+    "outguess_expected_payload_missing",
+    "openpuff_source_audio_candidate",
+    "openpuff_extracted_payload_text_present",
+    "mp3stego_candidate",
+    "interconnectedness_mp3_candidate",
+    "hidden_payload_tool_reference",
+    "hex_block",
+    "hex_to_binary",
+    "hex_to_jpeg_extraction",
+    "jpeg_sequence",
+    "reversed_order_image_sequence",
+    "non_reversed_order_image_sequence",
+    "image_payload_candidate",
+    "image_payload_extracted_text_present",
+    "magic_square",
+    "number_square",
+    "border_number_signal",
+    "prime_sequence",
+    "prime_count_spacing",
+    "sexagesimal_or_base60_candidate",
+    "gematria_prime_mapping",
+    "missing_prime_sequence",
+    "red_3299_or_prime_grid_candidate",
+    "book_code",
+    "liber_al_book_code",
+    "mabinogion_book_code",
+    "godel_escher_bach_book_code",
+    "whitespace_binary_payload",
+    "ascii_payload",
+    "telnet_instruction",
+    "server_status_payload",
+    "ping_reply_byte_payload",
+    "apache_status_record",
+    "tcp_server_script",
+    "script_or_code_artifact",
+    "cicada_os_artifact",
+    "onion_url",
+    "tor_hidden_service_requirement",
+    "cgi_upload_requirement",
+    "subreddit_stage",
+    "twitter_stage",
+    "physical_poster",
+    "qr_code",
+    "gps_coordinate_stage",
+    "phone_call",
+    "midi_puzzle",
+    "shamir_secret_sharing",
+    "self_reliance_reference",
+    "old_site_snapshot",
+    "liber_primus_page_image",
+    "liber_primus_pre_dump_page",
+    "liber_primus_transcript",
+    "liber_primus_rune_text",
+    "liber_primus_numeric_transcript",
+    "liber_primus_enhanced_image",
+    "liber_primus_unmodified_dropbox_file",
+    "liber_primus_post_2014_analysis",
+)
+
+DATA_PATHS = {
+    "archive_location": Path("data/historical-route/stage5bf-local-archive-location.yaml"),
+    "tree_summary": Path("data/historical-route/stage5bf-archive-tree-summary.yaml"),
+    "inventory_summary": Path("data/historical-route/stage5bf-archive-source-inventory-summary.yaml"),
+    "annual_route_inventory": Path("data/historical-route/stage5bf-annual-route-inventory.yaml"),
+    "high_priority_index": Path("data/historical-route/stage5bf-high-priority-artifact-index.yaml"),
+    "family_taxonomy": Path("data/historical-route/stage5bf-artifact-family-taxonomy.yaml"),
+    "trust_policy": Path("data/historical-route/stage5bf-trust-classification-policy.yaml"),
+    "trust_classifications": Path("data/historical-route/stage5bf-artifact-trust-classifications.yaml"),
+    "pgp": Path("data/historical-route/stage5bf-pgp-source-lock-candidates.yaml"),
+    "stego": Path("data/historical-route/stage5bf-stego-source-lock-candidates.yaml"),
+    "outguess": Path("data/historical-route/stage5bf-outguess-positive-control-candidates.yaml"),
+    "openpuff": Path("data/historical-route/stage5bf-openpuff-mp3-candidates.yaml"),
+    "magic_squares": Path("data/historical-route/stage5bf-magic-square-artifacts.yaml"),
+    "hex_jpeg": Path("data/historical-route/stage5bf-hex-jpeg-extraction-candidates.yaml"),
+    "onion": Path("data/historical-route/stage5bf-onion-route-artifacts.yaml"),
+    "book_codes": Path("data/historical-route/stage5bf-book-code-artifacts.yaml"),
+    "network_byte": Path("data/historical-route/stage5bf-network-byte-channel-artifacts.yaml"),
+    "liber_primus": Path("data/historical-route/stage5bf-liber-primus-historical-artifacts.yaml"),
+    "technique_taxonomy": Path("data/historical-route/stage5bf-historical-technique-taxonomy.yaml"),
+    "token_block_impact": Path("data/historical-route/stage5bf-token-block-planning-impact.yaml"),
+    "source_gaps": Path("data/historical-route/stage5bf-source-gap-register.yaml"),
+    "readiness": Path("data/historical-route/stage5bf-deep-research-readiness.yaml"),
+    "dwh_context": Path("data/historical-route/stage5bf-dwh-historical-context.yaml"),
+    "guardrail": Path("data/historical-route/stage5bf-guardrail.yaml"),
+    "next_stage": Path("data/project-state/stage5bf-next-stage-decision.yaml"),
+    "summary": Path("data/project-state/stage5bf-summary.yaml"),
+}

@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5BB" `
-        --expected-next-stage "Stage 5BC" `
+        --expected-latest-stage "Stage 5BF" `
+        --expected-next-stage "Stage 5BG" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5BB" `
-        --expected-next-stage "Stage 5BC" `
+        --expected-latest-stage "Stage 5BF" `
+        --expected-next-stage "Stage 5BG" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5BB",
+        expected_latest_stage="Stage 5BF",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5BB",
+            "expected_latest_stage": "Stage 5BF",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2467,6 +2467,16 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q "deep-research-repo-zips/stage5bd/ARCHIVE_MANIFEST.json"
     git check-ignore -q "deep-research-repo-zips/stage5bd/stage5bd-repo.zip"
     git check-ignore -q "codex-output/stage5bd-codex-completion.md"
+
+    Write-Host "Validating Stage 5BF historical route source-lock records"
+    $Stage5BFResultsRoot = Join-Path (Join-Path "experiments" "results") "historical-route/stage5bf"
+    & $Python -m libreprimus.cli historical-route validate-stage5bf --results-dir $Stage5BFResultsRoot
+    git check-ignore -q (Join-Path $Stage5BFResultsRoot "full_archive_file_inventory.jsonl")
+    git check-ignore -q (Join-Path $Stage5BFResultsRoot "high_priority_artifact_index.json")
+    git check-ignore -q (Join-Path $Stage5BFResultsRoot "summary.json")
+    git check-ignore -q "deep-research-content-packs/stage5bf/historical-route-source-lock-pack.zip"
+    git check-ignore -q "deep-research-repo-zips/stage5bf/stage5bf-repo.zip"
+    git check-ignore -q "codex-output/stage5bf-codex-completion.md"
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

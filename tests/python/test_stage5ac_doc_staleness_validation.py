@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5bd_latest_and_stage5be_next() -> None:
+def test_operational_docs_use_stage5bf_latest_and_stage5bg_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5BD token-block preflight dry-run implementation" in status
-    assert "Next recommended prompt: Stage 5BE" in status
-    assert "Latest completed stage: Stage 5BD" in staged_plan
-    assert "Current planning focus: Stage 5BE" in staged_plan
+    assert "Stage 5BF historical route source-lock and technique extraction" in status
+    assert "Next recommended prompt: Stage 5BG" in status
+    assert "Latest completed stage: Stage 5BF" in staged_plan
+    assert "Current planning focus: Stage 5BG" in staged_plan

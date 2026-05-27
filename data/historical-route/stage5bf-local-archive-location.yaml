@@ -1,0 +1,35 @@
+record_type: stage5bf_local_archive_location
+schema: schemas/historical-route/local-archive-location-v0.schema.json
+stage_id: stage-5bf
+status: complete
+preferred_relative_path: third_party/CicadaSolversIddqd
+fallback_absolute_path: null
+fallback_absolute_path_recorded: false
+fallback_path_policy: not_recorded_to_avoid_absolute_local_paths
+fallback_path_available: true
+selected_archive_path: third_party/CicadaSolversIddqd
+selected_archive_path_kind: project_relative
+archive_available: true
+archive_root_detected: true
+archive_root_contains_expected_markers: true
+expected_top_level_markers:
+  '2012': true
+  '2013': true
+  '2014': true
+  '2015': true
+  '2016': true
+  '2017': true
+  Archive: true
+  EXTRA WIKI PAGES: true
+  assets: true
+upstream_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+upstream_clone_performed: false
+network_fetch_performed: false
+local_git_directory_present: false
+local_git_commit: null
+local_git_branch: null
+local_git_remote_url: null
+local_git_dirty: null
+local_archive_tree_digest: bdc8739120be85fc7015e495704ee80bc80ef3a25cfc32c43e3b4d7de40270af
+total_file_count_seen_for_digest: 1243
+raw_archive_files_committed: false

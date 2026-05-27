@@ -1,0 +1,75 @@
+record_type: stage5bf_archive_source_inventory_summary
+schema: schemas/historical-route/archive-source-inventory-summary-v0.schema.json
+stage_id: stage-5bf
+archive_available: true
+total_file_count: 1243
+total_size_bytes: 838987564
+file_count_by_year_or_scope:
+  .gitkeep: 1
+  '2012': 140
+  '2013': 101
+  '2014': 321
+  '2015': 10
+  '2016': 16
+  '2017': 10
+  Archive: 176
+  EXTRA WIKI PAGES: 129
+  README.md: 1
+  assets: 338
+file_count_by_extension:
+  '.00': 2
+  '.1': 2
+  '.13': 2
+  '.17': 2
+  '.2': 2
+  '.3': 1
+  .7z: 1
+  .asc: 4
+  .bin: 10
+  .bmp: 5
+  .bz2: 1
+  .c: 1
+  .cpp: 1
+  .css: 13
+  .data: 1
+  .dec: 3
+  .decoded: 2
+  .decrypted: 4
+  .docx: 130
+  .gif: 9
+  .gz: 1
+  .headers: 1
+  .hex: 4
+  .html: 20
+  .jpeg: 5
+  .jpg: 520
+  .md: 24
+  .method: 3
+  .mid: 1
+  .mp3: 7
+  .mp4: 14
+  .onion: 1
+  .out: 13
+  .outguess: 18
+  .pdf: 128
+  .pm: 2
+  .png: 64
+  .py: 11
+  .rev: 10
+  .runes: 1
+  .sh: 1
+  .srt: 2
+  .transcribed: 1
+  .txt: 165
+  .webp: 2
+  .xlsx: 1
+  .zip: 1
+  ".\u05D4\u05D5\u05E8\u05D3\u05D4": 5
+  '[none]': 21
+top_level_directory_count: 9
+hash_manifest_sha256: bdc8739120be85fc7015e495704ee80bc80ef3a25cfc32c43e3b4d7de40270af
+full_inventory_output: experiments/results/historical-route/stage5bf/full_archive_file_inventory.jsonl
+full_inventory_committed: false
+raw_archive_files_committed: false
+high_priority_artifact_count: 1043
+source_gap_count: 4

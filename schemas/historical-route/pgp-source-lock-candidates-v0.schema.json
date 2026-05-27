@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["record_type","schema","stage_id","pgp_candidate_count","verification_performed","network_keyserver_fetch_performed"],"properties":{"stage_id":{"const":"stage-5bf"},"verification_performed":{"const":false},"network_keyserver_fetch_performed":{"const":false}},"additionalProperties":true}

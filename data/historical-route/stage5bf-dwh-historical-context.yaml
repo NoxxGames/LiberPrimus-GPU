@@ -1,0 +1,13 @@
+record_type: stage5bf_dwh_historical_context
+schema: schemas/historical-route/dwh-historical-context-v0.schema.json
+stage_id: stage-5bf
+dwh_defined: true
+dwh_expansion: Deep Web Hash
+historical_route_relevance: historical route corpus may constrain future DWH-source-lock
+  assumptions but does not make DWH operational
+dwh_operational_status: not_operational
+hash_search_performed: false
+hash_comparison_performed: false
+hash_preimage_claim: false
+decode_claim: false
+token_block_dwh_relationship_status: speculative_source_lock_required

@@ -1,0 +1,449 @@
+record_type: stage5bf_book_code_artifacts
+schema: schemas/historical-route/book-code-artifacts-v0.schema.json
+stage_id: stage-5bf
+candidate_count: 14
+source_lock_only: true
+execution_performed: false
+hash_search_performed: false
+decode_attempt_performed: false
+raw_archive_files_committed: false
+artifacts:
+- artifact_id: stage5bf-882aba335cb0da29
+  year_or_scope: '2012'
+  artifact_family: mabinogion_book_code
+  artifact_families:
+  - mabinogion_book_code
+  - subreddit_stage
+  relative_path: 2012/additional docs/the subreddit/the mabinogion.txt
+  sha256: 39497d6c9314bdbbeb33e7b89a1b06dc11730630b09217da1d459bddb2088641
+  size_bytes: 4663
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 69
+    metadata_text_digest: 8b2c4f18c2ebbfac5ad93b686696417a9a4822a301f551cfdd03d53ae7c8ede0
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 888
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-e2316bc81b08ae34
+  year_or_scope: '2012'
+  artifact_family: book_code
+  artifact_families:
+  - book_code
+  relative_path: 2012/additional docs/the unsolved book code/Encyclopaedia Britannica,
+    11th Edition - the book from the book code.txt
+  sha256: 8c8f8365c898711a86a5428876861c37c4b310a80bec3c2dada1effa3c7bb17e
+  size_bytes: 1167103
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 18890
+    metadata_text_digest: 258ecacce1f0292608345ab7efee9ba7a760cf7828353fe33de6bcb6616224f9
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 10
+    word_count: 191776
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: review_required_before_future_token_block_planning
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-f7a05b1793362623
+  year_or_scope: '2012'
+  artifact_family: book_code
+  artifact_families:
+  - book_code
+  relative_path: 2012/additional docs/the unsolved book code/the june 2017 edit.docx
+  sha256: b2d678e0497f42f34cde199a483a10c843e610fc83da53271761550982837baf
+  size_bytes: 14791
+  extension: .docx
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 1
+    metadata_text_digest: da2f6423c45f876d8dda8098da7b61ed7a703ab96cd5e54eafc1a95edcd048d0
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 212
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: review_required_before_future_token_block_planning
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-315738610bd602cd
+  year_or_scope: '2013'
+  artifact_family: book_code
+  artifact_families:
+  - book_code
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2013/additional docs/signed messages/book code pastebin.txt
+  sha256: 8b924d763df26c93146f5bbccdfd844accf50b983c0cc3171f15d9a748749197
+  size_bytes: 1539
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 82
+    metadata_text_digest: 42487ed952536213067d728954abd82de53cbd2c9d098f9de4d1f52b166d5e5d
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 224
+  trust_class: pgp_block_present_not_verified
+  route_relevance: core_historical_route
+  token_block_planning_relevance: review_required_before_future_token_block_planning
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-2dff66e637a56864
+  year_or_scope: '2014'
+  artifact_family: self_reliance_reference
+  artifact_families:
+  - self_reliance_reference
+  relative_path: 2014/additional docs/Self-Reliance and Other Essays/Self-Reliance
+    - Wikipedia.pdf
+  sha256: 798673679c0b3ebf7d0c54f88a3b8d604ee45082b3350be742f2bb05b3dbe2ac
+  size_bytes: 537541
+  extension: .pdf
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-089634e24a048dd8
+  year_or_scope: '2014'
+  artifact_family: self_reliance_reference
+  artifact_families:
+  - self_reliance_reference
+  relative_path: 2014/additional docs/Self-Reliance and Other Essays/Self-Reliance
+    and Other Essays.pdf
+  sha256: fee032e9ff4f2429fccc120831f9ad7a6d27d36f70828f037c191d5f34900abd
+  size_bytes: 116939
+  extension: .pdf
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-ea0865e98ea24077
+  year_or_scope: '2014'
+  artifact_family: godel_escher_bach_book_code
+  artifact_families:
+  - godel_escher_bach_book_code
+  - image_payload_candidate
+  - jpeg_sequence
+  relative_path: 2014/additional images/godel escher bach/Brotherboxportrait.jpg
+  sha256: b3696f3fe3fbd128de34466226bd7b484f2052e9ee772002164a8c336b143803
+  size_bytes: 359282
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-7ee237a913f724ba
+  year_or_scope: '2014'
+  artifact_family: godel_escher_bach_book_code
+  artifact_families:
+  - godel_escher_bach_book_code
+  - image_payload_candidate
+  - jpeg_sequence
+  relative_path: 2014/additional images/godel escher bach/Eyebyext.jpg
+  sha256: 6bd3d8011bad9a2593aa64e4b885ac8470e54a6a246b447a3995c2229cd98b79
+  size_bytes: 1635
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-82d28b3ba8bbda61
+  year_or_scope: '2014'
+  artifact_family: godel_escher_bach_book_code
+  artifact_families:
+  - godel_escher_bach_book_code
+  - image_payload_candidate
+  relative_path: 2014/additional images/godel escher bach/Eyebyext.png
+  sha256: 0b4a1d5498da0337f21e6e1be2de4fb3053702a9afd59a1de0b6e63b486f9018
+  size_bytes: 14369
+  extension: .png
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-6040c832f5a58078
+  year_or_scope: '2014'
+  artifact_family: godel_escher_bach_book_code
+  artifact_families:
+  - godel_escher_bach_book_code
+  - image_payload_candidate
+  - jpeg_sequence
+  relative_path: 2014/additional images/godel escher bach/Goedel.jpg
+  sha256: 4d66a03af8c3d7880297bce4056d3275f3b02ec00bc7051e36e80509f1d0ea9b
+  size_bytes: 1084
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-128ad19ffaeca9aa
+  year_or_scope: '2014'
+  artifact_family: godel_escher_bach_book_code
+  artifact_families:
+  - godel_escher_bach_book_code
+  - image_payload_candidate
+  relative_path: 2014/additional images/godel escher bach/Goedel.png
+  sha256: 670ac0ca1b5219c4795507e8d2e1e20035fd18e6ce6d861195b08fc43f77fbab
+  size_bytes: 3862
+  extension: .png
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-7e47b14d5f9e9863
+  year_or_scope: '2014'
+  artifact_family: godel_escher_bach_book_code
+  artifact_families:
+  - godel_escher_bach_book_code
+  - image_payload_candidate
+  - jpeg_sequence
+  relative_path: 2014/additional images/godel escher bach/Img_diff2.jpg
+  sha256: 815693525c8763305b405cd7a8a8367a4bc8558e6eb94a145e2d36dafd52731f
+  size_bytes: 982612
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-ce099f8820532d95
+  year_or_scope: Archive
+  artifact_family: liber_al_book_code
+  artifact_families:
+  - liber_al_book_code
+  relative_path: Archive/Media coverage/cicada3301.boards.net/Theories/Is Liber Al
+    Legis the key.docx
+  sha256: 490c51e17d57ec6de288b847e4623cb5cd562653b8c5f3cb357c090e5a513fec
+  size_bytes: 15441
+  extension: .docx
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 1
+    metadata_text_digest: ea4287423edbf573e7e806151232323cacec9e7b70dfd19b6d3d69f45343d2ff
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 242
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-77304e2fb2b69416
+  year_or_scope: Archive
+  artifact_family: liber_al_book_code
+  artifact_families:
+  - liber_al_book_code
+  - old_site_snapshot
+  relative_path: Archive/Old Sites/cicada3301.boards.net/Theories/Is Liber Al Legis
+    the key.docx
+  sha256: 490c51e17d57ec6de288b847e4623cb5cd562653b8c5f3cb357c090e5a513fec
+  size_bytes: 15441
+  extension: .docx
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 1
+    metadata_text_digest: ea4287423edbf573e7e806151232323cacec9e7b70dfd19b6d3d69f45343d2ff
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 242
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.

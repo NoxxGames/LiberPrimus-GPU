@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["record_type","schema","stage_id","candidate_count","source_lock_only","execution_performed"],"properties":{"stage_id":{"const":"stage-5bf"},"source_lock_only":{"const":true},"execution_performed":{"const":false},"decode_attempt_performed":{"const":false}},"additionalProperties":true}

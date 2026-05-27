@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5BD token-block preflight dry-run implementation without byte-stream generation is complete.
+Stage 5BF historical route source-lock and technique extraction is complete.
 
-Next recommended prompt: Stage 5BE - Deep Research review of token-block preflight dry-run implementation, archive/evidence hygiene, and execution-gate enforcement. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5BG - Deep Research historical route source-lock review. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5BF
+
+Stage 5BF source-locks the local 2012-2017 Cicada historical route archive under `third_party/CicadaSolversIddqd` as metadata only. It records the selected archive path, tree digest, inventory summary, annual route inventories, high-priority artefact index, trust-classification policy, PGP/stego/OutGuess/OpenPuff/MP3/magic-square/hex-JPEG/onion/book-code/network-byte-channel/Liber Primus candidate records, historical technique taxonomy, token-block planning impact, source gaps, Deep Research readiness, DWH context, guardrails, and Stage 5BG next-stage decision.
+
+Local Stage 5BF summary: archive files `1243`, archive size `838987564` bytes, high-priority artefacts `1043`, PGP candidates `96`, stego candidates `80`, OutGuess candidates `61`, OpenPuff/MP3 candidates `7`, magic-square artefacts `7`, hex/JPEG candidates `595`, onion artefacts `293`, book-code artefacts `14`, network-byte-channel artefacts `12`, Liber Primus historical artefacts `257`, source gaps `4`, and archive tree digest `bdc8739120be85fc7015e495704ee80bc80ef3a25cfc32c43e3b4d7de40270af`.
+
+Stage 5BF is historical source-lock infrastructure only. It does not clone online sources, scrape live sites, verify PGP online, run stego tools, run OutGuess/OpenPuff/MP3Stego, run OCR, use AI/ML or LLM vision, perform hidden-content image forensics, generate token-block byte streams, materialise variants, enumerate branch products, run DWH/hash/preimage search, compare hashes, decode, score, run CUDA, benchmark, publish website content, upgrade method status, alter Stage 5BD dry-run records, or make solve claims.
 
 ## Completed in Stage 5BD
 
@@ -1030,4 +1038,4 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 
 ## Next prompt recommendation
 
-Stage 5BE - Deep Research review of token-block preflight dry-run implementation, archive/evidence hygiene, and execution-gate enforcement. Use the Stage 5BD dry-run policy, active-manifest lock, run-plan ID policy/registry, dry-run plan manifest, future result-path validation, family counters, fixture-only records, execution-gate validation, no-byte-stream proof, Stage 5BB validation-evidence consolidation, archive marker policy, DWH context, guardrails, and summary records; keep token experiment execution, variant byte-stream generation, Cartesian enumeration, DWH/hash/preimage search, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, and solve claims blocked unless a later prompt explicitly scopes execution.
+Stage 5BG - Deep Research review of 2012-2017 historical route source-lock, technique taxonomy, and impact on future token-block dry-run planning. Use the Stage 5BF archive location, tree/inventory summaries, annual route inventories, high-priority artifact index, trust classifications, specialized artifact records, technique taxonomy, DWH historical context, token-block planning impact, source-gap register, guardrail, and summary records; keep token experiment execution, variant byte-stream generation, Cartesian enumeration, DWH/hash/preimage search, historical stego execution, online PGP verification, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, website publication, and solve claims blocked unless a later prompt explicitly scopes execution.

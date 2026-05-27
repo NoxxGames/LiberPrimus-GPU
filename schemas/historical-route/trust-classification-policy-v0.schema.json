@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["record_type","schema","stage_id","trust_classes","local_file_hash_proves_originality"],"properties":{"stage_id":{"const":"stage-5bf"},"local_file_hash_proves_originality":{"const":false},"raw_archive_files_committed":{"const":false}},"additionalProperties":true}

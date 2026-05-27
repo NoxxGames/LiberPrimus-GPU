@@ -1,0 +1,26 @@
+record_type: stage5bf_trust_classification_policy
+schema: schemas/historical-route/trust-classification-policy-v0.schema.json
+stage_id: stage-5bf
+trust_classes:
+- trust_class: primary_signed_or_hashable
+  meaning: Stage 5BF provenance classification; not a solve or authenticity proof.
+- trust_class: primary_binary_or_image_artifact_needed
+  meaning: Stage 5BF provenance classification; not a solve or authenticity proof.
+- trust_class: archived_local_file_hash_locked
+  meaning: Stage 5BF provenance classification; not a solve or authenticity proof.
+- trust_class: pgp_block_present_not_verified
+  meaning: Stage 5BF provenance classification; not a solve or authenticity proof.
+- trust_class: pgp_verified_by_prior_source_claim_only
+  meaning: Stage 5BF provenance classification; not a solve or authenticity proof.
+- trust_class: secondary_wiki_route_description
+  meaning: Stage 5BF provenance classification; not a solve or authenticity proof.
+- trust_class: speculative_community_analysis
+  meaning: Stage 5BF provenance classification; not a solve or authenticity proof.
+- trust_class: not_yet_source_locked
+  meaning: Stage 5BF provenance classification; not a solve or authenticity proof.
+- trust_class: out_of_scope_media_or_context
+  meaning: Stage 5BF provenance classification; not a solve or authenticity proof.
+- trust_class: rejected_duplicate_or_derived
+  meaning: Stage 5BF provenance classification; not a solve or authenticity proof.
+local_file_hash_proves_originality: false
+raw_archive_files_committed: false

@@ -1,0 +1,2544 @@
+record_type: stage5bf_stego_source_lock_candidates
+schema: schemas/historical-route/stego-source-lock-candidates-v0.schema.json
+stage_id: stage-5bf
+stego_tool_execution_performed: false
+outguess_execution_performed: false
+openpuff_execution_performed: false
+mp3stego_execution_performed: false
+candidate_count: 80
+ready_positive_control_count: 0
+partial_positive_control_count: 80
+blocked_candidate_count: 80
+candidates:
+- artifact_id: stage5bf-09a89ef4e6072c1d
+  year_or_scope: '2012'
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - outguess_extracted_payload_text_present
+  relative_path: 2012/additional docs/outguss/1CcV1.jpg.out
+  sha256: 7dbf268b1b356527cf4a2dc105c0dd1f6d2d703291dda24dd9e98e22851d6f40
+  size_bytes: 535
+  extension: .out
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 84
+    metadata_text_digest: 17564bc24009708d4fc074b6fdf4cc4937b3dc4f0e8774ca45a159e20e671707
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 1
+    word_count: 175
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-7beb8940ba27c5f6
+  year_or_scope: '2012'
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - outguess_extracted_payload_text_present
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2012/additional docs/outguss/8D7hN.jpg.out
+  sha256: f7d8e962db5f34a3e2300312c5ed150216974cae3b398fbc867b9dae727e1dab
+  size_bytes: 1041
+  extension: .out
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 29
+    metadata_text_digest: 335ff098f5f69c7fa77f23377680f0c345c9c234e957ca1da96fa044cf959d3b
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 82
+  trust_class: pgp_block_present_not_verified
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-5031ac431b5f9194
+  year_or_scope: '2012'
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - outguess_extracted_payload_text_present
+  - pgp_key_id_reference
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2012/additional docs/outguss/KXLOP.jpg.out
+  sha256: ce6c44a4c3daf6d5b3691f8894ddb59b10ab58514ce1a2e692caf9b86af7142a
+  size_bytes: 1089
+  extension: .out
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: true
+    line_count: 30
+    metadata_text_digest: 2b52cd43d790fc5ea2318609fbf00173d1d8da104adb4540ab6067470377817b
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 79
+  trust_class: pgp_block_present_not_verified
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-d70d7dec8d2b7a6a
+  year_or_scope: '2012'
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - outguess_extracted_payload_text_present
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2012/additional docs/outguss/NHYLD.jpg.out
+  sha256: 82b49ba4fe46ac32a80382ccd49d49f29371b787bc84409378ff25e2d45729cc
+  size_bytes: 1079
+  extension: .out
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 49
+    metadata_text_digest: dee807f1db557e367a075ccd4f65b4e3f22b1ac25b8502af7eebe9ce34425508
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 1
+    word_count: 112
+  trust_class: pgp_block_present_not_verified
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-2ba68d5a46e4da9c
+  year_or_scope: '2012'
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - outguess_extracted_payload_text_present
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2012/additional docs/outguss/cicada.jpg.out
+  sha256: 56013e89d00c5dc8a755f06da8c860c2cf20486ab1e02a5d58f134baa540f69e
+  size_bytes: 1221
+  extension: .out
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 34
+    metadata_text_digest: 9b94270a06538b03edc1ac95880cac9e238509dec8264ed1a017f58e286b42b3
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 103
+  trust_class: pgp_block_present_not_verified
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-fb221ba660c289bb
+  year_or_scope: '2012'
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - outguess_extracted_payload_text_present
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2012/additional docs/outguss/vjuNp.jpg.out
+  sha256: db68f6e38d5f8eab3f13cd3296465a5b562c84d581cc1121dda6ef9da9a8cb6b
+  size_bytes: 1398
+  extension: .out
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 43
+    metadata_text_digest: ee090e6a3e67b05f82b39cdbb5b495056eba20d68493a83fb4d83431fbf81a56
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 113
+  trust_class: pgp_block_present_not_verified
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-7d71551d2b91c906
+  year_or_scope: '2012'
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: 2012/additional docs/the outgussed messege.docx
+  sha256: ac23bf0379bf340da2c2b1961ce1af409f372f497fdd0d7432d5b68b93ee7255
+  size_bytes: 38618
+  extension: .docx
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 1
+    metadata_text_digest: 778e011b6de31ef7c7f31d3935fcacfdcc734a0d74ed5fc0b159c3a811728369
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 2
+    word_count: 200
+  trust_class: archived_local_file_hash_locked
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-3406288cb69456ca
+  year_or_scope: '2013'
+  artifact_family: hidden_payload_tool_reference
+  artifact_families:
+  - hidden_payload_tool_reference
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2013/additional docs/signed messages/Hidden content of original image
+    (January 4th 2013).txt
+  sha256: cbc0abbea8f36fdf30433806a3418b30ad06f21f60eeee212b1692e2d5c9811b
+  size_bytes: 1536
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 81
+    metadata_text_digest: 37c7cff698ede240216c88ab6daf1a4e0182265f402aa49ae67adc8064e98087
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 224
+  trust_class: pgp_block_present_not_verified
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-8bc622c867bde300
+  year_or_scope: '2013'
+  artifact_family: liber_primus_rune_text
+  artifact_families:
+  - liber_primus_rune_text
+  - outguess_source_image_candidate
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2013/additional docs/signed messages/OutGuessed message from rune
+    table.txt
+  sha256: 685aeec4217b1c76bb1cf64ba8f1c537e05895f4971d5c31ab6ed42d4460bd8b
+  size_bytes: 1469
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 28
+    metadata_text_digest: c40c59bf5f269abf03573793108fe625f52dcc95c4c49184fc8a5006cee37753
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 51
+  trust_class: pgp_block_present_not_verified
+  route_relevance: liber_primus_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-a8af532e07c2db99
+  year_or_scope: '2013'
+  artifact_family: cicada_os_artifact
+  artifact_families:
+  - cicada_os_artifact
+  - mp3stego_candidate
+  relative_path: 2013/additional files/Cicada OS/cicados/AUDIO/761.MP3
+  sha256: 83008217439110c3b824898af73b99cb2cf0657dda88cb363c3aa34a4ec0a460
+  size_bytes: 4010732
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-7917b2c890e5f336
+  year_or_scope: '2014'
+  artifact_family: interconnectedness_mp3_candidate
+  artifact_families:
+  - interconnectedness_mp3_candidate
+  - mp3stego_candidate
+  - old_site_snapshot
+  - onion_url
+  - tor_hidden_service_requirement
+  relative_path: 2014/Websites/Interconnectedness fron onion 5/3301 - Interconnectedness.mp3
+  sha256: 1ce3839b4a62462d9009c4469acc189b523e1bdcf338cb49cda1cd7bb4efffc6
+  size_bytes: 6651873
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-4c931d6455a344b9
+  year_or_scope: '2014'
+  artifact_family: mp3stego_candidate
+  artifact_families:
+  - mp3stego_candidate
+  - old_site_snapshot
+  - onion_url
+  - tor_hidden_service_requirement
+  relative_path: 2014/Websites/onion 5v2/c.mp3
+  sha256: f5719fec286ab0fcc88b36d1fcdd24f23c928b3cce75d437e8aa4f195069e03d
+  size_bytes: 9288
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-94eea395fcffce28
+  year_or_scope: '2014'
+  artifact_family: old_site_snapshot
+  artifact_families:
+  - old_site_snapshot
+  - onion_url
+  - outguess_source_image_candidate
+  - tor_hidden_service_requirement
+  relative_path: 2014/Websites/onion 5v2/img.outguess
+  sha256: cf57f8f9758b20d129b7a157afd26383e5d9209bbe76eb9f78ebe19a320997c7
+  size_bytes: 12683
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-e34988edc46ff601
+  year_or_scope: '2014'
+  artifact_family: old_site_snapshot
+  artifact_families:
+  - old_site_snapshot
+  - onion_url
+  - outguess_source_image_candidate
+  - tor_hidden_service_requirement
+  relative_path: 2014/Websites/onion 6/onion6.outguess
+  sha256: 56467e78411358a236479a867a073de1a6fe9be2572e19759be1128968b3feeb
+  size_bytes: 1234
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-5385d6d7d055a034
+  year_or_scope: '2014'
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: 2014/additional docs/Titanpads from time of solving/Final result
+    of XOR started last night; images and MP3 - outguss noise.txt
+  sha256: b12a67c0e79a009e5fe2ba73c4961e2a197f5fdb3fd8e2324144e244fe69f05d
+  size_bytes: 15875
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 323
+    metadata_text_digest: 78beb2e8e9a701c5f98929ff470fe5c5730a9c1b05561370bcfed797eb6785be
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 2574
+  trust_class: archived_local_file_hash_locked
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-6666ccc06099280d
+  year_or_scope: '2014'
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2014/additional docs/Titanpads from time of solving/Outguessing the
+    welcome image yields a signed message.txt
+  sha256: 59ce53a6dea9a4f4358636eb7476bafd65abec28ad02842d3c517bc1315c770b
+  size_bytes: 32340
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 533
+    metadata_text_digest: 635e52cd16c5f3becac4de5ce97f20708fe050e34f6d8e0ced8e1347659f7ccf
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 564
+  trust_class: pgp_block_present_not_verified
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-654e4a6ef3ffe6d2
+  year_or_scope: '2014'
+  artifact_family: onion_url
+  artifact_families:
+  - onion_url
+  - outguess_source_image_candidate
+  - tor_hidden_service_requirement
+  relative_path: 2014/additional docs/Titanpads from time of solving/onion4.image02.outguess.txt
+  sha256: 1c79279eeb8bb81fc32ca895ffb1d56f12bebe345e74ee17fe02fe28bcc90125
+  size_bytes: 144
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 8
+    metadata_text_digest: 7613cd3c5067ffa8116891f5a8ab96745d4ecfca2ef53df0dfce3338aa104f24
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 37
+  trust_class: archived_local_file_hash_locked
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-f01362aadc567a6a
+  year_or_scope: '2014'
+  artifact_family: onion_url
+  artifact_families:
+  - onion_url
+  - outguess_source_image_candidate
+  - pgp_signed_message
+  - signed_message_claim
+  - tor_hidden_service_requirement
+  relative_path: 2014/additional docs/Titanpads from time of solving/onion6.outguess02.dat.txt
+  sha256: c2ee79a9e68a7630e21b0ca6fe42dd8d6c6b6ec6212637c93665faa57512a946
+  size_bytes: 1275
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 43
+    metadata_text_digest: 8b57fab379fde79bc5888ee4015c47cf67e16217f32f6eaa37c7ae72ff2fc38c
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 103
+  trust_class: pgp_block_present_not_verified
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-5e8dd3e94788463f
+  year_or_scope: '2014'
+  artifact_family: onion_url
+  artifact_families:
+  - onion_url
+  - outguess_source_image_candidate
+  - tor_hidden_service_requirement
+  relative_path: 2014/additional docs/Titanpads from time of solving/the letters in
+    the outguess correspond to parables.txt
+  sha256: a3a63b390247631cc6c3f99f777c588d12287210f87c5432b293fecb8f988510
+  size_bytes: 1055
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 30
+    metadata_text_digest: 3e5a6b636c90f6447102ed3d1c66e630513863aba7c8ee5fb41a013a76b5a309
+    onion_url_count: 1
+    onion_urls:
+    - ut3qtzbrzvs7dtvzp.onion
+    url_count: 0
+    word_count: 165
+  trust_class: archived_local_file_hash_locked
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-0ac9bc312567fdb9
+  year_or_scope: '2014'
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2014/additional docs/outguss/intus outguss.txt
+  sha256: ec8594dff1a3b5db7e106ed7971c954fa48242ec9ce758efe4760ab1ead96f96
+  size_bytes: 2951
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 54
+    metadata_text_digest: acc0bfbf69e8f64c529903b733277c9f0f679d37ddabeb38169c8788640f951e
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 86
+  trust_class: pgp_block_present_not_verified
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-4cff5876d00dd2f1
+  year_or_scope: '2014'
+  artifact_family: liber_primus_transcript
+  artifact_families:
+  - liber_primus_transcript
+  - outguess_source_image_candidate
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2014/additional docs/outguss/liber primus 5 outguss.txt
+  sha256: 59ce53a6dea9a4f4358636eb7476bafd65abec28ad02842d3c517bc1315c770b
+  size_bytes: 32340
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 533
+    metadata_text_digest: 635e52cd16c5f3becac4de5ce97f20708fe050e34f6d8e0ced8e1347659f7ccf
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 564
+  trust_class: pgp_block_present_not_verified
+  route_relevance: liber_primus_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-0d2137a3a3decbbe
+  year_or_scope: '2014'
+  artifact_family: liber_primus_transcript
+  artifact_families:
+  - liber_primus_transcript
+  - outguess_source_image_candidate
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2014/additional docs/outguss/liber primus outguss.txt
+  sha256: aee36b637fafc77641bae197b7113ad46d9556c77c1c048f2fd19334a423a9d1
+  size_bytes: 2951
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 54
+    metadata_text_digest: 5db6ac9b0f5ebcac06c7b436a15a4443bcd1385215d82e8a45095c33883249ae
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 87
+  trust_class: pgp_block_present_not_verified
+  route_relevance: liber_primus_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-1ceb9971d0f1612f
+  year_or_scope: '2014'
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2014/additional docs/outguss/portrait outguss.txt
+  sha256: 55904a90db0b3fb1af059097617ee5d411867c7a940a3f978bf56fe875e82d18
+  size_bytes: 25994
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 453
+    metadata_text_digest: 859004bf18eba5c6b8b0cb502b85c8f1731fa77153793c029ce76c75c88205c7
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 537
+  trust_class: pgp_block_present_not_verified
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-0accad0009ab5460
+  year_or_scope: '2014'
+  artifact_family: liber_primus_rune_text
+  artifact_families:
+  - liber_primus_rune_text
+  - outguess_source_image_candidate
+  - pgp_signed_message
+  - signed_message_claim
+  relative_path: 2014/additional docs/outguss/runes outguss.txt
+  sha256: 18a497408a22c45d1f27a12cd5e2be96214164cb5bafa019ed41e0fd8004bef6
+  size_bytes: 2951
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: true
+    contains_pgp_signed_message_block: true
+    key_id_7a35090f_reference: false
+    line_count: 54
+    metadata_text_digest: c915bb0781ed653f75f5ca68740e0946ee5d47e8f06277c36a51380bf6608309
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 87
+  trust_class: pgp_block_present_not_verified
+  route_relevance: liber_primus_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-18b37d07f8592524
+  year_or_scope: '2014'
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: 2014/additional images/OutguessfromLiberPrimusPage6.jpg
+  sha256: 2e7c5b2f19e1edcda95534fb72a52aebf1a9d34619559b45a4425840c12d88a4
+  size_bytes: 15188
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-de5c5ebb4b4336ff
+  year_or_scope: Archive
+  artifact_family: mp3stego_candidate
+  artifact_families:
+  - mp3stego_candidate
+  relative_path: Archive/Media coverage/non text coverage/Cicada 3301 The Great Internet
+    Mystery Solved!.mp3
+  sha256: e836dcb932eede360d4959c88d6cb007871ae1b26ba035a8ffca17dcd174237f
+  size_bytes: 10938376
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-881c00851cd1d3cb
+  year_or_scope: Archive
+  artifact_family: old_site_snapshot
+  artifact_families:
+  - old_site_snapshot
+  - outguess_source_image_candidate
+  relative_path: Archive/Old Sites/3301Archive/walkthrough/2012 WALKTHROUGH/OUTGUSS.docx
+  sha256: dba7dc151483827013aa395755307a90b8dc801c6957ed509e8a468e2b16555a
+  size_bytes: 13301
+  extension: .docx
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 1
+    metadata_text_digest: 59f697553b68511e4da89aa855f521f412dd4b7a7b98b0e67365cc9d381bfbd8
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 64
+  trust_class: archived_local_file_hash_locked
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-600647bf128ad0e9
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: hidden_payload_tool_reference
+  artifact_families:
+  - hidden_payload_tool_reference
+  relative_path: EXTRA WIKI PAGES/Instar emergence (mp3 and hidden poem)/Instar emergence
+    (mp3 and hidden poem).docx
+  sha256: 076c7d480daf43704e6ff0d2f16fe9bf18a93adc30e0723fa8cd60295bcca76b
+  size_bytes: 2109485
+  extension: .docx
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 1
+    metadata_text_digest: 96fda5a5005fe4da7b37139c74d2248e71e09ca3421c9b9add578570253bfd05
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 23
+    word_count: 1163
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-f4e6ba7f12c57672
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: hidden_payload_tool_reference
+  artifact_families:
+  - hidden_payload_tool_reference
+  relative_path: EXTRA WIKI PAGES/Instar emergence (mp3 and hidden poem)/PiratePad_
+    hwffrkCznO.pdf
+  sha256: 006438affa6de5d7e7a7fb2ab83eb4e82f0a8da5f9dfe4d0c46854c92259315e
+  size_bytes: 177790
+  extension: .pdf
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-48900aa2b6d31fac
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: hidden_payload_tool_reference
+  artifact_families:
+  - hidden_payload_tool_reference
+  - image_payload_candidate
+  relative_path: EXTRA WIKI PAGES/Instar emergence (mp3 and hidden poem)/XrucW.png
+  sha256: d795d62325f79e02110c293f92ce40507752a1821bfbc0ef19e488b33ea017a1
+  size_bytes: 718990
+  extension: .png
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-b86b156eadae7035
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: hidden_payload_tool_reference
+  artifact_families:
+  - hidden_payload_tool_reference
+  - image_payload_candidate
+  relative_path: EXTRA WIKI PAGES/Instar emergence (mp3 and hidden poem)/analyse.png
+  sha256: c6f624bc5dd0063143eb88cb1a3d8db1f4e582bd815b3a7976db44eadaef38b0
+  size_bytes: 457372
+  extension: .png
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-51ec6eec3e7acb9d
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: hidden_payload_tool_reference
+  artifact_families:
+  - hidden_payload_tool_reference
+  - onion_url
+  - tor_hidden_service_requirement
+  relative_path: EXTRA WIKI PAGES/Instar emergence (mp3 and hidden poem)/cosmos posts
+    from 7th - full logs.txt
+  sha256: 366b468d8d125c7b3ddfe56e5b3bb10c2f454b572e8bb21062ec7f4a6cce8a82
+  size_bytes: 399787
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 5179
+    metadata_text_digest: 947a57c207e936e470d5d71943182513c722aa46d68a14f2c8c26386967478cb
+    onion_url_count: 2
+    onion_urls:
+    - emiwp4muu2ktwknf.onion
+    - xsxnaksict6egxkq.onion
+    url_count: 271
+    word_count: 76592
+  trust_class: archived_local_file_hash_locked
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-7992efe769ba10c1
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: hidden_payload_tool_reference
+  artifact_families:
+  - hidden_payload_tool_reference
+  - image_payload_candidate
+  relative_path: EXTRA WIKI PAGES/Instar emergence (mp3 and hidden poem)/hidden poem
+    1.png
+  sha256: 194cbd32ac7a4c4b5bddfa6c16d615402141e835145c695f7e1b763661898897
+  size_bytes: 23714
+  extension: .png
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-6b571b3094e3a107
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: hidden_payload_tool_reference
+  artifact_families:
+  - hidden_payload_tool_reference
+  - image_payload_candidate
+  relative_path: EXTRA WIKI PAGES/Instar emergence (mp3 and hidden poem)/hidden poem
+    2.png
+  sha256: 0e679ad13e7b9362a804bd044567ffaa9f1519c9ee36e338762348c91d220c9a
+  size_bytes: 65388
+  extension: .png
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-bb62508d0f83cbc7
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: hidden_payload_tool_reference
+  artifact_families:
+  - hidden_payload_tool_reference
+  - script_or_code_artifact
+  relative_path: EXTRA WIKI PAGES/Instar emergence (mp3 and hidden poem)/python script.py
+  sha256: 69fbddbf20cd156bd3c72810891a876eb5a4ce2c670a20c71a5f2b23ecda989b
+  size_bytes: 1355
+  extension: .py
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 89
+    metadata_text_digest: 5b71decc3a57a5c3bfb4bf0d1acfcb5e3d10ea6c114f2b7baed2c101ca5d98ba
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 216
+  trust_class: secondary_wiki_route_description
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-3e9fc528aaad4691
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: hidden_payload_tool_reference
+  artifact_families:
+  - hidden_payload_tool_reference
+  relative_path: EXTRA WIKI PAGES/Instar emergence (mp3 and hidden poem)/these are
+    all cosmos posts from 7th.txt
+  sha256: b54e15bbc2cac432f029d750df4a6d54b3cae31c5acc1d5351d099af885bd8f5
+  size_bytes: 25536
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 230
+    metadata_text_digest: 04d6be2ad384e63edf4ba94dafcb12f2dae7f6da03e819b2da9462b960e1cfdb
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 9
+    word_count: 5014
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-a7723051063cc808
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: hidden_payload_tool_reference
+  artifact_families:
+  - hidden_payload_tool_reference
+  - image_payload_candidate
+  relative_path: EXTRA WIKI PAGES/Instar emergence (mp3 and hidden poem)/x3Tr1.png
+  sha256: c34b3b1cb6131f9d549dc9abfe13a0c28a24a484f3b457005b6e36a9911cdf5a
+  size_bytes: 616940
+  extension: .png
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-0f04740408b8b491
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: hidden_payload_tool_reference
+  artifact_families:
+  - hidden_payload_tool_reference
+  - image_payload_candidate
+  relative_path: EXTRA WIKI PAGES/Instar emergence (mp3 and hidden poem)/y7Avz.png
+  sha256: c6d4a6548dcecbda01724714a8440956fe52687a97d1de54fb63020cb33e69d6
+  size_bytes: 652811
+  extension: .png
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-00f1828d45f4b141
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/Outguess detection
+    visual analysis.docx
+  sha256: 556f0cd2c61b08619688107edede4fc8a2858522f3fc9ad33b81132695524137
+  size_bytes: 2352490
+  extension: .docx
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 1
+    metadata_text_digest: 720fa289831d5d209b32179064a42c8ff74efc2396eb002bd86099c68a7ca3b8
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 43
+    word_count: 3538
+  trust_class: archived_local_file_hash_locked
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-ce834248c4a62aaa
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/extra docs/ImpulseAdventure
+    - JPEGsnoop - Detecting Edited Photos.pdf
+  sha256: b4050541222e56c8640a946fb408e6da9b9bdc7916c24db9902472a13749e7f7
+  size_bytes: 666475
+  extension: .pdf
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: archived_local_file_hash_locked
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-16954b118a6940f5
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/extra docs/JpgFromText.cpp
+  sha256: 4371d442520699c5265a1d96341617d6505f67f706cd20faae816744332f3f78
+  size_bytes: 2763
+  extension: .cpp
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-c5bf8a15a5b9f587
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/50charoutguesscomparison.gif
+  sha256: 32c9813b585beae678538900406e9670c184cdf94ea8bb31bc3df8a880b1cc7f
+  size_bytes: 14918
+  extension: .gif
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-8fa1b6b707237a9b
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/AllCicadaJpgsArtefactdarkandlight.jpg
+  sha256: ee0bacbf117454434241062ba300d51b3482daf8a247d0d9c62b32196bae9783
+  size_bytes: 824927
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-33a2f23978ad5ede
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/AllCicadaJpgsOutfuessArtefactsinLight.jpg
+  sha256: eaaf3ddb0ee1d6d5e50e1f9d50fccfd03df5a4b8b66dbb8556b8fcc90e67e36b
+  size_bytes: 467013
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-0271ed242bef1b89
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/AllCicadaJpgsOutguessinDark.jpg
+  sha256: e4605bf05ea4d37c33a4f2682a8d92448dc8768f62385c32aa99110d3c738325
+  size_bytes: 951639
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-aa7bb792be2bc391
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/AllCicadaJpgsUnchanged.jpg
+  sha256: f35ee1041494430d8d1baf0f0874b7970f1837c9623b117893d0e90424dbfd1d
+  size_bytes: 530685
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-5f89fe38516899b6
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/BtHz9g7.jpg
+  sha256: 8d078e75eb38790d25c2a46cf486c29e2cfb6c4bf9ef3a56f3cb1cfc31cf638b
+  size_bytes: 1035783
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-5cd5dc12ab67fd65
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/CKAyMGU.jpg
+  sha256: bafaa5106efcfa75ff52373510c79d051acc1c1b2cc7a565ce153ea48e868265
+  size_bytes: 346287
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-40a05830e2cc1b66
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/Lightshot.png
+  sha256: 1826bb3facae1972d3541b57747a0515b313ea6f419671cf51ccc53592f92fb3
+  size_bytes: 19038
+  extension: .png
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-75f15e8edfd75dc9
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/MYMoWUX.png
+  sha256: e41c38b4348586c979ae0b0a5a0ef7e24ce818594b9540785273f5707dff2379
+  size_bytes: 181407
+  extension: .png
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-a9491ae5b8fa575e
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/Page1artefacts_in_blackandwhite.jpg
+  sha256: 05bf181e546d342d1f7237a35759837f28100cbd85b42fe61fbe3343ead6389c
+  size_bytes: 941101
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-8ac5de32b63aba91
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/Page2artefactsinblackandwhite.jpg
+  sha256: fd0325b52b390bca0e6919da6f1f6017790fc7f2d125385f8afc81c31f209dba
+  size_bytes: 938720
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-093ed603214109b0
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/Page3OutguessArtefactsinblack.jpg
+  sha256: 5f182d13cb49edb9c485a77d7a804b2bdc8b409c081bee3414f7fea829d9c431
+  size_bytes: 2265625
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-aef1175ec67b9ed6
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/Page4artefactsinblack.jpg
+  sha256: 4bf7920a0698122e76c1ef0d03b22bacbd2e5989f87bdc214910ae564c5bdce8
+  size_bytes: 20732
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-3da7a09e78baabc0
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/Page4artefactsinlight.jpg
+  sha256: a63afa2655f87f838614a8ae681b7d84fe4b98b45c5d3ad5f76fcd09ab191175
+  size_bytes: 1146555
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-c934c4d6e5b1fd1c
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/Page4artefactsinlightandblack.jpg
+  sha256: 9991026e866c4df79045e395d300da127f2e8854664f0ecd28c7cdb73490bc83
+  size_bytes: 21222
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-b6881af9badab10c
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/Page_5_and_6_outgues_test.jpg
+  sha256: 2d991ea9d8ff66cc1cdc319e22be7ddf9dec6b5c0f5807a2523a24e572e5659e
+  size_bytes: 114623
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-5fcbde3f0cc255eb
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/images/okRX8bX.jpg
+  sha256: 9dc32297ea1cebe84849c991fd63d6f2083714c27126316bb5e350f008df3c45
+  size_bytes: 514606
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-80c91d7a45b95f9e
+  year_or_scope: EXTRA WIKI PAGES
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: EXTRA WIKI PAGES/Outguess detection visual analysis/note.md
+  sha256: 66741a6496e3d883bb3e49c9b427adcc3a59268b83a021982ac3529850989f92
+  size_bytes: 75
+  extension: .md
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 2
+    metadata_text_digest: 66741a6496e3d883bb3e49c9b427adcc3a59268b83a021982ac3529850989f92
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 8
+  trust_class: archived_local_file_hash_locked
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-d877a597fc980d44
+  year_or_scope: assets
+  artifact_family: mp3stego_candidate
+  artifact_families:
+  - mp3stego_candidate
+  relative_path: assets/2013/cicados/AUDIO/761.MP3
+  sha256: 83008217439110c3b824898af73b99cb2cf0657dda88cb363c3aa34a4ec0a460
+  size_bytes: 4010732
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-39d30f17d834fdfe
+  year_or_scope: assets
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage01/zN4h51m.jpg.outguess
+  sha256: cba64781bd461b17039316ef97426f912aae987fde131f62e883f7f9e9f0118e
+  size_bytes: 1150
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-85263c497ec6eb93
+  year_or_scope: assets
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage02/1033.jpg.outguess
+  sha256: 65ff60bfa019e424ce2ae23994f19af5692f7e12e6bc177830b42a154985defd
+  size_bytes: 1498
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-566edcb48c63b5d8
+  year_or_scope: assets
+  artifact_family: onion_url
+  artifact_families:
+  - onion_url
+  - outguess_source_image_candidate
+  - tor_hidden_service_requirement
+  relative_path: assets/2014/stage03/onion1.outguess
+  sha256: 2efba5e2283fa16592bedb7c339223bf2db94f07cf2d42188684aa393c12d180
+  size_bytes: 2899
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-117fd53c43428bfb
+  year_or_scope: assets
+  artifact_family: onion_url
+  artifact_families:
+  - onion_url
+  - outguess_source_image_candidate
+  - tor_hidden_service_requirement
+  relative_path: assets/2014/stage03/onion2.outguess
+  sha256: da4ad19d7e46a9df54fe800bb2477914fbb7b83d34e4ea748760ce2e0902e656
+  size_bytes: 2899
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-f80c6883c8109cdd
+  year_or_scope: assets
+  artifact_family: onion_url
+  artifact_families:
+  - onion_url
+  - outguess_source_image_candidate
+  - tor_hidden_service_requirement
+  relative_path: assets/2014/stage03/onion3.outguess
+  sha256: b1d1d69e32e6c5725dffbcd871c2acb482371889d48ce6734c17741816ad23a3
+  size_bytes: 2899
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-78cd1b068eafba6b
+  year_or_scope: assets
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage04/index.1.outguess
+  sha256: a14c1e144760c361a39da41e4784a9a22a3ce490baf42d9eb99b37feab8a47c1
+  size_bytes: 31809
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-9a63973f2114f1f4
+  year_or_scope: assets
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage04/index.1.outguess.decrypted
+  sha256: 69c6b458dc00cd260eb36b7f17c13c0dd4d666085dfae79f11cddadd8e73a560
+  size_bytes: 41
+  extension: .decrypted
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-1588acd8cdbbd872
+  year_or_scope: assets
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage04/index.1.outguess.jpg
+  sha256: 2e7c5b2f19e1edcda95534fb72a52aebf1a9d34619559b45a4425840c12d88a4
+  size_bytes: 15188
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-0024797be55a3623
+  year_or_scope: assets
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage04/index.1.rev.outguess
+  sha256: 35d31e61275c6b0420e7729161d5f6272122ea7edb87076fe84f3fe3c70af6db
+  size_bytes: 7524
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-0f8da3e1d3436357
+  year_or_scope: assets
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage06/index.1.outguess
+  sha256: 7551f316388ef7f413b72d6ea30c422ee174406d226c24375a72377adbe42064
+  size_bytes: 58152
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-05ed6f004dc1584c
+  year_or_scope: assets
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage06/index.2.outguess
+  sha256: c1af55ba9d982c7c8a463ac81c68bf9b8a7b814b54e395d9b6920a340fdfcfd5
+  size_bytes: 58152
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-7532ed2e4111e6f3
+  year_or_scope: assets
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage06/index.3.outguess
+  sha256: a35f439175a16486e6b5699cc45a265fa9d82eea15b92a52a124d549d97ff4f1
+  size_bytes: 58152
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-8bf2630851706ea0
+  year_or_scope: assets
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage06/index.4.outguess
+  sha256: 4767d811f22abdb15bfee53c29bbd2488b123a9c290f63712f4ed12fdbc5963d
+  size_bytes: 140
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-280f65f3e737e9fa
+  year_or_scope: assets
+  artifact_family: mp3stego_candidate
+  artifact_families:
+  - mp3stego_candidate
+  relative_path: assets/2014/stage07/index.mp3
+  sha256: 1ce3839b4a62462d9009c4469acc189b523e1bdcf338cb49cda1cd7bb4efffc6
+  size_bytes: 6651873
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-863ecc0afac46409
+  year_or_scope: assets
+  artifact_family: mp3stego_candidate
+  artifact_families:
+  - mp3stego_candidate
+  relative_path: assets/2014/stage08/index.3.mp3
+  sha256: f5719fec286ab0fcc88b36d1fcdd24f23c928b3cce75d437e8aa4f195069e03d
+  size_bytes: 9288
+  extension: .mp3
+  file_type_guess: audio
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-a3a66a94e9cd5648
+  year_or_scope: assets
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage09/index.1.outguess
+  sha256: 83835b0e148c1061d42693ea14a5035f54ad41fa45496b00b37311b8e96a2095
+  size_bytes: 1234
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-4bf71e38b4708a1d
+  year_or_scope: assets
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage09/index.2.outguess
+  sha256: 6f2db751c9d6acd7f17c59679e4313632402a66e7295447781d0de5701894027
+  size_bytes: 1234
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-feadc6092f97f421
+  year_or_scope: assets
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage09/index.3.outguess
+  sha256: 78581663e7a5ba77494d1840820098b122217edd13009661f1be2e497db88179
+  size_bytes: 1234
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-e340cbaa4528fa8a
+  year_or_scope: assets
+  artifact_family: outguess_source_image_candidate
+  artifact_families:
+  - outguess_source_image_candidate
+  relative_path: assets/2014/stage09/index.4.outguess
+  sha256: 83835b0e148c1061d42693ea14a5035f54ad41fa45496b00b37311b8e96a2095
+  size_bytes: 1234
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-390a2357c05a6324
+  year_or_scope: assets
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - outguess_source_image_candidate
+  relative_path: assets/2016/4gq25.jpg.outguess
+  sha256: fe89e77519dfaca998a257ed39c2861303029de2a49183db00eea0fda3a28010
+  size_bytes: 1136
+  extension: .outguess
+  file_type_guess: binary_or_unknown
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: core_historical_route
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.

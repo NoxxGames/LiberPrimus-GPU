@@ -789,6 +789,16 @@ deep-research-content-packs/**
 !deep-research-content-packs/.gitkeep
 !deep-research-content-packs/stage5an/
 !deep-research-content-packs/stage5an/.gitkeep
+!deep-research-content-packs/stage5bf/
+!deep-research-content-packs/stage5bf/.gitkeep
+
+# Generated historical-route source-lock reports
+experiments/results/historical-route/**
+!experiments/results/historical-route/
+!experiments/results/historical-route/README.md
+!experiments/results/historical-route/.gitkeep
+!experiments/results/historical-route/stage5bf/
+!experiments/results/historical-route/stage5bf/.gitkeep
 
 # Generated token-block source-lock/preflight outputs
 experiments/results/token-block/**
@@ -827,6 +837,8 @@ deep-research-repo-zips/**
 !deep-research-repo-zips/.gitkeep
 !deep-research-repo-zips/stage5bd/
 !deep-research-repo-zips/stage5bd/.gitkeep
+!deep-research-repo-zips/stage5bf/
+!deep-research-repo-zips/stage5bf/.gitkeep
 
 # Generated CI/validation outputs
 experiments/results/ci/**

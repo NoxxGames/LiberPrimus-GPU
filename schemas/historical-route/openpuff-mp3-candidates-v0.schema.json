@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["record_type","schema","stage_id","candidate_count","openpuff_execution_performed","mp3stego_execution_performed"],"properties":{"stage_id":{"const":"stage-5bf"},"openpuff_execution_performed":{"const":false},"mp3stego_execution_performed":{"const":false}},"additionalProperties":true}

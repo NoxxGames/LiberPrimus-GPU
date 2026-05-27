@@ -1,0 +1,231 @@
+record_type: stage5bf_magic_square_artifacts
+schema: schemas/historical-route/magic-square-artifacts-v0.schema.json
+stage_id: stage-5bf
+candidate_count: 7
+source_lock_only: true
+execution_performed: false
+hash_search_performed: false
+decode_attempt_performed: false
+raw_archive_files_committed: false
+artifacts:
+- artifact_id: stage5bf-4f04895f109fdbca
+  year_or_scope: '2014'
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - liber_primus_numeric_transcript
+  - magic_square
+  - onion_url
+  - tor_hidden_service_requirement
+  relative_path: 2014/additional docs/5x5 Magic Squares based on numbers from onion5
+    portrait.jpg.txt
+  sha256: 2afef6d231d8bbd278c92fb644fcb11d4add4452b20c4044f11ea787287d3cce
+  size_bytes: 121439
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 6107
+    metadata_text_digest: 29996c184a7aeacf1a65ffe66316ffe2e0dafdcbda9e04e5f96591761ac550b8
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 14761
+  trust_class: archived_local_file_hash_locked
+  route_relevance: liber_primus_historical_route
+  token_block_planning_relevance: review_required_before_future_token_block_planning
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-9d7245d789ae1901
+  year_or_scope: '2014'
+  artifact_family: magic_square
+  artifact_families:
+  - magic_square
+  relative_path: 2014/additional docs/Titanpads from time of solving/The 256 byte
+    strings aren't magic squares.txt
+  sha256: 0b77bb1922f2361cb941800e092351c34f1b9eb130023b7c755c2c7bbf47f377
+  size_bytes: 5360
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 56
+    metadata_text_digest: 15e0333d2e9ccbdbb0c7558d4029a7f1ba7702bc2952144d58483273d64f52dc
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 867
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: review_required_before_future_token_block_planning
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-7ad3914712381a33
+  year_or_scope: '2014'
+  artifact_family: image_payload_candidate
+  artifact_families:
+  - image_payload_candidate
+  - jpeg_sequence
+  - magic_square
+  relative_path: 2014/additional images/Magicsquare.jpg
+  sha256: d44efd4aa5d9df6883daa8e66d801ee9595ce63f533c055604988ab1cc138af4
+  size_bytes: 148039
+  extension: .jpg
+  file_type_guess: image
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 0
+    metadata_text_digest: null
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 0
+  trust_class: primary_signed_or_hashable
+  route_relevance: historical_route_support
+  token_block_planning_relevance: review_required_before_future_token_block_planning
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-a4bd07f60d08a2c1
+  year_or_scope: Archive
+  artifact_family: magic_square
+  artifact_families:
+  - magic_square
+  relative_path: Archive/Media coverage/cicada3301.boards.net/Theories/Magic Squares.docx
+  sha256: 4a572831b5a1e6de941dc029f3425c39473a6209e3e467b4f63d3b3165918505
+  size_bytes: 19016
+  extension: .docx
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 1
+    metadata_text_digest: ee8a2da99589dcc2a0ad6faca7d202a48af75d4d83453b6dee2ce43c0661c7bf
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 1110
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: review_required_before_future_token_block_planning
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-44766c4e429d97c9
+  year_or_scope: Archive
+  artifact_family: jpeg_sequence
+  artifact_families:
+  - jpeg_sequence
+  - number_square
+  - old_site_snapshot
+  relative_path: Archive/Old Sites/3301Archive/walkthrough/LP 15.JPG/NUMBER SQUARE.docx
+  sha256: 31d1bb50e525a63219e29c2d425d03667c4be0df54938ec47aa82eb31fc319e0
+  size_bytes: 243536
+  extension: .docx
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 1
+    metadata_text_digest: 3ad8ccc614ba705c74bff9d6a9ed1f06920f4d477cf8d22c9c2d8a5f9902ce7f
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 622
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: historical_context_only
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-7796be7e207593e6
+  year_or_scope: Archive
+  artifact_family: magic_square
+  artifact_families:
+  - magic_square
+  - old_site_snapshot
+  relative_path: Archive/Old Sites/cicada3301.boards.net/Theories/Magic Squares.docx
+  sha256: 4a572831b5a1e6de941dc029f3425c39473a6209e3e467b4f63d3b3165918505
+  size_bytes: 19016
+  extension: .docx
+  file_type_guess: document
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 1
+    metadata_text_digest: ee8a2da99589dcc2a0ad6faca7d202a48af75d4d83453b6dee2ce43c0661c7bf
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 1110
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: review_required_before_future_token_block_planning
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.
+- artifact_id: stage5bf-6bef92d430045e78
+  year_or_scope: assets
+  artifact_family: magic_square
+  artifact_families:
+  - magic_square
+  relative_path: assets/2014/stage07/magicsquares.txt
+  sha256: da31a5a338be6d587ebec87f1dd0bcfdd47108dfc9db5bfc2bd261a58717f190
+  size_bytes: 721
+  extension: .txt
+  file_type_guess: text
+  text_metadata:
+    contains_pgp_public_key_block: false
+    contains_pgp_signature_block: false
+    contains_pgp_signed_message_block: false
+    key_id_7a35090f_reference: false
+    line_count: 21
+    metadata_text_digest: 24ac7b603c57e07583d203c59b8ae7c7c4712631a8cac706abd2eb7adf3c026e
+    onion_url_count: 0
+    onion_urls: []
+    url_count: 0
+    word_count: 99
+  trust_class: archived_local_file_hash_locked
+  route_relevance: historical_route_support
+  token_block_planning_relevance: review_required_before_future_token_block_planning
+  dwh_relevance: possible_historical_constraint_only
+  future_review_required: true
+  raw_commit_allowed: false
+  notes:
+  - Hash locks the local archive file only; originality/authenticity remains review-gated.
+  - No historical technique was executed.

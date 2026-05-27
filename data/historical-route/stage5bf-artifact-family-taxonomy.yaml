@@ -1,0 +1,139 @@
+record_type: stage5bf_artifact_family_taxonomy
+schema: schemas/historical-route/artifact-family-taxonomy-v0.schema.json
+stage_id: stage-5bf
+known_artifact_families:
+- pgp_signed_message
+- pgp_public_key_reference
+- pgp_key_id_reference
+- signed_message_claim
+- unsigned_or_disputed_message
+- 2017_false_paths_warning
+- 2015_false_claim_refutation
+- outguess_source_image_candidate
+- outguess_extracted_payload_text_present
+- outguess_expected_payload_missing
+- openpuff_source_audio_candidate
+- openpuff_extracted_payload_text_present
+- mp3stego_candidate
+- interconnectedness_mp3_candidate
+- hidden_payload_tool_reference
+- hex_block
+- hex_to_binary
+- hex_to_jpeg_extraction
+- jpeg_sequence
+- reversed_order_image_sequence
+- non_reversed_order_image_sequence
+- image_payload_candidate
+- image_payload_extracted_text_present
+- magic_square
+- number_square
+- border_number_signal
+- prime_sequence
+- prime_count_spacing
+- sexagesimal_or_base60_candidate
+- gematria_prime_mapping
+- missing_prime_sequence
+- red_3299_or_prime_grid_candidate
+- book_code
+- liber_al_book_code
+- mabinogion_book_code
+- godel_escher_bach_book_code
+- whitespace_binary_payload
+- ascii_payload
+- telnet_instruction
+- server_status_payload
+- ping_reply_byte_payload
+- apache_status_record
+- tcp_server_script
+- script_or_code_artifact
+- cicada_os_artifact
+- onion_url
+- tor_hidden_service_requirement
+- cgi_upload_requirement
+- subreddit_stage
+- twitter_stage
+- physical_poster
+- qr_code
+- gps_coordinate_stage
+- phone_call
+- midi_puzzle
+- shamir_secret_sharing
+- self_reliance_reference
+- old_site_snapshot
+- liber_primus_page_image
+- liber_primus_pre_dump_page
+- liber_primus_transcript
+- liber_primus_rune_text
+- liber_primus_numeric_transcript
+- liber_primus_enhanced_image
+- liber_primus_unmodified_dropbox_file
+- liber_primus_post_2014_analysis
+family_counts:
+  pgp_signed_message: 83
+  pgp_public_key_reference: 0
+  pgp_key_id_reference: 27
+  signed_message_claim: 83
+  unsigned_or_disputed_message: 0
+  2017_false_paths_warning: 0
+  2015_false_claim_refutation: 0
+  outguess_source_image_candidate: 55
+  outguess_extracted_payload_text_present: 6
+  outguess_expected_payload_missing: 0
+  openpuff_source_audio_candidate: 0
+  openpuff_extracted_payload_text_present: 0
+  mp3stego_candidate: 7
+  interconnectedness_mp3_candidate: 1
+  hidden_payload_tool_reference: 12
+  hex_block: 9
+  hex_to_binary: 9
+  hex_to_jpeg_extraction: 0
+  jpeg_sequence: 586
+  reversed_order_image_sequence: 0
+  non_reversed_order_image_sequence: 0
+  image_payload_candidate: 605
+  image_payload_extracted_text_present: 0
+  magic_square: 6
+  number_square: 1
+  border_number_signal: 0
+  prime_sequence: 8
+  prime_count_spacing: 0
+  sexagesimal_or_base60_candidate: 1
+  gematria_prime_mapping: 5
+  missing_prime_sequence: 0
+  red_3299_or_prime_grid_candidate: 0
+  book_code: 3
+  liber_al_book_code: 2
+  mabinogion_book_code: 1
+  godel_escher_bach_book_code: 6
+  whitespace_binary_payload: 0
+  ascii_payload: 1
+  telnet_instruction: 1
+  server_status_payload: 8
+  ping_reply_byte_payload: 1
+  apache_status_record: 3
+  tcp_server_script: 2
+  script_or_code_artifact: 26
+  cicada_os_artifact: 18
+  onion_url: 293
+  tor_hidden_service_requirement: 293
+  cgi_upload_requirement: 0
+  subreddit_stage: 43
+  twitter_stage: 12
+  physical_poster: 12
+  qr_code: 2
+  gps_coordinate_stage: 6
+  phone_call: 1
+  midi_puzzle: 8
+  shamir_secret_sharing: 0
+  self_reliance_reference: 2
+  old_site_snapshot: 160
+  liber_primus_page_image: 190
+  liber_primus_pre_dump_page: 0
+  liber_primus_transcript: 28
+  liber_primus_rune_text: 42
+  liber_primus_numeric_transcript: 4
+  liber_primus_enhanced_image: 6
+  liber_primus_unmodified_dropbox_file: 60
+  liber_primus_post_2014_analysis: 6
+historical_source_lock_only: true
+execution_performed: false

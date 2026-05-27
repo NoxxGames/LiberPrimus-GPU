@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5BF Historical Route Source-Lock
+
+Stage 5BF is historical source-lock and technique-taxonomy infrastructure, not an experiment. It commits compact records for the local `third_party/CicadaSolversIddqd` archive location, archive tree and inventory summaries, annual route inventories, high-priority artifact hashes, artifact-family taxonomy, trust classifications, PGP/stego/OutGuess/OpenPuff/MP3/magic-square/hex-JPEG/onion/book-code/network-byte-channel/Liber Primus candidates, historical technique taxonomy, token-block planning impact, DWH historical context, Deep Research readiness, guardrails, next-stage decision, and aggregate summary.
+
+Generated Stage 5BF reports remain ignored under `experiments/results/historical-route/stage5bf/`; generated Deep Research content packs and future ZIPs remain ignored under `deep-research-content-packs/stage5bf/` and `deep-research-repo-zips/stage5bf/`. Stage 5BF performs no online clone, live scraping, PGP network verification, stego execution, OutGuess/OpenPuff/MP3Stego execution, OCR, AI/ML or LLM/vision interpretation, hidden-content image forensics, token experiment, byte-stream generation, variant materialisation, DWH/hash/preimage search, hash comparison, decode attempt, scoring, CUDA, benchmark, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve-claim workflow.
+
 ## Stage 5BD Token-Block Preflight Dry-Run
 
 Stage 5BD is dry-run planning infrastructure, not an experiment. It commits compact dry-run policy, active-manifest lock, run-plan ID policy/registry, dry-run plan manifest, future result-path policy/validation, family counters, fixture-only records, execution-gate dry-run validation, no-byte-stream proof, Stage 5BB validation-evidence consolidation, archive marker policy, DWH dry-run context, guardrail, next-stage, and summary records.

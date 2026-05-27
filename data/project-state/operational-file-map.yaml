@@ -1399,3 +1399,52 @@ records:
   notes: Explains the metadata-only dry-run layer and package split while keeping
     real byte streams, variants, DWH/hash search, decoding, scoring, CUDA,
     benchmarks, website expansion, and solve claims blocked.
+- path: data/project-state/stage5bf-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BF historical route source-lock aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bf
+  expected_update_frequency: when_historical_route_source_lock_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records local archive availability, archive tree digest, high-priority
+    artifact counts, specialized route candidate counts, guardrails, and Stage
+    5BG next-stage decision.
+- path: data/historical-route/stage5bf-historical-technique-taxonomy.yaml
+  category: active_data_record
+  purpose: Stage 5BF historical technique taxonomy.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bf
+  expected_update_frequency: when_historical_route_taxonomy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Classifies local 2012-2017 Cicada route techniques for Deep Research
+    review without executing historical techniques.
+- path: docs/reference/historical-route-source-lock-cli.md
+  category: operational_status_doc
+  purpose: Stage 5BF historical route source-lock CLI reference.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bf
+  expected_update_frequency: every_historical_route_cli_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents archive location, inventory, classification, taxonomy,
+    planning-impact, readiness, summary, and validation commands for Stage 5BF.
+- path: docs/onboarding/historical-route-source-lock-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5BF operator workflow for local historical route source-locking.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bf
+  expected_update_frequency: every_historical_route_source_lock_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Explains local archive use, raw-file ignore policy, generated-output
+    roots, and the Stage 5BG Deep Research review boundary.

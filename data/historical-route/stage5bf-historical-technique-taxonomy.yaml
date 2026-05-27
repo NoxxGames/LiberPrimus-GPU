@@ -1,0 +1,611 @@
+record_type: stage5bf_historical_technique_taxonomy
+schema: schemas/historical-route/historical-technique-taxonomy-v0.schema.json
+stage_id: stage-5bf
+technique_categories:
+  authenticity:
+  - pgp_signed_message
+  - key_id_7a35090f_verification_gate
+  stego:
+  - outguess
+  - openpuff
+  - mp3stego
+  encoding:
+  - hex_to_binary
+  - hex_to_jpeg
+  - whitespace_binary
+  - ascii_payload
+  numeric:
+  - prime_sequences
+  - magic_squares
+  - number_squares
+  - sexagesimal_base60
+  - gematria_prime_mapping
+  text_reference:
+  - book_code
+  - liber_al_reference
+  - mabinogion_reference
+  - godel_escher_bach_reference
+  - self_reliance_reference
+  network_route:
+  - onion_service
+  - cgi_upload
+  - telnet
+  - ping_reply
+  - apache_status
+  - tcp_server
+  physical_route:
+  - posters
+  - qr_codes
+  - gps_coordinates
+  - phone_call
+  liber_primus:
+  - rune_pages
+  - token_block
+  - numeric_transcripts
+  - post_2014_messages
+techniques:
+- technique: pgp_signed_message
+  historical_source_count: 83
+  hash_locked_artifact_count: 83
+  trust_distribution:
+    archived_local_file_hash_locked: 4
+    pgp_block_present_not_verified: 78
+    primary_signed_or_hashable: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: pgp_public_key_reference
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: pgp_key_id_reference
+  historical_source_count: 27
+  hash_locked_artifact_count: 27
+  trust_distribution:
+    archived_local_file_hash_locked: 9
+    pgp_block_present_not_verified: 16
+    secondary_wiki_route_description: 2
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: signed_message_claim
+  historical_source_count: 83
+  hash_locked_artifact_count: 83
+  trust_distribution:
+    archived_local_file_hash_locked: 4
+    pgp_block_present_not_verified: 78
+    primary_signed_or_hashable: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: unsigned_or_disputed_message
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: 2017_false_paths_warning
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: 2015_false_claim_refutation
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: outguess_source_image_candidate
+  historical_source_count: 55
+  hash_locked_artifact_count: 55
+  trust_distribution:
+    archived_local_file_hash_locked: 8
+    pgp_block_present_not_verified: 8
+    primary_signed_or_hashable: 39
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: outguess_extracted_payload_text_present
+  historical_source_count: 6
+  hash_locked_artifact_count: 6
+  trust_distribution:
+    archived_local_file_hash_locked: 1
+    pgp_block_present_not_verified: 5
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: outguess_expected_payload_missing
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: openpuff_source_audio_candidate
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: openpuff_extracted_payload_text_present
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: mp3stego_candidate
+  historical_source_count: 7
+  hash_locked_artifact_count: 7
+  trust_distribution:
+    primary_signed_or_hashable: 7
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: interconnectedness_mp3_candidate
+  historical_source_count: 1
+  hash_locked_artifact_count: 1
+  trust_distribution:
+    primary_signed_or_hashable: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: hidden_payload_tool_reference
+  historical_source_count: 12
+  hash_locked_artifact_count: 12
+  trust_distribution:
+    archived_local_file_hash_locked: 4
+    pgp_block_present_not_verified: 1
+    primary_signed_or_hashable: 6
+    secondary_wiki_route_description: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: hex_block
+  historical_source_count: 9
+  hash_locked_artifact_count: 9
+  trust_distribution:
+    archived_local_file_hash_locked: 4
+    primary_signed_or_hashable: 5
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: hex_to_binary
+  historical_source_count: 9
+  hash_locked_artifact_count: 9
+  trust_distribution:
+    archived_local_file_hash_locked: 4
+    primary_signed_or_hashable: 5
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: hex_to_jpeg_extraction
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: jpeg_sequence
+  historical_source_count: 586
+  hash_locked_artifact_count: 586
+  trust_distribution:
+    archived_local_file_hash_locked: 33
+    pgp_block_present_not_verified: 21
+    primary_signed_or_hashable: 531
+    secondary_wiki_route_description: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: reversed_order_image_sequence
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: non_reversed_order_image_sequence
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: image_payload_candidate
+  historical_source_count: 605
+  hash_locked_artifact_count: 605
+  trust_distribution:
+    primary_signed_or_hashable: 605
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: image_payload_extracted_text_present
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: magic_square
+  historical_source_count: 6
+  hash_locked_artifact_count: 6
+  trust_distribution:
+    archived_local_file_hash_locked: 5
+    primary_signed_or_hashable: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: number_square
+  historical_source_count: 1
+  hash_locked_artifact_count: 1
+  trust_distribution:
+    archived_local_file_hash_locked: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: border_number_signal
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: prime_sequence
+  historical_source_count: 8
+  hash_locked_artifact_count: 8
+  trust_distribution:
+    archived_local_file_hash_locked: 6
+    primary_signed_or_hashable: 2
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: prime_count_spacing
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: sexagesimal_or_base60_candidate
+  historical_source_count: 1
+  hash_locked_artifact_count: 1
+  trust_distribution:
+    primary_signed_or_hashable: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: gematria_prime_mapping
+  historical_source_count: 5
+  hash_locked_artifact_count: 5
+  trust_distribution:
+    archived_local_file_hash_locked: 1
+    pgp_block_present_not_verified: 2
+    primary_signed_or_hashable: 2
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: missing_prime_sequence
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: red_3299_or_prime_grid_candidate
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: book_code
+  historical_source_count: 3
+  hash_locked_artifact_count: 3
+  trust_distribution:
+    archived_local_file_hash_locked: 2
+    pgp_block_present_not_verified: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: liber_al_book_code
+  historical_source_count: 2
+  hash_locked_artifact_count: 2
+  trust_distribution:
+    archived_local_file_hash_locked: 2
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: mabinogion_book_code
+  historical_source_count: 1
+  hash_locked_artifact_count: 1
+  trust_distribution:
+    archived_local_file_hash_locked: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: godel_escher_bach_book_code
+  historical_source_count: 6
+  hash_locked_artifact_count: 6
+  trust_distribution:
+    primary_signed_or_hashable: 6
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: whitespace_binary_payload
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: ascii_payload
+  historical_source_count: 1
+  hash_locked_artifact_count: 1
+  trust_distribution:
+    archived_local_file_hash_locked: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: telnet_instruction
+  historical_source_count: 1
+  hash_locked_artifact_count: 1
+  trust_distribution:
+    archived_local_file_hash_locked: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: server_status_payload
+  historical_source_count: 8
+  hash_locked_artifact_count: 8
+  trust_distribution:
+    archived_local_file_hash_locked: 5
+    primary_signed_or_hashable: 3
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: ping_reply_byte_payload
+  historical_source_count: 1
+  hash_locked_artifact_count: 1
+  trust_distribution:
+    archived_local_file_hash_locked: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: apache_status_record
+  historical_source_count: 3
+  hash_locked_artifact_count: 3
+  trust_distribution:
+    archived_local_file_hash_locked: 3
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: tcp_server_script
+  historical_source_count: 2
+  hash_locked_artifact_count: 2
+  trust_distribution:
+    archived_local_file_hash_locked: 1
+    secondary_wiki_route_description: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: script_or_code_artifact
+  historical_source_count: 26
+  hash_locked_artifact_count: 26
+  trust_distribution:
+    archived_local_file_hash_locked: 20
+    pgp_block_present_not_verified: 1
+    secondary_wiki_route_description: 5
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: cicada_os_artifact
+  historical_source_count: 18
+  hash_locked_artifact_count: 18
+  trust_distribution:
+    archived_local_file_hash_locked: 2
+    pgp_block_present_not_verified: 2
+    primary_signed_or_hashable: 14
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: onion_url
+  historical_source_count: 293
+  hash_locked_artifact_count: 293
+  trust_distribution:
+    archived_local_file_hash_locked: 55
+    pgp_block_present_not_verified: 22
+    primary_signed_or_hashable: 203
+    secondary_wiki_route_description: 13
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: tor_hidden_service_requirement
+  historical_source_count: 293
+  hash_locked_artifact_count: 293
+  trust_distribution:
+    archived_local_file_hash_locked: 55
+    pgp_block_present_not_verified: 22
+    primary_signed_or_hashable: 203
+    secondary_wiki_route_description: 13
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: cgi_upload_requirement
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: subreddit_stage
+  historical_source_count: 43
+  hash_locked_artifact_count: 43
+  trust_distribution:
+    archived_local_file_hash_locked: 20
+    primary_signed_or_hashable: 20
+    secondary_wiki_route_description: 3
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: twitter_stage
+  historical_source_count: 12
+  hash_locked_artifact_count: 12
+  trust_distribution:
+    archived_local_file_hash_locked: 4
+    pgp_block_present_not_verified: 1
+    primary_signed_or_hashable: 7
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: physical_poster
+  historical_source_count: 12
+  hash_locked_artifact_count: 12
+  trust_distribution:
+    archived_local_file_hash_locked: 1
+    primary_signed_or_hashable: 11
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: qr_code
+  historical_source_count: 2
+  hash_locked_artifact_count: 2
+  trust_distribution:
+    primary_signed_or_hashable: 2
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: gps_coordinate_stage
+  historical_source_count: 6
+  hash_locked_artifact_count: 6
+  trust_distribution:
+    archived_local_file_hash_locked: 1
+    primary_signed_or_hashable: 3
+    secondary_wiki_route_description: 2
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: phone_call
+  historical_source_count: 1
+  hash_locked_artifact_count: 1
+  trust_distribution:
+    primary_signed_or_hashable: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: midi_puzzle
+  historical_source_count: 8
+  hash_locked_artifact_count: 8
+  trust_distribution:
+    archived_local_file_hash_locked: 2
+    pgp_block_present_not_verified: 2
+    primary_signed_or_hashable: 4
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: shamir_secret_sharing
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: self_reliance_reference
+  historical_source_count: 2
+  hash_locked_artifact_count: 2
+  trust_distribution:
+    archived_local_file_hash_locked: 2
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: old_site_snapshot
+  historical_source_count: 160
+  hash_locked_artifact_count: 160
+  trust_distribution:
+    archived_local_file_hash_locked: 71
+    pgp_block_present_not_verified: 4
+    primary_signed_or_hashable: 75
+    secondary_wiki_route_description: 10
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: liber_primus_page_image
+  historical_source_count: 190
+  hash_locked_artifact_count: 190
+  trust_distribution:
+    primary_signed_or_hashable: 190
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: liber_primus_pre_dump_page
+  historical_source_count: 0
+  hash_locked_artifact_count: 0
+  trust_distribution: {}
+  future_token_block_relevance: not_observed_in_local_index
+  future_control_family_relevance: none
+  execution_status: blocked_or_positive_control_only
+- technique: liber_primus_transcript
+  historical_source_count: 28
+  hash_locked_artifact_count: 28
+  trust_distribution:
+    archived_local_file_hash_locked: 21
+    pgp_block_present_not_verified: 5
+    secondary_wiki_route_description: 2
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: liber_primus_rune_text
+  historical_source_count: 42
+  hash_locked_artifact_count: 42
+  trust_distribution:
+    archived_local_file_hash_locked: 26
+    pgp_block_present_not_verified: 2
+    primary_signed_or_hashable: 11
+    secondary_wiki_route_description: 3
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: liber_primus_numeric_transcript
+  historical_source_count: 4
+  hash_locked_artifact_count: 4
+  trust_distribution:
+    archived_local_file_hash_locked: 4
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: liber_primus_enhanced_image
+  historical_source_count: 6
+  hash_locked_artifact_count: 6
+  trust_distribution:
+    primary_signed_or_hashable: 6
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: liber_primus_unmodified_dropbox_file
+  historical_source_count: 60
+  hash_locked_artifact_count: 60
+  trust_distribution:
+    pgp_block_present_not_verified: 1
+    primary_signed_or_hashable: 58
+    secondary_wiki_route_description: 1
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+- technique: liber_primus_post_2014_analysis
+  historical_source_count: 6
+  hash_locked_artifact_count: 6
+  trust_distribution:
+    archived_local_file_hash_locked: 1
+    pgp_block_present_not_verified: 1
+    primary_signed_or_hashable: 4
+  future_token_block_relevance: review_before_execution
+  future_control_family_relevance: candidate_control_or_constraint
+  execution_status: blocked_or_positive_control_only
+execution_performed: false

@@ -22,6 +22,8 @@ git remote -v
 Many CLIs support `--allow-missing` for raw-data-free validation. Missing raw data should not block
 CI unless a stage explicitly requires local review.
 
+Stage 5BF historical-route validation records a source gap if `third_party/CicadaSolversIddqd` is missing. Do not fix that by cloning online or staging raw archive files without an explicit future prompt.
+
 ## Generated Output Appears In Git Status
 
 Check ignore rules:
@@ -60,6 +62,10 @@ git check-ignore -v experiments/results/prime-minus-one-native-reporting/stage5y
 git check-ignore -v experiments/results/prime-minus-one-cuda-contract/stage5z/summary.json
 git check-ignore -v experiments/results/prime-minus-one-cuda-synthetic/stage5aa/summary.json
 git check-ignore -v experiments/results/prime-minus-one-bounded-p56-cuda-parity/stage5ad/summary.json
+git check-ignore -v experiments/results/historical-route/stage5bf/full_archive_file_inventory.jsonl
+git check-ignore -v deep-research-content-packs/stage5bf/historical-route-source-lock-pack.zip
+git check-ignore -v deep-research-repo-zips/stage5bf/stage5bf-repo.zip
+git check-ignore -v codex-output/stage5bf-codex-completion.md
 git check-ignore -v experiments/results/prime-minus-one-bounded-p56-mismatch/stage5ad-fix/summary.json
 git check-ignore -v experiments/results/prime-minus-one-bounded-p56-corrected-reporting/stage5ae/summary.json
 git check-ignore -v experiments/results/token-block/stage5ap/canonical_token_grid.csv

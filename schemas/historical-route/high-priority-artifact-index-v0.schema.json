@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["record_type","schema","stage_id","artifact_count","artifacts"],"properties":{"stage_id":{"const":"stage-5bf"},"raw_archive_files_committed":{"const":false}},"additionalProperties":true}

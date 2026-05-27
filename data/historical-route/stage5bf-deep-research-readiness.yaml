@@ -1,0 +1,8 @@
+record_type: stage5bf_deep_research_readiness
+schema: schemas/historical-route/deep-research-readiness-v0.schema.json
+stage_id: stage-5bf
+ready_for_deep_research_review: true
+review_scope: 2012-2017 historical route source-lock and technique taxonomy
+raw_archive_files_included: false
+generated_content_pack_committed: false
+recommended_next_stage: Stage 5BG - Deep Research historical route source-lock review

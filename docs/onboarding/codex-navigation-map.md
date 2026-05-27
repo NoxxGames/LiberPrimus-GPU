@@ -1,8 +1,8 @@
 # Codex Navigation Map
 
-## Stage 5BD Note
+## Stage 5BF Note
 
-Stage 5BD is a no-byte-stream token-block preflight dry-run layer. Use `libreprimus token-block validate-stage5bd` for dry-run policy, active-manifest lock, run-plan IDs, future result-path validation, counters, fixture-only records, gate validation, no-byte-stream proof, archive marker policy, and validation-evidence consolidation. Stage 5BE follow-up work should review the Stage 5BD dry-run implementation and gates, keep the Stage 5AU filled decision template ignored, and avoid token experiments, byte-stream generation, variant materialisation, decode attempts, hash/preimage search, scoring, OCR/AI/ML/LLM vision, image forensics, stego, CUDA, cryptanalytic benchmarks, scored experiments, or solve-claim workflows.
+Stage 5BF is a local-only historical route source-lock layer. Use `libreprimus historical-route validate-stage5bf` for archive location, tree/inventory summaries, annual route inventory, artifact classifications, trust policy, technique taxonomy, source gaps, DWH context, guardrails, and Stage 5BG next-stage routing. Stage 5BG follow-up work should review Stage 5BF metadata, keep raw `third_party/CicadaSolversIddqd` files ignored, and avoid token experiments, byte-stream generation, historical technique execution, PGP network verification, stego tools, decode attempts, hash/preimage search, scoring, OCR/AI/ML/LLM vision, image forensics, CUDA, cryptanalytic benchmarks, scored experiments, or solve-claim workflows.
 
 ## Read First
 
@@ -20,7 +20,7 @@ For most Codex tasks, read:
 - Do not trust rendered GitHub pages, cached raw URLs, memory, or old conversation context when state matters.
 - Run the task-specific validation commands before staging.
 - Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
-- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5BE prompts inherit current source-of-truth labels.
+- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5BG prompts inherit current source-of-truth labels.
 - Keep raw/generated outputs unstaged.
 - For Stage 5AF/5AG/5AI/5AJ/5AK source-harvester work, keep all raw harvester outputs, raw UsefulFiles/community-facts material, and generated bundle/extraction bodies local and ignored; do not use Google Drive as project storage.
 
@@ -37,7 +37,7 @@ If direction changes, update:
 - `AGENTS.md`
 - Relevant tutorials and `docs/wiki-source/**`
 - `docs/onboarding/source-harvester-workflow.md`, `docs/onboarding/local-source-inventory-workflow.md`, `docs/onboarding/deep-research-bundle-workflow.md`, `docs/onboarding/deep-research-ingest-format.md`, `docs/onboarding/community-observation-ingest-workflow.md`, `docs/reference/source-harvester-cli.md`, `docs/reference/source-harvester-local-inventory-cli.md`, `docs/reference/source-harvester-curated-bundles-cli.md`, `docs/reference/source-harvester-usefulfiles-cli.md`, and `docs/reference/source-harvester-community-facts-cli.md` when source-harvester behavior changes.
-- `data/project-state/stage5ah-*.yaml`, `data/project-state/stage5ap-*`, `data/project-state/stage5ar-*`, `data/project-state/stage5at-*`, `data/project-state/stage5au-*`, `data/token-block/stage5ap-*`, `data/token-block/stage5ar-*`, `data/token-block/stage5at-*`, `data/token-block/stage5au-*`, `data/stego/stage5ap-*`, `data/source-harvester/stage5ai-*`, `data/source-harvester/stage5aj-*`, `data/source-harvester/stage5ak-*`, `data/source-harvester/stage5al-*`, `data/website-ingest/stage5al/*`, `data/website-render/stage5am-*`, and `data/deep-research-export/stage5an-*` when bundle metadata, website metadata, private content metadata, token-block source-lock metadata, coordinate-lock metadata, case-review metadata, or the Stage 5AV next-stage decision change.
+- `data/project-state/stage5ah-*.yaml`, `data/project-state/stage5ap-*`, `data/project-state/stage5ar-*`, `data/project-state/stage5at-*`, `data/project-state/stage5au-*`, `data/project-state/stage5bf-*`, `data/token-block/stage5ap-*`, `data/token-block/stage5ar-*`, `data/token-block/stage5at-*`, `data/token-block/stage5au-*`, `data/historical-route/stage5bf-*`, `data/stego/stage5ap-*`, `data/source-harvester/stage5ai-*`, `data/source-harvester/stage5aj-*`, `data/source-harvester/stage5ak-*`, `data/source-harvester/stage5al-*`, `data/website-ingest/stage5al/*`, `data/website-render/stage5am-*`, and `data/deep-research-export/stage5an-*` when bundle metadata, website metadata, private content metadata, token-block source-lock metadata, coordinate-lock metadata, case-review metadata, historical-route metadata, or next-stage decisions change.
 
 ## Safety Rules
 
@@ -46,6 +46,6 @@ If direction changes, update:
 - Do not finalise page boundaries.
 - Do not process raw Discord logs or raw page images unless a future stage explicitly scopes that work.
 - Do not use CUDA before CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
-## Stage 5BD Navigation
+## Stage 5BF Navigation
 
-Stage 5BD implementation is under `python/libreprimus/token_block/preflight_runner/`; CLI commands are documented in `docs/reference/token-block-preflight-dry-run-cli.md`.
+Stage 5BF implementation is under `python/libreprimus/historical_route/`; CLI commands are documented in `docs/reference/historical-route-source-lock-cli.md`.
