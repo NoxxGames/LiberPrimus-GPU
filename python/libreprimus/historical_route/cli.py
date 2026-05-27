@@ -8,6 +8,12 @@ import typer
 from rich.console import Console
 
 from libreprimus.historical_route.models import DATA_PATHS, FALLBACK_ARCHIVE, PREFERRED_ARCHIVE, RESULTS_DIR, UPSTREAM_URL
+from libreprimus.historical_route.stage5bi import (
+    DATA_PATHS as STAGE5BI_DATA_PATHS,
+    build_stage5bi_records,
+    summarize_stage5bi,
+    validate_stage5bi,
+)
 from libreprimus.historical_route.stage5bf import (
     build_annual_route_inventory,
     build_deep_research_readiness,
@@ -335,5 +341,76 @@ def register(root_app: typer.Typer) -> None:
         for key, value in result.items():
             if key != "validation_errors":
                 console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+
+    @app.command("stage5bi-build")
+    def stage5bi_build() -> None:
+        payloads = build_stage5bi_records()
+        summary = payloads["summary"]
+        console.print("stage5bi_build=true")
+        console.print(f"fandom_page_triage_count={summary['fandom_page_triage_count']}")
+        console.print(f"item_source_lock_candidate_count={summary['item_source_lock_candidate_count']}")
+        console.print(
+            f"original_archive_crosswalk_candidate_count={summary['original_archive_crosswalk_candidate_count']}"
+        )
+        console.print(f"verified_archive_crosswalk_count={summary['verified_archive_crosswalk_count']}")
+        console.print(f"source_gap_count={summary['source_gap_count']}")
+        console.print(f"negative_control_count={summary['negative_control_count']}")
+        console.print(f"spreadsheet_found={str(summary['spreadsheet_found']).lower()}")
+
+    @app.command("stage5bi-validate")
+    def stage5bi_validate(
+        page_triage: Path = typer.Option(STAGE5BI_DATA_PATHS["page_triage"]),
+        item_candidates: Path = typer.Option(STAGE5BI_DATA_PATHS["item_candidates"]),
+        archive_crosswalk: Path = typer.Option(STAGE5BI_DATA_PATHS["archive_crosswalk"]),
+        media_policy: Path = typer.Option(STAGE5BI_DATA_PATHS["media_policy"]),
+        surface_context: Path = typer.Option(STAGE5BI_DATA_PATHS["surface_context"]),
+        negative_controls: Path = typer.Option(STAGE5BI_DATA_PATHS["negative_controls"]),
+        source_gaps: Path = typer.Option(STAGE5BI_DATA_PATHS["source_gaps"]),
+        guardrail: Path = typer.Option(STAGE5BI_DATA_PATHS["guardrail"]),
+        token_block_context: Path = typer.Option(STAGE5BI_DATA_PATHS["token_block_context"]),
+        surface_token_block_context: Path = typer.Option(STAGE5BI_DATA_PATHS["surface_token_block_context"]),
+        spreadsheet_reconciliation: Path = typer.Option(STAGE5BI_DATA_PATHS["spreadsheet_reconciliation"]),
+        spreadsheet_source_lock: Path = typer.Option(STAGE5BI_DATA_PATHS["spreadsheet_source_lock"]),
+        crosswalk_summary: Path = typer.Option(STAGE5BI_DATA_PATHS["crosswalk_summary"]),
+        summary: Path = typer.Option(STAGE5BI_DATA_PATHS["summary"]),
+        next_stage: Path = typer.Option(STAGE5BI_DATA_PATHS["next_stage"]),
+    ) -> None:
+        result = validate_stage5bi(
+            {
+                "page_triage": page_triage,
+                "item_candidates": item_candidates,
+                "archive_crosswalk": archive_crosswalk,
+                "media_policy": media_policy,
+                "surface_context": surface_context,
+                "negative_controls": negative_controls,
+                "source_gaps": source_gaps,
+                "guardrail": guardrail,
+                "token_block_context": token_block_context,
+                "surface_token_block_context": surface_token_block_context,
+                "spreadsheet_reconciliation": spreadsheet_reconciliation,
+                "spreadsheet_source_lock": spreadsheet_source_lock,
+                "crosswalk_summary": crosswalk_summary,
+                "summary": summary,
+                "next_stage": next_stage,
+            }
+        )
+        for key, value in result.items():
+            if key != "validation_errors":
+                console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+
+    @app.command("stage5bi-summary")
+    def stage5bi_summary(summary: Path = typer.Option(STAGE5BI_DATA_PATHS["summary"])) -> None:
+        payload = summarize_stage5bi(summary)
+        console.print(f"stage_id={payload.get('stage_id')}")
+        console.print(f"status={payload.get('status')}")
+        console.print(f"fandom_page_triage_count={payload.get('fandom_page_triage_count')}")
+        console.print(f"item_source_lock_candidate_count={payload.get('item_source_lock_candidate_count')}")
+        console.print(
+            f"original_archive_crosswalk_candidate_count={payload.get('original_archive_crosswalk_candidate_count')}"
+        )
+        console.print(f"verified_archive_crosswalk_count={payload.get('verified_archive_crosswalk_count')}")
+        console.print(f"source_gap_count={payload.get('source_gap_count')}")
+        console.print(f"negative_control_count={payload.get('negative_control_count')}")
+        console.print(f"spreadsheet_found={str(payload.get('spreadsheet_found')).lower()}")
 
     root_app.add_typer(app, name="historical-route")

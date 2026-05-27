@@ -1352,3 +1352,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5BF records 1243 local archive files, 838987564 bytes, archive tree digest bdc8739120be85fc7015e495704ee80bc80ef3a25cfc32c43e3b4d7de40270af, 1043 high-priority artefacts, 96 PGP candidates, 80 stego candidates, 61 OutGuess candidates, 7 OpenPuff/MP3 candidates, 7 magic-square artefacts, 595 hex/JPEG candidates, 293 onion artefacts, 14 book-code artefacts, 12 network-byte-channel artefacts, 257 Liber Primus historical artefacts, 4 source gaps, and Stage 5BG Deep Research review as next. It performs no online clone, live scraping, PGP network verification, stego or OutGuess/OpenPuff/MP3Stego execution, OCR, AI/ML or LLM/vision reading, semantic or hidden-content image interpretation, token experiments, byte-stream generation, variant materialisation, DWH/hash/preimage search, hash comparison, decode attempt, scoring, CUDA execution/source modification/kernel addition, benchmark, scored experiment, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5bi
+    title: Fandom source-lock triage and original-archive crosswalk integration
+    status: complete
+    category: infrastructure
+    summary: Converted Stage 5BH Fandom triage into committed metadata for Fandom page priority, item-level source-lock candidates, original/archive crosswalk candidates, media non-original policy, 2014 256-byte surface context, page 49-51 external context, local spreadsheet reconciliation, source gaps, negative controls, guardrails, and Stage 5BJ next-stage routing.
+    key_outputs:
+      - "`libreprimus historical-route` Stage 5BI commands for build, validation, and summary."
+      - Stage 5BI Fandom page triage, item source-lock candidate, original archive crosswalk, media policy, 2014 surface context, negative-control, source-gap, guardrail, token-block context, spreadsheet source-lock/reconciliation, crosswalk summary, aggregate summary, and next-stage records.
+      - Summary-only developer and research logs; no generated result bodies committed.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5BI records 30 Fandom page triage records, 18 item source-lock candidates, 12 original archive crosswalk candidates, 7 verified archive-equivalent crosswalks, 3 probable archive path candidates, 5 source gaps, 4 negative controls, local archive present true, local spreadsheet present true, canonical transcription changed false, active token-block manifest changed false, and Stage 5BJ as next. It performs no Fandom/archive/spreadsheet raw commit, token experiment, 2014/page49-51 surface combination, byte-stream generation, variant materialisation, DWH/hash/preimage search, hash comparison, decode attempt, stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

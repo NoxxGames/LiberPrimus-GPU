@@ -1,0 +1,29 @@
+record_type: stage5bi_local_spreadsheet_source_lock
+schema: schemas/source-harvester/stage5bi-local-spreadsheet-source-lock-v0.schema.json
+stage_id: stage-5bi
+stage_title: Stage 5BI - Fandom source-lock triage and original-archive crosswalk
+  integration
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_previous_stage: stage-5bf
+source_previous_deep_research_review: stage-5bg
+spreadsheet_found: true
+source_path: third_party/3N_3p_Bases_49-51.jpg.xlsx
+sha256: fcb1688be1e83c95e2094fcf7e14cbbb0e23e319764238acd2c4e157d23c6b6e
+file_size_bytes: 48138
+sheet_names:
+- Sheet1
+sheet_dimensions:
+- sheet_name: Sheet1
+  max_row: 259
+  max_column: 28
+parser: openpyxl_metadata_only
+source_role: local_analysis_metadata
+trusted_as_canonical: false
+spreadsheet_committed: false
+cell_body_committed: false
+generated_extract_committed: false
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+execution_allowed: false
+solve_claim: false

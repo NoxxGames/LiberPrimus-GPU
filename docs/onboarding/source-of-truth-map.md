@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BF it names Stage 5BF as latest complete and Stage 5BG as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BI it names Stage 5BI as latest complete and Stage 5BJ as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -43,9 +43,13 @@
 - `data/token-block/stage5bb-*.yaml`: Stage 5BB active-manifest registry, precedence policy, legacy pointer audit, branch-eligibility validation, runner scaffold, dry-run, counter, execution-gate, fixture-schema, validation, no-execution, DWH context, and guardrail records.
 - `data/token-block/stage5bd-*.yaml`: Stage 5BD dry-run policy, active-manifest lock, run-plan ID, future-path, counter, fixture-only, execution-gate, no-byte-stream, validation-evidence consolidation, archive marker, DWH context, and guardrail records.
 - `data/historical-route/stage5bf-*.yaml`: Stage 5BF local archive source-lock, inventory, trust-classification, specialized artifact, technique-taxonomy, token-block impact, source-gap, Deep Research readiness, DWH context, and guardrail records.
+- `data/historical-route/stage5bi-*.yaml`: Stage 5BI Fandom page triage, item source-lock candidate, original/archive crosswalk candidate, media policy, 2014 surface context, source-gap, negative-control, and guardrail records.
+- `data/source-harvester/stage5bi-*.yaml`: Stage 5BI local spreadsheet source-lock and Fandom/archive crosswalk source summary records.
+- `data/token-block/stage5bi-*.yaml`: Stage 5BI token-block external context, 2014 surface context, and spreadsheet/Stage 5AW reconciliation records that preserve active token-block records unchanged.
 - `data/project-state/stage5bb-summary.yaml`: Stage 5BB aggregate summary, guardrail state, and Stage 5BC historical next-stage decision.
 - `data/project-state/stage5bd-summary.yaml`: Stage 5BD aggregate summary, guardrail state, archive marker state, and Stage 5BE next-stage decision.
-- `data/project-state/stage5bf-summary.yaml`: Stage 5BF aggregate summary, guardrail state, and Stage 5BG next-stage decision.
+- `data/project-state/stage5bf-summary.yaml`: Stage 5BF aggregate summary, guardrail state, and historical Stage 5BG next-stage decision.
+- `data/project-state/stage5bi-summary.yaml`: Stage 5BI aggregate summary, guardrail state, Fandom/source-lock counts, spreadsheet status, and Stage 5BJ next-stage decision.
 - `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 - `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.
@@ -113,3 +117,7 @@ Historical docs may mention old stages. Current-state claims must be taken from 
 ## Stage 5BF Additions
 
 Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bf-summary.yaml`, and `data/historical-route/stage5bf-historical-technique-taxonomy.yaml` for the current historical-route source-lock state. Use Stage 5BD dry-run records as still-valid token-block planning infrastructure, not as execution permission.
+
+## Stage 5BI Additions
+
+Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bi-summary.yaml`, `data/project-state/stage5bi-next-stage-decision.yaml`, `data/historical-route/stage5bi-fandom-page-triage.yaml`, and `data/historical-route/stage5bi-original-archive-crosswalk-candidates.yaml` for the current Fandom/source-lock triage state. Fandom pages and media remain secondary context; the local spreadsheet is non-canonical analysis metadata; Stage 5BD dry-run records and future token-block execution gates remain blocked.

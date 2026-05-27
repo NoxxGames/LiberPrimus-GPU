@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5bf_latest_and_stage5bg_next() -> None:
+def test_operational_docs_use_stage5bi_latest_and_stage5bj_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5BF historical route source-lock and technique extraction" in status
-    assert "Next recommended prompt: Stage 5BG" in status
-    assert "Latest completed stage: Stage 5BF" in staged_plan
-    assert "Current planning focus: Stage 5BG" in staged_plan
+    assert "Stage 5BI Fandom source-lock triage and original-archive crosswalk integration" in status
+    assert "Next recommended prompt: Stage 5BJ" in status
+    assert "Latest completed stage: Stage 5BI" in staged_plan
+    assert "Current planning focus: Stage 5BJ" in staged_plan

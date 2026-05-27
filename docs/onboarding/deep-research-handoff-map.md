@@ -1,8 +1,8 @@
 # Deep Research Handoff Map
 
-## Stage 5BF Note
+## Stage 5BI Note
 
-Stage 5BF did not execute Deep Research. It source-locks the local 2012-2017 historical route archive as metadata, builds a technique taxonomy, and selects Stage 5BG for review of how those historical route records should constrain future token-block planning. Future handoffs should cite Stage 5BF records plus Stage 5BD/5BB/5AZ/5AY/5AW records as planning context, not decoded text or solve evidence.
+Stage 5BI did not execute Deep Research or any experiment. It converts the Stage 5BH Fandom triage into committed metadata, treats Fandom pages/media as secondary route context unless exact source locks exist, crosswalks high-value items toward local archive/source-equivalent candidates, and selects Stage 5BJ for original-archive crosswalk closure. Future handoffs should cite Stage 5BI records plus Stage 5BF and Stage 5BD/5BB/5AZ/5AY/5AW records as planning context, not decoded text or solve evidence.
 
 ## Repository Context
 
@@ -10,7 +10,7 @@ Repository: `https://github.com/NoxxGames/LiberPrimus-GPU`
 
 Before a Deep Research handoff, verify the latest commit and CI status locally. The handoff should cite the commit hash, stage, and generated bundle paths.
 
-Stage 5BF selects Stage 5BG Deep Research review of historical route source-lock and token-block planning impact as the next prompt. Use `data/historical-route/stage5bf-*`, `data/project-state/stage5bf-summary.yaml`, `data/project-state/stage5bf-next-stage-decision.yaml`, `data/token-block/stage5bd-*`, `data/project-state/stage5bd-summary.yaml`, `data/token-block/stage5bb-*`, `data/project-state/stage5bb-summary.yaml`, `data/token-block/stage5az-*`, `data/project-state/stage5az-summary.yaml`, `data/token-block/stage5ay-*`, `data/project-state/stage5ay-summary.yaml`, `data/token-block/stage5aw-*`, `data/project-state/stage5aw-summary.yaml`, and the page 49-51 lineage records from Stage 5AP through Stage 5AR. Ignored Stage 5BF reports under `experiments/results/historical-route/stage5bf/`, ignored content packs under `deep-research-content-packs/stage5bf/`, ignored ZIP outputs under `deep-research-repo-zips/stage5bf/`, ignored Stage 5BD reports under `experiments/results/token-block/stage5bd/`, and ignored review pack v2 under `human-review-packs/stage5au/token-case-review-v2/` are generated aids, not source truth or public publication. Do not hand Deep Research raw `third_party/` paths or raw page images as source truth. Public website expansion remains a future review-gated project.
+Stage 5BI selects Stage 5BJ original-archive crosswalk closure for high-priority Fandom-derived candidates as the next prompt. Use `data/historical-route/stage5bi-*`, `data/source-harvester/stage5bi-*`, `data/token-block/stage5bi-*`, `data/project-state/stage5bi-summary.yaml`, `data/project-state/stage5bi-next-stage-decision.yaml`, `data/historical-route/stage5bf-*`, `data/project-state/stage5bf-summary.yaml`, `data/token-block/stage5bd-*`, `data/project-state/stage5bd-summary.yaml`, `data/token-block/stage5bb-*`, `data/project-state/stage5bb-summary.yaml`, `data/token-block/stage5az-*`, `data/project-state/stage5az-summary.yaml`, `data/token-block/stage5ay-*`, `data/project-state/stage5ay-summary.yaml`, `data/token-block/stage5aw-*`, `data/project-state/stage5aw-summary.yaml`, and the page 49-51 lineage records from Stage 5AP through Stage 5AR. Ignored Stage 5BF reports under `experiments/results/historical-route/stage5bf/`, ignored content packs under `deep-research-content-packs/stage5bf/`, ignored ZIP outputs under `deep-research-repo-zips/stage5bf/`, ignored Stage 5BD reports under `experiments/results/token-block/stage5bd/`, and ignored review pack v2 under `human-review-packs/stage5au/token-case-review-v2/` are generated aids, not source truth or public publication. Do not hand Deep Research raw `third_party/` paths, Fandom HTML/images, spreadsheet bodies, or raw page images as source truth. Public website expansion remains a future review-gated project.
 
 ## Files Deep Research Should Inspect First
 
@@ -82,3 +82,7 @@ Future Deep Research handoffs should prefer these curated records plus the redac
 ## Stage 5BD Archive Markers
 
 Future ZIP-based Deep Research handoffs should use the Stage 5BD archive marker policy and scripts so the archive exposes commit, branch, stage, next-stage, and manifest-hash metadata without requiring `.git/`.
+
+## Stage 5BI Fandom Triage
+
+Stage 5BI records Fandom page triage, item source-lock candidates, original/archive crosswalk candidates, Fandom media non-original policy, 2014 surface context, negative controls, source gaps, and local spreadsheet metadata. The three 2014 256-byte surfaces are context only, not experiment inputs, and must not be combined with page 49-51 without a future explicit source-lock and execution gate.

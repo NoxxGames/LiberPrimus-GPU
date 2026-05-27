@@ -1,0 +1,31 @@
+record_type: stage5bi_fandom_media_non_original_policy
+schema: schemas/historical-route/stage5bi-fandom-media-non-original-policy-v0.schema.json
+stage_id: stage-5bi
+stage_title: Stage 5BI - Fandom source-lock triage and original-archive crosswalk
+  integration
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_previous_stage: stage-5bf
+source_previous_deep_research_review: stage-5bg
+default_media_status: fandom_copy_reference_only
+fandom_images_are_original_source_truth: false
+screenshots_are_original_source_truth: false
+fandom_image_urls_can_be_route_pointers: true
+original_archive_preference:
+- third_party/CicadaSolversIddqd
+- Stage 5BF archive/hash metadata
+- commit-addressed public repository references where applicable
+policy_rules:
+- Fandom-hosted images are secondary copies by default.
+- Do not use Fandom image URLs as original source truth.
+- Crosswalk high-value media to local archive originals or hash-locked equivalents.
+- Screenshots, resized images, and hosted derivatives remain reference-only.
+- Original archive equivalence must be recorded before any future positive-control
+  or source-truth use.
+media_status_values:
+- fandom_copy_reference_only
+- needs_archive_original_crosswalk
+- original_archive_equivalent_found
+- do_not_use_as_source_truth
+raw_images_committed: false
+solve_claim: false

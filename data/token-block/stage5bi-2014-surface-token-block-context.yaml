@@ -1,0 +1,25 @@
+record_type: stage5bi_2014_surface_token_block_context
+schema: schemas/token-block/stage5bi-2014-surface-token-block-context-v0.schema.json
+stage_id: stage-5bi
+stage_title: Stage 5BI - Fandom source-lock triage and original-archive crosswalk
+  integration
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_previous_stage: stage-5bf
+source_previous_deep_research_review: stage-5bg
+context_id: stage5bi-2014-surfaces-page49-51-context-only
+surface_ids:
+- stage5bi-c01-2014-growing-hex-surface
+- stage5bi-c02-2014-1033-hex-surface
+- stage5bi-c03-2014-3301-hex-surface
+page49_51_surface_id: stage5bi-c04-page49-51-256-token-surface
+context_only: true
+combination_allowed: false
+xor_attempt_performed: false
+transposition_attempt_performed: false
+hash_search_performed: false
+decode_attempt_performed: false
+execution_allowed: false
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+solve_claim: false

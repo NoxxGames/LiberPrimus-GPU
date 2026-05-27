@@ -1,0 +1,35 @@
+record_type: stage5bi_spreadsheet_stage5aw_reconciliation
+schema: schemas/token-block/stage5bi-spreadsheet-stage5aw-reconciliation-v0.schema.json
+stage_id: stage-5bi
+stage_title: Stage 5BI - Fandom source-lock triage and original-archive crosswalk
+  integration
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_previous_stage: stage-5bf
+source_previous_deep_research_review: stage-5bg
+spreadsheet_found: true
+spreadsheet_source_path: third_party/3N_3p_Bases_49-51.jpg.xlsx
+spreadsheet_sha256: fcb1688be1e83c95e2094fcf7e14cbbb0e23e319764238acd2c4e157d23c6b6e
+sheet_names:
+- Sheet1
+stage5aw_repaired_branch_manifest: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+stage5aw_repaired_unresolved_records: data/token-block/stage5aw-repaired-unresolved-token-variant-records.yaml
+stage5aw_reviewer_extra_possible_tokens: data/token-block/stage5aw-repaired-reviewer-extra-possible-tokens.yaml
+stage5ay_branch_eligibility_policy: data/token-block/stage5ay-branch-eligibility-policy.yaml
+stage5aw_unresolved_variant_count: 77
+stage5aw_possible_token_universe_count: 92
+stage5aw_possible_token_universe_hash: 41b1f59f071a3ebcbca8a05b52d98889b457e512f6f46550823d12d20a5853b0
+spreadsheet_parse_status: manual_review_required
+spreadsheet_primary_token_stream_has_256_entries: null
+spreadsheet_alternative_relation_to_stage5aw: manual_review_required
+missing_stage5aw_alternatives: []
+extra_spreadsheet_alternatives: []
+ambiguous_i_l_o_zero_variants_status: stage5aw_representation_present_but_spreadsheet_manual_review_required
+spreadsheet_is_local_analysis_metadata: true
+trusted_as_canonical: false
+canonical_transcription_changed: false
+branch_manifest_changed: false
+active_token_block_manifest_changed: false
+execution_allowed: false
+variant_byte_streams_generated: false
+solve_claim: false

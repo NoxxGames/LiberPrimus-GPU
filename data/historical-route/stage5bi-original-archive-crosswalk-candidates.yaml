@@ -1,0 +1,221 @@
+record_type: stage5bi_original_archive_crosswalk_candidate_set
+schema: schemas/historical-route/stage5bi-original-archive-crosswalk-candidate-v0.schema.json
+stage_id: stage-5bi
+stage_title: Stage 5BI - Fandom source-lock triage and original-archive crosswalk
+  integration
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_previous_stage: stage-5bf
+source_previous_deep_research_review: stage-5bg
+archive_available: true
+candidate_count: 12
+verified_archive_crosswalk_count: 7
+probable_archive_path_candidate_count: 3
+raw_archive_files_committed: false
+execution_allowed: false
+solve_claim: false
+records:
+- crosswalk_id: stage5bi-c01-2014-growing-hex-surface-archive-crosswalk
+  candidate_id: stage5bi-c01-2014-growing-hex-surface
+  candidate_label: 2014 growing string 256-byte surface
+  preferred_archive_root: third_party/CicadaSolversIddqd
+  upstream_archive_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  archive_crosswalk_status: probable_archive_path_candidate
+  archive_relative_path: 2014/additional docs/the growing string/CICADA 3301 2914
+    onion 2 updates GMT+1.txt
+  archive_sha256: 96e205599bf6716f59be9b29c43d58bebb27dadeaf7c5297ddced9c9abea08b4
+  archive_size_bytes: 25615
+  archive_file_type_guess: text
+  source_stage5bf_artifact_id: stage5bf-a3102282e470656e
+  crosswalk_verified_by: stage5bf_metadata_hash_path_match
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+  notes:
+  - The archive metadata contains growing-string candidates; exact 512-hex extraction
+    remains future review.
+- crosswalk_id: stage5bi-c02-2014-1033-hex-surface-archive-crosswalk
+  candidate_id: stage5bi-c02-2014-1033-hex-surface
+  candidate_label: 2014 <!--1033--> 256-byte surface
+  preferred_archive_root: third_party/CicadaSolversIddqd
+  upstream_archive_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  archive_crosswalk_status: probable_archive_path_candidate
+  archive_relative_path: 2014/additional images/Liber primus pages/1033.jpg
+  archive_sha256: 15b2b99fe15ff34ef3eab574bb84bfaad0a119674be2ca5baf65951e6a9bd865
+  archive_size_bytes: 342361
+  archive_file_type_guess: image
+  source_stage5bf_artifact_id: stage5bf-f917550ef5f56458
+  crosswalk_verified_by: stage5bf_metadata_hash_path_match
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+  notes:
+  - Archive has 1033 image/outguess candidates; exact hex-surface source remains unresolved.
+- crosswalk_id: stage5bi-c03-2014-3301-hex-surface-archive-crosswalk
+  candidate_id: stage5bi-c03-2014-3301-hex-surface
+  candidate_label: 2014 <!--3301--> 256-byte surface
+  preferred_archive_root: third_party/CicadaSolversIddqd
+  upstream_archive_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  archive_crosswalk_status: probable_archive_path_candidate
+  archive_relative_path: 2014/Websites/Interconnectedness fron onion 5/3301 - Interconnectedness.mp3
+  archive_sha256: 1ce3839b4a62462d9009c4469acc189b523e1bdcf338cb49cda1cd7bb4efffc6
+  archive_size_bytes: 6651873
+  archive_file_type_guess: audio
+  source_stage5bf_artifact_id: stage5bf-7917b2c890e5f336
+  crosswalk_verified_by: stage5bf_metadata_hash_path_match
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+  notes:
+  - 3301-labelled 2014 paths exist but need manual verification against exact surface
+    claims.
+- crosswalk_id: stage5bi-c04-page49-51-256-token-surface-archive-crosswalk
+  candidate_id: stage5bi-c04-page49-51-256-token-surface
+  candidate_label: Page 49-51 256-position token surface
+  preferred_archive_root: third_party/CicadaSolversIddqd
+  upstream_archive_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  archive_crosswalk_status: original_archive_equivalent_found
+  archive_relative_path: assets/2014/liber-primus-complete/49.jpg
+  archive_sha256: c0f778187a8e9ddbfc667a65929ac567430a2e38278a2022377984ac084e5f72
+  archive_size_bytes: 362637
+  archive_file_type_guess: image
+  source_stage5bf_artifact_id: stage5bf-f11d1c6a9b3bd4bb
+  crosswalk_verified_by: stage5bf_metadata_hash_path_match
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+  notes:
+  - Stage 5AP/5AR already source-lock the three original-image page anchors; this
+    row is context only.
+- crosswalk_id: stage5bi-c07-interconnectedness-mp3-archive-crosswalk
+  candidate_id: stage5bi-c07-interconnectedness-mp3
+  candidate_label: 2014 Interconnectedness MP3
+  preferred_archive_root: third_party/CicadaSolversIddqd
+  upstream_archive_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  archive_crosswalk_status: original_archive_equivalent_found
+  archive_relative_path: 2014/Websites/Interconnectedness fron onion 5/3301 - Interconnectedness.mp3
+  archive_sha256: 1ce3839b4a62462d9009c4469acc189b523e1bdcf338cb49cda1cd7bb4efffc6
+  archive_size_bytes: 6651873
+  archive_file_type_guess: audio
+  source_stage5bf_artifact_id: stage5bf-7917b2c890e5f336
+  crosswalk_verified_by: stage5bf_metadata_hash_path_match
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+  notes: []
+- crosswalk_id: stage5bi-c09-761-mp3-archive-crosswalk
+  candidate_id: stage5bi-c09-761-mp3
+  candidate_label: 761.MP3 audio candidate
+  preferred_archive_root: third_party/CicadaSolversIddqd
+  upstream_archive_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  archive_crosswalk_status: original_archive_equivalent_found
+  archive_relative_path: 2013/additional files/Cicada OS/cicados/AUDIO/761.MP3
+  archive_sha256: 83008217439110c3b824898af73b99cb2cf0657dda88cb363c3aa34a4ec0a460
+  archive_size_bytes: 4010732
+  archive_file_type_guess: audio
+  source_stage5bf_artifact_id: stage5bf-a8af532e07c2db99
+  crosswalk_verified_by: stage5bf_metadata_hash_path_match
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+  notes: []
+- crosswalk_id: stage5bi-c10-outguessed-rune-table-message-archive-crosswalk
+  candidate_id: stage5bi-c10-outguessed-rune-table-message
+  candidate_label: OutGuessed message from rune table
+  preferred_archive_root: third_party/CicadaSolversIddqd
+  upstream_archive_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  archive_crosswalk_status: original_archive_equivalent_found
+  archive_relative_path: 2013/additional docs/signed messages/OutGuessed message from
+    rune table.txt
+  archive_sha256: 685aeec4217b1c76bb1cf64ba8f1c537e05895f4971d5c31ab6ed42d4460bd8b
+  archive_size_bytes: 1469
+  archive_file_type_guess: text
+  source_stage5bf_artifact_id: stage5bf-8bc622c867bde300
+  crosswalk_verified_by: stage5bf_metadata_hash_path_match
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+  notes: []
+- crosswalk_id: stage5bi-c11-4gq25-image-archive-crosswalk
+  candidate_id: stage5bi-c11-4gq25-image
+  candidate_label: 4gq25.jpg image fixture candidate
+  preferred_archive_root: third_party/CicadaSolversIddqd
+  upstream_archive_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  archive_crosswalk_status: original_archive_equivalent_found
+  archive_relative_path: assets/2016/4gq25.jpg
+  archive_sha256: a8340ad04b83fb3130e7ed9172867a440812e87089d6aa2b932d97c6ae38aebe
+  archive_size_bytes: 26342
+  archive_file_type_guess: image
+  source_stage5bf_artifact_id: stage5bf-2abcff2b23cf846d
+  crosswalk_verified_by: stage5bf_metadata_hash_path_match
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+  notes: []
+- crosswalk_id: stage5bi-c12-magicsquares-text-archive-crosswalk
+  candidate_id: stage5bi-c12-magicsquares-text
+  candidate_label: 2014 magicsquares.txt
+  preferred_archive_root: third_party/CicadaSolversIddqd
+  upstream_archive_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  archive_crosswalk_status: original_archive_equivalent_found
+  archive_relative_path: assets/2014/stage07/magicsquares.txt
+  archive_sha256: da31a5a338be6d587ebec87f1dd0bcfdd47108dfc9db5bfc2bd261a58717f190
+  archive_size_bytes: 721
+  archive_file_type_guess: text
+  source_stage5bf_artifact_id: stage5bf-6bef92d430045e78
+  crosswalk_verified_by: stage5bf_metadata_hash_path_match
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+  notes: []
+- crosswalk_id: stage5bi-c15-telnet-output-recreation-archive-crosswalk
+  candidate_id: stage5bi-c15-telnet-output-recreation
+  candidate_label: 2013 telnet output/recreation
+  preferred_archive_root: third_party/CicadaSolversIddqd
+  upstream_archive_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  archive_crosswalk_status: original_archive_equivalent_found
+  archive_relative_path: 2013/additional docs/telnet/2013 offset messsage from telnet.txt
+  archive_sha256: 1b1bb7539353c027510b759bfbd7dd53a5d02b60010af6b38ed6ce6e2193a951
+  archive_size_bytes: 2272
+  archive_file_type_guess: text
+  source_stage5bf_artifact_id: stage5bf-28f5833f6a44b019
+  crosswalk_verified_by: stage5bf_metadata_hash_path_match
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+  notes:
+  - Archive presence does not make the community Telnet prompt page a reference implementation.
+- crosswalk_id: stage5bi-c13-pgp-signature-live-cd-archive-crosswalk
+  candidate_id: stage5bi-c13-pgp-signature-live-cd
+  candidate_label: PGP Signature from live cd
+  preferred_archive_root: third_party/CicadaSolversIddqd
+  upstream_archive_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  archive_crosswalk_status: local_archive_search_no_match
+  archive_relative_path: null
+  archive_sha256: null
+  archive_size_bytes: null
+  archive_file_type_guess: null
+  source_stage5bf_artifact_id: null
+  crosswalk_verified_by: not_verified
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+  notes:
+  - Fandom page remains weak/quarantined until stronger original material is found.
+- crosswalk_id: stage5bi-c06-boards-page49-51-256-byte-thread-archive-crosswalk
+  candidate_id: stage5bi-c06-boards-page49-51-256-byte-thread
+  candidate_label: Boards.net page 49-51 256 byte strings thread
+  preferred_archive_root: third_party/CicadaSolversIddqd
+  upstream_archive_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  archive_crosswalk_status: blocked_archive_absent
+  archive_relative_path: null
+  archive_sha256: null
+  archive_size_bytes: null
+  archive_file_type_guess: null
+  source_stage5bf_artifact_id: null
+  crosswalk_verified_by: not_verified
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+  notes:
+  - Thread may be inaccessible; future Wayback/local archive source-lock required.

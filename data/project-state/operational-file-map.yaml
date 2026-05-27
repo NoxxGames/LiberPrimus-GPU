@@ -1447,4 +1447,76 @@ records:
   staleness_check_level: current_state
   owner_context: research_operator
   notes: Explains local archive use, raw-file ignore policy, generated-output
-    roots, and the Stage 5BG Deep Research review boundary.
+    roots, and the historical Stage 5BG Deep Research review boundary.
+- path: data/project-state/stage5bi-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BI Fandom source-lock triage aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bi
+  expected_update_frequency: when_fandom_source_lock_triage_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records Fandom triage counts, archive-crosswalk counts, source gaps,
+    negative controls, spreadsheet/local archive presence, guardrails, and Stage
+    5BJ next-stage decision.
+- path: data/project-state/stage5bi-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5BI next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bi
+  expected_update_frequency: when_fandom_source_lock_next_stage_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Selects Stage 5BJ original-archive crosswalk closure without execution.
+- path: data/historical-route/stage5bi-fandom-page-triage.yaml
+  category: active_data_record
+  purpose: Stage 5BI Fandom page triage records.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bi
+  expected_update_frequency: when_fandom_triage_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Classifies Fandom pages by source-lock priority and evidence tier while
+    keeping page bodies and images uncommitted.
+- path: data/historical-route/stage5bi-original-archive-crosswalk-candidates.yaml
+  category: active_data_record
+  purpose: Stage 5BI original/archive-equivalent crosswalk candidates.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bi
+  expected_update_frequency: when_archive_crosswalk_candidates_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Links high-value Fandom-derived items to local archive/source-equivalent
+    candidates where available and records unresolved gaps without executing.
+- path: data/source-harvester/stage5bi-local-spreadsheet-source-lock.yaml
+  category: active_data_record
+  purpose: Stage 5BI local spreadsheet source-lock metadata.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bi
+  expected_update_frequency: when_spreadsheet_source_lock_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records workbook hash, size, sheet names, and dimensions only; workbook
+    bytes and cell bodies remain ignored and non-canonical.
+- path: docs/experiments/stage-5bi-fandom-source-lock-triage.md
+  category: operational_status_doc
+  purpose: Stage 5BI metadata-only experiment/source-lock note.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bi
+  expected_update_frequency: when_stage5bi_records_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents Stage 5BI record families, media policy, counts, no-execution
+    guardrails, and Stage 5BJ next-stage rationale.

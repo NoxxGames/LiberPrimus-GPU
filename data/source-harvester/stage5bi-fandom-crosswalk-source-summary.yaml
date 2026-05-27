@@ -1,0 +1,26 @@
+record_type: stage5bi_fandom_crosswalk_source_summary
+schema: schemas/source-harvester/stage5bi-fandom-crosswalk-source-summary-v0.schema.json
+stage_id: stage-5bi
+stage_title: Stage 5BI - Fandom source-lock triage and original-archive crosswalk
+  integration
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_previous_stage: stage-5bf
+source_previous_deep_research_review: stage-5bg
+fandom_page_triage_count: 30
+item_source_lock_candidate_count: 18
+highest_priority_candidate_count: 13
+original_archive_crosswalk_candidate_count: 12
+archive_crosswalk_status_counts:
+  blocked_archive_absent: 1
+  local_archive_search_no_match: 1
+  original_archive_equivalent_found: 7
+  probable_archive_path_candidate: 3
+local_archive_present: true
+local_spreadsheet_present: true
+fandom_media_policy: data/historical-route/stage5bi-fandom-media-non-original-policy.yaml
+raw_archive_files_committed: false
+fandom_page_bodies_committed: false
+spreadsheet_committed: false
+execution_allowed: false
+solve_claim: false

@@ -1,0 +1,86 @@
+record_type: stage5bi_summary
+schema: schemas/project-state/stage5bi-summary-v0.schema.json
+stage_id: stage-5bi
+stage_title: Stage 5BI - Fandom source-lock triage and original-archive crosswalk
+  integration
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_previous_stage: stage-5bf
+source_previous_deep_research_review: stage-5bg
+status: complete
+source_stage_ids:
+- stage-5bf
+- stage-5bg
+- stage-5bh-dr
+fandom_page_triage_count: 30
+item_source_lock_candidate_count: 18
+highest_priority_candidate_count: 13
+original_archive_crosswalk_candidate_count: 12
+verified_archive_crosswalk_count: 7
+probable_archive_path_candidate_count: 3
+source_gap_count: 5
+negative_control_count: 4
+fandom_media_policy_created: true
+surface_2014_context_created: true
+surface_2014_count: 3
+page49_51_surface_context_created: true
+spreadsheet_source_lock_created: true
+spreadsheet_reconciliation_created: true
+spreadsheet_found: true
+local_archive_present: true
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+stage5bd_dry_run_records_remain_valid: true
+future_token_block_execution_remains_blocked: true
+recommended_next_prompt_type: codex_metadata_implementation
+recommended_next_stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority
+  Fandom-derived candidates, without execution
+recommended_next_stage_reason: Stage 5BI leaves high-value Fandom-derived surfaces
+  and page bodies blocked until exact original/archive-equivalent crosswalks close;
+  the next stage should close those metadata gaps before broader historical-route
+  planning.
+metadata_only: true
+historical_source_lock_triage_only: true
+fandom_page_bodies_committed: false
+fandom_images_committed: false
+raw_archive_files_committed: false
+spreadsheet_committed: false
+generated_outputs_committed: false
+token_experiments_executed: false
+real_token_block_byte_streams_generated: false
+variant_byte_streams_generated: false
+variant_branches_enumerated: false
+real_variant_branches_materialised: false
+full_cartesian_product_enumerated: false
+sampled_real_variants_generated: false
+fandom_surface_combination_performed: false
+xor_attempt_performed: false
+transposition_attempt_performed: false
+outguess_execution_performed: false
+openpuff_execution_performed: false
+mp3stego_execution_performed: false
+stego_tool_execution_performed: false
+pgp_network_key_fetch_performed: false
+pgp_verification_performed_as_project_truth: false
+hash_search_performed: false
+hash_preimage_claim: false
+hash_comparison_performed: false
+decode_attempt_performed: false
+scored_experiments_executed: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+cuda_execution_performed: false
+cuda_source_modified: false
+new_cuda_kernels_added: 0
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+hidden_content_image_forensics_performed: false
+audio_analysis_performed: false
+canonical_corpus_active: false
+page_boundaries_final: false
+method_status_upgraded: false
+public_website_publication_performed: false
+website_expansion_performed: false
+solve_claim: false

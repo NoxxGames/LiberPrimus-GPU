@@ -1,0 +1,49 @@
+record_type: stage5bi_negative_control_quarantine_set
+schema: schemas/historical-route/stage5bi-negative-control-quarantine-v0.schema.json
+stage_id: stage-5bi
+stage_title: Stage 5BI - Fandom source-lock triage and original-archive crosswalk
+  integration
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_previous_stage: stage-5bf
+source_previous_deep_research_review: stage-5bg
+negative_control_count: 4
+records:
+- negative_control_id: stage5bi-infamous-warning
+  source_page: https://uncovering-cicada.fandom.com/wiki/The_Infamous_Warning
+  classification: negative_control_or_false_path
+  reason:
+  - Deep Research report says page documents unconfirmed claims.
+  - Do not treat as positive source evidence.
+  planning_effect:
+  - false_path_warning_should_be_explicit
+  - pgp_authenticity_gate_required
+  execution_allowed: false
+  solve_claim: false
+- negative_control_id: stage5bi-fake-puzzles
+  source_page: https://uncovering-cicada.fandom.com/wiki/Fake_puzzles
+  classification: negative_control_or_false_path
+  reason:
+  - Page documents fake or unverifiable puzzles.
+  planning_effect:
+  - future_false_positive_filter
+  execution_allowed: false
+  solve_claim: false
+- negative_control_id: stage5bi-telnet-recreation
+  source_page: https://uncovering-cicada.fandom.com/wiki/The_Telnet_Prompt
+  classification: recreation_not_reference_implementation
+  reason:
+  - Community recreation should not be treated as exact original service behavior.
+  planning_effect:
+  - requires_original_service_or_archive_crosswalk
+  execution_allowed: false
+  solve_claim: false
+- negative_control_id: stage5bi-pgp-signature-live-cd-deletion-candidate
+  source_page: https://uncovering-cicada.fandom.com/wiki/PGP_Signature_from_live_cd
+  classification: weak_or_quarantined_source
+  reason:
+  - Report flags candidate-for-deletion / weak provenance.
+  planning_effect:
+  - pgp_truth_requires_stronger_source_lock
+  execution_allowed: false
+  solve_claim: false

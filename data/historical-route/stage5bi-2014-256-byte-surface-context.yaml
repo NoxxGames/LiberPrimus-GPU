@@ -1,0 +1,64 @@
+record_type: stage5bi_2014_256_byte_surface_context
+schema: schemas/historical-route/stage5bi-2014-256-byte-surface-context-v0.schema.json
+stage_id: stage-5bi
+stage_title: Stage 5BI - Fandom source-lock triage and original-archive crosswalk
+  integration
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_previous_stage: stage-5bf
+source_previous_deep_research_review: stage-5bg
+surface_count: 3
+surfaces:
+- surface_id: stage5bi-c01-2014-growing-hex-surface
+  surface_label: 2014 growing string
+  historical_marker: Patience is a virtue
+  claimed_hex_character_count: 512
+  claimed_byte_count: 256
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  archive_crosswalk_status: probable_archive_path_candidate
+  execution_allowed: false
+  combination_with_page49_51_allowed: false
+  raw_surface_body_committed: false
+  solve_claim: false
+- surface_id: stage5bi-c02-2014-1033-hex-surface
+  surface_label: <!--1033-->
+  historical_marker: '1033'
+  claimed_hex_character_count: 512
+  claimed_byte_count: 256
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  archive_crosswalk_status: probable_archive_path_candidate
+  execution_allowed: false
+  combination_with_page49_51_allowed: false
+  raw_surface_body_committed: false
+  solve_claim: false
+- surface_id: stage5bi-c03-2014-3301-hex-surface
+  surface_label: <!--3301-->
+  historical_marker: '3301'
+  claimed_hex_character_count: 512
+  claimed_byte_count: 256
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  archive_crosswalk_status: probable_archive_path_candidate
+  execution_allowed: false
+  combination_with_page49_51_allowed: false
+  raw_surface_body_committed: false
+  solve_claim: false
+page49_51_context:
+  surface_id: stage5bi-c04-page49-51-256-token-surface
+  surface_label: page 49-51 256-position token surface
+  token_count: 256
+  source_records:
+  - data/token-block/stage5ap-token-block-canonical-transcription.yaml
+  - data/token-block/stage5ar-token-case-policy.yaml
+  - data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+  fandom_context_url: https://uncovering-cicada.fandom.com/wiki/Page_49-51
+  canonical_transcription_changed: false
+  active_token_block_manifest_changed: false
+  execution_allowed: false
+  combination_with_2014_surfaces_allowed: false
+  solve_claim: false
+surface_combination_performed: false
+xor_attempt_performed: false
+transposition_attempt_performed: false
+decode_attempt_performed: false
+hash_search_performed: false
+solve_claim: false

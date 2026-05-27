@@ -2,7 +2,7 @@
 
 ## Stage 5BD Note
 
-Stage 5AW supersedes Stage 5AV branch metadata for future token-block planning. Stage 5AX only inserted validation infrastructure, Stage 5AY records bounded preflight design using the repaired Stage 5AW branch manifest, Stage 5AZ repairs the duplicate bounded variant-family ID, Stage 5BB canonicalises active-manifest precedence for the no-execution runner scaffold, Stage 5BD adds no-byte-stream dry-run planning, and Stage 5BF adds local historical-route source-lock context for Stage 5BG review. Keep the Stage 5AP canonical transcription unchanged unless a future review stage explicitly scopes a canonical transcription update.
+Stage 5AW supersedes Stage 5AV branch metadata for future token-block planning. Stage 5AX only inserted validation infrastructure, Stage 5AY records bounded preflight design using the repaired Stage 5AW branch manifest, Stage 5AZ repairs the duplicate bounded variant-family ID, Stage 5BB canonicalises active-manifest precedence for the no-execution runner scaffold, Stage 5BD adds no-byte-stream dry-run planning, Stage 5BF adds local historical-route source-lock context, and Stage 5BI adds Fandom/source-lock context for Stage 5BJ crosswalk closure. Keep the Stage 5AP canonical transcription unchanged unless a future review stage explicitly scopes a canonical transcription update.
 
 Use this workflow when a future stage works with the page 49-51 token block.
 

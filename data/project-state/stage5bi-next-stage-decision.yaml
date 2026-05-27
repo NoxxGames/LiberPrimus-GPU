@@ -1,0 +1,30 @@
+record_type: stage5bi_next_stage_decision
+schema: schemas/project-state/stage5bi-next-stage-decision-v0.schema.json
+stage_id: stage-5bi
+stage_title: Stage 5BI - Fandom source-lock triage and original-archive crosswalk
+  integration
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_previous_stage: stage-5bf
+source_previous_deep_research_review: stage-5bg
+selected_next_stage_id: stage-5bj
+selected_next_prompt_type: codex_metadata_implementation
+selected_next_stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority
+  Fandom-derived candidates, without execution
+selected_next_stage_reason: Stage 5BI leaves high-value Fandom-derived surfaces and
+  page bodies blocked until exact original/archive-equivalent crosswalks close; the
+  next stage should close those metadata gaps before broader historical-route planning.
+token_block_execution_selected: false
+dwh_hash_search_selected: false
+scored_experiments_selected: false
+benchmark_selected: false
+cuda_selected: false
+public_website_expansion_selected: false
+stego_execution_selected: false
+pgp_verification_selected: false
+metadata_source_lock_only: true
+solve_claim: false
+summary_counts_preview:
+  fandom_page_triage_count: 30
+  item_source_lock_candidate_count: 18
+  source_gap_count: 5

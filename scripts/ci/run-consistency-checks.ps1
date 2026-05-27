@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5BF" `
-        --expected-next-stage "Stage 5BG" `
+        --expected-latest-stage "Stage 5BI" `
+        --expected-next-stage "Stage 5BJ" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5BF" `
-        --expected-next-stage "Stage 5BG" `
+        --expected-latest-stage "Stage 5BI" `
+        --expected-next-stage "Stage 5BJ" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5BF",
+        expected_latest_stage="Stage 5BI",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5BF",
+            "expected_latest_stage": "Stage 5BI",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2477,6 +2477,12 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q "deep-research-content-packs/stage5bf/historical-route-source-lock-pack.zip"
     git check-ignore -q "deep-research-repo-zips/stage5bf/stage5bf-repo.zip"
     git check-ignore -q "codex-output/stage5bf-codex-completion.md"
+
+    Write-Host "Validating Stage 5BI Fandom source-lock triage records"
+    & $Python -m libreprimus.cli historical-route stage5bi-validate
+    git check-ignore -q "third_party/CicadaSolversIddqd/example.txt"
+    git check-ignore -q "third_party/3N_3p_Bases_49-51.jpg.xlsx"
+    git check-ignore -q "codex-output/stage5bi-codex-completion.md"
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

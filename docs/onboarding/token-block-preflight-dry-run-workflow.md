@@ -10,4 +10,4 @@ Start with:
 
 If rebuilding, run the commands in `docs/reference/token-block-preflight-dry-run-cli.md` in order. After rebuilding, verify that `experiments/results/token-block/stage5bd/`, `deep-research-repo-zips/stage5bd/`, and `codex-output/stage5bd-codex-completion.md` remain ignored.
 
-Stage 5BD does not authorize byte-stream generation, variant materialisation, DWH/hash search, decoding, scoring, CUDA, benchmarks, website expansion, canonical corpus activation, page-boundary finalisation, or solve claims. Stage 5BF added historical-route source-lock metadata before any execution-capable planning; the next step is Stage 5BG Deep Research review.
+Stage 5BD does not authorize byte-stream generation, variant materialisation, DWH/hash search, decoding, scoring, CUDA, benchmarks, website expansion, canonical corpus activation, page-boundary finalisation, or solve claims. Stage 5BF added historical-route source-lock metadata and Stage 5BI added Fandom/source-lock crosswalk metadata before any execution-capable planning; the next step is Stage 5BJ original-archive crosswalk closure without execution.

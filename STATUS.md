@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5BF historical route source-lock and technique extraction is complete.
+Stage 5BI Fandom source-lock triage and original-archive crosswalk integration is complete.
 
-Next recommended prompt: Stage 5BG - Deep Research historical route source-lock review. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived candidates, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5BI
+
+Stage 5BI converts the Stage 5BH Deep Research Fandom triage into committed metadata. It classifies Uncovering Cicada / Fandom pages as secondary route context, records item-level source-lock candidates, crosswalks high-value claims to original or stronger archive candidates, marks Fandom media as non-original by default, records 2014 256-byte surface context, records page 49-51 external context without changing active token-block records, source-locks the local spreadsheet as non-canonical analysis metadata, and adds negative-control/source-gap/guardrail records.
+
+Local Stage 5BI summary: Fandom page triage records `30`, item source-lock candidates `18`, original archive crosswalk candidates `12`, verified archive-equivalent crosswalks `7`, probable archive path candidates `3`, source gaps `5`, negative controls `4`, local archive present `true`, spreadsheet present `true`, canonical transcription changed `false`, active token-block manifest changed `false`, and next stage `Stage 5BJ`.
+
+Stage 5BI is metadata-only. It does not run token-block experiments, generate real token-block byte streams, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, compare candidate hashes, decode, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, score candidate plaintext, publish website content, commit raw Fandom/archive/spreadsheet files, alter Stage 5BD dry-run records, or make solve claims.
 
 ## Completed in Stage 5BF
 
@@ -1038,4 +1046,4 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 
 ## Next prompt recommendation
 
-Stage 5BG - Deep Research review of 2012-2017 historical route source-lock, technique taxonomy, and impact on future token-block dry-run planning. Use the Stage 5BF archive location, tree/inventory summaries, annual route inventories, high-priority artifact index, trust classifications, specialized artifact records, technique taxonomy, DWH historical context, token-block planning impact, source-gap register, guardrail, and summary records; keep token experiment execution, variant byte-stream generation, Cartesian enumeration, DWH/hash/preimage search, historical stego execution, online PGP verification, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, website publication, and solve claims blocked unless a later prompt explicitly scopes execution.
+Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived candidates, without execution. Use the Stage 5BI page triage, item source-lock candidate, archive crosswalk, media policy, 2014 surface context, spreadsheet source-lock/reconciliation, source-gap, guardrail, summary, and next-stage records; keep token experiment execution, real byte-stream generation, 2014/page49-51 surface combination, DWH/hash/preimage search, historical stego execution, online PGP verification, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, website publication, and solve claims blocked unless a later prompt explicitly scopes execution.

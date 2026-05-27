@@ -1,0 +1,442 @@
+record_type: stage5bi_fandom_page_triage_record_set
+schema: schemas/historical-route/stage5bi-fandom-page-triage-v0.schema.json
+stage_id: stage-5bi
+stage_title: Stage 5BI - Fandom source-lock triage and original-archive crosswalk
+  integration
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_previous_stage: stage-5bf
+source_previous_deep_research_review: stage-5bg
+page_count: 30
+fandom_pages_are_secondary_route_context: true
+fandom_page_bodies_committed: false
+raw_html_committed: false
+records:
+- triage_id: stage5bi-page-what-happened-2014
+  source_title: What Happened Part 1 (2014)
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: token_block_constraint
+  recommended_action: source_lock_original_artifact_in_archive
+  source_lock_priority: highest
+  evidence_role: route_map_or_review_context
+  rationale: Stage 5BH flags this page as a useful 2014 route map, but Stage 4K did
+    not hash-lock the page body.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-page-49-51
+  source_title: Page 49-51
+  source_url: https://uncovering-cicada.fandom.com/wiki/Page_49-51
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: direct_token_block_relevance
+  recommended_action: source_lock_original_artifact_in_archive
+  source_lock_priority: highest
+  evidence_role: route_map_or_review_context
+  rationale: Fandom page is context for the 256-position token surface, not source
+    truth for token identity.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-liber-primus-49-51-base-pack
+  source_title: Liber Primus pp49-51 data interpreted as base 59, 60, 62 and 64
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_pp49-51_data_interpreted_as_base_59,_60,_62_and_64.
+  source_lock_classification: secondary_community_analysis
+  source_tier: tier3_reproducible_community_data
+  token_block_relevance: direct_token_block_relevance
+  recommended_action: source_lock_individually_now
+  source_lock_priority: highest
+  evidence_role: route_map_or_review_context
+  rationale: Community base-analysis context should be reconciled with Stage 5AW branch
+    metadata, not executed.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-what-happened-liber-primus
+  source_title: What Happened Liber Primus (Post 2014)
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Liber_Primus_(Post_2014)
+  source_lock_classification: reference_only_route_context
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: historical_context_only
+  recommended_action: record_reference_only
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: Useful post-2014 route context, but not an experiment input.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-liber-primus
+  source_title: Liber Primus
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus
+  source_lock_classification: reference_only_route_context
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: historical_context_only
+  recommended_action: record_reference_only
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: Index-level Liber Primus context only.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-solved-pages
+  source_title: How the solved pages of the Liber Primus were solved
+  source_url: https://uncovering-cicada.fandom.com/wiki/How_the_solved_pages_of_the_Liber_Primus_were_solved
+  source_lock_classification: secondary_community_analysis
+  source_tier: tier3_reproducible_community_data
+  token_block_relevance: positive_control_only
+  recommended_action: record_reference_only
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: Can inform solved-fixture context, but not unsolved-page truth.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-unsolved-pages
+  source_title: Liber Primus Unsolved Pages
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_Unsolved_Pages
+  source_lock_classification: reference_only_route_context
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: historical_context_only
+  recommended_action: record_reference_only
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: Route context only; unsolved-page execution remains blocked.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-frequency-analysis-unsolved
+  source_title: Frequency Analysis Unsolved Pages
+  source_url: https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_Unsolved_Pages
+  source_lock_classification: secondary_community_analysis
+  source_tier: tier3_reproducible_community_data
+  token_block_relevance: historical_context_only
+  recommended_action: record_reference_only
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: Reference for community analysis; no scoring or experiment execution
+    is authorized.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-page-56
+  source_title: PAGE 56
+  source_url: https://uncovering-cicada.fandom.com/wiki/PAGE_56
+  source_lock_classification: secondary_community_analysis
+  source_tier: tier3_reproducible_community_data
+  token_block_relevance: historical_context_only
+  recommended_action: defer_until_archive_crosswalk
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: p56 context remains blocked unless exact token buffers are separately
+    source-locked.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-page-57
+  source_title: PAGE 57
+  source_url: https://uncovering-cicada.fandom.com/wiki/PAGE_57
+  source_lock_classification: secondary_community_analysis
+  source_tier: tier3_reproducible_community_data
+  token_block_relevance: historical_context_only
+  recommended_action: defer_until_archive_crosswalk
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: p57 route context remains reference-only.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-liber-primus-keys
+  source_title: Liber Primus keys
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_keys
+  source_lock_classification: source_lock_page_body
+  source_tier: tier3_reproducible_community_data
+  token_block_relevance: positive_control_only
+  recommended_action: source_lock_individually_now
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: Exact key claims would need item-level source locks before verifier use.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-onion7-numbers-page15
+  source_title: 'Onion 7: numbers on page 15'
+  source_url: https://uncovering-cicada.fandom.com/wiki/Onion_7:_numbers_on_page_15
+  source_lock_classification: source_lock_page_body
+  source_tier: tier3_reproducible_community_data
+  token_block_relevance: historical_context_only
+  recommended_action: source_lock_individually_now
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: Known bounded numeric context; no rerun is selected.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-runes-transcriptions
+  source_title: Runes Transcriptions
+  source_url: https://uncovering-cicada.fandom.com/wiki/Runes_Transcriptions
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: blocks_execution_until_source_locked
+  recommended_action: defer_until_archive_crosswalk
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: Transcript-like material must not override canonical corpus inactivity.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-mentioned-primes
+  source_title: Mentioned PRIMES
+  source_url: https://uncovering-cicada.fandom.com/wiki/Mentioned_PRIMES
+  source_lock_classification: secondary_community_analysis
+  source_tier: tier3_reproducible_community_data
+  token_block_relevance: historical_context_only
+  recommended_action: record_reference_only
+  source_lock_priority: low
+  evidence_role: route_map_or_review_context
+  rationale: Prime references are context only unless exact source-backed transforms
+    are separately scoped.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-gematria-primus
+  source_title: Gematria Primus
+  source_url: https://uncovering-cicada.fandom.com/wiki/Gematria_Primus
+  source_lock_classification: reference_only_route_context
+  source_tier: tier3_reproducible_community_data
+  token_block_relevance: historical_context_only
+  recommended_action: record_reference_only
+  source_lock_priority: low
+  evidence_role: route_map_or_review_context
+  rationale: Reference to mappings, not a source of canonical token truth.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-what-happened-2012
+  source_title: What Happened (2012)
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_(2012)
+  source_lock_classification: reference_only_route_context
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: historical_context_only
+  recommended_action: record_reference_only
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: Route context for original archive crosswalk.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-what-happened-2013
+  source_title: What Happened Part 1 (2013)
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2013)
+  source_lock_classification: reference_only_route_context
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: historical_context_only
+  recommended_action: record_reference_only
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: Route context for telnet, image, and signed-message artifacts.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-telnet-prompt
+  source_title: The Telnet Prompt
+  source_url: https://uncovering-cicada.fandom.com/wiki/The_Telnet_Prompt
+  source_lock_classification: negative_control_or_false_path
+  source_tier: tier5_speculative_or_unverified
+  token_block_relevance: historical_context_only
+  recommended_action: record_negative_control
+  source_lock_priority: high
+  evidence_role: route_map_or_review_context
+  rationale: Community recreation must not be treated as exact original service behavior.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-hidden-content-original-image-2013
+  source_title: Hidden content of original image (January 4th 2013)
+  source_url: https://uncovering-cicada.fandom.com/wiki/Hidden_content_of_original_image_(January_4th_2013)
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: positive_control_only
+  recommended_action: source_lock_original_artifact_in_archive
+  source_lock_priority: high
+  evidence_role: route_map_or_review_context
+  rationale: Potential stego-positive-control context only; no tool execution.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-interconnectedness
+  source_title: Interconnectedness
+  source_url: https://uncovering-cicada.fandom.com/wiki/Interconnectedness
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: historical_context_only
+  recommended_action: source_lock_original_artifact_in_archive
+  source_lock_priority: high
+  evidence_role: route_map_or_review_context
+  rationale: Fandom route pointer should crosswalk to local archive MP3 and page context.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-instar-emergence
+  source_title: Instar emergence (mp3 and hidden poem)
+  source_url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem)
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: historical_context_only
+  recommended_action: source_lock_original_artifact_in_archive
+  source_lock_priority: high
+  evidence_role: route_map_or_review_context
+  rationale: Audio/stego context remains blocked pending expected-output policy.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-pgp-live-cd
+  source_title: PGP Signature from live cd
+  source_url: https://uncovering-cicada.fandom.com/wiki/PGP_Signature_from_live_cd
+  source_lock_classification: negative_control_or_false_path
+  source_tier: tier5_speculative_or_unverified
+  token_block_relevance: historical_context_only
+  recommended_action: record_negative_control
+  source_lock_priority: high
+  evidence_role: route_map_or_review_context
+  rationale: Weak-provenance PGP candidate; no network key fetch or truth verification.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-outguess
+  source_title: OutGuess
+  source_url: https://uncovering-cicada.fandom.com/wiki/OutGuess
+  source_lock_classification: tool_reference
+  source_tier: not_source_evidence
+  token_block_relevance: positive_control_only
+  recommended_action: record_reference_only
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: Tool reference only; execution remains blocked outside explicit fixture
+    stages.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-outguessed-rune-table
+  source_title: OutGuessed message from rune table
+  source_url: https://uncovering-cicada.fandom.com/wiki/OutGuessed_message_from_rune_table
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: positive_control_only
+  recommended_action: source_lock_original_artifact_in_archive
+  source_lock_priority: high
+  evidence_role: route_map_or_review_context
+  rationale: Expected-output source context should prefer local archive signed-message
+    record.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-2014-data-dump
+  source_title: 2014 CICADA 3301 DATA DUMP
+  source_url: https://uncovering-cicada.fandom.com/wiki/2014_CICADA_3301_DATA_DUMP
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: historical_context_only
+  recommended_action: defer_until_archive_crosswalk
+  source_lock_priority: high
+  evidence_role: route_map_or_review_context
+  rationale: Potential route-map index for 2014 artifacts, but not source truth.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-2014-things-xored
+  source_title: 2014 THINGS THAT HAD BEEN XORED
+  source_url: https://uncovering-cicada.fandom.com/wiki/2014_THINGS_THAT_HAD_BEEN_XORED
+  source_lock_classification: secondary_community_analysis
+  source_tier: tier5_speculative_or_unverified
+  token_block_relevance: blocks_execution_until_source_locked
+  recommended_action: record_source_gap
+  source_lock_priority: high
+  evidence_role: route_map_or_review_context
+  rationale: XOR-related community context is not an execution manifest.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-main-menu-2014
+  source_title: MAIN MENU OF PAGES FOR CICADA 2014
+  source_url: https://uncovering-cicada.fandom.com/wiki/MAIN_MENU_OF_PAGES_FOR_CICADA_2014
+  source_lock_classification: reference_only_route_context
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: historical_context_only
+  recommended_action: record_reference_only
+  source_lock_priority: medium
+  evidence_role: route_map_or_review_context
+  rationale: Route index context only.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-the-infamous-warning
+  source_title: The Infamous Warning
+  source_url: https://uncovering-cicada.fandom.com/wiki/The_Infamous_Warning
+  source_lock_classification: negative_control_or_false_path
+  source_tier: not_source_evidence
+  token_block_relevance: no_token_block_relevance
+  recommended_action: record_negative_control
+  source_lock_priority: high
+  evidence_role: route_map_or_review_context
+  rationale: Unconfirmed claims are quarantined as false-path controls.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-fake-puzzles
+  source_title: Fake puzzles
+  source_url: https://uncovering-cicada.fandom.com/wiki/Fake_puzzles
+  source_lock_classification: negative_control_or_false_path
+  source_tier: not_source_evidence
+  token_block_relevance: no_token_block_relevance
+  recommended_action: record_negative_control
+  source_lock_priority: high
+  evidence_role: route_map_or_review_context
+  rationale: Fake or unverifiable puzzle material belongs in negative controls.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false
+- triage_id: stage5bi-page-useful-links
+  source_title: USEFUL LINKS
+  source_url: https://uncovering-cicada.fandom.com/wiki/USEFUL_LINKS
+  source_lock_classification: reference_only_route_context
+  source_tier: not_source_evidence
+  token_block_relevance: historical_context_only
+  recommended_action: record_reference_only
+  source_lock_priority: low
+  evidence_role: route_map_or_review_context
+  rationale: Index page only.
+  fandom_page_body_committed: false
+  fandom_images_committed: false
+  execution_allowed: false
+  solve_claim: false

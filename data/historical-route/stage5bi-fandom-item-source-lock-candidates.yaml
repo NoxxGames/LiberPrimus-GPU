@@ -1,0 +1,286 @@
+record_type: stage5bi_fandom_item_source_lock_candidate_set
+schema: schemas/historical-route/stage5bi-fandom-item-source-lock-candidate-v0.schema.json
+stage_id: stage-5bi
+stage_title: Stage 5BI - Fandom source-lock triage and original-archive crosswalk
+  integration
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_previous_stage: stage-5bf
+source_previous_deep_research_review: stage-5bg
+candidate_count: 18
+highest_priority_candidate_count: 13
+execution_allowed: false
+solve_claim: false
+records:
+- candidate_id: stage5bi-c01-2014-growing-hex-surface
+  source_title: 2014 growing string 256-byte surface
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  candidate_kind: 2014_256_byte_hex_surface
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: token_block_constraint
+  recommended_action: source_lock_original_artifact_in_archive
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes:
+  - Context only; do not combine with the page 49-51 token surface in Stage 5BI.
+- candidate_id: stage5bi-c02-2014-1033-hex-surface
+  source_title: 2014 <!--1033--> 256-byte surface
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  candidate_kind: 2014_256_byte_hex_surface
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: token_block_constraint
+  recommended_action: source_lock_original_artifact_in_archive
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c03-2014-3301-hex-surface
+  source_title: 2014 <!--3301--> 256-byte surface
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  candidate_kind: 2014_256_byte_hex_surface
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: token_block_constraint
+  recommended_action: source_lock_original_artifact_in_archive
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c04-page49-51-256-token-surface
+  source_title: Page 49-51 256-position token surface
+  source_url: https://uncovering-cicada.fandom.com/wiki/Page_49-51
+  candidate_kind: page49_51_256_token_surface
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: direct_token_block_relevance
+  recommended_action: source_lock_original_artifact_in_archive
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c05-page49-51-base59-60-62-64-analysis
+  source_title: Page 49-51 base 59/60/62/64 community analysis
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_pp49-51_data_interpreted_as_base_59,_60,_62_and_64.
+  candidate_kind: community_token_block_analysis
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: direct_token_block_relevance
+  recommended_action: source_lock_individually_now
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c06-boards-page49-51-256-byte-thread
+  source_title: Boards.net page 49-51 256 byte strings thread
+  source_url: https://cicada3301.boards.net/thread/41/pages-49-256-byte-strings
+  candidate_kind: community_context_thread
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: blocks_execution_until_source_locked
+  recommended_action: record_source_gap
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c07-interconnectedness-mp3
+  source_title: 2014 Interconnectedness MP3
+  source_url: https://uncovering-cicada.fandom.com/wiki/Interconnectedness
+  candidate_kind: mp3_instar_or_interconnectedness_candidate
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: historical_context_only
+  recommended_action: source_lock_original_artifact_in_archive
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c08-instar-emergence-audio-hidden-poem
+  source_title: Instar emergence MP3 and hidden poem
+  source_url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem)
+  candidate_kind: mp3_instar_or_interconnectedness_candidate
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: historical_context_only
+  recommended_action: source_lock_expected_output_pair
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c09-761-mp3
+  source_title: 761.MP3 audio candidate
+  source_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive
+  candidate_kind: mp3_instar_candidate
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: historical_context_only
+  recommended_action: source_lock_original_artifact_in_archive
+  highest_priority_candidate: false
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c10-outguessed-rune-table-message
+  source_title: OutGuessed message from rune table
+  source_url: https://uncovering-cicada.fandom.com/wiki/OutGuessed_message_from_rune_table
+  candidate_kind: outguess_expected_output_candidate
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: positive_control_only
+  recommended_action: source_lock_expected_output_pair
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c11-4gq25-image
+  source_title: 4gq25.jpg image fixture candidate
+  source_url: https://uncovering-cicada.fandom.com/wiki/2016_Puzzle
+  candidate_kind: image_fixture_candidate
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: historical_context_only
+  recommended_action: source_lock_original_artifact_in_archive
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c12-magicsquares-text
+  source_title: 2014 magicsquares.txt
+  source_url: https://github.com/cicada-solvers/The-Complete-Cicada3301-Archive/blob/main/assets/2014/stage07/magicsquares.txt
+  candidate_kind: magic_square_artifact
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: historical_context_only
+  recommended_action: source_lock_original_artifact_in_archive
+  highest_priority_candidate: false
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c13-pgp-signature-live-cd
+  source_title: PGP Signature from live cd
+  source_url: https://uncovering-cicada.fandom.com/wiki/PGP_Signature_from_live_cd
+  candidate_kind: pgp_weak_or_quarantined_candidate
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: historical_context_only
+  recommended_action: record_negative_control
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c14-message-from-first-onion
+  source_title: Message from first onion
+  source_url: https://uncovering-cicada.fandom.com/wiki/Message_from_first_onion
+  candidate_kind: onion_route_message_candidate
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: historical_context_only
+  recommended_action: source_lock_original_artifact_in_archive
+  highest_priority_candidate: false
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c15-telnet-output-recreation
+  source_title: 2013 telnet output/recreation
+  source_url: https://uncovering-cicada.fandom.com/wiki/The_Telnet_Prompt
+  candidate_kind: recreation_not_reference_implementation
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: historical_context_only
+  recommended_action: record_negative_control
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c16-liber-primus-keys-frequency
+  source_title: Liber Primus keys and frequency pages
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_keys
+  candidate_kind: liber_primus_reference_candidate
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: positive_control_only
+  recommended_action: source_lock_individually_now
+  highest_priority_candidate: false
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c17-p56-p57-route-context
+  source_title: Page 56/Page 57 route context
+  source_url: https://uncovering-cicada.fandom.com/wiki/PAGE_56
+  candidate_kind: liber_primus_page_context
+  source_lock_classification: source_lock_after_original_archive_crosswalk
+  source_tier: tier1a_original_archive_crosswalk_candidate
+  token_block_relevance: historical_context_only
+  recommended_action: defer_until_archive_crosswalk
+  highest_priority_candidate: false
+  original_archive_crosswalk_required: true
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes: []
+- candidate_id: stage5bi-c18-fandom-what-happened-2014-page-body
+  source_title: What Happened Part 1 (2014) page body
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  candidate_kind: fandom_page_body_snapshot_candidate
+  source_lock_classification: reference_only_route_context
+  source_tier: tier2_archived_community_page_with_references
+  token_block_relevance: blocks_execution_until_source_locked
+  recommended_action: source_lock_page_body
+  highest_priority_candidate: true
+  original_archive_crosswalk_required: false
+  execution_allowed: false
+  raw_body_committed: false
+  generated_output_committed: false
+  solve_claim: false
+  notes:
+  - Stage 4K fetch failed with 403; metadata planning continues without raw page body.

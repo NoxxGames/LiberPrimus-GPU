@@ -1,8 +1,12 @@
 # Codex Navigation Map
 
+## Stage 5BI Note
+
+Stage 5BI is a metadata-only Fandom/source-lock triage layer. Use `libreprimus historical-route stage5bi-validate` for Fandom page triage, item source-lock candidates, archive crosswalk candidates, media policy, 2014 surface context, token-block external context, spreadsheet source-lock/reconciliation, negative controls, source gaps, guardrails, and Stage 5BJ next-stage routing. Stage 5BJ follow-up work should close original/archive-equivalent source gaps and keep raw Fandom/archive/spreadsheet files ignored.
+
 ## Stage 5BF Note
 
-Stage 5BF is a local-only historical route source-lock layer. Use `libreprimus historical-route validate-stage5bf` for archive location, tree/inventory summaries, annual route inventory, artifact classifications, trust policy, technique taxonomy, source gaps, DWH context, guardrails, and Stage 5BG next-stage routing. Stage 5BG follow-up work should review Stage 5BF metadata, keep raw `third_party/CicadaSolversIddqd` files ignored, and avoid token experiments, byte-stream generation, historical technique execution, PGP network verification, stego tools, decode attempts, hash/preimage search, scoring, OCR/AI/ML/LLM vision, image forensics, CUDA, cryptanalytic benchmarks, scored experiments, or solve-claim workflows.
+Stage 5BF is a local-only historical route source-lock layer. Use `libreprimus historical-route validate-stage5bf` for archive location, tree/inventory summaries, annual route inventory, artifact classifications, trust policy, technique taxonomy, source gaps, DWH context, guardrails, and the historical Stage 5BG review handoff. Current follow-up work should use Stage 5BI metadata, keep raw `third_party/CicadaSolversIddqd` files ignored, and avoid token experiments, byte-stream generation, historical technique execution, PGP network verification, stego tools, decode attempts, hash/preimage search, scoring, OCR/AI/ML/LLM vision, image forensics, CUDA, cryptanalytic benchmarks, scored experiments, or solve-claim workflows.
 
 ## Read First
 
@@ -20,7 +24,7 @@ For most Codex tasks, read:
 - Do not trust rendered GitHub pages, cached raw URLs, memory, or old conversation context when state matters.
 - Run the task-specific validation commands before staging.
 - Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
-- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5BG prompts inherit current source-of-truth labels.
+- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5BJ prompts inherit current source-of-truth labels.
 - Keep raw/generated outputs unstaged.
 - For Stage 5AF/5AG/5AI/5AJ/5AK source-harvester work, keep all raw harvester outputs, raw UsefulFiles/community-facts material, and generated bundle/extraction bodies local and ignored; do not use Google Drive as project storage.
 
@@ -37,7 +41,7 @@ If direction changes, update:
 - `AGENTS.md`
 - Relevant tutorials and `docs/wiki-source/**`
 - `docs/onboarding/source-harvester-workflow.md`, `docs/onboarding/local-source-inventory-workflow.md`, `docs/onboarding/deep-research-bundle-workflow.md`, `docs/onboarding/deep-research-ingest-format.md`, `docs/onboarding/community-observation-ingest-workflow.md`, `docs/reference/source-harvester-cli.md`, `docs/reference/source-harvester-local-inventory-cli.md`, `docs/reference/source-harvester-curated-bundles-cli.md`, `docs/reference/source-harvester-usefulfiles-cli.md`, and `docs/reference/source-harvester-community-facts-cli.md` when source-harvester behavior changes.
-- `data/project-state/stage5ah-*.yaml`, `data/project-state/stage5ap-*`, `data/project-state/stage5ar-*`, `data/project-state/stage5at-*`, `data/project-state/stage5au-*`, `data/project-state/stage5bf-*`, `data/token-block/stage5ap-*`, `data/token-block/stage5ar-*`, `data/token-block/stage5at-*`, `data/token-block/stage5au-*`, `data/historical-route/stage5bf-*`, `data/stego/stage5ap-*`, `data/source-harvester/stage5ai-*`, `data/source-harvester/stage5aj-*`, `data/source-harvester/stage5ak-*`, `data/source-harvester/stage5al-*`, `data/website-ingest/stage5al/*`, `data/website-render/stage5am-*`, and `data/deep-research-export/stage5an-*` when bundle metadata, website metadata, private content metadata, token-block source-lock metadata, coordinate-lock metadata, case-review metadata, historical-route metadata, or next-stage decisions change.
+- `data/project-state/stage5ah-*.yaml`, `data/project-state/stage5ap-*`, `data/project-state/stage5ar-*`, `data/project-state/stage5at-*`, `data/project-state/stage5au-*`, `data/project-state/stage5bf-*`, `data/project-state/stage5bi-*`, `data/token-block/stage5ap-*`, `data/token-block/stage5ar-*`, `data/token-block/stage5at-*`, `data/token-block/stage5au-*`, `data/token-block/stage5bi-*`, `data/historical-route/stage5bf-*`, `data/historical-route/stage5bi-*`, `data/stego/stage5ap-*`, `data/source-harvester/stage5ai-*`, `data/source-harvester/stage5aj-*`, `data/source-harvester/stage5ak-*`, `data/source-harvester/stage5al-*`, `data/source-harvester/stage5bi-*`, `data/website-ingest/stage5al/*`, `data/website-render/stage5am-*`, and `data/deep-research-export/stage5an-*` when bundle metadata, website metadata, private content metadata, token-block source-lock metadata, coordinate-lock metadata, case-review metadata, historical-route metadata, Fandom/source-lock metadata, or next-stage decisions change.
 
 ## Safety Rules
 
@@ -49,3 +53,7 @@ If direction changes, update:
 ## Stage 5BF Navigation
 
 Stage 5BF implementation is under `python/libreprimus/historical_route/`; CLI commands are documented in `docs/reference/historical-route-source-lock-cli.md`.
+
+## Stage 5BI Navigation
+
+Stage 5BI implementation is under `python/libreprimus/historical_route/stage5bi.py`; CLI commands are documented in `docs/reference/historical-route-source-lock-cli.md`.
