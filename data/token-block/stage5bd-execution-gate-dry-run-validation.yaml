@@ -1,0 +1,24 @@
+record_type: stage5bd_execution_gate_dry_run_validation
+schema: schemas/token-block/execution-gate-dry-run-validation-v0.schema.json
+stage_id: stage-5bd
+source_stage5bb_gate_policy: data/token-block/stage5bb-execution-gate-enforcement-policy.yaml
+source_stage5bb_gate_validation: data/token-block/stage5bb-execution-gate-validation.yaml
+source_stage5az_execution_gates: data/token-block/stage5az-repaired-execution-gates.yaml
+gate_count: 8
+gate_ids:
+- source_lock_gate
+- case_review_gate
+- manifest_review_gate
+- null_control_gate
+- execution_scope_gate
+- dwh_gate
+- safety_gate
+- manifest_integrity_gate
+execution_gate_dry_run_validation_created: true
+execution_authorised_now: false
+gate_enforcer_blocks_execution: true
+blocked_methods:
+- generate_real_token_block_byte_stream
+- materialise_real_variant_branches
+- run_dwh_hash_search
+validation_status: passed

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "source_validation_evidence_index"],
+  "properties": {
+    "record_type": {"const": "stage5bd_stage5bb_validation_evidence_consolidation"},
+    "stage_id": {"const": "stage-5bd"},
+    "classification": {"const": "historical_finalisation_placeholder_cleanup"},
+    "stage5bb_historical_file_mutated": {"const": false},
+    "supersedes_stage5bb_validation_evidence_for_review": {"const": true}
+  },
+  "additionalProperties": true
+}

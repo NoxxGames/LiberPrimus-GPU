@@ -1,0 +1,19 @@
+record_type: stage5bd_control_family_plan_counters
+schema: schemas/token-block/control-family-plan-counters-v0.schema.json
+stage_id: stage-5bd
+counter_mode: metadata_only_plan_space
+alphabet_control_family_count: 6
+reading_order_control_family_count: 8
+page_split_control_family_count: 4
+source_control_family_count: 3
+null_control_family_count: 6
+variant_family_count: 10
+dry_run_plan_family_count: 11520
+dry_run_plan_family_count_formula: variant_family_count * alphabet_control_family_count
+  * reading_order_control_family_count * page_split_control_family_count * null_control_family_count
+source_augmented_plan_family_count: 34560
+full_cartesian_product_allowed: false
+full_cartesian_product_enumerated: false
+real_variant_branches_materialised: false
+variant_byte_streams_generated: false
+token_experiments_executed: false

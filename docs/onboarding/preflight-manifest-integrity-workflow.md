@@ -1,6 +1,6 @@
 # Preflight Manifest Integrity Workflow
 
-Stage 5AZ repaired the Stage 5AY duplicate bounded variant-family ID. Stage 5BB is now the active no-execution runner-scaffold layer that consumes that repair.
+Stage 5AZ repaired the Stage 5AY duplicate bounded variant-family ID. Stage 5BB is the active no-execution runner-scaffold layer that consumes that repair, and Stage 5BD is the dry-run planning layer that keeps the repaired manifest locked.
 
 Use:
 
@@ -10,3 +10,6 @@ Use:
 - `data/token-block/stage5bb-legacy-pointer-audit.yaml` to verify stale pointers are blocked.
 
 Do not execute token experiments, generate byte streams, enumerate variants, search DWH/hashes, decode, score, run CUDA, benchmark, or claim a solve from manifest-integrity records.
+## Stage 5BD Status
+
+Stage 5BD locks the Stage 5AZ repaired variant-family manifest as active and keeps the old Stage 5AY bounded variant-family manifest inactive for active loads.

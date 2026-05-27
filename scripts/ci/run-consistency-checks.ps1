@@ -2458,6 +2458,16 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q (Join-Path (Join-Path $Stage5BBResultsRoot "fixtures") "fixture_result_schema_records.json")
     git check-ignore -q "codex-output/stage5bb-codex-completion.md"
 
+    Write-Host "Validating Stage 5BD token-block dry-run planning records"
+    $Stage5BDResultsRoot = Join-Path (Join-Path "experiments" "results") "token-block/stage5bd"
+    & $Python -m libreprimus.cli token-block validate-stage5bd --results-dir $Stage5BDResultsRoot
+    git check-ignore -q (Join-Path $Stage5BDResultsRoot "summary.json")
+    git check-ignore -q (Join-Path $Stage5BDResultsRoot "dry_run_plan_manifest.json")
+    git check-ignore -q (Join-Path (Join-Path $Stage5BDResultsRoot "fixtures") "fixture_dry_run_records.json")
+    git check-ignore -q "deep-research-repo-zips/stage5bd/ARCHIVE_MANIFEST.json"
+    git check-ignore -q "deep-research-repo-zips/stage5bd/stage5bd-repo.zip"
+    git check-ignore -q "codex-output/stage5bd-codex-completion.md"
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

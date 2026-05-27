@@ -1,0 +1,103 @@
+record_type: stage5bd_run_plan_id_registry
+schema: schemas/token-block/run-plan-id-registry-v0.schema.json
+stage_id: stage-5bd
+run_plan_ids_created: true
+run_plan_id_count: 10
+run_plan_id_algorithm: sha256_canonical_json_prefix_16
+run_plan_ids_include_generated_bytes: false
+run_plan_ids_include_absolute_paths: false
+run_plan_ids_include_timestamps: false
+full_plan_family_cross_product_enumerated: false
+representative_plan_ids_created: true
+metadata_only: true
+plan_ids:
+- run_plan_id: stage5bd-8ec994ca8eb3d3dd
+  dry_run_family_id: dry-run-keep_current_baseline
+  variant_family_id: keep_current_baseline
+  alphabet_family_id: primary60_current_alphabet
+  reading_order_family_id: global_32_row_order
+  page_split_family_id: accepted_10_13_9_split
+  null_control_family_id: case_policy_control
+  source_manifest_digest: 8ec994ca8eb3d3dd76e9a1afe3397bbb67d98bc6e4bd5be75dec4fe1aef6d763
+  execution_authorised: false
+- run_plan_id: stage5bd-ec00205865d4a31b
+  dry_run_family_id: dry-run-unresolved_as_current_only
+  variant_family_id: unresolved_as_current_only
+  alphabet_family_id: primary60_current_alphabet
+  reading_order_family_id: global_32_row_order
+  page_split_family_id: accepted_10_13_9_split
+  null_control_family_id: case_policy_control
+  source_manifest_digest: ec00205865d4a31b299c89a0e3b7a99e811e368c7deac980b71632de5cd97a81
+  execution_authorised: false
+- run_plan_id: stage5bd-3800876b07312b37
+  dry_run_family_id: dry-run-single_change_variants
+  variant_family_id: single_change_variants
+  alphabet_family_id: primary60_current_alphabet
+  reading_order_family_id: global_32_row_order
+  page_split_family_id: accepted_10_13_9_split
+  null_control_family_id: case_policy_control
+  source_manifest_digest: 3800876b07312b37d40d1624611070cffde882840a4f4dc865accebff2cdc7ca
+  execution_authorised: false
+- run_plan_id: stage5bd-2de7f951293e11a1
+  dry_run_family_id: dry-run-per_ambiguity_class_variants
+  variant_family_id: per_ambiguity_class_variants
+  alphabet_family_id: primary60_current_alphabet
+  reading_order_family_id: global_32_row_order
+  page_split_family_id: accepted_10_13_9_split
+  null_control_family_id: case_policy_control
+  source_manifest_digest: 2de7f951293e11a15242e3de2f0e9b365f895cf5fe53c9788bbee89ca2c2a919
+  execution_authorised: false
+- run_plan_id: stage5bd-315855134697e20c
+  dry_run_family_id: dry-run-primary60_mappable_only_variants
+  variant_family_id: primary60_mappable_only_variants
+  alphabet_family_id: primary60_current_alphabet
+  reading_order_family_id: global_32_row_order
+  page_split_family_id: accepted_10_13_9_split
+  null_control_family_id: case_policy_control
+  source_manifest_digest: 315855134697e20cbc318bc07a01961b7e5fece9a4f8f8cce7153f288605a5ed
+  execution_authorised: false
+- run_plan_id: stage5bd-3dbe38b80d6c2199
+  dry_run_family_id: dry-run-visual_placeholder_excluded_variants
+  variant_family_id: visual_placeholder_excluded_variants
+  alphabet_family_id: primary60_current_alphabet
+  reading_order_family_id: global_32_row_order
+  page_split_family_id: accepted_10_13_9_split
+  null_control_family_id: case_policy_control
+  source_manifest_digest: 3dbe38b80d6c2199adeea5de86da37be85c2e0aed052003b8a619ed359b7c7cf
+  execution_authorised: false
+- run_plan_id: stage5bd-8acb40cb6e8dc03b
+  dry_run_family_id: dry-run-reviewer_extra_possible_token_variants
+  variant_family_id: reviewer_extra_possible_token_variants
+  alphabet_family_id: primary60_current_alphabet
+  reading_order_family_id: global_32_row_order
+  page_split_family_id: accepted_10_13_9_split
+  null_control_family_id: case_policy_control
+  source_manifest_digest: 8acb40cb6e8dc03b74a0b957ab6adbeca3bdb265867e0072fe717138694724cd
+  execution_authorised: false
+- run_plan_id: stage5bd-eb7e490f1f25738c
+  dry_run_family_id: dry-run-unresolved_as_excluded
+  variant_family_id: unresolved_as_excluded
+  alphabet_family_id: primary60_current_alphabet
+  reading_order_family_id: global_32_row_order
+  page_split_family_id: accepted_10_13_9_split
+  null_control_family_id: case_policy_control
+  source_manifest_digest: eb7e490f1f25738cc9978c06abcd11515b536973018a2a8f3a8e2012b6cbcd44
+  execution_authorised: false
+- run_plan_id: stage5bd-676c4f62491662ee
+  dry_run_family_id: dry-run-unresolved_as_all_declared_variants
+  variant_family_id: unresolved_as_all_declared_variants
+  alphabet_family_id: primary60_current_alphabet
+  reading_order_family_id: global_32_row_order
+  page_split_family_id: accepted_10_13_9_split
+  null_control_family_id: case_policy_control
+  source_manifest_digest: 676c4f62491662ee4463fc1b327bb486409834e610e3f8c9525ef257e96ba723
+  execution_authorised: false
+- run_plan_id: stage5bd-1868fb706614da5e
+  dry_run_family_id: dry-run-unresolved_as_primary60_mappable_only
+  variant_family_id: unresolved_as_primary60_mappable_only
+  alphabet_family_id: primary60_current_alphabet
+  reading_order_family_id: global_32_row_order
+  page_split_family_id: accepted_10_13_9_split
+  null_control_family_id: case_policy_control
+  source_manifest_digest: 1868fb706614da5ef570603b70e47485b9162d8b5ddbc20d1fb2514d2b3a29fe
+  execution_authorised: false

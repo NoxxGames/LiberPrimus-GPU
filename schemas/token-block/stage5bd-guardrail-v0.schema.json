@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "dry_run_only"],
+  "properties": {
+    "record_type": {"const": "stage5bd_guardrail"},
+    "stage_id": {"const": "stage-5bd"},
+    "dry_run_only": {"const": true},
+    "execution_performed": {"const": false},
+    "token_experiments_executed": {"const": false},
+    "real_token_block_byte_streams_generated": {"const": false},
+    "variant_byte_streams_generated": {"const": false},
+    "hash_search_performed": {"const": false},
+    "hash_comparison_performed": {"const": false},
+    "decode_attempt_performed": {"const": false},
+    "cuda_execution_performed": {"const": false},
+    "cuda_source_modified": {"const": false},
+    "solve_claim": {"const": false},
+    "generated_outputs_committed": {"const": false}
+  },
+  "additionalProperties": true
+}

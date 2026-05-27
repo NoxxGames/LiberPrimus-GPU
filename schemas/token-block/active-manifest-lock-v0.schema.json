@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "active_branch_manifest", "active_variant_family_manifest"],
+  "properties": {
+    "record_type": {"const": "stage5bd_active_manifest_lock"},
+    "stage_id": {"const": "stage-5bd"},
+    "stale_active_load_allowed": {"const": false},
+    "all_active_paths_resolve": {"const": true},
+    "real_execution_authorised": {"const": false}
+  },
+  "additionalProperties": true
+}

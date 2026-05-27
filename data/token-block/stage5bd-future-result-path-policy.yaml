@@ -1,0 +1,18 @@
+record_type: stage5bd_future_result_path_policy
+schema: schemas/token-block/future-result-path-policy-v0.schema.json
+stage_id: stage-5bd
+status: complete
+allowed_future_roots:
+- experiments/results/token-block/stage5be/
+- experiments/results/token-block/stage5bf/
+blocked_roots:
+- data/
+- third_party/
+- human-review-packs/
+- codex-output/
+- website-export/
+- deep-research-content-packs/
+absolute_paths_allowed: false
+relative_paths_only: true
+future_result_paths_written: false
+later_authorisation_required_before_write: true

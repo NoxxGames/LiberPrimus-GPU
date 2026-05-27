@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "future_result_paths_validated"],
+  "properties": {
+    "record_type": {"const": "stage5bd_future_result_path_validation"},
+    "stage_id": {"const": "stage-5bd"},
+    "future_result_paths_validated": {"const": true},
+    "future_result_paths_written": {"const": false},
+    "real_execution_results_written": {"const": false},
+    "absolute_paths_allowed": {"const": false},
+    "relative_paths_only": {"const": true},
+    "all_future_paths_under_ignored_roots": {"const": true}
+  },
+  "additionalProperties": true
+}

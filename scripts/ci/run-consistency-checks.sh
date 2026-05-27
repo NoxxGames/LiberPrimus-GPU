@@ -2466,6 +2466,16 @@ git check-ignore -q "$stage5bb_results_root/manifest_reference_validation.json"
 git check-ignore -q "$stage5bb_results_root/fixtures/fixture_result_schema_records.json"
 git check-ignore -q "codex-output/stage5bb-codex-completion.md"
 
+echo "Validating Stage 5BD token-block dry-run planning records"
+stage5bd_results_root="experiments"/"results/token-block/stage5bd"
+"$python_bin" -m libreprimus.cli token-block validate-stage5bd --results-dir "$stage5bd_results_root"
+git check-ignore -q "$stage5bd_results_root/summary.json"
+git check-ignore -q "$stage5bd_results_root/dry_run_plan_manifest.json"
+git check-ignore -q "$stage5bd_results_root/fixtures/fixture_dry_run_records.json"
+git check-ignore -q "deep-research-repo-zips/stage5bd/ARCHIVE_MANIFEST.json"
+git check-ignore -q "deep-research-repo-zips/stage5bd/stage5bd-repo.zip"
+git check-ignore -q "codex-output/stage5bd-codex-completion.md"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

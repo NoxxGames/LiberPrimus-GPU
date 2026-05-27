@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "real_execution_authorised"],
+  "properties": {
+    "record_type": {"const": "stage5bd_dry_run_policy"},
+    "stage_id": {"const": "stage-5bd"},
+    "real_execution_authorised": {"const": false},
+    "real_token_block_byte_generation_allowed": {"const": false},
+    "real_variant_materialisation_allowed": {"const": false},
+    "hash_search_allowed": {"const": false},
+    "decode_allowed": {"const": false},
+    "scoring_allowed": {"const": false},
+    "cuda_allowed": {"const": false}
+  },
+  "additionalProperties": true
+}

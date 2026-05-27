@@ -1,0 +1,58 @@
+record_type: stage5bd_future_result_path_validation
+schema: schemas/token-block/future-result-path-validation-v0.schema.json
+stage_id: stage-5bd
+future_result_paths_validated: true
+future_result_paths_written: false
+real_execution_results_written: false
+dry_run_outputs_written_only_under_stage5bd_ignored_results: true
+allowed_future_roots:
+- experiments/results/token-block/stage5be/
+- experiments/results/token-block/stage5bf/
+blocked_roots:
+- data/
+- third_party/
+- human-review-packs/
+- codex-output/
+- website-export/
+- deep-research-content-packs/
+absolute_paths_allowed: false
+relative_paths_only: true
+all_future_paths_under_ignored_roots: true
+path_validation_records:
+- path_id: stage5be_dry_run_review_report
+  path: experiments/results/token-block/stage5be/dry_run_review_report.json
+  path_type: deep_research_review_report
+  relative_path: true
+  under_ignored_results_root: true
+  blocked: false
+  validation_status: allowed_requires_later_authorisation
+- path_id: stage5bf_future_execution_report
+  path: experiments/results/token-block/stage5bf/execution_report.json
+  path_type: future_authorised_execution_report
+  relative_path: true
+  under_ignored_results_root: true
+  blocked: false
+  validation_status: allowed_requires_later_authorisation
+- path_id: blocked_data_root_example
+  path: data/token-block/stage5bf-execution-report.json
+  path_type: blocked_committed_data_root
+  relative_path: true
+  under_ignored_results_root: false
+  blocked: true
+  validation_status: blocked
+- path_id: blocked_third_party_example
+  path: third_party/LiberPrimusPages/stage5bf-output.json
+  path_type: blocked_raw_source_root
+  relative_path: true
+  under_ignored_results_root: false
+  blocked: true
+  validation_status: blocked
+- path_id: blocked_codex_output_example
+  path: codex-output/stage5bf-report.json
+  path_type: blocked_codex_handoff_root
+  relative_path: true
+  under_ignored_results_root: false
+  blocked: true
+  validation_status: blocked
+blocked_path_count: 3
+validation_status: passed

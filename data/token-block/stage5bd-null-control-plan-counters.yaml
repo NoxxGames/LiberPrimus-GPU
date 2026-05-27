@@ -1,0 +1,15 @@
+record_type: stage5bd_null_control_plan_counters
+schema: schemas/token-block/null-control-plan-counters-v0.schema.json
+stage_id: stage-5bd
+source_null_control_family_manifest: data/token-block/stage5ay-null-control-family-manifest.yaml
+counter_mode: metadata_only_plan_space
+null_control_family_count: 6
+null_control_family_ids:
+- case_policy_control
+- page_split_control
+- reading_order_control
+- alphabet_control
+- random_shuffled_control
+- false_positive_numerology_control
+controls_executed: false
+variant_byte_streams_generated: false

@@ -1,0 +1,15 @@
+record_type: stage5bd_dwh_dry_run_context
+schema: schemas/token-block/dwh-dry-run-context-v0.schema.json
+stage_id: stage-5bd
+dwh_defined: true
+dwh_expansion: Deep Web Hash
+token_block_dwh_relationship_status: speculative_source_lock_required
+dwh_operational_status: not_operational
+dry_run_relevance: dry-run planning can validate manifest and gate readiness but cannot
+  generate DWH candidate material or compare hashes
+hash_search_performed: false
+hash_comparison_performed: false
+hash_preimage_claim: false
+decode_claim: false
+dwh_execution_authorised: false
+dwh_hash_search_supported_by_stage5bd: false

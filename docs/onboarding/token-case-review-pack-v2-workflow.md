@@ -1,8 +1,8 @@
 # Token Case Review Pack V2 Workflow
 
-## Stage 5BB Note
+## Stage 5BD Note
 
-The filled Stage 5AU v2 decision template remains local and ignored. Stage 5AW consumed it only to rebuild compact repaired metadata and does not change generated review-pack files, crops, overlays, or canonical transcription. Stage 5AX adds validation infrastructure only, Stage 5AY records bounded preflight design without execution, Stage 5AZ repairs duplicate manifest metadata without execution, and Stage 5BB records runner-scaffold metadata without execution.
+The filled Stage 5AU v2 decision template remains local and ignored. Stage 5AW consumed it only to rebuild compact repaired metadata and does not change generated review-pack files, crops, overlays, or canonical transcription. Stage 5AX adds validation infrastructure only, Stage 5AY records bounded preflight design without execution, Stage 5AZ repairs duplicate manifest metadata without execution, Stage 5BB records runner-scaffold metadata without execution, and Stage 5BD records dry-run planning metadata without execution.
 
 Use Stage 5AU records when preparing the next manual review:
 
@@ -15,3 +15,6 @@ Use Stage 5AU records when preparing the next manual review:
 The generated crops are aids for review only. Canonical transcription remains unchanged until a later explicit integration stage validates human decisions.
 
 Stage 5AV is that integration stage. It validates the filled local template, records 126 keep-current confirmations and 77 unresolved branches, preserves reviewer-declared possible tokens, and still keeps canonical transcription unchanged because no explicit `change_token` decisions were present.
+## Stage 5BD Status
+
+Stage 5BD does not read ignored review-pack bodies. It uses committed repaired branch metadata for dry-run planning.

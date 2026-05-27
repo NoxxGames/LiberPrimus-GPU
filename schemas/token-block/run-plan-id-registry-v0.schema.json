@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "run_plan_id_count", "plan_ids"],
+  "properties": {
+    "record_type": {"const": "stage5bd_run_plan_id_registry"},
+    "stage_id": {"const": "stage-5bd"},
+    "run_plan_ids_created": {"const": true},
+    "run_plan_ids_include_generated_bytes": {"const": false},
+    "run_plan_ids_include_absolute_paths": {"const": false},
+    "run_plan_ids_include_timestamps": {"const": false},
+    "full_plan_family_cross_product_enumerated": {"const": false},
+    "metadata_only": {"const": true},
+    "plan_ids": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["run_plan_id", "execution_authorised"],
+        "properties": {"execution_authorised": {"const": false}},
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

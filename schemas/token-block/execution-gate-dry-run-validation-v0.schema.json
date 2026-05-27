@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "gate_enforcer_blocks_execution"],
+  "properties": {
+    "record_type": {"const": "stage5bd_execution_gate_dry_run_validation"},
+    "stage_id": {"const": "stage-5bd"},
+    "execution_authorised_now": {"const": false},
+    "gate_enforcer_blocks_execution": {"const": true},
+    "validation_status": {"const": "passed"}
+  },
+  "additionalProperties": true
+}

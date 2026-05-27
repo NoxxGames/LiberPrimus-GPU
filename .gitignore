@@ -815,6 +815,18 @@ experiments/results/token-block/**
 !experiments/results/token-block/stage5bb/.gitkeep
 !experiments/results/token-block/stage5bb/fixtures/
 !experiments/results/token-block/stage5bb/fixtures/.gitkeep
+!experiments/results/token-block/stage5bd/
+!experiments/results/token-block/stage5bd/.gitkeep
+!experiments/results/token-block/stage5bd/fixtures/
+!experiments/results/token-block/stage5bd/fixtures/.gitkeep
+
+# Generated Deep Research repository review ZIPs
+deep-research-repo-zips/**
+!deep-research-repo-zips/
+!deep-research-repo-zips/README.md
+!deep-research-repo-zips/.gitkeep
+!deep-research-repo-zips/stage5bd/
+!deep-research-repo-zips/stage5bd/.gitkeep
 
 # Generated CI/validation outputs
 experiments/results/ci/**

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "fixture_result_examples_allowed"],
+  "properties": {
+    "record_type": {"const": "stage5bd_fixture_result_example_policy"},
+    "stage_id": {"const": "stage-5bd"},
+    "fixture_result_examples_allowed": {"const": true},
+    "fixture_data_not_derived_from_liber_primus": {"const": true},
+    "real_token_block_data_used": {"const": false},
+    "real_variant_data_used": {"const": false},
+    "fixture_byte_stream_files_committed": {"const": false}
+  },
+  "additionalProperties": true
+}

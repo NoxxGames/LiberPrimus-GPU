@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5BB - token-block preflight runner scaffold without execution.
+Current completed stage: Stage 5BD - token-block preflight dry-run implementation without byte-stream generation.
 
-Current work: Stage 5BC - Deep Research review of token-block preflight runner scaffold and execution-gate enforcement. Stage 5BB canonicalised active-manifest precedence for the page 49-51 token-block preflight runner scaffold, kept Stage 5AW and Stage 5AZ repaired manifests active, rejected Stage 5AV and the old Stage 5AY bounded variant-family manifest as active inputs, validated the Stage 5AY branch-eligibility policy explicitly, audited the Stage 5AZ legacy pointer, created dry-run previews and fixture-only schema records, and did not generate byte streams, materialise variants, enumerate Cartesian products, execute token experiments, run DWH/hash searches, decode, score, OCR, AI/ML interpretation, LLM/vision token reading, semantic or hidden-content image interpretation, stego, CUDA, cryptanalytic benchmarks, website expansion, method-status upgrades, or solve claims.
+Current work: Stage 5BE - Deep Research review of token-block preflight dry-run implementation, archive/evidence hygiene, and execution-gate enforcement. Stage 5BD implements deterministic metadata-only dry-run plan IDs, future result-path validation, family counters, fixture-only synthetic records, Stage 5BB validation-evidence consolidation, archive marker policy/scripts, and a preflight-runner package split while keeping Stage 5AW and Stage 5AZ repaired manifests active, Stage 5AV and old Stage 5AY active loads inactive, and all execution gates blocked. It did not generate byte streams, materialise variants, enumerate Cartesian products, execute token experiments, run DWH/hash searches, decode, score, OCR, AI/ML interpretation, LLM/vision token reading, semantic or hidden-content image interpretation, stego, CUDA, cryptanalytic benchmarks, website expansion, method-status upgrades, or solve claims.
 
 Current project state:
 
@@ -143,10 +143,12 @@ Current project state:
 - Stage 5BB active-manifest registry is now the loader entrypoint for future token-block preflight runner work. Future code must use Stage 5AW repaired branch metadata, Stage 5AZ repaired variant-family/design/budget/gate records, and Stage 5AY branch-eligibility policy through that registry.
 - Stage 5BB blocks stale active loads of `data/token-block/stage5av-token-variant-branch-manifest.yaml` and `data/token-block/stage5ay-bounded-variant-family-manifest.yaml`; those files may be used only for explicit historical diagnostics.
 - Stage 5BB dry-run previews and fixture-only result schema records are not execution, not DWH/hash search, not scoring, and not solve evidence.
-- Future Stage 5BC review must inspect Stage 5BB active-manifest precedence, legacy-pointer audit, branch-eligibility validation, runner scaffold, no-execution proof, and execution-gate enforcement before any execution-capable runner stage.
+- Stage 5BD dry-run plan IDs, future result-path validation, family counters, fixture-only records, archive marker policy, and Stage 5BB validation-evidence consolidation are dry-run planning metadata only.
+- Stage 5BD must not be treated as authorization for byte-stream generation, variant materialisation, Cartesian enumeration, DWH/hash/preimage search, decoding, scoring, CUDA, benchmarks, website expansion, method-status upgrades, or solve claims.
+- Future Stage 5BE review must inspect Stage 5BD dry-run implementation, archive/evidence hygiene, no-byte-stream proof, future result-path validation, and execution-gate enforcement before any execution-capable runner stage.
 - Stage 5AX keeps git, GitHub, network/remote, generated-output-writing, issue-update, commit, and push operations serial.
 - Stage 5AX uses pytest-xdist only when available and otherwise falls back to deterministic subprocess sharding.
-- Stage 5AY preflight design cites Stage 5AW repaired branch metadata and the Stage 5AX next-stage decision, does not use ignored review-pack bodies as committed input, and does not execute token experiments or DWH/hash searches. Future Stage 5BC review must consume Stage 5BB active-manifest registry, no-execution runner scaffold, and Stage 5AZ repaired manifest-design/execution-gate records before any execution-stage decision.
+- Stage 5AY preflight design cites Stage 5AW repaired branch metadata and the Stage 5AX next-stage decision, does not use ignored review-pack bodies as committed input, and does not execute token experiments or DWH/hash searches. Future Stage 5BE review must consume Stage 5BD dry-run records, Stage 5BB active-manifest registry, no-execution runner scaffold, and Stage 5AZ repaired manifest-design/execution-gate records before any execution-stage decision.
 - Candidate Batch ABI v0 defines shared token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, and result-store compatibility contracts only.
 - Stage 5U must keep `gematria_shift_score_only` parity distinct from original transform-family semantics.
 - Stage 5U must not add kernels, modify CUDA source, run CUDA, run native/CUDA CMake, benchmark, publish generated bodies, or widen solved/unsolved scope.
@@ -1025,7 +1027,7 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Stage 5AP page 49-51 token-block records are source-lock/preflight metadata only.
 - The 32x8 token transcription, logical coordinates, primary-60 mapping, null controls, DWH context, and OutGuess controls are not decoded plaintext, canonical corpus activation, experiment seeds, hash targets, or solve evidence.
 - Generated token-block and stego-control reports under `experiments/results/token-block/stage5ap/` and `experiments/results/stego-controls/stage5ap/` remain ignored.
-- Stage 5AY bounded preflight design cites Stage 5AW repaired decision/branch records, Stage 5AV decision records, Stage 5AU review-pack v2 records, Stage 5AT review-pack records, Stage 5AR original-image coordinate records, and Stage 5AP source-lock, transcription, alphabet, mapping, null-control, DWH, and OutGuess guardrail records. Future Stage 5BC review must cite Stage 5BB runner scaffold records and Stage 5AZ repaired execution gates before any bounded token-block execution follow-up.
+- Stage 5AY bounded preflight design cites Stage 5AW repaired decision/branch records, Stage 5AV decision records, Stage 5AU review-pack v2 records, Stage 5AT review-pack records, Stage 5AR original-image coordinate records, and Stage 5AP source-lock, transcription, alphabet, mapping, null-control, DWH, and OutGuess guardrail records. Future Stage 5BE review must cite Stage 5BD dry-run planning records, Stage 5BB runner scaffold records, and Stage 5AZ repaired execution gates before any bounded token-block execution follow-up.
 
 ## Stage 5AR Original-Image Coordinate Lock Rules
 
@@ -1033,7 +1035,7 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Original local page images are coordinate truth for pixel boxes; screenshots, crops, modified images, web-rendered pages, and private generated images are not coordinate truth.
 - Pixel coordinates are not OCR output, decoded text, semantic image interpretation, hidden-content forensics, experiment seeds, CUDA input permission, canonical corpus activation, page-boundary finalisation, or solve evidence.
 - Stage 5AR generated coordinate reports under `experiments/results/token-block/stage5ar/` remain ignored and must not be staged except for allowed scaffold files.
-- Stage 5AY bounded preflight design cites Stage 5AW repaired decision/branch records, Stage 5AV decision/branch records, Stage 5AU review-pack v2 records, Stage 5AT review-pack records, and Stage 5AR source-lock, image-variant, page-split, pixel-coordinate, case-policy, coordinate-validation, source-lock/null-control, DWH context, and guardrail records. Future Stage 5BC review must preserve the Stage 5BB no-execution proof and Stage 5AZ repaired no-execution guardrails unless a later prompt explicitly scopes execution.
+- Stage 5AY bounded preflight design cites Stage 5AW repaired decision/branch records, Stage 5AV decision/branch records, Stage 5AU review-pack v2 records, Stage 5AT review-pack records, and Stage 5AR source-lock, image-variant, page-split, pixel-coordinate, case-policy, coordinate-validation, source-lock/null-control, DWH context, and guardrail records. Future Stage 5BE review must preserve the Stage 5BD no-byte-stream proof, Stage 5BB no-execution proof, and Stage 5AZ repaired no-execution guardrails unless a later prompt explicitly scopes execution.
 
 ## Stage 5AT Token Case Review Pack Rules
 

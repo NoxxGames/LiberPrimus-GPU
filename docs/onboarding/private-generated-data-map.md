@@ -58,6 +58,8 @@
 - `experiments/results/token-block/stage5ay/`: generated Stage 5AY preflight design, branch budget, execution gate, summary, and warning reports. Commit only `.gitkeep` scaffolding and compact metadata under `data/token-block/` and `data/project-state/`; generated reports remain ignored.
 - `experiments/results/token-block/stage5az/`: generated Stage 5AZ manifest-integrity audit, family-ID audit, reference audit, repaired manifest, Deep Research readiness, summary, and warning reports. Commit only `.gitkeep` scaffolding and compact metadata under `data/token-block/` and `data/project-state/`; generated reports remain ignored.
 - `experiments/results/token-block/stage5bb/`: generated Stage 5BB active-manifest registry reports, legacy pointer audits, manifest reference reports, runner scaffold reports, dry-run previews, execution-gate validations, fixture-only schema reports, summaries, and warnings. Commit only `.gitkeep` scaffolding plus compact metadata under `data/token-block/` and `data/project-state/`; generated reports and fixture outputs remain ignored.
+- `experiments/results/token-block/stage5bd/`: generated Stage 5BD dry-run planning reports, future result-path validation reports, family-counter reports, fixture-only dry-run records, summaries, and warnings. Commit only `.gitkeep` scaffolding plus compact metadata under `data/token-block/` and `data/project-state/`; generated reports and fixture outputs remain ignored.
+- `deep-research-repo-zips/stage5bd/`: generated Stage 5BD Deep Research archive marker files and future ZIPs. Commit only `.gitkeep` scaffolding and scripts/docs; generated markers and ZIPs remain ignored.
 - `experiments/results/cuda-solved-family-readiness/stage5t/`: generated Stage 5T solved-family inventory, parity matrix, kernel-readiness, batch ABI gap, benchmark-readiness, no-unsolved guardrail, next-stage decision, summary, and warning reports.
 - `experiments/results/cuda-candidate-batch-abi/stage5u/`: generated Stage 5U Candidate Batch ABI, token-buffer, transform-parameter, key-schedule, stream-schedule, score-vector, top-k, backend-surface, result-store compatibility, ABI gap closure, next-stage decision, summary, and warning reports.
 - `experiments/results/cuda-candidate-batch-abi-conformance/stage5v/`: generated Stage 5V native adapter, conformance fixture, token-buffer, schedule, score-vector, top-k, result-store conformance, gap closure, next-stage decision, summary, and warning reports.
@@ -146,3 +148,6 @@
 - Downloaded or cached `cicada-solvers/iddqd` images, audio, fonts, archives, blobs, or cloned repository contents under `third_party/CicadaSolversIddqd/`.
 - SQLite databases.
 - Root Deep Research report copies or `deep-research-reports/**`.
+## Stage 5BD Ignored Outputs
+
+Stage 5BD generated reports remain ignored under `experiments/results/token-block/stage5bd/`; future Deep Research ZIP markers and ZIPs remain ignored under `deep-research-repo-zips/stage5bd/`.

@@ -1,0 +1,20 @@
+record_type: stage5bd_archive_marker_policy
+schema: schemas/token-block/archive-marker-policy-v0.schema.json
+stage_id: stage-5bd
+status: complete
+archive_commit_marker_required_for_future_zip_reviews: true
+recommended_marker_files:
+- ARCHIVE_COMMIT.txt
+- ARCHIVE_MANIFEST.json
+- ARCHIVE_MANIFEST.sha256
+- ARCHIVE_README.md
+git_directory_required_in_review_zip: false
+zip_primary_evidence_allowed: true
+github_secondary_evidence_allowed: true
+generated_zip_root: deep-research-repo-zips/stage5bd
+generated_zips_committed: false
+exclude_git_directory_by_default: true
+exclude_generated_outputs_by_default: true
+exclude_third_party_raw_by_default: true
+exclude_codex_output_by_default: true
+exclude_human_review_packs_by_default: true

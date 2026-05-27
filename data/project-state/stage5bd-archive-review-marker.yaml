@@ -1,0 +1,20 @@
+record_type: stage5bd_archive_review_marker
+schema: schemas/project-state/archive-review-marker-v0.schema.json
+stage_id: stage-5bd
+repo_name: NoxxGames/LiberPrimus-GPU
+archive_marker_policy: data/token-block/stage5bd-archive-marker-policy.yaml
+current_commit_detected: c1d07ee2331e5991220b9bde61e60a5438b5aa16
+current_branch_detected: main
+commit_detection_method: git
+branch_detection_method: git
+commit_detection_status: available
+archive_commit_marker_required_for_future_zip_reviews: true
+recommended_marker_files:
+- ARCHIVE_COMMIT.txt
+- ARCHIVE_MANIFEST.json
+- ARCHIVE_MANIFEST.sha256
+- ARCHIVE_README.md
+git_directory_required_in_review_zip: false
+zip_primary_evidence_allowed: true
+github_secondary_evidence_allowed: true
+included_manifest_hash: 0bab66cea026bc9092639f4e1b0fc7bbf341debd9f738445cddf48789ee435f6

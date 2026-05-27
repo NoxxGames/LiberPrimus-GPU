@@ -1,6 +1,6 @@
 # Token-Block Preflight Runner Scaffold Workflow
 
-Use this workflow when reviewing or extending Stage 5BB.
+Use this workflow when reviewing Stage 5BB history or extending it through Stage 5BD dry-run planning.
 
 1. Start with `data/token-block/stage5bb-active-manifest-registry.yaml`.
 2. Confirm active branch metadata points to Stage 5AW repaired records.
@@ -10,4 +10,7 @@ Use this workflow when reviewing or extending Stage 5BB.
 6. Use the dry-run preview only for plan review; it must not include real token bytes, variant outputs, scores, hashes, or decoded text.
 7. Treat fixture records as synthetic schema tests only.
 
-Do not run token experiments, generate byte streams, materialise variants, perform DWH/hash search, decode, score, run CUDA, benchmark, or claim a solve from Stage 5BB material.
+Do not run token experiments, generate byte streams, materialise variants, perform DWH/hash search, decode, score, run CUDA, benchmark, or claim a solve from Stage 5BB or Stage 5BD material.
+## Stage 5BD Supersession
+
+Stage 5BD preserves Stage 5BB scaffold history and adds a superseding validation-evidence consolidation record for the Stage 5BB `pending_before_final` placeholders.

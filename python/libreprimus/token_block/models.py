@@ -257,6 +257,36 @@ STAGE5BB_GUARDRAIL_PATH = DATA_DIR / "stage5bb-guardrail.yaml"
 STAGE5BB_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5bb-next-stage-decision.yaml"
 STAGE5BB_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5bb-summary.yaml"
 
+STAGE5BD_ID = "stage-5bd"
+STAGE5BD_RESULTS_DIR = Path("experiments/results/token-block/stage5bd")
+STAGE5BD_FIXTURE_RESULTS_DIR = STAGE5BD_RESULTS_DIR / "fixtures"
+STAGE5BD_ARCHIVE_ZIP_ROOT = Path("deep-research-repo-zips")
+STAGE5BD_ARCHIVE_ZIP_DIR = STAGE5BD_ARCHIVE_ZIP_ROOT / "stage5bd"
+STAGE5BD_DRY_RUN_POLICY_PATH = DATA_DIR / "stage5bd-dry-run-policy.yaml"
+STAGE5BD_ACTIVE_MANIFEST_LOCK_PATH = DATA_DIR / "stage5bd-active-manifest-lock.yaml"
+STAGE5BD_RUN_PLAN_ID_POLICY_PATH = DATA_DIR / "stage5bd-run-plan-id-policy.yaml"
+STAGE5BD_DRY_RUN_PLAN_MANIFEST_PATH = DATA_DIR / "stage5bd-dry-run-plan-manifest.yaml"
+STAGE5BD_RUN_PLAN_ID_REGISTRY_PATH = DATA_DIR / "stage5bd-run-plan-id-registry.yaml"
+STAGE5BD_FUTURE_RESULT_PATH_POLICY_PATH = DATA_DIR / "stage5bd-future-result-path-policy.yaml"
+STAGE5BD_FUTURE_RESULT_PATH_VALIDATION_PATH = DATA_DIR / "stage5bd-future-result-path-validation.yaml"
+STAGE5BD_BRANCH_FAMILY_PLAN_COUNTERS_PATH = DATA_DIR / "stage5bd-branch-family-plan-counters.yaml"
+STAGE5BD_NULL_CONTROL_PLAN_COUNTERS_PATH = DATA_DIR / "stage5bd-null-control-plan-counters.yaml"
+STAGE5BD_CONTROL_FAMILY_PLAN_COUNTERS_PATH = DATA_DIR / "stage5bd-control-family-plan-counters.yaml"
+STAGE5BD_DRY_RUN_REPORT_SCHEMA_PATH = DATA_DIR / "stage5bd-dry-run-report-schema.yaml"
+STAGE5BD_FIXTURE_RESULT_EXAMPLE_POLICY_PATH = DATA_DIR / "stage5bd-fixture-result-example-policy.yaml"
+STAGE5BD_FIXTURE_DRY_RUN_RECORDS_PATH = DATA_DIR / "stage5bd-fixture-dry-run-records.yaml"
+STAGE5BD_EXECUTION_GATE_DRY_RUN_VALIDATION_PATH = DATA_DIR / "stage5bd-execution-gate-dry-run-validation.yaml"
+STAGE5BD_NO_BYTE_STREAM_PROOF_PATH = DATA_DIR / "stage5bd-no-byte-stream-proof.yaml"
+STAGE5BD_STAGE5BB_VALIDATION_EVIDENCE_CONSOLIDATION_PATH = (
+    DATA_DIR / "stage5bd-stage5bb-validation-evidence-consolidation.yaml"
+)
+STAGE5BD_ARCHIVE_MARKER_POLICY_PATH = DATA_DIR / "stage5bd-archive-marker-policy.yaml"
+STAGE5BD_DWH_DRY_RUN_CONTEXT_PATH = DATA_DIR / "stage5bd-dwh-dry-run-context.yaml"
+STAGE5BD_GUARDRAIL_PATH = DATA_DIR / "stage5bd-guardrail.yaml"
+STAGE5BD_ARCHIVE_REVIEW_MARKER_PATH = PROJECT_STATE_DIR / "stage5bd-archive-review-marker.yaml"
+STAGE5BD_NEXT_STAGE_DECISION_PATH = PROJECT_STATE_DIR / "stage5bd-next-stage-decision.yaml"
+STAGE5BD_SUMMARY_PATH = PROJECT_STATE_DIR / "stage5bd-summary.yaml"
+
 FALSE_GUARDRAILS = {
     "network_fetch_performed": False,
     "online_repo_clone_performed": False,

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "run_plan_id_algorithm"],
+  "properties": {
+    "record_type": {"const": "stage5bd_run_plan_id_policy"},
+    "stage_id": {"const": "stage-5bd"},
+    "run_plan_ids_include_generated_bytes": {"const": false},
+    "run_plan_ids_include_absolute_paths": {"const": false},
+    "run_plan_ids_include_timestamps": {"const": false},
+    "real_execution_authorised": {"const": false}
+  },
+  "additionalProperties": true
+}

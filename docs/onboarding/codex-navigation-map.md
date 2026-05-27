@@ -1,8 +1,8 @@
 # Codex Navigation Map
 
-## Stage 5BB Note
+## Stage 5BD Note
 
-Stage 5BB is a no-execution token-block preflight runner scaffold. Use `libreprimus token-block validate-stage5bb` for the active-manifest registry, legacy pointer audit, branch-eligibility validation, runner scaffold, dry-run preview, gate enforcement, and no-execution proof. Stage 5BC follow-up work should review the Stage 5BB scaffold and gates, keep the Stage 5AU filled decision template ignored, and avoid token experiments, byte-stream generation, variant materialisation, decode attempts, hash/preimage search, scoring, OCR/AI/ML/LLM vision, image forensics, stego, CUDA, cryptanalytic benchmarks, scored experiments, or solve-claim workflows.
+Stage 5BD is a no-byte-stream token-block preflight dry-run layer. Use `libreprimus token-block validate-stage5bd` for dry-run policy, active-manifest lock, run-plan IDs, future result-path validation, counters, fixture-only records, gate validation, no-byte-stream proof, archive marker policy, and validation-evidence consolidation. Stage 5BE follow-up work should review the Stage 5BD dry-run implementation and gates, keep the Stage 5AU filled decision template ignored, and avoid token experiments, byte-stream generation, variant materialisation, decode attempts, hash/preimage search, scoring, OCR/AI/ML/LLM vision, image forensics, stego, CUDA, cryptanalytic benchmarks, scored experiments, or solve-claim workflows.
 
 ## Read First
 
@@ -20,7 +20,7 @@ For most Codex tasks, read:
 - Do not trust rendered GitHub pages, cached raw URLs, memory, or old conversation context when state matters.
 - Run the task-specific validation commands before staging.
 - Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
-- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5BC prompts inherit current source-of-truth labels.
+- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5BE prompts inherit current source-of-truth labels.
 - Keep raw/generated outputs unstaged.
 - For Stage 5AF/5AG/5AI/5AJ/5AK source-harvester work, keep all raw harvester outputs, raw UsefulFiles/community-facts material, and generated bundle/extraction bodies local and ignored; do not use Google Drive as project storage.
 
@@ -46,3 +46,6 @@ If direction changes, update:
 - Do not finalise page boundaries.
 - Do not process raw Discord logs or raw page images unless a future stage explicitly scopes that work.
 - Do not use CUDA before CPU references, stable scorer definitions, batch APIs, parity tests, and benchmarks exist.
+## Stage 5BD Navigation
+
+Stage 5BD implementation is under `python/libreprimus/token_block/preflight_runner/`; CLI commands are documented in `docs/reference/token-block-preflight-dry-run-cli.md`.

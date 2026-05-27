@@ -1,0 +1,21 @@
+record_type: stage5bd_run_plan_id_policy
+schema: schemas/token-block/run-plan-id-policy-v0.schema.json
+stage_id: stage-5bd
+status: complete
+run_plan_id_algorithm: sha256_canonical_json_prefix_16
+canonical_json_sorted_keys: true
+canonical_json_stable_separators: true
+run_plan_ids_include_generated_bytes: false
+run_plan_ids_include_absolute_paths: false
+run_plan_ids_include_timestamps: false
+run_plan_ids_include_random_seeds: false
+metadata_only_inputs:
+  stage_id: stage-5bd
+  active_manifest_registry_sha256: 0f415521d5380283fd4296e9c7acb8d87267fa246f95f0ac69c4ebcc13cfab07
+  manifest_precedence_policy_sha256: 8b42fdb6d6c107687b41664faaaf5404a5898a9de83beab37e2bdaedead6f9ac
+  stage5az_repaired_variant_family_manifest_sha256: 4be0806a2f41aac56b858774af253d249bd1dd894e253fa04fe52a57ed4bf1a3
+  stage5az_repaired_branch_budget_sha256: 30d271329945350ae4f11e1d435acca1240ecf6c5985b407d2257af24ae9da3d
+  stage5ay_branch_eligibility_policy_sha256: 8cab6a59ce259ce3cb9aa4f5c0312071f47cae543b46f39a5ff838f676d98624
+  dry_run_policy_id: stage5bd_dry_run_policy
+  execution_gate_policy_id: stage5az_repaired_execution_gates
+real_execution_authorised: false

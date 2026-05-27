@@ -1309,3 +1309,93 @@ records:
   owner_context: research_operator
   notes: Documents fail-closed gates for real byte-stream generation, variant
     materialisation, DWH/hash search, decode, scoring, CUDA, and benchmarks.
+- path: data/project-state/stage5bd-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BD token-block preflight dry-run implementation aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bd
+  expected_update_frequency: when_token_block_preflight_dry_run_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records dry-run plan IDs, future result-path validation, fixture-only
+    records, Stage 5BB validation-evidence consolidation, archive marker policy,
+    and Stage 5BE next-stage decision.
+- path: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+  category: active_data_record
+  purpose: Stage 5BD no-output dry-run plan manifest.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bd
+  expected_update_frequency: when_token_block_dry_run_plan_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Defines representative metadata-only run plans and deterministic run-plan
+    IDs without generating byte streams, materialising variants, enumerating the
+    Cartesian product, searching hashes, decoding, scoring, or running CUDA.
+- path: data/token-block/stage5bd-stage5bb-validation-evidence-consolidation.yaml
+  category: active_data_record
+  purpose: Stage 5BD superseding consolidation for Stage 5BB validation placeholders.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bd
+  expected_update_frequency: when_stage5bb_validation_evidence_is_reaudited
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Classifies Stage 5BB `pending_before_final` entries as historical
+    finalisation placeholders and consolidates final validation evidence without
+    mutating the Stage 5BB historical record.
+- path: data/token-block/stage5bd-archive-marker-policy.yaml
+  category: active_data_record
+  purpose: Stage 5BD Deep Research archive marker policy.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bd
+  expected_update_frequency: when_deep_research_archive_marker_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Requires future ZIP-based Deep Research handoffs to include commit,
+    branch, stage, timestamp, next-stage, and manifest-hash marker files while
+    keeping generated ZIPs ignored.
+- path: docs/onboarding/token-block-preflight-dry-run-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5BD operator workflow for token-block preflight dry-run planning.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bd
+  expected_update_frequency: every_token_block_dry_run_cli_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Documents CLI order, no-byte-stream proof, future result-path validation,
+    archive marker generation, ignored output roots, and Stage 5BE review boundary.
+- path: docs/reference/token-block-preflight-dry-run-cli.md
+  category: operational_status_doc
+  purpose: Stage 5BD token-block preflight dry-run CLI reference.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bd
+  expected_update_frequency: every_token_block_dry_run_cli_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents dry-run policy, manifest lock, plan, path-validation, counters,
+    fixture-only records, execution-gate validation, archive marker, summary, and
+    validation commands for Stage 5BD.
+- path: docs/architecture/token-block-preflight-dry-run-implementation.md
+  category: architecture_doc
+  purpose: Stage 5BD token-block preflight dry-run implementation architecture.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bd
+  expected_update_frequency: every_token_block_dry_run_implementation_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Explains the metadata-only dry-run layer and package split while keeping
+    real byte streams, variants, DWH/hash search, decoding, scoring, CUDA,
+    benchmarks, website expansion, and solve claims blocked.

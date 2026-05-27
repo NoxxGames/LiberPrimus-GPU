@@ -19,10 +19,11 @@ def test_stage5ab_source_of_truth_schema_and_loader() -> None:
 
     _validator("schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json").validate(payload)
     source = load_source_of_truth(path)
-    assert source.latest_completed_stage_prefix == "Stage 5BB"
-    assert source.expected_next_stage_prefix == "Stage 5BC"
+    assert source.latest_completed_stage_prefix == "Stage 5BD"
+    assert source.expected_next_stage_prefix == "Stage 5BE"
     assert source.next_stage_after_this_stage == (
-        "Stage 5BC - Deep Research review of token-block preflight runner scaffold and execution-gate enforcement"
+        "Stage 5BE - Deep Research review of token-block preflight dry-run implementation, "
+        "archive/evidence hygiene, and execution-gate enforcement"
     )
 
 

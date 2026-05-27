@@ -154,6 +154,29 @@ from .models import (
     STAGE5BB_RUNNER_SCAFFOLD_MANIFEST_PATH,
     STAGE5BB_SUMMARY_PATH,
     STAGE5BB_VALIDATION_EVIDENCE_INDEX_PATH,
+    STAGE5BD_ACTIVE_MANIFEST_LOCK_PATH,
+    STAGE5BD_ARCHIVE_MARKER_POLICY_PATH,
+    STAGE5BD_ARCHIVE_REVIEW_MARKER_PATH,
+    STAGE5BD_BRANCH_FAMILY_PLAN_COUNTERS_PATH,
+    STAGE5BD_CONTROL_FAMILY_PLAN_COUNTERS_PATH,
+    STAGE5BD_DRY_RUN_PLAN_MANIFEST_PATH,
+    STAGE5BD_DRY_RUN_POLICY_PATH,
+    STAGE5BD_DRY_RUN_REPORT_SCHEMA_PATH,
+    STAGE5BD_DWH_DRY_RUN_CONTEXT_PATH,
+    STAGE5BD_EXECUTION_GATE_DRY_RUN_VALIDATION_PATH,
+    STAGE5BD_FIXTURE_DRY_RUN_RECORDS_PATH,
+    STAGE5BD_FIXTURE_RESULT_EXAMPLE_POLICY_PATH,
+    STAGE5BD_FUTURE_RESULT_PATH_POLICY_PATH,
+    STAGE5BD_FUTURE_RESULT_PATH_VALIDATION_PATH,
+    STAGE5BD_GUARDRAIL_PATH,
+    STAGE5BD_NEXT_STAGE_DECISION_PATH,
+    STAGE5BD_NO_BYTE_STREAM_PROOF_PATH,
+    STAGE5BD_NULL_CONTROL_PLAN_COUNTERS_PATH,
+    STAGE5BD_RESULTS_DIR,
+    STAGE5BD_RUN_PLAN_ID_POLICY_PATH,
+    STAGE5BD_RUN_PLAN_ID_REGISTRY_PATH,
+    STAGE5BD_STAGE5BB_VALIDATION_EVIDENCE_CONSOLIDATION_PATH,
+    STAGE5BD_SUMMARY_PATH,
     TRANSCRIPTION_PATH,
     read_yaml,
 )
@@ -223,6 +246,18 @@ from .stage5bb import (
     validate_stage5bb,
     validate_stage5bb_execution_gates,
     validate_stage5bb_manifest_references,
+)
+from .preflight_runner.stage5bd import (
+    build_stage5bd_archive_marker,
+    build_stage5bd_dry_run_plan,
+    build_stage5bd_dry_run_policy,
+    build_stage5bd_fixture_dry_run_records,
+    build_stage5bd_future_result_path_validation,
+    build_stage5bd_plan_counters,
+    build_stage5bd_summary,
+    build_stage5bd_validation_evidence,
+    validate_stage5bd,
+    validate_stage5bd_execution_gates,
 )
 from .transcription import build_transcription
 from .validation import validate_stage5ap
@@ -2190,6 +2225,347 @@ def validate_stage5bb_command(
     if errors:
         raise typer.Exit(1)
     console.print("token_block_stage5bb_valid=true")
+
+
+@app.command("build-stage5bd-dry-run-policy")
+def build_stage5bd_dry_run_policy_command(
+    stage5bb_summary: Path = typer.Option(STAGE5BB_SUMMARY_PATH),
+    stage5bc_review_note: str = typer.Option("Stage 5BC approved no-execution dry-run implementation"),
+    stage5bb_active_registry: Path = typer.Option(STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH),
+    stage5bb_precedence_policy: Path = typer.Option(STAGE5BB_MANIFEST_PRECEDENCE_POLICY_PATH),
+    stage5bb_no_execution_proof: Path = typer.Option(STAGE5BB_NO_EXECUTION_PROOF_PATH),
+    stage5bb_guardrail: Path = typer.Option(STAGE5BB_GUARDRAIL_PATH),
+    results_dir: Path = typer.Option(STAGE5BD_RESULTS_DIR),
+    out_policy: Path = typer.Option(STAGE5BD_DRY_RUN_POLICY_PATH),
+    out_active_lock: Path = typer.Option(STAGE5BD_ACTIVE_MANIFEST_LOCK_PATH),
+) -> None:
+    policy, lock = build_stage5bd_dry_run_policy(
+        stage5bb_summary=stage5bb_summary,
+        stage5bc_review_note=stage5bc_review_note,
+        stage5bb_active_registry=stage5bb_active_registry,
+        stage5bb_precedence_policy=stage5bb_precedence_policy,
+        stage5bb_no_execution_proof=stage5bb_no_execution_proof,
+        stage5bb_guardrail=stage5bb_guardrail,
+        results_dir=results_dir,
+        out_policy=out_policy,
+        out_active_lock=out_active_lock,
+    )
+    console.print(f"dry_run_policy_status={policy['status']}")
+    console.print(f"active_branch_manifest={lock['active_branch_manifest']}")
+    console.print(f"real_execution_authorised={policy['real_execution_authorised']}")
+
+
+@app.command("build-stage5bd-active-manifest-lock")
+def build_stage5bd_active_manifest_lock_command(
+    stage5bb_summary: Path = typer.Option(STAGE5BB_SUMMARY_PATH),
+    stage5bb_active_registry: Path = typer.Option(STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH),
+    stage5bb_precedence_policy: Path = typer.Option(STAGE5BB_MANIFEST_PRECEDENCE_POLICY_PATH),
+    stage5bb_no_execution_proof: Path = typer.Option(STAGE5BB_NO_EXECUTION_PROOF_PATH),
+    stage5bb_guardrail: Path = typer.Option(STAGE5BB_GUARDRAIL_PATH),
+    results_dir: Path = typer.Option(STAGE5BD_RESULTS_DIR),
+    out_policy: Path = typer.Option(STAGE5BD_DRY_RUN_POLICY_PATH),
+    out_active_lock: Path = typer.Option(STAGE5BD_ACTIVE_MANIFEST_LOCK_PATH),
+) -> None:
+    _policy, lock = build_stage5bd_dry_run_policy(
+        stage5bb_summary=stage5bb_summary,
+        stage5bb_active_registry=stage5bb_active_registry,
+        stage5bb_precedence_policy=stage5bb_precedence_policy,
+        stage5bb_no_execution_proof=stage5bb_no_execution_proof,
+        stage5bb_guardrail=stage5bb_guardrail,
+        results_dir=results_dir,
+        out_policy=out_policy,
+        out_active_lock=out_active_lock,
+    )
+    console.print(f"active_manifest_lock_status={lock['status']}")
+    console.print(f"all_active_paths_resolve={lock['all_active_paths_resolve']}")
+
+
+@app.command("build-stage5bd-dry-run-plan")
+def build_stage5bd_dry_run_plan_command(
+    dry_run_policy: Path = typer.Option(STAGE5BD_DRY_RUN_POLICY_PATH),
+    active_lock: Path = typer.Option(STAGE5BD_ACTIVE_MANIFEST_LOCK_PATH),
+    active_registry: Path = typer.Option(STAGE5BB_ACTIVE_MANIFEST_REGISTRY_PATH),
+    variant_family: Path = typer.Option(STAGE5AZ_REPAIRED_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    branch_budget: Path = typer.Option(STAGE5AZ_REPAIRED_BRANCH_COUNT_BUDGET_PATH),
+    branch_eligibility: Path = typer.Option(STAGE5AY_BRANCH_ELIGIBILITY_POLICY_PATH),
+    execution_gates: Path = typer.Option(STAGE5AZ_REPAIRED_EXECUTION_GATES_PATH),
+    results_dir: Path = typer.Option(STAGE5BD_RESULTS_DIR),
+    out_id_policy: Path = typer.Option(STAGE5BD_RUN_PLAN_ID_POLICY_PATH),
+    out_plan: Path = typer.Option(STAGE5BD_DRY_RUN_PLAN_MANIFEST_PATH),
+    out_id_registry: Path = typer.Option(STAGE5BD_RUN_PLAN_ID_REGISTRY_PATH),
+) -> None:
+    _id_policy, plan, registry = build_stage5bd_dry_run_plan(
+        dry_run_policy=dry_run_policy,
+        active_lock=active_lock,
+        active_registry=active_registry,
+        variant_family=variant_family,
+        branch_budget=branch_budget,
+        branch_eligibility=branch_eligibility,
+        execution_gates=execution_gates,
+        results_dir=results_dir,
+        out_id_policy=out_id_policy,
+        out_plan=out_plan,
+        out_id_registry=out_id_registry,
+    )
+    console.print(f"dry_run_plan_created={plan['dry_run_plan_created']}")
+    console.print(f"run_plan_id_count={registry['run_plan_id_count']}")
+    console.print(f"real_byte_streams_generated={plan['real_byte_streams_generated']}")
+
+
+@app.command("build-stage5bd-future-result-path-validation")
+def build_stage5bd_future_result_path_validation_command(
+    dry_run_plan: Path = typer.Option(STAGE5BD_DRY_RUN_PLAN_MANIFEST_PATH),
+    active_lock: Path = typer.Option(STAGE5BD_ACTIVE_MANIFEST_LOCK_PATH),
+    results_dir: Path = typer.Option(STAGE5BD_RESULTS_DIR),
+    out_policy: Path = typer.Option(STAGE5BD_FUTURE_RESULT_PATH_POLICY_PATH),
+    out_validation: Path = typer.Option(STAGE5BD_FUTURE_RESULT_PATH_VALIDATION_PATH),
+) -> None:
+    _policy, validation = build_stage5bd_future_result_path_validation(
+        dry_run_plan=dry_run_plan,
+        active_lock=active_lock,
+        results_dir=results_dir,
+        out_policy=out_policy,
+        out_validation=out_validation,
+    )
+    console.print(f"future_result_paths_validated={validation['future_result_paths_validated']}")
+    console.print(f"future_result_paths_written={validation['future_result_paths_written']}")
+    console.print(f"blocked_path_count={validation['blocked_path_count']}")
+
+
+@app.command("build-stage5bd-plan-counters")
+def build_stage5bd_plan_counters_command(
+    dry_run_plan: Path = typer.Option(STAGE5BD_DRY_RUN_PLAN_MANIFEST_PATH),
+    variant_family: Path = typer.Option(STAGE5AZ_REPAIRED_BOUNDED_VARIANT_FAMILY_MANIFEST_PATH),
+    null_control_family: Path = typer.Option(STAGE5AY_NULL_CONTROL_FAMILY_MANIFEST_PATH),
+    alphabet_control: Path = typer.Option(STAGE5AY_ALPHABET_CONTROL_MANIFEST_PATH),
+    reading_order_control: Path = typer.Option(STAGE5AY_READING_ORDER_CONTROL_MANIFEST_PATH),
+    page_split_control: Path = typer.Option(STAGE5AY_PAGE_SPLIT_CONTROL_MANIFEST_PATH),
+    source_control: Path = typer.Option(STAGE5AY_SOURCE_CONTROL_MANIFEST_PATH),
+    branch_budget: Path = typer.Option(STAGE5AZ_REPAIRED_BRANCH_COUNT_BUDGET_PATH),
+    results_dir: Path = typer.Option(STAGE5BD_RESULTS_DIR),
+    out_branch_family_counters: Path = typer.Option(STAGE5BD_BRANCH_FAMILY_PLAN_COUNTERS_PATH),
+    out_null_control_counters: Path = typer.Option(STAGE5BD_NULL_CONTROL_PLAN_COUNTERS_PATH),
+    out_control_family_counters: Path = typer.Option(STAGE5BD_CONTROL_FAMILY_PLAN_COUNTERS_PATH),
+) -> None:
+    branch, null, control = build_stage5bd_plan_counters(
+        dry_run_plan=dry_run_plan,
+        variant_family=variant_family,
+        null_control_family=null_control_family,
+        alphabet_control=alphabet_control,
+        reading_order_control=reading_order_control,
+        page_split_control=page_split_control,
+        source_control=source_control,
+        branch_budget=branch_budget,
+        results_dir=results_dir,
+        out_branch_family_counters=out_branch_family_counters,
+        out_null_control_counters=out_null_control_counters,
+        out_control_family_counters=out_control_family_counters,
+    )
+    console.print(f"variant_family_count={branch['variant_family_count']}")
+    console.print(f"null_control_family_count={null['null_control_family_count']}")
+    console.print(f"dry_run_plan_family_count={control['dry_run_plan_family_count']}")
+
+
+@app.command("build-stage5bd-fixture-dry-run-records")
+def build_stage5bd_fixture_dry_run_records_command(
+    dry_run_plan: Path = typer.Option(STAGE5BD_DRY_RUN_PLAN_MANIFEST_PATH),
+    results_dir: Path = typer.Option(STAGE5BD_RESULTS_DIR),
+    out_schema: Path = typer.Option(STAGE5BD_DRY_RUN_REPORT_SCHEMA_PATH),
+    out_policy: Path = typer.Option(STAGE5BD_FIXTURE_RESULT_EXAMPLE_POLICY_PATH),
+    out_records: Path = typer.Option(STAGE5BD_FIXTURE_DRY_RUN_RECORDS_PATH),
+) -> None:
+    _schema, policy, records = build_stage5bd_fixture_dry_run_records(
+        dry_run_plan=dry_run_plan,
+        results_dir=results_dir,
+        out_schema=out_schema,
+        out_policy=out_policy,
+        out_records=out_records,
+    )
+    console.print(f"fixture_result_examples_allowed={policy['fixture_result_examples_allowed']}")
+    console.print(f"fixture_record_count={records['fixture_record_count']}")
+    console.print(f"real_token_block_data_used={policy['real_token_block_data_used']}")
+
+
+@app.command("validate-stage5bd-execution-gates")
+def validate_stage5bd_execution_gates_command(
+    dry_run_policy: Path = typer.Option(STAGE5BD_DRY_RUN_POLICY_PATH),
+    dry_run_plan: Path = typer.Option(STAGE5BD_DRY_RUN_PLAN_MANIFEST_PATH),
+    active_lock: Path = typer.Option(STAGE5BD_ACTIVE_MANIFEST_LOCK_PATH),
+    stage5bb_gate_policy: Path = typer.Option(STAGE5BB_EXECUTION_GATE_ENFORCEMENT_POLICY_PATH),
+    stage5bb_gate_validation: Path = typer.Option(STAGE5BB_EXECUTION_GATE_VALIDATION_PATH),
+    stage5az_execution_gates: Path = typer.Option(STAGE5AZ_REPAIRED_EXECUTION_GATES_PATH),
+    results_dir: Path = typer.Option(STAGE5BD_RESULTS_DIR),
+    out_validation: Path = typer.Option(STAGE5BD_EXECUTION_GATE_DRY_RUN_VALIDATION_PATH),
+    out_proof: Path = typer.Option(STAGE5BD_NO_BYTE_STREAM_PROOF_PATH),
+) -> None:
+    validation, proof = validate_stage5bd_execution_gates(
+        dry_run_policy=dry_run_policy,
+        dry_run_plan=dry_run_plan,
+        active_lock=active_lock,
+        stage5bb_gate_policy=stage5bb_gate_policy,
+        stage5bb_gate_validation=stage5bb_gate_validation,
+        stage5az_execution_gates=stage5az_execution_gates,
+        results_dir=results_dir,
+        out_validation=out_validation,
+        out_proof=out_proof,
+    )
+    console.print(f"gate_enforcer_blocks_execution={validation['gate_enforcer_blocks_execution']}")
+    console.print(f"real_token_block_byte_streams_generated={proof['real_token_block_byte_streams_generated']}")
+    console.print(f"hash_search_performed={proof['hash_search_performed']}")
+
+
+@app.command("build-stage5bd-validation-evidence")
+def build_stage5bd_validation_evidence_command(
+    stage5bb_validation_evidence: Path = typer.Option(STAGE5BB_VALIDATION_EVIDENCE_INDEX_PATH),
+    stage5bb_development_log: Path = typer.Option("docs/development-logs/2026-05-26-stage-5bb-preflight-runner-scaffold.md"),
+    stage5bb_summary: Path = typer.Option(STAGE5BB_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5BD_RESULTS_DIR),
+    out: Path = typer.Option(STAGE5BD_STAGE5BB_VALIDATION_EVIDENCE_CONSOLIDATION_PATH),
+) -> None:
+    record = build_stage5bd_validation_evidence(
+        stage5bb_validation_evidence=stage5bb_validation_evidence,
+        stage5bb_development_log=stage5bb_development_log,
+        stage5bb_summary=stage5bb_summary,
+        results_dir=results_dir,
+        out=out,
+    )
+    console.print(f"stage5bb_validation_evidence_placeholders_found={record['stage5bb_validation_evidence_placeholders_found']}")
+    console.print(f"consolidated_validation_status={record['consolidated_validation_status']}")
+    console.print(f"stage5bb_historical_file_mutated={record['stage5bb_historical_file_mutated']}")
+
+
+@app.command("build-stage5bd-archive-marker")
+def build_stage5bd_archive_marker_command(
+    dry_run_policy: Path = typer.Option(STAGE5BD_DRY_RUN_POLICY_PATH),
+    dry_run_plan: Path = typer.Option(STAGE5BD_DRY_RUN_PLAN_MANIFEST_PATH),
+    summary_output_path: Path = typer.Option(STAGE5BD_ARCHIVE_REVIEW_MARKER_PATH),
+    policy_output_path: Path = typer.Option(STAGE5BD_ARCHIVE_MARKER_POLICY_PATH),
+    results_dir: Path = typer.Option(STAGE5BD_RESULTS_DIR),
+) -> None:
+    policy, marker = build_stage5bd_archive_marker(
+        dry_run_policy=dry_run_policy,
+        dry_run_plan=dry_run_plan,
+        summary_output_path=summary_output_path,
+        policy_output_path=policy_output_path,
+        results_dir=results_dir,
+    )
+    console.print(f"archive_marker_policy_status={policy['status']}")
+    console.print(f"current_commit_detected={marker['current_commit_detected']}")
+    console.print("archive_marker_files_created=true")
+
+
+@app.command("build-stage5bd-summary")
+def build_stage5bd_summary_command(
+    dry_run_policy: Path = typer.Option(STAGE5BD_DRY_RUN_POLICY_PATH),
+    active_lock: Path = typer.Option(STAGE5BD_ACTIVE_MANIFEST_LOCK_PATH),
+    id_policy: Path = typer.Option(STAGE5BD_RUN_PLAN_ID_POLICY_PATH),
+    dry_run_plan: Path = typer.Option(STAGE5BD_DRY_RUN_PLAN_MANIFEST_PATH),
+    id_registry: Path = typer.Option(STAGE5BD_RUN_PLAN_ID_REGISTRY_PATH),
+    future_result_policy: Path = typer.Option(STAGE5BD_FUTURE_RESULT_PATH_POLICY_PATH),
+    future_result_validation: Path = typer.Option(STAGE5BD_FUTURE_RESULT_PATH_VALIDATION_PATH),
+    branch_family_counters: Path = typer.Option(STAGE5BD_BRANCH_FAMILY_PLAN_COUNTERS_PATH),
+    null_control_counters: Path = typer.Option(STAGE5BD_NULL_CONTROL_PLAN_COUNTERS_PATH),
+    control_family_counters: Path = typer.Option(STAGE5BD_CONTROL_FAMILY_PLAN_COUNTERS_PATH),
+    dry_run_report_schema: Path = typer.Option(STAGE5BD_DRY_RUN_REPORT_SCHEMA_PATH),
+    fixture_policy: Path = typer.Option(STAGE5BD_FIXTURE_RESULT_EXAMPLE_POLICY_PATH),
+    fixture_records: Path = typer.Option(STAGE5BD_FIXTURE_DRY_RUN_RECORDS_PATH),
+    gate_validation: Path = typer.Option(STAGE5BD_EXECUTION_GATE_DRY_RUN_VALIDATION_PATH),
+    no_byte_proof: Path = typer.Option(STAGE5BD_NO_BYTE_STREAM_PROOF_PATH),
+    validation_evidence: Path = typer.Option(STAGE5BD_STAGE5BB_VALIDATION_EVIDENCE_CONSOLIDATION_PATH),
+    archive_marker_policy: Path = typer.Option(STAGE5BD_ARCHIVE_MARKER_POLICY_PATH),
+    archive_review_marker: Path = typer.Option(STAGE5BD_ARCHIVE_REVIEW_MARKER_PATH),
+    out_dwh_context: Path = typer.Option(STAGE5BD_DWH_DRY_RUN_CONTEXT_PATH),
+    out_guardrail: Path = typer.Option(STAGE5BD_GUARDRAIL_PATH),
+    out_next_stage: Path = typer.Option(STAGE5BD_NEXT_STAGE_DECISION_PATH),
+    out_summary: Path = typer.Option(STAGE5BD_SUMMARY_PATH),
+) -> None:
+    dwh, _guardrail, next_stage, summary = build_stage5bd_summary(
+        dry_run_policy=dry_run_policy,
+        active_lock=active_lock,
+        id_policy=id_policy,
+        dry_run_plan=dry_run_plan,
+        id_registry=id_registry,
+        future_result_policy=future_result_policy,
+        future_result_validation=future_result_validation,
+        branch_family_counters=branch_family_counters,
+        null_control_counters=null_control_counters,
+        control_family_counters=control_family_counters,
+        dry_run_report_schema=dry_run_report_schema,
+        fixture_policy=fixture_policy,
+        fixture_records=fixture_records,
+        gate_validation=gate_validation,
+        no_byte_proof=no_byte_proof,
+        validation_evidence=validation_evidence,
+        archive_marker_policy=archive_marker_policy,
+        archive_review_marker=archive_review_marker,
+        out_dwh_context=out_dwh_context,
+        out_guardrail=out_guardrail,
+        out_next_stage=out_next_stage,
+        out_summary=out_summary,
+    )
+    console.print(f"dwh_operational_status={dwh['dwh_operational_status']}")
+    console.print(f"recommended_next_stage_title={next_stage['selected_next_stage_title']}")
+    console.print(f"run_plan_id_count={summary['run_plan_id_count']}")
+
+
+@app.command("validate-stage5bd")
+def validate_stage5bd_command(
+    dry_run_policy: Path = typer.Option(STAGE5BD_DRY_RUN_POLICY_PATH),
+    active_lock: Path = typer.Option(STAGE5BD_ACTIVE_MANIFEST_LOCK_PATH),
+    id_policy: Path = typer.Option(STAGE5BD_RUN_PLAN_ID_POLICY_PATH),
+    dry_run_plan: Path = typer.Option(STAGE5BD_DRY_RUN_PLAN_MANIFEST_PATH),
+    id_registry: Path = typer.Option(STAGE5BD_RUN_PLAN_ID_REGISTRY_PATH),
+    future_result_policy: Path = typer.Option(STAGE5BD_FUTURE_RESULT_PATH_POLICY_PATH),
+    future_result_validation: Path = typer.Option(STAGE5BD_FUTURE_RESULT_PATH_VALIDATION_PATH),
+    branch_family_counters: Path = typer.Option(STAGE5BD_BRANCH_FAMILY_PLAN_COUNTERS_PATH),
+    null_control_counters: Path = typer.Option(STAGE5BD_NULL_CONTROL_PLAN_COUNTERS_PATH),
+    control_family_counters: Path = typer.Option(STAGE5BD_CONTROL_FAMILY_PLAN_COUNTERS_PATH),
+    dry_run_report_schema: Path = typer.Option(STAGE5BD_DRY_RUN_REPORT_SCHEMA_PATH),
+    fixture_policy: Path = typer.Option(STAGE5BD_FIXTURE_RESULT_EXAMPLE_POLICY_PATH),
+    fixture_records: Path = typer.Option(STAGE5BD_FIXTURE_DRY_RUN_RECORDS_PATH),
+    gate_validation: Path = typer.Option(STAGE5BD_EXECUTION_GATE_DRY_RUN_VALIDATION_PATH),
+    no_byte_proof: Path = typer.Option(STAGE5BD_NO_BYTE_STREAM_PROOF_PATH),
+    validation_evidence: Path = typer.Option(STAGE5BD_STAGE5BB_VALIDATION_EVIDENCE_CONSOLIDATION_PATH),
+    archive_marker_policy: Path = typer.Option(STAGE5BD_ARCHIVE_MARKER_POLICY_PATH),
+    dwh_context: Path = typer.Option(STAGE5BD_DWH_DRY_RUN_CONTEXT_PATH),
+    guardrail: Path = typer.Option(STAGE5BD_GUARDRAIL_PATH),
+    archive_review_marker: Path = typer.Option(STAGE5BD_ARCHIVE_REVIEW_MARKER_PATH),
+    next_stage_decision: Path = typer.Option(STAGE5BD_NEXT_STAGE_DECISION_PATH),
+    summary: Path = typer.Option(STAGE5BD_SUMMARY_PATH),
+    results_dir: Path = typer.Option(STAGE5BD_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5bd(
+        dry_run_policy=dry_run_policy,
+        active_lock=active_lock,
+        id_policy=id_policy,
+        dry_run_plan=dry_run_plan,
+        id_registry=id_registry,
+        future_result_policy=future_result_policy,
+        future_result_validation=future_result_validation,
+        branch_family_counters=branch_family_counters,
+        null_control_counters=null_control_counters,
+        control_family_counters=control_family_counters,
+        dry_run_report_schema=dry_run_report_schema,
+        fixture_policy=fixture_policy,
+        fixture_records=fixture_records,
+        gate_validation=gate_validation,
+        no_byte_proof=no_byte_proof,
+        validation_evidence=validation_evidence,
+        archive_marker_policy=archive_marker_policy,
+        dwh_context=dwh_context,
+        guardrail=guardrail,
+        archive_review_marker=archive_review_marker,
+        next_stage_decision=next_stage_decision,
+        summary=summary,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5bd_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

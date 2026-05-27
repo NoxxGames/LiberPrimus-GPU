@@ -1,0 +1,37 @@
+record_type: stage5bd_dry_run_policy
+schema: schemas/token-block/dry-run-policy-v0.schema.json
+stage_id: stage-5bd
+status: complete
+source_stage_id: stage-5bc
+source_stage5bb_commit: c1d07ee2331e5991220b9bde61e60a5438b5aa16
+source_stage5bb_summary: data/project-state/stage5bb-summary.yaml
+stage5bc_review_note: Stage 5BC approved no-execution dry-run implementation
+dry_run_scope: no_output_preflight_plan_validation
+real_execution_authorised: false
+real_token_block_byte_generation_allowed: false
+real_variant_materialisation_allowed: false
+real_branch_enumeration_allowed: false
+sampled_real_variants_allowed: false
+hash_search_allowed: false
+hash_comparison_allowed: false
+decode_allowed: false
+scoring_allowed: false
+cuda_allowed: false
+allowed_outputs:
+- dry_run_plan_ids
+- active_manifest_lock
+- future_result_path_validation
+- metadata_only_family_counters
+- fixture_only_synthetic_records
+- no_byte_stream_proof
+- archive_marker_policy
+fixture_only_data_allowed: true
+fixture_data_not_derived_from_liber_primus: true
+stage5bb_runner_scaffold_created: true
+stage5bb_execution_gates_block_execution: true
+policy_sha256_inputs:
+  stage5bb_summary_sha256: 92c1addd46e8452efb00a1d391c7dfedb0cb9b1389139acfe3cd88b3ad34c587
+  active_registry_sha256: 0f415521d5380283fd4296e9c7acb8d87267fa246f95f0ac69c4ebcc13cfab07
+  manifest_precedence_policy_sha256: 8b42fdb6d6c107687b41664faaaf5404a5898a9de83beab37e2bdaedead6f9ac
+  stage5bb_no_execution_proof_sha256: 9431bdd6f4157e5ffa46e20365e39848bc53c9be80e402f8994ef92befd03054
+  stage5bb_guardrail_sha256: 627126638ea3a12e7819ad3eacd0dfdae22dc1132802d97b950bde0ddbb863db

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "fixture_record_count", "fixture_records"],
+  "properties": {
+    "record_type": {"const": "stage5bd_fixture_dry_run_records"},
+    "stage_id": {"const": "stage-5bd"},
+    "fixture_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "not_derived_from_liber_primus": {"const": true},
+          "real_token_block_data_used": {"const": false},
+          "real_variant_data_used": {"const": false},
+          "variant_byte_stream_generated": {"const": false},
+          "score_generated": {"const": false},
+          "decode_output_generated": {"const": false}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,14 @@
+record_type: stage5bd_fixture_result_example_policy
+schema: schemas/token-block/fixture-result-example-policy-v0.schema.json
+stage_id: stage-5bd
+fixture_result_examples_allowed: true
+fixture_data_not_derived_from_liber_primus: true
+fixture_values:
+- 0
+- 1
+- 2
+- 255
+real_token_block_data_used: false
+real_variant_data_used: false
+fixture_outputs_committed_as_compact_metadata_only: true
+fixture_byte_stream_files_committed: false

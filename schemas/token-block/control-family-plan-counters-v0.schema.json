@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "dry_run_plan_family_count"],
+  "properties": {
+    "record_type": {"const": "stage5bd_control_family_plan_counters"},
+    "stage_id": {"const": "stage-5bd"},
+    "counter_mode": {"const": "metadata_only_plan_space"},
+    "full_cartesian_product_allowed": {"const": false},
+    "full_cartesian_product_enumerated": {"const": false},
+    "real_variant_branches_materialised": {"const": false},
+    "variant_byte_streams_generated": {"const": false},
+    "token_experiments_executed": {"const": false}
+  },
+  "additionalProperties": true
+}

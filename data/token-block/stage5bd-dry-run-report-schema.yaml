@@ -1,0 +1,11 @@
+record_type: stage5bd_dry_run_report_schema
+schema: schemas/token-block/dry-run-report-schema-v0.schema.json
+stage_id: stage-5bd
+status: complete
+future_result_schema_id: stage5bd-dry-run-report-v0
+schema_scope: metadata_only_dry_run_reports
+real_token_byte_fields_allowed: false
+generated_byte_stream_hash_fields_allowed: false
+decoded_text_fields_allowed: false
+score_fields_allowed: false
+fixture_only_examples_allowed: true

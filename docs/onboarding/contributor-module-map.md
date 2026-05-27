@@ -1,8 +1,8 @@
 # Contributor Module Map
 
-## Stage 5BB Note
+## Stage 5BD Note
 
-The token-block layer now includes Stage 5BB runner-scaffold helpers under `python/libreprimus/token_block/`. Stage 5BB canonicalises active-manifest precedence, validates Stage 5AY branch eligibility, blocks stale Stage 5AV/5AY active loads, writes dry-run previews and no-execution proof records, and keeps execution blocked. These helpers must not be extended into token execution, byte-stream generation, variant materialisation, decoding, DWH/hash search, scoring, OCR/AI/ML interpretation, CUDA, cryptanalytic benchmarks, or scored experiments without an explicit future stage.
+The token-block layer now includes Stage 5BD preflight-runner helpers under `python/libreprimus/token_block/preflight_runner/`. Stage 5BD preserves Stage 5BB active-manifest precedence, validates future result paths, writes metadata-only run-plan IDs and fixture-only dry-run records, and keeps execution blocked. These helpers must not be extended into token execution, byte-stream generation, variant materialisation, decoding, DWH/hash search, scoring, OCR/AI/ML interpretation, CUDA, cryptanalytic benchmarks, or scored experiments without an explicit future stage.
 
 ## Module Areas
 
@@ -27,6 +27,7 @@ The token-block layer now includes Stage 5BB runner-scaffold helpers under `pyth
 - Stage 5AY token-block preflight design: `python/libreprimus/token_block/stage5ay.py`, `data/token-block/stage5ay-*.yaml`, `data/project-state/stage5ay-*.yaml`, and `schemas/token-block/*preflight*.json`.
 - Stage 5AZ token-block manifest-integrity repair: `python/libreprimus/token_block/stage5az.py`, `data/token-block/stage5az-*.yaml`, `data/project-state/stage5az-*.yaml`, and `schemas/token-block/*integrity*.json`.
 - Stage 5BB token-block preflight runner scaffold: `python/libreprimus/token_block/stage5bb.py`, `data/token-block/stage5bb-*.yaml`, `data/project-state/stage5bb-*.yaml`, and `schemas/token-block/*manifest*.json`, `schemas/token-block/*scaffold*.json`, `schemas/token-block/*execution-gate*.json`, plus `schemas/project-state/stage5bb-summary-v0.schema.json`.
+- Stage 5BD token-block preflight dry-run package: `python/libreprimus/token_block/preflight_runner/`, `data/token-block/stage5bd-*.yaml`, `data/project-state/stage5bd-*.yaml`, `schemas/token-block/*dry-run*.json`, `schemas/token-block/*run-plan*.json`, and `schemas/project-state/stage5bd-summary-v0.schema.json`.
 - Source harvester: `python/libreprimus/source_harvester/`, `data/source-harvester/`, `schemas/source-harvester/`.
 - Website renderer: `python/libreprimus/website_render/`, `data/website-render/`, `schemas/website-render/`.
 - CUDA parity/reporting: `python/libreprimus/cuda_*`, `python/libreprimus/prime_minus_one_*`, `python/libreprimus/bounded_p56_cuda_parity/`, `cuda/`, `data/cuda/`.
@@ -71,7 +72,7 @@ Stage 5AY token-block preflight modules build design metadata only. They must us
 
 Stage 5AZ token-block manifest-integrity modules repair metadata only. They must supersede the Stage 5AY bounded variant-family manifest for Deep Research review, preserve taxonomy overlap through `taxonomy_memberships`, keep branch budgets unchanged, keep execution gates blocked, keep generated reports ignored, and preserve all no-DWH/no-decode/no-CUDA/no-score/no-solve guardrails.
 
-Stage 5BB token-block runner-scaffold modules build no-execution loader, registry, reference validation, dry-run preview, counter, execution-gate, fixture-schema, and no-execution proof records. They must use the Stage 5BB active-manifest registry, keep Stage 5AV and old Stage 5AY manifests inactive as active inputs, keep generated reports ignored, and preserve all no-byte-stream/no-variant/no-DWH/no-decode/no-score/no-CUDA/no-benchmark/no-solve guardrails.
+Stage 5BD token-block preflight-runner modules build no-byte-stream dry-run policy, run-plan ID, future-path, counter, execution-gate, fixture-only, archive marker, and no-byte-stream proof records. They must use the Stage 5BB active-manifest registry lineage, keep Stage 5AV and old Stage 5AY manifests inactive as active inputs, keep generated reports ignored, and preserve all no-byte-stream/no-variant/no-DWH/no-decode/no-score/no-CUDA/no-benchmark/no-solve guardrails.
 
 ## Good First Areas
 
@@ -89,3 +90,6 @@ Stage 5BB token-block runner-scaffold modules build no-execution loader, registr
 - Executing new experiments.
 - Touching Discord raw-log processing.
 - Adding CUDA kernels.
+## Stage 5BD Module
+
+The Stage 5BD preflight-runner package split lives at `python/libreprimus/token_block/preflight_runner/` and remains dry-run-only.

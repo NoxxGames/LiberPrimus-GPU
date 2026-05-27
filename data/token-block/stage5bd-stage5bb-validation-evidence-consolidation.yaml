@@ -1,0 +1,26 @@
+record_type: stage5bd_stage5bb_validation_evidence_consolidation
+schema: schemas/token-block/validation-evidence-consolidation-v0.schema.json
+stage_id: stage-5bd
+source_stage_id: stage-5bb
+source_validation_evidence_index: data/token-block/stage5bb-validation-evidence-index.yaml
+source_development_log: docs/development-logs/2026-05-26-stage-5bb-preflight-runner-scaffold.md
+source_stage5bb_summary: data/project-state/stage5bb-summary.yaml
+stage5bb_validation_evidence_placeholders_found: true
+placeholder_values:
+- pending_before_final
+classification: historical_finalisation_placeholder_cleanup
+stage5bb_historical_file_mutated: false
+supersedes_stage5bb_validation_evidence_for_review: true
+development_log_present: true
+stage5bb_summary_status: complete
+consolidated_results:
+  stage5bb_validate: passed
+  pytest: passed
+  ruff: passed
+  parallel_validation: passed
+  consistency: passed
+  ci: passed
+  ci_run_id: '26478278684'
+consolidated_validation_status: passed
+notes: Stage 5BD consolidates Stage 5BB validation evidence without rewriting Stage
+  5BB historical metadata.

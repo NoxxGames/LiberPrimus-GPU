@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "allowed_future_roots"],
+  "properties": {
+    "record_type": {"const": "stage5bd_future_result_path_policy"},
+    "stage_id": {"const": "stage-5bd"},
+    "absolute_paths_allowed": {"const": false},
+    "relative_paths_only": {"const": true},
+    "future_result_paths_written": {"const": false},
+    "later_authorisation_required_before_write": {"const": true}
+  },
+  "additionalProperties": true
+}

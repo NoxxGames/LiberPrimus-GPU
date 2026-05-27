@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "archive_commit_marker_required_for_future_zip_reviews"],
+  "properties": {
+    "record_type": {"const": "stage5bd_archive_review_marker"},
+    "stage_id": {"const": "stage-5bd"},
+    "git_directory_required_in_review_zip": {"const": false},
+    "archive_commit_marker_required_for_future_zip_reviews": {"const": true},
+    "zip_primary_evidence_allowed": {"const": true}
+  },
+  "additionalProperties": true
+}

@@ -1,8 +1,8 @@
 # Page 49-51 Coordinate Source-Lock Workflow
 
-## Stage 5BB Note
+## Stage 5BD Note
 
-Stage 5AW does not alter Stage 5AR coordinates or the Stage 5AP token transcription. It only repairs parser-derived branch metadata from Stage 5AV; Stage 5AX adds validation infrastructure only; Stage 5AY designs preflight manifests and gates only; Stage 5AZ repairs duplicate manifest metadata only; Stage 5BB scaffolds a no-execution runner and active-manifest registry only. Coordinate and image-source truth still come from the Stage 5AR original-image coordinate records.
+Stage 5AW does not alter Stage 5AR coordinates or the Stage 5AP token transcription. It only repairs parser-derived branch metadata from Stage 5AV; Stage 5AX adds validation infrastructure only; Stage 5AY designs preflight manifests and gates only; Stage 5AZ repairs duplicate manifest metadata only; Stage 5BB scaffolds a no-execution runner and active-manifest registry only; Stage 5BD adds no-byte-stream dry-run planning only. Coordinate and image-source truth still come from the Stage 5AR original-image coordinate records.
 
 Use this workflow when reviewing the Stage 5AR page 49-51 original-image coordinate lock.
 
@@ -18,3 +18,6 @@ Use this workflow when reviewing the Stage 5AR page 49-51 original-image coordin
 Generated reports under `experiments/results/token-block/stage5ar/` are local diagnostics and remain ignored. Raw images under `third_party/LiberPrimusPages/` remain ignored.
 
 Do not use screenshots, crops, modified images, web-rendered pages, or private generated images as coordinate truth. Do not OCR, interpret image semantics, search hashes, decode the block, run stego tools, run CUDA, benchmark, execute scored experiments, activate the canonical corpus, finalise page boundaries, or make solve claims.
+## Stage 5BD Status
+
+Stage 5BD uses coordinate and token-block records only for dry-run metadata planning. It does not run OCR, image interpretation, byte-stream generation, or page-boundary finalisation.

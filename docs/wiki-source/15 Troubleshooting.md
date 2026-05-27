@@ -72,6 +72,10 @@ git check-ignore -v human-review-packs/stage5at/token-case-review/token-case-rev
 git check-ignore -v experiments/results/token-block/stage5au/summary.json
 git check-ignore -v human-review-packs/stage5au/token-case-review-v2/index.html
 git check-ignore -v human-review-packs/stage5au/token-case-review-v2/token-case-review-pack-v2.zip
+git check-ignore -v experiments/results/token-block/stage5bd/summary.json
+git check-ignore -v experiments/results/token-block/stage5bd/fixtures/fixture_dry_run_records.json
+git check-ignore -v deep-research-repo-zips/stage5bd/ARCHIVE_MANIFEST.json
+git check-ignore -v deep-research-repo-zips/stage5bd/stage5bd-repo.zip
 git check-ignore -v experiments/results/stego-controls/stage5ap/outguess_positive_control_matrix.json
 git check-ignore -v codex-output/stage5c-codex-completion.md
 git check-ignore -v codex-output/stage5d-codex-completion.md

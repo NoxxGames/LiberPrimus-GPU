@@ -1,0 +1,34 @@
+record_type: stage5bd_no_byte_stream_proof
+schema: schemas/token-block/no-byte-stream-proof-v0.schema.json
+stage_id: stage-5bd
+proof_status: passed
+real_token_block_byte_streams_generated: false
+real_variant_byte_streams_generated: false
+real_token_values_generated: false
+real_variant_branches_materialised: false
+full_cartesian_product_enumerated: false
+sampled_real_variants_generated: false
+hash_search_performed: false
+hash_comparison_performed: false
+decode_attempt_performed: false
+scoring_performed: false
+benchmark_performed: false
+cryptanalytic_benchmark_performed: false
+cuda_execution_performed: false
+stego_tool_execution_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+llm_vision_token_reading_performed: false
+semantic_image_interpretation_performed: false
+solve_claim: false
+negative_tests:
+- real_token_byte_generation_blocked
+- real_variant_materialisation_blocked
+- dwh_hash_search_blocked
+- stale_stage5av_manifest_active_load_blocked
+- stale_stage5ay_manifest_active_load_blocked
+- future_result_path_outside_ignored_roots_blocked
+blocked_methods:
+- generate_real_token_block_byte_stream
+- materialise_real_variant_branches
+- run_dwh_hash_search

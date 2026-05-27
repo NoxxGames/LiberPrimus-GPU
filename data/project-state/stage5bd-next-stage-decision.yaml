@@ -1,0 +1,15 @@
+record_type: stage5bd_next_stage_decision
+stage_id: stage-5bd
+selected_next_prompt_type: Deep Research
+selected_next_stage_key: stage5be_deep_research_preflight_dry_run_implementation_review
+selected_next_stage_title: Stage 5BE - Deep Research review of token-block preflight
+  dry-run implementation, archive/evidence hygiene, and execution-gate enforcement
+selected_next_stage_reason: Stage 5BD implements metadata-only dry-run planning, archive/evidence
+  hygiene, future-path validation, and no-byte-stream gate proof; Deep Research should
+  review the dry-run implementation before any execution-capable runner stage.
+execution_stage_selected: false
+dwh_hash_search_selected: false
+scored_experiments_selected: false
+benchmark_selected: false
+cuda_selected: false
+public_website_expansion_selected: false

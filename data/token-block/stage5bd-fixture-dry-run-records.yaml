@@ -1,0 +1,19 @@
+record_type: stage5bd_fixture_dry_run_records
+schema: schemas/token-block/fixture-dry-run-records-v0.schema.json
+stage_id: stage-5bd
+fixture_record_count: 1
+fixture_records:
+- record_id: stage5bd-fixture-dry-run-record-001
+  source_dry_run_plan_id: stage-5bd
+  fixture_source: synthetic_fixture_only
+  fixture_values:
+  - 0
+  - 1
+  - 2
+  - 255
+  not_derived_from_liber_primus: true
+  real_token_block_data_used: false
+  real_variant_data_used: false
+  variant_byte_stream_generated: false
+  score_generated: false
+  decode_output_generated: false

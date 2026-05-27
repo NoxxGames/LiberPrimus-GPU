@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "null_control_family_count"],
+  "properties": {
+    "record_type": {"const": "stage5bd_null_control_plan_counters"},
+    "stage_id": {"const": "stage-5bd"},
+    "counter_mode": {"const": "metadata_only_plan_space"},
+    "controls_executed": {"const": false},
+    "variant_byte_streams_generated": {"const": false}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["record_type", "schema", "stage_id", "dry_run_plan_created"],
+  "properties": {
+    "record_type": {"const": "stage5bd_dry_run_plan_manifest"},
+    "stage_id": {"const": "stage-5bd"},
+    "dry_run_plan_created": {"const": true},
+    "dry_run_plan_execution_authorised": {"const": false},
+    "plan_inputs_are_metadata_only": {"const": true},
+    "real_token_values_loaded": {"const": false},
+    "real_token_values_generated": {"const": false},
+    "real_byte_streams_generated": {"const": false},
+    "real_variant_outputs_generated": {"const": false},
+    "hash_comparisons_performed": {"const": false},
+    "decode_outputs_generated": {"const": false},
+    "scores_generated": {"const": false}
+  },
+  "additionalProperties": true
+}
