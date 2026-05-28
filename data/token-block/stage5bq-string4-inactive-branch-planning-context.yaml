@@ -1,0 +1,31 @@
+record_type: stage5bq_string4_inactive_branch_planning_context
+schema: schemas/token-block/stage5bq-string4-inactive-branch-planning-context-v0.schema.json
+stage_id: stage-5bq
+stage_title: Stage 5BQ - Operator-errata-aware String 4 inactive-branch dry-run planning
+  integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bo
+source_previous_stage_commit: f4fcb94a6f43f5733491725e643eebea98a2d26b
+source_deep_research_stage: stage-5bp
+source_deep_research_report: 10_LiberPrimus-GPU-Stage-5BP-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+source_stage5bo_branch_membership: data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+source_stage5bo_option_universe: data/token-block/stage5bo-errata-aware-token-option-universe.yaml
+source_stage5bo_source_gap_closure: data/token-block/stage5bo-string4-source-gap-closure-after-errata.yaml
+string4_position_count_checked: 256
+string4_branch_membership_status_after_errata: full_branch_match
+canonical_match_count: 249
+stage5aw_supported_noncanonical_count: 6
+operator_errata_supported_noncanonical_count: 1
+unsupported_position_count: 0
+parser_inconclusive_position_count: 0
+string4_planning_context_status: inactive_branch_context_only
+string4_active_input_allowed: false
+string4_execution_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_active_ingestion_status: blocked_pending_explicit_future_stage
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+execution_allowed: false

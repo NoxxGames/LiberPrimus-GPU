@@ -1,0 +1,28 @@
+record_type: stage5bq_active_manifest_preservation
+schema: schemas/token-block/stage5bq-active-manifest-preservation-v0.schema.json
+stage_id: stage-5bq
+stage_title: Stage 5BQ - Operator-errata-aware String 4 inactive-branch dry-run planning
+  integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bo
+source_previous_stage_commit: f4fcb94a6f43f5733491725e643eebea98a2d26b
+source_deep_research_stage: stage-5bp
+source_deep_research_report: 10_LiberPrimus-GPU-Stage-5BP-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+preserved_records:
+  stage5ap_canonical_transcription: data/token-block/stage5ap-token-block-canonical-transcription.yaml
+  stage5aw_branch_manifest: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+  stage5ay_branch_eligibility: data/token-block/stage5ay-branch-eligibility-policy.yaml
+  stage5az_variant_family_manifest: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+  stage5bb_active_manifest_registry: data/token-block/stage5bb-active-manifest-registry.yaml
+  stage5bd_active_manifest_lock: data/token-block/stage5bd-active-manifest-lock.yaml
+canonical_transcription_changed: false
+stage5aw_branch_manifest_changed: false
+stage5ay_branch_eligibility_changed: false
+stage5az_variant_family_manifest_changed: false
+stage5bb_active_manifest_registry_changed: false
+stage5bd_active_manifest_lock_changed: false
+active_token_block_manifest_changed: false
+string4_branch_materialised_as_active: false
+execution_allowed: false

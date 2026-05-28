@@ -1,0 +1,31 @@
+record_type: stage5bq_source_gap_severity_update
+schema: schemas/historical-route/stage5bq-source-gap-severity-update-v0.schema.json
+stage_id: stage-5bq
+stage_title: Stage 5BQ - Operator-errata-aware String 4 inactive-branch dry-run planning
+  integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bo
+source_previous_stage_commit: f4fcb94a6f43f5733491725e643eebea98a2d26b
+source_deep_research_stage: stage-5bp
+source_deep_research_report: 10_LiberPrimus-GPU-Stage-5BP-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+source_stage5bo_gap_update: data/historical-route/stage5bo-source-gap-severity-update.yaml
+source_stage5bo_closure: data/token-block/stage5bo-string4-source-gap-closure-after-errata.yaml
+source_gap_update_count: 1
+records:
+- source_gap_id: stage5bk-string4-stage5ap-branch-membership-unreconciled
+  source_gap_origin: stage-5bm
+  affected_family: token_block_page49_51_context
+  status_after_stage5bo: closed_operator_errata_supported_full_branch_match
+  status_after_stage5bq: closed_for_metadata_planning_only
+  blocks_metadata_planning: false
+  blocks_string4_ingestion_or_active_use: true
+  blocks_future_token_block_execution: true
+  recommended_resolution:
+  - Preserve as metadata-only errata closure.
+  - Keep String 4 inactive until a future explicit no-execution planning-ingestion
+    stage.
+  - Require guardrail and manifest validation before any future ingestion.
+  execution_allowed: false
+execution_allowed: false

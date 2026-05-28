@@ -1,0 +1,27 @@
+record_type: stage5bq_stage5bd_dry_run_lineage_preservation
+schema: schemas/token-block/stage5bq-stage5bd-dry-run-lineage-preservation-v0.schema.json
+stage_id: stage-5bq
+stage_title: Stage 5BQ - Operator-errata-aware String 4 inactive-branch dry-run planning
+  integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bo
+source_previous_stage_commit: f4fcb94a6f43f5733491725e643eebea98a2d26b
+source_deep_research_stage: stage-5bp
+source_deep_research_report: 10_LiberPrimus-GPU-Stage-5BP-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+source_stage5bd_summary: data/project-state/stage5bd-summary.yaml
+source_stage5bd_dry_run_plan: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+source_stage5bd_run_plan_registry: data/token-block/stage5bd-run-plan-id-registry.yaml
+stage5bd_dry_run_records_remain_valid: true
+stage5bd_dry_run_records_changed: false
+run_plan_ids_changed: false
+new_run_plan_ids_created: false
+string4_added_to_dry_run_plan_inputs: false
+dry_run_plan_ids_remain_metadata_only: true
+stage5bd_run_plan_id_count: 10
+stage5bd_previous_recommended_next_stage: Stage 5BE - Deep Research review of token-block
+  preflight dry-run implementation, archive/evidence hygiene, and execution-gate enforcement
+real_byte_stream_generated: false
+variant_materialisation_performed: false
+execution_allowed: false

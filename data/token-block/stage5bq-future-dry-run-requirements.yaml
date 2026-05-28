@@ -1,0 +1,30 @@
+record_type: stage5bq_future_dry_run_requirements
+schema: schemas/token-block/stage5bq-future-dry-run-requirements-v0.schema.json
+stage_id: stage-5bq
+stage_title: Stage 5BQ - Operator-errata-aware String 4 inactive-branch dry-run planning
+  integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bo
+source_previous_stage_commit: f4fcb94a6f43f5733491725e643eebea98a2d26b
+source_deep_research_stage: stage-5bp
+source_deep_research_report: 10_LiberPrimus-GPU-Stage-5BP-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+future_string4_dry_run_ingestion_requires:
+- explicit_future_codex_no_execution_planning_ingestion_stage
+- deep_research_or_operator_review_of_stage5bq_if_selected_by_next_stage
+- manifest_validation
+- active_manifest_preservation_or_explicit_supersession_policy
+- no_byte_stream_generation_gate
+- no_execution_guardrail_review
+- source_gap_closure_status_verification
+- clear_distinction_between_inactive_sidecar_and_active_input
+future_string4_execution_requires:
+- not_authorised_by_stage5bq
+- separate_execution_stage_prompt
+- expected_outputs_or_null_controls_where_relevant
+- explicit_hash_decode_stego_cuda_scope_if_ever_selected
+- solve_claim_policy
+current_stage_allows_ingestion: false
+current_stage_allows_execution: false
+execution_allowed: false

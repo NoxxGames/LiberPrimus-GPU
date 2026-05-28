@@ -4,9 +4,9 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5BO token-case human-review errata integration and String 4 full-branch reclassification is complete. It consumes the ignored original and corrected Stage 5AU decision templates as local operator inputs, records 8 compact operator errata, integrates Stage 5BN's inactive `0l` addendum as operator-errata planning metadata, and reclassifies String 4 as a full branch match in the inactive planning universe while keeping Stage 5BD dry-run records valid and execution gates blocked.
+Stage 5BQ operator-errata-aware String 4 inactive-branch dry-run planning integration is complete. It consumes Stage 5BP findings as compact metadata, records the Stage 5BO String 4 `full_branch_match` as inactive planning context only, blocks String 4 active input and dry-run ingestion now, adds fail-closed future dry-run requirements, and keeps Stage 5BD dry-run records valid with execution gates blocked.
 
-The next recommended prompt is Stage 5BP - Deep Research review of Stage 5BO operator-errata integration before dry-run ingestion. Token-block execution, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5BR - Deep Research review of Stage 5BQ inactive-branch dry-run planning integration. Token-block execution, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

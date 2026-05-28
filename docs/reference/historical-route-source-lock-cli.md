@@ -1,6 +1,6 @@
 # Historical Route Source-Lock CLI
 
-Use `libreprimus historical-route` for Stage 5BF, Stage 5BI, Stage 5BJ, and Stage 5BK metadata-only source locking and planning-constraint integration. Stage 5BM String 4 branch-crosswalk repair, Stage 5BN unsupported-position source-gap closure, and Stage 5BO token-case errata integration live under `libreprimus token-block` because the reconciliation is against Stage 5AP/5AW token-block metadata.
+Use `libreprimus historical-route` for Stage 5BF, Stage 5BI, Stage 5BJ, and Stage 5BK metadata-only source locking and planning-constraint integration. Stage 5BM String 4 branch-crosswalk repair, Stage 5BN unsupported-position source-gap closure, Stage 5BO token-case errata integration, and Stage 5BQ inactive-branch dry-run planning integration live under `libreprimus token-block` because the reconciliation is against Stage 5AP/5AW/5BD token-block metadata.
 
 Primary commands:
 
@@ -57,4 +57,4 @@ The Stage 5BK CLI does not execute token-block experiments, generate byte stream
 
 ## Stage 5BM / 5BN Note
 
-Stage 5BM consumes Stage 5BK historical-route records but is validated through `libreprimus token-block validate-stage5bm`. Stage 5BN consumes the Stage 5BM unsupported-position records and is validated through `libreprimus token-block validate-stage5bn`. Stage 5BO consumes Stage 5BN records plus ignored operator decision-template inputs and is validated through `libreprimus token-block validate-stage5bo`. These stages do not add historical-route aliases; use `docs/reference/token-block-cli.md` for the String 4 branch-crosswalk, unsupported-position, and operator-errata commands.
+Stage 5BM consumes Stage 5BK historical-route records but is validated through `libreprimus token-block validate-stage5bm`. Stage 5BN consumes the Stage 5BM unsupported-position records and is validated through `libreprimus token-block validate-stage5bn`. Stage 5BO consumes Stage 5BN records plus ignored operator decision-template inputs and is validated through `libreprimus token-block validate-stage5bo`. Stage 5BQ consumes Stage 5BP/5BO/5BD metadata and is validated through `libreprimus token-block validate-stage5bq`. These stages do not add historical-route aliases; use `docs/reference/token-block-cli.md` for the String 4 branch-crosswalk, unsupported-position, operator-errata, and inactive-branch dry-run planning commands.

@@ -1,0 +1,23 @@
+record_type: stage5bq_review_packaging_warning
+schema: schemas/source-harvester/stage5bq-review-packaging-warning-v0.schema.json
+stage_id: stage-5bq
+stage_title: Stage 5BQ - Operator-errata-aware String 4 inactive-branch dry-run planning
+  integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bo
+source_previous_stage_commit: f4fcb94a6f43f5733491725e643eebea98a2d26b
+source_deep_research_stage: stage-5bp
+source_deep_research_report: 10_LiberPrimus-GPU-Stage-5BP-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+zip_review_sufficient: true
+exact_final_commit_pin_missing_from_review_zip: true
+ignored_template_bodies_absent_from_review_zip: true
+ignored_spreadsheet_absent_from_review_zip: true
+ignored_codex_output_absent_from_review_zip: true
+warning_is_stage_failure: false
+recommended_future_resolution:
+- include_archive_or_commit_marker_in_future_review_zips
+- include_compact_local_source_root_marker_metadata_where_ignored_trees_are_omitted
+- keep_raw_ignored_bodies_uncommitted
+execution_allowed: false

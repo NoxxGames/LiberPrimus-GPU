@@ -1,0 +1,20 @@
+record_type: stage5bq_codex_handoff_policy
+schema: schemas/source-harvester/stage5bq-codex-handoff-policy-v0.schema.json
+stage_id: stage-5bq
+stage_title: Stage 5BQ - Operator-errata-aware String 4 inactive-branch dry-run planning
+  integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bo
+source_previous_stage_commit: f4fcb94a6f43f5733491725e643eebea98a2d26b
+source_deep_research_stage: stage-5bp
+source_deep_research_report: 10_LiberPrimus-GPU-Stage-5BP-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+deprecated_codex_output_root: codex_output
+codex_completion_summary_path: codex-output/stage5bq-codex-completion.md
+codex_output_directory_exists: false
+codex_output_used: false
+codex_output_directory_created: false
+codex_output_committed: false
+execution_allowed: false

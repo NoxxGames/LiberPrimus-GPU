@@ -1963,3 +1963,124 @@ records:
   owner_context: codex_agent
   notes: Documents Stage 5BO CLI commands, ignored template boundaries,
     inactive option-universe handling, and guardrails.
+- path: data/project-state/stage5bq-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BQ aggregate summary.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bq
+  expected_update_frequency: when_string4_dry_run_planning_constraints_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records Stage 5BP verdict, String 4 inactive planning context,
+    false active-input and dry-run-ingestion flags, Stage 5BD lineage
+    preservation, validation status, Codex handoff path, and Stage 5BR
+    next-stage rationale.
+- path: data/project-state/stage5bq-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5BQ next-stage decision.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bq
+  expected_update_frequency: when_string4_next_stage_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Selects Stage 5BR Deep Research review of inactive-branch dry-run
+    planning constraints before any execution-capable token-block stage.
+- path: data/project-state/stage5bq-stage5bp-findings-integration.yaml
+  category: active_data_record
+  purpose: Stage 5BQ Stage 5BP findings integration.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bq
+  expected_update_frequency: when_stage5bp_findings_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records accept_with_warnings review outcome as metadata only without
+    committing raw Deep Research bodies.
+- path: data/token-block/stage5bq-string4-inactive-branch-planning-context.yaml
+  category: active_data_record
+  purpose: Stage 5BQ inactive String 4 planning context.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bq
+  expected_update_frequency: when_string4_planning_context_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Carries the Stage 5BO full_branch_match as inactive_branch_context_only
+    with active input and dry-run ingestion disallowed.
+- path: data/token-block/stage5bq-errata-aware-dry-run-constraint-update.yaml
+  category: active_data_record
+  purpose: Stage 5BQ fail-closed dry-run constraint update.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bq
+  expected_update_frequency: when_future_dry_run_constraints_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Keeps the errata-aware universe inactive and blocks immediate dry-run
+    ingestion pending a future explicitly scoped stage.
+- path: data/token-block/stage5bq-string4-no-active-ingestion-proof.yaml
+  category: active_data_record
+  purpose: Stage 5BQ no-active-ingestion proof.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bq
+  expected_update_frequency: when_active_manifest_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Confirms String 4 is not active input and not present as a Stage 5BD
+    dry-run ingestion source.
+- path: data/token-block/stage5bq-future-dry-run-requirements.yaml
+  category: active_data_record
+  purpose: Stage 5BQ future dry-run requirements.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bq
+  expected_update_frequency: when_future_dry_run_requirements_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Lists future source, review, manifest, and gate requirements before
+    any String 4 dry-run ingestion may be considered.
+- path: data/token-block/stage5bq-stage5bd-dry-run-lineage-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5BQ Stage 5BD lineage preservation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bq
+  expected_update_frequency: when_stage5bd_lineage_or_locks_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Confirms Stage 5BD dry-run records remain valid and unchanged.
+- path: docs/experiments/stage-5bq-inactive-branch-dry-run-planning-integration.md
+  category: operational_status_doc
+  purpose: Stage 5BQ metadata-only experiment/planning note.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bq
+  expected_update_frequency: when_stage5bq_records_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents inactive planning context, dry-run constraint update,
+    preservation records, and no-execution guardrails.
+- path: docs/onboarding/stage5bq-inactive-branch-dry-run-planning-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5BQ operator workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bq
+  expected_update_frequency: when_stage5bq_commands_or_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents Stage 5BQ CLI commands, inactive planning boundaries,
+    preservation checks, and guardrails.

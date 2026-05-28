@@ -283,6 +283,22 @@ from .stage5bo import (
     load_stage5bo_summary,
     validate_stage5bo,
 )
+from .stage5bq import (
+    DATA_PATHS as STAGE5BQ_DATA_PATHS,
+    RESULTS_DIR as STAGE5BQ_RESULTS_DIR,
+    STAGE5BD_ACTIVE_LOCK_PATH as STAGE5BQ_STAGE5BD_ACTIVE_LOCK_PATH,
+    STAGE5BD_DRY_RUN_PLAN_PATH as STAGE5BQ_STAGE5BD_DRY_RUN_PLAN_PATH,
+    STAGE5BD_RUN_PLAN_REGISTRY_PATH as STAGE5BQ_STAGE5BD_RUN_PLAN_REGISTRY_PATH,
+    STAGE5BD_SUMMARY_PATH as STAGE5BQ_STAGE5BD_SUMMARY_PATH,
+    STAGE5BO_BRANCH_MEMBERSHIP_PATH as STAGE5BQ_STAGE5BO_BRANCH_MEMBERSHIP_PATH,
+    STAGE5BO_OPTION_UNIVERSE_PATH as STAGE5BQ_STAGE5BO_OPTION_UNIVERSE_PATH,
+    STAGE5BO_PLANNING_CONSTRAINT_PATH as STAGE5BQ_STAGE5BO_PLANNING_CONSTRAINT_PATH,
+    STAGE5BO_SOURCE_GAP_CLOSURE_PATH as STAGE5BQ_STAGE5BO_SOURCE_GAP_CLOSURE_PATH,
+    STAGE5BO_SUMMARY_PATH as STAGE5BQ_STAGE5BO_SUMMARY_PATH,
+    build_stage5bq_planning_integration,
+    load_stage5bq_summary,
+    validate_stage5bq,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -2973,6 +2989,150 @@ def stage5bo_summary_command(
     console.print(
         "stage5bn_addendum_integrated_as_inactive="
         f"{str(payload.get('stage5bn_addendum_integrated_as_inactive')).lower()}"
+    )
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+@app.command("build-stage5bq-planning-integration")
+def build_stage5bq_planning_integration_command(
+    stage5bo_summary: Path = typer.Option(STAGE5BQ_STAGE5BO_SUMMARY_PATH),
+    stage5bo_branch_membership: Path = typer.Option(STAGE5BQ_STAGE5BO_BRANCH_MEMBERSHIP_PATH),
+    stage5bo_option_universe: Path = typer.Option(STAGE5BQ_STAGE5BO_OPTION_UNIVERSE_PATH),
+    stage5bo_source_gap_closure: Path = typer.Option(STAGE5BQ_STAGE5BO_SOURCE_GAP_CLOSURE_PATH),
+    stage5bo_planning_constraint: Path = typer.Option(STAGE5BQ_STAGE5BO_PLANNING_CONSTRAINT_PATH),
+    stage5bd_summary: Path = typer.Option(STAGE5BQ_STAGE5BD_SUMMARY_PATH),
+    stage5bd_active_lock: Path = typer.Option(STAGE5BQ_STAGE5BD_ACTIVE_LOCK_PATH),
+    stage5bd_dry_run_plan: Path = typer.Option(STAGE5BQ_STAGE5BD_DRY_RUN_PLAN_PATH),
+    stage5bd_run_plan_registry: Path = typer.Option(STAGE5BQ_STAGE5BD_RUN_PLAN_REGISTRY_PATH),
+    results_dir: Path = typer.Option(STAGE5BQ_RESULTS_DIR),
+    out_findings: Path = typer.Option(STAGE5BQ_DATA_PATHS["findings"]),
+    out_review_packaging_warning: Path = typer.Option(STAGE5BQ_DATA_PATHS["review_packaging_warning"]),
+    out_string4_context: Path = typer.Option(STAGE5BQ_DATA_PATHS["string4_context"]),
+    out_sidecar_status: Path = typer.Option(STAGE5BQ_DATA_PATHS["sidecar_status"]),
+    out_dry_run_constraint: Path = typer.Option(STAGE5BQ_DATA_PATHS["dry_run_constraint"]),
+    out_no_active_ingestion: Path = typer.Option(STAGE5BQ_DATA_PATHS["no_active_ingestion"]),
+    out_future_requirements: Path = typer.Option(STAGE5BQ_DATA_PATHS["future_requirements"]),
+    out_active_preservation: Path = typer.Option(STAGE5BQ_DATA_PATHS["active_preservation"]),
+    out_stage5bd_preservation: Path = typer.Option(STAGE5BQ_DATA_PATHS["stage5bd_preservation"]),
+    out_future_impact: Path = typer.Option(STAGE5BQ_DATA_PATHS["future_impact"]),
+    out_source_gap: Path = typer.Option(STAGE5BQ_DATA_PATHS["source_gap"]),
+    out_dwh: Path = typer.Option(STAGE5BQ_DATA_PATHS["dwh"]),
+    out_guardrail: Path = typer.Option(STAGE5BQ_DATA_PATHS["guardrail"]),
+    out_handoff: Path = typer.Option(STAGE5BQ_DATA_PATHS["handoff"]),
+    out_summary: Path = typer.Option(STAGE5BQ_DATA_PATHS["summary"]),
+    out_next_stage: Path = typer.Option(STAGE5BQ_DATA_PATHS["next_stage"]),
+) -> None:
+    payload = build_stage5bq_planning_integration(
+        stage5bo_summary=stage5bo_summary,
+        stage5bo_branch_membership=stage5bo_branch_membership,
+        stage5bo_option_universe=stage5bo_option_universe,
+        stage5bo_source_gap_closure=stage5bo_source_gap_closure,
+        stage5bo_planning_constraint=stage5bo_planning_constraint,
+        stage5bd_summary=stage5bd_summary,
+        stage5bd_active_lock=stage5bd_active_lock,
+        stage5bd_dry_run_plan=stage5bd_dry_run_plan,
+        stage5bd_run_plan_registry=stage5bd_run_plan_registry,
+        results_dir=results_dir,
+        out_findings=out_findings,
+        out_review_packaging_warning=out_review_packaging_warning,
+        out_string4_context=out_string4_context,
+        out_sidecar_status=out_sidecar_status,
+        out_dry_run_constraint=out_dry_run_constraint,
+        out_no_active_ingestion=out_no_active_ingestion,
+        out_future_requirements=out_future_requirements,
+        out_active_preservation=out_active_preservation,
+        out_stage5bd_preservation=out_stage5bd_preservation,
+        out_future_impact=out_future_impact,
+        out_source_gap=out_source_gap,
+        out_dwh=out_dwh,
+        out_guardrail=out_guardrail,
+        out_handoff=out_handoff,
+        out_summary=out_summary,
+        out_next_stage=out_next_stage,
+    )
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"stage5bp_verdict={payload.get('stage5bp_verdict')}")
+    console.print(
+        "string4_branch_membership_status_after_errata="
+        f"{payload.get('string4_branch_membership_status_after_errata')}"
+    )
+    console.print(f"string4_planning_context_status={payload.get('string4_planning_context_status')}")
+    console.print(f"string4_active_input_allowed={str(payload.get('string4_active_input_allowed')).lower()}")
+    console.print(
+        "string4_dry_run_ingestion_allowed_now="
+        f"{str(payload.get('string4_dry_run_ingestion_allowed_now')).lower()}"
+    )
+    console.print(
+        "future_token_block_execution_remains_blocked="
+        f"{str(payload.get('future_token_block_execution_remains_blocked')).lower()}"
+    )
+
+
+@app.command("validate-stage5bq")
+def validate_stage5bq_command(
+    findings: Path = typer.Option(STAGE5BQ_DATA_PATHS["findings"]),
+    string4_context: Path = typer.Option(STAGE5BQ_DATA_PATHS["string4_context"]),
+    sidecar_status: Path = typer.Option(STAGE5BQ_DATA_PATHS["sidecar_status"]),
+    dry_run_constraint: Path = typer.Option(STAGE5BQ_DATA_PATHS["dry_run_constraint"]),
+    no_active_ingestion: Path = typer.Option(STAGE5BQ_DATA_PATHS["no_active_ingestion"]),
+    future_requirements: Path = typer.Option(STAGE5BQ_DATA_PATHS["future_requirements"]),
+    active_preservation: Path = typer.Option(STAGE5BQ_DATA_PATHS["active_preservation"]),
+    stage5bd_preservation: Path = typer.Option(STAGE5BQ_DATA_PATHS["stage5bd_preservation"]),
+    future_impact: Path = typer.Option(STAGE5BQ_DATA_PATHS["future_impact"]),
+    source_gap: Path = typer.Option(STAGE5BQ_DATA_PATHS["source_gap"]),
+    dwh: Path = typer.Option(STAGE5BQ_DATA_PATHS["dwh"]),
+    guardrail: Path = typer.Option(STAGE5BQ_DATA_PATHS["guardrail"]),
+    handoff: Path = typer.Option(STAGE5BQ_DATA_PATHS["handoff"]),
+    summary: Path = typer.Option(STAGE5BQ_DATA_PATHS["summary"]),
+    next_stage: Path = typer.Option(STAGE5BQ_DATA_PATHS["next_stage"]),
+    review_packaging_warning: Path = typer.Option(STAGE5BQ_DATA_PATHS["review_packaging_warning"]),
+    results_dir: Path = typer.Option(STAGE5BQ_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5bq(
+        findings=findings,
+        string4_context=string4_context,
+        sidecar_status=sidecar_status,
+        dry_run_constraint=dry_run_constraint,
+        no_active_ingestion=no_active_ingestion,
+        future_requirements=future_requirements,
+        active_preservation=active_preservation,
+        stage5bd_preservation=stage5bd_preservation,
+        future_impact=future_impact,
+        source_gap=source_gap,
+        dwh=dwh,
+        guardrail=guardrail,
+        handoff=handoff,
+        summary=summary,
+        next_stage=next_stage,
+        review_packaging_warning=review_packaging_warning,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5bq_valid=true")
+
+
+@app.command("stage5bq-summary")
+def stage5bq_summary_command(
+    summary: Path = typer.Option(STAGE5BQ_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5bq_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5bp_verdict={payload.get('stage5bp_verdict')}")
+    console.print(
+        "string4_branch_membership_status_after_errata="
+        f"{payload.get('string4_branch_membership_status_after_errata')}"
+    )
+    console.print(f"string4_planning_context_status={payload.get('string4_planning_context_status')}")
+    console.print(f"string4_active_input_allowed={str(payload.get('string4_active_input_allowed')).lower()}")
+    console.print(
+        "string4_dry_run_ingestion_allowed_now="
+        f"{str(payload.get('string4_dry_run_ingestion_allowed_now')).lower()}"
     )
     console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
 

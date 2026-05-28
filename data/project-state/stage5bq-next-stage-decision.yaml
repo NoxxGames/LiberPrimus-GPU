@@ -1,0 +1,37 @@
+record_type: stage5bq_next_stage_decision
+schema: schemas/project-state/stage5bq-next-stage-decision-v0.schema.json
+stage_id: stage-5bq
+stage_title: Stage 5BQ - Operator-errata-aware String 4 inactive-branch dry-run planning
+  integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bo
+source_previous_stage_commit: f4fcb94a6f43f5733491725e643eebea98a2d26b
+source_deep_research_stage: stage-5bp
+source_deep_research_report: 10_LiberPrimus-GPU-Stage-5BP-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+selected_next_stage_id: stage-5br
+selected_next_prompt_type: deep_research_review
+selected_next_stage_title: Stage 5BR - Deep Research review of Stage 5BQ inactive-branch
+  dry-run planning integration, without execution
+selected_next_stage_reason: Stage 5BQ creates fail-closed future dry-run planning
+  awareness for String 4; Deep Research should review before any future planning-ingestion
+  stage.
+string4_active_input_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+future_token_block_execution_remains_blocked: true
+ai_ml_selected: false
+benchmark_selected: false
+byte_stream_generation_selected: false
+canonical_corpus_activation_selected: false
+cuda_selected: false
+decode_selected: false
+dwh_hash_search_selected: false
+method_status_upgrade_selected: false
+ocr_selected: false
+page_boundary_finalisation_selected: false
+scored_experiments_selected: false
+stego_execution_selected: false
+token_block_execution_selected: false
+variant_materialisation_selected: false
+execution_allowed: false

@@ -1,0 +1,26 @@
+record_type: stage5bq_stage5bp_findings_integration
+schema: schemas/project-state/stage5bq-stage5bp-findings-integration-v0.schema.json
+stage_id: stage-5bq
+stage_title: Stage 5BQ - Operator-errata-aware String 4 inactive-branch dry-run planning
+  integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bo
+source_previous_stage_commit: f4fcb94a6f43f5733491725e643eebea98a2d26b
+source_deep_research_stage: stage-5bp
+source_deep_research_report: 10_LiberPrimus-GPU-Stage-5BP-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+stage5bp_verdict: accept_with_warnings
+stage5bp_primary_conclusion: stage5bo_operator_errata_integration_coherent_but_string4_must_remain_inactive
+stage5bp_warnings:
+- review_packaging_warning
+- errata_classification_coarse_use_explicit_deltas
+- do_not_ingest_string4_aggressively
+stage5bp_findings_integrated:
+- string4_full_branch_match_in_inactive_errata_aware_universe
+- active_records_unchanged
+- source_gap_closed_metadata_only
+- dry_run_ingestion_still_blocked
+- execution_still_blocked
+stage5bp_recommended_next_stage: stage-5bq
+execution_selected: false

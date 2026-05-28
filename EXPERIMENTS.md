@@ -1,5 +1,11 @@
 # Experiments
 
+## Stage 5BQ Inactive-Branch Dry-Run Planning Integration
+
+Stage 5BQ is dry-run planning metadata infrastructure, not an experiment. It commits compact records for Stage 5BP findings integration, String 4 inactive branch planning context, operator-errata sidecar status, fail-closed dry-run constraints, no-active-ingestion proof, future dry-run requirements, active-manifest preservation, Stage 5BD lineage preservation, future planning impact, source-gap severity, DWH quarantine, guardrails, Codex handoff policy, next-stage decision, and aggregate summary.
+
+Generated Stage 5BQ diagnostics remain ignored under `experiments/results/token-block/stage5bq/`; the local Codex handoff remains ignored under `codex-output/stage5bq-codex-completion.md`. Stage 5BQ keeps String 4 inactive, disallows active input and dry-run ingestion now, preserves Stage 5AP/5AW/5AY/5AZ/5BB/5BD records unchanged, and performs no Deep Research body commit, token experiment, byte-stream generation, variant materialisation, full Cartesian enumeration, DWH/hash/preimage search, hash comparison, decode attempt, OCR, AI/ML interpretation, LLM/vision token reading, semantic image interpretation, hidden-content image forensics, stego execution, CUDA, cryptanalytic benchmark, scored experiment, public website expansion, canonical-corpus activation, page-boundary finalisation, method-status upgrade, or solve-claim workflow.
+
 ## Stage 5BF Historical Route Source-Lock
 
 Stage 5BF is historical source-lock and technique-taxonomy infrastructure, not an experiment. It commits compact records for the local `third_party/CicadaSolversIddqd` archive location, archive tree and inventory summaries, annual route inventories, high-priority artifact hashes, artifact-family taxonomy, trust classifications, PGP/stego/OutGuess/OpenPuff/MP3/magic-square/hex-JPEG/onion/book-code/network-byte-channel/Liber Primus candidates, historical technique taxonomy, token-block planning impact, DWH historical context, Deep Research readiness, guardrails, next-stage decision, and aggregate summary.

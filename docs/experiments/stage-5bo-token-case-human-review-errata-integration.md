@@ -25,3 +25,5 @@ The corrected template is an operator errata source, not a canonical transcripti
 Generated diagnostics stay ignored under `experiments/results/token-block/stage5bo/` and `experiments/results/historical-route/stage5bo/`.
 
 Stage 5BO does not generate byte streams, materialise variants, run DWH/hash search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, activate canonical corpus, finalise page boundaries, or make solve claims.
+
+Stage 5BQ later consumes the Stage 5BP review outcome and records the Stage 5BO `full_branch_match` as inactive planning context only, with String 4 active input and dry-run ingestion still false.

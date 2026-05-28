@@ -1,0 +1,28 @@
+record_type: stage5bq_operator_errata_sidecar_status
+schema: schemas/token-block/stage5bq-operator-errata-sidecar-status-v0.schema.json
+stage_id: stage-5bq
+stage_title: Stage 5BQ - Operator-errata-aware String 4 inactive-branch dry-run planning
+  integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bo
+source_previous_stage_commit: f4fcb94a6f43f5733491725e643eebea98a2d26b
+source_deep_research_stage: stage-5bp
+source_deep_research_report: 10_LiberPrimus-GPU-Stage-5BP-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+source_errata_record: data/token-block/stage5bo-token-case-human-review-errata.yaml
+source_errata_aware_universe: data/token-block/stage5bo-errata-aware-token-option-universe.yaml
+operator_errata_record_count: 8
+case_199_closes_string4_branch_blocker: true
+case_198_recorded: true
+operator_errata_sidecar_status:
+- inactive_planning_sidecar
+- citable_for_future_planning
+- active_manifest_mutation_forbidden
+active_stage5aw_records_mutated: false
+active_stage5ay_records_mutated: false
+active_stage5az_records_mutated: false
+active_stage5bd_records_mutated: false
+future_stages_must_use_explicit_token_deltas_not_coarse_classification: true
+template_bodies_committed: false
+execution_allowed: false
