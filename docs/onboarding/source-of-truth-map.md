@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BM it names Stage 5BM as latest complete and Stage 5BN as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BN it names Stage 5BN as latest complete and Stage 5BO as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -66,6 +66,11 @@
 - `data/source-harvester/stage5bm-*.yaml`: Stage 5BM review-packaging warning and Codex handoff policy records.
 - `data/project-state/stage5bm-summary.yaml`: Stage 5BM aggregate summary, String 4 partial branch-match counts, guardrail state, and validation state.
 - `data/project-state/stage5bm-next-stage-decision.yaml`: Stage 5BM next-stage decision selecting Stage 5BN String 4 unsupported-position source-gap closure and human-review pack preparation without execution.
+- `data/token-block/stage5bn-*.yaml`: Stage 5BN target, option-gap, spreadsheet target-cell, coordinate-context, source-evidence, human-review manifest, inactive addendum, source-gap closure, planning-constraint, and lineage records.
+- `data/historical-route/stage5bn-*.yaml`: Stage 5BN source-gap severity, DWH quarantine, and guardrail records.
+- `data/source-harvester/stage5bn-codex-handoff-policy.yaml`: Stage 5BN Codex handoff policy using `codex-output`.
+- `data/project-state/stage5bn-summary.yaml`: Stage 5BN aggregate summary, spreadsheet-supported `0l` closure, inactive addendum status, and validation state.
+- `data/project-state/stage5bn-next-stage-decision.yaml`: Stage 5BN next-stage decision selecting Stage 5BO inactive addendum integration without execution.
 - `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 - `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.
@@ -149,3 +154,7 @@ Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bk-sum
 ## Stage 5BM Additions
 
 Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bm-summary.yaml`, `data/project-state/stage5bm-next-stage-decision.yaml`, `data/token-block/stage5bm-string4-stage5ap-mismatch-analysis.yaml`, `data/token-block/stage5bm-string4-stage5aw-branch-membership.yaml`, `data/token-block/stage5bm-string4-planning-constraint.yaml`, and `data/historical-route/stage5bm-source-gap-severity-update.yaml` for the current String 4 branch-crosswalk repair state. String 4 is a partial branch match, not active input, not source truth, not a byte-stream target, and not solve evidence.
+
+## Stage 5BN Additions
+
+Stage 5BN adds target-only source-gap closure metadata for String 4 token index `199`. The source-of-truth records are the Stage 5BN YAML files under `data/token-block/`, `data/historical-route/`, `data/source-harvester/`, and `data/project-state/`. Ignored local spreadsheet rows, generated diagnostics, and Codex completion summaries are not source truth.

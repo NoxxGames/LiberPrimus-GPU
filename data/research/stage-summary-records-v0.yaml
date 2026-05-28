@@ -1416,3 +1416,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5BM records String 4 branch-membership status partial_branch_match, 256 positions checked, 249 canonical matches, 6 Stage 5AW-supported noncanonical positions, 1 unsupported position, 0 parser-inconclusive positions, source-gap status partial, canonical transcription changed false, active token-block manifest changed false, Stage 5BD dry-run records valid, future execution blocked, and Stage 5BN source-gap closure/human-review pack preparation as next. It performs no full String 4 body commit, decoded byte commit, reconstructed token-stream commit, raw iddqd-v2/archive/Fandom/spreadsheet commit, generated report commit, token experiment, byte-stream generation, variant materialisation, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5bn
+    title: String 4 unsupported-position source-gap closure and human-review pack preparation, without execution
+    status: complete
+    category: infrastructure
+    summary: Audited the single Stage 5BM unsupported String 4 target position at token index 199 against Stage 5AW possible-token metadata, the ignored local spreadsheet target row, and Stage 5AP/5AR coordinate context without changing active records.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5BN commands for unsupported-position review, summary/process-record build, validation, and summary display."
+      - Stage 5BN target, option-gap, spreadsheet target-cell, coordinate-context, source-evidence, human-review manifest, inactive addendum, source-gap closure, planning-constraint, lineage, source-gap severity, DWH quarantine, guardrail, Codex handoff, summary, and next-stage records.
+      - Summary-only developer/research logs; ignored generated diagnostics under `experiments/results/token-block/stage5bn/` and `experiments/results/historical-route/stage5bn/`; local handoff under `codex-output/stage5bn-codex-completion.md`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5BN records target token index 199, Stage 5AP canonical token `0I`, String 4 inferred token `0l`, Stage 5AW allowed tokens `0I`, `0j`, `OI`, and `Oj`, Stage 5AW active support for `0l` false, spreadsheet target row identified true, spreadsheet supports `0l` true, closure status `closed_spreadsheet_support_found`, inactive addendum status `proposed_inactive_review_only`, human-review pack generated false, human review required false, canonical transcription changed false, active token-block manifests changed false, Stage 5BD dry-run records valid, and future execution blocked. It performs no token experiment, byte-stream generation, variant materialisation, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

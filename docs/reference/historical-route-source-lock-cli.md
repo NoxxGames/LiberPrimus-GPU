@@ -1,6 +1,6 @@
 # Historical Route Source-Lock CLI
 
-Use `libreprimus historical-route` for Stage 5BF, Stage 5BI, Stage 5BJ, and Stage 5BK metadata-only source locking and planning-constraint integration. Stage 5BM String 4 branch-crosswalk repair lives under `libreprimus token-block` because the reconciliation is against Stage 5AP/5AW token-block metadata.
+Use `libreprimus historical-route` for Stage 5BF, Stage 5BI, Stage 5BJ, and Stage 5BK metadata-only source locking and planning-constraint integration. Stage 5BM String 4 branch-crosswalk repair and Stage 5BN unsupported-position source-gap closure live under `libreprimus token-block` because the reconciliation is against Stage 5AP/5AW token-block metadata.
 
 Primary commands:
 
@@ -55,6 +55,6 @@ Stage 5BK commands integrate Stage 5BF/5BI/5BJ historical-route records with the
 
 The Stage 5BK CLI does not execute token-block experiments, generate byte streams, materialise variants, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, publish website content, or make solve claims. Raw iddqd-v2 files, fonts, media, full byte-string bodies, generated reports, and `codex-output/stage5bk-codex-completion.md` remain ignored. `codex_output` is deprecated and must not be used for current handoffs.
 
-## Stage 5BM Note
+## Stage 5BM / 5BN Note
 
-Stage 5BM consumes Stage 5BK historical-route records but is validated through `libreprimus token-block validate-stage5bm`. It does not add historical-route aliases; use `docs/reference/token-block-cli.md` for the String 4 branch-crosswalk commands.
+Stage 5BM consumes Stage 5BK historical-route records but is validated through `libreprimus token-block validate-stage5bm`. Stage 5BN consumes the Stage 5BM unsupported-position records and is validated through `libreprimus token-block validate-stage5bn`. Neither stage adds historical-route aliases; use `docs/reference/token-block-cli.md` for the String 4 branch-crosswalk and unsupported-position commands.

@@ -1802,3 +1802,77 @@ records:
   owner_context: codex_agent
   notes: Documents the Stage 5BM input records, CLI commands, interpretation
     boundary, and no-execution guardrails.
+- path: data/project-state/stage5bn-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BN aggregate summary.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bn
+  expected_update_frequency: when_string4_unsupported_position_gap_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records that the local spreadsheet target row supports `0l` for token
+    index 199, Stage 5AW still does not support active `0l`, and an inactive
+    review-only addendum is proposed while execution remains blocked.
+- path: data/project-state/stage5bn-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5BN next-stage decision.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bn
+  expected_update_frequency: when_string4_next_stage_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Selects Stage 5BO inactive token-option addendum integration without
+    token-block execution, byte-stream generation, DWH/hash search, decode,
+    CUDA, scoring, benchmarking, or method-status upgrade.
+- path: data/token-block/stage5bn-stage5aw-option-gap-audit.yaml
+  category: active_data_record
+  purpose: Stage 5BN Stage 5AW target-option gap audit.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bn
+  expected_update_frequency: when_stage5aw_target_option_support_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records that Stage 5AW possible tokens at index 199 remain `0I`,
+    `0j`, `OI`, and `Oj`, and that `0l` is not active support.
+- path: data/token-block/stage5bn-local-spreadsheet-target-cell-audit.yaml
+  category: active_data_record
+  purpose: Stage 5BN target-only spreadsheet cell audit.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bn
+  expected_update_frequency: when_local_spreadsheet_target_evidence_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records only the target index row evidence from the ignored local
+    spreadsheet; the workbook and broad cell dumps remain uncommitted.
+- path: docs/experiments/stage-5bn-string4-unsupported-position-source-gap.md
+  category: operational_status_doc
+  purpose: Stage 5BN metadata-only experiment/source-gap note.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bn
+  expected_update_frequency: when_stage5bn_records_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents the target-position source gap, spreadsheet audit,
+    inactive addendum, and no-execution guardrails.
+- path: docs/onboarding/stage5bn-string4-unsupported-position-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5BN operator workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bn
+  expected_update_frequency: when_stage5bn_commands_or_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents Stage 5BN CLI commands, target-only evidence boundaries,
+    inactive addendum handling, ignored review-pack policy, and guardrails.

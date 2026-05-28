@@ -1,0 +1,36 @@
+record_type: stage5bn_next_stage_decision
+schema: schemas/project-state/stage5bn-next-stage-decision-v0.schema.json
+stage_id: stage-5bn
+stage_title: Stage 5BN - String 4 unsupported-position source-gap closure and human-review
+  pack preparation, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bm
+source_previous_stage_commit: af51b16c83420b6df2070c1b9616e705285cb428
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+token_block_execution_selected: false
+byte_stream_generation_selected: false
+variant_materialisation_selected: false
+dwh_hash_search_selected: false
+decode_selected: false
+scored_experiments_selected: false
+benchmark_selected: false
+cuda_selected: false
+stego_execution_selected: false
+ocr_selected: false
+ai_ml_selected: false
+canonical_corpus_activation_selected: false
+page_boundary_finalisation_selected: false
+method_status_upgrade_selected: false
+selected_next_stage_id: stage-5bo-codex-token-option-addendum-integration-without-execution
+selected_next_prompt_type: codex_metadata_implementation
+selected_next_stage_title: Stage 5BO - String 4 inactive token-option addendum integration,
+  without execution
+selected_next_stage_reason: Stage 5BN found local spreadsheet target-row support for
+  0l, but active Stage 5AW records remain unchanged; the inactive review-only addendum
+  needs explicit integration review before any planning ingestion.
+unsupported_position_closure_status: closed_spreadsheet_support_found
+proposed_option_addendum_status: proposed_inactive_review_only
+human_review_required: false

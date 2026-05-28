@@ -1,0 +1,35 @@
+record_type: stage5bn_source_gap_severity_update
+schema: schemas/historical-route/stage5bn-source-gap-severity-update-v0.schema.json
+stage_id: stage-5bn
+stage_title: Stage 5BN - String 4 unsupported-position source-gap closure and human-review
+  pack preparation, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bm
+source_previous_stage_commit: af51b16c83420b6df2070c1b9616e705285cb428
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+source_stage5bm_gap_update: data/historical-route/stage5bm-source-gap-severity-update.yaml
+source_gap_update_count: 1
+string4_unsupported_position_gap_status: closed
+records:
+- source_gap_id: stage5bk-string4-stage5ap-branch-membership-unreconciled
+  source_gap_origin: stage-5bm
+  affected_family: token_block_page49_51_context
+  affected_candidate_ids:
+  - stage5bk-iddqd-v2-byte-string-4
+  target_token_index_0_based: 199
+  closure_status: closed_spreadsheet_support_found
+  severity: medium
+  blocks_execution: true
+  blocks_metadata_planning: false
+  blocks_string4_ingestion_or_active_use: true
+  blocks_future_token_block_execution: true
+  recommended_resolution:
+  - Review the inactive Stage 5BN 0l addendum before any active Stage 5AW/5AY integration.
+  - Do not use String 4 as active token-block input until a future explicit no-execution
+    integration stage validates the decision.
+  execution_allowed: false
+  solve_claim: false
+execution_allowed: false

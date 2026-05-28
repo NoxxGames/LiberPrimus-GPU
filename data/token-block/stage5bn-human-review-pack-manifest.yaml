@@ -1,0 +1,30 @@
+record_type: stage5bn_human_review_pack_manifest
+schema: schemas/token-block/stage5bn-human-review-pack-manifest-v0.schema.json
+stage_id: stage-5bn
+stage_title: Stage 5BN - String 4 unsupported-position source-gap closure and human-review
+  pack preparation, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bm
+source_previous_stage_commit: af51b16c83420b6df2070c1b9616e705285cb428
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+target_token_index_0_based: 199
+human_review_status: not_needed_gap_closed
+review_pack_root: human-review-packs/stage5bn/string4-unsupported-position
+review_pack_generated: false
+review_pack_files: []
+review_question: Should token index 199 include 0l as an allowed option?
+candidate_options_presented:
+- 0I
+- 0l
+- 0j
+- OI
+- Oj
+review_template_committed: false
+generated_crops_committed: false
+raw_images_committed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+execution_allowed: false

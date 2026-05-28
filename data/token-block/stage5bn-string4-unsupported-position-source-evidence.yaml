@@ -1,0 +1,35 @@
+record_type: stage5bn_string4_unsupported_position_source_evidence
+schema: schemas/token-block/stage5bn-string4-unsupported-position-source-evidence-v0.schema.json
+stage_id: stage-5bn
+stage_title: Stage 5BN - String 4 unsupported-position source-gap closure and human-review
+  pack preparation, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bm
+source_previous_stage_commit: af51b16c83420b6df2070c1b9616e705285cb428
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+target_token_index_0_based: 199
+evidence_records:
+- evidence_class: committed_stage5aw_metadata
+  status: unsupported
+  summary: Stage 5AW possible tokens at target are 0I, 0j, OI, Oj.
+- evidence_class: local_spreadsheet_target_cell
+  status: supported
+  summary: index=200; value=0l; case=lower; concat=0l-lower
+- evidence_class: local_iddqd_v2_string4
+  status: supports_0l_as_string4_inferred_token
+  summary: Stage 5BM String 4 mismatch analysis infers 0l at token index 199; full
+    source body remains uncommitted.
+- evidence_class: original_page_image_coordinate_context
+  status: review_aid_available
+  summary: Coordinate context is r25c08 on page_51; no OCR or image interpretation
+    performed.
+evidence_supports_add_0l_as_possible_option: true
+evidence_supports_external_mismatch_retained: false
+evidence_inconclusive: false
+human_review_required: false
+raw_bodies_committed: false
+generated_review_images_committed: false
+execution_allowed: false

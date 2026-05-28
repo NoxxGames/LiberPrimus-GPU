@@ -1,0 +1,20 @@
+record_type: stage5bn_codex_handoff_policy
+schema: schemas/source-harvester/stage5bn-codex-handoff-policy-v0.schema.json
+stage_id: stage-5bn
+stage_title: Stage 5BN - String 4 unsupported-position source-gap closure and human-review
+  pack preparation, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bm
+source_previous_stage_commit: af51b16c83420b6df2070c1b9616e705285cb428
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+canonical_handoff_root: codex-output
+codex_completion_summary_path: codex-output/stage5bn-codex-completion.md
+deprecated_handoff_root: codex_output
+codex_output_used: false
+codex_output_directory_created: false
+codex_completion_summary_committed: false
+generated_outputs_committed: false
+execution_allowed: false

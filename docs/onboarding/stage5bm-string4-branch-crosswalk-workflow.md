@@ -10,6 +10,7 @@ Use Stage 5BM when reviewing how the iddqd-v2 String 4 context relates to the pa
 - Stage 5AW repaired unresolved branch metadata and reviewer-extra token records.
 - Stage 5AY branch-eligibility policy.
 - Stage 5BM source restatement, mismatch analysis, branch-membership, planning-constraint, and next-stage decision records after the build command runs.
+- Stage 5BN target-position source-gap closure records for follow-up inactive addendum planning after Stage 5BM is complete.
 
 ## Commands
 

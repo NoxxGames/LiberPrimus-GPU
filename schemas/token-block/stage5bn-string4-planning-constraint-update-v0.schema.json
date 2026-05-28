@@ -1,0 +1,322 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "active_records_mutated": {
+      "const": false
+    },
+    "active_stage5aw_records_mutated": {
+      "const": false
+    },
+    "active_stage5ay_records_mutated": {
+      "const": false
+    },
+    "active_stage5az_records_mutated": {
+      "const": false
+    },
+    "active_token_block_manifest_changed": {
+      "const": false
+    },
+    "ai_ml_interpretation_performed": {
+      "const": false
+    },
+    "ai_ml_selected": {
+      "const": false
+    },
+    "audio_analysis_performed": {
+      "const": false
+    },
+    "benchmark_performed": {
+      "const": false
+    },
+    "benchmark_selected": {
+      "const": false
+    },
+    "byte_stream_generation_selected": {
+      "const": false
+    },
+    "canonical_corpus_activation_selected": {
+      "const": false
+    },
+    "canonical_corpus_active": {
+      "const": false
+    },
+    "canonical_transcription_changed": {
+      "const": false
+    },
+    "codex_output_directory_created": {
+      "const": false
+    },
+    "codex_output_used": {
+      "const": false
+    },
+    "cuda_execution_performed": {
+      "const": false
+    },
+    "cuda_selected": {
+      "const": false
+    },
+    "cuda_source_modified": {
+      "const": false
+    },
+    "decode_attempt_performed": {
+      "const": false
+    },
+    "decode_selected": {
+      "const": false
+    },
+    "decoded_byte_body_committed": {
+      "const": false
+    },
+    "decoded_bytes_committed": {
+      "const": false
+    },
+    "dwh_hash_search_performed": {
+      "const": false
+    },
+    "dwh_hash_search_selected": {
+      "const": false
+    },
+    "execution_allowed": {
+      "const": false
+    },
+    "fandom_images_committed": {
+      "const": false
+    },
+    "fandom_page_bodies_committed": {
+      "const": false
+    },
+    "full_cartesian_product_enumerated": {
+      "const": false
+    },
+    "full_cell_dump_committed": {
+      "const": false
+    },
+    "full_string4_body_committed": {
+      "const": false
+    },
+    "generated_crop_committed": {
+      "const": false
+    },
+    "generated_crops_committed": {
+      "const": false
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "generated_review_images_committed": {
+      "const": false
+    },
+    "hash_preimage_search_performed": {
+      "const": false
+    },
+    "hash_search_performed": {
+      "const": false
+    },
+    "hidden_content_image_forensics_performed": {
+      "const": false
+    },
+    "human_review_pack_committed": {
+      "const": false
+    },
+    "image_forensics_performed": {
+      "const": false
+    },
+    "image_interpretation_performed": {
+      "const": false
+    },
+    "llm_vision_token_reading_performed": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "method_status_upgrade_selected": {
+      "const": false
+    },
+    "method_status_upgraded": {
+      "const": false
+    },
+    "new_cuda_kernels_added": {
+      "const": 0
+    },
+    "ocr_performed": {
+      "const": false
+    },
+    "ocr_selected": {
+      "const": false
+    },
+    "openpuff_execution_performed": {
+      "const": false
+    },
+    "outguess_execution_performed": {
+      "const": false
+    },
+    "page_boundaries_final": {
+      "const": false
+    },
+    "page_boundary_finalisation_selected": {
+      "const": false
+    },
+    "pgp_network_key_fetch_performed": {
+      "const": false
+    },
+    "pgp_verification_performed_as_project_truth": {
+      "const": false
+    },
+    "planning_effect": {
+      "enum": [
+        "source_gap_closed_metadata_only",
+        "source_gap_partially_closed_human_review_required",
+        "source_gap_carried_forward",
+        "review_before_ingestion",
+        "external_community_context_only"
+      ]
+    },
+    "public_website_publication_performed": {
+      "const": false
+    },
+    "raw_archive_files_committed": {
+      "const": false
+    },
+    "raw_bodies_committed": {
+      "const": false
+    },
+    "raw_iddqd_v2_files_committed": {
+      "const": false
+    },
+    "raw_image_committed": {
+      "const": false
+    },
+    "raw_images_committed": {
+      "const": false
+    },
+    "raw_page_images_committed": {
+      "const": false
+    },
+    "real_byte_stream_generated": {
+      "const": false
+    },
+    "real_token_block_byte_streams_generated": {
+      "const": false
+    },
+    "reconstructed_token_stream_committed": {
+      "const": false
+    },
+    "record_type": {
+      "const": "stage5bn_string4_planning_constraint_update"
+    },
+    "review_template_committed": {
+      "const": false
+    },
+    "sampled_real_variants_generated": {
+      "const": false
+    },
+    "schema": {
+      "type": "string"
+    },
+    "scored_experiments_executed": {
+      "const": false
+    },
+    "scored_experiments_selected": {
+      "const": false
+    },
+    "scoring_performed": {
+      "const": false
+    },
+    "semantic_image_interpretation_performed": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "spreadsheet_body_committed": {
+      "const": false
+    },
+    "spreadsheet_cell_dump_committed": {
+      "const": false
+    },
+    "spreadsheet_committed": {
+      "const": false
+    },
+    "spreadsheet_file_committed": {
+      "const": false
+    },
+    "stage5ap_canonical_token": {
+      "const": "0I"
+    },
+    "stage5aw_branch_manifest_changed": {
+      "const": false
+    },
+    "stage5az_variant_family_manifest_changed": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-5bn"
+    },
+    "stego_execution_selected": {
+      "const": false
+    },
+    "stego_tool_execution_performed": {
+      "const": false
+    },
+    "string4_active_input_allowed": {
+      "const": false
+    },
+    "string4_byte_stream_generation_allowed": {
+      "const": false
+    },
+    "string4_combined_with_2014_surfaces": {
+      "const": false
+    },
+    "string4_dry_run_ingestion_allowed_now": {
+      "const": false
+    },
+    "string4_execution_input_allowed": {
+      "const": false
+    },
+    "string4_inferred_token": {
+      "const": "0l"
+    },
+    "target_token_index_0_based": {
+      "const": 199
+    },
+    "token_block_execution_selected": {
+      "const": false
+    },
+    "token_experiment_executed": {
+      "const": false
+    },
+    "token_experiments_executed": {
+      "const": false
+    },
+    "variant_byte_streams_generated": {
+      "const": false
+    },
+    "variant_materialisation_performed": {
+      "const": false
+    },
+    "variant_materialisation_selected": {
+      "const": false
+    },
+    "website_expansion_performed": {
+      "const": false
+    }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "metadata_only",
+    "planning_effect",
+    "string4_active_input_allowed",
+    "string4_execution_input_allowed",
+    "string4_byte_stream_generation_allowed",
+    "string4_dry_run_ingestion_allowed_now",
+    "stage5bd_dry_run_records_remain_valid",
+    "future_token_block_execution_remains_blocked",
+    "execution_allowed",
+    "solve_claim"
+  ],
+  "type": "object"
+}

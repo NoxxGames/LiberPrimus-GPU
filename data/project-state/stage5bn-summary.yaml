@@ -1,0 +1,71 @@
+record_type: stage5bn_summary
+schema: schemas/project-state/stage5bn-summary-v0.schema.json
+stage_id: stage-5bn
+stage_title: Stage 5BN - String 4 unsupported-position source-gap closure and human-review
+  pack preparation, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bm
+source_previous_stage_commit: af51b16c83420b6df2070c1b9616e705285cb428
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+status: complete
+target_token_index_0_based: 199
+target_row_index_one_based: 25
+target_column_index_one_based: 8
+stage5ap_canonical_token: 0I
+string4_inferred_token: 0l
+stage5aw_supports_string4_target_option_before_stage5bn: false
+unsupported_position_closure_status: closed_spreadsheet_support_found
+spreadsheet_found: true
+spreadsheet_target_cell_identified: true
+spreadsheet_supports_0l: true
+human_review_pack_generated: false
+human_review_required: false
+proposed_option_addendum_status: proposed_inactive_review_only
+stage5bn_proposes_inactive_0l_addendum: true
+string4_active_input_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+stage5aw_branch_manifest_changed: false
+stage5az_variant_family_manifest_changed: false
+stage5bd_dry_run_records_remain_valid: true
+future_token_block_execution_remains_blocked: true
+raw_archive_files_committed: false
+raw_iddqd_v2_files_committed: false
+spreadsheet_committed: false
+generated_outputs_committed: false
+human_review_pack_committed: false
+token_experiments_executed: false
+real_token_block_byte_streams_generated: false
+variant_byte_streams_generated: false
+hash_search_performed: false
+decode_attempt_performed: false
+stego_tool_execution_performed: false
+cuda_execution_performed: false
+benchmark_performed: false
+scored_experiments_executed: false
+parallel_validation_harness_used: true
+parallel_validation_run_passed: true
+consistency_checks_passed: true
+codex_completion_summary_path: codex-output/stage5bn-codex-completion.md
+codex_output_directory_used: false
+recommended_next_prompt_type: codex_metadata_implementation
+recommended_next_stage_title: Stage 5BO - String 4 inactive token-option addendum
+  integration, without execution
+recommended_next_stage_reason: Stage 5BN found local spreadsheet target-row support
+  for 0l, but active Stage 5AW records remain unchanged; the inactive review-only
+  addendum needs explicit integration review before any planning ingestion.
+source_record_paths:
+- data/token-block/stage5bn-string4-unsupported-position-target.yaml
+- data/token-block/stage5bn-stage5aw-option-gap-audit.yaml
+- data/token-block/stage5bn-local-spreadsheet-target-cell-audit.yaml
+- data/token-block/stage5bn-target-position-coordinate-context.yaml
+- data/token-block/stage5bn-string4-unsupported-position-source-evidence.yaml
+- data/token-block/stage5bn-human-review-pack-manifest.yaml
+- data/token-block/stage5bn-proposed-token-option-addendum.yaml
+- data/token-block/stage5bn-string4-source-gap-closure-status.yaml
+- data/token-block/stage5bn-string4-planning-constraint-update.yaml
+- data/token-block/stage5bn-token-block-lineage-preservation.yaml

@@ -267,6 +267,14 @@ from .stage5bm import (
     stage5bm_summary,
     validate_stage5bm,
 )
+from .stage5bn import (
+    DATA_PATHS as STAGE5BN_DATA_PATHS,
+    RESULTS_DIR as STAGE5BN_RESULTS_DIR,
+    build_stage5bn_summary_records,
+    build_stage5bn_unsupported_position_review,
+    load_stage5bn_summary,
+    validate_stage5bn,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -2634,6 +2642,187 @@ def validate_stage5bm_command(
     if errors:
         raise typer.Exit(1)
     console.print("token_block_stage5bm_valid=true")
+
+
+@app.command("build-stage5bn-unsupported-position-review")
+def build_stage5bn_unsupported_position_review_command(
+    stage5bm_summary: Path = typer.Option(STAGE5BM_DATA_PATHS["summary"]),
+    stage5bm_branch_membership: Path = typer.Option(STAGE5BM_DATA_PATHS["branch_membership"]),
+    stage5bm_mismatch_analysis: Path = typer.Option(STAGE5BM_DATA_PATHS["mismatch_analysis"]),
+    stage5bm_source_gap: Path = typer.Option(STAGE5BM_DATA_PATHS["gap_update"]),
+    stage5bm_planning_constraint: Path = typer.Option(STAGE5BM_DATA_PATHS["planning_constraint"]),
+    stage5ap_transcription: Path = typer.Option(TRANSCRIPTION_PATH),
+    stage5ap_coordinates: Path = typer.Option(COORDINATE_PATH),
+    stage5aw_unresolved: Path = typer.Option(STAGE5AW_REPAIRED_UNRESOLVED_VARIANTS_PATH),
+    stage5aw_extras: Path = typer.Option(STAGE5AW_REPAIRED_REVIEWER_EXTRA_TOKENS_PATH),
+    stage5aw_parser_audit: Path = typer.Option(STAGE5AW_DECISION_PARSER_AUDIT_PATH),
+    stage5aw_parser_policy: Path = typer.Option(STAGE5AW_PARSER_POLICY_PATH),
+    stage5ay_branch_eligibility: Path = typer.Option(STAGE5AY_BRANCH_ELIGIBILITY_POLICY_PATH),
+    stage5bi_spreadsheet_lock: Path = typer.Option(Path("data/source-harvester/stage5bi-local-spreadsheet-source-lock.yaml")),
+    local_spreadsheet: Path = typer.Option(Path("third_party/3N_3p_Bases_49-51.jpg.xlsx")),
+    local_iddqd_v2_root: Path = typer.Option(Path("third_party/CiadaSolversIddqd_v2")),
+    local_historical_archive: Path = typer.Option(Path("third_party/CicadaSolversIddqd")),
+    human_review_pack_root: Path = typer.Option(Path("human-review-packs/stage5bn/string4-unsupported-position")),
+    results_dir: Path = typer.Option(STAGE5BN_RESULTS_DIR),
+    out_target: Path = typer.Option(STAGE5BN_DATA_PATHS["target"]),
+    out_option_gap_audit: Path = typer.Option(STAGE5BN_DATA_PATHS["option_gap_audit"]),
+    out_spreadsheet_audit: Path = typer.Option(STAGE5BN_DATA_PATHS["spreadsheet_audit"]),
+    out_coordinate_context: Path = typer.Option(STAGE5BN_DATA_PATHS["coordinate_context"]),
+    out_source_evidence: Path = typer.Option(STAGE5BN_DATA_PATHS["source_evidence"]),
+    out_human_review_pack_manifest: Path = typer.Option(STAGE5BN_DATA_PATHS["human_review_pack_manifest"]),
+    out_proposed_addendum: Path = typer.Option(STAGE5BN_DATA_PATHS["proposed_addendum"]),
+    out_gap_closure: Path = typer.Option(STAGE5BN_DATA_PATHS["gap_closure"]),
+    out_planning_constraint_update: Path = typer.Option(STAGE5BN_DATA_PATHS["planning_constraint_update"]),
+    out_lineage: Path = typer.Option(STAGE5BN_DATA_PATHS["lineage"]),
+) -> None:
+    summary = build_stage5bn_unsupported_position_review(
+        stage5bm_summary=stage5bm_summary,
+        stage5bm_branch_membership=stage5bm_branch_membership,
+        stage5bm_mismatch_analysis=stage5bm_mismatch_analysis,
+        stage5bm_source_gap=stage5bm_source_gap,
+        stage5bm_planning_constraint=stage5bm_planning_constraint,
+        stage5ap_transcription=stage5ap_transcription,
+        stage5ap_coordinates=stage5ap_coordinates,
+        stage5aw_unresolved=stage5aw_unresolved,
+        stage5aw_extras=stage5aw_extras,
+        stage5aw_parser_audit=stage5aw_parser_audit,
+        stage5aw_parser_policy=stage5aw_parser_policy,
+        stage5ay_branch_eligibility=stage5ay_branch_eligibility,
+        stage5bi_spreadsheet_lock=stage5bi_spreadsheet_lock,
+        local_spreadsheet=local_spreadsheet,
+        local_iddqd_v2_root=local_iddqd_v2_root,
+        local_historical_archive=local_historical_archive,
+        human_review_pack_root=human_review_pack_root,
+        results_dir=results_dir,
+        out_target=out_target,
+        out_option_gap_audit=out_option_gap_audit,
+        out_spreadsheet_audit=out_spreadsheet_audit,
+        out_coordinate_context=out_coordinate_context,
+        out_source_evidence=out_source_evidence,
+        out_human_review_pack_manifest=out_human_review_pack_manifest,
+        out_proposed_addendum=out_proposed_addendum,
+        out_gap_closure=out_gap_closure,
+        out_planning_constraint_update=out_planning_constraint_update,
+        out_lineage=out_lineage,
+    )
+    console.print(f"target_token_index_0_based={summary['target_token_index_0_based']}")
+    console.print(f"stage5aw_supports_0l={str(summary['stage5aw_supports_0l']).lower()}")
+    console.print(f"spreadsheet_target_cell_identified={str(summary['spreadsheet_target_cell_identified']).lower()}")
+    console.print(f"spreadsheet_supports_0l={str(summary['spreadsheet_supports_0l']).lower()}")
+    console.print(f"unsupported_position_closure_status={summary['unsupported_position_closure_status']}")
+    console.print(f"proposed_option_addendum_status={summary['proposed_option_addendum_status']}")
+    console.print(f"human_review_required={str(summary['human_review_required']).lower()}")
+    console.print(f"future_token_block_execution_remains_blocked={str(summary['future_token_block_execution_remains_blocked']).lower()}")
+
+
+@app.command("stage5bn-summary")
+def stage5bn_summary_command(
+    target: Path = typer.Option(STAGE5BN_DATA_PATHS["target"]),
+    option_gap_audit: Path = typer.Option(STAGE5BN_DATA_PATHS["option_gap_audit"]),
+    spreadsheet_audit: Path = typer.Option(STAGE5BN_DATA_PATHS["spreadsheet_audit"]),
+    coordinate_context: Path = typer.Option(STAGE5BN_DATA_PATHS["coordinate_context"]),
+    source_evidence: Path = typer.Option(STAGE5BN_DATA_PATHS["source_evidence"]),
+    human_review_pack_manifest: Path = typer.Option(STAGE5BN_DATA_PATHS["human_review_pack_manifest"]),
+    proposed_addendum: Path = typer.Option(STAGE5BN_DATA_PATHS["proposed_addendum"]),
+    gap_closure: Path = typer.Option(STAGE5BN_DATA_PATHS["gap_closure"]),
+    planning_constraint_update: Path = typer.Option(STAGE5BN_DATA_PATHS["planning_constraint_update"]),
+    lineage: Path = typer.Option(STAGE5BN_DATA_PATHS["lineage"]),
+    stage5bm_gap_update: Path = typer.Option(STAGE5BM_DATA_PATHS["gap_update"]),
+    results_dir: Path = typer.Option(STAGE5BN_RESULTS_DIR),
+    out_gap_severity: Path = typer.Option(STAGE5BN_DATA_PATHS["gap_severity"]),
+    out_dwh_quarantine: Path = typer.Option(STAGE5BN_DATA_PATHS["dwh_quarantine"]),
+    out_guardrail: Path = typer.Option(STAGE5BN_DATA_PATHS["guardrail"]),
+    out_codex_handoff: Path = typer.Option(STAGE5BN_DATA_PATHS["codex_handoff"]),
+    out_summary: Path = typer.Option(STAGE5BN_DATA_PATHS["summary"]),
+    out_next_stage: Path = typer.Option(STAGE5BN_DATA_PATHS["next_stage"]),
+) -> None:
+    payload = build_stage5bn_summary_records(
+        target=target,
+        option_gap_audit=option_gap_audit,
+        spreadsheet_audit=spreadsheet_audit,
+        coordinate_context=coordinate_context,
+        source_evidence=source_evidence,
+        human_review_pack_manifest=human_review_pack_manifest,
+        proposed_addendum=proposed_addendum,
+        gap_closure=gap_closure,
+        planning_constraint_update=planning_constraint_update,
+        lineage=lineage,
+        stage5bm_gap_update=stage5bm_gap_update,
+        results_dir=results_dir,
+        out_gap_severity=out_gap_severity,
+        out_dwh_quarantine=out_dwh_quarantine,
+        out_guardrail=out_guardrail,
+        out_codex_handoff=out_codex_handoff,
+        out_summary=out_summary,
+        out_next_stage=out_next_stage,
+    )
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"target_token_index_0_based={payload.get('target_token_index_0_based')}")
+    console.print(f"unsupported_position_closure_status={payload.get('unsupported_position_closure_status')}")
+    console.print(f"spreadsheet_supports_0l={str(payload.get('spreadsheet_supports_0l')).lower()}")
+    console.print(f"human_review_required={str(payload.get('human_review_required')).lower()}")
+    console.print(f"proposed_option_addendum_status={payload.get('proposed_option_addendum_status')}")
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+@app.command("validate-stage5bn")
+def validate_stage5bn_command(
+    target: Path = typer.Option(STAGE5BN_DATA_PATHS["target"]),
+    option_gap_audit: Path = typer.Option(STAGE5BN_DATA_PATHS["option_gap_audit"]),
+    spreadsheet_audit: Path = typer.Option(STAGE5BN_DATA_PATHS["spreadsheet_audit"]),
+    coordinate_context: Path = typer.Option(STAGE5BN_DATA_PATHS["coordinate_context"]),
+    source_evidence: Path = typer.Option(STAGE5BN_DATA_PATHS["source_evidence"]),
+    human_review_pack_manifest: Path = typer.Option(STAGE5BN_DATA_PATHS["human_review_pack_manifest"]),
+    proposed_addendum: Path = typer.Option(STAGE5BN_DATA_PATHS["proposed_addendum"]),
+    gap_closure: Path = typer.Option(STAGE5BN_DATA_PATHS["gap_closure"]),
+    planning_constraint_update: Path = typer.Option(STAGE5BN_DATA_PATHS["planning_constraint_update"]),
+    lineage: Path = typer.Option(STAGE5BN_DATA_PATHS["lineage"]),
+    gap_severity: Path = typer.Option(STAGE5BN_DATA_PATHS["gap_severity"]),
+    dwh_quarantine: Path = typer.Option(STAGE5BN_DATA_PATHS["dwh_quarantine"]),
+    guardrail: Path = typer.Option(STAGE5BN_DATA_PATHS["guardrail"]),
+    codex_handoff: Path = typer.Option(STAGE5BN_DATA_PATHS["codex_handoff"]),
+    summary: Path = typer.Option(STAGE5BN_DATA_PATHS["summary"]),
+    next_stage_decision: Path = typer.Option(STAGE5BN_DATA_PATHS["next_stage"]),
+    results_dir: Path = typer.Option(STAGE5BN_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5bn(
+        target=target,
+        option_gap_audit=option_gap_audit,
+        spreadsheet_audit=spreadsheet_audit,
+        coordinate_context=coordinate_context,
+        source_evidence=source_evidence,
+        human_review_pack_manifest=human_review_pack_manifest,
+        proposed_addendum=proposed_addendum,
+        gap_closure=gap_closure,
+        planning_constraint_update=planning_constraint_update,
+        lineage=lineage,
+        gap_severity=gap_severity,
+        dwh_quarantine=dwh_quarantine,
+        guardrail=guardrail,
+        codex_handoff=codex_handoff,
+        summary=summary,
+        next_stage_decision=next_stage_decision,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5bn_valid=true")
+
+
+@app.command("show-stage5bn-summary")
+def show_stage5bn_summary_command(
+    summary: Path = typer.Option(STAGE5BN_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5bn_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"unsupported_position_closure_status={payload.get('unsupported_position_closure_status')}")
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
 
 
 def register(root_app: typer.Typer) -> None:

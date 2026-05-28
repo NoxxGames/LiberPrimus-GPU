@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5BM Deep Research findings integration and String 4 branch-crosswalk repair is complete.
+Stage 5BN String 4 unsupported-position source-gap closure and human-review pack preparation is complete.
 
-Next recommended prompt: Stage 5BN - String 4 unsupported-position source-gap closure and human-review pack preparation, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5BO - String 4 inactive token-option addendum integration, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5BN
+
+Stage 5BN audits the single unsupported String 4 target position found by Stage 5BM. It records target token index `199`, logical row/column `25`/`8`, Stage 5AP canonical token `0I`, String 4 inferred token `0l`, current Stage 5AW possible tokens `0I`, `0j`, `OI`, and `Oj`, and Stage 5AW active support for `0l` as `false`.
+
+Local Stage 5BN summary: the ignored local spreadsheet was found, target row `A203/B203` was identified, the target value supports `0l`, closure status is `closed_spreadsheet_support_found`, proposed option addendum status is `proposed_inactive_review_only`, human-review pack generated `false`, human review required `false`, canonical transcription changed `false`, active token-block manifest changed `false`, Stage 5BD dry-run records remain valid `true`, future token-block execution remains blocked `true`, and next stage `Stage 5BO`.
+
+Stage 5BN is metadata-only. It does not commit the workbook, workbook cell dumps, raw iddqd-v2/archive/Fandom files, page images, review-pack bodies, generated diagnostics, full String 4 bodies, decoded bytes, or reconstructed token streams. It does not run token-block experiments, generate byte streams, materialise variants, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, decode, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, score candidate plaintext, publish website content, change canonical transcription, change active token-block manifests, upgrade method status, or make solve claims. The Codex handoff path is `codex-output/stage5bn-codex-completion.md`; `codex_output` is deprecated and must not be created.
 
 ## Completed in Stage 5BM
 
@@ -1066,4 +1074,4 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 
 ## Next prompt recommendation
 
-Stage 5BN - String 4 unsupported-position source-gap closure and human-review pack preparation, without execution. Use the Stage 5BM String 4 mismatch, branch-membership, ambiguity-class, source-gap, planning-constraint, lineage, guardrail, summary, and next-stage records; keep token experiment execution, real byte-stream generation, variant materialisation, 2014/page49-51 surface combination, DWH/hash/preimage search, historical stego execution, online PGP verification, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, website publication, and solve claims blocked unless a later prompt explicitly scopes execution.
+Stage 5BO - String 4 inactive token-option addendum integration, without execution. Use the Stage 5BN target, option-gap, spreadsheet target-cell, source-evidence, proposed addendum, source-gap closure, planning-constraint, lineage, guardrail, summary, and next-stage records; keep token experiment execution, real byte-stream generation, variant materialisation, 2014/page49-51 surface combination, DWH/hash/preimage search, historical stego execution, online PGP verification, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, website publication, and solve claims blocked unless a later prompt explicitly scopes execution.

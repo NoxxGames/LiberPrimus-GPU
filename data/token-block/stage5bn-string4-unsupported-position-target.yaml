@@ -1,0 +1,41 @@
+record_type: stage5bn_string4_unsupported_position_target
+schema: schemas/token-block/stage5bn-string4-unsupported-position-target-v0.schema.json
+stage_id: stage-5bn
+stage_title: Stage 5BN - String 4 unsupported-position source-gap closure and human-review
+  pack preparation, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bm
+source_previous_stage_commit: af51b16c83420b6df2070c1b9616e705285cb428
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+source_stage_ids:
+- stage-5bm
+- stage-5bl
+- stage-5bk
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+source_token_block_lineage:
+- stage-5ap
+- stage-5ar
+- stage-5aw
+- stage-5az
+- stage-5bb
+- stage-5bd
+target_token_index_0_based: 199
+target_row_index_one_based: 25
+target_column_index_one_based: 8
+stage5ap_canonical_token: 0I
+string4_inferred_token: 0l
+stage5bm_unsupported_reason: String 4 inferred token is not present in Stage 5AW/5AY
+  allowed options for this index.
+stage5aw_allowed_tokens_summary: 0I, 0j, OI, Oj
+target_question: Should 0l be represented as an allowed option at token index 199,
+  or remain unsupported external String 4 context?
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+real_byte_stream_generated: false
+execution_allowed: false

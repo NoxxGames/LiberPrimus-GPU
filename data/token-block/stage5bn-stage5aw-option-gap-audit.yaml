@@ -1,0 +1,39 @@
+record_type: stage5bn_stage5aw_option_gap_audit
+schema: schemas/token-block/stage5bn-stage5aw-option-gap-audit-v0.schema.json
+stage_id: stage-5bn
+stage_title: Stage 5BN - String 4 unsupported-position source-gap closure and human-review
+  pack preparation, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bm
+source_previous_stage_commit: af51b16c83420b6df2070c1b9616e705285cb428
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+target_token_index_0_based: 199
+source_stage5aw_records:
+- data/token-block/stage5aw-repaired-unresolved-token-variant-records.yaml
+- data/token-block/stage5aw-repaired-reviewer-extra-possible-tokens.yaml
+- data/token-block/stage5aw-decision-parser-audit.yaml
+- data/token-block/stage5aw-possible-token-parser-policy.yaml
+- data/token-block/stage5ay-branch-eligibility-policy.yaml
+stage5ap_canonical_token: 0I
+string4_inferred_token: 0l
+stage5aw_allowed_tokens:
+- 0I
+- 0j
+- OI
+- Oj
+stage5aw_supports_0l: false
+stage5aw_supports_string4_target_option: false
+stage5av_or_stage5aw_existing_notes_mention_0l: false
+parser_omission_suspected: false
+parser_omission_reason: null
+option_gap_status: unsupported
+active_records_mutated: false
+proposed_addendum_required: true
+candidate_tokens_include_0l: true
+reviewer_extra_tokens:
+- 0j
+- Oj
+execution_allowed: false

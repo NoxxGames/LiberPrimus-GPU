@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk repair, without execution.
+Current completed stage: Stage 5BN - String 4 unsupported-position source-gap closure and human-review pack preparation, without execution.
 
-Current work: Stage 5BN - String 4 unsupported-position source-gap closure and human-review pack preparation, without execution. Stage 5BM consumes Stage 5BL Deep Research findings, Stage 5BK iddqd-v2 source-lock metadata, Stage 5AP canonical token records, Stage 5AW repaired branch metadata, and Stage 5BD dry-run gates, then classifies String 4 as `partial_branch_match` with 249 canonical matches, 6 Stage 5AW-supported noncanonical positions, 1 unsupported position, and 0 parser-inconclusive positions. It did not commit full String 4 bodies, decoded bytes, reconstructed token streams, raw iddqd-v2/archive/Fandom/spreadsheet files, or generated reports; change canonical token transcription; change active token-block manifests; combine 2014 surfaces with page 49-51; generate byte streams; run DWH/hash searches; decode; score; run stego/audio/image/OCR/AI/CUDA tooling; benchmark; publish website content; upgrade method status; or make solve claims.
+Current work: Stage 5BO - String 4 inactive token-option addendum integration, without execution. Stage 5BN audits the single Stage 5BM unsupported String 4 position at zero-based token index 199, records Stage 5AW active options `0I`, `0j`, `OI`, and `Oj`, confirms Stage 5AW still does not support `0l`, records target-only local spreadsheet support for `0l` at row `A203/B203`, and proposes an inactive review-only `0l` addendum. It did not commit the workbook, cell dumps, raw iddqd-v2/archive/Fandom files, page images, review-pack bodies, generated diagnostics, full String 4 bodies, decoded bytes, or reconstructed token streams; change canonical token transcription; change active token-block manifests; generate byte streams; materialise variants; run token experiments, DWH/hash searches, decode, score, stego/audio/image/OCR/AI/CUDA tooling, benchmarks; publish website content; upgrade method status; or make solve claims.
 
 Current project state:
 
@@ -165,7 +165,10 @@ Current project state:
 - Stage 5BM String 4 branch membership is `partial_branch_match`; the one unsupported position blocks active use pending Stage 5BN source-gap closure or human-review packaging.
 - Stage 5BM must not be used to commit full String 4 hex bodies, decoded bytes, reconstructed token streams, generated diagnostics, raw iddqd-v2/archive/Fandom/spreadsheet files, or full surface bodies.
 - Stage 5BM preserves Stage 5AP canonical transcription, Stage 5AW branch metadata, Stage 5AZ active manifest policy, and Stage 5BD dry-run records unchanged.
-- Future Stage 5BN work may close String 4 unsupported-position metadata and prepare review packs, but must not execute token-block experiments, generate byte streams, materialise variants, run DWH/hash search, decode, run stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, publish website content, upgrade method status, or make solve claims.
+- Stage 5BN String 4 unsupported-position closure is target-only metadata, not execution permission.
+- Stage 5BN found local spreadsheet support for `0l` at token index 199, but Stage 5AW active possible tokens remain `0I`, `0j`, `OI`, and `Oj`.
+- Stage 5BN proposed an inactive review-only `0l` addendum; it did not mutate Stage 5AW/5AY/5AZ records, canonical transcription, or active token-block manifests.
+- Future Stage 5BO work may review or integrate the inactive Stage 5BN addendum without execution, but must not execute token-block experiments, generate byte streams, materialise variants, run DWH/hash search, decode, run stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, publish website content, upgrade method status, or make solve claims.
 - Stage 5AX keeps git, GitHub, network/remote, generated-output-writing, issue-update, commit, and push operations serial.
 - Stage 5AX uses pytest-xdist only when available and otherwise falls back to deterministic subprocess sharding.
 - Stage 5AY preflight design cites Stage 5AW repaired branch metadata and the Stage 5AX next-stage decision, does not use ignored review-pack bodies as committed input, and does not execute token experiments or DWH/hash searches. Future Stage 5BE review must consume Stage 5BD dry-run records, Stage 5BB active-manifest registry, no-execution runner scaffold, and Stage 5AZ repaired manifest-design/execution-gate records before any execution-stage decision.
