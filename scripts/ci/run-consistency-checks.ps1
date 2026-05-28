@@ -2532,6 +2532,18 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q "codex-output/stage5bn-codex-completion.md"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5BN" }
 
+    Write-Host "Validating Stage 5BO token-case operator errata integration records"
+    & $Python -m libreprimus.cli token-block validate-stage5bo
+    $Stage5BOTokenResultsRoot = Join-Path (Join-Path (Join-Path "experiments" "results") "token-block") "stage5bo"
+    $Stage5BOHistoricalResultsRoot = Join-Path (Join-Path (Join-Path "experiments" "results") "historical-route") "stage5bo"
+    git check-ignore -q (Join-Path $Stage5BOTokenResultsRoot "summary.json")
+    git check-ignore -q (Join-Path $Stage5BOTokenResultsRoot "decision-template-errata-records.json")
+    git check-ignore -q (Join-Path $Stage5BOHistoricalResultsRoot "summary.json")
+    git check-ignore -q "human-review-packs/stage5au/token-case-review-v2/decision-template.yaml"
+    git check-ignore -q "human-review-packs/stage5au/token-case-review-v2/decision-template-corrected.yaml"
+    git check-ignore -q "codex-output/stage5bo-codex-completion.md"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5BO" }
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

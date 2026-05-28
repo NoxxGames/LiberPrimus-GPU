@@ -1,0 +1,233 @@
+record_type: stage5bo_errata_aware_token_option_universe
+schema: schemas/token-block/stage5bo-errata-aware-token-option-universe-v0.schema.json
+stage_id: stage-5bo
+stage_title: Stage 5BO - Token-case human-review errata integration and String 4 full-branch
+  reclassification, without execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bn
+source_previous_stage_commit: a55c46ff44b29166ea2a646d6503f6810729c23b
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+source_stage5aw_branch_manifest: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+source_stage5ay_branch_eligibility: data/token-block/stage5ay-branch-eligibility-policy.yaml
+source_errata: data/token-block/stage5bo-token-case-human-review-errata.yaml
+universe_status: inactive_planning_sidecar
+operator_errata_applied_for_planning: true
+active_stage5aw_records_mutated: false
+active_stage5ay_records_mutated: false
+active_stage5az_records_mutated: false
+corrected_case_count: 8
+records_summary:
+  count: 8
+  includes_token_index_199: true
+  includes_token_index_198: true
+target_index_199:
+  stage5aw_active_allowed_tokens_before_errata:
+  - 0I
+  - 0j
+  - OI
+  - Oj
+  errata_aware_allowed_tokens_for_planning: &id008
+  - 0I
+  - 0l
+  - OI
+  - Ol
+  string4_option_0l_supported_by_errata: true
+records:
+- token_index_0_based: 42
+  case_id: stage5at-token-case-042
+  stage5ap_canonical_token: 0S
+  stage5aw_active_allowed_tokens_before_errata:
+  - 0S
+  - OS
+  corrected_possible_tokens_from_operator_template: &id001
+  - 0S
+  - OS
+  errata_added_tokens: []
+  errata_removed_tokens: []
+  errata_aware_allowed_tokens_for_planning: *id001
+  primary60_mappable_added_tokens: []
+  primary60_mappable_removed_tokens: []
+  primary60_unmappable_added_tokens: []
+  primary60_unmappable_removed_tokens: []
+  string4_option_now_supported_by_operator_errata: false
+  active_stage5aw_records_mutated: false
+  active_stage5ay_records_mutated: false
+- token_index_0_based: 49
+  case_id: stage5at-token-case-049
+  stage5ap_canonical_token: 0G
+  stage5aw_active_allowed_tokens_before_errata:
+  - 0G
+  - OG
+  corrected_possible_tokens_from_operator_template: &id002
+  - 0G
+  - OG
+  errata_added_tokens: []
+  errata_removed_tokens: []
+  errata_aware_allowed_tokens_for_planning: *id002
+  primary60_mappable_added_tokens: []
+  primary60_mappable_removed_tokens: []
+  primary60_unmappable_added_tokens: []
+  primary60_unmappable_removed_tokens: []
+  string4_option_now_supported_by_operator_errata: false
+  active_stage5aw_records_mutated: false
+  active_stage5ay_records_mutated: false
+- token_index_0_based: 63
+  case_id: stage5at-token-case-063
+  stage5ap_canonical_token: 0p
+  stage5aw_active_allowed_tokens_before_errata:
+  - 0p
+  corrected_possible_tokens_from_operator_template: &id003
+  - 0p
+  - Op
+  errata_added_tokens:
+  - Op
+  errata_removed_tokens: []
+  errata_aware_allowed_tokens_for_planning: *id003
+  primary60_mappable_added_tokens: []
+  primary60_mappable_removed_tokens: []
+  primary60_unmappable_added_tokens:
+  - Op
+  primary60_unmappable_removed_tokens: []
+  string4_option_now_supported_by_operator_errata: false
+  active_stage5aw_records_mutated: false
+  active_stage5ay_records_mutated: false
+- token_index_0_based: 66
+  case_id: stage5at-token-case-066
+  stage5ap_canonical_token: 0P
+  stage5aw_active_allowed_tokens_before_errata:
+  - 0P
+  corrected_possible_tokens_from_operator_template: &id004
+  - 0P
+  - OP
+  errata_added_tokens:
+  - OP
+  errata_removed_tokens: []
+  errata_aware_allowed_tokens_for_planning: *id004
+  primary60_mappable_added_tokens: []
+  primary60_mappable_removed_tokens: []
+  primary60_unmappable_added_tokens:
+  - OP
+  primary60_unmappable_removed_tokens: []
+  string4_option_now_supported_by_operator_errata: false
+  active_stage5aw_records_mutated: false
+  active_stage5ay_records_mutated: false
+- token_index_0_based: 165
+  case_id: stage5at-token-case-165
+  stage5ap_canonical_token: 0I
+  stage5aw_active_allowed_tokens_before_errata:
+  - 0I
+  - 0j
+  - Oj
+  - Ol
+  corrected_possible_tokens_from_operator_template: &id005
+  - 0I
+  - 0l
+  - OI
+  - Ol
+  errata_added_tokens:
+  - 0l
+  - OI
+  errata_removed_tokens:
+  - 0j
+  - Oj
+  errata_aware_allowed_tokens_for_planning: *id005
+  primary60_mappable_added_tokens:
+  - 0l
+  primary60_mappable_removed_tokens:
+  - 0j
+  primary60_unmappable_added_tokens:
+  - OI
+  primary60_unmappable_removed_tokens:
+  - Oj
+  string4_option_now_supported_by_operator_errata: false
+  active_stage5aw_records_mutated: false
+  active_stage5ay_records_mutated: false
+- token_index_0_based: 175
+  case_id: stage5at-token-case-175
+  stage5ap_canonical_token: 0l
+  stage5aw_active_allowed_tokens_before_errata:
+  - 0I
+  - 0j
+  - Oj
+  - Ol
+  corrected_possible_tokens_from_operator_template: &id006
+  - 0I
+  - 0l
+  - OI
+  - Ol
+  errata_added_tokens:
+  - 0l
+  - OI
+  errata_removed_tokens:
+  - 0j
+  - Oj
+  errata_aware_allowed_tokens_for_planning: *id006
+  primary60_mappable_added_tokens:
+  - 0l
+  primary60_mappable_removed_tokens:
+  - 0j
+  primary60_unmappable_added_tokens:
+  - OI
+  primary60_unmappable_removed_tokens:
+  - Oj
+  string4_option_now_supported_by_operator_errata: false
+  active_stage5aw_records_mutated: false
+  active_stage5ay_records_mutated: false
+- token_index_0_based: 198
+  case_id: stage5at-token-case-198
+  stage5ap_canonical_token: 1j
+  stage5aw_active_allowed_tokens_before_errata:
+  - 1I
+  - 1j
+  corrected_possible_tokens_from_operator_template: &id007
+  - 1i
+  - 1j
+  errata_added_tokens:
+  - 1i
+  errata_removed_tokens:
+  - 1I
+  errata_aware_allowed_tokens_for_planning: *id007
+  primary60_mappable_added_tokens:
+  - 1i
+  primary60_mappable_removed_tokens:
+  - 1I
+  primary60_unmappable_added_tokens: []
+  primary60_unmappable_removed_tokens: []
+  string4_option_now_supported_by_operator_errata: false
+  active_stage5aw_records_mutated: false
+  active_stage5ay_records_mutated: false
+- token_index_0_based: 199
+  case_id: stage5at-token-case-199
+  stage5ap_canonical_token: 0I
+  stage5aw_active_allowed_tokens_before_errata:
+  - 0I
+  - 0j
+  - OI
+  - Oj
+  corrected_possible_tokens_from_operator_template: *id008
+  errata_added_tokens:
+  - 0l
+  - Ol
+  errata_removed_tokens:
+  - 0j
+  - Oj
+  errata_aware_allowed_tokens_for_planning: *id008
+  primary60_mappable_added_tokens:
+  - 0l
+  primary60_mappable_removed_tokens:
+  - 0j
+  primary60_unmappable_added_tokens:
+  - Ol
+  primary60_unmappable_removed_tokens:
+  - Oj
+  string4_option_now_supported_by_operator_errata: true
+  active_stage5aw_records_mutated: false
+  active_stage5ay_records_mutated: false
+full_universe_table_committed: false
+ignored_full_universe_table_path: experiments/results/token-block/stage5bo/errata-aware-token-option-universe.json
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+execution_allowed: false

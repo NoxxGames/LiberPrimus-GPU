@@ -2558,6 +2558,21 @@ if [ -e "codex_output" ]; then
     exit 1
 fi
 
+echo "Validating Stage 5BO token-case operator errata integration records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5bo
+stage5bo_token_results_root="experiments"/"results"/"token-block"/"stage5bo"
+stage5bo_historical_results_root="experiments"/"results"/"historical-route"/"stage5bo"
+git check-ignore -q "$stage5bo_token_results_root/summary.json"
+git check-ignore -q "$stage5bo_token_results_root/decision-template-errata-records.json"
+git check-ignore -q "$stage5bo_historical_results_root/summary.json"
+git check-ignore -q "human-review-packs/stage5au/token-case-review-v2/decision-template.yaml"
+git check-ignore -q "human-review-packs/stage5au/token-case-review-v2/decision-template-corrected.yaml"
+git check-ignore -q "codex-output/stage5bo-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5BO" >&2
+    exit 1
+fi
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

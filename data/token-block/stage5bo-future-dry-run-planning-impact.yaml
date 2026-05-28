@@ -1,0 +1,29 @@
+record_type: stage5bo_future_dry_run_planning_impact
+schema: schemas/token-block/stage5bo-future-dry-run-planning-impact-v0.schema.json
+stage_id: stage-5bo
+stage_title: Stage 5BO - Token-case human-review errata integration and String 4 full-branch
+  reclassification, without execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bn
+source_previous_stage_commit: a55c46ff44b29166ea2a646d6503f6810729c23b
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+source_string4_branch_membership: data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+source_planning_constraint: data/token-block/stage5bo-string4-planning-constraint-update.yaml
+future_dry_run_planning_impact_status: inactive_planning_context_only
+future_runner_must_cite_stage5bo_constraints: true
+execution_gate_default: blocked
+string4_branch_membership_resolved_for_planning: true
+string4_active_input_allowed: false
+string4_execution_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+real_byte_stream_generated: false
+variant_materialisation_performed: false
+full_cartesian_product_enumerated: false
+hash_search_performed: false
+decode_attempt_performed: false
+scoring_performed: false
+execution_allowed: false

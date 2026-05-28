@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5bn_latest_and_stage5bo_next() -> None:
+def test_operational_docs_use_stage5bo_latest_and_stage5bp_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5BN String 4 unsupported-position source-gap closure" in status
-    assert "Next recommended prompt: Stage 5BO" in status
-    assert "Latest completed stage: Stage 5BN" in staged_plan
-    assert "Current planning focus: Stage 5BO" in staged_plan
+    assert "Stage 5BO token-case human-review errata integration" in status
+    assert "Next recommended prompt: Stage 5BP" in status
+    assert "Latest completed stage: Stage 5BO" in staged_plan
+    assert "Current planning focus: Stage 5BP" in staged_plan

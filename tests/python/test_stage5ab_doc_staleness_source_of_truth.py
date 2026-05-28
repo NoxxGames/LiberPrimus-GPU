@@ -19,10 +19,10 @@ def test_stage5ab_source_of_truth_schema_and_loader() -> None:
 
     _validator("schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json").validate(payload)
     source = load_source_of_truth(path)
-    assert source.latest_completed_stage_prefix == "Stage 5BN"
-    assert source.expected_next_stage_prefix == "Stage 5BO"
+    assert source.latest_completed_stage_prefix == "Stage 5BO"
+    assert source.expected_next_stage_prefix == "Stage 5BP"
     assert source.next_stage_after_this_stage == (
-        "Stage 5BO - String 4 inactive token-option addendum integration, without execution"
+        "Stage 5BP - Deep Research review of Stage 5BO operator-errata integration before dry-run ingestion"
     )
 
 

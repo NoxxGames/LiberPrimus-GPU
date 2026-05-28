@@ -1,0 +1,356 @@
+record_type: stage5bo_token_case_human_review_errata
+schema: schemas/token-block/stage5bo-token-case-human-review-errata-v0.schema.json
+stage_id: stage-5bo
+stage_title: Stage 5BO - Token-case human-review errata integration and String 4 full-branch
+  reclassification, without execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bn
+source_previous_stage_commit: a55c46ff44b29166ea2a646d6503f6810729c23b
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+source_correction_source_lock: data/token-block/stage5bo-decision-template-correction-source-lock.yaml
+errata_record_count: 8
+possible_tokens_errata_count: 8
+case_199_errata_found: true
+case_198_errata_found: true
+records:
+- case_id: stage5at-token-case-042
+  token_index_0_based: 42
+  row_index_one_based: 6
+  column_index_one_based: 3
+  canonical_token: 0S
+  original_possible_tokens:
+  - 0S
+  - OS
+  corrected_possible_tokens:
+  - 0S
+  - OS
+  original_possible_token_fragments:
+  - 0S
+  - 0S
+  - OS
+  - OS
+  corrected_possible_token_fragments:
+  - 0S
+  - OS
+  added_tokens: []
+  removed_tokens: []
+  unchanged_tokens:
+  - 0S
+  - OS
+  field_names_changed:
+  - reviewer_notes
+  possible_tokens_changed: true
+  errata_classification: operator_possible_tokens_typo
+  errata_impact:
+  - no_string4_impact
+  primary60_mappable_added_tokens: []
+  primary60_mappable_removed_tokens: []
+  primary60_unmappable_added_tokens: []
+  primary60_unmappable_removed_tokens: []
+  canonical_token_changed: false
+  active_manifest_changed: false
+  possible_tokens_field_source: reviewer_notes
+- case_id: stage5at-token-case-049
+  token_index_0_based: 49
+  row_index_one_based: 7
+  column_index_one_based: 2
+  canonical_token: 0G
+  original_possible_tokens:
+  - 0G
+  - OG
+  corrected_possible_tokens:
+  - 0G
+  - OG
+  original_possible_token_fragments:
+  - 0G
+  - 0G
+  - OG
+  - OG
+  corrected_possible_token_fragments:
+  - 0G
+  - OG
+  added_tokens: []
+  removed_tokens: []
+  unchanged_tokens:
+  - 0G
+  - OG
+  field_names_changed:
+  - reviewer_notes
+  possible_tokens_changed: true
+  errata_classification: operator_possible_tokens_typo
+  errata_impact:
+  - no_string4_impact
+  primary60_mappable_added_tokens: []
+  primary60_mappable_removed_tokens: []
+  primary60_unmappable_added_tokens: []
+  primary60_unmappable_removed_tokens: []
+  canonical_token_changed: false
+  active_manifest_changed: false
+  possible_tokens_field_source: reviewer_notes
+- case_id: stage5at-token-case-063
+  token_index_0_based: 63
+  row_index_one_based: 8
+  column_index_one_based: 8
+  canonical_token: 0p
+  original_possible_tokens:
+  - 0p
+  corrected_possible_tokens:
+  - 0p
+  - Op
+  original_possible_token_fragments:
+  - 0p
+  - 0p
+  corrected_possible_token_fragments:
+  - 0p
+  - Op
+  added_tokens:
+  - Op
+  removed_tokens: []
+  unchanged_tokens:
+  - 0p
+  field_names_changed:
+  - reviewer_notes
+  possible_tokens_changed: true
+  errata_classification: operator_possible_tokens_typo
+  errata_impact:
+  - primary60_mappability_change
+  primary60_mappable_added_tokens: []
+  primary60_mappable_removed_tokens: []
+  primary60_unmappable_added_tokens:
+  - Op
+  primary60_unmappable_removed_tokens: []
+  canonical_token_changed: false
+  active_manifest_changed: false
+  possible_tokens_field_source: reviewer_notes
+- case_id: stage5at-token-case-066
+  token_index_0_based: 66
+  row_index_one_based: 9
+  column_index_one_based: 3
+  canonical_token: 0P
+  original_possible_tokens:
+  - 0P
+  corrected_possible_tokens:
+  - 0P
+  - OP
+  original_possible_token_fragments:
+  - 0P
+  - 0P
+  corrected_possible_token_fragments:
+  - 0P
+  - OP
+  added_tokens:
+  - OP
+  removed_tokens: []
+  unchanged_tokens:
+  - 0P
+  field_names_changed:
+  - reviewer_notes
+  possible_tokens_changed: true
+  errata_classification: operator_possible_tokens_typo
+  errata_impact:
+  - primary60_mappability_change
+  primary60_mappable_added_tokens: []
+  primary60_mappable_removed_tokens: []
+  primary60_unmappable_added_tokens:
+  - OP
+  primary60_unmappable_removed_tokens: []
+  canonical_token_changed: false
+  active_manifest_changed: false
+  possible_tokens_field_source: reviewer_notes
+- case_id: stage5at-token-case-165
+  token_index_0_based: 165
+  row_index_one_based: 21
+  column_index_one_based: 6
+  canonical_token: 0I
+  original_possible_tokens:
+  - 0I
+  - 0j
+  - Oj
+  - Ol
+  corrected_possible_tokens:
+  - 0I
+  - 0l
+  - OI
+  - Ol
+  original_possible_token_fragments:
+  - 0I
+  - 0j
+  - Oj
+  - Ol
+  corrected_possible_token_fragments:
+  - 0I
+  - 0l
+  - OI
+  - Ol
+  added_tokens:
+  - 0l
+  - OI
+  removed_tokens:
+  - 0j
+  - Oj
+  unchanged_tokens:
+  - 0I
+  - Ol
+  field_names_changed:
+  - reviewer_notes
+  possible_tokens_changed: true
+  errata_classification: operator_possible_tokens_typo
+  errata_impact:
+  - primary60_mappability_change
+  primary60_mappable_added_tokens:
+  - 0l
+  primary60_mappable_removed_tokens:
+  - 0j
+  primary60_unmappable_added_tokens:
+  - OI
+  primary60_unmappable_removed_tokens:
+  - Oj
+  canonical_token_changed: false
+  active_manifest_changed: false
+  possible_tokens_field_source: reviewer_notes
+- case_id: stage5at-token-case-175
+  token_index_0_based: 175
+  row_index_one_based: 22
+  column_index_one_based: 8
+  canonical_token: 0l
+  original_possible_tokens:
+  - 0I
+  - 0j
+  - Oj
+  - Ol
+  corrected_possible_tokens:
+  - 0I
+  - 0l
+  - OI
+  - Ol
+  original_possible_token_fragments:
+  - 0I
+  - 0j
+  - Oj
+  - Ol
+  corrected_possible_token_fragments:
+  - 0I
+  - 0l
+  - OI
+  - Ol
+  added_tokens:
+  - 0l
+  - OI
+  removed_tokens:
+  - 0j
+  - Oj
+  unchanged_tokens:
+  - 0I
+  - Ol
+  field_names_changed:
+  - reviewer_notes
+  possible_tokens_changed: true
+  errata_classification: operator_possible_tokens_typo
+  errata_impact:
+  - primary60_mappability_change
+  primary60_mappable_added_tokens:
+  - 0l
+  primary60_mappable_removed_tokens:
+  - 0j
+  primary60_unmappable_added_tokens:
+  - OI
+  primary60_unmappable_removed_tokens:
+  - Oj
+  canonical_token_changed: false
+  active_manifest_changed: false
+  possible_tokens_field_source: reviewer_notes
+- case_id: stage5at-token-case-198
+  token_index_0_based: 198
+  row_index_one_based: 25
+  column_index_one_based: 7
+  canonical_token: 1j
+  original_possible_tokens:
+  - 1I
+  - 1j
+  corrected_possible_tokens:
+  - 1i
+  - 1j
+  original_possible_token_fragments:
+  - 1I
+  - 1j
+  corrected_possible_token_fragments:
+  - 1i
+  - 1j
+  added_tokens:
+  - 1i
+  removed_tokens:
+  - 1I
+  unchanged_tokens:
+  - 1j
+  field_names_changed:
+  - reviewer_notes
+  possible_tokens_changed: true
+  errata_classification: operator_possible_tokens_typo
+  errata_impact:
+  - primary60_mappability_change
+  primary60_mappable_added_tokens:
+  - 1i
+  primary60_mappable_removed_tokens:
+  - 1I
+  primary60_unmappable_added_tokens: []
+  primary60_unmappable_removed_tokens: []
+  canonical_token_changed: false
+  active_manifest_changed: false
+  possible_tokens_field_source: reviewer_notes
+- case_id: stage5at-token-case-199
+  token_index_0_based: 199
+  row_index_one_based: 25
+  column_index_one_based: 8
+  canonical_token: 0I
+  original_possible_tokens:
+  - 0I
+  - 0j
+  - OI
+  - Oj
+  corrected_possible_tokens:
+  - 0I
+  - 0l
+  - OI
+  - Ol
+  original_possible_token_fragments:
+  - 0I
+  - 0j
+  - OI
+  - Oj
+  corrected_possible_token_fragments:
+  - 0I
+  - 0l
+  - OI
+  - Ol
+  added_tokens:
+  - 0l
+  - Ol
+  removed_tokens:
+  - 0j
+  - Oj
+  unchanged_tokens:
+  - 0I
+  - OI
+  field_names_changed:
+  - reviewer_notes
+  possible_tokens_changed: true
+  errata_classification: operator_possible_tokens_typo
+  errata_impact:
+  - string4_branch_blocker_closure
+  - primary60_mappability_change
+  primary60_mappable_added_tokens:
+  - 0l
+  primary60_mappable_removed_tokens:
+  - 0j
+  primary60_unmappable_added_tokens:
+  - Ol
+  primary60_unmappable_removed_tokens:
+  - Oj
+  canonical_token_changed: false
+  active_manifest_changed: false
+  possible_tokens_field_source: reviewer_notes
+template_bodies_committed: false
+execution_allowed: false

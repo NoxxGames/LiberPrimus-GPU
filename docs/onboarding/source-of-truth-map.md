@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BN it names Stage 5BN as latest complete and Stage 5BO as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BO it names Stage 5BO as latest complete and Stage 5BP as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -71,6 +71,11 @@
 - `data/source-harvester/stage5bn-codex-handoff-policy.yaml`: Stage 5BN Codex handoff policy using `codex-output`.
 - `data/project-state/stage5bn-summary.yaml`: Stage 5BN aggregate summary, spreadsheet-supported `0l` closure, inactive addendum status, and validation state.
 - `data/project-state/stage5bn-next-stage-decision.yaml`: Stage 5BN next-stage decision selecting Stage 5BO inactive addendum integration without execution.
+- `data/token-block/stage5bo-*.yaml`: Stage 5BO decision-template source lock, token-case errata, errata-aware inactive option universe, String 4 after-errata branch membership, Stage 5BN addendum integration, source-gap closure, planning constraint, lineage, and future dry-run impact records.
+- `data/historical-route/stage5bo-*.yaml`: Stage 5BO source-gap severity, DWH quarantine, and guardrail records.
+- `data/source-harvester/stage5bo-codex-handoff-policy.yaml`: Stage 5BO Codex handoff policy using `codex-output`.
+- `data/project-state/stage5bo-summary.yaml`: Stage 5BO aggregate summary, operator-errata counts, String 4 full-branch reclassification, and validation state.
+- `data/project-state/stage5bo-next-stage-decision.yaml`: Stage 5BO next-stage decision selecting Stage 5BP Deep Research review before dry-run ingestion.
 - `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 - `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.
@@ -88,6 +93,7 @@
 - `docs/onboarding/bounded-token-block-preflight-workflow.md`: Stage 5AY design, Stage 5AZ repaired bounded preflight manifest workflow, Stage 5BB no-execution runner scaffold boundary, and Stage 5BD dry-run planning boundary.
 - `docs/onboarding/token-block-preflight-runner-scaffold-workflow.md`: Stage 5BB active-manifest and runner-scaffold workflow, with Stage 5BD validation-evidence supersession notes.
 - `docs/onboarding/token-block-preflight-dry-run-workflow.md`: Stage 5BD dry-run planning workflow.
+- `docs/onboarding/stage5bo-token-case-human-review-errata-workflow.md`: Stage 5BO operator-errata workflow.
 - `docs/onboarding/historical-route-source-lock-workflow.md`: Stage 5BF local archive source-lock workflow.
 - `docs/onboarding/local-source-inventory-workflow.md`: local `third_party/` source inventory workflow and raw-data guardrails.
 
@@ -158,3 +164,7 @@ Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bm-sum
 ## Stage 5BN Additions
 
 Stage 5BN adds target-only source-gap closure metadata for String 4 token index `199`. The source-of-truth records are the Stage 5BN YAML files under `data/token-block/`, `data/historical-route/`, `data/source-harvester/`, and `data/project-state/`. Ignored local spreadsheet rows, generated diagnostics, and Codex completion summaries are not source truth.
+
+## Stage 5BO Additions
+
+Stage 5BO adds operator-errata integration metadata for the ignored original/corrected Stage 5AU decision templates. The source-of-truth records are the Stage 5BO YAML files under `data/token-block/`, `data/historical-route/`, `data/source-harvester/`, and `data/project-state/`. Ignored decision-template bodies, generated diagnostics, raw String 4 bodies, and Codex completion summaries are not source truth.

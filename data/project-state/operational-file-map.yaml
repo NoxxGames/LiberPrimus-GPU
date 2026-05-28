@@ -1876,3 +1876,90 @@ records:
   owner_context: codex_agent
   notes: Documents Stage 5BN CLI commands, target-only evidence boundaries,
     inactive addendum handling, ignored review-pack policy, and guardrails.
+- path: data/project-state/stage5bo-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BO aggregate summary.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bo
+  expected_update_frequency: when_operator_errata_or_string4_branch_membership_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records operator-errata counts, case 199 and case 198 corrections,
+    String 4 full-branch reclassification, guardrail state, validation status,
+    Codex handoff path, and Stage 5BP next-stage rationale.
+- path: data/project-state/stage5bo-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5BO next-stage decision.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bo
+  expected_update_frequency: when_string4_next_stage_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Selects Stage 5BP Deep Research review before dry-run ingestion,
+    without token-block execution, byte-stream generation, DWH/hash search,
+    decode, CUDA, scoring, benchmarking, or method-status upgrade.
+- path: data/token-block/stage5bo-token-case-human-review-errata.yaml
+  category: active_data_record
+  purpose: Stage 5BO compact operator token-case errata.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bo
+  expected_update_frequency: when_operator_template_errata_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records changed possible-token fragments and parsed token sets without
+    committing ignored decision-template bodies.
+- path: data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+  category: active_data_record
+  purpose: Stage 5BO String 4 after-errata branch-membership classification.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bo
+  expected_update_frequency: when_string4_branch_membership_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records full_branch_match after operator errata, with 249 canonical
+    matches, 6 Stage 5AW-supported noncanonical positions, 1 operator-errata
+    supported noncanonical position, and 0 unsupported positions.
+- path: data/token-block/stage5bo-errata-aware-token-option-universe.yaml
+  category: active_data_record
+  purpose: Stage 5BO inactive errata-aware token-option universe.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bo
+  expected_update_frequency: when_operator_errata_universe_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Inactive planning sidecar only; it does not mutate Stage 5AW, Stage
+    5AY, Stage 5AZ, or Stage 5BD active records.
+- path: docs/experiments/stage-5bo-token-case-human-review-errata-integration.md
+  category: operational_status_doc
+  purpose: Stage 5BO metadata-only experiment/source-gap note.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bo
+  expected_update_frequency: when_stage5bo_records_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents operator errata, String 4 after-errata counts, inactive
+    planning status, and no-execution guardrails.
+- path: docs/onboarding/stage5bo-token-case-human-review-errata-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5BO operator workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bo
+  expected_update_frequency: when_stage5bo_commands_or_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents Stage 5BO CLI commands, ignored template boundaries,
+    inactive option-universe handling, and guardrails.

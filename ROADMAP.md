@@ -4,9 +4,9 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5BN String 4 unsupported-position source-gap closure and human-review pack preparation is complete. It consumes Stage 5BM String 4 branch-crosswalk metadata, Stage 5AW repaired branch metadata, Stage 5AP/5AR coordinate lineage, and the ignored local spreadsheet target row. It records Stage 5AW active support for `0l` as false, spreadsheet support for `0l` at token index 199 as true, and an inactive review-only addendum while keeping Stage 5BD dry-run records valid and execution gates blocked.
+Stage 5BO token-case human-review errata integration and String 4 full-branch reclassification is complete. It consumes the ignored original and corrected Stage 5AU decision templates as local operator inputs, records 8 compact operator errata, integrates Stage 5BN's inactive `0l` addendum as operator-errata planning metadata, and reclassifies String 4 as a full branch match in the inactive planning universe while keeping Stage 5BD dry-run records valid and execution gates blocked.
 
-The next recommended prompt is Stage 5BO - String 4 inactive token-option addendum integration, without execution. Token-block execution, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5BP - Deep Research review of Stage 5BO operator-errata integration before dry-run ingestion. Token-block execution, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

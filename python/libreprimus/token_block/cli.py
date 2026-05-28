@@ -275,6 +275,14 @@ from .stage5bn import (
     load_stage5bn_summary,
     validate_stage5bn,
 )
+from .stage5bo import (
+    DATA_PATHS as STAGE5BO_DATA_PATHS,
+    ORIGINAL_TEMPLATE_PATH as STAGE5BO_ORIGINAL_TEMPLATE_PATH,
+    RESULTS_DIR as STAGE5BO_RESULTS_DIR,
+    build_stage5bo_decision_template_errata,
+    load_stage5bo_summary,
+    validate_stage5bo,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -2822,6 +2830,150 @@ def show_stage5bn_summary_command(
     console.print(f"stage_id={payload.get('stage_id')}")
     console.print(f"status={payload.get('status')}")
     console.print(f"unsupported_position_closure_status={payload.get('unsupported_position_closure_status')}")
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+@app.command("build-stage5bo-decision-template-errata")
+def build_stage5bo_decision_template_errata_command(
+    original_template: Path = typer.Option(STAGE5BO_ORIGINAL_TEMPLATE_PATH),
+    corrected_template: Path = typer.Option(
+        Path("human-review-packs/stage5au/token-case-review-v2/decision-template-corrected.yaml")
+    ),
+    stage5bn_summary: Path = typer.Option(STAGE5BN_DATA_PATHS["summary"]),
+    stage5bn_addendum: Path = typer.Option(STAGE5BN_DATA_PATHS["proposed_addendum"]),
+    stage5bm_branch_membership: Path = typer.Option(STAGE5BM_DATA_PATHS["branch_membership"]),
+    stage5aw_branch_manifest: Path = typer.Option(STAGE5AW_REPAIRED_BRANCH_MANIFEST_PATH),
+    stage5ay_branch_eligibility: Path = typer.Option(STAGE5AY_BRANCH_ELIGIBILITY_POLICY_PATH),
+    results_dir: Path = typer.Option(STAGE5BO_RESULTS_DIR),
+    out_source_lock: Path = typer.Option(STAGE5BO_DATA_PATHS["source_lock"]),
+    out_errata: Path = typer.Option(STAGE5BO_DATA_PATHS["errata"]),
+    out_impact: Path = typer.Option(STAGE5BO_DATA_PATHS["impact"]),
+    out_universe: Path = typer.Option(STAGE5BO_DATA_PATHS["universe"]),
+    out_string4: Path = typer.Option(STAGE5BO_DATA_PATHS["string4"]),
+    out_addendum_integration: Path = typer.Option(STAGE5BO_DATA_PATHS["addendum"]),
+    out_gap_closure: Path = typer.Option(STAGE5BO_DATA_PATHS["gap_closure"]),
+    out_planning_constraint: Path = typer.Option(STAGE5BO_DATA_PATHS["planning_constraint"]),
+    out_lineage: Path = typer.Option(STAGE5BO_DATA_PATHS["lineage"]),
+    out_future_impact: Path = typer.Option(STAGE5BO_DATA_PATHS["future_impact"]),
+    out_source_gap_severity: Path = typer.Option(STAGE5BO_DATA_PATHS["gap_severity"]),
+    out_dwh: Path = typer.Option(STAGE5BO_DATA_PATHS["dwh"]),
+    out_guardrail: Path = typer.Option(STAGE5BO_DATA_PATHS["guardrail"]),
+    out_handoff: Path = typer.Option(STAGE5BO_DATA_PATHS["handoff"]),
+    out_summary: Path = typer.Option(STAGE5BO_DATA_PATHS["summary"]),
+    out_next_stage: Path = typer.Option(STAGE5BO_DATA_PATHS["next_stage"]),
+) -> None:
+    payload = build_stage5bo_decision_template_errata(
+        original_template=original_template,
+        corrected_template=corrected_template,
+        stage5bn_summary=stage5bn_summary,
+        stage5bn_addendum=stage5bn_addendum,
+        stage5bm_branch_membership=stage5bm_branch_membership,
+        stage5aw_branch_manifest=stage5aw_branch_manifest,
+        stage5ay_branch_eligibility=stage5ay_branch_eligibility,
+        results_dir=results_dir,
+        out_source_lock=out_source_lock,
+        out_errata=out_errata,
+        out_impact=out_impact,
+        out_universe=out_universe,
+        out_string4=out_string4,
+        out_addendum_integration=out_addendum_integration,
+        out_gap_closure=out_gap_closure,
+        out_planning_constraint=out_planning_constraint,
+        out_lineage=out_lineage,
+        out_future_impact=out_future_impact,
+        out_source_gap_severity=out_source_gap_severity,
+        out_dwh=out_dwh,
+        out_guardrail=out_guardrail,
+        out_handoff=out_handoff,
+        out_summary=out_summary,
+        out_next_stage=out_next_stage,
+    )
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"original_decision_template_found={str(payload.get('original_decision_template_found')).lower()}")
+    console.print(f"corrected_decision_template_found={str(payload.get('corrected_decision_template_found')).lower()}")
+    console.print(f"token_case_errata_record_count={payload.get('token_case_errata_record_count')}")
+    console.print(f"case_199_operator_errata_found={str(payload.get('case_199_operator_errata_found')).lower()}")
+    console.print(f"case_198_operator_errata_found={str(payload.get('case_198_operator_errata_found')).lower()}")
+    console.print(
+        "string4_branch_membership_status_after_errata="
+        f"{payload.get('string4_branch_membership_status_after_errata')}"
+    )
+    console.print(
+        "string4_unsupported_position_count_after_errata="
+        f"{payload.get('string4_unsupported_position_count_after_errata')}"
+    )
+    console.print(
+        "future_token_block_execution_remains_blocked="
+        f"{str(payload.get('future_token_block_execution_remains_blocked')).lower()}"
+    )
+
+
+@app.command("validate-stage5bo")
+def validate_stage5bo_command(
+    source_lock: Path = typer.Option(STAGE5BO_DATA_PATHS["source_lock"]),
+    errata: Path = typer.Option(STAGE5BO_DATA_PATHS["errata"]),
+    impact: Path = typer.Option(STAGE5BO_DATA_PATHS["impact"]),
+    universe: Path = typer.Option(STAGE5BO_DATA_PATHS["universe"]),
+    string4: Path = typer.Option(STAGE5BO_DATA_PATHS["string4"]),
+    addendum: Path = typer.Option(STAGE5BO_DATA_PATHS["addendum"]),
+    gap_closure: Path = typer.Option(STAGE5BO_DATA_PATHS["gap_closure"]),
+    planning_constraint: Path = typer.Option(STAGE5BO_DATA_PATHS["planning_constraint"]),
+    lineage: Path = typer.Option(STAGE5BO_DATA_PATHS["lineage"]),
+    future_impact: Path = typer.Option(STAGE5BO_DATA_PATHS["future_impact"]),
+    gap_severity: Path = typer.Option(STAGE5BO_DATA_PATHS["gap_severity"]),
+    dwh: Path = typer.Option(STAGE5BO_DATA_PATHS["dwh"]),
+    guardrail: Path = typer.Option(STAGE5BO_DATA_PATHS["guardrail"]),
+    handoff: Path = typer.Option(STAGE5BO_DATA_PATHS["handoff"]),
+    summary: Path = typer.Option(STAGE5BO_DATA_PATHS["summary"]),
+    next_stage: Path = typer.Option(STAGE5BO_DATA_PATHS["next_stage"]),
+    results_dir: Path = typer.Option(STAGE5BO_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5bo(
+        source_lock=source_lock,
+        errata=errata,
+        impact=impact,
+        universe=universe,
+        string4=string4,
+        addendum=addendum,
+        gap_closure=gap_closure,
+        planning_constraint=planning_constraint,
+        lineage=lineage,
+        future_impact=future_impact,
+        gap_severity=gap_severity,
+        dwh=dwh,
+        guardrail=guardrail,
+        handoff=handoff,
+        summary=summary,
+        next_stage=next_stage,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5bo_valid=true")
+
+
+@app.command("stage5bo-summary")
+def stage5bo_summary_command(
+    summary: Path = typer.Option(STAGE5BO_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5bo_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"token_case_errata_record_count={payload.get('token_case_errata_record_count')}")
+    console.print(f"case_199_operator_errata_found={str(payload.get('case_199_operator_errata_found')).lower()}")
+    console.print(f"case_198_operator_errata_found={str(payload.get('case_198_operator_errata_found')).lower()}")
+    console.print(
+        "string4_branch_membership_status_after_errata="
+        f"{payload.get('string4_branch_membership_status_after_errata')}"
+    )
+    console.print(
+        "stage5bn_addendum_integrated_as_inactive="
+        f"{str(payload.get('stage5bn_addendum_integrated_as_inactive')).lower()}"
+    )
     console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
 
 

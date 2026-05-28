@@ -1,0 +1,75 @@
+record_type: stage5bo_summary
+schema: schemas/project-state/stage5bo-summary-v0.schema.json
+stage_id: stage-5bo
+stage_title: Stage 5BO - Token-case human-review errata integration and String 4 full-branch
+  reclassification, without execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bn
+source_previous_stage_commit: a55c46ff44b29166ea2a646d6503f6810729c23b
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+status: complete
+original_decision_template_found: true
+corrected_decision_template_found: true
+original_decision_template_sha256: dd9e3ee0fe5dccd70fd19dbca864dbb57706c113f48777abe546b98d9d8f25f7
+corrected_decision_template_sha256: cca9749756b7e74720a56fcdb8ee6f82f8750ed78d8758a5591263b1e5624f22
+original_decision_template_size_bytes: 101981
+corrected_decision_template_size_bytes: 101969
+token_case_errata_record_count: 8
+case_199_operator_errata_found: true
+case_198_operator_errata_found: true
+case_199_original_possible_tokens:
+- 0I
+- 0j
+- OI
+- Oj
+case_199_corrected_possible_tokens:
+- 0I
+- 0l
+- OI
+- Ol
+case_198_original_possible_tokens:
+- 1I
+- 1j
+case_198_corrected_possible_tokens:
+- 1i
+- 1j
+string4_branch_membership_status_after_errata: full_branch_match
+string4_canonical_match_count: 249
+string4_stage5aw_supported_noncanonical_count: 6
+string4_operator_errata_supported_noncanonical_count: 1
+string4_unsupported_position_count_after_errata: 0
+string4_parser_inconclusive_position_count_after_errata: 0
+stage5bn_addendum_integrated_as_inactive: true
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+stage5bd_dry_run_records_remain_valid: true
+future_token_block_execution_remains_blocked: true
+parallel_validation_harness_used: true
+parallel_validation_run_passed: true
+codex_completion_summary_path: codex-output/stage5bo-codex-completion.md
+codex_output_directory_used: false
+recommended_next_prompt_type: deep_research_review
+recommended_next_stage_title: Stage 5BP - Deep Research review of Stage 5BO operator-errata
+  integration before dry-run ingestion
+recommended_next_stage_reason: String 4 is a full planning-only branch match after
+  operator errata; independent review should precede any ingestion.
+source_record_paths:
+- data/token-block/stage5bo-decision-template-correction-source-lock.yaml
+- data/token-block/stage5bo-token-case-human-review-errata.yaml
+- data/token-block/stage5bo-token-case-correction-impact-summary.yaml
+- data/token-block/stage5bo-errata-aware-token-option-universe.yaml
+- data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+- data/token-block/stage5bo-stage5bn-addendum-integration.yaml
+- data/token-block/stage5bo-string4-source-gap-closure-after-errata.yaml
+- data/token-block/stage5bo-string4-planning-constraint-update.yaml
+- data/token-block/stage5bo-token-block-lineage-preservation.yaml
+- data/token-block/stage5bo-future-dry-run-planning-impact.yaml
+- data/historical-route/stage5bo-source-gap-severity-update.yaml
+- data/historical-route/stage5bo-dwh-quarantine-reaffirmation.yaml
+- data/historical-route/stage5bo-guardrail.yaml
+- data/source-harvester/stage5bo-codex-handoff-policy.yaml
+generated_outputs_committed: false
+execution_allowed: false

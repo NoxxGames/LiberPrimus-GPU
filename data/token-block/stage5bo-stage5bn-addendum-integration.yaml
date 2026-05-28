@@ -1,0 +1,24 @@
+record_type: stage5bo_stage5bn_addendum_integration
+schema: schemas/token-block/stage5bo-stage5bn-addendum-integration-v0.schema.json
+stage_id: stage-5bo
+stage_title: Stage 5BO - Token-case human-review errata integration and String 4 full-branch
+  reclassification, without execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bn
+source_previous_stage_commit: a55c46ff44b29166ea2a646d6503f6810729c23b
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+source_stage5bn_addendum: data/token-block/stage5bn-proposed-token-option-addendum.yaml
+source_stage5bn_spreadsheet_audit: data/token-block/stage5bn-local-spreadsheet-target-cell-audit.yaml
+source_stage5bo_errata: data/token-block/stage5bo-token-case-human-review-errata.yaml
+target_token_index_0_based: 199
+stage5bn_proposed_option: 0l
+stage5bo_operator_errata_supports_option: true
+addendum_integration_status: integrated_as_inactive_operator_errata
+active_stage5aw_records_mutated: false
+stage5bn_history_rewritten: false
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+execution_allowed: false

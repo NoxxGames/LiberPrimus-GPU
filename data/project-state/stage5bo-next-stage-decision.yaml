@@ -1,0 +1,37 @@
+record_type: stage5bo_next_stage_decision
+schema: schemas/project-state/stage5bo-next-stage-decision-v0.schema.json
+stage_id: stage-5bo
+stage_title: Stage 5BO - Token-case human-review errata integration and String 4 full-branch
+  reclassification, without execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bn
+source_previous_stage_commit: a55c46ff44b29166ea2a646d6503f6810729c23b
+source_deep_research_stage: stage-5bl
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+selected_next_stage_id: stage-5bp
+selected_next_stage_title: Stage 5BP - Deep Research review of Stage 5BO operator-errata
+  integration before dry-run ingestion
+selected_next_prompt_type: deep_research_review
+selected_next_stage_reason: String 4 is a full planning-only branch match after operator
+  errata; independent review should precede any ingestion.
+string4_active_input_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+future_token_block_execution_remains_blocked: true
+requires_deep_research_review_before_ingestion: true
+ai_ml_selected: false
+benchmark_selected: false
+byte_stream_generation_selected: false
+canonical_corpus_activation_selected: false
+cuda_selected: false
+decode_selected: false
+dwh_hash_search_selected: false
+method_status_upgrade_selected: false
+ocr_selected: false
+page_boundary_finalisation_selected: false
+scored_experiments_selected: false
+stego_execution_selected: false
+token_block_execution_selected: false
+variant_materialisation_selected: false
+execution_allowed: false

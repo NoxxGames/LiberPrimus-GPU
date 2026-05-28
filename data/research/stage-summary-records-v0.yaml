@@ -1432,3 +1432,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5BN records target token index 199, Stage 5AP canonical token `0I`, String 4 inferred token `0l`, Stage 5AW allowed tokens `0I`, `0j`, `OI`, and `Oj`, Stage 5AW active support for `0l` false, spreadsheet target row identified true, spreadsheet supports `0l` true, closure status `closed_spreadsheet_support_found`, inactive addendum status `proposed_inactive_review_only`, human-review pack generated false, human review required false, canonical transcription changed false, active token-block manifests changed false, Stage 5BD dry-run records valid, and future execution blocked. It performs no token experiment, byte-stream generation, variant materialisation, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5bo
+    title: Token-case human-review errata integration and String 4 full-branch reclassification, without execution
+    status: complete
+    category: infrastructure
+    summary: Diffed the ignored original and corrected Stage 5AU decision templates, recorded compact operator errata, built an inactive errata-aware option universe, and reclassified String 4 branch membership without execution.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5BO commands for operator-errata build, validation, and summary display."
+      - Stage 5BO decision-template source lock, token-case errata, correction impact, inactive option universe, String 4 after-errata branch membership, Stage 5BN addendum integration, source-gap closure, planning constraint, lineage, future dry-run impact, source-gap severity, DWH quarantine, guardrail, Codex handoff, summary, and next-stage records.
+      - Summary-only developer/research logs; ignored generated diagnostics under `experiments/results/token-block/stage5bo/` and `experiments/results/historical-route/stage5bo/`; local handoff under `codex-output/stage5bo-codex-completion.md`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5BO records 8 token-case errata, case 199 correction from `0I|0j|OI|Oj` to `0I|0l|OI|Ol`, case 198 correction from `1I|1j` to `1i|1j`, String 4 branch-membership status full_branch_match, 249 canonical matches, 6 Stage 5AW-supported noncanonical positions, 1 operator-errata-supported noncanonical position, 0 unsupported positions, 0 parser-inconclusive positions, Stage 5BN addendum integrated as inactive, canonical transcription changed false, active token-block manifests changed false, Stage 5BD dry-run records valid, and future execution blocked. It performs no template body commit, token experiment, byte-stream generation, variant materialisation, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
