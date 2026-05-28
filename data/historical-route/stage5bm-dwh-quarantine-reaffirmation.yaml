@@ -1,0 +1,21 @@
+record_type: stage5bm_dwh_quarantine_reaffirmation
+schema: schemas/historical-route/stage5bm-dwh-quarantine-reaffirmation-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+source_stage5bk_dwh_record: data/historical-route/stage5bk-dwh-quarantine-reaffirmation.yaml
+source_stage5bf_dwh_record: data/historical-route/stage5bf-dwh-historical-context.yaml
+dwh_expansion: Deep Web Hash
+dwh_operational_status: not_operational
+token_block_dwh_relationship_status: speculative_source_lock_required
+string4_dwh_status: not_a_dwh_target
+hash_search_performed: false
+hash_preimage_search_performed: false
+hash_comparison_performed_as_experiment: false
+decode_attempt_performed: false
+execution_allowed: false

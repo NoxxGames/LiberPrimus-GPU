@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AH updates that map for stage-ledger staleness coverage, Stage 5AI updates it for curated bundle metadata, Stage 5AJ updates it for UsefulFiles integration and extraction-fidelity policy, Stage 5AK updates it for community-facts claim curation, Stage 5AL updates it for website-ingest/Deep Research export staging, Stage 5AM updates it for the static research index renderer, Stage 5AN updates it for the private content pack and hosted private-content library, Stage 5AP updates it for the page 49-51 token-block source-lock, Stage 5AR updates it for original-image coordinate locking, Stage 5AT updates it for token case-review pack records, Stage 5AU updates it for review-pack v2 usability repair and Stage 5AV manual review direction, Stage 5AW updates it for decision-parser repair records, Stage 5AX updates it for parallel validation records, Stage 5AY updates it for bounded preflight design records, Stage 5AZ updates it for repaired bounded preflight manifest-integrity records, Stage 5BB updates it for no-execution runner-scaffold records, Stage 5BD updates it for no-byte-stream dry-run planning, Stage 5BF updates it for local historical-route source-lock plus Stage 5BG review planning, Stage 5BI updates it for Fandom/source-lock triage plus Stage 5BJ crosswalk closure, Stage 5BJ updates it for original/archive crosswalk closure plus Stage 5BK planning integration, and Stage 5BK updates it for historical-route planning constraints plus Stage 5BL review. The YAML record is the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Stage 5AH updates that map for stage-ledger staleness coverage, Stage 5AI updates it for curated bundle metadata, Stage 5AJ updates it for UsefulFiles integration and extraction-fidelity policy, Stage 5AK updates it for community-facts claim curation, Stage 5AL updates it for website-ingest/Deep Research export staging, Stage 5AM updates it for the static research index renderer, Stage 5AN updates it for the private content pack and hosted private-content library, Stage 5AP updates it for the page 49-51 token-block source-lock, Stage 5AR updates it for original-image coordinate locking, Stage 5AT updates it for token case-review pack records, Stage 5AU updates it for review-pack v2 usability repair and Stage 5AV manual review direction, Stage 5AW updates it for decision-parser repair records, Stage 5AX updates it for parallel validation records, Stage 5AY updates it for bounded preflight design records, Stage 5AZ updates it for repaired bounded preflight manifest-integrity records, Stage 5BB updates it for no-execution runner-scaffold records, Stage 5BD updates it for no-byte-stream dry-run planning, Stage 5BF updates it for local historical-route source-lock plus Stage 5BG review planning, Stage 5BI updates it for Fandom/source-lock triage plus Stage 5BJ crosswalk closure, Stage 5BJ updates it for original/archive crosswalk closure plus Stage 5BK planning integration, Stage 5BK updates it for historical-route planning constraints plus Stage 5BL review, and Stage 5BM updates it for String 4 branch-crosswalk repair plus Stage 5BN source-gap closure. The YAML record is the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 
@@ -43,14 +43,14 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5BK" `
-  --expected-next-stage "Stage 5BL"
+  --expected-latest-stage "Stage 5BM" `
+  --expected-next-stage "Stage 5BN"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5BK" `
-  --expected-next-stage "Stage 5BL"
+  --expected-latest-stage "Stage 5BM" `
+  --expected-next-stage "Stage 5BN"
 ```
 ## Stage 5BF Coverage
 
@@ -63,6 +63,10 @@ The operational file map includes Stage 5BI Fandom page triage, item source-lock
 ## Stage 5BK Coverage
 
 The operational file map includes Stage 5BK iddqd-v2 source-root, tree, source-candidate, byte-string, transcription, translation/key-lineage, positive-control context, source-gap, planning constraint, family planning status, source-gap severity, Stage 5BJ errata, token-block constraint, guardrail, summary, next-stage decision, experiment note, CLI reference, developer log, and research log records. The local Codex completion summary under `codex-output/**` is intentionally ignored; `codex_output/**` is deprecated and must not be created for current handoffs.
+
+## Stage 5BM Coverage
+
+The operational file map includes Stage 5BM Stage 5BL findings integration, review-packaging warning, String 4 source restatement, inverse policy, mismatch analysis, branch-membership, ambiguity coverage, planning constraint, source-gap severity, historical-family granularity, Stage 5BJ errata supersession, DWH quarantine, lineage preservation, future dry-run planning impact, guardrail, summary, next-stage decision, experiment note, workflow note, developer log, and research log records. The local Codex completion summary under `codex-output/**` is intentionally ignored; `codex_output/**` is deprecated and must not be created for current handoffs.
 
 ## Stage 5BJ Coverage
 

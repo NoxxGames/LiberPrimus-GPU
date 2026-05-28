@@ -1,0 +1,28 @@
+record_type: stage5bm_historical_family_granularity_update
+schema: schemas/historical-route/stage5bm-historical-family-granularity-update-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+source_stage5bk_family_status: data/historical-route/stage5bk-historical-family-planning-status.yaml
+granularity_update_status: targeted_addendum_only
+new_or_refined_family_rows:
+- family_id: token_block_page49_51_string4_branch_context
+  parent_family_id: token_block_page49_51_context
+  planning_status: partial_branch_context_only
+  execution_allowed: false
+- family_id: pgp_false_path_warning_and_7a35090f_gate
+  parent_family_id: authenticity_pgp_route
+  planning_status: blocked_authenticity_gate_required
+  execution_allowed: false
+- family_id: stego_outguess_openpuff_mp3_positive_controls
+  parent_family_id: stego_audio_positive_controls
+  planning_status: positive_control_only_or_review_before_execution
+  execution_allowed: false
+family_status_records_mutated: false
+method_status_upgraded: false
+execution_allowed: false

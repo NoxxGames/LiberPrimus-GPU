@@ -1,0 +1,23 @@
+record_type: stage5bm_stage5bj_errata_supersession
+schema: schemas/historical-route/stage5bm-stage5bj-errata-supersession-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+source_stage5bk_errata: data/historical-route/stage5bk-stage5bj-crosswalk-review-and-errata.yaml
+errata_id: stage5bm-stage5bj-hidden-content-4gq25-planning-supersession
+source_stage5bj_record_id: stage5bj-page-body-hidden-original-image
+source_url: https://uncovering-cicada.fandom.com/wiki/Hidden_content_of_original_image_(January_4th_2013)
+problem: Stage 5BJ linked a 2013 hidden-original-image Fandom page-body row to the
+  2016 4gq25 media fixture.
+corrected_planning_status: media_source_reference_or_positive_control_only_not_exact_page_body_snapshot
+supersedes_for_planning: true
+stage5bj_historical_records_mutated: false
+route_equivalent_file_is_page_body_snapshot: false
+route_equivalent_file_is_media_fixture: true
+execution_allowed: false
+image_forensics_performed: false

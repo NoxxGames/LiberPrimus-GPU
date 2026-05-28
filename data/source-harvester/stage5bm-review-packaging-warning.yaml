@@ -1,0 +1,19 @@
+record_type: stage5bm_review_packaging_warning
+schema: schemas/source-harvester/stage5bm-review-packaging-warning-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+zip_review_sufficient: true
+exact_final_commit_pin_missing_from_review_zip: true
+ignored_iddqd_v2_tree_absent_from_review_zip: true
+warning_is_stage_failure: false
+recommended_future_resolution:
+- include archive/commit marker in future review ZIPs
+- include compact local-source-root marker metadata where ignored trees are omitted
+- do not commit raw third_party bodies
+execution_allowed: false

@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5BJ" \
-    --expected-next-stage "Stage 5BK" \
+    --expected-latest-stage "Stage 5BM" \
+    --expected-next-stage "Stage 5BN" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5BJ" \
-    --expected-next-stage "Stage 5BK" \
+    --expected-latest-stage "Stage 5BM" \
+    --expected-next-stage "Stage 5BN" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5BJ",
+        expected_latest_stage="Stage 5BM",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5BJ",
+            "expected_latest_stage": "Stage 5BM",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2530,6 +2530,19 @@ git check-ignore -q "$stage5bk_token_block_results_root/token_block_impact.json"
 git check-ignore -q "third_party/CiadaSolversIddqd_v2/example.txt"
 git check-ignore -q "third_party/CicadaSolversIddqd_v2/example.txt"
 git check-ignore -q "codex-output/stage5bk-codex-completion.md"
+
+echo "Validating Stage 5BM String 4 branch-crosswalk repair records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5bm
+stage5bm_token_results_root="experiments"/"results"/"token-block"/"stage5bm"
+stage5bm_historical_results_root="experiments"/"results"/"historical-route"/"stage5bm"
+git check-ignore -q "$stage5bm_token_results_root/summary.json"
+git check-ignore -q "$stage5bm_token_results_root/string4-stage5ap-mismatch-table.json"
+git check-ignore -q "$stage5bm_historical_results_root/summary.json"
+git check-ignore -q "codex-output/stage5bm-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5BM" >&2
+    exit 1
+fi
 
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

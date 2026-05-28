@@ -1,0 +1,28 @@
+record_type: stage5bm_string4_planning_constraint
+schema: schemas/token-block/stage5bm-string4-planning-constraint-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+source_branch_membership: data/token-block/stage5bm-string4-stage5aw-branch-membership.yaml
+planning_constraint_id: stage5bm-string4-not-active-input-until-reviewed
+planning_effect: source_gap
+string4_active_input_allowed: false
+string4_execution_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_future_use_requires:
+- stage5bm_branch_membership_record
+- deep_research_review_of_stage5bm
+- explicit future Codex planning-ingestion stage
+- no-execution gate review
+- source-gap closure if unsupported positions remain
+stage5bd_dry_run_records_remain_valid: true
+future_token_block_execution_remains_blocked: true
+requires_deep_research_review_before_dry_run_context_ingestion: false
+requires_gap_closure_before_any_ingestion: true
+execution_allowed: false

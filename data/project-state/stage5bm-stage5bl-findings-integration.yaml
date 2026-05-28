@@ -1,0 +1,24 @@
+record_type: stage5bm_stage5bl_findings_integration
+schema: schemas/project-state/stage5bm-stage5bl-findings-integration-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+source_deep_research_report: 09_LiberPrimus-GPU-Stage-5BL-Deep-Research-Review.md
+stage5bl_verdict: accept_with_warnings
+stage5bl_primary_warning: string4_stage5aw_branch_membership_unreconciled
+stage5bl_findings_integrated:
+- stage5bk_safe_metadata_only
+- string1_to_3_crosswalk_green
+- string4_mismatch_yellow
+- planning_constraints_yellow
+- family_granularity_yellow
+- source_gap_severity_missing_string4_row
+- dwh_quarantine_green
+- guardrails_green
+stage5bl_recommended_next_stage: stage-5bm
+execution_selected: false

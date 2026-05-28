@@ -1,0 +1,80 @@
+record_type: stage5bm_string4_stage5ap_mismatch_analysis
+schema: schemas/token-block/stage5bm-string4-stage5ap-mismatch-analysis-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+source_string4_restatement: data/token-block/stage5bm-string4-source-restatement.yaml
+source_stage5ap_mapping: data/token-block/stage5ap-token-block-mapping-preflight.yaml
+source_stage5ap_transcription: data/token-block/stage5ap-token-block-canonical-transcription.yaml
+string4_reparsed_from_local_source: true
+stage5ap_token_count: 256
+string4_decoded_byte_count: 256
+stage5ap_primary60_decoded_byte_sha256: 876a6397b1e0191e50cf9c67812c9640f0ff4cd2df71ac29d1aaf7fd3c177ace
+string4_decoded_byte_sha256: 3b9b07d9a26e6d55c432d94d2661fdff3c2b348daed06821f2bdb23184a4b290
+string4_matches_stage5ap_primary60_bytes: false
+mismatch_count: 7
+canonical_match_count: 249
+first_mismatch_index_0_based: 25
+last_mismatch_index_0_based: 246
+mismatch_summary_records:
+- token_index_0_based: 25
+  row_index_one_based: 4
+  column_index_one_based: 2
+  stage5ap_canonical_token: 3l
+  string4_inferred_token: 3I
+  mismatch_class_guess: I_l
+  stage5aw_membership_status: noncanonical_option_supported_by_stage5aw
+- token_index_0_based: 45
+  row_index_one_based: 6
+  column_index_one_based: 6
+  stage5ap_canonical_token: 1I
+  string4_inferred_token: 1l
+  mismatch_class_guess: I_l
+  stage5aw_membership_status: noncanonical_option_supported_by_stage5aw
+- token_index_0_based: 50
+  row_index_one_based: 7
+  column_index_one_based: 3
+  stage5ap_canonical_token: 0I
+  string4_inferred_token: 0l
+  mismatch_class_guess: I_l
+  stage5aw_membership_status: noncanonical_option_supported_by_stage5aw
+- token_index_0_based: 90
+  row_index_one_based: 12
+  column_index_one_based: 3
+  stage5ap_canonical_token: 3l
+  string4_inferred_token: 3I
+  mismatch_class_guess: I_l
+  stage5aw_membership_status: noncanonical_option_supported_by_stage5aw
+- token_index_0_based: 175
+  row_index_one_based: 22
+  column_index_one_based: 8
+  stage5ap_canonical_token: 0l
+  string4_inferred_token: 0I
+  mismatch_class_guess: I_l
+  stage5aw_membership_status: noncanonical_option_supported_by_stage5aw
+- token_index_0_based: 199
+  row_index_one_based: 25
+  column_index_one_based: 8
+  stage5ap_canonical_token: 0I
+  string4_inferred_token: 0l
+  mismatch_class_guess: unsupported_external
+  stage5aw_membership_status: unsupported_by_stage5aw
+- token_index_0_based: 246
+  row_index_one_based: 31
+  column_index_one_based: 7
+  stage5ap_canonical_token: 3l
+  string4_inferred_token: 3I
+  mismatch_class_guess: I_l
+  stage5aw_membership_status: noncanonical_option_supported_by_stage5aw
+full_mismatch_table_committed: false
+ignored_full_mismatch_table_path: experiments/results/token-block/stage5bm/string4-stage5ap-mismatch-table.json
+reconstructed_token_stream_committed: false
+real_byte_stream_generated: false
+execution_allowed: false
+hash_search_performed: false
+decode_attempt_performed: false

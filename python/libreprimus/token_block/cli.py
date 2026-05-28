@@ -259,6 +259,14 @@ from .preflight_runner.stage5bd import (
     validate_stage5bd,
     validate_stage5bd_execution_gates,
 )
+from .stage5bm import (
+    DATA_PATHS as STAGE5BM_DATA_PATHS,
+    HISTORICAL_RESULTS_DIR as STAGE5BM_HISTORICAL_RESULTS_DIR,
+    RESULTS_DIR as STAGE5BM_RESULTS_DIR,
+    build_stage5bm_string4_reconciliation,
+    stage5bm_summary,
+    validate_stage5bm,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -2566,6 +2574,66 @@ def validate_stage5bd_command(
     if errors:
         raise typer.Exit(1)
     console.print("token_block_stage5bd_valid=true")
+
+
+@app.command("build-stage5bm-string4-reconciliation")
+def build_stage5bm_string4_reconciliation_command(
+    results_dir: Path = typer.Option(STAGE5BM_RESULTS_DIR),
+    historical_results_dir: Path = typer.Option(STAGE5BM_HISTORICAL_RESULTS_DIR),
+) -> None:
+    summary = build_stage5bm_string4_reconciliation(
+        results_dir=results_dir,
+        historical_results_dir=historical_results_dir,
+    )
+    console.print(f"string4_branch_membership_status={summary['string4_branch_membership_status']}")
+    console.print(f"string4_canonical_match_count={summary['string4_canonical_match_count']}")
+    console.print(f"string4_stage5aw_supported_noncanonical_count={summary['string4_stage5aw_supported_noncanonical_count']}")
+    console.print(f"string4_unsupported_position_count={summary['string4_unsupported_position_count']}")
+    console.print(f"future_token_block_execution_remains_blocked={summary['future_token_block_execution_remains_blocked']}")
+
+
+@app.command("validate-stage5bm-string4-reconciliation")
+def validate_stage5bm_string4_reconciliation_command(
+    results_dir: Path = typer.Option(STAGE5BM_RESULTS_DIR),
+    summary: Path = typer.Option(STAGE5BM_DATA_PATHS["summary"]),
+) -> None:
+    counts, errors = validate_stage5bm(results_dir=results_dir, summary=summary)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5bm_string4_reconciliation_valid=true")
+
+
+@app.command("stage5bm-summary")
+def stage5bm_summary_command(
+    summary: Path = typer.Option(STAGE5BM_DATA_PATHS["summary"]),
+) -> None:
+    payload = stage5bm_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"string4_branch_membership_status={payload.get('string4_branch_membership_status')}")
+    console.print(f"string4_canonical_match_count={payload.get('string4_canonical_match_count')}")
+    console.print(f"string4_stage5aw_supported_noncanonical_count={payload.get('string4_stage5aw_supported_noncanonical_count')}")
+    console.print(f"string4_unsupported_position_count={payload.get('string4_unsupported_position_count')}")
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+@app.command("validate-stage5bm")
+def validate_stage5bm_command(
+    results_dir: Path = typer.Option(STAGE5BM_RESULTS_DIR),
+    summary: Path = typer.Option(STAGE5BM_DATA_PATHS["summary"]),
+) -> None:
+    counts, errors = validate_stage5bm(results_dir=results_dir, summary=summary)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5bm_valid=true")
 
 
 def register(root_app: typer.Typer) -> None:

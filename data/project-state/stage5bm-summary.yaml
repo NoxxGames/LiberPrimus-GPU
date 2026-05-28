@@ -1,0 +1,72 @@
+record_type: stage5bm_summary
+schema: schemas/project-state/stage5bm-summary-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+status: complete
+source_stage_ids:
+- stage-5bl
+- stage-5bk
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+stage5bl_findings_integrated: true
+review_packaging_warning_recorded: true
+string4_source_restatement_created: true
+string4_primary60_inverse_policy_created: true
+string4_stage5ap_mismatch_analysis_created: true
+string4_stage5aw_branch_membership_created: true
+string4_ambiguity_class_coverage_created: true
+string4_planning_constraint_created: true
+string4_branch_membership_status: partial_branch_match
+string4_position_count_checked: 256
+string4_canonical_match_count: 249
+string4_stage5aw_supported_noncanonical_count: 6
+string4_unsupported_position_count: 1
+string4_parser_inconclusive_position_count: 0
+string4_full_body_committed: false
+string4_decoded_bytes_committed: false
+string4_reconstructed_token_stream_committed: false
+source_gap_severity_update_created: true
+string4_source_gap_status: partial
+historical_family_granularity_update_created: true
+stage5bj_errata_supersession_created: true
+dwh_quarantine_reaffirmed: true
+token_block_lineage_preserved: true
+future_dry_run_planning_impact_created: true
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+stage5bd_dry_run_records_remain_valid: true
+future_token_block_execution_remains_blocked: true
+raw_archive_files_committed: false
+raw_iddqd_v2_files_committed: false
+fandom_page_bodies_committed: false
+fandom_images_committed: false
+full_surface_bodies_committed: false
+decoded_byte_bodies_committed: false
+generated_outputs_committed: false
+token_experiments_executed: false
+real_token_block_byte_streams_generated: false
+variant_byte_streams_generated: false
+hash_search_performed: false
+decode_attempt_performed: false
+stego_tool_execution_performed: false
+cuda_execution_performed: false
+benchmark_performed: false
+scored_experiments_executed: false
+parallel_validation_harness_used: true
+parallel_validation_run_passed: true
+consistency_checks_passed: true
+codex_completion_summary_path: codex-output/stage5bm-codex-completion.md
+codex_output_directory_used: false
+recommended_next_prompt_type: codex_metadata_implementation
+recommended_next_stage_title: Stage 5BN - String 4 unsupported-position source-gap
+  closure and human-review pack preparation, without execution
+recommended_next_stage_reason: String 4 has Stage 5AW-supported I/l differences plus
+  one unsupported position, so future work should close that source gap before ingestion.

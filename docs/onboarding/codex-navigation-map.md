@@ -1,5 +1,9 @@
 # Codex Navigation Map
 
+## Stage 5BM Note
+
+Stage 5BM is a metadata-only String 4 branch-crosswalk repair layer. Use `libreprimus token-block validate-stage5bm` for Stage 5BL findings integration, String 4 source restatement, primary-60 inverse policy, Stage 5AP mismatch analysis, Stage 5AW branch membership, source-gap severity updates, DWH quarantine, lineage preservation, guardrails, and Stage 5BN next-stage routing. Stage 5BN follow-up work should close the one unsupported String 4 position or prepare human-review metadata while keeping full String 4 bodies, decoded bytes, reconstructed streams, raw iddqd-v2/archive/Fandom/spreadsheet files, and generated outputs ignored.
+
 ## Stage 5BK Note
 
 Stage 5BK is a metadata-only historical-route planning constraint layer. Use `libreprimus historical-route validate-stage5bk` for iddqd-v2 source-root/tree metadata, byte-string source locks, transcription/translation/key-lineage locks, positive-control context, planning constraints, source-gap severity, Stage 5BJ errata, token-block constraint updates, guardrails, and Stage 5BL next-stage routing. Stage 5BL follow-up work should review these planning constraints and keep raw iddqd-v2/archive/Fandom/spreadsheet files, full byte strings, decoded bytes, fonts, media, and generated outputs ignored.
@@ -28,7 +32,7 @@ For most Codex tasks, read:
 - Do not trust rendered GitHub pages, cached raw URLs, memory, or old conversation context when state matters.
 - Run the task-specific validation commands before staging.
 - Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
-- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5BK prompts inherit current source-of-truth labels.
+- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5BN prompts inherit current source-of-truth labels.
 - Keep raw/generated outputs unstaged.
 - For Stage 5AF/5AG/5AI/5AJ/5AK source-harvester work, keep all raw harvester outputs, raw UsefulFiles/community-facts material, and generated bundle/extraction bodies local and ignored; do not use Google Drive as project storage.
 
@@ -69,3 +73,7 @@ Stage 5BJ implementation is under `python/libreprimus/historical_route/stage5bj.
 ## Stage 5BK Navigation
 
 Stage 5BK implementation is under `python/libreprimus/historical_route/stage5bk.py`; CLI commands are documented in `docs/reference/historical-route-source-lock-cli.md`. The generated Stage 5BK reports remain ignored under `experiments/results/historical-route/stage5bk/` and `experiments/results/token-block/stage5bk/`. The local completion summary is `codex-output/stage5bk-codex-completion.md`; do not create or use `codex_output/` for current handoffs.
+
+## Stage 5BM Navigation
+
+Stage 5BM implementation is under `python/libreprimus/token_block/stage5bm.py`; CLI commands are documented in `docs/reference/token-block-cli.md`. The generated Stage 5BM reports remain ignored under `experiments/results/token-block/stage5bm/` and `experiments/results/historical-route/stage5bm/`. The local completion summary is `codex-output/stage5bm-codex-completion.md`; do not create or use `codex_output/` for current handoffs.

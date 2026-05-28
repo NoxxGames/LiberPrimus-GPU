@@ -1,0 +1,27 @@
+record_type: stage5bm_token_block_lineage_preservation
+schema: schemas/token-block/stage5bm-token-block-lineage-preservation-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+source_records:
+- data/token-block/stage5ap-token-block-canonical-transcription.yaml
+- data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+- data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+- data/token-block/stage5bb-active-manifest-registry.yaml
+- data/token-block/stage5bd-active-manifest-lock.yaml
+- data/token-block/stage5bd-dry-run-plan-manifest.yaml
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+stage5aw_branch_manifest_changed: false
+stage5az_variant_family_manifest_changed: false
+stage5bd_dry_run_records_remain_valid: true
+future_token_block_execution_remains_blocked: true
+string4_branch_materialised_as_active: false
+real_token_block_byte_streams_generated: false
+variant_byte_streams_generated: false
+execution_allowed: false

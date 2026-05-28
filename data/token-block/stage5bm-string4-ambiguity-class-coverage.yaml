@@ -1,0 +1,32 @@
+record_type: stage5bm_string4_ambiguity_class_coverage
+schema: schemas/token-block/stage5bm-string4-ambiguity-class-coverage-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+source_branch_membership: data/token-block/stage5bm-string4-stage5aw-branch-membership.yaml
+ambiguity_class_counts:
+  I_l: 6
+  O_0: 0
+  case_only: 0
+  digit_letter_confusion: 0
+  primary60_suffix_choice: 0
+  prefix_digit_change: 0
+  visual_placeholder: 0
+  reviewer_extra: 0
+  canonical_exact: 0
+  unsupported_external: 1
+  other: 0
+coverage_assessment: partially_supported
+majority_difference_class: I_l
+notes:
+- String 4 may represent external community transcription branch only if supported
+  by Stage 5AW metadata.
+- Ambiguity-class support is not canonicalisation and does not authorise execution.
+execution_allowed: false
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false

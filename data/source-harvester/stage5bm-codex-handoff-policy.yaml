@@ -1,0 +1,19 @@
+record_type: stage5bm_codex_handoff_policy
+schema: schemas/source-harvester/stage5bm-codex-handoff-policy-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+canonical_handoff_root: codex-output
+deprecated_handoff_root: codex_output
+future_stages_must_use_deprecated_root: false
+codex_completion_summary_path: codex-output/stage5bm-codex-completion.md
+codex_output_used: false
+codex_output_committed: false
+codex_output_directory_created: false
+deprecated_handoff_root_present: false
+completion_summary_committed: false

@@ -1705,3 +1705,100 @@ records:
   owner_context: codex_agent
   notes: Documents Stage 5BK iddqd-v2 metadata, planning constraints, token-block
     impact records, guardrails, and Stage 5BL next-stage rationale.
+- path: data/project-state/stage5bm-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BM aggregate summary.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bm
+  expected_update_frequency: when_string4_branch_crosswalk_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records Stage 5BM String 4 partial branch-match counts, source-gap
+    status, guardrails, validation status, Codex handoff path, and Stage 5BN
+    next-stage rationale.
+- path: data/project-state/stage5bm-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5BM next-stage decision.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bm
+  expected_update_frequency: when_string4_next_stage_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Selects Stage 5BN String 4 unsupported-position source-gap closure
+    and human-review pack preparation without execution.
+- path: data/token-block/stage5bm-string4-stage5ap-mismatch-analysis.yaml
+  category: active_data_record
+  purpose: Compact Stage 5BM String 4 versus Stage 5AP mismatch analysis.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bm
+  expected_update_frequency: when_string4_crosswalk_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records mismatch counts and compact mismatch rows without committing
+    full String 4 bodies, decoded bytes, or reconstructed token streams.
+- path: data/token-block/stage5bm-string4-stage5aw-branch-membership.yaml
+  category: active_data_record
+  purpose: Stage 5BM String 4 branch-membership classification.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bm
+  expected_update_frequency: when_string4_branch_membership_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records partial_branch_match, six Stage 5AW-supported noncanonical
+    positions, and one unsupported position as compact metadata.
+- path: data/token-block/stage5bm-string4-planning-constraint.yaml
+  category: active_data_record
+  purpose: Stage 5BM String 4 active-use planning constraint.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bm
+  expected_update_frequency: when_string4_planning_constraint_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Keeps String 4 review-only and blocks active input until the unsupported
+    source gap is closed.
+- path: data/historical-route/stage5bm-source-gap-severity-update.yaml
+  category: active_data_record
+  purpose: Stage 5BM String 4 source-gap severity update.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bm
+  expected_update_frequency: when_historical_route_source_gaps_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Adds the String 4 unsupported-position source gap without treating
+    the gap as execution permission.
+- path: docs/experiments/stage-5bm-string4-branch-crosswalk-repair.md
+  category: operational_status_doc
+  purpose: Stage 5BM metadata-only experiment/source-lock note.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bm
+  expected_update_frequency: when_stage5bm_records_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents Stage 5BM String 4 partial branch-match counts, guardrails,
+    ignored generated diagnostics, and Stage 5BN next-stage rationale.
+- path: docs/onboarding/stage5bm-string4-branch-crosswalk-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5BM operator workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bm
+  expected_update_frequency: when_stage5bm_commands_or_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents the Stage 5BM input records, CLI commands, interpretation
+    boundary, and no-execution guardrails.

@@ -1,0 +1,37 @@
+record_type: stage5bm_next_stage_decision
+schema: schemas/project-state/stage5bm-next-stage-decision-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+token_block_execution_selected: false
+byte_stream_generation_selected: false
+variant_materialisation_selected: false
+dwh_hash_search_selected: false
+hash_preimage_search_selected: false
+decode_selected: false
+scored_experiments_selected: false
+benchmark_selected: false
+cuda_selected: false
+public_website_expansion_selected: false
+stego_execution_selected: false
+pgp_verification_selected: false
+audio_analysis_selected: false
+image_forensics_selected: false
+ocr_selected: false
+ai_ml_selected: false
+canonical_corpus_activation_selected: false
+page_boundary_finalisation_selected: false
+method_status_upgrade_selected: false
+selected_next_stage_id: stage-5bn
+selected_next_prompt_type: codex_metadata_implementation
+selected_next_stage_title: Stage 5BN - String 4 unsupported-position source-gap closure
+  and human-review pack preparation, without execution
+selected_next_stage_reason: String 4 has Stage 5AW-supported I/l differences plus
+  one unsupported position, so future work should close that source gap before ingestion.
+string4_branch_membership_status: partial_branch_match
+string4_source_gap_status: partial

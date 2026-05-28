@@ -1,0 +1,25 @@
+record_type: stage5bm_string4_primary60_inverse_policy
+schema: schemas/token-block/stage5bm-string4-primary60-inverse-policy-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+source_stage5ap_mapping: data/token-block/stage5ap-token-block-mapping-preflight.yaml
+source_stage5ap_transcription: data/token-block/stage5ap-token-block-canonical-transcription.yaml
+source_stage5aw_branch_manifest: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+primary60_alphabet: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwx
+inverse_formula: token = str(value // 60) + alphabet[value % 60]
+input_domain: 0_to_255_bytes
+output_token_shape: leading_digit_0_to_4_plus_primary60_suffix
+policy_scope: string4_branch_membership_metadata_only
+full_hex_body_committed: false
+decoded_bytes_committed: false
+reconstructed_token_stream_committed: false
+real_byte_stream_generated: false
+active_token_block_manifest_changed: false
+canonical_transcription_changed: false
+execution_allowed: false

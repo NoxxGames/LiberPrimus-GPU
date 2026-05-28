@@ -1,0 +1,37 @@
+record_type: stage5bm_future_dry_run_planning_impact
+schema: schemas/token-block/stage5bm-future-dry-run-planning-impact-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+source_string4_branch_membership: data/token-block/stage5bm-string4-stage5aw-branch-membership.yaml
+source_string4_planning_constraint: data/token-block/stage5bm-string4-planning-constraint.yaml
+source_stage5bd_summary: data/project-state/stage5bd-summary.yaml
+stage5bd_status: complete
+future_dry_run_planning_impact_status: metadata_constraints_only
+future_dry_run_can_consume:
+- string4_branch_membership_status
+- string4_supported_unsupported_counts
+- source_gap_severity_update
+- planning_constraint_ids
+future_dry_run_must_not_consume:
+- raw String 4 hex body
+- decoded String 4 byte body
+- reconstructed full token stream
+- active String 4 bytes
+- raw iddqd-v2 files
+- generated diagnostic bodies
+future_runner_must_cite_stage5bm_constraints: true
+requires_deep_research_review_before_ingestion: true
+execution_gate_default: blocked
+real_byte_stream_generated: false
+variant_materialisation_performed: false
+full_cartesian_product_enumerated: false
+hash_search_performed: false
+decode_attempt_performed: false
+scoring_performed: false
+execution_allowed: false

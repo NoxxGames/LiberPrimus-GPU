@@ -1,0 +1,79 @@
+record_type: stage5bm_string4_stage5aw_branch_membership
+schema: schemas/token-block/stage5bm-string4-stage5aw-branch-membership-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+source_string4_mismatch_analysis: data/token-block/stage5bm-string4-stage5ap-mismatch-analysis.yaml
+source_stage5aw_branch_manifest: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+source_stage5aw_unresolved_records: data/token-block/stage5aw-repaired-unresolved-token-variant-records.yaml
+source_stage5aw_reviewer_extras: data/token-block/stage5aw-repaired-reviewer-extra-possible-tokens.yaml
+source_stage5ay_branch_eligibility: data/token-block/stage5ay-branch-eligibility-policy.yaml
+stage5aw_unresolved_variant_record_count: 77
+stage5aw_primary60_mappable_option_count: 99
+stage5aw_primary60_unmappable_option_count: 65
+string4_position_count_checked: 256
+string4_branch_membership_status: partial_branch_match
+canonical_match_count: 249
+stage5aw_supported_noncanonical_count: 6
+stage5aw_supported_total_count: 255
+unsupported_position_count: 1
+parser_inconclusive_position_count: 0
+primary60_mappable_supported_count: 6
+primary60_unmappable_supported_context_count: 0
+unsupported_position_records:
+- token_index_0_based: 199
+  row_index_one_based: 25
+  column_index_one_based: 8
+  stage5ap_canonical_token: 0I
+  string4_inferred_token: 0l
+  stage5aw_allowed_token_count: 4
+  stage5aw_allowed_tokens_summary: 0I, 0j, OI, Oj
+  suspected_ambiguity_class: unsupported_external
+  reason: String 4 inferred token is not present in Stage 5AW/5AY allowed options
+    for this index.
+supported_noncanonical_records_summary:
+  count: 6
+  sample_records:
+  - token_index_0_based: 25
+    stage5ap_canonical_token: 3l
+    string4_inferred_token: 3I
+    ambiguity_class: I_l
+    source_stage5aw_option_kind: branch_eligibility
+  - token_index_0_based: 45
+    stage5ap_canonical_token: 1I
+    string4_inferred_token: 1l
+    ambiguity_class: I_l
+    source_stage5aw_option_kind: branch_eligibility
+  - token_index_0_based: 50
+    stage5ap_canonical_token: 0I
+    string4_inferred_token: 0l
+    ambiguity_class: I_l
+    source_stage5aw_option_kind: branch_eligibility
+  - token_index_0_based: 90
+    stage5ap_canonical_token: 3l
+    string4_inferred_token: 3I
+    ambiguity_class: I_l
+    source_stage5aw_option_kind: branch_eligibility
+  - token_index_0_based: 175
+    stage5ap_canonical_token: 0l
+    string4_inferred_token: 0I
+    ambiguity_class: I_l
+    source_stage5aw_option_kind: branch_eligibility
+  - token_index_0_based: 246
+    stage5ap_canonical_token: 3l
+    string4_inferred_token: 3I
+    ambiguity_class: I_l
+    source_stage5aw_option_kind: branch_eligibility
+full_position_table_committed: false
+ignored_full_position_table_path: experiments/results/token-block/stage5bm/string4-stage5aw-branch-membership.json
+full_cartesian_product_enumerated: false
+branch_materialised_as_active: false
+active_token_block_manifest_changed: false
+canonical_transcription_changed: false
+real_byte_stream_generated: false
+execution_allowed: false

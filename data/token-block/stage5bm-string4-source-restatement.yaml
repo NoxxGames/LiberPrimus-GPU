@@ -1,0 +1,30 @@
+record_type: stage5bm_string4_source_restatement
+schema: schemas/token-block/stage5bm-string4-source-restatement-v0.schema.json
+stage_id: stage-5bm
+stage_title: Stage 5BM - Deep Research findings integration and String 4 branch-crosswalk
+  repair, without execution
+source_deep_research_stage: stage-5bl
+source_previous_stage: stage-5bk
+source_previous_stage_commit: 607c30c83491d74f8f6f6ee46519b0a01ecccf8c
+metadata_only: true
+solve_claim: false
+source_stage5bk_byte_strings_record: data/historical-route/stage5bk-iddqd-v2-byte-strings-source-lock.yaml
+source_stage5bk_string4_crosswalk: data/token-block/stage5bk-page49-51-string4-crosswalk.yaml
+source_byte_string_id: stage5bk-iddqd-v2-byte-string-4
+source_label: Matrix from pages 49-51 converted to hexadecimal
+source_root_path: third_party/CiadaSolversIddqd_v2
+source_file_path: third_party/CiadaSolversIddqd_v2/byte-strings/byte-strings
+source_file_found: true
+source_file_sha256: 03a1990cb8a32bdb4acc0981dba21a86cb6046871391fc61cab9bdc535f8154f
+hex_length: 512
+claimed_byte_length_if_hex: 256
+string4_hex_sha256: 93ee9ddeda9e30ae42827d9f61b4192d4da15726781f822d401d888ea6e96e6d
+string4_raw_hex_sha256: 6a986811453c74712055e72d3f21abde7df81f1ee210dcf21d5e7b2c6dc20e0e
+string4_decoded_byte_sha256: 3b9b07d9a26e6d55c432d94d2661fdff3c2b348daed06821f2bdb23184a4b290
+source_string_body_committed: false
+full_hex_body_committed: false
+decoded_byte_body_committed: false
+reconstructed_token_stream_committed: false
+execution_allowed: false
+hash_search_performed: false
+decode_attempt_performed: false

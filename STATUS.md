@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5BK historical-route planning constraint integration and iddqd-v2 source-lock addendum is complete.
+Stage 5BM Deep Research findings integration and String 4 branch-crosswalk repair is complete.
 
-Next recommended prompt: Stage 5BL - Deep Research review of historical-route planning constraints and iddqd-v2 source-lock integration, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5BN - String 4 unsupported-position source-gap closure and human-review pack preparation, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5BM
+
+Stage 5BM integrates the Stage 5BL Deep Research findings into committed metadata and reconciles iddqd-v2 String 4 against the Stage 5AP page 49-51 canonical token grid and Stage 5AW repaired branch universe. It records Stage 5BL findings integration, a review-packaging warning, String 4 source restatement, primary-60 inverse policy, Stage 5AP mismatch analysis, Stage 5AW branch-membership analysis, ambiguity-class coverage, planning constraints, source-gap severity updates, historical-family granularity updates, Stage 5BJ errata supersession, DWH quarantine reaffirmation, token-block lineage preservation, future dry-run planning impact, guardrails, summary, and Stage 5BN next-stage routing.
+
+Local Stage 5BM summary: String 4 branch-membership status `partial_branch_match`, positions checked `256`, canonical matches `249`, Stage 5AW-supported noncanonical positions `6`, unsupported positions `1`, parser-inconclusive positions `0`, source-gap status `partial`, canonical transcription changed `false`, active token-block manifest changed `false`, Stage 5BD dry-run records remain valid `true`, future token-block execution remains blocked `true`, and next stage `Stage 5BN`.
+
+Stage 5BM is metadata-only. It does not commit full String 4 hex bodies, decoded bytes, reconstructed token streams, raw iddqd-v2/archive/Fandom/spreadsheet files, full surface bodies, or generated reports. It does not run token-block experiments, generate real byte streams, materialise variants, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, compare candidate hashes as an experiment, decode, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, score candidate plaintext, publish website content, change canonical transcription, change active token-block manifests, upgrade method status, or make solve claims. The Codex handoff path is `codex-output/stage5bm-codex-completion.md`; `codex_output` is deprecated and must not be created.
 
 ## Completed in Stage 5BK
 
@@ -12,7 +20,7 @@ Stage 5BK integrates the Stage 5BF/5BI/5BJ historical-route context into explici
 
 Local Stage 5BK summary: iddqd-v2 source root found `true`, selected path `third_party/CiadaSolversIddqd_v2`, file count `309`, tree digest `e9184492a54a437dd955fecc4c344cd662889d172ab8e8a89eb34b629247ad8b`, byte-string count `4`, exact 512-hex strings `4`, String 1-3 Stage 5BJ crosswalks `3`, String 4 page49-51 crosswalk created `true`, transcription locks `2`, translation/key-lineage records `4`, positive-control context records `11`, historical family planning statuses `9`, source-gap severity records `7`, Stage 5BJ errata warnings `1`, active token-block manifest changed `false`, canonical transcription changed `false`, and next stage `Stage 5BL`.
 
-Stage 5BK is metadata-only. It does not run token-block experiments, generate real token-block byte streams, materialise variants, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, compare candidate hashes as an experiment, decode, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, score candidate plaintext, publish website content, commit raw iddqd-v2/Fandom/archive/spreadsheet files, commit full extracted surface bodies, alter Stage 5BD dry-run records, change canonical transcription, change active token-block manifests, or make solve claims. The Codex handoff path is `codex-output/stage5bk-codex-completion.md`; `codex_output` is deprecated and must not be created.
+Stage 5BK is metadata-only historical context for Stage 5BM. It does not run token-block experiments, generate real token-block byte streams, materialise variants, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, compare candidate hashes as an experiment, decode, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, score candidate plaintext, publish website content, commit raw iddqd-v2/Fandom/archive/spreadsheet files, commit full extracted surface bodies, alter Stage 5BD dry-run records, change canonical transcription, change active token-block manifests, or make solve claims. The Codex handoff path is `codex-output/stage5bk-codex-completion.md`; `codex_output` is deprecated and must not be created.
 
 ## Completed in Stage 5BJ
 
@@ -1058,4 +1066,4 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 
 ## Next prompt recommendation
 
-Stage 5BL - Deep Research review of historical-route planning constraints and iddqd-v2 source-lock integration, without execution. Use the Stage 5BK source-root, tree, byte-string, transcription, translation/key-lineage, positive-control context, planning constraint, source-gap severity, Stage 5BJ errata, token-block constraint, summary, and next-stage records; keep token experiment execution, real byte-stream generation, 2014/page49-51 surface combination, DWH/hash/preimage search, historical stego execution, online PGP verification, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, website publication, and solve claims blocked unless a later prompt explicitly scopes execution.
+Stage 5BN - String 4 unsupported-position source-gap closure and human-review pack preparation, without execution. Use the Stage 5BM String 4 mismatch, branch-membership, ambiguity-class, source-gap, planning-constraint, lineage, guardrail, summary, and next-stage records; keep token experiment execution, real byte-stream generation, variant materialisation, 2014/page49-51 surface combination, DWH/hash/preimage search, historical stego execution, online PGP verification, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, website publication, and solve claims blocked unless a later prompt explicitly scopes execution.
