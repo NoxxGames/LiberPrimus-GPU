@@ -1,0 +1,25 @@
+record_type: stage5bk_local_source_root_integration_summary
+schema: schemas/source-harvester/stage5bk-local-source-root-integration-summary-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+iddqd_v2_selected_path: third_party/CiadaSolversIddqd_v2
+iddqd_v2_source_root_found: true
+iddqd_v2_total_file_count: 309
+iddqd_v2_tree_digest: e9184492a54a437dd955fecc4c344cd662889d172ab8e8a89eb34b629247ad8b
+candidate_count: 20
+candidate_found_count: 20
+candidate_missing_count: 0
+raw_source_committed: false
+raw_iddqd_v2_files_committed: false
+generated_outputs_committed: false
+codex_output_used: false

@@ -2501,6 +2501,16 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q "codex-output/stage5bj-completion-summary.md"
     git check-ignore -q "codex_output/stage5bj-completion-summary.md"
 
+    Write-Host "Validating Stage 5BK historical-route planning constraint records"
+    $Stage5BKHistoricalResultsRoot = Join-Path (Join-Path "experiments" "results") "historical-route/stage5bk"
+    $Stage5BKTokenBlockResultsRoot = Join-Path (Join-Path "experiments" "results") "token-block/stage5bk"
+    & $Python -m libreprimus.cli historical-route validate-stage5bk --results-dir $Stage5BKHistoricalResultsRoot
+    git check-ignore -q (Join-Path $Stage5BKHistoricalResultsRoot "summary.json")
+    git check-ignore -q (Join-Path $Stage5BKTokenBlockResultsRoot "token_block_impact.json")
+    git check-ignore -q "third_party/CiadaSolversIddqd_v2/example.txt"
+    git check-ignore -q "third_party/CicadaSolversIddqd_v2/example.txt"
+    git check-ignore -q "codex-output/stage5bk-codex-completion.md"
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

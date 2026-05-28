@@ -1,0 +1,70 @@
+record_type: stage5bk_summary
+schema: schemas/project-state/stage5bk-summary-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+status: complete
+iddqd_v2_source_root_found: true
+iddqd_v2_selected_path: third_party/CiadaSolversIddqd_v2
+iddqd_v2_tree_digest: e9184492a54a437dd955fecc4c344cd662889d172ab8e8a89eb34b629247ad8b
+iddqd_v2_total_file_count: 309
+iddqd_v2_byte_strings_source_locked: true
+iddqd_v2_byte_string_count: 4
+iddqd_v2_exact_512_hex_string_count: 4
+iddqd_v2_string4_page49_crosswalk_created: true
+iddqd_v2_transcription_source_lock_created: true
+iddqd_v2_translation_key_lineage_created: true
+iddqd_v2_positive_control_context_created: true
+historical_planning_constraint_policy_created: true
+historical_family_planning_status_count: 9
+authenticity_gate_integration_created: true
+stego_positive_control_constraint_created: true
+numeric_magic_square_constraint_created: true
+book_code_text_reference_constraint_created: true
+network_byte_channel_constraint_created: true
+liber_primus_transcription_constraint_created: true
+dwh_quarantine_reaffirmed: true
+source_gap_severity_record_count: 7
+stage5bj_crosswalk_errata_count: 1
+token_block_historical_constraint_update_created: true
+future_dry_run_planning_impact_created: true
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+stage5bd_dry_run_records_remain_valid: true
+future_token_block_execution_remains_blocked: true
+raw_archive_files_committed: false
+raw_iddqd_v2_files_committed: false
+fandom_page_bodies_committed: false
+fandom_images_committed: false
+full_surface_bodies_committed: false
+decoded_byte_bodies_committed: false
+generated_outputs_committed: false
+token_experiments_executed: false
+real_token_block_byte_streams_generated: false
+variant_byte_streams_generated: false
+hash_search_performed: false
+decode_attempt_performed: false
+stego_tool_execution_performed: false
+cuda_execution_performed: false
+benchmark_performed: false
+scored_experiments_executed: false
+parallel_validation_harness_used: true
+parallel_validation_run_passed: true
+consistency_checks_passed: true
+codex_completion_summary_path: codex-output/stage5bk-codex-completion.md
+codex_output_directory_used: false
+recommended_next_prompt_type: deep_research_review
+recommended_next_stage_title: Stage 5BL - Deep Research review of historical-route
+  planning constraints and iddqd-v2 source-lock integration, without execution
+recommended_next_stage_reason: Stage 5BK integrates iddqd-v2 source-lock metadata
+  and historical-route constraints cleanly while preserving token-block execution
+  gates; the next safe step is independent review, not execution.

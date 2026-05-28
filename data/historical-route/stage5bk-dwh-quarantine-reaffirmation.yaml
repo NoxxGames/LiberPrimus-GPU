@@ -1,0 +1,34 @@
+record_type: stage5bk_dwh_quarantine_reaffirmation
+schema: schemas/historical-route/stage5bk-dwh-quarantine-reaffirmation-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+family_id: dwh_quarantine
+constraint_count: 3
+constraints:
+- DWH_relation_speculative
+- hash_preimage_search_blocked
+- null_controls_required
+planning_status: blocked_or_reference_only
+execution_enabled: false
+execution_allowed: false
+token_experiment_executed: false
+real_byte_stream_generated: false
+hash_search_performed: false
+decode_attempt_performed: false
+stego_tool_execution_performed: false
+cuda_execution_performed: false
+scoring_performed: false
+benchmark_performed: false
+method_status_upgraded: false
+dwh_quarantine_reaffirmed: true
+hash_preimage_search_performed: false

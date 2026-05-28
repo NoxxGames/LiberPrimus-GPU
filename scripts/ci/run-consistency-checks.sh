@@ -2521,6 +2521,16 @@ git check-ignore -q "$stage5bj_generated_root/historical-route/stage5bj/extracte
 git check-ignore -q "codex-output/stage5bj-completion-summary.md"
 git check-ignore -q "codex_output/stage5bj-completion-summary.md"
 
+echo "Validating Stage 5BK historical-route planning constraint records"
+stage5bk_historical_results_root="experiments"/"results/historical-route/stage5bk"
+stage5bk_token_block_results_root="experiments"/"results/token-block/stage5bk"
+"$python_bin" -m libreprimus.cli historical-route validate-stage5bk --results-dir "$stage5bk_historical_results_root"
+git check-ignore -q "$stage5bk_historical_results_root/summary.json"
+git check-ignore -q "$stage5bk_token_block_results_root/token_block_impact.json"
+git check-ignore -q "third_party/CiadaSolversIddqd_v2/example.txt"
+git check-ignore -q "third_party/CicadaSolversIddqd_v2/example.txt"
+git check-ignore -q "codex-output/stage5bk-codex-completion.md"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

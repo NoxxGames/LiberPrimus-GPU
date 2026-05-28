@@ -1,0 +1,80 @@
+record_type: stage5bk_iddqd_v2_tree_summary
+schema: schemas/historical-route/stage5bk-iddqd-v2-tree-summary-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+source_root_path: third_party/CiadaSolversIddqd_v2
+source_root_found: true
+total_file_count: 309
+total_size_bytes: 153752252
+tree_digest: e9184492a54a437dd955fecc4c344cd662889d172ab8e8a89eb34b629247ad8b
+extension_counts:
+  .iso: 1
+  .jpg: 217
+  .mp3: 3
+  .ttf: 1
+  .txt: 82
+  <none>: 5
+directory_summaries:
+- directory: liber-primus__images--full
+  present: true
+  file_count: 75
+  total_size_bytes: 52248065
+  tree_digest: 82719d1afa3ce5b6cfb9c3a29d5db8e2fd8ac10d33f80adba9cb5875b4dc0608
+  path_samples:
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full/00.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full/01.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full/02.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full/03.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full/04.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full/05.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full/06.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full/07.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full/08.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--full/09.jpg
+- directory: liber-primus__images--unsolved
+  present: true
+  file_count: 58
+  total_size_bytes: 35362230
+  tree_digest: f4c374a2a0b08d21c97bf1f6f61080a20453a8ddd9aaa5fe37dcda5fe1c9b9f7
+  path_samples:
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved/0.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved/1.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved/10.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved/11.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved/12.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved/13.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved/14.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved/15.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved/16.jpg
+  - third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved/17.jpg
+- directory: lp_outguessed
+  present: true
+  file_count: 150
+  total_size_bytes: 53406059
+  tree_digest: 168c5a8be19577bc76ccdd175ac000206182a4ad185c49b2b80283e9d343ff61
+  path_samples:
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed/00.jpg
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed/00.txt
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed/01.jpg
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed/01.txt
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed/02.jpg
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed/02.txt
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed/03.jpg
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed/03.txt
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed/04.jpg
+  - third_party/CiadaSolversIddqd_v2/lp_outguessed/04.txt
+raw_source_committed: false
+raw_iddqd_v2_files_committed: false
+generated_outputs_committed: false
+execution_allowed: false
+codex_output_used: false

@@ -1,0 +1,189 @@
+record_type: stage5bk_source_gap_severity_register
+schema: schemas/historical-route/stage5bk-source-gap-severity-register-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+source_gap_severity_record_count: 7
+blocking_source_gap_count: 7
+severity_counts:
+  high: 3
+  medium: 4
+records:
+- record_type: stage5bk_source_gap_severity
+  schema: schemas/historical-route/stage5bk-source-gap-severity-register-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  source_gap_id: stage5bi-fandom-2014-page-body-not-hash-locked
+  source_gap_origin: stage-5bi
+  severity: high
+  blocks_execution: true
+  blocks_metadata_planning: false
+  closure_status: partially_closed_more_specific_gap_remains
+  recommended_resolution:
+  - Local archive route-equivalent files now lock the exact 2014 surfaces.
+  - No exact Fandom page body snapshot was found locally; keep exact page body snapshot
+    gap open.
+  execution_allowed: false
+- record_type: stage5bk_source_gap_severity
+  schema: schemas/historical-route/stage5bk-source-gap-severity-register-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  source_gap_id: stage5bi-boards-page49-51-thread-inaccessible
+  source_gap_origin: stage-5bi
+  severity: medium
+  blocks_execution: true
+  blocks_metadata_planning: false
+  closure_status: closed_original_archive_equivalent_found
+  recommended_resolution:
+  - Local archive DOCX equivalent found.
+  - Do not use as token-block execution evidence without future review.
+  execution_allowed: false
+- record_type: stage5bk_source_gap_severity
+  schema: schemas/historical-route/stage5bk-source-gap-severity-register-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  source_gap_id: stage5bi-2014-256-surfaces-need-original-archive-crosswalk
+  source_gap_origin: stage-5bi
+  severity: medium
+  blocks_execution: true
+  blocks_metadata_planning: false
+  closure_status: closed_original_archive_equivalent_found
+  recommended_resolution:
+  - All three 2014 exact 512-hex surface targets are path/hash locked as metadata.
+  execution_allowed: false
+- record_type: stage5bk_source_gap_severity
+  schema: schemas/historical-route/stage5bk-source-gap-severity-register-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  source_gap_id: stage5bi-fandom-media-original-equivalence-not-assumed
+  source_gap_origin: stage-5bi
+  severity: medium
+  blocks_execution: true
+  blocks_metadata_planning: false
+  closure_status: closed_original_archive_equivalent_found
+  recommended_resolution:
+  - High-value media pointers now have local archive-equivalent metadata rows.
+  execution_allowed: false
+- record_type: stage5bk_source_gap_severity
+  schema: schemas/historical-route/stage5bk-source-gap-severity-register-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  source_gap_id: stage5bi-spreadsheet-not-canonical
+  source_gap_origin: stage-5bi
+  severity: medium
+  blocks_execution: true
+  blocks_metadata_planning: false
+  closure_status: downgraded_to_reference_only
+  recommended_resolution:
+  - Spreadsheet remains local non-canonical analysis metadata subordinate to Stage
+    5AW branch metadata.
+  execution_allowed: false
+- record_type: stage5bk_source_gap_severity
+  schema: schemas/historical-route/stage5bk-source-gap-severity-register-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  source_gap_id: stage5bj-fandom-page-body-local-snapshot-not-found
+  source_gap_origin: stage-5bj
+  severity: high
+  blocks_execution: true
+  blocks_metadata_planning: false
+  closure_status: carried_forward_unresolved
+  recommended_resolution:
+  - Only a future explicit source-lock stage may add a manual/Wayback page-body snapshot.
+  - Fandom page bodies remain secondary context.
+  execution_allowed: false
+- record_type: stage5bk_source_gap_severity
+  schema: schemas/historical-route/stage5bk-source-gap-severity-register-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  source_gap_id: stage5bj-pgp-live-cd-local-source-not-found
+  source_gap_origin: stage-5bj
+  severity: high
+  blocks_execution: true
+  blocks_metadata_planning: false
+  closure_status: carried_forward_unresolved
+  recommended_resolution:
+  - Keep PGP live-CD record quarantined/reference-only until a stronger original source
+    is located.
+  - Do not perform online PGP verification as project truth in this stage.
+  execution_allowed: false
+execution_allowed: false

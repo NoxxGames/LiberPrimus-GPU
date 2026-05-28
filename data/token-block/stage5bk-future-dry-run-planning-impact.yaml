@@ -1,0 +1,36 @@
+record_type: stage5bk_future_dry_run_planning_impact
+schema: schemas/token-block/stage5bk-future-dry-run-planning-impact-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+source_stage5bd_summary: data/project-state/stage5bd-summary.yaml
+stage5bd_status: complete
+dry_run_plan_ids_remain_metadata_only: true
+new_constraints_for_future_dry_run:
+- historical_route_records_are_planning_constraints_not_execution_inputs
+- 2014_exact_512_hex_surfaces_must_not_be_combined_with_page49_51_without_future_execution_gate
+- iddqd_v2_byte_strings_are_source_lock_metadata_not_dwh_targets
+- string4_page49_51_crosswalk_is_metadata_only_and_must_not_generate_token_block_bytes
+- transcription_and_translation_records_are_non_canonical_lineage_metadata
+- stego_audio_image_records_are_positive_control_or_source_reference_only
+- DWH_relationship_remains_quarantined_until_explicit_review_and_null_controls
+- codex_output_is_deprecated_and_must_not_be_used
+future_runner_must_cite_stage5bk_constraints: true
+execution_gate_default: blocked
+token_experiment_executed: false
+real_byte_stream_generated: false
+variant_materialisation_performed: false
+full_cartesian_product_enumerated: false
+hash_search_performed: false
+decode_attempt_performed: false
+scoring_performed: false
+execution_allowed: false

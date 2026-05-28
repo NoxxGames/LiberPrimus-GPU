@@ -1,0 +1,142 @@
+record_type: stage5bk_iddqd_v2_translation_key_lineage
+schema: schemas/historical-route/stage5bk-iddqd-v2-translation-key-lineage-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+lineage_record_count: 4
+lineage_files_found_count: 4
+compact_key_facts:
+- substitution_or_inverted_gematria_lineage_reference
+- polyalphabetic_substitution_lineage_reference
+- clear_text_f_is_not_encrypted_lineage_reference
+- keys_divinity_and_firfumferenfe_lineage_reference
+- prime_stream_phi_n_lineage_reference
+translation_or_key_bodies_committed: false
+solver_manifest_created: false
+execution_allowed: false
+records:
+- record_type: stage5bk_iddqd_v2_translation_key_source_lock
+  schema: schemas/historical-route/stage5bk-iddqd-v2-translation-key-lineage-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  lineage_id: stage5bk-iddqd-v2-translation
+  lineage_role: method_lineage_metadata_only
+  body_committed: false
+  solver_manifest_created: false
+  execution_allowed: false
+  candidate_id: stage5bk-iddqd-v2-translation
+  source_category: translation_reference
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  source_relative_path: liber-primus__translation/liber-primus__translation.txt
+  source_repo_path: third_party/CiadaSolversIddqd_v2/liber-primus__translation/liber-primus__translation.txt
+  source_path_found: true
+  source_sha256: adce48cfea746fd5add5071c85a34a998a546ca94c009bcd796cd3e699cc1c47
+  source_size_bytes: 5589
+  media_type_hint: text_or_extensionless
+- record_type: stage5bk_iddqd_v2_translation_key_source_lock
+  schema: schemas/historical-route/stage5bk-iddqd-v2-translation-key-lineage-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  lineage_id: stage5bk-iddqd-v2-known_plain_text
+  lineage_role: method_lineage_metadata_only
+  body_committed: false
+  solver_manifest_created: false
+  execution_allowed: false
+  candidate_id: stage5bk-iddqd-v2-known_plain_text
+  source_category: translation_reference
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  source_relative_path: liber-primus__translation/liber-primus__known-plain-text.txt
+  source_repo_path: third_party/CiadaSolversIddqd_v2/liber-primus__translation/liber-primus__known-plain-text.txt
+  source_path_found: true
+  source_sha256: 23f9639d1366b961dbf7b7e5ebca5d7fd53110557f572ae53aa7dfaa01ab949a
+  source_size_bytes: 48816
+  media_type_hint: text_or_extensionless
+- record_type: stage5bk_iddqd_v2_translation_key_source_lock
+  schema: schemas/historical-route/stage5bk-iddqd-v2-translation-key-lineage-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  lineage_id: stage5bk-iddqd-v2-known_plain_text_headlines
+  lineage_role: method_lineage_metadata_only
+  body_committed: false
+  solver_manifest_created: false
+  execution_allowed: false
+  candidate_id: stage5bk-iddqd-v2-known_plain_text_headlines
+  source_category: translation_reference
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  source_relative_path: liber-primus__translation/liber-primus__known-plain-text--headlines.txt
+  source_repo_path: third_party/CiadaSolversIddqd_v2/liber-primus__translation/liber-primus__known-plain-text--headlines.txt
+  source_path_found: true
+  source_sha256: 25c1c09613bec2e5007b4418caa025bd0a8a5e43bee9c92b15adf4307de9b143
+  source_size_bytes: 9072
+  media_type_hint: text_or_extensionless
+- record_type: stage5bk_iddqd_v2_translation_key_source_lock
+  schema: schemas/historical-route/stage5bk-iddqd-v2-translation-key-lineage-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  lineage_id: stage5bk-iddqd-v2-keys
+  lineage_role: method_lineage_metadata_only
+  body_committed: false
+  solver_manifest_created: false
+  execution_allowed: false
+  candidate_id: stage5bk-iddqd-v2-keys
+  source_category: key_lineage_reference
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  source_relative_path: liber-primus__keys/liber-primus__keys.txt
+  source_repo_path: third_party/CiadaSolversIddqd_v2/liber-primus__keys/liber-primus__keys.txt
+  source_path_found: true
+  source_sha256: ff1106e69d2136381c0ac166a0836c64a6d64078bce4be33436c2198af758ac3
+  source_size_bytes: 598
+  media_type_hint: text_or_extensionless

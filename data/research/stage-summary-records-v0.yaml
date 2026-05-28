@@ -1384,3 +1384,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5BJ records 12 crosswalk closure rows, 8 exact original/archive-equivalent closures, 3 archive-equivalent-but-not-exact-surface closures, 1 local archive no-match row, 3 exact 2014 512-hex surface source locks, 3 surface source files found, 7 Fandom page-body crosswalk rows, 5 route-equivalent archive docs found, 2 page-body rows not found, boards thread found true, 8 media-equivalence closure rows, 4 source gaps closed, 3 source gaps carried forward, 2 new source gaps, local archive present true, source snapshots present true, local spreadsheet present true, canonical transcription changed false, active token-block manifests changed false, and Stage 5BK as next. It performs no Fandom/archive/spreadsheet raw commit, full extracted surface body commit, token experiment, 2014/page49-51 surface combination, byte-stream generation, variant materialisation, DWH/hash/preimage search, hash comparison, decode attempt, stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5bk
+    title: Historical-route planning constraint integration and iddqd-v2 source-lock addendum
+    status: complete
+    category: infrastructure
+    summary: Integrated Stage 5BF/5BI/5BJ historical-route context and ignored local iddqd-v2 metadata into explicit planning constraints, token-block constraint updates, source-gap priorities, and Stage 5BL review routing without execution.
+    key_outputs:
+      - "`libreprimus historical-route` Stage 5BK commands for iddqd-v2 location, inventory, source-lock addenda, planning constraints, token-block impact, summary, and validation."
+      - Stage 5BK iddqd-v2 source-root, tree, source-candidate, byte-string, transcription, translation/key-lineage, positive-control context, source-gap, planning constraint, family planning status, source-gap severity, Stage 5BJ errata, guardrail, token-block context, source-harvester policy, summary, and next-stage records.
+      - Summary-only developer and research logs; ignored generated reports under `experiments/results/historical-route/stage5bk/` and `experiments/results/token-block/stage5bk/`; local handoff under `codex-output/stage5bk-codex-completion.md`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5BK records iddqd-v2 source root found true, selected path `third_party/CiadaSolversIddqd_v2`, file count 309, tree digest e9184492a54a437dd955fecc4c344cd662889d172ab8e8a89eb34b629247ad8b, byte strings 4, exact 512-hex strings 4, String 1-3 Stage 5BJ crosswalks 3, String 4 page49-51 crosswalk true, transcription locks 2, translation/key-lineage records 4, positive-control context records 11, historical family planning statuses 9, source-gap severity records 7, Stage 5BJ errata warnings 1, canonical transcription changed false, active token-block manifest changed false, and Stage 5BL review as next. It performs no raw iddqd-v2/archive/Fandom/spreadsheet commit, full surface body commit, token experiment, byte-stream generation, variant materialisation, 2014/page49-51 combination, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

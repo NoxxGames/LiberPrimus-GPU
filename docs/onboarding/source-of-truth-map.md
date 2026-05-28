@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BJ it names Stage 5BJ as latest complete and Stage 5BK as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BK it names Stage 5BK as latest complete and Stage 5BL as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -55,6 +55,11 @@
 - `data/token-block/stage5bj-*.yaml`: Stage 5BJ token-block lineage preservation and 2014 surface context closure records that preserve active token-block records unchanged.
 - `data/project-state/stage5bj-summary.yaml`: Stage 5BJ aggregate summary, guardrail state, closure counts, local archive/source status, and Stage 5BK next-stage decision.
 - `data/project-state/stage5bj-next-stage-decision.yaml`: Stage 5BJ next-stage decision selecting Stage 5BK historical-route planning constraint integration without execution.
+- `data/historical-route/stage5bk-*.yaml`: Stage 5BK iddqd-v2 source-root/tree/byte-string/transcription/translation/positive-control metadata, planning constraints, family planning statuses, source-gap severity records, Stage 5BJ errata, and guardrail records.
+- `data/token-block/stage5bk-*.yaml`: Stage 5BK token-block historical constraint, 2014 surface/page49 context, String 4 page49-51 crosswalk, lineage preservation, and future dry-run planning impact records.
+- `data/source-harvester/stage5bk-*.yaml`: Stage 5BK iddqd-v2 local-source integration summary and Codex handoff policy correction.
+- `data/project-state/stage5bk-summary.yaml`: Stage 5BK aggregate summary, guardrail state, source-lock counts, planning-constraint counts, and Stage 5BL next-stage decision.
+- `data/project-state/stage5bk-next-stage-decision.yaml`: Stage 5BK next-stage decision selecting Stage 5BL Deep Research review without execution.
 - `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 - `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.
@@ -130,3 +135,7 @@ Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bi-sum
 ## Stage 5BJ Additions
 
 Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bj-summary.yaml`, `data/project-state/stage5bj-next-stage-decision.yaml`, `data/historical-route/stage5bj-original-archive-crosswalk-closure.yaml`, `data/historical-route/stage5bj-2014-exact-surface-source-locks.yaml`, and `data/token-block/stage5bj-token-block-lineage-preservation.yaml` for the current original/archive crosswalk closure state. Exact 2014 surface locks are provenance metadata only, Fandom page bodies and media remain secondary unless exact source-locked, full extracted surface bodies stay ignored, and Stage 5AP/5AW/5AZ/5BD token-block execution gates remain blocked.
+
+## Stage 5BK Additions
+
+Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bk-summary.yaml`, `data/project-state/stage5bk-next-stage-decision.yaml`, `data/historical-route/stage5bk-iddqd-v2-byte-strings-source-lock.yaml`, `data/historical-route/stage5bk-historical-family-planning-status.yaml`, `data/historical-route/stage5bk-source-gap-severity-register.yaml`, and `data/token-block/stage5bk-page49-51-string4-crosswalk.yaml` for the current historical-route planning constraint state. iddqd-v2 is complementary technical archive metadata only, String 4 is page49-51 matrix-hex context only, transcription/translation/key files are non-canonical, and active token-block execution gates remain blocked.

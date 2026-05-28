@@ -1,5 +1,9 @@
 # Codex Navigation Map
 
+## Stage 5BK Note
+
+Stage 5BK is a metadata-only historical-route planning constraint layer. Use `libreprimus historical-route validate-stage5bk` for iddqd-v2 source-root/tree metadata, byte-string source locks, transcription/translation/key-lineage locks, positive-control context, planning constraints, source-gap severity, Stage 5BJ errata, token-block constraint updates, guardrails, and Stage 5BL next-stage routing. Stage 5BL follow-up work should review these planning constraints and keep raw iddqd-v2/archive/Fandom/spreadsheet files, full byte strings, decoded bytes, fonts, media, and generated outputs ignored.
+
 ## Stage 5BJ Note
 
 Stage 5BJ is a metadata-only original/archive crosswalk closure layer. Use `libreprimus historical-route stage5bj-validate` for crosswalk closure, exact 2014 surface source locks, Fandom page-body status, boards-thread archive-equivalent context, media-equivalence closure, source-gap updates, token-block lineage preservation, guardrails, and Stage 5BK next-stage routing. Stage 5BK follow-up work should integrate these planning constraints and keep raw Fandom/archive/spreadsheet files plus full extracted surface bodies ignored.
@@ -61,3 +65,7 @@ Stage 5BI implementation is under `python/libreprimus/historical_route/stage5bi.
 ## Stage 5BJ Navigation
 
 Stage 5BJ implementation is under `python/libreprimus/historical_route/stage5bj.py`; CLI commands are documented in `docs/reference/historical-route-source-lock-cli.md`. The generated Stage 5BJ reports and local Codex completion summaries remain ignored under `experiments/results/historical-route/stage5bj/`, `codex_output/`, and `codex-output/`.
+
+## Stage 5BK Navigation
+
+Stage 5BK implementation is under `python/libreprimus/historical_route/stage5bk.py`; CLI commands are documented in `docs/reference/historical-route-source-lock-cli.md`. The generated Stage 5BK reports remain ignored under `experiments/results/historical-route/stage5bk/` and `experiments/results/token-block/stage5bk/`. The local completion summary is `codex-output/stage5bk-codex-completion.md`; do not create or use `codex_output/` for current handoffs.

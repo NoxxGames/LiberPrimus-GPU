@@ -1,0 +1,263 @@
+record_type: stage5bk_iddqd_v2_source_candidate_index
+schema: schemas/historical-route/stage5bk-iddqd-v2-source-candidate-index-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+source_root_path: third_party/CiadaSolversIddqd_v2
+source_root_found: true
+candidate_count: 20
+candidate_found_count: 20
+candidate_missing_count: 0
+status_counts:
+  found: 20
+raw_source_committed: false
+raw_iddqd_v2_files_committed: false
+generated_outputs_committed: false
+execution_allowed: false
+records:
+- candidate_id: stage5bk-iddqd-v2-byte_strings
+  source_category: network_byte_channel_source
+  planning_role: source_lock_only_no_hash_search
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: byte-strings/byte-strings
+  source_repo_path: third_party/CiadaSolversIddqd_v2/byte-strings/byte-strings
+  source_path_found: true
+  source_sha256: 03a1990cb8a32bdb4acc0981dba21a86cb6046871391fc61cab9bdc535f8154f
+  source_size_bytes: 2335
+  media_type_hint: text_or_extensionless
+- candidate_id: stage5bk-iddqd-v2-transcription_master
+  source_category: liber_primus_transcription
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: liber-primus__transcription--master/liber-primus__transcription--master.txt
+  source_repo_path: third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master/liber-primus__transcription--master.txt
+  source_path_found: true
+  source_sha256: b0b2e13c3cd35512ee5955a2d9a56c22d7410e283d35dd9c90abbaa7b99279eb
+  source_size_bytes: 54553
+  media_type_hint: text_or_extensionless
+- candidate_id: stage5bk-iddqd-v2-transcription_sentences
+  source_category: liber_primus_transcription
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: liber-primus__transcription--sentences/liber-primus__transcription--sentences.txt
+  source_repo_path: third_party/CiadaSolversIddqd_v2/liber-primus__transcription--sentences/liber-primus__transcription--sentences.txt
+  source_path_found: true
+  source_sha256: 1f5fd9ac0fd2d53942e9f64074fe806329c0d2c59824cafc6e5b1d676eb8dec4
+  source_size_bytes: 57495
+  media_type_hint: text_or_extensionless
+- candidate_id: stage5bk-iddqd-v2-translation
+  source_category: translation_reference
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: liber-primus__translation/liber-primus__translation.txt
+  source_repo_path: third_party/CiadaSolversIddqd_v2/liber-primus__translation/liber-primus__translation.txt
+  source_path_found: true
+  source_sha256: adce48cfea746fd5add5071c85a34a998a546ca94c009bcd796cd3e699cc1c47
+  source_size_bytes: 5589
+  media_type_hint: text_or_extensionless
+- candidate_id: stage5bk-iddqd-v2-known_plain_text
+  source_category: translation_reference
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: liber-primus__translation/liber-primus__known-plain-text.txt
+  source_repo_path: third_party/CiadaSolversIddqd_v2/liber-primus__translation/liber-primus__known-plain-text.txt
+  source_path_found: true
+  source_sha256: 23f9639d1366b961dbf7b7e5ebca5d7fd53110557f572ae53aa7dfaa01ab949a
+  source_size_bytes: 48816
+  media_type_hint: text_or_extensionless
+- candidate_id: stage5bk-iddqd-v2-known_plain_text_headlines
+  source_category: translation_reference
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: liber-primus__translation/liber-primus__known-plain-text--headlines.txt
+  source_repo_path: third_party/CiadaSolversIddqd_v2/liber-primus__translation/liber-primus__known-plain-text--headlines.txt
+  source_path_found: true
+  source_sha256: 25c1c09613bec2e5007b4418caa025bd0a8a5e43bee9c92b15adf4307de9b143
+  source_size_bytes: 9072
+  media_type_hint: text_or_extensionless
+- candidate_id: stage5bk-iddqd-v2-keys
+  source_category: key_lineage_reference
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: liber-primus__keys/liber-primus__keys.txt
+  source_repo_path: third_party/CiadaSolversIddqd_v2/liber-primus__keys/liber-primus__keys.txt
+  source_path_found: true
+  source_sha256: ff1106e69d2136381c0ac166a0836c64a6d64078bce4be33436c2198af758ac3
+  source_size_bytes: 598
+  media_type_hint: text_or_extensionless
+- candidate_id: stage5bk-iddqd-v2-mabinogion_transcript
+  source_category: book_code_reference
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: 2012/02/mabinogion_transcript
+  source_repo_path: third_party/CiadaSolversIddqd_v2/2012/02/mabinogion_transcript
+  source_path_found: true
+  source_sha256: 89d5dc61f81c6cbceabde38305f12e90b635fb91c444823badac197f87303cdf
+  source_size_bytes: 12337
+  media_type_hint: text_or_extensionless
+- candidate_id: stage5bk-iddqd-v2-mabinogion_translation
+  source_category: book_code_reference
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: 2012/02/mabinogion_translation
+  source_repo_path: third_party/CiadaSolversIddqd_v2/2012/02/mabinogion_translation
+  source_path_found: true
+  source_sha256: 9163124f3a5a9b8c7d0aaed4f871dc081a95f573d37a6cd7376f60d138d276f1
+  source_size_bytes: 12340
+  media_type_hint: text_or_extensionless
+- candidate_id: stage5bk-iddqd-v2-answering_machine_mp3
+  source_category: audio_fixture_candidate
+  planning_role: positive_control_or_source_reference_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: 2012/03/answering_machine_2143909608.mp3
+  source_repo_path: third_party/CiadaSolversIddqd_v2/2012/03/answering_machine_2143909608.mp3
+  source_path_found: true
+  source_sha256: f90900f8d13fd9bda92d18387ed37b1456ab786b6b64d9ee74cb22ba38b2c39c
+  source_size_bytes: 592803
+  media_type_hint: audio
+- candidate_id: stage5bk-iddqd-v2-iso_3301
+  source_category: archive_fixture_candidate
+  planning_role: positive_control_or_source_reference_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: 2013/02/3301.iso
+  source_repo_path: third_party/CiadaSolversIddqd_v2/2013/02/3301.iso
+  source_path_found: true
+  source_sha256: bc7be9ef5dc30c2da2d4ba8363d9a9fc0ededaf49363d7aca17c3334ece8ccae
+  source_size_bytes: 134
+  media_type_hint: archive_or_binary
+- candidate_id: stage5bk-iddqd-v2-folly
+  source_category: text_reference_candidate
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: 2013/02/folly
+  source_repo_path: third_party/CiadaSolversIddqd_v2/2013/02/folly
+  source_path_found: true
+  source_sha256: 7e5ec097728197f5c0dba0729980565658fba486965809ffa25e3910a31c385a
+  source_size_bytes: 3368
+  media_type_hint: text_or_extensionless
+- candidate_id: stage5bk-iddqd-v2-wisdom
+  source_category: text_reference_candidate
+  planning_role: lineage_or_context_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: 2013/02/wisdom
+  source_repo_path: third_party/CiadaSolversIddqd_v2/2013/02/wisdom
+  source_path_found: true
+  source_sha256: 7e5ec097728197f5c0dba0729980565658fba486965809ffa25e3910a31c385a
+  source_size_bytes: 3368
+  media_type_hint: text_or_extensionless
+- candidate_id: stage5bk-iddqd-v2-mp3_761
+  source_category: audio_fixture_candidate
+  planning_role: positive_control_or_source_reference_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: 2013/02/761.MP3
+  source_repo_path: third_party/CiadaSolversIddqd_v2/2013/02/761.MP3
+  source_path_found: true
+  source_sha256: 83008217439110c3b824898af73b99cb2cf0657dda88cb363c3aa34a4ec0a460
+  source_size_bytes: 4010732
+  media_type_hint: audio
+- candidate_id: stage5bk-iddqd-v2-interconnectedness_mp3
+  source_category: audio_fixture_candidate
+  planning_role: positive_control_or_source_reference_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: 2014/05/3301 - Interconnectedness.mp3
+  source_repo_path: third_party/CiadaSolversIddqd_v2/2014/05/3301 - Interconnectedness.mp3
+  source_path_found: true
+  source_sha256: 1ce3839b4a62462d9009c4469acc189b523e1bdcf338cb49cda1cd7bb4efffc6
+  source_size_bytes: 6651873
+  media_type_hint: audio
+- candidate_id: stage5bk-iddqd-v2-image_4gq25
+  source_category: image_fixture_candidate
+  planning_role: positive_control_or_source_reference_only
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: 2016/01/4gq25.jpg
+  source_repo_path: third_party/CiadaSolversIddqd_v2/2016/01/4gq25.jpg
+  source_path_found: true
+  source_sha256: a8340ad04b83fb3130e7ed9172867a440812e87089d6aa2b932d97c6ae38aebe
+  source_size_bytes: 26342
+  media_type_hint: image
+- candidate_id: stage5bk-iddqd-v2-babelstone_font
+  source_category: font_reference
+  planning_role: reference_only_font_not_shared
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+  source_relative_path: ttf/BabelStoneRunicBeorhtnoth.ttf
+  source_repo_path: third_party/CiadaSolversIddqd_v2/ttf/BabelStoneRunicBeorhtnoth.ttf
+  source_path_found: true
+  source_sha256: 348b8af1a5907d8c347563c473595b85ebe05bdb62f3d29c743cbd61449c9497
+  source_size_bytes: 55556
+  media_type_hint: font
+- candidate_id: stage5bk-iddqd-v2-liber_primus_images_full
+  source_category: directory_tree
+  planning_role: positive_control_or_source_reference_only
+  source_relative_path: liber-primus__images--full
+  source_repo_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+  source_path_found: true
+  directory_file_count: 75
+  directory_tree_digest: 82719d1afa3ce5b6cfb9c3a29d5db8e2fd8ac10d33f80adba9cb5875b4dc0608
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+- candidate_id: stage5bk-iddqd-v2-liber_primus_images_unsolved
+  source_category: directory_tree
+  planning_role: positive_control_or_source_reference_only
+  source_relative_path: liber-primus__images--unsolved
+  source_repo_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved
+  source_path_found: true
+  directory_file_count: 58
+  directory_tree_digest: f4c374a2a0b08d21c97bf1f6f61080a20453a8ddd9aaa5fe37dcda5fe1c9b9f7
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false
+- candidate_id: stage5bk-iddqd-v2-lp_outguessed
+  source_category: directory_tree
+  planning_role: positive_control_or_source_reference_only
+  source_relative_path: lp_outguessed
+  source_repo_path: third_party/CiadaSolversIddqd_v2/lp_outguessed
+  source_path_found: true
+  directory_file_count: 150
+  directory_tree_digest: 168c5a8be19577bc76ccdd175ac000206182a4ad185c49b2b80283e9d343ff61
+  raw_body_committed: false
+  execution_allowed: false
+  solve_claim: false

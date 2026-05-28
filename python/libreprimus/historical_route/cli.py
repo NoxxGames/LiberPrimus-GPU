@@ -20,6 +20,23 @@ from libreprimus.historical_route.stage5bj import (
     summarize_stage5bj,
     validate_stage5bj,
 )
+from libreprimus.historical_route.stage5bk import (
+    DATA_PATHS as STAGE5BK_DATA_PATHS,
+    FALLBACK_IDDQD_V2,
+    PREFERRED_IDDQD_V2,
+    RESULTS_DIR as STAGE5BK_RESULTS_DIR,
+    TOKEN_BLOCK_RESULTS_DIR as STAGE5BK_TOKEN_BLOCK_RESULTS_DIR,
+    UPSTREAM_URL as STAGE5BK_UPSTREAM_URL,
+    build_stage5bk_iddqd_v2_source_lock,
+    build_stage5bk_planning_constraints,
+    build_stage5bk_records,
+    build_stage5bk_summary,
+    build_stage5bk_token_block_impact,
+    inventory_stage5bk_iddqd_v2,
+    locate_stage5bk_iddqd_v2,
+    summarize_stage5bk,
+    validate_stage5bk,
+)
 from libreprimus.historical_route.stage5bf import (
     build_annual_route_inventory,
     build_deep_research_readiness,
@@ -489,6 +506,361 @@ def register(root_app: typer.Typer) -> None:
         console.print(f"source_gap_closed_count={payload.get('source_gap_closed_count')}")
         console.print(f"source_gap_carried_forward_count={payload.get('source_gap_carried_forward_count')}")
         console.print(f"new_source_gap_count={payload.get('new_source_gap_count')}")
+        console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+    @app.command("locate-stage5bk-iddqd-v2")
+    def locate_stage5bk_iddqd_v2_command(
+        preferred_relative_path: Path = typer.Option(PREFERRED_IDDQD_V2),
+        fallback_relative_path: Path = typer.Option(FALLBACK_IDDQD_V2),
+        upstream_url: str = typer.Option(STAGE5BK_UPSTREAM_URL),
+        prior_stage4e_source_delta: Path = typer.Option(
+            Path("data/observations/archive/stage4e-cicada-solvers-iddqd-source-delta.yaml")
+        ),
+        results_dir: Path = typer.Option(STAGE5BK_RESULTS_DIR),
+        out: Path = typer.Option(STAGE5BK_DATA_PATHS["source_root"]),
+    ) -> None:
+        payload = locate_stage5bk_iddqd_v2(
+            preferred_relative_path=preferred_relative_path,
+            fallback_relative_path=fallback_relative_path,
+            upstream_url=upstream_url,
+            prior_stage4e_source_delta=prior_stage4e_source_delta,
+            results_dir=results_dir,
+            out=out,
+        )
+        console.print(f"iddqd_v2_source_root_found={str(payload['source_root_found']).lower()}")
+        console.print(f"iddqd_v2_selected_path={payload['selected_path']}")
+        console.print(f"source_root_status={payload['source_root_status']}")
+
+    @app.command("inventory-stage5bk-iddqd-v2")
+    def inventory_stage5bk_iddqd_v2_command(
+        source_root: Path = typer.Option(STAGE5BK_DATA_PATHS["source_root"]),
+        results_dir: Path = typer.Option(STAGE5BK_RESULTS_DIR),
+        out_tree_summary: Path = typer.Option(STAGE5BK_DATA_PATHS["tree_summary"]),
+        out_candidate_index: Path = typer.Option(STAGE5BK_DATA_PATHS["candidate_index"]),
+    ) -> None:
+        payload = inventory_stage5bk_iddqd_v2(
+            source_root=source_root,
+            results_dir=results_dir,
+            out_tree_summary=out_tree_summary,
+            out_candidate_index=out_candidate_index,
+        )
+        tree = payload["tree_summary"]
+        index = payload["candidate_index"]
+        console.print(f"iddqd_v2_total_file_count={tree['total_file_count']}")
+        console.print(f"iddqd_v2_tree_digest={tree['tree_digest']}")
+        console.print(f"candidate_found_count={index['candidate_found_count']}")
+
+    @app.command("build-stage5bk-iddqd-v2-source-lock")
+    def build_stage5bk_iddqd_v2_source_lock_command(
+        source_root: Path = typer.Option(STAGE5BK_DATA_PATHS["source_root"]),
+        tree_summary: Path = typer.Option(STAGE5BK_DATA_PATHS["tree_summary"]),
+        candidate_index: Path = typer.Option(STAGE5BK_DATA_PATHS["candidate_index"]),
+        stage5bj_surface_locks: Path = typer.Option(
+            Path("data/historical-route/stage5bj-2014-exact-surface-source-locks.yaml")
+        ),
+        stage5ap_mapping: Path = typer.Option(Path("data/token-block/stage5ap-token-block-mapping-preflight.yaml")),
+        stage5ap_transcription: Path = typer.Option(
+            Path("data/token-block/stage5ap-token-block-canonical-transcription.yaml")
+        ),
+        results_dir: Path = typer.Option(STAGE5BK_RESULTS_DIR),
+        out_byte_strings: Path = typer.Option(STAGE5BK_DATA_PATHS["byte_strings"]),
+        out_transcription: Path = typer.Option(STAGE5BK_DATA_PATHS["transcription"]),
+        out_translation_key_lineage: Path = typer.Option(STAGE5BK_DATA_PATHS["translation_key_lineage"]),
+        out_positive_control_context: Path = typer.Option(STAGE5BK_DATA_PATHS["positive_control_context"]),
+        out_source_gaps: Path = typer.Option(STAGE5BK_DATA_PATHS["iddqd_v2_source_gaps"]),
+        out_string4_crosswalk: Path = typer.Option(STAGE5BK_DATA_PATHS["string4_crosswalk"]),
+    ) -> None:
+        payload = build_stage5bk_iddqd_v2_source_lock(
+            source_root=source_root,
+            tree_summary=tree_summary,
+            candidate_index=candidate_index,
+            stage5bj_surface_locks=stage5bj_surface_locks,
+            stage5ap_mapping=stage5ap_mapping,
+            stage5ap_transcription=stage5ap_transcription,
+            results_dir=results_dir,
+            out_byte_strings=out_byte_strings,
+            out_transcription=out_transcription,
+            out_translation_key_lineage=out_translation_key_lineage,
+            out_positive_control_context=out_positive_control_context,
+            out_source_gaps=out_source_gaps,
+            out_string4_crosswalk=out_string4_crosswalk,
+        )
+        console.print(f"byte_string_count={payload['byte_strings']['byte_string_count']}")
+        console.print(f"exact_512_hex_string_count={payload['byte_strings']['exact_512_hex_string_count']}")
+        console.print(
+            "string4_page49_crosswalk_created="
+            f"{str(payload['string4_crosswalk']['source_string4_found']).lower()}"
+        )
+
+    @app.command("build-stage5bk-planning-constraints")
+    def build_stage5bk_planning_constraints_command(
+        stage5bf_technique_taxonomy: Path = typer.Option(
+            Path("data/historical-route/stage5bf-historical-technique-taxonomy.yaml")
+        ),
+        stage5bf_token_block_impact: Path = typer.Option(
+            Path("data/historical-route/stage5bf-token-block-planning-impact.yaml")
+        ),
+        stage5bf_source_gaps: Path = typer.Option(Path("data/historical-route/stage5bf-source-gap-register.yaml")),
+        stage5bj_summary: Path = typer.Option(Path("data/project-state/stage5bj-summary.yaml")),
+        stage5bj_surface_locks: Path = typer.Option(
+            Path("data/historical-route/stage5bj-2014-exact-surface-source-locks.yaml")
+        ),
+        stage5bj_crosswalk_closure: Path = typer.Option(
+            Path("data/historical-route/stage5bj-original-archive-crosswalk-closure.yaml")
+        ),
+        stage5bj_page_body_crosswalk: Path = typer.Option(
+            Path("data/historical-route/stage5bj-fandom-page-body-crosswalk.yaml")
+        ),
+        stage5bj_source_gaps: Path = typer.Option(Path("data/historical-route/stage5bj-source-gap-update.yaml")),
+        iddqd_v2_byte_strings: Path = typer.Option(STAGE5BK_DATA_PATHS["byte_strings"]),
+        iddqd_v2_transcription: Path = typer.Option(STAGE5BK_DATA_PATHS["transcription"]),
+        iddqd_v2_translation_key_lineage: Path = typer.Option(STAGE5BK_DATA_PATHS["translation_key_lineage"]),
+        results_dir: Path = typer.Option(STAGE5BK_RESULTS_DIR),
+        out_policy: Path = typer.Option(STAGE5BK_DATA_PATHS["constraint_policy"]),
+        out_family_status: Path = typer.Option(STAGE5BK_DATA_PATHS["family_status"]),
+        out_authenticity: Path = typer.Option(STAGE5BK_DATA_PATHS["authenticity"]),
+        out_stego: Path = typer.Option(STAGE5BK_DATA_PATHS["stego"]),
+        out_numeric: Path = typer.Option(STAGE5BK_DATA_PATHS["numeric"]),
+        out_book_code: Path = typer.Option(STAGE5BK_DATA_PATHS["book_code"]),
+        out_network_byte: Path = typer.Option(STAGE5BK_DATA_PATHS["network_byte"]),
+        out_lp_transcription: Path = typer.Option(STAGE5BK_DATA_PATHS["lp_transcription"]),
+        out_dwh: Path = typer.Option(STAGE5BK_DATA_PATHS["dwh"]),
+        out_gap_severity: Path = typer.Option(STAGE5BK_DATA_PATHS["gap_severity"]),
+        out_crosswalk_errata: Path = typer.Option(STAGE5BK_DATA_PATHS["crosswalk_errata"]),
+    ) -> None:
+        payload = build_stage5bk_planning_constraints(
+            stage5bf_technique_taxonomy=stage5bf_technique_taxonomy,
+            stage5bf_token_block_impact=stage5bf_token_block_impact,
+            stage5bf_source_gaps=stage5bf_source_gaps,
+            stage5bj_summary=stage5bj_summary,
+            stage5bj_surface_locks=stage5bj_surface_locks,
+            stage5bj_crosswalk_closure=stage5bj_crosswalk_closure,
+            stage5bj_page_body_crosswalk=stage5bj_page_body_crosswalk,
+            stage5bj_source_gaps=stage5bj_source_gaps,
+            iddqd_v2_byte_strings=iddqd_v2_byte_strings,
+            iddqd_v2_transcription=iddqd_v2_transcription,
+            iddqd_v2_translation_key_lineage=iddqd_v2_translation_key_lineage,
+            results_dir=results_dir,
+            out_policy=out_policy,
+            out_family_status=out_family_status,
+            out_authenticity=out_authenticity,
+            out_stego=out_stego,
+            out_numeric=out_numeric,
+            out_book_code=out_book_code,
+            out_network_byte=out_network_byte,
+            out_lp_transcription=out_lp_transcription,
+            out_dwh=out_dwh,
+            out_gap_severity=out_gap_severity,
+            out_crosswalk_errata=out_crosswalk_errata,
+        )
+        console.print(
+            f"historical_family_planning_status_count="
+            f"{payload['family_status']['historical_family_planning_status_count']}"
+        )
+        console.print(f"source_gap_severity_record_count={payload['gap_severity']['source_gap_severity_record_count']}")
+        console.print(f"stage5bj_crosswalk_errata_count={payload['crosswalk_errata']['stage5bj_crosswalk_errata_count']}")
+
+    @app.command("build-stage5bk-token-block-impact")
+    def build_stage5bk_token_block_impact_command(
+        constraint_policy: Path = typer.Option(STAGE5BK_DATA_PATHS["constraint_policy"]),
+        family_status: Path = typer.Option(STAGE5BK_DATA_PATHS["family_status"]),
+        gap_severity: Path = typer.Option(STAGE5BK_DATA_PATHS["gap_severity"]),
+        string4_crosswalk: Path = typer.Option(STAGE5BK_DATA_PATHS["string4_crosswalk"]),
+        stage5bd_summary: Path = typer.Option(Path("data/project-state/stage5bd-summary.yaml")),
+        stage5bj_lineage: Path = typer.Option(Path("data/token-block/stage5bj-token-block-lineage-preservation.yaml")),
+        results_dir: Path = typer.Option(STAGE5BK_TOKEN_BLOCK_RESULTS_DIR),
+        out_token_block_update: Path = typer.Option(STAGE5BK_DATA_PATHS["token_block_update"]),
+        out_surface_context: Path = typer.Option(STAGE5BK_DATA_PATHS["surface_context"]),
+        out_lineage: Path = typer.Option(STAGE5BK_DATA_PATHS["lineage"]),
+        out_future_dry_run_impact: Path = typer.Option(STAGE5BK_DATA_PATHS["future_dry_run_impact"]),
+    ) -> None:
+        payload = build_stage5bk_token_block_impact(
+            constraint_policy=constraint_policy,
+            family_status=family_status,
+            gap_severity=gap_severity,
+            string4_crosswalk=string4_crosswalk,
+            stage5bd_summary=stage5bd_summary,
+            stage5bj_lineage=stage5bj_lineage,
+            results_dir=results_dir,
+            out_token_block_update=out_token_block_update,
+            out_surface_context=out_surface_context,
+            out_lineage=out_lineage,
+            out_future_dry_run_impact=out_future_dry_run_impact,
+        )
+        console.print("token_block_historical_constraint_update_created=true")
+        console.print(
+            "future_token_block_execution_remains_blocked="
+            f"{str(payload['token_block_update']['future_token_block_execution_remains_blocked']).lower()}"
+        )
+
+    @app.command("build-stage5bk-summary")
+    def build_stage5bk_summary_command(
+        source_root: Path = typer.Option(STAGE5BK_DATA_PATHS["source_root"]),
+        tree_summary: Path = typer.Option(STAGE5BK_DATA_PATHS["tree_summary"]),
+        candidate_index: Path = typer.Option(STAGE5BK_DATA_PATHS["candidate_index"]),
+        byte_strings: Path = typer.Option(STAGE5BK_DATA_PATHS["byte_strings"]),
+        transcription: Path = typer.Option(STAGE5BK_DATA_PATHS["transcription"]),
+        translation_key_lineage: Path = typer.Option(STAGE5BK_DATA_PATHS["translation_key_lineage"]),
+        positive_control_context: Path = typer.Option(STAGE5BK_DATA_PATHS["positive_control_context"]),
+        iddqd_v2_source_gaps: Path = typer.Option(STAGE5BK_DATA_PATHS["iddqd_v2_source_gaps"]),
+        constraint_policy: Path = typer.Option(STAGE5BK_DATA_PATHS["constraint_policy"]),
+        family_status: Path = typer.Option(STAGE5BK_DATA_PATHS["family_status"]),
+        authenticity: Path = typer.Option(STAGE5BK_DATA_PATHS["authenticity"]),
+        stego: Path = typer.Option(STAGE5BK_DATA_PATHS["stego"]),
+        numeric: Path = typer.Option(STAGE5BK_DATA_PATHS["numeric"]),
+        book_code: Path = typer.Option(STAGE5BK_DATA_PATHS["book_code"]),
+        network_byte: Path = typer.Option(STAGE5BK_DATA_PATHS["network_byte"]),
+        lp_transcription: Path = typer.Option(STAGE5BK_DATA_PATHS["lp_transcription"]),
+        dwh: Path = typer.Option(STAGE5BK_DATA_PATHS["dwh"]),
+        gap_severity: Path = typer.Option(STAGE5BK_DATA_PATHS["gap_severity"]),
+        crosswalk_errata: Path = typer.Option(STAGE5BK_DATA_PATHS["crosswalk_errata"]),
+        token_block_update: Path = typer.Option(STAGE5BK_DATA_PATHS["token_block_update"]),
+        surface_context: Path = typer.Option(STAGE5BK_DATA_PATHS["surface_context"]),
+        string4_crosswalk: Path = typer.Option(STAGE5BK_DATA_PATHS["string4_crosswalk"]),
+        lineage: Path = typer.Option(STAGE5BK_DATA_PATHS["lineage"]),
+        future_dry_run_impact: Path = typer.Option(STAGE5BK_DATA_PATHS["future_dry_run_impact"]),
+        results_dir: Path = typer.Option(STAGE5BK_RESULTS_DIR),
+        out_source_summary: Path = typer.Option(STAGE5BK_DATA_PATHS["source_summary"]),
+        out_codex_policy: Path = typer.Option(STAGE5BK_DATA_PATHS["codex_policy"]),
+        out_guardrail: Path = typer.Option(STAGE5BK_DATA_PATHS["guardrail"]),
+        out_next_stage: Path = typer.Option(STAGE5BK_DATA_PATHS["next_stage"]),
+        out_summary: Path = typer.Option(STAGE5BK_DATA_PATHS["summary"]),
+    ) -> None:
+        payload = build_stage5bk_summary(
+            source_root=source_root,
+            tree_summary=tree_summary,
+            candidate_index=candidate_index,
+            byte_strings=byte_strings,
+            transcription=transcription,
+            translation_key_lineage=translation_key_lineage,
+            positive_control_context=positive_control_context,
+            iddqd_v2_source_gaps=iddqd_v2_source_gaps,
+            constraint_policy=constraint_policy,
+            family_status=family_status,
+            authenticity=authenticity,
+            stego=stego,
+            numeric=numeric,
+            book_code=book_code,
+            network_byte=network_byte,
+            lp_transcription=lp_transcription,
+            dwh=dwh,
+            gap_severity=gap_severity,
+            crosswalk_errata=crosswalk_errata,
+            token_block_update=token_block_update,
+            surface_context=surface_context,
+            string4_crosswalk=string4_crosswalk,
+            lineage=lineage,
+            future_dry_run_impact=future_dry_run_impact,
+            results_dir=results_dir,
+            out_source_summary=out_source_summary,
+            out_codex_policy=out_codex_policy,
+            out_guardrail=out_guardrail,
+            out_next_stage=out_next_stage,
+            out_summary=out_summary,
+        )
+        console.print("stage5bk_summary_written=true")
+        console.print(f"iddqd_v2_total_file_count={payload['iddqd_v2_total_file_count']}")
+        console.print(f"byte_string_count={payload['iddqd_v2_byte_string_count']}")
+        console.print(f"recommended_next_stage_title={payload['recommended_next_stage_title']}")
+
+    @app.command("validate-stage5bk")
+    def validate_stage5bk_command(
+        source_root: Path = typer.Option(STAGE5BK_DATA_PATHS["source_root"]),
+        tree_summary: Path = typer.Option(STAGE5BK_DATA_PATHS["tree_summary"]),
+        candidate_index: Path = typer.Option(STAGE5BK_DATA_PATHS["candidate_index"]),
+        byte_strings: Path = typer.Option(STAGE5BK_DATA_PATHS["byte_strings"]),
+        transcription: Path = typer.Option(STAGE5BK_DATA_PATHS["transcription"]),
+        translation_key_lineage: Path = typer.Option(STAGE5BK_DATA_PATHS["translation_key_lineage"]),
+        positive_control_context: Path = typer.Option(STAGE5BK_DATA_PATHS["positive_control_context"]),
+        iddqd_v2_source_gaps: Path = typer.Option(STAGE5BK_DATA_PATHS["iddqd_v2_source_gaps"]),
+        constraint_policy: Path = typer.Option(STAGE5BK_DATA_PATHS["constraint_policy"]),
+        family_status: Path = typer.Option(STAGE5BK_DATA_PATHS["family_status"]),
+        authenticity: Path = typer.Option(STAGE5BK_DATA_PATHS["authenticity"]),
+        stego: Path = typer.Option(STAGE5BK_DATA_PATHS["stego"]),
+        numeric: Path = typer.Option(STAGE5BK_DATA_PATHS["numeric"]),
+        book_code: Path = typer.Option(STAGE5BK_DATA_PATHS["book_code"]),
+        network_byte: Path = typer.Option(STAGE5BK_DATA_PATHS["network_byte"]),
+        lp_transcription: Path = typer.Option(STAGE5BK_DATA_PATHS["lp_transcription"]),
+        dwh: Path = typer.Option(STAGE5BK_DATA_PATHS["dwh"]),
+        gap_severity: Path = typer.Option(STAGE5BK_DATA_PATHS["gap_severity"]),
+        crosswalk_errata: Path = typer.Option(STAGE5BK_DATA_PATHS["crosswalk_errata"]),
+        token_block_update: Path = typer.Option(STAGE5BK_DATA_PATHS["token_block_update"]),
+        surface_context: Path = typer.Option(STAGE5BK_DATA_PATHS["surface_context"]),
+        string4_crosswalk: Path = typer.Option(STAGE5BK_DATA_PATHS["string4_crosswalk"]),
+        lineage: Path = typer.Option(STAGE5BK_DATA_PATHS["lineage"]),
+        future_dry_run_impact: Path = typer.Option(STAGE5BK_DATA_PATHS["future_dry_run_impact"]),
+        source_summary: Path = typer.Option(STAGE5BK_DATA_PATHS["source_summary"]),
+        codex_policy: Path = typer.Option(STAGE5BK_DATA_PATHS["codex_policy"]),
+        guardrail: Path = typer.Option(STAGE5BK_DATA_PATHS["guardrail"]),
+        next_stage_decision: Path = typer.Option(STAGE5BK_DATA_PATHS["next_stage"]),
+        summary: Path = typer.Option(STAGE5BK_DATA_PATHS["summary"]),
+        results_dir: Path = typer.Option(STAGE5BK_RESULTS_DIR),
+    ) -> None:
+        result = validate_stage5bk(
+            {
+                "source_root": source_root,
+                "tree_summary": tree_summary,
+                "candidate_index": candidate_index,
+                "byte_strings": byte_strings,
+                "transcription": transcription,
+                "translation_key_lineage": translation_key_lineage,
+                "positive_control_context": positive_control_context,
+                "iddqd_v2_source_gaps": iddqd_v2_source_gaps,
+                "constraint_policy": constraint_policy,
+                "family_status": family_status,
+                "authenticity": authenticity,
+                "stego": stego,
+                "numeric": numeric,
+                "book_code": book_code,
+                "network_byte": network_byte,
+                "lp_transcription": lp_transcription,
+                "dwh": dwh,
+                "gap_severity": gap_severity,
+                "crosswalk_errata": crosswalk_errata,
+                "token_block_update": token_block_update,
+                "surface_context": surface_context,
+                "string4_crosswalk": string4_crosswalk,
+                "lineage": lineage,
+                "future_dry_run_impact": future_dry_run_impact,
+                "source_summary": source_summary,
+                "codex_policy": codex_policy,
+                "guardrail": guardrail,
+                "next_stage": next_stage_decision,
+                "summary": summary,
+                "results_dir": results_dir,
+            }
+        )
+        for key, value in result.items():
+            if key != "validation_errors":
+                console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+
+    @app.command("stage5bk-build")
+    def stage5bk_build() -> None:
+        payloads = build_stage5bk_records()
+        summary = payloads["summary"]
+        console.print("stage5bk_build=true")
+        console.print(f"iddqd_v2_total_file_count={summary['iddqd_v2_total_file_count']}")
+        console.print(f"byte_string_count={summary['iddqd_v2_byte_string_count']}")
+        console.print(f"source_gap_severity_record_count={summary['source_gap_severity_record_count']}")
+        console.print(f"stage5bj_crosswalk_errata_count={summary['stage5bj_crosswalk_errata_count']}")
+
+    @app.command("stage5bk-validate")
+    def stage5bk_validate_alias() -> None:
+        result = validate_stage5bk()
+        for key, value in result.items():
+            if key != "validation_errors":
+                console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+
+    @app.command("stage5bk-summary")
+    def stage5bk_summary(summary: Path = typer.Option(STAGE5BK_DATA_PATHS["summary"])) -> None:
+        payload = summarize_stage5bk(summary)
+        console.print(f"stage_id={payload.get('stage_id')}")
+        console.print(f"status={payload.get('status')}")
+        console.print(f"iddqd_v2_selected_path={payload.get('iddqd_v2_selected_path')}")
+        console.print(f"iddqd_v2_total_file_count={payload.get('iddqd_v2_total_file_count')}")
+        console.print(f"iddqd_v2_byte_string_count={payload.get('iddqd_v2_byte_string_count')}")
+        console.print(f"source_gap_severity_record_count={payload.get('source_gap_severity_record_count')}")
+        console.print(f"stage5bj_crosswalk_errata_count={payload.get('stage5bj_crosswalk_errata_count')}")
         console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
 
     root_app.add_typer(app, name="historical-route")

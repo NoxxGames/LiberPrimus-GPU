@@ -1,0 +1,29 @@
+record_type: stage5bk_iddqd_v2_local_source_root
+schema: schemas/historical-route/stage5bk-iddqd-v2-local-source-root-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+preferred_relative_path: third_party/CiadaSolversIddqd_v2
+fallback_relative_path: third_party/CicadaSolversIddqd_v2
+selected_path: third_party/CiadaSolversIddqd_v2
+source_root_found: true
+preferred_path_found: true
+fallback_path_found: false
+upstream_url: https://github.com/cicada-solvers/iddqd
+prior_stage4e_source_delta: data/observations/archive/stage4e-cicada-solvers-iddqd-source-delta.yaml
+prior_stage4e_remote_head: 0e3789ad2949c62ea7fb9e3e00ded93df3b3ce07
+source_root_status: found_preferred_path
+raw_source_committed: false
+raw_iddqd_v2_files_committed: false
+generated_outputs_committed: false
+execution_allowed: false
+codex_output_used: false

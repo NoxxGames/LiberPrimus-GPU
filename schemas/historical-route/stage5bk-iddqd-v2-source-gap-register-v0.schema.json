@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["record_type","schema","stage_id","source_gap_count","records","metadata_only","solve_claim"],"properties":{"stage_id":{"const":"stage-5bk"},"source_gap_count":{"type":"integer","minimum":0},"execution_allowed":{"const":false},"solve_claim":{"const":false}},"additionalProperties":true}

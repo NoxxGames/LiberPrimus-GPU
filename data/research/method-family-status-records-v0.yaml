@@ -573,3 +573,14 @@ records:
     next_action: Keep historical fixtures blocked and use synthetic controls only for raw-data-free validation until expected outputs and tools are source-locked.
     solve_claim: false
     notes: Stage 5AP records `outguess_missing` locally and 0 historical fixtures ready.
+  - record_type: method_family_status_record
+    method_family_id: historical_route_planning_constraints
+    name: Historical-route planning constraints and iddqd-v2 source-lock addendum
+    status: infrastructure_only
+    evidence_summary: Stage 5BK consumes Stage 5BF, Stage 5BI, Stage 5BJ, and Stage 5BD records, source-locks the ignored local iddqd-v2 archive as compact metadata, records byte-string/transcription/translation/key-lineage context, audits one Stage 5BJ crosswalk warning, and turns historical families into explicit planning constraints while keeping all execution gates blocked.
+    completed_stage_refs: [stage-5bf, stage-5bi, stage-5bj, stage-5bk]
+    reopen_conditions: [A future Stage 5BL review requests metadata repair, source-gap reprioritisation, stronger source locks, or a later explicitly scoped execution-gated stage cites Stage 5BK constraints.]
+    stop_conditions: [Do not run token-block execution, generate byte streams, materialise variants, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, decode, run stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, commit raw iddqd-v2 files, publish generated outputs, upgrade method status to solved, or make solve claims.]
+    next_action: Stage 5BL should review the Stage 5BK planning constraints and iddqd-v2 source-lock integration without execution.
+    solve_claim: false
+    notes: iddqd-v2 is complementary technical archive metadata, not automatic canonical truth; String 4 is page49-51 matrix-hex context only and does not replace Stage 5AP.

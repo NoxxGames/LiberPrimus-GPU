@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5BJ original-archive crosswalk closure for high-priority Fandom-derived candidates is complete.
+Stage 5BK historical-route planning constraint integration and iddqd-v2 source-lock addendum is complete.
 
-Next recommended prompt: Stage 5BK - Historical-route planning constraint integration, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5BL - Deep Research review of historical-route planning constraints and iddqd-v2 source-lock integration, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5BK
+
+Stage 5BK integrates the Stage 5BF/5BI/5BJ historical-route context into explicit planning constraints without executing token-block work. It source-locks the ignored local `third_party/CiadaSolversIddqd_v2` archive as compact metadata only, records tree and high-priority file metadata, source-locks the `byte-strings/byte-strings` file, crosswalks Strings 1-3 to the Stage 5BJ 2014 exact surface locks, records String 4 as page 49-51 matrix-hex context only, and source-locks transcription/translation/key-lineage material as non-canonical context.
+
+Local Stage 5BK summary: iddqd-v2 source root found `true`, selected path `third_party/CiadaSolversIddqd_v2`, file count `309`, tree digest `e9184492a54a437dd955fecc4c344cd662889d172ab8e8a89eb34b629247ad8b`, byte-string count `4`, exact 512-hex strings `4`, String 1-3 Stage 5BJ crosswalks `3`, String 4 page49-51 crosswalk created `true`, transcription locks `2`, translation/key-lineage records `4`, positive-control context records `11`, historical family planning statuses `9`, source-gap severity records `7`, Stage 5BJ errata warnings `1`, active token-block manifest changed `false`, canonical transcription changed `false`, and next stage `Stage 5BL`.
+
+Stage 5BK is metadata-only. It does not run token-block experiments, generate real token-block byte streams, materialise variants, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, compare candidate hashes as an experiment, decode, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, score candidate plaintext, publish website content, commit raw iddqd-v2/Fandom/archive/spreadsheet files, commit full extracted surface bodies, alter Stage 5BD dry-run records, change canonical transcription, change active token-block manifests, or make solve claims. The Codex handoff path is `codex-output/stage5bk-codex-completion.md`; `codex_output` is deprecated and must not be created.
 
 ## Completed in Stage 5BJ
 
@@ -1050,4 +1058,4 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 
 ## Next prompt recommendation
 
-Stage 5BK - Historical-route planning constraint integration, without execution. Use the Stage 5BJ crosswalk closure, exact 2014 surface source-lock, Fandom page-body crosswalk, boards-thread, media-equivalence, source-gap update, token-block lineage, guardrail, summary, and next-stage records; keep token experiment execution, real byte-stream generation, 2014/page49-51 surface combination, DWH/hash/preimage search, historical stego execution, online PGP verification, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, website publication, and solve claims blocked unless a later prompt explicitly scopes execution.
+Stage 5BL - Deep Research review of historical-route planning constraints and iddqd-v2 source-lock integration, without execution. Use the Stage 5BK source-root, tree, byte-string, transcription, translation/key-lineage, positive-control context, planning constraint, source-gap severity, Stage 5BJ errata, token-block constraint, summary, and next-stage records; keep token experiment execution, real byte-stream generation, 2014/page49-51 surface combination, DWH/hash/preimage search, historical stego execution, online PGP verification, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, website publication, and solve claims blocked unless a later prompt explicitly scopes execution.

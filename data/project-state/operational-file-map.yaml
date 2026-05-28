@@ -1607,3 +1607,101 @@ records:
   owner_context: codex_agent
   notes: Documents Stage 5BJ closure records, exact-surface metadata, guardrails,
     ignored completion summaries, and Stage 5BK next-stage rationale.
+- path: data/project-state/stage5bk-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BK historical-route planning constraint aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bk
+  expected_update_frequency: when_historical_route_planning_constraints_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records iddqd-v2 source-root status, byte-string counts, transcription
+    and translation/key-lineage status, planning constraint counts, guardrails,
+    and Stage 5BL next-stage decision.
+- path: data/project-state/stage5bk-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5BK next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bk
+  expected_update_frequency: when_historical_route_planning_next_stage_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Selects Stage 5BL Deep Research review of historical-route planning
+    constraints and iddqd-v2 source-lock integration without execution.
+- path: data/historical-route/stage5bk-iddqd-v2-byte-strings-source-lock.yaml
+  category: active_data_record
+  purpose: Stage 5BK iddqd-v2 byte-string source-lock metadata.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bk
+  expected_update_frequency: when_iddqd_v2_byte_string_sources_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records four exact 512-hex strings as source-lock metadata only while
+    keeping full string bodies and decoded bytes uncommitted.
+- path: data/historical-route/stage5bk-historical-family-planning-status.yaml
+  category: active_data_record
+  purpose: Stage 5BK historical family planning statuses.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bk
+  expected_update_frequency: when_historical_family_planning_status_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Classifies historical-route families as blocked, control-only,
+    source-reference, or review-only planning metadata without execution.
+- path: data/historical-route/stage5bk-source-gap-severity-register.yaml
+  category: active_data_record
+  purpose: Stage 5BK source-gap severity register.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bk
+  expected_update_frequency: when_historical_route_source_gaps_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Carries Stage 5BF/5BI/5BJ and iddqd-v2 source gaps into explicit
+    planning blockers and review priorities.
+- path: data/token-block/stage5bk-page49-51-string4-crosswalk.yaml
+  category: active_data_record
+  purpose: Stage 5BK String 4 page49-51 matrix-hex context crosswalk.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bk
+  expected_update_frequency: when_page49_string4_context_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records String 4 as external page49-51 matrix-hex context only; it does
+    not change canonical transcription or generate byte streams.
+- path: data/token-block/stage5bk-token-block-lineage-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5BK token-block lineage preservation record.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bk
+  expected_update_frequency: when_token_block_lineage_constraints_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records that Stage 5AP canonical transcription, Stage 5AW branch
+    metadata, Stage 5AZ repaired manifests, and Stage 5BD dry-run gates remain
+    unchanged and blocked for execution.
+- path: docs/experiments/stage-5bk-historical-route-planning-constraint-integration.md
+  category: operational_status_doc
+  purpose: Stage 5BK metadata-only planning constraint note.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bk
+  expected_update_frequency: when_stage5bk_records_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents Stage 5BK iddqd-v2 metadata, planning constraints, token-block
+    impact records, guardrails, and Stage 5BL next-stage rationale.

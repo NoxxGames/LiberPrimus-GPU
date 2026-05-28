@@ -1,0 +1,45 @@
+record_type: stage5bk_stage5bj_crosswalk_review_and_errata_set
+schema: schemas/historical-route/stage5bk-stage5bj-crosswalk-review-and-errata-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+stage5bj_crosswalk_errata_count: 1
+planning_warning_count: 1
+records:
+- record_type: stage5bk_stage5bj_crosswalk_review_and_errata
+  schema: schemas/historical-route/stage5bk-stage5bj-crosswalk-review-and-errata-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  errata_id: stage5bk-stage5bj-hidden-content-4gq25-review-warning
+  source_stage5bj_record_id: stage5bj-page-body-hidden-original-image
+  source_url: https://uncovering-cicada.fandom.com/wiki/Hidden_content_of_original_image_(January_4th_2013)
+  review_status: planning_supersession_warning
+  warning: Stage 5BJ linked a Fandom hidden-original-image page-body row to the 2016
+    4gq25 media fixture. Stage 5BK treats that as media/source-reference context,
+    not an exact Fandom page-body snapshot.
+  supersedes_for_planning: true
+  route_equivalent_file_is_page_body_snapshot: false
+  route_equivalent_file_is_media_fixture: true
+  corrected_planning_status: positive_control_only_or_source_reference_only
+  execution_allowed: false
+  image_forensics_performed: false
+execution_allowed: false

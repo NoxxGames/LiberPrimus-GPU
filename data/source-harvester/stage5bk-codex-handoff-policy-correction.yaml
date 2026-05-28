@@ -1,0 +1,23 @@
+record_type: stage5bk_codex_handoff_policy_correction
+schema: schemas/source-harvester/stage5bk-codex-handoff-policy-correction-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+canonical_handoff_root: codex-output
+deprecated_handoff_root: codex_output
+deprecated_root_deleted_by_operator: true
+future_stages_must_use_deprecated_root: false
+historical_stage5bj_local_path_reference_preserved_as_historical_context: true
+codex_completion_summary_path: codex-output/stage5bk-codex-completion.md
+codex_output_used: false
+codex_output_committed: false
+codex_output_directory_created: false

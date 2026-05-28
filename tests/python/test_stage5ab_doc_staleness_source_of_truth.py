@@ -19,10 +19,10 @@ def test_stage5ab_source_of_truth_schema_and_loader() -> None:
 
     _validator("schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json").validate(payload)
     source = load_source_of_truth(path)
-    assert source.latest_completed_stage_prefix == "Stage 5BJ"
-    assert source.expected_next_stage_prefix == "Stage 5BK"
+    assert source.latest_completed_stage_prefix == "Stage 5BK"
+    assert source.expected_next_stage_prefix == "Stage 5BL"
     assert source.next_stage_after_this_stage == (
-        "Stage 5BK - Historical-route planning constraint integration, without execution"
+        "Stage 5BL - Deep Research review of historical-route planning constraints and iddqd-v2 source-lock integration, without execution"
     )
 
 

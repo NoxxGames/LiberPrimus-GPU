@@ -1,0 +1,208 @@
+record_type: stage5bk_historical_family_planning_status_set
+schema: schemas/historical-route/stage5bk-historical-family-planning-status-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+historical_family_planning_status_count: 9
+status_counts:
+  blocked_authenticity_gate_required: 1
+  blocked_execution: 2
+  control_or_reference_only: 1
+  non_canonical_reference: 1
+  positive_control_only: 1
+  quarantined: 1
+  reference_only: 1
+  source_lock_metadata_only: 1
+records:
+- record_type: stage5bk_historical_family_planning_status
+  schema: schemas/historical-route/stage5bk-historical-family-planning-status-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  family_id: authenticity_pgp_route
+  planning_status: blocked_authenticity_gate_required
+  constraint_reason: PGP authenticity remains a review gate.
+  method_status_upgrade_allowed: false
+  execution_allowed: false
+  token_experiment_executed: false
+- record_type: stage5bk_historical_family_planning_status
+  schema: schemas/historical-route/stage5bk-historical-family-planning-status-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  family_id: stego_audio_positive_controls
+  planning_status: positive_control_only
+  constraint_reason: Historical stego/audio artifacts require fixtures and expected
+    outputs.
+  method_status_upgrade_allowed: false
+  execution_allowed: false
+  token_experiment_executed: false
+- record_type: stage5bk_historical_family_planning_status
+  schema: schemas/historical-route/stage5bk-historical-family-planning-status-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  family_id: numeric_magic_square_controls
+  planning_status: control_or_reference_only
+  constraint_reason: Numeric and magic-square routes require null controls.
+  method_status_upgrade_allowed: false
+  execution_allowed: false
+  token_experiment_executed: false
+- record_type: stage5bk_historical_family_planning_status
+  schema: schemas/historical-route/stage5bk-historical-family-planning-status-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  family_id: book_code_text_reference
+  planning_status: reference_only
+  constraint_reason: Book-code and text-reference material is lineage context only.
+  method_status_upgrade_allowed: false
+  execution_allowed: false
+  token_experiment_executed: false
+- record_type: stage5bk_historical_family_planning_status
+  schema: schemas/historical-route/stage5bk-historical-family-planning-status-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  family_id: network_byte_channel_surfaces
+  planning_status: blocked_execution
+  constraint_reason: Network byte channels are source locks, not DWH/hash-search inputs.
+  method_status_upgrade_allowed: false
+  execution_allowed: false
+  token_experiment_executed: false
+- record_type: stage5bk_historical_family_planning_status
+  schema: schemas/historical-route/stage5bk-historical-family-planning-status-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  family_id: liber_primus_transcription_lineage
+  planning_status: non_canonical_reference
+  constraint_reason: iddqd-v2 transcriptions do not activate the canonical corpus.
+  method_status_upgrade_allowed: false
+  execution_allowed: false
+  token_experiment_executed: false
+- record_type: stage5bk_historical_family_planning_status
+  schema: schemas/historical-route/stage5bk-historical-family-planning-status-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  family_id: dwh_quarantine
+  planning_status: quarantined
+  constraint_reason: DWH relationships remain quarantined.
+  method_status_upgrade_allowed: false
+  execution_allowed: false
+  token_experiment_executed: false
+- record_type: stage5bk_historical_family_planning_status
+  schema: schemas/historical-route/stage5bk-historical-family-planning-status-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  family_id: token_block_page49_51_context
+  planning_status: blocked_execution
+  constraint_reason: Page 49-51 execution remains blocked by Stage 5BD gates.
+  method_status_upgrade_allowed: false
+  execution_allowed: false
+  token_experiment_executed: false
+- record_type: stage5bk_historical_family_planning_status
+  schema: schemas/historical-route/stage5bk-historical-family-planning-status-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  family_id: iddqd_v2_positive_control_context
+  planning_status: source_lock_metadata_only
+  constraint_reason: Local iddqd-v2 metadata can inform future review.
+  method_status_upgrade_allowed: false
+  execution_allowed: false
+  token_experiment_executed: false
+method_status_upgraded: false
+execution_allowed: false

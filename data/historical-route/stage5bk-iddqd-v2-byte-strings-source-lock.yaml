@@ -1,0 +1,177 @@
+record_type: stage5bk_iddqd_v2_byte_strings_source_lock_set
+schema: schemas/historical-route/stage5bk-iddqd-v2-byte-strings-source-lock-v0.schema.json
+stage_id: stage-5bk
+stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+  source-lock addendum, without execution
+source_previous_stage: stage-5bj
+source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+source_stage_ids:
+- stage-5bj
+- stage-5bi
+- stage-5bf
+- stage-5bd
+metadata_only: true
+solve_claim: false
+source_root_path: third_party/CiadaSolversIddqd_v2
+byte_strings_source_path: third_party/CiadaSolversIddqd_v2/byte-strings/byte-strings
+byte_strings_source_found: true
+byte_strings_source_sha256: 03a1990cb8a32bdb4acc0981dba21a86cb6046871391fc61cab9bdc535f8154f
+byte_string_count: 4
+exact_512_hex_string_count: 4
+string1_to_3_stage5bj_crosswalk_count: 3
+string4_page49_crosswalk_created: true
+source_string_bodies_committed: false
+full_hex_bodies_committed: false
+decoded_byte_bodies_committed: false
+decoded_bytes_committed: false
+raw_source_committed: false
+generated_outputs_committed: false
+real_byte_stream_generated: false
+hash_search_performed: false
+decode_attempt_performed: false
+execution_allowed: false
+records:
+- record_type: stage5bk_iddqd_v2_byte_string_source_lock
+  schema: schemas/historical-route/stage5bk-iddqd-v2-byte-strings-source-lock-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  byte_string_id: stage5bk-iddqd-v2-byte-string-1
+  string_number: 1
+  source_label: Hidden Service 2 (http://cu343l33nqaekrnw.onion/)
+  hex_length: 512
+  exact_512_hex: true
+  hex_sha256: 8097a0bf1823928f4849dbdfd4d136fd490c1c1110a6589db65304834c2d0022
+  decoded_byte_length: 256
+  decoded_byte_sha256: 05acf0d8e2ba7d851e2b4bbc32b85e461a1bd41576a50504487f33d4c1522c56
+  decoded_byte_hash_role: provenance_only_not_search
+  surface_crosswalk_status: matches_stage5bj_exact_2014_surface
+  stage5bj_surface_lock_id: stage5bj-lock-2014-patience-512-hex
+  stage5bj_surface_id: stage5bi-c01-2014-growing-hex-surface
+  stage5bj_surface_hash_match: true
+  source_string_body_committed: false
+  full_hex_body_committed: false
+  decoded_byte_bodies_committed: false
+  decoded_bytes_committed: false
+  real_byte_stream_generated: false
+  dwh_hash_search_performed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  execution_allowed: false
+- record_type: stage5bk_iddqd_v2_byte_string_source_lock
+  schema: schemas/historical-route/stage5bk-iddqd-v2-byte-strings-source-lock-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  byte_string_id: stage5bk-iddqd-v2-byte-string-2
+  string_number: 2
+  source_label: Hidden Service 3 (http://fv7lyucmeozzd5j4.onion/)
+  hex_length: 512
+  exact_512_hex: true
+  hex_sha256: 549b173a2f5569e070618c1133ded42d75b2033d3d20b8e82cce36a60b944f28
+  decoded_byte_length: 256
+  decoded_byte_sha256: d8c0f83cf91d0deda658035e3eb07712b12e72b36ed0e471a71a2fe07dd14ba6
+  decoded_byte_hash_role: provenance_only_not_search
+  surface_crosswalk_status: matches_stage5bj_exact_2014_surface
+  stage5bj_surface_lock_id: stage5bj-lock-2014-1033-512-hex
+  stage5bj_surface_id: stage5bi-c02-2014-1033-hex-surface
+  stage5bj_surface_hash_match: true
+  source_string_body_committed: false
+  full_hex_body_committed: false
+  decoded_byte_bodies_committed: false
+  decoded_bytes_committed: false
+  real_byte_stream_generated: false
+  dwh_hash_search_performed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  execution_allowed: false
+- record_type: stage5bk_iddqd_v2_byte_string_source_lock
+  schema: schemas/historical-route/stage5bk-iddqd-v2-byte-strings-source-lock-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  byte_string_id: stage5bk-iddqd-v2-byte-string-3
+  string_number: 3
+  source_label: Hidden Service 4 (https://avowyfgl5lkzfj3n.onion/)
+  hex_length: 512
+  exact_512_hex: true
+  hex_sha256: 9f492e398bf34f5f027a07cc02db6eb1d6f29982ede276a9cbd311a8058f4eb0
+  decoded_byte_length: 256
+  decoded_byte_sha256: 4f1cef871153b8211472d6afd0acfa120eb331b8793e6eb7690484bcb1f89da2
+  decoded_byte_hash_role: provenance_only_not_search
+  surface_crosswalk_status: matches_stage5bj_exact_2014_surface
+  stage5bj_surface_lock_id: stage5bj-lock-2014-3301-512-hex
+  stage5bj_surface_id: stage5bi-c03-2014-3301-hex-surface
+  stage5bj_surface_hash_match: true
+  source_string_body_committed: false
+  full_hex_body_committed: false
+  decoded_byte_bodies_committed: false
+  decoded_bytes_committed: false
+  real_byte_stream_generated: false
+  dwh_hash_search_performed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  execution_allowed: false
+- record_type: stage5bk_iddqd_v2_byte_string_source_lock
+  schema: schemas/historical-route/stage5bk-iddqd-v2-byte-strings-source-lock-v0.schema.json
+  stage_id: stage-5bk
+  stage_title: Stage 5BK - Historical-route planning constraint integration and iddqd-v2
+    source-lock addendum, without execution
+  source_previous_stage: stage-5bj
+  source_previous_stage_commit: 0103b24a4b3c77e2c88fba10f60ed5f6b9b1532d
+  source_stage_ids:
+  - stage-5bj
+  - stage-5bi
+  - stage-5bf
+  - stage-5bd
+  metadata_only: true
+  solve_claim: false
+  byte_string_id: stage5bk-iddqd-v2-byte-string-4
+  string_number: 4
+  source_label: Matrix from pages 49-51 converted to hexadecimal
+  hex_length: 512
+  exact_512_hex: true
+  hex_sha256: 93ee9ddeda9e30ae42827d9f61b4192d4da15726781f822d401d888ea6e96e6d
+  decoded_byte_length: 256
+  decoded_byte_sha256: 3b9b07d9a26e6d55c432d94d2661fdff3c2b348daed06821f2bdb23184a4b290
+  decoded_byte_hash_role: provenance_only_not_search
+  surface_crosswalk_status: metadata_crosswalk_to_stage5ap_primary60_mapping_only
+  stage5bj_surface_lock_id: null
+  stage5bj_surface_id: null
+  stage5bj_surface_hash_match: null
+  source_string_body_committed: false
+  full_hex_body_committed: false
+  decoded_byte_bodies_committed: false
+  decoded_bytes_committed: false
+  real_byte_stream_generated: false
+  dwh_hash_search_performed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  execution_allowed: false
