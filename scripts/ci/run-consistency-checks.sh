@@ -7,6 +7,15 @@ cd "$repo_root"
 python_bin="${PYTHON:-python}"
 tmp_dir="$(mktemp -d)"
 trap 'rm -rf "$tmp_dir"' EXIT
+
+python_path() {
+    if command -v cygpath >/dev/null 2>&1; then
+        cygpath -w "$1"
+    else
+        printf '%s\n' "$1"
+    fi
+}
+
 echo "For faster local validation, use scripts/ci/run-parallel-validation.sh --workers 16"
 
 echo "Running full consistency suite"
@@ -24,36 +33,37 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5BI" \
-    --expected-next-stage "Stage 5BJ" \
+    --expected-latest-stage "Stage 5BJ" \
+    --expected-next-stage "Stage 5BK" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5BI" \
-    --expected-next-stage "Stage 5BJ" \
+    --expected-latest-stage "Stage 5BJ" \
+    --expected-next-stage "Stage 5BK" \
     --out "$stage5ah_out/current_next_stage_report.json"
+stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
 import json
 from pathlib import Path
 import yaml
 from libreprimus.doc_staleness.stage_ledger import stage_ledger_findings_for_text
 
-out = Path("$stage5ah_out")
+out = Path(r"$stage5ah_python_out")
 readme = Path("README.md").read_text(encoding="utf-8")
 findings = [
     finding.to_dict()
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5BI",
+        expected_latest_stage="Stage 5BJ",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5BI",
+            "expected_latest_stage": "Stage 5BJ",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -973,9 +983,18 @@ echo "Running Stage 5R expanded solved-fixture CUDA parity no-GPU-safe/temp outp
     --results-dir "$tmp_dir/stage5r-gematria-expanded-solved-fixture-cuda"
 
 echo "Running Stage 5S expanded CUDA result-store integration temp output"
+stage5r_committed_results_dir="experiments"/"results"/"gematria-expanded-solved-fixture-cuda"/"stage5r"
+"$python_bin" -m libreprimus.cli gematria-expanded-solved-fixture-cuda validate-stage5r \
+    --run-records data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-run.yaml \
+    --parity-records data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-parity.yaml \
+    --boundaries data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-boundary.yaml \
+    --result-store-preflight data/cuda/stage5r-gematria-expanded-solved-fixture-result-store-preflight.yaml \
+    --score-summary-preflight data/cuda/stage5r-gematria-expanded-solved-fixture-score-summary-preflight.yaml \
+    --summary data/cuda/stage5r-expanded-solved-fixture-cuda-parity-summary.yaml \
+    --results-dir "$stage5r_committed_results_dir"
 "$python_bin" -m libreprimus.cli gematria-expanded-cuda-result-store build-parity-report \
-    --stage5r-parity "$tmp_dir/stage5r-gematria-expanded-solved-fixture-cuda-parity.yaml" \
-    --stage5r-run "$tmp_dir/stage5r-gematria-expanded-solved-fixture-cuda-run.yaml" \
+    --stage5r-parity data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-parity.yaml \
+    --stage5r-run data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-run.yaml \
     --parity-report-out "$tmp_dir/stage5s-gematria-expanded-cuda-parity-report.yaml" \
     --out-dir "$tmp_dir/stage5s-gematria-expanded-cuda-result-store" \
     --allow-warnings
@@ -1013,7 +1032,7 @@ echo "Running Stage 5S expanded CUDA result-store integration temp output"
     --generated-body-policy "$tmp_dir/stage5s-gematria-expanded-cuda-generated-body-policy.yaml" \
     --boundary-review "$tmp_dir/stage5s-gematria-expanded-cuda-boundary-review.yaml" \
     --next-step-decision "$tmp_dir/stage5s-gematria-expanded-cuda-next-step-decision.yaml" \
-    --stage5r-summary "$tmp_dir/stage5r-expanded-solved-fixture-cuda-parity-summary.yaml" \
+    --stage5r-summary data/cuda/stage5r-expanded-solved-fixture-cuda-parity-summary.yaml \
     --summary-out "$tmp_dir/stage5s-expanded-cuda-result-store-integration-summary.yaml" \
     --out-dir "$tmp_dir/stage5s-gematria-expanded-cuda-result-store" \
     --allow-warnings
@@ -2027,7 +2046,7 @@ git check-ignore -q "$stage5ak_bundle_claims"
 git check-ignore -q "$stage5ak_handoff"
 
 echo "Validating Stage 5AL website-ingest records"
-stage5al_results_dir="$temp_dir/stage5al-website-ingest"
+stage5al_results_dir="$tmp_dir/stage5al-website-ingest"
 mkdir -p "$stage5al_results_dir"
 for name in source_inventory.json research_index.json website_package_manifest.json publication_gates.json deep_research_export.json summary.json; do
     printf '{"stage_id":"stage-5al","solve_claim":false}\n' > "$stage5al_results_dir/$name"
@@ -2367,13 +2386,14 @@ git check-ignore -q "codex-output/stage5aw-codex-completion.md"
 echo "Validating Stage 5AX parallel validation records"
 stage5ax_results_root="$tmp_dir/stage5ax-parallel-validation"
 mkdir -p "$stage5ax_results_root"
+stage5ax_python_results_root="$(python_path "$stage5ax_results_root")"
 "$python_bin" - <<PY
 import json
 from pathlib import Path
 import yaml
 
 summary = yaml.safe_load(Path("data/ci/stage5ax-parallel-validation-run-summary.yaml").read_text(encoding="utf-8"))
-out = Path("$stage5ax_results_root")
+out = Path(r"$stage5ax_python_results_root")
 out.mkdir(parents=True, exist_ok=True)
 (out / "run-summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 PY
@@ -2493,6 +2513,14 @@ git check-ignore -q "third_party/CicadaSolversIddqd/example.txt"
 git check-ignore -q "third_party/3N_3p_Bases_49-51.jpg.xlsx"
 git check-ignore -q "codex-output/stage5bi-codex-completion.md"
 
+echo "Validating Stage 5BJ original-archive crosswalk closure records"
+"$python_bin" -m libreprimus.cli historical-route stage5bj-validate
+stage5bj_generated_root="experiments"/"results"
+git check-ignore -q "$stage5bj_generated_root/historical-route/stage5bj/summary.json"
+git check-ignore -q "$stage5bj_generated_root/historical-route/stage5bj/extracted-surfaces/stage5bj-lock-2014-1033-512-hex.hex"
+git check-ignore -q "codex-output/stage5bj-completion-summary.md"
+git check-ignore -q "codex_output/stage5bj-completion-summary.md"
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 
@@ -2528,11 +2556,13 @@ echo "Validating Stage 3Q Discord review-bundle raw-log-free mode"
 
 echo "Validating Stage 4A Discord full-review synthetic build"
 mkdir -p "$tmp_dir/stage4a-discord" "$tmp_dir/stage4a-pages"
+stage4a_discord_python_dir="$(python_path "$tmp_dir/stage4a-discord")"
+stage4a_pages_python_dir="$(python_path "$tmp_dir/stage4a-pages")"
 "$python_bin" - <<PY
 from pathlib import Path
 from PIL import Image
-discord = Path("$tmp_dir/stage4a-discord")
-pages = Path("$tmp_dir/stage4a-pages")
+discord = Path(r"$stage4a_discord_python_dir")
+pages = Path(r"$stage4a_pages_python_dir")
 (discord / "CicadaSolvers - Cicada - ci-test [123456789012345678].html").write_text(
     '<div class="chatlog__message"><span class="chatlog__author-name">User</span>'
     '<div class="chatlog__content">cuneiform base60 onion 7 https://example.org/source '

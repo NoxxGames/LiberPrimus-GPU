@@ -1,0 +1,139 @@
+record_type: stage5bj_2014_exact_surface_source_lock_set
+schema: schemas/historical-route/stage5bj-2014-exact-surface-source-lock-v0.schema.json
+stage_id: stage-5bj
+stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+  candidates, without execution
+source_previous_stage: stage-5bi
+source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+surface_lock_target_count: 3
+exact_512_hex_surface_locked_count: 3
+surface_source_file_found_count: 3
+allstrings_corroboration:
+  archive_path: third_party/CicadaSolversIddqd/assets/2014/stage05/allstrings
+  archive_path_found: true
+  archive_sha256: 2a591e24edc4c6a79dc9608c4d056046199f1cc6a6a6d1cf88b0f007cb7e7851
+  archive_size_bytes: 1594
+  exact_512_hex_line_count: 3
+  exact_512_hex_lines:
+  - line_number: 2
+    previous_label: '2ststring: - 1033'
+    hex_sha256: 549b173a2f5569e070618c1133ded42d75b2033d3d20b8e82cce36a60b944f28
+  - line_number: 5
+    previous_label: '2ndstring: - 761'
+    hex_sha256: 8097a0bf1823928f4849dbdfd4d136fd490c1c1110a6589db65304834c2d0022
+  - line_number: 8
+    previous_label: '3rdstring: - 3301'
+    hex_sha256: 9f492e398bf34f5f027a07cc02db6eb1d6f29982ede276a9cbd311a8058f4eb0
+raw_archive_files_committed: false
+full_surface_bodies_committed: false
+generated_outputs_committed: false
+execution_allowed: false
+solve_claim: false
+records:
+- record_type: stage5bj_2014_exact_surface_source_lock
+  schema: schemas/historical-route/stage5bj-2014-exact-surface-source-lock-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  surface_lock_id: stage5bj-lock-2014-patience-512-hex
+  surface_id: stage5bi-c01-2014-growing-hex-surface
+  surface_label: 2014 Patience is a virtue 256-byte surface
+  historical_marker: Patience is a virtue
+  surface_source_lock_status: exact_512_hex_surface_locked_by_archive_path_and_hash
+  stage5bi_probable_path: third_party/CicadaSolversIddqd/2014/additional docs/the
+    growing string/CICADA 3301 2914 onion 2 updates GMT+1.txt
+  archive_path: third_party/CicadaSolversIddqd/assets/2014/stage03/cu343l33nqaekrnw.onion/index.html
+  archive_path_found: true
+  archive_sha256: 01d06243b1f019d254c3dd8dea61ba14866d081e8e8883e176f4222f4b97509a
+  archive_size_bytes: 541
+  exact_512_hex_count: 1
+  exact_surface_hex_length: 512
+  exact_surface_sha256: 8097a0bf1823928f4849dbdfd4d136fd490c1c1110a6589db65304834c2d0022
+  ignored_extracted_surface_path: experiments/results/historical-route/stage5bj/extracted-surfaces/stage5bj-lock-2014-patience-512-hex.hex
+  allstrings_corroboration_path: third_party/CicadaSolversIddqd/assets/2014/stage05/allstrings
+  allstrings_corroboration_sha256: 2a591e24edc4c6a79dc9608c4d056046199f1cc6a6a6d1cf88b0f007cb7e7851
+  allstrings_label: '2ndstring: - 761'
+  raw_archive_files_committed: false
+  full_surface_body_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_2014_exact_surface_source_lock
+  schema: schemas/historical-route/stage5bj-2014-exact-surface-source-lock-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  surface_lock_id: stage5bj-lock-2014-1033-512-hex
+  surface_id: stage5bi-c02-2014-1033-hex-surface
+  surface_label: 2014 <!--1033--> 256-byte surface
+  historical_marker: <!--1033-->
+  surface_source_lock_status: exact_512_hex_surface_locked_by_archive_path_and_hash
+  stage5bi_probable_path: third_party/CicadaSolversIddqd/2014/additional images/Liber
+    primus pages/1033.jpg
+  archive_path: third_party/CicadaSolversIddqd/assets/2014/stage04/fv7lyucmeozzd5j4.onion/index.html
+  archive_path_found: true
+  archive_sha256: 471bad0e65ae01f6c0f69d65636f125a4eb47554291780ca1d880e9d44c7e508
+  archive_size_bytes: 524
+  exact_512_hex_count: 1
+  exact_surface_hex_length: 512
+  exact_surface_sha256: 549b173a2f5569e070618c1133ded42d75b2033d3d20b8e82cce36a60b944f28
+  ignored_extracted_surface_path: experiments/results/historical-route/stage5bj/extracted-surfaces/stage5bj-lock-2014-1033-512-hex.hex
+  allstrings_corroboration_path: third_party/CicadaSolversIddqd/assets/2014/stage05/allstrings
+  allstrings_corroboration_sha256: 2a591e24edc4c6a79dc9608c4d056046199f1cc6a6a6d1cf88b0f007cb7e7851
+  allstrings_label: '2ststring: - 1033'
+  raw_archive_files_committed: false
+  full_surface_body_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_2014_exact_surface_source_lock
+  schema: schemas/historical-route/stage5bj-2014-exact-surface-source-lock-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  surface_lock_id: stage5bj-lock-2014-3301-512-hex
+  surface_id: stage5bi-c03-2014-3301-hex-surface
+  surface_label: 2014 <!--3301--> 256-byte surface
+  historical_marker: <!--3301-->
+  surface_source_lock_status: exact_512_hex_surface_locked_by_archive_path_and_hash
+  stage5bi_probable_path: third_party/CicadaSolversIddqd/2014/Websites/Interconnectedness
+    fron onion 5/3301 - Interconnectedness.mp3
+  archive_path: third_party/CicadaSolversIddqd/assets/2014/stage05/avowyfgl5lkzfj3n.onion/index.html
+  archive_path_found: true
+  archive_sha256: 6bde714a2624d246741c944f5902120434ca32d5af9e2506c64de1a0353e6e4f
+  archive_size_bytes: 615
+  exact_512_hex_count: 1
+  exact_surface_hex_length: 512
+  exact_surface_sha256: 9f492e398bf34f5f027a07cc02db6eb1d6f29982ede276a9cbd311a8058f4eb0
+  ignored_extracted_surface_path: experiments/results/historical-route/stage5bj/extracted-surfaces/stage5bj-lock-2014-3301-512-hex.hex
+  allstrings_corroboration_path: third_party/CicadaSolversIddqd/assets/2014/stage05/allstrings
+  allstrings_corroboration_sha256: 2a591e24edc4c6a79dc9608c4d056046199f1cc6a6a6d1cf88b0f007cb7e7851
+  allstrings_label: '3rdstring: - 3301'
+  raw_archive_files_committed: false
+  full_surface_body_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false

@@ -1,0 +1,176 @@
+record_type: stage5bj_fandom_page_body_crosswalk_set
+schema: schemas/historical-route/stage5bj-fandom-page-body-crosswalk-v0.schema.json
+stage_id: stage-5bj
+stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+  candidates, without execution
+source_previous_stage: stage-5bi
+source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+fandom_page_body_crosswalk_count: 7
+local_page_snapshot_found_count: 0
+route_equivalent_archive_doc_found_count: 5
+page_body_not_found_count: 2
+status_counts:
+  not_found: 2
+  route_equivalent_archive_doc_found: 5
+fandom_page_bodies_committed: false
+execution_allowed: false
+solve_claim: false
+records:
+- record_type: stage5bj_fandom_page_body_crosswalk
+  schema: schemas/historical-route/stage5bj-fandom-page-body-crosswalk-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  page_crosswalk_id: stage5bj-page-body-what-happened-2014
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  page_body_status: route_equivalent_archive_doc_found
+  route_equivalent_paths:
+  - third_party/CicadaSolversIddqd/assets/2014/stage03/cu343l33nqaekrnw.onion/index.html
+  - third_party/CicadaSolversIddqd/assets/2014/stage04/fv7lyucmeozzd5j4.onion/index.html
+  - third_party/CicadaSolversIddqd/assets/2014/stage05/avowyfgl5lkzfj3n.onion/index.html
+  exact_fandom_page_snapshot_found: false
+  evidence_confidence: high
+  source_snapshots_checked: third_party/SourceSnapshots
+  source_snapshot_cache_found: false
+  fandom_page_body_committed: false
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+- record_type: stage5bj_fandom_page_body_crosswalk
+  schema: schemas/historical-route/stage5bj-fandom-page-body-crosswalk-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  page_crosswalk_id: stage5bj-page-body-page-49-51
+  source_url: https://uncovering-cicada.fandom.com/wiki/Page_49-51
+  page_body_status: route_equivalent_archive_doc_found
+  route_equivalent_paths:
+  - third_party/CicadaSolversIddqd/Archive/Media coverage/cicada3301.boards.net/Spiral
+    Branches 40-55/Pages 49 to 51 and 256 Byte Strings.docx
+  exact_fandom_page_snapshot_found: false
+  evidence_confidence: high
+  source_snapshots_checked: third_party/SourceSnapshots
+  source_snapshot_cache_found: false
+  fandom_page_body_committed: false
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+- record_type: stage5bj_fandom_page_body_crosswalk
+  schema: schemas/historical-route/stage5bj-fandom-page-body-crosswalk-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  page_crosswalk_id: stage5bj-page-body-base59-60-62-64
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus_pp49-51_data_interpreted_as_base_59,_60,_62_and_64.
+  page_body_status: not_found
+  route_equivalent_paths: []
+  exact_fandom_page_snapshot_found: false
+  evidence_confidence: none
+  source_snapshots_checked: third_party/SourceSnapshots
+  source_snapshot_cache_found: false
+  fandom_page_body_committed: false
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+- record_type: stage5bj_fandom_page_body_crosswalk
+  schema: schemas/historical-route/stage5bj-fandom-page-body-crosswalk-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  page_crosswalk_id: stage5bj-page-body-interconnectedness
+  source_url: https://uncovering-cicada.fandom.com/wiki/Interconnectedness
+  page_body_status: route_equivalent_archive_doc_found
+  route_equivalent_paths:
+  - third_party/CicadaSolversIddqd/2014/Websites/Interconnectedness fron onion 5/3301
+    - Interconnectedness.mp3
+  exact_fandom_page_snapshot_found: false
+  evidence_confidence: high
+  source_snapshots_checked: third_party/SourceSnapshots
+  source_snapshot_cache_found: false
+  fandom_page_body_committed: false
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+- record_type: stage5bj_fandom_page_body_crosswalk
+  schema: schemas/historical-route/stage5bj-fandom-page-body-crosswalk-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  page_crosswalk_id: stage5bj-page-body-instar
+  source_url: https://uncovering-cicada.fandom.com/wiki/Instar_emergence_(mp3_and_hidden_poem)
+  page_body_status: route_equivalent_archive_doc_found
+  route_equivalent_paths:
+  - third_party/CicadaSolversIddqd/2013/additional files/Cicada OS/cicados/AUDIO/761.MP3
+  exact_fandom_page_snapshot_found: false
+  evidence_confidence: high
+  source_snapshots_checked: third_party/SourceSnapshots
+  source_snapshot_cache_found: false
+  fandom_page_body_committed: false
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+- record_type: stage5bj_fandom_page_body_crosswalk
+  schema: schemas/historical-route/stage5bj-fandom-page-body-crosswalk-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  page_crosswalk_id: stage5bj-page-body-hidden-original-image
+  source_url: https://uncovering-cicada.fandom.com/wiki/Hidden_content_of_original_image_(January_4th_2013)
+  page_body_status: route_equivalent_archive_doc_found
+  route_equivalent_paths:
+  - third_party/CicadaSolversIddqd/assets/2016/4gq25.jpg
+  exact_fandom_page_snapshot_found: false
+  evidence_confidence: high
+  source_snapshots_checked: third_party/SourceSnapshots
+  source_snapshot_cache_found: false
+  fandom_page_body_committed: false
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false
+- record_type: stage5bj_fandom_page_body_crosswalk
+  schema: schemas/historical-route/stage5bj-fandom-page-body-crosswalk-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  page_crosswalk_id: stage5bj-page-body-pgp-live-cd
+  source_url: https://uncovering-cicada.fandom.com/wiki/PGP_Signed_Message_April_2017
+  page_body_status: not_found
+  route_equivalent_paths: []
+  exact_fandom_page_snapshot_found: false
+  evidence_confidence: none
+  source_snapshots_checked: third_party/SourceSnapshots
+  source_snapshot_cache_found: false
+  fandom_page_body_committed: false
+  raw_archive_files_committed: false
+  execution_allowed: false
+  solve_claim: false

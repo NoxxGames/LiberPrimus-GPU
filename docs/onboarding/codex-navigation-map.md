@@ -1,12 +1,12 @@
 # Codex Navigation Map
 
-## Stage 5BI Note
+## Stage 5BJ Note
 
-Stage 5BI is a metadata-only Fandom/source-lock triage layer. Use `libreprimus historical-route stage5bi-validate` for Fandom page triage, item source-lock candidates, archive crosswalk candidates, media policy, 2014 surface context, token-block external context, spreadsheet source-lock/reconciliation, negative controls, source gaps, guardrails, and Stage 5BJ next-stage routing. Stage 5BJ follow-up work should close original/archive-equivalent source gaps and keep raw Fandom/archive/spreadsheet files ignored.
+Stage 5BJ is a metadata-only original/archive crosswalk closure layer. Use `libreprimus historical-route stage5bj-validate` for crosswalk closure, exact 2014 surface source locks, Fandom page-body status, boards-thread archive-equivalent context, media-equivalence closure, source-gap updates, token-block lineage preservation, guardrails, and Stage 5BK next-stage routing. Stage 5BK follow-up work should integrate these planning constraints and keep raw Fandom/archive/spreadsheet files plus full extracted surface bodies ignored.
 
 ## Stage 5BF Note
 
-Stage 5BF is a local-only historical route source-lock layer. Use `libreprimus historical-route validate-stage5bf` for archive location, tree/inventory summaries, annual route inventory, artifact classifications, trust policy, technique taxonomy, source gaps, DWH context, guardrails, and the historical Stage 5BG review handoff. Current follow-up work should use Stage 5BI metadata, keep raw `third_party/CicadaSolversIddqd` files ignored, and avoid token experiments, byte-stream generation, historical technique execution, PGP network verification, stego tools, decode attempts, hash/preimage search, scoring, OCR/AI/ML/LLM vision, image forensics, CUDA, cryptanalytic benchmarks, scored experiments, or solve-claim workflows.
+Stage 5BF is a local-only historical route source-lock layer. Use `libreprimus historical-route validate-stage5bf` for archive location, tree/inventory summaries, annual route inventory, artifact classifications, trust policy, technique taxonomy, source gaps, DWH context, guardrails, and the historical Stage 5BG review handoff. Current follow-up work should use Stage 5BJ and Stage 5BI metadata, keep raw `third_party/CicadaSolversIddqd` files ignored, and avoid token experiments, byte-stream generation, historical technique execution, PGP network verification, stego tools, decode attempts, hash/preimage search, scoring, OCR/AI/ML/LLM vision, image forensics, CUDA, cryptanalytic benchmarks, scored experiments, or solve-claim workflows.
 
 ## Read First
 
@@ -24,7 +24,7 @@ For most Codex tasks, read:
 - Do not trust rendered GitHub pages, cached raw URLs, memory, or old conversation context when state matters.
 - Run the task-specific validation commands before staging.
 - Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
-- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5BJ prompts inherit current source-of-truth labels.
+- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5BK prompts inherit current source-of-truth labels.
 - Keep raw/generated outputs unstaged.
 - For Stage 5AF/5AG/5AI/5AJ/5AK source-harvester work, keep all raw harvester outputs, raw UsefulFiles/community-facts material, and generated bundle/extraction bodies local and ignored; do not use Google Drive as project storage.
 
@@ -57,3 +57,7 @@ Stage 5BF implementation is under `python/libreprimus/historical_route/`; CLI co
 ## Stage 5BI Navigation
 
 Stage 5BI implementation is under `python/libreprimus/historical_route/stage5bi.py`; CLI commands are documented in `docs/reference/historical-route-source-lock-cli.md`.
+
+## Stage 5BJ Navigation
+
+Stage 5BJ implementation is under `python/libreprimus/historical_route/stage5bj.py`; CLI commands are documented in `docs/reference/historical-route-source-lock-cli.md`. The generated Stage 5BJ reports and local Codex completion summaries remain ignored under `experiments/results/historical-route/stage5bj/`, `codex_output/`, and `codex-output/`.

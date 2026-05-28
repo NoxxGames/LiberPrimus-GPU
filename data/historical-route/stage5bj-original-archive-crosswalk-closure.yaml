@@ -1,0 +1,377 @@
+record_type: stage5bj_original_archive_crosswalk_closure_set
+schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+stage_id: stage-5bj
+stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+  candidates, without execution
+source_previous_stage: stage-5bi
+source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_stage5bi_crosswalk_candidate_count: 12
+crosswalk_closure_record_count: 12
+crosswalk_closure_status_counts:
+  closed_archive_equivalent_but_not_exact_surface: 3
+  closed_exact_original_archive_equivalent: 8
+  local_archive_search_no_match: 1
+raw_archive_files_committed: false
+generated_outputs_committed: false
+execution_allowed: false
+solve_claim: false
+records:
+- record_type: stage5bj_original_archive_crosswalk_closure
+  schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  closure_id: stage5bj-stage5bi-c01-2014-growing-hex-surface-closure
+  source_stage5bi_crosswalk_id: stage5bi-c01-2014-growing-hex-surface-archive-crosswalk
+  candidate_id: stage5bi-c01-2014-growing-hex-surface
+  candidate_label: 2014 growing string 256-byte surface
+  previous_archive_crosswalk_status: probable_archive_path_candidate
+  crosswalk_closure_status: closed_exact_original_archive_equivalent
+  closure_reason: Exact 512-hex surface found in local archive index file and locked
+    by path/hash.
+  evidence_confidence: exact
+  archive_path: third_party/CicadaSolversIddqd/assets/2014/stage03/cu343l33nqaekrnw.onion/index.html
+  archive_sha256: 01d06243b1f019d254c3dd8dea61ba14866d081e8e8883e176f4222f4b97509a
+  archive_size_bytes: 541
+  surface_lock_id: stage5bj-lock-2014-patience-512-hex
+  raw_archive_files_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  token_block_execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_original_archive_crosswalk_closure
+  schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  closure_id: stage5bj-stage5bi-c02-2014-1033-hex-surface-closure
+  source_stage5bi_crosswalk_id: stage5bi-c02-2014-1033-hex-surface-archive-crosswalk
+  candidate_id: stage5bi-c02-2014-1033-hex-surface
+  candidate_label: 2014 <!--1033--> 256-byte surface
+  previous_archive_crosswalk_status: probable_archive_path_candidate
+  crosswalk_closure_status: closed_exact_original_archive_equivalent
+  closure_reason: Exact 512-hex surface found in local archive index file and locked
+    by path/hash.
+  evidence_confidence: exact
+  archive_path: third_party/CicadaSolversIddqd/assets/2014/stage04/fv7lyucmeozzd5j4.onion/index.html
+  archive_sha256: 471bad0e65ae01f6c0f69d65636f125a4eb47554291780ca1d880e9d44c7e508
+  archive_size_bytes: 524
+  surface_lock_id: stage5bj-lock-2014-1033-512-hex
+  raw_archive_files_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  token_block_execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_original_archive_crosswalk_closure
+  schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  closure_id: stage5bj-stage5bi-c03-2014-3301-hex-surface-closure
+  source_stage5bi_crosswalk_id: stage5bi-c03-2014-3301-hex-surface-archive-crosswalk
+  candidate_id: stage5bi-c03-2014-3301-hex-surface
+  candidate_label: 2014 <!--3301--> 256-byte surface
+  previous_archive_crosswalk_status: probable_archive_path_candidate
+  crosswalk_closure_status: closed_exact_original_archive_equivalent
+  closure_reason: Exact 512-hex surface found in local archive index file and locked
+    by path/hash.
+  evidence_confidence: exact
+  archive_path: third_party/CicadaSolversIddqd/assets/2014/stage05/avowyfgl5lkzfj3n.onion/index.html
+  archive_sha256: 6bde714a2624d246741c944f5902120434ca32d5af9e2506c64de1a0353e6e4f
+  archive_size_bytes: 615
+  surface_lock_id: stage5bj-lock-2014-3301-512-hex
+  raw_archive_files_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  token_block_execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_original_archive_crosswalk_closure
+  schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  closure_id: stage5bj-stage5bi-c04-page49-51-256-token-surface-closure
+  source_stage5bi_crosswalk_id: stage5bi-c04-page49-51-256-token-surface-archive-crosswalk
+  candidate_id: stage5bi-c04-page49-51-256-token-surface
+  candidate_label: Page 49-51 256-position token surface
+  previous_archive_crosswalk_status: original_archive_equivalent_found
+  crosswalk_closure_status: closed_archive_equivalent_but_not_exact_surface
+  closure_reason: Local archive-equivalent context exists, but the item is not an
+    exact 2014 512-hex surface body.
+  evidence_confidence: high
+  archive_path: assets/2014/liber-primus-complete/49.jpg
+  archive_sha256: c0f778187a8e9ddbfc667a65929ac567430a2e38278a2022377984ac084e5f72
+  archive_size_bytes: 362637
+  surface_lock_id: null
+  raw_archive_files_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  token_block_execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_original_archive_crosswalk_closure
+  schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  closure_id: stage5bj-stage5bi-c07-interconnectedness-mp3-closure
+  source_stage5bi_crosswalk_id: stage5bi-c07-interconnectedness-mp3-archive-crosswalk
+  candidate_id: stage5bi-c07-interconnectedness-mp3
+  candidate_label: 2014 Interconnectedness MP3
+  previous_archive_crosswalk_status: original_archive_equivalent_found
+  crosswalk_closure_status: closed_exact_original_archive_equivalent
+  closure_reason: Stage 5BI archive-equivalent path/hash is preserved as closed metadata.
+  evidence_confidence: high
+  archive_path: 2014/Websites/Interconnectedness fron onion 5/3301 - Interconnectedness.mp3
+  archive_sha256: 1ce3839b4a62462d9009c4469acc189b523e1bdcf338cb49cda1cd7bb4efffc6
+  archive_size_bytes: 6651873
+  surface_lock_id: null
+  raw_archive_files_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  token_block_execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_original_archive_crosswalk_closure
+  schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  closure_id: stage5bj-stage5bi-c09-761-mp3-closure
+  source_stage5bi_crosswalk_id: stage5bi-c09-761-mp3-archive-crosswalk
+  candidate_id: stage5bi-c09-761-mp3
+  candidate_label: 761.MP3 audio candidate
+  previous_archive_crosswalk_status: original_archive_equivalent_found
+  crosswalk_closure_status: closed_exact_original_archive_equivalent
+  closure_reason: Stage 5BI archive-equivalent path/hash is preserved as closed metadata.
+  evidence_confidence: high
+  archive_path: 2013/additional files/Cicada OS/cicados/AUDIO/761.MP3
+  archive_sha256: 83008217439110c3b824898af73b99cb2cf0657dda88cb363c3aa34a4ec0a460
+  archive_size_bytes: 4010732
+  surface_lock_id: null
+  raw_archive_files_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  token_block_execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_original_archive_crosswalk_closure
+  schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  closure_id: stage5bj-stage5bi-c10-outguessed-rune-table-message-closure
+  source_stage5bi_crosswalk_id: stage5bi-c10-outguessed-rune-table-message-archive-crosswalk
+  candidate_id: stage5bi-c10-outguessed-rune-table-message
+  candidate_label: OutGuessed message from rune table
+  previous_archive_crosswalk_status: original_archive_equivalent_found
+  crosswalk_closure_status: closed_exact_original_archive_equivalent
+  closure_reason: Stage 5BI archive-equivalent path/hash is preserved as closed metadata.
+  evidence_confidence: high
+  archive_path: 2013/additional docs/signed messages/OutGuessed message from rune
+    table.txt
+  archive_sha256: 685aeec4217b1c76bb1cf64ba8f1c537e05895f4971d5c31ab6ed42d4460bd8b
+  archive_size_bytes: 1469
+  surface_lock_id: null
+  raw_archive_files_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  token_block_execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_original_archive_crosswalk_closure
+  schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  closure_id: stage5bj-stage5bi-c11-4gq25-image-closure
+  source_stage5bi_crosswalk_id: stage5bi-c11-4gq25-image-archive-crosswalk
+  candidate_id: stage5bi-c11-4gq25-image
+  candidate_label: 4gq25.jpg image fixture candidate
+  previous_archive_crosswalk_status: original_archive_equivalent_found
+  crosswalk_closure_status: closed_exact_original_archive_equivalent
+  closure_reason: Stage 5BI archive-equivalent path/hash is preserved as closed metadata.
+  evidence_confidence: high
+  archive_path: assets/2016/4gq25.jpg
+  archive_sha256: a8340ad04b83fb3130e7ed9172867a440812e87089d6aa2b932d97c6ae38aebe
+  archive_size_bytes: 26342
+  surface_lock_id: null
+  raw_archive_files_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  token_block_execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_original_archive_crosswalk_closure
+  schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  closure_id: stage5bj-stage5bi-c12-magicsquares-text-closure
+  source_stage5bi_crosswalk_id: stage5bi-c12-magicsquares-text-archive-crosswalk
+  candidate_id: stage5bi-c12-magicsquares-text
+  candidate_label: 2014 magicsquares.txt
+  previous_archive_crosswalk_status: original_archive_equivalent_found
+  crosswalk_closure_status: closed_exact_original_archive_equivalent
+  closure_reason: Stage 5BI archive-equivalent path/hash is preserved as closed metadata.
+  evidence_confidence: high
+  archive_path: assets/2014/stage07/magicsquares.txt
+  archive_sha256: da31a5a338be6d587ebec87f1dd0bcfdd47108dfc9db5bfc2bd261a58717f190
+  archive_size_bytes: 721
+  surface_lock_id: null
+  raw_archive_files_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  token_block_execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_original_archive_crosswalk_closure
+  schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  closure_id: stage5bj-stage5bi-c15-telnet-output-recreation-closure
+  source_stage5bi_crosswalk_id: stage5bi-c15-telnet-output-recreation-archive-crosswalk
+  candidate_id: stage5bi-c15-telnet-output-recreation
+  candidate_label: 2013 telnet output/recreation
+  previous_archive_crosswalk_status: original_archive_equivalent_found
+  crosswalk_closure_status: closed_archive_equivalent_but_not_exact_surface
+  closure_reason: Local archive-equivalent context exists, but the item is not an
+    exact 2014 512-hex surface body.
+  evidence_confidence: high
+  archive_path: 2013/additional docs/telnet/2013 offset messsage from telnet.txt
+  archive_sha256: 1b1bb7539353c027510b759bfbd7dd53a5d02b60010af6b38ed6ce6e2193a951
+  archive_size_bytes: 2272
+  surface_lock_id: null
+  raw_archive_files_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  token_block_execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_original_archive_crosswalk_closure
+  schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  closure_id: stage5bj-stage5bi-c13-pgp-signature-live-cd-closure
+  source_stage5bi_crosswalk_id: stage5bi-c13-pgp-signature-live-cd-archive-crosswalk
+  candidate_id: stage5bi-c13-pgp-signature-live-cd
+  candidate_label: PGP Signature from live cd
+  previous_archive_crosswalk_status: local_archive_search_no_match
+  crosswalk_closure_status: local_archive_search_no_match
+  closure_reason: No stronger local archive source was found; Fandom-derived PGP live-CD
+    context remains quarantined/reference-only.
+  evidence_confidence: none
+  archive_path: null
+  archive_sha256: null
+  archive_size_bytes: null
+  surface_lock_id: null
+  raw_archive_files_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  token_block_execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false
+- record_type: stage5bj_original_archive_crosswalk_closure
+  schema: schemas/historical-route/stage5bj-original-archive-crosswalk-closure-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  closure_id: stage5bj-stage5bi-c06-boards-page49-51-256-byte-thread-closure
+  source_stage5bi_crosswalk_id: stage5bi-c06-boards-page49-51-256-byte-thread-archive-crosswalk
+  candidate_id: stage5bi-c06-boards-page49-51-256-byte-thread
+  candidate_label: Boards.net page 49-51 256 byte strings thread
+  previous_archive_crosswalk_status: blocked_archive_absent
+  crosswalk_closure_status: closed_archive_equivalent_but_not_exact_surface
+  closure_reason: Local archive contains a boards.net Page 49 to 51 and 256 Byte Strings
+    DOCX equivalent.
+  evidence_confidence: high
+  archive_path: third_party/CicadaSolversIddqd/Archive/Media coverage/cicada3301.boards.net/Spiral
+    Branches 40-55/Pages 49 to 51 and 256 Byte Strings.docx
+  archive_sha256: 208fcab6afc0902ab9803f63f5d87ea0b57f993cf530123003806a17e521ac83
+  archive_size_bytes: 26446
+  surface_lock_id: null
+  raw_archive_files_committed: false
+  generated_outputs_committed: false
+  execution_allowed: false
+  token_block_execution_allowed: false
+  combination_with_page49_51_allowed: false
+  hash_search_performed: false
+  decode_attempt_performed: false
+  solve_claim: false

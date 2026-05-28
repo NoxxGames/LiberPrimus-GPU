@@ -14,6 +14,12 @@ from libreprimus.historical_route.stage5bi import (
     summarize_stage5bi,
     validate_stage5bi,
 )
+from libreprimus.historical_route.stage5bj import (
+    DATA_PATHS as STAGE5BJ_DATA_PATHS,
+    build_stage5bj_records,
+    summarize_stage5bj,
+    validate_stage5bj,
+)
 from libreprimus.historical_route.stage5bf import (
     build_annual_route_inventory,
     build_deep_research_readiness,
@@ -412,5 +418,77 @@ def register(root_app: typer.Typer) -> None:
         console.print(f"source_gap_count={payload.get('source_gap_count')}")
         console.print(f"negative_control_count={payload.get('negative_control_count')}")
         console.print(f"spreadsheet_found={str(payload.get('spreadsheet_found')).lower()}")
+
+    @app.command("stage5bj-build")
+    def stage5bj_build() -> None:
+        payloads = build_stage5bj_records()
+        summary = payloads["summary"]
+        console.print("stage5bj_build=true")
+        console.print(f"crosswalk_closure_record_count={summary['crosswalk_closure_record_count']}")
+        console.print(f"exact_512_hex_surface_locked_count={summary['exact_512_hex_surface_locked_count']}")
+        console.print(f"surface_source_file_found_count={summary['surface_source_file_found_count']}")
+        console.print(f"fandom_page_body_crosswalk_count={summary['fandom_page_body_crosswalk_count']}")
+        console.print(f"boards_thread_found={str(summary['boards_thread_found']).lower()}")
+        console.print(f"media_equivalence_record_count={summary['media_equivalence_record_count']}")
+        console.print(f"source_gap_closed_count={summary['source_gap_closed_count']}")
+        console.print(f"source_gap_carried_forward_count={summary['source_gap_carried_forward_count']}")
+        console.print(f"new_source_gap_count={summary['new_source_gap_count']}")
+
+    @app.command("stage5bj-validate")
+    def stage5bj_validate(
+        crosswalk_plan: Path = typer.Option(STAGE5BJ_DATA_PATHS["crosswalk_plan"]),
+        crosswalk_closure: Path = typer.Option(STAGE5BJ_DATA_PATHS["crosswalk_closure"]),
+        surface_locks: Path = typer.Option(STAGE5BJ_DATA_PATHS["surface_locks"]),
+        page_body_crosswalk: Path = typer.Option(STAGE5BJ_DATA_PATHS["page_body_crosswalk"]),
+        boards_thread: Path = typer.Option(STAGE5BJ_DATA_PATHS["boards_thread"]),
+        candidate_status: Path = typer.Option(STAGE5BJ_DATA_PATHS["candidate_status"]),
+        media_equivalence: Path = typer.Option(STAGE5BJ_DATA_PATHS["media_equivalence"]),
+        source_gap_update: Path = typer.Option(STAGE5BJ_DATA_PATHS["source_gap_update"]),
+        guardrail: Path = typer.Option(STAGE5BJ_DATA_PATHS["guardrail"]),
+        token_block_lineage: Path = typer.Option(STAGE5BJ_DATA_PATHS["token_block_lineage"]),
+        surface_context_closure: Path = typer.Option(STAGE5BJ_DATA_PATHS["surface_context_closure"]),
+        local_archive_summary: Path = typer.Option(STAGE5BJ_DATA_PATHS["local_archive_summary"]),
+        source_snapshot_summary: Path = typer.Option(STAGE5BJ_DATA_PATHS["source_snapshot_summary"]),
+        summary: Path = typer.Option(STAGE5BJ_DATA_PATHS["summary"]),
+        next_stage: Path = typer.Option(STAGE5BJ_DATA_PATHS["next_stage"]),
+    ) -> None:
+        result = validate_stage5bj(
+            {
+                "crosswalk_plan": crosswalk_plan,
+                "crosswalk_closure": crosswalk_closure,
+                "surface_locks": surface_locks,
+                "page_body_crosswalk": page_body_crosswalk,
+                "boards_thread": boards_thread,
+                "candidate_status": candidate_status,
+                "media_equivalence": media_equivalence,
+                "source_gap_update": source_gap_update,
+                "guardrail": guardrail,
+                "token_block_lineage": token_block_lineage,
+                "surface_context_closure": surface_context_closure,
+                "local_archive_summary": local_archive_summary,
+                "source_snapshot_summary": source_snapshot_summary,
+                "summary": summary,
+                "next_stage": next_stage,
+            }
+        )
+        for key, value in result.items():
+            if key != "validation_errors":
+                console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+
+    @app.command("stage5bj-summary")
+    def stage5bj_summary(summary: Path = typer.Option(STAGE5BJ_DATA_PATHS["summary"])) -> None:
+        payload = summarize_stage5bj(summary)
+        console.print(f"stage_id={payload.get('stage_id')}")
+        console.print(f"status={payload.get('status')}")
+        console.print(f"crosswalk_closure_record_count={payload.get('crosswalk_closure_record_count')}")
+        console.print(f"exact_512_hex_surface_locked_count={payload.get('exact_512_hex_surface_locked_count')}")
+        console.print(f"surface_source_file_found_count={payload.get('surface_source_file_found_count')}")
+        console.print(f"fandom_page_body_crosswalk_count={payload.get('fandom_page_body_crosswalk_count')}")
+        console.print(f"boards_thread_found={str(payload.get('boards_thread_found')).lower()}")
+        console.print(f"media_equivalence_record_count={payload.get('media_equivalence_record_count')}")
+        console.print(f"source_gap_closed_count={payload.get('source_gap_closed_count')}")
+        console.print(f"source_gap_carried_forward_count={payload.get('source_gap_carried_forward_count')}")
+        console.print(f"new_source_gap_count={payload.get('new_source_gap_count')}")
+        console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
 
     root_app.add_typer(app, name="historical-route")

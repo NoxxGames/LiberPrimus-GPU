@@ -1,0 +1,72 @@
+record_type: stage5bj_summary
+schema: schemas/project-state/stage5bj-summary-v0.schema.json
+stage_id: stage-5bj
+stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+  candidates, without execution
+source_previous_stage: stage-5bi
+source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+status: complete
+source_stage_ids:
+- stage-5bi
+- stage-5bf
+- stage-5bd
+stage5bi_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+local_archive_present: true
+source_snapshot_dir_present: true
+spreadsheet_found: true
+stage5bi_crosswalk_candidate_count: 12
+crosswalk_closure_record_count: 12
+closed_exact_original_archive_equivalent_count: 8
+closed_archive_equivalent_but_not_exact_surface_count: 3
+partially_closed_exact_surface_pending_count: 0
+carried_forward_unresolved_count: 0
+local_archive_search_no_match_count: 1
+surface_lock_target_count: 3
+exact_512_hex_surface_locked_count: 3
+surface_source_file_found_count: 3
+surface_exact_body_committed: false
+fandom_page_body_crosswalk_count: 7
+local_page_snapshot_found_count: 0
+route_equivalent_archive_doc_found_count: 5
+page_body_not_found_count: 2
+boards_thread_found: true
+boards_thread_gap_remains: false
+media_equivalence_record_count: 8
+media_original_archive_equivalent_found_count: 8
+source_gap_origin_count: 5
+source_gap_closed_count: 4
+source_gap_carried_forward_count: 3
+new_source_gap_count: 2
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+stage5bd_dry_run_records_remain_valid: true
+future_token_block_execution_remains_blocked: true
+metadata_only: true
+raw_archive_files_committed: false
+fandom_page_bodies_committed: false
+fandom_images_committed: false
+spreadsheet_committed: false
+generated_outputs_committed: false
+token_experiments_executed: false
+real_token_block_byte_streams_generated: false
+variant_byte_streams_generated: false
+fandom_surface_combination_performed: false
+hash_search_performed: false
+decode_attempt_performed: false
+stego_tool_execution_performed: false
+cuda_execution_performed: false
+benchmark_performed: false
+scored_experiments_executed: false
+solve_claim: false
+recommended_next_prompt_type: codex_metadata_implementation
+recommended_next_stage_title: Stage 5BK - Historical-route planning constraint integration,
+  without execution
+recommended_next_stage_reason: Stage 5BJ locks all three 2014 exact surfaces and closes
+  the boards/media archive-equivalence metadata gaps while carrying forward exact
+  Fandom page-body and PGP live-CD source gaps; broader historical-route planning
+  can now integrate these constraints without execution.
+completion_summary_local_paths:
+- codex_output/stage5bj-completion-summary.md
+- codex-output/stage5bj-completion-summary.md

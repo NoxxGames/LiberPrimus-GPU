@@ -1,0 +1,37 @@
+record_type: stage5bj_2014_surface_context_closure
+schema: schemas/token-block/stage5bj-2014-surface-context-closure-v0.schema.json
+stage_id: stage-5bj
+stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+  candidates, without execution
+source_previous_stage: stage-5bi
+source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+surface_lock_target_count: 3
+exact_512_hex_surface_locked_count: 3
+surface_source_file_found_count: 3
+surface_records:
+- surface_id: stage5bi-c01-2014-growing-hex-surface
+  surface_lock_id: stage5bj-lock-2014-patience-512-hex
+  surface_source_lock_status: exact_512_hex_surface_locked_by_archive_path_and_hash
+  exact_surface_sha256: 8097a0bf1823928f4849dbdfd4d136fd490c1c1110a6589db65304834c2d0022
+  archive_path: third_party/CicadaSolversIddqd/assets/2014/stage03/cu343l33nqaekrnw.onion/index.html
+- surface_id: stage5bi-c02-2014-1033-hex-surface
+  surface_lock_id: stage5bj-lock-2014-1033-512-hex
+  surface_source_lock_status: exact_512_hex_surface_locked_by_archive_path_and_hash
+  exact_surface_sha256: 549b173a2f5569e070618c1133ded42d75b2033d3d20b8e82cce36a60b944f28
+  archive_path: third_party/CicadaSolversIddqd/assets/2014/stage04/fv7lyucmeozzd5j4.onion/index.html
+- surface_id: stage5bi-c03-2014-3301-hex-surface
+  surface_lock_id: stage5bj-lock-2014-3301-512-hex
+  surface_source_lock_status: exact_512_hex_surface_locked_by_archive_path_and_hash
+  exact_surface_sha256: 9f492e398bf34f5f027a07cc02db6eb1d6f29982ede276a9cbd311a8058f4eb0
+  archive_path: third_party/CicadaSolversIddqd/assets/2014/stage05/avowyfgl5lkzfj3n.onion/index.html
+page49_51_combination_allowed: false
+fandom_surface_combination_performed: false
+xor_attempt_performed: false
+transposition_attempt_performed: false
+hash_search_performed: false
+decode_attempt_performed: false
+full_surface_bodies_committed: false
+execution_allowed: false
+solve_claim: false

@@ -1520,3 +1520,90 @@ records:
   owner_context: codex_agent
   notes: Documents Stage 5BI record families, media policy, counts, no-execution
     guardrails, and Stage 5BJ next-stage rationale.
+- path: data/project-state/stage5bj-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BJ original/archive crosswalk closure aggregate summary.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bj
+  expected_update_frequency: when_original_archive_crosswalk_closure_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records crosswalk closure counts, exact 2014 surface locks, page-body
+    and boards-thread status, media-equivalence counts, source-gap updates,
+    guardrails, and Stage 5BK next-stage decision.
+- path: data/project-state/stage5bj-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5BJ next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bj
+  expected_update_frequency: when_original_archive_crosswalk_next_stage_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Selects Stage 5BK historical-route planning constraint integration
+    without execution.
+- path: data/historical-route/stage5bj-original-archive-crosswalk-closure.yaml
+  category: active_data_record
+  purpose: Stage 5BJ original/archive-equivalence closure records.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bj
+  expected_update_frequency: when_crosswalk_closure_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Links Stage 5BI high-priority Fandom-derived items to exact,
+    archive-equivalent, carried-forward, or no-match closure statuses without
+    executing token-block work.
+- path: data/historical-route/stage5bj-2014-exact-surface-source-locks.yaml
+  category: active_data_record
+  purpose: Stage 5BJ exact 2014 512-hex surface source-lock records.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bj
+  expected_update_frequency: when_2014_surface_source_locks_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Hash-locks the three exact 2014 512-hex surfaces as provenance metadata
+    while keeping full extracted bodies ignored and uncommitted.
+- path: data/historical-route/stage5bj-source-gap-update.yaml
+  category: active_data_record
+  purpose: Stage 5BJ source-gap closure and carry-forward records.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bj
+  expected_update_frequency: when_source_gap_updates_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Maps every Stage 5BI source gap to closed, carried-forward, or new
+    exact-source requirements.
+- path: data/token-block/stage5bj-token-block-lineage-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5BJ token-block lineage preservation record.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bj
+  expected_update_frequency: when_token_block_lineage_constraints_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Records that Stage 5AP canonical transcription, Stage 5AW branch
+    metadata, Stage 5AZ repaired manifests, and Stage 5BD dry-run gates remain
+    unchanged and blocked for execution.
+- path: docs/experiments/stage-5bj-original-archive-crosswalk-closure.md
+  category: operational_status_doc
+  purpose: Stage 5BJ metadata-only experiment/source-lock note.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bj
+  expected_update_frequency: when_stage5bj_records_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents Stage 5BJ closure records, exact-surface metadata, guardrails,
+    ignored completion summaries, and Stage 5BK next-stage rationale.

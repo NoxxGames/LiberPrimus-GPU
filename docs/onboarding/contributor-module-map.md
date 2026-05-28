@@ -1,8 +1,8 @@
 # Contributor Module Map
 
-## Stage 5BI Note
+## Stage 5BJ Note
 
-The historical-route layer now also includes Stage 5BI Fandom/source-lock triage helpers under `python/libreprimus/historical_route/stage5bi.py`. Stage 5BI writes compact metadata for Fandom page triage, archive crosswalk candidates, 2014 surface context, spreadsheet source-lock/reconciliation, source gaps, negative controls, guardrails, and next-stage routing. These helpers must not be extended into Fandom page crawling, media downloading, spreadsheet cell-body publication, token execution, byte-stream generation, DWH/hash search, decoding, stego/audio/image/OCR/AI/CUDA work, benchmarking, scoring, or solve claims without an explicit future stage.
+The historical-route layer now also includes Stage 5BJ original/archive crosswalk closure helpers under `python/libreprimus/historical_route/stage5bj.py`. Stage 5BJ writes compact metadata for crosswalk closures, exact 2014 surface source locks, Fandom page-body status, boards-thread archive-equivalent context, media-equivalence closure, source-gap updates, token-block lineage preservation, guardrails, and next-stage routing. These helpers must not be extended into Fandom page crawling, media downloading, spreadsheet cell-body publication, full extracted surface publication, token execution, byte-stream generation, DWH/hash search, decoding, stego/audio/image/OCR/AI/CUDA work, benchmarking, scoring, or solve claims without an explicit future stage.
 
 ## Stage 5BF Note
 
@@ -34,6 +34,7 @@ The historical-route layer now includes Stage 5BF source-lock helpers under `pyt
 - Stage 5BD token-block preflight dry-run package: `python/libreprimus/token_block/preflight_runner/`, `data/token-block/stage5bd-*.yaml`, `data/project-state/stage5bd-*.yaml`, `schemas/token-block/*dry-run*.json`, `schemas/token-block/*run-plan*.json`, and `schemas/project-state/stage5bd-summary-v0.schema.json`.
 - Stage 5BF historical route source-lock package: `python/libreprimus/historical_route/`, `data/historical-route/stage5bf-*.yaml`, `data/project-state/stage5bf-*.yaml`, `schemas/historical-route/*.json`, and `schemas/project-state/stage5bf-summary-v0.schema.json`.
 - Stage 5BI Fandom/source-lock triage package: `python/libreprimus/historical_route/stage5bi.py`, `data/historical-route/stage5bi-*.yaml`, `data/source-harvester/stage5bi-*.yaml`, `data/token-block/stage5bi-*.yaml`, `data/project-state/stage5bi-*.yaml`, `schemas/historical-route/stage5bi-*.json`, `schemas/source-harvester/stage5bi-*.json`, `schemas/token-block/stage5bi-*.json`, and `schemas/project-state/stage5bi-*.json`.
+- Stage 5BJ original/archive crosswalk closure package: `python/libreprimus/historical_route/stage5bj.py`, `data/historical-route/stage5bj-*.yaml`, `data/source-harvester/stage5bj-*.yaml`, `data/token-block/stage5bj-*.yaml`, `data/project-state/stage5bj-*.yaml`, `schemas/historical-route/stage5bj-*.json`, `schemas/source-harvester/stage5bj-*.json`, `schemas/token-block/stage5bj-*.json`, and `schemas/project-state/stage5bj-*.json`.
 - Source harvester: `python/libreprimus/source_harvester/`, `data/source-harvester/`, `schemas/source-harvester/`.
 - Website renderer: `python/libreprimus/website_render/`, `data/website-render/`, `schemas/website-render/`.
 - CUDA parity/reporting: `python/libreprimus/cuda_*`, `python/libreprimus/prime_minus_one_*`, `python/libreprimus/bounded_p56_cuda_parity/`, `cuda/`, `data/cuda/`.
@@ -83,6 +84,8 @@ Stage 5BD token-block preflight-runner modules build no-byte-stream dry-run poli
 Stage 5BF historical-route modules locate and inventory the local `CicadaSolversIddqd` archive, hash-lock files, classify high-priority route artefacts, and build trust/technique/source-gap/readiness records. They must keep raw archive files ignored, generated reports ignored, no network clone/fetch, no PGP network verification, no stego execution, no token-block byte streams, no DWH/hash search, no CUDA, no benchmarks, no public website publication, and no solve claims.
 
 Stage 5BI historical-route modules build Fandom/source-lock triage records and spreadsheet metadata only. They must keep Fandom page bodies/media, raw archive files, spreadsheet bytes/cell bodies, generated outputs, token-block byte streams, 2014/page49-51 combinations, DWH/hash searches, decode attempts, stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, public website publication, and solve claims blocked.
+
+Stage 5BJ historical-route modules build original/archive crosswalk closure records only. They may inspect ignored local archive metadata and write ignored generated reports, but must keep raw archive files, Fandom HTML/images, spreadsheet bytes/cell bodies, full extracted 2014 surface bodies, generated outputs, token-block byte streams, 2014/page49-51 combinations, DWH/hash searches, decode attempts, stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, public website publication, and solve claims blocked.
 
 ## Good First Areas
 

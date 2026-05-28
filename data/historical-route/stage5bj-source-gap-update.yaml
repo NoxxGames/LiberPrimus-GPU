@@ -1,0 +1,176 @@
+record_type: stage5bj_source_gap_update_set
+schema: schemas/historical-route/stage5bj-source-gap-update-v0.schema.json
+stage_id: stage-5bj
+stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+  candidates, without execution
+source_previous_stage: stage-5bi
+source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_gap_origin_count: 5
+source_gap_update_count: 7
+source_gap_closed_count: 4
+source_gap_carried_forward_count: 3
+new_source_gap_count: 2
+execution_allowed: false
+solve_claim: false
+records:
+- record_type: stage5bj_source_gap_update
+  schema: schemas/historical-route/stage5bj-source-gap-update-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  gap_id: stage5bi-fandom-2014-page-body-not-hash-locked
+  source_gap_origin: stage-5bi
+  closure_status: partially_closed_more_specific_gap_remains
+  affected_candidate_ids: []
+  blocks_execution: true
+  blocks_metadata_planning: false
+  blocks_future_token_block_execution: true
+  recommended_resolution:
+  - Local archive route-equivalent files now lock the exact 2014 surfaces.
+  - No exact Fandom page body snapshot was found locally; keep exact page body snapshot
+    gap open.
+  carried_forward: true
+  execution_allowed: false
+  solve_claim: false
+- record_type: stage5bj_source_gap_update
+  schema: schemas/historical-route/stage5bj-source-gap-update-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  gap_id: stage5bi-boards-page49-51-thread-inaccessible
+  source_gap_origin: stage-5bi
+  closure_status: closed_original_archive_equivalent_found
+  affected_candidate_ids: []
+  blocks_execution: true
+  blocks_metadata_planning: false
+  blocks_future_token_block_execution: true
+  recommended_resolution:
+  - Local archive DOCX equivalent found.
+  - Do not use as token-block execution evidence without future review.
+  carried_forward: false
+  execution_allowed: false
+  solve_claim: false
+- record_type: stage5bj_source_gap_update
+  schema: schemas/historical-route/stage5bj-source-gap-update-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  gap_id: stage5bi-2014-256-surfaces-need-original-archive-crosswalk
+  source_gap_origin: stage-5bi
+  closure_status: closed_original_archive_equivalent_found
+  affected_candidate_ids:
+  - stage5bi-c01-2014-growing-hex-surface
+  - stage5bi-c02-2014-1033-hex-surface
+  - stage5bi-c03-2014-3301-hex-surface
+  blocks_execution: true
+  blocks_metadata_planning: false
+  blocks_future_token_block_execution: true
+  recommended_resolution:
+  - All three 2014 exact 512-hex surface targets are path/hash locked as metadata.
+  carried_forward: false
+  execution_allowed: false
+  solve_claim: false
+- record_type: stage5bj_source_gap_update
+  schema: schemas/historical-route/stage5bj-source-gap-update-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  gap_id: stage5bi-fandom-media-original-equivalence-not-assumed
+  source_gap_origin: stage-5bi
+  closure_status: closed_original_archive_equivalent_found
+  affected_candidate_ids: []
+  blocks_execution: true
+  blocks_metadata_planning: false
+  blocks_future_token_block_execution: true
+  recommended_resolution:
+  - High-value media pointers now have local archive-equivalent metadata rows.
+  carried_forward: false
+  execution_allowed: false
+  solve_claim: false
+- record_type: stage5bj_source_gap_update
+  schema: schemas/historical-route/stage5bj-source-gap-update-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  gap_id: stage5bi-spreadsheet-not-canonical
+  source_gap_origin: stage-5bi
+  closure_status: downgraded_to_reference_only
+  affected_candidate_ids: []
+  blocks_execution: true
+  blocks_metadata_planning: false
+  blocks_future_token_block_execution: true
+  recommended_resolution:
+  - Spreadsheet remains local non-canonical analysis metadata subordinate to Stage
+    5AW branch metadata.
+  carried_forward: false
+  execution_allowed: false
+  solve_claim: false
+- record_type: stage5bj_source_gap_update
+  schema: schemas/historical-route/stage5bj-source-gap-update-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  gap_id: stage5bj-fandom-page-body-local-snapshot-not-found
+  source_gap_origin: stage-5bj
+  closure_status: carried_forward_unresolved
+  affected_candidate_ids:
+  - stage5bi-c18-fandom-what-happened-2014-page-body
+  recommended_resolution:
+  - Only a future explicit source-lock stage may add a manual/Wayback page-body snapshot.
+  - Fandom page bodies remain secondary context.
+  blocks_execution: true
+  blocks_metadata_planning: false
+  blocks_future_token_block_execution: true
+  carried_forward: true
+  execution_allowed: false
+  solve_claim: false
+- record_type: stage5bj_source_gap_update
+  schema: schemas/historical-route/stage5bj-source-gap-update-v0.schema.json
+  stage_id: stage-5bj
+  stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+    candidates, without execution
+  source_previous_stage: stage-5bi
+  source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+  source_deep_research_stage: stage-5bh-dr
+  source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+  gap_id: stage5bj-pgp-live-cd-local-source-not-found
+  source_gap_origin: stage-5bj
+  closure_status: carried_forward_unresolved
+  affected_candidate_ids:
+  - stage5bi-c13-pgp-signature-live-cd
+  recommended_resolution:
+  - Keep PGP live-CD record quarantined/reference-only until a stronger original source
+    is located.
+  - Do not perform online PGP verification as project truth in this stage.
+  blocks_execution: true
+  blocks_metadata_planning: false
+  blocks_future_token_block_execution: true
+  carried_forward: true
+  execution_allowed: false
+  solve_claim: false

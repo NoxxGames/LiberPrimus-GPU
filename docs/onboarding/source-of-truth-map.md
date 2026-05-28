@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BI it names Stage 5BI as latest complete and Stage 5BJ as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BJ it names Stage 5BJ as latest complete and Stage 5BK as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -50,6 +50,11 @@
 - `data/project-state/stage5bd-summary.yaml`: Stage 5BD aggregate summary, guardrail state, archive marker state, and Stage 5BE next-stage decision.
 - `data/project-state/stage5bf-summary.yaml`: Stage 5BF aggregate summary, guardrail state, and historical Stage 5BG next-stage decision.
 - `data/project-state/stage5bi-summary.yaml`: Stage 5BI aggregate summary, guardrail state, Fandom/source-lock counts, spreadsheet status, and Stage 5BJ next-stage decision.
+- `data/historical-route/stage5bj-*.yaml`: Stage 5BJ crosswalk closure plan, original/archive closure, exact 2014 surface source locks, Fandom page-body crosswalk, boards-thread crosswalk, high-priority candidate status, media-equivalence closure, source-gap update, and guardrail records.
+- `data/source-harvester/stage5bj-*.yaml`: Stage 5BJ local archive and source-snapshot inspection summaries.
+- `data/token-block/stage5bj-*.yaml`: Stage 5BJ token-block lineage preservation and 2014 surface context closure records that preserve active token-block records unchanged.
+- `data/project-state/stage5bj-summary.yaml`: Stage 5BJ aggregate summary, guardrail state, closure counts, local archive/source status, and Stage 5BK next-stage decision.
+- `data/project-state/stage5bj-next-stage-decision.yaml`: Stage 5BJ next-stage decision selecting Stage 5BK historical-route planning constraint integration without execution.
 - `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 - `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.
@@ -121,3 +126,7 @@ Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bf-sum
 ## Stage 5BI Additions
 
 Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bi-summary.yaml`, `data/project-state/stage5bi-next-stage-decision.yaml`, `data/historical-route/stage5bi-fandom-page-triage.yaml`, and `data/historical-route/stage5bi-original-archive-crosswalk-candidates.yaml` for the current Fandom/source-lock triage state. Fandom pages and media remain secondary context; the local spreadsheet is non-canonical analysis metadata; Stage 5BD dry-run records and future token-block execution gates remain blocked.
+
+## Stage 5BJ Additions
+
+Use `STATUS.md`, `docs/roadmap/staged-plan.md`, `data/project-state/stage5bj-summary.yaml`, `data/project-state/stage5bj-next-stage-decision.yaml`, `data/historical-route/stage5bj-original-archive-crosswalk-closure.yaml`, `data/historical-route/stage5bj-2014-exact-surface-source-locks.yaml`, and `data/token-block/stage5bj-token-block-lineage-preservation.yaml` for the current original/archive crosswalk closure state. Exact 2014 surface locks are provenance metadata only, Fandom page bodies and media remain secondary unless exact source-locked, full extracted surface bodies stay ignored, and Stage 5AP/5AW/5AZ/5BD token-block execution gates remain blocked.

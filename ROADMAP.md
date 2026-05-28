@@ -4,9 +4,9 @@ The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/ro
 
 ## Current Direction
 
-Stage 5BI Fandom source-lock triage and original-archive crosswalk integration is complete. It consumes Stage 5BH Deep Research Fandom triage as metadata only, records Fandom page triage, item source-lock candidates, original/archive crosswalk candidates, media non-original policy, 2014 256-byte surface context, token-block external context, local spreadsheet source-lock/reconciliation metadata, source gaps, negative controls, guardrails, and Stage 5BJ next-stage routing while keeping Stage 5BD dry-run records valid and execution gates blocked.
+Stage 5BJ original-archive crosswalk closure for high-priority Fandom-derived candidates is complete. It consumes Stage 5BI Fandom/source-lock triage and Stage 5BF local archive metadata, records 12 crosswalk closure rows, locks 3 exact 2014 512-hex surface source files, records boards/media archive-equivalence closures, carries forward exact Fandom page-body and PGP live-CD gaps, and selects Stage 5BK planning constraint integration while keeping Stage 5BD dry-run records valid and execution gates blocked.
 
-The next recommended prompt is Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived candidates, without execution. Token-block execution, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5BK - Historical-route planning constraint integration, without execution. Token-block execution, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

@@ -1,0 +1,38 @@
+record_type: stage5bj_next_stage_decision
+schema: schemas/project-state/stage5bj-next-stage-decision-v0.schema.json
+stage_id: stage-5bj
+stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+  candidates, without execution
+source_previous_stage: stage-5bi
+source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+selected_next_stage_id: stage-5bk
+selected_next_prompt_type: codex_metadata_implementation
+selected_next_stage_title: Stage 5BK - Historical-route planning constraint integration,
+  without execution
+selected_next_stage_reason: Stage 5BJ locks all three 2014 exact surfaces and closes
+  the boards/media archive-equivalence metadata gaps while carrying forward exact
+  Fandom page-body and PGP live-CD source gaps; broader historical-route planning
+  can now integrate these constraints without execution.
+metadata_review_only: true
+summary_counts_preview:
+  exact_512_hex_surface_locked_count: 3
+  boards_thread_found: true
+token_block_execution_selected: false
+byte_stream_generation_selected: false
+variant_materialisation_selected: false
+dwh_hash_search_selected: false
+hash_preimage_search_selected: false
+decode_selected: false
+scored_experiments_selected: false
+benchmark_selected: false
+cuda_selected: false
+public_website_expansion_selected: false
+stego_execution_selected: false
+pgp_verification_selected: false
+audio_analysis_selected: false
+image_forensics_selected: false
+ocr_selected: false
+ai_ml_selected: false
+solve_claim: false

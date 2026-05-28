@@ -1,0 +1,34 @@
+record_type: stage5bj_token_block_lineage_preservation
+schema: schemas/token-block/stage5bj-token-block-lineage-preservation-v0.schema.json
+stage_id: stage-5bj
+stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+  candidates, without execution
+source_previous_stage: stage-5bi
+source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+lineage_record_count: 5
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+stage5bd_dry_run_records_remain_valid: true
+future_token_block_execution_remains_blocked: true
+real_token_block_byte_streams_generated: false
+variant_byte_streams_generated: false
+execution_allowed: false
+solve_claim: false
+records:
+- path: data/token-block/stage5ap-token-block-canonical-transcription.yaml
+  path_found: true
+  sha256: 264e059f73ebf04ea2982288d34ad8d7f278d68ef0e8d88fe2e6c8b15f66328e
+- path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+  path_found: true
+  sha256: 5e2dfee9717b1950cc7f61cf6e8b48ea592105e6dbe5e94d31396556c41daa3f
+- path: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+  path_found: true
+  sha256: 4be0806a2f41aac56b858774af253d249bd1dd894e253fa04fe52a57ed4bf1a3
+- path: data/token-block/stage5bd-active-manifest-lock.yaml
+  path_found: true
+  sha256: daafd90b61191941ecdfa86cce56516f0199813fd7f76f81ba4d8d9e793dceec
+- path: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+  path_found: true
+  sha256: e2a40ec584be822e31e535d80a8863c3b0ba0280829184feeb73a53caa61af82

@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5BI - Fandom source-lock triage and original-archive crosswalk integration.
+Current completed stage: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived candidates, without execution.
 
-Current work: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived candidates, without execution. Stage 5BI consumes Stage 5BH Fandom triage as metadata only, records Fandom page triage, item source-lock candidates, original/archive crosswalk candidates, media non-original policy, 2014 256-byte surface context, token-block external context, local spreadsheet source-lock/reconciliation metadata, source gaps, negative controls, guardrails, and Stage 5BJ next-stage routing. It did not commit Fandom page bodies or media, commit raw archive files, commit the spreadsheet, change canonical token transcription, change active token-block manifests, combine 2014 surfaces with page 49-51, generate byte streams, run DWH/hash searches, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, or make solve claims.
+Current work: Stage 5BK - Historical-route planning constraint integration, without execution. Stage 5BJ consumes Stage 5BI Fandom/source-lock triage and local Stage 5BF archive metadata as metadata only, records 12 crosswalk closure rows, 3 exact 2014 512-hex surface source locks, Fandom page-body crosswalk status, a boards-thread local archive-equivalent DOCX record, 8 media-equivalence closure rows, 7 source-gap updates, token-block lineage preservation, guardrails, and Stage 5BK next-stage routing. It did not commit Fandom page bodies or media, commit raw archive files, commit the spreadsheet, commit full extracted surface bodies, change canonical token transcription, change active token-block manifests, combine 2014 surfaces with page 49-51, generate byte streams, run DWH/hash searches, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, or make solve claims.
 
 Current project state:
 
@@ -155,7 +155,12 @@ Current project state:
 - Fandom images/media are secondary copies, not original artefacts; prefer `third_party/CicadaSolversIddqd`, Stage 5BF archive/hash metadata, and commit-addressed public refs for original/source-equivalent crosswalks.
 - Stage 5BI 2014 256-byte surfaces are context only and must not be combined with page 49-51 or used as experiment inputs without a future explicit source-lock/execution stage.
 - Stage 5BI local spreadsheet records are non-canonical local analysis metadata only; do not commit the workbook or cell bodies, and do not change canonical transcription from them.
-- Future Stage 5BJ work must close original/archive-equivalent crosswalk gaps for high-priority Fandom-derived candidates without token-block execution, byte-stream generation, DWH/hash search, decoding, stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, website publication, method-status upgrades, or solve claims.
+- Stage 5BJ original/archive crosswalk closure records are metadata-only provenance and planning records.
+- Stage 5BJ exact 2014 512-hex source locks are not experiment inputs, not DWH/hash targets, and must not be combined with page 49-51 without a future explicit execution-gated stage.
+- Stage 5BJ boards thread and media equivalence records are local archive-equivalent context only, not source truth for execution or solve evidence.
+- Stage 5BJ keeps exact Fandom page-body snapshots and PGP live-CD source gaps carried forward; do not silently promote Fandom page bodies or media.
+- Stage 5BJ local completion summaries under `codex_output/**` and `codex-output/**` are local-only ignored handoff files and must not be staged.
+- Future Stage 5BK work may integrate historical-route planning constraints from Stage 5BJ metadata, but must not execute token-block experiments, generate byte streams, run DWH/hash search, decode, run stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, publish website content, upgrade method status, or make solve claims.
 - Stage 5AX keeps git, GitHub, network/remote, generated-output-writing, issue-update, commit, and push operations serial.
 - Stage 5AX uses pytest-xdist only when available and otherwise falls back to deterministic subprocess sharding.
 - Stage 5AY preflight design cites Stage 5AW repaired branch metadata and the Stage 5AX next-stage decision, does not use ignored review-pack bodies as committed input, and does not execute token experiments or DWH/hash searches. Future Stage 5BE review must consume Stage 5BD dry-run records, Stage 5BB active-manifest registry, no-execution runner scaffold, and Stage 5AZ repaired manifest-design/execution-gate records before any execution-stage decision.

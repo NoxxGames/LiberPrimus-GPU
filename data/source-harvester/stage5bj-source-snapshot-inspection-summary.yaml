@@ -1,0 +1,20 @@
+record_type: stage5bj_source_snapshot_inspection_summary
+schema: schemas/source-harvester/stage5bj-source-snapshot-inspection-summary-v0.schema.json
+stage_id: stage-5bj
+stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+  candidates, without execution
+source_previous_stage: stage-5bi
+source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+source_snapshot_dir: third_party/SourceSnapshots
+source_snapshot_dir_present: true
+source_snapshot_file_count: 3
+fandom_like_snapshot_file_count: 1
+fandom_like_snapshot_paths:
+- third_party/SourceSnapshots/stage4k-stage4b-uncovering-outguess.html
+fandom_2014_exact_page_body_snapshot_found: false
+network_fetch_performed: false
+fandom_page_bodies_committed: false
+execution_allowed: false
+solve_claim: false

@@ -1,6 +1,6 @@
 # Website-Ingest Workflow
 
-Use this workflow for Stage 5AL-style metadata handoffs, Stage 5AM-style static metadata rendering, Stage 5AN-style private content-pack handoff, Stage 5AP token-block references, Stage 5AR coordinate-lock references, Stage 5AT review-pack references, and Stage 5BI Fandom/source-lock references that need to remain metadata-only.
+Use this workflow for Stage 5AL-style metadata handoffs, Stage 5AM-style static metadata rendering, Stage 5AN-style private content-pack handoff, Stage 5AP token-block references, Stage 5AR coordinate-lock references, Stage 5AT review-pack references, Stage 5BI Fandom/source-lock references, and Stage 5BJ original/archive crosswalk references that need to remain metadata-only.
 
 1. Validate the current source-harvester stage records.
 2. Build `data/website-ingest/stage5al/` from committed metadata.
@@ -13,4 +13,4 @@ Use this workflow for Stage 5AL-style metadata handoffs, Stage 5AM-style static 
    ignored.
 
 Future website work must consume the committed data package and must not infer publication
-permission from source-card presence alone. Publication gates are mandatory, Stage 5AM renderer output under `website-export/stage5am/` remains a private generated artifact, Stage 5AN private content under `deep-research-content-packs/stage5an/` plus `website-export/stage5an/` remains private generated handoff material, and Stage 5AP token-block records plus Stage 5AR coordinate records plus Stage 5AT review-pack records plus Stage 5BI Fandom/source-lock records must not be rendered as decoded text, image interpretation, automatic transcription changes, original-media equivalence, experiment inputs, or solve evidence unless a later review changes that gate.
+permission from source-card presence alone. Publication gates are mandatory, Stage 5AM renderer output under `website-export/stage5am/` remains a private generated artifact, Stage 5AN private content under `deep-research-content-packs/stage5an/` plus `website-export/stage5an/` remains private generated handoff material, and Stage 5AP token-block records plus Stage 5AR coordinate records plus Stage 5AT review-pack records plus Stage 5BI Fandom/source-lock records plus Stage 5BJ crosswalk closure records must not be rendered as decoded text, image interpretation, automatic transcription changes, original-media equivalence, experiment inputs, or solve evidence unless a later review changes that gate.

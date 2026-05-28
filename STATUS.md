@@ -2,17 +2,21 @@
 
 ## Current stage
 
-Stage 5BI Fandom source-lock triage and original-archive crosswalk integration is complete.
+Stage 5BJ original-archive crosswalk closure for high-priority Fandom-derived candidates is complete.
 
-Next recommended prompt: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived candidates, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5BK - Historical-route planning constraint integration, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5BJ
+
+Stage 5BJ closes and refines Stage 5BI high-priority original/archive crosswalk gaps using local ignored archive metadata only. It locks the three 2014 512-hex surfaces by archive path/hash metadata, records Fandom page-body crosswalk status, records the boards.net page 49-51 archive-equivalent DOCX metadata row, strengthens media-equivalence closure rows, preserves the non-canonical spreadsheet boundary, and keeps Stage 5AP/5AW/5AZ/5BD token-block lineage unchanged.
+
+Local Stage 5BJ summary: Stage 5BI crosswalk candidates consumed `12`, Stage 5BJ closure rows `12`, exact 2014 surface targets `3`, exact 512-hex surfaces locked `3`, surface source files found `3`, page-body crosswalk rows `7`, boards thread found `true`, media-equivalence rows `8`, source gaps closed/carried/new `4` / `3` / `2`, local archive present `true`, source snapshots present `true`, spreadsheet present `true`, canonical transcription changed `false`, active token-block manifest changed `false`, and next stage `Stage 5BK`.
+
+Stage 5BJ is metadata-only. It does not run token-block experiments, generate real token-block byte streams, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, compare candidate hashes as an experiment, decode, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, score candidate plaintext, publish website content, commit raw Fandom/archive/spreadsheet files, commit full extracted surface bodies, alter Stage 5BD dry-run records, or make solve claims.
 
 ## Completed in Stage 5BI
 
 Stage 5BI converts the Stage 5BH Deep Research Fandom triage into committed metadata. It classifies Uncovering Cicada / Fandom pages as secondary route context, records item-level source-lock candidates, crosswalks high-value claims to original or stronger archive candidates, marks Fandom media as non-original by default, records 2014 256-byte surface context, records page 49-51 external context without changing active token-block records, source-locks the local spreadsheet as non-canonical analysis metadata, and adds negative-control/source-gap/guardrail records.
-
-Local Stage 5BI summary: Fandom page triage records `30`, item source-lock candidates `18`, original archive crosswalk candidates `12`, verified archive-equivalent crosswalks `7`, probable archive path candidates `3`, source gaps `5`, negative controls `4`, local archive present `true`, spreadsheet present `true`, canonical transcription changed `false`, active token-block manifest changed `false`, and next stage `Stage 5BJ`.
-
-Stage 5BI is metadata-only. It does not run token-block experiments, generate real token-block byte streams, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, compare candidate hashes, decode, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, score candidate plaintext, publish website content, commit raw Fandom/archive/spreadsheet files, alter Stage 5BD dry-run records, or make solve claims.
 
 ## Completed in Stage 5BF
 
@@ -1046,4 +1050,4 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 
 ## Next prompt recommendation
 
-Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived candidates, without execution. Use the Stage 5BI page triage, item source-lock candidate, archive crosswalk, media policy, 2014 surface context, spreadsheet source-lock/reconciliation, source-gap, guardrail, summary, and next-stage records; keep token experiment execution, real byte-stream generation, 2014/page49-51 surface combination, DWH/hash/preimage search, historical stego execution, online PGP verification, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, website publication, and solve claims blocked unless a later prompt explicitly scopes execution.
+Stage 5BK - Historical-route planning constraint integration, without execution. Use the Stage 5BJ crosswalk closure, exact 2014 surface source-lock, Fandom page-body crosswalk, boards-thread, media-equivalence, source-gap update, token-block lineage, guardrail, summary, and next-stage records; keep token experiment execution, real byte-stream generation, 2014/page49-51 surface combination, DWH/hash/preimage search, historical stego execution, online PGP verification, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, website publication, and solve claims blocked unless a later prompt explicitly scopes execution.

@@ -1368,3 +1368,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5BI records 30 Fandom page triage records, 18 item source-lock candidates, 12 original archive crosswalk candidates, 7 verified archive-equivalent crosswalks, 3 probable archive path candidates, 5 source gaps, 4 negative controls, local archive present true, local spreadsheet present true, canonical transcription changed false, active token-block manifest changed false, and Stage 5BJ as next. It performs no Fandom/archive/spreadsheet raw commit, token experiment, 2014/page49-51 surface combination, byte-stream generation, variant materialisation, DWH/hash/preimage search, hash comparison, decode attempt, stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5bj
+    title: Original-archive crosswalk closure for high-priority Fandom-derived candidates
+    status: complete
+    category: infrastructure
+    summary: Closed or explicitly carried forward high-priority Stage 5BI Fandom-derived original/archive crosswalk gaps using ignored local archive/source metadata as provenance material only, without token-block execution or surface combination.
+    key_outputs:
+      - "`libreprimus historical-route` Stage 5BJ commands for build, validation, and summary."
+      - Stage 5BJ crosswalk closure plan, original/archive closure, exact 2014 surface source-lock, Fandom page-body crosswalk, boards-thread crosswalk, high-priority candidate status, media-equivalence closure, source-gap update, guardrail, token-block lineage preservation, 2014 surface context closure, local archive/source-snapshot inspection, aggregate summary, and next-stage records.
+      - Summary-only developer and research logs; ignored generated reports under `experiments/results/historical-route/stage5bj/` and local completion summaries under `codex_output/` and `codex-output/`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5BJ records 12 crosswalk closure rows, 8 exact original/archive-equivalent closures, 3 archive-equivalent-but-not-exact-surface closures, 1 local archive no-match row, 3 exact 2014 512-hex surface source locks, 3 surface source files found, 7 Fandom page-body crosswalk rows, 5 route-equivalent archive docs found, 2 page-body rows not found, boards thread found true, 8 media-equivalence closure rows, 4 source gaps closed, 3 source gaps carried forward, 2 new source gaps, local archive present true, source snapshots present true, local spreadsheet present true, canonical transcription changed false, active token-block manifests changed false, and Stage 5BK as next. It performs no Fandom/archive/spreadsheet raw commit, full extracted surface body commit, token experiment, 2014/page49-51 surface combination, byte-stream generation, variant materialisation, DWH/hash/preimage search, hash comparison, decode attempt, stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

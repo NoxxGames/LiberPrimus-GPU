@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5BI" `
-        --expected-next-stage "Stage 5BJ" `
+        --expected-latest-stage "Stage 5BJ" `
+        --expected-next-stage "Stage 5BK" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5BI" `
-        --expected-next-stage "Stage 5BJ" `
+        --expected-latest-stage "Stage 5BJ" `
+        --expected-next-stage "Stage 5BK" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5BI",
+        expected_latest_stage="Stage 5BJ",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5BI",
+            "expected_latest_stage": "Stage 5BJ",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -1110,9 +1110,18 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
     $Stage5SBoundary = Join-Path $TempDir "stage5s-gematria-expanded-cuda-boundary-review.yaml"
     $Stage5SDecision = Join-Path $TempDir "stage5s-gematria-expanded-cuda-next-step-decision.yaml"
     $Stage5SSummary = Join-Path $TempDir "stage5s-expanded-cuda-result-store-integration-summary.yaml"
+    $Stage5RCommittedResults = Join-Path (Join-Path (Join-Path "experiments" "results") "gematria-expanded-solved-fixture-cuda") "stage5r"
+    & $Python -m libreprimus.cli gematria-expanded-solved-fixture-cuda validate-stage5r `
+        --run-records data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-run.yaml `
+        --parity-records data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-parity.yaml `
+        --boundaries data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-boundary.yaml `
+        --result-store-preflight data/cuda/stage5r-gematria-expanded-solved-fixture-result-store-preflight.yaml `
+        --score-summary-preflight data/cuda/stage5r-gematria-expanded-solved-fixture-score-summary-preflight.yaml `
+        --summary data/cuda/stage5r-expanded-solved-fixture-cuda-parity-summary.yaml `
+        --results-dir $Stage5RCommittedResults
     & $Python -m libreprimus.cli gematria-expanded-cuda-result-store build-parity-report `
-        --stage5r-parity $Stage5RParity `
-        --stage5r-run $Stage5RRun `
+        --stage5r-parity data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-parity.yaml `
+        --stage5r-run data/cuda/stage5r-gematria-expanded-solved-fixture-cuda-run.yaml `
         --parity-report-out $Stage5SParity `
         --out-dir $Stage5SOut `
         --allow-warnings
@@ -1150,7 +1159,7 @@ json.dump(python_reference_run(threads=thread_count), sys.stdout, sort_keys=True
         --generated-body-policy $Stage5SPolicy `
         --boundary-review $Stage5SBoundary `
         --next-step-decision $Stage5SDecision `
-        --stage5r-summary $Stage5RSummary `
+        --stage5r-summary data/cuda/stage5r-expanded-solved-fixture-cuda-parity-summary.yaml `
         --summary-out $Stage5SSummary `
         --out-dir $Stage5SOut `
         --allow-warnings
@@ -2483,6 +2492,14 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q "third_party/CicadaSolversIddqd/example.txt"
     git check-ignore -q "third_party/3N_3p_Bases_49-51.jpg.xlsx"
     git check-ignore -q "codex-output/stage5bi-codex-completion.md"
+
+    Write-Host "Validating Stage 5BJ original-archive crosswalk closure records"
+    & $Python -m libreprimus.cli historical-route stage5bj-validate
+    $Stage5BjGeneratedRoot = "experiments" + "/results"
+    git check-ignore -q "$Stage5BjGeneratedRoot/historical-route/stage5bj/summary.json"
+    git check-ignore -q "$Stage5BjGeneratedRoot/historical-route/stage5bj/extracted-surfaces/stage5bj-lock-2014-1033-512-hex.hex"
+    git check-ignore -q "codex-output/stage5bj-completion-summary.md"
+    git check-ignore -q "codex_output/stage5bj-completion-summary.md"
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

@@ -233,7 +233,7 @@ def build_stage5am_summary(
         "private_ids_published": False,
         "local_absolute_paths_published": audit.get("local_absolute_paths_published", False),
         "robots_noindex_present": validation.get("robots_noindex_present", False),
-        "upload_instructions_created": upload.get("upload_directory") == "website-export/stage5am/research-index",
+        "upload_instructions_created": upload.get("upload_directory") == manifest.get("website_export_root"),
         "privacy_audit_passed": audit.get("privacy_audit_passed", False),
         "static_site_validation_passed": validation.get("static_site_validation_passed", False),
         "deep_research_export_ready": True,

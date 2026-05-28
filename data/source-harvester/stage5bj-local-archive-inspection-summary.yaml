@@ -1,0 +1,32 @@
+record_type: stage5bj_local_archive_inspection_summary
+schema: schemas/source-harvester/stage5bj-local-archive-inspection-summary-v0.schema.json
+stage_id: stage-5bj
+stage_title: Stage 5BJ - Original-archive crosswalk closure for high-priority Fandom-derived
+  candidates, without execution
+source_previous_stage: stage-5bi
+source_previous_stage_commit: d3c931b69d7718ff181c5dd0b6201174d36b2f7e
+source_deep_research_stage: stage-5bh-dr
+source_deep_research_report: 08_LiberPrimus-GPU-Stage-5BH-DR-Fandom-Source-Lock-Triage-And-Archive-Crosswalk.md
+local_archive_path: third_party/CicadaSolversIddqd
+local_archive_present: true
+local_archive_files_hashed_count: 12
+selected_archive_paths_hashed:
+- third_party/CicadaSolversIddqd/2013/additional files/Cicada OS/cicados/AUDIO/761.MP3
+- third_party/CicadaSolversIddqd/2014/Websites/Interconnectedness fron onion 5/3301
+  - Interconnectedness.mp3
+- third_party/CicadaSolversIddqd/2014/additional images/Liber primus pages/1033.jpg
+- third_party/CicadaSolversIddqd/Archive/Media coverage/cicada3301.boards.net/Spiral
+  Branches 40-55/Pages 49 to 51 and 256 Byte Strings.docx
+- third_party/CicadaSolversIddqd/assets/2014/liber-primus-complete/49.jpg
+- third_party/CicadaSolversIddqd/assets/2014/liber-primus-complete/50.jpg
+- third_party/CicadaSolversIddqd/assets/2014/liber-primus-complete/51.jpg
+- third_party/CicadaSolversIddqd/assets/2014/stage03/cu343l33nqaekrnw.onion/index.html
+- third_party/CicadaSolversIddqd/assets/2014/stage04/fv7lyucmeozzd5j4.onion/index.html
+- third_party/CicadaSolversIddqd/assets/2014/stage05/avowyfgl5lkzfj3n.onion/index.html
+- third_party/CicadaSolversIddqd/assets/2014/stage07/magicsquares.txt
+- third_party/CicadaSolversIddqd/assets/2016/4gq25.jpg
+directory_walk_performed: true
+raw_archive_files_committed: false
+generated_outputs_committed: false
+execution_allowed: false
+solve_claim: false

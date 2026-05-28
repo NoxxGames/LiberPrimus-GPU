@@ -878,3 +878,4 @@ experiments/results/website-render/**
 
 # Local Codex completion handoffs
 codex-output/**
+codex_output/**
