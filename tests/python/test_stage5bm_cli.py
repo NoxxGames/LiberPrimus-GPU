@@ -1,6 +1,11 @@
+from pathlib import Path
+
+import pytest
 from typer.testing import CliRunner
 
 from libreprimus.cli import app
+
+IDDQD_V2_STRING_SOURCE = Path("third_party/CiadaSolversIddqd_v2/byte-strings/byte-strings")
 
 
 def test_stage5bm_cli_validate_and_summary_work() -> None:
@@ -16,6 +21,9 @@ def test_stage5bm_cli_validate_and_summary_work() -> None:
 
 
 def test_stage5bm_cli_build_reconciliation_is_deterministic() -> None:
+    if not IDDQD_V2_STRING_SOURCE.is_file():
+        pytest.skip("local ignored iddqd-v2 String 4 source is not available")
+
     result = CliRunner().invoke(app, ["token-block", "build-stage5bm-string4-reconciliation"])
 
     assert result.exit_code == 0, result.output

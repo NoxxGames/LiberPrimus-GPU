@@ -1100,9 +1100,6 @@ def validate_stage5bm(results_dir: Path = RESULTS_DIR, summary: Path = DATA_PATH
             errors.append(f"next-stage decision has {key}={next_stage.get(key)!r}, expected {expected!r}")
     if guardrail.get("string4_branch_crosswalk_metadata_only") is not True:
         errors.append("guardrail must mark String 4 crosswalk as metadata-only")
-    if not (results_dir / "summary.json").is_file():
-        errors.append("ignored Stage 5BM generated summary is missing")
-
     counts = {
         "stage5bm_valid": not errors,
         "validation_error_count": len(errors),
@@ -1114,6 +1111,7 @@ def validate_stage5bm(results_dir: Path = RESULTS_DIR, summary: Path = DATA_PATH
         "parser_inconclusive_position_count": branch.get("parser_inconclusive_position_count"),
         "future_token_block_execution_remains_blocked": summary_payload.get("future_token_block_execution_remains_blocked"),
         "codex_output_used": handoff.get("codex_output_used"),
+        "ignored_generated_summary_present": (results_dir / "summary.json").is_file(),
     }
     return counts, errors
 
