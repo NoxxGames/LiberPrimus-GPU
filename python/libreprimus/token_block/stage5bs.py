@@ -222,7 +222,7 @@ FALSE_NEXT_STAGE_FLAGS: dict[str, bool] = {
 
 PRESERVED_ACTIVE_RECORDS = [
     "data/token-block/stage5ap-token-block-canonical-transcription.yaml",
-    "data/token-block/stage5aw-repaired-branch-manifest.yaml",
+    "data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml",
     "data/token-block/stage5ay-branch-eligibility-policy.yaml",
     "data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml",
     "data/token-block/stage5bb-active-manifest-registry.yaml",
@@ -980,6 +980,17 @@ def validate_stage5bs(
     ):
         if required_gap not in gap_ids:
             errors.append(f"missing_reviewability_gap={required_gap}")
+
+    preserved_active_paths = payloads["active_preservation"].get("preserved_active_record_paths", [])
+    wrong_stage5aw_path = "data/token-block/stage5aw-repaired-branch-manifest.yaml"
+    correct_stage5aw_path = "data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml"
+    if wrong_stage5aw_path in preserved_active_paths:
+        errors.append(f"active_preservation contains unresolved Stage 5AW path {wrong_stage5aw_path}")
+    if correct_stage5aw_path not in preserved_active_paths:
+        errors.append(f"active_preservation missing corrected Stage 5AW path {correct_stage5aw_path}")
+    for preserved_path in preserved_active_paths:
+        if not Path(str(preserved_path)).is_file():
+            errors.append(f"active_preservation path does not resolve: {preserved_path}")
 
     counts = {
         "stage5bs_valid": not errors,

@@ -93,3 +93,5 @@ Stage 5BO implementation is under `python/libreprimus/token_block/stage5bo.py`; 
 ## Stage 5BQ Navigation
 
 Stage 5BQ implementation is under `python/libreprimus/token_block/stage5bq.py`; CLI commands are documented in `docs/reference/token-block-cli.md`. The generated Stage 5BQ reports remain ignored under `experiments/results/token-block/stage5bq/`. The local completion summary is `codex-output/stage5bq-codex-completion.md`; do not create or use `codex_output/` for current handoffs.
+
+For Stage 5BU reviewability work, start with `docs/onboarding/stage5bu-lineage-path-reviewability-hardening-workflow.md` and run `token-block validate-stage5bu-lineage-paths`, `validate-stage5bu`, and the hardened `validate-stage5bs`.

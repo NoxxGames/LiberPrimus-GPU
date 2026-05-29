@@ -12,7 +12,7 @@ metadata_only: true
 solve_claim: false
 preserved_active_record_paths:
 - data/token-block/stage5ap-token-block-canonical-transcription.yaml
-- data/token-block/stage5aw-repaired-branch-manifest.yaml
+- data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
 - data/token-block/stage5ay-branch-eligibility-policy.yaml
 - data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
 - data/token-block/stage5bb-active-manifest-registry.yaml

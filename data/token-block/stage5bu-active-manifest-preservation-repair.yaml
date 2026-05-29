@@ -1,0 +1,33 @@
+record_type: stage5bu_active_manifest_preservation_repair
+schema: schemas/token-block/stage5bu-active-manifest-preservation-repair-v0.schema.json
+stage_id: stage-5bu
+stage_title: Stage 5BU - Stage 5BS lineage-path and reviewability hardening, without
+  execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bs
+source_previous_stage_commit: 9a56959daf147d96eb18090420e445b38d84666c
+source_deep_research_stage: stage-5bt
+source_deep_research_report: 12_Stage-5BT-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+repaired_stage5bs_record_path: data/token-block/stage5bs-active-manifest-preservation.yaml
+repaired_preserved_active_record_paths:
+- data/token-block/stage5ap-token-block-canonical-transcription.yaml
+- data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+- data/token-block/stage5ay-branch-eligibility-policy.yaml
+- data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+- data/token-block/stage5bb-active-manifest-registry.yaml
+- data/token-block/stage5bd-active-manifest-lock.yaml
+- data/token-block/stage5bd-dry-run-plan-manifest.yaml
+- data/token-block/stage5bd-run-plan-id-registry.yaml
+active_lineage_path_count: 8
+all_repaired_paths_resolve: true
+wrong_path_removed_from_active_preservation: true
+correct_path_present_in_active_preservation: true
+active_token_block_manifest_changed: false
+stage5aw_branch_manifest_changed: false
+stage5az_variant_family_manifest_changed: false
+stage5bd_dry_run_plan_changed: false
+stage5bd_dry_run_records_changed: false
+string4_active_input_allowed: false

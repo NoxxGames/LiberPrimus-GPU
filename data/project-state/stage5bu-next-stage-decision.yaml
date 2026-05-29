@@ -1,0 +1,26 @@
+record_type: stage5bu_next_stage_decision
+schema: schemas/project-state/stage5bu-next-stage-decision-v0.schema.json
+stage_id: stage-5bu
+stage_title: Stage 5BU - Stage 5BS lineage-path and reviewability hardening, without
+  execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bs
+source_previous_stage_commit: 9a56959daf147d96eb18090420e445b38d84666c
+source_deep_research_stage: stage-5bt
+source_deep_research_report: 12_Stage-5BT-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+selected_next_stage_id: stage-5bv
+selected_next_stage_title: Stage 5BV - Deep Research review of Stage 5BU lineage-path
+  and reviewability hardening, without execution
+selection_reason: Stage 5BU repaired a lineage-path defect and hardened validation;
+  Deep Research review must inspect the repair before execution-capable work.
+token_block_execution_selected: false
+byte_stream_generation_selected: false
+variant_materialisation_selected: false
+dwh_hash_search_selected: false
+scored_experiments_selected: false
+cuda_selected: false
+benchmark_selected: false
+method_status_upgrade_selected: false

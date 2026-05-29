@@ -40,6 +40,7 @@ The historical-route layer now includes Stage 5BF source-lock helpers under `pyt
 - Stage 5BO token-case operator-errata package: `python/libreprimus/token_block/stage5bo.py`, `data/token-block/stage5bo-*.yaml`, `data/historical-route/stage5bo-*.yaml`, `data/source-harvester/stage5bo-*.yaml`, `data/project-state/stage5bo-*.yaml`, `schemas/token-block/stage5bo-*.json`, `schemas/historical-route/stage5bo-*.json`, `schemas/source-harvester/stage5bo-*.json`, and `schemas/project-state/stage5bo-*.json`.
 - Stage 5BQ inactive-branch dry-run planning package: `python/libreprimus/token_block/stage5bq.py`, `data/token-block/stage5bq-*.yaml`, `data/historical-route/stage5bq-*.yaml`, `data/source-harvester/stage5bq-*.yaml`, `data/project-state/stage5bq-*.yaml`, `schemas/token-block/stage5bq-*.json`, `schemas/historical-route/stage5bq-*.json`, `schemas/source-harvester/stage5bq-*.json`, and `schemas/project-state/stage5bq-*.json`.
 - Stage 5BS planning-ingestion gate package: `python/libreprimus/token_block/stage5bs.py`, `data/token-block/stage5bs-*.yaml`, `data/historical-route/stage5bs-*.yaml`, `data/source-harvester/stage5bs-*.yaml`, `data/project-state/stage5bs-*.yaml`, `schemas/token-block/stage5bs-*.json`, `schemas/historical-route/stage5bs-*.json`, `schemas/source-harvester/stage5bs-*.json`, and `schemas/project-state/stage5bs-*.json`.
+- Stage 5BU lineage-path reviewability hardening package: `python/libreprimus/token_block/stage5bu.py`, `data/token-block/stage5bu-*.yaml`, `data/historical-route/stage5bu-*.yaml`, `data/source-harvester/stage5bu-*.yaml`, `data/project-state/stage5bu-*.yaml`, and matching `schemas/**/*stage5bu*.json`.
 - Source harvester: `python/libreprimus/source_harvester/`, `data/source-harvester/`, `schemas/source-harvester/`.
 - Website renderer: `python/libreprimus/website_render/`, `data/website-render/`, `schemas/website-render/`.
 - CUDA parity/reporting: `python/libreprimus/cuda_*`, `python/libreprimus/prime_minus_one_*`, `python/libreprimus/bounded_p56_cuda_parity/`, `cuda/`, `data/cuda/`.
@@ -102,6 +103,8 @@ Stage 5BO token-block modules parse ignored original/corrected decision template
 
 Stage 5BQ token-block modules consume Stage 5BP/5BO metadata and write inactive planning constraints only. They must not commit Deep Research bodies, mutate Stage 5AP/5AW/5AY/5AZ/5BB/5BD records, ingest String 4 into dry-run plans, generate byte streams, materialise variants, run DWH/hash search, decode, score, run CUDA, benchmark, or make solve claims.
 
+Stage 5BU token-block modules repair Stage 5BS lineage-path reviewability and harden validators only. They must not activate String 4 input, mutate Stage 5BD dry-run records, generate byte streams, materialise variants, run token experiments, DWH/hash search, decode, score, run CUDA, benchmark, expand the website, upgrade method status, or make solve claims.
+
 ## Good First Areas
 
 - Documentation fixes.
@@ -121,3 +124,5 @@ Stage 5BQ token-block modules consume Stage 5BP/5BO metadata and write inactive 
 ## Stage 5BD Module
 
 The Stage 5BD preflight-runner package split lives at `python/libreprimus/token_block/preflight_runner/` and remains dry-run-only.
+
+Stage 5BU token-block modules repair lineage-path reviewability and harden validators only. They must not be extended into active ingestion, byte-stream generation, token execution, DWH/hash search, scoring, CUDA, benchmarks, website expansion, method-status upgrades, or solve claims without an explicit future stage.

@@ -181,3 +181,5 @@ Stage 5BO adds operator-errata integration metadata for the ignored original/cor
 ## Stage 5BS Additions
 
 Stage 5BS adds fail-closed planning-ingestion metadata for the Stage 5BR-reviewed String 4 inactive branch context. The source-of-truth records are the Stage 5BS YAML files under `data/token-block/`, `data/historical-route/`, `data/source-harvester/`, and `data/project-state/`. Ignored Deep Research bodies, generated diagnostics, raw String 4 bodies, Codex completion summaries, and `codex_output` are not source truth.
+
+Stage 5BU adds `data/project-state/stage5bu-summary.yaml`, `data/token-block/stage5bu-stage5bs-lineage-path-erratum.yaml`, and `data/token-block/stage5bu-lineage-path-resolution-validation.yaml` as source-of-truth records for the Stage 5BS lineage-path repair.

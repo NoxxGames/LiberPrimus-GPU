@@ -1,0 +1,41 @@
+record_type: stage5bu_summary
+schema: schemas/project-state/stage5bu-summary-v0.schema.json
+stage_id: stage-5bu
+stage_title: Stage 5BU - Stage 5BS lineage-path and reviewability hardening, without
+  execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bs
+source_previous_stage_commit: 9a56959daf147d96eb18090420e445b38d84666c
+source_deep_research_stage: stage-5bt
+source_deep_research_report: 12_Stage-5BT-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+status: complete
+stage5bt_verdict: accept_with_warnings
+stage5bs_lineage_path_erratum_status: corrected_in_place_with_stage5bu_erratum
+incorrect_path: data/token-block/stage5aw-repaired-branch-manifest.yaml
+correct_path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+incorrect_path_active_after_stage5bu: false
+correct_path_active_after_stage5bu: true
+lineage_path_resolution_validation_status: passed
+lineage_record_count: 8
+source_digest_record_count: 15
+stage5bs_validator_hardened: true
+string4_planning_ingestion_gate_status: closed_gate_no_active_ingestion
+string4_active_input_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+future_token_block_execution_remains_blocked: true
+stage5bd_dry_run_records_remain_valid: true
+active_ingestion_performed: false
+real_byte_stream_generated: false
+variant_materialisation_performed: false
+cuda_execution_performed: false
+scored_experiments_executed: false
+generated_outputs_committed: false
+codex_output_used: false
+canonical_corpus_active: false
+page_boundaries_final: false
+recommended_next_stage_id: stage-5bv
+recommended_next_stage_title: Stage 5BV - Deep Research review of Stage 5BU lineage-path
+  and reviewability hardening, without execution

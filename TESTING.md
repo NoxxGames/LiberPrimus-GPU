@@ -1062,3 +1062,5 @@ Stage 5S tests are no-GPU-safe. They cover schema guardrails, exact three-record
 Stage 4P/Stage 4I compatibility, generated-body policy, method-status non-upgrade rules,
 boundary review, deterministic Deep Research next-step selection, CLI round trips, and ignore
 policy for generated reports, raw data, SQLite, and `codex-output/`.
+
+Stage 5BU extends coverage with lineage-path erratum schemas, preserved active-lineage digest validation, Stage 5BS validator hardening, reviewability metadata checks, gate preservation checks, CLI validation paths, and ignored-output checks for `experiments/results/token-block/stage5bu/` and `codex-output/**`. It confirms the deprecated Stage 5AW preserved path is absent, the corrected path resolves, String 4 active input remains false, dry-run ingestion remains false, Stage 5BD records remain valid, and no token experiments, byte-stream generation, DWH/hash/preimage search, decode, stego/audio/image/OCR/AI/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, or solve claim ran.

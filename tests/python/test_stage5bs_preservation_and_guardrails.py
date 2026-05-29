@@ -1,4 +1,6 @@
-from test_stage5bs_common import load_yaml
+from pathlib import Path
+
+from test_stage5bs_common import ROOT, load_yaml
 
 
 def test_stage5bs_preserves_stage5bd_plan_and_active_manifests() -> None:
@@ -12,6 +14,10 @@ def test_stage5bs_preserves_stage5bd_plan_and_active_manifests() -> None:
     assert active["active_token_block_manifest_changed"] is False
     assert active["stage5aw_branch_manifest_changed"] is False
     assert active["stage5az_variant_family_manifest_changed"] is False
+    paths = active["preserved_active_record_paths"]
+    assert "data/token-block/stage5aw-repaired-branch-manifest.yaml" not in paths
+    assert "data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml" in paths
+    assert all((ROOT / Path(path)).is_file() for path in paths)
 
 
 def test_stage5bs_no_active_ingestion_proof_blocks_string4_use() -> None:

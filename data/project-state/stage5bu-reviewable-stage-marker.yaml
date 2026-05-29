@@ -1,0 +1,21 @@
+record_type: stage5bu_reviewable_stage_marker
+schema: schemas/project-state/stage5bu-reviewable-stage-marker-v0.schema.json
+stage_id: stage-5bu
+stage_title: Stage 5BU - Stage 5BS lineage-path and reviewability hardening, without
+  execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bs
+source_previous_stage_commit: 9a56959daf147d96eb18090420e445b38d84666c
+source_deep_research_stage: stage-5bt
+source_deep_research_report: 12_Stage-5BT-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+reviewable_metadata_created: true
+lineage_path_erratum_created: true
+stage5bs_record_corrected_in_place: true
+final_commit_self_embedded: false
+final_commit_external_evidence_required: true
+ci_external_evidence_required: true
+codex_completion_summary_path: codex-output/stage5bu-codex-completion.md
+codex_output_directory_used: false

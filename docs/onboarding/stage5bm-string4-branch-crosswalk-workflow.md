@@ -13,6 +13,7 @@ Use Stage 5BM when reviewing how the iddqd-v2 String 4 context relates to the pa
 - Stage 5BN target-position source-gap closure records for follow-up inactive addendum planning after Stage 5BM is complete.
 - Stage 5BO operator-errata records and Stage 5BQ inactive-branch planning constraints for later follow-up context.
 - Stage 5BS planning-ingestion gate, future-runner citation policy, no-active-ingestion proof, Stage 5BD preservation, guardrail, and reviewable evidence records for future fail-closed planning-ingestion checks.
+- Stage 5BU lineage-path repair records, preserved active-lineage digest index, and validator hardening for future reviewability checks.
 
 ## Commands
 

@@ -1,0 +1,19 @@
+record_type: stage5bu_dwh_quarantine_reaffirmation
+schema: schemas/historical-route/stage5bu-dwh-quarantine-reaffirmation-v0.schema.json
+stage_id: stage-5bu
+stage_title: Stage 5BU - Stage 5BS lineage-path and reviewability hardening, without
+  execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bs
+source_previous_stage_commit: 9a56959daf147d96eb18090420e445b38d84666c
+source_deep_research_stage: stage-5bt
+source_deep_research_report: 12_Stage-5BT-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+dwh_relationship_status: quarantined
+quarantine_reaffirmed: true
+hash_search_performed: false
+dwh_hash_search_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false

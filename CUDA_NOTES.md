@@ -193,3 +193,5 @@ GPU kernels should return compact top-k or score summaries instead of dumping hu
 ## Profiling Tools Planned Later
 
 Nsight Systems and Nsight Compute remain future tools. Do not run long profiling jobs before CPU/GPU parity tests and a benchmark plan exist.
+
+Stage 5BU does not add or run CUDA. It preserves the existing CUDA deferral while repairing token-block lineage metadata.

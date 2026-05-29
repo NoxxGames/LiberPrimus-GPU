@@ -58,3 +58,5 @@ The Stage 5BK CLI does not execute token-block experiments, generate byte stream
 ## Stage 5BM / 5BN Note
 
 Stage 5BM consumes Stage 5BK historical-route records but is validated through `libreprimus token-block validate-stage5bm`. Stage 5BN consumes the Stage 5BM unsupported-position records and is validated through `libreprimus token-block validate-stage5bn`. Stage 5BO consumes Stage 5BN records plus ignored operator decision-template inputs and is validated through `libreprimus token-block validate-stage5bo`. Stage 5BQ consumes Stage 5BP/5BO/5BD metadata and is validated through `libreprimus token-block validate-stage5bq`. Stage 5BS consumes Stage 5BR review metadata and is validated through `libreprimus token-block validate-stage5bs`. These stages do not add historical-route aliases; use `docs/reference/token-block-cli.md` for the String 4 branch-crosswalk, unsupported-position, operator-errata, and inactive-branch dry-run planning commands.
+
+Stage 5BU reaffirms historical-route DWH quarantine and source-gap guardrails while repairing token-block lineage metadata; it adds no historical-route execution command.

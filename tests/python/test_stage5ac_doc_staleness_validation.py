@@ -23,7 +23,7 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
 def test_operational_docs_use_stage5bs_latest_and_stage5bt_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5BS String 4 inactive-branch planning-ingestion gate" in status
-    assert "Next recommended prompt: Stage 5BT" in status
-    assert "Latest completed stage: Stage 5BS" in staged_plan
-    assert "Current planning focus: Stage 5BT" in staged_plan
+    assert "Stage 5BU Stage 5BS lineage-path and reviewability hardening" in status
+    assert "Next recommended prompt: Stage 5BV" in status
+    assert "Latest completed stage: Stage 5BU" in staged_plan
+    assert "Current planning focus: Stage 5BV" in staged_plan

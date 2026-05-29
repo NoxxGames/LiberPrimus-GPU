@@ -85,3 +85,5 @@ Historical Stage 5BQ coverage includes Stage 5BQ Stage 5BP findings integration,
 ## Stage 5BJ Coverage
 
 The operational file map includes Stage 5BJ crosswalk closure plan, original/archive closure rows, exact 2014 surface source locks, Fandom page-body crosswalk records, boards-thread crosswalk records, high-priority candidate status, media-equivalence closure, source-gap updates, token-block lineage preservation, 2014 surface context closure, local archive/source-snapshot summaries, guardrails, summary, next-stage decision, experiment note, CLI reference, developer log, and research log. The local Codex completion summaries under `codex_output/**` and `codex-output/**` are intentionally ignored and are not part of committed operational state.
+
+Stage 5BU extends the operational file map with lineage-path erratum, path-resolution validation, summary, and workflow records.

@@ -1,0 +1,26 @@
+record_type: stage5bu_reviewability_gap_register
+schema: schemas/project-state/stage5bu-reviewability-gap-register-v0.schema.json
+stage_id: stage-5bu
+stage_title: Stage 5BU - Stage 5BS lineage-path and reviewability hardening, without
+  execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bs
+source_previous_stage_commit: 9a56959daf147d96eb18090420e445b38d84666c
+source_deep_research_stage: stage-5bt
+source_deep_research_report: 12_Stage-5BT-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+gap_register_status: open_external_evidence_gaps_only
+gaps:
+- gap_id: final_commit_hash_not_self_embedded
+  status: expected_until_after_commit
+  blocking: false
+- gap_id: ci_run_id_not_committed_at_stage_commit_time
+  status: expected_until_after_push
+  blocking: false
+- gap_id: raw_codex_completion_summary_uncommitted
+  status: intentional_ignored_output
+  blocking: false
+lineage_path_gap_closed: true
+incorrect_stage5aw_path_gap_closed: true

@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5BS" \
-    --expected-next-stage "Stage 5BT" \
+    --expected-latest-stage "Stage 5BU" \
+    --expected-next-stage "Stage 5BV" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5BS" \
-    --expected-next-stage "Stage 5BT" \
+    --expected-latest-stage "Stage 5BU" \
+    --expected-next-stage "Stage 5BV" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5BS",
+        expected_latest_stage="Stage 5BU",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5BS",
+            "expected_latest_stage": "Stage 5BU",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2594,6 +2594,20 @@ git check-ignore -q "$stage5bs_token_results_root/warnings.jsonl"
 git check-ignore -q "codex-output/stage5bs-codex-completion.md"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5BS" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5BU lineage-path reviewability hardening records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5bu-lineage-paths
+"$python_bin" -m libreprimus.cli token-block validate-stage5bu
+Stage5BUTokenResultsRoot="experiments"/"results"/"token-block"/"stage5bu"
+git check-ignore -q "$Stage5BUTokenResultsRoot/summary.json"
+git check-ignore -q "$Stage5BUTokenResultsRoot/source_file_digests.json"
+git check-ignore -q "$Stage5BUTokenResultsRoot/lineage_path_resolution.json"
+git check-ignore -q "$Stage5BUTokenResultsRoot/warnings.jsonl"
+git check-ignore -q "codex-output/stage5bu-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5BU" >&2
     exit 1
 fi
 

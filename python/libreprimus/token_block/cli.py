@@ -318,6 +318,17 @@ from .stage5bs import (
     load_stage5bs_summary,
     validate_stage5bs,
 )
+from .stage5bu import (
+    DATA_PATHS as STAGE5BU_DATA_PATHS,
+    RESULTS_DIR as STAGE5BU_RESULTS_DIR,
+    STAGE5BS_ACTIVE_PRESERVATION_PATH as STAGE5BU_STAGE5BS_ACTIVE_PRESERVATION_PATH,
+    STAGE5BT_REPORT_PATH as STAGE5BU_STAGE5BT_REPORT_PATH,
+    build_stage5bu_lineage_path_repair,
+    build_stage5bu_reviewability_records,
+    load_stage5bu_summary,
+    validate_stage5bu,
+    validate_stage5bu_lineage_paths,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -3251,6 +3262,108 @@ def stage5bs_summary_command(
         "string4_planning_ingestion_gate_status="
         f"{payload.get('string4_planning_ingestion_gate_status')}"
     )
+    console.print(
+        "future_token_block_execution_remains_blocked="
+        f"{str(payload.get('future_token_block_execution_remains_blocked')).lower()}"
+    )
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+@app.command("build-stage5bu-lineage-path-repair")
+def build_stage5bu_lineage_path_repair_command(
+    active_preservation: Path = typer.Option(STAGE5BU_STAGE5BS_ACTIVE_PRESERVATION_PATH),
+    results_dir: Path = typer.Option(STAGE5BU_RESULTS_DIR),
+) -> None:
+    payload = build_stage5bu_lineage_path_repair(
+        active_preservation=active_preservation,
+        results_dir=results_dir,
+    )
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"lineage_path_repair_written={str(payload.get('lineage_path_repair_written')).lower()}")
+    console.print(f"path_replacement_count={payload.get('path_replacement_count')}")
+    console.print(f"lineage_path_validation_status={payload.get('lineage_path_validation_status')}")
+    console.print(f"lineage_record_count={payload.get('lineage_record_count')}")
+
+
+@app.command("validate-stage5bu-lineage-paths")
+def validate_stage5bu_lineage_paths_command(
+    lineage_erratum: Path = typer.Option(STAGE5BU_DATA_PATHS["lineage_erratum"]),
+    active_repair: Path = typer.Option(STAGE5BU_DATA_PATHS["active_repair"]),
+    lineage_digest: Path = typer.Option(STAGE5BU_DATA_PATHS["lineage_digest"]),
+    lineage_validation: Path = typer.Option(STAGE5BU_DATA_PATHS["lineage_validation"]),
+    active_preservation: Path = typer.Option(STAGE5BU_STAGE5BS_ACTIVE_PRESERVATION_PATH),
+) -> None:
+    counts, errors = validate_stage5bu_lineage_paths(
+        lineage_erratum=lineage_erratum,
+        active_repair=active_repair,
+        lineage_digest=lineage_digest,
+        lineage_validation=lineage_validation,
+        active_preservation=active_preservation,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5bu_lineage_paths_valid=true")
+
+
+@app.command("build-stage5bu-reviewability-records")
+def build_stage5bu_reviewability_records_command(
+    results_dir: Path = typer.Option(STAGE5BU_RESULTS_DIR),
+    stage5bt_report: Path = typer.Option(STAGE5BU_STAGE5BT_REPORT_PATH),
+) -> None:
+    payload = build_stage5bu_reviewability_records(
+        results_dir=results_dir,
+        stage5bt_report=stage5bt_report,
+    )
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5bt_verdict={payload.get('stage5bt_verdict')}")
+    console.print(
+        "lineage_path_resolution_validation_status="
+        f"{payload.get('lineage_path_resolution_validation_status')}"
+    )
+    console.print(f"lineage_record_count={payload.get('lineage_record_count')}")
+    console.print(f"source_digest_record_count={payload.get('source_digest_record_count')}")
+
+
+@app.command("validate-stage5bu")
+def validate_stage5bu_command(
+    summary: Path = typer.Option(STAGE5BU_DATA_PATHS["summary"]),
+    next_stage_decision: Path = typer.Option(STAGE5BU_DATA_PATHS["next_stage"]),
+    guardrail: Path = typer.Option(STAGE5BU_DATA_PATHS["guardrail"]),
+    results_dir: Path = typer.Option(STAGE5BU_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5bu(
+        summary=summary,
+        next_stage_decision=next_stage_decision,
+        guardrail=guardrail,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5bu_valid=true")
+
+
+@app.command("stage5bu-summary")
+def stage5bu_summary_command(
+    summary: Path = typer.Option(STAGE5BU_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5bu_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5bt_verdict={payload.get('stage5bt_verdict')}")
+    console.print(
+        "lineage_path_resolution_validation_status="
+        f"{payload.get('lineage_path_resolution_validation_status')}"
+    )
+    console.print(f"stage5bs_validator_hardened={str(payload.get('stage5bs_validator_hardened')).lower()}")
     console.print(
         "future_token_block_execution_remains_blocked="
         f"{str(payload.get('future_token_block_execution_remains_blocked')).lower()}"

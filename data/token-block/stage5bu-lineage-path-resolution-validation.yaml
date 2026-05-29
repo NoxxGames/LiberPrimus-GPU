@@ -1,0 +1,30 @@
+record_type: stage5bu_lineage_path_resolution_validation
+schema: schemas/token-block/stage5bu-lineage-path-resolution-validation-v0.schema.json
+stage_id: stage-5bu
+stage_title: Stage 5BU - Stage 5BS lineage-path and reviewability hardening, without
+  execution
+prompt_type: codex_metadata_repair
+source_previous_stage: stage-5bs
+source_previous_stage_commit: 9a56959daf147d96eb18090420e445b38d84666c
+source_deep_research_stage: stage-5bt
+source_deep_research_report: 12_Stage-5BT-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+validation_status: passed
+validation_errors: []
+incorrect_path_active: false
+corrected_path_active: true
+incorrect_path_resolves: false
+corrected_path_resolves: true
+all_preserved_active_paths_resolve: true
+preserved_active_record_paths:
+- data/token-block/stage5ap-token-block-canonical-transcription.yaml
+- data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+- data/token-block/stage5ay-branch-eligibility-policy.yaml
+- data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+- data/token-block/stage5bb-active-manifest-registry.yaml
+- data/token-block/stage5bd-active-manifest-lock.yaml
+- data/token-block/stage5bd-dry-run-plan-manifest.yaml
+- data/token-block/stage5bd-run-plan-id-registry.yaml
+active_ingestion_performed: false

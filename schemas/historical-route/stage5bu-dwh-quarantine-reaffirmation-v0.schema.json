@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "active_ingestion_performed": {
+      "const": false
+    },
+    "active_token_block_manifest_changed": {
+      "const": false
+    },
+    "benchmark_performed": {
+      "const": false
+    },
+    "canonical_corpus_active": {
+      "const": false
+    },
+    "canonical_transcription_changed": {
+      "const": false
+    },
+    "codex_output_used": {
+      "const": false
+    },
+    "cuda_execution_performed": {
+      "const": false
+    },
+    "cuda_source_modified": {
+      "const": false
+    },
+    "decode_attempt_performed": {
+      "const": false
+    },
+    "dwh_hash_search_performed": {
+      "const": false
+    },
+    "execution_allowed": {
+      "const": false
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "hash_preimage_search_performed": {
+      "const": false
+    },
+    "hash_search_performed": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "method_status_upgraded": {
+      "const": false
+    },
+    "ocr_performed": {
+      "const": false
+    },
+    "page_boundaries_final": {
+      "const": false
+    },
+    "prompt_type": {
+      "const": "codex_metadata_repair"
+    },
+    "raw_human_review_pack_committed": {
+      "const": false
+    },
+    "real_byte_stream_generated": {
+      "const": false
+    },
+    "real_token_block_byte_streams_generated": {
+      "const": false
+    },
+    "record_type": {
+      "type": "string"
+    },
+    "schema": {
+      "type": "string"
+    },
+    "scored_experiments_executed": {
+      "const": false
+    },
+    "scoring_performed": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "source_deep_research_stage": {
+      "const": "stage-5bt"
+    },
+    "source_previous_stage": {
+      "const": "stage-5bs"
+    },
+    "stage5bd_dry_run_plan_changed": {
+      "const": false
+    },
+    "stage5bd_dry_run_records_changed": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-5bu"
+    },
+    "stage_title": {
+      "type": "string"
+    },
+    "string4_active_input_allowed": {
+      "const": false
+    },
+    "string4_byte_stream_generation_allowed": {
+      "const": false
+    },
+    "string4_dry_run_ingestion_allowed_now": {
+      "const": false
+    },
+    "string4_execution_input_allowed": {
+      "const": false
+    },
+    "variant_byte_streams_generated": {
+      "const": false
+    },
+    "variant_materialisation_performed": {
+      "const": false
+    },
+    "website_expansion_performed": {
+      "const": false
+    }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "metadata_only",
+    "solve_claim",
+    "execution_allowed"
+  ],
+  "title": "stage5bu-dwh-quarantine-reaffirmation-v0.schema",
+  "type": "object"
+}

@@ -1237,3 +1237,5 @@ Generated Stage 5O reports remain ignored under
 modify CUDA source, run unsolved page CUDA transforms, run GPU benchmarks, claim speedups, process
 raw data, publish generated result bodies, expand the website, activate the canonical corpus,
 finalise page boundaries, or claim a solve through Stage 5O records.
+
+Stage 5BU is not an experiment. It is a metadata-only erratum and reviewability-hardening stage for the Stage 5BS preserved active-lineage path; generated diagnostics under `experiments/results/token-block/stage5bu/` remain ignored.

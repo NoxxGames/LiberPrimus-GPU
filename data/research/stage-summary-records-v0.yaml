@@ -1480,3 +1480,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5BS records Stage 5BR verdict accept_with_warnings, String 4 branch-membership status after errata full_branch_match, planning context status inactive_branch_context_only, planning-ingestion gate status closed_gate_no_active_ingestion, future-runner citation status citation_required_fail_closed, active input allowed false, dry-run ingestion allowed now false, Stage 5BD dry-run records valid, canonical transcription changed false, active token-block manifests changed false, and future token-block execution blocked. It performs no Deep Research body commit, Codex completion commit, token experiment, active ingestion, byte-stream generation, variant materialisation, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5bu
+    title: Stage 5BS lineage-path and reviewability hardening, without execution
+    status: complete
+    category: infrastructure
+    summary: Integrated the Stage 5BT accept-with-warnings review outcome as compact metadata, repaired the Stage 5BS preserved active-lineage path for the Stage 5AW repaired branch manifest, added erratum/digest/path-resolution records, and hardened Stage 5BS validation.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5BU commands for lineage-path repair, path validation, reviewability record build, validation, and summary display."
+      - Stage 5BU Stage 5BT findings integration, reviewable stage marker, validation evidence, source-digest index, reviewability gap register, Stage 5BS lineage-path erratum, active-manifest preservation repair, preserved active-lineage digest index, path-resolution validation, Stage 5BS validator hardening, citation-policy repair, gate preservation, no-active-ingestion proof, Stage 5BD plan preservation, future dry-run impact, source-gap severity, DWH quarantine, guardrail, Codex handoff, summary, and next-stage records.
+      - Summary-only developer/research logs; ignored generated diagnostics under `experiments/results/token-block/stage5bu/`; local handoff under `codex-output/stage5bu-codex-completion.md`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5BU records Stage 5BT verdict accept_with_warnings, incorrect path `data/token-block/stage5aw-repaired-branch-manifest.yaml`, corrected path `data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml`, lineage validation passed, 8 preserved active-lineage paths, 15 source digest records, Stage 5BS validator hardened true, String 4 planning-ingestion gate closed, active input false, dry-run ingestion false, Stage 5BD dry-run records valid, and future execution blocked. It performs no Deep Research body commit, Codex completion commit, token experiment, active ingestion, byte-stream generation, variant materialisation, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

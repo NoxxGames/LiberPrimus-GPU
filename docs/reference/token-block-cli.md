@@ -93,3 +93,5 @@ Stage 5BQ commands write compact inactive-branch dry-run planning metadata under
 ```
 
 Stage 5BS commands write compact planning-ingestion gate metadata under `data/token-block/stage5bs-*`, `data/historical-route/stage5bs-*`, `data/source-harvester/stage5bs-*`, and `data/project-state/stage5bs-*`. Generated diagnostics are written under `experiments/results/token-block/stage5bs/` and remain ignored. The commands consume committed Stage 5BQ/5BO/5BD records and the ignored local Stage 5BR review report only for digest/status metadata; they must not commit Deep Research bodies, ingest String 4 into dry-run plans, generate byte streams, materialise variants, run DWH/hash search, decode, score, run CUDA, benchmark, or make solve claims. Future token-block runners must cite the Stage 5BS planning-ingestion gate and citation policy or fail closed.
+
+Stage 5BU token-block commands: `build-stage5bu-lineage-path-repair`, `validate-stage5bu-lineage-paths`, `build-stage5bu-reviewability-records`, `validate-stage5bu`, and `stage5bu-summary`.

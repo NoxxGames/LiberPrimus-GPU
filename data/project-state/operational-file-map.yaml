@@ -2193,3 +2193,47 @@ records:
   owner_context: codex_agent
   notes: Documents Stage 5BS CLI commands, future-runner citation checks,
     inactive-sidecar status, and guardrails.
+- path: data/project-state/stage5bu-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BU compact summary and current next-stage decision support.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bu
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: project_operator
+  notes: Records Stage 5BS lineage-path repair, validator hardening, no-execution guardrails, and Stage 5BV next-stage routing.
+- path: data/token-block/stage5bu-stage5bs-lineage-path-erratum.yaml
+  category: active_data_record
+  purpose: Reviewable erratum for the Stage 5BS preserved active-lineage path defect.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bu
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: token_block_operator
+  notes: Corrects Stage 5AW lineage citation to the repaired token-variant branch manifest without enabling execution.
+- path: data/token-block/stage5bu-lineage-path-resolution-validation.yaml
+  category: active_data_record
+  purpose: Validates repaired active-lineage path resolution and deprecated path absence.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bu
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: token_block_operator
+  notes: Future runner stages must cite this before using Stage 5BS lineage metadata.
+- path: docs/onboarding/stage5bu-lineage-path-reviewability-hardening-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5BU lineage-path repair and validator hardening.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bu
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents validation order and ignored-output boundaries for Stage 5BU.

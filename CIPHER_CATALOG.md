@@ -419,3 +419,5 @@ Readiness records are not solve evidence. Cookie/hash, stego/audio, image/compre
 Stage 5B does not add cipher families, transform semantics, CUDA kernels, CUDA source changes, or GPU benchmark behavior. It records future CUDA harness, fixture, backend capability, and kernel-matrix boundaries for existing CPU transform-adapter families only.
 
 Harness records are not solve evidence, implementation approval, or performance evidence. Future CUDA kernels must still be introduced by explicit implementation stages with CPU/GPU parity tests.
+
+Stage 5BU does not change cipher-family status. It repairs Stage 5BS lineage-path reviewability and keeps String 4/DWH planning quarantined and inactive.
