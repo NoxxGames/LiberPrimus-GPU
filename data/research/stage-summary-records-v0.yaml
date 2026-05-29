@@ -1512,3 +1512,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5BW records Stage 5BV verdict accept_with_warnings, sidecar planning-ingestion proposal created true, sidecar activated false, manifest-supersession preflight created true, manifest supersession performed false, String 4 active input false, dry-run ingestion false, byte-stream generation false, execution input false, Stage 5BD dry-run records valid, Stage 5BD run-plan ID count 10, active-lineage record count 8, source digest records 23, canonical transcription changed false, active manifests changed false, and future execution blocked. It performs no Deep Research body commit, Codex completion commit, token experiment, active ingestion, byte-stream generation, variant materialisation, manifest supersession, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5by
+    title: Inactive-sidecar planning manifest scaffold and no-execution planning-ingestion sidecar, without execution
+    status: complete
+    category: infrastructure
+    summary: Integrated the Stage 5BX accept-with-warnings review outcome by classifying Stage 5BW source-digest duplicates, adding record-family filename-equivalence metadata, creating an inactive String 4 planning manifest scaffold, and creating a no-execution planning-ingestion sidecar without activating String 4 or superseding manifests.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5BY commands for build, duplicate digest validation, sidecar-gate validation, validation, and summary display."
+      - Stage 5BY findings integration, Stage 5BW duplicate-review, filename-equivalence map, reviewable validation/source-digest/gap records, inactive sidecar scaffold, no-execution sidecar, no-active-ingestion/no-byte-stream proofs, manifest-supersession preflight carry-forward, active-lineage preservation, Stage 5BD plan preservation, future-runner citation requirements, source-gap/DWH guardrails, Codex handoff policy, summary, and next-stage records.
+      - Summary-only developer/research logs; ignored generated diagnostics under `experiments/results/token-block/stage5by/`; local handoff under `codex-output/stage5by-codex-completion.md`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5BY records Stage 5BX verdict accept_with_warnings, Stage 5BW source-digest row count 23, unique path count 21, duplicate path count 2, Stage 5BY source digest records 19, duplicate path count 0, inactive sidecar scaffold created true, no-execution sidecar created true, manifest supersession performed false, String 4 active input false, dry-run ingestion false, byte-stream generation false, execution input false, Stage 5BD dry-run records valid, Stage 5BD run-plan ID count 10, canonical transcription changed false, active manifests changed false, and future execution blocked. It performs no Deep Research body commit, Codex completion commit, token experiment, active ingestion, byte-stream generation, variant materialisation, manifest supersession, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

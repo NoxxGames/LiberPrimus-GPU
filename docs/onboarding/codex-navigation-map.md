@@ -97,3 +97,5 @@ Stage 5BQ implementation is under `python/libreprimus/token_block/stage5bq.py`; 
 For Stage 5BU reviewability work, start with `docs/onboarding/stage5bu-lineage-path-reviewability-hardening-workflow.md` and run `token-block validate-stage5bu-lineage-paths`, `validate-stage5bu`, and the hardened `validate-stage5bs`.
 
 For Stage 5BW inactive-sidecar planning-ingestion preflight work, start with `docs/onboarding/stage5bw-inactive-sidecar-planning-ingestion-workflow.md` and run `token-block build-stage5bw`, `validate-stage5bw`, and `stage5bw-summary`. Treat the sidecar as proposed-only and inactive.
+
+For Stage 5BY inactive-sidecar planning-manifest scaffold work, start with `docs/onboarding/stage5by-inactive-sidecar-planning-manifest-workflow.md` and run `token-block build-stage5by`, `validate-stage5by-source-digest-uniqueness`, `validate-stage5by-sidecar-gates`, `validate-stage5by`, and `stage5by-summary`. Treat the sidecar as scaffolded inactive and no-execution only.

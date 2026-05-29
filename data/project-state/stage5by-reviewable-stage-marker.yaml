@@ -1,0 +1,19 @@
+record_type: stage5by_stage_marker
+schema: schemas/project-state/stage5by-reviewable-stage-marker-v0.schema.json
+stage_id: stage-5by
+stage_title: Stage 5BY - Inactive-sidecar planning manifest scaffold and no-execution
+  planning-ingestion sidecar, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bw
+source_previous_stage_commit: 860b1798dcceda58acc7b77a878a84cf0d44926f
+source_deep_research_stage: stage-5bx
+source_deep_research_report: 14_Stage-5BX-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+status: complete
+reviewable_stage_marker_created: true
+source_previous_stage_status: complete
+source_previous_stage_commit_observed: 860b1798dcceda58acc7b77a878a84cf0d44926f
+selected_next_stage_id: stage-5bz
+selected_next_prompt_type: deep_research_review

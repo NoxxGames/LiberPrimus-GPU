@@ -1,0 +1,113 @@
+record_type: stage5by_active_lineage
+schema: schemas/token-block/stage5by-active-lineage-preservation-v0.schema.json
+stage_id: stage-5by
+stage_title: Stage 5BY - Inactive-sidecar planning manifest scaffold and no-execution
+  planning-ingestion sidecar, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bw
+source_previous_stage_commit: 860b1798dcceda58acc7b77a878a84cf0d44926f
+source_deep_research_stage: stage-5bx
+source_deep_research_report: 14_Stage-5BX-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+active_lineage_preservation_status: preserved_unchanged
+preserved_active_record_paths:
+- data/token-block/stage5ap-token-block-canonical-transcription.yaml
+- data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+- data/token-block/stage5ay-branch-eligibility-policy.yaml
+- data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+- data/token-block/stage5bb-active-manifest-registry.yaml
+- data/token-block/stage5bd-active-manifest-lock.yaml
+- data/token-block/stage5bd-dry-run-plan-manifest.yaml
+- data/token-block/stage5bd-run-plan-id-registry.yaml
+active_lineage_record_count: 8
+lineage_records:
+- path: data/token-block/stage5ap-token-block-canonical-transcription.yaml
+  role: stage5by_preserved_active_lineage_record
+  present: true
+  sha256: 264e059f73ebf04ea2982288d34ad8d7f278d68ef0e8d88fe2e6c8b15f66328e
+  size_bytes: 29096
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+  role: stage5by_preserved_active_lineage_record
+  present: true
+  sha256: 5e2dfee9717b1950cc7f61cf6e8b48ea592105e6dbe5e94d31396556c41daa3f
+  size_bytes: 154361
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ay-branch-eligibility-policy.yaml
+  role: stage5by_preserved_active_lineage_record
+  present: true
+  sha256: 8cab6a59ce259ce3cb9aa4f5c0312071f47cae543b46f39a5ff838f676d98624
+  size_bytes: 48827
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+  role: stage5by_preserved_active_lineage_record
+  present: true
+  sha256: 4be0806a2f41aac56b858774af253d249bd1dd894e253fa04fe52a57ed4bf1a3
+  size_bytes: 5141
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bb-active-manifest-registry.yaml
+  role: stage5by_preserved_active_lineage_record
+  present: true
+  sha256: 0f415521d5380283fd4296e9c7acb8d87267fa246f95f0ac69c4ebcc13cfab07
+  size_bytes: 7301
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-active-manifest-lock.yaml
+  role: stage5by_preserved_active_lineage_record
+  present: true
+  sha256: daafd90b61191941ecdfa86cce56516f0199813fd7f76f81ba4d8d9e793dceec
+  size_bytes: 8047
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+  role: stage5by_preserved_active_lineage_record
+  present: true
+  sha256: e2a40ec584be822e31e535d80a8863c3b0ba0280829184feeb73a53caa61af82
+  size_bytes: 7798
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-run-plan-id-registry.yaml
+  role: stage5by_preserved_active_lineage_record
+  present: true
+  sha256: 34fd917871f36bb41ab65d317bc63be2ceef07fa036a61c78a15f7e4abb70ee5
+  size_bytes: 5201
+  raw_or_generated_body_committed: false
+deprecated_stage5aw_path_included: false
+correct_stage5aw_path_included: true
+all_preserved_active_paths_resolve: true
+active_ingestion_performed: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+dwh_hash_search_performed: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+llm_vision_token_reading_performed: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+ocr_performed: false
+page_boundaries_final: false
+raw_archive_files_committed: false
+raw_human_review_pack_committed: false
+real_byte_stream_generated: false
+scoring_performed: false
+spreadsheet_file_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_planning_ingestion_activated: false
+template_bodies_committed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false

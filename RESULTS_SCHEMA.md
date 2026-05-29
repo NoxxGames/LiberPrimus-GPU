@@ -1405,3 +1405,5 @@ These records require contract-only/no-solve flags and reject native execution, 
 Stage 5BU adds compact lineage-path repair and validation records only. It does not publish generated result bodies, byte streams, decoded bytes, score summaries, SQLite databases, or local reports.
 
 Stage 5BW adds compact inactive-sidecar proposal, manifest-supersession preflight, active-lineage preservation, no-active-ingestion, no-byte-stream, and guardrail records only. It does not publish generated result bodies, byte streams, decoded bytes, score summaries, SQLite databases, local reports, or active String 4 inputs.
+
+Stage 5BY adds compact inactive planning-manifest scaffold, no-execution planning-ingestion sidecar, source-digest duplicate-review, filename-equivalence, Stage 5BD preservation, no-active-ingestion, no-byte-stream, and guardrail records only. It does not publish generated result bodies, byte streams, decoded bytes, score summaries, SQLite databases, local reports, or active String 4 inputs.

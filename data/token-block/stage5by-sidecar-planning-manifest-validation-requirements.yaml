@@ -1,0 +1,24 @@
+record_type: stage5by_manifest_validation
+schema: schemas/token-block/stage5by-sidecar-planning-manifest-validation-requirements-v0.schema.json
+stage_id: stage-5by
+stage_title: Stage 5BY - Inactive-sidecar planning manifest scaffold and no-execution
+  planning-ingestion sidecar, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bw
+source_previous_stage_commit: 860b1798dcceda58acc7b77a878a84cf0d44926f
+source_deep_research_stage: stage-5bx
+source_deep_research_report: 14_Stage-5BX-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+sidecar_planning_manifest_validation_requirements_created: true
+validation_requirements:
+- source_digest_unique_path_validation
+- record_family_equivalence_map_present
+- inactive_sidecar_status
+- no_active_ingestion
+- no_byte_stream_generation
+- manifest_supersession_not_performed
+- stage5bd_run_plan_ids_unchanged
+- correct_stage5aw_path_present
+- deprecated_stage5aw_path_absent

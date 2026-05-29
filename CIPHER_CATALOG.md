@@ -423,3 +423,5 @@ Harness records are not solve evidence, implementation approval, or performance 
 Stage 5BU does not change cipher-family status. It repairs Stage 5BS lineage-path reviewability and keeps String 4/DWH planning quarantined and inactive.
 
 Stage 5BW does not change cipher-family status. It proposes a future inactive-sidecar planning-ingestion path and manifest-supersession preflight while keeping String 4/DWH planning quarantined, inactive, non-executable, and non-solve-evidence.
+
+Stage 5BY does not change cipher-family status. It scaffolds an inactive no-execution planning sidecar, classifies Stage 5BW reviewability warnings, preserves String 4/DWH quarantine, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.

@@ -135,4 +135,6 @@ Stage 5BO records the corrected decision-template as operator errata: case `199`
 
 Stage 5BQ records Stage 5BP's review as `accept_with_warnings` and turns the Stage 5BO full branch match into `inactive_branch_context_only` planning metadata. String 4 active input is false, dry-run ingestion is false, and future dry-run use requires an explicit later stage with source/gate review.
 
-Stage 5BX should review Stage 5BW inactive-sidecar planning-ingestion proposal, manifest-supersession preflight, active-lineage preservation, Stage 5BD run-plan preservation, no-active-ingestion proof, no-byte-stream gate, and guardrails before any planning-ingestion or execution-capable token-block stage.
+Stage 5BX reviewed Stage 5BW and accepted it with warnings. Stage 5BY converts those warnings into committed duplicate-source-digest classification, filename-equivalence mapping, an inactive planning manifest scaffold, and a no-execution planning-ingestion sidecar.
+
+Stage 5BZ should review Stage 5BY findings integration, source-digest duplicate classification, record-family filename-equivalence map, inactive planning manifest scaffold, no-execution sidecar, manifest-supersession preflight carry-forward, active-lineage preservation, Stage 5BD run-plan preservation, no-active-ingestion proof, no-byte-stream gate, and guardrails before any planning-ingestion or execution-capable token-block stage.

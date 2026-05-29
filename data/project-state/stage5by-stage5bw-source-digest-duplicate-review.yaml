@@ -1,0 +1,31 @@
+record_type: stage5by_duplicate_review
+schema: schemas/project-state/stage5by-stage5bw-source-digest-duplicate-review-v0.schema.json
+stage_id: stage-5by
+stage_title: Stage 5BY - Inactive-sidecar planning manifest scaffold and no-execution
+  planning-ingestion sidecar, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bw
+source_previous_stage_commit: 860b1798dcceda58acc7b77a878a84cf0d44926f
+source_deep_research_stage: stage-5bx
+source_deep_research_report: 14_Stage-5BX-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+stage5bw_source_digest_row_count: 23
+stage5bw_source_digest_unique_path_count: 21
+stage5bw_source_digest_duplicate_path_count: 2
+stage5bw_source_digest_duplicate_extra_row_count: 2
+duplicate_paths:
+- path: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+  row_count: 2
+  classification: stage5bd_source_record_also_preserved_active_lineage_record
+  stage5by_action: classify_duplicate_and_emit_unique_path_index
+  stage_failure: false
+- path: data/token-block/stage5bd-run-plan-id-registry.yaml
+  row_count: 2
+  classification: stage5bd_source_record_also_preserved_active_lineage_record
+  stage5by_action: classify_duplicate_and_emit_unique_path_index
+  stage_failure: false
+duplicates_reviewed: true
+duplicates_deduplicated_or_classified: true
+stage5bw_history_rewritten: false

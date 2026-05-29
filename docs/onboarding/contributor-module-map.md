@@ -42,6 +42,7 @@ The historical-route layer now includes Stage 5BF source-lock helpers under `pyt
 - Stage 5BS planning-ingestion gate package: `python/libreprimus/token_block/stage5bs.py`, `data/token-block/stage5bs-*.yaml`, `data/historical-route/stage5bs-*.yaml`, `data/source-harvester/stage5bs-*.yaml`, `data/project-state/stage5bs-*.yaml`, `schemas/token-block/stage5bs-*.json`, `schemas/historical-route/stage5bs-*.json`, `schemas/source-harvester/stage5bs-*.json`, and `schemas/project-state/stage5bs-*.json`.
 - Stage 5BU lineage-path reviewability hardening package: `python/libreprimus/token_block/stage5bu.py`, `data/token-block/stage5bu-*.yaml`, `data/historical-route/stage5bu-*.yaml`, `data/source-harvester/stage5bu-*.yaml`, `data/project-state/stage5bu-*.yaml`, and matching `schemas/**/*stage5bu*.json`.
 - Stage 5BW inactive-sidecar planning-ingestion preflight package: `python/libreprimus/token_block/stage5bw.py`, `data/token-block/stage5bw-*.yaml`, `data/historical-route/stage5bw-*.yaml`, `data/source-harvester/stage5bw-*.yaml`, `data/project-state/stage5bw-*.yaml`, and matching `schemas/**/*stage5bw*.json`.
+- Stage 5BY inactive-sidecar planning-manifest scaffold package: `python/libreprimus/token_block/stage5by.py`, `data/token-block/stage5by-*.yaml`, `data/historical-route/stage5by-*.yaml`, `data/source-harvester/stage5by-*.yaml`, `data/project-state/stage5by-*.yaml`, and matching `schemas/**/*stage5by*.json`.
 - Source harvester: `python/libreprimus/source_harvester/`, `data/source-harvester/`, `schemas/source-harvester/`.
 - Website renderer: `python/libreprimus/website_render/`, `data/website-render/`, `schemas/website-render/`.
 - CUDA parity/reporting: `python/libreprimus/cuda_*`, `python/libreprimus/prime_minus_one_*`, `python/libreprimus/bounded_p56_cuda_parity/`, `cuda/`, `data/cuda/`.
@@ -108,6 +109,8 @@ Stage 5BU token-block modules repair Stage 5BS lineage-path reviewability and ha
 
 Stage 5BW token-block modules propose inactive-sidecar planning ingestion and manifest-supersession preflight only. They must not activate String 4 input, supersede active manifests, mutate Stage 5BD dry-run records, generate byte streams, materialise variants, run token experiments, DWH/hash search, decode, score, run CUDA, benchmark, expand the website, upgrade method status, or make solve claims.
 
+Stage 5BY token-block modules scaffold an inactive planning manifest and no-execution sidecar only. They classify Stage 5BW source-digest duplicate paths and filename drift, but they must not activate String 4 input, supersede active manifests, mutate Stage 5BD dry-run records, generate byte streams, materialise variants, run token experiments, DWH/hash search, decode, score, run CUDA, benchmark, expand the website, upgrade method status, or make solve claims.
+
 ## Good First Areas
 
 - Documentation fixes.
@@ -131,3 +134,5 @@ The Stage 5BD preflight-runner package split lives at `python/libreprimus/token_
 Stage 5BU token-block modules repair lineage-path reviewability and harden validators only. They must not be extended into active ingestion, byte-stream generation, token execution, DWH/hash search, scoring, CUDA, benchmarks, website expansion, method-status upgrades, or solve claims without an explicit future stage.
 
 Stage 5BW token-block modules keep inactive-sidecar planning-ingestion proposal records separate from active runner input. They must not be extended into active ingestion, manifest supersession, byte-stream generation, token execution, DWH/hash search, scoring, CUDA, benchmarks, website expansion, method-status upgrades, or solve claims without an explicit future stage.
+
+Stage 5BY token-block modules keep the inactive planning sidecar separate from active runner input. Future work must cite Stage 5BY records and pass Stage 5BZ review before any planning-ingestion, manifest-supersession, byte-stream generation, token execution, DWH/hash search, scoring, CUDA, benchmark, website expansion, method-status upgrade, or solve-claim path is considered.

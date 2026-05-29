@@ -2347,3 +2347,113 @@ records:
   staleness_check_level: strict
   owner_context: codex_agent
   notes: Documents validation order, inactive-sidecar status, manifest-supersession preflight, and ignored-output boundaries for Stage 5BW.
+- path: data/project-state/stage5by-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BY compact summary and next-stage decision support.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5by
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: project_operator
+  notes: Records Stage 5BX warning integration, inactive sidecar scaffold, no-execution sidecar, Stage 5BD preservation, no-execution guardrails, and Stage 5BZ next-stage routing.
+- path: data/project-state/stage5by-stage5bw-source-digest-duplicate-review.yaml
+  category: active_data_record
+  purpose: Stage 5BY classification of duplicate Stage 5BW source-digest paths.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5by
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: project_operator
+  notes: Classifies duplicate Stage 5BD path rows as reviewability metadata, not active manifest changes.
+- path: data/project-state/stage5by-record-family-name-equivalence-map.yaml
+  category: active_data_record
+  purpose: Stage 5BY filename and record-family equivalence map for Stage 5BW drift.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5by
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: project_operator
+  notes: Provides predictable mappings for prompt-anticipated and committed Stage 5BW record-family names.
+- path: data/project-state/stage5by-reviewable-validation-evidence.yaml
+  category: active_data_record
+  purpose: Stage 5BY validation evidence index.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5by
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: project_operator
+  notes: Records required validation evidence for inactive planning-manifest scaffold reviewability.
+- path: data/project-state/stage5by-reviewable-source-digest-index.yaml
+  category: active_data_record
+  purpose: Stage 5BY unique-path source digest index.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5by
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: project_operator
+  notes: Records unique Stage 5BY source paths and hashes while keeping raw/generated bodies uncommitted.
+- path: data/token-block/stage5by-inactive-sidecar-planning-manifest-scaffold.yaml
+  category: active_data_record
+  purpose: Inactive String 4 planning manifest scaffold.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5by
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: token_block_operator
+  notes: Scaffolded inactive only; active input, dry-run ingestion, byte-stream generation, and execution remain false.
+- path: data/token-block/stage5by-no-execution-planning-ingestion-sidecar.yaml
+  category: active_data_record
+  purpose: Stage 5BY no-execution planning-ingestion sidecar.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5by
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: token_block_operator
+  notes: Keeps planning sidecar inactive, non-canonical, not active input, not dry-run ingested, and not execution-capable.
+- path: data/token-block/stage5by-stage5bd-plan-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5BY Stage 5BD dry-run plan preservation record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5by
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: token_block_operator
+  notes: Confirms Stage 5BD run-plan ID count stays 10 and Stage 5BD records remain valid.
+- path: data/historical-route/stage5by-guardrail.yaml
+  category: active_data_record
+  purpose: Stage 5BY no-execution guardrail.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5by
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Requires no token-block execution, byte-stream generation, DWH/hash search, decode, scoring, CUDA, benchmark, website expansion, or solve claim.
+- path: docs/onboarding/stage5by-inactive-sidecar-planning-manifest-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5BY inactive planning manifest scaffold.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5by
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents validation order, duplicate-source digest review, inactive sidecar status, no-execution sidecar, and ignored-output boundaries for Stage 5BY.
