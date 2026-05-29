@@ -1,0 +1,34 @@
+record_type: stage5bw_active_lineage
+schema: schemas/token-block/stage5bw-active-lineage-preservation-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+active_lineage_preservation_status: preserved_unchanged
+preserved_active_record_paths:
+- data/token-block/stage5ap-token-block-canonical-transcription.yaml
+- data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+- data/token-block/stage5ay-branch-eligibility-policy.yaml
+- data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+- data/token-block/stage5bb-active-manifest-registry.yaml
+- data/token-block/stage5bd-active-manifest-lock.yaml
+- data/token-block/stage5bd-dry-run-plan-manifest.yaml
+- data/token-block/stage5bd-run-plan-id-registry.yaml
+active_lineage_record_count: 8
+all_preserved_active_paths_resolve: true
+deprecated_stage5aw_path_included: false
+correct_stage5aw_path_included: true
+stage5ap_canonical_transcription_changed: false
+stage5aw_branch_manifest_changed: false
+stage5ay_branch_eligibility_changed: false
+stage5az_variant_family_manifest_changed: false
+stage5bb_active_manifest_registry_changed: false
+stage5bd_dry_run_plan_manifest_changed: false
+active_token_block_manifest_changed: false

@@ -1,0 +1,17 @@
+record_type: stage5bw_handoff
+schema: schemas/source-harvester/stage5bw-codex-handoff-policy-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+codex_completion_summary_path: codex-output/stage5bw-codex-completion.md
+codex_output_used: false
+codex_output_directory_exists: false

@@ -1,0 +1,17 @@
+record_type: stage5bw_source_gap
+schema: schemas/historical-route/stage5bw-source-gap-severity-update-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+source_gap_status: inactive_sidecar_source_gap_preserved
+source_gap_severity: planning_blocker_for_activation
+string4_source_gap_closed_for_inactive_context: true
+string4_source_gap_closed_for_active_input: false

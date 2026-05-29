@@ -2237,3 +2237,113 @@ records:
   staleness_check_level: strict
   owner_context: codex_agent
   notes: Documents validation order and ignored-output boundaries for Stage 5BU.
+- path: data/project-state/stage5bw-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BW compact summary and next-stage decision support.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: project_operator
+  notes: Records inactive-sidecar proposal, manifest-supersession preflight, Stage 5BD preservation, no-execution guardrails, and Stage 5BX next-stage routing.
+- path: data/project-state/stage5bw-reviewable-validation-evidence.yaml
+  category: active_data_record
+  purpose: Stage 5BW validation evidence index.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: project_operator
+  notes: Records required validation evidence for inactive-sidecar preflight reviewability.
+- path: data/token-block/stage5bw-inactive-sidecar-planning-ingestion-proposal.yaml
+  category: active_data_record
+  purpose: Proposed inactive String 4 sidecar planning-ingestion model.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: token_block_operator
+  notes: Proposed-only sidecar model; active input, dry-run ingestion, byte-stream generation, and execution remain false.
+- path: data/token-block/stage5bw-manifest-supersession-preflight.yaml
+  category: active_data_record
+  purpose: Stage 5BW manifest-supersession preflight checklist.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: token_block_operator
+  notes: Creates preflight requirements but performs no supersession and changes no active manifests.
+- path: data/token-block/stage5bw-active-lineage-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5BW active-lineage preservation record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: token_block_operator
+  notes: Preserves Stage 5AP, Stage 5AW, Stage 5AY, Stage 5AZ, Stage 5BB, and Stage 5BD active paths.
+- path: data/token-block/stage5bw-stage5bd-plan-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5BW Stage 5BD dry-run plan preservation record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: token_block_operator
+  notes: Confirms Stage 5BD run-plan ID count stays 10 and Stage 5BD records remain valid.
+- path: data/token-block/stage5bw-future-runner-citation-requirements.yaml
+  category: active_data_record
+  purpose: Stage 5BW future-runner citation requirements.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: token_block_operator
+  notes: Future runner work must cite Stage 5BS, Stage 5BU, and Stage 5BW records or fail closed.
+- path: data/token-block/stage5bw-no-active-ingestion-proof.yaml
+  category: active_data_record
+  purpose: Stage 5BW no-active-ingestion proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: token_block_operator
+  notes: Confirms String 4 is not active input and is not added to active dry-run inputs.
+- path: data/historical-route/stage5bw-guardrail.yaml
+  category: active_data_record
+  purpose: Stage 5BW no-execution guardrail.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Requires no token-block execution, byte-stream generation, DWH/hash search, decode, scoring, CUDA, benchmark, website expansion, or solve claim.
+- path: docs/onboarding/stage5bw-inactive-sidecar-planning-ingestion-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5BW inactive-sidecar preflight.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents validation order, inactive-sidecar status, manifest-supersession preflight, and ignored-output boundaries for Stage 5BW.

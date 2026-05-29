@@ -1,0 +1,22 @@
+record_type: stage5bw_string4_gate
+schema: schemas/token-block/stage5bw-string4-gate-preservation-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+string4_gate_status: closed
+string4_planning_ingestion_gate_status: closed_gate_no_active_ingestion
+stage5bs_gate_preserved: true
+stage5bs_gate_path: data/token-block/stage5bs-string4-planning-ingestion-gate.yaml
+string4_active_input_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_byte_stream_generation_allowed: false
+active_ingestion_performed: false

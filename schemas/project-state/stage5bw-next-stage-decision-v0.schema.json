@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "codex_output_used": {
+      "const": false
+    },
+    "execution_allowed": {
+      "const": false
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "manifest_supersession_performed": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "real_byte_stream_generated": {
+      "const": false
+    },
+    "record_type": {
+      "const": "stage5bw_next_stage"
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-5bw"
+    },
+    "string4_active_input_allowed": {
+      "const": false
+    },
+    "string4_dry_run_ingestion_allowed_now": {
+      "const": false
+    },
+    "variant_materialisation_performed": {
+      "const": false
+    }
+  },
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "metadata_only",
+    "solve_claim",
+    "execution_allowed"
+  ],
+  "type": "object"
+}

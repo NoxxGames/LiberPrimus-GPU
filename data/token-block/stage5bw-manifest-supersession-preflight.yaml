@@ -1,0 +1,67 @@
+record_type: stage5bw_manifest_supersession
+schema: schemas/token-block/stage5bw-manifest-supersession-preflight-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+manifest_supersession_preflight_status: proposed_only
+manifest_supersession_preflight_created: true
+manifest_supersession_performed: false
+current_active_records_preserved: true
+future_supersession_would_require:
+- explicit_target_manifest_list
+- before_after_digest_comparison
+- active_manifest_registry_update
+- stage5bd_dry_run_run_plan_policy_review
+- no_byte_stream_proof
+- no_execution_proof
+- future_runner_citation_update
+- deep_research_or_operator_review_if_selected
+records:
+- path: data/token-block/stage5ap-token-block-canonical-transcription.yaml
+  current_status: active_preserved
+  future_sidecar_relation: must_preserve_or_explicitly_supersede
+  path_resolves: true
+  superseded_now: false
+- path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+  current_status: active_preserved
+  future_sidecar_relation: likely_must_preserve_as_source_of_active_ambiguity_or_explicitly_supersede
+  path_resolves: true
+  superseded_now: false
+- path: data/token-block/stage5ay-branch-eligibility-policy.yaml
+  current_status: active_preserved
+  future_sidecar_relation: must_preserve_or_explicitly_supersede
+  path_resolves: true
+  superseded_now: false
+- path: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+  current_status: active_preserved
+  future_sidecar_relation: must_preserve_or_explicitly_supersede
+  path_resolves: true
+  superseded_now: false
+- path: data/token-block/stage5bb-active-manifest-registry.yaml
+  current_status: active_preserved
+  future_sidecar_relation: must_preserve_or_explicitly_supersede
+  path_resolves: true
+  superseded_now: false
+- path: data/token-block/stage5bd-active-manifest-lock.yaml
+  current_status: active_preserved
+  future_sidecar_relation: must_preserve_or_explicitly_supersede
+  path_resolves: true
+  superseded_now: false
+- path: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+  current_status: active_preserved
+  future_sidecar_relation: must_preserve_or_replace_with_new_no-execution_plan
+  path_resolves: true
+  superseded_now: false
+- path: data/token-block/stage5bd-run-plan-id-registry.yaml
+  current_status: active_preserved
+  future_sidecar_relation: must_preserve_or_explicitly_supersede
+  path_resolves: true
+  superseded_now: false

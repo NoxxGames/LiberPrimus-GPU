@@ -18,3 +18,4 @@ Generated Stage 5AP reports live under `experiments/results/token-block/stage5ap
 ## Stage 5BD Status
 
 Stage 5BD consumes the source-lock and token-block records only as committed metadata. It does not treat the token block as decoded text or execution-ready input.
+Stage 5BW records only inactive-sidecar planning metadata for String 4. It preserves source-lock lineage, active token-block records, and DWH quarantine; it does not make String 4 source truth, active input, decoded text, or solve evidence.

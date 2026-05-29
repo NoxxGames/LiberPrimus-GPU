@@ -1,0 +1,26 @@
+record_type: stage5bw_no_active_ingestion
+schema: schemas/token-block/stage5bw-no-active-ingestion-proof-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+no_active_ingestion_status: preserved
+active_ingestion_performed: false
+string4_active_input_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+full_cartesian_product_enumerated: false
+dwh_hash_search_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+scoring_performed: false
+cuda_execution_performed: false

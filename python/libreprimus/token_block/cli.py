@@ -329,6 +329,13 @@ from .stage5bu import (
     validate_stage5bu,
     validate_stage5bu_lineage_paths,
 )
+from .stage5bw import (
+    DATA_PATHS as STAGE5BW_DATA_PATHS,
+    RESULTS_DIR as STAGE5BW_RESULTS_DIR,
+    build_stage5bw,
+    load_stage5bw_summary,
+    validate_stage5bw,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -3364,6 +3371,75 @@ def stage5bu_summary_command(
         f"{payload.get('lineage_path_resolution_validation_status')}"
     )
     console.print(f"stage5bs_validator_hardened={str(payload.get('stage5bs_validator_hardened')).lower()}")
+    console.print(
+        "future_token_block_execution_remains_blocked="
+        f"{str(payload.get('future_token_block_execution_remains_blocked')).lower()}"
+    )
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+@app.command("build-stage5bw")
+def build_stage5bw_command(
+    results_dir: Path = typer.Option(STAGE5BW_RESULTS_DIR),
+) -> None:
+    payload = build_stage5bw(results_dir=results_dir)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5bv_verdict={payload.get('stage5bv_verdict')}")
+    console.print(
+        "string4_sidecar_planning_ingestion_proposed="
+        f"{str(payload.get('string4_sidecar_planning_ingestion_proposed')).lower()}"
+    )
+    console.print(
+        "string4_sidecar_planning_ingestion_activated="
+        f"{str(payload.get('string4_sidecar_planning_ingestion_activated')).lower()}"
+    )
+    console.print(
+        "manifest_supersession_performed="
+        f"{str(payload.get('manifest_supersession_performed')).lower()}"
+    )
+    console.print(f"active_lineage_record_count={payload.get('active_lineage_record_count')}")
+    console.print(f"stage5bd_run_plan_id_count={payload.get('stage5bd_run_plan_id_count')}")
+
+
+@app.command("validate-stage5bw")
+def validate_stage5bw_command(
+    summary: Path = typer.Option(STAGE5BW_DATA_PATHS["summary"]),
+    next_stage_decision: Path = typer.Option(STAGE5BW_DATA_PATHS["next_stage"]),
+    guardrail: Path = typer.Option(STAGE5BW_DATA_PATHS["guardrail"]),
+    results_dir: Path = typer.Option(STAGE5BW_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5bw(
+        summary=summary,
+        next_stage_decision=next_stage_decision,
+        guardrail=guardrail,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5bw_valid=true")
+
+
+@app.command("stage5bw-summary")
+def stage5bw_summary_command(
+    summary: Path = typer.Option(STAGE5BW_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5bw_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5bv_verdict={payload.get('stage5bv_verdict')}")
+    console.print(
+        "string4_sidecar_planning_ingestion_proposed="
+        f"{str(payload.get('string4_sidecar_planning_ingestion_proposed')).lower()}"
+    )
+    console.print(
+        "manifest_supersession_performed="
+        f"{str(payload.get('manifest_supersession_performed')).lower()}"
+    )
     console.print(
         "future_token_block_execution_remains_blocked="
         f"{str(payload.get('future_token_block_execution_remains_blocked')).lower()}"

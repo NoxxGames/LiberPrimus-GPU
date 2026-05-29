@@ -1,0 +1,17 @@
+record_type: stage5bw_dwh
+schema: schemas/historical-route/stage5bw-dwh-quarantine-reaffirmation-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+dwh_quarantine_status: reaffirmed
+dwh_hash_search_performed: false
+hash_preimage_search_performed: false
+combine_string4_with_2014_surfaces_allowed: false

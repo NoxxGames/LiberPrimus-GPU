@@ -1,0 +1,23 @@
+record_type: stage5bw_manifest_validation
+schema: schemas/token-block/stage5bw-manifest-validation-preflight-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+manifest_validation_preflight_created: true
+validators_required_before_future_ingestion:
+- token-block validate-stage5bw
+- token-block validate-stage5bu-lineage-paths
+- token-block validate-stage5bs
+- token-block validate-stage5bd
+- consistency check-state-drift
+- consistency check-all --allow-warnings
+current_manifest_validation_status: passed
+future_activation_validated_now: false

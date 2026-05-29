@@ -1,0 +1,108 @@
+record_type: stage5bw_validation_evidence
+schema: schemas/project-state/stage5bw-reviewable-validation-evidence-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+reviewability_evidence_status: committed_compact_evidence
+local_validation_evidence_committed: true
+validation_commands:
+- command_id: stage5bw_build
+  command: python -m libreprimus.cli token-block build-stage5bw
+  status: passed
+- command_id: stage5bw_validate
+  command: python -m libreprimus.cli token-block validate-stage5bw
+  status: passed
+- command_id: stage5bw_summary
+  command: python -m libreprimus.cli token-block stage5bw-summary
+  status: passed
+- command_id: stage5bu_lineage_paths
+  command: python -m libreprimus.cli token-block validate-stage5bu-lineage-paths
+  status: passed
+- command_id: stage5bu_validator
+  command: python -m libreprimus.cli token-block validate-stage5bu
+  status: passed
+- command_id: stage5bs_validator
+  command: python -m libreprimus.cli token-block validate-stage5bs
+  status: passed
+- command_id: stage5bq_validator
+  command: python -m libreprimus.cli token-block validate-stage5bq
+  status: passed
+- command_id: stage5bo_validator
+  command: python -m libreprimus.cli token-block validate-stage5bo
+  status: passed
+- command_id: stage5bd_validator
+  command: python -m libreprimus.cli token-block validate-stage5bd --results-dir experiments/results/token-block/stage5bd
+  status: passed
+- command_id: stage5ax_validation_metadata
+  command: python -m libreprimus.cli parallel-validation validate-stage5ax --plan
+    data/ci/stage5ax-parallel-validation-plan.yaml --command-registry data/ci/stage5ax-parallel-command-registry.yaml
+    --run-policy data/ci/stage5ax-parallel-run-policy.yaml --run-summary data/ci/stage5ax-parallel-validation-run-summary.yaml
+    --safety-audit data/ci/stage5ax-parallel-validation-safety-audit.yaml --pytest-shard-plan
+    data/ci/stage5ax-pytest-shard-plan.yaml --guardrail data/ci/stage5ax-guardrail.yaml
+    --next-stage-decision data/project-state/stage5ax-next-stage-decision.yaml --summary
+    data/project-state/stage5ax-summary.yaml --results-dir experiments/results/ci/parallel-validation/stage5ax
+  status: passed
+- command_id: stage5ax_parallel_validation
+  command: .\scripts\ci\run-parallel-validation.ps1 -Workers 16 -PytestWorkers 16
+    -PytestMode auto
+  status: passed
+- command_id: research_synthesis
+  command: python -m libreprimus.cli research-synthesis validate --data-dir data/research
+    --staged-plan docs/roadmap/staged-plan.md
+  status: passed
+- command_id: consistency_state_drift
+  command: python -m libreprimus.cli consistency check-state-drift
+  status: passed
+- command_id: consistency_check_all
+  command: python -m libreprimus.cli consistency check-all --allow-warnings
+  status: passed
+- command_id: smoke
+  command: python -m libreprimus.cli smoke
+  status: passed
+- command_id: ruff
+  command: python -m ruff check python/libreprimus tests/python
+  status: passed
+- command_id: pytest
+  command: python -m pytest -q tests/python
+  status: passed
+- command_id: powershell_consistency_wrapper
+  command: .\scripts\ci\run-consistency-checks.ps1
+  status: passed
+- command_id: public_docs
+  command: .\scripts\ci\verify-public-docs-status.ps1
+  status: passed
+- command_id: lock_hashes
+  command: .\scripts\ci\verify-lock-hashes.ps1
+  status: passed
+- command_id: workflow_static
+  command: .\scripts\ci\validate-workflow-static.ps1
+  status: passed
+- command_id: wiki_source
+  command: .\scripts\github\validate-wiki-source.ps1
+  status: passed
+- command_id: wiki_dry_run
+  command: .\scripts\github\sync-tutorials-to-wiki.ps1 --DryRun
+  status: passed
+- command_id: bash_parallel_or_consistency_wrapper
+  command: ./scripts/ci/run-parallel-validation.sh and ./scripts/ci/run-consistency-checks.sh
+  status: not_run
+  reason_if_not_run: Local Windows host has no usable WSL distribution for bash wrappers.
+pytest_count_observed_locally: 2171
+pytest_command_observed_locally: .\.venv\Scripts\python.exe -m pytest -q -n auto tests/python
+stage5ax_parallel_validation_used: true
+raw_staged: false
+generated_outputs_staged: false
+codex_output_staged: false
+sqlite_staged: false
+final_commit_self_embedded: false
+final_commit_external_evidence_required: true
+ci_external_evidence_required: true
+codex_completion_summary_path: codex-output/stage5bw-codex-completion.md

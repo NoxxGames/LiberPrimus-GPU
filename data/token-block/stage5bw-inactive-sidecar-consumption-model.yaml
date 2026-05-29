@@ -1,0 +1,33 @@
+record_type: stage5bw_consumption_model
+schema: schemas/token-block/stage5bw-inactive-sidecar-consumption-model-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+vocabulary:
+  inactive_sidecar: Committed metadata context that may be cited by future stages
+    but is not active input.
+  planning_visible: Existing records can cite the sidecar as context or constraint.
+  planning_ingestion_proposed: A future consumption pathway is described, but not
+    activated.
+  active_planning_input: A record enters current active dry-run plans or current manifest
+    input.
+  active_dry_run_input: A record is included in a current run-plan manifest or input
+    registry.
+  execution_input: A record can generate bytes, run transforms, score, decode, search
+    hashes, or execute.
+inactive_sidecar_records:
+- data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+- data/token-block/stage5bo-errata-aware-token-option-universe.yaml
+- data/token-block/stage5bq-string4-inactive-branch-planning-context.yaml
+- data/token-block/stage5bq-errata-aware-dry-run-constraint-update.yaml
+- data/token-block/stage5bs-string4-planning-ingestion-gate.yaml
+active_planning_input_authorized_now: false
+execution_input_authorized_now: false

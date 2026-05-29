@@ -29,3 +29,5 @@ Stage 5BO does not generate byte streams, materialise variants, run DWH/hash sea
 Stage 5BQ later consumes the Stage 5BP review outcome and records the Stage 5BO `full_branch_match` as inactive planning context only, with String 4 active input and dry-run ingestion still false. Stage 5BS then consumes the Stage 5BR review outcome as compact metadata, creates a closed planning-ingestion gate, requires future runners to cite the gate fail-closed, preserves Stage 5BD dry-run records, and keeps String 4 inactive until a future reviewed stage explicitly changes that boundary.
 
 Stage 5BU later repairs the Stage 5BS preserved active-lineage path and hardens Stage 5BS validation without changing the Stage 5BO inactive planning status.
+
+Stage 5BW later proposes inactive-sidecar planning ingestion and manifest-supersession preflight while keeping String 4 inactive, active manifests unchanged, Stage 5BD run-plan IDs preserved, and all execution gates blocked before Stage 5BX review.

@@ -1239,3 +1239,5 @@ raw data, publish generated result bodies, expand the website, activate the cano
 finalise page boundaries, or claim a solve through Stage 5O records.
 
 Stage 5BU is not an experiment. It is a metadata-only erratum and reviewability-hardening stage for the Stage 5BS preserved active-lineage path; generated diagnostics under `experiments/results/token-block/stage5bu/` remain ignored.
+
+Stage 5BW is not an experiment. It is a metadata-only inactive-sidecar planning-ingestion proposal and manifest-supersession preflight for String 4; generated diagnostics under `experiments/results/token-block/stage5bw/` remain ignored. It does not activate String 4, supersede manifests, generate byte streams, materialise variants, execute token-block work, search DWH/hash targets, decode, score, run CUDA, benchmark, expand the website, upgrade method status, or make solve claims.

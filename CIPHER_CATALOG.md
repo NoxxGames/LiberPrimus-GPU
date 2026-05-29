@@ -421,3 +421,5 @@ Stage 5B does not add cipher families, transform semantics, CUDA kernels, CUDA s
 Harness records are not solve evidence, implementation approval, or performance evidence. Future CUDA kernels must still be introduced by explicit implementation stages with CPU/GPU parity tests.
 
 Stage 5BU does not change cipher-family status. It repairs Stage 5BS lineage-path reviewability and keeps String 4/DWH planning quarantined and inactive.
+
+Stage 5BW does not change cipher-family status. It proposes a future inactive-sidecar planning-ingestion path and manifest-supersession preflight while keeping String 4/DWH planning quarantined, inactive, non-executable, and non-solve-evidence.

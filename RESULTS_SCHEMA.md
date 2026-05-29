@@ -1403,3 +1403,5 @@ Stage 5Z adds prime-minus-one CUDA contract schemas:
 These records require contract-only/no-solve flags and reject native execution, CUDA execution, CUDA source modification, new CUDA kernels, GPU benchmarks, speedup claims, raw-data processing, generated-output publication, codex-output publication, canonical-corpus activation, and page-boundary finalisation.
 
 Stage 5BU adds compact lineage-path repair and validation records only. It does not publish generated result bodies, byte streams, decoded bytes, score summaries, SQLite databases, or local reports.
+
+Stage 5BW adds compact inactive-sidecar proposal, manifest-supersession preflight, active-lineage preservation, no-active-ingestion, no-byte-stream, and guardrail records only. It does not publish generated result bodies, byte streams, decoded bytes, score summaries, SQLite databases, local reports, or active String 4 inputs.

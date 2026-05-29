@@ -1,0 +1,17 @@
+record_type: stage5bw_review_packaging_warning
+schema: schemas/source-harvester/stage5bw-review-packaging-warning-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+review_packaging_warning_status: active
+raw_human_review_pack_files_committed: false
+template_bodies_committed: false
+full_option_universe_tables_committed: false

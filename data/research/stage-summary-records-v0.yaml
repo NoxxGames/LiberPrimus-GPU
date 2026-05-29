@@ -1496,3 +1496,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5BU records Stage 5BT verdict accept_with_warnings, incorrect path `data/token-block/stage5aw-repaired-branch-manifest.yaml`, corrected path `data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml`, lineage validation passed, 8 preserved active-lineage paths, 15 source digest records, Stage 5BS validator hardened true, String 4 planning-ingestion gate closed, active input false, dry-run ingestion false, Stage 5BD dry-run records valid, and future execution blocked. It performs no Deep Research body commit, Codex completion commit, token experiment, active ingestion, byte-stream generation, variant materialisation, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5bw
+    title: String 4 inactive-sidecar planning-ingestion proposal and manifest-supersession preflight, without execution
+    status: complete
+    category: infrastructure
+    summary: Integrated the Stage 5BV accept-with-warnings review outcome as compact metadata, proposed future inactive-sidecar planning-ingestion semantics for String 4, and created manifest-supersession preflight records without activating String 4 or superseding active manifests.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5BW commands for inactive-sidecar proposal build, validation, and summary display."
+      - Stage 5BW findings integration, reviewable stage marker, validation evidence, source-digest index, reviewability gap register, inactive-sidecar planning-ingestion proposal, sidecar consumption model, manifest-supersession preflight, manifest-validation preflight, active-lineage preservation, preserved active-lineage digest index, Stage 5BD plan preservation, future-runner citation requirements, active-ingestion blocker preservation, no-byte-stream gate, no-active-ingestion proof, String 4 gate preservation, future dry-run planning impact, gate-readiness matrix, authorization policy, source-gap severity, DWH quarantine, guardrail, Codex handoff, summary, and next-stage records.
+      - Summary-only developer/research logs; ignored generated diagnostics under `experiments/results/token-block/stage5bw/`; local handoff under `codex-output/stage5bw-codex-completion.md`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5BW records Stage 5BV verdict accept_with_warnings, sidecar planning-ingestion proposal created true, sidecar activated false, manifest-supersession preflight created true, manifest supersession performed false, String 4 active input false, dry-run ingestion false, byte-stream generation false, execution input false, Stage 5BD dry-run records valid, Stage 5BD run-plan ID count 10, active-lineage record count 8, source digest records 23, canonical transcription changed false, active manifests changed false, and future execution blocked. It performs no Deep Research body commit, Codex completion commit, token experiment, active ingestion, byte-stream generation, variant materialisation, manifest supersession, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

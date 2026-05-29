@@ -135,4 +135,4 @@ Stage 5BO records the corrected decision-template as operator errata: case `199`
 
 Stage 5BQ records Stage 5BP's review as `accept_with_warnings` and turns the Stage 5BO full branch match into `inactive_branch_context_only` planning metadata. String 4 active input is false, dry-run ingestion is false, and future dry-run use requires an explicit later stage with source/gate review.
 
-Stage 5BV should review Stage 5BU erratum, digest, path-resolution validation, and Stage 5BS validator hardening before any execution-capable token-block stage.
+Stage 5BX should review Stage 5BW inactive-sidecar planning-ingestion proposal, manifest-supersession preflight, active-lineage preservation, Stage 5BD run-plan preservation, no-active-ingestion proof, no-byte-stream gate, and guardrails before any planning-ingestion or execution-capable token-block stage.

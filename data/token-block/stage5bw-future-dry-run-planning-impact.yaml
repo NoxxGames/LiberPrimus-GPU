@@ -1,0 +1,19 @@
+record_type: stage5bw_future_impact
+schema: schemas/token-block/stage5bw-future-dry-run-planning-impact-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+future_dry_run_planning_impact: proposal_only
+current_stage5bd_dry_run_plan_changed: false
+current_run_plan_ids_changed: false
+new_active_dry_run_plan_created: false
+string4_added_to_active_dry_run_inputs: false
+requires_stage5bx_review_before_ingestion: true

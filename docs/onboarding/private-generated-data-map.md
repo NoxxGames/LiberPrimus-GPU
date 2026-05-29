@@ -159,3 +159,5 @@ Stage 5BD generated reports remain ignored under `experiments/results/token-bloc
 Stage 5BF generated reports remain ignored under `experiments/results/historical-route/stage5bf/`; generated Deep Research content packs and ZIP outputs remain ignored under `deep-research-content-packs/stage5bf/` and `deep-research-repo-zips/stage5bf/`. Raw historical archive files remain ignored under `third_party/CicadaSolversIddqd/`.
 
 Stage 5BU generated diagnostics live under `experiments/results/token-block/stage5bu/` and the local completion handoff lives at `codex-output/stage5bu-codex-completion.md`; both remain ignored.
+
+Stage 5BW generated diagnostics live under `experiments/results/token-block/stage5bw/` and the local completion handoff lives at `codex-output/stage5bw-codex-completion.md`; both remain ignored.

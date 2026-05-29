@@ -37,7 +37,7 @@ if (-not (Test-Path -LiteralPath $sidebar)) { $errors.Add("missing_sidebar=$side
 
 $tutorials = @()
 if (Test-Path -LiteralPath $TutorialDir) {
-    $tutorials = Get-ChildItem -LiteralPath $TutorialDir -Filter "*.md" -File | Sort-Object Name
+    $tutorials = @(Get-ChildItem -LiteralPath $TutorialDir -Filter "*.md" -File | Sort-Object Name)
 }
 
 foreach ($tutorial in $tutorials) {
@@ -72,4 +72,5 @@ if ($errors.Count -gt 0) {
 
 Write-Host "wiki_source_valid=true"
 Write-Host "tutorial_count=$($tutorials.Count)"
-Write-Host "wiki_page_count=$((Get-ChildItem -LiteralPath $WikiSourceDir -Filter "*.md" -File).Count)"
+$wikiPages = @(Get-ChildItem -LiteralPath $WikiSourceDir -Filter "*.md" -File)
+Write-Host "wiki_page_count=$($wikiPages.Count)"

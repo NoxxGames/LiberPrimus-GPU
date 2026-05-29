@@ -1,0 +1,155 @@
+record_type: stage5bw_source_digest_index
+schema: schemas/project-state/stage5bw-reviewable-source-digest-index-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+source_digest_record_count: 23
+source_digest_records:
+- path: deep-research-reports/reviews-of-ideas-and-concepts-and-data/md/13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+  role: stage5bw_source_record
+  present: true
+  sha256: 48ced5548d9b1bdc93a250e8393fe01955780b1cd92f209875a025264bf2ae6a
+  size_bytes: 24029
+  raw_or_generated_body_committed: false
+- path: data/project-state/stage5bu-summary.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: d2001a73fbc275bfc0918c69de65d6fd3db934eb52dca2592a3f54ac0298afbc
+  size_bytes: 1791
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bu-lineage-path-resolution-validation.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 9712e74ff02dcecb5b310807a4a4d42c8cec68f65c1d1712b8062a0fc0aa1145
+  size_bytes: 1365
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bu-preserved-active-lineage-digest-index.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: d57864bcc1fd7b3c265d879d05f413feef9d962e1677ec98e1904b9a94976033
+  size_bytes: 2746
+  raw_or_generated_body_committed: false
+- path: data/historical-route/stage5bu-guardrail.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 03ded7ee6050a46c6fbfae9e7ece924da581d8d14090e464ffe156e7f5bee2ce
+  size_bytes: 2758
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bs-active-manifest-preservation.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: a935cb945f793b3b719d4f385be789ce4ae5f8904794b9d9c1fff9c1f86da53e
+  size_bytes: 1510
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bs-string4-planning-ingestion-gate.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 47999679994d10ff446949e0a49621c429a84d93762f3ad650bc990fbb3b15e2
+  size_bytes: 1747
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bs-active-ingestion-blocker.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 643a5f6162aaaee0a7237371c86a1e62c57029ccc7b760c8a0203e79861d48ab
+  size_bytes: 1288
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bs-future-runner-citation-policy.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 12b02b15c0786b6116f89c8d709cde4d0b0e6828aedf9225e0ea4dc4c45349d8
+  size_bytes: 1595
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bq-string4-inactive-branch-planning-context.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: e716a4953f4f817de9466466c764e3b111d895bb4b4b0a2c246e24fbd6333c3b
+  size_bytes: 1637
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bq-errata-aware-dry-run-constraint-update.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 9e00d7aafc8f517ebbf4de19dd77d05bd4b8c3887829e94668aa1a62b7adf481
+  size_bytes: 1547
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 72840a2544cb72642a0f5bbd2bb6c4988665029e442b740aabc29641851dc816
+  size_bytes: 1856
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bo-errata-aware-token-option-universe.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 78e7c8727fa260a905afdf351743f4aa3e70a6d15553d63de473250ea706e238
+  size_bytes: 7146
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: e2a40ec584be822e31e535d80a8863c3b0ba0280829184feeb73a53caa61af82
+  size_bytes: 7798
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-run-plan-id-registry.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 34fd917871f36bb41ab65d317bc63be2ceef07fa036a61c78a15f7e4abb70ee5
+  size_bytes: 5201
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ap-token-block-canonical-transcription.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 264e059f73ebf04ea2982288d34ad8d7f278d68ef0e8d88fe2e6c8b15f66328e
+  size_bytes: 29096
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 5e2dfee9717b1950cc7f61cf6e8b48ea592105e6dbe5e94d31396556c41daa3f
+  size_bytes: 154361
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ay-branch-eligibility-policy.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 8cab6a59ce259ce3cb9aa4f5c0312071f47cae543b46f39a5ff838f676d98624
+  size_bytes: 48827
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 4be0806a2f41aac56b858774af253d249bd1dd894e253fa04fe52a57ed4bf1a3
+  size_bytes: 5141
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bb-active-manifest-registry.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 0f415521d5380283fd4296e9c7acb8d87267fa246f95f0ac69c4ebcc13cfab07
+  size_bytes: 7301
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-active-manifest-lock.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: daafd90b61191941ecdfa86cce56516f0199813fd7f76f81ba4d8d9e793dceec
+  size_bytes: 8047
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: e2a40ec584be822e31e535d80a8863c3b0ba0280829184feeb73a53caa61af82
+  size_bytes: 7798
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-run-plan-id-registry.yaml
+  role: stage5bw_source_record
+  present: true
+  sha256: 34fd917871f36bb41ab65d317bc63be2ceef07fa036a61c78a15f7e4abb70ee5
+  size_bytes: 5201
+  raw_or_generated_body_committed: false
+stage5bv_report_present_locally: true
+raw_or_generated_source_bodies_committed: false

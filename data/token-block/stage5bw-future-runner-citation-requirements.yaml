@@ -1,0 +1,37 @@
+record_type: stage5bw_citation_requirements
+schema: schemas/token-block/stage5bw-future-runner-citation-requirements-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+future_runner_citation_status: citation_required_fail_closed
+future_runner_must_cite:
+- data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+- data/token-block/stage5bo-errata-aware-token-option-universe.yaml
+- data/token-block/stage5bo-string4-source-gap-closure-after-errata.yaml
+- data/token-block/stage5bq-string4-inactive-branch-planning-context.yaml
+- data/token-block/stage5bq-errata-aware-dry-run-constraint-update.yaml
+- data/token-block/stage5bs-string4-planning-ingestion-gate.yaml
+- data/token-block/stage5bw-inactive-sidecar-planning-ingestion-proposal.yaml
+- data/token-block/stage5bw-manifest-supersession-preflight.yaml
+fail_closed_if:
+- citation_missing
+- sidecar_status_not_inactive
+- active_ingestion_authorization_missing
+- manifest_validation_missing
+- no_byte_stream_gate_missing
+- no_execution_guardrail_missing
+- stage5bd_preservation_not_verified
+runner_must_not:
+- treat_string4_as_canonical
+- treat_string4_as_active_input
+- generate_string4_bytes
+- execute_token_block_experiment
+- combine_string4_with_2014_surfaces

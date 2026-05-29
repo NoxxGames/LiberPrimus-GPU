@@ -1,0 +1,27 @@
+record_type: stage5bw_gap_register
+schema: schemas/project-state/stage5bw-reviewability-gap-register-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+reviewability_gaps:
+- gap_id: stage5bw-stage5bv-report-external-evidence
+  status: accepted_warning
+  severity: low
+  description: Stage 5BV findings are integrated from the prompt; final commit and
+    CI remain external evidence.
+  blocks_stage5bw: false
+- gap_id: stage5bw-future-activation-review-required
+  status: active_blocker
+  severity: high
+  description: Any future movement from inactive sidecar context to active planning
+    input needs an explicit future stage and review.
+  blocks_stage5bw: false
+blocking_gap_count: 0

@@ -1,0 +1,38 @@
+record_type: stage5bw_summary
+schema: schemas/project-state/stage5bw-summary-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+status: complete
+stage5bv_verdict: accept_with_warnings
+stage5bu_status_preserved: complete
+string4_sidecar_planning_ingestion_proposed: true
+string4_sidecar_planning_ingestion_activated: false
+manifest_supersession_preflight_created: true
+manifest_supersession_performed: false
+string4_active_input_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_byte_stream_generation_allowed: false
+string4_execution_input_allowed: false
+stage5bd_dry_run_records_remain_valid: true
+stage5bd_run_plan_id_count: 10
+stage5bd_run_plan_ids_changed: false
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+future_token_block_execution_remains_blocked: true
+active_lineage_record_count: 8
+source_digest_record_count: 23
+reviewable_metadata_created: true
+generated_outputs_committed: false
+codex_output_used: false
+recommended_next_stage_id: stage-5bx
+recommended_next_stage_title: Stage 5BX - Deep Research review of Stage 5BW inactive-sidecar
+  planning-ingestion proposal and manifest-supersession preflight, without execution

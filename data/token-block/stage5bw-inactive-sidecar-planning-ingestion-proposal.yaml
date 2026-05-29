@@ -1,0 +1,41 @@
+record_type: stage5bw_sidecar_proposal
+schema: schemas/token-block/stage5bw-inactive-sidecar-planning-ingestion-proposal-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+string4_inactive_sidecar_planning_ingestion_proposal_created: true
+string4_inactive_sidecar_planning_ingestion_activated: false
+proposal_status: proposed_only
+proposal_active: false
+proposal_ingests_bytes: false
+proposal_changes_current_plans: false
+proposal_requires_future_stage: true
+level_0_current_state:
+  string4_visible_as_inactive_context: true
+  string4_active_input_allowed: false
+  string4_dry_run_ingestion_allowed_now: false
+level_1_stage5bw_proposal:
+  proposal_created: true
+  proposal_active: false
+  proposal_ingests_bytes: false
+  proposal_changes_current_plans: false
+  proposal_requires_future_stage: true
+level_2_future_active_planning_input:
+  future_active_planning_input_authorized_now: false
+  future_activation_requires:
+  - explicit_future_codex_stage
+  - deep_research_or_operator_review_if_selected
+  - repaired_lineage_path_validation
+  - preserved_active_lineage_digest_validation
+  - no_byte_stream_gate
+  - no_execution_guardrail
+  - stage5bd_plan_preservation_or_explicit_supersession
+  - clear_inactive_sidecar_to_active_input_transition_policy

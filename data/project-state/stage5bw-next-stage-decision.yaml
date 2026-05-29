@@ -1,0 +1,29 @@
+record_type: stage5bw_next_stage
+schema: schemas/project-state/stage5bw-next-stage-decision-v0.schema.json
+stage_id: stage-5bw
+stage_title: Stage 5BW - String 4 inactive-sidecar planning-ingestion proposal and
+  manifest-supersession preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bu
+source_previous_stage_commit: 72a04b42f5cbd1f907d8ca20b703f0290e5796fd
+source_deep_research_stage: stage-5bv
+source_deep_research_report: 13_Deep-Research-Review-Of-Lineage-Path-And-Reviewability-Hardening.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+selected_next_stage_id: stage-5bx
+selected_next_stage_title: Stage 5BX - Deep Research review of Stage 5BW inactive-sidecar
+  planning-ingestion proposal and manifest-supersession preflight, without execution
+selected_next_prompt_type: deep_research_review
+selected_next_stage_reason: Stage 5BW proposes a future inactive-sidecar planning-ingestion
+  model and manifest-supersession preflight while keeping active input and execution
+  blocked; independent review should precede any future planning-ingestion stage.
+token_block_execution_selected: false
+byte_stream_generation_selected: false
+variant_materialisation_selected: false
+dwh_hash_search_selected: false
+decode_selected: false
+scored_experiments_selected: false
+cuda_selected: false
+benchmark_selected: false
+method_status_upgrade_selected: false
