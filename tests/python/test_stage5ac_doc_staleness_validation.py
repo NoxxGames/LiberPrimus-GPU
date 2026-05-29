@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5bq_latest_and_stage5br_next() -> None:
+def test_operational_docs_use_stage5bs_latest_and_stage5bt_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5BQ operator-errata-aware String 4 inactive-branch dry-run planning integration" in status
-    assert "Next recommended prompt: Stage 5BR" in status
-    assert "Latest completed stage: Stage 5BQ" in staged_plan
-    assert "Current planning focus: Stage 5BR" in staged_plan
+    assert "Stage 5BS String 4 inactive-branch planning-ingestion gate" in status
+    assert "Next recommended prompt: Stage 5BT" in status
+    assert "Latest completed stage: Stage 5BS" in staged_plan
+    assert "Current planning focus: Stage 5BT" in staged_plan

@@ -2084,3 +2084,112 @@ records:
   owner_context: codex_agent
   notes: Documents Stage 5BQ CLI commands, inactive planning boundaries,
     preservation checks, and guardrails.
+- path: data/project-state/stage5bs-summary.yaml
+  category: active_data_record
+  purpose: Stage 5BS aggregate summary and current stage marker.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bs
+  expected_update_frequency: every_stage
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records Stage 5BS complete, Stage 5BR accept-with-warnings verdict,
+    closed planning-ingestion gate, fail-closed citation policy, and Stage 5BT
+    next-stage routing.
+- path: data/project-state/stage5bs-reviewable-validation-evidence.yaml
+  category: active_data_record
+  purpose: Stage 5BS compact validation evidence.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bs
+  expected_update_frequency: when_stage5bs_validation_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Commits compact validation status while keeping full terminal logs and
+    Codex completion summaries ignored.
+- path: data/project-state/stage5bs-reviewable-source-digest-index.yaml
+  category: active_data_record
+  purpose: Stage 5BS consumed/created source digest index.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bs
+  expected_update_frequency: when_stage5bs_sources_or_outputs_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Hashes committed Stage 5BQ/5BO/5BD inputs and the ignored Stage 5BR
+    review report without committing the report body.
+- path: data/token-block/stage5bs-string4-planning-ingestion-gate.yaml
+  category: active_data_record
+  purpose: Stage 5BS closed String 4 planning-ingestion gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bs
+  expected_update_frequency: when_string4_planning_ingestion_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps String 4 inactive and blocks active input, dry-run ingestion now,
+    execution input, and byte-stream generation.
+- path: data/token-block/stage5bs-future-runner-citation-policy.yaml
+  category: active_data_record
+  purpose: Stage 5BS future-runner citation policy.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bs
+  expected_update_frequency: when_future_runner_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Future token-block runners must cite the required Stage 5BO, Stage 5BQ,
+    and Stage 5BS records or fail closed.
+- path: data/token-block/stage5bs-no-active-ingestion-proof.yaml
+  category: active_data_record
+  purpose: Stage 5BS no-active-ingestion proof.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bs
+  expected_update_frequency: when_active_manifest_policy_changes
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: research_operator
+  notes: Confirms Stage 5BD run-plan IDs remain unchanged and String 4 is not
+    active dry-run input.
+- path: data/historical-route/stage5bs-guardrail.yaml
+  category: active_data_record
+  purpose: Stage 5BS no-execution guardrail.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5bs
+  expected_update_frequency: when_stage5bs_guardrails_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Requires no token-block execution, byte-stream generation, DWH/hash
+    search, decode, scoring, CUDA, benchmark, website expansion, or solve claim.
+- path: docs/experiments/stage-5bs-string4-planning-ingestion-gate.md
+  category: operational_status_doc
+  purpose: Stage 5BS metadata-only experiment/planning note.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bs
+  expected_update_frequency: when_stage5bs_records_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents Stage 5BS gate records, citation requirements, ignored
+    diagnostics, and no-execution boundaries.
+- path: docs/onboarding/stage5bs-string4-planning-ingestion-gate-workflow.md
+  category: operational_status_doc
+  purpose: Stage 5BS operator workflow.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5bs
+  expected_update_frequency: when_stage5bs_commands_or_policy_change
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: current_state
+  owner_context: codex_agent
+  notes: Documents Stage 5BS CLI commands, future-runner citation checks,
+    inactive-sidecar status, and guardrails.

@@ -1464,3 +1464,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5BQ records Stage 5BP verdict accept_with_warnings, String 4 branch-membership status after errata full_branch_match, planning context status inactive_branch_context_only, active input allowed false, dry-run ingestion allowed now false, operator-errata sidecar inactive, Stage 5BO errata-aware universe active false, Stage 5BD dry-run records valid, canonical transcription changed false, active token-block manifests changed false, and future execution blocked. It performs no Deep Research body commit, token experiment, byte-stream generation, variant materialisation, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5bs
+    title: String 4 inactive-branch planning-ingestion gate and future-runner citation integration, without execution
+    status: complete
+    category: infrastructure
+    summary: Integrated the Stage 5BR accept-with-warnings review outcome as committed metadata, created a closed String 4 planning-ingestion gate, added fail-closed future-runner citation requirements, improved reviewability evidence, and selected Stage 5BT review.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5BS commands for planning-ingestion gate build, validation, and summary display."
+      - Stage 5BS findings integration, reviewable stage marker, validation evidence, source-digest index, reviewability gap register, review-packaging warning, String 4 planning-ingestion gate, future-runner citation policy, inactive-sidecar policy, active-ingestion blocker, no-active-ingestion proof, readiness matrix, manifest validation requirements, Stage 5BD plan preservation, active-manifest preservation, future dry-run impact, source-gap severity, DWH quarantine, guardrail, Codex handoff, summary, and next-stage records.
+      - Summary-only developer/research logs; ignored generated diagnostics under `experiments/results/token-block/stage5bs/`; local handoff under `codex-output/stage5bs-codex-completion.md`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5BS records Stage 5BR verdict accept_with_warnings, String 4 branch-membership status after errata full_branch_match, planning context status inactive_branch_context_only, planning-ingestion gate status closed_gate_no_active_ingestion, future-runner citation status citation_required_fail_closed, active input allowed false, dry-run ingestion allowed now false, Stage 5BD dry-run records valid, canonical transcription changed false, active token-block manifests changed false, and future token-block execution blocked. It performs no Deep Research body commit, Codex completion commit, token experiment, active ingestion, byte-stream generation, variant materialisation, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

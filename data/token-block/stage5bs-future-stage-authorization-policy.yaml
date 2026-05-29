@@ -1,0 +1,18 @@
+record_type: stage5bs_future_stage_authorization_policy
+schema: schemas/token-block/stage5bs-future-stage-authorization-policy-v0.schema.json
+stage_id: stage-5bs
+stage_title: Stage 5BS - String 4 inactive-branch planning-ingestion gate and future-runner
+  citation integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bq
+source_previous_stage_commit: 8df9e26e5166caa130c059aa91b270bb81968afa
+source_deep_research_stage: stage-5br
+source_deep_research_report: 11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+metadata_only: true
+solve_claim: false
+future_authorization_status: explicit_future_stage_required
+current_stage_authorizes_planning_ingestion: false
+current_stage_authorizes_active_input: false
+current_stage_authorizes_byte_streams: false
+current_stage_authorizes_execution: false
+execution_allowed: false

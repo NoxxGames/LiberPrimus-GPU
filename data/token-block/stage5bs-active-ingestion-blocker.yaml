@@ -1,0 +1,34 @@
+record_type: stage5bs_active_ingestion_blocker
+schema: schemas/token-block/stage5bs-active-ingestion-blocker-v0.schema.json
+stage_id: stage-5bs
+stage_title: Stage 5BS - String 4 inactive-branch planning-ingestion gate and future-runner
+  citation integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bq
+source_previous_stage_commit: 8df9e26e5166caa130c059aa91b270bb81968afa
+source_deep_research_stage: stage-5br
+source_deep_research_report: 11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+metadata_only: true
+solve_claim: false
+blocked_item: string4_inactive_branch_context
+blocked_actions:
+- active_dry_run_input
+- active_run_plan_input
+- active_manifest_update
+- byte_stream_generation
+- variant_materialisation
+- execution
+- scoring
+- decode
+- dwh_hash_search
+blocker_status: active
+future_unblock_requires:
+- explicit_future_codex_planning_ingestion_stage
+- deep_research_or_operator_review_if_selected
+- manifest_validation
+- no_byte_stream_generation_gate
+- no_execution_guardrail_review
+- source_gap_closure_status_verification
+- stage5bd_plan_preservation_or_explicit_supersession
+- clear_distinction_between_inactive_sidecar_and_active_input
+execution_allowed: false

@@ -1,0 +1,37 @@
+record_type: stage5bs_next_stage_decision
+schema: schemas/project-state/stage5bs-next-stage-decision-v0.schema.json
+stage_id: stage-5bs
+stage_title: Stage 5BS - String 4 inactive-branch planning-ingestion gate and future-runner
+  citation integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bq
+source_previous_stage_commit: 8df9e26e5166caa130c059aa91b270bb81968afa
+source_deep_research_stage: stage-5br
+source_deep_research_report: 11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+metadata_only: true
+solve_claim: false
+selected_next_stage_id: stage-5bt
+selected_next_prompt_type: deep_research_review
+selected_next_stage_title: Stage 5BT - Deep Research review of Stage 5BS planning-ingestion
+  gate and reviewable evidence metadata, without execution
+selected_next_stage_reason: Stage 5BS creates a fail-closed planning-ingestion gate
+  and reviewable committed evidence metadata; Deep Research should review before any
+  future planning-ingestion or active-input consideration.
+string4_active_input_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+future_token_block_execution_remains_blocked: true
+ai_ml_selected: false
+benchmark_selected: false
+byte_stream_generation_selected: false
+canonical_corpus_activation_selected: false
+cuda_selected: false
+decode_selected: false
+dwh_hash_search_selected: false
+method_status_upgrade_selected: false
+ocr_selected: false
+page_boundary_finalisation_selected: false
+scored_experiments_selected: false
+stego_execution_selected: false
+token_block_execution_selected: false
+variant_materialisation_selected: false
+execution_allowed: false

@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BQ it names Stage 5BQ as latest complete and Stage 5BR as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; after Stage 5BS it names Stage 5BS as latest complete and Stage 5BT as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -81,6 +81,9 @@
 - `data/source-harvester/stage5bq-codex-handoff-policy.yaml`: Stage 5BQ Codex handoff policy using `codex-output`.
 - `data/project-state/stage5bq-summary.yaml`: Stage 5BQ aggregate summary, Stage 5BP verdict, inactive planning context state, and validation state.
 - `data/project-state/stage5bq-next-stage-decision.yaml`: Stage 5BQ next-stage decision selecting Stage 5BR Deep Research review before any execution-capable stage.
+- `data/token-block/stage5bs-*.yaml`: Stage 5BS closed planning-ingestion gate, future-runner citation policy, inactive-sidecar policy, active blocker, no-active-ingestion proof, readiness matrix, manifest requirements, Stage 5BD plan preservation, active-manifest preservation, and future planning impact records.
+- `data/project-state/stage5bs-*.yaml`: Stage 5BS findings integration, reviewable stage marker, validation evidence, source digest index, reviewability gap register, summary, and next-stage decision records.
+- `data/historical-route/stage5bs-*.yaml`: Stage 5BS source-gap update, DWH quarantine reaffirmation, and guardrail records.
 - `data/project-state/stage5ah-doc-staleness-summary.yaml`: Stage 5AH operational doc-staleness coverage summary.
 - `docs/onboarding/source-harvester-workflow.md`: local-only source-harvester workflow and manual-export policy.
 - `docs/onboarding/deep-research-bundle-workflow.md`: Stage 5AI/5AJ/5AK private Deep-Research bundle handoff workflow.
@@ -175,6 +178,6 @@ Stage 5BN adds target-only source-gap closure metadata for String 4 token index 
 
 Stage 5BO adds operator-errata integration metadata for the ignored original/corrected Stage 5AU decision templates. The source-of-truth records are the Stage 5BO YAML files under `data/token-block/`, `data/historical-route/`, `data/source-harvester/`, and `data/project-state/`. Ignored decision-template bodies, generated diagnostics, raw String 4 bodies, and Codex completion summaries are not source truth.
 
-## Stage 5BQ Additions
+## Stage 5BS Additions
 
-Stage 5BQ adds inactive-branch dry-run planning metadata for the Stage 5BP-reviewed String 4 full-branch status. The source-of-truth records are the Stage 5BQ YAML files under `data/token-block/`, `data/historical-route/`, `data/source-harvester/`, and `data/project-state/`. Ignored Deep Research bodies, generated diagnostics, raw String 4 bodies, and Codex completion summaries are not source truth.
+Stage 5BS adds fail-closed planning-ingestion metadata for the Stage 5BR-reviewed String 4 inactive branch context. The source-of-truth records are the Stage 5BS YAML files under `data/token-block/`, `data/historical-route/`, `data/source-harvester/`, and `data/project-state/`. Ignored Deep Research bodies, generated diagnostics, raw String 4 bodies, Codex completion summaries, and `codex_output` are not source truth.

@@ -1,0 +1,38 @@
+record_type: stage5bs_string4_gate_readiness_matrix
+schema: schemas/token-block/stage5bs-string4-gate-readiness-matrix-v0.schema.json
+stage_id: stage-5bs
+stage_title: Stage 5BS - String 4 inactive-branch planning-ingestion gate and future-runner
+  citation integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bq
+source_previous_stage_commit: 8df9e26e5166caa130c059aa91b270bb81968afa
+source_deep_research_stage: stage-5br
+source_deep_research_report: 11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+metadata_only: true
+solve_claim: false
+records:
+- gate_item: string4_branch_representability
+  status: satisfied_for_inactive_context
+  evidence: data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+- gate_item: source_gap_metadata_closure
+  status: satisfied_for_metadata_only
+  evidence: data/token-block/stage5bo-string4-source-gap-closure-after-errata.yaml
+- gate_item: deep_research_review_of_inactive_context
+  status: satisfied_with_warnings
+  evidence: data/project-state/stage5bs-stage5br-findings-integration.yaml
+- gate_item: future_planning_awareness
+  status: satisfied_fail_closed
+  evidence: data/token-block/stage5bq-errata-aware-dry-run-constraint-update.yaml
+- gate_item: active_ingestion_authorization
+  status: blocked
+  evidence: data/token-block/stage5bs-active-ingestion-blocker.yaml
+- gate_item: byte_stream_generation_authorization
+  status: blocked
+  evidence: data/historical-route/stage5bs-guardrail.yaml
+- gate_item: execution_authorization
+  status: blocked
+  evidence: data/historical-route/stage5bs-guardrail.yaml
+- gate_item: dwh_hash_search_authorization
+  status: blocked
+  evidence: data/historical-route/stage5bs-dwh-quarantine-reaffirmation.yaml
+execution_allowed: false

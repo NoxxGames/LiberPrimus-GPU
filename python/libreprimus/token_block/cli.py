@@ -299,6 +299,25 @@ from .stage5bq import (
     load_stage5bq_summary,
     validate_stage5bq,
 )
+from .stage5bs import (
+    DATA_PATHS as STAGE5BS_DATA_PATHS,
+    RESULTS_DIR as STAGE5BS_RESULTS_DIR,
+    STAGE5BD_DRY_RUN_PLAN_PATH as STAGE5BS_STAGE5BD_DRY_RUN_PLAN_PATH,
+    STAGE5BD_RUN_PLAN_REGISTRY_PATH as STAGE5BS_STAGE5BD_RUN_PLAN_REGISTRY_PATH,
+    STAGE5BO_BRANCH_MEMBERSHIP_PATH as STAGE5BS_STAGE5BO_BRANCH_MEMBERSHIP_PATH,
+    STAGE5BO_OPTION_UNIVERSE_PATH as STAGE5BS_STAGE5BO_OPTION_UNIVERSE_PATH,
+    STAGE5BO_SOURCE_GAP_CLOSURE_PATH as STAGE5BS_STAGE5BO_SOURCE_GAP_CLOSURE_PATH,
+    STAGE5BQ_CONSTRAINT_PATH as STAGE5BS_STAGE5BQ_CONSTRAINT_PATH,
+    STAGE5BQ_CONTEXT_PATH as STAGE5BS_STAGE5BQ_CONTEXT_PATH,
+    STAGE5BQ_NEXT_STAGE_PATH as STAGE5BS_STAGE5BQ_NEXT_STAGE_PATH,
+    STAGE5BQ_NO_ACTIVE_INGESTION_PATH as STAGE5BS_STAGE5BQ_NO_ACTIVE_INGESTION_PATH,
+    STAGE5BQ_REQUIREMENTS_PATH as STAGE5BS_STAGE5BQ_REQUIREMENTS_PATH,
+    STAGE5BQ_SUMMARY_PATH as STAGE5BS_STAGE5BQ_SUMMARY_PATH,
+    STAGE5BR_REPORT_PATH as STAGE5BS_STAGE5BR_REPORT_PATH,
+    build_stage5bs_planning_ingestion_gate,
+    load_stage5bs_summary,
+    validate_stage5bs,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -3133,6 +3152,108 @@ def stage5bq_summary_command(
     console.print(
         "string4_dry_run_ingestion_allowed_now="
         f"{str(payload.get('string4_dry_run_ingestion_allowed_now')).lower()}"
+    )
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+@app.command("build-stage5bs-planning-ingestion-gate")
+def build_stage5bs_planning_ingestion_gate_command(
+    stage5bq_summary: Path = typer.Option(STAGE5BS_STAGE5BQ_SUMMARY_PATH),
+    stage5bq_next_stage: Path = typer.Option(STAGE5BS_STAGE5BQ_NEXT_STAGE_PATH),
+    stage5bq_context: Path = typer.Option(STAGE5BS_STAGE5BQ_CONTEXT_PATH),
+    stage5bq_constraint: Path = typer.Option(STAGE5BS_STAGE5BQ_CONSTRAINT_PATH),
+    stage5bq_no_active_ingestion: Path = typer.Option(STAGE5BS_STAGE5BQ_NO_ACTIVE_INGESTION_PATH),
+    stage5bq_requirements: Path = typer.Option(STAGE5BS_STAGE5BQ_REQUIREMENTS_PATH),
+    stage5bo_branch_membership: Path = typer.Option(STAGE5BS_STAGE5BO_BRANCH_MEMBERSHIP_PATH),
+    stage5bo_option_universe: Path = typer.Option(STAGE5BS_STAGE5BO_OPTION_UNIVERSE_PATH),
+    stage5bo_source_gap_closure: Path = typer.Option(STAGE5BS_STAGE5BO_SOURCE_GAP_CLOSURE_PATH),
+    stage5bd_dry_run_plan: Path = typer.Option(STAGE5BS_STAGE5BD_DRY_RUN_PLAN_PATH),
+    stage5bd_run_plan_registry: Path = typer.Option(STAGE5BS_STAGE5BD_RUN_PLAN_REGISTRY_PATH),
+    stage5br_report: Path = typer.Option(STAGE5BS_STAGE5BR_REPORT_PATH),
+    results_dir: Path = typer.Option(STAGE5BS_RESULTS_DIR),
+) -> None:
+    payload = build_stage5bs_planning_ingestion_gate(
+        stage5bq_summary=stage5bq_summary,
+        stage5bq_next_stage=stage5bq_next_stage,
+        stage5bq_context=stage5bq_context,
+        stage5bq_constraint=stage5bq_constraint,
+        stage5bq_no_active_ingestion=stage5bq_no_active_ingestion,
+        stage5bq_requirements=stage5bq_requirements,
+        stage5bo_branch_membership=stage5bo_branch_membership,
+        stage5bo_option_universe=stage5bo_option_universe,
+        stage5bo_source_gap_closure=stage5bo_source_gap_closure,
+        stage5bd_dry_run_plan=stage5bd_dry_run_plan,
+        stage5bd_run_plan_registry=stage5bd_run_plan_registry,
+        stage5br_report=stage5br_report,
+        results_dir=results_dir,
+    )
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"stage5br_verdict={payload.get('stage5br_verdict')}")
+    console.print(
+        "string4_branch_membership_status_after_errata="
+        f"{payload.get('string4_branch_membership_status_after_errata')}"
+    )
+    console.print(f"string4_planning_context_status={payload.get('string4_planning_context_status')}")
+    console.print(
+        "string4_planning_ingestion_gate_status="
+        f"{payload.get('string4_planning_ingestion_gate_status')}"
+    )
+    console.print(
+        "string4_active_input_allowed="
+        f"{str(payload.get('string4_active_input_allowed')).lower()}"
+    )
+    console.print(
+        "string4_dry_run_ingestion_allowed_now="
+        f"{str(payload.get('string4_dry_run_ingestion_allowed_now')).lower()}"
+    )
+    console.print(
+        "future_token_block_execution_remains_blocked="
+        f"{str(payload.get('future_token_block_execution_remains_blocked')).lower()}"
+    )
+
+
+@app.command("validate-stage5bs")
+def validate_stage5bs_command(
+    summary: Path = typer.Option(STAGE5BS_DATA_PATHS["summary"]),
+    next_stage_decision: Path = typer.Option(STAGE5BS_DATA_PATHS["next_stage"]),
+    guardrail: Path = typer.Option(STAGE5BS_DATA_PATHS["guardrail"]),
+    results_dir: Path = typer.Option(STAGE5BS_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5bs(
+        summary=summary,
+        next_stage_decision=next_stage_decision,
+        guardrail=guardrail,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5bs_valid=true")
+
+
+@app.command("stage5bs-summary")
+def stage5bs_summary_command(
+    summary: Path = typer.Option(STAGE5BS_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5bs_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5br_verdict={payload.get('stage5br_verdict')}")
+    console.print(
+        "string4_branch_membership_status_after_errata="
+        f"{payload.get('string4_branch_membership_status_after_errata')}"
+    )
+    console.print(f"string4_planning_context_status={payload.get('string4_planning_context_status')}")
+    console.print(
+        "string4_planning_ingestion_gate_status="
+        f"{payload.get('string4_planning_ingestion_gate_status')}"
+    )
+    console.print(
+        "future_token_block_execution_remains_blocked="
+        f"{str(payload.get('future_token_block_execution_remains_blocked')).lower()}"
     )
     console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
 

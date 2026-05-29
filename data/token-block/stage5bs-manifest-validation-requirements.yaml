@@ -1,0 +1,26 @@
+record_type: stage5bs_manifest_validation_requirements
+schema: schemas/token-block/stage5bs-manifest-validation-requirements-v0.schema.json
+stage_id: stage-5bs
+stage_title: Stage 5BS - String 4 inactive-branch planning-ingestion gate and future-runner
+  citation integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bq
+source_previous_stage_commit: 8df9e26e5166caa130c059aa91b270bb81968afa
+source_deep_research_stage: stage-5br
+source_deep_research_report: 11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+metadata_only: true
+solve_claim: false
+future_string4_planning_ingestion_requires_manifest_checks:
+- active_manifest_registry_resolves
+- stage5ap_canonical_transcription_preserved_or_explicitly_superseded
+- stage5aw_branch_manifest_preserved_or_explicitly_superseded
+- stage5ay_branch_eligibility_preserved_or_explicitly_superseded
+- stage5az_variant_family_preserved_or_explicitly_superseded
+- stage5bb_active_registry_preserved_or_explicitly_superseded
+- stage5bd_run_plan_ids_preserved_or_explicitly_superseded
+- string4_sidecar_status_inactive_or_explicitly_activated_by_future_stage
+- no_byte_stream_generation_gate_passed
+- no_execution_guardrail_passed
+current_stage_performs_manifest_activation: false
+current_stage_changes_manifest: false
+execution_allowed: false

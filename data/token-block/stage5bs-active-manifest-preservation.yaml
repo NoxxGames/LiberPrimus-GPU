@@ -1,0 +1,29 @@
+record_type: stage5bs_active_manifest_preservation
+schema: schemas/token-block/stage5bs-active-manifest-preservation-v0.schema.json
+stage_id: stage-5bs
+stage_title: Stage 5BS - String 4 inactive-branch planning-ingestion gate and future-runner
+  citation integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bq
+source_previous_stage_commit: 8df9e26e5166caa130c059aa91b270bb81968afa
+source_deep_research_stage: stage-5br
+source_deep_research_report: 11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+metadata_only: true
+solve_claim: false
+preserved_active_record_paths:
+- data/token-block/stage5ap-token-block-canonical-transcription.yaml
+- data/token-block/stage5aw-repaired-branch-manifest.yaml
+- data/token-block/stage5ay-branch-eligibility-policy.yaml
+- data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+- data/token-block/stage5bb-active-manifest-registry.yaml
+- data/token-block/stage5bd-active-manifest-lock.yaml
+- data/token-block/stage5bd-dry-run-plan-manifest.yaml
+- data/token-block/stage5bd-run-plan-id-registry.yaml
+stage5ap_canonical_transcription_changed: false
+stage5aw_branch_manifest_changed: false
+stage5ay_branch_eligibility_changed: false
+stage5az_variant_family_manifest_changed: false
+stage5bb_active_manifest_registry_changed: false
+stage5bd_active_manifest_lock_changed: false
+active_token_block_manifest_changed: false
+execution_allowed: false

@@ -1,0 +1,188 @@
+record_type: stage5bs_reviewable_source_digest_index
+schema: schemas/project-state/stage5bs-reviewable-source-digest-index-v0.schema.json
+stage_id: stage-5bs
+stage_title: Stage 5BS - String 4 inactive-branch planning-ingestion gate and future-runner
+  citation integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bq
+source_previous_stage_commit: 8df9e26e5166caa130c059aa91b270bb81968afa
+source_deep_research_stage: stage-5br
+source_deep_research_report: 11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+metadata_only: true
+solve_claim: false
+reviewability_evidence_status: committed_compact_evidence
+consumed_source_records:
+- path: data/project-state/stage5bq-summary.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 9247c06c6fb3bf97f679d7b379fe8f0ba77f6abdc95591811f26dd6965bce287
+- path: data/project-state/stage5bq-next-stage-decision.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 2fb9e5e24dcee9ed5229804cae225cb16793fddcee639299d1fff99140c95944
+- path: data/token-block/stage5bq-string4-inactive-branch-planning-context.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: e716a4953f4f817de9466466c764e3b111d895bb4b4b0a2c246e24fbd6333c3b
+- path: data/token-block/stage5bq-errata-aware-dry-run-constraint-update.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 9e00d7aafc8f517ebbf4de19dd77d05bd4b8c3887829e94668aa1a62b7adf481
+- path: data/token-block/stage5bq-string4-no-active-ingestion-proof.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 1883042a515111c9b54b2fd5e36a75d51f8e1c33164abb4fadd0d7079e3b32eb
+- path: data/token-block/stage5bq-future-dry-run-requirements.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 2e169d18c43119f1263bd884983c87a3d4ff8f6ab31b50ef8d9585c48de7b442
+- path: data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 72840a2544cb72642a0f5bbd2bb6c4988665029e442b740aabc29641851dc816
+- path: data/token-block/stage5bo-errata-aware-token-option-universe.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 78e7c8727fa260a905afdf351743f4aa3e70a6d15553d63de473250ea706e238
+- path: data/token-block/stage5bo-string4-source-gap-closure-after-errata.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: b8ad54a7efe859e366c2a23294f1b61860f5fc0eb808df7aa7789553dfba198a
+- path: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: e2a40ec584be822e31e535d80a8863c3b0ba0280829184feeb73a53caa61af82
+- path: data/token-block/stage5bd-run-plan-id-registry.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 34fd917871f36bb41ab65d317bc63be2ceef07fa036a61c78a15f7e4abb70ee5
+- path: deep-research-reports/reviews-of-ideas-and-concepts-and-data/md/11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+  role: ignored_deep_research_report
+  present: true
+  committed: false
+  sha256: 1415c5f6f21cdee235c2fd27fe10a636510c83e5ef2d57e3ae24aa876b882f8e
+created_stage5bs_records:
+- path: data/project-state/stage5bs-stage5br-findings-integration.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: a7dd839039238af107110e03f6a59d513025d535b47e11fc156e3fa2416d6420
+- path: data/project-state/stage5bs-reviewable-stage-marker.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 24ca93a5dcd4f2d0326d6a2cfefd0b6aab33031d8ffa491159b8fa9b169fd53d
+- path: data/project-state/stage5bs-reviewable-validation-evidence.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: ce105bbdd05e9eb7957910f1cb83a201c32b892090d4f2222fec629e16a86678
+- path: data/project-state/stage5bs-reviewability-gap-register.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 9d5ee825723f5275946a223838790f3a665c049213b650d2f9e1acda54f7eee9
+- path: data/source-harvester/stage5bs-review-packaging-warning.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 3c22e0e18d6bf7564b29a96839b9b71dbffd0734258a38f1a551887859bde9ca
+- path: data/token-block/stage5bs-string4-planning-ingestion-gate.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 47999679994d10ff446949e0a49621c429a84d93762f3ad650bc990fbb3b15e2
+- path: data/token-block/stage5bs-future-runner-citation-policy.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 12b02b15c0786b6116f89c8d709cde4d0b0e6828aedf9225e0ea4dc4c45349d8
+- path: data/token-block/stage5bs-inactive-sidecar-consumption-policy.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 207644c8f65145e24cd598a88217d2a57c8f6e2a6216ed9ccc28acbe870c7e5f
+- path: data/token-block/stage5bs-active-ingestion-blocker.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 643a5f6162aaaee0a7237371c86a1e62c57029ccc7b760c8a0203e79861d48ab
+- path: data/token-block/stage5bs-no-active-ingestion-proof.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: cc0c2fba6302897a20c6b7f8349be10dac0cc93d3039f61715a5d65564d262c4
+- path: data/token-block/stage5bs-string4-gate-readiness-matrix.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: f9ca921b21391f8071b82b573e7a798215f7100cbdbdc5693da36996b89384a5
+- path: data/token-block/stage5bs-manifest-validation-requirements.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 752abfd0a6374006a3667719cdb5d3c5124a055c5736a0dcf54362788b554f9c
+- path: data/token-block/stage5bs-future-stage-authorization-policy.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: d36b33ac7addc73e01d8450cd8f808cea89bb10f70ac074a375d8d7bfa5a6592
+- path: data/token-block/stage5bs-stage5bd-plan-preservation.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 904bf8e56360ac09cfa32ecc4705b63103ceef8796cb6470123582f638e5b990
+- path: data/token-block/stage5bs-active-manifest-preservation.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 4835de81cecbe52c7338908c8198d584d5c8c0625725e1d43a802519eb8482c8
+- path: data/token-block/stage5bs-future-dry-run-planning-impact.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 6a6d2719f73aca6cf49adf668916f0ef2ca4c4bacad93774c8a44d2db113387b
+- path: data/historical-route/stage5bs-source-gap-severity-update.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 6b7798755f89937fd9d5c10732ea4cef7e3038156aa63760545ddf7fb44a5352
+- path: data/historical-route/stage5bs-dwh-quarantine-reaffirmation.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 1c6700a211ce011942e961fc1ca54622874e99758edac33dda6dc315d5c8c6d1
+- path: data/historical-route/stage5bs-guardrail.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: b9429694b70d3b27c9f4512265cf89f903fabfcf1120e2031058d6edc9035e29
+- path: data/source-harvester/stage5bs-codex-handoff-policy.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: fee6d0bd6d04215de65b66f17c092d7600a5b827db12dd50fd601d74bfe93773
+- path: data/project-state/stage5bs-summary.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 09f99c18cb3ac092d12739578c0a523468b864f9b4cbd088f2b3762af406f4b6
+- path: data/project-state/stage5bs-next-stage-decision.yaml
+  role: created_stage5bs_record
+  present: true
+  committed: true
+  sha256: 0a36a3fd3b0c41d9d33b02c0405ed17fc5ade59a48b1b9089b9715b4f9358412
+self_digest_excluded: true
+self_digest_exclusion_reason: record cannot include a stable digest of itself
+execution_allowed: false

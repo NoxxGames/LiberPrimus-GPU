@@ -1,0 +1,22 @@
+record_type: stage5bs_source_gap_severity_update
+schema: schemas/historical-route/stage5bs-source-gap-severity-update-v0.schema.json
+stage_id: stage-5bs
+stage_title: Stage 5BS - String 4 inactive-branch planning-ingestion gate and future-runner
+  citation integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bq
+source_previous_stage_commit: 8df9e26e5166caa130c059aa91b270bb81968afa
+source_deep_research_stage: stage-5br
+source_deep_research_report: 11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+metadata_only: true
+solve_claim: false
+source_gap_updates:
+- source_gap_id: stage5bk-string4-stage5ap-branch-membership-unreconciled
+  status_after_stage5bo: closed_operator_errata_supported_full_branch_match
+  status_after_stage5bq: closed_for_metadata_planning_only
+  status_after_stage5bs: gated_for_future_planning_ingestion_only
+  blocks_metadata_planning: false
+  blocks_active_ingestion: true
+  blocks_execution: true
+  blocks_future_token_block_execution: true
+execution_allowed: false

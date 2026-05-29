@@ -1,0 +1,68 @@
+record_type: stage5bs_summary
+schema: schemas/project-state/stage5bs-summary-v0.schema.json
+stage_id: stage-5bs
+stage_title: Stage 5BS - String 4 inactive-branch planning-ingestion gate and future-runner
+  citation integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bq
+source_previous_stage_commit: 8df9e26e5166caa130c059aa91b270bb81968afa
+source_deep_research_stage: stage-5br
+source_deep_research_report: 11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+metadata_only: true
+solve_claim: false
+status: complete
+stage5br_findings_integrated: true
+stage5br_verdict: accept_with_warnings
+reviewable_metadata_created: true
+reviewable_validation_evidence_created: true
+reviewable_source_digest_index_created: true
+reviewability_gap_register_created: true
+string4_branch_membership_status_after_errata: full_branch_match
+string4_planning_context_status: inactive_branch_context_only
+string4_planning_ingestion_gate_status: closed_gate_no_active_ingestion
+future_runner_citation_policy_created: true
+inactive_sidecar_consumption_policy_created: true
+active_ingestion_blocker_created: true
+string4_active_input_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+operator_errata_sidecar_status: inactive_planning_sidecar
+stage5bo_errata_aware_universe_active: false
+stage5bd_dry_run_records_remain_valid: true
+stage5bd_dry_run_plan_changed: false
+canonical_transcription_changed: false
+active_token_block_manifest_changed: false
+future_token_block_execution_remains_blocked: true
+parallel_validation_harness_used: true
+parallel_validation_run_passed: true
+codex_completion_summary_path: codex-output/stage5bs-codex-completion.md
+codex_output_directory_used: false
+recommended_next_prompt_type: deep_research_review
+recommended_next_stage_title: Stage 5BT - Deep Research review of Stage 5BS planning-ingestion
+  gate and reviewable evidence metadata, without execution
+recommended_next_stage_reason: Stage 5BS creates a fail-closed planning-ingestion
+  gate and reviewable committed evidence metadata; independent review should precede
+  any future inactive-sidecar planning-ingestion stage.
+source_record_paths:
+- data/project-state/stage5bs-stage5br-findings-integration.yaml
+- data/project-state/stage5bs-reviewable-stage-marker.yaml
+- data/project-state/stage5bs-reviewable-validation-evidence.yaml
+- data/project-state/stage5bs-reviewable-source-digest-index.yaml
+- data/project-state/stage5bs-reviewability-gap-register.yaml
+- data/source-harvester/stage5bs-review-packaging-warning.yaml
+- data/token-block/stage5bs-string4-planning-ingestion-gate.yaml
+- data/token-block/stage5bs-future-runner-citation-policy.yaml
+- data/token-block/stage5bs-inactive-sidecar-consumption-policy.yaml
+- data/token-block/stage5bs-active-ingestion-blocker.yaml
+- data/token-block/stage5bs-no-active-ingestion-proof.yaml
+- data/token-block/stage5bs-string4-gate-readiness-matrix.yaml
+- data/token-block/stage5bs-manifest-validation-requirements.yaml
+- data/token-block/stage5bs-future-stage-authorization-policy.yaml
+- data/token-block/stage5bs-stage5bd-plan-preservation.yaml
+- data/token-block/stage5bs-active-manifest-preservation.yaml
+- data/token-block/stage5bs-future-dry-run-planning-impact.yaml
+- data/historical-route/stage5bs-source-gap-severity-update.yaml
+- data/historical-route/stage5bs-dwh-quarantine-reaffirmation.yaml
+- data/historical-route/stage5bs-guardrail.yaml
+- data/source-harvester/stage5bs-codex-handoff-policy.yaml
+- data/project-state/stage5bs-next-stage-decision.yaml
+execution_allowed: false

@@ -26,4 +26,4 @@ Generated diagnostics stay ignored under `experiments/results/token-block/stage5
 
 Stage 5BO does not generate byte streams, materialise variants, run DWH/hash search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, activate canonical corpus, finalise page boundaries, or make solve claims.
 
-Stage 5BQ later consumes the Stage 5BP review outcome and records the Stage 5BO `full_branch_match` as inactive planning context only, with String 4 active input and dry-run ingestion still false.
+Stage 5BQ later consumes the Stage 5BP review outcome and records the Stage 5BO `full_branch_match` as inactive planning context only, with String 4 active input and dry-run ingestion still false. Stage 5BS then consumes the Stage 5BR review outcome as compact metadata, creates a closed planning-ingestion gate, requires future runners to cite the gate fail-closed, preserves Stage 5BD dry-run records, and keeps String 4 inactive until a future reviewed stage explicitly changes that boundary.

@@ -1,0 +1,100 @@
+record_type: stage5bs_reviewable_validation_evidence
+schema: schemas/project-state/stage5bs-reviewable-validation-evidence-v0.schema.json
+stage_id: stage-5bs
+stage_title: Stage 5BS - String 4 inactive-branch planning-ingestion gate and future-runner
+  citation integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bq
+source_previous_stage_commit: 8df9e26e5166caa130c059aa91b270bb81968afa
+source_deep_research_stage: stage-5br
+source_deep_research_report: 11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+metadata_only: true
+solve_claim: false
+reviewability_evidence_status: committed_compact_evidence
+local_validation_evidence_committed: true
+validation_scope:
+- stage5bs_validator
+- stage5bq_validator
+- stage5bo_validator
+- stage5bd_validator
+- stage5ax_parallel_validation
+- research_synthesis
+- consistency_state_drift
+- consistency_check_all
+- smoke
+- ruff
+- pytest
+- powershell_consistency_wrapper
+- public_docs
+- lock_hashes
+- workflow_static
+- wiki_source
+- wiki_dry_run
+commands:
+- command_id: stage5bs_validator
+  command: python -m libreprimus.cli token-block validate-stage5bs
+  status: passed
+- command_id: stage5bq_validator
+  command: python -m libreprimus.cli token-block validate-stage5bq
+  status: passed
+- command_id: stage5bo_validator
+  command: python -m libreprimus.cli token-block validate-stage5bo
+  status: passed
+- command_id: stage5bd_validator
+  command: python -m libreprimus.cli token-block validate-stage5bd --results-dir experiments/results/token-block/stage5bd
+  status: passed
+- command_id: stage5ax_parallel_validation
+  command: .\scripts\ci\run-parallel-validation.ps1 -Workers 16 -PytestWorkers 16
+    -PytestMode auto
+  status: passed
+- command_id: research_synthesis
+  command: python -m libreprimus.cli research-synthesis validate --data-dir data/research
+    --staged-plan docs/roadmap/staged-plan.md
+  status: passed
+- command_id: consistency_state_drift
+  command: python -m libreprimus.cli consistency check-state-drift
+  status: passed
+- command_id: consistency_check_all
+  command: python -m libreprimus.cli consistency check-all --allow-warnings
+  status: passed
+- command_id: smoke
+  command: python -m libreprimus.cli smoke
+  status: passed
+- command_id: ruff
+  command: python -m ruff check python/libreprimus tests/python
+  status: passed
+- command_id: pytest
+  command: python -m pytest -q tests/python
+  status: passed
+- command_id: powershell_consistency_wrapper
+  command: .\scripts\ci\run-consistency-checks.ps1
+  status: passed
+- command_id: public_docs
+  command: .\scripts\ci\verify-public-docs-status.ps1
+  status: passed
+- command_id: lock_hashes
+  command: .\scripts\ci\verify-lock-hashes.ps1
+  status: passed
+- command_id: workflow_static
+  command: .\scripts\ci\validate-workflow-static.ps1
+  status: passed
+- command_id: wiki_source
+  command: .\scripts\github\validate-wiki-source.ps1
+  status: passed
+- command_id: wiki_dry_run
+  command: .\scripts\github\sync-tutorials-to-wiki.ps1 --DryRun
+  status: passed
+- command_id: bash_consistency_wrapper
+  command: ./scripts/ci/run-consistency-checks.sh
+  status: not_run
+  reason_if_not_run: Only WSL bash.exe was available locally and no WSL distribution
+    was installed.
+pytest_count: 2143
+stage5ax_parallel_validation_used: true
+stage5ax_parallel_validation_passed: true
+raw_or_generated_files_staged: false
+codex_output_staged: false
+third_party_raw_staged: false
+human_review_pack_staged: false
+full_command_output_committed: false
+execution_allowed: false

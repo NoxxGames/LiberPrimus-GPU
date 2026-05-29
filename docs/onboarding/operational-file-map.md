@@ -43,14 +43,14 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5BQ" `
-  --expected-next-stage "Stage 5BR"
+  --expected-latest-stage "Stage 5BS" `
+  --expected-next-stage "Stage 5BT"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5BQ" `
-  --expected-next-stage "Stage 5BR"
+  --expected-latest-stage "Stage 5BS" `
+  --expected-next-stage "Stage 5BT"
 ```
 ## Stage 5BF Coverage
 
@@ -76,9 +76,11 @@ The operational file map includes Stage 5BN target, source-evidence, Stage 5AW o
 
 The operational file map includes Stage 5BO decision-template correction source lock, token-case human-review errata, correction impact, inactive errata-aware option universe, String 4 after-errata branch membership, Stage 5BN addendum integration, source-gap closure, planning constraint, token-block lineage, future dry-run planning impact, source-gap severity, DWH quarantine, guardrail, Codex handoff, summary, next-stage decision, experiment note, workflow note, developer log, and research log records. The local Codex completion summary under `codex-output/**` is intentionally ignored; `codex_output/**` is deprecated and must not be created for current handoffs.
 
-## Stage 5BQ Coverage
+## Stage 5BS Coverage
 
-The operational file map includes Stage 5BQ Stage 5BP findings integration, review-packaging warning, inactive branch planning context, operator-errata sidecar status, dry-run constraint update, no-active-ingestion proof, future dry-run requirements, active-manifest preservation, Stage 5BD lineage preservation, future planning impact, source-gap severity update, DWH quarantine, guardrail, Codex handoff, summary, next-stage decision, experiment note, workflow note, developer log, and research log records. The local Codex completion summary under `codex-output/**` is intentionally ignored; `codex_output/**` is deprecated and must not be created for current handoffs.
+The operational file map includes Stage 5BS reviewable stage-marker, validation-evidence, source-digest, reviewability-gap, findings-integration, planning-ingestion gate, future-runner citation policy, inactive-sidecar policy, active-ingestion blocker, no-active-ingestion proof, readiness matrix, manifest requirements, Stage 5BD preservation, active-manifest preservation, future-impact, source-gap, DWH, guardrail, Codex handoff, summary, next-stage, experiment note, workflow note, developer log, and research log records. The local Codex completion summary under `codex-output/**` is intentionally ignored; `codex_output/**` is deprecated and must not be created for current handoffs.
+
+Historical Stage 5BQ coverage includes Stage 5BQ Stage 5BP findings integration, review-packaging warning, inactive branch planning context, operator-errata sidecar status, dry-run constraint update, no-active-ingestion proof, future dry-run requirements, active-manifest preservation, Stage 5BD lineage preservation, future planning impact, source-gap severity update, DWH quarantine, guardrail, Codex handoff, summary, next-stage decision, experiment note, workflow note, developer log, and research log records. The local Codex completion summary under `codex-output/**` is intentionally ignored; `codex_output/**` is deprecated and must not be created for current handoffs.
 
 ## Stage 5BJ Coverage
 

@@ -1,0 +1,101 @@
+record_type: stage5bs_no_active_ingestion_proof
+schema: schemas/token-block/stage5bs-no-active-ingestion-proof-v0.schema.json
+stage_id: stage-5bs
+stage_title: Stage 5BS - String 4 inactive-branch planning-ingestion gate and future-runner
+  citation integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bq
+source_previous_stage_commit: 8df9e26e5166caa130c059aa91b270bb81968afa
+source_deep_research_stage: stage-5br
+source_deep_research_report: 11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+metadata_only: true
+solve_claim: false
+source_stage5bq_no_active_ingestion_proof: data/token-block/stage5bq-string4-no-active-ingestion-proof.yaml
+source_stage5bd_dry_run_plan: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+source_file_digests:
+- path: data/project-state/stage5bq-summary.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 9247c06c6fb3bf97f679d7b379fe8f0ba77f6abdc95591811f26dd6965bce287
+- path: data/project-state/stage5bq-next-stage-decision.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 2fb9e5e24dcee9ed5229804cae225cb16793fddcee639299d1fff99140c95944
+- path: data/token-block/stage5bq-string4-inactive-branch-planning-context.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: e716a4953f4f817de9466466c764e3b111d895bb4b4b0a2c246e24fbd6333c3b
+- path: data/token-block/stage5bq-errata-aware-dry-run-constraint-update.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 9e00d7aafc8f517ebbf4de19dd77d05bd4b8c3887829e94668aa1a62b7adf481
+- path: data/token-block/stage5bq-string4-no-active-ingestion-proof.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 1883042a515111c9b54b2fd5e36a75d51f8e1c33164abb4fadd0d7079e3b32eb
+- path: data/token-block/stage5bq-future-dry-run-requirements.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 2e169d18c43119f1263bd884983c87a3d4ff8f6ab31b50ef8d9585c48de7b442
+- path: data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 72840a2544cb72642a0f5bbd2bb6c4988665029e442b740aabc29641851dc816
+- path: data/token-block/stage5bo-errata-aware-token-option-universe.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 78e7c8727fa260a905afdf351743f4aa3e70a6d15553d63de473250ea706e238
+- path: data/token-block/stage5bo-string4-source-gap-closure-after-errata.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: b8ad54a7efe859e366c2a23294f1b61860f5fc0eb808df7aa7789553dfba198a
+- path: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: e2a40ec584be822e31e535d80a8863c3b0ba0280829184feeb73a53caa61af82
+- path: data/token-block/stage5bd-run-plan-id-registry.yaml
+  role: consumed_committed_record
+  present: true
+  committed: true
+  sha256: 34fd917871f36bb41ab65d317bc63be2ceef07fa036a61c78a15f7e4abb70ee5
+- path: deep-research-reports/reviews-of-ideas-and-concepts-and-data/md/11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+  role: ignored_deep_research_report
+  present: true
+  committed: false
+  sha256: 1415c5f6f21cdee235c2fd27fe10a636510c83e5ef2d57e3ae24aa876b882f8e
+stage5bd_run_plan_id_count: 10
+stage5bd_run_plan_ids:
+- stage5bd-8ec994ca8eb3d3dd
+- stage5bd-ec00205865d4a31b
+- stage5bd-3800876b07312b37
+- stage5bd-2de7f951293e11a1
+- stage5bd-315855134697e20c
+- stage5bd-3dbe38b80d6c2199
+- stage5bd-8acb40cb6e8dc03b
+- stage5bd-eb7e490f1f25738c
+- stage5bd-676c4f62491662ee
+- stage5bd-1868fb706614da5e
+stage5bd_run_plan_ids_changed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bb_active_manifest_registry_changed: false
+stage5aw_branch_manifest_changed: false
+stage5ay_branch_eligibility_changed: false
+stage5az_variant_family_manifest_changed: false
+canonical_transcription_changed: false
+string4_active_input_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_byte_stream_generation_allowed: false
+real_byte_stream_generated: false
+variant_materialisation_performed: false
+execution_allowed: false

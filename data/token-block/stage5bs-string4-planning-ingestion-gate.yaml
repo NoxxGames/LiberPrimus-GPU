@@ -1,0 +1,33 @@
+record_type: stage5bs_string4_planning_ingestion_gate
+schema: schemas/token-block/stage5bs-string4-planning-ingestion-gate-v0.schema.json
+stage_id: stage-5bs
+stage_title: Stage 5BS - String 4 inactive-branch planning-ingestion gate and future-runner
+  citation integration, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5bq
+source_previous_stage_commit: 8df9e26e5166caa130c059aa91b270bb81968afa
+source_deep_research_stage: stage-5br
+source_deep_research_report: 11_Deep-Research-Review-Of-Inactive-Branch-Dry-Run-Planning-Integration.md
+metadata_only: true
+solve_claim: false
+source_stage5bq_context: data/token-block/stage5bq-string4-inactive-branch-planning-context.yaml
+source_stage5bq_constraint_update: data/token-block/stage5bq-errata-aware-dry-run-constraint-update.yaml
+source_stage5bo_branch_membership: data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+string4_branch_membership_status_after_errata: full_branch_match
+string4_planning_context_status: inactive_branch_context_only
+string4_planning_ingestion_gate_status: closed_gate_no_active_ingestion
+string4_active_ingestion_status: blocked_pending_explicit_future_stage
+string4_active_input_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_byte_stream_generation_allowed: false
+gate_reasons:
+- inactive_sidecar_only
+- active_manifest_preservation_required
+- no_byte_stream_generation_gate_required
+- no_execution_guardrail_review_required
+- explicit_future_codex_planning_ingestion_stage_required
+- manifest_validation_required
+current_stage_allows_ingestion: false
+current_stage_allows_execution: false
+execution_allowed: false
