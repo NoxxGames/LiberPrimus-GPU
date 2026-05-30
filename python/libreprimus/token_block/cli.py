@@ -357,6 +357,20 @@ from .stage5ca import (
     validate_stage5ca_manifest_supersession_contract,
     validate_stage5ca_sidecar_gates,
 )
+from .stage5cc import (
+    DATA_PATHS as STAGE5CC_DATA_PATHS,
+    RESULTS_DIR as STAGE5CC_RESULTS_DIR,
+    build_stage5cc,
+    load_stage5cc_summary,
+    validate_stage5cc,
+    validate_stage5cc_activation_preconditions,
+    validate_stage5cc_active_planning_input_preflight,
+    validate_stage5cc_citation_contract,
+    validate_stage5cc_fail_closed_triggers,
+    validate_stage5cc_no_byte_stream_transition_gate,
+    validate_stage5cc_no_execution_transition_gate,
+    validate_stage5cc_sidecar_gates,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -3723,6 +3737,199 @@ def stage5ca_summary_command(
     console.print(
         "manifest_supersession_preflight_contract_created="
         f"{str(payload.get('manifest_supersession_preflight_contract_created')).lower()}"
+    )
+    console.print(
+        "future_token_block_execution_remains_blocked="
+        f"{str(payload.get('future_token_block_execution_remains_blocked')).lower()}"
+    )
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+@app.command("build-stage5cc")
+def build_stage5cc_command(
+    results_dir: Path = typer.Option(STAGE5CC_RESULTS_DIR),
+) -> None:
+    payload = build_stage5cc(results_dir=results_dir)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5cb_verdict={payload.get('stage5cb_verdict')}")
+    console.print(
+        "stage5ca_exact_citation_contract_preserved="
+        f"{str(payload.get('stage5ca_exact_citation_contract_preserved')).lower()}"
+    )
+    console.print(
+        "fail_closed_trigger_exact_set_hardened="
+        f"{str(payload.get('fail_closed_trigger_exact_set_hardened')).lower()}"
+    )
+    console.print(
+        "activation_precondition_exact_set_hardened="
+        f"{str(payload.get('activation_precondition_exact_set_hardened')).lower()}"
+    )
+    console.print(
+        "active_planning_input_proposal_preflight_created="
+        f"{str(payload.get('active_planning_input_proposal_preflight_created')).lower()}"
+    )
+    console.print(
+        "no_byte_stream_transition_gate_status="
+        f"{payload.get('no_byte_stream_transition_gate_status')}"
+    )
+    console.print(
+        "future_token_block_execution_remains_blocked="
+        f"{str(payload.get('future_token_block_execution_remains_blocked')).lower()}"
+    )
+
+
+@app.command("validate-stage5cc-citation-contract")
+def validate_stage5cc_citation_contract_command(
+    citation_contract: Path = typer.Option(STAGE5CC_DATA_PATHS["citation_preservation"]),
+) -> None:
+    counts, errors = validate_stage5cc_citation_contract(citation_contract=citation_contract)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5cc_citation_contract_valid=true")
+
+
+@app.command("validate-stage5cc-fail-closed-triggers")
+def validate_stage5cc_fail_closed_triggers_command(
+    trigger_contract: Path = typer.Option(STAGE5CC_DATA_PATHS["fail_closed_contract"]),
+) -> None:
+    counts, errors = validate_stage5cc_fail_closed_triggers(trigger_contract=trigger_contract)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5cc_fail_closed_triggers_valid=true")
+
+
+@app.command("validate-stage5cc-activation-preconditions")
+def validate_stage5cc_activation_preconditions_command(
+    activation_contract: Path = typer.Option(STAGE5CC_DATA_PATHS["activation_contract"]),
+) -> None:
+    counts, errors = validate_stage5cc_activation_preconditions(
+        activation_contract=activation_contract
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5cc_activation_preconditions_valid=true")
+
+
+@app.command("validate-stage5cc-active-planning-input-preflight")
+def validate_stage5cc_active_planning_input_preflight_command(
+    preflight: Path = typer.Option(STAGE5CC_DATA_PATHS["active_planning_preflight"]),
+) -> None:
+    counts, errors = validate_stage5cc_active_planning_input_preflight(preflight=preflight)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5cc_active_planning_input_preflight_valid=true")
+
+
+@app.command("validate-stage5cc-no-byte-stream-transition-gate")
+def validate_stage5cc_no_byte_stream_transition_gate_command(
+    gate: Path = typer.Option(STAGE5CC_DATA_PATHS["no_byte_stream_transition_gate"]),
+) -> None:
+    counts, errors = validate_stage5cc_no_byte_stream_transition_gate(gate=gate)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5cc_no_byte_stream_transition_gate_valid=true")
+
+
+@app.command("validate-stage5cc-no-execution-transition-gate")
+def validate_stage5cc_no_execution_transition_gate_command(
+    gate: Path = typer.Option(STAGE5CC_DATA_PATHS["no_execution_transition_gate"]),
+) -> None:
+    counts, errors = validate_stage5cc_no_execution_transition_gate(gate=gate)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5cc_no_execution_transition_gate_valid=true")
+
+
+@app.command("validate-stage5cc-sidecar-gates")
+def validate_stage5cc_sidecar_gates_command() -> None:
+    counts, errors = validate_stage5cc_sidecar_gates()
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5cc_sidecar_gates_valid=true")
+
+
+@app.command("validate-stage5cc")
+def validate_stage5cc_command(
+    summary: Path = typer.Option(STAGE5CC_DATA_PATHS["summary"]),
+    next_stage_decision: Path = typer.Option(STAGE5CC_DATA_PATHS["next_stage"]),
+    guardrail: Path = typer.Option(STAGE5CC_DATA_PATHS["guardrail"]),
+    results_dir: Path = typer.Option(STAGE5CC_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5cc(
+        summary=summary,
+        next_stage_decision=next_stage_decision,
+        guardrail=guardrail,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5cc_valid=true")
+
+
+@app.command("stage5cc-summary")
+def stage5cc_summary_command(
+    summary: Path = typer.Option(STAGE5CC_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5cc_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5cb_verdict={payload.get('stage5cb_verdict')}")
+    console.print(
+        "stage5ca_exact_citation_contract_preserved="
+        f"{str(payload.get('stage5ca_exact_citation_contract_preserved')).lower()}"
+    )
+    console.print(
+        "fail_closed_trigger_exact_set_hardened="
+        f"{str(payload.get('fail_closed_trigger_exact_set_hardened')).lower()}"
+    )
+    console.print(
+        "activation_precondition_exact_set_hardened="
+        f"{str(payload.get('activation_precondition_exact_set_hardened')).lower()}"
+    )
+    console.print(
+        "active_planning_input_authorized_now="
+        f"{str(payload.get('active_planning_input_authorized_now')).lower()}"
+    )
+    console.print(
+        "no_byte_stream_transition_gate_status="
+        f"{payload.get('no_byte_stream_transition_gate_status')}"
+    )
+    console.print(
+        "no_execution_transition_gate_status="
+        f"{payload.get('no_execution_transition_gate_status')}"
     )
     console.print(
         "future_token_block_execution_remains_blocked="

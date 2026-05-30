@@ -1,0 +1,571 @@
+record_type: stage5cc_source_digest_index
+schema: schemas/project-state/stage5cc-reviewable-source-digest-index-v0.schema.json
+stage_id: stage-5cc
+stage_title: Stage 5CC - Inactive-sidecar active-planning-input proposal preflight
+  and no-byte-stream transition gate, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5ca
+source_previous_stage_commit: 5da4d0e82dd1de34d9d3ff6e9d2b04587d1531db
+source_deep_research_stage: stage-5cb
+source_deep_research_report: 16_Stage-5CA-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+source_digest_unique_path_validation_created: true
+source_digest_record_count: 83
+source_digest_unique_path_count: 83
+duplicate_path_count: 0
+duplicate_path_exception_count: 0
+source_digest_records:
+- path: deep-research-reports/reviews-of-ideas-and-concepts-and-data/md/16_Stage-5CA-Deep-Research-Review.md
+  role: stage5cc_source_record
+  present: true
+  sha256: 74f9b5d3e681335e947588df9608a20be62d08277b7501605821a6d683a6fac9
+  size_bytes: 31520
+  raw_or_generated_body_committed: false
+- path: README.md
+  role: stage5cc_source_record
+  present: true
+  sha256: 078174840ddfa1d8b22f8f8f849d9812ba85ce4336938ec0e7e1fbe9db1948a1
+  size_bytes: 68368
+  raw_or_generated_body_committed: false
+- path: STATUS.md
+  role: stage5cc_source_record
+  present: true
+  sha256: 50fc854abe74622c696f4464a7a1bc05fdf7460c88d39b8637b7e562d9c96dde
+  size_bytes: 168550
+  raw_or_generated_body_committed: false
+- path: AGENTS.md
+  role: stage5cc_source_record
+  present: true
+  sha256: 2e82a77c3445e58cba85706de3e56ad619e98584742789540a423f142094f17c
+  size_bytes: 111707
+  raw_or_generated_body_committed: false
+- path: ROADMAP.md
+  role: stage5cc_source_record
+  present: true
+  sha256: fda466aa740c74bf8da38c81ba15141dfe04501ad8ebfc881a86e62d1126bad0
+  size_bytes: 46124
+  raw_or_generated_body_committed: false
+- path: TESTING.md
+  role: stage5cc_source_record
+  present: true
+  sha256: 7aa2fa5c99f814ee5c2f07a71334d17b85fbfe34a28ec927958a4bbb60fe261f
+  size_bytes: 93168
+  raw_or_generated_body_committed: false
+- path: docs/roadmap/staged-plan.md
+  role: stage5cc_source_record
+  present: true
+  sha256: 7fe0ce3aeec461dc63565c8209b44d3ec42e0cb049c173d87feaaaabdc27c248
+  size_bytes: 91391
+  raw_or_generated_body_committed: false
+- path: docs/onboarding/start-here.md
+  role: stage5cc_source_record
+  present: true
+  sha256: 61c9b8a5130a0dac227f6c1b7ac1499ec38a9aeb8bc90da54282367d95257268
+  size_bytes: 8866
+  raw_or_generated_body_committed: false
+- path: docs/onboarding/source-of-truth-map.md
+  role: stage5cc_source_record
+  present: true
+  sha256: 3c82e3b0cf618d6b44d81831a264751f373fa28aa632df0254657fee42f12971
+  size_bytes: 26565
+  raw_or_generated_body_committed: false
+- path: docs/onboarding/operational-file-map.md
+  role: stage5cc_source_record
+  present: true
+  sha256: 45156aa4ebe11ab275703b0999577aa7c10f3cc3969b91fc174c737f36f50c11
+  size_bytes: 11592
+  raw_or_generated_body_committed: false
+- path: docs/onboarding/codex-navigation-map.md
+  role: stage5cc_source_record
+  present: true
+  sha256: 2850c8429ec60fb874196c87729fcc0ceafd9cec4be5efd7b2e3e03545affb6b
+  size_bytes: 11489
+  raw_or_generated_body_committed: false
+- path: docs/onboarding/deep-research-handoff-map.md
+  role: stage5cc_source_record
+  present: true
+  sha256: b4f7e878f1e8cd8b51aaa8a1e8eaf28cda96d31164e7307bbf218968a9bcfcc1
+  size_bytes: 16339
+  raw_or_generated_body_committed: false
+- path: docs/onboarding/token-block-source-lock-workflow.md
+  role: stage5cc_source_record
+  present: true
+  sha256: 23b98c1fa291ec617297708abaacab47b71d56ab227d8c3e1ecc75a715e81750
+  size_bytes: 5107
+  raw_or_generated_body_committed: false
+- path: docs/onboarding/token-block-preflight-dry-run-workflow.md
+  role: stage5cc_source_record
+  present: true
+  sha256: 91945197f4af61c8b099f0bd7c6898cf47424bfe9706a8b05e09f26026a7fbcb
+  size_bytes: 2891
+  raw_or_generated_body_committed: false
+- path: docs/reference/token-block-cli.md
+  role: stage5cc_source_record
+  present: true
+  sha256: f04477250a7886372bf7d76be68f0713d616950ff0a0eb2e6d83615e8e784344
+  size_bytes: 19511
+  raw_or_generated_body_committed: false
+- path: data/project-state/stage5ca-summary.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 0c328b0beff37d77fede6a17c9598ec4bef0190ec3e480fdcbe5cf598452f2a4
+  size_bytes: 3498
+  raw_or_generated_body_committed: false
+- path: data/project-state/stage5ca-next-stage-decision.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 53f2751ac326572e42d6f765f58579d8531038c238ef90bd8a7ea9daddeaf97d
+  size_bytes: 2593
+  raw_or_generated_body_committed: false
+- path: data/project-state/stage5ca-stage5bz-findings-integration.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: ceeb2983fc8a171d35b641c3be8c0cf26fe98540ae7f2a92c1d7e2ffd0814fec
+  size_bytes: 2605
+  raw_or_generated_body_committed: false
+- path: data/project-state/stage5ca-reviewable-stage-marker.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 54fb78c8960783a1f8a7800b74189b9072a5c486c59af65c68658d55c6d2f7b6
+  size_bytes: 2378
+  raw_or_generated_body_committed: false
+- path: data/project-state/stage5ca-reviewable-validation-evidence.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: eae653c893eba329bba7b6690db7e4f4ae4bed42740b5d52f23187b8ad882bc6
+  size_bytes: 6502
+  raw_or_generated_body_committed: false
+- path: data/project-state/stage5ca-reviewable-source-digest-index.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 8d128ff35abe3537c0746fd43003358852d1040036a628ed65a70e9c97fc8d60
+  size_bytes: 17638
+  raw_or_generated_body_committed: false
+- path: data/project-state/stage5ca-reviewability-gap-register.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 0c5588afb0b7c1842d23cb81376b6b7d10be0551a8eaad677e3de7ae06c8040f
+  size_bytes: 2533
+  raw_or_generated_body_committed: false
+- path: data/project-state/stage5ca-record-family-name-equivalence-map.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: e640752a968801627b4ba591ca53349e75d0890e1f0872122f0167736e22ef0f
+  size_bytes: 3120
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-inactive-sidecar-review-contract.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 8ad4458c0b53ded678d5ae9879c30a53276d1255e55eb8591741ebc9191a9309
+  size_bytes: 2780
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-future-runner-exact-citation-contract.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 0b0d6b036e11e404de196e8c9a385ead9e565338ec72b859cc10cd56ddae1915
+  size_bytes: 9421
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-future-runner-citation-validation-requirements.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 20fe50c13fd9d39651b589775175cb99c09a2a203f9840512214c21b74df33ff
+  size_bytes: 2444
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-fail-closed-trigger-contract.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 88a766081ed0ae5962508b36bdf36394b5d8c47bed6eac88dddc67655a21207d
+  size_bytes: 2798
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-fail-closed-trigger-validation-requirements.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: b4cba0615f2ad549fd463a25f585731615ce4a0c23eaba0cebc85c73e44ddbb9
+  size_bytes: 2355
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-activation-precondition-contract.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: b63c8214e314623b928a8a8d20d4f2606e3a2611bc44f48b00b4909bb13a04a6
+  size_bytes: 3056
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-activation-precondition-validation-requirements.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 60074ac3bcb0ea633956c63d231dcc5eb5401b5c590fc818a704773ab53be3f7
+  size_bytes: 2427
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-manifest-supersession-preflight-contract.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 04fefef5fe1870bdf660d7d02ea023d323fb1eb60da4d7fc3f24578cfadfdf2e
+  size_bytes: 2828
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-manifest-supersession-review-determinism.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 2b7ec8c6d3d64e040afcc2330f13f9a322dfc8ceca8eb91e7d5fd68b523f2365
+  size_bytes: 2378
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-sidecar-to-active-transition-policy.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 40cb2a265c64ee4b363679db4ecea4e07ed0088523a1195105ae45b3283f07e7
+  size_bytes: 2470
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-sidecar-activation-blocker.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: e53cd9374004595663cc59a060b8e839b41c9eeea8d15a5e79e032643d9ac6b9
+  size_bytes: 2462
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-stage5by-sidecar-scaffold-preservation.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 07deb48395a231a6ea4cfbb992e1df6af9b2b56a2dd923dbde739475ccc550ce
+  size_bytes: 2423
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-stage5bd-plan-preservation.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 09a2f892665dfa8f6f973471ea2279a6686623c89fd9fdc2a57f383d57028048
+  size_bytes: 2909
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-active-lineage-preservation.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 9036098d3cf4c844c7a3e59a0debb23e840b74212689604340e57517da3ecf5c
+  size_bytes: 5079
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-no-active-ingestion-proof.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 9415431a0652c016e449f63fa80bab87737ef4e1b547373dc141167bb8121190
+  size_bytes: 2294
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-no-byte-stream-proof.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: f3cf14018569ba60b637191e8234f58d3009fe4658a39fe20a7a5ca9cd0dd7ff
+  size_bytes: 2190
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ca-future-dry-run-planning-impact.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 10874753d955e3da248f641a9b491243d5a631ee8465d6e637a12a11e905ea03
+  size_bytes: 2334
+  raw_or_generated_body_committed: false
+- path: data/historical-route/stage5ca-source-gap-severity-update.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 507d6b3d5d44fd58c1ce450058b545b4481dafd2866b6d1d109a923222176266
+  size_bytes: 2270
+  raw_or_generated_body_committed: false
+- path: data/historical-route/stage5ca-dwh-quarantine-reaffirmation.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 4f4fe519bda50296b4d50b14d92b357a5fae55938920b508d72ad59a70bc1911
+  size_bytes: 2201
+  raw_or_generated_body_committed: false
+- path: data/historical-route/stage5ca-guardrail.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: bede506b8a067f9711390503c0a152df04d3d18516312a2cf6acabfbb8d22827
+  size_bytes: 2257
+  raw_or_generated_body_committed: false
+- path: data/source-harvester/stage5ca-codex-handoff-policy.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 67bde84641211f229f6849a42541955d68a669d78ea0af5a344a476c57e08d78
+  size_bytes: 2229
+  raw_or_generated_body_committed: false
+- path: data/source-harvester/stage5ca-review-packaging-warning.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 7e78db982d7fe2663b7ce66cfe945a4eae93ee5f98cd2eec03e1519032581a9e
+  size_bytes: 2277
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 72840a2544cb72642a0f5bbd2bb6c4988665029e442b740aabc29641851dc816
+  size_bytes: 1856
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bo-errata-aware-token-option-universe.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 78e7c8727fa260a905afdf351743f4aa3e70a6d15553d63de473250ea706e238
+  size_bytes: 7146
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bo-string4-source-gap-closure-after-errata.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: b8ad54a7efe859e366c2a23294f1b61860f5fc0eb808df7aa7789553dfba198a
+  size_bytes: 1526
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bq-string4-inactive-branch-planning-context.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: e716a4953f4f817de9466466c764e3b111d895bb4b4b0a2c246e24fbd6333c3b
+  size_bytes: 1637
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bq-errata-aware-dry-run-constraint-update.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 9e00d7aafc8f517ebbf4de19dd77d05bd4b8c3887829e94668aa1a62b7adf481
+  size_bytes: 1547
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bq-string4-no-active-ingestion-proof.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 1883042a515111c9b54b2fd5e36a75d51f8e1c33164abb4fadd0d7079e3b32eb
+  size_bytes: 3245
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bs-string4-planning-ingestion-gate.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 47999679994d10ff446949e0a49621c429a84d93762f3ad650bc990fbb3b15e2
+  size_bytes: 1747
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bs-future-runner-citation-policy.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 12b02b15c0786b6116f89c8d709cde4d0b0e6828aedf9225e0ea4dc4c45349d8
+  size_bytes: 1595
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bs-inactive-sidecar-consumption-policy.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 207644c8f65145e24cd598a88217d2a57c8f6e2a6216ed9ccc28acbe870c7e5f
+  size_bytes: 1316
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bs-active-ingestion-blocker.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 643a5f6162aaaee0a7237371c86a1e62c57029ccc7b760c8a0203e79861d48ab
+  size_bytes: 1288
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bu-lineage-path-resolution-validation.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 9712e74ff02dcecb5b310807a4a4d42c8cec68f65c1d1712b8062a0fc0aa1145
+  size_bytes: 1365
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bu-preserved-active-lineage-digest-index.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: d57864bcc1fd7b3c265d879d05f413feef9d962e1677ec98e1904b9a94976033
+  size_bytes: 2746
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bu-active-manifest-preservation-repair.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 69df4c5767db318716d47d71115c81ccfc02991607e7da708a7b84fb52c37ae6
+  size_bytes: 1635
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bw-inactive-sidecar-planning-ingestion-proposal.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 38fba90a3b43b53ff6c460d3cdeeff8ab9ccbacbb40cad071aab8d09a1affaca
+  size_bytes: 1763
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bw-manifest-supersession-preflight.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 46902ed6ad0e2f7f634ce9c112c0d2eab00af9d33a598536f052a4a81c67b69a
+  size_bytes: 2948
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bw-stage5bd-plan-preservation.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: aad26c1f80f2b8ea258963a212abda3d667e5a7c41a4ba81ae983b1425a04837
+  size_bytes: 1527
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bw-future-runner-citation-requirements.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 7bc1b09ef2c2ac24957f6b20ee8df40620b61bddd6095169150bbac7750370a2
+  size_bytes: 1736
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5by-inactive-sidecar-planning-manifest-scaffold.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: eb2301eb9a83b98efa2eae3314406d57df7f2ccdeacb9643c77b40143e359b43
+  size_bytes: 2616
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5by-no-execution-planning-ingestion-sidecar.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 0f90f0fbc21628a009180dcfd82f11188d1c52d22616200f78e34aef26b48f54
+  size_bytes: 2579
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5by-future-runner-citation-requirements.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 342a09a9da4b64f5b3f0634aff7e9501dcb647b5e7de4bffd7a7a9d7a53e9988
+  size_bytes: 1673
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5by-sidecar-activation-blocker.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 927dbebd787a09053183dc972e1a7e11827980afed0784ad00cbf838aa30b929
+  size_bytes: 2266
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5by-stage5bd-plan-preservation.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: a9973a20550b6097273bd8f3a11c663bcb8482b918f56434833dd275dcca27c4
+  size_bytes: 2733
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5by-active-lineage-preservation.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 4bccfb8579d1b62f58c460f0f87048c839038bb9791d27efcf07565ac9c0d53b
+  size_bytes: 4935
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ap-token-block-canonical-transcription.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 264e059f73ebf04ea2982288d34ad8d7f278d68ef0e8d88fe2e6c8b15f66328e
+  size_bytes: 29096
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 5e2dfee9717b1950cc7f61cf6e8b48ea592105e6dbe5e94d31396556c41daa3f
+  size_bytes: 154361
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5ay-branch-eligibility-policy.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 8cab6a59ce259ce3cb9aa4f5c0312071f47cae543b46f39a5ff838f676d98624
+  size_bytes: 48827
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 4be0806a2f41aac56b858774af253d249bd1dd894e253fa04fe52a57ed4bf1a3
+  size_bytes: 5141
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bb-active-manifest-registry.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 0f415521d5380283fd4296e9c7acb8d87267fa246f95f0ac69c4ebcc13cfab07
+  size_bytes: 7301
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-active-manifest-lock.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: daafd90b61191941ecdfa86cce56516f0199813fd7f76f81ba4d8d9e793dceec
+  size_bytes: 8047
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: e2a40ec584be822e31e535d80a8863c3b0ba0280829184feeb73a53caa61af82
+  size_bytes: 7798
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-run-plan-id-registry.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 34fd917871f36bb41ab65d317bc63be2ceef07fa036a61c78a15f7e4abb70ee5
+  size_bytes: 5201
+  raw_or_generated_body_committed: false
+- path: data/project-state/stage5bd-summary.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 2fab4c9a372743d04e73f6057ee8ee3e2c7f09654aebab5f8f770c24ef507ec2
+  size_bytes: 4345
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-run-plan-id-policy.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: bbd24405544d85a2ecd06c3d807ccfd889091d6d09ef5b32768b6dca02a125c1
+  size_bytes: 1175
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-dry-run-policy.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 22bd96af49ae67156dc315e917d883ca9c076a4bbf4652347441dd8f4899e6e6
+  size_bytes: 1653
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-future-result-path-validation.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: 0ddd825dc9663946cf4379148919c5c464b1ea3dfd77871cc6d8bc9ca72d25ba
+  size_bytes: 2070
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-execution-gate-dry-run-validation.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: edd6512b6eb6eb1f2362d13edeefbccf9e936edd248b1fce57f2a982583f468f
+  size_bytes: 887
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-no-byte-stream-proof.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: fb409acc646c733f036e475afbf1dcfc13c4b8cb996336b08f3fb5cfed0b92fc
+  size_bytes: 1229
+  raw_or_generated_body_committed: false
+- path: data/token-block/stage5bd-guardrail.yaml
+  role: stage5cc_source_record
+  present: true
+  sha256: f5205839c429e6e761e603e276ede17f71c0206ddfc1626cfea0d79670ad57a8
+  size_bytes: 1656
+  raw_or_generated_body_committed: false
+source_paths_unique: true
+raw_or_generated_source_bodies_committed: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_proposal_performed: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+full_cartesian_product_enumerated: false
+generated_byte_streams_committed: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+image_forensics_performed: false
+llm_vision_token_reading_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+new_active_planning_input_created: false
+ocr_performed: false
+page_boundaries_final: false
+pgp_network_verification_performed: false
+raw_archive_files_committed: false
+raw_fandom_files_committed: false
+raw_human_review_pack_committed: false
+real_byte_stream_generated: false
+scoring_performed: false
+spreadsheet_file_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_run_plan_ids_changed: false
+stage5bd_plan_superseded: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+template_bodies_committed: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false

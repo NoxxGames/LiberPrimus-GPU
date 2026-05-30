@@ -101,3 +101,5 @@ For Stage 5BW inactive-sidecar planning-ingestion preflight work, start with `do
 For Stage 5BY inactive-sidecar planning-manifest scaffold work, start with `docs/onboarding/stage5by-inactive-sidecar-planning-manifest-workflow.md` and run `token-block build-stage5by`, `validate-stage5by-source-digest-uniqueness`, `validate-stage5by-sidecar-gates`, `validate-stage5by`, and `stage5by-summary`. Treat the sidecar as scaffolded inactive and no-execution only.
 
 For Stage 5CA inactive-sidecar review-contract hardening work, start with `docs/onboarding/stage5ca-inactive-sidecar-review-contract-workflow.md` and run `token-block build-stage5ca`, the focused Stage 5CA validators, `validate-stage5ca`, and `stage5ca-summary`. Treat the sidecar as inactive review-contract metadata only.
+
+For Stage 5CC active-planning-input preflight work, start with `docs/onboarding/stage5cc-active-planning-input-preflight-workflow.md` and run `token-block build-stage5cc`, the focused Stage 5CC validators, `validate-stage5cc`, and `stage5cc-summary`. Treat the active-planning proposal as unperformed and unauthorized; no byte-stream or execution gate opens in this stage.
