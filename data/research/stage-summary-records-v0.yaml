@@ -1528,3 +1528,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5BY records Stage 5BX verdict accept_with_warnings, Stage 5BW source-digest row count 23, unique path count 21, duplicate path count 2, Stage 5BY source digest records 19, duplicate path count 0, inactive sidecar scaffold created true, no-execution sidecar created true, manifest supersession performed false, String 4 active input false, dry-run ingestion false, byte-stream generation false, execution input false, Stage 5BD dry-run records valid, Stage 5BD run-plan ID count 10, canonical transcription changed false, active manifests changed false, and future execution blocked. It performs no Deep Research body commit, Codex completion commit, token experiment, active ingestion, byte-stream generation, variant materialisation, manifest supersession, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ca
+    title: Inactive-sidecar manifest review contract and activation-precondition hardening, without execution
+    status: complete
+    category: infrastructure
+    summary: Integrated the Stage 5BZ accept-with-warnings review outcome by hardening exact future-runner citation validation, fail-closed trigger validation, activation-precondition validation, and deterministic manifest-supersession preflight checks without activating String 4.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5CA commands for build, exact citation validation, fail-closed trigger validation, activation-precondition validation, manifest-supersession validation, sidecar-gate validation, aggregate validation, and summary display."
+      - Stage 5CA findings integration, reviewable validation/source-digest/gap records, inactive sidecar review contract, exact future-runner citation contract, fail-closed trigger contract, activation-precondition contract, manifest-supersession preflight contract, sidecar transition policy, Stage 5BY scaffold preservation, active-lineage preservation, Stage 5BD plan preservation, no-active-ingestion proof, no-byte-stream proof, source-gap/DWH guardrails, Codex handoff policy, summary, and next-stage records.
+      - Summary-only developer/research logs; ignored generated diagnostics under `experiments/results/token-block/stage5ca/`; local handoff under `codex-output/stage5ca-codex-completion.md`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5CA records Stage 5BZ verdict accept_with_warnings, required citation count 33, fail-closed trigger count 17, activation precondition count 12, supersession requirement count 9, source digest records 59, active-lineage count 8, Stage 5BD run-plan ID count 10, manifest supersession performed false, String 4 active input false, dry-run ingestion false, byte-stream generation false, execution input false, Stage 5BD dry-run records valid, canonical transcription changed false, active manifests changed false, and future execution blocked. It performs no Deep Research body commit, Codex completion commit, token experiment, active ingestion, byte-stream generation, variant materialisation, manifest supersession, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

@@ -8,7 +8,7 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5BY inactive-sidecar planning manifest scaffold and no-execution planning-ingestion sidecar. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5CA inactive-sidecar manifest review contract and activation-precondition hardening. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -50,7 +50,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 
 ### Deferred future work
 
-- Stage 5BZ - Deep Research review of Stage 5BY inactive-sidecar planning manifest scaffold and reviewability tightening, without execution.
+- Stage 5CB - Deep Research review of Stage 5CA inactive-sidecar review contract and activation-precondition hardening, without execution.
 - Website expansion is deferred to a future unnumbered project.
 - Future visual numeric observations for base-60 or cuneiform-like numbers, binary dot patterns, symmetry/asymmetry, and page imagery must remain reviewable before becoming experiment seeds.
 - Search campaigns.
@@ -173,6 +173,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 5BO token-case human-review errata integration and inactive String 4 full-branch reclassification metadata.
 - Stage 5BS inactive-branch planning-ingestion gate and future-runner citation policy.
 - Stage 5BY inactive-sidecar planning manifest scaffold and no-execution planning-ingestion sidecar.
+- Stage 5CA inactive-sidecar review contract hardening with exact citation, fail-closed trigger, activation-precondition, and manifest-supersession preflight contracts.
 
 ## Architecture summary
 
@@ -301,6 +302,7 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Stage 5BS: inactive String 4 planning-ingestion gate, reviewable evidence metadata, and fail-closed future-runner citation policy complete.
 - Stage 5BU: Stage 5BS lineage-path erratum, preserved active-lineage digest index, path-resolution validation, and validator hardening complete.
 - Stage 5BY: inactive planning manifest scaffold, no-execution planning-ingestion sidecar, Stage 5BW duplicate source-digest classification, filename-equivalence map, active-lineage preservation, and Stage 5BD run-plan preservation complete.
+- Stage 5CA: inactive-sidecar review contract, exact future-runner citation contract, fail-closed trigger contract, activation-precondition contract, manifest-supersession preflight contract, Stage 5BD preservation, active-lineage preservation, no-active-ingestion proof, and no-byte-stream proof complete.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -350,10 +352,10 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Latest prime-minus-one native contract stage: Stage 5W wrote `7` source inventory records, `2` stream contract records, `3` prime schedule records, `3` Candidate Batch ABI mapping records, `3` native parity preparation records, `3` result-store preflight records, `6` guardrail records, and `8` next-stage decision records. It marks the bounded Stage 4O/5L p56 mapping ready for future no-GPU native parity, keeps full p56 parity blocked until a complete committed token buffer is scoped, ran no CUDA or native/CUDA CMake, added no kernels, benchmarked nothing, and selected Stage 5X.
 - Latest prime-minus-one native parity stage: Stage 5X wrote `3` native run records, `3` native parity records, `3` result-store preflight records, `3` score-summary preflight records, `1` full-p56 blocker record, `7` guardrail records, and `9` next-stage decision records. It executed only the two Stage 5W ready no-GPU Python-reference mappings, matched both Stage 5W expected hashes, skipped the blocked full p56 mapping, ran no CUDA or native/CUDA CMake, added no kernels, benchmarked nothing, and selected Stage 5Y.
 - Latest source-harvester/website stage: Stage 5AN builds a private Deep Research content pack and SFTP-ready hosted content library from Stage 5AL/5AM metadata. It writes compact records under `data/deep-research-export/`, generated private pack files under `deep-research-content-packs/stage5an/`, hosted private content under `website-export/stage5an/private-content/`, and a combined upload root under `website-export/stage5an/webserver-root/`. It records `208` content-pack files, `211` hosted-content files, `10` bundles, `61` source records, `58` content records, `12` community-claim records, `183` private extracts, `7` publication gates, and `0` public website-ready records. It commits only metadata/contracts/scaffolds and performs no network fetch, online clone, Google Drive storage, raw source commit, public website publication, Deep Research execution, hypothesis generation/execution, OCR, AI/ML interpretation, image/stego/audio execution, CUDA, benchmark, scored experiment, or solve claim.
-- Latest historical-route/token-block crosswalk stage: Stage 5BY consumes Stage 5BX findings as compact metadata, classifies Stage 5BW source-digest duplicates, maps Stage 5BW filename drift to committed record families, creates an inactive planning manifest scaffold and no-execution sidecar, preserves 8 active-lineage paths and 10 Stage 5BD run-plan IDs, and leaves String 4 active input, dry-run ingestion, byte-stream generation, and future token-block execution blocked.
+- Latest historical-route/token-block crosswalk stage: Stage 5CA consumes Stage 5BZ findings as compact metadata, hardens the inactive sidecar review contract, exact future-runner citation set, fail-closed trigger set, activation preconditions, and manifest-supersession preflight, preserves 8 active-lineage paths and 10 Stage 5BD run-plan IDs, and leaves String 4 active input, dry-run ingestion, byte-stream generation, and future token-block execution blocked.
 - Latest validation stage: Stage 5AX adds opt-in parallel validation infrastructure with `10` parallel-safe commands, `6` serial commands, `1` blocked command, 16-worker local sharded pytest fallback, separated logs, failure aggregation, and safety audits while keeping git/GitHub/network/generated-output-writing operations serial. Stage 5AY uses that harness for local validation metadata only.
-- Latest doc-staleness stage: Stage 5AH repairs README stage-ledger coverage, operational-file-map coverage, and current/next-stage consistency checks before curated extraction. Stage 5BY updates current/next-stage records to Stage 5BZ.
-- Next: Stage 5BZ - Deep Research review of Stage 5BY inactive-sidecar planning manifest scaffold and reviewability tightening, without execution.
+- Latest doc-staleness stage: Stage 5AH repairs README stage-ledger coverage, operational-file-map coverage, and current/next-stage consistency checks before curated extraction. Stage 5CA updates current/next-stage records to Stage 5CB.
+- Next: Stage 5CB - Deep Research review of Stage 5CA inactive-sidecar review contract and activation-precondition hardening, without execution.
 
 ## How To Use This Repo
 

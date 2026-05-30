@@ -33,3 +33,5 @@ Stage 5BU later repairs the Stage 5BS preserved active-lineage path and hardens 
 Stage 5BW later proposes inactive-sidecar planning ingestion and manifest-supersession preflight while keeping String 4 inactive, active manifests unchanged, Stage 5BD run-plan IDs preserved, and all execution gates blocked before Stage 5BX review.
 
 Stage 5BY later consumes the Stage 5BX review outcome, classifies the Stage 5BW duplicate source-digest rows, adds record-family filename-equivalence metadata, creates an inactive planning-manifest scaffold plus no-execution planning-ingestion sidecar, preserves Stage 5BD run-plan IDs, and keeps String 4 inactive before Stage 5BZ review.
+
+Stage 5CA later consumes the Stage 5BZ review outcome and hardens the inactive sidecar with exact future-runner citation, fail-closed trigger, activation-precondition, manifest-supersession preflight, sidecar-transition, Stage 5BD preservation, active-lineage preservation, no-active-ingestion, and no-byte-stream contracts before Stage 5CB review. It still keeps String 4 inactive and does not authorize active ingestion or execution.

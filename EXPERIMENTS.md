@@ -1,5 +1,7 @@
 # Experiments
 
+Stage 5CA is not an experiment. It is metadata-only inactive sidecar review-contract hardening for String 4; generated diagnostics under `experiments/results/token-block/stage5ca/` remain ignored. It creates exact citation, fail-closed trigger, activation-precondition, manifest-supersession preflight, sidecar-transition, Stage 5BD preservation, active-lineage preservation, no-active-ingestion, and no-byte-stream records, but it does not activate String 4, supersede manifests, mutate Stage 5BD plans, generate byte streams, materialise variants, execute token-block work, search DWH/hash targets, decode, score, run CUDA, benchmark, expand the website, upgrade method status, or make solve claims.
+
 ## Stage 5BS String 4 Planning-Ingestion Gate
 
 Stage 5BS is planning-ingestion gate metadata infrastructure, not an experiment. It commits compact records for Stage 5BR findings integration, reviewable validation evidence, source-digest indexing, reviewability gaps, String 4 inactive planning-ingestion gate status, future-runner citation policy, inactive-sidecar consumption policy, active-ingestion blocker, no-active-ingestion proof, gate readiness matrix, manifest validation requirements, Stage 5BD plan preservation, active-manifest preservation, source-gap severity, DWH quarantine, guardrails, Codex handoff policy, next-stage decision, and aggregate summary.

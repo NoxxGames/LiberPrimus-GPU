@@ -99,3 +99,5 @@ For Stage 5BU reviewability work, start with `docs/onboarding/stage5bu-lineage-p
 For Stage 5BW inactive-sidecar planning-ingestion preflight work, start with `docs/onboarding/stage5bw-inactive-sidecar-planning-ingestion-workflow.md` and run `token-block build-stage5bw`, `validate-stage5bw`, and `stage5bw-summary`. Treat the sidecar as proposed-only and inactive.
 
 For Stage 5BY inactive-sidecar planning-manifest scaffold work, start with `docs/onboarding/stage5by-inactive-sidecar-planning-manifest-workflow.md` and run `token-block build-stage5by`, `validate-stage5by-source-digest-uniqueness`, `validate-stage5by-sidecar-gates`, `validate-stage5by`, and `stage5by-summary`. Treat the sidecar as scaffolded inactive and no-execution only.
+
+For Stage 5CA inactive-sidecar review-contract hardening work, start with `docs/onboarding/stage5ca-inactive-sidecar-review-contract-workflow.md` and run `token-block build-stage5ca`, the focused Stage 5CA validators, `validate-stage5ca`, and `stage5ca-summary`. Treat the sidecar as inactive review-contract metadata only.

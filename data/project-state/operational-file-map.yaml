@@ -2457,3 +2457,47 @@ records:
   staleness_check_level: strict
   owner_context: codex_agent
   notes: Documents validation order, duplicate-source digest review, inactive sidecar status, no-execution sidecar, and ignored-output boundaries for Stage 5BY.
+- path: data/project-state/stage5ca-summary.yaml
+  category: active_data_record
+  purpose: Stage 5CA compact summary and next-stage decision support.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ca
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records Stage 5BZ warning integration, exact citation/fail-closed/activation/supersession contracts, Stage 5BD preservation, and Stage 5CB next-stage routing.
+- path: data/token-block/stage5ca-inactive-sidecar-review-contract.yaml
+  category: active_data_record
+  purpose: Stage 5CA inactive sidecar review contract.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ca
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps String 4 inactive, non-canonical, and non-execution-capable.
+- path: data/token-block/stage5ca-future-runner-exact-citation-contract.yaml
+  category: active_data_record
+  purpose: Stage 5CA exact future-runner citation contract.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ca
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Future runners must cite this exact set or fail closed.
+- path: docs/onboarding/stage5ca-inactive-sidecar-review-contract-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5CA inactive sidecar review-contract hardening.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ca
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, sidecar status, no-active/no-byte gates, and ignored-output boundaries for Stage 5CA.

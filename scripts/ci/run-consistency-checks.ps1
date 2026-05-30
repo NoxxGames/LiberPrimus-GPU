@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5BY" `
-        --expected-next-stage "Stage 5BZ" `
+        --expected-latest-stage "Stage 5CA" `
+        --expected-next-stage "Stage 5CB" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5BY" `
-        --expected-next-stage "Stage 5BZ" `
+        --expected-latest-stage "Stage 5CA" `
+        --expected-next-stage "Stage 5CB" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5BY",
+        expected_latest_stage="Stage 5CA",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5BY",
+            "expected_latest_stage": "Stage 5CA",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2594,6 +2594,21 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q (Join-Path $Stage5BYTokenResultsRoot "source-digest-duplicate-review.json")
     git check-ignore -q "codex-output/stage5by-codex-completion.md"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5BY" }
+
+    Write-Host "Validating Stage 5CA inactive-sidecar review-contract hardening records"
+    & $Python -m libreprimus.cli token-block validate-stage5ca-citation-contract
+    & $Python -m libreprimus.cli token-block validate-stage5ca-fail-closed-triggers
+    & $Python -m libreprimus.cli token-block validate-stage5ca-activation-preconditions
+    & $Python -m libreprimus.cli token-block validate-stage5ca-manifest-supersession-contract
+    & $Python -m libreprimus.cli token-block validate-stage5ca-sidecar-gates
+    & $Python -m libreprimus.cli token-block validate-stage5ca
+    $Stage5CATokenResultsRoot = Join-Path (Join-Path (Join-Path "experiments" "results") "token-block") "stage5ca"
+    git check-ignore -q (Join-Path $Stage5CATokenResultsRoot "summary.json")
+    git check-ignore -q (Join-Path $Stage5CATokenResultsRoot "citation_contract.json")
+    git check-ignore -q (Join-Path $Stage5CATokenResultsRoot "activation_precondition_contract.json")
+    git check-ignore -q (Join-Path $Stage5CATokenResultsRoot "manifest_supersession_preflight_contract.json")
+    git check-ignore -q "codex-output/stage5ca-codex-completion.md"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5CA" }
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

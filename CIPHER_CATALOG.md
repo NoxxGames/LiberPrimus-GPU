@@ -1,5 +1,7 @@
 # Cipher Catalog
 
+Stage 5CA does not change cipher-family status. It hardens review and validation contracts around the inactive String 4 sidecar, reaffirms DWH quarantine, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.
+
 ## Purpose
 
 This catalog records planned transform families and the standards required before implementation.

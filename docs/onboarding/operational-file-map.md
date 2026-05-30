@@ -43,14 +43,14 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5BY" `
-  --expected-next-stage "Stage 5BZ"
+  --expected-latest-stage "Stage 5CA" `
+  --expected-next-stage "Stage 5CB"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5BY" `
-  --expected-next-stage "Stage 5BZ"
+  --expected-latest-stage "Stage 5CA" `
+  --expected-next-stage "Stage 5CB"
 ```
 ## Stage 5BF Coverage
 
@@ -91,3 +91,5 @@ Stage 5BU extends the operational file map with lineage-path erratum, path-resol
 Stage 5BW extends the operational file map with inactive-sidecar proposal, manifest-supersession preflight, active-lineage preservation, Stage 5BD plan preservation, validation-evidence, summary, and workflow records.
 
 Stage 5BY extends the operational file map with Stage 5BX findings integration, Stage 5BW source-digest duplicate review, record-family filename-equivalence mapping, inactive planning manifest scaffold, no-execution planning-ingestion sidecar, no-active/no-byte-stream proofs, manifest-supersession carry-forward, active-lineage preservation, Stage 5BD plan preservation, validation evidence, source-digest, guardrail, summary, next-stage, workflow, developer-log, and research-log records.
+
+Stage 5CA extends the operational file map with Stage 5BZ findings integration, inactive sidecar review contract, exact future-runner citation contract, fail-closed trigger contract, activation-precondition contract, manifest-supersession preflight contract, Stage 5BD plan preservation, active-lineage preservation, no-active/no-byte-stream proofs, validation evidence, source-digest, guardrail, summary, next-stage, workflow, developer-log, and research-log records.

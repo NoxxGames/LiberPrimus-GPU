@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5BY - Inactive-sidecar planning manifest scaffold and no-execution planning-ingestion sidecar, without execution.
-- Current planning focus: Stage 5BZ - Deep Research review of Stage 5BY inactive-sidecar planning manifest scaffold and reviewability tightening, without execution.
+- Latest completed stage: Stage 5CA - Inactive-sidecar manifest review contract and activation-precondition hardening, without execution.
+- Current planning focus: Stage 5CB - Deep Research review of Stage 5CA inactive-sidecar review contract and activation-precondition hardening, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -35,8 +35,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 - Reviewer: read `docs/onboarding/source-of-truth-map.md`, `docs/experiments/method-retirement-ledger.md`, and the relevant research log.
 
 No page is claimed solved by these docs.
-## Stage 5BY Current Boundary
+## Stage 5CA Current Boundary
 
-Stage 5BY is the latest completed stage. It consumes Stage 5BX findings, classifies the duplicate Stage 5BW source-digest paths, adds record-family filename-equivalence metadata, creates an inactive String 4 planning manifest scaffold, and creates a no-execution planning-ingestion sidecar without activating String 4. It preserves Stage 5AP canonical transcription, active token-block manifests, Stage 5AW/5AY/5AZ records, Stage 5BB active-manifest registry records, Stage 5BD dry-run records, and all Stage 5BD run-plan IDs unchanged. It does not execute token-block experiments, generate bytes, materialise variants, combine 2014 surfaces with page 49-51, search DWH/hash/preimages, decode, score, run stego/audio/image/OCR/AI/CUDA/benchmark work, publish website content, commit raw iddqd-v2/archive/spreadsheet/review-template bodies, commit full String 4 bodies, or make solve claims.
+Stage 5CA is the latest completed stage. It consumes Stage 5BZ findings, hardens the inactive String 4 sidecar review contract, exact future-runner citation contract, fail-closed trigger contract, activation-precondition contract, and manifest-supersession preflight contract without activating String 4. It preserves Stage 5AP canonical transcription, active token-block manifests, Stage 5AW/5AY/5AZ records, Stage 5BB active-manifest registry records, Stage 5BD dry-run records, and all Stage 5BD run-plan IDs unchanged. It does not execute token-block experiments, generate bytes, materialise variants, combine 2014 surfaces with page 49-51, search DWH/hash/preimages, decode, score, run stego/audio/image/OCR/AI/CUDA/benchmark work, publish website content, commit raw iddqd-v2/archive/spreadsheet/review-template bodies, commit full String 4 bodies, or make solve claims.
 
-Current state: Stage 5BY is complete and Stage 5BZ review is next. Stage 5BY keeps String 4 active input false, dry-run ingestion false, byte-stream generation false, manifest supersession false, and execution blocked.
+Current state: Stage 5CA is complete and Stage 5CB review is next. Stage 5CA keeps String 4 active input false, dry-run ingestion false, byte-stream generation false, manifest supersession false, and execution blocked.

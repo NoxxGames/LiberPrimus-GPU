@@ -1,0 +1,227 @@
+record_type: stage5ca_citation_contract
+schema: schemas/token-block/stage5ca-future-runner-exact-citation-contract-v0.schema.json
+stage_id: stage-5ca
+stage_title: Stage 5CA - Inactive-sidecar manifest review contract and activation-precondition
+  hardening, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5by
+source_previous_stage_commit: 2554812801d42de888ec4d2561bfa20dc4efee92
+source_deep_research_stage: stage-5bz
+source_deep_research_report: 15_Stage-5BY-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+future_runner_exact_citation_contract_created: true
+citation_contract_type: exact_set
+future_runner_must_cite_exactly:
+- data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+- data/token-block/stage5bo-errata-aware-token-option-universe.yaml
+- data/token-block/stage5bo-string4-source-gap-closure-after-errata.yaml
+- data/token-block/stage5bq-string4-inactive-branch-planning-context.yaml
+- data/token-block/stage5bq-errata-aware-dry-run-constraint-update.yaml
+- data/token-block/stage5bq-string4-no-active-ingestion-proof.yaml
+- data/token-block/stage5bs-string4-planning-ingestion-gate.yaml
+- data/token-block/stage5bs-future-runner-citation-policy.yaml
+- data/token-block/stage5bs-inactive-sidecar-consumption-policy.yaml
+- data/token-block/stage5bs-active-ingestion-blocker.yaml
+- data/token-block/stage5bu-lineage-path-resolution-validation.yaml
+- data/token-block/stage5bu-preserved-active-lineage-digest-index.yaml
+- data/token-block/stage5bu-active-manifest-preservation-repair.yaml
+- data/token-block/stage5bw-inactive-sidecar-planning-ingestion-proposal.yaml
+- data/token-block/stage5bw-manifest-supersession-preflight.yaml
+- data/token-block/stage5bw-stage5bd-plan-preservation.yaml
+- data/token-block/stage5bw-future-runner-citation-requirements.yaml
+- data/token-block/stage5by-inactive-sidecar-planning-manifest-scaffold.yaml
+- data/token-block/stage5by-no-execution-planning-ingestion-sidecar.yaml
+- data/token-block/stage5by-future-runner-citation-requirements.yaml
+- data/token-block/stage5by-sidecar-activation-blocker.yaml
+- data/token-block/stage5by-stage5bd-plan-preservation.yaml
+- data/token-block/stage5by-active-lineage-preservation.yaml
+- data/token-block/stage5ca-inactive-sidecar-review-contract.yaml
+- data/token-block/stage5ca-future-runner-exact-citation-contract.yaml
+- data/token-block/stage5ca-fail-closed-trigger-contract.yaml
+- data/token-block/stage5ca-activation-precondition-contract.yaml
+- data/token-block/stage5ca-manifest-supersession-preflight-contract.yaml
+- data/token-block/stage5ca-sidecar-to-active-transition-policy.yaml
+- data/token-block/stage5ca-no-active-ingestion-proof.yaml
+- data/token-block/stage5ca-no-byte-stream-proof.yaml
+- data/token-block/stage5ca-stage5bd-plan-preservation.yaml
+- data/token-block/stage5ca-active-lineage-preservation.yaml
+required_citation_count: 33
+citation_records:
+- path: data/token-block/stage5bo-string4-branch-membership-after-errata.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bo-errata-aware-token-option-universe.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bo-string4-source-gap-closure-after-errata.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bq-string4-inactive-branch-planning-context.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bq-errata-aware-dry-run-constraint-update.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bq-string4-no-active-ingestion-proof.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bs-string4-planning-ingestion-gate.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bs-future-runner-citation-policy.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bs-inactive-sidecar-consumption-policy.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bs-active-ingestion-blocker.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bu-lineage-path-resolution-validation.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bu-preserved-active-lineage-digest-index.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bu-active-manifest-preservation-repair.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bw-inactive-sidecar-planning-ingestion-proposal.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bw-manifest-supersession-preflight.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bw-stage5bd-plan-preservation.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5bw-future-runner-citation-requirements.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5by-inactive-sidecar-planning-manifest-scaffold.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5by-no-execution-planning-ingestion-sidecar.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5by-future-runner-citation-requirements.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5by-sidecar-activation-blocker.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5by-stage5bd-plan-preservation.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5by-active-lineage-preservation.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5ca-inactive-sidecar-review-contract.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5ca-future-runner-exact-citation-contract.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5ca-fail-closed-trigger-contract.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5ca-activation-precondition-contract.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5ca-manifest-supersession-preflight-contract.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5ca-sidecar-to-active-transition-policy.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5ca-no-active-ingestion-proof.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5ca-no-byte-stream-proof.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5ca-stage5bd-plan-preservation.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+- path: data/token-block/stage5ca-active-lineage-preservation.yaml
+  required: true
+  present: true
+  deprecated_stage5aw_path: false
+extra_citations_allowed_without_contract_update: false
+missing_citation_fails_closed: true
+unresolved_citation_path_fails_closed: true
+active_ingestion_performed: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+dwh_hash_search_performed: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+image_forensics_performed: false
+llm_vision_token_reading_performed: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+ocr_performed: false
+page_boundaries_final: false
+pgp_network_verification_performed: false
+raw_archive_files_committed: false
+raw_fandom_files_committed: false
+raw_human_review_pack_committed: false
+real_byte_stream_generated: false
+scoring_performed: false
+spreadsheet_file_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_planning_ingestion_activated: false
+template_bodies_committed: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false

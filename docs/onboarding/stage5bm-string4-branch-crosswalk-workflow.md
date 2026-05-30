@@ -16,6 +16,7 @@ Use Stage 5BM when reviewing how the iddqd-v2 String 4 context relates to the pa
 - Stage 5BU lineage-path repair records, preserved active-lineage digest index, and validator hardening for future reviewability checks.
 - Stage 5BW inactive-sidecar planning-ingestion proposal, manifest-supersession preflight, active-lineage preservation, and Stage 5BD plan preservation records for future review-only planning checks.
 - Stage 5BY inactive planning-manifest scaffold, no-execution planning-ingestion sidecar, Stage 5BW duplicate-source-digest classification, filename-equivalence map, active-lineage preservation, and Stage 5BD plan preservation records for Stage 5BZ review-only planning checks.
+- Stage 5CA inactive-sidecar review contract, exact citation contract, fail-closed trigger contract, activation-precondition contract, manifest-supersession preflight contract, no-active-ingestion proof, no-byte-stream proof, active-lineage preservation, and Stage 5BD preservation records for Stage 5CB review-only contract checks.
 
 ## Commands
 

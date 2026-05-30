@@ -1,5 +1,7 @@
 # Results Schema
 
+Stage 5CA adds compact inactive sidecar review-contract hardening records only. It does not publish generated result bodies, byte streams, decoded bytes, score summaries, SQLite databases, local reports, or active String 4 inputs. Generated Stage 5CA diagnostics remain ignored under `experiments/results/token-block/stage5ca/`.
+
 ## Purpose
 
 Define result, manifest, source-lock, observation, and generated-output record policy for the workbench.
