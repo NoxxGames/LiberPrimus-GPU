@@ -371,6 +371,18 @@ from .stage5cc import (
     validate_stage5cc_no_execution_transition_gate,
     validate_stage5cc_sidecar_gates,
 )
+from .stage5ce import (
+    DATA_PATHS as STAGE5CE_DATA_PATHS,
+    RESULTS_DIR as STAGE5CE_RESULTS_DIR,
+    build_stage5ce,
+    load_stage5ce_summary,
+    validate_stage5ce,
+    validate_stage5ce_approval_gate,
+    validate_stage5ce_citation_negative_tests,
+    validate_stage5ce_no_byte_stream_transition_gate,
+    validate_stage5ce_no_execution_transition_gate,
+    validate_stage5ce_proposal_package,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -3934,6 +3946,163 @@ def stage5cc_summary_command(
     console.print(
         "future_token_block_execution_remains_blocked="
         f"{str(payload.get('future_token_block_execution_remains_blocked')).lower()}"
+    )
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+@app.command("build-stage5ce")
+def build_stage5ce_command(
+    results_dir: Path = typer.Option(STAGE5CE_RESULTS_DIR),
+) -> None:
+    payload = build_stage5ce(results_dir=results_dir)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5cd_verdict={payload.get('stage5cd_verdict')}")
+    console.print(
+        "active_planning_input_proposal_package_status="
+        f"{payload.get('active_planning_input_proposal_package_status')}"
+    )
+    console.print(
+        "approval_gate_satisfied_now="
+        f"{str(payload.get('approval_gate_satisfied_now')).lower()}"
+    )
+    console.print(
+        "no_byte_stream_transition_gate_status="
+        f"{payload.get('no_byte_stream_transition_gate_status')}"
+    )
+    console.print(
+        "no_execution_transition_gate_status="
+        f"{payload.get('no_execution_transition_gate_status')}"
+    )
+    console.print(
+        "future_token_block_execution_remains_blocked="
+        f"{str(payload.get('future_token_block_execution_remains_blocked')).lower()}"
+    )
+
+
+@app.command("validate-stage5ce-proposal-package")
+def validate_stage5ce_proposal_package_command(
+    proposal_package: Path = typer.Option(STAGE5CE_DATA_PATHS["proposal_package"]),
+) -> None:
+    counts, errors = validate_stage5ce_proposal_package(proposal_package=proposal_package)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ce_proposal_package_valid=true")
+
+
+@app.command("validate-stage5ce-approval-gate")
+def validate_stage5ce_approval_gate_command(
+    combined_gate: Path = typer.Option(STAGE5CE_DATA_PATHS["combined_gate"]),
+) -> None:
+    counts, errors = validate_stage5ce_approval_gate(combined_gate=combined_gate)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ce_approval_gate_valid=true")
+
+
+@app.command("validate-stage5ce-citation-negative-tests")
+def validate_stage5ce_citation_negative_tests_command(
+    citation_set: Path = typer.Option(STAGE5CE_DATA_PATHS["citation_set"]),
+) -> None:
+    counts, errors = validate_stage5ce_citation_negative_tests(citation_set=citation_set)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ce_citation_negative_tests_valid=true")
+
+
+@app.command("validate-stage5ce-no-byte-stream-transition-gate")
+def validate_stage5ce_no_byte_stream_transition_gate_command(
+    gate: Path = typer.Option(STAGE5CE_DATA_PATHS["no_byte_stream_transition_gate"]),
+) -> None:
+    counts, errors = validate_stage5ce_no_byte_stream_transition_gate(gate=gate)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ce_no_byte_stream_transition_gate_valid=true")
+
+
+@app.command("validate-stage5ce-no-execution-transition-gate")
+def validate_stage5ce_no_execution_transition_gate_command(
+    gate: Path = typer.Option(STAGE5CE_DATA_PATHS["no_execution_transition_gate"]),
+) -> None:
+    counts, errors = validate_stage5ce_no_execution_transition_gate(gate=gate)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ce_no_execution_transition_gate_valid=true")
+
+
+@app.command("validate-stage5ce")
+def validate_stage5ce_command(
+    summary: Path = typer.Option(STAGE5CE_DATA_PATHS["summary"]),
+    next_stage_decision: Path = typer.Option(STAGE5CE_DATA_PATHS["next_stage"]),
+    guardrail: Path = typer.Option(STAGE5CE_DATA_PATHS["guardrail"]),
+    results_dir: Path = typer.Option(STAGE5CE_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5ce(
+        summary=summary,
+        next_stage_decision=next_stage_decision,
+        guardrail=guardrail,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ce_valid=true")
+
+
+@app.command("stage5ce-summary")
+def stage5ce_summary_command(
+    summary: Path = typer.Option(STAGE5CE_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5ce_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5cd_verdict={payload.get('stage5cd_verdict')}")
+    console.print(
+        "active_planning_input_proposal_package_status="
+        f"{payload.get('active_planning_input_proposal_package_status')}"
+    )
+    console.print(
+        "active_planning_input_authorized_now="
+        f"{str(payload.get('active_planning_input_authorized_now')).lower()}"
+    )
+    console.print(
+        "approval_gate_satisfied_now="
+        f"{str(payload.get('approval_gate_satisfied_now')).lower()}"
+    )
+    console.print(
+        "no_byte_stream_transition_gate_status="
+        f"{payload.get('no_byte_stream_transition_gate_status')}"
+    )
+    console.print(
+        "no_execution_transition_gate_status="
+        f"{payload.get('no_execution_transition_gate_status')}"
+    )
+    console.print(
+        "pytest_count_observed_locally="
+        f"{payload.get('pytest_count_observed_locally')}"
     )
     console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
 

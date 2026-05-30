@@ -1,0 +1,104 @@
+record_type: stage5ce_equivalence_map
+schema: schemas/project-state/stage5ce-record-family-name-equivalence-map-v0.schema.json
+stage_id: stage-5ce
+stage_title: Stage 5CE - Active-planning-input proposal package and operator/Deep
+  Research gate design, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5cc
+source_previous_stage_commit: 5e52ac4aa02af8d66db8b5d8f5b2d9345830a59a
+source_deep_research_stage: stage-5cd
+source_deep_research_report: 17_Stage-5CC-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+record_family_name_equivalence_map_created: true
+path_mapping_status: exact_prompt_paths_used
+equivalence_record_count: 8
+equivalence_records:
+- record_family: summary
+  prompt_required_path: data/project-state/stage5ce-summary.yaml
+  committed_path: data/project-state/stage5ce-summary.yaml
+  semantic_status: exact_path_used
+- record_family: proposal_package
+  prompt_required_path: data/token-block/stage5ce-active-planning-input-proposal-package.yaml
+  committed_path: data/token-block/stage5ce-active-planning-input-proposal-package.yaml
+  semantic_status: exact_path_used
+- record_family: combined_gate
+  prompt_required_path: data/token-block/stage5ce-operator-deep-research-combined-gate-contract.yaml
+  committed_path: data/token-block/stage5ce-operator-deep-research-combined-gate-contract.yaml
+  semantic_status: exact_path_used
+- record_family: pytest_count
+  prompt_required_path: data/token-block/stage5ce-committed-pytest-count-capture.yaml
+  committed_path: data/token-block/stage5ce-committed-pytest-count-capture.yaml
+  semantic_status: exact_path_used
+- record_family: no_byte_stream_transition_gate
+  prompt_required_path: data/token-block/stage5ce-no-byte-stream-transition-gate.yaml
+  committed_path: data/token-block/stage5ce-no-byte-stream-transition-gate.yaml
+  semantic_status: exact_path_used
+- record_family: no_execution_transition_gate
+  prompt_required_path: data/token-block/stage5ce-no-execution-transition-gate.yaml
+  committed_path: data/token-block/stage5ce-no-execution-transition-gate.yaml
+  semantic_status: exact_path_used
+- record_family: stage5bd_preservation
+  prompt_required_path: data/token-block/stage5ce-stage5bd-plan-preservation.yaml
+  committed_path: data/token-block/stage5ce-stage5bd-plan-preservation.yaml
+  semantic_status: exact_path_used
+- record_family: active_lineage
+  prompt_required_path: data/token-block/stage5ce-active-lineage-preservation.yaml
+  committed_path: data/token-block/stage5ce-active-lineage-preservation.yaml
+  semantic_status: exact_path_used
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_proposal_performed: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+final_commit_self_embedded: false
+full_cartesian_product_enumerated: false
+generated_byte_streams_committed: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+image_forensics_performed: false
+llm_vision_token_reading_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+new_active_planning_input_created: false
+ocr_performed: false
+page_boundaries_final: false
+pgp_network_verification_performed: false
+raw_archive_files_committed: false
+raw_fandom_files_committed: false
+raw_human_review_pack_committed: false
+real_byte_stream_generated: false
+scoring_performed: false
+spreadsheet_file_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_run_plan_ids_changed: false
+stage5bd_plan_superseded: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+template_bodies_committed: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false

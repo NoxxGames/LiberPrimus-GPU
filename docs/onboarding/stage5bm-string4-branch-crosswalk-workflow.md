@@ -18,6 +18,7 @@ Use Stage 5BM when reviewing how the iddqd-v2 String 4 context relates to the pa
 - Stage 5BY inactive planning-manifest scaffold, no-execution planning-ingestion sidecar, Stage 5BW duplicate-source-digest classification, filename-equivalence map, active-lineage preservation, and Stage 5BD plan preservation records for Stage 5BZ review-only planning checks.
 - Stage 5CA inactive-sidecar review contract, exact citation contract, fail-closed trigger contract, activation-precondition contract, manifest-supersession preflight contract, no-active-ingestion proof, no-byte-stream proof, active-lineage preservation, and Stage 5BD preservation records for Stage 5CB review-only contract checks.
 - Stage 5CC active-planning-input proposal preflight, exact fail-closed trigger/precondition hardening, no-byte-stream transition gate, no-execution transition gate, active-lineage preservation, Stage 5BD plan preservation, and DWH quarantine reaffirmation records for Stage 5CD review-only transition-gate checks.
+- Stage 5CE active-planning-input proposal package, Stage 5CD findings integration, operator/Deep Research approval-gate design, direct citation negative-test hardening, committed pytest-count capture, active-lineage preservation, Stage 5BD plan preservation, no-byte-stream transition gate, and no-execution transition gate records for Stage 5CF review-only proposal-package checks.
 
 ## Commands
 

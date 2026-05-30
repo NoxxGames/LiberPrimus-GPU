@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5CC" \
-    --expected-next-stage "Stage 5CD" \
+    --expected-latest-stage "Stage 5CE" \
+    --expected-next-stage "Stage 5CF" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5CC" \
-    --expected-next-stage "Stage 5CD" \
+    --expected-latest-stage "Stage 5CE" \
+    --expected-next-stage "Stage 5CF" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5CC",
+        expected_latest_stage="Stage 5CE",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5CC",
+            "expected_latest_stage": "Stage 5CE",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2674,6 +2674,23 @@ git check-ignore -q "$stage5cc_token_results_root/no_byte_stream_transition_gate
 git check-ignore -q "codex-output/stage5cc-codex-completion.md"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5CC" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5CE active-planning-input proposal package records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5ce-proposal-package
+"$python_bin" -m libreprimus.cli token-block validate-stage5ce-approval-gate
+"$python_bin" -m libreprimus.cli token-block validate-stage5ce-citation-negative-tests
+"$python_bin" -m libreprimus.cli token-block validate-stage5ce-no-byte-stream-transition-gate
+"$python_bin" -m libreprimus.cli token-block validate-stage5ce-no-execution-transition-gate
+"$python_bin" -m libreprimus.cli token-block validate-stage5ce
+stage5ce_token_results_root="experiments"/"results"/"token-block"/"stage5ce"
+git check-ignore -q "$stage5ce_token_results_root/summary.json"
+git check-ignore -q "$stage5ce_token_results_root/proposal_package.json"
+git check-ignore -q "$stage5ce_token_results_root/combined_gate_contract.json"
+git check-ignore -q "codex-output/stage5ce-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5CE" >&2
     exit 1
 fi
 

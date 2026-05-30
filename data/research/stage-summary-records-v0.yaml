@@ -1560,3 +1560,19 @@ records:
     raw_outputs_committed: false
     generated_outputs_committed: false
     notes: Stage 5CC records Stage 5CB verdict accept_with_warnings, required citation count 33, fail-closed trigger count 17, activation precondition count 12, source digest records 83, active-lineage count 8, Stage 5BD run-plan ID count 10, active-planning input authorized now false, no-byte-stream transition gate closed, no-execution transition gate closed, manifest supersession performed false, String 4 active input false, dry-run ingestion false, byte-stream generation false, execution input false, Stage 5BD dry-run records valid, canonical transcription changed false, active manifests changed false, and future execution blocked. It performs no Deep Research body commit, Codex completion commit, token experiment, active ingestion, byte-stream generation, variant materialisation, manifest supersession, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.
+  - record_type: stage_summary_record
+    stage_id: stage-5ce
+    title: Active-planning-input proposal package and operator/Deep Research gate design, without execution
+    status: complete
+    category: infrastructure
+    summary: Integrated the Stage 5CD accept-with-warnings review outcome by packaging the inactive String 4 active-planning-input proposal as review-only metadata and defining the operator/Deep Research approval gate required before any activation-capable future stage.
+    key_outputs:
+      - "`libreprimus token-block` Stage 5CE commands for build, proposal-package validation, approval-gate validation, citation-negative-test validation, no-byte/no-execution gate validation, aggregate validation, and summary display."
+      - Stage 5CE findings integration, reviewable validation/source-digest/gap records, proposal package, citation set, operator/Deep Research gate records, Stage 5CC contract preservation, direct citation-negative-test hardening, committed pytest-count capture, no-byte-stream transition gate, no-execution transition gate, manifest-supersession nonactivation proof, Stage 5BD plan preservation, active-lineage preservation, source-gap/DWH guardrails, Codex handoff policy, summary, and next-stage records.
+      - Summary-only developer/research logs; ignored generated diagnostics under `experiments/results/token-block/stage5ce/`; local handoff under `codex-output/stage5ce-codex-completion.md`.
+    result_status: infrastructure_only
+    solve_claim: false
+    cuda_used: false
+    raw_outputs_committed: false
+    generated_outputs_committed: false
+    notes: Stage 5CE records Stage 5CD verdict accept_with_warnings, required citation count 33, fail-closed trigger count 17, activation precondition count 12, source digest records 72, active-lineage count 8, Stage 5BD run-plan ID count 10, proposal package review-only, approval gate satisfied false, active-planning input authorized now false, no-byte-stream transition gate closed, no-execution transition gate closed, manifest supersession performed false, String 4 active input false, dry-run ingestion false, byte-stream generation false, execution input false, Stage 5BD dry-run records valid, canonical transcription changed false, active manifests changed false, and future execution blocked. It performs no Deep Research body commit, Codex completion commit, token experiment, active ingestion, byte-stream generation, variant materialisation, manifest supersession, DWH/hash/preimage search, decode attempt, stego/audio/image/OCR/AI/LLM-vision/CUDA/scoring/benchmark work, public website expansion, method-status upgrade, canonical-corpus activation, page-boundary finalisation, or solve claim.

@@ -2556,3 +2556,69 @@ records:
   staleness_check_level: strict
   owner_context: codex_agent
   notes: Documents focused validators, sidecar status, no-byte/no-execution transition gates, and ignored-output boundaries for Stage 5CC.
+- path: data/project-state/stage5ce-summary.yaml
+  category: active_data_record
+  purpose: Stage 5CE compact summary and next-stage decision support.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ce
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records Stage 5CD warning integration, proposal-package status, operator/Deep Research gate design, pytest-count capture, Stage 5BD preservation, and Stage 5CF next-stage routing.
+- path: data/token-block/stage5ce-active-planning-input-proposal-package.yaml
+  category: active_data_record
+  purpose: Stage 5CE review-only active-planning-input proposal package.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ce
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Packages the proposal for review only; active-planning input is not selected or authorized.
+- path: data/token-block/stage5ce-operator-deep-research-combined-gate-contract.yaml
+  category: active_data_record
+  purpose: Stage 5CE operator and Deep Research approval gate contract.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ce
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Requires future operator plus Deep Research approval before any activation-capable stage; gate is not satisfied now.
+- path: data/token-block/stage5ce-no-byte-stream-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5CE no-byte-stream transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ce
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps primary-60/String 4 byte-stream generation, branch materialisation, variants, DWH/hash search, decode, scoring, CUDA, benchmarks, and solve claims blocked.
+- path: data/token-block/stage5ce-no-execution-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5CE no-execution transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ce
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps token-block experiments, decode, DWH/hash search, scoring, CUDA, benchmarks, and stego tools unexecuted.
+- path: docs/onboarding/stage5ce-active-planning-input-proposal-package-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5CE active-planning-input proposal package.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ce
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, review-only proposal status, operator/Deep Research gate status, no-byte/no-execution transition gates, and ignored-output boundaries for Stage 5CE.

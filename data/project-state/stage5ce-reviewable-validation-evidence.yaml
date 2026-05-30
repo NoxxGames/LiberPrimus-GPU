@@ -1,0 +1,174 @@
+record_type: stage5ce_validation_evidence
+schema: schemas/project-state/stage5ce-reviewable-validation-evidence-v0.schema.json
+stage_id: stage-5ce
+stage_title: Stage 5CE - Active-planning-input proposal package and operator/Deep
+  Research gate design, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5cc
+source_previous_stage_commit: 5e52ac4aa02af8d66db8b5d8f5b2d9345830a59a
+source_deep_research_stage: stage-5cd
+source_deep_research_report: 17_Stage-5CC-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+reviewability_evidence_status: committed_compact_evidence
+local_validation_evidence_committed: true
+validation_commands:
+- command_id: stage5ce_build
+  command: python -m libreprimus.cli token-block build-stage5ce
+  status: passed_local_validation
+- command_id: stage5ce_focused_validators
+  command: python -m libreprimus.cli token-block validate-stage5ce-proposal-package;
+    validate-stage5ce-approval-gate; validate-stage5ce-citation-negative-tests; validate-stage5ce-no-byte-stream-transition-gate;
+    validate-stage5ce-no-execution-transition-gate
+  status: passed_local_validation
+- command_id: stage5ce_validate
+  command: python -m libreprimus.cli token-block validate-stage5ce
+  status: passed_local_validation
+- command_id: stage5ce_summary
+  command: python -m libreprimus.cli token-block stage5ce-summary
+  status: passed_local_validation
+- command_id: stage5cc_validator
+  command: python -m libreprimus.cli token-block validate-stage5cc
+  status: passed_local_validation
+- command_id: stage5ca_validator
+  command: python -m libreprimus.cli token-block validate-stage5ca
+  status: passed_local_validation
+- command_id: stage5by_validator
+  command: python -m libreprimus.cli token-block validate-stage5by
+  status: passed_local_validation
+- command_id: stage5bw_validator
+  command: python -m libreprimus.cli token-block validate-stage5bw
+  status: passed_local_validation
+- command_id: stage5bu_validator
+  command: python -m libreprimus.cli token-block validate-stage5bu
+  status: passed_local_validation
+- command_id: stage5bs_validator
+  command: python -m libreprimus.cli token-block validate-stage5bs
+  status: passed_local_validation
+- command_id: stage5bq_validator
+  command: python -m libreprimus.cli token-block validate-stage5bq
+  status: passed_local_validation
+- command_id: stage5bo_validator
+  command: python -m libreprimus.cli token-block validate-stage5bo
+  status: passed_local_validation
+- command_id: stage5bd_validator
+  command: python -m libreprimus.cli token-block validate-stage5bd --results-dir experiments/results/token-block/stage5bd
+  status: passed_local_validation
+- command_id: stage5ax_validation
+  command: python -m libreprimus.cli parallel-validation validate-stage5ax
+  status: passed_local_validation
+- command_id: stage5ax_parallel_validation
+  command: .\scripts\ci\run-parallel-validation.ps1 -Workers 16 -PytestWorkers 16
+    -PytestMode auto
+  status: passed_local_validation
+- command_id: research_synthesis
+  command: python -m libreprimus.cli research-synthesis validate --data-dir data/research
+    --staged-plan docs/roadmap/staged-plan.md
+  status: passed_local_validation
+- command_id: consistency_state_drift
+  command: python -m libreprimus.cli consistency check-state-drift
+  status: passed_local_validation
+- command_id: consistency_check_all
+  command: python -m libreprimus.cli consistency check-all --allow-warnings
+  status: passed_local_validation
+- command_id: smoke
+  command: python -m libreprimus.cli smoke
+  status: passed_local_validation
+- command_id: ruff
+  command: python -m ruff check python/libreprimus tests/python
+  status: passed_local_validation
+- command_id: pytest
+  command: python -m pytest -q tests/python
+  status: passed_local_validation
+- command_id: powershell_consistency_wrapper
+  command: .\scripts\ci\run-consistency-checks.ps1
+  status: passed_local_validation
+- command_id: public_docs
+  command: .\scripts\ci\verify-public-docs-status.ps1
+  status: passed_local_validation
+- command_id: lock_hashes
+  command: .\scripts\ci\verify-lock-hashes.ps1
+  status: passed_local_validation
+- command_id: workflow_static
+  command: .\scripts\ci\validate-workflow-static.ps1
+  status: passed_local_validation
+- command_id: wiki_source
+  command: .\scripts\github\validate-wiki-source.ps1
+  status: passed_local_validation
+- command_id: wiki_dry_run
+  command: .\scripts\github\sync-tutorials-to-wiki.ps1 --DryRun
+  status: passed_local_validation
+- command_id: bash_parallel_or_consistency_wrapper
+  command: ./scripts/ci/run-parallel-validation.sh and ./scripts/ci/run-consistency-checks.sh
+  status: not_run_wsl_unavailable
+  reason_if_not_run: Local bash resolves to the Windows Subsystem for Linux launcher,
+    but no WSL distributions are installed.
+pytest_count_observed_locally: 2267
+pytest_command_observed_locally: python -m pytest -q tests/python
+pytest_count_committed: true
+pytest_count_source: local_validation
+pytest_count_exactness: observed_local_count
+stage5ax_parallel_validation_used: true
+raw_staged: false
+generated_outputs_staged: false
+codex_output_staged: false
+sqlite_staged: false
+final_commit_self_embedded: false
+final_commit_external_evidence_required: true
+ci_external_evidence_required: true
+codex_completion_summary_path: codex-output/stage5ce-codex-completion.md
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_proposal_performed: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+full_cartesian_product_enumerated: false
+generated_byte_streams_committed: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+image_forensics_performed: false
+llm_vision_token_reading_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+new_active_planning_input_created: false
+ocr_performed: false
+page_boundaries_final: false
+pgp_network_verification_performed: false
+raw_archive_files_committed: false
+raw_fandom_files_committed: false
+raw_human_review_pack_committed: false
+real_byte_stream_generated: false
+scoring_performed: false
+spreadsheet_file_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_run_plan_ids_changed: false
+stage5bd_plan_superseded: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+template_bodies_committed: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false

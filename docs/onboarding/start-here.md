@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5CC - Inactive-sidecar active-planning-input proposal preflight and no-byte-stream transition gate, without execution.
-- Current planning focus: Stage 5CD - Deep Research review of Stage 5CC active-planning-input proposal preflight and no-byte-stream transition gate, without execution.
+- Latest completed stage: Stage 5CE - Active-planning-input proposal package and operator/Deep Research gate design, without execution.
+- Current planning focus: Stage 5CF - Deep Research review of Stage 5CE active-planning-input proposal package and operator/Deep Research gate design, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -35,8 +35,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 - Reviewer: read `docs/onboarding/source-of-truth-map.md`, `docs/experiments/method-retirement-ledger.md`, and the relevant research log.
 
 No page is claimed solved by these docs.
-## Stage 5CC Current Boundary
+## Stage 5CE Current Boundary
 
-Stage 5CC is the latest completed stage. It consumes Stage 5CB findings, preserves the Stage 5CA exact citation contract, hardens the inactive String 4 sidecar fail-closed trigger and activation-precondition lists as exact sets, creates a future active-planning-input proposal preflight without authorizing it, and closes no-byte-stream plus no-execution transition gates. It preserves Stage 5AP canonical transcription, active token-block manifests, Stage 5AW/5AY/5AZ records, Stage 5BB active-manifest registry records, Stage 5BD dry-run records, and all Stage 5BD run-plan IDs unchanged. It does not execute token-block experiments, generate bytes, materialise variants, combine 2014 surfaces with page 49-51, search DWH/hash/preimages, decode, score, run stego/audio/image/OCR/AI/CUDA/benchmark work, publish website content, commit raw iddqd-v2/archive/spreadsheet/review-template bodies, commit full String 4 bodies, or make solve claims.
+Stage 5CE is the latest completed stage. It consumes Stage 5CD findings, preserves the Stage 5CC exact citation/fail-closed/activation contracts, packages the inactive String 4 active-planning-input proposal as review-only metadata, requires future operator plus Deep Research approval before any activation-capable stage, records committed pytest-count capture, and hardens direct citation negative tests. It preserves Stage 5AP canonical transcription, active token-block manifests, Stage 5AW/5AY/5AZ records, Stage 5BB active-manifest registry records, Stage 5BD dry-run records, and all Stage 5BD run-plan IDs unchanged. It does not execute token-block experiments, generate bytes, materialise variants, combine 2014 surfaces with page 49-51, search DWH/hash/preimages, decode, score, run stego/audio/image/OCR/AI/CUDA/benchmark work, publish website content, commit raw iddqd-v2/archive/spreadsheet/review-template bodies, commit full String 4 bodies, or make solve claims.
 
-Current state: Stage 5CC is complete and Stage 5CD review is next. Stage 5CC keeps active-planning input authorized now false, String 4 active input false, dry-run ingestion false, byte-stream generation false, manifest supersession false, and execution blocked.
+Current state: Stage 5CE is complete and Stage 5CF review is next. Stage 5CE keeps the proposal package review-only, approval gate satisfied now false, active-planning input authorized now false, String 4 active input false, dry-run ingestion false, byte-stream generation false, manifest supersession false, and execution blocked.
