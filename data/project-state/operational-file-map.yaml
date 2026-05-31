@@ -2622,3 +2622,80 @@ records:
   staleness_check_level: strict
   owner_context: codex_agent
   notes: Documents focused validators, review-only proposal status, operator/Deep Research gate status, no-byte/no-execution transition gates, and ignored-output boundaries for Stage 5CE.
+- path: data/project-state/stage5cg-summary.yaml
+  category: active_data_record
+  purpose: Stage 5CG compact summary and next-stage decision support.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records Stage 5CF warning integration, unsatisfied decision scaffolds, Stage 5CE wording review, Stage 5BD preservation, and Stage 5CH next-stage routing.
+- path: data/token-block/stage5cg-combined-approval-decision-gate-scaffold.yaml
+  category: active_data_record
+  purpose: Stage 5CG combined operator and Deep Research approval decision scaffold.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps operator and Deep Research decision records absent now; approval gate is not satisfied.
+- path: data/token-block/stage5cg-active-planning-input-decision-record-scaffold.yaml
+  category: active_data_record
+  purpose: Stage 5CG active-planning-input decision record scaffold.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Active-planning input is not selected, created, or authorized.
+- path: data/token-block/stage5cg-stage5ce-combined-gate-wording-review.yaml
+  category: active_data_record
+  purpose: Stage 5CG review of the Stage 5CE combined-gate wording warning.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records the reported wording issue as not reproduced in the current committed Stage 5CE gate record and not a gate opener.
+- path: data/token-block/stage5cg-no-byte-stream-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5CG no-byte-stream transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps primary-60/String 4 byte-stream generation, branch materialisation, variants, DWH/hash search, decode, scoring, CUDA, benchmarks, and solve claims blocked.
+- path: data/token-block/stage5cg-no-execution-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5CG no-execution transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps token-block experiments, decode, DWH/hash search, scoring, CUDA, benchmarks, and stego tools unexecuted.
+- path: docs/onboarding/stage5cg-approval-gate-decision-scaffold-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5CG approval-gate decision scaffolds.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, unsatisfied decision scaffolds, Stage 5CE wording review, no-byte/no-execution transition gates, and ignored-output boundaries for Stage 5CG.

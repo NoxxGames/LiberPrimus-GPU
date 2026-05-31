@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5CF - Deep Research review of Stage 5CE active-planning-input proposal package and operator/Deep Research gate design, without execution.
+Current next prompt: Stage 5CH - Deep Research review of Stage 5CG post-review approval-gate integration and active-planning-input decision record scaffold, without execution.
 
-Stage 5CE is complete as metadata-only packaging and gate-design hardening. It consumes Stage 5CD warnings, preserves Stage 5CC exact citation/fail-closed/activation contracts, packages the active-planning-input proposal as review-only metadata, adds operator and Deep Research approval-gate requirements, records committed pytest-count capture, hardens direct citation negative tests, preserves Stage 5BD run-plan IDs, and keeps String 4 inactive with all token-block execution blocked.
+Stage 5CG is complete as metadata-only post-review approval-gate integration and decision-scaffold hardening. It consumes Stage 5CF warnings, preserves the Stage 5CE proposal package and Stage 5CC contracts, creates unsatisfied operator and Deep Research decision scaffolds, records the Stage 5CE wording warning as not reproduced in the committed record, preserves Stage 5BD run-plan IDs, and keeps String 4 inactive with all token-block execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5CE active-planning-input proposal packaging is complete. It consumes the Stage 5CD accept-with-warnings review outcome, keeps the proposal package review-only, requires future operator plus Deep Research approval before any activation-capable stage, records exact pytest-count capture, hardens citation negative tests, preserves Stage 5BD run-plan IDs, and keeps String 4 inactive with all execution gates blocked.
+Stage 5CG post-review approval-gate integration is complete. It consumes the Stage 5CF accept-with-warnings review outcome, keeps the Stage 5CE proposal package review-only, creates future decision-record scaffolds without satisfying them, preserves Stage 5BD run-plan IDs, and keeps String 4 inactive with all execution gates blocked.
 
-The next recommended prompt is Stage 5CF - Deep Research review of Stage 5CE active-planning-input proposal package and operator/Deep Research gate design, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5CH - Deep Research review of Stage 5CG post-review approval-gate integration and active-planning-input decision record scaffold, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

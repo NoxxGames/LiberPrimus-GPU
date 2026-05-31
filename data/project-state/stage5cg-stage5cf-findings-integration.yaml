@@ -1,0 +1,121 @@
+record_type: stage5cg_findings
+schema: schemas/project-state/stage5cg-stage5cf-findings-integration-v0.schema.json
+stage_id: stage-5cg
+stage_title: Stage 5CG - Post-review approval-gate integration and active-planning-input
+  decision record scaffold, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5ce
+source_previous_stage_commit: 09d01c533bd1bf62a7c1076e263c479d6d77449d
+source_deep_research_stage: stage-5cf
+source_deep_research_report: 18_Stage-5CE-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+stage5cf_findings_integrated: true
+stage5cf_verdict: accept_with_warnings
+stage5cf_findings:
+- stage5ce_metadata_only_review_package_is_coherent
+- stage5ce_preserves_stage5cc_contract_layer
+- stage5ce_packages_active_planning_input_proposal_as_review_only
+- stage5ce_requires_operator_and_deep_research_approval_before_activation
+- stage5ce_records_committed_pytest_count_capture
+- stage5ce_keeps_no_byte_and_no_execution_transition_gates_closed
+- stage5ce_preserves_stage5bd_dry_run_plan_set
+- stage5ce_preserves_eight_record_active_lineage_set
+- stage5ce_keeps_string4_inactive
+- stage5ce_keeps_string4_noncanonical
+- stage5ce_keeps_string4_out_of_active_input
+- stage5ce_keeps_string4_out_of_dry_run_ingestion
+- stage5ce_keeps_string4_out_of_byte_stream_generation
+- stage5ce_keeps_string4_out_of_execution_input
+- stage5ce_does_not_authorize_active_planning_input
+- stage5ce_does_not_select_active_planning_input
+- stage5ce_does_not_create_new_active_planning_input
+- stage5ce_does_not_perform_manifest_supersession
+- stage5ce_does_not_mutate_stage5bd_plans
+- stage5ce_does_not_execute_token_block_work
+- stage5ce_has_no_gate_opening_defects
+- proposal_package_design_accepted_with_warnings
+- next_step_should_integrate_review_and_create_decision_scaffolds_without_decision
+stage5cf_warning_actions:
+  warning_1_public_github_issue_ci_external_or_unavailable:
+  - preserve_external_evidence_caveat
+  - keep_committed_reviewability_metadata
+  - do_not_attempt_final_commit_self_embedding
+  warning_2_attached_zip_not_pristine_checkout:
+  - record_packaging_warning_as_non_gate_opener
+  - keep_raw_and_generated_files_uncommitted
+  - audit_staging_before_commit
+  warning_3_source_digest_broader_than_prompt_expected:
+  - preserve_stage5ce_source_digest_breadth_as_intentional
+  - do_not_shrink_digest_coverage_to_match_older_prompt_expectation
+  - keep_unique_path_validation_active
+  warning_4_combined_gate_wording_blemish:
+  - inspect_current_stage5ce_combined_gate_record
+  - record_not_reproduced_current_repo_or_forward_erratum
+  - do_not_hide_history
+  - do_not_weaken_or_satisfy_approval_gate
+warning_count: 4
+warnings_are_gate_openers: false
+activation_authorized_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_acceptance_authorizes_activation_now: false
+deep_research_activation_accept_record_present_now: false
+deep_research_activation_accept_satisfied_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+final_commit_self_embedded: false
+full_cartesian_product_enumerated: false
+generated_byte_streams_committed: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+image_forensics_performed: false
+llm_vision_token_reading_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+new_active_planning_input_created: false
+ocr_performed: false
+operator_approval_authorizes_activation_now: false
+operator_approval_record_present_now: false
+operator_approval_satisfied_now: false
+page_boundaries_final: false
+pgp_network_verification_performed: false
+raw_archive_files_committed: false
+raw_fandom_files_committed: false
+raw_human_review_pack_committed: false
+real_byte_stream_generated: false
+scoring_performed: false
+spreadsheet_file_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_run_plan_ids_changed: false
+stage5bd_plan_superseded: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+template_bodies_committed: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false
