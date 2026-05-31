@@ -398,6 +398,19 @@ from .stage5cg import (
     validate_stage5cg_sidecar_gates,
     validate_stage5cg_stage5ce_wording_review,
 )
+from .stage5ci import (
+    DATA_PATHS as STAGE5CI_DATA_PATHS,
+    RESULTS_DIR as STAGE5CI_RESULTS_DIR,
+    build_stage5ci,
+    load_stage5ci_summary,
+    validate_stage5ci,
+    validate_stage5ci_activation_decision_template,
+    validate_stage5ci_combined_approval_gate,
+    validate_stage5ci_deep_research_acceptance_template,
+    validate_stage5ci_negative_validation_contract,
+    validate_stage5ci_operator_approval_template,
+    validate_stage5ci_sidecar_gates,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -4324,6 +4337,184 @@ def stage5cg_summary_command(
     console.print(
         "stage5ce_wording_blemish_disposition="
         f"{payload.get('stage5ce_wording_blemish_disposition')}"
+    )
+    console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+@app.command("build-stage5ci")
+def build_stage5ci_command(
+    results_dir: Path = typer.Option(STAGE5CI_RESULTS_DIR),
+) -> None:
+    payload = build_stage5ci(results_dir=results_dir)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(
+        "operator_approval_record_template_hardened="
+        f"{str(payload.get('operator_approval_record_template_hardened')).lower()}"
+    )
+    console.print(
+        "deep_research_acceptance_record_template_hardened="
+        f"{str(payload.get('deep_research_acceptance_record_template_hardened')).lower()}"
+    )
+    console.print(
+        "combined_approval_gate_satisfied_now="
+        f"{str(payload.get('combined_approval_gate_satisfied_now')).lower()}"
+    )
+    console.print(
+        "activation_decision_valid_now="
+        f"{str(payload.get('activation_decision_valid_now')).lower()}"
+    )
+    console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5ci-operator-approval-template")
+def validate_stage5ci_operator_approval_template_command(
+    operator_template: Path = typer.Option(STAGE5CI_DATA_PATHS["operator_template"]),
+) -> None:
+    counts, errors = validate_stage5ci_operator_approval_template(
+        operator_template=operator_template
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ci_operator_approval_template_valid=true")
+
+
+@app.command("validate-stage5ci-deep-research-acceptance-template")
+def validate_stage5ci_deep_research_acceptance_template_command(
+    deep_research_template: Path = typer.Option(STAGE5CI_DATA_PATHS["deep_research_template"]),
+) -> None:
+    counts, errors = validate_stage5ci_deep_research_acceptance_template(
+        deep_research_template=deep_research_template
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ci_deep_research_acceptance_template_valid=true")
+
+
+@app.command("validate-stage5ci-combined-approval-gate")
+def validate_stage5ci_combined_approval_gate_command(
+    combined_gate: Path = typer.Option(STAGE5CI_DATA_PATHS["combined_gate"]),
+) -> None:
+    counts, errors = validate_stage5ci_combined_approval_gate(combined_gate=combined_gate)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ci_combined_approval_gate_valid=true")
+
+
+@app.command("validate-stage5ci-activation-decision-template")
+def validate_stage5ci_activation_decision_template_command(
+    activation_template: Path = typer.Option(STAGE5CI_DATA_PATHS["activation_template"]),
+) -> None:
+    counts, errors = validate_stage5ci_activation_decision_template(
+        activation_template=activation_template
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ci_activation_decision_template_valid=true")
+
+
+@app.command("validate-stage5ci-negative-validation-contract")
+def validate_stage5ci_negative_validation_contract_command(
+    negative_contract: Path = typer.Option(STAGE5CI_DATA_PATHS["negative_contract"]),
+) -> None:
+    counts, errors = validate_stage5ci_negative_validation_contract(
+        negative_contract=negative_contract
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ci_negative_validation_contract_valid=true")
+
+
+@app.command("validate-stage5ci-sidecar-gates")
+def validate_stage5ci_sidecar_gates_command() -> None:
+    counts, errors = validate_stage5ci_sidecar_gates()
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ci_sidecar_gates_valid=true")
+
+
+@app.command("validate-stage5ci")
+def validate_stage5ci_command(
+    summary: Path = typer.Option(STAGE5CI_DATA_PATHS["summary"]),
+    next_stage_decision: Path = typer.Option(STAGE5CI_DATA_PATHS["next_stage"]),
+    guardrail: Path = typer.Option(STAGE5CI_DATA_PATHS["guardrail"]),
+    results_dir: Path = typer.Option(STAGE5CI_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5ci(
+        summary=summary,
+        next_stage_decision=next_stage_decision,
+        guardrail=guardrail,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ci_valid=true")
+
+
+@app.command("stage5ci-summary")
+def stage5ci_summary_command(
+    summary: Path = typer.Option(STAGE5CI_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5ci_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5ch_verdict={payload.get('stage5ch_verdict')}")
+    console.print(
+        "operator_approval_record_template_hardened="
+        f"{str(payload.get('operator_approval_record_template_hardened')).lower()}"
+    )
+    console.print(
+        "deep_research_acceptance_record_template_hardened="
+        f"{str(payload.get('deep_research_acceptance_record_template_hardened')).lower()}"
+    )
+    console.print(
+        "combined_approval_gate_satisfied_now="
+        f"{str(payload.get('combined_approval_gate_satisfied_now')).lower()}"
+    )
+    console.print(
+        "activation_decision_valid_now="
+        f"{str(payload.get('activation_decision_valid_now')).lower()}"
+    )
+    console.print(
+        "active_planning_input_authorized_now="
+        f"{str(payload.get('active_planning_input_authorized_now')).lower()}"
+    )
+    console.print(
+        "stage5bd_run_plan_id_count="
+        f"{payload.get('stage5bd_run_plan_id_count')}"
+    )
+    console.print(
+        "active_lineage_record_count="
+        f"{payload.get('active_lineage_record_count')}"
     )
     console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
     console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")

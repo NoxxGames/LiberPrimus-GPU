@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "activation_authorized_now": {
+      "const": false
+    },
+    "activation_decision_valid_now": {
+      "const": false
+    },
+    "active_ingestion_performed": {
+      "const": false
+    },
+    "active_manifest_registry_updated": {
+      "const": false
+    },
+    "active_planning_input_authorized_now": {
+      "const": false
+    },
+    "active_planning_input_decision_record_created_now": {
+      "const": false
+    },
+    "active_planning_input_selected_now": {
+      "const": false
+    },
+    "active_token_block_manifest_changed": {
+      "const": false
+    },
+    "ai_ml_interpretation_performed": {
+      "const": false
+    },
+    "approval_gate_authorizes_activation_now": {
+      "const": false
+    },
+    "approval_gate_satisfied_now": {
+      "const": false
+    },
+    "benchmark_performed": {
+      "const": false
+    },
+    "branch_enumeration_performed": {
+      "const": false
+    },
+    "byte_stream_generation_authorized_now": {
+      "const": false
+    },
+    "canonical_corpus_active": {
+      "const": false
+    },
+    "canonical_transcription_changed": {
+      "const": false
+    },
+    "codex_completion_summary_committed": {
+      "const": false
+    },
+    "codex_output_used": {
+      "const": false
+    },
+    "combined_approval_gate_authorizes_activation_now": {
+      "const": false
+    },
+    "combined_approval_gate_satisfied_now": {
+      "const": false
+    },
+    "cuda_execution_performed": {
+      "const": false
+    },
+    "decode_attempt_performed": {
+      "const": false
+    },
+    "deep_research_acceptance_authorizes_activation_now": {
+      "const": false
+    },
+    "deep_research_activation_accept_record_created_now": {
+      "const": false
+    },
+    "deep_research_activation_accept_record_present_now": {
+      "const": false
+    },
+    "deep_research_activation_accept_satisfied_now": {
+      "const": false
+    },
+    "dry_run_ingestion_authorized_now": {
+      "const": false
+    },
+    "dwh_hash_search_performed": {
+      "const": false
+    },
+    "execution_allowed": {
+      "const": false
+    },
+    "execution_authorized_now": {
+      "const": false
+    },
+    "final_commit_self_embedded": {
+      "const": false
+    },
+    "full_cartesian_product_enumerated": {
+      "const": false
+    },
+    "generated_byte_streams_committed": {
+      "const": false
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "hash_preimage_search_performed": {
+      "const": false
+    },
+    "image_forensics_performed": {
+      "const": false
+    },
+    "llm_vision_token_reading_performed": {
+      "const": false
+    },
+    "manifest_supersession_authorized_now": {
+      "const": false
+    },
+    "manifest_supersession_performed": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "method_status_upgraded": {
+      "const": false
+    },
+    "new_active_planning_input_created": {
+      "const": false
+    },
+    "ocr_performed": {
+      "const": false
+    },
+    "operator_approval_authorizes_activation_now": {
+      "const": false
+    },
+    "operator_approval_record_created_now": {
+      "const": false
+    },
+    "operator_approval_record_present_now": {
+      "const": false
+    },
+    "operator_approval_satisfied_now": {
+      "const": false
+    },
+    "page_boundaries_final": {
+      "const": false
+    },
+    "pgp_network_verification_performed": {
+      "const": false
+    },
+    "raw_archive_files_committed": {
+      "const": false
+    },
+    "raw_fandom_files_committed": {
+      "const": false
+    },
+    "raw_human_review_pack_committed": {
+      "const": false
+    },
+    "real_byte_stream_generated": {
+      "const": false
+    },
+    "record_type": {
+      "const": "stage5ci_findings"
+    },
+    "scoring_performed": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "spreadsheet_file_committed": {
+      "const": false
+    },
+    "stage5bd_dry_run_plan_manifest_changed": {
+      "const": false
+    },
+    "stage5bd_plan_superseded": {
+      "const": false
+    },
+    "stage5bd_run_plan_ids_changed": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-5ci"
+    },
+    "stego_tool_execution_performed": {
+      "const": false
+    },
+    "string4_active_input_allowed": {
+      "const": false
+    },
+    "string4_byte_stream_generation_allowed": {
+      "const": false
+    },
+    "string4_dry_run_ingestion_allowed_now": {
+      "const": false
+    },
+    "string4_execution_input_allowed": {
+      "const": false
+    },
+    "string4_sidecar_active": {
+      "const": false
+    },
+    "string4_sidecar_planning_ingestion_activated": {
+      "const": false
+    },
+    "template_bodies_committed": {
+      "const": false
+    },
+    "template_misread_as_approval": {
+      "const": false
+    },
+    "token_block_experiment_executed": {
+      "const": false
+    },
+    "variant_byte_streams_generated": {
+      "const": false
+    },
+    "variant_materialisation_performed": {
+      "const": false
+    },
+    "website_expansion_performed": {
+      "const": false
+    }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "metadata_only",
+    "solve_claim",
+    "execution_allowed"
+  ],
+  "type": "object"
+}

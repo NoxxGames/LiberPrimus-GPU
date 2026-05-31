@@ -19,11 +19,12 @@ def test_stage5ab_source_of_truth_schema_and_loader() -> None:
 
     _validator("schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json").validate(payload)
     source = load_source_of_truth(path)
-    assert source.latest_completed_stage_prefix == "Stage 5CG"
-    assert source.expected_next_stage_prefix == "Stage 5CH"
+    assert source.latest_completed_stage_prefix == "Stage 5CI"
+    assert source.expected_next_stage_prefix == "Stage 5CJ"
     assert source.next_stage_after_this_stage == (
-        "Stage 5CH - Deep Research review of Stage 5CG post-review approval-gate "
-        "integration and active-planning-input decision record scaffold, without execution"
+        "Stage 5CJ - Deep Research review of Stage 5CI operator/Deep Research "
+        "approval-record template hardening and activation-decision validation preflight, "
+        "without execution"
     )
 
 

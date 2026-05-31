@@ -2699,3 +2699,190 @@ records:
   staleness_check_level: strict
   owner_context: codex_agent
   notes: Documents focused validators, unsatisfied decision scaffolds, Stage 5CE wording review, no-byte/no-execution transition gates, and ignored-output boundaries for Stage 5CG.
+- path: data/project-state/stage5ci-summary.yaml
+  category: active_data_record
+  purpose: Stage 5CI compact summary and next-stage decision support.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records Stage 5CH warning integration, approval-template hardening, combined gate non-satisfaction, activation-decision template status, Stage 5BD preservation, and Stage 5CJ next-stage routing.
+- path: data/project-state/stage5ci-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5CI next-stage decision selecting Stage 5CJ review.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Selects Deep Research review and does not authorize execution.
+- path: data/project-state/stage5ci-stage5ch-findings-integration.yaml
+  category: active_data_record
+  purpose: Stage 5CI integration of the Stage 5CH review findings.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves Stage 5CH warnings as non-gate-opening template-hardening requirements.
+- path: data/project-state/stage5ci-reviewable-validation-evidence.yaml
+  category: active_data_record
+  purpose: Stage 5CI validation evidence and command inventory.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records focused validators, Stage 5AX parallel validation requirement, pytest count capture, and serial git/GitHub handling.
+- path: data/project-state/stage5ci-reviewable-source-digest-index.yaml
+  category: active_data_record
+  purpose: Stage 5CI reviewable source-digest index.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Hashes committed Stage 5CH/5CG/5CE/5CC/5BD and active-lineage metadata used by Stage 5CI.
+- path: data/project-state/stage5ci-reviewability-gap-register.yaml
+  category: active_data_record
+  purpose: Stage 5CI reviewability warning register.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records external evidence caveat, packaging-warning, template-hardening, and final-commit self-embedding limitations as non-gate-opening warnings.
+- path: data/project-state/stage5ci-record-family-name-equivalence-map.yaml
+  category: active_data_record
+  purpose: Stage 5CI record-family filename-equivalence metadata.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Groups Stage 5CG decision-scaffold and Stage 5CI approval-template record families for reviewability.
+- path: data/token-block/stage5ci-operator-approval-record-template.yaml
+  category: active_data_record
+  purpose: Stage 5CI future operator approval record template.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Template-only; no operator approval record exists and activation is not authorized.
+- path: data/token-block/stage5ci-deep-research-acceptance-record-template.yaml
+  category: active_data_record
+  purpose: Stage 5CI future Deep Research activation-acceptance record template.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Template-only; no Deep Research activation acceptance record exists and activation is not authorized.
+- path: data/token-block/stage5ci-combined-approval-gate-validation-preflight.yaml
+  category: active_data_record
+  purpose: Stage 5CI combined operator and Deep Research approval-gate validation preflight.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Requires both future records and remains unsatisfied now.
+- path: data/token-block/stage5ci-active-planning-input-activation-decision-template.yaml
+  category: active_data_record
+  purpose: Stage 5CI future active-planning-input activation-decision template.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Template-only; active-planning input is not selected, created, or authorized.
+- path: data/token-block/stage5ci-approval-record-negative-validation-contract.yaml
+  category: active_data_record
+  purpose: Stage 5CI negative validation contract for approval and activation records.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Requires validators to reject template misuse, missing approvals, byte-stream/execution/dry-run authorization, manifest supersession, deprecated paths, `codex_output`, and solve claims.
+- path: data/token-block/stage5ci-no-byte-stream-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5CI no-byte-stream transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps primary-60/String 4 byte-stream generation, branch materialisation, variants, DWH/hash search, decode, scoring, CUDA, benchmarks, and solve claims blocked.
+- path: data/token-block/stage5ci-no-execution-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5CI no-execution transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps token-block experiments, decode, DWH/hash search, scoring, CUDA, benchmarks, and stego tools unexecuted.
+- path: data/token-block/stage5ci-stage5bd-plan-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CI Stage 5BD dry-run plan preservation.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves all 10 Stage 5BD run-plan IDs and does not mutate dry-run plan records.
+- path: data/token-block/stage5ci-active-lineage-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CI active-lineage preservation.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves the eight active-lineage records and corrected Stage 5AW path.
+- path: docs/onboarding/stage5ci-approval-record-template-hardening-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5CI approval-record template hardening.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ci
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, template-only approval/acceptance records, combined gate non-satisfaction, activation-decision template status, no-byte/no-execution transition gates, and ignored-output boundaries for Stage 5CI.
