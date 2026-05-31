@@ -2886,3 +2886,157 @@ records:
   staleness_check_level: strict
   owner_context: codex_agent
   notes: Documents focused validators, template-only approval/acceptance records, combined gate non-satisfaction, activation-decision template status, no-byte/no-execution transition gates, and ignored-output boundaries for Stage 5CI.
+- path: data/project-state/stage5ck-summary.yaml
+  category: active_data_record
+  purpose: Stage 5CK compact summary and next-stage decision support.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records Stage 5CJ warning integration, fixture-pack counts, gate non-satisfaction, Stage 5BD preservation, and Stage 5CL next-stage routing.
+- path: data/project-state/stage5ck-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5CK next-stage decision selecting Stage 5CL review.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps the next stage non-executing and review-only.
+- path: data/project-state/stage5ck-stage5cj-findings-integration.yaml
+  category: active_data_record
+  purpose: Stage 5CK integration of the Stage 5CJ review findings.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records Stage 5CJ accept-with-warnings findings as compact metadata, not Deep Research body text.
+- path: data/project-state/stage5ck-reviewable-validation-evidence.yaml
+  category: active_data_record
+  purpose: Stage 5CK validation evidence and command inventory.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records focused validators, Stage 5AX parallel validation, pytest count capture, and serial git/GitHub handling.
+- path: data/project-state/stage5ck-reviewable-source-digest-index.yaml
+  category: active_data_record
+  purpose: Stage 5CK reviewable source-digest index.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Hashes committed Stage 5CJ/5CI/5CG/5CE/5CC/5BD and active-lineage metadata used by Stage 5CK.
+- path: data/project-state/stage5ck-reviewability-gap-register.yaml
+  category: active_data_record
+  purpose: Stage 5CK reviewability warning register.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records external-evidence caveats and fixture-packaging warnings as non-gate-opening warnings.
+- path: data/token-block/stage5ck-operator-approval-fixture-pack.yaml
+  category: active_data_record
+  purpose: Stage 5CK fixture-only operator approval validation pack.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Synthetic fixture-only; no operator approval record exists and activation is not authorized.
+- path: data/token-block/stage5ck-deep-research-acceptance-fixture-pack.yaml
+  category: active_data_record
+  purpose: Stage 5CK fixture-only Deep Research acceptance validation pack.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Synthetic fixture-only; no Deep Research activation acceptance record exists and activation is not authorized.
+- path: data/token-block/stage5ck-activation-decision-fixture-pack.yaml
+  category: active_data_record
+  purpose: Stage 5CK fixture-only activation-decision validation pack.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Synthetic fixture-only; active-planning input is not selected, created, or authorized.
+- path: data/token-block/stage5ck-approval-fixture-negative-validation-matrix.yaml
+  category: active_data_record
+  purpose: Stage 5CK negative validation matrix for fixture misuse.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Requires validators to reject fixture records as actual approvals, acceptances, activation decisions, byte-stream authorization, execution authorization, or solve claims.
+- path: data/token-block/stage5ck-activation-decision-review-package.yaml
+  category: active_data_record
+  purpose: Stage 5CK activation-decision review package.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Review package only; it authorizes no activation, active input, dry-run ingestion, byte streams, or execution.
+- path: data/token-block/stage5ck-stage5bd-plan-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CK Stage 5BD dry-run plan preservation.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves all 10 Stage 5BD run-plan IDs and does not mutate dry-run plan records.
+- path: data/token-block/stage5ck-active-lineage-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CK active-lineage preservation.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves the eight active-lineage records and corrected Stage 5AW path.
+- path: docs/onboarding/stage5ck-approval-record-fixture-pack-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5CK approval-record fixture packaging.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ck
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, fixture-only approval/acceptance/activation records, combined gate non-satisfaction, activation-decision review-package status, no-byte/no-execution transition gates, and ignored-output boundaries for Stage 5CK.

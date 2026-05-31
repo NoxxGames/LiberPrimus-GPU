@@ -1,0 +1,142 @@
+record_type: stage5ck_validation_evidence
+schema: schemas/project-state/stage5ck-reviewable-validation-evidence-v0.schema.json
+stage_id: stage-5ck
+stage_title: Stage 5CK - Approval-record validation fixture pack and activation-decision
+  review package, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5ci
+source_previous_stage_commit: 654098c8de63d9e5dc94618d2b89020299fc4a36
+source_deep_research_stage: stage-5cj
+source_deep_research_report: 20_Stage-5CI-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+validation_evidence_status: planned_and_recorded
+validation_commands:
+- command: python -m libreprimus.cli token-block build-stage5ck
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5ck-operator-fixtures
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5ck-deep-research-fixtures
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5ck-activation-decision-fixtures
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5ck-negative-validation-matrix
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5ck-review-package
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5ck-sidecar-gates
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5ck
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block stage5ck-summary
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5ci
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5cg
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5ce
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5cc
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5ca
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli token-block validate-stage5bd --results-dir experiments/results/token-block/stage5bd
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli parallel-validation validate-stage5ax
+  safe_to_parallelize: false
+- command: .\scripts\ci\run-parallel-validation.ps1 -Workers 16 -PytestWorkers 16
+    -PytestMode auto
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli research-synthesis validate --data-dir data/research
+    --staged-plan docs/roadmap/staged-plan.md
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli consistency check-state-drift
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli consistency check-all --allow-warnings
+  safe_to_parallelize: false
+- command: python -m libreprimus.cli smoke
+  safe_to_parallelize: false
+- command: python -m ruff check python/libreprimus tests/python
+  safe_to_parallelize: false
+- command: python -m pytest -q tests/python
+  safe_to_parallelize: false
+- command: .\scripts\ci\run-consistency-checks.ps1
+  safe_to_parallelize: false
+parallel_validation_required: true
+parallel_validation_wrapper: scripts/ci/run-parallel-validation.ps1
+parallel_validation_status_observed_locally: passed
+parallel_validation_pytest_mode_observed_locally: xdist
+bash_wrapper_status: wsl_present_without_installed_distribution
+unsafe_operations_kept_serial: true
+pytest_count_observed_locally: 2327
+pytest_command_observed_locally: python -m pytest -q tests/python
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_decision_record_created_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_acceptance_authorizes_activation_now: false
+deep_research_activation_accept_record_created_now: false
+deep_research_activation_accept_record_present_now: false
+deep_research_activation_accept_satisfied_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+final_commit_self_embedded: false
+full_cartesian_product_enumerated: false
+generated_byte_streams_committed: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+image_forensics_performed: false
+llm_vision_token_reading_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+new_active_planning_input_created: false
+ocr_performed: false
+operator_approval_authorizes_activation_now: false
+operator_approval_record_created_now: false
+operator_approval_record_present_now: false
+operator_approval_satisfied_now: false
+page_boundaries_final: false
+pgp_network_verification_performed: false
+raw_archive_files_committed: false
+raw_fandom_files_committed: false
+raw_human_review_pack_committed: false
+real_byte_stream_generated: false
+scoring_performed: false
+spreadsheet_file_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_plan_superseded: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+template_bodies_committed: false
+template_misread_as_approval: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false

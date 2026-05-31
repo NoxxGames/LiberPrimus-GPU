@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5CI operator/Deep Research approval-record template hardening and activation-decision validation preflight is complete.
+Stage 5CK approval-record validation fixture pack and activation-decision review package is complete.
 
-Next recommended prompt: Stage 5CJ - Deep Research review of Stage 5CI operator/Deep Research approval-record template hardening and activation-decision validation preflight, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5CL - Deep Research review of Stage 5CK approval-record validation fixture pack and activation-decision review package, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5CK
+
+Stage 5CK consumes the Stage 5CJ `accept_with_warnings` review outcome as compact metadata. It creates fixture-only operator approval, Deep Research activation-acceptance, and activation-decision validation packs, plus an activation-decision review package, while preserving Stage 5CI templates, Stage 5CG scaffolds, Stage 5CE proposal/gate records, Stage 5CC exact contracts, Stage 5BD run-plan IDs, and active lineage.
+
+Local Stage 5CK summary: Stage 5CJ verdict `accept_with_warnings`, fixture pack created `true`, fixture pack only `true`, operator fixture records `8`, Deep Research acceptance fixture records `8`, activation-decision fixture records `10`, negative validation classes `20`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, real approval records created `false`, real Deep Research acceptance records created `false`, real activation-decision records created `false`, operator approval fixture records satisfy approval `false`, Deep Research acceptance fixture records satisfy acceptance `false`, activation-decision fixture records valid now `false`, combined approval gate satisfied now `false`, activation decision valid now `false`, activation authorized now `false`, active input authorized now `false`, active input selected now `false`, String 4 active input `false`, dry-run ingestion now `false`, byte-stream generation allowed `false`, execution input allowed `false`, no-byte-stream transition gate `closed`, no-execution transition gate `closed`, manifest supersession performed `false`, canonical transcription changed `false`, active token-block manifest changed `false`, future execution blocked `true`, generated outputs committed `false`, `codex_output` used `false`, and next stage `Stage 5CL`.
+
+Stage 5CK is metadata-only. It does not create actual operator approval, create actual Deep Research activation acceptance, satisfy the approval gate, validate an activation decision now, authorize or select active planning input, activate String 4, ingest String 4 into Stage 5BD dry-run plans, mutate Stage 5BD dry-run records, supersede active manifests, generate byte streams, materialise variants, enumerate branches, run token experiments, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, or make solve claims. The Codex handoff path is `codex-output/stage5ck-codex-completion.md`; `codex_output` is deprecated and must not be created.
 
 ## Completed in Stage 5CI
 

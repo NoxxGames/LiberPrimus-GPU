@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5CI" \
-    --expected-next-stage "Stage 5CJ" \
+    --expected-latest-stage "Stage 5CK" \
+    --expected-next-stage "Stage 5CL" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5CI" \
-    --expected-next-stage "Stage 5CJ" \
+    --expected-latest-stage "Stage 5CK" \
+    --expected-next-stage "Stage 5CL" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-        expected_latest_stage="Stage 5CI",
+            expected_latest_stage="Stage 5CK",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5CI",
+            "expected_latest_stage": "Stage 5CK",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2735,6 +2735,26 @@ git check-ignore -q "$stage5ci_token_results_root/negative_validation_contract.j
 git check-ignore -q "codex-output/stage5ci-codex-completion.md"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5CI" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5CK approval-record fixture pack records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5ck-operator-fixtures
+"$python_bin" -m libreprimus.cli token-block validate-stage5ck-deep-research-fixtures
+"$python_bin" -m libreprimus.cli token-block validate-stage5ck-activation-decision-fixtures
+"$python_bin" -m libreprimus.cli token-block validate-stage5ck-negative-validation-matrix
+"$python_bin" -m libreprimus.cli token-block validate-stage5ck-review-package
+"$python_bin" -m libreprimus.cli token-block validate-stage5ck-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5ck
+stage5ck_token_results_root="experiments"/"results"/"token-block"/"stage5ck"
+git check-ignore -q "$stage5ck_token_results_root/summary.json"
+git check-ignore -q "$stage5ck_token_results_root/fixture_pack_report.json"
+git check-ignore -q "$stage5ck_token_results_root/activation_decision_review_package.json"
+git check-ignore -q "$stage5ck_token_results_root/combined_gate_validation.json"
+git check-ignore -q "$stage5ck_token_results_root/negative_validation_matrix.json"
+git check-ignore -q "codex-output/stage5ck-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5CK" >&2
     exit 1
 fi
 

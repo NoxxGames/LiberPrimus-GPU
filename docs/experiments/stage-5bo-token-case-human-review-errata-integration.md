@@ -36,6 +36,8 @@ Stage 5BY later consumes the Stage 5BX review outcome, classifies the Stage 5BW 
 
 Stage 5CI later consumes the Stage 5CH review outcome, hardens future operator approval and Deep Research acceptance templates, hardens combined approval-gate and activation-decision validation surfaces, preserves Stage 5BD run-plan IDs, and keeps String 4 inactive before Stage 5CJ review.
 
+Stage 5CK later consumes the Stage 5CJ review outcome, creates fixture-only operator approval, Deep Research acceptance, activation-decision, and negative-validation packs, proves fixture records cannot satisfy actual gates, preserves Stage 5CI templates plus Stage 5CG/5CE/5CC/5BD lineage, and keeps String 4 inactive before Stage 5CL review.
+
 Stage 5CA later consumes the Stage 5BZ review outcome and hardens the inactive sidecar with exact future-runner citation, fail-closed trigger, activation-precondition, manifest-supersession preflight, sidecar-transition, Stage 5BD preservation, active-lineage preservation, no-active-ingestion, and no-byte-stream contracts before Stage 5CB review. It still keeps String 4 inactive and does not authorize active ingestion or execution.
 
 Stage 5CC later consumes the Stage 5CB accept-with-warnings review outcome, preserves the Stage 5CA exact citation contract, hardens fail-closed triggers and activation preconditions as exact sets, creates an active-planning-input proposal preflight without authorizing it, closes no-byte-stream and no-execution transition gates, preserves Stage 5BD run-plan IDs and active lineage, reaffirms DWH quarantine, and keeps String 4 inactive before Stage 5CD review.

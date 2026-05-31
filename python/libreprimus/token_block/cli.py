@@ -411,6 +411,19 @@ from .stage5ci import (
     validate_stage5ci_operator_approval_template,
     validate_stage5ci_sidecar_gates,
 )
+from .stage5ck import (
+    DATA_PATHS as STAGE5CK_DATA_PATHS,
+    RESULTS_DIR as STAGE5CK_RESULTS_DIR,
+    build_stage5ck,
+    load_stage5ck_summary,
+    validate_stage5ck,
+    validate_stage5ck_activation_decision_fixtures,
+    validate_stage5ck_deep_research_fixtures,
+    validate_stage5ck_negative_validation_matrix,
+    validate_stage5ck_operator_fixtures,
+    validate_stage5ck_review_package,
+    validate_stage5ck_sidecar_gates,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -4496,6 +4509,171 @@ def stage5ci_summary_command(
         "deep_research_acceptance_record_template_hardened="
         f"{str(payload.get('deep_research_acceptance_record_template_hardened')).lower()}"
     )
+    console.print(
+        "combined_approval_gate_satisfied_now="
+        f"{str(payload.get('combined_approval_gate_satisfied_now')).lower()}"
+    )
+    console.print(
+        "activation_decision_valid_now="
+        f"{str(payload.get('activation_decision_valid_now')).lower()}"
+    )
+    console.print(
+        "active_planning_input_authorized_now="
+        f"{str(payload.get('active_planning_input_authorized_now')).lower()}"
+    )
+    console.print(
+        "stage5bd_run_plan_id_count="
+        f"{payload.get('stage5bd_run_plan_id_count')}"
+    )
+    console.print(
+        "active_lineage_record_count="
+        f"{payload.get('active_lineage_record_count')}"
+    )
+    console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+@app.command("build-stage5ck")
+def build_stage5ck_command(
+    results_dir: Path = typer.Option(STAGE5CK_RESULTS_DIR),
+) -> None:
+    payload = build_stage5ck(results_dir=results_dir)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"fixture_pack_created={str(payload.get('fixture_pack_created')).lower()}")
+    console.print(f"fixture_pack_only={str(payload.get('fixture_pack_only')).lower()}")
+    console.print(
+        "combined_approval_gate_satisfied_now="
+        f"{str(payload.get('combined_approval_gate_satisfied_now')).lower()}"
+    )
+    console.print(
+        "activation_decision_valid_now="
+        f"{str(payload.get('activation_decision_valid_now')).lower()}"
+    )
+    console.print(
+        "active_planning_input_authorized_now="
+        f"{str(payload.get('active_planning_input_authorized_now')).lower()}"
+    )
+
+
+@app.command("validate-stage5ck-operator-fixtures")
+def validate_stage5ck_operator_fixtures_command(
+    operator_fixtures: Path = typer.Option(STAGE5CK_DATA_PATHS["operator_fixtures"]),
+) -> None:
+    counts, errors = validate_stage5ck_operator_fixtures(operator_fixtures=operator_fixtures)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ck_operator_fixtures_valid=true")
+
+
+@app.command("validate-stage5ck-deep-research-fixtures")
+def validate_stage5ck_deep_research_fixtures_command(
+    deep_research_fixtures: Path = typer.Option(STAGE5CK_DATA_PATHS["deep_research_fixtures"]),
+) -> None:
+    counts, errors = validate_stage5ck_deep_research_fixtures(
+        deep_research_fixtures=deep_research_fixtures
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ck_deep_research_fixtures_valid=true")
+
+
+@app.command("validate-stage5ck-activation-decision-fixtures")
+def validate_stage5ck_activation_decision_fixtures_command(
+    activation_fixtures: Path = typer.Option(STAGE5CK_DATA_PATHS["activation_fixtures"]),
+) -> None:
+    counts, errors = validate_stage5ck_activation_decision_fixtures(
+        activation_fixtures=activation_fixtures
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ck_activation_decision_fixtures_valid=true")
+
+
+@app.command("validate-stage5ck-negative-validation-matrix")
+def validate_stage5ck_negative_validation_matrix_command(
+    negative_matrix: Path = typer.Option(STAGE5CK_DATA_PATHS["negative_matrix"]),
+) -> None:
+    counts, errors = validate_stage5ck_negative_validation_matrix(negative_matrix=negative_matrix)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ck_negative_validation_matrix_valid=true")
+
+
+@app.command("validate-stage5ck-review-package")
+def validate_stage5ck_review_package_command(
+    review_package: Path = typer.Option(STAGE5CK_DATA_PATHS["review_package"]),
+) -> None:
+    counts, errors = validate_stage5ck_review_package(review_package=review_package)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ck_review_package_valid=true")
+
+
+@app.command("validate-stage5ck-sidecar-gates")
+def validate_stage5ck_sidecar_gates_command() -> None:
+    counts, errors = validate_stage5ck_sidecar_gates()
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ck_sidecar_gates_valid=true")
+
+
+@app.command("validate-stage5ck")
+def validate_stage5ck_command(
+    summary: Path = typer.Option(STAGE5CK_DATA_PATHS["summary"]),
+    next_stage_decision: Path = typer.Option(STAGE5CK_DATA_PATHS["next_stage"]),
+    guardrail: Path = typer.Option(STAGE5CK_DATA_PATHS["guardrail"]),
+    results_dir: Path = typer.Option(STAGE5CK_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5ck(
+        summary=summary,
+        next_stage_decision=next_stage_decision,
+        guardrail=guardrail,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5ck_valid=true")
+
+
+@app.command("stage5ck-summary")
+def stage5ck_summary_command(
+    summary: Path = typer.Option(STAGE5CK_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5ck_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5cj_verdict={payload.get('stage5cj_verdict')}")
+    console.print(f"fixture_pack_created={str(payload.get('fixture_pack_created')).lower()}")
+    console.print(f"fixture_pack_only={str(payload.get('fixture_pack_only')).lower()}")
     console.print(
         "combined_approval_gate_satisfied_now="
         f"{str(payload.get('combined_approval_gate_satisfied_now')).lower()}"
