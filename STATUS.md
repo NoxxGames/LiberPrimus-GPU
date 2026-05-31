@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5CK approval-record validation fixture pack and activation-decision review package is complete.
+Stage 5CM approval-record readiness boundary and activation-decision gate hardening is complete.
 
-Next recommended prompt: Stage 5CL - Deep Research review of Stage 5CK approval-record validation fixture pack and activation-decision review package, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5CN - Deep Research review of Stage 5CM approval-record readiness boundary and activation-decision gate hardening, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5CM
+
+Stage 5CM consumes the Stage 5CL `accept_with_warnings` review outcome as compact metadata. It preserves the Stage 5CK fixture-only validation layer, hardens the boundary between fixture/template/scaffold/review-package records and future real approval records, adds an end-to-end readiness-boundary validator, records future real approval-readiness criteria, and adds credential-redaction/no-secret handoff policy.
+
+Local Stage 5CM summary: Stage 5CL verdict `accept_with_warnings`, approval-readiness boundary created `true`, fixture-vs-real boundary hardened `true`, end-to-end boundary validator created `true`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, parallel worker cap `8`, real approval records created `false`, real Deep Research acceptance records created `false`, real activation-decision records created `false`, combined approval gate satisfied now `false`, activation decision valid now `false`, active input authorized now `false`, active input selected now `false`, no-byte-stream transition gate `closed`, no-execution transition gate `closed`, manifest supersession performed `false`, String 4 sidecar active `false`, future execution blocked `true`, generated outputs committed `false`, `codex_output` used `false`, and next stage `Stage 5CN`.
+
+Stage 5CM is metadata-only. It does not create actual operator approval, create actual Deep Research activation acceptance, satisfy the approval gate, validate an activation decision now, authorize or select active planning input, activate String 4, ingest String 4 into Stage 5BD dry-run plans, mutate Stage 5BD dry-run records, supersede active manifests, generate byte streams, materialise variants, enumerate branches, run token experiments, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, or make solve claims. The Codex handoff path is `codex-output/stage5cm-codex-completion.md`; `codex_output` is deprecated and must not be created.
 
 ## Completed in Stage 5CK
 

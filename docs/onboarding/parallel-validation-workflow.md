@@ -3,7 +3,7 @@
 Stage 5AX adds an opt-in local workflow for faster validation:
 
 ```powershell
-.\scripts\ci\run-parallel-validation.ps1 -Workers 16 -PytestWorkers 16 -PytestMode auto
+.\scripts\ci\run-parallel-validation.ps1 -Workers 8 -PytestWorkers 8 -PytestMode auto
 ```
 
 Use this during Codex implementation turns after normal targeted checks pass. Keep final git, GitHub, staging, issue, commit, push, and remote verification steps serial.
@@ -18,7 +18,7 @@ The workflow:
 
 Do not add mutating commands to the parallel-safe class. Generated-output-writing commands need isolated ignored outputs or must stay serial. Network, GitHub, commit, push, and manual operations stay serial.
 
-Stage 5AY bounded token-block preflight design cites Stage 5AW repaired branch metadata and uses Stage 5AX as validation infrastructure only. Stage 5AZ repaired the duplicate variant-family ID; Stage 5BB uses Stage 5AX as validation infrastructure while building no-execution runner scaffold records; Stage 5BD uses it while validating no-byte-stream dry-run records. Stage 5BE review should inspect Stage 5BD records, not generated Stage 5AX logs.
+Stage 5AY bounded token-block preflight design cites Stage 5AW repaired branch metadata and uses Stage 5AX as validation infrastructure only. Stage 5AZ repaired the duplicate variant-family ID; Stage 5BB uses Stage 5AX as validation infrastructure while building no-execution runner scaffold records; Stage 5BD uses it while validating no-byte-stream dry-run records. Stage 5CM sets the forward local worker cap to 8 for the wrapper and pytest-xdist. Stage 5CN review should inspect Stage 5CM records, not generated Stage 5AX logs.
 ## Stage 5BD Status
 
 Stage 5BD can be validated by the parallel-validation harness as local infrastructure only; timings are not benchmark evidence.

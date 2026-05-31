@@ -20,4 +20,4 @@ It does not create an actual operator approval record, create a Deep Research ac
 
 Generated diagnostics remain ignored under `experiments/results/token-block/stage5ck/`.
 
-Next stage: Stage 5CL Deep Research review.
+Next stage: completed by Stage 5CL review and Stage 5CM readiness-boundary hardening; current routing is Stage 5CN Deep Research review.

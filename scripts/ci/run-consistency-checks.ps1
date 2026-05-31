@@ -7,7 +7,7 @@ Set-Location $RepoRoot
 $Python = if ($env:PYTHON) { $env:PYTHON } elseif (Test-Path ".\.venv\Scripts\python.exe") { ".\.venv\Scripts\python.exe" } else { "python" }
 $TempDir = Join-Path ([System.IO.Path]::GetTempPath()) ("libreprimus-consistency-" + [System.Guid]::NewGuid().ToString("N"))
 New-Item -ItemType Directory -Path $TempDir | Out-Null
-Write-Host "For faster local validation, use scripts/ci/run-parallel-validation.ps1 -Workers 16"
+Write-Host "For faster local validation, use scripts/ci/run-parallel-validation.ps1 -Workers 8 -PytestWorkers 8 -PytestMode auto"
 
 try {
     Write-Host "Running full consistency suite"
@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5CK" `
-        --expected-next-stage "Stage 5CL" `
+        --expected-latest-stage "Stage 5CM" `
+        --expected-next-stage "Stage 5CN" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5CK" `
-        --expected-next-stage "Stage 5CL" `
+        --expected-latest-stage "Stage 5CM" `
+        --expected-next-stage "Stage 5CN" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5CK",
+            expected_latest_stage="Stage 5CM",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5CK",
+            "expected_latest_stage": "Stage 5CM",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2695,6 +2695,23 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q (Join-Path $Stage5CKTokenResultsRoot "negative_validation_matrix.json")
     git check-ignore -q "codex-output/stage5ck-codex-completion.md"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5CK" }
+
+    Write-Host "Validating Stage 5CM approval-record readiness boundary records"
+    & $Python -m libreprimus.cli token-block validate-stage5cm-approval-readiness-boundary
+    & $Python -m libreprimus.cli token-block validate-stage5cm-fixture-real-boundary
+    & $Python -m libreprimus.cli token-block validate-stage5cm-end-to-end-readiness-boundary
+    & $Python -m libreprimus.cli token-block validate-stage5cm-real-approval-readiness
+    & $Python -m libreprimus.cli token-block validate-stage5cm-activation-decision-gate
+    & $Python -m libreprimus.cli token-block validate-stage5cm-credential-redaction-policy
+    & $Python -m libreprimus.cli token-block validate-stage5cm-sidecar-gates
+    & $Python -m libreprimus.cli token-block validate-stage5cm
+    $Stage5CMTokenResultsRoot = Join-Path (Join-Path (Join-Path "experiments" "results") "token-block") "stage5cm"
+    git check-ignore -q (Join-Path $Stage5CMTokenResultsRoot "summary.json")
+    git check-ignore -q (Join-Path $Stage5CMTokenResultsRoot "readiness_boundary_report.json")
+    git check-ignore -q (Join-Path $Stage5CMTokenResultsRoot "credential_scan.json")
+    git check-ignore -q (Join-Path $Stage5CMTokenResultsRoot "source_digest_index.json")
+    git check-ignore -q "codex-output/stage5cm-codex-completion.md"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5CM" }
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

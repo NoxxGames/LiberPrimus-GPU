@@ -1,0 +1,86 @@
+record_type: stage5cm_next_stage
+schema: schemas/project-state/stage5cm-next-stage-decision-v0.schema.json
+stage_id: stage-5cm
+stage_title: Stage 5CM - Approval-record readiness boundary and activation-decision
+  gate hardening, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5ck
+source_previous_stage_commit: 9a9b45c262d438d3f94d661dc8522c743252b55b
+source_deep_research_stage: stage-5cl
+source_deep_research_report: 21_Stage-5CK-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+selected_next_stage_id: stage-5cn
+selected_next_stage_title: Stage 5CN - Deep Research review of Stage 5CM approval-record
+  readiness boundary and activation-decision gate hardening, without execution
+selected_next_prompt_type: deep_research_review
+selected_next_stage_authorizes_execution: false
+reason: Stage 5CM hardens the readiness boundary between fixture-only infrastructure
+  and future real approval records; independent review is required before any approval
+  or activation-adjacent stage.
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_decision_record_created_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_activation_accept_record_created_now: false
+deep_research_activation_accept_record_present_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+full_cartesian_product_enumerated: false
+future_real_records_created_now: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+image_forensics_performed: false
+llm_vision_token_reading_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+new_active_planning_input_created: false
+ocr_performed: false
+operator_approval_record_created_now: false
+operator_approval_record_present_now: false
+real_activation_decision_record_created_now: false
+real_activation_decision_records_created: false
+real_approval_records_created: false
+real_byte_stream_generated: false
+real_combined_gate_validation_record_created_now: false
+real_deep_research_acceptance_record_created_now: false
+real_deep_research_acceptance_records_created: false
+real_operator_approval_record_created_now: false
+scoring_performed: false
+secret_values_printed_or_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_plan_superseded: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+template_misread_as_approval: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false

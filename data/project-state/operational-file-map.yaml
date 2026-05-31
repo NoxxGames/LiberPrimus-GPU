@@ -3040,3 +3040,146 @@ records:
   staleness_check_level: strict
   owner_context: codex_agent
   notes: Documents focused validators, fixture-only approval/acceptance/activation records, combined gate non-satisfaction, activation-decision review-package status, no-byte/no-execution transition gates, and ignored-output boundaries for Stage 5CK.
+- path: data/project-state/stage5cm-summary.yaml
+  category: active_data_record
+  purpose: Stage 5CM compact summary and next-stage decision support.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records Stage 5CL warning integration, approval-readiness boundary status, fixture-vs-real hardening, 8-worker validation cap, gate non-satisfaction, Stage 5BD preservation, and Stage 5CN next-stage routing.
+- path: data/project-state/stage5cm-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5CM next-stage decision selecting Stage 5CN review.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Selects Deep Research review only; no execution, activation, approval, or byte-stream stage is selected.
+- path: data/project-state/stage5cm-stage5cl-findings-integration.yaml
+  category: active_data_record
+  purpose: Stage 5CM integration of the Stage 5CL review findings.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Consumes Stage 5CL as compact accept-with-warnings metadata without committing the Deep Research body.
+- path: data/project-state/stage5cm-reviewable-validation-evidence.yaml
+  category: active_data_record
+  purpose: Stage 5CM validation evidence and command inventory.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records focused validators, Stage 5AX parallel validation with 8-worker cap, pytest count capture, and serial git/GitHub handling.
+- path: data/token-block/stage5cm-approval-readiness-boundary-contract.yaml
+  category: active_data_record
+  purpose: Stage 5CM approval-readiness boundary contract.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Defines fixture/template/scaffold/review-package records as non-real unless a future record satisfies explicit real approval criteria.
+- path: data/token-block/stage5cm-fixture-vs-real-record-boundary.yaml
+  category: active_data_record
+  purpose: Stage 5CM fixture-vs-real approval record boundary.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Requires fixture, template, scaffold, and review-package records to fail closed if presented as real approval records.
+- path: data/token-block/stage5cm-end-to-end-readiness-boundary-validation.yaml
+  category: active_data_record
+  purpose: Stage 5CM end-to-end readiness-boundary validation.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Validates that fixture misuse cannot satisfy real approval, activation, byte-stream, execution, or solve-claim gates.
+- path: data/token-block/stage5cm-real-approval-record-readiness-preflight.yaml
+  category: active_data_record
+  purpose: Stage 5CM future real approval-record readiness preflight.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records future criteria only; no real approval, acceptance, or activation record exists now.
+- path: data/token-block/stage5cm-activation-decision-gate-hardening.yaml
+  category: active_data_record
+  purpose: Stage 5CM activation-decision gate hardening.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps activation invalid, active planning input unselected and unauthorized, and combined approval gates unsatisfied.
+- path: data/token-block/stage5cm-stage5bd-plan-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CM Stage 5BD dry-run plan preservation.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves all 10 Stage 5BD run-plan IDs and does not mutate dry-run plan records.
+- path: data/token-block/stage5cm-active-lineage-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CM active-lineage preservation.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves the eight active-lineage records and corrected Stage 5AW path.
+- path: data/source-harvester/stage5cm-credential-redaction-policy.yaml
+  category: active_data_record
+  purpose: Stage 5CM credential redaction and no-secret handoff policy.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records category-only credential-like finding counts and forbids reproducing secret-bearing remote strings.
+- path: docs/onboarding/stage5cm-approval-record-readiness-boundary-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5CM approval-record readiness-boundary hardening.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, fixture-vs-real boundaries, future real approval-readiness criteria, credential-redaction policy, 8-worker validation cap, no-byte/no-execution gates, and ignored-output boundaries for Stage 5CM.
