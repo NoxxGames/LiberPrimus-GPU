@@ -5,6 +5,10 @@ from libreprimus.cli import app
 
 def test_stage5cm_cli_validate_and_summary_work() -> None:
     runner = CliRunner()
+    build = runner.invoke(app, ["token-block", "build-stage5cm"])
+    assert build.exit_code == 0, build.output
+    assert "stage_id=stage-5cm" in build.output
+
     commands = [
         (
             "validate-stage5cm-approval-readiness-boundary",
