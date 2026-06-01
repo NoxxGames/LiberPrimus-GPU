@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5CO real approval-record readiness package and activation-decision transition plan is complete.
+Stage 5CQ real approval-record readiness review integration and operator-decision package scaffold is complete.
 
-Next recommended prompt: Stage 5CP - Deep Research review of Stage 5CO real approval-record readiness package and activation-decision transition plan, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5CR - Deep Research review of Stage 5CQ real approval-record readiness review integration and operator-decision package scaffold, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5CQ
+
+Stage 5CQ consumes the Stage 5CP `accept_with_warnings` review outcome as compact metadata. It preserves the Stage 5CO real approval-record readiness package, missing-requirements register, activation-decision transition plan, Stage 5CM fixture-vs-real boundary, Stage 5CK fixture-only packs, Stage 5CI templates, Stage 5CG scaffolds, Stage 5CE proposal package, Stage 5CC contracts, Stage 5BD run-plan IDs, and active lineage, then creates a future operator-decision package scaffold without making an operator decision.
+
+Local Stage 5CQ summary: Stage 5CP verdict `accept_with_warnings`, operator-decision package status `scaffold_only`, operator-decision package created `true`, real approval records created `false`, real Deep Research acceptance records created `false`, real activation-decision records created `false`, combined approval gate satisfied now `false`, activation decision valid now `false`, active input authorized now `false`, active input selected now `false`, no-active-ingestion status `closed`, no-byte-stream transition gate `closed`, no-execution transition gate `closed`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, parallel worker cap `8`, `codex-output/stage5cq-codex-completion.md` written locally `true`, generated outputs committed `false`, `codex_output` used `false`, and next stage `Stage 5CR`.
+
+Stage 5CQ is metadata-only. It does not create an operator decision, create actual operator approval, create actual Deep Research activation acceptance, satisfy the approval gate, validate an activation decision now, authorize or select active planning input, activate String 4, ingest String 4 into Stage 5BD dry-run plans, mutate Stage 5BD dry-run records, supersede active manifests, generate byte streams, materialise variants, enumerate branches, run token experiments, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, or make solve claims. The Codex handoff path is `codex-output/stage5cq-codex-completion.md`; `codex_output` is deprecated and must not be created.
 
 ## Completed in Stage 5CO
 
