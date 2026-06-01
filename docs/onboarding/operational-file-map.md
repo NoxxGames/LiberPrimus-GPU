@@ -43,14 +43,14 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5CM" `
-  --expected-next-stage "Stage 5CN"
+  --expected-latest-stage "Stage 5CO" `
+  --expected-next-stage "Stage 5CP"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5CM" `
-  --expected-next-stage "Stage 5CN"
+  --expected-latest-stage "Stage 5CO" `
+  --expected-next-stage "Stage 5CP"
 ```
 ## Stage 5BF Coverage
 
@@ -101,3 +101,5 @@ Stage 5CG extends the operational file map with Stage 5CF findings integration, 
 Stage 5CK extends the operational file map with Stage 5CJ findings integration, fixture-only future operator approval and Deep Research acceptance validation packs, activation-decision fixture pack, negative validation matrix, activation-decision review package, no-byte-stream transition gate, no-execution transition gate, Stage 5CI/5CG/5CE/5CC/5BD preservation, active-lineage preservation, guardrail, summary, next-stage, workflow, developer-log, and research-log records.
 
 Stage 5CM extends the operational file map with Stage 5CL findings integration, approval-readiness boundary contract, fixture-vs-real record boundary, end-to-end boundary validation, real approval-readiness preflight, activation-decision gate hardening, Stage 5CK/5CI/5CG/5CE/5CC/5BD preservation, no-byte-stream transition gate, no-execution transition gate, active-lineage preservation, credential-redaction/no-secret policy, 8-worker validation evidence, guardrail, summary, next-stage, workflow, developer-log, and research-log records.
+
+Stage 5CO extends the operational file map with Stage 5CN findings integration, real approval-record readiness package, real operator approval readiness preflight, real Deep Research acceptance readiness preflight, combined-gate readiness preflight, activation-decision transition plan, future transition sequence, current missing-requirements register, real-record creation blocker, Stage 5CM/5CK/5CI/5CG/5CE/5CC/5BD preservation, active-lineage preservation, no-active/no-byte/no-execution transition gates, credential-redaction policy preservation, review-packaging warning, guardrail, summary, next-stage, workflow, developer-log, and research-log records.

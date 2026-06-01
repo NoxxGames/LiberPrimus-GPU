@@ -29,4 +29,4 @@ Expected state after a valid build:
 - Generated diagnostics stay under `experiments/results/token-block/stage5ci/` and remain ignored.
 - Local Codex completion summary uses `codex-output/stage5ci-codex-completion.md`; `codex_output/` must not be used.
 
-Next stage: completed by Stage 5CJ review, Stage 5CK fixture-pack follow-up, Stage 5CL review, and Stage 5CM readiness-boundary hardening; current routing is Stage 5CN Deep Research review before any actual approval-record or activation-capable stage.
+Next stage: completed by Stage 5CJ review, Stage 5CK fixture-pack follow-up, Stage 5CL review, Stage 5CM readiness-boundary hardening, Stage 5CN review, and Stage 5CO transition packaging; current routing is Stage 5CP Deep Research review before any actual approval-record or activation-capable stage.

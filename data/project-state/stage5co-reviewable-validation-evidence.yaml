@@ -1,0 +1,125 @@
+record_type: stage5co_validation_evidence
+schema: schemas/project-state/stage5co-reviewable-validation-evidence-v0.schema.json
+stage_id: stage-5co
+stage_title: Stage 5CO - Real approval-record readiness package and activation-decision
+  transition plan, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5cm
+source_previous_stage_commit: b7a9d0c2c33cb91d658364ed99cea489016c4280
+source_deep_research_stage: stage-5cn
+source_deep_research_report: 22_Stage-5CM-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+validation_evidence_status: committed_compact_evidence
+local_validation_evidence_committed: true
+parallel_worker_cap: 8
+parallel_worker_cap_for_stage5co_and_later: 8
+historical_16_worker_runs_preserved_as_historical_context: true
+parallel_validation_required: true
+parallel_validation_wrapper: scripts/ci/run-parallel-validation.ps1
+parallel_validation_workers_observed_locally: 8
+parallel_validation_pytest_workers_observed_locally: 8
+parallel_validation_status_observed_locally: passed
+pytest_count_observed_locally: 2374
+pytest_command_observed_locally: python -m pytest -q tests/python
+raw_staged: false
+generated_outputs_staged: false
+codex_output_staged: false
+sqlite_staged: false
+final_commit_external_evidence_required: true
+ci_external_evidence_required: true
+validation_commands:
+- command: python -m libreprimus.cli token-block build-stage5co
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co-stage5cn-findings
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co-approval-readiness-package
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co-real-operator-readiness
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co-real-deep-research-readiness
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co-real-combined-gate-readiness
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co-activation-transition-plan
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co-current-missing-requirements
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co-real-record-blocker
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co-stage5cm-boundary-preservation
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co-prior-stage-preservation
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co-sidecar-gates
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co-credential-redaction-policy
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block validate-stage5co
+  status_observed_locally: passed
+- command: python -m libreprimus.cli token-block stage5co-summary
+  status_observed_locally: passed
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_activation_accept_record_present_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+full_cartesian_product_enumerated: false
+future_real_records_created_now: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+image_forensics_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+new_active_planning_input_created: false
+ocr_performed: false
+operator_approval_record_present_now: false
+real_activation_decision_record_created_now: false
+real_activation_decision_records_created: false
+real_approval_records_created: false
+real_byte_stream_generated: false
+real_combined_gate_validation_record_created_now: false
+real_combined_gate_validation_record_present_now: false
+real_deep_research_acceptance_record_created_now: false
+real_deep_research_acceptance_records_created: false
+real_operator_approval_record_created_now: false
+real_operator_approval_record_present_now: false
+scoring_performed: false
+secret_values_printed_or_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_plan_superseded: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false

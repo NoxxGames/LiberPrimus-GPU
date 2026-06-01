@@ -1,0 +1,364 @@
+record_type: stage5co_source_digest_index
+schema: schemas/project-state/stage5co-reviewable-source-digest-index-v0.schema.json
+stage_id: stage-5co
+stage_title: Stage 5CO - Real approval-record readiness package and activation-decision
+  transition plan, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5cm
+source_previous_stage_commit: b7a9d0c2c33cb91d658364ed99cea489016c4280
+source_deep_research_stage: stage-5cn
+source_deep_research_report: 22_Stage-5CM-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+source_digest_index_created: true
+source_digest_record_count: 28
+source_digest_unique_path_count: 28
+duplicate_path_count: 0
+source_paths_unique: true
+secret_values_recorded: false
+source_records:
+- path: data/project-state/stage5cm-summary.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: c7fe228722757650b7d632732e391b97ec012f82b430879a3c43ccf062fdc1ed
+  size_bytes: 4527
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/source-harvester/stage5cm-credential-redaction-policy.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 8f648a30abd1b1b45876628b0409043dc137c30ade8e74c6e61d7d1eb3a663e3
+  size_bytes: 4188
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5ap-token-block-canonical-transcription.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 264e059f73ebf04ea2982288d34ad8d7f278d68ef0e8d88fe2e6c8b15f66328e
+  size_bytes: 29096
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5aw-repaired-token-variant-branch-manifest.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 5e2dfee9717b1950cc7f61cf6e8b48ea592105e6dbe5e94d31396556c41daa3f
+  size_bytes: 154361
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5ay-branch-eligibility-policy.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 8cab6a59ce259ce3cb9aa4f5c0312071f47cae543b46f39a5ff838f676d98624
+  size_bytes: 48827
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5az-repaired-bounded-variant-family-manifest.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 4be0806a2f41aac56b858774af253d249bd1dd894e253fa04fe52a57ed4bf1a3
+  size_bytes: 5141
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5bb-active-manifest-registry.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 0f415521d5380283fd4296e9c7acb8d87267fa246f95f0ac69c4ebcc13cfab07
+  size_bytes: 7301
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: e2a40ec584be822e31e535d80a8863c3b0ba0280829184feeb73a53caa61af82
+  size_bytes: 7798
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5bd-run-plan-id-registry.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 34fd917871f36bb41ab65d317bc63be2ceef07fa036a61c78a15f7e4abb70ee5
+  size_bytes: 5201
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5cc-activation-precondition-exact-set-contract.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 45e7e5e27def8a4f8be7b1d7e98df4224e3b731c37667e9f17d0d915444678a8
+  size_bytes: 3901
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5cc-fail-closed-trigger-exact-set-contract.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: cfda9b99b5edc5e43e0e5f5bcf91daa1b074bcd825bd34db35a4aacfc6871fc6
+  size_bytes: 3608
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5cc-future-runner-citation-contract-preservation.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 2273bc73363619c402b5429e343c0e2427aa792f0ba781f279a96b4296271203
+  size_bytes: 9992
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5ce-active-planning-input-proposal-package.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 47681e23a650c936fc261c01f2b93c0bc780dc27c9cac3e38b07db27bbe10a5b
+  size_bytes: 3880
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5cg-combined-approval-decision-gate-scaffold.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: d540233afe6342ab8fcf706010d027ef843ac663d7788d069252c1f3e9b15f23
+  size_bytes: 3238
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5cg-deep-research-acceptance-decision-scaffold.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 7d313c196ced8b9982e1223804265830fdd85f634c21b8b2ed9dc933e7f0c6a1
+  size_bytes: 3364
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5cg-operator-approval-decision-scaffold.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: bedc9c0730819cc0b2c3f4226cb5409d46b8669d42967c43187534e8a27e23d9
+  size_bytes: 3320
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5ci-active-planning-input-activation-decision-template.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 6fe1f618c70a4cdbcb3c9cc338efb84b5b2364567bfb9ea03b0140c9d75f5103
+  size_bytes: 4514
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5ci-deep-research-acceptance-record-template.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: e2ea1b5e8ee3ecc4de4a4de021856862ef2a6a94eecd55c8a2c59846a57e8948
+  size_bytes: 4384
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5ci-operator-approval-record-template.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 796de6ba3e6779eb767523da1222223e13383c523c65ecb712b6dd5d48cd4596
+  size_bytes: 4343
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5ck-activation-decision-fixture-pack.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 932f06af9bef0ae43d082b23e64eb68b6e48dfa742a38fe00e989df99a91f7c4
+  size_bytes: 11082
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5ck-approval-fixture-negative-validation-matrix.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 06dd9023674a98172e6417952904f8f95ce28e1d3b68ee13157285dba7879d5f
+  size_bytes: 4694
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5ck-deep-research-acceptance-fixture-pack.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: d7fdc2c5f1afb22e6b6ef00abdb9ff06b578284b2abfec5b6c86b2a1c980b6b0
+  size_bytes: 9712
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5ck-operator-approval-fixture-pack.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 69bd38bbb6a62a0760c7a7333b627bd2d88cd190ab3d09136fc57b382c09dd91
+  size_bytes: 9589
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5cm-approval-readiness-boundary-contract.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 9e7ffde1c657124190e4446acca6d9f0d9a55db515c4e6825f6fccb41959ae0f
+  size_bytes: 3861
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5cm-end-to-end-readiness-boundary-validation.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 0fbef52e5b6a5e4fecc13a908ea54558834c97afda2568de4f9b487e5dfabc60
+  size_bytes: 4335
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5cm-fixture-vs-real-record-boundary.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 34cf9b6395c9b677e3bd13cfa1e350794e3021674538108cf8ac69a2358628a8
+  size_bytes: 4083
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: data/token-block/stage5cm-real-approval-record-readiness-preflight.yaml
+  role: stage5co_reviewable_source
+  present: true
+  sha256: 15443d88614e92fec97aad5e359e84b758674f882207db7cbbaaefd659a01304
+  size_bytes: 3963
+  ignored_local_body: false
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: false
+  credential_like_text_present: false
+  secret_values_recorded: false
+- path: deep-research-reports/reviews-of-ideas-and-concepts-and-data/md/22_Stage-5CM-Deep-Research-Review.md
+  role: stage5co_reviewable_source
+  present: true
+  sha256: d7115ad08b8dd3a64daa86f859b347caa64b9c2cf9df9f8bffa0f2f60ee64826
+  size_bytes: 22498
+  ignored_local_body: true
+  raw_or_generated_body_committed: false
+  credential_like_text_scanned: true
+  credential_like_text_present: false
+  secret_values_recorded: false
+raw_or_generated_bodies_committed: false
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_activation_accept_record_present_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+full_cartesian_product_enumerated: false
+future_real_records_created_now: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+image_forensics_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+new_active_planning_input_created: false
+ocr_performed: false
+operator_approval_record_present_now: false
+real_activation_decision_record_created_now: false
+real_activation_decision_records_created: false
+real_approval_records_created: false
+real_byte_stream_generated: false
+real_combined_gate_validation_record_created_now: false
+real_combined_gate_validation_record_present_now: false
+real_deep_research_acceptance_record_created_now: false
+real_deep_research_acceptance_records_created: false
+real_operator_approval_record_created_now: false
+real_operator_approval_record_present_now: false
+scoring_performed: false
+secret_values_printed_or_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_plan_superseded: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false

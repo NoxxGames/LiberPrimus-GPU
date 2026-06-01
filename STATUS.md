@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5CM approval-record readiness boundary and activation-decision gate hardening is complete.
+Stage 5CO real approval-record readiness package and activation-decision transition plan is complete.
 
-Next recommended prompt: Stage 5CN - Deep Research review of Stage 5CM approval-record readiness boundary and activation-decision gate hardening, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5CP - Deep Research review of Stage 5CO real approval-record readiness package and activation-decision transition plan, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5CO
+
+Stage 5CO consumes the Stage 5CN `accept_with_warnings` review outcome as compact metadata. It preserves the Stage 5CM boundary-hardening layer, Stage 5CK fixture-only validation layer, Stage 5CI templates, Stage 5CG scaffolds, Stage 5CE proposal package, Stage 5CC contracts, Stage 5BD run-plan IDs, and active lineage, then packages the future real approval-record readiness path and activation-decision transition plan for review.
+
+Local Stage 5CO summary: Stage 5CN verdict `accept_with_warnings`, real approval-record readiness package created `true`, real operator approval readiness preflight created `true`, real Deep Research acceptance readiness preflight created `true`, real combined-gate validation readiness preflight created `true`, activation-decision transition plan created `true`, missing requirements register created `true`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, parallel worker cap `8`, real approval records created `false`, real Deep Research acceptance records created `false`, real activation-decision records created `false`, combined approval gate satisfied now `false`, activation decision valid now `false`, active input authorized now `false`, active input selected now `false`, no-active-ingestion status `closed`, no-byte-stream transition gate `closed`, no-execution transition gate `closed`, manifest supersession performed `false`, String 4 sidecar active `false`, future execution blocked `true`, generated outputs committed `false`, `codex_output` used `false`, and next stage `Stage 5CP`.
+
+Stage 5CO is metadata-only. It does not create actual operator approval, create actual Deep Research activation acceptance, satisfy the approval gate, validate an activation decision now, authorize or select active planning input, activate String 4, ingest String 4 into Stage 5BD dry-run plans, mutate Stage 5BD dry-run records, supersede active manifests, generate byte streams, materialise variants, enumerate branches, run token experiments, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, or make solve claims. The Codex handoff path is `codex-output/stage5co-codex-completion.md`; `codex_output` is deprecated and must not be created.
 
 ## Completed in Stage 5CM
 

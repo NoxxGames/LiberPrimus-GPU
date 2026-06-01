@@ -3183,3 +3183,267 @@ records:
   staleness_check_level: strict
   owner_context: codex_agent
   notes: Documents focused validators, fixture-vs-real boundaries, future real approval-readiness criteria, credential-redaction policy, 8-worker validation cap, no-byte/no-execution gates, and ignored-output boundaries for Stage 5CM.
+- path: python/libreprimus/token_block/stage5co.py
+  category: reference_only_data_record
+  purpose: Stage 5CO metadata builder and validators for real approval-record readiness and activation-decision transition planning.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Builds committed Stage 5CO metadata, schemas, ignored reports, and fail-closed validators without creating real approval, acceptance, activation, byte-stream, or execution records.
+- path: data/project-state/stage5co-summary.yaml
+  category: active_data_record
+  purpose: Stage 5CO compact summary and next-stage routing metadata.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records Stage 5CN warning integration, readiness-package counts, transition-gate status, no-active/no-byte/no-execution posture, and Stage 5CP next-stage selection.
+- path: data/project-state/stage5co-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5CO next-stage decision selecting Stage 5CP Deep Research review.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Selects review only; no approval, activation, active planning input, byte stream, or execution stage is selected.
+- path: data/project-state/stage5co-stage5cn-findings-integration.yaml
+  category: active_data_record
+  purpose: Stage 5CO compact integration of Stage 5CN accept-with-warnings review findings.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Consumes Stage 5CN review findings as metadata without committing Deep Research bodies or opening execution gates.
+- path: data/project-state/stage5co-reviewable-validation-evidence.yaml
+  category: active_data_record
+  purpose: Stage 5CO validation evidence and command inventory.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records focused validators, Stage 5AX 8-worker validation cap, pytest count capture, and serial git/GitHub handling.
+- path: data/token-block/stage5co-real-approval-record-readiness-package.yaml
+  category: active_data_record
+  purpose: Stage 5CO future real approval-record readiness package.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Packages future real approval criteria while recording that no real approval, acceptance, combined gate, activation decision, or active planning input exists.
+- path: data/token-block/stage5co-real-operator-approval-readiness-preflight.yaml
+  category: active_data_record
+  purpose: Stage 5CO future real operator approval readiness preflight.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Defines operator approval requirements and keeps the approval status absent and non-authorizing.
+- path: data/token-block/stage5co-real-deep-research-acceptance-readiness-preflight.yaml
+  category: active_data_record
+  purpose: Stage 5CO future real Deep Research acceptance readiness preflight.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Defines future acceptance requirements and keeps activation acceptance absent and non-authorizing.
+- path: data/token-block/stage5co-real-combined-gate-validation-readiness-preflight.yaml
+  category: active_data_record
+  purpose: Stage 5CO future real combined approval-gate validation readiness preflight.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Requires future real operator approval and real Deep Research acceptance before any combined gate can pass.
+- path: data/token-block/stage5co-activation-decision-transition-plan.yaml
+  category: active_data_record
+  purpose: Stage 5CO activation-decision transition plan.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Defines future transition order while keeping activation invalid, active planning input unauthorized, and String 4 inactive.
+- path: data/token-block/stage5co-future-transition-sequence.yaml
+  category: active_data_record
+  purpose: Stage 5CO ordered future transition sequence for real approval, acceptance, combined-gate, and activation-decision records.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records sequencing only; current approval, activation, byte-stream, and execution gates remain closed.
+- path: data/token-block/stage5co-current-missing-requirements-register.yaml
+  category: active_data_record
+  purpose: Stage 5CO current missing-requirements register.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Enumerates missing prerequisites that block real approval records, combined gate satisfaction, active planning input, byte streams, and execution.
+- path: data/token-block/stage5co-stage5cm-boundary-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CO preservation record for the Stage 5CM approval-readiness boundary.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves fixture-vs-real boundaries and prevents fixture/template/scaffold/review-package materials from satisfying real gates.
+- path: data/token-block/stage5co-stage5bd-plan-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CO preservation record for Stage 5BD dry-run plan IDs.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves all 10 Stage 5BD run-plan IDs and does not mutate dry-run plans or ingest String 4.
+- path: data/token-block/stage5co-active-lineage-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CO active-lineage preservation record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves the eight active-lineage records without superseding active manifests or activating sidecar input.
+- path: data/token-block/stage5co-no-active-ingestion-proof.yaml
+  category: active_data_record
+  purpose: Stage 5CO no-active-ingestion proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps String 4 inactive and blocks active planning input ingestion.
+- path: data/token-block/stage5co-no-byte-stream-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5CO no-byte-stream transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Blocks byte-stream generation, variant materialisation, Cartesian enumeration, DWH/hash search, decoding, scoring, CUDA, and benchmarks.
+- path: data/token-block/stage5co-no-execution-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5CO no-execution transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Blocks token-block execution and records that Stage 5CO is metadata-only.
+- path: data/source-harvester/stage5co-credential-redaction-policy-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CO credential-redaction and no-secret remote policy preservation.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves category/count-only credential-like finding policy and forbids reproducing secret-bearing remote strings.
+- path: data/source-harvester/stage5co-review-packaging-warning.yaml
+  category: active_data_record
+  purpose: Stage 5CO review-packaging warning for future real approval submissions.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Warns that future real approval submissions need reviewable source packaging without committing Deep Research bodies, secrets, raw archives, or generated outputs.
+- path: docs/onboarding/stage5co-real-approval-record-readiness-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5CO real approval-record readiness and transition planning.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, readiness package records, transition sequence, missing requirements, no-active/no-byte/no-execution gates, and Stage 5CP review routing.
+- path: docs/experiments/stage-5co-real-approval-record-readiness.md
+  category: operational_status_doc
+  purpose: Stage 5CO metadata-only experiment-boundary documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: States that Stage 5CO is not execution, approval, activation, byte-stream generation, CUDA, scoring, or solve evidence.
+- path: docs/development-logs/2026-06-01-stage-5co-real-approval-record-readiness.md
+  category: historical_log
+  purpose: Stage 5CO implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation phases, validation commands, raw/generated staging checks, GitHub issue handling, commit, push, and CI evidence.
+- path: research-log/2026-06-01-stage-5co-next-stage-decision-summary.md
+  category: historical_log
+  purpose: Stage 5CO summary-only research log and Stage 5CP next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5co
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: research_operator
+  notes: Summarizes readiness package counts, closed gates, missing requirements, and review-only next-stage rationale without Deep Research body content.

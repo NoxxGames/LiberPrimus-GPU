@@ -438,6 +438,25 @@ from .stage5cm import (
     validate_stage5cm_real_approval_readiness,
     validate_stage5cm_sidecar_gates,
 )
+from .stage5co import (
+    DATA_PATHS as STAGE5CO_DATA_PATHS,
+    RESULTS_DIR as STAGE5CO_RESULTS_DIR,
+    build_stage5co,
+    load_stage5co_summary,
+    validate_stage5co,
+    validate_stage5co_activation_transition_plan,
+    validate_stage5co_approval_readiness_package,
+    validate_stage5co_credential_redaction_policy,
+    validate_stage5co_current_missing_requirements,
+    validate_stage5co_prior_stage_preservation,
+    validate_stage5co_real_combined_gate_readiness,
+    validate_stage5co_real_deep_research_readiness,
+    validate_stage5co_real_operator_readiness,
+    validate_stage5co_real_record_blocker,
+    validate_stage5co_sidecar_gates,
+    validate_stage5co_stage5cm_boundary_preservation,
+    validate_stage5co_stage5cn_findings,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -4911,6 +4930,290 @@ def stage5cm_summary_command(
     console.print(
         "parallel_worker_cap_for_stage5cm_and_later="
         f"{payload.get('parallel_worker_cap_for_stage5cm_and_later')}"
+    )
+    console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+@app.command("build-stage5co")
+def build_stage5co_command(
+    results_dir: Path = typer.Option(STAGE5CO_RESULTS_DIR),
+) -> None:
+    payload = build_stage5co(results_dir=results_dir)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5cn_verdict={payload.get('stage5cn_verdict')}")
+    console.print(
+        "real_approval_record_readiness_package_created="
+        f"{str(payload.get('real_approval_record_readiness_package_created')).lower()}"
+    )
+    console.print(
+        "activation_decision_transition_plan_created="
+        f"{str(payload.get('activation_decision_transition_plan_created')).lower()}"
+    )
+    console.print(
+        "combined_approval_gate_satisfied_now="
+        f"{str(payload.get('combined_approval_gate_satisfied_now')).lower()}"
+    )
+    console.print(
+        "activation_decision_valid_now="
+        f"{str(payload.get('activation_decision_valid_now')).lower()}"
+    )
+    console.print(
+        "parallel_worker_cap_for_stage5co_and_later="
+        f"{payload.get('parallel_worker_cap_for_stage5co_and_later')}"
+    )
+
+
+@app.command("validate-stage5co-stage5cn-findings")
+def validate_stage5co_stage5cn_findings_command(
+    findings: Path = typer.Option(STAGE5CO_DATA_PATHS["findings"]),
+) -> None:
+    counts, errors = validate_stage5co_stage5cn_findings(findings=findings)
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_stage5cn_findings_valid=true")
+
+
+@app.command("validate-stage5co-approval-readiness-package")
+def validate_stage5co_approval_readiness_package_command(
+    readiness_package: Path = typer.Option(STAGE5CO_DATA_PATHS["readiness_package"]),
+) -> None:
+    counts, errors = validate_stage5co_approval_readiness_package(
+        readiness_package=readiness_package
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_approval_readiness_package_valid=true")
+
+
+@app.command("validate-stage5co-real-operator-readiness")
+def validate_stage5co_real_operator_readiness_command(
+    real_operator_readiness: Path = typer.Option(STAGE5CO_DATA_PATHS["real_operator_readiness"]),
+) -> None:
+    counts, errors = validate_stage5co_real_operator_readiness(
+        real_operator_readiness=real_operator_readiness
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_real_operator_readiness_valid=true")
+
+
+@app.command("validate-stage5co-real-deep-research-readiness")
+def validate_stage5co_real_deep_research_readiness_command(
+    real_deep_research_readiness: Path = typer.Option(
+        STAGE5CO_DATA_PATHS["real_deep_research_readiness"]
+    ),
+) -> None:
+    counts, errors = validate_stage5co_real_deep_research_readiness(
+        real_deep_research_readiness=real_deep_research_readiness
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_real_deep_research_readiness_valid=true")
+
+
+@app.command("validate-stage5co-real-combined-gate-readiness")
+def validate_stage5co_real_combined_gate_readiness_command(
+    real_combined_gate_readiness: Path = typer.Option(
+        STAGE5CO_DATA_PATHS["real_combined_gate_readiness"]
+    ),
+) -> None:
+    counts, errors = validate_stage5co_real_combined_gate_readiness(
+        real_combined_gate_readiness=real_combined_gate_readiness
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_real_combined_gate_readiness_valid=true")
+
+
+@app.command("validate-stage5co-activation-transition-plan")
+def validate_stage5co_activation_transition_plan_command(
+    activation_transition_plan: Path = typer.Option(
+        STAGE5CO_DATA_PATHS["activation_transition_plan"]
+    ),
+) -> None:
+    counts, errors = validate_stage5co_activation_transition_plan(
+        activation_transition_plan=activation_transition_plan
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_activation_transition_plan_valid=true")
+
+
+@app.command("validate-stage5co-current-missing-requirements")
+def validate_stage5co_current_missing_requirements_command(
+    missing_requirements: Path = typer.Option(STAGE5CO_DATA_PATHS["missing_requirements"]),
+) -> None:
+    counts, errors = validate_stage5co_current_missing_requirements(
+        missing_requirements=missing_requirements
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_current_missing_requirements_valid=true")
+
+
+@app.command("validate-stage5co-real-record-blocker")
+def validate_stage5co_real_record_blocker_command(
+    real_record_blocker: Path = typer.Option(STAGE5CO_DATA_PATHS["real_record_blocker"]),
+) -> None:
+    counts, errors = validate_stage5co_real_record_blocker(
+        real_record_blocker=real_record_blocker
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_real_record_blocker_valid=true")
+
+
+@app.command("validate-stage5co-stage5cm-boundary-preservation")
+def validate_stage5co_stage5cm_boundary_preservation_command(
+    stage5cm_boundary: Path = typer.Option(STAGE5CO_DATA_PATHS["stage5cm_boundary"]),
+) -> None:
+    counts, errors = validate_stage5co_stage5cm_boundary_preservation(
+        stage5cm_boundary=stage5cm_boundary
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_stage5cm_boundary_preservation_valid=true")
+
+
+@app.command("validate-stage5co-prior-stage-preservation")
+def validate_stage5co_prior_stage_preservation_command() -> None:
+    counts, errors = validate_stage5co_prior_stage_preservation()
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_prior_stage_preservation_valid=true")
+
+
+@app.command("validate-stage5co-sidecar-gates")
+def validate_stage5co_sidecar_gates_command() -> None:
+    counts, errors = validate_stage5co_sidecar_gates()
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_sidecar_gates_valid=true")
+
+
+@app.command("validate-stage5co-credential-redaction-policy")
+def validate_stage5co_credential_redaction_policy_command(
+    credential_redaction: Path = typer.Option(STAGE5CO_DATA_PATHS["credential_redaction"]),
+) -> None:
+    counts, errors = validate_stage5co_credential_redaction_policy(
+        credential_redaction=credential_redaction
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_credential_redaction_policy_valid=true")
+
+
+@app.command("validate-stage5co")
+def validate_stage5co_command(
+    summary: Path = typer.Option(STAGE5CO_DATA_PATHS["summary"]),
+    next_stage_decision: Path = typer.Option(STAGE5CO_DATA_PATHS["next_stage"]),
+    guardrail: Path = typer.Option(STAGE5CO_DATA_PATHS["guardrail"]),
+    results_dir: Path = typer.Option(STAGE5CO_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5co(
+        summary=summary,
+        next_stage_decision=next_stage_decision,
+        guardrail=guardrail,
+        results_dir=results_dir,
+    )
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"ERROR {error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print("token_block_stage5co_valid=true")
+
+
+@app.command("stage5co-summary")
+def stage5co_summary_command(
+    summary: Path = typer.Option(STAGE5CO_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5co_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5cn_verdict={payload.get('stage5cn_verdict')}")
+    console.print(
+        "real_approval_record_readiness_package_created="
+        f"{str(payload.get('real_approval_record_readiness_package_created')).lower()}"
+    )
+    console.print(
+        "activation_decision_transition_plan_created="
+        f"{str(payload.get('activation_decision_transition_plan_created')).lower()}"
+    )
+    console.print(
+        "combined_approval_gate_satisfied_now="
+        f"{str(payload.get('combined_approval_gate_satisfied_now')).lower()}"
+    )
+    console.print(
+        "activation_decision_valid_now="
+        f"{str(payload.get('activation_decision_valid_now')).lower()}"
+    )
+    console.print(
+        "active_planning_input_authorized_now="
+        f"{str(payload.get('active_planning_input_authorized_now')).lower()}"
+    )
+    console.print(
+        "stage5bd_run_plan_id_count="
+        f"{payload.get('stage5bd_run_plan_id_count')}"
+    )
+    console.print(
+        "active_lineage_record_count="
+        f"{payload.get('active_lineage_record_count')}"
+    )
+    console.print(
+        "parallel_worker_cap_for_stage5co_and_later="
+        f"{payload.get('parallel_worker_cap_for_stage5co_and_later')}"
     )
     console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
     console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")

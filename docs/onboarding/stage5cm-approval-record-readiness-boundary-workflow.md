@@ -1,6 +1,6 @@
 # Stage 5CM Approval-Record Readiness Boundary Workflow
 
-Use this workflow when inspecting or extending Stage 5CM approval-readiness boundary metadata.
+Use this workflow when inspecting historical Stage 5CM approval-readiness boundary metadata. Stage 5CO now packages the future real approval transition path and Stage 5CP review is next.
 
 ## Commands
 
