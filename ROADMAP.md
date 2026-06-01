@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5CR - Deep Research review of Stage 5CQ real approval-record readiness review integration and operator-decision package scaffold, without execution.
+Current next prompt: Stage 5CT - Deep Research review of Stage 5CS operator-decision readiness package and real-approval decision options scaffold, without execution.
 
-Stage 5CQ is complete as metadata-only review integration and operator-decision package scaffolding. It consumes Stage 5CP warnings, preserves the Stage 5CO real approval-readiness package and activation-transition plan, restores strict `codex-output` handoff discipline, creates a scaffold for a future operator decision without making that decision, and keeps String 4 inactive with all token-block execution blocked.
+Stage 5CS is complete as metadata-only review integration, operator-decision readiness packaging, and real-approval decision-options scaffolding. It consumes Stage 5CR warnings, preserves the Stage 5CQ scaffold and Stage 5CO real approval-readiness package/activation-transition plan, creates six explicit future options without selecting any option, and keeps String 4 inactive with all token-block execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5CQ real approval-record readiness review integration is complete. It consumes the Stage 5CP accept-with-warnings review outcome, keeps Stage 5CO readiness records and Stage 5CM/5CK/5CI/5CG/5CE/5CC boundaries preserved, creates only an operator-decision package scaffold, creates no real approval or activation records, preserves Stage 5BD run-plan IDs, preserves the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
+Stage 5CS operator-decision readiness/options integration is complete. It consumes the Stage 5CR accept-with-warnings review outcome, keeps Stage 5CQ, Stage 5CO, Stage 5CM, Stage 5CK, Stage 5CI, Stage 5CG, Stage 5CE, Stage 5CC, and Stage 5BD records preserved, creates only a future readiness package and unselected decision-options scaffold, creates no real decision/approval/acceptance/gate/activation records, preserves Stage 5BD run-plan IDs, preserves the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
 
-The next recommended prompt is Stage 5CR - Deep Research review of Stage 5CQ real approval-record readiness review integration and operator-decision package scaffold, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5CT - Deep Research review of Stage 5CS operator-decision readiness package and real-approval decision options scaffold, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5cq_latest_and_stage5cr_next() -> None:
+def test_operational_docs_use_stage5cs_latest_and_stage5ct_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5CQ real approval-record readiness review integration" in status
-    assert "Next recommended prompt: Stage 5CR" in status
-    assert "Latest completed stage: Stage 5CQ" in staged_plan
-    assert "Current planning focus: Stage 5CR" in staged_plan
+    assert "Stage 5CS operator-decision readiness package" in status
+    assert "Next recommended prompt: Stage 5CT" in status
+    assert "Latest completed stage: Stage 5CS" in staged_plan
+    assert "Current planning focus: Stage 5CT" in staged_plan

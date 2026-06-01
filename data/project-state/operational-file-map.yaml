@@ -3656,3 +3656,234 @@ records:
   staleness_check_level: historical
   owner_context: research_operator
   notes: Summarizes scaffold-only operator-decision package, closed gates, preserved Stage 5CO records, and review-only next-stage rationale without Deep Research body content.
+- path: python/libreprimus/token_block/stage5cs.py
+  category: reference_only_data_record
+  purpose: Stage 5CS metadata builder and validators for operator-decision readiness/options scaffolding.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Builds committed Stage 5CS metadata, schemas, ignored reports, and fail-closed validators without selecting options or creating real operator decisions, approvals, activation, byte-stream, or execution records.
+- path: data/project-state/stage5cs-summary.yaml
+  category: active_data_record
+  purpose: Stage 5CS compact summary and next-stage routing metadata.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records Stage 5CR warning integration, readiness package status, decision-options scaffold status, all options unselected, closed transition gates, no-active/no-byte/no-execution posture, and Stage 5CT next-stage selection.
+- path: data/project-state/stage5cs-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5CS next-stage decision selecting Stage 5CT Deep Research review.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Selects review only; no operator option, approval, activation, active planning input, byte stream, or execution stage is selected.
+- path: data/project-state/stage5cs-stage5cr-findings-integration.yaml
+  category: active_data_record
+  purpose: Stage 5CS compact integration of Stage 5CR accept-with-warnings review findings.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Consumes Stage 5CR review findings as metadata without committing Deep Research bodies or opening execution gates.
+- path: data/project-state/stage5cs-reviewable-validation-evidence.yaml
+  category: active_data_record
+  purpose: Stage 5CS validation evidence and command inventory.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records focused validators, Stage 5AX 8-worker validation cap, pytest count capture, and serial git/GitHub handling.
+- path: data/token-block/stage5cs-operator-decision-readiness-package.yaml
+  category: active_data_record
+  purpose: Stage 5CS future operator-decision readiness package.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Defines future operator-decision readiness requirements while recording that no real operator decision, approval, activation, byte stream, or execution path exists.
+- path: data/token-block/stage5cs-real-approval-decision-options-scaffold.yaml
+  category: active_data_record
+  purpose: Stage 5CS real-approval decision-options scaffold.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Lists six future decision options and keeps every option unselected.
+- path: data/token-block/stage5cs-operator-options-nonselection-proof.yaml
+  category: active_data_record
+  purpose: Stage 5CS proof that no operator-decision option is selected.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Records selected option ID null and blocks option selection in Stage 5CS.
+- path: data/token-block/stage5cs-real-record-creation-blocker.yaml
+  category: active_data_record
+  purpose: Stage 5CS blocker that prevents real record creation in this stage.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps actual operator decision, approval, Deep Research acceptance, combined-gate validation, activation-decision, and active-input selection records absent.
+- path: data/token-block/stage5cs-stage5cq-operator-decision-scaffold-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CS preservation record for the Stage 5CQ operator-decision scaffold.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves the Stage 5CQ scaffold as scaffold-only metadata without satisfying any gate.
+- path: data/token-block/stage5cs-stage5co-readiness-package-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CS preservation record for the Stage 5CO readiness package.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves Stage 5CO future real approval-readiness records without satisfying any gate.
+- path: data/token-block/stage5cs-stage5bd-plan-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CS preservation record for Stage 5BD dry-run plan IDs.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves all 10 Stage 5BD run-plan IDs and does not mutate dry-run plans or ingest String 4.
+- path: data/token-block/stage5cs-active-lineage-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5CS active-lineage preservation record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Preserves the eight active-lineage records without superseding active manifests or activating sidecar input.
+- path: data/token-block/stage5cs-no-active-ingestion-proof.yaml
+  category: active_data_record
+  purpose: Stage 5CS no-active-ingestion proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Keeps String 4 inactive and blocks active planning input ingestion.
+- path: data/token-block/stage5cs-no-byte-stream-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5CS no-byte-stream transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Blocks byte-stream generation, variant materialisation, Cartesian enumeration, DWH/hash search, decoding, scoring, CUDA, and benchmarks.
+- path: data/token-block/stage5cs-no-execution-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5CS no-execution transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: research_operator
+  notes: Blocks token-block execution and records that Stage 5CS is metadata-only.
+- path: data/source-harvester/stage5cs-completion-summary-continuity.yaml
+  category: active_data_record
+  purpose: Stage 5CS Codex completion-summary continuity metadata.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves strict local `codex-output/stage5cs-codex-completion.md` handoff discipline while keeping ignored handoff files uncommitted.
+- path: docs/onboarding/stage5cs-operator-decision-readiness-options-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5CS operator-decision readiness/options scaffolding.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, readiness package records, decision-options scaffold, option nonselection, Stage 5CQ/5CO preservation, no-active/no-byte/no-execution gates, handoff continuity, and Stage 5CT review routing.
+- path: docs/experiments/stage-5cs-operator-decision-readiness-options.md
+  category: operational_status_doc
+  purpose: Stage 5CS metadata-only experiment-boundary documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: States that Stage 5CS is not option selection, approval, activation, byte-stream generation, CUDA, scoring, or solve evidence.
+- path: docs/development-logs/2026-06-01-stage-5cs-operator-decision-readiness-options.md
+  category: historical_log
+  purpose: Stage 5CS implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation phases, validation commands, raw/generated staging checks, GitHub issue handling, commit, push, and CI evidence.
+- path: research-log/2026-06-01-stage-5cs-next-stage-decision-summary.md
+  category: historical_log
+  purpose: Stage 5CS summary-only research log and Stage 5CT next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cs
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: research_operator
+  notes: Summarizes readiness package, unselected decision options, closed gates, preserved Stage 5CQ/5CO records, and review-only next-stage rationale without Deep Research body content.
