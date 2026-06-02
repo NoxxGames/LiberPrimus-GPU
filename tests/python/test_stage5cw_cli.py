@@ -1,11 +1,12 @@
 import subprocess
+import sys
 
 from test_stage5cw_common import ROOT
 
 
 def _run(*args: str) -> str:
     result = subprocess.run(
-        [".venv/Scripts/python.exe", "-m", "libreprimus.cli", "token-block", *args],
+        [sys.executable, "-m", "libreprimus.cli", "token-block", *args],
         cwd=ROOT,
         check=True,
         capture_output=True,
