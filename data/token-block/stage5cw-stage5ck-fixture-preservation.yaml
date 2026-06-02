@@ -1,0 +1,249 @@
+record_type: stage5cw_stage5ck_preservation
+schema: schemas/token-block/stage5cw-stage5ck-fixture-preservation-v0.schema.json
+stage_id: stage-5cw
+stage_title: Stage 5CW - Operator-decision readiness review integration and real-decision
+  package preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5cu
+source_previous_stage_commit: a80d6e49ccfad34d690237cfa0fbb96a05cca7a2
+source_deep_research_stage: stage-5cv
+source_deep_research_report: 26_Stage-5CU-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+stage5ck_fixture_pack_preserved: true
+source_records:
+- path: data/project-state/stage5ck-summary.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 695d4360a972a23948791b887988e81fe2d9a2c2d903b6719ac0b1954d5390e3
+- path: data/project-state/stage5ck-next-stage-decision.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 8127d98a9a575de81ad99da55f20f71e70c52f7134ed4daf4e13c1f1ce3063d2
+- path: data/project-state/stage5ck-stage5cj-findings-integration.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: b4de994709aa5c1d415817a97701b3b6ff44866fd311b615e3afbb4cd77e9440
+- path: data/project-state/stage5ck-reviewable-stage-marker.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 80e25a2491a5bd62bad049f80e3833d2ba07c9122802915525fd543f8434b5ac
+- path: data/project-state/stage5ck-reviewable-validation-evidence.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 280d1c63f3004c216b4a931a61d2eda97b20fac4dce9ac6fd89d41f3e2a9bcb4
+- path: data/project-state/stage5ck-reviewable-source-digest-index.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: b98f059d570bb157b49653d7b7f1a81a3df6822ee83de45e8f527e2f6ad57b06
+- path: data/project-state/stage5ck-reviewability-gap-register.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 2b35e1816e08e95dc3e897cb838490fa6ce39df1833029035cba11c9a3a3fc2d
+- path: data/project-state/stage5ck-record-family-name-equivalence-map.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: df27e55649825ac70778a23685eaa747dac3321cfcd344ec9e4b390cb0eaf7c8
+- path: data/token-block/stage5ck-stage5ci-template-preservation.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: e086c9be8187778107ec8e29dd6b96bc42dbaa2a262757c795ea73d14fb25d1b
+- path: data/token-block/stage5ck-stage5cg-scaffold-preservation.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 5b5d6275718686fe0edce67a6048cfe07fde7bb4812e13e521fd33ad582f77ac
+- path: data/token-block/stage5ck-stage5ce-proposal-package-preservation.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 948baed0b2998b2ba98b8a509e883731ce6fc998e67e8e201e1a52d21eec1498
+- path: data/token-block/stage5ck-stage5cc-contract-preservation.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 1acde9e0e6c1db2a05a75f3575c51fd8cfe5b545615dbf917f99ab91c5f3d9fd
+- path: data/token-block/stage5ck-fixture-isolation-policy.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: a8a72b5e688d15eb36482198fb94fc3beac47a127a17bca0da342fbae62e010c
+- path: data/token-block/stage5ck-operator-approval-fixture-pack.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 69bd38bbb6a62a0760c7a7333b627bd2d88cd190ab3d09136fc57b382c09dd91
+- path: data/token-block/stage5ck-deep-research-acceptance-fixture-pack.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: d7fdc2c5f1afb22e6b6ef00abdb9ff06b578284b2abfec5b6c86b2a1c980b6b0
+- path: data/token-block/stage5ck-activation-decision-fixture-pack.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 932f06af9bef0ae43d082b23e64eb68b6e48dfa742a38fe00e989df99a91f7c4
+- path: data/token-block/stage5ck-approval-fixture-negative-validation-matrix.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 06dd9023674a98172e6417952904f8f95ce28e1d3b68ee13157285dba7879d5f
+- path: data/token-block/stage5ck-activation-decision-review-package.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 93f038d721ab67d807c6a05d1e154ee890341682df276a57da86135e2b6e204d
+- path: data/token-block/stage5ck-approval-fixture-non-satisfaction-proof.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 1c9b9fe46f0ac9854e77e2f9345a688fa72723e4eefcc628707ff1269d4fb730
+- path: data/token-block/stage5ck-combined-gate-non-satisfaction-proof.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 4595ac45fbf3b3799848e63c61b7a1b37d6d4480428e85c22be5e1f5d7d76799
+- path: data/token-block/stage5ck-activation-decision-invalid-now-proof.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 546eb769f4981bb1d60af93b6469547eff80f7206521feef4d28c42434909f36
+- path: data/token-block/stage5ck-no-active-ingestion-proof.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 88db0e775e0616669e65cf5266515860c663d3d7445e8fa148ead670baf5696e
+- path: data/token-block/stage5ck-no-byte-stream-transition-gate.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: bade0f2648af51b56c6b0638549c42636bd9702be14fa405f8c4363fb92d35c5
+- path: data/token-block/stage5ck-no-execution-transition-gate.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: fab853f31b6571f4f1d8c1236a81501862034ad82de5871f0fe43a7781bfe122
+- path: data/token-block/stage5ck-manifest-supersession-nonactivation-proof.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 020110ba26a1cc7ead4f628ad49d52ae64ae5d67131bcb6eabaf5ce52af53491
+- path: data/token-block/stage5ck-stage5bd-plan-preservation.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 8859773cd93b4e0881358c94e8e1362a683a50a98d22d7109fb1716e40980c85
+- path: data/token-block/stage5ck-active-lineage-preservation.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 4632b0bd1f2b53479c106fadd94da84ffa52ccd80e6d9b2a524dc7bf1740a249
+- path: data/token-block/stage5ck-sidecar-activation-blocker.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 0c21cd88470288736eafb2842b2f1ff8cf6658782157213e3af076eb00ad98a7
+- path: data/token-block/stage5ck-future-dry-run-planning-impact.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 475a725ea31991738aafd9866fcf923031b9e5987f22256b5a5a326b41d0e1fd
+- path: data/historical-route/stage5ck-guardrail.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: d39f0d0f01d5f5bd75b6555752b1c9d2d28cd6a2898cf19a51cf16916d68de51
+- path: data/historical-route/stage5ck-dwh-quarantine-reaffirmation.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: d6124c0f1aa19e675ae6e96b47314082f3ea064a8fef04615b9e9fd3e464e59a
+- path: data/historical-route/stage5ck-source-gap-severity-update.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: bd9f3ca4303b495e51eca502b81da56e512204a76a7a073c783548fefe813f24
+- path: data/source-harvester/stage5ck-codex-handoff-policy.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 12eff205eee64e4a19dca7c2245b4cbb5ccb33fc2d9885486a6705940e317101
+- path: data/source-harvester/stage5ck-review-packaging-warning.yaml
+  role: stage5ck_fixture_pack_source
+  present: true
+  sha256: 7df96bf0d6687405fbbd5ac77d5c8d5d3751af54e8b9a324bcbdaa35dfc78dec
+source_record_count: 34
+preservation_status: preserved
+stage5ck_fixture_pack_only_preserved: true
+stage5ck_synthetic_negative_fixtures_only_preserved: true
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_activation_accept_record_present_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+full_cartesian_product_enumerated: false
+future_real_records_created_now: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+historical_route_execution_performed: false
+image_forensics_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+mp3stego_execution_performed: false
+new_active_planning_input_created: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_approval_record_present_now: false
+operator_decision_option_selected_now: false
+operator_decision_authorizes_activation_now: false
+operator_decision_authorizes_real_approval_now: false
+operator_decision_package_authorizes_activation: false
+operator_decision_package_authorizes_active_input: false
+operator_decision_package_authorizes_approval: false
+operator_decision_package_authorizes_byte_stream_generation: false
+operator_decision_package_authorizes_dry_run_ingestion: false
+operator_decision_package_authorizes_execution: false
+operator_decision_record_created_now: false
+operator_decision_record_present_now: false
+operator_decision_satisfied_now: false
+outguess_execution_performed: false
+preflight_authorizes_activation_decision_now: false
+preflight_authorizes_active_planning_input_now: false
+preflight_authorizes_byte_stream_generation_now: false
+preflight_authorizes_combined_gate_validation_now: false
+preflight_authorizes_deep_research_acceptance_now: false
+preflight_authorizes_dry_run_ingestion_now: false
+preflight_authorizes_execution_now: false
+preflight_authorizes_real_approval_now: false
+preflight_authorizes_real_decision_now: false
+real_activation_decision_record_created_now: false
+real_activation_decision_record_present_now: false
+real_activation_decision_records_created: false
+real_approval_records_created: false
+real_byte_stream_generated: false
+real_combined_gate_validation_record_created_now: false
+real_combined_gate_validation_record_present_now: false
+real_decision_package_created_now: false
+real_decision_package_valid_now: false
+real_deep_research_acceptance_record_created_now: false
+real_deep_research_acceptance_record_present_now: false
+real_deep_research_acceptance_records_created: false
+real_operator_approval_record_created_now: false
+real_operator_approval_record_present_now: false
+real_operator_decision_record_created_now: false
+real_operator_decision_record_present_now: false
+scoring_performed: false
+secret_values_printed_or_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_plan_superseded: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false

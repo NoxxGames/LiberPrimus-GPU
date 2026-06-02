@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5CV - Deep Research review of Stage 5CU operator-decision option negative-fixture hardening, without execution.
+Current next prompt: Stage 5CX - Deep Research review of Stage 5CW operator-decision readiness integration and real-decision package preflight, without execution.
 
-Stage 5CU is complete as metadata-only review integration and adversarial negative-fixture hardening. It consumes Stage 5CT warnings, preserves the Stage 5CS readiness package and six unselected decision options, adds 41 decision-option negative fixtures and 13 option-selection misuse cases, and keeps String 4 inactive with all token-block execution blocked.
+Stage 5CW is complete as metadata-only review integration and real-decision package preflight. It consumes Stage 5CV warnings, preserves the Stage 5CU negative-fixture hardening layer, preserves the Stage 5CS six unselected decision options, records 24 future real-decision inputs and 24 preflight misuse cases, and keeps String 4 inactive with all token-block execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5CU operator-decision option hardening is complete. It consumes the Stage 5CT accept-with-warnings review outcome, keeps Stage 5CS, Stage 5CQ, Stage 5CO, Stage 5CM, Stage 5CK, Stage 5CI, Stage 5CG, Stage 5CE, Stage 5CC, and Stage 5BD records preserved, creates only adversarial negative-fixture and misuse-validation metadata, creates no real decision/approval/acceptance/gate/activation records, preserves Stage 5BD run-plan IDs, preserves the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
+Stage 5CW real-decision package preflight is complete. It consumes the Stage 5CV accept-with-warnings review outcome, keeps Stage 5CU, Stage 5CS, Stage 5CQ, Stage 5CO, Stage 5CM, Stage 5CK, Stage 5CI, Stage 5CG, Stage 5CE, Stage 5CC, and Stage 5BD records preserved, creates only review-only preflight and misuse-validation metadata, creates no real decision/approval/acceptance/gate/activation records, preserves Stage 5BD run-plan IDs, preserves the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
 
-The next recommended prompt is Stage 5CV - Deep Research review of Stage 5CU operator-decision option negative-fixture hardening, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5CX - Deep Research review of Stage 5CW operator-decision readiness integration and real-decision package preflight, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

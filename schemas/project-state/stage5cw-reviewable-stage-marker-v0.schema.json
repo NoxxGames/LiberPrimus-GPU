@@ -1,0 +1,308 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "activation_authorized_now": {
+      "const": false
+    },
+    "activation_decision_valid_now": {
+      "const": false
+    },
+    "active_ingestion_performed": {
+      "const": false
+    },
+    "active_manifest_registry_updated": {
+      "const": false
+    },
+    "active_planning_input_authorized_now": {
+      "const": false
+    },
+    "active_planning_input_selected_now": {
+      "const": false
+    },
+    "active_token_block_manifest_changed": {
+      "const": false
+    },
+    "ai_ml_interpretation_performed": {
+      "const": false
+    },
+    "approval_gate_authorizes_activation_now": {
+      "const": false
+    },
+    "approval_gate_satisfied_now": {
+      "const": false
+    },
+    "benchmark_performed": {
+      "const": false
+    },
+    "branch_enumeration_performed": {
+      "const": false
+    },
+    "byte_stream_generation_authorized_now": {
+      "const": false
+    },
+    "canonical_corpus_active": {
+      "const": false
+    },
+    "canonical_transcription_changed": {
+      "const": false
+    },
+    "codex_completion_summary_committed": {
+      "const": false
+    },
+    "codex_output_used": {
+      "const": false
+    },
+    "combined_approval_gate_authorizes_activation_now": {
+      "const": false
+    },
+    "combined_approval_gate_satisfied_now": {
+      "const": false
+    },
+    "cuda_execution_performed": {
+      "const": false
+    },
+    "decode_attempt_performed": {
+      "const": false
+    },
+    "deep_research_activation_accept_record_present_now": {
+      "const": false
+    },
+    "dry_run_ingestion_authorized_now": {
+      "const": false
+    },
+    "dwh_hash_search_performed": {
+      "const": false
+    },
+    "execution_allowed": {
+      "const": false
+    },
+    "execution_authorized_now": {
+      "const": false
+    },
+    "full_cartesian_product_enumerated": {
+      "const": false
+    },
+    "future_real_records_created_now": {
+      "const": false
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "hash_preimage_search_performed": {
+      "const": false
+    },
+    "historical_route_execution_performed": {
+      "const": false
+    },
+    "image_forensics_performed": {
+      "const": false
+    },
+    "manifest_supersession_authorized_now": {
+      "const": false
+    },
+    "manifest_supersession_performed": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "method_status_upgraded": {
+      "const": false
+    },
+    "mp3stego_execution_performed": {
+      "const": false
+    },
+    "new_active_planning_input_created": {
+      "const": false
+    },
+    "ocr_performed": {
+      "const": false
+    },
+    "openpuff_execution_performed": {
+      "const": false
+    },
+    "operator_approval_record_present_now": {
+      "const": false
+    },
+    "operator_decision_authorizes_activation_now": {
+      "const": false
+    },
+    "operator_decision_authorizes_real_approval_now": {
+      "const": false
+    },
+    "operator_decision_option_selected_now": {
+      "const": false
+    },
+    "operator_decision_package_authorizes_activation": {
+      "const": false
+    },
+    "operator_decision_package_authorizes_active_input": {
+      "const": false
+    },
+    "operator_decision_package_authorizes_approval": {
+      "const": false
+    },
+    "operator_decision_package_authorizes_byte_stream_generation": {
+      "const": false
+    },
+    "operator_decision_package_authorizes_dry_run_ingestion": {
+      "const": false
+    },
+    "operator_decision_package_authorizes_execution": {
+      "const": false
+    },
+    "operator_decision_record_created_now": {
+      "const": false
+    },
+    "operator_decision_record_present_now": {
+      "const": false
+    },
+    "operator_decision_satisfied_now": {
+      "const": false
+    },
+    "outguess_execution_performed": {
+      "const": false
+    },
+    "preflight_authorizes_activation_decision_now": {
+      "const": false
+    },
+    "preflight_authorizes_active_planning_input_now": {
+      "const": false
+    },
+    "preflight_authorizes_byte_stream_generation_now": {
+      "const": false
+    },
+    "preflight_authorizes_combined_gate_validation_now": {
+      "const": false
+    },
+    "preflight_authorizes_deep_research_acceptance_now": {
+      "const": false
+    },
+    "preflight_authorizes_dry_run_ingestion_now": {
+      "const": false
+    },
+    "preflight_authorizes_execution_now": {
+      "const": false
+    },
+    "preflight_authorizes_real_approval_now": {
+      "const": false
+    },
+    "preflight_authorizes_real_decision_now": {
+      "const": false
+    },
+    "real_activation_decision_record_created_now": {
+      "const": false
+    },
+    "real_activation_decision_record_present_now": {
+      "const": false
+    },
+    "real_activation_decision_records_created": {
+      "const": false
+    },
+    "real_approval_records_created": {
+      "const": false
+    },
+    "real_byte_stream_generated": {
+      "const": false
+    },
+    "real_combined_gate_validation_record_created_now": {
+      "const": false
+    },
+    "real_combined_gate_validation_record_present_now": {
+      "const": false
+    },
+    "real_decision_package_created_now": {
+      "const": false
+    },
+    "real_decision_package_valid_now": {
+      "const": false
+    },
+    "real_deep_research_acceptance_record_created_now": {
+      "const": false
+    },
+    "real_deep_research_acceptance_record_present_now": {
+      "const": false
+    },
+    "real_deep_research_acceptance_records_created": {
+      "const": false
+    },
+    "real_operator_approval_record_created_now": {
+      "const": false
+    },
+    "real_operator_approval_record_present_now": {
+      "const": false
+    },
+    "real_operator_decision_record_created_now": {
+      "const": false
+    },
+    "real_operator_decision_record_present_now": {
+      "const": false
+    },
+    "record_type": {
+      "const": "stage5cw_stage_marker"
+    },
+    "scoring_performed": {
+      "const": false
+    },
+    "secret_values_printed_or_committed": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage5bd_dry_run_plan_manifest_changed": {
+      "const": false
+    },
+    "stage5bd_plan_superseded": {
+      "const": false
+    },
+    "stage5bd_run_plan_ids_changed": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-5cw"
+    },
+    "stego_tool_execution_performed": {
+      "const": false
+    },
+    "string4_active_input_allowed": {
+      "const": false
+    },
+    "string4_byte_stream_generation_allowed": {
+      "const": false
+    },
+    "string4_dry_run_ingestion_allowed_now": {
+      "const": false
+    },
+    "string4_execution_input_allowed": {
+      "const": false
+    },
+    "string4_sidecar_active": {
+      "const": false
+    },
+    "string4_sidecar_planning_ingestion_activated": {
+      "const": false
+    },
+    "token_block_experiment_executed": {
+      "const": false
+    },
+    "variant_byte_streams_generated": {
+      "const": false
+    },
+    "variant_materialisation_performed": {
+      "const": false
+    },
+    "website_expansion_performed": {
+      "const": false
+    }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "metadata_only",
+    "solve_claim",
+    "execution_allowed"
+  ],
+  "type": "object"
+}

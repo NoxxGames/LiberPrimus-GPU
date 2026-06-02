@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5CU operator-decision options review integration and real-decision record negative-fixture hardening is complete.
+Stage 5CW operator-decision readiness review integration and real-decision package preflight is complete.
 
-Next recommended prompt: Stage 5CV - Deep Research review of Stage 5CU operator-decision option negative-fixture hardening, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5CX - Deep Research review of Stage 5CW operator-decision readiness integration and real-decision package preflight, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5CW
+
+Stage 5CW consumes the Stage 5CV `accept_with_warnings` review outcome as compact metadata. It preserves the Stage 5CU negative-fixture hardening layer, preserves the Stage 5CS six-option real-approval decision scaffold exactly, keeps every option unselected, and creates a future real-decision package preflight as review-only metadata.
+
+Local Stage 5CW summary: Stage 5CV verdict `accept_with_warnings`, real-decision package preflight status `review_preflight_only`, future real-decision required inputs `24`, preflight misuse cases `24`, operator decision options `6`, operator decision option selected now `false`, selected option ID `null`, Stage 5CU decision-option negative fixtures preserved `41`, Stage 5CU real-decision negative fixture classes preserved `10`, Stage 5CU option-selection misuse cases preserved `13`, real operator decision created `false`, real approval records created `false`, real Deep Research acceptance records created `false`, real activation-decision records created `false`, combined approval gate satisfied now `false`, activation decision valid now `false`, active input authorized now `false`, active input selected now `false`, no-active-ingestion status `closed`, no-byte-stream transition gate `closed`, no-execution transition gate `closed`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, parallel worker cap `8`, `codex-output/stage5cw-codex-completion.md` written locally `true`, completion summary finalized without pending placeholders `true`, generated outputs committed `false`, `codex_output` used `false`, and next stage `Stage 5CX`.
+
+Stage 5CW is metadata-only. It does not create a real operator decision package, create an operator decision, choose an operator option, create actual operator approval, create actual Deep Research activation acceptance, satisfy the approval gate, validate an activation decision now, authorize or select active planning input, activate String 4, ingest String 4 into Stage 5BD dry-run plans, mutate Stage 5BD dry-run records, supersede active manifests, generate byte streams, materialise variants, enumerate branches, run token experiments, combine 2014 surfaces with page 49-51, run DWH/hash/preimage search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, or make solve claims. The Codex handoff path is `codex-output/stage5cw-codex-completion.md`; `codex_output` is deprecated and must not be created.
 
 ## Completed in Stage 5CU
 

@@ -3975,3 +3975,124 @@ records:
   staleness_check_level: historical
   owner_context: research_operator
   notes: Summarizes Stage 5CT warning integration, negative fixture counts, option nonselection, closed gates, preserved Stage 5BD records, and review-only next-stage rationale without Deep Research body content.
+- path: data/project-state/stage5cw-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5CW compact summary and current boundary record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records Stage 5CV verdict consumption, review-only real-decision package preflight, Stage 5CU preservation, Stage 5CS option preservation, closed no-active/no-byte/no-execution gates, and Stage 5CX routing.
+- path: data/token-block/stage5cw-real-decision-package-preflight.yaml
+  category: operational_status_doc
+  purpose: Stage 5CW review-only future real-decision package preflight.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Explicitly records that no real decision package is valid or created now and no approval, activation, active-input, byte-stream, or execution gate opens.
+- path: data/token-block/stage5cw-preflight-misuse-validation-matrix.yaml
+  category: operational_status_doc
+  purpose: Stage 5CW preflight misuse validation matrix.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Contains 24 fail-closed misuse cases for real-decision package preflight records.
+- path: data/token-block/stage5cw-stage5cu-negative-fixture-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5CW preservation proof for the Stage 5CU negative-fixture pack.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves the 41 Stage 5CU decision-option negative fixtures without creating real records.
+- path: data/token-block/stage5cw-stage5cs-decision-options-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5CW preservation proof for the Stage 5CS six-option scaffold.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves all six decision options unselected with selected_option_id null.
+- path: data/token-block/stage5cw-stage5bd-plan-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5CW Stage 5BD dry-run plan preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves 10 Stage 5BD run-plan IDs and records no plan supersession.
+- path: data/token-block/stage5cw-active-lineage-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5CW active-lineage preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves 8 active-lineage records and keeps the deprecated Stage 5AW path absent.
+- path: docs/onboarding/stage5cw-real-decision-package-preflight-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5CW real-decision package preflight.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, review-only preflight records, Stage 5CU/5CS preservation, no-active/no-byte/no-execution gates, handoff continuity, and Stage 5CX review routing.
+- path: docs/experiments/stage-5cw-real-decision-package-preflight.md
+  category: operational_status_doc
+  purpose: Stage 5CW metadata-only experiment-boundary documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: States that Stage 5CW is not a real decision package, option selection, approval, activation, byte-stream generation, CUDA, scoring, or solve evidence.
+- path: docs/development-logs/2026-06-02-stage-5cw-real-decision-package-preflight.md
+  category: historical_log
+  purpose: Stage 5CW implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation phases, validation commands, raw/generated staging checks, GitHub issue handling, commit, push, and CI evidence.
+- path: research-log/2026-06-02-stage-5cw-next-stage-decision-summary.md
+  category: historical_log
+  purpose: Stage 5CW summary-only research log and Stage 5CX next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cw
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: research_operator
+  notes: Summarizes Stage 5CV warning integration, real-decision package preflight, Stage 5CU/5CS preservation, closed gates, preserved Stage 5BD records, and review-only next-stage rationale without Deep Research body content.

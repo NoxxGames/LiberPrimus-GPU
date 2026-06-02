@@ -1,5 +1,9 @@
 # Codex Navigation Map
 
+## Stage 5CW Note
+
+Stage 5CW is a metadata-only real-decision package preflight layer. Use `libreprimus token-block validate-stage5cw` for Stage 5CV findings integration, review-only real-decision package preflight, Stage 5CU negative-fixture preservation, Stage 5CS option preservation, preflight misuse validation, Stage 5BD plan preservation, active-lineage preservation, handoff continuity, credential-redaction policy, and Stage 5CX next-stage routing. Treat the preflight as non-authorizing: it creates no real decision package, selects no option, creates no approval records, activates no input, generates no bytes, and executes nothing.
+
 ## Stage 5BQ Note
 
 Stage 5BQ is a metadata-only inactive-branch dry-run planning layer. Use `libreprimus token-block validate-stage5bq` for Stage 5BP findings integration, inactive String 4 planning context, dry-run constraint updates, no-active-ingestion proof, future dry-run requirements, Stage 5BD lineage preservation, DWH quarantine, guardrails, and Stage 5BR next-stage routing. Stage 5BR follow-up work should review the fail-closed planning constraints while keeping Deep Research bodies, full String 4 bodies, decoded bytes, reconstructed streams, raw iddqd-v2/archive/Fandom/spreadsheet files, generated outputs, and active manifest changes out of scope.
@@ -36,7 +40,7 @@ For most Codex tasks, read:
 - Do not trust rendered GitHub pages, cached raw URLs, memory, or old conversation context when state matters.
 - Run the task-specific validation commands before staging.
 - Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
-- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5BR prompts inherit current source-of-truth labels.
+- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5CX prompts inherit current source-of-truth labels.
 - Keep raw/generated outputs unstaged.
 - For Stage 5AF/5AG/5AI/5AJ/5AK source-harvester work, keep all raw harvester outputs, raw UsefulFiles/community-facts material, and generated bundle/extraction bodies local and ignored; do not use Google Drive as project storage.
 
@@ -119,3 +123,7 @@ For Stage 5CO real approval-readiness transition work, start with `docs/onboardi
 For Stage 5CQ operator-decision package scaffold work, start with `docs/onboarding/stage5cq-operator-decision-package-scaffold-workflow.md` and run `token-block build-stage5cq`, the focused Stage 5CQ findings/package/blocker/gate/preservation/handoff validators, `validate-stage5cq`, and `stage5cq-summary`. Treat every Stage 5CQ record as review-integration metadata only; operator decisions, real approval, Deep Research acceptance, activation, active input, byte-stream generation, and execution remain false.
 
 For Stage 5CS operator-decision readiness/options work, start with `docs/onboarding/stage5cs-operator-decision-readiness-options-workflow.md` and run `token-block build-stage5cs`, the focused Stage 5CS findings/readiness/options/nonselection/blocker/gate/preservation/handoff validators, `validate-stage5cs`, and `stage5cs-summary`. Treat every Stage 5CS record as review-integration metadata only; the six decision options remain unselected, and real operator decisions, real approvals, Deep Research acceptance, activation, active input, byte-stream generation, and execution remain false.
+
+For Stage 5CU option negative-fixture hardening work, start with `docs/onboarding/stage5cu-option-negative-fixture-hardening-workflow.md` and run `token-block build-stage5cu`, the focused Stage 5CU findings/options/fixture/misuse/nonselection/blocker/gate/preservation/handoff validators, `validate-stage5cu`, and `stage5cu-summary`. Treat every Stage 5CU record as negative validation metadata only; the six options remain unselected, and real operator decisions, real approvals, Deep Research acceptance, activation, active input, byte-stream generation, and execution remain false.
+
+For Stage 5CW real-decision package preflight work, start with `docs/onboarding/stage5cw-real-decision-package-preflight-workflow.md` and run `token-block build-stage5cw`, the focused Stage 5CW findings/preflight/requirements/misuse/preservation/nonselection/blocker/gate/handoff validators, `validate-stage5cw`, and `stage5cw-summary`. Treat every Stage 5CW record as review-only preflight metadata; it does not create a valid real-decision package or authorize a future gate by itself.
