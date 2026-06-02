@@ -3887,3 +3887,91 @@ records:
   staleness_check_level: historical
   owner_context: research_operator
   notes: Summarizes readiness package, unselected decision options, closed gates, preserved Stage 5CQ/5CO records, and review-only next-stage rationale without Deep Research body content.
+- path: data/project-state/stage5cu-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5CU compact summary and current boundary record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cu
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records Stage 5CT verdict consumption, Stage 5CS option preservation, negative fixture counts, no-active/no-byte/no-execution gates, and Stage 5CV routing.
+- path: data/token-block/stage5cu-decision-option-negative-fixture-pack.yaml
+  category: operational_status_doc
+  purpose: Stage 5CU adversarial decision-option negative fixture records.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cu
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Contains 41 synthetic negative fixtures proving option scaffolds cannot be treated as selected or gate-opening real records.
+- path: data/token-block/stage5cu-option-selection-misuse-validation-matrix.yaml
+  category: operational_status_doc
+  purpose: Stage 5CU option-selection misuse validation matrix.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cu
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Contains 13 fail-closed misuse transitions and preserves selected option ID null.
+- path: data/token-block/stage5cu-real-decision-record-negative-fixture-pack.yaml
+  category: operational_status_doc
+  purpose: Stage 5CU real-decision record negative fixture pack.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cu
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Covers the 10 future real record classes and keeps all created/present/satisfied fields false.
+- path: docs/onboarding/stage5cu-option-negative-fixture-hardening-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5CU option negative-fixture hardening.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cu
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused Stage 5CU validators, negative fixtures, option-selection misuse checks, Stage 5BD preservation, handoff continuity, and Stage 5CV review routing.
+- path: docs/experiments/stage-5cu-option-negative-fixture-hardening.md
+  category: operational_status_doc
+  purpose: Stage 5CU metadata-only experiment-boundary documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cu
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: States that Stage 5CU is not option selection, approval, activation, byte-stream generation, CUDA, scoring, or solve evidence.
+- path: docs/development-logs/2026-06-02-stage-5cu-option-negative-fixture-hardening.md
+  category: historical_log
+  purpose: Stage 5CU implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cu
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation phases, validation commands, raw/generated staging checks, GitHub issue handling, commit, push, and CI evidence.
+- path: research-log/2026-06-02-stage-5cu-next-stage-decision-summary.md
+  category: historical_log
+  purpose: Stage 5CU summary-only research log and Stage 5CV next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cu
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: research_operator
+  notes: Summarizes Stage 5CT warning integration, negative fixture counts, option nonselection, closed gates, preserved Stage 5BD records, and review-only next-stage rationale without Deep Research body content.

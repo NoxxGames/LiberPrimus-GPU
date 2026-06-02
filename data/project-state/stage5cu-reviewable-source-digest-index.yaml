@@ -1,0 +1,584 @@
+record_type: stage5cu_source_digest_index
+schema: schemas/project-state/stage5cu-reviewable-source-digest-index-v0.schema.json
+stage_id: stage-5cu
+stage_title: Stage 5CU - Operator-decision options review integration and real-decision
+  record negative-fixture hardening, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5cs
+source_previous_stage_commit: f32cd0390565af7fc63760962f7e644a53751d30
+source_deep_research_stage: stage-5ct
+source_deep_research_report: 25_Stage-5CS-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+source_digest_index_created: true
+source_digest_record_count: 121
+source_digest_unique_path_count: 121
+duplicate_path_count: 0
+source_paths_unique: true
+secret_values_recorded: false
+source_records:
+- path: data/historical-route/stage5co-dwh-quarantine-reaffirmation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 00aa86df06a59b669865c64b875e5ba647c67f6ddc377d39dc08aa622d97b31f
+- path: data/historical-route/stage5co-guardrail.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: c4147a96d5521f6273f367c9e52ebb9e57784f7f0e5e81cc436291fb6fb1a4ca
+- path: data/historical-route/stage5co-source-gap-severity-update.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 15e35a74e6594fc80d2d95c34d68f8a4e43b0735ec7898c6433bf40bbfa70860
+- path: data/historical-route/stage5cq-dwh-quarantine-reaffirmation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 2a3f5348b2258fea6fafa60a2ef94982bbd008d5afdbd8bcccf9df7e930cedc8
+- path: data/historical-route/stage5cq-guardrail.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: c05863fdc5151183ff5cfc62ff90455ee350bfa40aa0a07d7a6d34ddd3dd8ec5
+- path: data/historical-route/stage5cq-source-gap-severity-update.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 028bb9ee8171a7aa55928c42bc06363213c7f58cdb29c81a2ed0a9f2355c9c95
+- path: data/historical-route/stage5cs-dwh-quarantine-reaffirmation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 2594559961f38fe6feb1a5a5915c53d4d06f636b2f90ad5504c775b9221dc8b0
+- path: data/historical-route/stage5cs-guardrail.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 012e5be75755cdae0f831005f121bcd2a9c6bef67e5fac7030179e0ef2070be0
+- path: data/historical-route/stage5cs-source-gap-severity-update.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 69c2534760772c61092a71de3afe9e3830b99e0d692b0378466685d526ed1b83
+- path: data/project-state/stage5co-next-stage-decision.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 0a2f294db19b5cdff80b68fefac7e65ac223068ac6d84140661c3c7090dcbb5a
+- path: data/project-state/stage5co-record-family-name-equivalence-map.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 329caefb46841d243371a149315c88b2fa79c86bccb2b594a60ce4ad6389ec5b
+- path: data/project-state/stage5co-reviewability-gap-register.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 63646cc0777e3179a751d82085eee33a87def8d0607d7833dc198b75cd147913
+- path: data/project-state/stage5co-reviewable-source-digest-index.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 340b87e871cd0ba69d330ef22211879e92e0c4f8899e41735cdb5864aaa7282d
+- path: data/project-state/stage5co-reviewable-stage-marker.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: a05961559033c627c797a4ab02121055f4e22b9b07bcf205cea66fdb34286a65
+- path: data/project-state/stage5co-reviewable-validation-evidence.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 9442e36719206e9295c9f4cd471b027fd338433847aee6628ec758ea608b83d0
+- path: data/project-state/stage5co-stage5cn-findings-integration.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 9d2f156a05682b98e543cbcd594a137d9c59616684ddacf5ae52763ca0400ffa
+- path: data/project-state/stage5co-summary.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 5497343040f72328d28cc6d476d10cf86e635c1b120b13365bbb369554e46b85
+- path: data/project-state/stage5cq-next-stage-decision.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 7e6ad3567beb0ff5bb8882e0dee9c8dd7462e5b87f946d8b15ffdaa30f878e81
+- path: data/project-state/stage5cq-record-family-name-equivalence-map.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 22d465756a2d73f4f9f017c72e74c8ed4408ca6794ca0b789f6eb685ed08ea9f
+- path: data/project-state/stage5cq-reviewability-gap-register.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 7e5729aa0aa4a01f0b3b395f795433e071486c480015cb023a442bb4919ddec4
+- path: data/project-state/stage5cq-reviewable-source-digest-index.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: a38d145b90acd952a40fd54671d2cbb3b7966a1e556a7865bde78d7d164c1e41
+- path: data/project-state/stage5cq-reviewable-stage-marker.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 645c94373c67fe03dd23a72d39be4b35074327e4df8c65c9c9f5097b91b710ff
+- path: data/project-state/stage5cq-reviewable-validation-evidence.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 4228fc05373db27cbc9b1529fc7216dea6c753cebe74fcda7aa5e9fa47e1a68e
+- path: data/project-state/stage5cq-stage5cp-findings-integration.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: e0be919cf9bdc89234c512fca6ca4663c201abbb45cb7e0ca3174db74a06c773
+- path: data/project-state/stage5cq-summary.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: bbc6fec4ab1081f46cffc1c04353ee1ed4b14c1dfe53f441bc47a0fe7cadf5a5
+- path: data/project-state/stage5cs-next-stage-decision.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 3d94a7b6d9aa1a0245b13adf06221d2f4287ed1eac68e1ba2cc8b1c1806cc9d8
+- path: data/project-state/stage5cs-record-family-name-equivalence-map.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: e4d793fe0ae6378fbfc861c37b7bfdbe9901d0007fed6195f29d94ccdc114ffb
+- path: data/project-state/stage5cs-reviewability-gap-register.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 1c9eec1b241710833f08225238efb88188d50aff631030d5459587ce2016d242
+- path: data/project-state/stage5cs-reviewable-source-digest-index.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: c063c907ca20cc3534cf3f95529bb7689378f64c1f2171c8f080c2678e7ea655
+- path: data/project-state/stage5cs-reviewable-stage-marker.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 3185b1d6d3be7981baac23637349bd5ea1e97340a0468c8f5f4ae07eaeda3aec
+- path: data/project-state/stage5cs-reviewable-validation-evidence.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 25a1850a2a30ef2132afa9d603d30e797eb4ac8395d9d697cbb1525a1b0df317
+- path: data/project-state/stage5cs-stage5cr-findings-integration.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: f850849098134b41e3becc92c545b4ca3a329605568fc1dca37cfd9c11a7392b
+- path: data/project-state/stage5cs-summary.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: bcc5a795e62af65a44120d54ea0cda2587bd381bc2b4caf5ec91ad82ec7b29fa
+- path: data/source-harvester/stage5co-codex-handoff-policy.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 2653ab719637e7c470da366676e7e51dd8798e5338f1ab38c7259abb4f398b72
+- path: data/source-harvester/stage5co-credential-redaction-policy-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: a791c937801516cd22ee68e9f7cd470075eb60eb85d4141f1eb7cbf650e39e27
+- path: data/source-harvester/stage5co-review-packaging-warning.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: cea3fb29c31ac58ef8528696bb03596e99a84985a20ef347d9bb65ad08e8b36d
+- path: data/source-harvester/stage5cq-codex-handoff-policy.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: fbecee8187e2d67e17429fafe881d843b3bc356f79aed33994608bcb3aa2cc2c
+- path: data/source-harvester/stage5cq-completion-summary-restoration.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 22b08cd3cb7f3d231034a027fb71e499bcc64de8ab0f26a9beb2241eb0ad85dd
+- path: data/source-harvester/stage5cq-credential-redaction-policy-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 20dc680640aa262f30f8a9fc026d280c2997d6ad9767f9f125bf3a50e12d2f70
+- path: data/source-harvester/stage5cq-review-packaging-warning.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 5770a7e0bf037fc3db1e39a55bd44414f87ad5c9efc49915aeae9fb376b66527
+- path: data/source-harvester/stage5cs-codex-handoff-policy.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 58681a06c8fc0388ee126430d40abca5dc6503492e28f3cb8cb557b9536c9f6a
+- path: data/source-harvester/stage5cs-completion-summary-continuity.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 1d9f1785f6769b34e485811397c3cf41564935e48d9528fa4df5ce583dac578a
+- path: data/source-harvester/stage5cs-credential-redaction-policy-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: a2c38a9a35594fa3365b3ccd436a71d238ef9d4d3e51faf91f5009c434065132
+- path: data/source-harvester/stage5cs-review-packaging-warning.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 7027d6ee2448c1f687201c3e8a6e606e6c04c22754583ed2e9dcd580fb83caec
+- path: data/token-block/stage5co-activation-decision-nonauthorization-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 3d9f659b89fee0d7bdadb64c3dcac50db155418425b8d1a2948e4fbff3d6fb2d
+- path: data/token-block/stage5co-activation-decision-transition-plan.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 716a7a2ed68aee4f0f86ffeef9be6c219bda5b3c13ddefbfeddcf81e4ab32320
+- path: data/token-block/stage5co-active-lineage-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 005e7d3850e7933662e6c059bf9284c3b388803c6dfd097cae79a89daed4ab90
+- path: data/token-block/stage5co-current-missing-requirements-register.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 221de8c523cb0adc92283294d1055cede6b78f5fbe7881fb2fb32cd8eb9ed502
+- path: data/token-block/stage5co-future-transition-sequence.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: eb59dfffa178ed769a83200b91694808023905969e9cdb4366b701ad291d5497
+- path: data/token-block/stage5co-manifest-supersession-nonactivation-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: b0f458afef22ac7826d0ae4f55dd87b1732296f0b6f490fd720718ea31ab8b28
+- path: data/token-block/stage5co-no-active-ingestion-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: e477b792781f0ea03086761a3885b06ddab3336ae7d6ef8825ceb7d3809f3be8
+- path: data/token-block/stage5co-no-byte-stream-transition-gate.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 59d13216cad9c516b9c5c8fe47163ad9ae41bdabb233f82e44afbe5b8ac38955
+- path: data/token-block/stage5co-no-execution-transition-gate.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 5baafe2e619f1e80c1880bbca0ba05a693749e2215f05eafafe80b0098e2afb9
+- path: data/token-block/stage5co-real-approval-record-readiness-package.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 89103a04b15302e546b2fda26fa5c2823f63472d3dbc95713f5ca7122ec5d067
+- path: data/token-block/stage5co-real-combined-gate-validation-readiness-preflight.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: c7a30099538df10ebae13d5ea206c6e7be2118192a3e89fea870fefeab4debbc
+- path: data/token-block/stage5co-real-deep-research-acceptance-readiness-preflight.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: b1a4b3cdf2c4f80ebdbf6c0e20d76e4535d67e102779d7a120000b32b74f78a0
+- path: data/token-block/stage5co-real-operator-approval-readiness-preflight.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 140dee790d6abc41fdf1998c5db742b92bf1b6f66e534b9b8edfee91094974a2
+- path: data/token-block/stage5co-real-record-creation-blocker.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 2e74dfcd782ab9537a3bde44892cf73b30c215b76beea296b5ba65bccad1242a
+- path: data/token-block/stage5co-sidecar-activation-blocker.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 9d4f3142b6f70d660f258daadb849a0e9e195b675cab5351ce61d1db2fb5fef5
+- path: data/token-block/stage5co-stage5bd-plan-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: acff2b8eb19ecfdc18c6837aa5599bbd97e4df988c33e8821505502e83e6e2e7
+- path: data/token-block/stage5co-stage5cc-contract-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: b84c0a0067030868c2b805fe43a2d7295d16645fe2cb7c593d724549a6532518
+- path: data/token-block/stage5co-stage5ce-proposal-package-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 7b5e5c3fb0c21d2ec223156d53d8659c97e127e1ee4c594b6167f4b17fa416ea
+- path: data/token-block/stage5co-stage5cg-scaffold-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: b8fe18ea910e805cd0dd8717d27ff5afdd9351f0c0c8ed008d19e936cadf7239
+- path: data/token-block/stage5co-stage5ci-template-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 0e0acaa7c7bd3fd9c27518bf32ca6f66a05ec75c0ae0952600e510fd708b5311
+- path: data/token-block/stage5co-stage5ck-fixture-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 82f1b14308d02ec4a3ba20dddb3558c06650bd6df7d141ea77f1ad4e1dd72693
+- path: data/token-block/stage5co-stage5cm-boundary-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: f38fdad8b723a50b32d017059868c311802039c3bb8bcf92caf5716b86e77776
+- path: data/token-block/stage5cq-activation-decision-nonauthorization-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: dc38669b20192b194ad25ffebdaeacbaf4b16c3d66d1a4c2c848224a0944eb39
+- path: data/token-block/stage5cq-active-lineage-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: b5be42cd5791cb37e3291caf5cff0fa34a5ae145e3ff340bb437e386de6a83c6
+- path: data/token-block/stage5cq-combined-gate-non-satisfaction-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: f781749d303bb801cbeb6e9ee7d0f5ebf149465c6864dd201b56ccc330ce6c8c
+- path: data/token-block/stage5cq-manifest-supersession-nonactivation-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 61e4de5548a140bf0944779efb3c1d04ca7301b0b47704a2955989a2eda30328
+- path: data/token-block/stage5cq-no-active-ingestion-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 54761400bea118ba4c776b084dedfad78dbbc31f29764e4814ea9ed0ba8a4e82
+- path: data/token-block/stage5cq-no-byte-stream-transition-gate.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 2f3d2a9d5ab883d7bf3a18eb84fef370471c17f8a5cacf1b07236b42ee4e9edd
+- path: data/token-block/stage5cq-no-execution-transition-gate.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: fd4f2c2f709ae2c38248b1ffeec8796f47185643704289824e0a58824d88ba66
+- path: data/token-block/stage5cq-operator-decision-nonauthorization-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 89c7c0da4da79a655cad81eaa54e7bcdca0a9f02ea882a65a312559f3b827bf8
+- path: data/token-block/stage5cq-operator-decision-package-scaffold.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 813350bee759a4c0989f2d2913de585f1371416dddfd1d67b698a94294082338
+- path: data/token-block/stage5cq-real-record-creation-blocker.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: a3d224d18364f60f22b37dcc0e14b1f5f4a27c5db7c62910040773f8906e06fb
+- path: data/token-block/stage5cq-sidecar-activation-blocker.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 54390a870a1b679259a6905fdc0f33d0dc1e3140523c29596b794bdfad4ac388
+- path: data/token-block/stage5cq-stage5bd-plan-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 22fc28b71a1234a35d6d4f9c76331d68fce7a3bc4bff98722a94271e367d57f0
+- path: data/token-block/stage5cq-stage5cc-contract-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 34972bdf5e2381b5905fb73b61c3b1dca76be1201ac84611af109d2c163184e3
+- path: data/token-block/stage5cq-stage5ce-proposal-package-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: eb6c7289f74f3b1a8c54f4dc7e2ca6542a36fd121a0d26c8bd83a4d78ea2bf9b
+- path: data/token-block/stage5cq-stage5cg-scaffold-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: c6321f9802281bb553a87e6a4ca1331ba92e238f4e06038507ebaafa6be45dcd
+- path: data/token-block/stage5cq-stage5ci-template-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 7bf135b5276b80b0fdb88fc5bca27ac14bf2e8a164785b8357564e634dbfaea4
+- path: data/token-block/stage5cq-stage5ck-fixture-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 6d52a9f994d4f4cc57e1bf59b22ef905814a2962a73d395ab8ac10140adeb20a
+- path: data/token-block/stage5cq-stage5cm-boundary-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 3ad68e5cd9816bc83750c44511b69efee0d88790fbcd03de6122202c1efaff64
+- path: data/token-block/stage5cq-stage5co-missing-requirements-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 30f10458e889e8889cbba6b93f03a491df6cd3c15dca1c494b35dd47ea64b631
+- path: data/token-block/stage5cq-stage5co-readiness-package-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 01590536836f0f72d7bbde1c20e94a41c2f6d4a43a6acd1ae1a89d813cdd3527
+- path: data/token-block/stage5cq-stage5co-transition-plan-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 0068418d5340c21e5ecc8a3c2529f8c76561409d4dc043b1e2503bf8d9e4e99f
+- path: data/token-block/stage5cs-activation-decision-nonauthorization-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 627302a886dd92db7ba52a09f5d30e806028af147fda0442196a28e7a0f2744f
+- path: data/token-block/stage5cs-active-lineage-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: f05342ffea1f6e6bdc6b6dff46f0fb993df1baae95dd81577154436148d08f38
+- path: data/token-block/stage5cs-combined-gate-non-satisfaction-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 665f9c829b44f1d322f873ece4e2406885f238d554a83d29974aba6f076323ea
+- path: data/token-block/stage5cs-manifest-supersession-nonactivation-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 4d47b0c0ad188468f99d9355fbd4722678effae2d27d1a08af44fb0bf919313b
+- path: data/token-block/stage5cs-no-active-ingestion-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 4faa68bac61518860fa337f89cbb4b97272a116f9a3e40e916891ca204adec18
+- path: data/token-block/stage5cs-no-byte-stream-transition-gate.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: de08e05477dbd01516a5e005002dbda6be9d2cd538b7eedb0767a42751a890f2
+- path: data/token-block/stage5cs-no-execution-transition-gate.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: f30e005c16a1cb3148c2964cdcd91b2ca30d3c9fcb610bf7edfb3471293e4eef
+- path: data/token-block/stage5cs-operator-decision-nonauthorization-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: f05ace124ffbf0a0a63a37602a9753200ae42feb66ce386949d8643527fb30ad
+- path: data/token-block/stage5cs-operator-decision-readiness-package.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 6a31a2a302614c259566a8e152b04a8a16daceaffb6974cbc5fadd4a2c8e7846
+- path: data/token-block/stage5cs-operator-options-nonselection-proof.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: f9b6735cb23c3c20e5dda8daec20a26d4e6db8efc8c3ba2a77020e2258bd145c
+- path: data/token-block/stage5cs-real-approval-decision-options-scaffold.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: e766ff6318a32627d8a75648d89ef3e5ac148a3ea67fa64fb1a6aedd7589f31d
+- path: data/token-block/stage5cs-real-record-creation-blocker.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 7f92854e7ee59ce4c7b44c396d5239678f644db7fdc1d8e70afbe9c5b7d21962
+- path: data/token-block/stage5cs-sidecar-activation-blocker.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: f79e20d4fef0740839598699a2b785eb65631863f5546112cb251ecbc558ea08
+- path: data/token-block/stage5cs-stage5bd-plan-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 4178d87c7c2855ac3fefdacb723c50675e5580c0cb66601008f02b0f5469713c
+- path: data/token-block/stage5cs-stage5cc-contract-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: cd6de74c28b38d668820ea04e141dec8062dfd023a1a04c5707a7a27613c92b8
+- path: data/token-block/stage5cs-stage5ce-proposal-package-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 3996cba641b18e1e7eeacf897842e801f8002af4dde08d4e4e01089000cd1087
+- path: data/token-block/stage5cs-stage5cg-scaffold-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 846cf0a02713c9c26bd436ef273c016cec0e7538f35ace088994b849687e5b27
+- path: data/token-block/stage5cs-stage5ci-template-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 330f7054f04184e4949e69bce9e58a2f0ea03d9b5d1415ed940e66e7a7d875cf
+- path: data/token-block/stage5cs-stage5ck-fixture-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 95732caee550bd06c522d8358ef084477c012ea2aa3aa03c41491c25ebf4fd37
+- path: data/token-block/stage5cs-stage5cm-boundary-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: d091f04e5e04aa7b734bae70c579114b863815cacbb162fc40d4a1517f723419
+- path: data/token-block/stage5cs-stage5co-missing-requirements-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 8859e40d6e975db3ed53934f2d179e496b5c57031a73f2b4ddb405e5e740b4f1
+- path: data/token-block/stage5cs-stage5co-readiness-package-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 82bb9e901aa249413b3446c680a61eab5ffe3f6ec2b5d1fda764e9e922b2d96c
+- path: data/token-block/stage5cs-stage5co-transition-plan-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 6f625a1b5fecbd3bb698f6d164ba8ac825d6e55f037f3a08fef5a96642d633ea
+- path: data/token-block/stage5cs-stage5cq-operator-decision-scaffold-preservation.yaml
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 7c351cdd211bb35f6d454812d9200eb8642bab32acacc51592e4a8ab05c10fda
+- path: deep-research-reports/reviews-of-ideas-and-concepts-and-data/md/25_Stage-5CS-Deep-Research-Review.md
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 4ab62bc30f1f71fd5e82fdeec5d4c66d6351c955288b3d5c540707ed8beb0bac
+- path: docs/development-logs/2026-06-01-stage-5co-real-approval-record-readiness.md
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: df298d03350db6df4579dbb1144757ea35f0fe42cb0fb012890fc7d5083fc5c2
+- path: docs/development-logs/2026-06-01-stage-5cq-operator-decision-package-scaffold.md
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 584986133b666e6e4afd2b01f13c7b9f62c1804f0dafad6b310e5b0c84d620db
+- path: docs/development-logs/2026-06-01-stage-5cs-operator-decision-readiness-options.md
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 3435ec0e2b648c46420f75aac2bd796d897e5dbaefa2585792b5563772b71bb1
+- path: docs/experiments/stage-5co-real-approval-record-readiness.md
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 3ebc27558659f9611c13101d7963586513c84d0f8448d112ae8df0882c86db13
+- path: docs/experiments/stage-5cq-operator-decision-package-scaffold.md
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 932e4d81840b8a6e1078ac7adbdbebc249c36ed950e469ddb2308d07d1692c20
+- path: docs/experiments/stage-5cs-operator-decision-readiness-options.md
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 03f1cacdbace0561392f9b21d59434a4ea7659de03063f0f75221e7ec506dfc5
+- path: docs/onboarding/stage5co-real-approval-record-readiness-workflow.md
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: 5e55fb251e8c58b4d84ed0a2a85f9b250978bf476746697bf3af08572bd57da9
+- path: docs/onboarding/stage5cq-operator-decision-package-scaffold-workflow.md
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: c10fa488f4cb9cfb08106f829b0571e70f2b56aaa489853bb437f24bcc522000
+- path: docs/onboarding/stage5cs-operator-decision-readiness-options-workflow.md
+  role: stage5cu_reviewable_source
+  present: true
+  sha256: edb1397b89387fe761a111f77ede3c2af48de4779240cdd7aed93c28e1631536
+raw_or_generated_bodies_committed: false
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_activation_accept_record_present_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+full_cartesian_product_enumerated: false
+future_real_records_created_now: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+image_forensics_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+new_active_planning_input_created: false
+ocr_performed: false
+operator_approval_record_present_now: false
+operator_decision_option_selected_now: false
+operator_decision_authorizes_activation_now: false
+operator_decision_authorizes_real_approval_now: false
+operator_decision_package_authorizes_activation: false
+operator_decision_package_authorizes_active_input: false
+operator_decision_package_authorizes_approval: false
+operator_decision_package_authorizes_byte_stream_generation: false
+operator_decision_package_authorizes_dry_run_ingestion: false
+operator_decision_package_authorizes_execution: false
+operator_decision_record_created_now: false
+operator_decision_record_present_now: false
+operator_decision_satisfied_now: false
+real_activation_decision_record_created_now: false
+real_activation_decision_record_present_now: false
+real_activation_decision_records_created: false
+real_approval_records_created: false
+real_byte_stream_generated: false
+real_combined_gate_validation_record_created_now: false
+real_combined_gate_validation_record_present_now: false
+real_deep_research_acceptance_record_created_now: false
+real_deep_research_acceptance_record_present_now: false
+real_deep_research_acceptance_records_created: false
+real_operator_approval_record_created_now: false
+real_operator_approval_record_present_now: false
+real_operator_decision_record_created_now: false
+real_operator_decision_record_present_now: false
+scoring_performed: false
+secret_values_printed_or_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_plan_superseded: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false

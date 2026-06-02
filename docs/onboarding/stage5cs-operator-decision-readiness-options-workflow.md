@@ -22,4 +22,4 @@ Focused validators are available for Stage 5CR findings, operator-decision readi
 - Active planning input, String 4 ingestion, byte streams, and execution remain blocked.
 - Stage 5BD run-plan IDs and active lineage remain unchanged.
 
-The next recommended stage is Stage 5CT Deep Research review of this metadata package.
+Historical next stage: Stage 5CT Deep Research reviewed this metadata package. Current follow-up routing is Stage 5CV review of the Stage 5CU option negative-fixture hardening layer.

@@ -1,0 +1,108 @@
+record_type: stage5cu_stage5ci_preservation
+schema: schemas/token-block/stage5cu-stage5ci-template-preservation-v0.schema.json
+stage_id: stage-5cu
+stage_title: Stage 5CU - Operator-decision options review integration and real-decision
+  record negative-fixture hardening, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5cs
+source_previous_stage_commit: f32cd0390565af7fc63760962f7e644a53751d30
+source_deep_research_stage: stage-5ct
+source_deep_research_report: 25_Stage-5CS-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+stage5ci_templates_preserved: true
+source_records:
+- path: data/token-block/stage5ci-operator-approval-record-template.yaml
+  role: stage5ci_templates_source
+  present: true
+  sha256: 796de6ba3e6779eb767523da1222223e13383c523c65ecb712b6dd5d48cd4596
+- path: data/token-block/stage5ci-deep-research-acceptance-record-template.yaml
+  role: stage5ci_templates_source
+  present: true
+  sha256: e2ea1b5e8ee3ecc4de4a4de021856862ef2a6a94eecd55c8a2c59846a57e8948
+- path: data/token-block/stage5ci-active-planning-input-activation-decision-template.yaml
+  role: stage5ci_templates_source
+  present: true
+  sha256: 6fe1f618c70a4cdbcb3c9cc338efb84b5b2364567bfb9ea03b0140c9d75f5103
+source_record_count: 3
+preservation_status: preserved
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_activation_accept_record_present_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+full_cartesian_product_enumerated: false
+future_real_records_created_now: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+image_forensics_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+new_active_planning_input_created: false
+ocr_performed: false
+operator_approval_record_present_now: false
+operator_decision_option_selected_now: false
+operator_decision_authorizes_activation_now: false
+operator_decision_authorizes_real_approval_now: false
+operator_decision_package_authorizes_activation: false
+operator_decision_package_authorizes_active_input: false
+operator_decision_package_authorizes_approval: false
+operator_decision_package_authorizes_byte_stream_generation: false
+operator_decision_package_authorizes_dry_run_ingestion: false
+operator_decision_package_authorizes_execution: false
+operator_decision_record_created_now: false
+operator_decision_record_present_now: false
+operator_decision_satisfied_now: false
+real_activation_decision_record_created_now: false
+real_activation_decision_record_present_now: false
+real_activation_decision_records_created: false
+real_approval_records_created: false
+real_byte_stream_generated: false
+real_combined_gate_validation_record_created_now: false
+real_combined_gate_validation_record_present_now: false
+real_deep_research_acceptance_record_created_now: false
+real_deep_research_acceptance_record_present_now: false
+real_deep_research_acceptance_records_created: false
+real_operator_approval_record_created_now: false
+real_operator_approval_record_present_now: false
+real_operator_decision_record_created_now: false
+real_operator_decision_record_present_now: false
+scoring_performed: false
+secret_values_printed_or_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_plan_superseded: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false

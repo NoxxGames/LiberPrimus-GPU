@@ -43,14 +43,14 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5CS" `
-  --expected-next-stage "Stage 5CT"
+  --expected-latest-stage "Stage 5CU" `
+  --expected-next-stage "Stage 5CV"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5CS" `
-  --expected-next-stage "Stage 5CT"
+  --expected-latest-stage "Stage 5CU" `
+  --expected-next-stage "Stage 5CV"
 ```
 ## Stage 5BF Coverage
 
@@ -106,4 +106,4 @@ Stage 5CO extends the operational file map with Stage 5CN findings integration, 
 
 Stage 5CQ extends the operational file map with Stage 5CP findings integration, reviewable stage marker, validation evidence, reviewability gap register, source-digest index, record-family filename-equivalence map, operator-decision package scaffold, operator-decision nonauthorization, combined-gate non-satisfaction, activation nonauthorization, real-record blocker, Stage 5CO/Stage 5CM/Stage 5CK/Stage 5CI/Stage 5CG/Stage 5CE/Stage 5CC/Stage 5BD preservation, active-lineage preservation, no-active/no-byte/no-execution transition gates, strict `codex-output` handoff restoration, credential-redaction policy preservation, review-packaging warning, guardrail, summary, next-stage, workflow, developer-log, and research-log records.
 
-Stage 5CS extends the operational file map with Stage 5CR findings integration, reviewable stage marker, validation evidence, reviewability gap register, source-digest index, record-family filename-equivalence map, operator-decision readiness package, real-approval decision-options scaffold, option-nonselection proof, operator-decision nonauthorization, combined-gate non-satisfaction, activation nonauthorization, real-record blocker, Stage 5CQ/Stage 5CO/Stage 5CM/Stage 5CK/Stage 5CI/Stage 5CG/Stage 5CE/Stage 5CC/Stage 5BD preservation, active-lineage preservation, no-active/no-byte/no-execution transition gates, strict `codex-output` handoff continuity, credential-redaction policy preservation, review-packaging warning, guardrail, summary, next-stage, workflow, developer-log, and research-log records.
+Stage 5CU extends the operational file map with Stage 5CT findings integration, Stage 5CS decision-options preservation, decision-option negative fixtures, real-decision negative fixtures, option-selection misuse validation, option-fixture isolation policy, Stage 5CQ/Stage 5CO/Stage 5CM/Stage 5CK/Stage 5CI/Stage 5CG/Stage 5CE/Stage 5CC/Stage 5BD preservation, active-lineage preservation, no-active/no-byte/no-execution transition gates, strict `codex-output` handoff continuity, credential-redaction policy preservation, review-packaging warning, guardrail, summary, next-stage, workflow, developer-log, and research-log records.

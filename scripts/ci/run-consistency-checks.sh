@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5CS" \
-    --expected-next-stage "Stage 5CT" \
+    --expected-latest-stage "Stage 5CU" \
+    --expected-next-stage "Stage 5CV" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5CS" \
-    --expected-next-stage "Stage 5CT" \
+    --expected-latest-stage "Stage 5CU" \
+    --expected-next-stage "Stage 5CV" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5CS",
+            expected_latest_stage="Stage 5CU",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5CS",
+            "expected_latest_stage": "Stage 5CU",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2856,6 +2856,40 @@ git check-ignore -q "$stage5cs_token_results_root/source_digest_index.json"
 git check-ignore -q "codex-output/stage5cs-codex-completion.md"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5CS" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5CU operator-decision option negative-fixture hardening records"
+"$python_bin" -m libreprimus.cli token-block build-stage5cu
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-stage5ct-findings
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-operator-decision-readiness
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-decision-options-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-decision-option-negative-fixtures
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-real-decision-negative-fixtures
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-option-selection-misuse
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-options-nonselection
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-real-record-blocker
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-combined-gate
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-activation-nonauthorization
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-stage5cs-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-stage5cq-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-stage5co-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-prior-stage-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-handoff-continuity
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu-credential-redaction-policy
+"$python_bin" -m libreprimus.cli token-block validate-stage5cu
+stage5cu_token_results_root="experiments"/"results"/"token-block"/"stage5cu"
+git check-ignore -q "$stage5cu_token_results_root/summary.json"
+git check-ignore -q "$stage5cu_token_results_root/operator_decision_readiness_report.json"
+git check-ignore -q "$stage5cu_token_results_root/decision_options_report.json"
+git check-ignore -q "$stage5cu_token_results_root/negative_fixture_report.json"
+git check-ignore -q "$stage5cu_token_results_root/preservation_report.json"
+git check-ignore -q "$stage5cu_token_results_root/handoff_continuity_report.json"
+git check-ignore -q "$stage5cu_token_results_root/source_digest_index.json"
+git check-ignore -q "codex-output/stage5cu-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5CU" >&2
     exit 1
 fi
 

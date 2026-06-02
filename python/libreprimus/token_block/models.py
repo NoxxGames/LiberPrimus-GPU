@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
+import time
 from pathlib import Path
 from typing import Any
 
@@ -337,7 +339,7 @@ def sha256_file(path: Path) -> str:
 
 def write_yaml(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(yaml.safe_dump(payload, sort_keys=False, allow_unicode=False), encoding="utf-8")
+    _write_text_atomic(path, yaml.safe_dump(payload, sort_keys=False, allow_unicode=False))
 
 
 def read_yaml(path: Path) -> Any:
@@ -346,12 +348,25 @@ def read_yaml(path: Path) -> Any:
 
 def write_json(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    _write_text_atomic(path, json.dumps(payload, indent=2, sort_keys=True) + "\n")
 
 
 def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("".join(json.dumps(row, sort_keys=True) + "\n" for row in rows), encoding="utf-8")
+    _write_text_atomic(path, "".join(json.dumps(row, sort_keys=True) + "\n" for row in rows))
+
+
+def _write_text_atomic(path: Path, text: str) -> None:
+    temp_path = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+    temp_path.write_text(text, encoding="utf-8")
+    for attempt in range(40):
+        try:
+            temp_path.replace(path)
+            return
+        except PermissionError:
+            if attempt == 39:
+                raise
+            time.sleep(0.05)
 
 
 def repo_relative(path: Path) -> str:

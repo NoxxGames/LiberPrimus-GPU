@@ -37,4 +37,4 @@ Run focused validators when reviewing a specific boundary:
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5co-sidecar-gates
 ```
 
-Historical next stage: Stage 5CP Deep Research review of Stage 5CO, without execution. Current operator-decision review routing is Stage 5CT after Stage 5CS, still without execution.
+Historical next stage: Stage 5CP Deep Research review of Stage 5CO, without execution. Current operator-decision review routing is Stage 5CV after Stage 5CU negative-fixture hardening, still without execution.

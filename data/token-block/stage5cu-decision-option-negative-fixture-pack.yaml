@@ -1,0 +1,716 @@
+record_type: stage5cu_decision_option_negative_fixtures
+schema: schemas/token-block/stage5cu-decision-option-negative-fixture-pack-v0.schema.json
+stage_id: stage-5cu
+stage_title: Stage 5CU - Operator-decision options review integration and real-decision
+  record negative-fixture hardening, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5cs
+source_previous_stage_commit: f32cd0390565af7fc63760962f7e644a53751d30
+source_deep_research_stage: stage-5ct
+source_deep_research_report: 25_Stage-5CS-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+decision_option_negative_fixture_pack_created: true
+fixture_pack_status: synthetic_negative_fixtures_only
+negative_fixture_count: 41
+negative_fixture_ids:
+- option_scaffold_treated_as_selected_operator_decision
+- option_scaffold_treated_as_real_operator_decision_record
+- option_scaffold_treated_as_real_operator_approval_record
+- option_scaffold_treated_as_real_deep_research_acceptance_record
+- option_scaffold_treated_as_real_combined_gate_validation_record
+- option_scaffold_treated_as_real_activation_decision_record
+- option_scaffold_treated_as_active_planning_input_selection_record
+- readiness_package_treated_as_operator_decision
+- stage5cq_scaffold_treated_as_operator_decision
+- stage5co_readiness_package_treated_as_real_approval
+- stage5ci_template_treated_as_real_approval
+- stage5ck_fixture_treated_as_real_approval
+- selected_option_id_set_without_real_operator_decision
+- selected_option_id_unknown
+- selected_option_id_multiple
+- option_missing_from_exact_set
+- option_extra_in_exact_set
+- option_duplicate_id
+- option_authorizes_real_approval_now
+- option_authorizes_activation_now
+- option_authorizes_active_input_now
+- option_authorizes_byte_stream_generation_now
+- option_authorizes_execution_now
+- prepare_real_operator_approval_record_misread_as_approval
+- prepare_real_deep_research_acceptance_record_misread_as_acceptance
+- prepare_combined_gate_validation_misread_as_combined_gate_satisfied
+- prepare_activation_decision_review_misread_as_activation_decision_valid
+- defer_for_more_review_misread_as_gate_satisfied
+- keep_blocked_no_action_conflicts_with_activation_true
+- option_fixture_allows_stage5bd_mutation
+- option_fixture_allows_active_lineage_mutation
+- deprecated_stage5aw_path_reintroduced
+- codex_output_used
+- stale_pending_completion_summary_treated_as_final_handoff
+- byte_stream_authorized
+- execution_authorized
+- dwh_hash_search_performed
+- decode_attempt_performed
+- scoring_performed
+- cuda_execution_performed
+- solve_claim_true
+fixtures:
+- fixture_id: option_scaffold_treated_as_selected_operator_decision
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_scaffold_treated_as_real_operator_decision_record
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_scaffold_treated_as_real_operator_approval_record
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_scaffold_treated_as_real_deep_research_acceptance_record
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_scaffold_treated_as_real_combined_gate_validation_record
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_scaffold_treated_as_real_activation_decision_record
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_scaffold_treated_as_active_planning_input_selection_record
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: readiness_package_treated_as_operator_decision
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: stage5cq_scaffold_treated_as_operator_decision
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: stage5co_readiness_package_treated_as_real_approval
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: stage5ci_template_treated_as_real_approval
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: stage5ck_fixture_treated_as_real_approval
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: selected_option_id_set_without_real_operator_decision
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: selected_option_id_unknown
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: selected_option_id_multiple
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_missing_from_exact_set
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_extra_in_exact_set
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_duplicate_id
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_authorizes_real_approval_now
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_authorizes_activation_now
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_authorizes_active_input_now
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_authorizes_byte_stream_generation_now
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_authorizes_execution_now
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: prepare_real_operator_approval_record_misread_as_approval
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: prepare_real_deep_research_acceptance_record_misread_as_acceptance
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: prepare_combined_gate_validation_misread_as_combined_gate_satisfied
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: prepare_activation_decision_review_misread_as_activation_decision_valid
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: defer_for_more_review_misread_as_gate_satisfied
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: keep_blocked_no_action_conflicts_with_activation_true
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_fixture_allows_stage5bd_mutation
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: option_fixture_allows_active_lineage_mutation
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: deprecated_stage5aw_path_reintroduced
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: codex_output_used
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: stale_pending_completion_summary_treated_as_final_handoff
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: byte_stream_authorized
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: execution_authorized
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: dwh_hash_search_performed
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: decode_attempt_performed
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: scoring_performed
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: cuda_execution_performed
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+- fixture_id: solve_claim_true
+  fixture_only: true
+  synthetic_negative_fixture: true
+  real_record_created_now: false
+  may_satisfy_real_gate: false
+  may_authorize_approval: false
+  may_authorize_activation: false
+  may_authorize_active_input: false
+  may_authorize_byte_stream_generation: false
+  may_authorize_execution: false
+  must_be_rejected_if_presented_as_real_record: true
+  operator_decision_option_selected_now: false
+  selected_option_id: null
+  gate_opening: false
+all_fixtures_rejected_as_real_records: true
+no_fixture_selects_option: true
+all_options_unselected: true
+operator_decision_option_selected_now: false
+selected_option_id: null
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_activation_accept_record_present_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+full_cartesian_product_enumerated: false
+future_real_records_created_now: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+image_forensics_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+new_active_planning_input_created: false
+ocr_performed: false
+operator_approval_record_present_now: false
+operator_decision_authorizes_activation_now: false
+operator_decision_authorizes_real_approval_now: false
+operator_decision_package_authorizes_activation: false
+operator_decision_package_authorizes_active_input: false
+operator_decision_package_authorizes_approval: false
+operator_decision_package_authorizes_byte_stream_generation: false
+operator_decision_package_authorizes_dry_run_ingestion: false
+operator_decision_package_authorizes_execution: false
+operator_decision_record_created_now: false
+operator_decision_record_present_now: false
+operator_decision_satisfied_now: false
+real_activation_decision_record_created_now: false
+real_activation_decision_record_present_now: false
+real_activation_decision_records_created: false
+real_approval_records_created: false
+real_byte_stream_generated: false
+real_combined_gate_validation_record_created_now: false
+real_combined_gate_validation_record_present_now: false
+real_deep_research_acceptance_record_created_now: false
+real_deep_research_acceptance_record_present_now: false
+real_deep_research_acceptance_records_created: false
+real_operator_approval_record_created_now: false
+real_operator_approval_record_present_now: false
+real_operator_decision_record_created_now: false
+real_operator_decision_record_present_now: false
+scoring_performed: false
+secret_values_printed_or_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_plan_superseded: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false
