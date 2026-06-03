@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5CZ - Deep Research review of Stage 5CY option-selection decision preflight and validation-count reconciliation, without execution.
+Current next prompt: Stage 5DB - Deep Research review of Stage 5DA operator choice / pause decision scaffold, without execution.
 
-Stage 5CY is complete as metadata-only review integration and operator-facing option-selection decision preflight. It consumes Stage 5CX warnings, preserves Stage 5CW real-decision package preflight as `review_preflight_only`, preserves the Stage 5CU negative-fixture hardening layer, preserves the Stage 5CS six unselected decision options, reconciles the Stage 5CW `2446` vs `2466` pytest-count warning without opening any gate, and keeps String 4 inactive with all token-block execution blocked.
+Stage 5DA is complete as metadata-only operator choice / pause scaffold work. It consumes Stage 5CZ warnings, preserves Stage 5CY and prior operator-decision layers, preserves the Stage 5CS six unselected decision options, records that no operator choice or explicit pause was selected, and keeps String 4 inactive with all token-block execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5CY option-selection decision preflight is complete. It consumes the Stage 5CX accept-with-warnings review outcome, keeps Stage 5CW, Stage 5CU, Stage 5CS, Stage 5CQ, Stage 5CO, Stage 5CM, Stage 5CK, Stage 5CI, Stage 5CG, Stage 5CE, Stage 5CC, and Stage 5BD records preserved, creates only review-only option-selection preflight and misuse-validation metadata, creates no real decision/approval/acceptance/gate/activation records, selects no option, preserves Stage 5BD run-plan IDs, preserves the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
+Stage 5DA operator choice / pause decision record scaffold is complete. It consumes the Stage 5CZ accept-with-warnings review outcome, keeps Stage 5CY, Stage 5CW, Stage 5CU, Stage 5CS, Stage 5CQ, Stage 5CO, Stage 5CM, Stage 5CK, Stage 5CI, Stage 5CG, Stage 5CE, Stage 5CC, and Stage 5BD records preserved, creates only a scaffold for a future explicit operator choice or explicit pause, creates no real decision/approval/acceptance/gate/activation records, selects no option or pause, preserves Stage 5BD run-plan IDs, preserves the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
 
-The next recommended prompt is Stage 5CZ - Deep Research review of Stage 5CY option-selection decision preflight and validation-count reconciliation, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DB - Deep Research review of Stage 5DA operator choice / pause decision scaffold, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

@@ -1,8 +1,8 @@
 # Codex Navigation Map
 
-## Stage 5CY Note
+## Stage 5DA Note
 
-Stage 5CY is a metadata-only option-selection decision preflight layer. Use `libreprimus token-block validate-stage5cy` for Stage 5CX findings integration, Stage 5CW preflight preservation, Stage 5CW validation-count reconciliation, Stage 5CU negative-fixture preservation, Stage 5CS option preservation, option-selection requirements, option-selection misuse validation, Stage 5BD plan preservation, active-lineage preservation, handoff continuity, credential-redaction policy, governance-scope control, and Stage 5CZ next-stage routing. Treat the preflight as non-authorizing: it creates no real decision package, selects no option, creates no approval records, activates no input, generates no bytes, and executes nothing.
+Stage 5DA is a metadata-only operator choice / pause scaffold layer. Use `libreprimus token-block validate-stage5da` for Stage 5CZ findings integration, Stage 5CY preflight preservation, Stage 5CS option preservation, choice/pause nonselection, explicit-pause nonactivation, Stage 5BD plan preservation, active-lineage preservation, handoff continuity, credential-redaction policy, governance-scope control, and Stage 5DB next-stage routing. Treat the scaffold as non-authorizing: it creates no real choice/pause record, selects no option, selects no explicit pause, creates no approval records, activates no input, generates no bytes, and executes nothing.
 
 ## Stage 5CW Note
 
@@ -44,7 +44,7 @@ For most Codex tasks, read:
 - Do not trust rendered GitHub pages, cached raw URLs, memory, or old conversation context when state matters.
 - Run the task-specific validation commands before staging.
 - Run `libreprimus consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict` when operational docs change.
-- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5CZ prompts inherit current source-of-truth labels.
+- Run the Stage 5AH stage-ledger, operational-map coverage, and current/next-stage checks after current-stage updates so Stage 5DB prompts inherit current source-of-truth labels.
 - Keep raw/generated outputs unstaged.
 - For Stage 5AF/5AG/5AI/5AJ/5AK source-harvester work, keep all raw harvester outputs, raw UsefulFiles/community-facts material, and generated bundle/extraction bodies local and ignored; do not use Google Drive as project storage.
 
@@ -132,4 +132,4 @@ For Stage 5CU option negative-fixture hardening work, start with `docs/onboardin
 
 For Stage 5CW real-decision package preflight work, start with `docs/onboarding/stage5cw-real-decision-package-preflight-workflow.md` and run `token-block build-stage5cw`, the focused Stage 5CW findings/preflight/requirements/misuse/preservation/nonselection/blocker/gate/handoff validators, `validate-stage5cw`, and `stage5cw-summary`. Treat every Stage 5CW record as review-only preflight metadata; it does not create a valid real-decision package or authorize a future gate by itself.
 
-For Stage 5CY option-selection decision preflight work, start with `docs/onboarding/stage5cy-option-selection-decision-preflight-workflow.md` and run `token-block build-stage5cy`, the focused Stage 5CY findings/preflight/requirements/misuse/preservation/nonselection/reconciliation/blocker/gate/handoff/governance validators, `validate-stage5cy`, and `stage5cy-summary`. Treat every Stage 5CY record as review-only preflight metadata; it does not select an option, create a valid real-decision package, or authorize a future gate by itself.
+For Stage 5DA operator choice / pause scaffold work, start with `docs/onboarding/stage5da-operator-choice-pause-scaffold-workflow.md` and run `token-block build-stage5da`, the focused Stage 5DA findings/scaffold/nonselection/pause/blocker/preservation/gate/handoff/governance validators, `validate-stage5da`, and `stage5da-summary`. Treat every Stage 5DA record as review-only scaffold metadata; it does not select an option, select an explicit pause, create a real choice/pause record, create a valid real-decision package, or authorize a future gate by itself.

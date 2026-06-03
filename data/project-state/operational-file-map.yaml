@@ -4228,3 +4228,124 @@ records:
   staleness_check_level: historical
   owner_context: research_operator
   notes: Summarizes Stage 5CX warning integration, validation-count reconciliation, option-selection preflight, Stage 5CW/5CU/5CS preservation, closed gates, preserved Stage 5BD records, and review-only next-stage rationale without Deep Research body content.
+- path: data/project-state/stage5da-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DA compact summary and current boundary record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5da
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records the Stage 5CZ verdict, choice/pause scaffold status, six unselected options, selected_option_id null, explicit pause unselected, Stage 5BD run-plan preservation, active-lineage preservation, and Stage 5DB next-stage routing.
+- path: data/project-state/stage5da-next-stage-decision.yaml
+  category: operational_status_doc
+  purpose: Stage 5DA next-stage decision selecting Stage 5DB review.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5da
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Requires Stage 5DB review before any future real operator choice, pause record, approval, activation, active-input selection, byte-stream stage, or execution-adjacent stage.
+- path: data/project-state/stage5da-governance-scope-control.yaml
+  category: operational_status_doc
+  purpose: Stage 5DA governance-overbuild boundary and anti-generic-preflight record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5da
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Blocks more generic preflight layers without a concrete defect and routes to explicit choice, explicit pause, or human stop after Stage 5DB review.
+- path: data/token-block/stage5da-operator-choice-pause-decision-scaffold.yaml
+  category: operational_status_doc
+  purpose: Stage 5DA future operator choice / explicit-pause scaffold.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5da
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Creates scaffold-only metadata while selecting no option, selecting no explicit pause, and opening no approval, activation, active-input, byte, or execution gate.
+- path: data/token-block/stage5da-operator-choice-pause-nonselection-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5DA proof that no operator choice or explicit pause was selected.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5da
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves the exact option set with selected_option_id null and explicit_pause_selected_now false.
+- path: data/token-block/stage5da-stage5bd-plan-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DA Stage 5BD dry-run plan preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5da
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves 10 Stage 5BD run-plan IDs and records no plan supersession.
+- path: data/token-block/stage5da-active-lineage-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DA active-lineage preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5da
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves 8 active-lineage records and keeps the deprecated Stage 5AW path absent.
+- path: docs/onboarding/stage5da-operator-choice-pause-scaffold-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5DA operator choice / pause scaffold.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5da
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, choice/pause scaffold, nonselection proof, no-active/no-byte/no-execution gates, handoff continuity, and Stage 5DB review routing.
+- path: docs/experiments/stage-5da-operator-choice-pause-scaffold.md
+  category: operational_status_doc
+  purpose: Stage 5DA metadata-only experiment-boundary documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5da
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: States that Stage 5DA is not option selection, pause selection, real decision creation, approval, activation, byte-stream generation, CUDA, scoring, or solve evidence.
+- path: docs/development-logs/2026-06-03-stage-5da-operator-choice-pause-decision-scaffold.md
+  category: historical_log
+  purpose: Stage 5DA implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5da
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation phases, validation commands, raw/generated staging checks, GitHub issue handling, commit, push, and CI evidence.
+- path: research-log/2026-06-03-stage-5da-next-stage-decision-summary.md
+  category: historical_log
+  purpose: Stage 5DA summary-only research log and Stage 5DB next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5da
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: research_operator
+  notes: Summarizes Stage 5CZ warning integration, choice/pause scaffold, nonselection proof, Stage 5CY preservation, closed gates, preserved Stage 5BD records, and review-only next-stage rationale without Deep Research body content.

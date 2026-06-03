@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5CY operator real-decision package readiness review integration and option-selection decision preflight is complete.
+Stage 5DA operator choice / pause decision record scaffold is complete.
 
-Next recommended prompt: Stage 5CZ - Deep Research review of Stage 5CY option-selection decision preflight and validation-count reconciliation, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DB - Deep Research review of Stage 5DA operator choice / pause decision scaffold, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DA
+
+Stage 5DA consumes the Stage 5CZ `accept_with_warnings` review outcome as compact metadata. It preserves the Stage 5CY option-selection preflight, preserves the Stage 5CS exact six-option scaffold with every option still unselected, creates only a future operator choice / explicit-pause scaffold, and records that no actual choice or pause was selected.
+
+Local Stage 5DA summary: Stage 5CZ verdict `accept_with_warnings`, operator choice / pause scaffold status `scaffold_only`, operator decision options `6`, all options unselected `true`, selected option ID `null`, explicit operator choice provided now `false`, explicit pause provided now `false`, operator choice or pause record created now `false`, real decision/approval/acceptance/combined-gate/activation records created `false`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, no-active-ingestion status `closed`, no-byte-stream transition gate `closed`, no-execution transition gate `closed`, parallel worker cap `8`, `codex-output/stage5da-codex-completion.md` written locally `true`, generated outputs committed `false`, `codex_output` used `false`, and next stage `Stage 5DB`.
+
+Stage 5DA is metadata-only. It does not select an option, select an explicit pause, create a real operator choice/pause record, create a real decision package, create a real operator decision, create approval or Deep Research acceptance records, satisfy the combined gate, validate or authorize activation, authorize or select active planning input, activate or ingest String 4, mutate Stage 5BD plans or active lineage, supersede manifests, generate byte streams, materialise variants, run token-block work, DWH/hash/preimage search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, or make solve claims. After Stage 5DB review, the project should require an explicit operator choice, an explicit pause, or a human stop; additional generic preflight layers are blocked without a concrete defect.
 
 ## Completed in Stage 5CY
 
