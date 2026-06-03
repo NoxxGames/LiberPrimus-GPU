@@ -1,0 +1,566 @@
+record_type: stage5cy_source_digest_index
+schema: schemas/project-state/stage5cy-reviewable-source-digest-index-v0.schema.json
+stage_id: stage-5cy
+stage_title: Stage 5CY - Operator real-decision package readiness review integration
+  and option-selection decision preflight, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5cw
+source_previous_stage_commit: 6844ce4757a78031c87579c63f077219f8bd7e75
+source_deep_research_stage: stage-5cx
+source_deep_research_report: 27_Stage-5CW-Deep-Research-Review.md
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+source_digest_record_count: 90
+source_digest_records:
+- path: codex-output/stage5cw-codex-completion.md
+  exists: true
+  committed: false
+  ignored_local_support: true
+  sha256: b88648913147488f2bc375799366c6037e5e56f817bb83f000475b58989e154c
+- path: data/historical-route/stage5cw-dwh-quarantine-reaffirmation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 690347d556670c1284020e07bbbbb538a181a2f518d77e1e7eb98a8bef862167
+- path: data/historical-route/stage5cw-guardrail.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 11412821aa020342280866bdfbc831b3f38f65d1e54c336ef3157a8f4635cb28
+- path: data/historical-route/stage5cw-source-gap-severity-update.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 57b99fc213ab800453c3fc4b5730a1a59f2843dba41a23f6467fe5015b07ab9c
+- path: data/historical-route/stage5cy-dwh-quarantine-reaffirmation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 8d33d1c840dac59910497561affe8d7b3b66da883c7246cdb357d5cc9bf622e6
+- path: data/historical-route/stage5cy-guardrail.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 836efd75de147d341e3c5232b922c4613f19e2f06b1e589526a3180f8b250eea
+- path: data/historical-route/stage5cy-source-gap-severity-update.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 2b84ee36cb67b04f0f652b3614bbdb8193f3d2c09d4d82a7df3eb4ef03d3c09e
+- path: data/project-state/stage5cw-next-stage-decision.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 799344deff934afeb88424589610916b6b89c7081ff0c25b405df914b3126d4c
+- path: data/project-state/stage5cw-record-family-name-equivalence-map.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: c555fbf31df0bb6bf97d9fb193cfda15cc7e2c2aab1f4e350e47e6bb3438c512
+- path: data/project-state/stage5cw-reviewability-gap-register.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: c80c8d8376f6872e57b44b24e55a7629283a36a7f0fceea2d496eec79f067050
+- path: data/project-state/stage5cw-reviewable-source-digest-index.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: bb6c0c6d4eca7d8fb58fe305824f51512666fc0b46f8b1efe437d5a39938f335
+- path: data/project-state/stage5cw-reviewable-stage-marker.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: c8db3a2d9b315dbc472b3aeca477c8e328ef5e0b6fd5044895e9b300ffbd8bc4
+- path: data/project-state/stage5cw-reviewable-validation-evidence.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: c21fb69e7be79f0e4c148ed997d005e8d78afec83d5fc7e360c3927cf4270135
+- path: data/project-state/stage5cw-stage5cv-findings-integration.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: a3ab728251f50448948ecca5ed386cda198a3eb7b1a0f1761aa7c6d454e8744a
+- path: data/project-state/stage5cw-summary.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 8a3e5e621d9ec77f59cf99db35988dd6d16f6835863e81c211c7775b9ba6b0db
+- path: data/project-state/stage5cy-governance-scope-control.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: dd280a66fed8b6bd31a398eaf3df00c6ffc9947909e086ab41402bb161387aad
+- path: data/project-state/stage5cy-next-stage-decision.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 3c257745dc2d676c1b2a983b0a36e6e478fc37c532f8641229a050c9716a1d72
+- path: data/project-state/stage5cy-record-family-name-equivalence-map.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 99130d602f8241a93769dd5ec1952b050b77a6b9e006735d78c33445022efe9a
+- path: data/project-state/stage5cy-reviewability-gap-register.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: ca3f3f70b715437dd1f48fbd1cd4dd3c83ffb6b27b80cdb845ac0634f6dc07b2
+- path: data/project-state/stage5cy-reviewable-source-digest-index.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 7acfebfe382c00be7b7a3c114bc6b1639a9fba57b4cf59a91bc30f76fca1e3a6
+- path: data/project-state/stage5cy-reviewable-stage-marker.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 591d14d363ea818a125cc2dc81a4fe500ef7ecb4c92274448156ef5b14f78066
+- path: data/project-state/stage5cy-reviewable-validation-evidence.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: c659aafb9672f6b7efadb78e75cdd7f173275f6ab2ffea918a47fc2500bc5a13
+- path: data/project-state/stage5cy-stage5cx-findings-integration.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 84769b3cca704766c27fcf78a10da2b3f3b4f8da29005b01084d0b561dae6776
+- path: data/project-state/stage5cy-summary.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 606054f0d7aa54c9b3f983e3411ae38fb218334b9f216fe75e8da65b1e4f19ca
+- path: data/project-state/stage5cy-validation-count-reconciliation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 0124254cd5ec1dfd27df6dfb258e85fa6a0abd3048b4a15d782abf66fd7be36a
+- path: data/source-harvester/stage5cw-codex-handoff-policy.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 7ba65a78c8084943e802dcaf45160a351065431632edbf17fd7e885f6d6a7e4d
+- path: data/source-harvester/stage5cw-completion-summary-continuity.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: da8e106ef8fd7cc4f56116b25ebd740491579b2074b5ed1a1711e9d5dd1f1e89
+- path: data/source-harvester/stage5cw-credential-redaction-policy-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 7889cfb88bea8ca0aa3aa9eb43212387e0c35c8d84c393a10c3073d52797d94b
+- path: data/source-harvester/stage5cw-review-packaging-warning.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: a47bb9655bb904f7b75f6d04c342614604198b14f85ee5d4cac99529d0621b35
+- path: data/source-harvester/stage5cy-codex-handoff-policy.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: d3f54b060393e7c78fca778087d27214772d5fab69a06e010703e259d8793ab8
+- path: data/source-harvester/stage5cy-completion-summary-continuity.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: b769b4069b7db8410a539fcc6aa633bb4eb1563312fc79b31a0b17c7244e8b00
+- path: data/source-harvester/stage5cy-credential-redaction-policy-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: dadde1726cd6a511988a54e42af99dc0967373da7ea79b3522823c962b7a0a06
+- path: data/source-harvester/stage5cy-review-packaging-warning.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: e3d75255d37845c15bd0b7574e27caa6873d660d19b902ef12494c66eec4dfdf
+- path: data/token-block/stage5bd-dry-run-plan-manifest.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: e2a40ec584be822e31e535d80a8863c3b0ba0280829184feeb73a53caa61af82
+- path: data/token-block/stage5cs-real-approval-decision-options-scaffold.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: e766ff6318a32627d8a75648d89ef3e5ac148a3ea67fa64fb1a6aedd7589f31d
+- path: data/token-block/stage5cw-activation-decision-nonauthorization-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 993d0c1dced1c73e4c8bac3a341df9d32b1998e3a7f5b4865a5a5a6b35e1fc8c
+- path: data/token-block/stage5cw-active-lineage-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 3496cc806c08aa5b3b98d3ccc7a631453eef48e2875370bd709bec6e73ae57f8
+- path: data/token-block/stage5cw-combined-gate-non-satisfaction-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 3184b16615b0b9f15a96f117b4900d1e9b873b9723e0ba0d5cd13aeb00613731
+- path: data/token-block/stage5cw-future-option-selection-preflight-requirements.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 2482ee57d7bee220dbee7989338b1938205361faba8bfb52fb0e20aca08bbd98
+- path: data/token-block/stage5cw-future-real-operator-decision-package-requirements.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 8b9a817014dcdcc799a45590fdddd1e069f54d8bedaf14de1dac7b2f6df7b22e
+- path: data/token-block/stage5cw-future-real-record-dependency-preflight.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 92c02c09d5fd2370c5656374c4a5fced8257446085309452e59fb5494f3663a9
+- path: data/token-block/stage5cw-manifest-supersession-nonactivation-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 721004dca892f2f1f341407cb96f6dc3d607e91b48ebb8c32bda6a062cfee4ab
+- path: data/token-block/stage5cw-no-active-ingestion-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 4d699911699a456f0ddb45a63881aecb3d5b76bdaaf9f6579ef286218aa4368e
+- path: data/token-block/stage5cw-no-byte-stream-transition-gate.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: fab6927657dbc71100ab98629c65535c9e1f3e69ace678267d107b29c4f8eba5
+- path: data/token-block/stage5cw-no-execution-transition-gate.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 7adefdf250070d06effd66ef400a56b87641889424f4672838866140a7a1b367
+- path: data/token-block/stage5cw-operator-decision-nonauthorization-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 6da841f70352835b5370b5c18b708c1015984ab2fa4209ae0bcb3547dfd04dba
+- path: data/token-block/stage5cw-operator-options-nonselection-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: aeeccfddaa8afd11a1ce5b6dda71020a9a252622b29d5d92d6e3e54a23db8b6c
+- path: data/token-block/stage5cw-preflight-misuse-validation-matrix.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 213289bb33169adec79bbd22111c5348f9a49ca10da0e894eebb6752fef424ec
+- path: data/token-block/stage5cw-preflight-nonauthorization-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: c626b1efbb3dd7a7c25ef74187e4a815ebf67ada503091f9ce1f5fec98cc231e
+- path: data/token-block/stage5cw-preflight-nonselection-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: ae3de6d227a74d53c5f4f8952f84fd6c2753b9130e61e40c02cc54edb908bcbb
+- path: data/token-block/stage5cw-real-decision-package-preflight.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: e86fa207851127d54c8f5b8764131d72c48eac8f3c690476dc7da5d86388effc
+- path: data/token-block/stage5cw-real-record-creation-blocker.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: fde5031c34b5d2aaf3674fe83cc7132e1aabaddc45ff6ba12be54912d790793c
+- path: data/token-block/stage5cw-sidecar-activation-blocker.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: ff5fda0c8f2bda893c3275eb808933c85d8020e33c76c77ed2b803b12b72139d
+- path: data/token-block/stage5cw-stage5bd-plan-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 561d033d6165d58c9cd1182f067c6d7e7c232bcebbf22be65d3df9e63979c784
+- path: data/token-block/stage5cw-stage5cc-contract-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 20fafdb6d1a41a2fe9476140ded47d1c399d70500a9b1dda1b4bf9da056d7825
+- path: data/token-block/stage5cw-stage5ce-proposal-package-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: dc49212f26b29ecfebc91eebf0bf487051e6744c834919704bbcfc03ffb25684
+- path: data/token-block/stage5cw-stage5cg-scaffold-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 5f21839415b963a9b0125928271eebe2afbd073cb574739db0028a29d5747f74
+- path: data/token-block/stage5cw-stage5ci-template-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 9932cf62f85e9f2734f5c003297ce3eaecf39397a07820b05877bb8cee156762
+- path: data/token-block/stage5cw-stage5ck-fixture-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 47530956beb44e77e9ae1be09071519a1dc0969bfb713e486301aab64065bec3
+- path: data/token-block/stage5cw-stage5cm-boundary-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: ed982d0ed092b14c375d35f90681ded8c80363d00224c4bf75528ffa0e4e95af
+- path: data/token-block/stage5cw-stage5co-missing-requirements-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 4c01d11210e3fffefcb69cd2c53754b1d8ab4c0c2d8d5f6fb4a173792fb7f47d
+- path: data/token-block/stage5cw-stage5co-readiness-package-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 2406d3c6731cb95d34b5aba0790fe66daa8b5384d999d4942325fa47e8b7a583
+- path: data/token-block/stage5cw-stage5co-transition-plan-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 316dfdcecf511d2b00419dc65bb592b62493f32d2b95d9995a8c304dbb4e801c
+- path: data/token-block/stage5cw-stage5cq-operator-decision-scaffold-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: d409c63aff665e1c14332d45398d7f007f620bc0f3d7afd1aba7ebc92033ff46
+- path: data/token-block/stage5cw-stage5cs-decision-options-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 96610d654db0c6e4f15d0d412390fcea710a5c8561a93c8f004cfb12e84bcdaa
+- path: data/token-block/stage5cw-stage5cs-operator-decision-readiness-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 6ba1b1651a6d13c4d562288771d2ca46803c901979c6f2d435a94b279ef2d427
+- path: data/token-block/stage5cw-stage5cu-fixture-isolation-policy-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 0685f55fe469be12b7d5137050cc6f7df88ad393d4c79b01f4dc34061c0a7186
+- path: data/token-block/stage5cw-stage5cu-negative-fixture-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 27807497f8b92ccb7f1d39e518fd58223c269420a6e6f1d426844b36fbab64de
+- path: data/token-block/stage5cw-stage5cu-option-selection-misuse-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 977e5b3f62e47b119a37f979b028b1bd9cf5f8c827306c97330c1dfbdf1f18a1
+- path: data/token-block/stage5cw-stage5cu-real-decision-fixture-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 5cf8c259fcc95d41081ba35ade6709807f8ea585548e3c8085f08ff86a53188e
+- path: data/token-block/stage5cw-stage5cu-real-record-blocker-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: ee95f478c6a1c049c1c4129f3ddcc99a16f95a24999e0b450cd6adc8be2ee366
+- path: data/token-block/stage5cy-activation-decision-nonauthorization-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 9e8813af8ddcef6719ba1d69163c7dfece1f7f0fd31a6f642816b097f06e7aea
+- path: data/token-block/stage5cy-active-lineage-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: a85bdf3fc399717953a759bba0d63f54d968d5a6dce63f3a2bfb6d2a5b7047d5
+- path: data/token-block/stage5cy-combined-gate-non-satisfaction-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: ffba71280d35f8c075a03d89cda9f29cf2f47f8b7b6fc47176b1409760c8560d
+- path: data/token-block/stage5cy-no-active-ingestion-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 6d883fedf90049696968cca2785f0dbb4167fcdee91ea20376f6249013f611c8
+- path: data/token-block/stage5cy-no-byte-stream-transition-gate.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: c0dc45f21700e336dbd6cd2e253be3fee9b04a5887dfe1faaaf75ec7057ebf05
+- path: data/token-block/stage5cy-no-execution-transition-gate.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 93800bfe840c03d294a0ac6e9b381c69b6e5fcbe8ec550585b10de7bc2d9e567
+- path: data/token-block/stage5cy-operator-decision-nonauthorization-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 464696cebd356d9e85cfb0f57e5d65b08f281f10c68e6b879ca36be5b5db1417
+- path: data/token-block/stage5cy-operator-option-selection-preflight.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 1be0e936f5f6bac6d2b2cdc336f70f56b054230feac9a9aa7572954f9e9b9d92
+- path: data/token-block/stage5cy-option-selection-misuse-validation-matrix.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 96db87de268b126ee2f60c01ddecfa24c229e5f5595c94e651a14a6e2c6ea17a
+- path: data/token-block/stage5cy-option-selection-requirements.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 02d0d4ed427e769ddd0a5f662538871442a7861c6af879c04de6dc37542ec596
+- path: data/token-block/stage5cy-options-nonselection-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: b959d2eb57c705a5ec6be74555a8ef708b098d4b90b03eb52624b3fc79f9fd89
+- path: data/token-block/stage5cy-preflight-nonauthorization-proof.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: a2b5c234c9ba1a175f570b93a73dc7cce21e5f6c9caf0ef22695af38cfdc7639
+- path: data/token-block/stage5cy-real-decision-preflight-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 9589843d12e183a36ed7f35f59a72ac0d9958e79291d1134e2d9b280539420c8
+- path: data/token-block/stage5cy-real-record-creation-blocker.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: abd26a93507cc27090006b983537f3e19aed13594eb4b3247841996158128386
+- path: data/token-block/stage5cy-sidecar-activation-blocker.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 38664e88d45d101a17b43d934c0b3f25619d4faca0c48494bb991f30ab985b9a
+- path: data/token-block/stage5cy-stage5bd-plan-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 0ea619e924cd7e3e463e1d98475e246b46f0e73d21f12e69a050e26bdbc41db9
+- path: data/token-block/stage5cy-stage5cs-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 3cd101f00aa710747c905c429cb21cf46f3ea283863fd1a2bd1d5fa5282cb00e
+- path: data/token-block/stage5cy-stage5cu-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: f7ce2fe5be1ffb5b89be778328984173cfa6af710a8693c737bd25d5e6ca747e
+- path: data/token-block/stage5cy-stage5cw-preservation.yaml
+  exists: true
+  committed: true
+  ignored_local_support: false
+  sha256: 32dce9645bf5693d2167434195a7f53b4a5eff39f92a95d32a6b492060e81c72
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_completion_summary_committed: false
+codex_output_used: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_activation_accept_record_present_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+full_cartesian_product_enumerated: false
+future_real_records_created_now: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+historical_route_execution_performed: false
+image_forensics_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+method_status_upgraded: false
+mp3stego_execution_performed: false
+new_active_planning_input_created: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_approval_record_present_now: false
+operator_decision_option_selected_now: false
+operator_decision_authorizes_activation_now: false
+operator_decision_authorizes_real_approval_now: false
+operator_decision_package_authorizes_activation: false
+operator_decision_package_authorizes_active_input: false
+operator_decision_package_authorizes_approval: false
+operator_decision_package_authorizes_byte_stream_generation: false
+operator_decision_package_authorizes_dry_run_ingestion: false
+operator_decision_package_authorizes_execution: false
+operator_decision_record_created_now: false
+operator_decision_record_present_now: false
+operator_decision_satisfied_now: false
+operator_facing_option_selection_preflight_authorizes_approval: false
+operator_facing_option_selection_preflight_authorizes_activation: false
+operator_facing_option_selection_preflight_authorizes_active_input: false
+operator_facing_option_selection_preflight_authorizes_dry_run_ingestion: false
+operator_facing_option_selection_preflight_authorizes_bytes: false
+operator_facing_option_selection_preflight_authorizes_execution: false
+outguess_execution_performed: false
+preflight_authorizes_activation_decision_now: false
+preflight_authorizes_active_planning_input_now: false
+preflight_authorizes_byte_stream_generation_now: false
+preflight_authorizes_combined_gate_validation_now: false
+preflight_authorizes_deep_research_acceptance_now: false
+preflight_authorizes_dry_run_ingestion_now: false
+preflight_authorizes_execution_now: false
+preflight_authorizes_real_approval_now: false
+preflight_authorizes_real_decision_now: false
+real_activation_decision_record_created_now: false
+real_activation_decision_record_present_now: false
+real_activation_decision_records_created: false
+real_approval_records_created: false
+real_byte_stream_generated: false
+real_combined_gate_validation_record_created_now: false
+real_combined_gate_validation_record_present_now: false
+real_decision_package_created_now: false
+real_decision_package_valid_now: false
+real_deep_research_acceptance_record_created_now: false
+real_deep_research_acceptance_record_present_now: false
+real_deep_research_acceptance_records_created: false
+real_operator_approval_record_created_now: false
+real_operator_approval_record_present_now: false
+real_operator_decision_record_created_now: false
+real_operator_decision_record_present_now: false
+scoring_performed: false
+secret_values_printed_or_committed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_plan_superseded: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+token_block_experiment_executed: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false
+selected_option_id: null

@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5CW operator-decision readiness review integration and real-decision package preflight is complete.
+Stage 5CY operator real-decision package readiness review integration and option-selection decision preflight is complete.
 
-Next recommended prompt: Stage 5CX - Deep Research review of Stage 5CW operator-decision readiness integration and real-decision package preflight, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5CZ - Deep Research review of Stage 5CY option-selection decision preflight and validation-count reconciliation, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5CY
+
+Stage 5CY consumes the Stage 5CX `accept_with_warnings` review outcome as compact metadata. It preserves Stage 5CW real-decision package preflight as `review_preflight_only`, preserves the Stage 5CU negative-fixture layer, preserves the Stage 5CS exact six-option scaffold, keeps every option unselected, creates an operator-facing option-selection decision preflight as review-only metadata, and reconciles the Stage 5CW pytest-count warning (`2446` committed compact evidence vs `2466` final issue/completion trail) as a reviewability/count-reconciliation warning only.
+
+Local Stage 5CY summary: Stage 5CX verdict `accept_with_warnings`, Stage 5CX findings integrated `26`, option-selection preflight status `review_preflight_only`, operator decision options `6`, operator decision option selected now `false`, selected option ID `null`, Stage 5CW count reconciliation status `superseding_reconciliation_record`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, no-active-ingestion status `closed`, no-byte-stream transition gate `closed`, no-execution transition gate `closed`, parallel worker cap `8`, `codex-output/stage5cy-codex-completion.md` written locally `true`, generated outputs committed `false`, `codex_output` used `false`, and next stage `Stage 5CZ`.
+
+Stage 5CY is metadata-only. It does not select an option, create a real decision package, create a real operator decision, create approval or Deep Research acceptance records, satisfy the combined gate, validate or authorize activation, authorize or select active planning input, activate or ingest String 4, mutate Stage 5BD plans or active lineage, supersede manifests, generate byte streams, materialise variants, run token-block work, DWH/hash/preimage search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, or make solve claims. After Stage 5CZ review, the project should make an explicit operator choice or explicitly pause further governance expansion unless Stage 5CZ finds a concrete defect.
 
 ## Completed in Stage 5CW
 

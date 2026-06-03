@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5CW" \
-    --expected-next-stage "Stage 5CX" \
+    --expected-latest-stage "Stage 5CY" \
+    --expected-next-stage "Stage 5CZ" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5CW" \
-    --expected-next-stage "Stage 5CX" \
+    --expected-latest-stage "Stage 5CY" \
+    --expected-next-stage "Stage 5CZ" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5CW",
+            expected_latest_stage="Stage 5CY",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5CW",
+            "expected_latest_stage": "Stage 5CY",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2921,6 +2921,42 @@ git check-ignore -q "$stage5cw_token_results_root/source_digest_index.json"
 git check-ignore -q "codex-output/stage5cw-codex-completion.md"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5CW" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5CY option-selection decision preflight records"
+"$python_bin" -m libreprimus.cli token-block build-stage5cy
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-stage5cx-findings
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-real-decision-preflight-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-operator-option-selection-preflight
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-option-selection-requirements
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-option-selection-misuse
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-options-nonselection
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-validation-count-reconciliation
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-real-record-blocker
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-combined-gate
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-activation-nonauthorization
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-stage5cw-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-stage5cu-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-stage5cs-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-stage5bd-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-active-lineage-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-handoff-continuity
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-credential-redaction-policy
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy-governance-scope-control
+"$python_bin" -m libreprimus.cli token-block validate-stage5cy
+stage5cy_token_results_root="experiments"/"results"/"token-block"/"stage5cy"
+git check-ignore -q "$stage5cy_token_results_root/summary.json"
+git check-ignore -q "$stage5cy_token_results_root/option_selection_preflight_report.json"
+git check-ignore -q "$stage5cy_token_results_root/option_selection_misuse_report.json"
+git check-ignore -q "$stage5cy_token_results_root/validation_count_reconciliation_report.json"
+git check-ignore -q "$stage5cy_token_results_root/preservation_report.json"
+git check-ignore -q "$stage5cy_token_results_root/handoff_continuity_report.json"
+git check-ignore -q "$stage5cy_token_results_root/source_digest_index.json"
+git check-ignore -q "codex-output/stage5cy-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5CY" >&2
     exit 1
 fi
 

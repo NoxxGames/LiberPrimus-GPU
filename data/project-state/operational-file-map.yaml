@@ -4096,3 +4096,135 @@ records:
   staleness_check_level: historical
   owner_context: research_operator
   notes: Summarizes Stage 5CV warning integration, real-decision package preflight, Stage 5CU/5CS preservation, closed gates, preserved Stage 5BD records, and review-only next-stage rationale without Deep Research body content.
+- path: data/project-state/stage5cy-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5CY compact summary and current boundary record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cy
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records Stage 5CX verdict consumption, Stage 5CW pytest-count reconciliation, review-only option-selection preflight, Stage 5CW/5CU/5CS preservation, closed no-active/no-byte/no-execution gates, and Stage 5CZ routing.
+- path: data/project-state/stage5cy-validation-count-reconciliation.yaml
+  category: operational_status_doc
+  purpose: Stage 5CY reconciliation record for Stage 5CW pytest-count evidence mismatch.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cy
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Treats the 2446 committed compact evidence versus 2466 final issue/completion trail as a non-gate-opening reviewability warning.
+- path: data/project-state/stage5cy-governance-scope-control.yaml
+  category: operational_status_doc
+  purpose: Stage 5CY governance-overbuild boundary and Stage 5CZ review requirement.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cy
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Requires Stage 5CZ review and then explicit operator choice or pause unless a concrete defect is found.
+- path: data/token-block/stage5cy-operator-option-selection-preflight.yaml
+  category: operational_status_doc
+  purpose: Stage 5CY operator-facing option-selection decision preflight.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cy
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Creates review-only option-selection preflight metadata while selecting no option and opening no approval, activation, active-input, byte, or execution gate.
+- path: data/token-block/stage5cy-options-nonselection-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5CY proof that the exact six Stage 5CS options remain unselected.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cy
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves the exact option set with selected_option_id null.
+- path: data/token-block/stage5cy-stage5cw-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5CY preservation proof for Stage 5CW records.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cy
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves Stage 5CW real-decision preflight as review_preflight_only and records that Stage 5CW history was not silently rewritten.
+- path: data/token-block/stage5cy-stage5bd-plan-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5CY Stage 5BD dry-run plan preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cy
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves 10 Stage 5BD run-plan IDs and records no plan supersession.
+- path: data/token-block/stage5cy-active-lineage-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5CY active-lineage preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5cy
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves 8 active-lineage records and keeps the deprecated Stage 5AW path absent.
+- path: docs/onboarding/stage5cy-option-selection-decision-preflight-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5CY option-selection decision preflight.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cy
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, count reconciliation, option-selection preflight, no-active/no-byte/no-execution gates, handoff continuity, and Stage 5CZ review routing.
+- path: docs/experiments/stage-5cy-option-selection-decision-preflight.md
+  category: operational_status_doc
+  purpose: Stage 5CY metadata-only experiment-boundary documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cy
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: States that Stage 5CY is not option selection, real decision creation, approval, activation, byte-stream generation, CUDA, scoring, or solve evidence.
+- path: docs/development-logs/2026-06-03-stage-5cy-option-selection-decision-preflight.md
+  category: historical_log
+  purpose: Stage 5CY implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cy
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation phases, validation commands, raw/generated staging checks, GitHub issue handling, commit, push, and CI evidence.
+- path: research-log/2026-06-03-stage-5cy-next-stage-decision-summary.md
+  category: historical_log
+  purpose: Stage 5CY summary-only research log and Stage 5CZ next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5cy
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: research_operator
+  notes: Summarizes Stage 5CX warning integration, validation-count reconciliation, option-selection preflight, Stage 5CW/5CU/5CS preservation, closed gates, preserved Stage 5BD records, and review-only next-stage rationale without Deep Research body content.
