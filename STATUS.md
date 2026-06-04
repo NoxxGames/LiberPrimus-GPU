@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DE real operator approval preparation package is complete.
+Stage 5DG real operator approval record creation is complete.
 
-Next recommended prompt: Stage 5DF - Review of Stage 5DE real operator approval preparation package, without activation. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DH - Review of Stage 5DG real operator approval record, without activation. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DG
+
+Stage 5DG consumes the Stage 5DF assistant/operator `accept_with_warnings` review of the Stage 5DE preparation package. It creates exactly one real operator approval record for the already selected Stage 5DC option `prepare_real_operator_approval_record` and records the operator approval component as satisfied.
+
+Local Stage 5DG summary: Stage 5DF verdict `accept_with_warnings`, selected option preserved `true`, Stage 5DE preparation package preserved `true`, real operator approval record created now `true`, operator approval record valid now `true`, operator approval component satisfied now `true`, real Deep Research acceptance record present now `false`, combined approval gate satisfied now `false`, activation authorized now `false`, active-planning input selected now `false`, byte-stream generation authorized now `false`, execution authorized now `false`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, no-active-ingestion status `closed`, no-byte-stream transition gate `closed`, no-execution transition gate `closed`, parallel worker cap `8`, `codex-output/stage5dg-codex-completion.md` written locally `true`, generated outputs committed `false`, `codex_output` used `false`, and next stage `Stage 5DH`.
+
+Stage 5DG is metadata-only governance infrastructure. It creates the real operator approval record, but operator approval alone does not satisfy the combined gate and does not create a Deep Research acceptance record, combined-gate validation record, activation decision, active-planning input selection or authorization, dry-run ingestion authorization, byte-stream generation authorization, execution authorization, target-class validation, Tor/network access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim.
 
 ## Completed in Stage 5DE
 

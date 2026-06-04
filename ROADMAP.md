@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5DF - Review of Stage 5DE real operator approval preparation package, without activation.
+Current next prompt: Stage 5DH - Review of Stage 5DG real operator approval record, without activation.
 
-Stage 5DE is complete as metadata-only real operator approval preparation work. It consumes the Stage 5DD / assistant accept-with-warnings review context, records the Stage 5DC review-label anomaly as non-gate-opening, preserves the Stage 5DC selected option `prepare_real_operator_approval_record`, creates a preparation package with 34 future approval-record requirements, creates no real operator approval record, and keeps String 4 inactive with all token-block execution blocked.
+Stage 5DG is complete as metadata-only real operator approval record creation work. It consumes the Stage 5DF assistant/operator accept-with-warnings review of Stage 5DE, preserves the Stage 5DE preparation package and Stage 5DC selected option `prepare_real_operator_approval_record`, creates exactly one valid real operator approval record, marks only the operator-approval component satisfied, and keeps String 4 inactive with all token-block execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DE real operator approval preparation package is complete. It preserves Stage 5DC selected-option and choice records, Stage 5DA, Stage 5CY, Stage 5CW, Stage 5CU, Stage 5CS, Stage 5CQ, Stage 5CO, Stage 5CM, Stage 5CK, Stage 5CI, Stage 5CG, Stage 5CE, Stage 5CC, and Stage 5BD records, records the 34 future requirements for a later real operator approval record, creates no real approval/acceptance/combined-gate/activation records, preserves Stage 5BD run-plan IDs, preserves the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
+Stage 5DG real operator approval record creation is complete. It preserves Stage 5DE preparation, Stage 5DC selected-option and choice records, Stage 5DA, Stage 5CY, Stage 5CW, Stage 5CU, Stage 5CS, Stage 5CQ, Stage 5CO, Stage 5CM, Stage 5CK, Stage 5CI, Stage 5CG, Stage 5CE, Stage 5CC, and Stage 5BD records, creates one valid real operator approval record, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, preserves Stage 5BD run-plan IDs, preserves the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
 
-The next recommended prompt is Stage 5DF - Review of Stage 5DE real operator approval preparation package, without activation. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DH - Review of Stage 5DG real operator approval record, without activation. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

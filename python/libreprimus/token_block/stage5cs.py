@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 import re
 import subprocess
 from pathlib import Path
@@ -11,6 +10,7 @@ from typing import Any
 from jsonschema import Draft202012Validator
 
 from libreprimus.token_block.models import (
+    read_json,
     repo_relative,
     sha256_file,
     write_json,
@@ -514,7 +514,7 @@ def _write_schemas() -> None:
 
 
 def _load_schema(path: str) -> dict[str, Any]:
-    return json.loads(Path(path).read_text(encoding="utf-8"))
+    return read_json(Path(path))
 
 
 def _secret_findings(text: str) -> list[str]:

@@ -631,6 +631,32 @@ from .stage5de import (
     validate_stage5de_stage5dc_preservation,
     validate_stage5de_stage5dd_findings,
 )
+from .stage5dg import (
+    DATA_PATHS as STAGE5DG_DATA_PATHS,
+    RESULTS_DIR as STAGE5DG_RESULTS_DIR,
+    build_stage5dg,
+    load_stage5dg_summary,
+    validate_stage5dg,
+    validate_stage5dg_activation_nonauthorization,
+    validate_stage5dg_active_lineage_preservation,
+    validate_stage5dg_combined_gate,
+    validate_stage5dg_credential_redaction_policy,
+    validate_stage5dg_deep_research_absence,
+    validate_stage5dg_governance_scope,
+    validate_stage5dg_handoff_continuity,
+    validate_stage5dg_operator_approval_nonactivation,
+    validate_stage5dg_operator_approval_scope,
+    validate_stage5dg_real_operator_approval_record,
+    validate_stage5dg_real_record_boundary,
+    validate_stage5dg_selected_option_preservation,
+    validate_stage5dg_sidecar_gates,
+    validate_stage5dg_stage5bd_preservation,
+    validate_stage5dg_stage5dc_preservation,
+    validate_stage5dg_stage5de_preservation,
+    validate_stage5dg_stage5df_findings,
+    validate_stage5dg_target_context,
+    validate_stage5dg_unselected_options_preservation,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -7373,6 +7399,322 @@ def stage5de_summary_command(
     console.print(
         "parallel_worker_cap_for_stage5de_and_later="
         f"{payload.get('parallel_worker_cap_for_stage5de_and_later')}"
+    )
+    console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
+    console.print(f"recommended_next_prompt_type={payload.get('recommended_next_prompt_type')}")
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+def _print_stage5dg_counts(counts: dict[str, object], errors: list[str], success_line: str) -> None:
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"error={error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5dg")
+def build_stage5dg_command(
+    results_dir: Path = typer.Option(STAGE5DG_RESULTS_DIR),
+) -> None:
+    payload = build_stage5dg(results_dir=results_dir)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5df_verdict={payload.get('stage5df_verdict')}")
+    console.print(f"selected_option_id={payload.get('selected_option_id')}")
+    console.print(
+        "real_operator_approval_record_created_now="
+        f"{str(payload.get('real_operator_approval_record_created_now')).lower()}"
+    )
+    console.print(
+        "operator_approval_record_valid_now="
+        f"{str(payload.get('operator_approval_record_valid_now')).lower()}"
+    )
+    console.print(
+        "operator_approval_component_satisfied_now="
+        f"{str(payload.get('operator_approval_component_satisfied_now')).lower()}"
+    )
+    console.print(
+        "real_deep_research_acceptance_record_present_now="
+        f"{str(payload.get('real_deep_research_acceptance_record_present_now')).lower()}"
+    )
+    console.print(
+        "combined_approval_gate_satisfied_now="
+        f"{str(payload.get('combined_approval_gate_satisfied_now')).lower()}"
+    )
+    console.print(
+        f"activation_authorized_now={str(payload.get('activation_authorized_now')).lower()}"
+    )
+    console.print(
+        "active_planning_input_selected_now="
+        f"{str(payload.get('active_planning_input_selected_now')).lower()}"
+    )
+    console.print(
+        "byte_stream_generation_authorized_now="
+        f"{str(payload.get('byte_stream_generation_authorized_now')).lower()}"
+    )
+    console.print(f"execution_authorized_now={str(payload.get('execution_authorized_now')).lower()}")
+    console.print(f"stage5bd_run_plan_id_count={payload.get('stage5bd_run_plan_id_count')}")
+    console.print(f"active_lineage_record_count={payload.get('active_lineage_record_count')}")
+    console.print(
+        "parallel_worker_cap_for_stage5dg_and_later="
+        f"{payload.get('parallel_worker_cap_for_stage5dg_and_later')}"
+    )
+    console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5dg-stage5df-findings")
+def validate_stage5dg_stage5df_findings_command(
+    findings: Path = typer.Option(STAGE5DG_DATA_PATHS["findings"]),
+) -> None:
+    counts, errors = validate_stage5dg_stage5df_findings(findings=findings)
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_stage5df_findings_valid=true")
+
+
+@app.command("validate-stage5dg-real-operator-approval-record")
+def validate_stage5dg_real_operator_approval_record_command(
+    approval_record: Path = typer.Option(STAGE5DG_DATA_PATHS["real_operator_approval_record"]),
+) -> None:
+    counts, errors = validate_stage5dg_real_operator_approval_record(
+        approval_record=approval_record
+    )
+    _print_stage5dg_counts(
+        counts,
+        errors,
+        "token_block_stage5dg_real_operator_approval_record_valid=true",
+    )
+
+
+@app.command("validate-stage5dg-operator-approval-scope")
+def validate_stage5dg_operator_approval_scope_command(
+    scope: Path = typer.Option(STAGE5DG_DATA_PATHS["operator_approval_scope"]),
+) -> None:
+    counts, errors = validate_stage5dg_operator_approval_scope(scope=scope)
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_operator_approval_scope_valid=true")
+
+
+@app.command("validate-stage5dg-operator-approval-nonactivation")
+def validate_stage5dg_operator_approval_nonactivation_command(
+    nonactivation: Path = typer.Option(STAGE5DG_DATA_PATHS["operator_approval_nonactivation"]),
+) -> None:
+    counts, errors = validate_stage5dg_operator_approval_nonactivation(
+        nonactivation=nonactivation
+    )
+    _print_stage5dg_counts(
+        counts,
+        errors,
+        "token_block_stage5dg_operator_approval_nonactivation_valid=true",
+    )
+
+
+@app.command("validate-stage5dg-stage5de-preservation")
+def validate_stage5dg_stage5de_preservation_command(
+    preservation: Path = typer.Option(STAGE5DG_DATA_PATHS["stage5de_preservation"]),
+) -> None:
+    counts, errors = validate_stage5dg_stage5de_preservation(preservation=preservation)
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_stage5de_preservation_valid=true")
+
+
+@app.command("validate-stage5dg-stage5dc-preservation")
+def validate_stage5dg_stage5dc_preservation_command(
+    preservation: Path = typer.Option(STAGE5DG_DATA_PATHS["stage5dc_choice_record_preservation"]),
+) -> None:
+    counts, errors = validate_stage5dg_stage5dc_preservation(preservation=preservation)
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_stage5dc_preservation_valid=true")
+
+
+@app.command("validate-stage5dg-selected-option-preservation")
+def validate_stage5dg_selected_option_preservation_command(
+    selected_option: Path = typer.Option(STAGE5DG_DATA_PATHS["selected_option_preservation"]),
+) -> None:
+    counts, errors = validate_stage5dg_selected_option_preservation(
+        selected_option=selected_option
+    )
+    _print_stage5dg_counts(
+        counts,
+        errors,
+        "token_block_stage5dg_selected_option_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dg-unselected-options-preservation")
+def validate_stage5dg_unselected_options_preservation_command(
+    unselected_options: Path = typer.Option(
+        STAGE5DG_DATA_PATHS["unselected_options_preservation"]
+    ),
+) -> None:
+    counts, errors = validate_stage5dg_unselected_options_preservation(
+        unselected_options=unselected_options
+    )
+    _print_stage5dg_counts(
+        counts,
+        errors,
+        "token_block_stage5dg_unselected_options_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dg-real-record-boundary")
+def validate_stage5dg_real_record_boundary_command(
+    boundary: Path = typer.Option(STAGE5DG_DATA_PATHS["real_record_boundary"]),
+) -> None:
+    counts, errors = validate_stage5dg_real_record_boundary(boundary=boundary)
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_real_record_boundary_valid=true")
+
+
+@app.command("validate-stage5dg-deep-research-absence")
+def validate_stage5dg_deep_research_absence_command(
+    absence: Path = typer.Option(STAGE5DG_DATA_PATHS["deep_research_absence"]),
+) -> None:
+    counts, errors = validate_stage5dg_deep_research_absence(absence=absence)
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_deep_research_absence_valid=true")
+
+
+@app.command("validate-stage5dg-combined-gate")
+def validate_stage5dg_combined_gate_command(
+    combined_gate: Path = typer.Option(STAGE5DG_DATA_PATHS["combined_gate"]),
+) -> None:
+    counts, errors = validate_stage5dg_combined_gate(combined_gate=combined_gate)
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_combined_gate_valid=true")
+
+
+@app.command("validate-stage5dg-activation-nonauthorization")
+def validate_stage5dg_activation_nonauthorization_command(
+    activation: Path = typer.Option(STAGE5DG_DATA_PATHS["activation_nonauthorization"]),
+) -> None:
+    counts, errors = validate_stage5dg_activation_nonauthorization(activation=activation)
+    _print_stage5dg_counts(
+        counts,
+        errors,
+        "token_block_stage5dg_activation_nonauthorization_valid=true",
+    )
+
+
+@app.command("validate-stage5dg-stage5bd-preservation")
+def validate_stage5dg_stage5bd_preservation_command(
+    preservation: Path = typer.Option(STAGE5DG_DATA_PATHS["stage5bd_preservation"]),
+) -> None:
+    counts, errors = validate_stage5dg_stage5bd_preservation(preservation=preservation)
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_stage5bd_preservation_valid=true")
+
+
+@app.command("validate-stage5dg-active-lineage-preservation")
+def validate_stage5dg_active_lineage_preservation_command(
+    active_lineage: Path = typer.Option(STAGE5DG_DATA_PATHS["active_lineage"]),
+) -> None:
+    counts, errors = validate_stage5dg_active_lineage_preservation(
+        active_lineage=active_lineage
+    )
+    _print_stage5dg_counts(
+        counts,
+        errors,
+        "token_block_stage5dg_active_lineage_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dg-sidecar-gates")
+def validate_stage5dg_sidecar_gates_command() -> None:
+    counts, errors = validate_stage5dg_sidecar_gates()
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_sidecar_gates_valid=true")
+
+
+@app.command("validate-stage5dg-target-context")
+def validate_stage5dg_target_context_command(
+    target_context: Path = typer.Option(STAGE5DG_DATA_PATHS["target_context"]),
+) -> None:
+    counts, errors = validate_stage5dg_target_context(target_context=target_context)
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_target_context_valid=true")
+
+
+@app.command("validate-stage5dg-handoff-continuity")
+def validate_stage5dg_handoff_continuity_command() -> None:
+    counts, errors = validate_stage5dg_handoff_continuity()
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_handoff_continuity_valid=true")
+
+
+@app.command("validate-stage5dg-credential-redaction-policy")
+def validate_stage5dg_credential_redaction_policy_command(
+    credential_redaction: Path = typer.Option(STAGE5DG_DATA_PATHS["credential_redaction"]),
+) -> None:
+    counts, errors = validate_stage5dg_credential_redaction_policy(
+        credential_redaction=credential_redaction
+    )
+    _print_stage5dg_counts(
+        counts,
+        errors,
+        "token_block_stage5dg_credential_redaction_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5dg-governance-scope")
+def validate_stage5dg_governance_scope_command(
+    governance: Path = typer.Option(STAGE5DG_DATA_PATHS["governance_scope_control"]),
+) -> None:
+    counts, errors = validate_stage5dg_governance_scope(governance=governance)
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_governance_scope_valid=true")
+
+
+@app.command("validate-stage5dg")
+def validate_stage5dg_command(
+    summary: Path = typer.Option(STAGE5DG_DATA_PATHS["summary"]),
+    next_stage_decision: Path = typer.Option(STAGE5DG_DATA_PATHS["next_stage"]),
+    results_dir: Path = typer.Option(STAGE5DG_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5dg(
+        summary=summary,
+        next_stage_decision=next_stage_decision,
+        results_dir=results_dir,
+    )
+    _print_stage5dg_counts(counts, errors, "token_block_stage5dg_valid=true")
+
+
+@app.command("stage5dg-summary")
+def stage5dg_summary_command(
+    summary: Path = typer.Option(STAGE5DG_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5dg_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"stage5df_verdict={payload.get('stage5df_verdict')}")
+    console.print(f"selected_option_id={payload.get('selected_option_id')}")
+    console.print(
+        "real_operator_approval_record_created_now="
+        f"{str(payload.get('real_operator_approval_record_created_now')).lower()}"
+    )
+    console.print(
+        "operator_approval_record_valid_now="
+        f"{str(payload.get('operator_approval_record_valid_now')).lower()}"
+    )
+    console.print(
+        "operator_approval_component_satisfied_now="
+        f"{str(payload.get('operator_approval_component_satisfied_now')).lower()}"
+    )
+    console.print(
+        "real_deep_research_acceptance_record_present_now="
+        f"{str(payload.get('real_deep_research_acceptance_record_present_now')).lower()}"
+    )
+    console.print(
+        "combined_approval_gate_satisfied_now="
+        f"{str(payload.get('combined_approval_gate_satisfied_now')).lower()}"
+    )
+    console.print(
+        f"activation_authorized_now={str(payload.get('activation_authorized_now')).lower()}"
+    )
+    console.print(
+        "active_planning_input_selected_now="
+        f"{str(payload.get('active_planning_input_selected_now')).lower()}"
+    )
+    console.print(
+        "byte_stream_generation_authorized_now="
+        f"{str(payload.get('byte_stream_generation_authorized_now')).lower()}"
+    )
+    console.print(f"execution_authorized_now={str(payload.get('execution_authorized_now')).lower()}")
+    console.print(f"stage5bd_run_plan_id_count={payload.get('stage5bd_run_plan_id_count')}")
+    console.print(f"active_lineage_record_count={payload.get('active_lineage_record_count')}")
+    console.print(
+        "parallel_worker_cap_for_stage5dg_and_later="
+        f"{payload.get('parallel_worker_cap_for_stage5dg_and_later')}"
     )
     console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
     console.print(f"recommended_next_prompt_type={payload.get('recommended_next_prompt_type')}")

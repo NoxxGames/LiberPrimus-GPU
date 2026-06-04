@@ -1,0 +1,141 @@
+record_type: stage5dg_gap_register
+schema: schemas/project-state/stage5dg-reviewability-gap-register-v0.schema.json
+stage_id: stage-5dg
+stage_title: Stage 5DG - Real operator approval record creation, without activation
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5de
+source_previous_stage_commit: ec6ad1fc4986463608d3096351f56099bd901cae
+source_review_stage: stage-5df
+source_review_type: assistant_or_operator_review
+source_review_verdict: accept_with_warnings
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+operator_choice_or_pause_record_created_now: true
+operator_choice_or_pause_record_valid_now: true
+real_operator_choice_pause_record_created_now: true
+real_operator_choice_pause_record_valid_now: true
+explicit_operator_choice_provided_now: true
+explicit_pause_provided_now: false
+explicit_pause_selected_now: false
+selected_option_id: prepare_real_operator_approval_record
+choice_source: explicit_operator_prompt_stage5dc
+operator_decision_option_count: 6
+stage5cs_exact_option_set_preserved: true
+all_options_unselected: false
+operator_decision_option_selected_now: true
+automatic_option_selection_allowed: false
+selected_option_count: 1
+unselected_option_count: 5
+reviewability_gap_count: 4
+reviewability_gaps:
+- gap_id: deep_research_acceptance_record_absent_after_stage5dg
+  status: expected_future_requirement
+  gate_opening: false
+  activation_defect: false
+- gap_id: combined_gate_validation_absent_after_stage5dg
+  status: expected_future_requirement
+  gate_opening: false
+  activation_defect: false
+- gap_id: activation_decision_absent_after_stage5dg
+  status: expected_future_requirement
+  gate_opening: false
+  activation_defect: false
+- gap_id: stage5de_review_label_anomaly
+  status: preserved_nonblocking_reviewability_warning
+  gate_opening: false
+  activation_defect: false
+selected_option_authorizes_real_operator_approval_record_creation_now: false
+selected_option_authorizes_real_approval_now: false
+selected_option_authorizes_deep_research_acceptance_now: false
+selected_option_authorizes_combined_gate_validation_now: false
+selected_option_authorizes_activation_decision_now: false
+selected_option_authorizes_activation_now: false
+selected_option_authorizes_active_planning_input_now: false
+selected_option_authorizes_dry_run_ingestion_now: false
+selected_option_authorizes_byte_stream_generation_now: false
+selected_option_authorizes_execution_now: false
+deep_research_activation_accept_record_present_now: false
+real_deep_research_acceptance_record_created_now: false
+real_deep_research_acceptance_record_present_now: false
+deep_research_acceptance_component_satisfied_now: false
+real_combined_gate_validation_record_created_now: false
+real_combined_gate_validation_record_present_now: false
+combined_approval_gate_satisfied_now: false
+combined_approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+approval_gate_authorizes_activation_now: false
+real_activation_decision_record_created_now: false
+real_activation_decision_record_present_now: false
+activation_decision_valid_now: false
+activation_authorized_now: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+new_active_planning_input_created: false
+dry_run_ingestion_authorized_now: false
+byte_stream_generation_authorized_now: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+branch_enumeration_performed: false
+full_cartesian_product_enumerated: false
+execution_authorized_now: false
+token_block_experiment_executed: false
+dwh_hash_search_performed: false
+hash_preimage_search_performed: false
+decode_attempt_performed: false
+scoring_performed: false
+cuda_execution_performed: false
+benchmark_performed: false
+stego_tool_execution_performed: false
+image_forensics_performed: false
+ocr_performed: false
+ai_ml_interpretation_performed: false
+tor_network_access_performed: false
+target_class_validation_implemented: false
+website_expansion_performed: false
+method_status_upgraded: false
+canonical_corpus_active: false
+page_boundaries_finalized: false
+active_manifest_registry_updated: false
+active_token_block_manifest_changed: false
+canonical_transcription_changed: false
+string4_sidecar_planning_ingestion_activated: false
+string4_active_input_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_byte_stream_generation_allowed: false
+string4_execution_input_allowed: false
+stage5bd_run_plan_ids_changed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_plan_superseded: false
+stage5dg_creates_generic_preflight_layer: false
+stage5dg_creates_broad_new_negative_fixture_layer: false
+stage5dg_authorizes_deep_research_acceptance: false
+stage5dg_authorizes_combined_gate_validation: false
+stage5dg_authorizes_activation: false
+stage5dg_authorizes_active_planning_input: false
+stage5dg_authorizes_byte_stream_generation: false
+stage5dg_authorizes_execution: false
+operator_approval_alone_satisfies_combined_gate: false
+operator_approval_alone_authorizes_activation: false
+operator_approval_alone_authorizes_active_planning_input: false
+operator_approval_alone_authorizes_dry_run_ingestion: false
+operator_approval_alone_authorizes_byte_stream_generation: false
+operator_approval_alone_authorizes_execution: false
+generated_outputs_committed: false
+codex_output_used: false
+codex_completion_summary_committed: false
+old_16_worker_default_reintroduced: false
+stage5de_approval_preparation_package_preserved: true
+stage5dc_selected_option_preserved: true
+real_operator_approval_record_created_now: true
+real_operator_approval_record_present_now: true
+operator_approval_record_present_now: true
+operator_approval_record_valid_now: true
+real_approval_records_created: true
+operator_approval_component_satisfied_now: true
+current_stage_authorizes_real_operator_approval_record_creation_now: true
+stage5dg_is_narrow_real_operator_approval_record_stage: true
+target_class_context_preserved_for_future_design_only: true
+governance_overbuild_risk_acknowledged: true

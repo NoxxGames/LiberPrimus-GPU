@@ -343,7 +343,17 @@ def write_yaml(path: Path, payload: Any) -> None:
 
 
 def read_yaml(path: Path) -> Any:
-    return yaml.safe_load(path.read_text(encoding="utf-8"))
+    return yaml.safe_load(_read_text_retry(path))
+
+
+def read_json(path: Path) -> Any:
+    for attempt in range(40):
+        try:
+            return json.loads(_read_text_retry(path))
+        except json.JSONDecodeError:
+            if attempt == 39:
+                raise
+            time.sleep(0.05)
 
 
 def write_json(path: Path, payload: Any) -> None:
@@ -367,6 +377,17 @@ def _write_text_atomic(path: Path, text: str) -> None:
             if attempt == 39:
                 raise
             time.sleep(0.05)
+
+
+def _read_text_retry(path: Path) -> str:
+    for attempt in range(40):
+        try:
+            return path.read_text(encoding="utf-8")
+        except PermissionError:
+            if attempt == 39:
+                raise
+            time.sleep(0.05)
+    raise RuntimeError(f"unreachable retry loop for {path}")
 
 
 def repo_relative(path: Path) -> str:

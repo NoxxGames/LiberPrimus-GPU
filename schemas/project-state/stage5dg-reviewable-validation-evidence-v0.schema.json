@@ -1,0 +1,340 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "activation_authorized_now": {
+      "const": false
+    },
+    "activation_decision_valid_now": {
+      "const": false
+    },
+    "active_manifest_registry_updated": {
+      "const": false
+    },
+    "active_planning_input_authorized_now": {
+      "const": false
+    },
+    "active_planning_input_selected_now": {
+      "const": false
+    },
+    "active_token_block_manifest_changed": {
+      "const": false
+    },
+    "ai_ml_interpretation_performed": {
+      "const": false
+    },
+    "approval_gate_authorizes_activation_now": {
+      "const": false
+    },
+    "approval_gate_satisfied_now": {
+      "const": false
+    },
+    "automatic_option_selection_allowed": {
+      "const": false
+    },
+    "benchmark_performed": {
+      "const": false
+    },
+    "branch_enumeration_performed": {
+      "const": false
+    },
+    "byte_stream_generation_authorized_now": {
+      "const": false
+    },
+    "canonical_corpus_active": {
+      "const": false
+    },
+    "canonical_transcription_changed": {
+      "const": false
+    },
+    "codex_completion_summary_committed": {
+      "const": false
+    },
+    "codex_output_used": {
+      "const": false
+    },
+    "combined_approval_gate_authorizes_activation_now": {
+      "const": false
+    },
+    "combined_approval_gate_satisfied_now": {
+      "const": false
+    },
+    "cuda_execution_performed": {
+      "const": false
+    },
+    "current_stage_authorizes_real_operator_approval_record_creation_now": {
+      "const": true
+    },
+    "decode_attempt_performed": {
+      "const": false
+    },
+    "deep_research_acceptance_component_satisfied_now": {
+      "const": false
+    },
+    "deep_research_activation_accept_record_present_now": {
+      "const": false
+    },
+    "dry_run_ingestion_authorized_now": {
+      "const": false
+    },
+    "dwh_hash_search_performed": {
+      "const": false
+    },
+    "execution_allowed": {
+      "const": false
+    },
+    "execution_authorized_now": {
+      "const": false
+    },
+    "explicit_operator_choice_provided_now": {
+      "const": true
+    },
+    "explicit_pause_provided_now": {
+      "const": false
+    },
+    "explicit_pause_selected_now": {
+      "const": false
+    },
+    "full_cartesian_product_enumerated": {
+      "const": false
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "governance_overbuild_risk_acknowledged": {
+      "const": true
+    },
+    "hash_preimage_search_performed": {
+      "const": false
+    },
+    "image_forensics_performed": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "method_status_upgraded": {
+      "const": false
+    },
+    "new_active_planning_input_created": {
+      "const": false
+    },
+    "ocr_performed": {
+      "const": false
+    },
+    "old_16_worker_default_reintroduced": {
+      "const": false
+    },
+    "operator_approval_alone_authorizes_activation": {
+      "const": false
+    },
+    "operator_approval_alone_authorizes_active_planning_input": {
+      "const": false
+    },
+    "operator_approval_alone_authorizes_byte_stream_generation": {
+      "const": false
+    },
+    "operator_approval_alone_authorizes_dry_run_ingestion": {
+      "const": false
+    },
+    "operator_approval_alone_authorizes_execution": {
+      "const": false
+    },
+    "operator_approval_alone_satisfies_combined_gate": {
+      "const": false
+    },
+    "operator_approval_component_satisfied_now": {
+      "const": true
+    },
+    "operator_approval_record_present_now": {
+      "const": true
+    },
+    "operator_approval_record_valid_now": {
+      "const": true
+    },
+    "operator_choice_or_pause_record_created_now": {
+      "const": true
+    },
+    "operator_choice_or_pause_record_valid_now": {
+      "const": true
+    },
+    "operator_decision_option_selected_now": {
+      "const": true
+    },
+    "page_boundaries_finalized": {
+      "const": false
+    },
+    "real_activation_decision_record_created_now": {
+      "const": false
+    },
+    "real_activation_decision_record_present_now": {
+      "const": false
+    },
+    "real_approval_records_created": {
+      "const": true
+    },
+    "real_byte_stream_generated": {
+      "const": false
+    },
+    "real_combined_gate_validation_record_created_now": {
+      "const": false
+    },
+    "real_combined_gate_validation_record_present_now": {
+      "const": false
+    },
+    "real_deep_research_acceptance_record_created_now": {
+      "const": false
+    },
+    "real_deep_research_acceptance_record_present_now": {
+      "const": false
+    },
+    "real_operator_approval_record_created_now": {
+      "const": true
+    },
+    "real_operator_approval_record_present_now": {
+      "const": true
+    },
+    "real_operator_choice_pause_record_created_now": {
+      "const": true
+    },
+    "real_operator_choice_pause_record_valid_now": {
+      "const": true
+    },
+    "record_type": {
+      "const": "stage5dg_validation_evidence"
+    },
+    "scoring_performed": {
+      "const": false
+    },
+    "selected_option_authorizes_activation_decision_now": {
+      "const": false
+    },
+    "selected_option_authorizes_activation_now": {
+      "const": false
+    },
+    "selected_option_authorizes_active_planning_input_now": {
+      "const": false
+    },
+    "selected_option_authorizes_byte_stream_generation_now": {
+      "const": false
+    },
+    "selected_option_authorizes_combined_gate_validation_now": {
+      "const": false
+    },
+    "selected_option_authorizes_deep_research_acceptance_now": {
+      "const": false
+    },
+    "selected_option_authorizes_dry_run_ingestion_now": {
+      "const": false
+    },
+    "selected_option_authorizes_execution_now": {
+      "const": false
+    },
+    "selected_option_authorizes_real_approval_now": {
+      "const": false
+    },
+    "selected_option_authorizes_real_operator_approval_record_creation_now": {
+      "const": false
+    },
+    "selected_option_id": {
+      "const": "prepare_real_operator_approval_record"
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage5bd_dry_run_plan_manifest_changed": {
+      "const": false
+    },
+    "stage5bd_plan_superseded": {
+      "const": false
+    },
+    "stage5bd_run_plan_ids_changed": {
+      "const": false
+    },
+    "stage5dc_selected_option_preserved": {
+      "const": true
+    },
+    "stage5de_approval_preparation_package_preserved": {
+      "const": true
+    },
+    "stage5dg_authorizes_activation": {
+      "const": false
+    },
+    "stage5dg_authorizes_active_planning_input": {
+      "const": false
+    },
+    "stage5dg_authorizes_byte_stream_generation": {
+      "const": false
+    },
+    "stage5dg_authorizes_combined_gate_validation": {
+      "const": false
+    },
+    "stage5dg_authorizes_deep_research_acceptance": {
+      "const": false
+    },
+    "stage5dg_authorizes_execution": {
+      "const": false
+    },
+    "stage5dg_creates_broad_new_negative_fixture_layer": {
+      "const": false
+    },
+    "stage5dg_creates_generic_preflight_layer": {
+      "const": false
+    },
+    "stage5dg_is_narrow_real_operator_approval_record_stage": {
+      "const": true
+    },
+    "stage_id": {
+      "const": "stage-5dg"
+    },
+    "stego_tool_execution_performed": {
+      "const": false
+    },
+    "string4_active_input_allowed": {
+      "const": false
+    },
+    "string4_byte_stream_generation_allowed": {
+      "const": false
+    },
+    "string4_dry_run_ingestion_allowed_now": {
+      "const": false
+    },
+    "string4_execution_input_allowed": {
+      "const": false
+    },
+    "string4_sidecar_planning_ingestion_activated": {
+      "const": false
+    },
+    "target_class_context_preserved_for_future_design_only": {
+      "const": true
+    },
+    "target_class_validation_implemented": {
+      "const": false
+    },
+    "token_block_experiment_executed": {
+      "const": false
+    },
+    "tor_network_access_performed": {
+      "const": false
+    },
+    "variant_byte_streams_generated": {
+      "const": false
+    },
+    "variant_materialisation_performed": {
+      "const": false
+    },
+    "website_expansion_performed": {
+      "const": false
+    }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "metadata_only",
+    "execution_allowed",
+    "solve_claim",
+    "selected_option_id"
+  ],
+  "title": "stage-5dg validation_evidence",
+  "type": "object"
+}

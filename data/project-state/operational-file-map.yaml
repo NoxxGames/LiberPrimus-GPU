@@ -4789,3 +4789,322 @@ records:
   staleness_check_level: historical
   owner_context: research_operator
   notes: Summarizes Stage 5DD warning integration, Stage 5DC selected-option preservation, preparation package, future approval requirements, closed gates, preserved Stage 5BD records, and review-only next-stage rationale.
+- path: data/project-state/stage5dg-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG compact summary and current boundary record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records Stage 5DF accept-with-warnings integration, one valid real operator approval record, operator-approval component satisfaction, closed combined/activation/byte/execution gates, Stage 5BD preservation, active-lineage preservation, and Stage 5DH next-stage routing.
+- path: data/project-state/stage5dg-next-stage-decision.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG next-stage decision selecting Stage 5DH review.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Requires review before any future Deep Research acceptance, combined-gate validation, activation decision, active input, byte-stream generation, execution, target validation, or Tor/network step.
+- path: data/project-state/stage5dg-stage5df-findings-integration.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG integration record for the Stage 5DF assistant/operator accept-with-warnings review.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Consumes Stage 5DF compact review metadata and records that Stage 5DG may create only the real operator approval record.
+- path: data/project-state/stage5dg-reviewable-validation-evidence.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG compact validation evidence.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records build, focused validators, aggregate validator, pytest, ruff, consistency, and 8-worker parallel validation status without committing raw logs.
+- path: data/project-state/stage5dg-reviewability-gap-register.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG reviewability gap register.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Lists expected non-gate-opening reviewability gaps for the approval-record-only stage.
+- path: data/project-state/stage5dg-governance-scope-control.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG governance-overbuild boundary and anti-generic-preflight record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records that Stage 5DG follows the selected operator-approval record path narrowly and creates no generic activation or execution preflight.
+- path: data/token-block/stage5dg-real-operator-approval-record.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG real operator approval record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Creates exactly one valid real operator approval record for prepare_real_operator_approval_record while authorizing no activation, active input, byte stream, execution, target validation, Tor/network use, or solve claim.
+- path: data/token-block/stage5dg-operator-approval-scope.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG operator-approval scope record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Marks only the operator-approval component satisfied and keeps Deep Research acceptance, combined gate, activation, active-input, byte-stream, execution, target-validation, and Tor/network authorization false.
+- path: data/token-block/stage5dg-operator-approval-nonactivation-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG proof that operator approval alone does not activate String 4.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps activation, active planning input, dry-run ingestion, byte-stream generation, execution, target validation, and Tor/network access unauthorized.
+- path: data/token-block/stage5dg-stage5de-preparation-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG proof that the Stage 5DE preparation package remains preserved.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves Stage 5DE preparation requirements and records that Stage 5DG consumes them only to create the operator approval record.
+- path: data/token-block/stage5dg-stage5dc-choice-record-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG proof that the Stage 5DC operator choice record remains unchanged.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves the explicit Stage 5DC operator choice source and selected option without broadening authorization.
+- path: data/token-block/stage5dg-selected-option-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG proof that prepare_real_operator_approval_record remains the single selected option.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves the Stage 5DC selected option while limiting Stage 5DG to approval-record creation only.
+- path: data/token-block/stage5dg-unselected-options-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG proof that the other five Stage 5CS options remain unselected.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves defer_for_more_review, prepare_real_deep_research_acceptance_record, prepare_combined_gate_validation, prepare_activation_decision_review, and keep_blocked_no_action as unselected.
+- path: data/token-block/stage5dg-real-record-creation-boundary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG real-record creation boundary.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Allows only the real operator approval record and blocks Deep Research acceptance, combined-gate validation, activation decision, active-input authorization, target validation, and execution records.
+- path: data/token-block/stage5dg-deep-research-acceptance-absence-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG proof that real Deep Research acceptance remains absent.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps Deep Research acceptance record presence false and blocks combined-gate satisfaction.
+- path: data/token-block/stage5dg-combined-gate-non-satisfaction-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG proof that the combined approval gate remains unsatisfied.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records operator approval satisfied true but combined gate false because Deep Research acceptance is absent.
+- path: data/token-block/stage5dg-activation-decision-nonauthorization-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG proof that activation and active planning input remain unauthorized.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps activation decision invalid, activation unauthorized, active planning input unselected, dry-run ingestion unauthorized, and byte-stream generation blocked.
+- path: data/token-block/stage5dg-stage5bd-plan-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG Stage 5BD dry-run plan preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves exactly 10 Stage 5BD run-plan IDs and records no plan supersession.
+- path: data/token-block/stage5dg-active-lineage-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG active-lineage preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves eight active-lineage records, includes the corrected Stage 5AW path, and keeps the deprecated path absent.
+- path: data/token-block/stage5dg-no-active-ingestion-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG no-active-ingestion proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps String 4 inactive, active planning input unauthorized and unselected, and active manifest registry unchanged.
+- path: data/token-block/stage5dg-no-byte-stream-transition-gate.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG no-byte-stream transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps byte-stream generation, variant materialisation, branch enumeration, and Cartesian enumeration unauthorized.
+- path: data/token-block/stage5dg-no-execution-transition-gate.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG no-execution transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps token-block execution, DWH/hash search, decode, scoring, CUDA, benchmarks, stego, image/OCR/AI work, website expansion, method upgrades, canonical corpus activation, and page-boundary finalisation false.
+- path: data/token-block/stage5dg-target-class-context-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG target-class context preservation record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves target-class context as review-only metadata and records no target validation, Tor access, or network access.
+- path: data/source-harvester/stage5dg-codex-handoff-policy.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG codex-output handoff policy record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Requires the ignored hyphenated codex-output completion summary and keeps deprecated codex_output unused.
+- path: data/source-harvester/stage5dg-credential-redaction-policy-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DG credential-redaction policy preservation record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records that credential-like remote values and secrets are not printed or committed.
+- path: docs/onboarding/stage5dg-real-operator-approval-record-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5DG real operator approval record creation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, real approval record semantics, Deep Research absence, combined-gate closure, Stage 5BD and active-lineage preservation, handoff continuity, target-context closure, and Stage 5DH review routing.
+- path: docs/experiments/stage-5dg-real-operator-approval-record.md
+  category: operational_status_doc
+  purpose: Stage 5DG metadata-only experiment-boundary documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: States that Stage 5DG is not activation, active-input selection, byte-stream generation, execution, target validation, Tor/network use, CUDA, scoring, or solve evidence.
+- path: docs/development-logs/2026-06-04-stage-5dg-real-operator-approval-record.md
+  category: historical_log
+  purpose: Stage 5DG implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation phases, validation commands, raw/generated staging checks, GitHub issue handling, commit, push, and CI evidence.
+- path: research-log/2026-06-04-stage-5dg-next-stage-decision-summary.md
+  category: historical_log
+  purpose: Stage 5DG summary-only research log and Stage 5DH next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: research_operator
+  notes: Summarizes Stage 5DF warning integration, the real operator approval record, closed combined/activation/byte/execution gates, preserved Stage 5BD records, and review-only next-stage rationale.
