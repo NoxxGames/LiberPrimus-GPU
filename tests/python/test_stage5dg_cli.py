@@ -1,13 +1,14 @@
 from __future__ import annotations
 
 import subprocess
+import sys
 
 from test_stage5dg_common import ROOT
 
 
 def run_cli(*args: str) -> str:
     result = subprocess.run(
-        [".venv/Scripts/python.exe", "-m", "libreprimus.cli", "token-block", *args],
+        [sys.executable, "-m", "libreprimus.cli", "token-block", *args],
         cwd=ROOT,
         check=True,
         capture_output=True,
