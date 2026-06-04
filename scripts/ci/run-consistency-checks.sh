@@ -3021,6 +3021,38 @@ if [ -e "codex_output" ]; then
     exit 1
 fi
 
+echo "Validating Stage 5DE real operator approval preparation records"
+"$python_bin" -m libreprimus.cli token-block build-stage5de
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-stage5dd-findings
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-review-label-anomaly
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-real-operator-approval-preparation
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-future-operator-approval-requirements
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-stage5dc-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-real-approval-noncreation
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-combined-gate
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-activation-nonauthorization
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-real-record-boundary
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-stage5bd-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-active-lineage-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-handoff-continuity
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-governance-scope
+"$python_bin" -m libreprimus.cli token-block validate-stage5de-credential-redaction-policy
+"$python_bin" -m libreprimus.cli token-block validate-stage5de
+"$python_bin" -m libreprimus.cli token-block stage5de-summary
+stage5de_token_results_root="experiments"/"results"/"token-block"/"stage5de"
+git check-ignore -q "$stage5de_token_results_root/summary.json"
+git check-ignore -q "$stage5de_token_results_root/approval_preparation_report.json"
+git check-ignore -q "$stage5de_token_results_root/future_requirements_report.json"
+git check-ignore -q "$stage5de_token_results_root/preservation_report.json"
+git check-ignore -q "$stage5de_token_results_root/handoff_continuity_report.json"
+git check-ignore -q "$stage5de_token_results_root/warnings.jsonl"
+git check-ignore -q "codex-output/stage5de-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5DE" >&2
+    exit 1
+fi
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

@@ -2932,6 +2932,35 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q "codex-output/stage5dc-codex-completion.md"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DC" }
 
+    Write-Host "Validating Stage 5DE real operator approval preparation records"
+    & $Python -m libreprimus.cli token-block build-stage5de
+    & $Python -m libreprimus.cli token-block validate-stage5de-stage5dd-findings
+    & $Python -m libreprimus.cli token-block validate-stage5de-review-label-anomaly
+    & $Python -m libreprimus.cli token-block validate-stage5de-real-operator-approval-preparation
+    & $Python -m libreprimus.cli token-block validate-stage5de-future-operator-approval-requirements
+    & $Python -m libreprimus.cli token-block validate-stage5de-stage5dc-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5de-real-approval-noncreation
+    & $Python -m libreprimus.cli token-block validate-stage5de-combined-gate
+    & $Python -m libreprimus.cli token-block validate-stage5de-activation-nonauthorization
+    & $Python -m libreprimus.cli token-block validate-stage5de-real-record-boundary
+    & $Python -m libreprimus.cli token-block validate-stage5de-stage5bd-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5de-active-lineage-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5de-sidecar-gates
+    & $Python -m libreprimus.cli token-block validate-stage5de-handoff-continuity
+    & $Python -m libreprimus.cli token-block validate-stage5de-governance-scope
+    & $Python -m libreprimus.cli token-block validate-stage5de-credential-redaction-policy
+    & $Python -m libreprimus.cli token-block validate-stage5de
+    & $Python -m libreprimus.cli token-block stage5de-summary
+    $Stage5DETokenResultsRoot = Join-Path (Join-Path (Join-Path "experiments" "results") "token-block") "stage5de"
+    git check-ignore -q (Join-Path $Stage5DETokenResultsRoot "summary.json")
+    git check-ignore -q (Join-Path $Stage5DETokenResultsRoot "approval_preparation_report.json")
+    git check-ignore -q (Join-Path $Stage5DETokenResultsRoot "future_requirements_report.json")
+    git check-ignore -q (Join-Path $Stage5DETokenResultsRoot "preservation_report.json")
+    git check-ignore -q (Join-Path $Stage5DETokenResultsRoot "handoff_continuity_report.json")
+    git check-ignore -q (Join-Path $Stage5DETokenResultsRoot "warnings.jsonl")
+    git check-ignore -q "codex-output/stage5de-codex-completion.md"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DE" }
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

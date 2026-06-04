@@ -4492,3 +4492,300 @@ records:
   staleness_check_level: historical
   owner_context: research_operator
   notes: Summarizes Stage 5DB warning integration, selected operator option, preservation records, closed gates, preserved Stage 5BD records, and review-only next-stage rationale without Deep Research body content.
+- path: data/project-state/stage5de-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE compact summary and current boundary record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records Stage 5DD accept-with-warnings integration, Stage 5DC selected option preservation, preparation-package-only status, no real approval record, closed gates, Stage 5BD preservation, active-lineage preservation, and Stage 5DF next-stage routing.
+- path: data/project-state/stage5de-next-stage-decision.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE next-stage decision selecting Stage 5DF review.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Requires review before any future real operator approval record creation and authorizes no activation, byte-stream generation, execution, or real approval record creation.
+- path: data/project-state/stage5de-stage5dd-findings-integration.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE integration record for the Stage 5DD accept-with-warnings review.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Consumes Stage 5DD review metadata and records the Stage 5DC label anomaly as non-gate-opening.
+- path: data/project-state/stage5de-review-label-anomaly.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE nonblocking review-label anomaly record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records that the Stage 5DD report had Stage 5DA/5DB label drift while the Stage 5DC substance remained acceptable with warnings.
+- path: data/project-state/stage5de-governance-scope-control.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE governance-overbuild boundary and anti-generic-preflight record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records that Stage 5DE follows the selected operator-approval preparation path narrowly and creates no generic preflight layer.
+- path: data/project-state/stage5de-reviewable-validation-evidence.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE compact validation evidence.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records build, focused validator, aggregate validator, pytest, ruff, consistency, and 8-worker parallel validation status without committing raw logs.
+- path: data/project-state/stage5de-reviewability-gap-register.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE reviewability gap register.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Lists only expected non-gate-opening reviewability gaps for the preparation-only stage.
+- path: data/token-block/stage5de-real-operator-approval-preparation-package.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE central real-operator-approval preparation package.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Creates preparation_package_only metadata and explicitly creates no real operator approval record, approval gate, activation, active input, byte stream, execution, or solve claim.
+- path: data/token-block/stage5de-future-operator-approval-record-requirements.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE future real operator approval record requirements.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Lists 34 future requirements while keeping the real approval record absent and invalid in Stage 5DE.
+- path: data/token-block/stage5de-stage5dc-selected-option-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE proof that the Stage 5DC selected option remains unchanged.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves prepare_real_operator_approval_record as the single selected option with record_preparation_only semantics.
+- path: data/token-block/stage5de-stage5dc-choice-record-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE proof that the Stage 5DC operator choice record remains unchanged.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves the explicit Stage 5DC operator choice source and selected option without broadening authorization.
+- path: data/token-block/stage5de-unselected-options-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE proof that the other five Stage 5CS options remain unselected.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves defer_for_more_review, prepare_real_deep_research_acceptance_record, prepare_combined_gate_validation, prepare_activation_decision_review, and keep_blocked_no_action as unselected.
+- path: data/token-block/stage5de-real-approval-noncreation-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE proof that no real approval record was created.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps real operator approval, approval gate, combined gate, and activation false.
+- path: data/token-block/stage5de-combined-gate-non-satisfaction-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE proof that approval and combined gates remain unsatisfied.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records approval_gate_satisfied_now and combined_approval_gate_satisfied_now false.
+- path: data/token-block/stage5de-activation-decision-nonauthorization-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE proof that activation and active planning input remain unauthorized.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps activation decision invalid, activation unauthorized, active planning input unselected, and dry-run ingestion unauthorized.
+- path: data/token-block/stage5de-real-record-creation-boundary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE real-record creation boundary.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Lists nine blocked real record classes and records future_real_records_created_now false.
+- path: data/token-block/stage5de-stage5bd-plan-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE Stage 5BD dry-run plan preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves exactly 10 Stage 5BD run-plan IDs and records no plan supersession.
+- path: data/token-block/stage5de-active-lineage-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE active-lineage preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves eight active-lineage records, includes the corrected Stage 5AW path, and keeps the deprecated path absent.
+- path: data/token-block/stage5de-no-active-ingestion-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE no-active-ingestion proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps String 4 inactive, active planning input unauthorized and unselected, and active manifest registry unchanged.
+- path: data/token-block/stage5de-no-byte-stream-transition-gate.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE no-byte-stream transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps byte-stream generation, variant materialisation, branch enumeration, and Cartesian enumeration unauthorized.
+- path: data/token-block/stage5de-no-execution-transition-gate.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE no-execution transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps token-block execution, DWH/hash search, decode, scoring, CUDA, benchmarks, stego, image/OCR/AI work, website expansion, method upgrades, canonical corpus activation, and page-boundary finalisation false.
+- path: data/source-harvester/stage5de-codex-handoff-policy.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE codex-output handoff policy record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Requires the ignored hyphenated codex-output completion summary and keeps deprecated codex_output unused.
+- path: data/source-harvester/stage5de-credential-redaction-policy-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DE credential-redaction policy preservation record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records that credential-like remote values and secrets are not printed or committed.
+- path: docs/onboarding/stage5de-real-operator-approval-preparation-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5DE real operator approval preparation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, preparation-only package semantics, closed gates, Stage 5BD and active-lineage preservation, handoff continuity, and Stage 5DF review routing.
+- path: docs/experiments/stage-5de-real-operator-approval-preparation.md
+  category: operational_status_doc
+  purpose: Stage 5DE metadata-only experiment-boundary documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: States that Stage 5DE is not real approval creation, activation, active-input selection, byte-stream generation, execution, CUDA, scoring, target validation, or solve evidence.
+- path: docs/development-logs/2026-06-04-stage-5de-real-operator-approval-preparation.md
+  category: historical_log
+  purpose: Stage 5DE implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation phases, validation commands, raw/generated staging checks, GitHub issue handling, commit, push, and CI evidence.
+- path: research-log/2026-06-04-stage-5de-next-stage-decision-summary.md
+  category: historical_log
+  purpose: Stage 5DE summary-only research log and Stage 5DF next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5de
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: research_operator
+  notes: Summarizes Stage 5DD warning integration, Stage 5DC selected-option preservation, preparation package, future approval requirements, closed gates, preserved Stage 5BD records, and review-only next-stage rationale.

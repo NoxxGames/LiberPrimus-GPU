@@ -70,7 +70,14 @@ def select_pytest_mode(requested_mode: str) -> tuple[str, bool, bool]:
     xdist = pytest_xdist_available()
     mode = requested_mode
     if requested_mode == "auto":
-        mode = "xdist" if xdist else "shard"
+        # Several stage-builder tests regenerate shared YAML/schema files. On
+        # Windows, xdist can make readers observe transient file-access
+        # contention even though writes are atomic. File-level shards keep the
+        # 8-worker local validation path parallel while avoiding that race.
+        if sys.platform.startswith("win"):
+            mode = "shard"
+        else:
+            mode = "xdist" if xdist else "shard"
     if mode == "xdist" and not xdist:
         mode = "shard"
     return mode, xdist, mode == "shard"
