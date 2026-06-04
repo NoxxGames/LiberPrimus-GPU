@@ -1,6 +1,6 @@
 # Cipher Catalog
 
-Stage 5DA does not change cipher-family status. It integrates the Stage 5CZ review, preserves Stage 5CY option-selection preflight, preserves Stage 5CU negative-fixture metadata, preserves Stage 5CS operator-decision readiness/options records, creates only a review-only operator choice / pause scaffold, preserves Stage 5CM/5CK/5CI/5CG/5CE/5CC/5BD guardrails, reaffirms DWH quarantine, preserves the 8-worker local parallel validation cap, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.
+Stage 5DC does not change cipher-family status. It integrates the Stage 5DB review, selects the operator option `prepare_real_operator_approval_record`, preserves the other five Stage 5CS options unselected, preserves Stage 5DA/5CY/5CU/5CS and Stage 5CM/5CK/5CI/5CG/5CE/5CC/5BD guardrails, reaffirms DWH quarantine, preserves the 8-worker local parallel validation cap, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.
 
 Stage 5CW does not change cipher-family status. It integrates the Stage 5CV review, preserves Stage 5CU negative-fixture metadata, preserves Stage 5CS operator-decision readiness/options records and Stage 5CQ/Stage 5CO approval-readiness metadata, creates only review-only real-decision package preflight and preflight misuse-validation metadata, preserves Stage 5CM/5CK/5CI/5CG/5CE/5CC/5BD guardrails, reaffirms DWH quarantine, preserves the 8-worker local parallel validation cap, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.
 

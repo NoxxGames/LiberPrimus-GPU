@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DA operator choice / pause decision record scaffold is complete.
+Stage 5DC operator choice decision record selecting `prepare_real_operator_approval_record` is complete.
 
-Next recommended prompt: Stage 5DB - Deep Research review of Stage 5DA operator choice / pause decision scaffold, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DD - Deep Research review of Stage 5DC operator choice selecting `prepare_real_operator_approval_record`, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DC
+
+Stage 5DC consumes the Stage 5DB `accept_with_warnings` review outcome as compact metadata and records the explicit operator choice `prepare_real_operator_approval_record`. It preserves the Stage 5DA choice/pause scaffold, the Stage 5CY option-selection preflight, and the exact Stage 5CS six-option set with exactly one selected option and five unselected options.
+
+Local Stage 5DC summary: Stage 5DB verdict `accept_with_warnings`, operator choice/pause record created now `true`, operator choice/pause record valid now `true`, explicit operator choice provided now `true`, selected option ID `prepare_real_operator_approval_record`, selected option count `1`, unselected option count `5`, explicit pause selected now `false`, real operator approval record created now `false`, Deep Research acceptance record created now `false`, combined approval gate satisfied now `false`, activation authorized now `false`, active-planning input selected now `false`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, no-active-ingestion status `closed`, no-byte-stream transition gate `closed`, no-execution transition gate `closed`, parallel worker cap `8`, `codex-output/stage5dc-codex-completion.md` written locally `true`, generated outputs committed `false`, `codex_output` used `false`, and next stage `Stage 5DD`.
+
+Stage 5DC is metadata-only. It creates a valid operator choice/pause decision record selecting the path toward a future real operator approval record package, but it does not create a real operator approval record, create a Deep Research acceptance record, satisfy the combined gate, validate or authorize activation, authorize or select active planning input, activate or ingest String 4, mutate Stage 5BD plans or active lineage, supersede manifests, generate byte streams, materialise variants, run token-block work, DWH/hash/preimage search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DA
 

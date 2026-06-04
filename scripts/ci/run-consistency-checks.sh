@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5DA" \
-    --expected-next-stage "Stage 5DB" \
+    --expected-latest-stage "Stage 5DC" \
+    --expected-next-stage "Stage 5DD" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5DA" \
-    --expected-next-stage "Stage 5DB" \
+    --expected-latest-stage "Stage 5DC" \
+    --expected-next-stage "Stage 5DD" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DA",
+            expected_latest_stage="Stage 5DC",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DA",
+            "expected_latest_stage": "Stage 5DC",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -2984,6 +2984,40 @@ git check-ignore -q "$stage5da_token_results_root/warnings.jsonl"
 git check-ignore -q "codex-output/stage5da-codex-completion.md"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5DA" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5DC operator choice decision records"
+"$python_bin" -m libreprimus.cli token-block build-stage5dc
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-stage5db-findings
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-choice-decision
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-selected-option
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-nonselected-options
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-explicit-pause-nonselection
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-real-approval-noncreation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-combined-gate
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-activation-nonauthorization
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-real-record-boundary
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-stage5cy-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-stage5da-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-stage5bd-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-active-lineage-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-handoff-continuity
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-governance-scope-control
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc-credential-redaction-policy
+"$python_bin" -m libreprimus.cli token-block validate-stage5dc
+"$python_bin" -m libreprimus.cli token-block stage5dc-summary
+stage5dc_token_results_root="experiments"/"results"/"token-block"/"stage5dc"
+git check-ignore -q "$stage5dc_token_results_root/summary.json"
+git check-ignore -q "$stage5dc_token_results_root/choice_decision_report.json"
+git check-ignore -q "$stage5dc_token_results_root/selected_option_report.json"
+git check-ignore -q "$stage5dc_token_results_root/preservation_report.json"
+git check-ignore -q "$stage5dc_token_results_root/handoff_continuity_report.json"
+git check-ignore -q "$stage5dc_token_results_root/warnings.jsonl"
+git check-ignore -q "codex-output/stage5dc-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5DC" >&2
     exit 1
 fi
 

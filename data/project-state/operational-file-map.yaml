@@ -4349,3 +4349,146 @@ records:
   staleness_check_level: historical
   owner_context: research_operator
   notes: Summarizes Stage 5CZ warning integration, choice/pause scaffold, nonselection proof, Stage 5CY preservation, closed gates, preserved Stage 5BD records, and review-only next-stage rationale without Deep Research body content.
+- path: data/project-state/stage5dc-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DC compact summary and current boundary record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records the Stage 5DB verdict, selected option prepare_real_operator_approval_record, explicit pause unselected, real approval/acceptance/gate/activation absent, Stage 5BD preservation, active-lineage preservation, and Stage 5DD next-stage routing.
+- path: data/project-state/stage5dc-next-stage-decision.yaml
+  category: operational_status_doc
+  purpose: Stage 5DC next-stage decision selecting Stage 5DD review.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Requires Stage 5DD review before any future real operator approval record, activation, active-input selection, byte-stream stage, or execution-adjacent stage.
+- path: data/project-state/stage5dc-stage5db-findings-integration.yaml
+  category: operational_status_doc
+  purpose: Stage 5DC integration record for the Stage 5DB accept-with-warnings review.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Consumes Stage 5DB review metadata without committing Deep Research body text.
+- path: data/project-state/stage5dc-governance-scope-control.yaml
+  category: operational_status_doc
+  purpose: Stage 5DC governance-overbuild boundary and anti-generic-preflight record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records that Stage 5DC is a narrow selected-choice stage and does not add generic preflight layers without a concrete defect.
+- path: data/token-block/stage5dc-operator-choice-decision-record.yaml
+  category: operational_status_doc
+  purpose: Stage 5DC real operator choice/pause decision record selecting prepare_real_operator_approval_record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Creates the choice record while opening no approval, activation, active-input, byte, or execution gate.
+- path: data/token-block/stage5dc-selected-option-record.yaml
+  category: operational_status_doc
+  purpose: Stage 5DC selected option semantics for prepare_real_operator_approval_record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records future_action_class record_preparation_only and every authorization flag false.
+- path: data/token-block/stage5dc-unselected-options-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DC proof that the other five Stage 5CS options remain unselected.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves defer_for_more_review, prepare_real_deep_research_acceptance_record, prepare_combined_gate_validation, prepare_activation_decision_review, and keep_blocked_no_action as unselected.
+- path: data/token-block/stage5dc-stage5bd-plan-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DC Stage 5BD dry-run plan preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves exactly 10 Stage 5BD run-plan IDs and records no plan supersession.
+- path: data/token-block/stage5dc-active-lineage-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DC active-lineage preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves 8 active-lineage records and keeps the deprecated Stage 5AW path absent.
+- path: docs/onboarding/stage5dc-operator-choice-record-workflow.md
+  category: operational_status_doc
+  purpose: Human review workflow for Stage 5DC operator choice record selection.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents focused validators, selected option semantics, unselected-option preservation, no-active/no-byte/no-execution gates, handoff continuity, and Stage 5DD review routing.
+- path: docs/experiments/stage-5dc-operator-choice-record.md
+  category: operational_status_doc
+  purpose: Stage 5DC metadata-only experiment-boundary documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: States that Stage 5DC is not approval, activation, active-input selection, byte-stream generation, CUDA, scoring, or solve evidence.
+- path: docs/development-logs/2026-06-04-stage-5dc-operator-choice-record.md
+  category: historical_log
+  purpose: Stage 5DC implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation phases, validation commands, raw/generated staging checks, GitHub issue handling, commit, push, and CI evidence.
+- path: research-log/2026-06-04-stage-5dc-next-stage-decision-summary.md
+  category: historical_log
+  purpose: Stage 5DC summary-only research log and Stage 5DD next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dc
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: research_operator
+  notes: Summarizes Stage 5DB warning integration, selected operator option, preservation records, closed gates, preserved Stage 5BD records, and review-only next-stage rationale without Deep Research body content.

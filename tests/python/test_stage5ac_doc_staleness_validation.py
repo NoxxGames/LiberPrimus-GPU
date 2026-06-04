@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5da_latest_and_stage5db_next() -> None:
+def test_operational_docs_use_stage5dc_latest_and_stage5dd_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5DA operator choice / pause decision record scaffold" in status
-    assert "Next recommended prompt: Stage 5DB" in status
-    assert "Latest completed stage: Stage 5DA" in staged_plan
-    assert "Current planning focus: Stage 5DB" in staged_plan
+    assert "Stage 5DC operator choice decision record selecting" in status
+    assert "Next recommended prompt: Stage 5DD" in status
+    assert "Latest completed stage: Stage 5DC" in staged_plan
+    assert "Current planning focus: Stage 5DD" in staged_plan

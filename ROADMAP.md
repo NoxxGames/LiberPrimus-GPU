@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5DB - Deep Research review of Stage 5DA operator choice / pause decision scaffold, without execution.
+Current next prompt: Stage 5DD - Deep Research review of Stage 5DC operator choice selecting `prepare_real_operator_approval_record`, without execution.
 
-Stage 5DA is complete as metadata-only operator choice / pause scaffold work. It consumes Stage 5CZ warnings, preserves Stage 5CY and prior operator-decision layers, preserves the Stage 5CS six unselected decision options, records that no operator choice or explicit pause was selected, and keeps String 4 inactive with all token-block execution blocked.
+Stage 5DC is complete as metadata-only operator choice work. It consumes Stage 5DB warnings, selects the Stage 5CS option `prepare_real_operator_approval_record`, preserves the other five options unselected, records no explicit pause selected, creates no real approval/acceptance/gate/activation record, and keeps String 4 inactive with all token-block execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DA operator choice / pause decision record scaffold is complete. It consumes the Stage 5CZ accept-with-warnings review outcome, keeps Stage 5CY, Stage 5CW, Stage 5CU, Stage 5CS, Stage 5CQ, Stage 5CO, Stage 5CM, Stage 5CK, Stage 5CI, Stage 5CG, Stage 5CE, Stage 5CC, and Stage 5BD records preserved, creates only a scaffold for a future explicit operator choice or explicit pause, creates no real decision/approval/acceptance/gate/activation records, selects no option or pause, preserves Stage 5BD run-plan IDs, preserves the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
+Stage 5DC operator choice decision record is complete. It consumes the Stage 5DB accept-with-warnings review outcome, keeps Stage 5DA, Stage 5CY, Stage 5CW, Stage 5CU, Stage 5CS, Stage 5CQ, Stage 5CO, Stage 5CM, Stage 5CK, Stage 5CI, Stage 5CG, Stage 5CE, Stage 5CC, and Stage 5BD records preserved, records the explicit selected option `prepare_real_operator_approval_record`, creates no real approval/acceptance/combined-gate/activation records, preserves Stage 5BD run-plan IDs, preserves the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
 
-The next recommended prompt is Stage 5DB - Deep Research review of Stage 5DA operator choice / pause decision scaffold, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DD - Deep Research review of Stage 5DC operator choice selecting `prepare_real_operator_approval_record`, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.
