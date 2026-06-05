@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5DK - Target-priority decision package, without execution.
+Current next prompt: Stage 5DL - Target-priority decision package, without execution.
 
-Stage 5DJ is complete as metadata-only CicadaMusic source-lock and music-clue pivot-integration work. It preserves the Stage 5DG operator approval record and operator-approval component, source-locks the ignored local CicadaMusic MP3/PDF cache as compact hashes and safe header metadata, adds `music_3301_instar_crab_canon_v0` as an unselected seventh pivot option, and keeps String 4 inactive with all token-block execution blocked.
+Stage 5DK is complete as metadata-only Fandom source-lock gap closure and Page 56 hash-contract refinement work. It records 14 Fandom source locks or reviewable metadata gaps, corrects malformed older index URLs, quarantines the speculative harmonic-key source, preserves the Page 56 512-bit hash as a target with unknown algorithm/preimage, preserves Stage 5DG operator approval plus Stage 5BD/active-lineage gates, and keeps String 4 inactive with all token-block execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DJ CicadaMusic source-lock and music-clue pivot integration is complete. It preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, records 7 local music files, 4 MP3 metadata locks, 3 PDF metadata locks, the `music_3301_instar_crab_canon_v0` candidate family, 7 unselected pivot options, Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
+Stage 5DK Fandom source-lock gap closure and Page 56 hash-contract refinement is complete. It preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, records 14 Fandom source-lock records, the Page 56 512-bit hash contract with unknown algorithm/preimage, 7 unselected pivot options, Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
 
-The next recommended prompt is Stage 5DK - Target-priority decision package, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DL - Target-priority decision package, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

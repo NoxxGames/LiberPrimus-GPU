@@ -1,0 +1,598 @@
+stage_id: stage-5dk
+stage_title: Stage 5DK - Fandom source-lock gap closure and Page 56 hash-contract
+  refinement
+record_type: stage5dk_fandom_source_lock_register
+source_previous_stage_id: stage-5dj
+source_previous_stage_commit: afed8e46fffb771ce923339719a2a54da508cc6e
+source_previous_stage_github_issue: 145
+source_previous_stage_ci_run: 27001720075
+source_previous_stage_pytest_count: 2605
+recommended_next_stage_id: stage-5dl
+recommended_next_stage_title: Stage 5DL - Target-priority decision package, without
+  execution
+parallel_worker_cap: 8
+website_expansion_performed: false
+active_token_block_manifest_changed: false
+page56_hash_algorithm_known: false
+target_priority_decision_created_now: false
+operator_approval_alone_authorizes_byte_stream_generation: false
+operator_target_priority_decision_created_now: false
+combined_gate_satisfied: false
+operator_approval_alone_authorizes_execution: false
+real_deep_research_acceptance_record_created_now: false
+execution_performed: false
+fandom_images_committed: false
+stage5bd_run_plan_ids_changed: false
+token_block_transform_performed_now: false
+operator_approval_alone_authorizes_active_planning_input: false
+scoring_performed: false
+codex_output_used: false
+page56_hash_preimage_known: false
+openpuff_execution_performed: false
+combined_approval_gate_authorizes_activation_now: false
+active_planning_input_authorized_now: false
+operator_approval_alone_satisfies_combined_gate: false
+active_ingestion_authorized: false
+target_selected_now: false
+new_active_planning_input_created: false
+combined_approval_gate_satisfied_now: false
+variant_byte_streams_generated: false
+tor_network_access_performed: false
+deep_research_approval_component_satisfied: false
+route_extraction_performed_now: false
+image_forensics_performed: false
+pgp_message_interpreted_as_target: false
+page56_hash_preimage_candidate_tested_now: false
+stego_tool_execution_performed: false
+meaning_claimed_now: false
+new_real_operator_approval_record_created_in_stage5di: false
+method_status_upgraded: false
+approval_gate_satisfied_now: false
+music_experiment_authorized: false
+activation_authorized_now: false
+pivot_target_selected_now: false
+raw_body_committed: false
+canonical_corpus_activated: false
+target_class_selected_now: false
+execution_authorized: false
+stage5dk_authorizes_page32_experiment_now: false
+approval_gate_authorizes_activation_now: false
+unsolved_page_execution_performed: false
+activation_decision_created_now: false
+active_ingestion_performed: false
+string4_added_to_stage5bd_run_plan_ids: false
+execution_allowed: false
+old_16_worker_default_reintroduced: false
+manifest_supersession_performed: false
+active_planning_input_selected_now: false
+real_byte_stream_generated: false
+deep_research_acceptance_component_satisfied_now: false
+ai_ml_interpretation_performed: false
+activation_decision_valid_now: false
+experiments_authorized_now: false
+stage5dk_authorizes_music_experiment_now: false
+page_boundaries_finalized: false
+mp3stego_execution_performed: false
+stage5dk_selects_target_priority_now: false
+image_ocr_performed: false
+route_extraction_performed: false
+cuda_execution_performed: false
+experiment_executed_now: false
+future_real_records_created_now: false
+operator_approval_alone_authorizes_activation: false
+canonical_transcription_changed: false
+page56_hash_algorithm_selected_now: false
+fandom_raw_html_committed: false
+stage5dk_authorizes_token_block_experiment_now: false
+canonical_corpus_active: false
+raw_fandom_body_committed: false
+triangle_experiment_authorized: false
+string4_added_to_active_dry_run_inputs: false
+manifest_supersession_authorized_now: false
+stage5bd_dry_run_plan_manifest_changed: false
+real_operator_approval_record_created_now: false
+ocr_performed: false
+variant_materialisation_performed: false
+generated_outputs_committed: false
+worker_cap_16_allowed: false
+token_block_experiment_executed: false
+string4_sidecar_planning_ingestion_activated: false
+polar_route_extraction_performed_now: false
+source_bodies_committed: false
+active_planning_input_authorized: false
+active_planning_input_selected: false
+execution_authorized_now: false
+string4_sidecar_active: false
+activation_authorized: false
+branch_enumeration_performed: false
+full_cartesian_product_enumerated: false
+string4_execution_input_allowed: false
+byte_stream_generation_authorized: false
+string4_dry_run_ingestion_allowed_now: false
+active_manifest_registry_updated: false
+stage5bd_plan_superseded: false
+experiment_authorized_now: false
+string4_byte_stream_generation_allowed: false
+decode_attempt_performed: false
+hash_preimage_search_performed: false
+dry_run_ingestion_authorized_now: false
+historical_route_execution_performed: false
+target_class_validation_implemented: false
+triangle_route_extraction_performed_now: false
+raw_webpage_bodies_committed: false
+byte_stream_generation_authorized_now: false
+activation_decision_valid: false
+dwh_hash_search_performed: false
+string4_active_input_allowed: false
+solve_claim: false
+page32_tree_experiment_authorized: false
+stage5dk_authorizes_experiment_now: false
+stage5dk_authorizes_triangle_experiment_now: false
+benchmark_performed: false
+byte_stream_generated: false
+deep_research_acceptance_record_created_now: false
+deep_research_activation_accept_record_present_now: false
+page56_hash_preimage_candidate_generated_now: false
+cuda_performed: false
+codex_output_canonical: true
+credential_redaction_policy_preserved: true
+fandom_source_locks_created: true
+metadata_only: true
+no_byte_stream_gate_closed: true
+no_execution_gate_closed: true
+operator_approval_component_satisfied_now: true
+page56_hash_contract_refined: true
+stage5bd_dry_run_records_remain_valid: true
+stage5dg_operator_approval_preserved: true
+stage5dj_preserved: true
+fandom_source_count: 14
+fandom_source_count_expected: 14
+sources:
+- source_position: 1
+  source_key: what_happened_2012
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_(2012)
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_(2012)
+  source_title: What Happened (2012)
+  source_category: historical_timeline
+  trust_tier: A2
+  source_lock_confidence: medium
+  prior_source_index_status: older_stage5aj_index_only_now_stage5dk_locked
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_(2012
+  old_index_url_malformed_or_truncated: true
+  stage5dk_canonical_url_corrected: true
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: b8b51a618062f3d00168d64d7dc4b73b217e4981a0bc398e20dc635b3f611510
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:24Z'
+  http_status: 200
+  api_title: What Happened (2012)
+  revision_id: 44625
+  revision_parent_id: 44624
+  revision_timestamp: '2026-03-21T17:58:11Z'
+  normalized_body_sha256: 9df89d1094e4c16a51cc3c792903982703891cad54ae10109a833c21dffd15a3
+  normalized_body_length: 46912
+  compact_source_digest_sha256: 7c895213c4b2efb88cfe76018219369a26e9f029c70342988632d57371671806
+- source_position: 2
+  source_key: what_happened_part_1_2013
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2013)
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2013)
+  source_title: What Happened Part 1 (2013)
+  source_category: historical_timeline
+  trust_tier: A2
+  source_lock_confidence: medium
+  prior_source_index_status: older_stage5aj_index_only_now_stage5dk_locked
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2013
+  old_index_url_malformed_or_truncated: true
+  stage5dk_canonical_url_corrected: true
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: d0a0472ae8c4167a4421998f16b537f687bff1bd8c433883fb9e67bb59744dd5
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:24Z'
+  http_status: 200
+  api_title: What Happened Part 1 (2013)
+  revision_id: 44205
+  revision_parent_id: 42678
+  revision_timestamp: '2024-09-01T18:11:22Z'
+  normalized_body_sha256: 4ed12d8f80f8b2d8c1527658c318768f32935f0a5553985953a22037d34ab92c
+  normalized_body_length: 24397
+  compact_source_digest_sha256: decfdeae9f80e082ea06d0c772ec0ca8028b7e6e59edf9c61050b16faccb9887
+- source_position: 3
+  source_key: what_happened_part_1_2014
+  source_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014)
+  source_title: What Happened Part 1 (2014)
+  source_category: historical_timeline
+  trust_tier: A2
+  source_lock_confidence: medium
+  prior_source_index_status: older_stage5aj_index_only_now_stage5dk_locked
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/What_Happened_Part_1_(2014
+  old_index_url_malformed_or_truncated: true
+  stage5dk_canonical_url_corrected: true
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: 6915898ea03c09be60bd8240c0a15b09310f14409f57e52802db4e88140f0acb
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:24Z'
+  http_status: 200
+  api_title: What Happened Part 1 (2014)
+  revision_id: 44290
+  revision_parent_id: 44207
+  revision_timestamp: '2025-07-16T10:22:26Z'
+  normalized_body_sha256: fc98b4d033cc655096d8882540e73be879f73c8fbfca6452a46015666d892fea
+  normalized_body_length: 48768
+  compact_source_digest_sha256: b2bab9e370b149d93255a557b3c5bd28524855a3530a4830ee3f3c1d671dc2bc
+- source_position: 4
+  source_key: twitter_2015_message
+  source_url: https://uncovering-cicada.fandom.com/wiki/2015_Twitter_Message
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/2015_Twitter_Message
+  source_title: 2015 Twitter Message
+  source_category: signed_message_context
+  trust_tier: A2
+  source_lock_confidence: medium
+  prior_source_index_status: older_stage5aj_index_only_now_stage5dk_locked
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/2015_Twitter_Message
+  old_index_url_malformed_or_truncated: false
+  stage5dk_canonical_url_corrected: false
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: 624099c46de45fb60e52f1ac64c4dcc276969cbcb45005e50d4e6efae82ba5c0
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:25Z'
+  http_status: 200
+  api_title: 2015 Twitter Message
+  revision_id: 43735
+  revision_parent_id: 43734
+  revision_timestamp: '2022-05-01T10:00:54Z'
+  normalized_body_sha256: 7f487fb9244cadbc95574840bf5a35db748b1a381a899d554bfa6abd988d7c83
+  normalized_body_length: 17339
+  compact_source_digest_sha256: 4778d8be29e6e8b9e39bff0788750b1e4779cc5cdb03b28ca100faf452b0ac0c
+- source_position: 5
+  source_key: message_2016
+  source_url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  source_title: 2016 Message
+  source_category: signed_message_context
+  trust_tier: A1
+  source_lock_confidence: high
+  prior_source_index_status: already_stage5di_source_locked_and_stage5dk_refreshed_or_cross_referenced
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  old_index_url_malformed_or_truncated: false
+  stage5dk_canonical_url_corrected: false
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: 45d0181f8e144aebe251695f862b9fc73fca3479b875758fcfabf47b62d51616
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:25Z'
+  http_status: 200
+  api_title: 2016 Message
+  revision_id: 44208
+  revision_parent_id: 44161
+  revision_timestamp: '2024-09-01T22:56:05Z'
+  normalized_body_sha256: b07fe8bc0b63c70e6e54ebf93fa18c4a0e4dd181246f5f679408a6025222dae5
+  normalized_body_length: 5759
+  compact_source_digest_sha256: 84ffae2b36e482248ac3f915f3144e1beb6258d0b886645c999827f5d1698715
+- source_position: 6
+  source_key: pgp_2017_message
+  source_url: https://uncovering-cicada.fandom.com/wiki/PGP_Signed_Message_April_2017
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/PGP_Signed_Message_April_2017
+  source_title: PGP Signed Message April 2017
+  source_category: signed_message_context
+  trust_tier: A2
+  source_lock_confidence: medium
+  prior_source_index_status: already_stage5di_source_locked_and_stage5dk_refreshed_or_cross_referenced
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/PGP_Signed_Message_April_2017
+  old_index_url_malformed_or_truncated: false
+  stage5dk_canonical_url_corrected: false
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: 1e343d72976b7d76ad090d08baa8558858c72be53c3d846164fda790b6d8c367
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:25Z'
+  http_status: 200
+  api_title: PGP Signed Message April 2017
+  revision_id: 42639
+  revision_parent_id: 42528
+  revision_timestamp: '2021-07-18T02:35:06Z'
+  normalized_body_sha256: 5473272113cf84c29cddebf3777e4e905dca192db23f7cbce626d4267d7fc38f
+  normalized_body_length: 2895
+  compact_source_digest_sha256: 375b5ccbb84c336f8ef6eacdbefe0a1f00ef29d791451c7557eb072675cdd045
+- source_position: 7
+  source_key: frequency_analysis_unsolved_pages
+  source_url: https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_Unsolved_Pages
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_Unsolved_Pages
+  source_title: Frequency Analysis Unsolved Pages
+  source_category: liber_primus_method_context
+  trust_tier: A1
+  source_lock_confidence: high
+  prior_source_index_status: older_stage5aj_index_only_now_stage5dk_locked
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/Frequency_Analysis_Unsolved_Pages
+  old_index_url_malformed_or_truncated: false
+  stage5dk_canonical_url_corrected: false
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: 790541e1ae64ba95ef4209db3a0bfddf348117b870c7add9ceb95c41b3480b6b
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:26Z'
+  http_status: 200
+  api_title: Frequency Analysis Unsolved Pages
+  revision_id: 44191
+  revision_parent_id: 43873
+  revision_timestamp: '2024-03-24T14:36:59Z'
+  normalized_body_sha256: a094e97b7121e49af17fd4f2c3b7107a08a9b5c534efcf4188a24ce59cbc1297
+  normalized_body_length: 10429
+  compact_source_digest_sha256: 30339a8e99bb85025c4e2ec7a7f2749c97170e06c2faad635d1785afe084d1c2
+- source_position: 8
+  source_key: list_of_missing_information
+  source_url: https://uncovering-cicada.fandom.com/wiki/List_of_missing_information
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/List_of_missing_information
+  source_title: List of missing information
+  source_category: gap_register_context
+  trust_tier: A1
+  source_lock_confidence: high
+  prior_source_index_status: older_stage5aj_index_only_now_stage5dk_locked
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/List_of_missing_information
+  old_index_url_malformed_or_truncated: false
+  stage5dk_canonical_url_corrected: false
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: 29268dd70dc1ebab67d7961341a06384e5df13dd020fbc1fcdd66e3e3c29e704
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:26Z'
+  http_status: 200
+  api_title: List of missing information
+  revision_id: 44626
+  revision_parent_id: 44281
+  revision_timestamp: '2026-03-30T15:11:19Z'
+  normalized_body_sha256: 40fa3e5656d6fd8645255c18286375586b0be9503171963d721ebf62f8554f5d
+  normalized_body_length: 4843
+  compact_source_digest_sha256: e5c9c90b0e43d0c0cb19317c1f15126cf8b0ac51ed12f8591f68ea39cc8bbb80
+- source_position: 9
+  source_key: proposal_16_digit_harmonic_key
+  source_url: https://uncovering-cicada.fandom.com/wiki/PROPOSAL:_THE_16-DIGIT_HARMONIC_KEY_(2422826321411203)
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/PROPOSAL:_THE_16-DIGIT_HARMONIC_KEY_(2422826321411203)
+  source_title: 'PROPOSAL: THE 16-DIGIT HARMONIC KEY (2422826321411203)'
+  source_category: speculative_quarantine
+  trust_tier: C_quarantine
+  source_lock_confidence: quarantine
+  prior_source_index_status: older_stage5aj_index_only_now_stage5dk_locked
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/PROPOSAL:_THE_16-DIGIT_HARMONIC_KEY_(2422826321411203
+  old_index_url_malformed_or_truncated: true
+  stage5dk_canonical_url_corrected: true
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: 30d06ca5e3f036942ee9f61269f7c4541971b7089e8b11491e2e7e38f0241e4d
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:26Z'
+  http_status: 200
+  api_title: 'PROPOSAL: THE 16-DIGIT HARMONIC KEY (2422826321411203)'
+  revision_id: 44312
+  revision_parent_id: 0
+  revision_timestamp: '2026-03-02T11:16:02Z'
+  normalized_body_sha256: 14099cb1c71358422165183fddf99776bdc2d39fb40d7d49339c4d68fc1271d4
+  normalized_body_length: 7333
+  compact_source_digest_sha256: 8f66d02aed2d8e993017da5bb5821b5ad91dc7c07a229fe38a9dbff1693e30a0
+- source_position: 10
+  source_key: possible_hints_never_used
+  source_url: https://uncovering-cicada.fandom.com/wiki/Possible_hints_never_used
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/Possible_hints_never_used
+  source_title: Possible hints never used
+  source_category: unused_hint_context
+  trust_tier: A2
+  source_lock_confidence: medium
+  prior_source_index_status: older_duplicate_manifest_source_now_cross_referenced
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/Possible_hints_never_used
+  old_index_url_malformed_or_truncated: false
+  stage5dk_canonical_url_corrected: false
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: a0ce4f1d971731bd3cec29853886672802c17004efc8e7e687e0cd85c5befcf7
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:27Z'
+  http_status: 200
+  api_title: Possible hints never used
+  revision_id: 44622
+  revision_parent_id: 44178
+  revision_timestamp: '2026-03-18T22:01:10Z'
+  normalized_body_sha256: 6162a83f0dceff93022a5e80f3e1a525c5f5191ec80fa673a5e447a5ab2196f8
+  normalized_body_length: 8510
+  compact_source_digest_sha256: 5abb26b860202147c435e8969a41e5672004fe7c9415edef70d7b65eb0e5301b
+- source_position: 11
+  source_key: other_twitter_accounts
+  source_url: https://uncovering-cicada.fandom.com/wiki/Other_Twitter_Accounts_Associated_With_3301%27s_Emails
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/Other_Twitter_Accounts_Associated_With_3301%27s_Emails
+  source_title: Other Twitter Accounts Associated With 3301's Emails
+  source_category: associated_account_context
+  trust_tier: B
+  source_lock_confidence: medium
+  prior_source_index_status: older_stage5aj_index_only_now_stage5dk_locked
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/Other_Twitter_Accounts_Associated_With_3301%27s_Emails
+  old_index_url_malformed_or_truncated: false
+  stage5dk_canonical_url_corrected: false
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: 79c2aacd5221d533cc3af35475beec59b4df628dbbf3dc41cb1c52877febabf2
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:27Z'
+  http_status: 200
+  api_title: Other Twitter Accounts Associated With 3301's Emails
+  revision_id: 44311
+  revision_parent_id: 44135
+  revision_timestamp: '2026-02-22T15:03:08Z'
+  normalized_body_sha256: 1e70ffa2f1a65e9cbb96b2e7a27323be76b24aa1c95f3f9df2f32569602be370
+  normalized_body_length: 5927
+  compact_source_digest_sha256: ddfc22b23d811b5b47bc0a051751103a3e427df800a6c4c2bc478c3a4f938367
+- source_position: 12
+  source_key: solved_pages_methods
+  source_url: https://uncovering-cicada.fandom.com/wiki/How_the_solved_pages_of_the_Liber_Primus_were_solved
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/How_the_solved_pages_of_the_Liber_Primus_were_solved
+  source_title: How the solved pages of the Liber Primus were solved
+  source_category: liber_primus_method_context
+  trust_tier: A2
+  source_lock_confidence: medium
+  prior_source_index_status: older_duplicate_manifest_source_now_cross_referenced
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/How_the_solved_pages_of_the_Liber_Primus_were_solved
+  old_index_url_malformed_or_truncated: false
+  stage5dk_canonical_url_corrected: false
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: e0f801c57a67736a0f1bd6c42ba3b28efbe25f41ab0e07475939b70ac0ddb5b6
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:27Z'
+  http_status: 200
+  api_title: How the solved pages of the Liber Primus were solved
+  revision_id: 44306
+  revision_parent_id: 44305
+  revision_timestamp: '2025-10-30T01:23:35Z'
+  normalized_body_sha256: ade432ce06b77c9873238fc864b19d5ecd2803c80110aef798442a084a4d65c4
+  normalized_body_length: 30975
+  compact_source_digest_sha256: 966e4c69a63fc85c54620e1c5942c45a5e97ce07d9d22285bf07e47e2a5fcc51
+- source_position: 13
+  source_key: liber_primus
+  source_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus
+  source_title: Liber Primus
+  source_category: liber_primus_overview
+  trust_tier: A2
+  source_lock_confidence: medium
+  prior_source_index_status: older_stage5aj_index_only_now_stage5dk_locked
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/Liber_Primus
+  old_index_url_malformed_or_truncated: false
+  stage5dk_canonical_url_corrected: false
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: ab5474ec0c875c7066063dc08ee0cb0c9cb5c138f7336e1a98c4acf53dc28baf
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:27Z'
+  http_status: 200
+  api_title: Liber Primus
+  revision_id: 44163
+  revision_parent_id: 44142
+  revision_timestamp: '2024-03-11T22:45:51Z'
+  normalized_body_sha256: eb20975f5fc6bcc232d45500a7a1014c6c35ad50ee41745e75788d44cfc8ffce
+  normalized_body_length: 5743
+  compact_source_digest_sha256: c799acff33486c3579c5139244c91939eeac912b1e2ddc66a3f8528445a9d091
+- source_position: 14
+  source_key: page_56
+  source_url: https://uncovering-cicada.fandom.com/wiki/PAGE_56
+  canonical_url: https://uncovering-cicada.fandom.com/wiki/PAGE_56
+  source_title: PAGE 56
+  source_category: page56_dwh_hash_contract
+  trust_tier: A1
+  source_lock_confidence: high
+  prior_source_index_status: already_stage5di_source_locked_and_stage5dk_refreshed_or_cross_referenced
+  old_index_url: https://uncovering-cicada.fandom.com/wiki/PAGE_56
+  old_index_url_malformed_or_truncated: false
+  stage5dk_canonical_url_corrected: false
+  source_lock_role: reviewable_metadata_lock
+  raw_body_committed: false
+  raw_fandom_body_committed: false
+  raw_webpage_body_committed: false
+  usable_as_execution_input: false
+  target_selected_now: false
+  solve_claim: false
+  access_status: reachable
+  source_lock_status: compact_metadata_fetch_hash_locked
+  fandom_api_url_sha256: e3a3bebe5c7b57a1afdee21255a6c67799d1b8cf01cfb20b7208fb4f00b90a95
+  fetch_method: fandom_mediawiki_api
+  retrieved_at_utc: '2026-06-05T18:36:28Z'
+  http_status: 200
+  api_title: PAGE 56
+  revision_id: 44630
+  revision_parent_id: 43793
+  revision_timestamp: '2026-05-31T19:55:46Z'
+  normalized_body_sha256: f7e4a6d5527eae16a6caad20b2fb12bed686db1ad89dc705630a12bdd00a2dfe
+  normalized_body_length: 1189
+  compact_source_digest_sha256: 40461cca0cf2a06dbda9bb18cc69b31fe4d38b10829aa3fe9c254c114b34d60e

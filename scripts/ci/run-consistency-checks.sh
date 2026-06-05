@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5DJ" \
-    --expected-next-stage "Stage 5DK" \
+    --expected-latest-stage "Stage 5DK" \
+    --expected-next-stage "Stage 5DL" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5DJ" \
-    --expected-next-stage "Stage 5DK" \
+    --expected-latest-stage "Stage 5DK" \
+    --expected-next-stage "Stage 5DL" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DJ",
+            expected_latest_stage="Stage 5DK",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DJ",
+            "expected_latest_stage": "Stage 5DK",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3151,6 +3151,36 @@ git check-ignore -q "codex-output/stage5dj-codex-completion.md"
 git check-ignore -q "third_party/CicadaMusic/761.MP3"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5DJ" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5DK Fandom source-lock and Page 56 hash-contract records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk-fandom-source-locks
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk-existing-source-crosswalk
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk-page56-hash-contract
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk-pivot-readiness
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk-stage5dj-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk-stage5dg-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk-stage5bd-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk-active-lineage-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk-handoff-continuity
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk-credential-redaction-policy
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk-governance-scope
+"$python_bin" -m libreprimus.cli token-block validate-stage5dk
+"$python_bin" -m libreprimus.cli token-block stage5dk-summary
+stage5dk_token_results_root="experiments"/"results"/"token-block"/"stage5dk"
+git check-ignore -q "$stage5dk_token_results_root/summary.json"
+git check-ignore -q "$stage5dk_token_results_root/fandom_source_lock_report.json"
+git check-ignore -q "$stage5dk_token_results_root/existing_source_crosswalk_report.json"
+git check-ignore -q "$stage5dk_token_results_root/page56_hash_contract_report.json"
+git check-ignore -q "$stage5dk_token_results_root/pivot_readiness_report.json"
+git check-ignore -q "$stage5dk_token_results_root/preservation_report.json"
+git check-ignore -q "$stage5dk_token_results_root/handoff_continuity_report.json"
+git check-ignore -q "$stage5dk_token_results_root/warnings.jsonl"
+git check-ignore -q "codex-output/stage5dk-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5DK" >&2
     exit 1
 fi
 

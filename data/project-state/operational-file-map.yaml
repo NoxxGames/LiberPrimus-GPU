@@ -5856,3 +5856,135 @@ records:
   staleness_check_level: historical
   owner_context: research_operator
   notes: Summarizes CicadaMusic source-locks, pivot nonselection, preserved approval gates, and target-priority review routing.
+- path: data/project-state/stage5dk-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DK aggregate summary and next Stage 5DL routing.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dk
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records 14 Fandom source locks/gaps, Page 56 hash-contract state, preserved approval/gate counts, and no-execution boundaries.
+- path: data/source-harvester/stage5dk-fandom-source-lock-register.yaml
+  category: operational_status_doc
+  purpose: Stage 5DK Fandom source-lock register.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dk
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records 14 Fandom URLs with compact metadata; raw page bodies/images are not committed.
+- path: data/source-harvester/stage5dk-existing-source-index-crosswalk.yaml
+  category: operational_status_doc
+  purpose: Stage 5DK Stage 5AJ/5DI source-index crosswalk.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dk
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Cross-references Stage 5DI locks, older Stage 5AJ index-only rows, duplicate rows, and malformed/truncated URLs.
+- path: data/project-state/stage5dk-page56-hash-contract-refinement.yaml
+  category: operational_status_doc
+  purpose: Stage 5DK Page 56 hash-contract refinement.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dk
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves the 512-bit Page 56 hash target while keeping algorithm and preimage unknown.
+- path: data/project-state/stage5dk-pivot-readiness-update.yaml
+  category: operational_status_doc
+  purpose: Stage 5DK seven-option pivot-readiness update.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dk
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps all seven pivot options unselected and creates no target-priority decision.
+- path: data/token-block/stage5dk-stage5dj-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DK Stage 5DJ preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dk
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves Stage 5DJ without authorizing activation or execution.
+- path: data/token-block/stage5dk-stage5dg-operator-approval-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DK Stage 5DG operator-approval preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dk
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves operator approval only; Deep Research acceptance and combined gate remain unsatisfied.
+- path: data/token-block/stage5dk-stage5bd-plan-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DK Stage 5BD run-plan preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dk
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves exactly 10 Stage 5BD run-plan IDs.
+- path: data/token-block/stage5dk-active-lineage-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DK active-lineage preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dk
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves eight active-lineage records and the corrected Stage 5AW path.
+- path: docs/experiments/stage-5dk-fandom-source-lock-gap-closure.md
+  category: operational_status_doc
+  purpose: Human-readable Stage 5DK source-lock and hash-contract documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dk
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents records, counts, no-execution boundaries, and Stage 5DL routing.
+- path: docs/development-logs/2026-06-05-stage-5dk-fandom-source-lock-gap-closure.md
+  category: historical_log
+  purpose: Stage 5DK implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dk
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation scope, validation, metadata counts, and no-raw/generated staging boundaries.
+- path: research-log/2026-06-05-stage-5dk-fandom-source-lock-gap-closure-summary.md
+  category: historical_log
+  purpose: Stage 5DK summary-only research log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dk
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: research_operator
+  notes: Summarizes Fandom source locks, Page 56 hash-contract refinement, preserved gates, and Stage 5DL routing.

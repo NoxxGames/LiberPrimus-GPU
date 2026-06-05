@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DJ CicadaMusic source-lock and music-clue pivot integration is complete.
+Stage 5DK Fandom source-lock gap closure and Page 56 hash-contract refinement is complete.
 
-Next recommended prompt: Stage 5DK - Target-priority decision package, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DL - Target-priority decision package, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DK
+
+Stage 5DK source-locks the 14 required Uncovering Cicada/Fandom pages as compact metadata, cross-references prior Stage 5DI source locks and older Stage 5AJ index-only rows, records corrected canonical URLs for malformed/truncated older index rows, quarantines the speculative harmonic-key page, and writes reviewable Fandom fetch evidence without committing raw page bodies or images.
+
+Local Stage 5DK summary: Fandom source count `14`, Fandom source locks created `true`, Page 56 hash bits `512`, Page 56 algorithm known `false`, Page 56 preimage known `false`, pivot options `7`, pivot target selected `false`, Stage 5DG operator approval preserved `true`, combined gate satisfied `false`, activation authorized `false`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, execution authorized `false`, generated outputs committed `false`, raw Fandom bodies committed `false`, `codex_output` used `false`, and next stage `Stage 5DL`.
+
+Stage 5DK is metadata-only source-lock and hash-contract refinement infrastructure. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select target priority, select active planning input, generate byte streams, run target-class validation, use Tor/network route access, run DWH/hash/preimage search, decode, score, run CUDA tooling, benchmark, publish website content, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DJ
 

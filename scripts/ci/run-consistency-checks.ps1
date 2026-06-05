@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5DJ" `
-        --expected-next-stage "Stage 5DK" `
+        --expected-latest-stage "Stage 5DK" `
+        --expected-next-stage "Stage 5DL" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5DJ" `
-        --expected-next-stage "Stage 5DK" `
+        --expected-latest-stage "Stage 5DK" `
+        --expected-next-stage "Stage 5DL" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DJ",
+            expected_latest_stage="Stage 5DK",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DJ",
+            "expected_latest_stage": "Stage 5DK",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3052,6 +3052,33 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q "codex-output/stage5dj-codex-completion.md"
     git check-ignore -q "third_party/CicadaMusic/761.MP3"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DJ" }
+
+    Write-Host "Validating Stage 5DK Fandom source-lock and Page 56 hash-contract records"
+    & $Python -m libreprimus.cli token-block validate-stage5dk-fandom-source-locks
+    & $Python -m libreprimus.cli token-block validate-stage5dk-existing-source-crosswalk
+    & $Python -m libreprimus.cli token-block validate-stage5dk-page56-hash-contract
+    & $Python -m libreprimus.cli token-block validate-stage5dk-pivot-readiness
+    & $Python -m libreprimus.cli token-block validate-stage5dk-stage5dj-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dk-stage5dg-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dk-stage5bd-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dk-active-lineage-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dk-sidecar-gates
+    & $Python -m libreprimus.cli token-block validate-stage5dk-handoff-continuity
+    & $Python -m libreprimus.cli token-block validate-stage5dk-credential-redaction-policy
+    & $Python -m libreprimus.cli token-block validate-stage5dk-governance-scope
+    & $Python -m libreprimus.cli token-block validate-stage5dk
+    & $Python -m libreprimus.cli token-block stage5dk-summary
+    $Stage5DKTokenResultsRoot = Join-Path (Join-Path (Join-Path "experiments" "results") "token-block") "stage5dk"
+    git check-ignore -q (Join-Path $Stage5DKTokenResultsRoot "summary.json")
+    git check-ignore -q (Join-Path $Stage5DKTokenResultsRoot "fandom_source_lock_report.json")
+    git check-ignore -q (Join-Path $Stage5DKTokenResultsRoot "existing_source_crosswalk_report.json")
+    git check-ignore -q (Join-Path $Stage5DKTokenResultsRoot "page56_hash_contract_report.json")
+    git check-ignore -q (Join-Path $Stage5DKTokenResultsRoot "pivot_readiness_report.json")
+    git check-ignore -q (Join-Path $Stage5DKTokenResultsRoot "preservation_report.json")
+    git check-ignore -q (Join-Path $Stage5DKTokenResultsRoot "handoff_continuity_report.json")
+    git check-ignore -q (Join-Path $Stage5DKTokenResultsRoot "warnings.jsonl")
+    git check-ignore -q "codex-output/stage5dk-codex-completion.md"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DK" }
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

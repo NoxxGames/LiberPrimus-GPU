@@ -699,6 +699,24 @@ from .stage5dj import (
     validate_stage5dj_stage5bd_preservation,
     validate_stage5dj_stage5dg_preservation,
 )
+from .stage5dk import (
+    RESULTS_DIR as STAGE5DK_RESULTS_DIR,
+    build_stage5dk,
+    stage5dk_summary_text,
+    validate_stage5dk,
+    validate_stage5dk_active_lineage_preservation,
+    validate_stage5dk_credential_redaction_policy,
+    validate_stage5dk_existing_source_crosswalk,
+    validate_stage5dk_fandom_source_locks,
+    validate_stage5dk_governance_scope,
+    validate_stage5dk_handoff_continuity,
+    validate_stage5dk_page56_hash_contract,
+    validate_stage5dk_pivot_readiness,
+    validate_stage5dk_sidecar_gates,
+    validate_stage5dk_stage5bd_preservation,
+    validate_stage5dk_stage5dg_preservation,
+    validate_stage5dk_stage5dj_preservation,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -8255,6 +8273,150 @@ def stage5dj_summary_command(
     console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
     console.print(f"recommended_next_prompt_type={payload.get('recommended_next_prompt_type')}")
     console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+def _print_stage5dk_result(result: object, success_line: str) -> None:
+    text = result.to_cli_text()
+    console.print(text)
+    if getattr(result, "validation_error_count") != 0:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5dk")
+def build_stage5dk_command(
+    results_dir: Path = typer.Option(STAGE5DK_RESULTS_DIR),
+    no_fetch: bool = typer.Option(False, "--no-fetch"),
+) -> None:
+    _ = results_dir
+    records = build_stage5dk(fetch_web=not no_fetch)
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"fandom_source_count={summary.get('fandom_source_count')}")
+    console.print(
+        "fandom_source_locks_created="
+        f"{str(summary.get('fandom_source_locks_created')).lower()}"
+    )
+    console.print(f"page56_hash_bits={summary.get('page56_hash_bits')}")
+    console.print(f"page56_algorithm_known={str(summary.get('page56_algorithm_known')).lower()}")
+    console.print(f"page56_preimage_known={str(summary.get('page56_preimage_known')).lower()}")
+    console.print(f"pivot_target_selected={str(summary.get('pivot_target_selected')).lower()}")
+    console.print(
+        "stage5dg_approval_preserved="
+        f"{str(summary.get('stage5dg_approval_preserved')).lower()}"
+    )
+    console.print(f"combined_gate_satisfied={str(summary.get('combined_gate_satisfied')).lower()}")
+    console.print(f"activation_authorized={str(summary.get('activation_authorized')).lower()}")
+    console.print(f"stage5bd_run_plan_id_count={summary.get('stage5bd_run_plan_id_count')}")
+    console.print(f"active_lineage_record_count={summary.get('active_lineage_record_count')}")
+    console.print(f"execution_authorized={str(summary.get('execution_authorized')).lower()}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5dk-fandom-source-locks")
+def validate_stage5dk_fandom_source_locks_command() -> None:
+    _print_stage5dk_result(
+        validate_stage5dk_fandom_source_locks(),
+        "token_block_stage5dk_fandom_source_locks_valid=true",
+    )
+
+
+@app.command("validate-stage5dk-existing-source-crosswalk")
+def validate_stage5dk_existing_source_crosswalk_command() -> None:
+    _print_stage5dk_result(
+        validate_stage5dk_existing_source_crosswalk(),
+        "token_block_stage5dk_existing_source_crosswalk_valid=true",
+    )
+
+
+@app.command("validate-stage5dk-page56-hash-contract")
+def validate_stage5dk_page56_hash_contract_command() -> None:
+    _print_stage5dk_result(
+        validate_stage5dk_page56_hash_contract(),
+        "token_block_stage5dk_page56_hash_contract_valid=true",
+    )
+
+
+@app.command("validate-stage5dk-pivot-readiness")
+def validate_stage5dk_pivot_readiness_command() -> None:
+    _print_stage5dk_result(
+        validate_stage5dk_pivot_readiness(),
+        "token_block_stage5dk_pivot_readiness_valid=true",
+    )
+
+
+@app.command("validate-stage5dk-stage5dj-preservation")
+def validate_stage5dk_stage5dj_preservation_command() -> None:
+    _print_stage5dk_result(
+        validate_stage5dk_stage5dj_preservation(),
+        "token_block_stage5dk_stage5dj_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dk-stage5dg-preservation")
+def validate_stage5dk_stage5dg_preservation_command() -> None:
+    _print_stage5dk_result(
+        validate_stage5dk_stage5dg_preservation(),
+        "token_block_stage5dk_stage5dg_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dk-stage5bd-preservation")
+def validate_stage5dk_stage5bd_preservation_command() -> None:
+    _print_stage5dk_result(
+        validate_stage5dk_stage5bd_preservation(),
+        "token_block_stage5dk_stage5bd_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dk-active-lineage-preservation")
+def validate_stage5dk_active_lineage_preservation_command() -> None:
+    _print_stage5dk_result(
+        validate_stage5dk_active_lineage_preservation(),
+        "token_block_stage5dk_active_lineage_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dk-sidecar-gates")
+def validate_stage5dk_sidecar_gates_command() -> None:
+    _print_stage5dk_result(
+        validate_stage5dk_sidecar_gates(),
+        "token_block_stage5dk_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5dk-handoff-continuity")
+def validate_stage5dk_handoff_continuity_command() -> None:
+    _print_stage5dk_result(
+        validate_stage5dk_handoff_continuity(),
+        "token_block_stage5dk_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5dk-credential-redaction-policy")
+def validate_stage5dk_credential_redaction_policy_command() -> None:
+    _print_stage5dk_result(
+        validate_stage5dk_credential_redaction_policy(),
+        "token_block_stage5dk_credential_redaction_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5dk-governance-scope")
+def validate_stage5dk_governance_scope_command() -> None:
+    _print_stage5dk_result(
+        validate_stage5dk_governance_scope(),
+        "token_block_stage5dk_governance_scope_valid=true",
+    )
+
+
+@app.command("validate-stage5dk")
+def validate_stage5dk_command() -> None:
+    _print_stage5dk_result(validate_stage5dk(), "token_block_stage5dk_valid=true")
+
+
+@app.command("stage5dk-summary")
+def stage5dk_summary_command() -> None:
+    console.print(stage5dk_summary_text())
 
 
 def register(root_app: typer.Typer) -> None:

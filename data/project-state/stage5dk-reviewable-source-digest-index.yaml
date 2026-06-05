@@ -1,0 +1,253 @@
+stage_id: stage-5dk
+stage_title: Stage 5DK - Fandom source-lock gap closure and Page 56 hash-contract
+  refinement
+record_type: stage5dk_reviewable_source_digest_index
+source_previous_stage_id: stage-5dj
+source_previous_stage_commit: afed8e46fffb771ce923339719a2a54da508cc6e
+source_previous_stage_github_issue: 145
+source_previous_stage_ci_run: 27001720075
+source_previous_stage_pytest_count: 2605
+recommended_next_stage_id: stage-5dl
+recommended_next_stage_title: Stage 5DL - Target-priority decision package, without
+  execution
+parallel_worker_cap: 8
+website_expansion_performed: false
+active_token_block_manifest_changed: false
+page56_hash_algorithm_known: false
+target_priority_decision_created_now: false
+operator_approval_alone_authorizes_byte_stream_generation: false
+operator_target_priority_decision_created_now: false
+combined_gate_satisfied: false
+operator_approval_alone_authorizes_execution: false
+real_deep_research_acceptance_record_created_now: false
+execution_performed: false
+fandom_images_committed: false
+stage5bd_run_plan_ids_changed: false
+token_block_transform_performed_now: false
+operator_approval_alone_authorizes_active_planning_input: false
+scoring_performed: false
+codex_output_used: false
+page56_hash_preimage_known: false
+openpuff_execution_performed: false
+combined_approval_gate_authorizes_activation_now: false
+active_planning_input_authorized_now: false
+operator_approval_alone_satisfies_combined_gate: false
+active_ingestion_authorized: false
+target_selected_now: false
+new_active_planning_input_created: false
+combined_approval_gate_satisfied_now: false
+variant_byte_streams_generated: false
+tor_network_access_performed: false
+deep_research_approval_component_satisfied: false
+route_extraction_performed_now: false
+image_forensics_performed: false
+pgp_message_interpreted_as_target: false
+page56_hash_preimage_candidate_tested_now: false
+stego_tool_execution_performed: false
+meaning_claimed_now: false
+new_real_operator_approval_record_created_in_stage5di: false
+method_status_upgraded: false
+approval_gate_satisfied_now: false
+music_experiment_authorized: false
+activation_authorized_now: false
+pivot_target_selected_now: false
+raw_body_committed: false
+canonical_corpus_activated: false
+target_class_selected_now: false
+execution_authorized: false
+stage5dk_authorizes_page32_experiment_now: false
+approval_gate_authorizes_activation_now: false
+unsolved_page_execution_performed: false
+activation_decision_created_now: false
+active_ingestion_performed: false
+string4_added_to_stage5bd_run_plan_ids: false
+execution_allowed: false
+old_16_worker_default_reintroduced: false
+manifest_supersession_performed: false
+active_planning_input_selected_now: false
+real_byte_stream_generated: false
+deep_research_acceptance_component_satisfied_now: false
+ai_ml_interpretation_performed: false
+activation_decision_valid_now: false
+experiments_authorized_now: false
+stage5dk_authorizes_music_experiment_now: false
+page_boundaries_finalized: false
+mp3stego_execution_performed: false
+stage5dk_selects_target_priority_now: false
+image_ocr_performed: false
+route_extraction_performed: false
+cuda_execution_performed: false
+experiment_executed_now: false
+future_real_records_created_now: false
+operator_approval_alone_authorizes_activation: false
+canonical_transcription_changed: false
+page56_hash_algorithm_selected_now: false
+fandom_raw_html_committed: false
+stage5dk_authorizes_token_block_experiment_now: false
+canonical_corpus_active: false
+raw_fandom_body_committed: false
+triangle_experiment_authorized: false
+string4_added_to_active_dry_run_inputs: false
+manifest_supersession_authorized_now: false
+stage5bd_dry_run_plan_manifest_changed: false
+real_operator_approval_record_created_now: false
+ocr_performed: false
+variant_materialisation_performed: false
+generated_outputs_committed: false
+worker_cap_16_allowed: false
+token_block_experiment_executed: false
+string4_sidecar_planning_ingestion_activated: false
+polar_route_extraction_performed_now: false
+source_bodies_committed: false
+active_planning_input_authorized: false
+active_planning_input_selected: false
+execution_authorized_now: false
+string4_sidecar_active: false
+activation_authorized: false
+branch_enumeration_performed: false
+full_cartesian_product_enumerated: false
+string4_execution_input_allowed: false
+byte_stream_generation_authorized: false
+string4_dry_run_ingestion_allowed_now: false
+active_manifest_registry_updated: false
+stage5bd_plan_superseded: false
+experiment_authorized_now: false
+string4_byte_stream_generation_allowed: false
+decode_attempt_performed: false
+hash_preimage_search_performed: false
+dry_run_ingestion_authorized_now: false
+historical_route_execution_performed: false
+target_class_validation_implemented: false
+triangle_route_extraction_performed_now: false
+raw_webpage_bodies_committed: false
+byte_stream_generation_authorized_now: false
+activation_decision_valid: false
+dwh_hash_search_performed: false
+string4_active_input_allowed: false
+solve_claim: false
+page32_tree_experiment_authorized: false
+stage5dk_authorizes_experiment_now: false
+stage5dk_authorizes_triangle_experiment_now: false
+benchmark_performed: false
+byte_stream_generated: false
+deep_research_acceptance_record_created_now: false
+deep_research_activation_accept_record_present_now: false
+page56_hash_preimage_candidate_generated_now: false
+cuda_performed: false
+codex_output_canonical: true
+credential_redaction_policy_preserved: true
+fandom_source_locks_created: true
+metadata_only: true
+no_byte_stream_gate_closed: true
+no_execution_gate_closed: true
+operator_approval_component_satisfied_now: true
+page56_hash_contract_refined: true
+stage5bd_dry_run_records_remain_valid: true
+stage5dg_operator_approval_preserved: true
+stage5dj_preserved: true
+digest_record_count: 26
+digest_records:
+- record_key: active_lineage_preservation
+  record_path: data/token-block/stage5dk-active-lineage-preservation.yaml
+  record_sha256: eaebae1913dfc8fafef740c7b50694a7724ee9e3f2419f452084bb12a44d90ea
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: codex_handoff_policy
+  record_path: data/source-harvester/stage5dk-codex-handoff-policy.yaml
+  record_sha256: f1d0aa70adbc3234868c3be24fda778223454fca6e815792e76b9c65a3567279
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: credential_redaction_policy_preservation
+  record_path: data/source-harvester/stage5dk-credential-redaction-policy-preservation.yaml
+  record_sha256: a8fe0122811464c4bb5dbd0e16ca6a3509b06ba1ff8d62b2cefc797080b40aec
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: existing_source_index_crosswalk
+  record_path: data/source-harvester/stage5dk-existing-source-index-crosswalk.yaml
+  record_sha256: 75da8c95dbae645e4c53a37d48d4225014ffe4d80326e9cb65a67c7ed5cedeaa
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: fandom_source_classification
+  record_path: data/source-harvester/stage5dk-fandom-source-classification.yaml
+  record_sha256: ed73d01318b18574ca838d4101bfc4622a39ccdc6868eb18a8667730f6d00b6c
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: fandom_source_lock_gap_assessment
+  record_path: data/project-state/stage5dk-fandom-source-lock-gap-assessment.yaml
+  record_sha256: 2bfa8632f646bb3ca1ff1017c2d0d2466dc3a425da5916ef813f9dffd2f5be34
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: fandom_source_lock_register
+  record_path: data/source-harvester/stage5dk-fandom-source-lock-register.yaml
+  record_sha256: 5c9d665ae7666d5307febccb58d7fc00e6975a5673a993514c516daab69b1e27
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: history_source_lock
+  record_path: data/historical-route/stage5dk-2012-2014-history-source-lock.yaml
+  record_sha256: b40c3bee2226fc928a5d74eabff850955440db113468703402dbf1ff1d32b9a4
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: liber_primus_method_source_lock
+  record_path: data/historical-route/stage5dk-liber-primus-method-source-lock.yaml
+  record_sha256: 51ed42a390a9852b1ff6664d6d5854e74238146d6f88fbc7cde1766a31bab726
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: next_stage_decision
+  record_path: data/project-state/stage5dk-next-stage-decision.yaml
+  record_sha256: 44bd9659825b492e0452048b610dd4790ab86e9a7ceb76e45de224286abca5d7
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: no_active_ingestion_proof
+  record_path: data/token-block/stage5dk-no-active-ingestion-proof.yaml
+  record_sha256: 7beda47ae30b22bf7e80c106e21405b73248efde7c53154f4c1efc32d2e351a1
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: no_byte_stream_transition_gate
+  record_path: data/token-block/stage5dk-no-byte-stream-transition-gate.yaml
+  record_sha256: a3ee115c1fc41d43297cea73aab6648af30cd4337e89cd1f2b5573861ad6ec7f
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: no_execution_transition_gate
+  record_path: data/token-block/stage5dk-no-execution-transition-gate.yaml
+  record_sha256: e90cd7b2cc21e7691be581afb8b38ef614a58df0486117cfe452d1686761bd95
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: page56_dwh_hash_contract
+  record_path: data/historical-route/stage5dk-page56-dwh-hash-contract.yaml
+  record_sha256: dd2afe80f04b0bb19c2e964c13bbd920317bbeddf51306323eb9337f2e885e90
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: page56_hash_contract_refinement
+  record_path: data/project-state/stage5dk-page56-hash-contract-refinement.yaml
+  record_sha256: 302f2286164a0525deb64384ccf0b9493ffb9fef9bb36028652c559941525f29
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: pivot_readiness_update
+  record_path: data/project-state/stage5dk-pivot-readiness-update.yaml
+  record_sha256: eaaec3693339207daf2f938d6081ac669585fc6b0a2ab1f2edd856cd660345df
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: reviewability_gap_register
+  record_path: data/project-state/stage5dk-reviewability-gap-register.yaml
+  record_sha256: 200af36de231d9d545f6f25ba1d004bdd3926f77741c757d0790b052990ca057
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: reviewable_stage_marker
+  record_path: data/project-state/stage5dk-reviewable-stage-marker.yaml
+  record_sha256: 04cbae61e22b48ba85517e8446ac7e28436a9cab10eb5ea816c14cc0a1f519f5
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: reviewable_validation_evidence
+  record_path: data/project-state/stage5dk-reviewable-validation-evidence.yaml
+  record_sha256: 7ec42bfb97f5f27b48ab145a1eeba7e7267c15dc8fca2fff182f87f0d7b6476c
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: signed_message_source_lock
+  record_path: data/historical-route/stage5dk-2015-2017-signed-message-source-lock.yaml
+  record_sha256: 3e0d3db9218dc51bda457afa688f376949a912d4a1935ec0cf87a3e527671081
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: speculative_source_quarantine
+  record_path: data/historical-route/stage5dk-speculative-source-quarantine.yaml
+  record_sha256: fadd3ed9dec20915534c76f77f8661e67fb0387959a226e81a5cba5d7843a48d
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: stage5bd_plan_preservation
+  record_path: data/token-block/stage5dk-stage5bd-plan-preservation.yaml
+  record_sha256: 7e4a3cb4c9aa74787b258804c46ae093033079b9daa8c80e46f4c13a99e5b8b6
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: stage5dg_operator_approval_preservation
+  record_path: data/token-block/stage5dk-stage5dg-operator-approval-preservation.yaml
+  record_sha256: c932723ed0a1bd9aec530de717b8bd3751d59f42692ca402f13b8996d88a581c
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: stage5dj_preservation
+  record_path: data/token-block/stage5dk-stage5dj-preservation.yaml
+  record_sha256: ac30cb90edcb6e2338563b951ebcefe2ebf8f70bed8c92f3a94c61258bf87bb6
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: summary
+  record_path: data/project-state/stage5dk-summary.yaml
+  record_sha256: 552e987c24693615715850c1a1e941efd595cc92d880062152ab43cbb085c86f
+  digest_kind: committed_stage5dk_record_sha256
+- record_key: web_fetch_evidence
+  record_path: data/source-harvester/stage5dk-web-fetch-evidence.yaml
+  record_sha256: 947a855c9c178029e90749c199ef317cb2487538ace60e5cd0f4bb2d0c42d97b
+  digest_kind: committed_stage5dk_record_sha256

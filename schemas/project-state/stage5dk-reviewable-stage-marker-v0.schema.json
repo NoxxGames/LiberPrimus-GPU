@@ -1,0 +1,90 @@
+{
+  "$id": "schemas/project-state/stage5dk-reviewable-stage-marker-v0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "activation_authorized": {
+      "const": false
+    },
+    "codex_output_used": {
+      "const": false
+    },
+    "combined_gate_satisfied": {
+      "const": false
+    },
+    "dwh_hash_search_performed": {
+      "const": false
+    },
+    "execution_authorized": {
+      "const": false
+    },
+    "execution_performed": {
+      "const": false
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "hash_preimage_search_performed": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "page56_hash_algorithm_known": {
+      "const": false
+    },
+    "page56_hash_preimage_known": {
+      "const": false
+    },
+    "raw_fandom_body_committed": {
+      "const": false
+    },
+    "raw_webpage_bodies_committed": {
+      "const": false
+    },
+    "recommended_next_stage_id": {
+      "const": "stage-5dl"
+    },
+    "record_type": {
+      "type": "string"
+    },
+    "source_bodies_committed": {
+      "const": false
+    },
+    "source_previous_stage_commit": {
+      "const": "afed8e46fffb771ce923339719a2a54da508cc6e"
+    },
+    "source_previous_stage_id": {
+      "const": "stage-5dj"
+    },
+    "stage5dk_selects_target_priority_now": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-5dk"
+    },
+    "stage_title": {
+      "type": "string"
+    },
+    "target_class_validation_implemented": {
+      "const": false
+    },
+    "worker_cap_16_allowed": {
+      "const": false
+    }
+  },
+  "required": [
+    "stage_id",
+    "stage_title",
+    "record_type",
+    "source_previous_stage_id",
+    "source_previous_stage_commit",
+    "metadata_only",
+    "activation_authorized",
+    "execution_authorized",
+    "combined_gate_satisfied",
+    "generated_outputs_committed"
+  ],
+  "title": "stage5dk-reviewable-stage-marker",
+  "type": "object"
+}
