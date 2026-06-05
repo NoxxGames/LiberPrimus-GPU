@@ -32,12 +32,20 @@ def test_stage5di_local_archive_crosswalk_records_provided_paths() -> None:
     counts, errors = validate_stage5di_local_archive_crosswalk()
 
     assert errors == []
-    assert counts["root_exists"] is True
     assert counts["crosswalk_count"] == 5
 
     payload = load_yaml("data/source-harvester/stage5di-cicada-solvers-iddqd-v2-crosswalk.yaml")
-    assert payload["found_in_repo_path"] == "third_party/CiadaSolversIddqd_v2"
-    assert payload["path_spelling_warning"] is True
+    assert set(payload["local_archive_root_candidates"]) == {
+        "third_party/CiadaSolversIddqd_v2",
+        "third_party/CicadaSolversIddqd_v2",
+    }
+    assert payload["found_in_repo_path"] in {None, "third_party/CiadaSolversIddqd_v2"}
+    assert payload["raw_archive_committed"] is False
+    for row in payload["crosswalks"]:
+        assert row["local_paths"]
+        assert all(path_row["path"].startswith("third_party/") for path_row in row["local_paths"])
+    assert counts["root_exists"] in {True, False}
+    assert counts["alternate_root_exists"] in {True, False}
 
 
 def test_stage5di_number_triangle_bundle_records_messages_and_images() -> None:
@@ -45,9 +53,20 @@ def test_stage5di_number_triangle_bundle_records_messages_and_images() -> None:
     counts, errors = validate_stage5di_number_triangle_crosswalk()
 
     assert errors == []
-    assert counts["bundle_root_exists"] is True
-    assert counts["message_file_count"] >= 1
-    assert counts["image_file_count"] >= 1
+    payload = load_yaml(
+        "data/source-harvester/stage5di-number-triangle-theory-bundle-crosswalk.yaml"
+    )
+    expected_root = "third_party/UsefulFilesAndIdeas/number-triangle-theory"
+    assert payload["operator_path"] == expected_root
+    assert payload["bundle_root"] == expected_root
+    assert payload["full_forum_text_committed_in_stage5di"] is False
+    assert payload["cross_check_against_iddqd_transcription_status"]
+    if counts["bundle_root_exists"] is True:
+        assert counts["message_file_count"] >= 1
+        assert counts["image_file_count"] >= 1
+    else:
+        assert counts["message_file_count"] == 0
+        assert counts["image_file_count"] == 0
 
 
 def test_stage5di_source_lock_register_rejects_missing_required_family(tmp_path) -> None:

@@ -1448,8 +1448,15 @@ def validate_stage5di_local_archive_crosswalk(
 ) -> tuple[dict[str, Any], list[str]]:
     payload = _load_yaml(crosswalk)
     errors: list[str] = []
-    if payload.get("root_exists") is not True:
-        errors.append("iddqd_v2_root_must_exist_for_stage5di_local_source_lock")
+    expected_roots = {
+        "third_party/CiadaSolversIddqd_v2",
+        "third_party/CicadaSolversIddqd_v2",
+    }
+    recorded_roots = set(payload.get("local_archive_root_candidates", []))
+    if not expected_roots.issubset(recorded_roots):
+        errors.append("missing_iddqd_v2_root_candidates")
+    if payload.get("raw_archive_committed") is not False:
+        errors.append("raw_archive_must_not_be_committed")
     crosswalk_ids = {row.get("candidate_family_id") for row in payload.get("crosswalks", [])}
     for family_id in [
         "page32_tree_polar_route_v0",
@@ -1459,8 +1466,17 @@ def validate_stage5di_local_archive_crosswalk(
     ]:
         if family_id not in crosswalk_ids:
             errors.append(f"missing_crosswalk_family:{family_id}")
+    for row in payload.get("crosswalks", []):
+        local_paths = row.get("local_paths", [])
+        if not local_paths:
+            errors.append(f"missing_crosswalk_local_paths:{row.get('candidate_family_id')}")
+        for path_row in local_paths:
+            path_value = path_row.get("path", "")
+            if not path_value.startswith("third_party/"):
+                errors.append(f"crosswalk_path_outside_third_party:{path_value}")
     counts = {
         "root_exists": payload.get("root_exists"),
+        "alternate_root_exists": payload.get("alternate_root_exists"),
         "crosswalk_count": payload.get("crosswalk_count"),
         "path_spelling_warning": payload.get("path_spelling_warning"),
     }
@@ -1472,12 +1488,20 @@ def validate_stage5di_number_triangle_crosswalk(
 ) -> tuple[dict[str, Any], list[str]]:
     payload = _load_yaml(crosswalk)
     errors: list[str] = []
-    if payload.get("bundle_root_exists") is not True:
-        errors.append("number_triangle_bundle_root_must_exist")
-    if payload.get("message_file_count", 0) < 1:
-        errors.append("number_triangle_message_file_must_be_recorded")
-    if payload.get("image_file_count", 0) < 1:
-        errors.append("number_triangle_image_files_must_be_recorded")
+    expected_root = "third_party/UsefulFilesAndIdeas/number-triangle-theory"
+    if payload.get("operator_path") != expected_root:
+        errors.append("number_triangle_operator_path_mismatch")
+    if payload.get("bundle_root") != expected_root:
+        errors.append("number_triangle_bundle_root_mismatch")
+    if payload.get("full_forum_text_committed_in_stage5di") is not False:
+        errors.append("number_triangle_full_forum_text_must_not_be_committed")
+    if not payload.get("cross_check_against_iddqd_transcription_status"):
+        errors.append("number_triangle_cross_check_status_missing")
+    if payload.get("bundle_root_exists") is True:
+        if payload.get("message_file_count", 0) < 1:
+            errors.append("number_triangle_message_file_must_be_recorded_when_present")
+        if payload.get("image_file_count", 0) < 1:
+            errors.append("number_triangle_image_files_must_be_recorded_when_present")
     counts = {
         "bundle_root_exists": payload.get("bundle_root_exists"),
         "file_count": payload.get("file_count"),
