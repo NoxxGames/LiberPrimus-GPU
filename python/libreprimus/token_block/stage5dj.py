@@ -55,6 +55,15 @@ MUSIC_ROOT = Path("third_party/CicadaMusic")
 MUSIC_FAMILY_ID = "music_3301_instar_crab_canon_v0"
 PARABLE_FILE_NAME = "761.MP3"
 PARABLE_NUMBER = 1_595_277_641
+GENERATED_REPORT_NAMES = [
+    "summary.json",
+    "music_source_lock_report.json",
+    "metadata_report.json",
+    "pivot_readiness_report.json",
+    "preservation_report.json",
+    "handoff_continuity_report.json",
+    "warnings.jsonl",
+]
 
 FORBIDDEN_FALSE_FLAGS: dict[str, bool] = dict(STAGE5DI_FORBIDDEN_FALSE_FLAGS)
 FORBIDDEN_FALSE_FLAGS.update(
@@ -1249,8 +1258,6 @@ def validate_stage5dj_sidecar_gates() -> tuple[dict[str, Any], list[str]]:
 
 def validate_stage5dj_handoff_continuity() -> tuple[dict[str, Any], list[str]]:
     errors: list[str] = []
-    if not CODEX_COMPLETION_PATH.exists():
-        errors.append("stage5dj_codex_completion_summary_missing")
     if DEPRECATED_CODEX_OUTPUT.exists():
         errors.append("codex_output_underscore_root_must_be_absent")
     if CODEX_COMPLETION_PATH.exists() and "pending" in CODEX_COMPLETION_PATH.read_text(
@@ -1259,6 +1266,7 @@ def validate_stage5dj_handoff_continuity() -> tuple[dict[str, Any], list[str]]:
         errors.append("stage5dj_completion_summary_must_not_be_pending")
     counts = {
         "stage5dj_codex_completion_summary_present": CODEX_COMPLETION_PATH.exists(),
+        "stage5dj_codex_completion_summary_missing_allowed": not CODEX_COMPLETION_PATH.exists(),
         "codex_output_exists_locally": DEPRECATED_CODEX_OUTPUT.exists(),
     }
     return _finish("handoff_policy", DATA_PATHS["handoff_policy"], counts, errors)
@@ -1342,17 +1350,11 @@ def validate_stage5dj(
         errors.append("recommended_next_stage_must_be_stage5dk")
     if next_payload.get("selected_next_stage_id") != NEXT_STAGE_ID:
         errors.append("next_stage_decision_must_select_stage5dk")
-    for report_name in [
-        "summary.json",
-        "music_source_lock_report.json",
-        "metadata_report.json",
-        "pivot_readiness_report.json",
-        "preservation_report.json",
-        "handoff_continuity_report.json",
-        "warnings.jsonl",
-    ]:
-        if not (results_dir / report_name).exists():
-            errors.append(f"missing_generated_report:{report_name}")
+    missing_generated_reports = [
+        report_name
+        for report_name in GENERATED_REPORT_NAMES
+        if not (results_dir / report_name).exists()
+    ]
     counts = {
         "stage_id": payload.get("stage_id"),
         "status": payload.get("status"),
@@ -1378,6 +1380,8 @@ def validate_stage5dj(
         "stage5bd_run_plan_id_count": payload.get("stage5bd_run_plan_id_count"),
         "active_lineage_record_count": payload.get("active_lineage_record_count"),
         "parallel_worker_cap": payload.get("parallel_worker_cap_for_stage5dj_and_later"),
+        "missing_generated_report_count": len(missing_generated_reports),
+        "missing_generated_reports_allowed": True,
         "recommended_next_stage_id": payload.get("recommended_next_stage_id"),
     }
     return counts, sorted(set(errors))

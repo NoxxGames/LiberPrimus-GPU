@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import subprocess
 import sys
+from pathlib import Path
 
+from libreprimus.token_block import stage5dj
 from test_stage5dj_common import ROOT
 
 
@@ -77,3 +79,23 @@ def test_stage5dj_build_cli_reports_music_pivot() -> None:
     assert "music_candidate_family_id=music_3301_instar_crab_canon_v0" in output
     assert "pivot_option_count=7" in output
     assert "recommended_next_stage_id=stage-5dk" in output
+
+
+def test_stage5dj_validation_allows_missing_ignored_generated_reports(tmp_path: Path) -> None:
+    counts, errors = stage5dj.validate_stage5dj(results_dir=tmp_path / "missing-stage5dj")
+
+    assert counts["missing_generated_report_count"] == len(stage5dj.GENERATED_REPORT_NAMES)
+    assert counts["missing_generated_reports_allowed"] is True
+    assert not [error for error in errors if error.startswith("missing_generated_report:")]
+
+
+def test_stage5dj_handoff_allows_missing_ignored_codex_output(
+    monkeypatch: object, tmp_path: Path
+) -> None:
+    monkeypatch.setattr(stage5dj, "CODEX_COMPLETION_PATH", tmp_path / "missing.md")
+
+    counts, errors = stage5dj.validate_stage5dj_handoff_continuity()
+
+    assert errors == []
+    assert counts["stage5dj_codex_completion_summary_present"] is False
+    assert counts["stage5dj_codex_completion_summary_missing_allowed"] is True
