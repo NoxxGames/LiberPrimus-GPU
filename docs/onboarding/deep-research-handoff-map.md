@@ -1,5 +1,11 @@
 # Deep Research Handoff Map
 
+## Stage 5DJ Note
+
+Stage 5DJ did not execute Deep Research or any experiment. It preserves the Stage 5DG real operator approval record and operator-approval component, source-locks the ignored local CicadaMusic MP3/PDF files as hash/header metadata, adds `music_3301_instar_crab_canon_v0` as a review-only pivot candidate, and creates a seven-option pivot-readiness package with no selected target. Operator approval alone still does not satisfy the combined gate.
+
+Use `data/project-state/stage5dj-*`, `data/historical-route/stage5dj-*`, `data/source-harvester/stage5dj-*`, and `data/token-block/stage5dj-*` for Stage 5DK target-priority review handoff. Do not hand over raw `third_party/CicadaMusic/**` files, generated diagnostics, generated completion summaries, target-validation outputs, Tor/network captures, byte streams, decoded bytes, route outputs, audio/stego outputs, OCR/rendered sheet-music outputs, or execution outputs as source truth. Stage 5DJ creates no Deep Research acceptance record, no combined gate validation record, no activation decision, no active input, and no execution authorization.
+
 ## Stage 5DI Note
 
 Stage 5DI did not execute Deep Research or any experiment. It preserves the Stage 5DG real operator approval record and operator-approval component, source-locks recent clue material and local archive crosswalks, and creates a pivot-readiness package with no selected target. Operator approval alone still does not satisfy the combined gate.

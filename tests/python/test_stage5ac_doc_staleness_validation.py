@@ -23,7 +23,7 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
 def test_operational_docs_use_stage5di_latest_and_stage5dj_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5DI recent clue source-lock and pivot-readiness package" in status
-    assert "Next recommended prompt: Stage 5DJ" in status
-    assert "Latest completed stage: Stage 5DI" in staged_plan
-    assert "Current planning focus: Stage 5DJ" in staged_plan
+    assert "Stage 5DJ CicadaMusic source-lock" in status
+    assert "Next recommended prompt: Stage 5DK" in status
+    assert "Latest completed stage: Stage 5DJ" in staged_plan
+    assert "Current planning focus: Stage 5DK" in staged_plan

@@ -5526,3 +5526,333 @@ records:
   staleness_check_level: historical
   owner_context: research_operator
   notes: Summarizes source locks, pivot nonselection, preserved approval gates, and target-priority review routing.
+- path: data/project-state/stage5dj-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ compact summary and current boundary record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records 7 CicadaMusic files, 4 MP3 metadata locks, 3 PDF metadata locks, 7 unselected pivot options, and Stage 5DK routing.
+- path: data/project-state/stage5dj-next-stage-decision.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ next-stage decision selecting Stage 5DK target-priority decision packaging.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records that Stage 5DI target-priority decision remains required after the operator-inserted music source-lock stage.
+- path: data/project-state/stage5dj-music-source-lock-register.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ CicadaMusic local source-lock register.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Lists ignored local CicadaMusic MP3/PDF files as metadata-only source records; raw files remain uncommitted.
+- path: data/project-state/stage5dj-music-file-hash-inventory.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ CicadaMusic file hash inventory.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records SHA-256, SHA-512, and BLAKE2b hashes for local ignored MP3/PDF files when present.
+- path: data/project-state/stage5dj-music-candidate-family-index.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ music candidate-family index.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Adds music_3301_instar_crab_canon_v0 as source-lock-only and not seed-ready.
+- path: data/project-state/stage5dj-pivot-readiness-integration.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ seven-option pivot-readiness integration.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Adds the CicadaMusic pivot option and keeps every option unselected.
+- path: data/project-state/stage5dj-pivot-priority-matrix-update.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ qualitative pivot-priority matrix update.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records review-only priority rows without selecting a target.
+- path: data/project-state/stage5dj-stage5di-integration.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ sequencing integration for the Stage 5DI next-stage title pivot.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records that the operator inserted music source-locking before target-priority packaging.
+- path: data/project-state/stage5dj-reviewable-validation-evidence.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ compact validation evidence.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Lists Stage 5DJ build, aggregate validation, and summary commands.
+- path: data/project-state/stage5dj-reviewability-gap-register.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ reviewability gap register.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Tracks missing public-source corroboration, target-priority decision, Deep Research acceptance, and authenticity review.
+- path: data/project-state/stage5dj-governance-scope-control.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ governance-scope control.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps audio/stego/route/CUDA/execution/activation/solve flags false.
+- path: data/project-state/stage5dj-music-authenticity-caution.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ local music authenticity caution record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records that local music metadata is not public source truth or execution authorization.
+- path: data/historical-route/stage5dj-music-3301-instar-crab-canon-source-lock.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ CicadaMusic candidate-family source-lock record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Source-locks the music candidate family as metadata-only local cache records.
+- path: data/historical-route/stage5dj-761-parable-metadata-lock.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ 761.MP3 parable metadata lock.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records safe ID3 metadata for 761.MP3 when the ignored local file is present.
+- path: data/historical-route/stage5dj-music-number-analysis-metadata.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ music-number arithmetic metadata.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records factorization/base60/mod29 metadata only; no cipher transform is performed.
+- path: data/historical-route/stage5dj-mp3-metadata-lock.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ MP3 header metadata lock.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records ID3/header metadata without audio decoding or stego tool execution.
+- path: data/historical-route/stage5dj-pdf-metadata-lock.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ PDF header metadata lock.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records PDF info-dictionary metadata without rendering or OCR.
+- path: data/source-harvester/stage5dj-cicadamusic-local-source-crosswalk.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ CicadaMusic local source crosswalk.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Crosswalks ignored local files to committed metadata record paths.
+- path: data/source-harvester/stage5dj-codex-handoff-policy.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ Codex handoff policy.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves codex-output and rejects deprecated codex_output handoff roots.
+- path: data/source-harvester/stage5dj-credential-redaction-policy-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ credential-redaction policy preservation.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records remote/secret redaction checks without printing remote values.
+- path: data/source-harvester/stage5dj-review-packaging-warning.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ raw music review-packaging warning.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Blocks raw audio/PDF packaging and public website publication.
+- path: data/token-block/stage5dj-stage5dg-operator-approval-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ Stage 5DG operator-approval preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves Stage 5DG operator approval and records that it does not satisfy the combined gate.
+- path: data/token-block/stage5dj-stage5bd-plan-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ Stage 5BD dry-run plan preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves exactly 10 Stage 5BD run-plan IDs and records no plan supersession.
+- path: data/token-block/stage5dj-active-lineage-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ active-lineage preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves eight active-lineage records and the corrected Stage 5AW path.
+- path: data/token-block/stage5dj-no-active-ingestion-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ no-active-ingestion proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps String 4 inactive, active planning input unauthorized and unselected, and active manifest registry unchanged.
+- path: data/token-block/stage5dj-no-byte-stream-transition-gate.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ no-byte-stream transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps byte-stream generation, variant materialisation, branch enumeration, and Cartesian enumeration unauthorized.
+- path: data/token-block/stage5dj-no-execution-transition-gate.yaml
+  category: operational_status_doc
+  purpose: Stage 5DJ no-execution transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps token-block execution, route extraction, DWH/hash search, audio/stego, decode, scoring, CUDA, benchmarks, target validation, Tor access, and solve claims false.
+- path: docs/experiments/stage-5dj-cicadamusic-source-lock.md
+  category: operational_status_doc
+  purpose: Human-readable Stage 5DJ source-lock and pivot-integration documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents records, counts, no-execution boundaries, and Stage 5DK routing.
+- path: docs/development-logs/2026-06-05-stage-5dj-cicadamusic-source-lock.md
+  category: historical_log
+  purpose: Stage 5DJ implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation scope, validation, local metadata counts, and no-raw/generated staging boundaries.
+- path: research-log/2026-06-05-stage-5dj-next-stage-decision-summary.md
+  category: historical_log
+  purpose: Stage 5DJ summary-only research log and Stage 5DK next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dj
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: research_operator
+  notes: Summarizes CicadaMusic source-locks, pivot nonselection, preserved approval gates, and target-priority review routing.

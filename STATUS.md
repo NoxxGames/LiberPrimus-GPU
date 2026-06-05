@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DI recent clue source-lock and pivot-readiness package is complete.
+Stage 5DJ CicadaMusic source-lock and music-clue pivot integration is complete.
 
-Next recommended prompt: Stage 5DJ - Target-priority decision package, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DK - Target-priority decision package, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DJ
+
+Stage 5DJ source-locks the locally supplied ignored `third_party/CicadaMusic/` material as metadata only. It records 7 local source files, 4 MP3 hash/metadata records, 3 PDF hash/metadata records, safe ID3/PDF header metadata, and the candidate family `music_3301_instar_crab_canon_v0` without decoding audio, rendering/OCRing sheet music, interpreting music semantics, or executing any route/audio/stego experiment.
+
+Local Stage 5DJ summary: music source files `7`, MP3 files `4`, PDF files `3`, safe MP3 metadata records `4`, safe PDF metadata records `3`, pivot options `7`, music pivot candidate added `true`, pivot target selected now `false`, target-priority decision created now `false`, Stage 5DG operator approval preserved `true`, operator approval component satisfied now `true`, Deep Research acceptance component satisfied now `false`, combined approval gate satisfied now `false`, activation authorized now `false`, active-planning input selected now `false`, byte-stream generation authorized now `false`, execution authorized now `false`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, parallel worker cap `8`, generated outputs committed `false`, raw music files committed `false`, `codex_output` used `false`, and next stage `Stage 5DK`.
+
+Stage 5DJ is metadata-only source-lock and pivot-readiness infrastructure. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select active planning input, generate byte streams, run target-priority selection, execute route extraction, run audio stego/MP3Stego/OpenPuff/spectrogram/waveform analysis, OCR/render sheet music, run DWH/hash/preimage search, decode, score, run CUDA tooling, benchmark, publish website content, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DI
 

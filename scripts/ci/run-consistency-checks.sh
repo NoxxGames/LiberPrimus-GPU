@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5DI" \
-    --expected-next-stage "Stage 5DJ" \
+    --expected-latest-stage "Stage 5DJ" \
+    --expected-next-stage "Stage 5DK" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5DI" \
-    --expected-next-stage "Stage 5DJ" \
+    --expected-latest-stage "Stage 5DJ" \
+    --expected-next-stage "Stage 5DK" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DI",
+            expected_latest_stage="Stage 5DJ",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DI",
+            "expected_latest_stage": "Stage 5DJ",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3117,6 +3117,40 @@ git check-ignore -q "$stage5di_token_results_root/warnings.jsonl"
 git check-ignore -q "codex-output/stage5di-codex-completion.md"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5DI" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5DJ CicadaMusic source-lock and pivot integration records"
+"$python_bin" -m libreprimus.cli token-block build-stage5dj
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-music-source-lock
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-music-file-hashes
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-mp3-metadata
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-pdf-metadata
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-761-parable
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-music-number-analysis
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-music-candidate-family
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-pivot-integration
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-stage5dg-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-stage5bd-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-active-lineage-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-handoff-continuity
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-credential-redaction-policy
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj-governance-scope
+"$python_bin" -m libreprimus.cli token-block validate-stage5dj
+"$python_bin" -m libreprimus.cli token-block stage5dj-summary
+stage5dj_token_results_root="experiments"/"results"/"token-block"/"stage5dj"
+git check-ignore -q "$stage5dj_token_results_root/summary.json"
+git check-ignore -q "$stage5dj_token_results_root/music_source_lock_report.json"
+git check-ignore -q "$stage5dj_token_results_root/metadata_report.json"
+git check-ignore -q "$stage5dj_token_results_root/pivot_readiness_report.json"
+git check-ignore -q "$stage5dj_token_results_root/preservation_report.json"
+git check-ignore -q "$stage5dj_token_results_root/handoff_continuity_report.json"
+git check-ignore -q "$stage5dj_token_results_root/warnings.jsonl"
+git check-ignore -q "codex-output/stage5dj-codex-completion.md"
+git check-ignore -q "third_party/CicadaMusic/761.MP3"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5DJ" >&2
     exit 1
 fi
 
