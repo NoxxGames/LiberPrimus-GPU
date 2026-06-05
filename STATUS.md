@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DG real operator approval record creation is complete.
+Stage 5DI recent clue source-lock and pivot-readiness package is complete.
 
-Next recommended prompt: Stage 5DH - Review of Stage 5DG real operator approval record, without activation. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DJ - Target-priority decision package, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DI
+
+Stage 5DI source-locks recent clue material and creates a pivot-readiness package without choosing a target or authorizing any execution. It records 6 public web source locks, 11 local archive source-lock records, 8 clue/candidate families, 7 route-candidate families, 1 visual-marker candidate, and 6 unselected pivot options.
+
+Local Stage 5DI summary: source records `17`, web source locks `6`, local archive source locks `11`, candidate families `8`, route-candidate families `7`, visual-marker candidates `1`, pivot options `6`, pivot target selected now `false`, operator target-priority decision created now `false`, Stage 5DG operator approval preserved `true`, operator approval component satisfied now `true`, Deep Research acceptance component satisfied now `false`, combined approval gate satisfied now `false`, activation authorized now `false`, active-planning input selected now `false`, byte-stream generation authorized now `false`, execution authorized now `false`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, parallel worker cap `8`, generated outputs committed `false`, `codex_output` used `false`, and next stage `Stage 5DJ`.
+
+Stage 5DI is metadata-only source-lock and pivot-readiness infrastructure. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select active planning input, generate byte streams, execute route extraction, run polar/triangle/magic-square/token-block transforms, validate target classes, use Tor/network access, run DWH/hash/preimage search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DG
 

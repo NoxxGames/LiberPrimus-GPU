@@ -1,0 +1,208 @@
+record_type: stage5di_web_source_lock_register
+schema: schemas/source-harvester/stage5di-web-source-lock-register-v0.schema.json
+stage_id: stage-5di
+stage_title: Stage 5DI - Recent clue source-lock and pivot-readiness package, without
+  execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5dg
+source_previous_stage_commit: bc47233023556073d5a057097aa23ce79d899c8a
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_activation_accept_record_present_now: false
+deep_research_acceptance_component_satisfied_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+experiment_authorized_now: false
+experiment_executed_now: false
+experiments_authorized_now: false
+full_cartesian_product_enumerated: false
+future_real_records_created_now: false
+hash_preimage_search_performed: false
+historical_route_execution_performed: false
+image_forensics_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+meaning_claimed_now: false
+method_status_upgraded: false
+mp3stego_execution_performed: false
+new_active_planning_input_created: false
+new_real_operator_approval_record_created_in_stage5di: false
+ocr_performed: false
+old_16_worker_default_reintroduced: false
+openpuff_execution_performed: false
+operator_approval_alone_authorizes_activation: false
+operator_approval_alone_authorizes_active_planning_input: false
+operator_approval_alone_authorizes_byte_stream_generation: false
+operator_approval_alone_authorizes_execution: false
+operator_approval_alone_satisfies_combined_gate: false
+operator_target_priority_decision_created_now: false
+page_boundaries_finalized: false
+pivot_target_selected_now: false
+polar_route_extraction_performed_now: false
+raw_body_committed: false
+real_byte_stream_generated: false
+real_deep_research_acceptance_record_created_now: false
+route_extraction_performed_now: false
+scoring_performed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_plan_superseded: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_added_to_active_dry_run_inputs: false
+string4_added_to_stage5bd_run_plan_ids: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+target_class_validation_implemented: false
+token_block_experiment_executed: false
+token_block_transform_performed_now: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false
+stage5dg_operator_approval_record_preserved: true
+real_operator_approval_record_created_now: true
+operator_approval_component_satisfied_now: true
+stage5bd_dry_run_records_remain_valid: true
+real_deep_research_acceptance_record_present_now: false
+stage5bd_run_plan_id_count: 10
+active_lineage_record_count: 8
+parallel_worker_cap_for_stage5di_and_later: 8
+source_lock_scope: public_web_compact_metadata_only
+web_source_lock_count: 6
+sources:
+- source_id: stage5di-web-2016-message-fandom
+  source_type: fandom_page
+  url: https://uncovering-cicada.fandom.com/wiki/2016_Message
+  candidate_family_ids:
+  - 2016_message_route_meta_clue_v0
+  - page32_tree_polar_route_v0
+  - pdd_153_triangle_word_route_v0
+  citation_summary: Public community page for the 2016 signed message, route wording,
+    image motif notes, and GP-sum community discussion.
+  source_lock_confidence: medium
+  stage_id: stage-5di
+  retrieved_at_utc: '2026-06-05T00:00:00Z'
+  access_status: reachable
+  content_saved_raw: false
+  raw_body_committed: false
+  source_lock_status: compact_metadata_url_locked
+  known_limitations:
+  - public page may change
+  - community page may contain unsourced claims
+  - compact metadata only; raw webpage body not committed
+- source_id: stage5di-web-page56-fandom
+  source_type: fandom_page
+  url: https://uncovering-cicada.fandom.com/wiki/PAGE_56
+  candidate_family_ids:
+  - page56_dwh_hash_target_contract_v0
+  citation_summary: Public community page for PAGE 56 / AN END and DWH hash context.
+  source_lock_confidence: medium
+  stage_id: stage-5di
+  retrieved_at_utc: '2026-06-05T00:00:00Z'
+  access_status: reachable
+  content_saved_raw: false
+  raw_body_committed: false
+  source_lock_status: compact_metadata_url_locked
+  known_limitations:
+  - public page may change
+  - community page may contain unsourced claims
+  - compact metadata only; raw webpage body not committed
+- source_id: stage5di-web-2017-pgp-message-fandom
+  source_type: fandom_page
+  url: https://uncovering-cicada.fandom.com/wiki/PGP_Signed_Message_April_2017
+  candidate_family_ids:
+  - 2016_message_route_meta_clue_v0
+  - magic_square_matrix_route_context_v0
+  citation_summary: Public page for nearby signed-message context; source-lock only.
+  source_lock_confidence: medium
+  stage_id: stage-5di
+  retrieved_at_utc: '2026-06-05T00:00:00Z'
+  access_status: reachable
+  content_saved_raw: false
+  raw_body_committed: false
+  source_lock_status: compact_metadata_url_locked
+  known_limitations:
+  - public page may change
+  - community page may contain unsourced claims
+  - compact metadata only; raw webpage body not committed
+- source_id: stage5di-web-boxentriq-liber-primus-guide
+  source_type: guide
+  url: https://www.boxentriq.com/guides/cicada-3301-liber-primus#solving-liber-primus-with-boxentriq
+  candidate_family_ids:
+  - boxentriq_known_method_synthesis_v0
+  citation_summary: Secondary known-method synthesis; not a primary source of truth.
+  source_lock_confidence: low
+  stage_id: stage-5di
+  retrieved_at_utc: '2026-06-05T00:00:00Z'
+  access_status: reachable
+  content_saved_raw: false
+  raw_body_committed: false
+  source_lock_status: compact_metadata_url_locked
+  known_limitations:
+  - public page may change
+  - community page may contain unsourced claims
+  - compact metadata only; raw webpage body not committed
+- source_id: stage5di-web-reddit-page32-tree-thread
+  source_type: reddit_thread
+  url: https://www.reddit.com/r/cicada/comments/9zb42i/next_step_is_page_32_in_liber_primus_the/
+  candidate_family_ids:
+  - page32_tree_polar_route_v0
+  citation_summary: Community route discussion tying the 2016 tree clue to page 32/full
+    49.
+  source_lock_confidence: low
+  stage_id: stage-5di
+  retrieved_at_utc: '2026-06-05T00:00:00Z'
+  access_status: reachable
+  content_saved_raw: false
+  raw_body_committed: false
+  source_lock_status: compact_metadata_url_locked
+  known_limitations:
+  - public page may change
+  - community page may contain unsourced claims
+  - compact metadata only; raw webpage body not committed
+  - Reddit thread may be deleted, edited, or rate-limited
+- source_id: stage5di-web-tweqx-3301-hash-alarm
+  source_type: github_repo
+  url: https://github.com/tweqx/3301-hash-alarm
+  candidate_family_ids:
+  - page56_dwh_hash_target_contract_v0
+  citation_summary: Public repository preserving the DWH target-hash watch context.
+  source_lock_confidence: medium
+  stage_id: stage-5di
+  retrieved_at_utc: '2026-06-05T00:00:00Z'
+  access_status: reachable
+  content_saved_raw: false
+  raw_body_committed: false
+  source_lock_status: compact_metadata_url_locked
+  known_limitations:
+  - public page may change
+  - community page may contain unsourced claims
+  - compact metadata only; raw webpage body not committed
+raw_webpage_bodies_committed: false

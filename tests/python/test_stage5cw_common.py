@@ -11,10 +11,18 @@ from libreprimus.token_block.stage5cw import DATA_PATHS, SCHEMA_PATHS, build_sta
 ROOT = Path(__file__).resolve().parents[2]
 STAGE5CW_RECORDS = [path.as_posix() for path in DATA_PATHS.values()]
 STAGE5CW_SCHEMAS = list(SCHEMA_PATHS.values())
+_STAGE5CW_BUILT = False
 
 
 def ensure_stage5cw_built() -> None:
+    global _STAGE5CW_BUILT
+    if _STAGE5CW_BUILT:
+        return
+    if all((ROOT / path).exists() for path in STAGE5CW_RECORDS + STAGE5CW_SCHEMAS):
+        _STAGE5CW_BUILT = True
+        return
     build_stage5cw()
+    _STAGE5CW_BUILT = True
 
 
 def load_yaml(path: str | Path) -> dict[str, Any]:

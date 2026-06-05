@@ -657,6 +657,26 @@ from .stage5dg import (
     validate_stage5dg_target_context,
     validate_stage5dg_unselected_options_preservation,
 )
+from .stage5di import (
+    DATA_PATHS as STAGE5DI_DATA_PATHS,
+    RESULTS_DIR as STAGE5DI_RESULTS_DIR,
+    build_stage5di,
+    load_stage5di_summary,
+    validate_stage5di,
+    validate_stage5di_active_lineage_preservation,
+    validate_stage5di_credential_redaction_policy,
+    validate_stage5di_dinkus_visual_delimiter,
+    validate_stage5di_governance_scope,
+    validate_stage5di_handoff_continuity,
+    validate_stage5di_local_archive_crosswalk,
+    validate_stage5di_number_triangle_crosswalk,
+    validate_stage5di_pivot_readiness,
+    validate_stage5di_route_candidate_families,
+    validate_stage5di_sidecar_gates,
+    validate_stage5di_source_lock_register,
+    validate_stage5di_stage5bd_preservation,
+    validate_stage5di_stage5dg_preservation,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -7715,6 +7735,235 @@ def stage5dg_summary_command(
     console.print(
         "parallel_worker_cap_for_stage5dg_and_later="
         f"{payload.get('parallel_worker_cap_for_stage5dg_and_later')}"
+    )
+    console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
+    console.print(f"recommended_next_prompt_type={payload.get('recommended_next_prompt_type')}")
+    console.print(f"recommended_next_stage_title={payload.get('recommended_next_stage_title')}")
+
+
+def _print_stage5di_counts(counts: dict[str, object], errors: list[str], success_line: str) -> None:
+    for key, value in counts.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
+    for error in errors:
+        console.print(f"error={error}")
+    if errors:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5di")
+def build_stage5di_command(
+    results_dir: Path = typer.Option(STAGE5DI_RESULTS_DIR),
+) -> None:
+    payload = build_stage5di(results_dir=results_dir)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"source_records_total={payload.get('source_records_total')}")
+    console.print(f"candidate_family_count={payload.get('candidate_family_count')}")
+    console.print(f"route_candidate_family_count={payload.get('route_candidate_family_count')}")
+    console.print(f"pivot_option_count={payload.get('pivot_option_count')}")
+    console.print(f"pivot_target_selected_now={str(payload.get('pivot_target_selected_now')).lower()}")
+    console.print(
+        "stage5dg_operator_approval_record_preserved="
+        f"{str(payload.get('stage5dg_operator_approval_record_preserved')).lower()}"
+    )
+    console.print(
+        "operator_approval_component_satisfied_now="
+        f"{str(payload.get('operator_approval_component_satisfied_now')).lower()}"
+    )
+    console.print(
+        "combined_approval_gate_satisfied_now="
+        f"{str(payload.get('combined_approval_gate_satisfied_now')).lower()}"
+    )
+    console.print(f"activation_authorized_now={str(payload.get('activation_authorized_now')).lower()}")
+    console.print(
+        "byte_stream_generation_authorized_now="
+        f"{str(payload.get('byte_stream_generation_authorized_now')).lower()}"
+    )
+    console.print(f"execution_authorized_now={str(payload.get('execution_authorized_now')).lower()}")
+    console.print(f"stage5bd_run_plan_id_count={payload.get('stage5bd_run_plan_id_count')}")
+    console.print(f"active_lineage_record_count={payload.get('active_lineage_record_count')}")
+    console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5di-source-lock-register")
+def validate_stage5di_source_lock_register_command(
+    register: Path = typer.Option(STAGE5DI_DATA_PATHS["recent_clue_source_lock_register"]),
+) -> None:
+    counts, errors = validate_stage5di_source_lock_register(register=register)
+    _print_stage5di_counts(counts, errors, "token_block_stage5di_source_lock_register_valid=true")
+
+
+@app.command("validate-stage5di-local-archive-crosswalk")
+def validate_stage5di_local_archive_crosswalk_command(
+    crosswalk: Path = typer.Option(STAGE5DI_DATA_PATHS["cicada_solvers_crosswalk"]),
+) -> None:
+    counts, errors = validate_stage5di_local_archive_crosswalk(crosswalk=crosswalk)
+    _print_stage5di_counts(counts, errors, "token_block_stage5di_local_archive_crosswalk_valid=true")
+
+
+@app.command("validate-stage5di-number-triangle-crosswalk")
+def validate_stage5di_number_triangle_crosswalk_command(
+    crosswalk: Path = typer.Option(STAGE5DI_DATA_PATHS["number_triangle_crosswalk"]),
+) -> None:
+    counts, errors = validate_stage5di_number_triangle_crosswalk(crosswalk=crosswalk)
+    _print_stage5di_counts(
+        counts,
+        errors,
+        "token_block_stage5di_number_triangle_crosswalk_valid=true",
+    )
+
+
+@app.command("validate-stage5di-route-candidate-families")
+def validate_stage5di_route_candidate_families_command(
+    index: Path = typer.Option(STAGE5DI_DATA_PATHS["route_candidate_family_index"]),
+) -> None:
+    counts, errors = validate_stage5di_route_candidate_families(index=index)
+    _print_stage5di_counts(counts, errors, "token_block_stage5di_route_candidate_families_valid=true")
+
+
+@app.command("validate-stage5di-pivot-readiness")
+def validate_stage5di_pivot_readiness_command(
+    package: Path = typer.Option(STAGE5DI_DATA_PATHS["pivot_readiness_package"]),
+) -> None:
+    counts, errors = validate_stage5di_pivot_readiness(package=package)
+    _print_stage5di_counts(counts, errors, "token_block_stage5di_pivot_readiness_valid=true")
+
+
+@app.command("validate-stage5di-dinkus-visual-delimiter")
+def validate_stage5di_dinkus_visual_delimiter_command(
+    record: Path = typer.Option(STAGE5DI_DATA_PATHS["dinkus_visual_delimiter"]),
+) -> None:
+    counts, errors = validate_stage5di_dinkus_visual_delimiter(record=record)
+    _print_stage5di_counts(counts, errors, "token_block_stage5di_dinkus_visual_delimiter_valid=true")
+
+
+@app.command("validate-stage5di-stage5dg-preservation")
+def validate_stage5di_stage5dg_preservation_command(
+    preservation: Path = typer.Option(STAGE5DI_DATA_PATHS["stage5dg_operator_approval_preservation"]),
+) -> None:
+    counts, errors = validate_stage5di_stage5dg_preservation(preservation=preservation)
+    _print_stage5di_counts(counts, errors, "token_block_stage5di_stage5dg_preservation_valid=true")
+
+
+@app.command("validate-stage5di-stage5bd-preservation")
+def validate_stage5di_stage5bd_preservation_command(
+    preservation: Path = typer.Option(STAGE5DI_DATA_PATHS["stage5bd_plan_preservation"]),
+) -> None:
+    counts, errors = validate_stage5di_stage5bd_preservation(preservation=preservation)
+    _print_stage5di_counts(counts, errors, "token_block_stage5di_stage5bd_preservation_valid=true")
+
+
+@app.command("validate-stage5di-active-lineage-preservation")
+def validate_stage5di_active_lineage_preservation_command(
+    preservation: Path = typer.Option(STAGE5DI_DATA_PATHS["active_lineage_preservation"]),
+) -> None:
+    counts, errors = validate_stage5di_active_lineage_preservation(preservation=preservation)
+    _print_stage5di_counts(
+        counts,
+        errors,
+        "token_block_stage5di_active_lineage_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5di-sidecar-gates")
+def validate_stage5di_sidecar_gates_command() -> None:
+    counts, errors = validate_stage5di_sidecar_gates()
+    _print_stage5di_counts(counts, errors, "token_block_stage5di_sidecar_gates_valid=true")
+
+
+@app.command("validate-stage5di-handoff-continuity")
+def validate_stage5di_handoff_continuity_command() -> None:
+    counts, errors = validate_stage5di_handoff_continuity()
+    _print_stage5di_counts(counts, errors, "token_block_stage5di_handoff_continuity_valid=true")
+
+
+@app.command("validate-stage5di-credential-redaction-policy")
+def validate_stage5di_credential_redaction_policy_command(
+    credential_redaction: Path = typer.Option(STAGE5DI_DATA_PATHS["credential_redaction"]),
+) -> None:
+    counts, errors = validate_stage5di_credential_redaction_policy(
+        credential_redaction=credential_redaction
+    )
+    _print_stage5di_counts(
+        counts,
+        errors,
+        "token_block_stage5di_credential_redaction_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5di-governance-scope")
+def validate_stage5di_governance_scope_command(
+    guardrail: Path = typer.Option(STAGE5DI_DATA_PATHS["guardrail"]),
+) -> None:
+    counts, errors = validate_stage5di_governance_scope(guardrail=guardrail)
+    _print_stage5di_counts(counts, errors, "token_block_stage5di_governance_scope_valid=true")
+
+
+@app.command("validate-stage5di")
+def validate_stage5di_command(
+    summary: Path = typer.Option(STAGE5DI_DATA_PATHS["summary"]),
+    next_stage_decision: Path = typer.Option(STAGE5DI_DATA_PATHS["next_stage_decision"]),
+    results_dir: Path = typer.Option(STAGE5DI_RESULTS_DIR),
+) -> None:
+    counts, errors = validate_stage5di(
+        summary=summary,
+        next_stage_decision=next_stage_decision,
+        results_dir=results_dir,
+    )
+    _print_stage5di_counts(counts, errors, "token_block_stage5di_valid=true")
+
+
+@app.command("stage5di-summary")
+def stage5di_summary_command(
+    summary: Path = typer.Option(STAGE5DI_DATA_PATHS["summary"]),
+) -> None:
+    payload = load_stage5di_summary(summary=summary)
+    console.print(f"stage_id={payload.get('stage_id')}")
+    console.print(f"status={payload.get('status')}")
+    console.print(f"source_records_total={payload.get('source_records_total')}")
+    console.print(f"web_source_lock_count={payload.get('web_source_lock_count')}")
+    console.print(f"local_archive_source_lock_count={payload.get('local_archive_source_lock_count')}")
+    console.print(f"candidate_family_count={payload.get('candidate_family_count')}")
+    console.print(f"route_candidate_family_count={payload.get('route_candidate_family_count')}")
+    console.print(f"visual_marker_candidate_count={payload.get('visual_marker_candidate_count')}")
+    console.print(f"pivot_option_count={payload.get('pivot_option_count')}")
+    console.print(f"pivot_target_selected_now={str(payload.get('pivot_target_selected_now')).lower()}")
+    console.print(
+        "operator_target_priority_decision_created_now="
+        f"{str(payload.get('operator_target_priority_decision_created_now')).lower()}"
+    )
+    console.print(
+        "stage5dg_operator_approval_record_preserved="
+        f"{str(payload.get('stage5dg_operator_approval_record_preserved')).lower()}"
+    )
+    console.print(
+        "operator_approval_component_satisfied_now="
+        f"{str(payload.get('operator_approval_component_satisfied_now')).lower()}"
+    )
+    console.print(
+        "deep_research_acceptance_component_satisfied_now="
+        f"{str(payload.get('deep_research_acceptance_component_satisfied_now')).lower()}"
+    )
+    console.print(
+        "combined_approval_gate_satisfied_now="
+        f"{str(payload.get('combined_approval_gate_satisfied_now')).lower()}"
+    )
+    console.print(f"activation_authorized_now={str(payload.get('activation_authorized_now')).lower()}")
+    console.print(
+        "active_planning_input_selected_now="
+        f"{str(payload.get('active_planning_input_selected_now')).lower()}"
+    )
+    console.print(
+        "byte_stream_generation_authorized_now="
+        f"{str(payload.get('byte_stream_generation_authorized_now')).lower()}"
+    )
+    console.print(f"execution_authorized_now={str(payload.get('execution_authorized_now')).lower()}")
+    console.print(f"stage5bd_run_plan_id_count={payload.get('stage5bd_run_plan_id_count')}")
+    console.print(f"active_lineage_record_count={payload.get('active_lineage_record_count')}")
+    console.print(
+        "parallel_worker_cap_for_stage5di_and_later="
+        f"{payload.get('parallel_worker_cap_for_stage5di_and_later')}"
     )
     console.print(f"recommended_next_stage_id={payload.get('recommended_next_stage_id')}")
     console.print(f"recommended_next_prompt_type={payload.get('recommended_next_prompt_type')}")

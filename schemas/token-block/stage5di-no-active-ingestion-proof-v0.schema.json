@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "activation_authorized_now": {
+      "const": false
+    },
+    "activation_decision_valid_now": {
+      "const": false
+    },
+    "active_ingestion_performed": {
+      "const": false
+    },
+    "active_manifest_registry_updated": {
+      "const": false
+    },
+    "active_planning_input_authorized_now": {
+      "const": false
+    },
+    "active_planning_input_selected_now": {
+      "const": false
+    },
+    "active_token_block_manifest_changed": {
+      "const": false
+    },
+    "ai_ml_interpretation_performed": {
+      "const": false
+    },
+    "approval_gate_authorizes_activation_now": {
+      "const": false
+    },
+    "approval_gate_satisfied_now": {
+      "const": false
+    },
+    "benchmark_performed": {
+      "const": false
+    },
+    "branch_enumeration_performed": {
+      "const": false
+    },
+    "byte_stream_generation_authorized_now": {
+      "const": false
+    },
+    "canonical_codex_handoff_root": {
+      "const": "codex-output"
+    },
+    "canonical_corpus_active": {
+      "const": false
+    },
+    "canonical_transcription_changed": {
+      "const": false
+    },
+    "combined_approval_gate_authorizes_activation_now": {
+      "const": false
+    },
+    "combined_approval_gate_satisfied_now": {
+      "const": false
+    },
+    "cuda_execution_performed": {
+      "const": false
+    },
+    "decode_attempt_performed": {
+      "const": false
+    },
+    "deep_research_acceptance_component_satisfied_now": {
+      "const": false
+    },
+    "deep_research_activation_accept_record_present_now": {
+      "const": false
+    },
+    "dry_run_ingestion_authorized_now": {
+      "const": false
+    },
+    "dwh_hash_search_performed": {
+      "const": false
+    },
+    "execution_allowed": {
+      "const": false
+    },
+    "execution_authorized_now": {
+      "const": false
+    },
+    "experiment_authorized_now": {
+      "const": false
+    },
+    "experiment_executed_now": {
+      "const": false
+    },
+    "experiments_authorized_now": {
+      "const": false
+    },
+    "full_cartesian_product_enumerated": {
+      "const": false
+    },
+    "future_real_records_created_now": {
+      "const": false
+    },
+    "hash_preimage_search_performed": {
+      "const": false
+    },
+    "historical_route_execution_performed": {
+      "const": false
+    },
+    "image_forensics_performed": {
+      "const": false
+    },
+    "manifest_supersession_authorized_now": {
+      "const": false
+    },
+    "manifest_supersession_performed": {
+      "const": false
+    },
+    "meaning_claimed_now": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "method_status_upgraded": {
+      "const": false
+    },
+    "mp3stego_execution_performed": {
+      "const": false
+    },
+    "new_active_planning_input_created": {
+      "const": false
+    },
+    "new_real_operator_approval_record_created_in_stage5di": {
+      "const": false
+    },
+    "ocr_performed": {
+      "const": false
+    },
+    "old_16_worker_default_reintroduced": {
+      "const": false
+    },
+    "openpuff_execution_performed": {
+      "const": false
+    },
+    "operator_approval_alone_authorizes_activation": {
+      "const": false
+    },
+    "operator_approval_alone_authorizes_active_planning_input": {
+      "const": false
+    },
+    "operator_approval_alone_authorizes_byte_stream_generation": {
+      "const": false
+    },
+    "operator_approval_alone_authorizes_execution": {
+      "const": false
+    },
+    "operator_approval_alone_satisfies_combined_gate": {
+      "const": false
+    },
+    "operator_approval_component_satisfied_now": {
+      "const": true
+    },
+    "operator_target_priority_decision_created_now": {
+      "const": false
+    },
+    "page_boundaries_finalized": {
+      "const": false
+    },
+    "pivot_target_selected_now": {
+      "const": false
+    },
+    "polar_route_extraction_performed_now": {
+      "const": false
+    },
+    "raw_body_committed": {
+      "const": false
+    },
+    "real_byte_stream_generated": {
+      "const": false
+    },
+    "real_deep_research_acceptance_record_created_now": {
+      "const": false
+    },
+    "real_operator_approval_record_created_now": {
+      "const": true
+    },
+    "record_type": {
+      "const": "stage5di_no_active_ingestion"
+    },
+    "route_extraction_performed_now": {
+      "const": false
+    },
+    "scoring_performed": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage5bd_dry_run_plan_manifest_changed": {
+      "const": false
+    },
+    "stage5bd_dry_run_records_remain_valid": {
+      "const": true
+    },
+    "stage5bd_plan_superseded": {
+      "const": false
+    },
+    "stage5bd_run_plan_ids_changed": {
+      "const": false
+    },
+    "stage5dg_operator_approval_record_preserved": {
+      "const": true
+    },
+    "stage_id": {
+      "const": "stage-5di"
+    },
+    "stego_tool_execution_performed": {
+      "const": false
+    },
+    "string4_active_input_allowed": {
+      "const": false
+    },
+    "string4_added_to_active_dry_run_inputs": {
+      "const": false
+    },
+    "string4_added_to_stage5bd_run_plan_ids": {
+      "const": false
+    },
+    "string4_byte_stream_generation_allowed": {
+      "const": false
+    },
+    "string4_dry_run_ingestion_allowed_now": {
+      "const": false
+    },
+    "string4_execution_input_allowed": {
+      "const": false
+    },
+    "string4_sidecar_active": {
+      "const": false
+    },
+    "string4_sidecar_planning_ingestion_activated": {
+      "const": false
+    },
+    "target_class_validation_implemented": {
+      "const": false
+    },
+    "token_block_experiment_executed": {
+      "const": false
+    },
+    "token_block_transform_performed_now": {
+      "const": false
+    },
+    "tor_network_access_performed": {
+      "const": false
+    },
+    "triangle_route_extraction_performed_now": {
+      "const": false
+    },
+    "variant_byte_streams_generated": {
+      "const": false
+    },
+    "variant_materialisation_performed": {
+      "const": false
+    },
+    "website_expansion_performed": {
+      "const": false
+    }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "metadata_only",
+    "execution_allowed",
+    "solve_claim",
+    "canonical_codex_handoff_root"
+  ],
+  "title": "stage-5di no_active_ingestion",
+  "type": "object"
+}

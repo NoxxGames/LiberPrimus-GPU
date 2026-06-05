@@ -1,5 +1,11 @@
 # Deep Research Handoff Map
 
+## Stage 5DI Note
+
+Stage 5DI did not execute Deep Research or any experiment. It preserves the Stage 5DG real operator approval record and operator-approval component, source-locks recent clue material and local archive crosswalks, and creates a pivot-readiness package with no selected target. Operator approval alone still does not satisfy the combined gate.
+
+Use `data/project-state/stage5di-*`, `data/historical-route/stage5di-*`, `data/source-harvester/stage5di-*`, and `data/token-block/stage5di-*` for Stage 5DJ target-priority review handoff. Do not hand over raw `third_party/` paths, generated diagnostics, generated completion summaries, target-validation outputs, Tor/network captures, byte streams, decoded bytes, route outputs, or execution outputs as source truth. Stage 5DI creates no Deep Research acceptance record, no combined gate validation record, no activation decision, no active input, and no execution authorization.
+
 ## Stage 5DG Note
 
 Stage 5DG did not execute Deep Research or any experiment. It consumes Stage 5DF assistant/operator review context, preserves Stage 5DE preparation and the Stage 5DC selected option `prepare_real_operator_approval_record`, and creates exactly one valid real operator approval record. Operator approval alone does not satisfy the combined gate.
@@ -190,6 +196,8 @@ Stage 5CR should review Stage 5CQ Stage 5CP findings integration, operator-decis
 Stage 5CS consumes the Stage 5CR accept-with-warnings review as compact metadata, preserves the Stage 5CQ operator-decision scaffold and Stage 5CO readiness/transition records, creates a future operator-decision readiness package plus six unselected real-approval decision options, and keeps actual operator decisions, approval records, activation records, active input, byte-stream generation, manifest supersession, and execution blocked.
 
 Stage 5DG later consumes the Stage 5DF assistant/operator accept-with-warnings review, preserves Stage 5DE preparation and the Stage 5DC selected option, creates exactly one valid real operator approval record, marks only the operator-approval component satisfied, keeps Deep Research acceptance absent, keeps the combined gate unsatisfied, preserves Stage 5BD run-plan IDs and active lineage, and routes Stage 5DH review without activation, active input, byte streams, execution, target validation, Tor/network access, CUDA, scoring, or solve claims.
+
+Stage 5DI later source-locks recent clue material and packages pivot readiness as compact metadata. It preserves the Stage 5DG operator approval component, keeps Deep Research acceptance absent, keeps the combined gate unsatisfied, preserves Stage 5BD run-plan IDs and active lineage, records no selected pivot target, and routes Stage 5DJ target-priority decision packaging without activation, active input, byte streams, route extraction, target validation, Tor/network access, CUDA, scoring, or solve claims.
 
 Stage 5CT reviewed Stage 5CS Stage 5CR findings integration, operator-decision readiness package, decision-options scaffold, option-nonselection proof, real-record blocker, combined-gate non-satisfaction proof, activation nonauthorization proof, Stage 5CQ and Stage 5CO preservation records, Stage 5BD plan preservation, active-lineage preservation, Codex handoff continuity, DWH quarantine reaffirmation, and 8-worker validation evidence before any future real operator decision, approval record, Deep Research acceptance record, combined gate, activation decision, active-planning-input selection, byte-stream stage, or execution-adjacent token-block stage.
 

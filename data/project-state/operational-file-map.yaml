@@ -5108,3 +5108,421 @@ records:
   staleness_check_level: historical
   owner_context: research_operator
   notes: Summarizes Stage 5DF warning integration, the real operator approval record, closed combined/activation/byte/execution gates, preserved Stage 5BD records, and review-only next-stage rationale.
+- path: data/project-state/stage5di-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI compact summary and current boundary record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records source-lock counts, candidate-family counts, pivot nonselection, Stage 5DG preservation, Stage 5BD preservation, active-lineage preservation, and Stage 5DJ routing.
+- path: data/project-state/stage5di-next-stage-decision.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI next-stage decision selecting Stage 5DJ target-priority decision packaging.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps the next stage metadata-only and explicitly non-executing.
+- path: data/project-state/stage5di-source-lock-plan.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI source-lock plan for recent clue material.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Captures web/local source-lock counts and compact metadata-only scope.
+- path: data/project-state/stage5di-recent-clue-source-lock-register.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI source-family register for recent clue material.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Lists eight source/candidate families and linked public/local source records.
+- path: data/project-state/stage5di-pivot-readiness-package.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI pivot-readiness package with no selected target.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records six candidate_not_selected pivot options and no execution authorization.
+- path: data/project-state/stage5di-pivot-priority-matrix.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI qualitative pivot-priority matrix.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Provides reviewable priority context without selecting a target or scoring a solve.
+- path: data/project-state/stage5di-route-candidate-family-index.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI route/candidate family index.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records eight candidate families, seven route-candidate families, and one visual-marker candidate.
+- path: data/project-state/stage5di-reviewable-validation-evidence.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI compact validation evidence.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records focused validators, 8-worker validation cap, and raw/generated staging boundaries.
+- path: data/project-state/stage5di-reviewability-gap-register.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI reviewability gap register.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Lists unresolved source and review gaps without opening execution gates.
+- path: data/project-state/stage5di-record-family-name-equivalence-map.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI record-family filename equivalence map.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Maps prompt shorthand names to committed Stage 5DI record names.
+- path: data/source-harvester/stage5di-web-source-lock-register.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI public web source-lock register.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records six reachable public URLs as compact metadata only; raw webpage bodies are not committed.
+- path: data/source-harvester/stage5di-local-archive-source-lock-register.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI local archive source-lock register.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records local iddqd-v2 and number-triangle source metadata without committing raw archive bytes.
+- path: data/source-harvester/stage5di-cicada-solvers-iddqd-v2-crosswalk.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI iddqd-v2 local archive crosswalk.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Crosswalks local page images/transcripts to candidate families and records the Ciada/Cicada spelling warning.
+- path: data/source-harvester/stage5di-number-triangle-theory-bundle-crosswalk.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI number-triangle theory local bundle crosswalk.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records message/image file metadata for the community bundle without committing forum bodies or images.
+- path: data/source-harvester/stage5di-codex-handoff-policy.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI codex-output handoff policy record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Requires ignored hyphenated codex-output completion summaries and keeps deprecated codex_output unused.
+- path: data/source-harvester/stage5di-credential-redaction-policy-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI credential-redaction policy preservation record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records that credential-like remote values and secrets are not printed or committed.
+- path: data/source-harvester/stage5di-review-packaging-warning.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI review-packaging warning.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Warns that source-lock records are not review packs and raw source bodies remain uncommitted.
+- path: data/historical-route/stage5di-2016-message-route-meta-clue.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI 2016 message route meta-clue source-lock record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records route wording and PGP signature status as claims not reverified in Stage 5DI.
+- path: data/historical-route/stage5di-page32-tree-polar-route-candidate.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI page32/full49 tree-polar route candidate record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records local image metadata and future route-model candidates without route extraction.
+- path: data/historical-route/stage5di-pdd-153-triangle-word-route-candidate.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI PDD 153-word triangle claim record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records community claims pending reproducible transcription crosswalk and performs no triangle route extraction.
+- path: data/historical-route/stage5di-page56-dwh-hash-target-contract.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI page56 DWH target-hash contract record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves the 512-bit hash target context without hash/preimage search or Tor access.
+- path: data/historical-route/stage5di-dinkus-visual-delimiter-candidate.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI dinkus / three-dot visual marker candidate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Source-locks a visual delimiter candidate without measurement, interpretation, OCR, image forensics, or meaning claim.
+- path: data/historical-route/stage5di-boxentriq-known-method-synthesis.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI Boxentriq known-method synthesis source-lock record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records Boxentriq as secondary synthesis, not primary source truth.
+- path: data/historical-route/stage5di-reddit-page32-thread-source-lock.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI Reddit page32 thread source-lock record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records page32/tree route discussion as community claim only.
+- path: data/historical-route/stage5di-magic-square-matrix-route-context.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI magic-square/matrix route context record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records matrix-route context as future bounded candidate metadata only.
+- path: data/historical-route/stage5di-source-gap-severity-update.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI source-gap severity update.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Summarizes remaining source and review gaps for Stage 5DJ.
+- path: data/historical-route/stage5di-dwh-quarantine-reaffirmation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI DWH quarantine reaffirmation record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Reaffirms no DWH/hash search, target validation, or Tor access.
+- path: data/historical-route/stage5di-guardrail.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI no-execution guardrail record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Lists allowed source-lock actions and forbidden execution actions preserved false.
+- path: data/token-block/stage5di-stage5dg-operator-approval-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI Stage 5DG operator-approval preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves Stage 5DG operator approval and records that it does not satisfy the combined gate.
+- path: data/token-block/stage5di-stage5bd-plan-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI Stage 5BD dry-run plan preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves exactly 10 Stage 5BD run-plan IDs and records no plan supersession.
+- path: data/token-block/stage5di-active-lineage-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI active-lineage preservation proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves eight active-lineage records and the corrected Stage 5AW path.
+- path: data/token-block/stage5di-no-active-ingestion-proof.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI no-active-ingestion proof.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps String 4 inactive, active planning input unauthorized and unselected, and active manifest registry unchanged.
+- path: data/token-block/stage5di-no-byte-stream-transition-gate.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI no-byte-stream transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps byte-stream generation, variant materialisation, branch enumeration, and Cartesian enumeration unauthorized.
+- path: data/token-block/stage5di-no-execution-transition-gate.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI no-execution transition gate.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps token-block execution, route extraction, DWH/hash search, decode, scoring, CUDA, benchmarks, target validation, Tor access, and solve claims false.
+- path: data/token-block/stage5di-target-class-context-preservation.yaml
+  category: operational_status_doc
+  purpose: Stage 5DI target-class context preservation record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves target-class context as future design metadata and records no validation, Tor access, or byte execution.
+- path: docs/experiments/stage-5di-recent-clue-source-lock.md
+  category: operational_status_doc
+  purpose: Human-readable Stage 5DI source-lock and pivot-readiness documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents records, counts, no-execution boundaries, and Stage 5DJ review routing.
+- path: docs/development-logs/2026-06-04-stage-5di-recent-clue-source-lock.md
+  category: historical_log
+  purpose: Stage 5DI implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation scope, validation, and no-raw/generated staging boundaries.
+- path: research-log/2026-06-04-stage-5di-next-stage-decision-summary.md
+  category: historical_log
+  purpose: Stage 5DI summary-only research log and Stage 5DJ next-stage decision.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5di
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: research_operator
+  notes: Summarizes source locks, pivot nonselection, preserved approval gates, and target-priority review routing.

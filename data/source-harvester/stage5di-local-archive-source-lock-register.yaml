@@ -1,0 +1,256 @@
+record_type: stage5di_local_archive_source_lock_register
+schema: schemas/source-harvester/stage5di-local-archive-source-lock-register-v0.schema.json
+stage_id: stage-5di
+stage_title: Stage 5DI - Recent clue source-lock and pivot-readiness package, without
+  execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5dg
+source_previous_stage_commit: bc47233023556073d5a057097aa23ce79d899c8a
+metadata_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_activation_accept_record_present_now: false
+deep_research_acceptance_component_satisfied_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+experiment_authorized_now: false
+experiment_executed_now: false
+experiments_authorized_now: false
+full_cartesian_product_enumerated: false
+future_real_records_created_now: false
+hash_preimage_search_performed: false
+historical_route_execution_performed: false
+image_forensics_performed: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+meaning_claimed_now: false
+method_status_upgraded: false
+mp3stego_execution_performed: false
+new_active_planning_input_created: false
+new_real_operator_approval_record_created_in_stage5di: false
+ocr_performed: false
+old_16_worker_default_reintroduced: false
+openpuff_execution_performed: false
+operator_approval_alone_authorizes_activation: false
+operator_approval_alone_authorizes_active_planning_input: false
+operator_approval_alone_authorizes_byte_stream_generation: false
+operator_approval_alone_authorizes_execution: false
+operator_approval_alone_satisfies_combined_gate: false
+operator_target_priority_decision_created_now: false
+page_boundaries_finalized: false
+pivot_target_selected_now: false
+polar_route_extraction_performed_now: false
+raw_body_committed: false
+real_byte_stream_generated: false
+real_deep_research_acceptance_record_created_now: false
+route_extraction_performed_now: false
+scoring_performed: false
+stage5bd_dry_run_plan_manifest_changed: false
+stage5bd_plan_superseded: false
+stage5bd_run_plan_ids_changed: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_added_to_active_dry_run_inputs: false
+string4_added_to_stage5bd_run_plan_ids: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+target_class_validation_implemented: false
+token_block_experiment_executed: false
+token_block_transform_performed_now: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+website_expansion_performed: false
+stage5dg_operator_approval_record_preserved: true
+real_operator_approval_record_created_now: true
+operator_approval_component_satisfied_now: true
+stage5bd_dry_run_records_remain_valid: true
+real_deep_research_acceptance_record_present_now: false
+stage5bd_run_plan_id_count: 10
+active_lineage_record_count: 8
+parallel_worker_cap_for_stage5di_and_later: 8
+source_lock_scope: local_archive_compact_metadata_only
+local_archive_source_lock_count: 11
+sources:
+- source_id: stage5di-local-iddqd_v2_root
+  stage_id: stage-5di
+  source_type: directory
+  source_locator: third_party/CiadaSolversIddqd_v2
+  path_exists: true
+  source_lock_status: local_metadata_hash_recorded
+  candidate_family_ids:
+  - 2016_message_route_meta_clue_v0
+  - page32_tree_polar_route_v0
+  - pdd_153_triangle_word_route_v0
+  - page56_dwh_hash_target_contract_v0
+  - token_block_matrix_context_v0
+  - dinkus_visual_delimiter_candidate_v0
+  - magic_square_matrix_route_context_v0
+  - boxentriq_known_method_synthesis_v0
+  raw_file_committed: false
+  raw_body_committed: false
+  content_saved_raw: false
+  sha256: null
+  size_bytes: null
+- source_id: stage5di-local-iddqd_v2_transcription_master
+  stage_id: stage-5di
+  source_type: text_file
+  source_locator: third_party/CiadaSolversIddqd_v2/liber-primus__transcription--master/liber-primus__transcription--master.txt
+  path_exists: true
+  source_lock_status: local_metadata_hash_recorded
+  candidate_family_ids:
+  - pdd_153_triangle_word_route_v0
+  - token_block_matrix_context_v0
+  raw_file_committed: false
+  raw_body_committed: false
+  content_saved_raw: false
+  sha256: b0b2e13c3cd35512ee5955a2d9a56c22d7410e283d35dd9c90abbaa7b99279eb
+  size_bytes: 54553
+- source_id: stage5di-local-iddqd_v2_transcription_sentences
+  stage_id: stage-5di
+  source_type: text_file
+  source_locator: third_party/CiadaSolversIddqd_v2/liber-primus__transcription--sentences/liber-primus__transcription--sentences.txt
+  path_exists: true
+  source_lock_status: local_metadata_hash_recorded
+  candidate_family_ids:
+  - pdd_153_triangle_word_route_v0
+  raw_file_committed: false
+  raw_body_committed: false
+  content_saved_raw: false
+  sha256: 1f5fd9ac0fd2d53942e9f64074fe806329c0d2c59824cafc6e5b1d676eb8dec4
+  size_bytes: 57495
+- source_id: stage5di-local-iddqd_v2_unsolved_page32
+  stage_id: stage-5di
+  source_type: image_file
+  source_locator: third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved/32.jpg
+  path_exists: true
+  source_lock_status: local_metadata_hash_recorded
+  candidate_family_ids:
+  - page32_tree_polar_route_v0
+  raw_file_committed: false
+  raw_body_committed: false
+  content_saved_raw: false
+  sha256: c0f778187a8e9ddbfc667a65929ac567430a2e38278a2022377984ac084e5f72
+  size_bytes: 362637
+- source_id: stage5di-local-iddqd_v2_full_page49
+  stage_id: stage-5di
+  source_type: image_file
+  source_locator: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/49.jpg
+  path_exists: true
+  source_lock_status: local_metadata_hash_recorded
+  candidate_family_ids:
+  - page32_tree_polar_route_v0
+  - token_block_matrix_context_v0
+  raw_file_committed: false
+  raw_body_committed: false
+  content_saved_raw: false
+  sha256: c0f778187a8e9ddbfc667a65929ac567430a2e38278a2022377984ac084e5f72
+  size_bytes: 362637
+- source_id: stage5di-local-iddqd_v2_full_page50
+  stage_id: stage-5di
+  source_type: image_file
+  source_locator: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/50.jpg
+  path_exists: true
+  source_lock_status: local_metadata_hash_recorded
+  candidate_family_ids:
+  - dinkus_visual_delimiter_candidate_v0
+  - token_block_matrix_context_v0
+  raw_file_committed: false
+  raw_body_committed: false
+  content_saved_raw: false
+  sha256: 13ff4c8d8ab934032a001b8c1fda16433aa44a38dd7272b3ff0dd7ac8300c62d
+  size_bytes: 525652
+- source_id: stage5di-local-iddqd_v2_full_page51
+  stage_id: stage-5di
+  source_type: image_file
+  source_locator: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/51.jpg
+  path_exists: true
+  source_lock_status: local_metadata_hash_recorded
+  candidate_family_ids:
+  - token_block_matrix_context_v0
+  raw_file_committed: false
+  raw_body_committed: false
+  content_saved_raw: false
+  sha256: 6f1b4c04b64ee54c689478bd3986bb6ab8a3b81f48780562094e9f248e4e87f8
+  size_bytes: 555050
+- source_id: stage5di-local-iddqd_v2_full_page56
+  stage_id: stage-5di
+  source_type: image_file
+  source_locator: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/56.jpg
+  path_exists: true
+  source_lock_status: local_metadata_hash_recorded
+  candidate_family_ids:
+  - dinkus_visual_delimiter_candidate_v0
+  - page56_dwh_hash_target_contract_v0
+  raw_file_committed: false
+  raw_body_committed: false
+  content_saved_raw: false
+  sha256: d1b7ea5a6ffb79709753e3565d1d46e05edbe3d82ca70c3ed6065d46b131bd00
+  size_bytes: 541379
+- source_id: stage5di-local-iddqd_v2_lp_outguessed
+  stage_id: stage-5di
+  source_type: directory
+  source_locator: third_party/CiadaSolversIddqd_v2/lp_outguessed
+  path_exists: true
+  source_lock_status: local_metadata_hash_recorded
+  candidate_family_ids:
+  - page56_dwh_hash_target_contract_v0
+  - boxentriq_known_method_synthesis_v0
+  raw_file_committed: false
+  raw_body_committed: false
+  content_saved_raw: false
+  sha256: null
+  size_bytes: null
+- source_id: stage5di-local-number_triangle_bundle
+  stage_id: stage-5di
+  source_type: directory
+  source_locator: third_party/UsefulFilesAndIdeas/number-triangle-theory
+  path_exists: true
+  source_lock_status: local_metadata_hash_recorded
+  candidate_family_ids:
+  - pdd_153_triangle_word_route_v0
+  - magic_square_matrix_route_context_v0
+  raw_file_committed: false
+  raw_body_committed: false
+  content_saved_raw: false
+  sha256: null
+  size_bytes: null
+- source_id: stage5di-local-number_triangle_messages
+  stage_id: stage-5di
+  source_type: text_file
+  source_locator: third_party/UsefulFilesAndIdeas/number-triangle-theory/messages.txt
+  path_exists: true
+  source_lock_status: local_metadata_hash_recorded
+  candidate_family_ids:
+  - pdd_153_triangle_word_route_v0
+  raw_file_committed: false
+  raw_body_committed: false
+  content_saved_raw: false
+  sha256: 3040dd6ef3ce7fb38ae54659883144e4002434b655d0406ea19078e87f282b59
+  size_bytes: 9178
+raw_archive_files_committed: false
