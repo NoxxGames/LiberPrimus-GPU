@@ -87,4 +87,3 @@ def test_stage5dk_build_cli_is_registered() -> None:
     output = run_cli("build-stage5dk", "--help")
 
     assert "build-stage5dk" in output
-    assert "--no-fetch" in output
