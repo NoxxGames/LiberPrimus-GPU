@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DL triangle / disk / quote / koan source-lock refresh is complete.
+Stage 5DM Blake / Sacred Book / full-page visual / Page32 Moebius-Fibonacci / doublet / evidence-atlas source-lock addendum is complete.
 
-Next recommended prompt: Stage 5DM - Target-priority decision package, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DN - Source/evidence review and target-priority decision readiness review, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DM
+
+Stage 5DM adds the missing visual-route source-lock addendum as compact metadata only. It records the Blake visual-text source family, Sacred Book Edition overlay index, Page6 magic-square word-sum precedent, full-page visual motif index, Page32 Moebius/Fibonacci-prime-index spiral arithmetic, LP doublet scarcity future feature candidate, evidence-atlas readiness, and Drive/path hygiene source-root aliases.
+
+Local Stage 5DM summary: source-lock addendum created `true`, source-lock addendum family count `8`, Blake source family created `true`, Sacred Book overlay index created `true`, magic-square precedent created `true`, full-page motif index created `true`, Page32 spiral record created `true`, doublet scarcity candidate created `true`, evidence-atlas readiness created `true`, Page32 arithmetic verified `true`, pivot target selected `false`, target-priority decision created `false`, Stage 5DG operator approval preserved `true`, combined gate satisfied `false`, activation authorized `false`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, execution authorized `false`, generated outputs committed `false`, raw third-party files committed `false`, `codex_output` used `false`, and next stage `Stage 5DN`.
+
+Stage 5DM is metadata-only source-lock and evidence-atlas readiness infrastructure. It does not rerun Stage 5DL, create Deep Research acceptance, satisfy the combined gate, authorize activation, select a pivot target, select active planning input, generate byte streams, run target-class validation, use Tor/network route access, run triangle/disk/quote/koan/Page32/Blake route extraction, perform OCR/image forensics/AI interpretation, search DWH/hash/preimages, decode, score, run CUDA tooling, benchmark, publish website content, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DL
 

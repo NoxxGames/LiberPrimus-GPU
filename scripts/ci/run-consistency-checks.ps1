@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5DL" `
-        --expected-next-stage "Stage 5DM" `
+        --expected-latest-stage "Stage 5DM" `
+        --expected-next-stage "Stage 5DN" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5DL" `
-        --expected-next-stage "Stage 5DM" `
+        --expected-latest-stage "Stage 5DM" `
+        --expected-next-stage "Stage 5DN" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DL",
+            expected_latest_stage="Stage 5DM",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DL",
+            "expected_latest_stage": "Stage 5DM",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3112,6 +3112,32 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q "codex-output/stage5dl-codex-completion.md"
     git check-ignore -q "third_party/koan_page.png"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DL" }
+
+    Write-Host "Validating Stage 5DM visual route source-lock addendum records"
+    & $Python -m libreprimus.cli token-block validate-stage5dm-blake-source-family
+    & $Python -m libreprimus.cli token-block validate-stage5dm-lp-sacred-book-overlays
+    & $Python -m libreprimus.cli token-block validate-stage5dm-magic-square-precedent
+    & $Python -m libreprimus.cli token-block validate-stage5dm-full-page-visual-motifs
+    & $Python -m libreprimus.cli token-block validate-stage5dm-page32-moebius-fibonacci
+    & $Python -m libreprimus.cli token-block validate-stage5dm-doublet-scarcity-feature
+    & $Python -m libreprimus.cli token-block validate-stage5dm-evidence-atlas-readiness
+    & $Python -m libreprimus.cli token-block validate-stage5dm-drive-path-hygiene
+    & $Python -m libreprimus.cli token-block validate-stage5dm-pivot-readiness
+    & $Python -m libreprimus.cli token-block validate-stage5dm-sidecar-gates
+    & $Python -m libreprimus.cli token-block validate-stage5dm-handoff-continuity
+    & $Python -m libreprimus.cli token-block validate-stage5dm-governance-scope
+    & $Python -m libreprimus.cli token-block validate-stage5dm
+    & $Python -m libreprimus.cli token-block stage5dm-summary
+    $Stage5DMTokenResultsRoot = Join-Path (Join-Path (Join-Path "experiments" "results") "token-block") "stage5dm"
+    git check-ignore -q (Join-Path $Stage5DMTokenResultsRoot "summary.json")
+    git check-ignore -q (Join-Path $Stage5DMTokenResultsRoot "source_root_discovery.json")
+    git check-ignore -q (Join-Path $Stage5DMTokenResultsRoot "source_lock_addendum_report.json")
+    git check-ignore -q (Join-Path $Stage5DMTokenResultsRoot "pivot_readiness_report.json")
+    git check-ignore -q (Join-Path $Stage5DMTokenResultsRoot "preservation_report.json")
+    git check-ignore -q (Join-Path $Stage5DMTokenResultsRoot "warnings.jsonl")
+    git check-ignore -q "codex-output/stage5dm-codex-completion.md"
+    git check-ignore -q "third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP Sacred Book Edition/english text on top of pages/Page6-book.jpg"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DM" }
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

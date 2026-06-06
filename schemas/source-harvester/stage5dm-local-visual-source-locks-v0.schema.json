@@ -1,0 +1,190 @@
+{
+  "$id": "schemas/source-harvester/stage5dm-local-visual-source-locks-v0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "activation_authorized_now": {
+      "const": false
+    },
+    "activation_decision_valid_now": {
+      "const": false
+    },
+    "active_ingestion_performed": {
+      "const": false
+    },
+    "active_manifest_registry_updated": {
+      "const": false
+    },
+    "active_planning_input_authorized_now": {
+      "const": false
+    },
+    "active_planning_input_selected_now": {
+      "const": false
+    },
+    "ai_ml_interpretation_performed": {
+      "const": false
+    },
+    "approval_gate_authorizes_activation_now": {
+      "const": false
+    },
+    "approval_gate_satisfied_now": {
+      "const": false
+    },
+    "byte_stream_generation_authorized_now": {
+      "const": false
+    },
+    "canonical_codex_handoff_root": {
+      "const": "codex-output"
+    },
+    "canonical_corpus_active": {
+      "const": false
+    },
+    "cuda_execution_performed": {
+      "const": false
+    },
+    "decode_attempt_performed": {
+      "const": false
+    },
+    "deep_research_acceptance_record_created_now": {
+      "const": false
+    },
+    "dwh_hash_search_performed": {
+      "const": false
+    },
+    "execution_allowed": {
+      "const": false
+    },
+    "execution_authorized_now": {
+      "const": false
+    },
+    "full_route_extraction_performed_now": {
+      "const": false
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "hash_preimage_search_performed": {
+      "const": false
+    },
+    "image_forensics_performed": {
+      "const": false
+    },
+    "manual_target_priority_selected_now": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "mp3stego_execution_performed": {
+      "const": false
+    },
+    "ocr_performed": {
+      "const": false
+    },
+    "openpuff_execution_performed": {
+      "const": false
+    },
+    "page32_route_extraction_performed_now": {
+      "const": false
+    },
+    "page_boundaries_finalized": {
+      "const": false
+    },
+    "pivot_target_selected_now": {
+      "const": false
+    },
+    "polar_route_extraction_performed_now": {
+      "const": false
+    },
+    "raw_third_party_files_committed": {
+      "const": false
+    },
+    "real_combined_gate_validation_record_created_now": {
+      "const": false
+    },
+    "real_deep_research_acceptance_record_created_now": {
+      "const": false
+    },
+    "real_operator_approval_record_created_now": {
+      "const": false
+    },
+    "record_type": {
+      "const": "stage5dm_local_visual_source_locks"
+    },
+    "route_extraction_performed_now": {
+      "const": false
+    },
+    "scoring_performed": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage5dl_rerun_performed": {
+      "const": false
+    },
+    "stage5dm_authorizes_blake_based_decoding_now": {
+      "const": false
+    },
+    "stage5dm_authorizes_page32_execution_now": {
+      "const": false
+    },
+    "stage5dm_authorizes_pdd_153_triangle_execution_now": {
+      "const": false
+    },
+    "stage5dm_builds_evidence_atlas_tool_now": {
+      "const": false
+    },
+    "stage5dm_builds_web_app_now": {
+      "const": false
+    },
+    "stage5dm_commits_raw_third_party_images": {
+      "const": false
+    },
+    "stage5dm_runs_ocr_or_visual_matching_now": {
+      "const": false
+    },
+    "stage5dm_selects_pivot_target_now": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-5dm"
+    },
+    "stego_tool_execution_performed": {
+      "const": false
+    },
+    "target_class_validation_implemented": {
+      "const": false
+    },
+    "target_priority_decision_created_now": {
+      "const": false
+    },
+    "token_block_experiment_executed": {
+      "const": false
+    },
+    "tor_network_access_performed": {
+      "const": false
+    },
+    "triangle_route_extraction_performed_now": {
+      "const": false
+    },
+    "variant_byte_streams_generated": {
+      "const": false
+    },
+    "website_expansion_performed": {
+      "const": false
+    }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "metadata_only",
+    "execution_allowed",
+    "canonical_codex_handoff_root",
+    "stage5dl_rerun_performed",
+    "solve_claim",
+    "generated_outputs_committed"
+  ],
+  "title": "stage5dm_local_visual_source_locks",
+  "type": "object"
+}

@@ -337,7 +337,7 @@ records:
   category: active_data_record
   purpose: Active Stage 5AH doc-staleness source-of-truth record.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5dl
+  last_meaningful_update_stage: stage-5dm
   expected_update_frequency: every_doc_staleness_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -6070,6 +6070,94 @@ records:
   purpose: Stage 5DL implementation and validation log.
   source_of_truth_rank: 2
   last_meaningful_update_stage: stage-5dl
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation scope, metadata-only boundaries, and validation summary.
+- path: data/project-state/stage5dm-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DM aggregate summary and next Stage 5DN routing.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records visual-route source-lock addendum families, Page32 arithmetic verification, preserved gates, and no-execution boundaries.
+- path: data/project-state/stage5dm-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DM project-state record family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers Stage 5DM source-lock addendum, pivot-readiness, path hygiene, evidence-atlas readiness, and validation evidence records.
+- path: data/historical-route/stage5dm-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DM historical-route addendum record family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers Blake context, Sacred Book overlays, Page6 magic-square precedent, full-page motifs, Page32 arithmetic, and doublet-scarcity metadata only.
+- path: data/source-harvester/stage5dm-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DM source-harvester source-lock addendum family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers Blake web-source gap metadata and local visual source locks while raw bodies and images remain ignored.
+- path: data/token-block/stage5dm-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DM preservation and closed-gate record family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers Stage 5BD/active-lineage preservation and no-active/no-byte/no-execution gates.
+- path: schemas/*/stage5dm-*.schema.json
+  category: schema
+  purpose: Stage 5DM schema family for metadata-only records.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers generated Stage 5DM JSON schemas that enforce no-execution/no-solve guardrails.
+- path: docs/experiments/stage-5dm-visual-route-source-lock-addendum.md
+  category: operational_status_doc
+  purpose: Human-readable Stage 5DM source-lock addendum and no-execution documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dm
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents addendum families, Page32 arithmetic verification, no-target-selection boundary, and Stage 5DN routing.
+- path: docs/development-logs/2026-06-06-stage-5dm-visual-route-source-lock-addendum.md
+  category: historical_log
+  purpose: Stage 5DM implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dm
   expected_update_frequency: stage_specific
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source

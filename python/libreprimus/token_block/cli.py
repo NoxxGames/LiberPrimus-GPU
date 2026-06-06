@@ -741,6 +741,7 @@ from .stage5dl import (
     validate_stage5dl_triangle_prime_mask,
     validate_stage5dl_triangle_way_anchor,
 )
+from . import stage5dm as stage5dm_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -8656,6 +8657,164 @@ def validate_stage5dl_command() -> None:
 @app.command("stage5dl-summary")
 def stage5dl_summary_command() -> None:
     console.print(stage5dl_summary_text())
+
+
+def _print_stage5dm_result(result: object, success_line: str) -> None:
+    text = result.to_cli_text()
+    console.print(text)
+    if getattr(result, "validation_error_count") != 0:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5dm")
+def build_stage5dm_command(
+    results_dir: Path = typer.Option(stage5dm_module.RESULTS_DIR),
+) -> None:
+    _ = results_dir
+    records = stage5dm_module.build_stage5dm()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(
+        "source_lock_addendum_created="
+        f"{str(summary.get('source_lock_addendum_created')).lower()}"
+    )
+    console.print(
+        "source_lock_addendum_family_count="
+        f"{summary.get('source_lock_addendum_family_count')}"
+    )
+    console.print(
+        "blake_visual_text_source_family_created="
+        f"{str(summary.get('blake_visual_text_source_family_created')).lower()}"
+    )
+    console.print(
+        "lp_sacred_book_overlay_index_created="
+        f"{str(summary.get('lp_sacred_book_overlay_index_created')).lower()}"
+    )
+    console.print(
+        "page32_moebius_fibonacci_prime_index_spiral_created="
+        f"{str(summary.get('page32_moebius_fibonacci_prime_index_spiral_created')).lower()}"
+    )
+    console.print(
+        "page32_arithmetic_verified="
+        f"{str(summary.get('page32_arithmetic_verified')).lower()}"
+    )
+    console.print(f"target_selected={str(summary.get('target_selected')).lower()}")
+    console.print(
+        f"execution_authorized_now={str(summary.get('execution_authorized_now')).lower()}"
+    )
+    console.print(f"stage5bd_run_plan_id_count={summary.get('stage5bd_run_plan_id_count')}")
+    console.print(f"active_lineage_record_count={summary.get('active_lineage_record_count')}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5dm-blake-source-family")
+def validate_stage5dm_blake_source_family_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm_blake_source_family(),
+        "token_block_stage5dm_blake_source_family_valid=true",
+    )
+
+
+@app.command("validate-stage5dm-lp-sacred-book-overlays")
+def validate_stage5dm_lp_sacred_book_overlays_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm_lp_sacred_book_overlays(),
+        "token_block_stage5dm_lp_sacred_book_overlays_valid=true",
+    )
+
+
+@app.command("validate-stage5dm-magic-square-precedent")
+def validate_stage5dm_magic_square_precedent_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm_magic_square_precedent(),
+        "token_block_stage5dm_magic_square_precedent_valid=true",
+    )
+
+
+@app.command("validate-stage5dm-full-page-visual-motifs")
+def validate_stage5dm_full_page_visual_motifs_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm_full_page_visual_motifs(),
+        "token_block_stage5dm_full_page_visual_motifs_valid=true",
+    )
+
+
+@app.command("validate-stage5dm-page32-moebius-fibonacci")
+def validate_stage5dm_page32_moebius_fibonacci_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm_page32_moebius_fibonacci(),
+        "token_block_stage5dm_page32_moebius_fibonacci_valid=true",
+    )
+
+
+@app.command("validate-stage5dm-doublet-scarcity-feature")
+def validate_stage5dm_doublet_scarcity_feature_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm_doublet_scarcity_feature(),
+        "token_block_stage5dm_doublet_scarcity_feature_valid=true",
+    )
+
+
+@app.command("validate-stage5dm-evidence-atlas-readiness")
+def validate_stage5dm_evidence_atlas_readiness_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm_evidence_atlas_readiness(),
+        "token_block_stage5dm_evidence_atlas_readiness_valid=true",
+    )
+
+
+@app.command("validate-stage5dm-drive-path-hygiene")
+def validate_stage5dm_drive_path_hygiene_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm_drive_path_hygiene(),
+        "token_block_stage5dm_drive_path_hygiene_valid=true",
+    )
+
+
+@app.command("validate-stage5dm-pivot-readiness")
+def validate_stage5dm_pivot_readiness_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm_pivot_readiness(),
+        "token_block_stage5dm_pivot_readiness_valid=true",
+    )
+
+
+@app.command("validate-stage5dm-sidecar-gates")
+def validate_stage5dm_sidecar_gates_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm_sidecar_gates(),
+        "token_block_stage5dm_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5dm-handoff-continuity")
+def validate_stage5dm_handoff_continuity_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm_handoff_continuity(),
+        "token_block_stage5dm_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5dm-governance-scope")
+def validate_stage5dm_governance_scope_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm_governance_scope(),
+        "token_block_stage5dm_governance_scope_valid=true",
+    )
+
+
+@app.command("validate-stage5dm")
+def validate_stage5dm_command() -> None:
+    _print_stage5dm_result(
+        stage5dm_module.validate_stage5dm(),
+        "token_block_stage5dm_valid=true",
+    )
+
+
+@app.command("stage5dm-summary")
+def stage5dm_summary_command() -> None:
+    console.print(stage5dm_module.stage5dm_summary_text())
 
 
 def register(root_app: typer.Typer) -> None:

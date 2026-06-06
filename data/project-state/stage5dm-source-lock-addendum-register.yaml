@@ -1,0 +1,181 @@
+record_type: stage5dm_source_lock_addendum_register
+schema: schemas/project-state/stage5dm-source-lock-addendum-register-v0.schema.json
+stage_id: stage-5dm
+stage_title: Stage 5DM - Blake / Sacred Book / full-page visual / Page32 Moebius-Fibonacci
+  / doublet / evidence-atlas source-lock addendum, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5dl
+source_previous_stage_id: stage-5dl
+source_previous_stage_commit: 054baa1377d5058cd6ad4402f725cd648ba8c0c0
+metadata_only: true
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+stage5dl_rerun_performed: false
+stage5dl_records_assumed_present_for_stage5dm_addendum: true
+stage5dl_completion_summary_missing_or_not_available: false
+stage5dg_operator_approval_record_preserved: true
+operator_approval_component_satisfied_now: true
+deep_research_acceptance_component_satisfied_now: false
+combined_approval_gate_satisfied_now: false
+stage5bd_run_plan_id_count: 10
+active_lineage_record_count: 8
+parallel_worker_cap_for_stage5dm_and_later: 8
+recommended_next_stage_id: stage-5dn
+recommended_next_stage_title: Stage 5DN - Source/evidence review and target-priority
+  decision readiness review, without execution
+recommended_next_prompt_type: codex_metadata_implementation
+tor_network_access_performed: false
+dwh_hash_search_performed: false
+stage5dm_commits_raw_third_party_images: false
+target_priority_decision_created_now: false
+generated_outputs_committed: false
+cuda_execution_performed: false
+mp3stego_execution_performed: false
+stage5dm_runs_ocr_or_visual_matching_now: false
+stage5dm_authorizes_pdd_153_triangle_execution_now: false
+stego_tool_execution_performed: false
+stage5dm_authorizes_blake_based_decoding_now: false
+variant_byte_streams_generated: false
+active_planning_input_authorized_now: false
+openpuff_execution_performed: false
+active_manifest_registry_updated: false
+stage5dm_selects_pivot_target_now: false
+token_block_experiment_executed: false
+real_operator_approval_record_created_now: false
+execution_authorized_now: false
+scoring_performed: false
+activation_authorized_now: false
+full_route_extraction_performed_now: false
+stage5dm_builds_web_app_now: false
+pivot_target_selected_now: false
+approval_gate_authorizes_activation_now: false
+stage5dm_authorizes_page32_execution_now: false
+activation_decision_valid_now: false
+website_expansion_performed: false
+route_extraction_performed_now: false
+decode_attempt_performed: false
+ai_ml_interpretation_performed: false
+target_class_validation_implemented: false
+hash_preimage_search_performed: false
+polar_route_extraction_performed_now: false
+page32_route_extraction_performed_now: false
+real_deep_research_acceptance_record_created_now: false
+canonical_corpus_active: false
+deep_research_acceptance_record_created_now: false
+page_boundaries_finalized: false
+stage5dm_builds_evidence_atlas_tool_now: false
+triangle_route_extraction_performed_now: false
+active_ingestion_performed: false
+real_combined_gate_validation_record_created_now: false
+approval_gate_satisfied_now: false
+ocr_performed: false
+active_planning_input_selected_now: false
+image_forensics_performed: false
+manual_target_priority_selected_now: false
+byte_stream_generation_authorized_now: false
+solve_claim: false
+source_lock_addendum_created: true
+source_lock_addendum_family_count: 8
+source_lock_addendum_families:
+- blake_visual_text_source_family_v0
+- lp_sacred_book_edition_overlay_v0
+- solved_magic_square_word_sum_precedent_v0
+- full_lp_page_visual_motif_index_v0
+- page32_moebius_fibonacci_prime_index_spiral_v1
+- lp_doublet_scarcity_feature_v0
+- evidence_source_atlas_readiness_v0
+- drive_path_hygiene_and_source_root_aliases_v0
+stage5dl_duplicate_record_creation_performed: false
+source_roots_checked:
+- source_root_id: number_triangle_current_folder
+  path: third_party/NumberTriangleStuff/v2-number-triangles
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 9
+  folder_count_if_directory: 8
+  source_lock_role: primary_number_triangle_context
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: lp_sacred_book_overlay_preferred
+  path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP Sacred
+    Book Edition/english text on top of pages
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 16
+  folder_count_if_directory: 0
+  source_lock_role: sacred_book_overlay_alignment_aids
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: liber_primus_pages
+  path: third_party/LiberPrimusPages
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 62
+  folder_count_if_directory: 0
+  source_lock_role: local_lp_page_image_archive
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: koan_page_preferred
+  path: third_party/koan_page.png
+  exists: true
+  is_file: true
+  is_directory: false
+  file_count_if_directory: 0
+  folder_count_if_directory: 0
+  source_lock_role: operator_blake_visual_context
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: disk_cipher_preferred
+  path: third_party/DiskCipherStuff
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 0
+  folder_count_if_directory: 1
+  source_lock_role: stage5dl_disk_cipher_context
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: reddit_stuff_preferred
+  path: third_party/RedditStuff
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 0
+  folder_count_if_directory: 3
+  source_lock_role: stage5dl_reddit_source_context
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: cicada_music_preferred
+  path: third_party/CicadaMusic
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 7
+  folder_count_if_directory: 0
+  source_lock_role: stage5dj_music_context
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: historical_iddqd_folder_spelling_seen
+  path: third_party/CiadaSolversIddqd_v2
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 0
+  folder_count_if_directory: 14
+  source_lock_role: legacy_alias
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: iddqd_corrected_folder
+  path: third_party/CicadaSolversIddqd
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 2
+  folder_count_if_directory: 9
+  source_lock_role: local_iddqd_context
+  raw_commit_allowed: false
+  missing_is_blocking: false
+raw_third_party_files_committed: false

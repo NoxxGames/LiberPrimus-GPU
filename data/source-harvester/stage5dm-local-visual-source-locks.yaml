@@ -1,0 +1,483 @@
+record_type: stage5dm_local_visual_source_locks
+schema: schemas/source-harvester/stage5dm-local-visual-source-locks-v0.schema.json
+stage_id: stage-5dm
+stage_title: Stage 5DM - Blake / Sacred Book / full-page visual / Page32 Moebius-Fibonacci
+  / doublet / evidence-atlas source-lock addendum, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5dl
+source_previous_stage_id: stage-5dl
+source_previous_stage_commit: 054baa1377d5058cd6ad4402f725cd648ba8c0c0
+metadata_only: true
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+stage5dl_rerun_performed: false
+stage5dl_records_assumed_present_for_stage5dm_addendum: true
+stage5dl_completion_summary_missing_or_not_available: false
+stage5dg_operator_approval_record_preserved: true
+operator_approval_component_satisfied_now: true
+deep_research_acceptance_component_satisfied_now: false
+combined_approval_gate_satisfied_now: false
+stage5bd_run_plan_id_count: 10
+active_lineage_record_count: 8
+parallel_worker_cap_for_stage5dm_and_later: 8
+recommended_next_stage_id: stage-5dn
+recommended_next_stage_title: Stage 5DN - Source/evidence review and target-priority
+  decision readiness review, without execution
+recommended_next_prompt_type: codex_metadata_implementation
+tor_network_access_performed: false
+dwh_hash_search_performed: false
+stage5dm_commits_raw_third_party_images: false
+target_priority_decision_created_now: false
+generated_outputs_committed: false
+cuda_execution_performed: false
+mp3stego_execution_performed: false
+stage5dm_runs_ocr_or_visual_matching_now: false
+stage5dm_authorizes_pdd_153_triangle_execution_now: false
+stego_tool_execution_performed: false
+stage5dm_authorizes_blake_based_decoding_now: false
+variant_byte_streams_generated: false
+active_planning_input_authorized_now: false
+openpuff_execution_performed: false
+active_manifest_registry_updated: false
+stage5dm_selects_pivot_target_now: false
+token_block_experiment_executed: false
+real_operator_approval_record_created_now: false
+execution_authorized_now: false
+scoring_performed: false
+activation_authorized_now: false
+full_route_extraction_performed_now: false
+stage5dm_builds_web_app_now: false
+pivot_target_selected_now: false
+approval_gate_authorizes_activation_now: false
+stage5dm_authorizes_page32_execution_now: false
+activation_decision_valid_now: false
+website_expansion_performed: false
+route_extraction_performed_now: false
+decode_attempt_performed: false
+ai_ml_interpretation_performed: false
+target_class_validation_implemented: false
+hash_preimage_search_performed: false
+polar_route_extraction_performed_now: false
+page32_route_extraction_performed_now: false
+real_deep_research_acceptance_record_created_now: false
+canonical_corpus_active: false
+deep_research_acceptance_record_created_now: false
+page_boundaries_finalized: false
+stage5dm_builds_evidence_atlas_tool_now: false
+triangle_route_extraction_performed_now: false
+active_ingestion_performed: false
+real_combined_gate_validation_record_created_now: false
+approval_gate_satisfied_now: false
+ocr_performed: false
+active_planning_input_selected_now: false
+image_forensics_performed: false
+manual_target_priority_selected_now: false
+byte_stream_generation_authorized_now: false
+solve_claim: false
+source_roots:
+- source_root_id: number_triangle_current_folder
+  path: third_party/NumberTriangleStuff/v2-number-triangles
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 9
+  folder_count_if_directory: 8
+  source_lock_role: primary_number_triangle_context
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: lp_sacred_book_overlay_preferred
+  path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP Sacred
+    Book Edition/english text on top of pages
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 16
+  folder_count_if_directory: 0
+  source_lock_role: sacred_book_overlay_alignment_aids
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: liber_primus_pages
+  path: third_party/LiberPrimusPages
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 62
+  folder_count_if_directory: 0
+  source_lock_role: local_lp_page_image_archive
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: koan_page_preferred
+  path: third_party/koan_page.png
+  exists: true
+  is_file: true
+  is_directory: false
+  file_count_if_directory: 0
+  folder_count_if_directory: 0
+  source_lock_role: operator_blake_visual_context
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: disk_cipher_preferred
+  path: third_party/DiskCipherStuff
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 0
+  folder_count_if_directory: 1
+  source_lock_role: stage5dl_disk_cipher_context
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: reddit_stuff_preferred
+  path: third_party/RedditStuff
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 0
+  folder_count_if_directory: 3
+  source_lock_role: stage5dl_reddit_source_context
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: cicada_music_preferred
+  path: third_party/CicadaMusic
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 7
+  folder_count_if_directory: 0
+  source_lock_role: stage5dj_music_context
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: historical_iddqd_folder_spelling_seen
+  path: third_party/CiadaSolversIddqd_v2
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 0
+  folder_count_if_directory: 14
+  source_lock_role: legacy_alias
+  raw_commit_allowed: false
+  missing_is_blocking: false
+- source_root_id: iddqd_corrected_folder
+  path: third_party/CicadaSolversIddqd
+  exists: true
+  is_file: false
+  is_directory: true
+  file_count_if_directory: 2
+  folder_count_if_directory: 9
+  source_lock_role: local_iddqd_context
+  raw_commit_allowed: false
+  missing_is_blocking: false
+overlay_source_root: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+  Sacred Book Edition/english text on top of pages
+overlay_inventory_count: 15
+local_visual_inventory_count: 4
+overlay_inventory:
+- filename: Book-cover.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Book-cover.jpg
+  extension: .jpg
+  size_bytes: 570935
+  sha256: 8d32f947a7871c0d8eb6cc3bf752dcfe16a8a7a94cb71ab9fd70a6bb23df389c
+  sha512: 1a0216078ead88aba70d0eb08b66cec40f7efb806f6892390aa06372fc5ebf74296b63cc76ee58177a16b8f017c8f44b80eeab488596c904e23288a7c55103ad
+  blake2b: 27ab8355a75ae40543f8212b1a8e593750c77fed9eaf8caa97f5aea100493f85bb0ef58fea4a43c19c07b7bad4740d6f755975bb6496bf1d3013bb8c99831c38
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 700
+  image_height: 753
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Book-cover
+  ocr_or_ai_interpretation_performed: false
+- filename: Book-page-1.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Book-page-1.jpg
+  extension: .jpg
+  size_bytes: 15567
+  sha256: 1751869fc25899f557ee3b6349b4b7745e294c201900b8c6a13bad27218cd52b
+  sha512: b2abd4a5c6df863f074d531a9824fe674926dc106ac9b8bf5ba70383334add5f4157a2d923000cde3fc5f4e1c2d5cce553eb13fff7d7e7df16b42e58f3b1b26a
+  blake2b: 49f52a18d4c3f6cb3c87727795436ba2b36bb738199c7c5ee5b456e59084b37752719dbdc5c49463ba641a96466fbc58c36f35c7b788e718a2b05c9c1002e8ff
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 700
+  image_height: 1050
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Book-page-1
+  ocr_or_ai_interpretation_performed: false
+- filename: Book-page-2.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Book-page-2.jpg
+  extension: .jpg
+  size_bytes: 17098
+  sha256: 2c08c813d23d914a7544e99bfa5f5b741d41feb97ee9e7aefbb2392e6c41957d
+  sha512: 11227bd4ad83fab7a39908d7ee600578d2478dffdd4976f35e6dae6dbde29c800a7b84421cbaa1baed753e16f94e05685161713e8d1127c67c3e5cafb1002039
+  blake2b: 5c2e0390aa9480db0d517db1fbd4ef6375bd6e3bc4de410bf5d1f92b2ee368ee75a3284bcb8259bc53e0e0c07c343648f5b9f08e2aafc7f0ab84295a5791ec5b
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 700
+  image_height: 1050
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Book-page-2
+  ocr_or_ai_interpretation_performed: false
+- filename: Page10-book.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Page10-book.jpg
+  extension: .jpg
+  size_bytes: 286729
+  sha256: f9cdb396a66202931b1e47f0d4a573f4437a075aa6720bfe298e606e641876c3
+  sha512: 600cd6337e0605ca81669928df76b88d184af57320cccc63b8458f26ef85075d9c950dbcd8263aed01cba832422fd8a5643537635adcc14d9a750d7c430dae8c
+  blake2b: a25b07d699e5c7215660a9d37ffbfb17195eb096f454800d7b4d6fcfed009c9acccc86140a5697acc78c8b0e330855a043d468d77a2d1c9d39eaa3035f5b1119
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 1000
+  image_height: 1500
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Page10-book
+  ocr_or_ai_interpretation_performed: false
+- filename: Page11-book.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Page11-book.jpg
+  extension: .jpg
+  size_bytes: 399507
+  sha256: 8a2464e2d03816d4452adb8eabd524918435aff517fa3e4a4fe6771ba6e0dfe2
+  sha512: 60c0bfe1aeac77824a726bd72f893e38976e41f11a3b4c2f25b7bba56b1b81a7a803bbb008e62f63bfbfb4cef0e6929b05f7684aeba3677481af77f28894e13b
+  blake2b: b749ac1bb34feffb69301405854cdbc93d79e524d8926df596f99e4fa05677c035a16b635b8dfe3115e245b0a7cf217f2f9cdafc2ef12f6d217e6688122be310
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 1000
+  image_height: 1500
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Page11-book
+  ocr_or_ai_interpretation_performed: false
+- filename: Page12-book.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Page12-book.jpg
+  extension: .jpg
+  size_bytes: 408596
+  sha256: 09728516e21e1eef915c794719ed8d957c49bfb14b6b3a23e28f0c5e3faeb36a
+  sha512: bebdc5750d1e037732b8ac4d5e1a0de243857f3c54bd98f1d857453ff84acfa62b99dc396b860de14d869385e4ef6aa932d8b1d14971cbda0e58642f8b75e767
+  blake2b: d13f9f1c49e22ce1bae26ef7ab09cab76bcc075648aa250dd55ae5316f325b7c6d65eb914e6a0a922eda7df8b51cd7ef012a4095b829857262749d6ec6ccd55b
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 1000
+  image_height: 1500
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Page12-book
+  ocr_or_ai_interpretation_performed: false
+- filename: Page13-book.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Page13-book.jpg
+  extension: .jpg
+  size_bytes: 387055
+  sha256: a5cc51ad34531b67af06bc71dcb5062f37213ed185882e4337ab94be79231a73
+  sha512: e968927a90d8ecc1d3b0cfc9f2d1311e2eaaa808a541bd26dca2c428d1e691176781cb19a3dc9337611b26866d3578518fd2e02a02c8d67a00206eb17f4f847b
+  blake2b: 2aec910c78dbfdf7fe5662238d3bff5b5693e04e524fa7ad47626c803fb03a80ad9e2ff5f0a1d062655432b5b52688248676a173455610435135b7461949a06b
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 1000
+  image_height: 1500
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Page13-book
+  ocr_or_ai_interpretation_performed: false
+- filename: Page14-book.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Page14-book.jpg
+  extension: .jpg
+  size_bytes: 379398
+  sha256: 7ea95f5d0edc31a73c9bb51d2701b942d0bd0be4818dc436dfe9ae659997f67b
+  sha512: 5cbf17a986c858137b672dfb9a58ce7be8a4701bc44bf5508c2557f93de8c43ea0d135c36f0bb6ca9fbea7a003986756784f63fa9311d9e964398e4541f39ba3
+  blake2b: 9e3da52d4a4651b55e711ba82c9c503444a55ecaf36d9bbf85adde8db4c5ea2269b208f63371528b015cdb3cd023a9bcc9d9401d909c592a4d24e079750b4a5f
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 1000
+  image_height: 1500
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Page14-book
+  ocr_or_ai_interpretation_performed: false
+- filename: Page3-book.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Page3-book.jpg
+  extension: .jpg
+  size_bytes: 380948
+  sha256: 9ef69a01ee23cb98759512de0d6f1b8ded81ec8c1d6f5df0603b1af003f33d79
+  sha512: e89a776f36d3e17cfaad3444b5adb02fadaafac9b8f92a5c500e5b46e9cedafd7966ca4d76e450eba58ad232d956a419a4787f3a23f237e2caf41d311fca4860
+  blake2b: 7d9addd20947ba330cfd86b6e283533fda8f399fe7a4711305deaa67402fe0fdc0e5b9faf001c2693a42fb7c62a174a5c44c4784a2d3f5625497fc2771260849
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 700
+  image_height: 1050
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Page3-book
+  ocr_or_ai_interpretation_performed: false
+- filename: Page4-book.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Page4-book.jpg
+  extension: .jpg
+  size_bytes: 875729
+  sha256: 9c892a06d2182676068aab30338b5d826531e18eee5556eb95ad257c534a65da
+  sha512: b8bfff6348b3f9929561b8f47f3a71a77e276a0959ba1219fa49590da8fb647f6a79be313bb1d11814964641459a609a4819c8146245f29687e1e3b7447d047a
+  blake2b: dde7d46b62b8d821e56c9a7a42e9f10fb52db8758d2d82a98b594ae81232ad4d392eeb24128aadc349e49083ed56b118951114875285f24b9ae1c7515b81d100
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 2160
+  image_height: 3240
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Page4-book
+  ocr_or_ai_interpretation_performed: false
+- filename: Page5-book.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Page5-book.jpg
+  extension: .jpg
+  size_bytes: 776911
+  sha256: 233d7470e2bbcf9a992305266825ef93942288dab1e684b7cef2fd4143d857c7
+  sha512: 5eec031d07f5a5b55941f59b27343576b5c3d31a82c498bb9526d763ebfa5d626361cf19a24f478a43c89d560628d75d4ae7292bed350a7e350b4ed6f2b0f007
+  blake2b: 0561fafb9bcbdb40e522071841e8fe6ad61355777a38652ef0e71744fa3c83e3b3351db771ad6fa1c5194ce677be2d392be3c83c4fc573e4fd5302f0628846a6
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 1000
+  image_height: 1500
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Page5-book
+  ocr_or_ai_interpretation_performed: false
+- filename: Page6-book.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Page6-book.jpg
+  extension: .jpg
+  size_bytes: 142247
+  sha256: 2389a8b517027ada59af1f6e7bcd0b723f9c6c8fa6b139a6982f8c30887b6ecc
+  sha512: a756cdc9e32e5ef7c0c04bcc98965a9f4d17e824dee08404273041da766bd66a776dde53b2774507018f115b7a59abd0538c51ae6360b5862d911bfda6a4be41
+  blake2b: f0b818567fb7877846fe13e657e80c387d378e4d57ae888cdc3bc5b3dc6d9538e1409587ae353e200729a708dab8b39aab15c9b5bdbe23d00a73d40d7654c151
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 700
+  image_height: 1075
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Page6-book
+  ocr_or_ai_interpretation_performed: false
+- filename: Page7-book.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Page7-book.jpg
+  extension: .jpg
+  size_bytes: 361024
+  sha256: 92fcdfc04ad1e7ebb6a4c869054cdb90dad7758ddf12ca12ce17d83b72c54773
+  sha512: b0092dc336def9872ec0ea6ace3efa2e7eacac757f1e5fbb301d7d3b247b88dca98939c391d6903821c5e8311ac6702d53ad71edf55533ebf633dd68c610a287
+  blake2b: 2a10885e4daaf49981da634f94247e77ac579c21293633fc66983858fb4acc68f4bbda8b93d25f3d3d157426af1be5183c48b6db7e29657791e4d754847fffbe
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 1000
+  image_height: 1500
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Page7-book
+  ocr_or_ai_interpretation_performed: false
+- filename: Page8-book.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Page8-book.jpg
+  extension: .jpg
+  size_bytes: 358128
+  sha256: 759c681341e15bb4db8710bba8ad29de4fd6794a54f4ae5c8fd721e13819d6b9
+  sha512: 9c446b34e5b65312d540d31f0381a1ebfa257306f61bdeda781a4848cbe3a5aca235c082784634655e0c99caf35bee4e210be1eac79110d4f05f9d8b6a29d480
+  blake2b: 823a3f65a1144757eccfce062f8e9222524137d14d10ef7fa79047fffe4e2fdd97f4d55ae90ec642137914a2e0e081c1cef0ec2e1a61fe7087e2beeb0fa7b363
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 1000
+  image_height: 1500
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Page8-book
+  ocr_or_ai_interpretation_performed: false
+- filename: Page9-book.jpg
+  relative_path: third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP
+    Sacred Book Edition/english text on top of pages/Page9-book.jpg
+  extension: .jpg
+  size_bytes: 342855
+  sha256: d9a59b9c59650abe8fe0559b13b7a9504123e5e95458d2acc019e773d682bb22
+  sha512: e9ff78555c0bf323375b98e2a0bcebace16aadddfcde74a1396a14b8063758da2f685bd8d292188bd04aec1ceebfca648efdd8fcb9d5a1ece191b69bce8f15b3
+  blake2b: 16b684c5ec6117dadaf903dba5480b22e9e90da62570bee69a4fe29187605ee4551862bfbe10b3cc2845b9f3c5ceeb6a4bea4bbc70a31a903ac4bf670555d335
+  mime_type: image/jpeg
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 1000
+  image_height: 1500
+  image_format: JPEG
+  page_name_mapping_from_filename_only: Page9-book
+  ocr_or_ai_interpretation_performed: false
+local_visual_inventory:
+- path: third_party/koan_page.png
+  exists: true
+  source_lock_role: local_visual_context_metadata
+  metadata:
+    filename: koan_page.png
+    relative_path: third_party/koan_page.png
+    extension: .png
+    size_bytes: 1146086
+    sha256: d7025260842392a8faa38621469e4215d6e6274a153e34ec8ebee36ca971c412
+    sha512: a9fb18e81a1c19c2baefa1acfbb9052a35db83b5b78e5ba26c07859f00b6c58a89a48af80e5f60c7426025c32f14178fb55c193988f4987681ea2446c031378b
+    blake2b: 793695d98288a146a600fb323035da7b276dade56eaa1753f06a3fefd4f27eb54f2554eff4ffee9692d6cb14294da2ff72afedc29d1745d33497caf6e8dbc585
+    mime_type: image/png
+    raw_file_committed: false
+    metadata_only: true
+    image_width: 736
+    image_height: 1116
+    image_format: PNG
+  raw_file_committed: false
+  ocr_performed: false
+  image_forensics_performed: false
+- path: third_party/NumberTriangleStuff/v2-number-triangles/liber-primus__images--full/32.jpg
+  exists: true
+  source_lock_role: local_visual_context_metadata
+  metadata:
+    filename: 32.jpg
+    relative_path: third_party/NumberTriangleStuff/v2-number-triangles/liber-primus__images--full/32.jpg
+    extension: .jpg
+    size_bytes: 512272
+    sha256: 5543cfce96493b86eece3195b3f5ea6e779ff41551676600b0c2479fc18c0ec5
+    sha512: 55af507ec46409d2f78c282b8cf41f63186eb6f3119700baf59d36fe734ceb4618deb6f6de7bf18add6e0efe7a9b5603bae60e0cb17fcb4f94429df0a5661e18
+    blake2b: ef4c8c1c4f189c4784582c6d44734ca645770a6d7d83c95a054c94fe3add57586e235df7a141ea40175740cd89728076860c5b86fb9b974810d617997e4513b5
+    mime_type: image/jpeg
+    raw_file_committed: false
+    metadata_only: true
+    image_width: 2400
+    image_height: 3600
+    image_format: JPEG
+  raw_file_committed: false
+  ocr_performed: false
+  image_forensics_performed: false
+- path: third_party/LiberPrimusPages/32.jpg
+  exists: true
+  source_lock_role: local_visual_context_metadata
+  metadata:
+    filename: 32.jpg
+    relative_path: third_party/LiberPrimusPages/32.jpg
+    extension: .jpg
+    size_bytes: 362637
+    sha256: c0f778187a8e9ddbfc667a65929ac567430a2e38278a2022377984ac084e5f72
+    sha512: 2941e1b34c502ba4c24b0c2005c4c08cf9dadcc4ff7a21196f4bac15d728a141f2cc4e6e8ea4168e185ed3a7ce31d8cb459e5312da0c98f8f1e449cfb05456c3
+    blake2b: 41752f83915560e0320a657c6a042d11d23aaae2e8e0e4f199ab45e477c75f0540c0490d9c7e569b3f8cb6c0df913369d0943c777e8c43d9c5f3fb86ccae7894
+    mime_type: image/jpeg
+    raw_file_committed: false
+    metadata_only: true
+    image_width: 2400
+    image_height: 3600
+    image_format: JPEG
+  raw_file_committed: false
+  ocr_performed: false
+  image_forensics_performed: false
+- path: third_party/LiberPrimusPages/32.png
+  exists: false
+  source_lock_role: local_visual_context_metadata
+  metadata: null
+  raw_file_committed: false
+  ocr_performed: false
+  image_forensics_performed: false
+raw_third_party_files_committed: false
+raw_images_committed: false
