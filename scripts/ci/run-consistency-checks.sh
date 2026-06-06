@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5DK" \
-    --expected-next-stage "Stage 5DL" \
+    --expected-latest-stage "Stage 5DL" \
+    --expected-next-stage "Stage 5DM" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5DK" \
-    --expected-next-stage "Stage 5DL" \
+    --expected-latest-stage "Stage 5DL" \
+    --expected-next-stage "Stage 5DM" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DK",
+            expected_latest_stage="Stage 5DL",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DK",
+            "expected_latest_stage": "Stage 5DL",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3181,6 +3181,42 @@ git check-ignore -q "$stage5dk_token_results_root/warnings.jsonl"
 git check-ignore -q "codex-output/stage5dk-codex-completion.md"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5DK" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5DL triangle / disk / quote / koan source-lock records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-number-triangle-v1
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-triangle-way-anchor
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-triangle-prime-mask
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-triangle-2016-prime-layer
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-triangle-fibonacci-prime-index
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-triangle-56311-wynn-way
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-disk-cipher-source-lock
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-quote-dialogue-cribs
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-koan-depiction-source-lock
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-local-source-crosswalks
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-pivot-readiness
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-stage5dg-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-stage5bd-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-active-lineage-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-handoff-continuity
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-credential-redaction-policy
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl-governance-scope
+"$python_bin" -m libreprimus.cli token-block validate-stage5dl
+"$python_bin" -m libreprimus.cli token-block stage5dl-summary
+stage5dl_token_results_root="experiments"/"results"/"token-block"/"stage5dl"
+git check-ignore -q "$stage5dl_token_results_root/summary.json"
+git check-ignore -q "$stage5dl_token_results_root/source_lock_report.json"
+git check-ignore -q "$stage5dl_token_results_root/candidate_family_report.json"
+git check-ignore -q "$stage5dl_token_results_root/pivot_readiness_report.json"
+git check-ignore -q "$stage5dl_token_results_root/preservation_report.json"
+git check-ignore -q "$stage5dl_token_results_root/handoff_continuity_report.json"
+git check-ignore -q "$stage5dl_token_results_root/warnings.jsonl"
+git check-ignore -q "codex-output/stage5dl-codex-completion.md"
+git check-ignore -q "third_party/koan_page.png"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5DL" >&2
     exit 1
 fi
 

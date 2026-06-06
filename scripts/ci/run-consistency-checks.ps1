@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5DK" `
-        --expected-next-stage "Stage 5DL" `
+        --expected-latest-stage "Stage 5DL" `
+        --expected-next-stage "Stage 5DM" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5DK" `
-        --expected-next-stage "Stage 5DL" `
+        --expected-latest-stage "Stage 5DL" `
+        --expected-next-stage "Stage 5DM" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DK",
+            expected_latest_stage="Stage 5DL",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DK",
+            "expected_latest_stage": "Stage 5DL",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3079,6 +3079,39 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q (Join-Path $Stage5DKTokenResultsRoot "warnings.jsonl")
     git check-ignore -q "codex-output/stage5dk-codex-completion.md"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DK" }
+
+    Write-Host "Validating Stage 5DL triangle / disk / quote / koan source-lock records"
+    & $Python -m libreprimus.cli token-block validate-stage5dl-number-triangle-v1
+    & $Python -m libreprimus.cli token-block validate-stage5dl-triangle-way-anchor
+    & $Python -m libreprimus.cli token-block validate-stage5dl-triangle-prime-mask
+    & $Python -m libreprimus.cli token-block validate-stage5dl-triangle-2016-prime-layer
+    & $Python -m libreprimus.cli token-block validate-stage5dl-triangle-fibonacci-prime-index
+    & $Python -m libreprimus.cli token-block validate-stage5dl-triangle-56311-wynn-way
+    & $Python -m libreprimus.cli token-block validate-stage5dl-disk-cipher-source-lock
+    & $Python -m libreprimus.cli token-block validate-stage5dl-quote-dialogue-cribs
+    & $Python -m libreprimus.cli token-block validate-stage5dl-koan-depiction-source-lock
+    & $Python -m libreprimus.cli token-block validate-stage5dl-local-source-crosswalks
+    & $Python -m libreprimus.cli token-block validate-stage5dl-pivot-readiness
+    & $Python -m libreprimus.cli token-block validate-stage5dl-stage5dg-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dl-stage5bd-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dl-active-lineage-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dl-sidecar-gates
+    & $Python -m libreprimus.cli token-block validate-stage5dl-handoff-continuity
+    & $Python -m libreprimus.cli token-block validate-stage5dl-credential-redaction-policy
+    & $Python -m libreprimus.cli token-block validate-stage5dl-governance-scope
+    & $Python -m libreprimus.cli token-block validate-stage5dl
+    & $Python -m libreprimus.cli token-block stage5dl-summary
+    $Stage5DLTokenResultsRoot = Join-Path (Join-Path (Join-Path "experiments" "results") "token-block") "stage5dl"
+    git check-ignore -q (Join-Path $Stage5DLTokenResultsRoot "summary.json")
+    git check-ignore -q (Join-Path $Stage5DLTokenResultsRoot "source_lock_report.json")
+    git check-ignore -q (Join-Path $Stage5DLTokenResultsRoot "candidate_family_report.json")
+    git check-ignore -q (Join-Path $Stage5DLTokenResultsRoot "pivot_readiness_report.json")
+    git check-ignore -q (Join-Path $Stage5DLTokenResultsRoot "preservation_report.json")
+    git check-ignore -q (Join-Path $Stage5DLTokenResultsRoot "handoff_continuity_report.json")
+    git check-ignore -q (Join-Path $Stage5DLTokenResultsRoot "warnings.jsonl")
+    git check-ignore -q "codex-output/stage5dl-codex-completion.md"
+    git check-ignore -q "third_party/koan_page.png"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DL" }
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

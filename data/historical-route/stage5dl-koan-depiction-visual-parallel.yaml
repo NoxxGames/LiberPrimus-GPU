@@ -1,0 +1,273 @@
+record_type: stage5dl_koan_page_depiction_correspondence_v0
+schema: schemas/historical-route/stage5dl-koan-depiction-visual-parallel-v0.schema.json
+stage_id: stage-5dl
+stage_title: Stage 5DL - Triangle / Disk / Quote / Koan source-lock refresh, without
+  execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5dk
+source_previous_stage_id: stage-5dk
+source_previous_stage_commit: 0eacca46c4d1184341fc6364be24db4701e33bc6
+source_previous_stage_issue: 146
+source_previous_stage_ci_run: 27036919161
+source_previous_stage_pytest_count: 2634
+stage5dk_summary_status: complete
+metadata_only: true
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+stage5dg_operator_approval_record_preserved: true
+real_operator_approval_record_created_now: false
+operator_approval_component_satisfied_now: true
+stage5di_recent_clue_source_lock_preserved: true
+stage5dj_music_source_lock_preserved: true
+stage5bd_run_plan_id_count: 10
+active_lineage_record_count: 8
+parallel_worker_cap_for_stage5dl_and_later: 8
+recommended_next_stage_id: stage-5dm
+recommended_next_stage_title: Stage 5DM - Target-priority decision package, without
+  execution
+recommended_next_prompt_type: codex_metadata_implementation
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+audio_stego_performed_now: false
+audio_transcription_performed_now: false
+audio_waveform_decode_performed_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_output_used: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_acceptance_component_satisfied_now: false
+deep_research_acceptance_created_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+experiment_authorized_now: false
+experiment_executed_now: false
+experiments_authorized_now: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+historical_route_execution_performed: false
+html_tool_execution_performed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+meaning_claimed_now: false
+method_status_upgraded: false
+model_claims_validated_now: false
+mp3stego_execution_performed: false
+music_cue_experiment_executed_now: false
+music_experiment_authorized_now: false
+music_experiment_executed_now: false
+music_route_extraction_performed_now: false
+music_score_ocr_performed_now: false
+music_sheet_rendered_now: false
+musicxml_conversion_performed_now: false
+new_active_planning_input_created: false
+new_real_operator_approval_record_created_in_stage5dl: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_target_priority_decision_created_now: false
+page_boundaries_finalized: false
+pdf_ocr_performed_now: false
+pdf_rendering_performed_now: false
+pivot_target_selected_now: false
+polar_route_extraction_performed_now: false
+raw_body_committed: false
+raw_disk_cipher_files_committed: false
+raw_koan_image_committed: false
+raw_music_file_committed: false
+raw_number_triangle_files_committed: false
+raw_pdf_committed: false
+raw_reddit_images_committed: false
+real_byte_stream_generated: false
+real_deep_research_acceptance_record_created_now: false
+route_extraction_performed_now: false
+score_to_cipher_experiment_performed_now: false
+score_to_cipher_transform_performed_now: false
+scoring_performed: false
+solve_claim: false
+spectrogram_decode_performed_now: false
+spectrogram_stego_analysis_performed_now: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_added_to_active_dry_run_inputs: false
+string4_added_to_stage5bd_run_plan_ids: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+token_block_transform_performed_now: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+visual_match_claimed_now: false
+waveform_analysis_performed_now: false
+way_anchor_route_executed_now: false
+website_expansion_performed: false
+candidate_family_id: koan_depiction_visual_parallel_candidate_v0
+source_path: third_party/koan_page.png
+koan_page_source_path: third_party/koan_page.png
+source_lock_only: true
+source_metadata:
+  source_file_name: koan_page.png
+  source_path: third_party/koan_page.png
+  extension: .png
+  file_kind: image
+  size_bytes: 1146086
+  modified_utc: '2026-06-05T22:50:13Z'
+  sha256: d7025260842392a8faa38621469e4215d6e6274a153e34ec8ebee36ca971c412
+  sha512: a9fb18e81a1c19c2baefa1acfbb9052a35db83b5b78e5ba26c07859f00b6c58a89a48af80e5f60c7426025c32f14178fb55c193988f4987681ea2446c031378b
+  blake2b: 793695d98288a146a600fb323035da7b276dade56eaa1753f06a3fefd4f27eb54f2554eff4ffee9692d6cb14294da2ff72afedc29d1745d33497caf6e8dbc585
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 736
+  image_height: 1116
+  image_format: PNG
+visual_correspondence_status: candidate_only
+operator_claim_recorded: true
+operator_observed_similarity_to_lp_body_depictions: true
+visual_similarity_claim_source: operator_observation
+visual_similarity_claim_status: human_observation_unverified
+visual_similarity_not_verified_by_image_forensics: true
+lp_page_14_15_16_candidate_paths_checked: true
+lp_page_14_15_16_candidate_records:
+- path: third_party/NumberTriangleStuff/v2-number-triangles/liber-primus__images--full/14.jpg
+  exists_locally: true
+  metadata:
+    source_file_name: 14.jpg
+    source_path: third_party/NumberTriangleStuff/v2-number-triangles/liber-primus__images--full/14.jpg
+    extension: .jpg
+    file_kind: image
+    size_bytes: 625668
+    modified_utc: '2024-10-12T21:28:00Z'
+    sha256: de2bebe1d06421d94f3dd2b2b5f838ee4cdb5f51b07b14e880e0108f7b79c14e
+    sha512: 2024793c693e6c099c48f8e3633ab48d1feb0887a6d92346673b63c1e7e74b3b7bd6ba611e14ebc7414c35974616f61186a6fa3255a132e34973bdfa122cae58
+    blake2b: f93ede515b3734142b0af354cbad19595a72147cfe871c1062a72fce59173ba442bf2b4d11e0c3d48fd9c41c468c59e7be7dca2ff2c852a0ef7fb58c76ef31f8
+    raw_file_committed: false
+    metadata_only: true
+    image_width: 2400
+    image_height: 3600
+    image_format: JPEG
+  visual_analysis_performed: false
+  ocr_performed: false
+- path: third_party/NumberTriangleStuff/v2-number-triangles/liber-primus__images--full/15.jpg
+  exists_locally: true
+  metadata:
+    source_file_name: 15.jpg
+    source_path: third_party/NumberTriangleStuff/v2-number-triangles/liber-primus__images--full/15.jpg
+    extension: .jpg
+    file_kind: image
+    size_bytes: 426945
+    modified_utc: '2024-10-12T21:28:00Z'
+    sha256: f163903bec1236f1c89c96343d0bd1dee610b697c3ba82514651f04c5fbee4b9
+    sha512: 267253a7543b04ee68ccec55ba01bcf5476968ad2f7731e4d36c2bbcf7f0004fc9921289b770d5e19033be9f7ca19f57e675441149578f7eb24141663e1e6969
+    blake2b: 1924caea61c0e6530ebc71d652156543300b13b43adc7e7a1c19dd5447d4b35e82b151072e122d5ee4206c4937f6e4323ffda7ef53d5443d730a5bce4c6e1ac5
+    raw_file_committed: false
+    metadata_only: true
+    image_width: 2400
+    image_height: 3600
+    image_format: JPEG
+  visual_analysis_performed: false
+  ocr_performed: false
+- path: third_party/NumberTriangleStuff/v2-number-triangles/liber-primus__images--full/16.jpg
+  exists_locally: true
+  metadata:
+    source_file_name: 16.jpg
+    source_path: third_party/NumberTriangleStuff/v2-number-triangles/liber-primus__images--full/16.jpg
+    extension: .jpg
+    file_kind: image
+    size_bytes: 485456
+    modified_utc: '2024-10-12T21:28:00Z'
+    sha256: 984668c680c6089b91587ef6d9eb2a1df1d2b7ee8ab3837655d3933f2adcbfbe
+    sha512: 2a594fdf4f84cba7d7d7dda2149b357cdb4b0915b29048e48e09ca1694d06fd55d66873bd4c087198bbe35ccedbf60a84a11e041002330c69ca9c4afa8ae5836
+    blake2b: a7f0bb8ed0ca897a1e647384fba0e9106beb0f98435bf67acc85c71b54fc2fb8fe8e2733772cad1b3c1e9977c18e82a97b5dd2e86492c478e59396220d0f6816
+    raw_file_committed: false
+    metadata_only: true
+    image_width: 2400
+    image_height: 3600
+    image_format: JPEG
+  visual_analysis_performed: false
+  ocr_performed: false
+- path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/14.jpg
+  exists_locally: true
+  metadata:
+    source_file_name: 14.jpg
+    source_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/14.jpg
+    extension: .jpg
+    file_kind: image
+    size_bytes: 625668
+    modified_utc: '2024-10-12T21:28:00Z'
+    sha256: de2bebe1d06421d94f3dd2b2b5f838ee4cdb5f51b07b14e880e0108f7b79c14e
+    sha512: 2024793c693e6c099c48f8e3633ab48d1feb0887a6d92346673b63c1e7e74b3b7bd6ba611e14ebc7414c35974616f61186a6fa3255a132e34973bdfa122cae58
+    blake2b: f93ede515b3734142b0af354cbad19595a72147cfe871c1062a72fce59173ba442bf2b4d11e0c3d48fd9c41c468c59e7be7dca2ff2c852a0ef7fb58c76ef31f8
+    raw_file_committed: false
+    metadata_only: true
+    image_width: 2400
+    image_height: 3600
+    image_format: JPEG
+  visual_analysis_performed: false
+  ocr_performed: false
+- path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/15.jpg
+  exists_locally: true
+  metadata:
+    source_file_name: 15.jpg
+    source_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/15.jpg
+    extension: .jpg
+    file_kind: image
+    size_bytes: 426945
+    modified_utc: '2024-10-12T21:28:00Z'
+    sha256: f163903bec1236f1c89c96343d0bd1dee610b697c3ba82514651f04c5fbee4b9
+    sha512: 267253a7543b04ee68ccec55ba01bcf5476968ad2f7731e4d36c2bbcf7f0004fc9921289b770d5e19033be9f7ca19f57e675441149578f7eb24141663e1e6969
+    blake2b: 1924caea61c0e6530ebc71d652156543300b13b43adc7e7a1c19dd5447d4b35e82b151072e122d5ee4206c4937f6e4323ffda7ef53d5443d730a5bce4c6e1ac5
+    raw_file_committed: false
+    metadata_only: true
+    image_width: 2400
+    image_height: 3600
+    image_format: JPEG
+  visual_analysis_performed: false
+  ocr_performed: false
+- path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/16.jpg
+  exists_locally: true
+  metadata:
+    source_file_name: 16.jpg
+    source_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/16.jpg
+    extension: .jpg
+    file_kind: image
+    size_bytes: 485456
+    modified_utc: '2024-10-12T21:28:00Z'
+    sha256: 984668c680c6089b91587ef6d9eb2a1df1d2b7ee8ab3837655d3933f2adcbfbe
+    sha512: 2a594fdf4f84cba7d7d7dda2149b357cdb4b0915b29048e48e09ca1694d06fd55d66873bd4c087198bbe35ccedbf60a84a11e041002330c69ca9c4afa8ae5836
+    blake2b: a7f0bb8ed0ca897a1e647384fba0e9106beb0f98435bf67acc85c71b54fc2fb8fe8e2733772cad1b3c1e9977c18e82a97b5dd2e86492c478e59396220d0f6816
+    raw_file_committed: false
+    metadata_only: true
+    image_width: 2400
+    image_height: 3600
+    image_format: JPEG
+  visual_analysis_performed: false
+  ocr_performed: false
+solved_koan_relationships:
+- 0.2 A KOAN
+- 0.4 A KOAN
+- quote-dialogue structure
+- I AM A quote forms
+- body/figure depictions

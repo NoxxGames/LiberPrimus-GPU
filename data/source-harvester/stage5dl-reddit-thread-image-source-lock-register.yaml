@@ -1,0 +1,249 @@
+record_type: stage5dl_reddit_thread_image_source_lock_register
+schema: schemas/source-harvester/stage5dl-reddit-thread-image-source-lock-register-v0.schema.json
+stage_id: stage-5dl
+stage_title: Stage 5DL - Triangle / Disk / Quote / Koan source-lock refresh, without
+  execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5dk
+source_previous_stage_id: stage-5dk
+source_previous_stage_commit: 0eacca46c4d1184341fc6364be24db4701e33bc6
+source_previous_stage_issue: 146
+source_previous_stage_ci_run: 27036919161
+source_previous_stage_pytest_count: 2634
+stage5dk_summary_status: complete
+metadata_only: true
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+stage5dg_operator_approval_record_preserved: true
+real_operator_approval_record_created_now: false
+operator_approval_component_satisfied_now: true
+stage5di_recent_clue_source_lock_preserved: true
+stage5dj_music_source_lock_preserved: true
+stage5bd_run_plan_id_count: 10
+active_lineage_record_count: 8
+parallel_worker_cap_for_stage5dl_and_later: 8
+recommended_next_stage_id: stage-5dm
+recommended_next_stage_title: Stage 5DM - Target-priority decision package, without
+  execution
+recommended_next_prompt_type: codex_metadata_implementation
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+audio_stego_performed_now: false
+audio_transcription_performed_now: false
+audio_waveform_decode_performed_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_output_used: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_acceptance_component_satisfied_now: false
+deep_research_acceptance_created_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+experiment_authorized_now: false
+experiment_executed_now: false
+experiments_authorized_now: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+historical_route_execution_performed: false
+html_tool_execution_performed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+meaning_claimed_now: false
+method_status_upgraded: false
+model_claims_validated_now: false
+mp3stego_execution_performed: false
+music_cue_experiment_executed_now: false
+music_experiment_authorized_now: false
+music_experiment_executed_now: false
+music_route_extraction_performed_now: false
+music_score_ocr_performed_now: false
+music_sheet_rendered_now: false
+musicxml_conversion_performed_now: false
+new_active_planning_input_created: false
+new_real_operator_approval_record_created_in_stage5dl: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_target_priority_decision_created_now: false
+page_boundaries_finalized: false
+pdf_ocr_performed_now: false
+pdf_rendering_performed_now: false
+pivot_target_selected_now: false
+polar_route_extraction_performed_now: false
+raw_body_committed: false
+raw_disk_cipher_files_committed: false
+raw_koan_image_committed: false
+raw_music_file_committed: false
+raw_number_triangle_files_committed: false
+raw_pdf_committed: false
+raw_reddit_images_committed: false
+real_byte_stream_generated: false
+real_deep_research_acceptance_record_created_now: false
+route_extraction_performed_now: false
+score_to_cipher_experiment_performed_now: false
+score_to_cipher_transform_performed_now: false
+scoring_performed: false
+solve_claim: false
+spectrogram_decode_performed_now: false
+spectrogram_stego_analysis_performed_now: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_added_to_active_dry_run_inputs: false
+string4_added_to_stage5bd_run_plan_ids: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+token_block_transform_performed_now: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+visual_match_claimed_now: false
+waveform_analysis_performed_now: false
+way_anchor_route_executed_now: false
+website_expansion_performed: false
+reddit_folder_count: 3
+reddit_folders:
+- reddit_folder: FibonacciSequence
+  folder_path: third_party/RedditStuff/FibonacciSequence
+  folder_exists: true
+  url_txt_path: third_party/RedditStuff/FibonacciSequence/url.txt
+  url_txt_exists: true
+  url: https://www.reddit.com/r/cicada/comments/1ayybpp/fibonacci_sequence_3301_found_in_gp_sums_of_2016/
+  image_path: third_party/RedditStuff/FibonacciSequence/fibonacci_sequence_3301.jpeg
+  image_exists: true
+  image_metadata:
+    source_file_name: fibonacci_sequence_3301.jpeg
+    source_path: third_party/RedditStuff/FibonacciSequence/fibonacci_sequence_3301.jpeg
+    extension: .jpeg
+    file_kind: image
+    size_bytes: 80757
+    modified_utc: '2026-06-05T19:06:55Z'
+    sha256: 4f383da57dc21cdfce753340ee72f982d7252647ce0011747f28ea3fbdfaed58
+    sha512: bea7aaa0f7a4db945d11b10a65a348a597386028bc5d3d4967c8aa59e4d7a65a4ae51471516226b28fd3e7cfe84573488a33889f830c16dba5c4ef0c1229758f
+    blake2b: a610e8ba52f47b50e6f21c48a640dfbaf9d5ec954aa82bdbd1968282150707ead635c8fa66d11fe7b7143fcd9e54bcc03b827726cc44fda6e2324cdb644ae4ad
+    raw_file_committed: false
+    metadata_only: true
+    image_width: 635
+    image_height: 421
+    image_format: JPEG
+  url_metadata:
+    source_file_name: url.txt
+    source_path: third_party/RedditStuff/FibonacciSequence/url.txt
+    extension: .txt
+    file_kind: text
+    size_bytes: 98
+    modified_utc: '2026-06-05T22:01:01Z'
+    sha256: 3179d28bc03a9603db779bc897ac2da62b05a8ff07d78d8232cd9a1d4a2450f3
+    sha512: 59b01676f043a78ac390658dcd2dac3fd27322108bdb51d326e687f9e736c6580cda15a66de4a75efb6b223caa31985b13fead97e6e1430261205228d3a6b6cd
+    blake2b: 5d6a5a8f97bf468f91e66b642463504c66cf2a48d4c5a008ed4f2bec87fa8d12c04e684108f810f63aad87fc19cca8546e1f2df3e5676ea63928fa4767e5bbc0
+    raw_file_committed: false
+    metadata_only: true
+    image_width: null
+    image_height: null
+    image_format: null
+  network_fetch_performed: false
+  raw_reddit_images_committed: false
+- reddit_folder: PrimeGPSums
+  folder_path: third_party/RedditStuff/PrimeGPSums
+  folder_exists: true
+  url_txt_path: third_party/RedditStuff/PrimeGPSums/url.txt
+  url_txt_exists: true
+  url: https://www.reddit.com/r/cicada/comments/12iei27/prime_gp_sums_in_the_2016_and_2017_messages/
+  image_path: third_party/RedditStuff/PrimeGPSums/prime_gp_sums.jpg
+  image_exists: true
+  image_metadata:
+    source_file_name: prime_gp_sums.jpg
+    source_path: third_party/RedditStuff/PrimeGPSums/prime_gp_sums.jpg
+    extension: .jpg
+    file_kind: image
+    size_bytes: 10740
+    modified_utc: '2026-06-05T19:07:24Z'
+    sha256: a2ec4efd89c42871a81aea27f6ad01890d14b1276800de5b4f573f3728f1e766
+    sha512: e6afc215b3555273688d23f89f7e93aeb35bea31a65fde2ef2e752f4dc56e5a2f885c6fc087c3f877bf880cfc874a23fe662c5e411f85a906401f6add78a44b1
+    blake2b: 25279f4a7de1b613e2ba6c017bb8568902cf406c9103bcd2677e13a596d536023f4a3ca1961b4cd3978b01971b5046b9e41da60a712bd424c61e4c38e43902f7
+    raw_file_committed: false
+    metadata_only: true
+    image_width: 312
+    image_height: 101
+    image_format: JPEG
+  url_metadata:
+    source_file_name: url.txt
+    source_path: third_party/RedditStuff/PrimeGPSums/url.txt
+    extension: .txt
+    file_kind: text
+    size_bytes: 93
+    modified_utc: '2026-06-05T22:01:25Z'
+    sha256: cc423e1deb29cc715a0813ac8a69a300a7563dccd49acb21641809c1fc2ce415
+    sha512: 48df12ea2788eaad28ba4bc8a57de38b95dec1ff44d8502c549685fe1c4e1f3d75b5e33e098696b3f63fe327244b450e81e2ddbe9508d9a0b0adf6b4b9e58238
+    blake2b: d09a8791e7eb903146f19d35fe38b1ca3638f17e3bf59bd95edb2a870a0d4052e0a3428d8c96361de1d5b433966cb3d4ea96ce0c4bc52ff2db9170de482e180a
+    raw_file_committed: false
+    metadata_only: true
+    image_width: null
+    image_height: null
+    image_format: null
+  network_fetch_performed: false
+  raw_reddit_images_committed: false
+- reddit_folder: Layered_primes
+  folder_path: third_party/RedditStuff/Layered_primes
+  folder_exists: true
+  url_txt_path: third_party/RedditStuff/Layered_primes/url.txt
+  url_txt_exists: true
+  url: https://www.reddit.com/r/cicada/comments/12j1evm/layered_primes_in_the_2016_message/
+  image_path: third_party/RedditStuff/Layered_primes/layered_primes.jpg
+  image_exists: true
+  image_metadata:
+    source_file_name: layered_primes.jpg
+    source_path: third_party/RedditStuff/Layered_primes/layered_primes.jpg
+    extension: .jpg
+    file_kind: image
+    size_bytes: 5986
+    modified_utc: '2026-06-05T19:07:13Z'
+    sha256: 597b3f88e957747e8fd58fb01ea3de068d64965ee00fbce1d3d4f094701da470
+    sha512: d810ab5d82bd664d4d7a7617c4592b89a51a56af8338118dca95eafffc83cb03c91114b78f59f1911ea1dc9a95de851e2ede81297bc15f56d836c59508028933
+    blake2b: 49be04a90c1049c3ad0162e8fd3f16bd692c2a7ef57b2a32c5ea71efbbe4c2cd9d155841eb1fe68248ba30a7e2dba38cfcc94d087b4cd554b5b25a9d37615467
+    raw_file_committed: false
+    metadata_only: true
+    image_width: 202
+    image_height: 141
+    image_format: JPEG
+  url_metadata:
+    source_file_name: url.txt
+    source_path: third_party/RedditStuff/Layered_primes/url.txt
+    extension: .txt
+    file_kind: text
+    size_bytes: 84
+    modified_utc: '2026-06-05T22:01:14Z'
+    sha256: d71bc4d772569bc06e0eaae7ffc448399a7f436e7f58935bcf92b638cd523957
+    sha512: 82caa71247e1903c39d9bf717a634aaf2a47275346313c561c4f6a9fd4a7caf08c626cb39abf51e405a8a70dfa7e4a32332df71068d251718ecec715bae23614
+    blake2b: 059568753aababdaebb2e5ff1fdf331eb69084132ea5f700bc6a384c420b217a9147c1d3688a4dd133d8de4df46a8dc0d7702ccc1544b8f38753210441bed7b8
+    raw_file_committed: false
+    metadata_only: true
+    image_width: null
+    image_height: null
+    image_format: null
+  network_fetch_performed: false
+  raw_reddit_images_committed: false
+network_fetch_performed: false

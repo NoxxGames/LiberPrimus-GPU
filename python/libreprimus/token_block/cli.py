@@ -717,6 +717,30 @@ from .stage5dk import (
     validate_stage5dk_stage5dg_preservation,
     validate_stage5dk_stage5dj_preservation,
 )
+from .stage5dl import (
+    RESULTS_DIR as STAGE5DL_RESULTS_DIR,
+    build_stage5dl,
+    stage5dl_summary_text,
+    validate_stage5dl,
+    validate_stage5dl_active_lineage_preservation,
+    validate_stage5dl_credential_redaction_policy,
+    validate_stage5dl_disk_cipher_source_lock,
+    validate_stage5dl_governance_scope,
+    validate_stage5dl_handoff_continuity,
+    validate_stage5dl_koan_depiction_source_lock,
+    validate_stage5dl_local_source_crosswalks,
+    validate_stage5dl_number_triangle_v1,
+    validate_stage5dl_pivot_readiness,
+    validate_stage5dl_quote_dialogue_cribs,
+    validate_stage5dl_sidecar_gates,
+    validate_stage5dl_stage5bd_preservation,
+    validate_stage5dl_stage5dg_preservation,
+    validate_stage5dl_triangle_2016_prime_layer,
+    validate_stage5dl_triangle_56311_wynn_way,
+    validate_stage5dl_triangle_fibonacci_prime_index,
+    validate_stage5dl_triangle_prime_mask,
+    validate_stage5dl_triangle_way_anchor,
+)
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -8417,6 +8441,221 @@ def validate_stage5dk_command() -> None:
 @app.command("stage5dk-summary")
 def stage5dk_summary_command() -> None:
     console.print(stage5dk_summary_text())
+
+
+def _print_stage5dl_result(result: object, success_line: str) -> None:
+    text = result.to_cli_text()
+    console.print(text)
+    if getattr(result, "validation_error_count") != 0:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5dl")
+def build_stage5dl_command(
+    results_dir: Path = typer.Option(STAGE5DL_RESULTS_DIR),
+) -> None:
+    _ = results_dir
+    records = build_stage5dl()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"stage5dk_summary_status={summary.get('stage5dk_summary_status')}")
+    console.print(
+        "number_triangle_v1_source_locked="
+        f"{str(summary.get('number_triangle_v1_source_locked')).lower()}"
+    )
+    console.print(
+        "disk_cipher_bridge_source_locked="
+        f"{str(summary.get('disk_cipher_bridge_source_locked')).lower()}"
+    )
+    console.print(
+        "reddit_prime_thread_images_source_locked="
+        f"{str(summary.get('reddit_prime_thread_images_source_locked')).lower()}"
+    )
+    console.print(
+        "quote_dialogue_cribs_source_locked="
+        f"{str(summary.get('quote_dialogue_cribs_source_locked')).lower()}"
+    )
+    console.print(
+        "koan_depiction_visual_candidate_source_locked="
+        f"{str(summary.get('koan_depiction_visual_candidate_source_locked')).lower()}"
+    )
+    console.print(
+        "candidate_family_count_added_or_updated="
+        f"{summary.get('candidate_family_count_added_or_updated')}"
+    )
+    console.print(
+        "operator_preferred_future_target_family_id="
+        f"{summary.get('operator_preferred_future_target_family_id')}"
+    )
+    console.print(
+        "pivot_target_selected_now="
+        f"{str(summary.get('pivot_target_selected_now')).lower()}"
+    )
+    console.print(
+        "target_priority_decision_created_now="
+        f"{str(summary.get('target_priority_decision_created_now')).lower()}"
+    )
+    console.print(f"stage5bd_run_plan_id_count={summary.get('stage5bd_run_plan_id_count')}")
+    console.print(f"active_lineage_record_count={summary.get('active_lineage_record_count')}")
+    console.print(
+        f"execution_authorized_now={str(summary.get('execution_authorized_now')).lower()}"
+    )
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5dl-number-triangle-v1")
+def validate_stage5dl_number_triangle_v1_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_number_triangle_v1(),
+        "token_block_stage5dl_number_triangle_v1_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-triangle-way-anchor")
+def validate_stage5dl_triangle_way_anchor_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_triangle_way_anchor(),
+        "token_block_stage5dl_triangle_way_anchor_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-triangle-prime-mask")
+def validate_stage5dl_triangle_prime_mask_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_triangle_prime_mask(),
+        "token_block_stage5dl_triangle_prime_mask_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-triangle-2016-prime-layer")
+def validate_stage5dl_triangle_2016_prime_layer_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_triangle_2016_prime_layer(),
+        "token_block_stage5dl_triangle_2016_prime_layer_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-triangle-fibonacci-prime-index")
+def validate_stage5dl_triangle_fibonacci_prime_index_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_triangle_fibonacci_prime_index(),
+        "token_block_stage5dl_triangle_fibonacci_prime_index_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-triangle-56311-wynn-way")
+def validate_stage5dl_triangle_56311_wynn_way_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_triangle_56311_wynn_way(),
+        "token_block_stage5dl_triangle_56311_wynn_way_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-disk-cipher-source-lock")
+def validate_stage5dl_disk_cipher_source_lock_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_disk_cipher_source_lock(),
+        "token_block_stage5dl_disk_cipher_source_lock_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-quote-dialogue-cribs")
+def validate_stage5dl_quote_dialogue_cribs_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_quote_dialogue_cribs(),
+        "token_block_stage5dl_quote_dialogue_cribs_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-koan-depiction-source-lock")
+def validate_stage5dl_koan_depiction_source_lock_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_koan_depiction_source_lock(),
+        "token_block_stage5dl_koan_depiction_source_lock_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-local-source-crosswalks")
+def validate_stage5dl_local_source_crosswalks_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_local_source_crosswalks(),
+        "token_block_stage5dl_local_source_crosswalks_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-pivot-readiness")
+def validate_stage5dl_pivot_readiness_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_pivot_readiness(),
+        "token_block_stage5dl_pivot_readiness_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-stage5dg-preservation")
+def validate_stage5dl_stage5dg_preservation_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_stage5dg_preservation(),
+        "token_block_stage5dl_stage5dg_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-stage5bd-preservation")
+def validate_stage5dl_stage5bd_preservation_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_stage5bd_preservation(),
+        "token_block_stage5dl_stage5bd_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-active-lineage-preservation")
+def validate_stage5dl_active_lineage_preservation_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_active_lineage_preservation(),
+        "token_block_stage5dl_active_lineage_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-sidecar-gates")
+def validate_stage5dl_sidecar_gates_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_sidecar_gates(),
+        "token_block_stage5dl_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-handoff-continuity")
+def validate_stage5dl_handoff_continuity_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_handoff_continuity(),
+        "token_block_stage5dl_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-credential-redaction-policy")
+def validate_stage5dl_credential_redaction_policy_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_credential_redaction_policy(),
+        "token_block_stage5dl_credential_redaction_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5dl-governance-scope")
+def validate_stage5dl_governance_scope_command() -> None:
+    _print_stage5dl_result(
+        validate_stage5dl_governance_scope(),
+        "token_block_stage5dl_governance_scope_valid=true",
+    )
+
+
+@app.command("validate-stage5dl")
+def validate_stage5dl_command() -> None:
+    _print_stage5dl_result(validate_stage5dl(), "token_block_stage5dl_valid=true")
+
+
+@app.command("stage5dl-summary")
+def stage5dl_summary_command() -> None:
+    console.print(stage5dl_summary_text())
 
 
 def register(root_app: typer.Typer) -> None:

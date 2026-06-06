@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DK Fandom source-lock gap closure and Page 56 hash-contract refinement is complete.
+Stage 5DL triangle / disk / quote / koan source-lock refresh is complete.
 
-Next recommended prompt: Stage 5DL - Target-priority decision package, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DM - Target-priority decision package, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DL
+
+Stage 5DL source-locks the locally supplied triangle, disk-cipher, Reddit prime-thread image, quote-dialogue crib, and koan depiction evidence as compact metadata only. It records `pdd_153_triangle_word_prime_route_v1` as the operator-preferred future target family, but it selects no target and authorizes no route extraction, byte-stream generation, target-class validation, DWH/hash search, decode, scoring, CUDA, benchmark, website expansion, or solve claim.
+
+Local Stage 5DL summary: NumberTriangleStuff locked `true`, DiskCipherStuff locked `true`, Reddit prime-thread images locked `true`, quote-dialogue cribs locked `true`, koan depiction visual candidate locked `true`, candidate families added or updated `10`, operator-preferred future target family `pdd_153_triangle_word_prime_route_v1`, pivot target selected `false`, target-priority decision created `false`, Stage 5DG operator approval preserved `true`, combined gate satisfied `false`, activation authorized `false`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, execution authorized `false`, generated outputs committed `false`, raw source files committed `false`, `codex_output` used `false`, and next stage `Stage 5DM`.
+
+Stage 5DL is metadata-only source-lock and pivot-readiness refresh infrastructure. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select active planning input, generate byte streams, run target-class validation, use Tor/network route access, run triangle/disk/quote/koan route extraction, perform OCR/image forensics/AI interpretation, search DWH/hash/preimages, decode, score, run CUDA tooling, benchmark, publish website content, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DK
 

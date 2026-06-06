@@ -337,7 +337,7 @@ records:
   category: active_data_record
   purpose: Active Stage 5AH doc-staleness source-of-truth record.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5dl
   expected_update_frequency: every_doc_staleness_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -5988,3 +5988,91 @@ records:
   staleness_check_level: historical
   owner_context: research_operator
   notes: Summarizes Fandom source locks, Page 56 hash-contract refinement, preserved gates, and Stage 5DL routing.
+- path: data/project-state/stage5dl-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DL aggregate summary and next Stage 5DM routing.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dl
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records triangle/disk/quote/koan source locks, candidate-family counts, future-only operator preference, preserved gates, and no-execution boundaries.
+- path: data/project-state/stage5dl-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DL project-state record family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dl
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers Stage 5DL next-stage, pivot-readiness, candidate-priority, validation, gap, path-alias, and digest records.
+- path: data/historical-route/stage5dl-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DL historical-route source-lock record family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dl
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers triangle, disk, quote-dialogue, koan, and cross-family route-evidence metadata only.
+- path: data/source-harvester/stage5dl-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DL source-harvester local source-lock record family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dl
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers local source-lock registers and archive crosswalks while raw third-party files remain ignored.
+- path: data/token-block/stage5dl-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DL preservation and closed-gate record family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dl
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers Stage 5DG/5BD/active-lineage preservation and no-active/no-byte/no-execution gates.
+- path: schemas/*/stage5dl-*.schema.json
+  category: schema
+  purpose: Stage 5DL schema family for metadata-only records.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dl
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers generated Stage 5DL JSON schemas that enforce no-execution/no-solve guardrails.
+- path: docs/experiments/stage-5dl-triangle-disk-quote-koan-source-lock.md
+  category: operational_status_doc
+  purpose: Human-readable Stage 5DL source-lock and no-execution documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dl
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents records, future-only operator preference, no-target-selection boundary, and Stage 5DM routing.
+- path: docs/development-logs/2026-06-05-stage-5dl-triangle-disk-quote-koan-source-lock.md
+  category: historical_log
+  purpose: Stage 5DL implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dl
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation scope, metadata-only boundaries, and validation summary.

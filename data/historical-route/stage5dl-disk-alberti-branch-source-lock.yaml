@@ -1,0 +1,347 @@
+record_type: stage5dl_disk_alberti_branch_cipher_candidate_v0
+schema: schemas/historical-route/stage5dl-disk-alberti-branch-source-lock-v0.schema.json
+stage_id: stage-5dl
+stage_title: Stage 5DL - Triangle / Disk / Quote / Koan source-lock refresh, without
+  execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5dk
+source_previous_stage_id: stage-5dk
+source_previous_stage_commit: 0eacca46c4d1184341fc6364be24db4701e33bc6
+source_previous_stage_issue: 146
+source_previous_stage_ci_run: 27036919161
+source_previous_stage_pytest_count: 2634
+stage5dk_summary_status: complete
+metadata_only: true
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+stage5dg_operator_approval_record_preserved: true
+real_operator_approval_record_created_now: false
+operator_approval_component_satisfied_now: true
+stage5di_recent_clue_source_lock_preserved: true
+stage5dj_music_source_lock_preserved: true
+stage5bd_run_plan_id_count: 10
+active_lineage_record_count: 8
+parallel_worker_cap_for_stage5dl_and_later: 8
+recommended_next_stage_id: stage-5dm
+recommended_next_stage_title: Stage 5DM - Target-priority decision package, without
+  execution
+recommended_next_prompt_type: codex_metadata_implementation
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+approval_gate_authorizes_activation_now: false
+approval_gate_satisfied_now: false
+audio_stego_performed_now: false
+audio_transcription_performed_now: false
+audio_waveform_decode_performed_now: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+canonical_transcription_changed: false
+codex_output_used: false
+combined_approval_gate_authorizes_activation_now: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+deep_research_acceptance_component_satisfied_now: false
+deep_research_acceptance_created_now: false
+dry_run_ingestion_authorized_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+experiment_authorized_now: false
+experiment_executed_now: false
+experiments_authorized_now: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+historical_route_execution_performed: false
+html_tool_execution_performed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+manifest_supersession_authorized_now: false
+manifest_supersession_performed: false
+meaning_claimed_now: false
+method_status_upgraded: false
+model_claims_validated_now: false
+mp3stego_execution_performed: false
+music_cue_experiment_executed_now: false
+music_experiment_authorized_now: false
+music_experiment_executed_now: false
+music_route_extraction_performed_now: false
+music_score_ocr_performed_now: false
+music_sheet_rendered_now: false
+musicxml_conversion_performed_now: false
+new_active_planning_input_created: false
+new_real_operator_approval_record_created_in_stage5dl: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_target_priority_decision_created_now: false
+page_boundaries_finalized: false
+pdf_ocr_performed_now: false
+pdf_rendering_performed_now: false
+pivot_target_selected_now: false
+polar_route_extraction_performed_now: false
+raw_body_committed: false
+raw_disk_cipher_files_committed: false
+raw_koan_image_committed: false
+raw_music_file_committed: false
+raw_number_triangle_files_committed: false
+raw_pdf_committed: false
+raw_reddit_images_committed: false
+real_byte_stream_generated: false
+real_deep_research_acceptance_record_created_now: false
+route_extraction_performed_now: false
+score_to_cipher_experiment_performed_now: false
+score_to_cipher_transform_performed_now: false
+scoring_performed: false
+solve_claim: false
+spectrogram_decode_performed_now: false
+spectrogram_stego_analysis_performed_now: false
+stego_tool_execution_performed: false
+string4_active_input_allowed: false
+string4_added_to_active_dry_run_inputs: false
+string4_added_to_stage5bd_run_plan_ids: false
+string4_byte_stream_generation_allowed: false
+string4_dry_run_ingestion_allowed_now: false
+string4_execution_input_allowed: false
+string4_sidecar_active: false
+string4_sidecar_planning_ingestion_activated: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+token_block_transform_performed_now: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+visual_match_claimed_now: false
+waveform_analysis_performed_now: false
+way_anchor_route_executed_now: false
+website_expansion_performed: false
+candidate_family_id: disk_alberti_branch_cipher_candidate_v0
+source_root: third_party/DiskCipherStuff
+source_lock_only: true
+files_present_count: 26
+required_named_file_records:
+- source_file_name: 39_1_clear.webp
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/39_1_clear.webp
+  extension: .webp
+  file_kind: image
+  size_bytes: 6040
+  modified_utc: '2026-05-23T17:41:13Z'
+  sha256: ecfc5fc665ee3e012573fadf83982a17f78f1bfffd9f36f38e8b5ec959afbd18
+  sha512: f6f10e2a7837b0e4aa922877b438b4fac19c1e1289c3ce227d57ce09f10af0d15297fcf7e6502677b19283bd4bbafa938bac61cf60d2050728bdc218bbbda62d
+  blake2b: e608fe056aa6b653eee2d55ca20a27558f96be3b073df2ff098adacd078e641e6334a4e01a2897c892fda7e87f563c64b8697d36b96fd00a9420704a5392339c
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 871
+  image_height: 286
+  image_format: WEBP
+- source_file_name: Alberti_LP.pdf
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/Alberti_LP.pdf
+  extension: .pdf
+  file_kind: pdf
+  size_bytes: 767007
+  modified_utc: '2026-05-23T17:29:14Z'
+  sha256: 1ebe7bba0aed8405c95484793a6dfff1d0ccf14d16e180c0cf583abf90ef3ff6
+  sha512: 07546874c7936684fbec0f93eccdcdfc2a7ebf309ef46cea7c1520ec39507b9fb52468801a5716977859dab91a572885422626eeffda70336dbc4c7ef504fb35
+  blake2b: abf7f1346483ff549a1bcef0e2758f867f11c4be75420646704707b3e8a357839c9ebf65ede93f6d6b6f00163189fc83604b88c8b6c0374bc7bfc6cf4538ddba
+  raw_file_committed: false
+  metadata_only: true
+  image_width: null
+  image_height: null
+  image_format: null
+- source_file_name: Alberti_statisticsGr.rtf
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/Alberti_statisticsGr.rtf
+  extension: .rtf
+  file_kind: rtf
+  size_bytes: 217815
+  modified_utc: '2026-05-23T17:41:22Z'
+  sha256: 231fea98e41bab5c789a0315770494f74b893ea9c686df3789bbb227d1cb0e40
+  sha512: 66c7c16e390784f5eec29caf6ac74ca66a85995742efe4f753cc101321dfac19536c9c05c74c2170a2c97329c1feeabb5c94090db97c6fffe1351e4eef9bdac1
+  blake2b: d5befc053062dd6e1611d1a9c662460ff9b34f492c3379723bf755dce5366c98b09c6575a07155c265da606e2180fe52056f9669bb2c23ffd3d0438d1c30f505
+  raw_file_committed: false
+  metadata_only: true
+  image_width: null
+  image_height: null
+  image_format: null
+- source_file_name: alberti_v26_branchfix.html
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/alberti_v26_branchfix.html
+  extension: .html
+  file_kind: html
+  size_bytes: 39273
+  modified_utc: '2026-06-05T21:31:18Z'
+  sha256: 9c62d1c6f6f1d585aa56056170ed58cd1c65792d0778bdd2c177d9f86e395ef8
+  sha512: a43431f63a1e8b99d1dd5ac686bfae756545172d80a6c72bf1d6812c9e3f343e96aaf9c5acfa0877fde1c1485aa08723fe9c117a3f9966e75fe1b1a805acbd9d
+  blake2b: 3dcfd0e9b65d98bc401a9b2e0ea499c0dfb3e8c07caeb514800ff59aef51e41b2424944276aad8f89ecf11071540aaeb3cfce95481c8a043858d37d0961cd44e
+  raw_file_committed: false
+  metadata_only: true
+  image_width: null
+  image_height: null
+  image_format: null
+- source_file_name: Bookcover_inv.pdf
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/Bookcover_inv.pdf
+  extension: .pdf
+  file_kind: pdf
+  size_bytes: 755886
+  modified_utc: '2026-05-23T17:40:55Z'
+  sha256: b83cf787803e4422de3313ec6000a4e2839e3626e1fe68c1cd3f8946f0f88021
+  sha512: a6a64f49c21f5da60eced929ab6a2f267e799db3a4e05c29fcb301c1ae3f2a76b93fee8cf6e1bb626eaf4e81c81f2bafa66666137bb4c5c0c334bfb2992a7bbc
+  blake2b: 5aa2b6c7203153fb95a9ddbdca9a100985da274233f67b074e05363efee7be8f35266cbcd15c4cbbebe205f9b83c111719009fdbc985c7e9b3faca173b6505f3
+  raw_file_committed: false
+  metadata_only: true
+  image_width: null
+  image_height: null
+  image_format: null
+- source_file_name: Claudes_Alberti_LP_summary.md.pdf
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/Claudes_Alberti_LP_summary.md.pdf
+  extension: .pdf
+  file_kind: pdf
+  size_bytes: 535591
+  modified_utc: '2026-06-05T21:31:13Z'
+  sha256: a594cc71906c4c163cd7c05e977eb7c262336f13b2926e71a2403fec19753f1f
+  sha512: cbe191a8f133360a0f2729efd5b6b2678edea344fb9617d66f0d1681418f785a14fde52fd057c43111c6bc28eda523e90aefd30f9f6e4798c08912b2f0e4956f
+  blake2b: 73e4f0eea4aaab6646eaf336115ed41d6a2f77696bcc6951b83c0b55b4139974340facd7e27f789fe252cb11f3884a3b4e61e1b6e290533e7f8a6181e8ac93cb
+  raw_file_committed: false
+  metadata_only: true
+  image_width: null
+  image_height: null
+  image_format: null
+- source_file_name: Ivis_Alberti_LP summary.pdf
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/Ivis_Alberti_LP summary.pdf
+  extension: .pdf
+  file_kind: pdf
+  size_bytes: 767007
+  modified_utc: '2026-06-05T21:31:12Z'
+  sha256: 1ebe7bba0aed8405c95484793a6dfff1d0ccf14d16e180c0cf583abf90ef3ff6
+  sha512: 07546874c7936684fbec0f93eccdcdfc2a7ebf309ef46cea7c1520ec39507b9fb52468801a5716977859dab91a572885422626eeffda70336dbc4c7ef504fb35
+  blake2b: abf7f1346483ff549a1bcef0e2758f867f11c4be75420646704707b3e8a357839c9ebf65ede93f6d6b6f00163189fc83604b88c8b6c0374bc7bfc6cf4538ddba
+  raw_file_committed: false
+  metadata_only: true
+  image_width: null
+  image_height: null
+  image_format: null
+- source_file_name: message_bodies.txt
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/message_bodies.txt
+  extension: .txt
+  file_kind: text
+  size_bytes: 26232
+  modified_utc: '2026-05-23T17:38:30Z'
+  sha256: 37d89137bd22e8aa70a217d1c40d69b216e0ede1631456544cbbf0df4296d455
+  sha512: e56848a6fd51dc5f658f3847ee26864ca86c023a6597706d79cea35110f4431655141e8889dda90675644084a0347f235495ab0c36266f5f3130c57228ea1c93
+  blake2b: bf6fcc5f1dae575c6b7e5d9b96a31446242f202e4cc254e4d1c95f7f91dc6450a6de278f35b2e0ad9e4485147ed8a00bd0d8cd771bac9fb4e60905d905d6fbaa
+  raw_file_committed: false
+  metadata_only: true
+  image_width: null
+  image_height: null
+  image_format: null
+- source_file_name: p.39_new.webp
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/p.39_new.webp
+  extension: .webp
+  file_kind: image
+  size_bytes: 23208
+  modified_utc: '2026-05-23T17:40:28Z'
+  sha256: f1e3f59f2e4db4c14d6fb8c8f1b3ac5feb6336adb0e8d877a1c101546df794e1
+  sha512: d365adb52872b3f7b9c9b56552b86d0bad6bdc32a7ed668074fe63f7c64c14b6653e9852d1cadbe58570adaf422d57e15a26f731367e804800a5f440598d16ac
+  blake2b: 4df659b7515ad050e733b6ef83a702017f587c8e5070aa62027d91057b2b57abca876b5e77a18872893250a2b5604caeb518f5d11960c5ac0fa2216ff0ee3521
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 911
+  image_height: 635
+  image_format: WEBP
+- source_file_name: P39_1row_ext.webp
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/P39_1row_ext.webp
+  extension: .webp
+  file_kind: image
+  size_bytes: 20006
+  modified_utc: '2026-05-23T17:35:51Z'
+  sha256: 2a0fd26fba11073a76bd1499b96f0830906e2db6041acf32f879b9f6314aeb9b
+  sha512: 47a50b3f1855877e3663bf355e91cc5e6706f648cec8183cfe422a93aea160a6eda508633a384ef9dad15bc2224728a3873bab695d9bf59d0d9864a1db60286c
+  blake2b: e7cfdd2f4ad7712caed441ed72be0363566d8e6866f4a1f63e2836dfe51a34d44c47b220ab52940bee97665a502d0d9c0b0bc0b156e2c62a810adcf78e4228c1
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 891
+  image_height: 987
+  image_format: WEBP
+- source_file_name: Rule changes from base M.pdf
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/Rule changes from base
+    M.pdf
+  extension: .pdf
+  file_kind: pdf
+  size_bytes: 151987
+  modified_utc: '2026-05-23T17:35:54Z'
+  sha256: 1bc51ef84f6a431204b1307c1be4839273841491475aead14e493c33a93b4ab5
+  sha512: c69aee4f1c2cde39781acc058511dcf9fa25f8a5c011bc43d7a97bc5fef4997b4fd1a50896cf9f2f52a4b25503e12736776f86ab33ea86a0adc98d3cf24da77e
+  blake2b: 2c409c9c5899643b75f0b7dddb5cb605461f7e4573c5e033e73fa349c6fbaee2fec62e53751fb07f2859cacd5deaa2e3fc6b791cb9a5d494c7c39228d61a52d8
+  raw_file_committed: false
+  metadata_only: true
+  image_width: null
+  image_height: null
+  image_format: null
+- source_file_name: test1.pdf
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/test1.pdf
+  extension: .pdf
+  file_kind: pdf
+  size_bytes: 2371103
+  modified_utc: '2026-05-23T17:39:50Z'
+  sha256: 43aec305c178ed537b63a4e34f06258a16817e319c2b80c890c5738e1dea2f25
+  sha512: 8e304d57f9ebd8a376f7307b0a3a2da91936e56da73133e26697118da136c6ec87f241dd26c5e5ab4ef27811e86aa44ccc31f16370b04bb2eb3e027d63f53a81
+  blake2b: f62fb197223de9fa16b3e38eb26eaff4c05a6796ba7626587a2e881db6f849cab9b0e62f66a844132ee5d92cf6d9b96aca9e24e2722751b04fdc6c79be11ea80
+  raw_file_committed: false
+  metadata_only: true
+  image_width: null
+  image_height: null
+  image_format: null
+branching_file_records:
+- source_file_name: Branching2.webp
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/Branching2.webp
+  extension: .webp
+  file_kind: image
+  size_bytes: 6116
+  modified_utc: '2026-05-23T17:40:18Z'
+  sha256: 8b27baf4f13a121581e0510580bd96004777c73b873ccfa06a4e7c45dea4ed7c
+  sha512: eb45717e94ea4796c3ca2f4a034e50994f48bcf427cfe26d3bce6bf0be20fe0d453ce41b840029198a5309476bc02c0bd70b057a066a10d95ab46097229a84ae
+  blake2b: 6cf2ad9222f8b7eb119858bc10cac38fdee8bfe802a7bffab11ae3065bd845ea5d4803038071632bc3cb46befce314e1bad0a8d900a1245c6e65d8156e3ceeb5
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 799
+  image_height: 127
+  image_format: WEBP
+- source_file_name: Branching3.webp
+  source_path: third_party/DiskCipherStuff/DiskCipherStuff/Branching3.webp
+  extension: .webp
+  file_kind: image
+  size_bytes: 15648
+  modified_utc: '2026-05-23T17:40:22Z'
+  sha256: f3e863f757e50dae7a9ad1100dc71a9b8ff191b674978827562a248f480333fb
+  sha512: eb021fda303f01ebf04b3ac5878f45699ee4dc78f011bfd44aa020ffdb341ab5c391ae067c82df678dab01ae937383154334afee273692cd4736ba4abba401e0
+  blake2b: a808472674841b9b96989453f78ac9f08f04d0ef64b62e526154c948288b0e49a4ad10c59fda05d375b155de5683a060271f3cdb0ab01f153df3b90fa496161e
+  raw_file_committed: false
+  metadata_only: true
+  image_width: 821
+  image_height: 431
+  image_format: WEBP
+candidate_concepts_recorded:
+- Alberti-style disk
+- WYNN special handling
+- 5-6-3-11 sequence
+- dots as branch points
+- circumference_rotation_flip_concepts
+- p39_fragments_euler_totient_circumference_wynn_prime_number_fish_phi
+html_execution_performed: false
+rtf_active_content_execution_performed_now: false
+disk_cipher_experiment_executed: false
+wynn_claim_recorded: true
+branching_claim_recorded: true
+sequence_56311_claim_recorded: true
+p39_claims_recorded_as_community_theory: true
+disk_candidate_confidence: low_to_medium
+manual_branching_false_positive_risk: high
+requires_programmatic_reproduction_before_experiment: true
+requires_future_programmatic_reproduction: true
