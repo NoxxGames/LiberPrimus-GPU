@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5DN - Source/evidence review and target-priority decision readiness review, without execution.
+Current next prompt: Stage 5DO - Source/evidence review and target-priority decision readiness review, without execution.
 
-Stage 5DM is complete as metadata-only visual-route source-lock addendum work. It records Blake visual-text context, Sacred Book Edition overlay metadata, the Page6 magic-square word/number precedent, a full-page visual motif index, Page32 Moebius/Fibonacci-prime-index spiral arithmetic, the LP doublet-scarcity future feature candidate, evidence-atlas readiness, and Drive/path hygiene aliases while preserving Stage 5DL and keeping all execution blocked.
+Stage 5DN is complete as metadata-only DiskCipher v1 source-lock and triangle/circumference bridge work. It records updated DiskCipherStuff file metadata, `message_bodies.txt` and `results.png` source locks, 11 review-only DiskCipher/triangle/circumference candidate bridge records, probability-claim quarantine, Stage 5DG/Stage 5BD/active-lineage preservation, and keeps all execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DM visual-route source-lock addendum is complete. It preserves Stage 5DL rather than rerunning it, records 8 addendum families, verifies the manually supplied Page32 prime-index arithmetic as metadata only, preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, preserves Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
+Stage 5DN DiskCipher v1 source-lock and triangle/circumference bridge update is complete. It preserves Stage 5DM rather than rerunning it, records 11 addendum families, source-locks updated DiskCipher material as metadata only, quarantines probability claims, preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, preserves Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
 
-The next recommended prompt is Stage 5DN - Source/evidence review and target-priority decision readiness review, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DO - Source/evidence review and target-priority decision readiness review, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

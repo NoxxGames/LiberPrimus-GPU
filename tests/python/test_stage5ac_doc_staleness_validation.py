@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5dm_latest_and_stage5dn_next() -> None:
+def test_operational_docs_use_stage5dn_latest_and_stage5do_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5DM Blake / Sacred Book / full-page visual / Page32" in status
-    assert "Next recommended prompt: Stage 5DN" in status
-    assert "Latest completed stage: Stage 5DM" in staged_plan
-    assert "Current planning focus: Stage 5DN" in staged_plan
+    assert "Stage 5DN DiskCipher v1 source-lock" in status
+    assert "Next recommended prompt: Stage 5DO" in status
+    assert "Latest completed stage: Stage 5DN" in staged_plan
+    assert "Current planning focus: Stage 5DO" in staged_plan

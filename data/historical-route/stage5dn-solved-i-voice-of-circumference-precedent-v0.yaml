@@ -1,0 +1,126 @@
+record_type: stage5dn_solved_i_voice_of_circumference_precedent
+schema: schemas/historical-route/stage5dn-solved-i-voice-of-circumference-precedent-v0-v0.schema.json
+stage_id: stage-5dn
+stage_title: Stage 5DN - DiskCipher v1 source-lock and triangle/circumference bridge
+  update, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5dm
+source_previous_stage_id: stage-5dm
+source_previous_stage_commit: bd6fc6ad6cdf770cada3503c19995f389bf64b0a
+metadata_only: true
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+stage5dm_records_assumed_present_for_stage5dn_addendum: true
+stage5dm_rerun_performed: false
+stage5dg_operator_approval_record_preserved: true
+operator_approval_component_satisfied_now: true
+deep_research_activation_accept_record_present_now: false
+deep_research_acceptance_component_satisfied_now: false
+combined_approval_gate_satisfied_now: false
+stage5bd_run_plan_id_count: 10
+active_lineage_record_count: 8
+parallel_worker_cap_for_stage5dn_and_later: 8
+recommended_next_stage_id: stage-5do
+recommended_next_stage_title: Stage 5DO - Source/evidence review and target-priority
+  decision readiness review, without execution
+recommended_next_prompt_type: codex_metadata_implementation
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+alberti_cipher_execution_performed_now: false
+alberti_html_executed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+html_tool_executed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+mp3stego_execution_performed: false
+network_target_validation_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+pivot_target_selected_now: false
+probability_claim_accepted_as_validated: false
+real_byte_stream_generated: false
+route_extraction_performed_now: false
+scoring_performed: false
+solve_claim: false
+spectrogram_stego_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_materialisation_performed: false
+website_expansion_performed: false
+source_path: third_party/NumberTriangleStuff/v2-number-triangles/liber-primus__translation/liber-primus__translation.txt
+present: true
+sha256: adce48cfea746fd5add5071c85a34a998a546ca94c009bcd796cd3e699cc1c47
+file_size_bytes: 5589
+line_count: 239
+text_sha256: adce48cfea746fd5add5071c85a34a998a546ca94c009bcd796cd3e699cc1c47
+source_file_candidates:
+- third_party/NumberTriangleStuff/v2-number-triangles/liber-primus__translation/liber-primus__translation.txt
+- third_party/CiadaSolversIddqd_v2/liber-primus__translation/liber-primus__translation.txt
+- third_party/CicadaSolversIddqd/liber-primus__translation/liber-primus__translation.txt
+selected_source_path: third_party/NumberTriangleStuff/v2-number-triangles/liber-primus__translation/liber-primus__translation.txt
+candidate_context_id: solved_i_voice_of_circumference_precedent_v0
+candidate_family_id: solved_i_voice_of_circumference_precedent_v0
+source_section_id: 0.4.0
+source_section_type: solved_koan
+source_status: solved_translation_precedent
+source_lock_only: true
+accepted_as_route: false
+accepted_as_solved_precedent: true
+used_for_decryption_now: false
+plaintext_quote: THE I IS THE VOICE OF THE CIRCUMFERENCE
+speaker_tag: HE SAID
+plain_i_token_length: 1
+circumference_token_present: true
+voice_inside_head_context_present: true
+source_lines:
+- id: 0.4.0.1
+  text: DURING A LESSON, THE MASTER EXPLAINED THE I
+- id: 0.4.0.2
+  text: '"THE I IS THE VOICE OF THE CIRCUMFERENCE," HE SAID'
+- id: 0.4.0.3
+  text_contains: THE MASTER SAID "IT IS A VOICE INSIDE YOUR HEAD"
+- id: 0.4.0.5
+  text_contains: '"THE VOICE THAT JUST SAID YOU HAVE NO VOICE IN YOUR HEAD; IS THE
+    I"'
+relevance:
+- circumference_theme
+- single_letter_I_anchor
+- quote_dialogue_crib_template
+- solved_koan_body_self_context
+- disk_circumference_blake_urizen_claim
+- triangle_single_rune_anchor_context
+links_to:
+- disk_p39_row1_math_semantic_cluster_v1
+- disk_rule4_mobius_trip_rotation_bridge_v0
+- circumference_single_i_spiral_anchor_crosslink_v0
+- blake_urizen_los_reason_circumference_v0
+- music_3301_instar_crab_canon_v0
+- pdd_153_triangle_word_prime_route_v1
+single_letter_I_relation_to_single_rune_anchors: candidate_crosslink_only
+not_claiming_I_equals_center_W: true
+not_claiming_direct_mapping_between_I_and_wynn: true

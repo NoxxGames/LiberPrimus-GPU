@@ -742,6 +742,7 @@ from .stage5dl import (
     validate_stage5dl_triangle_way_anchor,
 )
 from . import stage5dm as stage5dm_module
+from . import stage5dn as stage5dn_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -8815,6 +8816,185 @@ def validate_stage5dm_command() -> None:
 @app.command("stage5dm-summary")
 def stage5dm_summary_command() -> None:
     console.print(stage5dm_module.stage5dm_summary_text())
+
+
+def _print_stage5dn_result(result: object, success_line: str) -> None:
+    text = result.to_cli_text()
+    console.print(text)
+    if getattr(result, "validation_error_count") != 0:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5dn")
+def build_stage5dn_command(
+    results_dir: Path = typer.Option(stage5dn_module.RESULTS_DIR),
+) -> None:
+    _ = results_dir
+    records = stage5dn_module.build_stage5dn()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(
+        "disk_cipher_v1_source_lock_created="
+        f"{str(summary.get('disk_cipher_v1_source_lock_created')).lower()}"
+    )
+    console.print(
+        "disk_cipher_stuff_file_count="
+        f"{summary.get('disk_cipher_stuff_file_count')}"
+    )
+    console.print(
+        "candidate_records_created="
+        f"{summary.get('candidate_records_created')}"
+    )
+    console.print(
+        "disk_probability_claim_quarantine_v1_created="
+        f"{str(summary.get('disk_probability_claim_quarantine_v1_created')).lower()}"
+    )
+    console.print(
+        "target_selected="
+        f"{str(summary.get('pivot_target_selected_now')).lower()}"
+    )
+    console.print(
+        "execution_authorized_now="
+        f"{str(summary.get('execution_authorized_now')).lower()}"
+    )
+    console.print(f"stage5bd_run_plan_id_count={summary.get('stage5bd_run_plan_id_count')}")
+    console.print(f"active_lineage_record_count={summary.get('active_lineage_record_count')}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5dn-disk-source-lock")
+def validate_stage5dn_disk_source_lock_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_disk_source_lock(),
+        "token_block_stage5dn_disk_source_lock_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-results-png")
+def validate_stage5dn_results_png_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_results_png(),
+        "token_block_stage5dn_results_png_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-message-bodies")
+def validate_stage5dn_message_bodies_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_message_bodies(),
+        "token_block_stage5dn_message_bodies_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-disk-56311-wynn-way")
+def validate_stage5dn_disk_56311_wynn_way_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_disk_56311_wynn_way(),
+        "token_block_stage5dn_disk_56311_wynn_way_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-disk-p39-row1-cluster")
+def validate_stage5dn_disk_p39_row1_cluster_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_disk_p39_row1_cluster(),
+        "token_block_stage5dn_disk_p39_row1_cluster_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-doublet-suppression")
+def validate_stage5dn_doublet_suppression_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_doublet_suppression(),
+        "token_block_stage5dn_doublet_suppression_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-probability-quarantine")
+def validate_stage5dn_probability_quarantine_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_probability_quarantine(),
+        "token_block_stage5dn_probability_quarantine_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-circumference-precedent")
+def validate_stage5dn_circumference_precedent_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_circumference_precedent(),
+        "token_block_stage5dn_circumference_precedent_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-pdd-triangle-56311-update")
+def validate_stage5dn_pdd_triangle_56311_update_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_pdd_triangle_56311_update(),
+        "token_block_stage5dn_pdd_triangle_56311_update_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-stage5dm-preservation")
+def validate_stage5dn_stage5dm_preservation_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_stage5dm_preservation(),
+        "token_block_stage5dn_stage5dm_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-stage5bd-preservation")
+def validate_stage5dn_stage5bd_preservation_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_stage5bd_preservation(),
+        "token_block_stage5dn_stage5bd_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-active-lineage-preservation")
+def validate_stage5dn_active_lineage_preservation_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_active_lineage_preservation(),
+        "token_block_stage5dn_active_lineage_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-sidecar-gates")
+def validate_stage5dn_sidecar_gates_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_sidecar_gates(),
+        "token_block_stage5dn_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-handoff-continuity")
+def validate_stage5dn_handoff_continuity_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_handoff_continuity(),
+        "token_block_stage5dn_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5dn-governance-scope")
+def validate_stage5dn_governance_scope_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn_governance_scope(),
+        "token_block_stage5dn_governance_scope_valid=true",
+    )
+
+
+@app.command("validate-stage5dn")
+def validate_stage5dn_command() -> None:
+    _print_stage5dn_result(
+        stage5dn_module.validate_stage5dn(),
+        "token_block_stage5dn_valid=true",
+    )
+
+
+@app.command("stage5dn-summary")
+def stage5dn_summary_command() -> None:
+    console.print(stage5dn_module.stage5dn_summary_text())
 
 
 def register(root_app: typer.Typer) -> None:

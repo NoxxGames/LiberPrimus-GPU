@@ -1,0 +1,145 @@
+record_type: stage5dn_disk_message_bodies_source_lock
+schema: schemas/source-harvester/stage5dn-disk-message-bodies-source-lock-v0.schema.json
+stage_id: stage-5dn
+stage_title: Stage 5DN - DiskCipher v1 source-lock and triangle/circumference bridge
+  update, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5dm
+source_previous_stage_id: stage-5dm
+source_previous_stage_commit: bd6fc6ad6cdf770cada3503c19995f389bf64b0a
+metadata_only: true
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+stage5dm_records_assumed_present_for_stage5dn_addendum: true
+stage5dm_rerun_performed: false
+stage5dg_operator_approval_record_preserved: true
+operator_approval_component_satisfied_now: true
+deep_research_activation_accept_record_present_now: false
+deep_research_acceptance_component_satisfied_now: false
+combined_approval_gate_satisfied_now: false
+stage5bd_run_plan_id_count: 10
+active_lineage_record_count: 8
+parallel_worker_cap_for_stage5dn_and_later: 8
+recommended_next_stage_id: stage-5do
+recommended_next_stage_title: Stage 5DO - Source/evidence review and target-priority
+  decision readiness review, without execution
+recommended_next_prompt_type: codex_metadata_implementation
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+alberti_cipher_execution_performed_now: false
+alberti_html_executed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+html_tool_executed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+mp3stego_execution_performed: false
+network_target_validation_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+pivot_target_selected_now: false
+probability_claim_accepted_as_validated: false
+real_byte_stream_generated: false
+route_extraction_performed_now: false
+scoring_performed: false
+solve_claim: false
+spectrogram_stego_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_materialisation_performed: false
+website_expansion_performed: false
+source_path: third_party/DiskCipherStuff/DiskCipherStuff/message_bodies.txt
+present: true
+sha256: 1f9d89493b16ffc7228decd15eb2de0630c0fef780d615583b96c07a25bf5e67
+file_size_bytes: 31259
+line_count: 349
+text_sha256: 97ee0eaa220d45bdfd5f881ac8612df522f87b7aed5a062f19c93abba061a8d1
+source_lock_only: true
+compact_excerpts_only: true
+full_raw_body_committed: false
+raw_file_committed_now: false
+claim_groups:
+- id: p39_row_branching_claim
+  summary: p.39 first compressed row produces branching plaintext fragments under
+    Alberti/disk rules and dot branching.
+  claim_status: source_locked_candidate
+  accepted_as_solved: false
+  experiment_executed_now: false
+- id: seq_56311_claim
+  summary: sequence 5-6-3-11 is used horizontally/vertically and underlies branch
+    results.
+  claim_status: source_locked_candidate
+  accepted_as_solved: false
+  experiment_executed_now: false
+- id: wynn_claim
+  summary: WYNN is name of rune \u16b9 and is structurally highlighted in branch results.
+  claim_status: source_locked_candidate
+  accepted_as_solved: false
+  experiment_executed_now: false
+- id: row1_math_semantic_cluster_claim
+  summary: row 1 produces EULER/LEONHARD/NAPIER/JOHN/TOTIENT/CIRCUMFERENCE/PRIME NUMBER/FISH/WYNN/PHI
+    fragments.
+  claim_status: source_locked_candidate
+  accepted_as_solved: false
+  experiment_executed_now: false
+- id: doublet_suppression_claim
+  summary: disk/branching model may explain low doublet count or suppress repeated-rune
+    structures.
+  claim_status: source_locked_candidate
+  accepted_as_solved: false
+  experiment_executed_now: false
+- id: ruth_route_way_wordplay_claim
+  summary: WAY/RUTH/root/route/road/path/direction semantic bridge is proposed.
+  claim_status: source_locked_candidate
+  accepted_as_solved: false
+  experiment_executed_now: false
+- id: rule4_mobius_trip_claim
+  summary: rotation/flip/loop sequence is compared to Moebius trip/step behavior.
+  claim_status: source_locked_candidate
+  accepted_as_solved: false
+  experiment_executed_now: false
+- id: eclipse_167_candidate_claim
+  summary: March 20 2015 eclipse/equinox/167-second timing candidate is proposed.
+  claim_status: source_locked_candidate
+  accepted_as_solved: false
+  experiment_executed_now: false
+- id: blake_urizen_circumference_claim
+  summary: disk/circumference metaphor is linked to Blake/Urizen/reason/self loop.
+  claim_status: source_locked_candidate
+  accepted_as_solved: false
+  experiment_executed_now: false
+late_update_claims:
+- p39_first_row_branching_results
+- row1_math_semantic_cluster
+- sequence_56311_horizontal_and_vertical
+- dot_branching_plus_one
+- wynn_duplicate_or_special_rune
+- rule4_mobius_trip_rotation_loop
+- doublet_suppression
+- ruth_root_route_way_wordplay
+- eclipse_2015_167_second_temporal_candidate
+- blake_urizen_circumference_loop_metaphor

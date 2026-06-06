@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5DM" \
-    --expected-next-stage "Stage 5DN" \
+    --expected-latest-stage "Stage 5DN" \
+    --expected-next-stage "Stage 5DO" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5DM" \
-    --expected-next-stage "Stage 5DN" \
+    --expected-latest-stage "Stage 5DN" \
+    --expected-next-stage "Stage 5DO" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DM",
+            expected_latest_stage="Stage 5DN",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DM",
+            "expected_latest_stage": "Stage 5DN",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3246,6 +3246,39 @@ git check-ignore -q "codex-output/stage5dm-codex-completion.md"
 git check-ignore -q "third_party/The-Complete-Cicada3301-Archive-main/2014/Liber Primus/LP Sacred Book Edition/english text on top of pages/Page6-book.jpg"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5DM" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5DN DiskCipher v1 source-lock and bridge records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-disk-source-lock
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-results-png
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-message-bodies
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-disk-56311-wynn-way
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-disk-p39-row1-cluster
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-doublet-suppression
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-probability-quarantine
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-circumference-precedent
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-pdd-triangle-56311-update
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-stage5dm-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-stage5bd-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-active-lineage-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-handoff-continuity
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn-governance-scope
+"$python_bin" -m libreprimus.cli token-block validate-stage5dn
+"$python_bin" -m libreprimus.cli token-block stage5dn-summary
+stage5dn_token_results_root="$(printf '%s/%s/%s/%s' "experiments" "results" "token-block" "stage5dn")"
+git check-ignore -q "$stage5dn_token_results_root/summary.json"
+git check-ignore -q "$stage5dn_token_results_root/disk_source_lock_report.json"
+git check-ignore -q "$stage5dn_token_results_root/disk_file_inventory.json"
+git check-ignore -q "$stage5dn_token_results_root/candidate_bridge_report.json"
+git check-ignore -q "$stage5dn_token_results_root/preservation_report.json"
+git check-ignore -q "$stage5dn_token_results_root/warnings.jsonl"
+git check-ignore -q "codex-output/stage5dn-codex-completion.md"
+git check-ignore -q "third_party/DiskCipherStuff/DiskCipherStuff/results.png"
+git check-ignore -q "third_party/DiskCipherStuff/DiskCipherStuff/message_bodies.txt"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5DN" >&2
     exit 1
 fi
 

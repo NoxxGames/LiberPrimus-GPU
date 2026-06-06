@@ -1,0 +1,382 @@
+record_type: stage5dn_disk_cipher_v1_file_inventory
+schema: schemas/source-harvester/stage5dn-disk-cipher-v1-file-inventory-v0.schema.json
+stage_id: stage-5dn
+stage_title: Stage 5DN - DiskCipher v1 source-lock and triangle/circumference bridge
+  update, without execution
+prompt_type: codex_metadata_implementation
+source_previous_stage: stage-5dm
+source_previous_stage_id: stage-5dm
+source_previous_stage_commit: bd6fc6ad6cdf770cada3503c19995f389bf64b0a
+metadata_only: true
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+stage5dm_records_assumed_present_for_stage5dn_addendum: true
+stage5dm_rerun_performed: false
+stage5dg_operator_approval_record_preserved: true
+operator_approval_component_satisfied_now: true
+deep_research_activation_accept_record_present_now: false
+deep_research_acceptance_component_satisfied_now: false
+combined_approval_gate_satisfied_now: false
+stage5bd_run_plan_id_count: 10
+active_lineage_record_count: 8
+parallel_worker_cap_for_stage5dn_and_later: 8
+recommended_next_stage_id: stage-5do
+recommended_next_stage_title: Stage 5DO - Source/evidence review and target-priority
+  decision readiness review, without execution
+recommended_next_prompt_type: codex_metadata_implementation
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+alberti_cipher_execution_performed_now: false
+alberti_html_executed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+html_tool_executed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+mp3stego_execution_performed: false
+network_target_validation_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+pivot_target_selected_now: false
+probability_claim_accepted_as_validated: false
+real_byte_stream_generated: false
+route_extraction_performed_now: false
+scoring_performed: false
+solve_claim: false
+spectrogram_stego_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_materialisation_performed: false
+website_expansion_performed: false
+source_lock_only: true
+source_root: third_party/DiskCipherStuff
+effective_source_root: third_party/DiskCipherStuff/DiskCipherStuff
+source_root_exists: true
+effective_source_root_exists: true
+file_count_observed: 27
+files:
+- relative_path: 39_1_clear.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/39_1_clear.webp
+  file_name: 39_1_clear.webp
+  file_size_bytes: 6040
+  sha256: ecfc5fc665ee3e012573fadf83982a17f78f1bfffd9f36f38e8b5ec959afbd18
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: Alberti_LP.pdf
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/Alberti_LP.pdf
+  file_name: Alberti_LP.pdf
+  file_size_bytes: 767007
+  sha256: 1ebe7bba0aed8405c95484793a6dfff1d0ccf14d16e180c0cf583abf90ef3ff6
+  file_kind: pdf_source_document
+  source_role: supporting_source_document
+  mime_type_guess: application/pdf
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: Alberti_statisticsGr.rtf
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/Alberti_statisticsGr.rtf
+  file_name: Alberti_statisticsGr.rtf
+  file_size_bytes: 217815
+  sha256: 231fea98e41bab5c789a0315770494f74b893ea9c686df3789bbb227d1cb0e40
+  file_kind: rtf_source_document
+  source_role: supporting_source_document
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: alberti_v26_branchfix.html
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/alberti_v26_branchfix.html
+  file_name: alberti_v26_branchfix.html
+  file_size_bytes: 39273
+  sha256: 9c62d1c6f6f1d585aa56056170ed58cd1c65792d0778bdd2c177d9f86e395ef8
+  file_kind: html_tool_candidate
+  source_role: html_tool_candidate
+  mime_type_guess: text/html
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: false
+- relative_path: Bookcover_inv.pdf
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/Bookcover_inv.pdf
+  file_name: Bookcover_inv.pdf
+  file_size_bytes: 755886
+  sha256: b83cf787803e4422de3313ec6000a4e2839e3626e1fe68c1cd3f8946f0f88021
+  file_kind: pdf_source_document
+  source_role: supporting_source_document
+  mime_type_guess: application/pdf
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: Branching2.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/Branching2.webp
+  file_name: Branching2.webp
+  file_size_bytes: 6116
+  sha256: 8b27baf4f13a121581e0510580bd96004777c73b873ccfa06a4e7c45dea4ed7c
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: Branching3.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/Branching3.webp
+  file_name: Branching3.webp
+  file_size_bytes: 15648
+  sha256: f3e863f757e50dae7a9ad1100dc71a9b8ff191b674978827562a248f480333fb
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: Claudes_Alberti_LP_summary.md.pdf
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/Claudes_Alberti_LP_summary.md.pdf
+  file_name: Claudes_Alberti_LP_summary.md.pdf
+  file_size_bytes: 535591
+  sha256: a594cc71906c4c163cd7c05e977eb7c262336f13b2926e71a2403fec19753f1f
+  file_kind: pdf_source_document
+  source_role: supporting_source_document
+  mime_type_guess: application/pdf
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: Cover_table.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/Cover_table.webp
+  file_name: Cover_table.webp
+  file_size_bytes: 370306
+  sha256: f20f4c2cd6c3ed9fd3496664bdc84fd3532ef08bb9b26c8aac038d6e7376d1c4
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: image.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/image.webp
+  file_name: image.webp
+  file_size_bytes: 12604
+  sha256: 44276cde56d50ea6636746f1e3af49dbd1fb5d3883764d4dc434f801158aaa01
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: image1231234.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/image1231234.webp
+  file_name: image1231234.webp
+  file_size_bytes: 15618
+  sha256: 18249b6d9c947f482f804224d6d71f519e17ff911d80ffc8d7f0f359e3c943d9
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: image1352.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/image1352.webp
+  file_name: image1352.webp
+  file_size_bytes: 43468
+  sha256: 9d163953e0be065acf0bf06311aafbe83a502f3c9fc463135cc931075ff82505
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: image234151.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/image234151.webp
+  file_name: image234151.webp
+  file_size_bytes: 8956
+  sha256: 4b6b013e31130bc53b16164716d797c87e95936b50d201f67858972ecbb6435c
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: image2361234.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/image2361234.webp
+  file_name: image2361234.webp
+  file_size_bytes: 50942
+  sha256: c70dd3ac7f5ce3a0f48a762b55ab0ec19376b521ab9651995141f62fc4793bfa
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: image3423651.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/image3423651.webp
+  file_name: image3423651.webp
+  file_size_bytes: 21726
+  sha256: 31d9276b29804b2dc3c1905beceb67d757437bbb03fcd61bd7e423f6bb72baa1
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: image456234346.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/image456234346.webp
+  file_name: image456234346.webp
+  file_size_bytes: 23226
+  sha256: 8d53d56e85a6ce52b03bb46da9481c666cf6aa3a0e7894333d31a440e73d4578
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: image663333333323.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/image663333333323.webp
+  file_name: image663333333323.webp
+  file_size_bytes: 38006
+  sha256: 2bb217e085c09222f470a77ea510ed81c14c9c8a34c4e22d3cd081922b99fdab
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: image782634.png
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/image782634.png
+  file_name: image782634.png
+  file_size_bytes: 16353
+  sha256: f20a168646dac26bb1fc05f4252d68dba7390a1f1f263b32f17b9d9f1f6caec3
+  file_kind: image_png
+  source_role: supporting_visual_source
+  mime_type_guess: image/png
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: IMG_20230709_010708.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/IMG_20230709_010708.webp
+  file_name: IMG_20230709_010708.webp
+  file_size_bytes: 169696
+  sha256: 6b9661e43d0e81387527b0d96a0cfcfc0b81c2d18842de701057dc774b03022f
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: Ivis_Alberti_LP summary.pdf
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/Ivis_Alberti_LP
+    summary.pdf
+  file_name: Ivis_Alberti_LP summary.pdf
+  file_size_bytes: 767007
+  sha256: 1ebe7bba0aed8405c95484793a6dfff1d0ccf14d16e180c0cf583abf90ef3ff6
+  file_kind: pdf_source_document
+  source_role: supporting_source_document
+  mime_type_guess: application/pdf
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: message_bodies.txt
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/message_bodies.txt
+  file_name: message_bodies.txt
+  file_size_bytes: 31259
+  sha256: 1f9d89493b16ffc7228decd15eb2de0630c0fef780d615583b96c07a25bf5e67
+  file_kind: text_plain
+  source_role: updated_forum_or_chat_message_body_export
+  mime_type_guess: text/plain
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: p.39_new.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/p.39_new.webp
+  file_name: p.39_new.webp
+  file_size_bytes: 23208
+  sha256: f1e3f59f2e4db4c14d6fb8c8f1b3ac5feb6336adb0e8d877a1c101546df794e1
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: P39_1row_ext.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/P39_1row_ext.webp
+  file_name: P39_1row_ext.webp
+  file_size_bytes: 20006
+  sha256: 2a0fd26fba11073a76bd1499b96f0830906e2db6041acf32f879b9f6314aeb9b
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: results.png
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/results.png
+  file_name: results.png
+  file_size_bytes: 51949
+  sha256: d56f08df8412b81c14e659e5dbf743e1cb35f6eabe0f8df15e40f763aa6391da
+  file_kind: image_png
+  source_role: result_summary_image
+  mime_type_guess: image/png
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: Rule changes from base M.pdf
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/Rule changes from
+    base M.pdf
+  file_name: Rule changes from base M.pdf
+  file_size_bytes: 151987
+  sha256: 1bc51ef84f6a431204b1307c1be4839273841491475aead14e493c33a93b4ab5
+  file_kind: pdf_source_document
+  source_role: disk_rule_reference_document
+  mime_type_guess: application/pdf
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: test1.pdf
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/test1.pdf
+  file_name: test1.pdf
+  file_size_bytes: 2371103
+  sha256: 43aec305c178ed537b63a4e34f06258a16817e319c2b80c890c5738e1dea2f25
+  file_kind: pdf_source_document
+  source_role: supporting_source_document
+  mime_type_guess: application/pdf
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+- relative_path: Unsolved_p.39_last.webp
+  repo_relative_path: third_party/DiskCipherStuff/DiskCipherStuff/Unsolved_p.39_last.webp
+  file_name: Unsolved_p.39_last.webp
+  file_size_bytes: 23590
+  sha256: f7ef7d0883b800db0f18cb6037a5a7b7f1066a8f68bcdef2a2516331e4516b16
+  file_kind: image_webp
+  source_role: supporting_visual_source
+  mime_type_guess: application/octet-stream
+  source_lock_status: present_ignored_local_source
+  raw_file_committed_now: false
+  html_executed_now: null
+expected_file_gaps: []
+raw_files_committed_now: false
