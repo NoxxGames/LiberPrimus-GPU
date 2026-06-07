@@ -3282,6 +3282,40 @@ if [ -e "codex_output" ]; then
     exit 1
 fi
 
+echo "Validating Stage 5DO Discord NumberFacts and pixel-colour source-lock records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5do-number-facts-source-lock
+"$python_bin" -m libreprimus.cli token-block validate-stage5do-potential-hint-source-lock
+"$python_bin" -m libreprimus.cli token-block validate-stage5do-page32-red-header-2472
+"$python_bin" -m libreprimus.cli token-block validate-stage5do-page32-red-header-463-3299
+"$python_bin" -m libreprimus.cli token-block validate-stage5do-no-f-section-flow
+"$python_bin" -m libreprimus.cli token-block validate-stage5do-doublet-v1
+"$python_bin" -m libreprimus.cli token-block validate-stage5do-pixel-colour-candidate
+"$python_bin" -m libreprimus.cli token-block validate-stage5do-gp-facts
+"$python_bin" -m libreprimus.cli token-block validate-stage5do-source-browser-future-requirement
+"$python_bin" -m libreprimus.cli token-block validate-stage5do-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5do-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5do-handoff-continuity
+"$python_bin" -m libreprimus.cli token-block validate-stage5do
+"$python_bin" -m libreprimus.cli token-block stage5do-summary
+stage5do_token_results_root="$(printf '%s/%s/%s/%s' "experiments" "results" "token-block" "stage5do")"
+git check-ignore -q "$stage5do_token_results_root/summary.json"
+git check-ignore -q "$stage5do_token_results_root/number_facts_source_lock_report.json"
+git check-ignore -q "$stage5do_token_results_root/potential_hint_source_lock_report.json"
+git check-ignore -q "$stage5do_token_results_root/image_anchor_report.json"
+git check-ignore -q "$stage5do_token_results_root/candidate_report.json"
+git check-ignore -q "$stage5do_token_results_root/preservation_report.json"
+git check-ignore -q "$stage5do_token_results_root/warnings.jsonl"
+git check-ignore -q "codex-output/stage5do-codex-completion.md"
+git check-ignore -q "third_party/NumberFactsCollection/messages.txt"
+git check-ignore -q "third_party/NumberFactsCollection/futhork_rune_values_are_used.jpg"
+git check-ignore -q "third_party/PotentialHint-3301-on-Page32/messages.txt"
+git check-ignore -q "third_party/PotentialHint-3301-on-Page32/page-32.jpg"
+git check-ignore -q "third_party/PotentialHint-3301-on-Page32/prime_color_frequencies.txt"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5DO" >&2
+    exit 1
+fi
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

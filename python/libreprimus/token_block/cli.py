@@ -743,6 +743,7 @@ from .stage5dl import (
 )
 from . import stage5dm as stage5dm_module
 from . import stage5dn as stage5dn_module
+from . import stage5do as stage5do_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -8995,6 +8996,156 @@ def validate_stage5dn_command() -> None:
 @app.command("stage5dn-summary")
 def stage5dn_summary_command() -> None:
     console.print(stage5dn_module.stage5dn_summary_text())
+
+
+def _print_stage5do_result(result: object, success_line: str) -> None:
+    text = result.to_cli_text()
+    console.print(text)
+    if getattr(result, "validation_error_count") != 0:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5do")
+def build_stage5do_command(
+    results_dir: Path = typer.Option(stage5do_module.RESULTS_DIR),
+) -> None:
+    _ = results_dir
+    records = stage5do_module.build_stage5do()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(
+        "number_facts_collection_locked="
+        f"{str(summary.get('number_facts_collection_locked')).lower()}"
+    )
+    console.print(f"number_facts_file_count={summary.get('number_facts_file_count')}")
+    console.print(
+        "potential_hint_locked="
+        f"{str(summary.get('potential_hint_locked')).lower()}"
+    )
+    console.print(f"potential_hint_file_count={summary.get('potential_hint_file_count')}")
+    console.print(f"messages_txt_source_locks={summary.get('messages_txt_source_locks')}")
+    console.print(f"candidate_records_created={summary.get('candidate_records_created')}")
+    console.print(f"page32_2472_status={summary.get('page32_2472_status')}")
+    console.print(f"page32_463_3299_status={summary.get('page32_463_3299_status')}")
+    console.print(f"pixel_rgb185_3301_status={summary.get('pixel_rgb185_3301_status')}")
+    console.print(
+        "source_browser_gui_future_requirement_recorded="
+        f"{str(summary.get('source_browser_gui_future_requirement_recorded')).lower()}"
+    )
+    console.print(f"pivot_target_selected={str(summary.get('pivot_target_selected_now')).lower()}")
+    console.print(f"execution_performed={str(summary.get('execution_performed')).lower()}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5do-number-facts-source-lock")
+def validate_stage5do_number_facts_source_lock_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do_number_facts_source_lock(),
+        "token_block_stage5do_number_facts_source_lock_valid=true",
+    )
+
+
+@app.command("validate-stage5do-potential-hint-source-lock")
+def validate_stage5do_potential_hint_source_lock_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do_potential_hint_source_lock(),
+        "token_block_stage5do_potential_hint_source_lock_valid=true",
+    )
+
+
+@app.command("validate-stage5do-page32-red-header-2472")
+def validate_stage5do_page32_red_header_2472_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do_page32_red_header_2472(),
+        "token_block_stage5do_page32_red_header_2472_valid=true",
+    )
+
+
+@app.command("validate-stage5do-page32-red-header-463-3299")
+def validate_stage5do_page32_red_header_463_3299_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do_page32_red_header_463_3299(),
+        "token_block_stage5do_page32_red_header_463_3299_valid=true",
+    )
+
+
+@app.command("validate-stage5do-no-f-section-flow")
+def validate_stage5do_no_f_section_flow_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do_no_f_section_flow(),
+        "token_block_stage5do_no_f_section_flow_valid=true",
+    )
+
+
+@app.command("validate-stage5do-doublet-v1")
+def validate_stage5do_doublet_v1_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do_doublet_v1(),
+        "token_block_stage5do_doublet_v1_valid=true",
+    )
+
+
+@app.command("validate-stage5do-pixel-colour-candidate")
+def validate_stage5do_pixel_colour_candidate_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do_pixel_colour_candidate(),
+        "token_block_stage5do_pixel_colour_candidate_valid=true",
+    )
+
+
+@app.command("validate-stage5do-gp-facts")
+def validate_stage5do_gp_facts_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do_gp_facts(),
+        "token_block_stage5do_gp_facts_valid=true",
+    )
+
+
+@app.command("validate-stage5do-source-browser-future-requirement")
+def validate_stage5do_source_browser_future_requirement_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do_source_browser_future_requirement(),
+        "token_block_stage5do_source_browser_future_requirement_valid=true",
+    )
+
+
+@app.command("validate-stage5do-sidecar-gates")
+def validate_stage5do_sidecar_gates_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do_sidecar_gates(),
+        "token_block_stage5do_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5do-preservation")
+def validate_stage5do_preservation_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do_preservation(),
+        "token_block_stage5do_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5do-handoff-continuity")
+def validate_stage5do_handoff_continuity_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do_handoff_continuity(),
+        "token_block_stage5do_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5do")
+def validate_stage5do_command() -> None:
+    _print_stage5do_result(
+        stage5do_module.validate_stage5do(),
+        "token_block_stage5do_valid=true",
+    )
+
+
+@app.command("stage5do-summary")
+def stage5do_summary_command() -> None:
+    console.print(stage5do_module.stage5do_summary_text())
 
 
 def register(root_app: typer.Typer) -> None:

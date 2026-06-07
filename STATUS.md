@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DN DiskCipher v1 source-lock and triangle/circumference bridge update is complete.
+Stage 5DO Discord NumberFacts and pixel-colour source-lock addendum is complete.
 
-Next recommended prompt: Stage 5DO - Source/evidence review and target-priority decision readiness review, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DP - Lightweight source-lock browser GUI design/build, without puzzle execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DO
+
+Stage 5DO source-locks the local ignored `third_party/NumberFactsCollection/` and `third_party/PotentialHint-3301-on-Page32/` Discord-derived source folders as compact metadata only. It records two `messages.txt` source locks, file inventories for 11 NumberFacts files and 10 PotentialHint files, image-anchor line hashes, pixel-colour frequency table metadata, and 15 review-only historical-route candidate records.
+
+Local Stage 5DO summary: NumberFactsCollection locked `true`, PotentialHint source locked `true`, message source locks `2`, candidate records created `15`, Page32 progressive GP sum `2472` arithmetic status `arithmetic_verified_metadata_only`, Page32 cumulative index `463` / prime `3299` status `arithmetic_verified_metadata_only`, NO-F section-flow arithmetic status `component_arithmetic_verified_canonical_transcript_required`, RGB185 pixel-count status `source_locked_canonical_image_verification_required`, `1033`/185th-prime correction status `recorded`, future source-lock browser GUI requirement recorded `true`, pivot target selected `false`, target-priority decision created `false`, Stage 5DG operator approval preserved `true`, combined gate satisfied `false`, activation authorized `false`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, execution authorized `false`, generated outputs committed `false`, raw third-party files committed `false`, `codex_output` used `false`, and next stage `Stage 5DP`.
+
+Stage 5DO is metadata-only source-lock addendum infrastructure. It does not implement the future source-lock browser GUI, create Deep Research acceptance, satisfy the combined gate, authorize activation, select a pivot target, select active planning input, generate byte streams, run target-class validation, use Tor/network route access, run route extraction, OCR, image forensics, AI interpretation, pixel-colour validation against a canonical original image, DWH/hash/preimage search, decode, score, run CUDA tooling, benchmark, publish website content, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DN
 

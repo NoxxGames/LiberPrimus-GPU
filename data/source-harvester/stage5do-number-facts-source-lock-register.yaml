@@ -1,0 +1,214 @@
+record_type: stage5do_number_facts_source_lock_register
+schema: schemas/source-harvester/stage5do-number-facts-source-lock-register-v0.schema.json
+stage_id: stage-5do
+stage_title: Stage 5DO - Discord NumberFacts and pixel-colour source-lock addendum,
+  without execution
+prompt_type: codex_metadata_implementation
+metadata_only: true
+source_lock_only: true
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+source_previous_stage: stage-5dn
+source_previous_stage_id: stage-5dn
+source_previous_stage_commit: a3947f95e59728941d32b97097ae470aff85b1f0
+source_previous_issue: 149
+source_previous_ci_run: 27075087458
+stage5dn_records_assumed_present_for_stage5do_addendum: true
+stage5dn_rerun_performed: false
+stage5dg_operator_approval_record_preserved: true
+operator_approval_component_satisfied_now: true
+deep_research_acceptance_component_satisfied_now: false
+combined_approval_gate_satisfied_now: false
+stage5bd_run_plan_id_count: 10
+active_lineage_record_count: 8
+parallel_worker_cap_for_stage5do_and_later: 8
+recommended_next_stage_id: stage-5dp
+recommended_next_stage_title: Stage 5DP - Lightweight source-lock browser GUI design/build,
+  without puzzle execution
+recommended_next_prompt_type: codex_metadata_implementation
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+alberti_cipher_execution_performed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+html_tool_executed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+mp3stego_execution_performed: false
+network_target_validation_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_readiness_decision_created_now: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+pivot_target_selected_now: false
+probability_claim_accepted_as_validated: false
+real_byte_stream_generated: false
+route_extraction_performed_now: false
+scoring_performed: false
+solve_claim: false
+source_browser_gui_implemented_now: false
+spectrogram_stego_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_materialisation_performed: false
+website_expansion_performed: false
+source_root_id: number_facts_collection
+source_root: third_party/NumberFactsCollection
+source_type: discord_forum_thread_export_with_images
+priority: primary_for_stage5do
+source_root_exists: true
+expected_files_present_count: 11
+expected_files_missing: []
+unexpected_files_observed: []
+file_count_observed: 11
+files:
+- relative_path: end_up_at_he_very_beginning.png
+  local_relative_path: third_party/NumberFactsCollection/end_up_at_he_very_beginning.png
+  file_name: end_up_at_he_very_beginning.png
+  file_extension: .png
+  file_size_bytes: 10003
+  sha256: 5f6c52171b15cdaa0032c14ce7534568f8f243aa499517050b376a8cf380c679
+  mime_type_guess: image/png
+  source_root_id: number_facts_collection
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: forwarded.png
+  local_relative_path: third_party/NumberFactsCollection/forwarded.png
+  file_name: forwarded.png
+  file_extension: .png
+  file_size_bytes: 236053
+  sha256: 43cdfab8ce2aba71660da0582325066a32a838ff67f793a1e4eeaafd06c530cf
+  mime_type_guess: image/png
+  source_root_id: number_facts_collection
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: futhork_rune_values_are_used.jpg
+  local_relative_path: third_party/NumberFactsCollection/futhork_rune_values_are_used.jpg
+  file_name: futhork_rune_values_are_used.jpg
+  file_extension: .jpg
+  file_size_bytes: 36653
+  sha256: a2ce521419223f895f45ff3acbe88ace3b1813b5c06e5383bf3d1204dd359d33
+  mime_type_guess: image/jpeg
+  source_root_id: number_facts_collection
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: google_doc_1.png
+  local_relative_path: third_party/NumberFactsCollection/google_doc_1.png
+  file_name: google_doc_1.png
+  file_extension: .png
+  file_size_bytes: 33924
+  sha256: bcd17abf85007f040fe01b918bf6ff5b8ac3bc164544f661c4e443687947dc0b
+  mime_type_guess: image/png
+  source_root_id: number_facts_collection
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: google_doc_2.png
+  local_relative_path: third_party/NumberFactsCollection/google_doc_2.png
+  file_name: google_doc_2.png
+  file_extension: .png
+  file_size_bytes: 34257
+  sha256: 2cda3da3634a941eedd7f7bb3009d15d12c5d1fa1d7f36bf46e440fcd228e48f
+  mime_type_guess: image/png
+  source_root_id: number_facts_collection
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: google_doc_3.png
+  local_relative_path: third_party/NumberFactsCollection/google_doc_3.png
+  file_name: google_doc_3.png
+  file_extension: .png
+  file_size_bytes: 33874
+  sha256: 46221c0ac0705fc6f2dac1d898ce0d1b3c1347f7bed75d914c3423e773521429
+  mime_type_guess: image/png
+  source_root_id: number_facts_collection
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: messages.txt
+  local_relative_path: third_party/NumberFactsCollection/messages.txt
+  file_name: messages.txt
+  file_extension: .txt
+  file_size_bytes: 35450
+  sha256: d26b73dff5a662cb1a6201860d6b7180aa626d353465646201566493f1acbc52
+  mime_type_guess: text/plain
+  source_root_id: number_facts_collection
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: sequence_of_runes.png
+  local_relative_path: third_party/NumberFactsCollection/sequence_of_runes.png
+  file_name: sequence_of_runes.png
+  file_extension: .png
+  file_size_bytes: 70281
+  sha256: 59e242db029915f94f7d264fd2d751f4ecb7ea8077dc2d6f7ba70a0a795ceda4
+  mime_type_guess: image/png
+  source_root_id: number_facts_collection
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: table_below_use.png
+  local_relative_path: third_party/NumberFactsCollection/table_below_use.png
+  file_name: table_below_use.png
+  file_extension: .png
+  file_size_bytes: 20778
+  sha256: 7c6f426ea95edc4e5d50390ad611edafdb6ca584735da38ab983e53b8bea1139
+  mime_type_guess: image/png
+  source_root_id: number_facts_collection
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: these_have_1433_runes.png
+  local_relative_path: third_party/NumberFactsCollection/these_have_1433_runes.png
+  file_name: these_have_1433_runes.png
+  file_extension: .png
+  file_size_bytes: 34657
+  sha256: ddf1b2a549d5e9f6f29a655c84c701530456b89592c552b115190c8207f567c2
+  mime_type_guess: image/png
+  source_root_id: number_facts_collection
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: twitter_image_is_this.png
+  local_relative_path: third_party/NumberFactsCollection/twitter_image_is_this.png
+  file_name: twitter_image_is_this.png
+  file_extension: .png
+  file_size_bytes: 13462
+  sha256: 7b7898d10b3612621571a446933a187b260f30e2aecc96c41090b5c2982c0daf
+  mime_type_guess: image/png
+  source_root_id: number_facts_collection
+  raw_file_committed_now: false
+  source_lock_only: true
+messages_source_lock:
+  messages_txt_present: true
+  messages_txt_relative_path: third_party/NumberFactsCollection/messages.txt
+  messages_txt_sha256: d26b73dff5a662cb1a6201860d6b7180aa626d353465646201566493f1acbc52
+  messages_txt_line_count: 859
+  messages_txt_source_lock_only: true
+  raw_messages_body_committed_now: false
+image_filename_anchor_policy:
+  description: Image filenames were chosen by the operator from the last few words
+    before the attachment in the Discord thread so that images can be associated with
+    the right place in messages.txt.
+  source_lock_use: preserve filename, local relative path, hash, and nearest matching
+    text-anchor if found
+  ocr_required: false
+  manual_review_aid: true
+raw_files_committed_now: false
+raw_messages_body_committed_now: false

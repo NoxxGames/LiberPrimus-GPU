@@ -1,0 +1,204 @@
+record_type: stage5do_potential_hint_source_lock_register
+schema: schemas/source-harvester/stage5do-potential-hint-source-lock-register-v0.schema.json
+stage_id: stage-5do
+stage_title: Stage 5DO - Discord NumberFacts and pixel-colour source-lock addendum,
+  without execution
+prompt_type: codex_metadata_implementation
+metadata_only: true
+source_lock_only: true
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+source_previous_stage: stage-5dn
+source_previous_stage_id: stage-5dn
+source_previous_stage_commit: a3947f95e59728941d32b97097ae470aff85b1f0
+source_previous_issue: 149
+source_previous_ci_run: 27075087458
+stage5dn_records_assumed_present_for_stage5do_addendum: true
+stage5dn_rerun_performed: false
+stage5dg_operator_approval_record_preserved: true
+operator_approval_component_satisfied_now: true
+deep_research_acceptance_component_satisfied_now: false
+combined_approval_gate_satisfied_now: false
+stage5bd_run_plan_id_count: 10
+active_lineage_record_count: 8
+parallel_worker_cap_for_stage5do_and_later: 8
+recommended_next_stage_id: stage-5dp
+recommended_next_stage_title: Stage 5DP - Lightweight source-lock browser GUI design/build,
+  without puzzle execution
+recommended_next_prompt_type: codex_metadata_implementation
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+alberti_cipher_execution_performed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+html_tool_executed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+mp3stego_execution_performed: false
+network_target_validation_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_readiness_decision_created_now: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+pivot_target_selected_now: false
+probability_claim_accepted_as_validated: false
+real_byte_stream_generated: false
+route_extraction_performed_now: false
+scoring_performed: false
+solve_claim: false
+source_browser_gui_implemented_now: false
+spectrogram_stego_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_materialisation_performed: false
+website_expansion_performed: false
+source_root_id: potential_hint_3301_on_page32
+source_root: third_party/PotentialHint-3301-on-Page32
+source_type: discord_forum_thread_export_with_images_and_frequency_tables
+priority: primary_for_stage5do
+source_root_exists: true
+expected_files_present_count: 10
+expected_files_missing: []
+unexpected_files_observed: []
+file_count_observed: 10
+files:
+- relative_path: from_the_visual_elements.png
+  local_relative_path: third_party/PotentialHint-3301-on-Page32/from_the_visual_elements.png
+  file_name: from_the_visual_elements.png
+  file_extension: .png
+  file_size_bytes: 603896
+  sha256: 9f99ff7391e266529f5b58edb7d6eb478b0ce634eaffb1dcd830e124f19d3bda
+  mime_type_guess: image/png
+  source_root_id: potential_hint_3301_on_page32
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: Interesting.webp
+  local_relative_path: third_party/PotentialHint-3301-on-Page32/Interesting.webp
+  file_name: Interesting.webp
+  file_extension: .webp
+  file_size_bytes: 59083
+  sha256: e078d5050a05bd17ce7b0cb1d1468f8c164ee56dcf1045f788f3af4b22db9f12
+  mime_type_guess: application/octet-stream
+  source_root_id: potential_hint_3301_on_page32
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: Interesting2.png
+  local_relative_path: third_party/PotentialHint-3301-on-Page32/Interesting2.png
+  file_name: Interesting2.png
+  file_extension: .png
+  file_size_bytes: 415686
+  sha256: 46176799ec1e0ffdeeab942235a5fe39aa57b80b4de00178a4ba669fbfd78ee8
+  mime_type_guess: image/png
+  source_root_id: potential_hint_3301_on_page32
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: messages.txt
+  local_relative_path: third_party/PotentialHint-3301-on-Page32/messages.txt
+  file_name: messages.txt
+  file_extension: .txt
+  file_size_bytes: 15221
+  sha256: 0652bd467b7d1c11d01c0d95584344e67b4534c24cfa7f71047eb0a1cc9552cd
+  mime_type_guess: text/plain
+  source_root_id: potential_hint_3301_on_page32
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: page-32.jpg
+  local_relative_path: third_party/PotentialHint-3301-on-Page32/page-32.jpg
+  file_name: page-32.jpg
+  file_extension: .jpg
+  file_size_bytes: 756076
+  sha256: 030b015106c16621ef4520f2f801aab17281cf6698ba0d8de7eacd3e4fe4aa37
+  mime_type_guess: image/jpeg
+  source_root_id: potential_hint_3301_on_page32
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: prime_color_frequencies.txt
+  local_relative_path: third_party/PotentialHint-3301-on-Page32/prime_color_frequencies.txt
+  file_name: prime_color_frequencies.txt
+  file_extension: .txt
+  file_size_bytes: 495423
+  sha256: bd2e14e9d4d0b29837822afee94ebfea8af66fd486bb1f455a9cb1d46689a3d5
+  mime_type_guess: text/plain
+  source_root_id: potential_hint_3301_on_page32
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: probability_according_to_gpt.jpeg
+  local_relative_path: third_party/PotentialHint-3301-on-Page32/probability_according_to_gpt.jpeg
+  file_name: probability_according_to_gpt.jpeg
+  file_extension: .jpeg
+  file_size_bytes: 27292
+  sha256: 23f632f640f8d83ad40e0a531e46bae4471e794caa137ae9cb17efcba67cd42b
+  mime_type_guess: image/jpeg
+  source_root_id: potential_hint_3301_on_page32
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: superprime_color_frequencies.txt
+  local_relative_path: third_party/PotentialHint-3301-on-Page32/superprime_color_frequencies.txt
+  file_name: superprime_color_frequencies.txt
+  file_extension: .txt
+  file_size_bytes: 208791
+  sha256: 750c803fe12cd8aa6ddc7593c67f0760505cbe0d3a179ad5feb6b23c126e8fcd
+  mime_type_guess: text/plain
+  source_root_id: potential_hint_3301_on_page32
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: two_are_interconnected.jpg
+  local_relative_path: third_party/PotentialHint-3301-on-Page32/two_are_interconnected.jpg
+  file_name: two_are_interconnected.jpg
+  file_extension: .jpg
+  file_size_bytes: 508695
+  sha256: 80b3aa265eb58dfad1ad99256e2d8e9f2c6bdaa1e5ef049c40da366489ec7afa
+  mime_type_guess: image/jpeg
+  source_root_id: potential_hint_3301_on_page32
+  raw_file_committed_now: false
+  source_lock_only: true
+- relative_path: two_are_interconnected2.jpg
+  local_relative_path: third_party/PotentialHint-3301-on-Page32/two_are_interconnected2.jpg
+  file_name: two_are_interconnected2.jpg
+  file_extension: .jpg
+  file_size_bytes: 68134
+  sha256: fab7307933dae234e12ebcd401517b62c7644e8b613aee8f7df250a2927f1da4
+  mime_type_guess: image/jpeg
+  source_root_id: potential_hint_3301_on_page32
+  raw_file_committed_now: false
+  source_lock_only: true
+messages_source_lock:
+  messages_txt_present: true
+  messages_txt_relative_path: third_party/PotentialHint-3301-on-Page32/messages.txt
+  messages_txt_sha256: 0652bd467b7d1c11d01c0d95584344e67b4534c24cfa7f71047eb0a1cc9552cd
+  messages_txt_line_count: 505
+  messages_txt_source_lock_only: true
+  raw_messages_body_committed_now: false
+image_filename_anchor_policy:
+  description: Image filenames were chosen by the operator from the last few words
+    before the attachment in the Discord thread so that images can be associated with
+    the right place in messages.txt.
+  source_lock_use: preserve filename, local relative path, hash, and nearest matching
+    text-anchor if found
+  ocr_required: false
+  manual_review_aid: true
+raw_files_committed_now: false
+raw_messages_body_committed_now: false

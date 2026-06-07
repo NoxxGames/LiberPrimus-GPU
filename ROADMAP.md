@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5DO - Source/evidence review and target-priority decision readiness review, without execution.
+Current next prompt: Stage 5DP - Lightweight source-lock browser GUI design/build, without puzzle execution.
 
-Stage 5DN is complete as metadata-only DiskCipher v1 source-lock and triangle/circumference bridge work. It records updated DiskCipherStuff file metadata, `message_bodies.txt` and `results.png` source locks, 11 review-only DiskCipher/triangle/circumference candidate bridge records, probability-claim quarantine, Stage 5DG/Stage 5BD/active-lineage preservation, and keeps all execution blocked.
+Stage 5DO is complete as metadata-only Discord NumberFacts and pixel-colour source-lock addendum work. It records local NumberFactsCollection and PotentialHint source-lock metadata, two `messages.txt` locks, image-anchor line hashes, pixel-colour table metadata, 15 review-only candidate records, canonical-transcript/image blockers, probability-claim quarantine, Stage 5DG/Stage 5BD/active-lineage preservation, and keeps all execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DN DiskCipher v1 source-lock and triangle/circumference bridge update is complete. It preserves Stage 5DM rather than rerunning it, records 11 addendum families, source-locks updated DiskCipher material as metadata only, quarantines probability claims, preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, preserves Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
+Stage 5DO Discord NumberFacts and pixel-colour source-lock addendum is complete. It preserves Stage 5DN rather than rerunning it, records 15 review-only candidate records, source-locks local Discord-derived NumberFacts and PotentialHint material as metadata only, quarantines probability claims, preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, preserves Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
 
-The next recommended prompt is Stage 5DO - Source/evidence review and target-priority decision readiness review, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DP - Lightweight source-lock browser GUI design/build, without puzzle execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5dn_latest_and_stage5do_next() -> None:
+def test_operational_docs_use_stage5do_latest_and_stage5dp_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5DN DiskCipher v1 source-lock" in status
-    assert "Next recommended prompt: Stage 5DO" in status
-    assert "Latest completed stage: Stage 5DN" in staged_plan
-    assert "Current planning focus: Stage 5DO" in staged_plan
+    assert "Stage 5DO Discord NumberFacts and pixel-colour source-lock addendum is complete" in status
+    assert "Next recommended prompt: Stage 5DP" in status
+    assert "Latest completed stage: Stage 5DO" in staged_plan
+    assert "Current planning focus: Stage 5DP" in staged_plan

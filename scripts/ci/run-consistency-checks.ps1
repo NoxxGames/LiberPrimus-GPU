@@ -3169,6 +3169,37 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q "third_party/DiskCipherStuff/DiskCipherStuff/message_bodies.txt"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DN" }
 
+    Write-Host "Validating Stage 5DO Discord NumberFacts and pixel-colour source-lock records"
+    & $Python -m libreprimus.cli token-block validate-stage5do-number-facts-source-lock
+    & $Python -m libreprimus.cli token-block validate-stage5do-potential-hint-source-lock
+    & $Python -m libreprimus.cli token-block validate-stage5do-page32-red-header-2472
+    & $Python -m libreprimus.cli token-block validate-stage5do-page32-red-header-463-3299
+    & $Python -m libreprimus.cli token-block validate-stage5do-no-f-section-flow
+    & $Python -m libreprimus.cli token-block validate-stage5do-doublet-v1
+    & $Python -m libreprimus.cli token-block validate-stage5do-pixel-colour-candidate
+    & $Python -m libreprimus.cli token-block validate-stage5do-gp-facts
+    & $Python -m libreprimus.cli token-block validate-stage5do-source-browser-future-requirement
+    & $Python -m libreprimus.cli token-block validate-stage5do-sidecar-gates
+    & $Python -m libreprimus.cli token-block validate-stage5do-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5do-handoff-continuity
+    & $Python -m libreprimus.cli token-block validate-stage5do
+    & $Python -m libreprimus.cli token-block stage5do-summary
+    $Stage5DOTokenResultsRoot = Join-Path (Join-Path (Join-Path "experiments" "results") "token-block") "stage5do"
+    git check-ignore -q (Join-Path $Stage5DOTokenResultsRoot "summary.json")
+    git check-ignore -q (Join-Path $Stage5DOTokenResultsRoot "number_facts_source_lock_report.json")
+    git check-ignore -q (Join-Path $Stage5DOTokenResultsRoot "potential_hint_source_lock_report.json")
+    git check-ignore -q (Join-Path $Stage5DOTokenResultsRoot "image_anchor_report.json")
+    git check-ignore -q (Join-Path $Stage5DOTokenResultsRoot "candidate_report.json")
+    git check-ignore -q (Join-Path $Stage5DOTokenResultsRoot "preservation_report.json")
+    git check-ignore -q (Join-Path $Stage5DOTokenResultsRoot "warnings.jsonl")
+    git check-ignore -q "codex-output/stage5do-codex-completion.md"
+    git check-ignore -q "third_party/NumberFactsCollection/messages.txt"
+    git check-ignore -q "third_party/NumberFactsCollection/futhork_rune_values_are_used.jpg"
+    git check-ignore -q "third_party/PotentialHint-3301-on-Page32/messages.txt"
+    git check-ignore -q "third_party/PotentialHint-3301-on-Page32/page-32.jpg"
+    git check-ignore -q "third_party/PotentialHint-3301-on-Page32/prime_color_frequencies.txt"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DO" }
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 
