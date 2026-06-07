@@ -6428,3 +6428,135 @@ records:
   staleness_check_level: historical
   owner_context: codex_agent
   notes: Records implementation scope, metadata-only boundaries, and validation summary.
+- path: data/project-state/stage5dq-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DQ aggregate summary and next Stage 5DR routing.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dq
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records operator-console/source-browser implementation, source index counts, preserved gates, and no-execution boundaries.
+- path: data/project-state/stage5dq-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DQ project-state record family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dq
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers Stage 5DQ summary, GUI implementation summary, scope control, validation evidence, and next-stage decision records.
+- path: data/operator-console/source-browser/**/*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DQ Source Browser committed config and review scaffolds.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dq
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers manual-entry, manual-override, tombstone, path-alias, saved-filter, and column-profile scaffolds.
+- path: python/libreprimus/operator_console/**
+  category: active_data_record
+  purpose: Stage 5DQ Operator Console and Source Browser implementation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dq
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Review-only GUI/CLI infrastructure; no puzzle execution, OCR, image forensics, scoring, CUDA, or raw-source mutation.
+- path: schemas/operator-console/*.schema.json
+  category: schema
+  purpose: Stage 5DQ Operator Console and Source Browser schemas.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dq
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers manual entries, overrides, tombstones, path aliases, column profiles, and summary guardrails.
+- path: schemas/project-state/stage5dq-*.schema.json
+  category: schema
+  purpose: Stage 5DQ project-state schemas.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dq
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers generated Stage 5DQ JSON schemas that enforce no-execution/no-solve guardrails.
+- path: docs/operator-console/source-browser-v0.md
+  category: operational_status_doc
+  purpose: Stage 5DQ Operator Console Source Browser overview.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dq
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents Source Browser scope, review-only boundaries, and validation expectations.
+- path: docs/operator-console/manual-entry-format.md
+  category: operational_status_doc
+  purpose: Stage 5DQ Operator Console manual-entry format documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dq
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents manual-entry, override, and tombstone review scaffolds.
+- path: docs/operator-console/path-aliases.md
+  category: operational_status_doc
+  purpose: Stage 5DQ Operator Console path-alias policy documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dq
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents path alias records and local path disclosure boundaries.
+- path: docs/reference/operator-console-cli.md
+  category: operational_status_doc
+  purpose: Stage 5DQ Operator Console CLI reference.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dq
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents operator-console and source-browser CLI commands and no-execution boundaries.
+- path: docs/experiments/stage-5dq-operator-console-source-browser-gui.md
+  category: operational_status_doc
+  purpose: Human-readable Stage 5DQ Operator Console and no-execution documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dq
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents Source Browser implementation counts, guardrails, and Stage 5DR routing.
+- path: docs/development-logs/2026-06-07-stage-5dq-operator-console-source-browser-gui.md
+  category: historical_log
+  purpose: Stage 5DQ implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dq
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation scope, GUI boundary, and validation summary.

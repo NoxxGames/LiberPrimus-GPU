@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/operator-console/operator-console-summary-v0.schema.json",
+  "type": "object",
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "operator_console_shell_implemented_now",
+    "source_browser_component_implemented_now",
+    "source_browser_performs_analysis",
+    "execution_allowed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "type": "string" },
+    "schema": { "const": "schemas/operator-console/operator-console-summary-v0.schema.json" },
+    "stage_id": { "const": "stage-5dq" },
+    "operator_console_shell_implemented_now": { "const": true },
+    "source_browser_component_implemented_now": { "const": true },
+    "source_browser_performs_analysis": { "const": false },
+    "execution_allowed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

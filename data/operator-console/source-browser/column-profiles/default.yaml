@@ -1,0 +1,46 @@
+record_type: source_browser_column_profile
+schema: schemas/operator-console/source-browser-column-profile-v0.schema.json
+profile_id: default
+columns:
+- key: title
+  label: Entry
+  width: 240
+- key: category
+  label: Category
+  width: 130
+- key: candidate_family_id
+  label: Candidate
+  width: 260
+- key: stage_id
+  label: Stage
+  width: 90
+- key: status
+  label: Status
+  width: 130
+- key: trust_tier
+  label: Trust
+  width: 80
+- key: confidence
+  label: Confidence
+  width: 120
+- key: images
+  label: Images
+  width: 110
+- key: document_paths
+  label: Docs
+  width: 100
+- key: urls
+  label: URLs
+  width: 90
+- key: number_facts
+  label: Number facts
+  width: 170
+- key: warnings
+  label: Warnings
+  width: 110
+- key: modified_at
+  label: Modified
+  width: 150
+- key: source_record_path
+  label: Source record
+  width: 300

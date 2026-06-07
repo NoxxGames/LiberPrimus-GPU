@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/project-state/stage5dq-operator-console-scope-control-v0.schema.json",
+  "type": "object",
+  "required": [
+    "record_type",
+    "schema",
+    "stage_id",
+    "scope",
+    "committed_source_lock_records_read_only",
+    "operator_approval_management_implemented_now",
+    "target_decision_management_implemented_now",
+    "experiment_execution_ui_implemented_now",
+    "execution_allowed",
+    "solve_claim"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5dq_operator_console_scope_control" },
+    "schema": { "const": "schemas/project-state/stage5dq-operator-console-scope-control-v0.schema.json" },
+    "stage_id": { "const": "stage-5dq" },
+    "scope": { "const": "operator_console_source_browser_v0_only" },
+    "committed_source_lock_records_read_only": { "const": true },
+    "operator_approval_management_implemented_now": { "const": false },
+    "target_decision_management_implemented_now": { "const": false },
+    "experiment_execution_ui_implemented_now": { "const": false },
+    "source_browser_executes_source_files": { "const": false },
+    "source_browser_follows_urls_automatically": { "const": false },
+    "execution_allowed": { "const": false },
+    "solve_claim": { "const": false }
+  },
+  "additionalProperties": true
+}

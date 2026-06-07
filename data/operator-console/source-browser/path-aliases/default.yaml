@@ -1,0 +1,8 @@
+record_type: source_browser_path_aliases
+schema: schemas/operator-console/source-browser-path-aliases-v0.schema.json
+profile_id: default
+path_aliases:
+- from: third_party
+  to: third_party
+- from: data
+  to: data

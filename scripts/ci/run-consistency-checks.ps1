@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5DP" `
-        --expected-next-stage "Stage 5DQ" `
+        --expected-latest-stage "Stage 5DQ" `
+        --expected-next-stage "Stage 5DR" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5DP" `
-        --expected-next-stage "Stage 5DQ" `
+        --expected-latest-stage "Stage 5DQ" `
+        --expected-next-stage "Stage 5DR" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DP",
+            expected_latest_stage="Stage 5DQ",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DP",
+            "expected_latest_stage": "Stage 5DQ",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3224,6 +3224,20 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q "third_party/RedditStuff/MayFlyInvestigation/57.jpg Mayfly data.xlsx"
     git check-ignore -q "third_party/RedditStuff/DotObservationsFromPages_7_23_56/dot_observations_from_pages_7_23_56.png"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DP" }
+
+    Write-Host "Validating Stage 5DQ Operator Console Source Browser records"
+    & $Python -m libreprimus.cli operator-console build-source-index
+    & $Python -m libreprimus.cli operator-console validate-source-index
+    & $Python -m libreprimus.cli operator-console validate-manual-entries
+    & $Python -m libreprimus.cli operator-console summary
+    & $Python -m libreprimus.cli source-browser validate-index
+    & $Python -m libreprimus.cli token-block validate-stage5dq
+    & $Python -m libreprimus.cli token-block stage5dq-summary
+    git check-ignore -q ".cache/operator-console/index.json"
+    git check-ignore -q ".cache/operator-console/operator-console.log"
+    git check-ignore -q ".cache/operator-console/thumbnails/example.png"
+    git check-ignore -q "codex-output/stage5dq-codex-completion.md"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DQ" }
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

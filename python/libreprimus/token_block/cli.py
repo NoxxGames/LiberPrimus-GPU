@@ -745,6 +745,7 @@ from . import stage5dm as stage5dm_module
 from . import stage5dn as stage5dn_module
 from . import stage5do as stage5do_module
 from . import stage5dp as stage5dp_module
+from . import stage5dq as stage5dq_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -9269,6 +9270,51 @@ def validate_stage5dp_command() -> None:
 @app.command("stage5dp-summary")
 def stage5dp_summary_command() -> None:
     console.print(stage5dp_module.stage5dp_summary_text())
+
+
+def _print_stage5dq_result(result: object, success_line: str) -> None:
+    text = result.to_cli_text()
+    console.print(text)
+    if getattr(result, "validation_error_count") != 0:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5dq")
+def build_stage5dq_command() -> None:
+    records = stage5dq_module.build_stage5dq()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(
+        "operator_console_shell_implemented_now="
+        f"{str(summary.get('operator_console_shell_implemented_now')).lower()}"
+    )
+    console.print(
+        "source_browser_component_implemented_now="
+        f"{str(summary.get('source_browser_component_implemented_now')).lower()}"
+    )
+    console.print(
+        "source_browser_gui_implemented_now="
+        f"{str(summary.get('source_browser_gui_implemented_now')).lower()}"
+    )
+    console.print(f"source_browser_entries_loaded={summary.get('source_browser_entries_loaded')}")
+    console.print(f"pivot_target_selected={str(summary.get('pivot_target_selected_now')).lower()}")
+    console.print(f"execution_performed={str(summary.get('execution_performed')).lower()}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5dq")
+def validate_stage5dq_command() -> None:
+    _print_stage5dq_result(
+        stage5dq_module.validate_stage5dq(),
+        "token_block_stage5dq_valid=true",
+    )
+
+
+@app.command("stage5dq-summary")
+def stage5dq_summary_command() -> None:
+    console.print(stage5dq_module.stage5dq_summary_text())
 
 
 def register(root_app: typer.Typer) -> None:

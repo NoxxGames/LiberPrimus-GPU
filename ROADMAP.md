@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5DQ - Lightweight source-lock browser GUI implementation, without puzzle execution.
+Current next prompt: Stage 5DR - Source-browser GUI review and usability repair, without puzzle execution.
 
-Stage 5DP is complete as metadata-only New Reddit Mayfly / dot / cover / ISO source-lock addendum work. It records local RedditStuff source-lock metadata, Mayfly docx/xlsx metadata, bounded Mayfly workbook summaries, 23 candidate-only Mayfly/dot/cover/ISO/Problems/crosslink records, ChatGPT context-file facts, Stage 5DO GUI deferral preservation, Stage 5DG/Stage 5BD/active-lineage preservation, and keeps all execution blocked.
+Stage 5DQ is complete as review-only operator-console source-browser work. It records the Liber Primus Operator Console v0 shell, a source index over committed metadata, manual-entry/override/tombstone scaffolds, path aliases, column profiles, context-file navigation, optional PySide6 GUI loading, and raw-data-free validation while keeping all puzzle execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DP New Reddit Mayfly / dot / cover / ISO source-lock addendum is complete. It preserves Stage 5DO rather than rerunning it, records 23 candidate-only records, source-locks local RedditStuff Mayfly/dot/front-cover/ISO/Problems material as metadata only, records Mayfly workbook facts without committing raw docx/xlsx content, preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, preserves Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
+Stage 5DQ Liber Primus Operator Console v0 Source-Browser GUI is complete. It preserves Stage 5DP rather than rerunning it, loads `1293` review-only source-browser entries from committed metadata, records `7253` missing local source paths as review warnings, adds manual-source scaffolds and explicit context/file/URL navigation, preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, preserves Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
 
-The next recommended prompt is Stage 5DQ - Lightweight source-lock browser GUI implementation, without puzzle execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DR - Source-browser GUI review and usability repair, without puzzle execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

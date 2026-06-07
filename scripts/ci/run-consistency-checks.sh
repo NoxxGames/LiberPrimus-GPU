@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5DP" \
-    --expected-next-stage "Stage 5DQ" \
+    --expected-latest-stage "Stage 5DQ" \
+    --expected-next-stage "Stage 5DR" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5DP" \
-    --expected-next-stage "Stage 5DQ" \
+    --expected-latest-stage "Stage 5DQ" \
+    --expected-next-stage "Stage 5DR" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DP",
+            expected_latest_stage="Stage 5DQ",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DP",
+            "expected_latest_stage": "Stage 5DQ",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3341,6 +3341,23 @@ git check-ignore -q "third_party/RedditStuff/MayFlyInvestigation/57.jpg Mayfly d
 git check-ignore -q "third_party/RedditStuff/DotObservationsFromPages_7_23_56/dot_observations_from_pages_7_23_56.png"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5DP" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5DQ Operator Console Source Browser records"
+"$python_bin" -m libreprimus.cli operator-console build-source-index
+"$python_bin" -m libreprimus.cli operator-console validate-source-index
+"$python_bin" -m libreprimus.cli operator-console validate-manual-entries
+"$python_bin" -m libreprimus.cli operator-console summary
+"$python_bin" -m libreprimus.cli source-browser validate-index
+"$python_bin" -m libreprimus.cli token-block validate-stage5dq
+"$python_bin" -m libreprimus.cli token-block stage5dq-summary
+git check-ignore -q ".cache/operator-console/index.json"
+git check-ignore -q ".cache/operator-console/operator-console.log"
+git check-ignore -q ".cache/operator-console/thumbnails/example.png"
+git check-ignore -q "codex-output/stage5dq-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5DQ" >&2
     exit 1
 fi
 

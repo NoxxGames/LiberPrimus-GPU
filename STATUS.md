@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DP New Reddit Mayfly / dot / cover / ISO source-lock addendum is complete.
+Stage 5DQ Liber Primus Operator Console v0 Source-Browser GUI is complete.
 
-Next recommended prompt: Stage 5DQ - Lightweight source-lock browser GUI implementation, without puzzle execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DR - Source-browser GUI review and usability repair, without puzzle execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DQ
+
+Stage 5DQ implements the Liber Primus Operator Console v0 Source Browser as review-only GUI/CLI infrastructure. It adds a source index over committed metadata, manual-entry/override/tombstone scaffolds, path aliases, column profiles, context-file navigation, explicit file/URL opening actions, optional PySide6 GUI loading, and raw-data-free validation commands.
+
+Local Stage 5DQ summary: operator-console shell implemented `true`, source-browser GUI implemented `true`, source-browser component implemented `true`, source-browser entries loaded `1293`, committed records scanned `1292`, missing local paths recorded as review warnings `7253`, manual entry count `0`, manual override count `0`, tombstone count `0`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, parallel worker cap `8`, puzzle execution allowed `false`, source browser runs OCR `false`, source browser runs image forensics `false`, source browser performs analysis `false`, source browser executes source files `false`, source browser modifies raw third-party files `false`, activation authorized `false`, execution authorized `false`, and next stage `Stage 5DR`.
+
+Stage 5DQ is GUI and review infrastructure only. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select a pivot target, select active planning input, generate byte streams, run target-class validation, use Tor/network route access, run route extraction, run OCR, image forensics, AI interpretation, DWH/hash/preimage search, decode, score, run CUDA tooling, benchmark, publish website content, upgrade method status, activate the canonical corpus, finalise page boundaries, mutate raw sources, execute source files, or make solve claims.
 
 ## Completed in Stage 5DP
 

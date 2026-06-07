@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/operator-console/source-browser-manual-override-v0.schema.json",
+  "type": "object",
+  "required": [
+    "record_type",
+    "schema",
+    "target_entry_id",
+    "target_source_record_path",
+    "fields",
+    "solve_claim",
+    "execution_allowed"
+  ],
+  "properties": {
+    "record_type": { "const": "source_browser_manual_override" },
+    "schema": { "const": "schemas/operator-console/source-browser-manual-override-v0.schema.json" },
+    "target_entry_id": { "type": "string", "minLength": 1 },
+    "target_source_record_path": { "type": "string", "minLength": 1 },
+    "modified_at": { "type": "string" },
+    "fields": { "type": "object" },
+    "solve_claim": { "const": false },
+    "execution_allowed": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5dp_latest_and_stage5dq_next() -> None:
+def test_operational_docs_use_stage5dq_latest_and_stage5dr_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5DP New Reddit Mayfly / dot / cover / ISO source-lock addendum is complete" in status
-    assert "Next recommended prompt: Stage 5DQ" in status
-    assert "Latest completed stage: Stage 5DP" in staged_plan
-    assert "Current planning focus: Stage 5DQ" in staged_plan
+    assert "Stage 5DQ Liber Primus Operator Console v0 Source-Browser GUI is complete" in status
+    assert "Next recommended prompt: Stage 5DR" in status
+    assert "Latest completed stage: Stage 5DQ" in staged_plan
+    assert "Current planning focus: Stage 5DR" in staged_plan

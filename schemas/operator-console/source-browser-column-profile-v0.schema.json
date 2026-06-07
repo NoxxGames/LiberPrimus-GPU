@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/operator-console/source-browser-column-profile-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "schema", "profile_id", "columns"],
+  "properties": {
+    "record_type": { "const": "source_browser_column_profile" },
+    "schema": { "const": "schemas/operator-console/source-browser-column-profile-v0.schema.json" },
+    "profile_id": { "type": "string", "minLength": 1 },
+    "columns": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["key", "label", "width"],
+        "properties": {
+          "key": { "type": "string", "minLength": 1 },
+          "label": { "type": "string", "minLength": 1 },
+          "width": { "type": "integer", "minimum": 40 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true
+}

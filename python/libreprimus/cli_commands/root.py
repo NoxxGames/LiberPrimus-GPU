@@ -83,6 +83,8 @@ from libreprimus.cli_commands import (
     stego,
     solved_fixtures,
     parallel_validation,
+    operator_console,
+    source_browser,
 )
 
 app = typer.Typer(no_args_is_help=True)
@@ -193,6 +195,8 @@ _COMMAND_MODULES = (
     stego,
     solved_fixtures,
     parallel_validation,
+    operator_console,
+    source_browser,
 )
 
 

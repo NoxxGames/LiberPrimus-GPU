@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/operator-console/source-browser-path-aliases-v0.schema.json",
+  "type": "object",
+  "required": ["record_type", "schema", "profile_id", "path_aliases"],
+  "properties": {
+    "record_type": { "const": "source_browser_path_aliases" },
+    "schema": { "const": "schemas/operator-console/source-browser-path-aliases-v0.schema.json" },
+    "profile_id": { "type": "string", "minLength": 1 },
+    "path_aliases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from", "to"],
+        "properties": {
+          "from": { "type": "string", "minLength": 1 },
+          "to": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true
+}
