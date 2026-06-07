@@ -1,7 +1,10 @@
 from __future__ import annotations
 
+import importlib.util
 import subprocess
 import sys
+
+import pytest
 
 from test_stage5dq_common import ROOT
 
@@ -34,6 +37,10 @@ def test_source_browser_alias_validate_index() -> None:
     assert "source_browser_index_valid=true" in output
 
 
+@pytest.mark.skipif(
+    importlib.util.find_spec("PySide6") is not None,
+    reason="operator-console run launches the GUI when optional dependencies are installed",
+)
 def test_operator_console_run_fails_gracefully_without_gui_dependency() -> None:
     result = run_cli("operator-console", "run", check=False)
 

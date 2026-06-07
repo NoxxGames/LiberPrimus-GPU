@@ -11,6 +11,7 @@ from PySide6.QtWidgets import (
     QListWidget,
     QMainWindow,
     QMessageBox,
+    QSizePolicy,
     QSplitter,
     QTableView,
     QToolBar,
@@ -72,21 +73,32 @@ class MainWindow(QMainWindow):
     def _build_content(self) -> None:
         root = QWidget()
         layout = QVBoxLayout(root)
+        layout.setContentsMargins(8, 6, 8, 0)
+        layout.setSpacing(4)
         title = QLabel(f"{APP_NAME} / {SOURCE_BROWSER_NAME}")
-        title.setStyleSheet("font-size: 12pt; font-weight: 600; color: #f0f0f0;")
-        layout.addWidget(title)
+        title.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
+        title.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
+        title.setMinimumHeight(24)
+        title.setMaximumHeight(30)
+        title.setStyleSheet(
+            "font-size: 12pt; font-weight: 600; color: #f0f0f0; padding: 2px 0;"
+        )
+        layout.addWidget(title, 0)
         self.search = QLineEdit()
         self.search.setPlaceholderText("Search source records, paths, URLs, warnings, number facts...")
         self.search.textChanged.connect(self.apply_filters)
-        layout.addWidget(self.search)
+        self.search.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
+        layout.addWidget(self.search, 0)
         splitter = QSplitter(Qt.Orientation.Horizontal)
         self.categories = QListWidget()
+        self.categories.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Expanding)
         self.categories.addItems(source_browser_categories())
         self.categories.setCurrentRow(0)
         self.categories.currentTextChanged.connect(self.apply_filters)
         splitter.addWidget(self.categories)
         table_and_detail = QSplitter(Qt.Orientation.Vertical)
         self.table = QTableView()
+        self.table.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.table.setSortingEnabled(True)
         self.table.setAlternatingRowColors(True)
         self.table.doubleClicked.connect(self.open_detail_action)
@@ -97,9 +109,16 @@ class MainWindow(QMainWindow):
         self.detail = DetailPanel()
         table_and_detail.addWidget(self.table)
         table_and_detail.addWidget(self.detail)
+        table_and_detail.setStretchFactor(0, 1)
+        table_and_detail.setStretchFactor(1, 0)
+        table_and_detail.setCollapsible(1, True)
+        table_and_detail.setSizes([1, 0])
+        self.detail.hide()
         splitter.addWidget(table_and_detail)
+        splitter.setStretchFactor(0, 0)
+        splitter.setStretchFactor(1, 1)
         splitter.setSizes([220, 1200])
-        layout.addWidget(splitter)
+        layout.addWidget(splitter, 1)
         self.setCentralWidget(root)
         self.statusBar().showMessage("Source Browser ready")
         self.table.selectionModel().selectionChanged.connect(self.selection_changed)
@@ -129,7 +148,9 @@ class MainWindow(QMainWindow):
         return self.model.entry_at(indexes[0].row())
 
     def selection_changed(self) -> None:
-        self.detail.show_entry(self.current_entry())
+        entry = self.current_entry()
+        self.detail.show_entry(entry)
+        self.detail.setVisible(entry is not None)
 
     def add_entry(self) -> None:
         dialog = AddModifyDialog()
@@ -208,3 +229,4 @@ class MainWindow(QMainWindow):
             ImageViewerDialog(entry.image_paths).exec()
         else:
             self.detail.show_entry(entry)
+            self.detail.setVisible(entry is not None)
