@@ -17,8 +17,8 @@ source_records:
 - path: AGENTS.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: 50d73fb6cead0ed6b3bf1efd41b4369b5144cfe3b52cb94988da3cd43a24be0d
-  size_bytes: 115282
+  sha256: 1be9d6b29588aa984c363266252d432692250e1864ffbf8cdbb7d05269fadd53
+  size_bytes: 130401
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -27,8 +27,8 @@ source_records:
 - path: CIPHER_CATALOG.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: 152e5249fd0311b0d65f3161037ee9151ad773ef88d38d0de96f5c64d23baa54
-  size_bytes: 44131
+  sha256: 24a8b8f8ec88829d84056b5ca14d33c9e0ef859ab95c291e7220bbf732ef974b
+  size_bytes: 48318
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -37,8 +37,8 @@ source_records:
 - path: EXPERIMENTS.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: 7b3f77d68d00a73f1ff14b67c4f36e280b92bfbdbaa9722d061d1f36adcf82fa
-  size_bytes: 102016
+  sha256: 927da6b8248508941bf2d520505cccecf0801cea551516d16147de8ca06b1c73
+  size_bytes: 113313
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -47,8 +47,8 @@ source_records:
 - path: README.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: c787e09858bcbe956e6a5255be79eb9d163a41a922f0af1584a506bb012ab773
-  size_bytes: 72519
+  sha256: 3927651b38aa66757ed31d1ac5f7a1d1c4d3e24a1b733e98653e83660a76ae3a
+  size_bytes: 85737
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -57,8 +57,8 @@ source_records:
 - path: RESULTS_SCHEMA.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: 037f1e10c6bfe36d850a64821138f7193d4fa756ecc87c1d0594d82f7bf5446b
-  size_bytes: 102445
+  sha256: 65206ec650b1f9dacd4a7bd7643fd6995f9b1c891e6b549676473a43edb45326
+  size_bytes: 115745
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -67,8 +67,8 @@ source_records:
 - path: ROADMAP.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: 78d9f5706bdf56bee773df094ebcd67d9e5b523f10b9928401c180da4b246134
-  size_bytes: 46226
+  sha256: cbc0134db3674ca31b2cb71751d621f5fde605359b40108d1436d26e4609382f
+  size_bytes: 45992
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -77,8 +77,8 @@ source_records:
 - path: STATUS.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: ad1e1fa10fe9b82cd10a7a93c51545898e705ac9e2018dcb68770c2331840efc
-  size_bytes: 175549
+  sha256: 73405a0808b928edb4ad7203f76093bea1d96af085dcf9f946da747216b54428
+  size_bytes: 212317
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -87,8 +87,8 @@ source_records:
 - path: TESTING.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: 934cea47bc14c0534f4f870a256ff9320cbdd6b8b37156fe6d56396158dc83a9
-  size_bytes: 97675
+  sha256: 4b651baf2557067ddf4003409508860dd07f9b27960c05750f8ae92eb14d16ae
+  size_bytes: 118337
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -627,8 +627,8 @@ source_records:
 - path: docs/onboarding/codex-navigation-map.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: 1f6c1060d2f836b7993af3e20aa2ab43871020cfcc2e7410577a535fd6cd1077
-  size_bytes: 13589
+  sha256: 09a5876099342aebf0ed44c5f14c24f170679235fe187efecf8b4c368730c3a6
+  size_bytes: 21232
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -637,8 +637,8 @@ source_records:
 - path: docs/onboarding/deep-research-handoff-map.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: 708c2b9a414ee4085d84313272f75c41fd02c4059806919ac75e6af4c9cc8d32
-  size_bytes: 18093
+  sha256: 0e48c3f9455759a5e91fb0dd4273c83921fb4d5a0e93c34cbac90d1972ed8f21
+  size_bytes: 33617
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -647,8 +647,8 @@ source_records:
 - path: docs/onboarding/operational-file-map.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: 811536636a0bab07b5e81d30b88f8c3a16bbbf0d5e163ad4240dd450ab4950ac
-  size_bytes: 13528
+  sha256: 27c5ac0af347a4ca4f5ae9760632816970265fb4c1cf2fe2809e0c8abff0b9ad
+  size_bytes: 25170
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -657,8 +657,8 @@ source_records:
 - path: docs/onboarding/source-of-truth-map.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: 258d472ceee6e7b9ab6bf36b0cc0106d49349667cf5104bd786c6c40af1d58ae
-  size_bytes: 32671
+  sha256: caf1a7bdf3065af6ffa4bff621669955f9cfb882af66fddc45ae204124750909
+  size_bytes: 64341
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -667,8 +667,8 @@ source_records:
 - path: docs/onboarding/start-here.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: 8675945fbf9b8a69b4f47456ab8b3152a67a20a8507cba71193adb979ce3b850
-  size_bytes: 10403
+  sha256: b1913d472ff9b4a88ccc514c364eb2f78678fdbfdd5d8d5f83cb3b3a7aa52219
+  size_bytes: 15787
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -677,8 +677,8 @@ source_records:
 - path: docs/reference/token-block-cli.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: 5f14e6ddb7184744008958de2b1040c15e75891d3ddc985e55093e34f83b6f2b
-  size_bytes: 26560
+  sha256: 6881edce8b194c34c59cbd1f1a0e18bce2ba356772ec30a5ac3b57b439bf96c3
+  size_bytes: 56062
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false
@@ -687,8 +687,8 @@ source_records:
 - path: docs/roadmap/staged-plan.md
   role: stage5cm_reviewable_source
   present: true
-  sha256: ea220f37873a2da8b6f47c21fdab90df9a026df446344e36ba450b6e33644eb9
-  size_bytes: 89808
+  sha256: d178f3bfa2b0826676f224b43bfc0eed9d065604771d10e5b92b8797ba505bbe
+  size_bytes: 100523
   ignored_local_body: false
   raw_or_generated_body_committed: false
   credential_like_text_scanned: false

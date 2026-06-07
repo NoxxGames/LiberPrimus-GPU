@@ -1,0 +1,466 @@
+record_type: stage5dp_new_reddit_source_lock_register
+stage_id: stage-5dp
+stage_title: Stage 5DP - New Reddit Mayfly / dot / cover / ISO source-lock addendum,
+  without execution
+prompt_type: codex_metadata_implementation
+metadata_only: true
+source_lock_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+alberti_cipher_execution_performed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+html_tool_executed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+mayfly_route_extraction_performed_now: false
+mp3stego_execution_performed: false
+network_target_validation_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_readiness_decision_created_now: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+pivot_target_selected_now: false
+probability_claim_accepted_as_validated: false
+real_byte_stream_generated: false
+route_extraction_performed_now: false
+scoring_performed: false
+source_browser_gui_implemented_now: false
+spectrogram_stego_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_materialisation_performed: false
+website_expansion_performed: false
+source_root: third_party/RedditStuff
+source_root_exists: true
+required_source_folders:
+- MayFlyInvestigation
+- DotObservationsFromPages_7_23_56
+- Page_33_ThreeDotsObservations
+- FrontCoverMeasurementsOf1033
+- DataDirectoryFromTheISO
+- FindsFromProblems_2012_puzzle
+source_folder_count: 9
+required_source_folder_count: 6
+source_gap_count: 0
+source_folders:
+- source_folder: MayFlyInvestigation
+  source_folder_path: third_party/RedditStuff/MayFlyInvestigation
+  source_root_exists: true
+  file_count_observed: 7
+  gap_recorded: false
+  gap_reason: null
+  files:
+  - relative_path: third_party/RedditStuff/MayFlyInvestigation/57.jpg Mayfly data.xlsx
+    file_name: 57.jpg Mayfly data.xlsx
+    extension: .xlsx
+    file_size_bytes: 6173428
+    sha256: fec1c707b4aafdf0b7e8f010be97381f4d4604a839d7b64aa67ea1a88bb47f5b
+    mime_guess: null
+    source_folder: MayFlyInvestigation
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+  - relative_path: third_party/RedditStuff/MayFlyInvestigation/The Mayfly.docx
+    file_name: The Mayfly.docx
+    extension: .docx
+    file_size_bytes: 2851162
+    sha256: b8611d3b0ea6d430ef8bae7de9168c69d8c843be4c8ccffbd6f3378518aa378a
+    mime_guess: null
+    source_folder: MayFlyInvestigation
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+  - relative_path: third_party/RedditStuff/MayFlyInvestigation/info.txt
+    file_name: info.txt
+    extension: .txt
+    file_size_bytes: 9134
+    sha256: 96a0004a786fe4675126c30d5f6d856f382848a6a2fb773c5a528bc4a85826a9
+    mime_guess: text/plain
+    source_folder: MayFlyInvestigation
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+  - relative_path: third_party/RedditStuff/MayFlyInvestigation/possible-clue-in-final-mayfly-image-explanation-in-comments-v0-pcwyz3k76py51.webp
+    file_name: possible-clue-in-final-mayfly-image-explanation-in-comments-v0-pcwyz3k76py51.webp
+    extension: .webp
+    file_size_bytes: 28356
+    sha256: 2974bb3090fbd98ea57cf4933e4c348a53aa12845ae927e97e8b4ff48dcd0f76
+    mime_guess: null
+    source_folder: MayFlyInvestigation
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 750
+    image_height: 1334
+  - relative_path: third_party/RedditStuff/MayFlyInvestigation/possible-clue-in-final-mayfly-image-explanation-in-comments-v0-xis1p2k76py51.webp
+    file_name: possible-clue-in-final-mayfly-image-explanation-in-comments-v0-xis1p2k76py51.webp
+    extension: .webp
+    file_size_bytes: 138164
+    sha256: 1792e4ca6c282ad5b21fd70d68b5d78b7596c857e3a98604904ed9188f1d21c2
+    mime_guess: null
+    source_folder: MayFlyInvestigation
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 750
+    image_height: 736
+  - relative_path: third_party/RedditStuff/MayFlyInvestigation/url.txt
+    file_name: url.txt
+    extension: .txt
+    file_size_bytes: 80
+    sha256: 0ad71e6e62f917debfb157ce8e65d423e1b4d48da6ba84bc405ba025d5d08206
+    mime_guess: text/plain
+    source_folder: MayFlyInvestigation
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+  - relative_path: third_party/RedditStuff/MayFlyInvestigation/ycmx8pzedwy51.jpg
+    file_name: ycmx8pzedwy51.jpg
+    extension: .jpg
+    file_size_bytes: 96604
+    sha256: 1f8abda8b538791dbd229655867981add414b468fb777e9788a471d430f18495
+    mime_guess: image/jpeg
+    source_folder: MayFlyInvestigation
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 1324
+    image_height: 336
+- source_folder: DotObservationsFromPages_7_23_56
+  source_folder_path: third_party/RedditStuff/DotObservationsFromPages_7_23_56
+  source_root_exists: true
+  file_count_observed: 3
+  gap_recorded: false
+  gap_reason: null
+  files:
+  - relative_path: third_party/RedditStuff/DotObservationsFromPages_7_23_56/dot_observations_from_pages_7_23_56.png
+    file_name: dot_observations_from_pages_7_23_56.png
+    extension: .png
+    file_size_bytes: 26528
+    sha256: d7794181fc0712f083094d995e372961ff5605ebfc192dd67f6b7b34fb312e68
+    mime_guess: image/png
+    source_folder: DotObservationsFromPages_7_23_56
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 779
+    image_height: 511
+  - relative_path: third_party/RedditStuff/DotObservationsFromPages_7_23_56/info.txt
+    file_name: info.txt
+    extension: .txt
+    file_size_bytes: 929
+    sha256: 164e8a8dd00c914d7097469e08cd4b573da02901a946dc92df36103a567fa900
+    mime_guess: text/plain
+    source_folder: DotObservationsFromPages_7_23_56
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+  - relative_path: third_party/RedditStuff/DotObservationsFromPages_7_23_56/url.txt
+    file_name: url.txt
+    extension: .txt
+    file_size_bytes: 98
+    sha256: e0acdabd007660cbd243872eacff78acf92308d7986adada3400a3a77c6b84a7
+    mime_guess: text/plain
+    source_folder: DotObservationsFromPages_7_23_56
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+- source_folder: Page_33_ThreeDotsObservations
+  source_folder_path: third_party/RedditStuff/Page_33_ThreeDotsObservations
+  source_root_exists: true
+  file_count_observed: 4
+  gap_recorded: false
+  gap_reason: null
+  files:
+  - relative_path: third_party/RedditStuff/Page_33_ThreeDotsObservations/info.txt
+    file_name: info.txt
+    extension: .txt
+    file_size_bytes: 1806
+    sha256: 0fcad72a784c6fc1d69c99cf03e044dd410ea5b6d582c33c16918d028aa0888f
+    mime_guess: text/plain
+    source_folder: Page_33_ThreeDotsObservations
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+  - relative_path: third_party/RedditStuff/Page_33_ThreeDotsObservations/page_33.webp
+    file_name: page_33.webp
+    extension: .webp
+    file_size_bytes: 48192
+    sha256: 74210ad2cdfeaaa8a65ea20a20c682a3db574b19dce36223c713788896ddd3df
+    mime_guess: null
+    source_folder: Page_33_ThreeDotsObservations
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 683
+    image_height: 1024
+  - relative_path: third_party/RedditStuff/Page_33_ThreeDotsObservations/some-observations-on-the-three-dots-in-v0-n3tsdpghqz061.webp
+    file_name: some-observations-on-the-three-dots-in-v0-n3tsdpghqz061.webp
+    extension: .webp
+    file_size_bytes: 81826
+    sha256: 3d47a34b76bee00db64889ba05b8695fc730e154af812fd3dae2cbf032ea65da
+    mime_guess: null
+    source_folder: Page_33_ThreeDotsObservations
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 1080
+    image_height: 607
+  - relative_path: third_party/RedditStuff/Page_33_ThreeDotsObservations/url.txt
+    file_name: url.txt
+    extension: .txt
+    file_size_bytes: 93
+    sha256: 0e04407e7ed7883e5ea7e9a54ed1305f9223314a4ebbf4ac1c25201b5265cead
+    mime_guess: text/plain
+    source_folder: Page_33_ThreeDotsObservations
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+- source_folder: FrontCoverMeasurementsOf1033
+  source_folder_path: third_party/RedditStuff/FrontCoverMeasurementsOf1033
+  source_root_exists: true
+  file_count_observed: 6
+  gap_recorded: false
+  gap_reason: null
+  files:
+  - relative_path: third_party/RedditStuff/FrontCoverMeasurementsOf1033/info.txt
+    file_name: info.txt
+    extension: .txt
+    file_size_bytes: 924
+    sha256: b4c59645b6809a1581a6004d7ce819f2c4093dc874eec5000067b810e6327310
+    mime_guess: text/plain
+    source_folder: FrontCoverMeasurementsOf1033
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+  - relative_path: third_party/RedditStuff/FrontCoverMeasurementsOf1033/some-measurements-of-v0-44i123jls3l61.webp
+    file_name: some-measurements-of-v0-44i123jls3l61.webp
+    extension: .webp
+    file_size_bytes: 61016
+    sha256: 1e77ee7bd61c616491727127dd7accb1ca3417d915aaac07d965a67064cbd3d1
+    mime_guess: null
+    source_folder: FrontCoverMeasurementsOf1033
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 709
+    image_height: 800
+  - relative_path: third_party/RedditStuff/FrontCoverMeasurementsOf1033/some-measurements-of-v0-81q2m4jls3l61.webp
+    file_name: some-measurements-of-v0-81q2m4jls3l61.webp
+    extension: .webp
+    file_size_bytes: 81140
+    sha256: 5e93cff1195378712c2c36ed1a021d7a431e608cdcefcc2b2630fff6eddfa143
+    mime_guess: null
+    source_folder: FrontCoverMeasurementsOf1033
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 709
+    image_height: 800
+  - relative_path: third_party/RedditStuff/FrontCoverMeasurementsOf1033/some-measurements-of-v0-dhd2q3jls3l61.webp
+    file_name: some-measurements-of-v0-dhd2q3jls3l61.webp
+    extension: .webp
+    file_size_bytes: 82804
+    sha256: 670fcae696ab68132ed74238b619126768fd3066b954d4447409613308c77bba
+    mime_guess: null
+    source_folder: FrontCoverMeasurementsOf1033
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 709
+    image_height: 800
+  - relative_path: third_party/RedditStuff/FrontCoverMeasurementsOf1033/some-measurements-of-v0-nr6tx2jls3l61.webp
+    file_name: some-measurements-of-v0-nr6tx2jls3l61.webp
+    extension: .webp
+    file_size_bytes: 89556
+    sha256: d711eb0c765dd5dd6469efc896ed545778f0aaceec6ccc5075235cfa37c76e88
+    mime_guess: null
+    source_folder: FrontCoverMeasurementsOf1033
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 709
+    image_height: 800
+  - relative_path: third_party/RedditStuff/FrontCoverMeasurementsOf1033/url.txt
+    file_name: url.txt
+    extension: .txt
+    file_size_bytes: 77
+    sha256: e46bcf6e3fd549f194408de6a606ff60f59b24f9e92e478a0756741d3a5f4ca5
+    mime_guess: text/plain
+    source_folder: FrontCoverMeasurementsOf1033
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+- source_folder: DataDirectoryFromTheISO
+  source_folder_path: third_party/RedditStuff/DataDirectoryFromTheISO
+  source_root_exists: true
+  file_count_observed: 2
+  gap_recorded: false
+  gap_reason: null
+  files:
+  - relative_path: third_party/RedditStuff/DataDirectoryFromTheISO/info.txt
+    file_name: info.txt
+    extension: .txt
+    file_size_bytes: 2322
+    sha256: 59de56b212709cf8659182b296579e560a02eeed46cc1d68bc2136878f48835f
+    mime_guess: text/plain
+    source_folder: DataDirectoryFromTheISO
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+  - relative_path: third_party/RedditStuff/DataDirectoryFromTheISO/url.txt
+    file_name: url.txt
+    extension: .txt
+    file_size_bytes: 97
+    sha256: 98e21de38b5e32dfca4cffbcbb977701997dae4cb74a368d38e25e8aea687311
+    mime_guess: text/plain
+    source_folder: DataDirectoryFromTheISO
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+- source_folder: FindsFromProblems_2012_puzzle
+  source_folder_path: third_party/RedditStuff/FindsFromProblems_2012_puzzle
+  source_root_exists: true
+  file_count_observed: 2
+  gap_recorded: false
+  gap_reason: null
+  files:
+  - relative_path: third_party/RedditStuff/FindsFromProblems_2012_puzzle/info.txt
+    file_name: info.txt
+    extension: .txt
+    file_size_bytes: 2134
+    sha256: b1d06c1777058a2eef2ce9046c6779516168728c4538bdd9779c48598d8515d2
+    mime_guess: text/plain
+    source_folder: FindsFromProblems_2012_puzzle
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+  - relative_path: third_party/RedditStuff/FindsFromProblems_2012_puzzle/url.txt
+    file_name: url.txt
+    extension: .txt
+    file_size_bytes: 92
+    sha256: 1f43284b0eadd5ea23b5c853c39767517f922622efc7e055ea45bbdb231effa0
+    mime_guess: text/plain
+    source_folder: FindsFromProblems_2012_puzzle
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+- source_folder: FibonacciSequence
+  source_folder_path: third_party/RedditStuff/FibonacciSequence
+  source_root_exists: true
+  file_count_observed: 2
+  gap_recorded: false
+  gap_reason: null
+  files:
+  - relative_path: third_party/RedditStuff/FibonacciSequence/fibonacci_sequence_3301.jpeg
+    file_name: fibonacci_sequence_3301.jpeg
+    extension: .jpeg
+    file_size_bytes: 80757
+    sha256: 4f383da57dc21cdfce753340ee72f982d7252647ce0011747f28ea3fbdfaed58
+    mime_guess: image/jpeg
+    source_folder: FibonacciSequence
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 635
+    image_height: 421
+  - relative_path: third_party/RedditStuff/FibonacciSequence/url.txt
+    file_name: url.txt
+    extension: .txt
+    file_size_bytes: 98
+    sha256: 3179d28bc03a9603db779bc897ac2da62b05a8ff07d78d8232cd9a1d4a2450f3
+    mime_guess: text/plain
+    source_folder: FibonacciSequence
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+- source_folder: Layered_primes
+  source_folder_path: third_party/RedditStuff/Layered_primes
+  source_root_exists: true
+  file_count_observed: 2
+  gap_recorded: false
+  gap_reason: null
+  files:
+  - relative_path: third_party/RedditStuff/Layered_primes/layered_primes.jpg
+    file_name: layered_primes.jpg
+    extension: .jpg
+    file_size_bytes: 5986
+    sha256: 597b3f88e957747e8fd58fb01ea3de068d64965ee00fbce1d3d4f094701da470
+    mime_guess: image/jpeg
+    source_folder: Layered_primes
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 202
+    image_height: 141
+  - relative_path: third_party/RedditStuff/Layered_primes/url.txt
+    file_name: url.txt
+    extension: .txt
+    file_size_bytes: 84
+    sha256: d71bc4d772569bc06e0eaae7ffc448399a7f436e7f58935bcf92b638cd523957
+    mime_guess: text/plain
+    source_folder: Layered_primes
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null
+- source_folder: PrimeGPSums
+  source_folder_path: third_party/RedditStuff/PrimeGPSums
+  source_root_exists: true
+  file_count_observed: 2
+  gap_recorded: false
+  gap_reason: null
+  files:
+  - relative_path: third_party/RedditStuff/PrimeGPSums/prime_gp_sums.jpg
+    file_name: prime_gp_sums.jpg
+    extension: .jpg
+    file_size_bytes: 10740
+    sha256: a2ec4efd89c42871a81aea27f6ad01890d14b1276800de5b4f573f3728f1e766
+    mime_guess: image/jpeg
+    source_folder: PrimeGPSums
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: 312
+    image_height: 101
+  - relative_path: third_party/RedditStuff/PrimeGPSums/url.txt
+    file_name: url.txt
+    extension: .txt
+    file_size_bytes: 93
+    sha256: cc423e1deb29cc715a0813ac8a69a300a7563dccd49acb21641809c1fc2ce415
+    mime_guess: text/plain
+    source_folder: PrimeGPSums
+    raw_file_committed_now: false
+    source_lock_only: true
+    image_width: null
+    image_height: null

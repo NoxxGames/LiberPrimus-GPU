@@ -16,10 +16,10 @@ parallel_safe_command_count: 10
 serial_command_count: 6
 blocked_command_count: 1
 max_workers_configured: 16
-max_workers_used: 16
+max_workers_used: 8
 pytest_mode_used: shard
-pytest_workers_used: 16
-pytest_xdist_available: false
+pytest_workers_used: 8
+pytest_xdist_available: true
 pytest_shard_fallback_used: true
 failure_count: 0
 success_count: 11

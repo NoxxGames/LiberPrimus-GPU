@@ -113,7 +113,7 @@ source_digest_records:
   exists: true
   committed: true
   ignored_local_support: false
-  sha256: 7acfebfe382c00be7b7a3c114bc6b1639a9fba57b4cf59a91bc30f76fca1e3a6
+  sha256: 28090a0c5fd6af7a037896341b0a15488c43965d491c8f2e4a27ad0d13013872
 - path: data/project-state/stage5cy-reviewable-stage-marker.yaml
   exists: true
   committed: true

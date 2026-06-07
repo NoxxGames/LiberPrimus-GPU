@@ -61,8 +61,8 @@ cuda_execution_performed: false
 benchmark_performed: false
 scored_experiments_executed: false
 parallel_validation_harness_used: true
-parallel_validation_run_passed: true
-consistency_checks_passed: true
+parallel_validation_run_passed: false
+consistency_checks_passed: false
 codex_completion_summary_path: codex-output/stage5bm-codex-completion.md
 codex_output_directory_used: false
 recommended_next_prompt_type: codex_metadata_implementation

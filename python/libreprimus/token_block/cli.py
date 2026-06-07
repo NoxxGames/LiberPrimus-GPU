@@ -744,6 +744,7 @@ from .stage5dl import (
 from . import stage5dm as stage5dm_module
 from . import stage5dn as stage5dn_module
 from . import stage5do as stage5do_module
+from . import stage5dp as stage5dp_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -9146,6 +9147,128 @@ def validate_stage5do_command() -> None:
 @app.command("stage5do-summary")
 def stage5do_summary_command() -> None:
     console.print(stage5do_module.stage5do_summary_text())
+
+
+def _print_stage5dp_result(result: object, success_line: str) -> None:
+    text = result.to_cli_text()
+    console.print(text)
+    if getattr(result, "validation_error_count") != 0:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5dp")
+def build_stage5dp_command(
+    results_dir: Path = typer.Option(stage5dp_module.RESULTS_DIR),
+) -> None:
+    _ = results_dir
+    records = stage5dp_module.build_stage5dp()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(
+        f"new_reddit_source_lock_created={str(summary.get('new_reddit_source_lock_created')).lower()}"
+    )
+    console.print(f"new_reddit_source_folder_count={summary.get('new_reddit_source_folder_count')}")
+    console.print(
+        "required_reddit_source_folders_represented="
+        f"{summary.get('required_reddit_source_folders_represented')}"
+    )
+    console.print(f"mayfly_docx_source_locked={str(summary.get('mayfly_docx_source_locked')).lower()}")
+    console.print(f"mayfly_xlsx_source_locked={str(summary.get('mayfly_xlsx_source_locked')).lower()}")
+    console.print(f"candidate_records_created={summary.get('candidate_records_created')}")
+    console.print(
+        "source_browser_gui_deferred_to_next_stage="
+        f"{str(summary.get('source_browser_gui_deferred_to_next_stage')).lower()}"
+    )
+    console.print(f"pivot_target_selected={str(summary.get('pivot_target_selected_now')).lower()}")
+    console.print(f"execution_performed={str(summary.get('execution_performed')).lower()}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5dp-new-reddit-source-lock")
+def validate_stage5dp_new_reddit_source_lock_command() -> None:
+    _print_stage5dp_result(
+        stage5dp_module.validate_stage5dp_new_reddit_source_lock(),
+        "token_block_stage5dp_new_reddit_source_lock_valid=true",
+    )
+
+
+@app.command("validate-stage5dp-mayfly-source-lock")
+def validate_stage5dp_mayfly_source_lock_command() -> None:
+    _print_stage5dp_result(
+        stage5dp_module.validate_stage5dp_mayfly_source_lock(),
+        "token_block_stage5dp_mayfly_source_lock_valid=true",
+    )
+
+
+@app.command("validate-stage5dp-mayfly-workbook-summary")
+def validate_stage5dp_mayfly_workbook_summary_command() -> None:
+    _print_stage5dp_result(
+        stage5dp_module.validate_stage5dp_mayfly_workbook_summary(),
+        "token_block_stage5dp_mayfly_workbook_summary_valid=true",
+    )
+
+
+@app.command("validate-stage5dp-dot-observations")
+def validate_stage5dp_dot_observations_command() -> None:
+    _print_stage5dp_result(
+        stage5dp_module.validate_stage5dp_dot_observations(),
+        "token_block_stage5dp_dot_observations_valid=true",
+    )
+
+
+@app.command("validate-stage5dp-front-cover-measurements")
+def validate_stage5dp_front_cover_measurements_command() -> None:
+    _print_stage5dp_result(
+        stage5dp_module.validate_stage5dp_front_cover_measurements(),
+        "token_block_stage5dp_front_cover_measurements_valid=true",
+    )
+
+
+@app.command("validate-stage5dp-iso-and-problems-sources")
+def validate_stage5dp_iso_and_problems_sources_command() -> None:
+    _print_stage5dp_result(
+        stage5dp_module.validate_stage5dp_iso_and_problems_sources(),
+        "token_block_stage5dp_iso_and_problems_sources_valid=true",
+    )
+
+
+@app.command("validate-stage5dp-chatgpt-context-file")
+def validate_stage5dp_chatgpt_context_file_command() -> None:
+    _print_stage5dp_result(
+        stage5dp_module.validate_stage5dp_chatgpt_context_file(),
+        "token_block_stage5dp_chatgpt_context_file_valid=true",
+    )
+
+
+@app.command("validate-stage5dp-sidecar-gates")
+def validate_stage5dp_sidecar_gates_command() -> None:
+    _print_stage5dp_result(
+        stage5dp_module.validate_stage5dp_sidecar_gates(),
+        "token_block_stage5dp_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5dp-handoff-continuity")
+def validate_stage5dp_handoff_continuity_command() -> None:
+    _print_stage5dp_result(
+        stage5dp_module.validate_stage5dp_handoff_continuity(),
+        "token_block_stage5dp_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5dp")
+def validate_stage5dp_command() -> None:
+    _print_stage5dp_result(
+        stage5dp_module.validate_stage5dp(),
+        "token_block_stage5dp_valid=true",
+    )
+
+
+@app.command("stage5dp-summary")
+def stage5dp_summary_command() -> None:
+    console.print(stage5dp_module.stage5dp_summary_text())
 
 
 def register(root_app: typer.Typer) -> None:

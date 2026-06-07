@@ -102,7 +102,7 @@ source_records:
 - path: data/project-state/stage5cq-reviewable-source-digest-index.yaml
   role: stage5cu_reviewable_source
   present: true
-  sha256: a38d145b90acd952a40fd54671d2cbb3b7966a1e556a7865bde78d7d164c1e41
+  sha256: 1c332a12dd11e7e79ae33a975122cdf1dca889a46294c8ad2f0a246ed2f520bd
 - path: data/project-state/stage5cq-reviewable-stage-marker.yaml
   role: stage5cu_reviewable_source
   present: true
@@ -134,7 +134,7 @@ source_records:
 - path: data/project-state/stage5cs-reviewable-source-digest-index.yaml
   role: stage5cu_reviewable_source
   present: true
-  sha256: c063c907ca20cc3534cf3f95529bb7689378f64c1f2171c8f080c2678e7ea655
+  sha256: 61a28e96a3696e84a06a433da9b3c5734b99d8e163fc9bf690d23a0898d427ce
 - path: data/project-state/stage5cs-reviewable-stage-marker.yaml
   role: stage5cu_reviewable_source
   present: true

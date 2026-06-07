@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5DN" `
-        --expected-next-stage "Stage 5DO" `
+        --expected-latest-stage "Stage 5DP" `
+        --expected-next-stage "Stage 5DQ" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5DN" `
-        --expected-next-stage "Stage 5DO" `
+        --expected-latest-stage "Stage 5DP" `
+        --expected-next-stage "Stage 5DQ" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DN",
+            expected_latest_stage="Stage 5DP",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DN",
+            "expected_latest_stage": "Stage 5DP",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3199,6 +3199,31 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q "third_party/PotentialHint-3301-on-Page32/page-32.jpg"
     git check-ignore -q "third_party/PotentialHint-3301-on-Page32/prime_color_frequencies.txt"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DO" }
+
+    Write-Host "Validating Stage 5DP New Reddit Mayfly / dot / cover / ISO source-lock records"
+    & $Python -m libreprimus.cli token-block validate-stage5dp-new-reddit-source-lock
+    & $Python -m libreprimus.cli token-block validate-stage5dp-mayfly-source-lock
+    & $Python -m libreprimus.cli token-block validate-stage5dp-mayfly-workbook-summary
+    & $Python -m libreprimus.cli token-block validate-stage5dp-dot-observations
+    & $Python -m libreprimus.cli token-block validate-stage5dp-front-cover-measurements
+    & $Python -m libreprimus.cli token-block validate-stage5dp-iso-and-problems-sources
+    & $Python -m libreprimus.cli token-block validate-stage5dp-chatgpt-context-file
+    & $Python -m libreprimus.cli token-block validate-stage5dp-sidecar-gates
+    & $Python -m libreprimus.cli token-block validate-stage5dp-handoff-continuity
+    & $Python -m libreprimus.cli token-block validate-stage5dp
+    & $Python -m libreprimus.cli token-block stage5dp-summary
+    $Stage5DPTokenResultsRoot = Join-Path (Join-Path (Join-Path "experiments" "results") "token-block") "stage5dp"
+    git check-ignore -q (Join-Path $Stage5DPTokenResultsRoot "summary.json")
+    git check-ignore -q (Join-Path $Stage5DPTokenResultsRoot "new_reddit_source_lock_report.json")
+    git check-ignore -q (Join-Path $Stage5DPTokenResultsRoot "mayfly_docx_xlsx_report.json")
+    git check-ignore -q (Join-Path $Stage5DPTokenResultsRoot "candidate_report.json")
+    git check-ignore -q (Join-Path $Stage5DPTokenResultsRoot "preservation_report.json")
+    git check-ignore -q (Join-Path $Stage5DPTokenResultsRoot "warnings.jsonl")
+    git check-ignore -q "codex-output/stage5dp-codex-completion.md"
+    git check-ignore -q "third_party/RedditStuff/MayFlyInvestigation/The Mayfly.docx"
+    git check-ignore -q "third_party/RedditStuff/MayFlyInvestigation/57.jpg Mayfly data.xlsx"
+    git check-ignore -q "third_party/RedditStuff/DotObservationsFromPages_7_23_56/dot_observations_from_pages_7_23_56.png"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DP" }
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

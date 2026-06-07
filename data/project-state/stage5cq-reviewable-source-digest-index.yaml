@@ -178,7 +178,7 @@ source_records:
 - path: docs/onboarding/stage5co-real-approval-record-readiness-workflow.md
   role: stage5cq_reviewable_source
   present: true
-  sha256: 347bcc18e301bf2cd1d8c80bc98c94bbefaffd0231b795a83fd166bb206b4e30
+  sha256: 5e55fb251e8c58b4d84ed0a2a85f9b250978bf476746697bf3af08572bd57da9
 raw_or_generated_bodies_committed: false
 activation_authorized_now: false
 activation_decision_valid_now: false

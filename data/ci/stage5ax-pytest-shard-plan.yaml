@@ -4,11 +4,11 @@ stage_id: stage-5ax
 test_root: tests/python
 requested_workers: 16
 shard_count: 16
-test_file_count: 925
+test_file_count: 1419
 all_tests_covered_once: true
 shards:
 - shard_id: pytest-shard-01
-  test_file_count: 58
+  test_file_count: 89
   test_files:
   - tests/python/test_alignment_signatures.py
   - tests/python/test_stage0d_followup_gap_analysis.py
@@ -56,20 +56,51 @@ shards:
   - tests/python/test_stage5az_preflight_manifest_integrity_audit.py
   - tests/python/test_stage5bb_dry_run_plan_preview.py
   - tests/python/test_stage5bb_runner_scaffold_manifest.py
-  - tests/python/test_stage5e_ignore_policy.py
-  - tests/python/test_stage5h_gematria_shift_contract_schemas.py
-  - tests/python/test_stage5j_gematria_cuda_synthetic_parity.py
-  - tests/python/test_stage5m_cli.py
-  - tests/python/test_stage5o_ignore_policy.py
-  - tests/python/test_stage5q_expansion_candidate_mapping_schemas.py
-  - tests/python/test_stage5s_expanded_result_store_schemas.py
-  - tests/python/test_stage5t_no_unsolved_guardrail.py
-  - tests/python/test_stage5v_cli.py
-  - tests/python/test_stage5w_next_stage_decision.py
-  - tests/python/test_stage5y_cli.py
-  - tests/python/test_stage5z_future_parity_plan.py
+  - tests/python/test_stage5bd_future_result_paths.py
+  - tests/python/test_stage5bf_cli.py
+  - tests/python/test_stage5bf_pgp_source_lock_candidates.py
+  - tests/python/test_stage5bj_2014_exact_surfaces.py
+  - tests/python/test_stage5bk_codex_handoff_policy.py
+  - tests/python/test_stage5bk_positive_control_context.py
+  - tests/python/test_stage5bm_future_dry_run_planning_impact.py
+  - tests/python/test_stage5bm_summary.py
+  - tests/python/test_stage5bn_source_gap_closure_status.py
+  - tests/python/test_stage5bo_string4_after_errata.py
+  - tests/python/test_stage5bs_schemas.py
+  - tests/python/test_stage5bw_manifest_supersession_preflight.py
+  - tests/python/test_stage5by_stage5bd_preservation.py
+  - tests/python/test_stage5ca_reviewability.py
+  - tests/python/test_stage5ce_ignore_policy.py
+  - tests/python/test_stage5cg_reviewability.py
+  - tests/python/test_stage5ci_stage5bd_preservation.py
+  - tests/python/test_stage5ck_schemas.py
+  - tests/python/test_stage5co_activation_transition_plan.py
+  - tests/python/test_stage5co_stage5bd_preservation.py
+  - tests/python/test_stage5cq_stage5bd_preservation.py
+  - tests/python/test_stage5cs_prior_stage_preservation.py
+  - tests/python/test_stage5cu_handoff_continuity.py
+  - tests/python/test_stage5cw_common.py
+  - tests/python/test_stage5cy_cli.py
+  - tests/python/test_stage5da_handoff.py
+  - tests/python/test_stage5de_gate_closure.py
+  - tests/python/test_stage5dg_preservation.py
+  - tests/python/test_stage5dj_music_metadata.py
+  - tests/python/test_stage5dl_candidate_metadata.py
+  - tests/python/test_stage5dn_schemas.py
+  - tests/python/test_stage5e_native_parity_adapter_map.py
+  - tests/python/test_stage5h_native_gematria_fixtures.py
+  - tests/python/test_stage5k_device_code_audit.py
+  - tests/python/test_stage5m_solved_fixture_cuda_boundaries.py
+  - tests/python/test_stage5o_repeat_run_records.py
+  - tests/python/test_stage5q_ignore_policy.py
+  - tests/python/test_stage5s_ignore_policy.py
+  - tests/python/test_stage5u_backend_surface_contract.py
+  - tests/python/test_stage5v_ignore_policy.py
+  - tests/python/test_stage5w_prime_schedule.py
+  - tests/python/test_stage5y_full_p56_blocker.py
+  - tests/python/test_stage5z_ignore_policy.py
 - shard_id: pytest-shard-02
-  test_file_count: 58
+  test_file_count: 89
   test_files:
   - tests/python/test_cli_smoke.py
   - tests/python/test_stage0d_followup_real_if_present.py
@@ -117,20 +148,51 @@ shards:
   - tests/python/test_stage5az_repaired_branch_count_budget.py
   - tests/python/test_stage5bb_dwh_runner_context.py
   - tests/python/test_stage5bb_validation_evidence_index.py
-  - tests/python/test_stage5e_implementation_readiness.py
-  - tests/python/test_stage5h_ignore_policy.py
-  - tests/python/test_stage5j_ignore_policy.py
-  - tests/python/test_stage5m_ignore_policy.py
-  - tests/python/test_stage5o_repeat_parity.py
-  - tests/python/test_stage5q_expansion_gate.py
-  - tests/python/test_stage5s_generated_body_policy.py
-  - tests/python/test_stage5t_solved_family_inventory.py
-  - tests/python/test_stage5v_conformance_fixtures.py
-  - tests/python/test_stage5w_prime_minus_one_schemas.py
-  - tests/python/test_stage5y_cuda_contract_readiness.py
-  - tests/python/test_stage5z_host_runner_contract.py
+  - tests/python/test_stage5bd_guardrails.py
+  - tests/python/test_stage5bf_deep_research_readiness.py
+  - tests/python/test_stage5bf_source_gap_register.py
+  - tests/python/test_stage5bj_boards_thread_crosswalk.py
+  - tests/python/test_stage5bk_common.py
+  - tests/python/test_stage5bk_schemas.py
+  - tests/python/test_stage5bm_guardrails.py
+  - tests/python/test_stage5bm_token_block_lineage.py
+  - tests/python/test_stage5bn_source_gap_severity_update.py
+  - tests/python/test_stage5bo_summary.py
+  - tests/python/test_stage5bu_active_manifest_path_resolution.py
+  - tests/python/test_stage5bw_no_active_ingestion.py
+  - tests/python/test_stage5c_cuda_build_cli.py
+  - tests/python/test_stage5ca_schemas.py
+  - tests/python/test_stage5ce_no_byte_no_execution_gates.py
+  - tests/python/test_stage5cg_schemas.py
+  - tests/python/test_stage5ci_stage5ce_stage5cc_preservation.py
+  - tests/python/test_stage5ck_stage5bd_preservation.py
+  - tests/python/test_stage5co_active_lineage_preservation.py
+  - tests/python/test_stage5co_stage5cn_findings.py
+  - tests/python/test_stage5cq_stage5co_preservation.py
+  - tests/python/test_stage5cs_real_record_blocker.py
+  - tests/python/test_stage5cu_ignore_policy.py
+  - tests/python/test_stage5cw_credential_redaction_policy.py
+  - tests/python/test_stage5cy_common.py
+  - tests/python/test_stage5da_preservation.py
+  - tests/python/test_stage5de_governance_scope.py
+  - tests/python/test_stage5dg_real_operator_approval_record.py
+  - tests/python/test_stage5dj_music_number_and_pivot.py
+  - tests/python/test_stage5dl_cli.py
+  - tests/python/test_stage5do_cli.py
+  - tests/python/test_stage5f_cuda_kernel_cli.py
+  - tests/python/test_stage5h_score_summary_parity_plan.py
+  - tests/python/test_stage5k_gematria_cuda_parity_report.py
+  - tests/python/test_stage5m_solved_fixture_cuda_parity.py
+  - tests/python/test_stage5o_repeat_verification_schemas.py
+  - tests/python/test_stage5q_native_parity.py
+  - tests/python/test_stage5s_method_status_impact.py
+  - tests/python/test_stage5u_candidate_batch_abi.py
+  - tests/python/test_stage5v_implementation_status.py
+  - tests/python/test_stage5w_result_store_preflight.py
+  - tests/python/test_stage5y_generated_body_policy.py
+  - tests/python/test_stage5z_implementation_readiness.py
 - shard_id: pytest-shard-03
-  test_file_count: 58
+  test_file_count: 89
   test_files:
   - tests/python/test_glyph_variant_policy.py
   - tests/python/test_stage0d_followup_stream_alignment.py
@@ -177,21 +239,52 @@ shards:
   - tests/python/test_stage5ay_preflight_design_policy.py
   - tests/python/test_stage5az_repaired_execution_gates.py
   - tests/python/test_stage5bb_execution_gate_enforcement.py
-  - tests/python/test_stage5c_cuda_build_cli.py
-  - tests/python/test_stage5e_native_parity_adapter_map.py
-  - tests/python/test_stage5h_native_gematria_fixtures.py
-  - tests/python/test_stage5k_device_code_audit.py
-  - tests/python/test_stage5m_solved_fixture_cuda_boundaries.py
-  - tests/python/test_stage5o_repeat_run_records.py
-  - tests/python/test_stage5q_ignore_policy.py
-  - tests/python/test_stage5s_ignore_policy.py
-  - tests/python/test_stage5u_backend_surface_contract.py
-  - tests/python/test_stage5v_ignore_policy.py
-  - tests/python/test_stage5w_prime_schedule.py
-  - tests/python/test_stage5y_full_p56_blocker.py
-  - tests/python/test_stage5z_ignore_policy.py
+  - tests/python/test_stage5bd_active_manifest_lock.py
+  - tests/python/test_stage5bd_ignore_policy.py
+  - tests/python/test_stage5bf_dwh_historical_context.py
+  - tests/python/test_stage5bf_stego_source_lock_candidates.py
+  - tests/python/test_stage5bj_cli.py
+  - tests/python/test_stage5bk_dwh_quarantine.py
+  - tests/python/test_stage5bk_source_gap_register.py
+  - tests/python/test_stage5bm_historical_family_granularity_update.py
+  - tests/python/test_stage5bn_cli.py
+  - tests/python/test_stage5bn_spreadsheet_target_cell_audit.py
+  - tests/python/test_stage5bq_cli.py
+  - tests/python/test_stage5bu_cli.py
+  - tests/python/test_stage5bw_reviewability.py
+  - tests/python/test_stage5c_cuda_build_profiles.py
+  - tests/python/test_stage5ca_sidecar_gates.py
+  - tests/python/test_stage5ce_proposal_package.py
+  - tests/python/test_stage5cg_stage5bd_preservation.py
+  - tests/python/test_stage5ci_stage5cg_preservation.py
+  - tests/python/test_stage5ck_stage5ci_preservation.py
+  - tests/python/test_stage5co_approval_readiness_package.py
+  - tests/python/test_stage5co_worker_cap.py
+  - tests/python/test_stage5cq_stage5cp_findings.py
+  - tests/python/test_stage5cs_schemas.py
+  - tests/python/test_stage5cu_no_active_no_byte_no_execution.py
+  - tests/python/test_stage5cw_future_real_decision_requirements.py
+  - tests/python/test_stage5cy_count_reconciliation.py
+  - tests/python/test_stage5da_scaffold.py
+  - tests/python/test_stage5de_handoff.py
+  - tests/python/test_stage5dg_schemas.py
+  - tests/python/test_stage5dj_music_source_lock.py
+  - tests/python/test_stage5dl_common.py
+  - tests/python/test_stage5do_common.py
+  - tests/python/test_stage5f_cuda_kernel_records.py
+  - tests/python/test_stage5h_solved_fixture_mapping.py
+  - tests/python/test_stage5k_gematria_cuda_parity_reporting_cli.py
+  - tests/python/test_stage5m_solved_fixture_cuda_run_records.py
+  - tests/python/test_stage5o_result_store_preflight.py
+  - tests/python/test_stage5q_result_store_preflight.py
+  - tests/python/test_stage5s_next_step_decision.py
+  - tests/python/test_stage5u_candidate_batch_abi_schemas.py
+  - tests/python/test_stage5v_native_adapter_schemas.py
+  - tests/python/test_stage5w_source_inventory.py
+  - tests/python/test_stage5y_guardrails.py
+  - tests/python/test_stage5z_kernel_abi_contract.py
 - shard_id: pytest-shard-04
-  test_file_count: 58
+  test_file_count: 89
   test_files:
   - tests/python/test_legacy_pastebin_cli.py
   - tests/python/test_stage0d_followup_transcript_views.py
@@ -238,21 +331,52 @@ shards:
   - tests/python/test_stage5ay_preflight_manifest_schemas.py
   - tests/python/test_stage5az_repaired_preflight_design_policy.py
   - tests/python/test_stage5bb_execution_gate_validation.py
-  - tests/python/test_stage5c_cuda_build_profiles.py
-  - tests/python/test_stage5f_cuda_kernel_cli.py
-  - tests/python/test_stage5h_score_summary_parity_plan.py
-  - tests/python/test_stage5k_gematria_cuda_parity_report.py
-  - tests/python/test_stage5m_solved_fixture_cuda_parity.py
-  - tests/python/test_stage5o_repeat_verification_schemas.py
-  - tests/python/test_stage5q_native_parity.py
-  - tests/python/test_stage5s_method_status_impact.py
-  - tests/python/test_stage5u_candidate_batch_abi.py
-  - tests/python/test_stage5v_implementation_status.py
-  - tests/python/test_stage5w_result_store_preflight.py
-  - tests/python/test_stage5y_generated_body_policy.py
-  - tests/python/test_stage5z_implementation_readiness.py
+  - tests/python/test_stage5bd_archive_marker_policy.py
+  - tests/python/test_stage5bd_no_byte_stream_proof.py
+  - tests/python/test_stage5bf_guardrails.py
+  - tests/python/test_stage5bf_token_block_planning_impact.py
+  - tests/python/test_stage5bj_completion_summary_policy.py
+  - tests/python/test_stage5bk_family_planning_status.py
+  - tests/python/test_stage5bk_source_gap_severity.py
+  - tests/python/test_stage5bm_ignore_policy.py
+  - tests/python/test_stage5bn_codex_handoff_policy.py
+  - tests/python/test_stage5bn_summary.py
+  - tests/python/test_stage5bq_common.py
+  - tests/python/test_stage5bu_common.py
+  - tests/python/test_stage5bw_schemas.py
+  - tests/python/test_stage5c_cuda_build_schemas.py
+  - tests/python/test_stage5ca_stage5bd_preservation.py
+  - tests/python/test_stage5ce_reviewability.py
+  - tests/python/test_stage5cg_stage5ce_wording_review.py
+  - tests/python/test_stage5ck_activation_decision_fixtures.py
+  - tests/python/test_stage5cm_activation_decision_gate.py
+  - tests/python/test_stage5co_boundary_preservation.py
+  - tests/python/test_stage5cq_activation_nonauthorization.py
+  - tests/python/test_stage5cq_worker_cap.py
+  - tests/python/test_stage5cs_stage5bd_preservation.py
+  - tests/python/test_stage5cu_option_selection_misuse.py
+  - tests/python/test_stage5cw_handoff_continuity.py
+  - tests/python/test_stage5cy_gate_closure.py
+  - tests/python/test_stage5da_schemas.py
+  - tests/python/test_stage5de_preparation_package.py
+  - tests/python/test_stage5dg_target_context.py
+  - tests/python/test_stage5dj_preservation.py
+  - tests/python/test_stage5dl_gates.py
+  - tests/python/test_stage5do_ignore_policy.py
+  - tests/python/test_stage5f_cuda_kernel_schemas.py
+  - tests/python/test_stage5i_gematria_cuda_abi_plan.py
+  - tests/python/test_stage5k_gematria_cuda_parity_reporting_schemas.py
+  - tests/python/test_stage5m_solved_fixture_cuda_schemas.py
+  - tests/python/test_stage5o_score_summary_preflight.py
+  - tests/python/test_stage5q_token_mapping.py
+  - tests/python/test_stage5s_parity_report.py
+  - tests/python/test_stage5u_cli.py
+  - tests/python/test_stage5v_next_stage_decision.py
+  - tests/python/test_stage5w_stream_contract.py
+  - tests/python/test_stage5y_ignore_policy.py
+  - tests/python/test_stage5z_next_stage_decision.py
 - shard_id: pytest-shard-05
-  test_file_count: 58
+  test_file_count: 89
   test_files:
   - tests/python/test_legacy_pastebin_parser.py
   - tests/python/test_stage0d_real_if_present.py
@@ -299,21 +423,52 @@ shards:
   - tests/python/test_stage5ay_preflight_source_inputs.py
   - tests/python/test_stage5az_repaired_variant_family_manifest.py
   - tests/python/test_stage5bb_family_enumeration_summary.py
-  - tests/python/test_stage5c_cuda_build_schemas.py
-  - tests/python/test_stage5f_cuda_kernel_records.py
-  - tests/python/test_stage5h_solved_fixture_mapping.py
-  - tests/python/test_stage5k_gematria_cuda_parity_reporting_cli.py
-  - tests/python/test_stage5m_solved_fixture_cuda_run_records.py
-  - tests/python/test_stage5o_result_store_preflight.py
-  - tests/python/test_stage5q_result_store_preflight.py
-  - tests/python/test_stage5s_next_step_decision.py
-  - tests/python/test_stage5u_candidate_batch_abi_schemas.py
-  - tests/python/test_stage5v_native_adapter_schemas.py
-  - tests/python/test_stage5w_source_inventory.py
-  - tests/python/test_stage5y_guardrails.py
-  - tests/python/test_stage5z_kernel_abi_contract.py
+  - tests/python/test_stage5bd_archive_review_marker.py
+  - tests/python/test_stage5bd_null_control_counters.py
+  - tests/python/test_stage5bf_hex_jpeg_extraction_candidates.py
+  - tests/python/test_stage5bf_trust_classification_policy.py
+  - tests/python/test_stage5bj_crosswalk_closure.py
+  - tests/python/test_stage5bk_future_dry_run_planning_impact.py
+  - tests/python/test_stage5bk_stage5bj_crosswalk_errata.py
+  - tests/python/test_stage5bm_next_stage_decision.py
+  - tests/python/test_stage5bn_common.py
+  - tests/python/test_stage5bn_target_record.py
+  - tests/python/test_stage5bq_dry_run_constraints.py
+  - tests/python/test_stage5bu_gate_preservation.py
+  - tests/python/test_stage5bw_sidecar_proposal.py
+  - tests/python/test_stage5c_device_detection.py
+  - tests/python/test_stage5cc_cli.py
+  - tests/python/test_stage5ce_schemas.py
+  - tests/python/test_stage5ci_activation_decision_template.py
+  - tests/python/test_stage5ck_activation_decision_review_package.py
+  - tests/python/test_stage5cm_active_lineage_preservation.py
+  - tests/python/test_stage5co_cli.py
+  - tests/python/test_stage5cq_active_lineage_preservation.py
+  - tests/python/test_stage5cs_activation_nonauthorization.py
+  - tests/python/test_stage5cs_stage5co_preservation.py
+  - tests/python/test_stage5cu_options_nonselection.py
+  - tests/python/test_stage5cw_ignore_policy.py
+  - tests/python/test_stage5cy_governance_scope.py
+  - tests/python/test_stage5dc_choice_decision.py
+  - tests/python/test_stage5de_preservation.py
+  - tests/python/test_stage5di_cli.py
+  - tests/python/test_stage5dj_schemas.py
+  - tests/python/test_stage5dl_ignore_policy.py
+  - tests/python/test_stage5do_records.py
+  - tests/python/test_stage5f_ignore_policy.py
+  - tests/python/test_stage5i_gematria_cuda_implementation_checklist.py
+  - tests/python/test_stage5k_ignore_policy.py
+  - tests/python/test_stage5n_boundary_review.py
+  - tests/python/test_stage5p_cli.py
+  - tests/python/test_stage5r_cli.py
+  - tests/python/test_stage5s_result_store_integration.py
+  - tests/python/test_stage5u_gap_closure.py
+  - tests/python/test_stage5v_result_store_conformance.py
+  - tests/python/test_stage5x_cli.py
+  - tests/python/test_stage5y_method_status_impact.py
+  - tests/python/test_stage5z_no_cuda_source_change.py
 - shard_id: pytest-shard-06
-  test_file_count: 58
+  test_file_count: 89
   test_files:
   - tests/python/test_legacy_pastebin_real_if_present.py
   - tests/python/test_stage0e_cli.py
@@ -360,21 +515,52 @@ shards:
   - tests/python/test_stage5ay_reading_order_control_manifest.py
   - tests/python/test_stage5b_backend_capability.py
   - tests/python/test_stage5bb_fixture_result_schema_records.py
-  - tests/python/test_stage5c_device_detection.py
-  - tests/python/test_stage5f_cuda_kernel_schemas.py
-  - tests/python/test_stage5i_gematria_cuda_abi_plan.py
-  - tests/python/test_stage5k_gematria_cuda_parity_reporting_schemas.py
-  - tests/python/test_stage5m_solved_fixture_cuda_schemas.py
-  - tests/python/test_stage5o_score_summary_preflight.py
-  - tests/python/test_stage5q_token_mapping.py
-  - tests/python/test_stage5s_parity_report.py
-  - tests/python/test_stage5u_cli.py
-  - tests/python/test_stage5v_next_stage_decision.py
-  - tests/python/test_stage5w_stream_contract.py
-  - tests/python/test_stage5y_ignore_policy.py
-  - tests/python/test_stage5z_next_stage_decision.py
+  - tests/python/test_stage5bd_archive_scripts.py
+  - tests/python/test_stage5bd_preflight_runner_package_split.py
+  - tests/python/test_stage5bf_high_priority_artifact_index.py
+  - tests/python/test_stage5bi_2014_surfaces.py
+  - tests/python/test_stage5bj_fandom_page_body_crosswalk.py
+  - tests/python/test_stage5bk_guardrails.py
+  - tests/python/test_stage5bk_stego_positive_control_constraints.py
+  - tests/python/test_stage5bm_review_packaging_warning.py
+  - tests/python/test_stage5bn_coordinate_context.py
+  - tests/python/test_stage5bn_token_block_lineage.py
+  - tests/python/test_stage5bq_findings_and_context.py
+  - tests/python/test_stage5bu_guardrails.py
+  - tests/python/test_stage5by_cli.py
+  - tests/python/test_stage5c_ignore_policy.py
+  - tests/python/test_stage5cc_common.py
+  - tests/python/test_stage5ce_stage5bd_preservation.py
+  - tests/python/test_stage5ci_active_lineage_preservation.py
+  - tests/python/test_stage5ck_active_lineage_preservation.py
+  - tests/python/test_stage5cm_approval_readiness_boundary.py
+  - tests/python/test_stage5co_combined_gate_readiness.py
+  - tests/python/test_stage5cq_cli.py
+  - tests/python/test_stage5cs_active_lineage_preservation.py
+  - tests/python/test_stage5cs_stage5cq_preservation.py
+  - tests/python/test_stage5cu_prior_stage_preservation.py
+  - tests/python/test_stage5cw_no_active_no_byte_no_execution.py
+  - tests/python/test_stage5cy_ignore_policy.py
+  - tests/python/test_stage5dc_cli.py
+  - tests/python/test_stage5de_requirements.py
+  - tests/python/test_stage5di_common.py
+  - tests/python/test_stage5dk_cli.py
+  - tests/python/test_stage5dl_schemas.py
+  - tests/python/test_stage5do_schemas.py
+  - tests/python/test_stage5f_synthetic_parity_records.py
+  - tests/python/test_stage5i_gematria_cuda_kernel_preparation.py
+  - tests/python/test_stage5k_score_summary_preflight.py
+  - tests/python/test_stage5n_cli.py
+  - tests/python/test_stage5p_controlled_expansion_candidates.py
+  - tests/python/test_stage5r_expanded_cuda_boundaries.py
+  - tests/python/test_stage5s_score_summary_integration.py
+  - tests/python/test_stage5u_ignore_policy.py
+  - tests/python/test_stage5v_schedule_conformance.py
+  - tests/python/test_stage5x_full_p56_blocker.py
+  - tests/python/test_stage5y_native_parity_report.py
+  - tests/python/test_stage5z_prime_cuda_contract_schemas.py
 - shard_id: pytest-shard-07
-  test_file_count: 58
+  test_file_count: 89
   test_files:
   - tests/python/test_legacy_pastebin_validation.py
   - tests/python/test_stage0e_corpus_candidate_generation_synthetic.py
@@ -421,21 +607,52 @@ shards:
   - tests/python/test_stage5ay_source_control_manifest.py
   - tests/python/test_stage5b_cuda_parity_cli.py
   - tests/python/test_stage5bb_guardrails.py
-  - tests/python/test_stage5c_ignore_policy.py
-  - tests/python/test_stage5f_ignore_policy.py
-  - tests/python/test_stage5i_gematria_cuda_implementation_checklist.py
-  - tests/python/test_stage5k_ignore_policy.py
-  - tests/python/test_stage5n_boundary_review.py
-  - tests/python/test_stage5p_cli.py
-  - tests/python/test_stage5r_cli.py
-  - tests/python/test_stage5s_result_store_integration.py
-  - tests/python/test_stage5u_gap_closure.py
-  - tests/python/test_stage5v_result_store_conformance.py
-  - tests/python/test_stage5x_cli.py
-  - tests/python/test_stage5y_method_status_impact.py
-  - tests/python/test_stage5z_no_cuda_source_change.py
+  - tests/python/test_stage5bd_branch_family_plan_counters.py
+  - tests/python/test_stage5bd_run_plan_ids.py
+  - tests/python/test_stage5bf_historical_technique_taxonomy.py
+  - tests/python/test_stage5bi_archive_crosswalk.py
+  - tests/python/test_stage5bj_guardrails.py
+  - tests/python/test_stage5bk_historical_planning_constraint_policy.py
+  - tests/python/test_stage5bk_string4_crosswalk.py
+  - tests/python/test_stage5bm_schemas.py
+  - tests/python/test_stage5bn_dwh_quarantine.py
+  - tests/python/test_stage5bo_cli.py
+  - tests/python/test_stage5bq_handoff_next_stage.py
+  - tests/python/test_stage5bu_ignore_policy.py
+  - tests/python/test_stage5by_common.py
+  - tests/python/test_stage5c_smoke_build_records.py
+  - tests/python/test_stage5cc_exact_sets.py
+  - tests/python/test_stage5ce_stage5cc_contract_regressions.py
+  - tests/python/test_stage5ci_cli.py
+  - tests/python/test_stage5ck_cli.py
+  - tests/python/test_stage5cm_cli.py
+  - tests/python/test_stage5co_common.py
+  - tests/python/test_stage5cq_combined_gate.py
+  - tests/python/test_stage5cs_cli.py
+  - tests/python/test_stage5cs_stage5cr_findings.py
+  - tests/python/test_stage5cu_real_decision_negative_fixtures.py
+  - tests/python/test_stage5cw_options_nonselection.py
+  - tests/python/test_stage5cy_option_selection_preflight.py
+  - tests/python/test_stage5dc_common.py
+  - tests/python/test_stage5de_schemas.py
+  - tests/python/test_stage5di_gate_closure.py
+  - tests/python/test_stage5dk_common.py
+  - tests/python/test_stage5dl_sources.py
+  - tests/python/test_stage5dp_cli.py
+  - tests/python/test_stage5g_cuda_parity_reporting_cli.py
+  - tests/python/test_stage5i_gematria_cuda_prep_cli.py
+  - tests/python/test_stage5k_solved_fixture_safe_preflight.py
+  - tests/python/test_stage5n_controlled_expansion_gate.py
+  - tests/python/test_stage5p_generated_body_policy.py
+  - tests/python/test_stage5r_expanded_cuda_parity.py
+  - tests/python/test_stage5t_batch_abi_gaps.py
+  - tests/python/test_stage5u_key_schedule_contract.py
+  - tests/python/test_stage5v_score_vector_conformance.py
+  - tests/python/test_stage5x_guardrails.py
+  - tests/python/test_stage5y_next_stage_decision.py
+  - tests/python/test_stage5z_result_store_compatibility.py
 - shard_id: pytest-shard-08
-  test_file_count: 58
+  test_file_count: 89
   test_files:
   - tests/python/test_legacy_workbook_models.py
   - tests/python/test_stage0e_corpus_candidate_schemas.py
@@ -482,21 +699,52 @@ shards:
   - tests/python/test_stage5az_cli.py
   - tests/python/test_stage5b_cuda_parity_schemas.py
   - tests/python/test_stage5bb_ignore_policy.py
-  - tests/python/test_stage5c_smoke_build_records.py
-  - tests/python/test_stage5f_synthetic_parity_records.py
-  - tests/python/test_stage5i_gematria_cuda_kernel_preparation.py
-  - tests/python/test_stage5k_score_summary_preflight.py
-  - tests/python/test_stage5n_cli.py
-  - tests/python/test_stage5p_controlled_expansion_candidates.py
-  - tests/python/test_stage5r_expanded_cuda_boundaries.py
-  - tests/python/test_stage5s_score_summary_integration.py
-  - tests/python/test_stage5u_ignore_policy.py
-  - tests/python/test_stage5v_schedule_conformance.py
-  - tests/python/test_stage5x_full_p56_blocker.py
-  - tests/python/test_stage5y_native_parity_report.py
-  - tests/python/test_stage5z_prime_cuda_contract_schemas.py
+  - tests/python/test_stage5bd_cli.py
+  - tests/python/test_stage5bd_schemas.py
+  - tests/python/test_stage5bf_ignore_policy.py
+  - tests/python/test_stage5bi_cli.py
+  - tests/python/test_stage5bj_media_equivalence.py
+  - tests/python/test_stage5bk_iddqd_v2_byte_strings.py
+  - tests/python/test_stage5bk_summary.py
+  - tests/python/test_stage5bm_source_gap_severity_update.py
+  - tests/python/test_stage5bn_guardrails.py
+  - tests/python/test_stage5bo_codex_handoff_policy.py
+  - tests/python/test_stage5bq_ignore_policy.py
+  - tests/python/test_stage5bu_lineage_path_erratum.py
+  - tests/python/test_stage5by_guardrails.py
+  - tests/python/test_stage5c_toolchain_detection.py
+  - tests/python/test_stage5cc_gates.py
+  - tests/python/test_stage5cg_active_lineage_preservation.py
+  - tests/python/test_stage5ci_combined_approval_gate.py
+  - tests/python/test_stage5ck_combined_gate_non_satisfaction.py
+  - tests/python/test_stage5cm_common.py
+  - tests/python/test_stage5co_credential_redaction_policy.py
+  - tests/python/test_stage5cq_common.py
+  - tests/python/test_stage5cs_combined_gate.py
+  - tests/python/test_stage5cs_worker_cap.py
+  - tests/python/test_stage5cu_real_record_blocker.py
+  - tests/python/test_stage5cw_preflight_misuse.py
+  - tests/python/test_stage5cy_preservation.py
+  - tests/python/test_stage5dc_gate_closure.py
+  - tests/python/test_stage5dg_approval_scope.py
+  - tests/python/test_stage5di_ignore_policy.py
+  - tests/python/test_stage5dk_existing_source_crosswalk.py
+  - tests/python/test_stage5dm_cli.py
+  - tests/python/test_stage5dp_common.py
+  - tests/python/test_stage5g_cuda_parity_reporting_schemas.py
+  - tests/python/test_stage5i_gematria_cuda_prep_schemas.py
+  - tests/python/test_stage5l_cli.py
+  - tests/python/test_stage5n_ignore_policy.py
+  - tests/python/test_stage5p_ignore_policy.py
+  - tests/python/test_stage5r_expanded_cuda_run_records.py
+  - tests/python/test_stage5t_benchmark_readiness.py
+  - tests/python/test_stage5u_next_stage_decision.py
+  - tests/python/test_stage5v_token_buffer_conformance.py
+  - tests/python/test_stage5x_ignore_policy.py
+  - tests/python/test_stage5y_prime_native_reporting_schemas.py
+  - tests/python/test_stage5z_scored_experiment_deferral.py
 - shard_id: pytest-shard-09
-  test_file_count: 58
+  test_file_count: 89
   test_files:
   - tests/python/test_legacy_workbook_real_if_present.py
   - tests/python/test_stage0e_corpus_tokenizer.py
@@ -543,21 +791,52 @@ shards:
   - tests/python/test_stage5az_deep_research_readiness.py
   - tests/python/test_stage5b_future_kernel_matrix.py
   - tests/python/test_stage5bb_legacy_pointer_audit.py
-  - tests/python/test_stage5c_toolchain_detection.py
-  - tests/python/test_stage5g_cuda_parity_reporting_cli.py
-  - tests/python/test_stage5i_gematria_cuda_prep_cli.py
-  - tests/python/test_stage5k_solved_fixture_safe_preflight.py
-  - tests/python/test_stage5n_controlled_expansion_gate.py
-  - tests/python/test_stage5p_generated_body_policy.py
-  - tests/python/test_stage5r_expanded_cuda_parity.py
-  - tests/python/test_stage5t_batch_abi_gaps.py
-  - tests/python/test_stage5u_key_schedule_contract.py
-  - tests/python/test_stage5v_score_vector_conformance.py
-  - tests/python/test_stage5x_guardrails.py
-  - tests/python/test_stage5y_next_stage_decision.py
-  - tests/python/test_stage5z_result_store_compatibility.py
+  - tests/python/test_stage5bd_control_family_counters.py
+  - tests/python/test_stage5bd_source_of_truth_docs.py
+  - tests/python/test_stage5bf_liber_primus_historical_artifacts.py
+  - tests/python/test_stage5bi_fandom_media_policy.py
+  - tests/python/test_stage5bj_schemas.py
+  - tests/python/test_stage5bk_iddqd_v2_source_root.py
+  - tests/python/test_stage5bk_token_block_constraint_update.py
+  - tests/python/test_stage5bm_stage5bj_errata_supersession.py
+  - tests/python/test_stage5bn_human_review_pack_manifest.py
+  - tests/python/test_stage5bo_common.py
+  - tests/python/test_stage5bq_preservation_and_guardrails.py
+  - tests/python/test_stage5bu_preserved_lineage_digest_index.py
+  - tests/python/test_stage5by_ignore_policy.py
+  - tests/python/test_stage5ca_activation_preconditions.py
+  - tests/python/test_stage5cc_ignore_policy.py
+  - tests/python/test_stage5cg_active_planning_input_decision_scaffold.py
+  - tests/python/test_stage5ci_common.py
+  - tests/python/test_stage5ck_common.py
+  - tests/python/test_stage5cm_credential_redaction_policy.py
+  - tests/python/test_stage5co_current_missing_requirements.py
+  - tests/python/test_stage5cq_credential_redaction_policy.py
+  - tests/python/test_stage5cs_common.py
+  - tests/python/test_stage5cu_activation_nonauthorization.py
+  - tests/python/test_stage5cu_schemas.py
+  - tests/python/test_stage5cw_real_decision_package_preflight.py
+  - tests/python/test_stage5cy_schemas.py
+  - tests/python/test_stage5dc_governance_scope.py
+  - tests/python/test_stage5dg_cli.py
+  - tests/python/test_stage5di_pivot_readiness.py
+  - tests/python/test_stage5dk_fandom_source_locks.py
+  - tests/python/test_stage5dm_common.py
+  - tests/python/test_stage5dp_ignore_policy.py
+  - tests/python/test_stage5g_device_code_subset_audit.py
+  - tests/python/test_stage5i_gematria_cuda_validation_vectors.py
+  - tests/python/test_stage5l_ignore_policy.py
+  - tests/python/test_stage5n_no_unsolved_guardrail.py
+  - tests/python/test_stage5p_method_status_impact.py
+  - tests/python/test_stage5r_expanded_cuda_schemas.py
+  - tests/python/test_stage5t_cli.py
+  - tests/python/test_stage5u_result_store_compatibility.py
+  - tests/python/test_stage5v_topk_conformance.py
+  - tests/python/test_stage5x_native_execution.py
+  - tests/python/test_stage5y_result_store_integration.py
+  - tests/python/test_stage5z_validation_vectors.py
 - shard_id: pytest-shard-10
-  test_file_count: 58
+  test_file_count: 89
   test_files:
   - tests/python/test_legacy_workbook_synthetic.py
   - tests/python/test_stage0e_gematria_profile.py
@@ -604,21 +883,52 @@ shards:
   - tests/python/test_stage5az_dwh_context.py
   - tests/python/test_stage5b_harness_plan.py
   - tests/python/test_stage5bb_loader_scaffold_policy.py
-  - tests/python/test_stage5d_ignore_policy.py
-  - tests/python/test_stage5g_cuda_parity_reporting_schemas.py
-  - tests/python/test_stage5i_gematria_cuda_prep_schemas.py
-  - tests/python/test_stage5l_cli.py
-  - tests/python/test_stage5n_ignore_policy.py
-  - tests/python/test_stage5p_ignore_policy.py
-  - tests/python/test_stage5r_expanded_cuda_run_records.py
-  - tests/python/test_stage5t_benchmark_readiness.py
-  - tests/python/test_stage5u_next_stage_decision.py
-  - tests/python/test_stage5v_token_buffer_conformance.py
-  - tests/python/test_stage5x_ignore_policy.py
-  - tests/python/test_stage5y_prime_native_reporting_schemas.py
-  - tests/python/test_stage5z_scored_experiment_deferral.py
+  - tests/python/test_stage5bd_dry_run_plan_manifest.py
+  - tests/python/test_stage5bd_validation_evidence_consolidation.py
+  - tests/python/test_stage5bf_local_archive_location.py
+  - tests/python/test_stage5bi_fandom_page_triage.py
+  - tests/python/test_stage5bj_source_gap_update.py
+  - tests/python/test_stage5bk_iddqd_v2_tree_summary.py
+  - tests/python/test_stage5bk_token_block_lineage.py
+  - tests/python/test_stage5bm_stage5bl_findings_integration.py
+  - tests/python/test_stage5bn_ignore_policy.py
+  - tests/python/test_stage5bo_decision_template_errata.py
+  - tests/python/test_stage5bq_schemas.py
+  - tests/python/test_stage5bu_reviewability.py
+  - tests/python/test_stage5by_manifest_supersession_preflight.py
+  - tests/python/test_stage5ca_active_lineage_preservation.py
+  - tests/python/test_stage5cc_reviewability.py
+  - tests/python/test_stage5cg_cli.py
+  - tests/python/test_stage5ci_deep_research_acceptance_template.py
+  - tests/python/test_stage5ck_deep_research_acceptance_fixtures.py
+  - tests/python/test_stage5cm_end_to_end_readiness_boundary.py
+  - tests/python/test_stage5co_ignore_policy.py
+  - tests/python/test_stage5cq_handoff_restoration.py
+  - tests/python/test_stage5cs_credential_redaction_policy.py
+  - tests/python/test_stage5cu_active_lineage_preservation.py
+  - tests/python/test_stage5cu_stage5bd_preservation.py
+  - tests/python/test_stage5cw_real_record_blocker.py
+  - tests/python/test_stage5cy_stage5cx_findings.py
+  - tests/python/test_stage5dc_handoff.py
+  - tests/python/test_stage5dg_common.py
+  - tests/python/test_stage5di_preservation.py
+  - tests/python/test_stage5dk_gate_closure.py
+  - tests/python/test_stage5dm_ignore_policy.py
+  - tests/python/test_stage5dp_records.py
+  - tests/python/test_stage5g_ignore_policy.py
+  - tests/python/test_stage5i_ignore_policy.py
+  - tests/python/test_stage5l_native_parity.py
+  - tests/python/test_stage5n_parity_report.py
+  - tests/python/test_stage5p_result_store_integration_records.py
+  - tests/python/test_stage5r_ignore_policy.py
+  - tests/python/test_stage5t_cuda_parity_matrix.py
+  - tests/python/test_stage5u_score_vector_contract.py
+  - tests/python/test_stage5w_candidate_batch_mapping.py
+  - tests/python/test_stage5x_native_parity_records.py
+  - tests/python/test_stage5y_score_summary_integration.py
+  - tests/python/test_transcript_sources_rtkd_synthetic.py
 - shard_id: pytest-shard-11
-  test_file_count: 58
+  test_file_count: 89
   test_files:
   - tests/python/test_page_boundary_inference_synthetic.py
   - tests/python/test_stage0e_glyph_variant_profile.py
@@ -665,21 +975,52 @@ shards:
   - tests/python/test_stage5az_family_id_uniqueness_audit.py
   - tests/python/test_stage5b_ignore_policy.py
   - tests/python/test_stage5bb_manifest_precedence_policy.py
-  - tests/python/test_stage5d_native_cpu_cli.py
-  - tests/python/test_stage5g_device_code_subset_audit.py
-  - tests/python/test_stage5i_gematria_cuda_validation_vectors.py
-  - tests/python/test_stage5l_ignore_policy.py
-  - tests/python/test_stage5n_no_unsolved_guardrail.py
-  - tests/python/test_stage5p_method_status_impact.py
-  - tests/python/test_stage5r_expanded_cuda_schemas.py
-  - tests/python/test_stage5t_cli.py
-  - tests/python/test_stage5u_result_store_compatibility.py
-  - tests/python/test_stage5v_topk_conformance.py
-  - tests/python/test_stage5x_native_execution.py
-  - tests/python/test_stage5y_result_store_integration.py
-  - tests/python/test_stage5z_validation_vectors.py
+  - tests/python/test_stage5bd_dry_run_policy.py
+  - tests/python/test_stage5bf_annual_route_inventory.py
+  - tests/python/test_stage5bf_magic_square_artifacts.py
+  - tests/python/test_stage5bi_guardrails.py
+  - tests/python/test_stage5bj_summary.py
+  - tests/python/test_stage5bk_ignore_policy.py
+  - tests/python/test_stage5bk_transcription_source_lock.py
+  - tests/python/test_stage5bm_string4_ambiguity_coverage.py
+  - tests/python/test_stage5bn_next_stage_decision.py
+  - tests/python/test_stage5bo_errata_option_universe.py
+  - tests/python/test_stage5bs_cli.py
+  - tests/python/test_stage5bu_schemas.py
+  - tests/python/test_stage5by_no_active_ingestion.py
+  - tests/python/test_stage5ca_citation_contract.py
+  - tests/python/test_stage5cc_schemas.py
+  - tests/python/test_stage5cg_combined_approval_gate.py
+  - tests/python/test_stage5ci_ignore_policy.py
+  - tests/python/test_stage5ck_fixture_isolation.py
+  - tests/python/test_stage5cm_fixture_real_boundary.py
+  - tests/python/test_stage5co_no_active_no_byte_no_execution.py
+  - tests/python/test_stage5cq_ignore_policy.py
+  - tests/python/test_stage5cs_decision_options.py
+  - tests/python/test_stage5cu_cli.py
+  - tests/python/test_stage5cu_stage5ct_findings.py
+  - tests/python/test_stage5cw_schemas.py
+  - tests/python/test_stage5d_ignore_policy.py
+  - tests/python/test_stage5dc_preservation.py
+  - tests/python/test_stage5dg_findings.py
+  - tests/python/test_stage5di_route_candidates.py
+  - tests/python/test_stage5dk_handoff.py
+  - tests/python/test_stage5dm_records.py
+  - tests/python/test_stage5dp_schemas.py
+  - tests/python/test_stage5g_shift_score_parity_report.py
+  - tests/python/test_stage5j_device_code_subset.py
+  - tests/python/test_stage5l_output_hash_contract.py
+  - tests/python/test_stage5n_result_store_preflight.py
+  - tests/python/test_stage5p_result_store_integration_schemas.py
+  - tests/python/test_stage5r_result_store_preflight.py
+  - tests/python/test_stage5t_cuda_solved_family_schemas.py
+  - tests/python/test_stage5u_stream_schedule_contract.py
+  - tests/python/test_stage5w_cli.py
+  - tests/python/test_stage5x_next_stage_decision.py
+  - tests/python/test_stage5y_scored_experiment_readiness.py
+  - tests/python/test_transcript_sources_scream314_synthetic.py
 - shard_id: pytest-shard-12
-  test_file_count: 58
+  test_file_count: 88
   test_files:
   - tests/python/test_pastebin_transcript_alignment_synthetic.py
   - tests/python/test_stage0e_real_if_present.py
@@ -726,21 +1067,51 @@ shards:
   - tests/python/test_stage5az_family_taxonomy_membership_policy.py
   - tests/python/test_stage5b_parity_fixture_builder.py
   - tests/python/test_stage5bb_manifest_reference_validation.py
-  - tests/python/test_stage5d_native_cpu_schemas.py
-  - tests/python/test_stage5g_ignore_policy.py
-  - tests/python/test_stage5i_ignore_policy.py
-  - tests/python/test_stage5l_native_parity.py
-  - tests/python/test_stage5n_parity_report.py
-  - tests/python/test_stage5p_result_store_integration_records.py
-  - tests/python/test_stage5r_ignore_policy.py
-  - tests/python/test_stage5t_cuda_parity_matrix.py
-  - tests/python/test_stage5u_score_vector_contract.py
-  - tests/python/test_stage5w_candidate_batch_mapping.py
-  - tests/python/test_stage5x_native_parity_records.py
-  - tests/python/test_stage5y_score_summary_integration.py
-  - tests/python/test_transcript_sources_rtkd_synthetic.py
+  - tests/python/test_stage5bd_dry_run_report_schema.py
+  - tests/python/test_stage5bf_archive_inventory_summary.py
+  - tests/python/test_stage5bf_network_byte_channel_artifacts.py
+  - tests/python/test_stage5bi_ignore_policy.py
+  - tests/python/test_stage5bj_token_block_lineage.py
+  - tests/python/test_stage5bk_liber_primus_transcription_constraints.py
+  - tests/python/test_stage5bk_translation_key_lineage.py
+  - tests/python/test_stage5bm_string4_planning_constraint.py
+  - tests/python/test_stage5bn_option_gap_audit.py
+  - tests/python/test_stage5bo_guardrails.py
+  - tests/python/test_stage5bs_common.py
+  - tests/python/test_stage5bw_cli.py
+  - tests/python/test_stage5by_record_family_equivalence.py
+  - tests/python/test_stage5ca_cli.py
+  - tests/python/test_stage5ce_active_lineage_preservation.py
+  - tests/python/test_stage5cg_common.py
+  - tests/python/test_stage5ci_negative_validation_contract.py
+  - tests/python/test_stage5ck_ignore_policy.py
+  - tests/python/test_stage5cm_ignore_policy.py
+  - tests/python/test_stage5co_prior_stage_preservation.py
+  - tests/python/test_stage5cq_no_active_no_byte_no_execution.py
+  - tests/python/test_stage5cs_handoff_continuity.py
+  - tests/python/test_stage5cu_combined_gate.py
+  - tests/python/test_stage5cu_worker_cap.py
+  - tests/python/test_stage5cw_stage5bd_preservation.py
+  - tests/python/test_stage5d_native_cpu_cli.py
+  - tests/python/test_stage5dc_schemas.py
+  - tests/python/test_stage5dg_gate_closure.py
+  - tests/python/test_stage5di_schemas.py
+  - tests/python/test_stage5dk_no_raw_body_commit.py
+  - tests/python/test_stage5dm_schemas.py
+  - tests/python/test_stage5e_cuda_kernel_contract_cli.py
+  - tests/python/test_stage5g_solved_fixture_preflight.py
+  - tests/python/test_stage5j_gematria_cuda_kernel_cli.py
+  - tests/python/test_stage5l_score_summary_shape.py
+  - tests/python/test_stage5n_solved_fixture_cuda_reporting_schemas.py
+  - tests/python/test_stage5p_score_summary_integration.py
+  - tests/python/test_stage5r_score_summary_preflight.py
+  - tests/python/test_stage5t_ignore_policy.py
+  - tests/python/test_stage5u_token_buffer_contract.py
+  - tests/python/test_stage5w_guardrails.py
+  - tests/python/test_stage5x_prime_minus_one_schemas.py
+  - tests/python/test_stage5z_buffer_contract.py
 - shard_id: pytest-shard-13
-  test_file_count: 58
+  test_file_count: 88
   test_files:
   - tests/python/test_paths.py
   - tests/python/test_stage0e_separator_grammar.py
@@ -787,21 +1158,51 @@ shards:
   - tests/python/test_stage5az_guardrails.py
   - tests/python/test_stage5bb_active_manifest_registry.py
   - tests/python/test_stage5bb_next_stage_decision.py
-  - tests/python/test_stage5d_native_cpu_validation.py
-  - tests/python/test_stage5g_shift_score_parity_report.py
-  - tests/python/test_stage5j_device_code_subset.py
-  - tests/python/test_stage5l_output_hash_contract.py
-  - tests/python/test_stage5n_result_store_preflight.py
-  - tests/python/test_stage5p_result_store_integration_schemas.py
-  - tests/python/test_stage5r_result_store_preflight.py
-  - tests/python/test_stage5t_cuda_solved_family_schemas.py
-  - tests/python/test_stage5u_stream_schedule_contract.py
-  - tests/python/test_stage5w_cli.py
-  - tests/python/test_stage5x_next_stage_decision.py
-  - tests/python/test_stage5y_scored_experiment_readiness.py
-  - tests/python/test_transcript_sources_scream314_synthetic.py
+  - tests/python/test_stage5bd_dwh_context.py
+  - tests/python/test_stage5bf_archive_tree_summary.py
+  - tests/python/test_stage5bf_next_stage_decision.py
+  - tests/python/test_stage5bi_item_source_lock_candidates.py
+  - tests/python/test_stage5bk_authenticity_gate.py
+  - tests/python/test_stage5bk_network_byte_constraints.py
+  - tests/python/test_stage5bm_cli.py
+  - tests/python/test_stage5bm_string4_primary60_inverse_policy.py
+  - tests/python/test_stage5bn_planning_constraint_update.py
+  - tests/python/test_stage5bo_ignore_policy.py
+  - tests/python/test_stage5bs_gate_and_citation.py
+  - tests/python/test_stage5bw_common.py
+  - tests/python/test_stage5by_reviewability.py
+  - tests/python/test_stage5ca_common.py
+  - tests/python/test_stage5ce_approval_gate.py
+  - tests/python/test_stage5cg_deep_research_decision_scaffold.py
+  - tests/python/test_stage5ci_no_byte_no_execution_gates.py
+  - tests/python/test_stage5ck_negative_validation_matrix.py
+  - tests/python/test_stage5cm_real_approval_readiness.py
+  - tests/python/test_stage5co_real_deep_research_readiness.py
+  - tests/python/test_stage5cq_operator_decision_package.py
+  - tests/python/test_stage5cs_ignore_policy.py
+  - tests/python/test_stage5cu_common.py
+  - tests/python/test_stage5cw_activation_nonauthorization.py
+  - tests/python/test_stage5cw_stage5cs_preservation.py
+  - tests/python/test_stage5d_native_cpu_schemas.py
+  - tests/python/test_stage5dc_selected_option.py
+  - tests/python/test_stage5dg_governance_scope.py
+  - tests/python/test_stage5di_source_locks.py
+  - tests/python/test_stage5dk_page56_hash_contract.py
+  - tests/python/test_stage5dn_cli.py
+  - tests/python/test_stage5e_cuda_kernel_contract_schemas.py
+  - tests/python/test_stage5h_gematria_shift_contract_cli.py
+  - tests/python/test_stage5j_gematria_cuda_kernel_records.py
+  - tests/python/test_stage5l_solved_fixture_mapping_schemas.py
+  - tests/python/test_stage5o_cli.py
+  - tests/python/test_stage5q_candidate_inventory.py
+  - tests/python/test_stage5s_boundary_review.py
+  - tests/python/test_stage5t_kernel_readiness.py
+  - tests/python/test_stage5u_topk_output_contract.py
+  - tests/python/test_stage5w_ignore_policy.py
+  - tests/python/test_stage5x_result_store_preflight.py
+  - tests/python/test_stage5z_cli.py
 - shard_id: pytest-shard-14
-  test_file_count: 57
+  test_file_count: 88
   test_files:
   - tests/python/test_stage0d_cli.py
   - tests/python/test_stage1a_cli.py
@@ -848,20 +1249,51 @@ shards:
   - tests/python/test_stage5az_ignore_policy.py
   - tests/python/test_stage5bb_branch_counter_summary.py
   - tests/python/test_stage5bb_no_execution_proof.py
-  - tests/python/test_stage5e_cuda_kernel_contract_cli.py
-  - tests/python/test_stage5g_solved_fixture_preflight.py
-  - tests/python/test_stage5j_gematria_cuda_kernel_cli.py
-  - tests/python/test_stage5l_score_summary_shape.py
-  - tests/python/test_stage5n_solved_fixture_cuda_reporting_schemas.py
-  - tests/python/test_stage5p_score_summary_integration.py
-  - tests/python/test_stage5r_score_summary_preflight.py
-  - tests/python/test_stage5t_ignore_policy.py
-  - tests/python/test_stage5u_token_buffer_contract.py
-  - tests/python/test_stage5w_guardrails.py
-  - tests/python/test_stage5x_prime_minus_one_schemas.py
-  - tests/python/test_stage5z_buffer_contract.py
+  - tests/python/test_stage5bd_execution_gate_dry_run_validation.py
+  - tests/python/test_stage5bf_artifact_family_taxonomy.py
+  - tests/python/test_stage5bf_onion_route_artifacts.py
+  - tests/python/test_stage5bi_spreadsheet_source_lock.py
+  - tests/python/test_stage5bk_book_code_constraints.py
+  - tests/python/test_stage5bk_next_stage_decision.py
+  - tests/python/test_stage5bm_codex_handoff_policy.py
+  - tests/python/test_stage5bm_string4_source_restatement.py
+  - tests/python/test_stage5bn_proposed_option_addendum.py
+  - tests/python/test_stage5bo_schemas.py
+  - tests/python/test_stage5bs_ignore_policy.py
+  - tests/python/test_stage5bw_future_runner_citation.py
+  - tests/python/test_stage5by_schemas.py
+  - tests/python/test_stage5ca_fail_closed_triggers.py
+  - tests/python/test_stage5ce_citation_negative_hardening.py
+  - tests/python/test_stage5cg_ignore_policy.py
+  - tests/python/test_stage5ci_operator_approval_template.py
+  - tests/python/test_stage5ck_no_byte_no_execution_gates.py
+  - tests/python/test_stage5cm_schemas.py
+  - tests/python/test_stage5co_real_operator_readiness.py
+  - tests/python/test_stage5cq_prior_stage_preservation.py
+  - tests/python/test_stage5cs_no_active_no_byte_no_execution.py
+  - tests/python/test_stage5cu_credential_redaction_policy.py
+  - tests/python/test_stage5cw_active_lineage_preservation.py
+  - tests/python/test_stage5cw_stage5cu_preservation.py
+  - tests/python/test_stage5d_native_cpu_validation.py
+  - tests/python/test_stage5de_cli.py
+  - tests/python/test_stage5dg_handoff.py
+  - tests/python/test_stage5dj_cli.py
+  - tests/python/test_stage5dk_pivot_readiness.py
+  - tests/python/test_stage5dn_common.py
+  - tests/python/test_stage5e_first_kernel_selection.py
+  - tests/python/test_stage5h_gematria_shift_contract_records.py
+  - tests/python/test_stage5j_gematria_cuda_kernel_schemas.py
+  - tests/python/test_stage5l_token_mapping.py
+  - tests/python/test_stage5o_expansion_decision.py
+  - tests/python/test_stage5q_cli.py
+  - tests/python/test_stage5s_cli.py
+  - tests/python/test_stage5t_next_stage_decision.py
+  - tests/python/test_stage5u_transform_parameter_contract.py
+  - tests/python/test_stage5w_native_parity_preparation.py
+  - tests/python/test_stage5x_score_summary_preflight.py
+  - tests/python/test_stage5z_full_p56_blocker.py
 - shard_id: pytest-shard-15
-  test_file_count: 57
+  test_file_count: 88
   test_files:
   - tests/python/test_stage0d_followup_boundary_audit.py
   - tests/python/test_stage1a_direct_translation_decoder.py
@@ -908,20 +1340,51 @@ shards:
   - tests/python/test_stage5az_manifest_reference_audit.py
   - tests/python/test_stage5bb_branch_eligibility_reference_validation.py
   - tests/python/test_stage5bb_result_schema_fixture_policy.py
-  - tests/python/test_stage5e_cuda_kernel_contract_schemas.py
-  - tests/python/test_stage5h_gematria_shift_contract_cli.py
-  - tests/python/test_stage5j_gematria_cuda_kernel_records.py
-  - tests/python/test_stage5l_solved_fixture_mapping_schemas.py
-  - tests/python/test_stage5o_cli.py
-  - tests/python/test_stage5q_candidate_inventory.py
-  - tests/python/test_stage5s_boundary_review.py
-  - tests/python/test_stage5t_kernel_readiness.py
-  - tests/python/test_stage5u_topk_output_contract.py
-  - tests/python/test_stage5w_ignore_policy.py
-  - tests/python/test_stage5x_result_store_preflight.py
-  - tests/python/test_stage5z_cli.py
+  - tests/python/test_stage5bd_fixture_dry_run_records.py
+  - tests/python/test_stage5bf_artifact_trust_classifications.py
+  - tests/python/test_stage5bf_openpuff_mp3_candidates.py
+  - tests/python/test_stage5bi_summary.py
+  - tests/python/test_stage5bk_byte_strings_source_lock.py
+  - tests/python/test_stage5bk_numeric_magic_square_constraints.py
+  - tests/python/test_stage5bm_common.py
+  - tests/python/test_stage5bm_string4_stage5ap_mismatch.py
+  - tests/python/test_stage5bn_schemas.py
+  - tests/python/test_stage5bo_source_gap_closure.py
+  - tests/python/test_stage5bs_preservation_and_guardrails.py
+  - tests/python/test_stage5bw_guardrails.py
+  - tests/python/test_stage5by_sidecar_scaffold.py
+  - tests/python/test_stage5ca_ignore_policy.py
+  - tests/python/test_stage5ce_cli.py
+  - tests/python/test_stage5cg_no_byte_no_execution_gates.py
+  - tests/python/test_stage5ci_reviewability.py
+  - tests/python/test_stage5ck_operator_approval_fixtures.py
+  - tests/python/test_stage5cm_sidecar_gates.py
+  - tests/python/test_stage5co_real_record_blocker.py
+  - tests/python/test_stage5cq_real_record_blocker.py
+  - tests/python/test_stage5cs_operator_decision_readiness.py
+  - tests/python/test_stage5cu_decision_option_negative_fixtures.py
+  - tests/python/test_stage5cw_cli.py
+  - tests/python/test_stage5cw_stage5cv_findings.py
+  - tests/python/test_stage5da_cli.py
+  - tests/python/test_stage5de_common.py
+  - tests/python/test_stage5dg_ignore_policy.py
+  - tests/python/test_stage5dj_common.py
+  - tests/python/test_stage5dk_preservation.py
+  - tests/python/test_stage5dn_ignore_policy.py
+  - tests/python/test_stage5e_ignore_policy.py
+  - tests/python/test_stage5h_gematria_shift_contract_schemas.py
+  - tests/python/test_stage5j_gematria_cuda_synthetic_parity.py
+  - tests/python/test_stage5m_cli.py
+  - tests/python/test_stage5o_ignore_policy.py
+  - tests/python/test_stage5q_expansion_candidate_mapping_schemas.py
+  - tests/python/test_stage5s_expanded_result_store_schemas.py
+  - tests/python/test_stage5t_no_unsolved_guardrail.py
+  - tests/python/test_stage5v_cli.py
+  - tests/python/test_stage5w_next_stage_decision.py
+  - tests/python/test_stage5y_cli.py
+  - tests/python/test_stage5z_future_parity_plan.py
 - shard_id: pytest-shard-16
-  test_file_count: 57
+  test_file_count: 88
   test_files:
   - tests/python/test_stage0d_followup_cli.py
   - tests/python/test_stage1a_fixture_schema.py
@@ -968,15 +1431,46 @@ shards:
   - tests/python/test_stage5az_next_stage_decision.py
   - tests/python/test_stage5bb_cli.py
   - tests/python/test_stage5bb_result_schemas.py
-  - tests/python/test_stage5e_first_kernel_selection.py
-  - tests/python/test_stage5h_gematria_shift_contract_records.py
-  - tests/python/test_stage5j_gematria_cuda_kernel_schemas.py
-  - tests/python/test_stage5l_token_mapping.py
-  - tests/python/test_stage5o_expansion_decision.py
-  - tests/python/test_stage5q_cli.py
-  - tests/python/test_stage5s_cli.py
-  - tests/python/test_stage5t_next_stage_decision.py
-  - tests/python/test_stage5u_transform_parameter_contract.py
-  - tests/python/test_stage5w_native_parity_preparation.py
-  - tests/python/test_stage5x_score_summary_preflight.py
-  - tests/python/test_stage5z_full_p56_blocker.py
+  - tests/python/test_stage5bd_fixture_result_examples.py
+  - tests/python/test_stage5bf_book_code_artifacts.py
+  - tests/python/test_stage5bf_outguess_positive_control_candidates.py
+  - tests/python/test_stage5bi_token_block_external_context.py
+  - tests/python/test_stage5bk_cli.py
+  - tests/python/test_stage5bk_page49_string4_crosswalk.py
+  - tests/python/test_stage5bm_dwh_quarantine.py
+  - tests/python/test_stage5bm_string4_stage5aw_branch_membership.py
+  - tests/python/test_stage5bn_source_evidence.py
+  - tests/python/test_stage5bo_stage5bn_addendum_integration.py
+  - tests/python/test_stage5bs_reviewability.py
+  - tests/python/test_stage5bw_lineage_preservation.py
+  - tests/python/test_stage5by_source_digest_uniqueness.py
+  - tests/python/test_stage5ca_manifest_supersession_contract.py
+  - tests/python/test_stage5ce_common.py
+  - tests/python/test_stage5cg_operator_decision_scaffold.py
+  - tests/python/test_stage5ci_schemas.py
+  - tests/python/test_stage5ck_reviewability.py
+  - tests/python/test_stage5cm_stage5bd_preservation.py
+  - tests/python/test_stage5co_schemas.py
+  - tests/python/test_stage5cq_schemas.py
+  - tests/python/test_stage5cs_options_nonselection.py
+  - tests/python/test_stage5cu_decision_options_preservation.py
+  - tests/python/test_stage5cw_combined_gate.py
+  - tests/python/test_stage5cw_worker_cap.py
+  - tests/python/test_stage5da_common.py
+  - tests/python/test_stage5de_findings.py
+  - tests/python/test_stage5dg_nonactivation.py
+  - tests/python/test_stage5dj_ignore_policy.py
+  - tests/python/test_stage5dk_schemas.py
+  - tests/python/test_stage5dn_records.py
+  - tests/python/test_stage5e_implementation_readiness.py
+  - tests/python/test_stage5h_ignore_policy.py
+  - tests/python/test_stage5j_ignore_policy.py
+  - tests/python/test_stage5m_ignore_policy.py
+  - tests/python/test_stage5o_repeat_parity.py
+  - tests/python/test_stage5q_expansion_gate.py
+  - tests/python/test_stage5s_generated_body_policy.py
+  - tests/python/test_stage5t_solved_family_inventory.py
+  - tests/python/test_stage5v_conformance_fixtures.py
+  - tests/python/test_stage5w_prime_minus_one_schemas.py
+  - tests/python/test_stage5y_cuda_contract_readiness.py
+  - tests/python/test_stage5z_host_runner_contract.py

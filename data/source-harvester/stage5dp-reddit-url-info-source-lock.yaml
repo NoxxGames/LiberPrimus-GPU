@@ -1,0 +1,253 @@
+record_type: stage5dp_reddit_url_info_source_lock
+stage_id: stage-5dp
+stage_title: Stage 5DP - New Reddit Mayfly / dot / cover / ISO source-lock addendum,
+  without execution
+prompt_type: codex_metadata_implementation
+metadata_only: true
+source_lock_only: true
+solve_claim: false
+execution_allowed: false
+canonical_codex_handoff_root: codex-output
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+ai_ml_interpretation_performed: false
+alberti_cipher_execution_performed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+combined_approval_gate_satisfied_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+html_tool_executed_now: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+mayfly_route_extraction_performed_now: false
+mp3stego_execution_performed: false
+network_target_validation_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_readiness_decision_created_now: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+pivot_target_selected_now: false
+probability_claim_accepted_as_validated: false
+real_byte_stream_generated: false
+route_extraction_performed_now: false
+scoring_performed: false
+source_browser_gui_implemented_now: false
+spectrogram_stego_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_materialisation_performed: false
+website_expansion_performed: false
+url_info_locks:
+- source_folder: MayFlyInvestigation
+  file_name: url.txt
+  present: true
+  relative_path: third_party/RedditStuff/MayFlyInvestigation/url.txt
+  sha256: 0ad71e6e62f917debfb157ce8e65d423e1b4d48da6ba84bc405ba025d5d08206
+  line_count: 1
+  raw_text_committed_now: false
+- source_folder: MayFlyInvestigation
+  file_name: info.txt
+  present: true
+  relative_path: third_party/RedditStuff/MayFlyInvestigation/info.txt
+  sha256: 96a0004a786fe4675126c30d5f6d856f382848a6a2fb773c5a528bc4a85826a9
+  line_count: 294
+  raw_text_committed_now: false
+- source_folder: MayFlyInvestigation
+  file_name: messages.txt
+  present: false
+  relative_path: third_party/RedditStuff/MayFlyInvestigation/messages.txt
+  sha256: null
+  line_count: null
+  raw_text_committed_now: false
+- source_folder: DotObservationsFromPages_7_23_56
+  file_name: url.txt
+  present: true
+  relative_path: third_party/RedditStuff/DotObservationsFromPages_7_23_56/url.txt
+  sha256: e0acdabd007660cbd243872eacff78acf92308d7986adada3400a3a77c6b84a7
+  line_count: 1
+  raw_text_committed_now: false
+- source_folder: DotObservationsFromPages_7_23_56
+  file_name: info.txt
+  present: true
+  relative_path: third_party/RedditStuff/DotObservationsFromPages_7_23_56/info.txt
+  sha256: 164e8a8dd00c914d7097469e08cd4b573da02901a946dc92df36103a567fa900
+  line_count: 15
+  raw_text_committed_now: false
+- source_folder: DotObservationsFromPages_7_23_56
+  file_name: messages.txt
+  present: false
+  relative_path: third_party/RedditStuff/DotObservationsFromPages_7_23_56/messages.txt
+  sha256: null
+  line_count: null
+  raw_text_committed_now: false
+- source_folder: Page_33_ThreeDotsObservations
+  file_name: url.txt
+  present: true
+  relative_path: third_party/RedditStuff/Page_33_ThreeDotsObservations/url.txt
+  sha256: 0e04407e7ed7883e5ea7e9a54ed1305f9223314a4ebbf4ac1c25201b5265cead
+  line_count: 1
+  raw_text_committed_now: false
+- source_folder: Page_33_ThreeDotsObservations
+  file_name: info.txt
+  present: true
+  relative_path: third_party/RedditStuff/Page_33_ThreeDotsObservations/info.txt
+  sha256: 0fcad72a784c6fc1d69c99cf03e044dd410ea5b6d582c33c16918d028aa0888f
+  line_count: 75
+  raw_text_committed_now: false
+- source_folder: Page_33_ThreeDotsObservations
+  file_name: messages.txt
+  present: false
+  relative_path: third_party/RedditStuff/Page_33_ThreeDotsObservations/messages.txt
+  sha256: null
+  line_count: null
+  raw_text_committed_now: false
+- source_folder: FrontCoverMeasurementsOf1033
+  file_name: url.txt
+  present: true
+  relative_path: third_party/RedditStuff/FrontCoverMeasurementsOf1033/url.txt
+  sha256: e46bcf6e3fd549f194408de6a606ff60f59b24f9e92e478a0756741d3a5f4ca5
+  line_count: 1
+  raw_text_committed_now: false
+- source_folder: FrontCoverMeasurementsOf1033
+  file_name: info.txt
+  present: true
+  relative_path: third_party/RedditStuff/FrontCoverMeasurementsOf1033/info.txt
+  sha256: b4c59645b6809a1581a6004d7ce819f2c4093dc874eec5000067b810e6327310
+  line_count: 19
+  raw_text_committed_now: false
+- source_folder: FrontCoverMeasurementsOf1033
+  file_name: messages.txt
+  present: false
+  relative_path: third_party/RedditStuff/FrontCoverMeasurementsOf1033/messages.txt
+  sha256: null
+  line_count: null
+  raw_text_committed_now: false
+- source_folder: DataDirectoryFromTheISO
+  file_name: url.txt
+  present: true
+  relative_path: third_party/RedditStuff/DataDirectoryFromTheISO/url.txt
+  sha256: 98e21de38b5e32dfca4cffbcbb977701997dae4cb74a368d38e25e8aea687311
+  line_count: 1
+  raw_text_committed_now: false
+- source_folder: DataDirectoryFromTheISO
+  file_name: info.txt
+  present: true
+  relative_path: third_party/RedditStuff/DataDirectoryFromTheISO/info.txt
+  sha256: 59de56b212709cf8659182b296579e560a02eeed46cc1d68bc2136878f48835f
+  line_count: 88
+  raw_text_committed_now: false
+- source_folder: DataDirectoryFromTheISO
+  file_name: messages.txt
+  present: false
+  relative_path: third_party/RedditStuff/DataDirectoryFromTheISO/messages.txt
+  sha256: null
+  line_count: null
+  raw_text_committed_now: false
+- source_folder: FindsFromProblems_2012_puzzle
+  file_name: url.txt
+  present: true
+  relative_path: third_party/RedditStuff/FindsFromProblems_2012_puzzle/url.txt
+  sha256: 1f43284b0eadd5ea23b5c853c39767517f922622efc7e055ea45bbdb231effa0
+  line_count: 1
+  raw_text_committed_now: false
+- source_folder: FindsFromProblems_2012_puzzle
+  file_name: info.txt
+  present: true
+  relative_path: third_party/RedditStuff/FindsFromProblems_2012_puzzle/info.txt
+  sha256: b1d06c1777058a2eef2ce9046c6779516168728c4538bdd9779c48598d8515d2
+  line_count: 46
+  raw_text_committed_now: false
+- source_folder: FindsFromProblems_2012_puzzle
+  file_name: messages.txt
+  present: false
+  relative_path: third_party/RedditStuff/FindsFromProblems_2012_puzzle/messages.txt
+  sha256: null
+  line_count: null
+  raw_text_committed_now: false
+- source_folder: FibonacciSequence
+  file_name: url.txt
+  present: true
+  relative_path: third_party/RedditStuff/FibonacciSequence/url.txt
+  sha256: 3179d28bc03a9603db779bc897ac2da62b05a8ff07d78d8232cd9a1d4a2450f3
+  line_count: 1
+  raw_text_committed_now: false
+- source_folder: FibonacciSequence
+  file_name: info.txt
+  present: false
+  relative_path: third_party/RedditStuff/FibonacciSequence/info.txt
+  sha256: null
+  line_count: null
+  raw_text_committed_now: false
+- source_folder: FibonacciSequence
+  file_name: messages.txt
+  present: false
+  relative_path: third_party/RedditStuff/FibonacciSequence/messages.txt
+  sha256: null
+  line_count: null
+  raw_text_committed_now: false
+- source_folder: Layered_primes
+  file_name: url.txt
+  present: true
+  relative_path: third_party/RedditStuff/Layered_primes/url.txt
+  sha256: d71bc4d772569bc06e0eaae7ffc448399a7f436e7f58935bcf92b638cd523957
+  line_count: 1
+  raw_text_committed_now: false
+- source_folder: Layered_primes
+  file_name: info.txt
+  present: false
+  relative_path: third_party/RedditStuff/Layered_primes/info.txt
+  sha256: null
+  line_count: null
+  raw_text_committed_now: false
+- source_folder: Layered_primes
+  file_name: messages.txt
+  present: false
+  relative_path: third_party/RedditStuff/Layered_primes/messages.txt
+  sha256: null
+  line_count: null
+  raw_text_committed_now: false
+- source_folder: PrimeGPSums
+  file_name: url.txt
+  present: true
+  relative_path: third_party/RedditStuff/PrimeGPSums/url.txt
+  sha256: cc423e1deb29cc715a0813ac8a69a300a7563dccd49acb21641809c1fc2ce415
+  line_count: 1
+  raw_text_committed_now: false
+- source_folder: PrimeGPSums
+  file_name: info.txt
+  present: false
+  relative_path: third_party/RedditStuff/PrimeGPSums/info.txt
+  sha256: null
+  line_count: null
+  raw_text_committed_now: false
+- source_folder: PrimeGPSums
+  file_name: messages.txt
+  present: false
+  relative_path: third_party/RedditStuff/PrimeGPSums/messages.txt
+  sha256: null
+  line_count: null
+  raw_text_committed_now: false
+lock_count: 27
+present_count: 15
+raw_text_committed_now: false

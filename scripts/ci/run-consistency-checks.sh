@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5DN" \
-    --expected-next-stage "Stage 5DO" \
+    --expected-latest-stage "Stage 5DP" \
+    --expected-next-stage "Stage 5DQ" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5DN" \
-    --expected-next-stage "Stage 5DO" \
+    --expected-latest-stage "Stage 5DP" \
+    --expected-next-stage "Stage 5DQ" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DN",
+            expected_latest_stage="Stage 5DP",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DN",
+            "expected_latest_stage": "Stage 5DP",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3313,6 +3313,34 @@ git check-ignore -q "third_party/PotentialHint-3301-on-Page32/page-32.jpg"
 git check-ignore -q "third_party/PotentialHint-3301-on-Page32/prime_color_frequencies.txt"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5DO" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5DP New Reddit Mayfly / dot / cover / ISO source-lock records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5dp-new-reddit-source-lock
+"$python_bin" -m libreprimus.cli token-block validate-stage5dp-mayfly-source-lock
+"$python_bin" -m libreprimus.cli token-block validate-stage5dp-mayfly-workbook-summary
+"$python_bin" -m libreprimus.cli token-block validate-stage5dp-dot-observations
+"$python_bin" -m libreprimus.cli token-block validate-stage5dp-front-cover-measurements
+"$python_bin" -m libreprimus.cli token-block validate-stage5dp-iso-and-problems-sources
+"$python_bin" -m libreprimus.cli token-block validate-stage5dp-chatgpt-context-file
+"$python_bin" -m libreprimus.cli token-block validate-stage5dp-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5dp-handoff-continuity
+"$python_bin" -m libreprimus.cli token-block validate-stage5dp
+"$python_bin" -m libreprimus.cli token-block stage5dp-summary
+stage5dp_token_results_root="$(printf '%s/%s/%s/%s' "experiments" "results" "token-block" "stage5dp")"
+git check-ignore -q "$stage5dp_token_results_root/summary.json"
+git check-ignore -q "$stage5dp_token_results_root/new_reddit_source_lock_report.json"
+git check-ignore -q "$stage5dp_token_results_root/mayfly_docx_xlsx_report.json"
+git check-ignore -q "$stage5dp_token_results_root/candidate_report.json"
+git check-ignore -q "$stage5dp_token_results_root/preservation_report.json"
+git check-ignore -q "$stage5dp_token_results_root/warnings.jsonl"
+git check-ignore -q "codex-output/stage5dp-codex-completion.md"
+git check-ignore -q "third_party/RedditStuff/MayFlyInvestigation/The Mayfly.docx"
+git check-ignore -q "third_party/RedditStuff/MayFlyInvestigation/57.jpg Mayfly data.xlsx"
+git check-ignore -q "third_party/RedditStuff/DotObservationsFromPages_7_23_56/dot_observations_from_pages_7_23_56.png"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5DP" >&2
     exit 1
 fi
 

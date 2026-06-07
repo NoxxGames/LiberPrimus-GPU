@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5DP - Lightweight source-lock browser GUI design/build, without puzzle execution.
+Current next prompt: Stage 5DQ - Lightweight source-lock browser GUI implementation, without puzzle execution.
 
-Stage 5DO is complete as metadata-only Discord NumberFacts and pixel-colour source-lock addendum work. It records local NumberFactsCollection and PotentialHint source-lock metadata, two `messages.txt` locks, image-anchor line hashes, pixel-colour table metadata, 15 review-only candidate records, canonical-transcript/image blockers, probability-claim quarantine, Stage 5DG/Stage 5BD/active-lineage preservation, and keeps all execution blocked.
+Stage 5DP is complete as metadata-only New Reddit Mayfly / dot / cover / ISO source-lock addendum work. It records local RedditStuff source-lock metadata, Mayfly docx/xlsx metadata, bounded Mayfly workbook summaries, 23 candidate-only Mayfly/dot/cover/ISO/Problems/crosslink records, ChatGPT context-file facts, Stage 5DO GUI deferral preservation, Stage 5DG/Stage 5BD/active-lineage preservation, and keeps all execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DO Discord NumberFacts and pixel-colour source-lock addendum is complete. It preserves Stage 5DN rather than rerunning it, records 15 review-only candidate records, source-locks local Discord-derived NumberFacts and PotentialHint material as metadata only, quarantines probability claims, preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, preserves Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
+Stage 5DP New Reddit Mayfly / dot / cover / ISO source-lock addendum is complete. It preserves Stage 5DO rather than rerunning it, records 23 candidate-only records, source-locks local RedditStuff Mayfly/dot/front-cover/ISO/Problems material as metadata only, records Mayfly workbook facts without committing raw docx/xlsx content, preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, preserves Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
 
-The next recommended prompt is Stage 5DP - Lightweight source-lock browser GUI design/build, without puzzle execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DQ - Lightweight source-lock browser GUI implementation, without puzzle execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

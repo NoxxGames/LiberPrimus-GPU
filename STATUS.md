@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DO Discord NumberFacts and pixel-colour source-lock addendum is complete.
+Stage 5DP New Reddit Mayfly / dot / cover / ISO source-lock addendum is complete.
 
-Next recommended prompt: Stage 5DP - Lightweight source-lock browser GUI design/build, without puzzle execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DQ - Lightweight source-lock browser GUI implementation, without puzzle execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DP
+
+Stage 5DP source-locks the local ignored `third_party/RedditStuff/` folders as compact metadata only. It represents all six required new Reddit folders plus three extra local folders, source-locks Mayfly docx/xlsx files, URL/info files, images, and supporting documents without committing raw files, and creates 23 candidate-only historical-route/crosslink records.
+
+Local Stage 5DP summary: Reddit source lock created `true`, source folders inventoried `9`, required source folders represented `6`, Mayfly docx locked `true`, Mayfly xlsx locked `true`, candidate records created `23`, Mayfly original grid `958x1092` with ones sum `35210`, Mayfly reduced grid `230x262` with active cells `2033`, weighted grid sum `35210`, weighted block count total `2033`, ChatGPT context file updated `true`, future source-lock browser GUI deferred to Stage 5DQ `true`, pivot target selected `false`, route extraction performed `false`, OCR performed `false`, image forensics performed `false`, execution performed `false`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, parallel worker cap `8`, and next stage `Stage 5DQ`.
+
+Stage 5DP is metadata-only source-lock addendum infrastructure. It does not implement the future source-lock browser GUI, create Deep Research acceptance, satisfy the combined gate, authorize activation, select a pivot target, select active planning input, generate byte streams, run target-class validation, use Tor/network route access, run Mayfly/Page32/triangle route extraction, run OCR, image forensics, AI interpretation, DWH/hash/preimage search, decode, score, run CUDA tooling, benchmark, publish website content, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DO
 

@@ -90,7 +90,7 @@ source_records:
 - path: data/project-state/stage5cq-reviewable-source-digest-index.yaml
   role: stage5cs_reviewable_source
   present: true
-  sha256: d4671361dc5d7dc1f32711f4380981ee12dc022f4da919c41c1ac6ae52049ecc
+  sha256: 1c332a12dd11e7e79ae33a975122cdf1dca889a46294c8ad2f0a246ed2f520bd
 - path: data/project-state/stage5cq-reviewable-stage-marker.yaml
   role: stage5cs_reviewable_source
   present: true
@@ -330,7 +330,7 @@ source_records:
 - path: docs/onboarding/stage5co-real-approval-record-readiness-workflow.md
   role: stage5cs_reviewable_source
   present: true
-  sha256: b6f17d54b9802f85d9caf81b513d32075c0479a5dbe98a75307b2f2388485594
+  sha256: 5e55fb251e8c58b4d84ed0a2a85f9b250978bf476746697bf3af08572bd57da9
 - path: docs/onboarding/stage5cq-operator-decision-package-scaffold-workflow.md
   role: stage5cs_reviewable_source
   present: true

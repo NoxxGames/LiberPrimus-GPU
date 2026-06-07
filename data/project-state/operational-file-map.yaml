@@ -6340,3 +6340,91 @@ records:
   staleness_check_level: historical
   owner_context: codex_agent
   notes: Records implementation scope, metadata-only boundaries, and validation summary.
+- path: data/project-state/stage5dp-summary.yaml
+  category: operational_status_doc
+  purpose: Stage 5DP aggregate summary and next Stage 5DQ routing.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5dp
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records RedditStuff source locks, Mayfly docx/xlsx metadata, bounded workbook facts, candidate-only source-lock records, preserved gates, GUI deferral, and no-execution boundaries.
+- path: data/project-state/stage5dp-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DP project-state record family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dp
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers Stage 5DP summary, Stage 5DO preservation, pivot-readiness update, reviewable validation evidence, reviewability gaps, GUI deferral, and next-stage decision records.
+- path: data/historical-route/stage5dp-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DP historical-route candidate record family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dp
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers Mayfly, dot, Page33, front-cover, ISO, Problems 2012, and umbrella/crosslink candidates as review-only source-lock metadata.
+- path: data/source-harvester/stage5dp-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DP source-harvester New Reddit source-lock family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dp
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers RedditStuff folder inventories, Mayfly docx/xlsx metadata, URL/info locks, and raw-source noncommit proof.
+- path: data/token-block/stage5dp-*.yaml
+  category: operational_status_doc
+  purpose: Stage 5DP preservation and closed-gate record family.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dp
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers Stage 5DG/Stage 5BD/active-lineage preservation and no-active/no-byte/no-execution gates.
+- path: schemas/*/stage5dp-*.schema.json
+  category: schema
+  purpose: Stage 5DP schema family for metadata-only records.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dp
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Covers generated Stage 5DP JSON schemas that enforce no-execution/no-solve guardrails.
+- path: docs/experiments/stage-5dp-new-reddit-source-lock.md
+  category: operational_status_doc
+  purpose: Human-readable Stage 5DP New Reddit source-lock and no-execution documentation.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dp
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents source locks, Mayfly workbook facts, candidate-only records, GUI deferral, no-target-selection boundary, and Stage 5DQ routing.
+- path: docs/development-logs/2026-06-07-stage-5dp-new-reddit-source-lock.md
+  category: historical_log
+  purpose: Stage 5DP implementation and validation log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5dp
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation scope, metadata-only boundaries, and validation summary.
