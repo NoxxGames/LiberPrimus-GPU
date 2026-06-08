@@ -3239,6 +3239,18 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     git check-ignore -q "codex-output/stage5dq-codex-completion.md"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DQ" }
 
+    Write-Host "Validating Stage 5DS expanded Music / Ouroboros / token-static source-lock records"
+    & $Python -m libreprimus.cli token-block validate-stage5ds
+    & $Python -m libreprimus.cli token-block stage5ds-summary
+    & $Python -m libreprimus.cli operator-console validate-source-index
+    & $Python -m libreprimus.cli source-browser validate-index
+    git check-ignore -q "codex-output/stage5ds-codex-completion.md"
+    git check-ignore -q "third_party/CicadaMusic/community-theory/messages.txt"
+    git check-ignore -q "third_party/CicadaMusic/community-theory/761.MP3"
+    git check-ignore -q "third_party/CicadaMusic/community-theory/Interconnectedness.mp3"
+    git check-ignore -q "third_party/CicadaMusic/community-theory/READ ME FIRST - Cicada 3301 Music Guide.pdf"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DS" }
+
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

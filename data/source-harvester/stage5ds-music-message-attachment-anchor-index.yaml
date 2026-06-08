@@ -1,0 +1,417 @@
+record_type: stage5ds_music_message_attachment_anchor_index
+stage_id: stage-5ds
+stage_title: Stage 5DS - Expanded Music / Ouroboros / self-reference / token-block
+  static-context source-lock addendum, without execution
+prompt_type: codex_metadata_implementation
+metadata_only: true
+source_lock_only: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+previous_stage_id: stage-5dr
+previous_stage_final_commit_prompt_value: 9d15b12b3b4b34b2029fbb1ff46544e50eaed762
+actual_starting_commit_observed: afd2e2164903fd5fa34ea9ece9a092660bacc686
+schema: schemas/source-harvester/stage5ds-music-message-attachment-anchor-index-v0.schema.json
+route_extraction_performed_now: false
+activation_authorized_now: false
+website_expansion_performed: false
+active_manifest_registry_updated: false
+machine_code_execution_performed_now: false
+decode_attempt_performed: false
+token_block_variant_byte_streams_generated: false
+openpuff_execution_performed: false
+generated_outputs_committed: false
+raw_files_committed_now: false
+page32_route_extraction_performed_now: false
+disk_cipher_execution_performed_now: false
+combined_approval_gate_satisfied_now: false
+execution_performed: false
+active_ingestion_performed: false
+native_code_execution_performed_now: false
+cuda_execution_performed: false
+branch_enumeration_performed: false
+dwh_hash_search_performed: false
+active_token_block_manifest_changed: false
+token_block_experiment_executed: false
+music_route_extraction_performed_now: false
+hash_preimage_search_performed: false
+spectrogram_stego_performed: false
+page_boundaries_finalized: false
+execution_authorized_now: false
+mayfly_route_extraction_performed_now: false
+target_class_validation_implemented: false
+alberti_html_executed_now: false
+html_tool_executed_now: false
+vm_bytecode_execution_performed_now: false
+decryption_attempt_performed_now: false
+active_planning_input_selected_now: false
+canonical_corpus_active: false
+known_plaintext_attack_performed_now: false
+page56_hash_preimage_tested_now: false
+variant_byte_streams_generated: false
+pivot_target_selected_now: false
+full_cartesian_product_enumerated: false
+network_target_validation_performed_now: false
+hidden_content_image_forensics_performed: false
+real_byte_stream_generated: false
+tor_network_access_performed: false
+probability_claim_accepted_as_validated: false
+target_priority_decision_created_now: false
+ocr_performed: false
+mp3stego_execution_performed: false
+activation_decision_valid_now: false
+byte_stream_generation_authorized_now: false
+active_planning_input_authorized_now: false
+pdf_ocr_or_hidden_content_rendering_performed: false
+variant_materialisation_performed: false
+triangle_route_extraction_performed_now: false
+audio_stego_performed: false
+operator_readiness_decision_created_now: false
+benchmark_performed: false
+semantic_image_interpretation_performed: false
+codex_output_used: false
+image_forensics_performed: false
+midi_route_extraction_performed_now: false
+raw_third_party_files_committed: false
+scoring_performed: false
+direct_music_substitution_executed: false
+source_path: third_party/CicadaMusic/community-theory/messages.txt
+anchor_count: 28
+anchors_with_line_matches: 28
+anchors:
+- file_name: 761.MP3
+  relative_path: third_party/CicadaMusic/community-theory/761.MP3
+  file_sha256: 83008217439110c3b824898af73b99cb2cf0657dda88cb363c3aa34a4ec0a460
+  anchor_terms:
+  - '761'
+  message_line_anchor_present: true
+  message_line_number_one_based: 39
+  message_excerpt: 'CicadaOS ISO file: https://github.com/rtkd/iddqd/blob/master/2013/02/3301.iso
+    761.mp3: https://github.com/rtkd/iddqd/blob/master/2013/02/761.MP3 ID tag:761.mp3T'
+  raw_message_body_committed: false
+- file_name: a first stab at it.png
+  relative_path: third_party/CicadaMusic/community-theory/a first stab at it.png
+  file_sha256: 34e7e3c19d48b6676f8a4371ac5d7332b764eef21b37c0a323eca43c65ee5872
+  anchor_terms:
+  - first
+  - stab
+  message_line_anchor_present: true
+  message_line_number_one_based: 331
+  message_excerpt: Here's a first stab at it
+  raw_message_body_committed: false
+- file_name: audio provided by 3301.png
+  relative_path: third_party/CicadaMusic/community-theory/audio provided by 3301.png
+  file_sha256: 47be03d50558fadbcfdc451d9a576aca29ef8fa696e919bb32efe0c2c9c7ed98
+  anchor_terms:
+  - audio
+  - provided
+  - '3301'
+  message_line_anchor_present: true
+  message_line_number_one_based: 4
+  message_excerpt: As a result of work done by @7he5haman, and many years of feeling
+    there was something more to the music that 3301 included; Interconnectedness and
+    The Instar Em
+  raw_message_body_committed: false
+- file_name: audio provided by 3301_2.png
+  relative_path: third_party/CicadaMusic/community-theory/audio provided by 3301_2.png
+  file_sha256: 87270336fb8367eb8fce91267008b521d6d3b7f4b56322a2ef61ad76da64760e
+  anchor_terms:
+  - audio
+  - provided
+  - '3301'
+  message_line_anchor_present: true
+  message_line_number_one_based: 4
+  message_excerpt: As a result of work done by @7he5haman, and many years of feeling
+    there was something more to the music that 3301 included; Interconnectedness and
+    The Instar Em
+  raw_message_body_committed: false
+- file_name: Augmentation Canon, Instrumentation(10-11-2025).mp3
+  relative_path: third_party/CicadaMusic/community-theory/Augmentation Canon, Instrumentation(10-11-2025).mp3
+  file_sha256: 200ad81a164b581ca74348a9f7949d7d80810b70ba9110733abbef8480067e4a
+  anchor_terms:
+  - augmentation
+  - canon
+  - instrumentation
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 3
+  message_excerpt: "\u2014 20/06/2025 01:49"
+  raw_message_body_committed: false
+- file_name: Canon Goofiness.mp3
+  relative_path: third_party/CicadaMusic/community-theory/Canon Goofiness.mp3
+  file_sha256: c2d3ef05bf12f0404794f157f571ed86edea4cb96c72d28ac8d2601636a54812
+  anchor_terms:
+  - canon
+  - goofiness
+  message_line_anchor_present: true
+  message_line_number_one_based: 14
+  message_excerpt: Interconnectedness Crab Canon (6-18-2025).pdf
+  raw_message_body_committed: false
+- file_name: has a direct substitution.jpg
+  relative_path: third_party/CicadaMusic/community-theory/has a direct substitution.jpg
+  file_sha256: dbdabcfe0ef2a11abc6a320e19b03d6835f65232e4ec20af1f220dce61f95a28
+  anchor_terms:
+  - has
+  - direct
+  - substitution
+  message_line_anchor_present: true
+  message_line_number_one_based: 376
+  message_excerpt: This is from a Renaissance book that has a direct substitution
+  raw_message_body_committed: false
+- file_name: Instar Emergence (6-19-2025).mp3
+  relative_path: third_party/CicadaMusic/community-theory/Instar Emergence (6-19-2025).mp3
+  file_sha256: fc42b8229e56c2189ad634b4895e0e35cac1b97bc11be4a61f8294d5f729a997
+  anchor_terms:
+  - instar
+  - emergence
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 8
+  message_excerpt: Instar Emergence (6-19-2025).pdf
+  raw_message_body_committed: false
+- file_name: Instar Emergence (6-19-2025).pdf
+  relative_path: third_party/CicadaMusic/community-theory/Instar Emergence (6-19-2025).pdf
+  file_sha256: 96c4c0cb3df1464130a86ff6ada4dc37d934692f4369aace01f73643fffad6fe
+  anchor_terms:
+  - instar
+  - emergence
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 8
+  message_excerpt: Instar Emergence (6-19-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnected Crab Canon(10-10-2025).pdf
+  relative_path: third_party/CicadaMusic/community-theory/Interconnected Crab Canon(10-10-2025).pdf
+  file_sha256: 8279b47931cebca024a92950bd96ef6ba88b3c7ea53fd0879cc05c59976b54fb
+  anchor_terms:
+  - interconnected
+  - crab
+  - canon
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 14
+  message_excerpt: Interconnectedness Crab Canon (6-18-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnected Crab Canon(10-11-2025).pdf
+  relative_path: third_party/CicadaMusic/community-theory/Interconnected Crab Canon(10-11-2025).pdf
+  file_sha256: 8454b374ec768d28890fbe08259d6380af447cbd52b8fc13650db1672fe0de51
+  anchor_terms:
+  - interconnected
+  - crab
+  - canon
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 14
+  message_excerpt: Interconnectedness Crab Canon (6-18-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnectedness (10-11-2025).pdf
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness (10-11-2025).pdf
+  file_sha256: 1a904bf7c9f2338c91c1320bf95698be4876bbad3887ca2ed0f5571d8c8af231
+  anchor_terms:
+  - interconnectedness
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 11
+  message_excerpt: Interconnectedness (6-18-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnectedness (6-18-2025).pdf
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness (6-18-2025).pdf
+  file_sha256: 27e874dd322097b495d063f6e218211c06d97bdc5757ef72ab66afd2b35ea423
+  anchor_terms:
+  - interconnectedness
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 11
+  message_excerpt: Interconnectedness (6-18-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnectedness Canon (10-15-2025).mp3
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness Canon
+    (10-15-2025).mp3
+  file_sha256: 88dcb894d4d5aad472076d5cb696d37a7201ad6c61009dcee3a65cd1ef8dbcd0
+  anchor_terms:
+  - interconnectedness
+  - canon
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 14
+  message_excerpt: Interconnectedness Crab Canon (6-18-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnectedness Canon (10-15-2025).pdf
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness Canon
+    (10-15-2025).pdf
+  file_sha256: ae3d2d59e79ee2aee1af814f1a792a7e64ebc933c1464a6145632c7f0567634f
+  anchor_terms:
+  - interconnectedness
+  - canon
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 14
+  message_excerpt: Interconnectedness Crab Canon (6-18-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnectedness Crab Canon (6-18-2025).pdf
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness Crab
+    Canon (6-18-2025).pdf
+  file_sha256: 113eba3da081c15a9c913ca420f6b88bffa7af19cdd75f13674ebedef6605971
+  anchor_terms:
+  - interconnectedness
+  - crab
+  - canon
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 14
+  message_excerpt: Interconnectedness Crab Canon (6-18-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnectedness Crab Canon(10-10-2025).mp3
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness Crab
+    Canon(10-10-2025).mp3
+  file_sha256: fb9706c05f60c922f351f07f3b6dd7e1fcf38bc4608d99cb30d8ec371698ad3a
+  anchor_terms:
+  - interconnectedness
+  - crab
+  - canon
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 14
+  message_excerpt: Interconnectedness Crab Canon (6-18-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnectedness Crab Canon(10-11-2025).mp3
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness Crab
+    Canon(10-11-2025).mp3
+  file_sha256: 2e66c0af184b6f2f28480de500e37ebc2463f8af1557ca9d6d8caa0bfc9c6c6f
+  anchor_terms:
+  - interconnectedness
+  - crab
+  - canon
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 14
+  message_excerpt: Interconnectedness Crab Canon (6-18-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnectedness Crab Canon(6-18-2025).mp3
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness Crab
+    Canon(6-18-2025).mp3
+  file_sha256: d4f1c23a0155565721121e47c43a8ece5aeb254e32e4f83f07a5858337767a62
+  anchor_terms:
+  - interconnectedness
+  - crab
+  - canon
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 14
+  message_excerpt: Interconnectedness Crab Canon (6-18-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnectedness Prime Groups (10-12-2025).pdf
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness Prime
+    Groups (10-12-2025).pdf
+  file_sha256: 2bfaf21e2d4891049fdf5b7daf0938ec2d55e24ddb3c9167dfc7ca77d97bcb70
+  anchor_terms:
+  - interconnectedness
+  - prime
+  - groups
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 1338
+  message_excerpt: Interconnectedness Prime Groups (10-12-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnectedness, Guitar Tab (10-14-2025).pdf
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness, Guitar
+    Tab (10-14-2025).pdf
+  file_sha256: 99b34fb39fe7e4a57ed4eb8be2c6473468abfa99c837a2524ccc97c79135cbe7
+  anchor_terms:
+  - interconnectedness
+  - guitar
+  - tab
+  - '2025'
+  message_line_anchor_present: true
+  message_line_number_one_based: 1580
+  message_excerpt: Interconnectedness, Guitar Tab (10-14-2025).pdf
+  raw_message_body_committed: false
+- file_name: Interconnectedness.mp3
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness.mp3
+  file_sha256: 180e7c27479584a89ae441a36860e32bdeb29b54f33160a44129056b4ace5060
+  anchor_terms:
+  - interconnectedness
+  message_line_anchor_present: true
+  message_line_number_one_based: 4
+  message_excerpt: As a result of work done by @7he5haman, and many years of feeling
+    there was something more to the music that 3301 included; Interconnectedness and
+    The Instar Em
+  raw_message_body_committed: false
+- file_name: Potential Canon, Instar.mp3
+  relative_path: third_party/CicadaMusic/community-theory/Potential Canon, Instar.mp3
+  file_sha256: 241e0fd151519459eb108d93b227fa835e6cf8a654e1b228fd84582b735c32a6
+  anchor_terms:
+  - potential
+  - canon
+  - instar
+  message_line_anchor_present: true
+  message_line_number_one_based: 321
+  message_excerpt: And the fact of a crab canon (and potentially another type in Instar),
+    seems to hint towards there being some way in which we can draw something out.
+  raw_message_body_committed: false
+- file_name: Potential Canon, Instar.pdf
+  relative_path: third_party/CicadaMusic/community-theory/Potential Canon, Instar.pdf
+  file_sha256: c328e022901b0189b318973f023e1db171a61b1c05decce51ff5d67b11b14899
+  anchor_terms:
+  - potential
+  - canon
+  - instar
+  message_line_anchor_present: true
+  message_line_number_one_based: 321
+  message_excerpt: And the fact of a crab canon (and potentially another type in Instar),
+    seems to hint towards there being some way in which we can draw something out.
+  raw_message_body_committed: false
+- file_name: READ ME FIRST - Cicada 3301 Music Guide.pdf
+  relative_path: third_party/CicadaMusic/community-theory/READ ME FIRST - Cicada 3301
+    Music Guide.pdf
+  file_sha256: 4f56832e25a249504ff9d81d94c3064de12c5d9e138bb42fbe7ee97ac6a5101f
+  anchor_terms:
+  - read
+  - first
+  - cicada
+  - '3301'
+  - music
+  - guide
+  message_line_anchor_present: true
+  message_line_number_one_based: 1688
+  message_excerpt: READ ME FIRST - Cicada 3301 Music Guide.pdf
+  raw_message_body_committed: false
+- file_name: some kind of sequence.png
+  relative_path: third_party/CicadaMusic/community-theory/some kind of sequence.png
+  file_sha256: 55036af1c6b85e9f7b7ff89ee6d1152a32c3fdeecf73610d6f4f2b08d812e25f
+  anchor_terms:
+  - some
+  - kind
+  - sequence
+  message_line_anchor_present: true
+  message_line_number_one_based: 1775
+  message_excerpt: "Another idea, I wonder if you could use something similar to this\
+    \ harmony sheet and maybe block out chords/ notes as they are played and maybe\
+    \ it\u2019s like a weird"
+  raw_message_body_committed: false
+- file_name: something fun to speculate.jpg
+  relative_path: third_party/CicadaMusic/community-theory/something fun to speculate.jpg
+  file_sha256: 85a0d1601a87430d43725071221ab16f33fcd32cd03b3dbe7970577e1d347ad2
+  anchor_terms:
+  - something
+  - fun
+  - speculate
+  message_line_anchor_present: true
+  message_line_number_one_based: 1770
+  message_excerpt: Something similar to this but round. This might be a reach but
+    what if we have to grade the music? Does each song pass or fail, after all graded
+    assignments typ
+  raw_message_body_committed: false
+- file_name: very interesting to me.png
+  relative_path: third_party/CicadaMusic/community-theory/very interesting to me.png
+  file_sha256: 24ee68473c197929d9dd09f2dd5ae4e4b26e89ff95605710ff5b19f27b11ad12
+  anchor_terms:
+  - very
+  - interesting
+  message_line_anchor_present: true
+  message_line_number_one_based: 67
+  message_excerpt: This is all very interesting, and I've spent some time every few
+    years to check in and try my intuition that there's something more than meets
+    the eye in the mu
+  raw_message_body_committed: false
+raw_message_body_committed: false

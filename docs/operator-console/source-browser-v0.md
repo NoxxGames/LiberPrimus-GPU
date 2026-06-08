@@ -6,6 +6,8 @@ The Source Browser is not a puzzle runner. It does not run route extraction, OCR
 
 Stage 5DR refines the Source Browser GUI. The detail panel can be hidden or shown from `View -> Show Details Panel` or `Toggle Details`, and renders structured read-only tabs for overview, media/files, number facts, warnings/links, and the raw record preview. A follow-up usability fix moves that detail panel to the right side of the table, keeps the category list/table/details panes resizable, makes row clicks select the full row, wraps detail-panel text without horizontal scrolling, and applies explicit dark tab/scrollbar styling.
 
+Stage 5DS adds loadability coverage for the expanded Music / Ouroboros / token-block static source-lock addendum. The browser loads the new compact metadata as review-only Music, source-lock, candidate, warning, and number-fact entries; it still does not execute audio, open raw files automatically, infer image/text content, or promote candidates to experiment seeds.
+
 Blank table status values are displayed as `unspecified`. This means the source record did not contain `source_status`, `status`, `ready_state`, or `review_state`; it does not mean the record is incomplete, and the GUI does not rewrite source-lock records to invent statuses.
 
 ## Components
@@ -64,4 +66,13 @@ Stage 5DR validates through:
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dr-image-thumbnail-actions
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dr-url-file-actions
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dr-preservation
+```
+
+Stage 5DS validates source-browser loadability through:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5ds
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ds
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ds-source-browser-loadability
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block stage5ds-summary
 ```

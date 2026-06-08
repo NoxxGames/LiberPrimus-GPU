@@ -1,0 +1,213 @@
+record_type: stage5ds_music_image_source_locks
+stage_id: stage-5ds
+stage_title: Stage 5DS - Expanded Music / Ouroboros / self-reference / token-block
+  static-context source-lock addendum, without execution
+prompt_type: codex_metadata_implementation
+metadata_only: true
+source_lock_only: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+previous_stage_id: stage-5dr
+previous_stage_final_commit_prompt_value: 9d15b12b3b4b34b2029fbb1ff46544e50eaed762
+actual_starting_commit_observed: afd2e2164903fd5fa34ea9ece9a092660bacc686
+route_extraction_performed_now: false
+activation_authorized_now: false
+website_expansion_performed: false
+active_manifest_registry_updated: false
+machine_code_execution_performed_now: false
+decode_attempt_performed: false
+token_block_variant_byte_streams_generated: false
+openpuff_execution_performed: false
+generated_outputs_committed: false
+raw_files_committed_now: false
+page32_route_extraction_performed_now: false
+disk_cipher_execution_performed_now: false
+combined_approval_gate_satisfied_now: false
+execution_performed: false
+active_ingestion_performed: false
+native_code_execution_performed_now: false
+cuda_execution_performed: false
+branch_enumeration_performed: false
+dwh_hash_search_performed: false
+active_token_block_manifest_changed: false
+token_block_experiment_executed: false
+music_route_extraction_performed_now: false
+hash_preimage_search_performed: false
+spectrogram_stego_performed: false
+page_boundaries_finalized: false
+execution_authorized_now: false
+mayfly_route_extraction_performed_now: false
+target_class_validation_implemented: false
+alberti_html_executed_now: false
+html_tool_executed_now: false
+vm_bytecode_execution_performed_now: false
+decryption_attempt_performed_now: false
+active_planning_input_selected_now: false
+canonical_corpus_active: false
+known_plaintext_attack_performed_now: false
+page56_hash_preimage_tested_now: false
+variant_byte_streams_generated: false
+pivot_target_selected_now: false
+full_cartesian_product_enumerated: false
+network_target_validation_performed_now: false
+hidden_content_image_forensics_performed: false
+real_byte_stream_generated: false
+tor_network_access_performed: false
+probability_claim_accepted_as_validated: false
+target_priority_decision_created_now: false
+ocr_performed: false
+mp3stego_execution_performed: false
+activation_decision_valid_now: false
+byte_stream_generation_authorized_now: false
+active_planning_input_authorized_now: false
+pdf_ocr_or_hidden_content_rendering_performed: false
+variant_materialisation_performed: false
+triangle_route_extraction_performed_now: false
+audio_stego_performed: false
+operator_readiness_decision_created_now: false
+benchmark_performed: false
+semantic_image_interpretation_performed: false
+codex_output_used: false
+image_forensics_performed: false
+midi_route_extraction_performed_now: false
+raw_third_party_files_committed: false
+scoring_performed: false
+direct_music_substitution_executed: false
+title: Stage 5DS community-theory image source locks
+record_count: 7
+metadata_only_records: true
+records:
+- file_name: a first stab at it.png
+  relative_path: third_party/CicadaMusic/community-theory/a first stab at it.png
+  extension: .png
+  file_kind: image
+  mime_guess: image/png
+  probe_kind: unknown
+  size_bytes: 68319
+  modified_utc: '2026-06-08T01:52:41Z'
+  sha256: 34e7e3c19d48b6676f8a4371ac5d7332b764eef21b37c0a323eca43c65ee5872
+  raw_file_committed: false
+  metadata_only: true
+  image_format: PNG
+  width: 593
+  height: 978
+  colour_mode: RGBA
+  metadata_extraction_status: pillow_metadata_only
+  image_forensics_performed: false
+  ocr_performed: false
+  semantic_image_interpretation_performed: false
+- file_name: audio provided by 3301.png
+  relative_path: third_party/CicadaMusic/community-theory/audio provided by 3301.png
+  extension: .png
+  file_kind: image
+  mime_guess: image/png
+  probe_kind: unknown
+  size_bytes: 18291
+  modified_utc: '2026-06-08T01:51:54Z'
+  sha256: 47be03d50558fadbcfdc451d9a576aca29ef8fa696e919bb32efe0c2c9c7ed98
+  raw_file_committed: false
+  metadata_only: true
+  image_format: PNG
+  width: 263
+  height: 252
+  colour_mode: RGBA
+  metadata_extraction_status: pillow_metadata_only
+  image_forensics_performed: false
+  ocr_performed: false
+  semantic_image_interpretation_performed: false
+- file_name: audio provided by 3301_2.png
+  relative_path: third_party/CicadaMusic/community-theory/audio provided by 3301_2.png
+  extension: .png
+  file_kind: image
+  mime_guess: image/png
+  probe_kind: unknown
+  size_bytes: 36477
+  modified_utc: '2026-06-08T01:52:04Z'
+  sha256: 87270336fb8367eb8fce91267008b521d6d3b7f4b56322a2ef61ad76da64760e
+  raw_file_committed: false
+  metadata_only: true
+  image_format: PNG
+  width: 907
+  height: 562
+  colour_mode: RGBA
+  metadata_extraction_status: pillow_metadata_only
+  image_forensics_performed: false
+  ocr_performed: false
+  semantic_image_interpretation_performed: false
+- file_name: has a direct substitution.jpg
+  relative_path: third_party/CicadaMusic/community-theory/has a direct substitution.jpg
+  extension: .jpg
+  file_kind: image
+  mime_guess: image/jpeg
+  probe_kind: unknown
+  size_bytes: 26464
+  modified_utc: '2026-06-08T01:52:55Z'
+  sha256: dbdabcfe0ef2a11abc6a320e19b03d6835f65232e4ec20af1f220dce61f95a28
+  raw_file_committed: false
+  metadata_only: true
+  image_format: JPEG
+  width: 412
+  height: 230
+  colour_mode: RGB
+  metadata_extraction_status: pillow_metadata_only
+  image_forensics_performed: false
+  ocr_performed: false
+  semantic_image_interpretation_performed: false
+- file_name: some kind of sequence.png
+  relative_path: third_party/CicadaMusic/community-theory/some kind of sequence.png
+  extension: .png
+  file_kind: image
+  mime_guess: image/png
+  probe_kind: unknown
+  size_bytes: 1827792
+  modified_utc: '2026-06-08T01:54:48Z'
+  sha256: 55036af1c6b85e9f7b7ff89ee6d1152a32c3fdeecf73610d6f4f2b08d812e25f
+  raw_file_committed: false
+  metadata_only: true
+  image_format: PNG
+  width: 1206
+  height: 1405
+  colour_mode: RGB
+  metadata_extraction_status: pillow_metadata_only
+  image_forensics_performed: false
+  ocr_performed: false
+  semantic_image_interpretation_performed: false
+- file_name: something fun to speculate.jpg
+  relative_path: third_party/CicadaMusic/community-theory/something fun to speculate.jpg
+  extension: .jpg
+  file_kind: image
+  mime_guess: image/jpeg
+  probe_kind: unknown
+  size_bytes: 123799
+  modified_utc: '2026-06-08T01:54:32Z'
+  sha256: 85a0d1601a87430d43725071221ab16f33fcd32cd03b3dbe7970577e1d347ad2
+  raw_file_committed: false
+  metadata_only: true
+  image_format: JPEG
+  width: 1100
+  height: 1100
+  colour_mode: RGB
+  metadata_extraction_status: pillow_metadata_only
+  image_forensics_performed: false
+  ocr_performed: false
+  semantic_image_interpretation_performed: false
+- file_name: very interesting to me.png
+  relative_path: third_party/CicadaMusic/community-theory/very interesting to me.png
+  extension: .png
+  file_kind: image
+  mime_guess: image/png
+  probe_kind: unknown
+  size_bytes: 59869
+  modified_utc: '2026-06-08T01:54:20Z'
+  sha256: 24ee68473c197929d9dd09f2dd5ae4e4b26e89ff95605710ff5b19f27b11ad12
+  raw_file_committed: false
+  metadata_only: true
+  image_format: PNG
+  width: 1140
+  height: 875
+  colour_mode: RGBA
+  metadata_extraction_status: pillow_metadata_only
+  image_forensics_performed: false
+  ocr_performed: false
+  semantic_image_interpretation_performed: false

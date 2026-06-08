@@ -2,13 +2,23 @@
 
 ## Current stage
 
-Stage 5DR Operator Console Source Browser detail-panel and interaction fixes are complete.
+Stage 5DS expanded Music / Ouroboros / self-reference / token-block static-context source-lock addendum is complete.
 
-Next recommended prompt: Stage 5DS - Operator Console source-review readiness planning, without puzzle execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DT - Operator Console source-review readiness planning, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DS
+
+Stage 5DS source-locks the expanded ignored `third_party/CicadaMusic/community-theory/` archive as compact metadata, records music/Instar/Interconnectedness candidate facts, records Ouroboros/self-reference/Quine symbolic-transform context, and records token-block primary60 static machine-code sanity context without byte-stream generation or execution.
+
+Local Stage 5DS summary: community-theory files inventoried `29`, audio files `10`, PDF files `11`, image files `7`, music candidate records `11`, Ouroboros/self-reference records `17`, token-block static-context records `4`, Source Browser Stage 5DS entries loaded `62`, total source-browser entries loaded `1367`, Stage 5BD run-plan IDs `10`, active-lineage records `8`, first 16 primary60 bytes `cbe7a7ba61ed7eb75cf99cdef704b7d4`, primary60 byte-stream SHA-256 metadata `876a6397b1e0191e50cf9c67812c9640f0ff4cd2df71ac29d1aaf7fd3c177ace`, ChatGPT context updated `true`, source-browser loadability validated `true`, pivot target selected `false`, byte-stream generation authorized `false`, execution performed `false`, solve claim `false`, and next stage `Stage 5DT`.
+
+Stage 5DS is metadata/source-lock addendum infrastructure only. It does not create source-review readiness, select a target, create Deep Research acceptance, satisfy the combined gate, authorize activation, select active planning input, generate byte streams, run audio/stego/OCR/image forensics, run route extraction, execute native/VM/CUDA code, search DWH/hash/preimages, decode, score, benchmark, expand the website, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DR
 
 Stage 5DR refines the Liber Primus Operator Console Source Browser as GUI-only review infrastructure. It moves the details panel to a bottom splitter spanning both the category list and table, adds `View -> Show Details Panel` and toolbar hide/show controls, replaces the plain YAML-only detail view with structured read-only tabs, adds image thumbnails with explicit image-viewer opening, URL/file actions, row context menus, and clearer status display.
+
+A post-Stage 5DR usability fix moved the details panel to the right side of the table, improved row selection, dark tab/scrollbar styling, path resolution, wrapped details text, and resizable panes. This remains GUI review infrastructure only.
 
 Local Stage 5DR summary: source-browser entries loaded `1305` after adding Stage 5DR compact records, Stage 5DQ baseline entries preserved as `1293`, committed records scanned `1304`, missing local paths recorded as review warnings `7253`, bottom details panel spans category list and table `true`, details panel hideable `true`, structured sections `true`, image thumbnails in detail panel `true`, thumbnail click opens viewer `true`, URL controls `true`, file-location controls `true`, table context menu added `true`, blank status display clarified as `unspecified` `true`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, parallel worker cap `8`, puzzle execution allowed `false`, source-lock record semantics rewritten `false`, raw third-party files mutated by GUI `false`, route extraction performed `false`, OCR performed `false`, image forensics performed `false`, execution performed `false`, pivot target selected `false`, and next stage `Stage 5DS`.
 

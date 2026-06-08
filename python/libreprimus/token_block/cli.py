@@ -747,6 +747,7 @@ from . import stage5do as stage5do_module
 from . import stage5dp as stage5dp_module
 from . import stage5dq as stage5dq_module
 from . import stage5dr as stage5dr_module
+from . import stage5ds as stage5ds_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -9413,6 +9414,187 @@ def validate_stage5dr_command() -> None:
 @app.command("stage5dr-summary")
 def stage5dr_summary_command() -> None:
     console.print(stage5dr_module.stage5dr_summary_text())
+
+
+def _print_stage5ds_result(result: object, success_line: str) -> None:
+    text = result.to_cli_text()
+    console.print(text)
+    if getattr(result, "validation_error_count") != 0:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5ds")
+def build_stage5ds_command() -> None:
+    records = stage5ds_module.build_stage5ds()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(
+        "music_community_theory_source_lock_created="
+        f"{str(summary.get('music_community_theory_source_lock_created')).lower()}"
+    )
+    console.print(f"music_candidate_records_created={summary.get('music_candidate_records_created')}")
+    console.print(
+        f"ouroboros_candidate_records_created={summary.get('ouroboros_candidate_records_created')}"
+    )
+    console.print(
+        "token_block_static_candidate_records_created="
+        f"{summary.get('token_block_static_candidate_records_created')}"
+    )
+    console.print(f"chatgpt_context_updated={str(summary.get('chatgpt_context_updated')).lower()}")
+    console.print(
+        "source_browser_loadability_validated="
+        f"{str(summary.get('source_browser_loadability_validated')).lower()}"
+    )
+    console.print(f"pivot_target_selected_now={str(summary.get('pivot_target_selected_now')).lower()}")
+    console.print(
+        "byte_stream_generation_authorized_now="
+        f"{str(summary.get('byte_stream_generation_authorized_now')).lower()}"
+    )
+    console.print(f"execution_performed={str(summary.get('execution_performed')).lower()}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5ds")
+def validate_stage5ds_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds(),
+        "token_block_stage5ds_valid=true",
+    )
+
+
+@app.command("stage5ds-summary")
+def stage5ds_summary_command() -> None:
+    console.print(stage5ds_module.stage5ds_summary_text())
+
+
+@app.command("validate-stage5ds-music-source-lock")
+def validate_stage5ds_music_source_lock_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_music_source_lock(),
+        "token_block_stage5ds_music_source_lock_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-music-file-inventory")
+def validate_stage5ds_music_file_inventory_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_music_file_inventory(),
+        "token_block_stage5ds_music_file_inventory_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-music-message-anchors")
+def validate_stage5ds_music_message_anchors_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_music_message_anchors(),
+        "token_block_stage5ds_music_message_anchors_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-music-candidates")
+def validate_stage5ds_music_candidates_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_music_candidates(),
+        "token_block_stage5ds_music_candidates_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-ouroboros-context")
+def validate_stage5ds_ouroboros_context_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_ouroboros_context(),
+        "token_block_stage5ds_ouroboros_context_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-token-block-static-context")
+def validate_stage5ds_token_block_static_context_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_token_block_static_context(),
+        "token_block_stage5ds_token_block_static_context_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-chatgpt-context")
+def validate_stage5ds_chatgpt_context_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_chatgpt_context(),
+        "token_block_stage5ds_chatgpt_context_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-source-browser-loadability")
+def validate_stage5ds_source_browser_loadability_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_source_browser_loadability(),
+        "token_block_stage5ds_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-stage5dr-preservation")
+def validate_stage5ds_stage5dr_preservation_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_stage5dr_preservation(),
+        "token_block_stage5ds_stage5dr_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-stage5dg-preservation")
+def validate_stage5ds_stage5dg_preservation_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_stage5dg_preservation(),
+        "token_block_stage5ds_stage5dg_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-stage5bd-preservation")
+def validate_stage5ds_stage5bd_preservation_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_stage5bd_preservation(),
+        "token_block_stage5ds_stage5bd_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-active-lineage-preservation")
+def validate_stage5ds_active_lineage_preservation_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_active_lineage_preservation(),
+        "token_block_stage5ds_active_lineage_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-sidecar-gates")
+def validate_stage5ds_sidecar_gates_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_sidecar_gates(),
+        "token_block_stage5ds_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-handoff-continuity")
+def validate_stage5ds_handoff_continuity_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_handoff_continuity(),
+        "token_block_stage5ds_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-credential-redaction-policy")
+def validate_stage5ds_credential_redaction_policy_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_credential_redaction_policy(),
+        "token_block_stage5ds_credential_redaction_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5ds-scope-control")
+def validate_stage5ds_scope_control_command() -> None:
+    _print_stage5ds_result(
+        stage5ds_module.validate_stage5ds_scope_control(),
+        "token_block_stage5ds_scope_control_valid=true",
+    )
 
 
 def register(root_app: typer.Typer) -> None:

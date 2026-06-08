@@ -1,5 +1,9 @@
 # Codex Navigation Map
 
+## Stage 5DS Note
+
+Stage 5DS is a metadata-only expanded Music/Ouroboros/token-block static source-lock addendum. Use `libreprimus token-block validate-stage5ds` for source-lock, music candidate, Ouroboros context, token-block static context, ChatGPT context, Source Browser loadability, Stage 5DR/5DG/5BD preservation, active-lineage preservation, gate, handoff, credential-redaction, and scope-control validation. Stage 5DT follow-up work should plan source review while keeping raw `third_party/CicadaMusic/**` files, generated outputs, byte streams, route outputs, audio/stego/OCR/image-forensics outputs, native/VM/CUDA outputs, and solve claims out of scope.
+
 ## Stage 5DC Note
 
 Stage 5DC is a metadata-only operator choice selection layer. Use `libreprimus token-block validate-stage5dc` for Stage 5DB findings integration, selected option validation for `prepare_real_operator_approval_record`, unselected-option preservation, explicit-pause nonselection, real-approval noncreation, combined-gate and activation nonauthorization, Stage 5CY/5DA/5BD preservation, active-lineage preservation, handoff continuity, credential-redaction policy, governance-scope control, and Stage 5DD next-stage routing. Treat the selected option as non-authorizing: it creates no real approval record, creates no Deep Research acceptance record, satisfies no gate, activates no input, generates no bytes, and executes nothing.

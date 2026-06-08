@@ -3361,6 +3361,21 @@ if [ -e "codex_output" ]; then
     exit 1
 fi
 
+echo "Validating Stage 5DS expanded Music / Ouroboros / token-static source-lock records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5ds
+"$python_bin" -m libreprimus.cli token-block stage5ds-summary
+"$python_bin" -m libreprimus.cli operator-console validate-source-index
+"$python_bin" -m libreprimus.cli source-browser validate-index
+git check-ignore -q "codex-output/stage5ds-codex-completion.md"
+git check-ignore -q "third_party/CicadaMusic/community-theory/messages.txt"
+git check-ignore -q "third_party/CicadaMusic/community-theory/761.MP3"
+git check-ignore -q "third_party/CicadaMusic/community-theory/Interconnectedness.mp3"
+git check-ignore -q "third_party/CicadaMusic/community-theory/READ ME FIRST - Cicada 3301 Music Guide.pdf"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5DS" >&2
+    exit 1
+fi
+
 echo "Running result-store consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings
 

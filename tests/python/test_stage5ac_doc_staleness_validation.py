@@ -20,10 +20,13 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5dr_latest_and_stage5ds_next() -> None:
+def test_operational_docs_use_stage5ds_latest_and_stage5dt_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5DR Operator Console Source Browser detail-panel and interaction fixes are complete" in status
-    assert "Next recommended prompt: Stage 5DS" in status
-    assert "Latest completed stage: Stage 5DR" in staged_plan
-    assert "Current planning focus: Stage 5DS" in staged_plan
+    assert (
+        "Stage 5DS expanded Music / Ouroboros / self-reference / token-block "
+        "static-context source-lock addendum is complete"
+    ) in status
+    assert "Next recommended prompt: Stage 5DT" in status
+    assert "Latest completed stage: Stage 5DS" in staged_plan
+    assert "Current planning focus: Stage 5DT" in staged_plan

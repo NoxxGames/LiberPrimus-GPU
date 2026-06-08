@@ -1,0 +1,397 @@
+record_type: stage5ds_music_audio_metadata_locks
+stage_id: stage-5ds
+stage_title: Stage 5DS - Expanded Music / Ouroboros / self-reference / token-block
+  static-context source-lock addendum, without execution
+prompt_type: codex_metadata_implementation
+metadata_only: true
+source_lock_only: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+previous_stage_id: stage-5dr
+previous_stage_final_commit_prompt_value: 9d15b12b3b4b34b2029fbb1ff46544e50eaed762
+actual_starting_commit_observed: afd2e2164903fd5fa34ea9ece9a092660bacc686
+route_extraction_performed_now: false
+activation_authorized_now: false
+website_expansion_performed: false
+active_manifest_registry_updated: false
+machine_code_execution_performed_now: false
+decode_attempt_performed: false
+token_block_variant_byte_streams_generated: false
+openpuff_execution_performed: false
+generated_outputs_committed: false
+raw_files_committed_now: false
+page32_route_extraction_performed_now: false
+disk_cipher_execution_performed_now: false
+combined_approval_gate_satisfied_now: false
+execution_performed: false
+active_ingestion_performed: false
+native_code_execution_performed_now: false
+cuda_execution_performed: false
+branch_enumeration_performed: false
+dwh_hash_search_performed: false
+active_token_block_manifest_changed: false
+token_block_experiment_executed: false
+music_route_extraction_performed_now: false
+hash_preimage_search_performed: false
+spectrogram_stego_performed: false
+page_boundaries_finalized: false
+execution_authorized_now: false
+mayfly_route_extraction_performed_now: false
+target_class_validation_implemented: false
+alberti_html_executed_now: false
+html_tool_executed_now: false
+vm_bytecode_execution_performed_now: false
+decryption_attempt_performed_now: false
+active_planning_input_selected_now: false
+canonical_corpus_active: false
+known_plaintext_attack_performed_now: false
+page56_hash_preimage_tested_now: false
+variant_byte_streams_generated: false
+pivot_target_selected_now: false
+full_cartesian_product_enumerated: false
+network_target_validation_performed_now: false
+hidden_content_image_forensics_performed: false
+real_byte_stream_generated: false
+tor_network_access_performed: false
+probability_claim_accepted_as_validated: false
+target_priority_decision_created_now: false
+ocr_performed: false
+mp3stego_execution_performed: false
+activation_decision_valid_now: false
+byte_stream_generation_authorized_now: false
+active_planning_input_authorized_now: false
+pdf_ocr_or_hidden_content_rendering_performed: false
+variant_materialisation_performed: false
+triangle_route_extraction_performed_now: false
+audio_stego_performed: false
+operator_readiness_decision_created_now: false
+benchmark_performed: false
+semantic_image_interpretation_performed: false
+codex_output_used: false
+image_forensics_performed: false
+midi_route_extraction_performed_now: false
+raw_third_party_files_committed: false
+scoring_performed: false
+direct_music_substitution_executed: false
+title: Stage 5DS community-theory MP3 metadata locks
+record_count: 10
+metadata_only_records: true
+records:
+- file_name: 761.MP3
+  relative_path: third_party/CicadaMusic/community-theory/761.MP3
+  extension: .mp3
+  file_kind: audio
+  mime_guess: audio/mpeg
+  probe_kind: mp3
+  size_bytes: 4010732
+  modified_utc: '2026-06-08T01:52:10Z'
+  sha256: 83008217439110c3b824898af73b99cb2cf0657dda88cb363c3aa34a4ec0a460
+  raw_file_committed: false
+  metadata_only: true
+  id3_tags_present: true
+  id3_version: 2.3.0
+  id3_size: 196
+  tag_frames_observed:
+  - TXXX
+  - TIT2
+  - TPE1
+  tag_frame_details:
+  - frame_id: TXXX
+    size: 140
+  - frame_id: TIT2
+    size: 21
+  - frame_id: TPE1
+    size: 5
+  title: The Instar Emergence
+  artist: '3301'
+  encoder: null
+  custom_text_frames:
+  - description: Parable 1,595,277,641
+    value: Like the instar, tunneling to the surface\nWe must shed our own circumferences;\nFind
+      the divinity within and emerge.
+  parable_number_detected: true
+  parable_number: 1595277641
+  parable_text: Like the instar, tunneling to the surface\nWe must shed our own circumferences;\nFind
+    the divinity within and emerge.
+  metadata_extraction_status: id3_header_metadata_only
+  audio_decode_performed: false
+  audio_duration_metadata_verified_now: false
+  stego_tool_execution_performed: false
+  mp3stego_execution_performed: false
+  spectrogram_stego_performed: false
+- file_name: Augmentation Canon, Instrumentation(10-11-2025).mp3
+  relative_path: third_party/CicadaMusic/community-theory/Augmentation Canon, Instrumentation(10-11-2025).mp3
+  extension: .mp3
+  file_kind: audio
+  mime_guess: audio/mpeg
+  probe_kind: mp3
+  size_bytes: 726935
+  modified_utc: '2026-06-08T01:53:48Z'
+  sha256: 200ad81a164b581ca74348a9f7949d7d80810b70ba9110733abbef8480067e4a
+  raw_file_committed: false
+  metadata_only: true
+  id3_tags_present: false
+  id3_version: null
+  id3_size: 0
+  tag_frames_observed: []
+  title: null
+  artist: null
+  encoder: null
+  custom_text_frames: []
+  parable_number_detected: false
+  parable_number: null
+  parable_text: null
+  metadata_extraction_status: no_id3_header_observed
+  audio_decode_performed: false
+  audio_duration_metadata_verified_now: false
+  stego_tool_execution_performed: false
+  mp3stego_execution_performed: false
+  spectrogram_stego_performed: false
+- file_name: Canon Goofiness.mp3
+  relative_path: third_party/CicadaMusic/community-theory/Canon Goofiness.mp3
+  extension: .mp3
+  file_kind: audio
+  mime_guess: audio/mpeg
+  probe_kind: mp3
+  size_bytes: 716904
+  modified_utc: '2026-06-08T01:52:24Z'
+  sha256: c2d3ef05bf12f0404794f157f571ed86edea4cb96c72d28ac8d2601636a54812
+  raw_file_committed: false
+  metadata_only: true
+  id3_tags_present: false
+  id3_version: null
+  id3_size: 0
+  tag_frames_observed: []
+  title: null
+  artist: null
+  encoder: null
+  custom_text_frames: []
+  parable_number_detected: false
+  parable_number: null
+  parable_text: null
+  metadata_extraction_status: no_id3_header_observed
+  audio_decode_performed: false
+  audio_duration_metadata_verified_now: false
+  stego_tool_execution_performed: false
+  mp3stego_execution_performed: false
+  spectrogram_stego_performed: false
+- file_name: Instar Emergence (6-19-2025).mp3
+  relative_path: third_party/CicadaMusic/community-theory/Instar Emergence (6-19-2025).mp3
+  extension: .mp3
+  file_kind: audio
+  mime_guess: audio/mpeg
+  probe_kind: mp3
+  size_bytes: 2212153
+  modified_utc: '2026-06-08T01:52:13Z'
+  sha256: fc42b8229e56c2189ad634b4895e0e35cac1b97bc11be4a61f8294d5f729a997
+  raw_file_committed: false
+  metadata_only: true
+  id3_tags_present: false
+  id3_version: null
+  id3_size: 0
+  tag_frames_observed: []
+  title: null
+  artist: null
+  encoder: null
+  custom_text_frames: []
+  parable_number_detected: false
+  parable_number: null
+  parable_text: null
+  metadata_extraction_status: no_id3_header_observed
+  audio_decode_performed: false
+  audio_duration_metadata_verified_now: false
+  stego_tool_execution_performed: false
+  mp3stego_execution_performed: false
+  spectrogram_stego_performed: false
+- file_name: Interconnectedness Canon (10-15-2025).mp3
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness Canon
+    (10-15-2025).mp3
+  extension: .mp3
+  file_kind: audio
+  mime_guess: audio/mpeg
+  probe_kind: mp3
+  size_bytes: 3361645
+  modified_utc: '2026-06-08T01:54:00Z'
+  sha256: 88dcb894d4d5aad472076d5cb696d37a7201ad6c61009dcee3a65cd1ef8dbcd0
+  raw_file_committed: false
+  metadata_only: true
+  id3_tags_present: false
+  id3_version: null
+  id3_size: 0
+  tag_frames_observed: []
+  title: null
+  artist: null
+  encoder: null
+  custom_text_frames: []
+  parable_number_detected: false
+  parable_number: null
+  parable_text: null
+  metadata_extraction_status: no_id3_header_observed
+  audio_decode_performed: false
+  audio_duration_metadata_verified_now: false
+  stego_tool_execution_performed: false
+  mp3stego_execution_performed: false
+  spectrogram_stego_performed: false
+- file_name: Interconnectedness Crab Canon(10-10-2025).mp3
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness Crab
+    Canon(10-10-2025).mp3
+  extension: .mp3
+  file_kind: audio
+  mime_guess: audio/mpeg
+  probe_kind: mp3
+  size_bytes: 3361018
+  modified_utc: '2026-06-08T01:53:23Z'
+  sha256: fb9706c05f60c922f351f07f3b6dd7e1fcf38bc4608d99cb30d8ec371698ad3a
+  raw_file_committed: false
+  metadata_only: true
+  id3_tags_present: false
+  id3_version: null
+  id3_size: 0
+  tag_frames_observed: []
+  title: null
+  artist: null
+  encoder: null
+  custom_text_frames: []
+  parable_number_detected: false
+  parable_number: null
+  parable_text: null
+  metadata_extraction_status: no_id3_header_observed
+  audio_decode_performed: false
+  audio_duration_metadata_verified_now: false
+  stego_tool_execution_performed: false
+  mp3stego_execution_performed: false
+  spectrogram_stego_performed: false
+- file_name: Interconnectedness Crab Canon(10-11-2025).mp3
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness Crab
+    Canon(10-11-2025).mp3
+  extension: .mp3
+  file_kind: audio
+  mime_guess: audio/mpeg
+  probe_kind: mp3
+  size_bytes: 3361645
+  modified_utc: '2026-06-08T01:53:45Z'
+  sha256: 2e66c0af184b6f2f28480de500e37ebc2463f8af1557ca9d6d8caa0bfc9c6c6f
+  raw_file_committed: false
+  metadata_only: true
+  id3_tags_present: false
+  id3_version: null
+  id3_size: 0
+  tag_frames_observed: []
+  title: null
+  artist: null
+  encoder: null
+  custom_text_frames: []
+  parable_number_detected: false
+  parable_number: null
+  parable_text: null
+  metadata_extraction_status: no_id3_header_observed
+  audio_decode_performed: false
+  audio_duration_metadata_verified_now: false
+  stego_tool_execution_performed: false
+  mp3stego_execution_performed: false
+  spectrogram_stego_performed: false
+- file_name: Interconnectedness Crab Canon(6-18-2025).mp3
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness Crab
+    Canon(6-18-2025).mp3
+  extension: .mp3
+  file_kind: audio
+  mime_guess: audio/mpeg
+  probe_kind: mp3
+  size_bytes: 3324342
+  modified_utc: '2026-06-08T01:52:14Z'
+  sha256: d4f1c23a0155565721121e47c43a8ece5aeb254e32e4f83f07a5858337767a62
+  raw_file_committed: false
+  metadata_only: true
+  id3_tags_present: false
+  id3_version: null
+  id3_size: 0
+  tag_frames_observed: []
+  title: null
+  artist: null
+  encoder: null
+  custom_text_frames: []
+  parable_number_detected: false
+  parable_number: null
+  parable_text: null
+  metadata_extraction_status: no_id3_header_observed
+  audio_decode_performed: false
+  audio_duration_metadata_verified_now: false
+  stego_tool_execution_performed: false
+  mp3stego_execution_performed: false
+  spectrogram_stego_performed: false
+- file_name: Interconnectedness.mp3
+  relative_path: third_party/CicadaMusic/community-theory/Interconnectedness.mp3
+  extension: .mp3
+  file_kind: audio
+  mime_guess: audio/mpeg
+  probe_kind: mp3
+  size_bytes: 6663242
+  modified_utc: '2026-06-08T01:52:11Z'
+  sha256: 180e7c27479584a89ae441a36860e32bdeb29b54f33160a44129056b4ace5060
+  raw_file_committed: false
+  metadata_only: true
+  id3_tags_present: true
+  id3_version: 2.4.0
+  id3_size: 128
+  tag_frames_observed:
+  - TXXX
+  - TXXX
+  - TXXX
+  - TSSE
+  tag_frame_details:
+  - frame_id: TXXX
+    size: 18
+  - frame_id: TXXX
+    size: 17
+  - frame_id: TXXX
+    size: 28
+  - frame_id: TSSE
+    size: 15
+  title: null
+  artist: null
+  encoder: Lavf58.29.100
+  custom_text_frames:
+  - description: major_brand
+    value: dash
+  - description: minor_version
+    value: '0'
+  - description: compatible_brands
+    value: iso6mp41
+  parable_number_detected: false
+  parable_number: null
+  parable_text: null
+  metadata_extraction_status: id3_header_metadata_only
+  audio_decode_performed: false
+  audio_duration_metadata_verified_now: false
+  stego_tool_execution_performed: false
+  mp3stego_execution_performed: false
+  spectrogram_stego_performed: false
+- file_name: Potential Canon, Instar.mp3
+  relative_path: third_party/CicadaMusic/community-theory/Potential Canon, Instar.mp3
+  extension: .mp3
+  file_kind: audio
+  mime_guess: audio/mpeg
+  probe_kind: mp3
+  size_bytes: 790883
+  modified_utc: '2026-06-08T01:53:13Z'
+  sha256: 241e0fd151519459eb108d93b227fa835e6cf8a654e1b228fd84582b735c32a6
+  raw_file_committed: false
+  metadata_only: true
+  id3_tags_present: false
+  id3_version: null
+  id3_size: 0
+  tag_frames_observed: []
+  title: null
+  artist: null
+  encoder: null
+  custom_text_frames: []
+  parable_number_detected: false
+  parable_number: null
+  parable_text: null
+  metadata_extraction_status: no_id3_header_observed
+  audio_decode_performed: false
+  audio_duration_metadata_verified_now: false
+  stego_tool_execution_performed: false
+  mp3stego_execution_performed: false
+  spectrogram_stego_performed: false
