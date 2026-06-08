@@ -6,6 +6,7 @@ from pathlib import Path
 
 import pytest
 
+import libreprimus.operator_console.source_browser.path_aliases as path_aliases_module
 from libreprimus.operator_console.source_browser.entries import SourceBrowserEntry
 
 pytestmark = pytest.mark.skipif(importlib.util.find_spec("PySide6") is None, reason="PySide6 is optional")
@@ -58,6 +59,8 @@ def make_entry(image_path: str | None = None) -> SourceBrowserEntry:
 
 
 def test_detail_panel_renders_selected_entry_sections(app: object) -> None:
+    from PySide6.QtCore import Qt
+    from PySide6.QtWidgets import QPlainTextEdit, QScrollArea
     from libreprimus.operator_console.source_browser.detail_panel import EntryDetailPanel
 
     panel = EntryDetailPanel()
@@ -67,6 +70,12 @@ def test_detail_panel_renders_selected_entry_sections(app: object) -> None:
     assert panel.tabs.count() == 5
     assert panel.raw_text.toPlainText()
     assert "stage5dr_detail_fixture" in panel.raw_text.toPlainText()
+    assert panel.raw_text.lineWrapMode() == QPlainTextEdit.LineWrapMode.WidgetWidth
+    assert panel.raw_text.horizontalScrollBarPolicy() == Qt.ScrollBarPolicy.ScrollBarAlwaysOff
+    assert all(
+        scroll.horizontalScrollBarPolicy() == Qt.ScrollBarPolicy.ScrollBarAlwaysOff
+        for scroll in panel.findChildren(QScrollArea)
+    )
 
 
 def test_detail_panel_renders_media_urls_number_facts_and_warnings(
@@ -102,5 +111,38 @@ def test_thumbnail_action_can_instantiate_image_viewer(app: object, tmp_path: Pa
     assert image.save(str(image_path))
 
     dialog = ImageViewerDialog([str(image_path)], start_index=0)
+    assert dialog.paths[0] == image_path
+    assert dialog.label.pixmap() is not None
+
+
+def test_image_viewer_resolves_archive_relative_image_path(
+    app: object,
+    monkeypatch: pytest.MonkeyPatch,
+    tmp_path: Path,
+) -> None:
+    from PySide6.QtGui import QColor, QImage
+    from libreprimus.operator_console.source_browser.image_viewer import ImageViewerDialog
+
+    image_path = (
+        tmp_path
+        / "third_party"
+        / "CicadaSolversIddqd"
+        / "2014"
+        / "additional images"
+        / "OutguessfromLiberPrimusPage6.jpg"
+    )
+    image_path.parent.mkdir(parents=True)
+    image = QImage(10, 10, QImage.Format.Format_RGB32)
+    image.fill(QColor("#113355"))
+    assert image.save(str(image_path))
+    monkeypatch.setattr(path_aliases_module, "REPO_ROOT", tmp_path)
+    monkeypatch.setattr(
+        path_aliases_module,
+        "ARCHIVE_RELATIVE_ROOTS",
+        (Path("third_party/CicadaSolversIddqd"),),
+    )
+
+    dialog = ImageViewerDialog(["2014/additional images/OutguessfromLiberPrimusPage6.jpg"])
+
     assert dialog.paths[0] == image_path
     assert dialog.label.pixmap() is not None

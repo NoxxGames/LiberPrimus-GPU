@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-from pathlib import Path
-
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import (
@@ -17,13 +15,16 @@ from PySide6.QtWidgets import (
 )
 
 from .file_opening import open_file, open_file_location
+from .path_aliases import load_path_aliases, resolve_with_aliases
 
 
 class ImageViewerDialog(QDialog):
     def __init__(self, image_paths: list[str], start_index: int = 0) -> None:
         super().__init__()
         self.setWindowTitle("Image viewer")
-        self.paths = [Path(path) for path in image_paths]
+        aliases = load_path_aliases()
+        self.original_paths = list(image_paths)
+        self.paths = [resolve_with_aliases(path, aliases) for path in image_paths]
         self.index = start_index
         self.scale = 1.0
         self.label = QLabel()
@@ -57,7 +58,8 @@ class ImageViewerDialog(QDialog):
             return
         path = self.paths[self.index]
         if not path.exists():
-            self.label.setText(f"Missing image: {path.as_posix()}")
+            original = self.original_paths[self.index] if self.index < len(self.original_paths) else path.as_posix()
+            self.label.setText(f"Missing image: {original}\nResolved path: {path.as_posix()}")
             return
         pixmap = QPixmap(str(path))
         if self.scale != 1.0:

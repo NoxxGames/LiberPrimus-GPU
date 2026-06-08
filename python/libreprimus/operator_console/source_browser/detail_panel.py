@@ -12,6 +12,7 @@ from PySide6.QtWidgets import (
     QApplication,
     QFormLayout,
     QFrame,
+    QGridLayout,
     QGroupBox,
     QHBoxLayout,
     QLabel,
@@ -156,6 +157,8 @@ class EntryDetailPanel(QWidget):
         self.raw_text = QPlainTextEdit()
         self.raw_text.setObjectName("sourceBrowserRawRecordPreview")
         self.raw_text.setReadOnly(True)
+        self.raw_text.setLineWrapMode(QPlainTextEdit.LineWrapMode.WidgetWidth)
+        self.raw_text.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.tabs.addTab(self.raw_text, "Raw record")
         layout.addWidget(self.tabs, 1)
         self.setMinimumHeight(220)
@@ -164,6 +167,8 @@ class EntryDetailPanel(QWidget):
     def _add_scroll_tab(self, title: str) -> QVBoxLayout:
         scroll = QScrollArea()
         scroll.setWidgetResizable(True)
+        scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        scroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
         scroll.setFrameShape(QFrame.Shape.NoFrame)
         container = QWidget()
         tab_layout = QVBoxLayout(container)
@@ -238,10 +243,10 @@ class EntryDetailPanel(QWidget):
 
     def _image_group(self, entry: SourceBrowserEntry) -> QGroupBox:
         box = QGroupBox(f"Images ({len(entry.image_paths)})")
-        layout = QHBoxLayout(box)
+        layout = QGridLayout(box)
         layout.setSpacing(8)
         if not entry.image_paths:
-            layout.addWidget(QLabel("No image paths recorded."))
+            layout.addWidget(QLabel("No image paths recorded."), 0, 0)
             return box
         for index, path_text in enumerate(entry.image_paths):
             resolved = _resolve(path_text, self._aliases)
@@ -252,8 +257,9 @@ class EntryDetailPanel(QWidget):
                 hash_value=_hash_for_path(entry, path_text),
             )
             thumb.open_requested.connect(lambda image_index: self.image_requested.emit(entry.image_paths, image_index))
-            layout.addWidget(thumb)
-        layout.addStretch(1)
+            layout.addWidget(thumb, index // 2, index % 2)
+        layout.setColumnStretch(0, 1)
+        layout.setColumnStretch(1, 1)
         return box
 
     def _path_group(self, entry: SourceBrowserEntry) -> QGroupBox:
@@ -274,9 +280,13 @@ class EntryDetailPanel(QWidget):
         layout = QHBoxLayout(row)
         layout.setContentsMargins(0, 0, 0, 0)
         status = "present" if resolved.exists() else "missing"
-        label = QLabel(f"{Path(path_text).suffix.lower() or 'file'}  {path_text}  [{status}]")
+        label = QLabel(
+            f"{Path(path_text).suffix.lower() or 'file'}  {path_text}  [{status}]\n"
+            f"resolved: {resolved.as_posix()}"
+        )
         label.setWordWrap(True)
         label.setToolTip(str(resolved))
+        label.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
         layout.addWidget(label, 1)
         open_button = QPushButton("Open")
         open_button.setEnabled(resolved.exists())
@@ -306,6 +316,8 @@ class EntryDetailPanel(QWidget):
             row_layout.setContentsMargins(0, 0, 0, 0)
             label = QLabel(url_label(url))
             label.setToolTip(url)
+            label.setWordWrap(True)
+            label.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
             row_layout.addWidget(label, 1)
             open_button = QPushButton("Open URL")
             open_button.clicked.connect(lambda _checked=False, target=url: open_url(target))
@@ -327,6 +339,8 @@ class EntryDetailPanel(QWidget):
             layout = QVBoxLayout(box)
             text = QPlainTextEdit()
             text.setReadOnly(True)
+            text.setLineWrapMode(QPlainTextEdit.LineWrapMode.WidgetWidth)
+            text.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
             text.setPlainText(yaml.safe_dump(fact, sort_keys=False, allow_unicode=False))
             text.setMaximumHeight(130)
             layout.addWidget(text)

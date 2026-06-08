@@ -8,8 +8,11 @@ import sys
 import webbrowser
 from pathlib import Path
 
+from .path_aliases import resolve_with_aliases
+
 
 def open_file(path: Path) -> None:
+    path = _resolve_path(path)
     if sys.platform.startswith("win"):
         os.startfile(path)  # type: ignore[attr-defined]
     elif sys.platform == "darwin":
@@ -19,6 +22,7 @@ def open_file(path: Path) -> None:
 
 
 def open_file_location(path: Path) -> None:
+    path = _resolve_path(path)
     if sys.platform.startswith("win"):
         subprocess.run(["explorer", f"/select,{path}"], check=False)
     elif sys.platform == "darwin":
@@ -29,3 +33,7 @@ def open_file_location(path: Path) -> None:
 
 def open_url(url: str) -> None:
     webbrowser.open(url)
+
+
+def _resolve_path(path: Path) -> Path:
+    return path if path.is_absolute() else resolve_with_aliases(path.as_posix())

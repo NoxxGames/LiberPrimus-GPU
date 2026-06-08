@@ -7,6 +7,7 @@ from pathlib import Path
 from PySide6.QtCore import QModelIndex, QPoint, Qt
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import (
+    QAbstractItemView,
     QApplication,
     QLabel,
     QLineEdit,
@@ -107,18 +108,21 @@ class MainWindow(QMainWindow):
         self.status_legend.setStyleSheet("color: #8a8a8a;")
         self.status_legend.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         layout.addWidget(self.status_legend, 0)
-        self.main_splitter = QSplitter(Qt.Orientation.Vertical)
-        top_splitter = QSplitter(Qt.Orientation.Horizontal)
+        self.content_splitter = QSplitter(Qt.Orientation.Horizontal)
         self.categories = QListWidget()
-        self.categories.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Expanding)
+        self.categories.setMinimumWidth(140)
+        self.categories.setSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
         self.categories.addItems(source_browser_categories())
         self.categories.setCurrentRow(0)
         self.categories.currentTextChanged.connect(self.apply_filters)
-        top_splitter.addWidget(self.categories)
+        self.content_splitter.addWidget(self.categories)
         self.table = QTableView()
         self.table.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.table.setSortingEnabled(True)
         self.table.setAlternatingRowColors(True)
+        self.table.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
+        self.table.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
+        self.table.clicked.connect(self.select_table_row)
         self.table.doubleClicked.connect(self.open_detail_action)
         self.table.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self.table.customContextMenuRequested.connect(self.show_table_context_menu)
@@ -130,17 +134,17 @@ class MainWindow(QMainWindow):
         self.detail = DetailPanel()
         self.detail.image_requested.connect(self.open_image_viewer_at)
         self.detail.hide_requested.connect(lambda: self.toggle_details_panel(False))
-        top_splitter.addWidget(self.table)
-        top_splitter.setStretchFactor(0, 0)
-        top_splitter.setStretchFactor(1, 1)
-        top_splitter.setSizes([220, 1200])
-        self.main_splitter.addWidget(top_splitter)
-        self.main_splitter.addWidget(self.detail)
-        self.main_splitter.setStretchFactor(0, 1)
-        self.main_splitter.setStretchFactor(1, 0)
-        self.main_splitter.setCollapsible(1, True)
-        self.main_splitter.setSizes([720, 260])
-        layout.addWidget(self.main_splitter, 1)
+        self.detail.setMinimumWidth(360)
+        self.content_splitter.addWidget(self.table)
+        self.content_splitter.addWidget(self.detail)
+        self.content_splitter.setStretchFactor(0, 0)
+        self.content_splitter.setStretchFactor(1, 1)
+        self.content_splitter.setStretchFactor(2, 0)
+        self.content_splitter.setCollapsible(0, False)
+        self.content_splitter.setCollapsible(1, False)
+        self.content_splitter.setCollapsible(2, True)
+        self.content_splitter.setSizes([220, 1120, 520])
+        layout.addWidget(self.content_splitter, 1)
         self.setCentralWidget(root)
         self.statusBar().showMessage("Source Browser ready")
         self.table.selectionModel().selectionChanged.connect(self.selection_changed)
@@ -167,14 +171,23 @@ class MainWindow(QMainWindow):
 
     def current_entry(self) -> SourceBrowserEntry | None:
         indexes = self.table.selectionModel().selectedRows()
-        if not indexes:
-            return None
-        return self.model.entry_at(indexes[0].row())
+        if indexes:
+            return self.model.entry_at(indexes[0].row())
+        index = self.table.currentIndex()
+        if index.isValid():
+            return self.model.entry_at(index.row())
+        return None
 
     def selection_changed(self) -> None:
         entry = self.current_entry()
         self.detail.show_entry(entry)
         self.detail.setVisible(self.show_details_action.isChecked())
+
+    def select_table_row(self, index: QModelIndex) -> None:
+        if not index.isValid():
+            return
+        self.table.selectRow(index.row())
+        self.detail.show_entry(self._entry_for_index(index))
 
     def add_entry(self) -> None:
         dialog = AddModifyDialog()
@@ -256,7 +269,7 @@ class MainWindow(QMainWindow):
             action.setChecked(visible)
             action.blockSignals(False)
         self.detail.setVisible(visible)
-        self.main_splitter.setSizes([720, 260] if visible else [1, 0])
+        self.content_splitter.setSizes([220, 1120, 520] if visible else [220, 1440, 0])
         if visible:
             self.detail.show_entry(self.current_entry())
 

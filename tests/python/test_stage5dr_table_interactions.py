@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import os
+from types import SimpleNamespace
 
 import pytest
 
@@ -49,6 +50,13 @@ def make_entry() -> SourceBrowserEntry:
     )
 
 
+def make_window(monkeypatch: pytest.MonkeyPatch) -> object:
+    from libreprimus.operator_console import main_window as main_window_module
+
+    monkeypatch.setattr(main_window_module, "build_source_index", lambda: SimpleNamespace(entries=[make_entry()]))
+    return main_window_module.MainWindow()
+
+
 def test_blank_status_display_does_not_mutate_entry(app: object) -> None:
     from PySide6.QtCore import Qt
     from libreprimus.operator_console.source_browser.status_display import STATUS_UNSPECIFIED_TOOLTIP
@@ -63,10 +71,8 @@ def test_blank_status_display_does_not_mutate_entry(app: object) -> None:
     assert entry.source_status is None
 
 
-def test_table_context_menu_has_expected_actions(app: object) -> None:
-    from libreprimus.operator_console.main_window import MainWindow
-
-    window = MainWindow()
+def test_table_context_menu_has_expected_actions(app: object, monkeypatch: pytest.MonkeyPatch) -> None:
+    window = make_window(monkeypatch)
     menu = window._build_table_context_menu(make_entry())
     labels = [action.text() for action in menu.actions() if action.text()]
 
@@ -81,10 +87,35 @@ def test_table_context_menu_has_expected_actions(app: object) -> None:
     assert "Copy First URL" in labels
 
 
-def test_detail_panel_can_be_hidden_and_shown(app: object) -> None:
-    from libreprimus.operator_console.main_window import MainWindow
+def test_table_click_uses_full_row_selection(app: object, monkeypatch: pytest.MonkeyPatch) -> None:
+    from PySide6.QtWidgets import QAbstractItemView
 
-    window = MainWindow()
+    window = make_window(monkeypatch)
+    window.model.replace_entries([make_entry()])
+
+    index = window.model.index(0, 2)
+    window.select_table_row(index)
+
+    assert window.table.selectionBehavior() == QAbstractItemView.SelectionBehavior.SelectRows
+    assert window.table.selectionModel().selectedRows()
+    assert window.current_entry().entry_id == "stage5dr-table-fixture"
+    assert window.detail.header.text() == "Stage 5DR table fixture"
+
+
+def test_details_panel_is_right_side_resizable_pane(app: object, monkeypatch: pytest.MonkeyPatch) -> None:
+    from PySide6.QtCore import Qt
+
+    window = make_window(monkeypatch)
+
+    assert window.content_splitter.orientation() == Qt.Orientation.Horizontal
+    assert window.content_splitter.widget(0) is window.categories
+    assert window.content_splitter.widget(1) is window.table
+    assert window.content_splitter.widget(2) is window.detail
+    assert window.categories.maximumWidth() > 10000
+
+
+def test_detail_panel_can_be_hidden_and_shown(app: object, monkeypatch: pytest.MonkeyPatch) -> None:
+    window = make_window(monkeypatch)
     assert window.detail.isVisible() is False or window.show_details_action.isChecked() is True
     window.toggle_details_panel(False)
     assert window.detail.isVisible() is False
