@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import subprocess
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -31,7 +32,7 @@ def load_yaml(path: str | Path) -> dict[str, Any]:
 
 def run_token_block_cli(*args: str) -> str:
     result = subprocess.run(
-        [".venv/Scripts/python.exe", "-m", "libreprimus.cli", "token-block", *args],
+        [sys.executable, "-m", "libreprimus.cli", "token-block", *args],
         cwd=ROOT,
         check=True,
         capture_output=True,
