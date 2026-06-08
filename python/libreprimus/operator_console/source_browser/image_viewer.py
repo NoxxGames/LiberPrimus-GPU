@@ -7,6 +7,7 @@ from pathlib import Path
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import (
+    QApplication,
     QDialog,
     QHBoxLayout,
     QLabel,
@@ -42,6 +43,7 @@ class ImageViewerDialog(QDialog):
             ("Actual size", self.actual_size),
             ("Open location", self.open_location),
             ("Open externally", self.open_external),
+            ("Copy path", self.copy_path),
         ]:
             button = QPushButton(text)
             button.clicked.connect(callback)
@@ -103,3 +105,7 @@ class ImageViewerDialog(QDialog):
     def open_external(self) -> None:
         if self.paths:
             open_file(self.paths[self.index])
+
+    def copy_path(self) -> None:
+        if self.paths:
+            QApplication.clipboard().setText(str(self.paths[self.index]))

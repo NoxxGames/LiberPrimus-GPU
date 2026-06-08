@@ -75,16 +75,16 @@ def test_stage5ah_cli_commands_write_reports_and_validate(tmp_path: Path) -> Non
 
     result = runner.invoke(
         app,
-        [
-            "consistency",
-            "check-current-next-stage-consistency",
-            "--expected-latest-stage",
-            "Stage 5AH",
-            "--expected-next-stage",
-            "Stage 5AI",
-            "--out",
-            str(tmp_path / "current_next_stage_report.json"),
-        ],
+            [
+                "consistency",
+                "check-current-next-stage-consistency",
+                "--expected-latest-stage",
+                "Stage 5DR",
+                "--expected-next-stage",
+                "Stage 5DS",
+                "--out",
+                str(tmp_path / "current_next_stage_report.json"),
+            ],
     )
     assert result.exit_code == 0, result.output
 

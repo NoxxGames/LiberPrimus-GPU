@@ -746,6 +746,7 @@ from . import stage5dn as stage5dn_module
 from . import stage5do as stage5do_module
 from . import stage5dp as stage5dp_module
 from . import stage5dq as stage5dq_module
+from . import stage5dr as stage5dr_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -9315,6 +9316,103 @@ def validate_stage5dq_command() -> None:
 @app.command("stage5dq-summary")
 def stage5dq_summary_command() -> None:
     console.print(stage5dq_module.stage5dq_summary_text())
+
+
+def _print_stage5dr_result(result: object, success_line: str) -> None:
+    text = result.to_cli_text()
+    console.print(text)
+    if getattr(result, "validation_error_count") != 0:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5dr")
+def build_stage5dr_command() -> None:
+    records = stage5dr_module.build_stage5dr()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(
+        "bottom_details_panel_spans_categories_and_table="
+        f"{str(summary.get('bottom_details_panel_spans_categories_and_table')).lower()}"
+    )
+    console.print(f"details_panel_hideable={str(summary.get('details_panel_hideable')).lower()}")
+    console.print(
+        "details_panel_structured_sections="
+        f"{str(summary.get('details_panel_structured_sections')).lower()}"
+    )
+    console.print(
+        "image_thumbnails_in_details_panel="
+        f"{str(summary.get('image_thumbnails_in_details_panel')).lower()}"
+    )
+    console.print(f"table_context_menu_added={str(summary.get('table_context_menu_added')).lower()}")
+    console.print(
+        "status_unspecified_display_added="
+        f"{str(summary.get('status_unspecified_display_added')).lower()}"
+    )
+    console.print(f"execution_performed={str(summary.get('execution_performed')).lower()}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5dr-detail-panel")
+def validate_stage5dr_detail_panel_command() -> None:
+    _print_stage5dr_result(
+        stage5dr_module.validate_stage5dr_detail_panel(),
+        "token_block_stage5dr_detail_panel_valid=true",
+    )
+
+
+@app.command("validate-stage5dr-table-context-menu")
+def validate_stage5dr_table_context_menu_command() -> None:
+    _print_stage5dr_result(
+        stage5dr_module.validate_stage5dr_table_context_menu(),
+        "token_block_stage5dr_table_context_menu_valid=true",
+    )
+
+
+@app.command("validate-stage5dr-status-display")
+def validate_stage5dr_status_display_command() -> None:
+    _print_stage5dr_result(
+        stage5dr_module.validate_stage5dr_status_display(),
+        "token_block_stage5dr_status_display_valid=true",
+    )
+
+
+@app.command("validate-stage5dr-image-thumbnail-actions")
+def validate_stage5dr_image_thumbnail_actions_command() -> None:
+    _print_stage5dr_result(
+        stage5dr_module.validate_stage5dr_image_thumbnail_actions(),
+        "token_block_stage5dr_image_thumbnail_actions_valid=true",
+    )
+
+
+@app.command("validate-stage5dr-url-file-actions")
+def validate_stage5dr_url_file_actions_command() -> None:
+    _print_stage5dr_result(
+        stage5dr_module.validate_stage5dr_url_file_actions(),
+        "token_block_stage5dr_url_file_actions_valid=true",
+    )
+
+
+@app.command("validate-stage5dr-preservation")
+def validate_stage5dr_preservation_command() -> None:
+    _print_stage5dr_result(
+        stage5dr_module.validate_stage5dr_preservation(),
+        "token_block_stage5dr_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dr")
+def validate_stage5dr_command() -> None:
+    _print_stage5dr_result(
+        stage5dr_module.validate_stage5dr(),
+        "token_block_stage5dr_valid=true",
+    )
+
+
+@app.command("stage5dr-summary")
+def stage5dr_summary_command() -> None:
+    console.print(stage5dr_module.stage5dr_summary_text())
 
 
 def register(root_app: typer.Typer) -> None:

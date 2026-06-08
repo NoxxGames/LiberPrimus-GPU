@@ -7,6 +7,7 @@ from typing import Any
 from PySide6.QtCore import QAbstractTableModel, QModelIndex, Qt
 
 from .entries import SourceBrowserEntry
+from .status_display import STATUS_UNSPECIFIED_TOOLTIP, display_status
 
 
 class SourceBrowserTableModel(QAbstractTableModel):
@@ -29,6 +30,8 @@ class SourceBrowserTableModel(QAbstractTableModel):
         if role == Qt.ItemDataRole.DisplayRole:
             return self._display(entry, key)
         if role == Qt.ItemDataRole.ToolTipRole:
+            if key == "status" and not entry.source_status:
+                return STATUS_UNSPECIFIED_TOOLTIP
             return entry.summary
         return None
 
@@ -65,7 +68,7 @@ class SourceBrowserTableModel(QAbstractTableModel):
         if key == "category":
             return entry.category
         if key == "status":
-            return entry.source_status or ""
+            return display_status(entry.source_status)
         if key == "images":
             return str(len(entry.image_paths))
         if key == "urls":

@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DQ Liber Primus Operator Console v0 Source-Browser GUI is complete.
+Stage 5DR Operator Console Source Browser detail-panel and interaction fixes are complete.
 
-Next recommended prompt: Stage 5DR - Source-browser GUI review and usability repair, without puzzle execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DS - Operator Console source-review readiness planning, without puzzle execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DR
+
+Stage 5DR refines the Liber Primus Operator Console Source Browser as GUI-only review infrastructure. It moves the details panel to a bottom splitter spanning both the category list and table, adds `View -> Show Details Panel` and toolbar hide/show controls, replaces the plain YAML-only detail view with structured read-only tabs, adds image thumbnails with explicit image-viewer opening, URL/file actions, row context menus, and clearer status display.
+
+Local Stage 5DR summary: source-browser entries loaded `1305` after adding Stage 5DR compact records, Stage 5DQ baseline entries preserved as `1293`, committed records scanned `1304`, missing local paths recorded as review warnings `7253`, bottom details panel spans category list and table `true`, details panel hideable `true`, structured sections `true`, image thumbnails in detail panel `true`, thumbnail click opens viewer `true`, URL controls `true`, file-location controls `true`, table context menu added `true`, blank status display clarified as `unspecified` `true`, Stage 5BD run-plan ID count `10`, active-lineage records `8`, parallel worker cap `8`, puzzle execution allowed `false`, source-lock record semantics rewritten `false`, raw third-party files mutated by GUI `false`, route extraction performed `false`, OCR performed `false`, image forensics performed `false`, execution performed `false`, pivot target selected `false`, and next stage `Stage 5DS`.
+
+Stage 5DR is GUI refinement only. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select a pivot target, select active planning input, generate byte streams, run target-class validation, use Tor/network route access, run route extraction, run OCR, image forensics, AI interpretation, DWH/hash/preimage search, decode, score, run CUDA tooling, benchmark, publish website content, upgrade method status, activate the canonical corpus, finalise page boundaries, mutate raw sources, execute source files, or make solve claims.
 
 ## Completed in Stage 5DQ
 

@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5DQ - Liber Primus Operator Console v0 Source-Browser GUI, without puzzle execution.
-- Current planning focus: Stage 5DR - Source-browser GUI review and usability repair, without puzzle execution.
+- Latest completed stage: Stage 5DR - Operator Console Source Browser details panel and interaction fixes, without puzzle execution.
+- Current planning focus: Stage 5DS - Operator Console source-review readiness planning, without puzzle execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5DR - Source-browser GUI review and usability repair, without puzzle execution.
+Current next prompt: Stage 5DS - Operator Console source-review readiness planning, without puzzle execution.
 
-Stage 5DQ is complete as review-only operator-console source-browser work. It records the Liber Primus Operator Console v0 shell, a source index over committed metadata, manual-entry/override/tombstone scaffolds, path aliases, column profiles, context-file navigation, optional PySide6 GUI loading, and raw-data-free validation while keeping all puzzle execution blocked.
+Stage 5DR is complete as GUI-only operator-console source-browser usability repair. It moves the detail panel under both the category list and table, adds hide/show controls, structured detail tabs, thumbnails, URL/file actions, table context menus, and `unspecified` status display while keeping all puzzle execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DQ Liber Primus Operator Console v0 Source-Browser GUI is complete. It preserves Stage 5DP rather than rerunning it, loads `1293` review-only source-browser entries from committed metadata, records `7253` missing local source paths as review warnings, adds manual-source scaffolds and explicit context/file/URL navigation, preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, preserves Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
+Stage 5DR Operator Console Source Browser detail-panel and interaction fixes are complete. It preserves Stage 5DQ rather than rerunning source ingestion, loads `1305` review-only source-browser entries from committed metadata after adding Stage 5DR compact records, preserves the Stage 5DQ baseline count of `1293`, records `7253` missing local source paths as review warnings, adds a bottom details panel spanning the category list and table, structured read-only detail tabs, image thumbnails, URL/file controls, table row context menus, and `unspecified` status display for records without status fields. It preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, preserves Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, and keeps String 4 inactive with all execution gates blocked.
 
-The next recommended prompt is Stage 5DR - Source-browser GUI review and usability repair, without puzzle execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DS - Operator Console source-review readiness planning, without puzzle execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

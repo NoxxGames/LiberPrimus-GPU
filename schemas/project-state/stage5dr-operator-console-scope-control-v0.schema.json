@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/project-state/stage5dr-operator-console-scope-control-v0.schema.json",
+  "title": "Stage 5DR Operator Console scope control",
+  "type": "object",
+  "required": [
+    "record_type",
+    "stage_id",
+    "stage_title",
+    "prompt_type",
+    "canonical_codex_handoff_root",
+    "scope",
+    "committed_source_lock_records_read_only",
+    "manual_entry_semantics_unchanged",
+    "url_opening_explicit_operator_action_only",
+    "image_thumbnail_generation_interpretation_free",
+    "solve_claim",
+    "execution_performed",
+    "raw_third_party_files_mutated_by_gui",
+    "committed_source_lock_records_directly_rewritten"
+  ],
+  "properties": {
+    "record_type": { "const": "stage5dr_operator_console_scope_control" },
+    "stage_id": { "const": "stage-5dr" },
+    "prompt_type": { "const": "codex_gui_implementation" },
+    "canonical_codex_handoff_root": { "const": "codex-output" },
+    "scope": {
+      "const": "operator_console_source_browser_detail_panel_and_interaction_refinement_only"
+    },
+    "committed_source_lock_records_read_only": { "const": true },
+    "manual_entry_semantics_unchanged": { "const": true },
+    "url_opening_explicit_operator_action_only": { "const": true },
+    "image_thumbnail_generation_interpretation_free": { "const": true },
+    "solve_claim": { "const": false },
+    "execution_performed": { "const": false },
+    "route_extraction_performed_now": { "const": false },
+    "ocr_performed": { "const": false },
+    "image_forensics_performed": { "const": false },
+    "raw_third_party_files_mutated_by_gui": { "const": false },
+    "committed_source_lock_records_directly_rewritten": { "const": false },
+    "source_lock_record_semantics_rewritten": { "const": false }
+  },
+  "additionalProperties": true
+}

@@ -4,12 +4,15 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from PySide6.QtCore import Qt
+from PySide6.QtCore import QModelIndex, QPoint, Qt
+from PySide6.QtGui import QAction
 from PySide6.QtWidgets import (
+    QApplication,
     QLabel,
     QLineEdit,
     QListWidget,
     QMainWindow,
+    QMenu,
     QMessageBox,
     QSizePolicy,
     QSplitter,
@@ -23,7 +26,7 @@ from .navigation import source_browser_categories
 from .settings import APP_NAME, SOURCE_BROWSER_NAME
 from .source_browser.column_profiles import visible_columns
 from .source_browser.context_file import create_context_file_if_missing
-from .source_browser.detail_panel import DetailPanel
+from .source_browser.detail_panel import DetailPanel, STATUS_LEGEND
 from .source_browser.dialogs import AddModifyDialog, confirm_remove
 from .source_browser.entries import SourceBrowserEntry
 from .source_browser.file_opening import open_file, open_file_location, open_url
@@ -50,7 +53,12 @@ class MainWindow(QMainWindow):
     def _build_menu(self) -> None:
         menu = self.menuBar()
         menu.addMenu("File")
-        menu.addMenu("View")
+        view_menu = menu.addMenu("View")
+        self.show_details_action = QAction("Show Details Panel", self)
+        self.show_details_action.setCheckable(True)
+        self.show_details_action.setChecked(True)
+        self.show_details_action.triggered.connect(self.toggle_details_panel)
+        view_menu.addAction(self.show_details_action)
         menu.addMenu("Tools")
         menu.addMenu("Help")
 
@@ -69,6 +77,11 @@ class MainWindow(QMainWindow):
         ]:
             action = toolbar.addAction(label)
             action.triggered.connect(callback)
+        toolbar.addSeparator()
+        self.toggle_details_toolbar_action = toolbar.addAction("Toggle Details")
+        self.toggle_details_toolbar_action.setCheckable(True)
+        self.toggle_details_toolbar_action.setChecked(True)
+        self.toggle_details_toolbar_action.triggered.connect(self.toggle_details_panel)
 
     def _build_content(self) -> None:
         root = QWidget()
@@ -89,36 +102,45 @@ class MainWindow(QMainWindow):
         self.search.textChanged.connect(self.apply_filters)
         self.search.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         layout.addWidget(self.search, 0)
-        splitter = QSplitter(Qt.Orientation.Horizontal)
+        self.status_legend = QLabel(STATUS_LEGEND)
+        self.status_legend.setToolTip(STATUS_LEGEND)
+        self.status_legend.setStyleSheet("color: #8a8a8a;")
+        self.status_legend.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
+        layout.addWidget(self.status_legend, 0)
+        self.main_splitter = QSplitter(Qt.Orientation.Vertical)
+        top_splitter = QSplitter(Qt.Orientation.Horizontal)
         self.categories = QListWidget()
         self.categories.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Expanding)
         self.categories.addItems(source_browser_categories())
         self.categories.setCurrentRow(0)
         self.categories.currentTextChanged.connect(self.apply_filters)
-        splitter.addWidget(self.categories)
-        table_and_detail = QSplitter(Qt.Orientation.Vertical)
+        top_splitter.addWidget(self.categories)
         self.table = QTableView()
         self.table.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.table.setSortingEnabled(True)
         self.table.setAlternatingRowColors(True)
         self.table.doubleClicked.connect(self.open_detail_action)
+        self.table.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
+        self.table.customContextMenuRequested.connect(self.show_table_context_menu)
+        self.table.setToolTip(STATUS_LEGEND)
         self.model = SourceBrowserTableModel([], visible_columns())
         self.table.setModel(self.model)
         for index, column in enumerate(visible_columns()):
             self.table.setColumnWidth(index, int(column.get("width", 120)))
         self.detail = DetailPanel()
-        table_and_detail.addWidget(self.table)
-        table_and_detail.addWidget(self.detail)
-        table_and_detail.setStretchFactor(0, 1)
-        table_and_detail.setStretchFactor(1, 0)
-        table_and_detail.setCollapsible(1, True)
-        table_and_detail.setSizes([1, 0])
-        self.detail.hide()
-        splitter.addWidget(table_and_detail)
-        splitter.setStretchFactor(0, 0)
-        splitter.setStretchFactor(1, 1)
-        splitter.setSizes([220, 1200])
-        layout.addWidget(splitter, 1)
+        self.detail.image_requested.connect(self.open_image_viewer_at)
+        self.detail.hide_requested.connect(lambda: self.toggle_details_panel(False))
+        top_splitter.addWidget(self.table)
+        top_splitter.setStretchFactor(0, 0)
+        top_splitter.setStretchFactor(1, 1)
+        top_splitter.setSizes([220, 1200])
+        self.main_splitter.addWidget(top_splitter)
+        self.main_splitter.addWidget(self.detail)
+        self.main_splitter.setStretchFactor(0, 1)
+        self.main_splitter.setStretchFactor(1, 0)
+        self.main_splitter.setCollapsible(1, True)
+        self.main_splitter.setSizes([720, 260])
+        layout.addWidget(self.main_splitter, 1)
         self.setCentralWidget(root)
         self.statusBar().showMessage("Source Browser ready")
         self.table.selectionModel().selectionChanged.connect(self.selection_changed)
@@ -137,8 +159,10 @@ class MainWindow(QMainWindow):
             search=self.search.text(),
         )
         self.model.replace_entries(self.filtered_entries)
+        self.detail.show_entry(self.current_entry())
         self.statusBar().showMessage(
-            f"{len(self.filtered_entries)} of {len(self.all_entries)} entries / category: {category}"
+            f"{len(self.filtered_entries)} of {len(self.all_entries)} entries / category: {category} / "
+            "status unspecified means no status field"
         )
 
     def current_entry(self) -> SourceBrowserEntry | None:
@@ -150,7 +174,7 @@ class MainWindow(QMainWindow):
     def selection_changed(self) -> None:
         entry = self.current_entry()
         self.detail.show_entry(entry)
-        self.detail.setVisible(entry is not None)
+        self.detail.setVisible(self.show_details_action.isChecked())
 
     def add_entry(self) -> None:
         dialog = AddModifyDialog()
@@ -223,10 +247,98 @@ class MainWindow(QMainWindow):
         if entry and entry.urls:
             open_url(entry.urls[0])
 
-    def open_detail_action(self) -> None:
-        entry = self.current_entry()
-        if entry and entry.image_paths:
-            ImageViewerDialog(entry.image_paths).exec()
-        else:
-            self.detail.show_entry(entry)
-            self.detail.setVisible(entry is not None)
+    def toggle_details_panel(self, checked: bool) -> None:
+        self._set_details_visible(checked)
+
+    def _set_details_visible(self, visible: bool) -> None:
+        for action in (self.show_details_action, self.toggle_details_toolbar_action):
+            action.blockSignals(True)
+            action.setChecked(visible)
+            action.blockSignals(False)
+        self.detail.setVisible(visible)
+        self.main_splitter.setSizes([720, 260] if visible else [1, 0])
+        if visible:
+            self.detail.show_entry(self.current_entry())
+
+    def open_detail_action(self, index: QModelIndex | None = None) -> None:
+        entry = self._entry_for_index(index) if index and index.isValid() else self.current_entry()
+        if entry is None:
+            return
+        key = self._column_key(index.column()) if index and index.isValid() else ""
+        if key == "images" and entry.image_paths:
+            self.open_image_viewer_at(entry.image_paths, 0)
+            return
+        if key == "urls" and entry.urls:
+            open_url(entry.urls[0])
+            return
+        if key in {"document_paths", "local_paths"}:
+            first_path = self._first_file_path(entry)
+            if first_path:
+                open_file_location(Path(first_path))
+                return
+        self.detail.show_entry(entry)
+        self._set_details_visible(True)
+        self.detail.focus_panel()
+
+    def show_table_context_menu(self, position: QPoint) -> None:
+        index = self.table.indexAt(position)
+        if index.isValid():
+            self.table.setCurrentIndex(index)
+        entry = self._entry_for_index(index) if index.isValid() else self.current_entry()
+        if entry is None:
+            return
+        menu = self._build_table_context_menu(entry)
+        menu.exec(self.table.viewport().mapToGlobal(position))
+
+    def _build_table_context_menu(self, entry: SourceBrowserEntry) -> QMenu:
+        menu = QMenu(self)
+        show_details = menu.addAction("Show Details")
+        show_details.triggered.connect(lambda: self._show_details_for_entry(entry))
+        image_action = menu.addAction("Open Image Viewer")
+        image_action.setEnabled(bool(entry.image_paths))
+        image_action.triggered.connect(lambda: self.open_image_viewer_at(entry.image_paths, 0))
+        first_path = self._first_file_path(entry)
+        first_url = entry.urls[0] if entry.urls else None
+        open_first_file = menu.addAction("Open First File")
+        open_first_file.setEnabled(bool(first_path))
+        open_first_file.triggered.connect(lambda: open_file(Path(first_path or "")))
+        open_location = menu.addAction("Open File Location")
+        open_location.setEnabled(bool(first_path))
+        open_location.triggered.connect(lambda: open_file_location(Path(first_path or "")))
+        open_first_url = menu.addAction("Open First URL")
+        open_first_url.setEnabled(bool(first_url))
+        open_first_url.triggered.connect(lambda: open_url(first_url or ""))
+        menu.addSeparator()
+        copy_entry = menu.addAction("Copy Entry ID")
+        copy_entry.triggered.connect(lambda: QApplication.clipboard().setText(entry.entry_id))
+        copy_source = menu.addAction("Copy Source Record Path")
+        copy_source.triggered.connect(lambda: QApplication.clipboard().setText(entry.source_record_path))
+        copy_file = menu.addAction("Copy First File Path")
+        copy_file.setEnabled(bool(first_path))
+        copy_file.triggered.connect(lambda: QApplication.clipboard().setText(first_path or ""))
+        copy_url = menu.addAction("Copy First URL")
+        copy_url.setEnabled(bool(first_url))
+        copy_url.triggered.connect(lambda: QApplication.clipboard().setText(first_url or ""))
+        return menu
+
+    def _show_details_for_entry(self, entry: SourceBrowserEntry) -> None:
+        self.detail.show_entry(entry)
+        self._set_details_visible(True)
+        self.detail.focus_panel()
+
+    def open_image_viewer_at(self, paths: list[str], index: int = 0) -> None:
+        if paths:
+            ImageViewerDialog(paths, start_index=index).exec()
+
+    def _entry_for_index(self, index: QModelIndex) -> SourceBrowserEntry | None:
+        return self.model.entry_at(index.row())
+
+    def _column_key(self, column: int) -> str:
+        columns = visible_columns()
+        if 0 <= column < len(columns):
+            return str(columns[column].get("key", ""))
+        return ""
+
+    def _first_file_path(self, entry: SourceBrowserEntry) -> str | None:
+        paths = entry.image_paths or entry.document_paths or entry.local_paths
+        return paths[0] if paths else None
