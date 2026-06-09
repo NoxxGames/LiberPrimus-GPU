@@ -298,7 +298,7 @@ def path_canonicalization_report(index: SourceIndex | None = None) -> dict[str, 
         for alias in aliases
     )
     stage5du_under_third_party = bool(stage5du_thread_image_paths) and all(
-        path.startswith("third_party/") and cache.resolve(path).exists for path in stage5du_thread_image_paths
+        path.replace("\\", "/").startswith("third_party/") for path in stage5du_thread_image_paths
     )
     return {
         "entries_loaded": len(index.entries),
