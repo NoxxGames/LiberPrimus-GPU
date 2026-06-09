@@ -1,10 +1,12 @@
 from __future__ import annotations
 
+import importlib.util
 from pathlib import Path
+
+import pytest
 
 from libreprimus.operator_console.source_browser.entries import SourceBrowserEntry
 from libreprimus.operator_console.source_browser.path_aliases import PathResolutionCache
-from libreprimus.operator_console.source_browser.table_model import SourceBrowserTableModel
 from libreprimus.operator_console.source_browser.thumbnails import ThumbnailCache
 from test_stage5dv_common import ensure_stage5dv_built, load_yaml
 
@@ -36,6 +38,11 @@ def _entry() -> SourceBrowserEntry:
 
 
 def test_table_model_display_uses_compact_counts() -> None:
+    if importlib.util.find_spec("PySide6") is None:
+        pytest.skip("PySide6 is optional")
+
+    from libreprimus.operator_console.source_browser.table_model import SourceBrowserTableModel
+
     entry = _entry()
     columns = [
         {"key": "images", "label": "Images"},
