@@ -4004,3 +4004,23 @@ records:
     records, preserved Stage 5DT, Stage 5DG, Stage 5BD, active-lineage, and the 8-worker
     cap, and shifted the pending Stage 5DT number-fact review batch to Stage 5DV without
     execution.
+- record_type: stage_summary_record
+  stage_id: stage-5dv
+  title: Stage 5DV - Operator Console Source Browser performance, path canonicalization,
+    and ChatGPT context hardening, without puzzle execution
+  status: complete
+  category: operator_console_repair
+  summary: Repaired Source Browser path canonicalization and performance surfaces,
+    added path/cache policies, and expanded durable ChatGPT context.
+  key_outputs:
+  - Key-aware and source-root-aware Source Browser path collection.
+  - Source Browser performance/loadability/path validation evidence.
+  - Stage 5DV policies, preservation records, and next-stage routing to Stage 5DW.
+  result_status: metadata_and_gui_repair_only
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: Source Browser entries=1510, records=1509, spurious_root_paths=0, duplicate_pairs=0.
+    No number-fact review batch, source-lock rewrite, target selection, byte generation,
+    or execution was performed.

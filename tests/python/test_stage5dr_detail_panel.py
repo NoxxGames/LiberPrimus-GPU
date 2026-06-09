@@ -68,6 +68,7 @@ def test_detail_panel_renders_selected_entry_sections(app: object) -> None:
 
     assert panel.header.text() == "Stage 5DR detail fixture"
     assert panel.tabs.count() == 5
+    panel.tabs.setCurrentIndex(panel.raw_tab_index)
     assert panel.raw_text.toPlainText()
     assert "stage5dr_detail_fixture" in panel.raw_text.toPlainText()
     assert panel.raw_text.lineWrapMode() == QPlainTextEdit.LineWrapMode.WidgetWidth
@@ -98,6 +99,7 @@ def test_detail_panel_renders_media_urls_number_facts_and_warnings(
     assert panel.findChildren(QWidget, "sourceBrowserPathRow")
     assert panel.findChildren(QWidget, "sourceBrowserUrlRow")
     assert any("fixture-fact" in text.toPlainText() for text in panel.findChildren(QPlainTextEdit))
+    panel.tabs.setCurrentIndex(panel.raw_tab_index)
     assert "Synthetic warning" in panel.raw_text.toPlainText()
 
 

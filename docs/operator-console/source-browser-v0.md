@@ -12,6 +12,8 @@ Stage 5DT adds number-fact card reviewability. Existing number facts are normali
 
 Stage 5DU adds community visual/red-heading/negative-space source-lock metadata and a review-only overlay collection for selected number facts. The overlays make candidate facts easier to inspect in the details panel, but they do not rewrite historical source-lock records, validate visual intent, select a target, or authorize route execution.
 
+Stage 5DV repairs Source Browser responsiveness and path hygiene before the first number-fact review batch. Table cells use compact text/count display, path resolution is cached, raw previews and thumbnails are lazy/cached in the details panel, and search text is precomputed. Path collection is key-aware and source-root-aware: bare filenames such as `0.png`, `messages.txt`, or `google_doc_1.png` are labels unless a path-bearing key or explicit `source_root` resolves them. If `relative_path` and `file_name` are both present, the explicit relative path wins. Missing root-level basename duplicates are suppressed when a rooted canonical path is present.
+
 Blank table status values are displayed as `unspecified`. This means the source record did not contain `source_status`, `status`, `ready_state`, or `review_state`; it does not mean the record is incomplete, and the GUI does not rewrite source-lock records to invent statuses.
 
 ## Components
@@ -43,6 +45,8 @@ Stage 5DR adds right-click row actions and detail-panel actions for opening imag
 Stage 5DT number-fact cards are display and review scaffolding only. Overlay files may enrich review state later, but they must not rewrite the original source-lock records. The filters `needs:fact-enrichment`, `not-reviewed:number-facts`, `rich:number-facts`, `canonical-verification:number-facts`, and `quarantined:number-facts` help operators find review work without executing any route.
 
 Stage 5DU overlays are review-only enrichments for community visual-route candidate facts. They must stay `usable_for_decision_now=false`, cannot be used as route seeds or proof, and must not be treated as image-forensic or OCR evidence.
+
+Stage 5DV path policy records live in `data/operator-console/source-browser/path-canonicalization-policy.yaml`, `performance-policy.yaml`, and `cache-policy.yaml`. The canonical LP page image root remains `third_party/CiadaSolversIddqd_v2/liber-primus__images--full`; this spelling matches the current local source root and must not be silently changed.
 
 ## Validation
 
@@ -104,4 +108,17 @@ Stage 5DU validates community visual source-lock loadability through:
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5du-source-browser-loadability
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5du-number-fact-cards
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block stage5du-summary
+```
+
+Stage 5DV validates Source Browser repair through:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5dv
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dv
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dv-path-canonicalization
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dv-source-browser-performance
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dv-source-browser-loadability
+.\.venv\Scripts\python.exe -m libreprimus.cli source-browser validate-paths
+.\.venv\Scripts\python.exe -m libreprimus.cli source-browser performance-smoke
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block stage5dv-summary
 ```

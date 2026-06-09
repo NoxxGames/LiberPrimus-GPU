@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5DU" \
-    --expected-next-stage "Stage 5DV" \
+    --expected-latest-stage "Stage 5DV" \
+    --expected-next-stage "Stage 5DW" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5DU" \
-    --expected-next-stage "Stage 5DV" \
+    --expected-latest-stage "Stage 5DV" \
+    --expected-next-stage "Stage 5DW" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DU",
+            expected_latest_stage="Stage 5DV",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DU",
+            "expected_latest_stage": "Stage 5DV",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3423,6 +3423,31 @@ git check-ignore -q "third_party/RedRunes_Possible_Koan_Connection/messages.txt"
 git check-ignore -q "third_party/StarArtifactsInLPPageImages/messages.txt"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5DU" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5DV Source Browser performance and path repair records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv
+"$python_bin" -m libreprimus.cli token-block stage5dv-summary
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-source-browser-performance
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-path-canonicalization
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-chatgpt-context
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-source-browser-loadability
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-stage5du-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-stage5dt-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-stage5dg-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-stage5bd-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-active-lineage-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-handoff-continuity
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-credential-redaction-policy
+"$python_bin" -m libreprimus.cli token-block validate-stage5dv-governance-scope
+"$python_bin" -m libreprimus.cli source-browser validate-paths
+"$python_bin" -m libreprimus.cli source-browser performance-smoke
+git check-ignore -q "codex-output/stage5dv-codex-completion.md"
+git check-ignore -q ".cache/operator-console/thumbnails/test.png"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5DV" >&2
     exit 1
 fi
 

@@ -8,7 +8,12 @@ from rich.console import Console
 from .app import run_operator_console
 from .errors import GuiDependencyError
 from .settings import GUI_INSTALL_MESSAGE
-from .source_browser.validators import validate_number_fact_cards, validate_source_index
+from .source_browser.validators import (
+    performance_smoke,
+    validate_number_fact_cards,
+    validate_path_canonicalization,
+    validate_source_index,
+)
 
 console = Console()
 app = typer.Typer(no_args_is_help=True)
@@ -37,6 +42,24 @@ def validate_number_facts_command() -> None:
     result = validate_number_fact_cards()
     console.print(result.to_cli_text())
     console.print(f"source_browser_number_facts_valid={str(result.ok).lower()}")
+    if not result.ok:
+        raise typer.Exit(1)
+
+
+@app.command("validate-paths")
+def validate_paths_command() -> None:
+    result = validate_path_canonicalization()
+    console.print(result.to_cli_text())
+    console.print(f"source_browser_paths_valid={str(result.ok).lower()}")
+    if not result.ok:
+        raise typer.Exit(1)
+
+
+@app.command("performance-smoke")
+def performance_smoke_command() -> None:
+    result = performance_smoke()
+    console.print(result.to_cli_text())
+    console.print(f"source_browser_performance_smoke_valid={str(result.ok).lower()}")
     if not result.ok:
         raise typer.Exit(1)
 

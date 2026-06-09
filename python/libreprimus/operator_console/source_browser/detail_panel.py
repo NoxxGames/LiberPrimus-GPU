@@ -30,7 +30,7 @@ from PySide6.QtWidgets import (
 
 from .entries import SourceBrowserEntry
 from .file_opening import open_file, open_file_location, open_url
-from .path_aliases import load_path_aliases, resolve_with_aliases
+from .path_aliases import PathResolutionCache, load_path_aliases
 from .normalizer import url_label
 from .number_fact_cards import number_fact_card_widget
 from .number_facts import normalize_entry_number_facts, zero_fact_review_state
@@ -39,6 +39,7 @@ from .status_display import (
     STATUS_UNSPECIFIED_TOOLTIP,
     display_status,
 )
+from .thumbnails import ThumbnailCache
 
 
 class ThumbnailButton(QToolButton):
@@ -51,8 +52,10 @@ class ThumbnailButton(QToolButton):
         *,
         source_path: str,
         resolved_path: Path,
+        path_exists: bool,
         index: int,
         hash_value: str | None = None,
+        thumbnail_cache: ThumbnailCache | None = None,
         parent: QWidget | None = None,
     ) -> None:
         super().__init__(parent)
@@ -64,13 +67,14 @@ class ThumbnailButton(QToolButton):
         self.setIconSize(QSize(128, 96))
         self.setFixedSize(154, 132)
         self.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
-        self.setText(_short_path_label(source_path, missing=not resolved_path.exists()))
+        self.setText(_short_path_label(source_path, missing=not path_exists))
         self.setToolTip(source_path)
         self.clicked.connect(lambda: self.open_requested.emit(self.index))
         self.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self.customContextMenuRequested.connect(self._show_context_menu)
-        if resolved_path.exists():
-            pixmap = QPixmap(str(resolved_path))
+        if path_exists:
+            thumbnail = thumbnail_cache.get(resolved_path) if thumbnail_cache else None
+            pixmap = QPixmap(str(thumbnail or resolved_path))
             if not pixmap.isNull():
                 self.setIcon(
                     QIcon(
@@ -111,13 +115,19 @@ class EntryDetailPanel(QWidget):
         super().__init__()
         self.setObjectName("sourceBrowserEntryDetailPanel")
         self._aliases = load_path_aliases()
+        self._path_cache = PathResolutionCache(self._aliases)
+        self._thumbnail_cache = ThumbnailCache((128, 96))
+        self._raw_cache: dict[str, str] = {}
         self._entry: SourceBrowserEntry | None = None
         self._build_ui()
         self.show_entry(None)
 
     def show_entry(self, entry: SourceBrowserEntry | None) -> None:
+        if entry is not None and self._entry is not None and entry.entry_id == self._entry.entry_id:
+            return
         self._entry = entry
         self._aliases = load_path_aliases()
+        self._path_cache = PathResolutionCache(self._aliases)
         self._clear_dynamic_sections()
         if entry is None:
             self.header.setText("Details")
@@ -129,9 +139,8 @@ class EntryDetailPanel(QWidget):
         self._render_media_files(entry)
         self._render_number_facts(entry)
         self._render_warnings_links(entry)
-        self.raw_text.setPlainText(
-            yaml.safe_dump(entry.to_dict(include_raw=True), sort_keys=False, allow_unicode=False)
-        )
+        self.raw_text.setPlainText("Raw record preview is generated when this tab is opened.")
+        self._render_raw_if_visible()
 
     def focus_panel(self) -> None:
         self.tabs.setFocus(Qt.FocusReason.OtherFocusReason)
@@ -161,7 +170,8 @@ class EntryDetailPanel(QWidget):
         self.raw_text.setReadOnly(True)
         self.raw_text.setLineWrapMode(QPlainTextEdit.LineWrapMode.WidgetWidth)
         self.raw_text.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.tabs.addTab(self.raw_text, "Raw record")
+        self.raw_tab_index = self.tabs.addTab(self.raw_text, "Raw record")
+        self.tabs.currentChanged.connect(lambda _index: self._render_raw_if_visible())
         layout.addWidget(self.tabs, 1)
         self.setMinimumHeight(220)
         self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
@@ -251,12 +261,14 @@ class EntryDetailPanel(QWidget):
             layout.addWidget(QLabel("No image paths recorded."), 0, 0)
             return box
         for index, path_text in enumerate(entry.image_paths):
-            resolved = _resolve(path_text, self._aliases)
+            resolution = self._path_cache.resolve(path_text)
             thumb = ThumbnailButton(
                 source_path=path_text,
-                resolved_path=resolved,
+                resolved_path=resolution.resolved_path,
+                path_exists=resolution.exists,
                 index=index,
                 hash_value=_hash_for_path(entry, path_text),
+                thumbnail_cache=self._thumbnail_cache,
             )
             thumb.open_requested.connect(lambda image_index: self.image_requested.emit(entry.image_paths, image_index))
             layout.addWidget(thumb, index // 2, index % 2)
@@ -276,12 +288,13 @@ class EntryDetailPanel(QWidget):
         return box
 
     def _path_row(self, path_text: str) -> QWidget:
-        resolved = _resolve(path_text, self._aliases)
+        resolution = self._path_cache.resolve(path_text)
+        resolved = resolution.resolved_path
         row = QWidget()
         row.setObjectName("sourceBrowserPathRow")
         layout = QHBoxLayout(row)
         layout.setContentsMargins(0, 0, 0, 0)
-        status = "present" if resolved.exists() else "missing"
+        status = "present" if resolution.exists else "missing"
         label = QLabel(
             f"{Path(path_text).suffix.lower() or 'file'}  {path_text}  [{status}]\n"
             f"resolved: {resolved.as_posix()}"
@@ -291,11 +304,11 @@ class EntryDetailPanel(QWidget):
         label.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
         layout.addWidget(label, 1)
         open_button = QPushButton("Open")
-        open_button.setEnabled(resolved.exists())
+        open_button.setEnabled(resolution.exists)
         open_button.clicked.connect(lambda: open_file(resolved))
         layout.addWidget(open_button)
         location_button = QPushButton("Open Location")
-        location_button.setEnabled(resolved.exists())
+        location_button.setEnabled(resolution.exists)
         location_button.clicked.connect(lambda: open_file_location(resolved))
         layout.addWidget(location_button)
         copy_button = QPushButton("Copy Path")
@@ -392,6 +405,16 @@ class EntryDetailPanel(QWidget):
         layout.addWidget(label)
         layout.addStretch(1)
 
+    def _render_raw_if_visible(self) -> None:
+        if self._entry is None or self.tabs.currentIndex() != self.raw_tab_index:
+            return
+        cached = self._raw_cache.get(self._entry.entry_id)
+        if cached is None:
+            cached = yaml.safe_dump(self._entry.to_dict(include_raw=True), sort_keys=False, allow_unicode=False)
+            self._raw_cache[self._entry.entry_id] = cached
+        if self.raw_text.toPlainText() != cached:
+            self.raw_text.setPlainText(cached)
+
 
 DetailPanel = EntryDetailPanel
 
@@ -431,10 +454,6 @@ def _unique(values: list[str]) -> list[str]:
             ordered.append(value)
             seen.add(value)
     return ordered
-
-
-def _resolve(path_text: str, aliases: dict[str, str]) -> Path:
-    return resolve_with_aliases(path_text, aliases)
 
 
 def _hash_for_path(entry: SourceBrowserEntry, path_text: str) -> str | None:

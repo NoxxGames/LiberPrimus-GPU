@@ -6,3 +6,37 @@ path_aliases:
   to: third_party
 - from: data
   to: data
+- from: third_party/BigGapsFoundInLiberPrimus
+  to: third_party/BigGapsFoundInLiberPrimus
+- from: third_party/CribbingPage15
+  to: third_party/CribbingPage15
+- from: third_party/Mobius_totient_first_page_theory
+  to: third_party/Mobius_totient_first_page_theory
+- from: third_party/PotentialCrib_RedRunes_Pages_54_55
+  to: third_party/PotentialCrib_RedRunes_Pages_54_55
+- from: third_party/RedRunes_Possible_Koan_Connection
+  to: third_party/RedRunes_Possible_Koan_Connection
+- from: third_party/StarArtifactsInLPPageImages
+  to: third_party/StarArtifactsInLPPageImages
+- from: third_party/CicadaMusic
+  to: third_party/CicadaMusic
+- from: third_party/CicadaMusic/community-theory
+  to: third_party/CicadaMusic/community-theory
+- from: third_party/NumberFactsCollection
+  to: third_party/NumberFactsCollection
+- from: third_party/PotentialHint-3301-on-Page32
+  to: third_party/PotentialHint-3301-on-Page32
+- from: third_party/DiskCipherStuff
+  to: third_party/DiskCipherStuff
+- from: third_party/RedditStuff
+  to: third_party/RedditStuff
+- from: third_party/NumberTriangleStuff
+  to: third_party/NumberTriangleStuff
+- from: third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+  to: third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+- from: third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved
+  to: third_party/CiadaSolversIddqd_v2/liber-primus__images--unsolved
+- from: third_party/CiadaSolversIddqd_v2/lp_outguessed
+  to: third_party/CiadaSolversIddqd_v2/lp_outguessed
+- from: third_party/The-Complete-Cicada3301-Archive-main
+  to: third_party/The-Complete-Cicada3301-Archive-main

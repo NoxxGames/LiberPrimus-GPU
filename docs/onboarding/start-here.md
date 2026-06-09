@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5DU - Community visual/red-heading/negative-space source-lock addendum, without execution.
-- Current planning focus: Stage 5DV - Operator/assistant source-lock number-fact review batch 1, without execution.
+- Latest completed stage: Stage 5DV - Operator Console Source Browser performance, path canonicalization, and ChatGPT context hardening, without puzzle execution.
+- Current planning focus: Stage 5DW - Operator/assistant source-lock number-fact review batch 1, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

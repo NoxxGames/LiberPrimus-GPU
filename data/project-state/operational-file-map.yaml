@@ -7049,3 +7049,28 @@ records:
   staleness_check_level: strict
   owner_context: operator_review
   notes: Overlays are review display aids only and not target-priority evidence.
+- path: data/project-state/stage5dv-summary.yaml
+  owner_stage: stage-5dv
+  purpose: Stage 5DV compact source-browser repair summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_console
+  notes: Metadata-only repair summary; not puzzle evidence.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DV
+- path: data/operator-console/source-browser/path-canonicalization-policy.yaml
+  owner_stage: stage-5dv
+  purpose: Source Browser key-aware/source-root-aware path policy.
+  expected_update_frequency: as_needed
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_console
+  notes: Bare filenames are labels unless source-root/path-bearing context resolves
+    them.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DV

@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DU community visual/red-heading/negative-space source-lock addendum is complete.
+Stage 5DV Operator Console Source Browser performance, path canonicalization, and ChatGPT context hardening is complete.
 
-Next recommended prompt: Stage 5DV - Operator/assistant source-lock number-fact review batch 1, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DW - Operator/assistant source-lock number-fact review batch 1, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DV
+
+Stage 5DV repairs Operator Console Source Browser responsiveness and path canonicalization before the source-lock number-fact review batch begins. It adds key-aware/source-root-aware path collection, suppresses bare root filename paths, suppresses duplicate present+missing basename pairs, adds canonical local third-party path aliases, caches path resolution, lazily/caches thumbnails and raw preview text, precomputes search text, debounces filtering, and expands `ChatGPT-ContextFile.md` with durable Stage 5DU/5DV project context.
+
+Local Stage 5DV summary: Source Browser entries loaded `1510`, committed records scanned `1509`, Source Browser validation errors `0`, warnings `549`, spurious root image paths after repair `0`, spurious root document paths after repair `0`, duplicate present+missing path pairs after repair `0`, source-root-relative paths resolved `2161`, Stage 5BD run-plan IDs `10`, active-lineage records `8`, parallel worker cap `8`, number-fact review batch performed `false`, historical source-lock records rewritten `false`, target selected `false`, byte streams generated `false`, execution performed `false`, solve claim `false`, and next stage `Stage 5DW`.
+
+Stage 5DV is GUI/index repair and context-hardening infrastructure only. It does not perform the planned number-fact review batch, backfill historical number facts, rewrite historical source locks, select a target, create Deep Research acceptance, satisfy the combined gate, authorize activation, generate byte streams, run OCR/image/audio/stego/CUDA work, execute community code, run route extraction, search DWH/hash/preimages, decode, score, benchmark, expand the website, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DU
 

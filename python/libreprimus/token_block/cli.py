@@ -750,6 +750,7 @@ from . import stage5dr as stage5dr_module
 from . import stage5ds as stage5ds_module
 from . import stage5dt as stage5dt_module
 from . import stage5du as stage5du_module
+from . import stage5dv as stage5dv_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -9942,6 +9943,152 @@ def validate_stage5du_governance_scope_command() -> None:
     _print_stage5du_result(
         stage5du_module.validate_stage5du_governance_scope(),
         "token_block_stage5du_governance_scope_valid=true",
+    )
+
+
+def _print_stage5dv_result(result: object, success_line: str) -> None:
+    text = result.to_cli_text()
+    console.print(text)
+    if getattr(result, "validation_error_count") != 0:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5dv")
+def build_stage5dv_command() -> None:
+    records = stage5dv_module.build_stage5dv()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(f"source_browser_entries_loaded={summary.get('source_browser_entries_loaded')}")
+    console.print(f"source_browser_records_scanned={summary.get('source_browser_records_scanned')}")
+    console.print(f"spurious_root_image_paths_after={summary.get('spurious_root_image_paths_after')}")
+    console.print(
+        "duplicate_present_missing_path_pairs_after="
+        f"{summary.get('duplicate_present_missing_path_pairs_after')}"
+    )
+    console.print(
+        "source_browser_performance_repair_performed="
+        f"{str(summary.get('source_browser_performance_repair_performed')).lower()}"
+    )
+    console.print(f"chatgpt_context_updated={str(summary.get('chatgpt_context_updated')).lower()}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5dv")
+def validate_stage5dv_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv(),
+        "token_block_stage5dv_valid=true",
+    )
+
+
+@app.command("stage5dv-summary")
+def stage5dv_summary_command() -> None:
+    console.print(stage5dv_module.stage5dv_summary_text())
+
+
+@app.command("validate-stage5dv-source-browser-performance")
+def validate_stage5dv_source_browser_performance_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_source_browser_performance(),
+        "token_block_stage5dv_source_browser_performance_valid=true",
+    )
+
+
+@app.command("validate-stage5dv-path-canonicalization")
+def validate_stage5dv_path_canonicalization_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_path_canonicalization(),
+        "token_block_stage5dv_path_canonicalization_valid=true",
+    )
+
+
+@app.command("validate-stage5dv-chatgpt-context")
+def validate_stage5dv_chatgpt_context_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_chatgpt_context(),
+        "token_block_stage5dv_chatgpt_context_valid=true",
+    )
+
+
+@app.command("validate-stage5dv-source-browser-loadability")
+def validate_stage5dv_source_browser_loadability_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_source_browser_loadability(),
+        "token_block_stage5dv_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage5dv-stage5du-preservation")
+def validate_stage5dv_stage5du_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_stage5du_preservation(),
+        "token_block_stage5dv_stage5du_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dv-stage5dt-preservation")
+def validate_stage5dv_stage5dt_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_stage5dt_preservation(),
+        "token_block_stage5dv_stage5dt_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dv-stage5dg-preservation")
+def validate_stage5dv_stage5dg_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_stage5dg_preservation(),
+        "token_block_stage5dv_stage5dg_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dv-stage5bd-preservation")
+def validate_stage5dv_stage5bd_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_stage5bd_preservation(),
+        "token_block_stage5dv_stage5bd_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dv-active-lineage-preservation")
+def validate_stage5dv_active_lineage_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_active_lineage_preservation(),
+        "token_block_stage5dv_active_lineage_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dv-sidecar-gates")
+def validate_stage5dv_sidecar_gates_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_sidecar_gates(),
+        "token_block_stage5dv_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5dv-handoff-continuity")
+def validate_stage5dv_handoff_continuity_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_handoff_continuity(),
+        "token_block_stage5dv_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5dv-credential-redaction-policy")
+def validate_stage5dv_credential_redaction_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_credential_redaction_policy(),
+        "token_block_stage5dv_credential_redaction_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5dv-governance-scope")
+def validate_stage5dv_governance_scope_command() -> None:
+    _print_stage5dv_result(
+        stage5dv_module.validate_stage5dv_governance_scope(),
+        "token_block_stage5dv_governance_scope_valid=true",
     )
 
 

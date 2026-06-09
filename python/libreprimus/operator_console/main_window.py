@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from PySide6.QtCore import QModelIndex, QPoint, Qt
+from PySide6.QtCore import QModelIndex, QPoint, QTimer, Qt
 from PySide6.QtGui import QAction
 from PySide6.QtWidgets import (
     QAbstractItemView,
@@ -46,6 +46,11 @@ class MainWindow(QMainWindow):
         self.setWindowTitle(APP_NAME)
         self.all_entries: list[SourceBrowserEntry] = []
         self.filtered_entries: list[SourceBrowserEntry] = []
+        self._last_detail_entry_id: str | None = None
+        self._filter_timer = QTimer(self)
+        self._filter_timer.setSingleShot(True)
+        self._filter_timer.setInterval(120)
+        self._filter_timer.timeout.connect(self.apply_filters)
         self._build_menu()
         self._build_toolbar()
         self._build_content()
@@ -100,7 +105,7 @@ class MainWindow(QMainWindow):
         layout.addWidget(title, 0)
         self.search = QLineEdit()
         self.search.setPlaceholderText("Search source records, paths, URLs, warnings, number facts...")
-        self.search.textChanged.connect(self.apply_filters)
+        self.search.textChanged.connect(self.schedule_filters)
         self.search.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         layout.addWidget(self.search, 0)
         self.status_legend = QLabel(STATUS_LEGEND)
@@ -154,6 +159,9 @@ class MainWindow(QMainWindow):
         self.all_entries = index.entries
         self.apply_filters()
 
+    def schedule_filters(self) -> None:
+        self._filter_timer.start()
+
     def apply_filters(self) -> None:
         category_item = self.categories.currentItem()
         category = category_item.text() if category_item else "All"
@@ -180,6 +188,9 @@ class MainWindow(QMainWindow):
 
     def selection_changed(self) -> None:
         entry = self.current_entry()
+        if entry and entry.entry_id == self._last_detail_entry_id:
+            return
+        self._last_detail_entry_id = entry.entry_id if entry else None
         self.detail.show_entry(entry)
         self.detail.setVisible(self.show_details_action.isChecked())
 
@@ -187,7 +198,10 @@ class MainWindow(QMainWindow):
         if not index.isValid():
             return
         self.table.selectRow(index.row())
-        self.detail.show_entry(self._entry_for_index(index))
+        entry = self._entry_for_index(index)
+        if entry and entry.entry_id != self._last_detail_entry_id:
+            self._last_detail_entry_id = entry.entry_id
+            self.detail.show_entry(entry)
 
     def add_entry(self) -> None:
         dialog = AddModifyDialog()

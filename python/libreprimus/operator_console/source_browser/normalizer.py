@@ -14,6 +14,76 @@ from ..settings import DOCUMENT_EXTENSIONS, IMAGE_EXTENSIONS
 
 URL_RE = re.compile(r"https?://[^\s)>\"]+")
 SHA_RE = re.compile(r"^[0-9a-fA-F]{32,128}$")
+ROOT_ALLOWLIST = {"ChatGPT-ContextFile.md", "README.md", "STATUS.md", "ROADMAP.md"}
+PATH_BEARING_KEYS = {
+    "path",
+    "paths",
+    "local_path",
+    "local_paths",
+    "relative_path",
+    "relative_paths",
+    "source_path",
+    "source_paths",
+    "source_file",
+    "source_files",
+    "source_root",
+    "source_roots",
+    "image_path",
+    "image_paths",
+    "image_relative_path",
+    "document_path",
+    "document_paths",
+    "pdf_path",
+    "audio_path",
+    "attachment_path",
+    "thread_folder",
+    "canonical_page_root",
+    "root_path",
+    "file_path",
+    "source_record_path",
+    "schema_path",
+}
+SOURCE_ROOT_KEYS = {
+    "source_root",
+    "source_roots",
+    "thread_folder",
+    "canonical_page_root",
+    "root_path",
+    "base_path",
+}
+SOURCE_ROOT_RELATIVE_KEYS = {
+    "source_images",
+    "source_files",
+    "source_documents",
+    "image_files",
+    "document_files",
+    "expected_files",
+    "observed_files",
+    "files",
+    "records",
+    "image_locks",
+    "pdf_locks",
+    "audio_locks",
+}
+SOURCE_ROOT_RELATIVE_CHILD_KEYS = {"file_name", "image_name", "document_name", "pdf_name", "audio_name"}
+LABEL_ONLY_KEYS = {
+    "file_name",
+    "title",
+    "display_title",
+    "name",
+    "entry_title",
+    "source_id",
+    "candidate_family_id",
+    "claim_id",
+    "phrase",
+    "text",
+    "summary",
+    "description",
+    "notes",
+    "relation",
+    "expected_duplicate_note",
+    "expected_files_about",
+}
 
 
 def normalize_record(source_record_path: Path, raw_record: dict[str, Any]) -> SourceBrowserEntry:
@@ -65,7 +135,7 @@ def normalize_record(source_record_path: Path, raw_record: dict[str, Any]) -> So
         warnings=warnings,
     )
     entry_id = _entry_id(raw_record, record_type, candidate_family_id, source_record_path)
-    return SourceBrowserEntry(
+    entry = SourceBrowserEntry(
         entry_id=entry_id,
         entry_type=entry_type,
         category=category,
@@ -97,6 +167,8 @@ def normalize_record(source_record_path: Path, raw_record: dict[str, Any]) -> So
         schema_path=_string_or_none(raw_record.get("schema")),
         raw_record=raw_record,
     )
+    entry.search_text = _search_text(entry)
+    return entry
 
 
 def context_entry(path: Path) -> SourceBrowserEntry:
@@ -140,6 +212,7 @@ def context_entry(path: Path) -> SourceBrowserEntry:
         source_record_path=path.as_posix(),
         schema_path=None,
         raw_record=raw,
+        search_text="chatgpt context file chatgpt-contextfile.md assistant context handoff",
     )
 
 
@@ -287,6 +360,171 @@ def _string_or_none(value: Any) -> str | None:
     return None
 
 
+def _collect_paths(raw_record: dict[str, Any]) -> set[str]:
+    paths: set[str] = set()
+    _collect_paths_from_value(raw_record, paths, source_roots=(), key_path=())
+    return _suppress_bare_duplicate_paths(paths)
+
+
+def _collect_paths_from_value(
+    value: Any,
+    paths: set[str],
+    *,
+    source_roots: tuple[str, ...],
+    key_path: tuple[str, ...],
+) -> None:
+    if isinstance(value, dict):
+        local_roots = _source_roots_from_mapping(value, source_roots)
+        relative_path_present = _has_path_value(value.get("relative_path")) or _has_path_value(
+            value.get("image_relative_path")
+        )
+        for key, item in value.items():
+            key_text = str(key)
+            key_lower = key_text.lower()
+            child_path = (*key_path, key_lower)
+            if key_lower in SOURCE_ROOT_KEYS:
+                continue
+            if key_lower in PATH_BEARING_KEYS:
+                _collect_path_value(item, paths, source_roots=local_roots, key=key_lower)
+                continue
+            if key_lower in SOURCE_ROOT_RELATIVE_KEYS:
+                _collect_source_root_relative_value(item, paths, source_roots=local_roots, key_path=child_path)
+                continue
+            if (
+                key_lower in SOURCE_ROOT_RELATIVE_CHILD_KEYS
+                and not relative_path_present
+                and _parent_allows_filename_resolution(key_path)
+            ):
+                _collect_source_root_relative_value(item, paths, source_roots=local_roots, key_path=child_path)
+                continue
+            if key_lower in LABEL_ONLY_KEYS:
+                continue
+            _collect_paths_from_value(item, paths, source_roots=local_roots, key_path=child_path)
+    elif isinstance(value, list):
+        for item in value:
+            _collect_paths_from_value(item, paths, source_roots=source_roots, key_path=key_path)
+
+
+def _source_roots_from_mapping(value: dict[str, Any], inherited: tuple[str, ...]) -> tuple[str, ...]:
+    roots = list(inherited)
+    for key in SOURCE_ROOT_KEYS:
+        item = value.get(key)
+        if isinstance(item, str):
+            _append_source_root(item, roots)
+        elif isinstance(item, list):
+            for nested in item:
+                if isinstance(nested, str):
+                    _append_source_root(nested, roots)
+    return tuple(dict.fromkeys(roots))
+
+
+def _append_source_root(text: str, roots: list[str]) -> None:
+    normalized = _normalize_path_text(text)
+    if normalized and _looks_like_path(normalized) and normalized not in roots:
+        roots.append(normalized)
+
+
+def _collect_path_value(value: Any, paths: set[str], *, source_roots: tuple[str, ...], key: str) -> None:
+    if isinstance(value, str):
+        _add_path(paths, value, source_roots=source_roots, force_source_root=key in SOURCE_ROOT_RELATIVE_KEYS)
+    elif isinstance(value, list):
+        for item in value:
+            _collect_path_value(item, paths, source_roots=source_roots, key=key)
+    elif isinstance(value, dict):
+        _collect_paths_from_value(value, paths, source_roots=source_roots, key_path=(key,))
+
+
+def _collect_source_root_relative_value(
+    value: Any,
+    paths: set[str],
+    *,
+    source_roots: tuple[str, ...],
+    key_path: tuple[str, ...],
+) -> None:
+    if isinstance(value, str):
+        _add_path(paths, value, source_roots=source_roots, force_source_root=True)
+    elif isinstance(value, list):
+        for item in value:
+            _collect_source_root_relative_value(item, paths, source_roots=source_roots, key_path=key_path)
+    elif isinstance(value, dict):
+        _collect_paths_from_value(value, paths, source_roots=source_roots, key_path=key_path)
+
+
+def _add_path(
+    paths: set[str],
+    text: str,
+    *,
+    source_roots: tuple[str, ...],
+    force_source_root: bool = False,
+) -> None:
+    normalized = _normalize_path_text(text)
+    if not normalized or URL_RE.search(normalized):
+        return
+    if _is_bare_filename(normalized):
+        if normalized in ROOT_ALLOWLIST:
+            paths.add(normalized)
+            return
+        if source_roots and (force_source_root or _has_path_suffix(normalized)):
+            for root in source_roots:
+                paths.add(f"{root.rstrip('/')}/{normalized}")
+            return
+        return
+    if _looks_like_path(normalized):
+        paths.add(normalized)
+
+
+def _normalize_path_text(text: str) -> str:
+    return text.strip().replace("\\", "/")
+
+
+def _looks_like_path(text: str) -> bool:
+    suffix = Path(text).suffix.lower()
+    return (
+        text in ROOT_ALLOWLIST
+        or text.startswith(("data/", "docs/", "third_party/", "experiments/manifests/", "schemas/"))
+        or "/" in text
+        or suffix in IMAGE_EXTENSIONS
+        or suffix in DOCUMENT_EXTENSIONS
+    )
+
+
+def _has_path_suffix(text: str) -> bool:
+    return Path(text).suffix.lower() in IMAGE_EXTENSIONS | DOCUMENT_EXTENSIONS
+
+
+def _is_bare_filename(text: str) -> bool:
+    return "/" not in text and "\\" not in text and bool(Path(text).suffix)
+
+
+def _has_path_value(value: Any) -> bool:
+    if isinstance(value, str):
+        return bool(_normalize_path_text(value))
+    if isinstance(value, list):
+        return any(_has_path_value(item) for item in value)
+    return False
+
+
+def _parent_allows_filename_resolution(key_path: tuple[str, ...]) -> bool:
+    return any(key in SOURCE_ROOT_RELATIVE_KEYS for key in key_path)
+
+
+def _suppress_bare_duplicate_paths(paths: set[str]) -> set[str]:
+    basenames_with_rooted_path = {
+        Path(path).name.lower()
+        for path in paths
+        if not _is_bare_filename(path) and Path(path).suffix.lower() in IMAGE_EXTENSIONS | DOCUMENT_EXTENSIONS
+    }
+    return {
+        path
+        for path in paths
+        if not (
+            _is_bare_filename(path)
+            and Path(path).name.lower() in basenames_with_rooted_path
+            and path not in ROOT_ALLOWLIST
+        )
+    }
+
+
 def _walk(value: Any) -> Iterable[Any]:
     yield value
     if isinstance(value, dict):
@@ -295,25 +533,6 @@ def _walk(value: Any) -> Iterable[Any]:
     elif isinstance(value, list):
         for item in value:
             yield from _walk(item)
-
-
-def _collect_paths(raw_record: dict[str, Any]) -> set[str]:
-    paths: set[str] = set()
-    for value in _walk(raw_record):
-        if not isinstance(value, str):
-            continue
-        text = value.strip()
-        if not text or URL_RE.search(text):
-            continue
-        suffix = Path(text).suffix.lower()
-        if (
-            text == "ChatGPT-ContextFile.md"
-            or text.startswith(("data/", "docs/", "third_party/", "experiments/manifests/"))
-            or suffix in IMAGE_EXTENSIONS
-            or suffix in DOCUMENT_EXTENSIONS
-        ):
-            paths.add(text.replace("\\", "/"))
-    return paths
 
 
 def _collect_urls(raw_record: dict[str, Any]) -> set[str]:
@@ -404,6 +623,23 @@ def _collect_number_facts(raw_record: dict[str, Any]) -> list[dict[str, Any]]:
 
     visit(raw_record)
     return facts
+
+
+def _search_text(entry: SourceBrowserEntry) -> str:
+    parts = [
+        entry.title,
+        entry.summary,
+        entry.notes or "",
+        entry.record_type or "",
+        entry.candidate_family_id or "",
+        entry.stage_id or "",
+        entry.source_record_path,
+        " ".join(entry.local_paths),
+        " ".join(entry.urls),
+        " ".join(entry.warnings),
+        " ".join(str(fact) for fact in entry.number_facts),
+    ]
+    return " ".join(parts).lower()
 
 
 def _is_compact_value(value: Any) -> bool:

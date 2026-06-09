@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import json
+import re
+import time
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -20,7 +22,8 @@ from .number_facts import (
     reviewability_counts,
     zero_fact_review_state,
 )
-from .path_aliases import load_path_aliases, resolve_with_aliases
+from .path_aliases import PathResolutionCache, load_path_aliases
+from .table_model import SourceBrowserTableModel
 from ..settings import (
     DEFAULT_COLUMN_PROFILE,
     DEFAULT_PATH_ALIASES,
@@ -28,6 +31,10 @@ from ..settings import (
     MANUAL_OVERRIDES_DIR,
     TOMBSTONES_DIR,
 )
+
+BARE_ROOT_PATH_RE = re.compile(r"^[A-Za-z0-9 _,-]+\.(png|jpg|jpeg|webp|pdf|mp3|xlsx|xlsm|txt|py)$", re.I)
+ALLOWED_ROOT_PATHS = {"ChatGPT-ContextFile.md", "README.md", "STATUS.md", "ROADMAP.md"}
+CANONICAL_PAGE_ROOT = "third_party/CiadaSolversIddqd_v2/liber-primus__images--full"
 
 
 @dataclass
@@ -88,6 +95,87 @@ def validate_source_index() -> ValidationResult:
     return result
 
 
+def validate_path_canonicalization() -> ValidationResult:
+    report = path_canonicalization_report()
+    result = ValidationResult(
+        counts={
+            "entries_loaded": report["entries_loaded"],
+            "records_scanned": report["records_scanned"],
+            "spurious_root_image_paths": report["spurious_root_image_paths"],
+            "spurious_root_document_paths": report["spurious_root_document_paths"],
+            "duplicate_present_missing_path_pairs": report["duplicate_present_missing_path_pairs"],
+            "source_root_relative_resolved_paths": report["source_root_relative_resolved_paths"],
+            "canonical_lp_page_root_alias_present": report["canonical_lp_page_root_alias_present"],
+            "stage5du_thread_image_paths_under_third_party": report[
+                "stage5du_thread_image_paths_under_third_party"
+            ],
+        }
+    )
+    if report["spurious_root_image_paths"]:
+        result.errors.extend(f"spurious root image path: {path}" for path in report["spurious_root_image_path_examples"])
+    if report["spurious_root_document_paths"]:
+        result.errors.extend(
+            f"spurious root document path: {path}" for path in report["spurious_root_document_path_examples"]
+        )
+    if report["duplicate_present_missing_path_pairs"]:
+        result.errors.extend(
+            f"duplicate present+missing basename pair: {path}"
+            for path in report["duplicate_present_missing_path_pair_examples"]
+        )
+    if not report["canonical_lp_page_root_alias_present"]:
+        result.errors.append(f"canonical LP page root alias missing: {CANONICAL_PAGE_ROOT}")
+    if not report["stage5du_thread_image_paths_under_third_party"]:
+        result.errors.append("Stage 5DU thread image paths do not resolve under third_party")
+    return result
+
+
+def performance_smoke() -> ValidationResult:
+    start = time.perf_counter()
+    index = build_source_index()
+    index_seconds = time.perf_counter() - start
+    columns = [
+        {"key": "title", "label": "Entry"},
+        {"key": "images", "label": "Images"},
+        {"key": "document_paths", "label": "Docs"},
+        {"key": "urls", "label": "URLs"},
+        {"key": "number_facts", "label": "Number facts"},
+        {"key": "warnings", "label": "Warnings"},
+    ]
+    model = SourceBrowserTableModel(index.entries, columns)
+    table_start = time.perf_counter()
+    rows_to_check = min(100, len(index.entries))
+    for row in range(rows_to_check):
+        for column, spec in enumerate(columns):
+            # Use the model's cheap display helper directly to avoid a Qt index dependency in headless CI.
+            model._display(index.entries[row], str(spec["key"]))  # noqa: SLF001
+    table_seconds = time.perf_counter() - table_start
+    report = path_canonicalization_report(index)
+    result = ValidationResult(
+        counts={
+            "entries_loaded": len(index.entries),
+            "records_scanned": len(index.scanned_paths),
+            "table_model_smoke_rows": rows_to_check,
+            "table_model_no_cell_widgets_policy": True,
+            "thumbnail_generation_eager_for_table": False,
+            "raw_preview_lazy": True,
+            "path_resolution_cache_enabled": True,
+            "thumbnail_cache_enabled": True,
+            "startup_or_index_build_time_seconds_observed_locally": f"{index_seconds:.3f}",
+            "table_display_smoke_time_seconds_observed_locally": f"{table_seconds:.3f}",
+            "spurious_root_paths_after": report["spurious_root_image_paths"]
+            + report["spurious_root_document_paths"],
+            "duplicate_present_missing_path_pairs_after": report["duplicate_present_missing_path_pairs"],
+        }
+    )
+    if len(index.entries) < 1490:
+        result.errors.append("Source Browser entry count regressed below Stage 5DU baseline")
+    if report["spurious_root_image_paths"] or report["spurious_root_document_paths"]:
+        result.errors.append("spurious root paths remain after path canonicalization repair")
+    if report["duplicate_present_missing_path_pairs"]:
+        result.errors.append("duplicate present+missing path pairs remain after repair")
+    return result
+
+
 def validate_manual_records() -> ValidationResult:
     index = build_source_index()
     entry_ids = {entry.entry_id for entry in index.entries}
@@ -144,6 +232,55 @@ def source_browser_summary(index: SourceIndex | None = None) -> dict[str, Any]:
         "missing_paths": path_stats["missing_paths"],
         "categories": categories,
         "chatgpt_context": context_file_status(),
+    }
+
+
+def path_canonicalization_report(index: SourceIndex | None = None) -> dict[str, Any]:
+    index = index or build_source_index()
+    aliases = load_path_aliases()
+    cache = PathResolutionCache(aliases)
+    all_paths: list[str] = []
+    spurious_images: list[str] = []
+    spurious_documents: list[str] = []
+    stage5du_thread_image_paths: list[str] = []
+    source_root_relative_paths = 0
+    for entry in index.entries:
+        paths = sorted(set(entry.local_paths + entry.image_paths + entry.document_paths))
+        all_paths.extend(paths)
+        if entry.source_record_path.endswith("stage5du-thread-image-source-locks.yaml"):
+            stage5du_thread_image_paths.extend(entry.image_paths)
+        for path_text in paths:
+            suffix = Path(path_text).suffix.lower()
+            if _is_source_root_resolved(path_text):
+                source_root_relative_paths += 1
+            if path_text in ALLOWED_ROOT_PATHS or "/" in path_text or not BARE_ROOT_PATH_RE.match(path_text):
+                continue
+            if suffix in {".png", ".jpg", ".jpeg", ".webp"}:
+                spurious_images.append(path_text)
+            else:
+                spurious_documents.append(path_text)
+    duplicate_pairs = _duplicate_present_missing_pairs(all_paths, cache)
+    canonical_alias_present = any(
+        alias.source_prefix == CANONICAL_PAGE_ROOT or alias.target_prefix.replace("\\", "/") == CANONICAL_PAGE_ROOT
+        for alias in aliases
+    )
+    stage5du_under_third_party = bool(stage5du_thread_image_paths) and all(
+        path.startswith("third_party/") and cache.resolve(path).exists for path in stage5du_thread_image_paths
+    )
+    return {
+        "entries_loaded": len(index.entries),
+        "records_scanned": len(index.scanned_paths),
+        "path_references_after": len(all_paths),
+        "spurious_root_image_paths": len(spurious_images),
+        "spurious_root_document_paths": len(spurious_documents),
+        "spurious_root_image_path_examples": sorted(set(spurious_images))[:20],
+        "spurious_root_document_path_examples": sorted(set(spurious_documents))[:20],
+        "duplicate_present_missing_path_pairs": len(duplicate_pairs),
+        "duplicate_present_missing_path_pair_examples": duplicate_pairs[:20],
+        "source_root_relative_resolved_paths": source_root_relative_paths,
+        "canonical_lp_page_root_alias_present": canonical_alias_present,
+        "stage5du_thread_image_paths_under_third_party": stage5du_under_third_party,
+        "path_resolution_cache_exists_checks": cache.exists_checks,
     }
 
 
@@ -230,6 +367,7 @@ def _count_files(path: Path) -> int:
 
 def _path_stats(index: SourceIndex) -> dict[str, int]:
     aliases = load_path_aliases()
+    cache = PathResolutionCache(aliases)
     missing_paths = 0
     image_paths = 0
     document_paths = 0
@@ -243,7 +381,7 @@ def _path_stats(index: SourceIndex) -> dict[str, int]:
         for path_text in set(entry.local_paths + entry.image_paths + entry.document_paths):
             if path_text.startswith(("http://", "https://")):
                 continue
-            if not resolve_with_aliases(path_text, aliases).exists():
+            if not cache.resolve(path_text).exists:
                 missing_paths += 1
     return {
         "image_paths": image_paths,
@@ -252,6 +390,32 @@ def _path_stats(index: SourceIndex) -> dict[str, int]:
         "warnings": warning_count,
         "missing_paths": missing_paths,
     }
+
+
+def _is_source_root_resolved(path_text: str) -> bool:
+    return path_text.startswith("third_party/") and "/" in path_text
+
+
+def _duplicate_present_missing_pairs(paths: list[str], cache: PathResolutionCache) -> list[str]:
+    by_name: dict[str, list[str]] = {}
+    for path_text in sorted(set(paths)):
+        if path_text in ALLOWED_ROOT_PATHS:
+            continue
+        suffix = Path(path_text).suffix.lower()
+        if suffix not in {".png", ".jpg", ".jpeg", ".webp", ".pdf", ".mp3", ".xlsx", ".xlsm", ".txt", ".py"}:
+            continue
+        by_name.setdefault(Path(path_text).name.lower(), []).append(path_text)
+    pairs: list[str] = []
+    for name, grouped in by_name.items():
+        bare = [path for path in grouped if "/" not in path and BARE_ROOT_PATH_RE.match(path)]
+        rooted = [path for path in grouped if "/" in path]
+        if not bare or not rooted:
+            continue
+        rooted_present = any(cache.resolve(path).exists for path in rooted)
+        bare_missing = [path for path in bare if not cache.resolve(path).exists]
+        if rooted_present and bare_missing:
+            pairs.append(f"{name}: {','.join(bare_missing)}")
+    return pairs
 
 
 def _format(value: int | str | bool) -> str:

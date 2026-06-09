@@ -20,6 +20,8 @@ FACT_FILTER_QUERIES = {
 
 
 def searchable_text(entry: SourceBrowserEntry) -> str:
+    if entry.search_text:
+        return entry.search_text
     parts = [
         entry.title,
         entry.summary,

@@ -16,6 +16,7 @@ class SourceBrowserTableModel(QAbstractTableModel):
         super().__init__()
         self.entries = entries
         self.columns = columns
+        self._display_cache: dict[tuple[str, str], str] = {}
 
     def rowCount(self, parent: QModelIndex | None = None) -> int:  # noqa: N802
         return 0 if parent and parent.isValid() else len(self.entries)
@@ -61,26 +62,41 @@ class SourceBrowserTableModel(QAbstractTableModel):
     def replace_entries(self, entries: list[SourceBrowserEntry]) -> None:
         self.beginResetModel()
         self.entries = entries
+        self._display_cache.clear()
         self.endResetModel()
 
     def _display(self, entry: SourceBrowserEntry, key: str) -> str:
+        cache_key = (str(id(entry)), entry.entry_id, key)
+        cached = self._display_cache.get(cache_key)
+        if cached is not None:
+            return cached
         if key == "title":
-            return entry.title
-        if key == "category":
-            return entry.category
-        if key == "status":
-            return display_status(entry.source_status)
-        if key == "images":
-            return str(len(entry.image_paths))
-        if key == "urls":
-            return str(len(entry.urls))
-        if key == "number_facts":
-            return number_fact_table_display(entry)
-        if key == "warnings":
-            return str(len(entry.warnings))
-        value = getattr(entry, key, "")
-        if isinstance(value, list):
-            return str(len(value))
-        if isinstance(value, dict):
-            return str(len(value))
-        return "" if value is None else str(value)
+            value = entry.title
+        elif key == "category":
+            value = entry.category
+        elif key == "status":
+            value = display_status(entry.source_status)
+        elif key == "images":
+            count = len(entry.image_paths)
+            value = f"{count} image{'s' if count != 1 else ''}"
+        elif key == "document_paths":
+            count = len(entry.document_paths)
+            value = f"{count} doc{'s' if count != 1 else ''}"
+        elif key == "urls":
+            count = len(entry.urls)
+            value = f"{count} url{'s' if count != 1 else ''}"
+        elif key == "number_facts":
+            value = number_fact_table_display(entry)
+        elif key == "warnings":
+            count = len(entry.warnings)
+            value = f"{count} warning{'s' if count != 1 else ''}"
+        else:
+            raw_value = getattr(entry, key, "")
+            if isinstance(raw_value, list):
+                value = str(len(raw_value))
+            elif isinstance(raw_value, dict):
+                value = str(len(raw_value))
+            else:
+                value = "" if raw_value is None else str(raw_value)
+        self._display_cache[cache_key] = value
+        return value

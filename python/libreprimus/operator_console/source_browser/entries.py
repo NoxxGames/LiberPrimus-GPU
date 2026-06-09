@@ -38,6 +38,7 @@ class SourceBrowserEntry:
     source_record_path: str = ""
     schema_path: str | None = None
     raw_record: dict[str, Any] = field(default_factory=dict)
+    search_text: str = ""
 
     def to_dict(self, include_raw: bool = True) -> dict[str, Any]:
         payload = asdict(self)
