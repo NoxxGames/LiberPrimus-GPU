@@ -1,7 +1,12 @@
 from __future__ import annotations
 
+import importlib.util
+
+import pytest
+
 from libreprimus.operator_console.source_browser.entries import SourceBrowserEntry
-from libreprimus.operator_console.source_browser.table_model import SourceBrowserTableModel
+
+pytestmark = pytest.mark.skipif(importlib.util.find_spec("PySide6") is None, reason="PySide6 is optional")
 
 
 def _entry(facts: list[dict[str, object]]) -> SourceBrowserEntry:
@@ -28,6 +33,8 @@ def _entry(facts: list[dict[str, object]]) -> SourceBrowserEntry:
 
 
 def test_number_fact_table_display_uses_reviewability_labels() -> None:
+    from libreprimus.operator_console.source_browser.table_model import SourceBrowserTableModel
+
     model = SourceBrowserTableModel([_entry([]), _entry([{"claim_id": "x", "value": 1}])], [{"key": "number_facts"}])
 
     assert model._display(model.entries[0], "number_facts") == "not reviewed"
