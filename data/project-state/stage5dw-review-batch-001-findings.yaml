@@ -1,0 +1,29 @@
+stage_id: stage-5dw
+stage_title: Stage 5DW - Source-lock number-fact review batch 001, high-signal enrichment
+  overlays, without execution
+prompt_type: codex_metadata_and_operator_console_reviewability_implementation
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: stage5dw_review_batch_001_findings
+schema: schemas/project-state/stage5dw-review-batch-001-findings-v0.schema.json
+review_batch_id: number_fact_review_batch_001_high_signal
+reviewed_entry_count: 20
+overlay_count: 37
+overlay_only_cards_required_count: 27
+selected_batch_fact_card_count: 46
+key_fact_families:
+- page32_red_header
+- no_f_section_flow
+- lp_doublet_and_word_count
+- solved_koan_gp
+- music_instar_interconnectedness
+- red_runes_gateless_gate
+- big_gap_negative_space
+- star_artifacts_exact254
+- red_heading_gp491
+review_status: reviewed_and_overlayed

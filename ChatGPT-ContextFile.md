@@ -2,11 +2,11 @@
 
 ## Current Project State
 
-Current completed stage: Stage 5DV - Operator Console Source Browser performance, path canonicalization, and ChatGPT context hardening, without puzzle execution.
+Current completed stage: Stage 5DW - Source-lock number-fact review batch 001, high-signal enrichment overlays, without execution.
 
-Current work after Stage 5DV: Stage 5DW - Operator/assistant source-lock number-fact review batch 1, without execution.
+Current work after Stage 5DW: Stage 5DX - Operator/assistant source-lock number-fact review batch 2, without execution.
 
-Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DV does not perform the number-fact review batch, does not backfill number facts, does not rewrite historical source-lock records, and does not select a target.
+Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW then completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DW does not backfill number facts directly, does not rewrite historical source-lock records, and does not select a target.
 
 The canonical Codex handoff root is `codex-output`. The deprecated `codex_output` root must remain absent. Completion summaries under `codex-output/**` are local ignored handoffs and must not be committed.
 
@@ -61,7 +61,7 @@ Stage 5DP source-locked new Reddit Mayfly/dot/cover/ISO material. MayFlyInvestig
 
 Stage 5DS expanded music/Ouroboros/token-block static addendum. Stage 5DR GUI follow-up keeps the details panel as right-side/right-dock source review UI. Token-block static context preserves first 16 bytes `cbe7a7ba61ed7eb75cf99cdef704b7d4` as metadata only.
 
-Stage 5DT source-review readiness planning remains the prior number-fact-card planning layer; Stage 5DV repairs Source Browser performance/path handling before the Stage 5DW review batch.
+Stage 5DT source-review readiness planning remains the prior number-fact-card planning layer; Stage 5DV repaired Source Browser performance/path handling before Stage 5DW completed review batch 001.
 
 ## Stage 5DU - Community visual/red-heading/negative-space source-lock addendum
 
@@ -127,7 +127,7 @@ StarArtifacts strongest observations:
 - Source-locked does not mean review-ready.
 - A useful fact card must explain value, type, expression, components, relation, why stored, source anchor, verification status, risks, and crosslinks.
 - Older zero-fact entries are usually not reviewed, not necessarily number-free.
-- Stage 5DW should start the 20-entry review batch 1 after the Stage 5DV repair.
+- Stage 5DW completed the high-signal 20-entry review batch 001 after the Stage 5DV repair; Stage 5DX should continue with the next operator/assistant review batch.
 
 ## Governance And Preservation
 
@@ -140,7 +140,7 @@ StarArtifacts strongest observations:
 
 ## Guardrails
 
-- No number-fact review batch in Stage 5DV.
+- No direct historical source-record number-fact backfill in Stage 5DW.
 - No historical number-fact backfill.
 - No source-lock rewrite.
 - No target selection.
@@ -159,3 +159,12 @@ StarArtifacts strongest observations:
 - No canonical corpus activation.
 - No page-boundary finalization.
 - No solve claim.
+
+## Stage 5DW Number-Fact Review Batch 001
+
+- Stage 5DW completed high-signal number-fact review batch 001 after Stage 5DV path/performance repair.
+- The batch reviewed 20 selected evidence/candidate records, not the Stage 5DT stable batch-001 list.
+- Historical source-lock records were not rewritten; facts were added through NumberFactCard overlays.
+- Overlay-only fact cards are now supported, so older zero-extracted-fact records can display review facts without source-record mutation.
+- Key added fact families: Page32 red-header 2472; Page32 463->3299/3301; NO-F section-flow 1433/2883/1894/1814/695/91; LP doublets 89/4337; LP1 word count 464->3301; artwork/title 449/311; solved-koan 1229/337/199/1033; page54-57 308/154; Page32 Fibonacci mod29 primes; Final.jpg road/way 3301/991/1229; prime-index 761/167/464/1033/3301; RGB185=3301 plus 1033/1103 correction; Instar parable product; Instar 761/167; Interconnectedness 772/277/1049; Ouroboros see-also GP scan; RedRunes/Gateless Gate 2/11/3/227/742/682/155/551; BigGaps 569/229/109; StarArtifacts 254/2540/641/709; red-heading GP491 family.
+- All remain review-only; no target selection, route extraction, byte generation, execution, OCR/image forensics/audio/stego/Tor/network/CUDA/scoring, or solve claim.

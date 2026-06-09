@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5DW - Operator/assistant source-lock number-fact review batch 1, without execution.
+Current next prompt: Stage 5DX - Operator/assistant source-lock number-fact review batch 2, without execution.
 
-Stage 5DV is complete as an Operator Console Source Browser performance, path canonicalization, and ChatGPT context hardening repair. It keeps Stage 5DU source-lock records unchanged while making the browser faster and path-cleaner before number-fact review starts.
+Stage 5DW is complete as the first high-signal Source Browser number-fact review batch. It added review-only NumberFactCard overlays for 20 selected records and enabled overlay-only fact cards without rewriting historical source-lock records or authorizing execution.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DV Source Browser repair is complete. It validates `1510` Source Browser entries and `1509` scanned records, reduces spurious root image/document paths to `0`, suppresses duplicate present+missing basename pairs to `0`, keeps source-root-relative resolution active, preserves Stage 5DU/5DT/5DG/5BD/active-lineage records, and expands `ChatGPT-ContextFile.md` for durable handoff. The still-needed first operator/assistant number-fact review batch shifts to Stage 5DW.
+Stage 5DW Source Browser number-fact review batch 001 is complete. It validates `1529` Source Browser entries and `1528` scanned records, records `37` overlays for `20` selected records, supports overlay-only fact cards, keeps spurious root image/document paths at `0`, suppresses duplicate present+missing basename pairs to `0`, preserves Stage 5DV/5DU/5DT/5DG/5BD/active-lineage records, and expands `ChatGPT-ContextFile.md` for durable handoff. The next recommended review batch shifts to Stage 5DX.
 
-The next recommended prompt is Stage 5DW - Operator/assistant source-lock number-fact review batch 1, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DX - Operator/assistant source-lock number-fact review batch 2, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

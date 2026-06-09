@@ -7074,3 +7074,114 @@ records:
   category: active_data_record
   source_of_truth_rank: 1
   last_meaningful_update_stage: Stage 5DV
+- path: data/project-state/stage5dw-summary.yaml
+  owner_stage: stage-5dw
+  purpose: Stage 5DW compact number-fact review batch 001 summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_review
+  notes: Reviewability overlay metadata only; no source-lock rewrite, target selection,
+    byte generation, execution, or solve claim.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DW
+- path: data/operator-console/source-browser/number-fact-overlays/stage5dw-review-batch-001-high-signal-overlays.yaml
+  owner_stage: stage-5dw
+  purpose: Stage 5DW high-signal review-only NumberFactCard overlay collection.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_review
+  notes: Adds overlays for 20 selected records without mutating historical source-lock
+    records.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DW
+- path: data/operator-console/source-browser/number-fact-review-batches/stage5dw-review-batch-001-high-signal-result.yaml
+  owner_stage: stage-5dw
+  purpose: Stage 5DW review batch 001 result record.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_review
+  notes: Records selected high-signal batch policy and review-only overlay outcome.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DW
+- path: data/project-state/stage5dw-overlay-only-fact-card-support.yaml
+  owner_stage: stage-5dw
+  purpose: Stage 5DW overlay-only fact-card support record.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_console
+  notes: Enables zero-extracted-fact entries to show review overlay cards without
+    source-record mutation.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DW
+- path: data/project-state/stage5dw-source-browser-loadability-summary.yaml
+  owner_stage: stage-5dw
+  purpose: Stage 5DW Source Browser loadability and path-hygiene summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_console
+  notes: Preserves Stage 5DV path-canonicalization invariants after overlay records.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DW
+- path: data/token-block/stage5dw-no-execution-proof.yaml
+  owner_stage: stage-5dw
+  purpose: Stage 5DW no-execution guardrail proof.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps no-active/no-byte/no-execution gates closed.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DW
+- path: data/source-harvester/stage5dw-codex-handoff-policy.yaml
+  owner_stage: stage-5dw
+  purpose: Stage 5DW Codex handoff policy preservation record.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves `codex-output` handoff root and keeps `codex_output` deprecated.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DW
+- path: docs/development-logs/2026-06-09-stage-5dw-number-fact-review-batch-001.md
+  owner_stage: stage-5dw
+  purpose: Stage 5DW developer log.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation and validation decisions for the overlay batch.
+  category: historical_log
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: Stage 5DW
+- path: research-log/2026-06-09-stage-5dw-number-fact-review-batch-001.md
+  owner_stage: stage-5dw
+  purpose: Stage 5DW research log summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Summary-only log; no raw overlay dump or generated output publication.
+  category: historical_log
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: Stage 5DW

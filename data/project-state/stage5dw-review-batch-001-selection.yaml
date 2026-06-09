@@ -1,0 +1,41 @@
+stage_id: stage-5dw
+stage_title: Stage 5DW - Source-lock number-fact review batch 001, high-signal enrichment
+  overlays, without execution
+prompt_type: codex_metadata_and_operator_console_reviewability_implementation
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: stage5dw_review_batch_001_selection
+schema: schemas/project-state/stage5dw-review-batch-001-selection-v0.schema.json
+review_batch_id: number_fact_review_batch_001_high_signal
+stage5dt_stable_batch_plan_preserved: true
+stage5dt_stable_batch_001_not_mutated: true
+stage5dw_batch_selection_policy: assistant_operator_high_signal_evidence_batch
+operator_requested_twenty_entries_per_prompt: true
+reviewed_entry_count: 20
+selected_source_record_paths:
+- data/historical-route/stage5do-page32-red-header-progressive-gp-sum-2472.yaml
+- data/historical-route/stage5do-page32-red-header-cumulative-index-463-3299.yaml
+- data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+- data/historical-route/stage5do-lp-doublet-scarcity-feature-v1.yaml
+- data/historical-route/stage5do-lp1-encrypted-word-count-464-prime-3301.yaml
+- data/historical-route/stage5do-artwork-title-gp-equivalence-candidate.yaml
+- data/historical-route/stage5do-solved-koan-gp-facts-candidate.yaml
+- data/historical-route/stage5do-page54-57-hash-rune-count-balance-candidate.yaml
+- data/historical-route/stage5do-page32-fibonacci-mod29-prime-palindrome-candidate.yaml
+- data/historical-route/stage5do-final-jpg-road-way-gp-runs-candidate.yaml
+- data/historical-route/stage5do-prime-index-bridge-761-167-464-1033-3301.yaml
+- data/historical-route/stage5do-page32-dead-tree-rgb185-count-3301-candidate.yaml
+- data/historical-route/stage5ds-instar-parable-id3-gp-product-candidate-v1.yaml
+- data/historical-route/stage5ds-instar-title-761-duration-167-bridge-v1.yaml
+- data/historical-route/stage5ds-interconnectedness-772-277-table-canon-number-v1.yaml
+- data/historical-route/stage5ds-ouroboros-see-also-gp-arithmetic-scan-v0.yaml
+- data/historical-route/stage5du-red-runes-gateless-gate-koan20-title-candidate-v0.yaml
+- data/historical-route/stage5du-big-gap-page-set-16-candidate-v0.yaml
+- data/historical-route/stage5du-star-artifacts-exact254-mask-method-v0.yaml
+- data/historical-route/stage5du-red-heading-marginalia-gp491-equivalence-family-v0.yaml
+selection_deviation_reason: assistant_operator_selected_high_signal_evidence_records

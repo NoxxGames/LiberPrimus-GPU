@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "execution_performed": {
+      "const": false
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "historical_source_lock_records_rewritten": {
+      "const": false
+    },
+    "pivot_target_selected_now": {
+      "const": false
+    },
+    "raw_source_files_committed": {
+      "const": false
+    },
+    "raw_third_party_files_committed": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-5dw"
+    },
+    "target_priority_decision_created_now": {
+      "const": false
+    }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "status",
+    "review_batch_id"
+  ],
+  "type": "object"
+}

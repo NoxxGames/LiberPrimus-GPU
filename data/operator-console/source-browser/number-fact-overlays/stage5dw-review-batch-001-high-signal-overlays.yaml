@@ -1,0 +1,1340 @@
+record_type: source_browser_number_fact_enrichment_overlay_collection
+schema: schemas/operator-console/source-browser-number-fact-enrichment-overlay-v0.schema.json
+stage_id: stage-5dw
+stage_title: Stage 5DW - Source-lock number-fact review batch 001, high-signal enrichment overlays, without execution
+prompt_type: codex_metadata_and_operator_console_reviewability_implementation
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+review_batch_id: number_fact_review_batch_001_high_signal
+review_batch_selection_policy: assistant_operator_high_signal_evidence_batch
+reviewed_entry_count: 20
+overlay_only_fact_cards_supported_required: true
+review_state: overlay_enriched_fact
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+historical_source_lock_records_rewritten: false
+raw_source_files_committed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+execution_performed: false
+overlay_count: 37
+selected_source_record_paths:
+- data/historical-route/stage5do-page32-red-header-progressive-gp-sum-2472.yaml
+- data/historical-route/stage5do-page32-red-header-cumulative-index-463-3299.yaml
+- data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+- data/historical-route/stage5do-lp-doublet-scarcity-feature-v1.yaml
+- data/historical-route/stage5do-lp1-encrypted-word-count-464-prime-3301.yaml
+- data/historical-route/stage5do-artwork-title-gp-equivalence-candidate.yaml
+- data/historical-route/stage5do-solved-koan-gp-facts-candidate.yaml
+- data/historical-route/stage5do-page54-57-hash-rune-count-balance-candidate.yaml
+- data/historical-route/stage5do-page32-fibonacci-mod29-prime-palindrome-candidate.yaml
+- data/historical-route/stage5do-final-jpg-road-way-gp-runs-candidate.yaml
+- data/historical-route/stage5do-prime-index-bridge-761-167-464-1033-3301.yaml
+- data/historical-route/stage5do-page32-dead-tree-rgb185-count-3301-candidate.yaml
+- data/historical-route/stage5ds-instar-parable-id3-gp-product-candidate-v1.yaml
+- data/historical-route/stage5ds-instar-title-761-duration-167-bridge-v1.yaml
+- data/historical-route/stage5ds-interconnectedness-772-277-table-canon-number-v1.yaml
+- data/historical-route/stage5ds-ouroboros-see-also-gp-arithmetic-scan-v0.yaml
+- data/historical-route/stage5du-red-runes-gateless-gate-koan20-title-candidate-v0.yaml
+- data/historical-route/stage5du-big-gap-page-set-16-candidate-v0.yaml
+- data/historical-route/stage5du-star-artifacts-exact254-mask-method-v0.yaml
+- data/historical-route/stage5du-red-heading-marginalia-gp491-equivalence-family-v0.yaml
+allowed_related_overlay_source_paths:
+- data/historical-route/stage5du-red-runes-prime742-continue-this-candidate-v0.yaml
+overlays:
+- overlay_id: stage5dw_page32_red_header_progressive_2472_overlay
+  source_fact_id: page32_red_header_progressive_gp_sum_2472
+  fact_class: page32_red_header_number_facts
+  display_label: Page32 red header progressive GP sum = 2472, matching a Page32 grid value
+  short_label: Red header progressive sum = 2472
+  value: 2472
+  values:
+  - 2
+  - 5
+  - 78
+  - 149
+  - 246
+  - 355
+  - 458
+  - 541
+  - 638
+  - 2472
+  value_type: matrix_value
+  operation_type: progressive_sum
+  expression: 2 + 5 + 78 + 149 + 246 + 355 + 458 + 541 + 638 = 2472
+  relation: Red runic header progressive GP accumulation lands exactly on a Page32 number-grid value.
+  why_stored: This gives a constrained red-header -> GP arithmetic -> Page32 grid bridge and is more useful than a bare prime/value
+    note.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5do-page32-red-header-progressive-gp-sum-2472.yaml
+  - third_party/NumberFactsCollection/futhork_rune_values_are_used.jpg
+  crosslinks:
+  - page32_moebius_fibonacci_prime_index_spiral_v1
+  - pdd_153_triangle_word_prime_route_v1
+  - solved_magic_square_word_sum_precedent_v0
+  risk_notes:
+  - canonical_page32_header_transcription_required_before_experiment
+  - page32_numbering_convention_must_be_explicit
+  source_record_path: data/historical-route/stage5do-page32-red-header-progressive-gp-sum-2472.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_page32_red_header_cumulative_463_3299_overlay
+  source_fact_id: page32_red_header_cumulative_index_463_3299
+  fact_class: page32_red_header_number_facts
+  display_label: Page32 red header cumulative-index GP total = 463; prime(463)=3299
+  short_label: Red header cumulative GP = 463 -> prime(463)=3299
+  value: 463
+  values:
+  - 24
+  - 19
+  - 21
+  - 23
+  - 27
+  - 2
+  - 14
+  - 10
+  - 19
+  - 463
+  - 3299
+  - 3301
+  value_type: prime_index
+  operation_type: cumulative_sum
+  expression: cumulative indices mod 29 map to GP values 97+47+17+2+107+2+47+97+47 = 463; one-indexed prime(463)=3299
+  relation: The computed 463 points to the red Page32 grid number 3299 under one-indexed primes and may point to 3301 under
+    the zero-index convention noted by the source.
+  why_stored: This is a constrained red-header route candidate linking the red header, prime-index convention, and Page32
+    grid value 3299/3301.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5do-page32-red-header-cumulative-index-463-3299.yaml
+  - third_party/NumberFactsCollection/table_below_use.png
+  crosslinks:
+  - page32_red_header_progressive_gp_sum_2472_v1
+  - page32_moebius_fibonacci_prime_index_spiral_v1
+  risk_notes:
+  - prime_index_convention_warning
+  - canonical_red_header_transcription_required_before_experiment
+  source_record_path: data/historical-route/stage5do-page32-red-header-cumulative-index-463-3299.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_no_f_1433_triple_section_flow_overlay
+  source_fact_id: wing_tree_equals_no_f_cuneiform_equals_no_f_koan2_plus_no_f_spirals
+  fact_class: no_f_section_flow_number_facts
+  display_label: Wing Tree = NO-F Cuneiform = NO-F Koan2 + NO-F Spirals = 1433
+  short_label: NO-F section-flow triple = 1433
+  value: 1433
+  values:
+  - 1433
+  - 314
+  - 1119
+  value_type: rune_count
+  operation_type: section_count_equality
+  expression: Wing Tree = NO_F Cuneiform = NO_F Koan2 + NO_F Spirals; 314 + 1119 = 1433
+  relation: "Section-count equality linking Wing Tree, Cuneiform, Koan2, and Spirals after removing F/\u16A0."
+  why_stored: This is the strongest NO-F flow relation because it includes an explicit component sum and multiple section
+    equivalences.
+  verification_status: canonical_transcript_required
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  - third_party/NumberFactsCollection/google_doc_1.png
+  - third_party/NumberFactsCollection/google_doc_2.png
+  - third_party/NumberFactsCollection/google_doc_3.png
+  - third_party/NumberFactsCollection/these_have_1433_runes.png
+  crosslinks:
+  - lp_negative_space_layout_candidate_family_v0
+  - pdd_153_triangle_word_prime_route_v1
+  risk_notes:
+  - exact_section_boundaries_required
+  - canonical_rune_transcript_required
+  - no_f_policy_must_be_declared
+  source_record_path: data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_no_f_2883_spirals_branches_premobius_overlay
+  source_fact_id: spirals_branches_pre_mobius_table_relation
+  fact_class: no_f_section_flow_number_facts
+  display_label: Spirals + Branches + pre-Mobius table = NO-F Spiral Branches = 2883
+  short_label: Spirals/Branches/pre-Mobius relation = 2883
+  value: 2883
+  value_type: rune_count
+  operation_type: section_count_equality
+  expression: Spirals + Branches + pre-Mobius table = NO_F Spiral Branches
+  relation: Claimed section-flow equality involving the spiral/branch material and a pre-Mobius table.
+  why_stored: Preserves a candidate bridge between spiral/branch layout and NO-F transformed section counts.
+  verification_status: canonical_transcript_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  risk_notes:
+  - exact_component_values_not_fully_recorded_in_source_lock
+  - canonical_section_count_verification_required
+  source_record_path: data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_no_f_1894_koan_loss_instruction_mobius_overlay
+  source_fact_id: no_f_koan_loss_divinity_koan2_instruction_equals_mobius
+  fact_class: no_f_section_flow_number_facts
+  display_label: NO-F Koan/Loss/Koan2+Instruction count equals Mobius count = 1894
+  short_label: NO-F Koan/Loss/Instruction -> Mobius = 1894
+  value: 1894
+  value_type: rune_count
+  operation_type: section_count_equality
+  expression: NO_F Koan + NO_F Loss of Divinity + NO_F Koan2 + instruction = Mobius rune count
+  relation: Claimed NO-F section-flow equality tying koan/loss/instruction material to the Mobius section.
+  why_stored: This was previously only `claim_id` + `value`; the overlay explains what the equality is claiming and why it
+    matters.
+  verification_status: canonical_transcript_required
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  crosslinks:
+  - page32_moebius_fibonacci_prime_index_spiral_v1
+  - mobius_ouroboros_one_boundary_transform_candidate_v1
+  risk_notes:
+  - exact_section_boundaries_required
+  - component_values_not_yet_recorded
+  - no_f_policy_must_be_declared
+  source_record_path: data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_no_f_1814_koan_loss_signpost_spirals_overlay
+  source_fact_id: no_f_koan_loss_divinity_koan2_equals_no_f_signpost_plus_no_f_spirals
+  fact_class: no_f_section_flow_number_facts
+  display_label: NO-F Koan/Loss/Koan2 = NO-F Signpost + NO-F Spirals = 1814
+  short_label: NO-F Koan/Loss -> Signpost+Spirals = 1814
+  value: 1814
+  value_type: rune_count
+  operation_type: section_count_equality
+  expression: NO_F Koan + NO_F Loss of Divinity + NO_F Koan2 = NO_F Signpost + NO_F Spirals
+  relation: Claimed transformed section-count equality linking koan/loss material to signpost and spiral sections.
+  why_stored: Preserves a candidate section-flow relation rather than a bare numeric value.
+  verification_status: canonical_transcript_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  risk_notes:
+  - exact_section_boundaries_required
+  - component_values_not_yet_recorded
+  source_record_path: data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_no_f_695_koan1_minus_kt1_signpost_overlay
+  source_fact_id: koan1_minus_kt1_equals_no_f_signpost
+  fact_class: no_f_section_flow_number_facts
+  display_label: Koan1 - KT1 = NO-F Signpost = 695
+  short_label: Koan1 - KT1 -> NO-F Signpost = 695
+  value: 695
+  value_type: rune_count
+  operation_type: difference
+  expression: Koan1 - KT1 = NO_F Signpost
+  relation: Claimed difference relation yielding the NO-F Signpost count.
+  why_stored: Captures a section arithmetic relation requiring future transcript/control verification.
+  verification_status: canonical_transcript_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  risk_notes:
+  - exact_subsection_definition_required
+  - component_values_not_yet_recorded
+  source_record_path: data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_no_f_91_warning_minus_parable_three_dots_overlay
+  source_fact_id: no_f_warning_minus_parable_equals_wt_three_dots
+  fact_class: no_f_section_flow_number_facts
+  display_label: NO-F Warning - Parable = WT three dots = 91
+  short_label: NO-F Warning - Parable -> three dots = 91
+  value: 91
+  value_type: rune_count
+  operation_type: difference
+  expression: NO_F Warning - Parable = WT three-dots count/marker candidate
+  relation: Claimed relation connecting removed-F counts and three-dot marker context.
+  why_stored: Links NO-F arithmetic to the visual dot/dinkus/negative-space family.
+  verification_status: canonical_transcript_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  crosslinks:
+  - lp_dot_marker_geometry_family_v1
+  - dinkus_visual_delimiter_candidate_v0
+  risk_notes:
+  - exact_dot_marker_definition_required
+  - exact_warning_and_parable_count_policy_required
+  source_record_path: data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_lp_doublet_scarcity_89_4337_overlay
+  source_fact_id: lp_doublet_scarcity_89_4337
+  fact_class: doublet_scarcity_number_facts
+  display_label: 'LP doublet scarcity: 89 doublets, GP sum 4337, no B-doublet, final WWW context'
+  short_label: 'LP doublets: 89; sum 4337'
+  value: 89
+  values:
+  - 89
+  - 4337
+  value_type: rune_count
+  operation_type: count_equality
+  expression: reported doublet count = 89; reported doublet GP sum = 4337
+  relation: Candidate statistical feature linking LP-wide doublet scarcity to DiskCipher/doublet-suppression hypotheses.
+  why_stored: Doublet scarcity may become a future corpus-level feature/control; it should be visible as more than a note
+    string.
+  verification_status: canonical_transcript_required
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5do-lp-doublet-scarcity-feature-v1.yaml
+  crosslinks:
+  - disk_doublet_suppression_candidate_v1
+  - overlay_overlap_f_doublet_candidate_v0
+  risk_notes:
+  - canonical_transcript_required
+  - exact_doublet_definition_required
+  - not_scoring_feature_until_verified
+  source_record_path: data/historical-route/stage5do-lp-doublet-scarcity-feature-v1.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_lp1_encrypted_word_count_464_prime3301_overlay
+  source_fact_id: lp1_encrypted_word_count_464_prime_3301
+  fact_class: solved_lp_word_count_number_facts
+  display_label: LP1 solved encrypted word counts total 464; prime(464)=3301
+  short_label: LP1 encrypted words 464 -> prime(464)=3301
+  value: 464
+  values:
+  - 45
+  - 124
+  - 208
+  - 87
+  - 464
+  - 3301
+  value_type: word_count
+  operation_type: sum
+  expression: 45 + 124 + 208 + 87 = 464; prime(464) = 3301
+  relation: Word-count convention candidate connecting solved LP1 encrypted sections to 3301 through prime index.
+  why_stored: Useful context for word-count-based routes and prime-index conventions.
+  verification_status: canonical_transcript_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-lp1-encrypted-word-count-464-prime-3301.yaml
+  risk_notes:
+  - word_count_convention_verification_required
+  - solved_section_boundary_policy_required
+  source_record_path: data/historical-route/stage5do-lp1-encrypted-word-count-464-prime-3301.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_artwork_title_parable_mayfly_449_overlay
+  source_fact_id: parable_mayfly
+  fact_class: artwork_title_gp_equivalence_number_facts
+  display_label: PARABLE = MAYFLY = 449
+  short_label: PARABLE = MAYFLY = 449
+  value: 449
+  values:
+  - 449
+  value_type: gp_sum
+  operation_type: gp_sum
+  expression: GP(PARABLE) = GP(MAYFLY) = 449
+  relation: Natural artwork/title label equivalence between PARABLE and MAYFLY.
+  why_stored: Preserves a red-title/artwork-description GP equivalence that crosslinks Mayfly and parable material.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-artwork-title-gp-equivalence-candidate.yaml
+  crosslinks:
+  - mayfly_instar_grid_analysis_candidate_v1
+  - music_3301_instar_crab_canon_v0
+  risk_notes:
+  - artwork_label_subjectivity_warning
+  source_record_path: data/historical-route/stage5do-artwork-title-gp-equivalence-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_artwork_title_an_end_five_dots_311_overlay
+  source_fact_id: an_end_five_dots
+  fact_class: artwork_title_gp_equivalence_number_facts
+  display_label: AN END = FIVE DOTS = 311
+  short_label: AN END = FIVE DOTS = 311
+  value: 311
+  values:
+  - 311
+  value_type: gp_sum
+  operation_type: gp_sum
+  expression: GP(AN END) = GP(FIVE DOTS) = 311
+  relation: Red-title/artwork-description equivalence linking AN END/Page56/five-dot material.
+  why_stored: Useful bridge between Page56 hash-contract context and five-dot visual markers.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-artwork-title-gp-equivalence-candidate.yaml
+  crosslinks:
+  - page56_dwh_hash_target_contract_v0
+  - five_dot_transition_marker_candidate_v0
+  risk_notes:
+  - artwork_label_subjectivity_warning
+  source_record_path: data/historical-route/stage5do-artwork-title-gp-equivalence-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_solved_koan_instruction_1229_overlay
+  source_fact_id: do_four_unreasonable_things_each_day
+  fact_class: solved_koan_gp_number_facts
+  display_label: DO FOUR UNREASONABLE THINGS EACH DAY = 1229
+  short_label: DO FOUR UNREASONABLE... = 1229
+  value: 1229
+  value_type: gp_sum
+  operation_type: gp_sum
+  expression: GP(DO FOUR UNREASONABLE THINGS EACH DAY) = 1229
+  relation: Solved-koan instruction phrase shares GP value 1229 with Instar parable/divinity-within material.
+  why_stored: Connects solved koan instruction language to the 1229 music/parable/route context.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-solved-koan-gp-facts-candidate.yaml
+  crosslinks:
+  - instar_parable_id3_gp_product_candidate_v1
+  risk_notes:
+  - exact_solved_text_source_required_before_use_as_crib
+  source_record_path: data/historical-route/stage5do-solved-koan-gp-facts-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_solved_koan_question_answer_337_199_overlay
+  source_fact_id: who_are_you_i_am
+  fact_class: solved_koan_gp_number_facts
+  display_label: WHO ARE YOU = 337; I AM = 199
+  short_label: WHO ARE YOU=337; I AM=199
+  value: 337
+  values:
+  - 337
+  - 199
+  value_type: gp_sum
+  operation_type: gp_sum
+  expression: GP(WHO ARE YOU)=337; GP(I AM)=199
+  relation: Solved koan question/answer number facts tied to I/self/voice context.
+  why_stored: Supports review of quote-dialogue/koan crib candidates and self-reference/circumference motifs.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-solved-koan-gp-facts-candidate.yaml
+  crosslinks:
+  - solved_i_voice_of_circumference_precedent_v0
+  - self_reference_gp_529_square23_candidate_v0
+  risk_notes:
+  - exact_solved_text_source_required_before_use_as_crib
+  source_record_path: data/historical-route/stage5do-solved-koan-gp-facts-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_solved_koan_master_rebuttal_1033_overlay
+  source_fact_id: master_rebuttal_1033
+  fact_class: solved_koan_gp_number_facts
+  display_label: Master rebuttal selected-words GP claim = 1033
+  short_label: Master rebuttal GP claim = 1033
+  value: 1033
+  value_type: gp_sum
+  operation_type: gp_sum
+  expression: exact selected words required; claimed GP sum = 1033
+  relation: Claimed solved-koan selected-word GP value that may connect to 1033/174-prime and Page32/NumberFacts material.
+  why_stored: Preserve with strict token-selection warning; do not treat as verified until exact source words are locked.
+  verification_status: needs_exact_token_selection
+  review_state: canonical_verification_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-solved-koan-gp-facts-candidate.yaml
+  crosslinks:
+  - prime_index_bridge_761_167_464_1033_3301_candidate_v0
+  risk_notes:
+  - exact_selected_words_required
+  - selection_bias_warning
+  source_record_path: data/historical-route/stage5do-solved-koan-gp-facts-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_page54_57_hash_rune_balance_308_154_overlay
+  source_fact_id: page54_57_hash_rune_count_balance
+  fact_class: page56_hash_contract_number_facts
+  display_label: Pages 54-55 total 308; Page56/57 split 95+128+85=308; decimal hash digits 154 = half
+  short_label: 'Page54-57 balance: 308 / 154 / 128'
+  value: 308
+  values:
+  - 95
+  - 128
+  - 85
+  - 308
+  - 154
+  value_type: rune_count
+  operation_type: count_equality
+  expression: 95 + 128 + 85 = 308; 154 * 2 = 308; hash has 128 hex chars
+  relation: Claimed balancing relation between pages 54-55, Page56/57, and Page56 hash-length facts.
+  why_stored: Adds context to Page56 hash contract beyond bare hash length and connects adjacent page counts.
+  verification_status: canonical_transcript_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-page54-57-hash-rune-count-balance-candidate.yaml
+  crosslinks:
+  - page56_dwh_hash_target_contract_v0
+  risk_notes:
+  - canonical_count_verification_required
+  - page_boundary_policy_required
+  source_record_path: data/historical-route/stage5do-page54-57-hash-rune-count-balance-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_page32_fibonacci_mod29_prime_palindrome_overlay
+  source_fact_id: page32_fibonacci_mod29_prime_palindrome
+  fact_class: page32_fibonacci_prime_number_facts
+  display_label: Page32 Fibonacci mod29 sequence yields prime concatenations and 33-digit palindromic prime
+  short_label: Page32 Fibonacci mod29 prime/palindrome candidate
+  value: 1235813215262281
+  values:
+  - 1
+  - 2
+  - 3
+  - 5
+  - 8
+  - 13
+  - 21
+  - 5
+  - 26
+  - 2
+  - 28
+  - 1
+  - 0
+  - 1
+  - 1
+  - 1235813215262281
+  - 18226251231853211
+  - 123581321526228101822625123185321
+  value_type: prime
+  operation_type: sequence_mapping
+  expression: claimed mod29 Fibonacci sequence concatenations are prime; 33-digit palindrome claim primality verified in metadata
+  relation: "Candidate Page32 M\xF6bius/Fibonacci/prime-index bridge; useful as context, not execution seed."
+  why_stored: Preserves a nontrivial sequence/prime/palindrome observation tied to Page32 route candidates.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-page32-fibonacci-mod29-prime-palindrome-candidate.yaml
+  crosslinks:
+  - page32_moebius_fibonacci_prime_index_spiral_v1
+  risk_notes:
+  - search_space_warning
+  - concatenation_policy_required_before_experiment
+  source_record_path: data/historical-route/stage5do-page32-fibonacci-mod29-prime-palindrome-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_final_jpg_road_way_gp_runs_overlay
+  source_fact_id: final_jpg_road_way_gp_runs
+  fact_class: final_jpg_road_way_number_facts
+  display_label: 'Final.jpg road/way GP claims: 3301, 991, 1229'
+  short_label: 'Final.jpg road/way GP: 3301/991/1229'
+  value: 3301
+  values:
+  - 3301
+  - 991
+  - 1229
+  value_type: gp_sum
+  operation_type: gp_sum
+  expression: claimed GP runs include hidden-message road-to-finding-us=3301, meeting-the-few=991, all-the-way=1229
+  relation: Candidate bridge between early Cicada image text, road/way language, and later 2016 words/map/road/direction clues.
+  why_stored: Connects road/way GP observations to the route-method clue stack and PDD/WAY route.
+  verification_status: canonical_source_required
+  review_state: canonical_verification_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-final-jpg-road-way-gp-runs-candidate.yaml
+  crosslinks:
+  - words_map_road_direction_meta_clue
+  - pdd_153_triangle_word_prime_route_v1
+  - pdd_153_triangle_56311_wynn_way_route_v1
+  risk_notes:
+  - exact_source_text_required
+  - phrase_selection_control_required
+  source_record_path: data/historical-route/stage5do-final-jpg-road-way-gp-runs-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_prime_index_bridge_761_167_464_1033_3301_overlay
+  source_fact_id: prime_index_bridge_761_167_464_1033_3301
+  fact_class: prime_index_bridge_number_facts
+  display_label: 761+167=928; 928/2=464; prime(464)=3301; prime(174)=1033
+  short_label: 761/167 -> 464 -> 3301; 174 -> 1033
+  value: 3301
+  values:
+  - 761
+  - 167
+  - 928
+  - 464
+  - 3301
+  - 135
+  - 39
+  - 174
+  - 1033
+  - 841
+  value_type: prime_index
+  operation_type: prime_index_lookup
+  expression: primepi(761)=135; primepi(167)=39; 135+39=174; prime(174)=1033; 761+167=928; 928/2=464; prime(464)=3301
+  relation: Links the 761/167 music/temporal cluster to 3301 and 1033 with an explicit correction that 29^2=841, not 928.
+  why_stored: This is a central bridge connecting Instar/music, Mayfly/DiskCipher 167, 1033, and 3301.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5do-prime-index-bridge-761-167-464-1033-3301.yaml
+  crosslinks:
+  - instar_title_761_duration_167_bridge_v1
+  - ouroboros_gp_167_music_cycle_candidate_v0
+  - mayfly_horizontal_axis_167_229_229_229_104_candidate_v0
+  risk_notes:
+  - prime_index_convention_must_remain_explicit
+  source_record_path: data/historical-route/stage5do-prime-index-bridge-761-167-464-1033-3301.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_page32_dead_tree_rgb185_count3301_overlay
+  source_fact_id: page32_dead_tree_rgb185_count_3301
+  fact_class: pixel_colour_frequency_number_facts
+  display_label: Dead-tree page RGB(185,185,185) frequency claim = 3301
+  short_label: RGB185 frequency claim = 3301
+  value: 3301
+  values:
+  - 185
+  - 185
+  - 185
+  - 3301
+  value_type: pixel_count
+  operation_type: pixel_frequency
+  expression: claimed frequency of RGB(185,185,185) on dead-tree page = 3301
+  relation: Candidate exact-pixel-value observation tying a dead-tree page visual trace to 3301.
+  why_stored: Potentially strong if verified against canonical unmodified images; currently must remain a canonical-image
+    check.
+  verification_status: canonical_image_required
+  review_state: canonical_verification_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5do-page32-dead-tree-rgb185-count-3301-candidate.yaml
+  - third_party/PotentialHint-3301-on-Page32/prime_color_frequencies.txt
+  - third_party/PotentialHint-3301-on-Page32/superprime_color_frequencies.txt
+  crosslinks:
+  - page32_tree_polar_route_v0
+  - lp_exact_pixel_value_candidate_family_v0
+  risk_notes:
+  - attached_image_may_be_processed_or_annotated
+  - canonical_original_image_hash_required
+  - bulk_prime_colour_frequency_multiple_comparison_warning
+  - probability_claim_quarantined
+  source_record_path: data/historical-route/stage5do-page32-dead-tree-rgb185-count-3301-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_rgb185_prime_index_correction_overlay
+  source_fact_id: rgb185_prime_index_correction_1033_1103
+  fact_class: pixel_colour_frequency_number_facts
+  display_label: 'Correction: 1033 = prime(174), not prime(185); prime(185)=1103'
+  short_label: 1033=prime(174); 1103=prime(185)
+  value: 1103
+  values:
+  - 1033
+  - 174
+  - 185
+  - 1103
+  value_type: prime_index
+  operation_type: prime_index_lookup
+  expression: prime(174)=1033; prime(185)=1103
+  relation: Corrects the common 1033/185th-prime confusion in the RGB185 pixel-colour theory.
+  why_stored: Prevents the Source Browser from preserving a misleading prime-index interpretation for RGB185 claims.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5do-page32-dead-tree-rgb185-count-3301-candidate.yaml
+  crosslinks:
+  - pixel_colour_frequency_source_tables_v0
+  risk_notes:
+  - correction_fact_not_target_priority_evidence
+  source_record_path: data/historical-route/stage5do-page32-dead-tree-rgb185-count-3301-candidate.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_instar_parable_id3_gp_product_overlay
+  source_fact_id: instar_parable_id3_gp_product
+  fact_class: music_instar_number_facts
+  display_label: Instar parable line GP sums 1031, 1229, 1259 multiply to 1,595,277,641
+  short_label: Instar parable GP product = 1,595,277,641
+  value: 1595277641
+  values:
+  - 1031
+  - 1229
+  - 1259
+  - 1595277641
+  value_type: product
+  operation_type: product
+  expression: 1031 * 1229 * 1259 = 1595277641
+  relation: The ID3 parable number matches the product of the three hidden poem-line GP sums.
+  why_stored: This is one of the strongest deterministic music metadata facts and should be visible as a rich card.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5ds-instar-parable-id3-gp-product-candidate-v1.yaml
+  - third_party/CicadaMusic/community-theory/Instar Emergence (6-19-2025).mp3
+  - third_party/CicadaMusic/Instar Emergence (6-19-2025).mp3
+  crosslinks:
+  - music_3301_instar_crab_canon_v0
+  - solved_koan_instruction_gp_1229_candidate_v0
+  risk_notes:
+  - independent_id3_source_review_required
+  - gp_transliteration_contract_required_before_experiment
+  source_record_path: data/historical-route/stage5ds-instar-parable-id3-gp-product-candidate-v1.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_instar_title_761_reverse167_overlay
+  source_fact_id: instar_title_761_duration_167_bridge
+  fact_class: music_instar_number_facts
+  display_label: THE INSTAR EMERGENCE = 761; reverse 761 -> 167; duration family claimed 167s
+  short_label: THE INSTAR EMERGENCE=761 -> 167
+  value: 761
+  values:
+  - 761
+  - 167
+  value_type: gp_sum
+  operation_type: reverse_digits
+  expression: GP(THE INSTAR EMERGENCE)=761; reverse digits 761 -> 167
+  relation: Direct title/filename/duration-family bridge in the Instar music evidence.
+  why_stored: Connects music, 167 temporal/Mayfly/DiskCipher context, and 3301 prime-index bridge.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5ds-instar-title-761-duration-167-bridge-v1.yaml
+  crosslinks:
+  - prime_index_bridge_761_167_464_1033_3301_candidate_v0
+  - disk_2015_eclipse_167_temporal_candidate_v0
+  - mayfly_horizontal_axis_167_229_229_229_104_candidate_v0
+  risk_notes:
+  - duration_metadata_verified_now_false
+  - exact_audio_hash_duration_policy_required_before_experiment
+  source_record_path: data/historical-route/stage5ds-instar-title-761-duration-167-bridge-v1.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_interconnectedness_772_277_1049_overlay
+  source_fact_id: interconnectedness_772_277_table_canon_number
+  fact_class: music_interconnectedness_number_facts
+  display_label: INTERCONNECTEDNESS=772 -> 277; DIVINITY=376 -> 673; both reversal sums = 1049
+  short_label: INTERCONNECTEDNESS 772/277; reversal sum 1049
+  value: 1049
+  values:
+  - 772
+  - 277
+  - 376
+  - 673
+  - 1049
+  value_type: gp_sum
+  operation_type: reverse_digits
+  expression: 772 + 277 = 1049; 376 + 673 = 1049
+  relation: Reversal/crab-canon number family linking Interconnectedness to DIVINITY.
+  why_stored: Useful transform-grammar context for music/canon/reversal candidates.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5ds-interconnectedness-772-277-table-canon-number-v1.yaml
+  crosslinks:
+  - music_transform_grammar_for_cipher_methods_candidate_v1
+  - quine_fixed_point_self_reproduction_candidate_v0
+  risk_notes:
+  - duration_exactness_copy_dependent
+  - music_transform_not_plaintext_evidence
+  source_record_path: data/historical-route/stage5ds-interconnectedness-772-277-table-canon-number-v1.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_ouroboros_see_also_gp_scan_overlay
+  source_fact_id: ouroboros_see_also_gp_arithmetic_scan
+  fact_class: ouroboros_self_reference_number_facts
+  display_label: 'Ouroboros see-also GP scan: 167, 463, 529=23^2, 841=29^2, 409, 401, 423, 156, 751'
+  short_label: 'Ouroboros GP scan: 167/463/529/841/409...'
+  value: 167
+  values:
+  - 167
+  - 463
+  - 529
+  - 23
+  - 841
+  - 29
+  - 409
+  - 401
+  - 423
+  - 156
+  - 751
+  value_type: gp_sum
+  operation_type: symbolic_gp_scan
+  expression: OUROBOROS=167; STRANGE LOOP=463; SELF REFERENCE=529=23^2; SELF FULFILLING PROPHECY=841=29^2; INFINITE LOOP=409;
+    THREE HARES=401; MOBIUS STRIP=423; ENSO=156; AUTOCANNIBALISM=751
+  relation: Symbolic/topological transform-context GP scan, not route evidence.
+  why_stored: Keeps self-reference/Mobius/loop/quine vocabulary visible while preserving phrase-selection warnings.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5ds-ouroboros-see-also-gp-arithmetic-scan-v0.yaml
+  risk_notes:
+  - symbolic_context_only
+  - phrase_selection_bias_warning
+  - mythology_not_proof
+  source_record_path: data/historical-route/stage5ds-ouroboros-see-also-gp-arithmetic-scan-v0.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_strange_loop_463_page32_bridge_overlay
+  source_fact_id: strange_loop_463_page32_bridge
+  fact_class: ouroboros_self_reference_number_facts
+  display_label: STRANGE LOOP = 463, crosslinking Page32 red-header 463 -> 3299
+  short_label: STRANGE LOOP=463 -> Page32 463/3299
+  value: 463
+  value_type: gp_sum
+  operation_type: gp_sum
+  expression: GP(STRANGE LOOP)=463
+  relation: Symbolic self-reference phrase value equals the Page32 red-header cumulative-index total.
+  why_stored: Useful crosslink between transform-context language and Page32 red-header arithmetic.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5ds-ouroboros-see-also-gp-arithmetic-scan-v0.yaml
+  crosslinks:
+  - page32_red_header_cumulative_index_463_3299_candidate_v1
+  - page32_moebius_fibonacci_prime_index_spiral_v1
+  risk_notes:
+  - symbolic_context_only
+  - not_route_seed
+  source_record_path: data/historical-route/stage5ds-ouroboros-see-also-gp-arithmetic-scan-v0.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_red_runes_gateless_2_11_3_227_overlay
+  source_fact_id: red_runes_227_prime49_grouping
+  fact_class: red_runes_gateless_gate_number_facts
+  display_label: Red rune groups 2/11/3 match THE/ENLIGHTENED/MAN; title GP index sum 227 = prime(49)
+  short_label: Red groups 2/11/3; title 227=prime(49)
+  value: 227
+  values:
+  - 2
+  - 11
+  - 3
+  - 16
+  - 20
+  - 49
+  - 227
+  value_type: gp_sum
+  operation_type: gp_sum
+  expression: THE/ENLIGHTENED/MAN token groups = 2/11/3; zero-index GP sum = 227; prime(49)=227
+  relation: Candidate external koan-title reference; grouping is stronger than raw 227 because another Gateless Gate title
+    also sums to 227.
+  why_stored: This is the strongest RedRunes/Gateless Gate constraint and needs to be visible with its controls.
+  verification_status: source_author_claim
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5du-red-runes-gateless-gate-koan20-title-candidate-v0.yaml
+  - third_party/RedRunes_Possible_Koan_Connection/messages.txt
+  crosslinks:
+  - red_rune_header_external_text_reference_candidate_v0
+  - solved_koan_gp_facts_candidate_v0
+  risk_notes:
+  - red_rune_transcription_verification_required
+  - page_index_convention_verification_required
+  - title_sum_227_not_unique
+  - grouping_2_11_3_is_the_stronger_constraint
+  source_record_path: data/historical-route/stage5du-red-runes-gateless-gate-koan20-title-candidate-v0.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_red_runes_enlightened_mumons_comment_155_551_overlay
+  source_fact_id: red_runes_enlightened_mumons_comment_155_551
+  fact_class: red_runes_gateless_gate_number_facts
+  display_label: ENLIGHTENED = MUMON'S COMMENT by zero-index sum 155 and prime sum 551
+  short_label: ENLIGHTENED = MUMON'S COMMENT = 155/551
+  value: 155
+  values:
+  - 155
+  - 551
+  value_type: gp_sum
+  operation_type: gp_sum
+  expression: ENLIGHTENED index sum = 155; MUMONS COMMENT index sum = 155; both prime sums = 551
+  relation: Bridges the selected koan title into the koan commentary layer.
+  why_stored: Stronger than generic title numerology because it points from title text to the Gateless Gate commentary structure.
+  verification_status: operator_assistant_observed
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5du-red-runes-gateless-gate-koan20-title-candidate-v0.yaml
+  risk_notes:
+  - spelling_must_be_mumons_not_mummons
+  - translation_and_punctuation_policy_required
+  source_record_path: data/historical-route/stage5du-red-runes-gateless-gate-koan20-title-candidate-v0.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_red_runes_prime742_continue_this_overlay
+  source_record_path: data/historical-route/stage5du-red-runes-prime742-continue-this-candidate-v0.yaml
+  source_fact_id: red_runes_prime742_continue_this
+  fact_class: red_runes_gateless_gate_number_facts
+  display_label: Red-rune prime sum 742 matches LET ANOTHER CONTINUE THIS, omitting POEM
+  short_label: Red prime sum 742 = LET ANOTHER CONTINUE THIS
+  value: 742
+  value_type: gp_sum
+  operation_type: gp_sum
+  expression: red rune GP prime sum = 742; GP(LET ANOTHER CONTINUE THIS)=742
+  relation: Candidate partial-line match to the final line of Gateless Gate koan 20.
+  why_stored: Interesting because the phrase itself invites continuation, but must retain the omitted-final-word warning.
+  verification_status: source_author_claim
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5du-red-runes-prime742-continue-this-candidate-v0.yaml
+  risk_notes:
+  - omitted_final_word_POEM
+  - partial_line_match_warning
+  - phrase_selection_control_required
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_red_runes_key682_speech_tongue_overlay
+  source_fact_id: red_runes_key682_speech_tongue_sentence
+  fact_class: red_runes_gateless_gate_number_facts
+  display_label: Red->title key prime sum 682 matches koan speech/tongue sentence index sum 682
+  short_label: Red->title key sum 682 = speech/tongue sentence
+  value: 682
+  value_type: gp_sum
+  operation_type: sequence_mapping
+  expression: P=(C+K) mod 29 key indices from red runes to THE ENLIGHTENED MAN have prime-sum 682; koan sentence index sum
+    = 682
+  relation: Target-derived key-stream fact linking the red-title mapping to an internal koan sentence about speech and tongue.
+  why_stored: Useful but overfit-prone; preserve as candidate context only with controls.
+  verification_status: operator_assistant_observed
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5du-red-runes-gateless-gate-koan20-title-candidate-v0.yaml
+  risk_notes:
+  - target_derived_key_stream_overfit_risk
+  - koan_translation_policy_required
+  - not_route_seed
+  source_record_path: data/historical-route/stage5du-red-runes-gateless-gate-koan20-title-candidate-v0.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_big_gap_page_set_one_based_sum_569_overlay
+  source_fact_id: big_gap_page_set_one_based_sum_569
+  fact_class: big_gap_negative_space_number_facts
+  display_label: Sixteen claimed big-gap pages have one-based page sum 569
+  short_label: Big-gap page set sum = 569
+  value: 569
+  values:
+  - 16
+  - 553
+  - 569
+  - 7
+  - 79
+  value_type: sum
+  operation_type: sum
+  expression: zero-based page set sum = 553 = 7*79; one-based page set sum = 569
+  relation: Candidate bridge between big-gap page set and 2016 image-dimension 563x569 context.
+  why_stored: Layout/negative-space page-set summary should be reviewable with its selection-risk warning.
+  verification_status: source_author_claim
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5du-big-gap-page-set-16-candidate-v0.yaml
+  crosslinks:
+  - lp_negative_space_layout_candidate_family_v0
+  - 2016_message_route_meta_clue_v0
+  risk_notes:
+  - selection_risk_warning
+  - page_indexing_policy_required
+  - canonical_gap_measurement_required
+  source_record_path: data/historical-route/stage5du-big-gap-page-set-16-candidate-v0.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_big_gap_red_subset_one_based_sum_229_overlay
+  source_fact_id: big_gap_red_subset_one_based_sum_229
+  fact_class: big_gap_negative_space_number_facts
+  display_label: Red big-gap subset one-based sum = 229, crosslinking Mayfly 167/229 axis
+  short_label: Red big-gap subset sum = 229
+  value: 229
+  value_type: sum
+  operation_type: sum
+  expression: claimed red big-gap subset one-based sum = 229
+  relation: Low/medium confidence bridge from big gaps to Mayfly 229-axis context.
+  why_stored: Preserve as a controlled visual-layout crosslink; red-threshold policy required.
+  verification_status: operator_assistant_observed
+  review_state: canonical_verification_required
+  display_priority: low
+  source_paths:
+  - data/historical-route/stage5du-big-gap-page-set-16-candidate-v0.yaml
+  crosslinks:
+  - mayfly_horizontal_axis_167_229_229_229_104_candidate_v0
+  risk_notes:
+  - red_threshold_policy_required
+  - multiple_comparison_warning
+  - canonical_image_required
+  source_record_path: data/historical-route/stage5du-big-gap-page-set-16-candidate-v0.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_big_gap_metric_73_109_129_overlay
+  source_fact_id: big_gap_metric_73_109_129
+  fact_class: big_gap_negative_space_number_facts
+  display_label: Claimed line gaps 73/109/129; 109 = prime(29)
+  short_label: Gap metrics 73/109/129; 109=prime(29)
+  value: 109
+  values:
+  - 73
+  - 109
+  - 129
+  - 36
+  - 56
+  - 29
+  value_type: coordinate
+  operation_type: source_observation
+  expression: claimed regular gap approx 73px; big gap approx 109px; parable gap approx 129px; 109=prime(29)
+  relation: Candidate line-leading/vertical phase-shift metric; 109 has GP alphabet-size prime-index relevance.
+  why_stored: Makes layout measurements reviewable while keeping typographic-artifact risk visible.
+  verification_status: source_author_claim
+  review_state: canonical_verification_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5du-big-gap-page-set-16-candidate-v0.yaml
+  risk_notes:
+  - canonical_image_measurement_required
+  - crop_threshold_policy_required
+  - layout_artifact_risk_high
+  - thread_claim_37_is_i_should_not_be_preserved_without_correction
+  source_record_path: data/historical-route/stage5du-big-gap-page-set-16-candidate-v0.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_star_artifacts_exact254_counts_overlay
+  source_fact_id: exact254_star_artifact_threshold
+  fact_class: star_artifact_pixel_number_facts
+  display_label: Exact max-channel/RGB 254 mask reveals near-white star layer; pages 10-13 and 41-43 key
+  short_label: Exact 254 star layer; pages 10-13/41-43
+  value: 254
+  values:
+  - 254
+  - 1757676
+  - 1736280
+  - 1737723
+  - 1710229
+  - 246110
+  - 242707
+  - 245319
+  value_type: rgb_value
+  operation_type: pixel_frequency
+  expression: max(R,G,B)==254 mask; recorded key page counts include page10=1,757,676 and Mayfly pages 41-43 around 242k-246k
+  relation: Candidate exact pixel-value hidden/near-white visual layer observation.
+  why_stored: Strong reproducible visual-production/negative-space candidate that must remain source-locked and controlled.
+  verification_status: operator_assistant_observed
+  review_state: canonical_verification_required
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5du-star-artifacts-exact254-mask-method-v0.yaml
+  crosslinks:
+  - lp_exact_pixel_value_candidate_family_v0
+  - lp_negative_space_visual_layer_candidate_family_v0
+  risk_notes:
+  - canonical_image_hash_required
+  - image_forensics_not_performed_now
+  - production_artifact_possible
+  - not_route_seed
+  source_record_path: data/historical-route/stage5du-star-artifacts-exact254-mask-method-v0.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_stardust_phrase_gp2540_threshold254_overlay
+  source_fact_id: stardust_phrase_gp2540_threshold254
+  fact_class: star_artifact_pixel_number_facts
+  display_label: Unverified STARDUST phrase GP claim 2540 = 254 * 10
+  short_label: STARDUST phrase GP 2540 = 254*10
+  value: 2540
+  values:
+  - 254
+  - 10
+  - 2540
+  value_type: gp_sum
+  operation_type: product
+  expression: GP(THE STARDUST FROM WHEN LIFE ENDS WILL SWIRL AGAIN ALONG AND START)=2540=254*10
+  relation: Unverified community decode context linking exact-254 star method to stardust/cycle language.
+  why_stored: Interesting bridge to Instar/emergence/cycle motifs, but must remain quarantined until source phrase is verified.
+  verification_status: not_verified
+  review_state: quarantined_fact
+  display_priority: quarantine
+  source_paths:
+  - data/historical-route/stage5du-star-artifacts-exact254-mask-method-v0.yaml
+  crosslinks:
+  - instar_title_761_duration_167_bridge_v1
+  - music_transform_grammar_for_cipher_methods_candidate_v1
+  risk_notes:
+  - unverified_community_decode_screenshot
+  - not_accepted_plaintext
+  - phrase_source_required
+  source_record_path: data/historical-route/stage5du-star-artifacts-exact254-mask-method-v0.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_tree_offsets_641_709_prime_index_gap11_overlay
+  source_fact_id: tree_offsets_641_709_prime_index_gap11
+  fact_class: star_artifact_pixel_number_facts
+  display_label: Tree offsets 641 and 709 are prime; prime-index gap is 11
+  short_label: Tree offsets 641/709; prime-index gap 11
+  value: 11
+  values:
+  - 641
+  - 709
+  - 116
+  - 127
+  - 11
+  - 107
+  - 167
+  - 229
+  - 28
+  - 39
+  - 50
+  value_type: coordinate
+  operation_type: prime_index_lookup
+  expression: primepi(641)=116; primepi(709)=127; 127-116=11; pattern crosslinks 107/167/229 with prime-index steps 28/39/50
+  relation: Pixel-measurement candidate linking tree edges to the existing 107/167/229 prime-index stack.
+  why_stored: Stronger than generic pixel numerology because it uses declared edge offsets and prime-index step structure,
+    but still requires canonical measurement controls.
+  verification_status: operator_assistant_observed
+  review_state: canonical_verification_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5du-star-artifacts-exact254-mask-method-v0.yaml
+  crosslinks:
+  - page32_tree_polar_route_v0
+  - page32_moebius_fibonacci_prime_index_spiral_v1
+  - mayfly_horizontal_axis_167_229_229_229_104_candidate_v0
+  risk_notes:
+  - coordinate_selection_risk
+  - canonical_measurement_policy_required
+  - full_component_register_required_before_use
+  source_record_path: data/historical-route/stage5du-star-artifacts-exact254-mask-method-v0.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+- overlay_id: stage5dw_red_heading_gp491_family_overlay
+  source_fact_id: red_heading_gp491_family
+  fact_class: red_heading_gp491_number_facts
+  display_label: 'GP491 family: DEAD TREE, YGGDRASIL, A POSTLUDE, DIVINITY WITHIN, A CROSSROADS'
+  short_label: 'GP491 family: DEAD TREE/YGGDRASIL/A POSTLUDE/...'
+  value: 491
+  values:
+  - 491
+  value_type: gp_sum
+  operation_type: gp_sum
+  expression: GP(DEAD TREE)=GP(YGGDRASIL)=GP(A POSTLUDE)=GP(DIVINITY WITHIN)=GP(A CROSSROADS)=491
+  relation: Red-heading/marginalia GP-equivalence family tying page0/page54-55 opening/ending candidates to tree/crossroads/postlude
+    imagery.
+  why_stored: One of the strongest cross-thread red-heading patterns; must be visible with alternative-crib warnings.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5du-red-heading-marginalia-gp491-equivalence-family-v0.yaml
+  - third_party/PotentialCrib_RedRunes_Pages_54_55/messages.txt
+  crosslinks:
+  - page54_55_a_postlude_red_heading_candidate_v1
+  - page0_divinity_within_crossroads_gp491_candidate_v0
+  - divinity_within_491_563_1229_crosslink_v0
+  risk_notes:
+  - phrase_selection_bias_warning
+  - A_POSTLUDE_not_unique_by_GP_alone
+  - image_label_subjectivity_warning
+  - red_heading_decryption_not_accepted
+  source_record_path: data/historical-route/stage5du-red-heading-marginalia-gp491-equivalence-family-v0.yaml
+  record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as:
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim

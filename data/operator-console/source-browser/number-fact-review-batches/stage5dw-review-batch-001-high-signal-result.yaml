@@ -1,0 +1,46 @@
+stage_id: stage-5dw
+stage_title: Stage 5DW - Source-lock number-fact review batch 001, high-signal enrichment
+  overlays, without execution
+prompt_type: codex_metadata_and_operator_console_reviewability_implementation
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: source_browser_number_fact_review_batch_result
+schema: schemas/operator-console/source-browser-number-fact-review-batch-result-v0.schema.json
+review_batch_id: number_fact_review_batch_001_high_signal
+selection_policy: assistant_operator_high_signal_evidence_batch
+review_status: reviewed_and_overlayed
+reviewed_entry_count: 20
+source_record_paths:
+- data/historical-route/stage5do-page32-red-header-progressive-gp-sum-2472.yaml
+- data/historical-route/stage5do-page32-red-header-cumulative-index-463-3299.yaml
+- data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+- data/historical-route/stage5do-lp-doublet-scarcity-feature-v1.yaml
+- data/historical-route/stage5do-lp1-encrypted-word-count-464-prime-3301.yaml
+- data/historical-route/stage5do-artwork-title-gp-equivalence-candidate.yaml
+- data/historical-route/stage5do-solved-koan-gp-facts-candidate.yaml
+- data/historical-route/stage5do-page54-57-hash-rune-count-balance-candidate.yaml
+- data/historical-route/stage5do-page32-fibonacci-mod29-prime-palindrome-candidate.yaml
+- data/historical-route/stage5do-final-jpg-road-way-gp-runs-candidate.yaml
+- data/historical-route/stage5do-prime-index-bridge-761-167-464-1033-3301.yaml
+- data/historical-route/stage5do-page32-dead-tree-rgb185-count-3301-candidate.yaml
+- data/historical-route/stage5ds-instar-parable-id3-gp-product-candidate-v1.yaml
+- data/historical-route/stage5ds-instar-title-761-duration-167-bridge-v1.yaml
+- data/historical-route/stage5ds-interconnectedness-772-277-table-canon-number-v1.yaml
+- data/historical-route/stage5ds-ouroboros-see-also-gp-arithmetic-scan-v0.yaml
+- data/historical-route/stage5du-red-runes-gateless-gate-koan20-title-candidate-v0.yaml
+- data/historical-route/stage5du-big-gap-page-set-16-candidate-v0.yaml
+- data/historical-route/stage5du-star-artifacts-exact254-mask-method-v0.yaml
+- data/historical-route/stage5du-red-heading-marginalia-gp491-equivalence-family-v0.yaml
+overlay_file: data/operator-console/source-browser/number-fact-overlays/stage5dw-review-batch-001-high-signal-overlays.yaml
+overlays_added_count: 37
+overlay_only_cards_required_count: 27
+entries_reviewed_none_found_count: 0
+historical_source_lock_records_rewritten: false
+facts_added_directly_to_source_records: false
+facts_added_as_overlays: true
+next_batch_recommended: number_fact_review_batch_002

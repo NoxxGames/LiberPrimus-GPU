@@ -1,5 +1,7 @@
 # Cipher Catalog
 
+Stage 5DW does not change cipher-family status. It adds review-only Source Browser NumberFactCard overlays for 20 high-signal source-lock/candidate records, supports overlay-only cards for zero-extracted-fact entries, preserves Stage 5DV/5DU/5DT and active-lineage gates, keeps all targets unselected, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.
+
 Stage 5DV does not change cipher-family status. It repairs Operator Console Source Browser performance and path canonicalization, records review-only path/cache/context policies, preserves Stage 5DU/5DT and active-lineage gates, keeps all targets unselected, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.
 
 Stage 5DT does not change cipher-family status. It adds Operator Console number-fact card reviewability, enrichment overlay scaffolds, audit records, review-batch planning, and Source Browser fact-card rendering only, preserves Stage 5DS and active-lineage gates, keeps all targets unselected, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.

@@ -1,0 +1,115 @@
+stage_id: stage-5dw
+stage_title: Stage 5DW - Source-lock number-fact review batch 001, high-signal enrichment
+  overlays, without execution
+prompt_type: codex_metadata_and_operator_console_reviewability_implementation
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: source_browser_number_fact_review_batch_entry_status
+review_batch_id: number_fact_review_batch_001_high_signal
+entry_count: 20
+entries:
+- source_record_path: data/historical-route/stage5do-page32-red-header-progressive-gp-sum-2472.yaml
+  selected_for_batch: true
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5do-page32-red-header-cumulative-index-463-3299.yaml
+  selected_for_batch: true
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+  selected_for_batch: true
+  overlay_count: 6
+  fact_card_count_after_overlay: 6
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5do-lp-doublet-scarcity-feature-v1.yaml
+  selected_for_batch: true
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5do-lp1-encrypted-word-count-464-prime-3301.yaml
+  selected_for_batch: true
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5do-artwork-title-gp-equivalence-candidate.yaml
+  selected_for_batch: true
+  overlay_count: 2
+  fact_card_count_after_overlay: 2
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5do-solved-koan-gp-facts-candidate.yaml
+  selected_for_batch: true
+  overlay_count: 3
+  fact_card_count_after_overlay: 3
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5do-page54-57-hash-rune-count-balance-candidate.yaml
+  selected_for_batch: true
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5do-page32-fibonacci-mod29-prime-palindrome-candidate.yaml
+  selected_for_batch: true
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5do-final-jpg-road-way-gp-runs-candidate.yaml
+  selected_for_batch: true
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5do-prime-index-bridge-761-167-464-1033-3301.yaml
+  selected_for_batch: true
+  overlay_count: 1
+  fact_card_count_after_overlay: 8
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5do-page32-dead-tree-rgb185-count-3301-candidate.yaml
+  selected_for_batch: true
+  overlay_count: 2
+  fact_card_count_after_overlay: 2
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5ds-instar-parable-id3-gp-product-candidate-v1.yaml
+  selected_for_batch: true
+  overlay_count: 1
+  fact_card_count_after_overlay: 4
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5ds-instar-title-761-duration-167-bridge-v1.yaml
+  selected_for_batch: true
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5ds-interconnectedness-772-277-table-canon-number-v1.yaml
+  selected_for_batch: true
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5ds-ouroboros-see-also-gp-arithmetic-scan-v0.yaml
+  selected_for_batch: true
+  overlay_count: 2
+  fact_card_count_after_overlay: 2
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5du-red-runes-gateless-gate-koan20-title-candidate-v0.yaml
+  selected_for_batch: true
+  overlay_count: 3
+  fact_card_count_after_overlay: 3
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5du-big-gap-page-set-16-candidate-v0.yaml
+  selected_for_batch: true
+  overlay_count: 3
+  fact_card_count_after_overlay: 3
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5du-star-artifacts-exact254-mask-method-v0.yaml
+  selected_for_batch: true
+  overlay_count: 3
+  fact_card_count_after_overlay: 3
+  review_status: overlay_enriched_fact
+- source_record_path: data/historical-route/stage5du-red-heading-marginalia-gp491-equivalence-family-v0.yaml
+  selected_for_batch: true
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+  review_status: overlay_enriched_fact

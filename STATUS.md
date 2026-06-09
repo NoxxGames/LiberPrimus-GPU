@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DV Operator Console Source Browser performance, path canonicalization, and ChatGPT context hardening is complete.
+Stage 5DW Source-lock number-fact review batch 001 is complete.
 
-Next recommended prompt: Stage 5DW - Operator/assistant source-lock number-fact review batch 1, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DX - Operator/assistant source-lock number-fact review batch 2, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DW
+
+Stage 5DW completes the first high-signal source-lock number-fact review batch after the Stage 5DV Source Browser repair. It adds `37` review-only NumberFactCard enrichment overlays for `20` selected evidence/candidate records, supports overlay-only fact cards for older zero-extracted-fact entries, and records the high-signal batch deviation while preserving the Stage 5DT stable batch plan.
+
+Local Stage 5DW summary: Source Browser entries loaded `1529`, committed records scanned `1528`, fact cards after Stage 5DW `53`, reviewed entries `20`, overlays added `37`, overlay-only cards required `27`, Source Browser validation errors `0`, warnings `550`, missing paths retained as reviewability warnings `418`, spurious root image/document paths after repair `0/0`, duplicate present+missing path pairs `0`, Stage 5BD run-plan IDs `10`, active-lineage records `8`, parallel worker cap `8`, historical source-lock records rewritten `false`, number-fact backfill directly in source records `false`, target selected `false`, byte streams generated `false`, execution performed `false`, solve claim `false`, and next stage `Stage 5DX`.
+
+Stage 5DW is reviewability overlay metadata only. It does not rewrite historical source-lock records, select a target, create Deep Research acceptance, satisfy the combined gate, authorize activation, generate byte streams, run route extraction, OCR/image/audio/stego/CUDA/scoring/benchmarks, execute community/native/VM/spreadsheet/HTML tooling, access Tor/network targets, expand the website, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DV
 

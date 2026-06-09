@@ -1,0 +1,21 @@
+stage_id: stage-5dw
+stage_title: Stage 5DW - Source-lock number-fact review batch 001, high-signal enrichment
+  overlays, without execution
+prompt_type: codex_metadata_and_operator_console_reviewability_implementation
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: stage5dw_reviewable_validation_evidence
+validators:
+- validate-stage5dw
+- validate-stage5dw-review-batch-selection
+- validate-stage5dw-number-fact-overlays
+- validate-stage5dw-overlay-only-fact-cards
+- validate-stage5dw-source-browser-loadability
+- source-browser validate-index
+- source-browser validate-paths
+parallel_worker_cap: 8

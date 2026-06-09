@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5DV adds Operator Console Source Browser performance/path-canonicalization repair records and keeps the YAML map as the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5DW adds Source Browser number-fact review batch 001 overlays and keeps the YAML map as the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 
@@ -43,15 +43,19 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5DV" `
-  --expected-next-stage "Stage 5DW"
+  --expected-latest-stage "Stage 5DW" `
+  --expected-next-stage "Stage 5DX"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5DV" `
-  --expected-next-stage "Stage 5DW"
+  --expected-latest-stage "Stage 5DW" `
+  --expected-next-stage "Stage 5DX"
 ```
+
+## Stage 5DW Coverage
+
+The operational file map includes Stage 5DW high-signal number-fact overlay collection records, review-batch results, overlay-only fact-card support metadata, Source Browser loadability evidence, preservation records, closed-gate proofs, developer log, and research log. Historical source-lock records are not rewritten; raw third-party files, generated diagnostics, local GUI caches, and local `codex-output/**` handoffs remain ignored.
 
 ## Stage 5DV Coverage
 

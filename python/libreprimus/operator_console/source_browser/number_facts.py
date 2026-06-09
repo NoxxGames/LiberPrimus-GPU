@@ -169,16 +169,24 @@ def normalize_entry_number_facts(
     overlays: list[dict[str, Any]] | None = None,
 ) -> list[NumberFactCard]:
     overlays = overlays if overlays is not None else load_enrichment_overlays()
-    overlay_by_key = {
-        _overlay_key(overlay.get("source_record_path"), overlay.get("source_fact_id")): overlay
-        for overlay in overlays
-    }
+    overlay_by_key: dict[tuple[str, str], dict[str, Any]] = {}
+    for overlay in overlays:
+        overlay_by_key[_overlay_key(overlay.get("source_record_path"), overlay.get("source_fact_id"))] = overlay
+    consumed_overlay_ids: set[tuple[str, str, str]] = set()
     cards: list[NumberFactCard] = []
     for index, raw_fact in enumerate(entry.number_facts):
         source_fact_id = _source_fact_id(raw_fact)
         source_fact_path = str(raw_fact.get("source_fact_path") or f"number_facts[{index}]")
         overlay = overlay_by_key.get(_overlay_key(entry.source_record_path, source_fact_id))
+        if overlay:
+            consumed_overlay_ids.add(_overlay_identity(overlay))
         cards.append(_card_from_fact(entry, raw_fact, index, source_fact_id, source_fact_path, overlay))
+    for index, overlay in enumerate(overlays):
+        if str(overlay.get("source_record_path") or "") != entry.source_record_path:
+            continue
+        if _overlay_identity(overlay) in consumed_overlay_ids:
+            continue
+        cards.append(_card_from_overlay_only(entry, overlay, index))
     return sorted(cards, key=_card_sort_key)
 
 
@@ -339,6 +347,12 @@ def _card_from_fact(
     )
 
 
+def _card_from_overlay_only(entry: SourceBrowserEntry, overlay: dict[str, Any], index: int) -> NumberFactCard:
+    source_fact_id = str(overlay.get("source_fact_id") or overlay.get("overlay_id") or f"overlay_only_{index}")
+    source_fact_path = str(overlay.get("source_fact_path") or f"overlay_only[{index}]")
+    return _card_from_fact(entry, {}, index, source_fact_id, source_fact_path, overlay)
+
+
 def _review_state(payload: dict[str, Any], overlay_applied: bool) -> str:
     explicit = payload.get("review_state")
     if isinstance(explicit, str) and explicit in REVIEW_STATES:
@@ -369,6 +383,14 @@ def _source_fact_id(raw_fact: dict[str, Any]) -> str | None:
 
 def _overlay_key(source_record_path: Any, source_fact_id: Any) -> tuple[str, str]:
     return (str(source_record_path or ""), str(source_fact_id or ""))
+
+
+def _overlay_identity(overlay: dict[str, Any]) -> tuple[str, str, str]:
+    return (
+        str(overlay.get("source_record_path") or ""),
+        str(overlay.get("source_fact_id") or ""),
+        str(overlay.get("overlay_id") or ""),
+    )
 
 
 def _first_value(payload: dict[str, Any], keys: tuple[str, ...]) -> str | int | float | None:

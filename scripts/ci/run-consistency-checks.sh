@@ -33,14 +33,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5DV" \
-    --expected-next-stage "Stage 5DW" \
+    --expected-latest-stage "Stage 5DW" \
+    --expected-next-stage "Stage 5DX" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5DV" \
-    --expected-next-stage "Stage 5DW" \
+    --expected-latest-stage "Stage 5DW" \
+    --expected-next-stage "Stage 5DX" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +56,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DV",
+            expected_latest_stage="Stage 5DW",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DV",
+            "expected_latest_stage": "Stage 5DW",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3448,6 +3448,30 @@ git check-ignore -q "codex-output/stage5dv-codex-completion.md"
 git check-ignore -q ".cache/operator-console/thumbnails/test.png"
 if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5DV" >&2
+    exit 1
+fi
+
+echo "Validating Stage 5DW number-fact review batch overlay records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw
+"$python_bin" -m libreprimus.cli token-block stage5dw-summary
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw-review-batch-selection
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw-number-fact-overlays
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw-overlay-only-fact-cards
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw-source-browser-loadability
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw-stage5dv-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw-stage5dg-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw-stage5bd-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw-active-lineage-preservation
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw-sidecar-gates
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw-handoff-continuity
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw-credential-redaction-policy
+"$python_bin" -m libreprimus.cli token-block validate-stage5dw-governance-scope
+"$python_bin" -m libreprimus.cli operator-console validate-source-index
+"$python_bin" -m libreprimus.cli source-browser validate-index
+"$python_bin" -m libreprimus.cli source-browser validate-paths
+git check-ignore -q "codex-output/stage5dw-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5DW" >&2
     exit 1
 fi
 

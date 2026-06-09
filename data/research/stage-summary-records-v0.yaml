@@ -4024,3 +4024,22 @@ records:
   notes: Source Browser entries=1510, records=1509, spurious_root_paths=0, duplicate_pairs=0.
     No number-fact review batch, source-lock rewrite, target selection, byte generation,
     or execution was performed.
+- record_type: stage_summary_record
+  stage_id: stage-5dw
+  title: Stage 5DW - Source-lock number-fact review batch 001, high-signal enrichment
+    overlays, without execution
+  status: complete
+  category: operator_console_reviewability
+  summary: Added high-signal NumberFactCard overlays for the first 20-entry review
+    batch and enabled overlay-only fact cards.
+  key_outputs:
+  - Stage 5DW high-signal overlay collection with 37 review-only facts.
+  - Overlay-only NumberFactCard support for zero-extracted-fact source-lock entries.
+  - Stage 5DW records, validators, docs, tests, and handoff summary.
+  result_status: reviewability_overlays_only
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: Reviewed entries=20, overlays=37, fact_cards_after=53. Historical source
+    locks were not rewritten.
