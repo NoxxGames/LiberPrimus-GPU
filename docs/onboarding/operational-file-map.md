@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5DT adds Operator Console number-fact card reviewability records and keeps the YAML map as the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5DU adds community visual/red-heading/negative-space source-lock addendum records and keeps the YAML map as the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 
@@ -43,15 +43,19 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5DT" `
-  --expected-next-stage "Stage 5DU"
+  --expected-latest-stage "Stage 5DU" `
+  --expected-next-stage "Stage 5DV"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5DT" `
-  --expected-next-stage "Stage 5DU"
+  --expected-latest-stage "Stage 5DU" `
+  --expected-next-stage "Stage 5DV"
 ```
+
+## Stage 5DU Coverage
+
+The operational file map includes Stage 5DU community-thread source-lock registers, file inventories, canonical page-root crosslinks, candidate family records, number-fact overlays, Source Browser loadability, ChatGPT context update, preservation records, closed-gate proofs, developer log, experiment note, and research log. Raw community-thread files, generated diagnostics, local GUI caches, and local `codex-output/**` handoffs remain ignored.
 
 ## Stage 5DT Coverage
 

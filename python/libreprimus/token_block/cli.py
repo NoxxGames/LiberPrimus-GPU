@@ -749,6 +749,7 @@ from . import stage5dq as stage5dq_module
 from . import stage5dr as stage5dr_module
 from . import stage5ds as stage5ds_module
 from . import stage5dt as stage5dt_module
+from . import stage5du as stage5du_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -9741,6 +9742,206 @@ def validate_stage5dt_governance_scope_command() -> None:
     _print_stage5dt_result(
         stage5dt_module.validate_stage5dt_governance_scope(),
         "token_block_stage5dt_governance_scope_valid=true",
+    )
+
+
+def _print_stage5du_result(result: object, success_line: str) -> None:
+    text = result.to_cli_text()
+    console.print(text)
+    if getattr(result, "validation_error_count") != 0:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5du")
+def build_stage5du_command() -> None:
+    records = stage5du_module.build_stage5du()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(f"thread_folders_represented={summary.get('community_thread_folder_count_represented')}")
+    console.print(f"thread_file_count_total={summary.get('thread_file_count_total')}")
+    console.print(f"canonical_lp_page_image_count={summary.get('canonical_lp_page_image_count')}")
+    console.print(f"candidate_records_created={summary.get('candidate_records_created')}")
+    console.print(
+        "number_fact_cards_created_or_enriched="
+        f"{summary.get('number_fact_cards_created_or_enriched')}"
+    )
+    console.print(f"stage5du_entries_loaded={summary.get('stage5du_entries_loaded')}")
+    console.print(f"execution_performed={str(summary.get('execution_performed')).lower()}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5du")
+def validate_stage5du_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du(),
+        "token_block_stage5du_valid=true",
+    )
+
+
+@app.command("stage5du-summary")
+def stage5du_summary_command() -> None:
+    console.print(stage5du_module.stage5du_summary_text())
+
+
+@app.command("validate-stage5du-community-thread-source-locks")
+def validate_stage5du_community_thread_source_locks_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_community_thread_source_locks(),
+        "token_block_stage5du_community_thread_source_locks_valid=true",
+    )
+
+
+@app.command("validate-stage5du-thread-file-inventory")
+def validate_stage5du_thread_file_inventory_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_thread_file_inventory(),
+        "token_block_stage5du_thread_file_inventory_valid=true",
+    )
+
+
+@app.command("validate-stage5du-canonical-page-root-crosslink")
+def validate_stage5du_canonical_page_root_crosslink_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_canonical_page_root_crosslink(),
+        "token_block_stage5du_canonical_page_root_crosslink_valid=true",
+    )
+
+
+@app.command("validate-stage5du-red-runes-gateless-gate")
+def validate_stage5du_red_runes_gateless_gate_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_red_runes_gateless_gate(),
+        "token_block_stage5du_red_runes_gateless_gate_valid=true",
+    )
+
+
+@app.command("validate-stage5du-big-gaps-negative-space")
+def validate_stage5du_big_gaps_negative_space_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_big_gaps_negative_space(),
+        "token_block_stage5du_big_gaps_negative_space_valid=true",
+    )
+
+
+@app.command("validate-stage5du-star-artifacts")
+def validate_stage5du_star_artifacts_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_star_artifacts(),
+        "token_block_stage5du_star_artifacts_valid=true",
+    )
+
+
+@app.command("validate-stage5du-cribbing-page15")
+def validate_stage5du_cribbing_page15_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_cribbing_page15(),
+        "token_block_stage5du_cribbing_page15_valid=true",
+    )
+
+
+@app.command("validate-stage5du-red-runes-pages54-55")
+def validate_stage5du_red_runes_pages54_55_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_red_runes_pages54_55(),
+        "token_block_stage5du_red_runes_pages54_55_valid=true",
+    )
+
+
+@app.command("validate-stage5du-mobius-totient")
+def validate_stage5du_mobius_totient_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_mobius_totient(),
+        "token_block_stage5du_mobius_totient_valid=true",
+    )
+
+
+@app.command("validate-stage5du-number-fact-cards")
+def validate_stage5du_number_fact_cards_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_number_fact_cards(),
+        "token_block_stage5du_number_fact_cards_valid=true",
+    )
+
+
+@app.command("validate-stage5du-source-browser-loadability")
+def validate_stage5du_source_browser_loadability_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_source_browser_loadability(),
+        "token_block_stage5du_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage5du-chatgpt-context")
+def validate_stage5du_chatgpt_context_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_chatgpt_context(),
+        "token_block_stage5du_chatgpt_context_valid=true",
+    )
+
+
+@app.command("validate-stage5du-stage5dt-preservation")
+def validate_stage5du_stage5dt_preservation_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_stage5dt_preservation(),
+        "token_block_stage5du_stage5dt_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5du-stage5dg-preservation")
+def validate_stage5du_stage5dg_preservation_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_stage5dg_preservation(),
+        "token_block_stage5du_stage5dg_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5du-stage5bd-preservation")
+def validate_stage5du_stage5bd_preservation_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_stage5bd_preservation(),
+        "token_block_stage5du_stage5bd_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5du-active-lineage-preservation")
+def validate_stage5du_active_lineage_preservation_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_active_lineage_preservation(),
+        "token_block_stage5du_active_lineage_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5du-sidecar-gates")
+def validate_stage5du_sidecar_gates_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_sidecar_gates(),
+        "token_block_stage5du_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5du-handoff-continuity")
+def validate_stage5du_handoff_continuity_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_handoff_continuity(),
+        "token_block_stage5du_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5du-credential-redaction-policy")
+def validate_stage5du_credential_redaction_policy_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_credential_redaction_policy(),
+        "token_block_stage5du_credential_redaction_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5du-governance-scope")
+def validate_stage5du_governance_scope_command() -> None:
+    _print_stage5du_result(
+        stage5du_module.validate_stage5du_governance_scope(),
+        "token_block_stage5du_governance_scope_valid=true",
     )
 
 

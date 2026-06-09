@@ -3980,3 +3980,27 @@ records:
     historical source locks, selecting a target, authorizing active input, generating
     byte streams, executing token-block work, running OCR/image/audio/stego/CUDA/scoring/benchmarks,
     or making solve claims.
+- record_type: stage_summary_record
+  stage_id: stage-5du
+  title: Stage 5DU - Community visual/red-heading/negative-space source-lock addendum,
+    without execution
+  status: complete
+  category: source_lock_metadata
+  summary: Source-locked six local community visual/red-heading/layout theory folders
+    as compact metadata and review-only candidate context.
+  key_outputs:
+  - Community-thread file inventories, message locks, attachment order records, image/code/table
+    inventories, and canonical LP page root crosslink.
+  - Review-only candidate records for RedRunes/Gateless Gate, BigGaps/negative space,
+    StarArtifacts, CribbingPage15, pages 54/55 red headings, Mobius/totient, and cross-family
+    risk.
+  - NumberFactCard-compatible overlays and Source Browser loadability records.
+  result_status: metadata_only
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: Stage 5DU represented 6 folders, inventoried 234 files, created 72 candidate
+    records, preserved Stage 5DT, Stage 5DG, Stage 5BD, active-lineage, and the 8-worker
+    cap, and shifted the pending Stage 5DT number-fact review batch to Stage 5DV without
+    execution.

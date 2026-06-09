@@ -7013,3 +7013,39 @@ records:
   staleness_check_level: strict
   owner_context: operator_review
   notes: The plan is not a review result and does not authorize execution.
+- path: data/project-state/stage5du-summary.yaml
+  category: active_data_record
+  purpose: Stage 5DU community visual/red-heading/layout metadata-only source-lock
+    summary.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5du
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Source-lock addendum only; no target selection, route extraction, OCR, image
+    forensics, or execution.
+- path: data/source-harvester/stage5du-community-thread-source-lock-register.yaml
+  category: active_data_record
+  purpose: Compact metadata source-lock register for six ignored community-thread
+    folders.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5du
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Raw thread folders remain ignored and uncommitted.
+- path: data/operator-console/source-browser/number-fact-overlays/stage5du-community-visual-fact-overlays.yaml
+  category: active_data_record
+  purpose: Stage 5DU review-only NumberFactCard enrichment overlays.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5du
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_review
+  notes: Overlays are review display aids only and not target-priority evidence.

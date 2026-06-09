@@ -149,6 +149,16 @@ def load_enrichment_overlays(root: Path = OVERLAY_DIR) -> list[dict[str, Any]]:
             continue
         if payload.get("review_state") == "overlay_draft" or payload.get("template") is True:
             continue
+        if isinstance(payload.get("overlays"), list):
+            for item in payload["overlays"]:
+                if not isinstance(item, dict):
+                    continue
+                if item.get("review_state") == "overlay_draft" or item.get("template") is True:
+                    continue
+                item = dict(item)
+                item["_overlay_path"] = rel
+                overlays.append(item)
+            continue
         payload["_overlay_path"] = rel
         overlays.append(payload)
     return overlays

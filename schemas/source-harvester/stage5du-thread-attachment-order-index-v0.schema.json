@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "canonical_codex_handoff_root": {
+      "const": "codex-output"
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "metadata_only": {
+      "const": true
+    },
+    "puzzle_execution_allowed": {
+      "const": false
+    },
+    "raw_source_files_committed": {
+      "const": false
+    },
+    "raw_third_party_files_committed": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "source_lock_only": {
+      "const": true
+    },
+    "stage_id": {
+      "const": "stage-5du"
+    }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "attachments"
+  ],
+  "type": "object"
+}

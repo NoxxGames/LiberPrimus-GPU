@@ -7,7 +7,7 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; current operational docs now name Stage 5DT as latest complete and Stage 5DU as next.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; current operational docs now name Stage 5DU as latest complete and Stage 5DV as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -67,6 +67,11 @@
 - `data/project-state/stage5dt-*.yaml`: Stage 5DT summary, next-stage decision, Stage 5DS preservation, number-fact reviewability audit, review-batch summary, GUI fact-card summary, validation evidence, gap register, scope control, and ChatGPT context update records.
 - `data/source-harvester/stage5dt-*.yaml`: Stage 5DT Codex handoff, credential-redaction preservation, and raw-source noncommit proof records.
 - `data/token-block/stage5dt-*.yaml`: Stage 5DT Stage 5DG/Stage 5BD/active-lineage preservation and no-active/no-byte/no-execution proof records.
+- `data/source-harvester/stage5du-*.yaml`: Stage 5DU community-thread source-lock registers, file inventories, message/image/code/table metadata locks, canonical LP page-image crosslink, noncommit proof, handoff, and credential-redaction records.
+- `data/historical-route/stage5du-*.yaml`: Stage 5DU review-only visual/red-heading/negative-space/star/Mobius/Gateless Gate/cross-family candidate records.
+- `data/token-block/stage5du-*.yaml`: Stage 5DU Stage 5DT/Stage 5DG/Stage 5BD/active-lineage preservation and no-active/no-byte/no-execution proof records.
+- `data/project-state/stage5du-*.yaml`: Stage 5DU summary, next-stage decision, source-lock plan, family indexes, number-fact readiness, Source Browser loadability, validation evidence, gap register, scope control, and ChatGPT context update records.
+- `data/operator-console/source-browser/number-fact-overlays/stage5du-community-visual-fact-overlays.yaml`: Stage 5DU review-only NumberFactCard enrichment overlays for the Source Browser.
 - `data/source-harvester/stage5dl-*.yaml`: Stage 5DL local source-lock register, Reddit image register, number-triangle crosswalk, disk-cipher crosswalk, and koan-page lock records. These are compact metadata records only; raw local files are not committed.
 - `data/historical-route/stage5dl-*.yaml`: Stage 5DL triangle, disk-cipher, quote-dialogue crib, koan visual-parallel, and cross-family evidence-index records.
 - `data/token-block/stage5dl-*.yaml`: Stage 5DL Stage 5DG/5BD preservation, active-lineage preservation, no-active-ingestion proof, no-byte-stream gate, and no-execution gate records.
@@ -305,3 +310,5 @@ Stage 5DQ adds the Liber Primus Operator Console v0 Source Browser as review-onl
 Stage 5DS adds expanded CicadaMusic community-theory, Music/Ouroboros/self-reference, and token-block static-context source-lock metadata. Source-of-truth records are `data/project-state/stage5ds-*`, `data/source-harvester/stage5ds-*`, `data/historical-route/stage5ds-*`, `data/token-block/stage5ds-*`, and matching `schemas/**/*stage5ds*.schema.json`; ignored raw community-theory files, generated diagnostics, and `codex-output/stage5ds-codex-completion.md` are not source truth.
 
 Stage 5DT adds Operator Console number-fact card reviewability infrastructure. Source-of-truth records are `data/operator-console/source-browser/number-fact-*`, `data/project-state/stage5dt-*`, `data/source-harvester/stage5dt-*`, `data/token-block/stage5dt-*`, `python/libreprimus/operator_console/source_browser/number_facts.py`, `python/libreprimus/operator_console/source_browser/number_fact_cards.py`, and matching schemas. Ignored generated diagnostics, local GUI caches, and `codex-output/stage5dt-codex-completion.md` are not source truth.
+
+Stage 5DU adds community visual/red-heading/negative-space source-lock addendum metadata. Source-of-truth records are `data/project-state/stage5du-*`, `data/source-harvester/stage5du-*`, `data/historical-route/stage5du-*`, `data/token-block/stage5du-*`, `data/operator-console/source-browser/number-fact-overlays/stage5du-community-visual-fact-overlays.yaml`, `python/libreprimus/token_block/stage5du.py`, and matching `schemas/**/*stage5du*.schema.json`. Ignored local community-thread folders, raw images/messages/code/spreadsheets, generated diagnostics, generated masks or forensic outputs, and `codex-output/stage5du-codex-completion.md` are not source truth.

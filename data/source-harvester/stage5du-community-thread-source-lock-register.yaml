@@ -1,0 +1,212 @@
+record_type: stage5du_community_thread_source_lock_register
+stage_id: stage-5du
+stage_title: Stage 5DU - Community visual/red-heading/negative-space source-lock addendum,
+  without execution
+prompt_type: codex_metadata_implementation
+metadata_only: true
+source_lock_only: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+source_previous_stage_id: stage-5dt
+source_previous_stage_commit_expected: bd5bfa8dd8f1b310340f2254d9eaf53ff3d15791
+schema: schemas/source-harvester/stage5du-community-thread-source-lock-register-v0.schema.json
+machine_code_execution_performed_now: false
+page32_route_extraction_performed_now: false
+historical_source_lock_records_rewritten: false
+branch_enumeration_performed: false
+disk_cipher_execution_performed_now: false
+target_priority_decision_created_now: false
+number_fact_backfill_performed_now: false
+active_planning_input_authorized_now: false
+target_class_validation_implemented: false
+pivot_target_selected_now: false
+generated_outputs_committed: false
+cuda_execution_performed: false
+hidden_content_image_forensics_performed: false
+source_lock_entry_batch_review_performed_now: false
+token_block_experiment_executed: false
+active_manifest_registry_updated: false
+audio_stego_performed: false
+benchmark_performed: false
+execution_authorized_now: false
+spectrogram_stego_performed: false
+raw_third_party_files_committed: false
+old_16_worker_default_reintroduced: false
+mobius_totient_dictionary_search_executed_now: false
+combined_approval_gate_satisfied_now: false
+variant_byte_streams_generated: false
+community_code_executed_now: false
+variant_materialisation_performed: false
+known_plaintext_attack_performed_now: false
+probability_claim_accepted_as_validated: false
+html_tool_executed_now: false
+page_boundaries_final: false
+ai_ml_interpretation_performed: false
+activation_decision_valid_now: false
+token_block_variant_byte_streams_generated: false
+pdf_ocr_or_hidden_content_rendering_performed: false
+route_extraction_performed_now: false
+execution_performed: false
+website_expansion_performed: false
+active_ingestion_performed: false
+decryption_attempt_performed_now: false
+semantic_image_interpretation_performed: false
+canonical_corpus_active: false
+raw_source_files_committed: false
+image_forensics_performed: false
+byte_stream_generation_authorized_now: false
+decode_attempt_performed: false
+red_heading_decryption_accepted_now: false
+active_token_block_manifest_changed: false
+codex_output_used: false
+ocr_performed: false
+network_target_validation_performed_now: false
+alberti_html_executed_now: false
+page0_plaintext_accepted_now: false
+active_planning_input_selected_now: false
+tor_network_access_performed: false
+mp3stego_execution_performed: false
+full_cartesian_product_enumerated: false
+page56_hash_preimage_tested_now: false
+activation_authorized_now: false
+real_byte_stream_generated: false
+hash_preimage_search_performed: false
+spreadsheet_macro_execution_performed: false
+openpuff_execution_performed: false
+dwh_hash_search_performed: false
+scoring_performed: false
+operator_readiness_decision_created_now: false
+source_roots:
+- source_root_id: big_gaps_found_in_liber_primus
+  source_root: third_party/BigGapsFoundInLiberPrimus
+  source_status: local_ignored_metadata_locked
+  source_root_exists: true
+  messages_txt_present: true
+  file_count: 44
+  audio_file_count: 0
+  pdf_file_count: 0
+  image_file_count: 43
+  text_file_count: 1
+  python_file_count: 0
+  spreadsheet_file_count: 0
+  other_file_count: 0
+  missing_expected_files: []
+  unexpected_raw_original_pages_folder_present: false
+  expected_thread_images: 43
+  expected_duplicate_note: images 30-35 duplicate 36-41 in prior archive analysis
+  expected_files_about: null
+- source_root_id: cribbing_page15
+  source_root: third_party/CribbingPage15
+  source_status: local_ignored_metadata_locked
+  source_root_exists: true
+  messages_txt_present: true
+  file_count: 1
+  audio_file_count: 0
+  pdf_file_count: 0
+  image_file_count: 0
+  text_file_count: 1
+  python_file_count: 0
+  spreadsheet_file_count: 0
+  other_file_count: 0
+  missing_expected_files: []
+  unexpected_raw_original_pages_folder_present: false
+  expected_thread_images: null
+  expected_duplicate_note: null
+  expected_files_about: null
+- source_root_id: mobius_totient_first_page_theory
+  source_root: third_party/Mobius_totient_first_page_theory
+  source_status: local_ignored_metadata_locked
+  source_root_exists: true
+  messages_txt_present: true
+  file_count: 98
+  audio_file_count: 0
+  pdf_file_count: 0
+  image_file_count: 17
+  text_file_count: 40
+  python_file_count: 39
+  spreadsheet_file_count: 2
+  other_file_count: 0
+  missing_expected_files: []
+  unexpected_raw_original_pages_folder_present: false
+  expected_thread_images: null
+  expected_duplicate_note: null
+  expected_files_about: messages.txt plus images, Python files, text outputs, and
+    spreadsheets
+- source_root_id: potential_crib_red_runes_pages_54_55
+  source_root: third_party/PotentialCrib_RedRunes_Pages_54_55
+  source_status: local_ignored_metadata_locked
+  source_root_exists: true
+  messages_txt_present: true
+  file_count: 7
+  audio_file_count: 0
+  pdf_file_count: 0
+  image_file_count: 6
+  text_file_count: 1
+  python_file_count: 0
+  spreadsheet_file_count: 0
+  other_file_count: 0
+  missing_expected_files: []
+  unexpected_raw_original_pages_folder_present: false
+  expected_thread_images: null
+  expected_duplicate_note: null
+  expected_files_about: messages.txt plus 6 images/screenshots
+- source_root_id: red_runes_possible_koan_connection
+  source_root: third_party/RedRunes_Possible_Koan_Connection
+  source_status: local_ignored_metadata_locked
+  source_root_exists: true
+  messages_txt_present: true
+  file_count: 4
+  audio_file_count: 0
+  pdf_file_count: 0
+  image_file_count: 3
+  text_file_count: 1
+  python_file_count: 0
+  spreadsheet_file_count: 0
+  other_file_count: 0
+  missing_expected_files: []
+  unexpected_raw_original_pages_folder_present: false
+  expected_thread_images: null
+  expected_duplicate_note: null
+  expected_files_about: null
+- source_root_id: star_artifacts_in_lp_page_images
+  source_root: third_party/StarArtifactsInLPPageImages
+  source_status: local_ignored_metadata_locked
+  source_root_exists: true
+  messages_txt_present: true
+  file_count: 80
+  audio_file_count: 0
+  pdf_file_count: 0
+  image_file_count: 79
+  text_file_count: 1
+  python_file_count: 0
+  spreadsheet_file_count: 0
+  other_file_count: 0
+  missing_expected_files: []
+  unexpected_raw_original_pages_folder_present: false
+  expected_thread_images: 79
+  expected_duplicate_note: 1.png = 41.png = 42.png in prior archive analysis
+  expected_files_about: null
+expected_thread_summaries:
+  BigGapsFoundInLiberPrimus:
+    expected_thread_images: 43
+    expected_missing_image_numbers:
+    - 1
+    expected_duplicate_note: images 30-35 duplicate 36-41 in prior archive analysis
+  RedRunes_Possible_Koan_Connection:
+    expected_files:
+    - messages.txt
+    - a famous book.png
+    - coincidence for me_01.png
+    - coincidence for me_02.png
+  StarArtifactsInLPPageImages:
+    expected_thread_images: 79
+    expected_duplicate_note: 1.png = 41.png = 42.png in prior archive analysis
+  CribbingPage15:
+    expected_files:
+    - messages.txt
+  PotentialCrib_RedRunes_Pages_54_55:
+    expected_files_about: messages.txt plus 6 images/screenshots
+  Mobius_totient_first_page_theory:
+    expected_files_about: messages.txt plus images, Python files, text outputs, and
+      spreadsheets

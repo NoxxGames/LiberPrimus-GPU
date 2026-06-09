@@ -10,6 +10,8 @@ Stage 5DS adds loadability coverage for the expanded Music / Ouroboros / token-b
 
 Stage 5DT adds number-fact card reviewability. Existing number facts are normalized into read-only cards with explicit source path, value, operation/expression when available, verification state, review state, enrichment flags, and source-lock warnings. Value-only facts are displayed as enrichment-needed instead of silently looking complete; entries with zero extracted facts are displayed as not reviewed unless a future overlay explicitly records a reviewed-none-found state.
 
+Stage 5DU adds community visual/red-heading/negative-space source-lock metadata and a review-only overlay collection for selected number facts. The overlays make candidate facts easier to inspect in the details panel, but they do not rewrite historical source-lock records, validate visual intent, select a target, or authorize route execution.
+
 Blank table status values are displayed as `unspecified`. This means the source record did not contain `source_status`, `status`, `ready_state`, or `review_state`; it does not mean the record is incomplete, and the GUI does not rewrite source-lock records to invent statuses.
 
 ## Components
@@ -39,6 +41,8 @@ GUI file and URL actions are explicit operator actions. The browser must not aut
 Stage 5DR adds right-click row actions and detail-panel actions for opening image viewers, files, file locations, and URLs. These are still explicit operator actions only. Image thumbnails are display/navigation aids only and do not perform OCR, image forensics, AI interpretation, stego detection, or content analysis. Archive-relative image paths such as `2014/additional images/...` are resolved against local ignored Cicada archive roots when those files are present; the GUI still does not commit or mutate those raw files.
 
 Stage 5DT number-fact cards are display and review scaffolding only. Overlay files may enrich review state later, but they must not rewrite the original source-lock records. The filters `needs:fact-enrichment`, `not-reviewed:number-facts`, `rich:number-facts`, `canonical-verification:number-facts`, and `quarantined:number-facts` help operators find review work without executing any route.
+
+Stage 5DU overlays are review-only enrichments for community visual-route candidate facts. They must stay `usable_for_decision_now=false`, cannot be used as route seeds or proof, and must not be treated as image-forensic or OCR evidence.
 
 ## Validation
 
@@ -90,4 +94,14 @@ Stage 5DT validates number-fact card reviewability through:
 .\.venv\Scripts\python.exe -m libreprimus.cli operator-console validate-number-fact-cards
 .\.venv\Scripts\python.exe -m libreprimus.cli operator-console number-fact-reviewability-summary
 .\.venv\Scripts\python.exe -m libreprimus.cli source-browser validate-number-facts
+```
+
+Stage 5DU validates community visual source-lock loadability through:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5du
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5du
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5du-source-browser-loadability
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5du-number-fact-cards
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block stage5du-summary
 ```

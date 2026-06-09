@@ -1,0 +1,187 @@
+record_type: stage5du_canonical_lp_page_image_root_crosslink
+stage_id: stage-5du
+stage_title: Stage 5DU - Community visual/red-heading/negative-space source-lock addendum,
+  without execution
+prompt_type: codex_metadata_implementation
+metadata_only: true
+source_lock_only: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+source_previous_stage_id: stage-5dt
+source_previous_stage_commit_expected: bd5bfa8dd8f1b310340f2254d9eaf53ff3d15791
+schema: schemas/source-harvester/stage5du-canonical-lp-page-image-root-crosslink-v0.schema.json
+machine_code_execution_performed_now: false
+page32_route_extraction_performed_now: false
+historical_source_lock_records_rewritten: false
+branch_enumeration_performed: false
+disk_cipher_execution_performed_now: false
+target_priority_decision_created_now: false
+number_fact_backfill_performed_now: false
+active_planning_input_authorized_now: false
+target_class_validation_implemented: false
+pivot_target_selected_now: false
+generated_outputs_committed: false
+cuda_execution_performed: false
+hidden_content_image_forensics_performed: false
+source_lock_entry_batch_review_performed_now: false
+token_block_experiment_executed: false
+active_manifest_registry_updated: false
+audio_stego_performed: false
+benchmark_performed: false
+execution_authorized_now: false
+spectrogram_stego_performed: false
+raw_third_party_files_committed: false
+old_16_worker_default_reintroduced: false
+mobius_totient_dictionary_search_executed_now: false
+combined_approval_gate_satisfied_now: false
+variant_byte_streams_generated: false
+community_code_executed_now: false
+variant_materialisation_performed: false
+known_plaintext_attack_performed_now: false
+probability_claim_accepted_as_validated: false
+html_tool_executed_now: false
+page_boundaries_final: false
+ai_ml_interpretation_performed: false
+activation_decision_valid_now: false
+token_block_variant_byte_streams_generated: false
+pdf_ocr_or_hidden_content_rendering_performed: false
+route_extraction_performed_now: false
+execution_performed: false
+website_expansion_performed: false
+active_ingestion_performed: false
+decryption_attempt_performed_now: false
+semantic_image_interpretation_performed: false
+canonical_corpus_active: false
+raw_source_files_committed: false
+image_forensics_performed: false
+byte_stream_generation_authorized_now: false
+decode_attempt_performed: false
+red_heading_decryption_accepted_now: false
+active_token_block_manifest_changed: false
+codex_output_used: false
+ocr_performed: false
+network_target_validation_performed_now: false
+alberti_html_executed_now: false
+page0_plaintext_accepted_now: false
+active_planning_input_selected_now: false
+tor_network_access_performed: false
+mp3stego_execution_performed: false
+full_cartesian_product_enumerated: false
+page56_hash_preimage_tested_now: false
+activation_authorized_now: false
+real_byte_stream_generated: false
+hash_preimage_search_performed: false
+spreadsheet_macro_execution_performed: false
+openpuff_execution_performed: false
+dwh_hash_search_performed: false
+scoring_performed: false
+operator_readiness_decision_created_now: false
+canonical_page_image_root: third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+canonical_page_image_root_exists: true
+expected_canonical_page_count: 75
+canonical_page_count_observed: 75
+expected_page_pattern: 00.jpg through 74.jpg
+used_for_stage5du_original_page_references: true
+old_original_pages_folders_expected_in_thread_roots: false
+source_root_aliases:
+- third_party/CiadaSolversIddqd_v2/liber-primus__images--full
+path_spelling_warning_ciada_vs_cicada_recorded: true
+raw_page_images_committed_now: false
+representative_page_locks:
+- page_image_name: 00.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/00.jpg
+  exists: true
+  sha256: 184e6f9de8695d99435c2bef4fd7e304a8a0f704dbe04439fa8bf13c4da395a7
+  size_bytes: 168876
+  raw_page_image_committed_now: false
+- page_image_name: 04.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/04.jpg
+  exists: true
+  sha256: 745c6a46f67de1e5a2a9ac76175c323af82c2432e3b7483a8dc6244f8de9478f
+  size_bytes: 1223337
+  raw_page_image_committed_now: false
+- page_image_name: 07.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/07.jpg
+  exists: true
+  sha256: b50c1536ea1f30847e7875835991d52951bafb599fb1ab04eb78c5c6e6c2b468
+  size_bytes: 823514
+  raw_page_image_committed_now: false
+- page_image_name: 10.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/10.jpg
+  exists: true
+  sha256: 12ebfe421c129f2ef78d527c1630e358963da8d8dfdf9620eb977980d7967376
+  size_bytes: 4240957
+  raw_page_image_committed_now: false
+- page_image_name: 13.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/13.jpg
+  exists: true
+  sha256: bef0fc4867c2363c835eb4f08029a1eba35c925e2f72659d7353cf8a91089e56
+  size_bytes: 2070134
+  raw_page_image_committed_now: false
+- page_image_name: 20.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/20.jpg
+  exists: true
+  sha256: 1453ef27ea607c6ea378d6472c908e77c2881caba33c72d1893caddee8dc1117
+  size_bytes: 599916
+  raw_page_image_committed_now: false
+- page_image_name: 41.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/41.jpg
+  exists: true
+  sha256: 62148ef272d17bcedf5df30f6cc9e52df127113c18c1cf57ea92c75feedfce80
+  size_bytes: 654761
+  raw_page_image_committed_now: false
+- page_image_name: 42.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/42.jpg
+  exists: true
+  sha256: a7d6e597debff4f7c5b3516e1b02ca2e4fa5b37d972f567264ed2ec845013cff
+  size_bytes: 643754
+  raw_page_image_committed_now: false
+- page_image_name: 43.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/43.jpg
+  exists: true
+  sha256: ed88f5fcdca3d1f846538caa8be979aa28cde969eb99c9464d60daa26c1f9af7
+  size_bytes: 677224
+  raw_page_image_committed_now: false
+- page_image_name: 49.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/49.jpg
+  exists: true
+  sha256: c0f778187a8e9ddbfc667a65929ac567430a2e38278a2022377984ac084e5f72
+  size_bytes: 362637
+  raw_page_image_committed_now: false
+- page_image_name: 51.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/51.jpg
+  exists: true
+  sha256: 6f1b4c04b64ee54c689478bd3986bb6ab8a3b81f48780562094e9f248e4e87f8
+  size_bytes: 555050
+  raw_page_image_committed_now: false
+- page_image_name: 53.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/53.jpg
+  exists: true
+  sha256: 3b54a31a9e796e2c01b4e80d46e1092dee2e1142a7c61873e282078e2c776cb9
+  size_bytes: 511099
+  raw_page_image_committed_now: false
+- page_image_name: 54.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/54.jpg
+  exists: true
+  sha256: cee96d7e71b7de4d4e57237faacefad791229c153202e8224e4bedda45fb8f43
+  size_bytes: 503830
+  raw_page_image_committed_now: false
+- page_image_name: 55.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/55.jpg
+  exists: true
+  sha256: aec1898f599f57265d6422f3082a481db94a27f62230affbadee595d05077f8c
+  size_bytes: 519224
+  raw_page_image_committed_now: false
+- page_image_name: 56.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/56.jpg
+  exists: true
+  sha256: d1b7ea5a6ffb79709753e3565d1d46e05edbe3d82ca70c3ed6065d46b131bd00
+  size_bytes: 541379
+  raw_page_image_committed_now: false
+- page_image_name: 57.jpg
+  relative_path: third_party/CiadaSolversIddqd_v2/liber-primus__images--full/57.jpg
+  exists: true
+  sha256: 3f5af995b39f94f268d4aa94825a10f2429f4a3affa1921a7f627e6d1bfcfb69
+  size_bytes: 746355
+  raw_page_image_committed_now: false

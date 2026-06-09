@@ -2,7 +2,7 @@
 
 ## Stage 5DS Note
 
-Stage 5DS is a metadata-only expanded Music/Ouroboros/token-block static source-lock addendum. Use `libreprimus token-block validate-stage5ds` for source-lock, music candidate, Ouroboros context, token-block static context, ChatGPT context, Source Browser loadability, Stage 5DR/5DG/5BD preservation, active-lineage preservation, gate, handoff, credential-redaction, and scope-control validation. Stage 5DT follow-up work should plan source review while keeping raw `third_party/CicadaMusic/**` files, generated outputs, byte streams, route outputs, audio/stego/OCR/image-forensics outputs, native/VM/CUDA outputs, and solve claims out of scope.
+Stage 5DU is a metadata-only community visual/red-heading/negative-space source-lock addendum. Use `libreprimus token-block validate-stage5du` for community thread source locks, file inventory, canonical page-root crosslinks, candidate family records, number-fact overlays, Source Browser loadability, ChatGPT context, Stage 5DT/5DG/5BD preservation, active-lineage preservation, gates, handoff, credential-redaction, and governance-scope validation. Stage 5DV follow-up work should perform the bounded source-lock number-fact review batch while keeping raw `third_party/**` files, generated outputs, byte streams, route outputs, OCR/image-forensics outputs, native/VM/CUDA outputs, community code execution, and solve claims out of scope.
 
 ## Stage 5DC Note
 

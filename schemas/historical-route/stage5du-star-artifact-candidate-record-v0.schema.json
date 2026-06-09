@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "candidate_status": {
+      "enum": [
+        "source_locked_candidate_only",
+        "source_locked_context_only",
+        "source_locked_method_claim_only",
+        "quarantined_review_only"
+      ]
+    },
+    "route_extraction_performed_now": {
+      "const": false
+    },
+    "selected_now": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-5du"
+    },
+    "trusted_as_canonical": {
+      "const": false
+    },
+    "usable_as_experiment_seed_now": {
+      "const": false
+    }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "candidate_family_id",
+    "candidate_status",
+    "review_state",
+    "evidence_status",
+    "trusted_as_canonical",
+    "usable_as_experiment_seed_now",
+    "selected_now",
+    "route_extraction_performed_now",
+    "solve_claim"
+  ],
+  "type": "object"
+}

@@ -20,13 +20,13 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5dt_latest_and_stage5du_next() -> None:
+def test_operational_docs_use_stage5du_latest_and_stage5dv_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
     assert (
-        "Stage 5DT Operator Console number-fact cards and evidence-reviewability "
-        "upgrade is complete"
+        "Stage 5DU community visual/red-heading/negative-space source-lock "
+        "addendum is complete"
     ) in status
-    assert "Next recommended prompt: Stage 5DU" in status
-    assert "Latest completed stage: Stage 5DT" in staged_plan
-    assert "Current planning focus: Stage 5DU" in staged_plan
+    assert "Next recommended prompt: Stage 5DV" in status
+    assert "Latest completed stage: Stage 5DU" in staged_plan
+    assert "Current planning focus: Stage 5DV" in staged_plan

@@ -1,5 +1,11 @@
 # Deep Research Handoff Map
 
+## Stage 5DU Note
+
+Stage 5DU did not execute Deep Research or any experiment. It preserves Stage 5DT, source-locks six ignored local community visual/red-heading/negative-space thread folders as compact metadata, crosslinks the canonical LP page-image root, records review-only candidate families, and adds Operator Console number-fact enrichment overlays. Operator approval alone still does not satisfy the combined gate.
+
+Use `data/project-state/stage5du-*`, `data/source-harvester/stage5du-*`, `data/historical-route/stage5du-*`, `data/token-block/stage5du-*`, and `data/operator-console/source-browser/number-fact-overlays/stage5du-community-visual-fact-overlays.yaml` for Stage 5DV handoff. Do not hand over raw community-thread files, images, messages, Python/source files, spreadsheets, generated diagnostics, generated completion summaries, generated masks, OCR/image-forensics outputs, byte streams, decoded bytes, route outputs, CUDA outputs, or execution outputs as source truth. Stage 5DU creates no Deep Research acceptance record, no combined gate validation record, no activation decision, no active input, and no execution authorization.
+
 ## Stage 5DT Note
 
 Stage 5DT did not execute Deep Research or any experiment. It preserves Stage 5DS, normalizes existing Source Browser number facts into read-only cards, adds enrichment overlay and review-state scaffolds, records reviewability gaps, and plans the first bounded 20-entry number-fact review batch as Stage 5DU. Operator approval alone still does not satisfy the combined gate.
@@ -208,6 +214,8 @@ Stage 5CH reviewed Stage 5CG and accepted it with warnings. Stage 5CI turns thos
 Stage 5CJ reviewed Stage 5CI and accepted it with warnings. Stage 5CK turns those warnings into fixture-only operator approval, Deep Research acceptance, activation-decision, negative-validation, and review-package records while keeping the current gate unsatisfied.
 
 Stage 5CL reviewed Stage 5CK and accepted it with warnings. Stage 5CM turns those warnings into approval-record readiness-boundary, fixture-vs-real record boundary, end-to-end boundary validation, real approval-readiness preflight, activation-decision gate hardening, credential-redaction/no-secret policy, Stage 5CK preservation, Stage 5BD plan preservation, active-lineage preservation, DWH quarantine reaffirmation, and guardrail records while keeping actual approval, activation, active input, byte-stream generation, manifest supersession, and execution blocked.
+
+Stage 5DU later preserves Stage 5DT while adding community visual/red-heading/negative-space source-lock metadata and number-fact overlays. It keeps Deep Research acceptance absent, keeps the combined gate unsatisfied, keeps no-active/no-byte/no-execution gates closed, and moves the pending number-fact review batch to Stage 5DV.
 
 Stage 5CN reviewed Stage 5CM and accepted it with warnings. Stage 5CO turns those warnings into a real approval-record readiness package, real operator approval readiness preflight, real Deep Research acceptance readiness preflight, real combined-gate readiness preflight, activation-decision transition plan, future transition sequence, missing-requirements register, real-record blocker, Stage 5CM boundary preservation, Stage 5BD preservation, active-lineage preservation, credential-redaction preservation, review-packaging warning, and no-active/no-byte/no-execution gate records while keeping actual approval, activation, active input, byte-stream generation, manifest supersession, and execution blocked.
 

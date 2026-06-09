@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5DT" `
-        --expected-next-stage "Stage 5DU" `
+        --expected-latest-stage "Stage 5DU" `
+        --expected-next-stage "Stage 5DV" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5DT" `
-        --expected-next-stage "Stage 5DU" `
+        --expected-latest-stage "Stage 5DU" `
+        --expected-next-stage "Stage 5DV" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DT",
+            expected_latest_stage="Stage 5DU",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DT",
+            "expected_latest_stage": "Stage 5DU",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3259,6 +3259,41 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     & $Python -m libreprimus.cli source-browser validate-number-facts
     git check-ignore -q "codex-output/stage5dt-codex-completion.md"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DT" }
+
+    Write-Host "Validating Stage 5DU community visual/red-heading/negative-space source-lock records"
+    & $Python -m libreprimus.cli token-block validate-stage5du
+    & $Python -m libreprimus.cli token-block stage5du-summary
+    & $Python -m libreprimus.cli token-block validate-stage5du-community-thread-source-locks
+    & $Python -m libreprimus.cli token-block validate-stage5du-thread-file-inventory
+    & $Python -m libreprimus.cli token-block validate-stage5du-canonical-page-root-crosslink
+    & $Python -m libreprimus.cli token-block validate-stage5du-red-runes-gateless-gate
+    & $Python -m libreprimus.cli token-block validate-stage5du-big-gaps-negative-space
+    & $Python -m libreprimus.cli token-block validate-stage5du-star-artifacts
+    & $Python -m libreprimus.cli token-block validate-stage5du-cribbing-page15
+    & $Python -m libreprimus.cli token-block validate-stage5du-red-runes-pages54-55
+    & $Python -m libreprimus.cli token-block validate-stage5du-mobius-totient
+    & $Python -m libreprimus.cli token-block validate-stage5du-number-fact-cards
+    & $Python -m libreprimus.cli token-block validate-stage5du-source-browser-loadability
+    & $Python -m libreprimus.cli token-block validate-stage5du-chatgpt-context
+    & $Python -m libreprimus.cli token-block validate-stage5du-stage5dt-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5du-stage5dg-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5du-stage5bd-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5du-active-lineage-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5du-sidecar-gates
+    & $Python -m libreprimus.cli token-block validate-stage5du-handoff-continuity
+    & $Python -m libreprimus.cli token-block validate-stage5du-credential-redaction-policy
+    & $Python -m libreprimus.cli token-block validate-stage5du-governance-scope
+    & $Python -m libreprimus.cli operator-console validate-source-index
+    & $Python -m libreprimus.cli source-browser validate-index
+    & $Python -m libreprimus.cli source-browser validate-number-facts
+    git check-ignore -q "codex-output/stage5du-codex-completion.md"
+    git check-ignore -q "third_party/BigGapsFoundInLiberPrimus/messages.txt"
+    git check-ignore -q "third_party/CribbingPage15/messages.txt"
+    git check-ignore -q "third_party/Mobius_totient_first_page_theory/messages.txt"
+    git check-ignore -q "third_party/PotentialCrib_RedRunes_Pages_54_55/messages.txt"
+    git check-ignore -q "third_party/RedRunes_Possible_Koan_Connection/messages.txt"
+    git check-ignore -q "third_party/StarArtifactsInLPPageImages/messages.txt"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DU" }
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

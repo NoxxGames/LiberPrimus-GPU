@@ -27,3 +27,16 @@ Important interpretation: older source-lock entries with 0 extracted number fact
 Stage 5DT did not backfill historical number facts, rewrite source-lock records, select a target, authorize execution, run route extraction, generate bytes, run OCR/image forensics/audio/stego, or make a solve claim.
 
 Next intended work: Stage 5DU should be an operator/assistant review of the first batch of source-lock entries, likely 20 entries, to identify number facts and enrichment overlays to add in a later Codex stage.
+
+## Stage 5DU - Community visual/red-heading/negative-space source-lock addendum
+
+- Stage 5DU source-locks six local `third_party` forum-thread folders: BigGapsFoundInLiberPrimus, CribbingPage15, Mobius_totient_first_page_theory, PotentialCrib_RedRunes_Pages_54_55, RedRunes_Possible_Koan_Connection, and StarArtifactsInLPPageImages.
+- Original page images for thread crosschecks live under `third_party/CiadaSolversIddqd_v2/liber-primus__images--full`; old per-archive `original-pages` folders were intentionally removed.
+- RedRunes/Gateless Gate strongest observation: red rune grouping 2/11/3 matches THE/ENLIGHTENED/MAN, koan #20 of 49; title zero-index GP sum 227 = prime(49); 227 is not unique among titles, but 2/11/3 grouping is the strong constraint.
+- BigGaps strongest observations: claimed 16 big-gap pages, one-based sum 569; red big-gap subset one-based sum 229; line gaps 73/109/129 and same-frame overlay/phase-shift candidate. Layout artifact risk remains high.
+- StarArtifacts strongest observations: exact RGB/max-channel 254 threshold reveals near-white star/sunburst layer; pages 10-13 and 41-43 are key; tree offsets 641/709 have prime-index gap 11; stardust phrase GP 2540 = 254x10 is unverified community decode context.
+- CribbingPage15 preserves internal phrase GP facts and YOUR TRUTH crib warning; standard short-token GP makes YOUR/TRUTH 4/4, not clean 4/5.
+- Page54/55 red-heading candidate: A POSTLUDE / DEAD TREE / YGGDRASIL / DIVINITY WITHIN / A CROSSROADS all sit in GP 491 family; A POSTLUDE is not unique by GP alone.
+- Mobius_totient_first_page_theory preserves the arithmetic Mobius/totient zero-class method and page0 DIVINITY WITHIN / A CROSSROADS claim. The proposed 33-word page0 plaintext is quarantined, not accepted.
+- Stage 5DU performs no OCR, image forensics, route extraction, community-code execution, target selection, byte generation, or solve claim.
+- The Stage 5DT number-fact review batch 1 is still pending after this addendum and shifts to Stage 5DV.

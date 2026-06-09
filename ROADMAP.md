@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5DU - Operator/assistant source-lock number-fact review batch 1, without execution.
+Current next prompt: Stage 5DV - Operator/assistant source-lock number-fact review batch 1, without execution.
 
-Stage 5DT is complete as Operator Console number-fact card and reviewability infrastructure. It normalizes number facts into review cards, adds enrichment overlays and review-batch scaffolds, improves GUI display/filtering, and keeps all puzzle execution blocked.
+Stage 5DU is complete as a community visual/red-heading/negative-space source-lock addendum. It records six ignored local community-thread folders, canonical page-image crosslinks, review-only visual candidate families, and Operator Console number-fact enrichment overlays while keeping all puzzle execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DT Operator Console number-fact card and evidence-reviewability upgrade is complete. It loads `1387` Source Browser entries, extracts `20` number-fact cards, marks `13` as vague enrichment-needed facts, records `1383` older zero-fact entries as not reviewed, plans `7` review batches of at most 20 entries, and preserves Stage 5DS, Stage 5DG, Stage 5BD, active lineage, and the 8-worker local validation cap. It keeps Deep Research acceptance absent, keeps the combined gate unsatisfied, keeps String 4 inactive with all execution gates blocked, and records Stage 5DU as the still-needed first operator/assistant number-fact review batch.
+Stage 5DU community visual/red-heading/negative-space source-lock addendum is complete. It represents `6` local community-thread folders, inventories `234` files including `148` images and `39` Python/source files as metadata only, crosslinks `75` canonical LP page images, creates `72` review-only candidate records, creates or enriches `12` number-fact cards/overlays, loads `1490` Source Browser entries with `103` Stage 5DU entries, and preserves Stage 5DT, Stage 5DG, Stage 5BD, active lineage, and the 8-worker local validation cap. It keeps Deep Research acceptance absent, keeps the combined gate unsatisfied, keeps String 4 inactive with all execution gates blocked, and shifts the still-needed first operator/assistant number-fact review batch to Stage 5DV.
 
-The next recommended prompt is Stage 5DU - Operator/assistant source-lock number-fact review batch 1, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DV - Operator/assistant source-lock number-fact review batch 1, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

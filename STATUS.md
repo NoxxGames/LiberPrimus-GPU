@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DT Operator Console number-fact cards and evidence-reviewability upgrade is complete.
+Stage 5DU community visual/red-heading/negative-space source-lock addendum is complete.
 
-Next recommended prompt: Stage 5DU - Operator/assistant source-lock number-fact review batch 1, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DV - Operator/assistant source-lock number-fact review batch 1, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DU
+
+Stage 5DU source-locks six ignored local community visual/red-heading/negative-space theory folders as compact metadata, crosslinks the local canonical LP page-image root, records review-only candidate families for red-runes/Gateless Gate, big gaps/negative space, star artifacts, CribbingPage15, pages 54/55 red headings, Mobius/totient first-page theory, and cross-family visual context, and adds number-fact enrichment overlays for Operator Console review.
+
+Local Stage 5DU summary: thread folders represented `6`, thread files inventoried `234`, thread images `148`, Python/source files `39`, spreadsheets `2`, text outputs `39`, messages files `6`, canonical LP page image root present `true`, canonical LP page images `75`, candidate records created `72`, number-fact cards created or enriched `12`, Source Browser entries loaded `1490`, Stage 5DU entries loaded `103`, Stage 5BD run-plan IDs `10`, active-lineage records `8`, parallel worker cap `8`, source-browser validation errors `0`, reviewability gaps `0`, community code executed `false`, OCR performed `false`, image forensics performed `false`, route extraction performed `false`, target selected `false`, byte streams generated `false`, execution performed `false`, solve claim `false`, and next stage `Stage 5DV`.
+
+Stage 5DU is metadata/source-lock addendum infrastructure only. It does not perform the planned number-fact review batch, backfill historical number facts, rewrite historical source locks, select a target, create Deep Research acceptance, satisfy the combined gate, authorize activation, generate byte streams, run OCR/image/audio/stego/CUDA work, execute community code, run route extraction, search DWH/hash/preimages, decode, score, benchmark, expand the website, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DT
 
