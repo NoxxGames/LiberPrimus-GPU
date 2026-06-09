@@ -32,6 +32,8 @@ from .entries import SourceBrowserEntry
 from .file_opening import open_file, open_file_location, open_url
 from .path_aliases import load_path_aliases, resolve_with_aliases
 from .normalizer import url_label
+from .number_fact_cards import number_fact_card_widget
+from .number_facts import normalize_entry_number_facts, zero_fact_review_state
 from .status_display import (
     STATUS_LEGEND,
     STATUS_UNSPECIFIED_TOOLTIP,
@@ -331,20 +333,28 @@ class EntryDetailPanel(QWidget):
         return box
 
     def _render_number_facts(self, entry: SourceBrowserEntry) -> None:
-        if not entry.number_facts:
-            self._add_empty(self.number_facts_layout, "No number facts recorded for this entry.")
+        cards = normalize_entry_number_facts(entry)
+        if not cards:
+            state = zero_fact_review_state(entry)
+            message = (
+                "Reviewed: no relevant number facts found."
+                if state == "zero_extracted_facts_reviewed_none_found"
+                else "Not reviewed for number facts. Older zero-fact entries are not necessarily number-free."
+            )
+            self._add_empty(self.number_facts_layout, message)
             return
-        for index, fact in enumerate(entry.number_facts, start=1):
-            box = QGroupBox(f"Number fact {index}")
-            layout = QVBoxLayout(box)
-            text = QPlainTextEdit()
-            text.setReadOnly(True)
-            text.setLineWrapMode(QPlainTextEdit.LineWrapMode.WidgetWidth)
-            text.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-            text.setPlainText(yaml.safe_dump(fact, sort_keys=False, allow_unicode=False))
-            text.setMaximumHeight(130)
-            layout.addWidget(text)
-            self.number_facts_layout.addWidget(box)
+        counts: dict[str, int] = {}
+        for card in cards:
+            counts[card.review_state] = counts.get(card.review_state, 0) + 1
+        header = QLabel(
+            f"{len(cards)} fact card(s). Review states: "
+            + ", ".join(f"{key}={value}" for key, value in sorted(counts.items()))
+        )
+        header.setWordWrap(True)
+        header.setStyleSheet("color: #d8d8d8;")
+        self.number_facts_layout.addWidget(header)
+        for card in cards:
+            self.number_facts_layout.addWidget(number_fact_card_widget(card))
         self.number_facts_layout.addStretch(1)
 
     def _render_warnings_links(self, entry: SourceBrowserEntry) -> None:

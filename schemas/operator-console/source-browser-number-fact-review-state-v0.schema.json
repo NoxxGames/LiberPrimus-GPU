@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "review_states": {
+      "items": {
+        "enum": [
+          "canonical_verification_required",
+          "extracted_basic_fact",
+          "overlay_enriched_fact",
+          "quarantined_fact",
+          "rich_fact_card",
+          "vague_fact_enrichment_needed",
+          "zero_extracted_facts_not_reviewed",
+          "zero_extracted_facts_reviewed_none_found"
+        ]
+      },
+      "type": "array"
+    },
+    "stage_id": {
+      "const": "stage-5dt"
+    }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "review_states"
+  ],
+  "type": "object"
+}

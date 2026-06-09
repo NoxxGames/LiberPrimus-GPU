@@ -3,6 +3,20 @@
 from __future__ import annotations
 
 from .entries import SourceBrowserEntry
+from .number_facts import entry_matches_fact_filter, normalize_entry_number_facts, zero_fact_review_state
+
+FACT_FILTER_QUERIES = {
+    "needs:fact-enrichment": "needs_fact_enrichment",
+    "needs enrichment": "needs_fact_enrichment",
+    "not-reviewed:number-facts": "not_reviewed_for_number_facts",
+    "not reviewed for number facts": "not_reviewed_for_number_facts",
+    "rich:number-facts": "has_rich_number_facts",
+    "rich number facts": "has_rich_number_facts",
+    "canonical-verification:number-facts": "canonical_verification_required",
+    "canonical verification required": "canonical_verification_required",
+    "quarantined:number-facts": "quarantined_number_facts",
+    "quarantined number facts": "quarantined_number_facts",
+}
 
 
 def searchable_text(entry: SourceBrowserEntry) -> str:
@@ -18,6 +32,9 @@ def searchable_text(entry: SourceBrowserEntry) -> str:
         " ".join(entry.urls),
         " ".join(entry.warnings),
         " ".join(str(fact) for fact in entry.number_facts),
+        zero_fact_review_state(entry) if not entry.number_facts else "",
+        " ".join(card.review_state for card in normalize_entry_number_facts(entry)),
+        " ".join(card.display_label for card in normalize_entry_number_facts(entry)),
     ]
     return " ".join(parts).lower()
 
@@ -32,11 +49,14 @@ def filter_entries(
     has_warnings: bool | None = None,
 ) -> list[SourceBrowserEntry]:
     query = search.strip().lower()
+    fact_filter = FACT_FILTER_QUERIES.get(query)
     filtered: list[SourceBrowserEntry] = []
     for entry in entries:
         if category != "All" and entry.category != category:
             continue
-        if query and query not in searchable_text(entry):
+        if fact_filter and not entry_matches_fact_filter(entry, fact_filter):
+            continue
+        if query and not fact_filter and query not in searchable_text(entry):
             continue
         if has_images is not None and bool(entry.image_paths) != has_images:
             continue

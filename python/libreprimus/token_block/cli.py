@@ -748,6 +748,7 @@ from . import stage5dp as stage5dp_module
 from . import stage5dq as stage5dq_module
 from . import stage5dr as stage5dr_module
 from . import stage5ds as stage5ds_module
+from . import stage5dt as stage5dt_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -9594,6 +9595,152 @@ def validate_stage5ds_scope_control_command() -> None:
     _print_stage5ds_result(
         stage5ds_module.validate_stage5ds_scope_control(),
         "token_block_stage5ds_scope_control_valid=true",
+    )
+
+
+def _print_stage5dt_result(result: object, success_line: str) -> None:
+    text = result.to_cli_text()
+    console.print(text)
+    if getattr(result, "validation_error_count") != 0:
+        raise typer.Exit(1)
+    console.print(success_line)
+
+
+@app.command("build-stage5dt")
+def build_stage5dt_command() -> None:
+    records = stage5dt_module.build_stage5dt()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(
+        "number_fact_card_model_implemented="
+        f"{str(summary.get('number_fact_card_model_implemented')).lower()}"
+    )
+    console.print(f"source_browser_entries_loaded={summary.get('source_browser_entries_loaded')}")
+    console.print(f"fact_cards_extracted={summary.get('fact_cards_extracted')}")
+    console.print(f"vague_fact_cards={summary.get('vague_fact_cards')}")
+    console.print(
+        f"zero_fact_not_reviewed_entries={summary.get('zero_fact_not_reviewed_entries')}"
+    )
+    console.print(f"planned_review_batches={summary.get('planned_review_batches')}")
+    console.print(f"execution_performed={str(summary.get('execution_performed')).lower()}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5dt")
+def validate_stage5dt_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt(),
+        "token_block_stage5dt_valid=true",
+    )
+
+
+@app.command("stage5dt-summary")
+def stage5dt_summary_command() -> None:
+    console.print(stage5dt_module.stage5dt_summary_text())
+
+
+@app.command("validate-stage5dt-number-fact-card-model")
+def validate_stage5dt_number_fact_card_model_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_number_fact_card_model(),
+        "token_block_stage5dt_number_fact_card_model_valid=true",
+    )
+
+
+@app.command("validate-stage5dt-number-fact-overlays")
+def validate_stage5dt_number_fact_overlays_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_number_fact_overlays(),
+        "token_block_stage5dt_number_fact_overlays_valid=true",
+    )
+
+
+@app.command("validate-stage5dt-reviewability-audit")
+def validate_stage5dt_reviewability_audit_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_reviewability_audit(),
+        "token_block_stage5dt_reviewability_audit_valid=true",
+    )
+
+
+@app.command("validate-stage5dt-review-batch-plan")
+def validate_stage5dt_review_batch_plan_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_review_batch_plan(),
+        "token_block_stage5dt_review_batch_plan_valid=true",
+    )
+
+
+@app.command("validate-stage5dt-source-browser-loadability")
+def validate_stage5dt_source_browser_loadability_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_source_browser_loadability(),
+        "token_block_stage5dt_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage5dt-gui-fact-card-contract")
+def validate_stage5dt_gui_fact_card_contract_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_gui_fact_card_contract(),
+        "token_block_stage5dt_gui_fact_card_contract_valid=true",
+    )
+
+
+@app.command("validate-stage5dt-stage5ds-preservation")
+def validate_stage5dt_stage5ds_preservation_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_stage5ds_preservation(),
+        "token_block_stage5dt_stage5ds_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dt-stage5bd-preservation")
+def validate_stage5dt_stage5bd_preservation_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_stage5bd_preservation(),
+        "token_block_stage5dt_stage5bd_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dt-active-lineage-preservation")
+def validate_stage5dt_active_lineage_preservation_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_active_lineage_preservation(),
+        "token_block_stage5dt_active_lineage_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dt-sidecar-gates")
+def validate_stage5dt_sidecar_gates_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_sidecar_gates(),
+        "token_block_stage5dt_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5dt-handoff-continuity")
+def validate_stage5dt_handoff_continuity_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_handoff_continuity(),
+        "token_block_stage5dt_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5dt-credential-redaction-policy")
+def validate_stage5dt_credential_redaction_policy_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_credential_redaction_policy(),
+        "token_block_stage5dt_credential_redaction_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5dt-governance-scope")
+def validate_stage5dt_governance_scope_command() -> None:
+    _print_stage5dt_result(
+        stage5dt_module.validate_stage5dt_governance_scope(),
+        "token_block_stage5dt_governance_scope_valid=true",
     )
 
 

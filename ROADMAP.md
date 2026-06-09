@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5DT - Operator Console source-review readiness planning, without execution.
+Current next prompt: Stage 5DU - Operator/assistant source-lock number-fact review batch 1, without execution.
 
-Stage 5DS is complete as a metadata-only expanded Music / Ouroboros / self-reference / token-block static-context source-lock addendum. It source-locks local ignored community-theory music files as compact metadata, records review-only music and symbolic transform candidates, records token-block primary60 static context, updates the Source Browser and ChatGPT handoff context, and keeps all puzzle execution blocked.
+Stage 5DT is complete as Operator Console number-fact card and reviewability infrastructure. It normalizes number facts into review cards, adds enrichment overlays and review-batch scaffolds, improves GUI display/filtering, and keeps all puzzle execution blocked.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DS expanded Music / Ouroboros / self-reference / token-block static-context source-lock addendum is complete. It preserves Stage 5DR, inventories `29` local ignored community-theory files, records `11` music candidates, `17` Ouroboros/self-reference context records, `4` token-block static-context records, and loads `1367` review-only Source Browser entries with `62` Stage 5DS entries after adding the compact metadata. It preserves Stage 5DG real operator approval, leaves Deep Research acceptance absent, leaves the combined gate unsatisfied, preserves Stage 5BD run-plan IDs, active lineage, and the 8-worker local validation cap, keeps String 4 inactive with all execution gates blocked, and records Stage 5DT as the still-needed source-review readiness planning stage.
+Stage 5DT Operator Console number-fact card and evidence-reviewability upgrade is complete. It loads `1387` Source Browser entries, extracts `20` number-fact cards, marks `13` as vague enrichment-needed facts, records `1383` older zero-fact entries as not reviewed, plans `7` review batches of at most 20 entries, and preserves Stage 5DS, Stage 5DG, Stage 5BD, active lineage, and the 8-worker local validation cap. It keeps Deep Research acceptance absent, keeps the combined gate unsatisfied, keeps String 4 inactive with all execution gates blocked, and records Stage 5DU as the still-needed first operator/assistant number-fact review batch.
 
-The next recommended prompt is Stage 5DT - Operator Console source-review readiness planning, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DU - Operator/assistant source-lock number-fact review batch 1, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

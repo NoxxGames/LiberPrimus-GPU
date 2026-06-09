@@ -1,0 +1,78 @@
+record_type: source_browser_number_fact_review_states
+stage_id: stage-5dt
+stage_title: Stage 5DT - Operator Console number-fact cards and evidence-reviewability
+  upgrade, without execution
+prompt_type: codex_gui_and_metadata_implementation
+metadata_only: false
+source_lock_only: false
+reviewability_infrastructure_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+schema: schemas/operator-console/source-browser-number-fact-review-state-v0.schema.json
+review_states:
+- canonical_verification_required
+- extracted_basic_fact
+- overlay_enriched_fact
+- quarantined_fact
+- rich_fact_card
+- vague_fact_enrichment_needed
+- zero_extracted_facts_not_reviewed
+- zero_extracted_facts_reviewed_none_found
+value_types:
+- coordinate
+- difference
+- duration_seconds
+- factorization
+- file_size
+- gp_sum
+- hash_length
+- hash_value
+- matrix_value
+- modular_residue
+- page_number
+- pixel_count
+- prime
+- prime_index
+- product
+- ratio
+- rgb_value
+- rune_count
+- sequence
+- sum
+- unknown
+- word_count
+operation_types:
+- base_conversion
+- count_equality
+- cumulative_sum
+- difference
+- factorization
+- gp_sum
+- hash_contract
+- matrix_grid_match
+- modulo
+- pixel_frequency
+- prime_index_lookup
+- product
+- progressive_sum
+- reverse_digits
+- section_count_equality
+- sequence_mapping
+- source_observation
+- sum
+- symbolic_gp_scan
+- unknown
+verification_statuses:
+- arithmetic_verified_metadata_only
+- canonical_image_required
+- canonical_source_required
+- canonical_transcript_required
+- needs_exact_token_selection
+- not_verified
+- operator_assistant_observed
+- quarantined_selection_bias
+- reviewed_none_found
+- source_author_claim
+- verified_against_committed_source
+zero_extracted_facts_not_reviewed_meaning: not yet reviewed, not necessarily number-free

@@ -13,6 +13,13 @@ from jsonschema import Draft202012Validator
 from .context_file import context_file_status
 from .loaders import SourceIndex, build_source_index, load_record_file
 from .manual_entries import validate_no_huge_raw_blob
+from .number_facts import (
+    REVIEW_STATES,
+    load_enrichment_overlays,
+    normalize_entry_number_facts,
+    reviewability_counts,
+    zero_fact_review_state,
+)
 from .path_aliases import load_path_aliases, resolve_with_aliases
 from ..settings import (
     DEFAULT_COLUMN_PROFILE,
@@ -137,6 +144,51 @@ def source_browser_summary(index: SourceIndex | None = None) -> dict[str, Any]:
         "missing_paths": path_stats["missing_paths"],
         "categories": categories,
         "chatgpt_context": context_file_status(),
+    }
+
+
+def validate_number_fact_cards() -> ValidationResult:
+    index = build_source_index()
+    counts = reviewability_counts(index.entries)
+    result = ValidationResult(
+        counts={
+            "entries_loaded": len(index.entries),
+            "fact_cards_extracted": counts["total_number_fact_cards_extracted"],
+            "vague_fact_cards": counts["vague_fact_card_count"],
+            "zero_fact_not_reviewed_entries": counts[
+                "entries_with_zero_extracted_number_facts_not_reviewed"
+            ],
+            "overlay_count": len(load_enrichment_overlays()),
+        }
+    )
+    for entry in index.entries:
+        if not entry.number_facts:
+            state = zero_fact_review_state(entry)
+            if state not in REVIEW_STATES:
+                result.errors.append(f"{entry.source_record_path}: invalid zero-fact state {state}")
+            continue
+        for card in normalize_entry_number_facts(entry):
+            if card.review_state not in REVIEW_STATES:
+                result.errors.append(f"{card.source_record_path}: invalid review state {card.review_state}")
+            if card.usable_for_decision_now:
+                result.errors.append(f"{card.source_record_path}: fact card is decision-usable now")
+            if "solve_claim" not in card.not_allowed_as:
+                result.errors.append(f"{card.source_record_path}: fact card missing solve_claim guardrail")
+    return result
+
+
+def number_fact_reviewability_summary(index: SourceIndex | None = None) -> dict[str, Any]:
+    index = index or build_source_index()
+    counts = reviewability_counts(index.entries)
+    return {
+        "entries_loaded": len(index.entries),
+        "fact_cards_extracted": counts["total_number_fact_cards_extracted"],
+        "entries_with_vague_number_facts": counts["entries_with_vague_number_facts"],
+        "zero_fact_not_reviewed_entries": counts[
+            "entries_with_zero_extracted_number_facts_not_reviewed"
+        ],
+        "entries_with_rich_fact_cards": counts["entries_with_rich_fact_cards"],
+        "overlay_count": len(load_enrichment_overlays()),
     }
 
 

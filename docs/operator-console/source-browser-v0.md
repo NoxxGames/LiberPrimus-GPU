@@ -8,13 +8,15 @@ Stage 5DR refines the Source Browser GUI. The detail panel can be hidden or show
 
 Stage 5DS adds loadability coverage for the expanded Music / Ouroboros / token-block static source-lock addendum. The browser loads the new compact metadata as review-only Music, source-lock, candidate, warning, and number-fact entries; it still does not execute audio, open raw files automatically, infer image/text content, or promote candidates to experiment seeds.
 
+Stage 5DT adds number-fact card reviewability. Existing number facts are normalized into read-only cards with explicit source path, value, operation/expression when available, verification state, review state, enrichment flags, and source-lock warnings. Value-only facts are displayed as enrichment-needed instead of silently looking complete; entries with zero extracted facts are displayed as not reviewed unless a future overlay explicitly records a reviewed-none-found state.
+
 Blank table status values are displayed as `unspecified`. This means the source record did not contain `source_status`, `status`, `ready_state`, or `review_state`; it does not mean the record is incomplete, and the GUI does not rewrite source-lock records to invent statuses.
 
 ## Components
 
 - `python/libreprimus/operator_console/`: shared console settings, optional GUI entrypoint, styles, resources, and CLI registration.
 - `python/libreprimus/operator_console/source_browser/`: source index loading, normalization, filters, manual entries, overrides, tombstones, path aliases, column profiles, Qt table/detail widgets, context-file helpers, and validation.
-- `data/operator-console/source-browser/`: committed scaffolds for manual entries, manual overrides, tombstones, saved filters, path aliases, and column profiles.
+- `data/operator-console/source-browser/`: committed scaffolds for manual entries, manual overrides, tombstones, saved filters, path aliases, column profiles, number-fact card config, review states, enrichment overlays, and review batches.
 - `.cache/operator-console/`: ignored runtime cache for the local source index, thumbnails, and logs.
 
 ## Data Model
@@ -35,6 +37,8 @@ Manual entries and overrides are optional local review aids. They are schema-val
 GUI file and URL actions are explicit operator actions. The browser must not automatically follow URLs, execute local files, modify raw third-party files, or turn a reviewed observation into an execution seed.
 
 Stage 5DR adds right-click row actions and detail-panel actions for opening image viewers, files, file locations, and URLs. These are still explicit operator actions only. Image thumbnails are display/navigation aids only and do not perform OCR, image forensics, AI interpretation, stego detection, or content analysis. Archive-relative image paths such as `2014/additional images/...` are resolved against local ignored Cicada archive roots when those files are present; the GUI still does not commit or mutate those raw files.
+
+Stage 5DT number-fact cards are display and review scaffolding only. Overlay files may enrich review state later, but they must not rewrite the original source-lock records. The filters `needs:fact-enrichment`, `not-reviewed:number-facts`, `rich:number-facts`, `canonical-verification:number-facts`, and `quarantined:number-facts` help operators find review work without executing any route.
 
 ## Validation
 
@@ -75,4 +79,15 @@ Stage 5DS validates source-browser loadability through:
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ds
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ds-source-browser-loadability
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block stage5ds-summary
+```
+
+Stage 5DT validates number-fact card reviewability through:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5dt
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dt
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block stage5dt-summary
+.\.venv\Scripts\python.exe -m libreprimus.cli operator-console validate-number-fact-cards
+.\.venv\Scripts\python.exe -m libreprimus.cli operator-console number-fact-reviewability-summary
+.\.venv\Scripts\python.exe -m libreprimus.cli source-browser validate-number-facts
 ```

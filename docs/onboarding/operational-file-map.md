@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5DS adds expanded Music/Ouroboros/token-block static source-lock addendum records and keeps the YAML map as the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5DT adds Operator Console number-fact card reviewability records and keeps the YAML map as the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 
@@ -43,15 +43,19 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5DS" `
-  --expected-next-stage "Stage 5DT"
+  --expected-latest-stage "Stage 5DT" `
+  --expected-next-stage "Stage 5DU"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5DS" `
-  --expected-next-stage "Stage 5DT"
+  --expected-latest-stage "Stage 5DT" `
+  --expected-next-stage "Stage 5DU"
 ```
+
+## Stage 5DT Coverage
+
+The operational file map includes Stage 5DT NumberFactCard configuration, review states, overlay scaffold, review-batch plan, reviewability audit, GUI summary, preservation records, closed-gate proofs, developer log, experiment note, and research log. Raw third-party files, generated diagnostics, local GUI caches, and local `codex-output/**` handoffs remain ignored.
 
 ## Stage 5DS Coverage
 

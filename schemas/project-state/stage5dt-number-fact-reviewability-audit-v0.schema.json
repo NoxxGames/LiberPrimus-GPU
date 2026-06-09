@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "canonical_codex_handoff_root": {
+      "const": "codex-output"
+    },
+    "puzzle_execution_allowed": {
+      "const": false
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-5dt"
+    }
+  },
+  "required": [
+    "record_type",
+    "stage_id"
+  ],
+  "type": "object"
+}

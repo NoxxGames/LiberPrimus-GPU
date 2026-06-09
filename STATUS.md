@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DS expanded Music / Ouroboros / self-reference / token-block static-context source-lock addendum is complete.
+Stage 5DT Operator Console number-fact cards and evidence-reviewability upgrade is complete.
 
-Next recommended prompt: Stage 5DT - Operator Console source-review readiness planning, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DU - Operator/assistant source-lock number-fact review batch 1, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DT
+
+Stage 5DT adds normalized NumberFactCard records for the Operator Console Source Browser, enrichment overlay schemas/loader, reviewability audit records, 20-entry review-batch planning, fact-card rendering in the details panel, improved table display for number facts, and source-browser filters for enrichment and review states.
+
+Local Stage 5DT summary: Source Browser entries loaded `1387`, committed records scanned `1386`, fact cards extracted `20`, vague fact cards `13`, zero-fact-not-reviewed entries `1383`, planned review batches `7`, Stage 5BD run-plan IDs `10`, active-lineage records `8`, parallel worker cap `8`, number-fact backfill performed `false`, historical source-lock records rewritten `false`, source-lock entry batch review performed `false`, pivot target selected `false`, byte-stream generation authorized `false`, execution performed `false`, solve claim `false`, and next stage `Stage 5DU`.
+
+Stage 5DT is reviewability and GUI infrastructure only. It does not backfill historical number facts, rewrite historical source locks, perform source-lock entry batch review, select a target, create Deep Research acceptance, satisfy the combined gate, authorize activation, generate byte streams, run OCR/image/audio/stego/CUDA work, search DWH/hash/preimages, decode, score, benchmark, expand the website, upgrade method status, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DS
 

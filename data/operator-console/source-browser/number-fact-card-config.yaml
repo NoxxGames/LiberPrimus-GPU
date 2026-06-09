@@ -1,0 +1,27 @@
+record_type: source_browser_number_fact_card_config
+stage_id: stage-5dt
+stage_title: Stage 5DT - Operator Console number-fact cards and evidence-reviewability
+  upgrade, without execution
+prompt_type: codex_gui_and_metadata_implementation
+metadata_only: false
+source_lock_only: false
+reviewability_infrastructure_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+schema: schemas/operator-console/source-browser-number-fact-card-v0.schema.json
+display_policy: fact_cards_not_raw_yaml_fragments
+zero_extracted_facts_display: not reviewed for number facts
+reviewed_none_found_requires_overlay: true
+table_display_rules:
+  zero_unreviewed: not reviewed
+  zero_reviewed_none: none found
+  vague: N facts / needs context
+  rich: first three short labels
+filter_queries:
+- needs:fact-enrichment
+- not-reviewed:number-facts
+- rich:number-facts
+- canonical-verification:number-facts
+- quarantined:number-facts
+source_lock_records_rewritten: false

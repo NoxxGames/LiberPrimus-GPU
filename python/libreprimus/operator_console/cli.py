@@ -15,7 +15,9 @@ from .settings import CONTEXT_FILE, GUI_INSTALL_MESSAGE, INDEX_CACHE_PATH
 from .source_browser.context_file import create_context_file_if_missing, context_file_status
 from .source_browser.loaders import build_source_index, write_index_cache
 from .source_browser.validators import (
+    number_fact_reviewability_summary,
     source_browser_summary,
+    validate_number_fact_cards,
     validate_manual_records,
     validate_source_index,
 )
@@ -66,6 +68,24 @@ def validate_manual_entries_command() -> None:
     console.print(f"operator_console_manual_entries_valid={str(result.ok).lower()}")
     if not result.ok:
         raise typer.Exit(1)
+
+
+@app.command("validate-number-fact-cards")
+def validate_number_fact_cards_command() -> None:
+    """Validate normalized number-fact cards and reviewability guardrails."""
+    result = validate_number_fact_cards()
+    console.print(result.to_cli_text())
+    console.print(f"operator_console_number_fact_cards_valid={str(result.ok).lower()}")
+    if not result.ok:
+        raise typer.Exit(1)
+
+
+@app.command("number-fact-reviewability-summary")
+def number_fact_reviewability_summary_command() -> None:
+    """Print compact number-fact reviewability counts."""
+    summary = number_fact_reviewability_summary()
+    for key, value in summary.items():
+        console.print(f"{key}={str(value).lower() if isinstance(value, bool) else value}")
 
 
 @app.command("open-context")

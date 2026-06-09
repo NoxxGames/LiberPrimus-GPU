@@ -1,5 +1,11 @@
 # Deep Research Handoff Map
 
+## Stage 5DT Note
+
+Stage 5DT did not execute Deep Research or any experiment. It preserves Stage 5DS, normalizes existing Source Browser number facts into read-only cards, adds enrichment overlay and review-state scaffolds, records reviewability gaps, and plans the first bounded 20-entry number-fact review batch as Stage 5DU. Operator approval alone still does not satisfy the combined gate.
+
+Use `data/project-state/stage5dt-*`, `data/operator-console/source-browser/number-fact-*`, `data/source-harvester/stage5dt-*`, and `data/token-block/stage5dt-*` for Stage 5DU handoff. Do not hand over raw third-party files, generated diagnostics, generated completion summaries, byte streams, decoded bytes, route outputs, OCR/image-forensics/audio/stego outputs, CUDA outputs, or execution outputs as source truth. Stage 5DT creates no Deep Research acceptance record, no combined gate validation record, no activation decision, no active input, and no execution authorization.
+
 ## Stage 5DS Note
 
 Stage 5DS did not execute Deep Research or any experiment. It preserves Stage 5DR, source-locks the ignored local CicadaMusic community-theory archive as compact metadata, records review-only Music/Instar/Interconnectedness arithmetic candidates, Ouroboros/self-reference/Quine symbolic context, and token-block primary60 static context, and selects Stage 5DT source-review readiness planning. Operator approval alone still does not satisfy the combined gate.

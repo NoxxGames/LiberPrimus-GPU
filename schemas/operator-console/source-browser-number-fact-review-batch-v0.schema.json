@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "batch_size_default": {
+      "const": 20
+    },
+    "batches": {
+      "items": {
+        "additionalProperties": true,
+        "properties": {
+          "entry_count": {
+            "maximum": 20,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "status": {
+            "const": "planned_not_reviewed"
+          }
+        },
+        "required": [
+          "batch_id",
+          "status",
+          "entry_count"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "facts_added_now": {
+      "const": false
+    },
+    "overlays_added_now": {
+      "const": false
+    },
+    "record_type": {
+      "const": "source_browser_number_fact_review_batch_plan"
+    },
+    "review_performed_now": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-5dt"
+    }
+  },
+  "required": [
+    "record_type",
+    "stage_id",
+    "batch_size_default",
+    "batches"
+  ],
+  "type": "object"
+}

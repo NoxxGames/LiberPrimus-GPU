@@ -1,0 +1,37 @@
+record_type: source_browser_number_fact_enrichment_overlay
+schema: schemas/operator-console/source-browser-number-fact-enrichment-overlay-v0.schema.json
+template: true
+overlay_id: nf_overlay_example_template
+created_at: '2026-06-08T00:00:00Z'
+modified_at: '2026-06-08T00:00:00Z'
+created_by: operator_or_assistant_review
+source_record_path: data/historical-route/stage5do-no-f-rune-count-section-flow-candidate.yaml
+source_fact_id: no_f_koan_loss_divinity_koan2_instruction_equals_mobius
+source_fact_path: claims[2]
+display_label: NO-F Koan/Loss/Instruction equality to Mobius count
+short_label: NO-F to Mobius 1894
+value: 1894
+values:
+- 1894
+value_type: rune_count
+operation_type: section_count_equality
+expression: null
+relation: Example only; future review must fill the exact relation from source context.
+components: []
+why_stored: Example only; future review must explain why the value is worth review.
+source_paths:
+- third_party/NumberFactsCollection/example-placeholder.png
+source_anchor: null
+verification_status: canonical_transcript_required
+review_state: overlay_enriched_fact
+risk_notes:
+- depends_on_exact_section_boundaries
+- depends_on_no_f_policy
+crosslinks:
+- no_f_rune_count_section_flow_candidate_v0
+display_priority: medium
+usable_for_decision_now: false
+not_allowed_as:
+- proof
+- route_seed
+- solve_claim

@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5DS - Expanded Music / Ouroboros / self-reference / token-block static-context source-lock addendum, without execution.
-- Current planning focus: Stage 5DT - Operator Console source-review readiness planning, without execution.
+- Latest completed stage: Stage 5DT - Operator Console number-fact cards and evidence-reviewability upgrade, without execution.
+- Current planning focus: Stage 5DU - Operator/assistant source-lock number-fact review batch 1, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -37,9 +37,9 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 No page is claimed solved by these docs.
 ## Stage 5DS Current Boundary
 
-Stage 5DS is the latest completed stage. It source-locks expanded Music/Ouroboros/token-block static context as compact metadata only, records no target selection, creates no readiness decision, and selects Stage 5DT source-review readiness planning. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select active planning input, generate byte streams, execute route/token-block/audio/stego/OCR/image/native/VM/CUDA work, validate target classes, use Tor route access, run DWH/hash/preimage search, score, benchmark, or make solve claims.
+Stage 5DT is the latest completed stage. It adds Operator Console number-fact cards, enrichment overlay scaffolds, reviewability audit records, and bounded review-batch planning as review infrastructure only. It records no target selection, creates no activation/readiness decision, and selects Stage 5DU number-fact review batch 1. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select active planning input, generate byte streams, execute route/token-block/audio/stego/OCR/image/native/VM/CUDA work, validate target classes, use Tor route access, run DWH/hash/preimage search, score, benchmark, or make solve claims.
 
-Current state: Stage 5DS is complete and Stage 5DT source-review readiness planning is next. Stage 5DS records 29 community-theory files, 11 music candidates, 17 Ouroboros/self-reference records, 4 token-block static records, 62 Stage 5DS Source Browser entries, Stage 5BD run-plan ID count 10, active-lineage record count 8, and all execution gates closed.
+Current state: Stage 5DT is complete and Stage 5DU number-fact review batch 1 is next. Stage 5DT records 1387 Source Browser entries, 20 extracted number-fact cards, 13 vague facts needing enrichment, 1383 zero-fact-not-reviewed entries, 7 planned review batches, Stage 5BD run-plan ID count 10, active-lineage record count 8, and all execution gates closed.
 
 ## Stage 5DQ Boundary History
 

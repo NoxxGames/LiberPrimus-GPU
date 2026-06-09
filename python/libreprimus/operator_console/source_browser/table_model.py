@@ -7,6 +7,7 @@ from typing import Any
 from PySide6.QtCore import QAbstractTableModel, QModelIndex, Qt
 
 from .entries import SourceBrowserEntry
+from .number_facts import number_fact_table_display
 from .status_display import STATUS_UNSPECIFIED_TOOLTIP, display_status
 
 
@@ -74,7 +75,7 @@ class SourceBrowserTableModel(QAbstractTableModel):
         if key == "urls":
             return str(len(entry.urls))
         if key == "number_facts":
-            return str(len(entry.number_facts))
+            return number_fact_table_display(entry)
         if key == "warnings":
             return str(len(entry.warnings))
         value = getattr(entry, key, "")
