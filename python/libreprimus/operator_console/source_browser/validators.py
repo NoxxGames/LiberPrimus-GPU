@@ -19,11 +19,11 @@ from .number_facts import (
     REVIEW_STATES,
     load_enrichment_overlays,
     normalize_entry_number_facts,
+    number_fact_table_display,
     reviewability_counts,
     zero_fact_review_state,
 )
 from .path_aliases import PathResolutionCache, load_path_aliases
-from .table_model import SourceBrowserTableModel
 from ..settings import (
     DEFAULT_COLUMN_PROFILE,
     DEFAULT_PATH_ALIASES,
@@ -141,13 +141,24 @@ def performance_smoke() -> ValidationResult:
         {"key": "number_facts", "label": "Number facts"},
         {"key": "warnings", "label": "Warnings"},
     ]
-    model = SourceBrowserTableModel(index.entries, columns)
     table_start = time.perf_counter()
     rows_to_check = min(100, len(index.entries))
-    for row in range(rows_to_check):
-        for column, spec in enumerate(columns):
-            # Use the model's cheap display helper directly to avoid a Qt index dependency in headless CI.
-            model._display(index.entries[row], str(spec["key"]))  # noqa: SLF001
+    table_backend = "qt"
+    try:
+        from .table_model import SourceBrowserTableModel
+
+        model = SourceBrowserTableModel(index.entries, columns)
+        for row in range(rows_to_check):
+            for spec in columns:
+                # Use the model's cheap display helper directly to avoid a Qt index dependency in headless CI.
+                model._display(index.entries[row], str(spec["key"]))  # noqa: SLF001
+    except ModuleNotFoundError as exc:
+        if not str(exc.name).startswith("PySide6"):
+            raise
+        table_backend = "headless_no_qt"
+        for row in range(rows_to_check):
+            for spec in columns:
+                _headless_table_display(index.entries[row], str(spec["key"]))
     table_seconds = time.perf_counter() - table_start
     report = path_canonicalization_report(index)
     result = ValidationResult(
@@ -155,6 +166,7 @@ def performance_smoke() -> ValidationResult:
             "entries_loaded": len(index.entries),
             "records_scanned": len(index.scanned_paths),
             "table_model_smoke_rows": rows_to_check,
+            "table_model_backend": table_backend,
             "table_model_no_cell_widgets_policy": True,
             "thumbnail_generation_eager_for_table": False,
             "raw_preview_lazy": True,
@@ -174,6 +186,27 @@ def performance_smoke() -> ValidationResult:
     if report["duplicate_present_missing_path_pairs"]:
         result.errors.append("duplicate present+missing path pairs remain after repair")
     return result
+
+
+def _headless_table_display(entry: Any, key: str) -> str:
+    if key == "title":
+        return str(entry.title)
+    if key == "images":
+        count = len(entry.image_paths)
+        return f"{count} image{'s' if count != 1 else ''}"
+    if key == "document_paths":
+        count = len(entry.document_paths)
+        return f"{count} doc{'s' if count != 1 else ''}"
+    if key == "urls":
+        count = len(entry.urls)
+        return f"{count} url{'s' if count != 1 else ''}"
+    if key == "number_facts":
+        return number_fact_table_display(entry)
+    if key == "warnings":
+        count = len(entry.warnings)
+        return f"{count} warning{'s' if count != 1 else ''}"
+    raw_value = getattr(entry, key, "")
+    return "" if raw_value is None else str(raw_value)
 
 
 def validate_manual_records() -> ValidationResult:
