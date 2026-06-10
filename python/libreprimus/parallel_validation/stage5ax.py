@@ -34,6 +34,7 @@ def run_stage5ax_parallel_validation(
     pytest_mode: str,
     results_dir: Path,
     out_run_summary: Path,
+    out_safety_audit: Path = SAFETY_AUDIT_PATH,
 ) -> dict[str, Any]:
     plan = read_yaml(plan_path)
     registry = read_yaml(Path(plan["command_registry"]))
@@ -83,7 +84,7 @@ def run_stage5ax_parallel_validation(
         failure_count=run_summary["failure_count"],
         success_count=run_summary["success_count"],
     )
-    write_yaml(SAFETY_AUDIT_PATH, safety)
+    write_yaml(out_safety_audit, safety)
     return run_summary
 
 

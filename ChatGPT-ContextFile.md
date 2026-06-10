@@ -2,11 +2,11 @@
 
 ## Current Project State
 
-Current completed stage: Stage 5DX - Source-lock number-fact review batch 002, visual/red-heading/transform bridge enrichment overlays, without execution.
+Current completed stage: Stage 5DY - Validation performance, parallel-test discipline, stage-isolation, and non-mutating validator repair, without execution.
 
-Current work after Stage 5DX: Stage 5DY - Operator/assistant source-lock number-fact review batch 3, without execution.
+Current work after Stage 5DY: Stage 5DZ - Operator/assistant source-lock number-fact review batch 3, without execution.
 
-Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DX completed the second visual/red-heading/transform bridge review batch as overlay metadata only. Stage 5DX does not backfill number facts directly, does not rewrite historical source-lock records, does not select a target, and does not extract routes.
+Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DX completed the second visual/red-heading/transform bridge review batch as overlay metadata only. Stage 5DY repaired validation performance and stage isolation before the next batch. Stage 5DY does not perform number-fact batch 3, backfill number facts directly, rewrite historical source-lock records, select a target, generate bytes, execute anything, or make solve claims.
 
 The canonical Codex handoff root is `codex-output`. The deprecated `codex_output` root must remain absent. Completion summaries under `codex-output/**` are local ignored handoffs and must not be committed.
 
@@ -127,7 +127,7 @@ StarArtifacts strongest observations:
 - Source-locked does not mean review-ready.
 - A useful fact card must explain value, type, expression, components, relation, why stored, source anchor, verification status, risks, and crosslinks.
 - Older zero-fact entries are usually not reviewed, not necessarily number-free.
-- Stage 5DW completed the high-signal 20-entry review batch 001 after the Stage 5DV repair; Stage 5DX completed the visual/red-heading/transform 20-entry review batch 002. Stage 5DY should continue with the next operator/assistant review batch.
+- Stage 5DW completed the high-signal 20-entry review batch 001 after the Stage 5DV repair; Stage 5DX completed the visual/red-heading/transform 20-entry review batch 002. Stage 5DY inserted validation repair before the next review batch, so Stage 5DZ should continue with number-fact review batch 003.
 
 ## Governance And Preservation
 
@@ -177,4 +177,16 @@ StarArtifacts strongest observations:
 - BigGaps/StarArtifacts facts preserved: red-subset sum 229, gap metrics 73/109/129 with 109=prime(29), tree offsets 641/709 with prime-index gap 11, stardust phrase 2540=254*10, Mayfly 72/600 twin-prime gaps, ICC boundary pages 00-16 vs 17-74 with 2576-byte profile claim.
 - Red-heading/Mobius facts preserved: Page15 instruction phrase primes, DIVINITY WITHIN 491/563/1229 crosslink, YGGDRASIL spelling 491/564 warning, A POSTLUDE 1/8 structure, Mobius/totient zero-class 14-token partition, page0 DIVINITY WITHIN/A CROSSROADS 491.
 - PDD/Disk/Ouroboros facts preserved: 56311 net +25 over modulus 153, gcd(25,153)=1, 4-phase period 612; OUROBOROS 167 minus 153 gives offset 14; Disk 56311 from center 41/WYNN reaches word52/WAY.
-- Stage 5DY should continue number-fact review batch 003 unless a blocking Source Browser issue appears.
+- Stage 5DY inserted validation repair before number-fact review batch 003. Stage 5DZ should continue the review batch unless a blocking Source Browser issue appears.
+
+## Stage 5DY Validation Policy
+
+- Stage 5DX completed at eb93bc8d with 23 overlays and CI passed, but its Codex output exposed validation-tooling pain.
+- Full serial pytest took 1h38m41s and should not be required by default in every future prompt.
+- Full monolithic consistency exceeded 45 minutes locally; use focused/stage-fast and full-parallel profiles unless a full serial fallback is explicitly justified.
+- Future prompts should tell Codex: use focused tests during iteration, run broad parallel validation once near final, avoid broad repeated serial test loops.
+- Historical validators must not depend on mutable current global Source Browser counts.
+- Stage-specific schemas must not overwrite shared schemas.
+- Validate/summary commands must be read-only for committed records.
+- PowerShell wildcard expansion differs from Bash; use explicit file lists in examples.
+- Stage 5DZ remains the next fact-review batch.

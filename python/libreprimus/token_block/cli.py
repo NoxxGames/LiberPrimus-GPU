@@ -753,6 +753,7 @@ from . import stage5du as stage5du_module
 from . import stage5dv as stage5dv_module
 from . import stage5dw as stage5dw_module
 from . import stage5dx as stage5dx_module
+from . import stage5dy as stage5dy_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -10357,6 +10358,163 @@ def validate_stage5dx_governance_scope_command() -> None:
     _print_stage5dv_result(
         stage5dx_module.validate_stage5dx_governance_scope(),
         "token_block_stage5dx_governance_scope_valid=true",
+    )
+
+
+@app.command("build-stage5dy")
+def build_stage5dy_command() -> None:
+    records = stage5dy_module.build_stage5dy()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(f"validation_profile_count={summary.get('validation_profile_count')}")
+    console.print(f"parallel_worker_cap={summary.get('parallel_worker_cap')}")
+    console.print(
+        "full_serial_pytest_default="
+        f"{str(summary.get('full_serial_pytest_default_for_future_stages')).lower()}"
+    )
+    console.print(f"stage_isolation_repair={str(summary.get('stage_isolation_repair_performed')).lower()}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5dy")
+def validate_stage5dy_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy(),
+        "token_block_stage5dy_valid=true",
+    )
+
+
+@app.command("stage5dy-summary")
+def stage5dy_summary_command() -> None:
+    console.print(stage5dy_module.stage5dy_summary_text())
+
+
+@app.command("validate-stage5dy-stage5dx-preservation")
+def validate_stage5dy_stage5dx_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_stage5dx_preservation(),
+        "token_block_stage5dy_stage5dx_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-validation-performance-diagnostic")
+def validate_stage5dy_validation_performance_diagnostic_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_validation_performance_diagnostic(),
+        "token_block_stage5dy_validation_performance_diagnostic_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-validation-profile-registry")
+def validate_stage5dy_validation_profile_registry_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_validation_profile_registry(),
+        "token_block_stage5dy_validation_profile_registry_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-parallel-validation-policy")
+def validate_stage5dy_parallel_validation_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_parallel_validation_policy(),
+        "token_block_stage5dy_parallel_validation_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-consistency-profile-policy")
+def validate_stage5dy_consistency_profile_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_consistency_profile_policy(),
+        "token_block_stage5dy_consistency_profile_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-stage-isolation-policy")
+def validate_stage5dy_stage_isolation_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_stage_isolation_policy(),
+        "token_block_stage5dy_stage_isolation_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-nonmutating-validator-policy")
+def validate_stage5dy_nonmutating_validator_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_nonmutating_validator_policy(),
+        "token_block_stage5dy_nonmutating_validator_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-pytest-shard-race-audit")
+def validate_stage5dy_pytest_shard_race_audit_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_pytest_shard_race_audit(),
+        "token_block_stage5dy_pytest_shard_race_audit_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-source-browser-loadability")
+def validate_stage5dy_source_browser_loadability_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_source_browser_loadability(),
+        "token_block_stage5dy_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-stage5bd-preservation")
+def validate_stage5dy_stage5bd_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_stage5bd_preservation(),
+        "token_block_stage5dy_stage5bd_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-stage5dg-preservation")
+def validate_stage5dy_stage5dg_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_stage5dg_preservation(),
+        "token_block_stage5dy_stage5dg_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-active-lineage-preservation")
+def validate_stage5dy_active_lineage_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_active_lineage_preservation(),
+        "token_block_stage5dy_active_lineage_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-sidecar-gates")
+def validate_stage5dy_sidecar_gates_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_sidecar_gates(),
+        "token_block_stage5dy_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-handoff-continuity")
+def validate_stage5dy_handoff_continuity_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_handoff_continuity(),
+        "token_block_stage5dy_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-credential-redaction-policy")
+def validate_stage5dy_credential_redaction_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_credential_redaction_policy(),
+        "token_block_stage5dy_credential_redaction_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5dy-governance-scope")
+def validate_stage5dy_governance_scope_command() -> None:
+    _print_stage5dv_result(
+        stage5dy_module.validate_stage5dy_governance_scope(),
+        "token_block_stage5dy_governance_scope_valid=true",
     )
 
 

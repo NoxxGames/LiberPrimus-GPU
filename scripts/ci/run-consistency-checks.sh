@@ -5,6 +5,15 @@ repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$repo_root"
 
 python_bin="${PYTHON:-python}"
+profile="full"
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --profile) profile="$2"; shift 2 ;;
+        *) echo "Unknown argument: $1" >&2; exit 2 ;;
+    esac
+done
+
 tmp_dir="$(mktemp -d)"
 trap 'rm -rf "$tmp_dir"' EXIT
 
@@ -17,6 +26,25 @@ python_path() {
 }
 
 echo "For faster local validation, use scripts/ci/run-parallel-validation.sh --workers 8 --pytest-workers 8 --pytest-mode auto"
+
+if [[ "$profile" != "full" ]]; then
+    echo "Running $profile consistency profile"
+    "$python_bin" -m libreprimus.cli token-block validate-stage5dy
+    "$python_bin" -m libreprimus.cli source-browser validate-index
+    "$python_bin" -m libreprimus.cli consistency check-state-drift
+    "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
+        --expected-latest-stage "Stage 5DY" \
+        --expected-next-stage "Stage 5DZ" \
+        --out "$tmp_dir/stage-ledger-fast.json"
+    "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
+        --expected-latest-stage "Stage 5DY" \
+        --expected-next-stage "Stage 5DZ" \
+        --out "$tmp_dir/current-next-fast.json"
+    if [[ "$profile" == "local-fast" ]]; then
+        "$python_bin" -m libreprimus.cli consistency check-all --allow-warnings
+    fi
+    exit 0
+fi
 
 echo "Running full consistency suite"
 "$python_bin" -m libreprimus.cli consistency check-all --allow-warnings
@@ -33,14 +61,14 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5DX" \
-    --expected-next-stage "Stage 5DY" \
+    --expected-latest-stage "Stage 5DY" \
+    --expected-next-stage "Stage 5DZ" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5DX" \
-    --expected-next-stage "Stage 5DY" \
+    --expected-latest-stage "Stage 5DY" \
+    --expected-next-stage "Stage 5DZ" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -56,14 +84,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DX",
+            expected_latest_stage="Stage 5DY",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DX",
+            "expected_latest_stage": "Stage 5DY",
             "finding_count": len(findings),
             "findings": findings,
         },

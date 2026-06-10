@@ -1,0 +1,15 @@
+stage_id: stage-5dy
+stage_title: Stage 5DY - Validation performance, parallel-test discipline, stage-isolation,
+  and non-mutating validator repair, without execution
+prompt_type: codex_validation_infrastructure_and_metadata_repair
+metadata_only: false
+validation_infrastructure_stage: true
+source_lock_only: false
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: stage5dy_codex_handoff_policy
+schema: schemas/source-harvester/stage5dy-codex-handoff-policy-v0.schema.json
+codex_output_used: false
+completion_summary_path: codex-output/stage5dy-codex-completion.md
+completion_summary_committed: false

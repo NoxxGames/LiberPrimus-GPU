@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DX Source-lock number-fact review batch 002 is complete.
+Stage 5DY Validation performance, parallel-test discipline, stage-isolation, and non-mutating validator repair is complete.
 
-Next recommended prompt: Stage 5DY - Operator/assistant source-lock number-fact review batch 3, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DZ - Operator/assistant source-lock number-fact review batch 3, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DY
+
+Stage 5DY repairs validation infrastructure before continuing the number-fact review batches. It records the Stage 5DX validation-performance problems, adds focused, stage-fast, local-fast, full-parallel, full-serial-rare, and CI validation profiles, keeps the Stage 5CM-and-later parallel worker cap at `8`, marks full serial pytest as a rare fallback rather than a default local stage loop, and adds script-level profile support for staged validation.
+
+Local Stage 5DY summary: validation profiles `6`, parallel worker cap `8`, full serial pytest default `false`, stage-isolation repair `true`, shared-schema collision guard `true`, non-mutating validator guard `true`, Stage 5DX preserved `true`, Stage 5BD run-plan IDs `10`, active-lineage records `8`, number-fact batch 3 performed `false`, target selected `false`, byte streams generated `false`, execution performed `false`, solve claim `false`, and next stage `Stage 5DZ`.
+
+Stage 5DY is validation infrastructure only. It does not perform number-fact review batch 3, rewrite historical source-lock records, backfill facts directly, select a target, create Deep Research acceptance, satisfy the combined gate, authorize activation, generate byte streams, run route extraction, OCR/image/audio/stego/CUDA/scoring/benchmarks, execute community/native/VM/spreadsheet tooling, access Tor/network targets, expand the website, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DX
 

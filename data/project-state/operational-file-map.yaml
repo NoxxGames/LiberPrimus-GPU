@@ -7299,3 +7299,111 @@ records:
   category: historical_log
   source_of_truth_rank: 3
   last_meaningful_update_stage: Stage 5DX
+- path: data/project-state/stage5dy-summary.yaml
+  owner_stage: stage-5dy
+  purpose: Stage 5DY compact validation repair summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records validation profiles, worker cap, stage-isolation, non-mutating validator policy, preservation, and closed gates.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DY
+- path: data/project-state/stage5dy-validation-profile-registry.yaml
+  owner_stage: stage-5dy
+  purpose: Stage 5DY validation profile registry.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Defines focused, stage-fast, local-fast, full-parallel, full-serial-rare, and CI profiles.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DY
+- path: data/project-state/stage5dy-stage-isolation-policy.yaml
+  owner_stage: stage-5dy
+  purpose: Stage 5DY stage-isolation policy.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Requires historical validators to avoid mutable global Source Browser counts and shared schema collisions.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DY
+- path: data/project-state/stage5dy-nonmutating-validator-policy.yaml
+  owner_stage: stage-5dy
+  purpose: Stage 5DY non-mutating validator policy.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Requires validate and summary commands to stay read-only for committed records.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DY
+- path: data/ci/stage5dy-validation-profile-baseline.yaml
+  owner_stage: stage-5dy
+  purpose: Stage 5DY validation profile baseline.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Compact CI metadata for staged validation profile defaults; generated run logs remain ignored.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DY
+- path: scripts/ci/run-stage-validation.ps1
+  owner_stage: stage-5dy
+  purpose: Windows staged validation profile runner.
+  expected_update_frequency: on_validation_policy_change
+  mutable_or_reference_only: source
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Provides focused, stage-fast, local-fast, full-parallel, full-serial-rare, and CI validation profiles.
+  category: reference_only_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DY
+- path: scripts/ci/run-stage-validation.sh
+  owner_stage: stage-5dy
+  purpose: POSIX staged validation profile runner.
+  expected_update_frequency: on_validation_policy_change
+  mutable_or_reference_only: source
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Mirrors the PowerShell staged validation profiles for non-Windows local use.
+  category: reference_only_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DY
+- path: docs/development-logs/2026-06-10-stage-5dy-validation-performance-repair.md
+  owner_stage: stage-5dy
+  purpose: Stage 5DY developer log.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation and validation decisions for validation repair.
+  category: historical_log
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: Stage 5DY
+- path: research-log/2026-06-10-stage-5dy-next-stage-decision-summary.md
+  owner_stage: stage-5dy
+  purpose: Stage 5DY next-stage decision and research summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Summary-only log; no raw validation dump or generated output publication.
+  category: historical_log
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: Stage 5DY

@@ -4063,3 +4063,22 @@ records:
   generated_outputs_committed: false
   notes: Reviewed entries=20, overlays=23, fact_cards_after=80. Historical source
     locks were not rewritten.
+- record_type: stage_summary_record
+  stage_id: stage-5dy
+  title: Stage 5DY - Validation performance, parallel-test discipline, stage-isolation,
+    and non-mutating validator repair, without execution
+  status: complete
+  category: validation_infrastructure
+  summary: Added validation profiles, stage-isolation policy, non-mutating validator
+    policy, and parallel-test discipline before number-fact batch 3.
+  key_outputs:
+  - Stage 5DY validation profile registry and stage-fast/local-fast/full-parallel
+    scripts.
+  - Stage-isolation and shared-schema collision policy records.
+  - Non-mutating validator policy and focused regression tests.
+  result_status: validation_infrastructure_repaired
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: Profiles=6; parallel_worker_cap=8; next=stage-5dz.

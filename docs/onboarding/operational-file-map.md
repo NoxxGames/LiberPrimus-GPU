@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5DX adds Source Browser number-fact review batch 002 overlays and keeps the YAML map as the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5DY adds validation performance and stage-isolation repair records and keeps the YAML map as the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 
@@ -43,15 +43,19 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5DX" `
-  --expected-next-stage "Stage 5DY"
+  --expected-latest-stage "Stage 5DY" `
+  --expected-next-stage "Stage 5DZ"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5DX" `
-  --expected-next-stage "Stage 5DY"
+  --expected-latest-stage "Stage 5DY" `
+  --expected-next-stage "Stage 5DZ"
 ```
+
+## Stage 5DY Coverage
+
+The operational file map includes Stage 5DY validation profile, parallel policy, consistency policy, stage-isolation, non-mutating validator, shared-schema, preservation, closed-gate, developer log, experiment note, and research log records. Stage 5DY records the Stage 5DX validation tooling problems, but it does not perform number-fact batch 3 or rewrite historical source-lock records. Generated validation diagnostics, raw third-party files, local GUI caches, and local `codex-output/**` handoffs remain ignored.
 
 ## Stage 5DX Coverage
 

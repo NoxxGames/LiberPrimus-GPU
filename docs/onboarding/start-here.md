@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5DX - Source-lock number-fact review batch 002, visual/transform enrichment overlays, without execution.
-- Current planning focus: Stage 5DY - Operator/assistant source-lock number-fact review batch 3, without execution.
+- Latest completed stage: Stage 5DY - Validation performance, parallel-test discipline, stage-isolation, and non-mutating validator repair, without execution.
+- Current planning focus: Stage 5DZ - Operator/assistant source-lock number-fact review batch 3, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -35,11 +35,11 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 - Reviewer: read `docs/onboarding/source-of-truth-map.md`, `docs/experiments/method-retirement-ledger.md`, and the relevant research log.
 
 No page is claimed solved by these docs.
-## Stage 5DX Current Boundary
+## Stage 5DY Current Boundary
 
-Stage 5DX is the latest completed stage. It implements the second source-lock number-fact review batch as reviewability overlays only, records 23 NumberFactCard overlays for 20 selected visual/red-heading/transform-bridge evidence records, and preserves Stage 5DW overlay-only support plus all historical source-lock records unchanged. It records no target selection, creates no activation/readiness decision, and selects Stage 5DY number-fact review batch 3. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select active planning input, generate byte streams, execute route/token-block/audio/stego/OCR/image/native/VM/spreadsheet/CUDA work, execute community code, validate target classes, use Tor route access, run DWH/hash/preimage search, score, benchmark, rewrite historical source-lock records, backfill source-record facts directly, or make solve claims.
+Stage 5DY is the latest completed stage. It repairs validation performance, parallel-test discipline, stage-isolation, shared-schema collision protection, and non-mutating validator policy before the third source-lock number-fact review batch. It records no target selection, creates no activation/readiness decision, and selects Stage 5DZ number-fact review batch 3. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select active planning input, generate byte streams, execute route/token-block/audio/stego/OCR/image/native/VM/spreadsheet/CUDA work, execute community code, validate target classes, use Tor route access, run DWH/hash/preimage search, score, benchmark, rewrite historical source-lock records, backfill source-record facts directly, perform number-fact batch 3, or make solve claims.
 
-Current state: Stage 5DX is complete and Stage 5DY number-fact review batch 3 is next. Stage 5DX records 1546 Source Browser entries, 1545 records scanned, 80 fact cards after overlays, 20 reviewed entries, 23 overlays, 0 Source Browser validation errors, 0 spurious root image/document paths, 0 duplicate present/missing path pairs, Stage 5BD run-plan ID count 10, active-lineage record count 8, and all execution gates closed.
+Current state: Stage 5DY is complete and Stage 5DZ number-fact review batch 3 is next. Stage 5DY records 6 validation profiles, parallel worker cap 8, full serial pytest default false, stage-isolation repair true, shared-schema collision guard true, non-mutating validator guard true, Stage 5DX preserved true, Stage 5BD run-plan ID count 10, active-lineage record count 8, and all execution gates closed.
 
 ## Stage 5DQ Boundary History
 

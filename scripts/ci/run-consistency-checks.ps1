@@ -1,3 +1,8 @@
+param(
+    [ValidateSet("stage-fast", "local-fast", "full")]
+    [string]$Profile = "full"
+)
+
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
@@ -8,6 +13,25 @@ $Python = if ($env:PYTHON) { $env:PYTHON } elseif (Test-Path ".\.venv\Scripts\py
 $TempDir = Join-Path ([System.IO.Path]::GetTempPath()) ("libreprimus-consistency-" + [System.Guid]::NewGuid().ToString("N"))
 New-Item -ItemType Directory -Path $TempDir | Out-Null
 Write-Host "For faster local validation, use scripts/ci/run-parallel-validation.ps1 -Workers 8 -PytestWorkers 8 -PytestMode auto"
+
+if ($Profile -ne "full") {
+    Write-Host "Running $Profile consistency profile"
+    & $Python -m libreprimus.cli token-block validate-stage5dy
+    & $Python -m libreprimus.cli source-browser validate-index
+    & $Python -m libreprimus.cli consistency check-state-drift
+    & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
+        --expected-latest-stage "Stage 5DY" `
+        --expected-next-stage "Stage 5DZ" `
+        --out (Join-Path $TempDir "stage-ledger-fast.json")
+    & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
+        --expected-latest-stage "Stage 5DY" `
+        --expected-next-stage "Stage 5DZ" `
+        --out (Join-Path $TempDir "current-next-fast.json")
+    if ($Profile -eq "local-fast") {
+        & $Python -m libreprimus.cli consistency check-all --allow-warnings
+    }
+    exit 0
+}
 
 try {
     Write-Host "Running full consistency suite"
@@ -25,14 +49,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5DX" `
-        --expected-next-stage "Stage 5DY" `
+        --expected-latest-stage "Stage 5DY" `
+        --expected-next-stage "Stage 5DZ" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5DX" `
-        --expected-next-stage "Stage 5DY" `
+        --expected-latest-stage "Stage 5DY" `
+        --expected-next-stage "Stage 5DZ" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +71,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DX",
+            expected_latest_stage="Stage 5DY",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DX",
+            "expected_latest_stage": "Stage 5DY",
             "finding_count": len(findings),
             "findings": findings,
         },

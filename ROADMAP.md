@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5DY - Operator/assistant source-lock number-fact review batch 3, without execution.
+Current next prompt: Stage 5DZ - Operator/assistant source-lock number-fact review batch 3, without execution.
 
-Stage 5DX is complete as the second selected Source Browser number-fact review batch. It added review-only NumberFactCard overlays for 20 visual/red-heading/transform bridge records and preserved overlay-only fact cards without rewriting historical source-lock records or authorizing execution.
+Stage 5DY is complete as validation performance and stage-isolation repair before the third Source Browser number-fact review batch. It added validation profiles, staged script profiles, stage-isolation and shared-schema safeguards, and non-mutating validator policy while preserving Stage 5DX records without authorizing execution.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DX Source Browser number-fact review batch 002 is complete. It validates `1546` Source Browser entries and `1545` scanned records, records `23` overlays for `20` selected visual/red-heading/transform bridge records, supports overlay-only fact cards, keeps spurious root image/document paths at `0`, suppresses duplicate present+missing basename pairs to `0`, preserves Stage 5DW/5DV/5DU/5DG/5BD/active-lineage records, and expands `ChatGPT-ContextFile.md` for durable handoff. The next recommended review batch shifts to Stage 5DY.
+Stage 5DY validation repair is complete. It records the Stage 5DX slow-validation diagnostics, defines focused/stage-fast/local-fast/full-parallel/full-serial-rare/CI validation profiles, keeps local parallel validation capped at `8` workers, marks full serial pytest as a rare fallback, repairs historical validator stage-isolation policy, guards shared schemas from stage-specific rewrites, and updates `ChatGPT-ContextFile.md` for durable handoff. The next recommended review batch shifts to Stage 5DZ.
 
-The next recommended prompt is Stage 5DY - Operator/assistant source-lock number-fact review batch 3, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5DZ - Operator/assistant source-lock number-fact review batch 3, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

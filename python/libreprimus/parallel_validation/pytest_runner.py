@@ -12,6 +12,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
 
+SERIAL_ISOLATED_TEST_FILES = frozenset(
+    {
+        Path("tests/python/test_stage5cu_cli.py"),
+    }
+)
+
 
 def pytest_xdist_available() -> bool:
     """Return true when pytest-xdist is importable."""
@@ -23,6 +29,22 @@ def discover_test_files(test_root: Path) -> list[Path]:
     """Discover pytest files in deterministic order."""
 
     return sorted(path for path in test_root.rglob("test_*.py") if path.is_file())
+
+
+def _repo_relative(path: Path) -> Path:
+    return Path(path.as_posix())
+
+
+def serial_isolated_test_files(test_files: list[Path]) -> list[Path]:
+    """Return files that must run outside parallel shards."""
+
+    return [path for path in test_files if _repo_relative(path) in SERIAL_ISOLATED_TEST_FILES]
+
+
+def parallel_test_files(test_files: list[Path]) -> list[Path]:
+    """Return files eligible for parallel pytest shards."""
+
+    return [path for path in test_files if _repo_relative(path) not in SERIAL_ISOLATED_TEST_FILES]
 
 
 def build_shards(test_files: list[Path], worker_count: int) -> list[list[Path]]:
@@ -43,7 +65,9 @@ def shard_plan_record(test_root: Path, worker_count: int) -> dict[str, Any]:
     """Build a committed metadata shard plan without executing pytest."""
 
     files = discover_test_files(test_root)
-    shards = build_shards(files, worker_count)
+    isolated = serial_isolated_test_files(files)
+    parallel_files = parallel_test_files(files)
+    shards = build_shards(parallel_files, worker_count)
     return {
         "record_type": "stage5ax_pytest_shard_plan",
         "schema": "schemas/ci/pytest-shard-plan-v0.schema.json",
@@ -52,6 +76,9 @@ def shard_plan_record(test_root: Path, worker_count: int) -> dict[str, Any]:
         "requested_workers": worker_count,
         "shard_count": len(shards),
         "test_file_count": len(files),
+        "parallel_test_file_count": len(parallel_files),
+        "serial_isolated_test_file_count": len(isolated),
+        "serial_isolated_test_files": [str(path.as_posix()) for path in isolated],
         "all_tests_covered_once": True,
         "shards": [
             {
@@ -140,14 +167,20 @@ def run_pytest(
     results_dir: Path,
     requested_mode: str,
     worker_count: int,
-    timeout_seconds: int = 1200,
+    timeout_seconds: int = 2700,
 ) -> dict[str, Any]:
     """Run pytest using xdist, shard fallback, or serial mode."""
 
     mode, xdist, shard_fallback = select_pytest_mode(requested_mode)
+    files = discover_test_files(test_root)
+    isolated_files = serial_isolated_test_files(files)
+    if mode == "xdist" and isolated_files:
+        mode = "shard"
+        shard_fallback = True
     started = time.perf_counter()
     log_dir = results_dir / "logs" / "pytest"
     log_dir.mkdir(parents=True, exist_ok=True)
+    parallel_shard_count = 0
 
     if mode == "serial":
         shard_fallback = False
@@ -186,12 +219,13 @@ def run_pytest(
                 "stderr_log": str(stderr_log.as_posix()),
                 "timed_out": False,
                 "passed": completed.returncode == 0,
-                "test_file_count": len(discover_test_files(test_root)),
+                "test_file_count": len(files),
             }
         ]
     else:
-        files = discover_test_files(test_root)
-        shards = build_shards(files, worker_count)
+        parallel_files = parallel_test_files(files)
+        shards = build_shards(parallel_files, worker_count)
+        parallel_shard_count = len(shards)
         log_workers = min(worker_count, len(shards)) if shards else 1
         with ThreadPoolExecutor(max_workers=max(1, log_workers)) as executor:
             futures = {
@@ -207,6 +241,16 @@ def run_pytest(
             }
             shard_results = [future.result() for future in as_completed(futures)]
         shard_results = sorted(shard_results, key=lambda item: item["command_id"])
+        if isolated_files:
+            shard_results.append(
+                _run_pytest_shard(
+                    "pytest-serial-isolated",
+                    isolated_files,
+                    repo_root,
+                    log_dir,
+                    timeout_seconds,
+                )
+            )
 
     failures = [item for item in shard_results if not item["passed"]]
     duration = time.perf_counter() - started
@@ -218,8 +262,14 @@ def run_pytest(
         "pytest_workers_used": worker_count,
         "pytest_xdist_available": xdist,
         "pytest_shard_fallback_used": shard_fallback,
-        "pytest_shard_count": len(shard_results) if mode == "shard" else 0,
-        "test_file_count": len(discover_test_files(test_root)),
+        "pytest_shard_count": parallel_shard_count if mode == "shard" else 0,
+        "pytest_serial_isolated_count": len(isolated_files) if mode == "shard" else 0,
+        "pytest_serial_isolated_files": [
+            str(path.as_posix()) for path in isolated_files
+        ]
+        if mode == "shard"
+        else [],
+        "test_file_count": len(files),
         "failure_count": len(failures),
         "success_count": len(shard_results) - len(failures),
         "passed": not failures,

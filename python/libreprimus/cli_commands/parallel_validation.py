@@ -54,7 +54,7 @@ def build_stage5ax_plan_command(
 
 @app.command("run-stage5ax-pytest")
 def run_stage5ax_pytest_command(
-    workers: int = typer.Option(16),
+    workers: int = typer.Option(8),
     pytest_mode: str = typer.Option("auto"),
     results_dir: Path = typer.Option(DEFAULT_RESULTS_DIR),
 ) -> None:
@@ -76,11 +76,12 @@ def run_stage5ax_pytest_command(
 @app.command("run-stage5ax-parallel-validation")
 def run_stage5ax_parallel_validation_command(
     plan: Path = typer.Option(PLAN_PATH),
-    workers: int = typer.Option(16),
-    pytest_workers: int = typer.Option(16),
+    workers: int = typer.Option(8),
+    pytest_workers: int = typer.Option(8),
     pytest_mode: str = typer.Option("auto"),
     results_dir: Path = typer.Option(DEFAULT_RESULTS_DIR),
     out_run_summary: Path = typer.Option(RUN_SUMMARY_PATH),
+    out_safety_audit: Path = typer.Option(SAFETY_AUDIT_PATH),
 ) -> None:
     result = run_stage5ax_parallel_validation(
         plan_path=plan,
@@ -89,6 +90,7 @@ def run_stage5ax_parallel_validation_command(
         pytest_mode=pytest_mode,
         results_dir=results_dir,
         out_run_summary=out_run_summary,
+        out_safety_audit=out_safety_audit,
     )
     console.print(f"workers_used={result['workers_used']}")
     console.print(f"pytest_workers_used={result['pytest_workers_used']}")
