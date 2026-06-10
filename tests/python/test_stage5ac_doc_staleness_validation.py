@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5dy_latest_and_stage5dz_next() -> None:
+def test_operational_docs_use_stage5dz_latest_and_stage5ea_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5DY Validation performance" in status
-    assert "Next recommended prompt: Stage 5DZ" in status
-    assert "Latest completed stage: Stage 5DY" in staged_plan
-    assert "Current planning focus: Stage 5DZ" in staged_plan
+    assert "Stage 5DZ Triangle/Page32 bounded-solve findings" in status
+    assert "Next recommended prompt: Stage 5EA" in status
+    assert "Latest completed stage: Stage 5DZ" in staged_plan
+    assert "Current planning focus: Stage 5EA" in staged_plan

@@ -1,0 +1,484 @@
+stage_id: stage-5dz
+stage_title: Stage 5DZ - Triangle/Page32 bounded-solve findings source-lock and enriched
+  review records, without execution
+prompt_type: codex_metadata_and_operator_console_reviewability_implementation
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+bounded_findings_source_lock_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+activation_authorized_now: false
+activation_decision_valid_now: false
+active_ingestion_performed: false
+active_manifest_registry_updated: false
+active_planning_input_authorized_now: false
+active_planning_input_selected_now: false
+active_token_block_manifest_changed: false
+alberti_html_executed_now: false
+audio_stego_performed: false
+benchmark_performed: false
+branch_enumeration_performed: false
+byte_stream_generation_authorized_now: false
+canonical_corpus_active: false
+combined_approval_gate_satisfied_now: false
+community_code_executed_now: false
+cuda_execution_performed: false
+decode_attempt_performed: false
+decryption_attempt_performed_now: false
+disk_cipher_execution_performed_now: false
+dwh_hash_search_performed: false
+execution_authorized_now: false
+execution_performed: false
+full_cartesian_product_enumerated: false
+generated_outputs_committed: false
+hash_preimage_search_performed: false
+hidden_content_image_forensics_performed: false
+historical_source_lock_records_rewritten: false
+image_forensics_performed: false
+known_plaintext_attack_performed_now: false
+machine_code_execution_performed_now: false
+mayfly_route_extraction_performed_now: false
+midi_route_extraction_performed_now: false
+mp3stego_execution_performed: false
+music_route_extraction_performed_now: false
+native_code_execution_performed_now: false
+network_target_validation_performed_now: false
+number_fact_backfill_performed_now: false
+number_fact_review_batch_3_performed_now: false
+ocr_performed: false
+openpuff_execution_performed: false
+operator_readiness_decision_created_now: false
+page0_plaintext_accepted_now: false
+page32_route_extraction_performed_now: false
+page56_hash_preimage_tested_now: false
+pdf_ocr_or_hidden_content_rendering_performed: false
+pivot_target_selected_now: false
+probability_claim_accepted_as_validated: false
+raw_source_files_committed: false
+raw_third_party_files_committed: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+scoring_performed: false
+semantic_image_interpretation_performed: false
+spectrogram_stego_performed: false
+spreadsheet_macro_execution_performed: false
+target_class_validation_implemented: false
+target_priority_decision_created_now: false
+token_block_experiment_executed: false
+token_block_variant_byte_streams_generated: false
+tor_network_access_performed: false
+triangle_route_extraction_performed_now: false
+variant_byte_streams_generated: false
+variant_materialisation_performed: false
+vm_bytecode_execution_performed_now: false
+website_expansion_performed: false
+record_type: source_browser_number_fact_enrichment_overlay_collection
+schema: schemas/operator-console/source-browser-number-fact-overlays-stage5dz-v0.schema.json
+overlay_collection_id: stage5dz_triangle_page32_bounded_findings
+review_batch_id: triangle_page32_bounded_findings_source_lock_enrichment
+overlay_only_fact_cards_required: true
+overlay_only_fact_cards_supported: true
+overlay_only_fact_cards_validated: true
+overlay_count: 12
+minimum_overlay_count: 12
+recommended_overlay_count: 12_to_15
+overlays:
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: &id001
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5dz_pdd153_heading_p_d_th_canonicalization_overlay
+  source_record_path: data/historical-route/stage5dz-pdd153-heading-transcription-canonicalization-warning.yaml
+  source_fact_id: pdd153_heading_p_d_th_canonicalization
+  fact_class: pdd_153_triangle_number_facts
+  display_label: "PDD heading warning: WAY arithmetic uses \u16C8\u16DE\u16A6 = [13,23,2],\
+    \ not \u16C7\u16DE\u16A6"
+  short_label: "PDD heading \u16C8\u16DE\u16A6 vs \u16C7\u16DE\u16A6 warning"
+  value: 13
+  values:
+  - 13
+  - 23
+  - 2
+  - 12
+  value_type: sequence
+  operation_type: transcription_canonicalization
+  relation: Heading mismatch affects all mod29 WAY-anchor arithmetic.
+  why_stored: Prevents silent transcription drift before any future triangle experiment.
+  verification_status: canonical_transcription_required
+  display_priority: high
+  risk_notes:
+  - heading_mismatch_changes_arithmetic
+  - historical_record_rewrite_not_performed
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5dz_pdd153_way_anchor_mod29_overlay
+  source_record_path: data/historical-route/stage5dz-pdd153-way-anchor-ordinal-arithmetic-review.yaml
+  source_fact_id: pdd153_way_anchor_mod29
+  fact_class: pdd_153_triangle_number_facts
+  display_label: "\u16C8\u16DE\u16A6 - reverse(\u16B3\u16E0\u16B7) mod29 = \u16B9\u16AA\
+    \u16A3 / WAY"
+  short_label: PDD word52 -> WAY
+  value: 52
+  values:
+  - 13
+  - 23
+  - 2
+  - 5
+  - 28
+  - 6
+  - 6
+  - 28
+  - 5
+  - 7
+  - 24
+  - 26
+  - 52
+  value_type: sequence
+  operation_type: mod29_subtraction
+  expression: '[13,23,2] - [6,28,5] mod 29 = [7,24,26] = WAY'
+  relation: Strongest current instruction-level partial output from the triangle route
+    surface.
+  why_stored: This is the key constrained WAY result but remains candidate-only.
+  verification_status: arithmetic_verified_metadata_only_pending_canonical_surface
+  display_priority: high
+  risk_notes:
+  - not_accepted_plaintext_solution
+  - canonical_triangle_surface_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5dz_pdd153_56311_center_word52_overlay
+  source_record_path: data/historical-route/stage5dz-pdd153-56311-center-word52-way-bridge-review.yaml
+  source_fact_id: pdd153_56311_center_word52
+  fact_class: pdd_153_triangle_number_facts
+  display_label: 56311 from center 41/WYNN reaches word52/WAY anchor via offsets 5/11/14/25
+  short_label: 56311 center41 -> word52
+  value: 52
+  values:
+  - 5
+  - 6
+  - 3
+  - 11
+  - 41
+  - 46
+  - 52
+  - 55
+  - 66
+  - 5
+  - 11
+  - 14
+  - 25
+  value_type: sequence
+  operation_type: sequence_mapping
+  relation: Bridges DiskCipher 56311/WYNN into the PDD153 WAY-anchor candidate.
+  why_stored: Strongest DiskCipher-to-triangle numeric bridge.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  risk_notes:
+  - accepted_as_route_false
+  - route_stream_not_generated
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5dz_pdd153_ouroboric_period612_overlay
+  source_record_path: data/historical-route/stage5dz-pdd153-ouroboric-route-surface-interpretation.yaml
+  source_fact_id: pdd153_ouroboric_period612
+  fact_class: pdd_153_triangle_number_facts
+  display_label: 56311 has net +25; gcd(25,153)=1; 4-phase closed state period = 612
+  short_label: PDD153 56311 period612
+  value: 612
+  values:
+  - 5
+  - 6
+  - 3
+  - 11
+  - 25
+  - 153
+  - 1
+  - 4
+  - 612
+  value_type: sequence
+  operation_type: modulo
+  relation: Supports interpreting the triangle as a closed route/control surface.
+  why_stored: Captures the static ouroboric-cycle property without extracting a route.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  risk_notes:
+  - no_route_extraction
+  - not_execution_seed_now
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5dz_pdd153_no_plaintext_negative_result_overlay
+  source_record_path: data/historical-route/stage5dz-pdd153-direct-decode-negative-result-review.yaml
+  source_fact_id: pdd153_no_plaintext_found_bounded_pass
+  fact_class: negative_result_review_facts
+  display_label: Bounded triangle pass found no validated plaintext from direct row/column/GP-sum/56311
+    feature streams
+  short_label: PDD153 direct decodes negative
+  value: 0
+  values:
+  - 0
+  value_type: review_result
+  operation_type: negative_result_review
+  relation: Prevents overclaiming the bounded exploratory pass as a solve.
+  why_stored: Negative review facts are useful for later experiment design and avoiding
+    repeated weak tests.
+  verification_status: assistant_review_observation
+  display_priority: medium
+  risk_notes:
+  - not_formal_experiment
+  - not_disproof
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5dz_page32_red_header_start_stop_overlay
+  source_record_path: data/historical-route/stage5dz-page32-red-header-anchored-3299-to-2472-route-candidate.yaml
+  source_fact_id: page32_red_header_3299_to_2472
+  fact_class: page32_number_grid_facts
+  display_label: Red header points to 3299 start and 2472 waypoint/stop in Page32
+    grid
+  short_label: Page32 red header 3299->2472
+  value: 3299
+  values:
+  - 463
+  - 3299
+  - 2472
+  - 3301
+  value_type: sequence
+  operation_type: route_anchor_selection
+  expression: red-header cumulative index total 463 -> prime(463)=3299; progressive
+    GP sum = 2472
+  relation: 'Strongest Page32 solve-adjacent result: red header appears to select
+    route segment through the grid.'
+  why_stored: Turns separate 463/3299 and 2472 facts into a reviewable route-selection
+    card.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  risk_notes:
+  - route_not_executed
+  - no_plaintext_found
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5dz_page32_12cell_spiral_segment_overlay
+  source_record_path: data/historical-route/stage5dz-page32-red-header-anchored-3299-to-2472-route-candidate.yaml
+  source_fact_id: page32_12cell_spiral_segment
+  fact_class: page32_number_grid_facts
+  display_label: Page32 red-selected route segment has 12 cells from 3299 to 2472
+    with prime indices 1/2/3/4/6/9/14/22/35/56/90/145
+  short_label: Page32 12-cell 3299->2472 route
+  value: 12
+  values:
+  - 3299
+  - 3298
+  - 3296
+  - 3294
+  - 3288
+  - 3278
+  - 3258
+  - 3222
+  - 3152
+  - 3038
+  - 2838
+  - 2472
+  - 1
+  - 2
+  - 3
+  - 4
+  - 6
+  - 9
+  - 14
+  - 22
+  - 35
+  - 56
+  - 90
+  - 145
+  value_type: sequence
+  operation_type: fibonacci_prime_index_route
+  relation: Candidate front-side route segment selected by the red header.
+  why_stored: Makes the exact route segment visible before future experiments.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  risk_notes:
+  - no_extraction_performed
+  - route_segment_candidate_only
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5dz_page32_full16_mobius_fold_overlay
+  source_record_path: data/historical-route/stage5dz-page32-full16-mobius-fold-candidate.yaml
+  source_fact_id: page32_full16_mobius_fold
+  fact_class: page32_number_grid_facts
+  display_label: Page32 full 16-cell spiral may split into 12-cell front side plus
+    4-cell Mobius back/fold
+  short_label: Page32 12+4 Mobius fold
+  value: 16
+  values:
+  - 12
+  - 4
+  - 16
+  - 3299
+  - 2472
+  - 1820
+  - 708
+  - 1206
+  - 4516
+  value_type: sequence
+  operation_type: structural_partition
+  relation: Interprets remaining four cells after 2472 as possible back-side/fold
+    continuation.
+  why_stored: Preserves a constrained Mobius interpretation without forcing extraction.
+  verification_status: candidate_context_only
+  display_priority: medium
+  risk_notes:
+  - visual_mobius_interpretation
+  - not_route_evidence_yet
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5dz_page32_direct_extraction_negative_result_overlay
+  source_record_path: data/historical-route/stage5dz-page32-direct-extraction-negative-result-review.yaml
+  source_fact_id: page32_no_plaintext_found_direct_extractions
+  fact_class: negative_result_review_facts
+  display_label: Bounded Page32 pass found no validated plaintext from direct grid/prime-index/first-last-rune/simple
+    red-key extractions
+  short_label: Page32 direct decodes negative
+  value: 0
+  values:
+  - 0
+  value_type: review_result
+  operation_type: negative_result_review
+  relation: Prevents direct-grid-indexing tests from being overclaimed.
+  why_stored: Records which obvious methods did not produce useful signal in the assistant
+    pass.
+  verification_status: assistant_review_observation
+  display_priority: medium
+  risk_notes:
+  - not_formal_experiment
+  - not_disproof
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5dz_page32_mod153_bridge_overlay
+  source_record_path: data/historical-route/stage5dz-page32-pdd153-mod153-bridge-design-note.yaml
+  source_fact_id: page32_mod153_bridge
+  fact_class: cross_surface_route_design_facts
+  display_label: Page32 prime-index and number-value sequences have mod153 projections
+    that could map onto PDD153 later
+  short_label: Page32 -> PDD153 mod153 bridge
+  value: 153
+  values:
+  - 153
+  - 1
+  - 2
+  - 3
+  - 4
+  - 6
+  - 9
+  - 14
+  - 22
+  - 35
+  - 56
+  - 90
+  - 145
+  - 81
+  - 72
+  - 152
+  - 70
+  - 86
+  - 85
+  - 83
+  - 81
+  - 75
+  - 65
+  - 45
+  - 9
+  - 92
+  - 131
+  - 84
+  - 24
+  - 137
+  - 96
+  - 135
+  - 79
+  value_type: sequence
+  operation_type: modulo_projection
+  relation: Design-note bridge between Page32 route schedule and 153-word triangle
+    surface.
+  why_stored: Keeps cross-surface route hypothesis explicit and bounded.
+  verification_status: design_note_only
+  display_priority: medium
+  risk_notes:
+  - future_test_only
+  - no_pdd_route_extraction
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5dz_page32_exact254_anchor_design_overlay
+  source_record_path: data/historical-route/stage5dz-page32-exact254-anchor-control-design-note.yaml
+  source_fact_id: page32_exact254_anchor_design
+  fact_class: visual_anchor_design_facts
+  display_label: 'Future Page32 control: test whether exact-254 components align with
+    grid/Mobius/red-header anchors'
+  short_label: Page32 exact254 anchor control
+  value: 254
+  values:
+  - 254
+  - 3299
+  - 2472
+  value_type: pixel_value
+  operation_type: control_design
+  relation: Connects StarArtifacts exact-254 method to Page32 only as a future controlled
+    anchor test.
+  why_stored: Prevents uncontrolled visual overfitting while preserving the potential
+    anchor idea.
+  verification_status: design_note_only
+  display_priority: low
+  risk_notes:
+  - image_forensics_not_performed
+  - canonical_image_hash_required
+  - controls_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5dz_page32_surface_naming_warning_overlay
+  source_record_path: data/historical-route/stage5dz-page32-grid-vs-tree-polar-naming-clarification.yaml
+  source_fact_id: page32_surface_naming_warning
+  fact_class: source_identity_warning_facts
+  display_label: 'Page32 naming collision: Mobius number-grid surface differs from
+    tree/polar page32/full49 surface'
+  short_label: Page32 grid vs tree/polar warning
+  value: 2
+  values:
+  - 2
+  - 32
+  - 49
+  value_type: source_identity
+  operation_type: source_identity_clarification
+  relation: Prevents future source-lock and experiment confusion between two Page32-labeled
+    surfaces.
+  why_stored: This confusion has already appeared in source-lock context and must
+    stay visible.
+  verification_status: source_identity_review
+  display_priority: high
+  risk_notes:
+  - surface_id_required_for_future_records

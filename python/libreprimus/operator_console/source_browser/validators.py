@@ -319,6 +319,7 @@ def path_canonicalization_report(index: SourceIndex | None = None) -> dict[str, 
 
 def validate_number_fact_cards() -> ValidationResult:
     index = build_source_index()
+    overlays = load_enrichment_overlays()
     counts = reviewability_counts(index.entries)
     result = ValidationResult(
         counts={
@@ -328,16 +329,16 @@ def validate_number_fact_cards() -> ValidationResult:
             "zero_fact_not_reviewed_entries": counts[
                 "entries_with_zero_extracted_number_facts_not_reviewed"
             ],
-            "overlay_count": len(load_enrichment_overlays()),
+            "overlay_count": len(overlays),
         }
     )
     for entry in index.entries:
         if not entry.number_facts:
-            state = zero_fact_review_state(entry)
+            state = zero_fact_review_state(entry, overlays)
             if state not in REVIEW_STATES:
                 result.errors.append(f"{entry.source_record_path}: invalid zero-fact state {state}")
             continue
-        for card in normalize_entry_number_facts(entry):
+        for card in normalize_entry_number_facts(entry, overlays):
             if card.review_state not in REVIEW_STATES:
                 result.errors.append(f"{card.source_record_path}: invalid review state {card.review_state}")
             if card.usable_for_decision_now:

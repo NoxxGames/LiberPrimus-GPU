@@ -15,6 +15,7 @@ def test_consistency_profile_policy_and_scripts() -> None:
     assert payload["stage_profile_available"] is True
     assert payload["full_profile_preserved"] is True
     assert payload["long_tail_checks_default_local"] is False
-    assert "Stage 5DY" in ps1
+    assert "validate-stage5dy" in ps1
     assert "Stage 5DZ" in ps1
+    assert "Stage 5EA" in ps1
     assert "--profile" in sh

@@ -12,5 +12,5 @@ def test_chatgpt_context_contains_validation_policy() -> None:
 
     assert "## Stage 5DY Validation Policy" in text
     assert "PowerShell wildcard expansion differs from Bash" in text
-    assert "Stage 5DZ remains the next fact-review batch" in text
+    assert "Stage 5EA remains the next fact-review batch" in text
     assert summary["stage5dy_validation_policy_section_added"] is True

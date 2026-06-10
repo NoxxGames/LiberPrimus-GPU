@@ -2,11 +2,11 @@
 
 ## Current Project State
 
-Current completed stage: Stage 5DY - Validation performance, parallel-test discipline, stage-isolation, and non-mutating validator repair, without execution.
+Current completed stage: Stage 5DZ - Triangle/Page32 bounded-solve findings source-lock and enriched review records, without execution.
 
-Current work after Stage 5DY: Stage 5DZ - Operator/assistant source-lock number-fact review batch 3, without execution.
+Current work after Stage 5DZ: Stage 5EA - Operator/assistant source-lock number-fact review batch 3, without execution.
 
-Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DX completed the second visual/red-heading/transform bridge review batch as overlay metadata only. Stage 5DY repaired validation performance and stage isolation before the next batch. Stage 5DY does not perform number-fact batch 3, backfill number facts directly, rewrite historical source-lock records, select a target, generate bytes, execute anything, or make solve claims.
+Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DX completed the second visual/red-heading/transform bridge review batch as overlay metadata only. Stage 5DY repaired validation performance and stage isolation before the next batch. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment before the normal third review batch. Stage 5DZ does not perform number-fact batch 3, backfill number facts directly, rewrite historical source-lock records, select a target, extract routes, generate route streams, generate bytes, run image forensics/OCR, execute anything, or make solve claims.
 
 The canonical Codex handoff root is `codex-output`. The deprecated `codex_output` root must remain absent. Completion summaries under `codex-output/**` are local ignored handoffs and must not be committed.
 
@@ -127,7 +127,7 @@ StarArtifacts strongest observations:
 - Source-locked does not mean review-ready.
 - A useful fact card must explain value, type, expression, components, relation, why stored, source anchor, verification status, risks, and crosslinks.
 - Older zero-fact entries are usually not reviewed, not necessarily number-free.
-- Stage 5DW completed the high-signal 20-entry review batch 001 after the Stage 5DV repair; Stage 5DX completed the visual/red-heading/transform 20-entry review batch 002. Stage 5DY inserted validation repair before the next review batch, so Stage 5DZ should continue with number-fact review batch 003.
+- Stage 5DW completed the high-signal 20-entry review batch 001 after the Stage 5DV repair; Stage 5DX completed the visual/red-heading/transform 20-entry review batch 002. Stage 5DY inserted validation repair before the next review batch. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment, so Stage 5EA should continue with number-fact review batch 003.
 
 ## Governance And Preservation
 
@@ -177,7 +177,7 @@ StarArtifacts strongest observations:
 - BigGaps/StarArtifacts facts preserved: red-subset sum 229, gap metrics 73/109/129 with 109=prime(29), tree offsets 641/709 with prime-index gap 11, stardust phrase 2540=254*10, Mayfly 72/600 twin-prime gaps, ICC boundary pages 00-16 vs 17-74 with 2576-byte profile claim.
 - Red-heading/Mobius facts preserved: Page15 instruction phrase primes, DIVINITY WITHIN 491/563/1229 crosslink, YGGDRASIL spelling 491/564 warning, A POSTLUDE 1/8 structure, Mobius/totient zero-class 14-token partition, page0 DIVINITY WITHIN/A CROSSROADS 491.
 - PDD/Disk/Ouroboros facts preserved: 56311 net +25 over modulus 153, gcd(25,153)=1, 4-phase period 612; OUROBOROS 167 minus 153 gives offset 14; Disk 56311 from center 41/WYNN reaches word52/WAY.
-- Stage 5DY inserted validation repair before number-fact review batch 003. Stage 5DZ should continue the review batch unless a blocking Source Browser issue appears.
+- Stage 5DY inserted validation repair before number-fact review batch 003. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment before the batch. Stage 5EA should continue the review batch unless a blocking Source Browser issue appears.
 
 ## Stage 5DY Validation Policy
 
@@ -189,4 +189,28 @@ StarArtifacts strongest observations:
 - Stage-specific schemas must not overwrite shared schemas.
 - Validate/summary commands must be read-only for committed records.
 - PowerShell wildcard expansion differs from Bash; use explicit file lists in examples.
-- Stage 5DZ remains the next fact-review batch.
+- Stage 5EA remains the next fact-review batch.
+
+## Stage 5DZ - Triangle/Page32 bounded-solve findings source-lock
+
+Triangle:
+- No validated plaintext found.
+- Strongest partial result: ᛈᛞᚦ - reverse(ᚳᛠᚷ) mod29 = ᚹᚪᚣ / WAY.
+- Critical warning: some records show ᛇᛞᚦ, but arithmetic/master-transcription context implies ᛈᛞᚦ.
+- 56311 from center word 41/WYNN reaches word52, the WAY-anchor word.
+- 56311 sum 25 is coprime to 153; 4-phase closed period 612.
+- Current interpretation: triangle is a route/control surface, not direct plaintext.
+
+Page32:
+- No validated plaintext found.
+- Red header gives 463 -> prime(463)=3299 and progressive sum 2472.
+- Current best model: red header selects start 3299 and waypoint/stop 2472 through Fibonacci-prime-index spiral.
+- First candidate route segment: 3299->3298->3296->3294->3288->3278->3258->3222->3152->3038->2838->2472.
+- Full 16-cell grid may be a 12+4 Mobius fold candidate.
+- Direct extraction methods tried conceptually did not yield validated plaintext.
+- Page32 grid/Mobius surface must be distinguished from tree/polar page32/full49 surface.
+
+Guardrails:
+- These are source-locked review findings only.
+- No target selected.
+- No route extraction, route stream generation, byte generation, execution, image forensics, OCR, target validation, or solve claim.

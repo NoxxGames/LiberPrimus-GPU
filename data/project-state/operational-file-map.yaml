@@ -7407,3 +7407,123 @@ records:
   category: historical_log
   source_of_truth_rank: 3
   last_meaningful_update_stage: Stage 5DY
+- path: data/project-state/stage5dz-summary.yaml
+  owner_stage: stage-5dz
+  purpose: Stage 5DZ compact Triangle/Page32 bounded-findings source-lock summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records triangle/Page32 counts, closed gates, Stage 5DY preservation, and Stage 5EA routing.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DZ
+- path: data/project-state/stage5dz-bounded-findings-source-lock-register.yaml
+  owner_stage: stage-5dz
+  purpose: Stage 5DZ bounded-findings source-lock register.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Registers the assistant/operator PDD153 and Page32 bounded findings as review-only source-lock metadata.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DZ
+- path: data/project-state/stage5dz-triangle-findings-summary.yaml
+  owner_stage: stage-5dz
+  purpose: Stage 5DZ PDD153 triangle findings summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Summarizes 7 triangle findings without target selection, route extraction, byte generation, execution, or solve claim.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DZ
+- path: data/project-state/stage5dz-page32-findings-summary.yaml
+  owner_stage: stage-5dz
+  purpose: Stage 5DZ Page32 findings summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Summarizes 8 Page32 findings without target selection, route extraction, byte generation, execution, or solve claim.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DZ
+- path: data/operator-console/source-browser/number-fact-overlays/stage5dz-triangle-page32-bounded-findings-overlays.yaml
+  owner_stage: stage-5dz
+  purpose: Stage 5DZ Source Browser NumberFactCard overlay collection.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Adds 12 overlay-only fact cards for reviewability; it does not backfill historical source records directly.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DZ
+- path: data/operator-console/source-browser/number-fact-review-batches/stage5dz-triangle-page32-bounded-findings-result.yaml
+  owner_stage: stage-5dz
+  purpose: Stage 5DZ inserted review-batch result metadata.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records that normal number-fact review batch 3 is deferred to Stage 5EA.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DZ
+- path: python/libreprimus/token_block/stage5dz.py
+  owner_stage: stage-5dz
+  purpose: Stage 5DZ build, validation, summary, and preservation command implementation.
+  expected_update_frequency: on_stage5dz_policy_change
+  mutable_or_reference_only: source
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Implements metadata-only Stage 5DZ records and validators; no route or byte execution.
+  category: reference_only_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DZ
+- path: docs/experiments/stage-5dz-triangle-page32-bounded-findings.md
+  owner_stage: stage-5dz
+  purpose: Stage 5DZ experiment note and guardrail summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents that Stage 5DZ is source-lock enrichment only and that Stage 5EA is next.
+  category: policy_doc
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: Stage 5DZ
+- path: docs/development-logs/2026-06-10-stage-5dz-triangle-page32-bounded-findings.md
+  owner_stage: stage-5dz
+  purpose: Stage 5DZ developer log.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation and validation decisions for Triangle/Page32 source-lock enrichment.
+  category: historical_log
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: Stage 5DZ
+- path: research-log/2026-06-10-stage-5dz-next-stage-decision-summary.md
+  owner_stage: stage-5dz
+  purpose: Stage 5DZ next-stage decision and research summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Summary-only log; no raw findings dump or generated output publication.
+  category: historical_log
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: Stage 5DZ

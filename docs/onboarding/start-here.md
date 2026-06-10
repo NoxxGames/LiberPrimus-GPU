@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5DY - Validation performance, parallel-test discipline, stage-isolation, and non-mutating validator repair, without execution.
-- Current planning focus: Stage 5DZ - Operator/assistant source-lock number-fact review batch 3, without execution.
+- Latest completed stage: Stage 5DZ - Triangle/Page32 bounded-solve findings source-lock and enriched review records, without execution.
+- Current planning focus: Stage 5EA - Operator/assistant source-lock number-fact review batch 3, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -35,11 +35,15 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 - Reviewer: read `docs/onboarding/source-of-truth-map.md`, `docs/experiments/method-retirement-ledger.md`, and the relevant research log.
 
 No page is claimed solved by these docs.
-## Stage 5DY Current Boundary
+## Stage 5DZ Current Boundary
 
-Stage 5DY is the latest completed stage. It repairs validation performance, parallel-test discipline, stage-isolation, shared-schema collision protection, and non-mutating validator policy before the third source-lock number-fact review batch. It records no target selection, creates no activation/readiness decision, and selects Stage 5DZ number-fact review batch 3. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select active planning input, generate byte streams, execute route/token-block/audio/stego/OCR/image/native/VM/spreadsheet/CUDA work, execute community code, validate target classes, use Tor route access, run DWH/hash/preimage search, score, benchmark, rewrite historical source-lock records, backfill source-record facts directly, perform number-fact batch 3, or make solve claims.
+Stage 5DZ is the latest completed stage. It source-locks assistant/operator bounded findings for the PDD153 triangle and Page32 as review-only metadata before the third source-lock number-fact review batch. It records 7 PDD153 triangle findings, 8 Page32 findings, 12 Source Browser overlays, direct-method negative-result notes, future design notes, and Stage 5EA routing. Stage 5DZ does not select a target. Stage 5DZ does not execute routes or produce route streams. Stage 5DZ does not generate byte streams. Stage 5DZ does not perform image forensics/OCR. Stage 5DZ does not accept a solve claim. Number-fact review batch 3 is deferred to Stage 5EA.
 
-Current state: Stage 5DY is complete and Stage 5DZ number-fact review batch 3 is next. Stage 5DY records 6 validation profiles, parallel worker cap 8, full serial pytest default false, stage-isolation repair true, shared-schema collision guard true, non-mutating validator guard true, Stage 5DX preserved true, Stage 5BD run-plan ID count 10, active-lineage record count 8, and all execution gates closed.
+Current state: Stage 5DZ is complete and Stage 5EA number-fact review batch 3 is next. Stage 5DZ preserves Stage 5DY validation profiles, the local 8-worker cap, Stage 5DX/5DW/5DV/5DU, Stage 5DG, Stage 5BD run-plan IDs, active lineage, and all no-active/no-byte/no-execution gates.
+
+## Stage 5DY Boundary History
+
+Stage 5DY repairs validation performance, parallel-test discipline, stage-isolation, shared-schema collision protection, and non-mutating validator policy before the third source-lock number-fact review batch. It records no target selection, creates no activation/readiness decision, and originally selected Stage 5DZ as an inserted pre-batch addendum. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select active planning input, generate byte streams, execute route/token-block/audio/stego/OCR/image/native/VM/spreadsheet/CUDA work, execute community code, validate target classes, use Tor route access, run DWH/hash/preimage search, score, benchmark, rewrite historical source-lock records, backfill source-record facts directly, perform number-fact batch 3, or make solve claims.
 
 ## Stage 5DQ Boundary History
 

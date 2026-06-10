@@ -1,5 +1,9 @@
 # Cipher Catalog
 
+Stage 5DZ does not change cipher-family status. It source-locks assistant/operator bounded findings for the PDD153 triangle and Page32 as review-only enriched records, adds 12 Source Browser NumberFactCard overlays, preserves Stage 5DY validation repair plus active-lineage gates, keeps all targets unselected, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.
+
+Stage 5DY does not change cipher-family status. It repairs validation performance and stage isolation, preserves Stage 5DX review-only overlays, keeps all targets unselected, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.
+
 Stage 5DX does not change cipher-family status. It adds review-only Source Browser NumberFactCard overlays for the second 20-entry visual/red-heading/transform bridge source-lock review batch, preserves Stage 5DW overlay-only support plus Stage 5DV path/performance repairs, keeps all targets unselected, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.
 
 Stage 5DW does not change cipher-family status. It adds review-only Source Browser NumberFactCard overlays for 20 high-signal source-lock/candidate records, supports overlay-only cards for zero-extracted-fact entries, preserves Stage 5DV/5DU/5DT and active-lineage gates, keeps all targets unselected, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.

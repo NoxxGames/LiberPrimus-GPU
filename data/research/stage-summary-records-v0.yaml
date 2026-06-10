@@ -4082,3 +4082,23 @@ records:
   raw_outputs_committed: false
   generated_outputs_committed: false
   notes: Profiles=6; parallel_worker_cap=8; next=stage-5dz.
+- record_type: stage_summary_record
+  stage_id: stage-5dz
+  title: Stage 5DZ - Triangle/Page32 bounded-solve findings source-lock and enriched
+    review records, without execution
+  status: complete
+  category: operator_console_reviewability
+  summary: Source-locked assistant/operator bounded findings for the PDD153 triangle
+    and Page32 as review-only enriched records and Source Browser overlays.
+  key_outputs:
+  - Triangle WAY-anchor, 56311 bridge, ouroboric period, and negative-result review
+    records.
+  - Page32 red-header 3299->2472, 12-cell route segment, 12+4 fold, bridge/design
+    records.
+  - Stage 5DZ Source Browser overlay collection and next-stage routing to Stage 5EA.
+  result_status: bounded_findings_source_locked_review_only
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: triangle_records=7; page32_records=8; overlays=12; next=stage-5ea.

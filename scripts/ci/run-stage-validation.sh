@@ -20,33 +20,39 @@ repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$repo_root"
 
 python_bin="${PYTHON:-python}"
-stage5dy_results_dir="experiments"/"results"/"ci"/"parallel-validation"/"stage5dy"
+parallel_results_root="experiments"/"results"/"ci"/"parallel-validation"
+stage_id="${stage//-/}"
+stage_display="$(echo "$stage_id" | tr '[:lower:]' '[:upper:]' | sed 's/STAGE/Stage /')"
+stage_results_dir="$parallel_results_root"/"$stage_id"
 
 if [[ "$workers" -gt 8 || "$pytest_workers" -gt 8 ]]; then
-  echo "Stage 5DY validation policy caps local workers at 8" >&2
+  echo "Stage validation policy caps local workers at 8" >&2
   exit 2
 fi
 
-if [[ "$stage" != "stage5dy" && "$stage" != "stage-5dy" ]]; then
-  echo "run-stage-validation currently supports Stage 5DY only" >&2
+if [[ "$stage_id" != "stage5dy" && "$stage_id" != "stage5dz" ]]; then
+  echo "run-stage-validation currently supports Stage 5DY and Stage 5DZ" >&2
   exit 2
 fi
 
-mapfile -t stage_tests < <(find tests/python -maxdepth 1 -name 'test_stage5dy_*.py' | sort)
+mapfile -t stage_tests < <(find tests/python -maxdepth 1 -name "test_${stage_id}_*.py" | sort)
+validate_command="validate-$stage_id"
+summary_command="$stage_id-summary"
+stage_module="python/libreprimus/token_block/$stage_id.py"
 
 run_stage_fast() {
-  "$python_bin" -m libreprimus.cli token-block validate-stage5dy
-  "$python_bin" -m libreprimus.cli token-block stage5dy-summary
+  "$python_bin" -m libreprimus.cli token-block "$validate_command"
+  "$python_bin" -m libreprimus.cli token-block "$summary_command"
   "$python_bin" -m libreprimus.cli source-browser validate-index
   if [[ "${#stage_tests[@]}" -gt 0 ]]; then
     "$python_bin" -m pytest -q "${stage_tests[@]}"
-    "$python_bin" -m ruff check python/libreprimus/token_block/stage5dy.py "${stage_tests[@]}"
+    "$python_bin" -m ruff check "$stage_module" "${stage_tests[@]}"
   fi
 }
 
 case "$profile" in
   focused)
-    "$python_bin" -m libreprimus.cli token-block validate-stage5dy
+    "$python_bin" -m libreprimus.cli token-block "$validate_command"
     if [[ "${#stage_tests[@]}" -gt 0 ]]; then
       "$python_bin" -m pytest -q "${stage_tests[@]}"
     fi
@@ -64,7 +70,7 @@ case "$profile" in
       --workers "$workers" \
       --pytest-workers "$pytest_workers" \
       --pytest-mode auto \
-      --results-dir "$stage5dy_results_dir"
+      --results-dir "$stage_results_dir"
     ;;
   full-serial-rare)
     echo "Full serial pytest is a rare fallback. Running only because the profile was explicitly requested."

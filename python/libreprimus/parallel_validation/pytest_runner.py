@@ -167,7 +167,7 @@ def run_pytest(
     results_dir: Path,
     requested_mode: str,
     worker_count: int,
-    timeout_seconds: int = 2700,
+    timeout_seconds: int = 3600,
 ) -> dict[str, Any]:
     """Run pytest using xdist, shard fallback, or serial mode."""
 

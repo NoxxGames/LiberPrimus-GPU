@@ -15,7 +15,7 @@ Set-Location $RepoRoot
 
 $Python = if ($env:PYTHON) { $env:PYTHON } elseif (Test-Path ".\.venv\Scripts\python.exe") { ".\.venv\Scripts\python.exe" } else { "python" }
 $PowerShellExe = if ($PSVersionTable.PSEdition -eq "Core") { "pwsh" } else { "powershell.exe" }
-$Stage5DYResultsDir = Join-Path (Join-Path (Join-Path (Join-Path "experiments" "results") "ci") "parallel-validation") "stage5dy"
+$ParallelResultsRoot = Join-Path (Join-Path (Join-Path "experiments" "results") "ci") "parallel-validation"
 
 function Invoke-StageStep {
     param(
@@ -53,34 +53,38 @@ function Invoke-StageStep {
     }
 }
 
+$StageId = $Stage.ToLowerInvariant() -replace "-", ""
 if ($Workers -gt 8 -or $PytestWorkers -gt 8) {
-    throw "Stage 5DY validation policy caps local workers at 8"
+    throw "Stage validation policy caps local workers at 8"
 }
-
-if ($Stage -ne "stage5dy" -and $Stage -ne "stage-5dy") {
-    throw "run-stage-validation currently supports Stage 5DY only"
+if ($StageId -notin @("stage5dy", "stage5dz")) {
+    throw "run-stage-validation currently supports Stage 5DY and Stage 5DZ"
 }
-
-$stageTestFiles = Get-ChildItem tests/python -Filter "test_stage5dy_*.py" | ForEach-Object { $_.FullName }
+$StageDisplay = $StageId.ToUpperInvariant().Replace("STAGE", "Stage ")
+$stageTestFiles = Get-ChildItem tests/python -Filter "test_${StageId}_*.py" | ForEach-Object { $_.FullName }
+$stageModulePath = "python/libreprimus/token_block/$StageId.py"
+$validateCommand = "validate-$StageId"
+$summaryCommand = "$StageId-summary"
+$stageResultsDir = Join-Path $ParallelResultsRoot $StageId
 
 switch ($Profile) {
     "focused" {
-        Invoke-StageStep "validate Stage 5DY" $Python @("-m", "libreprimus.cli", "token-block", "validate-stage5dy")
+        Invoke-StageStep "validate $StageDisplay" $Python @("-m", "libreprimus.cli", "token-block", $validateCommand)
         if ($stageTestFiles.Count -gt 0) {
             $pytestArgs = @("-m", "pytest", "-q") + $stageTestFiles
-            Invoke-StageStep "pytest Stage 5DY focused files" $Python $pytestArgs
+            Invoke-StageStep "pytest $StageDisplay focused files" $Python $pytestArgs
         }
     }
     "stage-fast" {
-        Invoke-StageStep "validate Stage 5DY" $Python @("-m", "libreprimus.cli", "token-block", "validate-stage5dy")
-        Invoke-StageStep "Stage 5DY summary" $Python @("-m", "libreprimus.cli", "token-block", "stage5dy-summary")
+        Invoke-StageStep "validate $StageDisplay" $Python @("-m", "libreprimus.cli", "token-block", $validateCommand)
+        Invoke-StageStep "$StageDisplay summary" $Python @("-m", "libreprimus.cli", "token-block", $summaryCommand)
         Invoke-StageStep "Source Browser index smoke" $Python @("-m", "libreprimus.cli", "source-browser", "validate-index")
         if ($stageTestFiles.Count -gt 0) {
             $pytestArgs = @("-m", "pytest", "-q") + $stageTestFiles
-            Invoke-StageStep "pytest Stage 5DY focused files" $Python $pytestArgs
+            Invoke-StageStep "pytest $StageDisplay focused files" $Python $pytestArgs
         }
-        $ruffArgs = @("-m", "ruff", "check", "python/libreprimus/token_block/stage5dy.py") + $stageTestFiles
-        Invoke-StageStep "ruff Stage 5DY files" $Python $ruffArgs
+        $ruffArgs = @("-m", "ruff", "check", $stageModulePath) + $stageTestFiles
+        Invoke-StageStep "ruff $StageDisplay files" $Python $ruffArgs
     }
     "local-fast" {
         & $PSCommandPath -Stage $Stage -Profile stage-fast -Workers $Workers -PytestWorkers $PytestWorkers
@@ -105,7 +109,7 @@ switch ($Profile) {
             "-Workers", "$Workers",
             "-PytestWorkers", "$PytestWorkers",
             "-PytestMode", "auto",
-            "-ResultsDir", $Stage5DYResultsDir
+            "-ResultsDir", $stageResultsDir
         ) 7200
     }
     "full-serial-rare" {

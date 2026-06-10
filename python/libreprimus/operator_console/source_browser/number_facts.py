@@ -240,6 +240,7 @@ def entry_matches_fact_filter(entry: SourceBrowserEntry, filter_id: str) -> bool
 
 
 def reviewability_counts(entries: list[SourceBrowserEntry]) -> dict[str, int]:
+    overlays = load_enrichment_overlays()
     counts = {
         "entries_with_extracted_number_facts": 0,
         "entries_with_zero_extracted_number_facts": 0,
@@ -254,12 +255,12 @@ def reviewability_counts(entries: list[SourceBrowserEntry]) -> dict[str, int]:
         "canonical_verification_required_count": 0,
     }
     for entry in entries:
-        cards = normalize_entry_number_facts(entry)
+        cards = normalize_entry_number_facts(entry, overlays)
         if cards:
             counts["entries_with_extracted_number_facts"] += 1
         else:
             counts["entries_with_zero_extracted_number_facts"] += 1
-            if zero_fact_review_state(entry) == "zero_extracted_facts_not_reviewed":
+            if zero_fact_review_state(entry, overlays) == "zero_extracted_facts_not_reviewed":
                 counts["entries_with_zero_extracted_number_facts_not_reviewed"] += 1
         counts["total_number_fact_cards_extracted"] += len(cards)
         if any(card.review_state == "vague_fact_enrichment_needed" for card in cards):

@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DY Validation performance, parallel-test discipline, stage-isolation, and non-mutating validator repair is complete.
+Stage 5DZ Triangle/Page32 bounded-solve findings source-lock and enriched review records is complete.
 
-Next recommended prompt: Stage 5DZ - Operator/assistant source-lock number-fact review batch 3, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5EA - Operator/assistant source-lock number-fact review batch 3, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DZ
+
+Stage 5DZ is an inserted source-lock/enrichment addendum before the normal third number-fact review batch. It records assistant/operator bounded findings for the PDD153 triangle and Page32 as review-only metadata, adds `12` Source Browser NumberFactCard overlays, records the PDD heading canonicalization warning, preserves the candidate-only WAY-anchor arithmetic, records the Page32 red-header `3299 -> 2472` route-selection candidate, records direct-method negative-result notes, and adds future experiment design notes.
+
+Local Stage 5DZ summary: triangle findings `7`, Page32 findings `8`, overlays `12`, Source Browser validation errors `0`, Stage 5DY validation profiles preserved `6`, Stage 5BD run-plan IDs `10`, active-lineage records `8`, historical source-lock rewrites `false`, number-fact review batch 3 performed `false`, target selected `false`, route extraction `false`, route streams generated `false`, byte streams generated `false`, execution performed `false`, image forensics/OCR `false`, solve claim `false`, and next stage `Stage 5EA`.
+
+Stage 5DZ source-locks review findings only. It does not select a target, execute routes, produce route streams, generate byte streams, run image forensics/OCR/target validation, accept plaintext, rewrite historical source-lock records, perform the normal number-fact review batch 3, or make solve claims.
 
 ## Completed in Stage 5DY
 

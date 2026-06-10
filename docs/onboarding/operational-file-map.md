@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5DY adds validation performance and stage-isolation repair records and keeps the YAML map as the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5DZ adds Triangle/Page32 bounded-findings source-lock and enriched review records while keeping the YAML map as the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 
@@ -43,15 +43,19 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5DY" `
-  --expected-next-stage "Stage 5DZ"
+  --expected-latest-stage "Stage 5DZ" `
+  --expected-next-stage "Stage 5EA"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5DY" `
-  --expected-next-stage "Stage 5DZ"
+  --expected-latest-stage "Stage 5DZ" `
+  --expected-next-stage "Stage 5EA"
 ```
+
+## Stage 5DZ Coverage
+
+The operational file map includes Stage 5DZ Triangle/Page32 bounded-findings source-lock records, Page32 and PDD153 review summaries, Source Browser overlay and review-batch result records, Source Browser loadability evidence, ChatGPT context update evidence, preservation records, closed-gate proofs, developer log, experiment note, and research log. Stage 5DZ source-locks assistant/operator bounded findings for PDD153 triangle and Page32. Stage 5DZ does not select a target. Stage 5DZ does not execute routes or produce route streams. Stage 5DZ does not generate byte streams. Stage 5DZ does not perform image forensics/OCR. Stage 5DZ does not accept a solve claim. Number-fact review batch 3 is deferred to Stage 5EA. Raw third-party files, generated diagnostics, and local `codex-output/**` handoffs remain ignored.
 
 ## Stage 5DY Coverage
 
