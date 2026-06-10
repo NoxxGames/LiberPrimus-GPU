@@ -20,10 +20,10 @@ def test_doc_staleness_validation_consumes_stage5ab_records() -> None:
     assert record["next_stage_expected_prefix"] == "Stage 5AD"
 
 
-def test_operational_docs_use_stage5dw_latest_and_stage5dx_next() -> None:
+def test_operational_docs_use_stage5dx_latest_and_stage5dy_next() -> None:
     status = Path("STATUS.md").read_text(encoding="utf-8")
     staged_plan = Path("docs/roadmap/staged-plan.md").read_text(encoding="utf-8")
-    assert "Stage 5DW Source-lock number-fact review batch 001 is complete" in status
-    assert "Next recommended prompt: Stage 5DX" in status
-    assert "Latest completed stage: Stage 5DW" in staged_plan
-    assert "Current planning focus: Stage 5DX" in staged_plan
+    assert "Stage 5DX Source-lock number-fact review batch 002 is complete" in status
+    assert "Next recommended prompt: Stage 5DY" in status
+    assert "Latest completed stage: Stage 5DX" in staged_plan
+    assert "Current planning focus: Stage 5DY" in staged_plan

@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DW Source-lock number-fact review batch 001 is complete.
+Stage 5DX Source-lock number-fact review batch 002 is complete.
 
-Next recommended prompt: Stage 5DX - Operator/assistant source-lock number-fact review batch 2, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5DY - Operator/assistant source-lock number-fact review batch 3, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5DX
+
+Stage 5DX completes the second selected source-lock number-fact review batch after the Stage 5DW high-signal overlay pass. It adds `23` review-only NumberFactCard enrichment overlays for `20` selected visual/red-heading/transform bridge source-lock entries, including overlay-only cards for older records with no extracted number facts.
+
+Local Stage 5DX summary: Source Browser entries loaded `1546`, committed records scanned `1545`, fact cards after Stage 5DX `80`, reviewed entries `20`, overlays added `23`, overlay-only cards required `23`, Source Browser validation errors `0`, warnings `551`, missing paths retained as reviewability warnings `418`, spurious root image/document paths after repair `0/0`, duplicate present+missing path pairs `0`, Stage 5BD run-plan IDs `10`, active-lineage records `8`, parallel worker cap `8`, historical source-lock records rewritten `false`, number-fact backfill directly in source records `false`, target selected `false`, route extracted `false`, byte streams generated `false`, execution performed `false`, solve claim `false`, and next stage `Stage 5DY`.
+
+Stage 5DX is reviewability overlay metadata only. It does not rewrite historical source-lock records, perform direct number-fact backfill, select a target, create Deep Research acceptance, satisfy the combined gate, authorize activation, generate byte streams, run route extraction, OCR/image/audio/stego/CUDA/scoring/benchmarks, execute community/native/VM/spreadsheet/HTML tooling, access Tor/network targets, expand the website, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DW
 

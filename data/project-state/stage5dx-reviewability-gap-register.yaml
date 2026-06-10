@@ -1,0 +1,17 @@
+stage_id: stage-5dx
+stage_title: Stage 5DX - Source-lock number-fact review batch 002, visual/red-heading/transform
+  bridge enrichment overlays, without execution
+prompt_type: codex_metadata_and_operator_console_reviewability_implementation
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: stage5dx_reviewability_gap_register
+schema: schemas/project-state/stage5dx-reviewability-gap-register-v0.schema.json
+remaining_gap: continue_number_fact_review_batches
+next_batch_recommended: number_fact_review_batch_003
+overlay_count_deviation: false
+target_priority_decision_created_now: false

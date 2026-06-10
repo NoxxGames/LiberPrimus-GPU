@@ -1,0 +1,26 @@
+stage_id: stage-5dx
+stage_title: Stage 5DX - Source-lock number-fact review batch 002, visual/red-heading/transform
+  bridge enrichment overlays, without execution
+prompt_type: codex_metadata_and_operator_console_reviewability_implementation
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: stage5dx_source_browser_loadability_summary
+schema: schemas/project-state/stage5dx-source-browser-loadability-summary-v0.schema.json
+source_browser_entries_loaded: 1546
+source_browser_records_scanned: 1545
+source_browser_validation_error_count: 0
+source_browser_warning_count: 551
+source_browser_missing_paths_after: 418
+missing_paths_retained_as_warnings: true
+fact_card_count_after_stage5dx: 80
+spurious_root_image_paths_after: 0
+spurious_root_document_paths_after: 0
+duplicate_present_missing_path_pairs_after: 0
+source_root_relative_resolved_paths: 2085
+stage5dv_path_canonicalization_preserved: true
+stage5dw_overlay_only_support_preserved: true

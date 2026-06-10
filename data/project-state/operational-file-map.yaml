@@ -7185,3 +7185,117 @@ records:
   category: historical_log
   source_of_truth_rank: 3
   last_meaningful_update_stage: Stage 5DW
+- path: data/project-state/stage5dx-summary.yaml
+  owner_stage: stage-5dx
+  purpose: Stage 5DX compact number-fact review batch 002 summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_review
+  notes: Reviewability overlay metadata only; no source-lock rewrite, target selection,
+    route extraction, byte generation, execution, or solve claim.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DX
+- path: data/operator-console/source-browser/number-fact-overlays/stage5dx-review-batch-002-visual-transform-overlays.yaml
+  owner_stage: stage-5dx
+  purpose: Stage 5DX visual/red-heading/transform review-only NumberFactCard overlay collection.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_review
+  notes: Adds overlays for 20 selected records without mutating historical source-lock
+    records.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DX
+- path: data/operator-console/source-browser/number-fact-review-batches/stage5dx-review-batch-002-visual-transform-result.yaml
+  owner_stage: stage-5dx
+  purpose: Stage 5DX review batch 002 result record.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_review
+  notes: Records selected visual/red-heading/transform batch policy and review-only
+    overlay outcome.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DX
+- path: data/operator-console/source-browser/number-fact-review-batches/stage5dx-review-batch-002-entry-status.yaml
+  owner_stage: stage-5dx
+  purpose: Stage 5DX review batch 002 per-entry review-status record.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_review
+  notes: Marks the 20 selected records reviewed via overlays only and not usable
+    for decisions now.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DX
+- path: data/project-state/stage5dx-source-browser-loadability-summary.yaml
+  owner_stage: stage-5dx
+  purpose: Stage 5DX Source Browser loadability and path-hygiene summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_console
+  notes: Preserves Stage 5DV path-canonicalization invariants after batch-002 overlay
+    records.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DX
+- path: data/token-block/stage5dx-no-token-block-execution-proof.yaml
+  owner_stage: stage-5dx
+  purpose: Stage 5DX no-execution guardrail proof.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Keeps no-active/no-byte/no-execution gates closed.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DX
+- path: data/source-harvester/stage5dx-codex-handoff-policy.yaml
+  owner_stage: stage-5dx
+  purpose: Stage 5DX Codex handoff policy preservation record.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Preserves `codex-output` handoff root and keeps `codex_output` deprecated.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5DX
+- path: docs/development-logs/2026-06-10-stage-5dx-number-fact-review-batch-002.md
+  owner_stage: stage-5dx
+  purpose: Stage 5DX developer log.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation and validation decisions for the second overlay
+    batch.
+  category: historical_log
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: Stage 5DX
+- path: research-log/2026-06-10-stage-5dx-next-stage-decision-summary.md
+  owner_stage: stage-5dx
+  purpose: Stage 5DX next-stage decision and research summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Summary-only log; no raw overlay dump or generated output publication.
+  category: historical_log
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: Stage 5DX

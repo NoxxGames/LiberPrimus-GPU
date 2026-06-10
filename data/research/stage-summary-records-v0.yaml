@@ -4043,3 +4043,23 @@ records:
   generated_outputs_committed: false
   notes: Reviewed entries=20, overlays=37, fact_cards_after=53. Historical source
     locks were not rewritten.
+- record_type: stage_summary_record
+  stage_id: stage-5dx
+  title: Stage 5DX - Source-lock number-fact review batch 002, visual/red-heading/transform
+    bridge enrichment overlays, without execution
+  status: complete
+  category: operator_console_reviewability
+  summary: Added review-only NumberFactCard overlays for the second 20-entry source-lock
+    number-fact review batch.
+  key_outputs:
+  - Stage 5DX visual/red-heading/transform overlay collection with 23 review-only
+    facts.
+  - Stage 5DX records, validators, docs, tests, and handoff summary.
+  - Stage 5DY selected as the next number-fact review batch.
+  result_status: reviewability_overlays_only
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: Reviewed entries=20, overlays=23, fact_cards_after=80. Historical source
+    locks were not rewritten.

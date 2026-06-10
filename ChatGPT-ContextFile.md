@@ -2,11 +2,11 @@
 
 ## Current Project State
 
-Current completed stage: Stage 5DW - Source-lock number-fact review batch 001, high-signal enrichment overlays, without execution.
+Current completed stage: Stage 5DX - Source-lock number-fact review batch 002, visual/red-heading/transform bridge enrichment overlays, without execution.
 
-Current work after Stage 5DW: Stage 5DX - Operator/assistant source-lock number-fact review batch 2, without execution.
+Current work after Stage 5DX: Stage 5DY - Operator/assistant source-lock number-fact review batch 3, without execution.
 
-Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW then completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DW does not backfill number facts directly, does not rewrite historical source-lock records, and does not select a target.
+Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DX completed the second visual/red-heading/transform bridge review batch as overlay metadata only. Stage 5DX does not backfill number facts directly, does not rewrite historical source-lock records, does not select a target, and does not extract routes.
 
 The canonical Codex handoff root is `codex-output`. The deprecated `codex_output` root must remain absent. Completion summaries under `codex-output/**` are local ignored handoffs and must not be committed.
 
@@ -127,7 +127,7 @@ StarArtifacts strongest observations:
 - Source-locked does not mean review-ready.
 - A useful fact card must explain value, type, expression, components, relation, why stored, source anchor, verification status, risks, and crosslinks.
 - Older zero-fact entries are usually not reviewed, not necessarily number-free.
-- Stage 5DW completed the high-signal 20-entry review batch 001 after the Stage 5DV repair; Stage 5DX should continue with the next operator/assistant review batch.
+- Stage 5DW completed the high-signal 20-entry review batch 001 after the Stage 5DV repair; Stage 5DX completed the visual/red-heading/transform 20-entry review batch 002. Stage 5DY should continue with the next operator/assistant review batch.
 
 ## Governance And Preservation
 
@@ -168,3 +168,13 @@ StarArtifacts strongest observations:
 - Overlay-only fact cards are now supported, so older zero-extracted-fact records can display review facts without source-record mutation.
 - Key added fact families: Page32 red-header 2472; Page32 463->3299/3301; NO-F section-flow 1433/2883/1894/1814/695/91; LP doublets 89/4337; LP1 word count 464->3301; artwork/title 449/311; solved-koan 1229/337/199/1033; page54-57 308/154; Page32 Fibonacci mod29 primes; Final.jpg road/way 3301/991/1229; prime-index 761/167/464/1033/3301; RGB185=3301 plus 1033/1103 correction; Instar parable product; Instar 761/167; Interconnectedness 772/277/1049; Ouroboros see-also GP scan; RedRunes/Gateless Gate 2/11/3/227/742/682/155/551; BigGaps 569/229/109; StarArtifacts 254/2540/641/709; red-heading GP491 family.
 - All remain review-only; no target selection, route extraction, byte generation, execution, OCR/image forensics/audio/stego/Tor/network/CUDA/scoring, or solve claim.
+
+## Stage 5DX - Number-fact review batch 002
+
+- Stage 5DX enriched 20 selected visual/red-heading/transform source-lock entries using NumberFactCard overlays only.
+- Stage 5DX did not rewrite historical source locks, select a target, run routes, generate bytes, execute code, run OCR/image forensics, or make solve claims.
+- RedRunes secondary facts preserved: ENLIGHTENED/MUMON'S COMMENT 155/551, red prime-sum 742, key/speech-tongue 682, first-two-rune sum 31.
+- BigGaps/StarArtifacts facts preserved: red-subset sum 229, gap metrics 73/109/129 with 109=prime(29), tree offsets 641/709 with prime-index gap 11, stardust phrase 2540=254*10, Mayfly 72/600 twin-prime gaps, ICC boundary pages 00-16 vs 17-74 with 2576-byte profile claim.
+- Red-heading/Mobius facts preserved: Page15 instruction phrase primes, DIVINITY WITHIN 491/563/1229 crosslink, YGGDRASIL spelling 491/564 warning, A POSTLUDE 1/8 structure, Mobius/totient zero-class 14-token partition, page0 DIVINITY WITHIN/A CROSSROADS 491.
+- PDD/Disk/Ouroboros facts preserved: 56311 net +25 over modulus 153, gcd(25,153)=1, 4-phase period 612; OUROBOROS 167 minus 153 gives offset 14; Disk 56311 from center 41/WYNN reaches word52/WAY.
+- Stage 5DY should continue number-fact review batch 003 unless a blocking Source Browser issue appears.

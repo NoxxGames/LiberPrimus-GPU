@@ -16,6 +16,8 @@ Stage 5DV repairs Source Browser responsiveness and path hygiene before the firs
 
 Stage 5DW implements the first high-signal source-lock number-fact review batch. It adds 37 review-only NumberFactCard overlays for 20 selected source-lock/candidate records and supports overlay-only fact cards, so entries with zero extracted number facts can display reviewed facts without mutating their historical source-lock records.
 
+Stage 5DX implements the second Source Browser number-fact review batch for selected visual/red-heading/transform bridge records. It adds 23 review-only NumberFactCard overlays for 20 selected entries, preserves Stage 5DW overlay-only support, validates 1546 Source Browser entries with zero validation errors, and still does not rewrite historical source-lock records, backfill source records directly, select a target, authorize execution, or make a solve claim.
+
 Blank table status values are displayed as `unspecified`. This means the source record did not contain `source_status`, `status`, `ready_state`, or `review_state`; it does not mean the record is incomplete, and the GUI does not rewrite source-lock records to invent statuses.
 
 ## Components
@@ -51,6 +53,8 @@ Stage 5DU overlays are review-only enrichments for community visual-route candid
 Stage 5DV path policy records live in `data/operator-console/source-browser/path-canonicalization-policy.yaml`, `performance-policy.yaml`, and `cache-policy.yaml`. The canonical LP page image root remains `third_party/CiadaSolversIddqd_v2/liber-primus__images--full`; this spelling matches the current local source root and must not be silently changed.
 
 Stage 5DW overlays live in `data/operator-console/source-browser/number-fact-overlays/stage5dw-review-batch-001-high-signal-overlays.yaml`. Overlay-only cards are review aids loaded from committed overlay metadata; they must stay `usable_for_decision_now=false` and must not become target-priority evidence, route seeds, source-lock rewrites, byte streams, execution input, or solve claims.
+
+Stage 5DX overlays live in `data/operator-console/source-browser/number-fact-overlays/stage5dx-review-batch-002-visual-transform-overlays.yaml`. They are the same review-only overlay type as Stage 5DW, focused on the second selected visual/red-heading/transform bridge batch, and must not become target-priority evidence, route seeds, source-lock rewrites, byte streams, execution input, or solve claims.
 
 ## Validation
 
@@ -138,6 +142,20 @@ Stage 5DW validates number-fact review batch 001 through:
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dw-overlay-only-fact-cards
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dw-source-browser-loadability
 .\.venv\Scripts\python.exe -m libreprimus.cli operator-console validate-source-index
+.\.venv\Scripts\python.exe -m libreprimus.cli source-browser validate-index
+.\.venv\Scripts\python.exe -m libreprimus.cli source-browser validate-paths
+```
+
+Stage 5DX validates number-fact review batch 002 through:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5dx
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dx
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block stage5dx-summary
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dx-review-batch-selection
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dx-number-fact-overlays
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dx-overlay-only-support
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dx-source-browser-loadability
 .\.venv\Scripts\python.exe -m libreprimus.cli source-browser validate-index
 .\.venv\Scripts\python.exe -m libreprimus.cli source-browser validate-paths
 ```

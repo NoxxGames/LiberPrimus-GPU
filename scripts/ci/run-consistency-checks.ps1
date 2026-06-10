@@ -25,14 +25,14 @@ try {
     $Stage5AHOut = Join-Path $TempDir "stage5ah-doc-staleness"
     New-Item -ItemType Directory -Path $Stage5AHOut | Out-Null
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
-        --expected-latest-stage "Stage 5DW" `
-        --expected-next-stage "Stage 5DX" `
+        --expected-latest-stage "Stage 5DX" `
+        --expected-next-stage "Stage 5DY" `
         --out (Join-Path $Stage5AHOut "stale_stage_ledger_report.json")
     & $Python -m libreprimus.cli consistency check-operational-file-map-coverage `
         --out (Join-Path $Stage5AHOut "operational_file_map_coverage_report.json")
     & $Python -m libreprimus.cli consistency check-current-next-stage-consistency `
-        --expected-latest-stage "Stage 5DW" `
-        --expected-next-stage "Stage 5DX" `
+        --expected-latest-stage "Stage 5DX" `
+        --expected-next-stage "Stage 5DY" `
         --out (Join-Path $Stage5AHOut "current_next_stage_report.json")
 @"
 import json
@@ -47,14 +47,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DW",
+            expected_latest_stage="Stage 5DX",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DW",
+            "expected_latest_stage": "Stage 5DX",
             "finding_count": len(findings),
             "findings": findings,
         },
@@ -3337,6 +3337,29 @@ Path(r"$Stage5AXResultsRoot").mkdir(parents=True, exist_ok=True)
     & $Python -m libreprimus.cli source-browser validate-paths
     git check-ignore -q "codex-output/stage5dw-codex-completion.md"
     if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DW" }
+
+    Write-Host "Validating Stage 5DX number-fact review batch overlay records"
+    & $Python -m libreprimus.cli token-block validate-stage5dx
+    & $Python -m libreprimus.cli token-block stage5dx-summary
+    & $Python -m libreprimus.cli token-block validate-stage5dx-review-batch-selection
+    & $Python -m libreprimus.cli token-block validate-stage5dx-number-fact-overlays
+    & $Python -m libreprimus.cli token-block validate-stage5dx-overlay-only-support
+    & $Python -m libreprimus.cli token-block validate-stage5dx-source-browser-loadability
+    & $Python -m libreprimus.cli token-block validate-stage5dx-stage5dw-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dx-stage5dv-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dx-stage5du-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dx-stage5dg-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dx-stage5bd-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dx-active-lineage-preservation
+    & $Python -m libreprimus.cli token-block validate-stage5dx-sidecar-gates
+    & $Python -m libreprimus.cli token-block validate-stage5dx-handoff-continuity
+    & $Python -m libreprimus.cli token-block validate-stage5dx-credential-redaction-policy
+    & $Python -m libreprimus.cli token-block validate-stage5dx-governance-scope
+    & $Python -m libreprimus.cli operator-console validate-source-index
+    & $Python -m libreprimus.cli source-browser validate-index
+    & $Python -m libreprimus.cli source-browser validate-paths
+    git check-ignore -q "codex-output/stage5dx-codex-completion.md"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5DX" }
 
     Write-Host "Running result-store consistency suite"
     & $Python -m libreprimus.cli consistency check-result-store --allow-missing-generated --allow-warnings

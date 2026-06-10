@@ -1,0 +1,160 @@
+stage_id: stage-5dx
+stage_title: Stage 5DX - Source-lock number-fact review batch 002, visual/red-heading/transform
+  bridge enrichment overlays, without execution
+prompt_type: codex_metadata_and_operator_console_reviewability_implementation
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: source_browser_number_fact_review_batch_entry_status
+schema: schemas/operator-console/stage5dx-source-browser-number-fact-entry-status-v0.schema.json
+review_batch_id: number_fact_review_batch_002_visual_transform
+entry_count: 20
+entries:
+- source_record_path: data/historical-route/stage5du-red-runes-enlightened-mumons-comment-155-551-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: &id001
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_count: 2
+  fact_card_count_after_overlay: 2
+- source_record_path: data/historical-route/stage5du-red-runes-prime742-continue-this-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 2
+- source_record_path: data/historical-route/stage5du-red-runes-key682-speech-tongue-sentence-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 2
+  fact_card_count_after_overlay: 2
+- source_record_path: data/historical-route/stage5du-red-runes-first-two-indices31-mumon-word-position-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5du-big-gap-red-subset-one-based-sum-229-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5du-lp-line-gap-metric-73-109-129-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5du-wing-tree-641-709-prime-index-gap11-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 2
+  fact_card_count_after_overlay: 2
+- source_record_path: data/historical-route/stage5du-stardust-phrase-gp2540-threshold254-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5du-mayfly-star-artifact-72-600-twinprime-gap-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5du-lp-page-icc-profile-boundary-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5du-page15-your-truth-crib-pointer-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 2
+- source_record_path: data/historical-route/stage5du-divinity-within-491-563-1229-crosslink-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5du-dead-tree-yggdrasil-gp491-bridge-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5du-page54-55-a-postlude-red-heading-candidate-v1.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5du-mobius-totient-zero-class-gp-alphabet-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 2
+- source_record_path: data/historical-route/stage5du-page0-divinity-within-crossroads-gp491-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5ds-pdd153-56311-ouroboric-cycle-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5ds-pdd153-ouroboros-167-mod153-offset14-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5dn-disk-56311-wynn-way-bridge-v1.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
+- source_record_path: data/historical-route/stage5ds-ouroboros-gp-167-music-cycle-candidate-v0.yaml
+  review_status: reviewed_overlay_added
+  entry_historical_source_lock_rewritten: false
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_count: 1
+  fact_card_count_after_overlay: 1
