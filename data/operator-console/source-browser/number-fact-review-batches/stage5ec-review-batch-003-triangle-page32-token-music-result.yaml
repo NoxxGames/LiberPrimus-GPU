@@ -1,0 +1,47 @@
+stage_id: stage-5ec
+stage_title: Stage 5EC - Source-lock number-fact review batch 003, triangle / Page32
+  / token-static / music / self-reference enrichment overlays, without execution
+prompt_type: assistant_or_operator_review_then_codex_overlay_update
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: source_browser_number_fact_review_batch_result
+schema: schemas/operator-console/stage5ec-source-browser-number-fact-review-batch-result-v0.schema.json
+review_batch_id: number_fact_review_batch_003_triangle_page32_token_music
+review_batch_selection_policy: assistant_operator_triangle_page32_token_music_self_reference_batch
+reviewed_entry_count: 20
+overlay_count: 25
+overlays_added_now: true
+historical_source_lock_records_rewritten: false
+source_lock_evidence_updated_now: false
+number_fact_backfill_performed_now: false
+review_scope: selected_20_source_records_only
+review_result_status: overlay_enrichment_complete
+selected_source_record_paths:
+- data/historical-route/stage5dl-number-triangle-v1-source-lock.yaml
+- data/historical-route/stage5dl-triangle-way-anchor-source-lock.yaml
+- data/historical-route/stage5dl-triangle-prime-mask-source-lock.yaml
+- data/historical-route/stage5dl-triangle-2016-prime-layer-source-lock.yaml
+- data/historical-route/stage5dl-triangle-fibonacci-prime-index-source-lock.yaml
+- data/historical-route/stage5dl-triangle-56311-wynn-way-source-lock.yaml
+- data/historical-route/stage5dm-page32-moebius-fibonacci-prime-index-spiral.yaml
+- data/historical-route/stage5ds-token-block-machine-code-static-sanity-candidate-v0.yaml
+- data/historical-route/stage5ds-token-block-base-neighbor-static-scan-v0.yaml
+- data/historical-route/stage5ds-interconnectedness-table-canon-29-note-gp-mapping-v1.yaml
+- data/historical-route/stage5ds-instar-205-beats-prime205-1259-poem-line-v1.yaml
+- data/historical-route/stage5ds-interconnectedness-guitar-tab-prime-fret-strings-v1.yaml
+- data/historical-route/stage5ds-interconnectedness-547-beats-137-measures-v0.yaml
+- data/historical-route/stage5ds-strange-loop-gp463-page32-bridge-candidate-v0.yaml
+- data/historical-route/stage5ds-self-reference-gp529-square23-candidate-v0.yaml
+- data/historical-route/stage5ds-self-fulfilling-prophecy-gp841-square29-candidate-v0.yaml
+- data/historical-route/stage5ds-infinite-loop-gp409-page33-dot-bridge-candidate-v0.yaml
+- data/historical-route/stage5ds-three-hares-rotational-shared-parts-candidate-v0.yaml
+- data/historical-route/stage5ds-mobius-ouroboros-one-boundary-transform-candidate-v1.yaml
+- data/historical-route/stage5ds-token-block-vm-or-table-surface-candidate-v0.yaml
+overlay_file: data/operator-console/source-browser/number-fact-overlays/stage5ec-review-batch-003-triangle-page32-token-music-overlays.yaml
+facts_added_directly_to_source_records: false
+facts_added_as_overlays: true

@@ -12,5 +12,6 @@ def test_chatgpt_context_contains_validation_policy() -> None:
 
     assert "Stage 5DY inserted validation repair before the next review batch" in text
     assert "Stage 5EB inserted validation finalization plus 10-worker policy repair" in text
-    assert "Stage 5EC should continue with number-fact review batch 003" in text
+    assert "Stage 5EC completed number-fact review batch 003" in text
+    assert "Stage 5ED should continue with number-fact review batch 004" in text
     assert summary["stage5dy_validation_policy_section_added"] is True

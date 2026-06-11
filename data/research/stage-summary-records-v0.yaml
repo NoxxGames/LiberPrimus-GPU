@@ -4144,3 +4144,22 @@ records:
   raw_outputs_committed: false
   generated_outputs_committed: false
   notes: records=23; schemas=22; worker_cap=10; next=stage-5ec.
+- record_type: stage_summary_record
+  stage_id: stage-5ec
+  title: Stage 5EC - Source-lock number-fact review batch 003, triangle / Page32 /
+    token-static / music / self-reference enrichment overlays, without execution
+  status: complete
+  category: operator_console_reviewability
+  summary: Added review-only NumberFactCard overlays for the third selected 20-entry
+    source-lock number-fact review batch.
+  key_outputs:
+  - Stage 5EC triangle/Page32/token/music overlay collection with 25 review-only facts.
+  - Stage 5EC review-batch, preservation, loadability, scope, and validation records.
+  - Stage 5ED selected as the next number-fact review batch.
+  result_status: reviewability_overlays_only
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: Reviewed entries=20, overlays=25, fact_cards_after=117. Historical source
+    locks were not rewritten.

@@ -1,0 +1,1020 @@
+stage_id: stage-5ec
+stage_title: Stage 5EC - Source-lock number-fact review batch 003, triangle / Page32
+  / token-static / music / self-reference enrichment overlays, without execution
+prompt_type: assistant_or_operator_review_then_codex_overlay_update
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: source_browser_number_fact_enrichment_overlay_collection
+schema: schemas/operator-console/stage5ec-source-browser-number-fact-overlay-collection-v0.schema.json
+review_batch_id: number_fact_review_batch_003_triangle_page32_token_music
+review_batch_selection_policy: assistant_operator_triangle_page32_token_music_self_reference_batch
+reviewed_entry_count: 20
+overlay_count: 25
+overlay_only_fact_cards_supported_required: true
+review_state: overlay_enriched_fact
+historical_source_lock_records_rewritten: false
+source_lock_evidence_updated_now: false
+raw_source_files_committed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+execution_performed: false
+selected_source_record_paths:
+- data/historical-route/stage5dl-number-triangle-v1-source-lock.yaml
+- data/historical-route/stage5dl-triangle-way-anchor-source-lock.yaml
+- data/historical-route/stage5dl-triangle-prime-mask-source-lock.yaml
+- data/historical-route/stage5dl-triangle-2016-prime-layer-source-lock.yaml
+- data/historical-route/stage5dl-triangle-fibonacci-prime-index-source-lock.yaml
+- data/historical-route/stage5dl-triangle-56311-wynn-way-source-lock.yaml
+- data/historical-route/stage5dm-page32-moebius-fibonacci-prime-index-spiral.yaml
+- data/historical-route/stage5ds-token-block-machine-code-static-sanity-candidate-v0.yaml
+- data/historical-route/stage5ds-token-block-base-neighbor-static-scan-v0.yaml
+- data/historical-route/stage5ds-interconnectedness-table-canon-29-note-gp-mapping-v1.yaml
+- data/historical-route/stage5ds-instar-205-beats-prime205-1259-poem-line-v1.yaml
+- data/historical-route/stage5ds-interconnectedness-guitar-tab-prime-fret-strings-v1.yaml
+- data/historical-route/stage5ds-interconnectedness-547-beats-137-measures-v0.yaml
+- data/historical-route/stage5ds-strange-loop-gp463-page32-bridge-candidate-v0.yaml
+- data/historical-route/stage5ds-self-reference-gp529-square23-candidate-v0.yaml
+- data/historical-route/stage5ds-self-fulfilling-prophecy-gp841-square29-candidate-v0.yaml
+- data/historical-route/stage5ds-infinite-loop-gp409-page33-dot-bridge-candidate-v0.yaml
+- data/historical-route/stage5ds-three-hares-rotational-shared-parts-candidate-v0.yaml
+- data/historical-route/stage5ds-mobius-ouroboros-one-boundary-transform-candidate-v1.yaml
+- data/historical-route/stage5ds-token-block-vm-or-table-surface-candidate-v0.yaml
+overlays:
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: &id001
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5ec_pdd153_triangle_t17_center41_overlay
+  source_record_path: data/historical-route/stage5dl-number-triangle-v1-source-lock.yaml
+  source_fact_id: pdd153_t17_center41
+  fact_class: pdd_153_triangle_number_facts
+  display_label: PDD triangle body has 153 words = T17, arranged as 17 rows with center
+    word 41
+  short_label: PDD153 = T17; center=41
+  value: 153
+  values:
+  - 153
+  - 17
+  - 41
+  value_type: word_count
+  operation_type: source_observation
+  expression: 153 = 17*18/2; 17-row triangular surface; center word position claimed
+    as 41.
+  relation: Defines the core PDD-153 triangular route surface used by later WAY /
+    56311 / prime-mask candidates.
+  why_stored: This is the base surface fact; without it, later route/offset facts
+    are not reviewable.
+  verification_status: canonical_transcript_required
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5dl-number-triangle-v1-source-lock.yaml
+  crosslinks:
+  - pdd_153_triangle_word_prime_route_v1
+  - pdd_153_triangle_way_anchor_route_v1
+  risk_notes:
+  - exact_153_word_window_must_be_canonicalized
+  - heading_boundary_policy_required
+  - route_extraction_not_performed
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_pdd153_single_rune_positions_overlay
+  source_record_path: data/historical-route/stage5dl-number-triangle-v1-source-lock.yaml
+  source_fact_id: pdd153_single_rune_positions
+  fact_class: pdd_153_triangle_number_facts
+  display_label: PDD153 single-rune word positions are 25, 41, 53, 91, and 106
+  short_label: PDD single-rune positions 25/41/53/91/106
+  value: 41
+  values:
+  - 25
+  - 41
+  - 53
+  - 91
+  - 106
+  value_type: sequence
+  operation_type: source_observation
+  expression: Source-lock records single-rune word positions as 25, 41, 53, 91, 106.
+  relation: Candidate anchors for bounded route starts/controls, including the center-WYNN
+    position 41.
+  why_stored: These are compact anchor positions likely to matter in route design
+    and should be visible as fact cards.
+  verification_status: canonical_transcript_required
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5dl-number-triangle-v1-source-lock.yaml
+  crosslinks:
+  - pdd_153_triangle_56311_wynn_way_route_v1
+  risk_notes:
+  - canonical_transcription_required
+  - anchor_selection_must_be_controlled
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_pdd153_way_anchor_heading_minus_word52_overlay
+  source_record_path: data/historical-route/stage5dl-triangle-way-anchor-source-lock.yaml
+  source_fact_id: pdd153_way_anchor_heading_minus_reversed_word52
+  fact_class: pdd_153_triangle_number_facts
+  display_label: PDD heading values 13/23/2 minus reversed word52 values 6/28/5 produce
+    WAY values 7/24/26
+  short_label: PDD heading - reverse(word52) = WAY
+  value: 52
+  values:
+  - 13
+  - 23
+  - 2
+  - 5
+  - 28
+  - 6
+  - 6
+  - 28
+  - 5
+  - 7
+  - 24
+  - 26
+  - 52
+  value_type: sequence
+  operation_type: sequence_mapping
+  expression: '[13,23,2] - [6,28,5] mod 29 = [7,24,26] = WAY.'
+  relation: Strong instruction-level partial result for the PDD-153 triangle surface.
+  why_stored: This is the cleanest triangle arithmetic result and must remain reviewable
+    without opening route execution.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5dl-triangle-way-anchor-source-lock.yaml
+  crosslinks:
+  - pdd_153_triangle_word_prime_route_v1
+  - pdd_153_triangle_56311_wynn_way_route_v1
+  risk_notes:
+  - heading_transcription_must_be_P_D_TH_not_EOH_D_TH
+  - exact_word52_transcription_required
+  - accepted_as_plaintext_false
+  - route_extraction_not_performed
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_pdd153_prime_mask_present_missing_overlay
+  source_record_path: data/historical-route/stage5dl-triangle-prime-mask-source-lock.yaml
+  source_fact_id: pdd153_prime_mask_present_missing_under153
+  fact_class: pdd_153_triangle_number_facts
+  display_label: PDD153 prime mask records 20 present primes and 16 missing primes
+    under 153
+  short_label: 'PDD prime mask: 20 present / 16 missing'
+  value: 20
+  values:
+  - 20
+  - 16
+  - 2
+  - 3
+  - 5
+  - 7
+  - 11
+  - 13
+  - 17
+  - 19
+  - 23
+  - 29
+  - 31
+  - 37
+  - 41
+  - 43
+  - 47
+  - 53
+  - 59
+  - 61
+  - 67
+  - 71
+  - 73
+  - 79
+  - 83
+  - 89
+  - 97
+  - 101
+  - 103
+  - 107
+  - 109
+  - 113
+  - 127
+  - 131
+  - 137
+  - 139
+  - 149
+  - 151
+  value_type: sequence
+  operation_type: source_observation
+  expression: 'Present primes under 153: 20 values through 71; missing primes under
+    153: 16 values from 73 through 151.'
+  relation: Candidate mask family for distinguishing surface-visible vs absent/negative-space
+    prime positions.
+  why_stored: Prime presence/absence is a concrete number layer connected to the triangle
+    surface.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dl-triangle-prime-mask-source-lock.yaml
+  crosslinks:
+  - pdd_153_triangle_word_prime_route_v1
+  - lp_negative_space_layout_candidate_family_v0
+  risk_notes:
+  - mask_use_not_authorized_now
+  - prime_position_policy_must_be_predeclared
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_pdd153_2016_prime_layer_overlay
+  source_record_path: data/historical-route/stage5dl-triangle-2016-prime-layer-source-lock.yaml
+  source_fact_id: pdd153_2016_prime_layer
+  fact_class: pdd_153_triangle_number_facts
+  display_label: PDD triangle has a 2016-message prime-layer candidate linked to words/map/road/numbers-direction
+  short_label: PDD 2016 prime-layer candidate
+  value: 2016
+  values:
+  - 2016
+  - 153
+  value_type: sequence
+  operation_type: source_observation
+  expression: 2016 message route-meta clue is carried as a prime-layer / route-context
+    candidate over the 153-word triangle.
+  relation: Connects PDD-153 route interpretation to the solved/verified 2016 words/map/numbers-direction
+    clue family.
+  why_stored: Keeps the 2016 route-meta clue visible as method context rather than
+    treating triangle as standalone numerology.
+  verification_status: canonical_source_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dl-triangle-2016-prime-layer-source-lock.yaml
+  crosslinks:
+  - 2016_message_route_meta_clue_v0
+  - pdd_153_triangle_word_prime_route_v1
+  risk_notes:
+  - source_context_not_route_execution
+  - no_prime_layer_output_generated
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_pdd153_fibonacci_prime_index_route_overlay
+  source_record_path: data/historical-route/stage5dl-triangle-fibonacci-prime-index-source-lock.yaml
+  source_fact_id: pdd153_fibonacci_prime_index_route_candidate
+  fact_class: pdd_153_triangle_number_facts
+  display_label: PDD153 has a Fibonacci-prime-index route candidate for future bounded
+    comparison
+  short_label: PDD Fibonacci-prime-index route candidate
+  value: 153
+  values:
+  - 153
+  - 17
+  value_type: sequence
+  operation_type: source_observation
+  expression: PDD153 source-lock carries Fibonacci-prime-index route family as a future
+    candidate over the 17-row / 153-word surface.
+  relation: Bridges PDD153 to Page32's Fibonacci-prime-index spiral family.
+  why_stored: This is the triangle-side counterpart to the Page32 Fibonacci-prime-index
+    grid and should be visible in review.
+  verification_status: canonical_transcript_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dl-triangle-fibonacci-prime-index-source-lock.yaml
+  crosslinks:
+  - page32_moebius_fibonacci_prime_index_spiral_v1
+  - pdd_153_triangle_word_prime_route_v1
+  risk_notes:
+  - route_stream_not_generated
+  - comparison_only_until_experiment_authorized
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_pdd153_stage5dl_56311_wynn_way_overlay
+  source_record_path: data/historical-route/stage5dl-triangle-56311-wynn-way-source-lock.yaml
+  source_fact_id: pdd153_stage5dl_56311_center41_word52
+  fact_class: pdd_153_triangle_number_facts
+  display_label: Stage 5DL records 56311 from center word 41/WYNN to word52/WAY anchor
+  short_label: Stage5DL 56311 center41 -> word52
+  value: 52
+  values:
+  - 5
+  - 6
+  - 3
+  - 11
+  - 41
+  - 46
+  - 52
+  - 55
+  - 66
+  - 5
+  - 11
+  - 14
+  - 25
+  value_type: sequence
+  operation_type: sequence_mapping
+  expression: Center 41 plus cumulative offsets 5,11,14,25 gives 46,52,55,66; word52
+    is WAY anchor.
+  relation: Direct Stage 5DL triangle-side version of the later DiskCipher/WYNN/WAY
+    bridge.
+  why_stored: Prevents the 56311 relation from appearing only as a DiskCipher support
+    fact.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5dl-triangle-56311-wynn-way-source-lock.yaml
+  crosslinks:
+  - disk_56311_wynn_way_bridge_v1
+  - pdd_153_triangle_way_anchor_route_v1
+  risk_notes:
+  - route_extraction_not_performed
+  - no_route_stream_generated
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_page32_grid_spiral_values_overlay
+  source_record_path: data/historical-route/stage5dm-page32-moebius-fibonacci-prime-index-spiral.yaml
+  source_fact_id: page32_grid_spiral_values
+  fact_class: page32_moebius_number_facts
+  display_label: Page32 4x4 grid spiral starts 3299 and reaches 2472 after 12 cells
+  short_label: Page32 spiral 3299 -> 2472
+  value: 3299
+  values:
+  - 3299
+  - 3298
+  - 3296
+  - 3294
+  - 3288
+  - 3278
+  - 3258
+  - 3222
+  - 3152
+  - 3038
+  - 2838
+  - 2472
+  - 1820
+  - 708
+  - 1206
+  - 4516
+  value_type: sequence
+  operation_type: matrix_grid_match
+  expression: 'Spiral route values: 3299,3298,3296,3294,3288,3278,3258,3222,3152,3038,2838,2472,1820,708,1206,4516.'
+  relation: Core Page32 Moebius/Fibonacci-prime grid surface; red-header facts select
+    3299 and 2472 in related records.
+  why_stored: This is the Page32 numeric route surface itself and needs a fact-card
+    display independent of red-header overlays.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5dm-page32-moebius-fibonacci-prime-index-spiral.yaml
+  crosslinks:
+  - page32_red_header_progressive_gp_sum_2472_v1
+  - page32_red_header_cumulative_index_463_3299_candidate_v1
+  risk_notes:
+  - route_extraction_not_performed
+  - red_header_selected_segment_not_executed
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_page32_prime_indices_fibonacci_increments_overlay
+  source_record_path: data/historical-route/stage5dm-page32-moebius-fibonacci-prime-index-spiral.yaml
+  source_fact_id: page32_prime_indices_fibonacci_increments
+  fact_class: page32_moebius_number_facts
+  display_label: Page32 prime-index sequence 1/2/3/4/6/.../988 has Fibonacci-like
+    increments
+  short_label: Page32 prime-index Fibonacci increments
+  value: 988
+  values:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 6
+  - 9
+  - 14
+  - 22
+  - 35
+  - 56
+  - 90
+  - 145
+  - 234
+  - 378
+  - 611
+  - 988
+  - 1
+  - 1
+  - 1
+  - 2
+  - 3
+  - 5
+  - 8
+  - 13
+  - 21
+  - 34
+  - 55
+  - 89
+  - 144
+  - 233
+  - 377
+  value_type: sequence
+  operation_type: prime_index_lookup
+  expression: Prime-index sequence has increments +1,+1,+1,+2,+3,+5,+8,+13,+21,+34,+55,+89,+144,+233,+377.
+  relation: Encodes the Fibonacci-prime-index rule behind the Page32 grid values.
+  why_stored: Operators need to see the generating sequence, not just the final 4x4
+    numbers.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5dm-page32-moebius-fibonacci-prime-index-spiral.yaml
+  crosslinks:
+  - page32_fibonacci_mod29_prime_palindrome_candidate_v0
+  - pdd_153_triangle_fibonacci_prime_index_route_v1
+  risk_notes:
+  - prime_index_convention_must_be_declared
+  - not_a_direct_plaintext_route
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_page32_mod153_bridge_overlay
+  source_record_path: data/historical-route/stage5dm-page32-moebius-fibonacci-prime-index-spiral.yaml
+  source_fact_id: page32_prime_index_and_value_mod153_bridge
+  fact_class: page32_moebius_number_facts
+  display_label: Page32 prime-index/value sequences have mod-153 projections for PDD
+    comparison
+  short_label: Page32 mod153 bridge vectors
+  value: 153
+  values:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 6
+  - 9
+  - 14
+  - 22
+  - 35
+  - 56
+  - 90
+  - 145
+  - 81
+  - 72
+  - 152
+  - 70
+  - 86
+  - 85
+  - 83
+  - 81
+  - 75
+  - 65
+  - 45
+  - 9
+  - 92
+  - 131
+  - 84
+  - 24
+  - 137
+  - 96
+  - 135
+  - 79
+  value_type: modular_residue
+  operation_type: modulo
+  expression: Prime-index mod153 vector and grid-value mod153 vector are carried as
+    future-only PDD comparison context.
+  relation: Potential bridge between Page32 route scheduler and the PDD153 triangle
+    surface.
+  why_stored: Makes the Page32/PDD cross-surface design note visible without generating
+    any route output.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dm-page32-moebius-fibonacci-prime-index-spiral.yaml
+  crosslinks:
+  - pdd_153_triangle_word_prime_route_v1
+  - page32_red_header_anchored_3299_to_2472_route_candidate
+  risk_notes:
+  - future_comparison_only
+  - no_pdd_route_stream_generated
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_token_block_primary60_byte_surface_overlay
+  source_record_path: data/historical-route/stage5ds-token-block-machine-code-static-sanity-candidate-v0.yaml
+  source_fact_id: token_block_primary60_byte_surface
+  fact_class: token_block_static_number_facts
+  display_label: Token-block primary60 surface is 32x8 = 256 tokens with 161 unique
+    values
+  short_label: Token-block 32x8=256; unique=161
+  value: 256
+  values:
+  - 32
+  - 8
+  - 256
+  - 161
+  - 60
+  - 0
+  - 255
+  value_type: sequence
+  operation_type: base_conversion
+  expression: 32 rows * 8 columns = 256 tokens; primary60 maps 00->0 and 4F->255;
+    unique token/byte count = 161.
+  relation: Defines the token-block as a byte-like data surface rather than literal
+    hex.
+  why_stored: This is the core token-block static fact needed for future review.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5ds-token-block-machine-code-static-sanity-candidate-v0.yaml
+  - data/token-block/stage5ap-token-block-canonical-transcription.yaml
+  crosslinks:
+  - token_block_matrix_context_v0
+  risk_notes:
+  - byte_stream_generation_not_authorized
+  - variant_enumeration_not_performed
+  - not_hex_key_claim
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_token_block_x86_lret_out_sanity_overlay
+  source_record_path: data/historical-route/stage5ds-token-block-machine-code-static-sanity-candidate-v0.yaml
+  source_fact_id: token_block_x86_lret_out_sanity
+  fact_class: token_block_static_number_facts
+  display_label: Primary60 row-major bytes begin with CB E7; x86 interpretation starts
+    lret/out and likely faults
+  short_label: 'x86 sanity: starts CB E7 = lret/out'
+  value: cbe7
+  values:
+  - cb
+  - e7
+  - cbe7a7ba61ed7eb75cf99cdef704b7d4
+  value_type: sequence
+  operation_type: source_observation
+  expression: First bytes cbe7a7ba61ed7eb75cf99cdef704b7d4; x86/x86-64 offset-0 interpretation
+    starts with lret then privileged I/O-like behavior.
+  relation: Static sanity check lowering native-machine-code likelihood while leaving
+    VM/table interpretation open.
+  why_stored: Prevents future reviewers from re-litigating native-code execution from
+    byte 0 without a new architecture clue.
+  verification_status: operator_assistant_observed
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5ds-token-block-machine-code-static-sanity-candidate-v0.yaml
+  crosslinks:
+  - token_block_vm_or_table_surface_candidate_v0
+  risk_notes:
+  - native_code_execution_not_performed
+  - disassembly_shape_not_solve_evidence
+  - architecture_unspecified
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_token_block_base_neighbor_scan_overlay
+  source_record_path: data/historical-route/stage5ds-token-block-base-neighbor-static-scan-v0.yaml
+  source_fact_id: token_block_base58_64_neighbor_scan
+  fact_class: token_block_static_number_facts
+  display_label: Base60 is clean; base58/base59 invalid; base61-64 overflow byte range
+    without wrapping
+  short_label: 'Base scan: 58/59 invalid, 60 clean, 61-64 overflow'
+  value: 60
+  values:
+  - 58
+  - 59
+  - 60
+  - 61
+  - 62
+  - 63
+  - 64
+  value_type: sequence
+  operation_type: base_conversion
+  expression: base58/base59 invalid due suffix x index 59; base60 clean; base61-base64
+    require overflow/modulo wrapping.
+  relation: Constrains token-block byte interpretation to primary60 unless a source-backed
+    wrap rule appears.
+  why_stored: Base choice is a critical future experiment variable and should be visible
+    in the Source Browser.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5ds-token-block-base-neighbor-static-scan-v0.yaml
+  crosslinks:
+  - token_block_machine_code_static_sanity_candidate_v0
+  risk_notes:
+  - wrap_rules_not_authorized
+  - byte_stream_generation_not_authorized
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_token_block_vm_table_surface_review_overlay
+  source_record_path: data/historical-route/stage5ds-token-block-vm-or-table-surface-candidate-v0.yaml
+  source_fact_id: token_block_vm_table_surface_review
+  fact_class: token_block_static_number_facts
+  display_label: Token-block is more likely VM/table/key-schedule surface than native
+    CPU code
+  short_label: Token-block VM/table surface candidate
+  value: 256
+  values:
+  - 32
+  - 8
+  - 256
+  - 161
+  value_type: sequence
+  operation_type: source_observation
+  expression: 32x8 / 256-token / 161-unique surface is interpreted as VM/table/key-schedule
+    candidate, not accepted native code.
+  relation: Preserves the current static role hypothesis for the token block.
+  why_stored: Useful review context even though it is not a direct arithmetic proof.
+  verification_status: operator_assistant_observed
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5ds-token-block-vm-or-table-surface-candidate-v0.yaml
+  crosslinks:
+  - token_block_matrix_context_v0
+  risk_notes:
+  - conceptual_role_hypothesis_only
+  - no_vm_instruction_set_source_locked
+  - no_execution
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_interconnectedness_table_canon_29_note_overlay
+  source_record_path: data/historical-route/stage5ds-interconnectedness-table-canon-29-note-gp-mapping-v1.yaml
+  source_fact_id: interconnectedness_table_canon_29_note_mapping
+  fact_class: music_number_facts
+  display_label: Interconnectedness table/canon claim has 29-note inventory matching
+    GP alphabet size
+  short_label: Interconnectedness table canon -> 29 notes
+  value: 29
+  values:
+  - 19
+  - 29
+  value_type: sequence
+  operation_type: source_observation
+  expression: Community theory claims original unique-note count 19 and table-canon
+    unique-note count 29.
+  relation: Music-side bridge to the 29-token GP alphabet, with direct pitch substitution
+    quarantined.
+  why_stored: The 29-note claim is the most reviewable numeric piece of the table/canon
+    mapping candidate.
+  verification_status: canonical_source_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5ds-interconnectedness-table-canon-29-note-gp-mapping-v1.yaml
+  - third_party/CicadaMusic/community-theory/messages.txt
+  crosslinks:
+  - music_transform_grammar_for_cipher_methods_candidate_v1
+  risk_notes:
+  - canonical_musicxml_or_midi_required
+  - note_inventory_policy_required
+  - direct_pitch_substitution_low_value_warning
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_instar_205_prime205_1259_overlay
+  source_record_path: data/historical-route/stage5ds-instar-205-beats-prime205-1259-poem-line-v1.yaml
+  source_fact_id: instar_205_prime205_1259
+  fact_class: music_number_facts
+  display_label: Instar beat-count claim 205 maps by prime(205)=1259 to the first
+    parable line GP sum
+  short_label: Instar 205 beats -> prime(205)=1259
+  value: 1259
+  values:
+  - 205
+  - 1259
+  value_type: prime_index
+  operation_type: prime_index_lookup
+  expression: prime(205)=1259; LIKE THE INSTAR TUNNELING TO THE SURFACE has GP sum
+    1259.
+  relation: Links community beat-count claim to the first Instar parable GP line.
+  why_stored: Compact music-number bridge, but beat count needs canonical transcription
+    verification.
+  verification_status: canonical_source_required
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5ds-instar-205-beats-prime205-1259-poem-line-v1.yaml
+  crosslinks:
+  - instar_parable_id3_gp_product_candidate_v1
+  risk_notes:
+  - beat_count_not_verified_now
+  - canonical_audio_or_score_required
+  - route_extraction_not_performed
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_interconnectedness_guitar_tab_prime_strings_overlay
+  source_record_path: data/historical-route/stage5ds-interconnectedness-guitar-tab-prime-fret-strings-v1.yaml
+  source_fact_id: interconnectedness_guitar_tab_prime_fret_strings
+  fact_class: music_number_facts
+  display_label: Interconnectedness guitar-tab thread lists multiple prime fret-number
+    strings and 32023=31x1033
+  short_label: Guitar-tab prime strings; 32023=31x1033
+  value: 32023
+  values:
+  - 355330003553333
+  - 37302523
+  - 230032303
+  - 53033303
+  - 230303
+  - 333032303
+  - 300323
+  - 252323
+  - 32303
+  - 353
+  - 32023
+  - 31
+  - 1033
+  value_type: sequence
+  operation_type: factorization
+  expression: Several fret strings are prime; nonprime 32023 factors as 31 * 1033.
+  relation: Music/thread arithmetic candidate linked to 1033/3301 number family.
+  why_stored: Preserves a concrete table/string arithmetic family while warning about
+    tab-boundary dependence.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5ds-interconnectedness-guitar-tab-prime-fret-strings-v1.yaml
+  - third_party/CicadaMusic/community-theory/messages.txt
+  crosslinks:
+  - prime_index_bridge_761_167_464_1033_3301_candidate_v0
+  risk_notes:
+  - canonical_tab_required
+  - bar_boundary_policy_required
+  - string_order_policy_required
+  - source_selection_bias_warning
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_interconnectedness_547_137_overlay
+  source_record_path: data/historical-route/stage5ds-interconnectedness-547-beats-137-measures-v0.yaml
+  source_fact_id: interconnectedness_547_beats_137_measures
+  fact_class: music_number_facts
+  display_label: Interconnectedness community claim records 547 beats and 137 measures
+  short_label: Interconnectedness 547 beats / 137 measures
+  value: 547
+  values:
+  - 547
+  - 137
+  value_type: sequence
+  operation_type: source_observation
+  expression: Community theory claims Interconnectedness beat count 547 and 137-measure
+    structure.
+  relation: Potential bridge to ALONG THE WAY=547 and route/canon timing context.
+  why_stored: Keeps the 547/137 timing claim visible but clearly unverified.
+  verification_status: canonical_source_required
+  display_priority: low
+  source_paths:
+  - data/historical-route/stage5ds-interconnectedness-547-beats-137-measures-v0.yaml
+  crosslinks:
+  - music_transform_grammar_for_cipher_methods_candidate_v1
+  - page15_internal_instruction_number_facts
+  risk_notes:
+  - beat_measure_count_requires_canonical_score
+  - low_confidence_until_transcription
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_strange_loop_463_page32_overlay
+  source_record_path: data/historical-route/stage5ds-strange-loop-gp463-page32-bridge-candidate-v0.yaml
+  source_fact_id: strange_loop_gp463_page32_bridge
+  fact_class: ouroboros_self_reference_number_facts
+  display_label: STRANGE LOOP has GP sum 463, linking self-reference context to Page32
+    463->3299
+  short_label: STRANGE LOOP=463 -> Page32 463/3299
+  value: 463
+  values:
+  - 463
+  - 3299
+  value_type: gp_sum
+  operation_type: symbolic_gp_scan
+  expression: STRANGE LOOP = 463; Page32 red-header cumulative-index bridge uses 463
+    -> prime(463)=3299.
+  relation: Self-reference vocabulary lands on the Page32 463/3299 number bridge.
+  why_stored: This is the strongest Ouroboros-see-also arithmetic crosslink to an
+    existing Page32 fact.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5ds-strange-loop-gp463-page32-bridge-candidate-v0.yaml
+  crosslinks:
+  - page32_red_header_cumulative_index_463_3299_candidate_v1
+  risk_notes:
+  - symbolic_context_not_proof
+  - phrase_selection_bias_warning
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_self_reference_529_square23_overlay
+  source_record_path: data/historical-route/stage5ds-self-reference-gp529-square23-candidate-v0.yaml
+  source_fact_id: self_reference_gp529_square23
+  fact_class: ouroboros_self_reference_number_facts
+  display_label: SELF REFERENCE has GP sum 529 = 23^2
+  short_label: SELF REFERENCE=529=23^2
+  value: 529
+  values:
+  - 529
+  - 23
+  - 23
+  value_type: gp_sum
+  operation_type: factorization
+  expression: SELF REFERENCE = 529 = 23 * 23.
+  relation: Contextual self-reference / quine / ouroboros vocabulary linked to GP
+    square structure.
+  why_stored: Useful context for fixed-point/route-output-as-instruction hypotheses,
+    but not proof.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5ds-self-reference-gp529-square23-candidate-v0.yaml
+  crosslinks:
+  - quine_fixed_point_self_reproduction_candidate_v0
+  - solved_i_voice_of_circumference_precedent_v0
+  risk_notes:
+  - symbolic_context_only
+  - phrase_selection_bias_warning
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_self_fulfilling_prophecy_841_square29_overlay
+  source_record_path: data/historical-route/stage5ds-self-fulfilling-prophecy-gp841-square29-candidate-v0.yaml
+  source_fact_id: self_fulfilling_prophecy_gp841_square29
+  fact_class: ouroboros_self_reference_number_facts
+  display_label: SELF FULFILLING PROPHECY has GP sum 841 = 29^2
+  short_label: SELF FULFILLING PROPHECY=841=29^2
+  value: 841
+  values:
+  - 841
+  - 29
+  - 29
+  value_type: gp_sum
+  operation_type: factorization
+  expression: SELF FULFILLING PROPHECY = 841 = 29 * 29.
+  relation: Self-producing / fixed-point vocabulary lands on the full GP alphabet
+    square.
+  why_stored: Elegant symbolic arithmetic, but must stay quarantined from priority
+    decisions unless independently constrained.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5ds-self-fulfilling-prophecy-gp841-square29-candidate-v0.yaml
+  crosslinks:
+  - quine_fixed_point_self_reproduction_candidate_v0
+  risk_notes:
+  - phrase_selection_bias_warning
+  - symbolic_context_not_execution_seed
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_infinite_loop_409_page33_dot_overlay
+  source_record_path: data/historical-route/stage5ds-infinite-loop-gp409-page33-dot-bridge-candidate-v0.yaml
+  source_fact_id: infinite_loop_gp409_page33_dot_bridge
+  fact_class: ouroboros_self_reference_number_facts
+  display_label: INFINITE LOOP has GP sum 409, crosslinked to Page33 dot-distance
+    candidate
+  short_label: INFINITE LOOP=409
+  value: 409
+  values:
+  - 409
+  value_type: gp_sum
+  operation_type: symbolic_gp_scan
+  expression: INFINITE LOOP = 409 under GP; crosslinked to Page33 three-dot geometry/distance
+    candidate.
+  relation: Loop vocabulary attaches to an already-source-locked dot/geometry number.
+  why_stored: Preserves a compact loop/dot bridge while keeping mythology/context
+    from driving experiments.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: low
+  source_paths:
+  - data/historical-route/stage5ds-infinite-loop-gp409-page33-dot-bridge-candidate-v0.yaml
+  crosslinks:
+  - page33_three_dot_emirp_area_block_candidate_v0
+  risk_notes:
+  - symbolic_context_only
+  - not_target_priority_evidence_now
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_three_hares_401_rotational_overlay
+  source_record_path: data/historical-route/stage5ds-three-hares-rotational-shared-parts-candidate-v0.yaml
+  source_fact_id: three_hares_gp401_rotational_shared_parts
+  fact_class: ouroboros_self_reference_number_facts
+  display_label: THREE HARES has GP sum 401 and carries a 3-fold rotational/shared-parts
+    motif
+  short_label: THREE HARES=401; 3-fold motif
+  value: 401
+  values:
+  - 401
+  - 3
+  value_type: gp_sum
+  operation_type: symbolic_gp_scan
+  expression: THREE HARES = 401; motif has threefold rotational/shared-component structure.
+  relation: Contextual bridge to dot/threefold/rotation motifs, not a route rule.
+  why_stored: Low-priority but useful symbolic/topological context for rotational
+    sharing.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: low
+  source_paths:
+  - data/historical-route/stage5ds-three-hares-rotational-shared-parts-candidate-v0.yaml
+  crosslinks:
+  - lp_dot_marker_geometry_family_v1
+  risk_notes:
+  - symbolic_context_only
+  - low_priority
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_mobius_strip_423_one_boundary_overlay
+  source_record_path: data/historical-route/stage5ds-mobius-ouroboros-one-boundary-transform-candidate-v1.yaml
+  source_fact_id: mobius_strip_gp423_one_boundary
+  fact_class: ouroboros_self_reference_number_facts
+  display_label: MOBIUS STRIP has GP sum 423 and one-boundary / half-twist transform
+    context
+  short_label: MOBIUS STRIP=423; one boundary
+  value: 423
+  values:
+  - 423
+  - 1
+  - 2
+  value_type: gp_sum
+  operation_type: symbolic_gp_scan
+  expression: MOBIUS STRIP = 423; concept supplies one boundary and half-twist route
+    vocabulary.
+  relation: Bridges Page32 visual Moebius, DiskCipher flip/rotation, and PDD closed-cycle
+    route grammar.
+  why_stored: The numeric GP fact is secondary; the one-boundary/half-twist transform
+    context is the real review value.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5ds-mobius-ouroboros-one-boundary-transform-candidate-v1.yaml
+  crosslinks:
+  - page32_moebius_fibonacci_prime_index_spiral_v1
+  - disk_rule4_mobius_trip_rotation_bridge_v0
+  - pdd_153_56311_ouroboric_cycle_candidate_v0
+  risk_notes:
+  - symbolic_context_not_route_proof
+  - no_mobius_route_executed
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ec_batch003_triangle_page32_token_music_cluster_summary_overlay
+  source_record_path: data/historical-route/stage5dm-page32-moebius-fibonacci-prime-index-spiral.yaml
+  source_fact_id: batch003_triangle_page32_token_music_cluster_summary
+  fact_class: batch_summary_number_facts
+  display_label: 'Batch 003 cluster: PDD153/T17, WAY, 56311, Page32 spiral, token-block
+    256/161, music 29/205/547, self-reference squares'
+  short_label: 'Batch003: PDD153/Page32/token/music/self-ref'
+  value: 153
+  values:
+  - 153
+  - 17
+  - 41
+  - 52
+  - 56311
+  - 3299
+  - 2472
+  - 256
+  - 161
+  - 29
+  - 205
+  - 547
+  - 529
+  - 841
+  value_type: sequence
+  operation_type: source_observation
+  expression: Cluster summary only; see individual overlays for details.
+  relation: Compact review chip tying together Stage 5EC's selected source-lock entries.
+  why_stored: Improves scanability without replacing detailed fact cards.
+  verification_status: reviewed_none_found
+  display_priority: low
+  source_paths:
+  - data/historical-route/stage5dl-number-triangle-v1-source-lock.yaml
+  - data/historical-route/stage5dm-page32-moebius-fibonacci-prime-index-spiral.yaml
+  - data/historical-route/stage5ds-token-block-machine-code-static-sanity-candidate-v0.yaml
+  - data/historical-route/stage5ds-interconnectedness-table-canon-29-note-gp-mapping-v1.yaml
+  risk_notes:
+  - summary_card_only
+  - not_independent_evidence

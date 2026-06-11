@@ -342,8 +342,6 @@ def validate_stage5eb_current_stage_registry_policy() -> Stage5EBValidationResul
         _expected_errors(
             state,
             {
-                "latest_completed_stage_id": STAGE_ID,
-                "recommended_next_stage_id": NEXT_STAGE_ID,
                 "latest_completed_stage_commit_recording_policy": "external_post_push_handoff",
                 "latest_completed_stage_ci_status_recording_policy": "external_post_push_handoff",
                 "latest_completed_stage_commit_in_committed_registry": "not_applicable_self_referential",
@@ -353,6 +351,16 @@ def validate_stage5eb_current_stage_registry_policy() -> Stage5EBValidationResul
             state_path,
         )
     )
+    allowed_current_states = {
+        (STAGE_ID, NEXT_STAGE_ID),
+        ("stage-5ec", "stage-5ed"),
+    }
+    current_pair = (state.get("latest_completed_stage_id"), state.get("recommended_next_stage_id"))
+    if current_pair not in allowed_current_states:
+        errors.append(
+            f"{state_path.as_posix()}: latest/recommended stage pair must be one of "
+            f"{sorted(allowed_current_states)!r}, found {current_pair!r}"
+        )
     if state.get("latest_completed_stage_commit") == "":
         errors.append("current-stage registry must not use blank latest_completed_stage_commit")
     if state.get("latest_completed_stage_ci_status") == "pending_post_push":

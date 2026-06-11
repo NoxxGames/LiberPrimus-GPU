@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5EB adds validation-finalization and 10-worker policy records while keeping the YAML map as the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5EC adds the third Source Browser number-fact review batch and preserves Stage 5EB's 10-worker validation policy while keeping the YAML map as the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 
@@ -43,15 +43,19 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5EB" `
-  --expected-next-stage "Stage 5EC"
+  --expected-latest-stage "Stage 5EC" `
+  --expected-next-stage "Stage 5ED"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5EB" `
-  --expected-next-stage "Stage 5EC"
+  --expected-latest-stage "Stage 5EC" `
+  --expected-next-stage "Stage 5ED"
 ```
+
+## Stage 5EC Coverage
+
+The operational file map includes Stage 5EC number-fact review batch 003, triangle/Page32/token-static/music/self-reference NumberFactCard overlay collection records, review-batch result records, Source Browser loadability evidence, Stage 5EB validation-policy preservation, Stage 5DX/5DW/5DV/5DU preservation, Stage 5DG/5BD/active-lineage preservation, closed-gate proofs, developer log, experiment note, and research log. Stage 5EC reviews 20 selected source-lock entries and adds 25 review-only overlays. Stage 5EC performs no historical source-lock rewrite, source-lock evidence update, direct source-record fact backfill, target selection, route extraction, byte-stream generation, OCR/image/audio/stego/native/VM/CUDA/scoring/benchmark work, activation, or solve claim. Generated diagnostics, raw third-party files, local GUI caches, and local `codex-output/**` handoffs remain ignored.
 
 ## Stage 5EB Coverage
 

@@ -13,15 +13,20 @@ def test_current_stage_registry_preserves_stage5ea_or_newer_stage() -> None:
 
     state = load_yaml("data/project-state/current-stage-state.yaml")
 
-    assert state["latest_completed_stage_id"] in {"stage-5ea", "stage-5eb"}
+    assert state["latest_completed_stage_id"] in {"stage-5ea", "stage-5eb", "stage-5ec"}
     if state["latest_completed_stage_id"] == "stage-5ea":
         assert state["recommended_next_stage_id"] == "stage-5eb"
         assert current_latest_stage_label() == "Stage 5EA"
         assert current_next_stage_label() == "Stage 5EB"
         assert current_latest_stage_command_suffix() == "stage5ea"
-    else:
+    elif state["latest_completed_stage_id"] == "stage-5eb":
         assert state["recommended_next_stage_id"] == "stage-5ec"
         assert current_latest_stage_label() == "Stage 5EB"
         assert current_next_stage_label() == "Stage 5EC"
         assert current_latest_stage_command_suffix() == "stage5eb"
+    else:
+        assert state["recommended_next_stage_id"] == "stage-5ed"
+        assert current_latest_stage_label() == "Stage 5EC"
+        assert current_next_stage_label() == "Stage 5ED"
+        assert current_latest_stage_command_suffix() == "stage5ec"
     assert state["stage_registry_is_source_of_truth"] is True

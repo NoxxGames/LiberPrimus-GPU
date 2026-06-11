@@ -2,6 +2,8 @@
 
 Stage 5EA does not change cipher-family status. It repairs validation throughput, current-stage registry routing, historical-test isolation, Source Browser number-fact overlay caching, validation wrapper stage normalization, pytest shard planning, and orphan-process timeout policy, verifies Stage 5DZ as complete, routes number-fact review batch 3 to Stage 5EB, and keeps all targets unselected, String 4 inactive, byte streams blocked, execution blocked, and solve claims absent.
 
+Stage 5EC does not change cipher-family status. It completes Source Browser number-fact review batch 003 with 25 review-only overlays for 20 selected triangle/Page32/token-static/music/self-reference records, preserves Stage 5EB's 10-worker validation policy, keeps all targets unselected, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.
+
 Stage 5DZ does not change cipher-family status. It source-locks assistant/operator bounded findings for the PDD153 triangle and Page32 as review-only enriched records, adds 12 Source Browser NumberFactCard overlays, preserves Stage 5DY validation repair plus active-lineage gates, keeps all targets unselected, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.
 
 Stage 5DY does not change cipher-family status. It repairs validation performance and stage isolation, preserves Stage 5DX review-only overlays, keeps all targets unselected, and keeps String 4 inactive, non-executable, non-canonical, and non-solve-evidence.

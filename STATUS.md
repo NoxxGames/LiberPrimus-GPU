@@ -2,9 +2,19 @@
 
 ## Current stage
 
-Stage 5EB validation finalization, 10-worker parallel policy, serial-fallback elimination, and test-throughput repair is complete.
+Stage 5EC source-lock number-fact review batch 003 is complete.
 
-Next recommended prompt: Stage 5EC - Operator/assistant source-lock number-fact review batch 3, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5ED - Source-lock number-fact review batch 004, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5EC
+
+Stage 5EC completes the third selected Source Browser number-fact review batch. It reviews `20` selected triangle/Page32/token-static/music/self-reference source-lock entries and adds `25` review-only NumberFactCard overlays under `data/operator-console/source-browser/number-fact-overlays/stage5ec-review-batch-003-triangle-page32-token-music-overlays.yaml`.
+
+Local Stage 5EC summary: Source Browser validation errors `0`, reviewed entries `20`, overlays `25`, overlay-only cards required `25`, fact cards after Stage 5EC `117`, Source Browser entries loaded `1680`, committed records scanned `1679`, local validation defaults/caps `10` workers / `10` pytest workers, full serial pytest normal-completion requirement `false`, historical source-lock records rewritten `false`, source-lock evidence updated `false`, target selected `false`, route extraction `false`, byte streams generated `false`, execution performed `false`, CUDA `false`, solve claim `false`, and next stage `Stage 5ED`.
+
+Stage 5EC records triangle/Page32/token/music facts as overlays only: PDD153/T17/center41, PDD single-rune positions, heading minus reversed word52 = WAY, 56311 center41 to word52, Page32 3299 to 2472 spiral, Page32 Fibonacci-prime-index increments, token-block 32x8/256/161 primary60 facts, base60 neighbor constraints, music 29/205/547 claims, and self-reference GP facts such as STRANGE LOOP=463, SELF REFERENCE=529, SELF FULFILLING PROPHECY=841, and INFINITE LOOP=409.
+
+Stage 5EC does not rewrite historical source-lock records, backfill number facts directly into `data/historical-route/*.yaml`, add new source-lock evidence, source-lock lag5, select a target, extract triangle/Page32/music routes, generate route streams or bytes, run OCR/image/audio/stego/native/VM/spreadsheet/CUDA/scoring/benchmark work, expand the website, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5EB
 
