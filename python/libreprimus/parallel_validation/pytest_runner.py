@@ -12,6 +12,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any
 
+DEFAULT_WORKERS = 10
+DEFAULT_MAX_WORKERS = 10
+
 SERIAL_ISOLATED_TEST_FILES = frozenset(
     {
         Path("tests/python/test_stage5cu_cli.py"),
@@ -23,6 +26,9 @@ SLOW_TEST_FILE_WEIGHTS = {
     "test_stage5dz_cli.py": 4,
     "test_stage5ea_cli.py": 4,
     "test_stage5ea_source_browser_performance.py": 3,
+    "test_stage5eb_cli.py": 4,
+    "test_stage5eb_source_browser_cache_reuse.py": 3,
+    "test_stage5eb_generic_stage_wrapper.py": 2,
 }
 
 
@@ -98,14 +104,18 @@ def shard_plan_record(test_root: Path, worker_count: int) -> dict[str, Any]:
         "parallel_test_file_count": len(parallel_files),
         "serial_isolated_test_file_count": len(isolated),
         "serial_isolated_test_files": [str(path.as_posix()) for path in isolated],
+        "duration_aware_balancing": True,
+        "known_serial_isolated_files_recorded": True,
         "slow_test_weights": dict(sorted(SLOW_TEST_FILE_WEIGHTS.items())),
         "all_tests_covered_once": True,
         "shards": [
             {
                 "shard_id": f"pytest-shard-{index + 1:02d}",
                 "test_file_count": len(shard),
+                "estimated_weight": sum(pytest_file_weight(path) for path in shard),
                 "weight": sum(pytest_file_weight(path) for path in shard),
                 "test_files": [str(path.as_posix()) for path in shard],
+                "rerun_command": _pytest_rerun_command(shard),
             }
             for index, shard in enumerate(shards)
         ],
@@ -121,7 +131,7 @@ def select_pytest_mode(requested_mode: str) -> tuple[str, bool, bool]:
         # Several stage-builder tests regenerate shared YAML/schema files. On
         # Windows, xdist can make readers observe transient file-access
         # contention even though writes are atomic. File-level shards keep the
-        # 8-worker local validation path parallel while avoiding that race.
+        # local validation path parallel while avoiding that race.
         if sys.platform.startswith("win"):
             mode = "shard"
         else:
@@ -178,6 +188,8 @@ def _run_pytest_shard(
         "timed_out": timed_out,
         "passed": returncode == 0 and not timed_out,
         "test_file_count": len(files),
+        "test_files": [str(path.as_posix()) for path in files],
+        "rerun_command": _pytest_rerun_command(files),
     }
 
 
@@ -241,6 +253,8 @@ def run_pytest(
                 "timed_out": False,
                 "passed": completed.returncode == 0,
                 "test_file_count": len(files),
+                "test_files": [str(path.as_posix()) for path in files],
+                "rerun_command": f"{sys.executable} -m pytest -q {test_root.as_posix()} -n {worker_count}",
             }
         ]
     else:
@@ -292,12 +306,30 @@ def run_pytest(
         else [],
         "test_file_count": len(files),
         "failure_count": len(failures),
+        "failure_rerun_commands": [str(item["rerun_command"]) for item in failures if item.get("rerun_command")],
+        "rerun_guidance": _rerun_guidance(failures),
         "success_count": len(shard_results) - len(failures),
         "passed": not failures,
         "duration_seconds": round(duration, 6),
         "shard_results": shard_results,
     }
     return result
+
+
+def _pytest_rerun_command(files: list[Path]) -> str:
+    if not files:
+        return f"{sys.executable} -m pytest -q"
+    return " ".join([sys.executable, "-m", "pytest", "-q", *[path.as_posix() for path in files]])
+
+
+def _rerun_guidance(failures: list[dict[str, Any]]) -> str:
+    if not failures:
+        return "No pytest shard failures."
+    commands = [str(item["rerun_command"]) for item in failures if item.get("rerun_command")]
+    return (
+        "Rerun failing pytest shard before rerunning full parallel validation: "
+        + " && ".join(commands)
+    )
 
 
 def recommended_pytest_workers(requested: int, max_workers: int) -> int:

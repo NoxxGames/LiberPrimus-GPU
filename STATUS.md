@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5EA validation throughput, current-stage registry, historical-test isolation, and Source Browser fact-card performance repair is complete.
+Stage 5EB validation finalization, 10-worker parallel policy, serial-fallback elimination, and test-throughput repair is complete.
 
-Next recommended prompt: Stage 5EB - Operator/assistant source-lock number-fact review batch 3, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5EC - Operator/assistant source-lock number-fact review batch 3, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5EB
+
+Stage 5EB is validation infrastructure inserted before the deferred third number-fact review batch. It preserves Stage 5EA as the previous validation-throughput repair, raises local validation defaults and caps to `10` workers / `10` pytest workers, keeps full serial pytest as the explicit `full-serial-rare` fallback rather than a normal completion profile, repairs current-stage registry finalization semantics, genericizes stage validation wrapper aliases such as `stage-5eb`/`stage5eb`/`5eb`/`eb`, records doc-ledger tier policy, adds duration-aware pytest shard/rerun policy, and validates Source Browser number-fact overlay cache reuse.
+
+Local Stage 5EB summary: Stage 5EA preserved `true`, Stage 5EA issue `162`, Stage 5EA CI `passed`, Stage 5EA worker cap `8`, local parallel default workers `10`, local pytest workers `10`, full serial pytest default `false`, full serial normal-completion requirement `false`, current-stage registry external post-push handoff `true`, Source Browser overlay cache reuse `true`, number-fact review batch 3 performed `false`, source-lock entry batch review performed `false`, new number-fact overlays added `false`, target selected `false`, byte streams generated `false`, execution performed `false`, solve claim `false`, and next stage `Stage 5EC`.
+
+Stage 5EB does not perform number-fact review batch 3, add source-lock evidence, add overlays, rewrite historical source-lock records, backfill number facts, select a target, extract routes, generate route streams or bytes, process raw sources, run image/OCR/audio/stego/CUDA/scoring/benchmarks, expand the website, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5EA
 

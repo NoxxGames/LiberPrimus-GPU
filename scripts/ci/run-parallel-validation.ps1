@@ -1,6 +1,7 @@
 param(
-    [int]$Workers = $(if ($env:LIBERPRIMUS_VALIDATION_WORKERS) { [int]$env:LIBERPRIMUS_VALIDATION_WORKERS } else { 8 }),
-    [int]$PytestWorkers = $(if ($env:LIBERPRIMUS_PYTEST_WORKERS) { [int]$env:LIBERPRIMUS_PYTEST_WORKERS } else { 8 }),
+    [int]$MaxWorkers = $(if ($env:LIBERPRIMUS_MAX_VALIDATION_WORKERS) { [int]$env:LIBERPRIMUS_MAX_VALIDATION_WORKERS } else { 10 }),
+    [int]$Workers = $(if ($env:LIBERPRIMUS_VALIDATION_WORKERS) { [int]$env:LIBERPRIMUS_VALIDATION_WORKERS } else { 10 }),
+    [int]$PytestWorkers = $(if ($env:LIBERPRIMUS_PYTEST_WORKERS) { [int]$env:LIBERPRIMUS_PYTEST_WORKERS } else { 10 }),
     [string]$PytestMode = $(if ($env:LIBERPRIMUS_PYTEST_MODE) { $env:LIBERPRIMUS_PYTEST_MODE } else { "auto" }),
     [string]$ResultsDir = $(if ($env:LIBERPRIMUS_PARALLEL_VALIDATION_RESULTS_DIR) { $env:LIBERPRIMUS_PARALLEL_VALIDATION_RESULTS_DIR } else { Join-Path "experiments" "results/ci/parallel-validation/stage5ax" }),
     [switch]$FailFast
@@ -16,8 +17,8 @@ $Python = if ($env:PYTHON) { $env:PYTHON } elseif (Test-Path ".\.venv\Scripts\py
 $RunStateDir = Join-Path $ResultsDir "_stage5ax_state"
 New-Item -ItemType Directory -Path $RunStateDir -Force | Out-Null
 
-if ($Workers -gt 8 -or $PytestWorkers -gt 8) {
-    throw "Stage 5DY validation policy caps local parallel validation at 8 workers"
+if ($Workers -gt $MaxWorkers -or $PytestWorkers -gt $MaxWorkers) {
+    throw "Validation policy caps local parallel validation at $MaxWorkers workers"
 }
 
 $RunExitCode = 0

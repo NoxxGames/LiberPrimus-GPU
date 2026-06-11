@@ -297,8 +297,12 @@ def entry_matches_fact_filter(
     return True
 
 
-def reviewability_counts(entries: list[SourceBrowserEntry]) -> dict[str, int]:
-    overlay_cache = NumberFactOverlayCache.load()
+def reviewability_counts(
+    entries: list[SourceBrowserEntry],
+    *,
+    overlay_cache: NumberFactOverlayCache | None = None,
+) -> dict[str, int]:
+    overlay_cache = overlay_cache or NumberFactOverlayCache.load()
     counts = {
         "entries_with_extracted_number_facts": 0,
         "entries_with_zero_extracted_number_facts": 0,

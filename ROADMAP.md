@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5EB - Operator/assistant source-lock number-fact review batch 3, without execution.
+Current next prompt: Stage 5EC - Operator/assistant source-lock number-fact review batch 3, without execution.
 
-Stage 5EA is complete as an inserted validation throughput and historical-test isolation repair before the third Source Browser number-fact review batch. It added the current-stage registry, Stage 5DZ verification records, validation-wrapper stage-id normalization, doc-ledger tier policy, Source Browser number-fact overlay caching, pytest shard policy repair, and Stage 5EB routing while preserving Stage 5DZ/5DY/5DX/5DW/5BD lineage and authorizing no execution.
+Stage 5EB is complete as an inserted validation finalization and 10-worker policy repair before the third Source Browser number-fact review batch. It preserves Stage 5EA, sets local validation defaults/caps to 10 workers and 10 pytest workers, keeps full serial pytest as an explicit rare fallback, repairs current-stage registry finalization semantics, genericizes stage wrapper aliases, records doc-ledger tier policy, improves pytest shard/rerun guidance, validates Source Browser overlay cache reuse, and routes the deferred review batch to Stage 5EC while authorizing no execution.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5EA validation throughput repair is complete. It preserves Stage 5DZ Triangle/Page32 bounded-findings records, keeps the deferred third number-fact review batch unperformed, repairs current-stage registry and validation wrapper behavior, and defers normal number-fact review batch 3 to Stage 5EB.
+Stage 5EB validation finalization is complete. It preserves Stage 5EA validation-throughput records, keeps the deferred third number-fact review batch unperformed, sets the local parallel policy to 10 workers, keeps full serial pytest out of normal completion profiles, and defers normal number-fact review batch 3 to Stage 5EC.
 
-The next recommended prompt is Stage 5EB - Operator/assistant source-lock number-fact review batch 3, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5EC - Operator/assistant source-lock number-fact review batch 3, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

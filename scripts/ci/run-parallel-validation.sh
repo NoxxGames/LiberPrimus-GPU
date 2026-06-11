@@ -4,13 +4,15 @@ set -euo pipefail
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$repo_root"
 
-workers="${LIBERPRIMUS_VALIDATION_WORKERS:-8}"
-pytest_workers="${LIBERPRIMUS_PYTEST_WORKERS:-8}"
+max_workers="${LIBERPRIMUS_MAX_VALIDATION_WORKERS:-10}"
+workers="${LIBERPRIMUS_VALIDATION_WORKERS:-10}"
+pytest_workers="${LIBERPRIMUS_PYTEST_WORKERS:-10}"
 pytest_mode="${LIBERPRIMUS_PYTEST_MODE:-auto}"
 results_dir="${LIBERPRIMUS_PARALLEL_VALIDATION_RESULTS_DIR:-"experiments"/"results/ci/parallel-validation/stage5ax"}"
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
+    --max-workers) max_workers="$2"; shift 2 ;;
     --workers) workers="$2"; shift 2 ;;
     --pytest-workers) pytest_workers="$2"; shift 2 ;;
     --pytest-mode) pytest_mode="$2"; shift 2 ;;
@@ -23,8 +25,8 @@ python_bin="${PYTHON:-python}"
 run_state_dir="$results_dir/_stage5ax_state"
 mkdir -p "$run_state_dir"
 
-if [[ "$workers" -gt 8 || "$pytest_workers" -gt 8 ]]; then
-  echo "Stage 5DY validation policy caps local parallel validation at 8 workers" >&2
+if [[ "$workers" -gt "$max_workers" || "$pytest_workers" -gt "$max_workers" ]]; then
+  echo "Validation policy caps local parallel validation at $max_workers workers" >&2
   exit 2
 fi
 

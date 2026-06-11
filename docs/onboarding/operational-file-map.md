@@ -1,6 +1,6 @@
 # Operational File Map
 
-Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5DZ adds Triangle/Page32 bounded-findings source-lock and enriched review records while keeping the YAML map as the machine-readable source; this page is the human-readable guide.
+Stage 5AB added `data/project-state/operational-file-map.yaml` as the maintained lifecycle map for documents that carry current operational state. Later stages update it when new committed record families become operational source truth. Stage 5EB adds validation-finalization and 10-worker policy records while keeping the YAML map as the machine-readable source; this page is the human-readable guide.
 
 ## Strict Files
 
@@ -43,15 +43,19 @@ Run:
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-doc-staleness --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml --strict
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-stage-ledger-staleness `
-  --expected-latest-stage "Stage 5DZ" `
-  --expected-next-stage "Stage 5EA"
+  --expected-latest-stage "Stage 5EB" `
+  --expected-next-stage "Stage 5EC"
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-operational-file-map-coverage
 
 .\.venv\Scripts\python.exe -m libreprimus.cli consistency check-current-next-stage-consistency `
-  --expected-latest-stage "Stage 5DZ" `
-  --expected-next-stage "Stage 5EA"
+  --expected-latest-stage "Stage 5EB" `
+  --expected-next-stage "Stage 5EC"
 ```
+
+## Stage 5EB Coverage
+
+The operational file map includes Stage 5EB validation finalization, parallel-worker policy, serial-pytest policy, current-stage registry finalization, generic stage-wrapper repair, doc-tier policy, pytest shard/rerun policy, Source Browser cache-reuse evidence, Stage 5EA preservation, active-lineage preservation, closed-gate proofs, developer log, experiment note, and research log. Stage 5EB performs no number-fact review batch, source-lock evidence update, overlay creation, route extraction, byte-stream generation, execution, or solve claim. Generated validation diagnostics, raw third-party files, local GUI caches, and local `codex-output/**` handoffs remain ignored.
 
 ## Stage 5DZ Coverage
 

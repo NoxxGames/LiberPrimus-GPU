@@ -287,15 +287,26 @@ def validate_stage5ea_current_stage_registry() -> Stage5EAValidationResult:
     errors = _expected_errors(
         payload,
         {
-            "latest_completed_stage_id": STAGE_ID,
-            "latest_completed_stage_title": STAGE_TITLE,
-            "recommended_next_stage_id": NEXT_STAGE_ID,
-            "recommended_next_stage_title": NEXT_STAGE_TITLE,
             "stage_registry_is_source_of_truth": True,
             "historical_tests_must_not_require_latest_stage": True,
         },
         path,
     )
+    latest_stage = str(payload.get("latest_completed_stage_id", ""))
+    if latest_stage == STAGE_ID:
+        errors.extend(
+            _expected_errors(
+                payload,
+                {
+                    "latest_completed_stage_title": STAGE_TITLE,
+                    "recommended_next_stage_id": NEXT_STAGE_ID,
+                    "recommended_next_stage_title": NEXT_STAGE_TITLE,
+                },
+                path,
+            )
+        )
+    elif not latest_stage.startswith("stage-5"):
+        errors.append(f"{path.as_posix()}: unexpected latest_completed_stage_id {latest_stage!r}")
     return _result("current_stage_registry", payload, errors)
 
 

@@ -24,6 +24,10 @@ The corrected template is an operator errata source, not a canonical transcripti
 
 Generated diagnostics stay ignored under `experiments/results/token-block/stage5bo/` and `experiments/results/historical-route/stage5bo/`.
 
+Later Stage 5EB validation-finalization records preserve this boundary by keeping no-active/no-byte/no-execution gates closed, moving local validation defaults/caps to 10 workers, and deferring any normal number-fact review batch work to Stage 5EC without activating String 4 or changing token-case errata status.
+
+Stage 5EB: validation finalization only; no token-case errata mutation, String 4 activation, byte-stream generation, execution, or solve claim.
+
 Stage 5BO does not generate byte streams, materialise variants, run DWH/hash search, decode, score, run stego/audio/image/OCR/AI/CUDA tooling, benchmark, publish website content, upgrade method status, activate canonical corpus, finalise page boundaries, or make solve claims.
 
 Stage 5BQ later consumes the Stage 5BP review outcome and records the Stage 5BO `full_branch_match` as inactive planning context only, with String 4 active input and dry-run ingestion still false. Stage 5BS then consumes the Stage 5BR review outcome as compact metadata, creates a closed planning-ingestion gate, requires future runners to cite the gate fail-closed, preserves Stage 5BD dry-run records, and keeps String 4 inactive until a future reviewed stage explicitly changes that boundary.

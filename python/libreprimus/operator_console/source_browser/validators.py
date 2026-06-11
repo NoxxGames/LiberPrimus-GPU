@@ -16,8 +16,8 @@ from .context_file import context_file_status
 from .loaders import SourceIndex, build_source_index, load_record_file
 from .manual_entries import validate_no_huge_raw_blob
 from .number_facts import (
+    NumberFactOverlayCache,
     REVIEW_STATES,
-    load_enrichment_overlays,
     normalize_entry_number_facts,
     number_fact_table_display,
     reviewability_counts,
@@ -156,9 +156,10 @@ def performance_smoke() -> ValidationResult:
         if not str(exc.name).startswith("PySide6"):
             raise
         table_backend = "headless_no_qt"
+        overlay_cache = NumberFactOverlayCache.load()
         for row in range(rows_to_check):
             for spec in columns:
-                _headless_table_display(index.entries[row], str(spec["key"]))
+                _headless_table_display(index.entries[row], str(spec["key"]), overlay_cache=overlay_cache)
     table_seconds = time.perf_counter() - table_start
     report = path_canonicalization_report(index)
     result = ValidationResult(
@@ -188,7 +189,12 @@ def performance_smoke() -> ValidationResult:
     return result
 
 
-def _headless_table_display(entry: Any, key: str) -> str:
+def _headless_table_display(
+    entry: Any,
+    key: str,
+    *,
+    overlay_cache: NumberFactOverlayCache | None = None,
+) -> str:
     if key == "title":
         return str(entry.title)
     if key == "images":
@@ -201,7 +207,7 @@ def _headless_table_display(entry: Any, key: str) -> str:
         count = len(entry.urls)
         return f"{count} url{'s' if count != 1 else ''}"
     if key == "number_facts":
-        return number_fact_table_display(entry)
+        return number_fact_table_display(entry, overlay_cache=overlay_cache)
     if key == "warnings":
         count = len(entry.warnings)
         return f"{count} warning{'s' if count != 1 else ''}"
@@ -319,8 +325,8 @@ def path_canonicalization_report(index: SourceIndex | None = None) -> dict[str, 
 
 def validate_number_fact_cards() -> ValidationResult:
     index = build_source_index()
-    overlays = load_enrichment_overlays()
-    counts = reviewability_counts(index.entries)
+    overlay_cache = NumberFactOverlayCache.load()
+    counts = reviewability_counts(index.entries, overlay_cache=overlay_cache)
     result = ValidationResult(
         counts={
             "entries_loaded": len(index.entries),
@@ -329,16 +335,17 @@ def validate_number_fact_cards() -> ValidationResult:
             "zero_fact_not_reviewed_entries": counts[
                 "entries_with_zero_extracted_number_facts_not_reviewed"
             ],
-            "overlay_count": len(overlays),
+            "overlay_count": len(overlay_cache.overlays),
+            "overlay_cache_load_count": overlay_cache.load_count,
         }
     )
     for entry in index.entries:
         if not entry.number_facts:
-            state = zero_fact_review_state(entry, overlays)
+            state = zero_fact_review_state(entry, overlay_cache=overlay_cache)
             if state not in REVIEW_STATES:
                 result.errors.append(f"{entry.source_record_path}: invalid zero-fact state {state}")
             continue
-        for card in normalize_entry_number_facts(entry, overlays):
+        for card in normalize_entry_number_facts(entry, overlay_cache=overlay_cache):
             if card.review_state not in REVIEW_STATES:
                 result.errors.append(f"{card.source_record_path}: invalid review state {card.review_state}")
             if card.usable_for_decision_now:
@@ -350,7 +357,8 @@ def validate_number_fact_cards() -> ValidationResult:
 
 def number_fact_reviewability_summary(index: SourceIndex | None = None) -> dict[str, Any]:
     index = index or build_source_index()
-    counts = reviewability_counts(index.entries)
+    overlay_cache = NumberFactOverlayCache.load()
+    counts = reviewability_counts(index.entries, overlay_cache=overlay_cache)
     return {
         "entries_loaded": len(index.entries),
         "fact_cards_extracted": counts["total_number_fact_cards_extracted"],
@@ -359,7 +367,8 @@ def number_fact_reviewability_summary(index: SourceIndex | None = None) -> dict[
             "entries_with_zero_extracted_number_facts_not_reviewed"
         ],
         "entries_with_rich_fact_cards": counts["entries_with_rich_fact_cards"],
-        "overlay_count": len(load_enrichment_overlays()),
+        "overlay_count": len(overlay_cache.overlays),
+        "overlay_cache_load_count": overlay_cache.load_count,
     }
 
 

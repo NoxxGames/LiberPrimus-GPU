@@ -756,6 +756,7 @@ from . import stage5dx as stage5dx_module
 from . import stage5dy as stage5dy_module
 from . import stage5dz as stage5dz_module
 from . import stage5ea as stage5ea_module
+from . import stage5eb as stage5eb_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -10821,6 +10822,167 @@ def validate_stage5ea_governance_scope_command() -> None:
     _print_stage5dv_result(
         stage5ea_module.validate_stage5ea_governance_scope(),
         "token_block_stage5ea_governance_scope_valid=true",
+    )
+
+
+@app.command("build-stage5eb")
+def build_stage5eb_command() -> None:
+    records = stage5eb_module.build_stage5eb()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(f"stage5ea_status={summary.get('stage5ea_status')}")
+    console.print(
+        "number_fact_review_batch_3_deferred_to_stage5ec="
+        f"{str(summary.get('number_fact_review_batch_3_deferred_to_stage5ec') is True).lower()}"
+    )
+    console.print(f"local_parallel_default_workers={summary.get('local_parallel_default_workers')}")
+    console.print(f"local_parallel_default_pytest_workers={summary.get('local_parallel_default_pytest_workers')}")
+    console.print(
+        "full_serial_pytest_default_for_future_stages="
+        f"{str(summary.get('full_serial_pytest_default_for_future_stages') is True).lower()}"
+    )
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5eb")
+def validate_stage5eb_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb(),
+        "token_block_stage5eb_valid=true",
+    )
+
+
+@app.command("stage5eb-summary")
+def stage5eb_summary_command() -> None:
+    console.print(stage5eb_module.stage5eb_summary_text())
+
+
+@app.command("validate-stage5eb-stage5ea-preservation")
+def validate_stage5eb_stage5ea_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_stage5ea_preservation(),
+        "token_block_stage5eb_stage5ea_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-parallel-worker-policy")
+def validate_stage5eb_parallel_worker_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_parallel_worker_policy(),
+        "token_block_stage5eb_parallel_worker_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-serial-pytest-policy")
+def validate_stage5eb_serial_pytest_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_serial_pytest_policy(),
+        "token_block_stage5eb_serial_pytest_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-current-stage-registry-policy")
+def validate_stage5eb_current_stage_registry_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_current_stage_registry_policy(),
+        "token_block_stage5eb_current_stage_registry_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-generic-stage-wrapper")
+def validate_stage5eb_generic_stage_wrapper_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_generic_stage_wrapper(),
+        "token_block_stage5eb_generic_stage_wrapper_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-doc-ledger-tier-policy")
+def validate_stage5eb_doc_ledger_tier_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_doc_ledger_tier_policy(),
+        "token_block_stage5eb_doc_ledger_tier_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-pytest-shard-policy")
+def validate_stage5eb_pytest_shard_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_pytest_shard_policy(),
+        "token_block_stage5eb_pytest_shard_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-failing-shard-rerun-policy")
+def validate_stage5eb_failing_shard_rerun_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_failing_shard_rerun_policy(),
+        "token_block_stage5eb_failing_shard_rerun_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-source-browser-cache-reuse")
+def validate_stage5eb_source_browser_cache_reuse_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_source_browser_cache_reuse(),
+        "token_block_stage5eb_source_browser_cache_reuse_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-validation-rerun-discipline")
+def validate_stage5eb_validation_rerun_discipline_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_validation_rerun_discipline(),
+        "token_block_stage5eb_validation_rerun_discipline_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-stage5bd-preservation")
+def validate_stage5eb_stage5bd_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_stage5bd_preservation(),
+        "token_block_stage5eb_stage5bd_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-active-lineage-preservation")
+def validate_stage5eb_active_lineage_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_active_lineage_preservation(),
+        "token_block_stage5eb_active_lineage_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-sidecar-gates")
+def validate_stage5eb_sidecar_gates_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_sidecar_gates(),
+        "token_block_stage5eb_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-handoff-continuity")
+def validate_stage5eb_handoff_continuity_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_handoff_continuity(),
+        "token_block_stage5eb_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-credential-redaction-policy")
+def validate_stage5eb_credential_redaction_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_credential_redaction_policy(),
+        "token_block_stage5eb_credential_redaction_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5eb-governance-scope")
+def validate_stage5eb_governance_scope_command() -> None:
+    _print_stage5dv_result(
+        stage5eb_module.validate_stage5eb_governance_scope(),
+        "token_block_stage5eb_governance_scope_valid=true",
     )
 
 

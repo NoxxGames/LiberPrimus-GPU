@@ -1,9 +1,10 @@
 param(
-    [string]$Stage = "stage5ea",
+    [string]$Stage = "stage5eb",
     [ValidateSet("focused", "stage-fast", "local-fast", "full-parallel", "full-serial-rare", "ci")]
     [string]$Profile = "stage-fast",
-    [int]$Workers = 8,
-    [int]$PytestWorkers = 8,
+    [int]$MaxWorkers = $(if ($env:LIBERPRIMUS_MAX_VALIDATION_WORKERS) { [int]$env:LIBERPRIMUS_MAX_VALIDATION_WORKERS } else { 10 }),
+    [int]$Workers = $(if ($env:LIBERPRIMUS_VALIDATION_WORKERS) { [int]$env:LIBERPRIMUS_VALIDATION_WORKERS } else { 10 }),
+    [int]$PytestWorkers = $(if ($env:LIBERPRIMUS_PYTEST_WORKERS) { [int]$env:LIBERPRIMUS_PYTEST_WORKERS } else { 10 }),
     [int]$CommandTimeoutSeconds = 900
 )
 
@@ -24,7 +25,11 @@ function ConvertTo-StageCommandId {
         throw "Stage identifier is empty"
     }
     if (-not $token.StartsWith("stage")) {
-        $token = "stage$token"
+        if ($token -match "^[a-z]+$") {
+            $token = "stage5$token"
+        } else {
+            $token = "stage$token"
+        }
     }
     return $token
 }
@@ -79,11 +84,8 @@ function Invoke-StageStep {
 }
 
 $StageId = ConvertTo-StageCommandId $Stage
-if ($Workers -gt 8 -or $PytestWorkers -gt 8) {
-    throw "Stage validation policy caps local workers at 8"
-}
-if ($StageId -notin @("stage5dy", "stage5dz", "stage5ea")) {
-    throw "run-stage-validation currently supports Stage 5DY, Stage 5DZ, and Stage 5EA"
+if ($Workers -gt $MaxWorkers -or $PytestWorkers -gt $MaxWorkers) {
+    throw "Stage validation policy caps local workers at $MaxWorkers"
 }
 $StageDisplay = $StageId.ToUpperInvariant().Replace("STAGE", "Stage ")
 $stageTestFiles = Get-ChildItem tests/python -Filter "test_${StageId}_*.py" | ForEach-Object { $_.FullName }
@@ -112,7 +114,7 @@ switch ($Profile) {
         Invoke-StageStep "ruff $StageDisplay files" $Python $ruffArgs
     }
     "local-fast" {
-        & $PSCommandPath -Stage $Stage -Profile stage-fast -Workers $Workers -PytestWorkers $PytestWorkers
+        & $PSCommandPath -Stage $Stage -Profile stage-fast -MaxWorkers $MaxWorkers -Workers $Workers -PytestWorkers $PytestWorkers
         Invoke-StageStep "state drift" $Python @("-m", "libreprimus.cli", "consistency", "check-state-drift")
         Invoke-StageStep "fast consistency profile" $PowerShellExe @(
             "-NoProfile",
@@ -131,6 +133,7 @@ switch ($Profile) {
             "Bypass",
             "-File",
             ".\scripts\ci\run-parallel-validation.ps1",
+            "-MaxWorkers", "$MaxWorkers",
             "-Workers", "$Workers",
             "-PytestWorkers", "$PytestWorkers",
             "-PytestMode", "auto",
@@ -142,7 +145,7 @@ switch ($Profile) {
         Invoke-StageStep "full serial pytest rare fallback" $Python @("-m", "pytest", "-q", "tests/python") 7200
     }
     "ci" {
-        & $PSCommandPath -Stage $Stage -Profile local-fast -Workers $Workers -PytestWorkers $PytestWorkers
-        & $PSCommandPath -Stage $Stage -Profile full-parallel -Workers $Workers -PytestWorkers $PytestWorkers
+        & $PSCommandPath -Stage $Stage -Profile local-fast -MaxWorkers $MaxWorkers -Workers $Workers -PytestWorkers $PytestWorkers
+        & $PSCommandPath -Stage $Stage -Profile full-parallel -MaxWorkers $MaxWorkers -Workers $Workers -PytestWorkers $PytestWorkers
     }
 }

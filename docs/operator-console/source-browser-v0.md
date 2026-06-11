@@ -64,6 +64,8 @@ Stage 5DZ overlays live in `data/operator-console/source-browser/number-fact-ove
 
 Stage 5EA adds a pre-indexed number-fact overlay cache used by table display, filters, and the detail panel. This is a GUI/reviewability performance repair only; it does not add overlays, update source-lock evidence, perform number-fact review batch 3, or change any number-fact review decision.
 
+Stage 5EB validates Source Browser overlay-cache reuse as part of validation finalization. It keeps the cache as reviewability/performance infrastructure only, with no new overlays, source-lock evidence updates, review batch, route extraction, byte streams, execution, or solve claims.
+
 ## Validation
 
 Run:
@@ -94,6 +96,12 @@ Stage 5DR validates through:
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dr-image-thumbnail-actions
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dr-url-file-actions
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dr-preservation
+```
+
+Stage 5EB validation includes the Source Browser cache-reuse focused validator:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5eb-source-browser-cache-reuse
 ```
 
 Stage 5DS validates source-browser loadability through:

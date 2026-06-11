@@ -12,13 +12,14 @@ Set-Location $RepoRoot
 $Python = if ($env:PYTHON) { $env:PYTHON } elseif (Test-Path ".\.venv\Scripts\python.exe") { ".\.venv\Scripts\python.exe" } else { "python" }
 $TempDir = Join-Path ([System.IO.Path]::GetTempPath()) ("libreprimus-consistency-" + [System.Guid]::NewGuid().ToString("N"))
 New-Item -ItemType Directory -Path $TempDir | Out-Null
-Write-Host "For faster local validation, use scripts/ci/run-parallel-validation.ps1 -Workers 8 -PytestWorkers 8 -PytestMode auto"
+Write-Host "For faster local validation, use scripts/ci/run-parallel-validation.ps1 -Workers 10 -PytestWorkers 10 -PytestMode auto"
 
 if ($Profile -ne "full") {
     Write-Host "Running $Profile consistency profile"
     & $Python -m libreprimus.cli token-block validate-stage5dy
     & $Python -m libreprimus.cli token-block validate-stage5dz
     & $Python -m libreprimus.cli token-block validate-stage5ea
+    & $Python -m libreprimus.cli token-block validate-stage5eb
     & $Python -m libreprimus.cli source-browser validate-index
     & $Python -m libreprimus.cli consistency check-state-drift
     & $Python -m libreprimus.cli consistency check-stage-ledger-staleness `
@@ -37,6 +38,12 @@ try {
 
     Write-Host "Running state-drift consistency checks"
     & $Python -m libreprimus.cli consistency check-state-drift
+
+    Write-Host "Validating Stage 5EB validation-finalization records"
+    & $Python -m libreprimus.cli token-block validate-stage5eb
+    & $Python -m libreprimus.cli token-block stage5eb-summary
+    git check-ignore -q "codex-output/stage5eb-codex-completion.md"
+    if (Test-Path "codex_output") { throw "codex_output must not be used for Stage 5EB" }
 
     Write-Host "Running document staleness checks"
     & $Python -m libreprimus.cli consistency check-doc-staleness `
@@ -65,14 +72,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5EA",
+            expected_latest_stage="Stage 5EB",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5EA",
+            "expected_latest_stage": "Stage 5EB",
             "finding_count": len(findings),
             "findings": findings,
         },

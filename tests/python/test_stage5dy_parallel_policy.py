@@ -21,12 +21,12 @@ def test_parallel_policy_caps_workers_and_records_race_handling() -> None:
     assert audit["treated_as_race_avoidance_not_hidden_pass"] is True
 
 
-def test_parallel_scripts_default_to_eight_and_ignored_state() -> None:
+def test_parallel_scripts_default_to_current_ten_worker_policy_and_ignored_state() -> None:
     ps1 = Path("scripts/ci/run-parallel-validation.ps1").read_text(encoding="utf-8")
     sh = Path("scripts/ci/run-parallel-validation.sh").read_text(encoding="utf-8")
 
-    assert "else { 8 }" in ps1
-    assert "LIBERPRIMUS_VALIDATION_WORKERS:-8" in sh
+    assert "else { 10 }" in ps1
+    assert "LIBERPRIMUS_VALIDATION_WORKERS:-10" in sh
     assert "_stage5ax_state" in ps1
     assert "_stage5ax_state" in sh
     assert "--out-safety-audit" in ps1

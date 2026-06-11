@@ -80,6 +80,12 @@
     "full_cartesian_product_enumerated": {
       "const": false
     },
+    "full_serial_pytest_default_for_future_stages": {
+      "const": false
+    },
+    "full_serial_pytest_required_for_normal_stage_completion": {
+      "const": false
+    },
     "generated_outputs_committed": {
       "const": false
     },
@@ -98,11 +104,35 @@
     "known_plaintext_attack_performed_now": {
       "const": false
     },
+    "latest_completed_stage_ci_status_in_committed_registry": {
+      "const": "not_applicable_pre_push"
+    },
+    "latest_completed_stage_ci_status_recording_policy": {
+      "const": "external_post_push_handoff"
+    },
+    "latest_completed_stage_commit_in_committed_registry": {
+      "const": "not_applicable_self_referential"
+    },
+    "latest_completed_stage_commit_recording_policy": {
+      "const": "external_post_push_handoff"
+    },
     "latest_completed_stage_id": {
-      "const": "stage-5ea"
+      "const": "stage-5eb"
+    },
+    "local_parallel_default_pytest_workers": {
+      "const": 10
+    },
+    "local_parallel_default_workers": {
+      "const": 10
     },
     "machine_code_execution_performed_now": {
       "const": false
+    },
+    "maximum_supported_pytest_workers": {
+      "const": 10
+    },
+    "maximum_supported_workers": {
+      "const": 10
     },
     "mayfly_route_extraction_performed_now": {
       "const": false
@@ -140,6 +170,9 @@
     "old_16_worker_default_reintroduced": {
       "const": false
     },
+    "old_8_worker_cap_removed": {
+      "const": true
+    },
     "openpuff_execution_performed": {
       "const": false
     },
@@ -174,7 +207,7 @@
       "const": false
     },
     "recommended_next_stage_id": {
-      "const": "stage-5eb"
+      "const": "stage-5ec"
     },
     "record_type": {
       "const": "current_stage_state"
@@ -207,7 +240,7 @@
       "const": false
     },
     "stage_id": {
-      "const": "stage-5ea"
+      "const": "stage-5eb"
     },
     "stage_registry_is_source_of_truth": {
       "const": true
@@ -229,6 +262,9 @@
     },
     "triangle_route_extraction_performed_now": {
       "const": false
+    },
+    "validation_infrastructure_stage": {
+      "const": true
     },
     "variant_byte_streams_generated": {
       "const": false

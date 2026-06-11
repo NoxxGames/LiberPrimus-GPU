@@ -511,7 +511,7 @@ records:
     method_family_id: parallel_validation_infrastructure
     name: Parallel validation harness and fast local checks
     status: infrastructure_only
-    evidence_summary: Stage 5AX adds an opt-in local validation harness with classified command plans, read-only parallel-safe command execution, subprocess scheduling, pytest-xdist detection, deterministic shard fallback, worker caps, separated logs, failure aggregation, safety audits, and PowerShell/shell wrappers. Stage 5CM sets the forward local parallel-validation and pytest worker cap to 8 workers.
+    evidence_summary: Stage 5AX adds an opt-in local validation harness with classified command plans, read-only parallel-safe command execution, subprocess scheduling, pytest-xdist detection, deterministic shard fallback, worker caps, separated logs, failure aggregation, safety audits, and PowerShell/shell wrappers. Stage 5CM set the earlier forward local parallel-validation and pytest worker cap to 8 workers; Stage 5EB supersedes that local default/cap with 10 workers and 10 pytest workers while keeping CI env overrides and full serial pytest as an explicit rare fallback only.
     completed_stage_refs: [stage-5ax]
     reopen_conditions: [A future stage changes validation command classification, wants CI opt-in for the parallel harness, adds new read-only checks, or needs pytest shard/xdist behavior tuned.]
     stop_conditions: [Do not parallelise git mutation, GitHub mutation, network or remote commands, generated-output-writing build steps, commit/push, issue updates, token experiments, DWH/hash searches, decoding, stego, OCR/AI/ML/LLM vision, CUDA, cryptanalytic benchmarks, scored experiments, or solve-claim workflows.]

@@ -2,11 +2,11 @@
 
 ## Current Project State
 
-Current completed stage: Stage 5EA - Validation throughput, current-stage registry, historical-test isolation, and Source Browser fact-card performance repair, without execution.
+Current completed stage: Stage 5EB - Validation finalization, 10-worker parallel policy, serial-fallback elimination, and test-throughput repair, without execution.
 
-Current work after Stage 5EA: Stage 5EB - Operator/assistant source-lock number-fact review batch 3, without execution.
+Current work after Stage 5EB: Stage 5EC - Operator/assistant source-lock number-fact review batch 3, without execution.
 
-Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DX completed the second visual/red-heading/transform bridge review batch as overlay metadata only. Stage 5DY repaired validation performance and stage isolation before the next batch. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment before the normal third review batch. Stage 5EA repaired validation throughput, current-stage registry handling, historical-test isolation, validation-wrapper stage-id normalization, pytest shard policy, and Source Browser number-fact overlay caching. Stage 5EA does not perform number-fact batch 3, add source-lock evidence, add overlays, backfill number facts directly, rewrite historical source-lock records, select a target, extract routes, generate route streams, generate bytes, run image forensics/OCR, execute anything, or make solve claims.
+Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DX completed the second visual/red-heading/transform bridge review batch as overlay metadata only. Stage 5DY repaired validation performance and stage isolation before the next batch. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment before the normal third review batch. Stage 5EA repaired validation throughput, current-stage registry handling, historical-test isolation, validation-wrapper stage-id normalization, pytest shard policy, and Source Browser number-fact overlay caching. Stage 5EB finalized validation policy by moving local defaults/caps to 10 workers and 10 pytest workers, keeping full serial pytest as the explicit `full-serial-rare` fallback, repairing current-stage registry finalization handoff semantics, genericizing stage wrapper aliases, adding shard/rerun guidance, and validating Source Browser overlay cache reuse. Stage 5EB does not perform number-fact batch 3, add source-lock evidence, add overlays, backfill number facts directly, rewrite historical source-lock records, select a target, extract routes, generate route streams, generate bytes, run image forensics/OCR, execute anything, or make solve claims.
 
 The canonical Codex handoff root is `codex-output`. The deprecated `codex_output` root must remain absent. Completion summaries under `codex-output/**` are local ignored handoffs and must not be committed.
 
@@ -127,14 +127,14 @@ StarArtifacts strongest observations:
 - Source-locked does not mean review-ready.
 - A useful fact card must explain value, type, expression, components, relation, why stored, source anchor, verification status, risks, and crosslinks.
 - Older zero-fact entries are usually not reviewed, not necessarily number-free.
-- Stage 5DW completed the high-signal 20-entry review batch 001 after the Stage 5DV repair; Stage 5DX completed the visual/red-heading/transform 20-entry review batch 002. Stage 5DY inserted validation repair before the next review batch. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment. Stage 5EA inserted validation-throughput/current-stage repair, so Stage 5EB should continue with number-fact review batch 003.
+- Stage 5DW completed the high-signal 20-entry review batch 001 after the Stage 5DV repair; Stage 5DX completed the visual/red-heading/transform 20-entry review batch 002. Stage 5DY inserted validation repair before the next review batch. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment. Stage 5EA inserted validation-throughput/current-stage repair, and Stage 5EB inserted validation finalization plus 10-worker policy repair, so Stage 5EC should continue with number-fact review batch 003.
 
 ## Governance And Preservation
 
 - Stage 5DG real operator approval remains preserved, but there is still no Deep Research acceptance and no satisfied combined gate.
 - Stage 5BD run-plan IDs remain preserved at 10.
 - Active lineage records remain preserved at 8.
-- The Stage 5CM-and-later parallel validation cap remains 8 workers.
+- Stage 5EB supersedes the older Stage 5CM-era 8-worker local validation cap; the current local parallel validation default/cap is 10 workers and 10 pytest workers.
 - String 4 remains inactive.
 - Active planning input remains unauthorized and unselected.
 
@@ -177,7 +177,7 @@ StarArtifacts strongest observations:
 - BigGaps/StarArtifacts facts preserved: red-subset sum 229, gap metrics 73/109/129 with 109=prime(29), tree offsets 641/709 with prime-index gap 11, stardust phrase 2540=254*10, Mayfly 72/600 twin-prime gaps, ICC boundary pages 00-16 vs 17-74 with 2576-byte profile claim.
 - Red-heading/Mobius facts preserved: Page15 instruction phrase primes, DIVINITY WITHIN 491/563/1229 crosslink, YGGDRASIL spelling 491/564 warning, A POSTLUDE 1/8 structure, Mobius/totient zero-class 14-token partition, page0 DIVINITY WITHIN/A CROSSROADS 491.
 - PDD/Disk/Ouroboros facts preserved: 56311 net +25 over modulus 153, gcd(25,153)=1, 4-phase period 612; OUROBOROS 167 minus 153 gives offset 14; Disk 56311 from center 41/WYNN reaches word52/WAY.
-- Stage 5DY inserted validation repair before number-fact review batch 003. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment before the batch. Stage 5EA inserted validation-throughput/current-stage repair before the batch. Stage 5EB should continue the review batch unless a blocking Source Browser issue appears.
+- Stage 5DY inserted validation repair before number-fact review batch 003. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment before the batch. Stage 5EA inserted validation-throughput/current-stage repair before the batch. Stage 5EB inserted validation finalization and 10-worker policy repair before the batch. Stage 5EC should continue the review batch unless a blocking Source Browser issue appears.
 
 ## Stage 5DY Validation Policy
 
@@ -189,7 +189,7 @@ StarArtifacts strongest observations:
 - Stage-specific schemas must not overwrite shared schemas.
 - Validate/summary commands must be read-only for committed records.
 - PowerShell wildcard expansion differs from Bash; use explicit file lists in examples.
-- Stage 5EB remains the next fact-review batch.
+- Stage 5EC remains the next fact-review batch.
 
 ## Stage 5DZ - Triangle/Page32 bounded-solve findings source-lock
 

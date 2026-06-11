@@ -4122,3 +4122,25 @@ records:
   raw_outputs_committed: false
   generated_outputs_committed: false
   notes: records=26; schemas=21; worker_cap=8; next=stage-5eb.
+- record_type: stage_summary_record
+  stage_id: stage-5eb
+  title: Stage 5EB - Validation finalization, 10-worker parallel policy, serial-fallback
+    elimination, and test-throughput repair, without execution
+  status: complete
+  category: validation_infrastructure
+  summary: Finalized validation policy by moving local parallel validation to 10 workers,
+    making full serial pytest a rare explicit fallback, repairing current-stage registry
+    finalization semantics, genericizing stage wrappers, and adding failing-shard
+    rerun guidance.
+  key_outputs:
+  - Current-stage registry points latest to Stage 5EB and next to Stage 5EC without
+    blank final-hash placeholders.
+  - Local validation defaults and caps are 10 workers / 10 pytest workers.
+  - Full serial pytest remains full-serial-rare and is not part of normal final validation.
+  - Source Browser number-fact overlays are verified as shared-cache caller paths.
+  result_status: validation_finalization_repaired
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: records=23; schemas=22; worker_cap=10; next=stage-5ec.

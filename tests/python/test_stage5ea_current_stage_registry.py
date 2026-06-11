@@ -8,14 +8,20 @@ from libreprimus.stage_state.current import (
 from test_stage5ea_common import ensure_stage5ea_built, load_yaml
 
 
-def test_current_stage_registry_points_to_stage5ea_and_stage5eb() -> None:
+def test_current_stage_registry_preserves_stage5ea_or_newer_stage() -> None:
     ensure_stage5ea_built()
 
     state = load_yaml("data/project-state/current-stage-state.yaml")
 
-    assert state["latest_completed_stage_id"] == "stage-5ea"
-    assert state["recommended_next_stage_id"] == "stage-5eb"
+    assert state["latest_completed_stage_id"] in {"stage-5ea", "stage-5eb"}
+    if state["latest_completed_stage_id"] == "stage-5ea":
+        assert state["recommended_next_stage_id"] == "stage-5eb"
+        assert current_latest_stage_label() == "Stage 5EA"
+        assert current_next_stage_label() == "Stage 5EB"
+        assert current_latest_stage_command_suffix() == "stage5ea"
+    else:
+        assert state["recommended_next_stage_id"] == "stage-5ec"
+        assert current_latest_stage_label() == "Stage 5EB"
+        assert current_next_stage_label() == "Stage 5EC"
+        assert current_latest_stage_command_suffix() == "stage5eb"
     assert state["stage_registry_is_source_of_truth"] is True
-    assert current_latest_stage_label() == "Stage 5EA"
-    assert current_next_stage_label() == "Stage 5EB"
-    assert current_latest_stage_command_suffix() == "stage5ea"

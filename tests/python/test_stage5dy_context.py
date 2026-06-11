@@ -10,7 +10,7 @@ def test_chatgpt_context_contains_validation_policy() -> None:
     text = Path("ChatGPT-ContextFile.md").read_text(encoding="utf-8")
     summary = load_yaml("data/project-state/stage5dy-chatgpt-context-update-summary.yaml")
 
-    assert "## Stage 5DY Validation Policy" in text
-    assert "PowerShell wildcard expansion differs from Bash" in text
-    assert "Stage 5EB remains the next fact-review batch" in text
+    assert "Stage 5DY inserted validation repair before the next review batch" in text
+    assert "Stage 5EB inserted validation finalization plus 10-worker policy repair" in text
+    assert "Stage 5EC should continue with number-fact review batch 003" in text
     assert summary["stage5dy_validation_policy_section_added"] is True

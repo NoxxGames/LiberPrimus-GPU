@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5EA - Validation throughput, current-stage registry, historical-test isolation, and Source Browser fact-card performance repair, without execution.
-- Current planning focus: Stage 5EB - Operator/assistant source-lock number-fact review batch 3, without execution.
+- Latest completed stage: Stage 5EB - Validation finalization, 10-worker parallel policy, serial-fallback elimination, and test-throughput repair, without execution.
+- Current planning focus: Stage 5EC - Operator/assistant source-lock number-fact review batch 3, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -37,9 +37,9 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 No page is claimed solved by these docs.
 ## Stage 5DZ Current Boundary
 
-Stage 5DZ is the latest completed stage. It source-locks assistant/operator bounded findings for the PDD153 triangle and Page32 as review-only metadata before the third source-lock number-fact review batch. It records 7 PDD153 triangle findings, 8 Page32 findings, 12 Source Browser overlays, direct-method negative-result notes, future design notes, and Stage 5EA routing. Stage 5DZ does not select a target. Stage 5DZ does not execute routes or produce route streams. Stage 5DZ does not generate byte streams. Stage 5DZ does not perform image forensics/OCR. Stage 5DZ does not accept a solve claim. Number-fact review batch 3 is deferred to Stage 5EA.
+Stage 5EB is the latest completed stage. It finalizes validation policy before the third source-lock number-fact review batch. It preserves Stage 5EA, sets local validation defaults/caps to 10 workers and 10 pytest workers, keeps full serial pytest as `full-serial-rare`, repairs current-stage registry finalization handoff semantics, genericizes stage wrapper aliases, adds shard/rerun guidance, validates Source Browser overlay cache reuse, and routes number-fact review batch 3 to Stage 5EC. Stage 5EB does not select a target. Stage 5EB does not execute routes or produce route streams. Stage 5EB does not generate byte streams. Stage 5EB does not perform image forensics/OCR. Stage 5EB does not accept a solve claim.
 
-Current state: Stage 5DZ is complete and Stage 5EA number-fact review batch 3 is next. Stage 5DZ preserves Stage 5DY validation profiles, the local 8-worker cap, Stage 5DX/5DW/5DV/5DU, Stage 5DG, Stage 5BD run-plan IDs, active lineage, and all no-active/no-byte/no-execution gates.
+Current state: Stage 5EB is complete and Stage 5EC number-fact review batch 3 is next. Stage 5EB preserves Stage 5EA validation-throughput repair, Stage 5DZ source-lock enrichment, Stage 5BD run-plan IDs, active lineage, and all no-active/no-byte/no-execution gates while moving local validation defaults/caps to 10 workers.
 
 ## Stage 5DY Boundary History
 

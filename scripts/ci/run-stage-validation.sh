@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-stage="stage5ea"
+stage="stage5eb"
 profile="stage-fast"
-workers=8
-pytest_workers=8
+max_workers="${LIBERPRIMUS_MAX_VALIDATION_WORKERS:-10}"
+workers="${LIBERPRIMUS_VALIDATION_WORKERS:-10}"
+pytest_workers="${LIBERPRIMUS_PYTEST_WORKERS:-10}"
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --stage) stage="$2"; shift 2 ;;
     --profile) profile="$2"; shift 2 ;;
+    --max-workers) max_workers="$2"; shift 2 ;;
     --workers) workers="$2"; shift 2 ;;
     --pytest-workers) pytest_workers="$2"; shift 2 ;;
     *) echo "Unknown argument: $1" >&2; exit 2 ;;
@@ -27,18 +29,17 @@ if [[ -z "$stage_id" ]]; then
   exit 2
 fi
 if [[ "$stage_id" != stage* ]]; then
-  stage_id="stage$stage_id"
+  if [[ "$stage_id" =~ ^[a-z]+$ ]]; then
+    stage_id="stage5$stage_id"
+  else
+    stage_id="stage$stage_id"
+  fi
 fi
 stage_display="$(echo "$stage_id" | tr '[:lower:]' '[:upper:]' | sed 's/STAGE/Stage /')"
 stage_results_dir="$parallel_results_root"/"$stage_id"
 
-if [[ "$workers" -gt 8 || "$pytest_workers" -gt 8 ]]; then
-  echo "Stage validation policy caps local workers at 8" >&2
-  exit 2
-fi
-
-if [[ "$stage_id" != "stage5dy" && "$stage_id" != "stage5dz" && "$stage_id" != "stage5ea" ]]; then
-  echo "run-stage-validation currently supports Stage 5DY, Stage 5DZ, and Stage 5EA" >&2
+if [[ "$workers" -gt "$max_workers" || "$pytest_workers" -gt "$max_workers" ]]; then
+  echo "Stage validation policy caps local workers at $max_workers" >&2
   exit 2
 fi
 
@@ -75,6 +76,7 @@ case "$profile" in
   full-parallel)
     scripts/ci/run-parallel-validation.sh \
       --workers "$workers" \
+      --max-workers "$max_workers" \
       --pytest-workers "$pytest_workers" \
       --pytest-mode auto \
       --results-dir "$stage_results_dir"
@@ -84,8 +86,8 @@ case "$profile" in
     "$python_bin" -m pytest -q tests/python
     ;;
   ci)
-    "$0" --stage "$stage" --profile local-fast --workers "$workers" --pytest-workers "$pytest_workers"
-    "$0" --stage "$stage" --profile full-parallel --workers "$workers" --pytest-workers "$pytest_workers"
+    "$0" --stage "$stage" --profile local-fast --max-workers "$max_workers" --workers "$workers" --pytest-workers "$pytest_workers"
+    "$0" --stage "$stage" --profile full-parallel --max-workers "$max_workers" --workers "$workers" --pytest-workers "$pytest_workers"
     ;;
   *)
     echo "Unknown profile: $profile" >&2

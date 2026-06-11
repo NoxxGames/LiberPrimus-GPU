@@ -25,13 +25,14 @@ python_path() {
     fi
 }
 
-echo "For faster local validation, use scripts/ci/run-parallel-validation.sh --workers 8 --pytest-workers 8 --pytest-mode auto"
+echo "For faster local validation, use scripts/ci/run-parallel-validation.sh --workers 10 --pytest-workers 10 --pytest-mode auto"
 
 if [[ "$profile" != "full" ]]; then
     echo "Running $profile consistency profile"
     "$python_bin" -m libreprimus.cli token-block validate-stage5dy
     "$python_bin" -m libreprimus.cli token-block validate-stage5dz
     "$python_bin" -m libreprimus.cli token-block validate-stage5ea
+    "$python_bin" -m libreprimus.cli token-block validate-stage5eb
     "$python_bin" -m libreprimus.cli source-browser validate-index
     "$python_bin" -m libreprimus.cli consistency check-state-drift
     "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
@@ -49,6 +50,15 @@ echo "Running full consistency suite"
 
 echo "Running state-drift consistency checks"
 "$python_bin" -m libreprimus.cli consistency check-state-drift
+
+echo "Validating Stage 5EB validation-finalization records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5eb
+"$python_bin" -m libreprimus.cli token-block stage5eb-summary
+git check-ignore -q "codex-output/stage5eb-codex-completion.md"
+if [ -e "codex_output" ]; then
+    echo "codex_output must not be used for Stage 5EB" >&2
+    exit 1
+fi
 
 echo "Running document staleness checks"
 "$python_bin" -m libreprimus.cli consistency check-doc-staleness \
@@ -78,14 +88,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5EA",
+            expected_latest_stage="Stage 5EB",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5EA",
+            "expected_latest_stage": "Stage 5EB",
             "finding_count": len(findings),
             "findings": findings,
         },

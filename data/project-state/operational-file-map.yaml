@@ -5,7 +5,7 @@ records:
   category: operational_status_doc
   purpose: Public repository entrypoint and current boundary summary.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ea
+  last_meaningful_update_stage: stage-5eb
   expected_update_frequency: every_stage_when_state_changes
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -17,7 +17,7 @@ records:
   category: operational_status_doc
   purpose: Concise current operational status.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ea
+  last_meaningful_update_stage: stage-5eb
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -29,7 +29,7 @@ records:
   category: roadmap_doc
   purpose: High-level current direction with staged-plan pointer.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ea
+  last_meaningful_update_stage: stage-5eb
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -41,7 +41,7 @@ records:
   category: policy_doc
   purpose: Codex operational policy and current stage guardrails.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ea
+  last_meaningful_update_stage: stage-5eb
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -101,7 +101,7 @@ records:
   category: policy_doc
   purpose: Validation commands and test boundaries.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5eb
   expected_update_frequency: every_cli_or_ci_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -125,7 +125,7 @@ records:
   category: roadmap_doc
   purpose: Durable stage timeline, current state, and next-stage direction.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5eb
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -137,7 +137,7 @@ records:
   category: operational_status_doc
   purpose: Newcomer entrypoint to current project state.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5eb
   expected_update_frequency: every_stage_when_state_changes
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -149,7 +149,7 @@ records:
   category: operational_status_doc
   purpose: Map of authoritative docs and records.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5eb
   expected_update_frequency: every_source_of_truth_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -209,7 +209,7 @@ records:
   category: operational_status_doc
   purpose: Human-readable mirror of this operational file map.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5eb
   expected_update_frequency: every_operational_file_map_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: mirror_of_data_project_state_operational_file_map
@@ -765,7 +765,7 @@ records:
   category: operational_status_doc
   purpose: Stage 5AP token-block CLI reference.
   source_of_truth_rank: 3
-  last_meaningful_update_stage: stage-5ea
+  last_meaningful_update_stage: stage-5eb
   expected_update_frequency: every_token_block_cli_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -6995,7 +6995,7 @@ records:
   category: operational_status_doc
   purpose: Concise assistant context handoff including Stage 5DS high-value facts.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ea
+  last_meaningful_update_stage: stage-5eb
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -7371,29 +7371,29 @@ records:
   source_of_truth_rank: 1
   last_meaningful_update_stage: Stage 5DY
 - path: scripts/ci/run-stage-validation.ps1
-  owner_stage: stage-5dy
+  owner_stage: stage-5eb
   purpose: Windows staged validation profile runner.
   expected_update_frequency: on_validation_policy_change
   mutable_or_reference_only: source
   mirror_or_generated_relationships: source
   staleness_check_level: strict
   owner_context: codex_agent
-  notes: Provides focused, stage-fast, local-fast, full-parallel, full-serial-rare, and CI validation profiles.
+  notes: Provides focused, stage-fast, local-fast, full-parallel, full-serial-rare, and CI validation profiles with Stage 5EB 10-worker policy.
   category: reference_only_data_record
   source_of_truth_rank: 1
-  last_meaningful_update_stage: Stage 5DY
+  last_meaningful_update_stage: Stage 5EB
 - path: scripts/ci/run-stage-validation.sh
-  owner_stage: stage-5dy
+  owner_stage: stage-5eb
   purpose: POSIX staged validation profile runner.
   expected_update_frequency: on_validation_policy_change
   mutable_or_reference_only: source
   mirror_or_generated_relationships: source
   staleness_check_level: strict
   owner_context: codex_agent
-  notes: Mirrors the PowerShell staged validation profiles for non-Windows local use.
+  notes: Mirrors the PowerShell staged validation profiles and Stage 5EB 10-worker policy for non-Windows local use.
   category: reference_only_data_record
   source_of_truth_rank: 1
-  last_meaningful_update_stage: Stage 5DY
+  last_meaningful_update_stage: Stage 5EB
 - path: docs/development-logs/2026-06-10-stage-5dy-validation-performance-repair.md
   owner_stage: stage-5dy
   purpose: Stage 5DY developer log.
@@ -7538,3 +7538,195 @@ records:
   category: historical_log
   source_of_truth_rank: 3
   last_meaningful_update_stage: Stage 5DZ
+- path: data/project-state/stage5eb-summary.yaml
+  owner_stage: stage-5eb
+  purpose: Stage 5EB validation finalization and 10-worker policy summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Summary-only metadata; records no number-fact review, source-lock mutation, byte generation, execution, or solve claim.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5EB
+- path: data/project-state/stage5eb-next-stage-decision.yaml
+  owner_stage: stage-5eb
+  purpose: Stage 5EB next-stage decision routing batch 3 to Stage 5EC.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Records operator-inserted validation finalization before number-fact review batch 3.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5EB
+- path: data/project-state/stage5eb-parallel-worker-policy.yaml
+  owner_stage: stage-5eb
+  purpose: Local 10-worker validation default and cap policy.
+  expected_update_frequency: on_validation_policy_change
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: ci_operator
+  notes: Replaces the old 8-worker cap for local Stage 5EB-and-later validation defaults; 16-worker default remains not reintroduced.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5EB
+- path: data/project-state/stage5eb-serial-pytest-policy.yaml
+  owner_stage: stage-5eb
+  purpose: Full serial pytest rare-fallback policy.
+  expected_update_frequency: on_validation_policy_change
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: ci_operator
+  notes: Keeps full serial pytest outside normal local/CI/full-parallel completion profiles.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5EB
+- path: data/project-state/stage5eb-current-stage-registry-finalization-policy.yaml
+  owner_stage: stage-5eb
+  purpose: Current-stage registry finalization handoff policy.
+  expected_update_frequency: on_stage_registry_policy_change
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Avoids self-referential final commit/CI fields in committed pre-push state.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5EB
+- path: data/project-state/stage5eb-generic-stage-wrapper-repair.yaml
+  owner_stage: stage-5eb
+  purpose: Generic stage wrapper normalization policy.
+  expected_update_frequency: on_validation_policy_change
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: ci_operator
+  notes: Records support for stage-5eb, stage5eb, 5eb, and eb aliases without a hard-coded allowlist.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5EB
+- path: data/project-state/stage5eb-source-browser-cache-reuse-evidence.yaml
+  owner_stage: stage-5eb
+  purpose: Source Browser number-fact overlay cache reuse evidence.
+  expected_update_frequency: on_source_browser_cache_policy_change
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: operator_console_operator
+  notes: Records table, filter, detail, and reviewability count callers using one shared overlay cache.
+  category: active_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5EB
+- path: python/libreprimus/token_block/stage5eb.py
+  owner_stage: stage-5eb
+  purpose: Stage 5EB build, validation, summary, and preservation command implementation.
+  expected_update_frequency: on_stage5eb_policy_change
+  mutable_or_reference_only: source
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Implements metadata-only Stage 5EB records and validators; no review batch or execution.
+  category: reference_only_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5EB
+- path: python/libreprimus/parallel_validation/pytest_runner.py
+  owner_stage: stage-5eb
+  purpose: Duration-aware pytest shard metadata and rerun guidance.
+  expected_update_frequency: on_validation_policy_change
+  mutable_or_reference_only: source
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: ci_operator
+  notes: Provides 10-worker defaults and shard/failing-slice rerun metadata.
+  category: reference_only_data_record
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: Stage 5EB
+- path: scripts/ci/run-pytest-shard.ps1
+  owner_stage: stage-5eb
+  purpose: Windows failing-shard rerun helper.
+  expected_update_frequency: on_validation_policy_change
+  mutable_or_reference_only: source
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: ci_operator
+  notes: Runs a single planned pytest shard from the parallel validation summary.
+  category: reference_only_data_record
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: Stage 5EB
+- path: scripts/ci/run-pytest-shard.sh
+  owner_stage: stage-5eb
+  purpose: POSIX failing-shard rerun helper.
+  expected_update_frequency: on_validation_policy_change
+  mutable_or_reference_only: source
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: ci_operator
+  notes: Runs a single planned pytest shard from the parallel validation summary.
+  category: reference_only_data_record
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: Stage 5EB
+- path: scripts/ci/run-failing-pytest-slice.ps1
+  owner_stage: stage-5eb
+  purpose: Windows explicit failing pytest slice helper.
+  expected_update_frequency: on_validation_policy_change
+  mutable_or_reference_only: source
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: ci_operator
+  notes: Supports rerunning the failing slice before rerunning full parallel validation.
+  category: reference_only_data_record
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: Stage 5EB
+- path: scripts/ci/run-failing-pytest-slice.sh
+  owner_stage: stage-5eb
+  purpose: POSIX explicit failing pytest slice helper.
+  expected_update_frequency: on_validation_policy_change
+  mutable_or_reference_only: source
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: ci_operator
+  notes: Supports rerunning the failing slice before rerunning full parallel validation.
+  category: reference_only_data_record
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: Stage 5EB
+- path: docs/experiments/stage-5eb-validation-finalization-10-worker-policy.md
+  owner_stage: stage-5eb
+  purpose: Stage 5EB experiment note and guardrail summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents that Stage 5EB is validation infrastructure only and that Stage 5EC is next.
+  category: policy_doc
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: Stage 5EB
+- path: docs/development-logs/2026-06-11-stage-5eb-validation-finalization-10-worker-policy.md
+  owner_stage: stage-5eb
+  purpose: Stage 5EB developer log.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation and validation decisions for validation finalization.
+  category: historical_log
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: Stage 5EB
+- path: research-log/2026-06-11-stage5eb-next-stage-decision-summary.md
+  owner_stage: stage-5eb
+  purpose: Stage 5EB next-stage decision and research summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Summary-only log; no raw findings dump or generated output publication.
+  category: historical_log
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: Stage 5EB

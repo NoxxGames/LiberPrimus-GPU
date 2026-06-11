@@ -12,6 +12,8 @@ def normalize_stage_token(value: str) -> str:
         raise ValueError("stage identifier is empty")
     if token.startswith("stage"):
         return token
+    if token.isalpha():
+        return f"stage5{token}"
     return f"stage{token}"
 
 
