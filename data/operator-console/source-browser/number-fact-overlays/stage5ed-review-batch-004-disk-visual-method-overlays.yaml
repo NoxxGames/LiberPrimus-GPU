@@ -1,0 +1,909 @@
+stage_id: stage-5ed
+stage_title: Stage 5ED - Source-lock number-fact review batch 004, disk / visual-method
+  / route-context enrichment overlays, without execution
+prompt_type: assistant_or_operator_review_then_codex_overlay_update
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: stage5ed_source_browser_number_fact_enrichment_overlay_collection
+schema: schemas/operator-console/stage5ed-source-browser-number-fact-overlay-collection-v0.schema.json
+review_batch_id: number_fact_review_batch_004_disk_visual_method
+review_batch_selection_policy: assistant_operator_disk_visual_method_route_context_batch
+reviewed_entry_count: 20
+overlay_count: 25
+overlay_only_fact_cards_supported_required: true
+review_state: overlay_enriched_fact
+historical_source_lock_records_rewritten: false
+source_lock_evidence_updated_now: false
+raw_source_files_committed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+execution_performed: false
+selected_source_record_paths:
+- data/historical-route/stage5dn-disk-alberti-branch-cipher-candidate-v1.yaml
+- data/historical-route/stage5dn-disk-p39-row1-math-semantic-cluster-v1.yaml
+- data/historical-route/stage5dn-disk-rule4-mobius-trip-rotation-bridge-v0.yaml
+- data/historical-route/stage5dn-disk-doublet-suppression-candidate-v1.yaml
+- data/historical-route/stage5dn-disk-ruth-root-route-way-wordplay-candidate-v0.yaml
+- data/historical-route/stage5dn-disk-2015-eclipse-167-temporal-candidate-v0.yaml
+- data/historical-route/stage5dn-pdd-153-triangle-56311-wynn-way-route-v1.yaml
+- data/historical-route/stage5dn-solved-i-voice-of-circumference-precedent-v0.yaml
+- data/historical-route/stage5dn-circumference-single-i-spiral-anchor-crosslink-v0.yaml
+- data/historical-route/stage5dn-disk-probability-claim-quarantine-v1.yaml
+- data/historical-route/stage5dm-blake-visual-text-source-family.yaml
+- data/historical-route/stage5dm-lp-sacred-book-edition-overlay-index.yaml
+- data/historical-route/stage5dm-solved-magic-square-word-sum-precedent.yaml
+- data/historical-route/stage5dm-full-lp-page-visual-motif-index.yaml
+- data/historical-route/stage5dm-lp-doublet-scarcity-feature-candidate.yaml
+- data/historical-route/stage5di-2016-message-route-meta-clue.yaml
+- data/historical-route/stage5di-page32-tree-polar-route-candidate.yaml
+- data/historical-route/stage5dk-page56-dwh-hash-contract.yaml
+- data/historical-route/stage5di-dinkus-visual-delimiter-candidate.yaml
+- data/historical-route/stage5di-magic-square-matrix-route-context.yaml
+overlays:
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: &id001
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5ed_disk_alberti_model_components_overlay
+  source_record_path: data/historical-route/stage5dn-disk-alberti-branch-cipher-candidate-v1.yaml
+  source_fact_id: disk_alberti_model_components
+  fact_class: disk_cipher_number_facts
+  display_label: DiskCipher candidate has 8 claimed model components including four-rule
+    codebook and 56311
+  short_label: 'Disk model: 8 components; 56311'
+  value: 8
+  values:
+  - 8
+  - 4
+  - 5
+  - 6
+  - 3
+  - 11
+  value_type: sequence
+  operation_type: source_observation
+  expression: Source-lock lists 8 model components; includes four_rule_codebook and
+    sequence_56311.
+  relation: Preserves the model surface without executing Alberti branches.
+  why_stored: Helps reviewers see that DiskCipher is a many-component candidate and
+    not a single arithmetic fact.
+  verification_status: source_author_claim
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dn-disk-alberti-branch-cipher-candidate-v1.yaml
+  crosslinks:
+  - disk_alberti_branch_cipher_candidate_v1
+  - disk_56311_wynn_way_bridge_v1
+  risk_notes:
+  - high_degrees_of_freedom_warning
+  - model_not_validated
+  - no_html_execution
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_disk_p39_row1_term_count_overlay
+  source_record_path: data/historical-route/stage5dn-disk-p39-row1-math-semantic-cluster-v1.yaml
+  source_fact_id: disk_p39_row1_claimed_term_count
+  fact_class: disk_cipher_number_facts
+  display_label: Disk p39 row-1 cluster claims 10 terms including EULER, TOTIENT,
+    CIRCUMFERENCE, FISH, WYNN, and PHI
+  short_label: Disk p39 row1 = 10 claimed terms
+  value: 10
+  values:
+  - 10
+  value_type: sequence
+  operation_type: source_observation
+  expression: Claimed terms are EULER, LEONHARD, NAPIER, JOHN, TOTIENT, CIRCUMFERENCE,
+    PRIME_NUMBER, FISH, WYNN, PHI.
+  relation: Dense source-author semantic cluster linking DiskCipher to known LP math/geometry
+    vocabulary.
+  why_stored: This is one of the strongest DiskCipher review hooks, but remains candidate-only.
+  verification_status: source_author_claim
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5dn-disk-p39-row1-math-semantic-cluster-v1.yaml
+  crosslinks:
+  - disk_alberti_branch_cipher_candidate_v1
+  - pdd_153_triangle_word_prime_route_v1
+  - solved_i_voice_of_circumference_precedent_v0
+  risk_notes:
+  - terms_claimed_by_source_author
+  - independent_reimplementation_required
+  - negative_controls_required
+  - accepted_plaintext_false
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_disk_p39_row1_lp_relevance_overlay
+  source_record_path: data/historical-route/stage5dn-disk-p39-row1-math-semantic-cluster-v1.yaml
+  source_fact_id: disk_p39_row1_lp_relevance_cluster
+  fact_class: disk_cipher_number_facts
+  display_label: 'Disk p39 row-1 cluster links to 5 LP relevance families: prime/totient,
+    circumference, fish/153, WYNN/41, and PHI geometry'
+  short_label: Disk p39 row1 -> 5 LP relevance links
+  value: 5
+  values:
+  - 5
+  - 153
+  - 41
+  value_type: sequence
+  operation_type: source_observation
+  expression: Source-lock relevance list includes prime/totient solved wisdom, circumference
+    solved koan, fish/153 triangle, WYNN/center41, and PHI geometry.
+  relation: Crosswalks the row-1 semantic cluster into the current triangle/Page32/music
+    evidence graph.
+  why_stored: Prevents the term cluster from appearing as isolated vocabulary.
+  verification_status: operator_assistant_observed
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dn-disk-p39-row1-math-semantic-cluster-v1.yaml
+  crosslinks:
+  - pdd_153_triangle_word_prime_route_v1
+  - page32_moebius_fibonacci_prime_index_spiral_v1
+  - music_3301_instar_crab_canon_v0
+  risk_notes:
+  - semantic_context_not_proof
+  - candidate_only
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_disk_rule4_mobius_rotation_terms_overlay
+  source_record_path: data/historical-route/stage5dn-disk-rule4-mobius-trip-rotation-bridge-v0.yaml
+  source_fact_id: disk_rule4_mobius_rotation_terms
+  fact_class: disk_cipher_number_facts
+  display_label: "Disk Rule-4 M\xF6bius bridge records 5 route-mechanics terms: rotation,\
+    \ flip, loop, step/trip, circumference"
+  short_label: 'Rule4 terms: rotation/flip/loop/step/circumference'
+  value: 5
+  values:
+  - 4
+  - 5
+  value_type: sequence
+  operation_type: source_observation
+  expression: Rule-4 bridge terms are rotation, flip, loop, step_or_trip, circumference.
+  relation: "Conceptual bridge to Page32 M\xF6bius/Fibonacci route mechanics."
+  why_stored: The mechanics vocabulary may matter for future route design, but it
+    is not a route itself.
+  verification_status: source_author_claim
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dn-disk-rule4-mobius-trip-rotation-bridge-v0.yaml
+  crosslinks:
+  - page32_moebius_fibonacci_prime_index_spiral_v1
+  - disk_alberti_branch_cipher_candidate_v1
+  risk_notes:
+  - confidence_low_medium
+  - route_not_accepted
+  - no_execution
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_disk_doublet_suppression_448_89_overlay
+  source_record_path: data/historical-route/stage5dn-disk-doublet-suppression-candidate-v1.yaml
+  source_fact_id: disk_doublet_suppression_448_expected_89_observed
+  fact_class: disk_cipher_number_facts
+  display_label: Disk doublet-suppression claim compares expected 448 doublets to
+    observed 89, approximately 5x suppression
+  short_label: Doublets 448 expected / 89 observed / ~5x
+  value: 89
+  values:
+  - 448
+  - 89
+  - 5
+  value_type: sequence
+  operation_type: source_observation
+  expression: 'Source claim: expected doublets ~448, observed doublets 89, suppression
+    factor approximately 5x.'
+  relation: Possible mechanism-level bridge to LP-wide doublet scarcity.
+  why_stored: This is a falsifiable statistical constraint for future DiskCipher/LP
+    mechanism review.
+  verification_status: source_author_claim
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5dn-disk-doublet-suppression-candidate-v1.yaml
+  crosslinks:
+  - lp_doublet_scarcity_feature_v0
+  - lp_doublet_scarcity_feature_v1
+  - disk_alberti_branch_cipher_candidate_v1
+  risk_notes:
+  - accepted_as_validated_false
+  - metric_definition_required
+  - search_space_audit_required
+  - random_controls_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_disk_doublet_validation_requirements_overlay
+  source_record_path: data/historical-route/stage5dn-disk-doublet-suppression-candidate-v1.yaml
+  source_fact_id: disk_doublet_validation_requirement_count
+  fact_class: disk_cipher_number_facts
+  display_label: Disk doublet-suppression record lists 6 future validation requirements
+    before accepting the claim
+  short_label: Doublet validation requirements = 6
+  value: 6
+  values:
+  - 6
+  value_type: sequence
+  operation_type: source_observation
+  expression: Requirements include metric definition, canonical corpus, solved/unsolved
+    split, random controls, model controls, and trial-count accounting.
+  relation: Keeps the statistical claim quarantined until model and corpus controls
+    exist.
+  why_stored: Makes the uncertainty reviewable in the Source Browser.
+  verification_status: quarantined_selection_bias
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dn-disk-doublet-suppression-candidate-v1.yaml
+  crosslinks:
+  - disk_probability_claim_quarantine_v1
+  risk_notes:
+  - future_validation_required
+  - no_probability_claim_accepted
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_disk_ruth_route_way_wordplay_cluster_overlay
+  source_record_path: data/historical-route/stage5dn-disk-ruth-root-route-way-wordplay-candidate-v0.yaml
+  source_fact_id: disk_ruth_root_route_way_wordplay_cluster
+  fact_class: disk_cipher_number_facts
+  display_label: Disk wordplay record links WAY/RUTH/root/route/road/path/direction
+    to 2016 route vocabulary
+  short_label: WAY/RUTH/root/route/road/path/direction
+  value: 7
+  values:
+  - 7
+  value_type: sequence
+  operation_type: source_observation
+  expression: 'Semantic cluster has 7 route/devotion terms: WAY, RUTH, root, route,
+    road, path, direction.'
+  relation: Weak semantic support for the WAY route surface and 2016 route-meta clue.
+  why_stored: Useful as context, but too flexible to use as evidence alone.
+  verification_status: operator_assistant_observed
+  display_priority: low
+  source_paths:
+  - data/historical-route/stage5dn-disk-ruth-root-route-way-wordplay-candidate-v0.yaml
+  crosslinks:
+  - pdd_153_triangle_way_anchor_route_v1
+  - 2016_message_route_meta_clue_v0
+  - disk_56311_wynn_way_bridge_v1
+  risk_notes:
+  - flexible_wordplay
+  - not_independent_evidence
+  - not_route_seed
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_disk_2015_eclipse_167_overlay
+  source_record_path: data/historical-route/stage5dn-disk-2015-eclipse-167-temporal-candidate-v0.yaml
+  source_fact_id: disk_2015_eclipse_167_temporal_candidate
+  fact_class: disk_cipher_number_facts
+  display_label: Disk 2015 eclipse candidate preserves a low/medium 167-second temporal
+    bridge to 761.MP3
+  short_label: 2015 eclipse 167s -> 761.MP3 167s
+  value: 167
+  values:
+  - 2015
+  - 167
+  - 761
+  value_type: sequence
+  operation_type: source_observation
+  expression: Community/source claim links March 20 2015 eclipse timing around 167
+    seconds to the 761.MP3 duration family.
+  relation: Possible temporal bridge between DiskCipher external-date material and
+    music/Instar 167 context.
+  why_stored: Preserves the compact 167 bridge while warning that the external symbolic
+    chain is broad.
+  verification_status: canonical_source_required
+  display_priority: low
+  source_paths:
+  - data/historical-route/stage5dn-disk-2015-eclipse-167-temporal-candidate-v0.yaml
+  crosslinks:
+  - music_3301_instar_crab_canon_v0
+  - instar_title_761_duration_167_bridge_v1
+  risk_notes:
+  - external_fact_not_source_locked_now
+  - broad_symbolic_chain
+  - accepted_as_cicada_clue_false
+  - accepted_route_false
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_stage5dn_pdd153_56311_wynn_way_route_overlay
+  source_record_path: data/historical-route/stage5dn-pdd-153-triangle-56311-wynn-way-route-v1.yaml
+  source_fact_id: stage5dn_pdd153_56311_wynn_way_route
+  fact_class: pdd_153_triangle_number_facts
+  display_label: Stage 5DN PDD153 bridge records center word 41/WYNN and word52 reached
+    by 56311
+  short_label: Stage5DN PDD153 41/WYNN -> 52/WAY
+  value: 52
+  values:
+  - 41
+  - 52
+  - 5
+  - 6
+  - 3
+  - 11
+  value_type: sequence
+  operation_type: sequence_mapping
+  expression: PDD153 center word index 41 is WYNN; word52 is reached by 56311-from-center
+    bridge and preserves the WAY derivation candidate.
+  relation: Triangle-side counterpart to the DiskCipher 56311/WYNN/WAY support layer.
+  why_stored: Ensures the Stage 5DN bridge is visible separately from Stage 5DL/5EC
+    triangle cards.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5dn-pdd-153-triangle-56311-wynn-way-route-v1.yaml
+  crosslinks:
+  - disk_56311_wynn_way_bridge_v1
+  - pdd_153_triangle_56311_wynn_way_route_v1
+  risk_notes:
+  - route_extraction_not_performed
+  - accepted_route_false
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_solved_i_voice_circumference_precedent_overlay
+  source_record_path: data/historical-route/stage5dn-solved-i-voice-of-circumference-precedent-v0.yaml
+  source_fact_id: solved_i_voice_circumference_single_i
+  fact_class: solved_koan_number_facts
+  display_label: Solved koan 0.4.0 contains single-letter I and the quote THE I IS
+    THE VOICE OF THE CIRCUMFERENCE
+  short_label: 'Solved 0.4.0: I + CIRCUMFERENCE'
+  value: 1
+  values:
+  - 1
+  - 4
+  - 0
+  value_type: sequence
+  operation_type: source_observation
+  expression: Source section 0.4.0 includes a single-letter I token and the solved
+    quote THE I IS THE VOICE OF THE CIRCUMFERENCE.
+  relation: Solved precedent for single-letter / circumference / voice-self context.
+  why_stored: Supports review of single-rune/single-letter anchor hypotheses without
+    claiming I maps to WYNN.
+  verification_status: verified_against_committed_source
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5dn-solved-i-voice-of-circumference-precedent-v0.yaml
+  crosslinks:
+  - circumference_single_i_spiral_anchor_crosslink_v0
+  - blake_urizen_los_reason_circumference_v0
+  - pdd_153_triangle_word_prime_route_v1
+  risk_notes:
+  - not_claiming_i_equals_center_w
+  - not_claiming_direct_mapping_between_i_and_wynn
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_circumference_single_i_spiral_anchor_overlay
+  source_record_path: data/historical-route/stage5dn-circumference-single-i-spiral-anchor-crosslink-v0.yaml
+  source_fact_id: circumference_single_i_spiral_anchor_crosslink
+  fact_class: solved_koan_number_facts
+  display_label: Circumference crosslink records five triangle single-rune anchors
+    and center word 41/WYNN without claiming I=WYNN
+  short_label: Circumference / I / anchors 25/41/53/91/106
+  value: 41
+  values:
+  - 25
+  - 41
+  - 53
+  - 91
+  - 106
+  value_type: sequence
+  operation_type: source_observation
+  expression: Source facts include triangle single-rune anchors 25,41,53,91,106 and
+    center word 41 WYNN, plus solved I/circumference context.
+  relation: "Cross-family context linking solved I, PDD anchors, Page32 M\xF6bius,\
+    \ DiskCipher circles, and music circumference."
+  why_stored: Makes the non-mapping warning visible alongside the numeric anchor list.
+  verification_status: operator_assistant_observed
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dn-circumference-single-i-spiral-anchor-crosslink-v0.yaml
+  crosslinks:
+  - solved_i_voice_of_circumference_precedent_v0
+  - pdd_153_triangle_word_prime_route_v1
+  - page32_moebius_fibonacci_prime_index_spiral_v1
+  risk_notes:
+  - not_a_mapping_claim
+  - not_claiming_i_equals_wynn
+  - not_claiming_i_equals_triangle_center
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_disk_probability_quarantine_requirements_overlay
+  source_record_path: data/historical-route/stage5dn-disk-probability-claim-quarantine-v1.yaml
+  source_fact_id: disk_probability_quarantine_requirements
+  fact_class: disk_cipher_number_facts
+  display_label: Disk probability claims are quarantined due to 5 risk classes and
+    5 future-control requirements
+  short_label: 'Disk probability quarantine: 5 risks / 5 requirements'
+  value: 5
+  values:
+  - 5
+  - 5
+  value_type: sequence
+  operation_type: source_observation
+  expression: 'Quarantine lists 5 risk reasons and 5 future requirements: formal model,
+    deterministic reimplementation, trial accounting, negative controls, blind randomized
+    testing.'
+  relation: Keeps p-value/probability claims from influencing target decisions prematurely.
+  why_stored: Prevents impressive probability claims from appearing validated in the
+    UI.
+  verification_status: quarantined_selection_bias
+  display_priority: quarantine
+  source_paths:
+  - data/historical-route/stage5dn-disk-probability-claim-quarantine-v1.yaml
+  crosslinks:
+  - disk_doublet_suppression_candidate_v1
+  - disk_alberti_branch_cipher_candidate_v1
+  risk_notes:
+  - probability_claim_accepted_as_validated_false
+  - many_degrees_of_freedom
+  - selection_bias
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_blake_seven_subfamilies_overlay
+  source_record_path: data/historical-route/stage5dm-blake-visual-text-source-family.yaml
+  source_fact_id: blake_visual_text_seven_subfamilies
+  fact_class: blake_visual_text_number_facts
+  display_label: Blake visual-text source family records seven source-context subfamilies
+  short_label: Blake source family = 7 subfamilies
+  value: 7
+  values:
+  - 7
+  value_type: sequence
+  operation_type: source_observation
+  expression: Source-lock records 7 Blake subfamilies including Marriage, Tyger, Innocence/Experience,
+    Ancient of Days/Newton, Urizen/Los, body/soul, and Human Abstract.
+  relation: Context layer for circumference, perception, body/self, geometry, contraries,
+    symmetry, and tree/mind themes.
+  why_stored: Makes Blake context reviewable without treating it as a cipher key.
+  verification_status: source_author_claim
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dm-blake-visual-text-source-family.yaml
+  crosslinks:
+  - blake_urizen_los_reason_circumference_v0
+  - solved_i_voice_of_circumference_precedent_v0
+  - page32_tree_polar_route_v0
+  risk_notes:
+  - thematic_links_only
+  - cipher_key_claimed_false
+  - decode_authorized_now_false
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_sacred_book_overlay_inventory_overlay
+  source_record_path: data/historical-route/stage5dm-lp-sacred-book-edition-overlay-index.yaml
+  source_fact_id: sacred_book_overlay_inventory_15_files
+  fact_class: visual_source_number_facts
+  display_label: LP Sacred Book overlay index has 15 expected overlay images, all
+    present, used as alignment aids only
+  short_label: Sacred Book overlays = 15 present
+  value: 15
+  values:
+  - 15
+  - 700
+  - 1050
+  value_type: sequence
+  operation_type: source_observation
+  expression: File inventory count and expected filename count are 15; early page
+    overlay dimensions include 700x1050.
+  relation: Human alignment aids for source review, not primary sources and not OCR
+    evidence.
+  why_stored: Helps review image/source availability while preserving primary-source
+    hierarchy.
+  verification_status: verified_against_committed_source
+  display_priority: low
+  source_paths:
+  - data/historical-route/stage5dm-lp-sacred-book-edition-overlay-index.yaml
+  crosslinks:
+  - lp_sacred_book_edition_overlay_v0
+  risk_notes:
+  - overlay_images_are_not_primary_source
+  - raw_overlay_images_not_committed
+  - ocr_or_ai_interpretation_false
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_solved_magic_square_1033_overlay
+  source_record_path: data/historical-route/stage5dm-solved-magic-square-word-sum-precedent.yaml
+  source_fact_id: solved_magic_square_row_sum_1033
+  fact_class: magic_square_number_facts
+  display_label: Solved magic-square precedent has magic constant 1033 with worked
+    row sum 272+138+341+131+151=1033
+  short_label: Magic square constant 1033
+  value: 1033
+  values:
+  - 272
+  - 138
+  - 341
+  - 131
+  - 151
+  - 1033
+  value_type: sum
+  operation_type: sum
+  expression: 272 + 138 + 341 + 131 + 151 = 1033.
+  relation: Solved LP precedent for word-number interchange and matrix-like route
+    objects.
+  why_stored: Strong support context for future triangle/Page32/matrix word-sum tests.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5dm-solved-magic-square-word-sum-precedent.yaml
+  crosslinks:
+  - pdd_153_triangle_word_prime_route_v1
+  - magic_square_matrix_route_context_v0
+  risk_notes:
+  - future_only
+  - broad_magic_square_search_not_performed
+  - no_experiment_authorized
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_full_lp_visual_motif_14_sections_overlay
+  source_record_path: data/historical-route/stage5dm-full-lp-page-visual-motif-index.yaml
+  source_fact_id: full_lp_visual_motif_index_14_sections
+  fact_class: visual_source_number_facts
+  display_label: Full LP visual motif index records 14 section-level motif groups
+  short_label: Visual motif index = 14 sections
+  value: 14
+  values:
+  - 14
+  value_type: sequence
+  operation_type: source_observation
+  expression: Source-lock records 14 section-level visual motif groups across LP page
+    ranges.
+  relation: Review map for visual/route candidate families such as PDD153, Page32
+    tree/polar, Blake, and quote-dialogue.
+  why_stored: Useful UI context; not image classification or decode evidence.
+  verification_status: operator_assistant_observed
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dm-full-lp-page-visual-motif-index.yaml
+  crosslinks:
+  - full_lp_page_visual_motif_index_v0
+  - page32_tree_polar_route_v0
+  - pdd_153_triangle_word_prime_route_v1
+  risk_notes:
+  - motif_tags_are_review_metadata
+  - no_image_forensics
+  - no_visual_matching
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_stage5dm_doublet_metric_family_overlay
+  source_record_path: data/historical-route/stage5dm-lp-doublet-scarcity-feature-candidate.yaml
+  source_fact_id: stage5dm_doublet_metric_family
+  fact_class: doublet_statistical_number_facts
+  display_label: Stage 5DM doublet-scarcity candidate defines seven future metrics
+    but computes no statistics
+  short_label: Doublet metrics = 7 planned / computed=false
+  value: 7
+  values:
+  - 7
+  value_type: sequence
+  operation_type: source_observation
+  expression: Candidate metrics include adjacent identical count/rate, within-word,
+    cross-word, repeated bigram, repeated word, solved-vs-unsolved, and section z-score.
+  relation: Review-only statistical feature family later linked to Stage 5DN doublet-suppression
+    claims.
+  why_stored: Prevents metric-design records from looking empty in the Source Browser.
+  verification_status: operator_assistant_observed
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dm-lp-doublet-scarcity-feature-candidate.yaml
+  crosslinks:
+  - disk_doublet_suppression_candidate_v1
+  - lp_doublet_scarcity_feature_v1
+  risk_notes:
+  - statistics_computed_now_false
+  - corpus_wide_experiment_false
+  - metric_predeclaration_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_2016_message_563_569_route_terms_overlay
+  source_record_path: data/historical-route/stage5di-2016-message-route-meta-clue.yaml
+  source_fact_id: message_2016_563_569_five_route_terms
+  fact_class: historical_message_number_facts
+  display_label: 2016 message source-lock records claimed oak-tree dimensions 563x569
+    and five route terms
+  short_label: 2016 message 563x569 + 5 route terms
+  value: 563
+  values:
+  - 563
+  - 569
+  - 5
+  value_type: sequence
+  operation_type: source_observation
+  expression: Image dimensions claimed as 563x569; route terms present are path, way,
+    map, road, direction.
+  relation: Route-meta clue for word/number/layout methods; crosslinks to PDD, Page32,
+    Page56, and music route context.
+  why_stored: This is a compact source-locked description of the route grammar we
+    keep referencing.
+  verification_status: canonical_source_required
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5di-2016-message-route-meta-clue.yaml
+  crosslinks:
+  - pdd_153_triangle_word_prime_route_v1
+  - page32_tree_polar_route_v0
+  - page56_dwh_hash_target_contract_v0
+  risk_notes:
+  - pgp_signature_not_reverified_stage5di
+  - source_claim_not_route_execution
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_page32_tree_polar_crosswalk_overlay
+  source_record_path: data/historical-route/stage5di-page32-tree-polar-route-candidate.yaml
+  source_fact_id: page32_tree_polar_unsolved32_full49_hash_crosswalk
+  fact_class: page32_tree_polar_number_facts
+  display_label: Page32 tree/polar record crosswalks unsolved 32.jpg and full 49.jpg
+    by same file size/hash
+  short_label: 'page32 tree: unsolved32 = full49'
+  value: 32
+  values:
+  - 32
+  - 49
+  - 362637
+  value_type: sequence
+  operation_type: source_observation
+  expression: Unsolved image 32.jpg and full image 49.jpg both have file size 362637
+    bytes and the same SHA-256 in the source-lock.
+  relation: Prevents naming/indexing confusion between unsolved-page 32 and full-page
+    49 route surfaces.
+  why_stored: Critical page-numbering crosswalk for future Page32/tree/polar review.
+  verification_status: verified_against_committed_source
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5di-page32-tree-polar-route-candidate.yaml
+  crosslinks:
+  - page32_tree_polar_route_v0
+  - message_2016_route_meta_clue_v0
+  risk_notes:
+  - route_model_candidates_future_only
+  - no_polar_extraction
+  - page_numbering_convention_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_page56_hash_contract_128_64_512_overlay
+  source_record_path: data/historical-route/stage5dk-page56-dwh-hash-contract.yaml
+  source_fact_id: page56_hash_contract_128_64_512
+  fact_class: page56_hash_number_facts
+  display_label: Page56 hash contract has 128 hex characters = 64 bytes = 512 bits;
+    algorithm/preimage unknown
+  short_label: Page56 hash 128 hex / 64 bytes / 512 bits
+  value: 512
+  values:
+  - 128
+  - 64
+  - 512
+  value_type: hash_length
+  operation_type: source_observation
+  expression: Page56 hash length is 128 hex characters, 64 bytes, 512 bits; algorithm
+    not selected and preimage not searched.
+  relation: Target-contract context for final route outputs; not an immediate experiment.
+  why_stored: Important final-target constraint visible in review.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  source_paths:
+  - data/historical-route/stage5dk-page56-dwh-hash-contract.yaml
+  crosslinks:
+  - page56_dwh_hash_target_contract_v0
+  - token_block_matrix_context_v0
+  - page32_tree_polar_route_v0
+  - pdd_153_triangle_word_prime_route_v1
+  risk_notes:
+  - page56_hash_algorithm_selected_now_false
+  - hash_preimage_search_performed_false
+  - target_class_validation_false
+  - not_onion_address
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_page56_hash_algorithm_candidate_set_overlay
+  source_record_path: data/historical-route/stage5dk-page56-dwh-hash-contract.yaml
+  source_fact_id: page56_hash_algorithm_candidate_set_7
+  fact_class: page56_hash_number_facts
+  display_label: Page56 hash-contract record lists seven possible 512-bit hash algorithm
+    classes but selects none
+  short_label: Page56 algorithm candidates = 7 / selected=false
+  value: 7
+  values:
+  - 7
+  - 128
+  - 64
+  - 512
+  value_type: sequence
+  operation_type: source_observation
+  expression: Candidate algorithms are SHA-512, SHA3-512, BLAKE-512, BLAKE2b-512,
+    Whirlpool, Skein-512, unknown/custom 512-bit hash.
+  relation: Prevents false algorithm assumptions from creeping into target planning.
+  why_stored: Useful for final-target review without enabling preimage search.
+  verification_status: source_author_claim
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5dk-page56-dwh-hash-contract.yaml
+  crosslinks:
+  - page56_dwh_hash_target_contract_v0
+  risk_notes:
+  - algorithm_known_false
+  - preimage_known_false
+  - no_search
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_dinkus_two_pages_three_dots_overlay
+  source_record_path: data/historical-route/stage5di-dinkus-visual-delimiter-candidate.yaml
+  source_fact_id: dinkus_two_pages_three_dots
+  fact_class: visual_source_number_facts
+  display_label: 'Dinkus candidate records three-dot horizontal separators on two
+    pages: 50.jpg and 56.jpg'
+  short_label: 'Dinkus candidate: 3 dots on 2 pages'
+  value: 3
+  values:
+  - 3
+  - 2
+  - 50
+  - 56
+  value_type: sequence
+  operation_type: source_observation
+  expression: Observed feature is three black dots in horizontal separator form on
+    operator-attached 50.jpg and 56.jpg.
+  relation: Low/medium visual delimiter candidate relevant to section boundary review
+    and Page56 context.
+  why_stored: Makes the observation visible without turning uneven spacing into a
+    cipher claim.
+  verification_status: operator_assistant_observed
+  display_priority: low
+  source_paths:
+  - data/historical-route/stage5di-dinkus-visual-delimiter-candidate.yaml
+  crosslinks:
+  - page56_dwh_hash_target_contract_v0
+  - lp_negative_space_layout_candidate_family_v0
+  risk_notes:
+  - measurement_performed_now_false
+  - uneven_spacing_cipher_claimed_now_false
+  - visual_marker_only
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_magic_square_matrix_context_terms_overlay
+  source_record_path: data/historical-route/stage5di-magic-square-matrix-route-context.yaml
+  source_fact_id: magic_square_matrix_context_four_terms
+  fact_class: magic_square_number_facts
+  display_label: 'Magic-square matrix context preserves four route-method terms: magic_square,
+    matrix_route, gf_matrix, layout_transform'
+  short_label: Magic-square context = 4 method terms
+  value: 4
+  values:
+  - 4
+  value_type: sequence
+  operation_type: source_observation
+  expression: Route context terms are magic_square, matrix_route, gf_matrix, and layout_transform.
+  relation: Context layer for solved magic-square precedent and future bounded matrix-method
+    tests.
+  why_stored: Keeps matrix/GF discussion source-locked without executing transforms.
+  verification_status: operator_assistant_observed
+  display_priority: medium
+  source_paths:
+  - data/historical-route/stage5di-magic-square-matrix-route-context.yaml
+  crosslinks:
+  - solved_magic_square_word_sum_precedent_v0
+  - token_block_matrix_context_v0
+  risk_notes:
+  - magic_square_transform_performed_now_false
+  - route_extraction_false
+  - future_bounded_candidate_only
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_disk_support_cluster_summary_overlay
+  source_record_path: data/historical-route/stage5dn-disk-p39-row1-math-semantic-cluster-v1.yaml
+  source_fact_id: disk_support_cluster_summary
+  fact_class: disk_cipher_number_facts
+  display_label: 'Disk support cluster summary: 56311, WYNN/41, p39 ten-term cluster,
+    doublet 448/89, 167 temporal bridge'
+  short_label: Disk support cluster 56311/WYNN/p39/doublets/167
+  value: 56311
+  values:
+  - 56311
+  - 41
+  - 52
+  - 10
+  - 448
+  - 89
+  - 167
+  value_type: sequence
+  operation_type: source_observation
+  expression: Summary card only; detailed cards cover the individual DiskCipher facts.
+  relation: Compact review chip tying together the Stage 5ED DiskCipher support-layer
+    overlays.
+  why_stored: Improves Source Browser scanability while preserving detailed cards
+    and risk notes.
+  verification_status: operator_assistant_observed
+  display_priority: low
+  source_paths:
+  - data/historical-route/stage5dn-disk-p39-row1-math-semantic-cluster-v1.yaml
+  - data/historical-route/stage5dn-disk-doublet-suppression-candidate-v1.yaml
+  - data/historical-route/stage5dn-disk-2015-eclipse-167-temporal-candidate-v0.yaml
+  risk_notes:
+  - summary_card_only
+  - not_independent_evidence
+  - no_route_execution
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ed_visual_method_cluster_summary_overlay
+  source_record_path: data/historical-route/stage5dm-solved-magic-square-word-sum-precedent.yaml
+  source_fact_id: visual_method_context_cluster_summary
+  fact_class: visual_method_number_facts
+  display_label: 'Visual/method context summary: Blake 7, Sacred overlays 15, magic-square
+    1033, motif sections 14, Page56 512-bit hash'
+  short_label: Visual/method 7/15/1033/14/512
+  value: 1033
+  values:
+  - 7
+  - 15
+  - 1033
+  - 14
+  - 512
+  value_type: sequence
+  operation_type: source_observation
+  expression: Summary card only; detailed cards cover Blake, Sacred Book overlays,
+    magic-square precedent, LP motif index, and Page56 hash contract.
+  relation: Compact review chip tying together non-Disk method/context overlays in
+    Stage 5ED.
+  why_stored: Improves Source Browser scanability without creating a new evidence
+    claim.
+  verification_status: operator_assistant_observed
+  display_priority: low
+  source_paths:
+  - data/historical-route/stage5dm-blake-visual-text-source-family.yaml
+  - data/historical-route/stage5dm-lp-sacred-book-edition-overlay-index.yaml
+  - data/historical-route/stage5dm-solved-magic-square-word-sum-precedent.yaml
+  - data/historical-route/stage5dm-full-lp-page-visual-motif-index.yaml
+  - data/historical-route/stage5dk-page56-dwh-hash-contract.yaml
+  risk_notes:
+  - summary_card_only
+  - no_visual_matching
+  - no_hash_search

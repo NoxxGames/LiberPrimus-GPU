@@ -1,0 +1,24 @@
+stage_id: stage-5ed
+stage_title: Stage 5ED - Source-lock number-fact review batch 004, disk / visual-method
+  / route-context enrichment overlays, without execution
+prompt_type: assistant_or_operator_review_then_codex_overlay_update
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: stage5ed_reviewable_validation_evidence
+schema: schemas/project-state/stage5ed-reviewable-validation-evidence-v0.schema.json
+validators:
+- validate-stage5ed
+- validate-stage5ed-review-batch-selection
+- validate-stage5ed-number-fact-overlays
+- validate-stage5ed-overlay-only-support
+- validate-stage5ed-source-browser-loadability
+- source-browser validate-index
+- source-browser validate-paths
+parallel_worker_cap: 10
+full_parallel_is_normal_final_local_profile: true
+full_serial_pytest_required_for_normal_stage_completion: false

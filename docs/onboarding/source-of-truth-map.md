@@ -7,8 +7,8 @@
 - `docs/roadmap/staged-plan.md`: durable staged plan, deferred work, retired/deprioritised directions, and Deep Research influence.
 - `AGENTS.md`: Codex operating rules and non-negotiable policies.
 - `README.md`: public project overview and where-to-start summary.
-- `data/project-state/current-stage-state.yaml`: active current-stage registry. Stage 5EC makes this the current source for latest/next-stage validation defaults and uses external post-push handoff fields instead of self-referential final commit placeholders.
-- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; current operational docs now name Stage 5EC as latest complete and Stage 5ED as next.
+- `data/project-state/current-stage-state.yaml`: active current-stage registry. Stage 5ED makes this the current source for latest/next-stage validation defaults and uses external post-push handoff fields instead of self-referential final commit placeholders.
+- `data/project-state/stage5ah-doc-staleness-source-of-truth.yaml`: active current/next-stage expectations for the document staleness checker; current operational docs now name Stage 5ED as latest complete and Stage 5EE as next.
 - `data/project-state/stage5ab-doc-staleness-source-of-truth.yaml`: superseded staleness-check source for historical Stage 5AB/5AG validation context.
 - `data/project-state/operational-file-map.yaml`: maintained lifecycle map for operational, tutorial, mirror, and historical files.
 - `data/source-harvester/stage5af-cicada-source-manifest.yaml`: Stage 5AF source-harvester source manifest.
@@ -85,6 +85,9 @@
 - `data/operator-console/source-browser/number-fact-overlays/stage5ec-review-batch-003-triangle-page32-token-music-overlays.yaml`: Stage 5EC triangle/Page32/token-static/music/self-reference review-only NumberFactCard enrichment overlays for 20 selected source-lock/candidate records.
 - `data/operator-console/source-browser/number-fact-review-batches/stage5ec-*.yaml`: Stage 5EC review-batch result records for number-fact review batch 003.
 - `data/project-state/stage5ec-*.yaml`, `data/source-harvester/stage5ec-*.yaml`, and `data/token-block/stage5ec-*.yaml`: Stage 5EC reviewability summary, Source Browser loadability, validation evidence, Stage 5EB/5DX/5DW/5DV/5DU/5DG/5BD preservation, no-active/no-byte/no-execution, handoff, credential-redaction, and noncommit proof records.
+- `data/operator-console/source-browser/number-fact-overlays/stage5ed-review-batch-004-disk-visual-method-overlays.yaml`: Stage 5ED DiskCipher/visual-method/route-context review-only NumberFactCard enrichment overlays for 20 selected source-lock/candidate records.
+- `data/operator-console/source-browser/number-fact-review-batches/stage5ed-*.yaml`: Stage 5ED review-batch result records for number-fact review batch 004.
+- `data/project-state/stage5ed-*.yaml`, `data/source-harvester/stage5ed-*.yaml`, and `data/token-block/stage5ed-*.yaml`: Stage 5ED reviewability summary, Source Browser loadability, validation evidence, Stage 5EC/5EB preservation, older historical preservation, no-active/no-byte/no-execution, handoff, credential-redaction, and noncommit proof records.
 - `data/source-harvester/stage5dl-*.yaml`: Stage 5DL local source-lock register, Reddit image register, number-triangle crosswalk, disk-cipher crosswalk, and koan-page lock records. These are compact metadata records only; raw local files are not committed.
 - `data/historical-route/stage5dl-*.yaml`: Stage 5DL triangle, disk-cipher, quote-dialogue crib, koan visual-parallel, and cross-family evidence-index records.
 - `data/token-block/stage5dl-*.yaml`: Stage 5DL Stage 5DG/5BD preservation, active-lineage preservation, no-active-ingestion proof, no-byte-stream gate, and no-execution gate records.

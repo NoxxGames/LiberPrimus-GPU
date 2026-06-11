@@ -117,7 +117,7 @@
       "const": "external_post_push_handoff"
     },
     "latest_completed_stage_id": {
-      "const": "stage-5ec"
+      "const": "stage-5ed"
     },
     "local_parallel_default_pytest_workers": {
       "const": 10
@@ -207,7 +207,7 @@
       "const": false
     },
     "recommended_next_stage_id": {
-      "const": "stage-5ed"
+      "const": "stage-5ee"
     },
     "record_type": {
       "const": "current_stage_state"
@@ -240,7 +240,7 @@
       "const": false
     },
     "stage_id": {
-      "const": "stage-5ec"
+      "const": "stage-5ed"
     },
     "stage_registry_is_source_of_truth": {
       "const": true
@@ -276,6 +276,18 @@
       "const": false
     },
     "website_expansion_performed": {
+      "const": false
+    },
+    "alberti_cipher_execution_performed_now": {
+      "const": false
+    },
+    "magic_square_transform_performed_now": {
+      "const": false
+    },
+    "new_source_lock_evidence_added_now": {
+      "const": false
+    },
+    "page_boundaries_finalized": {
       "const": false
     }
   },

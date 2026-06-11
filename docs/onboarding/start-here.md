@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5EC - Source-lock number-fact review batch 003, triangle / Page32 / token-static / music / self-reference enrichment overlays, without execution.
-- Current planning focus: Stage 5ED - Source-lock number-fact review batch 004, without execution.
+- Latest completed stage: Stage 5ED - Source-lock number-fact review batch 004, disk / visual-method / route-context enrichment overlays, without execution.
+- Current planning focus: Stage 5EE - Source-lock number-fact review batch 005, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

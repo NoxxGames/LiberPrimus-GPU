@@ -68,6 +68,8 @@ Stage 5EB validates Source Browser overlay-cache reuse as part of validation fin
 
 Stage 5EC overlays live in `data/operator-console/source-browser/number-fact-overlays/stage5ec-review-batch-003-triangle-page32-token-music-overlays.yaml`. They add 25 review-only NumberFactCard overlays for 20 selected triangle/Page32/token-static/music/self-reference entries and are recorded in `data/operator-console/source-browser/number-fact-review-batches/stage5ec-review-batch-003-triangle-page32-token-music-result.yaml`. They must not become target-priority evidence, route seeds, historical source-lock rewrites, source-lock evidence updates, byte streams, execution input, OCR/image/audio/stego/native/VM/CUDA/scoring evidence, or solve claims.
 
+Stage 5ED overlays live in `data/operator-console/source-browser/number-fact-overlays/stage5ed-review-batch-004-disk-visual-method-overlays.yaml`. They add 25 review-only NumberFactCard overlays for 20 selected DiskCipher/visual-method/route-context entries and are recorded in `data/operator-console/source-browser/number-fact-review-batches/stage5ed-review-batch-004-disk-visual-method-result.yaml`. They must not become target-priority evidence, route seeds, historical source-lock rewrites, source-lock evidence updates, byte streams, execution input, OCR/image/audio/stego/native/VM/CUDA/scoring evidence, or solve claims.
+
 ## Validation
 
 Run:
@@ -117,6 +119,19 @@ Stage 5EC validates the third number-fact review batch through:
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ec-overlay-only-support
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ec-source-browser-loadability
 .\scripts\ci\run-stage-validation.ps1 -Stage stage5ec -Profile full-parallel -Workers 10 -PytestWorkers 10
+```
+
+Stage 5ED validates the fourth number-fact review batch through:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5ed
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ed
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block stage5ed-summary
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ed-review-batch-selection
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ed-number-fact-overlays
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ed-overlay-only-support
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ed-source-browser-loadability
+.\scripts\ci\run-stage-validation.ps1 -Stage stage5ed -Profile full-parallel -Workers 10 -PytestWorkers 10
 ```
 
 Stage 5DS validates source-browser loadability through:

@@ -2,11 +2,11 @@
 
 ## Current Project State
 
-Current completed stage: Stage 5EC - Source-lock number-fact review batch 003, triangle / Page32 / token-static / music / self-reference enrichment overlays, without execution.
+Current completed stage: Stage 5ED - Source-lock number-fact review batch 004, disk / visual-method / route-context enrichment overlays, without execution.
 
-Current work after Stage 5EC: Stage 5ED - Source-lock number-fact review batch 004, without execution.
+Current work after Stage 5ED: Stage 5EE - Source-lock number-fact review batch 005, without execution.
 
-Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DX completed the second visual/red-heading/transform bridge review batch as overlay metadata only. Stage 5DY repaired validation performance and stage isolation before the next batch. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment before the normal third review batch. Stage 5EA repaired validation throughput, current-stage registry handling, historical-test isolation, validation-wrapper stage-id normalization, pytest shard policy, and Source Browser number-fact overlay caching. Stage 5EB finalized validation policy by moving local defaults/caps to 10 workers and 10 pytest workers, keeping full serial pytest as the explicit `full-serial-rare` fallback, repairing current-stage registry finalization handoff semantics, genericizing stage wrapper aliases, adding shard/rerun guidance, and validating Source Browser overlay cache reuse. Stage 5EC then completed number-fact batch 003 by adding 25 review-only overlays for 20 selected triangle/Page32/token-static/music/self-reference records. Stage 5EC does not add source-lock evidence, backfill number facts directly, rewrite historical source-lock records, select a target, extract routes, generate route streams, generate bytes, run image forensics/OCR/audio/stego/native/VM/CUDA/scoring/benchmark work, execute anything, or make solve claims.
+Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DX completed the second visual/red-heading/transform bridge review batch as overlay metadata only. Stage 5DY repaired validation performance and stage isolation before the next batch. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment before the normal third review batch. Stage 5EA repaired validation throughput, current-stage registry handling, historical-test isolation, validation-wrapper stage-id normalization, pytest shard policy, and Source Browser number-fact overlay caching. Stage 5EB finalized validation policy by moving local defaults/caps to 10 workers and 10 pytest workers, keeping full serial pytest as the explicit `full-serial-rare` fallback, repairing current-stage registry finalization handoff semantics, genericizing stage wrapper aliases, adding shard/rerun guidance, and validating Source Browser overlay cache reuse. Stage 5EC completed number-fact batch 003, and Stage 5ED completed number-fact batch 004 by adding 25 review-only overlays for 20 selected DiskCipher/visual-method/route-context records. Stage 5ED does not add source-lock evidence, backfill number facts directly, rewrite historical source-lock records, select a target, extract routes, generate route streams, generate bytes, run image forensics/OCR/audio/stego/native/VM/CUDA/scoring/benchmark work, execute anything, or make solve claims.
 
 The canonical Codex handoff root is `codex-output`. The deprecated `codex_output` root must remain absent. Completion summaries under `codex-output/**` are local ignored handoffs and must not be committed.
 
@@ -127,7 +127,7 @@ StarArtifacts strongest observations:
 - Source-locked does not mean review-ready.
 - A useful fact card must explain value, type, expression, components, relation, why stored, source anchor, verification status, risks, and crosslinks.
 - Older zero-fact entries are usually not reviewed, not necessarily number-free.
-- Stage 5DW completed the high-signal 20-entry review batch 001 after the Stage 5DV repair; Stage 5DX completed the visual/red-heading/transform 20-entry review batch 002. Stage 5DY inserted validation repair before the next review batch. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment. Stage 5EA inserted validation-throughput/current-stage repair, Stage 5EB inserted validation finalization plus 10-worker policy repair, and Stage 5EC completed number-fact review batch 003. Stage 5ED should continue with number-fact review batch 004.
+- Stage 5DW completed the high-signal 20-entry review batch 001 after the Stage 5DV repair; Stage 5DX completed the visual/red-heading/transform 20-entry review batch 002. Stage 5DY inserted validation repair before the next review batch. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment. Stage 5EA inserted validation-throughput/current-stage repair, Stage 5EB inserted validation finalization plus 10-worker policy repair, Stage 5EC completed number-fact review batch 003, and Stage 5ED completed number-fact review batch 004. Stage 5EE should continue with number-fact review batch 005.
 
 ## Governance And Preservation
 
@@ -177,7 +177,7 @@ StarArtifacts strongest observations:
 - BigGaps/StarArtifacts facts preserved: red-subset sum 229, gap metrics 73/109/129 with 109=prime(29), tree offsets 641/709 with prime-index gap 11, stardust phrase 2540=254*10, Mayfly 72/600 twin-prime gaps, ICC boundary pages 00-16 vs 17-74 with 2576-byte profile claim.
 - Red-heading/Mobius facts preserved: Page15 instruction phrase primes, DIVINITY WITHIN 491/563/1229 crosslink, YGGDRASIL spelling 491/564 warning, A POSTLUDE 1/8 structure, Mobius/totient zero-class 14-token partition, page0 DIVINITY WITHIN/A CROSSROADS 491.
 - PDD/Disk/Ouroboros facts preserved: 56311 net +25 over modulus 153, gcd(25,153)=1, 4-phase period 612; OUROBOROS 167 minus 153 gives offset 14; Disk 56311 from center 41/WYNN reaches word52/WAY.
-- Stage 5DY inserted validation repair before number-fact review batch 003. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment before the batch. Stage 5EA inserted validation-throughput/current-stage repair before the batch. Stage 5EB inserted validation finalization and 10-worker policy repair before the batch. Stage 5EC completed the batch and Stage 5ED should continue number-fact review batch 004 unless a blocking Source Browser issue appears.
+- Stage 5DY inserted validation repair before number-fact review batch 003. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment before the batch. Stage 5EA inserted validation-throughput/current-stage repair before the batch. Stage 5EB inserted validation finalization and 10-worker policy repair before the batch. Historical Stage 5DX handoff recorded that Stage 5EC completed the batch and Stage 5ED should continue number-fact review batch 004. Stage 5EC completed batch 003, Stage 5ED completed batch 004, and Stage 5EE should continue number-fact review batch 005 unless a blocking Source Browser issue appears.
 
 ## Stage 5DY Validation Policy
 
@@ -189,7 +189,7 @@ StarArtifacts strongest observations:
 - Stage-specific schemas must not overwrite shared schemas.
 - Validate/summary commands must be read-only for committed records.
 - PowerShell wildcard expansion differs from Bash; use explicit file lists in examples.
-- Stage 5ED remains the next fact-review batch.
+- Stage 5EE remains the next fact-review batch.
 
 ## Stage 5DZ - Triangle/Page32 bounded-solve findings source-lock
 
@@ -222,4 +222,14 @@ Guardrails:
 - Durable batch facts: PDD153/T17/center41, PDD single-rune positions 25/41/53/91/106, heading minus reversed word52 = WAY, 56311 center41->word52, Page32 3299->2472 spiral, Page32 Fibonacci-prime-index increments, token-block 32x8=256 with 161 unique primary60 values, base60 clean while neighboring bases are blocked, music 29/205/547, STRANGE LOOP=463, SELF REFERENCE=529=23^2, SELF FULFILLING PROPHECY=841=29^2, and INFINITE LOOP=409.
 - Stage 5EB validation policy remains active: local/full-parallel validation uses 10 workers / 10 pytest workers, and full serial pytest is not part of normal completion.
 - The lag5 phenomenon remains not source-locked by Stage 5EC and is only a future lead.
-- Stage 5ED should continue number-fact review batch 004 unless a blocking Source Browser issue appears.
+- Historical Stage 5DY handoff said Stage 5ED should continue with number-fact review batch 004.
+- Stage 5ED completed number-fact review batch 004; Stage 5EE should continue number-fact review batch 005 unless a blocking Source Browser issue appears.
+
+## Stage 5ED - Number-fact review batch 004
+
+- Stage 5ED reviewed 20 selected DiskCipher/visual-method/route-context source-lock entries and added 25 NumberFactCard overlays only.
+- Stage 5ED did not rewrite historical source-lock records, add new source-lock evidence, select a target, generate byte streams, run routes, execute tools, or make a solve claim.
+- Durable batch facts: DiskCipher 8-component model, p39 ten-term semantic cluster, doublet 448/89 suppression claim, 167 temporal bridge, Stage 5DN PDD153 56311/WYNN/WAY bridge, solved I/circumference context, Blake seven-subfamily context, 15 Sacred Book overlays, magic-square 1033 precedent, 14 visual motif sections, Page32/full-page hash crosswalk, Page56 128-hex/512-bit hash contract, and dinkus/matrix route-context facts.
+- Stage 5EB validation policy remains active: local/full-parallel validation uses 10 workers / 10 pytest workers, and full serial pytest is not part of normal completion.
+- The lag5 phenomenon remains not source-locked by Stage 5ED and is only a future lead.
+- Stage 5EE should continue number-fact review batch 005 unless a blocking Source Browser issue appears.

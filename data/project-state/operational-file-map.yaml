@@ -5,7 +5,7 @@ records:
   category: operational_status_doc
   purpose: Public repository entrypoint and current boundary summary.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: every_stage_when_state_changes
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -17,7 +17,7 @@ records:
   category: operational_status_doc
   purpose: Concise current operational status.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -29,7 +29,7 @@ records:
   category: roadmap_doc
   purpose: High-level current direction with staged-plan pointer.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -41,7 +41,7 @@ records:
   category: policy_doc
   purpose: Codex operational policy and current stage guardrails.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -101,7 +101,7 @@ records:
   category: policy_doc
   purpose: Validation commands and test boundaries.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: every_cli_or_ci_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -125,7 +125,7 @@ records:
   category: roadmap_doc
   purpose: Durable stage timeline, current state, and next-stage direction.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -137,7 +137,7 @@ records:
   category: operational_status_doc
   purpose: Newcomer entrypoint to current project state.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: every_stage_when_state_changes
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -149,7 +149,7 @@ records:
   category: operational_status_doc
   purpose: Map of authoritative docs and records.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: every_source_of_truth_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -209,7 +209,7 @@ records:
   category: operational_status_doc
   purpose: Human-readable mirror of this operational file map.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: every_operational_file_map_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: mirror_of_data_project_state_operational_file_map
@@ -349,7 +349,7 @@ records:
   category: active_data_record
   purpose: Active current-stage registry for latest and next-stage validation defaults.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -766,7 +766,7 @@ records:
   category: operational_status_doc
   purpose: Stage 5AP token-block CLI reference.
   source_of_truth_rank: 3
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: every_token_block_cli_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -6917,7 +6917,7 @@ records:
   category: operational_status_doc
   purpose: Stage 5DQ Operator Console Source Browser overview.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: stage_specific
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -6996,7 +6996,7 @@ records:
   category: operational_status_doc
   purpose: Concise assistant context handoff including Stage 5DS high-value facts.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ec
+  last_meaningful_update_stage: stage-5ed
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -7761,13 +7761,15 @@ records:
   mirror_or_generated_relationships: source
   staleness_check_level: strict
   owner_context: codex_agent
-  notes: Records 20 reviewed entries, 25 review-only overlays, Source Browser loadability, and closed execution gates.
+  notes: Records 20 reviewed entries, 25 review-only overlays, Source Browser loadability,
+    and closed execution gates.
   category: active_data_record
   source_of_truth_rank: 1
   last_meaningful_update_stage: Stage 5EC
 - path: data/project-state/stage5ec-next-stage-decision.yaml
   owner_stage: stage-5ec
-  purpose: Stage 5EC next-stage decision routing number-fact review batch 004 to Stage 5ED.
+  purpose: Stage 5EC next-stage decision routing number-fact review batch 004 to Stage
+    5ED.
   expected_update_frequency: stage_specific
   mutable_or_reference_only: reference_only
   mirror_or_generated_relationships: source
@@ -7779,13 +7781,15 @@ records:
   last_meaningful_update_stage: Stage 5EC
 - path: data/operator-console/source-browser/number-fact-overlays/stage5ec-review-batch-003-triangle-page32-token-music-overlays.yaml
   owner_stage: stage-5ec
-  purpose: Stage 5EC review-only NumberFactCard overlays for selected triangle/Page32/token-static/music/self-reference records.
+  purpose: Stage 5EC review-only NumberFactCard overlays for selected triangle/Page32/token-static/music/self-reference
+    records.
   expected_update_frequency: stage_specific
   mutable_or_reference_only: reference_only
   mirror_or_generated_relationships: source
   staleness_check_level: strict
   owner_context: operator_console_operator
-  notes: Overlay-only review aids; not source-lock rewrites, target-priority evidence, execution inputs, or solve claims.
+  notes: Overlay-only review aids; not source-lock rewrites, target-priority evidence,
+    execution inputs, or solve claims.
   category: active_data_record
   source_of_truth_rank: 1
   last_meaningful_update_stage: Stage 5EC
@@ -7797,7 +7801,8 @@ records:
   mirror_or_generated_relationships: source
   staleness_check_level: strict
   owner_context: codex_agent
-  notes: Records overlay enrichment only; historical source-lock records were not rewritten.
+  notes: Records overlay enrichment only; historical source-lock records were not
+    rewritten.
   category: active_data_record
   source_of_truth_rank: 1
   last_meaningful_update_stage: Stage 5EC
@@ -7809,7 +7814,8 @@ records:
   mirror_or_generated_relationships: source
   staleness_check_level: strict
   owner_context: codex_agent
-  notes: Implements metadata-only Stage 5EC overlay batch records and validators; no execution.
+  notes: Implements metadata-only Stage 5EC overlay batch records and validators;
+    no execution.
   category: reference_only_data_record
   source_of_truth_rank: 1
   last_meaningful_update_stage: Stage 5EC
@@ -7849,3 +7855,39 @@ records:
   category: historical_log
   source_of_truth_rank: 3
   last_meaningful_update_stage: Stage 5EC
+- path: docs/experiments/stage-5ed-number-fact-review-batch-004.md
+  owner_stage: stage-5ed
+  purpose: Stage 5ED experiment note and guardrail summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: codex_agent
+  notes: Documents overlay-only scope, Source Browser validation, and Stage 5EE handoff.
+  category: policy_doc
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: Stage 5ED
+- path: docs/development-logs/2026-06-11-stage-5ed-number-fact-review-batch-004.md
+  owner_stage: stage-5ed
+  purpose: Stage 5ED developer log.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Records implementation and validation decisions for review batch 004.
+  category: historical_log
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: Stage 5ED
+- path: research-log/2026-06-11-stage5ed-next-stage-decision-summary.md
+  owner_stage: stage-5ed
+  purpose: Stage 5ED next-stage decision and research summary.
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: source
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Summary-only log; no raw findings dump or generated output publication.
+  category: historical_log
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: Stage 5ED

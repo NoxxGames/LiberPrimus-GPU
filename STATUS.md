@@ -2,9 +2,19 @@
 
 ## Current stage
 
-Stage 5EC source-lock number-fact review batch 003 is complete.
+Stage 5ED source-lock number-fact review batch 004 is complete.
 
-Next recommended prompt: Stage 5ED - Source-lock number-fact review batch 004, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5EE - Source-lock number-fact review batch 005, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5ED
+
+Stage 5ED completes the fourth selected Source Browser number-fact review batch. It reviews `20` selected DiskCipher/visual-method/route-context source-lock entries and adds `25` review-only NumberFactCard overlays under `data/operator-console/source-browser/number-fact-overlays/stage5ed-review-batch-004-disk-visual-method-overlays.yaml`.
+
+Local Stage 5ED summary: Source Browser validation errors `0`, reviewed entries `20`, overlays `25`, overlay-only cards required `25`, fact cards after Stage 5ED `142`, Source Browser entries loaded `1705`, committed records scanned `1704`, local validation defaults/caps `10` workers / `10` pytest workers, full serial pytest normal-completion requirement `false`, historical source-lock records rewritten `false`, source-lock evidence updated `false`, target selected `false`, route extraction `false`, byte streams generated `false`, execution performed `false`, CUDA `false`, solve claim `false`, and next stage `Stage 5EE`.
+
+Stage 5ED records DiskCipher, visual-method, and route-context facts as overlays only: DiskCipher 8-component model, p39 ten-term semantic cluster, doublet 448/89 suppression claim, 167 temporal bridge, Stage 5DN PDD153 56311/WYNN/WAY bridge, solved I/circumference context, Blake seven-subfamily context, 15 Sacred Book overlays, magic-square 1033 precedent, 14 visual motif sections, Page32/full-page hash crosswalk, Page56 128-hex/512-bit hash contract, and dinkus/matrix route-context facts.
+
+Stage 5ED does not rewrite historical source-lock records, backfill number facts directly into `data/historical-route/*.yaml`, add new source-lock evidence, select a target, extract DiskCipher/visual routes, generate route streams or bytes, run OCR/image/audio/stego/native/VM/spreadsheet/CUDA/scoring/benchmark work, expand the website, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5EC
 
