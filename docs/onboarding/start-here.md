@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5DZ - Triangle/Page32 bounded-solve findings source-lock and enriched review records, without execution.
-- Current planning focus: Stage 5EA - Operator/assistant source-lock number-fact review batch 3, without execution.
+- Latest completed stage: Stage 5EA - Validation throughput, current-stage registry, historical-test isolation, and Source Browser fact-card performance repair, without execution.
+- Current planning focus: Stage 5EB - Operator/assistant source-lock number-fact review batch 3, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

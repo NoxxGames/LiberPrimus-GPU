@@ -15,6 +15,8 @@ SELECTED_OPTION_ID = "prepare_real_operator_approval_record"
 
 
 def ensure_stage5dg_built() -> None:
+    if all((ROOT / path).exists() for path in STAGE5DG_RECORDS + STAGE5DG_SCHEMAS):
+        return
     build_stage5dg()
 
 

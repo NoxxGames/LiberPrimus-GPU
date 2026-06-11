@@ -7,7 +7,7 @@ from typing import Any
 from PySide6.QtCore import QAbstractTableModel, QModelIndex, Qt
 
 from .entries import SourceBrowserEntry
-from .number_facts import number_fact_table_display
+from .number_facts import NumberFactOverlayCache, number_fact_table_display
 from .status_display import STATUS_UNSPECIFIED_TOOLTIP, display_status
 
 
@@ -17,6 +17,7 @@ class SourceBrowserTableModel(QAbstractTableModel):
         self.entries = entries
         self.columns = columns
         self._display_cache: dict[tuple[str, str], str] = {}
+        self._number_fact_overlay_cache = NumberFactOverlayCache.load()
 
     def rowCount(self, parent: QModelIndex | None = None) -> int:  # noqa: N802
         return 0 if parent and parent.isValid() else len(self.entries)
@@ -63,6 +64,7 @@ class SourceBrowserTableModel(QAbstractTableModel):
         self.beginResetModel()
         self.entries = entries
         self._display_cache.clear()
+        self._number_fact_overlay_cache = NumberFactOverlayCache.load()
         self.endResetModel()
 
     def _display(self, entry: SourceBrowserEntry, key: str) -> str:
@@ -86,7 +88,7 @@ class SourceBrowserTableModel(QAbstractTableModel):
             count = len(entry.urls)
             value = f"{count} url{'s' if count != 1 else ''}"
         elif key == "number_facts":
-            value = number_fact_table_display(entry)
+            value = number_fact_table_display(entry, overlay_cache=self._number_fact_overlay_cache)
         elif key == "warnings":
             count = len(entry.warnings)
             value = f"{count} warning{'s' if count != 1 else ''}"

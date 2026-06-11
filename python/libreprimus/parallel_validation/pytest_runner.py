@@ -18,6 +18,13 @@ SERIAL_ISOLATED_TEST_FILES = frozenset(
     }
 )
 
+SLOW_TEST_FILE_WEIGHTS = {
+    "test_stage5dy_cli.py": 4,
+    "test_stage5dz_cli.py": 4,
+    "test_stage5ea_cli.py": 4,
+    "test_stage5ea_source_browser_performance.py": 3,
+}
+
 
 def pytest_xdist_available() -> bool:
     """Return true when pytest-xdist is importable."""
@@ -47,6 +54,12 @@ def parallel_test_files(test_files: list[Path]) -> list[Path]:
     return [path for path in test_files if _repo_relative(path) not in SERIAL_ISOLATED_TEST_FILES]
 
 
+def pytest_file_weight(path: Path) -> int:
+    """Return a deterministic relative shard weight for known slow tests."""
+
+    return max(1, SLOW_TEST_FILE_WEIGHTS.get(path.name, 1))
+
+
 def build_shards(test_files: list[Path], worker_count: int) -> list[list[Path]]:
     """Partition tests deterministically across up to worker_count shards."""
 
@@ -56,8 +69,14 @@ def build_shards(test_files: list[Path], worker_count: int) -> list[list[Path]]:
         return []
     shard_count = min(worker_count, len(test_files))
     shards: list[list[Path]] = [[] for _ in range(shard_count)]
-    for index, path in enumerate(test_files):
-        shards[index % shard_count].append(path)
+    shard_weights = [0 for _ in range(shard_count)]
+    weighted_files = sorted(test_files, key=lambda path: (-pytest_file_weight(path), path.as_posix()))
+    for path in weighted_files:
+        shard_index = min(range(shard_count), key=lambda index: (shard_weights[index], index))
+        shards[shard_index].append(path)
+        shard_weights[shard_index] += pytest_file_weight(path)
+    for shard in shards:
+        shard.sort(key=lambda path: path.as_posix())
     return shards
 
 
@@ -79,11 +98,13 @@ def shard_plan_record(test_root: Path, worker_count: int) -> dict[str, Any]:
         "parallel_test_file_count": len(parallel_files),
         "serial_isolated_test_file_count": len(isolated),
         "serial_isolated_test_files": [str(path.as_posix()) for path in isolated],
+        "slow_test_weights": dict(sorted(SLOW_TEST_FILE_WEIGHTS.items())),
         "all_tests_covered_once": True,
         "shards": [
             {
                 "shard_id": f"pytest-shard-{index + 1:02d}",
                 "test_file_count": len(shard),
+                "weight": sum(pytest_file_weight(path) for path in shard),
                 "test_files": [str(path.as_posix()) for path in shard],
             }
             for index, shard in enumerate(shards)

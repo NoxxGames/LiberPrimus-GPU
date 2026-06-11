@@ -164,26 +164,74 @@ def load_enrichment_overlays(root: Path = OVERLAY_DIR) -> list[dict[str, Any]]:
     return overlays
 
 
+@dataclass(frozen=True)
+class NumberFactOverlayCache:
+    """Pre-indexed number-fact overlays for table/filter/detail rendering."""
+
+    overlays: tuple[dict[str, Any], ...]
+    overlay_by_key: dict[tuple[str, str], dict[str, Any]]
+    overlays_by_source_path: dict[str, tuple[dict[str, Any], ...]]
+    zero_reviewed_source_paths: frozenset[str]
+    load_count: int = 0
+
+    @classmethod
+    def load(cls, root: Path = OVERLAY_DIR) -> NumberFactOverlayCache:
+        return cls.from_overlays(load_enrichment_overlays(root), load_count=1)
+
+    @classmethod
+    def from_overlays(
+        cls,
+        overlays: list[dict[str, Any]] | tuple[dict[str, Any], ...],
+        *,
+        load_count: int = 0,
+    ) -> NumberFactOverlayCache:
+        overlay_items = tuple(dict(overlay) for overlay in overlays)
+        overlay_by_key: dict[tuple[str, str], dict[str, Any]] = {}
+        source_groups: dict[str, list[dict[str, Any]]] = {}
+        zero_reviewed: set[str] = set()
+        for overlay in overlay_items:
+            source_path = str(overlay.get("source_record_path") or "")
+            overlay_by_key[_overlay_key(source_path, overlay.get("source_fact_id"))] = overlay
+            source_groups.setdefault(source_path, []).append(overlay)
+            if overlay.get("review_state") == "zero_extracted_facts_reviewed_none_found":
+                zero_reviewed.add(source_path)
+        return cls(
+            overlays=overlay_items,
+            overlay_by_key=overlay_by_key,
+            overlays_by_source_path={key: tuple(value) for key, value in source_groups.items()},
+            zero_reviewed_source_paths=frozenset(zero_reviewed),
+            load_count=load_count,
+        )
+
+    def overlay_for(self, source_record_path: str, source_fact_id: str | None) -> dict[str, Any] | None:
+        return self.overlay_by_key.get(_overlay_key(source_record_path, source_fact_id))
+
+    def overlays_for_source(self, source_record_path: str) -> tuple[dict[str, Any], ...]:
+        return self.overlays_by_source_path.get(source_record_path, ())
+
+    def zero_review_state_for(self, source_record_path: str) -> str:
+        if source_record_path in self.zero_reviewed_source_paths:
+            return "zero_extracted_facts_reviewed_none_found"
+        return "zero_extracted_facts_not_reviewed"
+
+
 def normalize_entry_number_facts(
     entry: SourceBrowserEntry,
     overlays: list[dict[str, Any]] | None = None,
+    *,
+    overlay_cache: NumberFactOverlayCache | None = None,
 ) -> list[NumberFactCard]:
-    overlays = overlays if overlays is not None else load_enrichment_overlays()
-    overlay_by_key: dict[tuple[str, str], dict[str, Any]] = {}
-    for overlay in overlays:
-        overlay_by_key[_overlay_key(overlay.get("source_record_path"), overlay.get("source_fact_id"))] = overlay
+    overlay_cache = overlay_cache or _overlay_cache_from_optional_overlays(overlays)
     consumed_overlay_ids: set[tuple[str, str, str]] = set()
     cards: list[NumberFactCard] = []
     for index, raw_fact in enumerate(entry.number_facts):
         source_fact_id = _source_fact_id(raw_fact)
         source_fact_path = str(raw_fact.get("source_fact_path") or f"number_facts[{index}]")
-        overlay = overlay_by_key.get(_overlay_key(entry.source_record_path, source_fact_id))
+        overlay = overlay_cache.overlay_for(entry.source_record_path, source_fact_id)
         if overlay:
             consumed_overlay_ids.add(_overlay_identity(overlay))
         cards.append(_card_from_fact(entry, raw_fact, index, source_fact_id, source_fact_path, overlay))
-    for index, overlay in enumerate(overlays):
-        if str(overlay.get("source_record_path") or "") != entry.source_record_path:
-            continue
+    for index, overlay in enumerate(overlay_cache.overlays_for_source(entry.source_record_path)):
         if _overlay_identity(overlay) in consumed_overlay_ids:
             continue
         cards.append(_card_from_overlay_only(entry, overlay, index))
@@ -193,25 +241,29 @@ def normalize_entry_number_facts(
 def zero_fact_review_state(
     entry: SourceBrowserEntry,
     overlays: list[dict[str, Any]] | None = None,
+    *,
+    overlay_cache: NumberFactOverlayCache | None = None,
 ) -> str:
     if entry.number_facts:
         return ""
-    overlays = overlays if overlays is not None else load_enrichment_overlays()
-    for overlay in overlays:
-        if overlay.get("source_record_path") != entry.source_record_path:
-            continue
-        if overlay.get("review_state") == "zero_extracted_facts_reviewed_none_found":
-            return "zero_extracted_facts_reviewed_none_found"
-    return "zero_extracted_facts_not_reviewed"
+    overlay_cache = overlay_cache or _overlay_cache_from_optional_overlays(overlays)
+    return overlay_cache.zero_review_state_for(entry.source_record_path)
 
 
 def number_fact_table_display(
     entry: SourceBrowserEntry,
     overlays: list[dict[str, Any]] | None = None,
+    *,
+    overlay_cache: NumberFactOverlayCache | None = None,
 ) -> str:
-    cards = normalize_entry_number_facts(entry, overlays)
+    overlay_cache = overlay_cache or _overlay_cache_from_optional_overlays(overlays)
+    cards = normalize_entry_number_facts(entry, overlay_cache=overlay_cache)
     if not cards:
-        return "none found" if zero_fact_review_state(entry, overlays).endswith("reviewed_none_found") else "not reviewed"
+        return (
+            "none found"
+            if zero_fact_review_state(entry, overlay_cache=overlay_cache).endswith("reviewed_none_found")
+            else "not reviewed"
+        )
     vague = sum(1 for card in cards if card.review_state == "vague_fact_enrichment_needed")
     if vague:
         return f"{len(cards)} facts / needs context"
@@ -219,12 +271,18 @@ def number_fact_table_display(
     return "; ".join(labels) if labels else f"{len(cards)} facts"
 
 
-def entry_matches_fact_filter(entry: SourceBrowserEntry, filter_id: str) -> bool:
-    cards = normalize_entry_number_facts(entry)
+def entry_matches_fact_filter(
+    entry: SourceBrowserEntry,
+    filter_id: str,
+    *,
+    overlay_cache: NumberFactOverlayCache | None = None,
+) -> bool:
+    overlay_cache = overlay_cache or NumberFactOverlayCache.load()
+    cards = normalize_entry_number_facts(entry, overlay_cache=overlay_cache)
     if filter_id == "needs_fact_enrichment":
         return any(card.needs_enrichment for card in cards)
     if filter_id == "not_reviewed_for_number_facts":
-        return not cards and zero_fact_review_state(entry) == "zero_extracted_facts_not_reviewed"
+        return not cards and zero_fact_review_state(entry, overlay_cache=overlay_cache) == "zero_extracted_facts_not_reviewed"
     if filter_id == "has_rich_number_facts":
         return any(card.review_state in {"rich_fact_card", "overlay_enriched_fact"} for card in cards)
     if filter_id == "canonical_verification_required":
@@ -240,7 +298,7 @@ def entry_matches_fact_filter(entry: SourceBrowserEntry, filter_id: str) -> bool
 
 
 def reviewability_counts(entries: list[SourceBrowserEntry]) -> dict[str, int]:
-    overlays = load_enrichment_overlays()
+    overlay_cache = NumberFactOverlayCache.load()
     counts = {
         "entries_with_extracted_number_facts": 0,
         "entries_with_zero_extracted_number_facts": 0,
@@ -255,12 +313,12 @@ def reviewability_counts(entries: list[SourceBrowserEntry]) -> dict[str, int]:
         "canonical_verification_required_count": 0,
     }
     for entry in entries:
-        cards = normalize_entry_number_facts(entry, overlays)
+        cards = normalize_entry_number_facts(entry, overlay_cache=overlay_cache)
         if cards:
             counts["entries_with_extracted_number_facts"] += 1
         else:
             counts["entries_with_zero_extracted_number_facts"] += 1
-            if zero_fact_review_state(entry, overlays) == "zero_extracted_facts_not_reviewed":
+            if zero_fact_review_state(entry, overlay_cache=overlay_cache) == "zero_extracted_facts_not_reviewed":
                 counts["entries_with_zero_extracted_number_facts_not_reviewed"] += 1
         counts["total_number_fact_cards_extracted"] += len(cards)
         if any(card.review_state == "vague_fact_enrichment_needed" for card in cards):
@@ -283,6 +341,12 @@ def reviewability_counts(entries: list[SourceBrowserEntry]) -> dict[str, int]:
             }:
                 counts["canonical_verification_required_count"] += 1
     return counts
+
+
+def _overlay_cache_from_optional_overlays(overlays: list[dict[str, Any]] | None) -> NumberFactOverlayCache:
+    if overlays is not None:
+        return NumberFactOverlayCache.from_overlays(overlays)
+    return NumberFactOverlayCache.load()
 
 
 def _card_from_fact(

@@ -31,15 +31,12 @@ if [[ "$profile" != "full" ]]; then
     echo "Running $profile consistency profile"
     "$python_bin" -m libreprimus.cli token-block validate-stage5dy
     "$python_bin" -m libreprimus.cli token-block validate-stage5dz
+    "$python_bin" -m libreprimus.cli token-block validate-stage5ea
     "$python_bin" -m libreprimus.cli source-browser validate-index
     "$python_bin" -m libreprimus.cli consistency check-state-drift
     "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-        --expected-latest-stage "Stage 5DZ" \
-        --expected-next-stage "Stage 5EA" \
         --out "$tmp_dir/stage-ledger-fast.json"
     "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-        --expected-latest-stage "Stage 5DZ" \
-        --expected-next-stage "Stage 5EA" \
         --out "$tmp_dir/current-next-fast.json"
     if [[ "$profile" == "local-fast" ]]; then
         "$python_bin" -m libreprimus.cli consistency check-all --allow-warnings
@@ -62,14 +59,10 @@ echo "Running Stage 5AH doc-staleness coverage checks"
 stage5ah_out="$tmp_dir/stage5ah-doc-staleness"
 mkdir -p "$stage5ah_out"
 "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
-    --expected-latest-stage "Stage 5DZ" \
-    --expected-next-stage "Stage 5EA" \
     --out "$stage5ah_out/stale_stage_ledger_report.json"
 "$python_bin" -m libreprimus.cli consistency check-operational-file-map-coverage \
     --out "$stage5ah_out/operational_file_map_coverage_report.json"
 "$python_bin" -m libreprimus.cli consistency check-current-next-stage-consistency \
-    --expected-latest-stage "Stage 5DZ" \
-    --expected-next-stage "Stage 5EA" \
     --out "$stage5ah_out/current_next_stage_report.json"
 stage5ah_python_out="$(python_path "$stage5ah_out")"
 "$python_bin" - <<PY
@@ -85,14 +78,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5DZ",
+            expected_latest_stage="Stage 5EA",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5DZ",
+            "expected_latest_stage": "Stage 5EA",
             "finding_count": len(findings),
             "findings": findings,
         },

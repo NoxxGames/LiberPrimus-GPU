@@ -1,5 +1,5 @@
 param(
-    [string]$Stage = "stage5dy",
+    [string]$Stage = "stage5ea",
     [ValidateSet("focused", "stage-fast", "local-fast", "full-parallel", "full-serial-rare", "ci")]
     [string]$Profile = "stage-fast",
     [int]$Workers = 8,
@@ -16,6 +16,31 @@ Set-Location $RepoRoot
 $Python = if ($env:PYTHON) { $env:PYTHON } elseif (Test-Path ".\.venv\Scripts\python.exe") { ".\.venv\Scripts\python.exe" } else { "python" }
 $PowerShellExe = if ($PSVersionTable.PSEdition -eq "Core") { "pwsh" } else { "powershell.exe" }
 $ParallelResultsRoot = Join-Path (Join-Path (Join-Path "experiments" "results") "ci") "parallel-validation"
+
+function ConvertTo-StageCommandId {
+    param([string]$Value)
+    $token = ($Value.ToLowerInvariant() -replace "[^a-z0-9]", "")
+    if ([string]::IsNullOrWhiteSpace($token)) {
+        throw "Stage identifier is empty"
+    }
+    if (-not $token.StartsWith("stage")) {
+        $token = "stage$token"
+    }
+    return $token
+}
+
+function Stop-StageProcessTree {
+    param([int]$ProcessId)
+    try {
+        $children = Get-CimInstance Win32_Process -Filter "ParentProcessId = $ProcessId" -ErrorAction SilentlyContinue
+        foreach ($child in $children) {
+            Stop-StageProcessTree -ProcessId ([int]$child.ProcessId)
+        }
+    } catch {
+        # Best-effort cleanup; the direct process kill below is authoritative.
+    }
+    Stop-Process -Id $ProcessId -Force -ErrorAction SilentlyContinue
+}
 
 function Invoke-StageStep {
     param(
@@ -40,7 +65,7 @@ function Invoke-StageStep {
         throw "$Name failed to start"
     }
     if (-not $process.WaitForExit($TimeoutSeconds * 1000)) {
-        Stop-Process -Id $process.Id -Force -ErrorAction SilentlyContinue
+        Stop-StageProcessTree -ProcessId $process.Id
         throw "$Name timed out after $TimeoutSeconds seconds"
     }
     $process.Refresh()
@@ -53,12 +78,12 @@ function Invoke-StageStep {
     }
 }
 
-$StageId = $Stage.ToLowerInvariant() -replace "-", ""
+$StageId = ConvertTo-StageCommandId $Stage
 if ($Workers -gt 8 -or $PytestWorkers -gt 8) {
     throw "Stage validation policy caps local workers at 8"
 }
-if ($StageId -notin @("stage5dy", "stage5dz")) {
-    throw "run-stage-validation currently supports Stage 5DY and Stage 5DZ"
+if ($StageId -notin @("stage5dy", "stage5dz", "stage5ea")) {
+    throw "run-stage-validation currently supports Stage 5DY, Stage 5DZ, and Stage 5EA"
 }
 $StageDisplay = $StageId.ToUpperInvariant().Replace("STAGE", "Stage ")
 $stageTestFiles = Get-ChildItem tests/python -Filter "test_${StageId}_*.py" | ForEach-Object { $_.FullName }

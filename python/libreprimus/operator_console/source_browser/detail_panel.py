@@ -33,7 +33,7 @@ from .file_opening import open_file, open_file_location, open_url
 from .path_aliases import PathResolutionCache, load_path_aliases
 from .normalizer import url_label
 from .number_fact_cards import number_fact_card_widget
-from .number_facts import normalize_entry_number_facts, zero_fact_review_state
+from .number_facts import NumberFactOverlayCache, normalize_entry_number_facts, zero_fact_review_state
 from .status_display import (
     STATUS_LEGEND,
     STATUS_UNSPECIFIED_TOOLTIP,
@@ -117,6 +117,7 @@ class EntryDetailPanel(QWidget):
         self._aliases = load_path_aliases()
         self._path_cache = PathResolutionCache(self._aliases)
         self._thumbnail_cache = ThumbnailCache((128, 96))
+        self._number_fact_overlay_cache = NumberFactOverlayCache.load()
         self._raw_cache: dict[str, str] = {}
         self._entry: SourceBrowserEntry | None = None
         self._build_ui()
@@ -346,9 +347,9 @@ class EntryDetailPanel(QWidget):
         return box
 
     def _render_number_facts(self, entry: SourceBrowserEntry) -> None:
-        cards = normalize_entry_number_facts(entry)
+        cards = normalize_entry_number_facts(entry, overlay_cache=self._number_fact_overlay_cache)
         if not cards:
-            state = zero_fact_review_state(entry)
+            state = zero_fact_review_state(entry, overlay_cache=self._number_fact_overlay_cache)
             message = (
                 "Reviewed: no relevant number facts found."
                 if state == "zero_extracted_facts_reviewed_none_found"

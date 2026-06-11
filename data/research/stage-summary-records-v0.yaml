@@ -4102,3 +4102,23 @@ records:
   raw_outputs_committed: false
   generated_outputs_committed: false
   notes: triangle_records=7; page32_records=8; overlays=12; next=stage-5ea.
+- record_type: stage_summary_record
+  stage_id: stage-5ea
+  title: Stage 5EA - Validation throughput, current-stage registry, historical-test
+    isolation, and Source Browser fact-card performance repair, without execution
+  status: complete
+  category: validation_infrastructure
+  summary: Repaired current-stage registry handling, historical-test isolation, validation-wrapper
+    stage-id normalization, pytest shard policy, and Source Browser number-fact overlay
+    caching.
+  key_outputs:
+  - Current-stage registry points latest to Stage 5EA and next to Stage 5EB.
+  - Historical Stage 5DZ verification is preserved without requiring Stage 5DZ to
+    remain latest.
+  - Source Browser number-fact overlays are cached for table/filter/detail rendering.
+  result_status: validation_throughput_repaired
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: records=26; schemas=21; worker_cap=8; next=stage-5eb.

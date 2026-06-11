@@ -3,7 +3,12 @@
 from __future__ import annotations
 
 from .entries import SourceBrowserEntry
-from .number_facts import entry_matches_fact_filter, normalize_entry_number_facts, zero_fact_review_state
+from .number_facts import (
+    NumberFactOverlayCache,
+    entry_matches_fact_filter,
+    normalize_entry_number_facts,
+    zero_fact_review_state,
+)
 
 FACT_FILTER_QUERIES = {
     "needs:fact-enrichment": "needs_fact_enrichment",
@@ -19,9 +24,11 @@ FACT_FILTER_QUERIES = {
 }
 
 
-def searchable_text(entry: SourceBrowserEntry) -> str:
+def searchable_text(entry: SourceBrowserEntry, overlay_cache: NumberFactOverlayCache | None = None) -> str:
     if entry.search_text:
         return entry.search_text
+    overlay_cache = overlay_cache or NumberFactOverlayCache.load()
+    cards = normalize_entry_number_facts(entry, overlay_cache=overlay_cache)
     parts = [
         entry.title,
         entry.summary,
@@ -34,9 +41,9 @@ def searchable_text(entry: SourceBrowserEntry) -> str:
         " ".join(entry.urls),
         " ".join(entry.warnings),
         " ".join(str(fact) for fact in entry.number_facts),
-        zero_fact_review_state(entry) if not entry.number_facts else "",
-        " ".join(card.review_state for card in normalize_entry_number_facts(entry)),
-        " ".join(card.display_label for card in normalize_entry_number_facts(entry)),
+        zero_fact_review_state(entry, overlay_cache=overlay_cache) if not entry.number_facts else "",
+        " ".join(card.review_state for card in cards),
+        " ".join(card.display_label for card in cards),
     ]
     return " ".join(parts).lower()
 
@@ -52,13 +59,14 @@ def filter_entries(
 ) -> list[SourceBrowserEntry]:
     query = search.strip().lower()
     fact_filter = FACT_FILTER_QUERIES.get(query)
+    overlay_cache = NumberFactOverlayCache.load()
     filtered: list[SourceBrowserEntry] = []
     for entry in entries:
         if category != "All" and entry.category != category:
             continue
-        if fact_filter and not entry_matches_fact_filter(entry, fact_filter):
+        if fact_filter and not entry_matches_fact_filter(entry, fact_filter, overlay_cache=overlay_cache):
             continue
-        if query and not fact_filter and query not in searchable_text(entry):
+        if query and not fact_filter and query not in searchable_text(entry, overlay_cache=overlay_cache):
             continue
         if has_images is not None and bool(entry.image_paths) != has_images:
             continue

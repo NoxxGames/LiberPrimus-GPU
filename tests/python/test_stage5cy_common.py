@@ -14,6 +14,8 @@ STAGE5CY_SCHEMAS = list(SCHEMA_PATHS.values())
 
 
 def ensure_stage5cy_built() -> None:
+    if all((ROOT / path).exists() for path in STAGE5CY_RECORDS + STAGE5CY_SCHEMAS):
+        return
     build_stage5cy()
 
 

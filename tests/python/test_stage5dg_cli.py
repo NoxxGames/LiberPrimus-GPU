@@ -17,18 +17,14 @@ def run_cli(*args: str) -> str:
     return result.stdout
 
 
-def test_stage5dg_cli_build_validate_and_summary() -> None:
-    build_output = run_cli("build-stage5dg")
-    assert "real_operator_approval_record_created_now=true" in build_output
-    assert "combined_approval_gate_satisfied_now=false" in build_output
-    assert "recommended_next_stage_id=stage-5dh" in build_output
-
+def test_stage5dg_cli_validate_and_summary() -> None:
     validate_output = run_cli("validate-stage5dg")
     assert "token_block_stage5dg_valid=true" in validate_output
 
     summary_output = run_cli("stage5dg-summary")
     assert "operator_approval_component_satisfied_now=true" in summary_output
     assert "execution_authorized_now=false" in summary_output
+    assert "recommended_next_stage_id=stage-5dh" in summary_output
 
 
 def test_stage5dg_focused_cli_commands_and_stage5de_preserved() -> None:

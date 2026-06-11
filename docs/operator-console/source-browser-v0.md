@@ -18,7 +18,7 @@ Stage 5DW implements the first high-signal source-lock number-fact review batch.
 
 Stage 5DX implements the second Source Browser number-fact review batch for selected visual/red-heading/transform bridge records. It adds 23 review-only NumberFactCard overlays for 20 selected entries, preserves Stage 5DW overlay-only support, validates 1546 Source Browser entries with zero validation errors, and still does not rewrite historical source-lock records, backfill source records directly, select a target, authorize execution, or make a solve claim.
 
-Stage 5DY pauses the third number-fact review batch to repair validation performance and stage isolation. It adds staged validation profiles, preserves the 8-worker parallel cap, marks full serial pytest as a rare fallback, and requires historical validators to avoid mutable global Source Browser counts. Stage 5DZ then inserts Triangle/Page32 bounded-findings source-lock enrichment before the normal third review batch, so the next review batch is Stage 5EA.
+Stage 5DY pauses the third number-fact review batch to repair validation performance and stage isolation. It adds staged validation profiles, preserves the 8-worker parallel cap, marks full serial pytest as a rare fallback, and requires historical validators to avoid mutable global Source Browser counts. Stage 5DZ then inserts Triangle/Page32 bounded-findings source-lock enrichment before the normal third review batch. Stage 5EA repairs validation throughput and Source Browser number-fact overlay caching, so the next review batch is Stage 5EB.
 
 Blank table status values are displayed as `unspecified`. This means the source record did not contain `source_status`, `status`, `ready_state`, or `review_state`; it does not mean the record is incomplete, and the GUI does not rewrite source-lock records to invent statuses.
 
@@ -61,6 +61,8 @@ Stage 5DX overlays live in `data/operator-console/source-browser/number-fact-ove
 Stage 5DY validation records live in `data/project-state/stage5dy-*`, `data/source-harvester/stage5dy-*`, and `data/token-block/stage5dy-*`. They are validation infrastructure only and do not add Source Browser overlays or number-fact decisions.
 
 Stage 5DZ overlays live in `data/operator-console/source-browser/number-fact-overlays/stage5dz-triangle-page32-bounded-findings-overlays.yaml`. They are review-only overlays for PDD153 triangle and Page32 bounded findings, and must not become target-priority evidence, route seeds, route streams, byte streams, execution input, image-forensics/OCR evidence, or solve claims.
+
+Stage 5EA adds a pre-indexed number-fact overlay cache used by table display, filters, and the detail panel. This is a GUI/reviewability performance repair only; it does not add overlays, update source-lock evidence, perform number-fact review batch 3, or change any number-fact review decision.
 
 ## Validation
 
@@ -183,4 +185,14 @@ Stage 5DZ validates the Triangle/Page32 bounded-findings source-lock addendum th
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5dz-source-browser-loadability
 .\.venv\Scripts\python.exe -m libreprimus.cli token-block stage5dz-summary
 .\scripts\ci\run-stage-validation.ps1 -Stage stage5dz -Profile local-fast
+```
+
+Stage 5EA validates the current-stage registry and Source Browser overlay-cache repair through:
+
+```powershell
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block build-stage5ea
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ea
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block validate-stage5ea-source-browser-performance
+.\.venv\Scripts\python.exe -m libreprimus.cli token-block stage5ea-summary
+.\scripts\ci\run-stage-validation.ps1 -Stage stage-5ea -Profile local-fast
 ```

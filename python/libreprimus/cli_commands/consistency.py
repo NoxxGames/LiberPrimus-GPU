@@ -6,6 +6,7 @@ from __future__ import annotations
 import typer
 
 from libreprimus.cli_commands.common import *
+from libreprimus.stage_state.current import current_latest_stage_label, current_next_stage_label
 
 consistency_app = typer.Typer(no_args_is_help=True)
 
@@ -161,8 +162,8 @@ def consistency_check_doc_staleness(
 
 @consistency_app.command("check-stage-ledger-staleness")
 def consistency_check_stage_ledger_staleness(
-    expected_latest_stage: str = typer.Option(..., "--expected-latest-stage"),
-    expected_next_stage: str = typer.Option(..., "--expected-next-stage"),
+    expected_latest_stage: str | None = typer.Option(None, "--expected-latest-stage"),
+    expected_next_stage: str | None = typer.Option(None, "--expected-next-stage"),
     operational_file_map: Path = typer.Option(Path("data/project-state/operational-file-map.yaml")),
     out: Path | None = typer.Option(None, "--out"),
     strict: bool = typer.Option(True, "--strict/--no-strict"),
@@ -173,6 +174,11 @@ def consistency_check_stage_ledger_staleness(
     from libreprimus.doc_staleness.source_of_truth import load_operational_paths
     from libreprimus.doc_staleness.stage_ledger import scan_stage_ledgers
 
+    expected_latest_stage = expected_latest_stage or current_latest_stage_label()
+    expected_next_stage = expected_next_stage or current_next_stage_label()
+    if not expected_latest_stage or not expected_next_stage:
+        console.print("[red]current-stage registry is missing latest/next stage labels[/red]")
+        raise typer.Exit(2)
     base = Path(".").resolve()
     paths = load_operational_paths(operational_file_map, root=base)
     report = scan_stage_ledgers(
@@ -214,8 +220,8 @@ def consistency_check_operational_file_map_coverage(
 
 @consistency_app.command("check-current-next-stage-consistency")
 def consistency_check_current_next_stage_consistency(
-    expected_latest_stage: str = typer.Option(..., "--expected-latest-stage"),
-    expected_next_stage: str = typer.Option(..., "--expected-next-stage"),
+    expected_latest_stage: str | None = typer.Option(None, "--expected-latest-stage"),
+    expected_next_stage: str | None = typer.Option(None, "--expected-next-stage"),
     source_of_truth: Path = typer.Option(
         Path("data/project-state/stage5ah-doc-staleness-source-of-truth.yaml"),
         "--source-of-truth",
@@ -228,6 +234,11 @@ def consistency_check_current_next_stage_consistency(
     from libreprimus.doc_staleness.current_context import build_current_next_stage_report
     from libreprimus.doc_staleness.reporting import write_json_report
 
+    expected_latest_stage = expected_latest_stage or current_latest_stage_label()
+    expected_next_stage = expected_next_stage or current_next_stage_label()
+    if not expected_latest_stage or not expected_next_stage:
+        console.print("[red]current-stage registry is missing latest/next stage labels[/red]")
+        raise typer.Exit(2)
     report = build_current_next_stage_report(
         root=Path(".").resolve(),
         source_of_truth=source_of_truth,

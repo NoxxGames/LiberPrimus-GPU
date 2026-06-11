@@ -16,14 +16,13 @@ def _validator(path: str) -> Draft202012Validator:
 def test_stage5ab_source_of_truth_schema_and_loader() -> None:
     path = Path("data/project-state/stage5ah-doc-staleness-source-of-truth.yaml")
     payload = yaml.safe_load(path.read_text(encoding="utf-8"))
+    current = yaml.safe_load(Path("data/project-state/current-stage-state.yaml").read_text(encoding="utf-8"))
 
     _validator("schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json").validate(payload)
     source = load_source_of_truth(path)
-    assert source.latest_completed_stage_prefix == "Stage 5DZ"
-    assert source.expected_next_stage_prefix == "Stage 5EA"
-    assert source.next_stage_after_this_stage == (
-        "Stage 5EA - Operator/assistant source-lock number-fact review batch 3, without execution"
-    )
+    assert source.latest_completed_stage_prefix == current["latest_completed_stage_title"].split(" - ", 1)[0]
+    assert source.expected_next_stage_prefix == current["recommended_next_stage_title"].split(" - ", 1)[0]
+    assert source.next_stage_after_this_stage == current["recommended_next_stage_title"]
 
 
 def test_stage5ab_operational_file_map_schema_and_loader() -> None:

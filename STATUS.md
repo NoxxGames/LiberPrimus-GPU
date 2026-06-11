@@ -2,9 +2,17 @@
 
 ## Current stage
 
-Stage 5DZ Triangle/Page32 bounded-solve findings source-lock and enriched review records is complete.
+Stage 5EA validation throughput, current-stage registry, historical-test isolation, and Source Browser fact-card performance repair is complete.
 
-Next recommended prompt: Stage 5EA - Operator/assistant source-lock number-fact review batch 3, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5EB - Operator/assistant source-lock number-fact review batch 3, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5EA
+
+Stage 5EA is a validation/tooling repair inserted before the deferred third number-fact review batch. It records Stage 5DZ verification, creates `data/project-state/current-stage-state.yaml` as the current-stage registry, repairs validation wrapper stage-id normalization for `stage-5ea`/`stage5ea`/`5ea`, hardens historical-test isolation, records doc-ledger tier policy, preserves the Stage 5CM-and-later `8` worker cap, records finite timeout/orphan-process cleanup policy, and caches Source Browser number-fact overlays for table/filter/detail rendering.
+
+Local Stage 5EA summary: Stage 5DZ verified `true`, Stage 5DZ triangle findings `7`, Page32 findings `8`, Stage 5DZ overlays `12`, current-stage registry repaired `true`, historical-test isolation repaired `true`, Source Browser overlay cache implemented `true`, parallel worker cap `8`, pytest timeout seconds `3600`, number-fact review batch 3 performed `false`, source-lock entry batch review performed `false`, new number-fact overlays added `false`, target selected `false`, byte streams generated `false`, execution performed `false`, solve claim `false`, and next stage `Stage 5EB`.
+
+Stage 5EA is validation and reviewability infrastructure only. It does not perform number-fact review batch 3, add source-lock evidence, add overlays, rewrite historical source-lock records, backfill number facts, select a target, extract routes, generate route streams or bytes, process raw sources, run image/OCR/audio/stego/CUDA/scoring/benchmarks, expand the website, activate the canonical corpus, finalise page boundaries, or make solve claims.
 
 ## Completed in Stage 5DZ
 

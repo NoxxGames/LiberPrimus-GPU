@@ -16,7 +16,6 @@ def _run(*args: str) -> str:
 
 
 def test_stage5cy_cli_build_validate_and_summary() -> None:
-    assert "stage_id=stage-5cy" in _run("build-stage5cy")
     assert "token_block_stage5cy_stage5cx_findings_valid=true" in _run(
         "validate-stage5cy-stage5cx-findings"
     )

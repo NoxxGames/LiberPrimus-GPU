@@ -7,6 +7,7 @@ Stage 5DZ does not generate byte streams.
 Stage 5DZ does not perform image forensics/OCR.
 Stage 5DZ does not accept a solve claim.
 Number-fact review batch 3 is deferred to Stage 5EA.
+Stage 5EA subsequently verifies this package as complete, repairs validation throughput and current-stage registry routing, and keeps number-fact review batch 3 deferred to Stage 5EB.
 
 ## Scope
 

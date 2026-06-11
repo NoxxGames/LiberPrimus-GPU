@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-stage="stage5dy"
+stage="stage5ea"
 profile="stage-fast"
 workers=8
 pytest_workers=8
@@ -21,7 +21,14 @@ cd "$repo_root"
 
 python_bin="${PYTHON:-python}"
 parallel_results_root="experiments"/"results"/"ci"/"parallel-validation"
-stage_id="${stage//-/}"
+stage_id="$(printf '%s' "$stage" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]//g')"
+if [[ -z "$stage_id" ]]; then
+  echo "Stage identifier is empty" >&2
+  exit 2
+fi
+if [[ "$stage_id" != stage* ]]; then
+  stage_id="stage$stage_id"
+fi
 stage_display="$(echo "$stage_id" | tr '[:lower:]' '[:upper:]' | sed 's/STAGE/Stage /')"
 stage_results_dir="$parallel_results_root"/"$stage_id"
 
@@ -30,8 +37,8 @@ if [[ "$workers" -gt 8 || "$pytest_workers" -gt 8 ]]; then
   exit 2
 fi
 
-if [[ "$stage_id" != "stage5dy" && "$stage_id" != "stage5dz" ]]; then
-  echo "run-stage-validation currently supports Stage 5DY and Stage 5DZ" >&2
+if [[ "$stage_id" != "stage5dy" && "$stage_id" != "stage5dz" && "$stage_id" != "stage5ea" ]]; then
+  echo "run-stage-validation currently supports Stage 5DY, Stage 5DZ, and Stage 5EA" >&2
   exit 2
 fi
 

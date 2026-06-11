@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5EA - Operator/assistant source-lock number-fact review batch 3, without execution.
+Current next prompt: Stage 5EB - Operator/assistant source-lock number-fact review batch 3, without execution.
 
-Stage 5DZ is complete as an inserted Triangle/Page32 bounded-findings source-lock addendum before the third Source Browser number-fact review batch. It added review-only PDD153 triangle and Page32 finding records, 12 Source Browser overlays, negative-result notes, future design notes, and Stage 5EA routing while preserving Stage 5DY validation repair and authorizing no execution.
+Stage 5EA is complete as an inserted validation throughput and historical-test isolation repair before the third Source Browser number-fact review batch. It added the current-stage registry, Stage 5DZ verification records, validation-wrapper stage-id normalization, doc-ledger tier policy, Source Browser number-fact overlay caching, pytest shard policy repair, and Stage 5EB routing while preserving Stage 5DZ/5DY/5DX/5DW/5BD lineage and authorizing no execution.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5DZ Triangle/Page32 bounded-findings source-lock is complete. It preserves Stage 5DY validation-performance policy, source-locks the assistant/operator PDD153 and Page32 bounded findings as candidate-only records, adds overlay-only Source Browser fact cards, records direct-method negative results, and defers the normal number-fact review batch 3 to Stage 5EA.
+Stage 5EA validation throughput repair is complete. It preserves Stage 5DZ Triangle/Page32 bounded-findings records, keeps the deferred third number-fact review batch unperformed, repairs current-stage registry and validation wrapper behavior, and defers normal number-fact review batch 3 to Stage 5EB.
 
-The next recommended prompt is Stage 5EA - Operator/assistant source-lock number-fact review batch 3, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5EB - Operator/assistant source-lock number-fact review batch 3, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.

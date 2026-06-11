@@ -5,7 +5,7 @@ records:
   category: operational_status_doc
   purpose: Public repository entrypoint and current boundary summary.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5ea
   expected_update_frequency: every_stage_when_state_changes
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -17,7 +17,7 @@ records:
   category: operational_status_doc
   purpose: Concise current operational status.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5ea
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -29,7 +29,7 @@ records:
   category: roadmap_doc
   purpose: High-level current direction with staged-plan pointer.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5ea
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -41,7 +41,7 @@ records:
   category: policy_doc
   purpose: Codex operational policy and current stage guardrails.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5ea
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -53,7 +53,7 @@ records:
   category: architecture_doc
   purpose: CUDA guardrails and current acceleration state.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5ea
   expected_update_frequency: every_cuda_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -65,7 +65,7 @@ records:
   category: architecture_doc
   purpose: Benchmark policy and readiness notes.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5ea
   expected_update_frequency: every_benchmark_or_cuda_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -77,7 +77,7 @@ records:
   category: policy_doc
   purpose: Experiment execution and generated-output policy.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5ea
   expected_update_frequency: every_experiment_policy_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -89,7 +89,7 @@ records:
   category: policy_doc
   purpose: Result and score-summary publication policy.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5aj
+  last_meaningful_update_stage: stage-5ea
   expected_update_frequency: every_result_surface_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -337,7 +337,7 @@ records:
   category: active_data_record
   purpose: Active Stage 5AH doc-staleness source-of-truth record.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5dm
+  last_meaningful_update_stage: stage-5ea
   expected_update_frequency: every_doc_staleness_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -345,6 +345,17 @@ records:
   owner_context: project_operator
   notes: Stage 5AH active project-state record; must not carry stale current/next-stage
     claims.
+- path: data/project-state/current-stage-state.yaml
+  category: active_data_record
+  purpose: Active current-stage registry for latest and next-stage validation defaults.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ea
+  expected_update_frequency: every_stage
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: source
+  staleness_check_level: strict
+  owner_context: project_operator
+  notes: Stage 5EA establishes this registry so historical tests do not hardcode latest-stage expectations.
 - path: data/project-state/stage5ah-doc-staleness-findings.yaml
   category: active_data_record
   purpose: Stage 5AH before/after staleness findings record.
@@ -754,7 +765,7 @@ records:
   category: operational_status_doc
   purpose: Stage 5AP token-block CLI reference.
   source_of_truth_rank: 3
-  last_meaningful_update_stage: stage-5ap
+  last_meaningful_update_stage: stage-5ea
   expected_update_frequency: every_token_block_cli_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -6905,7 +6916,7 @@ records:
   category: operational_status_doc
   purpose: Stage 5DQ Operator Console Source Browser overview.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5dq
+  last_meaningful_update_stage: stage-5ea
   expected_update_frequency: stage_specific
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -6984,7 +6995,7 @@ records:
   category: operational_status_doc
   purpose: Concise assistant context handoff including Stage 5DS high-value facts.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ds
+  last_meaningful_update_stage: stage-5ea
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
