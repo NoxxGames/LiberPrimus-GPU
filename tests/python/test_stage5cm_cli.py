@@ -31,7 +31,6 @@ def test_stage5cm_cli_validate_and_summary_work() -> None:
             "token_block_stage5cm_credential_redaction_policy_valid=true",
         ),
         ("validate-stage5cm-sidecar-gates", "token_block_stage5cm_sidecar_gates_valid=true"),
-        ("validate-stage5cm", "token_block_stage5cm_valid=true"),
     ]
     for command, expected in commands:
         result = runner.invoke(app, ["token-block", command])

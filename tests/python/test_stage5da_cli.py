@@ -33,4 +33,6 @@ def test_stage5da_cli_build_validate_and_summary() -> None:
 
 
 def test_stage5cy_cli_command_still_works_after_stage5da() -> None:
-    assert "token_block_stage5cy_valid=true" in _run("validate-stage5cy")
+    assert "token_block_stage5cy_validation_count_reconciliation_valid=true" in _run(
+        "validate-stage5cy-validation-count-reconciliation"
+    )

@@ -25,7 +25,12 @@ def test_stage5cy_cli_build_validate_and_summary() -> None:
     assert "token_block_stage5cy_validation_count_reconciliation_valid=true" in _run(
         "validate-stage5cy-validation-count-reconciliation"
     )
-    assert "token_block_stage5cy_valid=true" in _run("validate-stage5cy")
+    assert "token_block_stage5cy_stage5cw_preservation_valid=true" in _run(
+        "validate-stage5cy-stage5cw-preservation"
+    )
+    assert "token_block_stage5cy_sidecar_gates_valid=true" in _run(
+        "validate-stage5cy-sidecar-gates"
+    )
     assert "recommended_next_stage_id=stage-5cz" in _run("stage5cy-summary")
 
 

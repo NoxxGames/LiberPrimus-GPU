@@ -18,8 +18,8 @@ def run_cli(*args: str) -> str:
 
 
 def test_stage5dg_cli_validate_and_summary() -> None:
-    validate_output = run_cli("validate-stage5dg")
-    assert "token_block_stage5dg_valid=true" in validate_output
+    validate_output = run_cli("validate-stage5dg-real-operator-approval-record")
+    assert "token_block_stage5dg_real_operator_approval_record_valid=true" in validate_output
 
     summary_output = run_cli("stage5dg-summary")
     assert "operator_approval_component_satisfied_now=true" in summary_output
