@@ -1,0 +1,24 @@
+stage_id: stage-5ee
+stage_title: Stage 5EE - Source-lock number-fact review batch 005, source-register
+  / music-metadata / fandom-crosswalk / residual NumberFacts enrichment overlays,
+  without execution
+prompt_type: assistant_or_operator_review_then_codex_overlay_update
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: stage5ee_source_browser_loadability_summary
+source_browser_entries_loaded: 1724
+source_browser_records_scanned: 1723
+source_browser_validation_error_count: 0
+source_browser_warning_count: 565
+source_browser_missing_paths_after: 418
+missing_paths_retained_as_warnings: true
+fact_card_count_after_stage5ee: 167
+spurious_root_image_paths_after: 0
+spurious_root_document_paths_after: 0
+duplicate_present_missing_path_pairs_after: 0
+source_root_relative_resolved_paths: 2085

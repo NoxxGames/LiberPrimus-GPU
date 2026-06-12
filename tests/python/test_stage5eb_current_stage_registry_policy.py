@@ -12,7 +12,12 @@ def test_stage5eb_current_stage_registry_uses_external_post_push_handoff_policy(
     assert (
         current["latest_completed_stage_id"],
         current["recommended_next_stage_id"],
-    ) in {("stage-5eb", "stage-5ec"), ("stage-5ec", "stage-5ed"), ("stage-5ed", "stage-5ee")}
+    ) in {
+        ("stage-5eb", "stage-5ec"),
+        ("stage-5ec", "stage-5ed"),
+        ("stage-5ed", "stage-5ee"),
+        ("stage-5ee", "stage-5ef"),
+    }
     assert current["latest_completed_stage_commit_recording_policy"] == "external_post_push_handoff"
     assert current["latest_completed_stage_ci_status_recording_policy"] == "external_post_push_handoff"
     assert current["latest_completed_stage_commit_in_committed_registry"] == "not_applicable_self_referential"

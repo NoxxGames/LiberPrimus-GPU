@@ -9,6 +9,7 @@ Stage 5DZ does not accept a solve claim.
 Number-fact review batch 3 is deferred to Stage 5EA.
 Stage 5EA subsequently verifies this package as complete, repairs validation throughput and current-stage registry routing, and keeps number-fact review batch 3 deferred to Stage 5EB.
 Stage 5EB subsequently finalizes the 10-worker validation policy, and Stage 5EC completes number-fact review batch 003 as overlay-only metadata while preserving these Stage 5DZ findings as review records only.
+Stage 5EE subsequently completes number-fact review batch 005 as overlay-only metadata while preserving Stage 5ED overlays, Stage 5EB validation policy, and these Stage 5DZ findings as review records only.
 
 ## Scope
 

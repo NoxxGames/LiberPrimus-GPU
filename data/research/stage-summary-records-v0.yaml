@@ -4183,3 +4183,23 @@ records:
   generated_outputs_committed: false
   notes: Reviewed entries=20, overlays=25, fact_cards_after=142. Historical source
     locks were not rewritten.
+- record_type: stage_summary_record
+  stage_id: stage-5ee
+  title: Stage 5EE - Source-lock number-fact review batch 005, source-register / music-metadata
+    / fandom-crosswalk / residual NumberFacts enrichment overlays, without execution
+  status: complete
+  category: operator_console_reviewability
+  summary: Added review-only NumberFactCard overlays for the fifth selected 20-entry
+    source-lock number-fact review batch.
+  key_outputs:
+  - Stage 5EE source-register/music/fandom/residual NumberFacts overlay collection
+    with 25 review-only facts.
+  - Stage 5EE review-batch, preservation, loadability, scope, and validation records.
+  - Stage 5EF selected as the next number-fact review batch.
+  result_status: reviewability_overlays_only
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: Reviewed entries=20, overlays=25, fact_cards_after=167. Historical source
+    locks were not rewritten.

@@ -355,6 +355,7 @@ def validate_stage5eb_current_stage_registry_policy() -> Stage5EBValidationResul
         (STAGE_ID, NEXT_STAGE_ID),
         ("stage-5ec", "stage-5ed"),
         ("stage-5ed", "stage-5ee"),
+        ("stage-5ee", "stage-5ef"),
     }
     current_pair = (state.get("latest_completed_stage_id"), state.get("recommended_next_stage_id"))
     if current_pair not in allowed_current_states:
@@ -1008,8 +1009,13 @@ def _object_schema(required: list[str], key: str) -> dict[str, Any]:
         properties.update(
             {
                 "record_type": {"const": "current_stage_state"},
-                "latest_completed_stage_id": {"const": STAGE_ID},
-                "recommended_next_stage_id": {"const": NEXT_STAGE_ID},
+                "stage_id": {"enum": ["stage-5ea", "stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee"]},
+                "latest_completed_stage_id": {
+                    "enum": ["stage-5ea", "stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee"]
+                },
+                "recommended_next_stage_id": {
+                    "enum": ["stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee", "stage-5ef"]
+                },
                 "stage_registry_is_source_of_truth": {"const": True},
                 "latest_completed_stage_commit_recording_policy": {"const": "external_post_push_handoff"},
                 "latest_completed_stage_ci_status_recording_policy": {"const": "external_post_push_handoff"},

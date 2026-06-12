@@ -87,7 +87,7 @@ supporting_record_paths:
   sha256: 7edc7c51b662bc0b0bb80b64e90f89cca5561136a4e7c02d16b5d19a66b074b1
 - path: data/token-block/stage5dg-real-operator-approval-record.yaml
   exists: true
-  sha256: 58e945b8284802d4882c4197782eeac5620315285dbb18dc16647d50a5cf377d
+  sha256: 5809f02a5f7c51cb48a20edde1d9edd4fbbade857a387904582ce21c02dfa074
 - path: data/token-block/stage5dg-operator-approval-scope.yaml
   exists: true
   sha256: 283c744d6f6d42cbedf93240c97957f7450308950e8024d43fc04b8c591c29e4

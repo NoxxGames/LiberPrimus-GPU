@@ -1,0 +1,793 @@
+stage_id: stage-5ee
+stage_title: Stage 5EE - Source-lock number-fact review batch 005, source-register
+  / music-metadata / fandom-crosswalk / residual NumberFacts enrichment overlays,
+  without execution
+prompt_type: assistant_or_operator_review_then_codex_overlay_update
+metadata_only: true
+source_lock_only: false
+reviewability_stage: true
+number_fact_review_batch_stage: true
+puzzle_execution_allowed: false
+solve_claim: false
+canonical_codex_handoff_root: codex-output
+record_type: stage5ee_source_browser_number_fact_enrichment_overlay_collection
+schema: schemas/operator-console/stage5ee-source-browser-number-fact-overlay-collection-v0.schema.json
+review_batch_id: number_fact_review_batch_005_source_register_music_fandom
+review_batch_selection_policy: assistant_operator_source_register_music_fandom_residual_numberfacts_batch
+reviewed_entry_count: 20
+overlay_count: 25
+overlay_only_fact_cards_supported_required: true
+review_state: overlay_enriched_fact
+historical_source_lock_records_rewritten: false
+source_lock_evidence_updated_now: false
+raw_source_files_committed: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+execution_performed: false
+selected_source_record_paths:
+- data/historical-route/stage5do-pixel-colour-frequency-source-tables.yaml
+- data/historical-route/stage5do-associated-twitter-9901-digit-square-candidate.yaml
+- data/historical-route/stage5do-number-facts-selection-bias-warning.yaml
+- data/project-state/stage5dj-music-source-lock-register.yaml
+- data/historical-route/stage5dj-mp3-metadata-lock.yaml
+- data/historical-route/stage5dj-pdf-metadata-lock.yaml
+- data/historical-route/stage5dj-761-parable-metadata-lock.yaml
+- data/historical-route/stage5dj-music-number-analysis-metadata.yaml
+- data/project-state/stage5dj-music-candidate-family-index.yaml
+- data/project-state/stage5dj-pivot-readiness-integration.yaml
+- data/source-harvester/stage5dk-fandom-source-lock-register.yaml
+- data/source-harvester/stage5dk-fandom-source-classification.yaml
+- data/source-harvester/stage5dk-existing-source-index-crosswalk.yaml
+- data/source-harvester/stage5dk-web-fetch-evidence.yaml
+- data/source-harvester/stage5di-web-source-lock-register.yaml
+- data/source-harvester/stage5di-cicada-solvers-iddqd-v2-crosswalk.yaml
+- data/source-harvester/stage5di-number-triangle-theory-bundle-crosswalk.yaml
+- data/historical-route/stage5di-source-gap-severity-update.yaml
+- data/project-state/stage5di-record-family-name-equivalence-map.yaml
+- data/project-state/stage5dj-music-file-hash-inventory.yaml
+overlays:
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: &id001
+  - proof
+  - route_seed
+  - execution_seed
+  - solve_claim
+  overlay_id: stage5ee_pixel_colour_frequency_table_counts_overlay
+  source_record_path: data/historical-route/stage5do-pixel-colour-frequency-source-tables.yaml
+  source_fact_id: pixel_colour_frequency_table_counts
+  fact_class: pixel_colour_frequency_number_facts
+  display_label: PotentialHint pixel-frequency tables contain 12,543 prime-colour
+    rows and 6,327 superprime-colour rows
+  short_label: Pixel tables 12543 / 6327 rows
+  value: 12543
+  values:
+  - 12543
+  - 6327
+  - 495423
+  - 208791
+  value_type: sequence
+  operation_type: source_observation
+  expression: prime_color_frequencies.txt has 12,543 lines and 495,423 bytes; superprime_color_frequencies.txt
+    has 6,327 lines and 208,791 bytes.
+  relation: Shows the breadth of the pixel-colour scan underlying RGB-count claims.
+  why_stored: Makes multiple-comparison risk reviewable instead of hiding table scale.
+  verification_status: verified_against_committed_source
+  display_priority: medium
+  risk_notes:
+  - bulk_scan_multiple_comparison_warning
+  - canonical_image_verification_required
+  - raw_tables_not_committed
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_pixel_colour_prime_index_correction_overlay
+  source_record_path: data/historical-route/stage5do-pixel-colour-frequency-source-tables.yaml
+  source_fact_id: pixel_colour_prime_index_correction_174_185
+  fact_class: pixel_colour_frequency_number_facts
+  display_label: 'Pixel-colour thread correction: prime(174)=1033 and prime(185)=1103'
+  short_label: prime174=1033; prime185=1103
+  value: 1033
+  values:
+  - 174
+  - 1033
+  - 185
+  - 1103
+  value_type: prime_index
+  operation_type: prime_index_lookup
+  expression: 1033 is the 174th prime, not the 185th; the 185th prime is 1103.
+  relation: Corrects a potentially misleading RGB(185) interpretation in the pixel-colour
+    thread.
+  why_stored: "Prevents future reviewers from repeating the incorrect \u201C1033 is\
+    \ prime(185)\u201D claim."
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  risk_notes:
+  - correction_record
+  - source_thread_prime_index_misread
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_associated_twitter_9901_digit_square_overlay
+  source_record_path: data/historical-route/stage5do-associated-twitter-9901-digit-square-candidate.yaml
+  source_fact_id: associated_twitter_3301_digit_squares_9901
+  fact_class: associated_account_number_facts
+  display_label: Associated Twitter image candidate squares 3301 digitwise to 9901,
+    a prime
+  short_label: 3301 digit-squares -> 9901
+  value: 9901
+  values:
+  - 3
+  - 3
+  - 0
+  - 1
+  - 9
+  - 9
+  - 0
+  - 1
+  - 9901
+  value_type: sequence
+  operation_type: source_observation
+  expression: Digits 3,3,0,1 square to 9,9,0,1; concatenated result is 9901, recorded
+    as prime.
+  relation: Low/medium associated-account number candidate from NumberFactsCollection.
+  why_stored: Keeps the arithmetic visible while clearly marking it as low-priority/contextual.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: low
+  risk_notes:
+  - low_medium_confidence
+  - associated_account_context_not_primary_source
+  - not_target_priority_evidence
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_number_facts_selection_bias_warning_overlay
+  source_record_path: data/historical-route/stage5do-number-facts-selection-bias-warning.yaml
+  source_fact_id: number_facts_selection_bias_warning
+  fact_class: reviewability_warning_number_facts
+  display_label: NumberFactsCollection selection-bias warning covers three low-priority/bulk
+    fact families
+  short_label: Number-fact bias warning = 3 families
+  value: 3
+  values:
+  - 3
+  value_type: sequence
+  operation_type: source_observation
+  expression: Associated low-priority families include associated_twitter_9901_digit_square,
+    general emirp/prime facts, and probability/selection-bias warning context.
+  relation: Prevents bulk post-hoc number facts from being treated as proof.
+  why_stored: Makes the review caveat visible in the Source Browser alongside the
+    interesting facts.
+  verification_status: quarantined_selection_bias
+  display_priority: quarantine
+  risk_notes:
+  - bulk_selection_bias_warning
+  - canonical_verification_required
+  - null_models_required
+  - multiple_comparison_controls_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_music_source_inventory_7_4_3_overlay
+  source_record_path: data/project-state/stage5dj-music-source-lock-register.yaml
+  source_fact_id: music_source_inventory_7_files_4_mp3_3_pdf
+  fact_class: music_source_metadata_number_facts
+  display_label: 'Stage 5DJ music source inventory records 7 files: 4 MP3 and 3 PDF'
+  short_label: CicadaMusic 7 files = 4 MP3 + 3 PDF
+  value: 7
+  values:
+  - 7
+  - 4
+  - 3
+  - 0
+  value_type: sequence
+  operation_type: source_observation
+  expression: music_source_file_count=7; music_mp3_file_count=4; music_pdf_file_count=3;
+    music_other_file_count=0.
+  relation: Defines the local CicadaMusic source-lock scope.
+  why_stored: Helps operators distinguish original Stage 5DJ source inventory from
+    later community-theory additions.
+  verification_status: verified_against_committed_source
+  display_priority: high
+  risk_notes:
+  - metadata_only_source_lock
+  - raw_music_files_not_committed
+  - no_audio_decode
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_761_mp3_id3_parable_metadata_overlay
+  source_record_path: data/historical-route/stage5dj-mp3-metadata-lock.yaml
+  source_fact_id: music_761_mp3_id3_parable_metadata
+  fact_class: music_source_metadata_number_facts
+  display_label: 761.MP3 has ID3 v2.3.0 metadata, 196-byte ID3 header, three frames,
+    and parable number 1,595,277,641
+  short_label: 761.MP3 ID3 2.3.0 / 196 / 1595277641
+  value: 1595277641
+  values:
+  - 761
+  - 2
+  - 3
+  - 0
+  - 196
+  - 3
+  - 140
+  - 21
+  - 5
+  - 1595277641
+  value_type: sequence
+  operation_type: source_observation
+  expression: ID3 v2.3.0, ID3 size 196, frames TXXX/TIT2/TPE1 with sizes 140/21/5;
+    parable number detected as 1595277641.
+  relation: Source-metadata origin for the Instar parable number.
+  why_stored: Keeps the parable number attached to its actual metadata record, not
+    only later arithmetic records.
+  verification_status: verified_against_committed_source
+  display_priority: high
+  risk_notes:
+  - id3_metadata_only
+  - audio_decode_not_performed
+  - stego_tool_execution_false
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_mp3_metadata_coverage_overlay
+  source_record_path: data/historical-route/stage5dj-mp3-metadata-lock.yaml
+  source_fact_id: mp3_metadata_coverage_4_files_1_id3
+  fact_class: music_source_metadata_number_facts
+  display_label: Stage 5DJ MP3 metadata lock covers 4 MP3 files; 761.MP3 is the only
+    one with observed ID3 parable metadata
+  short_label: MP3 metadata coverage 4 files / 1 parable ID3
+  value: 4
+  values:
+  - 4
+  - 1
+  - 1595277641
+  value_type: sequence
+  operation_type: source_observation
+  expression: Four MP3 files are represented; 761.MP3 has ID3 metadata with parable
+    number 1595277641, while later MP3 rows record no ID3 header.
+  relation: Metadata coverage / negative context for the original music source-lock.
+  why_stored: Prevents reviewers from assuming every CicadaMusic MP3 had equivalent
+    ID3 metadata.
+  verification_status: verified_against_committed_source
+  display_priority: medium
+  risk_notes:
+  - metadata_availability_varies_by_file
+  - no_audio_stego_performed
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_pdf_metadata_3_files_musescore_overlay
+  source_record_path: data/historical-route/stage5dj-pdf-metadata-lock.yaml
+  source_fact_id: music_pdf_metadata_3_files_musescore
+  fact_class: music_source_metadata_number_facts
+  display_label: Stage 5DJ PDF metadata lock covers 3 PDFs; Instar PDF has 11 pages
+    and MuseScore 3.6.2 metadata
+  short_label: PDF metadata 3 files; Instar 11 pages / MuseScore 3.6.2
+  value: 11
+  values:
+  - 3
+  - 11
+  - 3
+  - 6
+  - 2
+  - 5
+  - 9
+  - 9
+  - 1
+  - 4
+  value_type: sequence
+  operation_type: source_observation
+  expression: Three PDFs are represented; Instar Emergence PDF has approx_page_count=11,
+    creator MuseScore 3.6.2, producer Qt 5.9.9, and PDF-1.4 header.
+  relation: Source-locks music-score provenance without interpreting score content.
+  why_stored: Keeps PDF/MuseScore metadata visible while preserving no-OCR/no-score-transform
+    boundaries.
+  verification_status: verified_against_committed_source
+  display_priority: medium
+  risk_notes:
+  - pdf_rendering_performed_false
+  - pdf_ocr_performed_false
+  - score_to_cipher_transform_false
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_761_parable_metadata_lock_overlay
+  source_record_path: data/historical-route/stage5dj-761-parable-metadata-lock.yaml
+  source_fact_id: stage5dj_761_parable_metadata_lock
+  fact_class: music_source_metadata_number_facts
+  display_label: 761.MP3 parable metadata lock records title The Instar Emergence,
+    artist 3301, and parable number 1,595,277,641
+  short_label: '761 parable metadata: title/3301/1595277641'
+  value: 1595277641
+  values:
+  - 761
+  - 3301
+  - 1595277641
+  value_type: sequence
+  operation_type: source_observation
+  expression: Source metadata record ties 761.MP3 to title The Instar Emergence, artist
+    3301, and the Parable 1,595,277,641 custom text frame.
+  relation: Root metadata source for later Instar / 761 / 167 / 1031 / 1229 / 1259
+    number facts.
+  why_stored: Keeps source provenance visible for the parable number.
+  verification_status: verified_against_committed_source
+  display_priority: high
+  risk_notes:
+  - metadata_text_claimed_as_solution_false
+  - route_extraction_false
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_music_number_analysis_1595277641_overlay
+  source_record_path: data/historical-route/stage5dj-music-number-analysis-metadata.yaml
+  source_fact_id: music_number_analysis_1595277641_factor_base60
+  fact_class: music_number_facts
+  display_label: "Music parable number 1,595,277,641 factors as 1031\xD71229\xD71259\
+    \ and has base60 digits 2/3/5/32/40/41"
+  short_label: "1595277641 = 1031\xD71229\xD71259; base60 2/3/5/32/40/41"
+  value: 1595277641
+  values:
+  - 1595277641
+  - 1031
+  - 1229
+  - 1259
+  - 2
+  - 3
+  - 5
+  - 32
+  - 40
+  - 41
+  value_type: sequence
+  operation_type: factorization
+  expression: 1595277641 = 1031 * 1229 * 1259; base60 expansion records digits 2,3,5,32,40,41.
+  relation: Core source-locked music-number bridge to Instar parable GP sums and possible
+    base60/triangle context.
+  why_stored: Makes the prime factorization and base60 surface visible from the original
+    Stage 5DJ metadata record.
+  verification_status: arithmetic_verified_metadata_only
+  display_priority: high
+  risk_notes:
+  - metadata_arithmetic_only
+  - base60_observation_not_route_seed_now
+  - experiment_authorized_false
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_music_candidate_family_index_overlay
+  source_record_path: data/project-state/stage5dj-music-candidate-family-index.yaml
+  source_fact_id: music_candidate_family_index_7_pivot_context
+  fact_class: music_source_metadata_number_facts
+  display_label: Stage 5DJ added music_3301_instar_crab_canon_v0 to the pivot matrix,
+    bringing pivot options to seven
+  short_label: Music candidate added; pivot options = 7
+  value: 7
+  values:
+  - 7
+  - 1
+  value_type: sequence
+  operation_type: source_observation
+  expression: music_3301_instar_crab_canon_v0 added as source-lock-only candidate;
+    pivot_option_count becomes 7.
+  relation: Tracks how music entered the candidate graph without being selected.
+  why_stored: "Prevents later confusion between \u201Ccandidate added\u201D and \u201C\
+    pivot selected.\u201D"
+  verification_status: verified_against_committed_source
+  display_priority: medium
+  risk_notes:
+  - music_candidate_not_selected
+  - immediate_execution_allowed_false
+  - source_lock_only
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_music_pivot_readiness_7_options_overlay
+  source_record_path: data/project-state/stage5dj-pivot-readiness-integration.yaml
+  source_fact_id: music_pivot_readiness_7_options_unselected
+  fact_class: pivot_readiness_number_facts
+  display_label: Stage 5DJ pivot-readiness integration has seven pivot options and
+    selected target remains null
+  short_label: Pivot options = 7; selected target = null
+  value: 7
+  values:
+  - 7
+  - 0
+  value_type: sequence
+  operation_type: source_observation
+  expression: pivot_option_count=7; selected_next_solve_target_id remains null; operator_target_priority_decision_required_next=true.
+  relation: Reviewability context for why source-lock enrichment continues without
+    experiments.
+  why_stored: Keeps pivot-selection boundary visible in the Source Browser.
+  verification_status: verified_against_committed_source
+  display_priority: medium
+  risk_notes:
+  - pivot_target_selected_false
+  - operator_target_priority_decision_not_created
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_fandom_source_lock_14_sources_overlay
+  source_record_path: data/source-harvester/stage5dk-fandom-source-lock-register.yaml
+  source_fact_id: fandom_source_lock_14_sources
+  fact_class: fandom_source_lock_number_facts
+  display_label: Stage 5DK Fandom source-lock register represents 14 Fandom sources
+  short_label: Fandom source locks = 14
+  value: 14
+  values:
+  - 14
+  value_type: sequence
+  operation_type: source_observation
+  expression: fandom_source_count=14 and fandom_source_count_expected=14.
+  relation: Defines the Fandom gap-closure source-lock scope.
+  why_stored: Makes source coverage visible without opening raw web bodies.
+  verification_status: verified_against_committed_source
+  display_priority: high
+  risk_notes:
+  - community_fandom_source
+  - raw_body_committed_false
+  - claims_require_independent_verification
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_fandom_trust_tier_distribution_overlay
+  source_record_path: data/source-harvester/stage5dk-fandom-source-classification.yaml
+  source_fact_id: fandom_trust_tier_distribution_4_8_1_1
+  fact_class: fandom_source_lock_number_facts
+  display_label: Fandom source-lock classification distributes 14 sources across A1/A2/B/C_quarantine
+    tiers
+  short_label: Fandom tiers A1/A2/B/C = 4/8/1/1
+  value: 14
+  values:
+  - 14
+  - 4
+  - 8
+  - 1
+  - 1
+  value_type: sequence
+  operation_type: source_observation
+  expression: 'Expected distribution from Stage 5DK source list: A1=4, A2=8, B=1,
+    C_quarantine=1.'
+  relation: Distinguishes central clue/target-contract sources from history/context/provenance/quarantine
+    records.
+  why_stored: Helps Source Browser review distinguish high-value Fandom pages from
+    speculative or provenance-risk pages.
+  verification_status: verified_against_committed_source
+  display_priority: medium
+  risk_notes:
+  - trust_tier_is_review_context_not_truth
+  - fandom_is_community_maintained
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_stage5dk_existing_source_crosswalk_url_corrections_overlay
+  source_record_path: data/source-harvester/stage5dk-existing-source-index-crosswalk.yaml
+  source_fact_id: stage5dk_existing_source_crosswalk_url_corrections
+  fact_class: fandom_source_lock_number_facts
+  display_label: Stage 5DK crosswalk records old malformed Fandom URLs corrected during
+    current source locking
+  short_label: Stage5DK old-index URL corrections
+  value: 14
+  values:
+  - 14
+  value_type: sequence
+  operation_type: source_observation
+  expression: Existing-source crosswalk has 14 records; older Stage 5AJ index-only
+    entries are not sufficient and malformed/truncated URLs are corrected where present.
+  relation: Reviewability bridge between old index-only source rows and current compact
+    source locks.
+  why_stored: Prevents old Stage 5AJ index-only rows from being mistaken for current
+    source-lock quality.
+  verification_status: verified_against_committed_source
+  display_priority: medium
+  risk_notes:
+  - exact_correction_count_should_be_computed_from_record
+  - old_index_only_was_sufficient_false
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_stage5dk_web_fetch_evidence_overlay
+  source_record_path: data/source-harvester/stage5dk-web-fetch-evidence.yaml
+  source_fact_id: stage5dk_web_fetch_evidence_status
+  fact_class: fandom_source_lock_number_facts
+  display_label: Stage 5DK web-fetch evidence supports compact metadata Fandom locking
+    with raw bodies uncommitted
+  short_label: Stage5DK web-fetch evidence / raw bodies=false
+  value: 14
+  values:
+  - 14
+  value_type: sequence
+  operation_type: source_observation
+  expression: Web-fetch evidence should summarize the 14 Fandom pages and confirm
+    raw Fandom bodies were not committed.
+  relation: Handoff evidence for Fandom source-lock freshness and no-raw-body policy.
+  why_stored: Keeps source-access context visible without storing raw webpage bodies
+    in fact cards.
+  verification_status: verified_against_committed_source
+  display_priority: low
+  risk_notes:
+  - raw_webpage_bodies_committed_false
+  - access_statuses_may_change
+  - compute_exact_status_counts_from_record
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_stage5di_web_source_lock_6_sources_overlay
+  source_record_path: data/source-harvester/stage5di-web-source-lock-register.yaml
+  source_fact_id: stage5di_web_source_lock_6_sources
+  fact_class: web_source_lock_number_facts
+  display_label: Stage 5DI compact web source-lock register contains six public sources
+  short_label: Stage5DI web sources = 6
+  value: 6
+  values:
+  - 6
+  value_type: sequence
+  operation_type: source_observation
+  expression: web_source_lock_count=6; includes 2016 Message, PAGE 56, 2017 PGP message,
+    Boxentriq, Reddit Page32 tree thread, and tweqx 3301-hash-alarm.
+  relation: Pre-Fandom-gap-closure source register feeding route/pivot context.
+  why_stored: "Shows the earlier web-source layer before Stage 5DK\u2019s 14-source\
+    \ Fandom expansion."
+  verification_status: verified_against_committed_source
+  display_priority: medium
+  risk_notes:
+  - compact_metadata_only
+  - raw_body_committed_false
+  - public_sources_may_change
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_stage5di_iddqd_crosswalk_page32_page56_token_overlay
+  source_record_path: data/source-harvester/stage5di-cicada-solvers-iddqd-v2-crosswalk.yaml
+  source_fact_id: stage5di_iddqd_crosswalk_core_paths
+  fact_class: local_archive_crosswalk_number_facts
+  display_label: Stage 5DI IDDQD crosswalk links unsolved 32/full 49 by identical
+    362,637-byte files and maps Page56/token pages
+  short_label: 'IDDQD crosswalk: 32=49 size 362637; Page56/token paths'
+  value: 362637
+  values:
+  - 32
+  - 49
+  - 362637
+  - 56
+  - 541379
+  - 389813
+  - 49
+  - 50
+  - 51
+  value_type: sequence
+  operation_type: source_observation
+  expression: Unsolved 32.jpg and full 49.jpg both have size 362637 and same SHA-256;
+    Page56 full/unsolved files and token-block pages 49/50/51 are crosswalked.
+  relation: Local archive source-root bridge for Page32/tree, Page56, token-block,
+    and PDD route families.
+  why_stored: Prevents page-numbering/source-root confusion in future review.
+  verification_status: verified_against_committed_source
+  display_priority: high
+  risk_notes:
+  - path_spelling_warning_Ciada_vs_Cicada
+  - route_extraction_false
+  - page_numbering_convention_required
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_stage5di_number_triangle_bundle_5_files_overlay
+  source_record_path: data/source-harvester/stage5di-number-triangle-theory-bundle-crosswalk.yaml
+  source_fact_id: stage5di_number_triangle_bundle_5_files
+  fact_class: local_archive_crosswalk_number_facts
+  display_label: 'Stage 5DI number-triangle bundle crosswalk has 5 files: 1 message
+    file and 4 images'
+  short_label: Number-triangle bundle 5 = 1 msg + 4 images
+  value: 5
+  values:
+  - 5
+  - 1
+  - 4
+  - 9178
+  - 100112
+  - 350509
+  - 875468
+  - 110709
+  value_type: sequence
+  operation_type: source_observation
+  expression: Bundle root has file_count=5, message_file_count=1, image_file_count=4,
+    with messages.txt size 9178 bytes.
+  relation: Local community-source bundle behind the PDD153 triangle source-lock family.
+  why_stored: Keeps the exact local bundle scope visible while preserving the warning
+    that claims are community-bundle claims.
+  verification_status: verified_against_committed_source
+  display_priority: medium
+  risk_notes:
+  - cross_check_against_iddqd_transcription_not_verified
+  - forum_text_not_committed
+  - community_bundle_claims_remain_unverified
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_stage5di_source_gap_severity_6_overlay
+  source_record_path: data/historical-route/stage5di-source-gap-severity-update.yaml
+  source_fact_id: stage5di_source_gap_severity_6_gaps
+  fact_class: source_gap_number_facts
+  display_label: Stage 5DI source-gap severity is medium-high with six named gaps
+  short_label: Source gaps = 6 / medium-high
+  value: 6
+  values:
+  - 6
+  value_type: sequence
+  operation_type: source_observation
+  expression: source_gap_severity=medium_high; gap_count=6.
+  relation: Reviewability caveat for route/pivot candidates before target-priority
+    decisions.
+  why_stored: Keeps unresolved source gaps visible in the Source Browser.
+  verification_status: verified_against_committed_source
+  display_priority: medium
+  risk_notes:
+  - source_gap_record
+  - not_a_route_fact
+  - must_not_be_used_as_execution_seed
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_stage5di_family_name_equivalence_3_overlay
+  source_record_path: data/project-state/stage5di-record-family-name-equivalence-map.yaml
+  source_fact_id: stage5di_family_name_equivalence_3_entries
+  fact_class: source_gap_number_facts
+  display_label: Stage 5DI record-family equivalence map has three entries covering
+    approval path shorthand, Page32/tree aliases, and PDD/T17 aliases
+  short_label: Family alias map = 3 entries
+  value: 3
+  values:
+  - 3
+  value_type: sequence
+  operation_type: source_observation
+  expression: equivalence_entry_count=3.
+  relation: Prevents alias/name drift in source-lock review.
+  why_stored: Helpful UI context when searching for page32/full49, tree-polar, 153-word
+    triangle, or T17 terms.
+  verification_status: verified_against_committed_source
+  display_priority: low
+  risk_notes:
+  - alias_mapping_not_evidence
+  - reviewability_only
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_music_file_hash_inventory_summary_overlay
+  source_record_path: data/project-state/stage5dj-music-file-hash-inventory.yaml
+  source_fact_id: music_file_hash_inventory_7_files
+  fact_class: music_source_metadata_number_facts
+  display_label: Stage 5DJ music file-hash inventory records seven local CicadaMusic
+    files with SHA-256/SHA-512/BLAKE2b metadata
+  short_label: Music hash inventory = 7 files
+  value: 7
+  values:
+  - 7
+  - 4
+  - 3
+  value_type: sequence
+  operation_type: source_observation
+  expression: 'Hash inventory covers the same 7 local files as the Stage 5DJ source
+    register: 4 MP3 and 3 PDF.'
+  relation: Provenance layer for original CicadaMusic files.
+  why_stored: Makes hash inventory visible as source provenance rather than only as
+    raw record metadata.
+  verification_status: verified_against_committed_source
+  display_priority: medium
+  risk_notes:
+  - raw_music_files_not_committed
+  - metadata_only_source_lock
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_music_fandom_source_scope_summary_overlay
+  source_record_path: data/project-state/stage5dj-music-source-lock-register.yaml
+  source_fact_id: music_fandom_source_scope_summary
+  fact_class: source_register_summary_number_facts
+  display_label: 'Source-register scope summary: 7 CicadaMusic files, 14 Fandom sources,
+    and 6 earlier Stage 5DI web sources'
+  short_label: Source scope 7 music / 14 Fandom / 6 web
+  value: 14
+  values:
+  - 7
+  - 14
+  - 6
+  value_type: sequence
+  operation_type: source_observation
+  expression: Summary card only; detailed cards cover Stage 5DJ music source register,
+    Stage 5DK Fandom register, and Stage 5DI web register.
+  relation: Compact review chip tying together source-register enrichment in Stage
+    5EE.
+  why_stored: Improves Source Browser scanability without creating a new evidence
+    claim.
+  verification_status: operator_assistant_observed
+  display_priority: low
+  risk_notes:
+  - summary_card_only
+  - not_independent_evidence
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_residual_numberfacts_pixel_cluster_summary_overlay
+  source_record_path: data/historical-route/stage5do-pixel-colour-frequency-source-tables.yaml
+  source_fact_id: residual_numberfacts_pixel_cluster_summary
+  fact_class: pixel_colour_frequency_number_facts
+  display_label: 'Residual NumberFacts cluster: 12,543/6,327 pixel-table rows, 9901
+    digit-square candidate, and selection-bias quarantine'
+  short_label: Residual NumberFacts 12543/6327/9901/bias
+  value: 12543
+  values:
+  - 12543
+  - 6327
+  - 9901
+  - 3
+  value_type: sequence
+  operation_type: source_observation
+  expression: Summary card only; detailed cards cover pixel-frequency table counts,
+    9901 candidate, and selection-bias warning.
+  relation: Compact review chip for Stage 5DO residual records not covered in earlier
+    batches.
+  why_stored: Improves Source Browser scanability while preserving detailed caveats
+    in individual cards.
+  verification_status: operator_assistant_observed
+  display_priority: low
+  risk_notes:
+  - summary_card_only
+  - not_independent_evidence
+  - bulk_selection_bias_warning
+- record_type: source_browser_number_fact_enrichment_overlay
+  review_state: overlay_enriched_fact
+  usable_for_decision_now: false
+  not_allowed_as: *id001
+  overlay_id: stage5ee_local_archive_source_gap_summary_overlay
+  source_record_path: data/source-harvester/stage5di-cicada-solvers-iddqd-v2-crosswalk.yaml
+  source_fact_id: local_archive_source_gap_summary
+  fact_class: local_archive_crosswalk_number_facts
+  display_label: 'Local-archive reviewability summary: IDDQD crosswalk, 5-file number-triangle
+    bundle, six source gaps, and three alias-map entries'
+  short_label: Archive/gap summary 5 files / 6 gaps / 3 aliases
+  value: 6
+  values:
+  - 5
+  - 6
+  - 3
+  - 32
+  - 49
+  - 56
+  value_type: sequence
+  operation_type: source_observation
+  expression: Summary card only; detailed cards cover IDDQD crosswalk, number-triangle
+    bundle, source-gap severity, and alias map.
+  relation: Compact source-review chip for local archive source availability and naming
+    hygiene.
+  why_stored: Helps operators quickly see why canonical path/source-gap hygiene matters
+    before experiment planning.
+  verification_status: operator_assistant_observed
+  display_priority: low
+  risk_notes:
+  - summary_card_only
+  - not_independent_evidence
+  - source_gap_context_only

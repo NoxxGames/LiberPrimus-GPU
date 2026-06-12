@@ -759,6 +759,7 @@ from . import stage5ea as stage5ea_module
 from . import stage5eb as stage5eb_module
 from . import stage5ec as stage5ec_module
 from . import stage5ed as stage5ed_module
+from . import stage5ee as stage5ee_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -11247,6 +11248,113 @@ def validate_stage5ed_governance_scope_command() -> None:
     _print_stage5dv_result(
         stage5ed_module.validate_stage5ed_governance_scope(),
         "token_block_stage5ed_governance_scope_valid=true",
+    )
+
+
+@app.command("build-stage5ee")
+def build_stage5ee_command() -> None:
+    records = stage5ee_module.build_stage5ee()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(f"reviewed_entry_count={summary.get('reviewed_entry_count')}")
+    console.print(f"overlay_count={summary.get('overlay_count')}")
+    console.print(f"source_browser_validation_error_count={summary.get('source_browser_validation_error_count')}")
+    console.print(f"local_parallel_default_workers={summary.get('local_parallel_default_workers')}")
+    console.print(f"local_parallel_default_pytest_workers={summary.get('local_parallel_default_pytest_workers')}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5ee")
+def validate_stage5ee_command() -> None:
+    _print_stage5dv_result(
+        stage5ee_module.validate_stage5ee(),
+        "token_block_stage5ee_valid=true",
+    )
+
+
+@app.command("stage5ee-summary")
+def stage5ee_summary_command() -> None:
+    console.print(stage5ee_module.stage5ee_summary_text())
+
+
+@app.command("validate-stage5ee-review-batch-selection")
+def validate_stage5ee_review_batch_selection_command() -> None:
+    _print_stage5dv_result(
+        stage5ee_module.validate_stage5ee_review_batch_selection(),
+        "token_block_stage5ee_review_batch_selection_valid=true",
+    )
+
+
+@app.command("validate-stage5ee-number-fact-overlays")
+def validate_stage5ee_number_fact_overlays_command() -> None:
+    _print_stage5dv_result(
+        stage5ee_module.validate_stage5ee_number_fact_overlays(),
+        "token_block_stage5ee_number_fact_overlays_valid=true",
+    )
+
+
+@app.command("validate-stage5ee-overlay-only-support")
+def validate_stage5ee_overlay_only_support_command() -> None:
+    _print_stage5dv_result(
+        stage5ee_module.validate_stage5ee_overlay_only_support(),
+        "token_block_stage5ee_overlay_only_support_valid=true",
+    )
+
+
+@app.command("validate-stage5ee-source-browser-loadability")
+def validate_stage5ee_source_browser_loadability_command() -> None:
+    _print_stage5dv_result(
+        stage5ee_module.validate_stage5ee_source_browser_loadability(),
+        "token_block_stage5ee_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage5ee-stage5ed-preservation")
+def validate_stage5ee_stage5ed_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5ee_module.validate_stage5ee_stage5ed_preservation(),
+        "token_block_stage5ee_stage5ed_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5ee-stage5eb-validation-policy")
+def validate_stage5ee_stage5eb_validation_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5ee_module.validate_stage5ee_stage5eb_validation_policy(),
+        "token_block_stage5ee_stage5eb_validation_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5ee-sidecar-gates")
+def validate_stage5ee_sidecar_gates_command() -> None:
+    _print_stage5dv_result(
+        stage5ee_module.validate_stage5ee_sidecar_gates(),
+        "token_block_stage5ee_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5ee-handoff-continuity")
+def validate_stage5ee_handoff_continuity_command() -> None:
+    _print_stage5dv_result(
+        stage5ee_module.validate_stage5ee_handoff_continuity(),
+        "token_block_stage5ee_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5ee-credential-redaction-policy")
+def validate_stage5ee_credential_redaction_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5ee_module.validate_stage5ee_credential_redaction_policy(),
+        "token_block_stage5ee_credential_redaction_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5ee-governance-scope")
+def validate_stage5ee_governance_scope_command() -> None:
+    _print_stage5dv_result(
+        stage5ee_module.validate_stage5ee_governance_scope(),
+        "token_block_stage5ee_governance_scope_valid=true",
     )
 
 

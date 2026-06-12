@@ -5,7 +5,7 @@ records:
   category: operational_status_doc
   purpose: Public repository entrypoint and current boundary summary.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: every_stage_when_state_changes
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -17,7 +17,7 @@ records:
   category: operational_status_doc
   purpose: Concise current operational status.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -29,7 +29,7 @@ records:
   category: roadmap_doc
   purpose: High-level current direction with staged-plan pointer.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -41,7 +41,7 @@ records:
   category: policy_doc
   purpose: Codex operational policy and current stage guardrails.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -101,7 +101,7 @@ records:
   category: policy_doc
   purpose: Validation commands and test boundaries.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: every_cli_or_ci_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -125,7 +125,7 @@ records:
   category: roadmap_doc
   purpose: Durable stage timeline, current state, and next-stage direction.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -137,7 +137,7 @@ records:
   category: operational_status_doc
   purpose: Newcomer entrypoint to current project state.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: every_stage_when_state_changes
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -149,7 +149,7 @@ records:
   category: operational_status_doc
   purpose: Map of authoritative docs and records.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: every_source_of_truth_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -209,7 +209,7 @@ records:
   category: operational_status_doc
   purpose: Human-readable mirror of this operational file map.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: every_operational_file_map_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: mirror_of_data_project_state_operational_file_map
@@ -349,7 +349,7 @@ records:
   category: active_data_record
   purpose: Active current-stage registry for latest and next-stage validation defaults.
   source_of_truth_rank: 1
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -766,7 +766,7 @@ records:
   category: operational_status_doc
   purpose: Stage 5AP token-block CLI reference.
   source_of_truth_rank: 3
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: every_token_block_cli_change
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -6917,7 +6917,7 @@ records:
   category: operational_status_doc
   purpose: Stage 5DQ Operator Console Source Browser overview.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: stage_specific
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source
@@ -6996,7 +6996,7 @@ records:
   category: operational_status_doc
   purpose: Concise assistant context handoff including Stage 5DS high-value facts.
   source_of_truth_rank: 2
-  last_meaningful_update_stage: stage-5ed
+  last_meaningful_update_stage: stage-5ee
   expected_update_frequency: every_stage
   mutable_or_reference_only: mutable
   mirror_or_generated_relationships: source

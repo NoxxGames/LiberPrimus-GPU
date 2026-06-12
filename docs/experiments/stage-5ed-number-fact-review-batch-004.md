@@ -15,6 +15,6 @@ Local summary:
 - Source Browser validation errors: 0.
 - Fact cards after Stage 5ED: 142.
 - Local validation policy: 10 workers / 10 pytest workers.
-- Next stage: Stage 5EE - source-lock number-fact review batch 005.
+- Historical successor: Stage 5EE - source-lock number-fact review batch 005.
 
 Stage 5ED does not rewrite historical source-lock records, add source-lock evidence, backfill number facts into source records, select targets, generate byte streams, run route extraction, execute tools, run CUDA/scoring/benchmark work, or make solve claims.
