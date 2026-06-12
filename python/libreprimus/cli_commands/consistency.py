@@ -313,6 +313,77 @@ def consistency_check_result_store(
 
 
 
+@consistency_app.command("check-current-truth-authority")
+def consistency_check_current_truth_authority() -> None:
+    """Run Stage 5EF current-truth authority checks."""
+
+    from libreprimus.token_block import stage5ef
+
+    result = stage5ef.validate_stage5ef_current_truth()
+    console.print(f"current_truth_authority_error_count={len(result.errors)}")
+    for error in result.errors:
+        console.print(f"[red]{error}[/red]")
+    if result.errors:
+        raise typer.Exit(1)
+    console.print("current_truth_authority_valid=true")
+
+
+@consistency_app.command("check-doc-update-policy")
+def consistency_check_doc_update_policy() -> None:
+    """Run Stage 5EF document update-policy checks."""
+
+    from libreprimus.token_block import stage5ef
+
+    result = stage5ef.validate_stage5ef_doc_update_policy()
+    console.print(f"doc_update_policy_error_count={len(result.errors)}")
+    for error in result.errors:
+        console.print(f"[red]{error}[/red]")
+    if result.errors:
+        raise typer.Exit(1)
+    console.print("doc_update_policy_valid=true")
+
+
+@consistency_app.command("generate-context-pack")
+def consistency_generate_context_pack(
+    pack: str = typer.Option(..., "--pack", help="Stage 5EF context-pack id."),
+    out: Path | None = typer.Option(None, "--out", help="Ignored output path for the rendered context pack."),
+) -> None:
+    """Render a deterministic Stage 5EF context-pack template."""
+
+    from libreprimus.token_block import stage5ef
+
+    text = stage5ef.render_context_pack(pack)
+    if out is not None:
+        output_path = _resolve_output_path(out)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(text, encoding="utf-8")
+        console.print(f"context_pack_written={output_path}")
+    else:
+        console.print(text)
+    console.print("context_pack_generated=true")
+
+
+@consistency_app.command("audit-doc-drift")
+def consistency_audit_doc_drift(
+    no_fix: bool = typer.Option(True, "--no-fix", help="Report only; fixes are not supported in Stage 5EF."),
+    out: Path | None = typer.Option(None, "--out", help="Ignored output path for the JSON report."),
+) -> None:
+    """Build a report-only Stage 5EF doc drift audit payload."""
+
+    from libreprimus.token_block import stage5ef
+    from libreprimus.token_block.models import write_json
+
+    if not no_fix:
+        console.print("[red]Stage 5EF doc drift audits are report-only; use --no-fix[/red]")
+        raise typer.Exit(2)
+    report = stage5ef.build_doc_drift_audit_report()
+    if out is not None:
+        write_json(_resolve_output_path(out), report)
+        console.print(f"doc_drift_audit_report={out}")
+    console.print(f"doc_drift_audit_doc_role_count={report['doc_role_count']}")
+    console.print("doc_drift_audit_report_only=true")
+
+
 def register(root_app: typer.Typer) -> None:
     """Register this module's Typer apps on the public root app."""
     root_app.add_typer(consistency_app, name="consistency")

@@ -2,9 +2,15 @@
 
 ## Current stage
 
-Stage 5EE source-lock number-fact review batch 005 is complete.
+Stage 5EF plan-mode current-truth ledger and drift-audit foundation is complete.
 
-Next recommended prompt: Stage 5EF - Source-lock number-fact review batch 006, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5EG - Source-lock number-fact review batch 006, without execution. Public website expansion remains deferred to a future review-gated project.
+
+## Completed in Stage 5EF
+
+Stage 5EF inserts anti-drift/current-truth infrastructure before the previously routed number-fact review batch 006. It makes `data/project-state/current-stage-state.yaml` the authoritative current-stage truth, classifies broad Markdown docs as mirrors or historical evidence, adds deterministic context-pack templates, report-only automation templates, inactive advisory-hook policy, skill-readiness deferral, focused validators, and ignored `codex-output` handoff files.
+
+Stage 5EF does not add source-lock evidence, number-fact overlays, direct source-record backfill, target or pivot selection, route extraction, byte-stream generation, execution, CUDA/scoring/benchmark work, website expansion, canonical corpus activation, page-boundary finalisation, or solve claims.
 
 ## Completed in Stage 5EE
 
@@ -1431,3 +1437,15 @@ Developer log: `docs/development-logs/2026-05-16-stage-3j-mersenne-perfect-numbe
 ## Next prompt recommendation
 
 Stage 5CH - Deep Research review of Stage 5CG post-review approval-gate integration and active-planning-input decision record scaffold, without execution. Use the Stage 5CG findings integration, decision scaffolds, combined approval-gate scaffold, Stage 5CE proposal/gate preservation records, wording review, no-byte-stream transition gate, no-execution transition gate, active-lineage preservation, Stage 5BD plan preservation, guardrail, summary, and next-stage records; keep approval satisfaction, token experiment execution, real byte-stream generation, variant materialisation, active String 4 ingestion, 2014/page49-51 surface combination, DWH/hash/preimage search, historical stego execution, online PGP verification, decoding, scoring, CUDA, benchmarks, generated-output commits, method-status upgrades, canonical corpus activation, page-boundary finalisation, website publication, and solve claims blocked unless a later prompt explicitly scopes execution.
+
+<!-- BEGIN stage5ef -->
+## Stage 5EF Status
+
+Latest completed stage: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation.
+
+Recommended next stage: Stage 5EG - Source-lock number-fact review batch 006, without execution.
+
+Stage 5EF is metadata/tooling only: current-truth authority, doc update policy, deterministic context-pack
+templates, report-only automation templates, inactive advisory-hook policy, skill-readiness deferral, and
+Stage 5EG routing. No puzzle execution or source-lock evidence changed.
+<!-- END stage5ef -->

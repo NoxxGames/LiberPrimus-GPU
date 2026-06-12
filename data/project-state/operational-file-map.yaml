@@ -762,18 +762,6 @@ records:
   owner_context: research_operator
   notes: Documents how future token-case review should consume Stage 5AP, Stage 5AR,
     and Stage 5AT records without treating them as decoded, canonical, or execution-ready.
-- path: docs/reference/token-block-cli.md
-  category: operational_status_doc
-  purpose: Stage 5AP token-block CLI reference.
-  source_of_truth_rank: 3
-  last_meaningful_update_stage: stage-5ee
-  expected_update_frequency: every_token_block_cli_change
-  mutable_or_reference_only: mutable
-  mirror_or_generated_relationships: source
-  staleness_check_level: current_state
-  owner_context: research_operator
-  notes: Documents source-lock, transcription, alphabet, mapping, null-control, DWH,
-    summary, and validation commands.
 - path: docs/reference/stego-controls-cli.md
   category: operational_status_doc
   purpose: Stage 5AP stego-control CLI reference.
@@ -7891,3 +7879,153 @@ records:
   category: historical_log
   source_of_truth_rank: 3
   last_meaningful_update_stage: Stage 5ED
+- path: data/project-state/stage5ef-summary.yaml
+  category: active_data_record
+  purpose: Stage 5EF machine-readable current-truth, policy, or validation record.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ef
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: machine-readable Stage 5EF source record; mirrored
+    by focused docs only where declared
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EF current-truth/doc-drift foundation. current-stage-state.yaml
+    remains the authoritative current truth.
+  stage5ef_role: stage5ef_current_truth_or_policy
+  current_truth_authority: false
+- path: data/project-state/stage5ef-current-truth-authority-policy.yaml
+  category: active_data_record
+  purpose: Stage 5EF machine-readable current-truth, policy, or validation record.
+  source_of_truth_rank: 1
+  last_meaningful_update_stage: stage-5ef
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: machine-readable Stage 5EF source record; mirrored
+    by focused docs only where declared
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EF current-truth/doc-drift foundation. current-stage-state.yaml
+    remains the authoritative current truth.
+  stage5ef_role: stage5ef_current_truth_or_policy
+  current_truth_authority: true
+- path: data/project-state/stage5ef-doc-update-policy-ledger.yaml
+  category: active_data_record
+  purpose: Stage 5EF machine-readable current-truth, policy, or validation record.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ef
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: machine-readable Stage 5EF source record; mirrored
+    by focused docs only where declared
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EF current-truth/doc-drift foundation. current-stage-state.yaml
+    remains the authoritative current truth.
+  stage5ef_role: stage5ef_current_truth_or_policy
+  current_truth_authority: false
+- path: data/project-state/stage5ef-context-pack-registry.yaml
+  category: active_data_record
+  purpose: Stage 5EF machine-readable current-truth, policy, or validation record.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ef
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: machine-readable Stage 5EF source record; mirrored
+    by focused docs only where declared
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EF current-truth/doc-drift foundation. current-stage-state.yaml
+    remains the authoritative current truth.
+  stage5ef_role: stage5ef_current_truth_or_policy
+  current_truth_authority: false
+- path: data/project-state/stage5ef-plan-mode-codex-run-policy.yaml
+  category: active_data_record
+  purpose: Stage 5EF machine-readable current-truth, policy, or validation record.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ef
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: machine-readable Stage 5EF source record; mirrored
+    by focused docs only where declared
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EF current-truth/doc-drift foundation. current-stage-state.yaml
+    remains the authoritative current truth.
+  stage5ef_role: stage5ef_current_truth_or_policy
+  current_truth_authority: false
+- path: data/project-state/stage5ef-drift-audit-policy.yaml
+  category: active_data_record
+  purpose: Stage 5EF machine-readable current-truth, policy, or validation record.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5ef
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: machine-readable Stage 5EF source record; mirrored
+    by focused docs only where declared
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EF current-truth/doc-drift foundation. current-stage-state.yaml
+    remains the authoritative current truth.
+  stage5ef_role: stage5ef_current_truth_or_policy
+  current_truth_authority: false
+- path: docs/codex/current-truth-and-doc-policy.md
+  category: policy_doc
+  purpose: Stage 5EF Codex operating policy documentation.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5ef
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: human-readable policy mirror of committed Stage
+    5EF records; not authoritative current truth
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EF current-truth/doc-drift foundation. current-stage-state.yaml
+    remains the authoritative current truth.
+  stage5ef_role: stage5ef_current_truth_or_policy
+  current_truth_authority: false
+- path: docs/codex/plan-mode-run-protocol.md
+  category: policy_doc
+  purpose: Stage 5EF Codex operating policy documentation.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5ef
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: human-readable policy mirror of committed Stage
+    5EF records; not authoritative current truth
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EF current-truth/doc-drift foundation. current-stage-state.yaml
+    remains the authoritative current truth.
+  stage5ef_role: stage5ef_current_truth_or_policy
+  current_truth_authority: false
+- path: docs/codex/context-packs.md
+  category: policy_doc
+  purpose: Stage 5EF Codex operating policy documentation.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5ef
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: human-readable policy mirror of committed Stage
+    5EF records; not authoritative current truth
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EF current-truth/doc-drift foundation. current-stage-state.yaml
+    remains the authoritative current truth.
+  stage5ef_role: stage5ef_current_truth_or_policy
+  current_truth_authority: false
+- path: docs/reference/token-block-cli.md
+  category: policy_doc
+  purpose: Reference documentation for Stage 5EF token-block and current-truth commands.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5ef
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: human-readable mirror of Stage 5EF CLI behavior;
+    not authoritative current truth
+  staleness_check_level: mirror
+  owner_context: codex_agent
+  notes: Added by Stage 5EF current-truth/doc-drift foundation. current-stage-state.yaml
+    remains the authoritative current truth.
+  stage5ef_role: stage5ef_current_truth_or_policy
+  current_truth_authority: false

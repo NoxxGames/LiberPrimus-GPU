@@ -1,0 +1,109 @@
+{
+  "$id": "https://liberprimus-gpu.local/schemas/project-state/stage5ef-summary-v0.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "active_hooks_created_now": {
+      "const": false
+    },
+    "canonical_corpus_active": {
+      "const": false
+    },
+    "codex_automations_scheduled_now": {
+      "const": false
+    },
+    "cuda_execution_performed": {
+      "const": false
+    },
+    "execution_performed": {
+      "const": false
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "new_source_lock_evidence_added_now": {
+      "const": false
+    },
+    "no_solve_claim": {
+      "const": true
+    },
+    "number_fact_backfill_performed_now": {
+      "const": false
+    },
+    "number_fact_enrichment_overlays_added_now": {
+      "const": false
+    },
+    "page_boundaries_finalized": {
+      "const": false
+    },
+    "plan_amendment_applied_before_editing": {
+      "const": true
+    },
+    "plan_deviation_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "plan_mode_policy_created": {
+      "const": true
+    },
+    "plan_mode_used_for_stage5ef": {
+      "const": true
+    },
+    "plan_review_performed_before_editing": {
+      "const": true
+    },
+    "real_byte_stream_generated": {
+      "const": false
+    },
+    "recommended_next_stage_id": {
+      "const": "stage-5eg"
+    },
+    "record_type": {
+      "type": "string"
+    },
+    "repo_local_skills_installed_now": {
+      "const": false
+    },
+    "route_extraction_performed_now": {
+      "const": false
+    },
+    "schema": {
+      "const": "schemas\\project-state\\stage5ef-summary-v0.schema.json"
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage_id": {
+      "const": "stage-5ef"
+    },
+    "status": {
+      "enum": [
+        "complete"
+      ]
+    },
+    "target_priority_decision_created_now": {
+      "const": false
+    }
+  },
+  "required": [
+    "active_hooks_created_now",
+    "canonical_corpus_active",
+    "codex_automations_scheduled_now",
+    "cuda_execution_performed",
+    "execution_performed",
+    "generated_outputs_committed",
+    "page_boundaries_finalized",
+    "plan_amendment_applied_before_editing",
+    "plan_mode_policy_created",
+    "plan_mode_used_for_stage5ef",
+    "plan_review_performed_before_editing",
+    "recommended_next_stage_id",
+    "record_type",
+    "repo_local_skills_installed_now",
+    "schema",
+    "solve_claim",
+    "stage_id",
+    "status"
+  ],
+  "type": "object"
+}

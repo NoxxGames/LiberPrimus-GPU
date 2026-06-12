@@ -1180,3 +1180,11 @@ Stage 5ED adds focused test files under `tests/python/test_stage5ed_*.py` for th
 Stage 5EE adds focused test files under `tests/python/test_stage5ee_*.py` for the fifth Source Browser number-fact review batch. The tests cover Stage 5EE schemas, exact 20-entry source-register/music/Fandom/residual NumberFacts selection, 25 review-only overlays, overlay-only fact cards, Source Browser loadability, Stage 5ED and Stage 5EB preservation, active-lineage preservation, no-active/no-byte/no-execution gates, strict `codex-output` handoff continuity, credential-redaction policy, and ignored-output policy. Stage 5EE validation does not update source-lock evidence, rewrite historical records, backfill facts directly to source records, select targets, run routes, generate byte streams, execute OCR/image/audio/stego/native/VM/CUDA/scoring/benchmark work, or make solve claims.
 
 Stage 5DI extends coverage with source-lock and pivot-readiness checks for recent clue material. It validates 35 Stage 5DI YAML records and schemas, confirms required web and local archive source families, verifies iddqd-v2 and number-triangle crosswalk metadata, checks the 8 candidate families and 6 unselected pivot options, rejects selected pivot targets, rejects Stage 5BD plan mutation, rejects visual-marker meaning claims, and confirms Stage 5DG operator approval remains only one approval component. The CLI tests cover `build-stage5di`, every focused validator, `validate-stage5di`, and `stage5di-summary`; ignore-policy tests verify generated Stage 5DI reports, `codex-output/**`, raw roots, local third-party material, and deprecated `codex_output/**` remain out of git.
+
+<!-- BEGIN stage5ef -->
+## Stage 5EF Validation Policy
+
+Stage 5EF keeps the Stage 5EB validation discipline: run focused validators first, then `stage-fast`,
+`local-fast`, and one final `full-parallel` validation with `Workers=10` and `PytestWorkers=10`. Full serial
+pytest is not required for normal completion.
+<!-- END stage5ef -->

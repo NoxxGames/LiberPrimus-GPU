@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5EE - Source-lock number-fact review batch 005, source-register / music-metadata / fandom-crosswalk / residual NumberFacts enrichment overlays, without execution.
-- Current planning focus: Stage 5EF - Source-lock number-fact review batch 006, without execution.
+- Latest completed stage: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation.
+- Current planning focus: Stage 5EG - Source-lock number-fact review batch 006, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.

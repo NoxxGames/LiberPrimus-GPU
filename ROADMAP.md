@@ -523,3 +523,12 @@ Evaluate statistical, language-model-assisted, or search-prior methods only afte
 ## Phase 7 - Publication and reproducibility
 
 Prepare reproducible reports, source citations, data locks, and review notes.
+
+<!-- BEGIN stage5ef -->
+## Stage 5EF Route
+
+Stage 5EF is complete as current-truth and drift-audit infrastructure. It preserves Stage 5EE and routes the
+deferred number-fact review batch 006 to Stage 5EG.
+
+Next: Stage 5EG - Source-lock number-fact review batch 006, without execution.
+<!-- END stage5ef -->

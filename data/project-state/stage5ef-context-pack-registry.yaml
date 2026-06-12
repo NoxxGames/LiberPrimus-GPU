@@ -1,0 +1,82 @@
+stage_id: stage-5ef
+previous_stage_id: stage-5ee
+recommended_next_stage_id: stage-5eg
+no_solve_claim: true
+generated_outputs_committed: false
+historical_source_lock_records_rewritten: false
+new_source_lock_evidence_added_now: false
+source_lock_evidence_updated_now: false
+number_fact_enrichment_overlays_added_now: false
+number_fact_backfill_performed_now: false
+number_fact_review_batch_006_performed_now: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+execution_performed: false
+cuda_execution_performed: false
+image_forensics_performed: false
+ocr_performed: false
+audio_stego_performed: false
+spectrogram_stego_performed: false
+tor_network_access_performed: false
+website_expansion_performed: false
+canonical_corpus_active: false
+page_boundaries_finalized: false
+page_boundaries_final: false
+solve_claim: false
+active_hooks_created_now: false
+blocking_hooks_enabled_now: false
+codex_automations_scheduled_now: false
+automation_auto_commit_enabled: false
+repo_local_skills_installed_now: false
+record_type: stage5ef_context_pack_registry
+schema: schemas\project-state\stage5ef-context-pack-registry-v0.schema.json
+status: complete
+context_pack_template_count: 6
+context_packs:
+- pack_id: number_fact_enrichment
+  path: docs/context-packs/context-pack-number-fact-enrichment.md
+  purpose: Prepare bounded future number-fact review batches without executing them.
+  deterministic_template: true
+  contains_wall_clock_timestamp: false
+  contains_local_worktree_path: false
+  contains_worktree_dirt_snapshot: false
+- pack_id: source_lock_addendum
+  path: docs/context-packs/context-pack-source-lock-addendum.md
+  purpose: Collect source-lock addenda without rewriting prior evidence.
+  deterministic_template: true
+  contains_wall_clock_timestamp: false
+  contains_local_worktree_path: false
+  contains_worktree_dirt_snapshot: false
+- pack_id: validation_repair
+  path: docs/context-packs/context-pack-validation-repair.md
+  purpose: Scope focused validator repair without broad doc churn.
+  deterministic_template: true
+  contains_wall_clock_timestamp: false
+  contains_local_worktree_path: false
+  contains_worktree_dirt_snapshot: false
+- pack_id: target_priority
+  path: docs/context-packs/context-pack-target-priority.md
+  purpose: Review target-priority proposals while keeping selection blocked.
+  deterministic_template: true
+  contains_wall_clock_timestamp: false
+  contains_local_worktree_path: false
+  contains_worktree_dirt_snapshot: false
+- pack_id: experiment_design
+  path: docs/context-packs/context-pack-experiment-design.md
+  purpose: Draft raw-data-free experiment-design scaffolds without execution.
+  deterministic_template: true
+  contains_wall_clock_timestamp: false
+  contains_local_worktree_path: false
+  contains_worktree_dirt_snapshot: false
+- pack_id: doc_drift
+  path: docs/context-packs/context-pack-doc-drift.md
+  purpose: Audit current-truth mirror drift without changing historical evidence.
+  deterministic_template: true
+  contains_wall_clock_timestamp: false
+  contains_local_worktree_path: false
+  contains_worktree_dirt_snapshot: false
+generated_context_pack_outputs_committed: false

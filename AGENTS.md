@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5EE - Source-lock number-fact review batch 005, source-register / music-metadata / fandom-crosswalk / residual NumberFacts enrichment overlays, without execution.
+Current completed stage: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation.
 
-Current work: Stage 5EF - Source-lock number-fact review batch 006, without execution. Stage 5EE reviewed 20 selected source-register/music-metadata/Fandom-crosswalk/residual NumberFacts source-lock entries and added 25 review-only NumberFactCard overlays only, preserving Stage 5ED overlays and Stage 5EB's 10-worker local defaults/caps and full-serial-rare fallback policy. Stage 5EE did not rewrite historical source-lock records, backfill number facts directly into source records, add new source-lock evidence, select a target, extract source-register/music/Fandom/NumberFacts routes, generate route streams or bytes, run OCR/image/audio/stego/native/VM/spreadsheet/CUDA/scoring/benchmark work, expand the website, activate the canonical corpus, finalise page boundaries, or make a solve claim. No Deep Research activation-acceptance record exists, the combined gate is not satisfied, no valid activation decision exists, and no active planning input authorization or selection exists. String 4 remains inactive; no target-priority selection, source-lock browser puzzle execution, direct source-record number-fact backfill, historical source-lock rewrite, triangle/Page32 route extraction, music route extraction, audio/stego/OCR/image forensics/AI interpretation, active ingestion, byte-stream generation, machine-code/VM execution, manifest supersession, execution, target-class validation, Tor access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim is authorized.
+Current work: Stage 5EG - Source-lock number-fact review batch 006, without execution. Stage 5EF inserted anti-drift/current-truth infrastructure before the previously routed batch 006, made `data/project-state/current-stage-state.yaml` authoritative, classified broad Markdown as mirrors or historical evidence, added deterministic context-pack templates, report-only automation templates, inactive advisory-hook policy, skills deferral, and focused validators. Stage 5EF did not add source-lock evidence, number-fact overlays, direct source-record backfill, target or pivot selection, route extraction, byte-stream generation, execution, CUDA/scoring/benchmark work, website expansion, canonical corpus activation, page-boundary finalisation, or solve claims. No Deep Research activation-acceptance record exists, the combined gate is not satisfied, no valid activation decision exists, and no active planning input authorization or selection exists. String 4 remains inactive; no target-priority selection, source-lock browser puzzle execution, direct source-record number-fact backfill, historical source-lock rewrite, triangle/Page32 route extraction, music route extraction, audio/stego/OCR/image forensics/AI interpretation, active ingestion, byte-stream generation, machine-code/VM execution, manifest supersession, execution, target-class validation, Tor access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim is authorized.
 
 Current project state:
 
@@ -1182,3 +1182,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - CLI refactors must preserve command names, option names, help behavior, output shape, and exit semantics unless a later stage explicitly scopes a behavior change.
 - Add or update command-surface tests whenever CLI commands are added, removed, renamed, or moved.
 - Do not combine CLI modularisation with experiment execution, schema redesign, raw-data processing, CUDA work, canonical corpus activation, page-boundary finalization, or solve claims.
+
+<!-- BEGIN stage5ef -->
+## Stage 5EF Current-Truth Amendment
+
+- Current completed stage: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation.
+- Current work: Stage 5EG - Source-lock number-fact review batch 006, without execution.
+- Authoritative current truth is `data/project-state/current-stage-state.yaml`.
+- Broad Markdown docs are mirrors or historical evidence, not authoritative state.
+- Stage 5EE originally routed Stage 5EF to number-fact review batch 006; that batch is now deferred to Stage 5EG.
+- Stage 5EF creates no source-lock evidence, number-fact overlays, target selection, byte streams, execution, CUDA,
+  scoring, benchmarks, website expansion, or solve claim.
+<!-- END stage5ef -->

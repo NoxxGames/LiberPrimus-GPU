@@ -4203,3 +4203,27 @@ records:
   generated_outputs_committed: false
   notes: Reviewed entries=20, overlays=25, fact_cards_after=167. Historical source
     locks were not rewritten.
+- record_type: stage_summary_record
+  stage_id: stage-5ef
+  title: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation
+  status: complete
+  category: metadata_tooling
+  summary: Inserted a current-truth authority ledger, doc update-policy ledger, deterministic
+    context-pack templates, report-only automation templates, inactive advisory-hook
+    policy, and Stage 5EG routing for number-fact review batch 006.
+  key_outputs:
+  - Authoritative current-stage truth narrowed to data/project-state/current-stage-state.yaml.
+  - Doc update-policy ledger classifies current mirrors, operating context, historical
+    logs, generated handoffs, and ignored roots.
+  - Deterministic context-pack templates and report-only automation templates were
+    added without active hooks, scheduled automations, or repo-local skills.
+  - Stage 5EE's historical route to Stage 5EF batch 006 is preserved and number-fact
+    review batch 006 is deferred to Stage 5EG.
+  result_status: metadata_tooling_complete
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: next=stage-5eg; plan_mode_used=true; full_serial_pytest_required=false; source-lock
+    evidence, number-fact overlays, execution, CUDA, scoring, benchmarks, website
+    expansion, and solve claims remain blocked.

@@ -218,6 +218,7 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 5EB validation finalization and 10-worker policy repair with Stage 5EA preservation, current-stage registry finalization policy, 10-worker local defaults/caps, full-serial-rare fallback policy, generic stage wrapper aliases, duration-aware pytest shard/rerun guidance, Source Browser overlay cache reuse evidence, no number-fact batch 3, no source-lock mutation, no active ingestion, no byte streams, no execution, and no solve claim.
 - Stage 5ED Source Browser number-fact review batch 004 with 20 selected DiskCipher/visual-method/route-context entries reviewed, 25 review-only NumberFactCard overlays added, Stage 5EC overlays and Stage 5EB 10-worker validation policy preserved, Source Browser loadability validated with zero errors, no historical source-lock rewrite, no source-lock evidence update, no target selected, no byte streams, no execution, and no solve claim.
 - Stage 5EE Source Browser number-fact review batch 005 with 20 selected source-register/music/Fandom/residual NumberFacts entries reviewed, 25 review-only NumberFactCard overlays added, Stage 5ED overlays and Stage 5EB 10-worker validation policy preserved, Source Browser loadability validated with zero errors, no historical source-lock rewrite, no source-lock evidence update, no target selected, no byte streams, no execution, and no solve claim.
+- Stage 5EF current-truth and drift-audit foundation with authoritative `data/project-state/current-stage-state.yaml`, doc update-policy ledger, deterministic context-pack templates, report-only automation templates, inactive advisory-hook policy, skill deferral, Stage 5EE preservation, Stage 5EB 10-worker validation policy preservation, no active hooks or scheduled automations, and no puzzle/source-lock/execution work.
 
 ## Architecture summary
 
@@ -427,11 +428,12 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Latest prime-minus-one native parity stage: Stage 5X wrote `3` native run records, `3` native parity records, `3` result-store preflight records, `3` score-summary preflight records, `1` full-p56 blocker record, `7` guardrail records, and `9` next-stage decision records. It executed only the two Stage 5W ready no-GPU Python-reference mappings, matched both Stage 5W expected hashes, skipped the blocked full p56 mapping, ran no CUDA or native/CUDA CMake, added no kernels, benchmarked nothing, and selected Stage 5Y.
 - Latest source-harvester/website stage: Stage 5AN builds a private Deep Research content pack and SFTP-ready hosted content library from Stage 5AL/5AM metadata. It writes compact records under `data/deep-research-export/`, generated private pack files under `deep-research-content-packs/stage5an/`, hosted private content under `website-export/stage5an/private-content/`, and a combined upload root under `website-export/stage5an/webserver-root/`. It records `208` content-pack files, `211` hosted-content files, `10` bundles, `61` source records, `58` content records, `12` community-claim records, `183` private extracts, `7` publication gates, and `0` public website-ready records. It commits only metadata/contracts/scaffolds and performs no network fetch, online clone, Google Drive storage, raw source commit, public website publication, Deep Research execution, hypothesis generation/execution, OCR, AI/ML interpretation, image/stego/audio execution, CUDA, benchmark, scored experiment, or solve claim.
 - Latest operator-console/source-lock stage: Stage 5EE implements source-lock number-fact review batch 005 as reviewability overlay metadata. It validates `1724` Source Browser entries, adds `25` overlays for `20` selected source-register/music/Fandom/residual NumberFacts records, supports overlay-only fact cards, preserves Stage 5ED overlays, Stage 5EB's 10-worker validation policy, and Stage 5BD/active-lineage boundaries, and leaves Deep Research acceptance, combined-gate satisfaction, activation authorization, active input, dry-run ingestion, byte-stream generation, target-class validation, Tor access, route extraction, DWH/hash/preimage search, OCR/image forensics/AI interpretation, audio/stego/native/VM/CUDA/scoring/benchmark work, community-code execution, raw-source mutation, source-lock rewrite, direct historical fact backfill, and future token-block execution blocked.
+- Stage 5EF: Latest current-truth/doc-policy stage inserts anti-drift infrastructure before number-fact review batch 006. It makes `data/project-state/current-stage-state.yaml` authoritative, classifies broad Markdown docs as mirrors or historical evidence, adds deterministic context-pack templates, report-only automation templates, inactive advisory-hook policy, skills deferral, and focused validators, and keeps all puzzle/source-lock/execution guardrails closed.
 - Latest validation repair stage: Stage 5DY records the Stage 5DX slow-validation diagnostics and adds staged validation profiles. Stage 5DZ preserves those profiles while adding review-only Triangle/Page32 source-lock enrichment. Future local work should use focused or stage-fast checks during implementation, local-fast before commit, and full-parallel near final. Full serial pytest is a rare fallback, not the default per-stage loop.
 - Latest validation stage: Stage 5AX adds opt-in parallel validation infrastructure with `10` parallel-safe commands, `6` serial commands, `1` blocked command, separated logs, failure aggregation, and safety audits while keeping git/GitHub/network/generated-output-writing operations serial. Stage 5DQ preserves the local parallel-validation and pytest cap at 8 workers for Stage 5CM and later.
 - Latest doc-staleness stage: Stage 5AH repairs README stage-ledger coverage, operational-file-map coverage, and current/next-stage consistency checks before curated extraction. Stage 5EE updates current/next-stage records to Stage 5EE complete and Stage 5EF next.
 - Latest validation infrastructure stage: Stage 5EB finalizes the 10-worker local validation policy, full-serial-rare fallback boundary, current-stage registry finalization handoff policy, generic stage wrapper aliases, pytest shard/rerun guidance, and Source Browser overlay-cache reuse evidence.
-- Next: Stage 5EF - Source-lock number-fact review batch 006, without execution.
+- Next: Stage 5EG - Source-lock number-fact review batch 006, without execution.
 
 ## How To Use This Repo
 
@@ -631,3 +633,16 @@ Stage 2B adds generated JSONL and SQLite result stores for solved-baseline regre
 ## Stage 2C CI
 
 Stage 2C adds `.github/workflows/ci.yml` plus local scripts under `scripts/ci/`. CI is raw-data-free, CUDA-free, secret-free, and does not upload generated corpus or result artifacts by default. The Python job runs Ruff, pytest, package smoke, transform-registry validation, solved-baseline manifest validation, and result-store manifest validation.
+
+<!-- BEGIN stage5ef -->
+## Stage 5EF Current Status
+
+The current authoritative stage registry is `data/project-state/current-stage-state.yaml`.
+
+Latest completed: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation.
+
+Next routed: Stage 5EG - Source-lock number-fact review batch 006, without execution.
+
+Stage 5EF is an anti-drift/current-truth foundation inserted before number-fact review batch 006. Batch 006 is
+deferred to Stage 5EG.
+<!-- END stage5ef -->

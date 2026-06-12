@@ -875,12 +875,14 @@ def _object_schema(required: list[str], key: str) -> dict[str, Any]:
         properties.update(
             {
                 "record_type": {"const": "current_stage_state"},
-                "stage_id": {"enum": ["stage-5ea", "stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee"]},
+                "stage_id": {
+                    "enum": ["stage-5ea", "stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee", "stage-5ef"]
+                },
                 "latest_completed_stage_id": {
-                    "enum": ["stage-5ea", "stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee"]
+                    "enum": ["stage-5ea", "stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee", "stage-5ef"]
                 },
                 "recommended_next_stage_id": {
-                    "enum": ["stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee", "stage-5ef"]
+                    "enum": ["stage-5eb", "stage-5ec", "stage-5ed", "stage-5ee", "stage-5ef", "stage-5eg"]
                 },
                 "stage_registry_is_source_of_truth": {"const": True},
             }

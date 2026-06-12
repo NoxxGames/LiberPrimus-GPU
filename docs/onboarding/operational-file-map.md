@@ -189,3 +189,10 @@ Stage 5DE extends the operational file map with Stage 5DD findings integration, 
 Stage 5DG extends the operational file map with Stage 5DF findings integration, real operator approval record, operator approval scope, operator approval nonactivation proof, Stage 5DE preparation preservation, Stage 5DC choice/selected-option preservation, unselected-options preservation, Deep Research acceptance absence proof, combined-gate and activation nonauthorization proofs, real-record boundary, Stage 5BD plan preservation, active-lineage preservation, no-active/no-byte/no-execution transition gates, target-context preservation, strict `codex-output` handoff policy, credential-redaction policy preservation, summary, next-stage, workflow, developer-log, and research-log records.
 
 Stage 5DI extends the operational file map with recent clue source-lock records, public web source locks, local iddqd-v2 and number-triangle crosswalks, route-candidate family index, pivot-readiness package, pivot-priority matrix, DWH quarantine reaffirmation, dinkus visual-marker metadata, Stage 5DG approval preservation, Stage 5BD plan preservation, active-lineage preservation, no-active/no-byte/no-execution gates, strict `codex-output` handoff policy, credential-redaction policy preservation, summary, next-stage, developer-log, experiment doc, and research-log records.
+
+<!-- BEGIN stage5ef -->
+## Stage 5EF Operational Map Amendment
+
+Stage 5EF records current-truth, doc update-policy, context-pack, plan-mode, drift-audit, automation-template,
+advisory-hook, and skill-readiness files in `data/project-state/operational-file-map.yaml`.
+<!-- END stage5ef -->

@@ -1,0 +1,175 @@
+stage_id: stage-5ef
+previous_stage_id: stage-5ee
+recommended_next_stage_id: stage-5eg
+no_solve_claim: true
+generated_outputs_committed: false
+historical_source_lock_records_rewritten: false
+new_source_lock_evidence_added_now: false
+source_lock_evidence_updated_now: false
+number_fact_enrichment_overlays_added_now: false
+number_fact_backfill_performed_now: false
+number_fact_review_batch_006_performed_now: false
+target_priority_decision_created_now: false
+pivot_target_selected_now: false
+route_extraction_performed_now: false
+route_stream_generated_now: false
+real_byte_stream_generated: false
+variant_byte_streams_generated: false
+execution_performed: false
+cuda_execution_performed: false
+image_forensics_performed: false
+ocr_performed: false
+audio_stego_performed: false
+spectrogram_stego_performed: false
+tor_network_access_performed: false
+website_expansion_performed: false
+canonical_corpus_active: false
+page_boundaries_finalized: false
+page_boundaries_final: false
+solve_claim: false
+active_hooks_created_now: false
+blocking_hooks_enabled_now: false
+codex_automations_scheduled_now: false
+automation_auto_commit_enabled: false
+repo_local_skills_installed_now: false
+record_type: stage5ef_doc_update_policy_ledger
+schema: schemas\project-state\stage5ef-doc-update-policy-ledger-v0.schema.json
+status: complete
+doc_roles:
+- path: STATUS.md
+  doc_role: current_mirror
+  current_mirror: true
+  stage5ef_default_update_allowed: true
+  update_policy: focused_current_section_only
+- path: README.md
+  doc_role: current_mirror
+  current_mirror: true
+  stage5ef_default_update_allowed: true
+  update_policy: focused_current_section_only
+- path: ROADMAP.md
+  doc_role: current_mirror
+  current_mirror: true
+  stage5ef_default_update_allowed: true
+  update_policy: focused_current_section_only
+- path: docs/roadmap/staged-plan.md
+  doc_role: current_mirror
+  current_mirror: true
+  stage5ef_default_update_allowed: true
+  update_policy: focused_current_section_only
+- path: AGENTS.md
+  doc_role: operating_context
+  current_mirror: false
+  stage5ef_default_update_allowed: true
+  update_policy: focused_current_section_only
+- path: ChatGPT-ContextFile.md
+  doc_role: operating_context
+  current_mirror: false
+  stage5ef_default_update_allowed: true
+  update_policy: focused_current_section_only
+- path: TESTING.md
+  doc_role: command_doc
+  current_mirror: false
+  stage5ef_default_update_allowed: true
+  update_policy: focused_current_section_only
+- path: docs/reference/token-block-cli.md
+  doc_role: command_doc
+  current_mirror: false
+  stage5ef_default_update_allowed: true
+  update_policy: focused_current_section_only
+- path: docs/onboarding/source-of-truth-map.md
+  doc_role: machine_map_doc
+  current_mirror: false
+  stage5ef_default_update_allowed: true
+  update_policy: focused_current_section_only
+- path: docs/onboarding/operational-file-map.md
+  doc_role: machine_map_doc
+  current_mirror: false
+  stage5ef_default_update_allowed: true
+  update_policy: focused_current_section_only
+- path: CIPHER_CATALOG.md
+  doc_role: domain_doc
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: EXPERIMENTS.md
+  doc_role: domain_doc
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: RESULTS_SCHEMA.md
+  doc_role: domain_doc
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: CUDA_NOTES.md
+  doc_role: domain_doc
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: BENCHMARKS.md
+  doc_role: domain_doc
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: tutorials/**
+  doc_role: tutorial_mirror
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: docs/wiki-source/**
+  doc_role: wiki_mirror
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: docs/experiments/**
+  doc_role: historical_stage_evidence
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: docs/operator-console/source-browser-v0.md
+  doc_role: stage_specific_operator_console_doc
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: docs/onboarding/contributor-module-map.md
+  doc_role: module_map
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: docs/development-logs/**
+  doc_role: historical_log
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: research-log/**
+  doc_role: historical_log
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: codex-output/**
+  doc_role: ignored_handoff
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: experiments/results/**
+  doc_role: ignored_generated_output
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: third_party/**
+  doc_role: ignored_raw_or_cache
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+- path: data/raw/**
+  doc_role: ignored_raw_or_cache
+  current_mirror: false
+  stage5ef_default_update_allowed: false
+  update_policy: blocked_unless_focused_validator_requires
+allowed_update_reasons:
+- declared current mirror current section stale
+- Stage 5EF command or file documentation introduced
+- doc-policy ledger explicitly requires update
+- focused validator proves concrete update need
+repo_wide_markdown_frontmatter_migration_performed: false
+repo_wide_markdown_frontmatter_migration_required: false

@@ -344,3 +344,11 @@ Stage 5DZ adds Triangle/Page32 bounded-findings source-lock and enriched review 
 Stage 5EA adds validation-throughput, current-stage registry, historical-test isolation, and Source Browser number-fact overlay-cache repair metadata. Source-of-truth records are `data/project-state/stage5ea-*`, `data/project-state/current-stage-state.yaml`, `data/source-harvester/stage5ea-*`, `data/token-block/stage5ea-*`, `python/libreprimus/token_block/stage5ea.py`, `python/libreprimus/stage_state/current.py`, `python/libreprimus/validation/stage_id.py`, and matching `schemas/**/*stage5ea*.schema.json`. Stage 5EA performs no number-fact review batch, source-lock evidence update, overlay creation, route extraction, byte-stream generation, execution, or solve claim. Ignored generated diagnostics, raw third-party files, and `codex-output/stage5ea-codex-completion.md` are not source truth.
 
 Stage 5EB adds validation finalization, 10-worker local policy, serial-pytest fallback, current-stage registry finalization, generic stage-wrapper, doc-tier, pytest shard/rerun, and Source Browser cache-reuse metadata. Source-of-truth records are `data/project-state/stage5eb-*`, `data/project-state/current-stage-state.yaml`, `data/source-harvester/stage5eb-*`, `data/token-block/stage5eb-*`, `python/libreprimus/token_block/stage5eb.py`, `python/libreprimus/validation/stage_id.py`, `python/libreprimus/parallel_validation/pytest_runner.py`, `scripts/ci/run-stage-validation.*`, `scripts/ci/run-parallel-validation.*`, `scripts/ci/run-pytest-shard.*`, `scripts/ci/run-failing-pytest-slice.*`, and matching `schemas/**/*stage5eb*.schema.json`. Stage 5EB performs no number-fact review batch, source-lock evidence update, overlay creation, route extraction, byte-stream generation, execution, or solve claim. Ignored generated diagnostics, raw third-party files, and `codex-output/stage5eb-codex-completion.md` are not source truth.
+
+<!-- BEGIN stage5ef -->
+## Stage 5EF Source-Of-Truth Amendment
+
+`data/project-state/current-stage-state.yaml` is the authoritative current-stage truth. README, STATUS,
+ROADMAP, and staged-plan current sections are mirrors only. Historical logs and historical Markdown sections
+are evidence, not current truth.
+<!-- END stage5ef -->

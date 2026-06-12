@@ -7,6 +7,8 @@ from pathlib import Path
 import re
 from typing import Any
 
+import yaml
+
 from libreprimus.doc_staleness.stage_ids import StageId, find_stage_ids, parse_stage_id
 
 LEDGER_HEADING_RE = re.compile(
@@ -16,7 +18,7 @@ LEDGER_HEADING_RE = re.compile(
 )
 EXEMPT_HEADING_RE = re.compile(
     r"(historical snapshot|selected highlights|not exhaustive|excerpt|archive|troubleshooting|"
-    r"\brules\b|^phase\s+\d|boundary|cuda planning)",
+    r"\brules\b|^phase\s+\d|^stage\s+\d|boundary|cuda planning)",
     re.IGNORECASE,
 )
 STAGE_LINE_RE = re.compile(r"^\s*(?:[-*]\s+)?(?:Stage|stage)[\s-]*\d+[A-Za-z]*\b")
@@ -85,7 +87,10 @@ def scan_stage_ledgers(
     sections: list[StageLedgerSection] = []
     findings: list[StageLedgerFinding] = []
     warnings: list[str] = []
+    policy_exemptions = _stage5ef_policy_exemptions(root)
     for relative in paths:
+        if _path_exempted_by_policy(relative, policy_exemptions):
+            continue
         path = root / relative
         if not path.is_file():
             warnings.append(f"missing_operational_file:{relative}")
@@ -210,3 +215,29 @@ def _stage_ids_in_section(lines: list[str]) -> list[StageId]:
         if STAGE_LINE_RE.match(line) or LEDGER_HEADING_RE.search(line):
             stages.extend(find_stage_ids(line))
     return stages
+
+
+def _stage5ef_policy_exemptions(root: Path) -> tuple[str, ...]:
+    """Return Stage 5EF doc-policy paths that should not be forced current."""
+
+    policy_path = root / "data/project-state/stage5ef-doc-update-policy-ledger.yaml"
+    if not policy_path.is_file():
+        return ()
+    payload = yaml.safe_load(policy_path.read_text(encoding="utf-8")) or {}
+    exemptions: list[str] = []
+    for record in payload.get("doc_roles", []):
+        if not isinstance(record, dict):
+            continue
+        if record.get("stage5ef_default_update_allowed") is False:
+            exemptions.append(str(record.get("path", "")).replace("\\", "/"))
+    return tuple(path for path in exemptions if path)
+
+
+def _path_exempted_by_policy(path: str, exemptions: tuple[str, ...]) -> bool:
+    normalized = path.replace("\\", "/")
+    for pattern in exemptions:
+        if pattern.endswith("/**") and normalized.startswith(pattern[:-3]):
+            return True
+        if normalized == pattern:
+            return True
+    return False

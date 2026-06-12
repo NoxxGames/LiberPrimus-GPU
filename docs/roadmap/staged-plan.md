@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 5EE - Source-lock number-fact review batch 005, source-register / music-metadata / fandom-crosswalk / residual NumberFacts enrichment overlays, without execution.
-- Current planning focus: Stage 5EF - Source-lock number-fact review batch 006, without execution.
+- Latest completed stage: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation.
+- Current planning focus: Stage 5EG - Source-lock number-fact review batch 006, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -316,3 +316,17 @@ Stage 5R controlled expanded solved-fixture-safe Gematria `shift_score` CUDA par
 Every Codex stage that changes stage status, roadmap, experiment priority, method-family status, data policy, CLI behaviour, or schema/result families must update the relevant `.md` and `.txt` project-context files. At minimum, check `STATUS.md`, `ROADMAP.md`, `AGENTS.md`, `README.md`, `EXPERIMENTS.md`, `RESULTS_SCHEMA.md`, `TESTING.md`, `CIPHER_CATALOG.md`, this file, tutorials, and `docs/wiki-source`.
 
 If no docs need updates, the final report for that stage must say why.
+
+<!-- BEGIN stage5ef -->
+## Stage 5EF
+
+Status: complete.
+
+Scope: current-truth ledger, doc update-policy ledger, deterministic context-pack templates, report-only
+automation templates, inactive advisory-hook policy, and skills deferral.
+
+Preserved fact: Stage 5EE originally routed to Stage 5EF as number-fact review batch 006. Operator inserted
+Stage 5EF as anti-drift infrastructure; batch 006 is deferred to Stage 5EG.
+
+Next: Stage 5EG - Source-lock number-fact review batch 006, without execution.
+<!-- END stage5ef -->

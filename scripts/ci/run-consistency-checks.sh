@@ -33,6 +33,9 @@ if [[ "$profile" != "full" ]]; then
     "$python_bin" -m libreprimus.cli token-block validate-stage5dz
     "$python_bin" -m libreprimus.cli token-block validate-stage5ea
     "$python_bin" -m libreprimus.cli token-block validate-stage5eb
+    "$python_bin" -m libreprimus.cli token-block validate-stage5ef
+    "$python_bin" -m libreprimus.cli consistency check-current-truth-authority
+    "$python_bin" -m libreprimus.cli consistency check-doc-update-policy
     "$python_bin" -m libreprimus.cli source-browser validate-index
     "$python_bin" -m libreprimus.cli consistency check-state-drift
     "$python_bin" -m libreprimus.cli consistency check-stage-ledger-staleness \
@@ -59,6 +62,13 @@ if [ -e "codex_output" ]; then
     echo "codex_output must not be used for Stage 5EB" >&2
     exit 1
 fi
+
+echo "Validating Stage 5EF current-truth and drift-audit records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5ef
+"$python_bin" -m libreprimus.cli token-block stage5ef-summary
+"$python_bin" -m libreprimus.cli consistency check-current-truth-authority
+"$python_bin" -m libreprimus.cli consistency check-doc-update-policy
+git check-ignore -q "codex-output/stage5ef-codex-completion.md"
 
 echo "Running document staleness checks"
 "$python_bin" -m libreprimus.cli consistency check-doc-staleness \
@@ -88,14 +98,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5EB",
+            expected_latest_stage="Stage 5EF",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5EB",
+            "expected_latest_stage": "Stage 5EF",
             "finding_count": len(findings),
             "findings": findings,
         },
