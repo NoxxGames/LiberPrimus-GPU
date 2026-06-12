@@ -273,7 +273,7 @@ def scan_text(
             if MARKER_END_RE.search(line):
                 historical_marker_depth = max(0, historical_marker_depth - 1)
             continue
-        suppression = SUPPRESSION_RE.search(line)
+        suppression = SUPPRESSION_RE.search(line) if _is_suppression_directive(line) else None
         if suppression and not (suppression.group("reason") or "").strip():
             findings.append(
                 _finding(
@@ -398,10 +398,15 @@ def _has_reasoned_suppression(lines: list[str], one_based_line: int) -> bool:
     for offset in (-1, 0, 1):
         position = one_based_line - 1 + offset
         if 0 <= position < len(lines):
-            match = SUPPRESSION_RE.search(lines[position])
+            match = SUPPRESSION_RE.search(lines[position]) if _is_suppression_directive(lines[position]) else None
             if match and (match.group("reason") or "").strip():
                 return True
     return False
+
+
+def _is_suppression_directive(line: str) -> bool:
+    stripped = line.lstrip()
+    return stripped.startswith(("<!--", "#", "//")) and bool(SUPPRESSION_RE.search(line))
 
 
 def _document_role(path: str) -> str:

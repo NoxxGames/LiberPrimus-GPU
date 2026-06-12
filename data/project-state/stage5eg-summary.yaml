@@ -92,6 +92,6 @@ automation_creation_unavailable_in_runtime: false
 manual_operator_setup_required: false
 known_start_here_stale_current_claims_fixed: true
 stale_current_claim_validation_error_count: 0
-stale_current_claim_warning_count: 68
+stale_current_claim_warning_count: 95
 source_browser_entries_loaded: 1771
 source_browser_validation_error_count: 0

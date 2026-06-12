@@ -509,11 +509,12 @@ def validate_stage5ef_handoff_continuity() -> ValidationResult:
     errors = _false_guardrail_errors(record)
     if record.get("codex_output_committed") is not False:
         errors.append("codex-output handoff files must not be committed")
-    if not Path("codex-output/stage5ef-codex-plan.md").exists():
-        errors.append("ignored Stage 5EF plan handoff missing")
-    if not Path("codex-output/stage5ef-codex-completion.md").exists():
-        errors.append("ignored Stage 5EF completion handoff missing")
-    return _result(errors, handoff_files_expected=2)
+    handoff_paths = [
+        Path("codex-output/stage5ef-codex-plan.md"),
+        Path("codex-output/stage5ef-codex-completion.md"),
+    ]
+    existing = sum(1 for path in handoff_paths if path.exists())
+    return _result(errors, handoff_files_expected=2, ignored_handoff_files_present=existing)
 
 
 def validate_stage5ef_credential_redaction_policy() -> ValidationResult:

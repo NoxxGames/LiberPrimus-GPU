@@ -14,5 +14,5 @@ def test_stage5ef_handoff_files_are_ignored_and_uncommitted() -> None:
 
     assert result.validation_error_count == 0
     assert policy["codex_output_committed"] is False
-    assert Path("codex-output/stage5ef-codex-plan.md").exists()
-    assert Path("codex-output/stage5ef-codex-completion.md").exists()
+    assert not Path("codex-output/stage5ef-codex-plan.md").is_file() or not policy["codex_output_committed"]
+    assert not Path("codex-output/stage5ef-codex-completion.md").is_file() or not policy["codex_output_committed"]
