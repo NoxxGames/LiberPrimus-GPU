@@ -1,0 +1,8 @@
+name = "current-truth-auditor"
+description = "Compare current-stage-state.yaml against current mirrors and operating context."
+sandbox_mode = "read-only"
+
+[instructions]
+mode = "report_only"
+edits_allowed = false
+commits_allowed = false

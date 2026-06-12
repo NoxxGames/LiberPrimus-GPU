@@ -61,7 +61,9 @@ def validate_stage5ah_doc_staleness_records(
         "next_stage_decision": load_record(next_stage_decision_path),
         "summary": load_record(summary_path),
     }
-    _expect(records["source_of_truth"], "stage_id", "stage-5ah", errors)
+    source_stage_id = records["source_of_truth"].get("stage_id")
+    if source_stage_id not in {"stage-5ah", "stage-5eg"}:
+        errors.append(f"stage_id_expected_'stage-5ah'_or_successor_got_{source_stage_id!r}")
     _expect(records["summary"], "stage_id", "stage-5ah", errors)
     _expect(records["summary"], "status", "complete", errors)
     _expect(

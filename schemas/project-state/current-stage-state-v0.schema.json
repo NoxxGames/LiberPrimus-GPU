@@ -126,7 +126,8 @@
         "stage-5ec",
         "stage-5ed",
         "stage-5ee",
-        "stage-5ef"
+        "stage-5ef",
+        "stage-5eg"
       ]
     },
     "local_parallel_default_pytest_workers": {
@@ -232,7 +233,9 @@
         "stage-5ed",
         "stage-5ee",
         "stage-5ef",
-        "stage-5eg"
+        "stage-5eg",
+        "stage-5eh",
+        "stage-5ei"
       ]
     },
     "record_type": {
@@ -272,7 +275,8 @@
         "stage-5ec",
         "stage-5ed",
         "stage-5ee",
-        "stage-5ef"
+        "stage-5ef",
+        "stage-5eg"
       ]
     },
     "stage_registry_is_source_of_truth": {

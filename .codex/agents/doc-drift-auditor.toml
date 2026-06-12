@@ -1,0 +1,8 @@
+name = "doc-drift-auditor"
+description = "Search changed and high-risk docs for stale current/latest/next-stage claims."
+sandbox_mode = "read-only"
+
+[instructions]
+mode = "report_only"
+edits_allowed = false
+commits_allowed = false

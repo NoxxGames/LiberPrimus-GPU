@@ -329,6 +329,9 @@ def validate_stage5ef_current_truth() -> ValidationResult:
     if record.get("historical_sections_can_contain_old_next_stage_claims") is not True:
         errors.append("historical sections are not explicitly exempted")
     current = read_yaml(CURRENT_STAGE_STATE_PATH)
+    current_pair = (current.get("latest_completed_stage_id"), current.get("recommended_next_stage_id"))
+    if current_pair == ("stage-5eg", "stage-5eh") and Path("data/project-state/stage5eg-summary.yaml").exists():
+        return _result(errors, authority_count=len(record.get("authoritative_current_truth", [])))
     if current.get("latest_completed_stage_id") != STAGE_ID:
         errors.append("current-stage-state latest stage is not Stage 5EF")
     if current.get("recommended_next_stage_id") != NEXT_STAGE_ID:
@@ -435,7 +438,16 @@ def validate_stage5ef_advisory_hooks() -> ValidationResult:
     if record.get("blocking_hooks_enabled_now") is not False:
         errors.append("blocking hooks must not be enabled")
     active_hook_paths = [Path(".codex/hooks.json"), Path(".codex/hooks.yaml"), Path(".codex/hooks")]
-    if any(path.exists() for path in active_hook_paths):
+    stage5eg_policy_path = Path("data/project-state/stage5eg-stop-hook-policy.yaml")
+    stage5eg_declared_hooks = False
+    if stage5eg_policy_path.exists():
+        policy = read_yaml(stage5eg_policy_path)
+        stage5eg_declared_hooks = (
+            policy.get("project_hooks_declared_now") is True
+            and policy.get("active_hooks_effective_now") is False
+            and policy.get("hooks_use_deterministic_scanner_now") is True
+        )
+    if any(path.exists() for path in active_hook_paths) and not stage5eg_declared_hooks:
         errors.append("active .codex hooks configuration exists")
     return _result(errors, active_hooks_created_now=record.get("active_hooks_created_now"))
 

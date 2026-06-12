@@ -384,6 +384,69 @@ def consistency_audit_doc_drift(
     console.print("doc_drift_audit_report_only=true")
 
 
+@consistency_app.command("audit-stale-current-claims")
+def consistency_audit_stale_current_claims(
+    strict: bool = typer.Option(False, "--strict", help="Return failure on error-severity stale current claims."),
+    report_only: bool = typer.Option(False, "--report-only", help="Report findings without failing on errors."),
+    out: Path | None = typer.Option(None, "--out", help="Generated JSON report path."),
+    expected_latest_stage: str | None = typer.Option(None, "--expected-latest-stage"),
+    expected_next_stage: str | None = typer.Option(None, "--expected-next-stage"),
+) -> None:
+    """Audit tracked text-like files for stale current/latest/next-stage claims."""
+
+    from libreprimus.doc_staleness.stale_current_claims import audit_repository, write_report
+
+    report = audit_repository(
+        expected_latest_stage=expected_latest_stage,
+        expected_next_stage=expected_next_stage,
+    )
+    if out is not None:
+        output_path = _resolve_output_path(out)
+        write_report(output_path, report)
+        console.print(f"stale_current_claim_report={output_path}")
+    console.print(f"stale_current_scanned_paths={report.scanned_path_count}")
+    console.print(f"stale_current_skipped_paths={report.skipped_path_count}")
+    console.print(f"stale_current_finding_count={report.finding_count}")
+    console.print(f"stale_current_error_count={report.error_count}")
+    console.print(f"stale_current_warning_count={report.warning_count}")
+    console.print(f"stale_current_suppression_error_count={report.suppression_error_count}")
+    for finding in report.findings:
+        style = "red" if finding.severity == "error" else "yellow"
+        text = (
+            f"{finding.severity}:{finding.claim_type}:{finding.path}:{finding.line}: "
+            f"{_console_safe(finding.matched_text)}"
+        )
+        console.print(text, style=style, markup=False, highlight=False)
+    if strict and not report_only and report.error_count:
+        raise typer.Exit(1)
+    console.print("stale_current_claim_audit_valid=true")
+
+
+@consistency_app.command("audit-doc-drift-deep")
+def consistency_audit_doc_drift_deep(
+    strict: bool = typer.Option(False, "--strict", help="Return failure on error-severity stale current claims."),
+    out: Path | None = typer.Option(None, "--out", help="Generated JSON report path."),
+) -> None:
+    """Run the Stage 5EG deep stale-current-claim audit."""
+
+    from libreprimus.doc_staleness.stale_current_claims import audit_repository, write_report
+
+    report = audit_repository()
+    if out is not None:
+        output_path = _resolve_output_path(out)
+        write_report(output_path, report)
+        console.print(f"stale_current_claim_report={output_path}")
+    console.print(f"stale_current_finding_count={report.finding_count}")
+    console.print(f"stale_current_error_count={report.error_count}")
+    if strict and report.error_count:
+        raise typer.Exit(1)
+    console.print("doc_drift_deep_audit_valid=true")
+
+
 def register(root_app: typer.Typer) -> None:
     """Register this module's Typer apps on the public root app."""
     root_app.add_typer(consistency_app, name="consistency")
+
+
+def _console_safe(text: str) -> str:
+    return text.encode("ascii", "backslashreplace").decode("ascii")

@@ -1,0 +1,8 @@
+name = "closeout-reviewer"
+description = "Review pending diffs for guardrail leakage, staging policy, and closeout completeness."
+sandbox_mode = "read-only"
+
+[instructions]
+mode = "report_only"
+edits_allowed = false
+commits_allowed = false

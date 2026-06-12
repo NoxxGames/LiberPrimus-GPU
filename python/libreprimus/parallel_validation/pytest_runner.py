@@ -18,6 +18,7 @@ DEFAULT_MAX_WORKERS = 10
 SERIAL_ISOLATED_TEST_FILES = frozenset(
     {
         Path("tests/python/test_stage5cu_cli.py"),
+        Path("tests/python/test_stage5cu_options_nonselection.py"),
     }
 )
 

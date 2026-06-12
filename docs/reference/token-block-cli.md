@@ -195,3 +195,12 @@ Stage 5EF commands:
 
 These commands build and validate metadata/tooling records only. They do not execute puzzle work.
 <!-- END stage5ef -->
+
+<!-- BEGIN stage5eg -->
+## Stage 5EG Commands
+
+- `python -m libreprimus.cli token-block build-stage5eg`
+- `python -m libreprimus.cli token-block validate-stage5eg`
+- `python -m libreprimus.cli token-block stage5eg-summary`
+- `python -m libreprimus.cli consistency audit-stale-current-claims --strict`
+<!-- END stage5eg -->

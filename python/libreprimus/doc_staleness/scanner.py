@@ -37,6 +37,8 @@ HISTORICAL_LINE_RE = re.compile(
     r"development log|research log|stage details|source-of-truth summary)\b",
     re.IGNORECASE,
 )
+MARKER_BEGIN_RE = re.compile(r"<!--\s*BEGIN\s+(?P<marker>stage\d+[a-z]+)\s*-->", re.IGNORECASE)
+MARKER_END_RE = re.compile(r"<!--\s*END\s+(?P<marker>stage\d+[a-z]+)\s*-->", re.IGNORECASE)
 
 
 def scan_repository(
@@ -82,12 +84,27 @@ def _scan_text(text: str, relative: str, source: SourceOfTruth) -> list[Stalenes
     findings: list[StalenessFinding] = []
     expected_next = parse_stage_id(source.expected_next_stage_prefix)
     latest = parse_stage_id(source.latest_completed_stage_prefix)
+    historical_marker_depth = 0
     for line_no, line in enumerate(text.splitlines(), start=1):
+        begin_marker = MARKER_BEGIN_RE.search(line)
+        if begin_marker:
+            try:
+                marker_stage = parse_stage_id(begin_marker.group("marker"))
+                if marker_stage != latest:
+                    historical_marker_depth += 1
+            except ValueError:
+                pass
+        if historical_marker_depth > 0:
+            if MARKER_END_RE.search(line):
+                historical_marker_depth = max(0, historical_marker_depth - 1)
+            continue
         if _is_historical_line(line):
             continue
         findings.extend(_website_findings(relative, line_no, line))
         findings.extend(_current_next_findings(relative, line_no, line, expected_next, latest))
         findings.extend(_cuda_cap_findings(relative, line_no, line, latest))
+        if MARKER_END_RE.search(line):
+            historical_marker_depth = max(0, historical_marker_depth - 1)
     return findings
 
 

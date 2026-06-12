@@ -17,3 +17,9 @@ Stage 5EF Evidence Fields:
 - plan_review_performed_before_editing: true
 - plan_amendment_applied_before_editing: true
 - plan_deviation_count: 0 unless real deviations occur
+
+<!-- BEGIN stage5eg -->
+## Stage 5EG Plan-Mode Closeout Guard
+
+Plans that edit docs should include a deterministic stale-current-claim scanner step before final validation.
+<!-- END stage5eg -->

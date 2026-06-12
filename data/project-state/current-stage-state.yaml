@@ -1,5 +1,6 @@
-stage_id: stage-5ef
-stage_title: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation
+stage_id: stage-5eg
+stage_title: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents,
+  stop-hook drift gate, and daily automation setup, without puzzle execution
 prompt_type: codex_plan_mode_metadata_tooling_implementation
 metadata_only: true
 source_lock_only: false
@@ -86,17 +87,18 @@ raw_third_party_files_committed: false
 record_type: current_stage_state
 schema: schemas/project-state/current-stage-state-v0.schema.json
 status: complete
-latest_completed_stage_id: stage-5ef
-latest_completed_stage_title: Stage 5EF - Plan-mode current-truth ledger and drift-audit
-  foundation
+latest_completed_stage_id: stage-5eg
+latest_completed_stage_title: Stage 5EG - Post-edit doc-staleness guardians, read-only
+  auditor agents, stop-hook drift gate, and daily automation setup, without puzzle
+  execution
 latest_completed_stage_commit_recording_policy: external_post_push_handoff
 latest_completed_stage_ci_status_recording_policy: external_post_push_handoff
 latest_completed_stage_commit_in_committed_registry: not_applicable_self_referential
 latest_completed_stage_ci_status_in_committed_registry: not_applicable_pre_push
-recommended_next_stage_id: stage-5eg
-recommended_next_stage_title: Stage 5EG - Source-lock number-fact review batch 006,
-  without execution
-recommended_next_prompt_type: assistant_or_operator_review_then_codex_overlay_update
+recommended_next_stage_id: stage-5eh
+recommended_next_stage_title: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe
+  manifest, and enriched fact cards, without execution
+recommended_next_prompt_type: codex_plan_mode_source_lock_addendum
 stage_registry_is_source_of_truth: true
 historical_tests_must_not_require_latest_stage: true
 current_stage_registry_is_committed_pre_push_state: true
@@ -119,3 +121,12 @@ automation_auto_commit_enabled: false
 repo_local_skills_installed_now: false
 number_fact_enrichment_overlays_added_now: false
 number_fact_review_batch_006_performed_now: false
+stage5ef_recommended_stage5eg_number_fact_batch_006: true
+operator_inserted_doc_staleness_guardian_stage_before_lag5: true
+previous_unexecuted_lag5_prompt_superseded_by_doc_guardian_stage: true
+lag5_source_lock_deferred_to_stage5eh: true
+number_fact_review_batch_006_deferred_to_stage5ei: true
+project_hooks_declared_now: true
+active_hooks_effective_now: false
+blocking_hooks_effective_now: false
+lag5_source_lock_performed_now: false

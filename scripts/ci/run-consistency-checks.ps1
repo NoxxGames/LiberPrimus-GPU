@@ -21,6 +21,8 @@ if ($Profile -ne "full") {
     & $Python -m libreprimus.cli token-block validate-stage5ea
     & $Python -m libreprimus.cli token-block validate-stage5eb
     & $Python -m libreprimus.cli token-block validate-stage5ef
+    & $Python -m libreprimus.cli token-block validate-stage5eg
+    & $Python -m libreprimus.cli consistency audit-stale-current-claims --strict
     & $Python -m libreprimus.cli consistency check-current-truth-authority
     & $Python -m libreprimus.cli consistency check-doc-update-policy
     & $Python -m libreprimus.cli source-browser validate-index
@@ -55,6 +57,12 @@ try {
     & $Python -m libreprimus.cli consistency check-doc-update-policy
     git check-ignore -q "codex-output/stage5ef-codex-completion.md"
 
+    Write-Host "Validating Stage 5EG doc-staleness guardian records"
+    & $Python -m libreprimus.cli token-block validate-stage5eg
+    & $Python -m libreprimus.cli token-block stage5eg-summary
+    & $Python -m libreprimus.cli consistency audit-stale-current-claims --strict
+    git check-ignore -q "codex-output/stage5eg-codex-completion.md"
+
     Write-Host "Running document staleness checks"
     & $Python -m libreprimus.cli consistency check-doc-staleness `
         --source-of-truth data/project-state/stage5ah-doc-staleness-source-of-truth.yaml `
@@ -82,14 +90,14 @@ findings = [
     for finding in stage_ledger_findings_for_text(
         readme,
         path="README.md",
-            expected_latest_stage="Stage 5EF",
+            expected_latest_stage="Stage 5EG",
     )
 ]
 (out / "readme_stage_coverage_report.json").write_text(
     json.dumps(
         {
             "record_type": "readme_stage_coverage_report",
-            "expected_latest_stage": "Stage 5EF",
+            "expected_latest_stage": "Stage 5EG",
             "finding_count": len(findings),
             "findings": findings,
         },

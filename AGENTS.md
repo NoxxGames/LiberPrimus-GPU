@@ -58,9 +58,9 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation.
+Current completed stage: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution.
 
-Current work: Stage 5EG - Source-lock number-fact review batch 006, without execution. Stage 5EF inserted anti-drift/current-truth infrastructure before the previously routed batch 006, made `data/project-state/current-stage-state.yaml` authoritative, classified broad Markdown as mirrors or historical evidence, added deterministic context-pack templates, report-only automation templates, inactive advisory-hook policy, skills deferral, and focused validators. Stage 5EF did not add source-lock evidence, number-fact overlays, direct source-record backfill, target or pivot selection, route extraction, byte-stream generation, execution, CUDA/scoring/benchmark work, website expansion, canonical corpus activation, page-boundary finalisation, or solve claims. No Deep Research activation-acceptance record exists, the combined gate is not satisfied, no valid activation decision exists, and no active planning input authorization or selection exists. String 4 remains inactive; no target-priority selection, source-lock browser puzzle execution, direct source-record number-fact backfill, historical source-lock rewrite, triangle/Page32 route extraction, music route extraction, audio/stego/OCR/image forensics/AI interpretation, active ingestion, byte-stream generation, machine-code/VM execution, manifest supersession, execution, target-class validation, Tor access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim is authorized.
+Current work: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution. Stage 5EG inserted deterministic doc-staleness guardians before Lag5 source-lock and the previously deferred number-fact review batch 006. Stage 5EF inserted anti-drift/current-truth infrastructure before the previously routed batch 006, made `data/project-state/current-stage-state.yaml` authoritative, classified broad Markdown as mirrors or historical evidence, added deterministic context-pack templates, report-only automation templates, inactive advisory-hook policy, skills deferral, and focused validators. Stage 5EF did not add source-lock evidence, number-fact overlays, direct source-record backfill, target or pivot selection, route extraction, byte-stream generation, execution, CUDA/scoring/benchmark work, website expansion, canonical corpus activation, page-boundary finalisation, or solve claims. No Deep Research activation-acceptance record exists, the combined gate is not satisfied, no valid activation decision exists, and no active planning input authorization or selection exists. String 4 remains inactive; no target-priority selection, source-lock browser puzzle execution, direct source-record number-fact backfill, historical source-lock rewrite, triangle/Page32 route extraction, music route extraction, audio/stego/OCR/image forensics/AI interpretation, active ingestion, byte-stream generation, machine-code/VM execution, manifest supersession, execution, target-class validation, Tor access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim is authorized.
 
 Current project state:
 
@@ -1186,11 +1186,22 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 <!-- BEGIN stage5ef -->
 ## Stage 5EF Current-Truth Amendment
 
-- Current completed stage: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation.
-- Current work: Stage 5EG - Source-lock number-fact review batch 006, without execution.
+- Current completed stage: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution.
+- Current work: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution. Stage 5EG inserted deterministic doc-staleness guardians before Lag5 source-lock and the previously deferred number-fact review batch 006.
 - Authoritative current truth is `data/project-state/current-stage-state.yaml`.
 - Broad Markdown docs are mirrors or historical evidence, not authoritative state.
 - Stage 5EE originally routed Stage 5EF to number-fact review batch 006; that batch is now deferred to Stage 5EG.
 - Stage 5EF creates no source-lock evidence, number-fact overlays, target selection, byte streams, execution, CUDA,
   scoring, benchmarks, website expansion, or solve claim.
 <!-- END stage5ef -->
+
+<!-- BEGIN stage5eg -->
+## Stage 5EG Doc-Staleness Guard
+
+- Current completed stage: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution.
+- Current work: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution.
+- Future closeout must run or explicitly report `python -m libreprimus.cli consistency audit-stale-current-claims --strict`.
+- Project `.codex` hooks are declared only; they are not effective until operator trust.
+- Read-only custom agents are available for explicit closeout review, but hooks use deterministic scanner commands, not agents.
+- Stage 5EG creates no source-lock evidence, number-fact overlays, route extraction, byte streams, execution, CUDA, scoring, benchmarks, website expansion, or solve claim.
+<!-- END stage5eg -->

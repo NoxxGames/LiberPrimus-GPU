@@ -8029,3 +8029,445 @@ records:
     remains the authoritative current truth.
   stage5ef_role: stage5ef_current_truth_or_policy
   current_truth_authority: false
+- path: data/project-state/stage5eg-summary.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-next-stage-decision.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-stage5ef-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-current-truth-stale-claim-policy.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-doc-staleness-pattern-registry.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-doc-update-policy-repair.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-post-edit-doc-audit-policy.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-codex-project-config-policy.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-custom-agent-registry.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-stop-hook-policy.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-daily-automation-setup.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-automation-scheduling-result.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-reviewable-validation-evidence.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-reviewability-gap-register.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/project-state/stage5eg-source-browser-loadability-summary.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/token-block/stage5eg-stage5bd-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/token-block/stage5eg-active-lineage-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/token-block/stage5eg-no-active-ingestion-proof.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/token-block/stage5eg-no-byte-stream-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/token-block/stage5eg-no-execution-transition-gate.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/source-harvester/stage5eg-codex-handoff-policy.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/source-harvester/stage5eg-credential-redaction-policy-preservation.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: data/source-harvester/stage5eg-raw-source-noncommit-proof.yaml
+  category: active_data_record
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 2
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: .codex/config.toml
+  category: policy_doc
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: .codex/hooks.json
+  category: policy_doc
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: .codex/hooks/session_start_current_truth_context.py
+  category: policy_doc
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: .codex/hooks/stop_doc_staleness_guard.py
+  category: policy_doc
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: .codex/agents/doc-drift-auditor.toml
+  category: policy_doc
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: .codex/agents/current-truth-auditor.toml
+  category: policy_doc
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: .codex/agents/closeout-reviewer.toml
+  category: policy_doc
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: docs/automations/daily-doc-staleness-triage.prompt.md
+  category: policy_doc
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: docs/automations/daily-doc-staleness-triage.setup.md
+  category: policy_doc
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: mutable
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: reference_only
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: docs/development-logs/2026-06-12-stage-5eg-doc-staleness-guardians.md
+  category: historical_log
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.
+- path: research-log/2026-06-12-stage5eg-doc-staleness-guardian-summary.md
+  category: historical_log
+  purpose: Stage 5EG doc-staleness guardian record, config, hook, agent, automation
+    doc, or log.
+  source_of_truth_rank: 3
+  last_meaningful_update_stage: stage-5eg
+  expected_update_frequency: stage_specific
+  mutable_or_reference_only: reference_only
+  mirror_or_generated_relationships: Stage 5EG source record or focused policy mirror;
+    current-stage-state remains authoritative.
+  staleness_check_level: historical
+  owner_context: codex_agent
+  notes: Added by Stage 5EG deterministic stale-current-claim guard.

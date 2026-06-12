@@ -10,8 +10,8 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 
 ## Current State
 
-- Latest completed stage: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation.
-- Current planning focus: Stage 5EG - Source-lock number-fact review batch 006, without execution.
+- Latest completed stage: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution.
+- Current planning focus: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -35,11 +35,11 @@ This project is not a solve claim, raw corpus dump, Discord scraper, live Tor cr
 - Reviewer: read `docs/onboarding/source-of-truth-map.md`, `docs/experiments/method-retirement-ledger.md`, and the relevant research log.
 
 No page is claimed solved by these docs.
-## Stage 5EC Current Boundary
+## Historical Stage 5EC Boundary
 
-Stage 5EC is the latest completed stage. It completes the third Source Browser number-fact review batch by adding 25 review-only NumberFactCard overlays for 20 selected triangle/Page32/token-static/music/self-reference source-lock entries. It preserves Stage 5EB's 10-worker validation policy, validates Source Browser loadability with zero errors, and routes number-fact review batch 004 to Stage 5ED. Stage 5EC does not select a target. Stage 5EC does not execute routes or produce route streams. Stage 5EC does not generate byte streams. Stage 5EC does not perform image forensics/OCR. Stage 5EC does not accept a solve claim.
+At the time of Stage 5EC, Stage 5EC was the latest completed stage. It completes the third Source Browser number-fact review batch by adding 25 review-only NumberFactCard overlays for 20 selected triangle/Page32/token-static/music/self-reference source-lock entries. It preserves Stage 5EB's 10-worker validation policy, validates Source Browser loadability with zero errors, and routes number-fact review batch 004 to Stage 5ED. Stage 5EC does not select a target. Stage 5EC does not execute routes or produce route streams. Stage 5EC does not generate byte streams. Stage 5EC does not perform image forensics/OCR. Stage 5EC does not accept a solve claim.
 
-Current state: Stage 5EC is complete and Stage 5ED number-fact review batch 004 is next. Stage 5EC preserves Stage 5EB validation-finalization repair, Stage 5DZ source-lock enrichment, Stage 5BD run-plan IDs, active lineage, and all no-active/no-byte/no-execution gates while keeping local validation defaults/caps at 10 workers.
+Historical Stage 5EC state: At the time of Stage 5EC, Stage 5EC was complete and Stage 5ED number-fact review batch 004 was next. Stage 5EC preserves Stage 5EB validation-finalization repair, Stage 5DZ source-lock enrichment, Stage 5BD run-plan IDs, active lineage, and all no-active/no-byte/no-execution gates while keeping local validation defaults/caps at 10 workers.
 
 ## Stage 5DY Boundary History
 
@@ -47,9 +47,9 @@ Stage 5DY repairs validation performance, parallel-test discipline, stage-isolat
 
 ## Stage 5DQ Boundary History
 
-Stage 5DQ is the latest completed stage. It preserves Stage 5DP, preserves the Stage 5DG real operator approval record and operator-approval component, records the review-only Operator Console shell and Source Browser GUI/CLI, indexes committed source-lock metadata, adds manual-entry/override/tombstone/path-alias/column-profile scaffolds, and leaves Stage 5DR for GUI review/usability repair. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select target priority, select active planning input, authorize dry-run ingestion, generate bytes, execute route/token-block work, validate target classes, use Tor route access, run DWH/hash/preimage search, run OCR/image forensics/AI interpretation, run CUDA/benchmarks, mutate raw sources, execute source files, or make solve claims.
+At the time of Stage 5DQ, Stage 5DQ was the latest completed stage. It preserves Stage 5DP, preserves the Stage 5DG real operator approval record and operator-approval component, records the review-only Operator Console shell and Source Browser GUI/CLI, indexes committed source-lock metadata, adds manual-entry/override/tombstone/path-alias/column-profile scaffolds, and leaves Stage 5DR for GUI review/usability repair. It does not create Deep Research acceptance, satisfy the combined gate, authorize activation, select target priority, select active planning input, authorize dry-run ingestion, generate bytes, execute route/token-block work, validate target classes, use Tor route access, run DWH/hash/preimage search, run OCR/image forensics/AI interpretation, run CUDA/benchmarks, mutate raw sources, execute source files, or make solve claims.
 
-Current state: Stage 5DQ is complete and Stage 5DR source-browser GUI review/usability repair is next. Stage 5DQ records 1293 source-browser entries, keeps the selected target null, preserves Stage 5BD run-plan ID count 10, active-lineage record count 8, the corrected Stage 5AW path, and the Stage 5CM-and-later 8-worker validation cap. Operator approval component remains satisfied; Deep Research acceptance is absent, the combined gate is unsatisfied, and no-active, no-byte, and no-execution gates remain closed.
+Historical Stage 5DQ state: At the time of Stage 5DQ, Stage 5DQ was complete and Stage 5DR source-browser GUI review/usability repair was next. Stage 5DQ records 1293 source-browser entries, keeps the selected target null, preserves Stage 5BD run-plan ID count 10, active-lineage record count 8, the corrected Stage 5AW path, and the Stage 5CM-and-later 8-worker validation cap. Operator approval component remains satisfied; Deep Research acceptance is absent, the combined gate is unsatisfied, and no-active, no-byte, and no-execution gates remain closed.
 
 ## Stage 5DE Boundary History
 
@@ -69,6 +69,6 @@ Historical Stage 5CW state: Stage 5CW completed the real-decision package prefli
 
 ## Stage 5CM Boundary History
 
-Stage 5CM is the latest completed stage. It consumes the Stage 5CL accept-with-warnings review, preserves the Stage 5CK fixture-only approval/acceptance/activation-decision validation layer, hardens the boundary between fixture/template/scaffold/review-package records and future real approval records, adds end-to-end readiness-boundary validation, records future real approval-readiness preflight criteria, and adds credential-redaction/no-secret handoff policy. It preserves Stage 5AP canonical transcription, active token-block manifests, Stage 5AW/5AY/5AZ records, Stage 5BB active-manifest registry records, Stage 5BD dry-run records, and all Stage 5BD run-plan IDs unchanged. It does not execute token-block experiments, generate bytes, materialise variants, combine 2014 surfaces with page 49-51, search DWH/hash/preimages, decode, score, run stego/audio/image/OCR/AI/CUDA/benchmark work, publish website content, commit raw iddqd-v2/archive/spreadsheet/review-template bodies, commit full String 4 bodies, create approval records, satisfy approvals, authorize activation, activate String 4, or make solve claims.
+At the time of Stage 5CM, Stage 5CM was the latest completed stage. It consumes the Stage 5CL accept-with-warnings review, preserves the Stage 5CK fixture-only approval/acceptance/activation-decision validation layer, hardens the boundary between fixture/template/scaffold/review-package records and future real approval records, adds end-to-end readiness-boundary validation, records future real approval-readiness preflight criteria, and adds credential-redaction/no-secret handoff policy. It preserves Stage 5AP canonical transcription, active token-block manifests, Stage 5AW/5AY/5AZ records, Stage 5BB active-manifest registry records, Stage 5BD dry-run records, and all Stage 5BD run-plan IDs unchanged. It does not execute token-block experiments, generate bytes, materialise variants, combine 2014 surfaces with page 49-51, search DWH/hash/preimages, decode, score, run stego/audio/image/OCR/AI/CUDA/benchmark work, publish website content, commit raw iddqd-v2/archive/spreadsheet/review-template bodies, commit full String 4 bodies, create approval records, satisfy approvals, authorize activation, activate String 4, or make solve claims.
 
 Historical Stage 5CM state: Stage 5CM completed the boundary-hardening layer and selected Stage 5CN review. Stage 5CM keeps every fixture record fixture-only, operator approval record present now false, Deep Research activation accept record present now false, approval gate satisfied now false, activation decision valid now false, active-planning input authorized now false, active-planning input selected now false, String 4 active input false, dry-run ingestion false, byte-stream generation false, manifest supersession false, execution blocked, and Stage 5CM-and-later local parallel validation capped at 8 workers.

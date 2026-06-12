@@ -1,16 +1,16 @@
 # Roadmap
 
-Current next prompt: Stage 5EF - Source-lock number-fact review batch 006, without execution.
+Current next prompt: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution.
 
-Stage 5EE is complete as the fifth Source Browser number-fact review batch. It reviewed 20 selected source-register/music-metadata/Fandom-crosswalk/residual NumberFacts source-lock entries and added 25 review-only NumberFactCard overlays while preserving Stage 5ED overlays and Stage 5EB's 10-worker validation policy and authorizing no source rewrite, new source-lock evidence, target selection, byte generation, execution, CUDA, scoring, benchmark, website expansion, or solve claim.
+Stage 5EG is complete as deterministic doc-staleness guardian infrastructure. It adds a tracked-file stale-current scanner, declared project Stop hook, read-only closeout agents, and daily report-only automation setup while authorizing no source rewrite, new source-lock evidence, target selection, byte generation, execution, CUDA, scoring, benchmark, website expansion, or solve claim.
 
 The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Current Direction
 
-Stage 5EE number-fact review batch 005 is complete. It keeps the reviewed facts as Source Browser overlays only, keeps historical source-lock records immutable, preserves the 10-worker/full-parallel validation policy, and leaves all no-active/no-byte/no-execution gates closed.
+Stage 5EG doc-staleness guardian work is complete. It keeps `data/project-state/current-stage-state.yaml` authoritative, treats broad Markdown as mirrors or historical evidence, and leaves all no-active/no-byte/no-execution gates closed.
 
-The next recommended prompt is Stage 5EF - Source-lock number-fact review batch 006, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
+The next recommended prompt is Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
 reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
 Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
 are stable.
@@ -532,3 +532,11 @@ deferred number-fact review batch 006 to Stage 5EG.
 
 Next: Stage 5EG - Source-lock number-fact review batch 006, without execution.
 <!-- END stage5ef -->
+
+<!-- BEGIN stage5eg -->
+## Stage 5EG Routing
+
+- Complete: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution.
+- Next: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution.
+- Then: Stage 5EI - Source-lock number-fact review batch 006, without execution.
+<!-- END stage5eg -->

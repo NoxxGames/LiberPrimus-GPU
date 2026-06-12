@@ -23,7 +23,7 @@ from .results import write_yaml
 
 
 def default_max_workers() -> int:
-    return max(1, min(8, os.cpu_count() or 1))
+    return max(1, min(10, os.cpu_count() or 1))
 
 
 def default_commands() -> list[ValidationCommand]:
@@ -262,7 +262,7 @@ def default_commands() -> list[ValidationCommand]:
 
 
 def build_plan_records(max_workers: int | None = None) -> dict[str, dict[str, Any]]:
-    workers = max(1, min(max_workers or default_max_workers(), 8))
+    workers = max(1, min(max_workers or default_max_workers(), 10))
     commands = default_commands()
     parallel_count = sum(command.parallel_safe for command in commands)
     serial_count = sum(command.parallel_class.startswith("serial_") for command in commands)
@@ -283,7 +283,7 @@ def build_plan_records(max_workers: int | None = None) -> dict[str, dict[str, An
         "stage_id": STAGE_ID,
         "default_workers": "auto",
         "max_workers_default": workers,
-        "max_workers_cap": 8,
+        "max_workers_cap": 10,
         "env_override": "LIBERPRIMUS_VALIDATION_WORKERS",
         "pytest_worker_override": "LIBERPRIMUS_PYTEST_WORKERS",
         "pytest_mode_override": "LIBERPRIMUS_PYTEST_MODE",
@@ -321,7 +321,7 @@ def build_plan_records(max_workers: int | None = None) -> dict[str, dict[str, An
         "no_cryptanalytic_execution": True,
     }
     safety = build_safety_audit(registry, policy, max_workers_used=workers)
-    shard_plan = shard_plan_record(Path("tests/python"), recommended_pytest_workers(8, workers))
+    shard_plan = shard_plan_record(Path("tests/python"), recommended_pytest_workers(10, workers))
     return {
         "plan": plan,
         "registry": registry,

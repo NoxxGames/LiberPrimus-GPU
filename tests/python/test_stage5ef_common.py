@@ -13,7 +13,10 @@ _BUILT = False
 def ensure_stage5ef_built() -> None:
     global _BUILT
     if not _BUILT:
-        stage5ef.build_stage5ef()
+        successor_present = Path("data/project-state/stage5eg-summary.yaml").exists()
+        stage5ef_records_present = all(path.exists() for path in stage5ef.DATA_PATHS.values())
+        if not (successor_present and stage5ef_records_present):
+            stage5ef.build_stage5ef()
         _BUILT = True
 
 

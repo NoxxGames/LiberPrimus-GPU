@@ -2,15 +2,15 @@
 
 ## Current stage
 
-Stage 5EF plan-mode current-truth ledger and drift-audit foundation is complete.
+Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution is complete.
 
-Next recommended prompt: Stage 5EG - Source-lock number-fact review batch 006, without execution. Public website expansion remains deferred to a future review-gated project.
+Next recommended prompt: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution. Public website expansion remains deferred to a future review-gated project.
 
-## Completed in Stage 5EF
+## Completed in Stage 5EG
 
-Stage 5EF inserts anti-drift/current-truth infrastructure before the previously routed number-fact review batch 006. It makes `data/project-state/current-stage-state.yaml` the authoritative current-stage truth, classifies broad Markdown docs as mirrors or historical evidence, adds deterministic context-pack templates, report-only automation templates, inactive advisory-hook policy, skill-readiness deferral, focused validators, and ignored `codex-output` handoff files.
+Stage 5EG adds deterministic post-edit doc-staleness guardians after Stage 5EF. It scans tracked text-like files for stale latest/current/next-stage claims, declares project-local Codex hooks that run deterministic commands, creates read-only closeout auditor agents, and creates daily report-only automation setup material.
 
-Stage 5EF does not add source-lock evidence, number-fact overlays, direct source-record backfill, target or pivot selection, route extraction, byte-stream generation, execution, CUDA/scoring/benchmark work, website expansion, canonical corpus activation, page-boundary finalisation, or solve claims.
+Stage 5EG does not add source-lock evidence, number-fact overlays, direct source-record backfill, target or pivot selection, Lag5 source-lock, route extraction, byte-stream generation, execution, CUDA/scoring/benchmark work, website expansion, canonical corpus activation, page-boundary finalisation, or solve claims.
 
 ## Completed in Stage 5EE
 
@@ -1449,3 +1449,13 @@ Stage 5EF is metadata/tooling only: current-truth authority, doc update policy, 
 templates, report-only automation templates, inactive advisory-hook policy, skill-readiness deferral, and
 Stage 5EG routing. No puzzle execution or source-lock evidence changed.
 <!-- END stage5ef -->
+
+<!-- BEGIN stage5eg -->
+## Stage 5EG Status
+
+Latest completed stage: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution.
+
+Recommended next stage: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution.
+
+Doc-staleness guard: strict tracked-file stale-current scanner plus declared Stop hook, read-only closeout agents, and daily report-only automation setup.
+<!-- END stage5eg -->

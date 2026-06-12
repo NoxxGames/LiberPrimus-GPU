@@ -196,3 +196,9 @@ Stage 5DI extends the operational file map with recent clue source-lock records,
 Stage 5EF records current-truth, doc update-policy, context-pack, plan-mode, drift-audit, automation-template,
 advisory-hook, and skill-readiness files in `data/project-state/operational-file-map.yaml`.
 <!-- END stage5ef -->
+
+<!-- BEGIN stage5eg -->
+## Stage 5EG Operational Map Note
+
+Stage 5EG adds `.codex/` project-local hook and agent declarations plus daily doc-staleness automation docs. Hooks are declared only until operator trust.
+<!-- END stage5eg -->

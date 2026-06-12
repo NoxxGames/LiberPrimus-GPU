@@ -56,8 +56,8 @@ automation_templates_report_only: true
 advisory_hook_policy_created: true
 skill_readiness_policy_created: true
 skills_deferred_because_agents_skills_not_repo_convention: true
-source_browser_entries_loaded: 1748
-source_browser_record_count: 1747
+source_browser_entries_loaded: 1771
+source_browser_record_count: 1770
 source_browser_validation_error_count: 0
 parallel_worker_cap: 10
 local_parallel_default_workers: 10

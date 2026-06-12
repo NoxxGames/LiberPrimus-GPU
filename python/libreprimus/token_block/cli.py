@@ -761,6 +761,7 @@ from . import stage5ec as stage5ec_module
 from . import stage5ed as stage5ed_module
 from . import stage5ee as stage5ee_module
 from . import stage5ef as stage5ef_module
+from . import stage5eg as stage5eg_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -11503,6 +11504,130 @@ def validate_stage5ef_governance_scope_command() -> None:
     _print_stage5dv_result(
         stage5ef_module.validate_stage5ef_governance_scope(),
         "token_block_stage5ef_governance_scope_valid=true",
+    )
+
+
+@app.command("build-stage5eg")
+def build_stage5eg_command() -> None:
+    records = stage5eg_module.build_stage5eg()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(f"stale_current_claim_scanner_created={summary.get('stale_current_claim_scanner_created')}")
+    console.print(f"stale_current_claim_validation_error_count={summary.get('stale_current_claim_validation_error_count')}")
+    console.print(f"custom_agent_count={summary.get('custom_agent_count')}")
+    console.print(f"hooks_use_deterministic_scanner_now={summary.get('hooks_use_deterministic_scanner_now')}")
+    console.print(f"automation_created_or_updated={summary.get('automation_created_or_updated')}")
+    console.print(f"manual_operator_setup_required={summary.get('manual_operator_setup_required')}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+
+
+@app.command("validate-stage5eg")
+def validate_stage5eg_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg(),
+        "token_block_stage5eg_valid=true",
+    )
+
+
+@app.command("stage5eg-summary")
+def stage5eg_summary_command() -> None:
+    console.print(stage5eg_module.stage5eg_summary_text())
+
+
+@app.command("validate-stage5eg-stage5ef-preservation")
+def validate_stage5eg_stage5ef_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg_stage5ef_preservation(),
+        "token_block_stage5eg_stage5ef_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5eg-stale-current-claim-scanner")
+def validate_stage5eg_stale_current_claim_scanner_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg_stale_current_claim_scanner(),
+        "token_block_stage5eg_stale_current_claim_scanner_valid=true",
+    )
+
+
+@app.command("validate-stage5eg-doc-policy-repair")
+def validate_stage5eg_doc_policy_repair_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg_doc_policy_repair(),
+        "token_block_stage5eg_doc_policy_repair_valid=true",
+    )
+
+
+@app.command("validate-stage5eg-custom-agents")
+def validate_stage5eg_custom_agents_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg_custom_agents(),
+        "token_block_stage5eg_custom_agents_valid=true",
+    )
+
+
+@app.command("validate-stage5eg-hooks")
+def validate_stage5eg_hooks_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg_hooks(),
+        "token_block_stage5eg_hooks_valid=true",
+    )
+
+
+@app.command("validate-stage5eg-daily-automation")
+def validate_stage5eg_daily_automation_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg_daily_automation(),
+        "token_block_stage5eg_daily_automation_valid=true",
+    )
+
+
+@app.command("validate-stage5eg-post-edit-doc-audit")
+def validate_stage5eg_post_edit_doc_audit_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg_post_edit_doc_audit(),
+        "token_block_stage5eg_post_edit_doc_audit_valid=true",
+    )
+
+
+@app.command("validate-stage5eg-source-browser-loadability")
+def validate_stage5eg_source_browser_loadability_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg_source_browser_loadability(),
+        "token_block_stage5eg_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage5eg-sidecar-gates")
+def validate_stage5eg_sidecar_gates_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg_sidecar_gates(),
+        "token_block_stage5eg_sidecar_gates_valid=true",
+    )
+
+
+@app.command("validate-stage5eg-handoff-continuity")
+def validate_stage5eg_handoff_continuity_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg_handoff_continuity(),
+        "token_block_stage5eg_handoff_continuity_valid=true",
+    )
+
+
+@app.command("validate-stage5eg-credential-redaction-policy")
+def validate_stage5eg_credential_redaction_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg_credential_redaction_policy(),
+        "token_block_stage5eg_credential_redaction_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5eg-governance-scope")
+def validate_stage5eg_governance_scope_command() -> None:
+    _print_stage5dv_result(
+        stage5eg_module.validate_stage5eg_governance_scope(),
+        "token_block_stage5eg_governance_scope_valid=true",
     )
 
 

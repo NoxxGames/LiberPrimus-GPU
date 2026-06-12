@@ -352,3 +352,9 @@ Stage 5EB adds validation finalization, 10-worker local policy, serial-pytest fa
 ROADMAP, and staged-plan current sections are mirrors only. Historical logs and historical Markdown sections
 are evidence, not current truth.
 <!-- END stage5ef -->
+
+<!-- BEGIN stage5eg -->
+## Stage 5EG Source-Of-Truth Note
+
+`data/project-state/current-stage-state.yaml` is the authoritative current-stage truth. The Stage 5EG scanner audits tracked text-like files for stale current/latest/next-stage claims.
+<!-- END stage5eg -->

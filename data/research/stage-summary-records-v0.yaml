@@ -4227,3 +4227,27 @@ records:
   notes: next=stage-5eg; plan_mode_used=true; full_serial_pytest_required=false; source-lock
     evidence, number-fact overlays, execution, CUDA, scoring, benchmarks, website
     expansion, and solve claims remain blocked.
+- record_type: stage_summary_record
+  stage_id: stage-5eg
+  title: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents,
+    stop-hook drift gate, and daily automation setup, without puzzle execution
+  status: complete
+  category: metadata_tooling
+  summary: Added deterministic stale-current-claim scanning, declared project hooks,
+    read-only auditor agents, and daily report-only automation setup.
+  key_outputs:
+  - Tracked-file stale-current scanner added with strict errors for current mirrors,
+    operating context, and onboarding stale claims.
+  - Known docs/onboarding/start-here.md stale current/latest claims repaired as regression
+    fixture.
+  - Project-local .codex config, hooks, and read-only custom agents declared but not
+    effective until operator trust.
+  - Lag5 source-lock deferred to Stage 5EH and number-fact review batch 006 deferred
+    to Stage 5EI.
+  result_status: metadata_tooling_complete
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: No source-lock evidence, overlays, route extraction, byte streams, execution,
+    CUDA, scoring, benchmarks, or solve claim.

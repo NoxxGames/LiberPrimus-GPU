@@ -2,11 +2,11 @@
 
 ## Current Project State
 
-Current completed stage: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation.
+Current completed stage: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution.
 
-Current work after Stage 5EF: Stage 5EG - Source-lock number-fact review batch 006, without execution.
+Current work after Stage 5EG: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution.
 
-Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DX completed the second visual/red-heading/transform bridge review batch as overlay metadata only. Stage 5DY repaired validation performance and stage isolation before the next batch. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment before the normal third review batch. Stage 5EA repaired validation throughput, current-stage registry handling, historical-test isolation, validation-wrapper stage-id normalization, pytest shard policy, and Source Browser number-fact overlay caching. Stage 5EB finalized validation policy by moving local defaults/caps to 10 workers and 10 pytest workers, keeping full serial pytest as the explicit `full-serial-rare` fallback, repairing current-stage registry finalization handoff semantics, genericizing stage wrapper aliases, adding shard/rerun guidance, and validating Source Browser overlay cache reuse. Stage 5EC completed number-fact batch 003, Stage 5ED completed number-fact batch 004, and Stage 5EE completed number-fact batch 005 by adding 25 review-only overlays for 20 selected source-register/music/Fandom/residual NumberFacts records. Stage 5EF inserted anti-drift/current-truth infrastructure before the previously routed batch 006, made `data/project-state/current-stage-state.yaml` authoritative, added deterministic context-pack and report-only automation templates, kept hooks/automations/skills inactive, and deferred batch 006 to Stage 5EG. Stage 5EF does not add source-lock evidence, backfill number facts directly, rewrite historical source-lock records, select a target, extract routes, generate route streams, generate bytes, run image forensics/OCR/audio/stego/native/VM/CUDA/scoring/benchmark work, execute anything, or make solve claims.
+Stage 5DV was inserted after Stage 5DU because the Source Browser became large enough that table responsiveness and path hygiene were blocking review. Stage 5DW completed the first high-signal number-fact review batch as overlay metadata only. Stage 5DX completed the second visual/red-heading/transform bridge review batch as overlay metadata only. Stage 5DY repaired validation performance and stage isolation before the next batch. Stage 5DZ inserted Triangle/Page32 bounded-findings source-lock enrichment before the normal third review batch. Stage 5EA repaired validation throughput, current-stage registry handling, historical-test isolation, validation-wrapper stage-id normalization, pytest shard policy, and Source Browser number-fact overlay caching. Stage 5EB finalized validation policy by moving local defaults/caps to 10 workers and 10 pytest workers, keeping full serial pytest as the explicit `full-serial-rare` fallback, repairing current-stage registry finalization handoff semantics, genericizing stage wrapper aliases, adding shard/rerun guidance, and validating Source Browser overlay cache reuse. Stage 5EC completed number-fact batch 003, Stage 5ED completed number-fact batch 004, and Stage 5EE completed number-fact batch 005 by adding 25 review-only overlays for 20 selected source-register/music/Fandom/residual NumberFacts records. Stage 5EF inserted anti-drift/current-truth infrastructure before the previously routed batch 006, made `data/project-state/current-stage-state.yaml` authoritative, added deterministic context-pack and report-only automation templates, kept hooks/automations/skills inactive, and deferred batch 006. Stage 5EG then added the deterministic stale-current scanner, declared project hooks, read-only agents, and daily report-only drift-audit setup; Lag5 is Stage 5EH and batch 006 is Stage 5EI. Stage 5EF does not add source-lock evidence, backfill number facts directly, rewrite historical source-lock records, select a target, extract routes, generate route streams, generate bytes, run image forensics/OCR/audio/stego/native/VM/CUDA/scoring/benchmark work, execute anything, or make solve claims.
 
 The canonical Codex handoff root is `codex-output`. The deprecated `codex_output` root must remain absent. Completion summaries under `codex-output/**` are local ignored handoffs and must not be committed.
 
@@ -248,7 +248,7 @@ Guardrails:
 <!-- BEGIN stage5ef -->
 ## Stage 5EF Current Context
 
-Current completed stage: Stage 5EF - Plan-mode current-truth ledger and drift-audit foundation.
+Current completed stage: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution.
 
 Current work / recommended next stage: Stage 5EG - Source-lock number-fact review batch 006, without execution.
 
@@ -256,3 +256,13 @@ Authoritative current truth is `data/project-state/current-stage-state.yaml`. `A
 operating context. README, STATUS, ROADMAP, and staged-plan current sections are mirrors only. Historical logs
 remain evidence and may retain old next-stage claims when clearly historical.
 <!-- END stage5ef -->
+
+<!-- BEGIN stage5eg -->
+## Stage 5EG Current Context
+
+Latest completed stage: Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution.
+
+Current planning focus: Stage 5EH - Lag5 phenomenon source-lock, diagnostic/probe manifest, and enriched fact cards, without execution.
+
+Stage 5EG supersedes the unexecuted Lag5 Stage 5EG prompt. Lag5 source-lock is deferred to Stage 5EH; ordinary number-fact review batch 006 is deferred to Stage 5EI.
+<!-- END stage5eg -->
