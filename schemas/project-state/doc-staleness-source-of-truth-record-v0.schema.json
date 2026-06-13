@@ -1,8 +1,97 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "schemas/project-state/doc-staleness-source-of-truth-record-v0.schema.json",
-  "title": "Doc Staleness Source Of Truth Record",
-  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "benchmark_performed": {
+      "const": false
+    },
+    "canonical_corpus_status": {
+      "const": "inactive"
+    },
+    "codex_output_committed": {
+      "const": false
+    },
+    "cuda_execution_performed": {
+      "type": "boolean"
+    },
+    "cuda_source_modified": {
+      "const": false
+    },
+    "expected_next_stage_prefix": {
+      "pattern": "Stage (5[A-Z]+(-fix)?|6)",
+      "type": "string"
+    },
+    "generated_outputs_committed": {
+      "const": false
+    },
+    "latest_completed_stage_after_this_stage": {
+      "pattern": "Stage (5[A-Z]+(-fix)?|6)",
+      "type": "string"
+    },
+    "latest_completed_stage_prefix": {
+      "pattern": "Stage (5[A-Z]+(-fix)?|6)",
+      "type": "string"
+    },
+    "latest_previous_stage": {
+      "pattern": "Stage (5[A-Z]+(-fix)?|6)",
+      "type": "string"
+    },
+    "new_cuda_kernels_added": {
+      "const": 0
+    },
+    "next_stage_after_this_stage": {
+      "pattern": "Stage (5[A-Z]+(-fix)?|6)",
+      "type": "string"
+    },
+    "page_boundaries_status": {
+      "const": "reviewable"
+    },
+    "raw_data_processed": {
+      "const": false
+    },
+    "record_type": {
+      "const": "doc_staleness_source_of_truth_record"
+    },
+    "scored_experiments_executed": {
+      "const": false
+    },
+    "scored_experiments_status": {
+      "const": "deferred_manifest_gate_required"
+    },
+    "solve_claim": {
+      "const": false
+    },
+    "stage_id": {
+      "enum": [
+        "stage-5ab",
+        "stage-5ac",
+        "stage-5ad",
+        "stage-5ad-fix",
+        "stage-5ae",
+        "stage-5af",
+        "stage-5ag",
+        "stage-5ah",
+        "stage-5eg",
+        "stage-5eh",
+        "stage-5ei",
+        "stage-6"
+      ]
+    },
+    "unsolved_page_cuda_status": {
+      "const": "blocked"
+    },
+    "user_override_reason": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "website_expansion_performed": {
+      "const": false
+    },
+    "website_expansion_status": {
+      "const": "deferred_future_unnumbered_project"
+    }
+  },
   "required": [
     "record_type",
     "stage_id",
@@ -19,30 +108,6 @@
     "scored_experiments_executed",
     "solve_claim"
   ],
-  "properties": {
-    "record_type": { "const": "doc_staleness_source_of_truth_record" },
-    "stage_id": { "enum": ["stage-5ab", "stage-5ac", "stage-5ad", "stage-5ad-fix", "stage-5ae", "stage-5af", "stage-5ag", "stage-5ah", "stage-5eg", "stage-5eh"] },
-    "latest_completed_stage_after_this_stage": { "type": "string", "pattern": "Stage 5[A-Z]+(-fix)?" },
-    "latest_completed_stage_prefix": { "type": "string", "pattern": "Stage 5[A-Z]+(-fix)?" },
-    "next_stage_after_this_stage": { "type": "string", "pattern": "Stage 5[A-Z]+(-fix)?" },
-    "expected_next_stage_prefix": { "type": "string", "pattern": "Stage 5[A-Z]+(-fix)?" },
-    "latest_previous_stage": { "type": "string", "pattern": "Stage 5[A-Z]+(-fix)?" },
-    "user_override_reason": { "type": "string", "minLength": 1 },
-    "website_expansion_status": { "const": "deferred_future_unnumbered_project" },
-    "scored_experiments_status": { "const": "deferred_manifest_gate_required" },
-    "unsolved_page_cuda_status": { "const": "blocked" },
-    "canonical_corpus_status": { "const": "inactive" },
-    "page_boundaries_status": { "const": "reviewable" },
-    "cuda_execution_performed": { "type": "boolean" },
-    "cuda_source_modified": { "const": false },
-    "new_cuda_kernels_added": { "const": 0 },
-    "benchmark_performed": { "const": false },
-    "scored_experiments_executed": { "const": false },
-    "website_expansion_performed": { "const": false },
-    "raw_data_processed": { "const": false },
-    "generated_outputs_committed": { "const": false },
-    "codex_output_committed": { "const": false },
-    "solve_claim": { "const": false }
-  },
-  "additionalProperties": true
+  "title": "Doc Staleness Source Of Truth Record",
+  "type": "object"
 }

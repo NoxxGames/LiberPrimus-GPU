@@ -8,7 +8,17 @@
 
 ## Current boundaries and deferred work
 
-These are not permanent project exclusions unless marked as safety rules. They describe the current implementation boundary after Stage 5EE source-lock number-fact review batch 005. Future experiments must stay bounded, reviewable, and reproducible before larger campaigns begin. CUDA and broad campaigns are deferred, not permanently excluded.
+Current completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
+
+Current next prompt: Stage 6 - Probe and diagnostic readiness, without execution.
+
+The Stage 5 source-lock/enrichment chain is closed for now. Stage 5EI did not run number-fact batch 006, generate route streams, execute probes, perform image/stego/OCR work, run CUDA/scoring/benchmarks, activate the canonical corpus, finalize page boundaries, or claim a solve.
+
+- Stage 5EG installed deterministic stale-current guardians and kept hooks scanner-based.
+- Stage 5EH added Lag5/outguess/byte-string/red-number/F5 source-lock context and review-only overlays without execution.
+- Stage 5EI closed Stage 5 as a triangle-transposition and diagnostics-transition metadata stage, routing next work to Stage 6 readiness without execution.
+
+These are not permanent project exclusions. CUDA and broad campaigns are deferred, not permanently excluded.
 
 ### Permanent safety rules
 
@@ -219,6 +229,9 @@ These are not permanent project exclusions unless marked as safety rules. They d
 - Stage 5ED Source Browser number-fact review batch 004 with 20 selected DiskCipher/visual-method/route-context entries reviewed, 25 review-only NumberFactCard overlays added, Stage 5EC overlays and Stage 5EB 10-worker validation policy preserved, Source Browser loadability validated with zero errors, no historical source-lock rewrite, no source-lock evidence update, no target selected, no byte streams, no execution, and no solve claim.
 - Stage 5EE Source Browser number-fact review batch 005 with 20 selected source-register/music/Fandom/residual NumberFacts entries reviewed, 25 review-only NumberFactCard overlays added, Stage 5ED overlays and Stage 5EB 10-worker validation policy preserved, Source Browser loadability validated with zero errors, no historical source-lock rewrite, no source-lock evidence update, no target selected, no byte streams, no execution, and no solve claim.
 - Stage 5EF current-truth and drift-audit foundation with authoritative `data/project-state/current-stage-state.yaml`, doc update-policy ledger, deterministic context-pack templates, report-only automation templates, inactive advisory-hook policy, skill deferral, Stage 5EE preservation, Stage 5EB 10-worker validation policy preservation, no active hooks or scheduled automations, and no puzzle/source-lock/execution work.
+- Stage 5EG post-edit doc-staleness guardians with tracked-file stale-current scanner, scanner-backed project hooks, read-only custom-agent configs, report-only automation setup, Stage 5EF preservation, and no puzzle/source-lock/execution work.
+- Stage 5EH Lag5/outguess/byte-string/red-number/F5 source-lock addendum with 23 future probe manifests, 36 review-only overlays, Stage 5EG scanner preservation, and no route/decode/stego/image/CUDA/scoring execution.
+- Stage 5EI final Stage 5 triangle-transposition and diagnostics-transition metadata with PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, route-fingerprint policy, 7 review-only overlays, Stage 5EH preservation, and Stage 6 readiness routing without execution.
 
 ## Architecture summary
 
@@ -378,6 +391,9 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Stage 5EB: Validation finalization and 10-worker policy repair complete with `23` Stage 5EB records, `22` Stage 5EB schemas, Stage 5EA preservation, 10-worker local validation defaults/caps, full-serial-rare fallback policy, current-stage registry finalization handoff policy, generic stage wrapper repair, doc-tier policy, duration-aware pytest shard/rerun guidance, Source Browser cache reuse evidence, no number-fact batch 3, no source-lock evidence updates, no target selected, no active ingestion, no byte streams, no execution, and no solve claim.
 - Stage 5ED: Source-lock number-fact review batch 004 complete with `20` reviewed entries, `25` review-only overlays, `142` Source Browser fact cards after overlay load, Stage 5EC overlays and Stage 5EB 10-worker validation policy preserved, zero Source Browser validation errors, no source-lock evidence updates, no historical source-lock rewrites, no target selected, no route extraction, no byte streams, no execution, and no solve claim.
 - Stage 5EE: Source-lock number-fact review batch 005 complete with `20` reviewed entries, `25` review-only overlays, `167` Source Browser fact cards after overlay load, Stage 5ED overlays and Stage 5EB 10-worker validation policy preserved, zero Source Browser validation errors, no source-lock evidence updates, no historical source-lock rewrites, no target selected, no route extraction, no byte streams, no execution, and no solve claim.
+- Stage 5EG: Post-edit doc-staleness guardians complete with the stale-current scanner, scanner-backed project hooks, read-only custom-agent configs, daily report-only automation setup, Source Browser loadability preservation, and zero strict stale-current errors.
+- Stage 5EH: Lag5/outguess/byte-string/red-number/F5 context source-lock addendum complete with 5 Lag5 files inventoried, 8 lp_outguessed signed outputs, 23 future probe manifests, 36 review-only overlays, zero Source Browser errors, and no execution.
+- Stage 5EI: Final Stage 5 triangle-transposition and diagnostics transition complete with 25 records, PDD153/T17 geometry, 22/24 triangular-transposition taxonomy ambiguity, no-plaintext route-fingerprint policy, 7 review-only overlays, Stage 5EH preservation, stale-current strict errors `0`, and Stage 6 readiness routing.
 - Known solved baselines: `10` passing through the registry/manifest path.
 - Fixture breakdown: direct translation `4`, Atbash-family `3`, explicit-key Vigenere `2`, p56 prime-minus-one / phi-prime `1`.
 - Canonical corpus: inactive.
@@ -433,7 +449,7 @@ The CPU side owns corpus management, manifests, hypothesis generation, branching
 - Latest validation stage: Stage 5AX adds opt-in parallel validation infrastructure with `10` parallel-safe commands, `6` serial commands, `1` blocked command, separated logs, failure aggregation, and safety audits while keeping git/GitHub/network/generated-output-writing operations serial. Stage 5DQ preserves the local parallel-validation and pytest cap at 8 workers for Stage 5CM and later.
 - Latest doc-staleness stage: Stage 5AH repairs README stage-ledger coverage, operational-file-map coverage, and current/next-stage consistency checks before curated extraction. Stage 5EE updates current/next-stage records to Stage 5EE complete and Stage 5EF next.
 - Latest validation infrastructure stage: Stage 5EB finalizes the 10-worker local validation policy, full-serial-rare fallback boundary, current-stage registry finalization handoff policy, generic stage wrapper aliases, pytest shard/rerun guidance, and Source Browser overlay-cache reuse evidence.
-- Next: Stage 5EI - Source-lock number-fact review batch 006, without execution.
+- Historical next after Stage 5EH: Stage 5EI - Source-lock number-fact review batch 006, without execution.
 
 ## How To Use This Repo
 

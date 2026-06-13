@@ -8,21 +8,11 @@ LiberPrimus-GPU is a conservative research workbench for reproducible Liber Prim
 
 This project is not a solve claim, raw corpus dump, Discord scraper, live Tor crawler, image/OCR interpretation tool, broad hash-cracker, or CUDA campaign.
 
-## Current State
+## Stage 5EI Current Boundary
 
-- Latest completed stage: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock addendum, diagnostic probe manifests, and enriched fact cards, without execution.
-- Current planning focus: Stage 5EI - Source-lock number-fact review batch 006, without execution.
-- Canonical corpus: inactive.
-- Page boundaries: reviewable.
-- CUDA: deferred.
-- Solve claims: none.
-- Raw/generated outputs: ignored and not committed.
-- Discord raw logs: local, private, ignored research material.
-- Local page images: local, ignored third-party material.
-- Observation records: review-gated; review-only observations are not experiment
-  seeds without explicit acceptance and promotion.
-- Document staleness checks: active through `libreprimus consistency check-doc-staleness`.
-- Curated source bundles: Stage 5AI, Stage 5AJ, and Stage 5AK metadata is complete; Stage 5AL adds a metadata-only website-ingest package and private Deep Research export, Stage 5AM renders that metadata to an ignored private static index, Stage 5AN builds an ignored private content pack plus SFTP-ready hosted content library, Stage 5AP adds page 49-51 token-block source-lock metadata, Stage 5AR adds original-image coordinate-lock metadata, Stage 5AT adds a generated ignored token-case human-review pack, Stage 5AU rebuilds it as an ignored v2 pack, Stage 5AV integrates the filled local decision template into compact branch metadata, Stage 5AW repairs the possible-token parser/branch metadata, Stage 5AX adds local parallel validation infrastructure, Stage 5AY designs bounded preflight manifests and gates, Stage 5AZ repairs the duplicate family-ID integrity gap, Stage 5BB scaffolds a no-execution preflight runner, Stage 5BD adds no-byte-stream dry-run planning, Stage 5BF source-locks the local historical route archive, Stage 5BI records Fandom/source-lock triage plus archive crosswalk metadata, Stage 5BJ closes/refines original/archive crosswalk gaps, Stage 5BK integrates historical-route planning constraints plus iddqd-v2 source-lock metadata, Stage 5BM integrates Stage 5BL findings into String 4 branch-crosswalk metadata, Stage 5BN closes the one unsupported String 4 source gap as spreadsheet-supported inactive-addendum metadata, Stage 5BO integrates operator decision-template errata into an inactive planning universe, Stage 5BQ turns the Stage 5BP review outcome into inactive dry-run planning constraints, Stage 5BS turns the Stage 5BR review outcome into a fail-closed planning-ingestion gate plus future-runner citation policy, Stage 5BU repairs the Stage 5BS preserved active-lineage path with validator hardening, Stage 5BW proposes a future inactive-sidecar planning-ingestion model plus manifest-supersession preflight while keeping the gate closed, Stage 5BY creates the inactive planning-manifest scaffold plus no-execution sidecar after classifying Stage 5BW reviewability warnings, Stage 5CA/5CC/5CE/5CG build stricter inactive-sidecar, active-planning, proposal-package, and approval-scaffold metadata, Stage 5CI hardens future approval and activation-decision templates without satisfying any gate, Stage 5CK adds fixture-only approval/acceptance/activation validation packs plus a review-only activation-decision package, and Stage 5CM hardens fixture-vs-real approval boundaries plus credential-redaction policy without creating real records. Generated bundle bodies, UsefulFiles extraction bodies, community-facts private addenda, Stage 5AL private export helpers, Stage 5AM static site files, Stage 5AN private content files, Stage 5AP token-block/stego-control reports, Stage 5AR coordinate reports, Stage 5AT human-review packs, Stage 5AU review-pack v2 files, the filled/corrected Stage 5AU decision templates, Stage 5AV generated reports, Stage 5AW generated reports, Stage 5AX validation logs, Stage 5AY generated reports, Stage 5AZ generated reports, Stage 5BB generated reports, Stage 5BD generated reports, Stage 5BD ZIP marker outputs, Stage 5BF historical-route reports, Stage 5BF Deep Research pack/ZIP outputs, Stage 5BJ crosswalk reports/extracted surfaces, Stage 5BK historical-route/token-block reports, Stage 5BM token-block/historical-route diagnostics, Stage 5BN token-block/historical-route diagnostics, Stage 5BO token-block/historical-route diagnostics, Stage 5BQ token-block diagnostics, Stage 5BS token-block diagnostics, Stage 5BU lineage-path diagnostics, Stage 5BW inactive-sidecar diagnostics, Stage 5BY sidecar diagnostics, Stage 5CI template-hardening diagnostics, Stage 5CK fixture/review-package diagnostics, and Stage 5CM readiness-boundary diagnostics stay ignored.
+The current authority is `data/project-state/current-stage-state.yaml`. It now records Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution as complete and Stage 6 - Probe and diagnostic readiness, without execution as next.
+
+Historical Stage 5EE, Stage 5EG, and Stage 5EH sections are evidence of their time, not current routing instructions. If they mention old next prompts, read them as historical only when the section says so explicitly.
 
 ## Where To Start
 
@@ -72,3 +62,19 @@ Historical Stage 5CW state: Stage 5CW completed the real-decision package prefli
 At the time of Stage 5CM, Stage 5CM was the latest completed stage. It consumes the Stage 5CL accept-with-warnings review, preserves the Stage 5CK fixture-only approval/acceptance/activation-decision validation layer, hardens the boundary between fixture/template/scaffold/review-package records and future real approval records, adds end-to-end readiness-boundary validation, records future real approval-readiness preflight criteria, and adds credential-redaction/no-secret handoff policy. It preserves Stage 5AP canonical transcription, active token-block manifests, Stage 5AW/5AY/5AZ records, Stage 5BB active-manifest registry records, Stage 5BD dry-run records, and all Stage 5BD run-plan IDs unchanged. It does not execute token-block experiments, generate bytes, materialise variants, combine 2014 surfaces with page 49-51, search DWH/hash/preimages, decode, score, run stego/audio/image/OCR/AI/CUDA/benchmark work, publish website content, commit raw iddqd-v2/archive/spreadsheet/review-template bodies, commit full String 4 bodies, create approval records, satisfy approvals, authorize activation, activate String 4, or make solve claims.
 
 Historical Stage 5CM state: Stage 5CM completed the boundary-hardening layer and selected Stage 5CN review. Stage 5CM keeps every fixture record fixture-only, operator approval record present now false, Deep Research activation accept record present now false, approval gate satisfied now false, activation decision valid now false, active-planning input authorized now false, active-planning input selected now false, String 4 active input false, dry-run ingestion false, byte-stream generation false, manifest supersession false, execution blocked, and Stage 5CM-and-later local parallel validation capped at 8 workers.
+
+<!-- BEGIN stage5ei -->
+## Stage 5EI Current Boundary
+
+The current authority is `data/project-state/current-stage-state.yaml`. It now records Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution as complete and Stage 6 - Probe and diagnostic readiness, without execution as next.
+
+Historical Stage 5EE, Stage 5EG, and Stage 5EH sections are evidence of their time, not current routing instructions. If they mention old next prompts, read them as historical only when the section says so explicitly.
+<!-- END stage5ei -->
+
+<!-- BEGIN stage5ei current-state -->
+## Stage 5EI Current Boundary
+
+The current authority is `data/project-state/current-stage-state.yaml`. It now records Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution as complete and Stage 6 - Probe and diagnostic readiness, without execution as next.
+
+Historical Stage 5EE, Stage 5EG, and Stage 5EH sections are evidence of their time, not current routing instructions. If they mention old next prompts, read them as historical only when the section says so explicitly.
+<!-- END stage5ei current-state -->

@@ -36,6 +36,7 @@ if [[ "$profile" != "full" ]]; then
     "$python_bin" -m libreprimus.cli token-block validate-stage5ef
     "$python_bin" -m libreprimus.cli token-block validate-stage5eg
     "$python_bin" -m libreprimus.cli token-block validate-stage5eh
+    "$python_bin" -m libreprimus.cli token-block validate-stage5ei
     "$python_bin" -m libreprimus.cli consistency audit-stale-current-claims --strict
     "$python_bin" -m libreprimus.cli consistency check-current-truth-authority
     "$python_bin" -m libreprimus.cli consistency check-doc-update-policy
@@ -84,6 +85,12 @@ echo "Validating Stage 5EH Lag5/outguess/byte-control source-lock addendum recor
 "$python_bin" -m libreprimus.cli token-block stage5eh-summary
 "$python_bin" -m libreprimus.cli consistency audit-stale-current-claims --strict
 git check-ignore -q "codex-output/stage5eh-codex-completion.md"
+
+echo "Validating Stage 5EI final Stage 5 diagnostics-transition records"
+"$python_bin" -m libreprimus.cli token-block validate-stage5ei
+"$python_bin" -m libreprimus.cli token-block stage5ei-summary
+"$python_bin" -m libreprimus.cli consistency audit-stale-current-claims --strict
+git check-ignore -q "codex-output/stage5ei-codex-completion.md"
 
 echo "Running document staleness checks"
 "$python_bin" -m libreprimus.cli consistency check-doc-staleness \

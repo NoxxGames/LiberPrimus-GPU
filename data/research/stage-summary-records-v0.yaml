@@ -4271,3 +4271,31 @@ records:
   generated_outputs_committed: false
   notes: No route extraction, byte streams, stego execution, image forensics, OCR,
     CUDA, scoring, benchmarks, or solve claim.
+- record_type: stage_summary_record
+  stage_id: stage-5ei
+  title: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition,
+    without execution
+  status: complete
+  category: metadata_transition
+  summary: Completed final Stage 5 triangle-transposition and diagnostics transition
+    metadata, preserved Stage 5EH counts, repaired focused current mirrors, and routed
+    the project to Stage 6 probe/diagnostic readiness without execution.
+  key_outputs:
+  - PDD153/T17 geometry, 56311 row-edge path, d=4 diagonal anchor, and bottom-row/Page32
+    quarantine bridge recorded as review-only metadata.
+  - Triangular-transposition 22-count operator claim and 24-family assistant observation
+    preserved as unresolved taxonomy context.
+  - Fingerprint-based route-diagnostic policy recorded without requiring plaintext
+    likeness or generating route streams.
+  - Stage 5EH probe, overlay, and Source Browser counts preserved; ordinary number-fact
+    review batch 006 superseded.
+  - Focused current mirrors repaired for Stage 5EI -> Stage 6 and stale-current strict
+    scanner remains at zero errors.
+  result_status: metadata_transition_complete
+  solve_claim: false
+  cuda_used: false
+  raw_outputs_committed: false
+  generated_outputs_committed: false
+  notes: next=stage-6; full_serial_pytest_required=false; no probes, route extraction,
+    byte streams, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target
+    selection, canonical-corpus activation, page-boundary finalisation, or solve claim.

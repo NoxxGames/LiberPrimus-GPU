@@ -410,7 +410,10 @@ def consistency_audit_stale_current_claims(
     console.print(f"stale_current_error_count={report.error_count}")
     console.print(f"stale_current_warning_count={report.warning_count}")
     console.print(f"stale_current_suppression_error_count={report.suppression_error_count}")
-    for finding in report.findings:
+    printable_findings = report.findings if report_only else [
+        finding for finding in report.findings if finding.severity == "error"
+    ]
+    for finding in printable_findings:
         style = "red" if finding.severity == "error" else "yellow"
         text = (
             f"{finding.severity}:{finding.claim_type}:{finding.path}:{finding.line}: "

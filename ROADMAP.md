@@ -1,35 +1,14 @@
 # Roadmap
 
-Current next prompt: Stage 5EI - Source-lock number-fact review batch 006, without execution.
-
-Stage 5EG is complete as deterministic doc-staleness guardian infrastructure. It adds a tracked-file stale-current scanner, declared project Stop hook, read-only closeout agents, and daily report-only automation setup while authorizing no source rewrite, new source-lock evidence, target selection, byte generation, execution, CUDA, scoring, benchmark, website expansion, or solve claim.
-
-The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
-
 ## Current Direction
 
-Stage 5EG doc-staleness guardian work is complete. It keeps `data/project-state/current-stage-state.yaml` authoritative, treats broad Markdown as mirrors or historical evidence, and leaves all no-active/no-byte/no-execution gates closed.
+Current completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
 
-The next recommended prompt is Stage 5EI - Source-lock number-fact review batch 006, without execution. Token-block execution, active String 4 ingestion, 2014/page49-51 surface combination, triangle/disk/quote/koan/Page32/Blake/DiskCipher/NumberFacts/Mayfly route extraction, DWH/hash search, historical technique execution, music/audio route execution, public website expansion, and broad CUDA implementation remain deferred except for explicit, synthetic-only or solved-fixture-safe parity stages until CPU batch, scorer, review workflow, source-lock
-reproducibility, promotion-ledger records, image-preflight controls, positive-control readiness,
-Stage 4O parity expectations, Stage 4P unified result surfaces, Stage 5D native CPU parity records, Stage 5E first-kernel contract records, parity tests, and benchmark plans
-are stable.
+Next routed stage: Stage 6 - Probe and diagnostic readiness, without execution.
 
-Stage 4A follow-up hardened the generated static site with noindex/robots/privacy/upload metadata and
-recorded the remaining GitHub Wiki publish blocker. Stage 4B ingested the Stage 4A Deep Research
-review into durable records without executing experiments, Stage 4C made the visual claims
-measurable without promoting them to seeds, Stage 4D ran only bounded no-fudge audit work, Stage 4E
-selected external source-delta targets without committing raw artefacts, Stage 4F prepared
-stego/audio fixture provenance without running tools, Stage 4G recorded the negative exact cookie
-refresh result, Stage 4H extracted the CPU batch API as the future CUDA parity contract, Stage
-4I made scoring labels and score summaries triage-only parity metadata, Stage 4J closed the
-review-to-promotion loop, Stage 4K strengthened public-source reproducibility, Stage 4L
-recorded promotion readiness, Stage 4M created image source-variant/compression preflight
-records, Stage 4N recorded OutGuess/audio positive-control readiness, Stage 4O expanded CPU
-batch adapter coverage, Stage 4P unified result-store/score-summary reporting, Stage 4Q
-recorded CPU benchmark and parity planning, Stage 5A recorded CUDA planning and parity scaffolding,
-Stage 5B recorded the CUDA parity harness skeleton, Stage 5C recorded CUDA build/device-detection
-metadata, Stage 5D recorded native C++ CPU backend/threading parity, Stage 5E selected the first future CUDA kernel contract, Stage 5F implemented the first synthetic-only CUDA parity kernel, Stage 5G completed parity reporting plus CUDA-facing source hardening, Stage 5H completed Gematria contract preparation, Stage 5I completed Gematria CUDA preparation, Stage 5J completed synthetic Gematria kernel implementation, Stage 5K completed Gematria parity reporting, Stage 5L completed solved-fixture token-mapping preparation, Stage 5M completed the first exact solved-fixture CUDA parity run, Stage 5N completed the reporting/controlled expansion gate, Stage 5O completed exact repeat/result-store preflight, Stage 5P completed compact result-store/score-summary integration, Stage 5Q completed controlled expansion candidate mapping, Stage 5R completed controlled expanded solved-fixture CUDA parity, Stage 5S completed expanded parity reporting/result-store integration, Stage 5T completed solved-family readiness classification, Stage 5U completed shared candidate batch ABI consolidation, Stage 5V completed no-GPU Candidate Batch ABI conformance, Stage 5W prepared the prime-minus-one stream native parity contract, Stage 5X executed only the two ready no-GPU prime-minus-one parity mappings, Stage 5Y integrated compact reporting, Stage 5Z prepared the prime-minus-one CUDA contract, Stage 5AA executed only the synthetic prime-minus-one CUDA validation vector, Stage 5AB repaired stale operational docs, Stage 5AC integrated synthetic parity reporting plus bounded-p56 preflight, Stage 5AD ran the bounded p56 CUDA vector and selected mismatch investigation, Stage 5AD-fix diagnosed the mismatch as a reference/hash-material contract issue, Stage 5AE repaired corrected reporting, Stage 5AF added local-only source-harvester/source-lock tooling, Stage 5AG inventoried local ignored third-party source material, Stage 5AH repaired stale operational documentation coverage, Stage 5AI extracted curated research-bundle metadata, Stage 5AJ integrated UsefulFilesAndIdeas metadata plus extraction/redaction/scraper policy, Stage 5AK integrated community-facts claim-record metadata, Stage 5AL staged metadata-only website-ingest/Deep Research export records, Stage 5AM rendered those records into a private static research index, Stage 5AN built the private content pack plus SFTP-ready hosted content library, Stage 5AP source-locked the page 49-51 token-block candidate plus OutGuess positive-control guardrails, Stage 5AR locked original-image pixel coordinates plus the page split for review, Stage 5AT built the token case-policy human review pack, Stage 5AU rebuilt it as a usable v2 review pack, Stage 5AV integrated the user-provided decisions into compact branch metadata, Stage 5AW repaired the possible-token parser and superseding branch metadata, Stage 5AX inserted local parallel validation infrastructure, Stage 5AY designed bounded token-block preflight manifests and gates without execution, Stage 5AZ repaired the duplicate family-ID integrity gap, Stage 5BB scaffolded the no-execution runner plus active-manifest precedence checks before Deep Research review, Stage 5BD implemented the no-byte-stream dry-run planning layer, Stage 5BF source-locked the 2012-2017 historical route archive and technique taxonomy before Stage 5BG review, Stage 5BI integrated the Fandom/source-lock triage and archive-crosswalk metadata before Stage 5BJ crosswalk closure, Stage 5BQ converted operator-errata context into fail-closed inactive dry-run planning constraints, Stage 5BS converted the Stage 5BR review into a committed planning-ingestion gate plus future-runner citation policy, Stage 5BU repaired and hardened the Stage 5BS active-lineage path reviewability layer, Stage 5BW proposed the next inactive-sidecar planning-ingestion/manifest-supersession preflight while keeping all gates closed, Stage 5BY converted the Stage 5BX review warnings into an inactive planning manifest scaffold, no-execution sidecar, source-digest dedupe/classification metadata, and Stage 5BZ review routing, Stage 5CA hardened that sidecar with exact citation/fail-closed/activation/supersession contracts, Stage 5CC/5CE/5CG/5CI/5CK built the active-planning proposal and approval-fixture layers without opening gates, Stage 5CM hardened the approval-readiness boundary, and Stage 5CO packaged real approval-readiness transition metadata while selecting Stage 5CP review.
+Stage 6 is a readiness stage only. It should define finite probe sets, fingerprints, null controls, and result-source requirements before any later bounded diagnostic execution. Stage 7 may run bounded diagnostics only after Stage 6 records the readiness contract. Stage 8 remains triangle-specific experiment readiness, and Stage 9 is the earliest triangle-experiment stage.
+
+The durable staged plan is maintained at [`docs/roadmap/staged-plan.md`](docs/roadmap/staged-plan.md). Update that file whenever stage status, direction, experiment priority, or method-family retirement/reopening changes.
 
 ## Phase 0A - Project bootstrap
 
@@ -548,3 +527,4 @@ Next: Stage 5EG - Source-lock number-fact review batch 006, without execution.
 - Next: Stage 5EI - Source-lock number-fact review batch 006, without execution.
 - Batch 006 remains deferred to Stage 5EI.
 <!-- END stage5eh -->
+<!-- BEGIN stage5ei current-state -->

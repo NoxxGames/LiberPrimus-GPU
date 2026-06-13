@@ -58,9 +58,13 @@ Maintain a reproducible, conservative research workbench for future Liber Primus
 
 ## Current stage
 
-Current completed stage: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock addendum, diagnostic probe manifests, and enriched fact cards, without execution.
+Current completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
 
-Current work: Stage 5EI - Source-lock number-fact review batch 006, without execution. Stage 5EG inserted deterministic doc-staleness guardians before Lag5 source-lock and the previously deferred number-fact review batch 006. Stage 5EF inserted anti-drift/current-truth infrastructure before the previously routed batch 006, made `data/project-state/current-stage-state.yaml` authoritative, classified broad Markdown as mirrors or historical evidence, added deterministic context-pack templates, report-only automation templates, inactive advisory-hook policy, skills deferral, and focused validators. Stage 5EF did not add source-lock evidence, number-fact overlays, direct source-record backfill, target or pivot selection, route extraction, byte-stream generation, execution, CUDA/scoring/benchmark work, website expansion, canonical corpus activation, page-boundary finalisation, or solve claims. No Deep Research activation-acceptance record exists, the combined gate is not satisfied, no valid activation decision exists, and no active planning input authorization or selection exists. String 4 remains inactive; no target-priority selection, source-lock browser puzzle execution, direct source-record number-fact backfill, historical source-lock rewrite, triangle/Page32 route extraction, music route extraction, audio/stego/OCR/image forensics/AI interpretation, active ingestion, byte-stream generation, machine-code/VM execution, manifest supersession, execution, target-class validation, Tor access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim is authorized.
+Current work: Stage 6 - Probe and diagnostic readiness, without execution. Stage 5EI superseded the previously routed ordinary number-fact review batch 006 and records final Stage 5 triangle/route diagnostic context as review-only metadata.
+
+No Deep Research activation-acceptance record exists, the combined gate is not satisfied, no valid activation decision exists, and no active planning input authorization or selection exists. String 4 remains inactive; no target-priority selection, source-lock browser puzzle execution, direct source-record number-fact backfill, historical source-lock rewrite, triangle/Page32 route extraction, music route extraction, audio/stego/OCR/image forensics/AI interpretation, active ingestion, byte-stream generation, machine-code/VM execution, manifest supersession, execution, target-class validation, Tor access, DWH/hash/preimage search, decode, scoring, CUDA, benchmark, website expansion, method-status upgrade, canonical corpus activation, page-boundary finalisation, or solve claim is authorized.
+
+Discord raw logs are not committed. Raw page images, raw historical stego artefacts, generated outputs, SQLite databases, and local reports remain ignored and uncommitted.
 
 Current project state:
 
@@ -1215,3 +1219,15 @@ Stop and report if a tool install requires reboot, a CUDA installer requires dri
 - Do not run OutGuess, StegDetect, F5 extraction/password search, XOR reconstruction, OCR, image forensics, route extraction, byte-stream generation, CUDA, scoring, benchmarks, Tor, or solve workflows from Stage 5EH records.
 - `third_party/CiadaSolversIddqd_v2/lp_outguessed` is the canonical local lp_outguessed root unless a future validator proves otherwise; duplicate `xor.txt` candidates elsewhere are reviewability context only.
 <!-- END stage5eh -->
+
+<!-- BEGIN stage5ei -->
+## Stage 5EI Current Boundary
+
+Current completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
+
+Current work: Stage 6 - Probe and diagnostic readiness, without execution.
+
+Project-local `.codex` hooks are declared and operator-approved locally for Stage 5EI recording purposes. They remain deterministic scanner hooks, not custom-agent execution hooks: `blocking_hooks_effective_now=false`, `hook_execution_relies_on_deterministic_scanner=true`, and `custom_agents_invoked_by_hooks=false`.
+
+Stage 5EI superseded the ordinary number-fact review batch 006. Do not run probes, route extraction, byte-stream generation, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, benchmarks, target selection, canonical corpus activation, page-boundary finalisation, or solve claims under the Stage 5EI records. Stage 6 must be readiness-only unless a later prompt explicitly changes scope.
+<!-- END stage5ei -->

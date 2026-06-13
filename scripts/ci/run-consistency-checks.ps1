@@ -23,6 +23,7 @@ if ($Profile -ne "full") {
     & $Python -m libreprimus.cli token-block validate-stage5ef
     & $Python -m libreprimus.cli token-block validate-stage5eg
     & $Python -m libreprimus.cli token-block validate-stage5eh
+    & $Python -m libreprimus.cli token-block validate-stage5ei
     & $Python -m libreprimus.cli consistency audit-stale-current-claims --strict
     & $Python -m libreprimus.cli consistency check-current-truth-authority
     & $Python -m libreprimus.cli consistency check-doc-update-policy
@@ -69,6 +70,12 @@ try {
     & $Python -m libreprimus.cli token-block stage5eh-summary
     & $Python -m libreprimus.cli consistency audit-stale-current-claims --strict
     git check-ignore -q "codex-output/stage5eh-codex-completion.md"
+
+    Write-Host "Validating Stage 5EI final Stage 5 diagnostics-transition records"
+    & $Python -m libreprimus.cli token-block validate-stage5ei
+    & $Python -m libreprimus.cli token-block stage5ei-summary
+    & $Python -m libreprimus.cli consistency audit-stale-current-claims --strict
+    git check-ignore -q "codex-output/stage5ei-codex-completion.md"
 
     Write-Host "Running document staleness checks"
     & $Python -m libreprimus.cli consistency check-doc-staleness `

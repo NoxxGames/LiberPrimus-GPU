@@ -81,6 +81,11 @@ SUPPRESSION_RE = re.compile(
 )
 MARKER_BEGIN_RE = re.compile(r"<!--\s*BEGIN\s+(?P<marker>stage\d+[a-z]+)\s*-->", re.IGNORECASE)
 MARKER_END_RE = re.compile(r"<!--\s*END\s+(?P<marker>stage\d+[a-z]+)\s*-->", re.IGNORECASE)
+HEADING_RE = re.compile(r"^(?P<marks>#{1,6})\s+(?P<title>.+?)\s*$")
+HISTORICAL_SECTION_HEADING_RE = re.compile(
+    r"\b(completed in stage|historical stage|stage\s+\d+[a-z]*\s+(?!current\b|current boundary\b))",
+    re.IGNORECASE,
+)
 CURRENT_PHRASE_RE = re.compile(
     r"\b(latest completed stage|latest stage|current completed stage|current stage|"
     r"current state|current planning focus|next recommended prompt|next stage|next prompt)\b",
@@ -92,6 +97,18 @@ STAGE_IS_LATEST_RE = re.compile(
 )
 STAGE_COMPLETE_NEXT_RE = re.compile(
     r"\bStage\s+\d+[A-Z]*\s+is\s+complete\s+and\s+Stage\s+\d+[A-Z]*\b.*\bnext\b",
+    re.IGNORECASE,
+)
+STAGE_COMPLETE_RE = re.compile(
+    r"\bStage\s+\d+[A-Z]*\b.{0,120}\bis\s+complete\b",
+    re.IGNORECASE,
+)
+AFTER_STAGE_RE = re.compile(
+    r"\bafter\s+Stage\s+\d+[A-Z]*\b",
+    re.IGNORECASE,
+)
+STAGE_CURRENT_BOUNDARY_RE = re.compile(
+    r"\bStage\s+\d+[A-Z]*\b.{0,80}\bcurrent\s+boundary\b",
     re.IGNORECASE,
 )
 CURRENT_BOUNDARY_HEADING_RE = re.compile(
@@ -260,7 +277,16 @@ def scan_text(
     lines = text.splitlines()
     findings: list[StaleCurrentFinding] = []
     historical_marker_depth = 0
+    historical_heading_level: int | None = None
     for index, line in enumerate(lines, start=1):
+        heading_match = HEADING_RE.match(line)
+        if heading_match:
+            heading_level = len(heading_match.group("marks"))
+            heading_title = heading_match.group("title")
+            if historical_heading_level is not None and heading_level <= historical_heading_level:
+                historical_heading_level = None
+            if HISTORICAL_SECTION_HEADING_RE.search(heading_title):
+                historical_heading_level = heading_level
         begin_marker = MARKER_BEGIN_RE.search(line)
         if begin_marker:
             try:
@@ -272,6 +298,8 @@ def scan_text(
         if historical_marker_depth > 0:
             if MARKER_END_RE.search(line):
                 historical_marker_depth = max(0, historical_marker_depth - 1)
+            continue
+        if historical_heading_level is not None:
             continue
         suppression = SUPPRESSION_RE.search(line) if _is_suppression_directive(line) else None
         if suppression and not (suppression.group("reason") or "").strip():
@@ -360,6 +388,12 @@ def _claim_type(line: str) -> str | None:
         return "current_planning_focus_claim"
     if STAGE_COMPLETE_NEXT_RE.search(line):
         return "complete_and_next_claim"
+    if STAGE_CURRENT_BOUNDARY_RE.search(line):
+        return "current_boundary_reference_claim"
+    if AFTER_STAGE_RE.search(line):
+        return "after_stage_current_boundary_claim"
+    if STAGE_COMPLETE_RE.search(line):
+        return "stage_complete_claim"
     if STAGE_IS_LATEST_RE.search(line) or COLON_CURRENT_RE.search(line):
         return "latest_completed_stage_claim"
     if COLON_NEXT_RE.search(line) or STAGE_SELECTS_NEXT_RE.search(line):
@@ -385,7 +419,14 @@ def _line_matches_expected(
         return any(stage == expected_next_stage for stage in stages)
     if claim_type in {"complete_and_next_claim"}:
         return expected_latest_stage in stages and expected_next_stage in stages
-    if claim_type in {"latest_completed_stage_claim", "current_state_claim", "current_like_claim"}:
+    if claim_type in {
+        "latest_completed_stage_claim",
+        "current_state_claim",
+        "current_like_claim",
+        "current_boundary_reference_claim",
+        "after_stage_current_boundary_claim",
+        "stage_complete_claim",
+    }:
         return expected_latest_stage in stages or expected_next_stage in stages
     return False
 

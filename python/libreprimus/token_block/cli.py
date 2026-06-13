@@ -763,6 +763,7 @@ from . import stage5ee as stage5ee_module
 from . import stage5ef as stage5ef_module
 from . import stage5eg as stage5eg_module
 from . import stage5eh as stage5eh_module
+from . import stage5ei as stage5ei_module
 from .transcription import build_transcription
 from .validation import validate_stage5ap
 from .variant_classifier import build_variant_classifier_repair_summary
@@ -11758,6 +11759,122 @@ def validate_stage5eh_governance_scope_command() -> None:
     _print_stage5dv_result(
         stage5eh_module.validate_stage5eh_governance_scope(),
         "token_block_stage5eh_governance_scope_valid=true",
+    )
+
+
+@app.command("build-stage5ei")
+def build_stage5ei_command() -> None:
+    records = stage5ei_module.build_stage5ei()
+    summary = records["summary"]
+    console.print(f"stage_id={summary.get('stage_id')}")
+    console.print(f"status={summary.get('status')}")
+    console.print(f"previous_stage_id={summary.get('previous_stage_id')}")
+    console.print(f"recommended_next_stage_id={summary.get('recommended_next_stage_id')}")
+    console.print(
+        "operator_superseded_number_fact_review_batch_006_now="
+        f"{summary.get('operator_superseded_number_fact_review_batch_006_now')}"
+    )
+    console.print(f"stage5eh_future_probe_manifest_count={summary.get('stage5eh_future_probe_manifest_count')}")
+    console.print(f"stage5eh_overlay_count={summary.get('stage5eh_overlay_count')}")
+    console.print(f"overlay_count={summary.get('overlay_count')}")
+    console.print(f"route_fingerprint_count={summary.get('route_fingerprint_count')}")
+    console.print(f"source_browser_validation_error_count={summary.get('source_browser_validation_error_count')}")
+    console.print(
+        "stale_current_claim_strict_errors_after_stage5ei="
+        f"{summary.get('stale_current_claim_strict_errors_after_stage5ei')}"
+    )
+
+
+@app.command("validate-stage5ei")
+def validate_stage5ei_command() -> None:
+    _print_stage5dv_result(
+        stage5ei_module.validate_stage5ei(),
+        "token_block_stage5ei_valid=true",
+    )
+
+
+@app.command("stage5ei-summary")
+def stage5ei_summary_command() -> None:
+    console.print(stage5ei_module.stage5ei_summary_text())
+
+
+@app.command("validate-stage5ei-stage5eh-preservation")
+def validate_stage5ei_stage5eh_preservation_command() -> None:
+    _print_stage5dv_result(
+        stage5ei_module.validate_stage5ei_stage5eh_preservation(),
+        "token_block_stage5ei_stage5eh_preservation_valid=true",
+    )
+
+
+@app.command("validate-stage5ei-current-mirror-repair")
+def validate_stage5ei_current_mirror_repair_command() -> None:
+    _print_stage5dv_result(
+        stage5ei_module.validate_stage5ei_current_mirror_repair(),
+        "token_block_stage5ei_current_mirror_repair_valid=true",
+    )
+
+
+@app.command("validate-stage5ei-stale-current-scanner-regression")
+def validate_stage5ei_stale_current_scanner_regression_command() -> None:
+    _print_stage5dv_result(
+        stage5ei_module.validate_stage5ei_stale_current_scanner_regression(),
+        "token_block_stage5ei_stale_current_scanner_regression_valid=true",
+    )
+
+
+@app.command("validate-stage5ei-triangle-transposition-geometry")
+def validate_stage5ei_triangle_transposition_geometry_command() -> None:
+    _print_stage5dv_result(
+        stage5ei_module.validate_stage5ei_triangle_transposition_geometry(),
+        "token_block_stage5ei_triangle_transposition_geometry_valid=true",
+    )
+
+
+@app.command("validate-stage5ei-route-diagnostic-policy")
+def validate_stage5ei_route_diagnostic_policy_command() -> None:
+    _print_stage5dv_result(
+        stage5ei_module.validate_stage5ei_route_diagnostic_policy(),
+        "token_block_stage5ei_route_diagnostic_policy_valid=true",
+    )
+
+
+@app.command("validate-stage5ei-stage6-roadmap")
+def validate_stage5ei_stage6_roadmap_command() -> None:
+    _print_stage5dv_result(
+        stage5ei_module.validate_stage5ei_stage6_roadmap(),
+        "token_block_stage5ei_stage6_roadmap_valid=true",
+    )
+
+
+@app.command("validate-stage5ei-number-fact-overlays")
+def validate_stage5ei_number_fact_overlays_command() -> None:
+    _print_stage5dv_result(
+        stage5ei_module.validate_stage5ei_number_fact_overlays(),
+        "token_block_stage5ei_number_fact_overlays_valid=true",
+    )
+
+
+@app.command("validate-stage5ei-source-browser-loadability")
+def validate_stage5ei_source_browser_loadability_command() -> None:
+    _print_stage5dv_result(
+        stage5ei_module.validate_stage5ei_source_browser_loadability(),
+        "token_block_stage5ei_source_browser_loadability_valid=true",
+    )
+
+
+@app.command("validate-stage5ei-gate-closure")
+def validate_stage5ei_gate_closure_command() -> None:
+    _print_stage5dv_result(
+        stage5ei_module.validate_stage5ei_gate_closure(),
+        "token_block_stage5ei_gate_closure_valid=true",
+    )
+
+
+@app.command("validate-stage5ei-handoff")
+def validate_stage5ei_handoff_command() -> None:
+    _print_stage5dv_result(
+        stage5ei_module.validate_stage5ei_handoff(),
+        "token_block_stage5ei_handoff_valid=true",
     )
 
 

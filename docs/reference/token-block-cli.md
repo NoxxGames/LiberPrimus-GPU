@@ -213,3 +213,12 @@ These commands build and validate metadata/tooling records only. They do not exe
 - `python -m libreprimus.cli token-block stage5eh-summary`
 - focused validators include Lag5 inventory, lp_outguessed inventory, overlays, Source Browser loadability, sidecar gates, handoff continuity, and governance scope.
 <!-- END stage5eh -->
+
+<!-- BEGIN stage5ei -->
+## Stage 5EI Token-Block Commands
+
+- `libreprimus token-block build-stage5ei`
+- `libreprimus token-block validate-stage5ei`
+- `libreprimus token-block stage5ei-summary`
+- focused validators are available for Stage 5EH preservation, current mirrors, stale-current scanner regressions, PDD153 geometry, route-diagnostic policy, Stage 6 roadmap, overlays, Source Browser loadability, gate closure, and handoff.
+<!-- END stage5ei -->

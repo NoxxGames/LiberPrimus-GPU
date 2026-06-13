@@ -6,8 +6,8 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 
 ## Current Project State
 
-- Latest completed stage: Stage 5EH - Lag5/outguess/byte-string/red-number/F5 context source-lock addendum, diagnostic probe manifests, and enriched fact cards, without execution.
-- Current planning focus: Stage 5EI - Source-lock number-fact review batch 006, without execution.
+- Latest completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
+- Current planning focus: Stage 6 - Probe and diagnostic readiness, without execution.
 - Canonical corpus: inactive.
 - Page boundaries: reviewable.
 - CUDA: deferred.
@@ -157,16 +157,22 @@ This file is the durable staged plan for LiberPrimus-GPU. It records completed w
 - Stage 5EC: completed Source Browser number-fact review batch 003 for triangle/Page32/token-static/music/self-reference records. It reviews 20 selected source-lock entries, adds 25 review-only NumberFactCard overlays, validates Source Browser loadability with zero errors, preserves Stage 5EB's 10-worker/full-parallel validation policy, and shifts the next review batch to Stage 5ED without puzzle execution.
 - Stage 5ED: completed Source Browser number-fact review batch 004 for DiskCipher/visual-method/route-context records. It reviews 20 selected source-lock entries, adds 25 review-only NumberFactCard overlays, validates Source Browser loadability with zero errors, preserves Stage 5EC overlays and Stage 5EB's 10-worker/full-parallel validation policy, and shifts the next review batch to Stage 5EE without puzzle execution.
 - Stage 5EE: completed Source Browser number-fact review batch 005 for source-register/music-metadata/Fandom-crosswalk/residual NumberFacts records. It reviews 20 selected source-lock entries, adds 25 review-only NumberFactCard overlays, validates Source Browser loadability with zero errors, preserves Stage 5ED overlays and Stage 5EB's 10-worker/full-parallel validation policy, and shifts the next review batch to Stage 5EF without puzzle execution.
+- Stage 5EG: completed post-edit doc-staleness guardian setup with deterministic stale-current scanning, scanner-backed project hooks, read-only custom-agent definitions, report-only automation setup, Stage 5EF preservation, and no puzzle/source-lock execution.
+- Stage 5EH: completed Lag5/outguess/byte-string/red-number/F5 source-lock context with 23 future probe manifests, 36 review-only overlays, Stage 5EG scanner preservation, and no route/decode/stego/image/CUDA/scoring execution.
+- Stage 5EI: completed the final Stage 5 triangle-transposition and diagnostics transition with PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, route-diagnostic fingerprint policy, 7 review-only overlays, Stage 5EH preservation, and Stage 6 readiness routing without execution.
 
 ## Current Stage
 
-Stage 5EE is complete. It adds review-only Source Browser overlays for the fifth selected number-fact review batch. It preserves Stage 5ED overlays, Stage 5EB validation finalization, Stage 5DG, Stage 5BD, and active lineage, keeps the local validation default/cap at 10 workers and 10 pytest workers, keeps Deep Research acceptance absent, keeps the combined gate unsatisfied, preserves 10 Stage 5BD run-plan IDs and 8 active-lineage records, and leaves normal number-fact review batch 006 for Stage 5EF.
+Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution is the latest completed stage. It supersedes the previously routed ordinary number-fact review batch 006, records final Stage 5 triangle/route diagnostic context, preserves Stage 5EH counts, and keeps all probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, and solve gates closed.
 
-Stage 5EE does not run cryptanalytic work. It does not rewrite historical source locks, add new source-lock evidence, source-lock lag5, backfill historical number facts directly into source records, commit raw sources, select a target, extract routes, generate route streams, generate byte streams, create Deep Research activation acceptance, create combined-gate validation, create a real activation-decision record, satisfy approval gates, validate activation now, activate String 4 input, select or authorize active planning input, ingest String 4 into dry-run plans, mutate Stage 5BD dry-run records, supersede active manifests, combine 2014 surfaces with page 49-51, run Mayfly/Page32/triangle/disk/quote/koan/Blake/NumberFacts/music/token-block transforms, materialise variants, enumerate branches, decode the token block, run DWH/hash/preimage search, perform target-class validation, use Tor/Tor-route access, score outputs, infer plaintext, run audio stego/MP3Stego/OpenPuff/spectrogram/waveform analysis, OCR/render sheet music, run image forensics/OCR/AI/CUDA tooling, execute source files, mutate raw sources, execute hypotheses, run benchmarks, upgrade method status, expand the public website, activate the canonical corpus, finalise page boundaries, or make solve claims.
+Current planning focus: Stage 6 - Probe and diagnostic readiness, without execution. Stage 6 is a readiness stage only; Stage 5EI does not run Stage 6 probes or generate route streams.
 
 ## Planned Next Stages
 
-- Stage 5EF - Source-lock number-fact review batch 006, without execution.
+- Stage 6 - Probe and diagnostic readiness, without execution.
+- Stage 7 - Actual probes and diagnostics only after Stage 6 approval gates.
+- Stage 8 - Triangle-specific experiment readiness, without execution.
+- Stage 9 - Triangle experiments only after Stage 8 approval gates.
 - Future unnumbered website expansion project after CUDA reporting boundaries are stable.
 
 The independent review originally suggested CPU batch API extraction as Stage 4A. User direction after Discord website review moved full Discord research-bundle extraction earlier so Deep Research could work with local Discord exports in a redacted, structured form. The Stage 4A Discord Research-Bundle Review then moved public-source locking, visual observation intake, annotation, and bounded numeric audits ahead of CPU API work. Later stages built the CPU batch, scoring, CUDA-planning, source-harvester, page 49-51 token-block, historical-route, inactive String 4 planning, no-byte dry-run, review-contract, active-planning preflight, proposal-package, and approval-scaffold layers. Stage 5CG integrated the Stage 5CF review into unsatisfied decision scaffolds before Stage 5CH review, Stage 5CI converted the Stage 5CH review warnings into hardened future approval, acceptance, combined-gate, negative-validation, and activation-decision templates before Stage 5CJ review, Stage 5CK created fixture-only validation packs before Stage 5CL review, Stage 5CM hardened fixture-vs-real approval boundaries before Stage 5CN review, Stage 5CO packaged the future real approval/acceptance/combined-gate/activation transition path before Stage 5CP review, Stage 5CQ integrated the Stage 5CP review while scaffolding the next operator-decision package before Stage 5CR review, Stage 5CS integrated the Stage 5CR review while scaffolding unselected operator-decision options before Stage 5CT review, Stage 5CU integrated the Stage 5CT review while hardening negative fixtures before Stage 5CV review, Stage 5CW integrated the Stage 5CV review while creating only a review-only real-decision package preflight before Stage 5CX review, Stage 5CY integrated the Stage 5CX review while creating only a review-only option-selection decision preflight before Stage 5CZ review, and Stage 5DA integrated the Stage 5CZ review while creating only a future operator choice / explicit-pause scaffold before Stage 5DB review.
@@ -346,3 +352,11 @@ Stage 5EG adds deterministic stale-current-claim scanning, project-local declare
 - Current planning focus: Stage 5EI - Source-lock number-fact review batch 006, without execution.
 - Stage 5EH is source-lock/reviewability metadata only and does not authorize route extraction, byte streams, stego execution, OCR, image forensics, CUDA, scoring, benchmarks, or solve claims.
 <!-- END stage5eh -->
+
+<!-- BEGIN stage5ei -->
+## Stage 5EI - Final Stage 5 Triangle Diagnostics Transition
+
+Stage 5EI records PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, Pascal/Fibonacci diagonal context, bottom-row quarantine warnings, review-only overlays, and a fingerprint-based route-diagnostic policy. It runs no probes, routes, byte streams, OCR/image/stego tools, CUDA, scoring, benchmarks, target selection, canonical-corpus activation, page-boundary finalisation, or solve claims.
+
+Next: Stage 6 - Probe and diagnostic readiness, without execution.
+<!-- END stage5ei -->

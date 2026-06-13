@@ -1,5 +1,13 @@
 # Testing
 
+Stage 5EI extends coverage with schema validation for final Stage 5 diagnostics-transition metadata, Stage 5EH preservation counts, current-mirror and stale-current regression checks, PDD153/T17 geometry facts, triangular-transposition 22/24 taxonomy ambiguity, Pascal/Fibonacci diagonal-context records, no-plaintext route-diagnostic policy checks, review-only overlay validation, Source Browser loadability checks, hook-trust truth recording, Stage 6/7/8/9 roadmap boundary checks, handoff/noncommit proofs, and closed guardrail checks. It runs no probes, route extraction, byte-stream generation, OCR/image/stego/PGP/OutGuess/F5/StegDetect work, CUDA, scoring, benchmarks, target selection, corpus activation, page-boundary finalization, or solve claim.
+
+Stage 5EH extends coverage with schema validation for Lag5/outguess/byte-string/red-number/F5 source-lock context, local inventory authority, future probe manifests, enriched review-only fact-card overlays, Source Browser loadability checks, stale-current scanner preservation, and closed execution guardrails.
+
+Stage 5EG extends coverage with deterministic stale-current claim scanning, scanner-backed hook configuration, read-only agent policy, report-only automation setup, onboarding regression checks, Source Browser preservation, and zero strict stale-current errors.
+
+Stage 5EF extends coverage with authoritative current-truth records, doc update-policy ledger validation, deterministic context-pack template checks, report-only automation template checks, inactive advisory-hook and skill-deferral policy checks, plan-mode evidence, Stage 5EE preservation, Stage 5EB 10-worker policy preservation, and strict no-execution guardrails.
+
 Stage 5EE extends coverage with schema validation for the fifth Source Browser number-fact review batch, exact 20-entry selection checks, 25 review-only source-register/music/Fandom/residual NumberFacts overlay checks, overlay-only fact-card rendering, Source Browser loadability checks, Stage 5ED overlay preservation, Stage 5EB 10-worker policy preservation, Stage 5DG/5BD/active-lineage preservation, no-active/no-byte/no-execution gate checks, strict `codex-output` handoff-continuity checks, credential-redaction policy checks, and Stage 5EF routing. It runs no source-lock evidence update, source-record backfill, historical source rewrite, route extraction, byte generation, image forensics/OCR, target validation, execution, CUDA, scoring, benchmark, or solve claim.
 
 Stage 5ED extends coverage with schema validation for the fourth Source Browser number-fact review batch, exact 20-entry selection checks, 25 review-only DiskCipher/visual-method/route-context overlay checks, overlay-only fact-card rendering, Source Browser loadability checks, Stage 5EC overlay preservation, Stage 5EB 10-worker policy preservation, Stage 5DX/5DW/5DV/5DU/5DG/5BD/active-lineage preservation, no-active/no-byte/no-execution gate checks, strict `codex-output` handoff-continuity checks, credential-redaction policy checks, and Stage 5EE routing. It runs no source-lock evidence update, source-record backfill, historical source rewrite, route extraction, byte generation, image forensics/OCR, target validation, execution, CUDA, scoring, benchmark, or solve claim.
@@ -1188,3 +1196,9 @@ Stage 5EF keeps the Stage 5EB validation discipline: run focused validators firs
 `local-fast`, and one final `full-parallel` validation with `Workers=10` and `PytestWorkers=10`. Full serial
 pytest is not required for normal completion.
 <!-- END stage5ef -->
+
+<!-- BEGIN stage5ei -->
+## Stage 5EI Validation Policy
+
+Stage 5EI uses focused validators first, then the stale-current scanner in strict mode, Source Browser validation, focused Stage 5EI pytest files, ruff, `stage-fast`, `local-fast`, and one `full-parallel` run with `Workers=10` and `PytestWorkers=10`. Full serial pytest is not required for normal closeout.
+<!-- END stage5ei -->

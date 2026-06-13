@@ -9511,3 +9511,11 @@ records:
   staleness_check_level: historical
   owner_context: codex_agent
   notes: Raw third_party files and generated outputs remain ignored and uncommitted.
+stage_records:
+  stage-5ei:
+    stage_id: stage-5ei
+    summary: data/project-state/stage5ei-summary.yaml
+    current_stage_state: data/project-state/current-stage-state.yaml
+    route_policy: data/token-block/stage5ei-route-diagnostic-policy.yaml
+    overlays: data/operator-console/source-browser/number-fact-overlays/stage5ei-final-stage5-triangle-transition-overlays.yaml
+    next_stage: stage-6

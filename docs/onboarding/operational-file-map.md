@@ -202,3 +202,9 @@ advisory-hook, and skill-readiness files in `data/project-state/operational-file
 
 Stage 5EG adds `.codex/` project-local hook and agent declarations plus daily doc-staleness automation docs. Hooks are declared only until operator trust.
 <!-- END stage5eg -->
+
+<!-- BEGIN stage5ei -->
+## Stage 5EI Operational Map Update
+
+Use `data/project-state/current-stage-state.yaml` for latest/next-stage truth. Stage 5EI is complete and Stage 6 is the next routed readiness stage. Older examples that mention Stage 5EI as batch 006 are historical and must not be used as current routing.
+<!-- END stage5ei -->

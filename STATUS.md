@@ -1,10 +1,13 @@
 # Status
 
-## Current stage
+## Current Stage
 
-Stage 5EG - Post-edit doc-staleness guardians, read-only auditor agents, stop-hook drift gate, and daily automation setup, without puzzle execution is complete.
-
-Next recommended prompt: Stage 5EI - Source-lock number-fact review batch 006, without execution. Public website expansion remains deferred to a future review-gated project.
+- Latest completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
+- Current next stage: Stage 6 - Probe and diagnostic readiness, without execution.
+- Next recommended prompt: Stage 6 - Probe and diagnostic readiness, without execution.
+- Stage 5EI supersedes the previously routed ordinary number-fact review batch 006 and routes the project to Stage 6 probe/diagnostic readiness.
+- Stage 5EI records PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, Pascal/Fibonacci diagonal context, and fingerprint-based route-diagnostic policy as review-only metadata.
+- No probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, or solve work is authorized.
 
 ## Completed in Stage 5EG
 
@@ -1469,3 +1472,13 @@ Recommended next stage: Stage 5EI - Source-lock number-fact review batch 006, wi
 
 Stage 5EH records Lag5 29/28/57 event context, M-sum 479 over claimed N=12,956, lp_outguessed signed-output metadata, the canonical xor.txt presence/gap result, operator-supplied 03 JPEG transcription facts, Stage 5BK byte-string crosslinks, Page54/55 red-number controls, and Page13 detector context. All probe manifests are disabled with `run_now=false`.
 <!-- END stage5eh -->
+
+<!-- BEGIN stage5ei current-state -->
+## Current Stage
+
+- Latest completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
+- Current next stage: Stage 6 - Probe and diagnostic readiness, without execution.
+- Stage 5EI supersedes the previously routed ordinary number-fact review batch 006 and routes the project to Stage 6 probe/diagnostic readiness.
+- Stage 5EI records PDD153/T17 geometry, triangular-transposition taxonomy ambiguity, Pascal/Fibonacci diagonal context, and fingerprint-based route-diagnostic policy as review-only metadata.
+- No probe, route, byte-stream, OCR/image/stego, PGP/OutGuess/F5/StegDetect, CUDA, scoring, target-selection, canonical-corpus, page-boundary, or solve work is authorized.
+<!-- END stage5ei current-state -->

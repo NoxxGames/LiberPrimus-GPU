@@ -358,3 +358,13 @@ are evidence, not current truth.
 
 `data/project-state/current-stage-state.yaml` is the authoritative current-stage truth. The Stage 5EG scanner audits tracked text-like files for stale current/latest/next-stage claims.
 <!-- END stage5eg -->
+
+<!-- BEGIN stage5ei -->
+## Stage 5EI Source-Of-Truth Update
+
+- Authoritative current state: `data/project-state/current-stage-state.yaml`.
+- Current mirrors: `STATUS.md`, `README.md`, `ROADMAP.md`, `AGENTS.md`, `ChatGPT-ContextFile.md`, and `docs/roadmap/staged-plan.md`.
+- Latest completed stage: Stage 5EI - Final Stage 5 triangle-transposition and diagnostics transition, without execution.
+- Next routed stage: Stage 6 - Probe and diagnostic readiness, without execution.
+- Historical logs and previous stage sections remain evidence, not current truth.
+<!-- END stage5ei -->
