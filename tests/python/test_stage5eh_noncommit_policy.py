@@ -20,4 +20,5 @@ def test_stage5eh_completion_handoff_is_ignored_path() -> None:
 
     assert handoff["completion_summary_path"] == "codex-output/stage5eh-codex-completion.md"
     assert handoff["codex_output_committed"] is False
-    assert Path("codex-output/stage5eh-codex-completion.md").exists()
+    assert handoff["completion_summary_path"].startswith("codex-output/")
+    assert "codex-output/**" in Path(".gitignore").read_text(encoding="utf-8")
